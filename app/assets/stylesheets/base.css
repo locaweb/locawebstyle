@@ -1,0 +1,280 @@
+#main {margin-bottom:50px;}
+
+.limite {
+	width:988px;
+	margin: 0 auto;
+}
+
+.nofloat {float:none;}
+.fright {float:right;}
+.fleft {float:left;}
+
+.cboth {clear:both;}
+.cright {clear:right;}
+.cleft {clear:left;}
+
+.dblock {display:block;}
+.dinline {display:inline;}
+.dinlineblock {display:inline-block;}
+
+/**
+*** Clearfix
+**/
+.clearfix {*zoom: 1;}
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {clear: both;}
+
+/**
+*** Botões
+**/
+.btn {font-size:14px;font-weight:normal; font-family:Ubuntu;}
+.btn-primary {
+  font-weight:400;
+  background-color: #006dcc;
+  background-image: -moz-linear-gradient(top, #5f8dc2, #3966a7);
+  background-image: -ms-linear-gradient(top, #5f8dc2, #3966a7);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5f8dc2), to(#3966a7));
+  background-image: -webkit-linear-gradient(top, #5f8dc2, #3966a7);
+  background-image: -o-linear-gradient(top, #5f8dc2, #3966a7);
+  background-image: linear-gradient(top, #5f8dc2, #3966a7);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5f8dc2', endColorstr='#3966a7', GradientType=0);
+  border-color: #4b7cb8 #4b7cb8 #4b7cb8;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.btn-primary:hover {
+	background-color:#4b7cb8;
+	background-image:none;
+}
+
+.btn.close {
+  opacity:1;
+  color:#393939;
+  background-color: #fcfcfc;
+  background-image: -moz-linear-gradient(top, #fcfcfc, #e9e9e9);
+  background-image: -ms-linear-gradient(top, #fcfcfc, #e9e9e9);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fcfcfc), to(#CCC));
+  background-image: -webkit-linear-gradient(top, #fcfcfc, #CCC);
+  background-image: -o-linear-gradient(top, #fcfcfc, #e9e9e9);
+  background-image: linear-gradient(top, #fcfcfc, #e9e9e9);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#e9e9e9', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border:1px solid #cccccc;
+}
+
+.btn.close:hover {
+	background-color:#ebebeb;
+	background-image:none;
+}
+
+
+/**
+*** Text basic styles
+**/
+h1, .modal-header h3 {
+	color:#000;
+	font:bold 26px Ubuntu, arial, verdana, tahoma, sans-serif;
+}
+
+h2 {
+	color:#000;
+	font:100 20px Ubuntu, arial, verdana, tahoma, sans-serif;
+}
+
+p {
+	color:#767676;
+	font:12px verdana, arial, tahoma, sans-serif;
+}
+
+
+/**
+*** LINKS COM SETINHA
+**/
+.lnkSeta {
+	background:url(images/setaRightBox.png) no-repeat left 2px;
+	color:#3d6495;
+	font: 12px Ubuntu, verdana, arial, sans-serif;
+	display:inline-block;
+	padding:0 0 0 12px;
+	margin:5px 0;
+}
+
+.lnkSeta:hover {text-decoration:none; color:#1e324a; background-position:left -25px;}
+
+.lnkSetaWhite {
+	background:url(images/setaRightBoxWhite.png) no-repeat left center;
+	color:#FFF;
+}
+.lnkSetaWhite:hover {background-position:left center; }
+
+
+/** BOX COM FUNDO CINZA
+*** geralmente tem um collapseGroup dentro
+**/
+.boxGray {
+	background:#d5d5d5 url(images/bgBoxGray.png) repeat-X top center;
+	border-radius:3px;
+	border:1px solid #e3e3e3;
+	padding-bottom:3px;
+}
+
+.boxGray h2 {
+	font-size: 24px;
+	padding:10px 10px 0 15px; margin:0 0 0 -1px;
+	background:url(images/setaDetalheTit.png) no-repeat left center;
+}
+
+.boxGray p {
+	font:12px verdana, arial, tahoma, sans-serif;
+	color:#797979;
+	margin:0;
+	padding: 0 15px 11px 15px;
+}
+
+/** COLLAPSE
+*** É o padrão do Bootstrap com algumas mudanças visuais
+**/
+.collapseGroup {padding-top:20px; margin:0 10px;}
+.collapseGroup .details {
+	background:#f1f1f1;
+	padding:3px 7px;
+	margin-bottom:5px;
+	border-radius:3px;
+	border:1px solid #d6d6d6;
+}
+.collapseGroup .details.active {background:#FFF;}
+
+.collapseGroup summary {
+	color:#545454;
+	cursor:pointer;
+	font-family:verdana;
+	display:block;
+	background:url(images/setacollapseBottom.png) no-repeat 99% center;
+}
+.collapseGroup summary.active {	font-weight:bold; 	background:url(images/setacollapseTop.png) no-repeat 99% 8px;}
+
+.collapseGroup summary span {
+	font:bold 18px Ubuntu;
+	color:#4b7cb8;
+}
+
+.collapseGroup .details p {padding:10px 30px;}
+
+/**
+*** Barra com select de Quantidade de exibição e paginação
+**/
+.navView {
+	margin:20px 0;
+	padding:7px 10px;
+	color:#767676;
+	border-bottom:1px solid #e5e5e5;
+}
+
+table ~ .navView, .navView.afterTable {border-bottom:0; border-top:1px solid #e5e5e5;}
+
+.navView label {color:#767676;}
+
+/**
+*** PAGINACAO
+**/
+.pagination {padding:5px 0 0; margin:0; height:auto;}
+.pagination ul {margin:0;box-shadow:none;}
+
+.pagination a, .pagination .current {
+	float:none;
+	display:inline-block;
+	line-height: 16px;
+	padding: 0 5px;
+	border: 1px solid #D7D7D7;
+	border-radius: 4px;
+	font-size: 11px;
+	color:#797979;
+}
+.pagination li.first-child a, .pagination li.last-child a, .pagination .first a, .pagination .prev a, .pagination .next a, .pagination .last a {
+	border:none;
+	color:#3d6495;
+}
+.pagination .first a, .pagination .last a {display:none;}
+
+.pagination .prev a, .pagination .next a {background:url(images/seta-pagination.png) no-repeat 0 0;}
+.pagination .prev a {background-position:left 6px; padding-left:10px;}
+.pagination .next a {background-position:right -13px; padding-right:10px;}
+
+.pagination .current, .pagination .active a {
+	border:1px solid #7aa4d1;
+	color:#FFF;
+	background-color:#264f94;
+	background-image: linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+	background-image: -o-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+	background-image: -moz-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+	background-image: -webkit-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+	background-image: -ms-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.17, rgb(38,78,148)),
+		color-stop(0.91, rgb(122,164,209))
+	);
+}
+
+.pagination .disabled a {border:none;}
+
+.navView .pagination {float:right;}
+
+
+/**
+*** TABLES
+**/
+table.tableList {
+	width:100%;
+	border-bottom:5px solid #d3d3d3;
+}
+
+table.tableList thead {
+	background:#545454;
+}
+
+table.tableList thead th {
+	border-right:1px solid #FFF;
+	color:#FFF;
+	padding:7px 10px;
+	text-align:center;
+	font:bold 13px verdana, arial, tahoma, sans-serif;
+}
+table.tableList thead th a {color:#FFF;}
+table.tableList thead th a:hover {color:#FFF;}
+
+table.tableList tbody td {
+	color:#797979;
+	padding:2px 0;
+	text-align:center;
+	border-right:1px solid #dddddd;
+}
+table.tableList tbody td:last-child {border-right:none;}
+table.tableList tbody tr:nth-child(even) {background-color:#eeeeee;}
+table.tableList thead th.actived {background-color:#2a2a2a;}
+
+/**
+*** ICONES
+**/
+.ico {
+	background-position:center left;
+	background-repeat:no-repeat;
+	padding-left:18px;
+	color:#3d6495;
+	font: 12px Ubuntu, verdana, arial, sans-serif;
+	display:inline-block;
+	margin:5px 0;
+}
+.ico:hover {text-decoration:none; color:#1e324a;}
+
+.ico-tabela {background-image:url(images/ico-tabela.png);}
+.ico-estornar {background-image:url(images/ico-estornar.png);}
+

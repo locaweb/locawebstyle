@@ -1,0 +1,132 @@
+<div class="model" id="tabela-listagem">
+
+<div class="examples">
+        <h3>Exemplo</h3>
+
+    <h2>Tabelas de listagem</h2>
+
+
+      <table class="tableList">
+        <thead>
+          <tr>
+            <th><a href="#"># do pedido</a></th>
+            <th><a href="#">Data - Hora</a></th>
+            <th><a href="#">Status</a></th>
+            <th><a href="#">Valor</a></th>
+            <th colspan="2">Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td>74994</td>
+              <td>14/03/12 - 11h25</td>
+              <td>Autorizada</td>
+              <td>R$ 297,00</td>
+              <td><a href="#" class="ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
+              <td> <a href="#" class="ico ico-estornar" data-toggle="modal">Estornar</a></td>
+            </tr>
+            <tr>
+              <td>74994</td>
+              <td>14/03/12 - 11h25</td>
+              <td>Autorizada</td>
+              <td>R$ 297,00</td>
+              <td><a href="#" class="ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
+              <td> <a href="#" class="ico ico-estornar" data-toggle="modal">Estornar</a></td>
+            </tr>
+            <tr>
+              <td>74994</td>
+              <td>14/03/12 - 11h25</td>
+              <td>Autorizada</td>
+              <td>R$ 297,00</td>
+              <td><a href="#" class="ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
+              <td> <a href="#" class="ico ico-estornar" data-toggle="modal">Estornar</a></td>
+            </tr>
+
+        </tbody>
+      </table>
+</div>
+
+<div class="codes">
+     <div class="divCode">
+        <h3>HTML</h3>
+        <pre class="brush: html">
+<table class="records tableList">
+  <thead>
+    <tr>
+      <th><a href="/transactions?asc_field=order_number"># do pedido</a></th>
+      <th><a href="/transactions?asc_field=updated_at">Data - Hora</a></th>
+      <th><a href="/transactions?desc_field=status">Status</a></th>
+      <th><a href="/transactions?asc_field=total">Valor</a></th>
+      <th colspan="2">Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr class="record" id="record-3">
+        <td>66261</td>
+        <td>14/03/12 - 11h25</td>
+        <td>Autorizada</td>
+        <td>R$ 902,00</td>
+        <td><a href="#" class="cancel-transaction gateway-open-modal ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
+        <td> <a href="/transaction/13/cancel_form" class="cancel-transaction gateway-open-modal ico ico-estornar" data-toggle="modal">Estornar</a></td>
+      </tr>
+      <tr class="record" id="record-4">
+        <td>74994</td>
+        <td>14/03/12 - 11h25</td>
+        <td>Autorizada</td>
+        <td>R$ 297,00</td>
+        <td><a href="#" class="cancel-transaction gateway-open-modal ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
+        <td> <a href="/transaction/13/cancel_form" class="cancel-transaction gateway-open-modal ico ico-estornar" data-toggle="modal">Estornar</a></td>
+      </tr>
+      <tr class="record" id="record-11">
+        <td>89124</td>
+        <td>14/03/12 - 11h25</td>
+        <td>Autorizada</td>
+        <td>R$ 341,00</td>
+        <td><a href="#" class="cancel-transaction gateway-open-modal ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
+        <td> <a href="/transaction/13/cancel_form" class="cancel-transaction gateway-open-modal ico ico-estornar" data-toggle="modal">Estornar</a></td>
+      </tr>
+
+  </tbody>
+</table>
+        </pre>
+      </div>
+
+      <div class="divCode cssCode">
+        <h3>CSS</h3>
+        <pre class="brush: css">
+table.tableList {
+  width:100%;
+  border-bottom:5px solid #d3d3d3;
+}
+
+table.tableList thead {
+  background:#545454;
+}
+
+table.tableList thead th {
+  border-right:1px solid #FFF;
+  color:#FFF;
+  padding:7px 10px;
+  text-align:center;
+  font:bold 13px verdana, arial, tahoma, sans-serif;
+}
+table.tableList thead th a {color:#FFF;}
+table.tableList thead th a:hover {color:#FFF;}
+
+table.tableList tbody td {
+  color:#797979;
+  padding:2px 0;
+  text-align:center;
+  border-right:1px solid #dddddd;
+}
+table.tableList tbody td:last-child {border-right:none;}
+table.tableList tbody tr:nth-child(even) {background-color:#eeeeee;}
+table.tableList thead th.actived {background-color:#2a2a2a;}
+        </pre>
+      </div>
+
+
+</div>
+</div>

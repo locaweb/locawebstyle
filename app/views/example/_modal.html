@@ -1,0 +1,75 @@
+<div class="model" id="modal">
+
+<div class="examples">
+    <h3>Exemplo</h3>
+    <h2>Modais ou Lightbox</h2>
+    <p>As modais são feitas integralmente no padrão Bootstrap. Qualquer dúvida, você pode ver <a href="http://twitter.github.com/bootstrap/javascript.html#modals">como é feito aqui</a>.</p>
+
+    <p><a class="edit-account-name lnkSeta" data-toggle="modal" data-target="#modalEditarNome" href="#">Teste a modal aqui</a>!</p>
+
+    <p>O link tem alguns atributos que precisam estar presentes para que a modal seja chamada. Um deles é o <strong>data-toggle="modal"</strong>, que faz o javascript encontrar o elemento com o nome MODAL, e o atributo <strong>data-target="#modalEditarNome"</strong>, que pega o ID específico da modal que deverá ser chamada.</p>
+
+</div>
+
+<div class="codes">
+     <div class="divCode">
+        <h3>HTML</h3>
+
+        <p class="label label-warning">Markup do link</p>
+        
+        <pre class="brush: html">
+          <a class="edit-account-name lnkSeta" data-toggle="modal" data-target="#modalEditarNome" href="#">Teste a modal aqui</a>
+        </pre>
+        <br>
+        <p class="label label-warning">HTML da MODAL</p>
+
+        <pre class="brush: html">
+<div class="modal gateway-modal-content" id="modalEditarNome">
+      
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Editar Nome</h3>
+        <p>Atribuir um nome para a conta com identificador 13427</p>
+      </div>
+
+      <form accept-charset="UTF-8" action="/accounts/1/update_name" class="simple_form account" id="edit_account_1" method="post" novalidate="novalidate">
+
+        <div class="modal-body">
+            <label class="string optional" for="account_name">Nome </label>
+            <input id="account_name" name="account[name]" size="30" type="text">
+        </div>
+
+        <div class="modal-footer">
+          <input class="btn btn-primary" name="commit" type="submit" value="Atualizar Conta">
+          <a href="#" class="btn close" data-dismiss="modal">Cancelar</a>
+        </div>
+      
+      </form>
+    </div>
+        </pre>
+      </div>
+
+    <div class="modal gateway-modal-content" id="modalEditarNome">
+      
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Editar Nome</h3>
+        <p>Atribuir um nome para a conta com identificador 13427</p>
+      </div>
+
+      <form accept-charset="UTF-8" action="/accounts/1/update_name" class="simple_form account" id="edit_account_1" method="post" novalidate="novalidate">
+
+        <div class="modal-body">
+            <label class="string optional" for="account_name">Nome </label>
+            <input id="account_name" name="account[name]" size="30" type="text">
+        </div>
+
+        <div class="modal-footer">
+          <input class="btn btn-primary" name="commit" type="submit" value="Atualizar Conta">
+          <a href="#" class="btn close" data-dismiss="modal">Cancelar</a>
+        </div>
+      
+      </form>
+    </div>
+</div>
+</div>

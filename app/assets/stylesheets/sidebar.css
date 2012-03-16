@@ -1,0 +1,77 @@
+.sidebar {margin:25px 0 0;}
+
+.sideBox {
+	background:#F0F0F0 url(images/bgSideBoxGray.png) repeat-X top center;
+	border-radius:3px;
+	border:1px solid #e5e5e5;
+	position:relative;
+	margin-bottom:45px;
+}
+
+.innerSideBox {
+	margin:10px;
+	border-radius:2px;
+}
+.innerSideBox.boxWhite {background:#FFF; padding:10px;}
+.innerSideBox.boxGray {background:#e2e2e2; padding:10px;}
+
+.sideBox h6 {
+	margin:0; padding:0;
+	text-transform:capitalize;
+	font:11px verdana, tahoma, arial, sans-serif;
+	color:#848484;
+}
+
+.sideBox p {
+	font:12px verdana, tahoma, arial, sans-serif;
+	margin:0; padding:0;
+	color:#2a2a2a;	
+}
+
+.sideBox hr {
+	margin:10px 0;
+}
+
+
+/** Títulos com ícones da SIDEBAR **/
+.titSide {
+	text-transform:uppercase;
+	font:300 18px Ubuntu;
+	margin:-26px 0 0 10px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding: 2px 0 18px 40px;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+.titSide.titDadosConta {background-image:url(images/ico-dadosConta.png)}  
+.titSide.titMeiosPagto {background-image:url(images/ico-convenios.png)}   
+.titSide.titAjudaSuporte {background-image:url(images/ico-dadosConta.png)}
+/** FIM Títulos com ícones da SIDEBAR **/
+
+/** Lista com links em BG Branco **/
+.listWhite {margin:0; padding:0;}
+
+.listWhite li {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.listWhite li a {
+	padding: 3px 10px 3px 15px;
+	background: white url(images/setaDirList.png) no-repeat 5px 8px;
+	color: #545454;
+	font: 12px verdana, tahoma, arial, sans-serif;
+	display: block;
+	margin-bottom: 1px;
+}
+
+.sidebar a[rel="external"]:after {
+	content:" ";
+	display:inline-block;
+	background: url(images/externalLnk.png) no-repeat right top;
+	width:10px; height:10px;
+	margin-left:5px;
+}
+/** FIM LISTA BRANCA **/

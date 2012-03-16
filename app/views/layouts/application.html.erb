@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="guideLoca" lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Locaweb Style Guide</title>
+	<%= stylesheet_link_tag :application %>
+	<%= stylesheet_link_tag 'manual/application' %>
+	<%= javascript_include_tag :application %>
+	<%= javascript_include_tag 'manual/application' %>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com.s3.amazonaws.com/pub/sh/3.0.83/scripts/shBrushCss.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com.s3.amazonaws.com/pub/sh/3.0.83/scripts/shBrushXml.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="destaque">
+	<h1><img src="http://img.locaweb.com.br/templates/locaweb/images/logo_lw_maior.20100729134130.gif"></h1>
+	<p>Guia visual e de estilo dos elementos que formam os layouts dos serviços Locaweb</p>
+</div>
+
+<%= render 'sidebar' %>
+
+<!--
+  CONTEÚDOS
+-->
+
+<!-- Inicial -->
+<%= render 'instrucoes-iniciais' %>
+<%= render 'instalacao' %>
+<%= render 'estrutura-folders' %>
+
+<!-- Estrutura -->
+<%= render 'example/estrutura-mestre' %>
+<%= render 'example/header-principal' %>
+<%= render 'example/footer-principal' %>
+<%= render 'example/sidebar' %>
+
+<!-- Elementos -->
+<%= render 'example/collapse' %>
+<%= render 'example/tabs' %>
+<%= render 'example/filtro-paginacao' %>
+<%= render 'example/modal' %>
+
+<!-- Tabelas -->
+<%= render 'example/tabela-listagem' %>
+
+</body>
+</html>
