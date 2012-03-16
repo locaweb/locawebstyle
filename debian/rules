@@ -31,7 +31,6 @@ binary-indep: build install
 	dh_install -X/usr/share/man --fail-missing
 	dh_installman
 	dh_installchangelogs
-	dh_installdocs
 	dh_lintian
 	dh_link
 	dh_compress
