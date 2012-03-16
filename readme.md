@@ -26,27 +26,22 @@ Dentro do Bootstrap eles usam o Normalize, que é um CSS Reset bastante completo
 
 O JQuery é o framework mais utilizado para controlar comportamentos de elementos e outras coisinhas mais. Acho que ele dispensa apresentações. [Link do projeto](http://jquery.com)
 
+
 *** Modernizr ***
 
 O Modernizr é um script de detectação de compatibilidade do CSS3. Ele nos avisa se o browser suporta ou não suporta as novas propriedades do CSS, nos dando a possibilidade de criar fallbacks para os browsers incompatíveis. Assim fica muito fácil saber qual browser suporta ou não SVG, Canvas, RGBA, drop shadow, gradiente e tudo o mais.
 
 Ele foi criado por desenvolvedores muito renomados como [Paul Irish](http://paulirish.com/) e [Faruk Ates](http://farukat.es/). [Site do projeto](http://www.modernizr.com/)
 
------
 
+*** eCSStender ***
 
-Clonando o projeto
------------
+eCSStender é um pluginzinho lindo que faz com que os browsers, quer dizer, browsers não, IEs, entendam coisas maravilhosas que o CSS faz, tipo, o IE7 e o IE8 entendem a pseudo-classe first-child, mas não entendem a pseudo-classe last-child… Esse plugin faz eles entenderem… 
 
-[Endereço no GIT Locaweb](https://git.locaweb.com.br/locawebstyle/locawebstyle)
-
-[Endereço do projeto no Git](git://git.locaweb.com.br/locawebstyle/locawebstyle.git)
-
-[SSH](git@git.locaweb.com.br:locawebstyle/locawebstyle.git)
+Leia mais sobre o [eCSStender](http://ecsstender.org/)
 
 
 -----
-
 
 Se der pau, falo com quem?
 -------
@@ -54,7 +49,7 @@ Se der pau, falo com quem?
 Antes de pular da janela, tente falar com o [Diego Eis](diego.eis@locaweb.com.br).
 O [Rachad](rachad.honein@locaweb.com.br) é o gerente responsável e pode te ouvir com paciência. ;-)
 
-Outros que podem ajudar caso algo der errado é o [Márcio Trindade](marcio.trindade@locaweb.com.br) do SASS também pode ajudar bastante, juntamente com o [Ronildo Sousa](ronildo.sousa@locaweb.com.br) e o [William Moraes](william.moraes@locaweb.com.br).
+O [Márcio Trindade](marcio.trindade@locaweb.com.br) do SASS também pode ajudar bastante caso der algo errado. Foi ele montou o CDN mother fucker que faz a instalação desse guia nos projetos ser fácil.
 
 **Mas eu quero ajudar a aumentar a inteligência dessa coisa toda**
 
@@ -69,10 +64,12 @@ Autores
 
 + http://twitter.com/diegoeis
 
-**Design inicial -- Ítalo Oliveira **
+**Design inicial -- (Ítalo Oliveira)[italo.oliveira@locaweb.com.br] **
+**CDN Mother Fucker -- (Marcio Trindade)[marcio.trindade@locaweb.com.br]**
 
 **Equipe SASS**
 
 -----
 
-v1 - 15 de Março de 2012
+v0.1 - 15 de Março de 2012
+v0.3 - 16 de Março de 2012
