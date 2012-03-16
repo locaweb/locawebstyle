@@ -1,24 +1,65 @@
+fieldset {
+    border:none;
+    padding:0; margin:0;
+}
+
+fieldset h6 {
+    text-transform:inherit;
+    font:400 14px Ubuntu;
+    color:#2a2a2a;
+    margin:0 10px 10px;
+}
+
+label, .form-horizontal .control-label {
+    font-weight:bold;
+    display:inline-block;
+    vertical-align:middle;
+    padding-right:5px;
+    text-align:right;
+    float:none;
+    width:100px;
+    color:#545454;
+    line-height:12px;
+}
+
+.modal label, .modal .form-horizontal .control-label {width:140px;}
+
+.opcoesBuscaAvancada .control-group .control-label:first-child, 
+.control-group .control-label:first-child {margin-left:0;}
+
+input, .control-group input {vertical-align:middle; display:inline-block; float:none;}
+
+.navView .control-label {width:auto;}
+.control-group .add-on {float:none; display:inline-block; vertical-align:middle;}
 
 /** Busca avançada **/
-.boxBuscaAvancada {
-	border-radius:3px;
-	background:#dfdddd;
-	padding:15px;
-	margin:30px 0;
-}
-.boxBuscaAvancada label.control-label {font-weight:bold; min-width:70px; width:auto; padding-right:10px;}
-
-.boxBuscaAvancada input, .boxBuscaAvancada .add-on {float:none; display:inline-block;}
-.boxBuscaAvancada .add-on {margin-left:-6px;}
-
-.boxBuscaAvancada h2 {
-	margin:0 0 10px;
+.boxFiltro {
+    border-radius:3px;
+    background:#dfdddd;
+    padding:15px;
+    margin:30px 0;
 }
 
-.boxBuscaAvancada .datepicker {width:94px;}
+.boxFiltro .add-on {margin-left:-6px;}
 
-.form-horizontal .controls {margin-left:0;}
+.boxFiltro h2 {margin:0 0 10px;}
 
-.transaction-search-per-page {
-	width:70px;
+.boxFiltro .datepicker {width:94px;}
+
+
+/* Quando ativa busca avançada */
+.control-group.collapse {margin-bottom:0;}
+.control-group.collapse.in {margin-bottom:18px;}
+
+.opcoesBuscaAvancada {
+    clear:both;
+    background:#cecccc;
+    padding:10px 0;
+    border-radius:5px;
 }
+
+.transaction-search-per-page {width:70px;}
+
+.input30 {width:30px;}
+.input120 {width:120px;}
+.input240 {width:240px;}

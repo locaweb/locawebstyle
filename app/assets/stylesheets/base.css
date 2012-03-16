@@ -1,8 +1,8 @@
 #main {margin-bottom:50px;}
 
 .limite {
-	width:988px;
-	margin: 0 auto;
+    width:988px;
+    margin: 0 auto;
 }
 
 .nofloat {float:none;}
@@ -48,8 +48,8 @@
 }
 
 .btn-primary:hover {
-	background-color:#4b7cb8;
-	background-image:none;
+    background-color:#4b7cb8;
+    background-image:none;
 }
 
 .btn.close {
@@ -69,8 +69,8 @@
 }
 
 .btn.close:hover {
-	background-color:#ebebeb;
-	background-image:none;
+    background-color:#ebebeb;
+    background-image:none;
 }
 
 
@@ -78,18 +78,18 @@
 *** Text basic styles
 **/
 h1, .modal-header h3 {
-	color:#000;
-	font:bold 26px Ubuntu, arial, verdana, tahoma, sans-serif;
+    color:#000;
+    font:bold 26px Ubuntu, arial, verdana, tahoma, sans-serif;
 }
 
 h2 {
-	color:#000;
-	font:100 20px Ubuntu, arial, verdana, tahoma, sans-serif;
+    color:#000;
+    font:100 20px Ubuntu, arial, verdana, tahoma, sans-serif;
 }
 
 p {
-	color:#767676;
-	font:12px verdana, arial, tahoma, sans-serif;
+    color:#767676;
+    font:12px verdana, arial, tahoma, sans-serif;
 }
 
 
@@ -97,19 +97,20 @@ p {
 *** LINKS COM SETINHA
 **/
 .lnkSeta {
-	background:url(images/setaRightBox.png) no-repeat left 2px;
-	color:#3d6495;
-	font: 12px Ubuntu, verdana, arial, sans-serif;
-	display:inline-block;
-	padding:0 0 0 12px;
-	margin:5px 0;
+    background:url(images/setaRightBox.png) no-repeat left 2px;
+    color:#3d6495;
+    font: 12px Ubuntu, verdana, arial, sans-serif;
+    display:inline-block;
+    padding:0 0 0 12px;
+    margin:5px 0;
+    vertical-align: middle;
 }
 
 .lnkSeta:hover {text-decoration:none; color:#1e324a; background-position:left -25px;}
 
 .lnkSetaWhite {
-	background:url(images/setaRightBoxWhite.png) no-repeat left center;
-	color:#FFF;
+    background:url(images/setaRightBoxWhite.png) no-repeat left center;
+    color:#FFF;
 }
 .lnkSetaWhite:hover {background-position:left center; }
 
@@ -118,23 +119,23 @@ p {
 *** geralmente tem um collapseGroup dentro
 **/
 .boxGray {
-	background:#d5d5d5 url(images/bgBoxGray.png) repeat-X top center;
-	border-radius:3px;
-	border:1px solid #e3e3e3;
-	padding-bottom:3px;
+    background:#d5d5d5 url(images/bgBoxGray.png) repeat-X top center;
+    border-radius:3px;
+    border:1px solid #e3e3e3;
+    padding-bottom:3px;
 }
 
 .boxGray h2 {
-	font-size: 24px;
-	padding:10px 10px 0 15px; margin:0 0 0 -1px;
-	background:url(images/setaDetalheTit.png) no-repeat left center;
+    font-size: 24px;
+    padding:10px 10px 0 15px; margin:0 0 0 -1px;
+    background:url(images/setaDetalheTit.png) no-repeat left center;
 }
 
 .boxGray p {
-	font:12px verdana, arial, tahoma, sans-serif;
-	color:#797979;
-	margin:0;
-	padding: 0 15px 11px 15px;
+    font:12px verdana, arial, tahoma, sans-serif;
+    color:#797979;
+    margin:0;
+    padding: 0 15px 11px 15px;
 }
 
 /** COLLAPSE
@@ -142,26 +143,26 @@ p {
 **/
 .collapseGroup {padding-top:20px; margin:0 10px;}
 .collapseGroup .details {
-	background:#f1f1f1;
-	padding:3px 7px;
-	margin-bottom:5px;
-	border-radius:3px;
-	border:1px solid #d6d6d6;
+    background:#f1f1f1;
+    padding:3px 7px;
+    margin-bottom:5px;
+    border-radius:3px;
+    border:1px solid #d6d6d6;
 }
 .collapseGroup .details.active {background:#FFF;}
 
 .collapseGroup summary {
-	color:#545454;
-	cursor:pointer;
-	font-family:verdana;
-	display:block;
-	background:url(images/setacollapseBottom.png) no-repeat 99% center;
+    color:#545454;
+    cursor:pointer;
+    font-family:verdana;
+    display:block;
+    background:url(images/setacollapseBottom.png) no-repeat 99% center;
 }
-.collapseGroup summary.active {	font-weight:bold; 	background:url(images/setacollapseTop.png) no-repeat 99% 8px;}
+.collapseGroup summary.active { font-weight:bold;   background:url(images/setacollapseTop.png) no-repeat 99% 8px;}
 
 .collapseGroup summary span {
-	font:bold 18px Ubuntu;
-	color:#4b7cb8;
+    font:bold 18px Ubuntu;
+    color:#4b7cb8;
 }
 
 .collapseGroup .details p {padding:10px 30px;}
@@ -170,10 +171,11 @@ p {
 *** Barra com select de Quantidade de exibição e paginação
 **/
 .navView {
-	margin:20px 0;
-	padding:7px 10px;
-	color:#767676;
-	border-bottom:1px solid #e5e5e5;
+    margin:20px 0;
+    padding:7px 10px;
+    color:#767676;
+    clear:both;
+    border-bottom:1px solid #e5e5e5;
 }
 
 table ~ .navView, .navView.afterTable {border-bottom:0; border-top:1px solid #e5e5e5;}
@@ -187,18 +189,18 @@ table ~ .navView, .navView.afterTable {border-bottom:0; border-top:1px solid #e5
 .pagination ul {margin:0;box-shadow:none;}
 
 .pagination a, .pagination .current {
-	float:none;
-	display:inline-block;
-	line-height: 16px;
-	padding: 0 5px;
-	border: 1px solid #D7D7D7;
-	border-radius: 4px;
-	font-size: 11px;
-	color:#797979;
+    float:none;
+    display:inline-block;
+    line-height: 16px;
+    padding: 0 5px;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+    font-size: 11px;
+    color:#797979;
 }
 .pagination li.first-child a, .pagination li.last-child a, .pagination .first a, .pagination .prev a, .pagination .next a, .pagination .last a {
-	border:none;
-	color:#3d6495;
+    border:none;
+    color:#3d6495;
 }
 .pagination .first a, .pagination .last a {display:none;}
 
@@ -207,21 +209,20 @@ table ~ .navView, .navView.afterTable {border-bottom:0; border-top:1px solid #e5
 .pagination .next a {background-position:right -13px; padding-right:10px;}
 
 .pagination .current, .pagination .active a {
-	border:1px solid #7aa4d1;
-	color:#FFF;
-	background-color:#264f94;
-	background-image: linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-	background-image: -o-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-	background-image: -moz-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-	background-image: -webkit-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-	background-image: -ms-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0.17, rgb(38,78,148)),
-		color-stop(0.91, rgb(122,164,209))
-	);
+    border:1px solid #7aa4d1;
+    color:#FFF;
+    background-color:#264f94;
+    background-image: linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+    background-image: -o-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+    background-image: -moz-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+    background-image: -webkit-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+    background-image: -ms-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.17, rgb(38,78,148)),
+        color-stop(0.91, rgb(122,164,209)));
 }
 
 .pagination .disabled a {border:none;}
@@ -233,29 +234,29 @@ table ~ .navView, .navView.afterTable {border-bottom:0; border-top:1px solid #e5
 *** TABLES
 **/
 table.tableList {
-	width:100%;
-	border-bottom:5px solid #d3d3d3;
+    width:100%;
+    border-bottom:5px solid #d3d3d3;
 }
 
 table.tableList thead {
-	background:#545454;
+    background:#545454;
 }
 
 table.tableList thead th {
-	border-right:1px solid #FFF;
-	color:#FFF;
-	padding:7px 10px;
-	text-align:center;
-	font:bold 13px verdana, arial, tahoma, sans-serif;
+    border-right:1px solid #FFF;
+    color:#FFF;
+    padding:7px 10px;
+    text-align:center;
+    font:bold 13px verdana, arial, tahoma, sans-serif;
 }
 table.tableList thead th a {color:#FFF;}
 table.tableList thead th a:hover {color:#FFF;}
 
 table.tableList tbody td {
-	color:#797979;
-	padding:2px 0;
-	text-align:center;
-	border-right:1px solid #dddddd;
+    color:#797979;
+    padding:2px 0;
+    text-align:center;
+    border-right:1px solid #dddddd;
 }
 table.tableList tbody td:last-child {border-right:none;}
 table.tableList tbody tr:nth-child(even) {background-color:#eeeeee;}
@@ -265,16 +266,32 @@ table.tableList thead th.actived {background-color:#2a2a2a;}
 *** ICONES
 **/
 .ico {
-	background-position:center left;
-	background-repeat:no-repeat;
-	padding-left:18px;
-	color:#3d6495;
-	font: 12px Ubuntu, verdana, arial, sans-serif;
-	display:inline-block;
-	margin:5px 0;
+    background-position:center left;
+    background-repeat:no-repeat;
+    padding-left:18px;
+    color:#3d6495;
+    font: 12px Ubuntu, verdana, arial, sans-serif;
+    display:inline-block;
+    margin:5px 0;
 }
 .ico:hover {text-decoration:none; color:#1e324a;}
 
 .ico-tabela {background-image:url(images/ico-tabela.png);}
 .ico-estornar {background-image:url(images/ico-estornar.png);}
+
+/***
+*** Actions Botoes
+**/
+.boxActions, .modal-footer {
+    border-top:5px solid #bfbfbf;
+    background-color:transparent;
+    padding:20px 0 20px 110px;
+}
+
+.modal-footer {padding-left:145px;}
+
+.boxActions .btn,
+.modal-footer .btn  {display:inline-block; margin-right:15px; float:none;}
+
+.btn-primary {font-weight:bold;}
 

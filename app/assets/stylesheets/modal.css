@@ -1,23 +1,24 @@
 /** MODAL **/
+.modal {
+  padding:10px;
+}
+
 .modal-header {
-	border:none;
-	padding:10px;
-	padding-bottom:0;
+  border:none;
+  padding-bottom:0;
+  padding: 0; margin:0;
+}
+
+.modal-body {
+  padding:15px 0;
 }
 
 .modal-header h3 {
-	margin:0;
-	padding:0 0 10px;
-	font-size:20px;
-	font-weight:400;
-	border-bottom:1px solid #EEE;
+  margin:0;
+  padding:0 0 10px;
+  font-size:20px;
+  font-weight:400;
+  border-bottom:1px solid #EEE;
 }
-.modal-footer {
-	border-top:5px solid #e5e5e5;
-	background-color:transparent;
-	margin:0 10px;
-	padding:15px 0;
-}
-
-.modal-footer .btn {float:left;}
+.modal-footer {border-top:5px solid #e5e5e5;}
 
