@@ -1,12 +1,15 @@
-@import url('bootstrap/css/bootstrap.css');
-@import url('reset.css');
-@import url('fonts.css');
-@import url('forms.css');
-@import url('grid.css');
-@import url('tabs.css');
-@import url('toolbar.css');
-@import url('base.css');
-@import url('footer.css');
-@import url('header.css');
-@import url('modal.css');
-@import url('sidebar.css');
+/*
+ *= require_self
+ *= require bootstrap/css/bootstrap
+ *= require reset
+ *= require fonts
+ *= require forms
+ *= require grid
+ *= require tabs
+ *= require toolbar
+ *= require header
+ *= require footer
+ *= require sidebar
+ *= require modal
+ *= require base
+ */
