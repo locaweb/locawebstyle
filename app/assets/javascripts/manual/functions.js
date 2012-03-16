@@ -19,4 +19,5 @@ $(document).ready(function(){
 
   $('.guideLoca *').removeClass('first-child')
   $('.guideLoca *').removeClass('last-child')
+  $('.guideLoca .divCode .setaTab').remove()
 });
