@@ -1,0 +1,12 @@
+Source: locastyle
+Section: ruby
+Priority: optional
+Maintainer: Diego Eis <diego.eis@locaweb.com.br>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.9.1
+Homepage: http://locaweb.com.br
+
+Package: locastyle
+Architecture: any
+Depends: ruby1.9.1, libruby1.9.1, libbundler-ruby1.9.1, librack-ruby1.9.1, nodejs, libxslt-dev, libxml2-dev
+Description: locastyle
