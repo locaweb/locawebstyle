@@ -28,21 +28,22 @@ $(document).ready(function(){
  $(".ui-datepicker-trigger").addClass("icon-calendar").html('').wrap('<span class="add-on">');
 
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
-  var btnBuscaAvancadaText = $('a[data-target="#optBuscaAvancada"]').html();
-  
-  $('a[data-target="#optBuscaAvancada"]').click(function(){
+  var btnBuscaAvancadaText = $('a.lnkSeta[data-text]').html();
+  var btnBuscaAvancadaTextAlt = $('a.lnkSeta[data-text]').attr('data-text');
+
+  $('a.lnkSeta[data-target]').click(function(){
     if ( $(this).html() == btnBuscaAvancadaText  ){
-      $(this).html('Retornar para a busca simples');
+      $(this).html(btnBuscaAvancadaTextAlt);
     } else {
       $(this).html( btnBuscaAvancadaText );
     }
   });
 
-  // Setinha na TAB
+  // Setinha nas TABs
   $('.tabs li a').append('<span class="setaTab" />');
   $('.tabs li:first-child').addClass('active');
 
-  // Faz a modal animar
+  // Faz a modal animar \o/
   $('.modal').hide().addClass('fade');
 
   // Adiciona uma classe aos elementos logo após uma tabela
