@@ -83,8 +83,9 @@ h1, .modal-header h3 {
 }
 
 h2 {
-  color:#000;
-  font:100 20px Ubuntu, arial, verdana, tahoma, sans-serif;
+    color:#000;
+    font:100 20px Ubuntu, arial, verdana, tahoma, sans-serif;
+    margin:25px 0 10px;
 }
 
 p {
@@ -114,6 +115,14 @@ p {
 }
 .lnkSetaWhite:hover {background-position:left center; }
 
+.actLnk .lnkSeta {
+  border-right:1px solid #d3d3d3;
+  padding-right: 10px;
+  margin:0;
+  margin-right: 5px;
+}
+
+.actLnk .lnkSeta:last-child {border-right:none; margin-right:0; padding-right:0;}
 
 /** BOX COM FUNDO CINZA
 *** geralmente tem um collapseGroup dentro
@@ -295,3 +304,45 @@ table.tableList thead th.actived {background-color:#2a2a2a;}
 
 .btn-primary {font-weight:bold;}
 
+/**
+*** Listagem de meios de pagamentos
+**/
+.listagemMeiosPagtos {
+  padding:0; margin:0;
+}
+
+.listagemMeiosPagtos li {
+  padding: 10px 10px 10px 25px;
+  list-style:none;
+  border:1px solid #e5e5e5;
+  margin-bottom:10px;
+  overflow:hidden;
+  background:url(images/bgMeioPagamentoCinza.png) no-repeat left center;
+}
+.listagemMeiosPagtos .pagtoAtivo {
+  background:url(images/bgMeioPagamentoVerde.png) no-repeat left center;
+}
+
+.listagemMeiosPagtos li img {
+  float:left;
+  margin-right:10px;
+}
+
+.listagemMeiosPagtos h6 {
+  margin:0;
+  padding:0;
+  color:#2a2a2a;
+  font:bold 12px verdana, arial, sans-serif;
+  text-transform:inherit;
+}
+
+.listagemMeiosPagtos p.tokenNumberMeioPagto {
+  background:#ececec;
+  color:#767676;
+  margin:5px 0 0 75px;
+  padding:5px;
+}
+
+.listagemMeiosPagtos p.tokenNumberMeioPagto strong {color:#545454;}
+
+.listagemMeiosPagtos .actLnk.fright {margin-top:-6px;}
