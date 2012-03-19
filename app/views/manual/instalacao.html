@@ -1,51 +1,28 @@
 <div class="model" id="instalacao">
+	<div class="examples">
+		<h2>Instruções de instalação</h2>
+		<p><strong>Primeiro passo:</strong> Adicione as tags abaixo para adicionar o pacote de CSS e Javascript.</p>
+		<p>
+			<i> &lt;link rel="stylesheet" type="text/css" href="<%= root_url %>assets/application.css"&gt;<br>
+			&lt;script type="text/javascript" src="<%= root_url %>assets/application.js"&gt;&lt;/script&gt;</i>
+		</p>
+		<p>
+			<strong>Segundo passo:</strong> Não tem segundo passo. ;-)
+		</p>
+	</div>
 
-<div class="examples">
-        <h2>Instruções de instalação</h2>
-        <p>
-                <strong>Primeiro passo:</strong> Adicione as tags abaixo para adicionar o pacote de CSS e Javascript.
-        </p>
-        <p>
-               <i> &lt;link rel="stylesheet" type="text/css" href="http://locastyle.devintegration.locaweb.com.br/assets/application.css"&gt;<br>
-                &lt;script type="text/javascript" src="http://locastyle.devintegration.locaweb.com.br/assets/application.js"&gt;&lt;/script&gt;</i>
-        <p>
-        	<strong>Segundo passo:</strong> Não tem segundo passo. ;-)
-        </p>
-</div>
-
-<div class="codes">
-     <div class="divCode">
-        <h3>HTML</h3>
-        <textarea class="brush: html">
+	<div class="codes">
+		<div class="divCode">
+			<h3>HTML</h3>
+			<textarea class="brush: html">
 <!DOCTYPE html>
 <html>
-        <head>
-        <title>Título</title>
-
-
-        <!-- O CSS principal. Dentro dele nós importamos todos os outros estilos -->
-        <link rel="stylesheet" type="text/css" href="stylesheets/application.css">
-
-        <!-- Última versão do JQuery -->
-        <script type="text/javascript" src="javascripts/jquery.js"></script>
-
-        <!-- Última versão do Modernizr -->
-        <script type="text/javascript" src="javascripts/modernizr.js"></script>
-
-        <!-- Última versão do Bootstrap -->
-        <script type="text/javascript" src="javascripts/bootstrap/js/bootstrap.js"></script>
-
-        <!-- Funções de scripts comuns. NÃO MODIFIQUE -->
-        <script type="text/javascript" src="javascripts/scripts.js"></script>
-
-        <!-- OPCIONAL: Caso você precise de scripts customizados para o projeto -->
-        <script type="text/javascript" src="javascripts/custom.js"></script>
-
-
-
-        </head>
-        </textarea>
-      </div>
-
-</div>
+<head>
+	<title>Título</title>
+	<link rel="stylesheet" type="text/css" href="<%= root_url %>assets/application.css">
+	<script type="text/javascript" src="<%= root_url %>assets/application.js"></script>
+</head>
+			</textarea>
+		</div>
+	</div>
 </div>
