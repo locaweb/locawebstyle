@@ -80,11 +80,31 @@ border-bottom-right-radius: 5px;
   padding: 0 0 0 15px;
 }
 
-h2 {
+.examples h2 {
   font-size:20px;
   border-bottom:1px solid #CCC;
   padding-bottom:10px;
 }
+
+.examples h4 {
+  font-size:16px;
+  border-bottom:1px solid #CCC;
+  padding:14px 0 10px;
+}
+
+.examples h5 {
+  font-size:15px;
+  padding:15px 0 0;
+  margin:0;
+}
+.examples h3 {margin-bottom:15px;}
+.examples p {
+  font-size:13px;
+  line-height:21px;
+  width:70%;
+   margin-top:0;
+}
+
 .examples {
   margin-right:30px;
   background:white;
@@ -117,12 +137,6 @@ h2 {
   margin:0;
   background:#ed1c24;
   display:inline-block;
-}
-.examples h3 {margin-bottom:15px;}
-.examples p {
-  font-size:14px;
-  line-height:21px;
-  width:70%;
 }
 
 .codes .divCode:last-child {margin-right:0;}
