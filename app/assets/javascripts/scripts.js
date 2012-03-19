@@ -26,7 +26,7 @@ $(document).ready(function(){
   var btnBuscaAvancadaText = $('a.lnkSeta[data-text]').html();
   var btnBuscaAvancadaTextAlt = $('a.lnkSeta[data-text]').attr('data-text');
 
-  $('a.lnkSeta[data-target]').click(function(){
+  $('.boxFiltro a.lnkSeta[data-target]').click(function(){
     if ( $(this).html() == btnBuscaAvancadaText  ){
       $(this).html(btnBuscaAvancadaTextAlt);
     } else {
@@ -34,11 +34,11 @@ $(document).ready(function(){
     }
   });
 
-   if (   $('#optBuscaAvancada fieldset input').val(''); ){
-      $(this).html(btnBuscaAvancadaTextAlt);
-    } else {
-      $(this).html( btnBuscaAvancadaText );
-    }
+ if ($('#optBuscaAvancada fieldset input').val('') ){
+    $(this).html(btnBuscaAvancadaTextAlt);
+  } else {
+    $(this).html( btnBuscaAvancadaText );
+  }
 
 
   
