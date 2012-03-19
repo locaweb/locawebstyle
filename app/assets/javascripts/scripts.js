@@ -1,10 +1,5 @@
 $(document).ready(function(){
 
-  // Insere classes de last e first 
-  // var childs = "div, .row, ul li, label"
-  // $('* > :first-child').addClass('first-child')
-  // $('* > :last-child').addClass('last-child')
-  
   // insere a classe SPAN nos divs da Grid
   $('div[class*="span"]').addClass('span');
   
@@ -21,11 +16,11 @@ $(document).ready(function(){
   });
 
   // Datepicker - JQuery UI
-  $(".datepicker").datepicker({
+  $('.datepicker').datepicker({
     showOn: "button",
-    dateFormat: 'dd/mm/yy'
+    dateFormat: "dd/mm/yy"
   });
- $(".ui-datepicker-trigger").addClass("icon-calendar").html('').wrap('<span class="add-on">');
+ $('.ui-datepicker-trigger').addClass('icon-calendar').html('').wrap('<span class="add-on">');
 
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
   var btnBuscaAvancadaText = $('a.lnkSeta[data-text]').html();
@@ -39,6 +34,14 @@ $(document).ready(function(){
     }
   });
 
+   if (   $('#optBuscaAvancada fieldset input').val(''); ){
+      $(this).html(btnBuscaAvancadaTextAlt);
+    } else {
+      $(this).html( btnBuscaAvancadaText );
+    }
+
+
+  
   // Setinha nas TABs
   $('.tabs li a').append('<span class="setaTab" />');
   $('.tabs li:first-child').addClass('active');
