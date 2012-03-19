@@ -1,150 +1,78 @@
 <div class="model" id="filtro-paginacao">
 
-<div class="examples">
-        <h3>Exemplo</h3>
-        <h2>Filtro de exibição e paginação</h2>
-  
-        <div class="navView">
-          <div class="pagination">
-            <ul>
-              <li class="prev"><a href="#">Anterior</a></li>
-              <li class="active">
-                <a href="#">1</a>
-              </li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li class="disabled"><a href="#">...</a></li>
-              <li class="next"><a href="#">Próximo</a></li>
-            </ul>
-          </div>
+	<div class="examples">
+		<h3>Exemplo</h3>
+		<h2>Filtro de exibição e paginação</h2>
 
-          <div class="filtroExibe">
-            <label class="select optional dinlineblock" for="per-page-top">Exibir </label>
-            <select class="select optional transaction-search-per-page" id="per-page-top" name="per_page">
-              <option value=""></option>
-              <option value="10">10</option>
-              <option value="20">20</option>
-              <option value="30">30</option>
-              <option value="50">50</option>
-              <option value="100">100</option>
-            </select>
-            ítens por página
-          </div>
+		<div class="navView">
+			<div class="pagination">
+				<ul>
+					<li class="prev"><a href="#">Anterior</a></li>
+					<li class="active">
+						<a href="#">1</a>
+					</li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li class="disabled"><a href="#">...</a></li>
+					<li class="next"><a href="#">Próximo</a></li>
+				</ul>
+			</div>
 
-        </div>
+			<div class="filtroExibe">
+				<label class="select optional dinlineblock" for="per-page-top">Exibir </label>
+				<select class="select optional transaction-search-per-page" id="per-page-top" name="per_page">
+					<option value=""></option>
+					<option value="10">10</option>
+					<option value="20">20</option>
+					<option value="30">30</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+				</select>
+				ítens por página
+			</div>
+
+		</div>
 
 
+	</div>
+
+	<div class="codes">
+		<div class="divCode">
+			<h3>HTML</h3>
+			<p class="label label-warning">Padrão de código do Bootstrap.</p>
+
+			<textarea class="brush: html">
+<div class="navView">
+	<div class="pagination">
+		<ul>
+			<li class="prev"><a href="#">Anterior</a></li>
+			<li class="active">
+				<a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li class="disabled"><a href="#">...</a></li>
+			<li class="next"><a href="#">Próximo</a></li>
+		</ul>
+	</div>
+
+	<div class="filtroExibe">
+		<label class="select optional dinlineblock" for="per-page-top">Exibir </label>
+		<select class="select optional transaction-search-per-page" id="per-page-top" name="per_page">
+			<option value=""></option>
+			<option value="10">10</option>
+			<option value="20">20</option>
+			<option value="30">30</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+		</select>
+		ítens por página
+	</div>
 </div>
+			</textarea>
+		</div>
 
-<div class="codes">
-     <div class="divCode">
-        <h3>HTML</h3>
-        <p class="label label-warning">Padrão de código do Bootstrap.</p>
-
-        <textarea class="brush: html">
-  <div class="navView">
-  <div class="pagination">
-    <ul>
-      <li class="prev"><a href="#">Anterior</a></li>
-      <li class="active">
-        <a href="#">1</a>
-      </li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li class="disabled"><a href="#">...</a></li>
-      <li class="next"><a href="#">Próximo</a></li>
-    </ul>
-  </div>
-
-  <div class="filtroExibe">
-    <label class="select optional dinlineblock" for="per-page-top">Exibir </label>
-    <select class="select optional transaction-search-per-page" id="per-page-top" name="per_page">
-      <option value=""></option>
-      <option value="10">10</option>
-      <option value="20">20</option>
-      <option value="30">30</option>
-      <option value="50">50</option>
-      <option value="100">100</option>
-    </select>
-    ítens por página
-  </div>
-
-</div>
-        </textarea>
-      </div>
-
-      <div class="divCode cssCode">
-        <h3>CSS</h3>
-        <p class="label label-warning">Este código é importado automaticamente pelo application.css e está modulado no arquivo tabs.css</p>
-
-        <pre class="brush: css">
-/**
-*** Barra com select de Quantidade de exibição e paginação
-**/
-.navView {
-  margin:20px 0;
-  padding:7px 10px;
-  color:#767676;
-  border-bottom:1px solid #e5e5e5;
-}
-
-table ~ .navView, .navView.afterTable {border-bottom:0; border-top:1px solid #e5e5e5;}
-
-.navView label {color:#767676;}
-
-/**
-*** PAGINACAO
-**/
-.pagination {padding:5px 0 0; margin:0; height:auto;}
-.pagination ul {margin:0;box-shadow:none;}
-
-.pagination a, .pagination .current {
-  float:none;
-  display:inline-block;
-  line-height: 16px;
-  padding: 0 5px;
-  border: 1px solid #D7D7D7;
-  border-radius: 4px;
-  font-size: 11px;
-  color:#797979;
-}
-.pagination li.first-child a, .pagination li.last-child a, .pagination .first a, .pagination .prev a, .pagination .next a, .pagination .last a {
-  border:none;
-  color:#3d6495;
-}
-.pagination .first a, .pagination .last a {display:none;}
-
-.pagination .prev a, .pagination .next a {background:url(images/seta-pagination.png) no-repeat 0 0;}
-.pagination .prev a {background-position:left 6px; padding-left:10px;}
-.pagination .next a {background-position:right -13px; padding-right:10px;}
-
-.pagination .current, .pagination .active a {
-  border:1px solid #7aa4d1;
-  color:#FFF;
-  background-color:#264f94;
-  background-image: linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  background-image: -o-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  background-image: -moz-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  background-image: -webkit-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  background-image: -ms-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.17, rgb(38,78,148)),
-    color-stop(0.91, rgb(122,164,209))
-  );
-}
-
-.pagination .disabled a {border:none;}
-
-.navView .pagination {float:right;}
-
-        </pre>
-      </div>
-
-
-</div>
+	</div>
 </div>
