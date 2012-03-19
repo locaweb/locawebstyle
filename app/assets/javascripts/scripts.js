@@ -20,6 +20,14 @@ $(document).ready(function(){
     $(this).parent('.details').toggleClass('active');
   });
 
+  // Datepicker - JQuery UI
+  $(".datepicker").datepicker({
+    showOn: "button",
+    dateFormat: 'dd/mm/yy'
+  });
+ $(".ui-datepicker-trigger").addClass("icon-calendar").html('').wrap('<span class="add-on">');
+
+  // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
   var btnBuscaAvancadaText = $('a[data-target="#optBuscaAvancada"]').html();
   
   $('a[data-target="#optBuscaAvancada"]').click(function(){

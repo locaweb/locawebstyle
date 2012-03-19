@@ -40,7 +40,6 @@ input, .control-group input {vertical-align:middle; display:inline-block; float:
     margin:30px 0;
 }
 
-.input-append .add-on {margin-left:-6px;}
 
 .boxFiltro h2 {margin:0 0 10px;}
 
@@ -63,3 +62,10 @@ input, .control-group input {vertical-align:middle; display:inline-block; float:
 .input30 {width:30px;}
 .input120 {width:120px;}
 .input240 {width:240px;}
+
+
+/** Botao do Datepicker **/
+.ui-datepicker-trigger {
+  border:none;
+  background-color:transparent;
+}
