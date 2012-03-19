@@ -1,56 +1,56 @@
 /* FOOTER */
-footer#rodape {   clear:both;  height:52px;padding:15px 0 0; background:url(images/bgfooter.png);}
+footer#rodape {   clear:both;  height:52px;padding:15px 0 0; background:url(/img/bgfooter.png);}
 #rodape nav {height:50px;}
 
 #rodape nav h6 {
-	font: 300 17px Ubuntu;
-	color:#FFF;
-	text-transform:uppercase;
-	background:#000;
-	padding:15px;
-	margin:0;
-	float:left;
+  font: 300 17px Ubuntu;
+  color:#FFF;
+  text-transform:uppercase;
+  background:#000;
+  padding:15px;
+  margin:0;
+  float:left;
 }
 
 #rodape nav {
-	background:#141414;
-	border:1px solid #383838;
-	border-bottom:0;
-	border-radius:3px;
+  background:#141414;
+  border:1px solid #383838;
+  border-bottom:0;
+  border-radius:3px;
 }
 
 #rodape ul{float:left; padding:15px; margin:0;}
 #rodape ul li {display:inline;}
 
 #rodape nav ul li a {
-	display:inline-block;
-	color:#FFF;
-	padding:5px 35px;
-	background-position:left center;
-	background-repeat:no-repeat;
-	border-right:1px solid #434343;
-	margin-right:25px;
+  display:inline-block;
+  color:#FFF;
+  padding:5px 35px;
+  background-position:left center;
+  background-repeat:no-repeat;
+  border-right:1px solid #434343;
+  margin-right:25px;
 }
 #rodape nav ul li:last-child a {border-right:none;}
 
-#rodape ul li.ico-helpDesk a {background-image:url(images/icoChat.png);}
-#rodape ul li.ico-Chat a {background-image:url(images/icoHelpDesk.png);}
-#rodape ul li.ico-Telefone a {background-image:url(images/icoTelefone.png);}
+#rodape ul li.ico-helpDesk a {background-image:url(/img/icoChat.png);}
+#rodape ul li.ico-Chat a {background-image:url(/img/icoHelpDesk.png);}
+#rodape ul li.ico-Telefone a {background-image:url(/img/icoTelefone.png);}
 
 #rodape nav .lnkSeta {margin:15px 20px 0; color:#FFF;}
 
 .subfooter {padding:10px 0; color:#545454; font-size:11px;}
 .subfooter strong {color:#2a2a2a;}
 .subfooter .lastAccess {
-	padding:0 0 0 20px;
-	background:url(images/ico-ultimoAcesso.png) no-repeat left center;
+  padding:0 0 0 20px;
+  background:url(/img/ico-ultimoAcesso.png) no-repeat left center;
 }
 .copyRight {margin:0;}
 
 .icoInterroga {
-	display:inline-block;
-	text-indent:-9999px;
-	background:url(images/icoInterroga.png) no-repeat center;
-	width:12px; height:12px;
-	vertical-align:middle;
+  display:inline-block;
+  text-indent:-9999px;
+  background:url(/img/icoInterroga.png) no-repeat center;
+  width:12px; height:12px;
+  vertical-align:middle;
 }

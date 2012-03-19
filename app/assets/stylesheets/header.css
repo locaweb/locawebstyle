@@ -1,6 +1,6 @@
 header.headerPrincipal {
   min-height:168px;
-  background:#f0f0f0 url(images/bgHeader.gif) repeat-X top center;
+  background:#f0f0f0 url(/img/bgHeader.gif) repeat-X top center;
   margin-bottom:25px;
 }
 header.headerPrincipal .limite {overflow:visible; height:120px; position:relative;}
@@ -32,7 +32,7 @@ header.headerPrincipal .serviceName a {text-decoration:none; float:left;}
 #menuPrincipal li.first-child {padding-left:0;}
 #menuPrincipal li {
   float:left;
-  background:url(images/dotMenuLi.gif) no-repeat right center;
+  background:url(/img/dotMenuLi.gif) no-repeat right center;
   padding:0 10px;
 }
 #menuPrincipal li a {
@@ -45,7 +45,7 @@ header.headerPrincipal .serviceName a {text-decoration:none; float:left;}
 }
 
 #menuPrincipal li a:hover, #menuPrincipal li.selected a {
-  background:#777777 url(images/setaDots.png) no-repeat center bottom;
+  background:#777777 url(/img/setaDots.png) no-repeat center bottom;
   color:#FFF;
   border-top-left-radius:5px;
   border-top-right-radius:5px;
@@ -53,7 +53,7 @@ header.headerPrincipal .serviceName a {text-decoration:none; float:left;}
 
 .lnkSugestoes {
   float:right;
-  background:url(images/ico-lamp.png) no-repeat 10px center;
+  background:url(/img/ico-lamp.png) no-repeat 10px center;
   text-decoration:none;
   color:#545454;
   font:12px verdana;
@@ -73,13 +73,13 @@ header.headerPrincipal .serviceName a {text-decoration:none; float:left;}
 
 .infoLogin .accountName {
   display:block;
-  background:url(images/bgIdentHeader.png) no-repeat  right top;
+  background:url(/img/bgIdentHeader.png) no-repeat  right top;
   padding:10px 0;
   margin:3px 0 0;
 }
 
 .btn-group .identNumber.dropdown-toggle {
-  background:url(images/setaIdentBaixo.png) no-repeat 96% 16px;
+  background:url(/img/setaIdentBaixo.png) no-repeat 96% 16px;
   cursor:pointer;
   padding: 11px 17px 5px;
   border: 1px solid transparent;
@@ -87,7 +87,7 @@ header.headerPrincipal .serviceName a {text-decoration:none; float:left;}
 }
 
 .infoLogin .identNumber.selected {
-  background:#FFF url(images/setaIdentTopo.png) no-repeat 96% 16px;
+  background:#FFF url(/img/setaIdentTopo.png) no-repeat 96% 16px;
   border: 1px solid #C7C7C7;
   border-bottom: none;
   z-index: 2;
@@ -106,11 +106,11 @@ header.headerPrincipal .btn-group {display:inline-block;}
   min-width:200px;
   z-index:1;
   text-align:left;
-} 
+}
 .btn-group.open .dropdown-toggle.identNumber {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  background:#FFF url(images/setaIdentTopo.png) no-repeat 96% 16px !important;
+  background:#FFF url(/img/setaIdentTopo.png) no-repeat 96% 16px !important;
   border: 1px solid #C7C7C7;
   border-bottom: none;
   border-radius: 0;
@@ -142,7 +142,7 @@ header.headerPrincipal .btn-group {display:inline-block;}
   display:block;
   font-weight:normal;
   color:#000;
-  background:url(images/setaDirList.png) no-repeat left center;
+  background:url(/img/setaDirList.png) no-repeat left center;
   padding-left:10px;
 }
 .listIdent li span {padding-left:10px; display:inline-block}
