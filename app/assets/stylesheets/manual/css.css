@@ -27,7 +27,7 @@ body {
   color:#333;
 }
 .destaque p {vertical-align:middle;display:inline-block; padding:0; margin:0 0 0 15px; font-size:15px; font-weight:300; line-height:40px; color:#333;}
-
+.divCode textarea {box-shadow:none;}
 .guideAreas {
   margin-right:30px;
   font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif !important;

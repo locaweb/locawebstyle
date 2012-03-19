@@ -156,9 +156,9 @@ p {
     cursor:pointer;
     font-family:verdana;
     display:block;
-    background:url(images/setacollapseBottom.png) no-repeat 99% center;
+    background:url(images/setaCollapseBottom.png) no-repeat 99% center;
 }
-.collapseGroup summary.active { font-weight:bold;   background:url(images/setacollapseTop.png) no-repeat 99% 8px;}
+.collapseGroup summary.active { font-weight:bold;   background:url(images/setaCollapseTop.png) no-repeat 99% 8px;}
 
 .collapseGroup summary span {
     font:bold 18px Ubuntu;
