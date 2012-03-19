@@ -1,6 +1,10 @@
 Boostrap::Application.routes.draw do
+
   namespace :example do
     root :to => 'home#index'
   end
-  root :to => 'home#index'
+
+  match ':id' => 'manual#show'
+  root :to => 'manual#show'
+
 end
