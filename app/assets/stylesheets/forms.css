@@ -50,7 +50,7 @@ input, .control-group input {vertical-align:middle; display:inline-block; float:
 .control-group.collapse {margin-bottom:0;}
 .control-group.collapse.in {margin-bottom:18px;}
 
-.opcoesBuscaAvancada {
+.boxFiltro fieldset {
     clear:both;
     background:#cecccc;
     padding:10px 0;
