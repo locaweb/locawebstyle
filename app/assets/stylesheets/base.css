@@ -358,6 +358,7 @@ table.tableList thead th.actived {background-color:#2a2a2a;}
   background-color:rgba(255,255,255,0.9);
   padding:5px;
   width:200px;
+  box-shadow:0 0 16px 5px rgba(0,0,0,0.3);
 }
 
 .ui-datepicker .ui-datepicker-header  {
