@@ -8,10 +8,10 @@ header.headerPrincipal .limite {overflow:visible; height:120px; position:relativ
 header.headerPrincipal .serviceName {
   margin:0; padding:40px 0;
   text-decoration:none;
-  color:#777777;
+  color:#4B7CB8;
   font:33px LacunaRegular, verdana, arial, tahoma, sans-serif;
 }
-header.headerPrincipal .serviceName a {text-decoration:none; float:left;}
+header.headerPrincipal .serviceName a {text-decoration:none; float:left; color:#4B7CB8;}
 /** Menu Principal **/
 #menuPrincipal {
   padding:7px 0 0;
