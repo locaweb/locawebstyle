@@ -247,9 +247,7 @@ table.tableList {
   border-bottom:5px solid #d3d3d3;
 }
 
-table.tableList thead {
-  background:#545454;
-}
+table.tableList thead { background:#545454;}
 
 table.tableList thead th {
   border-right:1px solid #FFF;
@@ -270,6 +268,8 @@ table.tableList tbody td {
 table.tableList tbody td:last-child {border-right:none;}
 table.tableList tbody tr:nth-child(even) {background-color:#eeeeee;}
 table.tableList thead th.actived {background-color:#2a2a2a;}
+
+table.tableList tbody tr:hover {background:#fffece;}
 
 /**
 *** ICONES
