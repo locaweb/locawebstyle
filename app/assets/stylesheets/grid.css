@@ -1,5 +1,5 @@
 .limite.row {margin:0 auto;}
-
+.limite.row .span:first-child {margin-left:0;}
 .row {
   margin-left: -20px;
   *zoom: 1;
