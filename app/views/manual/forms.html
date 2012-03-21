@@ -10,7 +10,24 @@
 			a
 			<input class="input120 datepicker" id="transaction_search_updated_at_begin" name="transaction_search[updated_at_begin]" size="50" type="text">
 		</div>
+<div class="control-group">
+    <label>Tipo de autenticação:</label>
+    <div class="controls">
+        <label class="dblock"><input type="radio"> Não autenticado</label>
+        <label><input type="radio" data-toggle="collapse" data-target="#authOpt"> Autenticado</label>
+        <div class="collapse" id="authOpt">
+	        <div class="boxGrayOpt">
+	            	<input name="redecard_setting[check_zip_on_avs]" type="hidden" value="0">
+	            	<input class="boolean optional" id="redecard_setting_check_zip_on_avs" name="redecard_setting[check_zip_on_avs]" type="checkbox" value="1">
+	            	<label class="boolean optional" for="redecard_setting_check_zip_on_avs"> CPF</label>
 
+	            	<input name="redecard_setting[check_cpf_on_avs]" type="hidden" value="0"><input class="boolean optional" id="redecard_setting_check_cpf_on_avs" name="redecard_setting[check_cpf_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_setting_check_cpf_on_avs"> Endereço</label>
+
+	            	<input name="redecard_setting[check_address_on_avs]" type="hidden" value="0"><input class="boolean optional" id="redecard_setting_check_address_on_avs" name="redecard_setting[check_address_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_setting_check_address_on_avs"> CEP</label>
+	        </div>
+	    </div>
+    </div>
+</div>
 		<div class="control-group">
 			<label>Meio de pagamento </label>
 			<input type="text" class="input240">

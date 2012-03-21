@@ -17,8 +17,6 @@ fieldset h6 {
     margin-left:0;
 }
 
-.controls label, .controls .control-label, .modal .controls .control-label {width:auto;}
-
 label, strong.control-label, .form-horizontal .control-label {
     font-weight:bold;
     display:inline-block;
@@ -34,6 +32,36 @@ label, strong.control-label, .form-horizontal .control-label {
 .control-group .control-label:first-child {width:100px;}
 
 .modal label, .modal .form-horizontal .control-label {width:140px;}
+
+.controls label,
+.control-group .controls .control-label:first-child, 
+.modal .controls label, 
+.controls .control-label, 
+.modal .controls .control-label {
+    text-align:left;
+    width:auto; 
+    margin:5px 0 0 0; 
+    font-weight:normal;
+    color:#797979;
+}
+
+.boxGrayOpt {
+    padding:5px;
+    position:relative;
+    margin:10px 0;
+    background:#e2e2e2;
+}
+
+.boxGrayOpt label, .boxGrayOpt .control-label {margin:0; width:100px; text-align:left;}
+
+.boxGrayOpt:before {
+    content:" ";
+    display:block;
+    width:15px; height:5px;
+    background:url(/img/indicadorTopBoxGrayInput.png) no-repeat;
+    position:absolute;
+    top:-5px; left:15px;
+}
 
 label.checkbox.control-label, label.checkbox.control-label:first-child {
     margin: 0 0 0 110px;
