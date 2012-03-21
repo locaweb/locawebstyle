@@ -11,7 +11,7 @@ header.headerPrincipal .serviceName {
   color:#4B7CB8;
   font:33px LacunaRegular, verdana, arial, tahoma, sans-serif;
 }
-header.headerPrincipal .serviceName a {text-decoration:none; float:left; color:#4B7CB8;}
+header.headerPrincipal .serviceName a {text-decoration:none; float:left; color:#777;}
 /** Menu Principal **/
 #menuPrincipal {
   padding:7px 0 0;
@@ -29,12 +29,12 @@ header.headerPrincipal .serviceName a {text-decoration:none; float:left; color:#
   padding:0;
 }
 
-#menuPrincipal li.first-child {padding-left:0;}
 #menuPrincipal li {
   float:left;
   background:url(/img/dotMenuLi.gif) no-repeat right center;
   padding:0 10px;
 }
+#menuPrincipal li:first-child {padding-left:0;}
 #menuPrincipal li a {
   display:inline-block;
   color:#545454;

@@ -53,9 +53,9 @@ border-top-right-radius: 5px;
 border-bottom-right-radius: 5px;
   color:rgba(255, 255, 255, 0.5);
   font-weight:300;
-  font-size:13px;
+  font-size:12px;
   display:inline-block;
-  padding:5px 15px;
+  padding:2px 15px;
   text-align:left;
   width:90%;
   margin-bottom:1px;
@@ -68,8 +68,8 @@ border-bottom-right-radius: 5px;
 }
 .guideAreas nav ul li a:hover {background:rgba(0,0,0,0.5);}
 .guideAreas nav ul {
-  margin-bottom:20px;
-  padding-bottom:20px;
+  margin-bottom:10px;
+  padding-bottom:10px;
   border-bottom:1px solid rgba(255,255,255,0.2);
 }
 .guideAreas h6 {
@@ -119,6 +119,7 @@ border-bottom-right-radius: 5px;
 .codes {
   overflow: hidden;
   margin-right:18px;
+  margin-left:180px;
 }
 .gutter .line {display:none;}
 .divCode .syntaxhighlighter, .divCode .syntaxhighlighter table {background-color:transparent !important;}
