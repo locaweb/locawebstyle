@@ -10,6 +10,14 @@ fieldset h6 {
     margin:0 10px 10px;
 }
 
+.form-horizontal .controls, .controls {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.controls .control-label {width:auto;}
+
 label, strong.control-label, .form-horizontal .control-label {
     font-weight:bold;
     display:inline-block;
