@@ -1,5 +1,16 @@
 /* FOOTER */
-footer#rodape {   clear:both;  height:52px;padding:15px 0 0; background:url(/img/bgfooter.png);}
+footer#rodape {
+  clear:both;
+  position:absolute;
+  bottom:0;
+  width:100%; 
+}
+
+#rodape .footerTop {
+  height:52px;
+  padding:15px 0 0;
+  background:url(/img/bgfooter.png);
+}
 #rodape nav {height:50px;}
 
 #rodape nav h6 {

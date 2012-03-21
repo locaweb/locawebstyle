@@ -1,5 +1,6 @@
-#main {margin-bottom:50px;}
-
+html, body {height:100%;}
+#main {min-height:75%; position:relative;}
+#main > .limite {padding-bottom:160px; }
 .limite {
   width:988px;
   margin: 0 auto;

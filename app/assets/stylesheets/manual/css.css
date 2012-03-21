@@ -80,6 +80,10 @@ border-bottom-right-radius: 5px;
   padding: 0 0 0 15px;
 }
 
+.examples {position:relative;}
+.examples #rodape {
+  position:static;
+}
 .examples h2 {
   font-size:20px;
   border-bottom:1px solid #CCC;
