@@ -26,6 +26,12 @@ label, .form-horizontal .control-label {
 
 .modal label, .modal .form-horizontal .control-label {width:140px;}
 
+label.checkbox.control-label, label.checkbox.control-label:first-child {
+    margin: 0 0 0 110px;
+    width: inherit;
+}
+label.checkbox.control-label input {float:none;}
+
 .opcoesBuscaAvancada .control-group .control-label:first-child, 
 .control-group .control-label:first-child {margin-left:0;}
 
@@ -42,11 +48,9 @@ input, .control-group input {vertical-align:middle; display:inline-block; float:
     margin:30px 0;
 }
 
-
 .boxFiltro h2 {margin:0 0 10px;}
 
 .boxFiltro .datepicker {width:94px;}
-
 
 /* Quando ativa busca avançada */
 .control-group.collapse {margin-bottom:0;}
