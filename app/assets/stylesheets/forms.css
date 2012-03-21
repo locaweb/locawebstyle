@@ -17,7 +17,7 @@ fieldset h6 {
     margin-left:0;
 }
 
-.controls label, .controls .control-label {width:auto;}
+.controls label, .controls .control-label, .modal .controls .control-label {width:auto;}
 
 label, strong.control-label, .form-horizontal .control-label {
     font-weight:bold;
