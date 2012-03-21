@@ -4,7 +4,6 @@
   margin-left: -20px;
   *zoom: 1;
 }
-.limite.row div:first-child {margin-left:0;}
 .row:before, .row:after {
   display: table;
   content: "";

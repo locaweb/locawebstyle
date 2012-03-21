@@ -2,6 +2,7 @@ $(document).ready(function(){
 
   // insere a classe SPAN nos divs da Grid
   $('div[class*="span"]').addClass('span');
+  $('div[class*="span"]:first').addClass('nomargin');
   
   $('label').addClass('control-label');
 

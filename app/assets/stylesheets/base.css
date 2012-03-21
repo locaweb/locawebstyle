@@ -18,6 +18,12 @@ html, body {height:100%;}
 .dinline {display:inline;}
 .dinlineblock {display:inline-block;}
 
+.nomargin {margin:0;}
+.nomarginleft {margin-left:0;}
+.nomarginright {margin-right:0;}
+.nomargintop {margin-top:0;}
+.nomarginbottom {margin-bottom:0;}
+
 /**
 *** Clearfix
 **/
