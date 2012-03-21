@@ -139,6 +139,7 @@ p {
   border-radius:3px;
   border:1px solid #e3e3e3;
   padding-bottom:3px;
+  overflow: hidden;
 }
 
 .boxGray h2 {
