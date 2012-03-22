@@ -20,3 +20,4 @@ tmp/
 .DS_Store
 .rvmrc
 public/assets
+config/unicorn.rb
