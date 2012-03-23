@@ -143,6 +143,19 @@ border-bottom-right-radius: 5px;
   background:#ed1c24;
   display:inline-block;
 }
+.examples:before, .divCode:before {
+  content:"Exemplo";
+  font-weight:bold;
+  font-size:13px;
+  border-bottom:1px solid rgba(0,0,0,0.1);
+  padding:3px 10px;
+  color:#FFF;
+  margin:0;
+  background:#ed1c24;
+  display:inline-block;
+}
+.divCode:before {content:"HTML";}
+
 
 .codes .divCode:last-child {margin-right:0;}
 
