@@ -80,10 +80,18 @@ border-bottom-right-radius: 5px;
   padding: 0 0 0 15px;
 }
 
-.examples {position:relative;}
-.examples #rodape {
-  position:static;
+
+.examples {
+  margin-right:30px;
+  background:white;
+  overflow: hidden;
+  padding:0px 40px 30px;
+  overflow:hidden;
+  border-radius:5px;
+  position:relative;
 }
+
+.examples #rodape {position:static;}
 .examples h2 {
   font-size:20px;
   border-bottom:1px solid #CCC;
@@ -109,14 +117,6 @@ border-bottom-right-radius: 5px;
    margin-top:0;
 }
 
-.examples {
-  margin-right:30px;
-  background:white;
-  overflow: hidden;
-  padding:0 40px 30px;
-  overflow:hidden;
-  border-radius:5px;
-}
 
 .row .span:first-child {margin:0 0 0 0px;}
 
