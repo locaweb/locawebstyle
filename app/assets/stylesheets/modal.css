@@ -22,3 +22,6 @@
 }
 .modal-footer {border-top:5px solid #e5e5e5; clear:both;}
 
+.modal-footer form {
+  display:inline-block;
+}

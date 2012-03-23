@@ -52,7 +52,8 @@ label, strong.control-label, .form-horizontal .control-label {
     background:#e2e2e2;
 }
 
-.boxGrayOpt label, .boxGrayOpt .control-label {margin:0; width:100px; text-align:left;}
+.boxGrayOpt label, .boxGrayOpt .control-label,
+.controls .boxGrayOpt label, .controls .boxGrayOpt .control-label {margin:0; width:100px; text-align:left;}
 
 .boxGrayOpt:before {
     content:" ";
