@@ -35,6 +35,23 @@ $(document).ready(function(){
     }
   });
 
+  // Limpa inputs da busca avançada quando clicamos no link de BUSCA AVANCDA
+  $('.boxFiltro form a.lnkSeta[data-text]').click(function(){
+    $('#optBuscaAvancada').find(':input').each(function(){
+      switch(this.type) {
+            case 'password':
+            case 'select-multiple':
+            case 'select-one':
+            case 'text':
+            case 'textarea':
+                $(this).val('');
+                break;
+            case 'checkbox':
+            case 'radio':
+                this.checked = false;
+        }
+    })
+  });
 
   // Verifica se os inputs dentro da busca avançada estão vazios, se não estiverem, a busca avancada fica aberta
     var inputVazio = $('#optBuscaAvancada').find('input[value!=""]').length > 0 || $('#optBuscaAvancada select option:selected').not(':empty').length > 0
