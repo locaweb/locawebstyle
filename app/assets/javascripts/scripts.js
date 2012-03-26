@@ -35,12 +35,13 @@ $(document).ready(function(){
     }
   });
 
- if ($('#optBuscaAvancada fieldset input').val('') ){
-    $(this).html(btnBuscaAvancadaTextAlt);
-  } else {
-    $(this).html( btnBuscaAvancadaText );
-  }
 
+  // Verifica se os inputs dentro da busca avançada estão vazios, se não estiverem, a busca avancada fica aberta
+    var inputVazio = $('#optBuscaAvancada').find('input[value!=""]').length > 0 || $('#optBuscaAvancada select option:selected').not(':empty').length > 0
+    if (inputVazio > 0) {
+      $('.boxFiltro a.lnkSeta[data-target]').html(btnBuscaAvancadaTextAlt);
+      $('#optBuscaAvancada').addClass('in')
+    }
 
   
   // Setinha nas TABs
