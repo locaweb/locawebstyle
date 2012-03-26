@@ -24,23 +24,33 @@
 
 .modal-footer form { display:inline-block;}
 
-.listDetail {background-color:#e2e2e2;}
+.listDetail {clear:both; margin:0;}
+.listDetail.boxGray {background-color:#e2e2e2; padding:10px 0;}
 
 .listDetail dt {
-  float: left;
   width: 150px;
   text-align: right;
   font-weight: normal;
   clear: left;
-  margin: 0;
+  margin: 0 0 6px;
   color:#767676;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .listDetail dd {
-  color:#616161;
+  color: #616161;
   display: inline-block;
+  vertical-align: middle;
   font-weight: bold;
   margin-left: 5px;
   margin-bottom: 6px;
 }
 
+
+.listDetail .sep {
+  display:block;
+  border:none;
+  background:none;
+  margin:0; padding:0;
+}

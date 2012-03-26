@@ -71,4 +71,7 @@ $(document).ready(function(){
   // Adiciona uma classe aos elementos logo após uma tabela
   $('table ~ .navView').addClass('afterTable');
 
+  // Insere quebra de linha depois das DDs em ListDetails
+  $('.listDetail dd').after('<hr class="sep">')
+
 });
