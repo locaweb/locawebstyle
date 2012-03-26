@@ -1,6 +1,8 @@
 /** MODAL **/
 .modal {
   padding:10px;
+  margin-top:-290px; /* sobrescrevendo bootstrap **/
+  max-height:560px;
 }
 
 .modal-header {
@@ -9,8 +11,9 @@
   padding: 0; margin:0;
 }
 
+
 .modal-body {
-  padding:15px 0;
+  padding:15px 0 0;
 }
 
 .modal-header h3 {
@@ -19,13 +22,14 @@
   font-size:20px;
   font-weight:400;
   border-bottom:1px solid #EEE;
+  font:100 20px Ubuntu, arial, verdana, tahoma, sans-serif;
 }
 .modal-footer {border-top:5px solid #e5e5e5; clear:both;}
 
 .modal-footer form { display:inline-block;}
 
 .listDetail {clear:both; margin:0;}
-.listDetail.boxGray {background-color:#e2e2e2; padding:10px 0;}
+.listDetail.boxGray {background-color:#e2e2e2; padding:10px 0; margin-bottom:15px;}
 
 .listDetail dt {
   width: 150px;
