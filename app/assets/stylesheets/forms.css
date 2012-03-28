@@ -120,3 +120,7 @@ legend + .control-group {margin:0;}
     width:165px;
 }
 .boletoForm label {width:100px;}
+
+.sideBySide input[type="text"] {width:140px;}
+.sideBySide label:first-child {width:140px;}
+.sideBySide label {width:83px;}
