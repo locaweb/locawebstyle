@@ -30,7 +30,9 @@ case "$1" in
       cd /var/www/locastyle/
       RAILS_ENV=production bundle exec rake assets:precompile
 
-      RAILS_ENV=production /etc/init.d/locastyle restart
+      /etc/init.d/locastyle stop
+      sleep 2
+      /etc/init.d/locastyle start
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
