@@ -113,3 +113,10 @@ input, .control-group input {vertical-align:middle; display:inline-block; float:
   border:none;
   background-color:transparent;
 }
+
+
+legend + .control-group {margin:0;}
+.boletoForm input[type="text"] {
+    width:165px;
+}
+.boletoForm label {width:100px;}
