@@ -115,13 +115,14 @@ input.input240 {width:240px;}
   background-color:transparent;
 }
 
-
 legend + .control-group {margin-top:0;}
-.boletoForm input[type="text"] {
-    width:165px;
-}
+.boletoForm input[type="text"] {width:165px;}
 .boletoForm label {width:100px;}
 
 .sideBySide input[type="text"] {width:120px;}
 .sideBySide label:first-child {width:140px;}
 .sideBySide label {width:83px;}
+
+.help-inline {margin-bottom:0;}
+
+.filtroExibe label {font-weight:normal;}
