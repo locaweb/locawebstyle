@@ -36,7 +36,7 @@ $(document).ready(function(){
   });
 
   // Limpa inputs da busca avançada quando clicamos no link de BUSCA AVANCDA
-  $('.boxFiltro form a.lnkSeta[data-text]').click(function(){
+  $('.boxFiltro a.lnkSeta[data-text]').click(function(){
     $('#optBuscaAvancada').find(':input').each(function(){
       switch(this.type) {
             case 'password':
@@ -47,6 +47,8 @@ $(document).ready(function(){
                 $(this).val('');
                 break;
             case 'checkbox':
+                this.selected = false;
+                break;
             case 'radio':
                 this.checked = false;
         }
