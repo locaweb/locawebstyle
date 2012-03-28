@@ -103,9 +103,10 @@ input, .control-group input {vertical-align:middle; display:inline-block; float:
 
 .transaction-search-per-page {width:70px;}
 
-.input30 {width:30px;}
-.input120 {width:120px;}
-.input240 {width:240px;}
+input.input30 {width:30px;}
+input.input60 {width:54px;}
+input.input120 {width:120px;}
+input.input240 {width:240px;}
 
 
 /** Botao do Datepicker **/
@@ -115,12 +116,12 @@ input, .control-group input {vertical-align:middle; display:inline-block; float:
 }
 
 
-legend + .control-group {margin:0;}
+legend + .control-group {margin-top:0;}
 .boletoForm input[type="text"] {
     width:165px;
 }
 .boletoForm label {width:100px;}
 
-.sideBySide input[type="text"] {width:140px;}
+.sideBySide input[type="text"] {width:120px;}
 .sideBySide label:first-child {width:140px;}
 .sideBySide label {width:83px;}
