@@ -38,24 +38,61 @@
 
   <div id="main">
     <div class="limite row">
-      <div class="alert">d</div>
-      <div class="span12">
-        <%= yield %>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget tellus nec leo vulputate laoreet non id enim. Quisque ornare blandit ligula sit amet convallis. Praesent blandit lobortis risus, at pulvinar dolor ultrices vel. Vestibulum at augue vitae ante tempus dignissim tempus a libero. Etiam felis orci, tempor nec posuere eu, pretium quis nibh. Suspendisse tortor dui, adipiscing at egestas at, commodo vitae justo. Vivamus sit amet orci sapien. Vivamus mattis augue vel nunc varius rhoncus pretium felis fermentum. Vivamus imperdiet consectetur commodo. Nullam sed vehicula arcu. Cras pretium, urna vel tristique blandit, orci dolor scelerisque quam, id tincidunt magna nisi ut felis. Praesent sit amet metus augue. Quisque sed nisi quam. Cras et pulvinar eros. Etiam blandit sem quis velit vestibulum vitae ornare quam facilisis. Morbi nec lectus tristique dui rutrum molestie.
+        <div class="span12">
+          <%= yield %>
+        </div>
+        <div class="span4">
+            <aside class="sidebar">
+              <section class="sideBox">
+                <h1 class="titSide titDadosConta">Dados da Conta</h1>
+                <div class="innerSideBox boxWhite">
+                  <h6>Identificador</h6>
+                  <p><strong>1234567890</strong></p>
 
-          Phasellus pellentesque aliquet dui a hendrerit. Vestibulum magna orci, viverra non fringilla et, bibendum non nisl. Nullam sagittis ante sed lacus sollicitudin suscipit. Ut accumsan orci sit amet est rutrum lobortis sit amet eget dui. Quisque condimentum tempus risus, vel condimentum quam sodales ac. Integer consectetur ultrices tellus, eu luctus velit dapibus ac. Integer molestie vulputate erat quis aliquam.
+                  <hr>
 
-          Etiam eget metus magna. Quisque vehicula dapibus congue. Pellentesque id est lectus. Fusce a dui elit. Morbi a nulla eu ligula interdum dignissim. Sed facilisis sem vitae justo pharetra fermentum. Nam tincidunt condimentum diam sed eleifend. Fusce bibendum egestas mi, quis ultrices justo euismod at. Cras arcu mi, porttitor eget fermentum ac, feugiat sit amet enim. Suspendisse vel nisi et velit tristique convallis. Integer vehicula diam non lorem convallis tempor. Donec in eros purus, quis scelerisque nibh. Nunc magna eros, congue sit amet elementum quis, facilisis at augue. Duis hendrerit turpis ut erat mattis blandit. Aliquam ante leo, dapibus vitae rhoncus vel, laoreet id erat.
+                  <h6>Nome</h6>
+                  <p><strong>Lojinha do Régis</strong></p>
+                  <a class="edit-account-name lnkSeta" data-toggle="modal" data-target="#modalEditarNome" href="/accounts/1/edit_name">Editar Nome</a>
+                  <hr>
 
-          Donec in hendrerit nibh. Aenean imperdiet bibendum neque eget consequat. Phasellus ut iaculis magna. Curabitur vehicula vestibulum felis, nec feugiat justo iaculis a. Sed non porta tortor. In lacinia nunc ut felis dignissim tincidunt nec ut massa. Mauris vitae ante justo. Aliquam erat volutpat. Praesent ultrices sapien tempus enim ornare congue. Vestibulum posuere orci in nisl dignissim dignissim. Donec vitae ante tellus. Vivamus dui est, mollis sed aliquet quis, auctor quis augue. Mauris vel erat in mi tempus condimentum. In hendrerit suscipit nulla, sit amet vestibulum sapien ornare accumsan.
+                  <h6>Plano</h6>
+                  <p><strong>Nome do plano</strong></p>
 
-        </p>
-      </div>
-      <div class="span4">
-          SIDEBAR
-      </div>
-    </div>
+                  <hr>
+
+                  <p>Usadas <strong>300</strong> de <strong>42</strong> transações</p>
+                  <a href="#" class="lnkSeta">Aumentar limite</a>
+
+                </div>
+              </section>
+
+              <section class="sideBox">
+                <h1 class="titSide titMeiosPagto">Meios de Pagamento</h1>
+                <div class="innerSideBox active-settings">
+                  <img alt="Cartao" src="/img/cartaoCielo.png">
+                  <img alt="Cartao" src="/img/cartaoRedecard.png">
+                  <img alt="Cartao" src="/img/cartaoShopline.png">
+                  <img alt="Cartao" src="/img/cartaoBoleto.png">
+                  <img alt="Cartao" src="/img/cartaoBoletoBradesco.png">
+
+                  <a href="/settings" class="lnkSeta">Ir para meios de pagamentos</a>
+                </div>
+              </section>
+
+              <section class="sideBox">
+                <h1 class="titSide titAjudaSuporte">Ajuda e Suporte</h1>
+                <div class="innerSideBox">
+                  <ul class="listWhite">
+                    <li><a href="#">Documentação de implementação</a></li>
+                    <li><a href="#" rel="external">Wiki do Gateway de pagamentos</a></li>
+                    <li><a href="#">Suporte 24h</a></li>
+                  </ul>
+                </div>
+              </section>
+            </aside>
+        </div>
+    </div><!-- FIM LIMITE -->
 
 
 

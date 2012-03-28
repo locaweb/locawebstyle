@@ -24,13 +24,14 @@ html, body {height:100%;}
 .nomargintop {margin-top:0;}
 .nomarginbottom {margin-bottom:0;}
 
+
 /**
 *** Clearfix
 **/
 .clearfix {*zoom: 1;}
 .clearfix:before, .clearfix:after {
-  display: table;
-  content: "";
+  content: " ";
+  display:block;
 }
 .clearfix:after {clear: both;}
 
@@ -139,8 +140,8 @@ p {
   border-radius:3px;
   border:1px solid #e3e3e3;
   padding-bottom:3px;
-  overflow: hidden;
 }
+.boxGray:after {content:" "; display:block; clear:both;}
 
 .boxGray h2 {
   font-size: 24px;
