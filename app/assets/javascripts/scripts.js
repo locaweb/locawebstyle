@@ -9,7 +9,6 @@ $(document).ready(function(){
   // Insere uma classe SELECTED para o primeiro Collpase
   $('.collapseGroup summary:first').addClass('active').parent('.details').addClass('active');
 
-
   // Faz a troca de Classe SELECTED entre os Collpases
   $('.collapseGroup summary').click(function(){
     $(this).toggleClass('active');
@@ -74,6 +73,6 @@ $(document).ready(function(){
   $('table ~ .navView').addClass('afterTable');
 
   // Insere quebra de linha depois das DDs em ListDetails
-  $('.listDetail dd').after('<hr class="sep">')
+  $('.listDetail dd').after('<hr class="sep">');
 
 });
