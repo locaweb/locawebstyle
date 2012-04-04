@@ -1,9 +1,16 @@
-$(document).ready(function(){
+$(document).ready(function() {     
+  // Scripts iniciais que modificam o DOM ou geram outras tarefas
+  scriptsIniciais();
 
-  // insere a classe SPAN nos divs da Grid
-  $('div[class*="span"]').addClass('span');
-  $('div[class*="span"]:first').addClass('nomargin');
-  
+  // Limpa inputs de formulários. Muito usado na busca avançada.
+  clearForms();
+
+
+});
+
+function scriptsIniciais(){
+
+  // Classe necessárias para as Labels
   $('label').addClass('control-label');
 
   // Insere uma classe SELECTED para o primeiro Collpase
@@ -34,26 +41,6 @@ $(document).ready(function(){
     }
   });
 
-  // Limpa inputs da busca avançada quando clicamos no link de BUSCA AVANCDA
-  $('.boxFiltro a.lnkSeta[data-text]').click(function(){
-    $('#optBuscaAvancada').find(':input').each(function(){
-      switch(this.type) {
-            case 'password':
-            case 'select-multiple':
-            case 'select-one':
-            case 'text':
-            case 'textarea':
-                $(this).val('');
-                break;
-            case 'checkbox':
-                this.selected = false;
-                break;
-            case 'radio':
-                this.checked = false;
-        }
-    })
-  });
-
   // Verifica se os inputs dentro da busca avançada estão vazios, se não estiverem, a busca avancada fica aberta
     var inputVazio = $('#optBuscaAvancada').find('input[value!=""]').length > 0 || $('#optBuscaAvancada select option:selected').not(':empty').length > 0
     if (inputVazio > 0) {
@@ -75,4 +62,26 @@ $(document).ready(function(){
   // Insere quebra de linha depois das DDs em ListDetails
   $('.listDetail dd').after('<hr class="sep">');
 
-});
+}
+
+// Limpa inputs da busca avançada quando clicamos no link de BUSCA AVANCDA
+function clearForms(){
+  $('.clearForm').click(function(){
+    $(this).closest('form').find(':input').each(function(){
+      switch(this.type) {
+            case 'password':
+            case 'select-multiple':
+            case 'select-one':
+            case 'text':
+            case 'textarea':
+                $(this).val('');
+                break;
+            case 'checkbox':
+                this.selected = false;
+                break;
+            case 'radio':
+                this.checked = false;
+        }
+    })
+  });
+}

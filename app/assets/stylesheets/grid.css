@@ -1,3 +1,4 @@
+div[class*="span"]:first-child {margin:0;}
 .row {
   margin-left: -20px;
   *zoom: 1;
