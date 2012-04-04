@@ -21,14 +21,8 @@
   border-top:2px solid transparent;
   position:relative;
 }
-.tabs li a:hover, .tabs li.active a {
-  text-decoration:none;
-  background:#FFF;
-  border-top:2px solid #4b7cb8;
-  border-top-right-radius:3px;
-  border-top-left-radius:3px;
-}
-.tabs .setaTab {
+.tabs li a:after, .tabs li.active a:after {
+  content: " ";
   display:none;
   width: 11px; height: 6px;
   position: absolute;
@@ -37,7 +31,19 @@
   background: url(/img/setaTab.png) no-repeat center center;
   margin-left: -5px;
 }
-.tabs li a:hover .setaTab, .tabs li.active a .setaTab {display:block;}
+
+.tabs li a:hover, .tabs li.active a {
+  text-decoration:none;
+  background:#FFF;
+  border-top:2px solid #4b7cb8;
+  border-top-right-radius:3px;
+  border-top-left-radius:3px;
+}
+
+.tabs li a:hover .setaTab, 
+.tabs li.active a .setaTab, 
+.tabs li a:hover:after,
+.tabs li.active a:after {display:block;}
 
 
 .tab-content {

@@ -50,7 +50,6 @@ function scriptsIniciais(){
 
   
   // Setinha nas TABs
-  $('.tabs li a').append('<span class="setaTab" />');
   $('.tabs li:first-child').addClass('active');
 
   // Faz a modal animar \o/
