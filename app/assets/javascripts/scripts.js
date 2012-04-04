@@ -8,6 +8,8 @@ $(document).ready(function() {
 
 });
 
+
+// Scripts iniciais que modificam o DOM ou geram outras tarefas
 function scriptsIniciais(){
 
   // Classe necessárias para as Labels
@@ -41,6 +43,8 @@ function scriptsIniciais(){
     }
   });
 
+
+
   // Verifica se os inputs dentro da busca avançada estão vazios, se não estiverem, a busca avancada fica aberta
     var inputVazio = $('#optBuscaAvancada').find('input[value!=""]').length > 0 || $('#optBuscaAvancada select option:selected').not(':empty').length > 0
     if (inputVazio > 0) {
@@ -55,9 +59,6 @@ function scriptsIniciais(){
   // Faz a modal animar \o/
   $('.modal').hide().addClass('fade');
 
-  // Adiciona uma classe aos elementos logo após uma tabela
-  $('table ~ .navView').addClass('afterTable');
-
   // Insere quebra de linha depois das DDs em ListDetails
   $('.listDetail dd').after('<hr class="sep">');
 
@@ -66,7 +67,7 @@ function scriptsIniciais(){
 // Limpa inputs da busca avançada quando clicamos no link de BUSCA AVANCDA
 function clearForms(){
   $('.clearForm').click(function(){
-    $(this).closest('form').find(':input').each(function(){
+    $(this).closest('form, div').find(':input').each(function(){
       switch(this.type) {
             case 'password':
             case 'select-multiple':

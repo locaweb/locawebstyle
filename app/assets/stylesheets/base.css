@@ -196,7 +196,7 @@ p {
   border-bottom:1px solid #e5e5e5;
 }
 
-table ~ .navView, .navView.afterTable {border-bottom:0; border-top:1px solid #e5e5e5;}
+table ~ .navView {border-bottom:0; border-top:1px solid #e5e5e5;}
 
 .navView label {color:#767676;}
 
