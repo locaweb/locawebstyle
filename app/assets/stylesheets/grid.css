@@ -1,6 +1,8 @@
-/** 
+/**!
 *** GRID.CSS
 **/
+div[class*="span"]:first-child {margin:0 !important;}
+
 .row {
   margin-left: -20px;
   *zoom: 1;

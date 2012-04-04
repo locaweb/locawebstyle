@@ -394,8 +394,3 @@ table.tableList tbody tr:hover {background:#fffece;}
 .ui-datepicker table td:empty {border:none;}
 .ui-datepicker table td a {font-size:11px; display:block; color:#333;}
 
-
-/**
-*** GRID - Personalização do GRID
-**/
-div[class*="span"]:first-child {margin:0 !important;}
