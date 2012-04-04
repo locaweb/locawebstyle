@@ -43,7 +43,7 @@ function scriptsIniciais(){
     }
   });
 
-
+ $('div[class*="span"]:first').css('margin-left','0')
 
   // Verifica se os inputs dentro da busca avançada estão vazios, se não estiverem, a busca avancada fica aberta
     var inputVazio = $('#optBuscaAvancada').find('input[value!=""]').length > 0 || $('#optBuscaAvancada select option:selected').not(':empty').length > 0
