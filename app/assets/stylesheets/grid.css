@@ -1,4 +1,6 @@
-div[class*="span"]:first-child {margin:0;}
+/** 
+*** GRID.CSS
+**/
 .row {
   margin-left: -20px;
   *zoom: 1;
@@ -15,6 +17,7 @@ div[class*="span"]:first-child {margin:0;}
   float: left;
   margin-left: 20px;
 }
+
 .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
