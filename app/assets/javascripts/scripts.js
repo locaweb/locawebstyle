@@ -52,7 +52,7 @@ function scriptsIniciais(){
       $('#optBuscaAvancada').addClass('in')
     }
 
-  
+
   // Setinha nas TABs
   $('.tabs li:first-child').addClass('active');
 
@@ -60,9 +60,11 @@ function scriptsIniciais(){
   $('.modal').hide().addClass('fade');
 
   // Insere quebra de linha depois das DDs em ListDetails
-  $('.listDetail dd').after('<hr class="sep">');
+   $('.listDetail dd').after('<hr class="sep">');
 
 }
+
+
 
 // Limpa inputs da busca avançada quando clicamos no link de BUSCA AVANCDA
 function clearForms(){
