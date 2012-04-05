@@ -2,12 +2,14 @@
 .toolbar {display:none;}
 
 body {
+  border-top:5px solid #b60000;
   margin: 0;
   font-size: 13px;
   line-height: 18px;
   color: #333;
   background:#E6EAEC;
 }
+
 .cssCode {display:none;}
 .nomargin{margin:0;}
 .destaque {
