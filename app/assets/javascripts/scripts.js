@@ -5,7 +5,6 @@ $(document).ready(function() {
   // Limpa inputs de formulários. Muito usado na busca avançada.
   clearForms();
 
-
 });
 
 
@@ -90,7 +89,7 @@ function scriptsIniciais(){
 // Limpa inputs da busca avançada quando clicamos no link de BUSCA AVANCDA
 function clearForms(){
   $('.clearForm').click(function(){
-    $(this).closest('form, div').find(':input').each(function(){
+    $(this).closest('.boxFiltro').find(':input').each(function(){
       switch(this.type) {
             case 'password':
             case 'select-multiple':
