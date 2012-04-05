@@ -123,6 +123,11 @@ legend + .control-group {margin-top:0;}
 .sideBySide label:first-child {width:140px;}
 .sideBySide label {width:83px;}
 
+.sideBySide {overflow: hidden;}
+.sideBySide .control-group {float:left; padding-bottom:3px;}
+.sideBySide .control-group label.control-label {width:103px;}
+
+
 .help-inline {margin-bottom:0;}
 .error .help-inline {display:block; margin:2px 0 0 105px;}
 .filtroExibe label {font-weight:normal;}
