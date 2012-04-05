@@ -124,5 +124,5 @@ legend + .control-group {margin-top:0;}
 .sideBySide label {width:83px;}
 
 .help-inline {margin-bottom:0;}
-
+.error .help-inline {display:block; margin:2px 0 0 105px;}
 .filtroExibe label {font-weight:normal;}
