@@ -73,7 +73,6 @@ function scriptsIniciais(){
       $('#optBuscaAvancada').addClass('in')
     }
 
-
   // Setinha nas TABs
   $('.tabs li:first-child').addClass('active');
 
@@ -82,6 +81,7 @@ function scriptsIniciais(){
 
   // Insere quebra de linha depois das DDs em ListDetails
    $('.listDetail dd').after('<hr class="sep">');
+
 
 }
 
