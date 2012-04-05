@@ -12,6 +12,27 @@ $(document).ready(function() {
 // Scripts iniciais que modificam o DOM ou geram outras tarefas
 function scriptsIniciais(){
 
+  // Insere a possibilidade de inserir acoes especificas de toggle definidos para os collapses
+  $('body').on('change.collapse.data-api', '[data-toggle=hide]', function ( e ) {
+    var $this = $(this), href
+      , target = $this.attr('data-target')
+        || e.preventDefault()
+        || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') //strip for ie7
+    $(target).collapse('hide')
+  })
+
+  $('body').on('change.collapse.data-api', '[data-toggle=show]', function ( e ) {
+    var $this = $(this), href
+      , target = $this.attr('data-target')
+        || e.preventDefault()
+        || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') //strip for ie7
+    $(target).collapse('show')
+  })
+
+  $(document).ajaxComplete(function(event,request, settings){
+    $('[data-toggle=show]').filter(':checked').trigger('change');
+  });
+
   // Classe necessárias para as Labels
   $('label').addClass('control-label');
 
