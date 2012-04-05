@@ -127,6 +127,7 @@ legend + .control-group {margin-top:0;}
 .sideBySide .control-group {float:left; padding-bottom:3px;}
 .sideBySide .control-group label.control-label {width:103px;}
 
+.sideBySide .control-group .help-inline {max-width:120px;}
 
 .help-inline {margin-bottom:0;}
 .error .help-inline {display:block; margin:2px 0 0 105px;}
