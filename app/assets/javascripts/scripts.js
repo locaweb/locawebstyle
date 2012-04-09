@@ -52,7 +52,7 @@ function scriptsIniciais(){
 
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
 
-  $('.lnkSeta').click(function(e){
+  $('.lnkSeta[data-text]').click(function(e){
     e.preventDefault();
     var btnText = $(this).html();
     var btnTextAlt = $(this).data('text');
