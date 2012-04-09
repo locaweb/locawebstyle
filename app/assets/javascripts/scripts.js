@@ -32,9 +32,6 @@ function scriptsIniciais(){
     $('[data-toggle=show]').filter(':checked').trigger('change');
   });
 
-  // Classe necessárias para as Labels
-  $('label').addClass('control-label');
-
   // Insere uma classe SELECTED para o primeiro Collpase
   $('.collapseGroup summary:first').addClass('active').parent('.details').addClass('active');
 
@@ -54,30 +51,23 @@ function scriptsIniciais(){
 
 
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
-  var btnBuscaAvancadaText = $('a.lnkSeta[data-text]').html();
-  var btnBuscaAvancadaTextAlt = $('a.lnkSeta[data-text]').attr('data-text');
 
-  $('.boxFiltro a.lnkSeta[data-target]').click(function(){
-    if ( $(this).html() == btnBuscaAvancadaText  ){
-      $(this).html(btnBuscaAvancadaTextAlt);
-    } else {
-      $(this).html( btnBuscaAvancadaText );
-    }
+  $('.lnkSeta').click(function(e){
+    e.preventDefault();
+    var btnText = $(this).html();
+    var btnTextAlt = $(this).data('text');
+    $(this).html( btnTextAlt ).data('text',btnText);
   });
 
-
   // Verifica se os inputs dentro da busca avançada estão vazios, se não estiverem, a busca avancada fica aberta
-    var inputVazio = $('#optBuscaAvancada').find('input[value!=""]').length > 0 || $('#optBuscaAvancada select option:selected').not(':empty').length > 0
-    if (inputVazio > 0) {
-      $('.boxFiltro a.lnkSeta[data-target]').html(btnBuscaAvancadaTextAlt);
-      $('#optBuscaAvancada').addClass('in')
-    }
+    var inputVazio = $('#optBuscaAvancada').find('input[value!=""]').length > 0 || $('#optBuscaAvancada select option:selected').not(':empty').length > 0;
+    if (inputVazio > 0) { $('.boxFiltro a.lnkSeta[data-target]').click();  }
 
   // Setinha nas TABs
   $('.tabs li:first-child').addClass('active');
 
   // Faz a modal animar \o/
-  $('.modal').hide().addClass('fade');
+  $('.modal').addClass('fade');
 
   // Insere quebra de linha depois das DDs em ListDetails
    $('.listDetail dd').after('<hr class="sep">');
