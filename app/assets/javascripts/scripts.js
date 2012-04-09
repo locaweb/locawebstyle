@@ -44,12 +44,14 @@ function scriptsIniciais(){
     $(this).parent('.details').toggleClass('active');
   });
 
+
   // Datepicker - JQuery UI
   $('.datepicker').datepicker({
     showOn: "button",
     dateFormat: "dd/mm/yy"
   });
  $('.ui-datepicker-trigger').addClass('icon-calendar').html('').wrap('<span class="add-on">');
+
 
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
   var btnBuscaAvancadaText = $('a.lnkSeta[data-text]').html();
@@ -63,7 +65,6 @@ function scriptsIniciais(){
     }
   });
 
- $('div[class*="span"]:first').css('margin-left','0')
 
   // Verifica se os inputs dentro da busca avançada estão vazios, se não estiverem, a busca avancada fica aberta
     var inputVazio = $('#optBuscaAvancada').find('input[value!=""]').length > 0 || $('#optBuscaAvancada select option:selected').not(':empty').length > 0
@@ -88,8 +89,9 @@ function scriptsIniciais(){
 
 // Limpa inputs da busca avançada quando clicamos no link de BUSCA AVANCDA
 function clearForms(){
-  $('.clearForm').click(function(){
-    $(this).closest('.boxFiltro').find(':input').each(function(){
+  $('.clearFormBt').click(function(e){
+    e.preventDefault();
+    $(this).closest('.boxFiltro').find('.clearForm :input').each(function(){
       switch(this.type) {
             case 'password':
             case 'select-multiple':
