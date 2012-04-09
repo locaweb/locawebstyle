@@ -28,10 +28,10 @@ label, strong.control-label, .form-horizontal .control-label {
     color:#545454;
     line-height:12px;
 }
-.control-group .control-label {width:auto; margin-left:10px;}
-.control-group .control-label:first-child {width:100px;}
 
+.control-group .control-label {width:auto; margin-left:10px;}
 .modal label, .modal .form-horizontal .control-label {width:140px;}
+.control-group .control-label:first-child, .control-group label:first-child {width:100px;}
 
 .controls label,
 .control-group .controls .control-label:first-child, 
