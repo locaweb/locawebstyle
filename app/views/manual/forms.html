@@ -8,21 +8,21 @@
 			<input class="input120 datepicker" id="transaction_search_updated_at_begin" name="transaction_search[updated_at_begin]" size="50" type="text">
 		</div>
 
-		<div class="control-group">
-			<label rel="tooltip" title="Autenticação é o processo para assegurar que o comprador é realmente aquele quem diz ser">Tipo de autenticação:</label>
-			<div class="controls">
-				<label class="dblock"><input name="authentication-type" type="radio" data-toggle="hide" data-target="#authOpt"> Não autenticado</label>
-				<label><input checked="checked" type="radio" name="authentication-type" data-toggle="show" data-target="#authOpt"> Autenticado</label>
-				<div class="collapse" id="authOpt">
-					<div class="boxGrayOpt">
-						<input class="boolean optional" id="redecard_ws_setting_check_zip_on_avs" name="redecard_ws_setting[check_zip_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_zip_on_avs"> CPF</label>
-						<input class="boolean optional" id="redecard_ws_setting_check_cpf_on_avs" name="redecard_ws_setting[check_cpf_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_cpf_on_avs"> Endereço</label>
-						<input class="boolean optional" id="redecard_ws_setting_check_address_on_avs" name="redecard_ws_setting[check_address_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_address_on_avs"> CEP</label>
-					</div>
-				</div>
-			</div>
-		</div>
 
+<div class="control-group">
+    <label rel="tooltip" title="Autenticação é o processo para assegurar que o comprador é realmente aquele quem diz ser">Tipo de autenticação:</label>
+    <div class="controls">
+        <label class="control-label"><input name="authentication-type" type="radio" data-toggle="hide" data-target="#authOpt"> Não autenticado</label>
+        <label class="control-label"><input checked="checked" type="radio" name="authentication-type" data-toggle="show" data-target="#authOpt"> Autenticado</label>
+        <div class="collapse" id="authOpt">
+            <div class="boxGrayOpt">
+                <input class="boolean optional" id="redecard_ws_setting_check_zip_on_avs" name="redecard_ws_setting[check_zip_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_zip_on_avs"> CPF</label>
+                <input class="boolean optional" id="redecard_ws_setting_check_cpf_on_avs" name="redecard_ws_setting[check_cpf_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_cpf_on_avs"> Endereço</label>
+                <input class="boolean optional" id="redecard_ws_setting_check_address_on_avs" name="redecard_ws_setting[check_address_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_address_on_avs"> CEP</label>
+            </div>
+        </div>
+    </div>
+</div>
 		<div class="control-group error">
 			<label>Meio de pagamento </label>
 			<input type="text" class="input240">
@@ -45,12 +45,6 @@
 
 			<label>Nº do pedido </label>
 			<input type="text" class="input120">
-		</div>
-
-		<div class="control-group">
-			<label class="checkbox">
-				<input type="checkbox"> Remember me
-			</label>
 		</div>
 
 		<div class="control-group">
@@ -77,17 +71,26 @@
 	<input class="input120 datepicker" id="transaction_search_updated_at_begin" name="transaction_search[updated_at_begin]" size="50" type="text">
 </div>
 
+
 <div class="control-group">
-	<label rel="tooltip" title="Autenticação é o processo para assegurar que o comprador é realmente aquele quem diz ser">Tipo de autenticação:</label>
-	<div class="controls">
-		<label class="dblock"><input name="authentication-type" type="radio" data-toggle="hide" data-target="#authOpt"> Não autenticado</label>
-		<label><input checked="checked" type="radio" name="authentication-type" data-toggle="show" data-target="#authOpt"> Autenticado</label>
-		<div class="collapse" id="authOpt">
-			<div class="boxGrayOpt">
-				<input class="boolean optional" id="redecard_ws_setting_check_zip_on_avs" name="redecard_ws_setting[check_zip_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_zip_on_avs"> CPF</label>
-				<input class="boolean optional" id="redecard_ws_setting_check_cpf_on_avs" name="redecard_ws_setting[check_cpf_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_cpf_on_avs"> Endereço</label>
-				<input class="boolean optional" id="redecard_ws_setting_check_address_on_avs" name="redecard_ws_setting[check_address_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_address_on_avs"> CEP</label>
-			</div>
+
+    <label rel="tooltip" title="Autenticação é o processo para assegurar que o comprador é realmente aquele quem diz ser">Tipo de autenticação:</label>
+    <div class="controls">
+        <label class="control-label"><input name="authentication-type" type="radio" data-toggle="hide" data-target="#authOpt"> Não autenticado</label>
+        <label class="control-label"><input checked="checked" type="radio" name="authentication-type" data-toggle="show" data-target="#authOpt"> Autenticado</label>
+        <div class="collapse" id="authOpt">
+            <div class="boxGrayOpt">
+                <input class="boolean optional" id="redecard_ws_setting_check_zip_on_avs" name="redecard_ws_setting[check_zip_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_zip_on_avs"> CPF</label>
+                <input class="boolean optional" id="redecard_ws_setting_check_cpf_on_avs" name="redecard_ws_setting[check_cpf_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_cpf_on_avs"> Endereço</label>
+                <input class="boolean optional" id="redecard_ws_setting_check_address_on_avs" name="redecard_ws_setting[check_address_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_address_on_avs"> CEP</label>
+            </div>
+        </div>
+    </div>
+</div>
+		<div class="control-group error">
+			<label>Meio de pagamento </label>
+			<input type="text" class="input240">
+			<span class="help-inline">Something may have gone wrong</span>
 		</div>
 	</div>
 </div>
@@ -114,12 +117,6 @@
 
 	<label>Nº do pedido </label>
 	<input type="text" class="input120">
-</div>
-
-<div class="control-group">
-	<label class="checkbox">
-		<input type="checkbox"> Remember me
-	</label>
 </div>
 
 <div class="control-group">
