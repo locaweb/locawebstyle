@@ -31,18 +31,18 @@ label, strong.control-label, .form-horizontal .control-label {
 
 .control-group .control-label {width:auto; margin-left:10px;}
 .modal label, .modal .form-horizontal .control-label {width:140px;}
-.control-group .control-label:first-child, 
+.control-group .control-label:first-child,
 .control-group label:first-child,
 .sideBySide label:first-child {width:100px;}
 
 .controls label,
-.control-group .controls .control-label:first-child, 
-.modal .controls label, 
-.controls .control-label, 
+.control-group .controls .control-label:first-child,
+.modal .controls label,
+.controls .control-label,
 .modal .controls .control-label {
     text-align:left;
-    width:auto; 
-    margin:5px 0 0 0; 
+    width:auto;
+    margin:5px 0 0 0;
     font-weight:normal;
     color:#797979;
 }
@@ -72,12 +72,12 @@ label.checkbox.control-label, label.checkbox.control-label:first-child {
 }
 label.checkbox.control-label input {float:none;}
 
-.opcoesBuscaAvancada .control-group .control-label:first-child, 
+.opcoesBuscaAvancada .control-group .control-label:first-child,
 .control-group .control-label:first-child {margin-left:0;}
 
 input, .control-group input {vertical-align:middle; display:inline-block; float:none;}
 
-.navView .control-label {width:auto;}
+.navView label {width:auto;}
 .control-group .add-on {float:none; display:inline-block; vertical-align:middle;}
 
 /** Busca avançada **/
