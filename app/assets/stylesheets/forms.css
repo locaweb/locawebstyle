@@ -19,6 +19,7 @@ fieldset h6 {
 
 label, strong.control-label, .form-horizontal .control-label {
     font-weight:bold;
+    font-size:12px;
     display:inline-block;
     vertical-align:middle;
     padding-right:5px;
@@ -122,7 +123,7 @@ legend + .control-group {margin-top:0;}
 .boletoForm label {width:100px;}
 
 .sideBySide input[type="text"] {width:120px;}
-.sideBySide label {width:83px;}
+.modal .sideBySide label, .sideBySide label {width:83px;}
 
 .sideBySide {overflow: hidden;}
 .sideBySide .control-group {float:left; padding-bottom:3px;}

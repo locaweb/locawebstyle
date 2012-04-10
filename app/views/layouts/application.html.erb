@@ -14,58 +14,101 @@
 </head>
 <body>
 
-<div class="destaque">
-	<h1><img src="http://assets.locaweb.com.br/images/logo_locaweb_183x41.gif" width="183" height="41"></h1>
-	<p>Guia visual e de estilo dos elementos que formam os layouts dos serviços Locaweb</p>
-</div>
+<div class="all">
+	<div class="headerPrincipal">
+		<h1 class="logo"><a href="http://locaweb.com.br/">Locaweb</a></h1>
+		<p>Guia visual e de estilo</p>
+	</div>
 
-<aside class="guideAreas">
-	<nav>
-		<h6>Início</h6>
-		<ul>
-			<li><a href="/">Informações iniciais</a></li>
-			<li><a href="/instalacao">Como instalar</a></li>
-			<li><a href="/simple_form">Simple form</a></li>
-		</ul>
-		<h6>Estrutura</h6>
-		<ul>
-			<li><a href="/estrutura-uma-coluna">Estrutura uma coluna</a></li>
-			<li><a href="/estrutura-duas-colunas">Estrutura duas colunas</a></li>
-			<li><a href="/header-principal">Header Principal</a></li>
-			<li><a href="/footer-principal">Footer Principal</a></li>
-			<li><a href="/sidebar">Sidebar</a></li>
-		</ul>
+    <aside class="boxes">
+      <nav role="navigation">
+        <div class="collapseGroup">
+          <h4 title="read the fucking manual">Informações</h4>
+          <div class="details selected">
+            
+            <summary data-toggle="collapse" data-target="#menuIntro" class="selected active">Introdução</summary>
+            <div id="menuIntro" class="collapse in">
+                <ul>
+                    <li><a href="/">Informações iniciais</a></li>
+                    <li><a href="/instalacao">Como instalar</a></li>
+                    <li><a href="/simple_form">Simple form</a></li>
+                </ul>
+            </div>
+          </div>
 
-		<h6>Elementos</h6>
-		<ul>
-			<li><a href="/collapse">Collapse</a></li>
-			<li><a href="/tabs">Tabs</a></li>
-			<li><a href="/filtro-paginacao">Filtro e paginação</a></li>
-			<li><a href="/modal">Modal ou Lightbox</a></li>
-			<li><a href="/botoes">Botões</a></li>
-			<li><a href="/calendario">Calendários</a></li>
-			<li><a href="/tags-inline">Tags inline</a></li>
-		</ul>
 
-		<h6>Conteúdo</h6>
-		<ul>
-			<li><a href="/tabela-listagem">Tabela de listagem</a></li>
-			<li><a href="/mensagens-alertas">Mensagens de Alertas</a></li>
-		</ul>
+          <div class="details selected">
+            
+            <summary data-toggle="collapse" data-target="#menuEstrutura" class="selected active">Modos de estrutura</summary>
+            <div id="menuEstrutura" class="collapse in">
+                <ul>
+                <li><a href="/estrutura-uma-coluna">Estrutura uma coluna</a></li>
+                <li><a href="/estrutura-duas-colunas">Estrutura duas colunas</a></li>
+                <li><a href="/header-principal">Header Principal</a></li>
+                <li><a href="/footer-principal">Footer Principal</a></li>
+                <li><a href="/sidebar">Sidebar</a></li>
+                </ul>
+            </div>
+          </div>
 
-		<h6>Formulários</h6>
-		<ul>
-			<li><a href="/forms">Campos</a></li>
-			<li><a href="/busca-avancada">Busca avançada</a></li>
-		</ul>
-		<h6>Gateway</h6>
-	    <ul>
-	      <li><a href="/gateway-meios-pagamentos">Meios de Pagamento</a></li>
-	    </ul>
-	</nav>
-</aside>
+          <div class="details selected">
+            <summary data-toggle="collapse" data-target="#menuElementos" class="selected active">Elementos</summary>
+            <div id="menuElementos" class="collapse in">
+                <ul>
+                    <li><a href="/collapse">Collapse</a></li>
+                    <li><a href="/tabs">Tabs</a></li>
+                    <li><a href="/filtro-paginacao">Filtro e paginação</a></li>
+                    <li><a href="/modal">Modal ou Lightbox</a></li>
+                    <li><a href="/botoes">Botões</a></li>
+                    <li><a href="/calendario">Calendários</a></li>
+                    <li><a href="/tags-inline">Tags inline</a></li>
+                </ul>
+            </div>
+          </div>
 
-<%= yield %>
 
+          <div class="details selected">
+            
+            <summary data-toggle="collapse" data-target="#menuConteudo" class="selected active">Conteúdo</summary>
+            <div id="menuConteudo" class="collapse in">
+                <ul>
+                <li><a href="/tabela-listagem">Tabela de listagem</a></li>
+                <li><a href="/mensagens-alertas">Mensagens de Alertas</a></li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="details selected">
+            
+            <summary data-toggle="collapse" data-target="#menuFormularios" class="selected active">Formulários</summary>
+            <div id="menuFormularios" class="collapse in">
+                <ul>
+                <li><a href="/forms">Campos</a></li>
+                <li><a href="/busca-avancada">Busca avançada</a></li>
+                </ul>
+            </div>
+          </div>
+
+          <h4 title="read the fucking manual">Específicos de Serviços</h4>
+          <div class="details selected">
+            <summary data-toggle="collapse" data-target="#menuGateway" class="selected active">Gateway</summary>
+            <div id="menuGateway" class="collapse in">
+                <ul>
+                  <li><a href="/gateway-meios-pagamentos">Meios de Pagamento</a></li>
+                </ul>
+            </div>
+          </div>
+
+
+
+			</div>
+		</nav>
+	</aside>
+
+    <div class="main boxes clearfix">
+    	<%= yield %>
+    </div>
+
+</div><!-- FIM GERAL -->
 </body>
 </html>
