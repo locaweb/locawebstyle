@@ -25,7 +25,7 @@ Locastyle = (function() {
     obj.find('[data-toggle=show]').filter(':checked').change();
 
     // Insere uma classe SELECTED para o primeiro Collpase
-    obj.find('.collapseGroup summary:first').addClass('active').parent('.details').addClass('active');
+    obj.find('.collapseGroup summary:first').not('noAutoActive').addClass('active').parent('.details').addClass('active');
 
     // Verifica se os inputs dentro da busca avançada estão vazios, se não estiverem, a busca avancada fica aberta
     var inputVazio = obj.find('#optBuscaAvancada input[value!=""]').length > 0 || obj.find('#optBuscaAvancada select option:selected').not(':empty').length > 0;

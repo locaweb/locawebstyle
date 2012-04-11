@@ -46,14 +46,13 @@
 .divCode:before {content:"HTML";}
 
 .divCode textarea {
-  background:transparent;
-  border:none;
-  width:100%;
-  min-height:500px;
-  height:auto;
-  font-family:monaco;
-  font-size:11px;
-  line-height:20px;
+background: #F0F6FF;
+border: 1px solid #D4E0F5;
+border-radius: 4px;
+color: #1A4294;
+display: block;
+margin: 30px 0;
+padding: 20px;
 }
 
 
@@ -69,7 +68,7 @@ body{
 .all{
   margin: 0 auto;
   min-width: 990px;
-  max-width:1300px;
+  max-width:1350px;
 }
 
 .codes {
@@ -78,8 +77,8 @@ body{
 
 .codes textarea {
   padding:10px;
-  width:90%;
-  margin:0 auto;
+  width:98%;
+  margin:5px auto;
   min-height:300px;
 }
 
@@ -121,8 +120,8 @@ header.site-header h1{
   border-radius: 4px;
 }
 
-.collapseGroup,
-.collapseGroup .details{
+aside.boxes .collapseGroup,
+aside.boxes .collapseGroup .details{
   background: transparent none;
   border: 0 none;
   margin: 0;
@@ -189,7 +188,7 @@ aside.boxes nav a.selected{
  font-weight: bold;
 }
 
-.collapseGroup summary{
+.collapseGroup span{
   background: url("/images/summary-top.png") 98% 55% no-repeat;
   color: #545454;
   border-bottom: 1px solid #DDD;
@@ -198,7 +197,7 @@ aside.boxes nav a.selected{
   line-height: 25px;
 }
 
-.collapseGroup summary.active{
+.collapseGroup span.active{
   background-image: url("/images/summary-blue.png");
   background-position: 98% 11px;
   border-bottom: 0 none;
@@ -288,3 +287,5 @@ footer.site-footer{
 }
 
 footer#rodape {position:static;}
+
+aside.boxes .collapseGroup summary.active { font-weight:normal; color:#B60000;   background:url(/img/setaCollapseTop.png) no-repeat 99% 8px;}
