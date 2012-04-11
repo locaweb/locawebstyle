@@ -1,7 +1,6 @@
 header.headerPrincipal {
   min-height:168px;
   background:#f0f0f0 url(/img/bgHeader.gif) repeat-X top center;
-  margin-bottom:25px;
 }
 header.headerPrincipal .limite {overflow:visible; height:120px; position:relative;}
 
