@@ -3,6 +3,10 @@ fieldset {
     padding:0; margin:0;
 }
 
+
+
+/*
+
 fieldset h6 {
     text-transform:inherit;
     font:400 14px Ubuntu;
@@ -80,8 +84,9 @@ input, .control-group input {vertical-align:middle; display:inline-block; float:
 
 .navView label {width:auto;}
 .control-group .add-on {float:none; display:inline-block; vertical-align:middle;}
+*/
 
-/** Busca avançada **/
+/** Busca avançada 
 .boxFiltro {
     border-radius:3px;
     background:#dfdddd;
@@ -92,8 +97,8 @@ input, .control-group input {vertical-align:middle; display:inline-block; float:
 .boxFiltro h2 {margin:0 0 10px;}
 
 .boxFiltro .datepicker {width:94px;}
-
-/* Quando ativa busca avançada */
+**/
+/* Quando ativa busca avançada 
 .control-group.collapse {margin-bottom:0;}
 .control-group.collapse.in {margin-bottom:18px;}
 
@@ -111,8 +116,8 @@ input.input60 {width:54px;}
 input.input120 {width:120px;}
 input.input240 {width:240px;}
 
-
-/** Botao do Datepicker **/
+*/
+/** Botao do Datepicker 
 .ui-datepicker-trigger {
   border:none;
   background-color:transparent;
@@ -134,3 +139,4 @@ legend + .control-group {margin-top:0;}
 .help-inline {margin-bottom:0;}
 .error .help-inline {display:block; margin:2px 0 0 105px;}
 .filtroExibe label {font-weight:normal;}
+**/
