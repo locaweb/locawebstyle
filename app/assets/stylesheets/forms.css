@@ -11,6 +11,10 @@ fieldset h6 {
     margin:0 10px 10px;
 }
 
+.control-group {
+    margin-bottom:18px;
+}
+
 .form-horizontal .controls, .controls {
     display: inline-block;
     vertical-align: top;
@@ -23,9 +27,21 @@ fieldset h6 {
     padding-left:3px; 
     vertical-align:middle;
     font-weight:normal;
+    display:inline-block;
+    margin-bottom:0;
 }
 
 label, strong.control-label, .form-horizontal .control-label {
+    font-weight:bold;
+    font-size:12px;
+    vertical-align:middle;
+    padding-right:10px;
+    color:#545454;
+    line-height:12px;
+}
+
+
+.formInline label, .formInline strong.control-label, .formInline .form-horizontal .control-label {
     font-weight:bold;
     font-size:12px;
     display:inline-block;
@@ -37,25 +53,8 @@ label, strong.control-label, .form-horizontal .control-label {
     color:#545454;
     line-height:12px;
 }
-/*
-.control-group .control-label {width:auto; margin-left:10px;}
-.modal label, .modal .form-horizontal .control-label {width:140px;}
-.control-group .control-label:first-child,
-.control-group label:first-child,
-.sideBySide label:first-child {width:100px;}
 
-.controls label,
-.control-group .controls .control-label:first-child,
-.modal .controls label,
-.controls .control-label,
-.modal .controls .control-label {
-    text-align:left;
-    width:auto;
-    margin:5px 0 0 0;
-    font-weight:normal;
-    color:#797979;
-}
-*/
+
 .boxGrayOpt {
     padding:5px;
     position:relative;
@@ -139,5 +138,6 @@ legend + .control-group {margin-top:0;}
 .sideBySide .control-group .help-inline {max-width:120px;}
 
 .help-inline {margin-bottom:0;}
-.error .help-inline {display:block; margin:2px 0 0 105px;}
+.formInline .error .help-inline {display:block; margin:2px 0 0 105px;}
+.error .help-inline {display:block; margin:2px 0 0 0px;}
 .filtroExibe label {font-weight:normal;}

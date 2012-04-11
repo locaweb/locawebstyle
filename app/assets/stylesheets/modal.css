@@ -2,8 +2,10 @@
 .modal {
   padding:10px;
   margin-top:-290px; /* sobrescrevendo bootstrap **/
-  max-height:560px;
+  max-height:590px;
   display:none;
+  width:470px;
+  overflow:hidden;
 }
 
 .modal-header {
@@ -11,24 +13,34 @@
   padding-bottom:0;
   padding: 0; margin:0;
 }
+.modal-header .close { margin-right:5px;}
 
-.modal-body {padding:15px 10px;}
- 
 .modal-header h3 {
   margin:0;
-  padding:0 0 10px;
+  color:#000;
+  padding:0 5px 10px;
   font-size:20px;
   font-weight:400;
   border-bottom:1px solid #EEE;
-  font:100 20px Ubuntu, arial, verdana, tahoma, sans-serif;
+  font:400 20px Ubuntu, arial, verdana, tahoma, sans-serif;
 }
-.modal-footer {border-top:5px solid #e5e5e5; clear:both;}
 
+.modal-body {padding:15px 5px 0; min-height:auto; margin:0 0 15px;}
+.modal-header p {padding-left:5px; padding-right:5px;}
+ 
+.modal-footer .btn.close {float:none; display:inline-block;}
+
+.modal-footer {
+  border-top:5px solid #e5e5e5;
+  background-color:transparent;
+  clear:both;
+  text-align:left;
+  padding:20px 5px 10px 5px;
+}
 .modal-footer form { display:inline-block;}
 
 .listDetail {clear:both; margin:0;}
 .listDetail.boxGray {background-color:#e2e2e2; padding:10px 0; margin-bottom:15px;}
-
 
 .listDetail dt {
   width: 150px;
@@ -49,7 +61,6 @@
   margin-left: 5px;
   margin-bottom: 6px;
 }
-
 
 .listDetail .sep {
   display:block;
