@@ -1,21 +1,3 @@
-
- * { margin: 0; padding: 0; outline:none; /* padronizando nos navegadores */ }
-section, article, aside, header, footer, nav, dialog, figure {display:block;}
-
-img { border: 0;}
-fieldset { display: block; border: none; padding: 10px; /* padronizando nos navegadores */ }
-ul, ol { margin-left: 10px; /* padronizando nos navegadores */}
-input[type=hidden]{ display: none !important; visibility: hidden !important; /* esconde mesmo inputs hidden no FF */}
-button { border: 1px outset #AAA;}
-form button { text-align: center; margin: 5px auto; display: block; }
-form ul { list-style: none; margin-left: 0; }
-fieldset .radios label { display: inline; }
-p { margin-bottom: 15px; }
-a{color: #3A3732;}
-a:hover {text-decoration: none;}
-ol li{margin:0 0 15px 35px;}
-
-
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -25,6 +7,7 @@ ol li{margin:0 0 15px 35px;}
   height: 0;
 }
 .clearfix { display: inline-table; }
+
 /* Hides from IE-mac \*/
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
@@ -49,6 +32,29 @@ ol li{margin:0 0 15px 35px;}
 }
 
 .headerPrincipal p {vertical-align:middle;display:inline-block; padding:0; margin:0 0 0 15px; font-size:15px; font-weight:300; line-height:40px; color:#333;}
+.examples:before, .divCode:before {
+  content:"Exemplo";
+  font-weight:bold;
+  font-size:13px;
+  border-bottom:1px solid rgba(0,0,0,0.1);
+  padding:3px 10px;
+  color:#FFF;
+  margin:0;
+  background:#ed1c24;
+  display:inline-block;
+}
+.divCode:before {content:"HTML";}
+
+.divCode textarea {
+  background:transparent;
+  border:none;
+  width:100%;
+  min-height:500px;
+  height:auto;
+  font-family:monaco;
+  font-size:11px;
+  line-height:20px;
+}
 
 
 body{
@@ -62,8 +68,22 @@ body{
 
 .all{
   margin: 0 auto;
-  width: 990px;
+  min-width: 990px;
+  max-width:1300px;
 }
+
+.codes {
+  padding:30px 0;
+}
+
+.codes textarea {
+  padding:10px;
+  width:90%;
+  margin:0 auto;
+  min-height:300px;
+}
+
+.cssCode {display:none;}
 
 /** Feedbackr Button **/
 #feedbackr{
@@ -109,33 +129,35 @@ header.site-header h1{
   padding: 0;
 }
 
-aside{
+aside.boxes{
   float: left;
   width: 240px;
+  padding-bottom:10px;
+  margin-right:3px;
 }
 
-aside h4{
+aside.boxes h4{
   color: #2A2A2A;
   font: bold 13px Ubuntu;
   margin: 30px 0 10px 0;
   text-transform: uppercase;
 }
-aside h4:first-child{margin-top: 0;}
+aside.boxes h4:first-child{margin-top: 0;}
 
 .collapseGroup{
   margin: 0 0 0 5px;
 }
 
-aside nav{
+aside.boxes nav{
   margin: 30px 20px 30px 10px;
 }
 
-aside nav ul{
+aside.boxes nav ul{
   margin: 0 0 20px 0;
   padding: 0;
 }
 
-aside nav ul li{
+aside.boxes nav ul li{
   background: url("/images/left-arrow.png") 7px 50% no-repeat;
   border-bottom: 1px dotted #DDD;
   height: 20px;
@@ -143,18 +165,18 @@ aside nav ul li{
   padding: 0 0 0 15px;
 }
 
-aside nav ul li:last-child{
+aside.boxes nav ul li:last-child{
   border-bottom: 1px solid #DDD;
 }
 
-aside nav ul li a{
+aside.boxes nav ul li a{
   color: #787878;
   display: block;
 }
 
-aside nav ul li a:hover {color:#000;}
+aside.boxes nav ul li a:hover {color:#000;}
 
-aside nav a.no-children{
+aside.boxes nav a.no-children{
  border-bottom: 1px solid #DDD;
  display: block;
  font-family: Ubuntu;
@@ -162,7 +184,7 @@ aside nav a.no-children{
  line-height: 25px;
 }
 
-aside nav a.selected{
+aside.boxes nav a.selected{
  color: #b60000;
  font-weight: bold;
 }
@@ -186,10 +208,9 @@ aside nav a.selected{
 
 /** Main Coloumn **/
 .main{
-  width: 694px;
-  float: right;
-  margin-bottom: 30px;
-  padding: 30px 20px 30px 30px;
+  overflow: hidden;
+  margin:0 0 60px;
+  padding: 30px 20px 0 30px;
   position: relative;
 }
 
@@ -265,3 +286,5 @@ footer.site-footer{
   padding: 0 0 20px 0;
   text-align: center;
 }
+
+footer#rodape {position:static;}

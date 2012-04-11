@@ -1,6 +1,4 @@
 
-
-
 var resizeBoxes = function(){
   var contentHeight = $('.main').outerHeight();
   var sidebarHeight = $('aside').height();
