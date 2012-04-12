@@ -303,7 +303,7 @@ table.tableList tbody tr:hover {background:#fffece;}
 .boxActions {
   border-top:5px solid #bfbfbf;
   background-color:transparent;
-  padding:20px 0 20px 110px;
+  padding:20px 0 20px 5px;
 }
 
 .boxActions .btn {display:inline-block; margin-right:15px; float:none;}
