@@ -1,12 +1,12 @@
 
 var resizeBoxes = function(){
   var contentHeight = $('.main').outerHeight();
-  var sidebarHeight = $('aside').height();
+  var sidebarHeight = $('aside.boxes').height();
 
   if (contentHeight > sidebarHeight) {
-    $('aside').css("min-height", contentHeight);
+    $('aside.boxes').css("min-height", contentHeight);
   } else {
-    $('aside').css("height", "auto");
+    $('aside.boxes').css("height", "auto");
   }
 
   if (sidebarHeight > contentHeight) {

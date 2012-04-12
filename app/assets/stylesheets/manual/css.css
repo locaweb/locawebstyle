@@ -12,7 +12,7 @@
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 /* End hide from IE-mac */
-.headerPrincipal {
+.headerPrincipalDoc {
   font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   width:100%;
   text-align:left;
@@ -30,7 +30,7 @@
     float:left;
 }
 
-.headerPrincipal p {vertical-align:middle;display:inline-block; padding:0; margin:0 0 0 15px; font-size:15px; font-weight:300; line-height:40px; color:#333;}
+.headerPrincipalDoc p {vertical-align:middle;display:inline-block; padding:0; margin:0 0 0 15px; font-size:15px; font-weight:300; line-height:40px; color:#333;}
 .examples:before, .divCode:before {
   content:"Exemplo";
   font-weight:bold;
@@ -42,6 +42,7 @@
   background:#ed1c24;
   display:inline-block;
 }
+.divCode {clear:both;}
 .divCode:before {content:"HTML";}
 
 .divCode textarea {
@@ -65,9 +66,10 @@ body{
 }
 
 .all{
-  margin: 0 auto;
+  margin:0 auto;
+  padding: 0 5%;
   min-width: 990px;
-  max-width:1350px;
+  max-width:1550px;
 }
 
 .codes {
@@ -76,6 +78,7 @@ body{
 
 .codes textarea {
   padding:10px;
+  line-height:25px;
   width:98%;
   margin:5px auto;
   min-height:300px;
