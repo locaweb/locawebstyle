@@ -42,7 +42,7 @@ $(document).ready(function() {
   // Limpa inputs de formulários. Muito usado na busca avançada.
   $('.clearFormBt').live('click', function(e){
     e.preventDefault();
-    $(this).closest('.boxFiltro, .clearForm').find(':input').each(function(){
+    $(this).closest('.boxFiltro').find('.clearForm :input').each(function(){
       switch(this.type) {
             case 'password':
             case 'select-multiple':
