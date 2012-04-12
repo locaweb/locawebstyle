@@ -17,76 +17,98 @@
 		<div class="divCode">
 			
 
-
-        
         <p class="label label-warning">Markup da MODAL</p>
 
 			<textarea class="brush: html">
+<div class="modal" id="modalEditarNome2">
 
-
-
-    <div class="modal" id="modalEditarNome">
-      
-      <div class="modal-header">
-        <a class="close" data-dismiss="modal">×</a>
-        <h3>Editar Nome</h3>
-        <p>Atribuir um nome para a conta com identificador 13427</p>
-      </div>
+<div class="modal-header">
+  <a class="close" data-dismiss="modal">×</a>
+  <h3>Editar Nome</h3>
+  <p>Atribuir um nome para a conta com identificador 13427</p>
+</div>
 
 <div class="modal-body">
-
-    <dl class="listDetail">
-      <dt># do pedido:</dt>
-      <dd>1036</dd>
-      
-      <dt>Data e hora do pedido:</dt>
-      <dd>26/03/12 - 10h18</dd>
-      
-      <dt>ID:</dt>
-      <dd>1</dd>
-      
-      <dt>Meio de Pagamento:</dt>
-      <dd>Cielo (Visa)</dd>
-      
-      <dt>Status:</dt>
-      <dd>Pago (Capturada)</dd>
-      
-      <dt>Valor:</dt>
-      <dd>R$ 635,00</dd>
-    </dl>
-
-
-    <div class="extra-information-transaction">
-      <dl class="boxGray listDetail">
-        <dt>ID da transação (tid):</dt>
-        <dd>7597077486</dd>
-
-        <dt>Número Sequencial da autorização (nsu):</dt>
-        <dd>72142382</dd>
-
-        <dt>Pan:</dt>
-        <dd>25660126</dd>
-
-        <dt>Número da autorização (arp):</dt>
-        <dd>126802974</dd>
-
-        <dt>Retorno da autorização (lr):</dt>
-        <dd></dd>
-
-        <dt>URI para o usuário acessar:</dt>
-        <dd>http://cielo.com.br/auth?id=836</dd>
-      </dl>      
-    </div>
-    <div class="modal-footer">
-      <a href="#" class="btn close" data-dismiss="modal">Cancelar</a>
+    <div class="control-group">
+      <label class="string required" for="boleto_caixa_setting_key"> <abbr title="Obrigatório">*</abbr> Convênio</label>
+        <input class="string required" id="boleto_caixa_setting_key" name="boleto_caixa_setting[key]" required size="50" type="text" value="d1232">
     </div>
 
-  </div>
+    <div class="control-group">
+      <label class="integer required" for="boleto_caixa_setting_expire_after_days"><abbr title="Obrigatório">*</abbr> Dias até o vencimento</label><input class="numeric integer required" id="boleto_caixa_setting_expire_after_days" name="boleto_caixa_setting[expire_after_days]" type="text" value="5">
+    </div>
+    <div class="control-group accepts_after_expired">
+        <label>Aceitar após o vencimento</label>
+        <div class="controls">
+          <span><input id="boleto_caixa_setting_accepts_after_expired_s" name="boleto_caixa_setting[accepts_after_expired]" type="radio" value="S"><label class="collection_radio_buttons" for="boleto_caixa_setting_accepts_after_expired_s"> Sim</label></span><span><input checked="checked" id="boleto_caixa_setting_accepts_after_expired_n" name="boleto_caixa_setting[accepts_after_expired]" type="radio" value="N"><label class="collection_radio_buttons" for="boleto_caixa_setting_accepts_after_expired_n"> Não</label></span>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="string required" for="boleto_caixa_setting_payment_place">
+          <abbr title="Obrigatório">*</abbr> Local do pagamento</label>
+          <input class="string required" id="boleto_caixa_setting_payment_place" name="boleto_caixa_setting[payment_place]" size="50" type="text" value="Qualquer Banco até o vencimento">
     </div>
 
 
+    <div class="control-group">
+        <label class="string required" for="boleto_caixa_setting_store_name"><abbr title="Obrigatório">*</abbr> Nome da loja</label>
 
+    <input class="string required" id="boleto_caixa_setting_store_name" placeholder="Como consta no banco" name="boleto_caixa_setting[store_name]" size="50" type="text" value=""> 
+    </div>
+    <div class="control-group">
+        <label class="string required" for="boleto_caixa_setting_store_document"><abbr title="Obrigatório">*</abbr> CNPJ/CPF da loja</label>
+      <input class="string required" id="boleto_caixa_setting_store_name" placeholder="Como consta no banco" name="boleto_caixa_setting[store_name]" size="50" type="text" value=""> 
+    </div>
+    <div class="control-group">
+      <label class="string required" for="boleto_caixa_setting_portfolio"><abbr title="Obrigatório">*</abbr> Carteira</label>
 
+      <select id="boleto_caixa_setting_portfolio" name="boleto_caixa_setting[portfolio]">
+        <option value="24" selected="selected">24</option>
+        <option value="24" selected="selected">24</option>
+        <option value="24" selected="selected">24</option>
+        <option value="24" selected="selected">24</option>
+        <option value="24" selected="selected">24</option>
+      </select>
+
+    </div>
+    <div class="control-group sideBySide">
+        <label class="string required" for="boleto_caixa_setting_bank_agency"><abbr title="Obrigatório">*</abbr> Agência</label><input class="string required input60" id="boleto_caixa_setting_bank_agency" name="boleto_caixa_setting[bank_agency]" size="50" type="text" value="1252">
+        <label class="string required" for="boleto_caixa_setting_bank_account"><abbr title="Obrigatório">*</abbr> Conta</label><input class="string required input60" id="boleto_caixa_setting_bank_account" name="boleto_caixa_setting[bank_account]" size="50" type="text" value="21112">
+    </div>
+    <fieldset class="sideBySide">
+      <legend>Boleto</legend>
+      <div class="control-group fleft">
+          <label class="string optional" for="boleto_caixa_setting_instruction_1"> Linha de instrução 1</label><input class="string optional" id="boleto_caixa_setting_instruction_1" name="boleto_caixa_setting[instruction_1]" size="50" type="text" value="extra information">
+      </div>
+      <div class="control-group fleft">
+          <label class="string optional" for="boleto_caixa_setting_instruction_2"> Linha de instrução 2</label><input class="string optional" id="boleto_caixa_setting_instruction_2" name="boleto_caixa_setting[instruction_2]" size="50" type="text" value="extra information">
+      </div>
+      <div class="control-group fleft">
+          <label class="string optional" for="boleto_caixa_setting_instruction_3"> Linha de instrução 3</label><input class="string optional" id="boleto_caixa_setting_instruction_3" name="boleto_caixa_setting[instruction_3]" size="50" type="text" value="extra information">
+      </div>
+      <div class="control-group fleft">
+          <label class="string optional" for="boleto_caixa_setting_instruction_4"> Linha de instrução 4</label><input class="string optional" id="boleto_caixa_setting_instruction_4" name="boleto_caixa_setting[instruction_4]" size="50" type="text" value="extra information">
+      </div>
+      <div class="control-group fleft">
+          <label class="string optional" for="boleto_caixa_setting_instruction_5"> Linha de instrução 5</label><input class="string optional" id="boleto_caixa_setting_instruction_5" name="boleto_caixa_setting[instruction_5]" size="50" type="text" value="extra information">
+      </div>
+      <div class="control-group fleft">
+          <label class="string optional" for="boleto_caixa_setting_instruction_6"> Linha de instrução 6</label><input class="string optional" id="boleto_caixa_setting_instruction_6" name="boleto_caixa_setting[instruction_6]" size="50" type="text" value="extra information">
+      </div>
+    </fieldset>
+
+      
+          <div class="input hidden">
+            <input class="hidden" id="boleto_caixa_setting_setting_attributes_active" name="boleto_caixa_setting[setting_attributes][active]" type="hidden" value="true">
+          </div>
+          <input id="boleto_caixa_setting_setting_attributes_id" name="boleto_caixa_setting[setting_attributes][id]" type="hidden" value="7">
+</div>
+<div class="modal-footer">
+<a href="#" class="btn close" data-dismiss="modal">Cancelar</a>
+</div>
+
+</div>
 			</textarea>
 		</div>
 
@@ -150,8 +172,8 @@
       <a href="#" class="btn close" data-dismiss="modal">Cancelar</a>
     </div>
 
-    </div>
-    <div class="modal" id="modalEditarNome2">
+    </div><!-- fim modal 2 -->
+<div class="modal" id="modalEditarNome2">
       
       <div class="modal-header">
         <a class="close" data-dismiss="modal">×</a>
@@ -159,85 +181,89 @@
         <p>Atribuir um nome para a conta com identificador 13427</p>
       </div>
 
-<div class="modal-body">
-    <div class="control-group">
-      <label class="string required" for="boleto_caixa_setting_key"> <abbr title="Obrigatório">*</abbr> Convênio</label>
-        <input class="string required" id="boleto_caixa_setting_key" name="boleto_caixa_setting[key]" required size="50" type="text" value="d1232">
+      <div class="modal-body">
+          <div class="control-group">
+            <label class="string required" for="boleto_caixa_setting_key"> <abbr title="Obrigatório">*</abbr> Convênio</label>
+              <input class="string required" id="boleto_caixa_setting_key" name="boleto_caixa_setting[key]" required size="50" type="text" value="d1232">
+          </div>
+
+          <div class="control-group">
+            <label class="integer required" for="boleto_caixa_setting_expire_after_days"><abbr title="Obrigatório">*</abbr> Dias até o vencimento</label><input class="numeric integer required" id="boleto_caixa_setting_expire_after_days" name="boleto_caixa_setting[expire_after_days]" type="text" value="5">
+          </div>
+          <div class="control-group accepts_after_expired">
+              <label>Aceitar após o vencimento</label>
+              <div class="controls">
+                <span><input id="boleto_caixa_setting_accepts_after_expired_s" name="boleto_caixa_setting[accepts_after_expired]" type="radio" value="S"><label class="collection_radio_buttons" for="boleto_caixa_setting_accepts_after_expired_s"> Sim</label></span><span><input checked="checked" id="boleto_caixa_setting_accepts_after_expired_n" name="boleto_caixa_setting[accepts_after_expired]" type="radio" value="N"><label class="collection_radio_buttons" for="boleto_caixa_setting_accepts_after_expired_n"> Não</label></span>
+              </div>
+          </div>
+
+          <div class="control-group">
+              <label class="string required" for="boleto_caixa_setting_payment_place">
+                <abbr title="Obrigatório">*</abbr> Local do pagamento</label>
+                <input class="string required" id="boleto_caixa_setting_payment_place" name="boleto_caixa_setting[payment_place]" size="50" type="text" value="Qualquer Banco até o vencimento">
+          </div>
+
+
+          <div class="control-group">
+              <label class="string required" for="boleto_caixa_setting_store_name"><abbr title="Obrigatório">*</abbr> Nome da loja</label>
+
+          <input class="string required" id="boleto_caixa_setting_store_name" placeholder="Como consta no banco" name="boleto_caixa_setting[store_name]" size="50" type="text" value=""> 
+          </div>
+          <div class="control-group">
+              <label class="string required" for="boleto_caixa_setting_store_document"><abbr title="Obrigatório">*</abbr> CNPJ/CPF da loja</label>
+            <input class="string required" id="boleto_caixa_setting_store_name" placeholder="Como consta no banco" name="boleto_caixa_setting[store_name]" size="50" type="text" value=""> 
+          </div>
+          <div class="control-group">
+            <label class="string required" for="boleto_caixa_setting_portfolio"><abbr title="Obrigatório">*</abbr> Carteira</label>
+
+            <select id="boleto_caixa_setting_portfolio" name="boleto_caixa_setting[portfolio]">
+              <option value="24" selected="selected">24</option>
+              <option value="24" selected="selected">24</option>
+              <option value="24" selected="selected">24</option>
+              <option value="24" selected="selected">24</option>
+              <option value="24" selected="selected">24</option>
+            </select>
+
+          </div>
+          <div class="control-group sideBySide">
+              <label class="string required" for="boleto_caixa_setting_bank_agency"><abbr title="Obrigatório">*</abbr> Agência</label><input class="string required input60" id="boleto_caixa_setting_bank_agency" name="boleto_caixa_setting[bank_agency]" size="50" type="text" value="1252">
+              <label class="string required" for="boleto_caixa_setting_bank_account"><abbr title="Obrigatório">*</abbr> Conta</label><input class="string required input60" id="boleto_caixa_setting_bank_account" name="boleto_caixa_setting[bank_account]" size="50" type="text" value="21112">
+          </div>
+          <fieldset class="sideBySide">
+            <legend>Boleto</legend>
+            <div class="control-group fleft">
+                <label class="string optional" for="boleto_caixa_setting_instruction_1"> Linha de instrução 1</label><input class="string optional" id="boleto_caixa_setting_instruction_1" name="boleto_caixa_setting[instruction_1]" size="50" type="text" value="extra information">
+            </div>
+            <div class="control-group fleft">
+                <label class="string optional" for="boleto_caixa_setting_instruction_2"> Linha de instrução 2</label><input class="string optional" id="boleto_caixa_setting_instruction_2" name="boleto_caixa_setting[instruction_2]" size="50" type="text" value="extra information">
+            </div>
+            <div class="control-group fleft">
+                <label class="string optional" for="boleto_caixa_setting_instruction_3"> Linha de instrução 3</label><input class="string optional" id="boleto_caixa_setting_instruction_3" name="boleto_caixa_setting[instruction_3]" size="50" type="text" value="extra information">
+            </div>
+            <div class="control-group fleft">
+                <label class="string optional" for="boleto_caixa_setting_instruction_4"> Linha de instrução 4</label><input class="string optional" id="boleto_caixa_setting_instruction_4" name="boleto_caixa_setting[instruction_4]" size="50" type="text" value="extra information">
+            </div>
+            <div class="control-group fleft">
+                <label class="string optional" for="boleto_caixa_setting_instruction_5"> Linha de instrução 5</label><input class="string optional" id="boleto_caixa_setting_instruction_5" name="boleto_caixa_setting[instruction_5]" size="50" type="text" value="extra information">
+            </div>
+            <div class="control-group fleft">
+                <label class="string optional" for="boleto_caixa_setting_instruction_6"> Linha de instrução 6</label><input class="string optional" id="boleto_caixa_setting_instruction_6" name="boleto_caixa_setting[instruction_6]" size="50" type="text" value="extra information">
+            </div>
+          </fieldset>
+
+            
+                <div class="input hidden">
+                  <input class="hidden" id="boleto_caixa_setting_setting_attributes_active" name="boleto_caixa_setting[setting_attributes][active]" type="hidden" value="true">
+                </div>
+                <input id="boleto_caixa_setting_setting_attributes_id" name="boleto_caixa_setting[setting_attributes][id]" type="hidden" value="7">
     </div>
-
-    <div class="control-group">
-      <label class="integer required" for="boleto_caixa_setting_expire_after_days"><abbr title="Obrigatório">*</abbr> Dias até o vencimento</label><input class="numeric integer required" id="boleto_caixa_setting_expire_after_days" name="boleto_caixa_setting[expire_after_days]" type="text" value="5">
-    </div>
-<div class="control-group accepts_after_expired">
-    <label>Aceitar após o vencimento</label>
-    <div class="controls">
-      <span><input id="boleto_caixa_setting_accepts_after_expired_s" name="boleto_caixa_setting[accepts_after_expired]" type="radio" value="S"><label class="collection_radio_buttons" for="boleto_caixa_setting_accepts_after_expired_s"> Sim</label></span><span><input checked="checked" id="boleto_caixa_setting_accepts_after_expired_n" name="boleto_caixa_setting[accepts_after_expired]" type="radio" value="N"><label class="collection_radio_buttons" for="boleto_caixa_setting_accepts_after_expired_n"> Não</label></span>
-    </div>
-</div>
-
-<div class="control-group">
-    <label class="string required" for="boleto_caixa_setting_payment_place">
-      <abbr title="Obrigatório">*</abbr> Local do pagamento</label>
-      <input class="string required" id="boleto_caixa_setting_payment_place" name="boleto_caixa_setting[payment_place]" size="50" type="text" value="Qualquer Banco até o vencimento">
-</div>
-
-
-<div class="control-group">
-    <label class="string required" for="boleto_caixa_setting_store_name"><abbr title="Obrigatório">*</abbr> Nome da loja</label>
-
-<input class="string required" id="boleto_caixa_setting_store_name" placeholder="Como consta no banco" name="boleto_caixa_setting[store_name]" size="50" type="text" value=""> 
-</div>
-<div class="control-group">
-    <label class="string required" for="boleto_caixa_setting_store_document"><abbr title="Obrigatório">*</abbr> CNPJ/CPF da loja</label>
-  <input class="string required" id="boleto_caixa_setting_store_name" placeholder="Como consta no banco" name="boleto_caixa_setting[store_name]" size="50" type="text" value=""> 
-</div>
-<div class="control-group">
-  <label class="string required" for="boleto_caixa_setting_portfolio"><abbr title="Obrigatório">*</abbr> Carteira</label>
-
-  <select id="boleto_caixa_setting_portfolio" name="boleto_caixa_setting[portfolio]">
-    <option value="24" selected="selected">24</option>
-    <option value="24" selected="selected">24</option>
-    <option value="24" selected="selected">24</option>
-    <option value="24" selected="selected">24</option>
-    <option value="24" selected="selected">24</option>
-  </select>
-
-</div>
-<div class="control-group sideBySide">
-    <label class="string required" for="boleto_caixa_setting_bank_agency"><abbr title="Obrigatório">*</abbr> Agência</label><input class="string required input60" id="boleto_caixa_setting_bank_agency" name="boleto_caixa_setting[bank_agency]" size="50" type="text" value="1252">
-    <label class="string required" for="boleto_caixa_setting_bank_account"><abbr title="Obrigatório">*</abbr> Conta</label><input class="string required input60" id="boleto_caixa_setting_bank_account" name="boleto_caixa_setting[bank_account]" size="50" type="text" value="21112">
-</div>
-<fieldset class="sideBySide">
-    <legend>Boleto</legend>
-<div class="control-group fleft">
-    <label class="string optional" for="boleto_caixa_setting_instruction_1"> Linha de instrução 1</label><input class="string optional" id="boleto_caixa_setting_instruction_1" name="boleto_caixa_setting[instruction_1]" size="50" type="text" value="extra information">
-</div>
-<div class="control-group fleft">
-    <label class="string optional" for="boleto_caixa_setting_instruction_2"> Linha de instrução 2</label><input class="string optional" id="boleto_caixa_setting_instruction_2" name="boleto_caixa_setting[instruction_2]" size="50" type="text" value="extra information">
-</div>
-<div class="control-group fleft">
-    <label class="string optional" for="boleto_caixa_setting_instruction_3"> Linha de instrução 3</label><input class="string optional" id="boleto_caixa_setting_instruction_3" name="boleto_caixa_setting[instruction_3]" size="50" type="text" value="extra information">
-</div>
-<div class="control-group fleft">
-    <label class="string optional" for="boleto_caixa_setting_instruction_4"> Linha de instrução 4</label><input class="string optional" id="boleto_caixa_setting_instruction_4" name="boleto_caixa_setting[instruction_4]" size="50" type="text" value="extra information">
-</div>
-<div class="control-group fleft">
-    <label class="string optional" for="boleto_caixa_setting_instruction_5"> Linha de instrução 5</label><input class="string optional" id="boleto_caixa_setting_instruction_5" name="boleto_caixa_setting[instruction_5]" size="50" type="text" value="extra information">
-</div>
-<div class="control-group fleft">
-    <label class="string optional" for="boleto_caixa_setting_instruction_6"> Linha de instrução 6</label><input class="string optional" id="boleto_caixa_setting_instruction_6" name="boleto_caixa_setting[instruction_6]" size="50" type="text" value="extra information">
-</div>
-</fieldset>
-
-      
-        <div class="input hidden"><input class="hidden" id="boleto_caixa_setting_setting_attributes_active" name="boleto_caixa_setting[setting_attributes][active]" type="hidden" value="true"></div>
-<input id="boleto_caixa_setting_setting_attributes_id" name="boleto_caixa_setting[setting_attributes][id]" type="hidden" value="7">    </div>
     <div class="modal-footer">
       <a href="#" class="btn close" data-dismiss="modal">Cancelar</a>
     </div>
 
   </div>
-    </div>
+
+</div>
 
 
 </div>
