@@ -132,7 +132,7 @@ legend + .control-group {margin-top:0;}
 .sideBySide input[type="text"] {width:120px;}
 
 .sideBySide {overflow: hidden;}
-.sideBySide .control-group {float:left; padding-bottom:3px;}
+.sideBySide .control-group {float:left; padding-bottom:3px; padding-right: 10px;}
 .sideBySide .control-group label.control-label {width:103px;}
 
 .sideBySide .control-group .help-inline {max-width:120px;}
