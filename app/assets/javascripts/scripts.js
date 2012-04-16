@@ -42,7 +42,7 @@ $(document).ready(function() {
   // Limpa inputs de formulários. Muito usado na busca avançada.
   $('.clearFormBt').live('click', function(e){
     e.preventDefault();
-    $(this).closest('.boxFiltro').find('.clearForm :input').each(function(){
+    $(this).closest('.boxFiltro').find('.clearForm').not('.in').find(':input').each(function(){
       switch(this.type) {
             case 'password':
             case 'select-multiple':
@@ -57,7 +57,7 @@ $(document).ready(function() {
             case 'radio':
                 this.checked = false;
         }
-    })
+    });
   });
 
   // Insere a possibilidade de inserir acoes especificas de toggle definidos para os collapses
