@@ -9,11 +9,18 @@
 			<h2>Busca avançada</h2>
 
 			<form action="">
-				<div class="control-group formInline input-append">
-					<label class="control-label" for="transaction_search_updated_at_begin">Pedido: </label>
-					<input class="input120 datepicker" id="transaction_search_updated_at_begin" name="transaction_search[updated_at_begin]" size="50" type="text">
-					a
-					<input class="input120 datepicker" id="transaction_search_updated_at_end" name="transaction_search[updated_at_begin]" size="50" type="text">
+				<div class="sideBySide formInline input-append periodoForm">
+					<div class="control-group error">
+						<label class="control-label" for="transaction_search_updated_at_begin">Pedido: </label>
+						<input class="input120 datepicker" id="transaction_search_updated_at_begin" name="transaction_search[updated_at_begin]" size="50" type="text">
+						a
+						<span class="help-inline">erro</span>
+					</div>
+
+					<div class="control-group error">
+						<input class="input120 datepicker" id="transaction_search_updated_at_end" name="transaction_search[updated_at_begin]" size="50" type="text">
+						<span class="help-inline">erro</span>
+					</div>
 				</div>
 
 				<div class="control-group collapse formInline clearForm" id="optBuscaAvancada">

@@ -11,9 +11,7 @@ fieldset h6 {
     margin:0 10px 10px;
 }
 
-.control-group {
-    margin-bottom:18px;
-}
+.control-group {margin-bottom:18px;}
 
 .form-horizontal .controls, .controls {
     display: inline-block;
@@ -40,7 +38,6 @@ label, strong.control-label, .form-horizontal .control-label {
     line-height:12px;
 }
 
-
 .formInline label, .formInline strong.control-label, .formInline .form-horizontal .control-label {
     font-weight:bold;
     font-size:12px;
@@ -53,7 +50,6 @@ label, strong.control-label, .form-horizontal .control-label {
     color:#545454;
     line-height:12px;
 }
-
 
 .boxGrayOpt {
     padding:5px;
@@ -112,6 +108,9 @@ input, .control-group input {vertical-align:middle; display:inline-block; float:
 }
 
 .transaction-search-per-page {width:70px;}
+
+.periodoForm.formInline .control-group:first-child .help-inline {margin-left:117px;}
+.periodoForm.formInline .control-group .help-inline {margin-left:0; padding-left:0;}
 
 input.input30 {width:30px;}
 input.input60 {width:54px;}
