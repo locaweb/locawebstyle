@@ -76,13 +76,22 @@ header.headerPrincipal .serviceName a {text-decoration:none; float:left; color:#
 }
 
 .btn-group .identNumber.dropdown-toggle {
-  background:url(/img/setaIdentBaixo.png) no-repeat 96% 16px;
+  background:url(/img/setaIdentBaixo.png) no-repeat 89% 16px;
   cursor:pointer;
-  padding: 11px 17px 5px;
+  padding: 11px 20px 5px 12px;
   border: 1px solid transparent;
-
 }
 
+.btn-group.open .dropdown-toggle.identNumber {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  background:#FFF url(/img/setaIdentTopo.png) no-repeat 89% 16px !important;
+  border: 1px solid #C7C7C7;
+  border-bottom: none;
+  border-radius: 0;
+  z-index: 2;
+  position: relative;
+}
 .infoLogin .identNumber.selected {
   background:#FFF url(/img/setaIdentTopo.png) no-repeat 96% 16px;
   border: 1px solid #C7C7C7;
@@ -104,18 +113,12 @@ header.headerPrincipal .btn-group {display:inline-block;}
   z-index:1;
   text-align:left;
 }
-.btn-group.open .dropdown-toggle.identNumber {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  background:#FFF url(/img/setaIdentTopo.png) no-repeat 96% 16px !important;
-  border: 1px solid #C7C7C7;
-  border-bottom: none;
-  border-radius: 0;
-  z-index: 2;
-  position: relative;
-}
+
 
 header.headerPrincipal .btn-group {display:inline-block;}
+
+.dropdown-menu.listIdent a {padding:0;}
+
 .dropdown-menu.listIdent {
   left:-130px; top:18px;
   background:#FFF;
@@ -128,11 +131,16 @@ header.headerPrincipal .btn-group {display:inline-block;}
   text-align:left;
 }
 
+.dropdown-menu.listIdent ul {
+  list-style:none;
+  margin:0; padding:0;
+}
 .listIdent li {
   text-align:left;
   border-bottom:1px solid #e9e9e9;
   padding:10px;
   color:#797979;
+  margin:0;
 }
 
 .listIdent li strong {
@@ -144,6 +152,6 @@ header.headerPrincipal .btn-group {display:inline-block;}
 }
 .listIdent li span {padding-left:10px; display:inline-block}
 
-.listIdent .lnkSeta {margin:10px;}
+.dropdown-menu.listIdent .lnkSeta {margin:10px; background-position:left 4px; padding-left:13px;}
 
 /*** TOOLBAR ***/
