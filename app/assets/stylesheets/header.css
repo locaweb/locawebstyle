@@ -24,7 +24,9 @@ header.headerPrincipal .serviceName a {text-decoration:none; float:left; color:#
   list-style:none;
   width:988px;
   padding:0;
+  position:relative;
 }
+#menuPrincipal ul:after {content:" "; display:block; clear:both;}
 
 #menuPrincipal li {
   float:left;
@@ -65,12 +67,13 @@ header.headerPrincipal .serviceName a {text-decoration:none; float:left; color:#
   bottom: 15px; right: 0px;
   text-align:right;
   font:12px verdana;
+  min-height:50px;
   color:#545454;
+  background:url(/img/bgIdentHeader.png) no-repeat right 20px;
 }
 
 .infoLogin .accountName {
   display:block;
-  background:url(/img/bgIdentHeader.png) no-repeat  right top;
   padding:10px 0;
   margin:3px 0 0;
 }
