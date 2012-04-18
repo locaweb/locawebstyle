@@ -75,27 +75,21 @@ header.headerPrincipal .serviceName a {text-decoration:none; float:left; color:#
   margin:3px 0 0;
 }
 
-.btn-group .identNumber.dropdown-toggle {
-  background:url(/img/setaIdentBaixo.png) no-repeat 89% 16px;
+.btn-group .dropdown-toggle.identNumber {
+  background:url(/img/setaIdentBaixo.png) no-repeat right 16px;
   cursor:pointer;
-  padding: 11px 20px 5px 12px;
+  padding: 11px 25px 5px 12px;
   border: 1px solid transparent;
 }
 
-.btn-group.open .dropdown-toggle.identNumber {
+.btn-group.open .dropdown-toggle.identNumber, .infoLogin .identNumber.selected {
   -webkit-box-shadow: none;
+  cursor:pointer;
   -moz-box-shadow: none;
-  background:#FFF url(/img/setaIdentTopo.png) no-repeat 89% 16px !important;
+  background:#FFF url(/img/setaIdentTop.png) no-repeat right 16px;
   border: 1px solid #C7C7C7;
   border-bottom: none;
   border-radius: 0;
-  z-index: 2;
-  position: relative;
-}
-.infoLogin .identNumber.selected {
-  background:#FFF url(/img/setaIdentTopo.png) no-repeat 96% 16px;
-  border: 1px solid #C7C7C7;
-  border-bottom: none;
   z-index: 2;
   position: relative;
 }
