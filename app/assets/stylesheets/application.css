@@ -12,3 +12,13 @@
  *= require sidebar
  *= require base
  */
+
+.gridShow {
+  width:988px; height:100%;
+  margin:auto;
+  background:url(/img/grid.png) repeat-Y;
+  position: fixed;
+  top:0; left:50%;
+  margin-left:-494px;
+  z-index:1000;
+}
