@@ -4,6 +4,7 @@
 		
 		<h2>Modais ou Lightbox</h2>
 		<p>As modais são feitas integralmente no padrão Bootstrap. Qualquer dúvida, você pode ver <a href="http://twitter.github.com/bootstrap/javascript.html#modals">como é feito aqui</a>.</p>
+    <p><a class="lnkSeta" data-toggle="modal" data-target="#modalz" href="#">Teste a modal com Wizard/Slider aqui!</a></p>
 
     <p><a class="lnkSeta" data-toggle="modal" data-target="#modalComSlider" href="#">Teste a modal com Wizard/Slider aqui!</a></p>
     <p><a class="lnkSeta" data-toggle="modal" data-target="#modalEditarNome" href="#">Teste a modal aqui!</a></p>
@@ -289,3 +290,50 @@
 
 
 </div> <!-- FIM MODAL -->
+
+
+
+
+<div class="modal" id="modalz">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Itaú Shopline </h3>
+  </div>
+  <form accept-charset="UTF-8" action="/itau_shopline_setting" class="simple_form edit_itau_shopline_setting" data-remote="true" id="edit_itau_shopline_setting_1" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="AqSU0NQGzumx8NACG7uWnZHEMh3AjTGCX6M7pN8Z8kk="></div>
+    <div class="modal-body">
+      <p class="setting_info">Os campos abaixo devem preenchidos com as informações referentes ao convênio para comércio eletrônico firmado entre o seu estabelecimento e o Itaú Shopline</p>
+      <div class="sideBySide">
+  <div class="control-group string required"><label class="string required" for="itau_shopline_setting_key"><abbr title="Obrigatório">*</abbr> Chave</label><input class="string required" id="itau_shopline_setting_key" name="itau_shopline_setting[key]" size="50" type="text" value="YS7TG9CN14MO7EO7"></div>
+  <div class="control-group string required"><label class="string required" for="itau_shopline_setting_company_code"><abbr title="Obrigatório">*</abbr> Código empresa</label><input class="string required" id="itau_shopline_setting_company_code" name="itau_shopline_setting[company_code]" size="50" type="text" value="J0062849500001710000013056"></div>
+</div>
+<div class="control-group">
+  <label>Tipo de autenticação:</label>
+  <div class="controls">
+    <label class="control-label" for="itau_shopline_setting_use_boleto_true"><input data-target="#authOpt" data-toggle="collapse" id="itau_shopline_setting_use_boleto_true" name="itau_shopline_setting[use_boleto]" type="radio" value="true">Usar boleto</label><label class="dblock" for="itau_shopline_setting_use_boleto_false"><input checked="checked" id="itau_shopline_setting_use_boleto_false" name="itau_shopline_setting[use_boleto]" type="radio" value="false">Não usar boleto</label>
+<div class="collapse" id="authOpt">
+  <div class="boxGrayOpt">
+    <fieldset id="boleto" class="boletoForm dblock">
+      <h6>Configurações do boleto</h6>
+        <div class="control-group integer optional"><label class="integer optional" for="itau_shopline_setting_expire_after_days"> Dias até o vencimento</label><input class="numeric integer optional" id="itau_shopline_setting_expire_after_days" name="itau_shopline_setting[expire_after_days]" type="text" value="3"></div>
+
+        <div class="sideBySide">
+          <div class="control-group string optional"><label class="string optional" for="itau_shopline_setting_instruction_1"> Linha de instrução 1</label><input class="string optional" id="itau_shopline_setting_instruction_1" name="itau_shopline_setting[instruction_1]" size="50" type="text"></div>
+          <div class="control-group string optional"><label class="string optional" for="itau_shopline_setting_instruction_2"> Linha de instrução 2</label><input class="string optional" id="itau_shopline_setting_instruction_2" name="itau_shopline_setting[instruction_2]" size="50" type="text"></div>
+          <div class="control-group string optional"><label class="string optional" for="itau_shopline_setting_instruction_3"> Linha de instrução 3</label><input class="string optional" id="itau_shopline_setting_instruction_3" name="itau_shopline_setting[instruction_3]" size="50" type="text"></div>
+          <div class="control-group string optional"><label class="string optional" for="itau_shopline_setting_instruction_4"> Linha de instrução 4</label><input class="string optional" id="itau_shopline_setting_instruction_4" name="itau_shopline_setting[instruction_4]" size="50" type="text"></div>
+        </div>
+    </fieldset>
+  </div>
+</div>
+  </div>
+
+</div>
+
+      
+        <div class="input hidden"><input class="hidden" id="itau_shopline_setting_setting_attributes_active" name="itau_shopline_setting[setting_attributes][active]" type="hidden" value="true"></div>
+<input id="itau_shopline_setting_setting_attributes_id" name="itau_shopline_setting[setting_attributes][id]" type="hidden" value="4">    </div>
+    <div class="modal-footer">
+      <input class="button btn btn-primary" name="commit" type="submit" value="ok">
+      <a href="#" class="btn close" data-dismiss="modal">Cancelar</a>
+    </div>
+</form></div>

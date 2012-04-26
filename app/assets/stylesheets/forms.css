@@ -15,13 +15,11 @@ form h6 {
 .control-group {margin-bottom:18px;}
 
 .form-horizontal .controls, .controls {
-    display: inline-block;
-    vertical-align: top;
     text-align: left;
     margin-left:0;
 }
 
-.controls label, .controls .control-label {
+.controls > label, .controls > .control-label {
     width:auto;
     padding-left:3px; 
     vertical-align:middle;
