@@ -9,7 +9,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   color:#4B7CB8;
   float:left;
   font:33px LacunaRegular, verdana, arial, tahoma, sans-serif;
-}
+} 
 .serviceName a {text-decoration:none;  color:#777;}
 
 .serviceName span {
