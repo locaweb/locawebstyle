@@ -48,8 +48,9 @@
 
 .tab-content {
   border:1px solid #e5e5e5;
-  padding:10px;
   margin-bottom:10px;
-  min-width:714px;
+  min-width: 734px;
+  width: auto;
 }
 
+.tab-content .tab-pane {padding:10px;}
