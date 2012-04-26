@@ -25,7 +25,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   padding:7px 0 0;
   background:#FFF;
   border-top:1px solid #d7d7d7;
-  border-bottom:4px solid #777777;
+  border-bottom:4px solid #777;
   overflow:hidden;
   margin:0;
 }
@@ -55,7 +55,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 }
 
 #menuPrincipal li a:hover, #menuPrincipal li.selected a {
-  background:#777777 url(/img/setaDots.png) no-repeat center bottom;
+  background:#777 url(/img/setaDots.png) no-repeat center bottom;
   color:#FFF;
   border-top-left-radius:5px;
   border-top-right-radius:5px;
@@ -63,14 +63,14 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 
 #menuPrincipal .btMenu {float:right; padding:0; border-right:0; }
 #menuPrincipal .btMenu a {
-  background: #E6E5E5 url(/img/setaBtMenu.png) no-repeat 9px center;
+  background: #E6E5E5 url(/img/setaBtMenuGray.png) no-repeat 9px center;
   border-radius: 5px;
-  color: #4B7BB8;
+  color: #777;
   text-decoration: none;
   float: right;
   padding: 7px 10px 7px 19px;
 }
-#menuPrincipal .btMenu a:hover {background:#777777 url(/img/setaBtMeneHover.png) no-repeat 9px center;}
+#menuPrincipal .btMenu a:hover {background:#777 url(/img/setaBtMeneHover.png) no-repeat 9px center;}
 
 /** Linkzinho de sugestões do Header **/
 .lnkSugestoes {
