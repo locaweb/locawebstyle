@@ -3,6 +3,7 @@ fieldset {
     padding:0; margin:0;
 }
 
+input, textarea, select {color:#797979;}
 
 fieldset h6 {
     text-transform:inherit;
@@ -130,9 +131,9 @@ legend + .control-group {margin-top:0;}
 
 
 .sideBySide {overflow: hidden;}
-.sideBySide .control-group {float:left; padding-bottom:3px; padding-right: 10px;}
+.sideBySide .control-group {padding-bottom:3px; padding-right: 10px;}
 .sideBySide .control-group label.control-label {width:103px;}
-
+.sideBySide label:first-child {width:auto;}
 .sideBySide .control-group .help-inline {max-width:120px;}
 
 .help-inline {margin-bottom:0;}
