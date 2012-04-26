@@ -7,6 +7,34 @@ Locastyle = (function() {
     // Setinha nas TABs
     obj.find('.tabs li:first-child').addClass('active');
 
+
+  // Define um intervalo para o Wizard demorar para rodar sozinho
+  obj.find('.modalSlider .carousel').carousel({interval: 1000000});
+
+  obj.find('.modalSlider .modal-footer').find('.btnSalvar').hide(); 
+  obj.find('.modalSlider .modal-footer').parents('.modal').find('.modal-footer .slidePrev').hide();
+
+  // Monitora o botão de next e prev dos sliders/wizards de dentro de uma modal
+  obj.find('.modal-footer .slideNext, .modal-footer .slidePrev').live("click", function() {
+      
+    obj.find(this).parents('.modal').find('.modal-footer .slidePrev').show();
+
+    if ( obj.find('.modalSlider .carousel .item:first-child').is('.prev') ) {
+          obj.find(this).parents('.modal').find('.modal-footer .slidePrev').hide();
+        } else {
+          obj.find(this).parents('.modal').find('.modal-footer .slidePrev').show();
+        }
+
+    if ( obj.find('.modalSlider .carousel .item:last-child').is('.next') ) {
+          obj.find(this).parents('.modal').find('.modal-footer .slideNext').hide();   
+          obj.find(this).parents('.modal').find('.modal-footer .btnSalvar').show();   
+        } else {
+          obj.find(this).parents('.modal').find('.modal-footer .slideNext').show();    
+          obj.find(this).parents('.modal').find('.modal-footer .btnSalvar').hide();    
+        }
+  });
+
+
     // Faz a modal animar \o/
     obj.find('.modal').addClass('fade');
 
@@ -92,33 +120,6 @@ $(document).ready(function() {
     btnTextAlt = $(this).data('text');
     $(this).html( btnTextAlt ).data('text',btnText);
   });
-
-  // Define um intervalo para o Wizard demorar para rodar sozinho
-  $('.modalSlider .carousel').carousel({interval: 1000000});
-
-  $('.modalSlider .modal-footer').find('.btnSalvar').hide(); 
-  $('.modalSlider .modal-footer').parents('.modal').find('.modal-footer .slidePrev').hide();
-
-  // Monitora o botão de next e prev dos sliders/wizards de dentro de uma modal
-  $('.modal-footer .slideNext, .modal-footer .slidePrev').live("click", function() {
-      
-    $(this).parents('.modal').find('.modal-footer .slidePrev').show();
-
-    if ( $('.modalSlider .carousel .item:first-child').is('.prev') ) {
-          $(this).parents('.modal').find('.modal-footer .slidePrev').hide();
-        } else {
-          $(this).parents('.modal').find('.modal-footer .slidePrev').show();
-        }
-
-    if ( $('.modalSlider .carousel .item:last-child').is('.next') ) {
-          $(this).parents('.modal').find('.modal-footer .slideNext').hide();   
-          $(this).parents('.modal').find('.modal-footer .btnSalvar').show();   
-        } else {
-          $(this).parents('.modal').find('.modal-footer .slideNext').show();    
-          $(this).parents('.modal').find('.modal-footer .btnSalvar').hide();    
-        }
-  });
-
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
