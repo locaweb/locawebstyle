@@ -24,6 +24,10 @@ html, body {height:100%;}
 .nomargintop {margin-top:0;}
 .nomarginbottom {margin-bottom:0;}
 
+.txtLeft {text-align:left;}
+.txtRight {text-align:right;}
+.txtJustify {text-align:justify;}
+.txtCenter {text-align:center;}
 
 /**
 *** Clearfix
@@ -246,39 +250,6 @@ table ~ .navView {border-bottom:0; border-top:1px solid #e5e5e5;}
 .pagination .disabled a {border:none;}
 
 .navView .pagination {float:right;}
-
-
-/**
-*** TABLES
-**/
-table.tableList {
-  width:100%;
-  border-bottom:5px solid #d3d3d3;
-}
-
-table.tableList thead { background:#545454;}
-
-table.tableList thead th {
-  border-right:1px solid #FFF;
-  color:#FFF;
-  padding:7px 10px;
-  text-align:center;
-  font:bold 13px verdana, arial, tahoma, sans-serif;
-}
-table.tableList thead th a {color:#FFF;}
-table.tableList thead th a:hover {color:#FFF;}
-
-table.tableList tbody td {
-  color:#797979;
-  padding:2px 0;
-  text-align:center;
-  border-right:1px solid #dddddd;
-}
-table.tableList tbody td:last-child {border-right:none;}
-table.tableList tbody tr:nth-child(even) {background-color:#eeeeee;}
-table.tableList thead th.actived {background-color:#2a2a2a;}
-
-table.tableList tbody tr:hover {background:#fffece;}
 
 /**
 *** ICONES

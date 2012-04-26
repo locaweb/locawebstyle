@@ -10,9 +10,11 @@
  *= require forms
  *= require modal
  *= require sidebar
+ *= require tables
  *= require base
  */
 
+/** Pra mostrar a grid visualmente **/
 .gridShow {
   width:988px; height:100%;
   margin:auto;
