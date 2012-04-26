@@ -28,6 +28,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   border-bottom:4px solid #777;
   overflow:hidden;
   margin:0;
+  clear:both;
 }
 
 #menuPrincipal ul {
