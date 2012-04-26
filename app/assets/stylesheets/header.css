@@ -61,6 +61,18 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   border-top-right-radius:5px;
 }
 
+#menuPrincipal .btMenu {float:right; padding:0; border-right:0; }
+#menuPrincipal .btMenu a {
+  background: #E6E5E5 url(/img/setaBtMenu.png) no-repeat 9px center;
+  border-radius: 5px;
+  color: #4B7BB8;
+  text-decoration: none;
+  float: right;
+  padding: 7px 10px 7px 19px;
+}
+#menuPrincipal .btMenu a:hover {background:#777777 url(/img/setaBtMeneHover.png) no-repeat 9px center;}
+
+/** Linkzinho de sugestões do Header **/
 .lnkSugestoes {
   float:right;
   background:url(/img/ico-lamp.png) no-repeat 10px center;
