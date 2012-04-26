@@ -147,9 +147,21 @@ legend + .control-group {margin-top:0;}
 
 
 .sideBySide {overflow: hidden;}
-.sideBySide .control-group {padding-bottom:3px; padding-right: 10px; display:inline-block;}
-.sideBySide .control-group label.control-label {width:103px;}
+.sideBySide .control-group {
+    padding-bottom:3px; 
+    padding-right: 10px;
+    float:left;
+}
 .sideBySide label:first-child {width:auto;}
+.sideBySide label.control-label {
+    width: 103px;
+}
+.sideBySide.formInline .control-label {
+    float:left;
+    min-height: 27px;
+    line-height: 27px;
+}
+
 .sideBySide .control-group .help-inline {max-width:120px;}
 
 .help-inline {margin-bottom:0;}
