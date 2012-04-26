@@ -14,4 +14,5 @@ $(document).keypress(function(e) {
         $('.gridShow').remove();
         $('body').append('<div class="gridShow"></div>')
     }
+
 });

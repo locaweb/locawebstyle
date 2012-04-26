@@ -35,7 +35,7 @@
   background-color:transparent;
   clear:both;
   text-align:left;
-  padding:20px 5px 10px 5px;
+  padding:20px 0 10px 0;
 }
 .modal-footer form { display:inline-block;}
 
@@ -68,3 +68,15 @@
   background:none;
   margin:0; padding:0;
 }
+
+.modal-footer .slidePrev, .modal-footer .slideNext {float:right;}
+
+.modal-footer .slidePrev:before, .modal-footer .slideNext:after {
+  content: " ";
+  display:inline-block;
+  width:10px; height:10px;
+}
+.modal-footer .slidePrev:before {background:url(/img/arrowLeftGray.png) no-repeat center; margin-right:5px;}
+.modal-footer .slideNext:after {background:url(/img/arrowRight.png) no-repeat center; margin-left:5px;}
+
+.modalSlider .modal-footer .btn-primary {float:right;}
