@@ -249,8 +249,27 @@
     <div id="myCarousel">
       <!-- Carousel items -->
       <div class="carousel-inner">
-        <div class="active item">df1…</div>
-        <div class="item">2</div>
+        <div class="active item">
+<div class="control-group">
+      <label class="string required" for="boleto_caixa_setting_key"> <abbr title="Obrigatório">*</abbr> Convênio</label>
+        <input class="string required" id="boleto_caixa_setting_key" name="boleto_caixa_setting[key]" required size="50" type="text" value="d1232">
+    </div>
+
+
+
+        </div>
+        <div class="item">
+
+    <div class="control-group">
+      <label class="integer required" for="boleto_caixa_setting_expire_after_days"><abbr title="Obrigatório">*</abbr> Dias até o vencimento</label><input class="numeric integer required" id="boleto_caixa_setting_expire_after_days" name="boleto_caixa_setting[expire_after_days]" type="text" value="5">
+    </div>
+    <div class="control-group accepts_after_expired">
+        <label>Aceitar após o vencimento</label>
+        <div class="controls">
+          <span><input id="boleto_caixa_setting_accepts_after_expired_s" name="boleto_caixa_setting[accepts_after_expired]" type="radio" value="S"><label class="collection_radio_buttons" for="boleto_caixa_setting_accepts_after_expired_s"> Sim</label></span><span><input checked="checked" id="boleto_caixa_setting_accepts_after_expired_n" name="boleto_caixa_setting[accepts_after_expired]" type="radio" value="N"><label class="collection_radio_buttons" for="boleto_caixa_setting_accepts_after_expired_n"> Não</label></span>
+        </div>
+    </div>
+        </div>
         <div class="item">3</div>
       </div>
       <!-- Carousel nav -->
