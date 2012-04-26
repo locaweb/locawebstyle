@@ -22,11 +22,9 @@ form h6 {
 }
 
 .controls label, .controls .control-label {
-    width:auto;
     padding-left:3px; 
     vertical-align:middle;
     font-weight:normal;
-    display:inline-block;
     margin-bottom:0;
 }
 
@@ -39,7 +37,9 @@ label, strong.control-label, .form-horizontal .control-label {
     line-height:12px;
 }
 
-.formInline label, .formInline strong.control-label, .formInline .form-horizontal .control-label {
+.formInline label, 
+.formInline strong.control-label, 
+.formInline .form-horizontal .control-label {
     font-weight:bold;
     font-size:12px;
     display:inline-block;
@@ -53,7 +53,7 @@ label, strong.control-label, .form-horizontal .control-label {
 }
 
 .boxGrayOpt {
-    padding:5px;
+    padding:10px;
     position:relative;
     margin:10px 0;
     background:#e2e2e2;

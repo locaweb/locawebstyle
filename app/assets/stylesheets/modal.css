@@ -28,6 +28,11 @@
 .modal-body {padding:15px 5px 0; min-height:auto; margin:0 0 15px;}
 .modal-header p {padding-left:5px; padding-right:5px;}
 
+.modal-body p {
+  line-height:18px;
+  margin:0 0 10px;
+}
+
 .modal-body h2:first-child {margin-top:0;}
 
 .modal-footer .btn.close {float:none; display:inline-block;}
