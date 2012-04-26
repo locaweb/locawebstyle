@@ -7,7 +7,7 @@
 # This special exception was added by Craig Small in version 0.37 of dh-make.
 
 # Uncomment this to turn on verbose mode.
-export DH_VERBOSE=1
+#export DH_VERBOSE=1
 
 clean:
 	dh_clean
@@ -27,6 +27,7 @@ binary-indep: build install
 	# Add here commands to install the package into debian/<packagename>
 	gem install bundler
 	bundle install --deployment --without=development:test
+	bundle exec rake RAILS_ENV=production assets:precompile
 	echo `git describe` > public/version.txt
 	dh_install -X/usr/share/man --fail-missing
 	dh_installman
