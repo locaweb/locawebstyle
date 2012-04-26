@@ -9,9 +9,9 @@
 			<h2>Busca avançada</h2>
 
 			<form action="">
-				<div class="sideBySide formInline input-append periodoForm">
-					<div class="control-group error">
+				<div class="sideBySide input-append periodoForm">
 						<label class="control-label" for="transaction_search_updated_at_begin">Pedido: </label>
+					<div class="control-group error">
 						<input class="input120 datepicker" id="transaction_search_updated_at_begin" name="transaction_search[updated_at_begin]" size="50" type="text">
 						a
 						<span class="help-inline">erro</span>
@@ -23,7 +23,7 @@
 					</div>
 				</div>
 
-				<div class="control-group collapse formInline clearForm" id="optBuscaAvancada">
+				<div class="control-group sideBySide collapse clearForm" id="optBuscaAvancada">
 					<fieldset>
 						<h6>Opções de busca avançada</h6>
 
@@ -36,6 +36,8 @@
 								<option>Opção 3</option>
 								<option>Opção 4</option>
 							</select>
+						</div>
+						<div class="control-group">
 							<label>Nº do pedido </label>
 							<input type="text" value="" class="input120">
 						</div>
@@ -43,6 +45,8 @@
 						<div class="control-group">
 							<label>Status </label>
 							<input type="text" value="completo" class="input240">
+						</div>
+						<div class="control-group">
 							<label>Valor </label>
 							<input type="text" value="" class="input30"> a
 							<input type="text" value="" class="input30">

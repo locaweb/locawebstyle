@@ -5,11 +5,11 @@ fieldset {
 
 input, textarea, select {color:#797979;}
 
-fieldset h6 {
+form h6 {
     text-transform:inherit;
     font:400 14px Ubuntu;
     color:#2a2a2a;
-    margin:0 10px 10px;
+    margin:0 0 10px;
 }
 
 .control-group {margin-bottom:18px;}
@@ -82,7 +82,22 @@ label.checkbox.control-label input {float:none;}
 
 input, .control-group input {vertical-align:middle; display:inline-block; float:none;}
 
-.navView label {width:auto;}
+/**
+*** Barra com select de Quantidade de exibição e paginação
+**/
+.navView {
+  margin:20px 0;
+  padding:7px 10px;
+  color:#767676;
+  clear:both;
+  border-bottom:1px solid #e5e5e5;
+}
+
+table ~ .navView {border-bottom:0; border-top:1px solid #e5e5e5;}
+
+.navView label {color:#767676; width:auto; display:inline-block;}
+.navView .control-group {display:inline-block; margin-right:5px;}
+
 .control-group .add-on {float:none; display:inline-block; vertical-align:middle;}
 
 /** Busca avançada **/
@@ -104,7 +119,7 @@ input, .control-group input {vertical-align:middle; display:inline-block; float:
 .boxFiltro fieldset {
     clear:both;
     background:#cecccc;
-    padding:10px 0;
+    padding:10px;
     border-radius:5px;
 }
 
@@ -117,6 +132,7 @@ input.input30 {width:30px;}
 input.input60 {width:54px;}
 input.input120 {width:120px;}
 input.input240 {width:240px;}
+input.input360 {width:360px;}
 
 
 /** Botao do Datepicker **/
@@ -131,7 +147,7 @@ legend + .control-group {margin-top:0;}
 
 
 .sideBySide {overflow: hidden;}
-.sideBySide .control-group {padding-bottom:3px; padding-right: 10px;}
+.sideBySide .control-group {padding-bottom:3px; padding-right: 10px; display:inline-block;}
 .sideBySide .control-group label.control-label {width:103px;}
 .sideBySide label:first-child {width:auto;}
 .sideBySide .control-group .help-inline {max-width:120px;}

@@ -190,20 +190,6 @@ p {
 
 .collapseGroup .details p {padding:10px 30px;}
 
-/**
-*** Barra com select de Quantidade de exibição e paginação
-**/
-.navView {
-  margin:20px 0;
-  padding:7px 10px;
-  color:#767676;
-  clear:both;
-  border-bottom:1px solid #e5e5e5;
-}
-
-table ~ .navView {border-bottom:0; border-top:1px solid #e5e5e5;}
-
-.navView label {color:#767676;}
 
 /**
 *** PAGINACAO
