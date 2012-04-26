@@ -4,6 +4,7 @@ fieldset {
 }
 
 input, textarea, select {color:#797979;}
+input, .control-group input {display:inline-block; float:none;}
 
 form h6 {
     text-transform:inherit;
@@ -57,8 +58,10 @@ label, strong.control-label, .form-horizontal .control-label {
     background:#e2e2e2;
 }
 
-.boxGrayOpt label, .boxGrayOpt .control-label,
-.controls .boxGrayOpt label, .controls .boxGrayOpt .control-label {margin:0; width:100px; text-align:left;}
+.formInline .boxGrayOpt label, 
+.formInline .boxGrayOpt .control-label,
+.formInline .controls .boxGrayOpt label, 
+.formInline .controls .boxGrayOpt .control-label {margin:0; width:100px; text-align:left;}
 
 .boxGrayOpt:before {
     content:" ";
@@ -78,7 +81,6 @@ label.checkbox.control-label input {float:none;}
 .opcoesBuscaAvancada .control-group .control-label:first-child,
 .control-group .control-label:first-child {margin-left:0;}
 
-input, .control-group input {vertical-align:middle; display:inline-block; float:none;}
 
 /**
 *** Barra com select de Quantidade de exibição e paginação
@@ -140,9 +142,6 @@ input.input360 {width:360px;}
 }
 
 legend + .control-group {margin-top:0;}
-.boletoForm input[type="text"] {width:165px;}
-.boletoForm label {width:100px;}
-
 
 .sideBySide {overflow: hidden;}
 .sideBySide .control-group {
