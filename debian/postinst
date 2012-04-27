@@ -7,6 +7,7 @@ case "$1" in
   configure)
     chown locastyle:locastyle /var/log/locastyle
     chown -R locastyle:locastyle $APP_PATH
+    invoke-rc.d locastyle restart
   ;;
 
 esac
