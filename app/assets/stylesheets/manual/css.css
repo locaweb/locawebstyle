@@ -159,7 +159,6 @@ aside.boxes nav ul{
 }
 
 aside.boxes nav ul li{
-  background: url("/images/left-arrow.png") 7px 50% no-repeat;
   border-bottom: 1px dotted #DDD;
   height: 20px;
   line-height: 20px;
