@@ -21,12 +21,6 @@ var resizeBoxes = function(){
 
 $('.main').on('shown', function(){resizeBoxes()});
 
-$(document).ready(function(){
-  dp.SyntaxHighlighter.ClipboardSwf = '/clipboard.swf';
-  dp.SyntaxHighlighter.HighlightAll('code');
-  resizeBoxes()
-});
-
 $(".clippy").live({
   clippycopy: function(e, data) {
     data.text = $(this).children(".clippy_code").text();
