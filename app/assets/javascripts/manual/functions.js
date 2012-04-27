@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 $(".clippy").live({
   clippycopy: function(e, data) {
-    data.text = $(this).parent().parent().children("pre").html();
+    data.text = $(this).children(".clippy_code").text();
   },
   clippyover: function() {
     $(this).children(".clippy_label").text("copiar");

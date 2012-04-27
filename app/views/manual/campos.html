@@ -1,71 +1,7 @@
 <div id="forms">
 	<div class="examples">
 		<h2>Formulários</h2>
-
-		<form>
-			<div class="control-group input-append">
-				<label class="control-label" for="transaction_search_updated_at_begin">Pedido: </label>
-				<input class="input120 datepicker" id="transaction_search_updated_at_begin" name="transaction_search[updated_at_begin]" size="50" type="text">
-				a
-				<input class="input120 datepicker" id="transaction_search_updated_at_begin" name="transaction_search[updated_at_begin]" size="50" type="text">
-			</div>
-
-
-			<div class="control-group">
-				<label rel="tooltip" title="Autenticação é o processo para assegurar que o comprador é realmente aquele quem diz ser">Tipo de autenticação:</label>
-				<div class="controls">
-					<label class="control-label"><input name="authentication-type" type="radio" data-toggle="hide" data-target="#authOpt"> Não autenticado</label>
-					<label class="control-label"><input checked="checked" type="radio" name="authentication-type" data-toggle="show" data-target="#authOpt"> Autenticado</label>
-					<div class="collapse" id="authOpt">
-						<div class="boxGrayOpt">
-							<input class="boolean optional" id="redecard_ws_setting_check_zip_on_avs" name="redecard_ws_setting[check_zip_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_zip_on_avs"> CPF</label>
-							<input class="boolean optional" id="redecard_ws_setting_check_cpf_on_avs" name="redecard_ws_setting[check_cpf_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_cpf_on_avs"> Endereço</label>
-							<input class="boolean optional" id="redecard_ws_setting_check_address_on_avs" name="redecard_ws_setting[check_address_on_avs]" type="checkbox" value="1"><label class="boolean optional" for="redecard_ws_setting_check_address_on_avs"> CEP</label>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="control-group error">
-				<label>Meio de pagamento </label>
-				<input type="text" class="input240">
-				<span class="help-inline">Something may have gone wrong</span>
-			</div>
-
-			<div class="sideBySide">
-				<div class="control-group error">
-					<label class="integer required" for="boleto_caixa_setting_expire_after_days"><b title="Obrigatório">*</b> Dias até o vencimento</label><input class="numeric integer required" id="boleto_caixa_setting_expire_after_days" name="boleto_caixa_setting[expire_after_days]" type="text" value="5">
-					<span class="help-inline">Something may have gone wrong</span>
-				</div>
-				<div class="control-group">
-					<label class="string required" for="boleto_caixa_setting_key"><b title="Obrigatório">*</b> Convênio</label><input class="string required" id="boleto_caixa_setting_key" name="boleto_caixa_setting[key]" size="50" type="text" value="1232">
-				</div>
-			</div>
-
-			<div class="control-group">
-				<label>Meio de pagamento </label>
-				<input type="text" class="input240">
-			</div>
-			<div class="control-group">
-				<label>Nº do pedido </label>
-				<input type="text" class="input120">
-			</div>
-
-			<div class="control-group">
-				<label>Status </label>
-				<input type="text" class="input240">
-			</div>
-			<div class="control-group">
-				<label>Valor </label>
-				<input type="text" class="input120">
-			</div>
-		</form>
-	</div>
-
-	<div class="codes">
-		<div class="divCode">
-
-<%= clippy %>
-<pre name="code" class="php::nocontrols">
+<%= content_for_clippy do %>
 <form>
 	<div class="control-group input-append">
 		<label class="control-label" for="transaction_search_updated_at_begin">Pedido: </label>
@@ -73,7 +9,6 @@
 		a
 		<input class="input120 datepicker" id="transaction_search_updated_at_begin" name="transaction_search[updated_at_begin]" size="50" type="text">
 	</div>
-
 
 	<div class="control-group">
 		<label rel="tooltip" title="Autenticação é o processo para assegurar que o comprador é realmente aquele quem diz ser">Tipo de autenticação:</label>
@@ -122,10 +57,13 @@
 		<label>Valor </label>
 		<input type="text" class="input120">
 	</div>
-
 </form>
-</pre>
+		<% end  %>
+	</div>
 
+	<div class="codes">
+		<div class="divCode">
+			<%= clippy(yield(:code)) %>
 		</div>
 	</div>
 </div>

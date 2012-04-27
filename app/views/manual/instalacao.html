@@ -11,13 +11,8 @@
 		<p>
 			<strong>Segundo passo:</strong> Não tem segundo passo. ;-)
 		</p>
-	</div>
 
-	<div class="codes">
-		<div class="divCode">
-
-<%= clippy %>
-<pre name="code" class="php::nocontrols">
+				<% content_for_clippy do %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +20,12 @@
 	<link rel="stylesheet" type="text/css" href="<%= File.join(root_url, path_to_asset('application.css')) %>">
 	<script type="text/javascript" src="<%= File.join(root_url, path_to_asset('application.js')) %>"></script>
 </head>
-</pre>
+			<% end %>
+	</div>
+
+	<div class="codes">
+		<div class="divCode">
+			<%= clippy(yield(:code)) %>
 		</div>
 	</div>
 </div>

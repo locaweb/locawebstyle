@@ -2,19 +2,16 @@
 
 	<div class="examples">
 		<h2>Calendário</h2>
-		<div class="input-append">
-			<input class="input120 datepicker" id="" name="" size="50" type="text">
-		</div>
+		<%= content_for_clippy do %>
+<div class="input-append">
+	<input class="input120 datepicker" id="" name="" size="50" type="text">
+</div>
+		<% end  %>
 	</div>
 
 	<div class="codes">
 		<div class="divCode">
-<%= clippy %>
-<pre name="code" class="php::nocontrols">
-<div class="input-append">
-	<input class="input120 datepicker" id="" name="" size="50" type="text">
-</div>
-</pre>
+			<%= clippy(yield(:code)) %>
 		</div>
 	</div>
 </div>

@@ -56,23 +56,18 @@
 		<h2>Caixa de ações</h2>
 		<p>Você pode utilizar os botões dentro de uma caixa, que é padrão nas modais e em diversos lugares dos sistemas.</p>
 
-		<div class="boxActions">
-			<input class="btn btn-primary" name="commit" type="submit" value="Atualizar Conta">
-			<a href="#" class="btn close" data-dismiss="modal">Cancelar</a>
-		</div>
-	</div>
-
-	<div class="codes">
-		<div class="divCode">
-
-			<p class="label label-warning">Padrão de código do Bootstrap.</p>
-<%= clippy %>
-<pre name="code" class="php::nocontrols">
+		<%= content_for_clippy do %>
 <div class="boxActions">
 	<input class="btn btn-primary" name="commit" type="submit" value="Atualizar Conta">
 	<a href="#" class="btn close" data-dismiss="modal">Cancelar</a>
 </div>
-</pre>
+		<% end %>
+	</div>
+
+	<div class="codes">
+		<div class="divCode">
+			<p class="label label-warning">Padrão de código do Bootstrap.</p>
+			<%= clippy(yield(:code)) %>
 		</div>
 	</div>
 </div>

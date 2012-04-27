@@ -1,102 +1,25 @@
 <div id="estrutura-duas-colunas">
-
 	<div class="examples">
-
 		<h2>Estrutura duas colunas</h2>
 		<p>A estrutura é composta pelos elementos mestres: #headerPrincipal, #main, #footer.</p>
 		<p>O <strong>#main</strong> é dividido em duas colunas chamadas pela classe <strong>.span</strong>. Essas colunas são baseadas em um grid específico, logo, você precisa manter as classes <strong>.span12</strong> para o lugar onde o conteúdo ficará, e a classe <strong>.span4</strong> para a sidebar.</p>
 
 		<hr>
 
-		<div id="toolbar">
-			<div class="limiteToolbar">
-				<h1 class="logoToolbar">Central do Cliente</h1>
-				<ul class="menuToolbar">
-					<li><a href="#">Minha conta</a></li>
-					<li><a href="#">Ver e alterar planos</a></li>
-					<li><a href="#">Atendimento</a></li>
-				</ul>
-				<a href="/logout" class="logOut">Sair</a>
-				<span class="userName"><strong>saas-dev</strong> (saas-dev)</span>
-			</div>
-		</div>
-		<header class="headerPrincipal">
-			<div class="limite">
-				<a id="feedbackr" class="lnkSugestoes" href="https://www.feedbackr.com.br/projects/4eef88bd6866c42b5500000e/feedbacks/new" target="_blank" alt="feedbackr">Sugestões</a>
-				<h1 class="serviceName"><a href="/">Nome do projeto</a></h1>
-				<div class="infoLogin">
-					Acessando com Identificador
-					<div class="btn-group">
-						<strong class="identNumber dropdown-toggle" data-toggle="dropdown">28424</strong>
-						<div class="listIdent dropdown-menu">
-							<ul>
-								<li>
-									<strong><a href="/accounts/1/change">28424</a> </strong>
-									<span>Gateway 01</span>
-								</li>
-								<li>
-									<strong><a href="/accounts/2/change">/accounts/2/change</a> </strong>
-									<span>teste</span>
-								</li>
-							</ul>
-							<a href="/accounts" class="lnkSeta">Ver todas</a>
-						</div>
-					</div>
-					<span class="accountName">Nome da conta: <strong>Gateway 01</strong></span>
-				</div>
-			</div>
-
-			<menu id="menuPrincipal">
-				<ul>
-					<li class="selected"><a href="/">Página inicial</a></li>
-					<li><a href="#transactions">Transações</a></li>
-					<li><a href="#settings">Meios de pagamento</a></li>
-				</ul>
-			</menu>
-		</header>
-
-		<div id="main">
-			<div class="limite">
-				<div class="row">
-					<div class="span12">
-						Aqui é onde vai o CONTEÚDO PRINCIPAL
-					</div><!-- FIM SPAN CONTENT -->
-					<div class="span4">
-						Aqui é onde vai a SIDEBAR
-					</div><!-- FIM SIDE SPAN -->
-				</div> <!-- FIM ROW -->
-			</div> <!-- FIM LIMITE -->
-		</div> <!-- FIM MAIN -->
-
-		<footer id="rodape">
-			<div class="footerTop">
-				<div class="limite">
-					<nav>
-						<h6>Atendimento</h6>
-						<ul>
-							<li class="ico-helpDesk"><a href="#">HelpDesk</a></li>
-							<li class="ico-Chat"><a href="#">Chat</a></li>
-							<li class="ico-Telefone"><a href="#">Telefone</a></li>
-						</ul>
-						<a href="#" class="lnkSeta lnkSetaWhite fright">Ver todas as formas de atendimento</a>
-					</nav>
-				</div>
-			</div>
-			<div class="subfooter">
-				<div class="limite">
-					<span class="lastAccess"><strong>Último acesso:</strong> 7/8/2011 22:35:49   <strong>IP:</strong> 201.87.65.217 <a href="#" class="icoInterroga">?</a></span>
-
-					<p class="copyRight fright">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</p>
-				</div>
-			</div>
-		</footer>
+		<%= content_for_clippy do %>
+<div id="toolbar">
+	<div class="limiteToolbar">
+		<h1 class="logoToolbar">Central do Cliente</h1>
+		<ul class="menuToolbar">
+			<li><a href="#">Minha conta</a></li>
+			<li><a href="#">Ver e alterar planos</a></li>
+			<li><a href="#">Atendimento</a></li>
+		</ul>
+		<a href="/logout" class="logOut">Sair</a>
+		<span class="userName"><strong>saas-dev</strong> (saas-dev)</span>
 	</div>
+</div>
 
-	<div class="codes">
-		<div class="divCode">
-
-<%= clippy %>
-<pre name="code" class="php::nocontrols">
 <header class="headerPrincipal">
 	<div class="limite">
 		<a id="feedbackr" class="lnkSugestoes" href="https://www.feedbackr.com.br/projects/4eef88bd6866c42b5500000e/feedbacks/new" target="_blank" alt="feedbackr">Sugestões</a>
@@ -133,7 +56,7 @@
 </header>
 
 <div id="main">
-	<div class="limite row">
+	<div class="limite">
 		<div class="row">
 			<div class="span12">
 				Aqui é onde vai o CONTEÚDO PRINCIPAL
@@ -166,14 +89,13 @@
 			<p class="copyRight fright">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</p>
 		</div>
 	</div>
-
 </footer>
-</pre>
-		</div>
+		<% end %>
+	</div>
 
-		<div class="divCode cssCode">
-			<h3>CSS</h3>
-			<pre class="brush: css"><link rel="stylesheet" type="text/css" href="assets/application.css"></pre>
+	<div class="codes">
+		<div class="divCode">
+			<%= clippy(yield(:code)) %>
 		</div>
 	</div>
 </div>

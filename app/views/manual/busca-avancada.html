@@ -7,112 +7,66 @@
 		<p>Quando o usuário clica no botão VOLTAR PARA BUSCA SIMPLES, executa uma ação de limpar os inputs de BUSCA AVANCADA para não submete-los quando o usuário clicar em BUSCAR.</p>
 		<div class="boxFiltro">
 			<h2>Busca avançada</h2>
-
-			<form action="">
-				<div class="sideBySide input-append periodoForm">
-					<label class="control-label" for="transaction_search_updated_at_begin">Pedido: </label>
-					<div class="control-group error">
-						<input class="input120 datepicker" id="transaction_search_updated_at_begin" name="transaction_search[updated_at_begin]" size="50" type="text">
-						a
-						<span class="help-inline">erro</span>
-					</div>
-
-					<div class="control-group error">
-						<input class="input120 datepicker" id="transaction_search_updated_at_end" name="transaction_search[updated_at_begin]" size="50" type="text">
-						<span class="help-inline">erro</span>
-					</div>
-				</div>
-
-				<div class="control-group sideBySide collapse clearForm" id="optBuscaAvancada">
-					<fieldset>
-						<h6>Opções de busca avançada</h6>
-
-						<div class="control-group">
-							<label>Meio de pagamento </label>
-							<select>
-								<option></option>
-								<option>Opção 1</option>
-								<option>Opção 2</option>
-								<option>Opção 3</option>
-								<option>Opção 4</option>
-							</select>
-						</div>
-						<div class="control-group">
-							<label>Nº do pedido </label>
-							<input type="text" value="" class="input120">
-						</div>
-
-						<div class="control-group">
-							<label>Status </label>
-							<input type="text" value="completo" class="input240">
-						</div>
-						<div class="control-group">
-							<label>Valor </label>
-							<input type="text" value="" class="input30"> a
-							<input type="text" value="" class="input30">
-						</div>
-					</fieldset>
-				</div>
-
-				<div class="boxActions">
-					<input class="btn btn-primary" name="commit" type="submit" value="Buscar">
-					<a href="#" class="lnkSeta clearFormBt" data-text="Voltar para busca simples" data-toggle="collapse" data-target="#optBuscaAvancada">Busca avançada</a>
-				</div>
-			</form>
-
+			<%= content_for_clippy do %>
+<form action="">
+	<div class="sideBySide input-append periodoForm">
+		<label class="control-label" for="transaction_search_updated_at_begin">Pedido: </label>
+		<div class="control-group error">
+			<input class="input120 datepicker" id="transaction_search_updated_at_begin" name="transaction_search[updated_at_begin]" size="50" type="text">
+			a
+			<span class="help-inline">erro</span>
 		</div>
 
+		<div class="control-group error">
+			<input class="input120 datepicker" id="transaction_search_updated_at_end" name="transaction_search[updated_at_begin]" size="50" type="text">
+			<span class="help-inline">erro</span>
+		</div>
+	</div>
+
+	<div class="control-group sideBySide collapse clearForm advancedSearch">
+		<fieldset>
+			<h6>Opções de busca avançada</h6>
+
+			<div class="control-group">
+				<label>Meio de pagamento </label>
+				<select>
+					<option></option>
+					<option>Opção 1</option>
+					<option>Opção 2</option>
+					<option>Opção 3</option>
+					<option>Opção 4</option>
+				</select>
+			</div>
+			<div class="control-group">
+				<label>Nº do pedido </label>
+				<input type="text" value="" class="input120">
+			</div>
+
+			<div class="control-group">
+				<label>Status </label>
+				<input type="text" value="completo" class="input240">
+			</div>
+			<div class="control-group">
+				<label>Valor </label>
+				<input type="text" value="" class="input30"> a
+				<input type="text" value="" class="input30">
+			</div>
+		</fieldset>
+	</div>
+
+	<div class="boxActions">
+		<input class="btn btn-primary" name="commit" type="submit" value="Buscar">
+		<a href="#" class="lnkSeta clearFormBt" id="1" data-text="Voltar para busca simples" data-toggle="collapse" data-target=".advancedSearch">Busca avançada</a>
+	</div>
+</form>
+			<% end %>
+		</div>
 	</div>
 
 	<div class="codes">
 		<div class="divCode">
-
-<%= clippy %>
-<pre name="code" class="php::nocontrols">
-<div class="boxFiltro">
-	<form action="">
-		<div class="control-group input-append">
-			<label class="control-label" for="transaction_search_updated_at_begin">Pedido: </label>
-			<input class="input120 datepicker" id="transaction_search_updated_at_begin" name="transaction_search[updated_at_begin]" size="50" type="text">
-			a
-			<input class="input120 datepicker" id="transaction_search_updated_at_end" name="transaction_search[updated_at_begin]" size="50" type="text">
+			<%= clippy(yield(:code)) %>
 		</div>
-
-		<div class="control-group collapse clearForm" id="optBuscaAvancada">
-			<fieldset>
-				<h6>Opções de busca avançada</h6>
-
-				<div class="control-group">
-					<label>Meio de pagamento </label>
-					<select>
-						<option></option>
-						<option>Opção 1</option>
-						<option>Opção 2</option>
-						<option>Opção 3</option>
-						<option>Opção 4</option>
-					</select>
-					<label>Nº do pedido </label>
-					<input type="text" value="" class="input120">
-				</div>
-
-				<div class="control-group">
-					<label>Status </label>
-					<input type="text" value="completo" class="input240">
-					<label>Valor </label>
-					<input type="text" value="" class="input30"> a
-					<input type="text" value="" class="input30">
-				</div>
-			</fieldset>
-		</div>
-
-		<div class="boxActions">
-			<input class="btn btn-primary" name="commit" type="submit" value="Buscar">
-			<a href="#" class="lnkSeta clearFormBt" data-text="Voltar para busca simples" data-toggle="collapse" data-target="#optBuscaAvancada">Busca avançada</a>
-		</div>
-	</form>
-</div>
-</pre>
-		</div>
-
 	</div>
+
 </div>

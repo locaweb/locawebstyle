@@ -4,6 +4,7 @@ source "http://gems.locaweb.com.br/"
 gem 'rails',    '3.2.2'
 gem 'unicorn',  '~> 4.2.0'
 gem 'god',      '~> 0.12.1'
+gem 'coderay',  '~> 1.0.6'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -4,43 +4,7 @@
 
 		<h2>Filtro de exibição e paginação</h2>
 
-		<div class="navView">
-			<div class="pagination">
-				<ul>
-					<li class="prev"><a href="#">Anterior</a></li>
-					<li class="active"><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li class="disabled"><a href="#">...</a></li>
-					<li class="next"><a href="#">Próximo</a></li>
-				</ul>
-			</div>
-
-			<div class="filtroExibe">
-				<label class="select optional dinlineblock" for="per-page-top">Exibir </label>
-				<select class="select optional transaction-search-per-page" id="per-page-top" name="per_page">
-					<option value=""></option>
-					<option value="10">10</option>
-					<option value="20">20</option>
-					<option value="30">30</option>
-					<option value="50">50</option>
-					<option value="100">100</option>
-				</select>
-				ítens por página
-			</div>
-
-		</div>
-
-	</div>
-
-	<div class="codes">
-		<div class="divCode">
-
-			<p class="label label-warning">Padrão de código do Bootstrap.</p>
-
-<%= clippy %>
-<pre name="code" class="php::nocontrols">
+		<%= content_for_clippy do %>
 <div class="navView">
 	<div class="pagination">
 		<ul>
@@ -66,11 +30,13 @@
 		</select>
 		ítens por página
 	</div>
-
 </div>
-</pre>
-		</div>
-
+		<% end %>
 	</div>
-</div>
+
+	<div class="codes">
+		<div class="divCode">
+			<%= clippy(yield(:code)) %>
+		</div>
+	</div>
 </div>

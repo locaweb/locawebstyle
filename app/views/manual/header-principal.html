@@ -1,68 +1,25 @@
 <div id="header-principal">
 
 	<div class="examples">
-
 		<h2>Header de exemplo</h2>
-		<div id="toolbar">
-			<div class="limiteToolbar">
-				<h1 class="logoToolbar">Central do Cliente</h1>
-				<ul class="menuToolbar">
-					<li><a href="#">Minha conta</a></li>
-					<li><a href="#">Ver e alterar planos</a></li>
-					<li><a href="#">Atendimento</a></li>
-				</ul>
-				<a href="/logout" class="logOut">Sair</a>
-				<span class="userName"><strong>saas-dev</strong> (saas-dev)</span>
-			</div>
-		</div>
-
-		<header class="headerPrincipal">
-			<div class="limite">
-				<a id="feedbackr" class="lnkSugestoes" href="https://www.feedbackr.com.br/projects/4eef88bd6866c42b5500000e/feedbacks/new" target="_blank" alt="feedbackr">Sugestões</a>
-				<h1 class="serviceName"><a href="/">Nome do projeto</a> <span>Uma frase qualquer</span></h1>
-				<div class="infoLogin">
-					Acessando com Identificador
-					<div class="btn-group">
-						<strong class="identNumber dropdown-toggle" data-toggle="dropdown">28424</strong>
-						<div class="listIdent dropdown-menu">
-							<ul>
-								<li>
-									<strong><a href="/accounts/1/change">28424</a> </strong>
-									<span>Gateway 01</span>
-								</li>
-								<li>
-									<strong><a href="/accounts/2/change">/accounts/2/change</a> </strong>
-									<span>teste</span>
-								</li>
-							</ul>
-							<a href="/accounts" class="lnkSeta">Ver todas</a>
-						</div>
-					</div>
-					<span class="accountName">Nome da conta: <strong>Gateway 01</strong></span>
-				</div>
-			</div>
-
-			<menu id="menuPrincipal">
-				<ul>
-					<li class="selected"><a href="/">Página inicial</a></li>
-					<li><a href="#transactions">Transações</a></li>
-					<li><a href="#settings">Meios de pagamento</a></li>
-					<li class="btMenu"><a href="#">Ambiente de testes</a></li>
-				</ul>
-			</menu>
-		</header>
-
+		<%= content_for_clippy do %>
+<div id="toolbar">
+	<div class="limiteToolbar">
+		<h1 class="logoToolbar">Central do Cliente</h1>
+		<ul class="menuToolbar">
+			<li><a href="#">Minha conta</a></li>
+			<li><a href="#">Ver e alterar planos</a></li>
+			<li><a href="#">Atendimento</a></li>
+		</ul>
+		<a href="/logout" class="logOut">Sair</a>
+		<span class="userName"><strong>saas-dev</strong> (saas-dev)</span>
 	</div>
+</div>
 
-	<div class="codes">
-		<div class="divCode">
-
-<%= clippy %>
-<pre name="code" class="php::nocontrols">
 <header class="headerPrincipal">
 	<div class="limite">
 		<a id="feedbackr" class="lnkSugestoes" href="https://www.feedbackr.com.br/projects/4eef88bd6866c42b5500000e/feedbacks/new" target="_blank" alt="feedbackr">Sugestões</a>
-		<h1 class="serviceName"><a href="/">Nome do projeto</a></h1>
+		<h1 class="serviceName"><a href="/">Nome do projeto</a> <span>Uma frase qualquer</span></h1>
 		<div class="infoLogin">
 			Acessando com Identificador
 			<div class="btn-group">
@@ -90,10 +47,16 @@
 			<li class="selected"><a href="/">Página inicial</a></li>
 			<li><a href="#transactions">Transações</a></li>
 			<li><a href="#settings">Meios de pagamento</a></li>
+			<li class="btMenu"><a href="#">Ambiente de testes</a></li>
 		</ul>
 	</menu>
 </header>
-</pre>
+	<% end %>
+	</div>
+
+	<div class="codes">
+		<div class="divCode">
+			<%= clippy(yield(:code)) %>
 		</div>
 	</div>
 </div>
