@@ -98,7 +98,7 @@ table ~ .navView {border-bottom:0; border-top:1px solid #e5e5e5;}
 .navView label {color:#767676; width:auto; display:inline-block;}
 .navView .control-group {display:inline-block; margin-right:5px;}
 
-.control-group .add-on {float:none; display:inline-block; vertical-align:middle;}
+.control-group .add-on {float:none; display:inline-block; vertical-align:top;}
 
 /** Busca avançada **/
 .boxFiltro {
