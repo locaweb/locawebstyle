@@ -30,7 +30,7 @@ table.tableList tbody td.txtCenter, table.tableList thead th.txtCenter {text-ali
 
 
 table.tableList tbody td:last-child {border-right:none;}
-table.tableList tbody tr:nth-child(even) {background-color:#eeeeee;}
+table.tableList tbody tr:nth-child(even) {background-color:#eee;}
 table.tableList thead th.actived {background-color:#2a2a2a;}
 
 table.tableList tbody tr:hover {background:#fffece;}
