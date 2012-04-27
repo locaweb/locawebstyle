@@ -4,41 +4,13 @@ APP_PATH="/var/www/locastyle"
 
 case "$1" in
 
-  configure|reconfigure)
-  {
-    addgroup --quiet --system locastyle
-    adduser --quiet --system --no-create-home --disabled-password --gid $(getent group locastyle | cut -d: -f3) --home $APP_PATH locastyle
-
+  configure)
     mkdir -p $APP_PATH/tmp
     mkdir -p $APP_PATH/log
     mkdir -p /var/log/locastyle
 
-    BIN="/usr/bin"
-
-    RUBY=$(which ruby) || RUBY="NULL"
-    if [ "${RUBY}" = "NULL" ] && [ -f "${BIN}/ruby1.9.1" ]; then
-       ln -s ${BIN}/ruby1.9.1 ${BIN}/ruby
-    fi
-
-    GEM=$(which gem) || GEM="NULL"
-    if [ "${GEM}" = "NULL" ] && [ -f "${BIN}/gem1.9.1" ]; then
-       ln -s ${BIN}/gem1.9.1 ${BIN}/gem
-    fi
-
-    RAKE=$(which rake) || RAKE="NULL"
-    if [ "${RAKE}" = "NULL" ] && [ -f "${BIN}/rake1.9.1" ]; then
-       ln -s ${BIN}/rake1.9.1 ${BIN}/rake
-    fi
-
-    for GEM in god
-    do
-       chmod 755 $APP_PATH/vendor/bundle/ruby/1.9.1/gems/${GEM}*/bin/${GEM}
-    done
-
     chown locastyle:locastyle /var/log/locastyle
     chown -R locastyle:locastyle $APP_PATH
-  } 1>&2
-
   ;;
 
 esac

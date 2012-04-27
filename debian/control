@@ -2,9 +2,9 @@ Source: locastyle
 Section: ruby
 Priority: optional
 Maintainer: Diego Eis <diego.eis@locaweb.com.br>
-Build-Depends: debhelper (>= 7.0.50~)
-Standards-Version: 3.9.1
-Homepage: http://locaweb.com.br
+Build-Depends: ruby1.9.1, ruby1.9.1-dev
+Standards-Version: 0.1
+Homepage: https://git.locaweb.com.br/locawebstyle/locawebstyle
 
 Package: locastyle
 Architecture: any
