@@ -24,4 +24,4 @@ server_mode: #{@server_deployment.inspect}
 
 GOD
 
-%w(unicorn workers).each {|g| God.load File.join(@conf_dir, "#{g}.god")}
+%w(unicorn).each {|g| God.load File.join(@conf_dir, "#{g}.god")}

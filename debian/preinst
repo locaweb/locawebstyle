@@ -6,8 +6,8 @@ case "$1" in
   install|upgrade)
     id locastyle > /dev/null 2>&1 || adduser --home "/var/www/locastyle" --system locastyle --group
 
-    mkdir -p $APP_PATH
     mkdir -p $APP_PATH/tmp
+    mkdir -p $APP_PATH/tmp/pids
     mkdir -p $APP_PATH/log
     mkdir -p /var/log/locastyle
   ;;
