@@ -6,7 +6,7 @@
 # Short-Description: Locastyle - Default Interface to Locaweb
 ### END INIT INFO
 
-PATH+=$(NEW_PATH="/var/www/locastyle/vendor/bundle/ruby/1.9.1/gems/*/bin" ; echo $NEW_PATH | sed 's/^/:/g;s/ /:/g')
+PATH+=$(NEW_PATH="/var/www/locastyle/vendor/bundle/ruby/1.9.1/gems/bin" ; echo $NEW_PATH | sed 's/^/:/g;s/ /:/g')
 APP_PATH=/var/www/locastyle
 
 NAME=locastyle-monitor
