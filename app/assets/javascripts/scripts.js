@@ -56,8 +56,7 @@ Locastyle = (function() {
     obj.find('.advancedSearch').each(function(index, search){
       inputVazio = $(search).find('input[value!=""]').size() + $(search).find('select option:selected').not(':empty').size();
       if (inputVazio > 0) {
-        $(search).parent().find('a[data-toggle="collapse"][data-target=".advancedSearch"]').click();
-        console.log($(search).parent().find('a[data-toggle="collapse"][data-target=".advancedSearch"]').attr('id'));
+        $(search).parent().find('a[data-toggle="collapse"][data-target]').click();
       }
     });
   };
