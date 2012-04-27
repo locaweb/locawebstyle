@@ -22,6 +22,22 @@ var resizeBoxes = function(){
 $('.main').on('shown', function(){resizeBoxes()});
 
 $(document).ready(function(){
-  SyntaxHighlighter.all()
+  dp.SyntaxHighlighter.ClipboardSwf = '/clipboard.swf';
+  dp.SyntaxHighlighter.HighlightAll('code');
   resizeBoxes()
+});
+
+$(".clippy").live({
+  clippycopy: function(e, data) {
+    data.text = $(this).parent().parent().children("pre").html();
+  },
+  clippyover: function() {
+    $(this).children(".clippy_label").text("copiar");
+  },
+  clippyout: function() {
+    $(this).children(".clippy_label").text("");
+  },
+  clippycopied: function() {
+    $(this).children(".clippy_label").text("texto copiado");
+  }
 });

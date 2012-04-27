@@ -11,12 +11,12 @@ Locastyle = (function() {
   // Define um intervalo para o Wizard demorar para rodar sozinho
   obj.find('.modalSlider .carousel').carousel({interval: 1000000});
 
-  obj.find('.modalSlider .modal-footer').find('.btnSalvar').hide(); 
+  obj.find('.modalSlider .modal-footer').find('.btnSalvar').hide();
   obj.find('.modalSlider .modal-footer').parents('.modal').find('.modal-footer .slidePrev').hide();
 
   // Monitora o botão de next e prev dos sliders/wizards de dentro de uma modal
   obj.find('.modal-footer .slideNext, .modal-footer .slidePrev').live("click", function() {
-      
+
     obj.find(this).parents('.modal').find('.modal-footer .slidePrev').show();
 
     if ( obj.find('.modalSlider .carousel .item:first-child').is('.prev') ) {
@@ -26,11 +26,11 @@ Locastyle = (function() {
         }
 
     if ( obj.find('.modalSlider .carousel .item:last-child').is('.next') ) {
-          obj.find(this).parents('.modal').find('.modal-footer .slideNext').hide();   
-          obj.find(this).parents('.modal').find('.modal-footer .btnSalvar').show();   
+          obj.find(this).parents('.modal').find('.modal-footer .slideNext').hide();
+          obj.find(this).parents('.modal').find('.modal-footer .btnSalvar').show();
         } else {
-          obj.find(this).parents('.modal').find('.modal-footer .slideNext').show();    
-          obj.find(this).parents('.modal').find('.modal-footer .btnSalvar').hide();    
+          obj.find(this).parents('.modal').find('.modal-footer .slideNext').show();
+          obj.find(this).parents('.modal').find('.modal-footer .btnSalvar').hide();
         }
   });
 
@@ -123,4 +123,11 @@ $(document).ready(function() {
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
+});
+
+$(document).keypress(function(e) {
+  if(e.keyCode == 13) {
+    $('.gridShow').remove();
+    $('body').append('<div class="gridShow"></div>')
+  }
 });

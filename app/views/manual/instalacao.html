@@ -3,8 +3,10 @@
 		<h2>Instruções de instalação</h2>
 		<p><strong>Primeiro passo:</strong> Adicione as tags abaixo para adicionar o pacote de CSS e Javascript.</p>
 		<p>
-			<i> &lt;link rel="stylesheet" type="text/css" href="<%= root_url %>assets/application.css"&gt;<br>
-			&lt;script type="text/javascript" src="<%= root_url %>assets/application.js"&gt;&lt;/script&gt;</i>
+			<i> &lt;link rel="stylesheet" type="text/css" href="<%= File.join(root_url, path_to_asset('application.css')) %>"&gt;<br>
+			&lt;script type="text/javascript" src="<%= File.join(root_url, path_to_asset('application.js')) %>"&gt;&lt;/script&gt;</i>
+			<i>
+			</i>
 		</p>
 		<p>
 			<strong>Segundo passo:</strong> Não tem segundo passo. ;-)
@@ -13,16 +15,17 @@
 
 	<div class="codes">
 		<div class="divCode">
-			
-			<textarea class="brush: html">
+
+<%= clippy %>
+<pre name="code" class="php::nocontrols">
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Título</title>
-	<link rel="stylesheet" type="text/css" href="<%= root_url %>assets/application.css">
-	<script type="text/javascript" src="<%= root_url %>assets/application.js"></script>
+	<link rel="stylesheet" type="text/css" href="<%= File.join(root_url, path_to_asset('application.css')) %>">
+	<script type="text/javascript" src="<%= File.join(root_url, path_to_asset('application.js')) %>"></script>
 </head>
-			</textarea>
+</pre>
 		</div>
 	</div>
 </div>
