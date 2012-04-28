@@ -1,11 +1,15 @@
 #!/bin/sh -e
 
 APP_PATH="/var/www/locastyle"
+LOG_PATH="/var/log/locastyle"
 
 case "$1" in
 
   configure)
-    chown locastyle:locastyle /var/log/locastyle
+    ln -fs $LOG_PATH $APP_PATH/log
+    cd $APP_PATH
+    bundle exec rake RAILS_ENV=production assets:precompile
+    chown locastyle:locastyle $LOG_PATH
     chown -R locastyle:locastyle $APP_PATH
     invoke-rc.d locastyle restart
   ;;

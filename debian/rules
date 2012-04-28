@@ -27,7 +27,6 @@ binary-indep: build install
 	# Add here commands to install the package into debian/<packagename>
 	gem install bundler
 	bundle install --deployment --without=development:test
-	bundle exec rake RAILS_ENV=production assets:precompile
 	echo `git describe` > public/version.txt
 	dh_install -X/usr/share/man --fail-missing
 	dh_installman
