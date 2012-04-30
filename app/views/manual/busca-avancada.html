@@ -1,7 +1,5 @@
 <div id="busca-avancada">
 
-	<div class="examples">
-
 		<h2>Busca avançada</h2>
 		<p>A busca avançada já reconhece se os inputs estão marcados com preenchidos. Se estiverem preenchidos, o busca avançada já fica aberto, caso contrário ele aparece fechado. </p>
 		<p>Quando o usuário clica no botão VOLTAR PARA BUSCA SIMPLES, executa uma ação de limpar os inputs de BUSCA AVANCADA para não submete-los quando o usuário clicar em BUSCAR.</p>
@@ -11,15 +9,13 @@
 <form action="">
 	<div class="sideBySide input-append periodoForm">
 		<label class="control-label" for="transaction_search_updated_at_begin">Pedido: </label>
-		<div class="control-group error">
-			<input class="input120 datepicker" id="transaction_search_updated_at_begin" name="transaction_search[updated_at_begin]" size="50" type="text">
+		<div class="control-group">
+			<input class="input120 datepicker" type="text">
 			a
-			<span class="help-inline">erro</span>
 		</div>
 
-		<div class="control-group error">
-			<input class="input120 datepicker" id="transaction_search_updated_at_end" name="transaction_search[updated_at_begin]" size="50" type="text">
-			<span class="help-inline">erro</span>
+		<div class="control-group">
+			<input class="input120 datepicker" type="text">
 		</div>
 	</div>
 
@@ -61,12 +57,9 @@
 </form>
 			<% end %>
 		</div>
-	</div>
 
 	<div class="codes">
-		<div class="divCode">
 			<%= clippy(yield(:code)) %>
-		</div>
 	</div>
 
 </div>

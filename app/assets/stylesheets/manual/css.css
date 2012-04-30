@@ -31,29 +31,6 @@
 }
 
 .headerPrincipalDoc p {vertical-align:middle;display:inline-block; padding:0; margin:0 0 0 15px; font-size:15px; font-weight:300; line-height:40px; color:#333;}
-.examples:before, .divCode:before {
-  content:"Exemplo";
-  font-weight:bold;
-  font-size:13px;
-  border-bottom:1px solid rgba(0,0,0,0.1);
-  padding:3px 10px;
-  color:#FFF;
-  margin:0;
-  background:#ed1c24;
-  display:inline-block;
-}
-.divCode {clear:both;}
-.divCode:before {content:"HTML";}
-
-.divCode textarea {
-background: #F0F6FF;
-border: 1px solid #D4E0F5;
-border-radius: 4px;
-color: #1A4294;
-display: block;
-margin: 30px 0;
-padding: 20px;
-}
 
 
 body{
@@ -73,18 +50,22 @@ body{
 }
 
 .codes {
+  clear:both;
   padding:30px 0;
 }
+.codes:before {content:"HTML";}
 
-.codes textarea {
-  padding:10px;
-  line-height:25px;
-  width:98%;
-  margin:5px auto;
-  min-height:300px;
+.codes:before {
+  content:"Exemplo";
+  font-weight:bold;
+  font-size:13px;
+  border-bottom:1px solid rgba(0,0,0,0.1);
+  padding:3px 10px;
+  color:#FFF;
+  margin:0;
+  background:#ed1c24;
+  display:inline-block;
 }
-
-.cssCode {display:none;}
 
 /** Feedbackr Button **/
 #feedbackr{
@@ -101,7 +82,6 @@ body{
   text-decoration: none;
 }
 
-
 /** Header Logo **/
 header.site-header h1{
   background: url("/images/logo-gateway.png");
@@ -111,9 +91,6 @@ header.site-header h1{
   width: 324px;
   text-indent: -5555em;
 }
-
-
-
 
 /** Menu and Navigation **/
 .boxes{
@@ -210,7 +187,7 @@ aside.boxes nav a.selected{
 .main{
   overflow: hidden;
   margin:0 0 60px;
-  padding: 30px 20px 0 30px;
+  padding: 0 20px 0 30px;
   position: relative;
 }
 
@@ -257,9 +234,7 @@ aside.boxes nav a.selected{
   width: 215px;
 }
 
-.yellow-box p{
-  margin: 0 0 10px 0;
-}
+.yellow-box p{margin: 0 0 10px 0;}
 
 .yellow-box p span{
   color: #A57945;

@@ -1,5 +1,4 @@
 <div id="instalacao">
-	<div class="examples">
 		<h2>Instruções de instalação</h2>
 		<p><strong>Primeiro passo:</strong> Adicione as tags abaixo para adicionar o pacote de CSS e Javascript.</p>
 		<p>
@@ -21,11 +20,8 @@
 	<script type="text/javascript" src="<%= File.join(root_url, path_to_asset('application.js')) %>"></script>
 </head>
 			<% end %>
-	</div>
 
 	<div class="codes">
-		<div class="divCode">
 			<%= clippy(yield(:code)) %>
-		</div>
 	</div>
 </div>

@@ -1,13 +1,10 @@
 <div id="simple_form">
-  <div class="examples">
     <h2>Configuração do Simple Form</h2>
     <p>Basta sobrescrever a configuração inicial do simple_form que os formulários já estarão formatados.</p>
     <p>Pra todo input será gerado uma div > label + input. Caso você não queira a div em volta basta alterar o wrapper do input.</p>
     <p><i>&lt;%= f.input :name, wrapper: :empty %&gt;</i></p>
-</div>
 
 <div class="codes">
-	<div class="divCode">
 		<p class="label label-warning">config/initializers/simple_form.rb</p>
 		<% content_for_clippy do %>
 SimpleForm.setup do |config|
@@ -64,6 +61,5 @@ SimpleForm.setup do |config|
 end
 <% end %>
 		<%= clippy(yield(:code), :ruby) %>
-	</div>
-</div>
+  </div>
 </div>

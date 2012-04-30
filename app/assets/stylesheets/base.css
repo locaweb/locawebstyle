@@ -316,10 +316,10 @@ p {
   top:5px; right:10px;
 }
 
-/**
-*** Calendário
-**/
 
+/**
+*** Calendário - Datepicker
+**/
 .ui-datepicker {
   display: none;
   border: 1px solid #AAA;

@@ -1,5 +1,9 @@
 header.headerPrincipal {background:#f0f0f0 url(/img/bgHeader.gif) repeat-X top center;}
-header.headerPrincipal .limite {overflow:visible; height:120px; position:relative;}
+header.headerPrincipal .limite {
+  overflow:visible; height:120px; position:relative;
+  width: auto;
+  max-width: 988px;
+}
 header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" "; display:block; clear:both;}
 
 /** Nome do serviço - Logo - H1 **/

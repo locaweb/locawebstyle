@@ -1,7 +1,5 @@
 <div id="botoes">
 
-	<div class="examples">
-
 		<h2>Botões de ação</h2>
 		<p>
 			Os botões são feitos <a href="http://twitter.github.com/bootstrap/base-css.html#buttons">utilizando o padrão do Bootstrap</a>. É muito simples de implementar. Basta fazer um link ou input submit e inserir a classe <strong>btn</strong>. Dependendo da utilidade do botão, insira as <a href="http://twitter.github.com/bootstrap/base-css.html#buttons">classes descritas no Bootstrap</a>:
@@ -50,6 +48,54 @@
 					<td><code>btn btn-inverse</code></td>
 					<td>Botão preto, alternativo, com semântica e significado neutro</td>
 				</tr>
+				<tr>
+					<td><a class="btn btn-danger" href="#"><i class="icon-trash icon-white"></i> Delete</a></td>
+					<td><code>btn btn-danger</code></td>
+					<td>Delete?</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3>Botões com dropdown</h3>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Botão</th>
+					<th>Descrição</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<div class="btn-group">
+						  <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+						  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+						  <ul class="dropdown-menu">
+						    <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+						    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+						    <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+						    <li class="divider"></li>
+						    <li><a href="#"><i class="i"></i> Make admin</a></li>
+						  </ul>
+						</div>
+					</td>
+					<td>Opções agrupadas em botão com combo box.</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="btn-group">
+						  <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></button>
+						  <ul class="dropdown-menu">
+						    <li><a href="#">Action</a></li>
+						    <li><a href="#">Another action</a></li>
+						    <li><a href="#">Something else here</a></li>
+						    <li class="divider"></li>
+						    <li><a href="#">Separated link</a></li>
+						  </ul>
+						</div>
+					</td>
+					<td>Opções agrupadas, mas ativados no próprio botão</td>
+				</tr>
 			</tbody>
 		</table>
 
@@ -62,12 +108,9 @@
 	<a href="#" class="btn close" data-dismiss="modal">Cancelar</a>
 </div>
 		<% end %>
-	</div>
 
 	<div class="codes">
-		<div class="divCode">
 			<p class="label label-warning">Padrão de código do Bootstrap.</p>
 			<%= clippy(yield(:code)) %>
-		</div>
 	</div>
 </div>
