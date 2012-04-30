@@ -12,7 +12,7 @@ form h6 {
     color:#2a2a2a;
     margin:0 0 10px;
 }
-
+label b {display:none;}
 .form-horizontal .controls, .controls {
     text-align: left;
     margin-left:0;
