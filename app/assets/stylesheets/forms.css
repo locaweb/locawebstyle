@@ -100,7 +100,7 @@ label.checkbox.control-label input {float:none;}
 **/
 .navView {
   margin:20px 0;
-  padding:7px 10px;
+  padding:9px 10px 0;
   color:#767676;
   clear:both;
   border-bottom:1px solid #e5e5e5;
@@ -110,6 +110,10 @@ table ~ .navView {border-bottom:0; border-top:1px solid #e5e5e5;}
 
 .navView label {color:#767676; width:auto; display:inline-block;}
 .navView .control-group {display:inline-block; margin-right:5px;}
+
+.filtroExibe .control-group label {font-weight:normal; width:auto !important;}
+.filtroExibe .control-group {margin:0;}
+.filtroExibe .controlg-group input, .filtroExibe .controlg-group select {margin:0;}
 
 .control-group .add-on {
     float:none; display:inline-block; vertical-align:top;
@@ -186,8 +190,6 @@ legend + .control-group {margin-top:0;}
 .formInline .error .help-inline {display:block; margin:2px 0 0 105px;}
 .error .help-inline {font-size:11px; display:block; margin:2px 0 0 0px;}
 .error input {margin-bottom:0;}
-.filtroExibe label {font-weight:normal;}
 
-.input-prepend label + .add-on {
-    border-radius:3px 0 0 3px;
-}
+.input-prepend label + .add-on {border-radius:3px 0 0 3px;}
+

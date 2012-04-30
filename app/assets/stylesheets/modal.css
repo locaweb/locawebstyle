@@ -16,7 +16,7 @@
 .modal-header .close { margin-right:5px;}
 
 .modal-header h3 {
-  margin:0;
+  margin:0 0 20px;
   color:#000;
   padding:0 5px 10px;
   font-size:20px;
@@ -26,7 +26,7 @@
 }
 
 .modal-body {padding:15px 5px 0; min-height:auto; margin:0 0 15px;}
-.modal-header p {padding-left:5px; padding-right:5px; padding-top:20px;}
+.modal-header p {padding-left:5px; padding-right:5px;}
 
 .modal-body p {
   line-height:18px;
@@ -43,6 +43,7 @@
   clear:both;
   text-align:left;
   padding:20px 0 10px 0;
+  margin-top:20px;
 }
 .modal-footer form { display:inline-block;}
 
