@@ -7,7 +7,6 @@
   width:550px;
   overflow:hidden;
 }
-
 .modal-header {
   border:none;
   padding-bottom:0;
@@ -16,7 +15,7 @@
 .modal-header .close { margin-right:5px;}
 
 .modal-header h3 {
-  margin:0 0 20px;
+  margin:0;
   color:#000;
   padding:0 5px 10px;
   font-size:20px;
@@ -27,6 +26,9 @@
 
 .modal-body {padding:15px 5px 0; min-height:auto; margin:0 0 15px;}
 .modal-header p {padding-left:5px; padding-right:5px;}
+.modal-header h3 + p {
+  padding-top:20px;
+}
 
 .modal-body p {
   line-height:18px;
