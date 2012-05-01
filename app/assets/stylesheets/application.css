@@ -13,13 +13,75 @@
  *= require base
  */
 
-/** Pra mostrar a grid visualmente **/
-.gridShow {
-  width:988px; height:100%;
-  margin:auto;
-  background:url(/img/grid.png) repeat-Y;
-  position: fixed;
-  top:0; left:50%;
-  margin-left:-494px;
-  z-index:1000;
+/** Iphone LIke
+*** 320 x 480 (iPhone
+**/
+@media screen and (max-width:335px) {
+    .limite {
+        width:100%;
+    }
+    [class*="span"] {
+        width:100%;
+    }
+
+    .row {
+        margin:0 0 0 -10px;
+        width:94%;
+    }
+
+    header.headerPrincipal .limite {
+        height:auto;
+    }
+
+    .serviceName {
+        padding:15px 10px;
+        margin:0;
+        text-transform:uppercase;
+        font-size:20px;
+        font-weight:bold;
+    }
+
+    #menuPrincipal {
+        width:100%;
+        padding:0;
+    }
+
+    #menuPrincipal li {float:none; padding:0; margin:0 0 1px; }
+    #menuPrincipal li a {display:block; padding:10px; font-size:13px; border-radius:0;}
+    #menuPrincipal li a:hover, #menuPrincipal li.selected a {border-radius:0;}
+
+
+}
+
+/** Small Tablets e outros smartphones
+*** 480 x 640 (iPhone
+**/
+@media screen and (min-width:336px) and (max-width:640px) {
+
+.limite {
+        width:100%;
+    }
+
+    header.headerPrincipal .limite {
+        height:auto;
+    }
+
+    .serviceName {
+        padding:15px 10px;
+        margin:0;
+        text-transform:uppercase;
+        font-size:20px;
+        font-weight:bold;
+    }
+
+    #menuPrincipal {
+        width:100%;
+        padding:0;
+    }
+
+    #menuPrincipal li {float:none; padding:0; margin:0 0 1px; }
+    #menuPrincipal li a {display:block; padding:10px; font-size:13px; border-radius:0;}
+    #menuPrincipal li a:hover, #menuPrincipal li.selected a {border-radius:0;}
+
+
 }
