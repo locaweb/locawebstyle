@@ -4,7 +4,7 @@ fieldset {
 }
 
 input, textarea, select {color:#797979;}
-input, .control-group input {display:inline-block; float:none;}
+.control-group input {margin-bottom:0;}
 
 form h6 {
     text-transform:inherit;
@@ -13,6 +13,8 @@ form h6 {
     margin:0 0 10px;
 }
 label b {display:none;}
+.control-group {margin-bottom:15px;}
+
 .form-horizontal .controls, .controls {
     text-align: left;
     margin-left:0;
