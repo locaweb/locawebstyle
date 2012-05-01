@@ -20,7 +20,7 @@
   overflow: hidden;
 }
 
-p {font-size:13px; line-height:20px;}
+p {font-size:12px; line-height:20px;}
 
 .exampleLnk {
   display:block;
@@ -227,15 +227,11 @@ aside.boxes nav a.selected{
   margin: 0;
 }
 
-/*.main h3{
-  font: bold 26px Ubuntu;
-  margin: 0;
-}*/
-
 .main h4{
   font-family: Ubuntu;
   font-size: 20px;
   font-weight: 300;
+  margin:20px 0 10px;
 }
 
 .yellow-box{
