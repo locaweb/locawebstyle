@@ -20,6 +20,18 @@
   overflow: hidden;
 }
 
+p {font-size:13px; line-height:20px;}
+
+.exampleLnk {
+  display:block;
+  padding:5px;
+  text-align:center;
+  color:#666;
+  background:#EFEFEF;
+  border-radius: 3px 3px 0 0;
+  border-bottom:1px solid #D7D7D7;
+}
+.exampleLnk:hover {color:#000; background:#CCC; text-decoration:none;}
 .logo {margin:0;}
 .logo a {
     width:158px;
@@ -48,6 +60,8 @@ body{
   min-width: 990px;
   max-width:1550px;
 }
+
+h2 {border-bottom:1px solid #EFEFEF; padding-bottom:15px; margin-bottom:15px;}
 
 .codes {
   clear:both;
