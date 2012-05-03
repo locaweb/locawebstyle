@@ -65,6 +65,7 @@ label, strong.control-label, .form-horizontal .control-label {
     clear:both;
     float:none;
 }
+.formInline.boxGrayOpt label {width:auto;}
 
 .formInline .boxGrayOpt label, 
 .form-horizontal .boxGrayOpt label, 
