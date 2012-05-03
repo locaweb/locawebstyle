@@ -54,7 +54,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   display:inline-block;
   color:#545454;
   text-decoration:none;
-  font:14px Ubuntu;
+  font:14px 'Ubuntu';
   text-transform:uppercase;
   padding:10px 10px 10px;
 }

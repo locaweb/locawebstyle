@@ -1,6 +1,51 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,700,400);
 
 @font-face {
+    font-family: 'Ubuntu';
+    src: url('/fonts/ubuntu/ubuntu-regular-webfont.eot');
+    src: url('/fonts/ubuntu/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/ubuntu/ubuntu-regular-webfont.woff') format('woff'),
+         url('/fonts/ubuntu/ubuntu-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'UbuntuBold';
+    src: url('/fonts/ubuntu/ubuntu-bold-webfont.eot');
+    src: url('/fonts/ubuntu/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/ubuntu/ubuntu-bold-webfont.woff') format('woff'),
+         url('/fonts/ubuntu/ubuntu-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'UbuntuLight';
+    src: url('/fonts/ubuntu/ubuntu-light-webfont.eot');
+    src: url('/fonts/ubuntu/ubuntu-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/ubuntu/ubuntu-light-webfont.woff') format('woff'),
+         url('/fonts/ubuntu/ubuntu-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'UbuntuMedium';
+    src: url('/fonts/ubuntu/ubuntu-medium-webfont.eot');
+    src: url('/fonts/ubuntu/ubuntu-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/ubuntu/ubuntu-medium-webfont.woff') format('woff'),
+         url('/fonts/ubuntu/ubuntu-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
     font-family: 'LacunaRegular';
     src: url('/fonts/lacuna/lacuna-webfont.eot');
     src: url('/fonts/lacuna/lacuna-webfont.eot?#iefix') format('embedded-opentype'),

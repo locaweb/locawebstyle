@@ -29,6 +29,8 @@ label b {display:none;}
     margin-bottom:0;
 }
 
+.controls .control-label input {display:inline-block; margin-top:0; vertical-align:top;}
+
 label, strong.control-label, .form-horizontal .control-label {
     font-weight:bold;
     font-size:12px;
@@ -95,8 +97,8 @@ label.checkbox.control-label input {float:none;}
 .opcoesBuscaAvancada .control-group .control-label:first-child,
 .control-group .control-label:first-child {margin-left:0;}
 
-.boxGrayOpt label {display:inline-block;}
-
+.boxGrayOpt label {display:inline-block; margin:0;}
+.boxGrayOpt input {margin:0 1px 0 0;}
 /**
 *** Barra com select de Quantidade de exibição e paginação
 **/
