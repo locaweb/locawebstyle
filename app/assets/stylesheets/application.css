@@ -81,11 +81,20 @@
     .modal {
         margin:10px;
         width:auto;
+        height: auto;
+        max-height: inherit !important;
+        overflow:visible;
         position:absolute;
         top:0; left:0;
     }
 
-#charts .tab-pane {width: 390px !important; height: 200px !important;}
+    .modal-body {
+        max-height:inherit !important;
+        height:auto;
+        overflow:visible;
+    }
+
+    #charts .tab-pane {width: 390px !important; height: 200px !important;}
 
 
     /** FORMS **/
