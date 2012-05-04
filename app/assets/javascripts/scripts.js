@@ -116,6 +116,8 @@ $(document).ready(function() {
     $(this).parent('.details').toggleClass('active');
   });
 
+  $('#menuPrincipal li').has('ul').addClass('parent');
+
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
   $('.lnkSeta[data-text]').live('click', function(e){
     var btnText, btnTextAlt;
