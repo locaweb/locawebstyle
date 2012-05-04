@@ -15,6 +15,8 @@
 .innerSideBox.boxWhite {background:#FFF; padding:10px;}
 .innerSideBox.boxGray {background:#e2e2e2; padding:10px;}
 
+.innerSideBox img {margin:0 3px 8px 0;}
+
 .sideBox h6 {
   margin:0; padding:0;
   text-transform:capitalize;
