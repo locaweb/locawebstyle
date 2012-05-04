@@ -52,10 +52,10 @@
         padding:0;
     }
 
-    #menuPrincipal ul {width:auto;}
-    #menuPrincipal li {float:none; padding:0;}
-    #menuPrincipal li a {background-image:none; display:block; padding:7px 10px; font-size:13px; border-radius:0; border-top:1px dotted #CCC;}
-    #menuPrincipal li a:hover, #menuPrincipal li.selected a {border-radius:0; background-image:none;}
+    #menuPrincipal > ul {width:auto;}
+    #menuPrincipal > ul > li {float:none !important; padding:0;}
+    #menuPrincipal > ul > li > a {background-image:none; display:block !important; padding:7px 10px; font-size:13px; border-radius:0; border-top:1px dotted #CCC;}
+    #menuPrincipal > ul > li > a:hover, #menuPrincipal > ul > li.selected > a {border-radius:0; background-image:none;}
 
     #menuPrincipal .btMenu {float:none;}
     #menuPrincipal .btMenu a {background:inherit; color:inherit; float:none;}

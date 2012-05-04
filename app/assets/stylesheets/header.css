@@ -58,7 +58,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   text-transform:uppercase;
   padding:10px;
 }
-#menuPrincipal > ul > li > a:hover {color:#3d6495;}
+#menuPrincipal > ul > li > a:hover {color:#3d6495; background-color:transparent;}
 
 #menuPrincipal > ul > li.selected > a {
   background:#777 url(/img/setaDots.png) no-repeat center bottom;
@@ -86,7 +86,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   z-index:2;
 }
   
-#menuPrincipal > ul > li:hover ul {opacity:1;visibility:visible;  -webkit-transition:all 0.2s linear;}
+#menuPrincipal > ul > li:hover ul {opacity:1; visibility:visible; }
 #menuPrincipal ul li ul {
   opacity:0;
   border:1px solid #c7c7c7;
@@ -101,6 +101,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   border-radius: 0 3px 3px 3px;
   border-bottom:3px solid #777;
   box-shadow:3px 3px 5px 0 rgba(0, 0, 0, 0.2);
+   -webkit-transition:all 0.2s linear;
 }
 
 #menuPrincipal ul li ul li a {
