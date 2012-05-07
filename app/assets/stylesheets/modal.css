@@ -13,7 +13,6 @@
   padding: 0; margin:0;
 }
 .modal-header .close { margin-right:5px; text-decoration:none;}
-
 .modal-header h3 {
   margin:0;
   color:#000;
@@ -24,10 +23,12 @@
   font:400 20px Ubuntu, arial, verdana, tahoma, sans-serif;
 }
 
-.modal-body {padding:15px 5px 0; min-height:auto; margin:0 0 15px;}
 .modal-header p {padding-left:5px; padding-right:5px;}
 .modal-header h3 + p {padding-top:20px;}
 
+.modal-body {padding:15px 5px 0; min-height:auto; margin:0 0 15px;}
+
+.modal-body h2 {margin-bottom:5px;}
 .modal-body p {
   line-height:18px;
   margin:0 0 10px;

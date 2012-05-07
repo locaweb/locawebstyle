@@ -93,15 +93,31 @@ html, body {height:100%;}
 /**
 *** Text basic styles
 **/
+h1, h2, h3, h4, h5, h6 {color:#000;}
 h1 {
-  color:#000;
-  font:bold 26px Ubuntu, arial, verdana, tahoma, sans-serif;
+  font: 26px UbuntuMedium, Ubuntu, arial, verdana, tahoma, sans-serif;
 }
 
 h2 {
-    color:#000;
-    font:100 20px Ubuntu, arial, verdana, tahoma, sans-serif;
-    margin:25px 0 10px;
+    font: 24px UbuntuLight, Ubuntu, arial, verdana, tahoma, sans-serif;
+    /*margin:25px 0 10px;*/
+}
+
+h3 {
+    font: 20px Ubuntu, arial, verdana, tahoma, sans-serif;
+}
+
+h4 {
+    font: 20px UbuntuLight, arial, verdana, tahoma, sans-serif;
+}
+
+h5 {
+    font: 15px UbuntuMedium, arial, verdana, tahoma, sans-serif;
+}
+
+h6 {
+    font: 14px Ubuntu, arial, verdana, tahoma, sans-serif;
+    text-transform:inherit;
 }
 
 p {
@@ -166,6 +182,7 @@ a:hover {text-decoration:none;}
   border-radius:3px;
   border:1px solid #e3e3e3;
   padding-bottom:3px;
+  margin-bottom:20px;
 }
 .boxGray:after {content:" "; display:block; clear:both;}
 
