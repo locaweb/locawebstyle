@@ -4,6 +4,7 @@ Locastyle = (function() {
   function Locastyle() {}
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   Locastyle.prototype.init = function(obj) {
+    console.log(obj);
     // Setinha nas TABs
     obj.find('.tabs li:first-child').addClass('active');
 
@@ -12,21 +13,19 @@ Locastyle = (function() {
     obj.find('.modalSlider .modal-footer').find('.btnSalvar').hide();
     obj.find('.modalSlider .modal-footer').parents('.modal').find('.modal-footer .slidePrev').hide();
 
-
     // Encontra se há algum formulário com erro de validação, e ativa a tab do slider com erro
     if ( obj.find('.modalSlider .modal-body .control-group').hasClass('error') ) {
       $('.modalSlider .item').removeClass('active');
-      $('.modalSlider .error').parents('.item:first').addClass('active');
-      console.log(this);
-      this.modal_callback(obj);
+      var item = $('.modalSlider .error').parents('.item:first');
+      item.addClass('active').addClass('next');
+      window.locastyle.modal_callback(obj, $('.modalSlider .slidePrev:first'));
+      item.removeClass('next');
     }
-
 
     // Monitora o botão de next e prev dos sliders/wizards de dentro de uma modal
     obj.find('.modal-footer .slideNext, .modal-footer .slidePrev').live("click", function() {
       $(this).parents('.modal').find('.modal-footer .slidePrev').show();
-      console.log(this);
-      this.modal_callback(obj);
+      window.locastyle.modal_callback(obj, $(this));
     });
 
     // Faz a modal animar \o/
@@ -64,20 +63,19 @@ Locastyle = (function() {
     });
   };
 
-  Locastyle.prototype.modal_callback = function (obj) {
-    console.log('test');
+  Locastyle.prototype.modal_callback = function (obj, element) {
     if (obj.find('.modalSlider .carousel .item:first-child').is('.prev')) {
-      $(this).parents('.modal').find('.modal-footer .slidePrev').hide();
+      element.parents('.modal').find('.modal-footer .slidePrev').hide();
     } else {
-      $(this).parents('.modal').find('.modal-footer .slidePrev').show();
+      element.parents('.modal').find('.modal-footer .slidePrev').show();
     }
 
-    if (obj.find('.modalSlider .carousel .item:last-child').is('.next')) {
-      $(this).parents('.modal').find('.modal-footer .slideNext').hide();
-      $(this).parents('.modal').find('.modal-footer .btnSalvar').show();
+    if (obj.find('.modalSlider .item:last-child').is('.next')) {
+      element.parents('.modal').find('.modal-footer .slideNext').hide();
+      element.parents('.modal').find('.modal-footer .btnSalvar').show();
     } else {
-      $(this).parents('.modal').find('.modal-footer .slideNext').show();
-      $(this).parents('.modal').find('.modal-footer .btnSalvar').hide();
+      element.parents('.modal').find('.modal-footer .slideNext').show();
+      element.parents('.modal').find('.modal-footer .btnSalvar').hide();
     }
   };
 
