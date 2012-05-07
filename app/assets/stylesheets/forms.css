@@ -120,6 +120,7 @@ table ~ .navView {border-bottom:0; border-top:1px solid #e5e5e5;}
 .filtroExibe .control-group {margin:0;}
 .filtroExibe .controlg-group input, .filtroExibe .controlg-group select {margin:0;}
 
+.control-group .add-on button {padding:0;}
 .control-group .add-on {
     float:none; display:inline-block; vertical-align:top;
     -webkit-border-radius: 0 3px 3px 0;

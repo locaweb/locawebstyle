@@ -213,7 +213,7 @@ aside.boxes nav a.selected{
 .main{
   overflow: hidden;
   margin:0 0 60px;
-  padding: 0 20px 0 30px;
+  padding:20px 20px 0 30px;
   position: relative;
 }
 
@@ -288,3 +288,9 @@ footer#rodape {position:static;}
 
 aside.boxes .collapseGroup summary.active { font-weight:normal; color:#B60000;   background:url(/img/setaCollapseTop.png) no-repeat 99% 8px;}
 
+
+
+.the-icons {list-style:none;}
+.the-icons li {
+  margin-bottom:5px;
+}
