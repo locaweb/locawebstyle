@@ -26,9 +26,7 @@
 
 .modal-body {padding:15px 5px 0; min-height:auto; margin:0 0 15px;}
 .modal-header p {padding-left:5px; padding-right:5px;}
-.modal-header h3 + p {
-  padding-top:20px;
-}
+.modal-header h3 + p {padding-top:20px;}
 
 .modal-body p {
   line-height:18px;

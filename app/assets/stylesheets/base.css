@@ -42,7 +42,12 @@ html, body {height:100%;}
 /**
 *** Botões
 **/
-.btn {font-size:14px;font-weight:normal; font-family:Ubuntu;}
+.btn {
+  text-decoration:none; 
+  font:normal 14px Ubuntu, verdana, arial, tahoma;
+  margin:0 5px;
+}
+
 .btn-primary {
   font-weight:400;
   background-color: #006dcc;
@@ -85,8 +90,6 @@ html, body {height:100%;}
   background-image:none;
 }
 
-.modal-footer .btn + .btn {margin-left:0; margin-right:5px;}
-
 /**
 *** Text basic styles
 **/
@@ -106,7 +109,7 @@ p {
   font:12px verdana, arial, tahoma, sans-serif;
 }
 
-a:link {text-decoration:underline;}
+a {text-decoration:underline;}
 a:hover {text-decoration:none;}
 
 #main.systemError {

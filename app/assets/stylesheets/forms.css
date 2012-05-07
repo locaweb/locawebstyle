@@ -17,7 +17,7 @@ label b {display:none;}
 
 .form-horizontal .controls, .controls {
     text-align: left;
-    margin-left:0;
+    margin-left:1px;
 }
 
 .controls > label, .controls > .control-label {
