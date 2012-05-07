@@ -98,8 +98,8 @@ label.checkbox.control-label input {float:none;}
 .opcoesBuscaAvancada .control-group .control-label:first-child,
 .control-group .control-label:first-child {margin-left:0;}
 
-.boxGrayOpt label {display:inline-block; margin:0;}
 .boxGrayOpt input {margin:0 1px 0 0;}
+
 /**
 *** Barra com select de Quantidade de exibição e paginação
 **/
@@ -163,7 +163,7 @@ table ~ .navView {border-bottom:0; border-top:1px solid #e5e5e5;}
 input.input30 {width:30px;}
 input.input60 {width:54px;}
 input.input120 {width:120px;}
-input.input240 {width:240px;}
+input.input240 {width:238px;}
 input.input360 {width:360px;}
 
 
