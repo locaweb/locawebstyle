@@ -139,7 +139,7 @@ aside.boxes{
   padding-bottom:10px;
   margin-right:3px;
 }
-
+aside.boxes a {text-decoration:none;}
 aside.boxes h4{
   color: #2A2A2A;
   font: bold 13px Ubuntu;

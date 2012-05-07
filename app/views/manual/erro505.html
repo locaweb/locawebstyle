@@ -1,6 +1,5 @@
-		<h2>Estrutura uma coluna</h2>
-		<p>Como o layout é baseado em um grid criado por nós, temos alguma flexibilidade para a criação das estruturas utilizadas nos serviços.</p>
-		<p>Em telas com uma coluna, onde normalmente não usamos uma sidebar, o conteúdo tem a largura total do espaço, é necessário inserir uma classe para que o grid funcione perfeitamente, essa classe chama-se <strong>span16</strong>.</p>
+
+		<h2>Estrutura de erro 404</h2>
 
 		<hr>
 		<%= content_for_clippy do %>
@@ -21,42 +20,22 @@
 	<div class="limite">
 		<a id="feedbackr" class="lnkSugestoes" href="https://www.feedbackr.com.br/projects/4eef88bd6866c42b5500000e/feedbacks/new" target="_blank" alt="feedbackr">Sugestões</a>
 		<h1 class="serviceName"><a href="/">Nome do projeto</a></h1>
-		<div class="infoLogin">
-			Acessando com Identificador
-			<div class="btn-group">
-				<strong class="identNumber dropdown-toggle" data-toggle="dropdown">28424</strong>
-				<div class="listIdent dropdown-menu">
-					<ul>
-						<li>
-							<strong><a href="/accounts/1/change">28424</a> </strong>
-							<span>Gateway 01</span>
-						</li>
-						<li>
-							<strong><a href="/accounts/2/change">/accounts/2/change</a> </strong>
-							<span>teste</span>
-						</li>
-					</ul>
-					<a href="/accounts" class="lnkSeta">Ver todas</a>
-				</div>
-			</div>
-			<span class="accountName">Nome da conta: <strong>Gateway 01</strong></span>
-		</div>
-	</div>
-
-	<menu id="menuPrincipal">
-		<ul>
-			<li class="selected"><a href="/">Página inicial</a></li>
-			<li><a href="#transactions">Transações</a></li>
-			<li><a href="#settings">Meios de pagamento</a></li>
-		</ul>
-	</menu>
 </header>
 
-<div id="main">
+<div id="main" class="systemError">
 	<div class="limite">
 		<div class="row">
 			<div class="span16">
-				Coluna única com o tamanho de 100% do espaço.
+					<h1 class="titError">Erro interno do sistema</h1>
+
+					<p>Ocorreu uma instabilidade temporária que impediu a exibição do conteúdo. Nossa equipe técnica foi notificada e estamos trabalhando para resolvê-lo.</p>
+
+					<p><strong>Você pode:</strong></p>
+					<ol>
+						<li>Recarregar a página clicando no botão Atualizar do seu navegador.</li>
+						<li>Retornar à <a href="/">página inicial</a>.</li>
+						<li>Se o problema persistir, aguarde alguns instantes e acesse novamente a <a href="#">Central do Cliente</a>.</li>
+					</ol>
 			</div><!-- FIM SPAN CONTENT -->
 		</div>
 	</div> <!-- FIM LIMITE ROW -->

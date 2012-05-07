@@ -106,6 +106,24 @@ p {
   font:12px verdana, arial, tahoma, sans-serif;
 }
 
+a:link {text-decoration:underline;}
+a:hover {text-decoration:none;}
+
+#main.systemError {
+  background:none;
+  border-top:3px solid #CCC;
+  
+}
+
+.titError {
+  background:url(/img/icoerro_404.png) no-repeat left center;
+  padding:15px 0 15px 45px;
+  margin:4px 0 10px;
+  font:bold 20px verdana, arial, tahoma, sans-serif;
+  color:#545454;
+}
+
+#main.systemError p, #main.systemError ol li {margin-left:45px;}
 
 /**
 *** LINKS COM SETINHA
