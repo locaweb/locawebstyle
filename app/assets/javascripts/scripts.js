@@ -4,7 +4,6 @@ Locastyle = (function() {
   function Locastyle() {}
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   Locastyle.prototype.init = function(obj) {
-    console.log(obj);
     // Setinha nas TABs
     obj.find('.tabs li:first-child').addClass('active');
 
