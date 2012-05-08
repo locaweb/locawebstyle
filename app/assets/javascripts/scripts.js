@@ -113,7 +113,7 @@ $(document).ready(function() {
     $this = $(this);
     target = $this.data('target');
     $(target).collapse('hide');
-  })
+  });
 
   $('body').on('change.collapse.data-api', '[data-toggle=show]', function (e) {
     e.preventDefault();
@@ -121,7 +121,7 @@ $(document).ready(function() {
     $this = $(this);
     target = $this.data('target');
     $(target).collapse('show');
-  })
+  });
 
   // Faz a troca de Classe SELECTED entre os Collpases
   $('.collapseGroup summary').live('click', function(e){
@@ -145,9 +145,3 @@ $(document).ready(function() {
   window.locastyle.init($(document));
 });
 
-$(document).keypress(function(e) {
-  if(e.keyCode == 13) {
-    $('.gridShow').remove();
-    $('body').append('<div class="gridShow"></div>')
-  }
-});
