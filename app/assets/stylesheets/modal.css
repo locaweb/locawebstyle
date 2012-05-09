@@ -48,8 +48,26 @@
 }
 .modal-footer form { display:inline-block;}
 
-.listDetail {clear:both; margin:0;}
+
+.boxGray.listDetail {padding:10px;}
+
+.listDetail {font-size:13px; font-family: verdana, arial, tahoma, sans-serif; clear:both; margin:0 0 20px;}
+.listDetail:after {
+  content:" ";
+  display:block;
+  clear:both;
+}
 .listDetail.boxGray {background-color:#e2e2e2; padding:10px 0; margin-bottom:15px;}
+
+.listDetail li {
+  color: #616161;
+  float:left;
+  list-style:none;
+  width: 270px;
+  padding: 5px 0;
+}
+.listDetail li.nofloat {float:none;}
+.listDetail strong {display:block;}
 
 .listDetail dt {
   width: 150px;
@@ -63,11 +81,10 @@
 }
 
 .listDetail dd {
-  color: #616161;
   display: inline-block;
   vertical-align: middle;
-  font-weight: bold;
   margin-left: 5px;
+  font-weight: bold;
   margin-bottom: 6px;
 }
 

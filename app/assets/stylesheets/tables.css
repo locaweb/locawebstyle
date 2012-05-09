@@ -15,7 +15,7 @@ table.tableList thead th {
   text-align:center;
   font:bold 13px verdana, arial, tahoma, sans-serif;
 }
-table.tableList thead th a {color:#FFF;}
+table.tableList thead th a {color:#FFF; text-decoration:none;}
 table.tableList thead th a:hover {color:#FFF;}
 
 table.tableList tbody td {
