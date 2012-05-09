@@ -9,13 +9,23 @@
     border-radius: 0 3px 3px 0;
 }
 
-.error .add-on {border-color:#B94A48;}
-
 [class^="icon-"], [class*=" icon-"] {
   width:auto;
   height:auto;
   background:none;
   line-height:inherit;
+}
+
+.ui-datepicker-trigger.icon-calendar {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    border:1px solid #CCC;
+    background:#EEE;
+    vertical-align:top;
+    padding:6px 4px 1px 7px;
+    padding:6px 4px 2px 7px\0/;
+    margin-left:-2px;
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -25,10 +35,12 @@
   width: 14px;
   height: 14px;
   line-height: 14px;
-  vertical-align: text-top;
   background-image: url("/assets/bootstrap/img/glyphicons-halflings.png");
   background-repeat: no-repeat;
 }
+
+.error .add-on, .error .ui-datepicker-trigger.icon-calendar {border-color:#B94A48;}
+
 .icon-white {background-image: url("../img/glyphicons-halflings-white.png");}
 .icon-glass:before {background-position: 0 0;}
 .icon-music:before {background-position: -24px 0;}

@@ -44,7 +44,7 @@ Locastyle = (function() {
         $(this).css('width', $(this).parent().find('input[type="text"], input[type="password"], input[type="number"], input[type="email"], select').width())
     });
 
-    obj.find('.ui-datepicker-trigger').addClass('icon-calendar').html('').wrap('<span class="add-on">');
+    obj.find('.ui-datepicker-trigger').addClass('icon-calendar').html('');
 
     // init of change.collapse.data-api
     obj.find('[data-toggle=show]').filter(':checked').change();
