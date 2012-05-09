@@ -390,6 +390,6 @@ a:hover {text-decoration:none;}
 .ui-datepicker table { width:100%;}
 .ui-datepicker table td {text-align:center; border:1px solid #CCC;}
 .ui-datepicker table td:empty {border:none;}
-.ui-datepicker table td a {font-size:11px; display:block; color:#333;}
-
+.ui-datepicker table td a {font-size:11px; display:block; color:#333; text-decoration:none;}
+.ui-datepicker table td a:hover {background-color:#EFEFEF;}
 .alert .close {text-decoration:none;}
