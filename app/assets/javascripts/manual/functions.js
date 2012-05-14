@@ -14,9 +14,6 @@ var resizeBoxes = function(){
   } else {
     $('.main').css("height", "auto");
   }
-  // var mainDivHeight;
-  // mainDivHeight = $(".main").height();
-  // $("aside.boxes").css("height", mainDivHeight+60);
 };
 
 $('.main').on('shown', function(){resizeBoxes()});

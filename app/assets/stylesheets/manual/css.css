@@ -1,14 +1,5 @@
 
-/** Pra mostrar a grid visualmente **/
-.gridShow {
-  width:988px; height:100%;
-  margin:auto;
-  background:url(/img/grid.png) repeat-Y;
-  position: fixed;
-  top:0; left:50%;
-  margin-left:-494px;
-  z-index:1000;
-}
+
 
 .clearfix:after {
   visibility: hidden;
@@ -93,24 +84,8 @@ h2 {border-bottom:1px solid #EFEFEF; padding-bottom:15px; margin-bottom:15px;}
   display:inline-block;
 }
 
-/** Feedbackr Button **/
-#feedbackr{
-  background: #F4F4F4 url("/images/ico-feedbackr.png") 12px 50% no-repeat;
-  border: 1px solid #D5D5D5;
-  border-top: none;
-  border-radius: 0 0 4px 4px;
-  color: #545454;
-  display: block;
-  float: right;
-  height: 25px;
-  line-height: 23px;
-  padding: 0 12px 0 26px;
-  text-decoration: none;
-}
-
 /** Header Logo **/
 header.site-header h1{
-  background: url("/images/logo-gateway.png");
   float: left;
   height: 41px;
   margin: 40px 0;

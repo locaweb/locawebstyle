@@ -142,5 +142,17 @@ $(document).ready(function() {
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
-});
 
+
+});
+$(document).keypress(function(e) {
+  if(e.keyCode == 71) {
+    if($('body').hasClass('grid')){
+      $('.gridShow').remove();
+      $('body').removeClass('grid');
+    } else {
+      $('.gridShow').remove();
+      $('body').addClass('grid').append('<div class="gridShow"></div>');
+    }
+  }
+});

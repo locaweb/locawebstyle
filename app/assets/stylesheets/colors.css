@@ -1,0 +1,26 @@
+/*** COR
+**** AZUL
+***/
+.colorBlue #menuPrincipal > ul > li.selected a {background-color:#4b7cb8;}
+
+.colorBlue #menuPrincipal,
+.colorBlue .tabs li a:hover, 
+.colorBlue .tabs li.active a,
+.colorBlue #menuPrincipal ul li ul {border-bottom-color:#4b7cb8;}
+
+.colorBlue .serviceName a,
+.colorBlue #menuPrincipal .btMenu a,
+.colorBlue .collapseGroup summary span,
+.colorBlue .lnkSeta {color: #4B7CB8;}
+
+.colorBlue #menuPrincipal .btMenu a {background: #E6E5E5 url(../img/setaBtMenuBlue.png) no-repeat 9px center;}
+
+/** LINKS COM SETINHAS QUADRADAS ***/
+.colorBlue .lnkSeta:before {background-position:0 -9px;}
+.colorBlue .lnkSeta:hover:before {background-position:-9px -9px;}
+
+.colorGreen .lnkSeta:before {background-position:0 -27px;}
+.colorGreen .lnkSeta:hover:before {background-position:-9px -27px;}
+
+.colorRed .lnkSeta:before {background-position:0 -18px;}
+.colorRed .lnkSeta:hover:before {background-position:-9px -18px;}

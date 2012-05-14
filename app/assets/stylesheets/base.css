@@ -94,27 +94,11 @@ html, body {height:100%;}
 *** Text basic styles
 **/
 h1, h2, h3, h4, h5, h6 {color:#000;}
-h1 {
-  font: 26px UbuntuMedium, Ubuntu, arial, verdana, tahoma, sans-serif;
-}
-
-h2 {
-    font: 24px UbuntuLight, Ubuntu, arial, verdana, tahoma, sans-serif;
-    /*margin:25px 0 10px;*/
-}
-
-h3 {
-    font: 20px Ubuntu, arial, verdana, tahoma, sans-serif;
-}
-
-h4 {
-    font: 20px UbuntuLight, arial, verdana, tahoma, sans-serif;
-}
-
-h5 {
-    font: 15px UbuntuMedium, arial, verdana, tahoma, sans-serif;
-}
-
+h1 {font: 26px UbuntuMedium, Ubuntu, arial, verdana, tahoma, sans-serif;}
+h2 {font: 24px UbuntuLight, Ubuntu, arial, verdana, tahoma, sans-serif;}
+h3 {font: 20px Ubuntu, arial, verdana, tahoma, sans-serif;}
+h4 {font: 20px UbuntuLight, arial, verdana, tahoma, sans-serif;}
+h5 {font: 15px UbuntuMedium, arial, verdana, tahoma, sans-serif;}
 h6 {
     font: 14px Ubuntu, arial, verdana, tahoma, sans-serif;
     text-transform:inherit;
@@ -125,13 +109,12 @@ p {
   font:12px verdana, arial, tahoma, sans-serif;
 }
 
-a {text-decoration:underline;}
-a:hover {text-decoration:none;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
 
 #main.systemError {
   background:none;
   border-top:3px solid #CCC;
-  
 }
 
 .titError {
@@ -148,16 +131,22 @@ a:hover {text-decoration:none;}
 *** LINKS COM SETINHA
 **/
 .lnkSeta {
-  background:url(/img/setaRightBox.png) no-repeat left 2px;
-  color:#3d6495;
+  color:#666;
   font: 12px Ubuntu, verdana, arial, sans-serif;
   display:inline-block;
-  padding:0 0 0 12px;
+  padding:0;
   margin:5px 0;
   vertical-align: middle;
 }
-
-.lnkSeta:hover {text-decoration:none; color:#1e324a; background-position:left -25px;}
+.lnkSeta:before {
+  content: " ";
+  margin-right:2px;
+  display:inline-block;
+  background:url(/img/setaRightBox.png) no-repeat 0 0;
+  width:9px; height:9px;
+}
+.lnkSeta:hover {text-decoration:none; color:#1e324a; background-position:0 -9px;}
+.lnkSeta:hover:before {background-position:-9px 0;}
 
 .lnkSetaWhite {
   background:url(/img/setaRightBoxWhite.png) no-repeat left center;
@@ -189,7 +178,7 @@ a:hover {text-decoration:none;}
 .boxGray h2 {
   font-size: 24px;
   padding:10px 10px 0 15px; margin:0 0 0 -1px;
-  background:url(/img/setaDetalheTit.png) no-repeat left center;
+  background:url(/img/setaDetalheTit.png) no-repeat left 15px;
 }
 
 .boxGray p {
@@ -223,11 +212,10 @@ a:hover {text-decoration:none;}
 
 .collapseGroup summary span {
   font:bold 18px Ubuntu;
-  color:#4b7cb8;
+  color:#777;
 }
 
 .collapseGroup .details p {padding:10px 30px;}
-
 
 /**
 *** PAGINACAO
@@ -393,3 +381,14 @@ a:hover {text-decoration:none;}
 .ui-datepicker table td a {font-size:11px; display:block; color:#333; text-decoration:none;}
 .ui-datepicker table td a:hover {background-color:#EFEFEF;}
 .alert .close {text-decoration:none;}
+
+/** Pra mostrar a grid visualmente **/
+.gridShow {
+  width:988px; height:100%;
+  margin:auto;
+  background:url(/img/grid.png) repeat-Y;
+  position: fixed;
+  top:0; left:50%;
+  margin-left:-494px;
+  z-index:1000;
+}

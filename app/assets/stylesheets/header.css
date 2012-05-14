@@ -123,7 +123,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   float: right;
   padding: 7px 10px 7px 19px;
 }
-#menuPrincipal .btMenu a:hover {background:#777 url(/img/setaBtMeneHover.png) no-repeat 9px center;}
+#menuPrincipal .btMenu a:hover {background:#777 url(/img/setaBtMeneHover.png) no-repeat 9px center; color:#FFF;}
 
 /** Linkzinho de sugestões do Header **/
 .lnkSugestoes {

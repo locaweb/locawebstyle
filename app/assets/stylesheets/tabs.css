@@ -35,7 +35,7 @@
 .tabs li a:hover, .tabs li.active a {
   text-decoration:none;
   background:#FFF;
-  border-top:2px solid #4b7cb8;
+  border-top:2px solid #777;
   border-top-right-radius:3px;
   border-top-left-radius:3px;
 }
@@ -44,7 +44,6 @@
 .tabs li.active a .setaTab, 
 .tabs li a:hover:after,
 .tabs li.active a:after {display:block;}
-
 
 .tab-content {
   border:1px solid #e5e5e5;

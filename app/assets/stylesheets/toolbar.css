@@ -30,6 +30,7 @@ body {margin:0; padding:0;}
 }
 #toolbar .menuToolbar li {float:left;}
 #toolbar .menuToolbar li a {
+  margin:1px 0 0;
   float: left;
   text-decoration: none;
   text-transform: uppercase;
@@ -42,7 +43,7 @@ body {margin:0; padding:0;}
   line-height: 33px;
   padding: 0 20px;
 }
-#toolbar .menuToolbar li a:hover {background:#333; text-decoration:underline;}
+#toolbar .menuToolbar li a:hover {background:#333; text-decoration:none;}
 
 #toolbar .userName, #toolbar .logOut  {float:right;}
 
