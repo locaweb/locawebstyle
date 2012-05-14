@@ -10,15 +10,10 @@
 			<strong>Segundo passo:</strong> Não tem segundo passo. ;-)
 		</p>
 
-				<% content_for_clippy do %>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Título</title>
-	<link rel="stylesheet" type="text/css" href="<%= File.join(root_url, path_to_asset('application.css')) %>">
-	<script type="text/javascript" src="<%= File.join(root_url, path_to_asset('application.js')) %>"></script>
-</head>
-			<% end %>
+		<% content_for_clippy do %>
+<link rel="stylesheet" type="text/css" href="<%= File.join(root_url, path_to_asset('application.css')) %>">
+<script type="text/javascript" src="<%= File.join(root_url, path_to_asset('application.js')) %>"></script>
+		<% end %>
 
 	<div class="codes">
 			<%= clippy(yield(:code)) %>
