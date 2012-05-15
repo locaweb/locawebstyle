@@ -54,8 +54,20 @@
 .colorBlue .lnkSeta:before {background-position:0 -9px;}
 .colorBlue .lnkSeta:hover:before {background-position:-9px -9px;}
 
+.colorRed .lnkSeta:before {background-position:0 -18px;}
+.colorRed .lnkSeta:hover:before {background-position:-9px -18px;}
+
 .colorGreen .lnkSeta:before {background-position:0 -27px;}
 .colorGreen .lnkSeta:hover:before {background-position:-9px -27px;}
 
-.colorRed .lnkSeta:before {background-position:0 -18px;}
-.colorRed .lnkSeta:hover:before {background-position:-9px -18px;}
+
+/*** LINKS COM ARROWS ***/
+.colorBlue .listWhite li a:before {background-position:0 -5px;}
+.colorBlue .listWhite li a:hover:before {background-position:-4px -5px;}
+
+.colorRed .listWhite li a:before {background-position:0 -10px;}
+.colorRed .listWhite li a:hover:before {background-position:-4px -10px;}
+
+.colorGreen .listWhite li a:before {background-position:0 -15px;}
+.colorGreen .listWhite li a:hover:before {background-position:-4px -15px;}
+

@@ -60,12 +60,23 @@
 
 .listWhite li a {
   padding: 3px 10px 3px 15px;
-  background: white url(/img/setaDirList.png) no-repeat 5px 8px;
+  background-color: white;
   color: #545454;
   font: 12px verdana, tahoma, arial, sans-serif;
   display: block;
   margin-bottom: 1px;
 }
+.listWhite li a:before {
+  content:" ";
+  display:inline-block;
+  width:4px; height:5px;
+  background-image:url(/img/arrows.png);
+  background-repeat:no-repeat;
+  background-position:0 0;
+  position:relative; top:-2px;
+  margin:0 3px 0 -8px;
+}
+.listWhite li a:hover:before {background-position:-4px 0;}
 
 .sidebar a[rel="external"]:after {
   content:" ";
