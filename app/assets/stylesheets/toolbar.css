@@ -14,11 +14,10 @@ body {margin:0; padding:0;}
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  width:22%; height:18px;
+  width:80px; height:18px;
   position:absolute;
   top:50%; margin-top:-9px;
   background:url(/img/tit-toolBar.png) no-repeat left center;
-  background-size:100%;
 }
 
 
@@ -49,11 +48,11 @@ body {margin:0; padding:0;}
 
 #toolbar .userName {
   background: url(/img/bgUsuario.png) no-repeat left center;
-  font-size: 14px;
+  font-size: 13px;
   color: #D1D1D1;
   padding: 0 15px 3px 32px;
   border-right: 1px solid #616161;
-  margin: 6px 15px 0 0;
+  margin: 7px 15px 0 0;
 }
 
 #toolbar .logOut {

@@ -58,7 +58,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   text-transform:uppercase;
   padding:10px;
 }
-#menuPrincipal > ul > li > a:hover {color:#3d6495; background-color:transparent;}
+#menuPrincipal > ul > li > a:hover {color:#666; background-color:transparent;}
 
 #menuPrincipal > ul > li.selected > a {
   background:#777 url(/img/setaDots.png) no-repeat center bottom;

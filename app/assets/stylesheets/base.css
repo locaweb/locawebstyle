@@ -145,7 +145,7 @@ a:hover {text-decoration:underline;}
   background:url(/img/setaRightBox.png) no-repeat 0 0;
   width:9px; height:9px;
 }
-.lnkSeta:hover {text-decoration:none; color:#1e324a; background-position:0 -9px;}
+.lnkSeta:hover {text-decoration:none; color:#000; background-position:0 -9px;}
 .lnkSeta:hover:before {background-position:-9px 0;}
 
 .lnkSetaWhite {

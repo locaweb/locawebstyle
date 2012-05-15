@@ -5,15 +5,50 @@
 
 .colorBlue #menuPrincipal,
 .colorBlue .tabs li a:hover, 
+.colorBlue #menuPrincipal ul li ul {border-bottom-color:#4b7cb8; }
+
 .colorBlue .tabs li.active a,
-.colorBlue #menuPrincipal ul li ul {border-bottom-color:#4b7cb8;}
+.colorBlue .tabs li a:hover {border-top-color:#4b7cb8; }
 
 .colorBlue .serviceName a,
 .colorBlue #menuPrincipal .btMenu a,
 .colorBlue .collapseGroup summary span,
-.colorBlue .lnkSeta {color: #4B7CB8;}
+.colorBlue .lnkSeta,
+.colorBlue #menuPrincipal > ul > li > a:hover {color: #4B7CB8;}
+
+.colorBlue #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
 .colorBlue #menuPrincipal .btMenu a {background: #E6E5E5 url(../img/setaBtMenuBlue.png) no-repeat 9px center;}
+
+.colorBlue .lnkSeta:hover,
+.colorBlue .lnkSugestoes {color:#1e324a;}
+
+/*** COR
+**** VERDE
+***/
+.colorGreen #menuPrincipal > ul > li.selected a {background-color:#79bb2c;}
+
+.colorGreen #menuPrincipal,
+.colorGreen .tabs li a:hover, 
+.colorGreen .tabs li.active a,
+.colorGreen #menuPrincipal ul li ul {border-bottom-color:#79bb2c;}
+
+.colorGreen .tabs li.active a,
+.colorGreen .tabs li a:hover {border-top-color:#79bb2c; }
+
+.colorGreen .serviceName a,
+.colorGreen #menuPrincipal .btMenu a,
+.colorGreen .collapseGroup summary span,
+.colorGreen .lnkSeta,
+.colorGreen #menuPrincipal > ul > li > a:hover {color: #84c02e;}
+
+.colorGreen #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
+
+.colorGreen #menuPrincipal .btMenu a {background: #E6E5E5 url(../img/setaBtMenuBlue.png) no-repeat 9px center;}
+
+.colorGreen .lnkSeta:hover,
+.colorGreen .lnkSugestoes:hover  {color:#4f731c;}
+
 
 /** LINKS COM SETINHAS QUADRADAS ***/
 .colorBlue .lnkSeta:before {background-position:0 -9px;}
