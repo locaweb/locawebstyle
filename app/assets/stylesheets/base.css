@@ -392,3 +392,69 @@ a:hover {text-decoration:underline;}
   margin-left:-494px;
   z-index:1000;
 }
+
+/***
+**** CHAMADAS NO BOXGRAY
+***/
+.chamadasBox {margin:0 0 0 25px;}
+
+.chamadasBox div {
+  width:209px; min-height:230px;
+  float:left;
+  text-align:center;
+  border:3px solid #ababab;
+  border-radius:10px;
+  margin:10px 20px 20px 0;
+  padding:0;
+  background:#f4f4f4 url(/img/bgChamadasBox.png) repeat-X center bottom;
+}
+
+.chamadasBox div:last-child {margin-right:0;}
+
+.chamadasBox div:hover {
+  border-color:#98b67f;
+  background:#f1f6e8 url(/img/bgChamadasBoxGreen.png) repeat-X center bottom;
+}
+
+
+.chamadasBox h3 {
+  text-transform:uppercase; 
+  font:100 20px Ubuntu, verdana, arial, tahoma, sans-serif; 
+  margin:0 auto;
+}
+.chamadasBox h3 a {padding-top:15px; color:#1a2609; display:block;}
+
+.chamadasBox [class^="tit"] a:before {
+  content:" ";
+  display:block;
+  width:100px; height:100px;
+  background-position: center top;
+  background-repeat:no-repeat;
+  margin:0 auto 10px;
+}
+
+.chamadasBox h3.titResults a:before {background-image:url(/img/titIcoResults.png);}
+.chamadasBox h3.titMoreUser a:before {background-image:url(/img/titIcoMoreUsers.png);}
+.chamadasBox h3.titMessage a:before {background-image:url(/img/titIcoMessage.png);}
+
+.chamadasBox div:hover a:before,
+.chamadasBox h3.titResults a:hover:before,
+.chamadasBox h3.titMoreUser a:hover:before,
+.chamadasBox h3.titMessage a:hover:before {background-position:center -121px;}
+
+.chamadasBox a:hover {text-decoration:none;}
+
+.chamadasBox div p {
+  font: 12px verdana, arial, tahoma, sans-serif; 
+  margin:0 auto;
+  color:#767676;
+  padding:0;
+}
+
+.chamadasBox div p a {
+  color:#767676;
+  display:block;
+  padding-bottom:20px;
+  padding:10px 5px 15px;
+}
+
