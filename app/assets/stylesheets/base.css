@@ -29,6 +29,8 @@ html, body {height:100%;}
 .txtJustify {text-align:justify;}
 .txtCenter {text-align:center;}
 
+.widthAuto {width: auto;}
+
 /**
 *** Clearfix
 **/
@@ -263,23 +265,6 @@ a:hover {text-decoration:underline;}
 .pagination .disabled a {border:none;}
 
 .navView .pagination {float:right;}
-
-/**
-*** ICONES
-**/
-.ico {
-  background-position:center left;
-  background-repeat:no-repeat;
-  padding-left:18px;
-  color:#3d6495;
-  font: 12px Ubuntu, verdana, arial, sans-serif;
-  display:inline-block;
-  margin:5px 0;
-}
-.ico:hover {text-decoration:none; color:#1e324a;}
-
-.ico-tabela {background-image:url(/img/ico-tabela.png);}
-.ico-estornar {background-image:url(/img/ico-estornar.png);}
 
 /***
 *** Actions Botoes

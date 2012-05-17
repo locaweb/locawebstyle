@@ -4,6 +4,7 @@ fieldset {
 }
 
 input, textarea, select {color:#797979;}
+
 .control-group input {margin-bottom:0;}
 
 form h6 {
@@ -40,6 +41,8 @@ label, strong.control-label, .form-horizontal .control-label {
     line-height:12px;
 }
 
+label.widthAuto {width:auto !important;}
+
 .formInline label, 
 .form-horizontal label, 
 .formInline strong.control-label, 
@@ -65,7 +68,7 @@ label, strong.control-label, .form-horizontal .control-label {
     clear:both;
     float:none;
 }
-.formInline.boxGrayOpt label {width:auto;}
+.formInline.boxGrayOpt label {width:auto; margin-bottom:0;}
 
 .formInline .boxGrayOpt label, 
 .form-horizontal .boxGrayOpt label, 
@@ -190,3 +193,4 @@ legend + .control-group {margin-top:0;}
 
 .input-prepend label + .add-on {border-radius:3px 0 0 3px;}
 
+input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top:0;}

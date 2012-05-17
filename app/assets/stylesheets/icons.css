@@ -1,5 +1,20 @@
+/**
+*** ICONES
+**/
+[class^="ico"], [class*=" ico"] {
+  background-position:center left;
+  background-repeat:no-repeat;
+  padding-left:18px;
+  color:#777;
+  font: 12px Ubuntu, verdana, arial, sans-serif;
+  display:inline-block;
+}
+[class^="ico"]:hover {text-decoration:none; color:#1e324a;}
 
-/** ICONES **/
+.ico-tabela {background-image:url(/img/ico-tabela.png);}
+.ico-estornar {background-image:url(/img/ico-estornar.png);}
+
+
 .add-on .ui-datepicker-trigger {padding:0 0 0 3px;}
 
 .control-group .add-on {

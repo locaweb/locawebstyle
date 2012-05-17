@@ -2,7 +2,6 @@
 **** AZUL
 ***/
 .colorBlue #menuPrincipal > ul > li.selected a {background-color:#4b7cb8;}
-
 .colorBlue #menuPrincipal,
 .colorBlue .tabs li a:hover, 
 .colorBlue #menuPrincipal ul li ul {border-bottom-color:#4b7cb8; }
@@ -14,7 +13,9 @@
 .colorBlue #menuPrincipal .btMenu a,
 .colorBlue .collapseGroup summary span,
 .colorBlue .lnkSeta,
-.colorBlue #menuPrincipal > ul > li > a:hover {color: #4B7CB8;}
+.colorBlue #menuPrincipal > ul > li > a:hover,
+.colorBlue [class^="ico"], .colorBlue [class*=" ico"],
+.colorBlue .boxGray.listDetail a {color: #4B7CB8;}
 
 .colorBlue #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
@@ -40,7 +41,8 @@
 .colorGreen #menuPrincipal .btMenu a,
 .colorGreen .collapseGroup summary span,
 .colorGreen .lnkSeta,
-.colorGreen #menuPrincipal > ul > li > a:hover {color: #84c02e;}
+.colorGreen #menuPrincipal > ul > li > a:hover,
+.colorGreen [class^="ico"], .colorGreen [class*=" ico"]  {color: #84c02e;}
 
 .colorGreen #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
