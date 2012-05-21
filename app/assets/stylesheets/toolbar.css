@@ -69,14 +69,22 @@ body {margin:0; padding:0;}
 /**** RESPONSIVE TOOLBAR ****/
 
 @media screen and (max-width:480px) {
-  #toolbar .limiteToolbar {width:100%; height:63px;}
+  #toolbar .limiteToolbar {width:100%; height:auto; overflow: hidden;}
   #toolbar h1.logoToolbar {width:80px; background-size:auto; float:left; position:static; margin:7px 0 5px 10px;}
-  #toolbar .menuToolbar {text-align:center; height:30px;  position:absolute; top:50px; left:0; width:100%; clear:left;}
+  #toolbar .menuToolbar {
+    text-align:center; 
+    height:30px;
+    width:100%; 
+    clear:left;
+    position:static;
+  }
+  #toolbar .menuToolbar li {margin-right:-5px;float:none; display:inline-block;}
+  #toolbar .menuToolbar li:last-child {margin-right:0;}
   #toolbar .menuToolbar li a {
-    height:30px; 
-    line-height:30px; 
+    height:29px; 
+    line-height:29px;
     font-size:10px; 
-    padding:0 11px;
+    padding:0 10px;
   }
   #toolbar .userName {
    margin:0;
@@ -93,6 +101,7 @@ body {margin:0; padding:0;}
    position: absolute; top:5px; right:8px;
  }
 }
+
 @media screen and (min-width:481px) and (max-width:640px) {
   #toolbar .limiteToolbar {width:100%; height:63px;}
   #toolbar h1.logoToolbar {width:200px; float:left; position:static; margin:7px 0 5px 10px;}

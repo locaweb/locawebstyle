@@ -20,9 +20,11 @@
 .colorBlue #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
 .colorBlue #menuPrincipal .btMenu a {background: #E6E5E5 url(../img/setaBtMenuBlue.png) no-repeat 9px center;}
+.colorBlue #menuPrincipal .btMenu a:hover {color:#FFF;}
 
 .colorBlue .lnkSeta:hover,
 .colorBlue .lnkSugestoes {color:#1e324a;}
+
 
 /*** COR
 **** VERDE

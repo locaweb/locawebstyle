@@ -4,11 +4,14 @@
 **/
 @media screen and (max-width:480px) {
     .limite {
-        width:auto;
+        width:auto !important;
         left:0;
+        padding-bottom:0;
     }
-    #main .limite {left:0 !important; padding:0 5px;}
-    #main > .limite {padding-bottom:40px;}
+
+    .infoLogin {display:none;}
+
+    #main div.limite {left:0 !important; padding:0 10px 40px 10px;}
 
     [class*="span"] {
         width:auto;
@@ -23,6 +26,8 @@
 
     header.headerPrincipal .limite {height:auto; padding:0;}
 
+    .sidebar {padding:40px 0 0;}
+
     /** NOME DO PRODUTO - Logo ***/
     .serviceName {
         padding:15px 10px;
@@ -32,6 +37,8 @@
         font-weight:bold;
     }
 
+    .logOut {border-radius:5px;}
+
     /*** MENU PRINCIPAL ***/
     #menuPrincipal {
         width:100%;
@@ -40,8 +47,18 @@
 
     #menuPrincipal > ul {width:auto;}
     #menuPrincipal > ul > li {float:none; padding:0;}
-    #menuPrincipal > ul > li > a {display:block; padding:7px 10px; font-size:13px; border-radius:0; border-top:1px dotted #CCC;}
-    #menuPrincipal > ul > li > a:hover, #menuPrincipal > ul > li.selected > a {border-radius:0; background-image:none;}
+    #menuPrincipal > ul > li > a {
+        display:block; 
+        padding:7px 10px; 
+        font-size:13px; 
+        border-radius:0; 
+        border-top:1px dotted #CCC;
+    }
+    #menuPrincipal > ul > li > a:hover, #menuPrincipal > ul > li.selected > a {
+        padding:7px 9px 6px; 
+        border-radius:0; 
+        background-image:none;
+    }
 
     #menuPrincipal .btMenu {float:none;}
     #menuPrincipal .btMenu a {background:inherit; color:inherit; float:none;}
@@ -88,10 +105,11 @@
 
     /** RODAPE **/
     footer#rodape {position:static;}
+    footer#rodape .limite {padding:0;}
     #rodape ul {padding:5px 0; background:black;}
 
     #rodape nav h6 {font-size:10px; text-transform:lowercase; padding:12px 7px 11px;}
-    #rodape nav ul li a {font-size: 11px; background-size:20%; padding:3px 10px 3px 23px; margin-right:5px;}
+    #rodape nav ul li a {font-size: 11px; background-size:20%; padding:6px 7px 6px 17px; margin-right:5px;}
     .copyRight {
         font-size: 10px;
         float:none; margin-left:10px;
@@ -104,6 +122,9 @@
     .subfooter .lastAccess {background-image:none; display:block; padding:0;}
     #rodape nav .lnkSeta {margin:2px 0 0 10px; float:left; font-size:11px;}
     .subfooter strong {margin-left:10px;}
+    .icoInterroga {display:none;}
+
+    .footerTop [class^="ico"], .footerTop [class*=" ico"] {padding-left:4px;}
 
 }
 
