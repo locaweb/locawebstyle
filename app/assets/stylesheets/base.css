@@ -237,7 +237,7 @@ a:hover {text-decoration:underline;}
 }
 .pagination li.first-child a, .pagination li.last-child a, .pagination .first a, .pagination .prev a, .pagination .next a, .pagination .last a {
   border:none;
-  color:#3d6495;
+  color:#666;
 }
 .pagination .first a, .pagination .last a {display:none;}
 
@@ -246,20 +246,21 @@ a:hover {text-decoration:underline;}
 .pagination .next a {background-position:right -13px; padding-right:10px;}
 
 .pagination .current, .pagination .active a {
-  border:1px solid #7aa4d1;
   color:#FFF;
-  background-color:#264f94;
-  background-image: linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  background-image: -o-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  background-image: -moz-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  background-image: -webkit-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  background-image: -ms-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+  background-color:#666;
+  background-image: linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
+  background-image: -ms-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
+
   background-image: -webkit-gradient(
     linear,
     left bottom,
     left top,
-    color-stop(0.17, rgb(38,78,148)),
-    color-stop(0.91, rgb(122,164,209)));
+    color-stop(0.21, rgb(133,133,133)),
+    color-stop(1, rgb(209,209,209))
+  );
 }
 
 .pagination .disabled a {border:none;}

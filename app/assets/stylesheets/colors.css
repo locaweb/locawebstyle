@@ -2,8 +2,10 @@
 **** AZUL
 ***/
 .colorBlue #menuPrincipal > ul > li.selected a {background-color:#4b7cb8;}
+
 .colorBlue #menuPrincipal,
 .colorBlue .tabs li a:hover, 
+.colorBlue .tabs li.active a,
 .colorBlue #menuPrincipal ul li ul {border-bottom-color:#4b7cb8; }
 
 .colorBlue .tabs li.active a,
@@ -14,7 +16,8 @@
 .colorBlue .collapseGroup summary span,
 .colorBlue .lnkSeta,
 .colorBlue #menuPrincipal > ul > li > a:hover,
-.colorBlue [class^="ico"], .colorBlue [class*=" ico"],
+.colorBlue [class^="ico"], 
+.colorBlue [class*=" ico"],
 .colorBlue .boxGray.listDetail a {color: #4B7CB8;}
 
 .colorBlue #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
@@ -25,6 +28,30 @@
 .colorBlue .lnkSeta:hover,
 .colorBlue .lnkSugestoes {color:#1e324a;}
 
+.colorBlue .pagination .current, 
+.colorBlue .pagination .active a {
+  background-color:#264f94;
+  background-image: linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+  background-image: -o-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+  background-image: -moz-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+  background-image: -webkit-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+  background-image: -ms-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.17, rgb(38,78,148)),
+    color-stop(0.91, rgb(122,164,209)));
+}
+
+.colorBlue .pagination li.first-child a, 
+.colorBlue .pagination li.last-child a, 
+.colorBlue .pagination .first a, 
+.colorBlue .pagination .prev a, 
+.colorBlue .pagination .next a, 
+.colorBlue .pagination .last a {
+    color:#3d6495;
+}
 
 /*** COR
 **** VERDE
@@ -44,7 +71,9 @@
 .colorGreen .collapseGroup summary span,
 .colorGreen .lnkSeta,
 .colorGreen #menuPrincipal > ul > li > a:hover,
-.colorGreen [class^="ico"], .colorGreen [class*=" ico"]  {color: #84c02e;}
+.colorGreen [class^="ico"], 
+.colorGreen [class*=" ico"],
+.colorGreen .boxGray.listDetail a  {color: #84c02e;}
 
 .colorGreen #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
@@ -52,6 +81,33 @@
 
 .colorGreen .lnkSeta:hover,
 .colorGreen .lnkSugestoes:hover  {color:#4f731c;}
+
+.colorGreen .pagination .current, 
+.colorGreen .pagination .active a {
+    background-color:#3f6f0f;
+    background-image: linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.21, rgb(63,111,15)),
+        color-stop(1, rgb(148,187,81))
+    );
+}
+
+.colorGreen .pagination li.first-child a, 
+.colorGreen .pagination li.last-child a, 
+.colorGreen .pagination .first a, 
+.colorGreen .pagination .prev a, 
+.colorGreen .pagination .next a, 
+.colorGreen .pagination .last a {
+    color:#6a9a25;
+}
 
 
 /** LINKS COM SETINHAS QUADRADAS ***/
