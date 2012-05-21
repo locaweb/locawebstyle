@@ -48,6 +48,7 @@
 }
 .modal-footer form { display:inline-block;}
 
+.modal form { margin-bottom:0;}
 
 .boxGray.listDetail {padding:10px;}
 
