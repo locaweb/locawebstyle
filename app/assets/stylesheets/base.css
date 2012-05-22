@@ -106,6 +106,12 @@ h6 {
     text-transform:inherit;
 }
 
+.titDots {
+  padding:0 10px 12px;
+  margin:0 0 15px;
+  background:url(/img/titDots.png) repeat-X left bottom;
+}
+
 p {
   color:#767676;
   font:12px verdana, arial, tahoma, sans-serif;
@@ -173,7 +179,7 @@ a:hover {text-decoration:underline;}
   border-radius:3px;
   border:1px solid #e3e3e3;
   padding-bottom:3px;
-  margin-bottom:20px;
+  margin-bottom:40px;
 }
 .boxGray:after {content:" "; display:block; clear:both;}
 
@@ -402,7 +408,6 @@ a:hover {text-decoration:underline;}
   background:#f1f6e8 url(/img/bgChamadasBoxGreen.png) repeat-X center bottom;
 }
 
-
 .chamadasBox h3 {
   text-transform:uppercase; 
   font:100 20px Ubuntu, verdana, arial, tahoma, sans-serif; 
@@ -444,3 +449,88 @@ a:hover {text-decoration:underline;}
   padding:10px 5px 15px;
 }
 
+/*** statusMessageBox
+**** Usado inicialmente na home de Email Marketing
+***/
+.statusMessageInfo .lnkSeta {margin-left:10px;}
+.statusMessageBox {
+  list-style:none;
+  border:1px solid #e5e5e5;
+  border-radius:3px;
+  margin:0 10px 5px;
+  font-family:verdana;
+}
+
+.statusMessageBox li:first-child {text-align:center;}
+.statusMessageBox li {
+  display:inline-block;
+  *display:inline;
+  *zoom:1;
+  max-width:280px;
+  vertical-align:middle;
+  border-right:1px solid #e5e5e5;
+  margin-right:5px;
+  padding:13px 5px 12px 0;
+}
+
+.statusMessageBox h6 {
+  color:#767676;
+  font:11px verdana, tahoma, arial, helvetica, sans-serif;
+}
+.statusMessageBox p {margin:0; color:#2a2a2a;}
+.statusMessageBox b {
+  font:bold 15px verdana, tahoma, arial, helvetica, sans-serif;
+  color:#2a2a2a;
+}
+.statusMessageBox .countViews h6 {color:rgba(0,0,0,0.5);}
+.statusMessageBox .countViews {
+  margin:2px;
+  min-width:102px;
+  position:relative;
+  border-right:none;
+  padding:9px 8px 9px 0;
+  text-align:center;
+  background-color:#d5e6bc;
+  background-image: linear-gradient(bottom, rgb(213,230,188) 37%, rgb(233,242,216) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(213,230,188) 37%, rgb(233,242,216) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(213,230,188) 37%, rgb(233,242,216) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(213,230,188) 37%, rgb(233,242,216) 100%);
+  background-image: -ms-linear-gradient(bottom, rgb(213,230,188) 37%, rgb(233,242,216) 100%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.37, rgb(213,230,188)),
+    color-stop(1, rgb(233,242,216))
+  );
+}
+.statusMessageBox .countViews:after {
+  content:" ";
+  position:absolute;
+  top:0; right:0;
+  width:7px; height:49px;
+  background:url(/img/bgCountViewSeta.png) left center;
+}
+
+.statusMessageBox .overflowMessage {overflow:hidden; position:relative;}
+.statusMessageBox .overflowMessage p {width:10000px;}
+
+.overflowMessage + .overflowMessage {width:220px; border-right:none; margin-right:0;}
+
+.overflowMessage:after {
+  content:" ";
+  display:block;
+  width:25px;
+  position:absolute;
+  top:0; right:0;
+  border-right:10px solid #FFF;
+  height:200px;
+  background:url(/img/whiteGradientEnd.png) repeat-Y right center;
+}
+
+.dotsSep {
+  height: 5px;
+  background: url(/img/titDots.png);
+  margin:5px 0 30px;
+}

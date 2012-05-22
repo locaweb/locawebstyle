@@ -8,6 +8,7 @@
   color:#777;
   font: 12px Ubuntu, verdana, arial, sans-serif;
   display:inline-block;
+  width:auto;
 }
 [class^="ico"]:hover {text-decoration:none; color:#1e324a;}
 
@@ -24,7 +25,8 @@
     border-radius: 0 3px 3px 0;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"],
+li [class^="icon-"], li [class*=" icon-"] {
   width:auto;
   height:auto;
   background:none;
