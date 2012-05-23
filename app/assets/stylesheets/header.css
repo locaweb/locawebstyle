@@ -74,7 +74,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   padding:9px;
   border-bottom:1px solid #FFF;
   border-radius:3px 3px 0 0;
-  color:#3d6495;
+  color:#666;
 }
 #menuPrincipal .parent:after {
   content:" ";
@@ -116,7 +116,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 
 #menuPrincipal .btMenu {float:right; padding:0; border-right:0; }
 #menuPrincipal .btMenu a {
-  background: #E6E5E5 url(/img/setaBtMenuGray.png) no-repeat 9px center;
+  background-color: #E6E5E5;
   border-radius: 5px;
   color: #777;
   text-decoration: none;
@@ -125,10 +125,20 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 }
 #menuPrincipal .btMenu a:hover,
 #menuPrincipal .btMenu a:active {
-  background:#777 url(/img/setaBtMeneHover.png) no-repeat 9px center; 
-  color:#FFF;
+  background-color:#777; 
+  color:#FFF !important;
   padding-left:19px;
 }
+
+.btMenu a:before {
+  content: " ";
+  display:inline-block; vertical-align:middle;
+  width:5px; height:7px;
+  background:url(/img/largeArrows.png) no-repeat 0 0;
+  position:relative; left:-7px; top:-1px;
+}
+.btMenu a:hover:before {background-position: 0 0;}
+
 
 /** Linkzinho de sugestões do Header **/
 .lnkSugestoes {

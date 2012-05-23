@@ -532,5 +532,33 @@ a:hover {text-decoration:underline;}
 .dotsSep {
   height: 5px;
   background: url(/img/titDots.png);
-  margin:5px 0 30px;
+  margin:20px 0;
 }
+
+/*** BREADCRUMB ***/
+.breadcrumb {
+  background:none;
+  border:none;
+  border-radius:0;
+  box-shadow:none;
+  margin:-20px 0 37px;
+  padding:7px 11px 2px;
+  color:#767676;
+  font:11px verdana, tahoma, arial, helvetica, sans-serif;
+  border-bottom:1px solid #d4d4d4;
+  cursor: default;
+}
+.breadcrumb li {margin-right:10px;}
+.breadcrumb li:before {
+  background:url(/img/miniArrows.png) no-repeat;
+  width:3px; height:4px;
+  display:inline-block;
+  vertical-align:middle;
+  content:" ";
+  margin-right:2px;
+  position:relative; top:-2px;
+}
+.breadcrumb li:hover:before {background-position:-3px 0;}
+
+.breadcrumb a {color:#767676; text-decoration:none;}
+.breadcrumb a:hover {color:#333; text-decoration:underline;}

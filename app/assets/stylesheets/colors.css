@@ -1,6 +1,7 @@
 /*** COR
 **** AZUL
 ***/
+
 .colorBlue #menuPrincipal > ul > li.selected a {background-color:#4b7cb8;}
 
 .colorBlue #menuPrincipal,
@@ -18,12 +19,11 @@
 .colorBlue #menuPrincipal > ul > li > a:hover,
 .colorBlue [class^="ico"], 
 .colorBlue [class*=" ico"],
-.colorBlue .boxGray.listDetail a {color: #4B7CB8;}
+.colorBlue .boxGray.listDetail a,
+.colorBlue #menuPrincipal .parent > a:hover, 
+.colorBlue #menuPrincipal .parent:hover > a  {color: #4B7CB8;}
 
 .colorBlue #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
-
-.colorBlue #menuPrincipal .btMenu a {background: #E6E5E5 url(../img/setaBtMenuBlue.png) no-repeat 9px center;}
-.colorBlue #menuPrincipal .btMenu a:hover {color:#FFF;}
 
 .colorBlue .lnkSeta:hover,
 .colorBlue .lnkSugestoes {color:#1e324a;}
@@ -53,6 +53,9 @@
     color:#3d6495;
 }
 
+.colorBlue .breadcrumb {color:#4f731c;}
+
+
 /*** COR
 **** VERDE
 ***/
@@ -73,11 +76,11 @@
 .colorGreen #menuPrincipal > ul > li > a:hover,
 .colorGreen [class^="ico"], 
 .colorGreen [class*=" ico"],
-.colorGreen .boxGray.listDetail a  {color: #84c02e;}
+.colorGreen .boxGray.listDetail a,
+.colorGreen #menuPrincipal .parent > a:hover, 
+.colorGreen #menuPrincipal .parent:hover > a  {color: #84c02e;}
 
 .colorGreen #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
-
-.colorGreen #menuPrincipal .btMenu a {background: #E6E5E5 url(../img/setaBtMenuBlue.png) no-repeat 9px center;}
 
 .colorGreen .lnkSeta:hover,
 .colorGreen .lnkSugestoes:hover  {color:#4f731c;}
@@ -105,7 +108,8 @@
 .colorGreen .pagination .first a, 
 .colorGreen .pagination .prev a, 
 .colorGreen .pagination .next a, 
-.colorGreen .pagination .last a {
+.colorGreen .pagination .last a,
+.colorGreen .breadcrumb {
     color:#6a9a25;
 }
 
@@ -130,4 +134,20 @@
 
 .colorGreen .listWhite li a:before {background-position:0 -15px;}
 .colorGreen .listWhite li a:hover:before {background-position:-4px -15px;}
+
+/*** MINI ARROWS ***/
+.colorBlue .breadcrumb li:before {background-position:0 -4px;}
+.colorBlue .breadcrumb li:hover:before {background-position:-3px -4px;}
+
+.colorRed .breadcrumb li:before {background-position:0 -8px;}
+.colorRed .breadcrumb li:hover:before {background-position:-3px -8px;}
+
+.colorGreen .breadcrumb li:before {background-position:0 -12px;}
+.colorGreen .breadcrumb li:hover:before {background-position:-3px -12px;}
+
+/*** LARGE ARROWS - BTMENU ***/
+.colorGreen .btMenu a:before {background-position: 0 -28px;}
+.colorBlue .btMenu a:before {background-position: 0 -14px;}
+.colorRed .btMenu a:before {background-position: 0 -21px;}
+
 
