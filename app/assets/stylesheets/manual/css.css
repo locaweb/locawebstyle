@@ -269,7 +269,7 @@ aside.boxes .collapseGroup summary.active { font-weight:normal; color:#B60000;  
 
 
 
-.the-icons {list-style:none;}
+.the-icons {list-style:none; margin:0;}
 .the-icons li {
   margin-bottom:5px;
 }

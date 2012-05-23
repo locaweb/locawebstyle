@@ -3,6 +3,7 @@
 **/
 table.tableList {
   width:100%;
+  margin-bottom:20px;
   border-bottom:5px solid #d3d3d3;
 }
 
@@ -43,14 +44,14 @@ table.tableList tbody tr:hover {background:#fffece;}
   cursor:pointer;
 }
 
-.dataDescending:before, .dataAscending:before {
+.dataDescending:after, .dataAscending:after {
   content: " ";
   display:inline-block;
   width:7px; height:7px;
   background-position:center center;
   background-repeat:no-repeat;
-  position:relative; left:-15px; top:-2px;
+  margin-left:10px;
 }
 
-.dataDescending:before {background-image: url(/img/setaDescending.png);}
-.dataAscending:before {background-image: url(/img/setaAscending.png);}
+.dataDescending:after {background-image: url(/img/setaDescending.png);}
+.dataAscending:after {background-image: url(/img/setaAscending.png);}

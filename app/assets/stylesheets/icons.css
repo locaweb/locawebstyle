@@ -4,17 +4,13 @@
 [class^="ico"], [class*=" ico"] {
   background-position:center left;
   background-repeat:no-repeat;
-  padding-left:18px;
+  padding:2px 1px 2px 2px;
   color:#777;
   font: 12px Ubuntu, verdana, arial, sans-serif;
   display:inline-block;
   width:auto;
 }
 [class^="ico"]:hover {text-decoration:none; color:#1e324a;}
-
-.ico-tabela {background-image:url(/img/ico-tabela.png);}
-.ico-estornar {background-image:url(/img/ico-estornar.png);}
-
 
 .add-on .ui-datepicker-trigger {padding:0 0 0 3px;}
 
@@ -26,7 +22,8 @@
 }
 
 [class^="icon-"], [class*=" icon-"],
-li [class^="icon-"], li [class*=" icon-"] {
+li [class^="icon-"], li [class*=" icon-"],
+[class^="ico-"], [class*=" ico-"] {
   width:auto;
   height:auto;
   background:none;
@@ -40,23 +37,41 @@ li [class^="icon-"], li [class*=" icon-"] {
     border:1px solid #CCC;
     background:#EEE;
     vertical-align:top;
-    padding:6px 4px 1px 7px;
+    padding:6px 4px 2px 7px;
     margin-left:-2px;
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before,
+[class^="ico-"]:before, [class*=" ico-"]:before {
   content:" ";
   display: inline-block;
-  margin-right:4px;
-  width: 14px;
-  height: 14px;
+  margin-right:3px;
+  width: 13px;
+  height: 13px;
   line-height: 14px;
   background-image: url("/assets/bootstrap/img/glyphicons-halflings.png");
   background-repeat: no-repeat;
 }
+.actionsTable [class^="ico-"]:before, .actionsTable [class*=" ico-"]:before {margin-right:2px;}
 
 .error .add-on, .error .ui-datepicker-trigger.icon-calendar {border-color:#B94A48;}
 
+/** locaweb custom icons ***/
+.colorBlue [class^="ico-"]:before, .colorBlue [class*=" ico-"]:before {background-image:url(/img/locaIconsBlue.png);}
+.colorGreen [class^="ico-"]:before, .colorGreen [class*=" ico-"]:before {background-image:url(/img/locaIconsGreen.png);}
+.colorRed [class^="ico-"]:before, .colorRed [class*=" ico-"]:before {background-image:url(/img/locaIconsRed.png);}
+
+.ico-tabela:before,
+.ico-relatorio:before {background-position:-39px 0;}
+.ico-estornar:before {background-position:-52px 0;}
+
+.ico-excluir {color:#b54646 !important;}
+.ico-excluir:before {
+  background:url(/img/ico-excluir.png) no-repeat center center !important;
+  color:#b54646;
+}
+
+/*** Bootstrap Icons ***/
 .icon-white {background-image: url("../img/glyphicons-halflings-white.png");}
 .icon-glass:before {background-position: 0 0;}
 .icon-music:before {background-position: -24px 0;}

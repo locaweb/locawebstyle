@@ -64,3 +64,6 @@ footer#rodape {
   width:12px; height:12px;
   vertical-align:middle;
 }
+
+#rodape [class^="ico"]:before,
+#rodape [class*=" ico"]:before {display:none;}
