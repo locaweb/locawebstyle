@@ -1,4 +1,3 @@
-body {margin:0; padding:0;}
 #toolbar {
   background:url(/img/bgToolbar.png) repeat-X center center;
   position:relative;
@@ -14,12 +13,12 @@ body {margin:0; padding:0;}
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  width:80px; height:18px;
+  width:60px; height:18px;
+  margin:-9px 0 0 10px;
   position:absolute;
-  top:50%; margin-top:-9px;
+  top:50%;
   background:url(/img/tit-toolBar.png) no-repeat left center;
 }
-
 
 #toolbar .menuToolbar {
   position:absolute;

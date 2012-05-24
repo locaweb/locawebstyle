@@ -8,7 +8,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 
 /** Nome do serviço - Logo - H1 **/
 .serviceName {
-  margin:0; padding:40px 0;
+  margin:0; padding:40px 10px;
   text-decoration:none;
   color:#4B7CB8;
   float:left;
