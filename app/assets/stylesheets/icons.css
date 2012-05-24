@@ -1,7 +1,7 @@
 /**
 *** ICONES
 **/
-[class^="ico"], [class*=" ico"] {
+/*[class^="ico"], [class*=" ico"] {
   background-position:center left;
   background-repeat:no-repeat;
   padding:2px 1px 2px 2px;
@@ -11,7 +11,7 @@
   width:auto;
 }
 [class^="ico"]:hover {text-decoration:none; color:#1e324a;}
-
+*/
 .add-on .ui-datepicker-trigger {padding:0 0 0 3px;}
 
 .control-group .add-on {
@@ -27,30 +27,33 @@ li [class^="icon-"], li [class*=" icon-"],
   width:auto;
   height:auto;
   background:none;
-  line-height:inherit;
 }
 
 .ui-datepicker-trigger.icon-calendar {
-    -webkit-border-radius: 0 3px 3px 0;
-    -moz-border-radius: 0 3px 3px 0;
-    border-radius: 0 3px 3px 0;
-    border:1px solid #CCC;
-    background:#EEE;
-    vertical-align:top;
-    padding:6px 4px 2px 7px;
-    margin-left:-2px;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  border:1px solid #CCC;
+  background:#EEE;
+  vertical-align:top;
+  padding:4px 4px 4px 7px;
+  margin-left:-2px;
 }
+
+  
+[class^="icon-"]:before, [class*=" icon-"]:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png);}
+[class^="ico-"]:before, [class*=" ico-"]:before {background-image:url(/img/locaIconsGray.png);}
 
 [class^="icon-"]:before, [class*=" icon-"]:before,
 [class^="ico-"]:before, [class*=" ico-"]:before {
   content:" ";
   display: inline-block;
-  margin-right:3px;
-  width: 13px;
-  height: 13px;
+  vertical-align:middle;
+  width: 16px;
+  height: 16px;
   line-height: 14px;
-  background-image: url("/assets/bootstrap/img/glyphicons-halflings.png");
   background-repeat: no-repeat;
+  margin-top:-3px;
 }
 .actionsTable [class^="ico-"]:before, .actionsTable [class*=" ico-"]:before {margin-right:2px;}
 
@@ -62,8 +65,8 @@ li [class^="icon-"], li [class*=" icon-"],
 .colorRed [class^="ico-"]:before, .colorRed [class*=" ico-"]:before {background-image:url(/img/locaIconsRed.png);}
 
 .ico-tabela:before,
-.ico-relatorio:before {background-position:-39px 0;}
-.ico-estornar:before {background-position:-52px 0;}
+.ico-relatorio:before {background-position:-48px 0;}
+.ico-estornar:before {background-position:-65px 0;}
 
 .ico-excluir {color:#b54646 !important;}
 .ico-excluir:before {

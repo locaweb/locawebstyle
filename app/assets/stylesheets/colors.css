@@ -21,7 +21,8 @@
 .colorBlue [class*=" ico"],
 .colorBlue .boxGray.listDetail a,
 .colorBlue #menuPrincipal .parent > a:hover, 
-.colorBlue #menuPrincipal .parent:hover > a  {color: #4B7CB8;}
+.colorBlue #menuPrincipal .parent:hover > a,
+.colorBlue td a  {color: #4B7CB8;}
 
 .colorBlue #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
@@ -78,7 +79,8 @@
 .colorGreen [class*=" ico"],
 .colorGreen .boxGray.listDetail a,
 .colorGreen #menuPrincipal .parent > a:hover, 
-.colorGreen #menuPrincipal .parent:hover > a  {color: #84c02e;}
+.colorGreen #menuPrincipal .parent:hover > a,
+.colorGreen td a {color: #84c02e;}
 
 .colorGreen #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
@@ -113,6 +115,20 @@
     color:#6a9a25;
 }
 
+/*** COR
+**** Vermelho
+***/
+.colorRed .serviceName a,                            
+.colorRed #menuPrincipal .btMenu a,                  
+.colorRed .collapseGroup summary span,               
+.colorRed .lnkSeta,                                  
+.colorRed #menuPrincipal > ul > li > a:hover,        
+.colorRed [class^="ico"],                            
+.colorRed [class*=" ico"],                           
+.colorRed .boxGray.listDetail a,                     
+.colorRed #menuPrincipal .parent > a:hover,          
+.colorRed #menuPrincipal .parent:hover > a,
+.colorRed td a  {color: #831e22;}
 
 /** LINKS COM SETINHAS QUADRADAS ***/
 .colorBlue .lnkSeta:before {background-position:0 -9px;}

@@ -3,14 +3,54 @@
 		<p>
 			O Bootstrap já tem um esquema de inserção de ícones em elementos. No Locastyle modificamos esse funcionamento para que não fosse necessário adicionar um elemento a mais.
 		</p>
-
-                <p>O funcionamento é simples. As classes podem ser inseridas em qualquer elemento, mas é tem um efeito muito melhor em elementos de linha, como links, span, strong, i, em, etc... Isso quer dizer que talvez, quem sabe, a classe vai funcionar em uma TD, mas o efeito pode não ser o esperado.</p>
+                <p>
+                        Nós também temos a necessidade de criar novos ícones de diferentes cores para os serviços. O ponto importante foi fazer com que você possa usar nossos ícones e usar os ícones do Bootstrap. Há um prefixo nas classes: <strong>icon-</strong> para os ícones do Bootstrap e <strong>ico-</strong> para os ícones da Locaweb.<br>
+                        Precisamos de duas classes (por enquanto) porque usamos dois sprites diferentes.
+                </p>
+                <p>
+                        O funcionamento é simples. As classes podem ser inseridas em qualquer elemento, mas é tem um efeito muito melhor em elementos de linha, como links, span, strong, i, em, etc... Isso quer dizer que talvez, quem sabe, a classe vai funcionar em uma TD, mas o efeito pode não ser o esperado.</p>
                 <p>
                         Para adicionar seu ícone, insira uma das classes abaixo no elemento escolhido.
                 </p>
 		<hr>
 		<%= content_for_clippy do %>
 <div class="row">
+
+        <h4>Ícones da Locaweb</h4>
+        <div class="span3 colorGray">
+          <h5>Cinza (default)</h5>
+                <ul class="the-icons">
+                    <li><span class="ico-tabela">ico-tabela</span></li>
+                    <li><span class="ico-relatorio">ico-relatorio</span></li>
+                    <li><span class="ico-estornar">ico-estornar</span></li>
+                </ul>
+        </div>
+        <div class="span3 colorBlue">
+          <h5>Azul</h5>
+                <ul class="the-icons">
+                    <li><span class="ico-tabela">ico-tabela</span></li>
+                    <li><span class="ico-relatorio">ico-relatorio</span></li>
+                    <li><span class="ico-estornar">ico-estornar</span></li>
+                </ul>
+        </div>
+        <div class="span3 colorGreen">
+          <h5>Verde</h5>
+                <ul class="the-icons">
+                    <li><span class="ico-tabela">ico-tabela</span></li>
+                    <li><span class="ico-relatorio">ico-relatorio</span></li>
+                    <li><span class="ico-estornar">ico-estornar</span></li>
+                </ul>
+        </div>
+        <div class="span3 colorRed">
+          <h5>Vermelho</h5>
+                <ul class="the-icons">
+                    <li><span class="ico-tabela">ico-tabela</span></li>
+                    <li><span class="ico-relatorio">ico-relatorio</span></li>
+                    <li><span class="ico-estornar">ico-estornar</span></li>
+                </ul>
+        </div>
+        <hr class="cboth">
+        <h4>Ícones do Bootstrap</h4>
     <div class="span3">
       <ul class="the-icons">
         <li><span class="icon-glass">icon-glass</span>
