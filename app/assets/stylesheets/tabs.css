@@ -2,7 +2,7 @@
 .tabs {
   background:#e5e5e5;
   height:32px;
-  padding: 0 10px;
+  padding: 0 10px 1px;
   margin:10px 0 0;
   border-top-left-radius:3px;
   border-top-right-radius:3px;
@@ -51,5 +51,6 @@
   min-width: 734px;
   width: auto;
 }
+.tabs + .tab-content {border-top:none;}
 
 .tab-content .tab-pane {padding:10px;}

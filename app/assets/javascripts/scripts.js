@@ -40,7 +40,7 @@ Locastyle = (function() {
     });
 
     // Encontra os .help-inline e define uma largura se referenciando a largura dos inputs próximos.
-    obj.find('.control-group .help-inline, .control-group > label').each(function(index) {
+    obj.find('.control-group .help-inline, .control-group > .help-inline').each(function(index) {
         $(this).css('width', $(this).parent().find('input[type="text"], input[type="password"], input[type="number"], input[type="email"], select').width())
     });
 

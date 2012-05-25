@@ -1,7 +1,5 @@
 html, body {height:100%;}
-.geral {
-  position: relative;
-}
+.geral {position: relative; height:100%; min-height:75%;}
 #main {padding-top:25px; min-height:75%; position:relative; background:url(/img/bgDesgradeBody.png) repeat-X top;}
 #main > .limite {padding-bottom:160px;}
 .limite {
@@ -18,8 +16,8 @@ html, body {height:100%;}
 .cleft {clear:left;}
 
 .dblock {display:block;}
-.dinline {display:inline;}
-.dinlineblock {display:inline-block;}
+.dinline {display:inline; float:none;}
+.dinlineblock {display:inline-block; float:none;}
 
 .nomargin {margin:0;}
 .nomarginleft {margin-left:0;}
@@ -33,6 +31,12 @@ html, body {height:100%;}
 .txtCenter {text-align:center;}
 
 .widthAuto {width: auto;}
+
+.noborder {border:none;}
+.noborderright {border-right:none;}
+.noborderleft {border-left:none;}
+.noborderbottom {border-bottom:none;}
+.nobordertop {border-top:none;}
 
 /**
 *** Clearfix
@@ -52,7 +56,7 @@ html, body {height:100%;}
   font:normal 14px Ubuntu, verdana, arial, tahoma;
 }
 
-.btn.dropdown-toggle {padding:5px 8px;}
+.btn.dropdown-toggle {padding:5px 8px 4px;}
 
 .modal .btn {margin:0 5px;}
 

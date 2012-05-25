@@ -3,7 +3,7 @@ fieldset {
     padding:0; margin:0;
 }
 
-input, textarea, select {color:#797979;}
+input, textarea, select {color:#797979; margin-bottom:0;}
 
 .control-group input {margin-bottom:0;}
 
@@ -196,3 +196,20 @@ legend + .control-group {margin-top:0;}
 .input-prepend label + .add-on {border-radius:3px 0 0 3px; margin-left:0;}
 
 input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top:0;}
+
+.simpleFilter {
+    border-bottom:1px solid #e5e5e5;
+    margin-bottom:20px;
+    padding:10px 0;
+}
+.simpleFilter select {margin-bottom:3px;}
+.simpleFilter.sideBySide .control-group {margin-bottom:0; border-left:1px dotted #cfcfcf; padding:0 15px;}
+.simpleFilter.sideBySide .control-group.fright {float:right;}
+.simpleFilter.sideBySide .control-group.fright:last-child {border:none;}
+.simpleFilter.sideBySide .control-group label {width:auto;}
+
+.simpleFilter .searchInput {
+    background:url(/img/lupaInput.png) no-repeat 8px center;
+    max-width:236px;
+    padding-left:35px;
+}

@@ -111,9 +111,29 @@
 .colorGreen .pagination .prev a, 
 .colorGreen .pagination .next a, 
 .colorGreen .pagination .last a,
-.colorGreen .breadcrumb {
-    color:#6a9a25;
+.colorGreen .breadcrumb {color:#6a9a25;}
+
+.colorGreen .btn-primary {
+  background-color: #5BB75B;
+  background-image: -ms-linear-gradient(top, #62C462, #51A351);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62C462), to(#51A351));
+  background-image: -webkit-linear-gradient(top, #62C462, #51A351);
+  background-image: -o-linear-gradient(top, #62C462, #51A351);
+  background-image: -moz-linear-gradient(top, #62C462, #51A351);
+  background-image: linear-gradient(top, #62C462, #51A351);
+  background-repeat: repeat-x;
+  border-color: #51A351 #51A351 #387038;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#62C462', endColorstr='#51A351', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
+
+.colorGreen .btn-primary:hover, 
+.colorGreen .btn-primary:active, 
+.colorGreen .btn-primary.active, 
+.colorGreen .btn-primary.disabled, 
+.colorGreen .btn-primary[disabled] {background-color: #51A351;}
+
 
 /*** COR
 **** Vermelho
