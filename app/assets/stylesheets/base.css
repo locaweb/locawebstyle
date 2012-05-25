@@ -3,7 +3,7 @@ html, body {height:100%;}
   position: relative;
 }
 #main {padding-top:25px; min-height:75%; position:relative; background:url(/img/bgDesgradeBody.png) repeat-X top;}
-#main > .limite {padding-bottom:160px; }
+#main > .limite {padding-bottom:160px;}
 .limite {
   width:988px;
   margin: 0 auto;
@@ -530,7 +530,7 @@ a:hover {text-decoration:underline;}
 .statusMessageBox .overflowMessage {overflow:hidden; position:relative;}
 .statusMessageBox .overflowMessage p {width:10000px;}
 
-.overflowMessage + .overflowMessage {width:200px; border-right:none; margin-right:0;}
+.overflowMessage + .overflowMessage {width:170px; border-right:none; margin-right:0;}
 
 .overflowMessage:after {
   content:" ";

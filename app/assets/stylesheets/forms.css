@@ -135,8 +135,8 @@ table ~ .navView {border-bottom:0; border-top:1px solid #e5e5e5;}
 .labelInline {margin-bottom:15px;}
 .labelInline label {display:inline;}
 
-.boxFiltro h2 {margin:0 0 10px;}
-
+.boxFiltro h2 {padding:0 0 10px;}
+.boxFiltro h6 {padding:0;}
 .boxFiltro .datepicker {width:94px;}
 
 /* Quando ativa busca avançada */

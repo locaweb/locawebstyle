@@ -28,7 +28,9 @@
 
 .modal-body {padding:15px 5px 0; min-height:auto; margin:0 0 15px;}
 
-.modal-body h2 {padding:0 0 5px;}
+.modal-body h2,
+.modal-body h3,
+.modal-body h4 {padding:0 0 5px;}
 .modal-body p {
   line-height:18px;
   margin:0 0 10px;
