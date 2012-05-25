@@ -44,6 +44,9 @@ li [class^="icon-"], li [class*=" icon-"],
   
 [class^="icon-"]:before, [class*=" icon-"]:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png);}
 [class^="ico-"]:before, [class*=" ico-"]:before {background-image:url(/img/locaIconsGray.png);}
+.colorGreen [class^="icon-"]:before, .colorGreen [class*=" icon-"]:before {background-image: url(/img/glyphicons-halflings-green.png);}
+.colorRed [class^="icon-"]:before, .colorRed [class*=" icon-"]:before {background-image: url(/img/glyphicons-halflings-red.png);}
+.colorBlue [class^="icon-"]:before, .colorBlue [class*=" icon-"]:before {background-image: url(/img/glyphicons-halflings-blue.png);}
 
 [class^="icon-"]:before, [class*=" icon-"]:before,
 [class^="ico-"]:before, [class*=" ico-"]:before {
