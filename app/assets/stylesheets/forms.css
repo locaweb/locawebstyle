@@ -161,6 +161,8 @@ input.input120 {width:120px;}
 input.input240 {width:238px;}
 input.input360 {width:360px;}
 
+.input60 input {width:54px;}
+.input60 label, .input60 .help-inline {min-width:154px;}
 
 /** Botao do Datepicker **/
 .ui-datepicker-trigger {
