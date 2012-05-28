@@ -42,11 +42,13 @@ li [class^="icon-"], li [class*=" icon-"],
   margin-left:-2px;
 }
   
-[class^="icon-"]:before, [class*=" icon-"]:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png);}
-[class^="ico-"]:before, [class*=" ico-"]:before {background-image:url(/img/locaIconsGray.png);}
+[class^="icon-"]:before, [class*=" icon-"]:before,
+body.forceClass .ui-datepicker-trigger.icon-calendar:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png);}
 .colorGreen [class^="icon-"]:before, .colorGreen [class*=" icon-"]:before {background-image: url(/img/glyphicons-halflings-green.png);}
 .colorRed [class^="icon-"]:before, .colorRed [class*=" icon-"]:before {background-image: url(/img/glyphicons-halflings-red.png);}
 .colorBlue [class^="icon-"]:before, .colorBlue [class*=" icon-"]:before {background-image: url(/img/glyphicons-halflings-blue.png);}
+
+[class^="ico-"]:before, [class*=" ico-"]:before {background-image:url(/img/locaIconsGray.png);}
 
 [class^="icon-"]:before, [class*=" icon-"]:before,
 [class^="ico-"]:before, [class*=" ico-"]:before {
@@ -70,11 +72,13 @@ li [class^="icon-"], li [class*=" icon-"],
 .colorBlack [class^="ico-"]:before, .colorBlack [class*=" ico-"]:before {background-image:url(/img/locaIconsBlack.png);}
 .colorWhite [class^="icon-"]:before, .colorWhite [class*=" ico-"]:before {background-image:url(/img/locaIconsWhite.png);}
 
-.ico-excluir:before {background-position:0 0;}
 .ico-tabela:before,
-.ico-relatorio:before {background-position:-48px 0;}
-.ico-estornar:before {background-position:-65px 0;}
-.ico-more:before {background-position:-80px 0;}
+.ico-relatorio:before {background-position:-48px -1px;}
+.ico-estornar:before {background-position:-65px -1px;}
+.ico-more:before {background-position:-80px -1px;}
+
+.ico-excluir:before {background-position:0 -18px; background-image:url(/img/locaIconsRed.png) !important;}
+.btn.ico-excluir:before {background-image:url(/img/locaIconsWhite.png) !important;}
 
 .ico-excluir {color:#b54646 !important;}
 

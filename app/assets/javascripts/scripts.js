@@ -84,6 +84,8 @@ Locastyle = (function() {
 $(document).ready(function() {
   window.locastyle = new Locastyle();
 
+  $('body').addClass('forceClass');
+
   // Limpa inputs de formulários. Muito usado na busca avançada.
   $('.clearFormBt').live('click', function(e){
     e.preventDefault();

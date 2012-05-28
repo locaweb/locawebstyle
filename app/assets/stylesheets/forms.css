@@ -108,7 +108,7 @@ label.checkbox.control-label input {float:none;}
 **/
 .navView {
   margin:20px 0;
-  padding:9px 10px 0;
+  padding:9px 10px;
   color:#767676;
   clear:both;
   border-bottom:1px solid #e5e5e5;
@@ -200,10 +200,12 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top:0;}
 .simpleFilter {
     border-bottom:1px solid #e5e5e5;
     margin-bottom:20px;
-    padding:10px 0;
+    padding:10px;
+    min-height: 30px;
 }
-.simpleFilter select {margin-bottom:3px;}
-.simpleFilter.sideBySide .control-group {margin-bottom:0; border-left:1px dotted #cfcfcf; padding:0 15px;}
+.tab-content .simpleFilter {padding:10px 0;}
+.simpleFilter select {margin-bottom:3px; width:100px;}
+.simpleFilter.sideBySide .control-group {margin-bottom:0; border-left:1px dotted #cfcfcf; padding:0 0 0 15px; margin-left:15px;}
 .simpleFilter.sideBySide .control-group.fright {float:right;}
 .simpleFilter.sideBySide .control-group.fright:last-child {border:none;}
 .simpleFilter.sideBySide .control-group label {width:auto;}
@@ -213,3 +215,4 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top:0;}
     max-width:236px;
     padding-left:35px;
 }
+.simpleFilter .control-group.fright {padding-right:0;}

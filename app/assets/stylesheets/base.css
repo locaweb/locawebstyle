@@ -25,6 +25,12 @@ html, body {height:100%;}
 .nomargintop {margin-top:0;}
 .nomarginbottom {margin-bottom:0;}
 
+.nopadding {padding:0;}
+.nopaddingleft {padding-left:0;}
+.nopaddingright {padding-right:0;}
+.nopaddingtop {padding-top:0;}
+.nopaddingbottom {padding-bottom:0;}
+
 .txtLeft {text-align:left;}
 .txtRight {text-align:right;}
 .txtJustify {text-align:justify;}
@@ -595,7 +601,7 @@ tr:hover .actionsTable {display:block;}
 .actionsTable li {
   display:inline-block;
   *display:inline;
-  background:url(/img/sepActionsTable.gif) no-repeat right 6px;
+  background:url(/img/sepActionsTable.gif) no-repeat right top;
   *zoom:1;
   padding-right:10px;
   line-height:0;
