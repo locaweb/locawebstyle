@@ -111,7 +111,7 @@ html, body {height:100%;}
 /**
 *** Text basic styles
 **/
-h1, h2, h3, h4, h5, h6 {color:#000; padding:0 10px;}
+h1, h2, h3, h4, h5, h6 {color:#000;}
 h1 {font: 26px UbuntuMedium, Ubuntu, arial, verdana, tahoma, sans-serif;}
 h2 {font: 24px UbuntuLight, Ubuntu, arial, verdana, tahoma, sans-serif;}
 h3 {font: 20px Ubuntu, arial, verdana, tahoma, sans-serif;}
@@ -131,8 +131,6 @@ h6 {
 h1 + p {padding-top:10px;}
 
 p {
-  padding-left:10px;
-  padding-right:10px;
   color:#767676;
   font:12px verdana, arial, tahoma, sans-serif;
 }

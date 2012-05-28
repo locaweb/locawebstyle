@@ -2,10 +2,9 @@
 *** TABLES
 **/
 table.tableList {
-  width: 98%;
-  margin: 0 10px 20px;
+  width: 100%;
   border-bottom: 5px solid lightGrey;
-  margin: 0 10px 20px;
+  margin: 0 0 20px;
 }
 
 table.tableList thead { background:#545454;}

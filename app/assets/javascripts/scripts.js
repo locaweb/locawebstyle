@@ -5,7 +5,7 @@ Locastyle = (function() {
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   Locastyle.prototype.init = function(obj) {
     // Setinha nas TABs
-    obj.find('.tabs li:first-child').addClass('active');
+    // obj.find('.tabs li:first-child').addClass('active');
 
     // Define um intervalo para o Wizard demorar para rodar sozinho
     obj.find('.modalSlider .carousel').carousel({interval: 1000000});
