@@ -211,7 +211,7 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top:0;}
 
 .simpleFilter .searchInput {
     background:url(/img/lupaInput.png) no-repeat 8px center;
-    max-width:236px;
+    max-width:185px;
     padding-left:35px;
 }
 .simpleFilter .control-group.fright {padding-right:0;}

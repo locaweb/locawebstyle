@@ -606,3 +606,38 @@ tr:hover .actionsTable {display:block;}
 }
 
 .actionsTable li:last-child {background:none;}
+
+/*** PROGRESS BAR 
+.progressBar {
+  position:relative;
+  font:8px verdana, tahoma, arial, sans-serif;
+  color:#FFF;
+}
+progress {
+  font:8px verdana, tahoma, arial, sans-serif;
+  color:#FFF;
+  text-align:center;
+  display:inline-block;
+  border:1px solid #ddd;
+  border-radius:3px;
+  padding:7px 5px;
+  background:white;
+  -webkit-animation:progressBg 330s linear infinite;
+}
+@-webkit-keyframes progressBg {
+  from {background-position:0 0;}
+  to {background-position:3000px 0;}
+}
+
+.progressBar progress strong {display:none;}
+.progressBar strong {
+  position:absolute; top:-4px; left:0;
+  width:100%;
+  text-align:center;
+  color:#FFF;
+}
+
+.colorGreen progress{
+  background:url(/img/progressGreen.png);
+}***/
+
