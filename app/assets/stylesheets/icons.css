@@ -29,8 +29,6 @@ li [class^="icon-"], li [class*=" icon-"],
   background-color:none;
 }
 
-.btn[class^="ico-"], .btn[class*=" ico-"] {color:#FFF;}
-
 .ui-datepicker-trigger.icon-calendar {
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
@@ -77,26 +75,31 @@ body.forceClass .ui-datepicker-trigger.icon-calendar:before {background-image: u
 .ico-archive:before {background-position:-17px -17px;}
 .ico-unarchive:before {background-position:-32px -17px;}
 
-.forceClass .ico-excluir:before,
-.forceClass .icon-trash:before {background-position:0 -18px; background-image:url(/img/locaIconsRed.png);}
+.forceClass .ico-excluir:before {background-position:0 -18px; background-image:url(/img/locaIconsRed.png);}
 .btn.ico-excluir:before {background-image:url(/img/locaIconsWhite.png) !important;}
 
 .ico-cancel:before {background-image:url(/img/icoCancel.png) !important; margin:-4px 2px 0 2px;}
 
-.icoRed {color:#b54646 !important;}
+.icoRed,
+.ico-excluir {color:#831E22 !important;}
 
 /*** Config dos ícones nos botoes ***/
 .btn:before {margin:0px 5px 0 -4px; position:relative; top:-1px;}
 
-.btn.ico-excluir {color:#FFF !important;}
 .btn.ico-excluir:before {background-position:0 -17px;}
 
-.colorBlue .btn:before,
-.colorGreen .btn:before,
-.colorRed .btn:before,
-.colorBlack .btn:before,
-.colorWhite .btn:before,
-.colorGray .btn:before {background-image:url(/img/locaIconsWhite.png);}
+[class^="btn-"]:before,
+[class*=" btn-"]:before,
+.icon-white:before {background-image:url(/img/locaIconsWhite.png) !important;}
+
+.btn.ico-excluir, 
+.btn[class^="ico-"], 
+.btn[class*=" ico-"], 
+[class^="btn-"], 
+[class*=" btn-"],
+.btn-danger {color:#FFF !important;}
+
+.btn-primary:before {background-image: url("../img/glyphicons-halflings-white.png") !important;}
 
 /*** Bootstrap Icons ***/
 .icon-white {background-image: url("../img/glyphicons-halflings-white.png");}

@@ -62,7 +62,7 @@ html, body {height:100%;}
   font:normal 14px Ubuntu, verdana, arial, tahoma;
 }
 
-.btn.dropdown-toggle {padding:5px 8px 4px;}
+.btn.dropdown-toggle {padding:5px 8px;}
 
 .modal .btn {margin:0 5px;}
 
