@@ -142,6 +142,7 @@ $(document).ready(function() {
     $(this).html( btnTextAlt ).data('text',btnText);
   });
 
+
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
 

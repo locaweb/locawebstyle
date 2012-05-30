@@ -86,3 +86,40 @@
   margin-left:5px;
 }
 /** FIM LISTA BRANCA **/
+.sidebar .carousel {margin:0;}
+.sidebar .carousel ul {margin:0;}
+.sidebar .carousel-inner .item {min-height:135px;}
+
+.sidebar .carousel h5 {color:#2a2a2a; font:bold 12px verdana, tahoma, arial, sans-serif; margin-bottom:5px;}
+.sidebar .carousel p {color:#767676; font: 12px/16px verdana, tahoma, arial, sans-serif; margin-bottom:5px;}
+
+.carouselNav {
+  font:10px verdana, tahoma, arial, sans-serif;
+  color:#545454;
+  text-align:center;
+  padding:10px 0 0;
+  margin:10px 0 0;
+  border-top:1px solid #e9e9e9;
+}
+.carouselNav i {font-style:normal;}
+
+.carouselNav .carousel-control {
+  position:static;
+  display:inline-block;
+  border:none;
+  font-size:inherit;
+  border-radius:0;
+  line-height:auto;
+  display:inline-block;
+  width:5px; height:7px;
+  background:url(/img/largeArrows.png) no-repeat;
+}
+.colorGray .carousel-control {background:url(/img/largeArrows.png) no-repeat 0 -7px;}
+.colorBlue .carousel-control {background:url(/img/largeArrows.png) no-repeat 0 -14px;}
+.colorRed .carousel-control {background:url(/img/largeArrows.png) no-repeat 0 -21px;}
+.colorGreen .carousel-control {background:url(/img/largeArrows.png) no-repeat 0 -28px;}
+
+.colorGray .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -7px;}
+.colorBlue .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -14px;}
+.colorRed .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -21px;}
+.colorGreen .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -28px;}
