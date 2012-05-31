@@ -27,6 +27,7 @@ li [class^="icon-"], li [class*=" icon-"],
   width:auto;
   height:auto;
   background-color:none;
+  background-image:none;
 }
 
 .ui-datepicker-trigger.icon-calendar {

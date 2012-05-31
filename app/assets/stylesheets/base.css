@@ -294,6 +294,10 @@ a:hover {text-decoration:underline;}
 .pagination .disabled a {border:none;}
 
 .navView .pagination {float:right;}
+.tab-content .navView {
+  margin:-10px 0 0;
+  padding:10px 10px 15px;
+}
 
 /***
 *** Actions Botoes

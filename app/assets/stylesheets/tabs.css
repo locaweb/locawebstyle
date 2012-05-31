@@ -54,3 +54,7 @@
 .tabs + .tab-content {border-top:none;}
 
 .tab-content .tab-pane {padding:10px;}
+
+.tab-content.noborder {
+  border-bottom:5px solid #e5e5e5;
+}

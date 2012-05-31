@@ -3,7 +3,7 @@
 **/
 table.tableList {
   width: 100%;
-  border-bottom: 5px solid lightGrey;
+  border-bottom: 1px solid #ddd;
   margin: 0 0 20px;
 }
 
