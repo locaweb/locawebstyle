@@ -20,6 +20,10 @@
 }
 
 
+
+/** Desktop
+*** Passando de 1220px
+**/
 @media screen and (min-width: 1220px) {
   .limite, 
   #menuPrincipal > ul,
@@ -46,6 +50,9 @@
 
 }
 
+/** Outras telas, desktops e até tablets
+*** Até 1220px
+**/
 @media screen and (max-width: 1220px) {
 
   .limite, 

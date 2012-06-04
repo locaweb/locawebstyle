@@ -1,14 +1,21 @@
-
-/** Iphone LIke
+/** iPhone LIke
 *** 320 x 480 (iPhone
 **/
 @media screen and (max-width:480px) {
     .limite {
-        width:auto !important;
+        width:95% !important;
         left:0;
         padding-bottom:0;
     }
 
+    .chamadasBox div {
+      width:92% !important;
+      min-height: inherit !important;
+      padding-bottom:20px !important;
+      height: auto !important;
+      float:none !important;
+    }
+    .chamadasBox div p {display:none;}
     .infoLogin {display:none;}
 
     #main div.limite {left:0 !important; padding:0 10px 40px 10px;}

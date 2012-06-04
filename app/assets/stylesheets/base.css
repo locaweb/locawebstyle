@@ -416,7 +416,8 @@ a:hover {text-decoration:underline;}
 .chamadasBox {margin:0 0 0 25px;}
 
 .chamadasBox div {
-  width:209px; min-height:230px;
+  width:30%;
+  min-height:250px;
   float:left;
   text-align:center;
   border:3px solid #ababab;
@@ -438,7 +439,13 @@ a:hover {text-decoration:underline;}
   font:100 20px Ubuntu, verdana, arial, tahoma, sans-serif; 
   margin:0 auto;
 }
-.chamadasBox h3 a {padding-top:15px; color:#1a2609; display:block;}
+.chamadasBox h3 a {
+  padding-top:15px;
+  color:#1a2609;
+  display:block;
+  max-width: 250px;
+  margin: 0 auto;
+}
 
 .chamadasBox [class^="tit"] a:before {
   content:" ";
