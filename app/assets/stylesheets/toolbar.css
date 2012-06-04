@@ -4,7 +4,7 @@
   font: 300 12px verdana, tahoma, arial, helvetica, sans-serif;
   border-bottom:4px solid #BBB;
 }
-#toolbar .limiteToolbar {position:relative; width:988px; margin:0 auto; height:33px;}
+#toolbar .limiteToolbar {position:relative; max-width: 1150px; margin:0 auto; height:33px;}
 
 #toolbar ul {margin:0; padding:0;}
 #toolbar li {list-style:none;}

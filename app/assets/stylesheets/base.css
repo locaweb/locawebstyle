@@ -3,7 +3,6 @@ html, body {height:100%;}
 #main {padding-top:25px; min-height:75%; position:relative; background:url(/img/bgDesgradeBody.png) repeat-X top;}
 #main > .limite {padding-bottom:160px;}
 .limite {
-  width:988px;
   margin: 0 auto;
 }
 

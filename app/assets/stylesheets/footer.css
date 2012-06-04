@@ -5,7 +5,6 @@ footer#rodape {
   bottom:0;
   width:100%; 
 }
-#rodape .limite {max-width:988px; width:auto;}
 #rodape .footerTop {
   padding:15px 0 0;
   background:url(/img/bgfooter.png);

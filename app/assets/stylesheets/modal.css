@@ -119,3 +119,4 @@
 
 .modalCenter .modal-body,
 .modalCenter .modal-footer {text-align:center;}
+.modal.modalCenter .btn {margin: 0;}

@@ -148,8 +148,9 @@ $(document).ready(function() {
 
 
 });
+
 // $(document).keypress(function(e) {
-//   if(e.keyCode == 71 + 17) {
+//   if(e.keyCode == 71) {
 //     if($('body').hasClass('grid')){
 //       $('.gridShow').remove();
 //       $('body').removeClass('grid');
