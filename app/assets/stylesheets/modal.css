@@ -28,6 +28,14 @@
 
 .modal-body {padding:15px 5px 0; min-height:auto; margin:0 0 15px;}
 
+.modal-body .titAlert {
+  font: bold 18px verdana, arial, tahoma, sans-serif;
+  color: #2A2A2A;
+  width: 370px;
+  margin: 0 auto;
+  padding-bottom:15px;
+}
+
 .modal-body h2,
 .modal-body h3,
 .modal-body h4 {padding:0 0 5px;}
@@ -109,3 +117,5 @@
 .modal-footer .slidePrev:before {background:url(/img/arrowLeftGray.png) no-repeat center; margin-right:5px;}
 .modal-footer .slideNext:after {background:url(/img/arrowRightGray.png) no-repeat center; margin-left:5px;}
 
+.modalCenter .modal-body,
+.modalCenter .modal-footer {text-align:center;}

@@ -84,7 +84,8 @@ body.forceClass .ui-datepicker-trigger.icon-calendar:before {background-image: u
 
 .icoRed,
 .ico-excluir,
-.ico-trash {color:#b54646 !important;}
+.ico-trash,
+.ico-cancel {color:#b54646 !important;}
 
 /*** Config dos ícones nos botoes ***/
 

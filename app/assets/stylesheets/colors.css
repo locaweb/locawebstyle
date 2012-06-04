@@ -82,6 +82,8 @@
 .colorGreen #menuPrincipal .parent:hover > a,
 .colorGreen td a {color: #84c02e;}
 
+.colorGreen td a {color:#6a9a26;}
+
 .colorGreen #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
 .colorGreen .lnkSeta:hover,

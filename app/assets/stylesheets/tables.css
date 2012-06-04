@@ -7,6 +7,8 @@ table.tableList {
   margin: 0 0 20px;
 }
 
+table.tableList tr {border-bottom:1px solid #ddd;}
+
 table.tableList thead { background:#545454;}
 
 table.tableList thead th {
@@ -21,9 +23,9 @@ table.tableList thead th a:hover {color:#FFF;}
 
 table.tableList tbody td {
   color:#797979;
-  padding:5px;
+  padding:5px 10px;
   text-align:center;
-  border-right:1px solid #dddddd;
+  border-right:1px solid #ddd;
 }
 table.tableList tbody td.txtLeft, table.tableList thead th.txtLeft {text-align:left;}
 table.tableList tbody td.txtRight, table.tableList thead th.txtRight {text-align:right;}
@@ -35,7 +37,6 @@ table.tableList tbody tr:nth-child(even) {background-color:#eee;}
 table.tableList thead th.actived {background-color:#2a2a2a;}
 
 table.tableList tbody tr:hover {background:#fffece;}
-
 
 /** Ordenação **/
 .dataDescending, .dataAscending {
@@ -55,3 +56,26 @@ table.tableList tbody tr:hover {background:#fffece;}
 
 .dataDescending:after {background-image: url(/img/setaDescending.png);}
 .dataAscending:after {background-image: url(/img/setaAscending.png);}
+
+
+/*** 
+**** Ações em Tabela
+***/
+tr:hover .actionsTable {display:block;}
+.actionsTable {
+  display:none;
+  list-style:none;
+  margin:0;
+  padding:5px 0 0;
+}
+
+.actionsTable li {
+  display:inline-block;
+  *display:inline;
+  background:url(/img/sepActionsTable.gif) no-repeat right 3px;
+  *zoom:1;
+  padding-right:10px;
+  line-height:0;
+}
+
+.actionsTable li:last-child {background:none;}

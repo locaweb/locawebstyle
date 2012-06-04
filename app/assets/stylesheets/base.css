@@ -178,11 +178,11 @@ a:hover {text-decoration:underline;}
 .lnkSeta:hover {text-decoration:none; color:#000; background-position:0 -9px;}
 .lnkSeta:hover:before {background-position:-9px 0;}
 
-.lnkSetaWhite {
-  background:url(/img/setaRightBoxWhite.png) no-repeat left center;
+#rodape .lnkSeta.lnkSetaWhite {
+  background:url(/img/setaRightBoxWhite.png) no-repeat left center !important;
   color:#FFF;
 }
-.lnkSetaWhite:hover {background-position:left center; }
+.lnkSeta.lnkSetaWhite:hover {background-position:left center; }
 
 .actLnk .lnkSeta {
   border-right:1px solid #d3d3d3;
@@ -588,28 +588,6 @@ a:hover {text-decoration:underline;}
 
 .breadcrumb a {color:#767676; text-decoration:none;}
 .breadcrumb a:hover {color:#333; text-decoration:underline;}
-
-/*** 
-**** Ações em Tabela
-***/
-tr:hover .actionsTable {display:block;}
-.actionsTable {
-  display:none;
-  list-style:none;
-  margin:0;
-  padding:5px 0 0;
-}
-
-.actionsTable li {
-  display:inline-block;
-  *display:inline;
-  background:url(/img/sepActionsTable.gif) no-repeat right top;
-  *zoom:1;
-  padding-right:10px;
-  line-height:0;
-}
-
-.actionsTable li:last-child {background:none;}
 
 /*** PROGRESS BAR 
 .progressBar {
