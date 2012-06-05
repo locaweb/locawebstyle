@@ -86,14 +86,16 @@ $(document).ready(function() {
 
   $('body').addClass('forceClass');
 
-  // Contando quantos sliders items tem no slider das sidebares 
-    
-// var qtdItensCarousel = $(this).find('.carousel-inner .item').length
-//       $('.carouselNav i').html(qtdItensCarousel);
-
-    $.each($('.sideBox .carousel'), function() {
-      $(this).find('.carouselNav i').html($(this).find('.carousel-inner .item').length)
-    });
+  // Contando quantos sliders items tem no slider das sidebares
+  $.each($('.sideBox .carousel'), function() {
+    if ($(this).find('.carouselNav b').size() > 0) {
+      $(this).bind('slid', function (e) {
+        $(this).find('.carouselNav b').html($(this).find('.active').index() + 1);
+      });
+      $(this).find('.carouselNav i').html($(this).find('.carousel-inner .item').size())
+      $(this).find('.carouselNav b').html($(this).find('.active').index() + 1);
+    }
+  });
 
   // Limpa inputs de formulários. Muito usado na busca avançada.
   $('.clearFormBt').live('click', function(e){
