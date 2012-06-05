@@ -86,6 +86,15 @@ $(document).ready(function() {
 
   $('body').addClass('forceClass');
 
+  // Contando quantos sliders items tem no slider das sidebares 
+    
+// var qtdItensCarousel = $(this).find('.carousel-inner .item').length
+//       $('.carouselNav i').html(qtdItensCarousel);
+
+    $.each($('.sideBox .carousel'), function() {
+      $(this).find('.carouselNav i').html($(this).find('.carousel-inner .item').length)
+    });
+
   // Limpa inputs de formulários. Muito usado na busca avançada.
   $('.clearFormBt').live('click', function(e){
     e.preventDefault();
@@ -141,6 +150,7 @@ $(document).ready(function() {
     btnTextAlt = $(this).data('text');
     $(this).html( btnTextAlt ).data('text',btnText);
   });
+
 
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
