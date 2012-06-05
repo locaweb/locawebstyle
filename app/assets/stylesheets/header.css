@@ -53,7 +53,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   text-decoration:none;
   font:14px 'Ubuntu', verdana, arial, tahoma, sans-serif;
   text-transform:uppercase;
-  padding:10px 9px;
+  padding:10px;
 }
 #menuPrincipal > ul > li > a:hover {color:#666; background-color:transparent;}
 

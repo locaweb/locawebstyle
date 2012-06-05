@@ -62,7 +62,7 @@
         border-top:1px dotted #CCC;
     }
     #menuPrincipal > ul > li > a:hover, #menuPrincipal > ul > li.selected > a {
-        padding:7px 9px 6px; 
+        padding:7px 10px; 
         border-radius:0; 
         background-image:none;
     }
