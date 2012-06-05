@@ -498,11 +498,11 @@ a:hover {text-decoration:underline;}
   display:inline-block;
   *display:inline;
   *zoom:1;
-  max-width:270px;
   vertical-align:middle;
   border-right:1px solid #e5e5e5;
   margin-right:5px;
   padding:13px 5px 12px 0;
+  min-width:65px;
 }
 
 .statusMessageBox h6 {
@@ -545,10 +545,9 @@ a:hover {text-decoration:underline;}
   background:url(/img/bgCountViewSeta.png) left center;
 }
 
-.statusMessageBox .overflowMessage {overflow:hidden; position:relative;}
+.statusMessageBox .overflowMessage {overflow:hidden; position:relative; min-width:10%; max-width:40%;}
+.overflowMessage + .overflowMessage {border-right:none; margin-right:0; width:29%;}
 .statusMessageBox .overflowMessage p {width:10000px;}
-
-.overflowMessage + .overflowMessage {width:170px; border-right:none; margin-right:0;}
 
 .overflowMessage:after {
   content:" ";
