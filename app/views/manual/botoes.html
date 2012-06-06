@@ -47,34 +47,6 @@
 					<td>Botão preto, alternativo, com semântica e significado neutro</td>
 				</tr>
 
-			</tbody>
-		</table>
-
-		<h3>Botões com dropdown</h3>
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>Botão</th>
-					<th>Descrição</th>
-				</tr>
-			</thead>
-			<tbody>
-				<!-- <tr>
-					<td>
-						<div class="btn-group">
-						  <a class="btn btn-primary icon-user icon-white" href="#">User</a>
-						  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-						  <ul class="dropdown-menu">
-						    <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
-						    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
-						    <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
-						    <li class="divider"></li>
-						    <li><a href="#"><i class="i"></i> Make admin</a></li>
-						  </ul>
-						</div>
-					</td>
-					<td>Opções agrupadas em botão com combo box.</td>
-				</tr> -->
 				<tr>
 					<td>
 						<div class="btn-group">
@@ -88,6 +60,7 @@
 						  </ul>
 						</div>
 					</td>
+					<td>Atríbutos: <code> class="btn btn-danger dropdown-toggle" data-toggle="dropdown"</code></td>
 					<td>Opções agrupadas, mas ativados no próprio botão</td>
 				</tr>
 			</tbody>
@@ -104,6 +77,6 @@
 		<% end %>
 
 	<div class="codes">
-			<p class="label label-warning">Padrão de código do Bootstrap.</p>
-			<%= clippy(yield(:code)) %>
+		<p class="label label-warning">Padrão de código do Bootstrap.</p>
+		<%= clippy(yield(:code)) %>
 	</div>

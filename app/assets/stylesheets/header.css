@@ -1,7 +1,5 @@
 header.headerPrincipal {background:#f0f0f0 url(/img/bgHeader.gif) repeat-X top center;}
-header.headerPrincipal .limite {
-  height:120px; position:relative;
-}
+header.headerPrincipal .limite {height:120px; position:relative;}
 header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" "; display:block; clear:both;}
 
 /** Nome do serviço - Logo - H1 **/
@@ -83,7 +81,8 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   z-index:2;
 }
   
-#menuPrincipal > ul > li:hover ul {opacity:1; visibility:visible; }
+#menuPrincipal > ul > li:hover ul,
+#menuPrincipal > ul > li:active ul {opacity:1; visibility:visible; }
 #menuPrincipal ul li ul {
   opacity:0;
   border:1px solid #c7c7c7;

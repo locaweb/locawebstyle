@@ -69,7 +69,10 @@
 
     #menuPrincipal .btMenu {float:none;}
     #menuPrincipal .btMenu a {background:inherit; color:inherit; float:none;}
-
+    #menuPrincipal .parent > a:hover, #menuPrincipal .parent:hover > a {
+        padding:8px 10px 7px; 
+        border:none;
+    }
     /*** Caixa inicial de collapse ***/
     .boxGray h2 {font-size:19px;}
     .collapseGroup .details p {font-size:11px; padding-left:20px;}
@@ -103,8 +106,6 @@
         height:auto;
         overflow:visible;
     }
-
-    #charts .tab-pane {width: 390px !important; height: 200px !important;}
 
     /** FORMS **/
     input.input360 {max-width:250px;}

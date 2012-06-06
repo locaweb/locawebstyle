@@ -349,6 +349,7 @@ a:hover {text-decoration:underline;}
   color:#767676;
   margin:5px 0 0 0;
   padding:5px;
+  max-width:100%;
   overflow: hidden;
 }
 
