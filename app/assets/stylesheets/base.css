@@ -597,12 +597,13 @@ a:hover {text-decoration:underline;}
 
 /*** PROGRESS BAR  ***/
 .progress {
-  width: 50px; height:14px;
+  width: 300px; height:14px;
   display: inline-block;
   margin: 0 0 0 4px;
   border:1px solid #ddd;
   border-radius:3px;
 }
+td .progress {width:50px;}
 .progress .bar {
   border-radius:3px; height:100%; 
   line-height:14px;
