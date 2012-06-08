@@ -2,7 +2,8 @@
 **** AZUL
 ***/
 
-.colorBlue #menuPrincipal > ul > li.selected a {background-color:#4b7cb8;}
+.colorBlue #menuPrincipal > ul > li.selected a,
+.colorBlue .progress .bar {background-color:#4b7cb8;}
 
 .colorBlue #menuPrincipal,
 .colorBlue .tabs li a:hover, 
@@ -56,11 +57,11 @@
 
 .colorBlue .breadcrumb {color:#4f731c;}
 
-
 /*** COR
 **** VERDE
 ***/
-.colorGreen #menuPrincipal > ul > li.selected a {background-color:#79bb2c;}
+.colorGreen #menuPrincipal > ul > li.selected a,
+.colorGreen .progress .bar {background-color:#79bb2c;}
 
 .colorGreen #menuPrincipal,
 .colorGreen .tabs li a:hover, 
@@ -152,6 +153,9 @@
 .colorRed #menuPrincipal .parent:hover > a,
 .colorRed td a  {color: #831e22;}
 
+
+
+
 /** LINKS COM SETINHAS QUADRADAS ***/
 .colorBlue .lnkSeta:before {background-position:0 -9px;}
 .colorBlue .lnkSeta:hover:before {background-position:-9px -9px;}
@@ -161,7 +165,6 @@
 
 .colorGreen .lnkSeta:before {background-position:0 -27px;}
 .colorGreen .lnkSeta:hover:before {background-position:-9px -27px;}
-
 
 /*** LINKS COM ARROWS ***/
 .colorBlue .listWhite li a:before {background-position:0 -5px;}

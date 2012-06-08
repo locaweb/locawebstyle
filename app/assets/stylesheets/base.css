@@ -595,37 +595,18 @@ a:hover {text-decoration:underline;}
 .breadcrumb a {color:#767676; text-decoration:none;}
 .breadcrumb a:hover {color:#333; text-decoration:underline;}
 
-/*** PROGRESS BAR 
-.progressBar {
-  position:relative;
-  font:8px verdana, tahoma, arial, sans-serif;
-  color:#FFF;
-}
-progress {
-  font:8px verdana, tahoma, arial, sans-serif;
-  color:#FFF;
-  text-align:center;
-  display:inline-block;
+/*** PROGRESS BAR  ***/
+.progress {
+  width: 50px; height:14px;
+  display: inline-block;
+  margin: 0 0 0 4px;
   border:1px solid #ddd;
   border-radius:3px;
-  padding:7px 5px;
-  background:white;
-  -webkit-animation:progressBg 330s linear infinite;
 }
-@-webkit-keyframes progressBg {
-  from {background-position:0 0;}
-  to {background-position:3000px 0;}
+.progress .bar {
+  border-radius:3px; height:100%; 
+  line-height:14px;
+  font-size:8px;
+  font-family:verdana;
 }
-
-.progressBar progress strong {display:none;}
-.progressBar strong {
-  position:absolute; top:-4px; left:0;
-  width:100%;
-  text-align:center;
-  color:#FFF;
-}
-
-.colorGreen progress{
-  background:url(/img/progressGreen.png);
-}***/
-
+.progress .bar b {padding:0 3px;}
