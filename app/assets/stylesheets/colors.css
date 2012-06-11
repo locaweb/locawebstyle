@@ -139,6 +139,75 @@
 
 
 /*** COR
+**** LARANJA
+***/
+.colorOrange #menuPrincipal > ul > li.selected a,
+.colorOrange .progress .bar,
+.colorOrange .btn-primary:hover, 
+.colorOrange .btn-primary:active, 
+.colorOrange .btn-primary.active, 
+.colorOrange .btn-primary.disabled, 
+.colorOrange .btn-primary[disabled] {background-color:#ffa600;}
+
+.colorOrange #menuPrincipal,
+.colorOrange .tabs li a:hover, 
+.colorOrange .tabs li.active a,
+.colorOrange #menuPrincipal ul li ul {border-bottom-color:#ffa600;}
+
+.colorOrange .tabs li.active a,
+.colorOrange .tabs li a:hover {border-top-color:#ffa600; }
+
+.colorOrange .serviceName a,
+.colorOrange #menuPrincipal .btMenu a,
+.colorOrange .collapseGroup summary span,
+.colorOrange .lnkSeta,
+.colorOrange #menuPrincipal > ul > li > a:hover,
+.colorOrange [class^="ico"], 
+.colorOrange [class*=" ico"],
+.colorOrange .boxGray.listDetail a,
+.colorOrange #menuPrincipal .parent > a:hover, 
+.colorOrange #menuPrincipal .parent:hover > a,
+.colorOrange td a {color: #ffa600;}
+
+.colorOrange #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
+
+.colorOrange .lnkSeta:hover,
+.colorOrange .lnkSugestoes:hover  {color:#cc8500;}
+
+.colorOrange .pagination .current, 
+.colorOrange .pagination .active a {
+    background-color:#ffa600;
+    background: -moz-linear-gradient(top, #fdb000 0%, #fb9000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdb000), color-stop(100%,#fb9000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* IE10+ */
+    background: linear-gradient(top, #fdb000 0%,#fb9000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdb000', endColorstr='#fb9000',GradientType=0 ); /* IE6-9 */
+}
+
+.colorOrange .pagination li.first-child a, 
+.colorOrange .pagination li.last-child a, 
+.colorOrange .pagination .first a, 
+.colorOrange .pagination .prev a, 
+.colorOrange .pagination .next a, 
+.colorOrange .pagination .last a,
+.colorOrange .breadcrumb {color:#cc8500;}
+
+.colorOrange .btn-primary {
+  background-color: #5BB75B;
+  background: -moz-linear-gradient(top, #fdb000 0%, #fb9000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdb000), color-stop(100%,#fb9000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* IE10+ */
+  background: linear-gradient(top, #fdb000 0%,#fb9000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdb000', endColorstr='#fb9000',GradientType=0 ); /* IE6-9 */
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+
+/*** COR
 **** Vermelho
 ***/
 .colorRed .serviceName a,                            
@@ -155,7 +224,6 @@
 
 
 
-
 /** LINKS COM SETINHAS QUADRADAS ***/
 .colorBlue .lnkSeta:before {background-position:0 -9px;}
 .colorBlue .lnkSeta:hover:before {background-position:-9px -9px;}
@@ -165,6 +233,9 @@
 
 .colorGreen .lnkSeta:before {background-position:0 -27px;}
 .colorGreen .lnkSeta:hover:before {background-position:-9px -27px;}
+
+.colorOrange .lnkSeta:before {background-position:0 -36px;}
+.colorOrange .lnkSeta:hover:before {background-position:-9px -36px;}
 
 /*** LINKS COM ARROWS ***/
 .colorBlue .listWhite li a:before {background-position:0 -5px;}

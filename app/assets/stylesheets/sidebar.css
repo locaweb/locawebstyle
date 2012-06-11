@@ -118,8 +118,10 @@
 .colorBlue .carousel-control {background:url(/img/largeArrows.png) no-repeat 0 -14px;}
 .colorRed .carousel-control {background:url(/img/largeArrows.png) no-repeat 0 -21px;}
 .colorGreen .carousel-control {background:url(/img/largeArrows.png) no-repeat 0 -28px;}
+.colorOrange .carousel-control {background:url(/img/largeArrows.png) no-repeat 0 -35px;}
 
 .colorGray .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -7px;}
 .colorBlue .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -14px;}
 .colorRed .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -21px;}
 .colorGreen .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -28px;}
+.colorOrange .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -35px;}
