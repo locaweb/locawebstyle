@@ -72,7 +72,7 @@ tr:hover .actionsTable {display:block;}
 .actionsTable li {
   display:inline-block;
   *display:inline;
-  background:url(/img/sepActionsTable.gif) no-repeat right 3px;
+  background:url(/img/sepActionsTable.gif) no-repeat right top;
   *zoom:1;
   padding-right:10px;
   line-height:0;

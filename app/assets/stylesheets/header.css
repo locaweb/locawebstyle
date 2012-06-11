@@ -80,6 +80,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   position:relative;
   z-index:2;
 }
+#menuPrincipal .parent {outline:none;}
   
 #menuPrincipal > ul > li:hover ul,
 #menuPrincipal > ul > li:active ul {opacity:1; visibility:visible; }

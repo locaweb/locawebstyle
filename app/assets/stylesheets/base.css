@@ -610,4 +610,4 @@ td .progress {width:50px;}
   font-size:8px;
   font-family:verdana;
 }
-.progress .bar b {padding:0 3px;}
+.progress .bar b {padding:0 3px; text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);}
