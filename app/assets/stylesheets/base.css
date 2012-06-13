@@ -1,10 +1,9 @@
 html, body {height:100%;}
+
 .geral {position: relative; height:100%; min-height:75%;}
 #main {padding-top:25px; min-height:75%; position:relative; background:url(/img/bgDesgradeBody.png) repeat-X top;}
 #main > .limite {padding-bottom:160px;}
-.limite {
-  margin: 0 auto;
-}
+.limite {margin: 0 auto;}
 
 .nofloat {float:none;}
 .fright {float:right;}

@@ -2,7 +2,6 @@
   background:url(/img/bgToolbar.png) repeat-X center center;
   position:relative;
   font: 300 12px verdana, tahoma, arial, helvetica, sans-serif;
-  border-bottom:4px solid #BBB;
 }
 #toolbar .limiteToolbar {position:relative; max-width: 1150px; margin:0 auto; height:33px;}
 

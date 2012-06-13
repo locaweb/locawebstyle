@@ -1,4 +1,7 @@
-header.headerPrincipal {background:#f0f0f0 url(/img/bgHeader.gif) repeat-X top center;}
+header.headerPrincipal {
+  border-top:4px solid #BBB;
+  background:#f0f0f0 url(/img/bgHeader.gif) repeat-X top center;
+}
 header.headerPrincipal .limite {height:120px; position:relative;}
 header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" "; display:block; clear:both;}
 

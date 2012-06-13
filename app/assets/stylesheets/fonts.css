@@ -1,3 +1,24 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+
+    -webkit-text-shadow:0 0 1px transparent;
+    -moz-text-shadow:0 0 1px transparent;
+    -ms-text-shadow:0 0 1px transparent;
+    -o-text-shadow:0 0 1px transparent;
+    text-shadow:0 0 1px transparent;
+
+    -webkit-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+
+}
+
 @font-face {
     font-family: 'Ubuntu';
     src: url('/fonts/ubuntu/ubuntu-regular-webfont.eot');

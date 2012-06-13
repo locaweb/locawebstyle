@@ -222,8 +222,6 @@
 .colorRed #menuPrincipal .parent:hover > a,
 .colorRed td a  {color: #831e22;}
 
-
-
 /** LINKS COM SETINHAS QUADRADAS ***/
 .colorBlue .lnkSeta:before {background-position:0 -9px;}
 .colorBlue .lnkSeta:hover:before {background-position:-9px -9px;}
