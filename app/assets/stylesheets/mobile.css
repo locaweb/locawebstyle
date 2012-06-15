@@ -55,23 +55,30 @@
     #menuPrincipal > ul {width:auto;}
     #menuPrincipal > ul > li {float:none; padding:0;}
     #menuPrincipal > ul > li > a {
-        display:block; 
-        padding:7px 10px; 
-        font-size:13px; 
-        border-radius:0; 
-        border-top:1px dotted #CCC;
+        display:block;
+        color:#545454;
+        text-decoration:none;
+        font:14px 'Ubuntu', verdana, arial, tahoma, sans-serif;
+        text-transform:uppercase;
+        border:1px solid #EFEFEF;
+        border-bottom-color:transparent;
+        border-radius:none;
+        padding:9px;
+        -webkit-transition:all .15s linear;
     }
     #menuPrincipal > ul > li > a:hover, #menuPrincipal > ul > li.selected > a {
-        padding:7px 10px; 
         border-radius:0; 
         background-image:none;
     }
 
-    #menuPrincipal .btMenu {float:none;}
-    #menuPrincipal .btMenu a {background:inherit; color:inherit; float:none;}
+    #menuPrincipal .btMenu {float:none; background:none; border-right:none;}
+    #menuPrincipal .btMenu a {background:none; color:inherit; float:none; border-radius:0; padding-left:5px;}
+
     #menuPrincipal .parent > a:hover, #menuPrincipal .parent:hover > a {
-        padding:8px 10px 7px; 
-        border:none;
+        color:#666;
+        font:14px 'Ubuntu', verdana, arial, tahoma, sans-serif;
+        text-transform:uppercase;
+        border-radius:3px 3px 0 0;
     }
     /*** Caixa inicial de collapse ***/
     .boxGray h2 {font-size:19px;}

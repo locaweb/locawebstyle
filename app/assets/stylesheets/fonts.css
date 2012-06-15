@@ -1,4 +1,4 @@
-body {
+body, li, p, a {
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
@@ -11,11 +11,11 @@ body {
     -o-text-shadow:0 0 1px transparent;
     text-shadow:0 0 1px transparent;
 
-    -webkit-text-rendering: optimizeLegibility;
-    -ms-text-rendering: optimizeLegibility;
-    -ms-text-rendering: optimizeLegibility;
-    -o-text-rendering: optimizeLegibility;
-    text-rendering: optimizeLegibility;
+    -webkit-text-rendering: optimizeSpeed;
+    -ms-text-rendering: optimizeSpeed;
+    -ms-text-rendering: optimizeSpeed;
+    -o-text-rendering: optimizeSpeed;
+    text-rendering: optimizeSpeed;
 
 }
 

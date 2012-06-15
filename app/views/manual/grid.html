@@ -1,9 +1,13 @@
 		<h2>Estruturação e Grid</h2>
 		<p>O layout é baseado em um grid criado por nós por isso temos alguma flexibilidade para a criação das estruturas utilizadas nos serviços.</p>
 		<p>Em telas com uma coluna, onde normalmente não usamos uma sidebar, o conteúdo tem a largura total do espaço, é necessário inserir uma classe para que o grid funcione perfeitamente.</p>
+		<h3>Que problema isso resolve?</h3>
+		<p>Nós precisamos gerenciar diversas estruturas, tanto estruturas de layout quanto as estruturas internas dos layouts. Ter um layout baseado por grids ajuda a manter a padronização e uniformização de todos os serviços. </p>
 		<p>Abaixo segue um exemplo com as grids e suas respectivas classes.</p>
 		<p>O grid sempre deve ter uma estrutura de hierarquia correta de elementos. Um elemento com a classe <strong>.row</strong> deve envolver os elementos que dividirão a estrutura, que terão classes como <strong>.span2, span3, .span4 até span16.</strong></p>
 		<hr>
+
+		<div class="gridCode">
 		<%= content_for_clippy do %>
 
 <div class="geral">
@@ -47,64 +51,64 @@
 		<div class="row">
 			<div class="span16">
 				<p>span16</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 
 			<div class="span1">
 				<p>span1</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 			<div class="span15">
 				<p>span15</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 
 			<div class="span2">
 				<p>span2</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 			<div class="span14">
 				<p>span14</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 
 			<div class="span3">
 				<p>span3</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 			<div class="span13">
 				<p>span13</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 			
 			<div class="span4">
 				<p>span4</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 			<div class="span12">
 				<p>span12</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 
 			
 			<div class="span5">
 				<p>span5</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 			<div class="span11">
 				<p>span11</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 
 			<div class="span6">
 				<p>span6</p>
-			</div><!-- FIM SPAN CONTENT -->			
+			</div>			
 			<div class="span10">
 				<p>span10</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 						
 			<div class="span7">
 				<p>span7</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 			<div class="span9">
 				<p>span9</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 									
 			<div class="span8">
 				<p>span8</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 			<div class="span8">
 				<p>span8</p>
-			</div><!-- FIM SPAN CONTENT -->
+			</div>
 
 		</div>
 	</div> <!-- FIM LIMITE ROW -->
@@ -134,7 +138,7 @@
 </footer>
 </div>
 		<% end %>
-
+</div>
 <div class="codes">
 	<%= clippy(yield(:code)) %>
 </div>

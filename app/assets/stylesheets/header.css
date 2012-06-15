@@ -54,7 +54,10 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   text-decoration:none;
   font:14px 'Ubuntu', verdana, arial, tahoma, sans-serif;
   text-transform:uppercase;
-  padding:10px;
+  border:1px solid transparent;
+  border-bottom:1px solid transparent;
+  padding:9px;
+  -webkit-transition:all .15s linear;
 }
 #menuPrincipal > ul > li > a:hover {color:#666; background-color:transparent;}
 
@@ -68,11 +71,12 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 #menuPrincipal .parent:hover > a {box-shadow:1px 3px 5px 0 rgba(0, 0, 0, 0.2);}
 
 #menuPrincipal .parent > a:hover, #menuPrincipal .parent:hover > a {
-  border:1px solid #c7c7c7;
-  padding:9px;
-  border-bottom:1px solid #FFF;
-  border-radius:3px 3px 0 0;
   color:#666;
+  font:14px 'Ubuntu', verdana, arial, tahoma, sans-serif;
+  text-transform:uppercase;
+  border-radius:3px 3px 0 0;
+  border:1px solid #c7c7c7;
+  border-bottom:1px solid #FFF;
 }
 #menuPrincipal .parent:after {
   content:" ";
@@ -101,7 +105,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   border-radius: 0 3px 3px 3px;
   border-bottom:3px solid #777;
   box-shadow:3px 3px 5px 0 rgba(0, 0, 0, 0.2);
-   -webkit-transition:all 0.2s linear;
+   -webkit-transition:all .15s linear;
 }
 
 #menuPrincipal ul li ul li a {
