@@ -84,7 +84,7 @@ Locastyle = (function() {
 $(document).ready(function() {
   window.locastyle = new Locastyle();
 
-  $('body').addClass('forceClass');
+  $('html').addClass('forceClass');
 
   // Contando quantos sliders items tem no slider das sidebares
   $.each($('.sideBox .carousel'), function() {

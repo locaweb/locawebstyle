@@ -16,6 +16,7 @@ html, body {height:100%;}
 .dblock {display:block;}
 .dinline {display:inline; float:none;}
 .dinlineblock {display:inline-block; float:none;}
+.dnone, .hide, .forceClass .dnone, .forceClass .hide {display:none;}
 
 .nomargin {margin:0;}
 .nomarginleft {margin-left:0;}
