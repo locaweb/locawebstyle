@@ -39,11 +39,11 @@
   background-image: -webkit-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
   background-image: -ms-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
   background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.17, rgb(38,78,148)),
-    color-stop(0.91, rgb(122,164,209)));
+  linear,
+  left bottom,
+  left top,
+  color-stop(0.17, rgb(38,78,148)),
+  color-stop(0.91, rgb(122,164,209)));
 }
 
 .colorBlue .pagination li.first-child a, 
@@ -52,7 +52,7 @@
 .colorBlue .pagination .prev a, 
 .colorBlue .pagination .next a, 
 .colorBlue .pagination .last a {
-    color:#3d6495;
+  color:#3d6495;
 }
 
 .colorBlue .breadcrumb {color:#4f731c;}
@@ -92,20 +92,20 @@
 
 .colorGreen .pagination .current, 
 .colorGreen .pagination .active a {
-    background-color:#3f6f0f;
-    background-image: linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
-    background-image: -o-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
-    background-image: -moz-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
-    background-image: -webkit-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
-    background-image: -ms-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
+  background-color:#3f6f0f;
+  background-image: linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
+  background-image: -ms-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
 
-    background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0.21, rgb(63,111,15)),
-        color-stop(1, rgb(148,187,81))
-    );
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.21, rgb(63,111,15)),
+    color-stop(1, rgb(148,187,81))
+  );
 }
 
 .colorGreen .pagination li.first-child a, 
@@ -176,14 +176,14 @@
 
 .colorOrange .pagination .current, 
 .colorOrange .pagination .active a {
-    background-color:#ffa600;
-    background: -moz-linear-gradient(top, #fdb000 0%, #fb9000 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdb000), color-stop(100%,#fb9000)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* IE10+ */
-    background: linear-gradient(top, #fdb000 0%,#fb9000 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdb000', endColorstr='#fb9000',GradientType=0 ); /* IE6-9 */
+  background-color:#ffa600;
+  background: -moz-linear-gradient(top, #fdb000 0%, #fb9000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdb000), color-stop(100%,#fb9000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* IE10+ */
+  background: linear-gradient(top, #fdb000 0%,#fb9000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdb000', endColorstr='#fb9000',GradientType=0 ); /* IE6-9 */
 }
 
 .colorOrange .pagination li.first-child a, 
@@ -210,15 +210,15 @@
 /*** COR
 **** Vermelho
 ***/
-.colorRed .serviceName a,                            
-.colorRed #menuPrincipal .btMenu a,                  
-.colorRed .collapseGroup summary span,               
-.colorRed .lnkSeta,                                  
-.colorRed #menuPrincipal > ul > li > a:hover,        
-.colorRed [class^="ico"],                            
-.colorRed [class*=" ico"],                           
-.colorRed .boxGray.listDetail a,                     
-.colorRed #menuPrincipal .parent > a:hover,          
+.colorRed .serviceName a,              
+.colorRed #menuPrincipal .btMenu a,          
+.colorRed .collapseGroup summary span,         
+.colorRed .lnkSeta,                  
+.colorRed #menuPrincipal > ul > li > a:hover,    
+.colorRed [class^="ico"],              
+.colorRed [class*=" ico"],               
+.colorRed .boxGray.listDetail a,           
+.colorRed #menuPrincipal .parent > a:hover,      
 .colorRed #menuPrincipal .parent:hover > a,
 .colorRed td a  {color: #831e22;}
 

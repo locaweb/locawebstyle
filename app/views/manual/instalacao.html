@@ -1,20 +1,20 @@
-		<h2>Instruções de instalação</h2>
-		<p><strong>Primeiro passo:</strong> Adicione as tags abaixo para adicionar o pacote de CSS e Javascript.</p>
-		<p>
-			<i> &lt;link rel="stylesheet" type="text/css" href="<%= File.join(root_url, path_to_asset('application.css')) %>"&gt;<br>
-			&lt;script type="text/javascript" src="<%= File.join(root_url, path_to_asset('application.js')) %>"&gt;&lt;/script&gt;</i>
-			<i>
-			</i>
-		</p>
-		<p>
-			<strong>Segundo passo:</strong> Não tem segundo passo. ;-)
-		</p>
+        <h2>Instruções de instalação</h2>
+        <p><strong>Primeiro passo:</strong> Adicione as tags abaixo para adicionar o pacote de CSS e Javascript.</p>
+        <p>
+            <i> &lt;link rel="stylesheet" type="text/css" href="<%= File.join(root_url, path_to_asset('application.css')) %>"&gt;<br>
+            &lt;script type="text/javascript" src="<%= File.join(root_url, path_to_asset('application.js')) %>"&gt;&lt;/script&gt;</i>
+            <i>
+            </i>
+        </p>
+        <p>
+            <strong>Segundo passo:</strong> Não tem segundo passo. ;-)
+        </p>
 
-		<% content_for_clippy do %>
+        <% content_for_clippy do %>
 <link rel="stylesheet" type="text/css" href="<%= File.join(root_url, path_to_asset('application.css')) %>">
 <script type="text/javascript" src="<%= File.join(root_url, path_to_asset('application.js')) %>"></script>
-		<% end %>
+        <% end %>
 
-	<div class="codes">
-			<%= clippy(yield(:code)) %>
-	</div>
+    <div class="codes">
+            <%= clippy(yield(:code)) %>
+    </div>

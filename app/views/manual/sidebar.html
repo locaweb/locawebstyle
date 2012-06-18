@@ -1,59 +1,59 @@
-		<h2>Elementos da Sidebar</h2>
+        <h2>Elementos da Sidebar</h2>
 
-		<%= content_for_clippy do %>
+        <%= content_for_clippy do %>
 <div class="span4">
-	<aside class="sidebar">
-		<section class="sideBox">
-			<h1 class="titSide titDadosConta">Dados da Conta</h1>
-			<div class="innerSideBox boxWhite">
-				<h6>Identificador</h6>
-				<p><strong>1234567890</strong></p>
+    <aside class="sidebar">
+        <section class="sideBox">
+            <h1 class="titSide titDadosConta">Dados da Conta</h1>
+            <div class="innerSideBox boxWhite">
+                <h6>Identificador</h6>
+                <p><strong>1234567890</strong></p>
 
-				<hr>
+                <hr>
 
-				<h6>Nome</h6>
-				<p><strong>Lojinha do Régis</strong></p>
-				<a class="edit-account-name lnkSeta" data-toggle="modal" data-target="#modalEditarNome" href="/accounts/1/edit_name">Editar Nome</a>
-				<hr>
+                <h6>Nome</h6>
+                <p><strong>Lojinha do Régis</strong></p>
+                <a class="edit-account-name lnkSeta" data-toggle="modal" data-target="#modalEditarNome" href="/accounts/1/edit_name">Editar Nome</a>
+                <hr>
 
-				<h6>Plano</h6>
-				<p><strong>Nome do plano</strong></p>
-				<p><small>observação qualquer</small></p>
-				<hr>
+                <h6>Plano</h6>
+                <p><strong>Nome do plano</strong></p>
+                <p><small>observação qualquer</small></p>
+                <hr>
 
-				<p>Usadas <strong>300</strong> de <strong>42</strong> transações</p>
-				<a href="#" class="lnkSeta">Aumentar limite</a>
+                <p>Usadas <strong>300</strong> de <strong>42</strong> transações</p>
+                <a href="#" class="lnkSeta">Aumentar limite</a>
 
-			</div>
-		</section>
+            </div>
+        </section>
 
-		<section class="sideBox">
-			<h1 class="titSide titMeiosPagto">Meios de Pagamento</h1>
-			<div class="innerSideBox active-settings">
-				<img alt="Cartao" src="/img/cartaoCielo.png">
-				<img alt="Cartao" src="/img/cartaoRedecard.png">
-				<img alt="Cartao" src="/img/cartaoShopline.png">
-				<img alt="Cartao" src="/img/cartaoBoleto.png">
-				<img alt="Cartao" src="/img/cartaoBoletoBradesco.png">
+        <section class="sideBox">
+            <h1 class="titSide titMeiosPagto">Meios de Pagamento</h1>
+            <div class="innerSideBox active-settings">
+                <img alt="Cartao" src="/img/cartaoCielo.png">
+                <img alt="Cartao" src="/img/cartaoRedecard.png">
+                <img alt="Cartao" src="/img/cartaoShopline.png">
+                <img alt="Cartao" src="/img/cartaoBoleto.png">
+                <img alt="Cartao" src="/img/cartaoBoletoBradesco.png">
 
-				<a href="/settings" class="lnkSeta">Ir para meios de pagamentos</a>
-			</div>
-		</section>
+                <a href="/settings" class="lnkSeta">Ir para meios de pagamentos</a>
+            </div>
+        </section>
 
-		<section class="sideBox">
-			<h1 class="titSide titAjudaSuporte">Ajuda e Suporte</h1>
-			<div class="innerSideBox">
-				<ul class="listWhite">
-					<li><a href="#">Documentação de implementação</a></li>
-					<li><a href="#" rel="external">Wiki do Gateway de pagamentos</a></li>
-					<li><a href="#">Suporte 24h</a></li>
-				</ul>
-			</div>
-		</section>
-	</aside>
+        <section class="sideBox">
+            <h1 class="titSide titAjudaSuporte">Ajuda e Suporte</h1>
+            <div class="innerSideBox">
+                <ul class="listWhite">
+                    <li><a href="#">Documentação de implementação</a></li>
+                    <li><a href="#" rel="external">Wiki do Gateway de pagamentos</a></li>
+                    <li><a href="#">Suporte 24h</a></li>
+                </ul>
+            </div>
+        </section>
+    </aside>
 </div>
-		<% end %>
+        <% end %>
 
-	<div class="codes">
-			<%= clippy(yield(:code)) %>
-	</div>
+    <div class="codes">
+            <%= clippy(yield(:code)) %>
+    </div>

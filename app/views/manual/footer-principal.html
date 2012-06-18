@@ -1,31 +1,31 @@
-		<h2>Footer de exemplo</h2>
-		<p>O Footer precisa ser colocado no final do div <strong>#main</strong>.</p>
+        <h2>Footer de exemplo</h2>
+        <p>O Footer precisa ser colocado no final do div <strong>#main</strong>.</p>
 
-		<%= content_for_clippy do %>
+        <%= content_for_clippy do %>
 <footer id="rodape">
-	<div class="footerTop">
-		<div class="limite">
-			<nav>
-				<h6>Atendimento</h6>
-				<ul>
-					<li class="ico-helpDesk"><a href="#">HelpDesk</a></li>
-					<li class="ico-Chat"><a href="#">Chat</a></li>
-					<li class="ico-Telefone"><a href="#">Telefone</a></li>
-				</ul>
-				<a href="#" class="lnkSeta lnkSetaWhite fright">Ver todas as formas de atendimento</a>
-			</nav>
-		</div>
-	</div>
-	<div class="subfooter">
-		<div class="limite">
-			<span class="lastAccess"><strong>Último acesso:</strong> 7/8/2011 22:35:49   <strong>IP:</strong> 201.87.65.217 <a href="#" class="icoInterroga">?</a></span>
+    <div class="footerTop">
+        <div class="limite">
+            <nav>
+                <h6>Atendimento</h6>
+                <ul>
+                    <li class="ico-helpDesk"><a href="#">HelpDesk</a></li>
+                    <li class="ico-Chat"><a href="#">Chat</a></li>
+                    <li class="ico-Telefone"><a href="#">Telefone</a></li>
+                </ul>
+                <a href="#" class="lnkSeta lnkSetaWhite fright">Ver todas as formas de atendimento</a>
+            </nav>
+        </div>
+    </div>
+    <div class="subfooter">
+        <div class="limite">
+            <span class="lastAccess"><strong>Último acesso:</strong> 7/8/2011 22:35:49   <strong>IP:</strong> 201.87.65.217 <a href="#" class="icoInterroga">?</a></span>
 
-			<p class="copyRight fright">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</p>
-		</div>
-	</div>
+            <p class="copyRight fright">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</p>
+        </div>
+    </div>
 </footer>
-		<% end  %>
+        <% end  %>
 
-	<div class="codes">
-			<%= clippy(yield(:code)) %>
-	</div>
+    <div class="codes">
+            <%= clippy(yield(:code)) %>
+    </div>

@@ -1,6 +1,6 @@
 fieldset {
-    border:none;
-    padding:0; margin:0;
+  border:none;
+  padding:0; margin:0;
 }
 
 input, textarea, select {color:#797979; margin-bottom:0;}
@@ -8,37 +8,37 @@ input, textarea, select {color:#797979; margin-bottom:0;}
 .control-group input {margin-bottom:0;}
 
 form h6 {
-    text-transform:inherit;
-    font:400 14px Ubuntu;
-    color:#2a2a2a;
-    margin:0 0 10px;
+  text-transform:inherit;
+  font:400 14px Ubuntu;
+  color:#2a2a2a;
+  margin:0 0 10px;
 }
 label b {display:none;}
 .control-group {margin-bottom:15px;}
 
 .form-horizontal .controls, .controls {
-    text-align: left;
-    margin-left:1px;
+  text-align: left;
+  margin-left:1px;
 }
 
 .controls > label, .controls > .control-label {
-    width:auto;
-    padding-left:3px; 
-    vertical-align:middle;
-    font-weight:normal;
-    display:inline-block;
-    margin-bottom:0;
+  width:auto;
+  padding-left:3px; 
+  vertical-align:middle;
+  font-weight:normal;
+  display:inline-block;
+  margin-bottom:0;
 }
 
 .controls .control-label input {display:inline-block; margin-top:0; vertical-align:top;}
 
 label, strong.control-label, .form-horizontal .control-label {
-    font-weight:bold;
-    font-size:12px;
-    vertical-align:middle;
-    padding-right:10px;
-    color:#545454;
-    line-height:12px;
+  font-weight:bold;
+  font-size:12px;
+  vertical-align:middle;
+  padding-right:10px;
+  color:#545454;
+  line-height:12px;
 }
 
 label.widthAuto {width:auto !important;}
@@ -49,24 +49,24 @@ label.widthAuto {width:auto !important;}
 .form-horizontal strong.control-label, 
 .formInline .control-label,
 .form-horizontal .control-label {
-    font-weight:bold;
-    font-size:12px;
-    display:inline-block;
-    vertical-align:middle;
-    padding-right:10px;
-    text-align:right;
-    width:100px;
-    color:#545454;
-    line-height:12px;
+  font-weight:bold;
+  font-size:12px;
+  display:inline-block;
+  vertical-align:middle;
+  padding-right:10px;
+  text-align:right;
+  width:100px;
+  color:#545454;
+  line-height:12px;
 }
 
 .boxGrayOpt {
-    padding:10px;
-    position:relative;
-    margin:10px 0;
-    background:#e2e2e2;
-    clear:both;
-    float:none;
+  padding:10px;
+  position:relative;
+  margin:10px 0;
+  background:#e2e2e2;
+  clear:both;
+  float:none;
 }
 .formInline.boxGrayOpt label {width:auto; margin-bottom:0;}
 
@@ -78,23 +78,23 @@ label.widthAuto {width:auto !important;}
 .form-horizontal .controls .boxGrayOpt label, 
 .formInline .controls .boxGrayOpt .control-label,
 .form-horizontal .controls .boxGrayOpt .control-label  {
-    margin:0; 
-    width:100px; 
-    text-align:left;
+  margin:0; 
+  width:100px; 
+  text-align:left;
 }
 
 .boxGrayOpt:before {
-    content:" ";
-    display:block;
-    width:15px; height:5px;
-    background:url(/img/indicadorTopBoxGrayInput.png) no-repeat;
-    position:absolute;
-    top:-5px; left:15px;
+  content:" ";
+  display:block;
+  width:15px; height:5px;
+  background:url(/img/indicadorTopBoxGrayInput.png) no-repeat;
+  position:absolute;
+  top:-5px; left:15px;
 }
 
 label.checkbox.control-label, label.checkbox.control-label:first-child {
-    margin: 0 0 0 110px;
-    width: inherit;
+  margin: 0 0 0 110px;
+  width: inherit;
 }
 label.checkbox.control-label input {float:none;}
 
@@ -126,10 +126,10 @@ table ~ .navView {border-bottom:0; border-top:1px solid #e5e5e5;}
 
 /** Busca avançada **/
 .boxFiltro {
-    border-radius:3px;
-    background:#dfdddd;
-    padding:15px;
-    margin:30px 0;
+  border-radius:3px;
+  background:#dfdddd;
+  padding:15px;
+  margin:30px 0;
 }
 
 .labelInline {margin-bottom:15px;}
@@ -144,10 +144,10 @@ table ~ .navView {border-bottom:0; border-top:1px solid #e5e5e5;}
 .control-group.collapse.in {margin-bottom:18px;}
 
 .boxFiltro fieldset {
-    clear:both;
-    background:#cecccc;
-    padding:10px;
-    border-radius:5px;
+  clear:both;
+  background:#cecccc;
+  padding:10px;
+  border-radius:5px;
 }
 
 .transaction-search-per-page {width:70px;}
@@ -174,18 +174,18 @@ legend + .control-group {margin-top:0;}
 
 .sideBySide {overflow: hidden;}
 .sideBySide .control-group {
-    padding-bottom:3px; 
-    padding-right: 10px;
-    float:left;
+  padding-bottom:3px; 
+  padding-right: 10px;
+  float:left;
 }
 .sideBySide label:first-child {width:auto;}
 .sideBySide label.control-label {
-    width: 103px;
+  width: 103px;
 }
 .sideBySide.formInline .control-label, .form-horizontal.sideBySide .control-label {
-    float:left;
-    min-height: 27px;
-    line-height: 27px;
+  float:left;
+  min-height: 27px;
+  line-height: 27px;
 }
 .sideBySide.error label {color:#B94A48;}
 .help-inline {margin-bottom:0; padding-left:0; display:block;}
@@ -198,10 +198,10 @@ legend + .control-group {margin-top:0;}
 input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top:0;}
 
 .simpleFilter {
-    border-bottom:1px solid #e5e5e5;
-    margin-bottom:20px;
-    padding:10px 0;
-    min-height: 30px;
+  border-bottom:1px solid #e5e5e5;
+  margin-bottom:20px;
+  padding:10px 0;
+  min-height: 30px;
 }
 .simpleFilter select {margin-bottom:3px; width:100px;}
 .simpleFilter.sideBySide .control-group {margin-bottom:0; border-left:1px dotted #cfcfcf; padding:0 0 0 15px; margin-left:15px;}
@@ -210,8 +210,8 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top:0;}
 .simpleFilter.sideBySide .control-group label {width:auto;}
 
 .simpleFilter .searchInput {
-    background:url(/img/lupaInput.png) no-repeat 8px center;
-    max-width:185px;
-    padding-left:35px;
+  background:url(/img/lupaInput.png) no-repeat 8px center;
+  max-width:185px;
+  padding-left:35px;
 }
 .simpleFilter .control-group.fright {padding-right:0;}

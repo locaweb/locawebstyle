@@ -2,68 +2,68 @@
 <hr>
 <%= content_for_clippy do %>
 <div id="toolbar">
-	<div class="limiteToolbar">
-		<h1 class="logoToolbar">Central do Cliente</h1>
-		<ul class="menuToolbar">
-			<li><a href="#">Minha conta</a></li>
-			<li><a href="#">Ver e alterar planos</a></li>
-			<li><a href="#">Atendimento</a></li>
-		</ul>
-		<a href="/logout" class="logOut">Sair</a>
-		<span class="userName"><strong>saas-dev</strong> (saas-dev)</span>
-	</div>
+    <div class="limiteToolbar">
+        <h1 class="logoToolbar">Central do Cliente</h1>
+        <ul class="menuToolbar">
+            <li><a href="#">Minha conta</a></li>
+            <li><a href="#">Ver e alterar planos</a></li>
+            <li><a href="#">Atendimento</a></li>
+        </ul>
+        <a href="/logout" class="logOut">Sair</a>
+        <span class="userName"><strong>saas-dev</strong> (saas-dev)</span>
+    </div>
 </div>
 
 <header class="headerPrincipal">
-	<div class="limite">
-		<a id="feedbackr" class="lnkSugestoes" href="https://www.feedbackr.com.br/projects/4eef88bd6866c42b5500000e/feedbacks/new" target="_blank" alt="feedbackr">Sugestões</a>
-		<h1 class="serviceName"><a href="/">Nome do projeto</a></h1>
-	</div>
+    <div class="limite">
+        <a id="feedbackr" class="lnkSugestoes" href="https://www.feedbackr.com.br/projects/4eef88bd6866c42b5500000e/feedbacks/new" target="_blank" alt="feedbackr">Sugestões</a>
+        <h1 class="serviceName"><a href="/">Nome do projeto</a></h1>
+    </div>
 </header>
 
 <div id="main" class="systemError">
-	<div class="limite">
-		<div class="row">
-			<div class="span16">
-				<h1 class="titError">Erro interno do sistema</h1>
+    <div class="limite">
+        <div class="row">
+            <div class="span16">
+                <h1 class="titError">Erro interno do sistema</h1>
 
-				<p>Ocorreu uma instabilidade temporária que impediu a exibição do conteúdo. Nossa equipe técnica foi notificada e estamos trabalhando para resolvê-lo.</p>
+                <p>Ocorreu uma instabilidade temporária que impediu a exibição do conteúdo. Nossa equipe técnica foi notificada e estamos trabalhando para resolvê-lo.</p>
 
-				<p><strong>Você pode:</strong></p>
-				<ol>
-					<li>Recarregar a página clicando no botão Atualizar do seu navegador.</li>
-					<li>Retornar à <a href="/">página inicial</a>.</li>
-					<li>Se o problema persistir, aguarde alguns instantes e acesse novamente a <a href="#">Central do Cliente</a>.</li>
-				</ol>
-			</div><!-- FIM SPAN CONTENT -->
-		</div>
-	</div> <!-- FIM LIMITE ROW -->
+                <p><strong>Você pode:</strong></p>
+                <ol>
+                    <li>Recarregar a página clicando no botão Atualizar do seu navegador.</li>
+                    <li>Retornar à <a href="/">página inicial</a>.</li>
+                    <li>Se o problema persistir, aguarde alguns instantes e acesse novamente a <a href="#">Central do Cliente</a>.</li>
+                </ol>
+            </div><!-- FIM SPAN CONTENT -->
+        </div>
+    </div> <!-- FIM LIMITE ROW -->
 </div> <!-- FIM MAIN -->
 
 <footer id="rodape">
-	<div class="footerTop">
-		<div class="limite">
-			<nav>
-				<h6>Atendimento</h6>
-				<ul>
-					<li class="ico-helpDesk"><a href="#">HelpDesk</a></li>
-					<li class="ico-Chat"><a href="#">Chat</a></li>
-					<li class="ico-Telefone"><a href="#">Telefone</a></li>
-				</ul>
-				<a href="#" class="lnkSeta lnkSetaWhite fright">Ver todas as formas de atendimento</a>
-			</nav>
-		</div>
-	</div>
-	<div class="subfooter">
-		<div class="limite">
-			<span class="lastAccess"><strong>Último acesso:</strong> 7/8/2011 22:35:49   <strong>IP:</strong> 201.87.65.217 <a href="#" class="icoInterroga">?</a></span>
+    <div class="footerTop">
+        <div class="limite">
+            <nav>
+                <h6>Atendimento</h6>
+                <ul>
+                    <li class="ico-helpDesk"><a href="#">HelpDesk</a></li>
+                    <li class="ico-Chat"><a href="#">Chat</a></li>
+                    <li class="ico-Telefone"><a href="#">Telefone</a></li>
+                </ul>
+                <a href="#" class="lnkSeta lnkSetaWhite fright">Ver todas as formas de atendimento</a>
+            </nav>
+        </div>
+    </div>
+    <div class="subfooter">
+        <div class="limite">
+            <span class="lastAccess"><strong>Último acesso:</strong> 7/8/2011 22:35:49   <strong>IP:</strong> 201.87.65.217 <a href="#" class="icoInterroga">?</a></span>
 
-			<p class="copyRight fright">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</p>
-		</div>
-	</div>
+            <p class="copyRight fright">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</p>
+        </div>
+    </div>
 </footer>
 <% end %>
 
 <div class="codes">
-	<%= clippy(yield(:code)) %>
+    <%= clippy(yield(:code)) %>
 </div>

@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html class="guideLoca colorBlue" lang="pt-br">
 <head>
-	<meta charset="utf-8">
-	<title>Locaweb Style Guide</title>
+  <meta charset="utf-8">
+  <title>Locaweb Style Guide</title>
   <%= stylesheet_link_tag :application %>
-	<%= stylesheet_link_tag :application %>
-	<%= stylesheet_link_tag 'manual/application' %>
-	<%= javascript_include_tag :application %>
-	<%= javascript_include_tag 'manual/application' %>
+  <%= stylesheet_link_tag :application %>
+  <%= stylesheet_link_tag 'manual/application' %>
+  <%= javascript_include_tag :application %>
+  <%= javascript_include_tag 'manual/application' %>
 </head>
 <body>
 
 <div class="all">
-	<div class="headerPrincipalDoc">
-		<h1 class="logo"><a href="http://locaweb.com.br/">Locaweb</a></h1>
-		<p>Locastyle - Locaweb Design Patterns</p>
-	</div>
+  <div class="headerPrincipalDoc">
+    <h1 class="logo"><a href="http://locaweb.com.br/">Locaweb</a></h1>
+    <p>Locastyle - Locaweb Design Patterns</p>
+  </div>
   
     <aside class="boxes">
       <a href="/example" class="exampleLnk">Veja um exemplo</a>
@@ -30,10 +30,10 @@
                     <li><a href="/">Informações iniciais</a></li>
                     <li><a href="/instalacao">Como instalar</a></li>
                     <li><a href="/simple_form">Simple form</a></li>
+                    <li><a href="/boaspraticas">Guideline de escrita Front-end</a></li>
                 </ul>
             </div>
           </div>
-
 
           <div class="details active">
             <summary data-toggle="collapse" class="active" data-target="#menuEstrutura">Layout</summary>
@@ -101,12 +101,12 @@
 
 
 
-			</div>
-		</nav>
-	</aside>
+      </div>
+    </nav>
+  </aside>
 
     <div class="main boxes clearfix">
-    	<%= yield %>
+      <%= yield %>
     </div>
   <footer class="site-footer">
     <p>If not you, who? If not now, when?</p>

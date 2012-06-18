@@ -1,189 +1,189 @@
-		<h2>Modais ou Lightbox</h2>
-		<p>As modais são feitas integralmente no padrão Bootstrap. Qualquer dúvida, você pode ver <a href="http://twitter.github.com/bootstrap/javascript.html#modals">como é feito aqui</a>.</p>
-		<p>O link tem alguns atributos que precisam estar presentes para que a modal seja chamada. Um deles é o <strong>data-toggle="modal"</strong>, que faz o javascript encontrar o elemento com o nome MODAL, e o atributo <strong>data-target="#modalEditarNome"</strong>, que pega o ID específico da modal que deverá ser chamada.</p>
+        <h2>Modais ou Lightbox</h2>
+        <p>As modais são feitas integralmente no padrão Bootstrap. Qualquer dúvida, você pode ver <a href="http://twitter.github.com/bootstrap/javascript.html#modals">como é feito aqui</a>.</p>
+        <p>O link tem alguns atributos que precisam estar presentes para que a modal seja chamada. Um deles é o <strong>data-toggle="modal"</strong>, que faz o javascript encontrar o elemento com o nome MODAL, e o atributo <strong>data-target="#modalEditarNome"</strong>, que pega o ID específico da modal que deverá ser chamada.</p>
 
-		<p><a class="lnkSeta" data-toggle="modal" data-target="#modalComSlider" href="#">Teste a modal com Wizard/Slider aqui!</a></p>
+        <p><a class="lnkSeta" data-toggle="modal" data-target="#modalComSlider" href="#">Teste a modal com Wizard/Slider aqui!</a></p>
 <p><a class="lnkSeta" data-toggle="modal" data-target="#modalEditarNome" href="#">Teste a modal aqui!</a></p>
 
 <%= content_for_clippy do %>
 <div class="modal" id="modalEditarNome">
-	<div class="modal-header">
-		<a class="close" data-dismiss="modal">×</a>
-		<h3>Editar Nome</h3>
-		<p>Atribuir um nome para a conta com identificador 13427</p>
-	</div><!-- FIM MODAL HEADER -->
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Editar Nome</h3>
+        <p>Atribuir um nome para a conta com identificador 13427</p>
+    </div><!-- FIM MODAL HEADER -->
 
-	<div class="modal-body">
-		<div class="control-group">
-			<label> <b title="Obrigatório">*</b> Convênio</label>
-			<input required size="50" type="text" value="d1232">
-		</div>
+    <div class="modal-body">
+        <div class="control-group">
+            <label> <b title="Obrigatório">*</b> Convênio</label>
+            <input required size="50" type="text" value="d1232">
+        </div>
 
-		<div class="control-group">
-			<label><b title="Obrigatório">*</b> Dias até o vencimento</label>
-			<input type="text" value="5">
-		</div>
+        <div class="control-group">
+            <label><b title="Obrigatório">*</b> Dias até o vencimento</label>
+            <input type="text" value="5">
+        </div>
 
-		<div class="control-group accepts_after_expired">
-			<label>Aceitar após o vencimento</label>
-			<div class="controls">
-				<input type="radio" value="S">
-				<label> Sim</label>
+        <div class="control-group accepts_after_expired">
+            <label>Aceitar após o vencimento</label>
+            <div class="controls">
+                <input type="radio" value="S">
+                <label> Sim</label>
 
-				<input checked="checked" type="radio" value="N">
-				<label> Não</label>
-			</div>
-		</div>
+                <input checked="checked" type="radio" value="N">
+                <label> Não</label>
+            </div>
+        </div>
 
-		<fieldset class="sideBySide">
-			<div class="control-group">
-				<label><b title="Obrigatório">*</b> Agência</label>
-				<input class="input60" size="50" type="text" value="">
-			</div>
-			<div class="control-group">
-				<label><b title="Obrigatório">*</b> Conta</label>
-				<input class="input60" size="50" type="text" value="">
-			</div>
-		</fieldset>
+        <fieldset class="sideBySide">
+            <div class="control-group">
+                <label><b title="Obrigatório">*</b> Agência</label>
+                <input class="input60" size="50" type="text" value="">
+            </div>
+            <div class="control-group">
+                <label><b title="Obrigatório">*</b> Conta</label>
+                <input class="input60" size="50" type="text" value="">
+            </div>
+        </fieldset>
 
-		<fieldset class="sideBySide">
-			<h2>Boleto</h2>
-			<div class="control-group">
-				<label> Linha de instrução 1</label>
-				<input type="text" placeholder="extra information">
-			</div>
-			<div class="control-group">
-				<label> Linha de instrução 2</label>
-				<input type="text" placeholder="extra information">
-			</div>
-			<div class="control-group">
-				<label> Linha de instrução 3</label>
-				<input type="text" placeholder="extra information">
-			</div>
-			<div class="control-group">
-				<label> Linha de instrução 4</label>
-				<input type="text" placeholder="extra information">
-			</div>
-			<div class="control-group">
-				<label> Linha de instrução 5</label>
-				<input type="text" placeholder="extra information">
-			</div>
-			<div class="control-group">
-				<label> Linha de instrução 6</label>
-				<input type="text" placeholder="extra information">
-			</div>
-		</fieldset>
+        <fieldset class="sideBySide">
+            <h2>Boleto</h2>
+            <div class="control-group">
+                <label> Linha de instrução 1</label>
+                <input type="text" placeholder="extra information">
+            </div>
+            <div class="control-group">
+                <label> Linha de instrução 2</label>
+                <input type="text" placeholder="extra information">
+            </div>
+            <div class="control-group">
+                <label> Linha de instrução 3</label>
+                <input type="text" placeholder="extra information">
+            </div>
+            <div class="control-group">
+                <label> Linha de instrução 4</label>
+                <input type="text" placeholder="extra information">
+            </div>
+            <div class="control-group">
+                <label> Linha de instrução 5</label>
+                <input type="text" placeholder="extra information">
+            </div>
+            <div class="control-group">
+                <label> Linha de instrução 6</label>
+                <input type="text" placeholder="extra information">
+            </div>
+        </fieldset>
 
-		<div class="extra-information-transaction">
-			<dl class="boxGray listDetail">
-				<dt>ID da transação (tid):</dt>
-				<dd>7597077486</dd>
+        <div class="extra-information-transaction">
+            <dl class="boxGray listDetail">
+                <dt>ID da transação (tid):</dt>
+                <dd>7597077486</dd>
 
-				<dt>Número Sequencial da autorização (nsu):</dt>
-				<dd>72142382</dd>
+                <dt>Número Sequencial da autorização (nsu):</dt>
+                <dd>72142382</dd>
 
-				<dt>Pan:</dt>
-				<dd>25660126</dd>
+                <dt>Pan:</dt>
+                <dd>25660126</dd>
 
-				<dt>Número da autorização (arp):</dt>
-				<dd>126802974</dd>
+                <dt>Número da autorização (arp):</dt>
+                <dd>126802974</dd>
 
-				<dt>Retorno da autorização (lr):</dt>
-				<dd></dd>
+                <dt>Retorno da autorização (lr):</dt>
+                <dd></dd>
 
-				<dt>URI para o usuário acessar:</dt>
-				<dd>http://cielo.com.br/auth?id=836</dd>
-			</dl>
-		</div>
-		<div class="control-group">
-			<label for="boleto_caixa_setting_payment_place"><b title="Obrigatório">*</b> Local do pagamento</label>
-			<input id="boleto_caixa_setting_payment_place" name="boleto_caixa_setting[payment_place]" size="50" type="text" value="Qualquer Banco até o vencimento">
-		</div>
+                <dt>URI para o usuário acessar:</dt>
+                <dd>http://cielo.com.br/auth?id=836</dd>
+            </dl>
+        </div>
+        <div class="control-group">
+            <label for="boleto_caixa_setting_payment_place"><b title="Obrigatório">*</b> Local do pagamento</label>
+            <input id="boleto_caixa_setting_payment_place" name="boleto_caixa_setting[payment_place]" size="50" type="text" value="Qualquer Banco até o vencimento">
+        </div>
 
-		<div class="control-group">
-			<label><b title="Obrigatório">*</b> Nome da loja</label>
-			<input placeholder="Como consta no banco" type="text" value="">
-		</div>
-		<div class="control-group">
-			<label><b title="Obrigatório">*</b> CNPJ/CPF da loja</label>
-			<input placeholder="Como consta no banco" type="text" value="">
-		</div>
-		<div class="control-group">
-			<label><b title="Obrigatório">*</b> Carteira</label>
+        <div class="control-group">
+            <label><b title="Obrigatório">*</b> Nome da loja</label>
+            <input placeholder="Como consta no banco" type="text" value="">
+        </div>
+        <div class="control-group">
+            <label><b title="Obrigatório">*</b> CNPJ/CPF da loja</label>
+            <input placeholder="Como consta no banco" type="text" value="">
+        </div>
+        <div class="control-group">
+            <label><b title="Obrigatório">*</b> Carteira</label>
 
-			<select>
-				<option value="opcao1">Opção 1</option>
-				<option value="opcao2">Opção 2</option>
-				<option value="opcao3">Opção 3</option>
-				<option value="opcao4">Opção 4</option>
-				<option value="opcao5" selected="selected">Opção 5</option>
-			</select>
-		</div>
-	</div><!-- FIM MODAL BODY -->
+            <select>
+                <option value="opcao1">Opção 1</option>
+                <option value="opcao2">Opção 2</option>
+                <option value="opcao3">Opção 3</option>
+                <option value="opcao4">Opção 4</option>
+                <option value="opcao5" selected="selected">Opção 5</option>
+            </select>
+        </div>
+    </div><!-- FIM MODAL BODY -->
 
-	<div class="modal-footer">
-		<input class="btn btn-primary" type="submit" value="Ok">
-		<a href="#" class="btn close" data-dismiss="modal">Cancelar</a>
-	</div>
+    <div class="modal-footer">
+        <input class="btn btn-primary" type="submit" value="Ok">
+        <a href="#" class="btn close" data-dismiss="modal">Cancelar</a>
+    </div>
 </div> <!-- FIM MODAL -->
-		<% end %>
+        <% end %>
 
 
 <div class="modal modalSlider" id="modalComSlider">
-	<div class="modal-header">
-		<a class="close" data-dismiss="modal">×</a>
-		<h3>Editar Nome</h3>
-	</div><!-- FIM MODAL HEADER -->
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Editar Nome</h3>
+    </div><!-- FIM MODAL HEADER -->
 
-	<div class="modal-body">
-		<div id="myCarousel" class="carousel slide">
-			<!-- Carousel items -->
-			<div class="carousel-inner">
-				<div class="active item">
-					<div class="control-group">
-						<label> <b title="Obrigatório">*</b> Convênio</label>
-						<input required type="text" value="Amil">
-					</div>
-				</div>
+    <div class="modal-body">
+        <div id="myCarousel" class="carousel slide">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <div class="control-group">
+                        <label> <b title="Obrigatório">*</b> Convênio</label>
+                        <input required type="text" value="Amil">
+                    </div>
+                </div>
 
-				<div class="item">
-					<div class="control-group error">
-						<label><b title="Obrigatório">*</b> Dias até o vencimento</label>
-						<input type="text" value="5">
-						<span class="help-inline">Um erro interessante</span>
-					</div>
-					<div class="control-group accepts_after_expired">
-						<label>Aceitar após o vencimento</label>
-						<div class="controls">
-							<input type="radio" value="S">
-							<label> Sim</label>
-							<input checked="checked" type="radio" value="N">
-							<label> Não</label>
+                <div class="item">
+                    <div class="control-group error">
+                        <label><b title="Obrigatório">*</b> Dias até o vencimento</label>
+                        <input type="text" value="5">
+                        <span class="help-inline">Um erro interessante</span>
+                    </div>
+                    <div class="control-group accepts_after_expired">
+                        <label>Aceitar após o vencimento</label>
+                        <div class="controls">
+                            <input type="radio" value="S">
+                            <label> Sim</label>
+                            <input checked="checked" type="radio" value="N">
+                            <label> Não</label>
 
-						</div>
-					</div>
-				</div>
+                        </div>
+                    </div>
+                </div>
 
-				<div class="item">
-					<div class="control-group error">
-						<label><b title="Obrigatório">*</b> Dias até o vencimento</label>
-						<input type="text" value="5">
-						<span class="help-inline">Um erro interessante</span>
-					</div>
-				</div>
-			</div>
-			<!-- Carousel nav -->
-		</div>
+                <div class="item">
+                    <div class="control-group error">
+                        <label><b title="Obrigatório">*</b> Dias até o vencimento</label>
+                        <input type="text" value="5">
+                        <span class="help-inline">Um erro interessante</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel nav -->
+        </div>
 
-	</div><!-- FIM MODAL BODY -->
+    </div><!-- FIM MODAL BODY -->
 
-	<div class="modal-footer">
-		<a href="#myCarousel" class="btn slidePrev" data-slide="prev">Anterior</a>
-		<a href="#myCarousel" class="btn slideNext" data-slide="next">Próximo</a>
-		<a href="#" class="btn btn-primary btnSalvar">Salvar</a>
-	</div>
+    <div class="modal-footer">
+        <a href="#myCarousel" class="btn slidePrev" data-slide="prev">Anterior</a>
+        <a href="#myCarousel" class="btn slideNext" data-slide="next">Próximo</a>
+        <a href="#" class="btn btn-primary btnSalvar">Salvar</a>
+    </div>
 </div> <!-- FIM MODAL -->
 
-	<div class="codes">
-		<%= clippy(yield(:code)) %>
-	</div>
+    <div class="codes">
+        <%= clippy(yield(:code)) %>
+    </div>

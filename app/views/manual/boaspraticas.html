@@ -1,0 +1,92 @@
+<h2>Boas práticas de escrita front-end</h2>
+
+<p>Como este é um projeto onde várias pessoas escrevem código front, precisamos manter alguns padrões de escrita. Isso é importante para que o projeto perdure e que novos integrantes entendam facilmente como tudo funciona.  </p>
+
+<p>Quando definimos um padrão de escrita de código, queremos que o código seja uniforme. Isso quer dizer que o código precisa parecer que foi escrito por uma única pessoa. Assim, conseguimos manter a manutenção mais simples, garantindo que o projeto seja flexível e escalável de forma consistente. Abaixo separamos algumas das regras que devemos seguir para manter isso tudo funcionando. </p>
+
+<p>Pode ser que tenha alguma regra que você goste ou não esteja familiarizado. Infelizmente, você vai precisa seguir. Todo mundo tem um gosto e não é possível manter o gosto de todos, por isso precisamos escolher apenas um.</p>
+
+<h3>Espaços em brancos</h3>
+<p>Escolher entre tabs e espaços sempre é uma dúvida terrível. Escolhemos o padrão que os programadores ruby e python usam que são os espaços. Assim fica tudo um único padrão. São 2 (dois) espaços. Tanto no código HTML quanto no CSS.</p>
+
+<h3>Descrição de várias classes ou IDs</h3>
+Como tratamos vários patterns, precisamos sempre reutilizar muito código para manter a uniformidade visual dos elementos e facilitar a manutenção. Por isso, as vezes, precisamos definir o mesmo estilo para vários elementos, assim:
+
+<pre>
+.collapseGroup summary span,
+.boxGray.listDetail a,
+.serviceName a,
+[class^="ico"], 
+[class*=" ico"]
+#menuPrincipal .btMenu a,
+#menuPrincipal .parent:hover > a,
+#menuPrincipal .parent > a:hover, 
+#menuPrincipal > ul > li > a:hover <b>{color: #4B7CB8;}</b>
+</pre>
+
+<p>Para não ficar uma linha muito grande com vários elementos definidos, quebramos linha a cada seletor criado. Isso mantém a leitura legível e nos ajuda a identificar erros. Não se preocupe, o Ruby vai minificar todo esse código depois, por isso, ele não vai para a produção dessa forma.</p>
+
+<h3>Encoding</h3>
+<p>Eu sei que eu não preciso dizer, mas quem sabe, não é? <br>
+O encoding utilizado é o padrão da web inteira: <strong>UTF-8</strong>.</p> 
+
+<pre>&lt;meta charset="utf-8"&gt;</pre>
+<p>SEM BOM! Pelo amor de Deus. </p>
+
+<h3>Referências de Entidades</h3>
+NUNCA use entidades do HTML. Como nós utilizamos UTF-8, coloque o caractere diretamente.
+<pre>O simbolo do Euro é <b>€</b>. Cifrão <b>$</b> </pre>
+
+<h3>Cores</h3>
+<p>Sempre que utilizar uma cor hexadecimal que tenha repetição de valores, use sempre o valor de atalho, assim:</p>
+<pre>
+    /** Recomendado **/
+    p {color: <b>#AAA</b>;}
+
+    /** Não Recomendado **/
+    p {color: <b>#AAAAAA</b>;}
+</pre>
+
+<h4>RGBA</h4>
+Sempre que possível, utilize RGBA e mantenha o fallback para browsers antigos. Nós utilizamos Modernizr para que isso seja simples. Um exemplo:
+<pre>
+    p { color: rgba(0, 0, 0, 0.5); }
+    .no-rgba p { color: #000; }
+</pre>
+
+
+<h3>Aspas</h3>
+<p>Tanto no CSS quanto no HTML utilizamos ASPAS DUPLAS. Nunca aspas simples, a não ser no Javascript/JQuery.</p>
+<pre>
+input[<b>type="checkout"</b>] { ... }
+div:after { <b>content: " "</b>; }
+</pre>
+
+<h3>Comentários</h3>
+<p>Para uma seção:</p>
+<pre>
+<b>/***</b> HEADER
+<b>****</b> Header principal do site
+<b>***/</b>
+</pre>
+
+<p>Nunca use comentários na mesma linha da propriedade:</p>
+<pre>
+    p {color: #FFF;} <b>/** Nunca use comentários assim **/</b>
+
+    p {color: #FFF; <b>/** Nunca use comentários assim **/</b>}
+</pre>
+
+<p>Assim é melhor:</p>
+<pre>
+
+    <b>/** Assim é melhor **/</b>
+    p {
+        color: #FFF;
+        background: red;
+        margin: 0;
+
+        <b>/** Assim também é bom **/</b>
+        padding: 0;
+    }
+</pre>
