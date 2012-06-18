@@ -43,9 +43,10 @@ li [class^="icon-"], li [class*=" icon-"],
   
 [class^="icon-"]:before, [class*=" icon-"]:before,
 body.forceClass .ui-datepicker-trigger.icon-calendar:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png);}
-.colorGreen [class^="icon-"]:before, .colorGreen [class*=" icon-"]:before {background-image: url(/img/glyphicons-halflings-green.png);}
+/*.colorGreen [class^="icon-"]:before, .colorGreen [class*=" icon-"]:before {background-image: url(/img/glyphicons-halflings-green.png);}
 .colorRed [class^="icon-"]:before, .colorRed [class*=" icon-"]:before {background-image: url(/img/glyphicons-halflings-red.png);}
 .colorBlue [class^="icon-"]:before, .colorBlue [class*=" icon-"]:before {background-image: url(/img/glyphicons-halflings-blue.png);}
+*/
 
 [class^="icon-"]:before, [class*=" icon-"]:before,
 [class^="ico-"]:before, [class*=" ico-"]:before {
@@ -107,6 +108,7 @@ body.forceClass .ui-datepicker-trigger.icon-calendar:before {background-image: u
 .btn:before {background-image:url(/img/locaIconsGray.png);}
 .btn.btn-neutro {color:#777;}
 .forceClass .btn.btn-neutro:before {background-image:url(/img/locaIconsGray.png);}
+
 
 /*** Bootstrap Icons ***/
 .icon-white {background-image: url("../img/glyphicons-halflings-white.png");}
