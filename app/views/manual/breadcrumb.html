@@ -1,0 +1,13 @@
+        <h2>Breadcrumb</h2>
+        <p>Caminho usado em alguns projetos.</p>
+        <br>
+        <%= content_for_clippy do %>
+<ul class="breadcrumb">
+  <li><a href="#">Página inicial</a></li>
+  <li>Mensagens</li>
+</ul>
+        <% end %>
+
+    <div class="codes">
+            <%= clippy(yield(:code)) %>
+    </div>

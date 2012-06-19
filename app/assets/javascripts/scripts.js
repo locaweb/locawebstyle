@@ -144,6 +144,14 @@ $(document).ready(function() {
 
   $('#menuPrincipal li').has('ul').addClass('parent');
 
+  $('input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]').addClass('disabled');
+
+  $('.boxCollapse header').live('click', function(e){
+    e.preventDefault();
+    $(this).parent('.boxCollapse').toggleClass('active');    
+  });
+
+
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
   $('.lnkSeta[data-text]').live('click', function(e){
     var btnText, btnTextAlt;

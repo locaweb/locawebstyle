@@ -125,7 +125,7 @@ table ~ .navView {border-bottom:0; border-top:1px solid #e5e5e5;}
 
 
 /** Busca avançada **/
-.boxFiltro {
+.boxFiltro, .boxCinza {
   border-radius:3px;
   background:#dfdddd;
   padding:15px;
@@ -143,7 +143,7 @@ table ~ .navView {border-bottom:0; border-top:1px solid #e5e5e5;}
 .control-group.collapse {margin-bottom:0;}
 .control-group.collapse.in {margin-bottom:18px;}
 
-.boxFiltro fieldset {
+.boxFiltro fieldset, .boxCinza .boxCinzaInner {
   clear:both;
   background:#cecccc;
   padding:10px;

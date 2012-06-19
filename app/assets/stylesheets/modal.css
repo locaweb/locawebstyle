@@ -7,7 +7,7 @@
   width:550px;
   overflow:hidden;
 }
-
+.modalSmall {width:450px;}
 .modal-header {
   border:none;
   padding-bottom:0;

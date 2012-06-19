@@ -23,7 +23,8 @@
 .colorBlue .boxGray.listDetail a,
 .colorBlue #menuPrincipal .parent > a:hover, 
 .colorBlue #menuPrincipal .parent:hover > a,
-.colorBlue td a  {color: #4B7CB8;}
+.colorBlue td a,
+.colorBlue .breadcrumb  {color: #4B7CB8;}
 
 .colorBlue #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
@@ -51,11 +52,12 @@
 .colorBlue .pagination .first a, 
 .colorBlue .pagination .prev a, 
 .colorBlue .pagination .next a, 
-.colorBlue .pagination .last a {
+.colorBlue .pagination .last a,
+.colorBlue .boxCollapse header h4  {
   color:#3d6495;
 }
 
-.colorBlue .breadcrumb {color:#4f731c;}
+.colorBlue .boxCollapse header {border-left-color: #4b7cb8;}
 
 /*** COR
 **** VERDE
@@ -137,6 +139,9 @@
 .colorGreen .btn-primary.disabled, 
 .colorGreen .btn-primary[disabled] {background-color: #51A351;}
 
+.colorGreen .boxCollapse header {border-left-color: #84c02e;}
+
+.boxCollapse header h4 {color:#354d12;}
 
 /*** COR
 **** LARANJA
