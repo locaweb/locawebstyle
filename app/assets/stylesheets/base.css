@@ -567,7 +567,9 @@ a:hover {text-decoration:underline;}
   margin:20px 0;
 }
 
-/*** BREADCRUMB ***/
+/*** 
+**** BREADCRUMB
+***/
 .breadcrumb {
   background:none;
   border:none;
@@ -595,7 +597,9 @@ a:hover {text-decoration:underline;}
 .breadcrumb a {color:#767676; text-decoration:none;}
 .breadcrumb a:hover {color:#333; text-decoration:underline;}
 
-/*** PROGRESS BAR  ***/
+/*** 
+**** PROGRESS BAR 
+****/
 .progress {
   width: 100%; height:14px;
   display: inline-block;
@@ -631,7 +635,7 @@ p + .boxCollapse {margin-top:30px;}
   cursor:pointer;
 }
 
-.boxCollapse.active {background:#ececec url(/img/setaCollapseTop.png) no-repeat 99% 10px;}
+.boxCollapse.active {background:#ececec url(/img/setaCollapseTop.png) no-repeat 99% 10px; padding-bottom:10px;}
 .boxCollapse.active h4 {font-weight:bold;}
 .boxCollapse .collapse {padding:0 15px;}
 .boxCollapse .collapse:before {content: " "; display:block; padding:20px 0 0;}

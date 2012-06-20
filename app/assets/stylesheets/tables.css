@@ -13,12 +13,21 @@
 
 .tableList thead th {
   border-right:1px solid #FFF;
+  position:relative;
   color:#FFF;
   padding:7px 10px;
   text-align:center;
   font:bold 13px verdana, arial, tahoma, sans-serif;
 }
-.tableList thead th a {color:#FFF; text-decoration:none;}
+.tableList thead th a {
+  color:#FFF; 
+  text-decoration:none;
+  position: absolute;
+  top:0; left:0;
+  padding:7px 0 8px;
+  width:100%;
+  display:block;
+}
 .tableList thead th a:hover {color:#FFF;}
 
 table.tableList tbody td {
@@ -41,11 +50,10 @@ table.tableList tbody td {
 .dataDescending, .dataAscending {
   background-color:#2a2a2a;
   padding-left:20px;
-  cursor:pointer;
 }
 
-.dataDesc:after, .dataAsc:after,
-.dataDescending:after, .dataAscending:after {
+.dataDesc a:after, .dataAsc a:after,
+.dataDescending a:after, .dataAscending a:after {
   content: " ";
   display:inline-block;
   width:7px; height:7px;
@@ -54,8 +62,8 @@ table.tableList tbody td {
   margin-left:10px;
 }
 
-.dataDesc:after, .dataDescending:after {background-image: url(/img/setaDescending.png);}
-.dataAsc:after, .dataAscending:after {background-image: url(/img/setaAscending.png);}
+.dataDesc a:after, .dataDescending a:after {background-image: url(/img/setaDescending.png);}
+.dataAsc a:after, .dataAscending a:after {background-image: url(/img/setaAscending.png);}
 
 
 /***
