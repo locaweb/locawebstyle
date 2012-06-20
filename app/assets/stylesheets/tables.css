@@ -37,12 +37,14 @@ table.tableList tbody td {
 .forceClass .tableList tbody tr:hover {background-color:#fffece;}
 
 /** Ordenação **/
+.dataDesc, .dataAsc,
 .dataDescending, .dataAscending {
   background-color:#2a2a2a;
   padding-left:20px;
   cursor:pointer;
 }
 
+.dataDesc:after, .dataAsc:after,
 .dataDescending:after, .dataAscending:after {
   content: " ";
   display:inline-block;
@@ -52,11 +54,11 @@ table.tableList tbody td {
   margin-left:10px;
 }
 
-.dataDescending:after {background-image: url(/img/setaDescending.png);}
-.dataAscending:after {background-image: url(/img/setaAscending.png);}
+.dataDesc:after, .dataDescending:after {background-image: url(/img/setaDescending.png);}
+.dataAsc:after, .dataAscending:after {background-image: url(/img/setaAscending.png);}
 
 
-/*** 
+/***
 **** Ações em Tabela
 ***/
 tr:hover .actionsTable {display:block;}
