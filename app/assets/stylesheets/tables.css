@@ -24,7 +24,7 @@
   text-decoration:none;
   position: absolute;
   top:0; left:0;
-  padding:7px 0 8px;
+  padding:7px 0 8px 10px;
   width:100%;
   display:block;
 }
@@ -64,7 +64,6 @@ table.tableList tbody td {
 
 .dataDesc a:after, .dataDescending a:after {background-image: url(/img/setaDescending.png);}
 .dataAsc a:after, .dataAscending a:after {background-image: url(/img/setaAscending.png);}
-
 
 /***
 **** Ações em Tabela
