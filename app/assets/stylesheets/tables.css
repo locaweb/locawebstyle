@@ -1,25 +1,25 @@
 /**
 *** TABLES
 **/
-table.tableList {
+.tableList {
   width: 100%;
   border-bottom: 1px solid #ddd;
   margin: 0 0 20px;
 }
 
-table.tableList tr {border-bottom:1px solid #ddd;}
+.tableList tr {border-bottom:1px solid #ddd;}
 
-table.tableList thead { background:#545454;}
+.tableList thead { background:#545454;}
 
-table.tableList thead th {
+.tableList thead th {
   border-right:1px solid #FFF;
   color:#FFF;
   padding:7px 10px;
   text-align:center;
   font:bold 13px verdana, arial, tahoma, sans-serif;
 }
-table.tableList thead th a {color:#FFF; text-decoration:none;}
-table.tableList thead th a:hover {color:#FFF;}
+.tableList thead th a {color:#FFF; text-decoration:none;}
+.tableList thead th a:hover {color:#FFF;}
 
 table.tableList tbody td {
   color:#797979;
@@ -27,16 +27,14 @@ table.tableList tbody td {
   text-align:center;
   border-right:1px solid #ddd;
 }
-table.tableList tbody td.txtLeft, table.tableList thead th.txtLeft {text-align:left;}
-table.tableList tbody td.txtRight, table.tableList thead th.txtRight {text-align:right;}
-table.tableList tbody td.txtCenter, table.tableList thead th.txtCenter {text-align:center;}
+.tableList tbody td.txtLeft, table.tableList thead th.txtLeft {text-align:left;}
+.tableList tbody td.txtRight, table.tableList thead th.txtRight {text-align:right;}
+.tableList tbody td.txtCenter, table.tableList thead th.txtCenter {text-align:center;}
+.tableList tbody td:last-child {border-right:none;}
+.tableList tbody tr:nth-child(even) {background-color:#eee;}
+.tableList thead th.actived {background-color:#2a2a2a;}
 
-
-table.tableList tbody td:last-child {border-right:none;}
-table.tableList tbody tr:nth-child(even) {background-color:#eee;}
-table.tableList thead th.actived {background-color:#2a2a2a;}
-
-table.tableList tbody tr:hover {background:#fffece;}
+.forceClass .tableList tbody tr:hover {background-color:#fffece;}
 
 /** Ordenação **/
 .dataDescending, .dataAscending {

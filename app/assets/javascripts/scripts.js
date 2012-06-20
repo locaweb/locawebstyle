@@ -151,7 +151,6 @@ $(document).ready(function() {
     $(this).parent('.boxCollapse').toggleClass('active');    
   });
 
-
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
   $('.lnkSeta[data-text]').live('click', function(e){
     var btnText, btnTextAlt;
