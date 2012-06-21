@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body, li, p, a {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -17,6 +18,17 @@ body, li, p, a {
   -o-text-rendering: optimizeSpeed;
   text-rendering: optimizeSpeed;
 
+}
+
+/** ICONS **/
+@font-face {
+  font-family: 'locaweb';
+  src: url('/fonts/locaicons/locaweb.eot');
+  src: url('/fonts/locaicons/locaweb.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/locaicons/locaweb.woff') format('woff'),
+       url('/fonts/locaicons/locaweb.ttf') format('truetype'),
+       url('/fonts/locaicons/locaweb.svg#locaweb') format('svg');
+  font-weight: normal; font-style: normal;
 }
 
 @font-face {
