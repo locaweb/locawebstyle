@@ -1,81 +1,367 @@
 
         <h2>Elementos com ícones</h2>
         <p>
-            O Bootstrap já tem um esquema de inserção de ícones em elementos. No Locastyle modificamos esse funcionamento para que não fosse necessário adicionar um elemento a mais.
+            O Bootstrap já tem um esquema de inserção de ícones em elementos. No Locastyle modificamos esse funcionamento para que não fosse necessário adicionar uma tag a mais no HTML.
         </p>
-                <p>
-                        Nós também temos a necessidade de criar novos ícones de diferentes cores para os serviços. O ponto importante foi fazer com que você possa usar nossos ícones e usar os ícones do Bootstrap. Há um prefixo nas classes: <strong>icon-</strong> para os ícones do Bootstrap e <strong>ico-</strong> para os ícones da Locaweb.<br>
-                        Precisamos de duas classes (por enquanto) porque usamos dois sprites diferentes.
-                </p>
-                <p>
-                        O funcionamento é simples. As classes podem ser inseridas em qualquer elemento, mas é tem um efeito muito melhor em elementos de linha, como links, span, strong, i, em, etc... Isso quer dizer que talvez, quem sabe, a classe vai funcionar em uma TD, mas o efeito pode não ser o esperado.</p>
-                <p>
-                        Para adicionar seu ícone, insira uma das classes abaixo no elemento escolhido.
-                </p>
+        <p></p>
+        <p>
+            Nós também temos a necessidade de ter várias cores para os serviços. Por isso utilizamos o serviço <a href="http://fontello.com/">Fontello</a> para utilizarmos icones baseados em fonts. O ponto importante é possibilitar o uso dos nossos ícones e usar os ícones do Bootstrap. Há um prefixo nas classes: <strong>icon-</strong> para os ícones do Bootstrap e <strong>ico-</strong> para os ícones da Locaweb.<br>
+        </p>
+        <p>
+            O funcionamento é simples. As classes podem ser inseridas em qualquer elemento, mas é tem um efeito muito melhor em elementos de linha, como links, span, strong, i, em, etc... Isso quer dizer que talvez, quem sabe, a classe vai funcionar em uma TD, mas o efeito pode não ser o esperado.
+        </p>
+        <p>
+            Para adicionar seu ícone, insira uma das classes abaixo no elemento escolhido.
+        </p>
+        <p><strong>Prefira usar os ícones da Locaweb. Lá tem praticamente todos os ícones do Bootstrap, entre outros, além de podermos mudar de cor, tamanho e outras qualidades.</strong></p>
         <hr>
+<div class="row">
+        <h4>Ícones da Locaweb</h4>
+        <br>
+        <select id="colorTheme">
+            <optgroup label="Escolha a cor">
+                <option value="colorBlue">Azul (gateway)</option>
+                <option value="colorGreen">Verde (email marketing)</option>
+                <option value="colorOrange">Laranja (registro domínios)</option>
+            </optgroup>
+        </select>
+        <br>
+        <br>
         <%= content_for_clippy do %>
 <div class="row">
-
-        <h4>Ícones da Locaweb</h4>
-        <div class="span3 colorGray">
-          <h5>Cinza (default)</h5>
-        <br>
-                <ul class="the-icons">
-                    <li><span class="ico-tabela">ico-tabela</span></li>
-                    <li><span class="ico-relatorio">ico-relatorio</span></li>
-                    <li><span class="ico-estornar">ico-estornar</span></li>
-                    <li><span class="ico-archive">ico-archive</span></li>
-                    <li><span class="ico-unarchive">ico-unarchive</span></li>
-                    <li><span class="ico-more">ico-more</span></li>
-                    <li><span class="ico-excluir">ico-excluir</span></li>
-                    <li><span class="ico-cancel">ico-cancel</span></li>
-                </ul>
-        </div>
-        <div class="span3 colorBlue">
-          <h5>Azul</h5>
-        <br>
-                <ul class="the-icons">
-                    <li><span class="ico-tabela">ico-tabela</span></li>
-                    <li><span class="ico-relatorio">ico-relatorio</span></li>
-                    <li><span class="ico-estornar">ico-estornar</span></li>
-                    <li><span class="ico-archive">ico-archive</span></li>
-                    <li><span class="ico-unarchive">ico-unarchive</span></li>
-                    <li><span class="ico-more">ico-more</span></li>
-                    <li><span class="ico-excluir">ico-excluir</span></li>
-                    <li><span class="ico-cancel">ico-cancel</span></li>
-                </ul>
-        </div>
-        <div class="span3 colorGreen">
-          <h5>Verde</h5>
-        <br>
-                <ul class="the-icons">
-                    <li><span class="ico-tabela">ico-tabela</span></li>
-                    <li><span class="ico-relatorio">ico-relatorio</span></li>
-                    <li><span class="ico-estornar">ico-estornar</span></li>
-                    <li><span class="ico-archive">ico-archive</span></li>
-                    <li><span class="ico-unarchive">ico-unarchive</span></li>
-                    <li><span class="ico-more">ico-more</span></li>
-                    <li><span class="ico-excluir">ico-excluir</span></li>
-                    <li><span class="ico-cancel">ico-cancel</span></li>
-                </ul>
-        </div>
-        <div class="span3 colorRed">
-          <h5>Vermelho</h5>
-        <br>
-                <ul class="the-icons">
-                    <li><span class="ico-tabela">ico-tabela</span></li>
-                    <li><span class="ico-relatorio">ico-relatorio</span></li>
-                    <li><span class="ico-estornar">ico-estornar</span></li>
-                    <li><span class="ico-archive">ico-archive</span></li>
-                    <li><span class="ico-unarchive">ico-unarchive</span></li>
-                    <li><span class="ico-more">ico-more</span></li>
-                    <li><span class="ico-excluir">ico-excluir</span></li>
-                    <li><span class="ico-cancel">ico-cancel</span></li>
-                </ul>
-        </div>
+      <div class="span3">
+        <ul class="the-icons">
+          <li class="ico-plus-1"> ico-plus-1</li>
+                    <li class="ico-plus"> ico-plus</li>
+                    <li class="ico-minus-1"> ico-minus-1</li>
+                    <li class="ico-left-1"> ico-left-1</li>
+                    <li class="ico-up-1"> ico-up-1</li>
+                    <li class="ico-right-1"> ico-right-1</li>
+                    <li class="ico-down-1"> ico-down-1</li>
+                    <li class="ico-home-1"> ico-home-1</li>
+                    <li class="ico-keyboard"> ico-keyboard</li>
+                    <li class="ico-split"> ico-split</li>
+                    <li class="ico-pause-1"> ico-pause-1</li>
+                    <li class="ico-fast-fw-1"> ico-fast-fw-1</li>
+                    <li class="ico-fast-bw-1"> ico-fast-bw-1</li>
+                    <li class="ico-to-end-1"> ico-to-end-1</li>
+                    <li class="ico-to-start-1"> ico-to-start-1</li>
+                    <li class="ico-stop-1"> ico-stop-1</li>
+                    <li class="ico-up-dir"> ico-up-dir</li>
+                    <li class="ico-play-1"> ico-play-1</li>
+                    <li class="ico-right-dir"> ico-right-dir</li>
+                    <li class="ico-down-dir"> ico-down-dir</li>
+                    <li class="ico-left-dir"> ico-left-dir</li>
+                    <li class="ico-sun-inv"> ico-sun-inv</li>
+                    <li class="ico-cloud"> ico-cloud</li>
+                    <li class="ico-cloud-1"> ico-cloud-1</li>
+                    <li class="ico-umbrella"> ico-umbrella</li>
+                    <li class="ico-star-1"> ico-star-1</li>
+                    <li class="ico-star-empty-1"> ico-star-empty-1</li>
+                    <li class="ico-check"> ico-check</li>
+                    <li class="ico-th-list-1"> ico-th-list-1</li>
+                    <li class="ico-sun"> ico-sun</li>
+                    <li class="ico-moon"> ico-moon</li>
+                    <li class="ico-heart-empty-1"> ico-heart-empty-1</li>
+                    <li class="ico-heart-1"> ico-heart-1</li>
+                    <li class="ico-music-1"> ico-music-1</li>
+                    <li class="ico-th-1"> ico-th-1</li>
+                    <li class="ico-flag-1"> ico-flag-1</li>
+                    <li class="ico-cog-1"> ico-cog-1</li>
+                    <li class="ico-attention-1"> ico-attention-1</li>
+                    <li class="ico-attention"> ico-attention</li>
+                    <li class="ico-flash"> ico-flash</li>
+                    <li class="ico-flash-1"> ico-flash-1</li>
+                    <li class="ico-key-1"> ico-key-1</li>
+                    <li class="ico-rain"> ico-rain</li>
+                    <li class="ico-cog-alt"> ico-cog-alt</li>
+                    <li class="ico-flight-1"> ico-flight-1</li>
+                    <li class="ico-mail"> ico-mail</li>
+                    <li class="ico-mail-2"> ico-mail-2</li>
+                    <li class="ico-mail-1"> ico-mail-1</li>
+                    <li class="ico-edit"> ico-edit</li>
+                    <li class="ico-pencil-1"> ico-pencil-1</li>
+                    <li class="ico-pencil"> ico-pencil</li>
+                    <li class="ico-pencil-2"> ico-pencil-2</li>
+                    <li class="ico-pencil-alt"> ico-pencil-alt</li>
+                    <li class="ico-ok-1"> ico-ok-1</li>
+                    <li class="ico-ok-circle"> ico-ok-circle</li>
+                    <li class="ico-cancel-1"> ico-cancel-1</li>
+                    <li class="ico-cancel-circle-1"> ico-cancel-circle-1</li>
+                    <li class="ico-asterisk"> ico-asterisk</li>
+                    <li class="ico-attention-circle"> ico-attention-circle</li>
+                    <li class="ico-plus-circle"> ico-plus-circle</li>
+                    <li class="ico-plus-circle-1"> ico-plus-circle-1</li>
+                    <li class="ico-minus-circle-1"> ico-minus-circle-1</li>
+                    <li class="ico-direction"> ico-direction</li>
+                    <li class="ico-forward"> ico-forward</li>
+                    <li class="ico-forward-1"> ico-forward-1</li>
+                    <li class="ico-ccw"> ico-ccw</li>
+                    <li class="ico-cw"> ico-cw</li>
+                    <li class="ico-cw-1"> ico-cw-1</li>
+                    <li class="ico-resize-vertical-1"> ico-resize-vertical-1</li>
+                    <li class="ico-resize-vertical"> ico-resize-vertical</li>
+                    <li class="ico-resize-horizontal"> ico-resize-horizontal</li>
+                    <li class="ico-resize-horizontal-1"> ico-resize-horizontal-1</li>
+                    <li class="ico-eject"> ico-eject</li>
+                    <li class="ico-list-add"> ico-list-add</li>
+                    <li class="ico-left-circle-1"> ico-left-circle-1</li>
+                    <li class="ico-right-circle-1"> ico-right-circle-1</li>
+                    <li class="ico-up-circle-1"> ico-up-circle-1</li>
+                    
+        </ul>
+      </div>
+      <div class="span3">
+        <ul class="the-icons">
+                    <li class="ico-down-circle-1"> ico-down-circle-1</li>
+                    <li class="ico-user-add"> ico-user-add</li>
+                    <li class="ico-star-half"> ico-star-half</li>
+                    <li class="ico-ok-circle2"> ico-ok-circle2</li>
+                    <li class="ico-cancel-circle2"> ico-cancel-circle2</li>
+                    <li class="ico-help-circle-1"> ico-help-circle-1</li>
+                    <li class="ico-info-circle-1"> ico-info-circle-1</li>
+                    <li class="ico-th-large"> ico-th-large</li>
+                    <li class="ico-eye-1"> ico-eye-1</li>
+                    <li class="ico-eye-off"> ico-eye-off</li>
+                    <li class="ico-tag-2"> ico-tag-2</li>
+                    <li class="ico-tag-3"> ico-tag-3</li>
+                    <li class="ico-tag-1"> ico-tag-1</li>
+                    <li class="ico-tags"> ico-tags</li>
+                    <li class="ico-tag-empty"> ico-tag-empty</li>
+                    <li class="ico-camera-alt"> ico-camera-alt</li>
+                    <li class="ico-download-cloud"> ico-download-cloud</li>
+                    <li class="ico-upload-cloud-1"> ico-upload-cloud-1</li>
+                    <li class="ico-upload-cloud"> ico-upload-cloud</li>
+                    <li class="ico-reply"> ico-reply</li>
+                    <li class="ico-reply-all"> ico-reply-all</li>
+                    <li class="ico-export-1"> ico-export-1</li>
+                    <li class="ico-print-1"> ico-print-1</li>
+                    <li class="ico-print"> ico-print</li>
+                    <li class="ico-retweet-1"> ico-retweet-1</li>
+                    <li class="ico-comment-1"> ico-comment-1</li>
+                    <li class="ico-comment"> ico-comment</li>
+                    <li class="ico-chat-4"> ico-chat-4</li>
+                    <li class="ico-chat"> ico-chat</li>
+                    <li class="ico-chat-1"> ico-chat-1</li>
+                    <li class="ico-chat-3"> ico-chat-3</li>
+                    <li class="ico-chat-2"> ico-chat-2</li>
+                    <li class="ico-vcard"> ico-vcard</li>
+                    <li class="ico-location-1"> ico-location-1</li>
+                    <li class="ico-map"> ico-map</li>
+                    <li class="ico-trash-1"> ico-trash-1</li>
+                    <li class="ico-trash"> ico-trash</li>
+                    <li class="ico-doc"> ico-doc</li>
+                    <li class="ico-doc-2"> ico-doc-2</li>
+                    <li class="ico-doc-inv"> ico-doc-inv</li>
+                    <li class="ico-doc-alt"> ico-doc-alt</li>
+                    <li class="ico-doc-inv-alt"> ico-doc-inv-alt</li>
+                    <li class="ico-article-alt"> ico-article-alt</li>
+                    <li class="ico-docs"> ico-docs</li>
+                    <li class="ico-docs-landscape"> ico-docs-landscape</li>
+                    <li class="ico-archive"> ico-archive</li>
+                    <li class="ico-rss-1"> ico-rss-1</li>
+                    <li class="ico-basket-2"> ico-basket-2</li>
+                    <li class="ico-basket-1"> ico-basket-1</li>
+                    <li class="ico-login"> ico-login</li>
+                    <li class="ico-logout"> ico-logout</li>
+                    <li class="ico-resize-full-1"> ico-resize-full-1</li>
+                    <li class="ico-resize-full"> ico-resize-full</li>
+                    <li class="ico-resize-full-alt"> ico-resize-full-alt</li>
+                    <li class="ico-resize-small-1"> ico-resize-small-1</li>
+                    <li class="ico-resize-small"> ico-resize-small</li>
+                    <li class="ico-resize-small-alt"> ico-resize-small-alt</li>
+                    <li class="ico-move-1"> ico-move-1</li>
+                    <li class="ico-popup-2"> ico-popup-2</li>
+                    <li class="ico-popup"> ico-popup</li>
+                    <li class="ico-publish"> ico-publish</li>
+                    <li class="ico-window"> ico-window</li>
+                    <li class="ico-zoom-in"> ico-zoom-in</li>
+                    <li class="ico-zoom-out"> ico-zoom-out</li>
+                    <li class="ico-down-circle2-1"> ico-down-circle2-1</li>
+                    <li class="ico-down-circle2"> ico-down-circle2</li>
+                    <li class="ico-left-circle2"> ico-left-circle2</li>
+                    <li class="ico-right-circle2"> ico-right-circle2</li>
+                    <li class="ico-up-circle2-1"> ico-up-circle2-1</li>
+                    <li class="ico-up-circle2"> ico-up-circle2</li>
+                    <li class="ico-down-open-1"> ico-down-open-1</li>
+                    <li class="ico-down-open"> ico-down-open</li>
+                    <li class="ico-left-open-2"> ico-left-open-2</li>
+                    <li class="ico-left-open-1"> ico-left-open-1</li>
+                    <li class="ico-left-open"> ico-left-open</li>
+                    <li class="ico-right-open-1"> ico-right-open-1</li>
+                    <li class="ico-right-open-2"> ico-right-open-2</li>
+                    
+        </ul>
+      </div>
+      <div class="span3">
+        <ul class="the-icons">
+                    <li class="ico-right-open"> ico-right-open</li>
+                    <li class="ico-up-open-1"> ico-up-open-1</li>
+                    <li class="ico-up-open"> ico-up-open</li>
+                    <li class="ico-arrows-cw"> ico-arrows-cw</li>
+                    <li class="ico-play-circle2"> ico-play-circle2</li>
+                    <li class="ico-to-end-alt"> ico-to-end-alt</li>
+                    <li class="ico-to-start-alt"> ico-to-start-alt</li>
+                    <li class="ico-progress-0"> ico-progress-0</li>
+                    <li class="ico-progress-1"> ico-progress-1</li>
+                    <li class="ico-progress-2"> ico-progress-2</li>
+                    <li class="ico-progress-3"> ico-progress-3</li>
+                    <li class="ico-signal-2"> ico-signal-2</li>
+                    <li class="ico-back-in-time"> ico-back-in-time</li>
+                    <li class="ico-inbox-1"> ico-inbox-1</li>
+                    <li class="ico-install"> ico-install</li>
+                    <li class="ico-font"> ico-font</li>
+                    <li class="ico-bold"> ico-bold</li>
+                    <li class="ico-italic"> ico-italic</li>
+                    <li class="ico-text-height"> ico-text-height</li>
+                    <li class="ico-text-width"> ico-text-width</li>
+                    <li class="ico-align-left"> ico-align-left</li>
+                    <li class="ico-align-center"> ico-align-center</li>
+                    <li class="ico-align-right"> ico-align-right</li>
+                    <li class="ico-align-justify"> ico-align-justify</li>
+                    <li class="ico-list"> ico-list</li>
+                    <li class="ico-indent-left"> ico-indent-left</li>
+                    <li class="ico-indent-right"> ico-indent-right</li>
+                    <li class="ico-lifebuoy"> ico-lifebuoy</li>
+                    <li class="ico-mouse"> ico-mouse</li>
+                    <li class="ico-bag"> ico-bag</li>
+                    <li class="ico-dot"> ico-dot</li>
+                    <li class="ico-dot-2"> ico-dot-2</li>
+                    <li class="ico-dot-3"> ico-dot-3</li>
+                    <li class="ico-off"> ico-off</li>
+                    <li class="ico-road"> ico-road</li>
+                    <li class="ico-list-alt"> ico-list-alt</li>
+                    <li class="ico-qrcode"> ico-qrcode</li>
+                    <li class="ico-barcode"> ico-barcode</li>
+                    <li class="ico-ajust"> ico-ajust</li>
+                    <li class="ico-tint"> ico-tint</li>
+                    <li class="ico-layers"> ico-layers</li>
+                    <li class="ico-layers-alt"> ico-layers-alt</li>
+                    <li class="ico-magnet"> ico-magnet</li>
+                    <li class="ico-chart-pie-1"> ico-chart-pie-1</li>
+                    <li class="ico-chart-pie-alt"> ico-chart-pie-alt</li>
+                    <li class="ico-cc"> ico-cc</li>
+                    <li class="ico-cw-circle"> ico-cw-circle</li>
+                    <li class="ico-updown-circle"> ico-updown-circle</li>
+                    <li class="ico-terminal"> ico-terminal</li>
+                    <li class="ico-mobile-alt"> ico-mobile-alt</li>
+                    <li class="ico-tablet"> ico-tablet</li>
+                    <li class="ico-easel"> ico-easel</li>
+                    <li class="ico-puzzle"> ico-puzzle</li>
+                    <li class="ico-move"> ico-move</li>
+                    <li class="ico-facebook-1"> ico-facebook-1</li>
+                    <li class="ico-facebook-rect-1"> ico-facebook-rect-1</li>
+                    <li class="ico-twitter-1"> ico-twitter-1</li>
+                    <li class="ico-twitter-bird-1"> ico-twitter-bird-1</li>
+                    <li class="ico-icq"> ico-icq</li>
+                    <li class="ico-yandex"> ico-yandex</li>
+                    <li class="ico-yandex-rect"> ico-yandex-rect</li>
+                    <li class="ico-github-text"> ico-github-text</li>
+                    <li class="ico-github-1"> ico-github-1</li>
+                    <li class="ico-googleplus-rect-1"> ico-googleplus-rect-1</li>
+                    <li class="ico-vkontakte-rect-1"> ico-vkontakte-rect-1</li>
+                    <li class="ico-skype-1"> ico-skype-1</li>
+                    <li class="ico-odnoklassniki"> ico-odnoklassniki</li>
+                    <li class="ico-odnoklassniki-rect-1"> ico-odnoklassniki-rect-1</li>
+                    <li class="ico-vimeo-rect-1"> ico-vimeo-rect-1</li>
+                    <li class="ico-vimeo"> ico-vimeo</li>
+                    <li class="ico-tumblr-rect-1"> ico-tumblr-rect-1</li>
+                    <li class="ico-google-circles"> ico-google-circles</li>
+                    <li class="ico-tumblr"> ico-tumblr</li>
+                    <li class="ico-globe"> ico-globe</li>
+                    <li class="ico-picture-1"> ico-picture-1</li>
+                    <li class="ico-picture"> ico-picture</li>
+                    <li class="ico-leaf-1"> ico-leaf-1</li>
+                    
+        </ul>
+      </div>
+      <div class="span3">
+        <ul class="the-icons">
+                    <li class="ico-glass"> ico-glass</li>
+                    <li class="ico-gift"> ico-gift</li>
+                    <li class="ico-mic"> ico-mic</li>
+                    <li class="ico-mic-2"> ico-mic-2</li>
+                    <li class="ico-videocam"> ico-videocam</li>
+                    <li class="ico-headphones"> ico-headphones</li>
+                    <li class="ico-video-1"> ico-video-1</li>
+                    <li class="ico-target-1"> ico-target-1</li>
+                    <li class="ico-top-list"> ico-top-list</li>
+                    <li class="ico-award"> ico-award</li>
+                    <li class="ico-thumbs-up-1"> ico-thumbs-up-1</li>
+                    <li class="ico-thumbs-up"> ico-thumbs-up</li>
+                    <li class="ico-thumbs-up-2"> ico-thumbs-up-2</li>
+                    <li class="ico-thumbs-down-1-1"> ico-thumbs-down-1-1</li>
+                    <li class="ico-thumbs-down-1"> ico-thumbs-down-1</li>
+                    <li class="ico-thumbs-down"> ico-thumbs-down</li>
+                    <li class="ico-user-1"> ico-user-1</li>
+                    <li class="ico-users-1"> ico-users-1</li>
+                    <li class="ico-users"> ico-users</li>
+                    <li class="ico-money"> ico-money</li>
+                    <li class="ico-dollar"> ico-dollar</li>
+                    <li class="ico-monitor"> ico-monitor</li>
+                    <li class="ico-cd-1"> ico-cd-1</li>
+                    <li class="ico-cd"> ico-cd</li>
+                    <li class="ico-folder"> ico-folder</li>
+                    <li class="ico-folder-1"> ico-folder-1</li>
+                    <li class="ico-folder-open"> ico-folder-open</li>
+                    <li class="ico-doc-text"> ico-doc-text</li>
+                    <li class="ico-doc-1"> ico-doc-1</li>
+                    <li class="ico-calendar-1"> ico-calendar-1</li>
+                    <li class="ico-chart"> ico-chart</li>
+                    <li class="ico-chart-bar-1-1"> ico-chart-bar-1-1</li>
+                    <li class="ico-chart-bar"> ico-chart-bar</li>
+                    <li class="ico-chart-bar-1"> ico-chart-bar-1</li>
+                    <li class="ico-pin"> ico-pin</li>
+                    <li class="ico-attach"> ico-attach</li>
+                    <li class="ico-book-alt"> ico-book-alt</li>
+                    <li class="ico-book"> ico-book</li>
+                    <li class="ico-book-1"> ico-book-1</li>
+                    <li class="ico-book-2"> ico-book-2</li>
+                    <li class="ico-book-open"> ico-book-open</li>
+                    <li class="ico-phone"> ico-phone</li>
+                    <li class="ico-phone-1"> ico-phone-1</li>
+                    <li class="ico-bullhorn"> ico-bullhorn</li>
+                    <li class="ico-upload-1"> ico-upload-1</li>
+                    <li class="ico-upload-2"> ico-upload-2</li>
+                    <li class="ico-upload"> ico-upload</li>
+                    <li class="ico-download-1"> ico-download-1</li>
+                    <li class="ico-download-2"> ico-download-2</li>
+                    <li class="ico-download-4"> ico-download-4</li>
+                    <li class="ico-download"> ico-download</li>
+                    <li class="ico-download-3"> ico-download-3</li>
+                    <li class="ico-box"> ico-box</li>
+                    <li class="ico-mobile"> ico-mobile</li>
+                    <li class="ico-signal-1"> ico-signal-1</li>
+                    <li class="ico-camera-1"> ico-camera-1</li>
+                    <li class="ico-shuffle-1"> ico-shuffle-1</li>
+                    <li class="ico-shuffle-2"> ico-shuffle-2</li>
+                    <li class="ico-loop"> ico-loop</li>
+                    <li class="ico-volume-off-1"> ico-volume-off-1</li>
+                    <li class="ico-volume-down"> ico-volume-down</li>
+                    <li class="ico-volume-up-1"> ico-volume-up-1</li>
+                    <li class="ico-battery"> ico-battery</li>
+                    <li class="ico-search"> ico-search</li>
+                    <li class="ico-search-1-1"> ico-search-1-1</li>
+                    <li class="ico-key-inv"> ico-key-inv</li>
+                    <li class="ico-key"> ico-key</li>
+                    <li class="ico-lock-1"> ico-lock-1</li>
+                    <li class="ico-lock"> ico-lock</li>
+                    <li class="ico-lock-open"> ico-lock-open</li>
+                    <li class="ico-bookmark-1"> ico-bookmark-1</li>
+                    <li class="ico-link-1"> ico-link-1</li>
+                    <li class="ico-fire"> ico-fire</li>
+                    <li class="ico-wrench"> ico-wrench</li>
+                    <li class="ico-clock-1"> ico-clock-1</li>
+                    <li class="ico-block-1"> ico-block-1</li>
+                    
+        </ul>
+        <% end %>
+        
+      </div>
+    </div>
         <hr class="cboth">
-        <h4>Ícones do Bootstrap</h4>
-    <div class="span3">
+    <div class="span3" style="display:none;">
+        <h4>Ícones do Bootstrap (IMAGENS NON-COLOR)</h4>
       <ul class="the-icons">
         <li><span class="icon-glass">icon-glass</span>
         <li><span class="icon-music">icon-music</span>
@@ -114,7 +400,7 @@
         <li><span class="icon-headphones">icon-headphones</span>
       </ul>
     </div>
-    <div class="span3">
+    <div class="span3" style="display:none;">
       <ul class="the-icons">
         <li><span class="icon-volume-off">icon-volume-off</span>
         <li><span class="icon-volume-down">icon-volume-down</span>
@@ -153,7 +439,7 @@
         <li><span class="icon-fast-backward">icon-fast-backward</span>
       </ul>
     </div>
-    <div class="span3">
+    <div class="span3" style="display:none;">
       <ul class="the-icons">
         <li><span class="icon-backward">icon-backward</span>
         <li><span class="icon-play">icon-play</span>
@@ -192,7 +478,7 @@
         <li><span class="icon-eye-open">icon-eye-open</span>
       </ul>
     </div>
-    <div class="span3">
+    <div class="span3" style="display:none;">
       <ul class="the-icons">
         <li><span class="icon-eye-close">icon-eye-close</span>
         <li><span class="icon-warning-sign">icon-warning-sign</span>
@@ -234,7 +520,6 @@
   </div>
 
 
-        <% end %>
 
     <div class="codes">
             <p class="label label-warning">Padrão de código do Bootstrap.</p>

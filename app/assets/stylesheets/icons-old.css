@@ -1,20 +1,55 @@
+/**
+*** ICONES
+**/
+/*[class^="ico"], [class*=" ico"] {
+  background-position:center left;
+  background-repeat:no-repeat;
+  padding:2px 1px 2px 2px;
+  color:#777;
+  font: 12px Ubuntu, verdana, arial, sans-serif;
+  display:inline-block;
+  width:auto;
+}
+[class^="ico"]:hover {text-decoration:none; color:#1e324a;}
+*/
+.add-on .ui-datepicker-trigger {padding:0 0 0 3px;}
+
+.control-group .add-on {
+  float:none; display:inline-block; vertical-align:top;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.ui-datepicker-trigger.icon-calendar {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  border:1px solid #CCC;
+  background:#EEE;
+  vertical-align:top;
+  padding:6px 4px 4px 7px;
+  margin-left:-2px;
+}
+  
+[class^="icon-"]:before, [class*=" icon-"]:before,
+body.forceClass .ui-datepicker-trigger.icon-calendar:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png);}
+/*.colorGreen [class^="icon-"]:before, .colorGreen [class*=" icon-"]:before {background-image: url(/img/glyphicons-halflings-green.png);}
+.colorRed [class^="icon-"]:before, .colorRed [class*=" icon-"]:before {background-image: url(/img/glyphicons-halflings-red.png);}
+.colorBlue [class^="icon-"]:before, .colorBlue [class*=" icon-"]:before {background-image: url(/img/glyphicons-halflings-blue.png);}
+*/
+
 [class^="icon-"], [class*=" icon-"],
-li [class^="icon-"], li [class*=" icon-"] {
+li [class^="icon-"], li [class*=" icon-"],
+[class^="ico-"], [class*=" ico-"] {
   width:auto;
   height:auto;
   background-color:none;
   background-image:none;
 }
 
-[class^="icon-"], [class*=" icon-"],
-li [class^="icon-"], li [class*=" icon-"] {
-  width:auto;
-  height:auto;
-  background-color:none;
-  background-image:none;
-}
-
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before,
+[class^="ico-"]:before, [class*=" ico-"]:before {
   content:" ";
   display: inline-block;
   vertical-align:middle;
@@ -23,25 +58,59 @@ li [class^="icon-"], li [class*=" icon-"] {
   background-repeat: no-repeat;
   margin-top:-3px;
 }
-.ui-datepicker-trigger.icon-calendar {
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  -ms-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-  border:1px solid #CCC;
-  background:#EEE;
-  vertical-align:top;
-  padding:6px 4px 4px 7px;
-  margin-left:-2px;
-}
-.error .ui-datepicker-trigger.icon-calendar {border-color:#953B39;}
+
+.error .add-on, .error .ui-datepicker-trigger.icon-calendar {border-color:#B94A48;}
+
+/** locaweb custom icons ***/
+[class^="ico-"]:before, [class*=" ico-"]:before {background-image:url(/img/locaIconsGray.png);}
+
+.colorBlue [class^="ico-"]:before, .colorBlue [class*=" ico-"]:before {background-image:url(/img/locaIconsBlue.png);}
+.colorGreen [class^="ico-"]:before, .colorGreen [class*=" ico-"]:before {background-image:url(/img/locaIconsGreen.png);}
+.colorRed [class^="ico-"]:before, .colorRed [class*=" ico-"]:before {background-image:url(/img/locaIconsRed.png);}
+.colorBlack [class^="ico-"]:before, .colorBlack [class*=" ico-"]:before {background-image:url(/img/locaIconsBlack.png);}
+.colorWhite [class^="icon-"]:before, .colorWhite [class*=" ico-"]:before {background-image:url(/img/locaIconsWhite.png);}
+.colorOrange [class^="ico-"]:before, .colorOrange [class*=" ico-"]:before {background-image:url(/img/locaIconsOrange.png);}
+
+.ico-tabela:before,
+.ico-relatorio:before {background-position:-48px -1px;}
+.ico-estornar:before {background-position:-65px -1px;}
+.ico-more:before {background-position:-80px -1px;}
+.ico-archive:before {background-position:-17px -17px;}
+.ico-unarchive:before {background-position:-32px -17px;}
+
+.forceClass .ico-excluir:before,
+.forceClass .icon-trash:before {background-position:0 -18px; background-image:url(/img/locaIconsRed.png);}
+.btn.ico-excluir:before {background-image:url(/img/locaIconsWhite.png) !important;}
+
+.ico-cancel:before {background-image:url(/img/icoCancel.png) !important; margin:-4px 2px 0 2px;}
+
+.icoRed,
+.ico-excluir,
+.ico-trash,
+.ico-cancel {color:#b54646 !important;}
+
+/*** Config dos ícones nos botoes ***/
+
+.btn:before {margin:0px 5px 0 -4px; position:relative; top:-1px;}
+
+.btn.ico-excluir {color:#FFF !important;}
+.btn.ico-excluir:before {background-position:0 -17px;}
+
+.colorBlue .btn[class^="btn-"]:before,.colorBlue .btn[class*=" btn-"]:before,
+.colorGreen .btn[class^="btn-"]:before,.colorGreen .btn[class*=" btn-"]:before,
+.colorRed .btn[class^="btn-"]:before,.colorRed .btn[class*=" btn-"]:before,
+.colorBlack .btn[class^="btn-"]:before,.colorBlack .btn[class*=" btn-"]:before,
+.colorWhite .btn[class^="btn-"]:before,.colorWhite .btn[class*=" btn-"]:before,
+.colorGray .btn[class^="btn-"]:before, .colorGray .btn[class*=" btn-"]:before {background-image:url(/img/locaIconsWhite.png);}
+
+.btn[class^="btn-"], .btn[class*=" btn-"] {color:white;}
+
+.btn:before {background-image:url(/img/locaIconsGray.png);}
+.btn.btn-neutro {color:#777;}
+.forceClass .btn.btn-neutro:before {background-image:url(/img/locaIconsGray.png);}
 
 
-[class^="icon-"]:before, [class*=" icon-"]:before,
-body.forceClass .ui-datepicker-trigger.icon-calendar:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png);}
-
-/*** Bootstrap Icons***/
+/*** Bootstrap Icons ***/
 .icon-white {background-image: url("../img/glyphicons-halflings-white.png");}
 .icon-glass:before {background-position: 0 0;}
 .icon-music:before {background-position: -24px 0;}
@@ -183,4 +252,3 @@ body.forceClass .ui-datepicker-trigger.icon-calendar:before {background-image: u
 .icon-filter:before {background-position: -408px -144px;}
 .icon-briefcase:before {background-position: -432px -144px;}
 .icon-fullscreen:before {background-position: -456px -144px;}
- 

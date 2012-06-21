@@ -1,4 +1,12 @@
+$(document).ready(function() {
 
+var selectedScheme = 'colorBlue';
+
+  $('#colorTheme').change(function(){
+    $('div.row').removeClass(selectedScheme).addClass($(this).val());
+    selectedScheme = $(this).val();
+  });
+});
 var resizeBoxes = function(){
   var contentHeight = $('.main').outerHeight();
   var sidebarHeight = $('aside.boxes').height();
