@@ -43,7 +43,7 @@ table.tableList tbody td {
 .tableList tbody tr:nth-child(even) {background-color:#eee;}
 .tableList thead th.actived {background-color:#2a2a2a;}
 
-.forceClass .tableList tbody tr:hover {background-color:#fffece;}
+.forceClass .tableList tbody tr:hover, tr.active {background-color:#fffece;}
 
 /** Ordenação **/
 .dataDesc, .dataAsc,
@@ -69,6 +69,7 @@ table.tableList tbody td {
 **** Ações em Tabela
 ***/
 tr:hover .actionsTable {display:block;}
+
 .actionsTable {
   display:none;
   list-style:none;
@@ -79,10 +80,11 @@ tr:hover .actionsTable {display:block;}
 .actionsTable li {
   display:inline-block;
   *display:inline;
-  background:url(/img/sepActionsTable.gif) no-repeat right top;
+  background:url(/img/sepActionsTable.gif) no-repeat right center;
   *zoom:1;
   padding-right:10px;
   line-height:0;
 }
 
 .actionsTable li:last-child {background:none;}
+
