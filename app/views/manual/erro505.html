@@ -1,6 +1,5 @@
 <h2>Estrutura de erro 500</h2>
 <hr>
-<%= content_for_clippy do %>
 <div id="toolbar">
     <div class="limiteToolbar">
         <h1 class="logoToolbar">Central do Cliente</h1>
@@ -20,6 +19,7 @@
         <h1 class="serviceName"><a href="/">Nome do projeto</a></h1>
     </div>
 </header>
+<%= content_for_clippy do %>
 
 <div id="main" class="systemError">
     <div class="limite">
@@ -39,6 +39,7 @@
         </div>
     </div> <!-- FIM LIMITE ROW -->
 </div> <!-- FIM MAIN -->
+<% end %>
 
 <footer id="rodape">
     <div class="footerTop">
@@ -62,7 +63,6 @@
         </div>
     </div>
 </footer>
-<% end %>
 
 <div class="codes">
     <%= clippy(yield(:code)) %>

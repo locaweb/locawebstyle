@@ -2,6 +2,8 @@
   display:inline-block;
   margin-right:2px;
   width: 1.1em;
+  font-family: locaweb;
+  line-height: 15px;
 }
 [class^="ico-"], [class*="ico-"] {
   font-family: locaweb;
@@ -12,16 +14,8 @@
   text-align: center;
 }
 
-.the-icons li {
-  font-size: 14px;
-  line-height: 24px;
-  height: 24px;
-  display:block;
-  text-align:left;
-}
-
-.ico-plus-1:before { content: ""; } /* '\e810' */
-.ico-plus:before { content: "+"; } /* '\2b' */
+.ico-plus:before { content: ""; } /* '\e810' */
+.ico-plus-1:before { content: "+"; } /* '\2b' */
 .ico-minus-1:before { content: ""; } /* '\e81a' */
 .ico-left-1:before { content: ""; } /* '\e814' */
 .ico-up-1:before { content: ""; } /* '\e81f' */
@@ -48,7 +42,7 @@
 .ico-star-1:before { content: ""; } /* '\e819' */
 .ico-star-empty-1:before { content: ""; } /* '\e822' */
 .ico-check:before { content: "☑"; } /* '\2611' */
-.ico-th-list-1:before { content: ""; } /* '\e842' */
+.ico-th-list-1:before, .ico-tabela:before { content: ""; } /* '\e842' */
 .ico-sun:before { content: "☼"; } /* '\263c' */
 .ico-moon:before { content: "☾"; } /* '\263e' */
 .ico-heart-empty-1:before { content: ""; } /* '\e818' */
@@ -287,7 +281,7 @@
 .ico-chart-bar-1:before { content: ""; } /* '\e84b' */
 .ico-pin:before { content: "📌"; } /* '\1f4cc' */
 .ico-attach:before { content: "📎"; } /* '\1f4ce' */
-.ico-book-alt:before { content: "📔"; } /* '\1f4d4' */
+.ico-book-alt:before, .ico-estornar:before { content: "📔"; } /* '\1f4d4' */
 .ico-book:before { content: "📕"; } /* '\1f4d5' */
 .ico-book-1:before { content: ""; } /* '\e854' */
 .ico-book-2:before { content: ""; } /* '\e85e' */

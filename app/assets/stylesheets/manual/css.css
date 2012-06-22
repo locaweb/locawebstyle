@@ -253,8 +253,6 @@ pre{
   padding: 20px;
 }
 
-
-
 /** Footer **/
 footer.site-footer{
   clear: both;
@@ -267,10 +265,13 @@ footer#rodape {position:static;}
 aside.boxes .collapseGroup summary.active { font-weight:normal; color:#B60000;   background:url(/img/setaCollapseTop.png) no-repeat 99% 8px;}
 
 
-
-.the-icons {list-style:none; margin:0;}
+.the-icons {margin:0 0 0 50px;}
 .the-icons li {
-  margin-bottom:5px;
+  font-size: 15px;
+  line-height: 24px;
+  height: 24px;
+  display:block;
+  text-align:left;
 }
 
 code {
@@ -282,4 +283,10 @@ code {
   margin:20px auto;
   line-height:20px;
   background:#EFEFEF;
+}
+
+td code {
+  background:none;
+  width:auto;
+  padding:0;
 }

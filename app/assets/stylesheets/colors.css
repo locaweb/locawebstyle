@@ -264,4 +264,4 @@
 .colorBlue .btMenu a:before {background-position: 0 -14px;}
 .colorRed .btMenu a:before {background-position: 0 -21px;}
 
-
+.btn[classˆ="ico-"], .btn[class*="ico-"] {color:#FFF;}
