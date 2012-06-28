@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {color:#000;}
 h1 {font: 26px UbuntuMedium, Ubuntu, arial, verdana, tahoma, sans-serif;}
 h2 {font: 24px UbuntuLight, Ubuntu, arial, verdana, tahoma, sans-serif;}
 h3, legend {font: 20px Ubuntu, arial, verdana, tahoma, sans-serif;}
-h4 {font: 20px UbuntuLight, arial, verdana, tahoma, sans-serif;}
+h4 {font: 20px UbuntuLight, arial, verdana, tahoma, sans-serif; margin-bottom:5px;}
 h5 {font: 15px UbuntuMedium, arial, verdana, tahoma, sans-serif;}
 h6 {
     font: 14px Ubuntu, arial, verdana, tahoma, sans-serif;
@@ -150,6 +150,17 @@ a:hover {text-decoration:underline;}
 
 .headerContent {padding-bottom:17px;}
 .headerContent .alert {margin:10px 0;}
+
+h3 + .alert {margin-top:15px;}
+
+.alert h5 {
+  font:bold 12px verdana,arial, tahoma, sans-serif;
+  color:#2a2a2a !important;
+  text-transform: uppercase;
+  margin-right:10px;
+}
+
+.alert h5 + p {margin:3px 0 0 23px;}
 
 .titError {
   background:url(/img/icoerro_404.png) no-repeat left center;

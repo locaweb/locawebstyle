@@ -28,6 +28,16 @@
   text-align: center;
 }
 
+/** OFF TOPIC ***/
+.ico-alert:before {
+  margin-right:7px;
+  display:inline-block;
+  vertical-align:top; 
+  content: " "; 
+  background:url(../img/ico-alert.png) no-repeat center center;
+  width:17px; height:15px;
+}
+
 .ico-trash {color:#b54646 !important;}
 
 .ico-plus:before { content: ""; } /* '\e810' */
