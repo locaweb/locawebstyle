@@ -1,6 +1,7 @@
 /**!
 *** GRID.CSS
 **/
+
 .row {
   margin-left: -20px;
   *zoom: 1;
@@ -17,7 +18,8 @@
   float: left;
   margin-left: 20px;
 }
-.row > [class*="span"]:last-child {margin-left:0;}
+
+
 
 /** Desktop
 *** Passando de 1220px
