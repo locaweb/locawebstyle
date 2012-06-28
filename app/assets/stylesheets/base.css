@@ -43,6 +43,8 @@ html, body {height:100%;}
 .noborderbottom {border-bottom:none;}
 .nobordertop {border-top:none;}
 
+.sepDot {border:none; border-bottom:1px dotted #d1d1d1; background:none; display:block; margin:15px 0;}
+
 /**
 *** Clearfix
 **/
@@ -146,9 +148,8 @@ a:hover {text-decoration:underline;}
   border-top:3px solid #CCC;
 }
 
-.headerContent {
-  padding-bottom:17px;
-}
+.headerContent {padding-bottom:17px;}
+.headerContent .alert {margin:10px 0;}
 
 .titError {
   background:url(/img/icoerro_404.png) no-repeat left center;
@@ -159,6 +160,42 @@ a:hover {text-decoration:underline;}
 }
 
 #main.systemError p, #main.systemError ol li {margin-left:45px;}
+
+.error .help-placeholder {color:#767676 !important;}
+.help-placeholder, .error .help-placeholder {
+  background:#e5e5e5;
+  font-size:10px;
+  color:#767676;
+  border-radius:0 0 3px 3px;
+  padding:8px 10px;
+  float:none;
+  opacity:0;
+  margin-top:-40px;
+  z-index:0;
+  display:none;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.help-placeholder[class*="span"] {margin-left:0 !important; float:none;}
+
+input:focus + .help-placeholder,
+select:focus + .help-placeholder,
+textarea:focus + .help-placeholder {
+  margin-top:-1px;
+  opacity:1;
+  display:block;
+}
+
+.obs {
+  font:11px verdana, arial, tahoma, sans-serif;
+  color:#767676;
+  display:block;
+  padding: 10px 0;
+}
 
 /**
 *** LINKS COM SETINHA
@@ -321,12 +358,14 @@ table ~ .navView {border:none; margin-top:10px;}
   border-top:5px solid #bfbfbf;
   background-color:transparent;
   padding:20px 0 20px 5px;
+  margin:10px 0 0;
 }
 
 .boxActions .btn {display:inline-block; margin-right:15px; float:none;}
 .boxActionsTools {padding-left:0; border-top:none;}
 .boxActionsTools .btn {margin-right:2px;}
-.btn-primary {font-weight:bold;}
+
+.modal .boxActions {margin-top:0;}
 
 /**
 *** Listagem de meios de pagamentos e outras observações
