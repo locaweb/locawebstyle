@@ -12,18 +12,19 @@
   margin:10px;
   border-radius:2px;
 }
-.innerSideBox.boxWhite {background:#FFF; padding:10px;}
+.innerSideBox.boxWhite {background:#FFF; padding:10px; border-radius:3px;}
 .innerSideBox.boxGray {background:#e2e2e2; padding:10px;}
 
 .innerSideBox img {margin:0 3px 8px 0;}
+.innerSideBox .control-group:last-child {margin-bottom:0;}
 
-.sideBox h6 {
+.sideBox h6, .sideBox .grayP {
   margin:0; padding:0;
   text-transform:capitalize;
   font:11px verdana, tahoma, arial, sans-serif;
   color:#848484;
 }
-
+.sideBox .grayP {text-transform:inherit; margin-bottom:5px;}
 .sideBox p {
   font:12px verdana, tahoma, arial, sans-serif;
   margin:0; padding:0;
@@ -124,3 +125,10 @@
 .colorRed .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -21px;}
 .colorGreen .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -28px;}
 .colorOrange .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -35px;}
+
+.sideBox h4 {
+  padding: 10px 10px 0;
+  margin: 0;
+}
+h4 + .tableList {margin:10px 0 0;}
+h4 + .boxWhite {margin-top:4px;}

@@ -3,7 +3,9 @@
 ***/
 
 .colorBlue #menuPrincipal > ul > li.selected a,
-.colorBlue .progress .bar {background-color:#4b7cb8;}
+.colorBlue .progress .bar,
+.colorBlue .pathWay li.active, 
+.colorBlue .pathWay li:hover {background-color:#4b7cb8;}
 
 .colorBlue #menuPrincipal,
 .colorBlue .tabs li a:hover, 
@@ -53,17 +55,23 @@
 .colorBlue .pagination .prev a, 
 .colorBlue .pagination .next a, 
 .colorBlue .pagination .last a,
-.colorBlue .boxCollapse header h4  {
+.colorBlue .boxCollapse header h4,
+.colorBlue .pathWay li.active a, 
+.colorBlue .pathWay li:hover a {
   color:#3d6495;
 }
 
 .colorBlue .boxCollapse header {border-left-color: #4b7cb8;}
 
+.colorBlue .pathWay li.active a, .colorBlue .pathWay li:hover a {background-color:#e4f0fd;}
+.colorBlue .pathWay li.active b, .colorBlue .pathWay li:hover b {color:#4b7cb8;}
+
 /*** COR
 **** VERDE
 ***/
 .colorGreen #menuPrincipal > ul > li.selected a,
-.colorGreen .progress .bar {background-color:#79bb2c;}
+.colorGreen .progress .bar,
+.colorGreen .pathWay li.active, .colorGreen .pathWay li:hover {background-color:#79bb2c;}
 
 .colorGreen #menuPrincipal,
 .colorGreen .tabs li a:hover, 
@@ -78,14 +86,13 @@
 .colorGreen .collapseGroup summary span,
 .colorGreen .lnkSeta,
 .colorGreen #menuPrincipal > ul > li > a:hover,
-.colorGreen [class^="ico-"], 
-.colorGreen [class*=" ico-"],
 .colorGreen .boxGray.listDetail a,
 .colorGreen #menuPrincipal .parent > a:hover, 
-.colorGreen #menuPrincipal .parent:hover > a,
-.colorGreen td a {color: #84c02e;}
+.colorGreen #menuPrincipal .parent:hover > a {color: #84c02e;}
 
-.colorGreen td a {color:#6a9a26;}
+.colorGreen td a,
+.colorGreen [class^="ico-"], 
+.colorGreen [class*=" ico-"] {color:#6a9a25;}
 
 .colorGreen #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
@@ -140,7 +147,12 @@
 
 .colorGreen .boxCollapse header {border-left-color: #84c02e;}
 
-.boxCollapse header h4 {color:#354d12;}
+.colorGreen .pathWay li.active a, .colorGreen .pathWay li:hover a {background-color:#edf6e1;}
+.colorGreen .pathWay li.active b, .colorGreen .pathWay li:hover b {color:#79bb2c;}
+
+.colorGreen .boxCollapse header h4,
+.colorGreen .pathWay li.active a, 
+.colorGreen .pathWay li:hover a {color:#354d12;}
 
 /*** COR
 **** LARANJA

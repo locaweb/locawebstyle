@@ -1,5 +1,22 @@
+/** Desktops, TVs e etc.
+*** Com telas maiores que 1220px
+**/
+@media screen and (min-width: 1220px) {
+ 
+}
+
+/** Middle - Telas de desktops e até tablets
+*** Até 1220px
+**/
+@media screen and (max-width: 1220px) {
+
+  /** SIMPLE FILTER **/
+  .simpleFilter input.datepicker {width:77px;}
+
+}
+
 /** iPhone LIke
-*** 320 x 480 (iPhone
+*** 320 x 480 (maioria dos smartphones)
 **/
 @media screen and (max-width:480px) {
   .limite {
@@ -128,6 +145,14 @@
     font-size: 10px;
     float:none; margin-left:10px;
   }
+
+
+  /*** PATH 
+  **** Passos de algum processo.
+  ***/
+  .pathWay ol li, .pathWay ul li {float:none !important; width:100% !important;}
+  .pathWay ol li a, .pathWay ul li a {width:97.9% !important; font-size:14px;}
+  .pathWay b {display:none;}
 
   /** TABELA Padrão **/
   .tableList td:nth-child(2), .tableList th:nth-child(2),

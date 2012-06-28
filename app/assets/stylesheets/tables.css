@@ -15,7 +15,7 @@
   border-right:1px solid #FFF;
   position:relative;
   color:#FFF;
-  padding:7px 10px;
+  padding:7px 0;
   text-align:center;
   font:bold 13px verdana, arial, tahoma, sans-serif;
 }
@@ -24,21 +24,23 @@
   text-decoration:none;
   position: absolute;
   top:0; left:0;
-  padding:7px 0 8px 10px;
+  padding:7px 0 8px 0;
   width:100%;
   display:block;
 }
+.tableList thead th.txtLeft a {padding-left:10px;}
 .tableList thead th a:hover {color:#FFF;}
 
-table.tableList tbody td {
+.tableList tbody td {
   color:#797979;
   padding:5px 10px;
   text-align:center;
   border-right:1px solid #ddd;
 }
-.tableList tbody td.txtLeft, table.tableList thead th.txtLeft {text-align:left;}
-.tableList tbody td.txtRight, table.tableList thead th.txtRight {text-align:right;}
-.tableList tbody td.txtCenter, table.tableList thead th.txtCenter {text-align:center;}
+.tableList tbody td a {font-weight:bold;}
+.tableList tbody td.txtLeft, .tableList thead th.txtLeft {text-align:left;}
+.tableList tbody td.txtRight, .tableList thead th.txtRight {text-align:right;}
+.tableList tbody td.txtCenter, .tableList thead th.txtCenter {text-align:center;}
 .tableList tbody td:last-child {border-right:none;}
 .tableList tbody tr:nth-child(even) {background-color:#eee;}
 .tableList thead th.actived {background-color:#2a2a2a;}
@@ -83,8 +85,9 @@ tr:hover .actionsTable {display:block;}
   background:url(/img/sepActionsTable.gif) no-repeat right center;
   *zoom:1;
   padding-right:10px;
-  line-height:0;
+  line-height:11px;
 }
 
 .actionsTable li:last-child {background:none;}
 
+.actionsTable li a {font-weight:normal !important;}

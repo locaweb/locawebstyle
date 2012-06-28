@@ -6,7 +6,7 @@ html, body {height:100%;}
 .limite {margin: 0 auto;}
 
 .nofloat {float:none;}
-.fright {float:right;}
+.fright {float:right !important;}
 .fleft {float:left;}
 
 .cboth {clear:both;}
@@ -116,13 +116,14 @@ td .modal-footer .btn-primary {color:#FFF;}
 h1, h2, h3, h4, h5, h6 {color:#000;}
 h1 {font: 26px UbuntuMedium, Ubuntu, arial, verdana, tahoma, sans-serif;}
 h2 {font: 24px UbuntuLight, Ubuntu, arial, verdana, tahoma, sans-serif;}
-h3 {font: 20px Ubuntu, arial, verdana, tahoma, sans-serif;}
+h3, legend {font: 20px Ubuntu, arial, verdana, tahoma, sans-serif;}
 h4 {font: 20px UbuntuLight, arial, verdana, tahoma, sans-serif;}
 h5 {font: 15px UbuntuMedium, arial, verdana, tahoma, sans-serif;}
 h6 {
     font: 14px Ubuntu, arial, verdana, tahoma, sans-serif;
     text-transform:inherit;
 }
+legend {border-bottom:none; padding-bottom:5px;}
 
 .titDots {
   padding:0 10px 12px;
@@ -250,7 +251,7 @@ a:hover {text-decoration:underline;}
 .collapseGroup .details p {padding:10px 30px;}
 
 /**
-*** PAGINACAO
+*** PAGINACAO e NAVEGACAO
 **/
 .pagination {padding:5px 0 0; margin:0; height:auto;}
 .pagination ul {margin:0;box-shadow:none;}
@@ -300,6 +301,18 @@ a:hover {text-decoration:underline;}
   margin:-10px 0 0;
   padding:10px 10px 15px;
 }
+.navView {
+  margin:20px 0;
+  padding:9px 10px;
+  color:#767676;
+  clear:both;
+  border-bottom:1px solid #e5e5e5;
+}
+
+table ~ .navView {border:none; margin-top:10px;}
+
+.navView label {color:#767676; width:auto; display:inline-block;}
+.navView .control-group {display:inline-block; margin-right:5px;}
 
 /***
 *** Actions Botoes
@@ -679,3 +692,63 @@ p + .boxCollapse {margin-top:30px;}
 tr.active .boxActions {display:block; padding:10px 0 5px;}
 tr.active .boxActions .btn {margin-right:0;}
 tr.active .actionsTable {display:none;}
+
+/*** PATH 
+**** Passos de algum processo.
+***/
+.pathWay {clear:both;}
+.pathWay ol:after, .pathWay ul:after {content:" "; display:block; clear:both;}
+.pathWay ol, .pathWay ul {margin:0 0 30px; padding:0;}
+.pathWay li {
+  list-style: none;
+  width: 19.9%;
+  float: left;
+  background: url(../img/dotsPathWays.png) repeat-X bottom left;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -ms-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+.pathWay li a {
+  border-left: 1px dotted #CCC;
+  border-bottom: 2px solid white;
+  padding: 5px 0 0 5px;
+  margin-bottom: 5px;
+  color: #B0B0B0;
+  width: 97.9%;
+  display: inline-block;
+  font: 20px Ubuntu, arial, tahoma, sans-serif;
+  text-transform: uppercase;
+  background: white url(../img/pathWays-whiteGradient.png) repeat-X top;
+  letter-spacing: -1px;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -ms-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+.pathWay li a:hover {text-decoration:none;}
+.pathWay li:first-child a {border-left:none;}
+.pathWay span {
+  display:block;
+  padding:16px 0 0 0;
+  font-size:12px;
+  text-transform: capitalize;
+}
+
+.pathWay li b {
+  color:#b8b8b8;
+  letter-spacing: -3px;
+  margin-right: 5px;
+  float:left;
+  font:bold 50px UbuntuMedium, Ubuntu, Verdana, arial, tahoma, sans-serif ;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -ms-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+.pathWay .stepOk {background-color:#666665;}
+.pathWay .stepOk a, .pathWay .stepOk b {color:#666;}
