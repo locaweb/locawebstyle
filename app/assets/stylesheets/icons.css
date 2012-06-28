@@ -1,15 +1,29 @@
+[class^="btn-"][class^="ico-"]:before, [class*="btn-"][class*="ico-"]:before {
+  margin-left:-3px;
+  margin-right:10px;
+}
+
+.icoPosRight[class^="btn-"][class^="ico-"]:before,
+.icoPosRight[class*="btn-"][class*="ico-"]:before {
+  float:right;
+  margin-left:10px;
+  margin-right:-3px;
+}
+
 [class^="ico-"]:before, [class*="ico-"]:before {
   display:inline-block;
   margin-right:2px;
   width: 1.1em;
   font-family: locaweb;
   line-height: 15px;
+  font-weight:normal;
 }
 [class^="ico-"], [class*="ico-"] {
   font-family: locaweb;
   font-style: normal;
   speak: none;
 
+  position:relative;
   display: inline-block;
   text-align: center;
 }

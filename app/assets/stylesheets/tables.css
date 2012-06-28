@@ -28,7 +28,7 @@
   width:100%;
   display:block;
 }
-.tableList thead th.txtLeft a {padding-left:10px;}
+.tableList thead th.txtLeft {padding-left:10px;}
 .tableList thead th a:hover {color:#FFF;}
 
 .tableList tbody td {
