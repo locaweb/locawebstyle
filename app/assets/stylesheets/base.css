@@ -353,7 +353,7 @@ textarea:focus + .help-placeholder {
   clear:both;
   border-bottom:1px solid #e5e5e5;
 }
-
+.navView.borderTop {border-top:1px solid #e5e5e5; border-bottom:0;}
 table ~ .navView {border:none; margin-top:10px;}
 
 .navView label {color:#767676; width:auto; display:inline-block;}
