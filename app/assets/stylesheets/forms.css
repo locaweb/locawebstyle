@@ -16,7 +16,7 @@ form h6 {
 }
 label b {display:none;}
 .control-group {margin-bottom:15px;}
-
+.modal .control-group {padding:0 5px;}
 .form-horizontal .controls, .controls {
   text-align: left;
   margin-left:1px;
