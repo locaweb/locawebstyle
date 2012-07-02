@@ -160,7 +160,11 @@ $(document).ready(function() {
     $(this).html( btnTextAlt ).data('text',btnText);
   });
 
-
+  $(".customSelect, .chzn-select").chosen({
+    no_results_text: "Nenhum resultado encontrado",
+    disable_search_threshold: 20
+    // search_contains: true,
+  });
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));

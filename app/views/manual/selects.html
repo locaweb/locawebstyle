@@ -1,0 +1,110 @@
+        <h2>Selects customizáveis</h2>
+        <p>Customização de select é normal em alguns projetos. Na Locaweb utilizamos o <a href="http://harvesthq.github.com/chosen/">Chosen</a> para customizar nossos selects. Ele é o plugin mais completo e acessível que encontramos.</p>
+        <p>Para utilizá-lo é simples, basta usar a classe <strong>customSelect</strong> no select que você quer customizar e pronto.</p>
+        <p>O atributo <strong>data-placeholder</strong> mostra uma frase no select para indicar alguma instrução para o usuário.</p>
+        <p>Para melhor usabilidade, quando houverem mais de 20 itens no select, nós mostramos automaticamente um input de search no select. Assim facilitamos a procura de opções.</p>
+
+
+<select class="customSelect" data-placeholder="Escolha um país" tabindex="1">
+    <option></option> 
+    <option value="United States">United States</option> 
+    <option value="United Kingdom">United Kingdom</option> 
+    <option value="Afghanistan">Afghanistan</option> 
+    <option value="Albania">Albania</option> 
+    <option value="Algeria">Algeria</option> 
+    <option value="American Samoa">American Samoa</option> 
+    <option value="Andorra">Andorra</option> 
+    <option value="Angola">Angola</option> 
+    <option value="Anguilla">Anguilla</option> 
+    <option value="Antarctica">Antarctica</option> 
+    <option value="Antigua and Barbuda">Antigua and Barbuda</option> 
+</select>
+<br>
+<br>
+        <%= content_for_clippy do %>
+<select class="customSelect" data-placeholder="Escolha um país" tabindex="1">
+    <option></option> 
+    <option value="United States">United States</option> 
+    <option value="United Kingdom">United Kingdom</option> 
+    <option value="Afghanistan">Afghanistan</option> 
+    <option value="Albania">Albania</option> 
+    <option value="Algeria">Algeria</option> 
+    <option value="American Samoa">American Samoa</option> 
+    <option value="Andorra">Andorra</option> 
+    <option value="Angola">Angola</option> 
+    <option value="Anguilla">Anguilla</option> 
+    <option value="Antarctica">Antarctica</option> 
+    <option value="Antigua and Barbuda">Antigua and Barbuda</option> 
+    <option value="Argentina">Argentina</option> 
+    <option value="Armenia">Armenia</option> 
+    <option value="Aruba">Aruba</option> 
+    <option value="Australia">Australia</option> 
+    <option value="Austria">Austria</option> 
+    <option value="Azerbaijan">Azerbaijan</option> 
+    <option value="Bahamas">Bahamas</option> 
+    <option value="Bahrain">Bahrain</option> 
+    <option value="Bangladesh">Bangladesh</option> 
+    <option value="Barbados">Barbados</option> 
+    <option value="Belarus">Belarus</option> 
+    <option value="Belgium">Belgium</option> 
+    <option value="Belize">Belize</option> 
+    <option value="Benin">Benin</option> 
+    <option value="Bermuda">Bermuda</option> 
+    <option value="Bhutan">Bhutan</option> 
+    <option value="Bolivia">Bolivia</option> 
+    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option> 
+    <option value="Botswana">Botswana</option> 
+    <option value="Bouvet Island">Bouvet Island</option> 
+    <option value="Brazil">Brazil</option> 
+    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option> 
+    <option value="Brunei Darussalam">Brunei Darussalam</option> 
+    <option value="Bulgaria">Bulgaria</option> 
+    <option value="Burkina Faso">Burkina Faso</option> 
+</select>
+        <% end %>
+<br><br>
+        <h3>Múltiplas escolhas</h3>
+        <p>Para selects com múltiplas escolhas o Chose modifica de forma que o visual fica com o abaixo:</p>
+        <select class="customSelect" data-placeholder="Escolha um país..." style="width:350px" multiple="" tabindex="3">
+          <option value="United States">United States</option> 
+          <option value="United Kingdom">United Kingdom</option> 
+          <option value="Afghanistan">Afghanistan</option> 
+          <option value="Albania">Albania</option> 
+          <option value="Algeria">Algeria</option> 
+          <option value="American Samoa">American Samoa</option> 
+          <option value="Andorra">Andorra</option> 
+          <option value="Angola">Angola</option> 
+          <option value="Anguilla">Anguilla</option> 
+          <option value="Antarctica">Antarctica</option> 
+          <option value="Antigua and Barbuda">Antigua and Barbuda</option> 
+          <option value="Argentina">Argentina</option> 
+          <option value="Armenia">Armenia</option> 
+          <option value="Aruba">Aruba</option> 
+          <option value="Australia">Australia</option> 
+          <option value="Austria">Austria</option> 
+          <option value="Azerbaijan">Azerbaijan</option> 
+          <option value="Bahamas">Bahamas</option> 
+          <option value="Bahrain">Bahrain</option> 
+          <option value="Bangladesh">Bangladesh</option> 
+          <option value="Barbados">Barbados</option> 
+          <option value="Belarus">Belarus</option> 
+          <option value="Belgium">Belgium</option> 
+          <option value="Belize">Belize</option> 
+          <option value="Benin">Benin</option> 
+          <option value="Bermuda">Bermuda</option> 
+          <option value="Bhutan">Bhutan</option> 
+          <option value="Bolivia">Bolivia</option> 
+          <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option> 
+          <option value="Botswana">Botswana</option> 
+          <option value="Bouvet Island">Bouvet Island</option> 
+          <option value="Brazil">Brazil</option> 
+          <option value="British Indian Ocean Territory">British Indian Ocean Territory</option> 
+          <option value="Brunei Darussalam">Brunei Darussalam</option> 
+          <option value="Bulgaria">Bulgaria</option> 
+          <option value="Burkina Faso">Burkina Faso</option> 
+        </select>
+        <br>
+
+    <div class="codes">
+            <%= clippy(yield(:code)) %>
+    </div>

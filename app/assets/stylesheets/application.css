@@ -3,6 +3,7 @@
  *= require colors
  *= require fonts
  *= require grid
+ *= require chosen
  *= require tabs
  *= require toolbar
  *= require icons
