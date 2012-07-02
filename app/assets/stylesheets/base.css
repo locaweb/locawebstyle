@@ -68,6 +68,7 @@ html, body {height:100%;}
 .modal .btn {margin:0 5px;}
 .btn.btn-cancel {color:#333;}
 
+.btn.btn-success {color:#FFF;}
 .btn-primary {
   color:#FFF;
   font-weight:400;
@@ -119,7 +120,9 @@ h1, h2, h3, h4, h5, h6 {color:#000;}
 h1 {font: 26px UbuntuMedium, Ubuntu, arial, verdana, tahoma, sans-serif;}
 h2 {font: 24px UbuntuLight, Ubuntu, arial, verdana, tahoma, sans-serif;}
 h3, legend {font: 20px Ubuntu, arial, verdana, tahoma, sans-serif;}
-h4 {font: 20px UbuntuLight, arial, verdana, tahoma, sans-serif; margin-bottom:5px;}
+h4 {font: 18px UbuntuLight, arial, verdana, tahoma, sans-serif; margin-bottom:5px;}
+h3 + h4 {margin-bottom:15px;}
+
 h5 {font: 15px UbuntuMedium, arial, verdana, tahoma, sans-serif;}
 h6 {
     font: 14px Ubuntu, arial, verdana, tahoma, sans-serif;
@@ -208,8 +211,8 @@ textarea:focus + .help-placeholder {
   padding: 10px 0;
 }
 
-/**
-*** LINKS COM SETINHA
+/** LINKS COM SETINHA
+*** FOI DESCONTINUADO EM DETRIMENTO AOS ICONES COM FONTES - Apagar na próxima versão de produção
 **/
 .lnkSeta {
   color:#666;

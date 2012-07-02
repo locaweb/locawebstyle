@@ -184,7 +184,7 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top:0;}
 .simpleFilter {
   border-bottom:1px solid #e5e5e5;
   margin-bottom:20px;
-  padding:10px 0;
+  padding:10px 0 0;
   min-height: 30px;
 }
 .simpleFilter select {margin-bottom:3px; width:100px;}

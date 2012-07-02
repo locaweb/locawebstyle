@@ -1,13 +1,15 @@
-[class^="btn-"][class^="ico-"]:before, [class*="btn-"][class*="ico-"]:before {
-  margin-left:-3px;
-  margin-right:10px;
+[class^="btn-"][class^="ico-"]:before, [class*="btn-"][class*="ico-"]:before {margin-right:5px;}
+[class^="btn-"][class^="ico-"], [class*="btn-"][class*="ico-"] {padding-left:5px;}
+.icoPosRight[class^="btn-"][class^="ico-"],
+.icoPosRight[class*="btn-"][class*="ico-"] {
+  padding-left:10px;
+  padding-right:5px;
 }
 
 .icoPosRight[class^="btn-"][class^="ico-"]:before,
 .icoPosRight[class*="btn-"][class*="ico-"]:before {
   float:right;
-  margin-left:10px;
-  margin-right:-3px;
+  margin-left:5px;
 }
 
 [class^="ico-"]:before, [class*="ico-"]:before {
@@ -27,6 +29,7 @@
   display: inline-block;
   text-align: center;
 }
+.tableList td [class^="ico-"], .tableList td [class*="ico-"] {font-weight:normal;}
 
 /** OFF TOPIC ***/
 .ico-alert:before {
@@ -115,7 +118,7 @@
 .ico-eject:before { content: "⻏"; } /* '\2ecf' */
 .ico-list-add:before { content: ""; } /* '\e003' */
 .ico-left-circle-1:before { content: ""; } /* '\e8c8' */
-.ico-right-circle-1:before { content: ""; } /* '\e8ca' */
+.ico-right-circle-1:before { content: ""; font-size:11px; margin-right:1px;} /* '\e8ca' */
 .ico-up-circle-1:before { content: ""; } /* '\e8c9' */
 .ico-down-circle-1:before { content: ""; } /* '\e8c7' */
 .ico-user-add:before { content: ""; } /* '\e700' */
@@ -382,7 +385,7 @@ li [class^="icon-"], li [class*=" icon-"] {
   -ms-border-radius: 0 3px 3px 0;
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
-  border:1px solid #CCC;
+  border:1px solid #E5E5E5;
   background:#EEE;
   vertical-align:top;
   padding:6px 4px 4px 7px;
