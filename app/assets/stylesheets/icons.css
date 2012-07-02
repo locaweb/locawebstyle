@@ -199,7 +199,7 @@
 .ico-left-open:before { content: ""; } /* '\e75d' */
 .ico-right-open-1:before { content: ""; } /* '\e80d' */
 .ico-right-open-2:before { content: ""; } /* '\e856' */
-.ico-right-open:before { content: ""; } /* '\e75e' */
+.ico-right-open:before { content: ""; font-size:9px; font-weight:bold;} /* '\e75e' */
 .ico-up-open-1:before { content: ""; } /* '\e80b' */
 .ico-up-open:before { content: ""; } /* '\e75f' */
 .ico-arrows-cw:before { content: ""; } /* '\e760' */

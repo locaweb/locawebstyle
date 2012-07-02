@@ -349,7 +349,7 @@ table ~ .navView {border:none; margin-top:10px;}
   margin:10px 0 0;
 }
 
-.boxActions .btn {display:inline-block; margin-right:15px; float:none;}
+.boxActions .btn {display:inline-block; margin-right:2px; float:none;}
 .boxActionsTools {padding-left:0; border-top:none;}
 .boxActionsTools .btn {margin-right:2px;}
 
