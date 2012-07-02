@@ -222,30 +222,7 @@ textarea:focus + .help-placeholder {
   margin:5px 0;
   vertical-align: middle;
 }
-.lnkSeta:before {
-  content: " ";
-  margin-right:2px;
-  display:inline-block;
-  background:url(/img/setaRightBox.png) no-repeat 0 0;
-  width:9px; height:9px;
-}
-.lnkSeta:hover {text-decoration:none; color:#000; background-position:0 -9px;}
-.lnkSeta:hover:before {background-position:-9px 0;}
-
-#rodape .lnkSeta.lnkSetaWhite {
-  background:url(/img/setaRightBoxWhite.png) no-repeat left center !important;
-  color:#FFF;
-}
-.lnkSeta.lnkSetaWhite:hover {background-position:left center; }
-
-.actLnk .lnkSeta {
-  border-right:1px solid #d3d3d3;
-  padding-right: 10px;
-  margin:0;
-  margin-right: 5px;
-}
-
-.actLnk .lnkSeta:last-child {border-right:none; margin-right:0; padding-right:0;}
+h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
 
 /** BOX COM FUNDO CINZA
 *** geralmente tem um collapseGroup dentro
