@@ -140,5 +140,15 @@
 
   .footerTop [class^="ico"], .footerTop [class*=" ico"] {padding-left:4px;}
 
+  /** PATH **/
+  #steps.pathWay li {
+    float:none;
+    width:100%;
+    border:none;
+  }
+  #steps.pathWay li b {display:none;}
+  #steps.pathWay li a {width:100%;border:none; font-size:15px; margin-bottom:3px;}
+  #steps.pathWay span {display:inline-block; padding-right:5px;}
+
 }
 
