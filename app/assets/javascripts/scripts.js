@@ -162,6 +162,7 @@ $(document).ready(function() {
 
   $(".customSelect, .chzn-select").chosen({
     no_results_text: "Nenhum resultado encontrado",
+    placeholder_text: "Selecione uma opção",
     disable_search_threshold: 20
     // search_contains: true,
   });
@@ -172,14 +173,3 @@ $(document).ready(function() {
 
 });
 
-// $(document).keypress(function(e) {
-//   if(e.keyCode == 71) {
-//     if($('body').hasClass('grid')){
-//       $('.gridShow').remove();
-//       $('body').removeClass('grid');
-//     } else {
-//       $('.gridShow').remove();
-//       $('body').addClass('grid').append('<div class="gridShow"></div>');
-//     }
-//   }
-// });

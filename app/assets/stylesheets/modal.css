@@ -58,7 +58,7 @@
   margin-top:20px;
 }
 .modal-footer form { display:inline-block;}
-
+.modal-footer .btn + .btn {margin-left:0;}
 .modal form { margin-bottom:0;}
 
 .boxGray.listDetail {padding:10px;}
