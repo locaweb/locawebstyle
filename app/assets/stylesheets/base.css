@@ -44,6 +44,7 @@ html, body {height:100%;}
 .nobordertop {border-top:none;}
 
 .sepDot {border:none; border-bottom:1px dotted #d1d1d1; background:none; display:block; margin:15px 0;}
+.dotsSep {height: 5px;  background: url(/img/titDots.png);  margin:20px 0;}
 
 /**
 *** Clearfix
@@ -622,8 +623,6 @@ table ~ .navView {border:none; margin-top:10px;}
 }
 .lists .statusMessageBox p {color:#767676; padding:3px 0 0 10px; font:12px verdana;}
 
-.lists .statusMessageBox h6 small {font-weight:normal; font-size:11px; padding:0 5px; border-left:1px solid #CCC;  border-right:1px solid #CCC;}
-.lists .statusMessageBox h6 .lnkSeta {top:-2px; position:relative; margin:0;}
 .lists .actionsTable a {border-left:1px solid #CCC; padding:0; padding-left:3px; line-height: 0;}
 .lists .actionsTable a:first-child {border-left:0;}
 
@@ -633,12 +632,8 @@ table ~ .navView {border:none; margin-top:10px;}
   margin:5px 0 0;
 }
 
-.dotsSep {
-  height: 5px;
-  background: url(/img/titDots.png);
-  margin:20px 0;
-}
-
+h6 small {font-weight:normal; font-size:11px; padding:0 10px; margin:0 8px; border-left:1px solid #CCC;  border-right:1px solid #CCC;}
+h6 .lnkSeta {position:relative; top:-1px; margin:0;}
 /*** 
 **** BREADCRUMB
 ***/
@@ -716,8 +711,8 @@ p + .boxCollapse {margin-top:30px;}
 .boxCollapse header h4 {font:15px verdana, arial, tahoma, sans-serif;}
 .boxCollapse header p {font:12px verdana, arial, tahoma, sans-serif; color:#767676; padding:0; margin:0;}
 
-.boxCollapse .boxCinzaInner {background:#ddd; padding:20px 10px; margin-bottom:30px;}
-.boxCollapse .boxCinzaInner .control-group {margin:0;}
+.boxCinzaInner {background:#ddd; padding:20px 10px; margin-bottom:30px;}
+.boxCinzaInner .control-group {margin:0;}
 .boxCollapse .tableList {
   margin-top:15px;
   margin-bottom:5px;
@@ -809,3 +804,35 @@ tr.active .actionsTable {display:none;}
 
 .pathWay .stepOk {background-color:#666665;}
 .pathWay .stepOk a, .pathWay .stepOk b {color:#666;}
+
+/** Caixa Cinza que geralmente vem abaixo de títulos **/
+.obsGray {
+  background:#ececec;
+  border:1px solid #e4e4e4;
+  border-radius:3px;
+  padding:10px;
+  margin:10px 0 25px;
+  position:relative;
+}
+.obsGray:after {
+  width:12px;
+  height:6px;
+  background:url(/img/setaTopObsGray.png) no-repeat center center;
+  position:absolute;
+  top:-6px; left:11px;
+  content:" ";
+}
+
+.obsGray p {margin-bottom:0;}
+
+.obsGray h6 {
+  color:#545454;
+  font:bold 12px verdana, arial, tahoma;
+}
+
+.lightGray {
+  padding:5px;
+  color:#767676;
+  background:#fbfbfb;
+  margin:10px 0 0;
+}

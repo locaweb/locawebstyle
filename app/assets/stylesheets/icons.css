@@ -44,7 +44,7 @@
 }
 
 .ico-trash {color:#b54646 !important;}
-
+.btn.ico-trash {color:#FFF !important;}
 .ico-plus:before { content: ""; } /* '\e810' */
 .ico-plus-1:before { content: "+"; } /* '\2b' */
 .ico-minus-1:before { content: ""; } /* '\e81a' */
