@@ -531,7 +531,6 @@ table ~ .navView {border:none; margin-top:10px;}
 /*** statusMessageBox
 **** Usado inicialmente na home de Email Marketing
 ***/
-.statusMessageInfo .lnkSeta {margin-left:10px;}
 .statusMessageBox {
   list-style:none;
   border:1px solid #e5e5e5;
