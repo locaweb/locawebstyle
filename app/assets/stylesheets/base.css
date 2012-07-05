@@ -227,6 +227,10 @@ textarea:focus + .help-placeholder {
 }
 h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
 
+.innerSideBox + .lnkSeta {
+  margin:-5px 0 10px 10px;
+}
+
 /** BOX COM FUNDO CINZA
 *** geralmente tem um collapseGroup dentro
 **/
@@ -815,6 +819,8 @@ tr.active .actionsTable {display:none;}
   top:-6px; left:11px;
   content:" ";
 }
+
+.headerContent + .obsGray {margin-top:-10px;}
 
 .obsGray p {margin-bottom:0;}
 
