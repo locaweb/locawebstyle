@@ -15,7 +15,7 @@
   border-right:1px solid #FFF;
   position:relative;
   color:#FFF;
-  padding:7px 0;
+  padding:8px 10px;
   text-align:center;
   font:bold 13px verdana, arial, tahoma, sans-serif;
 }
@@ -24,7 +24,7 @@
   text-decoration:none;
   position: absolute;
   top:0; left:0;
-  padding:7px 0 8px 0;
+  padding:8px 10px;
   width:100%;
   display:block;
 }
@@ -46,6 +46,8 @@
 .tableList thead th.actived {background-color:#2a2a2a;}
 
 .forceClass .tableList tbody tr:hover, tr.active {background-color:#fffece;}
+
+.tableList .txtLeft td, .tableList .txtLeft th {text-align:left;}
 
 /** Ordenação **/
 .dataDesc, .dataAsc,

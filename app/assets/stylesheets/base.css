@@ -43,8 +43,9 @@ html, body {height:100%;}
 .noborderbottom {border-bottom:none;}
 .nobordertop {border-top:none;}
 
-.sepDot {border:none; border-bottom:1px dotted #d1d1d1; background:none; display:block; margin:15px 0;}
-.dotsSep {height: 5px;  background: url(/img/titDots.png);  margin:20px 0;}
+hr {border:none; border-bottom:1px solid #e5e5e5; background:none; display:block; margin:15px 0;}
+hr.sepDot {border-bottom:1px dotted #d1d1d1;}
+hr.dotsSep {height: 5px;  background: url(/img/titDots.png);  margin:20px 0;}
 
 /**
 *** Clearfix
@@ -139,7 +140,7 @@ legend {border-bottom:none; padding-bottom:5px;}
 }
 
 h1 + p {padding-top:10px;}
-
+h2 + p {margin-top:10px;}
 p {
   color:#767676;
   font:12px verdana, arial, tahoma, sans-serif;
@@ -314,14 +315,7 @@ h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
   background-image: -moz-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
   background-image: -webkit-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
   background-image: -ms-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
-
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.21, rgb(133,133,133)),
-    color-stop(1, rgb(209,209,209))
-  );
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.21, rgb(133,133,133)), color-stop(1, rgb(209,209,209)));
 }
 
 .pagination .disabled a {border:none;}
@@ -336,7 +330,7 @@ h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
   border-bottom:1px solid #e5e5e5;
 }
 .navView.borderTop {border-top:1px solid #e5e5e5; border-bottom:0;}
-table ~ .navView {border:none; margin-top:10px;}
+table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
 
 .navView label {color:#767676; width:auto; display:inline-block;}
 .navView .control-group {display:inline-block; margin-right:5px;}
@@ -631,8 +625,8 @@ table ~ .navView {border:none; margin-top:10px;}
   margin:5px 0 0;
 }
 
-h6 small {font-weight:normal; font-size:11px; padding:0 10px; margin:0 8px; border-left:1px solid #CCC;  border-right:1px solid #CCC;}
-h6 .lnkSeta {position:relative; top:-1px; margin:0;}
+h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; border-left:1px solid #CCC; color:#767676;}
+h6 .lnkSeta {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC; padding-left:10px;}
 /*** 
 **** BREADCRUMB
 ***/

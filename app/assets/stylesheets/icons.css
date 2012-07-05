@@ -22,6 +22,7 @@
   line-height: 15px;
   font-weight:normal;
 }
+
 [class^="ico-"], [class*="ico-"], .lnkSeta:before {
   font-family: locaweb;
   font-style: normal;
@@ -119,7 +120,7 @@
 .ico-resize-horizontal-1:before { content: ""; } /* '\e85a' */
 .ico-eject:before { content: "⻏"; } /* '\2ecf' */
 .ico-list-add:before { content: ""; } /* '\e003' */
-.ico-left-circle-1:before { content: ""; } /* '\e8c8' */
+.ico-left-circle-1:before, .lnkSeta.leftSeta:before { content: ""; } /* '\e8c8' */
 .ico-right-circle-1:before, .lnkSeta:before { content: ""; font-size:11px; margin-right:1px;} /* '\e8ca' */
 .ico-up-circle-1:before { content: ""; } /* '\e8c9' */
 .ico-down-circle-1:before { content: ""; } /* '\e8c7' */
