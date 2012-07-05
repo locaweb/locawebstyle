@@ -167,6 +167,11 @@ $(document).ready(function() {
     // search_contains: true,
   });
 
+  // Bubble de informação
+  var bubbleContent = $('.infoBubble').html()
+  $('.infoBubble').wrapInner('<div class="bubbleContent" />')
+  $('.bubbleContent').wrapInner('<div class="bubbleContentInner" />')
+
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
 

@@ -3,5 +3,4 @@
 //= require modernizr
 //= require chosen.jquery.min
 //= require bootstrap/js/bootstrap
-//= require css3-mediaqueries
 //= require scripts

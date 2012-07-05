@@ -49,7 +49,7 @@ label, strong.control-label, .form-horizontal .control-label {
   line-height:12px;
 }
 label.widthAuto {width:auto !important;}
-
+label.nomarginleft {margin-left: 0 !important;}
 .formInline label, 
 .form-horizontal label, 
 .formInline strong.control-label, 
@@ -103,7 +103,7 @@ label.checkbox.control-label, label.checkbox.control-label:first-child {
   margin: 0 0 0 110px;
   width: inherit;
 }
-label.checkbox.control-label input {float:none;}
+/*label.checkbox.control-label input {float:none;}*/
 
 .opcoesBuscaAvancada .control-group .control-label:first-child,
 .control-group .control-label:first-child {margin-left:0;}

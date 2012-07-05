@@ -822,7 +822,7 @@ tr.active .actionsTable {display:none;}
 
 .headerContent + .obsGray {margin-top:-10px;}
 
-.obsGray p {margin-bottom:0;}
+.obsGray p, .main .obsGray p {margin-bottom:0; max-width:100%;}
 
 .obsGray h6 {
   color:#545454;
@@ -834,4 +834,54 @@ tr.active .actionsTable {display:none;}
   color:#767676;
   background:#fbfbfb;
   margin:10px 0 0;
+}
+
+/*** info bubble **/
+.infoBubble {
+  width:14px; height:14px;
+  display:inline-block;
+  cursor:pointer;
+  background:url(/img/infoBubble.png) no-repeat center center;
+  position:relative;
+}
+
+.infoBubble h6 {
+  color:#1a4294;
+  font:bold 12px verdana, arial, tahoma, sans-serif;
+  margin:0 0 5px;
+}
+
+.infoBubble .bubbleContent {
+  border:5px solid rgba(0,0,0,0.1);
+  min-width:283px;
+  cursor: default;
+  border-radius:5px;
+  position: relative;
+  left: 53px; top: -23px;
+  opacity:0;
+  visibility: hidden;
+  z-index: 1;
+  -webkit-transition:all .2s ease-in;
+}
+
+.infoBubble:hover .bubbleContent {
+  opacity:1;
+  visibility: visible;
+  left:23px;
+}
+
+.infoBubble .bubbleContent:before {
+  content:" ";
+  position:absolute;
+  display:block;
+  width:12px; height:19px;
+}
+
+.infoBubble.bubbleLeft .bubbleContent:before { background:url(/img/setaleftBubble.png); left:-11px; top:15px;}
+.infoBubble.bubbleRight .bubbleContent:before { background:url(/img/setarightBubble.png); right:-11px; top:15px;}
+
+.bubbleContentInner {
+  background:#FFF;
+  border:1px solid #b5b5b5;
+  padding:14px 12px;
 }
