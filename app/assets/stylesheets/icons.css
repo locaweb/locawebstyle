@@ -44,7 +44,7 @@
   width:17px; height:15px;
 }
 
-.ico-trash {color:#b54646 !important;}
+.ico-trash, .ico-cancel {color:#b54646 !important;}
 .btn.ico-trash {color:#FFF !important;}
 .ico-plus:before { content: ""; } /* '\e810' */
 .ico-plus-1:before { content: "+"; } /* '\2b' */
@@ -352,7 +352,7 @@
 .ico-fire:before { content: "🔥"; } /* '\1f525' */
 .ico-wrench:before { content: "🔧"; } /* '\1f527' */
 .ico-clock-1:before { content: ""; } /* '\e826' */
-.ico-block-1:before { content: ""; } /* '\e833' */
+.ico-block-1:before, .ico-cancel:before { content: ""; } /* '\e833' */
 
 
 
