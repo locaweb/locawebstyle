@@ -163,7 +163,7 @@ input.input360 {width:360px;}
 
 legend + .control-group {margin-top:0;}
 
-.sideBySide {overflow: hidden;}
+.sideBySide:after {content:" "; display:block; clear:both;}
 .sideBySide .control-group {
   padding-bottom:3px; 
   padding-right: 10px;
@@ -190,7 +190,7 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top:0;}
 .simpleFilter {
   border-bottom:1px solid #e5e5e5;
   margin-bottom:20px;
-  padding: 15px 0;
+  padding: 15px 0 10px;
   min-height: 30px;
 }
 .simpleFilter form {margin:0;}
