@@ -363,7 +363,8 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   margin:15px 0 0;
 }
 
-.boxActions .btn {display:inline-block; margin-right:2px; float:none;}
+.boxActions .btn {display:inline-block; margin-right:5px; float:none;}
+.boxActions .btn.fright {margin-left:5px;}
 .boxActionsTools {padding-left:0; border-top:none;}
 .boxActionsTools .btn {margin-right:2px;}
 
