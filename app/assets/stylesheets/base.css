@@ -776,7 +776,7 @@ tr.active .actionsTable {display:none;}
   transition: all .2s ease-out;
 }
 
-.pathWay li a, .pathWay li.disable a:hover {
+.pathWay li a, .pathWay li.disable:hover a {
   border-left: 1px dotted #CCC;
   border-bottom: 2px solid white;
   padding: 5px 0 0 5px;
