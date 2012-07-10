@@ -862,6 +862,7 @@ tr.active .actionsTable {display:none;}
   position:relative;
 }
 
+
 .infoBubble h6 {
   color:#1a4294;
   font:bold 12px verdana, arial, tahoma, sans-serif;
@@ -873,18 +874,19 @@ tr.active .actionsTable {display:none;}
   min-width:283px;
   cursor: default;
   border-radius:5px;
+  z-index:2;
   position: relative;
   left: 53px; top: -23px;
   opacity:0;
-  visibility: hidden;
-  z-index: 1;
-  -webkit-transition:all .2s ease-in;
+  z-index:-1;
+  -webkit-transition: all .2s linear;
 }
 
+.infoBubble:hover {z-index:1;}
 .infoBubble:hover .bubbleContent {
   opacity:1;
-  visibility: visible;
   left:23px;
+  z-index:1;
 }
 
 .infoBubble .bubbleContent:before {
