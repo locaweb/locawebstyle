@@ -762,7 +762,8 @@ tr.active .actionsTable {display:none;}
 .pathWay {clear:both;}
 .pathWay ol:after, .pathWay ul:after {content:" "; display:block; clear:both;}
 .pathWay ol, .pathWay ul {margin:0 0 30px; padding:0;}
-.pathWay li {
+.pathWay li.disable, .pathWay li.disable a {cursor: default;}
+.pathWay li, .pathWay li.disabled, .pathWay li.disable:hover {
   margin-right:1px;
   list-style: none;
   width: 19.9%;
@@ -774,7 +775,8 @@ tr.active .actionsTable {display:none;}
   -o-transition: all .2s ease-out;
   transition: all .2s ease-out;
 }
-.pathWay li a {
+
+.pathWay li a, .pathWay li.disable a:hover {
   border-left: 1px dotted #CCC;
   border-bottom: 2px solid white;
   padding: 5px 0 0 5px;
@@ -801,7 +803,7 @@ tr.active .actionsTable {display:none;}
   text-transform: capitalize;
 }
 
-.pathWay li b {
+.pathWay li b, .pathWay li.disable:hover b {
   color:#b8b8b8;
   letter-spacing: -3px;
   margin-right: 5px;
