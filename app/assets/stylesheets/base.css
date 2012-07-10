@@ -739,7 +739,7 @@ p + .boxCollapse {margin-top:30px;}
   box-shadow: none;
   cursor:default;
   padding:0;
-  color:#E3E3E3;
+  color:#666;
 }
 .boxCollapse .tableList tr:nth-child(even){background-color:#f4f4f4;}
 .boxCollapse .tableList thead th {background:#cecece; color:#545454; font-weight:bold;}
