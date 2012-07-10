@@ -860,6 +860,7 @@ tr.active .actionsTable {display:none;}
   cursor:pointer;
   background:url(/img/infoBubble.png) no-repeat center center;
   position:relative;
+  vertical-align: middle;
 }
 
 
