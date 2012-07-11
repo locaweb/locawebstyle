@@ -905,3 +905,8 @@ tr.active .actionsTable {display:none;}
   border:1px solid #b5b5b5;
   padding:14px 12px;
 }
+
+/*** COLLAPSE 
+**** Algumas adequações
+***/
+.ie8 .in.collapse {height:auto !important;}

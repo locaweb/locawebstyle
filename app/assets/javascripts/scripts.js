@@ -172,6 +172,21 @@ $(document).ready(function() {
   $('.infoBubble').wrapInner('<div class="bubbleContent" />')
   $('.bubbleContent').wrapInner('<div class="bubbleContentInner" />')
 
+
+  // Identificando os IEs Mother Fuckers...
+  if ($.browser.msie) {
+    if(parseInt($.browser.version) == 8){
+         // Para IE8
+         $("html").addClass("ie8");
+    } else if(parseInt($.browser.version) == 7){
+         // Para IE7
+         $("html").addClass("ie7");
+    } else if(parseInt($.browser.version) == 6){
+         // Para IE6
+         $("html").addClass("ie6");
+    }
+  }
+
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
 
