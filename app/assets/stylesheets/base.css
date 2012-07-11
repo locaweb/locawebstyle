@@ -646,6 +646,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
 
 h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; border-left:1px solid #CCC; color:#767676;}
 h6 .lnkSeta {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC; padding-left:10px;}
+
 /*** 
 **** BREADCRUMB
 ***/
@@ -660,6 +661,9 @@ h6 .lnkSeta {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC
   font:11px verdana, tahoma, arial, helvetica, sans-serif;
   border-bottom:1px solid #d4d4d4;
   cursor: default;
+
+  /** No Bootstrap já existe um gradiente para o Breadcrumb. Tivemos que tirar isso aqui. **/
+  filter: none;
 }
 .breadcrumb li {margin-right:10px;}
 .breadcrumb li:before {
