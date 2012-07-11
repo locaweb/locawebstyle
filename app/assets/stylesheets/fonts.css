@@ -19,14 +19,28 @@ body, li, p, a {
 }
 
 /** ICONS **/
-@font-face {
+/*@font-face {
   font-family: 'locaweb';
   src: url('/fonts/locaicons/locaweb.eot');
   src: url('/fonts/locaicons/locaweb.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/locaicons/locaweb.svg#locaweb') format('svg'),
+       url('/fonts/locaicons/locaweb.woff') format('woff'),
        url('/fonts/locaicons/locaweb.ttf') format('truetype');
-       /*url('/fonts/locaicons/locaweb.svg#locaweb') format('svg')url('/fonts/locaicons/locaweb.woff') format('woff')*/
   font-weight: normal; font-style: normal;
 }
+*/
+
+@font-face {
+  font-family: 'locaweb';
+  src: url('/fonts/locaicons/Locaweb-Icons.eot');
+  src: url('/fonts/locaicons/Locaweb-Icons.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/locaicons/Locaweb-Icons.svg#Locaweb-Icons') format('svg'),
+    url('/fonts/locaicons/Locaweb-Icons.woff') format('woff'),
+    url('/fonts/locaicons/Locaweb-Icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 @font-face {
   font-family: 'Ubuntu';
