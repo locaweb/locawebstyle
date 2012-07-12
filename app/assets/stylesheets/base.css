@@ -563,6 +563,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   padding:13px 5px 12px 0;
   min-width:65px;
 }
+.statusMessageBox li a {color:#2a2a2a;}
 
 .statusMessageBox h6 {
   color:#767676;
@@ -637,12 +638,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
 
 .lists .actionsTable a {border-left:1px solid #CCC; padding:0; padding-left:3px; line-height: 0;}
 .lists .actionsTable a:first-child {border-left:0;}
-/*
-.lists .actionsTable {
-  display:block;
-  border-top:1px solid #EFEFEF;
-  margin:5px 0 0;
-}*/
+
 
 h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; border-left:1px solid #CCC; color:#767676;}
 h6 .lnkSeta {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC; padding-left:10px;}
