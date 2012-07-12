@@ -53,9 +53,13 @@
   text-transform: uppercase;
   letter-spacing: -1px;
 }
-.titSide.titDadosConta {background-image:url(/img/ico-dadosConta.png)}
-.titSide.titMeiosPagto {background-image:url(/img/ico-convenios.png)}
-.titSide.titAjudaSuporte {background-image:url(/img/ico-dadosConta.png)}
+.titSide.titDadosConta {background-image:url(/img/ico-dadosConta.png);}
+.titSide.titMeiosPagto {background-image:url(/img/ico-convenios.png);}
+.titSide.titAjudaSuporte {background-image:url(/img/ico-dadosConta.png);}
+
+.colorGreen .titSide.titDadosConta {background-image:url(/img/ico-dadosContaGreen.png);}
+.colorGreen .titSide.titAjudaSuporte {background-image:url(/img/ico-ajudasuporteGreen.png);}
+.colorGreen .titSide.titDicas {background-image:url(/img/ico-dicasGreen.png);}
 
 /** Lista com links em BG Branco **/
 .listWhite {margin:0; padding:0;}

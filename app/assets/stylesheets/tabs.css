@@ -11,7 +11,7 @@
 .tabs li {display:inline;}
 .tabs li a {
   display:inline-block;
-  font:500 11px Ubuntu;
+  font:500 11px Ubuntu, helvetica, tahoma, verdana, arial, sans-serif;
   text-transform:uppercase;
   color:#545454;
   padding:13px 10px 7px;
