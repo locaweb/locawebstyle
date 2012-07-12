@@ -139,7 +139,7 @@ h3, legend {font: 20px Ubuntu, arial, verdana, tahoma, sans-serif;}
 [class^="span"] h3:first-child {padding:20px 0 10px;}
 h4 {font: 18px UbuntuLight, arial, verdana, tahoma, sans-serif; margin-bottom:5px;}
 h3 + h4 {margin-top:15px;}
-
+h4 + .lnkSeta {border-left:1px solid #bababa; margin-left:10px; padding-left:10px;}
 h5 {font: 15px UbuntuMedium, arial, verdana, tahoma, sans-serif;}
 h6 {
     font: 14px Ubuntu, arial, verdana, tahoma, sans-serif;
@@ -339,7 +339,7 @@ h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
 .pagination .disabled a {border:none;}
 
 .navView .pagination {float:right;}
-.tab-content .navView {padding:10px 10px 15px;}
+.tab-content .navView {padding:15px 10px;}
 .navView {
   margin:20px 0;
   padding:9px 10px;

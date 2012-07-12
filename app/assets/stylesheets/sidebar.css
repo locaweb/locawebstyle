@@ -12,11 +12,18 @@
   margin:10px;
   border-radius:2px;
 }
-.innerSideBox.boxWhite {background:#FFF; padding:10px; border-radius:3px;}
+.boxWhite {background:#FFF; padding:10px; border-radius:3px;}
 .innerSideBox.boxGray {background:#e2e2e2; padding:10px;}
+
+.list .boxWhite {list-style:none; margin-bottom:1px; padding:7px 10px; line-height:15px;}
+.list .boxWhite a {color:#767676;}
 
 .innerSideBox img {margin:0 3px 8px 0;}
 .innerSideBox .control-group:last-child {margin-bottom:0;}
+
+.innerSideBox [class^="ico-"], .innerSideBox [class*="ico-"] {color:#2a3a2a;}
+
+.innerSideBox + .innerSideBox {margin-top:1px; margin-bottom:1px;}
 
 .sideBox h6, .sideBox .grayP {
   margin:0; padding:0;
@@ -30,10 +37,11 @@
   margin:0; padding:0;
   color:#2a2a2a;
 }
+.innerSideBox p:last-child {margin-bottom:0;}
 
 .sideBox hr { margin:5px 0;}
 
-
+.sidebar[classˆ="span"], .sidebar[class*=" span"] {margin-top:0;}
 /** Títulos com ícones da SIDEBAR **/
 .titSide {
   text-transform:uppercase;
@@ -130,5 +138,9 @@
   padding: 10px 10px 0;
   margin: 0;
 }
+
 h4 + .tableList {margin:10px 0 0;}
 h4 + .boxWhite {margin-top:4px;}
+
+.sideBox h5 {padding:10px 10px 0; margin:0;}
+h5 + .innerSideBox {margin-top:5px;}
