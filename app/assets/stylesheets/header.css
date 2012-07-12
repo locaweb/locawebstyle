@@ -14,6 +14,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   font:33px LacunaRegular, verdana, arial, tahoma, sans-serif;
 } 
 .serviceName a {text-decoration:none;  color:#777; margin-left:-4px;}
+.serviceName a:hover {text-decoration:none; opacity:0.7;}
 
 .serviceName span {
   font-size: 13px;
