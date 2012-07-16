@@ -1,4 +1,4 @@
-html, body {height:100%;}
+html, body {height:100%; font-family:verdana, tahoma, arial, helvetica, sans-serif;}
 
 .geral {position: relative; height:100%; min-height:75%;}
 #main {padding-top:25px; min-height:75%; position:relative; background:url(/img/bgDesgradeBody.png) repeat-X top;}
@@ -242,9 +242,7 @@ textarea:focus + .help-placeholder {
 }
 h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
 
-.innerSideBox + .lnkSeta {
-  margin:-5px 0 10px 10px;
-}
+.innerSideBox + .lnkSeta {margin:-5px 0 10px 10px;}
 
 /** BOX COM FUNDO CINZA
 *** geralmente tem um collapseGroup dentro
@@ -635,7 +633,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   font:bold 12px verdana, arial, tahoma, sans-serif;
   color:#545454;
 }
-.lists .statusMessageBox p {color:#767676; padding:3px 0 0 10px; font:12px verdana;}
+.lists .statusMessageBox p {color:#767676; padding:3px 0 0 10px; font:12px verdana, arial, helvetica, tahoma, sans-serif;}
 
 h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; border-left:1px solid #CCC; color:#767676;}
 h6 .lnkSeta {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC; padding-left:10px;}

@@ -24,7 +24,6 @@ body, li, p, a {
   src: url('/fonts/locaicons/Locaweb-Icons.eot');
   src: url('/fonts/locaicons/Locaweb-Icons.eot?#iefix') format('embedded-opentype'),
     url('/fonts/locaicons/Locaweb-Icons.svg#Locaweb-Icons') format('svg'),
-    url('/fonts/locaicons/Locaweb-Icons.woff') format('woff'),
     url('/fonts/locaicons/Locaweb-Icons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -35,7 +34,6 @@ body, li, p, a {
   font-family: 'Ubuntu';
   src: url('/fonts/ubuntu/ubuntu-regular-webfont.eot');
   src: url('/fonts/ubuntu/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
-     url('/fonts/ubuntu/ubuntu-regular-webfont.woff') format('woff'),
      url('/fonts/ubuntu/ubuntu-regular-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -45,7 +43,6 @@ body, li, p, a {
   font-family: 'UbuntuBold';
   src: url('/fonts/ubuntu/ubuntu-bold-webfont.eot');
   src: url('/fonts/ubuntu/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
-     url('/fonts/ubuntu/ubuntu-bold-webfont.woff') format('woff'),
      url('/fonts/ubuntu/ubuntu-bold-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -55,7 +52,6 @@ body, li, p, a {
   font-family: 'UbuntuLight';
   src: url('/fonts/ubuntu/ubuntu-light-webfont.eot');
   src: url('/fonts/ubuntu/ubuntu-light-webfont.eot?#iefix') format('embedded-opentype'),
-     url('/fonts/ubuntu/ubuntu-light-webfont.woff') format('woff'),
      url('/fonts/ubuntu/ubuntu-light-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -65,7 +61,6 @@ body, li, p, a {
   font-family: 'UbuntuMedium';
   src: url('/fonts/ubuntu/ubuntu-medium-webfont.eot');
   src: url('/fonts/ubuntu/ubuntu-medium-webfont.eot?#iefix') format('embedded-opentype'),
-     url('/fonts/ubuntu/ubuntu-medium-webfont.woff') format('woff'),
      url('/fonts/ubuntu/ubuntu-medium-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -77,7 +72,6 @@ body, li, p, a {
   font-family: 'LacunaRegular';
   src: url('/fonts/lacuna/lacuna-webfont.eot');
   src: url('/fonts/lacuna/lacuna-webfont.eot?#iefix') format('embedded-opentype'),
-     url('/fonts/lacuna/lacuna-webfont.woff') format('woff'),
      url('/fonts/lacuna/lacuna-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -88,7 +82,6 @@ body, li, p, a {
   font-family: 'LacunaItalicRegular';
   src: url('/fonts/lacuna/lacuna-italic-webfont.eot');
   src: url('/fonts/lacuna/lacuna-italic-webfont.eot?#iefix') format('embedded-opentype'),
-     url('/fonts/lacuna/lacuna-italic-webfont.woff') format('woff'),
      url('/fonts/lacuna/lacuna-italic-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;

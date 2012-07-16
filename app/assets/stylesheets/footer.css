@@ -12,7 +12,7 @@ footer#rodape {
 #rodape nav {height:50px;}
 
 #rodape nav h6 {
-  font: 300 17px Ubuntu;
+  font: 300 17px Ubuntu, verdana, tahoma, arial, helvetica, sans-serif;
   color:#FFF;
   text-transform:uppercase;
   background:#000;
