@@ -9,8 +9,6 @@
   font-family: Ubuntu, verdana, arial, helvetica, tahoma, sans-serif;
 }
 
-[class^="ico-"]:hover, [class*="ico-"]:hover {text-decoration: none; opacity:0.75;}
-
 [class^="btn-"][class^="ico-"]:before, [class*="btn-"][class*="ico-"]:before {margin-right:5px; vertical-align: middle;}
 
 [class^="btn-"][class^="ico-"], [class*="btn-"][class*="ico-"] {padding-left:5px;}

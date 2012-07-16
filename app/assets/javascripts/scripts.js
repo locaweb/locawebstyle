@@ -185,7 +185,12 @@ $(document).ready(function() {
          // Para IE6
          $("html").addClass("ie6");
     }
+  } else if ($.browser.mozilla) {
+    $("html").addClass("gecko");
+  } else if ($.browser.webkit) {
+    $("html").addClass("webkit");
   }
+
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
