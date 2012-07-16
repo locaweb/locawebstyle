@@ -1,10 +1,12 @@
 [class^="ico-"], [class*="ico-"] {
+  font-size:12px;
   font-style: normal;
   position:relative;
   display: inline-block;
   vertical-align:middle;
   min-height:17px;
   line-height:17px;
+  font-family: Ubuntu, verdana, arial, helvetica, tahoma, sans-serif;
 }
 
 [class^="btn-"][class^="ico-"]:before, [class*="btn-"][class*="ico-"]:before {margin-right:5px; vertical-align: middle;}
