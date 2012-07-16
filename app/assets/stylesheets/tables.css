@@ -77,17 +77,28 @@
   padding:5px 0 0;
 }
 tr:hover .actionsTable {display:block;}
-.statusMessageBox .actionsTable {display:block;}
+.statusMessageBox .actionsTable {
+  display: block;
+  border-top: 1px solid #E5E5E5;
+  margin: 7px 10px;
+  padding: 2px 0 0;
+}
 
 .actionsTable li {
-  display:inline-block;
+  display:inline;
+  border:none;
   *display:inline;
-  background:url(/img/sepActionsTable.gif) no-repeat right center;
   *zoom:1;
-  padding-right:10px;
+  padding:0;
   line-height:11px;
 }
 
 .actionsTable li:last-child {background:none;}
 
-.actionsTable li a {font-weight:normal !important;}
+.actionsTable li a {
+  font-weight:normal !important;
+  display:inline-block;
+  padding-right:10px;
+  background:url(/img/sepActionsTable.gif) no-repeat right center;
+}
+.actionsTable li:last-child a {background-image:none;}
