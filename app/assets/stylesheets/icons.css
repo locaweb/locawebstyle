@@ -11,7 +11,7 @@
 
 [class^="btn-"][class^="ico-"]:before, [class*="btn-"][class*="ico-"]:before {margin-right:5px; vertical-align: middle;}
 
-[class^="btn-"][class^="ico-"], [class*="btn-"][class*="ico-"] {padding-left:5px; color:#FFF;}
+[class^="btn-"][class^="ico-"], [class*="btn-"][class*="ico-"] {padding-left:5px;}
 
 [class^="ico-"]:before, [class*="ico-"]:before, .lnkSeta:before {
   display:inline-block;
@@ -30,6 +30,9 @@
 .tableList td [class^="ico-"], .tableList td [class*="ico-"] {font-weight:normal;}
 
 .lnkSeta:before {position:relative; top:-1px;}
+
+.btn-warning[class^="btn-"], .btn-warning[class*=" btn-"], 
+.btn-danger[class^="btn-"], .btn-danger[class*=" btn-"] {color:#FFF;}
 
 /** Quando o ícone tem que ir para a direita **/
 .icoPosRight[class^="btn-"][class^="ico-"],
@@ -55,7 +58,6 @@
 
 .ico-trash, .ico-cancel {color:#b54646 !important;}
 .btn.ico-trash {color:#FFF !important;}
-
 
 .ico-plus:before {content: "\21";}
 .ico-keyboard:before {content: "\22";}
