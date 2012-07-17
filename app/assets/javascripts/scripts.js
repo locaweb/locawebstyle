@@ -175,7 +175,10 @@ $(document).ready(function() {
 
   // Identificando os IEs Mother Fuckers...
   if ($.browser.msie) {
-    if(parseInt($.browser.version) == 8){
+    if(parseInt($.browser.version) == 9){
+         // Para IE9
+         $("html").addClass("ie9");
+    } else if (parseInt($.browser.version) == 8){
          // Para IE8
          $("html").addClass("ie8");
     } else if(parseInt($.browser.version) == 7){

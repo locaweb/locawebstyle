@@ -691,67 +691,6 @@ td .progress {max-width:50px;}
 }
 .progress .bar b {padding:0 3px; text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);}
 
-/***
-**** BOX Collpase
-***/
-p + .boxCollapse {margin-top:30px;}
-.boxCollapse {
-  border-radius:3px;
-  padding:3px;
-  margin:0 0 10px; 
-  border:1px solid #e5e5e5; 
-  border-bottom-width:2px;
-  background:url(/img/setaCollapseBottom.png) no-repeat 99% 10px;
-  -webkit-transition:all .2s linear;
-}
-.boxCollapse header  {
-  border-left:5px solid #CCC;
-  padding:7px 10px;
-  cursor:pointer;
-}
-.boxCollapse:hover {background-color:#ECECEC;}
-
-.boxCollapse.active {background:#ececec url(/img/setaCollapseTop.png) no-repeat 99% 10px; padding-bottom:10px;}
-.boxCollapse.active h4 {font-weight:bold;}
-.boxCollapse .collapse {padding:0 15px;}
-.boxCollapse .collapse:before {content: " "; display:block; padding:20px 0 0;}
-
-.boxCollapse header h4 {font:15px verdana, arial, tahoma, sans-serif;}
-.boxCollapse header p {font:12px verdana, arial, tahoma, sans-serif; color:#767676; padding:0; margin:0;}
-
-.boxCinzaInner {background:#ddd; padding:20px 10px; margin-bottom:30px;}
-.boxCinzaInner .control-group {margin:0;}
-.boxCollapse .tableList {
-  margin-top:15px;
-  margin-bottom:5px;
-  border-collapse: separate;
-  background:#FFF;
-}
-.boxCollapse table td {border-right:none;border-bottom:1px solid #ddd;}
-.boxCollapse form {margin-bottom:0;}
-.boxCollapse .tableList td .disabled {
-  background: none;
-  border: none;
-  box-shadow: none;
-  cursor:default;
-  padding:0;
-  color:#666;
-}
-.boxCollapse .tableList tr:nth-child(even){background-color:#f4f4f4;}
-.boxCollapse .tableList thead th {background:#cecece; color:#545454; font-weight:bold;}
-
-.boxCollapse .boxActions {margin-top:35px; clear:both; border-top-color:#d9d9d9;}
-
-.boxCollapse td .boxActions {
-  margin:0;
-  padding:0;
-  border:none;
-  display:none;
-}
-tr.active .boxActions {display:block; padding:10px 0 5px;}
-tr.active .boxActions .btn {margin-right:0;}
-tr.active .actionsTable {display:none;}
-
 /*** PATH 
 **** Passos de algum processo.
 ***/
