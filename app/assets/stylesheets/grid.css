@@ -18,6 +18,36 @@
   margin-left: 20px;
 }
 
+/** Outras telas, desktops e até tablets
+*** Até 1220px - Este é o default e é o que o IE vai entender
+**/
+.limite, 
+#menuPrincipal > ul,
+.container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {width: 988px;}
+
+.span16 {width: 988px;}
+.span15 {width: 925px;}
+.span14 {width: 862px;}
+.span13 {width: 799px;}
+.span12 {width: 736px;}
+.span11 {width: 673px;}
+.span10 {width: 610px;}
+.span9 {width: 547px;}
+.span8 {width: 484px;}
+.span7 {width: 421px;}
+.span6 {width: 358px;}
+.span5 {width: 295px;}
+.span4 {width: 232px;}
+.span3 {width: 169px;}
+.span2 {width: 106px;}
+.span1 {width: 43px;}
+
+input.input120, input.span2 {width:90px !important;}
+.simpleFilter .searchInput {max-width:145px !important;}
+
+.statusMessageBox .span14 {width:840px;}
 
 /** Desktop
 *** Passando de 1220px
@@ -45,40 +75,5 @@
   .span3 {width: 205px;}
   .span2 {width: 130px;}
   .span1 {width: 55px;}
-
-}
-
-/** Outras telas, desktops e até tablets
-*** Até 1220px
-**/
-@media screen and (max-width: 1220px) {
-
-  .limite, 
-  #menuPrincipal > ul,
-  .container,
-  .navbar-fixed-top .container,
-  .navbar-fixed-bottom .container {width: 988px;}
-
-  .span16 {width: 988px;}
-  .span15 {width: 925px;}
-  .span14 {width: 862px;}
-  .span13 {width: 799px;}
-  .span12 {width: 736px;}
-  .span11 {width: 673px;}
-  .span10 {width: 610px;}
-  .span9 {width: 547px;}
-  .span8 {width: 484px;}
-  .span7 {width: 421px;}
-  .span6 {width: 358px;}
-  .span5 {width: 295px;}
-  .span4 {width: 232px;}
-  .span3 {width: 169px;}
-  .span2 {width: 106px;}
-  .span1 {width: 43px;}
-
-  input.input120, input.span2 {width:90px !important;}
-  .simpleFilter .searchInput {max-width:145px !important;}
-
-  .statusMessageBox .span14 {width:840px;}
 
 }
