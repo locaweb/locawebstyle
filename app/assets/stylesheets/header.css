@@ -60,6 +60,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   padding:9px;
   -webkit-transition:all .15s linear;
 }
+.ie9 #menuPrincipal > ul > li > a {font-size:13px;}
 #menuPrincipal > ul > li > a:hover {color:#666; background-color:transparent;}
 
 #menuPrincipal > ul > li.selected > a {

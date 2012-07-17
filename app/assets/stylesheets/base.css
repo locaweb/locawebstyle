@@ -701,7 +701,7 @@ td .progress {max-width:50px;}
 .pathWay li, .pathWay li.disabled, .pathWay li.disable:hover {
   margin-right:1px;
   list-style: none;
-  width: 19.9%;
+  width: 19.8%;
   float: left;
   background: url(../img/dotsPathWays.png) repeat-X bottom left;
   -webkit-transition: all .2s ease-out;
