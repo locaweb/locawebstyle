@@ -75,6 +75,27 @@
         <input type="text" class="input120">
     </div>
 </form>
+
+
+<div class="simpleFilter sideBySide formInline">
+  <a href="#" class="btn btn-primary ico-plus">Criar nova lista</a>
+  <form class="search control-group fright">
+    <div class="control-group fright">
+      <label>Buscar</label>
+      <input type="text" name="lists[q]" class="searchInput" placeholder="Buscar pelo nome">
+      <input type="submit" value="Buscar" class="btn">
+    </div>
+      <div class="period control-group">
+        <label for="period">Período:</label>
+        <input class="input120 datepicker datemask hasDatepicker" id="list_period_start" name="list[period_start]" type="text"><button type="button" class="ui-datepicker-trigger icon-calendar"></button> à
+        <input class="input120 datepicker datemask hasDatepicker" id="list_period_end" name="list[period_end]" type="text"><button type="button" class="ui-datepicker-trigger icon-calendar"></button>
+        <input type="submit" name="" value="Filtrar" class="btn">
+      </div>
+</form>  
+
+</div>
+
+
         <% end  %>
 
     <div class="codes">

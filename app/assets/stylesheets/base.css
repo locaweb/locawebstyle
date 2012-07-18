@@ -163,8 +163,8 @@ a {text-decoration:none;}
 a:hover {text-decoration:underline;}
 .ie8 a:hover {text-decoration: none;}
 
-#main.systemError, #main.noMenu {
-  background:none;
+#main.systemError, .noMenu #main {
+  background:#FFF;
   border-top:1px solid #CCC;
 }
 
@@ -289,11 +289,19 @@ h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
   background:url(/img/setaCollapseBottom.png) no-repeat 99% center;
 }
 .collapseGroup summary.active { font-weight:bold;   background:url(/img/setaCollapseTop.png) no-repeat 99% 8px;}
+.collapseGroup summary span.ico-dot {
+  font-size: 30px;
+  line-height: 20px;
+  margin-right: 0;
+  width: 25px;
+  text-align: center;
+}
 .collapseGroup summary span {
   font:bold 18px Ubuntu, verdana, arial, tahoma, helvetica, sans-serif;
   color:#777;
   border:none;
 }
+
 
 .collapseGroup .details p {padding:10px 30px;}
 
