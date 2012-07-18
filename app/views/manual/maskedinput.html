@@ -20,6 +20,30 @@ $("#cpf").mask("999.999.999-99");
             <input type="text" id="cpf">
         </div>
     </div>
+
+<hr class="sep">
+<h3>Trocando o Underline por outra coisa</h3>
+<p>Se você não quer que a máscara fique com os underlines (___), você pode modificar pelo parâmetro placeholder, assim:</p>
+<pre>
+$("#cpf").mask("999.999.999-99",{placeholder:" "});
+</pre>
+<p>Assim, ele mostraria espaços em vez de _ (underline).</p>
+<div class="control-group formInline">
+    <label>CPF:</label>
+    <input type="text" id="cpf2">
+</div>
+<hr class="sep">
+<h3>Executando uma função</h3>
+<p>Você pode executar uma função quando o campo for totalmente completo.</p>
+<pre>
+$("#data").mask("99/99/9999",{completed:function(){alert("Você digitou a data: "+this.val());}});
+</pre>
+<div class="control-group formInline">
+    <label>Data:</label>
+    <input type="text" id="data2">
+</div>
+
+<p>Veja <a href="http://digitalbush.com/projects/masked-input-plugin/">outras funções desse plugin aqui</a>.</p>
     <div class="codes">
         <%= clippy(yield(:code)) %>
     </div>

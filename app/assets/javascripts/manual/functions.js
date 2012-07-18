@@ -2,8 +2,10 @@ $(document).ready(function() {
 
 // Amostra do Masked Input em funcionamento
 $("#data").mask("99/99/9999");
+$("#data2").mask("99/99/9999",{completed:function(){alert("Você digitou a data: "+this.val());}});
 $("#telefone").mask("(999) 9999-9999");
 $("#cpf").mask("999.999.999-99");
+$("#cpf2").mask("999.999.999-99",{placeholder:" "});
 
 var selectedScheme = 'colorBlue';
 
