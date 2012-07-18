@@ -44,8 +44,8 @@ html, body {height:100%; font-family:verdana, tahoma, arial, helvetica, sans-ser
 .nobordertop {border-top:none;}
 
 hr {border:none; border-bottom:1px solid #e5e5e5; background:none; display:block; margin:15px 0;}
-hr.sepDot {border-bottom:1px dotted #d1d1d1;}
-hr.dotsSep {height: 5px;  background: url(/img/titDots.png);  margin:20px 0;}
+hr.dotsSep, hr.sepDot {height: 5px; background: url(/img/titDots.png);  margin:20px 0;}
+hr.sep {background-color: #E5E5E5; }
 
 pre {
   background:#FFF;
@@ -689,7 +689,7 @@ td .progress {max-width:50px;}
   font-size:8px;
   font-family:verdana;
 }
-.progress .bar b {padding:0 3px; text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);}
+.progress .bar b {display:inline-block; padding:0 3px; text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);}
 
 /*** PATH 
 **** Passos de algum processo.
