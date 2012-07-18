@@ -97,7 +97,7 @@
 .ico-user-add:before {content: "\44";}
 .ico-star-half:before {content: "\45";}
 .ico-ok-circle2:before {content: "\46";}
-.ico-cancel-circle2:before {content: "\47";}
+.ico-cancel-circle2:before, .ico-cancel:before {content: "\47";}
 .ico-th-large:before {content: "\48";}
 .ico-eye-off:before {content: "\49";}
 .ico-ico-tags:before {content: "\4a";}

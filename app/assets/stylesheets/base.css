@@ -153,8 +153,7 @@ legend {border-bottom:none; padding-bottom:5px;}
   background:url(/img/titDots.png) repeat-X left bottom;
 }
 
-h1 + p {padding-top:10px;}
-h2 + p {margin-top:10px;}
+h1 + p, h2 + p, h3 + p {padding-top:7px;}
 p {
   color:#767676;
   font:12px verdana, arial, tahoma, sans-serif;

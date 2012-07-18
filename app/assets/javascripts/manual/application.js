@@ -1,2 +1,1 @@
 //= require manual/functions
-

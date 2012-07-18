@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+// Amostra do Masked Input em funcionamento
+$("#data").mask("99/99/9999");
+$("#telefone").mask("(999) 9999-9999");
+$("#cpf").mask("999.999.999-99");
+
 var selectedScheme = 'colorBlue';
 
   $('#colorTheme').change(function(){
@@ -39,4 +44,6 @@ $(".clippy").live({
   clippycopied: function() {
     $(this).children(".clippy_label").text("texto copiado");
   }
+
 });
+

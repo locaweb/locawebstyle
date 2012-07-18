@@ -3,4 +3,5 @@
 //= require modernizr
 //= require chosen.jquery.min
 //= require bootstrap/js/bootstrap
+//= require masked-input
 //= require scripts
