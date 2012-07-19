@@ -147,6 +147,8 @@ $(document).ready(function() {
     $(this).parent('.details').toggleClass('active');
   });
 
+  $('[data-toggle="collapse"]').click(function (e){e.preventDefault();});
+  
   $('#menuPrincipal li').has('ul').addClass('parent');
 
   $('input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]').addClass('disabled');
