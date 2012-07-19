@@ -326,7 +326,9 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   background-color:transparent;
   padding:20px 0 20px 10px;
   margin:15px 0 0;
+  clear:both;
 }
+.obsGray .boxActions {border-top-color:#cbcbcb;}
 
 .boxActions .btn {display:inline-block; margin-right:5px; float:none;}
 .boxActions .btn.fright {margin-left:5px;}
@@ -737,6 +739,7 @@ td .progress {max-width:50px;}
   top:-6px; left:11px;
   content:" ";
 }
+.collapse .obsGray {top:5px;}
 
 .headerContent + .obsGray {margin-top:-10px;}
 

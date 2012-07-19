@@ -340,7 +340,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#513335', end
 .colorWine .btn-primary:active, 
 .colorWine .btn-primary.active, 
 .colorWine .btn-primary.disabled, 
-.colorWine .btn-primary[disabled] {background-color: #7ca837;}
+.colorWine .btn-primary[disabled] {background-color: #624446;}
 
 .colorWine .boxCollapse header {border-left-color: #513335;}
 

@@ -160,7 +160,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 }
 
 .infoLogin {
-  width:290px;
+  width:400px;
   position: absolute;
   bottom: 15px; right: 0px;
   text-align:right;
