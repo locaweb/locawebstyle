@@ -5,48 +5,6 @@ html, body {height:100%; font-family:verdana, tahoma, arial, helvetica, sans-ser
 #main > .limite {padding-bottom:160px;}
 .limite {margin: 0 auto;}
 
-.nofloat {float:none;}
-.fright {float:right !important;}
-.fleft {float:left;}
-
-.cboth {clear:both;}
-.cright {clear:right;}
-.cleft {clear:left;}
-
-.dblock {display:block;}
-.dinline {display:inline; float:none;}
-.dinlineblock {display:inline-block; float:none;}
-.dnone, .hide, .forceClass .dnone, .forceClass .hide {display:none;}
-
-.nomargin {margin:0;}
-.nomarginleft {margin-left:0;}
-.nomarginright {margin-right:0;}
-.nomargintop {margin-top:0;}
-.nomarginbottom {margin-bottom:0;}
-
-.nopadding {padding:0;}
-.nopaddingleft {padding-left:0;}
-.nopaddingright {padding-right:0;}
-.nopaddingtop {padding-top:0;}
-.nopaddingbottom {padding-bottom:0;}
-
-.txtLeft {text-align:left;}
-.txtRight {text-align:right;}
-.txtJustify {text-align:justify;}
-.txtCenter {text-align:center;}
-
-.widthAuto {width: auto;}
-
-.noborder {border:none;}
-.noborderright {border-right:none;}
-.noborderleft {border-left:none;}
-.noborderbottom {border-bottom:none;}
-.nobordertop {border-top:none;}
-
-hr {border:none; border-bottom:1px solid #e5e5e5; background:none; display:block; margin:15px 0;}
-hr.dotsSep, hr.sepDot {height: 5px; background: url(/img/titDots.png);  margin:20px 0;}
-hr.sep {background-color: #E5E5E5; }
-
 pre {
   background:#FFF;
   margin:5px 0;
