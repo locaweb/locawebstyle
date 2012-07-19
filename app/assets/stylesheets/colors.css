@@ -319,6 +319,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#513335', end
 .colorWine .pagination .prev a, 
 .colorWine .pagination .next a, 
 .colorWine .pagination .last a,
+.colorWine p a,
 .colorWine .breadcrumb {color:#513335;}
 
 .colorWine .btn-primary {
