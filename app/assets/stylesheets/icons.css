@@ -56,7 +56,7 @@
   width:17px; height:15px;
 }
 
-.ico-trash, .ico-cancel {color:#b54646 !important;}
+.ico-trash, .ico-cancel, .ico-delete {color:#b54646 !important;}
 .btn.ico-trash {color:#FFF !important;}
 
 .ico-plus:before {content: "\21";}
@@ -250,7 +250,7 @@
 .ico-photo:before {content: "\e05e";}
 .ico-th:before {content: "\e05f";}
 .ico-tag:before {content: "\e060";}
-.ico-trash:before {content: "\e061";}
+.ico-trash:before, .ico-delete:before {content: "\e061";}
 .ico-to-end:before {content: "\e062";}
 .ico-doc-inv:before {content: "\e063";}
 .ico-folder-inv:before {content: "\e064";}
@@ -342,7 +342,7 @@
 .ico-cd:before {content: "\e0ba";}
 .ico-folder:before {content: "\e0bb";}
 .ico-folder-open:before {content: "\e0bc";}
-.ico-doc-text:before {content: "\e0bd";}
+.ico-doc-text:before, .ico-tabela:before {content: "\e0bd";}
 .ico-stat:before {content: "\e0be";}
 .ico-stat-1:before {content: "\e0bf";}
 .ico-pin:before {content: "\e0c0";}

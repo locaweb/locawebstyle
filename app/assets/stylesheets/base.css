@@ -190,6 +190,7 @@ textarea:focus + .help-placeholder {
 *** FOI DESCONTINUADO EM DETRIMENTO AOS ICONES COM FONTES - Apagar na próxima versão de produção
 **/
 .lnkSeta {
+  cursor:pointer;
   color:#666;
   font: 12px Ubuntu, verdana, arial, sans-serif;
   display:inline-block;
