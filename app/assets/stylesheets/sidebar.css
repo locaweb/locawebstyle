@@ -100,10 +100,25 @@
 /** FIM LISTA BRANCA **/
 .sidebar .carousel {margin:0;}
 .sidebar .carousel ul {margin:0;}
-.sidebar .carousel-inner .item {min-height:135px;}
+.sidebar .carousel-inner .item {min-height:150px;}
 
-.sidebar .carousel h5 {color:#2a2a2a; font:bold 12px verdana, tahoma, arial, sans-serif; margin-bottom:5px;}
-.sidebar .carousel p {color:#767676; font: 12px/16px verdana, tahoma, arial, sans-serif; margin-bottom:5px;}
+.sidebar .carousel h5,
+.sidebar .carousel p {
+  font-family:verdana, tahoma, arial, sans-serif;
+  font-size:12px;
+  margin:0 0 5px;
+  padding:0;
+}
+.sidebar .carousel h5 {color:#2a2a2a; font-weight:bold;}
+.sidebar .carousel p {color:#767676; line-height: 16px;}
+
+.sidebar .carousel li li {
+  color:#767676;
+  font-size:11px;
+  font-weight:bold;
+  margin-left:15px;
+  margin-bottom:-5px;
+}
 
 .carouselNav {
   font:10px verdana, tahoma, arial, sans-serif;
