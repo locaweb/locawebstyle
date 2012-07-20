@@ -328,7 +328,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   margin:15px 0 0;
   clear:both;
 }
-.obsGray .boxActions {border-top-color:#cbcbcb;}
+.obsGray .boxActions, .boxFiltro .boxActions {border-top-color:#cbcbcb;}
 
 .boxActions .btn {display:inline-block; margin-right:5px; float:none;}
 .boxActions .btn.fright {margin-left:5px;}
@@ -336,7 +336,6 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
 .boxActionsTools .btn {margin-right:2px;}
 
 .modal .boxActions {margin-top:0;}
-
 /**
 *** Listagem de meios de pagamentos e outras observações
 **/
