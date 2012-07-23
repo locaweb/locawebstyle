@@ -101,7 +101,7 @@
 .sidebar .carousel {margin:0;}
 .sidebar .carousel ul {margin:0;}
 .sidebar .carousel-inner .item {min-height:150px;}
-
+.sidebar .carousel-inner { list-style-position:  inside;  }
 .sidebar .carousel h5,
 .sidebar .carousel p {
   font-family:verdana, tahoma, arial, sans-serif;
