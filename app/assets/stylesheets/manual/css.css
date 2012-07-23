@@ -7,6 +7,7 @@
   height: 0;
 }
 .clearfix { display: inline-table; }
+#exampleCarousel {width:640px;}
 
 .gridCode #main .limite [class^="span"] {margin-bottom:10px; background:#e3e3e3;}
 .gridCode #main .limite [class^="span"] p {margin:0; padding:10px;}
