@@ -263,12 +263,12 @@ footer#rodape {position:static;}
 
 aside.boxes .collapseGroup summary.active { font-weight:normal; color:#B60000;   background:url(/img/setaCollapseTop.png) no-repeat 99% 8px;}
 
-
 .the-icons {margin:0 0 0 50px;}
 .the-icons li {
   font-size: 15px;
   line-height: 24px;
   height: 24px;
+  margin-bottom:10px;
   display:block;
   text-align:left;
 }

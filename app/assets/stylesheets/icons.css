@@ -20,10 +20,10 @@
   font-weight:normal;
   speak: none;
   text-decoration:none;
-  vertical-align:top;
+  width:17px;
   text-align: center;
-  min-height:17px;
-  line-height:17px;
+  min-height:15px;
+  line-height:15px;
 }
 .ie8 [class^="ico-"]:before, .ie8 [class*="ico-"]:before, .ie8 .lnkSeta:before {vertical-align:top; text-decoration: none !important;}
 
