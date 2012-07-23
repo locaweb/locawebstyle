@@ -798,8 +798,8 @@ td .progress {max-width:50px;}
   background:url(/img/infoBubble.png) no-repeat center center;
   position:relative;
   vertical-align: middle;
+  text-indent: -9999px;
 }
-
 
 .infoBubble h6 {
   color:#1a4294;
@@ -819,7 +819,7 @@ td .progress {max-width:50px;}
   z-index:-1;
   -webkit-transition: all .2s linear;
 }
-
+/*
 .infoBubble:hover {z-index:1;}
 .infoBubble:hover .bubbleContent {
   opacity:1;
@@ -841,7 +841,7 @@ td .progress {max-width:50px;}
   background:#FFF;
   border:1px solid #b5b5b5;
   padding:14px 12px;
-}
+}*/
 
 /*** COLLAPSE
 **** Algumas adequações

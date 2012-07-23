@@ -176,9 +176,9 @@ $(document).ready(function() {
   });
 
   // Bubble de informação
-  var bubbleContent = $('.infoBubble').html()
-  $('.infoBubble').wrapInner('<div class="bubbleContent" />')
-  $('.bubbleContent').wrapInner('<div class="bubbleContentInner" />')
+  // var bubbleContent = $('.infoBubble').html()
+  // $('.infoBubble').wrapInner('<div class="bubbleContent" />')
+  // $('.bubbleContent').wrapInner('<div class="bubbleContentInner" />')
 
 
   // Identificando os IEs Mother Fuckers...
@@ -205,9 +205,10 @@ $(document).ready(function() {
   // Desabilita click em botoes com disabled
   $('.btn.disabled').click(function(event){event.preventDefault();})
 
+  $('.popover').popover()
+
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
-
 
 });
 
