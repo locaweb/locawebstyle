@@ -313,7 +313,7 @@
 .ico-odnoklassniki:before {content: "\e09d";}
 .ico-odnoklassniki-1:before {content: "\e09e";}
 .ico-down-circle:before {content: "\e09f";}
-.ico-left-circle:before, .lnkSeta.setaInv:before {content: "\e0a0";}
+.ico-left-circle:before, .lnkSeta.setaInv:before, .lnkSeta.setaLeft:before {content: "\e0a0";}
 .ico-up-circle:before {content: "\e0a1";}
 .ico-right-circle:before, .lnkSeta:before {content: "\e0a2";}
 .ico-move:before {content: "\e0a3";}

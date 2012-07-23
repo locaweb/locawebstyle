@@ -97,6 +97,7 @@ $(document).ready(function() {
     }
   });
 
+
   // Limpa inputs de formulários. Muito usado na busca avançada.
   $('.clearFormBt').live('click', function(e){
     e.preventDefault();
@@ -201,6 +202,8 @@ $(document).ready(function() {
     $("html").addClass("webkit");
   }
 
+  // Desabilita click em botoes com disabled
+  $('.btn.disabled').click(function(event){event.preventDefault();})
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));

@@ -226,6 +226,9 @@ h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
   margin:0;
   padding: 0 15px 11px 15px;
 }
+.boxGray h2 + p {
+  margin-top:10px;
+}
 
 /** COLLAPSE
 *** É o padrão do Bootstrap com algumas mudanças visuais
@@ -238,7 +241,7 @@ h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
   border-radius:3px;
   border:1px solid #d6d6d6;
 }
-.collapseGroup .details.active {background:#FFF;}
+.collapseGroup .details.active {background-color:#FFF;}
 
 .collapseGroup summary {
   color:#545454;
@@ -247,7 +250,7 @@ h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
   display:block;
   background:url(/img/setaCollapseBottom.png) no-repeat 99% center;
 }
-.collapseGroup summary.active { font-weight:bold;   background:url(/img/setaCollapseTop.png) no-repeat 99% 8px;}
+.collapseGroup .active summary { font-weight:bold;   background:url(/img/setaCollapseTop.png) no-repeat 99% 8px;}
 .collapseGroup summary span.ico-dot {
   font-size: 30px;
   line-height: 20px;
@@ -844,3 +847,5 @@ td .progress {max-width:50px;}
 **** Algumas adequações
 ***/
 .ie8 .in.collapse {height:auto !important;}
+
+.carousel-control {background-image:none !important;}
