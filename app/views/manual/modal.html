@@ -2,9 +2,24 @@
         <p>As modais são feitas integralmente no padrão Bootstrap. Qualquer dúvida, você pode ver <a href="http://twitter.github.com/bootstrap/javascript.html#modals">como é feito aqui</a>.</p>
         <p>O link tem alguns atributos que precisam estar presentes para que a modal seja chamada. Um deles é o <strong>data-toggle="modal"</strong>, que faz o javascript encontrar o elemento com o nome MODAL, e o atributo <strong>data-target="#modalEditarNome"</strong>, que pega o ID específico da modal que deverá ser chamada.</p>
 
-        <p><a class="lnkSeta" data-toggle="modal" data-target="#modalComSlider" href="#">Teste a modal com Wizard/Slider aqui!</a></p>
-<p><a class="lnkSeta" data-toggle="modal" data-target="#modalEditarNome" href="#">Teste a modal aqui!</a></p>
+        <p><a class="btn btn-primary" data-toggle="modal" data-target="#modalComSlider" href="#">Teste a modal com Wizard/Slider aqui!</a></p>
+        <p><a class="btn btn-primary" data-toggle="modal" data-target="#modalEditarNome" href="#">Teste a modal aqui!</a></p>
 
+<div class="well modal-example" style="background-color: #888; border: none;">
+            <div class="modal dblock in" style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1; max-width: 100%;">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>Título da Modal</h3>
+              </div>
+              <div class="modal-body">
+                <p>Um parágrafo bem bacana para a modal. Pode ter uma pancada de coisas, tipo formulários.</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn btn-primary">Salvar</a>
+                <a href="#" class="btn">Fechar</a>
+              </div>
+            </div>
+          </div>
 <div class="modal" id="modalEditarNome">
     <div class="modal-header">
         <a class="close" data-dismiss="modal">×</a>
