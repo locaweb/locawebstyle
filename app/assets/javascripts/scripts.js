@@ -205,7 +205,7 @@ $(document).ready(function() {
   // Desabilita click em botoes com disabled
   $('.btn.disabled').click(function(event){event.preventDefault();})
 
-  $('.popover').popover()
+  $('[rel="popover"]').popover()
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
