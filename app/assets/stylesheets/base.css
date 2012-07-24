@@ -199,7 +199,7 @@ textarea:focus + .help-placeholder {
   vertical-align: middle;
 }
 h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
-
+.lnkSeta:before {margin-right:0;}
 .innerSideBox + .lnkSeta {margin:-5px 0 10px 10px;}
 
 /** BOX COM FUNDO CINZA
@@ -258,6 +258,9 @@ h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
   width: 25px;
   text-align: center;
 }
+summary.ico-dot:before {font-size:25px; margin-top:-1px;}
+summary.ico-dot + div p {padding-left:23px !important;}
+
 .collapseGroup summary span {
   font:bold 18px Ubuntu, verdana, arial, tahoma, helvetica, sans-serif;
   color:#777;
@@ -807,42 +810,11 @@ td .progress {max-width:50px;}
   margin:0 0 5px;
 }
 
-.infoBubble .bubbleContent {
-  border:5px solid rgba(0,0,0,0.1);
-  min-width:283px;
-  cursor: default;
-  border-radius:5px;
-  z-index:2;
-  position: relative;
-  left: 53px; top: -23px;
-  opacity:0;
-  z-index:-1;
-  -webkit-transition: all .2s linear;
-}
-/*
-.infoBubble:hover {z-index:1;}
-.infoBubble:hover .bubbleContent {
-  opacity:1;
-  left:23px;
-  z-index:1;
-}
+.popover{margin-top:4px;}
+.popover-inner {background:rgba(0,0,0,0.2); padding:5px; box-shadow:inherit;}
+.popover .arrow {border-right:5px solid rgba(0,0,0,0.2) !important;}
 
-.infoBubble .bubbleContent:before {
-  content:" ";
-  position:absolute;
-  display:block;
-  width:12px; height:19px;
-}
-
-.infoBubble.bubbleLeft .bubbleContent:before { background:url(/img/setaleftBubble.png); left:-11px; top:15px;}
-.infoBubble.bubbleRight .bubbleContent:before { background:url(/img/setarightBubble.png); right:-11px; top:15px;}
-
-.bubbleContentInner {
-  background:#FFF;
-  border:1px solid #b5b5b5;
-  padding:14px 12px;
-}*/
-
+.popover-content p, .popover-content ul, .popover-content ol {}
 /*** COLLAPSE
 **** Algumas adequações
 ***/

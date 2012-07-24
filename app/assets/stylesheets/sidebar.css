@@ -131,27 +131,16 @@
 .carouselNav i {font-style:normal;}
 
 .carouselNav .carousel-control {
-  position:static;
-  display:inline-block;
-  border:none;
-  font-size:inherit;
-  border-radius:0;
-  line-height:auto;
-  display:inline-block;
-  width:5px; height:7px;
-  background:url(/img/largeArrows.png) no-repeat;
+  height: 17px;
+  width: 15px;
+  padding: 0; margin:-5px 0 0 0; overflow: hidden;
+  font-weight:bold;
+  vertical-align: middle;
+  color: black;
+  background: transparent;
 }
-.colorGray .carousel-control {background:url(/img/largeArrows.png) no-repeat 0 -7px;}
-.colorBlue .carousel-control {background:url(/img/largeArrows.png) no-repeat 0 -14px;}
-.colorRed .carousel-control {background:url(/img/largeArrows.png) no-repeat 0 -21px;}
-.colorGreen .carousel-control {background:url(/img/largeArrows.png) no-repeat 0 -28px;}
-.colorOrange .carousel-control {background:url(/img/largeArrows.png) no-repeat 0 -35px;}
-
-.colorGray .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -7px;}
-.colorBlue .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -14px;}
-.colorRed .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -21px;}
-.colorGreen .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -28px;}
-.colorOrange .carousel-control.left {background:url(/img/largeArrows.png) no-repeat -10px -35px;}
+.carouselNav .carousel-control.left {margin-right:12px;}
+.carouselNav .carousel-control.right {margin-left:10px;}
 
 .sideBox h4 {
   padding: 10px 10px 0;
