@@ -19,9 +19,9 @@
 }
 
 /** Outras telas, desktops e até tablets
-*** 
+***
 **/
-.limite, 
+.limite,
 #menuPrincipal > ul,
 .container,
 .navbar-fixed-top .container,
@@ -47,13 +47,13 @@
 input.input120, input.span2 {width:90px !important;}
 .simpleFilter .searchInput {max-width:145px !important;}
 
-.statusMessageBox .span14 {width:840px;}
+.home .span14 {width:840px;}
 
 /** Desktop
 *** Passando de 1220px
 **/
 @media screen and (min-width: 1220px) {
-  .limite, 
+  .limite,
   #menuPrincipal > ul,
   .container,
   .navbar-fixed-top .container,
