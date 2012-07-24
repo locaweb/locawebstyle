@@ -258,6 +258,9 @@ h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
   width: 25px;
   text-align: center;
 }
+summary.ico-dot:before {font-size:25px; margin-top:-1px;}
+summary.ico-dot + div p {padding-left:23px !important;}
+
 .collapseGroup summary span {
   font:bold 18px Ubuntu, verdana, arial, tahoma, helvetica, sans-serif;
   color:#777;
