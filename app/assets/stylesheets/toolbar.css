@@ -3,7 +3,7 @@
   position:relative;
   font: 300 12px verdana, tahoma, arial, helvetica, sans-serif;
 }
-#toolbar .limiteToolbar {position:relative; max-width: 1150px; margin:0 auto; height:33px;}
+#toolbar .limiteToolbar {position:relative; max-width: 1180px; margin:0 auto; height:33px;}
 
 #toolbar ul {margin:0; padding:0;}
 #toolbar li {list-style:none;}
@@ -22,7 +22,7 @@
 #toolbar .menuToolbar {
   position:absolute;
   left:260px; top:50%;
-  height:23px;
+  height:34px;
   margin-top:-17px;
 }
 #toolbar .menuToolbar li {float:left;}
@@ -102,7 +102,7 @@
 
 @media screen and (min-width:481px) and (max-width:640px) {
   #toolbar .limiteToolbar {width:100%; height:63px;}
-  #toolbar h1.logoToolbar {width:200px; float:left; position:static; margin:7px 0 5px 10px;}
+  #toolbar h1.logoToolbar {float:left; position:static; margin:7px 0 5px 10px;}
   #toolbar .menuToolbar {text-align:center; height:30px;  position:absolute; top:50px; left:0; width:100%; clear:left;}
   #toolbar .menuToolbar li {
     float:none;
@@ -117,8 +117,8 @@
     background: #373737 url(/img/bgOptToolbar.png) repeat-X left center;
     border-right: 1px solid #444;
     border-left: 1px solid #242424;
-    height: 33px;
-    line-height: 33px;
+    height: 29px;
+    line-height: 29px;
     padding: 0 20px;
     margin-left: -4px;
     width: 124px;
