@@ -48,7 +48,7 @@ footer#rodape {
 
 #rodape nav .lnkSeta {margin:15px 20px 0; color:#FFF;}
 
-.subfooter {padding:10px 0; color:#545454; font-size:11px; background:#FFF;}
+.subfooter {padding:10px 0; color:#545454; font-size:11px; background:#FFF; clear:both; overflow: hidden;}
 .subfooter strong {color:#2a2a2a;}
 .subfooter .lastAccess {
   padding:0 0 0 20px;

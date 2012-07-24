@@ -335,7 +335,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   clear:both;
 }
 .obsGray .boxActions, .boxFiltro .boxActions {border-top-color:#cbcbcb;}
-
+.obsGray h3:first-child {padding-top:0;}
 .boxActions .btn {display:inline-block; margin-right:5px; float:none;}
 .boxActions .btn.fright {margin-left:5px;}
 .boxActionsTools {padding-left:0; border-top:none;}
@@ -775,7 +775,6 @@ td .progress {max-width:50px;}
   top:-6px; left:11px;
   content:" ";
 }
-.collapse .obsGray {top:5px;}
 
 .headerContent + .obsGray {margin-top:-10px;}
 
