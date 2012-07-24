@@ -199,7 +199,7 @@ textarea:focus + .help-placeholder {
   vertical-align: middle;
 }
 h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
-
+.lnkSeta:before {margin-right:0;}
 .innerSideBox + .lnkSeta {margin:-5px 0 10px 10px;}
 
 /** BOX COM FUNDO CINZA

@@ -1,7 +1,6 @@
 /*** COR
 **** AZUL
 ***/
-
 .colorBlue #menuPrincipal > ul > li.selected a,
 .colorBlue .progress .bar,
 .colorBlue .pathWay li.active, 
@@ -38,7 +37,8 @@
 .colorBlue #menuPrincipal .parent > a:hover, 
 .colorBlue #menuPrincipal .parent:hover > a,
 .colorBlue td a,
-.colorBlue .breadcrumb  {color: #4B7CB8;}
+.colorBlue .breadcrumb,
+.colorBlue .carousel-control  {color: #4B7CB8;}
 
 .colorBlue #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
@@ -118,7 +118,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
 
 .colorGreen td a,
 .colorGreen [class^="ico-"], 
-.colorGreen [class*=" ico-"] {color:#6a9a25;}
+.colorGreen [class*=" ico-"],
+.colorGreen .carousel-control {color:#6a9a25;}
 
 .colorGreen #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
@@ -210,7 +211,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
 .colorOrange .boxGray.listDetail a,
 .colorOrange #menuPrincipal .parent > a:hover, 
 .colorOrange #menuPrincipal .parent:hover > a,
-.colorOrange td a {color: #ffa600;}
+.colorOrange td a,
+.colorOrange .carousel-control {color: #ffa600;}
 
 .colorOrange #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
@@ -289,7 +291,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
 .colorWine [class^="ico-"], 
 .colorWine [class*=" ico-"],
 .colorWine #menuPrincipal .parent > a:hover, 
-.colorWine #menuPrincipal .parent:hover > a {color: #513335;}
+.colorWine #menuPrincipal .parent:hover > a,
+.colorWine .carousel-control {color: #513335;}
 
 .colorWine #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 

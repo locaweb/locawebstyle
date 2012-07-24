@@ -1,5 +1,5 @@
 <h2>Estrutura de erro 500</h2>
-<hr>
+<div class="noMenu">
 <div id="toolbar">
     <div class="limiteToolbar">
         <h1 class="logoToolbar">Central do Cliente</h1>
@@ -21,7 +21,7 @@
 </header>
 <%= content_for_clippy do %>
 
-<div id="main" class="systemError">
+<div id="main">
     <div class="limite">
         <div class="row">
             <div class="span16">
@@ -63,7 +63,7 @@
         </div>
     </div>
 </footer>
-
+</div>
 <div class="codes">
     <%= clippy(yield(:code)) %>
 </div>
