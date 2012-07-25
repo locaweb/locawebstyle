@@ -33,6 +33,7 @@
   color:#797979;
   padding:5px 10px;
   text-align:center;
+  word-break: break-all;
   border-right:1px solid #ddd;
 }
 .tableList tbody td a {font-weight:bold;}
