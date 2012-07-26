@@ -38,7 +38,7 @@ Locastyle = (function() {
       showOn: "button",
       dateFormat: "dd/mm/yy",
       monthNamesShort: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],
-      monthNames: ["Janeis","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
+      monthNames: ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
     });
 
     // Encontra os .help-inline e define uma largura se referenciando a largura dos inputs próximos.
