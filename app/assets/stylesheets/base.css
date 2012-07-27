@@ -337,7 +337,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
 .obsGray .boxActions, .boxFiltro .boxActions {border-top-color:#cbcbcb;}
 .obsGray h3:first-child {padding-top:0;}
 .boxActions .btn {display:inline-block; margin-right:5px; float:none;}
-.boxActions .btn.fright {margin-left:5px;}
+.boxActions .btn.fright {color: #333; margin-left:5px;}
 .boxActionsTools {padding-left:0; border-top:none;}
 .boxActionsTools .btn {margin-right:2px;}
 
@@ -523,6 +523,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   min-height:98px;
 
 }
+.revisit .chamadasBox h3{ font:  100 18px Ubuntu, verdana, arial, tahoma, sans-serif;}
 .revisit .chamadasBox div:hover {
 
   background:#f1f6e8 url(/img/bgChamadasBoxGreen.png) repeat-X center bottom;
