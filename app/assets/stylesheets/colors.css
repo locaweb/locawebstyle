@@ -152,7 +152,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
 .colorGreen .pagination .next a,
 .colorGreen .pagination .last a,
 .colorGreen .breadcrumb {color:#6a9a25;}
-
+.colorGreen .boxActions .btn{ color: #666;}
 .colorGreen .btn-primary {
   background-color: #5BB75B;
   background-image: -ms-linear-gradient(top, #7ca837, #55851a);
@@ -163,10 +163,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
   background-image: linear-gradient(top, #7ca837, #55851a);
   background-repeat: repeat-x;
   border-color: #6a9a25;
+
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#7ca837', endColorstr='#55851a', GradientType=0);
   filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
-
+.colorGreen .modal-header a.close{ color: #000;}
+.colorGreen a.btn{ color: #333;}
+.colorGreen .btn-primary,
+.colorGreen .btn-danger{
+  color: #fff!important;
+}
 .colorGreen .btn-primary:hover,
 .colorGreen .btn-primary:active,
 .colorGreen .btn-primary.active,
