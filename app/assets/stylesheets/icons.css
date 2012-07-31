@@ -142,7 +142,7 @@
 .ico-left-open:before {content: "\70";}
 .ico-right-open:before {content: "\71";}
 .ico-up-open:before {content: "\72";}
-.ico-arrows-cw:before {content: "\73";}
+.ico-arrows-cw:before, .ico-atualizar:before {content: "\73";}
 .ico-play-circle2:before {content: "\74";}
 .ico-to-end-alt:before {content: "\75";}
 .ico-to-start-alt:before {content: "\76";}
@@ -354,7 +354,7 @@
 .ico-phone-1:before {content: "\e0c5";}
 .ico-megaphone:before {content: "\e0c6";}
 .ico-upload:before {content: "\e0c7";}
-.ico-download:before {content: "\e0c8";}
+.ico-download:before, .ico-unarchive:before {content: "\e0c8";}
 .ico-box:before {content: "\e0c9";}
 .ico-cellphone:before {content: "\e0ca";}
 .ico-signal-1:before {content: "\e0cb";}
@@ -373,9 +373,6 @@
 .ico-wrench:before {content: "\e0d8";}
 .ico-code:before {content: "\e0d9";}
 .ico-rocket:before {content: "\e0da";}
-
-
-
 
 
 
