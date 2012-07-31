@@ -5,6 +5,9 @@ html, body {height:100%; font-family:verdana, tahoma, arial, helvetica, sans-ser
 #main > .limite {padding-bottom:160px;}
 .limite {margin: 0 auto;}
 
+/** Menu para Acessibilidade escondido **/
+.accessMenu {position:absolute; top:-999px;}
+
 pre {
   background:#FFF;
   margin:5px 0;
