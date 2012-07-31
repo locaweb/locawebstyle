@@ -48,7 +48,7 @@ input.input120, input.span2 {width:90px !important;}
 .simpleFilter .searchInput {max-width:145px !important;}
 
 .home .span14 {width:840px;}
-
+.revisit .chamadasBox h3{ font: 100 16px Ubuntu, verdana, arial, tahoma, sans-serif;}
 /** Desktop
 *** Passando de 1220px
 **/
@@ -75,6 +75,8 @@ input.input120, input.span2 {width:90px !important;}
   .span3 {width: 205px;}
   .span2 {width: 130px;}
   .span1 {width: 55px;}
+
+  .revisit .chamadasBox h3{ font: 100 20px Ubuntu, verdana, arial, tahoma, sans-serif;}
 
 }
 
@@ -147,7 +149,7 @@ input.input120, input.span2 {width:90px !important;}
     -webkit-transition:all .15s linear;
   }
   #menuPrincipal > ul > li > a:hover, #menuPrincipal > ul > li.selected > a {
-    border-radius:0; 
+    border-radius:0;
     background-image:none;
   }
 
@@ -207,10 +209,10 @@ input.input120, input.span2 {width:90px !important;}
 
   #rodape nav h6 {display:none; font-size:10px; text-transform:lowercase; padding:12px 7px 11px;}
   #rodape nav ul li a {
-    display:inline-block; 
-    font-size: 11px; 
-    background-size:20%; 
-    padding:6px 20px 6px 17px; 
+    display:inline-block;
+    font-size: 11px;
+    background-size:20%;
+    padding:6px 20px 6px 17px;
     margin-right:5px;
   }
   #rodape nav .lnkSeta {

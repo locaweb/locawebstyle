@@ -523,7 +523,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   min-height:98px;
 
 }
-.revisit .chamadasBox h3{ font: 100 16px Ubuntu, verdana, arial, tahoma, sans-serif;}
+
 .revisit .chamadasBox div:hover {
 
   background:#f1f6e8 url(/img/bgChamadasBoxGreen.png) repeat-X center bottom;
@@ -534,7 +534,8 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   width:49px; height:49px;
   margin:0 auto 10px;
 }
-.revisit [class^="span"] h3:first-child{ padding: 10px;}
+.revisit .chamadasBox h3 a{ padding: 25px 10px 30px;}
+.revisit [class^="span"] h3:first-child{ padding: 0;}
 .revisit .chamadasBox h3.titResults a:before {background-image:url(/img/titIcoResultsSmall.png);}
 .revisit .chamadasBox h3.titMoreUser a:before {background-image:url(/img/titIcoMoreUsersSmall.png);}
 .revisit .chamadasBox h3.titMessage a:before {background-image:url(/img/titIcoMessageSmall.png);}
