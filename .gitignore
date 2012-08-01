@@ -12,6 +12,7 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+
 /tmp
 db/*.sqlite3
 log/*.log
@@ -21,3 +22,4 @@ tmp/
 .rvmrc
 public/assets
 config/unicorn.rb
+*.swp
