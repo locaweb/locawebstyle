@@ -49,6 +49,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   padding:0 5px;
 }
 #menuPrincipal > ul > li:first-child {padding-left:0;}
+#menuPrincipal > ul > li:last-child {background-image:none;}
 #menuPrincipal > ul > li > a:before {
   content: ""; 
   display:block; 
