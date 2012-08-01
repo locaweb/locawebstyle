@@ -109,7 +109,7 @@ h6 {
 legend {border-bottom:none; padding-bottom:5px;}
 
 .titDots {
-  padding:0 10px 12px;
+  padding:0 10px 12px 0;
   margin:0 0 15px;
   background:url(/img/titDots.png) repeat-X left bottom;
 }
@@ -496,7 +496,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
 
 .chamadasBox h3 {
   text-transform:uppercase;
-  font:100 20px Ubuntu, verdana, arial, tahoma, sans-serif;
+  font:100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;
   margin:0 auto;
 }
 .chamadasBox h3 a {
@@ -577,10 +577,21 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   list-style:none;
   border:1px solid #e5e5e5;
   border-radius:3px;
-  margin:0 10px 5px;
+  margin:0 0 5px;
   font-family:verdana;
+  position: relative;
 }
-
+.statusMessageBox:hover {
+  background: #f0f0f0;
+}
+.statusMessageBox .viewMessage{
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 53px;
+  width: 100%;
+  z-index: 2;
+}
 .statusMessageBox li:first-child {text-align:center;}
 .statusMessageBox > li {
   display:inline-block;
@@ -592,6 +603,8 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   padding:13px 5px 12px 0;
   min-width:65px;
 }
+.statusMessageBox > li.statusContact{ padding-left: 10px;}
+
 .statusMessageBox li a {color:#2a2a2a;}
 
 .statusMessageBox h6 {
@@ -611,7 +624,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   border-right:none;
   padding:9px 8px 9px 0;
   text-align:center;
-  background-color:#d5e6bc;
+ /* background-color:#d5e6bc;
   background-image: linear-gradient(bottom, rgb(213,230,188) 37%, rgb(233,242,216) 100%);
   background-image: -o-linear-gradient(bottom, rgb(213,230,188) 37%, rgb(233,242,216) 100%);
   background-image: -moz-linear-gradient(bottom, rgb(213,230,188) 37%, rgb(233,242,216) 100%);
@@ -624,21 +637,32 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
     left top,
     color-stop(0.37, rgb(213,230,188)),
     color-stop(1, rgb(233,242,216))
-  );
+  );*/
+background: #e9f3d9; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5ZjNkOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkMmU3YjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #e9f3d9 0%, #d2e7b7 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e9f3d9), color-stop(100%,#d2e7b7)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e9f3d9 0%,#d2e7b7 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e9f3d9 0%,#d2e7b7 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e9f3d9 0%,#d2e7b7 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #e9f3d9 0%,#d2e7b7 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f3d9', endColorstr='#d2e7b7',GradientType=0 ); /* IE6-8 */
+
 }
 .statusMessageBox .countViews:after {
   content:" ";
   position:absolute;
-  top:0; right:0;
+  top:0; right:-7px;
   width:7px; height:100%;
-  background:url(/img/bgCountViewSeta.png) left center;
+  background: url(/img/arrowGreen.png) left center;
 }
 
 .statusMessageBox .overflowMessage {overflow:hidden; position:relative; min-width:10%; max-width:40%;}
 .overflowMessage + .overflowMessage {border-right:none; margin-right:0; width:29%;}
 .statusMessageBox .overflowMessage p {width:10000px;}
 
-.overflowMessage:after {
+/*.overflowMessage:after {
   content:" ";
   display:block;
   width:25px;
@@ -647,7 +671,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   border-right:10px solid #FFF;
   height:200px;
   background:url(/img/whiteGradientEnd.png) repeat-Y right center;
-}
+}*/
 
 .lists .statusMessageBox .countViews {
   padding:21px 10px 19px 0;
@@ -657,7 +681,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
 .lists .statusMessageBox .countViews h6 {padding-left:0; font-weight:normal;}
 .lists .statusMessageBox .countViews p {padding-left:0;}
 
-.statusMessageBox > li {margin-left:0; border-right:none; padding:10px 0 0; margin-left:2px;}
+.statusMessageBox > li {margin-left:0; border-right:none; ; margin-left:2px;}
 .lists .statusMessageBox h6 {
   padding-left:10px;
   font:bold 12px verdana, arial, tahoma, sans-serif;
@@ -667,6 +691,33 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
 
 h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; border-left:1px solid #CCC; color:#767676;}
 h6 .lnkSeta {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC; padding-left:10px;}
+.statusMessageBox > li.messageBorder{
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  padding: 13px 5px 12px 10px;
+}
+
+.graphicBorder{
+  border: 1px solid #e5e5e5;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  box-shadow: 0 5px 3px #ebebeb inset;
+  position: relative;
+}
+.graphicBorder:after{
+  background: url(/img/arrowGraphic.png) no-repeat 0 0;
+  content:" ";
+  left: 9px;
+  height: 12px;
+  position: absolute;
+  top: -7px;
+  width:  15px;
+}
+.statusGraphic { margin-top: 40px;}
+.statusGraphic .titDots { background: none; margin: 0;}
+
 
 /***
 **** BREADCRUMB
