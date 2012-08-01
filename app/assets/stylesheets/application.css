@@ -1,7 +1,6 @@
 /*
  *= require bootstrap/css/bootstrap
  *= require colors
- *= require classesfuncionais
  *= require fonts
  *= require chosen
  *= require collapse
@@ -16,4 +15,5 @@
  *= require tables
  *= require grid
  *= require base
+ *= require classesfuncionais
  */
