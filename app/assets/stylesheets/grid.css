@@ -49,6 +49,8 @@ input.input120, input.span2 {width:90px !important;}
 
 .home .span14 {width:840px;}
 .revisit .chamadasBox h3{ font: 100 16px Ubuntu, verdana, arial, tahoma, sans-serif;}
+
+
 /** Desktop
 *** Passando de 1220px
 **/
@@ -86,8 +88,9 @@ input.input120, input.span2 {width:90px !important;}
 @media screen and (max-width:480px) {
   .limite {
     width:95% !important;
-    left:0;
+    position:relative; left:0; 
     padding-bottom:0;
+    margin:0 auto;
   }
 
   .chamadasBox div {
@@ -122,7 +125,7 @@ input.input120, input.span2 {width:90px !important;}
     padding:15px 10px;
     margin:0;
     text-transform:uppercase;
-    font-size:20px;
+    font-size:20px !important;
     font-weight:bold;
   }
 
@@ -136,6 +139,7 @@ input.input120, input.span2 {width:90px !important;}
 
   #menuPrincipal > ul {width:auto;}
   #menuPrincipal > ul > li {float:none; padding:0;}
+  #menuPrincipal > ul > li > a:before {display:none;}
   #menuPrincipal > ul > li > a {
     display:block;
     color:#545454;
@@ -200,7 +204,7 @@ input.input120, input.span2 {width:90px !important;}
   input.input360 {max-width:250px;}
 
   /** RODAPE **/
-  footer#rodape {position:static;}
+  footer#rodape {position:static !important;}
   footer#rodape .limite {padding:0;}
 
   #rodape nav {height:70px;}

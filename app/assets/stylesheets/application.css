@@ -3,7 +3,6 @@
  *= require colors
  *= require classesfuncionais
  *= require fonts
- *= require grid
  *= require chosen
  *= require collapse
  *= require tabs
@@ -15,5 +14,6 @@
  *= require modal
  *= require sidebar
  *= require tables
+ *= require grid
  *= require base
  */
