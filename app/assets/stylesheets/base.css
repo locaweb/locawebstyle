@@ -386,7 +386,13 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   margin:5px 0 0 0;
   padding:5px;
   max-width:100%;
-  overflow: hidden;
+}
+
+.spanObs {
+  border-left: solid 2px #fff;
+  padding:5px;
+  margin:5px 0 0 0;
+  line-height: 18px;
 }
 
 .listOptions p.pObs strong {color:#545454;}
