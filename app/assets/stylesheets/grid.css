@@ -48,7 +48,8 @@ input.input120, input.span2 {width:90px !important;}
 .simpleFilter .searchInput {max-width:145px !important;}
 
 .home .span14 {width:840px;}
-.revisit .chamadasBox h3{ font: 100 16px Ubuntu, verdana, arial, tahoma, sans-serif;}
+.revisit .chamadasBox h3{ font: 100 16px Ubuntu, verdana, arial, tahoma, sans-serif; line-height: 25px;}
+
 /** Desktop
 *** Passando de 1220px
 **/
@@ -114,7 +115,8 @@ input.input120, input.span2 {width:90px !important;}
   }
 
   header.headerPrincipal .limite {height:auto; padding:0;}
-
+  .revisit .chamadasBox h3{ font: 100 22px Ubuntu, verdana, arial, tahoma, sans-serif;}
+  .revisit .chamadasBox div{ padding-bottom: 0!important;}
   .sidebar {padding:40px 0 0;}
 
   /** NOME DO PRODUTO - Logo ***/
