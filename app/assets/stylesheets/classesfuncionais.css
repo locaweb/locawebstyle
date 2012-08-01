@@ -42,3 +42,27 @@ hr, hr.sepDot {border:none; border-bottom:1px solid #e5e5e5; background:none; di
 hr.sepDot {border-bottom:1px dotted #E5E5E5;}
 hr.dotsSep {height: 5px; background: url(/img/titDots.png);  margin:20px 0;}
 hr.sep {background-color: #E5E5E5; }
+
+.noBullet, .noListStyle {list-style:none;}
+
+.cursorPointer, .cursorpointer {cursor: pointer;}
+.cursorDefault, .cursordefault {cursor: default;}
+.cursorCrosshair, .cursorcrosshair {cursor: crosshair}
+.cursorMove, .cursormove {cursor: move}
+.cursorHelp, .cursorhelp {cursor: help;}
+.cursorWait, .cursorwait {cursor: wait;}
+.cursorInherit, .cursorinherit {cursor: inherit;}
+.cursorText, .cursortext {cursor: text;}
+.cursorProgress, .cursorprogress {cursor: progress;}
+
+.cursorGrab, .cursorgrab {
+  cursor:hand;
+  cursor:grab;
+  cursor:-moz-grab;
+  cursor:-webkit-grab;
+}
+.cursorGrabbing, .cursorgrabbing {
+  cursor:grabbing;
+  cursor:-moz-grabbing;
+  cursor:-webkit-grabbing;
+}

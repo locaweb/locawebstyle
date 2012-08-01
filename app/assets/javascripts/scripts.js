@@ -177,13 +177,7 @@ $(document).ready(function() {
     // search_contains: true,
   });
 
-  // Bubble de informação
-  // var bubbleContent = $('.infoBubble').html()
-  // $('.infoBubble').wrapInner('<div class="bubbleContent" />')
-  // $('.bubbleContent').wrapInner('<div class="bubbleContentInner" />')
-
-
-  // Identificando os IEs Mother Fuckers...
+   // Identificando os IEs Mother Fuckers...
   if ($.browser.msie) {
     if(parseInt($.browser.version) == 9){
          // Para IE9

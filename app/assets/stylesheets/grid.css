@@ -48,7 +48,9 @@ input.input120, input.span2 {width:90px !important;}
 .simpleFilter .searchInput {max-width:145px !important;}
 
 .home .span14 {width:840px;}
-.revisit .chamadasBox h3{ font: 100 16px Ubuntu, verdana, arial, tahoma, sans-serif; line-height: 25px;}
+
+.revisit .chamadasBox h3{ font: 100 18px UbuntuLight, verdana, arial, tahoma, sans-serif; line-height: 25px; letter-spacing: -0.6px;}
+
 
 /** Desktop
 *** Passando de 1220px
@@ -77,7 +79,7 @@ input.input120, input.span2 {width:90px !important;}
   .span2 {width: 130px;}
   .span1 {width: 55px;}
 
-  .revisit .chamadasBox h3{ font: 100 20px Ubuntu, verdana, arial, tahoma, sans-serif;}
+  .revisit .chamadasBox h3{ font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;}
 
 }
 
@@ -87,8 +89,9 @@ input.input120, input.span2 {width:90px !important;}
 @media screen and (max-width:480px) {
   .limite {
     width:95% !important;
-    left:0;
+    position:relative; left:0;
     padding-bottom:0;
+    margin:0 auto;
   }
 
   .chamadasBox div {
@@ -115,7 +118,7 @@ input.input120, input.span2 {width:90px !important;}
   }
 
   header.headerPrincipal .limite {height:auto; padding:0;}
-  .revisit .chamadasBox h3{ font: 100 22px Ubuntu, verdana, arial, tahoma, sans-serif;}
+  .revisit .chamadasBox h3{ font: 100 22px UbuntuLight, verdana, arial, tahoma, sans-serif;}
   .revisit .chamadasBox div{ padding-bottom: 0!important;}
   .sidebar {padding:40px 0 0;}
 
@@ -124,7 +127,7 @@ input.input120, input.span2 {width:90px !important;}
     padding:15px 10px;
     margin:0;
     text-transform:uppercase;
-    font-size:20px;
+    font-size:20px !important;
     font-weight:bold;
   }
 
@@ -138,6 +141,7 @@ input.input120, input.span2 {width:90px !important;}
 
   #menuPrincipal > ul {width:auto;}
   #menuPrincipal > ul > li {float:none; padding:0;}
+  #menuPrincipal > ul > li > a:before {display:none;}
   #menuPrincipal > ul > li > a {
     display:block;
     color:#545454;
@@ -202,7 +206,7 @@ input.input120, input.span2 {width:90px !important;}
   input.input360 {max-width:250px;}
 
   /** RODAPE **/
-  footer#rodape {position:static;}
+  footer#rodape {position:static !important;}
   footer#rodape .limite {padding:0;}
 
   #rodape nav {height:70px;}

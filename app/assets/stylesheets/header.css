@@ -46,10 +46,20 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   float:left;
   position:relative;
   background:#FFF url(/img/dotMenuLi.gif) no-repeat right center;
-  padding:0 10px;
+  padding:0 5px;
 }
 #menuPrincipal > ul > li:first-child {padding-left:0;}
+#menuPrincipal > ul > li:last-child {background-image:none;}
+#menuPrincipal > ul > li > a:before {
+  content: ""; 
+  display:block; 
+  position:absolute; 
+  bottom:2px; left:50%; margin-left: -4px;
+  width:9px; height:5px; 
+  background:url(/img/setaDots.png) center center no-repeat; 
+}
 #menuPrincipal > ul > li > a {
+  position:relative;
   display:inline-block;
   color:#545454;
   text-decoration:none;
@@ -57,7 +67,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   text-transform:uppercase;
   border:1px solid transparent;
   border-bottom:1px solid transparent;
-  padding:9px;
+  padding:9px 8px;
   -webkit-transition:all .15s linear;
 }
 .ie9 #menuPrincipal > ul > li > a {font-size:13px;}
