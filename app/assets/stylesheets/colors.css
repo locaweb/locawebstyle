@@ -42,8 +42,7 @@
 
 .colorBlue #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
-.colorBlue .lnkSeta:hover,
-.colorBlue .lnkSugestoes {color:#1e324a;}
+.colorBlue .lnkSeta:hover {color:#1e324a;}
 
 .colorBlue .pagination .current,
 .colorBlue .pagination .active a {
@@ -124,8 +123,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
 
 .colorGreen #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
-.colorGreen .lnkSeta:hover,
-.colorGreen .lnkSugestoes:hover  {color:#4f731c;}
+.colorGreen .lnkSeta:hover {color:#4f731c;}
 
 .colorGreen .pagination .current,
 .colorGreen .pagination .active a {
@@ -223,8 +221,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
 
 .colorOrange #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
-.colorOrange .lnkSeta:hover,
-.colorOrange .lnkSugestoes:hover  {color:#cc8500;}
+.colorOrange .lnkSeta:hover {color:#cc8500;}
 
 .colorOrange .pagination .current,
 .colorOrange .pagination .active a {
@@ -303,8 +300,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
 
 .colorWine #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
-.colorWine .lnkSeta:hover,
-.colorWine .lnkSugestoes:hover  {color:#96666a;}
+.colorWine .lnkSeta:hover {color:#96666a;}
 
 .colorWine .pagination .current,
 .colorWine .pagination .active a {

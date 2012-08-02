@@ -157,7 +157,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 
 
 /** Linkzinho de sugestões do Header **/
-.lnkSugestoes {
+.lnkSugestoes, #feedbackr.lnkSugestoes {
   float:right;
   background:url(/img/ico-lamp.png) no-repeat 10px center;
   text-decoration:none;
