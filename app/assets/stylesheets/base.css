@@ -664,7 +664,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f3d9', end
   background: url(/img/arrowGreen.png) left center;
 }
 
-.statusMessageBox .overflowMessage {overflow:hidden; position:relative; min-width:10%; max-width:40%;}
+.statusMessageBox .overflowMessage {overflow:hidden; position:relative; min-width:10%; max-width:37%;}
 .overflowMessage + .overflowMessage {border-right:none; margin-right:0; width:29%;}
 .statusMessageBox .overflowMessage p {width:10000px;}
 
