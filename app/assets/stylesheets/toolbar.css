@@ -62,7 +62,7 @@
 }
 #toolbar .logOut:hover {color:#FFF; text-decoration:none;}
 
-
+#toolbar .limiteToolbar {max-width:988px;}
 
 /**** RESPONSIVE TOOLBAR ****/
 

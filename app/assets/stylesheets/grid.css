@@ -52,6 +52,13 @@ input.input120, input.span2 {width:90px !important;}
 .revisit .chamadasBox h3{ font: 100 18px UbuntuLight, verdana, arial, tahoma, sans-serif; line-height: 25px; letter-spacing: -1px;}
 
 
+
+
+
+
+
+
+
 /** Desktop
 *** Passando de 1220px
 **/
@@ -61,6 +68,8 @@ input.input120, input.span2 {width:90px !important;}
   .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {width: 1180px !important;}
+
+  #toolbar .limiteToolbar {max-width:1180px;}
 
   .span16 {width: 1180px;}
   .span15 {width: 1105px;}
@@ -82,6 +91,12 @@ input.input120, input.span2 {width:90px !important;}
   .revisit .chamadasBox h3{ font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;}
 
 }
+
+
+
+
+
+
 
 /** Tamanhos padrão de Smartphones
 *** 320 x 480

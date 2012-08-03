@@ -60,7 +60,6 @@
 .ico-trash, .ico-cancel, .ico-delete {color:#b54646 !important;}
 .btn.ico-trash {color:#FFF !important;}
 
-.ico-plus:before {content: "\21";}
 .ico-keyboard:before {content: "\22";}
 .ico-split:before {content: "\23";}
 .ico-up-dir:before {content: "\24";}
@@ -205,7 +204,8 @@
 .ico-right-open-1:before {content: "\e030";}
 .ico-mail-1:before {content: "\e031";}
 .ico-heart-1:before {content: "\e032";}
-.ico-plus-1:before {content: "\e033";}
+.ico-plus:before {content: "\e033";}
+.ico-plus-1:before {content: "\21";}
 .ico-forward-1:before {content: "\e034";}
 .ico-down-1:before {content: "\e035";}
 .ico-inbox-1:before {content: "\e036";}

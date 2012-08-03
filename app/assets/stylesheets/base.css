@@ -867,6 +867,8 @@ td .progress {max-width:50px;}
   font:bold 12px verdana, arial, tahoma;
 }
 
+.obsGray h3 + p {padding-top:0; margin-bottom:20px;}
+
 .lightGray {
   padding:5px;
   color:#767676;
@@ -894,8 +896,18 @@ td .progress {max-width:50px;}
 .popover{margin-top:4px;}
 .popover-inner {background:rgba(0,0,0,0.2); padding:5px; box-shadow:inherit;}
 .popover .arrow {border-right:5px solid rgba(0,0,0,0.2) !important;}
-
+.popover-content {padding-top:4px;}
 .popover-content p, .popover-content ul, .popover-content ol {}
+
+.popover-title {
+  background:white;
+  padding:10px 14px 0;
+  border:none;
+  margin:0;
+  color:#163988;
+  font:bold 12px verdana, arial, tahoma, sans-serif;
+}
+
 /*** COLLAPSE
 **** Algumas adequações
 ***/
