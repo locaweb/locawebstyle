@@ -411,3 +411,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
 
 .btn[classˆ="ico-"], .btn[class*="ico-"] {color:inherit;}
 .btn-primary[class^="ico-"], .btn-primary[class*="ico-"] {color:#FFF;}
+
+/*** ADITIONAL COLORS FOR BOOTSTRAP LABELS ***/
+.labelFrozen {
+  background-color: #ba4d48;
+}
+
+.labelExpired {
+  background-color: #73221e;
+}
