@@ -36,8 +36,8 @@
   background: #373737 url(/img/bgOptToolbar.png) repeat-X left center;
   border-right: 1px solid #444;
   border-left: 1px solid #242424;
-  height: 33px;
-  line-height: 33px;
+  height: 32px;
+  line-height: 32px;
   padding: 0 20px;
 }
 #toolbar .menuToolbar li a:hover {background:#333; text-decoration:none;}
@@ -70,18 +70,18 @@
   #toolbar .limiteToolbar {width:100%; height:auto; overflow: hidden;}
   #toolbar h1.logoToolbar {width:80px; background-size:auto; float:left; position:static; margin:7px 0 5px 10px;}
   #toolbar .menuToolbar {
-    text-align:center; 
+    text-align:center;
     height:30px;
-    width:100%; 
+    width:100%;
     clear:left;
     position:static;
   }
   #toolbar .menuToolbar li {margin-right:-5px;float:none; display:inline-block;}
   #toolbar .menuToolbar li:last-child {margin-right:0;}
   #toolbar .menuToolbar li a {
-    height:29px; 
+    height:29px;
     line-height:29px;
-    font-size:10px; 
+    font-size:10px;
     padding:0 10px;
   }
   #toolbar .userName {
