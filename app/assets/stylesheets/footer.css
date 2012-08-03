@@ -3,7 +3,7 @@ footer#rodape {
   clear:both;
   position:absolute;
   bottom:0;
-  width:100%; 
+  width:100%;
 }
 #rodape .footerTop {
   padding:15px 0 0;
@@ -20,7 +20,7 @@ footer#rodape {
   margin:0;
   float:left;
 }
-  
+
 #rodape nav {
   background:#141414;
   border:1px solid #383838;
@@ -42,8 +42,8 @@ footer#rodape {
 }
 #rodape nav ul li:last-child a {border-right:none;}
 
-#rodape ul li.ico-helpDesk a {background-image:url(/img/icoChat.png);}
-#rodape ul li.ico-Chat a {background-image:url(/img/icoHelpDesk.png);}
+#rodape ul li.ico-helpDesk a {background-image:url(/img/icoHelpDesk.png);}
+#rodape ul li.ico-Chat a {background-image:url(/img/icoChat.png);}
 #rodape ul li.ico-Telefone a {background-image:url(/img/icoTelefone.png);}
 
 #rodape nav .lnkSeta {margin:15px 20px 0; color:#FFF;}
