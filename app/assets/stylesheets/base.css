@@ -62,7 +62,7 @@ iframe {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
-
+.tableList tbody td .btn {font-weight:normal;}
 .btn-primary:hover {
   background-color:#4b7cb8;
   background-image:none;
