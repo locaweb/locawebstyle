@@ -384,15 +384,18 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   background:#ececec;
   color:#767676;
   margin:5px 0 0 0;
-  padding:5px;
+  padding:6px;
   max-width:100%;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 .spanObs {
   border-left: solid 2px #fff;
-  padding:5px;
+  padding:6px;
   margin:5px 0 0 0;
-  line-height: 18px;
+  line-height: 20px;
+  font-size: 12px;
 }
 
 .listOptions p.pObs strong {color:#545454;}
