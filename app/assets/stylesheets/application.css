@@ -17,3 +17,37 @@
  *= require base
  *= require classesfuncionais
  */
+
+.showOpts {
+  position:fixed;
+  right:20px;
+  top:20px;
+  border:1px solid #CCC;
+  background:#FFF;
+  border-radius:3px;
+  z-index: 1000;
+  text-align:center;
+  padding:10px;
+   box-shadow: 0 0 10px 0 rgba(0,0,0,0.4)
+}
+
+.showOpts ul {
+	display: block;
+	margin: 20px 0 0;
+	width: 100px;
+}
+
+.showOpts li a {
+	display:block; 
+	border-bottom:1px solid #EFEFEF;
+	color:#333;
+}
+
+.showOpts li {
+  list-style:none;
+  text-align:left;
+}
+
+.showOpts:before {
+	font-size:25px;
+}

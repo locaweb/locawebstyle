@@ -340,7 +340,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
 .obsGray .boxActions, .boxFiltro .boxActions {border-top-color:#cbcbcb;}
 .obsGray h3:first-child {padding-top:0;}
 .boxActions .btn {display:inline-block; margin-right:5px; float:none;}
-.boxActions .btn.fright {color: #333; margin-left:5px;}
+.boxActions .btn.fright {color: #333; margin-left:5px; float:right;}
 .boxActionsTools {padding-left:0; border-top:none;}
 .boxActionsTools .btn {margin-right:2px;}
 
@@ -447,13 +447,17 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
 
 /** Pra mostrar a grid visualmente **/
 .gridShow {
-  width:988px; height:100%;
-  margin:auto;
-  background:url(/img/grid.png) repeat-Y;
+  width: 988px;
+  height: 100%;
+  margin: auto;
+  outline: 1px solid 
+  red;
+  background: url(/img/grid.png) left;
   position: fixed;
-  top:0; left:50%;
-  margin-left:-494px;
-  z-index:1000;
+  top: 0;
+  left: 50%;
+  margin-left: -495px;
+  z-index: 1000;
 }
 
 /***

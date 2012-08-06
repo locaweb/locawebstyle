@@ -47,5 +47,7 @@ $(".clippy").live({
     $(this).children(".clippy_label").text("texto copiado");
   }
 
+
+
 });
 

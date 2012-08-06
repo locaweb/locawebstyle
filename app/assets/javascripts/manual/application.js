@@ -1,1 +1,1 @@
-//= require manual/functions
+//= require manual/functions\
