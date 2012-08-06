@@ -124,6 +124,20 @@ label.checkbox.control-label, label.checkbox.control-label:first-child {
   margin:30px 0;
 }
 
+.boxCinzaLight {
+  border-radius:3px;
+  background:#ececec;
+  padding:15px;
+  margin:30px 0;
+}
+
+.boxCinzaInnerLight {
+  clear:both;
+  background:#dddddd;
+  padding:10px;
+  border-radius:5px;
+}
+
 .labelInline {margin-bottom:15px;}
 .labelInline label {display:inline;}
 
