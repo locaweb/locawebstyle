@@ -752,13 +752,18 @@ h6 .lnkSeta {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC
 }
 .breadcrumb li {margin-right:10px;}
 .breadcrumb li:before {
-  background:url(/img/miniArrows.png) no-repeat;
-  width:3px; height:4px;
   display:inline-block;
-  vertical-align:middle;
-  content:" ";
-  margin-right:2px;
-  position:relative; top:-2px;
+  margin-right:0px;
+  font-size:7px;
+  font-family: locaweb;
+  font-weight:normal;
+  speak: none;
+  text-decoration:none;
+  width:10px;
+  text-align: center;
+  min-height:10px;
+  line-height:15px;
+  vertical-align: middle;
 }
 .breadcrumb li:hover:before {background-position:-3px 0;}
 

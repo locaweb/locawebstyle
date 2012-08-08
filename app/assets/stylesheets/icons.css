@@ -201,7 +201,7 @@
 .ico-target-1:before {content: "\e02d";}
 .ico-up-open-1:before {content: "\e02e";}
 .ico-upload-1:before {content: "\e02f";}
-.ico-right-open-1:before {content: "\e030";}
+.ico-right-open-1:before, .breadcrumb li:before {content: "\e030";}
 .ico-mail-1:before {content: "\e031";}
 .ico-heart-1:before {content: "\e032";}
 .ico-plus:before {content: "\e033";}
