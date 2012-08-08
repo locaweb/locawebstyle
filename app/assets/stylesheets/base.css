@@ -388,6 +388,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   max-width:100%;
   font-size: 12px;
   line-height: 20px;
+  overflow: hidden;
 }
 
 .spanObs {
@@ -396,6 +397,11 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   margin:5px 0 0 0;
   line-height: 20px;
   font-size: 12px;
+  background:#ececec;
+}
+
+.spanObs .lnkSeta {
+  margin: 0;
 }
 
 .listOptions p.pObs strong {color:#545454;}
