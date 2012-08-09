@@ -12,7 +12,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   color:#4B7CB8;
   float:left;
   font:33px LacunaRegular, verdana, arial, tahoma, sans-serif;
-} 
+}
 .serviceName a {text-decoration:none;  color:#777; margin-left:-4px;}
 .serviceName a:hover {text-decoration:none; opacity:0.7;}
 
@@ -51,13 +51,14 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 #menuPrincipal > ul > li:first-child {padding-left:0;}
 #menuPrincipal > ul > li:last-child {background-image:none;}
 #menuPrincipal > ul > li > a:before {
-  content: ""; 
-  display:block; 
-  position:absolute; 
+  content: "";
+  display:block;
+  position:absolute;
   bottom:2px; left:50%; margin-left: -4px;
-  width:9px; height:5px; 
-  background:url(/img/setaDots.png) center center no-repeat; 
+  width:9px; height:5px;
+  background:url(/img/setaDots.png) center center no-repeat;
 }
+
 #menuPrincipal > ul > li > a {
   position:relative;
   display:inline-block;
@@ -100,7 +101,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   z-index:2;
 }
 #menuPrincipal .parent {outline:none;}
-  
+
 #menuPrincipal > ul > li:hover ul,
 #menuPrincipal > ul > li:active ul {opacity:1; visibility:visible; }
 #menuPrincipal ul li ul {
@@ -141,20 +142,27 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 }
 #menuPrincipal .btMenu a:hover,
 #menuPrincipal .btMenu a:active {
-  background-color:#777; 
+  background-color:#777;
   color:#FFF !important;
   padding-left:19px;
+}
+
+#menuPrincipal > ul > li.btMenu > a:before {
+  content: " ";
+  display:inline-block; vertical-align:middle;
+  width:5px; height:7px;
+  background:url(/img/largeArrows.png) no-repeat;
+  position:relative; left:-7px; top:-1px;
 }
 
 .btMenu a:before {
   content: " ";
   display:inline-block; vertical-align:middle;
   width:5px; height:7px;
-  background:url(/img/largeArrows.png) no-repeat 0 0;
+  background:url(/img/largeArrows.png) no-repeat;
   position:relative; left:-7px; top:-1px;
 }
 .btMenu a:hover:before {background-position: 0 0;}
-
 
 /** Linkzinho de sugestões do Header **/
 .lnkSugestoes, #feedbackr.lnkSugestoes {
