@@ -405,9 +405,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
 .colorGreen .breadcrumb li:hover:before {background-position:-3px -12px;}
 
 /*** LARGE ARROWS - BTMENU ***/
-.colorGreen .btMenu a:before {background-position: 0 -28px;}
-.colorBlue .btMenu a:before {background-position: 0 -14px;}
-.colorRed .btMenu a:before {background-position: 0 -21px;}
+.colorGreen #menuPrincipal .btMenu a:before {background-position: 0 -28px; }
+.colorBlue #menuPrincipal > ul > li.btMenu > a:before {background-position: 0 -14px;}
+.colorRed #menuPrincipal > ul > li.btMenu > a:before {background-position: 0 -21px;}
+.colorOrange #menuPrincipal > ul > li.btMenu > a:before {background-position: 0 -35px;}
 
 .btn[classˆ="ico-"], .btn[class*="ico-"] {color:inherit;}
 .btn-primary[class^="ico-"], .btn-primary[class*="ico-"] {color:#FFF;}
