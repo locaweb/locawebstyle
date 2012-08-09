@@ -66,3 +66,7 @@ hr.sep {background-color: #E5E5E5; }
   cursor:-moz-grabbing;
   cursor:-webkit-grabbing;
 }
+
+.marginBottom40 {
+  margin-bottom: 40px;
+}
