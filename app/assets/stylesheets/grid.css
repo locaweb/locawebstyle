@@ -50,7 +50,7 @@ input.input120, input.span2 {width:90px !important;}
 .span14 {width:840px;}
 
 .revisit .chamadasBox h3{ font: 100 18px UbuntuLight, verdana, arial, tahoma, sans-serif; line-height: 25px; letter-spacing: -1px;}
-
+.statusMessageBox .overflowMessage {overflow:hidden; position:relative; min-width:10%; max-width:37%;}
 
 
 
@@ -216,6 +216,8 @@ input.input120, input.span2 {width:90px !important;}
     height:auto;
     overflow:visible;
   }
+  /** TABELA DE MENSAGEM NA HOME ***/
+  .statusMessageBox .overflowMessage {overflow:hidden; position:relative; min-width:10%; max-width:19%;}
 
   /** FORMS **/
   input.input360 {max-width:250px;}
