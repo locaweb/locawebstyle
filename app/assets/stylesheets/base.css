@@ -456,7 +456,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   width: 988px;
   height: 100%;
   margin: auto;
-  outline: 1px solid 
+  outline: 1px solid
   red;
   background: url(/img/grid.png) left;
   position: fixed;
@@ -674,7 +674,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f3d9', end
   position:absolute;
   top:0; right:-7px;
   width:7px; height:100%;
-  background: url(/img/arrowGreen.png) left center;
+  background: url(/img/arrowGreen.png) no-repeat left center;
 }
 
 
@@ -694,6 +694,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f3d9', end
 
 .lists .statusMessageBox .countViews {
   padding:21px 10px 19px 0;
+  min-height: 20px;
   width:auto;
   font-weight:normal;
 }
@@ -727,7 +728,7 @@ h6 .lnkSeta {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC
   border-radius:0;
   box-shadow:none;
   margin:-20px 0 37px;
-  padding:7px 11px 2px;
+  padding:7px 11px 2px 7px;
   color:#767676;
   font:11px verdana, tahoma, arial, helvetica, sans-serif;
   border-bottom:1px solid #d4d4d4;

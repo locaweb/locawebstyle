@@ -32,7 +32,7 @@ label b {display:none;}
 
 .controls > label, .controls > .control-label {
   width:auto;
-  padding-left:3px; 
+  padding-left:3px;
   vertical-align:middle;
   font-weight:normal;
   display:inline-block;
@@ -51,10 +51,10 @@ label, strong.control-label, .form-horizontal .control-label {
 }
 label.widthAuto {width:auto !important;}
 label.nomarginleft {margin-left: 0 !important;}
-.formInline label, 
-.form-horizontal label, 
-.formInline strong.control-label, 
-.form-horizontal strong.control-label, 
+.formInline label,
+.form-horizontal label,
+.formInline strong.control-label,
+.form-horizontal strong.control-label,
 .formInline .control-label,
 .form-horizontal .control-label {
   font-weight:bold;
@@ -66,6 +66,7 @@ label.nomarginleft {margin-left: 0 !important;}
   width:100px;
   color:#545454;
   line-height:12px;
+  padding-top: 5px;
 }
 
 .boxGrayOpt {
@@ -78,16 +79,16 @@ label.nomarginleft {margin-left: 0 !important;}
 }
 .formInline.boxGrayOpt label {width:auto; margin-bottom:0;}
 
-.formInline .boxGrayOpt label, 
-.form-horizontal .boxGrayOpt label, 
+.formInline .boxGrayOpt label,
+.form-horizontal .boxGrayOpt label,
 .formInline .boxGrayOpt .control-label,
 .form-horizontal .boxGrayOpt .control-label,
-.formInline .controls .boxGrayOpt label, 
-.form-horizontal .controls .boxGrayOpt label, 
+.formInline .controls .boxGrayOpt label,
+.form-horizontal .controls .boxGrayOpt label,
 .formInline .controls .boxGrayOpt .control-label,
 .form-horizontal .controls .boxGrayOpt .control-label  {
-  margin:0; 
-  width:100px; 
+  margin:0;
+  width:100px;
   text-align:left;
 }
 
@@ -180,7 +181,7 @@ legend + .control-group {margin-top:0;}
 
 .sideBySide:after {content:" "; display:block; clear:both;}
 .sideBySide .control-group {
-  padding-bottom:3px; 
+  padding-bottom:3px;
   padding-right: 10px;
   float:left;
 }
