@@ -279,6 +279,18 @@ input.input120, input.span2 {width:90px !important;}
   #steps.pathWay li a {width:100%;border:none; font-size:15px; margin-bottom:3px;}
   #steps.pathWay span {display:inline-block; padding-right:5px;}
 
+    /** LISTAS  **/
+ .lists .statusMessageBox > li{display: block;}
+ .lists .statusMessageBox h6, .lists .statusMessageBox p, .lists .statusMessageBox .actionsTable{text-align: center;}
+ .lists .statusMessageBox .countViews::after{background: none;}
+
+ .simpleFilter.sideBySide .control-group {margin-left:0; padding-left:0; clear:both; border-left:none;}
+ .simpleFilter .control-group.fright {
+    padding-right: 0;
+    float: none !important;
+    padding: 10px 0;
+  }
+
 }
 
 

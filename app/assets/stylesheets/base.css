@@ -694,10 +694,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f3d9', end
 
 .lists .statusMessageBox .countViews {
   padding:21px 10px 19px 0;
-  min-height: 20px;
+  height: 100%;
   width:auto;
   font-weight:normal;
 }
+.lists .statusMessageBox > li{padding: 10px 5px 0 0;}
 .lists .statusMessageBox .countViews h6 {padding-left:0; font-weight:normal;}
 .lists .statusMessageBox .countViews p {padding-left:0;}
 
