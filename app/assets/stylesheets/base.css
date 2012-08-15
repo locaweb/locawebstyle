@@ -914,3 +914,7 @@ td .progress {max-width:50px;}
 .ie8 .in.collapse {height:auto !important;}
 
 .carousel-control {background-image:none !important;}
+
+
+.ui-datepicker-trigger.icon-calendar:before{margin-top: 0;}
+

@@ -70,3 +70,9 @@ hr.sep {background-color: #E5E5E5; }
 .marginBottom40 {
   margin-bottom: 40px;
 }
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}

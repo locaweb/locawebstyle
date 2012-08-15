@@ -20,7 +20,7 @@
   font:bold 13px verdana, arial, tahoma, sans-serif;
 }
 .tableList thead th a {
-  color:#FFF; 
+  color:#FFF;
   text-decoration:none;
   padding:8px 10px;
   margin:-8px;
@@ -35,6 +35,7 @@
   text-align:center;
   word-break: break-all;
   border-right:1px solid #ddd;
+  vertical-align: top;
 }
 
 .tableList tbody td a {font-weight:bold;}
