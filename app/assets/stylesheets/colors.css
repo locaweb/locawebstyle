@@ -241,6 +241,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
 .colorOrange .pagination .prev a,
 .colorOrange .pagination .next a,
 .colorOrange .pagination .last a,
+.colorOrange p a,
 .colorOrange .breadcrumb {color:#cc8500;}
 
 .colorOrange .btn-primary {
