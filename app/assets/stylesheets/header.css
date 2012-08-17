@@ -112,12 +112,12 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   margin:0; padding:0;
   min-width:185px;
   position:absolute;
-  top:35px; left:10px;
+  top:35px; left:5px;
   z-index:1;
   background:#FFF;
   border-radius: 0 3px 3px 3px;
   border-bottom:3px solid #777;
-  box-shadow:3px 3px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow:3px 4px 5px -1px rgba(0, 0, 0, 0.2);
    -webkit-transition:all .15s linear;
 }
 
