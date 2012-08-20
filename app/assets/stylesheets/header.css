@@ -55,7 +55,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   display:block;
   position:absolute;
   bottom:2px; left:50%; margin-left: -4px;
-  width:9px; height:5px;
+  width:11px; height:5px;
   background:url(/img/setaDots.png) center center no-repeat;
 }
 
