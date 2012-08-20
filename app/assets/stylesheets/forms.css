@@ -77,7 +77,6 @@ label.nomarginleft {margin-left: 0 !important;}
   clear:both;
   float:none;
 }
-.formInline.boxGrayOpt label {width:auto; margin-bottom:0;}
 
 .formInline .boxGrayOpt label,
 .form-horizontal .boxGrayOpt label,
@@ -91,6 +90,9 @@ label.nomarginleft {margin-left: 0 !important;}
   width:100px;
   text-align:left;
 }
+
+.formInline.boxGrayOpt label {width:auto; margin-bottom:0; padding-top:0;}
+.formInline.boxGrayOpt input {vertical-align: middle;}
 
 .boxGrayOpt:before {
   content:" ";
