@@ -93,7 +93,7 @@ td .modal-footer .btn-primary {color:#FFF;}
 /**
 *** Text basic styles
 **/
-h1, h2, h3, h4, h5, h6 {color:#000; margin:0;}
+h1, h2, h3, h4, h5, h6 {color:#000;}
 h1 {font: 26px UbuntuMedium, Ubuntu, arial, verdana, tahoma, sans-serif;}
 h2 {font: 24px UbuntuLight, Ubuntu, arial, verdana, tahoma, sans-serif;}
 h3, legend {font: 20px Ubuntu, arial, verdana, tahoma, sans-serif;}
