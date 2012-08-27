@@ -387,7 +387,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
 .colorPurple #menuPrincipal .parent > a:hover,
 .colorPurple #menuPrincipal .parent:hover > a,
 .colorPurple td a,
-.colorPurple .carousel-control {color: #5a2dc0;}
+.colorPurple .carousel-control
+{color: #5a2dc0;}
 
 .colorPurple #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
