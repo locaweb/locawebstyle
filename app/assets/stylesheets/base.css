@@ -276,9 +276,15 @@ summary.ico-dot + div p {padding-left:23px !important;}
 /**
 *** PAGINACAO e NAVEGACAO
 **/
-.pagination {padding:5px 0 0; margin:0; height:auto;}
+.pagination {
+  padding:5px 0 0;
+  margin:0;
+  height:auto;
+  font-size: 11px;
+}
 .pagination ul {margin:0;box-shadow:none;}
 
+.pagination a, .pagination span {line-height: inherit;}
 .pagination a, .pagination .current {
   float:none;
   display:inline-block;
@@ -286,7 +292,6 @@ summary.ico-dot + div p {padding-left:23px !important;}
   padding: 0 5px;
   border: 1px solid #D7D7D7;
   border-radius: 4px;
-  font-size: 11px;
   color:#797979;
 }
 .pagination li.first-child a, .pagination li.last-child a, .pagination .first a, .pagination .prev a, .pagination .next a, .pagination .last a {
