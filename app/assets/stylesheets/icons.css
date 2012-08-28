@@ -46,6 +46,7 @@
 .icoPosRight[class*="btn-"][class*="ico-"]:before {
   float:right;
   margin-left:5px;
+  margin-top:1px;
 }
 
 .ico-alert:before {

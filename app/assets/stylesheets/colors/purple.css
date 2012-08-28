@@ -28,8 +28,8 @@
 .colorPurple #menuPrincipal .parent > a:hover,
 .colorPurple #menuPrincipal .parent:hover > a,
 .colorPurple td a,
-.colorPurple .carousel-control
-{color: #5a2dc0;}
+.colorPurple .carousel-control,
+.colorPurple .pathWay li.active b, .colorPurple .pathWay li:hover b {color: #5a2dc0;}
 
 .colorPurple #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
@@ -56,13 +56,14 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#764ccd', endColorstr='#4520af',GradientType=0 ); /* IE6-9 */
   filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
-.colorPurple .boxCollapse header {border-left-color: #84c02e;}
 
-.colorPurple .pathWay li.active a, .colorPurple .pathWay li:hover a {background-color:#edf6e1;}
-.colorPurple .pathWay li.active b, .colorPurple .pathWay li:hover b {color:#79bb2c;}
+/** Borda esquerda do collapse de Configuração **/
+.colorPurple .boxCollapse header {border-left-color: #5a2dc0;}
+
+.colorPurple .pathWay li.active a, .colorPurple .pathWay li:hover a {background-color:#e8e1f6;}
 
 .colorPurple .boxCollapse header h4,
 .colorPurple .pathWay li.active a,
 .colorPurple .pathWay li:hover a,
-.colorPurple .sidebar h1 {color:#354d12;}
+.colorPurple .sidebar h1 {color:#120926;}
 
