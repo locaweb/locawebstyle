@@ -1,0 +1,68 @@
+/*** COR
+**** ROXA
+***/
+.colorPurple #menuPrincipal > ul > li.selected a,
+.colorPurple .progress .bar,
+.colorPurple .btn-primary:hover,
+.colorPurple .btn-primary:active,
+.colorPurple .btn-primary.active,
+.colorPurple .btn-primary.disabled,
+.colorPurple .btn-primary[disabled],
+.colorPurple .pathWay li.active, .colorPurple .pathWay li:hover {background-color:#5a2dc0;}
+
+.colorPurple #menuPrincipal,
+.colorPurple .tabs li, .colorPurple .tabs li.active a,
+.colorPurple #menuPrincipal ul li ul {border-bottom-color:#5a2dc0;}
+
+.colorPurple .tabs li.active a,
+.colorPurple .tabs li a:hover {border-top-color:#5a2dc0; }
+
+.colorPurple .serviceName a,
+.colorPurple #menuPrincipal .btMenu a,
+.colorPurple .collapseGroup summary span,
+.colorPurple .lnkSeta,
+.colorPurple #menuPrincipal > ul > li > a:hover,
+.colorPurple [class^="ico-"],
+.colorPurple [class*=" ico-"],
+.colorPurple .boxGray.listDetail a,
+.colorPurple #menuPrincipal .parent > a:hover,
+.colorPurple #menuPrincipal .parent:hover > a,
+.colorPurple td a,
+.colorPurple .carousel-control
+{color: #5a2dc0;}
+
+.colorPurple #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
+
+.colorPurple .lnkSeta:hover {color:#cc8500;}
+
+.colorPurple .pagination li.first-child a,
+.colorPurple .pagination li.last-child a,
+.colorPurple .pagination .first a,
+.colorPurple .pagination .prev a,
+.colorPurple .pagination .next a,
+.colorPurple .pagination .last a,
+.colorPurple p a,
+.colorPurple .breadcrumb {color:#cc8500;}
+
+.colorPurple .btn-primary, .colorPurple .pagination .current,
+.colorPurple .pagination .active a {
+  background-color: #5a2dc0;
+  background: -moz-linear-gradient(top, #764ccd 0%, #4520af 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#764ccd), color-stop(100%,#4520af)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #764ccd 0%,#4520af 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #764ccd 0%,#4520af 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #764ccd 0%,#4520af 100%); /* IE10+ */
+  background: linear-gradient(top, #764ccd 0%,#4520af 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#764ccd', endColorstr='#4520af',GradientType=0 ); /* IE6-9 */
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+.colorPurple .boxCollapse header {border-left-color: #84c02e;}
+
+.colorPurple .pathWay li.active a, .colorPurple .pathWay li:hover a {background-color:#edf6e1;}
+.colorPurple .pathWay li.active b, .colorPurple .pathWay li:hover b {color:#79bb2c;}
+
+.colorPurple .boxCollapse header h4,
+.colorPurple .pathWay li.active a,
+.colorPurple .pathWay li:hover a,
+.colorPurple .sidebar h1 {color:#354d12;}
+

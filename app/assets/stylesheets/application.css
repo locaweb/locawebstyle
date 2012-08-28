@@ -1,6 +1,6 @@
 /*
  *= require bootstrap/css/bootstrap
- *= require colors
+ *= require colors/colors
  *= require fonts
  *= require chosen
  *= require collapse
@@ -13,6 +13,7 @@
  *= require modal
  *= require sidebar
  *= require tables
+ *= require passos
  *= require grid
  *= require mobile
  *= require base
