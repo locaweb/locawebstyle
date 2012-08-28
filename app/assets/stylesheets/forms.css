@@ -137,7 +137,7 @@ label.checkbox.control-label, label.checkbox.control-label:first-child {
 .boxCinzaInnerLight {
   clear:both;
   background:#dddddd;
-  padding:10px;
+  padding:10px 15px;
   border-radius:5px;
 }
 
@@ -172,6 +172,8 @@ input.input360 {width:360px;}
 
 .input60 input {width:54px;}
 .input60 label, .input60 .help-inline {min-width:154px;}
+
+.boxCinzaInner h6 {margin-bottom:0;}
 
 /** Botao do Datepicker **/
 .ui-datepicker-trigger {
