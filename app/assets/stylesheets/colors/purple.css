@@ -33,7 +33,7 @@
 
 .colorPurple #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
-.colorPurple .lnkSeta:hover {color:#cc8500;}
+.colorPurple .lnkSeta:hover {color:#48249a;}
 
 .colorPurple .pagination li.first-child a,
 .colorPurple .pagination li.last-child a,
@@ -42,7 +42,7 @@
 .colorPurple .pagination .next a,
 .colorPurple .pagination .last a,
 .colorPurple p a,
-.colorPurple .breadcrumb {color:#cc8500;}
+.colorPurple .breadcrumb {color:#48249a;}
 
 .colorPurple .btn-primary, .colorPurple .pagination .current,
 .colorPurple .pagination .active a {

@@ -102,7 +102,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
 .colorGreen .boxCollapse header {border-left-color: #84c02e;}
 
 .colorGreen .pathWay li.active a, .colorGreen .pathWay li:hover a {background-color:#edf6e1;}
-.colorGreen .pathWay li.active b, .colorGreen .pathWay li:hover b {color:#5a2dc0;}
+.colorGreen .pathWay li.active b, .colorGreen .pathWay li:hover b {color:#84c02e;}
 
 .colorGreen .boxCollapse header h4,
 .colorGreen .pathWay li.active a,

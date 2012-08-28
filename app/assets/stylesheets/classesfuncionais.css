@@ -74,5 +74,5 @@ hr.sep {background-color: #E5E5E5; }
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  display: block;
+  display: block !important;
 }
