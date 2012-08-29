@@ -134,6 +134,25 @@ a:hover {text-decoration:underline;}
 
 h3 + .alert {margin-top:15px;}
 
+.alert .close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+
+.alert .close:hover {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
 .alert h5 {
   font:bold 12px verdana,arial, tahoma, sans-serif;
   color:#2a2a2a !important;
