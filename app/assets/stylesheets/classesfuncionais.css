@@ -31,6 +31,7 @@
 .txtCenter, .txtcenter {text-align:center;}
 
 .widthAuto, .widthAuto {width: auto;}
+.widthInherit {width: inherit;}
 
 .noborder, .noBorder {border:none;}
 .noborderright, .noBorderRight {border-right:none;}

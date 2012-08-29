@@ -28,6 +28,7 @@ p + .boxCollapse {margin-top:30px;}
 .boxCollapse header p {font:12px verdana, arial, tahoma, sans-serif; color:#767676; padding:0; margin:0;}
 
 .boxCinzaInner {background:#ddd; padding:10px 10px; margin-bottom:30px;}
+.boxCinzaInner + .boxCinzaInner {margin-top:-25px;}
 .boxCinzaInner .control-group {margin:0 0 10px;}
 
 .boxCinzaInner p + div.control-group {margin-top:20px;}

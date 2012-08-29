@@ -241,3 +241,17 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top:0;}
   padding:0 3px;
   vertical-align: middle;
 }
+
+.sideInput {position:relative; padding-left:20px;}
+.sideInput input[type="radio"], .sideInput input[type="checkbox"] {position:absolute; top:5px; left:0px;}
+
+.sideInput label {margin-bottom:5px; display:block;}
+
+
+.lineFieldsContainer label {margin-left:0;}
+.lineFieldsContainer label.span3 {width:217px;}
+.lineFields {clear:both; margin-bottom:10px;}
+
+.lineFields input:nth-child(2n) {width:275px;}
+
+.lineFields input[type="text"]:after {content: "teste"; display:block;}
