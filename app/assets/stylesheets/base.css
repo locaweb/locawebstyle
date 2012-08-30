@@ -119,6 +119,10 @@ p {
   color:#767676;
   font:12px verdana, arial, tahoma, sans-serif;
 }
+p small {
+  color:#767676;
+  font:10px verdana, arial, tahoma, sans-serif;
+}
 
 a {text-decoration:none;}
 a:hover {text-decoration:underline;}
@@ -248,9 +252,7 @@ h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
   margin:0;
   padding: 0 15px 11px 15px;
 }
-.boxGray h2 + p {
-  margin-top:10px;
-}
+.boxGray h2 + p {margin-top:10px;}
 
 /** COLLAPSE
 *** É o padrão do Bootstrap com algumas mudanças visuais
@@ -365,6 +367,11 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
 
 .modal .boxActions {margin-top:0;}
 
+.boxCinzaInner .boxActions {
+  border-top-color:#cbcbcb;
+  margin:15px 0 0;
+  padding:20px 0 15px;
+}
 
 /**
 *** Listagem de meios de pagamentos e outras observações
