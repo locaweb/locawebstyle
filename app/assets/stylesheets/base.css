@@ -585,10 +585,10 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   padding-bottom:20px;
   padding:10px 5px 15px;
 }
+
 /***
 **** CHAMADAS NO BOXGRAY - Revisit
 ***/
-
 .revisit .chamadasBox div { min-height:98px;}
 
 .revisit .chamadasBox div:hover {
@@ -850,5 +850,5 @@ td .progress {max-width:50px;}
 
 .carousel-control {background-image:none !important;}
 
-
 .ui-datepicker-trigger.icon-calendar:before{margin-top: 0;}
+

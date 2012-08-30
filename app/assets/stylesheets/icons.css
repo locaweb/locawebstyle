@@ -42,11 +42,14 @@
 }
 
 .icoPosRight[class^="btn-"][class^="ico-"]:before,
-.icoPosRight[class*="btn-"][class*="ico-"]:before {
+.icoPosRight[class*="btn-"][class*="ico-"]:before,
+.icoPosRight[class^="ico-"]:before,
+.icoPosRight[class*="ico-"]:before {
   float:right;
   margin-left:5px;
   margin-top:1px;
 }
+.ico-down-dir.icoPosRight:before {font-size:15px; margin-right:3px;}
 
 .ico-alert:before {
   margin-right:7px;
