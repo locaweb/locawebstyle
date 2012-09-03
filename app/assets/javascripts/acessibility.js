@@ -37,6 +37,8 @@ $(document).ready(function() {
 	$('#rodape').attr('role','contentinfo');
 	$('.alert').attr('role','alert');
 	$('a.btn').attr('role','button');
+	$('.boxGray').attr('role','region');
+	$('.boxGray h2').attr('role','presentation');
 
 
 	// Verifica se existe um elemento mais específico que o MAIN com o conteúdo principal
