@@ -1,7 +1,12 @@
 $(document).ready(function() {
 
+	$('a, input, select, textarea, h1, h2, h3, h4, h5, h6, p').attr('tabindex','0');
 	$('#menuPrincipal li > a').attr('tabindex','1');
-	$('.pathWay li > a').attr('tabindex','2');
+	$('.pathWay li > a, .btn-primary').attr('tabindex','2');
+	$('.btn-primary').attr('tabindex','3');
+	$('.tabs li a').attr('tabindex','4');
+
+	$('.alert').focus();
 
 //
 // WAI-ARIA nos elementos
@@ -18,17 +23,17 @@ $(document).ready(function() {
 
 	// Inserie ARIA-SELECTED em TABS ativas
 
-	$('.tab-pane').attr({
-		role: 'tabpanel',
-		'aria-hidden': 'true'
-	});
+	// $('.tab-pane').attr({
+	// 	role: 'tabpanel',
+	// 	'aria-hidden': 'true'
+	// });
 
-	$('[data-toggle="tab"]').attr('aria-selected','false');
-	$('.active [data-toggle="tab"]').attr('aria-selected','true');
-	$('[data-toggle="tab"]').attr('role','tab').on('show', function(e){
-		$(e.target).attr('aria-selected','true');
-		$(e.relatedTarget).attr('aria-selected','false');
-	});
+	// $('[data-toggle="tab"]').attr('aria-selected','false');
+	// $('.active [data-toggle="tab"]').attr('aria-selected','true');
+	// $('[data-toggle="tab"]').attr('role','tab').on('show', function(e){
+	// 	$(e.target).attr('aria-selected','true');
+	// 	$(e.relatedTarget).attr('aria-selected','false');
+	// });
 
 
 	//

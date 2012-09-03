@@ -825,7 +825,8 @@ td .progress {max-width:50px;}
   font:bold 12px verdana, arial, tahoma, sans-serif;
   margin:0 0 5px;
 }
-
+.popover.right .arrow {margin-top:-6px;}
+/*
 .popover{margin-top:4px;}
 .popover-inner {background:rgba(0,0,0,0.2); padding:5px; box-shadow:inherit;}
 .popover .arrow {border-right:5px solid rgba(0,0,0,0.2) !important;}
@@ -840,7 +841,7 @@ td .progress {max-width:50px;}
   color:#163988;
   font:bold 12px verdana, arial, tahoma, sans-serif;
 }
-
+*/
 /*** COLLAPSE
 **** Algumas adequações
 ***/
