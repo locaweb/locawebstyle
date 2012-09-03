@@ -29,6 +29,12 @@ Locastyle = (function() {
 
     // Faz a modal animar \o/
     obj.find('.modal').addClass('fade');
+    
+    // Ativa focus quando a modal é carregada
+    obj.find('.modal').on('shown', function () {
+      $('.autofocus').focus()
+    });
+
 
     // Insere quebra de linha depois das DDs em ListDetails
      obj.find('.listDetail dd').after('<hr class="sep">');
@@ -176,27 +182,6 @@ $(document).ready(function() {
     disable_search_threshold: 20
     // search_contains: true,
   });
-
-   // Identificando os IEs Mother Fuckers...
-  if ($.browser.msie) {
-    if(parseInt($.browser.version) == 9){
-         // Para IE9
-         $("html").addClass("ie9");
-    } else if (parseInt($.browser.version) == 8){
-         // Para IE8
-         $("html").addClass("ie8");
-    } else if(parseInt($.browser.version) == 7){
-         // Para IE7
-         $("html").addClass("ie7");
-    } else if(parseInt($.browser.version) == 6){
-         // Para IE6
-         $("html").addClass("ie6");
-    }
-  } else if ($.browser.mozilla) {
-    $("html").addClass("gecko");
-  } else if ($.browser.webkit) {
-    $("html").addClass("webkit");
-  }
 
   // Desabilita click em botoes com disabled
   $('.btn.disabled').click(function(event){event.preventDefault();})
