@@ -5,4 +5,5 @@
 //= require bootstrap/js/bootstrap
 //= require masked-input
 //= require browser-detect
+//= require acessibility
 //= require scripts

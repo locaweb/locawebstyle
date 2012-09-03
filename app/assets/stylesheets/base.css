@@ -426,9 +426,7 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   background:#ececec;
 }
 
-.spanObs .lnkSeta {
-  margin: 0;
-}
+.spanObs .lnkSeta {margin: 0;}
 
 .listOptions p.pObs strong {color:#545454;}
 

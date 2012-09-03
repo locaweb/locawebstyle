@@ -198,8 +198,6 @@ $(document).ready(function() {
 
   $('[rel="popover"]').popover()
 
-  $('#menuPrincipal li.selected').find('a').attr('tabindex','1')
-
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
 
