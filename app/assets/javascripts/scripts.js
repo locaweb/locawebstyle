@@ -162,10 +162,20 @@ $(document).ready(function() {
 
   $('input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]').addClass('disabled');
 
-  $('.boxCollapse header').live('click', function(e){
-    e.preventDefault();
-    $(this).parent('.boxCollapse').toggleClass('active');    
+
+  // Insere classe ACTIVE para parents de Collapse
+  //
+  // boxCollapse são aqueles collapses como na página de CONFIGURAÇÃO do Email Marketing
+  // collpaseGroup fazem parte dos collapses utilizados na home, como em Gateway.
+  //
+  $('.collapse').on('show', function(){
+    $(this).parents('.boxCollapse, .collapseGroup').addClass('active');
   });
+
+  $('.collapse').on('hide', function(){
+    $(this).parents('.boxCollapse, .collapseGroup').removeClass('active');    
+  });
+
 
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
   $('.lnkSeta[data-text]').live('click', function(e){
