@@ -4,4 +4,5 @@
 //= require chosen.jquery.min
 //= require bootstrap/js/bootstrap
 //= require masked-input
+//= require browser-detect
 //= require scripts
