@@ -47,7 +47,7 @@
 .tableList tbody tr:nth-child(even) {background-color:#eee;}
 .tableList thead th.actived {background-color:#2a2a2a;}
 
-.forceClass .tableList tbody tr:hover, tr.active {background-color:#fffece;}
+.tableList tbody tr:hover, tr.active {background-color:#fffece;}
 
 .tableList .txtLeft td, .tableList .txtLeft th {text-align:left;}
 

@@ -10,8 +10,7 @@
 .dinline, .dNone {display:inline; float:none;}
 .dinlineblock, .dInlineBlock {display:inline-block; float:none;}
 .dnone, .dNone,
-.forceClass .dnone, .forceClass .dNone,
-.hide, .forceClass .hide {display:none;}
+.hide, .hide {display:none;}
 
 .nomargin, .noMargin {margin:0;}
 .nomarginleft, .noMarginLeft, .row.noMarginLeft {margin-left:0;}

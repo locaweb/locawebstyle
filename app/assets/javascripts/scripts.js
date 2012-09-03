@@ -92,8 +92,6 @@ Locastyle = (function() {
 $(document).ready(function() {
   window.locastyle = new Locastyle();
 
-  $('html').addClass('forceClass');
-
   // Contando quantos sliders items tem no slider das sidebares
   $.each($('.sideBox .carousel'), function() {
     if ($(this).find('.carouselNav b').size() > 0) {
@@ -196,7 +194,7 @@ $(document).ready(function() {
   // Desabilita click em botoes com disabled
   $('.btn.disabled').click(function(event){event.preventDefault();})
 
-  $('[rel="popover"]').popover()
+  $('[rel="popover"]').popover({trigger: 'hover'})
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));

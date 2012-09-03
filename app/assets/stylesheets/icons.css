@@ -420,7 +420,7 @@ li [class^="icon-"], li [class*=" icon-"] {
 
 
 [class^="icon-"]:before, [class*=" icon-"]:before,
-body.forceClass .ui-datepicker-trigger.icon-calendar:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png);}
+.ui-datepicker-trigger.icon-calendar:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png);}
 
 /*** Bootstrap Icons***/
 .icon-white {background-image: url("../img/glyphicons-halflings-white.png");}
