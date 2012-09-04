@@ -2,10 +2,9 @@ var Locastyle;
 
 Locastyle = (function() {
   function Locastyle() {}
+
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   Locastyle.prototype.init = function(obj) {
-    // Setinha nas TABs
-    // obj.find('.tabs li:first-child').addClass('active');
 
     // Define um intervalo para o Wizard demorar para rodar sozinho
     obj.find('.modalSlider .carousel').carousel({interval: 1000000});
@@ -147,33 +146,11 @@ $(document).ready(function() {
     $(target).collapse('show');
   });
 
-  // Faz a troca de Classe SELECTED entre os Collpases
-  $('.collapseGroup summary').live('click', function(e){
-    e.preventDefault();
-    $(this).toggleClass('active');
-    $(this).parent('.details').toggleClass('active');
-  });
-
   $('[data-toggle="collapse"]').click(function (e){e.preventDefault();});
   
   $('#menuPrincipal li').has('ul').addClass('parent');
 
   $('input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]').addClass('disabled');
-
-
-  // Insere classe ACTIVE para parents de Collapse
-  //
-  // boxCollapse são aqueles collapses como na página de CONFIGURAÇÃO do Email Marketing
-  // collpaseGroup fazem parte dos collapses utilizados na home, como em Gateway.
-  //
-  $('.collapse').on('show', function(){
-    $(this).parents('.boxCollapse, .collapseGroup').addClass('active');
-  });
-
-  $('.collapse').on('hide', function(){
-    $(this).parents('.boxCollapse, .collapseGroup').removeClass('active');    
-  });
-
 
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
   $('.lnkSeta[data-text]').live('click', function(e){
@@ -184,6 +161,8 @@ $(document).ready(function() {
     $(this).html( btnTextAlt ).data('text',btnText);
   });
 
+
+  // Selects Customizados.
   $(".customSelect, .chzn-select").chosen({
     no_results_text: "Nenhum resultado encontrado",
     placeholder_text: "Selecione uma opção",
@@ -194,7 +173,30 @@ $(document).ready(function() {
   // Desabilita click em botoes com disabled
   $('.btn.disabled').click(function(event){event.preventDefault();})
 
+  // Faz o popover ser habilitado no HOVER e não no Click.
   $('[rel="popover"]').popover({trigger: 'hover'})
+
+
+  // Insere classe ACTIVE para parents de Collapse
+  //
+  // boxCollapse são aqueles collapses como na página de CONFIGURAÇÃO do Email Marketing
+  // collpaseGroup fazem parte dos collapses utilizados na home, como em Gateway.
+  //  
+  function boxCollapseActive() {
+    $('.collapse').on('show', function(){
+      $(this).parents('.boxCollapse, .details').addClass('active');
+    });
+
+    $('.collapse').on('hide', function(){
+      $(this).parents('.boxCollapse, .details').removeClass('active');    
+    });
+  }
+
+  // Pega todos os collapses e deixa sob a função de adicionar ACTIVE nos parents.
+  $('[data-toggle="collapse"]').click( boxCollapseActive() );
+
+  // Se houver uma classe ERROR dentro de um collapse, ele já aparece aberto.
+  $('.error').parents('.collapse').collapse('show');
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
