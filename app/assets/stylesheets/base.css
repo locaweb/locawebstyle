@@ -33,6 +33,11 @@ iframe {
 .clearfix:after {clear: both;}
 
 /**
+*** Accessibility
+**/
+[tabindex] {outline:none;}
+
+/**
 *** Botões
 **/
 .btn {
