@@ -1,4 +1,5 @@
 /*
+ *= require colors/shared
  *= require colors/blue
  *= require colors/green
  *= require colors/orange
@@ -6,54 +7,3 @@
  *= require colors/purple
  *= require colors/aqua
 */
-
-/** LINKS COM SETINHAS QUADRADAS ***/
-.colorBlue .lnkSeta:before {background-position:0 -9px;}
-.colorBlue .lnkSeta:hover:before {background-position:-9px -9px;}
-
-.colorRed .lnkSeta:before {background-position:0 -18px;}
-.colorRed .lnkSeta:hover:before {background-position:-9px -18px;}
-
-.colorGreen .lnkSeta:before {background-position:0 -27px;}
-.colorGreen .lnkSeta:hover:before {background-position:-9px -27px;}
-
-.colorOrange .lnkSeta:before {background-position:0 -36px;}
-.colorOrange .lnkSeta:hover:before {background-position:-9px -36px;}
-
-/*** LINKS COM ARROWS ***/
-.colorBlue .listWhite li a:before {background-position:0 -5px;}
-.colorBlue .listWhite li a:hover:before {background-position:-4px -5px;}
-
-.colorRed .listWhite li a:before {background-position:0 -10px;}
-.colorRed .listWhite li a:hover:before {background-position:-4px -10px;}
-
-.colorGreen .listWhite li a:before {background-position:0 -15px;}
-.colorGreen .listWhite li a:hover:before {background-position:-4px -15px;}
-
-/*** MINI ARROWS ***/
-.colorBlue .breadcrumb li:before {background-position:0 -4px;}
-.colorBlue .breadcrumb li:hover:before {background-position:-3px -4px;}
-
-.colorRed .breadcrumb li:before {background-position:0 -8px;}
-.colorRed .breadcrumb li:hover:before {background-position:-3px -8px;}
-
-.colorGreen .breadcrumb li:before {background-position:0 -12px;}
-.colorGreen .breadcrumb li:hover:before {background-position:-3px -12px;}
-
-/*** LARGE ARROWS - BTMENU ***/
-.colorGreen #menuPrincipal .btMenu a:before {background-position: 0 -28px; }
-.colorBlue #menuPrincipal > ul > li.btMenu > a:before {background-position: 0 -14px;}
-.colorRed #menuPrincipal > ul > li.btMenu > a:before {background-position: 0 -21px;}
-.colorOrange #menuPrincipal > ul > li.btMenu > a:before {background-position: 0 -35px;}
-
-.btn[classˆ="ico-"], .btn[class*="ico-"] {color:inherit;}
-.btn-primary[class^="ico-"], .btn-primary[class*="ico-"] {color:#FFF;}
-
-/*** ADITIONAL COLORS FOR BOOTSTRAP LABELS ***/
-.labelFrozen {
-  background-color: #ba4d48;
-}
-
-.labelExpired {
-  background-color: #73221e;
-}
