@@ -108,3 +108,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', end
 .colorGreen .pathWay li.active a,
 .colorGreen .pathWay li:hover a,
 .colorGreen .sidebar h1 {color:#354d12;}
+
+/** LINKS COM SETINHAS QUADRADAS ***/
+.colorGreen .lnkSeta:before {background-position:0 -27px;}
+.colorGreen .lnkSeta:hover:before {background-position:-9px -27px;}
+
+/*** LINKS COM ARROWS ***/
+.colorGreen .listWhite li a:before {background-position:0 -15px;}
+.colorGreen .listWhite li a:hover:before {background-position:-4px -15px;}
+
+/*** MINI ARROWS ***/
+.colorGreen .breadcrumb li:before {background-position:0 -12px;}
+.colorGreen .breadcrumb li:hover:before {background-position:-3px -12px;}
+
+/*** LARGE ARROWS - BTMENU ***/
+.colorGreen #menuPrincipal .btMenu a:before {background-position: 0 -28px; }

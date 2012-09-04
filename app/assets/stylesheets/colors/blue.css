@@ -76,3 +76,18 @@
 
 .colorBlue .pathWay li.active a, .colorBlue .pathWay li:hover a {background-color:#e4f0fd;}
 .colorBlue .pathWay li.active b, .colorBlue .pathWay li:hover b {color:#4b7cb8;}
+
+/** LINKS COM SETINHAS QUADRADAS ***/
+.colorBlue .lnkSeta:before {background-position:0 -9px;}
+.colorBlue .lnkSeta:hover:before {background-position:-9px -9px;}
+
+/*** LINKS COM ARROWS ***/
+.colorBlue .listWhite li a:before {background-position:0 -5px;}
+.colorBlue .listWhite li a:hover:before {background-position:-4px -5px;}
+
+/*** MINI ARROWS ***/
+.colorBlue .breadcrumb li:before {background-position:0 -4px;}
+.colorBlue .breadcrumb li:hover:before {background-position:-3px -4px;}
+
+/*** LARGE ARROWS - BTMENU ***/
+.colorBlue #menuPrincipal > ul > li.btMenu > a:before {background-position: 0 -14px;}

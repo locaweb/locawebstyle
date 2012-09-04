@@ -68,3 +68,14 @@
   filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
 
+
+/** LINKS COM SETINHAS QUADRADAS ***/
+.colorOrange .lnkSeta:before {background-position:0 -36px;}
+.colorOrange .lnkSeta:hover:before {background-position:-9px -36px;}
+
+/*** LINKS COM ARROWS ***/
+
+/*** MINI ARROWS ***/
+
+/*** LARGE ARROWS - BTMENU ***/
+.colorOrange #menuPrincipal > ul > li.btMenu > a:before {background-position: 0 -35px;}
