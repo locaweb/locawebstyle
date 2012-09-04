@@ -78,7 +78,7 @@
   display:none;
   list-style:none;
   margin:0;
-  padding:5px 0 0;
+  padding:5px 0;
 }
 tr:hover .actionsTable {display:block;}
 .statusMessageBox .actionsTable {
