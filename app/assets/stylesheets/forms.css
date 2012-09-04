@@ -257,3 +257,5 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top:0;}
 .lineFields select {vertical-align: top;}
 .lineFields .addRemoveLine {width:30px; height:30px; vertical-align: top}
 .lineFields .addRemoveLine:before {margin-left:-8px; margin-top:3px;}
+
+/** Selects Customizáveis **/

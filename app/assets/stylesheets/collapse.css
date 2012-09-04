@@ -16,6 +16,7 @@ p + .boxCollapse {margin-top:30px;}
   border-left:5px solid #CCC;
   padding:2px 10px 4px;
   cursor:pointer;
+  outline: none;
 }
 .boxCollapse:hover {background-color:#ECECEC;}
 
@@ -24,8 +25,8 @@ p + .boxCollapse {margin-top:30px;}
 .boxCollapse .collapse {padding:0 15px;}
 .boxCollapse .collapse:before {content: " "; display:block; padding:20px 0 0;}
 
-.boxCollapse header h4 {font:15px verdana, arial, tahoma, sans-serif; margin-bottom:0;}
-.boxCollapse header p {font:12px verdana, arial, tahoma, sans-serif; color:#767676; padding:0; margin:0;}
+.boxCollapse header h4 {font:15px verdana, arial, tahoma, sans-serif; margin-bottom:0; outline: none;}
+.boxCollapse header p {font:12px verdana, arial, tahoma, sans-serif; color:#767676; padding:0; margin:0; outline: none;}
 
 .boxCinzaInner {background:#ddd; padding:10px 10px; margin-bottom:30px;}
 .boxCinzaInner + .boxCinzaInner {margin-top:-25px;}
