@@ -1,0 +1,14 @@
+/** LINKS COM SETINHAS QUADRADAS ***/
+.colorRed .lnkSeta:before {background-position:0 -18px;}
+.colorRed .lnkSeta:hover:before {background-position:-9px -18px;}
+
+/*** LINKS COM ARROWS ***/
+.colorRed .listWhite li a:before {background-position:0 -10px;}
+.colorRed .listWhite li a:hover:before {background-position:-4px -10px;}
+
+/*** MINI ARROWS ***/
+.colorRed .breadcrumb li:before {background-position:0 -8px;}
+.colorRed .breadcrumb li:hover:before {background-position:-3px -8px;}
+
+/*** LARGE ARROWS - BTMENU ***/
+.colorRed #menuPrincipal > ul > li.btMenu > a:before {background-position: 0 -21px;}
