@@ -1,0 +1,25 @@
+<h2>Formulários</h2>
+<%= content_for_clippy do %>
+  <div class="boxGray">
+    <h2>Primeiros passos</h2>
+    <p>Comece aqui suas ações para as configurações do seu site.</p>
+    <div class="row chamadasBox">
+      <div class="span4">
+          <h3 class="titResults"><a href="#">Publique o conteúdo do site</a></h3>
+          <p>Utiize os recursos do FTP abaixo ou acesse o nosso Gerenciador de Arquivos.</p>
+      </div>
+      <div class="span4">
+        <h3 class="titMessage"><a href="#">INSTALE APLICATIVOS EM SEU SITE</a></h3>
+        <p>Faça a instalação automática de aplicativos e ferramentas para incrementar seu site.</p>
+      </div>
+      <div class="span4">
+        <h3 class="titMoreUser"><a href="#">GERENCIE SUAS BASES DE DADOS</a></h3>
+        <p>Visualize em detalhes as bases de dados do site ou crie uma nova base de dados.</p>
+      </div>
+    </div>
+  </div>
+<% end  %>
+
+<div class="codes">
+    <%= clippy(yield(:code)) %>
+</div>
