@@ -51,7 +51,7 @@ iframe {
 .btn.btn-cancel {color:#333;}
 
 .btn.btn-success {color:#FFF;}
-.btn-primary {
+.btn-primary, .control-group.error .btn-primary {
   color:#FFF;
   font-weight:400;
   background-color: #006dcc;
@@ -68,7 +68,7 @@ iframe {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .tableList tbody td .btn {font-weight:normal;}
-.btn-primary:hover {
+.btn-primary:hover, .control-group.error .btn-primary:hover {
   background-color:#4b7cb8;
   background-image:none;
 }
@@ -94,6 +94,7 @@ td .modal-footer .btn-primary {color:#FFF;}
   background-color:#ebebeb;
   background-image:none;
 }
+
 
 /**
 *** Text basic styles

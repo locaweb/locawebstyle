@@ -67,8 +67,6 @@ tr.active .boxActions {display:block; padding:10px 0 5px;}
 tr.active .boxActions .btn {margin-right:0;}
 tr.active .actionsTable {display:none;}
 
-.boxCollapse h6 + p {margin-top:-8px;}
-
 /***
 **** Fix do IE9 para Altura dos collapses em conjunto com actionsTable que aparecia e desaparecia
 ***/
