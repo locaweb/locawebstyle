@@ -9,9 +9,9 @@
   font-family: Ubuntu, verdana, arial, helvetica, tahoma, sans-serif;
 }
 
-[class^="btn-"][class^="ico-"]:before, [class*="btn-"][class*="ico-"]:before {margin-right:5px; vertical-align: middle;}
+[class^="btn"][class^="ico-"]:before, [class*="btn"][class*="ico-"]:before {margin-right:5px; vertical-align: middle;}
 
-[class^="btn-"][class^="ico-"], [class*="btn-"][class*="ico-"] {padding-left:5px;}
+[class^="btn"][class^="ico-"], [class*="btn"][class*="ico-"] {padding-left:5px;}
 
 [class^="ico-"]:before, [class*="ico-"]:before, .lnkSeta:before {
   display:inline-block;
@@ -31,18 +31,22 @@
 
 .lnkSeta:before {position:relative; top:-1px;}
 
-.btn-warning[class^="btn-"], .btn-warning[class*=" btn-"], 
-.btn-danger[class^="btn-"], .btn-danger[class*=" btn-"] {color:#FFF;}
+[class^="btn"][class*="btn"] {color:#333;}
+
+.btn-warning[class^="btn"], .btn-warning[class*=" btn-"], 
+.btn-danger[class^="btn"], .btn-danger[class*=" btn-"],
+.btn-primary[class^="btn"], .btn-primary[class*=" btn-"] {color:#FFF;}
+
 
 /** Quando o ícone tem que ir para a direita **/
-.icoPosRight[class^="btn-"][class^="ico-"],
-.icoPosRight[class*="btn-"][class*="ico-"] {
+.icoPosRight[class^="btn"][class^="ico-"],
+.icoPosRight[class*="btn"][class*="ico-"] {
   padding-left:10px;
   padding-right:5px;
 }
 
-.icoPosRight[class^="btn-"][class^="ico-"]:before,
-.icoPosRight[class*="btn-"][class*="ico-"]:before,
+.icoPosRight[class^="btn"][class^="ico-"]:before,
+.icoPosRight[class*="btn"][class*="ico-"]:before,
 .icoPosRight[class^="ico-"]:before,
 .icoPosRight[class*="ico-"]:before {
   float:right;

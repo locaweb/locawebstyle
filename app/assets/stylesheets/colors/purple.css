@@ -29,12 +29,12 @@
 .colorPurple #menuPrincipal .parent:hover > a,
 .colorPurple td a,
 .colorPurple .carousel-control,
-.colorPurple .pathWay li.active b, .colorPurple .pathWay li:hover b {color: #5a2dc0;}
+.colorPurple .pathWay li.active b, 
+.colorPurple .pathWay li:hover b {color: #5a2dc0;}
 
 .colorPurple #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
 
-.colorPurple .lnkSeta:hover {color:#48249a;}
-
+.colorPurple .lnkSeta:hover,
 .colorPurple .pagination li.first-child a,
 .colorPurple .pagination li.last-child a,
 .colorPurple .pagination .first a,
