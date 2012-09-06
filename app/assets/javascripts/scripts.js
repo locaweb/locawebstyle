@@ -7,12 +7,12 @@ Locastyle = (function() {
   Locastyle.prototype.init = function(obj) {
 
     // Define um intervalo para o Wizard demorar para rodar sozinho
-    obj.find('.modalSlider .carousel').carousel({interval: 1000000});
-    obj.find('.modalSlider .modal-footer').find('.btnSalvar').hide();
-    obj.find('.modalSlider .modal-footer').parents('.modal').find('.modal-footer .slidePrev').hide();
+    $('.modalSlider .carousel', obj).carousel({interval: 1000000});
+    $('.modalSlider .modal-footer', obj).find('.btnSalvar').hide();
+    $('.modalSlider .modal-footer', obj).parents('.modal').find('.modal-footer .slidePrev').hide();
 
     // Encontra se há algum formulário com erro de validação, e ativa a tab do slider com erro
-    if ( obj.find('.modalSlider .modal-body .control-group').hasClass('error') ) {
+    if ( $('.modalSlider .modal-body .control-group', obj).hasClass('error') ) {
       $('.modalSlider .item').removeClass('active');
       var item = $('.modalSlider .error').parents('.item:first');
       item.addClass('active').addClass('next');
@@ -21,25 +21,24 @@ Locastyle = (function() {
     }
 
     // Monitora o botão de next e prev dos sliders/wizards de dentro de uma modal
-    obj.find('.modal-footer .slideNext, .modal-footer .slidePrev').live("click", function() {
+    $('.modal-footer .slideNext, .modal-footer .slidePrev', obj).live("click", function() {
       $(this).parents('.modal').find('.modal-footer .slidePrev').show();
       window.locastyle.modal_callback(obj, $(this));
     });
 
     // Faz a modal animar \o/
-    obj.find('.modal').addClass('fade');
-    
-    // Ativa focus quando a modal é carregada
-    obj.find('.modal').on('shown', function () {
-      $('.autofocus').focus()
+    $('.modal', obj).addClass('fade');
+
+    // Ativa focus quando termina de abrir o modal
+    $('.modal', obj).on('shown', function () {
+      $('.autofocus').focus();
     });
 
-
     // Insere quebra de linha depois das DDs em ListDetails
-     obj.find('.listDetail dd').after('<hr class="sep">');
+     $('.listDetail dd', obj).after('<hr class="sep">');
 
     // Datepicker - JQuery UI
-    obj.find('.datepicker').datepicker({
+    $('.datepicker', obj).datepicker({
       showOn: "button",
       dateFormat: "dd/mm/yy",
       monthNamesShort: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],
@@ -47,21 +46,21 @@ Locastyle = (function() {
     });
 
     // Encontra os .help-inline e define uma largura se referenciando a largura dos inputs próximos.
-    obj.find('.control-group .help-inline, .control-group > .help-inline').each(function(index) {
-        $(this).css('width', $(this).parent().find('input[type="text"], input[type="password"], input[type="number"], input[type="email"], select').width())
+    $('.control-group .help-inline, .control-group > .help-inline', obj).each(function(index) {
+      $(this).css('width', $(this).parent().find('input[type="text"], input[type="password"], input[type="number"], input[type="email"], select').width())
     });
 
-    obj.find('.ui-datepicker-trigger').addClass('icon-calendar').html('');
+    $('.ui-datepicker-trigger', obj).addClass('icon-calendar').html('');
 
     // init of change.collapse.data-api
-    obj.find('[data-toggle=show]').filter(':checked').change();
+    $('[data-toggle=show]', obj).filter(':checked').change();
 
     // Insere uma classe SELECTED para o primeiro Collpase
-    obj.find('.collapseGroup summary:first').not('noAutoActive').addClass('active').parent('.details').addClass('active');
+    $('.collapseGroup summary:first', obj).not('noAutoActive').addClass('active').parent('.details').addClass('active');
 
     // Verifica se os inputs dentro da busca avançada estão vazios, se não estiverem, a busca avancada fica aberta
     var inputVazio;
-    obj.find('.advancedSearch').each(function(index, search){
+    $('.advancedSearch', obj).each(function(index, search){
       inputVazio = $(search).find('input[value!=""]').size() + $(search).find('select option:selected').not(':empty').size();
       if (inputVazio > 0) {
         $(search).parent().find('a[data-toggle="collapse"][data-target]').click();
@@ -70,13 +69,13 @@ Locastyle = (function() {
   };
 
   Locastyle.prototype.modal_callback = function (obj, element) {
-    if (obj.find('.modalSlider .carousel .item:first-child').is('.prev')) {
+    if ($('.modalSlider .carousel .item:first-child', obj).is('.prev')) {
       element.parents('.modal').find('.modal-footer .slidePrev').hide();
     } else {
       element.parents('.modal').find('.modal-footer .slidePrev').show();
     }
 
-    if (obj.find('.modalSlider .item:last-child').is('.next')) {
+    if ($('.modalSlider .item:last-child', obj).is('.next')) {
       element.parents('.modal').find('.modal-footer .slideNext').hide();
       element.parents('.modal').find('.modal-footer .btnSalvar').show();
     } else {
@@ -93,15 +92,14 @@ $(document).ready(function() {
 
   // Contando quantos sliders items tem no slider das sidebares
   $.each($('.sideBox .carousel'), function() {
-    if ($(this).find('.carouselNav b').size() > 0) {
+    if ($('.carouselNav b', this).size() > 0) {
       $(this).bind('slid', function (e) {
-        $(this).find('.carouselNav b').html($(this).find('.active').index() + 1);
+        $('.carouselNav b', this).html($('.active', this).index() + 1);
       });
-      $(this).find('.carouselNav i').html($(this).find('.carousel-inner .item').size())
-      $(this).find('.carouselNav b').html($(this).find('.active').index() + 1);
+      $('.carouselNav i', this).html($('.carousel-inner .item', this).size())
+      $('.carouselNav b', this).html($('.active', this).index() + 1);
     }
   });
-
 
   // Limpa inputs de formulários. Muito usado na busca avançada.
   $('.clearFormBt').live('click', function(e){
@@ -125,29 +123,23 @@ $(document).ready(function() {
   });
 
   // Faz o usuário só usar números em vez de letras.
-  $('.numbersOnly').keyup(function () { 
+  $('.numbersOnly').keyup(function () {
     this.value = this.value.replace(/[^0-9\.]/g,'');
   });
 
   // Insere a possibilidade de inserir acoes especificas de toggle definidos para os collapses
   $('body').on('change.collapse.data-api', '[data-toggle=hide]', function (e) {
     e.preventDefault();
-    var $this, href, target;
-    $this = $(this);
-    target = $this.data('target');
-    $(target).collapse('hide');
+    $($(this).data('target')).collapse('hide');
   });
 
   $('body').on('change.collapse.data-api', '[data-toggle=show]', function (e) {
     e.preventDefault();
-    var $this, href, target;
-    $this = $(this);
-    target = $this.data('target');
-    $(target).collapse('show');
+    $($(this).data('target')).collapse('show');
   });
 
   $('[data-toggle="collapse"]').click(function (e){e.preventDefault();});
-  
+
   $('#menuPrincipal li').has('ul').addClass('parent');
 
   $('input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]').addClass('disabled');
@@ -158,7 +150,7 @@ $(document).ready(function() {
     e.preventDefault();
     btnText = $(this).html();
     btnTextAlt = $(this).data('text');
-    $(this).html( btnTextAlt ).data('text',btnText);
+    $(this).html(btnTextAlt).data('text',btnText);
   });
 
 
@@ -181,14 +173,14 @@ $(document).ready(function() {
   //
   // boxCollapse são aqueles collapses como na página de CONFIGURAÇÃO do Email Marketing
   // collpaseGroup fazem parte dos collapses utilizados na home, como em Gateway.
-  //  
+  //
   function boxCollapseActive() {
     $('.collapse').on('show', function(){
       $(this).parents('.boxCollapse, .details').addClass('active');
     });
 
     $('.collapse').on('hide', function(){
-      $(this).parents('.boxCollapse, .details').removeClass('active');    
+      $(this).parents('.boxCollapse, .details').removeClass('active');
     });
   }
 
@@ -200,6 +192,5 @@ $(document).ready(function() {
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
-
 });
 
