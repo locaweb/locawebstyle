@@ -35,7 +35,7 @@ iframe {
 /**
 *** Accessibility
 **/
-[tabindex] {outline:none;}
+[tabindex] {outline:none !important;}
 
 /**
 *** Botões
