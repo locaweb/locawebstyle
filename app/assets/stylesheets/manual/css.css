@@ -140,6 +140,7 @@ aside.boxes nav ul li{
   border-bottom: 1px dotted #DDD;
   height: 20px;
   line-height: 20px;
+  list-style: none;
   padding: 0 0 0 15px;
 }
 
