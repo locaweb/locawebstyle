@@ -1,8 +1,8 @@
 //= require jquery
-//= require jquery-ui-1.8.18.custom.min.js
 //= require modernizr
-//= require chosen.jquery.min
 //= require bootstrap/js/bootstrap
+//= require select2.min
+//= require jquery-ui.min
 //= require masked-input
 //= require browser-detect
 //= require acessibility

@@ -155,12 +155,15 @@ $(document).ready(function() {
 
 
   // Selects Customizados.
-  $(".customSelect, .chzn-select").chosen({
-    no_results_text: "Nenhum resultado encontrado",
-    placeholder_text: "Selecione uma opção",
-    disable_search_threshold: 20
-    // search_contains: true,
-  });
+  // $(".customSelect, .chzn-select").chosen({
+  //   no_results_text: "Nenhum resultado encontrado",
+  //   placeholder_text: "Selecione uma opção",
+  //   disable_search_threshold: 20
+  //   // search_contains: true,
+  // });
+
+  $(".customSelect").select2();
+
 
   // Desabilita click em botoes com disabled
   $('.btn.disabled').click(function(event){event.preventDefault();})
