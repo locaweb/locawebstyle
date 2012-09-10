@@ -8,6 +8,7 @@
   overflow:hidden;
   word-break:normal;
 }
+
 .modalSmall {width:450px;}
 .modal-header {
   border:none;
@@ -142,6 +143,8 @@
 }
 .modal-footer .slidePrev:before {background:url(/img/arrowLeftGray.png) no-repeat center; margin-right:5px;}
 .modal-footer .slideNext:after {background:url(/img/arrowRightGray.png) no-repeat center; margin-left:5px;}
+
+.modal-footer .btn {margin:0 5px;}
 
 .modalCenter .modal-body,
 .modalCenter .modal-footer {text-align:center;}

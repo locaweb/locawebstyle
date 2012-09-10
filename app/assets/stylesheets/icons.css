@@ -1,5 +1,4 @@
 [class^="ico-"], [class*="ico-"] {
-  font-size:12px;
   font-style: normal;
   position:relative;
   display: inline-block;
@@ -30,9 +29,6 @@
 .tableList td [class^="ico-"], .tableList td [class*="ico-"] {font-weight:normal;}
 
 .lnkSeta:before {position:relative; top:-1px;}
-
-.btn-warning[class^="btn-"], .btn-warning[class*=" btn-"], 
-.btn-danger[class^="btn-"], .btn-danger[class*=" btn-"] {color:#FFF;}
 
 /** Quando o ícone tem que ir para a direita **/
 .icoPosRight[class^="btn-"][class^="ico-"],
