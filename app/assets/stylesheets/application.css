@@ -2,7 +2,6 @@
  *= require bootstrap/css/bootstrap
  *= require colors/colors
  *= require fonts
- *= require chosen
  *= require collapse
  *= require tabs
  *= require toolbar
@@ -19,7 +18,7 @@
  *= require mobile
  *= require base
  *= require classesfuncionais
- */
+*/
 
 .showOpts {
   position:fixed;

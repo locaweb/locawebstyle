@@ -153,16 +153,12 @@ $(document).ready(function() {
     $(this).html(btnTextAlt).data('text',btnText);
   });
 
-
   // Selects Customizados.
-  // $(".customSelect, .chzn-select").chosen({
-  //   no_results_text: "Nenhum resultado encontrado",
-  //   placeholder_text: "Selecione uma opção",
-  //   disable_search_threshold: 20
-  //   // search_contains: true,
-  // });
-
-  $(".customSelect").select2();
+  $(".customSelect").select2({
+     placeholder: "Selecione uma opção",
+     formatNoMatches: "Nenhum resultado encontrado",
+     allowClear: false
+  });
 
 
   // Desabilita click em botoes com disabled
