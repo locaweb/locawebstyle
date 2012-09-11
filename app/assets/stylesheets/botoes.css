@@ -8,11 +8,7 @@
 
 .btn.dropdown-toggle {padding:5px 8px;}
 
-.btn.btn-cancel {color:#333;}
-
-.btn.btn-success {color:#FFF;}
 .btn-primary, .control-group.error .btn-primary {
-  color:#FFF;
   font-weight:400;
   background-color: #006dcc;
   background-image: -moz-linear-gradient(top, #5f8dc2, #3966a7);
@@ -27,6 +23,20 @@
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
+
+[class^="btn"][class^="ico"],
+[class*="btn"][class*="ico"],
+.btn.btn-cancel {color:#333333;}
+
+/** Exceção botoes que tem class ico- e btn mas que precisam ter a cor de texto branca **/
+.btn-primary[class*="btn"][class*="ico"],
+.control-group.error .btn-primary[class*="btn"][class*="ico"],
+.btn-success[class*="btn"][class*="ico"],
+.btn-info[class*="btn"][class*="ico"],
+.btn-warning[class*="btn"][class*="ico"],
+.btn-danger[class*="btn"][class*="ico"],
+.btn-inverse[class*="btn"][class*="ico"] {color:#FFF;}
+
 .tableList tbody td .btn {font-weight:normal;}
 .btn-primary:hover, .control-group.error .btn-primary:hover {
   background-color:#4b7cb8;
@@ -53,6 +63,3 @@
   background-color:#ebebeb;
   background-image:none;
 }
-
-[class^="btn"][class^="ico-"],
-[class*="btn"][class*="ico-"] {color:#FFF;}
