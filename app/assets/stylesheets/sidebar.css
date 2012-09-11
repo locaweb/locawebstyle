@@ -142,11 +142,7 @@
 .carouselNav .carousel-control.left {margin-right:12px;}
 .carouselNav .carousel-control.right {margin-left:10px;}
 
-.carouselNav .carousel-control, .carouselNav .carousel-control {
-  font-size:13px;
-  position: relative;
-  top:3px;
-}
+.carouselNav .carousel-control, .carouselNav .carousel-control {font-size:13px;}
 
 .sideBox h4 {
   padding: 10px 10px 0;

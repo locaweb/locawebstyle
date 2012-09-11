@@ -24,6 +24,8 @@
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 
+.btn-large {padding-bottom:9px;}
+
 [class^="btn"][class^="ico"],
 [class*="btn"][class*="ico"],
 .btn.btn-cancel {color:#333333;}
