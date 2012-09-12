@@ -1,10 +1,7 @@
 /**
 *** Botões
 **/
-.btn {
-  text-decoration:none;
-  font:normal 14px Ubuntu, verdana, arial, tahoma;
-}
+.btn {text-decoration:none;}
 
 .btn.dropdown-toggle {padding:5px 8px;}
 

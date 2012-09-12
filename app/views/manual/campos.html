@@ -1,7 +1,25 @@
         <h2>Formulários</h2>
 <%= content_for_clippy do %>
-<form>
 
+<form class="form-search">
+  <div class="input-append">
+    <input type="text" class="span2 search-query">
+    <button type="submit" class="btn">Search</button>
+  </div>
+  <div class="input-prepend">
+    <button type="submit" class="btn">Search</button>
+    <input type="text" class="span2 search-query">
+  </div>
+</form>
+<form>
+<div class="input-append">
+  <input class="span2" id="appendedInputButton" size="16" type="text"><button class="btn" type="button">Go!</button>
+</div>
+ 
+<div class="input-append">
+  <input class="span2" id="appendedInputButtons" size="16" type="text"><button class="btn" type="button">Search</button><button class="btn" type="button">Options</button>
+</div>
+<hr>
     <div class="control-group">
         <label>Só números! (classe <b>numbersOnly</b> no input) </label>
         <input type="text" class="input240 numbersOnly">
