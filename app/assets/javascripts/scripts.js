@@ -31,7 +31,7 @@ Locastyle = (function() {
 
     // Ativa focus quando termina de abrir o modal
     $('.modal', obj).on('shown', function () {
-      $('.autoFocus').focus();
+      $('.autoFocus', this).focus();
     });
 
     // Insere quebra de linha depois das DDs em ListDetails
