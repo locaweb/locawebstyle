@@ -163,7 +163,6 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   background:url(/img/largeArrows.png) no-repeat;
   position:relative; left:-7px; top:-1px;
 }
-
 .btMenu a:before {
   content: " ";
   display:inline-block; vertical-align:middle;
