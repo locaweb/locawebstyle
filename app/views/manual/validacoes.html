@@ -1,0 +1,24 @@
+        <h2>Estados de validações</h2>
+		<p>Tipos de validações. Normalmente usamos apenas a validação de error. Mas existem outras possibilidades.</p>
+        <%= content_for_clippy do %>
+
+<div class="control-group warning">
+	<label class="control-label" for="inputWarning">Input with warning</label>
+	<input type="text" id="inputWarning">
+	<span class="help-inline">Something may have gone wrong</span>
+</div>
+<div class="control-group error">
+	<label class="control-label" for="inputError">Input with error</label>
+	<input type="text" id="inputError">
+	<span class="help-inline">Please correct the error</span>
+</div>
+<div class="control-group success">
+	<label class="control-label" for="inputSuccess">Input with success</label>
+	<input type="text" id="inputSuccess">
+	<span class="help-inline">Woohoo!</span>
+</div>
+        <% end  %>
+
+    <div class="codes">
+            <%= clippy(yield(:code)) %>
+    </div>

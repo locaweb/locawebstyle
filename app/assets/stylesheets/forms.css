@@ -198,8 +198,12 @@ legend + .control-group {margin-top:0;}
   min-height: 27px;
   line-height: 27px;
 }
+
+.formInline .controls {display:inline-block; vertical-align:top;}
+
 .sideBySide.error label {color:#B94A48;}
 .help-inline {margin-bottom:0; padding-left:0; display:block;}
+.formInline .help-inline {display:inline-block;}
 .formInline .error .help-inline {display:block; margin:2px 0 0 105px;}
 .error .help-inline {font-size:11px; display:block; margin:2px 0 0 0px;}
 .error input {margin-bottom:0;}
