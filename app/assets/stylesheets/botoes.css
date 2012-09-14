@@ -62,3 +62,9 @@
   background-color:#ebebeb;
   background-image:none;
 }
+
+.btn-group > .btn:first-child {
+  vertical-align: middle;
+  padding: 7px 14px 6px;
+  margin: 0 -4px 0 0;
+}
