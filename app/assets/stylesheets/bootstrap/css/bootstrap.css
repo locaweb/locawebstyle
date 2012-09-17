@@ -1368,7 +1368,7 @@ textarea,
 .controls-row [class*="span"] + [class*="span"] {
   margin-left: 20px;
 }
-input.span12, textarea.span12, .uneditable-input.span12 {
+/*input.span12, textarea.span12, .uneditable-input.span12 {
   width: 926px;
 }
 input.span11, textarea.span11, .uneditable-input.span11 {
@@ -1403,7 +1403,7 @@ input.span2, textarea.span2, .uneditable-input.span2 {
 }
 input.span1, textarea.span1, .uneditable-input.span1 {
   width: 46px;
-}
+}*/
 .controls-row {
   *zoom: 1;
 }
@@ -5643,7 +5643,7 @@ button.close {
   .controls-row [class*="span"] + [class*="span"] {
     margin-left: 30px;
   }
-  input.span12, textarea.span12, .uneditable-input.span12 {
+ /* input.span12, textarea.span12, .uneditable-input.span12 {
     width: 1156px;
   }
   input.span11, textarea.span11, .uneditable-input.span11 {
@@ -5678,7 +5678,7 @@ button.close {
   }
   input.span1, textarea.span1, .uneditable-input.span1 {
     width: 56px;
-  }
+  }*/
   .thumbnails {
     margin-left: -30px;
   }
