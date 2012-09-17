@@ -1,12 +1,10 @@
 $(document).ready(function() {
 
-	$('a, input, select, textarea, h1, h2, h3, h4, h5, h6, p').attr('tabindex','0');
-	$('#menuPrincipal li > a').attr('tabindex','1');
-	$('.pathWay li > a, .btn-primary').attr('tabindex','2');
-	$('.btn-primary').attr('tabindex','3');
-	$('.tabs li a').attr('tabindex','4');
-
-	$('.alert').focus();
+	// $('select, textarea, h1, h2, h3, h4, h5, h6, p').attr('tabindex','0');
+	// $('#menuPrincipal li > a, h1').attr('tabindex','1');
+	// $('input, select, .pathWay li.active > a, .btn-primary, .alert a').attr('tabindex','2');
+	// $('.btn-primary').attr('tabindex','3');
+	// $('.tabs li a').attr('tabindex','4');
 
 //
 // WAI-ARIA nos elementos
