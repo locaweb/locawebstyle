@@ -9,3 +9,5 @@
 .labelExpired {
   background-color: #73221e;
 }
+
+.alert a {color:inherit; text-decoration:underline;}
