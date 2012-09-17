@@ -68,3 +68,5 @@
   padding: 7px 14px 6px;
   margin: 0 -4px 0 0;
 }
+
+.error .btn, .control-group.error .btn {color:#FFF;}
