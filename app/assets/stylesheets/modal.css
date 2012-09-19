@@ -9,7 +9,8 @@
   word-break:normal;
 }
 
-.modalSmall {width:450px;}
+.modalSmall {width:450px; margin-left:-200px;}
+
 .modal-header {
   border:none;
   padding-bottom:0;
@@ -146,6 +147,11 @@
 
 .modal-footer .btn {margin:0 5px;}
 
+.modal.txtCenter .modal-body,
+.modal.txtCenter .modal-footer,
+.modal.txtCenter .modal-header,
 .modalCenter .modal-body,
+.modalCenter .modal-header,
 .modalCenter .modal-footer {text-align:center;}
+
 .modal.modalCenter .btn {margin: 0;}

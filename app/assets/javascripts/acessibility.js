@@ -6,7 +6,7 @@ $(document).ready(function() {
 	// $('.tabs li a').attr('tabindex','4');
 	$('#menuPrincipal li > a, #main .chamadasBox h3 a, .headerContent h1, .alert').attr('tabindex','1');
 	$('.btn, .tabs a, .sidebar h1, .sidebar h2').attr('tabindex','4');
-	$('input, select, .btn.btn-primary').removeAttr('tabindex').attr('tabindex','2');
+	$('input, select, .btn.btn-primary').attr('tabindex','2');
 
 //
 // WAI-ARIA nos elementos
