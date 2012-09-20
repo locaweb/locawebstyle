@@ -247,7 +247,7 @@ summary.ico-dot + div p {padding-left:23px !important;}
 .pagination {padding:5px 0 0; margin:0; height:auto;}
 .pagination ul {margin:0;box-shadow:none;}
 
-.pagination a, .pagination .current, .pagination span {
+.pagination ul > li > a, .pagination .current, .pagination span {
   float:none;
   display:inline-block;
   line-height: 16px;
@@ -257,7 +257,13 @@ summary.ico-dot + div p {padding-left:23px !important;}
   font-size: 11px;
   color:#797979;
 }
-.pagination li.first-child a, .pagination li.last-child a, .pagination .first a, .pagination .prev a, .pagination .next a, .pagination .last a {
+
+.pagination ul > li.first-child > a, 
+.pagination li.last-child a, 
+.pagination .first a, 
+.pagination .prev a, 
+.pagination .next a, 
+.pagination .last a {
   border:none;
   color:#666;
 }
@@ -266,8 +272,10 @@ summary.ico-dot + div p {padding-left:23px !important;}
 .pagination .prev a, .pagination .next a {background:url(/img/seta-pagination.png) no-repeat 0 0;}
 .pagination .prev a {background-position:left 6px; padding-left:10px;}
 .pagination .next a {background-position:right -13px; padding-right:10px;}
+.pagination .prev a:hover, 
+.pagination .next a:hover {background-color:transparent; opacity: 0.8;}
 
-.pagination .current, .pagination .active a {
+.pagination .current, .pagination ul > .active > a {
   color:#FFF;
   background-color:#666;
   background-image: linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
@@ -278,7 +286,7 @@ summary.ico-dot + div p {padding-left:23px !important;}
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.21, rgb(133,133,133)), color-stop(1, rgb(209,209,209)));
 }
 
-.pagination .disabled a {border:none;}
+.pagination .disabled, .pagination .disabled a {border:none; line-height: inherit;}
 
 .navView .pagination {float:right;}
 .tab-content .navView {padding:15px 10px;}
