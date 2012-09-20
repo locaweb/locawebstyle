@@ -186,7 +186,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 }
 
 .infoLogin {
-  width:400px;
+  min-width:400px;
   position: absolute;
   bottom: 15px; right: 0px;
   text-align:right;
