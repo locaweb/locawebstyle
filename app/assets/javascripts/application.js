@@ -5,5 +5,4 @@
 //= require jquery-ui.min
 //= require masked-input
 //= require browser-detect
-//= require acessibility
 //= require scripts
