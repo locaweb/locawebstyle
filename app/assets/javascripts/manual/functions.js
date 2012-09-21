@@ -3,7 +3,21 @@ $(document).ready(function() {
   // Amostra do Masked Input em funcionamento
   $("#data").mask("99/99/9999");
   $("#data2").mask("99/99/9999",{completed:function(){alert("Você digitou a data: "+this.val());}});
-  $("#telefone").mask("(999) 9999-9999");
+
+  // Input de Telefone com 8 ou 9 digitos
+  $('#telefone').mask("(99) 9999-9999?9").ready(function(event) {
+      var target, phone, element;
+       target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+        phone = target.value.replace(/\D/g, '');
+      element = $(target);
+      element.unmask();
+      if(phone.length > 10) {
+          element.mask("(99) 99999-999?9");
+      } else {
+          element.mask("(99) 9999-9999?9");
+      }
+  });
+
   $("#cpf").mask("999.999.999-99");
   $("#cpf2").mask("999.999.999-99",{placeholder:" "});
 

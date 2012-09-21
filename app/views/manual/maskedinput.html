@@ -2,7 +2,19 @@
         <p>Utilizamos o plugin Masked Input para criar máscaras de campos de formulários. No Locaweb Style nós não tratamos nenhuma máscara por default, logo você precisará fazer isso no seu projeto. O funcionamento é muito simples. Você pode definir em uma linha no seu Javascript/JQuery como será a máscara dos determinados inputs.</p>
 
 <pre><%= content_for_clippy do %>$("#data").mask("99/99/9999");
-$("#telefone").mask("(999) 9999-9999");
+//Aceita até 9 digitos
+$('#telefone').mask("(99) 9999-9999?9").ready(function(event) {
+      var target, phone, element;
+      target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+      phone = target.value.replace(/\D/g, '');
+      element = $(target);
+      element.unmask();
+      if(phone.length > 10) {
+          element.mask("(99) 99999-999?9");
+      } else {
+          element.mask("(99) 9999-9999?9");
+      }
+  });
 $("#cpf").mask("999.999.999-99");
 <% end %></pre>
 
