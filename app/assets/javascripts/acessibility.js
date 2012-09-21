@@ -53,6 +53,4 @@ $(document).ready(function() {
 		$('#main').attr('role','main');
 	}
 	
-
-
 });
