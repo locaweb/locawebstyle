@@ -1,0 +1,40 @@
+$theme_name: ".colorWine";
+
+$main_color: #513335;
+$secondary_color: #4b2e30;
+
+$btn_primary_color: #fff;
+
+$main_menu_hover_color: #fff;
+
+$button_interaction_background_color: #624446;
+
+$lnk_seta_hover_color: #96666a;
+
+$button_to_close_modal_color: #000;
+
+$path_way_background_active_color: #d5c3c4;
+$path_way_step_active_color: #845357;
+$path_way_description_active_color: #513335;
+
+@mixin main_gradient {
+  background: rgb(81,51,53); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(81,51,53,1) 5%, rgba(62,42,46,1) 6%, rgba(81,51,53,1) 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top,  rgba(81,51,53,1) 5%,rgba(62,42,46,1) 6%,rgba(81,51,53,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(81,51,53,1) 5%,rgba(62,42,46,1) 6%,rgba(81,51,53,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(81,51,53,1) 5%,rgba(62,42,46,1) 6%,rgba(81,51,53,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(81,51,53,1) 5%,rgba(62,42,46,1) 6%,rgba(81,51,53,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#513335', endColorstr='#3e2a2e',GradientType=0 ); /* IE6-8 */
+}
+
+@mixin secondary_gradient {
+  background: rgb(165,148,149); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(165,148,149,1) 0%, rgba(98,68,70,1) 4%, rgba(61,36,38,1) 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top,  rgba(165,148,149,1) 0%,rgba(98,68,70,1) 4%,rgba(61,36,38,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(165,148,149,1) 0%,rgba(98,68,70,1) 4%,rgba(61,36,38,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(165,148,149,1) 0%,rgba(98,68,70,1) 4%,rgba(61,36,38,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(165,148,149,1) 0%,rgba(98,68,70,1) 4%,rgba(61,36,38,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a59495', endColorstr='#3d2426',GradientType=0 ); /* IE6-8 */
+}
+
+@import "theme_base";
