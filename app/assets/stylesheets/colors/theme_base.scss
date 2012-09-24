@@ -1,0 +1,99 @@
+#{$theme_name} #menuPrincipal > ul > li.selected a,
+#{$theme_name} .progress .bar,
+#{$theme_name} .pathWay li.active,
+#{$theme_name} .pathWay li:hover {
+  background-color: $main_color;
+}
+
+#{$theme_name} #menuPrincipal,
+#{$theme_name} .tabs li a:hover,
+#{$theme_name} .tabs li.active a,
+#{$theme_name} #menuPrincipal ul li ul {
+  border-bottom-color: $main_color;
+}
+
+#{$theme_name} #menuPrincipal > ul > li.selected > a {
+  @include main_gradient;
+}
+
+#{$theme_name} .tabs li.active a,
+#{$theme_name} .tabs li a:hover {
+  border-top-color: $secondary_color;
+}
+
+#{$theme_name} .serviceName a,
+#{$theme_name} #menuPrincipal .btMenu a,
+#{$theme_name} .collapseGroup summary span,
+#{$theme_name} .lnkSeta,
+#{$theme_name} #menuPrincipal > ul > li > a:hover,
+#{$theme_name} .boxGray.listDetail a,
+#{$theme_name} td a,
+#{$theme_name} [class^="ico-"],
+#{$theme_name} [class*=" ico-"],
+#{$theme_name} #menuPrincipal .parent > a:hover,
+#{$theme_name} #menuPrincipal .parent:hover > a,
+#{$theme_name} .carousel-control {
+  color: $main_color;
+}
+
+#{$theme_name} #menuPrincipal > ul > li.selected > a:hover {
+  color: $main_menu_hover_color;
+}
+
+#{$theme_name} .lnkSeta:hover {
+  color: $lnk_seta_hover_color;
+}
+
+#{$theme_name} .pagination .current,
+#{$theme_name} .pagination .active a {
+  @include main_gradient;
+}
+
+#{$theme_name} .pagination li.first-child a,
+#{$theme_name} .pagination li.last-child a,
+#{$theme_name} .pagination .first a,
+#{$theme_name} .pagination .prev a,
+#{$theme_name} .pagination .next a,
+#{$theme_name} .pagination .last a,
+#{$theme_name} p a,
+#{$theme_name} .breadcrumb {
+  color: $main_color;
+}
+
+#{$theme_name} .btn-primary {
+  @include secondary_gradient;
+  color: $btn_primary_color;
+}
+
+#{$theme_name} .btn-primary:hover,
+#{$theme_name} .btn-primary:active,
+#{$theme_name} .btn-primary.active,
+#{$theme_name} .btn-primary.disabled,
+#{$theme_name} .btn-primary[disabled] {
+  background-color: $button_interaction_background_color;
+}
+
+#{$theme_name} .modal-header a.close {
+  color: $button_to_close_modal_color;
+}
+
+#{$theme_name} .boxCollapse header {
+  border-left-color: $main_color;
+}
+
+#{$theme_name} .pathWay li.active a,
+#{$theme_name} .pathWay li:hover a {
+  background-color: $path_way_background_active_color;
+}
+
+#{$theme_name} .pathWay li.active b,
+#{$theme_name} .pathWay li:hover b {
+  color: $path_way_step_active_color;
+}
+
+#{$theme_name} .boxCollapse header h4,
+#{$theme_name} .pathWay li.active a,
+#{$theme_name} .pathWay li:hover a,
+#{$theme_name} .sidebar h1 {
+  color: $path_way_description_active_color;
+}
