@@ -70,17 +70,9 @@
 .colorGreen .pagination .prev a,
 .colorGreen .pagination .next a,
 .colorGreen .pagination .last a,
-.colorWine p a,
+.colorGreen p a,
 .colorGreen .breadcrumb {
   color:#6a9a25;
-}
-
-.colorGreen .boxActions .btn {
-  color: #666;
-}
-
-.colorGreen .btn{
-  color: #333;
 }
 
 .colorGreen .btn-primary {
@@ -91,11 +83,6 @@
   background: -ms-linear-gradient(top, #7ca837, #55851a);
   background: linear-gradient(top, #7ca837, #55851a);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#7ca837', endColorstr='#55851a', GradientType=0);
-}
-
-.colorGreen .btn-primary,
-.colorGreen .btn-danger {
-  color: #fff;
 }
 
 .colorGreen .btn-primary:hover,
