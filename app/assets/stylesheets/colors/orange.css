@@ -1,45 +1,62 @@
-
 /*** COR
 **** LARANJA
 ***/
 .colorOrange #menuPrincipal > ul > li.selected a,
 .colorOrange .progress .bar,
-.colorOrange .btn-primary:hover,
-.colorOrange .btn-primary:active,
-.colorOrange .btn-primary.active,
-.colorOrange .btn-primary.disabled,
-.colorOrange .btn-primary[disabled] {background-color:#ffa600;}
+.colorOrange .pathWay li.active,
+.colorOrange .pathWay li:hover {
+  background-color:#ffa600;
+}
 
 .colorOrange #menuPrincipal,
 .colorOrange .tabs li a:hover,
 .colorOrange .tabs li.active a,
-.colorOrange #menuPrincipal ul li ul {border-bottom-color:#ffa600;}
+.colorOrange #menuPrincipal ul li ul {
+  border-bottom-color:#ffa600;
+}
+
+.colorWine #menuPrincipal > ul > li.selected > a {
+  background-color:#ffa600;
+  background: -moz-linear-gradient(top, #fdb000 0%, #fb9000 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* IE10+ */
+  background: linear-gradient(top, #fdb000 0%,#fb9000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdb000', endColorstr='#fb9000',GradientType=0 ); /* IE6-9 */
+}
 
 .colorOrange .tabs li.active a,
-.colorOrange .tabs li a:hover {border-top-color:#ffa600; }
+.colorOrange .tabs li a:hover {
+  border-top-color:#ffa600;
+}
 
 .colorOrange .serviceName a,
 .colorOrange #menuPrincipal .btMenu a,
 .colorOrange .collapseGroup summary span,
 .colorOrange .lnkSeta,
 .colorOrange #menuPrincipal > ul > li > a:hover,
+.colorOrange .boxGray.listDetail a,
+.colorOrange td a,
 .colorOrange [class^="ico-"],
 .colorOrange [class*=" ico-"],
-.colorOrange .boxGray.listDetail a,
 .colorOrange #menuPrincipal .parent > a:hover,
 .colorOrange #menuPrincipal .parent:hover > a,
-.colorOrange td a,
-.colorOrange .carousel-control {color: #ffa600;}
+.colorOrange .carousel-control {
+  color: #ffa600;
+}
 
-.colorOrange #menuPrincipal > ul > li.selected > a:hover {color:#FFF;}
+.colorOrange #menuPrincipal > ul > li.selected > a:hover {
+  color:#FFF;
+}
 
-.colorOrange .lnkSeta:hover {color:#cc8500;}
+.colorOrange .lnkSeta:hover {
+  color:#cc8500;
+}
 
 .colorOrange .pagination .current,
 .colorOrange .pagination .active a {
-  background-color:#ffa600;
+  background: #ffa600;
   background: -moz-linear-gradient(top, #fdb000 0%, #fb9000 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdb000), color-stop(100%,#fb9000)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Opera 11.10+ */
   background: -ms-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* IE10+ */
@@ -54,28 +71,49 @@
 .colorOrange .pagination .next a,
 .colorOrange .pagination .last a,
 .colorOrange p a,
-.colorOrange .breadcrumb {color:#cc8500;}
+.colorOrange .breadcrumb {
+  color:#cc8500;
+}
 
 .colorOrange .btn-primary {
-  background-color: #5BB75B;
+  background: #5BB75B;
   background: -moz-linear-gradient(top, #fdb000 0%, #fb9000 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdb000), color-stop(100%,#fb9000)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Opera 11.10+ */
   background: -ms-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* IE10+ */
   background: linear-gradient(top, #fdb000 0%,#fb9000 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdb000', endColorstr='#fb9000',GradientType=0 ); /* IE6-9 */
-  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
 
+.colorOrange .btn-primary:hover,
+.colorOrange .btn-primary:active,
+.colorOrange .btn-primary.active,
+.colorOrange .btn-primary.disabled,
+.colorOrange .btn-primary[disabled] {
+  background-color: #624446;*****
+}
 
-/** LINKS COM SETINHAS QUADRADAS ***/
-.colorOrange .lnkSeta:before {background-position:0 -36px;}
-.colorOrange .lnkSeta:hover:before {background-position:-9px -36px;}
+.colorOrange .modal-header a.close {
+  color: #000;
+}
 
-/*** LINKS COM ARROWS ***/
+.colorOrange .boxCollapse header {
+  border-left-color: #ffa600;
+}
 
-/*** MINI ARROWS ***/
+.colorOrange .pathWay li.active a,
+.colorOrange .pathWay li:hover a {
+  background-color:#f6f0e1;
+}
 
-/*** LARGE ARROWS - BTMENU ***/
-.colorOrange #menuPrincipal > ul > li.btMenu > a:before {background-position: 0 -35px;}
+.colorOrange .pathWay li.active b,
+.colorOrange .pathWay li:hover b {
+  color:#c8752a;
+}
+
+.colorOrange .boxCollapse header h4,
+.colorOrange .pathWay li.active a,
+.colorOrange .pathWay li:hover a,
+.colorOrange .sidebar h1 {
+  color:#4d2b12;
+}
