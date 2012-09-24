@@ -102,13 +102,31 @@
 .colorAqua .btn-primary:active,
 .colorAqua .btn-primary.active,
 .colorAqua .btn-primary.disabled,
-.colorAqua .btn-primary[disabled] {background-color: #377d84;}
+.colorAqua .btn-primary[disabled] {
+  background-color: #377d84;
+}
 
-.colorAqua .boxCollapse header {border-left-color: #3b949c;}
+.colorAqua .modal-header a.close {
+  color: #000;
+}
 
-.colorAqua .pathWay li.active a, .colorAqua .pathWay li:hover a {background-color:#eef8f8;}
-.colorAqua .pathWay li.active b, .colorAqua .pathWay li:hover b {color:#3B949C;}
+.colorAqua .boxCollapse header {
+  border-left-color: #3b949c;
+}
+
+.colorAqua .pathWay li.active a,
+.colorAqua .pathWay li:hover a {
+  background-color:#eef8f8;
+}
+
+.colorAqua .pathWay li.active b,
+.colorAqua .pathWay li:hover b {
+  color:#3B949C;
+}
 
 .colorAqua .boxCollapse header h4,
 .colorAqua .pathWay li.active a,
-.colorAqua .pathWay li:hover a {color:#3B949C;}
+.colorAqua .pathWay li:hover a,
+.colorWine .sidebar h1 {
+  color:#3B949C;
+}
