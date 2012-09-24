@@ -75,14 +75,6 @@
   color:#3b949c;
 }
 
-.colorAqua .boxActions .btn{
-  color: #666;
-}
-
-.colorAqua .btn {
-  color: #333;
-}
-
 .colorAqua .btn-primary {
   background: rgb(34,97,103); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(34,97,103,1) 0%, rgba(67,135,142,1) 4%, rgba(34,97,103,1) 100%); /* FF3.6+ */
@@ -91,11 +83,6 @@
   background: -ms-linear-gradient(top,  rgba(34,97,103,1) 0%,rgba(67,135,142,1) 4%,rgba(61,36,38,1) 100%); /* IE10+ */
   background: linear-gradient(to bottom,  rgba(34,97,103,1) 0%,rgba(67,135,142,1) 4%,rgba(61,36,38,1) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#226167', endColorstr='#43878e',GradientType=0 ); /* IE6-8 */
-}
-
-.colorAqua .btn-primary,
-.colorAqua .btn-danger {
-  color: #fff;
 }
 
 .colorAqua .btn-primary:hover,
