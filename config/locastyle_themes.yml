@@ -1,0 +1,8 @@
+locastyle:
+  themes:
+    aqua: colorAqua
+    blue: colorBlue
+    green: colorGreen
+    orange: colorOrange
+    purple: colorPurple
+    wine: colorWine
