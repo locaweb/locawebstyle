@@ -27,4 +27,7 @@ module ApplicationHelper
     content_tag :div, &block
   end
 
+  def theme_options
+    LOCASTYLE_THEMES["locastyle"]["themes"]
+  end
 end
