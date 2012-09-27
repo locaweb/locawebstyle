@@ -258,11 +258,11 @@ summary.ico-dot + div p {padding-left:23px !important;}
   color:#797979;
 }
 
-.pagination ul > li.first-child > a, 
-.pagination li.last-child a, 
-.pagination .first a, 
-.pagination .prev a, 
-.pagination .next a, 
+.pagination ul > li.first-child > a,
+.pagination li.last-child a,
+.pagination .first a,
+.pagination .prev a,
+.pagination .next a,
 .pagination .last a {
   border:none;
   color:#666;
@@ -272,7 +272,7 @@ summary.ico-dot + div p {padding-left:23px !important;}
 .pagination .prev a, .pagination .next a {background:url(/img/seta-pagination.png) no-repeat 0 0;}
 .pagination .prev a {background-position:left 6px; padding-left:10px;}
 .pagination .next a {background-position:right -13px; padding-right:10px;}
-.pagination .prev a:hover, 
+.pagination .prev a:hover,
 .pagination .next a:hover {background-color:transparent; opacity: 0.8;}
 
 .pagination .current, .pagination ul > .active > a {
@@ -812,7 +812,7 @@ td .progress {max-width:50px;}
 }
 
 .showOpts li a {
-  display:block; 
+  display:block;
   border-bottom:1px solid #EFEFEF;
   color:#333;
 }
@@ -824,4 +824,9 @@ td .progress {max-width:50px;}
 
 .showOpts:before {
   font-size:25px;
+}
+
+#select_themes {
+  text-align: right;
+  margin-bottom: 10px;
 }
