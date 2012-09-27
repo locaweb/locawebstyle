@@ -17,7 +17,7 @@
     <p>Locaweb Style - Padrões de código e UI</p>
   </div>
 
-  <div id="select_themes">Selecione o tema: <%= select_tag "themes", options_for_select(theme_options), id: "theme_selector" %></div>
+  <div id="select_themes">Selecione o tema: <%= select_tag "themes", options_for_select(theme_options), id: "theme_selector", include_blank: true %></div>
     <aside class="boxes">
       <a href="/example" class="exampleLnk">Veja um exemplo</a>
       <nav role="navigation">
