@@ -1,0 +1,40 @@
+$theme_name: ".colorAqua";
+
+$main_color: #3b949c;
+$secondary_color: #2d808f;
+
+$btn_primary_color: #fff;
+
+$main_menu_hover_color: #fff;
+
+$button_interaction_background_color: #377d84;
+
+$lnk_seta_hover_color: #2f767d;
+
+$button_to_close_modal_color: #000;
+
+$path_way_background_active_color: #eef8f8;
+$path_way_step_active_color: #3B949C;
+$path_way_description_active_color: #3B949C;
+
+@mixin main_gradient {
+  background: rgb(59,148,156); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(59,148,156,1) 5%, rgba(45,128,143,1) 6%, rgba(59,148,156,1) 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top,  rgba(59,148,156,1) 5%,rgba(45,128,143,1) 6%,rgba(59,148,156,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(59,148,156,1) 5%,rgba(45,128,143,1) 6%,rgba(59,148,156,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(59,148,156,1) 5%,rgba(45,128,143,1) 6%,rgba(59,148,156,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(59,148,156,1) 5%,rgba(45,128,143,1) 6%,rgba(59,148,156,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b949c', endColorstr='#2d808f',GradientType=0 ); /* IE6-8 */
+}
+
+@mixin secondary_gradient {
+  background: rgb(34,97,103); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(34,97,103,1) 0%, rgba(67,135,142,1) 4%, rgba(34,97,103,1) 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top,  rgba(87,149,154,1) 0%,rgba(67,135,142,1) 4%,rgba(34,97,103,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(34,97,103,1) 0%,rgba(67,135,142,1) 4%,rgba(61,36,38,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(34,97,103,1) 0%,rgba(67,135,142,1) 4%,rgba(61,36,38,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(34,97,103,1) 0%,rgba(67,135,142,1) 4%,rgba(61,36,38,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#226167', endColorstr='#43878e',GradientType=0 ); /* IE6-8 */
+}
+
+@import "theme_base";
