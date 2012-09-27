@@ -21,7 +21,6 @@ window.themeSelector.cookieManager = {
     }
     else var expires = "";
     document.cookie = name + "=" + value + expires + "; path=/";
-    console.log("created cookie: " + name + "with value: " + value);
   },
 
   readCookie: function () {

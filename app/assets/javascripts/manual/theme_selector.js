@@ -8,7 +8,6 @@ window.themeSelector = {
 
   loadTheme: function (selected_by_user) {
     var theme = themeSelector.setTheme(selected_by_user)
-    console.log("cuurent theme is: " + theme);
     regexp = new RegExp("color[A-Z][^ ]*");
     oldThemeClass = $("html").attr("class").match(regexp);
     $("html").removeClass(oldThemeClass[0]);
