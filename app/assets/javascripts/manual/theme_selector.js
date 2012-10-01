@@ -10,7 +10,9 @@ window.themeSelector = {
     var theme = themeSelector.setTheme(selected_by_user)
     regexp = new RegExp("color[A-Z][^ ]*");
     oldThemeClass = $("html").attr("class").match(regexp);
-    $("html").removeClass(oldThemeClass[0]);
+    if (oldThemeClass) {
+      $("html").removeClass(oldThemeClass[0]);
+    }
     $("html").addClass(theme);
   },
 
