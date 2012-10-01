@@ -7,11 +7,13 @@ $(document).ready(function() {
   // Input de Telefone com 8 ou 9 digitos
   $('#telefone').mask("(99) 9999-9999?9").ready(function(event) {
       var target, phone, element;
-       target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+      target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+      if (target) {
         phone = target.value.replace(/\D/g, '');
+      }
       element = $(target);
       element.unmask();
-      if(phone.length > 10) {
+      if(phone && phone.length > 10) {
           element.mask("(99) 99999-999?9");
       } else {
           element.mask("(99) 9999-9999?9");
