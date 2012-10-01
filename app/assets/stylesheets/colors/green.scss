@@ -18,6 +18,16 @@ $path_way_step_active_color: #84c02e;
 $path_way_description_active_color: #354d12;
 
 @mixin main_gradient {
+  background: rgb(132,192,46); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(132,192,46,1) 3%, rgba(104,181,40,1) 5%, rgba(132,192,46,1) 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top,  rgba(132,192,46,1) 3%,rgba(104,181,40,1) 5%,rgba(132,192,46,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(132,192,46,1) 3%,rgba(104,181,40,1) 5%,rgba(132,192,46,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(132,192,46,1) 3%,rgba(104,181,40,1) 5%,rgba(132,192,46,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(132,192,46,1) 3%,rgba(104,181,40,1) 5%,rgba(132,192,46,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', endColorstr='#84c02e',GradientType=0 ); /* IE6-8 */
+}
+
+@mixin secondary_gradient {
   background-color: #3f6f0f;
   background-image: -moz-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
   background-image: -webkit-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
@@ -25,16 +35,6 @@ $path_way_description_active_color: #354d12;
   background-image: -ms-linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
   background-image: linear-gradient(bottom, rgb(63,111,15) 21%, rgb(148,187,81) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f6f0f', endColorstr='#94bb51',GradientType=0 ); /* IE6-8 */
-}
-
-@mixin secondary_gradient {
-  background: #5BB75B;
-  background: -moz-linear-gradient(top, #7ca837, #55851a);
-  background: -webkit-linear-gradient(top, #7ca837, #55851a);
-  background: -o-linear-gradient(top, #7ca837, #55851a);
-  background: -ms-linear-gradient(top, #7ca837, #55851a);
-  background: linear-gradient(top, #7ca837, #55851a);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#7ca837', endColorstr='#55851a', GradientType=0);
 }
 
 @import "theme_base";

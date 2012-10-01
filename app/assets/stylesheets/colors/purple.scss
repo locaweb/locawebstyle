@@ -18,13 +18,13 @@ $path_way_step_active_color: #802cbb;
 $path_way_description_active_color: #120926;
 
 @mixin main_gradient {
-  background-color: #5a2dc0;
-  background: -moz-linear-gradient(top, #764ccd 0%, #4520af 100%); /* FF3.6+ */
-  background: -webkit-linear-gradient(top, #764ccd 0%,#4520af 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #764ccd 0%,#4520af 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #764ccd 0%,#4520af 100%); /* IE10+ */
-  background: linear-gradient(top, #764ccd 0%,#4520af 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#764ccd', endColorstr='#4520af',GradientType=0 ); /* IE6-9 */
+  background: rgb(87,45,81); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(90,44,192,1) 5%, rgba(70,38,183,1) 6%, rgba(90,44,192,1) 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top,  rgba(90,44,192,1) 5%,rgba(70,38,183,1) 6%,rgba(90,44,192,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(90,44,192,1) 5%,rgba(70,38,183,1) 6%,rgba(90,44,192,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(90,44,192,1) 5%,rgba(70,38,183,1) 6%,rgba(90,44,192,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(90,44,192,1) 5%,rgba(70,38,183,1) 6%,rgba(90,44,192,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4626b7', endColorstr='#5a2cc0',GradientType=0 ); /* IE6-8 */
 }
 
 @mixin secondary_gradient {
