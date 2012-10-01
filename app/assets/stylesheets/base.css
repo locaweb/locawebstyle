@@ -848,3 +848,20 @@ td .progress {max-width:50px;}
   text-align: right;
   margin-bottom: 10px;
 }
+
+
+  .chamadaBoxShare {margin: 0;}
+  .chamadaBoxShare div  {margin: 0 12px 12px 0;width: 205px;min-height: 100px;}
+  .chamadaBoxHome {padding: 20px 0 0 0;}
+  .chamadaBoxHome div {min-width: 232px;margin-left:20px;}
+
+  .revisit .chamadaBoxShare div:hover,
+  .chamadaBoxShare div:hover {
+    border: 3px solid #9d8ac9;
+    background-image: linear-gradient(bottom, rgb(198,187,223) 0%, rgb(255,255,255) 100%, rgb(255,255,255) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(198,187,223) 0%, rgb(255,255,255) 100%, rgb(255,255,255) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(198,187,223) 0%, rgb(255,255,255) 100%, rgb(255,255,255) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(198,187,223) 0%, rgb(255,255,255) 100%, rgb(255,255,255) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(198,187,223) 0%, rgb(255,255,255) 100%, rgb(255,255,255) 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(198,187,223)),color-stop(1, rgb(255,255,255)),color-stop(1, rgb(255,255,255)));
+  }
