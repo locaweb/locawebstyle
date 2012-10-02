@@ -183,12 +183,18 @@ $(document).ready(function() {
     });
   }
 
-  // Diminui o tamanho dos atalhos de chamadas 
+  // CHAMADAS: Faz o click acontecer no chamadas
+  // $('.chamadasBox div').find('h3 a').clone().addClass('lnkCoverAll').appendTo($(this));
+  $('.chamadasBox div').each(function(){
+    $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll') ); 
+  })
 
-    $(".minShortcuts").click(function(e){      
-      $(this).parent().find(".chamadasBox").toggleClass("microBox");
-      e.preventDefault();
-    })
+
+  // CHAMADAS: Diminui o tamanho dos atalhos de chamadas 
+  $(".minShortcuts").click(function(e){      
+    $(this).parent().find(".chamadasBox").toggleClass("microBox");
+    e.preventDefault();
+  })
 
   // Pega todos os collapses e deixa sob a função de adicionar ACTIVE nos parents.
   $('[data-toggle="collapse"]').click( boxCollapseActive() );
