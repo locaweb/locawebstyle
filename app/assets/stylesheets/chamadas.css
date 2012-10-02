@@ -1,0 +1,124 @@
+/***
+**** CHAMADAS NO BOXGRAY
+***/
+.chamadasBox {margin:15px 0 15px 15px; clear:both;}
+.chamadasBox:after {content: " "; display:block; clear:both;}
+
+.chamadasBox div {
+  width:30.2%;
+  min-height:220px;
+  text-align:center;
+  border:3px solid #b7b7b7;
+  border-radius:10px;
+  display:inline-block;
+  margin-right:1.9%;
+  padding:20px 0;
+
+  background: #f8f8f8;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjNmM2YzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  #f8f8f8 0%, #c6c6c6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#c6c6c6));
+  background: -webkit-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%);
+  background: -o-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%);
+  background: -ms-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%);
+  background: linear-gradient(to bottom,  #f8f8f8 0%,#c6c6c6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#c6c6c6',GradientType=0 );
+
+}
+
+/** Hover padrão **/
+.chamadasBox div:hover {
+  border-color:#CCC;
+  background: rgb(248,248,248); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(248,248,248,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+
+}
+
+.chamadasBox :before {display:inline-block; margin-bottom:10px; opacity:0.6; }
+.chamadasBox :hover :before {opacity:0.8;}
+
+.chamadasBox .span3 {width:22.5%; margin-left:0;}
+
+.ie8 .chamadasBox div {width:29.6%;}
+
+.chamadasBox div:last-child {margin-right:0;}
+
+.chamadasBox div h3, .chamadasBox div h3:first-child {
+  text-transform:uppercase;
+  font:100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;
+  margin:0 auto;
+  padding:0 0 10px;
+}
+
+.chamadasBox h3 a {
+  color:#1a2609;
+  display:block;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.chamadasBox [class^="tit"] a:before {
+  content:" ";
+  display:block;
+  width:100px; height:100px;
+  background-position: center top;
+  background-repeat:no-repeat;
+  margin:0 auto 10px;
+}
+
+/** APAGAR ISSO QUANDO ATUALIZARMOS OS SISTEMAS **/
+.chamadasBox h3.titResults a:before {background-image:url(/img/titIcoResults.png);}
+.chamadasBox h3.titMoreUser a:before {background-image:url(/img/titIcoMoreUsers.png);}
+.chamadasBox h3.titMessage a:before {background-image:url(/img/titIcoMessage.png);}
+
+.chamadasBox div:hover a:before,
+.chamadasBox h3.titResults a:hover:before,
+.chamadasBox h3.titMoreUser a:hover:before,
+.chamadasBox h3.titMessage a:hover:before {background-position:center -121px;}
+
+.chamadasBox a:hover {text-decoration:none;}
+
+.chamadasBox div p {
+  font: 12px verdana, arial, tahoma, sans-serif;
+  margin:0 auto;
+  color:#767676;
+  padding:0;
+}
+
+.chamadasBox div p a {
+  color:#767676;
+  display:block;
+  padding:0px 20px 15px;
+}
+
+/*** MINI BOX
+**** Quando não tem P e quando o box é pequeno
+***/
+.miniBox div {min-height:140px;}
+.miniBox p, .microBox p { display:none;}
+
+/*** MICRO BOX
+**** Revisitado. Quando o usuário clica em MINIMIZAR ATALHOS/DICAS
+***/
+.microBox div {min-height:10px; text-align:left; padding:15px 0}
+.microBox div h3, .microBox div h3:first-child {margin:0; padding:0;}
+.microBox div h3 a {display:inline-block; vertical-align: middle;}
+.microBox :before {
+  display:inline-block;
+  vertical-align: middle;
+  font-size:60px;
+  margin:0 10px;
+  padding:0;
+  max-width: 173px;
+}
+
+.chamadasBox + .lnkSeta {position:relative; top:-5px;}
+
+.maxShortcuts,
+.minShortcuts {margin-left: 17px;}

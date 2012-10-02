@@ -179,6 +179,7 @@ h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
 *** geralmente tem um collapseGroup dentro
 **/
 .boxGray {
+  clear:both;
   background:#d5d5d5 url(/img/bgBoxGray.png) repeat-X top center;
   border-radius:3px;
   border:1px solid #e3e3e3;
@@ -463,129 +464,6 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   z-index: 1000;
 }
 
-/***
-**** CHAMADAS NO BOXGRAY
-***/
-.chamadasBox {margin:0 0 0 25px;}
-
-.chamadasBox div {
-  width:30%;
-  min-height:250px;
-  float:left;
-  text-align:center;
-  border:3px solid #b7b7b7;
-  border-radius:10px;
-  margin:10px 20px 20px 0;
-  padding:0;
-
-  background: #f8f8f8; /* Old browsers */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjNmM2YzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top,  #f8f8f8 0%, #c6c6c6 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#c6c6c6)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #f8f8f8 0%,#c6c6c6 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#c6c6c6',GradientType=0 ); /* IE6-8 */
-
-
-}
-.ie8 .chamadasBox div {width:29.6%;}
-
-.chamadasBox div:last-child {margin-right:0;}
-
-.chamadasBox div:hover {
-  border-color:#a8bd95;
-  background: #fcfdfa; /* Old browsers */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZmRmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZGRjYmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top,  #fcfdfa 0%, #cddcbd 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfdfa), color-stop(100%,#cddcbd)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #fcfdfa 0%,#cddcbd 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #fcfdfa 0%,#cddcbd 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #fcfdfa 0%,#cddcbd 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #fcfdfa 0%,#cddcbd 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfdfa', endColorstr='#cddcbd',GradientType=0 ); /* IE6-8 */
-
-}
-
-.chamadasBox h3 {
-  text-transform:uppercase;
-  font:100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;
-  margin:0 auto;
-}
-.chamadasBox h3 a {
-  padding-top:15px;
-  color:#1a2609;
-  display:block;
-  max-width: 250px;
-  margin: 0 auto;
-}
-
-.chamadasBox [class^="tit"] a:before {
-  content:" ";
-  display:block;
-  width:100px; height:100px;
-  background-position: center top;
-  background-repeat:no-repeat;
-  margin:0 auto 10px;
-}
-
-.chamadasBox h3.titResults a:before {background-image:url(/img/titIcoResults.png);}
-.chamadasBox h3.titMoreUser a:before {background-image:url(/img/titIcoMoreUsers.png);}
-.chamadasBox h3.titMessage a:before {background-image:url(/img/titIcoMessage.png);}
-
-.chamadasBox div:hover a:before,
-.chamadasBox h3.titResults a:hover:before,
-.chamadasBox h3.titMoreUser a:hover:before,
-.chamadasBox h3.titMessage a:hover:before {background-position:center -121px;}
-
-.chamadasBox a:hover {text-decoration:none;}
-
-.chamadasBox div p {
-  font: 12px verdana, arial, tahoma, sans-serif;
-  margin:0 auto;
-  color:#767676;
-  padding:0;
-}
-
-.chamadasBox div p a {
-  color:#767676;
-  display:block;
-  padding-bottom:20px;
-  padding:10px 5px 15px;
-}
-
-/***
-**** CHAMADAS NO BOXGRAY - Revisit
-***/
-.revisit .chamadasBox div { min-height:98px;}
-
-.revisit .chamadasBox div:hover {
-
-  background:#f1f6e8 url(/img/bgChamadasBoxGreen.png) repeat-X center bottom;
-}
-.revisit .chamadasBox [class^="tit"] a:before {
-  content:" ";
-  float: left;
-  width:49px; height:49px;
-  margin:0 10px 10px 0;
-
-}
-.revisit .chamadasBox h3 a{ padding: 25px 10px 30px; text-align: left;}
-.revisit [class^="span"] h3:first-child{ padding: 0;}
-.revisit .chamadasBox h3.titResults a:before {background-image:url(/img/titIcoResultsSmall.png); }
-.revisit .chamadasBox h3.titMoreUser a:before {background-image:url(/img/titIcoMoreUsersSmall.png);}
-.revisit .chamadasBox h3.titMessage a:before {background-image:url(/img/titIcoMessageSmall.png);}
-
-.revisit .chamadasBox div:hover a:before,
-.revisit .chamadasBox h3.titResults a:hover:before,
-.revisit .chamadasBox h3.titMoreUser a:hover:before,
-.revisit .chamadasBox h3.titMessage a:hover:before {background-position: 0 -49px;  }
-
-.revisit .chamadasBox div p{ display: none;}
-
 /*** statusMessageBox
 **** Usado inicialmente na home de Email Marketing
 ***/
@@ -849,19 +727,3 @@ td .progress {max-width:50px;}
   margin-bottom: 10px;
 }
 
-
-  .chamadaBoxShare {margin: 0;}
-  .chamadaBoxShare div  {margin: 0 12px 12px 0;width: 205px;min-height: 100px;}
-  .chamadaBoxHome {padding: 20px 0 0 0;}
-  .chamadaBoxHome div {min-width: 232px;margin-left:20px;}
-
-  .revisit .chamadaBoxShare div:hover,
-  .chamadaBoxShare div:hover {
-    border: 3px solid #9d8ac9;
-    background-image: linear-gradient(bottom, rgb(198,187,223) 0%, rgb(255,255,255) 100%, rgb(255,255,255) 100%);
-    background-image: -o-linear-gradient(bottom, rgb(198,187,223) 0%, rgb(255,255,255) 100%, rgb(255,255,255) 100%);
-    background-image: -moz-linear-gradient(bottom, rgb(198,187,223) 0%, rgb(255,255,255) 100%, rgb(255,255,255) 100%);
-    background-image: -webkit-linear-gradient(bottom, rgb(198,187,223) 0%, rgb(255,255,255) 100%, rgb(255,255,255) 100%);
-    background-image: -ms-linear-gradient(bottom, rgb(198,187,223) 0%, rgb(255,255,255) 100%, rgb(255,255,255) 100%);
-    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(198,187,223)),color-stop(1, rgb(255,255,255)),color-stop(1, rgb(255,255,255)));
-  }
