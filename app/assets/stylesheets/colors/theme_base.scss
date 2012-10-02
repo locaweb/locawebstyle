@@ -57,7 +57,7 @@
 #{$theme_name} .pagination .last a,
 #{$theme_name} p a,
 #{$theme_name} a,
-#{$theme_name} .breadcrumb {
+#{$theme_name} .breadcrumb, {
   color: $main_color;
 }
 
@@ -88,7 +88,8 @@
 }
 
 #{$theme_name} .pathWay li.active b,
-#{$theme_name} .pathWay li:hover b {
+#{$theme_name} .pathWay li:hover b,
+#{$theme_name} .chamadasBox :hover :before {
   color: $path_way_step_active_color;
 }
 
@@ -97,4 +98,8 @@
 #{$theme_name} .pathWay li:hover a,
 #{$theme_name} .sidebar h1 {
   color: $path_way_description_active_color;
+}
+
+#{$theme_name} .chamadasBox div:hover {
+  @include chamadas_gradient_hover;
 }
