@@ -23,8 +23,28 @@ body, li, p, a {
   font-family: 'locaweb';
   src: url('/fonts/locaicons/Locaweb-Icons.eot');
   src: url('/fonts/locaicons/Locaweb-Icons.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/locaicons/Locaweb-Icons.svg#Locaweb-Icons') format('svg'),
+    url('/fonts/locaicons/Locaweb-Icons.svg#iefix') format('svg'),
     url('/fonts/locaicons/Locaweb-Icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chamaicons';
+  src: url('/fonts/locaicons/chamada-icons.eot');
+  src: url('/fonts/locaicons/chamada-icons.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/locaicons/chamada-icons.svg#iefix') format('svg'),
+    url('/fonts/locaicons/chamada-icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'brandicon';
+  src: url('/fonts/locaicons/brandicon.eot');
+  src: url('/fonts/locaicons/brandicon.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/locaicons/brandicon.svg#iefix') format('svg'),
+    url('/fonts/locaicons/brandicon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

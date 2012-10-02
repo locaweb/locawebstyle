@@ -56,6 +56,71 @@
 .ico-trash, .ico-cancel, .ico-delete {color:#b54646 !important;}
 .btn.ico-trash {color:#FFF !important;}
 
+/** ícones usados nas chamadas **/
+[class^="chamaicon-"]:before, [class*=" chamaicon-"]:before {
+  font-family: 'chamaicons';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.chamadasBox :before{font-size:100px;}
+
+.chamaicon-addcontact:before {content: "\21"}
+.chamaicon-buzina:before {content: "\22"}
+.chamaicon-configtools:before {content: "\23"}
+.chamaicon-downloadbox:before {content: "\24"}
+.chamaicon-editpaper:before {content: "\25"}
+.chamaicon-email:before {content: "\26"}
+.chamaicon-layersbancos:before {content: "\27"}
+.chamaicon-pincel:before {content: "\28"}
+.chamaicon-sendemail:before {content: "\29"}
+.chamaicon-sendowindow:before {content: "\2a"}
+.chamaicon-stats:before {content: "\2b"}
+
+
+/** ícones de redes sociais - brandicon **/
+[class^="brandicon-"]:before, [class*=" brandicon-"]:before {
+  font-family: 'brandicon';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.brandicon-facebook:before { content: '\f300'; } /* '' */
+.brandicon-facebook-rect:before { content: '\f301'; } /* '' */
+.brandicon-twitter:before { content: '\f302'; } /* '' */
+.brandicon-twitter-bird:before { content: '\f303'; } /* '' */
+.brandicon-icq:before { content: '\f304'; } /* '' */
+.brandicon-yandex:before { content: '\f305'; } /* '' */
+.brandicon-yandex-rect:before { content: '\f306'; } /* '' */
+.brandicon-github-text:before { content: '\f307'; } /* '' */
+.brandicon-github:before { content: '\f308'; } /* '' */
+.brandicon-googleplus-rect:before { content: '\f309'; } /* '' */
+.brandicon-vkontakte-rect:before { content: '\f30a'; } /* '' */
+.brandicon-skype:before { content: '\f30b'; } /* '' */
+.brandicon-odnoklassniki:before { content: '\f30c'; } /* '' */
+.brandicon-odnoklassniki-rect:before { content: '\f30d'; } /* '' */
+.brandicon-vimeo-rect:before { content: '\f30e'; } /* '' */
+.brandicon-vimeo:before { content: '\f30f'; } /* '' */
+.brandicon-tumblr-rect:before { content: '\f310'; } /* '' */
+.brandicon-tumblr:before { content: '\f311'; } /* '' */
+.brandicon-friendfeed:before { content: '\f312'; } /* '' */
+.brandicon-friendfeed-rect:before { content: '\f313'; } /* '' */
+.brandicon-blogger:before { content: '\f314'; } /* '' */
+.brandicon-blogger-rect:before { content: '\f315'; } /* '' */
+.brandicon-deviantart:before { content: '\f316'; } /* '' */
+.brandicon-jabber:before { content: '\f317'; } /* '' */
+.brandicon-lastfm:before { content: '\f318'; } /* '' */
+.brandicon-lastfm-rect:before { content: '\f319'; } /* '' */
+.brandicon-linkedin:before { content: '\f31a'; } /* '' */
+.brandicon-linkedin-rect:before { content: '\f31b'; } /* '' */
+.brandicon-picasa:before { content: '\f31c'; } /* '' */
+.brandicon-wordpress:before { content: '\f31d'; } /* '' */
+
+/** ícones gerais **/
 .ico-keyboard:before {content: "\22";}
 .ico-split:before {content: "\23";}
 .ico-up-dir:before {content: "\24";}
@@ -369,7 +434,6 @@
 .ico-wrench:before {content: "\e0d8";}
 .ico-code:before {content: "\e0d9";}
 .ico-rocket:before {content: "\e0da";}
-
 
 
 [class^="icon-"], [class*=" icon-"],
