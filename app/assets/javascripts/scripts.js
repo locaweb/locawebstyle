@@ -186,7 +186,7 @@ $(document).ready(function() {
   // Diminui o tamanho dos atalhos de chamadas 
 
     $(".minShortcuts").click(function(e){      
-      $(".chamadasBox").toggleClass("microBox");
+      $(this).parent().find(".chamadasBox").toggleClass("microBox");
       e.preventDefault();
     })
 
