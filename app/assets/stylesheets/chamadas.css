@@ -6,12 +6,13 @@
 
 .chamadasBox div {
   width:30.2%;
-  min-height:220px;
+  min-height:250px;
   text-align:center;
   border:3px solid #b7b7b7;
   border-radius:10px;
   display:inline-block;
   margin-right:1.9%;
+  margin-bottom:20px;
   padding:20px 0;
   position: relative;
   vertical-align: top;
@@ -110,7 +111,7 @@
 ***/
 .microBox div {min-height:10px; text-align:left; padding:15px 0}
 .microBox div h3, .microBox div h3:first-child {margin:0; padding:0;}
-.microBox div h3 a {display:inline-block; vertical-align: middle;}
+.microBox div h3 a {display:inline-block; width:66%; vertical-align: middle;}
 .microBox :before {
   display:inline-block;
   vertical-align: middle;
