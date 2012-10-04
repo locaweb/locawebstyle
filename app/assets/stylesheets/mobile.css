@@ -1,20 +1,17 @@
-
-
-
-
-
-
 /** Tamanhos padrão de Smartphones
 *** 320 x 480
 **/
-@media screen and (max-width:480px) {
+@media screen and (max-width:767px) {
+
+  body:after {content:" "; display:block; clear:both;}
+  body { padding:0 !important;}
+
   .limite {
     width:95% !important;
     position:relative; left:0;
     padding-bottom:0;
     margin:0 auto;
   }
-
   .chamadasBox div {
     width:92% !important;
     min-height: inherit !important;
