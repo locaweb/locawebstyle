@@ -194,10 +194,14 @@ $(document).ready(function() {
 
 
   // CHAMADAS: Diminui o tamanho dos atalhos de chamadas 
-  $(".minShortcuts").click(function(e){      
+  $(".minShortcuts").toggle(function (){
     $(this).parent().find(".chamadasBox").toggleClass("microBox");
-    e.preventDefault();
-  })
+    $(this).text('Expandir atalhos');
+  }, function(){
+    $(this).parent().find(".chamadasBox").toggleClass("microBox");
+    $(this).text('Minimizar atalhos');
+  });
+
 
   // Pega todos os collapses e deixa sob a função de adicionar ACTIVE nos parents.
   $('[data-toggle="collapse"]').click( boxCollapseActive() );

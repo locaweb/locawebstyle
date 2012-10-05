@@ -1,7 +1,7 @@
 /***
 **** CHAMADAS NO BOXGRAY
 ***/
-.chamadasBox {margin:15px 0 15px 15px; clear:both;}
+.chamadasBox {margin:15px 0 0 15px; clear:both;}
 .chamadasBox:after {content: " "; display:block; clear:both;}
 
 .chamadasBox div {
