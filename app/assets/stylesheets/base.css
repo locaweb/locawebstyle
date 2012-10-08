@@ -346,6 +346,8 @@ table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
   margin:15px 0 0;
   clear:both;
 }
+tr.active td .boxActions {padding-top:0;}
+
 .obsGray .boxActions, .boxFiltro .boxActions {border-top-color:#cbcbcb;}
 .obsGray h3:first-child {padding-top:0;}
 .boxActions .btn {display:inline-block; margin-right:5px; float:none;}

@@ -49,7 +49,9 @@ td a[class*="span"] {margin-right:0;}
 .tableList tbody tr:nth-child(even) {background-color:#eee;}
 .tableList thead th.actived {background-color:#2a2a2a;}
 
-.tableList tbody tr:hover, tr.active {background-color:#fffece;}
+.tableList tbody tr:hover,
+.boxCollapse .tableList tr:nth-child(even):hover,
+tr.active {background-color:#fffece;}
 
 .tableList .txtLeft td, .tableList .txtLeft th {text-align:left;}
 
@@ -83,6 +85,8 @@ td a[class*="span"] {margin-right:0;}
   padding:5px 0;
 }
 tr:hover .actionsTable {display:block;}
+tr.active:hover .actionsTable {display:none;}
+
 .statusMessageBox .actionsTable {
   display: block;
   border-top: 1px solid #E5E5E5;
