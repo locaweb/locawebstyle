@@ -14,6 +14,7 @@ window.themeSelector = {
       $("html").removeClass(oldThemeClass[0]);
     }
     $("html").addClass(theme);
+    $("#theme_selector").val(theme);
   },
 
   setTheme: function (selected_by_user) {
