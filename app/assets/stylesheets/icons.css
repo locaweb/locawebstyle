@@ -119,6 +119,11 @@
 .brandicon-linkedin-rect:before { content: '\f31b'; } /* '' */
 .brandicon-picasa:before { content: '\f31c'; } /* '' */
 .brandicon-wordpress:before { content: '\f31d'; } /* '' */
+.brandicon-link:before {content: "\e000";}
+.brandicon-link-2:before {content: "\e001";}
+.brandicon-link-3:before {content: "\e002";}
+.brandicon-out:before {content: "\e003";}
+.brandicon-out-2:before {content: "\e004";}
 
 /** ícones gerais **/
 .ico-keyboard:before {content: "\22";}
