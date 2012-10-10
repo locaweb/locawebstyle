@@ -163,6 +163,8 @@ $(document).ready(function() {
      allowClear: false
   });
 
+  // As vezes temos problemas de hierarquia e conflitos de CSS. Essa classe ajuda a sanar isso
+  $('html').addClass('forceClass');
 
   // Desabilita click em botoes com disabled
   $('.btn.disabled').click(function(event){event.preventDefault();})
