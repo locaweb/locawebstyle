@@ -6,3 +6,4 @@
 //= require masked-input
 //= require browser-detect
 //= require scripts
+//= require cookie
