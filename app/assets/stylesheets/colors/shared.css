@@ -17,7 +17,7 @@
   background-color: #73221e;
 }
 
-.alert a {
+.forceClass .alert a {
   color: inherit;
   text-decoration: underline;
 }
