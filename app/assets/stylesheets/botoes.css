@@ -3,6 +3,7 @@
 **/
 .btn {text-decoration:none;}
 a.btn {color:#333;}
+a.btn-primary {color:#FFF;}
 
 .btn.dropdown-toggle {padding:5px 8px;}
 
