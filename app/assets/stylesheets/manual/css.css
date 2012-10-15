@@ -294,3 +294,8 @@ td code {
 dt {margin-top:10px;}
 
 .table th, .table td {vertical-align: middle;}
+
+#select_themes {
+  text-align: right;
+  margin-bottom: 10px;
+}

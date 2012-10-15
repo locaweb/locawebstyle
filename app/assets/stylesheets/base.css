@@ -742,11 +742,6 @@ td .progress {max-width:50px;}
   font-size:25px;
 }
 
-#select_themes {
-  text-align: right;
-  margin-bottom: 10px;
-}
-
 .innerBox {
   border: 1px solid #D7D7D7;
   border-radius: 4px;
