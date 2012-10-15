@@ -77,3 +77,8 @@ hr.sep {background-color: #E5E5E5; }
   white-space: nowrap;
   display: block !important;
 }
+
+/** COLORS **/
+.bgWhite {
+  background: white;
+}
