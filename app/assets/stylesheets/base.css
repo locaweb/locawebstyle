@@ -4,7 +4,7 @@ html, body {height:100%; font-family:verdana, tahoma, arial, helvetica, sans-ser
 #main {
   padding-top:25px;
   min-height:75%;
-  position:relative; 
+  position:relative;
   /*background:url(/img/bgDesgradeBody.png) repeat-X top;*/
   background: rgb(232,232,232); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(232,232,232,1) 0%, rgba(252,252,252,1) 3%, rgba(255,255,255,1) 7%); /* FF3.6+ */
@@ -678,7 +678,7 @@ td .progress {max-width:50px;}
 }
 
 /*** POPOVER
-**** antigo infoBubble 
+**** antigo infoBubble
 ***/
 .infoBubble, [rel="popover"] {
   width:14px; height:14px;
@@ -745,4 +745,9 @@ td .progress {max-width:50px;}
 #select_themes {
   text-align: right;
   margin-bottom: 10px;
+}
+
+.innerBox {
+  border: 1px solid #D7D7D7;
+  border-radius: 4px;
 }
