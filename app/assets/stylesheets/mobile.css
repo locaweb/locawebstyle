@@ -141,6 +141,7 @@
     padding:6px 20px 6px 17px;
     margin-right:5px;
   }
+  #rodape nav .lnkArrow,
   #rodape nav .lnkSeta {
     margin: 2px 0 0 10px;
     font-size: 11px;
@@ -166,7 +167,7 @@
   .tableList td:nth-child(3), .tableList th:nth-child(3) {visibility:hidden; display:none;}
   table.tableList thead th, table.tableList tbody td {font-size:11px;}
   .subfooter .lastAccess {background-image:none; display:block; padding:0;}
-  #rodape nav .lnkSeta {margin:2px 0 0 10px; float:left; font-size:11px;}
+  #rodape nav .lnkSeta, #rodape nav .lnkArrow {margin:2px 0 0 10px; float:left; font-size:11px;}
   .subfooter strong {margin-left:10px;}
   .icoInterroga {display:none;}
 

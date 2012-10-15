@@ -121,10 +121,10 @@
   max-width: 173px;
 }
 
-.chamadasBox + .lnkSeta {position:relative; top:-5px;}
-
 .lnkSeta.maxShortcuts,
-.lnkSeta.minShortcuts {margin-left: 17px;}
+.lnkSeta.minShortcuts,
+.lnkArrow.maxShortcuts,
+.lnkArrow.minShortcuts {margin-left: 17px;}
 
 /*** 
 **** Esse link é inserido via JQuery. ;-( 

@@ -148,7 +148,7 @@ $(document).ready(function() {
   $('input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]').addClass('disabled');
 
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
-  $('.lnkSeta[data-text]').live('click', function(e){
+  $('.lnkSeta[data-text], .lnkArrow[data-text]').live('click', function(e){
     var btnText, btnTextAlt;
     e.preventDefault();
     btnText = $(this).html();

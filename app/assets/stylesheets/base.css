@@ -61,7 +61,6 @@ h3, legend {font: 20px Ubuntu, arial, verdana, tahoma, sans-serif;}
 [class^="span"] h3:first-child {padding:20px 0 10px;}
 h4 {font: 18px UbuntuLight, arial, verdana, tahoma, sans-serif; margin-bottom:5px;}
 h3 + h4 {margin-top:15px;}
-h4 + .lnkSeta {border-left:1px solid #bababa; margin-left:10px; padding-left:10px;}
 h5 {font: 15px UbuntuMedium, arial, verdana, tahoma, sans-serif;}
 h6 {
     font: 14px Ubuntu, arial, verdana, tahoma, sans-serif;
@@ -176,7 +175,7 @@ textarea:focus + .help-placeholder {
 /** LINKS COM SETINHA
 *** FOI DESCONTINUADO EM DETRIMENTO AOS ICONES COM FONTES - Apagar na próxima versão de produção
 **/
-.lnkSeta {
+.lnkSeta, .lnkArrow {
   cursor:pointer;
   color:#666;
   font: 12px Ubuntu, verdana, arial, sans-serif;
@@ -185,9 +184,14 @@ textarea:focus + .help-placeholder {
   margin:5px 0;
   vertical-align: middle;
 }
-h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
-.lnkSeta:before {margin-right:0;}
-.innerSideBox + .lnkSeta {margin:-5px 0 10px 10px;}
+h3 .lnkSeta, h3 .lnkArrow {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
+h4 + .lnkSeta, h4 + .lnkArrow {border-left:1px solid #bababa; margin-left:10px; padding-left:10px;}
+h6 .lnkSeta, h6 .lnkArrow {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC; padding-left:10px;}
+
+.spanObs .lnkSeta, .spanObs .lnkArrow {margin: 0;}
+.lnkSeta:before, .lnkArrow:before {margin-right:0;}
+.innerSideBox + .lnkSeta, .innerSideBox + .lnkArrow {margin:-5px 0 10px 10px;}
+.chamadasBox + .lnkSeta, .chamadasBox + .lnkArrow {position:relative; top:-5px;}
 
 /** BOX COM FUNDO CINZA
 *** geralmente tem um collapseGroup dentro
@@ -416,8 +420,6 @@ tr.active td .boxActions {padding-top:0;}
   background:#ececec;
 }
 
-.spanObs .lnkSeta {margin: 0;}
-
 .listOptions p.pObs strong {color:#545454;}
 
 .listOptions .actLnk.fright {
@@ -575,7 +577,6 @@ tr.active td .boxActions {padding-top:0;}
 .lists .statusMessageBox p {color:#767676; padding:3px 0 0 10px; font:12px verdana, arial, helvetica, tahoma, sans-serif;}
 
 h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; border-left:1px solid #CCC; color:#767676;}
-h6 .lnkSeta {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC; padding-left:10px;}
 .statusMessageBox > li.messageBorder{
   border-left: 1px solid #e5e5e5;
   border-right: 1px solid #e5e5e5;
