@@ -231,6 +231,11 @@ $(document).ready(function() {
     });
   }
 
+  var targetAnchor = window.location.hash.replace("!/", "");
+  if(targetAnchor != ''){
+    $("[data-target="+targetAnchor+"]").click()
+    $("[data-target="+targetAnchor+"]").parent().addClass("active")
+  }
 
   // Pega todos os collapses e deixa sob a função de adicionar ACTIVE nos parents.
   $('[data-toggle="collapse"]').click( boxCollapseActive() );
