@@ -9,7 +9,7 @@
 
 [class^="btn"][class^="ico-"], [class*="btn"][class*="ico-"] {padding-left:5px;}
 
-[class^="ico-"]:before, [class*="ico-"]:before, .lnkSeta:before {
+[class^="ico-"]:before, [class*="ico-"]:before, .lnkArrow:before, .lnkSeta:before {
   display:inline-block;
   margin-right:2px;
   font-family: locaweb;

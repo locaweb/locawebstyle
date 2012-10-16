@@ -78,7 +78,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   border:1px solid transparent;
   border-bottom:1px solid transparent;
   padding:9px 8px;
-  -webkit-transition:all .15s linear;
+  -webkit-transition:all .1s ease-in;
 }
 .ie9 #menuPrincipal > ul > li > a {font-size:13px;}
 #menuPrincipal > ul > li > a:hover {color:#666; background-color:transparent;}
@@ -127,7 +127,6 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   border-radius: 0 3px 3px 3px;
   border-bottom:3px solid #777;
   box-shadow:3px 4px 5px -1px rgba(0, 0, 0, 0.2);
-   -webkit-transition:all .15s linear;
 }
 
 #menuPrincipal ul li ul li a {
@@ -140,37 +139,42 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 }
 #menuPrincipal ul li ul li a:hover {background:#e9e9e9;}
 
+/***
+**** Opção do menu destacada como botão
+***/
+
 #menuPrincipal .btMenu {float:right; padding:0; border-right:0; }
 #menuPrincipal .btMenu a {
   background-color: #E6E5E5;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #777;
   text-decoration: none;
   float: right;
-  padding: 7px 10px 7px 19px;
+  background-image:none;
+  padding: 8px 10px 4px 6px;
+  position: relative; top: -2px;
 }
 #menuPrincipal .btMenu a:hover,
 #menuPrincipal .btMenu a:active {
   background-color:#777;
   color:#FFF !important;
-  padding-left:19px;
 }
+#menuPrincipal > ul > li.btMenu > a::after {display:none;}
 
 #menuPrincipal > ul > li.btMenu > a:before {
-  content: " ";
+  content: "\e076";
   display:inline-block; vertical-align:middle;
-  width:5px; height:7px;
-  background:url(/img/largeArrows.png) no-repeat;
-  position:relative; left:-7px; top:-1px;
+  width:17px;
+  min-height:17px;
+  display:inline-block;
+  font-family: locaweb;
+  font-weight:normal;
+  speak: none;
+  text-decoration:none;
+  text-align: center;
+  position: relative; top:-1px;
+  font-size:10px;
 }
-.btMenu a:before {
-  content: " ";
-  display:inline-block; vertical-align:middle;
-  width:5px; height:7px;
-  background:url(/img/largeArrows.png) no-repeat;
-  position:relative; left:-7px; top:-1px;
-}
-.btMenu a:hover:before {background-position: 0 0;}
 
 /** Linkzinho de sugestões do Header **/
 .lnkSugestoes, #feedbackr.lnkSugestoes {
