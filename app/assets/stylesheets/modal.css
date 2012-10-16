@@ -155,3 +155,21 @@
 .modalCenter .modal-footer {text-align:center;}
 
 .modal.modalCenter .btn {margin: 0;}
+
+
+/*** Modal Nude
+**** Modal sem background, transparentes, sem bordas, sem nada... Totalmente nu!
+***/
+.modalNude {
+  background:none;
+  box-shadow: none;
+  border:none;
+}
+
+.modalNude .close {
+  border-radius:50%;
+  background-color:white;
+  color:#666;
+  padding:1px 4px 4px 4px;
+  opacity:1;
+}
