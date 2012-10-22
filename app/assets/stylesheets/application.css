@@ -1,6 +1,6 @@
 /*
- *= require bootstrap/css/bootstrap
  VENDOR
+ *= require bootstrap/css/bootstrap
 
  *= require colors/colors
  *= require fonts
@@ -22,4 +22,5 @@
  *= require mobile
  *= require base
  *= require classesfuncionais
+ *= require print
 */
