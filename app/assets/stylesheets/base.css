@@ -460,7 +460,7 @@ tr.active td .boxActions {padding-top:0;}
 .ui-datepicker .ui-datepicker-next {background-position: -49px -193px; float:right;}
 .ui-datepicker-title {text-align:center; line-height:14px;}
 
-.ui-datepicker table { width:100%;}
+.ui-datepicker table { width:100%; font-size:0.7em;}
 .ui-datepicker table td {text-align:center; border:1px solid #CCC;}
 .ui-datepicker table td:empty {border:none;}
 .ui-datepicker table td a {font-size:11px; display:block; color:#333; text-decoration:none;}
