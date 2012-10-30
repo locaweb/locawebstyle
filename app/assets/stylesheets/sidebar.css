@@ -73,11 +73,11 @@
 .listWhite li a {
   padding: 3px 10px 3px 15px;
   background-color: white;
-  color: #545454;
   font: 12px verdana, tahoma, arial, sans-serif;
   display: block;
   margin-bottom: 1px;
 }
+
 .listWhite li a:before {
   content:" ";
   display:inline-block;
