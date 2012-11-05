@@ -112,3 +112,19 @@ tr.active:hover .actionsTable {display:none;}
   background:url(/img/sepActionsTable.gif) no-repeat right center;
 }
 .actionsTable li:last-child a {background-image:none;}
+
+.tableList .totalFooter {
+  color: white;
+  background-color: #898989;
+}
+
+.tableList .totalFooter {
+  color: white;
+  background-color: #898989;
+}
+
+.tableList .totalFooter td {
+  vertical-align: middle;
+  padding: 10px;
+  border-right: solid 1px white;
+}
