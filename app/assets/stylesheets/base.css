@@ -688,6 +688,7 @@ td .progress {max-width:50px;}
   position:relative;
   vertical-align: middle;
   text-indent: -9999px;
+  overflow: hidden;
 }
 
 .infoBubble h6, [rel="popover"] h6 {
