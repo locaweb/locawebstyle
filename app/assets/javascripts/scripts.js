@@ -72,13 +72,13 @@ Locastyle = (function() {
   };
 
   Locastyle.prototype.modal_callback = function (obj, element) {
-    if ($('.modalSlider .carousel .item:first-child', obj).is('.prev')) {
+    if ($('.modalSlider .carousel .item:first-child', obj).is('.active')) {
       element.parents('.modal').find('.modal-footer .slidePrev').hide();
     } else {
       element.parents('.modal').find('.modal-footer .slidePrev').show();
     }
 
-    if ($('.modalSlider .item:last-child', obj).is('.next')) {
+    if ($('.modalSlider .item:last-child', obj).is('.active')) {
       element.parents('.modal').find('.modal-footer .slideNext').hide();
       element.parents('.modal').find('.modal-footer .btnSalvar').show();
     } else {
