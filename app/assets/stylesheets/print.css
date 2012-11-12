@@ -16,7 +16,8 @@
 	.lnkSugestoes,
 	.statusGraphic,
 	.chart,
-	.filtroExibe {
+	.filtroExibe,
+	#menuPrincipal {
 		display:none;
 	}
 

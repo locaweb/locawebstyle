@@ -105,6 +105,11 @@
 ***/
 .miniBox div {min-height:140px;}
 .miniBox p, .microBox p { display:none;}
+.miniBox [class^="ico-"]:before, 
+.miniBox [class*="ico-"]:before, 
+.miniBox .lnkArrow::before, .lnkSeta:before{
+  width: auto;
+}
 
 /*** MICRO BOX
 **** Revisitado. Quando o usuário clica em MINIMIZAR ATALHOS/DICAS

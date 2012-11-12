@@ -688,6 +688,7 @@ td .progress {max-width:50px;}
   position:relative;
   vertical-align: middle;
   text-indent: -9999px;
+  overflow: hidden;
 }
 
 .infoBubble h6, [rel="popover"] h6 {
@@ -746,3 +747,42 @@ td .progress {max-width:50px;}
   border: 1px solid #D7D7D7;
   border-radius: 4px;
 }
+
+/*** ALERTAS
+**** Alertas para retornos e notificações
+***/
+
+.alert {font-size:12px;}
+.forceClass .alert .close {text-decoration: none; border:none;}
+
+/** ALERT de NOTIFICAÇÃO **/
+.alert.alert-notification {
+  background-color: rgb(230,232,192);
+  background: -moz-linear-gradient(top,  rgba(230,232,192,1) 0%, rgba(245,248,219,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(230,232,192,1)), color-stop(100%,rgba(245,248,219,1)));
+  background: -webkit-linear-gradient(top,  rgba(230,232,192,1) 0%,rgba(245,248,219,1) 100%);
+  background: -o-linear-gradient(top,  rgba(230,232,192,1) 0%,rgba(245,248,219,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(230,232,192,1) 0%,rgba(245,248,219,1) 100%);
+  background: linear-gradient(to bottom,  rgba(230,232,192,1) 0%,rgba(245,248,219,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e8c0', endColorstr='#f5f8db',GradientType=0 ) ;
+
+  border:none;
+  border-bottom:2px solid #d6d9ba;
+  border-radius:0;
+  margin-bottom:30px;
+
+  color:#57573b;
+  position: relative;
+}
+
+.alert.alert-notification .close {display: none;}
+
+.lnkNoShow {
+  position: absolute;
+  right: 0; bottom: -21px;
+  font-size:11px;
+  color:#666;
+  text-decoration: none !important;
+}
+
+.lnkNoShow:hover {color:#000 !important; text-decoration: underline !important;}
