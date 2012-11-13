@@ -58,7 +58,7 @@ Locastyle = (function() {
     // init of change.collapse.data-api
     $('[data-toggle=show]', obj).filter(':checked').change();
 
-    // Insere uma classe SELECTED para o primeiro Collpase
+    // Insere uma classe ACTIVE para o primeiro Collpase
     $('.collapseGroup summary:first', obj).not('noAutoActive').addClass('active').parent('.details').addClass('active');
 
     // Verifica se os inputs dentro da busca avançada estão vazios, se não estiverem, a busca avancada fica aberta
@@ -188,6 +188,9 @@ $(document).ready(function() {
     });
   }
 
+  // Pega todos os collapses e deixa sob a função de adicionar ACTIVE nos parents.
+  $('[data-toggle="collapse"]').click( boxCollapseActive() );
+
   // CHAMADAS: Faz o click acontecer no chamadas
   // $('.chamadasBox div').find('h3 a').clone().addClass('lnkCoverAll').appendTo($(this));
   $('.chamadasBox div').each(function(){
@@ -249,9 +252,6 @@ $(document).ready(function() {
     $("[data-target="+targetAnchor+"]").click()
     $("[data-target="+targetAnchor+"]").parent().addClass("active")
   }
-
-  // Pega todos os collapses e deixa sob a função de adicionar ACTIVE nos parents.
-  $('[data-toggle="collapse"]').click( boxCollapseActive() );
 
   // Se houver uma classe ERROR dentro de um collapse, ele já aparece aberto.
   $('.error').parents('.collapse').collapse('show');
