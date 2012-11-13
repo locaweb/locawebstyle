@@ -206,24 +206,22 @@ $(document).ready(function() {
   checkLinkHasClass();
 
   $(".minShortcuts").toggle(function(){
-    $(this).parent().find(".chamadasBox").toggleClass("microBox");
-  });
+    $(this).parent().find(".expandBox").toggleClass("microBox");
+    $.cookie('minShortcuts', $('.expandBox').hasClass('microBox') ? '1' : '0' );
+    checkLinkHasClass()
+  }, function(){
+    $(this).parent().find(".expandBox").toggleClass("microBox");
+    $.cookie('minShortcuts', $('.expandBox').hasClass('microBox') ? '1' : '0' );
+    checkLinkHasClass()
+  })
 
-  // $(".minShortcuts").toggle(function(){
-  //   $(this).parent().find(".expandBox").toggleClass("microBox");
-  //   $.cookie('minShortcuts', $('.expandBox').hasClass('microBox') ? '1' : '0' );
-  // }, function(){
-  //   $(this).parent().find(".expandBox").toggleClass("microBox");
-  //   $.cookie('minShortcuts', $('.expandBox').hasClass('microBox') ? '1' : '0' );
-  // })
-
-  // function checkLinkHasClass(){
-  //   if($(".expandBox").hasClass("microBox")){
-  //     $(".minShortcuts").text('Expandir atalhos');
-  //   }else{
-  //     $(".minShortcuts").text('Minimizar atalhos');
-  //   }
-  // }
+  function checkLinkHasClass(){
+    if($(".expandBox").hasClass("microBox")){
+      $(".minShortcuts").text('Expandir atalhos');
+    }else{
+      $(".minShortcuts").text('Minimizar atalhos');
+    }
+  }
 
   // CHAMADAS: Diminui o tamanho dos atalhos de chamadas
   if($.cookie == undefined){
