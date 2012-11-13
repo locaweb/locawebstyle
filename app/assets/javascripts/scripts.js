@@ -260,4 +260,3 @@ $(document).ready(function() {
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
 });
-
