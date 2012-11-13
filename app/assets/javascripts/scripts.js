@@ -149,12 +149,15 @@ $(document).ready(function() {
 
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
   $('.lnkSeta[data-text], .lnkArrow[data-text]').live('click', function(e){
-    var btnText, btnTextAlt;
-    e.preventDefault();
-    btnText = $(this).html();
-    btnTextAlt = $(this).data('text');
-    $(this).html(btnTextAlt).data('text',btnText);
+    changeText('.lnkSeta[data-text], .lnkArrow[data-text]')
   });
+
+  function changeText(element){
+    var btnText, btnTextAlt;
+    btnText = $(element).html();
+    btnTextAlt = $(element).data('text');
+    $(element).html(btnTextAlt).data('text',btnText);
+  }
 
   // Selects Customizados.
   $(".customSelect").select2({
@@ -197,42 +200,26 @@ $(document).ready(function() {
     $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll') );
   })
 
-  if($.cookie("minShortcuts") == "0"){
-    $(".expandBox").removeClass("microBox");
-  }else{
-    $(".expandBox").addClass("microBox");
-  }
-
-  checkLinkHasClass();
-
-  $(".minShortcuts").toggle(function(){
-    $(this).parent().find(".expandBox").toggleClass("microBox");
-    $.cookie('minShortcuts', $('.expandBox').hasClass('microBox') ? '1' : '0' );
-    checkLinkHasClass()
+  $(".minShortcuts").toggle(function(e){
+    $(this).show()
+    microBox = $(this).parent().find(".chamadasBox")
+    microBox.addClass('microBox')
+    $.cookie("minShortcuts", "1")
+    changeText(".minShortcuts")
   }, function(){
-    $(this).parent().find(".expandBox").toggleClass("microBox");
-    $.cookie('minShortcuts', $('.expandBox').hasClass('microBox') ? '1' : '0' );
-    checkLinkHasClass()
+    microBox.removeClass('microBox')
+    $.cookie("minShortcuts", "0")
+    changeText(".minShortcuts")
   })
 
-  function checkLinkHasClass(){
-    if($(".expandBox").hasClass("microBox")){
-      $(".minShortcuts").text('Expandir atalhos');
-    }else{
-      $(".minShortcuts").text('Minimizar atalhos');
-    }
+  if($.cookie("minShortcuts") ==  "1"){
+    $(".minShortcuts").text($(this).data("text"))
   }
 
-  // CHAMADAS: Diminui o tamanho dos atalhos de chamadas
-  if($.cookie == undefined){
-    $(".minShortcuts").toggle(function(){
-      $(this).parent().find(".expandBox").toggleClass("microBox");
-      $(this).text('Expandir atalhos');
-    }, function(){
-      $(this).parent().find(".expandBox").toggleClass("microBox");
-      $(this).text('Minimizar atalhos');
-    });
+  if($(".chamadasBox").hasClass("microBox")){
+    changeText(".minShortcuts")
   }
+
 
   // NOTIFICATION: Não exibe o alert de notificação
   var alertNotifica = $('.lnkNoShow').attr('data-target')
