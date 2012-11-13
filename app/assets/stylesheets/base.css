@@ -757,21 +757,15 @@ td .progress {max-width:50px;}
 
 /** ALERT de NOTIFICAÇÃO **/
 .alert.alert-notification {
-  background-color: rgb(230,232,192);
-  background: -moz-linear-gradient(top,  rgba(230,232,192,1) 0%, rgba(245,248,219,1) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(230,232,192,1)), color-stop(100%,rgba(245,248,219,1)));
-  background: -webkit-linear-gradient(top,  rgba(230,232,192,1) 0%,rgba(245,248,219,1) 100%);
-  background: -o-linear-gradient(top,  rgba(230,232,192,1) 0%,rgba(245,248,219,1) 100%);
-  background: -ms-linear-gradient(top,  rgba(230,232,192,1) 0%,rgba(245,248,219,1) 100%);
-  background: linear-gradient(to bottom,  rgba(230,232,192,1) 0%,rgba(245,248,219,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e8c0', endColorstr='#f5f8db',GradientType=0 ) ;
+  background: #74776d;
 
   border:none;
-  border-bottom:2px solid #d6d9ba;
-  border-radius:0;
+  border-radius:5px;
+  padding:5px 15px;
+  text-shadow:none;
   margin-bottom:30px;
 
-  color:#57573b;
+  color:#FFF;
   position: relative;
 }
 
