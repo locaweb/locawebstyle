@@ -602,17 +602,17 @@ h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; 
 }
 .breadcrumb li {margin-right:10px;}
 .breadcrumb li:before {
-  display:inline-block;
-  margin-right:0px;
-  font-size:7px;
+  display: inline-block;
+  margin-right: 0px;
+  font-size: 7px;
   font-family: locaweb;
-  font-weight:normal;
+  font-weight: normal;
   speak: none;
-  text-decoration:none;
-  width:10px;
+  text-decoration: none;
+  width: 10px;
   text-align: center;
-  min-height:10px;
-  line-height:15px;
+  min-height: 10px;
+  line-height: 5px;
   vertical-align: middle;
 }
 .breadcrumb li:hover:before {background-position:-3px 0;}
