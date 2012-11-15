@@ -149,12 +149,22 @@ $(document).ready(function() {
 
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
   $('.lnkSeta[data-text], .lnkArrow[data-text]').live('click', function(e){
-    var btnText, btnTextAlt;
-    e.preventDefault();
-    btnText = $(this).html();
-    btnTextAlt = $(this).data('text');
-    $(this).html(btnTextAlt).data('text',btnText);
+    changeText('.lnkSeta[data-text], .lnkArrow[data-text]')
   });
+
+  function changeText(element){
+    var btnText, btnTextAlt;
+    btnText = $(element).html();
+    btnTextAlt = $(element).data('text');
+    $(element).html(btnTextAlt).data('text',btnText);
+  }
+
+  function changeTextChamadas(element){
+    var btnText, btnTextAlt;
+    btnTextAlt = $(element).html();
+    btnText = $(element).data('text');
+    $(element).html(btnText).data('text',btnTextAlt);
+  }
 
   // Selects Customizados.
   $(".customSelect").select2({
@@ -197,42 +207,28 @@ $(document).ready(function() {
     $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll') );
   })
 
-  if($.cookie("minShortcuts") == "0"){
+  if($.cookie("minShortcuts") == 0 || $.cookie("minShortcuts") == null){
     $(".expandBox").removeClass("microBox");
   }else{
     $(".expandBox").addClass("microBox");
+    changeTextChamadas('.minShortcuts[data-text]')
   }
 
-  checkLinkHasClass();
-
-  $(".minShortcuts").toggle(function(){
-    $(this).parent().find(".expandBox").toggleClass("microBox");
-    $.cookie('minShortcuts', $('.expandBox').hasClass('microBox') ? '1' : '0' );
-    checkLinkHasClass()
-  }, function(){
-    $(this).parent().find(".expandBox").toggleClass("microBox");
-    $.cookie('minShortcuts', $('.expandBox').hasClass('microBox') ? '1' : '0' );
-    checkLinkHasClass()
-  })
-
-  function checkLinkHasClass(){
-    if($(".expandBox").hasClass("microBox")){
-      $(".minShortcuts").text('Expandir atalhos');
+  function toggleBox(){
+    if($.cookie("minShortcuts") == 0 || $.cookie("minShortcuts") == null){
+      $.cookie("minShortcuts", 1);
+      changeTextChamadas('.minShortcuts[data-text]')
     }else{
-      $(".minShortcuts").text('Minimizar atalhos');
+      $.cookie("minShortcuts", 0);
+      changeText('.minShortcuts[data-text]')
     }
   }
 
-  // CHAMADAS: Diminui o tamanho dos atalhos de chamadas
-  if($.cookie == undefined){
-    $(".minShortcuts").toggle(function(){
-      $(this).parent().find(".expandBox").toggleClass("microBox");
-      $(this).text('Expandir atalhos');
-    }, function(){
-      $(this).parent().find(".expandBox").toggleClass("microBox");
-      $(this).text('Minimizar atalhos');
-    });
-  }
+  $(".minShortcuts").live('click', function(e){
+    toggleBox()
+    $(".expandBox").toggleClass("microBox");
+    changeText('.minShortcuts[data-text]')
+  });
 
   // NOTIFICATION: Não exibe o alert de notificação
   var alertNotifica = $('.lnkNoShow').attr('data-target')
