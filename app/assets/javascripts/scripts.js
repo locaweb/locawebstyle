@@ -159,6 +159,13 @@ $(document).ready(function() {
     $(element).html(btnTextAlt).data('text',btnText);
   }
 
+  function changeTextChamadas(element){
+    var btnText, btnTextAlt;
+    btnTextAlt = $(element).html();
+    btnText = $(element).data('text');
+    $(element).html(btnText).data('text',btnTextAlt);
+  }
+
   // Selects Customizados.
   $(".customSelect").select2({
      placeholder: "Selecione uma opção",
@@ -200,26 +207,28 @@ $(document).ready(function() {
     $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll') );
   })
 
-  $(".minShortcuts").toggle(function(e){
-    $(this).show()
-    microBox = $(this).parent().find(".chamadasBox")
-    microBox.addClass('microBox')
-    $.cookie("minShortcuts", "1")
-    changeText(".minShortcuts")
-  }, function(){
-    microBox.removeClass('microBox')
-    $.cookie("minShortcuts", "0")
-    changeText(".minShortcuts")
-  })
-
-  if($.cookie("minShortcuts") ==  "1"){
-    $(".minShortcuts").text($(this).data("text"))
+  if($.cookie("minShortcuts") == 0 || $.cookie("minShortcuts") == null){
+    $(".expandBox").removeClass("microBox");
+  }else{
+    $(".expandBox").addClass("microBox");
+    changeTextChamadas('.minShortcuts[data-text]')
   }
 
-  if($(".chamadasBox").hasClass("microBox")){
-    changeText(".minShortcuts")
+  function toggleBox(){
+    if($.cookie("minShortcuts") == 0 || $.cookie("minShortcuts") == null){
+      $.cookie("minShortcuts", 1);
+      changeTextChamadas('.minShortcuts[data-text]')
+    }else{
+      $.cookie("minShortcuts", 0);
+      changeText('.minShortcuts[data-text]')
+    }
   }
 
+  $(".minShortcuts").live('click', function(e){
+    toggleBox()
+    $(".expandBox").toggleClass("microBox");
+    changeText('.minShortcuts[data-text]')
+  });
 
   // NOTIFICATION: Não exibe o alert de notificação
   var alertNotifica = $('.lnkNoShow').attr('data-target')
