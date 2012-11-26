@@ -51,7 +51,7 @@
   font:400 20px Ubuntu, arial, verdana, tahoma, sans-serif;
 }
 
-.modal-header p, .modal-body p {padding:0 5px;}
+.modal-header p {padding:0 5px;}
 .modal-header h3 + p {padding-top:20px;}
 
 .modal-body {padding:15px 5px 0; min-height:auto; margin:0 0 15px;}
