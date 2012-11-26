@@ -29,6 +29,7 @@ label b {display:none;}
   text-align: left;
   margin-left:1px;
 }
+.modal-body .controls + p {margin-top: 15px;}
 
 .controls > label, .controls > .control-label {
   width:auto;
@@ -39,7 +40,8 @@ label b {display:none;}
   margin-bottom:0;
 }
 
-.controls .control-label input {display:inline-block; margin-top:0; vertical-align:top;}
+.controls .control-label input {display:inline-block; margin-top:0; vertical-align:middle;}
+label.dInlineBlock, label.dInline {margin-bottom:0;}
 
 label, strong.control-label, .form-horizontal .control-label {
   font-weight:bold;
@@ -107,7 +109,6 @@ label.checkbox.control-label, label.checkbox.control-label:first-child {
   margin: 0 0 0 110px;
   width: inherit;
 }
-/*label.checkbox.control-label input {float:none;}*/
 
 .opcoesBuscaAvancada .control-group .control-label:first-child,
 .control-group .control-label:first-child {margin-left:0;}
