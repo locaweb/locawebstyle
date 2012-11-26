@@ -7,7 +7,7 @@
 .cleft, .cLeft {clear:left;}
 
 .dblock, .dBlock {display:block;}
-.dinline, .dNone {display:inline; float:none;}
+.dinline, .dInline {display:inline; float:none;}
 .dinlineblock, .dInlineBlock {display:inline-block; float:none;}
 .dnone, .dNone,
 .hide, .hide {display:none;}
