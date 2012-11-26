@@ -612,10 +612,10 @@ h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; 
   width: 10px;
   text-align: center;
   min-height: 10px;
-  line-height: 5px;
+  line-height: 10px;
+  margin-top: -3px;
   vertical-align: middle;
 }
-.breadcrumb li:hover:before {background-position:-3px 0;}
 
 .breadcrumb a {color:#767676; text-decoration:none;}
 .breadcrumb a:hover {color:#333; text-decoration:underline;}
