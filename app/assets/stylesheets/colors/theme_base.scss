@@ -40,6 +40,17 @@
   color: $main_menu_hover_color;
 }
 
+#{$theme_name} a.btn:hover,
+#{$theme_name} .modal-footer a.btn {
+  color: #333;
+}
+
+#{$theme_name} .modal-footer a.btn-primary,
+#{$theme_name} a.btn-primary,
+#{$theme_name} a.btn-primary:hover {
+  color: white;
+}
+#{$theme_name} a:hover,
 #{$theme_name} .lnkArrow:hover,
 #{$theme_name} .lnkSeta:hover {
   color: $lnk_seta_hover_color;
