@@ -42,6 +42,7 @@
 }
 .modal h1 {max-width:490px; margin:0 auto 10px;}
 .modal-header h3 {
+  text-align: left;
   margin:0;
   color:#000;
   padding:0 5px 10px;
