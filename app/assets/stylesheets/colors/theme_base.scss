@@ -76,6 +76,7 @@
 #{$theme_name} .btn-primary {
   @include secondary_gradient;
   color: $btn_primary_color;
+  border: 1px solid $main_color;
 }
 
 #{$theme_name} .btn-primary:hover,
