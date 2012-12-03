@@ -39,8 +39,10 @@
 .icoPosRight[class^="ico-"]:before,
 .icoPosRight[class*="ico-"]:before {
   float:right;
-  margin-left:5px;
-  margin-top:1px;
+  margin-left:0;
+  margin-right:0;
+  margin-top: 0;
+  top:0;
 }
 .ico-down-dir.icoPosRight:before {font-size:15px; margin-right:3px;}
 
