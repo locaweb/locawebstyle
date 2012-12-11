@@ -71,6 +71,6 @@ function accessMenu(){
     var title = $(this).attr('title');
     var  href = $(this).attr('href');
     var  text = $(this).text();
-    $('.menuaccess').append('<a tabindex="1" href="' + href + '" title="' + title + '">' + text + '</a>');
+    $('.menuaccess').append('<a tabindex="1" href="'  + href + '" aria-label="' + title + '" title="' + title + '">' + text + '</a>');
   })      
 }
