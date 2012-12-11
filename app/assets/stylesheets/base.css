@@ -757,7 +757,7 @@ td .progress {max-width:70px;}
 
 .alert.alert-notification .close {display: none;}
 
-.lnkNoShow {
+.forceClass a.lnkNoShow {
   position: absolute;
   right: 0; bottom: -21px;
   font-size:11px;
@@ -765,4 +765,4 @@ td .progress {max-width:70px;}
   text-decoration: none !important;
 }
 
-.lnkNoShow:hover {color:#000 !important; text-decoration: underline !important;}
+.forceClass a.lnkNoShow:hover {color:#000; text-decoration: underline !important;}
