@@ -1,12 +1,14 @@
-$(document).ready(function() {
+$(function(){
+  accessMenu();
 
 	// $('select, textarea, h1, h2, h3, h4, h5, h6, p').attr('tabindex','0');
 	// $('input, select, .pathWay li.active > a, .btn-primary, .alert a').attr('tabindex','2');
 	// $('.btn-primary').attr('tabindex','3');
 	// $('.tabs li a').attr('tabindex','4');
-	$('#menuPrincipal li > a, #main .chamadasBox h3 a, .headerContent h1, .alert').attr('tabindex','1');
+	//$('#menuPrincipal li > a, #main .chamadasBox h3 a, .headerContent h1, .alert').attr('tabindex','2');
+	$('#menuPrincipal li > a').attr('tabindex','2');
 	$('.btn, .tabs a, .sidebar h1, .sidebar h2').attr('tabindex','4');
-	$('input, select, .btn.btn-primary').attr('tabindex','2');
+	//$('input, select, .btn.btn-primary').attr('tabindex','2');
 
 //
 // WAI-ARIA nos elementos
@@ -25,6 +27,12 @@ $(document).ready(function() {
 	$('a.btn').attr('role','button');
 	$('.boxGray').attr('role','region');
 	$('.boxGray h2').attr('role','presentation');
+	$('.headerPrincipal').attr('role','banner');
+	$('.content').attr('role','main'); // criar essa classe nos produtos ??
+	$('.sidebar').attr('role','complementary');
+
+
+
 
 	//
 	// TABS
@@ -47,10 +55,22 @@ $(document).ready(function() {
 
 
 	// Verifica se existe um elemento mais específico que o MAIN com o conteúdo principal
-	if ($('#main > .limite > .breadcrumb + .row > .span12').length == 1) {
-		$('#main > .limite > .breadcrumb + .row > .span12').attr('role','main');
-	} else {
-		$('#main').attr('role','main');
-	}
-	
-});
+	// if ($('#main .limite .row .span12').length == 1) {
+	// 	$('#main .limite .row .span12').attr('role','main');
+	// } else {
+	// 	$('#main').attr('role','main');
+	// }
+
+
+
+})
+
+function accessMenu(){
+  $('.serviceName').after('<nav class="menuaccess" />');
+  $('[data-access]').each(function(){
+    var title = $(this).attr('title');
+    var  href = $(this).attr('href');
+    var  text = $(this).text();
+    $('.menuaccess').append('<a tabindex="1" href="' + href + '" title="' + title + '">' + text + '</a>');
+  })      
+}
