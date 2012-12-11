@@ -427,7 +427,6 @@ tr.active td .boxActions {padding-top:0;}
   top:5px; right:10px;
 }
 
-
 /**
 *** Calendário - Datepicker
 **/
@@ -466,21 +465,6 @@ tr.active td .boxActions {padding-top:0;}
 .ui-datepicker table td a {font-size:11px; display:block; color:#333; text-decoration:none;}
 .ui-datepicker table td a:hover {background-color:#EFEFEF;}
 .alert .close {text-decoration:none;}
-
-/** Pra mostrar a grid visualmente **/
-.gridShow {
-  width: 988px;
-  height: 100%;
-  margin: auto;
-  outline: 1px solid
-  red;
-  background: url(/img/grid.png) left;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  margin-left: -495px;
-  z-index: 1000;
-}
 
 /*** statusMessageBox
 **** Usado inicialmente na home de Email Marketing
