@@ -53,11 +53,6 @@ iframe {
 .clearfix:after {clear: both;}
 
 /**
-*** Accessibility
-**/
-[tabindex] {outline:none !important;}
-
-/**
 *** Text basic styles
 **/
 h1, h2, h3, h4, h5, h6 {color:#000; margin:0;}
