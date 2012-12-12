@@ -23,7 +23,7 @@
 }
 
 /** IE8 Fix ***/
-.ie8 [class^="ico-"]:before, .ie8 [class*="ico-"]:before, .ie8 .lnkSeta:before {vertical-align:top; text-decoration: none !important;}
+.ie8 [class^="ico-"]:before, .ie8 [class*="ico-"]:before, .ie8 .lnkSeta:before, .ie8 .lnkArrow:before {vertical-align:top; text-decoration: none !important;}
 
 .tableList td [class^="ico-"], .tableList td [class*="ico-"] {font-weight:normal;}
 
@@ -382,9 +382,9 @@
 .ico-odnoklassniki:before {content: "\e09d";}
 .ico-odnoklassniki-1:before {content: "\e09e";}
 .ico-down-circle:before {content: "\e09f";}
-.ico-left-circle:before, .lnkSeta.setaInv:before, .lnkSeta.setaLeft:before {content: "\e0a0";}
+.ico-left-circle:before, .lnkSeta.setaInv:before, .lnkSeta.setaLeft:before, .lnkArrow.setInv:before {content: "\e0a0";}
 .ico-up-circle:before {content: "\e0a1";}
-.ico-right-circle:before, .lnkSeta:before {content: "\e0a2";}
+.ico-right-circle:before, .lnkSeta:before, .lnkArrow:before {content: "\e0a2";}
 .ico-move:before {content: "\e0a3";}
 .ico-twitter-old:before {content: "\e0a4";}
 .ico-rsocial:before {content: "\e0a5";}

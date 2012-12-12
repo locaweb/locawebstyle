@@ -154,9 +154,15 @@ $(document).ready(function() {
 
   $('input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]').addClass('disabled');
 
-  // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
-  $('.lnkSeta[data-text], .lnkArrow[data-text]').live('click', function(e){
-    changeText('.lnkSeta[data-text], .lnkArrow[data-text]')
+  //Faz o texto do link que troca da busca SIMPLES para AVANÇADA
+  $('.lnkSeta[data-text], .lnkArrow[data-text], [data-toggletext="true"]').live('click', function(e){
+    changeText(this);
+    e.preventDefault();
+  });
+
+  $('[data-toggletext="true"][data-toggletexthover="true"]').live('hover', function(e){
+    changeText(this);
+    e.preventDefault();
   });
 
   function changeText(element){
