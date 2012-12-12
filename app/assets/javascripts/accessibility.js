@@ -8,8 +8,8 @@ $(function(){
 	// $('.btn-primary').attr('tabindex','3');
 	// $('.tabs li a').attr('tabindex','4');
 	//$('#menuPrincipal li > a, #main .chamadasBox h3 a, .headerContent h1, .alert').attr('tabindex','2');
-	$('.btn, #menuPrincipal li > a').attr('tabindex','2');
-	$('.tabs a, .sidebar h1, .sidebar h2').attr('tabindex','4');
+	$('#menuPrincipal li > a').attr('tabindex','2');
+	$('.btn, .tabs a, .sidebar h1, .sidebar h2').attr('tabindex','4');
 	//$('input, select, .btn.btn-primary').attr('tabindex','2');
 
 //
@@ -61,15 +61,12 @@ $(function(){
 })
 
 function accessMenu(){
-	// Colocando tabindex no Nome do Serviço
-	$('.serviceName a').attr('tabindex','1');
-	
 	// Colocando o menu acessível logo depois do Logo. Assim o logo é lido primeiro.
-	$('.serviceName').after('<nav class="accessMenu" />');
+	$('.serviceName').after('<nav class="menuAccess" />');
 	$('[data-access]').each(function(){
 		var title = $(this).attr('title');
 		var  href = $(this).attr('href');
 		var  text = $(this).text();
-		$('.accessMenu').append('<a tabindex="1" href="'  + href + '" aria-label="' + title + '" title="' + title + '">' + text + '</a>');
+		$('.menuAccess').append('<a tabindex="1" href="'  + href + '" aria-label="' + title + '" title="' + title + '">' + text + '</a>');
 	})      
 }
