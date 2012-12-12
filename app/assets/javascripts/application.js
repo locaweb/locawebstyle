@@ -5,6 +5,7 @@
 //= require jquery-ui.min
 //= require browser-detect
 //= require masked-input
+//= require accessibility
 //= require cookie
 // VENDOR
 //

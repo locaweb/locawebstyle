@@ -29,6 +29,9 @@
 .txtJustify, .txtjustify {text-align:justify;}
 .txtCenter, .txtcenter {text-align:center;}
 
+table.txtLeft td, table.txtLeft th {text-align:left;}
+table.txtRight td, table.txtRight th {text-align:right;}
+
 .widthAuto, .widthAuto {width: auto;}
 .widthInherit {width: inherit;}
 

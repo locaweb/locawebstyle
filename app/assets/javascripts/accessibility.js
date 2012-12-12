@@ -1,5 +1,7 @@
 $(function(){
-  accessMenu();
+
+ 	// Chama função de criação de menu acessível.
+	accessMenu();
 
 	// $('select, textarea, h1, h2, h3, h4, h5, h6, p').attr('tabindex','0');
 	// $('input, select, .pathWay li.active > a, .btn-primary, .alert a').attr('tabindex','2');
@@ -31,9 +33,6 @@ $(function(){
 	$('.content').attr('role','main'); // criar essa classe nos produtos ??
 	$('.sidebar').attr('role','complementary');
 
-
-
-
 	//
 	// TABS
 	$('.tabs').attr('role','tablist');
@@ -52,8 +51,6 @@ $(function(){
 	// 	$(e.relatedTarget).attr('aria-selected','false');
 	// });
 
-
-
 	// Verifica se existe um elemento mais específico que o MAIN com o conteúdo principal
 	// if ($('#main .limite .row .span12').length == 1) {
 	// 	$('#main .limite .row .span12').attr('role','main');
@@ -61,16 +58,15 @@ $(function(){
 	// 	$('#main').attr('role','main');
 	// }
 
-
-
 })
 
 function accessMenu(){
-  $('.serviceName').after('<nav class="menuaccess" />');
-  $('[data-access]').each(function(){
-    var title = $(this).attr('title');
-    var  href = $(this).attr('href');
-    var  text = $(this).text();
-    $('.menuaccess').append('<a tabindex="1" href="'  + href + '" aria-label="' + title + '" title="' + title + '">' + text + '</a>');
-  })      
+	// Colocando o menu acessível logo depois do Logo. Assim o logo é lido primeiro.
+	$('.serviceName').after('<nav class="menuAccess" />');
+	$('[data-access]').each(function(){
+		var title = $(this).attr('title');
+		var  href = $(this).attr('href');
+		var  text = $(this).text();
+		$('.menuAccess').append('<a tabindex="1" href="'  + href + '" aria-label="' + title + '" title="' + title + '">' + text + '</a>');
+	})      
 }
