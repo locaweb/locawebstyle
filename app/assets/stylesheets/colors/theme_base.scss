@@ -40,16 +40,10 @@
   color: $main_menu_hover_color;
 }
 
-#{$theme_name} a.btn:hover,
-#{$theme_name} .modal-footer a.btn {
-  color: #333;
-}
-
-#{$theme_name} .modal-footer a.btn-primary,
-#{$theme_name} a.btn-primary,
-#{$theme_name} a.btn-primary:hover {
+#{$theme_name} .modal-footer a.btn-primary {
   color: white;
 }
+
 #{$theme_name} a:hover,
 #{$theme_name} .lnkArrow:hover,
 #{$theme_name} .lnkSeta:hover {
@@ -68,7 +62,6 @@
 #{$theme_name} .pagination .next a,
 #{$theme_name} .pagination .last a,
 #{$theme_name} p a,
-#{$theme_name} a,
 #{$theme_name} .breadcrumb a {
   color: $main_color;
 }

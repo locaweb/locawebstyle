@@ -2,10 +2,9 @@
 *** Botões
 **/
 .btn {text-decoration:none;}
-a.btn {color:#333;}
-a.btn-primary {color:#FFF;}
 
 .btn.dropdown-toggle {padding:5px 8px;}
+.btn:hover {color:inherit !important;}
 
 .btn-primary, .control-group.error .btn-primary {
   font-weight:400;
@@ -21,13 +20,15 @@ a.btn-primary {color:#FFF;}
   border-color: #4b7cb8 #4b7cb8 #4b7cb8;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  color:#FFF !important;
 }
 
-.btn-large {padding-bottom:9px;}
+.btn[class*="btn-"] {color:#FFF !important;}
 
 [class^="btn"][class^="ico"],
 [class*="btn"][class*="ico"],
-.btn.btn-cancel {color:#333333;}
+.btn.btn-cancel,
+td .modal .btn {color:#333;}
 
 /** Exceção botoes que tem class ico- e btn mas que precisam ter a cor de texto branca **/
 .btn-primary[class*="btn"][class*="ico"],
@@ -67,7 +68,7 @@ a.btn-primary {color:#FFF;}
 
 .btn-group > .btn:first-child {
   vertical-align: middle;
-  padding: 7px 14px 6px;
+  padding: 5px 10px;
   margin: 0 -4px 0 0;
 }
 
