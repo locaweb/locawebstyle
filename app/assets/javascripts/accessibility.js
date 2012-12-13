@@ -9,7 +9,7 @@ $(function(){
 	// $('.tabs li a').attr('tabindex','4');
 	//$('#menuPrincipal li > a, #main .chamadasBox h3 a, .headerContent h1, .alert').attr('tabindex','2');
 	$('#menuPrincipal li > a').attr('tabindex','2');
-	$('.btn, .tabs a, .sidebar h1, .sidebar h2').attr('tabindex','4');
+	$('.btn, .tabs a').attr('tabindex','4');
 	//$('input, select, .btn.btn-primary').attr('tabindex','2');
 
 //
