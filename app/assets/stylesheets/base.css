@@ -26,7 +26,7 @@ html, body {height:100%; font-family:verdana, tahoma, arial, helvetica, sans-ser
 .limite {margin: 0 auto;}
 
 /** Menu para Acessibilidade escondido **/
-.access, .accessMenu {position:absolute; top:-999px;}
+.menuAccess {position:absolute; top:-999px;}
 
 pre {
   background:#FFF;
