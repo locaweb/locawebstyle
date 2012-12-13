@@ -720,9 +720,7 @@ td .progress {max-width:70px;}
   text-align:left;
 }
 
-.showOpts:before {
-  font-size:25px;
-}
+.showOpts:before {font-size:25px;}
 
 .innerBox {
   border: 1px solid #D7D7D7;
@@ -732,7 +730,6 @@ td .progress {max-width:70px;}
 /*** ALERTAS
 **** Alertas para retornos e notificações
 ***/
-
 .alert {font-size:12px;}
 .forceClass .alert .close {text-decoration: none; border:none;}
 
