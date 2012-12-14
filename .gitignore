@@ -20,6 +20,5 @@ tmp/
 .sass-cache/
 .DS_Store
 .rvmrc
-public/assets
 config/unicorn.rb
 *.swp
