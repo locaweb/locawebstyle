@@ -42,7 +42,7 @@ p {font-size:12px; line-height:20px;}
     width:158px;
     height:42px;
     text-indent:-9999px; overflow: hidden;
-    background:url(/img/logoLocaweb.png);
+    background:url(/assets/img/logoLocaweb.png);
     display: block;
     float:left;
 }
@@ -262,7 +262,7 @@ footer.site-footer{
 
 footer#rodape {position:static;}
 
-aside.boxes .collapseGroup summary.active { font-weight:normal; color:#B60000;   background:url(/img/setaCollapseTop.png) no-repeat 99% 8px;}
+aside.boxes .collapseGroup summary.active { font-weight:normal; color:#B60000;   background:url(/assets/img/setaCollapseTop.png) no-repeat 99% 8px;}
 
 .the-icons {margin:0 0 0 50px;}
 .the-icons li {

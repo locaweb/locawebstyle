@@ -9,7 +9,7 @@ p + .boxCollapse {margin-top:30px;}
   margin:0 0 10px; 
   border:1px solid #e5e5e5; 
   border-bottom-width:2px;
-  background:url(/img/setaCollapseBottom.png) no-repeat 99% 10px;
+  background:url(/assets/img/setaCollapseBottom.png) no-repeat 99% 10px;
   -webkit-transition:all .2s linear;
 }
 .ie9 .boxCollapse {overflow:hidden;}
@@ -22,7 +22,7 @@ p + .boxCollapse {margin-top:30px;}
 }
 .boxCollapse:hover {background-color:#ECECEC;}
 
-.boxCollapse.active {background:#ececec url(/img/setaCollapseTop.png) no-repeat 99% 10px; padding-bottom:10px;}
+.boxCollapse.active {background:#ececec url(/assets/img/setaCollapseTop.png) no-repeat 99% 10px; padding-bottom:10px;}
 .boxCollapse.active h4 {font-weight:bold;}
 .boxCollapse .collapse {padding:0 15px;}
 .boxCollapse .collapse:before {content: " "; display:block; padding:20px 0 0;}

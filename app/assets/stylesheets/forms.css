@@ -100,7 +100,7 @@ label.nomarginleft {margin-left: 0 !important;}
   content:" ";
   display:block;
   width:15px; height:5px;
-  background:url(/img/indicadorTopBoxGrayInput.png) no-repeat;
+  background:url(/assets/img/indicadorTopBoxGrayInput.png) no-repeat;
   position:absolute;
   top:-5px; left:15px;
 }
@@ -230,7 +230,7 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top:0;}
 .simpleFilter.sideBySide p.fleft {margin-bottom:0; margin-top:6px;}
 
 .simpleFilter .searchInput {
-  background:url(/img/lupaInput.png) no-repeat 8px center;
+  background:url(/assets/img/lupaInput.png) no-repeat 8px center;
   max-width:185px;
   padding-left:35px;
 }

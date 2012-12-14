@@ -51,7 +51,7 @@
   display:inline-block;
   vertical-align:top; 
   content: " "; 
-  background:url(../img/ico-alert.png) no-repeat center center;
+  background:url(../assets/img/ico-alert.png) no-repeat center center;
   width:17px; height:15px;
 }
 
@@ -485,10 +485,10 @@ li [class^="icon-"], li [class*=" icon-"] {
 .help-inline {width:inherit;}
 
 [class^="icon-"]:before, [class*=" icon-"]:before,
-.ui-datepicker-trigger.icon-calendar:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png);}
+.ui-datepicker-trigger.icon-calendar:before {background-image: url(/assets/bootstrap/assets/img/glyphicons-halflings.png);}
 
 /*** Bootstrap Icons***/
-.icon-white {background-image: url("../img/glyphicons-halflings-white.png");}
+.icon-white {background-image: url("../assets/img/glyphicons-halflings-white.png");}
 .icon-glass:before {background-position: 0 0;}
 .icon-music:before {background-position: -24px 0;}
 .icon-search:before {background-position: -48px 0;}

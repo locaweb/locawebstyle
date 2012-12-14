@@ -7,7 +7,7 @@ footer#rodape {
 }
 #rodape .footerTop {
   padding:15px 0 0;
-  background:url(/img/bgfooter.png);
+  background:url(/assets/img/bgfooter.png);
 }
 #rodape nav {height:50px;}
 
@@ -42,9 +42,9 @@ footer#rodape {
 }
 #rodape nav ul li:last-child a {border-right:none;}
 
-#rodape ul li.ico-helpDesk a {background-image:url(/img/icoHelpDesk.png);}
-#rodape ul li.ico-Chat a {background-image:url(/img/icoChat.png);}
-#rodape ul li.ico-Telefone a {background-image:url(/img/icoTelefone.png);}
+#rodape ul li.ico-helpDesk a {background-image:url(/assets/img/icoHelpDesk.png);}
+#rodape ul li.ico-Chat a {background-image:url(/assets/img/icoChat.png);}
+#rodape ul li.ico-Telefone a {background-image:url(/assets/img/icoTelefone.png);}
 
 #rodape nav .lnkSeta {margin:15px 20px 0; color:#FFF;}
 
@@ -52,14 +52,14 @@ footer#rodape {
 .subfooter strong {color:#2a2a2a;}
 .subfooter .lastAccess {
   padding:0 0 0 20px;
-  background:url(/img/ico-ultimoAcesso.png) no-repeat left center;
+  background:url(/assets/img/ico-ultimoAcesso.png) no-repeat left center;
 }
 .copyRight {margin:0;}
 
 .icoInterroga {
   display:inline-block;
   text-indent:-9999px;
-  background:url(/img/icoInterroga.png) no-repeat center;
+  background:url(/assets/img/icoInterroga.png) no-repeat center;
   width:12px; height:12px;
   vertical-align:middle;
 }

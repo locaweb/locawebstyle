@@ -1,7 +1,7 @@
 .sidebar {margin:25px 0 0;}
 
 .sideBox {
-  background:#f0f0f0 url(/img/bgSidebarBox.png) repeat-X top center;
+  background:#f0f0f0 url(/assets/img/bgSidebarBox.png) repeat-X top center;
   border-radius:3px;
   border:1px solid #e5e5e5;
   position:relative;
@@ -53,13 +53,13 @@
   text-transform: uppercase;
   letter-spacing: -1px;
 }
-.titSide.titDadosConta {background-image:url(/img/ico-dadosConta.png);}
-.titSide.titMeiosPagto {background-image:url(/img/ico-convenios.png);}
-.titSide.titAjudaSuporte {background-image:url(/img/ico-dadosConta.png);}
+.titSide.titDadosConta {background-image:url(/assets/img/ico-dadosConta.png);}
+.titSide.titMeiosPagto {background-image:url(/assets/img/ico-convenios.png);}
+.titSide.titAjudaSuporte {background-image:url(/assets/img/ico-dadosConta.png);}
 
-.colorGreen .titSide.titDadosConta {background-image:url(/img/ico-dadosContaGreen.png);}
-.colorGreen .titSide.titAjudaSuporte {background-image:url(/img/ico-ajudasuporteGreen.png);}
-.colorGreen .titSide.titDicas {background-image:url(/img/ico-dicasGreen.png);}
+.colorGreen .titSide.titDadosConta {background-image:url(/assets/img/ico-dadosContaGreen.png);}
+.colorGreen .titSide.titAjudaSuporte {background-image:url(/assets/img/ico-ajudasuporteGreen.png);}
+.colorGreen .titSide.titDicas {background-image:url(/assets/img/ico-dicasGreen.png);}
 
 /** Lista com links em BG Branco **/
 .listWhite {margin:0; padding:0;}
@@ -82,7 +82,7 @@
   content:" ";
   display:inline-block;
   width:4px; height:5px;
-  background-image:url(/img/arrows.png);
+  background-image:url(/assets/img/arrows.png);
   background-repeat:no-repeat;
   background-position:0 0;
   position:relative; top:-2px;
@@ -93,7 +93,7 @@
 .sidebar a[rel="external"]:after {
   content:" ";
   display:inline-block;
-  background: url(/img/externalLnk.png) no-repeat right top;
+  background: url(/assets/img/externalLnk.png) no-repeat right top;
   width:10px; height:10px;
   margin-left:5px;
 }
