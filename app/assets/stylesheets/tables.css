@@ -84,8 +84,9 @@ tr.active {background-color:#fffece;}
   margin:0;
   padding:5px 0;
 }
-tr:hover .actionsTable {display:block;}
+tr:hover .actionsTable {display:block; clear: both;}
 tr.active:hover .actionsTable {display:none;}
+tr [class*="span"] {margin-left:0;}
 
 .statusMessageBox .actionsTable {
   display: block;

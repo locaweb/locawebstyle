@@ -2,7 +2,7 @@
 *** 320 x 480
 **/
 @media screen and (max-width:767px) {
-
+#select_themes {display: none;}
   body:after {content:" "; display:block; clear:both;}
   body { padding:0 !important;}
 
@@ -72,9 +72,17 @@
     padding:9px;
     -webkit-transition:all .15s linear;
   }
+  #menuPrincipal > ul > li > a:after {display: none;}
   #menuPrincipal > ul > li > a:hover, #menuPrincipal > ul > li.selected > a {
     border-radius:0;
     background-image:none;
+  }
+
+  #menuPrincipal a.ico-home {
+    width: inherit;
+    height: auto;
+    overflow: inherit;
+    text-indent: inherit;
   }
 
   #menuPrincipal .btMenu {float:none; background:none; border-right:none;}

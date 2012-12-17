@@ -1,10 +1,8 @@
 /** MODAL **/
 .modal {
   padding:10px;
-  margin-top:-290px; /* sobrescrevendo bootstrap **/
   max-height:590px;
   display:none;
-  width:550px;
   overflow:hidden;
   word-break:normal;
 }
