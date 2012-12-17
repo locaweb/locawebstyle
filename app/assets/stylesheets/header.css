@@ -81,6 +81,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 
 #menuPrincipal a.ico-home {
   width:25px;
+  background-color:#777;
   text-indent: -999px;
   padding:7px 8px 8px;
 }
