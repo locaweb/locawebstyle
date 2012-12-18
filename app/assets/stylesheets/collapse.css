@@ -14,6 +14,10 @@ p + .boxCollapse {margin-top:30px;}
   border-bottom-width:2px;
   background:url(/assets/img/setaCollapseBottom.png) no-repeat 99% 10px;
   -webkit-transition:all .2s linear;
+  -moz-transition:all .2s linear;
+  -ms-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear;
 }
 .ie9 .boxCollapse {overflow:hidden;}
 
