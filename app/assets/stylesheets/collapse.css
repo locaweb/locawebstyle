@@ -1,8 +1,11 @@
-
 /***
 **** BOX Collpase
 ***/
+
 p + .boxCollapse {margin-top:30px;}
+.collapse p + .btn {margin: 10px 0 5px;}
+.collapse h6:first-child {padding: 10px 0 0;}
+
 .boxCollapse {
   border-radius:3px;
   padding:3px;
