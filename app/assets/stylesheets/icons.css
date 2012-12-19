@@ -485,7 +485,7 @@ li [class^="icon-"], li [class*=" icon-"] {
 .help-inline {width:inherit;}
 
 [class^="icon-"]:before, [class*=" icon-"]:before,
-.ui-datepicker-trigger.icon-calendar:before {background-image: url(/assets/bootstrap/assets/img/glyphicons-halflings.png);}
+.ui-datepicker-trigger.icon-calendar:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png);}
 
 /*** Bootstrap Icons***/
 .icon-white {background-image: url("../assets/img/glyphicons-halflings-white.png");}
