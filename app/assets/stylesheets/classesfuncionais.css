@@ -12,6 +12,13 @@
 .dnone, .dNone,
 .hide, .hide {display:none;}
 
+.vAlignTop {vertical-align: top;}
+.vAlignMiddle {vertical-align: middle;}
+.vAlignBottom {vertical-align: bottom;}
+.vAlignTopImportant {vertical-align: top !important;}
+.vAlignMiddleImportant {vertical-align: middle !important;}
+.vAlignBottomImportant {vertical-align: bottom !important;}
+
 .nomargin, .noMargin {margin:0;}
 .nomarginleft, .noMarginLeft, .row.noMarginLeft {margin-left:0;}
 .nomarginright, .noMarginRight {margin-right:0;}
