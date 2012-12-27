@@ -1,6 +1,9 @@
 $theme_name: ".colorAqua";
 
+$arrow_image: "arrowAqua.png";
+
 $main_color: #3b949c;
+
 $secondary_color: #2d808f;
 
 $btn_primary_color: #fff;
@@ -28,6 +31,16 @@ $path_way_description_active_color: #3B949C;
 }
 
 @mixin secondary_gradient {
+  background: rgb(34,97,103); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(34,97,103,1) 0%, rgba(67,135,142,1) 4%, rgba(34,97,103,1) 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top,  rgba(87,149,154,1) 0%,rgba(67,135,142,1) 4%,rgba(34,97,103,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(34,97,103,1) 0%,rgba(67,135,142,1) 4%,rgba(61,36,38,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(34,97,103,1) 0%,rgba(67,135,142,1) 4%,rgba(61,36,38,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(34,97,103,1) 0%,rgba(67,135,142,1) 4%,rgba(61,36,38,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#226167', endColorstr='#43878e',GradientType=0 ); /* IE6-8 */
+}
+
+@mixin third_gradient {
   background: rgb(34,97,103); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(34,97,103,1) 0%, rgba(67,135,142,1) 4%, rgba(34,97,103,1) 100%); /* FF3.6+ */
   background: -webkit-linear-gradient(top,  rgba(87,149,154,1) 0%,rgba(67,135,142,1) 4%,rgba(34,97,103,1) 100%); /* Chrome10+,Safari5.1+ */
