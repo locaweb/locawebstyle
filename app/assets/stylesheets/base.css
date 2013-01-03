@@ -671,6 +671,7 @@ td .progress {max-width:70px;}
 
 .popover.right .arrow {margin-top:-6px;} /** Corrije um desalinhamento da setinha... tem que pesquisar por que acontece isso. **/
 .popover.left {margin-left:-10px;} /**  **/
+.popover li {white-space: nowrap;overflow: hidden;-o-text-overflow: ellipsis;-ms-text-overflow: ellipsis;text-overflow: ellipsis;}
 
 /*** COLLAPSE
 **** Algumas adequações
