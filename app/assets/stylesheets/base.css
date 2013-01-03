@@ -59,7 +59,6 @@ h1, h2, h3, h4, h5, h6 {color:#000; margin:0;}
 h1 {font: 26px UbuntuMedium, Ubuntu, arial, verdana, tahoma, sans-serif;}
 h2 {font: 24px UbuntuLight, Ubuntu, arial, verdana, tahoma, sans-serif;}
 h3, legend {font: 20px Ubuntu, arial, verdana, tahoma, sans-serif;}
-[class^="span"] h3:first-child {padding:20px 0 10px;}
 h4 {font: 18px UbuntuLight, arial, verdana, tahoma, sans-serif; margin-bottom:5px;}
 h3 + h4 {margin-top:15px;}
 h5 {font: 15px UbuntuMedium, arial, verdana, tahoma, sans-serif;}
