@@ -516,13 +516,13 @@ tr.active td .boxActions {padding-top:0;}
   text-align:center;
 } 
 .lists .statusMessageBox .countViews:after{
+  background:url(/assets/img/arrowInfo.png) no-repeat left center;
   content: " ";
   position: absolute;
-  margin-top: -10px;
-  top: 50%;
-  right: -7px;
+  top: 0;
+  right: 0;
   width: 7px;
-  height: 20px;
+  height: 99px;
 }
 .overflowMessage + .overflowMessage {border-right:none; margin-right:0; width:29%;}
 .statusMessageBox .overflowMessage p {width:10000px;}
