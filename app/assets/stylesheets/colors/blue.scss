@@ -1,7 +1,5 @@
 $theme_name: ".colorBlue";
 
-$arrow_image: "arrowBlue.png";
-
 $main_color: #4b7cb8;
 $secondary_color: #4b7cb8;
 
@@ -38,15 +36,7 @@ $path_way_description_active_color: #4b7cb8;
   background: linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#264e94', endColorstr='#7aa4d1',GradientType=0 ); /* IE6-8 */
 }
-@mixin third_gradient {
-  background: #264f94;
-  background: -moz-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  background: -webkit-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  background: -o-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  background: -ms-linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  background: linear-gradient(bottom, rgb(38,78,148) 17%, rgb(122,164,209) 91%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#264e94', endColorstr='#7aa4d1',GradientType=0 ); /* IE6-8 */
-}
+
 @mixin chamadas_gradient_hover {
   border-color:#6D94C5;
   background: rgb(252,252,252); /* Old browsers */

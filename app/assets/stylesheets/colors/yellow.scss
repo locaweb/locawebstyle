@@ -1,7 +1,5 @@
 $theme_name: ".colorYellow";
 
-$arrow_image: "arrowYellow.png";
-
 $main_color: #c9ae1c;
 $secondary_color: #c9ae1c;
 
@@ -41,16 +39,6 @@ $path_way_description_active_color: #4d2b12;
   background: linear-gradient(to bottom,  #d7c243 0%,#ba9b13 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7c243', endColorstr='#ba9b13',GradientType=0 ); /* IE6-9 */
 
-}
-
-@mixin third_gradient {
-  background: #5BB75B;
-  background: -moz-linear-gradient(top, #fdb000 0%, #fb9000 100%); /* FF3.6+ */
-  background: -webkit-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #fdb000 0%,#fb9000 100%); /* IE10+ */
-  background: linear-gradient(top, #fdb000 0%,#fb9000 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdb000', endColorstr='#fb9000',GradientType=0 ); /* IE6-9 */
 }
 
 @mixin chamadas_gradient_hover {

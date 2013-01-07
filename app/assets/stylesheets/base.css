@@ -514,22 +514,35 @@ tr.active td .boxActions {padding-top:0;}
   border-right:none;
   padding:9px 8px 9px 0;
   text-align:center;
+
+
+  background: -moz-linear-gradient(top,  #efefef 0%, #dfdfdf 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#dfdfdf)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #efefef 0%,#dfdfdf 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #efefef 0%,#dfdfdf 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #efefef 0%,#dfdfdf 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #efefef 0%,#dfdfdf 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#dfdfdf',GradientType=0 ); /* IE6-9 */
+
+}
+.lists .statusMessageBox:hover .countViews:after{
+   background:url(/assets/img/arrowInfo.png) no-repeat 0 -99px;
 } 
 .lists .statusMessageBox .countViews:after{
-  background:url(/assets/img/arrowInfo.png) no-repeat left center;
+  background:url(/assets/img/arrowInfo.png) no-repeat 0 0;
   content: " ";
   position: absolute;
   top: 0;
   right: 0;
   width: 7px;
-  height: 99px;
+  height: 98px;
 }
 .overflowMessage + .overflowMessage {border-right:none; margin-right:0; width:29%;}
 .statusMessageBox .overflowMessage p {width:10000px;}
 
 .lists .statusMessageBox .countViews {
-  padding:21px 10px 19px 0;
-  height: 100%;
+  padding:21px 20px 19px 10px;
+  height: 57px;
   width:auto;
   font-weight:normal;
 }

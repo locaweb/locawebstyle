@@ -109,9 +109,4 @@
 #{$theme_name} .chamadasBox div:hover {
   @include chamadas_gradient_hover;
 }
-#{$theme_name} .lists .statusMessageBox .countViews{
-   @include third_gradient;
-}
-#{$theme_name} .lists .statusMessageBox .countViews:after{
-  background: url(/assets/img/#{$arrow_image}) no-repeat left center;
-}
+

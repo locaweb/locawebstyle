@@ -1,7 +1,5 @@
 $theme_name: ".colorNavyBlue";
 
-$arrow_image: "arrowNavyBlue.png";
-
 $main_color: #00417b;
 $secondary_color: #0c589b;
 
@@ -30,16 +28,6 @@ $path_way_description_active_color: #02436d;
 }
 
 @mixin secondary_gradient {
-  background: rgba(0,65,123,1); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(0,65,123,1) 0%, rgba(0,85,140,1) 4%, rgba(0,49,101,1) 100%); /* FF3.6+ */
-  background: -webkit-linear-gradient(top,  rgba(0,65,123,1) 0%,rgba(0,85,140,1) 4%,rgba(0,49,101,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(0,65,123,1) 0%,rgba(0,85,140,1) 4%,rgba(0,49,101,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(0,65,123,1) 0%,rgba(0,85,140,1) 4%,rgba(0,49,101,1) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(0,65,123,1) 0%,rgba(0,85,140,1) 4%,rgba(0,49,101,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00558c', endColorstr='#003165',GradientType=0 ); /* IE6-8 */
-}
-
-@mixin third_gradient {
   background: rgba(0,65,123,1); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(0,65,123,1) 0%, rgba(0,85,140,1) 4%, rgba(0,49,101,1) 100%); /* FF3.6+ */
   background: -webkit-linear-gradient(top,  rgba(0,65,123,1) 0%,rgba(0,85,140,1) 4%,rgba(0,49,101,1) 100%); /* Chrome10+,Safari5.1+ */
