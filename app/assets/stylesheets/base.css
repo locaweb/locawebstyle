@@ -531,12 +531,12 @@ tr.active td .boxActions {padding-top:0;}
 .statusMessageBox .overflowMessage p {width:10000px;}
 
 .lists .statusMessageBox .countViews {
-  padding:21px 20px 19px 10px;
+  padding: 21px 10px 19px 0;
   height: 57px;
   width:auto;
   font-weight:normal;
 }
-.lists .statusMessageBox > li{padding: 10px 5px 0 0;}
+.lists .statusMessageBox > li{padding: 10px 5px 0 0; position: relative;}
 .lists .statusMessageBox .countViews h6 {padding-left:0; font-weight:normal;}
 .lists .statusMessageBox .countViews p {padding-left:0;}
 

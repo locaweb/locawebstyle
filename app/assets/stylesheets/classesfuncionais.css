@@ -6,7 +6,7 @@
 .cright, .cRight {clear:right;}
 .cleft, .cLeft {clear:left;}
 
-.dblock, .dBlock {display:block;}
+.dblock, .dBlock {display:block!important;}
 .dinline, .dInline {display:inline; float:none;}
 .dinlineblock, .dInlineBlock {display:inline-block; float:none;}
 .dnone, .dNone,
@@ -92,3 +92,5 @@ hr.sep {background-color: #E5E5E5; }
 .bgWhite {
   background: white;
 }
+
+.overflowHidden, .overflowhidden{ overflow: hidden;}
