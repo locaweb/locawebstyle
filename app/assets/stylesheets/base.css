@@ -790,3 +790,5 @@ td .progress {max-width:70px;}
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#dfdfdf',GradientType=0 ); /* IE6-9 */
 
 }
+
+a[class*="ico-"] {font-size: 12px;}
