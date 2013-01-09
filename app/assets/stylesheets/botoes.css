@@ -4,7 +4,8 @@
 .btn {text-decoration:none;}
 
 .btn.dropdown-toggle {padding:5px 8px;}
-.btn:hover {color:inherit !important;}
+
+.btn.btn-danger:hover {color:#fff!important;}
 
 .btn-primary, .control-group.error .btn-primary {
   font-weight:400;
@@ -23,12 +24,14 @@
   color:#FFF !important;
 }
 
-.btn[class*="btn-"] {color:#FFF !important;}
+.btn.btn-large {font-size: 14px;}
 
 [class^="btn"][class^="ico"],
 [class*="btn"][class*="ico"],
 .btn.btn-cancel,
 td .modal .btn {color:#333;}
+
+.modal-footer .btn:hover {color: #333;}
 
 /** Exceção botoes que tem class ico- e btn mas que precisam ter a cor de texto branca **/
 .btn-primary[class*="btn"][class*="ico"],
