@@ -71,6 +71,7 @@
 }
 
 .listWhite li a {
+  color:inherit;
   padding: 3px 10px 3px 15px;
   background-color: white;
   font: 12px verdana, tahoma, arial, sans-serif;
