@@ -477,15 +477,19 @@ li [class^="icon-"], li [class*=" icon-"] {
   border:1px solid #E5E5E5;
   background:#EEE;
   vertical-align:top;
-  padding: 6px 4px 5px 7px;
-  margin-left: -2px;
+  padding: 0; 
+  height:30px;
+  width:30px;
+  display: inline-block;
+  position: relative; left:-3px;
+  z-index: 1;
   margin-top: 0px;
 }
 .error .ui-datepicker-trigger.icon-calendar {border-color:#953B39;}
 .help-inline {width:inherit;}
 
 [class^="icon-"]:before, [class*=" icon-"]:before,
-.ui-datepicker-trigger.icon-calendar:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png);}
+.ui-datepicker-trigger.icon-calendar:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png); position: relative; left:1px; top:1px;}
 
 /*** Bootstrap Icons***/
 .icon-white {background-image: url("../assets/img/glyphicons-halflings-white.png");}
