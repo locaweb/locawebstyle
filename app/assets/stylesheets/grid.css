@@ -91,7 +91,9 @@ input.input120, input.span2 {width:90px !important;}
   .revisit .chamadasBox h3{ font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;}
 
 }
-
+@media screen and (max-width: 480px) {
+  .lists .statusMessageBox .countViews:after{background: none!important;}
+}
 
 
 

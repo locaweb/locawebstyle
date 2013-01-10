@@ -39,7 +39,7 @@
 table.txtLeft td, table.txtLeft th {text-align:left;}
 table.txtRight td, table.txtRight th {text-align:right;}
 
-.widthAuto, .widthAuto {width: auto;}
+.widthAuto, .widthAuto {width: auto!important;}
 .widthInherit {width: inherit;}
 
 .noborder, .noBorder {border:none;}

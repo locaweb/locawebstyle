@@ -9,7 +9,7 @@ $(function(){
 	// $('.tabs li a').attr('tabindex','4');
 	//$('#menuPrincipal li > a, #main .chamadasBox h3 a, .headerContent h1, .alert').attr('tabindex','2');
 	$('#menuPrincipal li > a').attr('tabindex','2');
-	$('.btn, .tabs a').attr('tabindex','4');
+	$('.btn, .tabs a').attr('tabindex','3');
 	//$('input, select, .btn.btn-primary').attr('tabindex','2');
 
 //
@@ -32,6 +32,7 @@ $(function(){
 	$('.headerPrincipal').attr('role','banner');
 	$('.content').attr('role','main'); // criar essa classe nos produtos ??
 	$('.sidebar').attr('role','complementary');
+	$('input.required').attr('aria-required','true');
 
 	//
 	// TABS
@@ -39,10 +40,12 @@ $(function(){
 
 	// Inserie ARIA-SELECTED em TABS ativas
 
-	// $('.tab-pane').attr({
-	// 	role: 'tabpanel',
-	// 	'aria-hidden': 'true'
-	// });
+	$('.tabs li a').attr({
+		role: 'tabpanel',
+		'aria-selected': 'false'
+	});
+
+	$('.tabs li.active a').attr('aria-selected','true');
 
 	// $('[data-toggle="tab"]').attr('aria-selected','false');
 	// $('.active [data-toggle="tab"]').attr('aria-selected','true');

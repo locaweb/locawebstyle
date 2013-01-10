@@ -484,9 +484,6 @@ tr.active td .boxActions {padding-top:0;}
 }
 .statusMessageBox li:first-child {text-align:center;}
 .statusMessageBox > li {
-  display:inline-block;
-  *display:inline;
-  *zoom:1;
   vertical-align:middle;
   border-right:1px solid #e5e5e5;
   margin-right:5px;
@@ -529,7 +526,7 @@ tr.active td .boxActions {padding-top:0;}
 }
 .overflowMessage + .overflowMessage {border-right:none; margin-right:0; width:29%;}
 .statusMessageBox .overflowMessage p {width:10000px;}
-
+.lists .statusMessageBox p{height: 27px;}
 .lists .statusMessageBox .countViews {
   padding: 21px 10px 19px 0;
   height: 57px;
@@ -755,7 +752,7 @@ td .progress {max-width:70px;}
 /*** Box Gradiente
 **** Cores gradientes utilizadas
 ***/
-.gradientGreen, .colorGreen .countViews{
+.gradientGreen{
   background: #e6efdd; /* Old browsers */
   background: -moz-linear-gradient(top,  #e6efdd 0%, #ccdfbc 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6efdd), color-stop(100%,#ccdfbc)); /* Chrome,Safari4+ */
@@ -791,4 +788,3 @@ td .progress {max-width:70px;}
 }
 
 a[class*="ico-"] {font-size: 12px;}
-.colorGreen .lists .statusMessageBox .countViews {width: auto;}
