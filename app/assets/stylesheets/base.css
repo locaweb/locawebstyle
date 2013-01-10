@@ -533,7 +533,6 @@ tr.active td .boxActions {padding-top:0;}
 .lists .statusMessageBox .countViews {
   padding: 21px 10px 19px 0;
   height: 57px;
-  width:auto;
   font-weight:normal;
 }
 .lists .statusMessageBox > li{padding: 10px 5px 0 0; position: relative;}
@@ -756,7 +755,7 @@ td .progress {max-width:70px;}
 /*** Box Gradiente
 **** Cores gradientes utilizadas
 ***/
-.gradientGreen{
+.gradientGreen, .colorGreen .countViews{
   background: #e6efdd; /* Old browsers */
   background: -moz-linear-gradient(top,  #e6efdd 0%, #ccdfbc 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6efdd), color-stop(100%,#ccdfbc)); /* Chrome,Safari4+ */
@@ -792,3 +791,4 @@ td .progress {max-width:70px;}
 }
 
 a[class*="ico-"] {font-size: 12px;}
+.colorGreen .lists .statusMessageBox .countViews {width: auto;}
