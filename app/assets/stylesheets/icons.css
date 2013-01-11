@@ -49,9 +49,9 @@
 .ico-alert:before {
   margin-right:7px;
   display:inline-block;
-  vertical-align:top; 
-  content: " "; 
-  background:url(../assets/img/ico-alert.png) no-repeat center center;
+  vertical-align:top;
+  content: " ";
+  background:url(img/ico-alert.png) no-repeat center center;
   width:17px; height:15px;
 }
 
@@ -477,7 +477,7 @@ li [class^="icon-"], li [class*=" icon-"] {
   border:1px solid #E5E5E5;
   background:#EEE;
   vertical-align:top;
-  padding: 0; 
+  padding: 0;
   height:30px;
   width:30px;
   display: inline-block;
@@ -489,10 +489,10 @@ li [class^="icon-"], li [class*=" icon-"] {
 .help-inline {width:inherit;}
 
 [class^="icon-"]:before, [class*=" icon-"]:before,
-.ui-datepicker-trigger.icon-calendar:before {background-image: url(/assets/bootstrap/img/glyphicons-halflings.png); position: relative; left:1px; top:1px;}
+.ui-datepicker-trigger.icon-calendar:before {background-image: url(bootstrap/img/glyphicons-halflings.png); position: relative; left:1px; top:1px;}
 
 /*** Bootstrap Icons***/
-.icon-white {background-image: url("../assets/img/glyphicons-halflings-white.png");}
+.icon-white {background-image: url("bootstrap/img/glyphicons-halflings-white.png");}
 .icon-glass:before {background-position: 0 0;}
 .icon-music:before {background-position: -24px 0;}
 .icon-search:before {background-position: -48px 0;}
@@ -633,4 +633,4 @@ li [class^="icon-"], li [class*=" icon-"] {
 .icon-filter:before {background-position: -408px -144px;}
 .icon-briefcase:before {background-position: -432px -144px;}
 .icon-fullscreen:before {background-position: -456px -144px;}
- 
+

@@ -1,6 +1,6 @@
 header.headerPrincipal {
   border-top:4px solid #BBB;
-  background:#f0f0f0 url(/assets/img/bgHeader.gif) repeat-X top center;
+  background:#f0f0f0 url(img/bgHeader.gif) repeat-X top center;
 }
 header.headerPrincipal .limite {height:120px; position:relative;}
 header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" "; display:block; clear:both;}
@@ -44,7 +44,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 #menuPrincipal > ul > li {
   float:left;
   position:relative;
-  background:#FFF url(/assets/img/dotMenuLi.gif) no-repeat right center;
+  background:#FFF url(img/dotMenuLi.gif) no-repeat right center;
   padding:0 5px;
 }
 #menuPrincipal > ul > li:first-child {padding-left:0;}
@@ -55,7 +55,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   position:absolute;
   bottom:2px; left:48.8%; margin-left: -4px;
   width:11px; height:5px;
-  background:url(/assets/img/setaDots.png) center center no-repeat;
+  background:url(img/setaDots.png) center center no-repeat;
 }
 #menuPrincipal > ul > li > a {
   position:relative;
@@ -179,7 +179,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 /** Linkzinho de sugestões do Header **/
 .lnkSugestoes, #feedbackr.lnkSugestoes {
   float:right;
-  background:url(/assets/img/ico-lamp.png) no-repeat 10px center;
+  background:url(img/ico-lamp.png) no-repeat 10px center;
   text-decoration:none;
   color:#545454;
   font:12px verdana;
@@ -197,7 +197,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   font:12px verdana;
   min-height:50px;
   color:#545454;
-  background:url(/assets/img/bgIdentHeader.png) no-repeat right 20px;
+  background:url(img/bgIdentHeader.png) no-repeat right 20px;
 }
 
 .infoLogin .accountName {
@@ -210,7 +210,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 .btn-group {font-size: inherit;}
 
 .btn-group .dropdown-toggle.identNumber {
-  background:url(/assets/img/setaIdentBaixo.png) no-repeat right 16px;
+  background:url(img/setaIdentBaixo.png) no-repeat right 16px;
   cursor:pointer;
   padding: 11px 25px 5px 12px;
   border: 1px solid transparent;
@@ -220,7 +220,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   -webkit-box-shadow: none;
   cursor:pointer;
   -moz-box-shadow: none;
-  background:#FFF url(/assets/img/setaIdentTop.png) no-repeat right 16px;
+  background:#FFF url(img/setaIdentTop.png) no-repeat right 16px;
   border: 1px solid #C7C7C7;
   border-bottom: none;
   border-radius: 0;
@@ -274,7 +274,7 @@ header.headerPrincipal .btn-group {display:inline-block;}
   display:block;
   font-weight:normal;
   color:#000;
-  background:url(/assets/img/setaDirList.png) no-repeat left center;
+  background:url(img/setaDirList.png) no-repeat left center;
   padding-left:10px;
 }
 .listIdent li span {padding-left:10px; display:inline-block}

@@ -6,7 +6,7 @@ html, body {height:100%; font-family:verdana, tahoma, arial, helvetica, sans-ser
   padding-top:25px;
   min-height:75%;
   position:relative;
-  /*background:url(/assets/img/bgDesgradeBody.png) repeat-X top;*/
+  /*background:url(img/bgDesgradeBody.png) repeat-X top;*/
   background: #FFF; /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(232,232,232,1) 0%, rgba(252,252,252,1) 3%, rgba(255,255,255,1) 7%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(232,232,232,1)), color-stop(3%,rgba(252,252,252,1)), color-stop(7%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
@@ -71,7 +71,7 @@ legend {border-bottom:none; padding-bottom:5px;}
 .titDots {
   padding:0 10px 12px 0;
   margin:0 0 15px;
-  background:url(/assets/img/titDots.png) repeat-X left bottom;
+  background:url(img/titDots.png) repeat-X left bottom;
 }
 
 h1 + p, h2 + p, h3 + p {padding-top:7px;}
@@ -122,7 +122,7 @@ h3 + .alert {margin-top:15px;}
 .alert h5 + p {margin:3px 0 0 23px;}
 
 .titError {
-  background:url(/assets/img/icoerro_404.png) no-repeat left center;
+  background:url(img/icoerro_404.png) no-repeat left center;
   padding:15px 0 15px 45px;
   margin:4px 0 10px;
   font:bold 20px verdana, arial, tahoma, sans-serif;
@@ -192,7 +192,7 @@ h6 .lnkSeta, h6 .lnkArrow {position:relative; top:-1px; margin:0;   border-left:
 **/
 .boxGray {
   clear:both;
-  background:#d5d5d5 url(/assets/img/bgBoxGray.png) repeat-X top center;
+  background:#d5d5d5 url(img/bgBoxGray.png) repeat-X top center;
   border-radius:3px;
   border:1px solid #e3e3e3;
   padding-bottom:3px;
@@ -203,7 +203,7 @@ h6 .lnkSeta, h6 .lnkArrow {position:relative; top:-1px; margin:0;   border-left:
 .boxGray h2 {
   font-size: 24px;
   padding:10px 10px 0 15px; margin:0 0 0 -1px;
-  background:url(/assets/img/setaDetalheTit.png) no-repeat left 15px;
+  background:url(img/setaDetalheTit.png) no-repeat left 15px;
 }
 
 .boxGray p {
@@ -232,9 +232,9 @@ h6 .lnkSeta, h6 .lnkArrow {position:relative; top:-1px; margin:0;   border-left:
   cursor:pointer;
   font-family:verdana;
   display:block;
-  background:url(/assets/img/setaCollapseBottom.png) no-repeat 99% center;
+  background:url(img/setaCollapseBottom.png) no-repeat 99% center;
 }
-.collapseGroup .active summary { font-weight:bold;   background:url(/assets/img/setaCollapseTop.png) no-repeat 99% 8px;}
+.collapseGroup .active summary { font-weight:bold;   background:url(img/setaCollapseTop.png) no-repeat 99% 8px;}
 .collapseGroup summary span.ico-dot {
   font-size: 30px;
   line-height: 20px;
@@ -295,7 +295,7 @@ summary.ico-dot + div p {padding-left:23px !important;}
 }
 .pagination .first a, .pagination .last a {display:none;}
 
-.pagination .prev a, .pagination .next a {background:url(/assets/img/seta-pagination.png) no-repeat 0 0;}
+.pagination .prev a, .pagination .next a {background:url(img/seta-pagination.png) no-repeat 0 0;}
 .pagination .prev a {background-position:left 6px; padding-left:10px;}
 .pagination .next a {background-position:right -13px; padding-right:10px;}
 .pagination .prev a:hover,
@@ -375,10 +375,10 @@ tr.active td .boxActions {padding-top:0;}
   padding: 10px;
 }
 .listOptions.listagemMeiosPagtos li {
-  background:url(/assets/img/bgMeioPagamentoCinza.png) no-repeat left center;
+  background:url(img/bgMeioPagamentoCinza.png) no-repeat left center;
   padding: 10px 10px 10px 25px;
 }
-.listOptions.listagemMeiosPagtos .pagtoAtivo {background:url(/assets/img/bgMeioPagamentoVerde.png) no-repeat left center;}
+.listOptions.listagemMeiosPagtos .pagtoAtivo {background:url(img/bgMeioPagamentoVerde.png) no-repeat left center;}
 
 .listOptions li img {
   float:left;
@@ -445,7 +445,7 @@ tr.active td .boxActions {padding-top:0;}
   width:13px; height:13px;
   display:block;
   text-indent:-9999px;overflow:hidden;
-  background-image:url(/assets/img/jqui.png);
+  background-image:url(img/jqui.png);
   background-position: no-repeat;
   cursor:pointer;
 }
@@ -513,10 +513,10 @@ tr.active td .boxActions {padding-top:0;}
   text-align:center;
 }
 .lists .statusMessageBox:hover .countViews:after{
-   background:url(/assets/img/arrowInfo.png) no-repeat 0 -99px;
+   background:url(img/arrowInfo.png) no-repeat 0 -99px;
 } 
 .lists .statusMessageBox .countViews:after{
-  background:url(/assets/img/arrowInfo.png) no-repeat 0 0;
+  background:url(img/arrowInfo.png) no-repeat 0 0;
   content: " ";
   position: absolute;
   top: 0;
@@ -623,7 +623,7 @@ td .progress {max-width:70px;}
 .obsGray:after {
   width:12px;
   height:6px;
-  background:url(/assets/img/setaTopObsGray.png) no-repeat center center;
+  background:url(img/setaTopObsGray.png) no-repeat center center;
   position:absolute;
   top:-6px; left:11px;
   content:" ";
@@ -654,7 +654,7 @@ td .progress {max-width:70px;}
   width:14px; height:14px;
   display:inline-block;
   cursor:pointer;
-  background:url(/assets/img/infoBubble.png) no-repeat center center;
+  background:url(img/infoBubble.png) no-repeat center center;
   position:relative;
   vertical-align: middle;
   text-indent: -9999px;

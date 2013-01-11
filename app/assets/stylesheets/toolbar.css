@@ -1,5 +1,5 @@
 #toolbar {
-  background:url(/assets/img/bgToolbar.png) repeat-X center center;
+  background:url(img/bgToolbar.png) repeat-X center center;
   position:relative;
   font: 300 12px verdana, tahoma, arial, helvetica, sans-serif;
 }
@@ -16,7 +16,7 @@
   margin:-9px 0 0 0;
   position:absolute;
   top:50%;
-  background:url(/assets/img/tit-toolBar.png) no-repeat left center;
+  background:url(img/tit-toolBar.png) no-repeat left center;
 }
 
 #toolbar .menuToolbar {
@@ -33,7 +33,7 @@
   text-transform: uppercase;
   color: white;
   font: 300 12px Ubuntu;
-  background: #373737 url(/assets/img/bgOptToolbar.png) repeat-X left center;
+  background: #373737 url(img/bgOptToolbar.png) repeat-X left center;
   border-right: 1px solid #444;
   border-left: 1px solid #242424;
   height: 32px;
@@ -45,7 +45,7 @@
 #toolbar .userName, #toolbar .logOut  {float:right;}
 
 #toolbar .userName {
-  background: url(/assets/img/bgUsuario.png) no-repeat left center;
+  background: url(img/bgUsuario.png) no-repeat left center;
   font-size: 13px;
   color: #D1D1D1;
   padding: 0 15px 3px 32px;
@@ -56,7 +56,7 @@
 #toolbar .logOut {
   font-size: 13px;
   color: #D1D1D1;
-  background: url(/assets/img/btSair.png) no-repeat center center;
+  background: url(img/btSair.png) no-repeat center center;
   padding: 2px 8px 2px 30px;
   margin: 5px 0 0;
 }
@@ -114,7 +114,7 @@
     text-transform: uppercase;
     color: white;
     font: 300 12px Ubuntu;
-    background: #373737 url(/assets/img/bgOptToolbar.png) repeat-X left center;
+    background: #373737 url(img/bgOptToolbar.png) repeat-X left center;
     border-right: 1px solid #444;
     border-left: 1px solid #242424;
     height: 29px;

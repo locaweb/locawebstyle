@@ -12,7 +12,7 @@
   list-style: none;
   width: 19.8%;
   float: left;
-  background: url(../assets/img/dotsPathWays.png) repeat-X bottom left;
+  background: url(img/dotsPathWays.png) repeat-X bottom left;
   -webkit-transition: all .2s ease-out;
   -moz-transition: all .2s ease-out;
   -ms-transition: all .2s ease-out;
@@ -30,7 +30,7 @@
   display: inline-block;
   font: 18px Ubuntu, arial, tahoma, sans-serif;
   text-transform: uppercase;
-  background: white url(../assets/img/pathWays-whiteGradient.png) repeat-X top;
+  background: white url(img/pathWays-whiteGradient.png) repeat-X top;
   letter-spacing: -1px;
   -webkit-transition: all .2s ease-out;
   -moz-transition: all .2s ease-out;

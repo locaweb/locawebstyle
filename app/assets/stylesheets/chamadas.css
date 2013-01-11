@@ -76,9 +76,9 @@
 }
 
 /** APAGAR ISSO QUANDO ATUALIZARMOS OS SISTEMAS **/
-.chamadasBox h3.titResults a:before {background-image:url(/assets/img/titIcoResults.png);}
-.chamadasBox h3.titMoreUser a:before {background-image:url(/assets/img/titIcoMoreUsers.png);}
-.chamadasBox h3.titMessage a:before {background-image:url(/assets/img/titIcoMessage.png);}
+.chamadasBox h3.titResults a:before {background-image:url(img/titIcoResults.png);}
+.chamadasBox h3.titMoreUser a:before {background-image:url(img/titIcoMoreUsers.png);}
+.chamadasBox h3.titMessage a:before {background-image:url(img/titIcoMessage.png);}
 
 .chamadasBox div:hover a:before,
 .chamadasBox h3.titResults a:hover:before,
