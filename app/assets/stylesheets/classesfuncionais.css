@@ -51,7 +51,7 @@ table.txtRight td, table.txtRight th {text-align:right;}
 hr, hr.sepDot {border:none; border-bottom:1px solid #e5e5e5; background:none; display:block; margin:15px 0;}
 .boxCollapse hr, .boxCollapse hr.sepDot {border-color:#c9c9c9;}
 hr.sepDot {border-bottom:1px dotted #E5E5E5;}
-hr.dotsSep {height: 5px; background: url(/assets/img/titDots.png);  margin:20px 0;}
+hr.dotsSep {height: 5px; background: url(img/titDots.png);  margin:20px 0;}
 hr.sep {background-color: #E5E5E5; }
 
 .noBullet, .noListStyle {list-style:none;}
