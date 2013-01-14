@@ -39,10 +39,6 @@
   color: $main_menu_hover_color;
 }
 
-#{$theme_name} .modal-footer a.btn-primary {
-  color: white;
-}
-
 #{$theme_name} a:hover,
 #{$theme_name} .lnkArrow:hover,
 #{$theme_name} .lnkSeta:hover {
@@ -68,16 +64,14 @@
 #{$theme_name} .btn-primary {
   @include secondary_gradient;
   color: $btn_primary_color;
-  border: 1px solid $main_color;
+  border: 1px solid $btn_border;
 }
 
-#{$theme_name} .btn-primary:hover,
-#{$theme_name} .btn-primary:active,
-#{$theme_name} .btn-primary.active,
-#{$theme_name} .btn-primary.disabled,
-#{$theme_name} .btn-primary[disabled] {
-  background-color: $button_interaction_background_color;
-}
+#{$theme_name} .btn-group.open .btn-primary.dropdown-toggle {background-color: $main_color;}
+
+#{$theme_name} .dropdown-menu li > a:hover, 
+#{$theme_name} .dropdown-menu li > a:focus, 
+#{$theme_name} .dropdown-submenu:hover > a {@include secondary_gradient;}
 
 #{$theme_name} .modal-header a.close {
   color: $button_to_close_modal_color;

@@ -451,14 +451,6 @@ li [class^="icon-"], li [class*=" icon-"] {
   background-image:none;
 }
 
-[class^="icon-"], [class*=" icon-"],
-li [class^="icon-"], li [class*=" icon-"] {
-  width:auto;
-  height:auto;
-  background-color:none;
-  background-image:none;
-}
-
 [class^="icon-"]:before, [class*=" icon-"]:before {
   content:" ";
   display: inline-block;
