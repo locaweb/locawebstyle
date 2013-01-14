@@ -2,6 +2,7 @@
 *** Botões
 **/
 .btn {text-decoration:none;}
+a.btn:hover {color:inherit;}
 
 .btn.dropdown-toggle {padding:5px 8px;}
 
