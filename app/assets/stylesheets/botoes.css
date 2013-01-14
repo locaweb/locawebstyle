@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
 *** Botões
 **/
@@ -32,8 +33,46 @@ a.btn:hover {color:inherit;}
 .btn.btn-cancel,
 td .modal .btn {color:#333;}
 
+=======
+<<<<<<< HEAD
+>>>>>>> Arrumando cores no hover do a.btn
 /** Resolve bug quando era colocado icon no botões de dropdown **/
 .btn-group > .btn + .dropdown-toggle {vertical-align: bottom;}
+=======
+/**
+*** Botões
+**/
+.btn {text-decoration:none;}
+a.btn:hover {color:inherit;}
+
+.btn.dropdown-toggle {padding:5px 8px;}
+
+.btn.btn-danger:hover {color:#fff!important;}
+
+.btn-primary, .control-group.error .btn-primary {
+  font-weight:400;
+  background-color: #006dcc;
+  background-image: -moz-linear-gradient(top, #5f8dc2, #3966a7);
+  background-image: -ms-linear-gradient(top, #5f8dc2, #3966a7);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5f8dc2), to(#3966a7));
+  background-image: -webkit-linear-gradient(top, #5f8dc2, #3966a7);
+  background-image: -o-linear-gradient(top, #5f8dc2, #3966a7);
+  background-image: linear-gradient(top, #5f8dc2, #3966a7);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5f8dc2', endColorstr='#3966a7', GradientType=0);
+  border-color: #4b7cb8 #4b7cb8 #4b7cb8;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  color:#FFF !important;
+}
+
+.btn.btn-large {font-size: 14px;}
+
+[class^="btn"][class^="ico"],
+[class*="btn"][class*="ico"],
+.btn.btn-cancel,
+td .modal .btn {color:#333;}
+>>>>>>> Arrumando cores no hover do a.btn
 
 .btn {border-radius: 3px;}
 
