@@ -1,9 +1,11 @@
+// Revenda Email Marketing
 $theme_name: ".colorYellow";
 
 $main_color: #c9ae1c;
 $secondary_color: #c9ae1c;
 
 $btn_primary_color: #fff;
+$btn_border: #c9ae1c;
 
 $main_menu_hover_color: #fff;
 
@@ -19,37 +21,34 @@ $path_way_description_active_color: #4d2b12;
 
 @mixin main_gradient {
   background: #bd9f18; /* Old browsers */
-  background: -moz-linear-gradient(top,  #bd9f18 0%, #c9ae1c 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bd9f18), color-stop(100%,#c9ae1c)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #bd9f18 0%,#c9ae1c 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #bd9f18 0%,#c9ae1c 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #bd9f18 0%,#c9ae1c 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #bd9f18 0%,#c9ae1c 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd9f18', endColorstr='#c9ae1c',GradientType=0 ); /* IE6-9 */
+  background: -moz-linear-gradient(top,  #bd9f18 0%, #c9ae1c 100%);
+  background: -webkit-linear-gradient(top,  #bd9f18 0%,#c9ae1c 100%);
+  background: -o-linear-gradient(top,  #bd9f18 0%,#c9ae1c 100%);
+  background: -ms-linear-gradient(top,  #bd9f18 0%,#c9ae1c 100%);
+  background: linear-gradient(to bottom,  #bd9f18 0%,#c9ae1c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd9f18', endColorstr='#c9ae1c',GradientType=0 );
 
 }
 
 @mixin secondary_gradient {
-  background: #d7c243; /* Old browsers */
-  background: -moz-linear-gradient(top,  #d7c243 0%, #ba9b13 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d7c243), color-stop(100%,#ba9b13)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #d7c243 0%,#ba9b13 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #d7c243 0%,#ba9b13 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #d7c243 0%,#ba9b13 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #d7c243 0%,#ba9b13 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7c243', endColorstr='#ba9b13',GradientType=0 ); /* IE6-9 */
+  background-color: #ba9b13; /* Old browsers */
+  background-image: -moz-linear-gradient(top,  #d7c243 0%, #ba9b13 100%);
+  background-image: -webkit-linear-gradient(top,  #d7c243 0%,#ba9b13 100%);
+  background-image: -o-linear-gradient(top,  #d7c243 0%,#ba9b13 100%);
+  background-image: -ms-linear-gradient(top,  #d7c243 0%,#ba9b13 100%);
+  background-image: linear-gradient(to bottom,  #d7c243 0%,#ba9b13 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7c243', endColorstr='#ba9b13',GradientType=0 );
 
 }
 
 @mixin chamadas_gradient_hover {
   border-color:#D18E4F;
   background: rgb(252,252,252); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(255,242,216,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(255,242,216,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(255,242,216,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(255,242,216,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(255,242,216,1) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(255,242,216,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#fff2d8',GradientType=0 ); /* IE6-9 */
+  background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(255,242,216,1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(255,242,216,1) 100%);
+  background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(255,242,216,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(255,242,216,1) 100%);
+  background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(255,242,216,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#fff2d8',GradientType=0 );
 }
 @import "theme_base";

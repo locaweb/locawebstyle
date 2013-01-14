@@ -1,78 +1,25 @@
-/**
-*** Botões
+/** Resolve bug quando era colocado icon no botões de dropdown **/
+.btn-group > .btn + .dropdown-toggle {vertical-align: bottom;}
+
+.btn {border-radius: 3px;}
+
+/** arruma cor padrao de btns com icones **/
+.btn[class^="ico-"],
+.btn[class*=" ico-"] {color:inherit;}
+
+/** 
+*** Fixing: A linha 6042 do Bootstrap caga a cor desses botoes. Quando eles estão com ícones.
 **/
-.btn {text-decoration:none;}
+.btn.btn-info,
+.btn.btn-warning,
+.btn.btn-success,
+.btn.btn-danger,
+.btn.btn-inverse,
+.btn.btn-primary:hover,
+[class^="btn-"][class^="ico-"],
+[class*=" btn-"][class*=" ico-"] {color:#FFF;}
 
-.btn.dropdown-toggle {padding:5px 8px;}
-
-.btn.btn-danger:hover {color:#fff!important;}
-
-.btn-primary, .control-group.error .btn-primary {
-  font-weight:400;
-  background-color: #006dcc;
-  background-image: -moz-linear-gradient(top, #5f8dc2, #3966a7);
-  background-image: -ms-linear-gradient(top, #5f8dc2, #3966a7);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5f8dc2), to(#3966a7));
-  background-image: -webkit-linear-gradient(top, #5f8dc2, #3966a7);
-  background-image: -o-linear-gradient(top, #5f8dc2, #3966a7);
-  background-image: linear-gradient(top, #5f8dc2, #3966a7);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5f8dc2', endColorstr='#3966a7', GradientType=0);
-  border-color: #4b7cb8 #4b7cb8 #4b7cb8;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  color:#FFF !important;
+.btn.btn-large {
+	font-size: 14px;
+	padding: 10px 19px;
 }
-
-.btn.btn-large {font-size: 14px;}
-
-[class^="btn"][class^="ico"],
-[class*="btn"][class*="ico"],
-.btn.btn-cancel,
-td .modal .btn {color:#333;}
-
-.modal-footer .btn:hover {color: #333;}
-
-/** Exceção botoes que tem class ico- e btn mas que precisam ter a cor de texto branca **/
-.btn-primary[class*="btn"][class*="ico"],
-.control-group.error .btn-primary[class*="btn"][class*="ico"],
-.btn-success[class*="btn"][class*="ico"],
-.btn-info[class*="btn"][class*="ico"],
-.btn-warning[class*="btn"][class*="ico"],
-.btn-danger[class*="btn"][class*="ico"],
-.btn-inverse[class*="btn"][class*="ico"] {color:#FFF;}
-
-.tableList tbody td .btn {font-weight:normal;}
-.btn-primary:hover, .control-group.error .btn-primary:hover {
-  background-color:#4b7cb8;
-  background-image:none;
-}
-
-.btn.close {
-  opacity:1;
-  color:#393939;
-  background-color: #fcfcfc;
-  background-image: -moz-linear-gradient(top, #fcfcfc, #e9e9e9);
-  background-image: -ms-linear-gradient(top, #fcfcfc, #e9e9e9);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fcfcfc), to(#CCC));
-  background-image: -webkit-linear-gradient(top, #fcfcfc, #CCC);
-  background-image: -o-linear-gradient(top, #fcfcfc, #e9e9e9);
-  background-image: linear-gradient(top, #fcfcfc, #e9e9e9);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#e9e9e9', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  border:1px solid #cccccc;
-}
-
-.btn.close:hover {
-  background-color:#ebebeb;
-  background-image:none;
-}
-
-.btn-group > .btn:first-child {
-  vertical-align: middle;
-  padding: 5px 10px;
-  margin: 0 -4px 0 0;
-}
-
-.error .btn, .control-group.error .btn {color:#FFF;}

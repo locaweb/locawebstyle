@@ -1,13 +1,3 @@
-.btn[classˆ="ico-"],
-.btn[class*="ico-"] {
-  color: inherit;
-}
-
-.btn-primary[class^="ico-"],
-.btn-primary[class*="ico-"] {
-  color:#FFF;
-}
-
 /*** ADITIONAL COLORS FOR BOOTSTRAP LABELS ***/
 .labelFrozen {
   background-color: #ba4d48;
