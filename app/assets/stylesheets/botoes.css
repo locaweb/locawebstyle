@@ -4,6 +4,7 @@
 .btn {border-radius: 3px;}
 
 /** arruma cor padrao de btns com icones **/
+a.btn:hover,
 .btn[class^="ico-"],
 .btn[class*=" ico-"] {color:inherit;}
 
