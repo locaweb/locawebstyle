@@ -538,7 +538,6 @@ tr.active td .boxActions {padding-top:0;}
 
 .statusMessageBox > li {margin-left:0; border-right:none; ; margin-left:2px;}
 .lists .statusMessageBox h6 {
-  padding-left:10px;
   font:bold 12px verdana, arial, tahoma, sans-serif;
   color:#545454;
 }
