@@ -6,7 +6,7 @@
 .cright, .cRight {clear:right;}
 .cleft, .cLeft {clear:left;}
 
-.dblock, .dBlock {display:block!important;}
+.dblock, .dBlock {display:block;}
 .dinline, .dInline {display:inline; float:none;}
 .dinlineblock, .dInlineBlock {display:inline-block; float:none;}
 .dnone, .dNone,

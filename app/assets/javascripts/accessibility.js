@@ -26,14 +26,13 @@ $(function(){
 	// $('.pathWays').attr('role','navigation');
 	$('#rodape').attr('role','contentinfo');
 	$('.alert').attr('role','alert');
-	$('a.btn').attr('role','button');
+	$('a.btn, .modal-header .close').attr('role','button');
 	$('.boxGray').attr('role','region');
 	$('.boxGray h2').attr('role','presentation');
 	$('.headerPrincipal').attr('role','banner');
 	$('.content').attr('role','main'); // criar essa classe nos produtos ??
 	$('.sidebar').attr('role','complementary');
 	$('input.required').attr('aria-required','true');
-
 	//
 	// TABS
 	$('.tabs').attr('role','tablist');
@@ -41,11 +40,15 @@ $(function(){
 	// Inserie ARIA-SELECTED em TABS ativas
 
 	$('.tabs li a').attr({
-		role: 'tabpanel',
-		'aria-selected': 'false'
+		role: 'tab',
+		'aria-selected': 'false',
+		tabindex : -1
 	});
 
 	$('.tabs li.active a').attr('aria-selected','true');
+	$('.tabs li.active a').attr('tabindex','3');
+
+
 
 	// $('[data-toggle="tab"]').attr('aria-selected','false');
 	// $('.active [data-toggle="tab"]').attr('aria-selected','true');
