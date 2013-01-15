@@ -1,40 +1,40 @@
-.nofloat, .noFloat {float:none;}
-.fright, .fRight {float:right;}
-.fleft, .fLeft {float:left;}
+.nofloat, .noFloat {float:none!important;}
+.fright, .fRight {float:right!important;}
+.fleft, .fLeft {float:left!important;}
 
-.cboth, .cBoth {clear:both;}
-.cright, .cRight {clear:right;}
-.cleft, .cLeft {clear:left;}
+.cboth, .cBoth {clear:both!important;}
+.cright, .cRight {clear:right!important;}
+.cleft, .cLeft {clear:left!important;}
 
-.dblock, .dBlock {display:block;}
-.dinline, .dInline {display:inline; float:none;}
-.dinlineblock, .dInlineBlock {display:inline-block; float:none;}
-.dnone, .dNone,
-.hide, .hide {display:none;}
+.dblock, .dBlock {display:block!important;}
+.dinline, .dInline {display:inline; float:none!important;}
+.dinlineblock, .dInlineBlock {display:inline-block; float:none!important;}
+.dnone, .dNon,
+.hide, .hide {display:none!important;}
 
-.vAlignTop {vertical-align: top;}
-.vAlignMiddle {vertical-align: middle;}
-.vAlignBottom {vertical-align: bottom;}
+.vAlignTop {vertical-align: top!important;}
+.vAlignMiddle {vertical-align: middle!important;}
+.vAlignBottom {vertical-align: bottom!important;}
 .vAlignTopImportant {vertical-align: top !important;}
 .vAlignMiddleImportant {vertical-align: middle !important;}
 .vAlignBottomImportant {vertical-align: bottom !important;}
 
-.nomargin, .noMargin {margin:0;}
-.nomarginleft, .noMarginLeft, .row.noMarginLeft {margin-left:0;}
-.nomarginright, .noMarginRight {margin-right:0;}
-.nomargintop, .noMarginTop {margin-top:0;}
-.nomarginbottom, .noMarginBottom {margin-bottom:0;}
+.nomargin, .noMargin {margin:0!important;}
+.nomarginleft, .noMarginLeft, .row.noMarginLeft {margin-left:0!important;}
+.nomarginright, .noMarginRight {margin-right:0!important;}
+.nomargintop, .noMarginTop {margin-top:0!important;}
+.nomarginbottom, .noMarginBottom {margin-bottom:0!important;}
 
-.nopadding, .noPadding {padding:0;}
-.nopaddingleft, .noPaddingLeft {padding-left:0;}
-.nopaddingright, .noPaddingRight {padding-right:0;}
-.nopaddingtop, .noPaddingTop {padding-top:0;}
-.nopaddingbottom, .noPaddingBottom {padding-bottom:0;}
+.nopadding, .noPadding {padding:0!important;}
+.nopaddingleft, .noPaddingLeft {padding-left:0!important;}
+.nopaddingright, .noPaddingRight {padding-right:0!important;}
+.nopaddingtop, .noPaddingTop {padding-top:0!important;}
+.nopaddingbottom, .noPaddingBottom {padding-bottom:0!important;}
 
-.txtLeft, .txtleft {text-align:left;}
-.txtRight, .txtright {text-align:right;}
-.txtJustify, .txtjustify {text-align:justify;}
-.txtCenter, .txtcenter {text-align:center;}
+.txtLeft, .txtleft {text-align:left!important;}
+.txtRight, .txtright {text-align:right!important;}
+.txtJustify, .txtjustify {text-align:justify!important;}
+.txtCenter, .txtcenter {text-align:center!important;}
 
 table.txtLeft td, table.txtLeft th {text-align:left;}
 table.txtRight td, table.txtRight th {text-align:right;}
@@ -42,11 +42,14 @@ table.txtRight td, table.txtRight th {text-align:right;}
 .widthAuto, .widthAuto {width: auto!important;}
 .widthInherit {width: inherit;}
 
-.noborder, .noBorder {border:none;}
-.noborderright, .noBorderRight {border-right:none;}
-.noborderleft, .noBorderLeft {border-left:none;}
-.noborderbottom, .noBorderBottom {border-bottom:none;}
-.nobordertop, .noBorderTop {border-top:none;}
+.noBackground, .noBackground {background:none!important;}
+.noShadow, .noShadow {box-shadow: none!important;}
+
+.noborder, .noBorder {border:none!important;}
+.noborderright, .noBorderRight {border-right:none!important;}
+.noborderleft, .noBorderLeft {border-left:none!important;}
+.noborderbottom, .noBorderBottom {border-bottom:none!important;}
+.nobordertop, .noBorderTop {border-top:none!important;}
 
 hr, hr.sepDot {border:none; border-bottom:1px solid #e5e5e5; background:none; display:block; margin:15px 0;}
 .boxCollapse hr, .boxCollapse hr.sepDot {border-color:#c9c9c9;}
@@ -54,17 +57,17 @@ hr.sepDot {border-bottom:1px dotted #E5E5E5;}
 hr.dotsSep {height: 5px; background: url(img/titDots.png);  margin:20px 0;}
 hr.sep {background-color: #E5E5E5; }
 
-.noBullet, .noListStyle {list-style:none;}
+.noBullet, .noListStyle {list-style:none!important;}
 
-.cursorPointer, .cursorpointer {cursor: pointer;}
-.cursorDefault, .cursordefault {cursor: default;}
-.cursorCrosshair, .cursorcrosshair {cursor: crosshair}
-.cursorMove, .cursormove {cursor: move}
-.cursorHelp, .cursorhelp {cursor: help;}
-.cursorWait, .cursorwait {cursor: wait;}
-.cursorInherit, .cursorinherit {cursor: inherit;}
-.cursorText, .cursortext {cursor: text;}
-.cursorProgress, .cursorprogress {cursor: progress;}
+.cursorPointer, .cursorpointer {cursor: pointer!important;}
+.cursorDefault, .cursordefault {cursor: default!important;}
+.cursorCrosshair, .cursorcrosshair {cursor: crosshair!important;}
+.cursorMove, .cursormove {cursor: move!important;}
+.cursorHelp, .cursorhelp {cursor: help!important;}
+.cursorWait, .cursorwait {cursor: wait!important;}
+.cursorInherit, .cursorinherit {cursor: inherit!important;}
+.cursorText, .cursortext {cursor: text!important;}
+.cursorProgress, .cursorprogress {cursor: progress!important;}
 
 .cursorGrab, .cursorgrab {
   cursor:hand;
@@ -93,4 +96,4 @@ hr.sep {background-color: #E5E5E5; }
   background: white;
 }
 
-.overflowHidden, .overflowhidden{ overflow: hidden;}
+.overflowHidden, .overflowhidden{ overflow: hidden!important;}
