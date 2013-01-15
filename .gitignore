@@ -22,3 +22,9 @@ tmp/
 .rvmrc
 config/unicorn.rb
 *.swp
+
+# Ignore assets and deploy related files.
+/public/assets/*.*
+/public/assets/manual/**
+/public/assets/bootstrap/**
+/public/deploy/**
