@@ -11,6 +11,10 @@ namespace :deploy do
     puts "#{@agent} Cleaning assets and creating deploy directory..."
     sh %{cp -fr public/assets/ public/deploy/ &&
          cd public/deploy &&
+         mv {application,locastyle}.css &&
+         mv {application,locastyle}.css.gz &&
+         mv {application,locastyle}.js &&
+         mv {application,locastyle}.js.gz &&
          rm manifest.yml &&
          rm -r manual/ &&
          rm bootstrap/customize-bootstrap.png &&
