@@ -1,10 +1,13 @@
 Locaweb Style Guide
 =================
 
-O Locaweb Style Guide explora um simples e flexível HTML, CSS e Javascript para as necessidades comuns na manutenção e criação dos serviços da Locaweb. Isso é uma ferramenta para a criação e manutenção de maneira simples e rápida. 
+O Locaweb Style são os padrões de interface utilizados nos produtos da Locaweb. Ele explora um simples e flexível HTML, CSS e Javascript para as necessidades comuns na manutenção e criação dos nossos serviços.
 
-Este projeto foi criado para que a criação de novos serviços e a manutenção do legado fosse simples e rápida. Outro Objetivo importante para tal iniciativa é uniformizar o código de toda a Locaweb, melhorando a perfomance de produção, facilitando o aprendizado de novos integrantes e agilizando a implementação de novas ideias.
+Este projeto foi criado para manter uniforme a identidade de todas as interfaces dos produtos da Locaweb. Outro objetivo importante para tal iniciativa é a uniformização do código da Locaweb, melhorando a perfomance de produção, facilitando o aprendizado de novos integrantes e agilizando a implementação de novas ideias.
 
+Com essa estrutura, a Locaweb integra de forma consistente as necessidades de interface e programação, trabalhando em um código client-side robusto e escalável. Assim mantemos a fidelidade do layout sob um código limpo e enxuto, que se adequa às necessidades dos programadores.
+
+Caso você tenha alguma sugestão para melhorar a inteligência destes códigos, entre em contato conosco. Novas idéias são sempre bem vindas.
 ________
 
 Baseado em que?
@@ -22,54 +25,33 @@ Se você não conhece, visite o github do projeto e conheça já!
 Dentro do Bootstrap eles usam o Normalize, que é um CSS Reset bastante completo. Ele reseta e compatibiliza alguns problemas de textos e valores padrões em elementos HTML. O Normalize foi criado pelo [Nicolas Gallagher](@necolas) and [Jonathan Neal](@jon_neal)
 [Dê uma olhada no projeto](http://necolas.github.com/normalize.css/)
 
-*** JQuery ***
+***JQuery***
 
 O JQuery é o framework mais utilizado para controlar comportamentos de elementos e outras coisinhas mais. Acho que ele dispensa apresentações. [Link do projeto](http://jquery.com)
 
 
-*** Modernizr ***
+***Modernizr***
 
 O Modernizr é um script de detectação de compatibilidade do CSS3. Ele nos avisa se o browser suporta ou não suporta as novas propriedades do CSS, nos dando a possibilidade de criar fallbacks para os browsers incompatíveis. Assim fica muito fácil saber qual browser suporta ou não SVG, Canvas, RGBA, drop shadow, gradiente e tudo o mais.
 
 Ele foi criado por desenvolvedores muito renomados como [Paul Irish](http://paulirish.com/) e [Faruk Ates](http://farukat.es/). [Site do projeto](http://www.modernizr.com/)
 
+***Select2***
 
-*** eCSStender ***
+[Select2](http://ivaynberg.github.com/select2/) é um plugin para customização de selects (ou como muitos chamam “combo box”) muito útil e flexível. Ele é o melhor plugin para executar essa tarefa por que ele mantém a acessibilidade. Você consegue navegar via teclado e etc. Para ver como o Locaweb Style utiliza, [visite esse link](http://developer.locaweb.com.br/locawebstyle/formularios/entendendo-os-selects/).
 
-eCSStender é um pluginzinho lindo que faz com que os browsers, quer dizer, browsers não, IEs, entendam coisas maravilhosas que o CSS faz, tipo, o IE7 e o IE8 entendem a pseudo-classe first-child, mas não entendem a pseudo-classe last-child… Esse plugin faz eles entenderem… 
+***Masked Input***
 
-Leia mais sobre o [eCSStender](http://ecsstender.org/)
-
+(Masked Input)[http://digitalbush.com/projects/masked-input-plugin/] é um plugin para a criação de máscaras para formulários. É muito simples de utilizar. Para ver seu funcionamento, [clique aqui](http://developer.locaweb.com.br/locawebstyle/formularios/mascaras-formularios/).
 
 -----
 
-Se der pau, falo com quem?
--------
-
-Antes de pular da janela, tente falar com o [Diego Eis](diego.eis@locaweb.com.br).
-O [Rachad](rachad.honein@locaweb.com.br) é o gerente responsável e pode te ouvir com paciência. ;-)
-
-O [Márcio Trindade](marcio.trindade@locaweb.com.br) do SASS também pode ajudar bastante caso der algo errado. Foi ele montou o CDN mother fucker que faz a instalação desse guia nos projetos ser fácil.
-
-**Mas eu quero ajudar a aumentar a inteligência dessa coisa toda**
+**Eu quero ajudar a aumentar a inteligência dessa coisa toda**
 
 Mas que coisa linda! Seja bem-vindo. Nos procure e compartilhe suas ideias. Se elas forem realmente ajudar o projeto como um todo, podendo ser implementado para todos os serviços da Locaweb, elas será muito bem vinda.
 
 -----
 
-Autores
--------
+***Changelog***
 
-**Client-side -- Diego Eis**
-
-+ http://twitter.com/diegoeis
-
-**Design inicial -- (Ítalo Oliveira)[italo.oliveira@locaweb.com.br] **
-**CDN Mother Fucker -- (Marcio Trindade)[marcio.trindade@locaweb.com.br]**
-
-**Equipe SASS**
-
------
-
-v0.1 - 15 de Março de 2012
-v0.3 - 16 de Março de 2012
+Para verificar o changelog, visite a página oficial: [http://developer.locaweb.com.br/locawebstyle/introducao/changelog/](http://developer.locaweb.com.br/locawebstyle/introducao/changelog/)
