@@ -264,10 +264,15 @@ $(document).ready(function() {
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
 
-  //Habilita campo pra editar
+  //Exibe/esconde elementos
+  var dataClass = $('.toggleChild').data('class')
+  $('.toggleChild').addClass(dataClass);
+
   $('.lnkToggle').on('click',function(e){
     e.preventDefault();
+    var itemClass = $('.toggleChild').attr('data-class');
     $(this).parents('.toggleChild').find('.itemToToggle').toggleClass("dNone");
+    $(this).parents('.toggleChild').toggleClass(itemClass);
   })
 });
 
