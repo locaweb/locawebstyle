@@ -28,23 +28,12 @@
 .tableList td [class^="ico-"], .tableList td [class*="ico-"] {font-weight:normal;}
 
 /** Quando o ícone tem que ir para a direita **/
-.icoPosRight[class^="btn-"][class^="ico-"],
-.icoPosRight[class*="btn-"][class*="ico-"] {
-  padding-left:10px;
-  padding-right:5px;
-}
-
-.icoPosRight[class^="btn-"][class^="ico-"]:before,
-.icoPosRight[class*="btn-"][class*="ico-"]:before,
-.icoPosRight[class^="ico-"]:before,
-.icoPosRight[class*="ico-"]:before {
+.btn-large.icoPosRight {padding:10px 12px 10px 192px !important;}
+.btn.icoPosRight {padding:5px 9px !important;}
+.icoPosRight:before {
   float:right;
-  margin-left:0;
-  margin-right:0;
-  margin-top: 0;
-  top:0;
+  right:-5px; top:0;
 }
-.ico-down-dir.icoPosRight:before {font-size:15px; margin-right:3px;}
 
 .ico-alert:before {
   margin-right:7px;
