@@ -73,7 +73,6 @@ Locastyle = (function() {
   };
 
   Locastyle.prototype.client_form = function(content, targetElements, disabledClasses, classToContent){
-    alert("");
     content || (content = ".clientDetails form.edit_account");
     targetElements || (targetElements = ".disable_form input, .disable_form textarea");
     disabledClasses || (disabledClasses = "noBorder noBackground noShadow cursorDefault");
