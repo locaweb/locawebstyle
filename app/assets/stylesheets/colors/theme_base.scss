@@ -104,3 +104,4 @@
   @include chamadas_gradient_hover;
 }
 
+#{$theme_name} .innerSideBox [class^="ico-"], .innerSideBox [class*="ico-"] {color: $main_color;}
