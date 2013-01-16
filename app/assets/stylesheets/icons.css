@@ -28,8 +28,8 @@
 .tableList td [class^="ico-"], .tableList td [class*="ico-"] {font-weight:normal;}
 
 /** Quando o ícone tem que ir para a direita **/
-.btn-large.icoPosRight {padding:10px 12px 10px 192px !important;}
 .btn.icoPosRight {padding:5px 9px !important;}
+.btn-large.icoPosRight {padding:10px 12px 10px 19px !important;}
 .icoPosRight:before {
   float:right;
   right:-5px; top:0;
