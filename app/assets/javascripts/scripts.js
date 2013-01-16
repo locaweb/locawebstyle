@@ -122,6 +122,12 @@ Locastyle = (function() {
 $(document).ready(function() {
   window.locastyle = new Locastyle();
 
+  $("input").each(function(i, field) {
+    var input = $("input[name='"+field.name+"']");
+    var value = $(input).attr("value");
+    $(input).attr("data-value", value);
+  })
+
   // Contando quantos sliders items tem no slider das sidebares
   $.each($('.sideBox .carousel'), function() {
     if ($('.carouselNav b', this).size() > 0) {
