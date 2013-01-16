@@ -263,5 +263,11 @@ $(document).ready(function() {
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
+
+  //Habilita campo pra editar
+  $('.lnkToggle').on('click',function(e){
+    e.preventDefault();
+    $(this).parents('.toggleChild').find('.itemToToggle').toggleClass("dNone");
+  })
 });
 
