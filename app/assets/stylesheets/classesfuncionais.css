@@ -131,4 +131,5 @@ hr.sep {background-color: #E5E5E5; }
 
 .removeBefore:before,
 .removeAfter:after {background:none!important;border:none!important;}
+.popover h3 {margin: 0!important;}
 
