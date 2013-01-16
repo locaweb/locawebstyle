@@ -30,12 +30,12 @@ $path_way_description_active_color: #50460b;
 }
 
 @mixin secondary_gradient {
-  background: #d7c243; /* Old browsers */
-  background: -moz-linear-gradient(top,  #d7c243 0%, #ba9b13 100%); /* FF3.6+ */
-  background: -webkit-linear-gradient(top,  #d7c243 0%,#ba9b13 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #d7c243 0%,#ba9b13 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #d7c243 0%,#ba9b13 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #d7c243 0%,#ba9b13 100%); /* W3C */
+  background-color: #ba9b13; /* Old browsers */
+  background-image: -moz-linear-gradient(top,  #d7c243 0%, #ba9b13 100%); /* FF3.6+ */
+  background-image: -webkit-linear-gradient(top,  #d7c243 0%,#ba9b13 100%); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(top,  #d7c243 0%,#ba9b13 100%); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(top,  #d7c243 0%,#ba9b13 100%); /* IE10+ */
+  background-image: linear-gradient(to bottom,  #d7c243 0%,#ba9b13 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7c243', endColorstr='#ba9b13',GradientType=0 ); /* IE6-9 */
 }
 
