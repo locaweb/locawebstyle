@@ -69,7 +69,30 @@ Locastyle = (function() {
         $(search).parent().find('a[data-toggle="collapse"][data-target]').click();
       }
     });
+
   };
+
+  Locastyle.prototype.client_form = function(content, targetElements, disabledClasses, classToContent){
+    alert("");
+    content || (content = ".clientDetails form.edit_account");
+    targetElements || (targetElements = ".disable_form input, .disable_form textarea");
+    disabledClasses || (disabledClasses = "noBorder noBackground noShadow cursorDefault");
+    classToContent || (classToContent = "editable obsGray noBorder removeAfter");
+    $(".clientDetails .dropdown-menu").on('click', 'a:first', function(e) {
+      e.preventDefault();
+      $(content).addClass(classToContent);
+      return $(targetElements).each(function(index) {
+        return $(this).removeClass(disabledClasses).attr("disabled", false);
+      });
+    });
+    return $(".clientDetails .dataClient").on('click', '.cancelEdit', function(e) {
+      e.preventDefault();
+      $(content).removeClass(classToContent);
+      return $(targetElements).each(function(index) {
+        return $(this).addClass(disabledClasses).attr("disabled", true);
+      });
+    });
+  }
 
   Locastyle.prototype.modal_callback = function (obj, element){
     if(navigator.userAgent.match(/msie/i) != null){
