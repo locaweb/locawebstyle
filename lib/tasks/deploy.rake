@@ -26,7 +26,7 @@ namespace :deploy do
 
   def precompile
     puts "#{@agent} Compiling assets..."
-    Rake::Task["assets:precompile:primary"].invoke
+    Rake::Task["assets:precompile"].invoke
     puts "#{@agent} Assets fully compiled!"
   end
 
