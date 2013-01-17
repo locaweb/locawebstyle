@@ -126,11 +126,19 @@ Locastyle = (function() {
 $(document).ready(function() {
   window.locastyle = new Locastyle();
 
-  $("input").each(function(i, field) {
-    var input = $("input[name='"+field.name+"']");
-    var value = $(input).attr("value");
-    $(input).attr("data-value", value);
-  })
+  function inputDataValue(){
+    $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]'), function(i, field){
+      var value = $(this).attr("value");
+      $(this).attr("data-value", value);
+      var inputId =  $(this).attr("id");
+      $(".btn.lnkToggle").on("click", function(){
+        if(value !== undefined){
+          $("#"+inputId).val(value);
+        }
+      });
+    });
+  }
+  inputDataValue()
 
   // Contando quantos sliders items tem no slider das sidebares
   $.each($('.sideBox .carousel'), function() {
