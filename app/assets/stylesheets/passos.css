@@ -1,5 +1,3 @@
-
-
 /*** PATH
 **** Passos de algum processo.
 ***/
@@ -10,8 +8,9 @@
 .pathWay li, .pathWay li.disabled, .pathWay li.disable:hover {
   margin-right:1px;
   list-style: none;
-  width: 19.8%;
+  width: 19.91%;
   float: left;
+  overflow: hidden;
   background: url(img/dotsPathWays.png) repeat-X bottom left;
   -webkit-transition: all .2s ease-out;
   -moz-transition: all .2s ease-out;
@@ -19,14 +18,20 @@
   -o-transition: all .2s ease-out;
   transition: all .2s ease-out;
 }
+.pathWay.steps6 li {width:16.582%;}
+.pathWay.steps5 li {width:19.91%;}
+.pathWay.steps4 li {width:24.916%;}
+.pathWay.steps3 li {width:33.24%;}
+.pathWay.steps2 li {width:49.916%;}
+.pathWay.steps1 li {width:100%;}
 
-.pathWay li a, .pathWay li.disable:hover a {
+.pathWay a, .pathWay li.disable:hover a {
   border-left: 1px dotted #CCC;
   border-bottom: 2px solid white;
   padding: 5px 0 0 5px;
   margin-bottom: 5px;
   color: #B0B0B0;
-  width: 97.9%;
+  width:100%;
   display: inline-block;
   font: 18px Ubuntu, arial, tahoma, sans-serif;
   text-transform: uppercase;
