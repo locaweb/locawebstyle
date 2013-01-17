@@ -16,9 +16,11 @@ namespace :deploy do
          mv {application,locastyle}.js &&
          mv {application,locastyle}.js.gz &&
          rm manifest.yml &&
+         rm .DS_Store &&
          rm -r manual/ &&
          rm bootstrap/customize-bootstrap.png &&
-         zip -r #{version}.zip .}
+         zip -r #{version}.zip . &&
+         cp #{version}.zip edge.zip }
     puts "#{@agent} Everything done, version #{version} of Locastyle is ready to upload."
   end
 
