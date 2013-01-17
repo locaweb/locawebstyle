@@ -1,3 +1,4 @@
+//= require locastyle_head
 //= require jquery
 //= require modernizr
 //= require bootstrap/js/bootstrap
