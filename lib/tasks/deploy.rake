@@ -3,8 +3,19 @@ namespace :deploy do
   @agent = "[Locastyle Robot] says:"
 
   task :setup, :version do |t, args|
+    update_version(args[:version])
     precompile
     package(args[:version])
+  end
+
+  def update_version(version)
+    File.open(File.join(Rails.root, "app/assets/stylesheets/locastyle_head.css"), "w") do |f|
+      f.puts "/*! Locastyle version: #{version}*/"
+    end
+
+    File.open(File.join(Rails.root, "app/assets/javascripts/locastyle_head.js"), "w") do |f|
+      f.puts "/*! Locastyle version: #{version}*/"
+    end
   end
 
   def package(version)
