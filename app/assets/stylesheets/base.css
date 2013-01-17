@@ -549,6 +549,21 @@ h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; 
   border-right: 1px solid #e5e5e5;
   padding: 13px 5px 12px 10px;
 }
+/* inserindo Status */
+.lists .statusMessageBox .status{
+  border-left: 1px solid #E5E5E5;
+  padding: 8px 0 8px 10px;
+  position: absolute;
+  left: 80%;
+  top: 0;
+}
+
+.statusMessageBox .actionsTable{margin: 7px 0px 7px 10px;}
+.lists .statusMessageBox > li{ padding: 10px 0px 0 0;}
+.lists .statusMessageBox .countViews h6{font-weight: bold;}
+.countViews small{ color: #767676;}
+.lists .statusMessageBox .status > span {font-weight: normal;}
+.lists .statusMessageBox .status b{font-size: 12px;}
 
 /***
 **** BREADCRUMB
