@@ -335,7 +335,7 @@ $(document).ready(function() {
   var dataClass = $('.toggleChild').data('class')
   $('.toggleChild').addClass(dataClass);
 
-  $('.lnkToggle').on('click',function(e){
+  $('.lnkToggle, .itemToToggle .btn-primary').on('click',function(e){
     e.preventDefault();
     var itemClass = $('.toggleChild').attr('data-class');
     $(this).parents('.toggleChild').find('.itemToToggle').toggleClass("dNone");
