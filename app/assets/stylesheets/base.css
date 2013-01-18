@@ -804,3 +804,12 @@ td .progress {max-width:70px;}
 a[class*="ico-"] {font-size: 12px;}
 
 .forceClass a.warning {color: #b54646;}
+.forceClass .control-group.error input[type="text"], 
+.forceClass .control-group.error input[type="password"], 
+.forceClass .control-group.error input[type="number"], 
+.forceClass .control-group.error input[type="email"]
+.forceClass .control-group.error input[type="date"]{
+  border-color: transparent;
+  color: inherit;
+
+}
