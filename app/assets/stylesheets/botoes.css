@@ -4,6 +4,7 @@
 .btn {border-radius: 3px;}
 
 /** arruma cor padrao de btns com icones **/
+table tr td a.btn,
 a[class*="btn"],
 a[class*="btn"]:hover,
 .btn[class^="ico-"],
