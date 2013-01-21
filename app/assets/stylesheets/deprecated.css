@@ -1,0 +1,37 @@
+
+/* DEPRECATED 21/01/13 */
+.collapseGroup summary {
+  color:#545454;
+  cursor:pointer;
+  font-family:verdana;
+  display:block;
+  background:url(img/setaCollapseBottom.png) no-repeat 99% center;
+}
+.collapseGroup .active summary { font-weight:bold;   background:url(img/setaCollapseTop.png) no-repeat 99% 8px;}
+.collapseGroup summary span.ico-dot {
+  font-size: 30px;
+  line-height: 20px;
+  margin-right: 0;
+  width: 25px;
+  text-align: center;
+}
+
+summary.ico-dot:before {font-size:25px; margin-top:-1px;}
+summary.ico-dot + div p {padding-left:23px !important;}
+.collapseGroup summary span {
+  font:bold 18px Ubuntu, verdana, arial, tahoma, helvetica, sans-serif;
+  color:#777;
+  border:none;
+}
+.collapseGroup {padding-top:20px; margin:0 10px;}
+.collapseGroup .details {
+  background:#f1f1f1;
+  padding:3px 7px;
+  margin-bottom:5px;
+  border-radius:3px;
+  border:1px solid #d6d6d6;
+}
+.collapseGroup .details.active {background-color:#FFF;}
+
+
+/* DEPRECATED 21/01/13 */
