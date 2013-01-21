@@ -87,6 +87,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 
 #menuPrincipal > ul > li.selected > a {
   color:#FFF;
+  background-color:#777;
   border-top-left-radius:3px;
   border-top-right-radius:3px;
 }
