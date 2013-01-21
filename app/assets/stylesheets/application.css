@@ -4,6 +4,7 @@
  VENDOR
  *= require bootstrap/css/bootstrap
 
+ *= require deprecated
  *= require colors/colors
  *= require fonts
  *= require collapse
