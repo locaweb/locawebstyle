@@ -204,3 +204,7 @@
   }
 
 }
+
+@media screen and (max-width: 480px) {
+  .lists .statusMessageBox .countViews:after{background: none!important;}
+}
