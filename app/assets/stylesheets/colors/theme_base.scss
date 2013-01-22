@@ -106,3 +106,10 @@
 }
 
 #{$theme_name} .innerSideBox [class^="ico-"], .innerSideBox [class*="ico-"] {color: $main_color;}
+
+#{$theme_name} .boxSidebarTitle{
+  @include box_sidebar;
+}
+#{$theme_name} .boxSidebarTitle:before{
+  @include arrow_box_sidebar;
+}
