@@ -50,5 +50,18 @@ $path_way_description_active_color: #513335;
   background: linear-gradient(to bottom,  rgba(251,249,249,1) 0%,rgba(219,195,195,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbf9f9', endColorstr='#dbc3c3',GradientType=0 ); /* IE6-9 */
 }
+@mixin box_sidebar {
+  background: #3f3a10;
+  background: -moz-linear-gradient(top,  #3f3a10 0%, #181504 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3f3a10), color-stop(100%,#181504));
+  background: -webkit-linear-gradient(top,  #3f3a10 0%,#181504 100%);
+  background: -o-linear-gradient(top,  #3f3a10 0%,#181504 100%);
+  background: -ms-linear-gradient(top,  #3f3a10 0%,#181504 100%);
+  background: linear-gradient(to bottom,  #3f3a10 0%,#181504 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3a10', endColorstr='#181504',GradientType=0 );
 
+}
+@mixin arrow_box_sidebar {
+  border-color: #181504 transparent transparent transparent;
+}
 @import "theme_base";
