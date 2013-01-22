@@ -441,12 +441,12 @@ tr.active td .boxActions {padding-top:0;}
   width: 100%;
   z-index: 2;
 }
-.statusMessageBox li:first-child {text-align:center;}
 .statusMessageBox > li {
   vertical-align:middle;
   border-right:1px solid #e5e5e5;
   margin-right:5px;
-  padding:13px 5px 12px 0;
+  padding: 10px 5px 0 0;
+  position: relative;
   min-width:65px;
 }
 .statusMessageBox > li.statusContact{ padding-left: 10px;}
@@ -455,7 +455,7 @@ tr.active td .boxActions {padding-top:0;}
 
 .statusMessageBox h6 {
   color:#767676;
-  font:11px verdana, tahoma, arial, helvetica, sans-serif;
+  font:12px verdana, tahoma, arial, helvetica, sans-serif;
 }
 .statusMessageBox p {margin:0; color:#2a2a2a;}
 .statusMessageBox b {
@@ -490,8 +490,8 @@ tr.active td .boxActions {padding-top:0;}
   padding: 21px 10px 19px 0;
   height: 57px;
   font-weight:normal;
+  text-align: center;
 }
-.lists .statusMessageBox > li{padding: 10px 5px 0 0; position: relative;}
 .lists .statusMessageBox .countViews h6 {padding-left:0; font-weight:normal;}
 .lists .statusMessageBox .countViews p {padding-left:0;}
 
@@ -508,21 +508,36 @@ h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; 
   border-right: 1px solid #e5e5e5;
   padding: 13px 5px 12px 10px;
 }
+.collapse .statusMessageBox h6:first-child{padding: 0 0 5px;}
+.collapse .statusMessageBox{border: none;}
 /* inserindo Status */
-.lists .statusMessageBox .status{
+.statusMessageBox .status{
   border-left: 1px solid #E5E5E5;
   padding: 8px 0 8px 10px;
   position: absolute;
-  left: 80%;
+  left: 70%;
   top: 0;
+}
+.statusMessageBox .overflowHidden h6{
+  border-bottom: 1px solid #e5e5e5;
+  margin-left: 10px;
+  padding-bottom: 5px;
 }
 
 .statusMessageBox .actionsTable{margin: 7px 0px 7px 10px;}
-.lists .statusMessageBox > li{ padding: 10px 0px 0 0;}
 .lists .statusMessageBox .countViews h6{font-weight: bold;}
 .countViews small{ color: #767676;}
 .lists .statusMessageBox .status > span {font-weight: normal;}
 .lists .statusMessageBox .status b{font-size: 12px;}
+/* Status Message Box Simples */
+.simpleStatusMessage{
+
+}
+.simpleStatusMessage.boxCinzaInner{padding: 0;}
+.simpleStatusMessage .actionsTable{border-top: none;}
+.simpleStatusMessage .itemToToggle:last-child{padding: 10px;}
+.bgWhite .statusMessageBox:hover{background: #fff;}
+
 
 /***
 **** BREADCRUMB

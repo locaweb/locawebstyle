@@ -65,7 +65,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   font:14px 'Ubuntu', verdana, arial, tahoma, sans-serif;
   text-transform:uppercase;
   border:1px solid transparent;
-  border-bottom:1px solid transparent;
+  border-bottom: none;
   -webkit-transition:all .1s ease-in;
   -moz-transition:all .1s ease-in;
   -ms-transition:all .1s ease-in;
