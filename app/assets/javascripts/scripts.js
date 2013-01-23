@@ -120,12 +120,26 @@ Locastyle = (function() {
     }
   };
 
+  Locastyle.prototype.linkToggle = function(){
+    $('.lnkToggle').on('click',function(){
+      var itemClass = $('.toggleChild').attr('data-class');
+      $(this).parents('.toggleChild').find('.itemToToggle').toggleClass("dNone");
+      $(this).parents('.toggleChild').toggleClass(itemClass);
+    });
+  };
+
+  Locastyle.prototype.submitToggle = function(element){
+    var itemClass = $('.toggleChild').attr('data-class');
+    $(element).parents('.toggleChild').find('.itemToToggle').toggleClass("dNone");
+    $(element).parents('.toggleChild').toggleClass(itemClass);
+  };
+
   return Locastyle;
 })();
 
 $(document).ready(function() {
   window.locastyle = new Locastyle();
-
+  window.locastyle.linkToggle()
   function inputDataValue(){
     $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]'), function(i, field){
       var value = $(this).attr("value");
@@ -137,7 +151,7 @@ $(document).ready(function() {
         }
       });
     });
-  }
+  };
   inputDataValue()
 
   // Contando quantos sliders items tem no slider das sidebares
@@ -338,11 +352,5 @@ $(document).ready(function() {
   var dataClass = $('.toggleChild').data('class')
   $('.toggleChild').addClass(dataClass);
 
-  $('.lnkToggle, .itemToToggle .btn-primary').on('click',function(e){
-    e.preventDefault();
-    var itemClass = $('.toggleChild').attr('data-class');
-    $(this).parents('.toggleChild').find('.itemToToggle').toggleClass("dNone");
-    $(this).parents('.toggleChild').toggleClass(itemClass);
-  })
 });
 
