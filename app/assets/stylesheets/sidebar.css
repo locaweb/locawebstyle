@@ -23,7 +23,7 @@
 
 .innerSideBox [class^="ico-"], .innerSideBox [class*="ico-"] {color:#2a3a2a;}
 
-.innerSideBox + .innerSideBox {margin-top:1px; margin-bottom:1px;}
+.innerSideBox + .innerSideBox {margin-top:1px;}
 
 .sideBox h6, .sideBox .grayP {
   margin:0; padding:0;
