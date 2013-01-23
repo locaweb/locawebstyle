@@ -1,9 +1,0 @@
----
-application.js: application.js
-manual/application.js: manual/application.js
-application.css: application.css
-manual/application.css: manual/application.css
-manual/example.css: manual/example.css
-bootstrap/customize-bootstrap.png: bootstrap/customize-bootstrap.png
-bootstrap/img/glyphicons-halflings-white.png: bootstrap/img/glyphicons-halflings-white.png
-bootstrap/img/glyphicons-halflings.png: bootstrap/img/glyphicons-halflings.png
