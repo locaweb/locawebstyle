@@ -445,7 +445,23 @@ tr.active td .boxActions {padding-top:0;}
   vertical-align: middle;
   float: none;
 }
-
+<<<<<<< HEAD
+.statusMessageBox .viewMessage{
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 53px;
+  width: 100%;
+  z-index: 2;
+}
+.statusMessageBox > li {
+  vertical-align:middle;
+  border-right:1px solid #e5e5e5;
+  margin-right:5px;
+  padding: 10px 5px 0 0;
+  position: relative;
+  min-width:65px;
+=======
 .messageInfo > div:before {
   content: " ";
   display: inline-block;
@@ -454,6 +470,7 @@ tr.active td .boxActions {padding-top:0;}
   position: absolute;
   left: 0;
   top: -50px;
+>>>>>>> Refazendo o MessageBox. Agora ele funciona com variações de layout.
 }
 .messageInfo .countViews:before,
 .messageInfo .countViews + div:before {display: none;}
@@ -466,7 +483,11 @@ tr.active td .boxActions {padding-top:0;}
 
 .messageInfo h5, .messageInfo h5 a {
   color:#767676;
+<<<<<<< HEAD
+  font:12px verdana, tahoma, arial, helvetica, sans-serif;
+=======
   font:normal 12px verdana, sans-serif;
+>>>>>>> Refazendo o MessageBox. Agora ele funciona com variações de layout.
 }
 .messageInfo h6, .messageInfo h6 a {
   font:bold 15px verdana, arial, sans-serif;
@@ -495,9 +516,28 @@ tr.active td .boxActions {padding-top:0;}
   height: 40px;
   display: inline-block;
   position: absolute;
+<<<<<<< HEAD
+  top: 0;
+  right: 0;
+  width: 7px;
+  height: 98px;
+}
+.overflowMessage + .overflowMessage {border-right:none; margin-right:0; width:29%;}
+.statusMessageBox .overflowMessage p {width:10000px;}
+.lists .statusMessageBox p{height: 27px;}
+.lists .statusMessageBox .countViews {
+  padding: 21px 10px 19px 0;
+  height: 57px;
+  font-weight:normal;
+  text-align: center;
+}
+.lists .statusMessageBox .countViews h6 {padding-left:0; font-weight:normal;}
+.lists .statusMessageBox .countViews p {padding-left:0;}
+=======
   top: 50%; right: 2px;
   margin-top: -20px;
 }
+>>>>>>> Refazendo o MessageBox. Agora ele funciona com variações de layout.
 
 .messageInfo p a {color: #2a2a2a;}
 .messageInfo p {margin: 0;}
@@ -513,6 +553,38 @@ tr.active td .boxActions {padding-top:0;}
   margin:-14px 0 10px;
   overflow: hidden;
 }
+<<<<<<< HEAD
+.collapse .statusMessageBox h6:first-child{padding: 0 0 5px;}
+.collapse .statusMessageBox{border: none;}
+/* inserindo Status */
+.statusMessageBox .status{
+  border-left: 1px solid #E5E5E5;
+  padding: 8px 0 8px 10px;
+  position: absolute;
+  left: 70%;
+  top: 0;
+}
+.statusMessageBox .overflowHidden h6{
+  border-bottom: 1px solid #e5e5e5;
+  margin-left: 10px;
+  padding-bottom: 5px;
+}
+
+.statusMessageBox .actionsTable{margin: 7px 0px 7px 10px;}
+.lists .statusMessageBox .countViews h6{font-weight: bold;}
+.countViews small{ color: #767676;}
+.lists .statusMessageBox .status > span {font-weight: normal;}
+.lists .statusMessageBox .status b{font-size: 12px;}
+/* Status Message Box Simples */
+.simpleStatusMessage{
+
+}
+.simpleStatusMessage.boxCinzaInner{padding: 0;}
+.simpleStatusMessage .actionsTable{border-top: none;}
+.simpleStatusMessage .itemToToggle:last-child{padding: 10px;}
+.bgWhite .statusMessageBox:hover{background: #fff;}
+
+=======
 
 .messageInfo .headerInfo span {
   display: inline;
@@ -530,6 +602,7 @@ tr.active td .boxActions {padding-top:0;}
   padding:5px 15px;
   position: static;
 }
+>>>>>>> Refazendo o MessageBox. Agora ele funciona com variações de layout.
 
 /***
 **** BREADCRUMB
