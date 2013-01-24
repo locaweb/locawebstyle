@@ -33,5 +33,110 @@ summary.ico-dot + div p {padding-left:23px !important;}
 }
 .collapseGroup .details.active {background-color:#FFF;}
 
+/* DEPRECATED 24/01/13 */
+/*** statusMessageBox
+**** Usado inicialmente na home de Email Marketing
+***/
+.statusMessageBox {
+  list-style:none;
+  border:1px solid #e5e5e5;
+  border-radius:3px;
+  margin:0 0 5px;
+  font-family:verdana;
+  position: relative;
+}
+.statusMessageBox:hover {
+  background: #f0f0f0;
+}
+.statusMessageBox .viewMessage{
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 53px;
+  width: 100%;
+  z-index: 2;
+}
+.statusMessageBox li:first-child {text-align:center;}
+.statusMessageBox > li {
+  vertical-align:middle;
+  border-right:1px solid #e5e5e5;
+  margin-right:5px;
+  padding:13px 5px 12px 0;
+  min-width:65px;
+}
+.statusMessageBox > li.statusContact{ padding-left: 10px;}
 
-/* DEPRECATED 21/01/13 */
+.statusMessageBox li a {color:#2a2a2a;}
+
+.statusMessageBox h6 {
+  color:#767676;
+  font:11px verdana, tahoma, arial, helvetica, sans-serif;
+}
+.statusMessageBox p {margin:0; color:#2a2a2a;}
+.statusMessageBox b {
+  font:bold 15px verdana, tahoma, arial, helvetica, sans-serif;
+  color:#2a2a2a;
+}
+.statusMessageBox .countViews h6 {color:rgba(0,0,0,0.5);}
+.statusMessageBox .countViews {
+  margin:2px;
+  min-width:102px;
+  position:relative;
+  border-right:none;
+  padding:9px 8px 9px 0;
+  text-align:center;
+}
+.lists .statusMessageBox:hover .countViews:after{
+   background:url(img/arrowInfo.png) no-repeat 0 -99px;
+} 
+.lists .statusMessageBox .countViews:after{
+  background:url(img/arrowInfo.png) no-repeat 0 0;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7px;
+  height: 98px;
+}
+.overflowMessage + .overflowMessage {border-right:none; margin-right:0; width:29%;}
+.statusMessageBox .overflowMessage p {width:10000px;}
+.lists .statusMessageBox p{height: 27px;}
+.lists .statusMessageBox .countViews {
+  padding: 21px 10px 19px 0;
+  height: 57px;
+  font-weight:normal;
+}
+.lists .statusMessageBox > li{padding: 10px 5px 0 0; position: relative;}
+.lists .statusMessageBox .countViews h6 {padding-left:0; font-weight:normal;}
+.lists .statusMessageBox .countViews p {padding-left:0;}
+
+.statusMessageBox > li {margin-left:0; border-right:none; ; margin-left:2px;}
+.lists .statusMessageBox h6 {
+  font:bold 12px verdana, arial, tahoma, sans-serif;
+  color:#545454;
+}
+.lists .statusMessageBox p {color:#767676; padding:3px 0 0 10px; font:12px verdana, arial, helvetica, tahoma, sans-serif;}
+
+h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; border-left:1px solid #CCC; color:#767676;}
+.statusMessageBox > li.messageBorder{
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  padding: 13px 5px 12px 10px;
+}
+
+/* inserindo Status */
+.lists .statusMessageBox .status{
+  border-left: 1px solid #E5E5E5;
+  padding: 8px 0 8px 10px;
+  position: absolute;
+  left: 80%;
+  top: 0;
+}
+
+.statusMessageBox .actionsTable{margin: 7px 0px 7px 10px;}
+.lists .statusMessageBox > li{ padding: 10px 0px 0 0;}
+.lists .statusMessageBox .countViews h6{font-weight: bold;}
+.countViews small{ color: #767676;}
+.lists .statusMessageBox .status > span {font-weight: normal;}
+.lists .statusMessageBox .status b{font-size: 12px;}
+
