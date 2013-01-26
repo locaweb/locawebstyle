@@ -8,7 +8,9 @@
 //= require masked-input
 //= require passwordStrength
 //= require accessibility
+//= require analytics
 //= require cookie
 // VENDOR
 //
-//= require scripts
+//= require_tree ./classes
+//= require locawebstyle
