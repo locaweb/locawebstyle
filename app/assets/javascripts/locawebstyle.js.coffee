@@ -4,12 +4,6 @@ class Locawebstyle
     @collapse = new Collapse()
     @wizard_form = new WizardForm()
     @feature_boxes = new FeatureBoxes()
-    # ações que dependem de contexto
-    @init($(document))
-    # ações que não dependem de contexto
-    @clearForm()
-    @main()
-    @paginatedCarousel()
 
   init: (container) ->
     @modal(container)
@@ -73,7 +67,9 @@ class Locawebstyle
     _this = this
     $(".lnkToggle", container).click (e) ->
       e.preventDefault()
+      $(this).trigger($.Event('lnkToggleStart'))
       _this.linkToggleAction(this)
+      $(this).trigger($.Event('lnkToggleFinish'))
 
   linkToggleAction: (target) ->
     $(target).parents(".toggleChild").find(".itemToToggle").toggleClass "dNone"
@@ -174,5 +170,12 @@ class Locawebstyle
     dataClass = $('.toggleChild').data('class')
     $('.toggleChild').addClass(dataClass)
 
+window.locastyle = new Locawebstyle()
+
 $(document).ready ->
-  window.locastyle = new Locawebstyle()
+  locastyle.init($(document))
+  # ações que não dependem de container
+  locastyle.clearForm()
+  locastyle.main()
+  locastyle.paginatedCarousel()
+
