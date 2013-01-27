@@ -75,8 +75,9 @@ class Locawebstyle
     $(target).parents(".toggleChild").find(".itemToToggle").toggleClass "dNone"
     $(target).parents(".toggleChild").toggleClass $(".toggleChild").attr("data-class")
     if $(target).hasClass('btn')
-      input = $(target).parents(".toggleChild").find('[data-value]')
-      input.val input.data('value')
+      inputs = $(target).parents(".toggleChild").find('[data-value]')
+      inputs.each ->
+        $(this).val $(this).data('value')
 
   defaultForm: (container) ->
     # Faz o usuário só usar números em vez de letras.
