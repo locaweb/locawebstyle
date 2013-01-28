@@ -5,7 +5,7 @@ Locastyle = (function() {
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   Locastyle.prototype.init = function(obj) {
-
+    window.locastyle.linkToggle()
     // Define um intervalo para o Wizard demorar para rodar sozinho
     $('.modalSlider .carousel', obj).carousel({interval: 1000000});
     $('.modalSlider .modal-footer', obj).find('.btnSalvar').hide();
@@ -139,7 +139,6 @@ Locastyle = (function() {
 
 $(document).ready(function() {
   window.locastyle = new Locastyle();
-  window.locastyle.linkToggle()
   function inputDataValue(){
     $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]'), function(i, field){
       var value = $(this).attr("value");
