@@ -5,7 +5,8 @@ Locastyle = (function() {
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   Locastyle.prototype.init = function(obj) {
-    window.locastyle.linkToggle()
+    window.locastyle.linkToggle();
+    window.locastyle.inputDataValue();
     // Define um intervalo para o Wizard demorar para rodar sozinho
     $('.modalSlider .carousel', obj).carousel({interval: 1000000});
     $('.modalSlider .modal-footer', obj).find('.btnSalvar').hide();
@@ -134,24 +135,25 @@ Locastyle = (function() {
     $(element).parents('.toggleChild').toggleClass(itemClass);
   };
 
-  return Locastyle;
-})();
-
-$(document).ready(function() {
-  window.locastyle = new Locastyle();
-  function inputDataValue(){
-    $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]'), function(i, field){
+  Locastyle.prototype.inputDataValue = function(element){
+    $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]', element), function(i, field){
       var value = $(this).attr("value");
       $(this).attr("data-value", value);
       var inputId =  $(this).attr("id");
       $(".btn.lnkToggle").on("click", function(){
         if(value !== undefined){
           $("#"+inputId).val(value);
+          $(this).trigger($.Event('lnkToggleFinish'));
         }
       });
     });
-  };
-  inputDataValue()
+  }
+
+  return Locastyle;
+})();
+
+$(document).ready(function() {
+  window.locastyle = new Locastyle();
 
   // Contando quantos sliders items tem no slider das sidebares
   $.each($('.sideBox .carousel'), function() {
