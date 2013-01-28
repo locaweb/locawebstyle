@@ -1,5 +1,6 @@
 //= require locastyle_head
 //= require jquery
+//= require analytics_trackevent
 //= require modernizr
 //= require bootstrap/js/bootstrap
 //= require select2.min
