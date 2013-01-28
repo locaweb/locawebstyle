@@ -435,6 +435,8 @@ tr.active td .boxActions {padding-top:0;}
   margin-bottom: 10px;
   width:100%;
 }
+.messageInfo:hover{background:#f0f0f0;}
+.messageInfo:hover .countViews{box-shadow: inset 0 0 0 2px #f0f0f0;}
 .messageInfo > div:last-child {border:none;}
 
 .messageInfo > div {
@@ -472,10 +474,12 @@ tr.active td .boxActions {padding-top:0;}
   font:bold 15px verdana, arial, sans-serif;
 }
 .messageInfo:after {content: " "; display: block; clear:both;}
-.messageInfo a, .messageInfo a:hover {color:#2a2a2a;}
+.messageInfo .countViews a, 
+.messageInfo .countViews a:hover {color:#2a2a2a;}
 
 .messageInfo [class*="span"] {margin-left:0;}
-
+.messageInfo .headerInfo span.label-info, 
+.messageInfo .headerInfo span.badge-info{color: #fff;}
 .messageInfo .countViews {
   border-radius: 5px 0 0 5px;
   text-align: center;
@@ -487,7 +491,7 @@ tr.active td .boxActions {padding-top:0;}
   display: table-cell;
   box-shadow: inset 0 0 0 2px #FFF;
 }
-
+.messageInfo .countViews strong{ color: #545454;}
 .messageInfo .countViews:after{
   background: url(img/arrowWhite.png) no-repeat right center;
   content: " ";
@@ -499,7 +503,7 @@ tr.active td .boxActions {padding-top:0;}
   margin-top: -20px;
 }
 
-.messageInfo p a {color: #2a2a2a;}
+.messageInfo p {color: #2a2a2a;}
 .messageInfo p {margin: 0;}
 
 .messageInfo i {
@@ -516,21 +520,39 @@ tr.active td .boxActions {padding-top:0;}
 
 .messageInfo .headerInfo span {
   display: inline;
+  color: #767676;
   border-left: 1px solid #e5e5e5;
   padding:0 5px 0 8px;
   position: relative;
   top: 6px;
 }
-.messageInfo .headerInfo span:first-child {border-left:none;}
+.messageInfo .headerInfo strong{color: #545454;}
 
+.messageInfo .headerInfo span:first-child {border-left:none;}
+.messageInfo .headerInfo .translation_missing{top: 0;}
 .messageInfo .headerInfo .fRight {
   display: inline-block;
   border-left: 1px solid #e5e5e5;
   border-right: none;
-  padding:5px 15px;
+  padding:5px 10px;
   position: static;
+  width: 300px;
 }
-
+/* Utilizado dentro de collapse */
+.simpleMessageInfo .messageInfo{
+  border:none;
+  display: block; 
+  margin: 0;
+}
+.simpleMessageInfo .messageInfo > div{
+  display: block;
+  padding: 0;
+}
+.simpleMessageInfo .messageInfo > div .actionsTable{margin: 0;}
+.simpleMessageInfo .messageInfo > div::before{border: none;}
+.boxCinzaInner .messageInfo:hover{background: none;}
+.simpleMessageInfo strong{color: #545454;}
+.simpleMessageInfo .messageInfo .headerInfo{margin: 0; border: none;}
 /***
 **** BREADCRUMB
 ***/
