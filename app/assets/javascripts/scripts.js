@@ -122,30 +122,30 @@ Locastyle = (function() {
   };
 
   Locastyle.prototype.linkToggle = function(){
-    $('.lnkToggle').on('click',function(){
+    $('.lnkToggle').on('click',function(e){
+      e.preventDefault();
       var itemClass = $('.toggleChild').attr('data-class');
       $(this).parents('.toggleChild').find('.itemToToggle').toggleClass("dNone");
       $(this).parents('.toggleChild').toggleClass(itemClass);
+      window.locastyle.changeDataValue(this);
+      $(this).trigger($.Event('lnkToggleFinish'));
     });
   };
 
-  Locastyle.prototype.submitToggle = function(element){
-    var itemClass = $('.toggleChild').attr('data-class');
-    $(element).parents('.toggleChild').find('.itemToToggle').toggleClass("dNone");
-    $(element).parents('.toggleChild').toggleClass(itemClass);
-  };
+  Locastyle.prototype.changeDataValue = function(target){
+    if($(target).hasClass('btn')){
+      var inputs = $(target).parents(".toggleChild").find('[data-value]')
+      inputs.each(function(){
+        $(this).val($(this).data('value'));
+      });
+        
+    }
+  }
 
   Locastyle.prototype.inputDataValue = function(element){
     $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]', element), function(i, field){
       var value = $(this).attr("value");
       $(this).attr("data-value", value);
-      var inputId =  $(this).attr("id");
-      $(".btn.lnkToggle").on("click", function(){
-        if(value !== undefined){
-          $("#"+inputId).val(value);
-          $(this).trigger($.Event('lnkToggleFinish'));
-        }
-      });
     });
   }
 
