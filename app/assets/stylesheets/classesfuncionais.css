@@ -120,6 +120,11 @@ table.txtRight td, table.txtRight th {text-align:right;}
   background: white;
 }
 
+/**
+*** INPUTS
+**/
+.noSpin::-webkit-inner-spin-button {-webkit-appearance: none;}
+
 /** 
 *** HR - LINHA HORIZONTAL
 **/
