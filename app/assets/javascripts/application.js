@@ -1,4 +1,8 @@
+// < HEAD
 //= require locastyle_head
+// HEAD >
+//
+// < VENDOR
 //= require jquery
 //= require analytics_trackevent
 //= require modernizr
@@ -8,8 +12,10 @@
 //= require masked-input
 //= require passwordStrength
 //= require cookie
-// VENDOR
+// VENDOR >
 //
-//= require scripts
-//= require browser-detect
+// < APP
+//= require locastyle
 //= require accessibility
+//= require browser-detect
+// APP >
