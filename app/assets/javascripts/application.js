@@ -14,4 +14,5 @@
 //
 // < APP
 //= require locastyle
+//= require initializer
 // APP >
