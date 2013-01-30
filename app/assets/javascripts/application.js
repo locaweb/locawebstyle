@@ -5,11 +5,11 @@
 //= require bootstrap/js/bootstrap
 //= require select2.min
 //= require jquery-ui.min
-//= require browser-detect
 //= require masked-input
 //= require passwordStrength
-//= require accessibility
 //= require cookie
 // VENDOR
 //
 //= require scripts
+//= require browser-detect
+//= require accessibility
