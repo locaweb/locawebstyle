@@ -11,6 +11,8 @@
 #   - dist/**/*.js
 #
 src_files:
+  - assets/jquery.js
+# DEPENDENCIES
   - assets/locastyle.js
 
 # stylesheets
