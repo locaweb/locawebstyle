@@ -42,13 +42,13 @@ $(function(){
 	$('.tabs li a').attr({
 		role: 'tab',
 		'aria-selected': 'false',
-		tabindex : -1
+		tabindex : 3
 	});
 
 	$('.tabs li.active a').attr('aria-selected','true');
 	$('.tabs li.active a').attr('tabindex','3');
 
-
+	
 
 	// $('[data-toggle="tab"]').attr('aria-selected','false');
 	// $('.active [data-toggle="tab"]').attr('aria-selected','true');
@@ -63,6 +63,14 @@ $(function(){
 	// } else {
 	// 	$('#main').attr('role','main');
 	// }
+
+
+
+
+	//Notificaçao
+	$('.alert').attr('tabindex','-1').focus();
+
+	//$('header[data-toggle=collapse]').attr('role','button').attr('tabindex','3');
 
 })
 
