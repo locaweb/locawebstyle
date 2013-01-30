@@ -1,57 +1,79 @@
-.obsGray form {margin-bottom:0; padding:3px 0;}
+.obsGray form {margin-bottom: 0; padding: 3px 0;}
 fieldset {
-  border:none;
-  padding:0; margin:0 0 10px;
+  border: none;
+  padding: 0; margin: 0 0 10px;
 }
-fieldset + fieldset {margin-top:20px;}
+fieldset + fieldset {margin-top: 20px;}
 
-input, textarea, select {color:#797979; margin-bottom:0; z-index:1; position:relative; border-color:#e5e5e5;}
+input, textarea, select {
+  color: #797979; 
+  margin-bottom: 0; 
+  z-index: 1; 
+  position: relative; 
+  border-color: #e5e5e5;
+}
+
+/** CONTROL GROUP
+*** Container que agrupa os inputs e campos de formulário
+**/
+.control-group {margin-bottom: 15px;}
+
+.control-group[class*="span"] {margin-left: 0;}
+
+.sideBySide .control-group {
+  padding-bottom: 3px;
+  padding-right: 25px;
+  float: left;
+}
+
+.sideBySide .control-group.input-prepend {padding-right:10px;}
+.simpleFilter.sideBySide .control-group:first-child {border-left:none; padding-left:0;}
 
 /** modifica a cor do placeholder dos inputs **/
 ::-webkit-input-placeholder,
 ::-moz-input-placeholder,
 ::-ms-input-placeholder,
 ::-o-input-placeholder,
-::input-placeholder {color:#bfbfbf;}
+::input-placeholder {color: #bfbfbf;}
 
-.control-group input {margin-bottom:0;}
+.control-group input {width: inherit; margin-bottom: 0;}
 
 form h6 {
-  text-transform:inherit;
-  font:400 14px Ubuntu;
-  color:#2a2a2a;
-  margin:0 0 10px;
+  text-transform: inherit;
+  font: 400 14px Ubuntu;
+  color: #2a2a2a;
+  margin: 0 0 10px;
 }
-label b {display:none;}
-.control-group {margin-bottom:15px;}
-.modal .control-group {padding:0 5px;}
+label b {display: none;}
+
+.modal .control-group {padding: 0 5px;}
 .form-horizontal .controls, .controls {
   text-align: left;
-  margin-left:1px;
+  margin-left: 1px;
 }
 .modal-body .controls + p {margin-top: 15px;}
 
 .controls > label, .controls > .control-label {
-  width:auto;
-  padding-left:3px;
-  vertical-align:middle;
-  font-weight:normal;
-  display:inline-block;
-  margin-bottom:0;
+  width: auto;
+  padding-left: 3px;
+  vertical-align: middle;
+  font-weight: normal;
+  display: inline-block;
+  margin-bottom: 0;
 }
 
-.controls .control-label input {display:inline-block; margin-top:0; vertical-align:middle;}
-label.dInlineBlock, label.dInline {margin-bottom:0;}
+.controls .control-label input {display: inline-block; margin-top: 0; vertical-align: middle;}
+label.dInlineBlock, label.dInline {margin-bottom: 0;}
 
 label, strong.control-label, .form-horizontal .control-label {
-  font-weight:bold;
-  font-size:12px;
-  vertical-align:middle;
-  padding-right:10px;
-  color:#545454;
-  line-height:12px;
+  font-weight: bold;
+  font-size: 12px;
+  vertical-align: middle;
+  padding-right: 10px;
+  color: #545454;
+  line-height: 12px;
 }
-label.widthAuto {width:auto !important;}
+label.widthAuto {width: auto !important;}
 label.nomarginleft {margin-left: 0 !important;}
 .formInline label,
 .form-horizontal label,
@@ -59,25 +81,25 @@ label.nomarginleft {margin-left: 0 !important;}
 .form-horizontal strong.control-label,
 .formInline .control-label,
 .form-horizontal .control-label {
-  font-weight:bold;
-  font-size:12px;
-  display:inline-block;
-  vertical-align:middle;
-  padding-right:10px;
-  text-align:right;
-  width:100px;
-  color:#545454;
-  line-height:12px;
+  font-weight: bold;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+  text-align: right;
+  width: 100px;
+  color: #545454;
+  line-height: 12px;
   padding-top: 5px;
 }
 
 .boxGrayOpt {
-  padding:10px;
-  position:relative;
-  margin:10px 0;
-  background:#e2e2e2;
-  clear:both;
-  float:none;
+  padding: 10px;
+  position: relative;
+  margin: 10px 0;
+  background: #e2e2e2;
+  clear: both;
+  float: none;
 }
 
 .formInline .boxGrayOpt label,
@@ -88,177 +110,173 @@ label.nomarginleft {margin-left: 0 !important;}
 .form-horizontal .controls .boxGrayOpt label,
 .formInline .controls .boxGrayOpt .control-label,
 .form-horizontal .controls .boxGrayOpt .control-label  {
-  margin:0;
-  width:100px;
-  text-align:left;
+  margin: 0;
+  width: 100px;
+  text-align: left;
 }
 
-.formInline.boxGrayOpt label {width:auto; margin-bottom:0; padding-top:0;}
+.formInline.boxGrayOpt label {width: auto; margin-bottom: 0; padding-top: 0;}
 .formInline.boxGrayOpt input {vertical-align: middle;}
 
-.boxGrayOpt:before {
-  content:" ";
-  display:block;
-  width:15px; height:5px;
-  background:url(img/indicadorTopBoxGrayInput.png) no-repeat;
-  position:absolute;
-  top:-5px; left:15px;
+.boxGrayOpt: before {
+  content: " ";
+  display: block;
+  width: 15px; height: 5px;
+  background: url(img/indicadorTopBoxGrayInput.png) no-repeat;
+  position: absolute;
+  top: -5px; left: 15px;
 }
 
-label.checkbox.control-label, label.checkbox.control-label:first-child {
+label.checkbox.control-label, label.checkbox.control-label: first-child {
   margin: 0 0 0 110px;
   width: inherit;
 }
 
-.opcoesBuscaAvancada .control-group .control-label:first-child,
-.control-group .control-label:first-child {margin-left:0;}
+.opcoesBuscaAvancada .control-group .control-label: first-child,
+.control-group .control-label: first-child {margin-left: 0;}
 
-.boxGrayOpt input {margin:0 1px 0 0;}
+.boxGrayOpt input {margin: 0 1px 0 0;}
 
-.filtroExibe .control-group label {font-weight:normal; width:auto !important;}
-.filtroExibe .control-group {margin:0;}
-.filtroExibe .controlg-group input, .filtroExibe .controlg-group select {margin:0;}
+.filtroExibe .control-group label {font-weight: normal; width: auto !important;}
+.filtroExibe .control-group {margin: 0;}
+.filtroExibe .controlg-group input, .filtroExibe .controlg-group select {margin: 0;}
 
 
 /** Busca avançada **/
 .boxFiltro, .boxCinza {
-  border-radius:3px;
-  background:#dfdddd;
-  padding:15px;
-  margin:30px 0;
+  border-radius: 3px;
+  background: #dfdddd;
+  padding: 15px;
+  margin: 30px 0;
 }
 
 .boxCinzaLight {
-  border-radius:3px;
-  background:#ececec;
-  padding:15px;
-  margin:30px 0;
+  border-radius: 3px;
+  background: #ececec;
+  padding: 15px;
+  margin: 30px 0;
 }
 
 .boxCinzaInnerLight {
-  clear:both;
-  background:#dddddd;
-  padding:10px 15px;
-  border-radius:5px;
+  clear: both;
+  background: #dddddd;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
-.labelInline {margin-bottom:15px;}
-.labelInline label {display:inline;}
+.labelInline {margin-bottom: 15px;}
+.labelInline label {display: inline;}
 
-.boxFiltro h2 {padding:0 0 10px;}
-.boxFiltro h6 {padding:0;}
-.boxFiltro .datepicker {width:94px;}
+.boxFiltro h2 {padding: 0 0 10px;}
+.boxFiltro h6 {padding: 0;}
+.boxFiltro .datepicker {width: 94px;}
 
 /* Quando ativa busca avançada */
-.control-group.collapse {margin-bottom:0;}
-.control-group.collapse.in {margin-bottom:18px;}
+.control-group.collapse {margin-bottom: 0;}
+.control-group.collapse.in {margin-bottom: 18px;}
 
 .boxFiltro fieldset, .boxCinza .boxCinzaInner {
-  clear:both;
-  background:#cecccc;
-  padding:10px;
-  border-radius:5px;
+  clear: both;
+  background: #cecccc;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.transaction-search-per-page {width:70px;}
+.transaction-search-per-page {width: 70px;}
 
-.periodoForm.formInline .control-group:first-child .help-inline {margin-left:117px;}
-.periodoForm.formInline .control-group .help-inline {margin-left:0; padding-left:0;}
+.periodoForm.formInline .control-group: first-child .help-inline {margin-left: 117px;}
+.periodoForm.formInline .control-group .help-inline {margin-left: 0; padding-left: 0;}
 
-input.input30 {width:30px;}
-input.input60 {width:54px;}
-input.input120 {width:120px;}
-input.input240 {width:238px;}
-input.input360 {width:360px;}
+input.input30 {width: 30px;}
+input.input60 {width: 54px;}
+input.input120 {width: 120px;}
+input.input240 {width: 238px;}
+input.input360 {width: 360px;}
 
-.input60 input {width:54px;}
-.input60 label, .input60 .help-inline {min-width:154px;}
+.input60 input {width: 54px;}
+.input60 label, .input60 .help-inline {min-width: 154px;}
 
-.boxCinzaInner h6 {margin-bottom:0;}
+.boxCinzaInner h6 {margin-bottom: 0;}
 
 /** Botao do Datepicker **/
 .ui-datepicker-trigger {
-  border:none;
-  background-color:transparent;
+  border: none;
+  background-color: transparent;
 }
 
-legend + .control-group {margin-top:0;}
+legend + .control-group {margin-top: 0;}
 
-.sideBySide:after {content:" "; display:block; clear:both;}
-.sideBySide .control-group {
-  padding-bottom:3px;
-  padding-right: 10px;
-  float:left;
-}
-.sideBySide label:first-child {width:auto;}
-.sideBySide label.control-label {
-  width: 103px;
-}
+.sideBySide: after {content: " "; display: block; clear: both;}
+
+.sideBySide label: first-child {width: auto;}
+.sideBySide label.control-label {width: 103px;}
 .sideBySide.formInline .control-label, .form-horizontal.sideBySide .control-label {
-  float:left;
+  float: left;
   min-height: 27px;
   line-height: 27px;
 }
 
-.formInline .controls {display:inline-block; vertical-align:top;}
+.formInline .controls {display: inline-block; vertical-align: top;}
 
-.sideBySide.error label {color:#B94A48;}
-.help-inline {margin-bottom:0; padding-left:0; display:block;}
-.formInline .help-inline {display:inline-block;}
-.formInline .error .help-inline {display:block; margin:2px 0 0 105px;}
-.error .help-inline {font-size:11px; display:block; margin:2px 0 0 0px;}
-.error input {margin-bottom:0;}
-.input-prepend label + .add-on {border-radius:3px 0 0 3px; margin-left:0;}
+.sideBySide.error label {color: #B94A48;}
+.help-inline {margin-bottom: 0; padding-left: 0; display: block;}
+.formInline .help-inline {display: inline-block;}
+.formInline .error .help-inline {display: block; margin: 2px 0 0 105px;}
+.error .help-inline {font-size: 11px; display: block; margin: 2px 0 0 0px;}
+.error input {margin-bottom: 0;}
+.input-prepend label + .add-on {border-radius: 3px 0 0 3px; margin-left: 0;}
 
-input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top:0;}
+input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;}
 
 .simpleFilter {
-  border-bottom:1px solid #e5e5e5;
-  margin-bottom:20px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px;
   padding: 15px 0 10px;
   min-height: 30px;
 }
-.tab-pane .simpleFilter {padding-top:5px;}
-.simpleFilter form {margin:0;}
-.simpleFilter select {margin-bottom:3px; width:100px;}
-.simpleFilter.sideBySide .control-group {margin-bottom:0; border-left:1px dotted #cfcfcf; padding:0 0 0 15px; margin-left:15px;}
-.simpleFilter .control-group:last-child {border-left:0;}
-.simpleFilter.sideBySide .control-group.fright {float:right;}
-.simpleFilter.sideBySide .control-group.fright:last-child {border:none;}
-.simpleFilter.sideBySide .control-group label {width:auto;}
+.simpleFilter:after {content: " "; display: block; clear: both;}
 
-.simpleFilter.sideBySide p.fleft {margin-bottom:0; margin-top:6px;}
+.tab-pane .simpleFilter {padding-top: 5px;}
+.simpleFilter form {margin: 0;}
+.simpleFilter select {margin-bottom: 3px; width: 100px;}
+.simpleFilter.sideBySide .control-group {margin-bottom: 0; border-left: 1px dotted #cfcfcf; padding: 0 0 0 15px; margin-left: 15px;}
+.simpleFilter .control-group: last-child {border-left: 0;}
+.simpleFilter.sideBySide .control-group.fright {float: right;}
+.simpleFilter.sideBySide .control-group.fright: last-child {border: none;}
+.simpleFilter.sideBySide .control-group label {width: auto;}
+
+.simpleFilter.sideBySide p.fleft {margin-bottom: 0; margin-top: 6px;}
 
 .simpleFilter .searchInput {
-  background:url(img/lupaInput.png) no-repeat 8px center;
-  max-width:185px;
-  padding-left:35px;
+  background: url(img/lupaInput.png) no-repeat 8px center;
+  max-width: 185px;
+  padding-left: 35px;
 }
-.simpleFilter .control-group.fright {padding-right:0;}
+.simpleFilter .control-group.fright {padding-right: 0;}
 
-.datetime select {width:100px;}
+.datetime select {width: 100px;}
 
 
 .hint {
-  font:14px verdana, sans-serif;
-  color:#767676;
-  display:inline-block;
-  padding:0 3px;
+  font: 14px verdana, sans-serif;
+  color: #767676;
+  display: inline-block;
+  padding: 0 3px;
   vertical-align: middle;
 }
 
-.sideInput {position:relative; padding-left:20px;}
-.sideInput input[type="radio"], .sideInput input[type="checkbox"] {position:absolute; top:5px; left:0px;}
+.sideInput {position: relative; padding-left: 20px;}
+.sideInput input[type="radio"], .sideInput input[type="checkbox"] {position: absolute; top: 5px; left: 0px;}
 
-.sideInput label {margin-bottom:5px; display:block;}
+.sideInput label {margin-bottom: 5px; display: block;}
 
 
-.lineFieldsContainer label {margin-left:0;}
-.lineFieldsContainer label.span3 {width:217px;}
-.lineFields {clear:both; margin-bottom:10px;}
+.lineFieldsContainer label {margin-left: 0;}
+.lineFieldsContainer label.span3 {width: 217px;}
+.lineFields {clear: both; margin-bottom: 10px;}
 
-.lineFields input:nth-child(2n) {width:275px;}
+.lineFields input: nth-child(2n) {width: 275px;}
 
 .lineFields select {vertical-align: top;}
-.lineFields .addRemoveLine {width:30px; height:30px; vertical-align: top}
-.lineFields .addRemoveLine:before {margin-left:-8px; margin-top:3px;}
+.lineFields .addRemoveLine {width: 30px; height: 30px; vertical-align: top}
+.lineFields .addRemoveLine: before {margin-left: -8px; margin-top: 3px;}
