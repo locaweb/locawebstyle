@@ -1,67 +1,129 @@
         <h2>Formulários</h2>
 <%= content_for_clippy do %>
 
-<form class="form-search">
-  <div class="input-append">
-    <input type="text" class="span2 search-query">
-    <button type="submit" class="btn">Search</button>
-  </div>
-  <div class="input-prepend">
-    <button type="submit" class="btn">Search</button>
-    <input type="text" class="span2 search-query">
-  </div>
-</form>
-<form>
-<div class="input-append">
-  <input class="span2" id="appendedInputButton" size="16" type="text"><button class="btn" type="button">Go!</button>
-</div>
- 
-<div class="input-append">
-  <input class="span2" id="appendedInputButtons" size="16" type="text"><button class="btn" type="button">Search</button><button class="btn" type="button">Options</button>
-</div>
-<hr>
-    <div class="control-group">
-        <label>Só números! (classe <b>numbersOnly</b> no input) </label>
-        <input type="text" class="input240 numbersOnly">
-    </div>
-
-    <div class="sideBySide">
-        <div class="control-group input-prepend">
-            <label>Nome </label>
-            <span class="add-on">@</span><input class="span2" id="prependedInput" placeholder="Seu nome" type="text">
+<div class="example">
+<div class="simpleFilter sideBySide formInline">
+    <a href="#" class="btn btn-primary ico-plus fLeft">Criar nova lista</a>
+    <form class="fRight">
+        <div class="control-group">
+            <label>Buscar 1</label>
+            <input type="text" placeholder="Buscar pelo nome">
+            <input type="submit" value="Buscar" class="btn">
         </div>
-        <div class="control-group input-prepend">
-            <label>E-mail </label>
-            <span class="add-on"><i class="icon-envelope"></i></span><input class="span2" placeholder="Seu e-mail" id="inputIcon" type="email">
-        </div>
-    </div>
-    <div class="control-group">
-        <label>Meio de pagamento </label>
-        <input type="text" class="input240">
-    </div>
-    <div class="control-group labelInline">
-        <input type="checkbox">
-        <label>Aceitar pós o vencimento</label>
-    </div>
+<div class="period control-group fRight">
+        <label for="period">Período:</label>
+        <input type="text" name="list[period_start]" id="list_period_start" class="input120 datepicker datemask hasDatepicker"><button class="ui-datepicker-trigger icon-calendar" type="button"></button> à
+        <input type="text" name="list[period_end]" id="list_period_end" class="input120 datepicker datemask hasDatepicker"><button class="ui-datepicker-trigger icon-calendar" type="button"></button>
+        <input type="submit" class="btn" value="Filtrar" name="">
+      </div>
+    </form>
+</div>
+</div>
 
-    <hr>
+<pre class="lang-html">
+&lt;div class="simpleFilter sideBySide formInline"&gt;
+    &lt;a href="#" class="btn btn-primary ico-plus fLeft"&gt;Criar nova lista&lt;/a&gt;
+    &lt;form class="fRight"&gt;
+        &lt;div class="control-group"&gt;
+            &lt;label&gt;Buscar&lt;/label&gt;
+            &lt;input type="text" placeholder="Buscar pelo nome"&gt;
+            &lt;input type="submit" value="Buscar" class="btn"&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+<table class="table table-stripped table-bordered">
+    <thead>
+        <tr>
+            <th class="span4">Classes usadas</th>
+            <th>Descrição</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>simpleFilter</td>
+            <td>Prepara uma barra com campos, botoes e ações.</td>
+        </tr>
+        <tr>
+            <td>sideBySide</td>
+            <td>Faz elementos <strong>control-group</strong> ficarem lado a lado.</td>
+        </tr>
+        <tr>
+            <td>formInline</td>
+            <td>Faz labels dos inputs ficarem ao lado dos campos de formulário.</td>
+        </tr>
+        <tr>
+            <td>control-group</td>
+            <td>Classe padrão do Bootstrap. Agrupa elemento de formulários: labels, campos, botões.</td>
+        </tr>
+    </tbody>
+</table>
 
+<div class="example">
+    <div class="input-prepend">
+        <span class="add-on">@</span>
+        <input class="span2" id="prependedInput" type="text" placeholder="Username">
+    </div>
+    <div class="input-append">
+        <input class="span2" id="appendedInput" type="text">
+        <span class="add-on">.00</span>
+    </div>
+</div>
+<pre class="lang-html">
+&lt;div class="input-prepend"&gt;
+    &lt;span class="add-on"&gt;@&lt;/span&gt;
+    &lt;input class="span2" id="prependedInput" type="text" placeholder="Username"&gt;
+&lt;/div&gt;
+&lt;div class="input-append"&gt;
+    &lt;input class="span2" id="appendedInput" type="text"&gt;
+    &lt;span class="add-on"&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+<p>Insere uma classe <strong>.add-on</strong> no elemento, formatando-o de forma que ele fique acomplado ao campo.</p>
+
+
+<div class="example">
     <div class="control-group">
-        <label rel="tooltip" title="Autenticação é o processo para assegurar que o comprador é realmente aquele quem diz ser">Tipo de autenticação:</label>
+        <label>Tipo de autenticação:</label>
         <div class="controls">
-            <label class="control-label"><input checked="checked" type="radio" name="authentication-type" data-toggle="show" data-target="#authOpt"> Autenticado</label>
-            <label class="control-label"><input name="authentication-type" type="radio" data-toggle="hide" data-target="#authOpt"> Não autenticado</label>
-            <div class="collapse" id="authOpt">
+            <label class="control-label">
+                <input type="radio" data-target="#authOpt" data-toggle="show" checked="checked"> Autenticado
+            </label>
+            <label class="control-label">
+                <input type="radio" data-target="#authOpt" data-toggle="hide"> Não autenticado
+            </label>
+            <div id="authOpt" class="collapse">
                 <div class="boxGrayOpt formInline">
-                    <input type="checkbox" value="1"><label> CPF</label>
-                    <input type="checkbox" value="1"><label> Endereço</label>
-                    <input type="checkbox" value="1"><label> CEP</label>
+                    <label><input type="checkbox" value="1"> CPF</label>
+                    <label><input type="checkbox" value="1"> Endereço</label>
+                    <label><input type="checkbox" value="1"> CEP</label>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<pre class="lang-html">
+&lt;div class="control-group"&gt;
+    &lt;label&gt;Tipo de autenticação:&lt;/label&gt;
+    &lt;div class="controls"&gt;
+        &lt;label class="control-label"&gt;
+            &lt;input type="radio" data-target="#authOpt" data-toggle="show" checked="checked"&gt; Autenticado
+        &lt;/label&gt;
+        &lt;label class="control-label"&gt;
+            &lt;input type="radio" data-target="#authOpt" data-toggle="hide"&gt; Não autenticado
+        &lt;/label&gt;
+        &lt;div id="authOpt" class="collapse"&gt;
+            &lt;div class="boxGrayOpt formInline"&gt;
+                &lt;label&gt;&lt;input type="checkbox" value="1"&gt; CPF&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" value="1"&gt; Endereço&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" value="1"&gt; CEP&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
-    <hr>
+
 
     <div class="sideBySide periodoForm">
         <label class="control-label">Pedido: </label>
@@ -84,7 +146,7 @@
     </div>
     
     <div class="sideBySide">
-        <div class="control-group error input60">
+        <div class="control-group error span2">
             <label><b title="Obrigatório">*</b> Dias até o vencimento</label><input type="text" value="5">
             <span class="help-inline">Something may have gone wrong asdfa sdfdfasdf asdf </span>
         </div>
@@ -92,26 +154,6 @@
             <label><b title="Obrigatório">*</b> Convênio</label><input type="text" value="1232">
         </div>
     </div>
-</form>
-
-
-<div class="simpleFilter sideBySide formInline">
-  <a href="#" class="btn btn-primary ico-plus">Criar nova lista</a>
-  <form class="search control-group fright">
-    <div class="control-group fright">
-      <label>Buscar</label>
-      <input type="text" name="lists[q]" class="searchInput" placeholder="Buscar pelo nome">
-      <input type="submit" value="Buscar" class="btn">
-    </div>
-      <div class="period control-group">
-        <label for="period">Período:</label>
-        <input class="input120 datepicker datemask hasDatepicker" id="list_period_start" name="list[period_start]" type="text"><button type="button" class="ui-datepicker-trigger icon-calendar"></button> à
-        <input class="input120 datepicker datemask hasDatepicker" id="list_period_end" name="list[period_end]" type="text"><button type="button" class="ui-datepicker-trigger icon-calendar"></button>
-        <input type="submit" name="" value="Filtrar" class="btn">
-      </div>
-</form>  
-
-</div>
 
 
         <% end  %>
