@@ -3,6 +3,7 @@ fieldset {
   border: none;
   padding: 0; margin: 0 0 10px;
 }
+
 /*fieldset + fieldset {margin-top: 20px;}*/
 
 input, textarea, select {
@@ -125,7 +126,7 @@ label.nomarginleft {margin-left: 0 !important;}
   top: -5px; left: 15px;
 }
 
-label.checkbox.control-label, label.checkbox.control-label:first-child {
+label.checkbox.control-label, label.checkbox.control-label: first-child {
   margin: 0 0 0 110px;
   width: inherit;
 }
@@ -208,6 +209,7 @@ legend + .control-group {margin-top: 0;}
 
 .sideBySide label:first-child {width: auto;}
 .sideBySide label.control-label {width: 103px;}
+
 .sideBySide.formInline .control-label, .form-horizontal.sideBySide .control-label {
   float: left;
   min-height: 27px;
@@ -238,9 +240,11 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 .simpleFilter form {margin: 0;}
 .simpleFilter select {margin-bottom: 3px; width: 100px;}
 .simpleFilter.sideBySide .control-group {margin-bottom: 0; border-left: 1px dotted #cfcfcf; padding: 0 0 0 15px; margin-left: 15px;}
+
 .simpleFilter .control-group:last-child {border-left: 0;}
 .simpleFilter.sideBySide .control-group.fright {float: right;}
 .simpleFilter.sideBySide .control-group.fright:last-child {border: none;}
+
 .simpleFilter.sideBySide .control-group label {width: auto;}
 
 .simpleFilter.sideBySide p.fleft {margin-bottom: 0; margin-top: 6px;}
@@ -254,7 +258,6 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 
 .datetime select {width: 100px;}
 
-
 .hint {
   font: 14px verdana, sans-serif;
   color: #767676;
@@ -267,7 +270,6 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 .sideInput input[type="radio"], .sideInput input[type="checkbox"] {position: absolute; top: 5px; left: 0px;}
 
 .sideInput label {margin-bottom: 5px; display: block;}
-
 
 .lineFieldsContainer label {margin-left: 0;}
 .lineFieldsContainer label.span3 {width: 217px;}
