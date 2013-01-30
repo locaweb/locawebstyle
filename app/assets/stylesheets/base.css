@@ -801,3 +801,31 @@ a[class*="ico-"] {font-size: 12px;}
   color: inherit;
 
 }
+
+
+
+/**
+*** Container para marcar exemplos
+**/
+.example {
+  border:1px solid #E1E1E8;
+  border-radius:3px;
+  padding:40px 10px 10px;
+  position: relative;
+}
+.example + pre {margin-top:-1px; margin-bottom: 30px;}
+.example + pre + table {margin-top:-31px; margin-bottom:30px;}
+.example + pre + p {border:1px solid #E1E1E8; padding:10px; border-radius: 3px; margin-top:-20px; margin-bottom: 30px;}
+
+.example:before {
+  position: absolute;
+  top: 0; left: 0;
+  font-size: 11px;
+  border-bottom:1px solid #E1E1E8;
+  border-right:1px solid #E1E1E8;
+  content: "Exemplo";
+  display: inline-block;
+  background:#EFEFEF;
+  color:#666;
+  padding:5px 10px;
+}
