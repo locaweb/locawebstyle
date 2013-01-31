@@ -116,7 +116,7 @@ label.nomarginleft {margin-left: 0 !important;}
 .formInline.boxGrayOpt label {width: auto; margin-bottom: 0; padding-top: 0;}
 .formInline.boxGrayOpt input {vertical-align: middle;}
 
-.boxGrayOpt: before {
+.boxGrayOpt:before {
   content: " ";
   display: block;
   width: 15px; height: 5px;
