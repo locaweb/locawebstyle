@@ -3,7 +3,7 @@ fieldset {
   border: none;
   padding: 0; margin: 0 0 10px;
 }
-fieldset + fieldset {margin-top: 20px;}
+/*fieldset + fieldset {margin-top: 20px;}*/
 
 input, textarea, select {
   color: #797979; 
@@ -33,6 +33,8 @@ input, textarea, select {
 ::-ms-input-placeholder,
 ::-o-input-placeholder,
 ::input-placeholder {color: #bfbfbf;}
+
+.control-group input {margin-bottom: 0;}
 
 form h6 {
   text-transform: inherit;
