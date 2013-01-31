@@ -30,7 +30,7 @@ describe("Locastyle", function() {
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();
         var textToBeApplied = $("#toggle_text").data("text");
-        locastyle.methods.toggleTextOnClick(dom_scope);
+        locastyle.methods.init(dom_scope);
         $('[data-toggle_text="click"]').click();
         expect($("#toggle_text").text()).toEqual(textToBeApplied);
       });
@@ -39,7 +39,7 @@ describe("Locastyle", function() {
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();
         var text = $("#toggle_text").text();
-        locastyle.methods.toggleTextOnClick(dom_scope);
+        locastyle.methods.init(dom_scope);
         $('[data-toggle_text="click"]').click();
         expect($("#toggle_text").data("text")).toEqual(text);
       });
