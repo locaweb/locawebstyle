@@ -44,5 +44,25 @@ describe("Locastyle", function() {
         expect($("#toggle_text").data("text")).toEqual(text);
       });
     });
+
+    describe("when an element has data-toggle_text='hover' attribute", function () {
+      it("should replace the text when mouse over on it", function () {
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        var textToBeApplied = $("#toggle_text_on_hover").data("text");
+        locastyle.methods.init(dom_scope);
+        $('[data-toggle_text="hover"]').mouseover();
+        expect($("#toggle_text_on_hover").text()).toEqual(textToBeApplied);
+      });
+
+      it("should also replace the data-text attribute when mouse over on it", function () {
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        var text = $("#toggle_text_on_hover").text();
+        locastyle.methods.init(dom_scope);
+        $('[data-toggle_text="hover"]').mouseover();
+        expect($("#toggle_text_on_hover").data("text")).toEqual(text);
+      });
+    });
   });
 });
