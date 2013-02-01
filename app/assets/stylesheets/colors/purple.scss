@@ -51,17 +51,7 @@ $path_way_description_active_color: #120926;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfafc', endColorstr='#c5badf',GradientType=0 ); /* IE6-9 */
 }
 @mixin box_sidebar {
-  background: #261443;
-  background: -moz-linear-gradient(top,  #261443 0%, #0b0519 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#261443), color-stop(100%,#0b0519));
-  background: -webkit-linear-gradient(top,  #261443 0%,#0b0519 100%);
-  background: -o-linear-gradient(top,  #261443 0%,#0b0519 100%);
-  background: -ms-linear-gradient(top,  #261443 0%,#0b0519 100%);
-  background: linear-gradient(to bottom,  #261443 0%,#0b0519 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#261443', endColorstr='#0b0519',GradientType=0 );
+  background-color: #5a2dc0;
+}
 
-}
-@mixin arrow_box_sidebar {
-  border-color: #0b0519 transparent transparent transparent;
-}
 @import "theme_base";

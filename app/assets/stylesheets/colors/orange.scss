@@ -50,17 +50,7 @@ $path_way_description_active_color: #4d2b12;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#fff2d8',GradientType=0 ); /* IE6-9 */
 }
 @mixin box_sidebar {
-  background: #3f3a10;
-  background: -moz-linear-gradient(top,  #3f3a10 0%, #181504 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3f3a10), color-stop(100%,#181504));
-  background: -webkit-linear-gradient(top,  #3f3a10 0%,#181504 100%);
-  background: -o-linear-gradient(top,  #3f3a10 0%,#181504 100%);
-  background: -ms-linear-gradient(top,  #3f3a10 0%,#181504 100%);
-  background: linear-gradient(to bottom,  #3f3a10 0%,#181504 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3a10', endColorstr='#181504',GradientType=0 );
+  background-color: #4d2b12;
+}
 
-}
-@mixin arrow_box_sidebar {
-  border-color: #181504 transparent transparent transparent;
-}
 @import "theme_base";
