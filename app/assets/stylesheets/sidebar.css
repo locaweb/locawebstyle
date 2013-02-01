@@ -61,6 +61,7 @@
 .colorGreen .titSide.titAjudaSuporte {background-image:url(img/ico-ajudasuporteGreen.png);}
 .colorGreen .titSide.titDicas {background-image:url(img/ico-dicasGreen.png);}
 
+
 /** Lista com links em BG Branco **/
 .listWhite {margin:0; padding:0;}
 
@@ -158,6 +159,10 @@ h5 + .innerSideBox {margin-top:5px;}
 
 /* Box para icones */
 .boxSidebarTitle {
+  background-image: url(img/bgIconSidebar.png);
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-color: #ccc;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -166,14 +171,16 @@ h5 + .innerSideBox {margin-top:5px;}
   top: -26px;
   padding: 1px;
   position: absolute;
-  height: 35px;
+  height: 32px;
 }
 .boxSidebarTitle:before {
+  border-color: #000 transparent transparent transparent;
+  border-width: 8px;
+  border-style: solid;
   content: "";
   position: absolute;
-  top: 36px;
+  top: 34px;
   left: 10px;
-  border: 8px solid;
 }
 .boxSidebarTitle i {
   color: #fff!important;

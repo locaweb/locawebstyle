@@ -110,6 +110,4 @@
 #{$theme_name} .boxSidebarTitle{
   @include box_sidebar;
 }
-#{$theme_name} .boxSidebarTitle:before{
-  @include arrow_box_sidebar;
-}
+
