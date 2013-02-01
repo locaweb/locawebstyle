@@ -42,7 +42,7 @@ Ele foi criado por desenvolvedores muito renomados como [Paul Irish](http://paul
 
 ***Masked Input***
 
-(Masked Input)[http://digitalbush.com/projects/masked-input-plugin/] é um plugin para a criação de máscaras para formulários. É muito simples de utilizar. Para ver seu funcionamento, [clique aqui](http://developer.locaweb.com.br/locawebstyle/formularios/mascaras-formularios/).
+[Masked Input](http://digitalbush.com/projects/masked-input-plugin/) é um plugin para a criação de máscaras para formulários. É muito simples de utilizar. Para ver seu funcionamento, [clique aqui](http://developer.locaweb.com.br/locawebstyle/formularios/mascaras-formularios/).
 
 -----
 
