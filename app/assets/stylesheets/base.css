@@ -658,6 +658,29 @@ td .progress {max-width:70px;}
   text-indent: -9999px;
   overflow: hidden;
 }
+/*** POPOVER
+**** Novo icone infoBubble testado na Revenda
+***/
+.colorYellow .infoBubble, .colorYellow  [rel="popover"]{
+  background: #fff;
+  text-indent: 0;
+  width:15px; 
+  height:15px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  min-height: 16px!important;
+  box-shadow: 0 0 3px #224c9b inset;
+}
+.colorYellow .infoBubble.ico-help-circle:before, 
+.colorYellow [rel="popover"].ico-help-circle:before{
+  color: #224c9b!important;
+  font-size: 20px;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
 
 .infoBubble h6, [rel="popover"] h6 {
   color:#1a4294;
