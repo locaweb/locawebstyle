@@ -33,6 +33,9 @@ $(function(){
 	$('.content').attr('role','main'); // criar essa classe nos produtos ??
 	$('.sidebar').attr('role','complementary');
 	$('input.required').attr('aria-required','true');
+	$('.lnkCoverAll').attr('tabindex','3');
+	$('.chamadasBox h3 > a').attr('aria-hidden','true');
+
 	//
 	// TABS
 	$('.tabs').attr('role','tablist');
