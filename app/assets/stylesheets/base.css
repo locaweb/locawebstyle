@@ -37,8 +37,6 @@ pre {
 
 iframe {
   box-shadow:inset 0 2px 5px -2px rgba(0,0,0,0.2);
-  border:1px solid #EFEFEF !important;
-  border-radius:5px;
 }
 
 /**
