@@ -5,7 +5,7 @@
 #select_themes {display: none;}
   body:after {content:" "; display:block; clear:both;}
   body { padding:0 !important;}
-
+.select_themes {display: none;}
   .limite {
     width:95% !important;
     position:relative; left:0;
@@ -203,4 +203,8 @@
     padding: 10px 0;
   }
 
+}
+
+@media screen and (max-width: 480px) {
+  .lists .statusMessageBox .countViews:after{background: none!important;}
 }

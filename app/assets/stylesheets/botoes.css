@@ -4,12 +4,16 @@
 .btn {border-radius: 3px;}
 
 /** arruma cor padrao de btns com icones **/
+table tr td a.btn,
+p a.btn,
 a[class*="btn"],
 a[class*="btn"]:hover,
 .btn[class^="ico-"],
 .btn[class*=" ico-"],
 .btn[class*=" ico-"]:hover,
 .btn[class^="ico-"]:hover {color:inherit;}
+
+p a.btn {color:#333;}
 
 /**
 *** Fixing: A linha 6042 do Bootstrap caga a cor desses botoes. Quando eles estão com ícones.

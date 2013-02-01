@@ -68,8 +68,8 @@ table.txtRight td, table.txtRight th {text-align:right;}
 /** 
 *** BACKGROUND E BORDA
 **/
-.noBackground, .noBackground {background:none !important;}
-.noShadow, .noShadow {box-shadow: none !important;}
+.noBackground {background:none !important;}
+.noShadow {box-shadow: none !important;}
 
 .noborder, .noBorder {border:none !important;}
 .noborderright, .noBorderRight {border-right:none !important;}

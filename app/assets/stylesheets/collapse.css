@@ -23,7 +23,7 @@ p + .boxCollapse {margin-top:30px;}
 
 .boxCollapse header  {
   border-left:5px solid #CCC;
-  padding:2px 10px 4px;
+  padding:2px 10px 0px;
   cursor:pointer;
   outline: none;
 }
@@ -75,6 +75,25 @@ p + .boxCollapse {margin-top:30px;}
 tr.active .boxActions {display:block; padding:10px 0 5px;}
 tr.active .boxActions .btn {margin-right:0;}
 tr.active .actionsTable {display:none;}
+
+.boxCollapse h4 span {
+  font:bold 18px Ubuntu, verdana, arial, tahoma, helvetica, sans-serif;
+  color:#777;
+  border:none;
+}
+
+.boxCollapse h4 span.ico-dot {
+  font-size: 40px;
+  line-height: 7px;
+  margin-right: 0;
+  width: 14px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  left: -5px;
+}
+
+.collapseGroup .details p {padding:10px 30px;}
 
 /***
 **** Fix do IE9 para Altura dos collapses em conjunto com actionsTable que aparecia e desaparecia
