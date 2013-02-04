@@ -54,11 +54,11 @@ Locastyle = (function() {
     });
 
     // Encontra os .help-inline e define uma largura se referenciando a largura dos inputs próximos.
-    $('.control-group .help-inline, .control-group > .help-inline', obj).each(function(index) {
-      $(this).css('width', $(this).parent().find('input[type="text"], input[type="password"], input[type="number"], input[type="email"], select').width())
-    });
+    //$('.control-group .help-inline, .control-group > .help-inline', obj).each(function(index) {
+    //  $(this).css('width', $(this).parent().find('input[type="text"], input[type="password"], input[type="number"], input[type="email"], select').width())
+    //});
 
-    $('.ui-datepicker-trigger', obj).addClass('icon-calendar').html('');
+    //$('.ui-datepicker-trigger', obj).addClass('icon-calendar').html('');
 
     // init of change.collapse.data-api
     $('[data-toggle=show]', obj).filter(':checked').change();
@@ -211,20 +211,20 @@ $(document).ready(function() {
   $('input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]').addClass('disabled');
 
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
-  $('.lnkSeta[data-text], .lnkArrow[data-text], [data-toggletext="true"]').live('click', function(e){
-    changeText(this);
-  });
+  //$('.lnkSeta[data-text], .lnkArrow[data-text], [data-toggletext="true"]').live('click', function(e){
+  //  changeText(this);
+  //});
 
-  $('[data-toggletext="true"][data-toggletexthover="true"]').live('hover', function(e){
-    changeText(this);
-  });
+  //$('[data-toggletext="true"][data-toggletexthover="true"]').live('hover', function(e){
+  //  changeText(this);
+  //});
 
-  function changeText(element){
-    var btnText, btnTextAlt;
-    btnText = $(element).html();
-    btnTextAlt = $(element).data('text');
-    $(element).html(btnTextAlt).data('text',btnText);
-  }
+  //function changeText(element){
+  //  var btnText, btnTextAlt;
+  //  btnText = $(element).html();
+  //  btnTextAlt = $(element).data('text');
+  //  $(element).html(btnTextAlt).data('text',btnText);
+  //}
 
   function changeTextChamadas(element){
     var btnText, btnTextAlt;
