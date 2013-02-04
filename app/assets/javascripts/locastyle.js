@@ -1,8 +1,9 @@
 Locastyle = (function() {
   Locastyle.prototype.base = {
     init: function (dom_scope) {
-      this.toggleTextOnClick(dom_scope)
-      this.toggleTextOnHover(dom_scope)
+      this.toggleTextOnClick(dom_scope);
+      this.toggleTextOnHover(dom_scope);
+      this.datePickerSetup(dom_scope, this.datePickerOptions);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -26,6 +27,20 @@ Locastyle = (function() {
       text = $(element).html();
       replacementText = $(element).data("text");
       $(element).text(replacementText).data("text", text);
+    },
+
+    datePickerOptions: {
+      showOn: "button",
+      dateFormat: "dd/mm/yy",
+      monthNamesShort: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],
+      monthNames: ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],
+      dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
+      dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+      dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab']
+    },
+
+    datePickerSetup: function(dom_scope, options) {
+      $('.datepicker', dom_scope).datepicker(options);
     }
   }
 });

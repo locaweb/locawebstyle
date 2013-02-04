@@ -1,4 +1,8 @@
 describe("Locastyle", function() {
+  beforeEach(function () {
+    loadFixtures('locastyle.html');
+  });
+
   describe("Constructing", function () {
     describe("Before constructing", function () {
       it("should be a function", function () {
@@ -20,11 +24,27 @@ describe("Locastyle", function() {
     });
   });
 
-  describe("Toggle text", function () {
-    beforeEach(function () {
-      loadFixtures('locastyle.html');
+  describe("On init", function () {
+    describe("Datepicker", function () {
+      it("should call datepicker with correct options", function () {
+        var locastyle = new Locastyle();
+        spyOn(locastyle.base, 'datePickerSetup');
+        var expectedOptions = {
+          showOn: "button",
+          dateFormat: "dd/mm/yy",
+          monthNamesShort: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],
+          monthNames: ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],
+          dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
+          dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+          dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab']
+        }
+        locastyle.base.init($(document));
+        expect(locastyle.base.datePickerSetup).toHaveBeenCalledWith($(document), expectedOptions);
+      });
     });
+  });
 
+  describe("Toggle text", function () {
     describe("when an element has data-toggle_text='click' attribute", function () {
       it("should replace the text when clicked on it", function () {
         var dom_scope = $("#locastyle_fixture");
@@ -66,7 +86,4 @@ describe("Locastyle", function() {
     });
   });
 
-  describe(":tab", function () {
-
-  });
 });

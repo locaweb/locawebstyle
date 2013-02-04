@@ -12,6 +12,7 @@
 #
 src_files:
   - assets/jquery.js
+  - assets/jquery-ui.min.js
 # DEPENDENCIES
   - assets/locastyle.js
 
