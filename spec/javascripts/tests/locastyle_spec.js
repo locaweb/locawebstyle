@@ -15,7 +15,7 @@ describe("Locastyle", function() {
 
       it("should have an inherited init function", function () {
         var locastyle = new Locastyle();
-        expect(typeof(locastyle.methods.init)).toEqual("function");
+        expect(typeof(locastyle.base.init)).toEqual("function");
       });
     });
   });
@@ -30,7 +30,7 @@ describe("Locastyle", function() {
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();
         var textToBeApplied = $("#toggle_text").data("text");
-        locastyle.methods.init(dom_scope);
+        locastyle.base.init(dom_scope);
         $('[data-toggle_text="click"]').click();
         expect($("#toggle_text").text()).toEqual(textToBeApplied);
       });
@@ -39,7 +39,7 @@ describe("Locastyle", function() {
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();
         var text = $("#toggle_text").text();
-        locastyle.methods.init(dom_scope);
+        locastyle.base.init(dom_scope);
         $('[data-toggle_text="click"]').click();
         expect($("#toggle_text").data("text")).toEqual(text);
       });
@@ -50,7 +50,7 @@ describe("Locastyle", function() {
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();
         var textToBeApplied = $("#toggle_text_on_hover").data("text");
-        locastyle.methods.init(dom_scope);
+        locastyle.base.init(dom_scope);
         $('[data-toggle_text="hover"]').mouseover();
         expect($("#toggle_text_on_hover").text()).toEqual(textToBeApplied);
       });
@@ -59,10 +59,14 @@ describe("Locastyle", function() {
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();
         var text = $("#toggle_text_on_hover").text();
-        locastyle.methods.init(dom_scope);
+        locastyle.base.init(dom_scope);
         $('[data-toggle_text="hover"]').mouseover();
         expect($("#toggle_text_on_hover").data("text")).toEqual(text);
       });
     });
+  });
+
+  describe(":tab", function () {
+
   });
 });

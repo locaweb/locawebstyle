@@ -1,5 +1,5 @@
 Locastyle = (function() {
-  Locastyle.prototype.methods = {
+  Locastyle.prototype.base = {
     init: function (dom_scope) {
       this.toggleTextOnClick(dom_scope)
       this.toggleTextOnHover(dom_scope)
