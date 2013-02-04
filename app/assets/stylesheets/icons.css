@@ -22,6 +22,17 @@
   position:relative; top:1px;
 }
 
+h1[class^="ico-"]:before,
+h2[class^="ico-"]:before,
+h3[class^="ico-"]:before,
+h4[class^="ico-"]:before,
+h5[class^="ico-"]:before,
+h6[class^="ico-"]:before {
+  margin:0 15px 0 0;
+  position: relative;
+  top: -2px;
+}
+
 /** IE8 Fix ***/
 .ie8 [class^="ico-"]:before, .ie8 [class*="ico-"]:before, .ie8 .lnkSeta:before, .ie8 .lnkArrow:before {vertical-align:top; text-decoration: none !important;}
 
