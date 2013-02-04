@@ -186,14 +186,26 @@ label.checkbox.control-label, label.checkbox.control-label: first-child {
 .periodoForm.formInline .control-group:first-child .help-inline {margin-left: 117px;}
 .periodoForm.formInline .control-group .help-inline {margin-left: 0; padding-left: 0;}
 
-input.input30 {width: 30px;}
-input.input60 {width: 54px;}
-input.input120 {width: 120px;}
-input.input240 {width: 238px;}
-input.input360 {width: 360px;}
+.span16 input, input.span16, textarea.span16, .uneditable-input.span16 {width: 1166px;}
+.span15 input, input.span15, textarea.span15, .uneditable-input.span15 {width: 1091px;}
+.span14 input, input.span14, textarea.span14, .uneditable-input.span14 {width: 1016px;}
+.span13 input, input.span13, textarea.span13, .uneditable-input.span13 {width: 941px;}
+.span12 input, input.span12, textarea.span12, .uneditable-input.span12 {width: 866px;}
+.span11 input, input.span11, textarea.span11, .uneditable-input.span11 {width: 791px;}
+.span10 input, input.span10, textarea.span10, .uneditable-input.span10 {width: 716px;}
+.span9 input, input.span9, textarea.span9, .uneditable-input.span9 {width: 641px;}
+.span8 input, input.span8, textarea.span8, .uneditable-input.span8 {width: 566px;}
+.span7 input, input.span7, textarea.span7, .uneditable-input.span7 {width: 491px;}
+.span6 input, input.span6, textarea.span6, .uneditable-input.span6 {width: 416px;}
+.span5 input, input.span5, textarea.span5, .uneditable-input.span5 {width: 341px;}
+.span4 input, input.span4, textarea.span4, .uneditable-input.span4 {width: 266px;}
+.span3 input, input.span3, textarea.span3, .uneditable-input.span3 {width: 191px;}
+.span2 input, input.span2, textarea.span2, .uneditable-input.span2 {width: 116px;}
+.span1 input, input.span1, textarea.span1, .uneditable-input.span1 {width: 41px;}
 
-.input60 input {width: 54px;}
-.input60 label, .input60 .help-inline {min-width: 154px;}
+[class*="span"] input[type="submit"],
+[class*="span"] input[type="radio"],
+[class*="span"] input[type="checkbox"] {width: auto;}
 
 .boxCinzaInner h6 {margin-bottom: 0;}
 
@@ -223,7 +235,6 @@ legend + .control-group {margin-top: 0;}
 .formInline .help-inline {display: inline-block;}
 .formInline .error .help-inline {display: block; margin: 2px 0 0 105px;}
 .error .help-inline {font-size: 11px; display: block; margin: 2px 0 0 0px;}
-.error input {margin-bottom: 0;}
 .input-prepend label + .add-on {border-radius: 3px 0 0 3px; margin-left: 0;}
 
 input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;}
@@ -279,4 +290,5 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 
 .lineFields select {vertical-align: top;}
 .lineFields .addRemoveLine {width: 30px; height: 30px; vertical-align: top}
+
 .lineFields .addRemoveLine:before {margin-left: -8px; margin-top: 3px;}

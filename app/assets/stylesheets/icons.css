@@ -479,7 +479,6 @@ li [class^="icon-"], li [class*=" icon-"] {
   margin-top: 0px;
 }
 .error .ui-datepicker-trigger.icon-calendar {border-color:#953B39;}
-.help-inline {width:inherit;}
 
 [class^="icon-"]:before, [class*=" icon-"]:before,
 .ui-datepicker-trigger.icon-calendar:before {background-image: url(bootstrap/img/glyphicons-halflings.png); position: relative; left:1px; top:1px;}
