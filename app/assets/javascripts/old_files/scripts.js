@@ -43,15 +43,15 @@ Locastyle = (function() {
      $('.listDetail dd', obj).after('<hr class="sep">');
 
     // Datepicker - JQuery UI
-    $('.datepicker', obj).datepicker({
-      showOn: "button",
-      dateFormat: "dd/mm/yy",
-      monthNamesShort: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],
-      monthNames: ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],
-      dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
-      dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
-      dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab']
-    });
+    //$('.datepicker', obj).datepicker({
+    //  showOn: "button",
+    //  dateFormat: "dd/mm/yy",
+    //  monthNamesShort: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],
+    //  monthNames: ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],
+    //  dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
+    //  dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+    //  dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab']
+    //});
 
     // Encontra os .help-inline e define uma largura se referenciando a largura dos inputs próximos.
     //$('.control-group .help-inline, .control-group > .help-inline', obj).each(function(index) {
