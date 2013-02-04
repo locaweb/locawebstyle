@@ -171,8 +171,6 @@
   }
 
   /** TABELA Padrão **/
-  .tableList td:nth-child(2), .tableList th:nth-child(2),
-  .tableList td:nth-child(3), .tableList th:nth-child(3) {visibility:hidden; display:none;}
   table.tableList thead th, table.tableList tbody td {font-size:11px;}
   .subfooter .lastAccess {background-image:none; display:block; padding:0;}
   #rodape nav .lnkSeta, #rodape nav .lnkArrow {margin:2px 0 0 10px; float:left; font-size:11px;}
