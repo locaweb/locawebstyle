@@ -37,3 +37,24 @@ p a.btn {color:#333;}
 	font-size: 14px;
 	padding: 10px 19px 10px 14px;
 }
+
+.btn-choice {width: 100px;margin-bottom: 10px;}
+.btn-shadow {
+	position: relative;
+	background: #bfbfbf!important;
+	border-bottom: 1px solid #adadad!important;
+}
+
+.btn-shadow:after,
+.btn-shadow:before {
+	content: "";
+	position: absolute;
+	border: 9px;
+	border-style: solid;
+	top: 28px;
+}
+
+.btn-shadow:after{border-color: #bfbfbf transparent transparent transparent;left: 42%;}
+.btn-shadow:before{border-color: #adadad transparent transparent transparent;left: 42%;}
+
+
