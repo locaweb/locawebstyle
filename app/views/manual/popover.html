@@ -1,7 +1,12 @@
 <h2>Popover</h2>
 
 <%= content_for_clippy do %>
-	<input type="checkbox"> Um input qualquer <a title="Exemplo de Popover" data-content="Aqui vai um conteúdo maravilhoso para o popover... aceita <b>html</b>" rel="popover">Help!</a>
+	<input type="checkbox"> Um input qualquer
+	<a title="Exemplo de Popover"
+		data-html="true"  rel="popover"
+		data-content="Aqui vai um conteúdo maravilhoso para o popover... aceita <b>html</b>">
+		Help!
+	</a>
 <% end %>
 <h4>Opções</h4>
 <p>As opções devem ser passadas via atributo data, <strong>ex: data-animation="false", data-trigger="click".</strong></p>
@@ -59,6 +64,14 @@
 				<p>Delay para mostrar e esconder o popover (ms) - não aplicável para ativação manual.</p>
 				<p>Se um número é fornecido, o delay é aplicado no hide e show.</p>
 				<p>Estrutura do objeto é: <code>delay: { show: 500, hide: 100 }</code></p>
+			</td>
+		</tr>
+		<tr>
+			<td>html</td>
+			<td>boolean</td>
+			<td>false</td>
+			<td>
+				<p>Permite que o conteúdo tenha código HTML.</p>
 			</td>
 		</tr>
 	</tbody>
