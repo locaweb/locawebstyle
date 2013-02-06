@@ -16,8 +16,12 @@ $lnk_seta_hover_color: #2f767d;
 $button_to_close_modal_color: #000;
 
 $path_way_background_active_color: #eef8f8;
-$path_way_step_active_color: #3B949C;
+$path_way_step_active_color: #3b949c;
 $path_way_description_active_color: #3B949C;
+
+$color_strong: #3A919A;
+$color_medium: #4F84D6;
+$color_soft: #b8cfd2;
 
 @mixin main_gradient {
   background: rgb(59,148,156); /* Old browsers */

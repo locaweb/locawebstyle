@@ -537,7 +537,7 @@ tr.active td .boxActions {padding-top:0;}
 
 /* Status Gradient */
 .countViews,
-.forceClass .statusMessageInfo .gradientSilver{
+.forceClass .messageInfo .gradientSilver{
   background: -moz-linear-gradient(top,  #efefef 0%, #dfdfdf 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#dfdfdf)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top,  #efefef 0%,#dfdfdf 100%); /* Chrome10+,Safari5.1+ */
@@ -547,7 +547,7 @@ tr.active td .boxActions {padding-top:0;}
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#dfdfdf',GradientType=0 ); /* IE6-9 */
 
 }
-.forceClass .statusMessageInfo .gradientRed{
+.forceClass .messageInfo .gradientRed{
   background: #f0e1e1; /* Old browsers */
   background: -moz-linear-gradient(top,  #f0e1e1 0%, #e1c6c4 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0e1e1), color-stop(100%,#e1c6c4)); /* Chrome,Safari4+ */
@@ -559,7 +559,7 @@ tr.active td .boxActions {padding-top:0;}
 
 }
 
-.forceClass .statusMessageInfo .gradientGreen{
+.forceClass .messageInfo .gradientGreen{
   background: #e6efdd; /* Old browsers */
   background: -moz-linear-gradient(top,  #e6efdd 0%, #ccdfbc 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6efdd), color-stop(100%,#ccdfbc)); /* Chrome,Safari4+ */
@@ -839,4 +839,106 @@ a[class*="ico-"] {font-size: 12px;}
   background:#EFEFEF;
   color:#666;
   padding:5px 10px;
+}
+
+
+/*** Tools - Opcoes de Template ***/
+.chooseBox {padding-bottom:20px;}
+.chooseBox:after {
+  content:" ";
+  display:block;
+  clear:both;
+}
+.chooseBox ul {margin-left:20px;}
+.chooseBox h4, .chooseBox p {padding:0 15px 0 60px; margin-bottom:0;}
+.chooseBox h4 {padding-bottom:5px; font-size:18px;}
+
+.chooseBox a.lnkChoose {
+  display:block;
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  text-indent: -9999px;
+  text-align:left;
+  overflow:hidden;
+}
+
+.ie8 .chooseBox a.lnkChoose,
+.ie9 .chooseBox a.lnkChoose,
+.ie7 .chooseBox a.lnkChoose {background:#FFF; filter: alpha(opacity = 0);}
+
+.chooseBox li:first-child {margin-left:0;}
+
+.chooseBox li {
+  position:relative;
+  padding:10px 0;
+  list-style:none;
+  margin-left:17px;
+  background-color: whiteSmoke;
+  background-image: -ms-linear-gradient(top, white, #E6E6E6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#E6E6E6));
+  background-image: -webkit-linear-gradient(top, white, #E6E6E6);
+  background-image: -o-linear-gradient(top, white, #E6E6E6);
+  background-image: linear-gradient(top, white, #E6E6E6);
+  background-image: -moz-linear-gradient(top, white, #E6E6E6);
+  background-repeat: repeat-x;
+  border: 1px solid #CCC;
+  min-height:70px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='white', endColorstr='#E6E6E6', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+   box-shadow:inset 0 8px 10px 0px rgba(256,256,256,0.5);
+}
+.chooseBox .active:after {
+  content: " ";
+  position:absolute;
+  left:50%; margin-left:-15px;
+  bottom:-13px;
+  width: 0; 
+  height: 0; 
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+}
+.chooseBox .active:before {
+  content: " ";
+  position:absolute;
+  left:50%; margin-left:-17px;
+  bottom:-15px;
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+.chooseBox .ico-folder-open:before, 
+.chooseBox .ico-archive:before,
+.chooseBox .ico-terminal:before,
+.chooseBox .ico-vcard:before{
+  color: #545454;
+  font-size: 44px;
+  margin: 10px;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.chooseBox .ico-terminal:before{
+  font-size: 35px;
+}
+.chooseBox li:hover h4, .chooseBox li.active h4 {color: #333;}
+.chooseBox .active:after { border-top: 13px solid #cdcdcd;}
+.chooseBox .active:before {border-top: 15px solid #999;}
+.chooseBox li:hover, .chooseBox li.active {
+  background:#cdcdcd;
+  border:1px solid #999;
+}
+.chooseBox li:hover .ico-folder-open:before,
+.chooseBox li.active .ico-folder-open:before,
+.chooseBox li:hover .ico-archive:before,
+.chooseBox li.active .ico-archive:before,
+.chooseBox li:hover .ico-terminal:before,
+.chooseBox li.active .ico-terminal:before,
+.chooseBox li:hover .ico-vcard:before,
+.chooseBox li.active .ico-vcard:before{
+  color: #333;
 }
