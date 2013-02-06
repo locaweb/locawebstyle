@@ -1,7 +1,6 @@
 html, body {height:100%; font-family:verdana, tahoma, arial, helvetica, sans-serif;}
 
 .geral {position: relative; height:100%; min-height:75%;}
-
 #main {
   padding-top:25px;
   min-height:75%;
@@ -36,11 +35,6 @@ pre {
   font-weight:normal;
 }
 
-iframe {
-  box-shadow:inset 0 2px 5px -2px rgba(0,0,0,0.2);
-  border:1px solid #EFEFEF !important;
-  border-radius:5px;
-}
 
 /**
 *** Clearfix
@@ -213,46 +207,6 @@ h6 .lnkSeta, h6 .lnkArrow {position:relative; top:-1px; margin:0;   border-left:
   padding: 0 15px 11px 15px;
 }
 .boxGray h2 + p {margin-top:10px;}
-
-/** COLLAPSE
-*** É o padrão do Bootstrap com algumas mudanças visuais
-**/
-.collapseGroup {padding-top:20px; margin:0 10px;}
-.collapseGroup .details {
-  background:#f1f1f1;
-  padding:3px 7px;
-  margin-bottom:5px;
-  border-radius:3px;
-  border:1px solid #d6d6d6;
-}
-.collapseGroup .details.active {background-color:#FFF;}
-
-.collapseGroup summary {
-  color:#545454;
-  cursor:pointer;
-  font-family:verdana;
-  display:block;
-  background:url(img/setaCollapseBottom.png) no-repeat 99% center;
-}
-.collapseGroup .active summary { font-weight:bold;   background:url(img/setaCollapseTop.png) no-repeat 99% 8px;}
-.collapseGroup summary span.ico-dot {
-  font-size: 30px;
-  line-height: 20px;
-  margin-right: 0;
-  width: 25px;
-  text-align: center;
-}
-summary.ico-dot:before {font-size:25px; margin-top:-1px;}
-summary.ico-dot + div p {padding-left:23px !important;}
-
-.collapseGroup summary span {
-  font:bold 18px Ubuntu, verdana, arial, tahoma, helvetica, sans-serif;
-  color:#777;
-  border:none;
-}
-
-
-.collapseGroup .details p {padding:10px 30px;}
 
 /**
 *** PAGINACAO e NAVEGACAO
@@ -460,111 +414,141 @@ tr.active td .boxActions {padding-top:0;}
 .ui-datepicker table td a:hover {background-color:#EFEFEF;}
 .alert .close {text-decoration:none;}
 
-/*** statusMessageBox
-**** Usado inicialmente na home de Email Marketing
+/***
+**** Status Message
 ***/
-.statusMessageBox {
-  list-style:none;
+.messageInfo {
   border:1px solid #e5e5e5;
-  border-radius:3px;
-  margin:0 0 5px;
-  font-family:verdana;
+  border-radius: 5px;
+  font-size:12px;
+  font-weight: normal;
+  font-family: verdana, arial, sans-serif;
+  color: #2a2a2a;
+  min-height: 33px;
+  overflow: hidden;
+  display: table;
+  margin-bottom: 10px;
+  width:100%;
+}
+.messageInfo:hover{background:#f0f0f0;}
+.messageInfo:hover .countViews{box-shadow: inset 0 0 0 2px #f0f0f0;}
+.messageInfo:hover .countViews:after{background: url(img/arrowSilver.png) no-repeat right center;}
+.messageInfo > div:last-child {border:none;}
+
+.messageInfo > div {
+  padding:14px 10px;
+  height: inherit;
   position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
 }
-.statusMessageBox:hover {
-  background: #f0f0f0;
-}
-.statusMessageBox .viewMessage{
-  left: 0;
-  position: absolute;
-  top: 0;
-  height: 53px;
-  width: 100%;
-  z-index: 2;
-}
-.statusMessageBox li:first-child {text-align:center;}
-.statusMessageBox > li {
-  vertical-align:middle;
-  border-right:1px solid #e5e5e5;
-  margin-right:5px;
-  padding:13px 5px 12px 0;
-  min-width:65px;
-}
-.statusMessageBox > li.statusContact{ padding-left: 10px;}
 
-.statusMessageBox li a {color:#2a2a2a;}
-
-.statusMessageBox h6 {
-  color:#767676;
-  font:11px verdana, tahoma, arial, helvetica, sans-serif;
-}
-.statusMessageBox p {margin:0; color:#2a2a2a;}
-.statusMessageBox b {
-  font:bold 15px verdana, tahoma, arial, helvetica, sans-serif;
-  color:#2a2a2a;
-}
-.statusMessageBox .countViews h6 {color:rgba(0,0,0,0.5);}
-.statusMessageBox .countViews {
-  margin:2px;
-  min-width:102px;
-  position:relative;
-  border-right:none;
-  padding:9px 8px 9px 0;
-  text-align:center;
-}
-.lists .statusMessageBox:hover .countViews:after{
-   background:url(img/arrowInfo.png) no-repeat 0 -99px;
-} 
-.lists .statusMessageBox .countViews:after{
-  background:url(img/arrowInfo.png) no-repeat 0 0;
+.messageInfo > div:before {
   content: " ";
+  display: inline-block;
+  height: 500px;
+  border-right:1px solid #e5e5e5;
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 7px;
-  height: 98px;
+  left: 0;
+  top: -50px;
 }
-.overflowMessage + .overflowMessage {border-right:none; margin-right:0; width:29%;}
-.statusMessageBox .overflowMessage p {width:10000px;}
-.lists .statusMessageBox p{height: 27px;}
-.lists .statusMessageBox .countViews {
-  padding: 21px 10px 19px 0;
-  height: 57px;
-  font-weight:normal;
-}
-.lists .statusMessageBox > li{padding: 10px 5px 0 0; position: relative;}
-.lists .statusMessageBox .countViews h6 {padding-left:0; font-weight:normal;}
-.lists .statusMessageBox .countViews p {padding-left:0;}
+.messageInfo .countViews:before,
+.messageInfo .countViews + div:before {display: none;}
 
-.statusMessageBox > li {margin-left:0; border-right:none; ; margin-left:2px;}
-.lists .statusMessageBox h6 {
-  font:bold 12px verdana, arial, tahoma, sans-serif;
-  color:#545454;
+.messageInfo > div .actionsTable {
+  display: block;
+  border-top: 1px solid #e5e5e5;
+  margin:20px 0 -14px;
 }
-.lists .statusMessageBox p {color:#767676; padding:3px 0 0 10px; font:12px verdana, arial, helvetica, tahoma, sans-serif;}
 
-h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; border-left:1px solid #CCC; color:#767676;}
-.statusMessageBox > li.messageBorder{
+.messageInfo h5, .messageInfo h5 a {
+  color:#767676;
+  font:normal 12px verdana, sans-serif;
+}
+.messageInfo h6, .messageInfo h6 a {
+  font:bold 15px verdana, arial, sans-serif;
+}
+.messageInfo:after {content: " "; display: block; clear:both;}
+.messageInfo .countViews a, 
+.messageInfo .countViews a:hover {color:#2a2a2a;}
+
+.messageInfo [class*="span"] {margin-left:0;}
+.messageInfo .headerInfo span.label-info, 
+.messageInfo .headerInfo span.badge-info{color: #fff;}
+.messageInfo .countViews {
+  border-radius: 5px 0 0 5px;
+  text-align: center;
+  position: relative;
+  border-right: 0;
+  min-height:50px;
+  height: inherit;
+  overflow: hidden;
+  display: table-cell;
+  box-shadow: inset 0 0 0 2px #FFF;
+}
+.messageInfo .countViews strong{ color: #545454;}
+.messageInfo .countViews:after{
+  background: url(img/arrowWhite.png) no-repeat right center;
+  content: " ";
+  width: 17px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  top: 50%; right: 2px;
+  margin-top: -20px;
+}
+
+.messageInfo p {color: #2a2a2a;}
+.messageInfo p {margin: 0;}
+
+.messageInfo i {
+  color:#1a8e00;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.messageInfo .headerInfo {
+  border-bottom:1px solid #e5e5e5;
+  margin:-14px 0 10px;
+  overflow: hidden;
+}
+
+.messageInfo .headerInfo span {
+  display: inline;
+  color: #767676;
   border-left: 1px solid #e5e5e5;
-  border-right: 1px solid #e5e5e5;
-  padding: 13px 5px 12px 10px;
+  padding:0 5px 0 8px;
+  position: relative;
+  top: 6px;
 }
-/* inserindo Status */
-.lists .statusMessageBox .status{
-  border-left: 1px solid #E5E5E5;
-  padding: 8px 0 8px 10px;
-  position: absolute;
-  left: 80%;
-  top: 0;
+.messageInfo .headerInfo strong{color: #545454;}
+
+.messageInfo .headerInfo span:first-child {border-left:none;}
+.messageInfo .headerInfo .translation_missing{top: 0;}
+.messageInfo .headerInfo .fRight {
+  display: inline-block;
+  border-left: 1px solid #e5e5e5;
+  border-right: none;
+  padding:5px 10px;
+  position: static;
+  width: 300px;
 }
-
-.statusMessageBox .actionsTable{margin: 7px 0px 7px 10px;}
-.lists .statusMessageBox > li{ padding: 10px 0px 0 0;}
-.lists .statusMessageBox .countViews h6{font-weight: bold;}
-.countViews small{ color: #767676;}
-.lists .statusMessageBox .status > span {font-weight: normal;}
-.lists .statusMessageBox .status b{font-size: 12px;}
-
+/* Utilizado dentro de collapse */
+.simpleMessageInfo .messageInfo{
+  border:none;
+  display: block; 
+  margin: 0;
+}
+.simpleMessageInfo .messageInfo > div{
+  display: block;
+  padding: 0;
+}
+.simpleMessageInfo .messageInfo > div .actionsTable{margin: 0;}
+.simpleMessageInfo .messageInfo > div::before{border: none;}
+.boxCinzaInner .messageInfo:hover{background: none;}
+.simpleMessageInfo strong{color: #545454;}
+.simpleMessageInfo .messageInfo .headerInfo{margin: 0; border: none;}
 /***
 **** BREADCRUMB
 ***/
@@ -665,15 +649,33 @@ td .progress {max-width:70px;}
 **** antigo infoBubble
 ***/
 .infoBubble, [rel="popover"] {
-  width:14px; height:14px;
-  display:inline-block;
-  cursor:pointer;
-  background:url(img/infoBubble.png) no-repeat center center;
-  position:relative;
-  vertical-align: middle;
-  text-indent: -9999px;
-  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  background-color: #194092;
+  border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  box-shadow: 0 0 3px #224c9b inset;
+  color: #FFF !important;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  height: 14px;
+  line-height: 14px;
+  padding: 0 4px;
+  border-radius: 4px;
 }
+
+/*** POPOVER
+**** Novo icone infoBubble testado na Revenda
+***/
+.infoBubble:before, 
+[rel="popover"]:before{
+  content: "?";
+  color:#FFF !important;
+}
+
 
 .infoBubble h6, [rel="popover"] h6 {
   color:#1a4294;
@@ -804,3 +806,38 @@ td .progress {max-width:70px;}
 a[class*="ico-"] {font-size: 12px;}
 
 .forceClass a.warning {color: #b54646;}
+.forceClass .control-group.error input[type="text"], 
+.forceClass .control-group.error input[type="password"], 
+.forceClass .control-group.error input[type="number"], 
+.forceClass .control-group.error input[type="email"],
+.forceClass .control-group.error input[type="date"]{
+  color: inherit;
+}
+
+
+
+/**
+*** Container para marcar exemplos
+**/
+.example {
+  border:1px solid #E1E1E8;
+  border-radius:3px;
+  padding:40px 10px 10px;
+  position: relative;
+}
+.example + pre {margin-top:-1px; margin-bottom: 30px;}
+.example + pre + table {margin-top:-31px; margin-bottom:30px;}
+.example + pre + p {border:1px solid #E1E1E8; padding:10px; border-radius: 3px; margin-top:-20px; margin-bottom: 30px;}
+
+.example:before {
+  position: absolute;
+  top: 0; left: 0;
+  font-size: 11px;
+  border-bottom:1px solid #E1E1E8;
+  border-right:1px solid #E1E1E8;
+  content: "Exemplo";
+  display: inline-block;
+  background:#EFEFEF;
+  color:#666;
+  padding:5px 10px;
+}

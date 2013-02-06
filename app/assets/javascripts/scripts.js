@@ -5,7 +5,8 @@ Locastyle = (function() {
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   Locastyle.prototype.init = function(obj) {
-
+    window.locastyle.linkToggle();
+    window.locastyle.inputDataValue();
     // Define um intervalo para o Wizard demorar para rodar sozinho
     $('.modalSlider .carousel', obj).carousel({interval: 1000000});
     $('.modalSlider .modal-footer', obj).find('.btnSalvar').hide();
@@ -120,25 +121,38 @@ Locastyle = (function() {
     }
   };
 
-  return Locastyle;
-})();
+  Locastyle.prototype.linkToggle = function(){
+    $('.lnkToggle').on('click',function(e){
+      e.preventDefault();
+      var itemClass = $('.toggleChild').attr('data-class');
+      $(this).parents('.toggleChild').find('.itemToToggle').toggleClass("dNone");
+      $(this).parents('.toggleChild').toggleClass(itemClass);
+      window.locastyle.changeDataValue(this);
+      $(this).trigger($.Event('lnkToggleFinish'));
+    });
+  };
 
-$(document).ready(function() {
-  window.locastyle = new Locastyle();
+  Locastyle.prototype.changeDataValue = function(target){
+    if($(target).hasClass('btn')){
+      var inputs = $(target).parents(".toggleChild").find('[data-value]')
+      inputs.each(function(){
+        $(this).val($(this).data('value'));
+      });
+        
+    }
+  }
 
-  function inputDataValue(){
-    $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]'), function(i, field){
+  Locastyle.prototype.inputDataValue = function(element){
+    $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]', element), function(i, field){
       var value = $(this).attr("value");
       $(this).attr("data-value", value);
-      var inputId =  $(this).attr("id");
-      $(".btn.lnkToggle").on("click", function(){
-        if(value !== undefined){
-          $("#"+inputId).val(value);
-        }
-      });
     });
   }
-  inputDataValue()
+
+  return Locastyle;
+})();
+window.locastyle = new Locastyle();
+$(document).ready(function() {
 
   // Contando quantos sliders items tem no slider das sidebares
   $.each($('.sideBox .carousel'), function() {
@@ -150,6 +164,8 @@ $(document).ready(function() {
       $('.carouselNav b', this).html($('.active', this).index() + 1);
     }
   });
+
+  $(".modalAutoOpen").modal();
 
   // Limpa inputs de formulários. Muito usado na busca avançada.
   $('.clearFormBt').live('click', function(e){
@@ -255,7 +271,8 @@ $(document).ready(function() {
   // CHAMADAS: Faz o click acontecer no chamadas
   // $('.chamadasBox div').find('h3 a').clone().addClass('lnkCoverAll').appendTo($(this));
   $('.chamadasBox div').each(function(){
-    $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll') );
+    var title = $(this).find('p').text()
+    $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll').attr('title',title).attr('aria-label',title) );
   })
 
   if($.cookie("minShortcuts") == 0 || $.cookie("minShortcuts") == null){
@@ -281,32 +298,6 @@ $(document).ready(function() {
     $(this).toggleClass("shortcutExpanded");
     changeText('.minShortcuts[data-text]')
   });
-
-
-  //
-  // TRACK EVENT ANALYTICS
-  // $('.serviceName a').attr('onclick', "_gaq.push(['_trackEvent(category, action, opt_label, opt_value, opt_noninteraction)]);");
-  $('.serviceName a').attr('onclick', "_gaq.push(['_trackEvent', 'Logo', 'Clique', 'Nome do Servico']);"); // Logo do produto
-  $('.logOut').attr('onclick', "_gaq.push(['_trackEvent', 'BT_Sair', 'Clique', 'Sair do Servico']);"); // Botão sair
-  $('.lnkSugestoes').attr('onclick', "_gaq.push(['_trackEvent', 'BT_Sugestoes', 'Clique', 'Sugestoes Feedbackr']);"); // Link de sugestões
-  $('.infoLogin .btn-group').attr('onclick', "_gaq.push(['_trackEvent', 'Combo_Administrar', 'Clique', 'Troca de Ambiente']);"); // Combo de mudança de ambiente
-
-  $('.minShortcuts.shortcutExpanded').attr('onclick', "_gaq.push(['_trackEvent', 'Atalhos', 'Clique', 'Minimizar']);"); // links minimizar atalhos
-  $('.minShortcuts').attr('onclick', "_gaq.push(['_trackEvent', 'Atalhos', 'Clique', 'Expandir']);"); // links expandir atalhos
-
-  $('.span12 .carousel-control.left').attr('onclick', "_gaq.push(['_trackEvent', 'Slider', 'Clique', 'Anterior']);"); // seta dica esquerda HOME
-  $('.span12 .carousel-control.right').attr('onclick', "_gaq.push(['_trackEvent', 'Slider', 'Clique', 'Proximo']);"); // seta dica direita HOME
- 
-  $('.innerSideBox .carousel-control.left').attr('onclick', "_gaq.push(['_trackEvent', 'Slider', 'Clique', 'Anterior']);"); // seta dica esquerda
-  $('.innerSideBox .carousel-control.right').attr('onclick', "_gaq.push(['_trackEvent', 'Slider', 'Clique', 'Proximo']);"); // seta dica direita
-
-  $('.footerTop .ico-helpDesk').attr('onclick', "_gaq.push(['_trackEvent', 'Atendimento', 'Clique', 'Helpdesk']);"); // link Help Desk do Footer
-  $('.footerTop .ico-Chat').attr('onclick', "_gaq.push(['_trackEvent', 'Atendimento', 'Clique', 'Chat']);"); // link Chat do Footer
-  $('.footerTop .ico-Telefone').attr('onclick', "_gaq.push(['_trackEvent', 'Atendimento', 'Clique', 'Telefone']);"); // link Telefone do Footer
-  $('.footerTop .lnkSeta.lnkSetaWhite').attr('onclick', "_gaq.push(['_trackEvent', 'Atendimento', 'Clique', 'VerFormasAtendimento']);"); // Link Ver Outras Formas
-
-
-
 
   // NOTIFICATION: Não exibe o alert de notificação
   var alertNotifica = $('.lnkNoShow').attr('data-target')
@@ -335,11 +326,5 @@ $(document).ready(function() {
   var dataClass = $('.toggleChild').data('class')
   $('.toggleChild').addClass(dataClass);
 
-  $('.lnkToggle').on('click',function(e){
-    e.preventDefault();
-    var itemClass = $('.toggleChild').attr('data-class');
-    $(this).parents('.toggleChild').find('.itemToToggle').toggleClass("dNone");
-    $(this).parents('.toggleChild').toggleClass(itemClass);
-  })
 });
 

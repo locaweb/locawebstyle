@@ -53,5 +53,9 @@ $path_way_description_active_color: #3ba9f1;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafcfd', endColorstr='#c9deec',GradientType=0 );
 
 }
+@mixin box_sidebar {
+  background-color: #3ba9f1;
+}
+
 
 @import "theme_base";

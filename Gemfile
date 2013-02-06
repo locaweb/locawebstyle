@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-source "http://gems.locaweb.com.br/"
 
 gem 'rails',    '3.2.2'
 gem 'unicorn',  '~> 4.2.0'

@@ -23,7 +23,7 @@
 
 .innerSideBox [class^="ico-"], .innerSideBox [class*="ico-"] {color:#2a3a2a;}
 
-.innerSideBox + .innerSideBox {margin-top:1px; margin-bottom:1px;}
+.innerSideBox + .innerSideBox {margin-top:1px;}
 
 .sideBox h6, .sideBox .grayP {
   margin:0; padding:0;
@@ -46,10 +46,10 @@
 .titSide {
   text-transform:uppercase;
   font:300 18px Ubuntu;
-  margin:-26px 0 0 10px;
+  margin:-38px 0 0 10px;
   background-repeat: no-repeat;
   background-position: left top;
-  padding: 2px 0 18px 40px;
+  padding: 2px 0 18px 50px;
   text-transform: uppercase;
   letter-spacing: -1px;
 }
@@ -60,6 +60,7 @@
 .colorGreen .titSide.titDadosConta {background-image:url(img/ico-dadosContaGreen.png);}
 .colorGreen .titSide.titAjudaSuporte {background-image:url(img/ico-ajudasuporteGreen.png);}
 .colorGreen .titSide.titDicas {background-image:url(img/ico-dicasGreen.png);}
+
 
 /** Lista com links em BG Branco **/
 .listWhite {margin:0; padding:0;}
@@ -155,3 +156,45 @@ h4 + .boxWhite {margin-top:4px;}
 
 .sideBox h5 {padding:10px 10px 0; margin:0;}
 h5 + .innerSideBox {margin-top:5px;}
+
+/* Box para icones */
+.boxSidebarTitle {
+  background-image: url(img/bgIconSidebar.png);
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-color: #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  left: 10px;
+  width: 35px;
+  top: -26px;
+  padding: 1px;
+  position: absolute;
+  height: 32px;
+}
+.boxSidebarTitle:before {
+  border-color: #000 transparent transparent transparent;
+  border-width: 8px;
+  border-style: solid;
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 10px;
+}
+.boxSidebarTitle i {
+  color: #fff!important;
+  font-size: 27px;
+  margin:6px 0 0 9px;
+  font-weight: normal;
+  font-style: normal;
+}
+.boxSidebarTitle i.ico-user{
+  margin: 6px 0 0 5px;
+}
+.boxSidebarTitle i.cmicon-help {
+  margin: 7px 0 0 10px;
+  position: absolute;
+  font-weight: bold;
+}
+.home .sideBox{padding: 10px 0;}

@@ -50,5 +50,9 @@ $path_way_description_active_color: #354d12;
   background: linear-gradient(to bottom,  #fcfdfa 0%,#cddcbd 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfdfa', endColorstr='#cddcbd',GradientType=0 );
 }
+@mixin box_sidebar {
+  background-color: #354d12;
+}
+
 
 @import "theme_base";
