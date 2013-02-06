@@ -18,6 +18,10 @@ $path_way_background_active_color: #f6f0e1;
 $path_way_step_active_color: #c8752a;
 $path_way_description_active_color: #4d2b12;
 
+$color_strong: #D18E4F;
+$color_medium: #bdb174;
+$color_soft: #fff2d8;
+
 @mixin main_gradient {
   background: rgb(255,165,6); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(255,165,6,1) 5%, rgba(255,150,2,1) 6%, rgba(254,167,0,1) 100%); /* FF3.6+ */

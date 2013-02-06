@@ -114,3 +114,23 @@
   @include gradient_light;
 }
 
+#{$theme_name} .chooseBox li:hover h4, 
+#{$theme_name} .chooseBox li.active h4 {color: $color_strong;}
+#{$theme_name} .chooseBox .active:after { border-top: 13px solid $color_soft;}
+#{$theme_name} .chooseBox .active:before {border-top: 15px solid $color_medium;}
+#{$theme_name} .chooseBox li:hover, 
+#{$theme_name} .chooseBox li.active {
+  background: $color_soft;
+  border:1px solid $color_medium;
+}
+#{$theme_name} .chooseBox li:hover .ico-folder-open:before,
+#{$theme_name} .chooseBox li.active .ico-folder-open:before,
+#{$theme_name} .chooseBox li:hover .ico-archive:before,
+#{$theme_name} .chooseBox li.active .ico-archive:before,
+#{$theme_name} .chooseBox li:hover .ico-terminal:before,
+#{$theme_name} .chooseBox li.active .ico-terminal:before,
+#{$theme_name} .chooseBox li:hover .ico-vcard:before,
+#{$theme_name} .chooseBox li.active .ico-vcard:before{
+  color: $color_strong;
+}
+
