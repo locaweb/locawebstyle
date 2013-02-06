@@ -537,7 +537,7 @@ tr.active td .boxActions {padding-top:0;}
 
 /* Status Gradient */
 .countViews,
-.forceClass .messageInfo .gradientSilver{
+.forceClass .gradientSilver{
   background: -moz-linear-gradient(top,  #efefef 0%, #dfdfdf 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#dfdfdf)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top,  #efefef 0%,#dfdfdf 100%); /* Chrome10+,Safari5.1+ */
@@ -547,7 +547,7 @@ tr.active td .boxActions {padding-top:0;}
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#dfdfdf',GradientType=0 ); /* IE6-9 */
 
 }
-.forceClass .messageInfo .gradientRed{
+.forceClass .gradientRed{
   background: #f0e1e1; /* Old browsers */
   background: -moz-linear-gradient(top,  #f0e1e1 0%, #e1c6c4 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0e1e1), color-stop(100%,#e1c6c4)); /* Chrome,Safari4+ */
@@ -559,7 +559,7 @@ tr.active td .boxActions {padding-top:0;}
 
 }
 
-.forceClass .messageInfo .gradientGreen{
+.forceClass .gradientGreen{
   background: #e6efdd; /* Old browsers */
   background: -moz-linear-gradient(top,  #e6efdd 0%, #ccdfbc 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6efdd), color-stop(100%,#ccdfbc)); /* Chrome,Safari4+ */
