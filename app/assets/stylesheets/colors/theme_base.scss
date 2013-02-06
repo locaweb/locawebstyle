@@ -110,4 +110,7 @@
 #{$theme_name} .boxSidebarTitle{
   @include box_sidebar;
 }
+#{$theme_name}  .countViews{
+  @include gradient_light;
+}
 
