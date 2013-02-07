@@ -6,6 +6,7 @@ Locastyle = (function() {
       this.datePickerSetup(dom_scope, this.datePickerOptions);
       this.numbersOnly();
       this.collapseActivate();
+      this.activateCollapseOnShown();
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -46,8 +47,15 @@ Locastyle = (function() {
     },
 
     numbersOnly: function() {
-      $('.numbersOnly').keyup(function () {
+      $('.numbersOnly').keyup(function() {
         this.value = this.value.replace(/[^0-9\.]/g,'');
+      });
+    },
+
+    activateCollapseOnShown: function() {
+      var self = this;
+      $('.collapse').on('shown', function(){
+        self.collapseActivate();
       });
     },
 
