@@ -255,21 +255,16 @@ $(document).ready(function() {
   // boxCollapse são aqueles collapses como na página de CONFIGURAÇÃO do Email Marketing
   // collpaseGroup fazem parte dos collapses utilizados na home, como em Gateway.
   //
-  function boxCollapseActive() {
-    $('.collapse').on('show', function(){
-      $(this).parents('.boxCollapse, .details').addClass('active');
-      $(this).attr('aria-hidden','false');
-      $(this).find('*[tabindex="0"]').attr('tabindex','3');
-      $(this).attr('aria-expanded','true');
-    });
 
-    $('.collapse').on('hide', function(){
-      $(this).parents('.boxCollapse, .details').removeClass('active');
-      $(this).attr('aria-hidden','true');
-      $(this).find('*[tabindex="3"]').attr('tabindex','0');
-      $(this).attr('aria-expanded','false');
-    });
-  }
+  //function boxCollapseActive() {
+  //  $('.collapse').on('show', function(){
+  //    $(this).parents('.boxCollapse, .details').addClass('active');
+  //  });
+
+  //  $('.collapse').on('hide', function(){
+  //    $(this).parents('.boxCollapse, .details').removeClass('active');
+  //  });
+  //}
 
   // Pega todos os collapses e deixa sob a função de adicionar ACTIVE nos parents.
   $('[data-toggle="collapse"]').click( boxCollapseActive() );

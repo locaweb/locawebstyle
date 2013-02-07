@@ -7,6 +7,7 @@ Locastyle = (function() {
       this.numbersOnly();
       this.collapseActivate();
       this.activateCollapseOnShown();
+      this.deactivateCollapseOnHide();
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -59,8 +60,19 @@ Locastyle = (function() {
       });
     },
 
+    deactivateCollapseOnHide: function() {
+      var self = this;
+      $('.collapse').on('hide', function(){
+        self.collapseDeactivate();
+      });
+    },
+
     collapseActivate: function() {
       $(".collapse.in").parents(".boxCollapse").addClass("active");
+    },
+
+    collapseDeactivate: function() {
+      $(".collapse.in").parents(".boxCollapse").removeClass("active");
     }
   }
 });

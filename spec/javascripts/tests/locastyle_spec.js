@@ -73,6 +73,16 @@ describe("Locastyle", function() {
           expect($(".boxCollapse.first")).toHaveClass("active");
         });
       })
+
+      describe("When a collapse hide", function () {
+        it("should remove .active css class on the parent .boxCollapse", function () {
+          var locastyle = new Locastyle();
+          locastyle.base.init($(document));
+          $(".boxCollapse.second [data-toggle='collapse']").trigger("click");
+          $(".boxCollapse.second .collapse").trigger("hide");
+          expect($(".boxCollapse.second")).not.toHaveClass("active");
+        });
+      })
     });
   });
 
