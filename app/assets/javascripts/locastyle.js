@@ -5,6 +5,7 @@ Locastyle = (function() {
       this.toggleTextOnHover(dom_scope);
       this.datePickerSetup(dom_scope, this.datePickerOptions);
       this.numbersOnly();
+      this.collapseActivate();
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -48,6 +49,10 @@ Locastyle = (function() {
       $('.numbersOnly').keyup(function () {
         this.value = this.value.replace(/[^0-9\.]/g,'');
       });
+    },
+
+    collapseActivate: function() {
+      $(".collapse.in").parents(".boxCollapse").addClass("active");
     }
   }
 });

@@ -54,6 +54,16 @@ describe("Locastyle", function() {
         expect($(".numbersOnly").val()).toEqual(expectedValue);
       });
     });
+
+    describe("Collapse activation", function () {
+      describe("When a collapse has class .in", function () {
+        it("should add .active css class on the parent .boxCollapse", function () {
+          var locastyle = new Locastyle();
+          locastyle.base.init($(document));
+          expect($(".boxCollapse.second")).toHaveClass("active");
+        });
+      });
+    });
   });
 
   describe("Toggle text", function () {

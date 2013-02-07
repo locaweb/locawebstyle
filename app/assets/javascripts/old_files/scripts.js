@@ -64,7 +64,7 @@ Locastyle = (function() {
     $('[data-toggle=show]', obj).filter(':checked').change();
 
     // Insere uma classe ACTIVE para o primeiro Collpase
-    $('.collapseGroup summary:first', obj).not('noAutoActive').addClass('active').parent('.details').addClass('active');
+    //$('.collapseGroup summary:first', obj).not('noAutoActive').addClass('active').parent('.details').addClass('active');
 
     // Verifica se os inputs dentro da busca avançada estão vazios, se não estiverem, a busca avancada fica aberta
     var inputVazio;
