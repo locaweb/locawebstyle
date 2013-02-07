@@ -258,10 +258,14 @@ $(document).ready(function() {
   function boxCollapseActive() {
     $('.collapse').on('show', function(){
       $(this).parents('.boxCollapse, .details').addClass('active');
+      $(this).attr('aria-hidden','false');
+      $(this).attr('aria-expanded','true');
     });
 
     $('.collapse').on('hide', function(){
       $(this).parents('.boxCollapse, .details').removeClass('active');
+      $(this).attr('aria-hidden','true');
+      $(this).attr('aria-expanded','false');
     });
   }
 

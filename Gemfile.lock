@@ -1,6 +1,5 @@
 GEM
   remote: https://rubygems.org/
-  remote: http://gems.locaweb.com.br/
   specs:
     actionmailer (3.2.2)
       actionpack (= 3.2.2)
