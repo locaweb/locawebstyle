@@ -13,6 +13,7 @@
 src_files:
   - assets/jquery.js
   - assets/jquery-ui.min.js
+  - assets/bootstrap/js/bootstrap.js
 # DEPENDENCIES
   - assets/locastyle.js
 
