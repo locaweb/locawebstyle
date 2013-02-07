@@ -42,6 +42,18 @@ describe("Locastyle", function() {
         expect(locastyle.base.datePickerSetup).toHaveBeenCalledWith($(document), expectedOptions);
       });
     });
+
+    describe("Numbers only", function () {
+      it("should watch keyup event and allow only numbers in a input with .numbersOnly css class", function () {
+        var locastyle = new Locastyle();
+        var insertedValue = "1l2o3c4a5";
+        $(".numbersOnly").val(insertedValue)
+        var expectedValue = "12345";
+        locastyle.base.init($(document));
+        $(".numbersOnly").trigger("keyup");
+        expect($(".numbersOnly").val()).toEqual(expectedValue);
+      });
+    });
   });
 
   describe("Toggle text", function () {

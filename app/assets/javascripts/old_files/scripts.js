@@ -189,9 +189,9 @@ $(document).ready(function() {
   });
 
   // Faz o usuário só usar números em vez de letras.
-  $('.numbersOnly').keyup(function () {
-    this.value = this.value.replace(/[^0-9\.]/g,'');
-  });
+  //$('.numbersOnly').keyup(function () {
+  //  this.value = this.value.replace(/[^0-9\.]/g,'');
+  //});
 
   // Insere a possibilidade de inserir acoes especificas de toggle definidos para os collapses
   $('body').on('change.collapse.data-api', '[data-toggle=hide]', function (e) {
