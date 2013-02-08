@@ -10,6 +10,7 @@ Locastyle = (function() {
       this.deactivateCollapseOnHide();
       this.htmlForceClass();
       this.disableClass();
+      this.classParentLiMenu();
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -83,6 +84,10 @@ Locastyle = (function() {
 
     disableClass: function() {
       $("input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]").addClass("disabled");
+    },
+
+    classParentLiMenu: function() {
+      $("#menuPrincipal li").has('ul').addClass("parent");
     }
 
   }

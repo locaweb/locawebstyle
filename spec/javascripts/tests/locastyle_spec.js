@@ -146,5 +146,13 @@ describe("Locastyle", function() {
     });
   });
 
+  describe("Parent Class on Li parent", function () {
+    it("should put a .parent in LI element that have a UL as a child", function (){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        expect($("#menuPrincipal li")).toHaveClass("parent");
+    });
+  });
 
 });

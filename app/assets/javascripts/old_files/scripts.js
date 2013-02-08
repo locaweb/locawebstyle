@@ -204,9 +204,10 @@ $(document).ready(function() {
     $($(this).data('target')).collapse('show');
   });
 
-  $('[data-toggle="collapse"]').click(function (e){e.preventDefault();});
+  // Tem que analisar direito depois.
+  // $('[data-toggle="collapse"]').click(function (e){e.preventDefault();});
 
-  $('#menuPrincipal li').has('ul').addClass('parent');
+  // $('#menuPrincipal li').has('ul').addClass('parent');
 
   // $('input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]').addClass('disabled');
 
