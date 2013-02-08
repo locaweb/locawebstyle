@@ -28,7 +28,7 @@ Locastyle = (function() {
     });
 
     // Faz a modal animar \o/
-    $('.modal', obj).addClass('fade');
+    //$('.modal', obj).addClass('fade');
 
     // Ativa focus quando termina de abrir o modal
     $('.modal', obj).on('shown', function () {
