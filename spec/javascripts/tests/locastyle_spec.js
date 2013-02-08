@@ -72,7 +72,7 @@ describe("Locastyle", function() {
           $(".boxCollapse.first .collapse").trigger("shown");
           expect($(".boxCollapse.first")).toHaveClass("active");
         });
-      })
+      });
 
       describe("When a collapse hide", function () {
         it("should remove .active css class on the parent .boxCollapse", function () {
@@ -127,5 +127,24 @@ describe("Locastyle", function() {
       });
     });
   });
+
+  describe("HTML ForceClass", function () {
+    it("should put a .forceClass on HTML tag", function (){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        expect($("html")).toHaveClass("forceClass");
+    });
+  });
+
+  describe("Class .disabled in form fields", function () {
+    it("should put a .disabled in inputs, selects and textareas that have DISABLE or READONLY attributes", function (){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        expect($("input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]")).toHaveClass("disabled");
+    });
+  });
+
 
 });

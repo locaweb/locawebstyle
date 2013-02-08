@@ -208,7 +208,7 @@ $(document).ready(function() {
 
   $('#menuPrincipal li').has('ul').addClass('parent');
 
-  $('input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]').addClass('disabled');
+  // $('input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]').addClass('disabled');
 
   // Faz o texto do link que troca da busca SIMPLES para AVANÇADA
   //$('.lnkSeta[data-text], .lnkArrow[data-text], [data-toggletext="true"]').live('click', function(e){
@@ -241,7 +241,7 @@ $(document).ready(function() {
   });
 
   // As vezes temos problemas de hierarquia e conflitos de CSS. Essa classe ajuda a sanar isso
-  $('html').addClass('forceClass');
+  // $('html').addClass('forceClass');
 
   // Desabilita click em botoes com disabled
   $('.btn.disabled').click(function(event){event.preventDefault();})

@@ -8,6 +8,8 @@ Locastyle = (function() {
       this.collapseActivate();
       this.activateCollapseOnShown();
       this.deactivateCollapseOnHide();
+      this.htmlForceClass();
+      this.disableClass();
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -73,6 +75,15 @@ Locastyle = (function() {
 
     collapseDeactivate: function() {
       $(".collapse.in").parents(".boxCollapse").removeClass("active");
+    },
+
+    htmlForceClass: function() {
+      $("html").addClass("forceClass");
+    },
+
+    disableClass: function() {
+      $("input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]").addClass("disabled");
     }
+
   }
 });
