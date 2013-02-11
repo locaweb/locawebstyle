@@ -245,7 +245,7 @@ $(document).ready(function() {
   // $('html').addClass('forceClass');
 
   // Desabilita click em botoes com disabled
-  $('.btn.disabled').click(function(event){event.preventDefault();})
+  //$('.btn.disabled').click(function(event){event.preventDefault();})
 
   // Faz o popover ser habilitado no HOVER e não no Click.
   $('[rel="popover"]').popover({trigger: 'hover'})

@@ -12,6 +12,7 @@ Locastyle = (function() {
       this.disableClass();
       this.classParentLiMenu();
       this.modalAutoFocus(dom_scope);
+      this.preventDefaultOnDisabled(dom_scope)
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -95,6 +96,12 @@ Locastyle = (function() {
       $('.modal', dom_scope).on('shown', function () {
         $('.autoFocus', this).focus();
       });
+    },
+
+    preventDefaultOnDisabled: function(dom_scope) {
+      $('.btn.disabled').click( function(event) {
+        event.preventDefault();
+      })
     }
   }
 });

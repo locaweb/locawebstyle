@@ -169,4 +169,14 @@ describe("Locastyle", function() {
     });
   });
 
+  describe("Prevent default event", function () {
+    it("should prevent default events in elements with the .btn.disabled css classes", function () {
+      var dom_scope = $("#locastyle_fixture");
+      var locastyle = new Locastyle();
+      locastyle.base.init(dom_scope);
+      spyOnEvent($('#disable_me'), 'click');
+      $('#disable_me').click();
+      expect("click").toHaveBeenPreventedOn($("#disable_me"));
+    });
+  });
 });
