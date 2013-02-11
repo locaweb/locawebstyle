@@ -165,7 +165,7 @@ $(document).ready(function() {
     }
   });
 
-  $(".modalAutoOpen").modal();
+  //$(".modalAutoOpen").modal();
 
   // Limpa inputs de formulários. Muito usado na busca avançada.
   $('.clearFormBt').live('click', function(e){

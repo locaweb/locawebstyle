@@ -158,7 +158,7 @@ describe("Locastyle", function() {
   describe("Auto focus in modals", function () {
     describe("When modals triggers shown event", function () {
       it("should activate focus on fields with the .autoFocus css class", function () {
-        var dom_scope = $("#locastyle_fixture");
+        var dom_scope = $("#only_focus_modal");
         var locastyle = new Locastyle();
         locastyle.base.init(dom_scope);
         $(".modal_to_focus_trigger").trigger("click");
@@ -189,6 +189,16 @@ describe("Locastyle", function() {
         locastyle.base.init(dom_scope);
         expect($("#collapse_with_error").height()).not.toEqual(0);
       });
+    });
+  });
+
+  describe("Modal auto open", function () {
+    it("should open modals with the css class '.modalAutoOpen'", function () {
+      loadFixtures('modal_auto_open.html');
+      var dom_scope = $("#modal_auto_open_fixture");
+      var locastyle = new Locastyle();
+      locastyle.base.init(dom_scope);
+      expect($(".modalAutoOpen").data("modal").isShown).toEqual(true);
     });
   });
 });

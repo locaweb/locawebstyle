@@ -14,6 +14,7 @@ Locastyle = (function() {
       this.modalAutoFocus(dom_scope);
       this.preventDefaultOnDisabled(dom_scope);
       this.openCollapsesWithError(dom_scope);
+      this.autoOpenModal(dom_scope);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -107,6 +108,10 @@ Locastyle = (function() {
 
     openCollapsesWithError: function(dom_scope) {
       $('.collapse .error', dom_scope).parents('.collapse').collapse('show');
+    },
+
+    autoOpenModal: function(dom_scope) {
+      $(".modalAutoOpen").modal("show");
     }
   }
 });
