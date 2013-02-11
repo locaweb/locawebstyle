@@ -12,7 +12,8 @@ Locastyle = (function() {
       this.disableClass();
       this.classParentLiMenu();
       this.modalAutoFocus(dom_scope);
-      this.preventDefaultOnDisabled(dom_scope)
+      this.preventDefaultOnDisabled(dom_scope);
+      this.openCollapsesWithError(dom_scope);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -102,6 +103,10 @@ Locastyle = (function() {
       $('.btn.disabled').click( function(event) {
         event.preventDefault();
       })
+    },
+
+    openCollapsesWithError: function(dom_scope) {
+      $('.collapse .error', dom_scope).parents('.collapse').collapse('show');
     }
   }
 });

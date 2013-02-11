@@ -320,7 +320,7 @@ $(document).ready(function() {
   }
 
   // Se houver uma classe ERROR dentro de um collapse, ele já aparece aberto.
-  $('.error').parents('.collapse').collapse('show');
+  //$('.error').parents('.collapse').collapse('show');
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));

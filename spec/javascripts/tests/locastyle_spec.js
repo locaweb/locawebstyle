@@ -179,4 +179,16 @@ describe("Locastyle", function() {
       expect("click").toHaveBeenPreventedOn($("#disable_me"));
     });
   });
+
+  describe("Open collapses with error", function () {
+    describe("When there are errors inside a collapse", function () {
+      it("should open automatically", function () {
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        $("#collapse_with_error").height("0")
+        locastyle.base.init(dom_scope);
+        expect($("#collapse_with_error").height()).not.toEqual(0);
+      });
+    });
+  });
 });
