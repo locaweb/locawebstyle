@@ -11,6 +11,7 @@ Locastyle = (function() {
       this.htmlForceClass();
       this.disableClass();
       this.classParentLiMenu();
+      this.modalAutoFocus(dom_scope);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -88,7 +89,12 @@ Locastyle = (function() {
 
     classParentLiMenu: function() {
       $("#menuPrincipal li").has('ul').addClass("parent");
-    }
+    },
 
+    modalAutoFocus: function(dom_scope) {
+      $('.modal', dom_scope).on('shown', function () {
+        $('.autoFocus', this).focus();
+      });
+    }
   }
 });

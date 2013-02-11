@@ -155,4 +155,18 @@ describe("Locastyle", function() {
     });
   });
 
+  describe("Auto focus in modals", function () {
+    describe("When modals triggers shown event", function () {
+      it("should activate focus on fields with the .autoFocus css class", function () {
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        $(".modal_to_focus_trigger").trigger("click");
+        $("#modal_to_be_focused").show();
+        $("#modal_to_be_focused").trigger("shown");
+        expect($(".autoFocus").is(":focus")).toEqual(true);
+      });
+    });
+  });
+
 });

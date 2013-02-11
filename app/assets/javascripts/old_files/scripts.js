@@ -31,9 +31,9 @@ Locastyle = (function() {
     //$('.modal', obj).addClass('fade');
 
     // Ativa focus quando termina de abrir o modal
-    $('.modal', obj).on('shown', function () {
-      $('.autoFocus', this).focus();
-    });
+    //$('.modal', obj).on('shown', function () {
+    //  $('.autoFocus', this).focus();
+    //});
 
     // Conta quantos elementos tem no PathWay - Passo a Passo e coloca uma classe específica
     var howMuchSteps = $('.pathWay li').size();
