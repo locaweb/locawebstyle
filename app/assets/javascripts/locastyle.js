@@ -4,13 +4,13 @@ Locastyle = (function() {
       this.toggleTextOnClick(dom_scope);
       this.toggleTextOnHover(dom_scope);
       this.datePickerSetup(dom_scope, this.datePickerOptions);
-      this.numbersOnly();
-      this.collapseActivate();
-      this.activateCollapseOnShown();
-      this.deactivateCollapseOnHide();
-      this.htmlForceClass();
-      this.disableClass();
-      this.classParentLiMenu();
+      this.numbersOnly(dom_scope);
+      this.collapseActivate(dom_scope);
+      this.activateCollapseOnShown(dom_scope);
+      this.deactivateCollapseOnHide(dom_scope);
+      this.htmlForceClass(dom_scope);
+      this.disableClass(dom_scope);
+      this.classParentLiMenu(dom_scope);
       this.modalAutoFocus(dom_scope);
       this.preventDefaultOnDisabled(dom_scope);
       this.openCollapsesWithError(dom_scope);
@@ -54,44 +54,44 @@ Locastyle = (function() {
       $('.datepicker', dom_scope).datepicker(options);
     },
 
-    numbersOnly: function() {
-      $('.numbersOnly').keyup(function() {
+    numbersOnly: function(dom_scope) {
+      $('.numbersOnly', dom_scope).keyup(function() {
         this.value = this.value.replace(/[^0-9\.]/g,'');
       });
     },
 
-    activateCollapseOnShown: function() {
+    activateCollapseOnShown: function(dom_scope) {
       var self = this;
-      $('.collapse').on('shown', function(){
+      $('.collapse', dom_scope).on('shown', function(){
         self.collapseActivate();
       });
     },
 
-    deactivateCollapseOnHide: function() {
+    deactivateCollapseOnHide: function(dom_scope) {
       var self = this;
-      $('.collapse').on('hide', function(){
+      $('.collapse', dom_scope).on('hide', function(){
         self.collapseDeactivate();
       });
     },
 
-    collapseActivate: function() {
-      $(".collapse.in").parents(".boxCollapse").addClass("active");
+    collapseActivate: function(dom_scope) {
+      $(".collapse.in", dom_scope).parents(".boxCollapse").addClass("active");
     },
 
     collapseDeactivate: function() {
       $(".collapse.in").parents(".boxCollapse").removeClass("active");
     },
 
-    htmlForceClass: function() {
-      $("html").addClass("forceClass");
+    htmlForceClass: function(dom_scope) {
+      $("html", dom_scope).addClass("forceClass");
     },
 
-    disableClass: function() {
-      $("input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]").addClass("disabled");
+    disableClass: function(dom_scope) {
+      $("input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]", dom_scope).addClass("disabled");
     },
 
-    classParentLiMenu: function() {
-      $("#menuPrincipal li").has('ul').addClass("parent");
+    classParentLiMenu: function(dom_scope) {
+      $("#menuPrincipal li", dom_scope).has('ul').addClass("parent");
     },
 
     modalAutoFocus: function(dom_scope) {
