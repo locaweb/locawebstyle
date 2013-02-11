@@ -268,7 +268,7 @@ $(document).ready(function() {
   //}
 
   // Pega todos os collapses e deixa sob a função de adicionar ACTIVE nos parents.
-  $('[data-toggle="collapse"]').click( boxCollapseActive() );
+  //$('[data-toggle="collapse"]').click( boxCollapseActive() );
 
   // CHAMADAS: Faz o click acontecer no chamadas
   // $('.chamadasBox div').find('h3 a').clone().addClass('lnkCoverAll').appendTo($(this));
