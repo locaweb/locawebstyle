@@ -161,10 +161,9 @@ describe("Locastyle", function() {
         var dom_scope = $("#only_focus_modal");
         var locastyle = new Locastyle();
         locastyle.base.init(dom_scope);
-        $(".modal_to_focus_trigger").trigger("click");
         $("#modal_to_be_focused").show();
         $("#modal_to_be_focused").trigger("shown");
-        expect($(".autoFocus").is(":focus")).toEqual(true);
+        expect($(".autoFocus")).toBeFocused();
       });
     });
   });
