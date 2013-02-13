@@ -185,9 +185,9 @@ describe("Locastyle", function() {
       it("should open automatically", function () {
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();
-        $("#collapse_with_error").height("0")
+        spyOnEvent($('#collapse_with_error'), 'show');
         locastyle.base.init(dom_scope);
-        expect($("#collapse_with_error").height()).not.toEqual(0);
+        expect("show").toHaveBeenTriggeredOn($('#collapse_with_error'));
       });
     });
   });
