@@ -13,4 +13,5 @@ end
 
 group :test, :development do
   gem 'jasmine', '~> 1.3.1'
+  gem 'selenium-webdriver', '2.25.0'
 end
