@@ -10,6 +10,20 @@ Com essa estrutura, a Locaweb integra de forma consistente as necessidades de in
 Caso você tenha alguma sugestão para melhorar a inteligência destes códigos, entre em contato conosco. Novas idéias são sempre bem vindas.
 ________
 
+Instalando e contribuindo
+=================
+Mas que coisa linda você contribuir com seu código. Seja bem-vindo. 
+
+Embora só utilizemos arquivos estáticos no [Locaweb Style](http://developer.locaweb.com.br/locawebstyle/), toda a estrutura é baseada em ruby/rails para compilarmos os assets. Por isso você precisa saber como rodar aplicações rails em sua máquina. Se você não sabe, [dá uma procurada no Google](http://lmgtfy.com/?q=como+rodar+rails). Se você já sabe fazer isso, basta clonar o projeto e rodar a aplicação. Rode um bundle da vida para poder instalar alguma dependência e etc…
+
+Arquivos
+---
+Todos os arquivos que criamos estão dentro de app/assets/javascripts e app/assets/stylesheets.
+Os arquivos de terceiros estão dentro da pasta /vendor/assets/javascripts e /vendor/assets/stylesheets. Nestas pastas você encontra por exemplo o Bootstrap, jQuery e etc...
+
+----
+
+
 Baseado em que?
 -----------
 Este projeto foi baseado em alguns frameworks já conhecidos de todos os desenvolvedores
@@ -43,12 +57,6 @@ Ele foi criado por desenvolvedores muito renomados como [Paul Irish](http://paul
 ***Masked Input***
 
 [Masked Input](http://digitalbush.com/projects/masked-input-plugin/) é um plugin para a criação de máscaras para formulários. É muito simples de utilizar. Para ver seu funcionamento, [clique aqui](http://developer.locaweb.com.br/locawebstyle/formularios/mascaras-formularios/).
-
------
-
-**Eu quero ajudar a aumentar a inteligência dessa coisa toda**
-
-Mas que coisa linda! Seja bem-vindo. Nos procure e compartilhe suas ideias. Se elas forem realmente ajudar o projeto como um todo, podendo ser implementado para todos os serviços da Locaweb, elas será muito bem vinda.
 
 -----
 
