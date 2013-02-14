@@ -36,7 +36,7 @@ Se você não conhece, visite o github do projeto e conheça já!
 [Bootstrap](twitter.github.com/bootstrap/)
 
 *Curiosidade* -- 
-Dentro do Bootstrap eles usam o Normalize, que é um CSS Reset bastante completo. Ele reseta e compatibiliza alguns problemas de textos e valores padrões em elementos HTML. O Normalize foi criado pelo [Nicolas Gallagher](@necolas) and [Jonathan Neal](@jon_neal)
+Dentro do Bootstrap eles usam o Normalize, que é um CSS Reset bastante completo. Ele reseta e compatibiliza alguns problemas de textos e valores padrões em elementos HTML. O Normalize foi criado por [Nicolas Gallagher](@necolas) e [Jonathan Neal](@jon_neal).
 [Dê uma olhada no projeto](http://necolas.github.com/normalize.css/)
 
 ***JQuery***
@@ -46,7 +46,7 @@ O JQuery é o framework mais utilizado para controlar comportamentos de elemento
 
 ***Modernizr***
 
-O Modernizr é um script de detectação de compatibilidade do CSS3. Ele nos avisa se o browser suporta ou não suporta as novas propriedades do CSS, nos dando a possibilidade de criar fallbacks para os browsers incompatíveis. Assim fica muito fácil saber qual browser suporta ou não SVG, Canvas, RGBA, drop shadow, gradiente e tudo o mais.
+O Modernizr é um script de detecção de suporte HTML5. Ele nos avisa se o browser suporta ou não suporta as novas propriedades do CSS, nos dando a possibilidade de criar fallbacks para os browsers incompatíveis. Assim fica muito fácil saber qual browser suporta ou não SVG, Canvas, RGBA, drop shadow, gradiente e tudo o mais.
 
 Ele foi criado por desenvolvedores muito renomados como [Paul Irish](http://paulirish.com/) e [Faruk Ates](http://farukat.es/). [Site do projeto](http://www.modernizr.com/)
 
