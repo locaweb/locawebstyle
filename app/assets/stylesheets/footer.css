@@ -31,7 +31,7 @@ footer#rodape {
 #rodape ul{float:left; padding:15px; margin:0;}
 #rodape ul li {display:inline;}
 
-#rodape nav ul li a {
+#rodape nav ul li  {
   display:inline-block;
   color:#FFF;
   padding:5px 35px;
@@ -40,11 +40,12 @@ footer#rodape {
   border-right:1px solid #434343;
   margin-right:25px;
 }
-#rodape nav ul li:last-child a {border-right:none;}
+#rodape nav ul li a{color: #fff;}
+#rodape nav ul li:last-child  {border-right:none;}
 
-#rodape ul li.ico-helpDesk a {background-image:url(img/icoHelpDesk.png);}
-#rodape ul li.ico-Chat a {background-image:url(img/icoChat.png);}
-#rodape ul li.ico-Telefone a {background-image:url(img/icoTelefone.png);}
+#rodape ul li.ico-helpDesk{background-image:url(img/icoHelpDesk.png);}
+#rodape ul li.ico-Chat{background-image:url(img/icoChat.png);}
+#rodape ul li.ico-Telefone {background-image:url(img/icoTelefone.png);}
 
 #rodape nav .lnkSeta {margin:15px 20px 0; color:#FFF;}
 

@@ -68,6 +68,7 @@ $(function(){
 	// }
 
 
+
 	//collapse
 	$('.boxCollapse header').each(function(){
 		var txt = $(this).find('p').html();
