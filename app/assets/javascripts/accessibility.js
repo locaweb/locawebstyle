@@ -73,7 +73,6 @@ $(function(){
 	$('.boxCollapse header').each(function(){
 		var txt = $(this).find('p').html();
 		var target = $(this).data('target');
-		console.log(target);
 		$(this).prepend('<a href="#" role="button" aria-haspopup="true" aria-controls="'+target+'" aria-label="'+txt+'" title="'+txt+'" class="lnkCollapse" tabindex="3"></a>');
 	})
 	
