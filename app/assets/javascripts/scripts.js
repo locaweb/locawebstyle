@@ -5,8 +5,8 @@ Locastyle = (function() {
 
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   Locastyle.prototype.init = function(obj) {
-    window.locastyle.linkToggle();
-    window.locastyle.inputDataValue();
+    window.locastyle.linkToggle(obj);
+    window.locastyle.inputDataValue(obj);
     // Define um intervalo para o Wizard demorar para rodar sozinho
     $('.modalSlider .carousel', obj).carousel({interval: 1000000});
     $('.modalSlider .modal-footer', obj).find('.btnSalvar').hide();
@@ -121,8 +121,8 @@ Locastyle = (function() {
     }
   };
 
-  Locastyle.prototype.linkToggle = function(){
-    $('.lnkToggle').on('click',function(e){
+  Locastyle.prototype.linkToggle = function(element){
+    $('.lnkToggle', element).on('click',function(e){
       e.preventDefault();
       var itemClass = $('.toggleChild').attr('data-class');
       $(this).parents('.toggleChild').find('.itemToToggle').toggleClass("dNone");
@@ -138,7 +138,7 @@ Locastyle = (function() {
       inputs.each(function(){
         $(this).val($(this).data('value'));
       });
-        
+
     }
   }
 
