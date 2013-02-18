@@ -259,12 +259,14 @@ $(document).ready(function() {
     $('.collapse').on('show', function(){
       $(this).parents('.boxCollapse, .details').addClass('active');
       $(this).attr('aria-hidden','false');
+      $(this).find('a, .btn').attr('tabindex','3');
       $(this).attr('aria-expanded','true');
     });
 
     $('.collapse').on('hide', function(){
       $(this).parents('.boxCollapse, .details').removeClass('active');
       $(this).attr('aria-hidden','true');
+      $(this).find('a, .btn').removeAttr('tabindex');
       $(this).attr('aria-expanded','false');
     });
   }

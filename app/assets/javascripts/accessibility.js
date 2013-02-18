@@ -75,6 +75,7 @@ $(function(){
 		var target = $(this).data('target');
 		$(this).prepend('<a href="#" role="button" aria-haspopup="true" aria-controls="'+target+'" aria-label="'+txt+'" title="'+txt+'" class="lnkCollapse" tabindex="3"></a>');
 	})
+	$('.collapse').find('a, .btn').removeAttr('tabindex');
 	
 
 	// $('[data-toggle="collapse"]').attr('role','button').attr('tabindex','3');
