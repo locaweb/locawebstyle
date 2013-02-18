@@ -297,6 +297,7 @@ $(document).ready(function() {
   }
 
   $(".minShortcuts").live('click', function(e){
+    e.preventDefault();
     toggleBox()
     $(".expandBox").toggleClass("microBox");
     $(this).toggleClass("shortcutExpanded");
