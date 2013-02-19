@@ -20,6 +20,7 @@
   text-align: center;
   min-height:17px;
   position:relative; top:1px;
+  font-size:1.1em;
 }
 
 h1[class^="ico-"]:before,
