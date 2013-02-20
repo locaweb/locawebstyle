@@ -128,7 +128,6 @@
 }
 
 .modal-footer .slidePrev, .modal-footer .slideNext {float:left;}
-.modalSlider .modal-footer .btn-primary {float:left;}
 
 .modal-footer .slidePrev:before, .modal-footer .slideNext:after {
   content: " ";
