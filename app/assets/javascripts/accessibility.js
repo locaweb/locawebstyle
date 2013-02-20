@@ -70,12 +70,11 @@ $(function(){
 
 
 	//collapse
-	// $('.boxCollapse header').each(function(){
-	// 	var title = $(this).find('h4').html();
-	// 	var txt = $(this).find('p').html();
-	// 	var target = $(this).data('target');
-	// 	$(this).prepend('<a href="#" role="button" aria-haspopup="true" aria-controls="'+target+'" aria-label="'+title+'. ' +txt+'" title="'+title+'. ' +txt+'" class="lnkCollapse" tabindex="3"></a>');
-	// })
+	$('.boxCollapse header').each(function(){
+		var title = $(this).find('h4').text();
+		var target = $(this).data('target');
+		$(this).prepend('<a href="#" role="button" aria-haspopup="true" aria-controls="'+target+'" aria-label="'+title+'" title="'+title+'" class="lnkCollapse" tabindex="3"></a>');
+	})
 	$('.collapse').find('*[tabindex="3"]').attr('tabindex','0');
 	
 
