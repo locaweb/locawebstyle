@@ -8,7 +8,7 @@ Locastyle = (function() {
     window.locastyle.linkToggle(obj);
     window.locastyle.inputDataValue(obj);
     // Define um intervalo para o Wizard demorar para rodar sozinho
-    $('.modalSlider .carousel', obj).carousel({interval: 1000000});
+    // $('.modalSlider .carousel', obj).carousel({interval: 1000000});
     $('.modalSlider .modal-footer', obj).find('.btnSalvar').hide();
     $('.modalSlider .modal-footer', obj).parents('.modal').find('.modal-footer .slidePrev').hide();
 
