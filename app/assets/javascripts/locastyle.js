@@ -117,15 +117,15 @@ Locastyle = (function() {
 
     controlBtnModalSlider: function(dom_scope) {
       var self = this;
-      $(".modal .carousel.slide [data-slide]").on("click", function(){
+      $(".modal .carousel.slide").on("slid", function(){
         if ($(".modal .carousel.slide .carousel-inner .item:first-child").not(".active")) {
           self.showSlidePrev();
         }
-      });
+      })
     },
 
     showSlidePrev: function() {
-      $(".modal .carousel.slide [data-slide='prev']").removeClass("dNone");
+      $(".modal [data-slide='prev']").removeClass("dNone");
     }
 
   }

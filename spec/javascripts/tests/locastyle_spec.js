@@ -207,7 +207,7 @@ describe("Locastyle", function() {
       var dom_scope = $("#modal_auto_open_fixture");
       var locastyle = new Locastyle();
       locastyle.base.init(dom_scope);
-      $(".modal .carousel.slide [data-slide='next']").trigger("click");
+      $(".modal .carousel.slide").trigger("slid");
       expect($(".modal .carousel.slide [data-slide='prev']")).not.toHaveClass("dNone");
     });
   });
