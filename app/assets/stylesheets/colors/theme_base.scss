@@ -101,6 +101,7 @@
   color: $path_way_description_active_color;
 }
 
+#{$theme_name} .chamadasBox div.active,
 #{$theme_name} .chamadasBox div:hover {
   @include chamadas_gradient_hover;
 }
