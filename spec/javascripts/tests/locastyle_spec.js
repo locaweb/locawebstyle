@@ -200,4 +200,15 @@ describe("Locastyle", function() {
       expect($(".modalAutoOpen").data("modal").isShown).toEqual(true);
     });
   });
+
+
+  describe("Modal with Slider", function () {
+    it("Should show the prev button starting from second slide", function () {
+      var dom_scope = $("#modal_auto_open_fixture");
+      var locastyle = new Locastyle();
+      locastyle.base.init(dom_scope);
+      $(".modal .carousel.slide [data-slide='next']").trigger("click");
+      expect($(".modal .carousel.slide [data-slide='prev']")).not.toHaveClass("dNone");
+    });
+  });
 });
