@@ -803,6 +803,7 @@ td .progress {max-width:70px;}
 .forceClass a.lnkNoShow:hover {color:#000; text-decoration: underline !important;}
 
 a[class*="ico-"] {font-size: 12px;}
+a.btn[class*="ico-"] {font-size: 14px;}
 
 .forceClass a.warning {color: #b54646;}
 .forceClass .control-group.error input[type="text"], 
