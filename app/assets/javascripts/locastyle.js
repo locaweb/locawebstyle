@@ -121,23 +121,20 @@ Locastyle = (function() {
       var btnNext = ".modal.in [data-slide='next']";
       var btnSave = ".modal.in .modal-footer .btn-primary";
 
-      $(".modal .carousel.slide").on("slid", function(){
-        if ($(".modal .carousel.slide .carousel-inner .item:first-child").not(".active")) {
-          self.showBtnDisplaySlider(btnPrev);
+      $("[data-toggle='modal']").on("click", function() {
+        if ($(".modal .carousel.slide .carousel-inner .item:first-child").is(".active")) {
+          self.hideBtnDisplaySlider(btnPrev);
         }
-
-        if ($(".modal .carousel.slide .carousel-inner .item:last-child").is(".active")) {
-          self.hideBtnDisplaySlider(btnNext);
-        }
-
       });
     },
 
     showBtnDisplaySlider: function(element) {
+      console.log("showBtnDisplaySlider")
       $(element).removeClass("dNone");
     },
 
     hideBtnDisplaySlider: function(element) {
+      console.log("hideBtnDisplaySlider")
       $(element).addClass("dNone");
     }
 
