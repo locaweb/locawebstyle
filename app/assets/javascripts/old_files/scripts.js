@@ -9,8 +9,8 @@ Locastyle = (function() {
     window.locastyle.inputDataValue(obj);
     // Define um intervalo para o Wizard demorar para rodar sozinho
     // $('.modalSlider .carousel', obj).carousel({interval: 1000000});
-    $('.modalSlider .modal-footer', obj).find('.btnSalvar').hide();
-    $('.modalSlider .modal-footer', obj).parents('.modal').find('.modal-footer .slidePrev').hide();
+    // $('.modalSlider .modal-footer', obj).find('.btnSalvar').hide();
+    // $('.modalSlider .modal-footer', obj).parents('.modal').find('.modal-footer .slidePrev').hide();
 
     // Encontra se há algum formulário com erro de validação, e ativa a tab do slider com erro
     if ( $('.modalSlider .modal-body .control-group', obj).hasClass('error') ) {
@@ -22,10 +22,10 @@ Locastyle = (function() {
     }
 
     // Monitora o botão de next e prev dos sliders/wizards de dentro de uma modal
-    $('.modal-footer .slideNext, .modal-footer .slidePrev', obj).live("click", function() {
-      $(this).parents('.modal').find('.modal-footer .slidePrev').show();
-      window.locastyle.modal_callback(obj, $(this));
-    });
+    // $('.modal-footer .slideNext, .modal-footer .slidePrev', obj).live("click", function() {
+    //   $(this).parents('.modal').find('.modal-footer .slidePrev').show();
+    //   window.locastyle.modal_callback(obj, $(this));
+    // });
 
     // Faz a modal animar \o/
     //$('.modal', obj).addClass('fade');
@@ -98,28 +98,28 @@ Locastyle = (function() {
     });
   }
 
-  Locastyle.prototype.modal_callback = function (obj, element){
-    if(navigator.userAgent.match(/msie/i) != null){
-      window.classAgentPrev = '.active';
-      window.classAgentNext = '.active';
-    }else{
-      window.classAgentPrev = '.prev';
-      window.classAgentNext = '.next';
-    }
-    if ($('.modalSlider .carousel .item:first-child', obj).is(classAgentPrev)){
-      element.parents('.modal').find('.modal-footer .slidePrev').hide();
-    } else {
-      element.parents('.modal').find('.modal-footer .slidePrev').show();
-    }
+  // Locastyle.prototype.modal_callback = function (obj, element){
+  //   if(navigator.userAgent.match(/msie/i) != null){
+  //     window.classAgentPrev = '.active';
+  //     window.classAgentNext = '.active';
+  //   }else{
+  //     window.classAgentPrev = '.prev';
+  //     window.classAgentNext = '.next';
+  //   }
+  //   if ($('.modalSlider .carousel .item:first-child', obj).is(classAgentPrev)){
+  //     element.parents('.modal').find('.modal-footer .slidePrev').hide();
+  //   } else {
+  //     element.parents('.modal').find('.modal-footer .slidePrev').show();
+  //   }
 
-    if ($('.modalSlider .item:last-child', obj).is(classAgentNext)){
-      element.parents('.modal').find('.modal-footer .slideNext').hide();
-      element.parents('.modal').find('.modal-footer .btnSalvar').show();
-    } else {
-      element.parents('.modal').find('.modal-footer .slideNext').show();
-      element.parents('.modal').find('.modal-footer .btnSalvar').hide();
-    }
-  };
+  //   if ($('.modalSlider .item:last-child', obj).is(classAgentNext)){
+  //     element.parents('.modal').find('.modal-footer .slideNext').hide();
+  //     element.parents('.modal').find('.modal-footer .btnSalvar').show();
+  //   } else {
+  //     element.parents('.modal').find('.modal-footer .slideNext').show();
+  //     element.parents('.modal').find('.modal-footer .btnSalvar').hide();
+  //   }
+  // };
 
   Locastyle.prototype.linkToggle = function(element){
     $('.lnkToggle', element).on('click',function(e){

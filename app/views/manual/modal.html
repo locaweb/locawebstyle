@@ -8,7 +8,7 @@
         <p>O tamanho padrão das modais é de 550px de largura. Existe um outro tamanho menor, com 450px de largura, geralmente utilizado para mostrar mensagens de excluir e de alertas. Pra fazer essas modais menores, basta colocar a classe <strong>modalSmall</strong> na div MODAL.</p>
 
 <div class="well modal-example" style="background-color: #888; border: none;">
-            <div class="modal dblock in" style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1; max-width: 100%;">
+            <div class="modal dBlock" style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1; max-width: 100%;">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">×</button>
                 <h3>Título da Modal</h3>
@@ -150,7 +150,7 @@
     </div><!-- FIM MODAL HEADER -->
 
     <div class="modal-body">
-        <div id="myCarousel" class="carousel slide">
+        <div id="myCarousel" class="carousel slide" data-interval="0">
             <!-- Carousel items -->
             <div class="carousel-inner">
                 <div class="active item">
@@ -185,6 +185,13 @@
                         <span class="help-inline">Um erro interessante</span>
                     </div>
                 </div>
+                <div class="item">
+                    <div class="control-group error">
+                        <label><b title="Obrigatório">*</b> Dias até o vencimento</label>
+                        <input type="text" value="5">
+                        <span class="help-inline">Um erro interessante</span>
+                    </div>
+                </div>
             </div>
             <!-- Carousel nav -->
         </div>
@@ -192,9 +199,9 @@
     </div><!-- FIM MODAL BODY -->
 
     <div class="modal-footer">
-        <a href="#myCarousel" class="btn ico-left-open" data-slide="prev">Anterior</a>
+        <a href="#myCarousel" class="btn ico-left-open dNone" data-slide="prev">Anterior</a>
         <a href="#myCarousel" class="btn ico-right-open icoPosRight" data-slide="next">Próximo</a>
-        <a href="#" class="btn btn-primary">Salvar</a>
+        <a href="#" class="btn btn-primary dNone">Salvar</a>
     </div>
 </div> <!-- FIM MODAL -->
 <% end %>

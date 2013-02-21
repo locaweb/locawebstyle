@@ -204,11 +204,20 @@ describe("Locastyle", function() {
 
   describe("Modal with Slider", function () {
     it("Should show the prev button starting from second slide", function () {
-      var dom_scope = $("#modal_auto_open_fixture");
+      var dom_scope = $("#modal_button_test");
       var locastyle = new Locastyle();
       locastyle.base.init(dom_scope);
       $(".modal .carousel.slide").trigger("slid");
       expect($(".modal .carousel.slide [data-slide='prev']")).not.toHaveClass("dNone");
     });
+
+    it("Should hide the next button in last slide", function () {
+      var dom_scope = $("#modal_last_button_test");
+      var locastyle = new Locastyle();
+      locastyle.base.init(dom_scope);
+      $(".modal .carousel.slide").trigger("slid");
+      expect($(".modal .carousel.slide [data-slide='next']")).toHaveClass("dNone");
+    });
   });
+
 });
