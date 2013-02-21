@@ -15,7 +15,7 @@ Locastyle = (function() {
       this.preventDefaultOnDisabled(dom_scope);
       this.openCollapsesWithError(dom_scope);
       this.autoOpenModal(dom_scope);
-      this.controlBtnModalSlider(dom_scope);
+      this.modalSliderSetupBind(dom_scope);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -115,26 +115,37 @@ Locastyle = (function() {
       $(".modalAutoOpen").modal("show");
     },
 
-    controlBtnModalSlider: function(dom_scope) {
+    modalSliderSetupBind: function(dom_scope) {
+      var self = this;
+      var btnPrev = ".modal [data-slide='prev']";
+      $("[data-toggle='modal']").on("click", function() {
+        self.setupModalSlider(btnPrev);
+      });
+      self.modalSliderActionController();
+    },
+
+    setupModalSlider: function(element) {
+      var self = this;
+      self.hideElement(element);
+    },
+
+    modalSliderActionController: function(dom_scope) {
       var self = this;
       var btnPrev = ".modal.in [data-slide='prev']";
-      var btnNext = ".modal.in [data-slide='next']";
-      var btnSave = ".modal.in .modal-footer .btn-primary";
-
-      $("[data-toggle='modal']").on("click", function() {
-        if ($(".modal .carousel.slide .carousel-inner .item:first-child").is(".active")) {
-          self.hideBtnDisplaySlider(btnPrev);
+      $(".carousel").on("slid", function(dom_scope) {
+        if ($(".item:first-child").is(".active")) {
+          self.hideElement(btnPrev);
+        } else {
+          self.showElement(btnPrev);
         }
       });
     },
 
-    showBtnDisplaySlider: function(element) {
-      console.log("showBtnDisplaySlider")
+    showElement: function(element) {
       $(element).removeClass("dNone");
     },
 
-    hideBtnDisplaySlider: function(element) {
-      console.log("hideBtnDisplaySlider")
+    hideElement: function(element) {
       $(element).addClass("dNone");
     }
 

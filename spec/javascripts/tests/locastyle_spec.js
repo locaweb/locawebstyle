@@ -201,33 +201,26 @@ describe("Locastyle", function() {
     });
   });
 
-
   describe("Modal with Slider", function () {
     describe("When the modal open", function () {
       it("Should hide the prev button", function () {
         var dom_scope = $("#modalSlider");
         var locastyle = new Locastyle();
         locastyle.base.init(dom_scope);
-        $("[data-target='#modalSlider']").trigger("click");
-        expect($(".modal .carousel.slide [data-slide='prev']")).toHaveClass("dNone");
+        $(".btn[data-target='#modalSlider']").trigger("click");
+        expect($(".modal .carousel [data-slide='prev']")).toHaveClass("dNone");
       });
-    })
+    });
 
-    // it("Should show the prev button starting from second slide", function () {
-    //   var dom_scope = $("#modalSlider");
-    //   var locastyle = new Locastyle();
-    //   locastyle.base.init(dom_scope);
-    //   $(".modal .carousel.slide").trigger("slid");
-    //   expect($(".modal .carousel.slide [data-slide='prev']")).not.toHaveClass("dNone");
-    // });
-
-    // it("Should hide the next button in last slide", function () {
-    //   var dom_scope = $("#modalSlider");
-    //   var locastyle = new Locastyle();
-    //   locastyle.base.init(dom_scope);
-    //   $(".modal .carousel.slide").trigger("slid");
-    //   expect($(".modal .carousel.slide [data-slide='next']")).toHaveClass("dNone");
-    // });
+    describe("When the first slide don't have ACTIVE", function () {
+      it("Should show the prev button", function () {
+        var dom_scope = $("#modalSlider");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        $("[data-slide='next']", dom_scope).trigger('click')
+        expect($(".modal .carousel.slide [data-slide='prev']")).not.toHaveClass("dNone");
+      });
+    });
   });
 
 });
