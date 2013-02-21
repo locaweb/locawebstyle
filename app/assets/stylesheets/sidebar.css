@@ -189,12 +189,15 @@ h5 + .innerSideBox {margin-top:5px;}
   font-weight: normal;
   font-style: normal;
 }
-.boxSidebarTitle i.ico-user{
+.boxSidebarTitle .ico-user{
   margin: 6px 0 0 5px;
 }
-.boxSidebarTitle i.cmicon-help {
+.boxSidebarTitle .cmicon-help {
   margin: 7px 0 0 10px;
   position: absolute;
   font-weight: bold;
+}
+.boxSidebarTitle .ico-thumbs-up-1{
+  margin: 5px;
 }
 .home .sideBox{padding: 10px 0;}
