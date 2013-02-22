@@ -73,6 +73,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   transition:all .1s ease-in;
 
   padding:9px 8px;
+  border-bottom: 1px solid transparent;
   
 }
 .ie9 #menuPrincipal > ul > li > a {font-size:13px;}
@@ -123,7 +124,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   margin:0; padding:0;
   min-width:185px;
   position:absolute;
-  top:35px; left:5px;
+  top:35px; left: 0;
   z-index:1;
   background:#FFF;
   border-radius: 0 3px 3px 3px;
