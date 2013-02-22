@@ -208,7 +208,14 @@ describe("Locastyle", function() {
         var locastyle = new Locastyle();
         locastyle.base.init(dom_scope);
         $(".btn[data-target='#modalSlider']").trigger("click");
-        expect($(".modal .carousel [data-slide='prev']")).toHaveClass("dNone");
+        expect($("[data-slide='prev']", dom_scope)).toHaveClass("dNone");
+      });
+      it("Should hide the save button", function () {
+        var dom_scope = $("#modalSlider");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        $(".btn[data-target='#modalSlider']").trigger("click");
+        expect($(".btnSave", dom_scope)).toHaveClass("dNone");
       });
     });
 
@@ -217,10 +224,11 @@ describe("Locastyle", function() {
         var dom_scope = $("#modalSlider");
         var locastyle = new Locastyle();
         locastyle.base.init(dom_scope);
-        $("[data-slide='next']", dom_scope).trigger('click')
-        expect($(".modal .carousel.slide [data-slide='prev']")).not.toHaveClass("dNone");
+        $("[data-slide='next']", dom_scope).trigger('click');
+        expect($("[data-slide='prev']", dom_scope)).not.toHaveClass("dNone");
       });
     });
+
   });
 
 });

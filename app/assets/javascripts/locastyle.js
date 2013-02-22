@@ -118,8 +118,10 @@ Locastyle = (function() {
     modalSliderSetupBind: function(dom_scope) {
       var self = this;
       var btnPrev = ".modal [data-slide='prev']";
+      var btnSave = ".modal .modal-footer .btn.btn-primary";
       $("[data-toggle='modal']").on("click", function() {
         self.setupModalSlider(btnPrev);
+        self.setupModalSlider(btnSave);
       });
       self.modalSliderActionController();
     },
@@ -132,12 +134,23 @@ Locastyle = (function() {
     modalSliderActionController: function(dom_scope) {
       var self = this;
       var btnPrev = ".modal.in [data-slide='prev']";
+      var btnSave = ".modal .modal-footer .btn.btn-primary";
+      var btnNext = ".modal.in [data-slide='next']";
       $(".carousel").on("slid", function(dom_scope) {
         if ($(".item:first-child").is(".active")) {
           self.hideElement(btnPrev);
         } else {
           self.showElement(btnPrev);
         }
+
+        if ($(".item:last-child").is(".active")) {
+          self.hideElement(btnNext);
+          self.showElement(btnSave);
+        } else {
+          self.showElement(btnNext);
+          self.hideElement(btnSave);
+        }
+
       });
     },
 
