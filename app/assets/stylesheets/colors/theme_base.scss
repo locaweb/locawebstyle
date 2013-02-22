@@ -124,14 +124,10 @@
   background: $color_soft;
   border:1px solid $color_medium;
 }
-#{$theme_name} .chooseBox li:hover .ico-folder-open:before,
-#{$theme_name} .chooseBox li.active .ico-folder-open:before,
-#{$theme_name} .chooseBox li:hover .ico-archive:before,
-#{$theme_name} .chooseBox li.active .ico-archive:before,
-#{$theme_name} .chooseBox li:hover .ico-terminal:before,
-#{$theme_name} .chooseBox li.active .ico-terminal:before,
-#{$theme_name} .chooseBox li:hover .ico-vcard:before,
-#{$theme_name} .chooseBox li.active .ico-vcard:before{
+#{$theme_name} .chooseBox li:hover [class^="ico-"]:before,
+#{$theme_name} .chooseBox li:hover [class*="ico-"]:before,
+#{$theme_name} .chooseBox li.active [class^="ico-"]:before,
+#{$theme_name} .chooseBox li.active [class*="ico-"]:before{
   color: $color_strong;
 }
 

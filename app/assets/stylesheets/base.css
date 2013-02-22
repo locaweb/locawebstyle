@@ -911,19 +911,14 @@ a[class*="ico-"] {font-size: 12px;}
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
 }
-.chooseBox .ico-folder-open:before, 
-.chooseBox .ico-archive:before,
-.chooseBox .ico-terminal:before,
-.chooseBox .ico-vcard:before{
+.chooseBox [class^="ico-"]:before, 
+.chooseBox [class*="ico-"]:before{
   color: #545454;
   font-size: 44px;
   margin: 10px;
   position: absolute;
   left: 0;
   top: 5px;
-}
-.chooseBox .ico-terminal:before{
-  font-size: 35px;
 }
 .chooseBox li:hover h4, .chooseBox li.active h4 {color: #333;}
 .chooseBox .active:after { border-top: 13px solid #cdcdcd;}
@@ -932,14 +927,10 @@ a[class*="ico-"] {font-size: 12px;}
   background:#cdcdcd;
   border:1px solid #999;
 }
-.chooseBox li:hover .ico-folder-open:before,
-.chooseBox li.active .ico-folder-open:before,
-.chooseBox li:hover .ico-archive:before,
-.chooseBox li.active .ico-archive:before,
-.chooseBox li:hover .ico-terminal:before,
-.chooseBox li.active .ico-terminal:before,
-.chooseBox li:hover .ico-vcard:before,
-.chooseBox li.active .ico-vcard:before{
+.chooseBox li:hover [class^="ico-"]:before,
+.chooseBox li:hover [class*="ico-"]:before,
+.chooseBox li.active [class^="ico-"]:before,
+.chooseBox li.active [class*="ico-"]:before{
   color: #333;
 }
 .popover-content{font-size: 14px;}
