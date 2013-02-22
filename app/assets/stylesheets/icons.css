@@ -627,3 +627,30 @@ li [class^="icon-"], li [class*=" icon-"] {
 .icon-briefcase:before {background-position: -432px -144px;}
 .icon-fullscreen:before {background-position: -456px -144px;}
 
+.ico-bug:before {content: "\e0d5";}
+.ico-bookmark:before {content: "\e0d6";}
+.ico-blocked:before {content: "\e0d7";}
+.ico-wrench:before {content: "\e0d8";}
+.ico-code:before {content: "\e0d9";}
+.ico-rocket:before {content: "\e0da";}
+.ico-cloud:before {content: "\f0c2";}
+.ico-cloud-2:before {content: "\e0f0";}
+.ico-cloud-3:before {content: "\e0f1";}
+
+.ico-chart:before {content: "\e0e9";}
+.ico-chart-2:before {content: "\e0e8";}
+.ico-chart-3:before {content: "\e0e7";}
+.ico-chart-4:before {content: "\e0e6";}
+.ico-chart-5:before {content: "\e0e5";}
+.ico-chart-6:before {content: "\e0e4";}
+.ico-signup:before {content: "\e0e3";}
+.ico-th:before {content: "\f00a";}
+.ico-calendar:before {content: "\e0e2";}
+.ico-pie:before {content: "\e0e1";}
+.ico-table:before {content: "\e0e0";}
+.ico-grid:before {content: "\e0df";}
+.ico-bars:before {content: "\e0de";}
+.ico-stats:before {content: "\e0dd";}
+.ico-image:before {content: "\e0dc";}
+.ico-chart-alt:before {content: "\e0db";}
+.ico-chart-7:before {content: "\f0000";}
