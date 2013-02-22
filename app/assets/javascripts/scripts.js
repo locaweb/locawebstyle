@@ -74,22 +74,22 @@ Locastyle = (function() {
         $(search).parent().find('a[data-toggle="collapse"][data-target]').click();
       }
     });
-
   };
 
-  Locastyle.prototype.client_form = function(content, targetElements, disabledClasses, classToContent){
-    content || (content = ".clientDetails form.edit_account");
-    targetElements || (targetElements = ".disable_form input, .disable_form textarea");
+  Locastyle.prototype.client_form = function(element_trigger, content, targetElements, disabledClasses, classToContent){
+    content         || (content         = ".clientDetails form.edit_account");
+    element_trigger || (element_trigger = "a.edit_form");
+    targetElements  || (targetElements  = ".disable_form input, .disable_form textarea");
     disabledClasses || (disabledClasses = "noBorder noBackground noShadow cursorDefault");
-    classToContent || (classToContent = "editable obsGray noBorder removeAfter");
-    $(".clientDetails .dropdown-menu").on('click', 'a:first', function(e) {
+    classToContent  || (classToContent  = "editable obsGray noBorder removeAfter");
+    $("body").on('click', element_trigger, function(e) {
       e.preventDefault();
       $(content).addClass(classToContent);
       return $(targetElements).each(function(index) {
         return $(this).removeClass(disabledClasses).attr("disabled", false);
       });
     });
-    return $(".clientDetails .dataClient").on('click', '.cancelEdit', function(e) {
+    $(".clientDetails .dataClient").on('click', '.cancelEdit', function(e) {
       e.preventDefault();
       $(content).removeClass(classToContent);
       return $(targetElements).each(function(index) {
