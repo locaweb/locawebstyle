@@ -942,3 +942,4 @@ a[class*="ico-"] {font-size: 12px;}
 .chooseBox li.active .ico-vcard:before{
   color: #333;
 }
+.popover-content{font-size: 14px;}
