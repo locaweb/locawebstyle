@@ -189,7 +189,10 @@ h5 + .innerSideBox {margin-top:5px;}
   font-weight: normal;
   font-style: normal;
 }
-.boxSidebarTitle .ico-user{
+
+.boxSidebarTitle .ico-user,
+.boxSidebarTitle .ico-user-star,
+.boxSidebarTitle .ico-lamp{
   margin: 6px 0 0 5px;
 }
 .boxSidebarTitle .cmicon-help {

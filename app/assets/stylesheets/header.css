@@ -78,7 +78,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 }
 .ie9 #menuPrincipal > ul > li > a {font-size:13px;}
 #menuPrincipal > ul > li > a:hover {color:#666; background-color:transparent;}
-#menuPrincipal a.ico-home:before {float:right; position:relative; left:-2px; margin-top:-5px; font-size:19px; text-indent: 0;}
+#menuPrincipal a.ico-home:before {float:right; position:relative; left:-2px; margin-top:-4px; font-size:19px; text-indent: 0;}
 
 #menuPrincipal a.ico-home {
   width:25px;
@@ -124,7 +124,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   margin:0; padding:0;
   min-width:185px;
   position:absolute;
-  top:35px; left: 0;
+  top:35px; left: 5px;
   z-index:1;
   background:#FFF;
   border-radius: 0 3px 3px 3px;
