@@ -477,6 +477,11 @@ h6[class^="ico-"]:before {
 .ico-image:before {content: "\e0dc";}
 .ico-chart-alt:before {content: "\e0db";}
 .ico-chart-7:before {content: "\f0000";}
+.ico-calendar-check:before {content: "\e0f2";}
+.ico-calendar-more:before {content: "\e0f3";}
+.ico-lamp:before {content: "\e0f4";}
+.ico-user-group:before {content: "\e0f5";}
+.ico-user-star:before {content: "\e0f6";}
 
 
 [class^="icon-"], [class*=" icon-"],
