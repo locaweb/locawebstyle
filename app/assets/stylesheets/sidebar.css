@@ -46,10 +46,10 @@
 .titSide {
   text-transform:uppercase;
   font:300 18px Ubuntu;
-  margin:-38px 0 0 10px;
+  margin:-27px 0 0 10px;
   background-repeat: no-repeat;
   background-position: left top;
-  padding: 2px 0 18px 50px;
+  padding: 2px 0 18px 45px;
   text-transform: uppercase;
   letter-spacing: -1px;
 }
@@ -203,4 +203,4 @@ h5 + .innerSideBox {margin-top:5px;}
 .boxSidebarTitle .ico-thumbs-up-1{
   margin: 5px;
 }
-.home .sideBox{padding: 10px 0;}
+
