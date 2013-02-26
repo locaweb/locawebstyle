@@ -3,6 +3,7 @@
 	<strong>Informação!</strong> Uma informação qualquer do seu sistema. <a href="#">Um link qualquer</a>.
 </div>
 
+
 <div class="boxGray">
     <h2>Primeiros passos</h2>
     <p>Comece aqui suas ações para as configurações do seu site.</p>
@@ -22,36 +23,122 @@
     </div>
   </div>
 
+<!-- COLLAPSE FULL -->
+<div class="boxCollapse">
+	<header data-target="#collapseFull" data-toggle="collapse"><a href="#" role="button" aria-haspopup="true" aria-controls="#collapseFull" aria-label="Motivos de descadastramento" title="Motivos de descadastramento" class="lnkCollapse" tabindex="3"></a>
+		<h4>Motivos de descadastramento</h4>
+		<p>Você pode editar os já cadastrados ou pode criar novos motivos para a sua lista.</p>
+	</header>
+	<div id="collapseFull" class="collapse">
+		<div class="boxCinzaInner">
+			<form>
+				<div class="control-group">
+					<label for="unsubscribe_reason_create" class="required control-label">Adicione um motivo <b>*</b></label><input type="text" name="unsubscribe_reason[name]" id="unsubscribe_reason_create" class="span5" data-value="">
+					<input type="submit" value="Adicionar" class="btn btn-primary" tabindex="0">
+				</div>
+			</form>
+		</div>
+
+		<h6>Motivos adicionados</h6>
+		<table class="tableList">
+			<thead>
+				<tr>
+					<th class="txtLeft">Motivo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="txtLeft">
+						Lorem Ipsum dolor sit amet
+						<ul class="actionsTable">
+							<li><a data-disable="edit" class="ico-pencil" href="#edit">Editar</a></li>
+							<li><a data-toggle="modal" data-target="#deleteModal" class="ico-trash" href="#">Excluir</a></li>
+						</ul>
+						<div id="deleteModal" class="modal modalCenter modalSmall fade">
+							<div class="modal-header">
+								<a data-dismiss="modal" class="close" role="button">×</a>
+								<h3>Um título qualquer</h3>
+							</div>
+
+							<div class="modal-body">
+								<h2 class="titAlert">Aqui é um título do alerta</h2>
+								<p>Aqui vai a mensagem de alerta, aviso, notificação ou qualquer outro aviso que você deseja aplicar.</p>
+							</div>
+
+							<div class="modal-footer">
+								<a data-method="delete" class="btn btn-primary" href="#" tabindex="0" role="button">sim</a>
+								<a data-dismiss="modal" class="btn" href="#" tabindex="0" role="button">Não tenho certeza</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="txtLeft">
+						Consectuer dip alet Lorem Ipsum
+						<ul class="actionsTable">
+							<li><a data-disable="edit" class="ico-pencil" href="#edit">Editar</a></li>
+							<li><a data-toggle="modal" data-target="#deleteModal" class="ico-trash" href="#">Excluir</a></li>
+						</ul>
+						<div id="deleteModal" class="modal modalCenter modalSmall fade">
+							<div class="modal-header">
+								<a data-dismiss="modal" class="close" role="button">×</a>
+								<h3>Um título qualquer</h3>
+							</div>
+
+							<div class="modal-body">
+								<h2 class="titAlert">Aqui é um título do alerta</h2>
+								<p>Aqui vai a mensagem de alerta, aviso, notificação ou qualquer outro aviso que você deseja aplicar.</p>
+							</div>
+
+							<div class="modal-footer">
+								<a data-method="delete" class="btn btn-primary" href="#" tabindex="0" role="button">sim</a>
+								<a data-dismiss="modal" class="btn" href="#" tabindex="0" role="button">Não tenho certeza</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+  </div>
+  <div class="boxCollapse">
+	<header data-target="#collapseFull2" data-toggle="collapse"><a href="#" role="button" aria-haspopup="true" aria-controls="#collapseFull2" aria-label="Motivos de descadastramento" title="Motivos de descadastramento" class="lnkCollapse" tabindex="3"></a>
+		<h4>Um título qualquer</h4>
+		<p>Remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.</p>
+	</header>
+	<div id="collapseFull2" class="collapse">
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.</p>
+	</div>
+  </div>
+<!-- FIM COLLAPSE FULL -->
+
+
+<!-- BOX GRAY -->
 <div class="boxGray">
 	<h2>Um título bacana</h2>
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.</p>
 
-	<div class="collapseGroup">
-		<div class="details active">
-			<summary data-toggle="collapse" data-target="#contrateConvenioDesc" class="active"><span>01.</span> Contrate um convênio</summary>
-			<div id="contrateConvenioDesc" class="collapse in">
-				<p>Nam dapibus placerat ante, nec feugiat elit faucibus sollicitudin. Aliquam accumsan mi id lectus posuere scelerisque. Fusce hendrerit nibh vel libero blandit mattis. Nullam vestibulum est eget enim iaculis ultrices</p>
-				<p><a href="#" class="lnkSeta">Saiba mais</a></p>
+		<div class="boxCollapse whiteCollapse">
+			<header data-target="#collapse1" data-toggle="collapse" class="noBorder">
+				<h4><span>01.</span> Contrate um convênio</h4>
+			</header>
+			<div class="collapse" id="collapse1">
+				<p>Para contratar um convênio, é necessário Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit justo, tincidunt nec ultricies at, pellentesque et elit. Proin risus odio, ultrices vel porttitor sed, blandit tristique eros. Aliquam erat volutpat. In hac habitasse platea dictumst.Proin eget velit sed mauris sollicitudin semper vel et sem. Nam dapibus placerat ante, nec feugiat elit faucibus sollicitudin. Aliquam accumsan mi id lectus posuere scelerisque. Fusce hendrerit nibh vel libero blandit mattis. Nullam vestibulum est eget enim iaculis ultrices.  </p>
+				<p><a class="lnkSeta" href="#">Saiba mais</a></p>
 			</div>
 		</div>
-
-		<div class="details">
-			<summary data-toggle="collapse" data-target="#configMeioPagtoDesc"><span>02.</span> Configure um meio de pagamento</summary>
-			<div id="configMeioPagtoDesc" class="collapse">
-				<p>Proin eget velit sed mauris sollicitudin semper vel et sem. Nam dapibus placerat ante, nec feugiat elit faucibus sollicitudin. Aliquam accumsan mi id lectus posuere scelerisque. Fusce hendrerit nibh vel libero blandit mattis. Nullam vestibulum est eget enim iaculis ultrices</p>
-				<p><a href="#" class="lnkSeta">Saiba mais</a></p>
-			</div>
-		</div>
-		<div class="details">
-			<summary data-toggle="collapse" data-target="#impMeioPagtoDesc"><span>03.</span> Implemente seu meio de pagamento</summary>
-			<div id="impMeioPagtoDesc" class="collapse">
-				<p>Nam dapibus placerat ante, nec feugiat elit faucibus sollicitudin. Aliquam accumsan mi id lectus posuere scelerisque. Fusce hendrerit nibh vel libero blandit mattis. Nullam vestibulum est eget enim iaculis ultrice</p>
-				<p><a href="#" class="lnkSeta">Saiba mais</a></p>
+		<div class="boxCollapse whiteCollapse">
+			<header data-target="#collapse2" data-toggle="collapse" class="noBorder">
+				<h4><span>01.</span> Contrate um convênio</h4>
+			</header>
+			<div class="collapse" id="collapse2">
+				<p>Para contratar um convênio, é necessário Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit justo, tincidunt nec ultricies at, pellentesque et elit. Proin risus odio, ultrices vel porttitor sed, blandit tristique eros. Aliquam erat volutpat. In hac habitasse platea dictumst.Proin eget velit sed mauris sollicitudin semper vel et sem. Nam dapibus placerat ante, nec feugiat elit faucibus sollicitudin. Aliquam accumsan mi id lectus posuere scelerisque. Fusce hendrerit nibh vel libero blandit mattis. Nullam vestibulum est eget enim iaculis ultrices.  </p>
+				<p><a class="lnkSeta" href="#">Saiba mais</a></p>
 			</div>
 		</div>
 		<a href="/stop_showing_first_steps" class="lnkSeta fright hideFirstSteps" data-remote="true">Não exibir novamente</a>
 
-	</div>
-</div>
+</div> <!-- FIM COLLAPSE BOX GRAY -->
 
 
 

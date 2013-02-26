@@ -1,7 +1,7 @@
 /***
 **** BOX Collpase
 ***/
-
+.boxGray > .lnkSeta {margin:0 15px 10px;}
 p + .boxCollapse {margin-top:30px;}
 .collapse p + .btn {margin: 10px 0 5px;}
 .collapse h6:first-child {padding: 10px 0 0;}
@@ -9,10 +9,10 @@ p + .boxCollapse {margin-top:30px;}
 .boxCollapse {
   border-radius:3px;
   padding:3px;
-  margin:0 0 10px; 
-  border:1px solid #e5e5e5; 
+  margin:0 0 10px;
+  border:1px solid #e5e5e5;
   border-bottom-width:2px;
-  background:url(img/setaCollapseBottom.png) no-repeat 99% 10px;
+  background:url(img/setaCollapseBottom.png) no-repeat 99% 11px;
   -webkit-transition:all .2s linear;
   -moz-transition:all .2s linear;
   -ms-transition:all .2s linear;
@@ -20,6 +20,30 @@ p + .boxCollapse {margin-top:30px;}
   transition:all .2s linear;
 }
 
+
+.boxGray .boxCollapse {margin:0 15px 5px;}
+
+/**
+  boxCollapse menor, sem borda do lado esquerdo, com fundo branco quando ativa
+**/
+.boxCollapse.whiteCollapse {
+  background-color:#F1F1F1;
+  border:1px solid #d0d0d0;
+}
+.boxCollapse.whiteCollapse:hover,
+.boxCollapse.whiteCollapse.active {background-color:#FFF;}
+
+.boxCollapse.whiteCollapse header {
+  color:#545454;
+  font-size:0.75em;
+  padding:0 10px;
+}
+.boxCollapse.whiteCollapse header h4 {color: #545454; font-size: 1.0em;}
+.boxCollapse.whiteCollapse .collapse p {
+  padding-left: 20px;
+  line-height: 1.45em;
+}
+.boxCollapse.whiteCollapse header span {font-size:1.45em; letter-spacing: -2px;}
 
 .boxCollapse header  {
   border-left:5px solid #CCC;
@@ -29,21 +53,39 @@ p + .boxCollapse {margin-top:30px;}
   position: relative;
 }
 .boxCollapse .lnkCollapse{
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
+  height: 100%; width: 100%;
   position: absolute;
-} 
+  left: 0; top: 0;
+}
 .boxCollapse:hover {background-color:#ECECEC;}
 
-.boxCollapse.active {background:#ececec url(img/setaCollapseTop.png) no-repeat 99% 10px; padding-bottom:10px;}
+.boxCollapse.active {
+  background-image: url(img/setaCollapseTop.png);
+  background-color: #ECECEC;
+  padding-bottom:10px;
+}
 .boxCollapse.active header h4 {font-weight:bold;}
-.boxCollapse .collapse {padding:0 15px;}
-.boxCollapse .collapse:before {content: " "; display:block; padding:20px 0 0;}
 
-.boxCollapse header h4 {font:15px verdana, arial, tahoma, sans-serif; margin-bottom:0; outline: none;}
-.boxCollapse header p {font:12px verdana, arial, tahoma, sans-serif; color:#767676; padding:0; margin:0; outline: none;}
+.boxCollapse .collapse {padding:0 15px;}
+
+.boxCollapse .collapse::before {content: ""; display:block; padding:20px 0 0;}
+.boxCollapse.whiteCollapse .collapse::before {padding:10px 0 0;}
+
+.boxCollapse header > a {outline: none;}
+
+.boxCollapse header h4 {
+  font:1em verdana, arial, tahoma, sans-serif;
+  margin-bottom:0;
+  outline: none;
+}
+
+.boxCollapse header p {
+  font:12px verdana, arial, tahoma, sans-serif;
+  color:#767676;
+  padding:0;
+  margin:0;
+  outline: none;
+}
 
 .boxCinzaInner {background:#ddd; padding:10px 10px; margin-bottom:30px;}
 .boxCinzaInner + .boxCinzaInner {margin-top:-25px;}
@@ -103,3 +145,7 @@ tr.active .actionsTable {display:none;}
 
 .collapseGroup .details p {padding:10px 30px;}
 
+/***
+**** Fix do IE9 para Altura dos collapses em conjunto com actionsTable que aparecia e desaparecia
+***/
+.ie9 .boxCollapse.active, .ie9 .boxCollapse.active .in {overflow:visible; height:auto !important;}
