@@ -157,7 +157,6 @@ h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; 
 .lists .statusMessageBox .status > span {font-weight: normal;}
 .lists .statusMessageBox .status b{font-size: 12px;}
 
-<<<<<<< HEAD
 /** usado no lugar de campos de formulário para listar KEYs de APIS no Email Marketing e Revenda de EMKT **/
 pre {
   background:#FFF;
@@ -201,6 +200,14 @@ pre {
   color:#1a4294;
   font:bold 12px verdana, arial, tahoma, sans-serif;
   margin:0 0 5px;
+}
+/** usado no lugar de campos de formulário para listar KEYs de APIS no Email Marketing e Revenda de EMKT **/
+pre {
+  background:#FFF;
+  margin:5px 0;
+  padding:10px;
+  box-shadow:inset 0 2px 5px -2px rgba(0,0,0,0.2);
+  font-weight:normal;
 }
 
 /*** POPOVER
