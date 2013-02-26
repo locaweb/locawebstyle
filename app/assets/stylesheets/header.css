@@ -24,7 +24,9 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   letter-spacing: 7px;
 }
 
-/** Menu Principal **/
+/*** MENU PRINCIPAL
+**** Formatação do menu principal do header
+***/
 #menuPrincipal {
   padding:7px 0 0;
   background:#FFF;
@@ -40,15 +42,19 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   padding:0;
   position:relative;
 }
+
 #menuPrincipal > ul:after {content:" "; display:block; clear:both;}
+
 #menuPrincipal > ul > li {
   float:left;
   position:relative;
   background:#FFF url(img/dotMenuLi.gif) no-repeat right center;
   padding:0 5px;
 }
+
 #menuPrincipal > ul > li:first-child {padding-left:0;}
 #menuPrincipal > ul > li:last-child {background-image:none;}
+
 #menuPrincipal > ul > li > a:after {
   content: "";
   display:block;
@@ -57,6 +63,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   width:11px; height:5px;
   background:url(img/setaDots.png) center center no-repeat;
 }
+
 #menuPrincipal > ul > li > a {
   position:relative;
   display:inline-block;
@@ -74,16 +81,19 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 
   padding:9px 8px;
   border-bottom: 1px solid transparent;
-  
+
 }
 
+.ie9 #menuPrincipal > ul > li > a {font-size:13px;}
+
 #menuPrincipal > ul > li > a:hover {color:#666; background-color:transparent;}
+
 #menuPrincipal a.ico-home:before {
-  float:right; 
-  position:relative; 
-  left: 1px; 
-  margin-top:-4px; 
-  font-size:19px; 
+  float:right;
+  position:relative;
+  left:-2px;
+  margin-top:-4px;
+  font-size: 19px;
   text-indent: 0;
 }
 
@@ -102,7 +112,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 
 #menuPrincipal .parent:hover > a {box-shadow:1px 3px 5px 0 rgba(0, 0, 0, 0.2);}
 
-#menuPrincipal .parent > a:hover, 
+#menuPrincipal .parent > a:hover,
 #menuPrincipal .parent:hover > a,
 #menuPrincipal ul li.parent.focus > a {
   color:#666;
@@ -127,7 +137,9 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 }
 
 #menuPrincipal > ul > li:hover ul,
-#menuPrincipal > ul > li:active ul {opacity:1; visibility:visible; }
+#menuPrincipal > ul > li:active ul {
+  opacity:1; visibility:visible;
+}
 #menuPrincipal ul li ul {
   opacity:0;
   border:1px solid #c7c7c7;
@@ -295,10 +307,10 @@ header.headerPrincipal .btn-group {display:inline-block;}
 .listIdent li span {padding-left:10px; display:inline-block}
 
 .dropdown-menu.listIdent .lnkSeta {margin:10px; background-position:left 4px; padding-left:13px;}
-.lnkContent{ 
+.lnkContent{
   left: 0;
-  position: absolute; 
-  text-indent: -9999px; 
-  top: 0; 
+  position: absolute;
+  text-indent: -9999px;
+  top: 0;
 }
 .lnkContent:focus{text-indent: 0;}
