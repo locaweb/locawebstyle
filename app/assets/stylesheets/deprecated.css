@@ -1,4 +1,3 @@
-
 /* DEPRECATED 21/01/13 */
 .collapseGroup summary {
   color:#545454;
@@ -149,4 +148,51 @@ pre {
   box-shadow:inset 0 2px 5px -2px rgba(0,0,0,0.2);
   font-weight:normal;
 }
+
+/*** POPOVER
+***/
+.infoBubble {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  background-color: #194092;
+  border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  box-shadow: 0 0 3px #224c9b inset;
+  color: #FFF !important;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  height: 14px;
+  line-height: 14px;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+.progress.infoBubble{padding: 0;}
+
+
+/*** POPOVER
+**** Novo icone infoBubble testado na Revenda
+***/
+.infoBubble:before {
+  content: "?";
+  color:#FFF !important;
+}
+
+.infoBubble h6 {
+  color:#1a4294;
+  font:bold 12px verdana, arial, tahoma, sans-serif;
+  margin:0 0 5px;
+}
+/** usado no lugar de campos de formulário para listar KEYs de APIS no Email Marketing e Revenda de EMKT **/
+pre {
+  background:#FFF;
+  margin:5px 0;
+  padding:10px;
+  box-shadow:inset 0 2px 5px -2px rgba(0,0,0,0.2);
+  font-weight:normal;
+}
+
+
 
