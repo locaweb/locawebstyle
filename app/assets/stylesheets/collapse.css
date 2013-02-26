@@ -48,6 +48,30 @@ p + .boxCollapse {margin-top:30px;}
 }
 .boxCollapse.simpleCollapse header span {font-size:1.40em; letter-spacing: -2px;}
 
+.boxGray .boxCollapse {margin:0 15px 5px;}
+
+/**
+  boxCollapse menor, sem borda do lado esquerdo, com fundo branco quando ativa
+**/
+.boxCollapse.whiteCollapse {
+  background-color:#F1F1F1;
+  border:1px solid #d0d0d0;
+}
+.boxCollapse.whiteCollapse:hover,
+.boxCollapse.whiteCollapse.active {background-color:#FFF;}
+
+.boxCollapse.whiteCollapse header {
+  color:#545454;
+  font-size:0.75em;
+  padding:0 10px;
+}
+.boxCollapse.whiteCollapse header h4 {color: #545454; font-size: 1.0em;}
+.boxCollapse.whiteCollapse .collapse p {
+  padding-left: 20px;
+  line-height: 1.45em;
+}
+.boxCollapse.whiteCollapse header span {font-size:1.45em; letter-spacing: -2px;}
+
 .boxCollapse header  {
   border-left:5px solid #CCC;
   padding:2px 10px 0px;
@@ -145,8 +169,6 @@ tr.active .actionsTable {display:none;}
   position: relative;
   left: -5px;
 }
-
-.collapseGroup .details p {padding:10px 30px;}
 
 /***
 **** Fix do IE9 para Altura dos collapses em conjunto com actionsTable que aparecia e desaparecia
