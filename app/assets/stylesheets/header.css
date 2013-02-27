@@ -314,10 +314,7 @@ header.headerPrincipal .btn-group {display:inline-block;}
 .listIdent li span {padding-left:10px; display:inline-block}
 
 .dropdown-menu.listIdent .lnkSeta {margin:10px; background-position:left 4px; padding-left:13px;}
-.lnkContent{
-  left: 0;
-  position: absolute;
-  text-indent: -9999px;
-  top: 0;
-}
-.lnkContent:focus{text-indent: 0;}
+
+#lnk-content{opacity: 0;}
+
+#lnk-content:focus{opacity: 1;}

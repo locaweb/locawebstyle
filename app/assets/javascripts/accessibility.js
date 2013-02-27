@@ -10,8 +10,8 @@ $(function(){
 	// $('.btn-primary').attr('tabindex','3');
 	// $('.tabs li a').attr('tabindex','4');
 	//$('#menuPrincipal li > a, #main .chamadasBox h3 a, .headerContent h1, .alert').attr('tabindex','2');
-	
-	
+
+
 	//$('input, select, .btn.btn-primary').attr('tabindex','2');
 
 //
@@ -33,7 +33,7 @@ $(function(){
 	$('.boxGray').attr('role','region');
 	$('.boxGray h2').attr('role','presentation');
 	$('.headerPrincipal').attr('role','banner');
-	$('.content').attr('role','main'); 
+	$('.content').attr('role','main');
 	$('.sidebar').attr('role','complementary');
 	$('input.required').attr('aria-required','true');
 	$('.lnkCoverAll').attr('tabindex','3');
@@ -79,18 +79,18 @@ $(function(){
 		$(this).prepend('<a href="#" role="button" aria-haspopup="true" aria-controls="'+target+'" aria-label="'+title+'" title="'+title+'" class="lnkCollapse" tabindex="3"></a>');
 	})
 	$('.collapse').find('*[tabindex="3"]').attr('tabindex','0');
-	
+
 
 	//Notificaçao
 	$('.alert, .focusOn').attr('tabindex','-1').focus();
 
-	//Ir para o conteudo 
+	//Ir para o conteudo
 	$('.lnkContent').on('click',function(e){
-    $('.titleContent').attr('tabindex', '-1').focus().css('outline','none');
-    $('html, body').animate({
+        $('.titleContent').attr('tabindex', '-1').focus().css('outline','none');
+        $('html, body').animate({
 		    scrollTop: $(".titleContent").offset().top
 		}, 500);
-    e.preventDefault();
+        e.preventDefault();
   })
 
 
@@ -104,7 +104,7 @@ function accessMenu(){
 		var  href = $(this).attr('href');
 		var  text = $(this).text();
 		$('.menuAccess').append('<a role="menuitem" tabindex="1" href="'  + href + '" aria-label="' + title + '" title="' + title + '">' + text + '</a>');
-	})      
+	})
 }
 
 // Deixa o submenu acessivel
