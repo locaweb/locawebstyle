@@ -332,7 +332,5 @@ $(document).ready(function() {
   //Exibe/esconde elementos
   var dataClass = $('.toggleChild').data('class')
   $('.toggleChild').addClass(dataClass);
-
-
 });
 
