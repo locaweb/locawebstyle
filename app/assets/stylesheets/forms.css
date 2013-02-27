@@ -6,10 +6,10 @@ fieldset {
 /*fieldset + fieldset {margin-top: 20px;}*/
 
 input, textarea, select {
-  color: #797979; 
-  margin-bottom: 0; 
-  z-index: 1; 
-  position: relative; 
+  color: #797979;
+  margin-bottom: 0;
+  z-index: 1;
+  position: relative;
   border-color: #e5e5e5;
 }
 
@@ -282,7 +282,7 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 /*** CUSTOM SELECT
 **** Formatando seletores customizaveis
 ***/
-.select2-drop, 
+.select2-drop,
 .customSelect,
 .select2-container-active {
   font-size:0.9em;
@@ -293,7 +293,7 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 
 .customSelect[class*="span"] {margin-left:0;}
 
-.select2-container-active .select2-choice, 
+.select2-container-active .select2-choice,
 .select2-container-active .select2-choices,
 .select2-container .select2-choice,
 .select2-dropdown-open .select2-choice,
