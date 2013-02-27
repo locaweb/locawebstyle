@@ -934,3 +934,28 @@ a[class*="ico-"] {font-size: 12px;}
   color: #333;
 }
 .popover-content{font-size: 14px;}
+
+
+
+.boxWithArrow {
+  float: left;
+  margin-top: 5px;
+  background: #ececec;
+}
+
+.boxWithArrow div {
+  background: #fff;
+  width: 29px;
+  margin: 2px;
+  height: 29px;
+  position: relative;
+}
+
+.boxWithArrow div:before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: -10px;
+  border: 5px solid;
+  border-color: transparent transparent transparent #fff;
+}

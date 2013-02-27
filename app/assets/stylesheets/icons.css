@@ -11,15 +11,17 @@
 
 [class^="ico-"]:before, [class*="ico-"]:before, .lnkArrow:before, .lnkSeta:before {
   display:inline-block;
-  margin-right:2px;
+  margin-right:4px;
   font-family: locaweb;
   font-weight:normal;
   speak: none;
   text-decoration:none;
-  width:17px;
+  width:auto;
+  line-height: 1.1em;
+  vertical-align: middle;
   text-align: center;
-  min-height:17px;
-  position:relative; top:1px;
+  position:relative;
+  top:-2px;
   font-size:1.1em;
 }
 
@@ -33,6 +35,8 @@ h6[class^="ico-"]:before {
   position: relative;
   top: -2px;
 }
+
+.mediumIcon {font-size: 30px;vertical-align: middle;}
 
 /** IE8 Fix ***/
 .ie8 [class^="ico-"]:before, .ie8 [class*="ico-"]:before, .ie8 .lnkSeta:before, .ie8 .lnkArrow:before {vertical-align:top; text-decoration: none !important;}
