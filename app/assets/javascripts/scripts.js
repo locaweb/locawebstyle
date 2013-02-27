@@ -333,11 +333,7 @@ $(document).ready(function() {
   var dataClass = $('.toggleChild').data('class')
   $('.toggleChild').addClass(dataClass);
 
-   //Add/remove classe active para botoes especificos
-  $('.btn_toggle').on('click',function(){
-    $(this).parent().find('.btn_toggle').removeClass('active');
-    $(this).toggleClass('active');
-  })
+  
 
 });
 
