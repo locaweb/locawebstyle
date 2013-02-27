@@ -38,7 +38,6 @@ h6[class^="ico-"]:before {
 
 .mediumIcon {font-size: 30px;vertical-align: middle;}
 
-
 .tableList td [class^="ico-"], .tableList td [class*="ico-"] {font-weight:normal;}
 
 /** Quando o ícone tem que ir para a direita **/

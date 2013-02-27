@@ -1001,8 +1001,8 @@ a[class*="ico-"] {font-size: 12px;}
 .chooseBox li.active [class*="ico-"]:before{
   color: #333;
 }
-.popover{font-size: 0.88em;}
 
+.popover{font-size: 0.88em;}
 
 .boxWithArrow {
   float: left;
@@ -1026,5 +1026,8 @@ a[class*="ico-"] {font-size: 12px;}
   border: 5px solid;
   border-color: transparent transparent transparent #fff;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> Nova classe boxWithArrow e ajustes nos icones.
