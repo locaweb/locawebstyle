@@ -83,6 +83,11 @@ $(function(){
 	//Notificaçao
 	$('.alert, .focusOn').attr('tabindex','-1').focus();
 
+	//Ir para o conteudo (necessario ter ID content)
+	$('#lnk-content').on('click',function(){
+    $('#content').attr('tabindex', '-1').focus().css('outline','none');
+  })
+
 
 })
 
