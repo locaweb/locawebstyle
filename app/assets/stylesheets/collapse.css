@@ -26,24 +26,27 @@ p + .boxCollapse {margin-top:30px;}
 /**
   boxCollapse menor, sem borda do lado esquerdo, com fundo branco quando ativa
 **/
-.boxCollapse.whiteCollapse {
+.boxCollapse.simpleCollapse {
   background-color:#F1F1F1;
   border:1px solid #d0d0d0;
+  margin-bottom:5px;
 }
-.boxCollapse.whiteCollapse:hover,
-.boxCollapse.whiteCollapse.active {background-color:#FFF;}
 
-.boxCollapse.whiteCollapse header {
+.boxCollapse.simpleCollapse:hover,
+.boxCollapse.simpleCollapse.active {background-color:#FFF;}
+
+.boxCollapse.simpleCollapse header {
   color:#545454;
   font-size:0.75em;
   padding:0 10px;
+  border-left:none;
 }
-.boxCollapse.whiteCollapse header h4 {color: #545454; font-size: 1.0em;}
-.boxCollapse.whiteCollapse .collapse p {
-  padding-left: 20px;
+.boxCollapse.simpleCollapse header h4 {color: #545454; font-size: 1.0em;}
+.boxCollapse.simpleCollapse .collapse p {
+  padding-left: 25px;
   line-height: 1.45em;
 }
-.boxCollapse.whiteCollapse header span {font-size:1.45em; letter-spacing: -2px;}
+.boxCollapse.simpleCollapse header span {font-size:1.40em; letter-spacing: -2px;}
 
 .boxCollapse header  {
   border-left:5px solid #CCC;
