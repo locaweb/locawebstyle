@@ -333,4 +333,3 @@ $(document).ready(function() {
   var dataClass = $('.toggleChild').data('class')
   $('.toggleChild').addClass(dataClass);
 });
-
