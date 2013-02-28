@@ -395,26 +395,29 @@ tr.active td .boxActions {padding-top:0;}
   display: none;
   border: 1px solid #AAA;
   border-radius: 3px;
-  background-color:#FFF;
-  background-color:rgba(255,255,255,0.9);
-  padding:5px;
-  width:200px;
-  box-shadow:0 0 16px 5px rgba(0,0,0,0.3);
+  background-color: #FFF;
+  background-color: rgba(255,255,255,0.9);
+  padding: 5px;
+  width: 200px;
+  box-shadow: 0 0 16px 5px rgba(0,0,0,0.3);
+  z-index: 1050 !important;
 }
 
 .ui-datepicker .ui-datepicker-header  {
-  background-color:#CCC;
-  padding:5px;
-  font-weight:bold;
-  border-radius:3px;
+  background-color: #CCC;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 3px;
 }
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
-  width:13px; height:13px;
-  display:block;
-  text-indent:-9999px;overflow:hidden;
-  background-image:url(img/jqui.png);
+  width: 13px;
+  height: 13px;
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-image: url(img/jqui.png);
   background-position: no-repeat;
-  cursor:pointer;
+  cursor: pointer;
 }
 .ui-datepicker .ui-datepicker-prev {background-position: -81px -193px; float:left;}
 .ui-datepicker .ui-datepicker-next {background-position: -49px -193px; float:right;}
