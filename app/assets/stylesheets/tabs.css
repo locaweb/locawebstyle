@@ -51,6 +51,7 @@
   margin-bottom:20px;
   min-width: 734px;
   width: auto;
+  background: white;
 }
 .tabs + .tab-content {border-top:none;}
 
