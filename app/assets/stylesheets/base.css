@@ -378,6 +378,16 @@ tr.active td .boxActions {padding-top:0;}
   top:5px; right:10px;
 }
 
+.actLnk a {
+  border-right: 1px solid #CCC;
+  padding: 0 5px;
+  margin: 0;
+}
+
+.actLnk.fright a:last-child {
+  border: none;
+}
+
 /**
 *** Calendário - Datepicker
 **/
