@@ -275,13 +275,16 @@ h6 .lnkSeta, h6 .lnkArrow {position:relative; top:-1px; margin:0;   border-left:
 
 .navView .pagination {float:right;}
 .tab-content .navView {padding:15px 10px;}
+
 .navView {
-  margin:20px 0;
-  padding:9px 10px;
-  color:#767676;
-  clear:both;
-  border-bottom:1px solid #e5e5e5;
+  margin: 20px 0;
+  padding: 9px 10px;
+  color: #767676;
+  clear: both;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 0.8em;
 }
+
 .navView.borderTop {border-top:1px solid #e5e5e5; border-bottom:0;}
 table ~ .navView {border-top:none; margin-top:-20px; padding:15px 10px;}
 
