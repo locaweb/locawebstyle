@@ -538,6 +538,50 @@ tr.active td .boxActions {padding-top:0;}
   width: 300px;
 }
 
+.messageInfo .contentDescription {
+  overflow: hidden;
+}
+
+.messageInfo .contentDescription .actionsTable {
+  border: none;
+  padding: 2px 5px;
+  margin: 0;
+  float: left;
+}
+
+.messageInfo .contentDescription.with_border {
+  border-top: 1px solid #e5e5e5;
+  margin: 0 0 -10px;
+}
+
+.messageInfo .contentDescription p {
+  padding: 5px 5px;
+  border-left: 1px solid #e5e5e5;
+}
+
+.messageInfo .contentDescription.with_border p {
+  padding: 5px 5px 10px;
+}
+
+.messageInfo .contentDescription p span {
+  color: #767676;
+}
+
+.messageInfo .contentDescription p:first-child {
+  border: none;
+}
+
+.messageInfo .contentDescription p a {
+  font-weight: normal !important;
+  display: inline-block;
+  padding-right: 10px;
+  background: url(/assets/sepActionsTable.gif) no-repeat right center;
+}
+
+.messageInfo .contentDescription p a:last-child {
+  background: none;
+}
+
 /* Status Gradient */
 .countViews,
 .forceClass .gradientSilver{
