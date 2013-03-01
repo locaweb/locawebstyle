@@ -10,6 +10,7 @@
 .cleft, .cLeft {clear:left !important;}
 
 .overflowHidden, .overflowhidden{ overflow: hidden !important;}
+.overflowVisible {overflow: visible !important;}
 
 /** 
 *** BLOCO E LINHA

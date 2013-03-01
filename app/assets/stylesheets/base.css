@@ -472,6 +472,13 @@ tr.active td .boxActions {padding-top:0;}
 .messageInfo .countViews:before,
 .messageInfo .countViews + div:before {display: none;}
 
+.messageInfo.overflowVisible > div:before {display: none;}
+.messageInfo.overflowVisible > div {
+  display: table-cell;
+  border-left: 1px solid #e5e5e5;
+}
+.messageInfo.overflowVisible > div:first-child{border:none;}
+
 .messageInfo > div .actionsTable {
   display: block;
   border-top: 1px solid #e5e5e5;
@@ -763,6 +770,8 @@ td .progress {max-width:70px;}
   padding: 0 4px;
   border-radius: 4px;
 }
+.progress[rel="popover"]{padding: 0;}
+
 
 /*** POPOVER
 **** Novo icone infoBubble testado na Revenda
@@ -994,7 +1003,6 @@ a[class*="ico-"] {font-size: 12px;}
   color: #333;
 }
 .popover-content{font-size: 14px;}
-
 
 
 .boxWithArrow {
