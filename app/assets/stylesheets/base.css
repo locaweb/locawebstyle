@@ -766,8 +766,8 @@ td .progress {max-width:70px;}
   padding: 0 4px;
   border-radius: 4px;
 }
-.progress.infoHelp {padding: 0;}
 
+.progress.infoHelp {padding: 0;}
 
 /*** POPOVER
 **** Novo icone infoHelp testado na Revenda
@@ -1002,8 +1002,11 @@ a[class*="ico-"] {font-size: 12px;}
   color: #333;
 }
 
+<<<<<<< HEAD
 .popover{font-size: 0.88em;}
 
+=======
+>>>>>>> Modularizacao do messageInfo que exibe conteudo fora da caixa de mensagem adicionando classe overflowVisible
 .boxWithArrow {
   float: left;
   margin-top: 5px;
