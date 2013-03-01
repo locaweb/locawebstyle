@@ -767,6 +767,8 @@ td .progress {max-width:70px;}
   padding: 0 4px;
   border-radius: 4px;
 }
+.progress[rel="popover"]{padding: 0;}
+
 
 .progress.infoHelp {padding: 0;}
 
