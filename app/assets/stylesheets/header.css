@@ -78,12 +78,19 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 }
 .ie9 #menuPrincipal > ul > li > a {font-size:13px;}
 #menuPrincipal > ul > li > a:hover {color:#666; background-color:transparent;}
-#menuPrincipal a.ico-home:before {float:right; position:relative; left:-2px; margin-top:-4px; font-size:19px; text-indent: 0;}
+#menuPrincipal a.ico-home:before {
+  float:right; 
+  position:relative; 
+  left: 1px; 
+  margin-top:-4px; 
+  font-size:19px; 
+  text-indent: 0;
+}
 
 #menuPrincipal a.ico-home {
   width:25px;
   text-indent: -999px;
-  padding:7px 8px 8px;
+  padding:9px 8px 8px;
 }
 
 #menuPrincipal > ul > li.selected > a {
@@ -282,5 +289,5 @@ header.headerPrincipal .btn-group {display:inline-block;}
 .listIdent li span {padding-left:10px; display:inline-block}
 
 .dropdown-menu.listIdent .lnkSeta {margin:10px; background-position:left 4px; padding-left:13px;}
-#lnk-content{opacity: 0;}
-#lnk-content:focus{opacity: 1;}
+.lnkContent{opacity: 0;}
+.lnkContent:focus{opacity: 1;}

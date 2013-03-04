@@ -49,6 +49,7 @@
 .chamadasBox .span3 {width:22.5%; margin-left:0;}
 
 .ie8 .chamadasBox div {width:29.6%;}
+.ie8 .maxBox.chamadasBox div {width:inherit;}
 
 .chamadasBox div:last-child {margin-right:0;}
 
