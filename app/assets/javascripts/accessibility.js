@@ -86,11 +86,11 @@ $(function(){
 
 	//Ir para o conteudo
 	$('.lnkContent').on('click',function(e){
-        $('.titleContent').attr('tabindex', '-1').focus().css('outline','none');
-        $('html, body').animate({
+    $('.titleContent').attr('tabindex', '-1').focus().css('outline','none');
+    $('html, body').animate({
 		    scrollTop: $(".titleContent").offset().top
 		}, 500);
-        e.preventDefault();
+    e.preventDefault();
   })
 
 

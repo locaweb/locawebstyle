@@ -48,8 +48,6 @@
 
 .chamadasBox .span3 {width:22.5%; margin-left:0;}
 
-
-
 .chamadasBox div:last-child {margin-right:0;}
 
 .chamadasBox div h3, .chamadasBox div h3:first-child {
@@ -95,8 +93,8 @@
 ***/
 .miniBox div {min-height:140px;}
 .miniBox p, .microBox p { display:none;}
-.miniBox [class^="ico-"]:before, 
-.miniBox [class*="ico-"]:before, 
+.miniBox [class^="ico-"]:before,
+.miniBox [class*="ico-"]:before,
 .miniBox .lnkArrow::before, .lnkSeta:before{
   width: auto;
 }
@@ -123,8 +121,8 @@
 
 
 
-/*** 
-**** Esse link é inserido via JQuery. ;-( 
+/***
+**** Esse link é inserido via JQuery. ;-(
 ***/
 .lnkCoverAll {
   text-indent: -9999px;
