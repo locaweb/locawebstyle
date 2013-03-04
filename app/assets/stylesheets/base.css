@@ -750,9 +750,8 @@ td .progress {max-width:70px;}
 }
 
 /*** POPOVER
-**** antigo infoBubble
 ***/
-.infoBubble, [rel="popover"] {
+.infoHelp {
   display: inline-block;
   cursor: pointer;
   position: relative;
@@ -770,20 +769,19 @@ td .progress {max-width:70px;}
   padding: 0 4px;
   border-radius: 4px;
 }
-.progress[rel="popover"]{padding: 0;}
+.progress.infoHelp {padding: 0;}
 
 
 /*** POPOVER
-**** Novo icone infoBubble testado na Revenda
+**** Novo icone infoHelp testado na Revenda
 ***/
-.infoBubble:before, 
-[rel="popover"]:before{
+.infoHelp:before {
   content: "?";
   color:#FFF !important;
 }
 
 
-.infoBubble h6, [rel="popover"] h6 {
+.infoHelp h6 {
   color:#1a4294;
   font:bold 12px verdana, arial, tahoma, sans-serif;
   margin:0 0 5px;
