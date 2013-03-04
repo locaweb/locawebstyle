@@ -241,7 +241,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 }
 
 /** fix para esta classe que coloca font-size: 0 na versão 2.1.0 do bootstrap **/
-.btn-group {font-size: none;}
+.btn-group {font-size: inherit;}
 
 .btn-group .dropdown-toggle.identNumber {
   background:url(img/setaIdentBaixo.png) no-repeat right 16px;
