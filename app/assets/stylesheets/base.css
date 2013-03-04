@@ -18,6 +18,7 @@ html, body {
   background: -ms-linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(252,252,252,1) 3%,rgba(255,255,255,1) 7%);
   background: linear-gradient(to bottom,  rgba(232,232,232,1) 0%,rgba(252,252,252,1) 3%,rgba(255,255,255,1) 7%);
 }
+
 #main > .limite {padding-bottom:160px;}
 
 .limite {margin: 0 auto;}
@@ -489,11 +490,11 @@ tr.active td .boxActions {padding-top:0;}
   font:bold 15px verdana, arial, sans-serif;
 }
 .messageInfo:after {content: " "; display: block; clear:both;}
-.messageInfo .countViews a, 
+.messageInfo .countViews a,
 .messageInfo .countViews a:hover {color:#2a2a2a;}
 
 .messageInfo [class*="span"] {margin-left:0;}
-.messageInfo .headerInfo span.label-info, 
+.messageInfo .headerInfo span.label-info,
 .messageInfo .headerInfo span.badge-info{color: #fff;}
 .messageInfo .countViews {
   border-radius: 5px 0 0 5px;
@@ -637,7 +638,7 @@ tr.active td .boxActions {padding-top:0;}
 /* Utilizado dentro de collapse */
 .simpleMessageInfo .messageInfo{
   border: none;
-  display: block; 
+  display: block;
   margin: 0;
 }
 .simpleMessageInfo .messageInfo > div{
@@ -868,9 +869,9 @@ td .progress {max-width:70px;}
 a[class*="ico-"] {font-size: 12px;}
 
 .forceClass a.warning {color: #b54646;}
-.forceClass .control-group.error input[type="text"], 
-.forceClass .control-group.error input[type="password"], 
-.forceClass .control-group.error input[type="number"], 
+.forceClass .control-group.error input[type="text"],
+.forceClass .control-group.error input[type="password"],
+.forceClass .control-group.error input[type="number"],
 .forceClass .control-group.error input[type="email"],
 .forceClass .control-group.error input[type="date"]{
   color: inherit;
@@ -957,8 +958,8 @@ a[class*="ico-"] {font-size: 12px;}
   position:absolute;
   left:50%; margin-left:-15px;
   bottom:-13px;
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 13px solid transparent;
   border-right: 13px solid transparent;
 }
@@ -967,12 +968,12 @@ a[class*="ico-"] {font-size: 12px;}
   position:absolute;
   left:50%; margin-left:-17px;
   bottom:-15px;
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
 }
-.chooseBox [class^="ico-"]:before, 
+.chooseBox [class^="ico-"]:before,
 .chooseBox [class*="ico-"]:before{
   color: #545454;
   font-size: 2.4em;
