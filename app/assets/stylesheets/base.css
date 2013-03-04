@@ -521,7 +521,8 @@ tr.active td .boxActions {padding-top:0;}
   top: 50%; right: 2px;
   margin-top: -20px;
 }
-
+.ie8 .messageInfo .countViews:after{right: 0;}
+.ie9 .messageInfo .countViews:after{margin-top: -10px;}
 .messageInfo p {color: #2a2a2a;}
 .messageInfo p {margin: 0;}
 
