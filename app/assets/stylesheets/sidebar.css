@@ -173,6 +173,7 @@ h5 + .innerSideBox {margin-top:5px;}
   position: absolute;
   height: 32px;
 }
+
 .boxSidebarTitle:before {
   border-color: #000 transparent transparent transparent;
   border-width: 8px;
@@ -203,4 +204,3 @@ h5 + .innerSideBox {margin-top:5px;}
 .boxSidebarTitle .ico-thumbs-up-1{
   margin: 5px;
 }
-
