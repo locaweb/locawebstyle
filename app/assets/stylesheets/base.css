@@ -927,7 +927,13 @@ a[class*="ico-"] {font-size: 12px;}
   overflow:hidden;
 }
 
-
+.chooseBox li h4[class^="ico-"]:before,
+.chooseBox li h4[class*=" ico-"]:before,
+.chooseBox li:hover p,
+.chooseBox li.active p{ opacity: 0.7;}
+.ie8 .chooseBox a.lnkChoose,
+.ie9 .chooseBox a.lnkChoose,
+.ie7 .chooseBox a.lnkChoose {background:#FFF; filter: alpha(opacity = 0);}
 
 .chooseBox li:first-child {margin-left:0;}
 

@@ -1,73 +1,12 @@
 // Email Panel Color
 $theme_name: ".colorNavyBlue";
 
-$main_color: #00417b;
-$secondary_color: #0c589b;
-
-$btn_primary_color: #fff;
-$btn_border: #00417b;
-
-$main_menu_hover_color: #fff;
-
-$button_interaction_background_color: #21527d;
-
-$lnk_seta_hover_color: #1a68ad;
-
-$button_to_close_modal_color: #000;
-
-$path_way_background_active_color: #9eb0e8;
-$path_way_step_active_color: #2865ca;
-$path_way_description_active_color: #02436d;
-
-$color_strong: #2865ca;
-$color_medium: #4F84D6;
-$color_soft: #d9ecff;
-
-@mixin main_gradient {
-  background: rgb(0,65,123); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(0,65,123,1) 5%, rgba(0,53,107,1) 6%, rgba(0,65,123,1) 100%);
-  background: -webkit-linear-gradient(top,  rgba(0,65,123,1) 5%,rgba(0,53,107,1) 6%,rgba(0,65,123,1) 100%);
-  background: -o-linear-gradient(top,  rgba(0,65,123,1) 5%,rgba(0,53,107,1) 6%,rgba(0,65,123,1) 100%);
-  background: -ms-linear-gradient(top,  rgba(0,65,123,1) 5%,rgba(0,53,107,1) 6%,rgba(0,65,123,1) 100%);
-  background: linear-gradient(to bottom,  rgba(0,65,123,1) 5%,rgba(0,53,107,1) 6%,rgba(0,65,123,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#513335', endColorstr='#3e2a2e',GradientType=0 );
-}
-
-@mixin secondary_gradient {
-  background-color: #003165;
-  background-image: -moz-linear-gradient(top,  rgba(0,65,123,1) 0%, rgba(0,85,140,1) 4%, rgba(0,49,101,1) 100%);
-  background-image: -webkit-linear-gradient(top,  rgba(0,65,123,1) 0%,rgba(0,85,140,1) 4%,rgba(0,49,101,1) 100%);
-  background-image: -o-linear-gradient(top,  rgba(0,65,123,1) 0%,rgba(0,85,140,1) 4%,rgba(0,49,101,1) 100%);
-  background-image: -ms-linear-gradient(top,  rgba(0,65,123,1) 0%,rgba(0,85,140,1) 4%,rgba(0,49,101,1) 100%);
-  background-image: linear-gradient(to bottom,  rgba(0,65,123,1) 0%,rgba(0,85,140,1) 4%,rgba(0,49,101,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00558c', endColorstr='#003165',GradientType=0 );
-}
-
-@mixin chamadas_gradient_hover {
-  border-color:#4F84D6;
-  background: rgb(252,252,252); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(217,236,255,1) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(217,236,255,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(217,236,255,1) 100%);
-  background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(217,236,255,1) 100%);
-  background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(217,236,255,1) 100%);
-  background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(217,236,255,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#d9ecff',GradientType=0 ); /* IE6-9 */
-}
-@mixin box_sidebar {
-  background-color: #02436d;
-}
-@mixin gradient_light{
-  background: #99b3ca;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk5YjNjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2NjhkYjAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top,  #99b3ca 0%, #668db0 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#99b3ca), color-stop(100%,#668db0));
-  background: -webkit-linear-gradient(top,  #99b3ca 0%,#668db0 100%);
-  background: -o-linear-gradient(top,  #99b3ca 0%,#668db0 100%);
-  background: -ms-linear-gradient(top,  #99b3ca 0%,#668db0 100%);
-  background: linear-gradient(to bottom,  #99b3ca 0%,#668db0 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99b3ca', endColorstr='#668db0',GradientType=0 );
-}
-
+$pallet_1: #5c90c4;
+$pallet_2: #4a739d;
+$pallet_3: #253a4e;
+$pallet_4: #121d27;
+$pallet_5: #dee9f3;
+$pallet_6: #bed3e7;
+$pallet_7: #eff4f9;
 
 @import "theme_base";

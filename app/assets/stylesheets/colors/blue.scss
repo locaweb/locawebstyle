@@ -1,72 +1,12 @@
 // Gateway
 $theme_name: ".colorBlue";
 
-$main_color: #4b7cb8;
-$secondary_color: #4b7cb8;
+$pallet_1: #00417b;
+$pallet_2: #003462;
+$pallet_3: #001a31;
+$pallet_4: #000d19;
+$pallet_5: #ccd9e5;
+$pallet_6: #99b3ca;
+$pallet_7: #e6ecf2;
 
-$btn_primary_color: #fff;
-$btn_border: #4b7cb8;
-
-$main_menu_hover_color: #fff;
-
-$button_interaction_background_color: #3d6495;
-
-$lnk_seta_hover_color: #1e324a;
-
-$button_to_close_modal_color: #000;
-
-$path_way_background_active_color: #e4f0fd;
-$path_way_step_active_color: #4b7cb8;
-$path_way_description_active_color: #4b7cb8;
-
-$color_strong: #4b7cb8;
-$color_medium: #6D94C5;
-$color_soft: #c2d4e8;
-
-@mixin main_gradient {
-  background: rgb(75,124,184);
-  background: -moz-linear-gradient(top,  rgba(75,124,184,1) 3%, rgba(58,101,175,1) 5%, rgba(75,124,184,1) 100%); /* FF3.6+ */
-  background: -webkit-linear-gradient(top,  rgba(75,124,184,1) 3%,rgba(58,101,175,1) 5%,rgba(75,124,184,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(75,124,184,1) 3%,rgba(58,101,175,1) 5%,rgba(75,124,184,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(75,124,184,1) 3%,rgba(58,101,175,1) 5%,rgba(75,124,184,1) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(75,124,184,1) 3%,rgba(58,101,175,1) 5%,rgba(75,124,184,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b7cb8', endColorstr='#3a65af',GradientType=0 ); /* IE6-8 */
-}
-
-@mixin secondary_gradient {
-  background-color: #3966a7; /* Old browsers */
-  background-image: -moz-linear-gradient(top,  #a2bedc 2%, #5f8dc2 2%, #3966a7 100%); /* FF3.6+ */
-  background-image: -webkit-linear-gradient(top,  #a2bedc 2%,#5f8dc2 2%,#3966a7 100%); /* Chrome10+,Safari5.1+ */
-  background-image: -o-linear-gradient(top,  #a2bedc 2%,#5f8dc2 2%,#3966a7 100%); /* Opera 11.10+ */
-  background-image: -ms-linear-gradient(top,  #a2bedc 2%,#5f8dc2 2%,#3966a7 100%); /* IE10+ */
-  background-image: linear-gradient(to bottom,  #a2bedc 2%,#5f8dc2 2%,#3966a7 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a2bedc', endColorstr='#3966a7',GradientType=0 ); /* IE6-9 */
-}
-
-@mixin chamadas_gradient_hover {
-  border-color:#6D94C5;
-  background: rgb(252,252,252); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(194,212,232,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(194,212,232,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(194,212,232,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(194,212,232,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(194,212,232,1) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(194,212,232,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#c2d4e8',GradientType=0 ); /* IE6-9 */
-}
-@mixin box_sidebar {
-  background-color: #4b7cb8;
-}
-
-@mixin gradient_light{
-  background: #b7cbe3;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I3Y2JlMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5NGIxZDYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top,  #b7cbe3 0%, #94b1d6 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b7cbe3), color-stop(100%,#94b1d6));
-  background: -webkit-linear-gradient(top,  #b7cbe3 0%,#94b1d6 100%);
-  background: -o-linear-gradient(top,  #b7cbe3 0%,#94b1d6 100%);
-  background: -ms-linear-gradient(top,  #b7cbe3 0%,#94b1d6 100%);
-  background: linear-gradient(to bottom,  #b7cbe3 0%,#94b1d6 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7cbe3', endColorstr='#94b1d6',GradientType=0 );
-}
 @import "theme_base";

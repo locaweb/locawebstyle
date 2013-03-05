@@ -104,12 +104,14 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
 }
 
 #menuPrincipal > ul > li.selected > a {
+  background-image: url(img/bgMenu.png);
+  background-repeat: repeat-x;
   color:#FFF;
   background-color:#777;
   border-top-left-radius:3px;
   border-top-right-radius:3px;
 }
-
+#menuPrincipal > ul > li.selected > a:hover{color: #fff;}
 #menuPrincipal .parent:hover > a {box-shadow:1px 3px 5px 0 rgba(0, 0, 0, 0.2);}
 
 #menuPrincipal .parent > a:hover,

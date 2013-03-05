@@ -43,8 +43,8 @@
 
 }
 
-.chamadasBox :before {display:inline-block; margin-bottom:10px; opacity:0.6; }
-.chamadasBox :hover :before {opacity:0.8;}
+.chamadasBox h3:before {display:inline-block; margin-bottom:10px; opacity:0.7; }
+.chamadasBox > div:hover h3:before {opacity:1;}
 
 .chamadasBox .span3 {width:22.5%; margin-left:0;}
 
@@ -80,11 +80,10 @@
 .chamadasBox div p {
   font: 12px verdana, arial, tahoma, sans-serif;
   margin:0 auto;
-  color:#767676;
   margin: 0 7px;
   padding:0;
 }
-
+.chamadasBox div:hover p {opacity: 0.7;}
 .chamadasBox div p a {
   color:#767676;
   display:block;

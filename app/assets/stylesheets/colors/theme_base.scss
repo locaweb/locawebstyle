@@ -1,57 +1,27 @@
-#{$theme_name} #menuPrincipal > ul > li.selected a,
+
 #{$theme_name} .progress .bar,
 #{$theme_name} .pathWay li.active,
 #{$theme_name} .pathWay li:hover {
-  background-color: $main_color;
+  background-color: $pallet_1;
 }
 
 #{$theme_name} #menuPrincipal,
 #{$theme_name} .tabs li a:hover,
 #{$theme_name} .tabs li.active a,
 #{$theme_name} #menuPrincipal ul li ul {
-  border-bottom-color: $main_color;
-}
-
-#{$theme_name} #menuPrincipal > ul > li.selected > a {
-  @include main_gradient;
+  border-bottom-color: $pallet_1;
 }
 
 #{$theme_name} .tabs li.active a,
 #{$theme_name} .tabs li a:hover {
-  border-top-color: $secondary_color;
+  border-top-color: $pallet_1;
 }
+
 #{$theme_name} a,
-#{$theme_name} .serviceName a,
 #{$theme_name} #menuPrincipal .btMenu a,
-#{$theme_name} .collapseGroup summary span,
-#{$theme_name} .boxCollapse h4 span,
-#{$theme_name} .lnkSeta, #{$theme_name} .lnkArrow,
-#{$theme_name} #menuPrincipal > ul > li > a:hover,
 #{$theme_name} .boxGray.listDetail a,
 #{$theme_name} td a,
-#{$theme_name} [class^="ico-"],
-#{$theme_name} [class*=" ico-"],
-#{$theme_name} #menuPrincipal .parent > a:hover,
 #{$theme_name} #menuPrincipal .parent:hover > a,
-#{$theme_name} .carousel-control {
-  color: $main_color;
-}
-
-#{$theme_name} #menuPrincipal > ul > li.selected > a:hover {
-  color: $main_menu_hover_color;
-}
-
-#{$theme_name} a:hover,
-#{$theme_name} .lnkArrow:hover,
-#{$theme_name} .lnkSeta:hover {
-  color: $lnk_seta_hover_color;
-}
-
-#{$theme_name} .pagination .current,
-#{$theme_name} .pagination .active a {
-  @include main_gradient;
-}
-
 #{$theme_name} .pagination li.first-child a,
 #{$theme_name} .pagination li.last-child a,
 #{$theme_name} .pagination .first a,
@@ -59,75 +29,142 @@
 #{$theme_name} .pagination .next a,
 #{$theme_name} .pagination .last a,
 #{$theme_name} p a,
-#{$theme_name} .breadcrumb a {
-  color: $main_color;
-}
-
-#{$theme_name} .btn-primary {
-  @include secondary_gradient;
-  color: $btn_primary_color;
-  border: 1px solid $btn_border;
-}
-
-#{$theme_name} .btn-group.open .btn-primary.dropdown-toggle {background-color: $main_color;}
-
-#{$theme_name} .dropdown-menu li > a:hover, 
-#{$theme_name} .dropdown-menu li > a:focus, 
-#{$theme_name} .dropdown-submenu:hover > a {@include secondary_gradient;}
-
-#{$theme_name} .modal-header a.close {
-  color: $button_to_close_modal_color;
-}
-
-#{$theme_name} .boxCollapse header {
-  border-left-color: $main_color;
-}
-
-#{$theme_name} .pathWay li.active a,
-#{$theme_name} .pathWay li:hover a {
-  background-color: $path_way_background_active_color;
-}
-
+#{$theme_name} .lnkSeta, #{$theme_name} .lnkArrow,
+#{$theme_name} .breadcrumb a,
+#{$theme_name} [class^="ico-"],
+#{$theme_name} [class*=" ico-"],
 #{$theme_name} .pathWay li.active b,
 #{$theme_name} .pathWay li:hover b,
-#{$theme_name} .chamadasBox :hover :before {
-  color: $path_way_step_active_color;
+#{$theme_name} .chamadasBox :hover :before,
+#{$theme_name} .chooseBox li:hover [class^="ico-"]:before,
+#{$theme_name} .chooseBox li:hover [class*="ico-"]:before,
+#{$theme_name} .chooseBox li.active [class^="ico-"]:before,
+#{$theme_name} .chooseBox li.active [class*="ico-"]:before {
+  color: $pallet_2;
 }
+
+#{$theme_name} a:hover,
+#{$theme_name} .lnkArrow:hover,
+#{$theme_name} .lnkSeta:hover,
+#{$theme_name} [class^="ico-"]:hover,
+#{$theme_name} [class*=" ico-"]:hover,
+#{$theme_name} .collapseGroup summary span,
+#{$theme_name} .boxCollapse h4 span,
+#{$theme_name} #menuPrincipal > ul > li > a:hover,
+#{$theme_name} #menuPrincipal .parent > a:hover,
+#{$theme_name} .carousel-control,
+#{$theme_name} .serviceName a {
+  color: $pallet_1;
+}
+
+#{$theme_name} .btn-group.open .btn-primary.dropdown-toggle {background-color: $pallet_1;}
 
 #{$theme_name} .boxCollapse header h4,
 #{$theme_name} .pathWay li.active a,
 #{$theme_name} .pathWay li:hover a,
 #{$theme_name} .sidebar h1 {
-  color: $path_way_description_active_color;
+  color: $pallet_3
 }
+
 
 #{$theme_name} .chamadasBox div.active,
-#{$theme_name} .chamadasBox div:hover {
-  @include chamadas_gradient_hover;
+#{$theme_name} .chamadasBox div:hover,
+#{$theme_name} .chooseBox li:hover, 
+#{$theme_name} .chooseBox li.active {
+  border-color: $pallet_6;
+  background: #fdfcfa;
+  background: -moz-linear-gradient(top,  #ffffff 0%, $pallet_5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,$pallet_5));
+  background: -webkit-linear-gradient(top,  #ffffff 0%,$pallet_5 100%);
+  background: -o-linear-gradient(top,  #ffffff 0%,$pallet_5 100%);
+  background: -ms-linear-gradient(top,  #ffffff 0%,$pallet_5 100%);
+  background: linear-gradient(to bottom,  #ffffff 0%,$pallet_5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$pallet_5',GradientType=0 );
 }
 
-#{$theme_name} .innerSideBox [class^="ico-"], .innerSideBox [class*="ico-"] {color: $main_color;}
+#{$theme_name} .innerSideBox [class^="ico-"], .innerSideBox [class*="ico-"] {color: $pallet_1;}
 
-#{$theme_name} .boxSidebarTitle{
-  @include box_sidebar;
+#{$theme_name} .boxCollapse header {
+  border-left-color: $pallet_1;
+}
+#{$theme_name} .chamadasBox div:hover p a,
+#{$theme_name} .chamadasBox div:hover p,
+#{$theme_name} .chamadasBox div.active p {color: $pallet_3;}
+
+#{$theme_name} #menuPrincipal > ul > li.selected > a {
+  background-color: $pallet_1;
+}
+
+#{$theme_name} .boxSidebarTitle{background-color: $pallet_3;}
+
+#{$theme_name} .btn-primary,
+#{$theme_name} .dropdown-menu li > a:hover, 
+#{$theme_name} .dropdown-menu li > a:focus, 
+#{$theme_name} .dropdown-submenu:hover > a  {
+  background-color: $pallet_2; 
+  background-image: -moz-linear-gradient(top,  $pallet_1 0%, $pallet_2 100%); 
+  background-image: -webkit-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%); 
+  background-image: -o-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%); 
+  background-image: -ms-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%); 
+  background-image: linear-gradient(to bottom,  $pallet_1 0%,$pallet_2 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_1', endColorstr='$pallet_2',GradientType=0 ); 
+ 
+}
+#{$theme_name} .btn-primary{ border: 1px solid $pallet_2;}
+
+
+#{$theme_name} .pathWay li.active a,
+#{$theme_name} .pathWay li:hover a {
+  background-color: $pallet_5;
 }
 #{$theme_name}  .gradient{
-  @include gradient_light;
+  background-color: $pallet_5; 
+  background-image: -moz-linear-gradient(top,  $pallet_7 0%, $pallet_5 100%); 
+  background-image: -webkit-linear-gradient(top,  $pallet_7 0%,$pallet_5 100%); 
+  background-image: -o-linear-gradient(top,  $pallet_7 0%,$pallet_5 100%); 
+  background-image: -ms-linear-gradient(top,  $pallet_7 0%,$pallet_5 100%); 
+  background-image: linear-gradient(to bottom,  $pallet_7 0%,$pallet_5 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_7', endColorstr='$pallet_5',GradientType=0 );
 }
 
 #{$theme_name} .chooseBox li:hover h4, 
-#{$theme_name} .chooseBox li.active h4 {color: $color_strong;}
-#{$theme_name} .chooseBox .active:after { border-top: 13px solid $color_soft;}
-#{$theme_name} .chooseBox .active:before {border-top: 15px solid $color_medium;}
+#{$theme_name} .chooseBox li.active h4,
+#{$theme_name} .content h2,
+#{$theme_name} .content h3,
+#{$theme_name} .content h4,
+#{$theme_name} .content h5,
+#{$theme_name} .content h6{
+color: $pallet_4;}
+
+#{$theme_name} .chooseBox .active:after { border-top: 13px solid $pallet_5;}
+
+#{$theme_name} .chooseBox .active:before {border-top: 15px solid $pallet_6;}
+
 #{$theme_name} .chooseBox li:hover, 
 #{$theme_name} .chooseBox li.active {
-  background: $color_soft;
-  border:1px solid $color_medium;
-}
-#{$theme_name} .chooseBox li:hover [class^="ico-"]:before,
-#{$theme_name} .chooseBox li:hover [class*="ico-"]:before,
-#{$theme_name} .chooseBox li.active [class^="ico-"]:before,
-#{$theme_name} .chooseBox li.active [class*="ico-"]:before{
-  color: $color_strong;
+  border:1px solid $pallet_6;
 }
 
+#{$theme_name} .chooseBox li:hover p, 
+#{$theme_name} .chooseBox li.active p{
+  color: $pallet_3;
+}
+
+#{$theme_name} .chamadasBox h3,
+#{$theme_name} .chamadasBox h3 a,
+#{$theme_name} .chooseBox li h4[class^="ico-"]:before,
+#{$theme_name} .chooseBox li h4,
+#{$theme_name} .chooseBox li:hover h4,
+#{$theme_name} .chooseBox li.active h4{color: $pallet_4;}
+
+#{$theme_name} .pagination .current,
+#{$theme_name} .pagination .active a {
+  border-color: $pallet_1; 
+  background-color: $pallet_1; 
+  background-image: -moz-linear-gradient(top,  $pallet_1 0%, $pallet_2 100%); 
+  background-image: -webkit-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%); 
+  background-image: -o-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%); 
+  background-image: -ms-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%); 
+  background-image: linear-gradient(to bottom,  $pallet_1 0%,$pallet_2 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_1', endColorstr='$pallet_2',GradientType=0 );
+}

@@ -1,72 +1,12 @@
 // Email Marketing Panel
 $theme_name: ".colorGreen";
 
-$main_color: #84c02e;
-$secondary_color: #79bb2c;
-
-$btn_primary_color: #fff;
-$btn_border: #6a9a25;
-
-$main_menu_hover_color: #fff;
-
-$button_interaction_background_color: #7ca837;
-
-$lnk_seta_hover_color: #4f731c;
-
-$button_to_close_modal_color: #000;
-
-$path_way_background_active_color: #edf6e1;
-$path_way_step_active_color: #84c02e;
-$path_way_description_active_color: #354d12;
-
-$color_strong: #83be2e;
-$color_medium: #cae4a5;
-$color_soft: #e6f2d5;
-
-@mixin main_gradient {
-  background: rgb(132,192,46);
-  background: -moz-linear-gradient(top,  rgba(132,192,46,1) 3%, rgba(104,181,40,1) 5%, rgba(132,192,46,1) 100%);
-  background: -webkit-linear-gradient(top,  rgba(132,192,46,1) 3%,rgba(104,181,40,1) 5%,rgba(132,192,46,1) 100%);
-  background: -o-linear-gradient(top,  rgba(132,192,46,1) 3%,rgba(104,181,40,1) 5%,rgba(132,192,46,1) 100%);
-  background: -ms-linear-gradient(top,  rgba(132,192,46,1) 3%,rgba(104,181,40,1) 5%,rgba(132,192,46,1) 100%);
-  background: linear-gradient(to bottom,  rgba(132,192,46,1) 3%,rgba(104,181,40,1) 5%,rgba(132,192,46,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c02e', endColorstr='#84c02e',GradientType=0 );
-}
-
-@mixin secondary_gradient {
-  background-color: #55851a;
-  background-image: -moz-linear-gradient(top,  #a5c374 1%, #7ca837 2%, #7ca837 34%, #55851a 100%);
-  background-image: -webkit-linear-gradient(top,  #a5c374 1%,#7ca837 2%,#7ca837 34%,#55851a 100%); 
-  background-image: -o-linear-gradient(top,  #a5c374 1%,#7ca837 2%,#7ca837 34%,#55851a 100%);
-  background-image: -ms-linear-gradient(top,  #a5c374 1%,#7ca837 2%,#7ca837 34%,#55851a 100%);
-  background-image: linear-gradient(to bottom,  #a5c374 1%,#7ca837 2%,#7ca837 34%,#55851a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5c374', endColorstr='#55851a',GradientType=0 );
-}
-
-@mixin chamadas_gradient_hover {
-  border-color:#a8bd95;
-  background: #fcfdfa;
-  background: -moz-linear-gradient(top,  #fcfdfa 0%, #cddcbd 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfdfa), color-stop(100%,#cddcbd));
-  background: -webkit-linear-gradient(top,  #fcfdfa 0%,#cddcbd 100%);
-  background: -o-linear-gradient(top,  #fcfdfa 0%,#cddcbd 100%);
-  background: -ms-linear-gradient(top,  #fcfdfa 0%,#cddcbd 100%);
-  background: linear-gradient(to bottom,  #fcfdfa 0%,#cddcbd 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfdfa', endColorstr='#cddcbd',GradientType=0 );
-}
-@mixin box_sidebar {
-  background-color: #354d12;
-}
-@mixin gradient_light{
-  background: #e6efdd; /* Old browsers */
-  background: -moz-linear-gradient(top,  #e6efdd 0%, #ccdfbc 100%); 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6efdd), color-stop(100%,#ccdfbc)); 
-  background: -webkit-linear-gradient(top,  #e6efdd 0%,#ccdfbc 100%); 
-  background: -o-linear-gradient(top,  #e6efdd 0%,#ccdfbc 100%); 
-  background: -ms-linear-gradient(top,  #e6efdd 0%,#ccdfbc 100%); 
-  background: linear-gradient(to bottom,  #e6efdd 0%,#ccdfbc 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6efdd', endColorstr='#ccdfbc',GradientType=0 ); 
-
-}
+$pallet_1: #94c83c;
+$pallet_2: #76a030;
+$pallet_3: #3b5018;
+$pallet_4: #1e280c;
+$pallet_5: #eaf4d8;
+$pallet_6: #d4e9b1;
+$pallet_7: #f5faec;
 
 @import "theme_base";
