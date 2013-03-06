@@ -12,14 +12,14 @@
     padding-bottom:0;
     margin:0 auto;
   }
-  .chamadasBox div {
+  .shortcutBox div {
     width:92% !important;
     min-height: inherit !important;
     padding-bottom:20px !important;
     height: auto !important;
     float:none !important;
   }
-  .chamadasBox div p {display:none;}
+  .shortcutBox div p {display:none;}
   .infoLogin {display:none;}
 
   #main div.limit {left:0 !important; padding:0 10px 40px 10px;}
@@ -36,8 +36,8 @@
   }
 
   header.headerPrincipal .limit {height:auto; padding:0;}
-  .revisit .chamadasBox h3{ font: 100 22px UbuntuLight, verdana, arial, tahoma, sans-serif;}
-  .revisit .chamadasBox div{ padding-bottom: 0!important;}
+  .revisit .shortcutBox h3{ font: 100 22px UbuntuLight, verdana, arial, tahoma, sans-serif;}
+  .revisit .shortcutBox div{ padding-bottom: 0!important;}
   .sidebar {padding:40px 0 0;}
 
   /** NOME DO PRODUTO - Logo ***/

@@ -9,9 +9,21 @@
     margin:0 auto;
   }
   #rodape nav .lnkSeta, #rodape nav .lnkArrow {margin:2px 0 0 10px; float:left; font-size:11px;}
+    .chamadasBox div {
+    width:92% !important;
+    min-height: inherit !important;
+    padding-bottom:20px !important;
+    height: auto !important;
+    float:none !important;
+  }
+  .chamadasBox div p {display:none;}
+  .revisit .chamadasBox h3{ font: 100 22px UbuntuLight, verdana, arial, tahoma, sans-serif;}
+  .revisit .chamadasBox div{ padding-bottom: 0!important;}
+
 }
 
 @media screen and (min-width: 1220px) {
+  .revisit .chamadasBox h3{ font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;}
   .limite {width: 1180px !important;}
 }
 
@@ -398,3 +410,99 @@ footer#rodape {
 #rodape [class^="ico"]:before,
 #rodape [class*=" ico"]:before {display:none;}
 
+/***
+**** CHAMADAS NO BOXGRAY
+***/
+.chamadasBox {margin:15px 0 0 15px; clear:both;}
+.chamadasBox:after {content: " "; display:block; clear:both;}
+
+.chamadasBox div {
+  width:30.2%;
+  min-height:250px;
+  text-align:center;
+  border:3px solid #b7b7b7;
+  border-radius:10px;
+  display:inline-block;
+  margin-right:1.9%;
+  margin-bottom:20px;
+  padding:20px 0;
+  position: relative;
+  vertical-align: top;
+
+  background: #f8f8f8;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjNmM2YzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  #f8f8f8 0%, #c6c6c6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#c6c6c6));
+  background: -webkit-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%);
+  background: -o-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%);
+  background: -ms-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%);
+  background: linear-gradient(to bottom,  #f8f8f8 0%,#c6c6c6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#c6c6c6',GradientType=0 );
+
+}
+
+/** Hover padrão **/
+.chamadasBox div:hover {
+  border-color:#CCC;
+  background: rgb(248,248,248); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(248,248,248,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+
+}
+
+.chamadasBox h3:before {display:inline-block; margin-bottom:10px; opacity:0.7; }
+.chamadasBox > div:hover h3:before {opacity:1;}
+
+.chamadasBox .span3 {width:22.5%; margin-left:0;}
+
+.ie8 .chamadasBox div {width:29.6%;}
+.ie8 .maxBox.chamadasBox div {width:inherit;}
+
+.chamadasBox div:last-child {margin-right:0;}
+
+.chamadasBox div h3, .chamadasBox div h3:first-child {
+  text-transform:uppercase;
+  font:100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;
+  margin:0 auto;
+  padding:0 0 10px;
+}
+
+.chamadasBox h3 a {
+  color:#1a2609;
+  display:block;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.chamadasBox [class^="tit"] a:before {
+  content:" ";
+  display:block;
+  width:100px; height:100px;
+  background-position: center top;
+  background-repeat:no-repeat;
+  margin:0 auto 10px;
+}
+
+.chamadasBox a:hover {text-decoration:none;}
+
+.chamadasBox div p {
+  font: 12px verdana, arial, tahoma, sans-serif;
+  margin:0 auto;
+  margin: 0 7px;
+  padding:0;
+}
+.chamadasBox div:hover p {opacity: 0.7;}
+.chamadasBox div p a {
+  color:#767676;
+  display:block;
+  padding:0px 20px 15px;
+}
+
+.chamadasBox + .lnkArrow {position:relative; top:-5px;}
+.revisit .chamadasBox h3{ font: 100 18px UbuntuLight, verdana, arial, tahoma, sans-serif; line-height: 25px; letter-spacing: -1px;}
+.chamadasBox :before{font-size: 6.5em;}

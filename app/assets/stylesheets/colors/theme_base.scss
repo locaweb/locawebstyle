@@ -39,7 +39,7 @@
 #{$theme_name} [class*=" ico-"],
 #{$theme_name} .pathWay li.active b,
 #{$theme_name} .pathWay li:hover b,
-#{$theme_name} .chamadasBox :hover :before,
+#{$theme_name} .shortcutBox :hover :before,
 #{$theme_name} .chooseBox li:hover [class^="ico-"]:before,
 #{$theme_name} .chooseBox li:hover [class*="ico-"]:before,
 #{$theme_name} .chooseBox li.active [class^="ico-"]:before,
@@ -71,8 +71,8 @@
 }
 
 
-#{$theme_name} .chamadasBox div.active,
-#{$theme_name} .chamadasBox div:hover,
+#{$theme_name} .shortcutBox div.active,
+#{$theme_name} .shortcutBox div:hover,
 #{$theme_name} .chooseBox li:hover,
 #{$theme_name} .chooseBox li.active {
   border-color: $pallet_6;
@@ -91,9 +91,9 @@
 #{$theme_name} .boxCollapse header {
   border-left-color: $pallet_1;
 }
-#{$theme_name} .chamadasBox div:hover p a,
-#{$theme_name} .chamadasBox div:hover p,
-#{$theme_name} .chamadasBox div.active p {color: $pallet_3;}
+#{$theme_name} .shortcutBox div:hover p a,
+#{$theme_name} .shortcutBox div:hover p,
+#{$theme_name} .shortcutBox div.active p {color: $pallet_3;}
 
 #{$theme_name} #menuPrincipal > ul > li.selected > a {
   background-color: $pallet_1;
@@ -154,8 +154,8 @@ color: $pallet_4;}
   color: $pallet_3;
 }
 
-#{$theme_name} .chamadasBox h3,
-#{$theme_name} .chamadasBox h3 a,
+#{$theme_name} .shortcutBox h3,
+#{$theme_name} .shortcutBox h3 a,
 #{$theme_name} .chooseBox li h4[class^="ico-"]:before,
 #{$theme_name} .chooseBox li h4,
 #{$theme_name} .chooseBox li:hover h4,

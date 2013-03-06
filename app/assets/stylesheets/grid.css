@@ -54,7 +54,7 @@ input.input120, input.span2 {width:90px !important;}
 
 .span14 {width:840px;}
 
-.revisit .chamadasBox h3{ font: 100 18px UbuntuLight, verdana, arial, tahoma, sans-serif; line-height: 25px; letter-spacing: -1px;}
+.revisit .shortcutBox h3{ font: 100 18px UbuntuLight, verdana, arial, tahoma, sans-serif; line-height: 25px; letter-spacing: -1px;}
 .statusMessageBox .overflowMessage {overflow:hidden; position:relative; min-width:10%; max-width:37%;}
 
 /** Desktop
@@ -88,7 +88,7 @@ input.input120, input.span2 {width:90px !important;}
   .span2 {width: 130px;}
   .span1 {width: 55px;}
 
-  .revisit .chamadasBox h3{ font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;}
+  .revisit .shortcutBox h3{ font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;}
 
 }
 

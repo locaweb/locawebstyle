@@ -176,7 +176,7 @@ h6 .lnkArrow {position:relative; top:-1px; margin:0;   border-left:1px solid #CC
 
 .spanObs .lnkArrow {margin: 0;}
 .innerSideBox + .lnkArrow {margin:-5px 0 10px 10px;}
-.chamadasBox + .lnkArrow {position:relative; top:-5px;}
+.shortcutBox + .lnkArrow {position:relative; top:-5px;}
 
 /** BOX COM FUNDO CINZA
 *** geralmente tem um collapseGroup dentro

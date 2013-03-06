@@ -1,10 +1,10 @@
 /***
 **** CHAMADAS NO BOXGRAY
 ***/
-.chamadasBox {margin:15px 0 0 15px; clear:both;}
-.chamadasBox:after {content: " "; display:block; clear:both;}
+.shortcutBox {margin:15px 0 0 15px; clear:both;}
+.shortcutBox:after {content: " "; display:block; clear:both;}
 
-.chamadasBox div {
+.shortcutBox div {
   width:30.2%;
   min-height:250px;
   text-align:center;
@@ -30,7 +30,7 @@
 }
 
 /** Hover padrão **/
-.chamadasBox div:hover {
+.shortcutBox div:hover {
   border-color:#CCC;
   background: rgb(248,248,248); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
@@ -43,28 +43,28 @@
 
 }
 
-.chamadasBox h3:before {display:inline-block; margin-bottom:10px; opacity:0.7; }
-.chamadasBox > div:hover h3:before {opacity:1;}
+.shortcutBox h3:before {display:inline-block; margin-bottom:10px; opacity:0.7; }
+.shortcutBox > div:hover h3:before {opacity:1;}
 
-.chamadasBox .span3 {width:22.5%; margin-left:0;}
+.shortcutBox .span3 {width:22.5%; margin-left:0;}
 
-.chamadasBox div:last-child {margin-right:0;}
+.shortcutBox div:last-child {margin-right:0;}
 
-.chamadasBox div h3, .chamadasBox div h3:first-child {
+.shortcutBox div h3, .shortcutBox div h3:first-child {
   text-transform:uppercase;
   font:100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;
   margin:0 auto;
   padding:0 0 10px;
 }
 
-.chamadasBox h3 a {
+.shortcutBox h3 a {
   color:#1a2609;
   display:block;
   max-width: 250px;
   margin: 0 auto;
 }
 
-.chamadasBox [class^="tit"] a:before {
+.shortcutBox [class^="tit"] a:before {
   content:" ";
   display:block;
   width:100px; height:100px;
@@ -73,16 +73,16 @@
   margin:0 auto 10px;
 }
 
-.chamadasBox a:hover {text-decoration:none;}
+.shortcutBox a:hover {text-decoration:none;}
 
-.chamadasBox div p {
+.shortcutBox div p {
   font: 12px verdana, arial, tahoma, sans-serif;
   margin:0 auto;
   margin: 0 7px;
   padding:0;
 }
-.chamadasBox div:hover p {opacity: 0.7;}
-.chamadasBox div p a {
+.shortcutBox div:hover p {opacity: 0.7;}
+.shortcutBox div p a {
   color:#767676;
   display:block;
   padding:0px 20px 15px;
@@ -116,8 +116,6 @@
 
 .lnkArrow.maxShortcuts,
 .lnkArrow.minShortcuts {margin-left: 17px;}
-
-
 
 /***
 **** Esse link é inserido via JQuery. ;-(
