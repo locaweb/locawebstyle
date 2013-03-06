@@ -67,8 +67,6 @@ input.input120, input.span2 {width:90px !important;}
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {width: 1180px !important;}
 
-  #toolbar .limiteToolbar {max-width:1180px;}
-
   .pathWay li a, .pathWay li.disable:hover a {font-size:20px;}
 
   .span16 {width: 1180px;}
