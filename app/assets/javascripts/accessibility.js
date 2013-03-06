@@ -8,8 +8,8 @@ $(function(){
 	// $('.btn-primary').attr('tabindex','3');
 	// $('.tabs li a').attr('tabindex','4');
 	//$('#menuPrincipal li > a, #main .chamadasBox h3 a, .headerContent h1, .alert').attr('tabindex','2');
-	$('#menuPrincipal li > a').attr('tabindex','2');
-	$('.btn, .tabs a').attr('tabindex','3');
+	
+	
 	//$('input, select, .btn.btn-primary').attr('tabindex','2');
 
 //
@@ -20,28 +20,31 @@ $(function(){
 	// Menu
 	$('#menuPrincipal').attr('role','navigation');
 	$('#menuPrincipal li a').attr('role','menuitem');
+	$('#menuPrincipal li > a').attr('tabindex','2');
 
 	//
 	// Elementos Geral
-	// $('.pathWays').attr('role','navigation');
+	$('.pathWays').attr('role','navigation');
 	$('#rodape').attr('role','contentinfo');
 	$('.alert').attr('role','alert');
 	$('a.btn, .modal-header .close').attr('role','button');
 	$('.boxGray').attr('role','region');
 	$('.boxGray h2').attr('role','presentation');
 	$('.headerPrincipal').attr('role','banner');
-	$('.content').attr('role','main'); // criar essa classe nos produtos ??
+	$('.content').attr('role','main'); 
 	$('.sidebar').attr('role','complementary');
 	$('input.required').attr('aria-required','true');
 	$('.lnkCoverAll').attr('tabindex','3');
 	$('.chamadasBox h3 > a').attr('aria-hidden','true');
+	$('.pathWay li.active > a, .pathWay li.stepOk > a').attr('tabindex','3');
+	$('.pathWay li.disable > a').removeAttr('tabindex');
+	$('.btn, .tabs a').attr('tabindex','3');
 
 	//
 	// TABS
 	$('.tabs').attr('role','tablist');
 
 	// Inserie ARIA-SELECTED em TABS ativas
-
 	$('.tabs li a').attr({
 		role: 'tab',
 		'aria-selected': 'false',
@@ -50,8 +53,6 @@ $(function(){
 
 	$('.tabs li.active a').attr('aria-selected','true');
 	$('.tabs li.active a').attr('tabindex','3');
-
-	
 
 	// $('[data-toggle="tab"]').attr('aria-selected','false');
 	// $('.active [data-toggle="tab"]').attr('aria-selected','true');
@@ -77,8 +78,6 @@ $(function(){
 	})
 	$('.collapse').find('*[tabindex="3"]').attr('tabindex','0');
 	
-
-	// $('[data-toggle="collapse"]').attr('role','button').attr('tabindex','3');
 
 	//Notificaçao
 	$('.alert, .focusOn').attr('tabindex','-1').focus();

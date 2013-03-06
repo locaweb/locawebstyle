@@ -47,6 +47,7 @@
 #toolbar .userName {
   background: url(img/bgUsuario.png) no-repeat left center;
   font-size: 13px;
+  height: 17px;
   color: #D1D1D1;
   padding: 0 15px 3px 32px;
   border-right: 1px solid #616161;

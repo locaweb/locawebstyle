@@ -982,11 +982,11 @@ a[class*="ico-"] {font-size: 12px;}
 .chooseBox [class^="ico-"]:before, 
 .chooseBox [class*="ico-"]:before{
   color: #545454;
-  font-size: 44px;
+  font-size: 2.4em;
   margin: 10px;
   position: absolute;
   left: 0;
-  top: 5px;
+  top: -10px;
 }
 .chooseBox li:hover h4, .chooseBox li.active h4 {color: #333;}
 .chooseBox .active:after { border-top: 13px solid #cdcdcd;}
@@ -1001,7 +1001,7 @@ a[class*="ico-"] {font-size: 12px;}
 .chooseBox li.active [class*="ico-"]:before{
   color: #333;
 }
-.popover-content{font-size: 14px;}
+.popover{font-size: 0.88em;}
 
 
 .boxWithArrow {

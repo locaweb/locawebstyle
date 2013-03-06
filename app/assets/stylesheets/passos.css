@@ -8,10 +8,9 @@
 .pathWay li, .pathWay li.disabled, .pathWay li.disable:hover {
   margin-right:1px;
   list-style: none;
-  width: 19.91%;
   float: left;
   overflow: hidden;
-  background: url(img/dotsPathWays.png) repeat-X bottom left;
+  background: url(img/dotsPathWays.png) repeat-x bottom left;
   -webkit-transition: all .2s ease-out;
   -moz-transition: all .2s ease-out;
   -ms-transition: all .2s ease-out;
