@@ -56,22 +56,6 @@ $(function(){
 	$('.tabs li.active a').attr('aria-selected','true');
 	$('.tabs li.active a').attr('tabindex','3');
 
-	// $('[data-toggle="tab"]').attr('aria-selected','false');
-	// $('.active [data-toggle="tab"]').attr('aria-selected','true');
-	// $('[data-toggle="tab"]').attr('role','tab').on('show', function(e){
-	// 	$(e.target).attr('aria-selected','true');
-	// 	$(e.relatedTarget).attr('aria-selected','false');
-	// });
-
-	// Verifica se existe um elemento mais específico que o MAIN com o conteúdo principal
-	// if ($('#main .limite .row .span12').length == 1) {
-	// 	$('#main .limite .row .span12').attr('role','main');
-	// } else {
-	// 	$('#main').attr('role','main');
-	// }
-
-
-
 	//collapse
 	$('.boxCollapse header').each(function(){
 		var title = $(this).find('h4').text();

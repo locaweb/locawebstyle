@@ -9,9 +9,9 @@
 .clearfix { display: inline-table; }
 #exampleCarousel {width:640px;}
 
-.gridCode #main .limite [class^="span"] {margin-bottom:10px; background:#e3e3e3;}
-.gridCode #main .limite [class^="span"] p {margin:0; padding:10px;}
-.gridCode #main .limite [class^="span"]:hover {color:#000; background:#CCC; font-weight:bold;}
+.gridCode #main .limit [class^="span"] {margin-bottom:10px; background:#e3e3e3;}
+.gridCode #main .limit [class^="span"] p {margin:0; padding:10px;}
+.gridCode #main .limit [class^="span"]:hover {color:#000; background:#CCC; font-weight:bold;}
 
 /* Hides from IE-mac \*/
 * html .clearfix { height: 1%; }

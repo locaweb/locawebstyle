@@ -19,9 +19,9 @@ html, body {
   background: linear-gradient(to bottom,  rgba(232,232,232,1) 0%,rgba(252,252,252,1) 3%,rgba(255,255,255,1) 7%);
 }
 
-#main > .limite {padding-bottom:160px;}
+#main > .limit {padding-bottom:160px;}
 
-.limite {margin: 0 auto;}
+.limit {margin: 0 auto;}
 
 /** Formatação do Main quando o header está sem menu **/
 .noMenu #main {
@@ -1003,11 +1003,8 @@ a[class*="ico-"] {font-size: 12px;}
   color: #333;
 }
 
-<<<<<<< HEAD
 .popover{font-size: 0.88em;}
 
-=======
->>>>>>> Modularizacao do messageInfo que exibe conteudo fora da caixa de mensagem adicionando classe overflowVisible
 .boxWithArrow {
   float: left;
   margin-top: 5px;
@@ -1030,8 +1027,3 @@ a[class*="ico-"] {font-size: 12px;}
   border: 5px solid;
   border-color: transparent transparent transparent #fff;
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> Nova classe boxWithArrow e ajustes nos icones.

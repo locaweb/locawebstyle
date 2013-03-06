@@ -194,5 +194,28 @@ pre {
   font-weight:normal;
 }
 
+/****
+***** Nomenclaturas antigas
+****/
 
+/*** LIMITE ***/
+#main > .limite {padding-bottom:160px;}
+#main div.limite {left:0 !important; padding:0 10px 40px 10px;}
+.limite {margin: 0 auto; width: 988px;}
+header.headerPrincipal .limite {height:120px; position:relative;}
+header.headerPrincipal .limite:after {content:" "; display:block; clear:both;}
 
+.gridCode #main .limite [class^="span"] {margin-bottom:10px; background:#e3e3e3;}
+.gridCode #main .limite [class^="span"] p {margin:0; padding:10px;}
+.gridCode #main .limite [class^="span"]:hover {color:#000; background:#CCC; font-weight:bold;}
+
+@media screen and (max-width:767px) {
+  .limite {
+    width:95% !important;
+    position:relative; left:0;
+    padding-bottom:0;
+    margin:0 auto;
+  }
+}
+
+footer#rodape .limite {padding:0;}

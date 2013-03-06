@@ -26,7 +26,7 @@
 /** Outras telas, desktops e até tablets
 ***
 **/
-.limite,
+.limit,
 #menuPrincipal > ul,
 .container,
 .navbar-fixed-top .container,
@@ -61,7 +61,7 @@ input.input120, input.span2 {width:90px !important;}
 *** Passando de 1220px
 **/
 @media screen and (min-width: 1220px) {
-  .limite,
+  .limit,
   #menuPrincipal > ul,
   .container,
   .navbar-fixed-top .container,

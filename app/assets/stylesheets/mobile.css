@@ -6,7 +6,7 @@
   body:after {content:" "; display:block; clear:both;}
   body { padding:0 !important;}
 .select_themes {display: none;}
-  .limite {
+  .limit {
     width:95% !important;
     position:relative; left:0;
     padding-bottom:0;
@@ -22,7 +22,7 @@
   .chamadasBox div p {display:none;}
   .infoLogin {display:none;}
 
-  #main div.limite {left:0 !important; padding:0 10px 40px 10px;}
+  #main div.limit {left:0 !important; padding:0 10px 40px 10px;}
 
   [class*="span"] {
     width:auto;
@@ -35,7 +35,7 @@
     margin:0;
   }
 
-  header.headerPrincipal .limite {height:auto; padding:0;}
+  header.headerPrincipal .limit {height:auto; padding:0;}
   .revisit .chamadasBox h3{ font: 100 22px UbuntuLight, verdana, arial, tahoma, sans-serif;}
   .revisit .chamadasBox div{ padding-bottom: 0!important;}
   .sidebar {padding:40px 0 0;}
@@ -135,7 +135,7 @@
 
   /** RODAPE **/
   footer#rodape {position:static !important;}
-  footer#rodape .limite {padding:0;}
+  footer#rodape .limit {padding:0;}
 
   #rodape nav {height:70px;}
   #rodape ul {width:100%; padding:5px 0; background:#000; text-align:center;}
