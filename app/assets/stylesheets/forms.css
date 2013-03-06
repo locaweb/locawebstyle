@@ -279,6 +279,39 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 .lineFields .addRemoveLine {width: 30px; height: 30px; vertical-align: top}
 .lineFields .addRemoveLine:before {margin-left: -8px; margin-top: 3px;}
 
-/*** CUSTOM SELECT ***/
+/*** CUSTOM SELECT
+**** Formatando seletores customizaveis
+***/
 .select2-drop, 
-.customSelect {font-size:0.80em;}
+.customSelect,
+.select2-container-active {
+  font-size:0.9em;
+  border-radius: 2px;
+  box-shadow: none;
+  border-color: #d4d4d4;
+}
+
+.customSelect[class*="span"] {margin-left:0;}
+
+.select2-container-active .select2-choice, 
+.select2-container-active .select2-choices,
+.select2-container .select2-choice,
+.select2-dropdown-open .select2-choice,
+.select2-container.select2-drop-above .select2-choice {
+  border-radius: 2px;
+  background: none;
+  border-color: #d4d4d4;
+  box-shadow: none;
+  color: #767676;
+}
+
+.select2-container .select2-choice div {
+  border-left: none;
+  background: none;
+}
+
+.select2-container .select2-choice div b {background: url(img/setaIdentBaixo.png) no-repeat center;}
+.select2-dropdown-open .select2-choice div b {background: url(img/setaIdentTop.png) no-repeat center;}
+
+.select2-search {margin-top: 10px;}
+

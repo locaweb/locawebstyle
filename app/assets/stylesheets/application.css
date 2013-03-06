@@ -14,13 +14,13 @@
  *= require botoes
  *= require header
  *= require footer
+ *= require select2
  *= require forms
  *= require modal
  *= require sidebar
  *= require tables
  *= require passos
  *= require grid
- *= require select2
  *= require chamadas
  *= require mobile
  *= require base
