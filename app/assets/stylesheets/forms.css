@@ -135,9 +135,9 @@ label.checkbox.control-label, label.checkbox.control-label:first-child {
 
 .boxGrayOpt input {margin: 0 1px 0 0;}
 
-.filtroExibe .control-group label {font-weight: normal; width: auto !important;}
-.filtroExibe .control-group {margin: 0;}
-.filtroExibe .controlg-group input, .filtroExibe .controlg-group select {margin: 0;}
+.filterCount .control-group label {font-weight: normal; width: auto !important;}
+.filterCount .control-group {margin: 0;}
+.filterCount .controlg-group input, .filterCount .controlg-group select {margin: 0;}
 
 
 /** Busca avançada **/

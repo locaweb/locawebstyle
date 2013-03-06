@@ -1,3 +1,7 @@
+@media print {
+  .filtroExibe {display:none;}
+}
+
 /***
 **** Tudo o que é deprecated e está dentro de MOBILE.CSS
 ***/
@@ -54,6 +58,10 @@ header.headerPrincipal .limit {height:120px; position:relative;}
 header.headerPrincipal:after, header.headerPrincipal .limit:after {content:" "; display:block; clear:both;}
 header.headerPrincipal .btn-group {display:inline-block;}
 
+/*** PAGINACAO E FILTRO ***/
+.filtroExibe .control-group label {font-weight: normal; width: auto !important;}
+.filtroExibe .control-group {margin: 0;}
+.filtroExibe .controlg-group input, .filtroExibe .controlg-group select {margin: 0;}
 
 /*** COLLAPSE ***/
 .collapseGroup summary {
