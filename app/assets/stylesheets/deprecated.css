@@ -1,3 +1,17 @@
+/***
+**** Tudo o que é deprecated e está dentro de MOBILE.CSS
+***/
+@media screen and (max-width:767px) {
+  .limite {
+    width:95% !important;
+    position:relative; left:0;
+    padding-bottom:0;
+    margin:0 auto;
+  }
+  #rodape nav .lnkSeta, #rodape nav .lnkArrow {margin:2px 0 0 10px; float:left; font-size:11px;}
+}
+
+
 /* DEPRECATED 21/01/13 */
 .collapseGroup summary {
   color:#545454;
@@ -209,13 +223,60 @@ header.headerPrincipal .limite:after {content:" "; display:block; clear:both;}
 .gridCode #main .limite [class^="span"] p {margin:0; padding:10px;}
 .gridCode #main .limite [class^="span"]:hover {color:#000; background:#CCC; font-weight:bold;}
 
-@media screen and (max-width:767px) {
-  .limite {
-    width:95% !important;
-    position:relative; left:0;
-    padding-bottom:0;
-    margin:0 auto;
-  }
+footer#rodape .limite {padding:0;}
+
+/*** LNKSETA  ***/
+.lnkSeta {
+  cursor:pointer;
+  color:#666;
+  font: 12px Ubuntu, verdana, arial, sans-serif;
+  display:inline-block;
+  padding:0;
+  margin:5px 0;
+  vertical-align: middle;
 }
+h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
+h4 + .lnkSeta {border-left:1px solid #bababa; margin-left:10px; padding-left:10px;}
+h6 .lnkSeta {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC; padding-left:10px;}
+
+.spanObs .lnkSeta {margin: 0;}
+.innerSideBox + .lnkSeta {margin:-5px 0 10px 10px;}
+.chamadasBox + .lnkSeta {position:relative; top:-5px;}
+
+.miniBox .lnkSeta::before, .lnkSeta:before{width: auto;}
+.lnkSeta.maxShortcuts,
+.lnkSeta.minShortcuts {margin-left: 17px;}
+.boxGray > .lnkSeta {margin:0 15px 10px;}
+#rodape nav .lnkSeta {margin:15px 20px 0; color:#FFF;}
+.dropdown-menu.listIdent .lnkSeta {margin:10px; background-position:left 4px; padding-left:13px;}
 
 footer#rodape .limite {padding:0;}
+
+.lnkSeta:before {
+  display:inline-block;
+  margin-right:4px;
+  font-family: locaweb;
+  font-weight:normal;
+  speak: none;
+  text-decoration:none;
+  width:auto;
+  line-height: 1.1em;
+  vertical-align: middle;
+  text-align: center;
+  position:relative;
+  top:-2px;
+  font-size:1.1em;
+}
+.ie8 .lnkSeta:before {vertical-align:top; text-decoration: none !important;}
+.lnkSeta.setaInv:before, .lnkSeta.setaLeft:before {content: "\e0a0";}
+.lnkSeta:before {content: "\e0a2";}
+
+#rodape nav .lnkSeta {
+  margin: 2px 0 0 10px;
+  font-size: 11px;
+  text-align: center;
+  float: none !important;
+  display: block;
+  padding: 7px 0 0;
+  clear: both;
+}

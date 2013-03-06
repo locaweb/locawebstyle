@@ -9,7 +9,7 @@
 
 [class^="btn"][class^="ico-"], [class*="btn"][class*="ico-"] {padding-left:5px;}
 
-[class^="ico-"]:before, [class*="ico-"]:before, .lnkArrow:before, .lnkSeta:before {
+[class^="ico-"]:before, [class*="ico-"]:before, .lnkArrow:before {
   display:inline-block;
   margin-right:4px;
   font-family: locaweb;
@@ -384,9 +384,9 @@ h6[class^="ico-"]:before {
 .ico-odnoklassniki:before {content: "\e09d";}
 .ico-odnoklassniki-1:before {content: "\e09e";}
 .ico-down-circle:before {content: "\e09f";}
-.ico-left-circle:before, .lnkSeta.setaInv:before, .lnkSeta.setaLeft:before, .lnkArrow.setInv:before {content: "\e0a0";}
 .ico-up-circle:before {content: "\e0a1";}
-.ico-right-circle:before, .lnkSeta:before, .lnkArrow:before {content: "\e0a2";}
+.ico-left-circle:before, .lnkArrow.setInv:before {content: "\e0a0";}
+.ico-right-circle:before, .lnkArrow:before {content: "\e0a2";}
 .ico-move:before {content: "\e0a3";}
 .ico-twitter-old:before {content: "\e0a4";}
 .ico-rsocial:before {content: "\e0a5";}

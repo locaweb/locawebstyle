@@ -95,7 +95,7 @@
 .miniBox p, .microBox p { display:none;}
 .miniBox [class^="ico-"]:before,
 .miniBox [class*="ico-"]:before,
-.miniBox .lnkArrow::before, .lnkSeta:before{
+.miniBox .lnkArrow::before, .lnkArrow:before{
   width: auto;
 }
 
@@ -114,8 +114,6 @@
   max-width: 53px;
 }
 
-.lnkSeta.maxShortcuts,
-.lnkSeta.minShortcuts,
 .lnkArrow.maxShortcuts,
 .lnkArrow.minShortcuts {margin-left: 17px;}
 

@@ -1,7 +1,7 @@
 /***
 **** BOX Collpase
 ***/
-.boxGray > .lnkSeta {margin:0 15px 10px;}
+.boxGray > .lnkArrow {margin:0 15px 10px;}
 p + .boxCollapse {margin-top:30px;}
 .collapse p + .btn {margin: 10px 0 5px;}
 .collapse h6:first-child {padding: 10px 0 0;}

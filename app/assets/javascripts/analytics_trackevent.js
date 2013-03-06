@@ -19,5 +19,5 @@
   $('.footerTop .ico-helpDesk').attr('onclick', "_gaq.push(['_trackEvent', 'Atendimento', 'Clique', 'Helpdesk']);"); // link Help Desk do Footer
   $('.footerTop .ico-Chat').attr('onclick', "_gaq.push(['_trackEvent', 'Atendimento', 'Clique', 'Chat']);"); // link Chat do Footer
   $('.footerTop .ico-Telefone').attr('onclick', "_gaq.push(['_trackEvent', 'Atendimento', 'Clique', 'Telefone']);"); // link Telefone do Footer
-  $('.footerTop .lnkSeta.lnkSetaWhite').attr('onclick', "_gaq.push(['_trackEvent', 'Atendimento', 'Clique', 'VerFormasAtendimento']);"); // Link Ver Outras Formas
+  $('.footerTop .lnkArrow.lnkArrowWhite').attr('onclick', "_gaq.push(['_trackEvent', 'Atendimento', 'Clique', 'VerFormasAtendimento']);"); // Link Ver Outras Formas
 

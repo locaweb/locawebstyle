@@ -161,7 +161,7 @@ textarea:focus + .help-placeholder {
 /** LINKS COM SETINHA
 *** FOI DESCONTINUADO EM DETRIMENTO AOS ICONES COM FONTES - Apagar na próxima versão de produção
 **/
-.lnkSeta, .lnkArrow {
+.lnkArrow {
   cursor:pointer;
   color:#666;
   font: 12px Ubuntu, verdana, arial, sans-serif;
@@ -170,13 +170,13 @@ textarea:focus + .help-placeholder {
   margin:5px 0;
   vertical-align: middle;
 }
-h3 .lnkSeta, h3 .lnkArrow {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
-h4 + .lnkSeta, h4 + .lnkArrow {border-left:1px solid #bababa; margin-left:10px; padding-left:10px;}
-h6 .lnkSeta, h6 .lnkArrow {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC; padding-left:10px;}
+h3 .lnkArrow {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
+h4 + .lnkArrow {border-left:1px solid #bababa; margin-left:10px; padding-left:10px;}
+h6 .lnkArrow {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC; padding-left:10px;}
 
-.spanObs .lnkSeta, .spanObs .lnkArrow {margin: 0;}
-.innerSideBox + .lnkSeta, .innerSideBox + .lnkArrow {margin:-5px 0 10px 10px;}
-.chamadasBox + .lnkSeta, .chamadasBox + .lnkArrow {position:relative; top:-5px;}
+.spanObs .lnkArrow {margin: 0;}
+.innerSideBox + .lnkArrow {margin:-5px 0 10px 10px;}
+.chamadasBox + .lnkArrow {position:relative; top:-5px;}
 
 /** BOX COM FUNDO CINZA
 *** geralmente tem um collapseGroup dentro

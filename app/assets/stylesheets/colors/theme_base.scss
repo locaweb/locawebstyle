@@ -19,6 +19,10 @@
 
 #{$theme_name} a,
 #{$theme_name} #menuPrincipal .btMenu a,
+#{$theme_name} .collapseGroup summary span,
+#{$theme_name} .boxCollapse h4 span,
+#{$theme_name} .lnkArrow,
+#{$theme_name} #menuPrincipal > ul > li > a:hover,
 #{$theme_name} .boxGray.listDetail a,
 #{$theme_name} td a,
 #{$theme_name} #menuPrincipal .parent:hover > a,
@@ -69,7 +73,7 @@
 
 #{$theme_name} .chamadasBox div.active,
 #{$theme_name} .chamadasBox div:hover,
-#{$theme_name} .chooseBox li:hover, 
+#{$theme_name} .chooseBox li:hover,
 #{$theme_name} .chooseBox li.active {
   border-color: $pallet_6;
   background: #fdfcfa;
@@ -98,17 +102,17 @@
 #{$theme_name} .boxSidebarTitle{background-color: $pallet_3;}
 
 #{$theme_name} .btn-primary,
-#{$theme_name} .dropdown-menu li > a:hover, 
-#{$theme_name} .dropdown-menu li > a:focus, 
+#{$theme_name} .dropdown-menu li > a:hover,
+#{$theme_name} .dropdown-menu li > a:focus,
 #{$theme_name} .dropdown-submenu:hover > a  {
-  background-color: $pallet_2; 
-  background-image: -moz-linear-gradient(top,  $pallet_1 0%, $pallet_2 100%); 
-  background-image: -webkit-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%); 
-  background-image: -o-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%); 
-  background-image: -ms-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%); 
-  background-image: linear-gradient(to bottom,  $pallet_1 0%,$pallet_2 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_1', endColorstr='$pallet_2',GradientType=0 ); 
- 
+  background-color: $pallet_2;
+  background-image: -moz-linear-gradient(top,  $pallet_1 0%, $pallet_2 100%);
+  background-image: -webkit-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
+  background-image: -o-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
+  background-image: -ms-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
+  background-image: linear-gradient(to bottom,  $pallet_1 0%,$pallet_2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_1', endColorstr='$pallet_2',GradientType=0 );
+
 }
 #{$theme_name} .btn-primary{ border: 1px solid $pallet_2;}
 
@@ -118,16 +122,16 @@
   background-color: $pallet_5;
 }
 #{$theme_name}  .gradient{
-  background-color: $pallet_5; 
-  background-image: -moz-linear-gradient(top,  $pallet_7 0%, $pallet_5 100%); 
-  background-image: -webkit-linear-gradient(top,  $pallet_7 0%,$pallet_5 100%); 
-  background-image: -o-linear-gradient(top,  $pallet_7 0%,$pallet_5 100%); 
-  background-image: -ms-linear-gradient(top,  $pallet_7 0%,$pallet_5 100%); 
-  background-image: linear-gradient(to bottom,  $pallet_7 0%,$pallet_5 100%); 
+  background-color: $pallet_5;
+  background-image: -moz-linear-gradient(top,  $pallet_7 0%, $pallet_5 100%);
+  background-image: -webkit-linear-gradient(top,  $pallet_7 0%,$pallet_5 100%);
+  background-image: -o-linear-gradient(top,  $pallet_7 0%,$pallet_5 100%);
+  background-image: -ms-linear-gradient(top,  $pallet_7 0%,$pallet_5 100%);
+  background-image: linear-gradient(to bottom,  $pallet_7 0%,$pallet_5 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_7', endColorstr='$pallet_5',GradientType=0 );
 }
 
-#{$theme_name} .chooseBox li:hover h4, 
+#{$theme_name} .chooseBox li:hover h4,
 #{$theme_name} .chooseBox li.active h4,
 #{$theme_name} .content h2,
 #{$theme_name} .content h3,
@@ -140,12 +144,12 @@ color: $pallet_4;}
 
 #{$theme_name} .chooseBox .active:before {border-top: 15px solid $pallet_6;}
 
-#{$theme_name} .chooseBox li:hover, 
+#{$theme_name} .chooseBox li:hover,
 #{$theme_name} .chooseBox li.active {
   border:1px solid $pallet_6;
 }
 
-#{$theme_name} .chooseBox li:hover p, 
+#{$theme_name} .chooseBox li:hover p,
 #{$theme_name} .chooseBox li.active p{
   color: $pallet_3;
 }
@@ -159,12 +163,12 @@ color: $pallet_4;}
 
 #{$theme_name} .pagination .current,
 #{$theme_name} .pagination .active a {
-  border-color: $pallet_1; 
-  background-color: $pallet_1; 
-  background-image: -moz-linear-gradient(top,  $pallet_1 0%, $pallet_2 100%); 
-  background-image: -webkit-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%); 
-  background-image: -o-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%); 
-  background-image: -ms-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%); 
-  background-image: linear-gradient(to bottom,  $pallet_1 0%,$pallet_2 100%); 
+  border-color: $pallet_1;
+  background-color: $pallet_1;
+  background-image: -moz-linear-gradient(top,  $pallet_1 0%, $pallet_2 100%);
+  background-image: -webkit-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
+  background-image: -o-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
+  background-image: -ms-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
+  background-image: linear-gradient(to bottom,  $pallet_1 0%,$pallet_2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_1', endColorstr='$pallet_2',GradientType=0 );
 }
