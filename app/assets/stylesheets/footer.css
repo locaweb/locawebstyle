@@ -1,17 +1,17 @@
 /* FOOTER */
-footer#rodape {
+footer#footer {
   clear:both;
   position:absolute;
   bottom:0;
   width:100%;
 }
-#rodape .footerTop {
+#footer .footerTop {
   padding:15px 0 0;
   background:url(img/bgfooter.png);
 }
-#rodape nav {height:50px;}
+#footer nav {height:50px;}
 
-#rodape nav h6 {
+#footer nav h6 {
   font: 300 17px Ubuntu, verdana, tahoma, arial, helvetica, sans-serif;
   color:#FFF;
   text-transform:uppercase;
@@ -21,17 +21,17 @@ footer#rodape {
   float:left;
 }
 
-#rodape nav {
+#footer nav {
   background:#141414;
   border:1px solid #383838;
   border-bottom:0;
   border-radius:3px;
 }
 
-#rodape ul{float:left; padding:15px; margin:0;}
-#rodape ul li {display:inline;}
+#footer ul{float:left; padding:15px; margin:0;}
+#footer ul li {display:inline;}
 
-#rodape nav ul li  {
+#footer nav ul li  {
   display:inline-block;
   color:#FFF;
   padding:5px 35px;
@@ -40,14 +40,14 @@ footer#rodape {
   border-right:1px solid #434343;
   margin-right:25px;
 }
-#rodape nav ul li a{color: #fff;}
-#rodape nav ul li:last-child  {border-right:none;}
+#footer nav ul li a{color: #fff;}
+#footer nav ul li:last-child  {border-right:none;}
 
-#rodape ul li.ico-helpDesk{background-image:url(img/icoHelpDesk.png);}
-#rodape ul li.ico-Chat{background-image:url(img/icoChat.png);}
-#rodape ul li.ico-Telefone {background-image:url(img/icoTelefone.png);}
+#footer ul li.ico-helpDesk{background-image:url(img/icoHelpDesk.png);}
+#footer ul li.ico-Chat{background-image:url(img/icoChat.png);}
+#footer ul li.ico-Telefone {background-image:url(img/icoTelefone.png);}
 
-#rodape nav .lnkArrow {margin:15px 20px 0; color:#FFF;}
+#footer nav .lnkArrow {margin:15px 20px 0; color:#FFF;}
 
 .subfooter {padding:10px 0; color:#545454; font-size:11px; background:#FFF; clear:both; overflow: hidden;}
 .subfooter strong {color:#2a2a2a;}
@@ -65,5 +65,5 @@ footer#rodape {
   vertical-align:middle;
 }
 
-#rodape [class^="ico"]:before,
-#rodape [class*=" ico"]:before {display:none;}
+#footer [class^="ico"]:before,
+#footer [class*=" ico"]:before {display:none;}
