@@ -2,16 +2,22 @@
 *** 320 x 480
 **/
 @media screen and (max-width:767px) {
-#select_themes {display: none;}
-  body:after {content:" "; display:block; clear:both;}
+  #select_themes {display: none;}
+  
   body { padding:0 !important;}
-.select_themes {display: none;}
+  body:after {content:" "; display:block; clear:both;}
+  
+  .select_themes {display: none;}
+
   .limit {
     width:95% !important;
     position:relative; left:0;
     padding-bottom:0;
     margin:0 auto;
   }
+
+  #main div.limit {left:0 !important; padding:0 10px 40px 10px;}
+
   .shortcutBox div {
     width:92% !important;
     min-height: inherit !important;
@@ -19,10 +25,10 @@
     height: auto !important;
     float:none !important;
   }
-  .shortcutBox div p {display:none;}
-  .infoLogin {display:none;}
 
-  #main div.limit {left:0 !important; padding:0 10px 40px 10px;}
+  .shortcutBox div p {display:none;}
+
+  .infoLogin {display:none;}
 
   [class*="span"] {
     width:auto;
@@ -35,7 +41,7 @@
     margin:0;
   }
 
-  header.headerPrincipal .limit {height:auto; padding:0;}
+  #header .limit {height:auto; padding:0;}
   .revisit .shortcutBox h3{ font: 100 22px UbuntuLight, verdana, arial, tahoma, sans-serif;}
   .revisit .shortcutBox div{ padding-bottom: 0!important;}
   .sidebar {padding:40px 0 0;}

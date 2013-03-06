@@ -2,14 +2,8 @@
 **** Tudo o que é deprecated e está dentro de MOBILE.CSS
 ***/
 @media screen and (max-width:767px) {
-  .limite {
-    width:95% !important;
-    position:relative; left:0;
-    padding-bottom:0;
-    margin:0 auto;
-  }
   #rodape nav .lnkSeta, #rodape nav .lnkArrow {margin:2px 0 0 10px; float:left; font-size:11px;}
-    .chamadasBox div {
+  .chamadasBox div {
     width:92% !important;
     min-height: inherit !important;
     padding-bottom:20px !important;
@@ -20,14 +14,43 @@
   .revisit .chamadasBox h3{ font: 100 22px UbuntuLight, verdana, arial, tahoma, sans-serif;}
   .revisit .chamadasBox div{ padding-bottom: 0!important;}
 
+  .limite {
+    width:95% !important;
+    position:relative; left:0;
+    padding-bottom:0;
+    margin:0 auto;
+  }
+
+  header.headerPrincipal .limite {height:auto; padding:0;}
+  #main div.limite {left:0 !important; padding:0 10px 40px 10px;}
+  footer#rodape .limite {padding:0;}
 }
 
 @media screen and (min-width: 1220px) {
+   .limite {width: 1180px !important;}
   .revisit .chamadasBox h3{ font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;}
-  .limite {width: 1180px !important;}
 }
 
-/* DEPRECATED 21/01/13 */
+/*** LIMITE ***/
+#main > .limite {padding-bottom:160px;}
+.limite {margin: 0 auto; width: 988px;}
+header.headerPrincipal .limite {height:120px; position:relative;}
+header.headerPrincipal .limite:after {content:" "; display:block; clear:both;}
+.gridCode #main .limite [class^="span"] {margin-bottom:10px; background:#e3e3e3;}
+.gridCode #main .limite [class^="span"] p {margin:0; padding:10px;}
+.gridCode #main .limite [class^="span"]:hover {color:#000; background:#CCC; font-weight:bold;}
+
+/*** HEADER ***/
+header.headerPrincipal {
+  border-top:4px solid #BBB;
+  background:#f0f0f0 url(img/bgHeader.gif) repeat-X top center;
+}
+header.headerPrincipal .limit {height:120px; position:relative;}
+header.headerPrincipal:after, header.headerPrincipal .limit:after {content:" "; display:block; clear:both;}
+header.headerPrincipal .btn-group {display:inline-block;}
+
+
+/*** COLLAPSE ***/
 .collapseGroup summary {
   color:#545454;
   cursor:pointer;
@@ -62,7 +85,6 @@ summary.ico-dot + div p {padding-left:23px !important;}
 .collapseGroup .details.active {background-color:#FFF;}
 .collapseGroup .details p {padding:10px 30px;}
 
-/* DEPRECATED 24/01/13 */
 /*** statusMessageBox
 **** Usado inicialmente na home de Email Marketing
 ***/
@@ -271,18 +293,6 @@ pre {
 ***** Nomenclaturas antigas
 ****/
 
-/*** LIMITE ***/
-#main > .limite {padding-bottom:160px;}
-#main div.limite {left:0 !important; padding:0 10px 40px 10px;}
-.limite {margin: 0 auto; width: 988px;}
-header.headerPrincipal .limite {height:120px; position:relative;}
-header.headerPrincipal .limite:after {content:" "; display:block; clear:both;}
-
-.gridCode #main .limite [class^="span"] {margin-bottom:10px; background:#e3e3e3;}
-.gridCode #main .limite [class^="span"] p {margin:0; padding:10px;}
-.gridCode #main .limite [class^="span"]:hover {color:#000; background:#CCC; font-weight:bold;}
-
-footer#rodape .limite {padding:0;}
 
 /*** LNKSETA  ***/
 .lnkSeta {

@@ -1,9 +1,9 @@
-header.headerPrincipal {
+#header {
   border-top:4px solid #BBB;
   background:#f0f0f0 url(img/bgHeader.gif) repeat-X top center;
 }
-header.headerPrincipal .limit {height:120px; position:relative;}
-header.headerPrincipal:after, header.headerPrincipal .limit:after {content:" "; display:block; clear:both;}
+#header .limit {height:120px; position:relative;}
+#header:after, #header .limit:after {content:" "; display:block; clear:both;}
 
 /** Nome do serviço - Logo - H1 **/
 .serviceName {
@@ -262,7 +262,6 @@ header.headerPrincipal:after, header.headerPrincipal .limit:after {content:" "; 
   position: relative;
 }
 
-header.headerPrincipal .btn-group {display:inline-block;}
 .listIdent {
   position:absolute;
   background:#FFF;
@@ -276,7 +275,7 @@ header.headerPrincipal .btn-group {display:inline-block;}
   text-align:left;
 }
 
-header.headerPrincipal .btn-group {display:inline-block;}
+#header .btn-group {display:inline-block;}
 
 .dropdown-menu.listIdent a {padding:0;}
 
