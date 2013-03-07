@@ -1,13 +1,13 @@
 /** 
 *** FLOAT E CLEAR
 **/
-.nofloat, .noFloat {float:none !important;}
-.fright, .fRight {float:right !important;}
-.fleft, .fLeft {float:left !important;}
+.nofloat, .noFloat {float: none !important;}
+.fright, .fRight {float: right !important;}
+.fleft, .fLeft {float: left !important;}
 
-.cboth, .cBoth {clear:both !important;}
-.cright, .cRight {clear:right !important;}
-.cleft, .cLeft {clear:left !important;}
+.cboth, .cBoth {clear: both !important;}
+.cright, .cRight {clear: right !important;}
+.cleft, .cLeft {clear: left !important;}
 
 .overflowHidden, .overflowhidden{ overflow: hidden !important;}
 .overflowVisible {overflow: visible !important;}
@@ -15,10 +15,10 @@
 /** 
 *** BLOCO E LINHA
 **/
-.dblock, .dBlock {display:block !important;}
-.dinline, .dInline {display:inline !important; float:none !important;}
-.dinlineblock, .dInlineBlock {display:inline-block !important; float:none !important;}
-.dnone, .dNone, .hide, .hide {display:none !important;}
+.dblock, .dBlock {display: block !important;}
+.dinline, .dInline {display: inline !important; float: none !important;}
+.dinlineblock, .dInlineBlock {display: inline-block !important; float: none !important;}
+.dnone, .dNone, .hide, .hide {display: none !important;}
 
 /** 
 *** TAMANHO
@@ -31,30 +31,30 @@
 /** 
 *** MARGIN E PADDING
 **/
-.nomargin, .noMargin {margin:0 !important;}
-.nomarginleft, .noMarginLeft, .row.noMarginLeft {margin-left:0 !important;}
-.nomarginright, .noMarginRight {margin-right:0 !important;}
-.nomargintop, .noMarginTop {margin-top:0 !important;}
-.nomarginbottom, .noMarginBottom {margin-bottom:0 !important;}
+.nomargin, .noMargin {margin: 0 !important;}
+.nomarginleft, .noMarginLeft, .row.noMarginLeft {margin-left: 0 !important;}
+.nomarginright, .noMarginRight {margin-right: 0 !important;}
+.nomargintop, .noMarginTop {margin-top: 0 !important;}
+.nomarginbottom, .noMarginBottom {margin-bottom: 0 !important;}
 
-.nopadding, .noPadding {padding:0 !important;}
-.nopaddingleft, .noPaddingLeft {padding-left:0 !important;}
-.nopaddingright, .noPaddingRight {padding-right:0 !important;}
-.nopaddingtop, .noPaddingTop {padding-top:0 !important;}
-.nopaddingbottom, .noPaddingBottom {padding-bottom:0 !important;}
+.nopadding, .noPadding {padding: 0 !important;}
+.nopaddingleft, .noPaddingLeft {padding-left: 0 !important;}
+.nopaddingright, .noPaddingRight {padding-right: 0 !important;}
+.nopaddingtop, .noPaddingTop {padding-top: 0 !important;}
+.nopaddingbottom, .noPaddingBottom {padding-bottom: 0 !important;}
 
 .marginBottom40 {margin-bottom: 40px;}
 
 /** 
 *** ALINHAMENTO DE TEXTO
 **/
-.txtLeft, .txtleft {text-align:left !important;}
-.txtRight, .txtright {text-align:right !important;}
-.txtJustify, .txtjustify {text-align:justify !important;}
-.txtCenter, .txtcenter {text-align:center !important;}
+.txtLeft, .txtleft {text-align: left !important;}
+.txtRight, .txtright {text-align: right !important;}
+.txtJustify, .txtjustify {text-align: justify !important;}
+.txtCenter, .txtcenter {text-align: center !important;}
 
-table.txtLeft td, table.txtLeft th {text-align:left;}
-table.txtRight td, table.txtRight th {text-align:right;}
+table.txtLeft td, table.txtLeft th {text-align: left;}
+table.txtRight td, table.txtRight th {text-align: right;}
 
 /** 
 *** ALINHAMENTO VERTICAL
@@ -69,16 +69,16 @@ table.txtRight td, table.txtRight th {text-align:right;}
 /** 
 *** BACKGROUND E BORDA
 **/
-.noBackground {background:none !important;}
+.noBackground {background: none !important;}
 .noShadow {box-shadow: none !important;}
 
-.noborder, .noBorder {border:none !important;}
-.noborderright, .noBorderRight {border-right:none !important;}
-.noborderleft, .noBorderLeft {border-left:none !important;}
-.noborderbottom, .noBorderBottom {border-bottom:none !important;}
-.nobordertop, .noBorderTop {border-top:none !important;}
+.noborder, .noBorder {border: none !important;}
+.noborderright, .noBorderRight {border-right: none !important;}
+.noborderleft, .noBorderLeft {border-left: none !important;}
+.noborderbottom, .noBorderBottom {border-bottom: none !important;}
+.nobordertop, .noBorderTop {border-top: none !important;}
 
-.noBullet, .noListStyle {list-style:none !important;}
+.noBullet, .noListStyle {list-style: none !important;}
 
 /** 
 *** CURSOR DE MOUSE
@@ -94,19 +94,19 @@ table.txtRight td, table.txtRight th {text-align:right;}
 .cursorProgress, .cursorprogress {cursor: progress !important;}
 
 .cursorGrab, .cursorgrab {
-  cursor:hand;
-  cursor:grab;
-  cursor:-o-grab;
-  cursor:-ms-grab;
-  cursor:-moz-grab;
-  cursor:-webkit-grab;
+  cursor: hand;
+  cursor: grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
 }
 .cursorGrabbing, .cursorgrabbing {
-  cursor:grabbing;
-  cursor:-o-grabbing;
-  cursor:-ms-grabbing;
-  cursor:-moz-grabbing;
-  cursor:-webkit-grabbing;
+  cursor: grabbing;
+  cursor: -o-grabbing;
+  cursor: -ms-grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
 }
 
 .ellipsis {
@@ -128,14 +128,4 @@ table.txtRight td, table.txtRight th {text-align:right;}
 /** 
 *** HR - LINHA HORIZONTAL
 **/
-hr, hr.sepDot {border:none; border-bottom:1px solid #e5e5e5; background:none; display:block; margin:15px 0;}
-.boxCollapse hr, .boxCollapse hr.sepDot {border-color:#c9c9c9;}
-.boxCollapse .toggleChild hr{border-bottom-width: 5px; margin: 10px 0;}
-hr.sepDot {border-bottom:1px dotted #E5E5E5;}
-hr.dotsSep {height: 5px; background: url(img/titDots.png);  margin:20px 0;}
-hr.sep {background-color: #E5E5E5; }
-
-.removeBefore:before,
-.removeAfter:after {background:none!important;border:none!important;}
-.popover h3 {margin: 0!important;}
-
+hr, hr.sepDot {border: none; border-bottom: 1px solid #e5e5e5; background: none; display: block; margin: 15px 0;}

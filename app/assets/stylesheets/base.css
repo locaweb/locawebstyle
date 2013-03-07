@@ -773,9 +773,8 @@ td .progress {max-width: 70px;}
 }
 .progress.infoHelp {padding: 0;}
 
-/*** POPOVER
-**** Novo icone infoHelp testado na Revenda
-***/
+.popover h3 {margin: 0 !important;}
+
 .infoHelp:before {
   content: "?";
   color: #FFF !important;
@@ -1033,3 +1032,11 @@ a[class*="ico-"] {font-size: 12px;}
   border: 5px solid;
   border-color: transparent transparent transparent #fff;
 }
+
+
+hr.sepDot {border-bottom: 1px dotted #E5E5E5;}
+hr.dotsSep {height: 5px; background: url(img/titDots.png);  margin: 20px 0;}
+hr.sep {background-color: #E5E5E5; }
+
+.removeBefore:before,
+.removeAfter:after {background:none !important; border:none !important;}

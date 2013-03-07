@@ -176,3 +176,6 @@ tr.active .actionsTable {display:none;}
 **** Fix do IE9 para Altura dos collapses em conjunto com actionsTable que aparecia e desaparecia
 ***/
 .ie9 .boxCollapse.active, .ie9 .boxCollapse.active .in {overflow:visible; height:auto !important;}
+
+.boxCollapse hr, .boxCollapse hr.sepDot {border-color: #c9c9c9;}
+.boxCollapse .toggleChild hr{border-bottom-width: 5px; margin: 10px 0;}
