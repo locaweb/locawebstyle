@@ -7,24 +7,25 @@
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
-
 .tabs li {display: inline;}
 .tabs li a {
   display: inline-block;
   font: 500 11px Ubuntu, helvetica, tahoma, verdana, arial, sans-serif;
   text-transform: uppercase;
   color: #545454;
-  padding: 12px 10px 8px;
+  padding: 13px 10px 7px;
   height: 13px;
   position: relative;
   top: -3px;
   border-top: 2px solid transparent;
   position: relative;
 }
-.tabs li a:after, .tabs li.active a:after {
+.tabs li a:after,
+.tabs li.active a:after {
   content: " ";
   display: none;
-  width: 11px; height: 6px;
+  width: 11px;
+  height: 6px;
   position: absolute;
   bottom: -6px;
   left: 50%;
@@ -32,9 +33,10 @@
   margin-left: -5px;
 }
 
-.tabs li a:hover, .tabs li.active a {
+.tabs li a:hover,
+.tabs li.active a {
   text-decoration: none;
-  background: #FFF;
+  background:#FFF;
   outline: none;
   border-top: 2px solid #777;
   border-top-right-radius: 3px;
@@ -44,7 +46,9 @@
 .tabs li a:hover .setaTab, 
 .tabs li.active a .setaTab, 
 .tabs li a:hover:after,
-.tabs li.active a:after {display: block;}
+.tabs li.active a:after {
+  display: block;
+}
 
 .tab-content {
   border: 1px solid #e5e5e5;
@@ -55,6 +59,6 @@
 }
 .tabs + .tab-content {border-top: none;}
 
-.tab-content .tab-pane {padding: 10px;}
+.tab-content .tab-pane {padding: 20px 10px 10px;}
 
 .tab-content.noborder {border: none;}
