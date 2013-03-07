@@ -5,11 +5,11 @@ body, li, p, a {
   -ms-font-smoothing: antialiased;
   font-smoothing: antialiased;
 
-  -webkit-text-shadow:0 0 1px transparent;
-  -moz-text-shadow:0 0 1px transparent;
-  -ms-text-shadow:0 0 1px transparent;
-  -o-text-shadow:0 0 1px transparent;
-  text-shadow:0 0 1px transparent;
+  -webkit-text-shadow: 0 0 1px transparent;
+  -moz-text-shadow: 0 0 1px transparent;
+  -ms-text-shadow: 0 0 1px transparent;
+  -o-text-shadow: 0 0 1px transparent;
+  text-shadow: 0 0 1px transparent;
 
   -webkit-text-rendering: optimizeSpeed;
   -ms-text-rendering: optimizeSpeed;
@@ -105,5 +105,4 @@ body, li, p, a {
      url('fonts/lacuna/lacuna-italic-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
-
 }
