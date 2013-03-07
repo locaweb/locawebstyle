@@ -80,7 +80,7 @@ p small {
 
 a {text-decoration:none;}
 a:hover {text-decoration:underline;}
-.ie8 a:hover {text-decoration: none;}
+
 
 .headerContent {padding-bottom:17px;}
 .headerContent .alert {margin:10px 0;}
@@ -521,8 +521,7 @@ tr.active td .boxActions {padding-top:0;}
   top: 50%; right: 2px;
   margin-top: -20px;
 }
-.ie8 .messageInfo .countViews:after{right: 0;}
-.ie9 .messageInfo .countViews:after{margin-top: -10px;}
+
 .messageInfo p {color: #2a2a2a;}
 .messageInfo p {margin: 0;}
 
@@ -641,7 +640,7 @@ tr.active td .boxActions {padding-top:0;}
 
 /* Utilizado dentro de collapse */
 .simpleMessageInfo .messageInfo{
-  border:none;
+  border: none;
   display: block; 
   margin: 0;
 }
@@ -795,7 +794,7 @@ td .progress {max-width:70px;}
 /*** COLLAPSE
 **** Algumas adequações
 ***/
-.ie8 .in.collapse {height:auto !important;}
+
 
 .carousel-control {background-image:none !important;}
 
@@ -931,9 +930,7 @@ a[class*="ico-"] {font-size: 12px;}
   overflow:hidden;
 }
 
-.ie8 .chooseBox a.lnkChoose,
-.ie9 .chooseBox a.lnkChoose,
-.ie7 .chooseBox a.lnkChoose {background:#FFF; filter: alpha(opacity = 0);}
+
 
 .chooseBox li:first-child {margin-left:0;}
 
@@ -1026,3 +1023,5 @@ a[class*="ico-"] {font-size: 12px;}
   border: 5px solid;
   border-color: transparent transparent transparent #fff;
 }
+
+

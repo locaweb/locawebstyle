@@ -76,7 +76,7 @@ header.headerPrincipal:after, header.headerPrincipal .limite:after {content:" ";
   border-bottom: 1px solid transparent;
   
 }
-.ie9 #menuPrincipal > ul > li > a {font-size:13px;}
+
 #menuPrincipal > ul > li > a:hover {color:#666; background-color:transparent;}
 #menuPrincipal a.ico-home:before {
   float:right; 
@@ -289,5 +289,10 @@ header.headerPrincipal .btn-group {display:inline-block;}
 .listIdent li span {padding-left:10px; display:inline-block}
 
 .dropdown-menu.listIdent .lnkSeta {margin:10px; background-position:left 4px; padding-left:13px;}
-.lnkContent{opacity: 0;}
-.lnkContent:focus{opacity: 1;}
+.lnkContent{ 
+  left: 0;
+  position: absolute; 
+  text-indent: -9999px; 
+  top: 0; 
+}
+.lnkContent:focus{text-indent: 0;}
