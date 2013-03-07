@@ -199,7 +199,7 @@ describe("Locastyle", function() {
       locastyle.base.init(dom_scope);
       expect($(".modalAutoOpen").data("modal").isShown).toEqual(true);
     });
-  });
+  })
 
   describe("Modal with Slider", function () {
     describe("When the modal open", function () {
@@ -228,7 +228,15 @@ describe("Locastyle", function() {
         expect($("[data-slide='prev']", dom_scope)).not.toHaveClass("dNone");
       });
     });
+  });
 
+  describe("Pathway step counter", function () {
+    it("Should add a css class step(number) related to the number of steps", function () {
+      var dom_scope = $("#locastyle_fixture");
+      var locastyle = new Locastyle();
+      locastyle.base.init(dom_scope);
+      expect($("#my_pathway", dom_scope)).toHaveClass("steps3");
+    });
   });
 
 });

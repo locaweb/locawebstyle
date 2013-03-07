@@ -36,8 +36,8 @@ Locastyle = (function() {
     //});
 
     // Conta quantos elementos tem no PathWay - Passo a Passo e coloca uma classe específica
-    var howMuchSteps = $('.pathWay li').size();
-    $('.pathWay').each(function(){ $(this).addClass('steps' + howMuchSteps) })
+    // var howMuchSteps = $('.pathWay li').size();
+    // $('.pathWay').each(function(){ $(this).addClass('steps' + howMuchSteps) })
 
     // Insere quebra de linha depois das DDs em ListDetails
      $('.listDetail dd', obj).after('<hr class="sep">');

@@ -16,6 +16,7 @@ Locastyle = (function() {
       this.openCollapsesWithError(dom_scope);
       this.autoOpenModal(dom_scope);
       this.modalSliderSetupBind(dom_scope);
+      this.pathWayStepCounter(dom_scope);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -160,6 +161,13 @@ Locastyle = (function() {
 
     hideElement: function(element) {
       $(element).addClass("dNone");
+    },
+
+    pathWayStepCounter: function() {
+      $(".pathWay").each(function() {
+        var steps = $(this).find("li").size();
+        $(this).addClass('steps' + steps);
+      });
     }
 
   }
