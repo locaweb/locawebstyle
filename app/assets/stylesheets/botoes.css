@@ -11,9 +11,9 @@ a[class*="btn"]:hover,
 .btn[class^="ico-"],
 .btn[class*=" ico-"],
 .btn[class*=" ico-"]:hover,
-.btn[class^="ico-"]:hover {color:inherit;}
+.btn[class^="ico-"]:hover {color: inherit;}
 
-p a.btn {color:#333;}
+p a.btn {color: #333;}
 
 /**
 *** Fixing: A linha 6042 do Bootstrap caga a cor desses botoes. Quando eles estão com ícones.
@@ -31,18 +31,22 @@ p a.btn {color:#333;}
 .btn.btn-primary,
 .btn.btn-primary:hover,
 .btn-primary[class^="ico-"],
-.btn-primary[class*=" ico-"] {color:#FFF;}
+.btn-primary[class*=" ico-"] {color: #FFF;}
 
 .btn.btn-large {
 	font-size: 14px;
 	padding: 10px 19px 10px 14px;
 }
 
-.btn-choice {width: 100px;margin-bottom: 10px;}
+.btn-choice {
+	width: 100px;
+	margin-bottom: 10px;
+}
+
 .btn-shadow {
 	position: relative;
-	background: #bfbfbf!important;
-	border-bottom: 1px solid #adadad!important;
+	background: #bfbfbf !important;
+	border-bottom: 1px solid #adadad !important;
 }
 
 .btn-shadow:after,
@@ -54,19 +58,5 @@ p a.btn {color:#333;}
 	top: 28px;
 }
 
-.btn-shadow:after{border-color: #bfbfbf transparent transparent transparent;left: 42%;}
-.btn-shadow:before{border-color: #adadad transparent transparent transparent;left: 42%;}
-.forceClass .alert .btn,
-.forceClass .alert .btn:hover {
-	color: #333;
-	text-decoration: none;
-	opacity: 1;
-}
-.forceClass .alert .btn[class^="btn-"],
-.forceClass .alert .btn[class*="btn-"],
-.forceClass .alert .btn[class^="btn-"]:hover,
-.forceClass .alert .btn[class*="btn-"]:hover{
-	color: #fff;
-	opacity: 1;
-}
-.alert .btn[class*="ico-"]{font-size: 14px; line-height: 20px;}
+.btn-shadow:after{border-color: #bfbfbf transparent transparent transparent; left: 42%;}
+.btn-shadow:before{border-color: #adadad transparent transparent transparent; left: 42%;}
