@@ -1,14 +1,14 @@
 /*** TABS ***/
 .tabs {
-  background:#e5e5e5;
-  height:32px;
+  background: #e5e5e5;
+  height: 32px;
   padding: 0 10px 1px;
-  margin:10px 0 0;
-  border-top-left-radius:3px;
-  border-top-right-radius:3px;
+  margin: 10px 0 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
-.tabs li {display:inline;}
+.tabs li {display: inline;}
 .tabs li a {
   display: inline-block;
   font: 500 11px Ubuntu, helvetica, tahoma, verdana, arial, sans-serif;
@@ -44,7 +44,7 @@
 .tabs li a:hover .setaTab, 
 .tabs li.active a .setaTab, 
 .tabs li a:hover:after,
-.tabs li.active a:after {display:block;}
+.tabs li.active a:after {display: block;}
 
 .tab-content {
   border: 1px solid #e5e5e5;
@@ -53,8 +53,8 @@
   width: auto;
   background: white;
 }
-.tabs + .tab-content {border-top:none;}
+.tabs + .tab-content {border-top: none;}
 
-.tab-content .tab-pane {padding:10px;}
+.tab-content .tab-pane {padding: 10px;}
 
-.tab-content.noborder {border:none;}
+.tab-content.noborder {border: none;}
