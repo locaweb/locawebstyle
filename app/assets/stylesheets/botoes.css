@@ -56,5 +56,17 @@ p a.btn {color:#333;}
 
 .btn-shadow:after{border-color: #bfbfbf transparent transparent transparent;left: 42%;}
 .btn-shadow:before{border-color: #adadad transparent transparent transparent;left: 42%;}
-
-
+.forceClass .alert .btn,
+.forceClass .alert .btn:hover {
+	color: #333;
+	text-decoration: none;
+	opacity: 1;
+}
+.forceClass .alert .btn[class^="btn-"],
+.forceClass .alert .btn[class*="btn-"],
+.forceClass .alert .btn[class^="btn-"]:hover,
+.forceClass .alert .btn[class*="btn-"]:hover{
+	color: #fff;
+	opacity: 1;
+}
+.alert .btn[class*="ico-"]{font-size: 14px; line-height: 20px;}
