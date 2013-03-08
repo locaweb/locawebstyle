@@ -13,6 +13,13 @@
 .ie8 .boxInfo header h3 small{margin-left: 35px;}
 .ie8 .ico-calendar-more,
 .ie8 .ico-calendar-check{width: 35px;}
+
+.ie8 .pathWay.steps6 li {width:16.382%;}
+.ie8 .pathWay.steps5 li {width:19.81%;}
+.ie8 .pathWay.steps4 li {width:24.816%;}
+.ie8 .pathWay.steps3 li {width:33.14%;}
+.ie8 .pathWay.steps2 li {width:49.816%;}
+
 /***
 **** IE8 Fix 
 ***/
@@ -20,7 +27,7 @@
 .ie8 [class*="ico-"]:before, 
 .ie8 .lnkSeta:before, 
 .ie8 .lnkArrow:before {
-  vertical-align:top; text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .ie9 .boxCollapse {overflow:hidden;}

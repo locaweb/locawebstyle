@@ -3,6 +3,8 @@ $(function(){
  	// Chama função de criação de menu acessível.
 	accessMenu();
 
+	subMenuAccess();
+
 	// $('select, textarea, h1, h2, h3, h4, h5, h6, p').attr('tabindex','0');
 	// $('input, select, .pathWay li.active > a, .btn-primary, .alert a').attr('tabindex','2');
 	// $('.btn-primary').attr('tabindex','3');
@@ -104,3 +106,21 @@ function accessMenu(){
 		$('.menuAccess').append('<a role="menuitem" tabindex="1" href="'  + href + '" aria-label="' + title + '" title="' + title + '">' + text + '</a>');
 	})      
 }
+
+// Deixa o submenu acessivel
+function subMenuAccess(){
+	$('#menuPrincipal .parent a').focus(function(){
+	$(this).parents('.parent').addClass('focus');
+	$(this).parents('.parent').find('ul').attr({
+		'aria-expanded' : true,
+			 'aria-hidden': false
+	})
+}).blur(function(){
+	$(this).parents('.parent').removeClass('focus');
+	$(this).parents('.parent').find('ul').attr({
+		'aria-expanded' : false,
+			 'aria-hidden': true
+	})
+})
+}
+
