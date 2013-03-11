@@ -1,12 +1,12 @@
 /*** PATH
 **** Passos de algum processo.
 ***/
-.pathWay {clear:both;}
-.pathWay ol:after, .pathWay ul:after {content:" "; display:block; clear:both;}
-.pathWay ol, .pathWay ul {margin:0 0 30px; padding:0;}
+.pathWay {clear: both;}
+.pathWay ol:after, .pathWay ul:after {content: " "; display: block; clear: both;}
+.pathWay ol, .pathWay ul {margin: 0 0 30px; padding: 0;}
 .pathWay li.disable, .pathWay li.disable a {cursor: default;}
 .pathWay li, .pathWay li.disabled, .pathWay li.disable:hover {
-  margin-right:1px;
+  margin-right: 1px;
   list-style: none;
   float: left;
   overflow: hidden;
@@ -17,12 +17,12 @@
   -o-transition: all .2s ease-out;
   transition: all .2s ease-out;
 }
-.pathWay.steps6 li {width:16.582%;}
-.pathWay.steps5 li {width:19.91%;}
-.pathWay.steps4 li {width:24.916%;}
-.pathWay.steps3 li {width:33.24%;}
-.pathWay.steps2 li {width:49.916%;}
-.pathWay.steps1 li {width:100%;}
+.pathWay.steps6 li {width: 16.582%;}
+.pathWay.steps5 li {width: 19.91%;}
+.pathWay.steps4 li {width: 24.916%;}
+.pathWay.steps3 li {width: 33.24%;}
+.pathWay.steps2 li {width: 49.916%;}
+.pathWay.steps1 li {width: 100%;}
 
 .pathWay a, .pathWay li.disable:hover a {
   border-left: 1px dotted #CCC;
@@ -30,7 +30,7 @@
   padding: 5px 0 0 5px;
   margin-bottom: 5px;
   color: #B0B0B0;
-  width:100%;
+  width: 100%;
   display: inline-block;
   font: 18px Ubuntu, arial, tahoma, sans-serif;
   text-transform: uppercase;
@@ -42,21 +42,22 @@
   -o-transition: all .2s ease-out;
   transition: all .2s ease-out;
 }
-.pathWay li a:hover {text-decoration:none;}
-.pathWay li:first-child a {border-left:none;}
+.pathWay li a:hover {text-decoration: none;}
+.pathWay li:first-child a {border-left: none;}
+
 .pathWay span {
-  display:block;
-  padding:16px 0 0 0;
-  font-size:12px;
+  display: block;
+  padding: 16px 0 0 0;
+  font-size: 12px;
   text-transform: capitalize;
 }
 
 .pathWay li b, .pathWay li.disable:hover b {
-  color:#b8b8b8;
+  color: #b8b8b8;
   letter-spacing: -3px;
   margin-right: 5px;
-  float:left;
-  font:bold 50px UbuntuMedium, Ubuntu, Verdana, arial, tahoma, sans-serif ;
+  float: left;
+  font: bold 50px UbuntuMedium, Ubuntu, Verdana, arial, tahoma, sans-serif ;
   -webkit-transition: all .2s ease-out;
   -moz-transition: all .2s ease-out;
   -ms-transition: all .2s ease-out;
@@ -64,5 +65,5 @@
   transition: all .2s ease-out;
 }
 
-.pathWay .stepOk {background-color:#666665;}
-.pathWay .stepOk a, .pathWay .stepOk b {color:#666;}
+.pathWay .stepOk {background-color: #666665;}
+.pathWay .stepOk a, .pathWay .stepOk b {color: #666;}
