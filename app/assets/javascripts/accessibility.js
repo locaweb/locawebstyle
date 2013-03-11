@@ -39,6 +39,7 @@ $(function(){
 	$('.lnkCoverAll').attr('tabindex','3');
 	$('.shortcutBox h3 > a').attr('aria-hidden','true');
 
+
 	//
 	// TABS
 	$('.tabs').attr('role','tablist');
@@ -59,8 +60,7 @@ $(function(){
 		var target = $(this).data('target');
 		$(this).prepend('<a href="#" role="button" aria-haspopup="true" aria-controls="'+target+'" aria-label="'+title+'" title="'+title+'" class="lnkCollapse" tabindex="3"></a>');
 	})
-	$('.collapse').find('*[tabindex="3"]').attr('tabindex','0');
-
+	$('.collapse').find('[tabindex="3"]').attr('tabindex','0');
 
 	//Notificaçao
 	$('.alert, .focusOn').attr('tabindex','-1').focus();
@@ -73,6 +73,10 @@ $(function(){
 		}, 500);
     e.preventDefault();
   })
+
+
+	$('[rel="popover"]').focus(function(){$(this).click()})
+	$('[rel="popover"]').blur(function(){$(this).click()})
 
 
 })
