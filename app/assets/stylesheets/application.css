@@ -11,7 +11,7 @@
  *= require tabs
  *= require toolbar
  *= require icons
- *= require botoes
+ *= require buttons
  *= require header
  *= require footer
  *= require select2
@@ -19,12 +19,12 @@
  *= require modal
  *= require sidebar
  *= require tables
- *= require passos
+ *= require pathway
  *= require grid
- *= require chamadas
+ *= require shortcutbox
  *= require mobile
  *= require base
- *= require classesfuncionais
+ *= require functionalclasses
  *= require passwordStrength
  *= require print
  *= require ie

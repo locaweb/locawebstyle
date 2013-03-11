@@ -1,5 +1,5 @@
-/***
-**** CHAMADAS NO BOXGRAY
+/*** Shortcut Box
+**** Caixa geralmente inserida na home do dashboard dos produtos contendo atalhos para as principais ações
 ***/
 .shortcutBox {margin: 15px 0 0 15px; clear: both;}
 .shortcutBox:after {content: " "; display: block; clear: both;}
