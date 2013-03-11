@@ -1,28 +1,28 @@
 [class^="ico-"], [class*="ico-"] {
   font-style: normal;
-  position:relative;
+  position: relative;
   display: inline-block;
-  min-height:17px;
-  line-height:17px;
+  min-height: 17px;
+  line-height: 17px;
   font-family: Ubuntu, verdana, arial, helvetica, tahoma, sans-serif;
 }
 
-[class^="btn"][class^="ico-"], [class*="btn"][class*="ico-"] {padding-left:5px;}
+[class^="btn"][class^="ico-"], [class*="btn"][class*="ico-"] {padding-left: 5px;}
 
 [class^="ico-"]:before, [class*="ico-"]:before, .lnkArrow:before {
-  display:inline-block;
-  margin-right:4px;
+  display: inline-block;
+  margin-right: 4px;
   font-family: locaweb;
-  font-weight:normal;
+  font-weight: normal;
   speak: none;
-  text-decoration:none;
-  width:auto;
+  text-decoration: none;
+  width: auto;
   line-height: 1.1em;
   vertical-align: middle;
   text-align: center;
-  position:relative;
-  top:-2px;
-  font-size:1.1em;
+  position: relative;
+  top: -2px;
+  font-size: 1.1em;
 }
 
 h1[class^="ico-"]:before,
@@ -31,34 +31,41 @@ h3[class^="ico-"]:before,
 h4[class^="ico-"]:before,
 h5[class^="ico-"]:before,
 h6[class^="ico-"]:before {
-  margin:0 15px 0 0;
+  margin: 0 15px 0 0;
   position: relative;
   top: -2px;
 }
 
-.mediumIcon {font-size: 30px;vertical-align: middle;}
+.mediumIcon {
+  font-size: 30px;
+  vertical-align: middle;
+}
 
-.tableList td [class^="ico-"], .tableList td [class*="ico-"] {font-weight:normal;}
+/** IE8 Fix ***/
+.ie8 [class^="ico-"]:before, .ie8 [class*="ico-"]:before, .ie8 .lnkArrow:before {vertical-align: top; text-decoration: none !important;}
+
+.tableList td [class^="ico-"], .tableList td [class*="ico-"] {font-weight: normal;}
 
 /** Quando o ícone tem que ir para a direita **/
-.btn.icoPosRight {padding:5px 9px !important;}
-.btn-large.icoPosRight {padding:10px 12px 10px 19px !important;}
+.btn.icoPosRight {padding: 5px 9px !important;}
+.btn-large.icoPosRight {padding: 10px 12px 10px 19px !important;}
 .icoPosRight:before {
-  float:right;
-  right:-5px; top:0;
+  float: right;
+  right: -5px; top:0;
 }
 
 .ico-alert:before {
-  margin-right:7px;
-  display:inline-block;
-  vertical-align:top;
+  margin-right: 7px;
+  display: inline-block;
+  vertical-align: top;
   content: " ";
-  background:url(img/ico-alert.png) no-repeat center center;
-  width:17px; height:15px;
+  background: url(img/ico-alert.png) no-repeat center center;
+  width: 17px;
+  height: 15px;
 }
 
-.ico-trash, .ico-cancel, .ico-delete {color:#b54646 !important;}
-.btn.ico-trash {color:#FFF !important;}
+.ico-trash, .ico-cancel, .ico-delete {color: #b54646 !important;}
+.btn.ico-trash {color: #FFF !important;}
 
 /** ícones usados nas chamadas **/
 [class^="chamaicon-"]:before, [class*=" chamaicon-"]:before {
@@ -487,20 +494,21 @@ h6[class^="ico-"]:before {
 
 [class^="icon-"], [class*=" icon-"],
 li [class^="icon-"], li [class*=" icon-"] {
-  width:auto;
-  height:auto;
-  background-color:none;
-  background-image:none;
+  width: auto;
+  height: auto;
+  background-color: none;
+  background-image: none;
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
   content:" ";
   display: inline-block;
   vertical-align:middle;
-  width: 16px; height: 16px;
+  width: 16px;
+  height: 16px;
   line-height: 14px;
   background-repeat: no-repeat;
-  margin-top:-3px;
+  margin-top: -3px;
 }
 .ui-datepicker-trigger.icon-calendar {
   -webkit-border-radius: 0 3px 3px 0;
@@ -508,22 +516,28 @@ li [class^="icon-"], li [class*=" icon-"] {
   -ms-border-radius: 0 3px 3px 0;
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
-  border:1px solid #E5E5E5;
-  background:#EEE;
-  vertical-align:top;
+  border: 1px solid #E5E5E5;
+  background: #EEE;
+  vertical-align: top;
   padding: 0;
-  height:30px;
-  width:30px;
+  height: 30px;
+  width: 30px;
   display: inline-block;
-  position: relative; left:-3px;
+  position: relative;
+  left: -3px;
   z-index: 1;
   margin-top: 0px;
 }
-.error .ui-datepicker-trigger.icon-calendar {border-color:#953B39;}
-.help-inline {width:inherit;}
+.error .ui-datepicker-trigger.icon-calendar {border-color: #953B39;}
+.help-inline {width: inherit;}
 
 [class^="icon-"]:before, [class*=" icon-"]:before,
-.ui-datepicker-trigger.icon-calendar:before {background-image: url(bootstrap/img/glyphicons-halflings.png); position: relative; left:1px; top:1px;}
+.ui-datepicker-trigger.icon-calendar:before {
+  background-image: url(bootstrap/img/glyphicons-halflings.png);
+  position: relative;
+  left: 1px;
+  top: 1px;
+}
 
 /*** Bootstrap Icons***/
 .icon-white {background-image: url("bootstrap/img/glyphicons-halflings-white.png");}
