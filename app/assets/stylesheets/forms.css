@@ -25,7 +25,10 @@ input, textarea, select {
 }
 
 .sideBySide .control-group.input-prepend {padding-right: 10px;}
-.simpleFilter.sideBySide .control-group:first-child {border-left: none; padding-left: 0;}
+.simpleFilter.sideBySide .control-group:first-child {
+  border-left: none;
+  padding-left: 0;
+}
 
 /** modifica a cor do placeholder dos inputs **/
 ::-webkit-input-placeholder,
@@ -60,7 +63,11 @@ label b {display: none;}
   margin-bottom: 0;
 }
 
-.controls .control-label input {display: inline-block; margin-top: 0; vertical-align: middle;}
+.controls .control-label input {
+  display: inline-block;
+  margin-top: 0;
+  vertical-align: middle;
+}
 label.dInlineBlock, label.dInline {margin-bottom: 0;}
 
 label, strong.control-label, .form-horizontal .control-label {
@@ -113,7 +120,11 @@ label.nomarginleft {margin-left: 0 !important;}
   text-align: left;
 }
 
-.formInline.boxGrayOpt label {width: auto; margin-bottom: 0; padding-top: 0;}
+.formInline.boxGrayOpt label {
+  width: auto;
+  margin-bottom: 0;
+  padding-top: 0;
+}
 .formInline.boxGrayOpt input {vertical-align: middle;}
 
 .boxGrayOpt:before {
