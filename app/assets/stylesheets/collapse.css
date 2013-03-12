@@ -91,59 +91,64 @@ p + .boxCollapse {margin-top:30px;}
 .boxCollapse.active {
   background-image: url(img/setaCollapseTop.png);
   background-color: #ECECEC;
-  padding-bottom:10px;
+  padding-bottom: 10px;
 }
 .boxCollapse.active header h4 {font-weight:bold;}
 
 .boxCollapse .collapse {padding:0 15px;}
 
-.boxCollapse .collapse::before {content: ""; display:block; padding:20px 0 0;}
-.boxCollapse.whiteCollapse .collapse::before {padding:10px 0 0;}
+.boxCollapse .collapse::before {content: ""; display: block; padding: 20px 0 0;}
+.boxCollapse.whiteCollapse .collapse::before {padding: 10px 0 0;}
 
 .boxCollapse header > a {outline: none;}
 
 .boxCollapse header h4 {
-  font:1em verdana, arial, tahoma, sans-serif;
-  margin-bottom:0;
+  font: 0.85em verdana, arial, tahoma, sans-serif;
+  margin-bottom: 0;
   outline: none;
 }
 
 .boxCollapse header p {
-  font:12px verdana, arial, tahoma, sans-serif;
-  color:#767676;
-  padding:0;
-  margin:0;
+  font: 0.75em verdana, arial, tahoma, sans-serif;
+  color: #767676;
+  padding: 0;
+  margin: 0;
   outline: none;
 }
 
-.boxCinzaInner {background:#ddd; padding:10px 10px; margin-bottom:30px;}
-.boxCinzaInner + .boxCinzaInner {margin-top:-25px;}
-.boxCinzaInner .control-group {margin:0 0 10px;}
+.boxCinzaInner {
+  background: #ddd;
+  padding: 10px 10px;
+  margin-bottom: 30px;
+ }
+.boxCinzaInner + .boxCinzaInner {margin-top: -25px;}
+.boxCinzaInner .control-group {margin: 0 0 10px;}
 
-.boxCinzaInner p + div.control-group {margin-top:20px;}
+.boxCinzaInner p + div.control-group {margin-top: 20px;}
 
 .boxCollapse .tableList {
-  margin-top:15px;
-  margin-bottom:5px;
+  margin-top: 15px;
+  margin-bottom: 5px;
   border-collapse: separate;
-  background:#FFF;
+  background: #FFF;
 }
-.boxCollapse table td {border-right:none;border-bottom:1px solid #ddd;}
-.boxCollapse form {margin-bottom:0;}
+.boxCollapse table td {border-right: none; border-bottom: 1px solid #ddd;}
+.boxCollapse form {margin-bottom: 0;}
+
 .boxCollapse .tableList td .disabled {
   background: none;
   border: none;
   box-shadow: none;
-  cursor:default;
-  padding:0;
-  margin:0;
-  font-size:12px;
-  color:#555;
+  cursor: default;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #555;
 }
-.boxCollapse .tableList tr:nth-child(even){background-color:#f4f4f4;}
-.boxCollapse .tableList thead th {background:#cecece; color:#545454; font-weight:bold;}
+.boxCollapse .tableList tr:nth-child(even) {background-color: #f4f4f4;}
+.boxCollapse .tableList thead th {background: #cecece; color: #545454; font-weight: bold;}
 
-.boxCollapse .boxActions {margin-top:35px; clear:both; border-top-color:#d9d9d9;}
+.boxCollapse .boxActions {margin-top: 35px; clear: both; border-top-color: #d9d9d9;}
 
 .boxCollapse td .boxActions {
   margin:0;

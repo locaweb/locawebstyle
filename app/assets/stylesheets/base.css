@@ -54,7 +54,7 @@ h4 {font: 18px UbuntuLight, arial, verdana, tahoma, sans-serif; margin-bottom: 5
 h3 + h4 {margin-top: 15px;}
 h5 {font: 15px UbuntuMedium, arial, verdana, tahoma, sans-serif;}
 h6 {
-    font: 14px Ubuntu, arial, verdana, tahoma, sans-serif;
+    font: 1.14em Ubuntu, arial, verdana, tahoma, sans-serif;
     text-transform: inherit;
 }
 
@@ -69,12 +69,12 @@ legend {border-bottom: none; padding-bottom: 5px;}
 h1 + p, h2 + p, h3 + p {padding-top: 7px;}
 p {
   color: #767676;
-  font: 12px verdana, arial, tahoma, sans-serif;
+  font: 0.75em verdana, arial, tahoma, sans-serif;
 }
 
 p small {
   color: #767676;
-  font: 10px verdana, arial, tahoma, sans-serif;
+  font: 0.85em verdana, arial, tahoma, sans-serif;
 }
 
 a {text-decoration: none;}
@@ -105,7 +105,7 @@ h3 + .alert {margin-top: 15px;}
 }
 
 .alert h5 {
-  font: bold 12px verdana,arial, tahoma, sans-serif;
+  font: bold 0.75em verdana,arial, tahoma, sans-serif;
   color: #2a2a2a !important;
   text-transform: uppercase;
   margin-right: 10px;
@@ -117,7 +117,7 @@ h3 + .alert {margin-top: 15px;}
   background: url(img/icoerro_404.png) no-repeat left center;
   padding: 15px 0 15px 45px;
   margin: 4px 0 10px;
-  font: bold 20px verdana, arial, tahoma, sans-serif;
+  font: bold 1.7em verdana, arial, tahoma, sans-serif;
   color: #545454;
 }
 
@@ -126,7 +126,7 @@ h3 + .alert {margin-top: 15px;}
 .error .help-placeholder {color: #767676 !important;}
 .help-placeholder, .error .help-placeholder {
   background: #e5e5e5;
-  font-size: 10px;
+  font-size: 0.85em;
   color: #767676;
   border-radius: 0 0 3px 3px;
   padding: 8px 10px;
@@ -152,28 +152,38 @@ textarea:focus + .help-placeholder {
   display: block;
 }
 
-.obs {
-  font: 11px verdana, arial, tahoma, sans-serif;
-  color: #767676;
-  display: block;
-  padding: 10px 0;
-}
-
 /** LINKS COM SETINHA
 *** FOI DESCONTINUADO EM DETRIMENTO AOS ICONES COM FONTES - Apagar na próxima versão de produção
 **/
 .lnkArrow {
   cursor: pointer;
   color: #666;
-  font: 12px Ubuntu, verdana, arial, sans-serif;
+  font-family: Ubuntu, verdana, arial, sans-serif;
   display: inline-block;
   padding: 0;
   margin: 5px 0;
   vertical-align: middle;
 }
-h3 .lnkArrow {border-left: 1px solid #CCC; padding-left: 7px; margin-left: 5px;}
-h4 + .lnkArrow {border-left: 1px solid #bababa; margin-left: 10px; padding-left: 10px;}
-h6 .lnkArrow {position: relative; top: -1px; margin: 0;   border-left: 1px solid #CCC; padding-left: 10px;}
+
+h3 .lnkArrow {
+  border-left: 1px solid #CCC;
+  padding-left: 7px;
+  margin-left: 5px;
+}
+
+h4 + .lnkArrow {
+  border-left: 1px solid #bababa;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+h6 .lnkArrow {
+  position: relative;
+  top: -1px;
+  margin: 0;
+  border-left: 1px solid #CCC;
+  padding-left: 10px;
+ }
 
 .spanObs .lnkArrow {margin: 0;}
 .innerSideBox + .lnkArrow {margin: -5px 0 10px 10px;}
@@ -213,7 +223,7 @@ h6 .lnkArrow {position: relative; top: -1px; margin: 0;   border-left: 1px solid
   padding: 5px 0 0;
   margin: 0;
   height: auto;
-  font-size: 11px;
+  font-size: 1.2em;
 }
 
 .pagination ul {
@@ -348,14 +358,13 @@ tr.active td .boxActions {padding-top: 0;}
   text-transform: inherit;
 }
 
-.listOptions p {margin: 0;}
+.listOptions p {margin: 0; font-size: 0.9em;}
 .listOptions p.pObs {
   background: #ececec;
   color: #767676;
   margin: 5px 0 0 0;
   padding: 6px;
   max-width: 100%;
-  font-size: 12px;
   line-height: 20px;
   overflow: hidden;
 }
@@ -365,7 +374,7 @@ tr.active td .boxActions {padding-top: 0;}
   padding: 6px 10px;
   margin: 5px 0 0 0;
   line-height: 20px;
-  font-size: 12px;
+  font-size: 1.03em;
   background: #ececec;
 }
 
@@ -485,7 +494,7 @@ tr.active td .boxActions {padding-top: 0;}
 
 .messageInfo h5, .messageInfo h5 a {
   color: #767676;
-  font:normal 12px verdana, sans-serif;
+  font: normal 12px verdana, sans-serif;
 }
 .messageInfo h6, .messageInfo h6 a {
   font: bold 15px verdana, arial, sans-serif;
