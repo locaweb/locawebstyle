@@ -1,7 +1,7 @@
 /** Resolve bug quando era colocado icon no botões de dropdown **/
 .btn-group > .btn + .dropdown-toggle {vertical-align: bottom;}
 
-.btn {border-radius: 3px;}
+.btn {border-radius: 3px; padding: 4px 12px;}
 
 /** arruma cor padrao de btns com icones **/
 table tr td a.btn,
