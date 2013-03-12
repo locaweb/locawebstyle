@@ -152,7 +152,7 @@ textarea:focus + .help-placeholder {
   display: block;
 }
 
-/** 
+/**
 *** LINKS COM SETINHA
 **/
 .lnkArrow {
@@ -885,6 +885,16 @@ td .progress {max-width: 70px;}
 a[class*="ico-"] {font-size: 12px;}
 
 .forceClass a.warning {color: #b54646;}
+.forceClass .control-group.warning input[type="text"],
+.forceClass .control-group.warning input[type="password"],
+.forceClass .control-group.warning input[type="number"],
+.forceClass .control-group.warning input[type="email"],
+.forceClass .control-group.warning input[type="date"],
+.forceClass .control-group.success input[type="text"],
+.forceClass .control-group.success input[type="password"],
+.forceClass .control-group.success input[type="number"],
+.forceClass .control-group.success input[type="email"],
+.forceClass .control-group.success input[type="date"],
 .forceClass .control-group.error input[type="text"],
 .forceClass .control-group.error input[type="password"],
 .forceClass .control-group.error input[type="number"],
