@@ -115,6 +115,7 @@ table.txtRight td, table.txtRight th {text-align: right;}
   white-space: nowrap;
   display: block  !important;
 }
+.noBold, .nobold{font-weight: normal!important;}
 
 /** COLORS **/
 .bgWhite {background: white!important;}

@@ -24,6 +24,7 @@ $(function(){
 	$('#menuPrincipal li a').attr('role','menuitem');
 	$('#menuPrincipal li > a').attr('tabindex','2');
 
+
 	//
 	// Elementos Geral
 	$('.pathWays').attr('role','navigation');
