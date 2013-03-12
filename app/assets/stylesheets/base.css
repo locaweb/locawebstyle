@@ -156,15 +156,15 @@ textarea:focus + .help-placeholder {
 *** LINKS COM SETINHA
 **/
 .lnkArrow {
-  cursor: pointer;
-  color: #666;
-  font-family: Ubuntu, verdana, arial, sans-serif;
   display: inline-block;
   padding: 0;
   margin: 5px 0;
   vertical-align: middle;
+  cursor: pointer;
+  color: #666;
+  font-family: Ubuntu, verdana, arial, sans-serif;
+  font-size: 0.75em;
 }
-
 .sidebar .lnkArrow {font-size: 0.75em;}
 
 h3 .lnkArrow {
@@ -205,7 +205,7 @@ h6 .lnkArrow {
 .boxGray:after {content: " "; display: block; clear: both;}
 
 .boxGray h2 {
-  font-size: 24px;
+  font-size: 1.2em;
   padding: 10px 10px 0 15px; margin: 0 0 0 -1px;
   background: url(img/setaDetalheTit.png) no-repeat left 15px;
 }
