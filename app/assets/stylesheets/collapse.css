@@ -75,8 +75,12 @@ p + .boxCollapse {margin-top:30px;}
   font-family: Ubuntu, verdana, arial, helvetica, tahoma, sans-serif;
 }
 
+.boxCollapse.simpleCollapse .collapse::before {
+  padding-top: 12px;
+}
+
 .boxCollapse.simpleCollapse .collapse p {
-  padding-left: 25px;
+  padding-left: 1.7em;
   line-height: 1.45em;
 }
 
