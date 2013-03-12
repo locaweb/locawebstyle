@@ -152,8 +152,8 @@ textarea:focus + .help-placeholder {
   display: block;
 }
 
-/** LINKS COM SETINHA
-*** FOI DESCONTINUADO EM DETRIMENTO AOS ICONES COM FONTES - Apagar na próxima versão de produção
+/** 
+*** LINKS COM SETINHA
 **/
 .lnkArrow {
   cursor: pointer;
@@ -164,6 +164,8 @@ textarea:focus + .help-placeholder {
   margin: 5px 0;
   vertical-align: middle;
 }
+
+.sidebar .lnkArrow {font-size: 0.75em;}
 
 h3 .lnkArrow {
   border-left: 1px solid #CCC;
