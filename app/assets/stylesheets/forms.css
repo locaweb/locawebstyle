@@ -146,7 +146,8 @@ label.checkbox.control-label, label.checkbox.control-label:first-child {
 
 .boxGrayOpt input {margin: 0 1px 0 0;}
 
-.filterCount .control-group label {font-weight: normal; width: auto !important;}
+.filterCount {line-height: 28px;}
+.filterCount .control-group label {font-weight: normal; width: auto !important;line-height: 28px;}
 
 .filterCount .control-group,
 .filterCount .controlg-group input,
@@ -239,18 +240,26 @@ legend + .control-group {margin-top: 0;}
 
 .formInline .help-inline {display: inline-block;}
 
-.formInline .error .help-inline {
+.formInline .error .help-inline,
+.formInline .warning .help-inline,
+.formInline .success .help-inline {
   display: block;
   margin: 2px 0 0 105px;
  }
 
-.error .help-inline {
+.error .help-inline,
+.warning .help-inline,
+.success .help-inline {
   font-size: 11px;
   display: block;
   margin: 2px 0 0 0px;
 }
 
-.error input {margin-bottom: 0;}
+.error input,
+.warning input,
+.success input {
+  margin-bottom: 0;
+}
 .input-prepend label + .add-on {border-radius: 3px 0 0 3px; margin-left: 0;}
 
 input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;}
