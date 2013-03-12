@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="colorWine">
+<html>
 <head>
   <title>Locaweb Style</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -22,281 +22,34 @@
           Selecione o tema: <%= select_tag "themes", options_for_select(theme_options), id: "theme_selector", include_blank: true %>
         </li>
       </ul>
-      <a href="/logout" class="logOut">Sair</a>
-      <span class="userName"><strong>saas-dev</strong> (saas-dev)</span>
     </div>
   </div>
 
-  <header class="headerPrincipal">
-    <div class="limite">
-      <a id="feedbackr" class="lnkSugestoes" href="https://www.feedbackr.com.br/projects/4eef88bd6866c42b5500000e/feedbacks/new" target="_blank" alt="feedbackr">Sugestões</a>
-      <h1 class="serviceName"><a href="/">Locastyle</a></h1>
-      <div class="infoLogin">
-        Acessando com Identificador
-        <div class="btn-group">
-          <strong class="identNumber dropdown-toggle" data-toggle="dropdown">28424</strong>
-          <div class="listIdent dropdown-menu">
-            <ul>
-              <li>
-                <strong><a href="/accounts/1/change">28424</a> </strong>
-                <span>Gateway 01</span>
-              </li>
-              <li>
-                <strong><a href="/accounts/2/change">/accounts/2/change</a> </strong>
-                <span>teste</span>
-              </li>
-            </ul>
-            <a href="/accounts" class="lnkArrow">Ver todas</a>
-          </div>
-        </div>
-        <span class="accountName">Nome da conta: <strong>Gateway 01</strong></span>
-      </div>
-    </div>
-    <menu id="menuPrincipal">
-      <ul>
-        <li class="selected"><a href="/" class="ico-home">Página inicial</a></li>
-        <li><a href="#">Transações</a>
-          <ul>
-            <li><a href="#">Established</a></li>
-            <li><a href="#">Distribution of letters</a></li>
-            <li><a href="#">Publishing Lorem</a></li>
-            <li><a href="#">Sometimes</a></li>
-          </ul>
-        </li>
-        <li><a href="/settings">Meios de pagamento</a></li>
-      <li class="btMenu"><a href="#">Ambiente de testes</a></li>
-      </ul>
-    </menu>
-  </header>
+
 
   <div id="main">
     <div class="limite">
-
-<div class="alert alert-notification" id="notificacaoId">
-  <strong>Informação!</strong> Uma informação qualquer do seu sistema. <a href="#">Um link qualquer</a> 1.
-  <a href="#" class="lnkNoShow" data-target="#notificacaoId">Não exibir novamente</a>
-</div>
-
-        <ul class="breadcrumb">
-          <li><a href="#">Página inicial</a></li>
-          <li>Mensagens</li>
-        </ul>
-
       <div class="row">
-
-        <div class="span12">
+        <div class="span16">
           <%= yield %>
         </div>
-        <div class="span4">
-            <aside class="sidebar">
-              <section class="sideBox">
-                <h1 class="titSide titDadosConta">Dados da Conta</h1>
-                <div class="innerSideBox boxWhite">
-                  <h6>Identificador</h6>
-                  <p><strong>1234567890</strong></p>
-
-                  <hr>
-
-                  <h6>Nome</h6>
-                  <p><strong>Lojinha do Régis</strong></p>
-                  <a class="edit-account-name lnkArrow" data-toggle="modal" data-target="#modalEditarNome" href="/accounts/1/edit_name">Editar Nome</a>
-                  <hr>
-
-                  <h6>Plano</h6>
-                  <p><strong>Nome do plano</strong></p>
-
-                  <hr>
-
-                  <p>Usadas <strong>300</strong> de <strong>42</strong> transações</p>
-                  <a href="#" class="lnkArrow">Aumentar limite</a>
-
-                </div>
-              </section>
-
-              <section class="sideBox">
-                <h1 class="titSide titMeiosPagto">Meios de Pagamento</h1>
-                <div class="innerSideBox active-settings">
-                  <img alt="Cartao" src="/assets/img/cartaoCielo.png">
-                  <img alt="Cartao" src="/assets/img/cartaoRedecard.png">
-                  <img alt="Cartao" src="/assets/img/cartaoShopline.png">
-                  <img alt="Cartao" src="/assets/img/cartaoBoleto.png">
-                  <img alt="Cartao" src="/assets/img/cartaoBoletoBradesco.png">
-
-                  <a href="/settings" class="lnkArrow">Ir para meios de pagamentos</a>
-                </div>
-              </section>
-              <section class="sideBox">
-              <h1 class="titSide titMeiosPagto">Dicas</h1>
-              <div class="innerSideBox boxWhite">
-                <div id="myCarousel" class="carousel slide">
-                  <!-- Carousel items -->
-                  <ul class="carousel-inner">
-                    <li class="item active">
-                      <h5>1 Cuidado com os bounces</h5>
-                      <p>Bounces são tipos diversos de problemas que impedem que um contato receba a mensagem enviada. Por exemplo: e-mail inválido, caixa postal cheia, lentidão no servidor do destinatário, etc.</p>
-                    </li>
-                    <li class="item">
-                      <h5>2 Bounces Cuidado</h5>
-                      <p>Bounces são tipos diversos de problemas que impedem que um contato receba a mensagem enviada. Por exemplo: e-mail inválido, caixa postal cheia etc.</p>
-                    </li>
-                    <li class="item">
-                      <h5>3 Bounces Cuidado</h5>
-                      <p>Bounces são tipos diversos de problemas que impedem que um contato receba a mensagem enviada. Por exemplo: e-mail inválido, caixa postal cheia etc.</p>
-                    </li>
-                    <li class="item">
-                      <h5>4 Bounces Cuidado</h5>
-                      <p>Bounces são tipos diversos de problemas que impedem que um contato receba a mensagem enviada. Por exemplo: e-mail inválido, caixa postal cheia etc.</p>
-                    </li>
-                    <li class="item">
-                      <h5>5 Cuidado com os bounces</h5>
-                      <p>Bounces são tipos diversos de problemas que impedem que um contato receba a mensagem enviada. Por exemplo: e-mail inválido, caixa postal cheia, lentidão no servidor do destinatário, etc.</p>
-                    </li>
-                    <li class="item">
-                      <h5>6 Cuidado com os bounces</h5>
-                      <p>Bounces são tipos diversos de problemas que impedem que um contato receba a mensagem enviada. Por exemplo: e-mail inválido, caixa postal cheia, lentidão no servidor do destinatário, etc.</p>
-                    </li>
-                  </ul>
-                  <!-- Carousel nav -->
-                  <div class="carouselNav">
-                    <a class="carousel-control left ico-left-open" href="#myCarousel" data-slide="prev">‹</a>
-                      <b>1</b> de <i>4</i>
-                    <a class="carousel-control right ico-right-open" href="#myCarousel" data-slide="next">›</a>
-                  </div>
-                </div>
-              </div>
-
-            </section>
-            <section class="sideBox">
-              <h1 class="titSide titAjudaSuporte">Ajuda e Suporte <a title="Exemplo de Popover" data-content="Aqui vai um conteúdo maravilhoso para o popover... aceita <b>html</b>" rel="popover">Help!</a></h1>
-              <div class="innerSideBox">
-                <ul class="listWhite">
-                  <li><a href="#">Documentação de implementação</a></li>
-                  <li><a href="#" rel="external">Wiki do Gateway de pagamentos</a></li>
-                  <li><a href="#">Suporte 24h</a></li>
-                </ul>
-              </div>
-            </section>
-
-            <section class="sideBox">
-              <div class="innerSideBox">
-                <p>Um input qualquer <a title="Exemplo de Popover" data-trigger="click"  data-placement="left" data-content="Aqui vai um conteúdo maravilhoso para o popover... aceita <b>html</b>" rel="popover">Help!</a></p>
-              </div>
-            </section>
-          </aside>
       </div>
-      <div class="span16">
-          <table class="tableList">
-              <thead>
-                  <tr>
-                      <th><input type="checkbox"></th>
-                      <th class="txtLeft dataDescending"><a href="#">Mensagem</a></th>
-                      <th><a href="#">Campanha</a></th>
-                      <th><a href="#">Status</a></th>
-                      <th><a href="#">Valor</a></th>
-                      <th colspan="2">Ações</th>
-                  </tr>
-              </thead>
+    </div>
+  </div>
 
-              <tbody>
-                  <tr>
-                      <td><input type="checkbox"></td>
-                      <td class="txtLeft">
-                        <a href="#">There are many variations of passages of available, but the majority</a>
-                        <ul class="actionsTable">
-                          <li><a href="#" class="ico-docs">Duplicar</a></li>
-                          <li><a href="#" class="ico-list">Relatório</a></li>
-                          <li><a href="#" class="ico-trash">Excluir</a></li>
-                        </ul>
-                      </td>
-                      <td>Campanha X</td>
-                      <td>R$ 297,00</td>
-                      <td><a href="#" class="ico-list" data-toggle="modal">Ver Detalhes</a></td>
-                      <td> <a href="#" class="ico-estornar" data-toggle="modal">Estornar</a></td>
-                  </tr>
-                  <tr>
-                      <td><input type="checkbox"></td>
-                      <td class="txtLeft">
-                        <a href="#">There are many variations of passages of available, but the majority</a>
-                        <ul class="actionsTable">
-                          <li><a href="#" class="ico-docs">Duplicar</a></li>
-                          <li><a href="#" class="ico-list">Relatório</a></li>
-                          <li><a href="#" class="ico-trash">Excluir</a></li>
-                        </ul>
-                      </td>
-                      <td>Campanha X</td>
-                      <td>R$ 297,00</td>
-                      <td><a href="#" class="ico-list" data-toggle="modal">Ver Detalhes</a>
-                        <div class="progress progress-striped active">
-                          <div class="bar" style="width: 50%;"><b>1.000</b></div>
-                        </div>
-                      </td>
-                      <td> <a href="#" class="ico-estornar" data-toggle="modal">Estornar</a></td>
-                  </tr>
-                  <tr>
-                      <td><input type="checkbox"></td>
-                      <td class="txtLeft">
-                        <a href="#">There are many variations of passages of available, but the majority</a>
-                        <ul class="actionsTable">
-                          <li><a href="#" class="ico-docs">Duplicar</a></li>
-                          <li><a href="#" class="ico-list">Relatório</a></li>
-                          <li><a href="#" class="ico-trash">Excluir</a></li>
-                        </ul>
-                      </td>
-                      <td>Campanha X</td>
-                      <td>R$ 297,00</td>
-                      <td><a href="#" class="ico-list" data-toggle="modal">Ver Detalhes</a></td>
-                      <td> <a href="#" class="ico-estornar" data-toggle="modal">Estornar</a></td>
-                  </tr>
+  <script type="text/javascript">
 
-              </tbody>
-          </table>
-        </div>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32633790-1']);
+    _gaq.push(['_setDomainName', 'locaweb.com.br']);
+    _gaq.push(['_trackPageview']);
 
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
-    </div><!-- FIM ROW -->
-
-  </div><!-- FIM LIMITE -->
-
-
-
-  <footer id="footer">
-      <div class="footerTop">
-        <div class="limite">
-          <nav>
-            <h6>Atendimento</h6>
-            <ul>
-              <li class="ico-helpDesk"><a href="#">HelpDesk</a></li>
-              <li class="ico-Chat"><a href="#">Chat</a></li>
-              <li class="ico-Telefone"><a href="#">Telefone</a></li>
-            </ul>
-            <a href="#" class="lnkArrow lnkArrowWhite fright">Ver todas as formas de atendimento</a>
-          </nav>
-        </div>
-      </div>
-      <div class="subfooter">
-        <div class="limite">
-          <span class="lastAccess"><strong>Último acesso:</strong> 7/8/2011 22:35:49   <strong>IP:</strong> 201.87.65.217 <a href="#" class="icoInterroga">?</a></span>
-
-          <p class="copyRight fright">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</p>
-        </div>
-      </div>
-    </footer>
-
-</div>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-32633790-1']);
-  _gaq.push(['_setDomainName', 'locaweb.com.br']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+  </script>
 </body>
 </html>
