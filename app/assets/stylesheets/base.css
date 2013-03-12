@@ -533,8 +533,11 @@ tr.active td .boxActions {padding-top: 0;}
 }
 .ie8 .messageInfo .countViews:after {right: 0;}
 .ie9 .messageInfo .countViews:after {margin-top: -10px;}
-.messageInfo p {color: #2a2a2a;}
-.messageInfo p {margin: 0;}
+.messageInfo p {
+  color: #2a2a2a;
+  margin: 0;
+  font-size: 0.9em;
+}
 
 .messageInfo i {
   color: #1a8e00;
@@ -571,6 +574,7 @@ tr.active td .boxActions {padding-top: 0;}
 
 .messageInfo .contentDescription {
   overflow: hidden;
+  padding-left: 4px;
 }
 
 .messageInfo .contentDescription .actionsTable {
