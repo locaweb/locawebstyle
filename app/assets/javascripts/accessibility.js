@@ -64,7 +64,7 @@ $(function(){
 	$('.collapse').find('[tabindex="3"]').attr('tabindex','0');
 
 	//Notificaçao
-	$('.alert, .focusOn').attr('tabindex','-1').focus();
+	$('.flash_alert, .focusOn').attr('tabindex','-1').focus();
 
 	//Ir para o conteudo
 	$('.lnkContent').on('click',function(e){
