@@ -25,53 +25,21 @@ p + .boxCollapse {margin-top:30px;}
 .boxGray .boxCollapse {margin: 0 15px 5px;}
 
 /**
-  boxCollapse menor, sem borda do lado esquerdo, com fundo branco quando ativa
+  boxCollapse quando existir numeração
 **/
 .boxCollapse.simpleCollapse {
-  background-color: #F1F1F1;
   border: 1px solid #d0d0d0;
   margin-bottom: 5px;
 }
 
-.boxCollapse.simpleCollapse:hover,
-.boxCollapse.simpleCollapse.active {background-color:#FFF;}
-
-.boxCollapse.simpleCollapse header {
-  color:#545454;
-  font-size:0.75em;
-  padding:0 10px;
-  border-left:none;
-}
-.boxCollapse.simpleCollapse header h4 {color: #545454; font-size: 1.0em;}
-.boxCollapse.simpleCollapse .collapse p {
-  padding-left: 25px;
-  line-height: 1.45em;
-}
-.boxCollapse.simpleCollapse header span {font-size:1.40em; letter-spacing: -2px;}
-
-.boxGray .boxCollapse {margin:0 15px 5px;}
-
-/**
-  boxCollapse menor, sem borda do lado esquerdo, com fundo branco quando ativa
-**/
-.boxCollapse.simpleCollapse {
-  background-color:#F1F1F1;
-  border:1px solid #d0d0d0;
-  margin-bottom:5px;
-}
-.boxCollapse.simpleCollapse:hover,
-.boxCollapse.simpleCollapse.active {background-color:#FFF;}
-
 .boxCollapse.simpleCollapse header {
   color: #545454;
-  font-size: 0.75em;
   padding: 0 10px;
   border-left: none;
 }
 
 .boxCollapse.simpleCollapse header h4 {
-  color: #545454;
-  font-size: 1.1em;
+  font-size: 1em;
   font-family: Ubuntu, verdana, arial, helvetica, tahoma, sans-serif;
 }
 
@@ -79,14 +47,12 @@ p + .boxCollapse {margin-top:30px;}
   padding-top: 12px;
 }
 
-.boxCollapse.simpleCollapse .collapse p {
-  padding-left: 1.7em;
-  line-height: 1.45em;
-}
+.boxCollapse.simpleCollapse .collapse {padding-left: 2.5em;}
+.boxCollapse.simpleCollapse .collapse p{line-height: 1.45em;}
 
-.boxCollapse.simpleCollapse header span {
-  font-size: 1.40em;
-  letter-spacing: -2px;
+.boxCollapse.simpleCollapse header h4 span {
+  font-size: 1.2em;
+  letter-spacing: -1px;
 }
 
 .boxCollapse header  {
@@ -134,7 +100,6 @@ p + .boxCollapse {margin-top:30px;}
 }
 
 .boxCollapse header p {
-  font: 0.75em verdana, arial, tahoma, sans-serif;
   color: #767676;
   padding: 3px 0 4px;
   margin: 0;

@@ -165,6 +165,9 @@ textarea:focus + .help-placeholder {
   font-family: Ubuntu, verdana, arial, sans-serif;
   font-size: 0.75em;
 }
+p .lnkArrow,
+table .lnkArrow{font-size: 1em;}
+table .lnkArrow{margin: 0;}
 .sidebar .lnkArrow {font-size: 0.75em;}
 
 h3 .lnkArrow {
@@ -1075,21 +1078,21 @@ hr.sep {background-color: #E5E5E5; }
   padding: 15px;
   position: relative;
 }
-.boxArrowTop .active:after,
-.boxArrowTop .active:before{
+.boxArrowTop:after,
+.boxArrowTop:before{
   content: " ";
   position: absolute;
   width: 0;
   height: 0;
 }
-.boxArrowTop .active:after {
+.boxArrowTop:after {
   left: 13px;
   top: -8px;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 8px solid #fff;
 }
-.boxArrowTop .active:before {
+.boxArrowTop:before {
   left: 11px;
   top: -10px;
   border-left: 10px solid transparent;
