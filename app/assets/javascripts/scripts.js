@@ -323,6 +323,12 @@ $(document).ready(function() {
     $("[data-target="+targetAnchor+"]").parent().addClass("active")
   }
 
+  if($("a").attr("href") == "#"){
+    $(this).on("click", function(e){
+      e.preventDefault();
+    })
+  }
+
   // Se houver uma classe ERROR dentro de um collapse, ele já aparece aberto.
   $('.error').parents('.collapse').collapse('show');
 
