@@ -205,3 +205,9 @@ tr.active .actionsTable {display: none;}
   border-bottom-width: 5px;
   margin: 10px 0;
 }
+/***
+**** Collapse dentro de obsGray
+***/
+.obsGray .boxCollapse{background: #f6f6f6;}
+.obsGray .boxCollapse:hover,
+.obsGray .boxCollapse.active{background: #fff;}
