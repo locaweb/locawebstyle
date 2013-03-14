@@ -485,9 +485,17 @@ tr.active td .boxActions {padding-top: 0;}
 .messageInfo .countViews + div:before,
 .messageInfo.overflowVisible > div:before {display: none;}
 
+.messageInfo.overflowVisible > div.headerInfo{
+  display: table;
+  margin: 0 10px; 
+  padding: 0;
+  width: 100%
+}
+
 .messageInfo.overflowVisible > div {
   display: table-cell;
   border-left: 1px solid #e5e5e5;
+  padding: 0 10px;
 }
 .messageInfo.overflowVisible > div:first-child {border: none;}
 
@@ -496,8 +504,17 @@ tr.active td .boxActions {padding-top: 0;}
   border-top: 1px solid #e5e5e5;
   margin: 20px 0 -14px;
 }
+.messageInfo.overflowVisible > div.messageContent,
+.messageInfo > div.messageContent{
+  display: block;
+  border-top: 1px solid #e5e5e5;
+  border-left: none;
+  margin: 0 10px;
+  padding: 0;
+}
 
-.messageInfo h5, .messageInfo h5 a {
+.messageInfo .messageContent .actionsTable{margin: 0; border: none;}
+.forceClass .messageInfo h5, .forceClass .messageInfo h5 a {
   color: #767676;
   font: normal 12px verdana, sans-serif;
 }
@@ -507,11 +524,16 @@ tr.active td .boxActions {padding-top: 0;}
 .messageInfo:after {content: " "; display: block; clear: both;}
 .messageInfo .countViews a,
 .messageInfo .countViews a:hover {color: #2a2a2a;}
-
+.messageInfo .headerInfo > [class*="span"]{
+  display: table-cell;
+  float: none;
+  height: inherit;
+  vertical-align: middle;
+}
 .messageInfo [class*="span"] {margin-left: 0;}
 .messageInfo .headerInfo span.label-info,
 .messageInfo .headerInfo span.badge-info {color: #fff;}
-
+.messageInfo .headerInfo span.label{padding: 2px 4px; top: 8px;}
 .messageInfo .countViews {
   border-radius: 5px 0 0 5px;
   text-align: center;
@@ -554,18 +576,18 @@ tr.active td .boxActions {padding-top: 0;}
   overflow: hidden;
 }
 
-.messageInfo .headerInfo span {
-  display: inline;
-  color: #767676;
+.messageInfo .headerInfo > span {
   border-left: 1px solid #e5e5e5;
-  padding: 0 5px 0 8px;
+  color: #767676;
+  padding: 5px 10px;
+  float: left;
   position: relative;
-  top: 6px;
+  margin: 0 5px;
 }
 .messageInfo .headerInfo strong {color: #545454;}
 
 .messageInfo .headerInfo span:first-child {border-left: none;}
-.messageInfo .headerInfo .translation_missing {top: 0;}
+.messageInfo .headerInfo .translation_missing {top: 0; padding: 0;}
 .messageInfo .headerInfo .fRight {
   display: inline-block;
   border-left: 1px solid #e5e5e5;
