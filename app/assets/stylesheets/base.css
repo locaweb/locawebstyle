@@ -168,7 +168,7 @@ textarea:focus + .help-placeholder {
 p .lnkArrow,
 table .lnkArrow{font-size: 1em;}
 table .lnkArrow{margin: 0;}
-.sidebar .lnkArrow {font-size: 0.75em;}
+
 
 h3 .lnkArrow {
   border-left: 1px solid #CCC;
@@ -721,7 +721,12 @@ tr.active td .boxActions {padding-top: 0;}
   border: 1px solid #ddd;
   border-radius: 3px;
 }
-
+.progressInfo{color: #2a2a2a; font-weight: bold;}
+.progressInfo .progress{
+  float: left;
+  margin-right: 5px;
+  width: 80%;
+}
 td .progress {max-width: 70px;}
 
 .progress .bar {
