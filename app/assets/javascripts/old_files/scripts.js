@@ -60,6 +60,7 @@ Locastyle = (function() {
 
     //$('.ui-datepicker-trigger', obj).addClass('icon-calendar').html('');
 
+    // TODO: Verificar
     // init of change.collapse.data-api
     $('[data-toggle=show]', obj).filter(':checked').change();
 
@@ -325,6 +326,7 @@ $(document).ready(function() {
   // Scripts iniciais que modificam o DOM ou geram outras tarefas
   window.locastyle.init($(document));
 
+  // TODO: Verificar
   //Exibe/esconde elementos
   var dataClass = $('.toggleChild').data('class')
   $('.toggleChild').addClass(dataClass);
@@ -336,4 +338,3 @@ $(document).ready(function() {
   })
 
 });
-
