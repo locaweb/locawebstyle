@@ -17,6 +17,7 @@ Locastyle = (function() {
       this.autoOpenModal(dom_scope);
       this.modalSliderSetupBind(dom_scope);
       this.pathWayStepCounter(dom_scope);
+      this.setListDetailSeparator();
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -167,6 +168,12 @@ Locastyle = (function() {
       $(".pathWay").each(function() {
         var steps = $(this).find("li").size();
         $(this).addClass('steps' + steps);
+      });
+    },
+
+    setListDetailSeparator: function() {
+      $(".listDetail dd").each(function(i, el){
+        $(el).after("<hr class='sep'/>");
       });
     }
 

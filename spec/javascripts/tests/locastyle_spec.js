@@ -239,4 +239,13 @@ describe("Locastyle", function() {
     });
   });
 
+  describe("List detail", function () {
+    it("Should add a hr.sep element after each dd tag", function () {
+      var dom_scope = $("#locastyle_fixture");
+      var locastyle = new Locastyle();
+      locastyle.base.init(dom_scope);
+      expect($("#list_detail_test .listDetail").find("hr.sep").size()).toEqual(2);
+    });
+  });
+
 });

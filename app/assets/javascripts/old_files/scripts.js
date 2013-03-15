@@ -40,7 +40,7 @@ Locastyle = (function() {
     // $('.pathWay').each(function(){ $(this).addClass('steps' + howMuchSteps) })
 
     // Insere quebra de linha depois das DDs em ListDetails
-     $('.listDetail dd', obj).after('<hr class="sep">');
+    //$('.listDetail dd', obj).after('<hr class="sep">');
 
     // Datepicker - JQuery UI
     //$('.datepicker', obj).datepicker({
