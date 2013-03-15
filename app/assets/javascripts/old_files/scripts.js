@@ -249,7 +249,7 @@ $(document).ready(function() {
   //$('.btn.disabled').click(function(event){event.preventDefault();})
 
   // Faz o popover ser habilitado no HOVER e não no Click.
-  $('[rel="popover"]').popover({trigger: 'hover'})
+  //$('[rel="popover"]').popover({trigger: 'hover'})
 
 
   // Insere classe ACTIVE para parents de Collapse
