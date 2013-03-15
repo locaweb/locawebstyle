@@ -451,19 +451,19 @@ tr.active td .boxActions {padding-top: 0;}
   font-size: 12px;
   font-weight: normal;
   font-family: verdana, arial, sans-serif;
-  color: #2a2a2a;
+  color: #767676;
   min-height: 33px;
   overflow: hidden;
   display: table;
   margin-bottom: 10px;
+  position: relative;
   width: 100%;
 }
 .messageInfo:hover{background: #f0f0f0;}
-.messageInfo:hover .countViews{box-shadow: inset 0 0 0 2px #f0f0f0;}
-.messageInfo:hover .countViews:after{background: url(img/arrowSilver.png) no-repeat right center;}
-.messageInfo > div:last-child {border: none;}
+.messageInfo:hover .countViews[class*="span"]{box-shadow: inset 0 0 0 2px #f0f0f0;}
+.messageInfo:hover .countViews[class*="span"]:after{background: url(img/arrowSilver.png) no-repeat right center;}
 
-.messageInfo > div {
+.messageInfo > div[class*="span"] {
   padding: 14px 10px;
   height: inherit;
   position: relative;
@@ -492,7 +492,7 @@ tr.active td .boxActions {padding-top: 0;}
   width: 100%
 }
 
-.messageInfo.overflowVisible > div {
+.messageInfo.overflowVisible > div[class*="span"] {
   display: table-cell;
   border-left: 1px solid #e5e5e5;
   padding: 0 10px;
@@ -534,7 +534,7 @@ tr.active td .boxActions {padding-top: 0;}
 .messageInfo .headerInfo span.label-info,
 .messageInfo .headerInfo span.badge-info {color: #fff;}
 .messageInfo .headerInfo span.label{padding: 2px 4px; top: 8px;}
-.messageInfo .countViews {
+.messageInfo .countViews[class*="span"] {
   border-radius: 5px 0 0 5px;
   text-align: center;
   position: relative;
@@ -575,18 +575,24 @@ tr.active td .boxActions {padding-top: 0;}
   margin: -14px 0 10px;
   overflow: hidden;
 }
-
-.messageInfo .headerInfo > span {
-  border-left: 1px solid #e5e5e5;
-  color: #767676;
+.messageInfo .headerInfo > span{
   padding: 5px 10px;
   float: left;
+}
+.messageInfo .headerInfo > span,
+.messageInfo .headerInfo > div[class*="span"] {
+  border-left: 1px solid #e5e5e5;
+  color: #767676;
   position: relative;
   margin: 0 5px;
 }
+.messageInfo .headerInfo > div[class*="span"]{
+  padding: 10px;
+}
 .messageInfo .headerInfo strong {color: #545454;}
 
-.messageInfo .headerInfo span:first-child {border-left: none;}
+.messageInfo .headerInfo span:first-child,
+.messageInfo .headerInfo > div[class*="span"]:first-child {border-left: none;}
 .messageInfo .headerInfo .translation_missing {top: 0; padding: 0;}
 .messageInfo .headerInfo .fRight {
   display: inline-block;
@@ -1125,4 +1131,12 @@ hr.sep {background-color: #E5E5E5; }
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid #dfdfdf;
+}
+.boxWhite{
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 10px;
 }

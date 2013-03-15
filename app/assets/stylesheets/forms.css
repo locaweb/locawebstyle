@@ -274,7 +274,7 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 
 .tab-pane .simpleFilter {padding-top: 5px;}
 .simpleFilter form {margin: 0;}
-.simpleFilter select {margin-bottom: 3px; width: 100px;}
+.simpleFilter select {width: 100px;}
 .simpleFilter.sideBySide .control-group {margin-bottom: 0; border-left: 1px dotted #cfcfcf; padding: 0 0 0 15px; margin-left: 15px;}
 .simpleFilter .control-group:last-child {border-left: 0;}
 .simpleFilter.sideBySide .control-group.fright {float: right;}
@@ -284,7 +284,9 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 .simpleFilter.sideBySide p.fleft {margin-bottom: 0; margin-top: 6px;}
 
 .simpleFilter .searchInput {
-  background: url(img/lupaInput.png) no-repeat 8px center;
+  background-image: url(img/lupaInput.png);
+  background-position: 8px center;
+  background-repeat: no-repeat;
   max-width: 185px;
   padding-left: 35px;
 }
