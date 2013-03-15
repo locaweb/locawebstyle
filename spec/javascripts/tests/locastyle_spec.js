@@ -248,4 +248,16 @@ describe("Locastyle", function() {
     });
   });
 
+  describe("Advanced search:", function(){
+    describe("When advanced search has at least a input with value", function(){
+      it("Should add the class .in to .advancedSearch", function(){
+        var dom_scope = $("#locastyle_fixture");
+        $("#advanced_search_test #input1").val("has value");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        expect($("#advanced_search_test")).toHaveClass("in");
+      });
+    });
+  });
+
 });

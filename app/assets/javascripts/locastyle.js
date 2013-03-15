@@ -18,6 +18,7 @@ Locastyle = (function() {
       this.modalSliderSetupBind(dom_scope);
       this.pathWayStepCounter(dom_scope);
       this.setListDetailSeparator();
+      this.advancedSearchValueHandler(dom_scope);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -174,6 +175,14 @@ Locastyle = (function() {
     setListDetailSeparator: function() {
       $(".listDetail dd").each(function(i, el){
         $(el).after("<hr class='sep'/>");
+      });
+    },
+
+    advancedSearchValueHandler: function(dom_scope){
+      $(".inputAdvancedSearchField", dom_scope).each(function(i, el){
+        if($(el).val() !== ""){
+          $(this).parents().addClass("in");
+        }
       });
     }
 
