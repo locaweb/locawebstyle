@@ -133,15 +133,15 @@ Locastyle = (function() {
   //   });
   // };
 
-  Locastyle.prototype.changeDataValue = function(target){
-    if($(target).hasClass('btn')){
-      var inputs = $(target).parents(".toggleChild").find('[data-value]')
-      inputs.each(function(){
-        $(this).val($(this).data('value'));
-      });
+  // Locastyle.prototype.changeDataValue = function(target){
+  //   if($(target).hasClass('btn')){
+  //     var inputs = $(target).parents(".toggleChild").find('[data-value]')
+  //     inputs.each(function(){
+  //       $(this).val($(this).data('value'));
+  //     });
 
-    }
-  }
+  //   }
+  // }
 
   Locastyle.prototype.inputDataValue = function(element){
     $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]', element), function(i, field){

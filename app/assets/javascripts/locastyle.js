@@ -20,6 +20,7 @@ Locastyle = (function() {
       this.setListDetailSeparator();
       this.advancedSearchValueHandler(dom_scope);
       this.toggleChild(dom_scope);
+      this.toggleChildValue(dom_scope);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -179,7 +180,7 @@ Locastyle = (function() {
       });
     },
 
-    advancedSearchValueHandler: function(dom_scope){
+    advancedSearchValueHandler: function(dom_scope) {
       $(".inputAdvancedSearchField", dom_scope).each(function(i, el){
         if($(el).val() !== ""){
           $(this).parents().addClass("in");
@@ -193,6 +194,15 @@ Locastyle = (function() {
         $(this).parents(".toggleChild").find(".itemToToggle").toggleClass("dNone");
         $(this).parents(".toggleChild").toggleClass($(this).parents(".toggleChild").data("class"));
         $(this).trigger($.Event('lnkToggleFinish'));
+      });
+    },
+
+    toggleChildValue: function(dom_scope) {
+      $(".btn.lnkToggle").on("click", function(e){
+        var inputs = $(this).parents(".toggleChild").find('[data-value]')
+        inputs.each(function(){
+          $(this).val($(this).data('value'));
+        });
       });
     }
   }

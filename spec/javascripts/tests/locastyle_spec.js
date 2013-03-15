@@ -287,6 +287,17 @@ describe("Locastyle", function() {
         expect("lnkToggleFinish").toHaveBeenTriggeredOn($(".lnkToggle"));
       });
     });
+
+    describe("When click on .btn.lnkToggle", function(){
+      it("Should replace related inputs value with this data-value", function(){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        $("#toggleClassTest #input_with_value").val("fake typed value");
+        $("#toggleClassTest .btn.lnkToggle").trigger("click");
+        expect($("#toggleClassTest #input_with_value").val()).toEqual("here is a value");
+      });
+    });
   });
 
 });
