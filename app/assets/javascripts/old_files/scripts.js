@@ -273,6 +273,7 @@ $(document).ready(function() {
 
   // CHAMADAS: Faz o click acontecer no chamadas
   // $('.chamadasBox div').find('h3 a').clone().addClass('lnkCoverAll').appendTo($(this));
+  // Transforma o box todo do chamadas em um link.
   $('.chamadasBox div').each(function(){
     var title = $(this).find('p').text()
     $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll').attr('title',title).attr('aria-label',title) );
