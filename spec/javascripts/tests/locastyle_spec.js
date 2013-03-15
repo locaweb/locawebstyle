@@ -260,4 +260,33 @@ describe("Locastyle", function() {
     });
   });
 
+  describe("Toggle child: ", function(){
+    describe("When click on .lnkToggle", function(){
+      it("Should toggle .dNone in .itemToToggle", function(){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        $(".lnkToggle").trigger("click");
+        expect($("#toggleClassTest .itemToToggle")).toHaveClass("dNone");
+      });
+
+      it("Should toggle data-class on self", function(){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        $(".lnkToggle").trigger("click");
+        expect($(".toggleChild#toggleClassTest")).toHaveClass("myClassToToggle");
+      });
+
+      it("Should call lnkToggleFinish event", function(){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        spyOnEvent($('.lnkToggle'), 'lnkToggleFinish');
+        $(".lnkToggle").trigger("click");
+        expect("lnkToggleFinish").toHaveBeenTriggeredOn($(".lnkToggle"));
+      });
+    });
+  });
+
 });

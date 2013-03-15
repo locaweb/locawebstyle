@@ -19,6 +19,7 @@ Locastyle = (function() {
       this.pathWayStepCounter(dom_scope);
       this.setListDetailSeparator();
       this.advancedSearchValueHandler(dom_scope);
+      this.toggleChild(dom_scope);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -184,7 +185,15 @@ Locastyle = (function() {
           $(this).parents().addClass("in");
         }
       });
-    }
+    },
 
+    toggleChild: function(dom_scope){
+      $(".lnkToggle").on("click", function(e){
+        e.preventDefault();
+        $(this).parents(".toggleChild").find(".itemToToggle").toggleClass("dNone");
+        $(this).parents(".toggleChild").toggleClass($(this).parents(".toggleChild").data("class"));
+        $(this).trigger($.Event('lnkToggleFinish'));
+      });
+    }
   }
 });

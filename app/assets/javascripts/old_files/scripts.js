@@ -122,16 +122,16 @@ Locastyle = (function() {
   //   }
   // };
 
-  Locastyle.prototype.linkToggle = function(element){
-    $('.lnkToggle', element).on('click',function(e){
-      e.preventDefault();
-      var itemClass = $('.toggleChild').attr('data-class');
-      $(this).parents('.toggleChild').find('.itemToToggle').toggleClass("dNone");
-      $(this).parents('.toggleChild').toggleClass(itemClass);
-      window.locastyle.changeDataValue(this);
-      $(this).trigger($.Event('lnkToggleFinish'));
-    });
-  };
+  // Locastyle.prototype.linkToggle = function(element){
+  //   $('.lnkToggle', element).on('click',function(e){
+  //     e.preventDefault();
+  //     var itemClass = $('.toggleChild').attr('data-class');
+  //     $(this).parents('.toggleChild').find('.itemToToggle').toggleClass("dNone");
+  //     $(this).parents('.toggleChild').toggleClass(itemClass);
+  //     window.locastyle.changeDataValue(this);
+  //     $(this).trigger($.Event('lnkToggleFinish'));
+  //   });
+  // };
 
   Locastyle.prototype.changeDataValue = function(target){
     if($(target).hasClass('btn')){
