@@ -203,14 +203,14 @@ describe("Locastyle", function() {
 
   describe("Modal with Slider", function () {
     describe("When the modal open", function () {
-      it("Should hide the prev button", function () {
+      it("should hide the prev button", function () {
         var dom_scope = $("#modalSlider");
         var locastyle = new Locastyle();
         locastyle.base.init(dom_scope);
         $(".btn[data-target='#modalSlider']").trigger("click");
         expect($("[data-slide='prev']", dom_scope)).toHaveClass("dNone");
       });
-      it("Should hide the save button", function () {
+      it("should hide the save button", function () {
         var dom_scope = $("#modalSlider");
         var locastyle = new Locastyle();
         locastyle.base.init(dom_scope);
@@ -220,7 +220,7 @@ describe("Locastyle", function() {
     });
 
     describe("When the first slide don't have ACTIVE", function () {
-      it("Should show the prev button", function () {
+      it("should show the prev button", function () {
         var dom_scope = $("#modalSlider");
         var locastyle = new Locastyle();
         locastyle.base.init(dom_scope);
@@ -231,7 +231,7 @@ describe("Locastyle", function() {
   });
 
   describe("Pathway step counter", function () {
-    it("Should add a css class step(number) related to the number of steps", function () {
+    it("should add a css class step(number) related to the number of steps", function () {
       var dom_scope = $("#locastyle_fixture");
       var locastyle = new Locastyle();
       locastyle.base.init(dom_scope);
@@ -240,7 +240,7 @@ describe("Locastyle", function() {
   });
 
   describe("List detail", function () {
-    it("Should add a hr.sep element after each dd tag", function () {
+    it("should add a hr.sep element after each dd tag", function () {
       var dom_scope = $("#locastyle_fixture");
       var locastyle = new Locastyle();
       locastyle.base.init(dom_scope);
@@ -250,7 +250,7 @@ describe("Locastyle", function() {
 
   describe("Advanced search:", function(){
     describe("When advanced search has at least a input with value", function(){
-      it("Should add the class .in to .advancedSearch", function(){
+      it("should add the class .in to .advancedSearch", function(){
         var dom_scope = $("#locastyle_fixture");
         $("#advanced_search_test #input1").val("has value");
         var locastyle = new Locastyle();
@@ -262,7 +262,7 @@ describe("Locastyle", function() {
 
   describe("Toggle child: ", function(){
     describe("When click on .lnkToggle", function(){
-      it("Should toggle .dNone in .itemToToggle", function(){
+      it("should toggle .dNone in .itemToToggle", function(){
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();
         locastyle.base.init(dom_scope);
@@ -270,7 +270,7 @@ describe("Locastyle", function() {
         expect($("#toggleClassTest .itemToToggle")).toHaveClass("dNone");
       });
 
-      it("Should toggle data-class on self", function(){
+      it("should toggle data-class on self", function(){
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();
         locastyle.base.init(dom_scope);
@@ -278,7 +278,7 @@ describe("Locastyle", function() {
         expect($(".toggleChild#toggleClassTest")).toHaveClass("myClassToToggle");
       });
 
-      it("Should call lnkToggleFinish event", function(){
+      it("should call lnkToggleFinish event", function(){
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();
         locastyle.base.init(dom_scope);
@@ -289,7 +289,7 @@ describe("Locastyle", function() {
     });
 
     describe("When click on .btn.lnkToggle", function(){
-      it("Should replace related inputs value with this data-value", function(){
+      it("should replace related inputs value with this data-value", function(){
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();
         locastyle.base.init(dom_scope);
