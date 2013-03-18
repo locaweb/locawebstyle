@@ -17,6 +17,7 @@ html, body {
   background: -o-linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(252,252,252,1) 3%,rgba(255,255,255,1) 7%);
   background: -ms-linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(252,252,252,1) 3%,rgba(255,255,255,1) 7%);
   background: linear-gradient(to bottom,  rgba(232,232,232,1) 0%,rgba(252,252,252,1) 3%,rgba(255,255,255,1) 7%);
+  z-index: 1;
 }
 
 #main > .limit {padding-bottom: 160px;}

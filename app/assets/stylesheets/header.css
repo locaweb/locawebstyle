@@ -35,6 +35,8 @@
   background: #FFF;
   border-top: 1px solid #d7d7d7;
   border-bottom: 4px solid #777;
+  position: relative;
+  z-index: 2;
 }
 
 #menuPrincipal > ul {
@@ -117,12 +119,12 @@
 #menuPrincipal .parent > a:hover,
 #menuPrincipal .parent:hover > a,
 #menuPrincipal ul li.parent.focus > a {
-  color:#666;
-  font:14px 'Ubuntu', verdana, arial, tahoma, sans-serif;
-  text-transform:uppercase;
-  border-radius:3px 3px 0 0;
-  border:1px solid #c7c7c7;
-  border-bottom:1px solid #FFF;
+  color: #666;
+  font: 14px 'Ubuntu', verdana, arial, tahoma, sans-serif;
+  text-transform: uppercase;
+  border-radius: 3px 3px 0 0;
+  border: 1px solid #c7c7c7;
+  border-bottom: 1px solid #FFF;
 }
 #menuPrincipal .parent:after {
   content: " ";
@@ -133,7 +135,7 @@
   position: relative;
   z-index: 2;
 }
-#menuPrincipal .parent {outline:none;}
+#menuPrincipal .parent {outline: none;}
 #menuPrincipal .parent.focus ul{
   opacity: 1; visibility: visible;
 }
