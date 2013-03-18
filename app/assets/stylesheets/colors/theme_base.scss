@@ -1,20 +1,17 @@
-
-#{$theme_name} .progress .bar,
-#{$theme_name} .pathWay li.active,
-#{$theme_name} .pathWay li:hover {
-  background-color: $pallet_1;
-}
-
-#{$theme_name} #menuPrincipal,
-#{$theme_name} .tabs li a:hover,
-#{$theme_name} .tabs li.active a,
-#{$theme_name} #menuPrincipal ul li ul {
-  border-bottom-color: $pallet_1;
-}
-
-#{$theme_name} .tabs li.active a,
-#{$theme_name} .tabs li a:hover {
-  border-top-color: $pallet_1;
+#{$theme_name} a:hover,
+#{$theme_name} .lnkArrow:hover,
+#{$theme_name} .lnkSeta:hover,
+#{$theme_name} [class^="ico-"]:hover,
+#{$theme_name} [class*=" ico-"]:hover,
+#{$theme_name} .collapseGroup summary span,
+#{$theme_name} .boxCollapse h4 span,
+#{$theme_name} #menuPrincipal > ul > li > a:hover,
+#{$theme_name} #menuPrincipal .parent > a:hover,
+#{$theme_name} .carousel-control,
+#{$theme_name} .serviceName a,
+#{$theme_name} .innerSideBox [class^="ico-"],
+#{$theme_name} .innerSideBox [class*="ico-"] {
+  color: $pallet_1;
 }
 
 #{$theme_name} a,
@@ -47,29 +44,91 @@
   color: $pallet_2;
 }
 
-#{$theme_name} a:hover,
-#{$theme_name} .lnkArrow:hover,
-#{$theme_name} .lnkSeta:hover,
-#{$theme_name} [class^="ico-"]:hover,
-#{$theme_name} [class*=" ico-"]:hover,
-#{$theme_name} .collapseGroup summary span,
-#{$theme_name} .boxCollapse h4 span,
-#{$theme_name} #menuPrincipal > ul > li > a:hover,
-#{$theme_name} #menuPrincipal .parent > a:hover,
-#{$theme_name} .carousel-control,
-#{$theme_name} .serviceName a {
-  color: $pallet_1;
-}
-
-#{$theme_name} .btn-group.open .btn-primary.dropdown-toggle {background-color: $pallet_1;}
 
 #{$theme_name} .boxCollapse header h4,
 #{$theme_name} .pathWay li.active a,
 #{$theme_name} .pathWay li:hover a,
-#{$theme_name} .sidebar h1 {
+#{$theme_name} .sidebar h1,
+#{$theme_name} .chooseBox li:hover p,
+#{$theme_name} .chooseBox li.active p,
+#{$theme_name} .shortcutBox div:hover p a,
+#{$theme_name} .shortcutBox div:hover p,
+#{$theme_name} .shortcutBox div.active p {
   color: $pallet_3
 }
 
+#{$theme_name} .chooseBox li:hover h4,
+#{$theme_name} .chooseBox li.active h4,
+#{$theme_name} .content h2,
+#{$theme_name} .content h3,
+#{$theme_name} .content h4,
+#{$theme_name} .content h5,
+#{$theme_name} .content h6,
+#{$theme_name} .shortcutBox h3,
+#{$theme_name} .shortcutBox h3 a,
+#{$theme_name} .chooseBox li h4[class^="ico-"]:before,
+#{$theme_name} .chooseBox li h4,
+#{$theme_name} .chooseBox li:hover h4,
+#{$theme_name} .chooseBox li.active h4{
+  color: $pallet_4;
+}
+
+#{$theme_name} .progress .bar,
+#{$theme_name} .pathWay li.active,
+#{$theme_name} .pathWay li:hover {
+  background-color: $pallet_1;
+}
+
+#{$theme_name} #menuPrincipal,
+#{$theme_name} .tabs li a:hover,
+#{$theme_name} .tabs li.active a,
+#{$theme_name} #menuPrincipal ul li ul {
+  border-bottom-color: $pallet_1;
+}
+
+#{$theme_name} .tabs li.active a,
+#{$theme_name} .tabs li a:hover {
+  border-top-color: $pallet_1;
+}
+
+#{$theme_name} .btn-group.open .btn-primary.dropdown-toggle {background-color: $pallet_1;}
+
+#{$theme_name} .boxCollapse header {
+  border-left-color: $pallet_1;
+}
+
+#{$theme_name} #menuPrincipal > ul > li.selected > a {
+  background-color: $pallet_1;
+}
+
+#{$theme_name} .boxSidebarTitle{background-color: $pallet_3;}
+
+#{$theme_name} .btn-primary{ border: 1px solid $pallet_2;}
+
+#{$theme_name} .pathWay li.active a,
+#{$theme_name} .pathWay li:hover a {
+  background-color: $pallet_5;
+}
+
+#{$theme_name} .chooseBox .active:after { border-top: 13px solid $pallet_5;}
+#{$theme_name} .chooseBox .active:before {border-top: 15px solid $pallet_6;}
+#{$theme_name} .chooseBox li:hover,
+#{$theme_name} .chooseBox li.active {
+  border:1px solid $pallet_6;
+}
+
+#{$theme_name} .btn-primary,
+#{$theme_name} .dropdown-menu li > a:hover,
+#{$theme_name} .dropdown-menu li > a:focus,
+#{$theme_name} .dropdown-submenu:hover > a  {
+  background-color: $pallet_2;
+  background-image: -moz-linear-gradient(top,  $pallet_1 0%, $pallet_2 100%);
+  background-image: -webkit-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
+  background-image: -o-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
+  background-image: -ms-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
+  background-image: linear-gradient(to bottom,  $pallet_1 0%,$pallet_2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_1', endColorstr='$pallet_2',GradientType=0 );
+}
 
 #{$theme_name} .shortcutBox div.active,
 #{$theme_name} .shortcutBox div:hover,
@@ -86,41 +145,6 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$pallet_5',GradientType=0 );
 }
 
-#{$theme_name} .innerSideBox [class^="ico-"], .innerSideBox [class*="ico-"] {color: $pallet_1;}
-
-#{$theme_name} .boxCollapse header {
-  border-left-color: $pallet_1;
-}
-#{$theme_name} .shortcutBox div:hover p a,
-#{$theme_name} .shortcutBox div:hover p,
-#{$theme_name} .shortcutBox div.active p {color: $pallet_3;}
-
-#{$theme_name} #menuPrincipal > ul > li.selected > a {
-  background-color: $pallet_1;
-}
-
-#{$theme_name} .boxSidebarTitle{background-color: $pallet_3;}
-
-#{$theme_name} .btn-primary,
-#{$theme_name} .dropdown-menu li > a:hover,
-#{$theme_name} .dropdown-menu li > a:focus,
-#{$theme_name} .dropdown-submenu:hover > a  {
-  background-color: $pallet_2;
-  background-image: -moz-linear-gradient(top,  $pallet_1 0%, $pallet_2 100%);
-  background-image: -webkit-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
-  background-image: -o-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
-  background-image: -ms-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
-  background-image: linear-gradient(to bottom,  $pallet_1 0%,$pallet_2 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_1', endColorstr='$pallet_2',GradientType=0 );
-
-}
-#{$theme_name} .btn-primary{ border: 1px solid $pallet_2;}
-
-
-#{$theme_name} .pathWay li.active a,
-#{$theme_name} .pathWay li:hover a {
-  background-color: $pallet_5;
-}
 #{$theme_name}  .gradient{
   background-color: $pallet_5;
   background-image: -moz-linear-gradient(top,  $pallet_7 0%, $pallet_5 100%);
@@ -130,36 +154,6 @@
   background-image: linear-gradient(to bottom,  $pallet_7 0%,$pallet_5 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_7', endColorstr='$pallet_5',GradientType=0 );
 }
-
-#{$theme_name} .chooseBox li:hover h4,
-#{$theme_name} .chooseBox li.active h4,
-#{$theme_name} .content h2,
-#{$theme_name} .content h3,
-#{$theme_name} .content h4,
-#{$theme_name} .content h5,
-#{$theme_name} .content h6{
-color: $pallet_4;}
-
-#{$theme_name} .chooseBox .active:after { border-top: 13px solid $pallet_5;}
-
-#{$theme_name} .chooseBox .active:before {border-top: 15px solid $pallet_6;}
-
-#{$theme_name} .chooseBox li:hover,
-#{$theme_name} .chooseBox li.active {
-  border:1px solid $pallet_6;
-}
-
-#{$theme_name} .chooseBox li:hover p,
-#{$theme_name} .chooseBox li.active p{
-  color: $pallet_3;
-}
-
-#{$theme_name} .shortcutBox h3,
-#{$theme_name} .shortcutBox h3 a,
-#{$theme_name} .chooseBox li h4[class^="ico-"]:before,
-#{$theme_name} .chooseBox li h4,
-#{$theme_name} .chooseBox li:hover h4,
-#{$theme_name} .chooseBox li.active h4{color: $pallet_4;}
 
 #{$theme_name} .pagination .current,
 #{$theme_name} .pagination .active a {

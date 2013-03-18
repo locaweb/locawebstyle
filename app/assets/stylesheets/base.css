@@ -581,11 +581,12 @@ tr.active td .boxActions {padding-top: 0;}
 }
 .messageInfo .headerInfo > span,
 .messageInfo .headerInfo > div[class*="span"] {
-  border-left: 1px solid #e5e5e5;
   color: #767676;
   position: relative;
   margin: 0 5px;
 }
+.messageInfo .headerInfo > div[class*="span"]{border-left: 1px solid #e5e5e5;}
+
 .messageInfo .headerInfo > div[class*="span"]{
   padding: 10px;
 }
