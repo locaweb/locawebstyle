@@ -487,7 +487,7 @@ tr.active td .boxActions {padding-top: 0;}
 
 .messageInfo.overflowVisible > div.headerInfo{
   display: table;
-  margin: 0 10px; 
+  margin: 0 10px;
   padding: 0;
   width: 100%
 }
@@ -924,7 +924,6 @@ td .progress {max-width: 70px;}
 
 a[class*="ico-"] {font-size: 12px;}
 
-.forceClass .warning {color: #b54646!important;}
 .forceClass .control-group.warning input[type="text"],
 .forceClass .control-group.warning input[type="password"],
 .forceClass .control-group.warning input[type="number"],
