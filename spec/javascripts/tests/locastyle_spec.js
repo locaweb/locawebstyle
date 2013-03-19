@@ -278,6 +278,15 @@ describe("Locastyle", function() {
         expect($(".toggleChild#toggleClassTest")).toHaveClass("myClassToToggle");
       });
 
+      it("should call toggleChildValue on self", function() {
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        spyOn(locastyle.base, 'toggleChildValue');
+        $(".lnkToggle").trigger("click");
+        expect(locastyle.base.toggleChildValue).toHaveBeenCalled();
+      });
+
       it("should call lnkToggleFinish event", function(){
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();

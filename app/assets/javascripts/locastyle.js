@@ -189,10 +189,12 @@ Locastyle = (function() {
     },
 
     toggleChild: function(dom_scope){
+      self = this;
       $(".lnkToggle").on("click", function(e){
         e.preventDefault();
         $(this).parents(".toggleChild").find(".itemToToggle").toggleClass("dNone");
         $(this).parents(".toggleChild").toggleClass($(this).parents(".toggleChild").data("class"));
+        self.toggleChildValue(dom_scope);
         $(this).trigger($.Event('lnkToggleFinish'));
       });
     },
