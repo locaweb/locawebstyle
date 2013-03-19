@@ -309,4 +309,13 @@ describe("Locastyle", function() {
     });
   });
 
+  describe("Data-value on fields: ", function(){
+    it("should add a data-value attribute with self value", function(){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        expect($("#data_value_fields input").attr("data-value")).toEqual($("#data_value_fields input").val());
+    });
+  })
+
 });

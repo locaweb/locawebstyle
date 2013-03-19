@@ -143,12 +143,12 @@ Locastyle = (function() {
   //   }
   // }
 
-  Locastyle.prototype.inputDataValue = function(element){
-    $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]', element), function(i, field){
-      var value = $(this).attr("value");
-      $(this).attr("data-value", value);
-    });
-  }
+  // Locastyle.prototype.inputDataValue = function(element){
+  //   $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]', element), function(i, field){
+  //     var value = $(this).attr("value");
+  //     $(this).attr("data-value", value);
+  //   });
+  // }
 
   return Locastyle;
 })();

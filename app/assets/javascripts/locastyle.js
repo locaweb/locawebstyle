@@ -21,6 +21,7 @@ Locastyle = (function() {
       this.advancedSearchValueHandler(dom_scope);
       this.toggleChild(dom_scope);
       this.toggleChildValue(dom_scope);
+      this.inputDataValue(dom_scope);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -205,6 +206,13 @@ Locastyle = (function() {
         inputs.each(function(){
           $(this).val($(this).data('value'));
         });
+      });
+    },
+
+    inputDataValue: function(dom_scope){
+      $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]'), function(i, e){
+        var value = $(this).attr("value");
+        $(this).attr("data-value", value);
       });
     }
   }
