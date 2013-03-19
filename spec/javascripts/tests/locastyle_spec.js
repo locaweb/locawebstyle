@@ -316,6 +316,26 @@ describe("Locastyle", function() {
         locastyle.base.init(dom_scope);
         expect($("#data_value_fields input").attr("data-value")).toEqual($("#data_value_fields input").val());
     });
-  })
+  });
+
+  describe("Collapse auto open", function(){
+    describe("When it is called", function(){
+      it("should add the .active css class the parent .boxCollapse related to the received selector", function(){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        locastyle.base.collapseAutoOpen("#collapse_test");
+        expect($("#collapse_to_test_auto_open")).toHaveClass("active");
+      });
+
+      it("should add the .in css class to the .collapse related to the received selector", function(){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        locastyle.base.collapseAutoOpen("#collapse_test");
+        expect($("#collapse_to_test_auto_open #collapse_test")).toHaveClass("in");
+      });
+    });
+  });
 
 });

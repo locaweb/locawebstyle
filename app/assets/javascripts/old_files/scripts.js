@@ -316,10 +316,10 @@ $(document).ready(function() {
   }
 
   var targetAnchor = window.location.hash.replace("!/", "");
-  if(targetAnchor != ''){
-    $("[data-target="+targetAnchor+"]").click()
-    $("[data-target="+targetAnchor+"]").parent().addClass("active")
-  }
+  // if(targetAnchor != ''){
+  //   $("[data-target="+targetAnchor+"]").click()
+  //   $("[data-target="+targetAnchor+"]").parent().addClass("active")
+  // }
 
   // Se houver uma classe ERROR dentro de um collapse, ele já aparece aberto.
   //$('.error').parents('.collapse').collapse('show');

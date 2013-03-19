@@ -189,7 +189,7 @@ Locastyle = (function() {
       });
     },
 
-    toggleChild: function(dom_scope){
+    toggleChild: function(dom_scope) {
       self = this;
       $(".lnkToggle").on("click", function(e){
         e.preventDefault();
@@ -209,11 +209,16 @@ Locastyle = (function() {
       });
     },
 
-    inputDataValue: function(dom_scope){
+    inputDataValue: function(dom_scope) {
       $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]'), function(i, e){
         var value = $(this).attr("value");
         $(this).attr("data-value", value);
       });
+    },
+
+    collapseAutoOpen: function(target) {
+      $("[data-target=" + target + "]").click();
+      $("[data-target=" + target + "]").parent().addClass("active");
     }
   }
 });
