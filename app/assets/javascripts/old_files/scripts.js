@@ -236,11 +236,7 @@ $(document).ready(function() {
   }
 
   // Selects Customizados.
-  $(".customSelect").select2({
-     placeholder: "Selecione uma opção",
-     formatNoMatches: "Nenhum resultado encontrado",
-     allowClear: false
-  });
+  // $(".customSelect").select2();
 
   // As vezes temos problemas de hierarquia e conflitos de CSS. Essa classe ajuda a sanar isso
   // $('html').addClass('forceClass');

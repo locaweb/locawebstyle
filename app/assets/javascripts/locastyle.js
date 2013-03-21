@@ -23,6 +23,7 @@ Locastyle = (function() {
       this.toggleChildValue(dom_scope);
       this.inputDataValue(dom_scope);
       this.carouselCounter(dom_scope);
+      this.initCustomSelect(dom_scope);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -230,6 +231,10 @@ Locastyle = (function() {
           $(this).find(".carouselNav b").html($(this).find(".active").index() + 1);
         });
       });
+    },
+
+    initCustomSelect: function(dom_scope){
+      $(".customSelect").select2();
     }
 
   }

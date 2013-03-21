@@ -355,6 +355,13 @@ describe("Locastyle", function() {
     });
   });
 
-
+  describe("Custom select: ", function(){
+    it("should init select2 on elements with .customSelect", function(){
+      var dom_scope = $("#locastyle_fixture");
+      var locastyle = new Locastyle();
+      locastyle.base.init(dom_scope);
+      expect($("#select_to_be_tested div.select2-container.selectToBeTested")).toExist();
+    });
+  });
 
 });
