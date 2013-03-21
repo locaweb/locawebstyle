@@ -228,12 +228,12 @@ $(document).ready(function() {
   //  $(element).html(btnTextAlt).data('text',btnText);
   //}
 
-  function changeTextChamadas(element){
-    var btnText, btnTextAlt;
-    btnTextAlt = $(element).html();
-    btnText = $(element).data('text');
-    $(element).html(btnText).data('text',btnTextAlt);
-  }
+  // function changeTextChamadas(element){
+  //   var btnText, btnTextAlt;
+  //   btnTextAlt = $(element).html();
+  //   btnText = $(element).data('text');
+  //   $(element).html(btnText).data('text',btnTextAlt);
+  // }
 
   // Selects Customizados.
   // $(".customSelect").select2();
