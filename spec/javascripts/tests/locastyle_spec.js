@@ -338,4 +338,13 @@ describe("Locastyle", function() {
     });
   });
 
+  describe("Carousel counter: ", function(){
+    it("should fill the counter related with the .item quantity", function(){
+      var dom_scope = $("#locastyle_fixture");
+      var locastyle = new Locastyle();
+      locastyle.base.init(dom_scope);
+      expect($("#myCarousel .carouselNav i").text()).toEqual("3");
+    });
+  });
+
 });

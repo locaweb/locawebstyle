@@ -155,7 +155,7 @@ Locastyle = (function() {
 window.locastyle = new Locastyle();
 $(document).ready(function() {
 
-  // Contando quantos sliders items tem no slider das sidebares
+  // Contando quantos sliders items tem no slider das sidebars
   $.each($('.sideBox .carousel'), function() {
     if ($('.carouselNav b', this).size() > 0) {
       $(this).bind('slid', function (e) {
