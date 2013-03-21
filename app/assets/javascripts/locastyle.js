@@ -223,10 +223,12 @@ Locastyle = (function() {
     },
 
     carouselCounter: function(dom_scope){
-      var items = $(".carousel-inner li").size();
-      $(".carouselNav i").html(items);
-      $(".carousel").on('slid', function () {
-        $('.carouselNav b').html($('.active').index());
+      $.each($(".carousel"), function() {
+        var items = $(".carousel-inner li", this).size();
+        $(".carouselNav i", this).html(items);
+        $(this).on('slid', function() {
+          $(this).find(".carouselNav b").html($(this).find(".active").index() + 1);
+        });
       });
     }
 

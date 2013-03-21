@@ -156,15 +156,15 @@ window.locastyle = new Locastyle();
 $(document).ready(function() {
 
   // Contando quantos sliders items tem no slider das sidebars
-  $.each($('.sideBox .carousel'), function() {
-    if ($('.carouselNav b', this).size() > 0) {
-      $(this).bind('slid', function (e) {
-        $('.carouselNav b', this).html($('.active', this).index() + 1);
-      });
-      $('.carouselNav i', this).html($('.carousel-inner .item', this).size())
-      $('.carouselNav b', this).html($('.active', this).index() + 1);
-    }
-  });
+  // $.each($('.sideBox .carousel'), function() {
+  //   if ($('.carouselNav b', this).size() > 0) {
+  //     $(this).bind('slid', function (e) {
+  //       $('.carouselNav b', this).html($('.active', this).index() + 1);
+  //     });
+  //     $('.carouselNav i', this).html($('.carousel-inner .item', this).size())
+  //     $('.carouselNav b', this).html($('.active', this).index() + 1);
+  //   }
+  // });
 
   //$(".modalAutoOpen").modal();
 
