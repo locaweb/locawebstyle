@@ -225,6 +225,9 @@ Locastyle = (function() {
     carouselCounter: function(dom_scope){
       var items = $(".carousel-inner li").size();
       $(".carouselNav i").html(items);
+      $(".carousel").on('slid', function () {
+        $('.carouselNav b').html($('.active').index() + 1);
+      });
     }
 
   }

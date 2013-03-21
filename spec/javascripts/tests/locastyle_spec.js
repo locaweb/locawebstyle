@@ -343,8 +343,18 @@ describe("Locastyle", function() {
       var dom_scope = $("#locastyle_fixture");
       var locastyle = new Locastyle();
       locastyle.base.init(dom_scope);
-      expect($("#myCarousel .carouselNav i").text()).toEqual("3");
+      expect($("#my_carousel_counter .carouselNav i").text()).toEqual("3");
+    });
+
+    it("should update the .carouselNav <b> value with item has .active", function(){
+      var dom_scope = $("#locastyle_fixture");
+      var locastyle = new Locastyle();
+      locastyle.base.init(dom_scope);
+      $("#my_carousel_counter").trigger("slid");
+      expect($("#my_carousel_counter .carouselNav b").text()).toEqual("2");
     });
   });
+
+
 
 });
