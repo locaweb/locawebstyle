@@ -13,7 +13,7 @@ Locastyle = (function() {
     // $('.modalSlider .modal-footer', obj).parents('.modal').find('.modal-footer .slidePrev').hide();
 
     // Encontra se há algum formulário com erro de validação, e ativa a tab do slider com erro
-    if ( $('.modalSlider .modal-body .control-group', obj).hasClass('error') ) {
+    if($('.modalSlider .modal-body .control-group', obj).hasClass('error')){
       $('.modalSlider .item').removeClass('active');
       var item = $('.modalSlider .error').parents('.item:first');
       item.addClass('active').addClass('next');
