@@ -29,6 +29,7 @@ Locastyle = (function() {
       this.notificationInfoHandler();
       this.minShortcutsCookieSetter();
       this.minShortcutsCookieHandler();
+      this.coverAllLink(dom_scope);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -289,6 +290,13 @@ Locastyle = (function() {
         self.toggleText($(".minShortcuts"));
         $(".expandBox").addClass("microBox");
       }
+    },
+
+    coverAllLink: function(dom_scope) {
+      $('.chamadasBox div', dom_scope).each(function(){
+        var title = $(this).find('p').text()
+        $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll').attr('title',title).attr('aria-label',title) );
+      });
     }
 
   }

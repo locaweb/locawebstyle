@@ -433,4 +433,13 @@ describe("Locastyle", function() {
     });
   });
 
+  describe("Cover all link", function() {
+    it("should add a .lnkCoverAll inside each highlight box", function() {
+      var dom_scope = $("#min_shortcuts_fixture");
+      var locastyle = new Locastyle();
+      locastyle.base.init(dom_scope);
+      expect($("#min_shortcuts_fixture a.lnkCoverAll")).toExist();
+    });
+  });
+
 });
