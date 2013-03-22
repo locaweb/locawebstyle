@@ -24,6 +24,7 @@ Locastyle = (function() {
       this.inputDataValue(dom_scope);
       this.carouselCounter(dom_scope);
       this.initCustomSelect(dom_scope);
+      this.showSliderItemWithError(dom_scope);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -142,10 +143,12 @@ Locastyle = (function() {
 
     modalSliderActionController: function(target, dom_scope) {
       var self = this;
-      var btnPrev = target + ".modal.in [data-slide='prev']";
-      var btnSave = target + ".modal .modal-footer .btn.btn-primary";
-      var btnNext = target + ".modal.in [data-slide='next']";
-      $(".carousel").on("slid", function(dom_scope) {
+
+      $(".carousel").on("slid", function(target, dom_scope) {
+        var btnPrev = target + ".modal.in [data-slide='prev']";
+        var btnSave = target + ".modal .modal-footer .btn.btn-primary";
+        var btnNext = target + ".modal.in [data-slide='next']";
+
         if ($(".item:first-child").is(".active")) {
           self.hideElement(btnPrev);
         } else {
@@ -236,6 +239,19 @@ Locastyle = (function() {
 
     initCustomSelect: function(dom_scope){
       $(".customSelect").select2();
+    },
+
+    showSliderItemWithError: function(dom_scope){
+      var self = this;
+      $(".modal").on("shown", function(){
+        if($(".modal.in").has(".error")){
+          $(".modal.in").find(".item").removeClass("active");
+          var item = $(".modal.in").find(".item .error")[0];
+          $(item).parents(".item").addClass("active");
+          self.modalSliderActionController(this, dom_scope);
+          $(this).find(".carousel").trigger("slid");
+        }
+      });
     }
 
   }
