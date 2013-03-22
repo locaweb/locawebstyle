@@ -301,15 +301,15 @@ $(document).ready(function() {
   });
 
   // NOTIFICATION: Não exibe o alert de notificação
-  var alertNotifica = $('.lnkNoShow').attr('data-target')
-  $('.lnkNoShow').click(function(){
-    $(this).parent().remove()
-    $.cookie( alertNotifica, 1 );
-  });
+  // var alertNotifica = $('.lnkNoShow').attr('data-target')
+  // $('.lnkNoShow').click(function(){
+  //   $(this).parent().remove()
+  //   $.cookie( alertNotifica, 1 );
+  // });
 
-  if($.cookie(alertNotifica) == "1"){
-    $(alertNotifica).remove()
-  }
+  // if($.cookie(alertNotifica) == "1"){
+  //   $(alertNotifica).remove()
+  // }
 
   // var targetAnchor = window.location.hash.replace("!/", "");
   // if(targetAnchor != ''){

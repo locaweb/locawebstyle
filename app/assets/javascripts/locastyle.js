@@ -25,6 +25,8 @@ Locastyle = (function() {
       this.carouselCounter(dom_scope);
       this.initCustomSelect(dom_scope);
       this.collapseSetAnchor();
+      this.notificationInfoSet();
+      this.notificationInfoHandler();
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -248,6 +250,23 @@ Locastyle = (function() {
 
     initCustomSelect: function(dom_scope){
       $(".customSelect").select2();
+    },
+
+    notificationInfoSet: function(){
+      $('.lnkNoShow').on("click", function(){
+        $.cookie( $(this).data("target") , true );
+        $($(this).data("target")).remove();
+      });
+    },
+
+    notificationInfoHandler: function(){
+      $.each($(".lnkNoShow"), function() {
+        var target = $(this).data("target");
+        if($.cookie(target) === "true"){
+          $(target).remove();
+        }
+      });
     }
+
   }
 });

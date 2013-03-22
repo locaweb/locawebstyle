@@ -364,4 +364,32 @@ describe("Locastyle", function() {
     });
   });
 
+  describe("Alert notification: ", function(){
+    describe("When click on .lnkNoShow: ", function(){
+      it("should set a cookie named as trigger data-target", function(){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        $(".lnkNoShow").trigger("click");
+        expect($.cookie("#alert_notification_test")).toEqual("true");
+      });
+      it("should remove the elements with the trigger data-target id", function(){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        $(".lnkNoShow").trigger("click");
+        expect($("#alert_notification_test")).not.toExist();
+      });
+    });
+    describe("When page loads: ", function(){
+      it("should remove the elements with the id equal to cookies set", function(){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        $.cookie("#element_to_vanish", true);
+        locastyle.base.init(dom_scope);
+        expect($("#element_to_vanish")).not.toExist();
+      });
+    });
+  });
+
 });
