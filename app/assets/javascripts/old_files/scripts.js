@@ -311,7 +311,7 @@ $(document).ready(function() {
     $(alertNotifica).remove()
   }
 
-  var targetAnchor = window.location.hash.replace("!/", "");
+  // var targetAnchor = window.location.hash.replace("!/", "");
   // if(targetAnchor != ''){
   //   $("[data-target="+targetAnchor+"]").click()
   //   $("[data-target="+targetAnchor+"]").parent().addClass("active")

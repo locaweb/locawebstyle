@@ -24,6 +24,7 @@ Locastyle = (function() {
       this.inputDataValue(dom_scope);
       this.carouselCounter(dom_scope);
       this.initCustomSelect(dom_scope);
+      this.collapseSetAnchor();
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -222,6 +223,17 @@ Locastyle = (function() {
     collapseAutoOpen: function(target) {
       $("[data-target=" + target + "]").click();
       $("[data-target=" + target + "]").parent().addClass("active");
+    },
+
+    collapseSetAnchor: function(){
+      var collapseAnchor = window.location.hash.replace("!/", "");
+      this.collapseAnchorHandler(collapseAnchor);
+    },
+
+    collapseAnchorHandler: function(anchor){
+      if(anchor != ''){
+        this.collapseAutoOpen(anchor);
+      }
     },
 
     carouselCounter: function(dom_scope){
