@@ -62,7 +62,7 @@ Locastyle = (function() {
 
     // TODO: Verificar
     // init of change.collapse.data-api
-    $('[data-toggle=show]', obj).filter(':checked').change();
+    // $('[data-toggle=show]', obj).filter(':checked').change();
 
     // Insere uma classe ACTIVE para o primeiro Collpase
     //$('.collapseGroup summary:first', obj).not('noAutoActive').addClass('active').parent('.details').addClass('active');
@@ -169,25 +169,25 @@ $(document).ready(function() {
   //$(".modalAutoOpen").modal();
 
   // Limpa inputs de formulários. Muito usado na busca avançada.
-  $('.clearFormBt').live('click', function(e){
-    e.preventDefault();
-    $(this).closest('.boxFiltro').find('.clearForm').not('.in').find(':input').each(function(){
-      switch(this.type) {
-            case 'password':
-            case 'select-multiple':
-            case 'select-one':
-            case 'text':
-            case 'textarea':
-                $(this).val('');
-                break;
-            case 'checkbox':
-                this.selected = false;
-                break;
-            case 'radio':
-                this.checked = false;
-        }
-    });
-  });
+  // $('.clearFormBt').live('click', function(e){
+  //   e.preventDefault();
+  //   $(this).closest('.boxFiltro').find('.clearForm').not('.in').find(':input').each(function(){
+  //     switch(this.type) {
+  //           case 'password':
+  //           case 'select-multiple':
+  //           case 'select-one':
+  //           case 'text':
+  //           case 'textarea':
+  //               $(this).val('');
+  //               break;
+  //           case 'checkbox':
+  //               this.selected = false;
+  //               break;
+  //           case 'radio':
+  //               this.checked = false;
+  //       }
+  //   });
+  // });
 
   // Faz o usuário só usar números em vez de letras.
   //$('.numbersOnly').keyup(function () {
@@ -195,15 +195,15 @@ $(document).ready(function() {
   //});
 
   // Insere a possibilidade de inserir acoes especificas de toggle definidos para os collapses
-  $('body').on('change.collapse.data-api', '[data-toggle=hide]', function (e) {
-    e.preventDefault();
-    $($(this).data('target')).collapse('hide');
-  });
+  // $('body').on('change.collapse.data-api', '[data-toggle=hide]', function (e) {
+  //   e.preventDefault();
+  //   $($(this).data('target')).collapse('hide');
+  // });
 
-  $('body').on('change.collapse.data-api', '[data-toggle=show]', function (e) {
-    e.preventDefault();
-    $($(this).data('target')).collapse('show');
-  });
+  // $('body').on('change.collapse.data-api', '[data-toggle=show]', function (e) {
+  //   e.preventDefault();
+  //   $($(this).data('target')).collapse('show');
+  // });
 
   // Tem que analisar direito depois.
   // $('[data-toggle="collapse"]').click(function (e){e.preventDefault();});

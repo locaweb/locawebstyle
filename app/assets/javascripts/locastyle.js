@@ -297,7 +297,43 @@ Locastyle = (function() {
         var title = $(this).find('p').text()
         $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll').attr('title',title).attr('aria-label',title) );
       });
-    }
+    },
 
+    // look down here to cover tests
+    collapsesWeirdBehavior: function(dom_scope) {
+      $('body').on('change.collapse.data-api', '[data-toggle=hide]', function (e) {
+        e.preventDefault();
+        $($(this).data('target')).collapse('hide');
+      });
+
+      $('body').on('change.collapse.data-api', '[data-toggle=show]', function (e) {
+        e.preventDefault();
+        $($(this).data('target')).collapse('show');
+      });
+
+      $('[data-toggle=show]', dom_scope).filter(':checked').change();
+    },
+
+    clearForms: function(dom_scope) {
+      $('.clearFormBt').live('click', function(e){
+        e.preventDefault();
+        $(this).closest('.boxFiltro').find('.clearForm').not('.in').find(':input').each(function(){
+          switch(this.type) {
+                case 'password':
+                case 'select-multiple':
+                case 'select-one':
+                case 'text':
+                case 'textarea':
+                    $(this).val('');
+                    break;
+                case 'checkbox':
+                    this.selected = false;
+                    break;
+                case 'radio':
+                    this.checked = false;
+            }
+        });
+      });
+    }
   }
 });
