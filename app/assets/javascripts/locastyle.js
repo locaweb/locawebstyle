@@ -28,6 +28,7 @@ Locastyle = (function() {
       this.notificationInfoSet();
       this.notificationInfoHandler();
       this.minShortcutsCookieSetter();
+      this.minShortcutsCookieHandler();
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -271,9 +272,19 @@ Locastyle = (function() {
 
     minShortcutsCookieSetter: function(){
       $(".minShortcuts").on('click', function(){
-        $.cookie("minShortcuts", true);
-        $(".expandBox").toggleClass("microBox");
+        if($.cookie("minShortcuts") === "true"){
+          $.cookie("minShortcuts", false);
+        }else{
+          $.cookie("minShortcuts", true);
+        }
+        $(this).siblings(".expandBox").toggleClass("microBox");
       });
+    },
+
+    minShortcutsCookieHandler: function(){
+      if($.cookie("minShortcuts") === "true"){
+        $(".expandBox").addClass("microBox");
+      }
     }
 
   }

@@ -373,6 +373,7 @@ describe("Locastyle", function() {
         $(".lnkNoShow").trigger("click");
         expect($.cookie("#alert_notification_test")).toEqual("true");
       });
+
       it("should remove the elements with the trigger data-target id", function(){
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();
@@ -381,6 +382,7 @@ describe("Locastyle", function() {
         expect($("#alert_notification_test")).not.toExist();
       });
     });
+
     describe("When page loads: ", function(){
       it("should remove the elements with the id equal to cookies set", function(){
         var dom_scope = $("#locastyle_fixture");
@@ -401,15 +403,34 @@ describe("Locastyle", function() {
         $(".minShortcuts").trigger("click");
         expect($.cookie("minShortcuts")).toEqual("true");
       });
+
       it("should toogle .microBox", function(){
         var dom_scope = $("#locastyle_fixture");
         var locastyle = new Locastyle();
+        $.cookie("minShortcuts", false);
         locastyle.base.init(dom_scope);
         $(".minShortcuts").trigger("click");
         expect($(".expandBox")).toHaveClass("microBox");
       });
+
+      it("should remove the minShortcuts cookie if it already exists", function(){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        $(".minShortcuts").trigger("click");
+        expect($.cookie("minShortcuts")).toEqual("false");
+      });
     });
 
+    describe("When page loades: ", function(){
+      it("should add .microBox if minShortcuts cookie exists", function(){
+        var dom_scope = $("#min_shortcuts_fixture");
+        var locastyle = new Locastyle();
+        $.cookie("minShortcuts", true);
+        locastyle.base.init(dom_scope);
+        expect($("#min_shortcuts_fixture .expandBox")).toHaveClass("microBox");
+      });
+    });
   });
 
 });
