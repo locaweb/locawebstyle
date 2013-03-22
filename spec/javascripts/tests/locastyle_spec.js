@@ -392,4 +392,24 @@ describe("Locastyle", function() {
     });
   });
 
+  describe("Box chamadas:", function(){
+    describe("When click on .minShortcuts", function(){
+      it("should create a minShortcuts cookie", function(){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        $(".minShortcuts").trigger("click");
+        expect($.cookie("minShortcuts")).toEqual("true");
+      });
+      it("should toogle .microBox", function(){
+        var dom_scope = $("#locastyle_fixture");
+        var locastyle = new Locastyle();
+        locastyle.base.init(dom_scope);
+        $(".minShortcuts").trigger("click");
+        expect($(".expandBox")).toHaveClass("microBox");
+      });
+    });
+
+  });
+
 });

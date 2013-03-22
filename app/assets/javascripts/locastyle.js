@@ -27,6 +27,7 @@ Locastyle = (function() {
       this.collapseSetAnchor();
       this.notificationInfoSet();
       this.notificationInfoHandler();
+      this.minShortcutsCookieSetter();
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -265,6 +266,13 @@ Locastyle = (function() {
         if($.cookie(target) === "true"){
           $(target).remove();
         }
+      });
+    },
+
+    minShortcutsCookieSetter: function(){
+      $(".minShortcuts").on('click', function(){
+        $.cookie("minShortcuts", true);
+        $(".expandBox").toggleClass("microBox");
       });
     }
 
