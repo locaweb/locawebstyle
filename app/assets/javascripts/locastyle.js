@@ -271,11 +271,14 @@ Locastyle = (function() {
     },
 
     minShortcutsCookieSetter: function(){
+      var self = this;
       $(".minShortcuts").on('click', function(){
         if($.cookie("minShortcuts") === "true"){
           $.cookie("minShortcuts", false);
+          self.toggleText($(this));
         }else{
           $.cookie("minShortcuts", true);
+          self.toggleText($(this));
         }
         $(this).siblings(".expandBox").toggleClass("microBox");
       });
@@ -283,6 +286,7 @@ Locastyle = (function() {
 
     minShortcutsCookieHandler: function(){
       if($.cookie("minShortcuts") === "true"){
+        self.toggleText($(".minShortcuts"));
         $(".expandBox").addClass("microBox");
       }
     }
