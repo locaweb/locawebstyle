@@ -141,12 +141,11 @@ Locastyle = (function() {
 
     modalSliderActionController: function(dom_scope) {
       var self = this;
+      var btnPrev = ".modal.in [data-slide='prev']";
+      var btnSave = ".modal .modal-footer .btn.btn-primary";
+      var btnNext = ".modal.in [data-slide='next']";
 
       $(".carousel").on("slid", function(dom_scope) {
-        var btnPrev = ".modal.in [data-slide='prev']";
-        var btnSave = ".modal .modal-footer .btn.btn-primary";
-        var btnNext = ".modal.in [data-slide='next']";
-
         if ($(".item:first-child").is(".active")) {
           self.hideElement(btnPrev);
         } else {
