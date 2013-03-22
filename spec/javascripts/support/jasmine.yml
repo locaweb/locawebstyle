@@ -12,6 +12,7 @@
 #
 src_files:
   - assets/jquery.js
+  - assets/cookie.js
   - assets/jquery-ui.min.js
   - assets/select2.min.js
   - assets/bootstrap/js/bootstrap.js
