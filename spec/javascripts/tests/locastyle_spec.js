@@ -364,21 +364,4 @@ describe("Locastyle", function() {
     });
   });
 
-
-  describe("Modal slider with error", function(){
-    it("should add .active in first .item with .error", function(){
-      var dom_scope = $("#locastyle_fixture");
-      var locastyle = new Locastyle();
-      locastyle.base.init(dom_scope);
-      expect($("#modal_with_slider_error #item_to_have_error")).toHaveClass("active");
-    });
-    it("should remove any .active from .item", function(){
-      var dom_scope = $("#locastyle_fixture");
-      var locastyle = new Locastyle();
-      locastyle.base.init(dom_scope);
-      expect($("#modal_with_slider_error #item_not_active")).not.toHaveClass("active");
-    });
-  });
-
-
 });

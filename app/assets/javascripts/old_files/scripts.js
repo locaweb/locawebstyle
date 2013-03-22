@@ -13,13 +13,13 @@ Locastyle = (function() {
     // $('.modalSlider .modal-footer', obj).parents('.modal').find('.modal-footer .slidePrev').hide();
 
     // Encontra se há algum formulário com erro de validação, e ativa a tab do slider com erro
-    if($('.modalSlider .modal-body .control-group', obj).hasClass('error')){
-      $('.modalSlider .item').removeClass('active');
-      var item = $('.modalSlider .error').parents('.item:first');
-      item.addClass('active').addClass('next');
-      window.locastyle.modal_callback(obj, $('.modalSlider .slidePrev:first'));
-      item.removeClass('next');
-    }
+    // if($('.modalSlider .modal-body .control-group', obj).hasClass('error')){
+    //   $('.modalSlider .item').removeClass('active');
+    //   var item = $('.modalSlider .error').parents('.item:first');
+    //   item.addClass('active').addClass('next');
+    //   window.locastyle.modal_callback(obj, $('.modalSlider .slidePrev:first'));
+    //   item.removeClass('next');
+    // }
 
     // Monitora o botão de next e prev dos sliders/wizards de dentro de uma modal
     // $('.modal-footer .slideNext, .modal-footer .slidePrev', obj).live("click", function() {

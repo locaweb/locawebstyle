@@ -24,7 +24,6 @@ Locastyle = (function() {
       this.inputDataValue(dom_scope);
       this.carouselCounter(dom_scope);
       this.initCustomSelect(dom_scope);
-      this.showSliderItemWithError(dom_scope);
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -129,11 +128,10 @@ Locastyle = (function() {
       var btnPrev = ".modal [data-slide='prev']";
       var btnSave = ".modal .modal-footer .btn.btn-primary";
       $("[data-toggle='modal']").on("click", function(){
-        var idModalActive = $(this).data("target");
         self.setupModalSlider(btnPrev);
-        self.hideElement($(idModalActive + btnSave));
-        self.modalSliderActionController(idModalActive);
+        self.hideElement(btnSave);
       });
+      self.modalSliderActionController();
     },
 
     setupModalSlider: function(element) {
@@ -141,13 +139,13 @@ Locastyle = (function() {
       self.hideElement(element);
     },
 
-    modalSliderActionController: function(target, dom_scope) {
+    modalSliderActionController: function(dom_scope) {
       var self = this;
 
-      $(".carousel").on("slid", function(target, dom_scope) {
-        var btnPrev = target + ".modal.in [data-slide='prev']";
-        var btnSave = target + ".modal .modal-footer .btn.btn-primary";
-        var btnNext = target + ".modal.in [data-slide='next']";
+      $(".carousel").on("slid", function(dom_scope) {
+        var btnPrev = ".modal.in [data-slide='prev']";
+        var btnSave = ".modal .modal-footer .btn.btn-primary";
+        var btnNext = ".modal.in [data-slide='next']";
 
         if ($(".item:first-child").is(".active")) {
           self.hideElement(btnPrev);
@@ -239,20 +237,6 @@ Locastyle = (function() {
 
     initCustomSelect: function(dom_scope){
       $(".customSelect").select2();
-    },
-
-    showSliderItemWithError: function(dom_scope){
-      var self = this;
-      $(".modal").on("shown", function(){
-        if($(".modal.in").has(".error")){
-          $(".modal.in").find(".item").removeClass("active");
-          var item = $(".modal.in").find(".item .error")[0];
-          $(item).parents(".item").addClass("active");
-          self.modalSliderActionController(this, dom_scope);
-          $(this).find(".carousel").trigger("slid");
-        }
-      });
     }
-
   }
 });
