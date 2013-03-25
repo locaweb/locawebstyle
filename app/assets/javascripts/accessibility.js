@@ -1,6 +1,6 @@
 $(function(){
 
- 	
+
 	accessMenu();
 	subMenuAccess();
 
@@ -94,10 +94,6 @@ function accessMenu(){
 	})
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> correcoes de subMenu que ficava atras de elementos de conteudo
 // Deixa o submenu acessivel
 function subMenuAccess(){
 	$('#menuPrincipal .parent a').focus(function(){
@@ -113,9 +109,4 @@ function subMenuAccess(){
 			 'aria-hidden': true
 	})
 })
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> correcoes de subMenu que ficava atras de elementos de conteudo
