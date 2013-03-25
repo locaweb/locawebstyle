@@ -43,6 +43,11 @@
 .nopaddingtop, .noPaddingTop {padding-top: 0 !important;}
 .nopaddingbottom, .noPaddingBottom {padding-bottom: 0 !important;}
 
+.marginAuto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .marginBottom40 {margin-bottom: 40px;}
 
 /** 
