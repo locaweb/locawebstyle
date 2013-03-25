@@ -15,4 +15,7 @@
 // < APP
 //= require locastyle
 //= require initializer
+//= require analytics_trackevent
+//= require browser-detect
+//= require passwordStrength
 // APP >
