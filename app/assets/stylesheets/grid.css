@@ -49,7 +49,7 @@
 .span2 {width: 106px;}
 .span1 {width: 43px;}
 
-input.input120, input.span2 {width:90px !important;}
+/*input.input120, input.span2 {width:90px !important;}*/
 .simpleFilter .searchInput {max-width:145px !important;}
 
 .span14 {width:840px;}

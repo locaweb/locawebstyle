@@ -1,6 +1,27 @@
         <h2>Collapse</h2>
         <p>Collapses são usados para organizar grandes quantidades de conteúdo que trazem uma informação ou comportamentos do sistema para a interação com o usuário. Veja os exemplos abaixo:</p>
 
+  <div class="collapseGroup error_toggle">
+    <div class="boxCollapse">
+      <header data-target="#collapse_with_error" data-toggle="collapse">
+        <h4>I have errors</h4>
+      </header>
+      <div class="collapse" id="collapse_with_error">
+        <h4>I have errors</h4>
+        <p class="error">Hello with errors</p>
+      </div>
+    </div>
+
+    <div class="boxCollapse">
+      <header data-target="#collapse_without_error" data-toggle="collapse">
+        <h4>I don't have errors</h4>
+      </header>
+      <div class="collapse" id="collapse_without_error">
+        <h4>I don't have errors</h4>
+        <p>Hello with no error</p>
+      </div>
+    </div>
+  </div>
 <div class="boxCollapse config" id="unsubscribe_reasons">
     <header data-toggle="collapse" data-target="#addMotivo">
         <h4>Motivos de descadastramento</h4>

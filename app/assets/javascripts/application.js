@@ -1,15 +1,21 @@
+// < HEAD
 //= require locastyle_head
+// HEAD >
+//
+// < VENDOR
 //= require jquery
-//= require analytics_trackevent
 //= require modernizr
 //= require bootstrap/js/bootstrap
 //= require select2.min
 //= require jquery-ui.min
 //= require masked-input
-//= require passwordStrength
 //= require cookie
-// VENDOR
+// VENDOR >
 //
-//= require scripts
+// < APP
+//= require locastyle
+//= require initializer
+//= require analytics_trackevent
 //= require browser-detect
-//= require accessibility
+//= require passwordStrength
+// APP >

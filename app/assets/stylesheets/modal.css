@@ -8,14 +8,14 @@
 }
 
 .modalSmall {
-  width: 450px; 
+  width: 450px;
   margin-left: -200px;
 }
 
 .modal-header {
   border: none;
   padding-bottom: 0;
-  padding: 0; 
+  padding: 0;
   margin: 0;
 }
 .modal-header .close {
@@ -113,8 +113,8 @@
   clear: both;
 }
 .listDetail.boxGray {
-  background-color: #e2e2e2; 
-  padding: 10px 0; 
+  background-color: #e2e2e2;
+  padding: 10px 0;
   margin-bottom: 15px;
 }
 
@@ -162,7 +162,7 @@
 .modal-footer .slidePrev:before, .modal-footer .slideNext:after {
   content: " ";
   display: inline-block;
-  width: 10px; 
+  width: 10px;
   height: 10px;
 }
 .modal-footer .slidePrev:before {background: url(img/arrowLeftGray.png) no-repeat center; margin-right: 5px;}

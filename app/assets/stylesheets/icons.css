@@ -528,6 +528,7 @@ li [class^="icon-"], li [class*=" icon-"] {
   z-index: 1;
   margin-top: 0px;
 }
+
 .error .ui-datepicker-trigger.icon-calendar {border-color: #953B39;}
 .help-inline {width: inherit;}
 

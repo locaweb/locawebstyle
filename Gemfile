@@ -10,3 +10,8 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier',     '~> 1.0.3'
 end
+
+group :test, :development do
+  gem 'jasmine', '~> 1.3.1'
+  gem 'selenium-webdriver', '2.25.0'
+end
