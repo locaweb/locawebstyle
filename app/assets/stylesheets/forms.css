@@ -384,9 +384,11 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 .select2-container .select2-choice,
 .select2-dropdown-open .select2-choice,
 .select2-container.select2-drop-above .select2-choice {
-  border-radius: 2px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   background: none;
-  border-color: #d4d4d4;
+  border-color: #ccc;
   box-shadow: none;
   color: #767676;
 }
