@@ -1,29 +1,29 @@
 /** 
 *** FLOAT E CLEAR
 **/
-.nofloat, .noFloat {float: none !important;}
-.fright, .fRight {float: right !important;}
-.fleft, .fLeft {float: left !important;}
+.noFloat {float: none !important;}
+.fRight {float: right !important;}
+.fLeft {float: left !important;}
 
-.cboth, .cBoth {clear: both !important;}
-.cright, .cRight {clear: right !important;}
-.cleft, .cLeft {clear: left !important;}
+.cBoth {clear: both !important;}
+.cRight {clear: right !important;}
+.cLeft {clear: left !important;}
 
-.overflowHidden, .overflowhidden{ overflow: hidden !important;}
+.overflowHidden { overflow: hidden !important;}
 .overflowVisible {overflow: visible !important;}
 
 /** 
 *** BLOCO E LINHA
 **/
-.dblock, .dBlock {display: block !important;}
-.dinline, .dInline {display: inline !important; float: none !important;}
-.dinlineblock, .dInlineBlock {display: inline-block !important; float: none !important;}
-.dnone, .dNone, .hide, .hide {display: none !important;}
+.dBlock {display: block !important;}
+.dInline {display: inline !important; float: none !important;}
+.dInlineBlock {display: inline-block !important; float: none !important;}
+.dNone, .hide {display: none !important;}
 
 /** 
 *** TAMANHO
 **/
-.widthauto, .widthAuto {width: auto !important;}
+.widthAuto {width: auto !important;}
 .widthInherit {width: inherit;}
 .heightInherit {height: inherit;}
 .heightAuto {height: auto !important;}
@@ -31,17 +31,17 @@
 /** 
 *** MARGIN E PADDING
 **/
-.nomargin, .noMargin {margin: 0 !important;}
-.nomarginleft, .noMarginLeft, .row.noMarginLeft {margin-left: 0 !important;}
-.nomarginright, .noMarginRight {margin-right: 0 !important;}
-.nomargintop, .noMarginTop {margin-top: 0 !important;}
-.nomarginbottom, .noMarginBottom {margin-bottom: 0 !important;}
+.noMargin {margin: 0 !important;}
+.noMarginLeft, .row.noMarginLeft {margin-left: 0 !important;}
+.noMarginRight {margin-right: 0 !important;}
+.noMarginTop {margin-top: 0 !important;}
+.noMarginBottom {margin-bottom: 0 !important;}
 
-.nopadding, .noPadding {padding: 0 !important;}
-.nopaddingleft, .noPaddingLeft {padding-left: 0 !important;}
-.nopaddingright, .noPaddingRight {padding-right: 0 !important;}
-.nopaddingtop, .noPaddingTop {padding-top: 0 !important;}
-.nopaddingbottom, .noPaddingBottom {padding-bottom: 0 !important;}
+.noPadding {padding: 0 !important;}
+.noPaddingLeft {padding-left: 0 !important;}
+.noPaddingRight {padding-right: 0 !important;}
+.noPaddingTop {padding-top: 0 !important;}
+.noPaddingBottom {padding-bottom: 0 !important;}
 
 .marginAuto {
   margin-left: auto !important;
@@ -53,10 +53,10 @@
 /** 
 *** ALINHAMENTO DE TEXTO
 **/
-.txtLeft, .txtleft {text-align: left !important;}
-.txtRight, .txtright {text-align: right !important;}
-.txtJustify, .txtjustify {text-align: justify !important;}
-.txtCenter, .txtcenter {text-align: center !important;}
+.txtLeft {text-align: left !important;}
+.txtRight {text-align: right !important;}
+.txtJustify {text-align: justify !important;}
+.txtCenter {text-align: center !important;}
 
 table.txtLeft td, table.txtLeft th {text-align: left;}
 table.txtRight td, table.txtRight th {text-align: right;}
@@ -77,28 +77,28 @@ table.txtRight td, table.txtRight th {text-align: right;}
 .noBackground {background: none !important;}
 .noShadow {box-shadow: none !important;}
 
-.noborder, .noBorder {border: none !important;}
-.noborderright, .noBorderRight {border-right: none !important;}
-.noborderleft, .noBorderLeft {border-left: none !important;}
-.noborderbottom, .noBorderBottom {border-bottom: none !important;}
-.nobordertop, .noBorderTop {border-top: none !important;}
+.noBorder {border: none !important;}
+.noBorderRight {border-right: none !important;}
+.noBorderLeft {border-left: none !important;}
+.noBorderBottom {border-bottom: none !important;}
+.noBorderTop {border-top: none !important;}
 
 .noBullet, .noListStyle {list-style: none !important;}
 
 /** 
 *** CURSOR DE MOUSE
 **/
-.cursorPointer, .cursorpointer {cursor: pointer !important;}
-.cursorDefault, .cursordefault {cursor: default !important;}
-.cursorCrosshair, .cursorcrosshair {cursor: crosshair !important;}
-.cursorMove, .cursormove {cursor: move !important;}
-.cursorHelp, .cursorhelp {cursor: help !important;}
-.cursorWait, .cursorwait {cursor: wait !important;}
-.cursorInherit, .cursorinherit {cursor: inherit !important;}
-.cursorText, .cursortext {cursor: text !important;}
-.cursorProgress, .cursorprogress {cursor: progress !important;}
+.cursorPointer {cursor: pointer !important;}
+.cursorDefault {cursor: default !important;}
+.cursorCrosshair {cursor: crosshair !important;}
+.cursorMove {cursor: move !important;}
+.cursorHelp {cursor: help !important;}
+.cursorWait {cursor: wait !important;}
+.cursorInherit {cursor: inherit !important;}
+.cursorText {cursor: text !important;}
+.cursorProgress {cursor: progress !important;}
 
-.cursorGrab, .cursorgrab {
+.cursorGrab {
   cursor: hand;
   cursor: grab;
   cursor: -o-grab;
@@ -106,7 +106,7 @@ table.txtRight td, table.txtRight th {text-align: right;}
   cursor: -moz-grab;
   cursor: -webkit-grab;
 }
-.cursorGrabbing, .cursorgrabbing {
+.cursorGrabbing {
   cursor: grabbing;
   cursor: -o-grabbing;
   cursor: -ms-grabbing;
@@ -120,8 +120,8 @@ table.txtRight td, table.txtRight th {text-align: right;}
   white-space: nowrap;
   display: block  !important;
 }
-.noBold, .nobold{font-weight: normal!important;}
-.noBgHover{background: none!important;}
+.noBold {font-weight: normal!important;}
+.noBgHover {background: none!important;}
 
 /** COLORS **/
 .bgWhite {background: white!important;}

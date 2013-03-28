@@ -58,5 +58,11 @@ p a.btn {color: #333;}
 	top: 28px;
 }
 
-.btn-shadow:after{border-color: #bfbfbf transparent transparent transparent; left: 42%;}
-.btn-shadow:before{border-color: #adadad transparent transparent transparent; left: 42%;}
+.btn-shadow:after{
+	border-color: #bfbfbf transparent transparent transparent;
+ 	left: 42%
+}
+.btn-shadow:before{
+	border-color: #adadad transparent transparent transparent; 
+	left: 42%;
+}

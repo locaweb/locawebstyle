@@ -61,19 +61,20 @@ footer#footer {
   overflow: hidden;
 }
 
-.subfooter strong {color:#2a2a2a;}
+.subfooter strong {color: #2a2a2a;}
 .subfooter .lastAccess {
-  padding:0 0 0 20px;
-  background:url(img/ico-ultimoAcesso.png) no-repeat left center;
+  padding: 0 0 0 20px;
+  background: url(img/ico-ultimoAcesso.png) no-repeat left center;
 }
-.copyRight {margin:0;}
+.copyRight {margin: 0;}
 
 .icoInterroga {
-  display:inline-block;
-  text-indent:-9999px;
-  background:url(img/icoInterroga.png) no-repeat center;
-  width:12px; height:12px;
-  vertical-align:middle;
+  display: inline-block;
+  text-indent: -9999px;
+  background: url(img/icoInterroga.png) no-repeat center;
+  width: 12px; 
+  height: 12px;
+  vertical-align: middle;
 }
 
 #footer [class^="ico"]:before,

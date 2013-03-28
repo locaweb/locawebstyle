@@ -1,7 +1,8 @@
 .obsGray form {margin-bottom: 0; padding: 3px 0;}
 fieldset {
   border: none;
-  padding: 0; margin: 0 0 10px;
+  padding: 0; 
+  margin: 0 0 10px;
 }
 
 /*fieldset + fieldset {margin-top: 20px;}*/
@@ -49,6 +50,7 @@ form h6 {
 label b {display: none;}
 
 .modal .control-group {padding: 0 5px;}
+
 .form-horizontal .controls, .controls {
   text-align: left;
   margin-left: 1px;
@@ -72,40 +74,41 @@ label b {display: none;}
 label.dInlineBlock, label.dInline {margin-bottom: 0;}
 
 label, strong.control-label, .form-horizontal .control-label {
+  padding-right: 10px;
   font-weight: bold;
   font-size: 12px;
   vertical-align: middle;
-  padding-right: 10px;
   color: #545454;
   line-height: 12px;
 }
 label.widthAuto {width: auto !important;}
 label.nomarginleft {margin-left: 0 !important;}
+
 .formInline label,
 .form-horizontal label,
 .formInline strong.control-label,
 .form-horizontal strong.control-label,
 .formInline .control-label,
 .form-horizontal .control-label {
+  display: inline-block;
+  padding-top: 5px;
+  padding-right: 10px;
+  width: 100px;
+  text-align: right;
   font-weight: bold;
   font-size: 12px;
-  display: inline-block;
   vertical-align: middle;
-  padding-right: 10px;
-  text-align: right;
-  width: 100px;
   color: #545454;
   line-height: 12px;
-  padding-top: 5px;
 }
 
 .boxGrayOpt {
+  clear: both;
+  float: none;
   padding: 10px;
   position: relative;
   margin: 10px 0;
   background: #e2e2e2;
-  clear: both;
-  float: none;
 }
 
 .formInline .boxGrayOpt label,
@@ -129,12 +132,14 @@ label.nomarginleft {margin-left: 0 !important;}
 .formInline.boxGrayOpt input {vertical-align: middle;}
 
 .boxGrayOpt:before {
+  position: absolute;
+  top: -5px; 
+  left: 15px;
   content: " ";
   display: block;
-  width: 15px; height: 5px;
+  width: 15px; 
+  height: 5px;
   background: url(img/indicadorTopBoxGrayInput.png) no-repeat;
-  position: absolute;
-  top: -5px; left: 15px;
 }
 
 label.checkbox.control-label, label.checkbox.control-label: first-child {
@@ -148,12 +153,16 @@ label.checkbox.control-label, label.checkbox.control-label: first-child {
 .boxGrayOpt input {margin: 0 1px 0 0;}
 
 .filterCount {line-height: 28px;}
-.filterCount .control-group label {font-weight: normal; width: auto !important;line-height: 28px;}
+
+.filterCount .control-group label {
+  font-weight: normal; 
+  width: auto !important;
+  line-height: 28px;
+}
 
 .filterCount .control-group,
 .filterCount .controlg-group input,
 .filterCount .controlg-group select {margin: 0;}
-
 
 /** Busca avançada **/
 .boxFiltro, .boxCinza {
@@ -172,7 +181,7 @@ label.checkbox.control-label, label.checkbox.control-label: first-child {
 
 .boxCinzaInnerLight {
   clear: both;
-  background: #dddddd;
+  background: #ddd;
   padding: 10px 15px;
   border-radius: 5px;
 }
@@ -198,7 +207,11 @@ label.checkbox.control-label, label.checkbox.control-label: first-child {
 .transaction-search-per-page {width: 70px;}
 
 .periodoForm.formInline .control-group:first-child .help-inline {margin-left: 117px;}
-.periodoForm.formInline .control-group .help-inline {margin-left: 0; padding-left: 0;}
+
+.periodoForm.formInline .control-group .help-inline {
+  margin-left: 0; 
+  padding-left: 0;
+}
 
 input.span16, textarea.span16, .uneditable-input.span16 {width: 1166px;}
 input.span15, textarea.span15, .uneditable-input.span15 {width: 1091px;}
@@ -290,7 +303,13 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 .tab-pane .simpleFilter {padding-top: 5px;}
 .simpleFilter form {margin: 0;}
 .simpleFilter select {width: 100px;}
-.simpleFilter.sideBySide .control-group {margin-bottom: 0; border-left: 1px dotted #cfcfcf; padding: 0 0 0 15px; margin-left: 15px;}
+
+.simpleFilter.sideBySide .control-group {
+  margin-bottom: 0;
+  border-left: 1px dotted #cfcfcf;
+  padding: 0 0 0 15px;
+  margin-left: 15px;
+}
 
 .simpleFilter .control-group:last-child {border-left: 0;}
 .simpleFilter.sideBySide .control-group.fright {float: right;}
@@ -326,13 +345,26 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 
 .lineFieldsContainer label {margin-left: 0;}
 .lineFieldsContainer label.span3 {width: 217px;}
-.lineFields {clear: both; margin-bottom: 10px;}
+
+.lineFields {
+  clear: both; 
+  margin-bottom: 10px;
+}
 
 .lineFields input:nth-child(2n) {width: 275px;}
 
 .lineFields select {vertical-align: top;}
-.lineFields .addRemoveLine {width: 30px; height: 30px; vertical-align: top}
-.lineFields .addRemoveLine:before {margin-left: -8px; margin-top: 3px;}
+
+.lineFields .addRemoveLine {
+  width: 30px; 
+  height: 30px; 
+  vertical-align: top;
+}
+
+.lineFields .addRemoveLine:before {
+  margin-left: -8px; 
+  margin-top: 3px;
+}
 
 /*** CUSTOM SELECT
 **** Formatando seletores customizaveis

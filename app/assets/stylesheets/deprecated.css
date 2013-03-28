@@ -531,3 +531,104 @@ footer#rodape {
 .chamadasBox + .lnkArrow {position:relative; top:-5px;}
 .revisit .chamadasBox h3{ font: 100 18px UbuntuLight, verdana, arial, tahoma, sans-serif; line-height: 25px; letter-spacing: -1px;}
 .chamadasBox :before{font-size: 6.5em;}
+
+
+
+
+/******
+******* CLASSES FUNCIONAIS DEPRECATED
+******/
+/** 
+*** FLOAT E CLEAR
+**/
+.nofloat {float: none !important;}
+.fright {float: right !important;}
+.fleft {float: left !important;}
+
+.cboth {clear: both !important;}
+.cright {clear: right !important;}
+.cleft {clear: left !important;}
+
+.overflowhidden{ overflow: hidden !important;}
+
+/** 
+*** BLOCO E LINHA
+**/
+.dblock {display: block !important;}
+.dinline {display: inline !important; float: none !important;}
+.dinlineblock {display: inline-block !important; float: none !important;}
+.dnone, .hide {display: none !important;}
+
+/** 
+*** TAMANHO
+**/
+.widthauto {width: auto !important;}
+
+/** 
+*** MARGIN E PADDING
+**/
+.nomargin {margin: 0 !important;}
+.nomarginleft {margin-left: 0 !important;}
+.nomarginright {margin-right: 0 !important;}
+.nomargintop {margin-top: 0 !important;}
+.nomarginbottom {margin-bottom: 0 !important;}
+
+.nopadding {padding: 0 !important;}
+.nopaddingleft {padding-left: 0 !important;}
+.nopaddingright {padding-right: 0 !important;}
+.nopaddingtop {padding-top: 0 !important;}
+.nopaddingbottom {padding-bottom: 0 !important;}
+
+/** 
+*** ALINHAMENTO DE TEXTO
+**/
+.txtleft {text-align: left !important;}
+.txtright {text-align: right !important;}
+.txtjustify {text-align: justify !important;}
+.txtcenter {text-align: center !important;}
+
+/** 
+*** BACKGROUND E BORDA
+**/
+.noborder {border: none !important;}
+.noborderright {border-right: none !important;}
+.noborderleft {border-left: none !important;}
+.noborderbottom {border-bottom: none !important;}
+.nobordertop {border-top: none !important;}
+
+/** 
+*** CURSOR DE MOUSE
+**/
+.cursorpointer {cursor: pointer !important;}
+.cursordefault {cursor: default !important;}
+.cursorcrosshair {cursor: crosshair !important;}
+.cursormove {cursor: move !important;}
+.cursorhelp {cursor: help !important;}
+.cursorwait {cursor: wait !important;}
+.cursorinherit {cursor: inherit !important;}
+.cursortext {cursor: text !important;}
+.cursorprogress {cursor: progress !important;}
+
+.cursorgrab {
+  cursor: hand;
+  cursor: grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.cursorgrabbing {
+  cursor: grabbing;
+  cursor: -o-grabbing;
+  cursor: -ms-grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block  !important;
+}
+.nobold{font-weight: normal!important;}

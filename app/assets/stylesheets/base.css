@@ -1129,10 +1129,10 @@ hr.sep {background-color: #E5E5E5; }
   border-bottom: 10px solid #dfdfdf;
 }
 .boxWhite{
+  padding: 10px;
   border: 1px solid #e5e5e5;
   background: #fff;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  padding: 10px;
 }
