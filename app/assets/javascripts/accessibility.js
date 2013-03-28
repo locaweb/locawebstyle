@@ -1,9 +1,7 @@
 $(function(){
 
-
+	// $('.ui-datepicker-trigger').addClass('icon-calendar').html('');
 	accessMenu();
-	subMenuAccess();
-
 	subMenuAccess();
 
 	// $('select, textarea, h1, h2, h3, h4, h5, h6, p').attr('tabindex','0');
@@ -77,10 +75,6 @@ $(function(){
   })
 
 
-	$('[rel="popover"]').focus(function(){$(this).click()})
-	$('[rel="popover"]').blur(function(){$(this).click()})
-
-
 })
 
 function accessMenu(){
@@ -101,12 +95,12 @@ function subMenuAccess(){
 	$(this).parents('.parent').find('ul').attr({
 		'aria-expanded' : true,
 			 'aria-hidden': false
+		})
+	}).blur(function(){
+		$(this).parents('.parent').removeClass('focus');
+		$(this).parents('.parent').find('ul').attr({
+			'aria-expanded' : false,
+				 'aria-hidden': true
+		})
 	})
-}).blur(function(){
-	$(this).parents('.parent').removeClass('focus');
-	$(this).parents('.parent').find('ul').attr({
-		'aria-expanded' : false,
-			 'aria-hidden': true
-	})
-})
 }

@@ -220,7 +220,7 @@
 
 
 									<div class="messageInfo">
-										<div class="span2 countViews gradientGreen">
+										<div class="span2 countViews gradient">
 											<h5>envios expiram em</h5>
 											<h6>27/03/2013</h6>
 										</div>
@@ -413,7 +413,7 @@
 		<div class="boxGray">
 			<h2>Primeiros passos</h2>
 			<p>Comece aqui suas ações para as configurações do seu site.</p>
-			<div class="chamadasBox expandBox">
+			<div class="shortcutBox expandBox">
 				<div>
 						<h3 class="chamaicon-stats"><a href="#">Publique o conteúdo do site</a></h3>
 						<p><a href="#">Utiize os recursos do FTP abaixo ou acesse o nosso Gerenciador de Arquivos.</a></p>
@@ -430,7 +430,7 @@
 			<a href="#" class="lnkSeta minShortcuts" data-text="Expandir Atalhos" >Minimizar Atalhos</a>
 		</div>
 		<hr>
-		<div class="chamadasBox miniBox">
+		<div class="shortcutBox miniBox">
 			<div class="span3">
 				<h3 class="brandicon-twitter"><a href="#">Twitter</a></h3>
 			</div>
@@ -458,6 +458,7 @@
 	</div>
 </div>
 <div class="row">
+	
 	<div class="span8">
 		<div class="alert alert-notification" role="alert" tabindex="-1">
 			<strong>Notificação!</strong> Uma mensagem de notificação.
@@ -487,7 +488,31 @@
 			<strong>Notificação!</strong> Uma mensagem de notificação.
 		</div>
 	</div>
+	<div class="span8">
+		<div class="alert alert-error" role="alert" tabindex="-1">
+			<p>Uma mensagem de notificação.
+				<a href="#" class="btn">Botão</a>
+				<a href="">Link</a>
+			</p>
+		</div>
+	</div>
 </div>
+
+<hr>
+<h1>Boxes</h1>
+<div class="row">
+	<div class="span16">
+		<div class="obsGray">
+			<div class="boxWhite">
+				<p>Conteúdo</p>
+			</div>
+		</div>
+		<div class="boxArrowTop">
+			<p>Conteúdo</p>
+		</div>
+	</div>
+</div>
+
 <hr>
 <h1>Formulários</h1>
 <br>
@@ -519,10 +544,10 @@
 				<label>Tipo de autenticação:</label>
 				<div class="controls">
 					<label class="control-label">
-						<input type="radio" data-target="#authOpt" data-toggle="show" checked="checked"> Autenticado
+						<input type="radio" data-target="#authOpt" name="control" data-toggle="show" checked="checked"> Autenticado
 					</label>
 					<label class="control-label">
-						<input type="radio" data-target="#authOpt" data-toggle="hide"> Não autenticado
+						<input type="radio" data-target="#authOpt" name="control" data-toggle="hide"> Não autenticado
 					</label>
 					<div id="authOpt" class="collapse">
 						<div class="boxGrayOpt formInline">
@@ -536,12 +561,12 @@
 			<div class="row">
 				<div class="span5">
 					<div class="control-group">
-						<label class="control-label" for="inputWarning">Input without warning</label>
-						<input type="text" id="inputWarning" data-value="" class="span4">
+						<label class="control-label" for="inputNoWarning">Input without warning</label>
+						<input type="text" id="inputNoWarning" class="span4">
 					</div>
 					<div class="control-group overflowHidden">
-						<label class="control-label">Input without warning</label>
-						<select class="customSelect span4">
+						<label class="control-label" for="selectNoWarning">Input without warning</label>
+						<select class="customSelect" id="selectNoWarning" span="4">
 							<option>Opção 1</option>
 							<option>Opção 2</option>
 							<option>Opção 3</option>
@@ -550,34 +575,34 @@
 						</select>
 					</div>
 					<div class="control-group">
-						<label class="control-label">Data</label>
-						<input class="datepicker" id="" name="" size="50" type="text">
+						<label class="control-label" for="date">Data</label>
+						<input class="datepicker" id="date" name="" size="50" type="text">
 					</div>
 					<div class="control-group">
-						<label class="control-label">Senha</label>
-						<input id="" name="" size="50" type="password">
+						<label class="control-label" for="pass">Senha</label>
+						<input id="pass" name="" size="50" type="password">
 					</div>
 				</div>
 				<div class="span5">
 					<div class="control-group warning">
 						<label class="control-label" for="inputWarning">Input with warning</label>
-						<input type="text" id="inputWarning" data-value="" class="span4">
+						<input type="text" id="inputWarning" class="span4">
 						<span class="help-inline">Something may have gone wrong</span>
 					</div>
 					<div class="control-group error">
 						<label class="control-label" for="inputError">Input with error</label>
-						<input type="text" id="inputError" data-value="" class="span4">
+						<input type="text" id="inputError" class="span4">
 						<span class="help-inline">Please correct the error</span>
 					</div>
 					<div class="control-group success">
 						<label class="control-label" for="inputSuccess">Input with success</label>
-						<input type="text" id="inputSuccess" data-value="" class="span4">
+						<input type="text" id="inputSuccess" class="span4">
 						<span class="help-inline">Woohoo!</span>
 					</div>	
 				</div>
 				<div class="span5">
 					<div class="control-group overflowHidden warning">
-						<label class="control-label">Input without warning</label>
+						<label class="control-label">Select with warning</label>
 						<select class="customSelect span4">
 							<option>Opção 1</option>
 							<option>Opção 2</option>
@@ -588,7 +613,7 @@
 						<span class="help-inline">Something may have gone wrong</span>
 					</div>
 					<div class="control-group overflowHidden error">
-						<label class="control-label">Input without warning</label>
+						<label class="control-label">Select with error</label>
 						<select class="customSelect span4">
 							<option>Opção 1</option>
 							<option>Opção 2</option>
@@ -599,7 +624,7 @@
 						<span class="help-inline">Please correct the error</span>
 					</div>
 					<div class="control-group overflowHidden success">
-						<label class="control-label">Input without warning</label>
+						<label class="control-label">Select with success</label>
 						<select class="customSelect span4">
 							<option>Opção 1</option>
 							<option>Opção 2</option>
