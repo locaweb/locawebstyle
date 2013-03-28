@@ -1,6 +1,5 @@
 $(function(){
 
-	// $('.ui-datepicker-trigger').addClass('icon-calendar').html('');
 	accessMenu();
 	subMenuAccess();
 

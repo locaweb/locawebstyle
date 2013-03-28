@@ -233,7 +233,7 @@ h6 .lnkArrow {
   padding: 5px 0 0;
   margin: 0;
   height: auto;
-  font-size: 1.2em;
+  font-size: 0.8em;
 }
 
 .pagination ul {
@@ -300,7 +300,6 @@ h6 .lnkArrow {
   color: #767676;
   clear: both;
   border-bottom: 1px solid #e5e5e5;
-  font-size: 0.8em;
 }
 
 .navView.borderTop {border-top: 1px solid #e5e5e5; border-bottom: 0;}
@@ -517,6 +516,7 @@ tr.active td .boxActions {padding-top: 0;}
   margin: 0 10px;
   padding: 0;
 }
+.messageInfo .messageContent p{margin: 0 0 10px;}
 
 .messageInfo .messageContent .actionsTable{margin: 0; border: none;}
 .forceClass .messageInfo h5, .forceClass .messageInfo h5 a {
@@ -1113,7 +1113,7 @@ hr.sep {background-color: #E5E5E5; }
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  margin-top: 17px;
+  margin: 17px 0 20px;
   padding: 10px;
   position: relative;
 }

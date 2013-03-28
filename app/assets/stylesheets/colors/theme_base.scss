@@ -117,6 +117,8 @@
   border:1px solid $pallet_6;
 }
 
+#{$theme_name} .select2-results .select2-highlighted,
+#{$theme_name} .select2-results .select2-highlighted:focus,
 #{$theme_name} .btn-primary,
 #{$theme_name} .dropdown-menu li > a:hover,
 #{$theme_name} .dropdown-menu li > a:focus,

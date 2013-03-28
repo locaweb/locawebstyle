@@ -55,6 +55,7 @@ p + .boxCollapse {margin-top:30px;}
 
 .boxCollapse header  {
   border-left: 5px solid #CCC;
+  min-height: 21px;
   padding: 2px 10px 0px;
   cursor: pointer;
   outline: none;
@@ -99,7 +100,6 @@ p + .boxCollapse {margin-top:30px;}
 
 .boxCollapse header p {
   color: #767676;
-  padding: 3px 0 4px;
   margin: 0;
   outline: none;
 }
@@ -197,6 +197,7 @@ tr.active .actionsTable {display: none;}
 /***
 **** Collapse dentro de obsGray
 ***/
-.obsGray .boxCollapse{background: #f6f6f6;}
+.obsGray .boxCollapse{background-color: #f6f6f6;}
 .obsGray .boxCollapse:hover,
-.obsGray .boxCollapse.active{background: #fff;}
+.obsGray .boxCollapse.active,
+.obsGray .boxCollapse .in{background-color: #fff;}
