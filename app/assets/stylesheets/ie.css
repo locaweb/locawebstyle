@@ -20,6 +20,10 @@
 .ie8 .pathWay.steps3 li {width:33.14%;}
 .ie8 .pathWay.steps2 li {width:49.816%;}
 
+.ie8 .chooseBox a.lnkChoose,
+.ie9 .chooseBox a.lnkChoose,
+.ie7 .chooseBox a.lnkChoose {background: #FFF; filter: alpha(opacity = 0);}
+
 /***
 **** IE8 Fix 
 ***/
@@ -29,17 +33,25 @@
 .ie8 .lnkArrow:before {
   text-decoration: none !important;
 }
+.ie8 .messageInfo .countViews:after {right: 0;}
 
-.ie9 .boxCollapse {overflow:hidden;}
-.ie9 .messageInfo .countViews:after{margin-top: -12px; right: 0;}
+.ie8 .shortcutBox div {width: 29.6%;}
+.ie8 .maxBox.shortcutBox div {width: inherit;}
 
 /***
 **** Fix do IE9 para Altura dos collapses em conjunto com actionsTable que aparecia e desaparecia
 ***/
+.ie9 .boxCollapse {overflow:hidden;}
 .ie9 .boxCollapse.active, .ie9 .boxCollapse.active .in {overflow:visible; height:auto !important;}
 .ie9 #menuPrincipal > ul > li > a {font-size:13px;}
-
 
 .ie8 .progress .bar,
 .ie9 .progress .bar{filter: none;}
 .ie9 #menuPrincipal > ul > li.selected > a{padding-bottom: 11px;}
+.ie9 .messageInfo .countViews:after{margin-top: -12px; right: 0;}
+
+.ie9 .boxCollapse.active,
+.ie9 .boxCollapse.active .in {
+  overflow: visible;
+  height: auto !important;
+}

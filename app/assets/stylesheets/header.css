@@ -49,21 +49,21 @@
 #menuPrincipal > ul:after {content: " "; display: block; clear: both;}
 
 #menuPrincipal > ul > li {
+  padding: 0 5px;
   float: left;
   position: relative;
   background: #FFF url(img/dotMenuLi.gif) no-repeat right center;
-  padding: 0 5px;
 }
 
 #menuPrincipal > ul > li:first-child {padding-left: 0;}
 #menuPrincipal > ul > li:last-child {background-image: none;}
 
 #menuPrincipal > ul > li > a:after {
-  content: "";
-  display: block;
   position: absolute;
   bottom: 2px;
   left: 48.8%;
+  content: "";
+  display: block;
   margin-left: -4px;
   width: 11px;
   height: 5px;
@@ -71,13 +71,13 @@
 }
 
 #menuPrincipal > ul > li > a {
-  padding: 9px 8px;
   position: relative;
+  padding: 9px 8px;
   display: inline-block;
   color: #545454;
   text-decoration: none;
-  font: 14px 'Ubuntu', verdana, arial, tahoma, sans-serif;
   text-transform: uppercase;
+  font: 14px 'Ubuntu', verdana, arial, tahoma, sans-serif;
   border: 1px solid transparent;
   -webkit-transition: all .1s ease-in;
   -moz-transition: all .1s ease-in;
@@ -85,8 +85,6 @@
   -o-transition: all .1s ease-in;
   transition: all .1s ease-in;
 }
-
-.ie9 #menuPrincipal > ul > li > a {font-size: 13px;}
 
 #menuPrincipal > ul > li > a:hover {color: #666; background-color: transparent;}
 
@@ -319,9 +317,16 @@
   background: url(img/setaDirList.png) no-repeat left center;
   padding-left: 10px;
 }
-.listIdent li span {padding-left: 10px; display: inline-block}
+.listIdent li span {
+  padding-left: 10px; 
+  display: inline-block;
+}
 
-.dropdown-menu.listIdent .lnkArrow {margin: 10px; background-position: left 4px; padding-left: 13px;}
+.dropdown-menu.listIdent .lnkArrow {
+  margin: 10px;
+  background-position: left 4px;
+  padding-left: 13px;
+}
 
 .lnkContent{opacity: 0;}
 

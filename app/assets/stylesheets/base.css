@@ -556,8 +556,7 @@ tr.active td .boxActions {padding-top: 0;}
   top: 50%; right: 2px;
   margin-top: -20px;
 }
-.ie8 .messageInfo .countViews:after {right: 0;}
-.ie9 .messageInfo .countViews:after {margin-top: -10px;}
+
 .messageInfo p {
   color: #2a2a2a;
   margin: 0;
@@ -996,10 +995,6 @@ a.btn[class*="ico-"] {font-size: 14px;}
 .chooseBox li h4[class*=" ico-"]:before,
 .chooseBox li:hover p,
 .chooseBox li.active p { opacity: 0.7;}
-
-.ie8 .chooseBox a.lnkChoose,
-.ie9 .chooseBox a.lnkChoose,
-.ie7 .chooseBox a.lnkChoose {background: #FFF; filter: alpha(opacity = 0);}
 
 .chooseBox li:first-child {margin-left: 0;}
 

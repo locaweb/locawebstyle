@@ -20,8 +20,6 @@ p + .boxCollapse {margin-top:30px;}
   transition:all .2s linear;
 }
 
-.ie9 .boxCollapse {overflow: hidden;}
-
 .boxGray .boxCollapse {margin: 0 15px 5px;}
 
 /**
@@ -185,15 +183,6 @@ tr.active .actionsTable {display: none;}
   vertical-align: middle;
   position: relative;
   left: -5px;
-}
-
-/***
-**** Fix do IE9 para Altura dos collapses em conjunto com actionsTable que aparecia e desaparecia
-***/
-.ie9 .boxCollapse.active,
-.ie9 .boxCollapse.active .in {
-  overflow: visible;
-  height: auto !important;
 }
 
 .boxCollapse hr,
