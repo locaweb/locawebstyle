@@ -4,7 +4,7 @@
 @media screen and (max-width:767px) {
   #select_themes {display: none;}
   
-  body { padding:0 !important;}
+  body {padding:0 !important;}
   body:after {content:" "; display:block; clear:both;}
   
   .select_themes {display: none;}

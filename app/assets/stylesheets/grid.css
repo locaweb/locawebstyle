@@ -50,12 +50,17 @@
 .span1 {width: 43px;}
 
 /*input.input120, input.span2 {width:90px !important;}*/
-.simpleFilter .searchInput {max-width:145px !important;}
+.simpleFilter .searchInput {max-width: 145px !important;}
 
-.span14 {width:840px;}
+.span14 {width: 840px;}
 
 .revisit .shortcutBox h3{ font: 100 18px UbuntuLight, verdana, arial, tahoma, sans-serif; line-height: 25px; letter-spacing: -1px;}
-.statusMessageBox .overflowMessage {overflow:hidden; position:relative; min-width:10%; max-width:37%;}
+.statusMessageBox .overflowMessage {
+  overflow: hidden;
+  position: relative;
+  min-width: 10%;
+  max-width: 37%;
+}
 
 /** Desktop
 *** Passando de 1220px
@@ -67,7 +72,7 @@
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {width: 1180px !important;}
 
-  .pathWay li a, .pathWay li.disable:hover a {font-size:20px;}
+  .pathWay li a, .pathWay li.disable:hover a {font-size: 20px;}
 
   .span16 {width: 1180px;}
   .span15 {width: 1105px;}
@@ -86,7 +91,7 @@
   .span2 {width: 130px;}
   .span1 {width: 55px;}
 
-  .revisit .shortcutBox h3{ font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;}
+  .revisit .shortcutBox h3 {font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;}
 
 }
 
