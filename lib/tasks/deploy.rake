@@ -6,6 +6,7 @@ namespace :deploy do
     update_version(args[:version])
     precompile
     package(args[:version])
+    git_commit_and_tag(args[:version])
   end
 
   def update_version(version)
@@ -39,6 +40,13 @@ namespace :deploy do
     puts "#{@agent} Compiling assets..."
     Rake::Task["assets:precompile"].invoke
     puts "#{@agent} Assets fully compiled!"
+  end
+
+  def git_commit_and_tag(version)
+    puts "#{@agent} Let's commit it..."
+    sh %{git add . &&
+         git commit -m "bump de versão: #{version}" &&
+         git tag -a "#{version}" -m "" }
   end
 
   task :clean do
