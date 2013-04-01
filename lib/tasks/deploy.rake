@@ -27,9 +27,9 @@ namespace :deploy do
          mv {application,locastyle}.css.gz &&
          mv {application,locastyle}.js &&
          mv {application,locastyle}.js.gz &&
-         rm manifest.yml &&
-         rm .DS_Store &&
-         rm -r manual/ &&
+         rm -f manifest.yml &&
+         rm -f .DS_Store &&
+         rm -rf manual/ &&
          rm bootstrap/customize-bootstrap.png &&
          zip -r #{version}.zip . &&
          cp #{version}.zip edge.zip }
