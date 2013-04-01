@@ -116,7 +116,7 @@ h3 + .alert {margin-top: 15px;}
 .alert a.btn,
 .alert a.btn:hover{color: #333;}
 .alert a[class*="btn-"],
-.alert a[class*="btn-"]:hover.{color: #fff;}
+.alert a[class*="btn-"]:hover{color: #fff;}
 
 .titError {
   background: url(img/icoerro_404.png) no-repeat left center;
@@ -903,7 +903,7 @@ td .progress {max-width: 70px;}
 .alert {font-size: 0.75em;}
 .alert p{
   color: inherit;
-  font-size: inherit;  
+  font-size: inherit;
   margin: 0;
 }
 .forceClass .alert .close {text-decoration: none; border: none;}
