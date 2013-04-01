@@ -111,12 +111,23 @@ h3 + .alert {margin-top: 15px;}
   margin-right: 10px;
 }
 
-.alert h5 + p {margin: 3px 0 0 23px;}
-.forceClass .alert a.btn{text-decoration: none;}
+.alert h5 + p {
+  margin: 3px 0 0 23px;
+}
+
+.forceClass .alert a.btn {
+  text-decoration: none;
+}
+
 .alert a.btn,
-.alert a.btn:hover{color: #333;}
+.alert a.btn:hover {
+  color: #333;
+}
+
 .alert a[class*="btn-"],
-.alert a[class*="btn-"]:hover{color: #fff;}
+.alert a[class*="btn-"]:hover {
+  color: #fff;
+}
 
 .titError {
   background: url(img/icoerro_404.png) no-repeat left center;
