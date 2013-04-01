@@ -51,8 +51,12 @@ namespace :deploy do
   end
 
   task :clean do
+    puts "#{@agent} Removing all compiled assets..."
+    Rake::Task["assets:clean"].invoke
+    puts "#{@agent} Put some Locastyle files back..."
+    sh %{git checkout -f}
     puts "#{@agent} Cleaning deployment related files from repo..."
     sh %{rm -r public/deploy/}
-    puts "#{@agent} Deployment related files cleaned."
+    puts "#{@agent} Deployment related files cleaned, you are good to go!"
   end
 end
