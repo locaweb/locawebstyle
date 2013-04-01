@@ -47,6 +47,7 @@ namespace :deploy do
     sh %{git add . &&
          git commit -m "bump de versão: #{version}" &&
          git tag -a "#{version}" -m "" }
+    puts "#{@agent} Done, now to push the code is up to you."
   end
 
   task :clean do
