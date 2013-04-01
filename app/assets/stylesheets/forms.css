@@ -142,7 +142,7 @@ label.nomarginleft {margin-left: 0 !important;}
   background: url(img/indicadorTopBoxGrayInput.png) no-repeat;
 }
 
-label.checkbox.control-label, label.checkbox.control-label: first-child {
+label.checkbox.control-label, label.checkbox.control-label:first-child {
   margin: 0 0 0 110px;
   width: inherit;
 }
