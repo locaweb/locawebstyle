@@ -110,8 +110,8 @@
   background-color: $pallet_5;
 }
 
-#{$theme_name} .chooseBox .active:after { border-top: 13px solid $pallet_5;}
-#{$theme_name} .chooseBox .active:before {border-top: 15px solid $pallet_6;}
+#{$theme_name} .chooseBox .active:after { border-top: 13px solid $pallet_6;}
+#{$theme_name} .chooseBox .active:before {border-top: 15px solid $pallet_1;}
 #{$theme_name} .chooseBox li:hover,
 #{$theme_name} .chooseBox li.active {
   border:1px solid $pallet_6;
@@ -136,15 +136,15 @@
 #{$theme_name} .shortcutBox div:hover,
 #{$theme_name} .chooseBox li:hover,
 #{$theme_name} .chooseBox li.active {
-  border-color: $pallet_6;
+  border-color: $pallet_1;
   background: #fdfcfa;
-  background: -moz-linear-gradient(top,  #ffffff 0%, $pallet_5 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,$pallet_5));
-  background: -webkit-linear-gradient(top,  #ffffff 0%,$pallet_5 100%);
-  background: -o-linear-gradient(top,  #ffffff 0%,$pallet_5 100%);
-  background: -ms-linear-gradient(top,  #ffffff 0%,$pallet_5 100%);
-  background: linear-gradient(to bottom,  #ffffff 0%,$pallet_5 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$pallet_5',GradientType=0 );
+  background: -moz-linear-gradient(top,  #ffffff 0%, $pallet_6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,$pallet_6));
+  background: -webkit-linear-gradient(top,  #ffffff 0%,$pallet_6 100%);
+  background: -o-linear-gradient(top,  #ffffff 0%,$pallet_6 100%);
+  background: -ms-linear-gradient(top,  #ffffff 0%,$pallet_6 100%);
+  background: linear-gradient(to bottom,  #ffffff 0%,$pallet_6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$pallet_6',GradientType=0 );
 }
 
 #{$theme_name}  .gradient{
