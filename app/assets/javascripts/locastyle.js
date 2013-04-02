@@ -30,6 +30,7 @@ Locastyle = (function() {
       this.minShortcutsCookieSetter();
       this.minShortcutsCookieHandler();
       this.coverAllLink(dom_scope);
+      this.linkPreventDefault();
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -252,7 +253,7 @@ Locastyle = (function() {
     },
 
     initCustomSelect: function(dom_scope){
-      $(".customSelect").select2();
+      $("select.customSelect").select2();
     },
 
     notificationInfoSet: function(){
@@ -312,6 +313,14 @@ Locastyle = (function() {
       });
 
       $('[data-toggle=show]', dom_scope).filter(':checked').change();
+    },
+
+    linkPreventDefault: function(){
+      $("a").on("click", function(e){
+        if($(this).attr("href") === "" || $(this).attr("href") === "#"){
+          e.preventDefault();
+        }
+      })
     },
 
     clearForms: function(dom_scope) {
