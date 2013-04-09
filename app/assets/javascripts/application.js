@@ -18,4 +18,5 @@
 //= require analytics_trackevent
 //= require browser-detect
 //= require passwordStrength
+//= require accessibility
 // APP >

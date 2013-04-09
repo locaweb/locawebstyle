@@ -31,7 +31,7 @@ $(function(){
 	$('a.btn, .modal-header .close').attr('role','button');
 	$('.boxGray').attr('role','region');
 	$('.boxGray h2').attr('role','presentation');
-	$('.header').attr('role','banner');
+	$('.headerPrincipal').attr('role','banner');
 	$('.content').attr('role','main'); // criar essa classe nos produtos ??
 	$('.sidebar').attr('role','complementary');
 	$('input.required').attr('aria-required','true');

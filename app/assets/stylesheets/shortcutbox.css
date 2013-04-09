@@ -135,3 +135,24 @@
   width: 56px;
   min-height: 56px;
 }
+.maxBox{margin-left: 0;}
+.maxBox div{
+  padding: 50px 0;
+  min-height: 100px;
+  text-align: left;
+  width: inherit;
+}
+.shortcutBox.maxBox h3 a{max-width: none;}
+.shortcutBox.maxBox div h3,
+.maxBox span,
+.shortcutBox.maxBox div p{
+  margin-left: 200px;
+}
+.shortcutBox.maxBox div h3{font-size: 1.75em; padding: 0; letter-spacing: -0.6px;}
+.shortcutBox.maxBox div p{font-size: 14px; margin-bottom: 10px;}
+.shortcutBox.maxBox :before{
+  position: absolute;
+  left: 30px;
+  font-size: 150px;
+  top: 30px;
+}
