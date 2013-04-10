@@ -85,7 +85,7 @@ p + .boxCollapse {margin-top:30px;}
 .boxCollapse .collapse::before {
   content: "";
   display: block;
-  padding: 20px 0 0;
+  padding: 10px 0 0;
 }
 
 .boxCollapse.whiteCollapse .collapse::before {padding: 10px 0 0;}
@@ -116,10 +116,11 @@ p + .boxCollapse {margin-top:30px;}
 .boxCinzaInner p + div.control-group {margin-top: 20px;}
 
 .boxCollapse .tableList {
-  margin-top: 0.9em;
+  margin-top: 0;
   margin-bottom: 0.1em;
   border-collapse: separate;
   background: #FFF;
+  border-bottom: none;
 }
 
 .boxCollapse table td {

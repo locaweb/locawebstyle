@@ -210,6 +210,10 @@ h6 .lnkArrow {
 .innerSideBox + .lnkArrow {margin: -5px 0 10px 10px;}
 .shortcutBox + .lnkArrow {position: relative; top: -5px;}
 
+.forceClass .lnkArrowWhite,
+.forceClass .lnkArrowWhite:hover
+{color: #fff;}
+
 /** BOX COM FUNDO CINZA
 *** geralmente tem um collapseGroup dentro
 **/
@@ -863,6 +867,10 @@ td .progress {max-width: 70px;}
   -o-text-overflow: ellipsis;
   -ms-text-overflow: ellipsis;
   text-overflow: ellipsis;
+}
+/* quando nao existir conteudo no titulo */
+.popover .popover-title:empty{
+  display: none;
 }
 
 /*** COLLAPSE
