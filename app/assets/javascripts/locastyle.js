@@ -5,7 +5,6 @@ Locastyle = (function() {
       this.toggleTextOnHover(dom_scope);
       this.datePickerSetup(dom_scope, this.datePickerOptions);
       this.numbersOnly(dom_scope);
-      this.collapseActivate(dom_scope);
       this.activateCollapseOnShown(dom_scope);
       this.deactivateCollapseOnHide(dom_scope);
       this.htmlForceClass(dom_scope);
@@ -79,23 +78,15 @@ Locastyle = (function() {
     activateCollapseOnShown: function(dom_scope) {
       var self = this;
       $('.collapse', dom_scope).on('shown', function(){
-        self.collapseActivate();
+        $(this).parents(".boxCollapse").addClass("active");
       });
     },
 
     deactivateCollapseOnHide: function(dom_scope) {
       var self = this;
       $('.collapse', dom_scope).on('hide', function(){
-        self.collapseDeactivate();
+        $(this).parents(".boxCollapse").removeClass("active");
       });
-    },
-
-    collapseActivate: function(dom_scope) {
-      $(".collapse.in", dom_scope).parents(".boxCollapse").addClass("active");
-    },
-
-    collapseDeactivate: function() {
-      $(".collapse.in").parents(".boxCollapse").removeClass("active");
     },
 
     htmlForceClass: function(dom_scope) {
