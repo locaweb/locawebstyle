@@ -36,7 +36,7 @@ $(function(){
 	$('.sidebar').attr('role','complementary');
 	$('input.required').attr('aria-required','true');
 	$('.lnkCoverAll').attr('tabindex','3');
-	$('.shortcutBox h3 > a').attr('aria-hidden','true');
+	//$('.shortcutBox h3 > a').attr('aria-hidden','true');
 
 
 	//
@@ -60,6 +60,7 @@ $(function(){
 		$(this).prepend('<a href="#" role="button" aria-haspopup="true" aria-controls="'+target+'" aria-label="'+title+'" title="'+title+'" class="lnkCollapse" tabindex="3"></a>');
 	})
 	$('.collapse').find('[tabindex="3"]').attr('tabindex','0');
+	$('.collapse.in').find('[tabindex="0"]').attr('tabindex','3');
 
 	//Notificaçao
 	$('.flash_alert, .focusOn').attr('tabindex','-1').focus();
@@ -72,9 +73,24 @@ $(function(){
 		    scrollTop: $(".titleContent").offset().top
 		}, 500);
   })
+
+  // Selecao de servicos no header
   $('.dropdown-menu li:last-child a').blur(function(){
   	$(this).parents('.dropdown-menu').siblings('.dropdown-toggle').click();
   	$('.serviceName a').focus();
+  })
+
+  // Insere link sobre as chamadas
+  $('.shortcutBox > div').each(function(){
+    var title = $(this).find('p').text()
+    $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll').attr('title',title).attr('aria-label',title).attr('tabindex', '3') );
+  })
+
+  // Ativa visualmente as chamadas ao receber o foco do teclado
+  $('.shortcutBox a').focus(function(){
+  	$(this).parents('div:first').addClass('active');
+  }).blur(function(){
+  	$('.shortcutBox > div').removeClass('active')
   })
 
 

@@ -38,6 +38,7 @@
 #{$theme_name} .pathWay li.active b,
 #{$theme_name} .pathWay li:hover b,
 #{$theme_name} .shortcutBox :hover :before,
+#{$theme_name} .shortcutBox .active :before,
 #{$theme_name} .chooseBox li:hover [class^="ico-"]:before,
 #{$theme_name} .chooseBox li:hover [class*="ico-"]:before,
 #{$theme_name} .chooseBox li.active [class^="ico-"]:before,
@@ -54,7 +55,8 @@
 #{$theme_name} .chooseBox li.active p,
 #{$theme_name} .shortcutBox div:hover p a,
 #{$theme_name} .shortcutBox div:hover p,
-#{$theme_name} .shortcutBox div.active p {
+#{$theme_name} .shortcutBox div.active p,
+#{$theme_name} .shortcutBox div:active p a {
   color: $pallet_3
 }
 

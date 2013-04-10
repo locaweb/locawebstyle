@@ -90,7 +90,6 @@ p + .boxCollapse {margin-top:30px;}
 
 .boxCollapse.whiteCollapse .collapse::before {padding: 10px 0 0;}
 
-.boxCollapse header > a {outline: none;}
 
 .boxCollapse header h4 {
   font: 0.85em verdana, arial, tahoma, sans-serif;

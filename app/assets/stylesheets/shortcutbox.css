@@ -26,6 +26,7 @@
   background: linear-gradient(to bottom,  #f8f8f8 0%,#c6c6c6 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#c6c6c6',GradientType=0 );
 }
+.shortcutBox h3 a:focus{outline: none;}
 
 /** Hover padrão **/
 .shortcutBox div:hover {
