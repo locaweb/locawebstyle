@@ -71,7 +71,10 @@ $(function(){
     $('html, body').animate({
 		    scrollTop: $(".titleContent").offset().top
 		}, 500);
-    
+  })
+  $('.dropdown-menu li:last-child a').blur(function(){
+  	$(this).parents('.dropdown-menu').siblings('.dropdown-toggle').click();
+  	$('.serviceName a').focus();
   })
 
 

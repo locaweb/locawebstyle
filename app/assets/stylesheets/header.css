@@ -329,5 +329,32 @@
 }
 
 .lnkContent{opacity: 0;}
-
 .lnkContent:focus{opacity: 1;}
+
+.headerPrincipal .nav-pills .dropdown-menu,
+.headerPrincipal .dropdown-toggle{
+  font-size: 0.75em;
+}
+.headerPrincipal .open .dropdown-toggle:hover{color: #fff;}
+.headerPrincipal .dropdown-toggle,
+.headerPrincipal .dropdown-toggle:hover,
+.headerPrincipal .dropdown-toggle .caret{
+  color: #000;
+}
+.headerPrincipal .dropdown-toggle {font-weight: bold;}
+.headerPrincipal .nav .dropdown-toggle .caret{
+  border-top-color: #000;
+}
+.headerPrincipal .nav > li > a:focus{background-color: #eee;}
+.headerPrincipal .nav > li.open > a:focus{background-color: #999;}
+.headerPrincipal .nav-pills{
+  position: absolute;
+  top: 12px;
+  left: -12px;
+}
+.headerPrincipal .lnkAll.lnkArrow{
+  border-left: 1px solid #cecece;
+  display: inline-block;
+  padding: 0 0 0 10px;
+  margin: 55px 0 0 10px;
+}

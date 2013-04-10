@@ -10,7 +10,8 @@
 #{$theme_name} .carousel-control,
 #{$theme_name} .serviceName a,
 #{$theme_name} .innerSideBox [class^="ico-"],
-#{$theme_name} .innerSideBox [class*="ico-"] {
+#{$theme_name} .innerSideBox [class*="ico-"],
+#{$theme_name} .listWhite li a:before {
   color: $pallet_1;
 }
 
@@ -161,6 +162,15 @@
 #{$theme_name} .pagination .active a {
   border-color: $pallet_1;
   background-color: $pallet_1;
+  background-image: -moz-linear-gradient(top,  $pallet_1 0%, $pallet_2 100%);
+  background-image: -webkit-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
+  background-image: -o-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
+  background-image: -ms-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
+  background-image: linear-gradient(to bottom,  $pallet_1 0%,$pallet_2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_1', endColorstr='$pallet_2',GradientType=0 );
+}
+#{$theme_name} .progress .bar{
+  background-color: $pallet_2;
   background-image: -moz-linear-gradient(top,  $pallet_1 0%, $pallet_2 100%);
   background-image: -webkit-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
   background-image: -o-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
