@@ -78,7 +78,7 @@
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
 }
-.listWhite [class^="ico-"]:before, 
+.listWhite [class^="ico-"]:before,
 .listWhite [class*="ico-"]:before{
   left: 5px;
   font-size: 0.9em;
@@ -87,10 +87,10 @@
 .listWhite li a {
   color:inherit!important;
   padding: 3px 10px 3px 15px;
-  
+
   font: 12px verdana, tahoma, arial, sans-serif;
   display: inline-block;
-  
+
 }
 
 .listWhite li a:before {
@@ -109,7 +109,7 @@
 /** FIM LISTA BRANCA **/
 .sidebar .carousel {margin:0;}
 .sidebar .carousel ul {margin:0;}
-.sidebar .carousel-inner .item {height:185px;}
+/*.sidebar .carousel-inner .item {height:185px;}*/
 .sidebar .carousel-inner { list-style-position:  inside;  }
 .sidebar .carousel h5,
 .sidebar .carousel p {
@@ -138,7 +138,7 @@
   border-top:1px solid #e9e9e9;
 }
 .carouselNav i {font-style:normal; padding-right: 2px;}
-.carouselNav [class^="ico-"]:before, 
+.carouselNav [class^="ico-"]:before,
 .carouselNav [class*="ico-"]:before{
   top: 0;
 }
