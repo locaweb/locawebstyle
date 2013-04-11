@@ -47,16 +47,17 @@ html, body {
 *** Text basic styles
 **/
 h1, h2, h3, h4, h5, h6 {color: #000; margin: 0;}
-h1 {font: 26px UbuntuMedium, Ubuntu, arial, verdana, tahoma, sans-serif;}
-h2 {font: 24px UbuntuLight, Ubuntu, arial, verdana, tahoma, sans-serif;}
-h3, legend {font: 20px Ubuntu, arial, verdana, tahoma, sans-serif;}
+h1 {font: 30px UbuntuMedium, Ubuntu, arial, verdana, tahoma, sans-serif;}
+h2 {font: 26px UbuntuLight, Ubuntu, arial, verdana, tahoma, sans-serif;}
+h3, legend {font: 22px Ubuntu, arial, verdana, tahoma, sans-serif;}
 h4 {font: 18px UbuntuLight, arial, verdana, tahoma, sans-serif; margin-bottom: 5px;}
-h3 + h4 {margin-top: 15px;}
-h5 {font: 15px UbuntuMedium, arial, verdana, tahoma, sans-serif;}
+h5 {font: 14px UbuntuMedium, arial, verdana, tahoma, sans-serif;}
 h6 {
-    font: 1.14em Ubuntu, arial, verdana, tahoma, sans-serif;
+    font: 12px Ubuntu, arial, verdana, tahoma, sans-serif;
     text-transform: inherit;
 }
+
+h3 + h4 {margin-top: 15px;}
 
 legend {border-bottom: none; padding-bottom: 5px;}
 
