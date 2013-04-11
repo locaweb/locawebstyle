@@ -29,6 +29,11 @@ Locastyle = (function() {
       this.minShortcutsCookieHandler();
       this.coverAllLink(dom_scope);
       this.linkPreventDefault();
+      this.popover(dom_scope);
+    },
+
+    popover: function(dom_scope){
+      $("[rel=popover]").popover()
     },
 
     toggleTextOnClick: function(dom_scope) {
