@@ -66,6 +66,7 @@ Locastyle = (function() {
 
     datePickerSetup: function(dom_scope, options) {
       $('.datepicker', dom_scope).datepicker(options);
+      $('.ui-datepicker-trigger', dom_scope).addClass('icon-calendar').html('');
     },
 
     numbersOnly: function(dom_scope) {
