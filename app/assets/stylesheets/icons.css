@@ -25,6 +25,8 @@
   font-size: 1.1em;
 }
 
+.btn[class^="ico-"]:before, .btn[class*="ico-"]:before {top: 0;}
+
 h1[class^="ico-"]:before,
 h2[class^="ico-"]:before,
 h3[class^="ico-"]:before,

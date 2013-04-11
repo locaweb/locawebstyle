@@ -2,7 +2,8 @@
 .btn-group > .btn + .dropdown-toggle {vertical-align: bottom;}
 
 [class*="btn"] {
-  font-family: Ubuntu, verdana, arial, helvetica, tahoma, sans-serif;
+	line-height: normal;
+  	font-family: Ubuntu, verdana, arial, helvetica, tahoma, sans-serif;
 }
 
 .btn {border-radius: 3px; padding: 4px 12px;}

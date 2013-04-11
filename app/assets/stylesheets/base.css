@@ -960,9 +960,6 @@ td .progress {max-width: 70px;}
 
 .forceClass a.lnkNoShow:hover {color: #000; text-decoration: underline !important;}
 
-a[class*="ico-"] {font-size: 12px;}
-a.btn[class*="ico-"] {font-size: 14px;}
-
 .forceClass .control-group.warning input[type="text"],
 .forceClass .control-group.warning input[type="password"],
 .forceClass .control-group.warning input[type="number"],
