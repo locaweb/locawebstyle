@@ -14,7 +14,6 @@ Locastyle = (function() {
       this.preventDefaultOnDisabled(dom_scope);
       this.openCollapsesWithError(dom_scope);
       this.autoOpenModal(dom_scope);
-      this.modalSliderSetupBind(dom_scope);
       this.pathWayStepCounter(dom_scope);
       this.setListDetailSeparator();
       this.advancedSearchValueHandler(dom_scope);
@@ -121,46 +120,6 @@ Locastyle = (function() {
 
     autoOpenModal: function(dom_scope) {
       $(".modalAutoOpen").modal("show");
-    },
-
-    modalSliderSetupBind: function(dom_scope) {
-      var self = this;
-      var btnPrev = ".modal [data-slide='prev']";
-      var btnSave = ".modal .modal-footer .btn.btn-primary";
-      $("[data-toggle='modal']").on("click", function(){
-        self.setupModalSlider(btnPrev);
-        self.hideElement(btnSave);
-      });
-      self.modalSliderActionController();
-    },
-
-    setupModalSlider: function(element) {
-      var self = this;
-      self.hideElement(element);
-    },
-
-    modalSliderActionController: function(dom_scope) {
-      var self = this;
-      var btnPrev = ".modal.in [data-slide='prev']";
-      var btnSave = ".modal .modal-footer .btn.btn-primary";
-      var btnNext = ".modal.in [data-slide='next']";
-
-      $(".carousel").on("slid", function(dom_scope) {
-        if ($(".item:first-child").is(".active")) {
-          self.hideElement(btnPrev);
-        } else {
-          self.showElement(btnPrev);
-        }
-
-        if ($(".item:last-child").is(".active")) {
-          self.hideElement(btnNext);
-          self.showElement(btnSave);
-        } else {
-          self.showElement(btnNext);
-          self.hideElement(btnSave);
-        }
-
-      });
     },
 
     showElement: function(element) {
