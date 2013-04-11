@@ -920,7 +920,10 @@ td .progress {max-width: 70px;}
 /*** ALERTAS
 **** Alertas para retornos e notificações
 ***/
-.alert {font-size: 0.75em;}
+.alert {
+  font-size: 0.75em;
+  padding: 8px 14px;
+}
 .alert p{
   color: inherit;
   font-size: inherit;
