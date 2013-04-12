@@ -63,7 +63,7 @@ $(function(){
 	$('.collapse.in').find('[tabindex="0"]').attr('tabindex','3');
 
 	//Notificaçao
-	$('.flash_alert, .focusOn').attr('tabindex','-1').focus();
+	$('.flash_alert, .focusOn, .modal').attr('tabindex','-1').focus();
 
 	//Ir para o conteudo
 	$('.lnkContent').on('click',function(e){
@@ -92,6 +92,8 @@ $(function(){
   }).blur(function(){
   	$('.shortcutBox > div').removeClass('active')
   })
+
+
 
 
 })

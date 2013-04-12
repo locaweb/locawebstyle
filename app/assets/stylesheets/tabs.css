@@ -62,3 +62,8 @@
 .tab-content .tab-pane {padding: 20px 10px 10px;}
 
 .tab-content.noborder {border: none;}
+.tabs .searchInput {
+  height: 17px;
+  margin: 2px 0 0;
+}
+.tabs .btn-small{padding: 2px 12px;}

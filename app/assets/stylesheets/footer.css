@@ -47,11 +47,6 @@ footer#footer {
 #footer ul li.ico-Chat {background-image: url(img/icoChat.png);}
 #footer ul li.ico-Telefone {background-image: url(img/icoTelefone.png);}
 
-#footer nav .lnkArrow {
-  margin: 15px 20px 0;
-  color:#FFF;
-}
-
 .subfooter {
   padding: 10px 0;
   color: #545454;

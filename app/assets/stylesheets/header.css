@@ -354,7 +354,7 @@
 }
 .headerPrincipal .lnkAll.lnkArrow{
   border-left: 1px solid #cecece;
-  display: inline-block;
+  float: left;
   padding: 0 0 0 10px;
   margin: 55px 0 0 10px;
 }

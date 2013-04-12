@@ -118,7 +118,7 @@ table.txtRight td, table.txtRight th {text-align: right;}
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  display: block  !important;
+  display: inline-block  !important;
 }
 .noBold {font-weight: normal!important;}
 .noBgHover {background: none!important;}

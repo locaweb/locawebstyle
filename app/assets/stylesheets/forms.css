@@ -327,7 +327,10 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
   padding-left: 35px;
 }
 .simpleFilter .control-group.fright {padding-right: 0;}
-
+.tabs .searchInput {
+  height: 17px;
+  margin: 2px 0 0;
+}
 .datetime select {width: 100px;}
 
 .hint {

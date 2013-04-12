@@ -214,6 +214,10 @@ h5 + .innerSideBox {margin-top:5px;}
 .boxSidebarTitle .ico-thumbs-up-1{
   margin: 5px;
 }
+.boxSidebarTitle i.ico-list,
+.boxSidebarTitle i.ico-code{font-size: 1.16em;}
+.boxSidebarTitle i.ico-code{margin: 6px 0 0 7px;}
+
 .innerSideBox .lnkArrow {font-size: 1em;}
 .innerSideBox small{font-size: 0.9em; line-height: 1.1em; }
 .sidebar .progress{margin: 0;}
