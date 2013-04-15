@@ -133,6 +133,7 @@
   min-height: 76px;
 }
 .smallMiniBox div {
+  border-width: 2px;
   width: 56px;
   min-height: 56px;
 }
@@ -141,7 +142,11 @@
   padding: 50px 0;
   min-height: 100px;
   text-align: left;
-  width: inherit;
+  width: 99%;
+}
+.forceClass .shortcutBox.maxBox div:hover [class*="ico-"]:before,
+.forceClass .shortcutBox.maxBox div:hover [class^="ico-"]:before{
+  color: #fff;
 }
 .shortcutBox.maxBox h3 a{max-width: none;}
 .shortcutBox.maxBox div h3,
@@ -151,7 +156,7 @@
 }
 .shortcutBox.maxBox div h3{font-size: 1.75em; padding: 0; letter-spacing: -0.6px;}
 .shortcutBox.maxBox div p{font-size: 14px; margin-bottom: 10px;}
-.shortcutBox.maxBox :before{
+.shortcutBox.maxBox h3:before{
   position: absolute;
   left: 30px;
   font-size: 150px;

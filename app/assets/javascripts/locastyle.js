@@ -92,7 +92,7 @@ Locastyle = (function() {
       var self = this;
       $('.collapse', dom_scope).on('hide', function(){
         $(this).parents(".boxCollapse").removeClass("active");
-        $(this).parents(".boxCollapse").find('[tabindex="3"]').attr('tabindex','0');
+        $(this).parents(".collapse").find('[tabindex="3"]').attr('tabindex','0');
       });
     },
 

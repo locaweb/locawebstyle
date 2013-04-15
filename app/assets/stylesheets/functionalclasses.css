@@ -122,6 +122,11 @@ table.txtRight td, table.txtRight th {text-align: right;}
 }
 .noBold {font-weight: normal!important;}
 .noBgHover {background: none!important;}
+.noRadius{
+  border-radius: 0!important;
+  -moz-border-radius: 0!important;
+  -webkit-border-radius: 0!important;
+}
 
 /** COLORS **/
 .bgWhite {background: white!important;}

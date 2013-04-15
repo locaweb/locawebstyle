@@ -784,7 +784,12 @@ td .progress {max-width: 70px;}
   font-size:8px;
   font-family:verdana;
 }
-.progress .bar b {display: inline-block; padding: 0 3px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);}
+.progress .bar b {
+  color: #fff;
+  display: inline-block; 
+  padding: 0 3px; 
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
 
 
 /** Caixa Cinza que geralmente vem abaixo de títulos **/
