@@ -38,6 +38,8 @@ $(function(){
 	$('.lnkCoverAll').attr('tabindex','3');
 	//$('.shortcutBox h3 > a').attr('aria-hidden','true');
 
+	$('.lnkCoverAll .btn').attr('tabindex','0');
+
 
 	//
 	// TABS
@@ -81,10 +83,10 @@ $(function(){
   })
 
   // Insere link sobre as chamadas
-  $('.shortcutBox > div').each(function(){
-    var title = $(this).find('p').text()
-    $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll').attr('title',title).attr('aria-label',title).attr('tabindex', '3') );
-  })
+  // $('.shortcutBox > div').each(function(){
+  //   var title = $(this).find('p').text()
+  //   $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll').attr('title',title).attr('aria-label',title).attr('tabindex', '3') );
+  // })
 
   // Ativa visualmente as chamadas ao receber o foco do teclado
   $('.shortcutBox a').focus(function(){

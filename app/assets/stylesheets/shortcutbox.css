@@ -76,15 +76,10 @@
 .shortcutBox div p {
   font: 12px verdana, arial, tahoma, sans-serif;
   margin: 0 auto;
-  margin: 0 7px;
   padding: 0;
 }
 .shortcutBox div:hover p {opacity: 0.7;}
-.shortcutBox div p a {
-  color: #767676;
-  display: block;
-  padding: 0px 20px 15px;
-}
+
 
 /*** MINI BOX
 **** Quando não tem P e quando o box é pequeno
@@ -119,14 +114,11 @@
 **** Esse link é inserido via JQuery. ;-(
 ***/
 .lnkCoverAll {
-  text-indent: -9999px;
-  width: 100%;
-  height: 100%;
+  width: 77%;
+  height: 68%;
   position: absolute;
   top: 0; left: 0;
 }
-
-.lnkCoverAll br {display: none;}
 
 .smallBox div {
   width: 76px;
@@ -138,22 +130,20 @@
   min-height: 56px;
 }
 .maxBox{margin-left: 0;}
-.maxBox div{
-  padding: 50px 0;
-  min-height: 100px;
+.maxBox div,
+.maxBox .lnkCoverAll{
+  padding: 50px 0 20px 200px;
+  min-height: 150px;
   text-align: left;
-  width: 99%;
 }
+.maxBox .lnkCoverAll{ display: block; cursor: pointer;}
+.forceClass .shortcutBox.maxBox div.active [class*="ico-"]:before,
+.forceClass .shortcutBox.maxBox div.active [class^="ico-"]:before,
 .forceClass .shortcutBox.maxBox div:hover [class*="ico-"]:before,
 .forceClass .shortcutBox.maxBox div:hover [class^="ico-"]:before{
   color: #fff;
 }
 .shortcutBox.maxBox h3 a{max-width: none;}
-.shortcutBox.maxBox div h3,
-.maxBox span,
-.shortcutBox.maxBox div p{
-  margin-left: 200px;
-}
 .shortcutBox.maxBox div h3{font-size: 1.75em; padding: 0; letter-spacing: -0.6px;}
 .shortcutBox.maxBox div p{font-size: 14px; margin-bottom: 10px;}
 .shortcutBox.maxBox h3:before{

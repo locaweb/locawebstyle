@@ -84,7 +84,7 @@ Locastyle = (function() {
       var self = this;
       $('.collapse', dom_scope).on('shown', function(){
         $(this).parents(".boxCollapse").addClass("active");
-        $(this).parents(".boxCollapse").find('[tabindex="0"]').attr('tabindex','3');
+        $(this).find('[tabindex="0"]').attr('tabindex','3');
       });
     },
 
@@ -92,7 +92,7 @@ Locastyle = (function() {
       var self = this;
       $('.collapse', dom_scope).on('hide', function(){
         $(this).parents(".boxCollapse").removeClass("active");
-        $(this).parents(".collapse").find('[tabindex="3"]').attr('tabindex','0');
+        $(this).find('[tabindex="3"]').attr('tabindex','0');
       });
     },
 
