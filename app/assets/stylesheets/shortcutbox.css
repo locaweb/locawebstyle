@@ -6,14 +6,12 @@
 
 .shortcutBox div {
   width: 30.2%;
-  min-height: 250px;
   text-align: center;
   border:3px solid #b7b7b7;
   border-radius: 10px;
   display: inline-block;
   margin-right: 1.9%;
   margin-bottom: 20px;
-  padding: 20px 0;
   position: relative;
   vertical-align: top;
   background: #f8f8f8;
@@ -26,7 +24,32 @@
   background: linear-gradient(to bottom,  #f8f8f8 0%,#c6c6c6 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#c6c6c6',GradientType=0 );
 }
-.shortcutBox h3 a:focus{outline: none;}
+.shortcutBox div > a,
+.shortcutBox div{
+  min-height: 250px;
+  
+}
+.shortcutBox.miniBox div,
+.shortcutBox.miniBox div > a,
+.shortcutBox.maxBox div > a
+.shortcutBox.smallBox div,
+.shortcutBox.smallBox div > a{
+  min-height: 10px;
+}
+
+.shortcutBox div > a{
+  display: block;
+  padding: 20px 0;
+}
+.shortcutBox.miniBox div > a,
+.shortcutBox.smallBox div > a,
+.shortcutBox.maxBox div > a{
+  display: inline;
+  padding: 0;
+}
+.shortcutBox.maxBox div > .lnkCoverAll{padding: inherit;}
+.shortcutBox.maxBox div > .btn.btn-large{padding: 10px 19px 10px 14px;}
+.shortcutBox.maxBox div > .btn{padding: 4px 12px;}
 
 /** Hover padrão **/
 .shortcutBox div:hover {
@@ -55,7 +78,7 @@
   padding: 0 0 10px;
 }
 
-.shortcutBox h3 a {
+.shortcutBox h3 .shortcutTitle{
   color: #1a2609;
   display: block;
   max-width: 250px;
@@ -95,10 +118,15 @@
 /*** MICRO BOX
 **** Revisitado. Quando o usuário clica em MINIMIZAR ATALHOS/DICAS
 ***/
-.microBox div {min-height: 10px; text-align: left; padding: 15px 0}
+.microBox div,
+.microBox div a {
+  min-height: 10px; 
+  text-align: left; 
+}
+.microBox div a{padding: 15px 0;}
 .microBox div h3, .microBox div h3:first-child {margin: 0; padding: 0;}
-.microBox div h3 a {display: inline-block; width: 66%; vertical-align: middle;}
-.microBox :before {
+.microBox div h3 .shortcutTitle {display: inline-block; width: 66%; vertical-align: middle;}
+.microBox h3:before {
   display: inline-block;
   vertical-align: middle;
   font-size: 3em;
