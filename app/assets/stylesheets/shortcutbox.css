@@ -37,19 +37,19 @@
   min-height: 10px;
 }
 
-.shortcutBox div > a{
+.shortcutBox div > a,
+.shortcutBox.miniBox div > a{
   display: block;
   padding: 20px 0;
 }
-.shortcutBox.miniBox div > a,
 .shortcutBox.smallBox div > a,
 .shortcutBox.maxBox div > a{
-  display: inline;
+  display: inline-block;
   padding: 0;
 }
 .shortcutBox.maxBox div > .lnkCoverAll{padding: inherit;}
 .shortcutBox.maxBox div > .btn.btn-large{padding: 10px 19px 10px 14px;}
-.shortcutBox.maxBox div > .btn{padding: 4px 12px;}
+.shortcutBox.maxBox div > .btn{padding: 4px 12px; display: inline}
 
 /** Hover padrão **/
 .shortcutBox div:hover {
@@ -65,7 +65,8 @@
 }
 
 .shortcutBox h3:before {display: inline-block; margin-bottom: 10px; opacity: 0.7; }
-.shortcutBox > div:hover h3:before {opacity: 1;}
+.shortcutBox > div:hover h3:before,
+.shortcutBox > div.active h3:before {opacity: 1;}
 
 .shortcutBox .span3 {width: 22.5%; margin-left: 0;}
 
@@ -165,12 +166,18 @@
   text-align: left;
 }
 .maxBox .lnkCoverAll{ display: block; cursor: pointer;}
-.forceClass .shortcutBox.maxBox div.active [class*="ico-"]:before,
-.forceClass .shortcutBox.maxBox div.active [class^="ico-"]:before,
-.forceClass .shortcutBox.maxBox div:hover [class*="ico-"]:before,
-.forceClass .shortcutBox.maxBox div:hover [class^="ico-"]:before{
+.shortcutBox.maxBox div.active .btn-primary[class*="ico-"]:before,
+.shortcutBox.maxBox div.active .btn-primary[class^="ico-"]:before,
+.shortcutBox.maxBox div:hover .btn-primary[class*="ico-"]:before,
+.shortcutBox.maxBox div:hover .btn-primary[class^="ico-"]:before{
   color: #fff;
 }
+.shortcutBox.maxBox div.active .btn[class*="ico-"]:before,
+.shortcutBox.maxBox div.active .btn[class^="ico-"]:before,
+.shortcutBox.maxBox div:hover .btn[class*="ico-"]:before,
+.shortcutBox.maxBox div:hover .btn[class^="ico-"]:before{
+  color: inherit;
+  }
 .shortcutBox.maxBox h3 a{max-width: none;}
 .shortcutBox.maxBox div h3{font-size: 1.75em; padding: 0; letter-spacing: -0.6px;}
 .shortcutBox.maxBox div p{font-size: 14px; margin-bottom: 10px;}

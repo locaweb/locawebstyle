@@ -75,6 +75,11 @@ $(function(){
 		    scrollTop: $(".titleContent").offset().top
 		}, 500);
   })
+  $('.accessibility a').focus(function(){
+  	$(this).parent().addClass('show');
+  }).blur(function(){
+  	$(this).parent().removeClass('show');
+  })
 
   // Selecao de servicos no header
   $('.dropdown-menu li:last-child a').blur(function(){
@@ -93,6 +98,13 @@ $(function(){
   	$(this).parents('div:first').addClass('active');
   }).blur(function(){
   	$('.shortcutBox > div').removeClass('active')
+  })
+
+  // Ativa visualmente as chamadas ao receber o foco do teclado
+  $('.lnkCollapse').focus(function(){
+  	$(this).parents('.boxCollapse').addClass('focus');
+  }).blur(function(){
+  	$(this).parents('.boxCollapse').removeClass('focus');
   })
 
 

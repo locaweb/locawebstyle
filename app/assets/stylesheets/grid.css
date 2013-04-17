@@ -60,7 +60,8 @@
   min-width: 10%;
   max-width: 37%;
 }
-  .maxBox.shortcutBox div{width: 72%;}
+.maxBox.shortcutBox div{width: 72%;}
+.span16 .maxBox.shortcutBox div{width: 79%;}
 
 /** Desktop
 *** Passando de 1220px
@@ -93,6 +94,7 @@
 
   .revisit .shortcutBox h3 {font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;}
   .maxBox.shortcutBox div{width: 76.6%;}
+  .span16 .maxBox.shortcutBox div{width: 82.6%;}
 }
 
 

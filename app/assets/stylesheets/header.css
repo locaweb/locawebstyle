@@ -1,6 +1,8 @@
 #header {
   border-top: 4px solid #BBB;
   background: #f0f0f0 url(img/bgHeader.gif) repeat-X top center;
+  position: relative;
+  z-index: 1;
 }
 #header .limit {height: 120px; position: relative;}
 #header:after, #header .limit:after {content: " "; display: block; clear: both;}
@@ -218,7 +220,7 @@
 /** Linkzinho de sugestões do Header **/
 .lnkSugestoes, #feedbackr.lnkSugestoes {
   float: right;
-  background: url(img/ico-lamp.png) no-repeat 10px center;
+  background: url(img/ico-lamp.png) no-repeat 10px center #fff;
   text-decoration: none;
   color: #545454;
   font: 12px verdana;
@@ -327,9 +329,24 @@
   background-position: left 4px;
   padding-left: 13px;
 }
-
-.lnkContent{opacity: 0;}
-.lnkContent:focus{opacity: 1;}
+.accessibility{
+  background: #999;
+  left: 0;
+  padding: 3px 0;
+  text-align: center;
+  position: absolute;
+  top: -100px;
+  width: 100%;
+}
+.accessibility.show{top:0;}
+.forceClass .accessibility .lnkContent{
+  color: #fff;
+  font-size: 1em;
+}
+.accessibility,
+.accessibility.show{
+  transition: all 0.3s linear;
+}
 
 .headerPrincipal .nav-pills .dropdown-menu,
 .headerPrincipal .dropdown-toggle{

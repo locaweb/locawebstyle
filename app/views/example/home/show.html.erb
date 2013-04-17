@@ -526,41 +526,170 @@
 <h1>Chamadas (shortcuts)</h1>
 <br>
 <div class="row">
-	<div class="span16">
-		<div class="boxGray">
-			<h2>Primeiros passos</h2>
-			<p>Comece aqui suas ações para as configurações do seu site.</p>
-			<div class="shortcutBox expandBox">
-				<div>
-						<h3 class="chamaicon-stats"><a href="#">Publique o conteúdo do site</a></h3>
-						<p><a href="#">Utiize os recursos do FTP abaixo ou acesse o nosso Gerenciador de Arquivos.</a></p>
-				</div>
-				<div>
-					<h3 class="chamaicon-sendemail"><a href="#">INSTALE APLICATIVOS EM SEU SITE</a></h3>
-					<p><a href="#">Faça a instalação automática de aplicativos e ferramentas para incrementar seu site.</a></p>
-				</div>
-				<div>
-					<h3 class="chamaicon-addcontact"><a href="#">GERENCIE SUAS BASES DE DADOS</a></h3>
-					<p><a href="#">Visualize em detalhes as bases de dados do site ou crie uma nova base de dados.</a></p>
-				</div>
-			</div>
-			<a href="#" class="lnkSeta minShortcuts" data-text="Expandir Atalhos" >Minimizar Atalhos</a>
-		</div>
-		<hr>
-		<div class="shortcutBox miniBox">
-			<div class="span3">
-				<h3 class="brandicon-twitter"><a href="#">Twitter</a></h3>
-			</div>
-			<div class="span3">
-				<h3 class="brandicon-facebook"><a href="#">Facebook</a></h3>
-			</div>
-			<div class="span3">
-				<h3 class="brandicon-linkedin"><a href="#">LinkedIn</a></h3>
-			</div>
-			<div class="span3">
-				<h3 class="brandicon-googleplus-rect"><a href="#">Google+</a></h3>
+	<div class="span12">
+
+		<h3>Link no elemento inteiro</h3>
+		<p>O Link possui a classe <b>lnkCoverAll</b></p>
+		<div class="shortcutBox maxBox">
+			<div>
+				<a href="http://www.locaweb.com.br" tabindex="3" class="lnkCoverAll" title="Crie sua caixa postal" aria-label="Crie sua caixa postal">
+					<h3 class="chamaicon-addcontact">CRIE SUA CAIXA POSTAL</h3>
+					<p>Com uma caixa postal será possível enviar e receber e-mails.
+					<br>Comece criando sua primeira caixa postal.</p>
+					<span class="btn btn-primary btn-large" tabindex="0">Criar caixa postal</span>
+				</a>
 			</div>
 		</div>
+
+		<h3>Vários Links dentro do elemento</h3>
+		<div class="shortcutBox maxBox">
+			<div>
+				<h3 class="chamaicon-addcontact">CRIE SUA CAIXA POSTAL</h3>
+				<p>Com uma caixa postal será possível enviar e receber e-mails.<br>Comece criando sua primeira caixa postal.</p>
+				<a hre="#" tabindex="3" title="Crie sua caixa postal" aria-label="Crie sua caixa postal" class="btn btn-large btn-primary ico-plus" role="button">Criar caixa postal</a>
+				<br><br>
+				<p>Deseja criar <a href="#" tabindex="3" title="Crie várias caixas postais" aria-label="Crie várias caixas postais">várias caixas postais?</a></p>
+			</div>
+		</div>
+	
+		<div class="boxGray" role="region">
+		<h2 class="titleContent" role="presentation">Acesso rápido</h2>
+
+		<div class="shortcutBox shortcutBox expandBox">
+			<div>
+				<a href="#" tabindex="3" title="Crie uma nova caixa postal dentro do seu site.">
+					<h3 class="chamaicon-stats"><span class="shortcutTitle">Criar caixa postal</span> </h3>
+					<p>Crie uma nova caixa postal dentro do seu site.</p>
+				</a>
+			</div>
+			<div>
+				<a href="#" tabindex="3" title="Envie mensagens para várias caixas em um único endereço.">
+					<h3 class="chamaicon-sendemail"><span class="shortcutTitle">Criar grupo</span></h3>
+					<p>Envie mensagens para várias caixas em um único endereço.</p>
+				</a>
+			</div>
+			<div>
+				<a href="#" tabindex="3" title="Compartilhe contatos na agenda de todas as caixas postais.">
+					<h3 class="chamaicon-addcontact"><span class="shortcutTitle">Adicionar contato</span></h3>
+					<p>Compartilhe contatos na agenda de todas as caixas postais.</p>
+				</a>
+			</div>
+		</div>
+		<a href="#" class="lnkArrow fRight minShortcuts" data-text="Expandir Atalhos">Minimizar Atalhos</a>
+	</div>
+	<div class="shortcutBox miniBox">
+			<div class="span3">
+				<a href="">
+					<h3 class="brandicon-twitter"><span class="shortcutTitle">Twitter</span></h3>
+				</a>
+			</div>
+			<div class="span3">
+				<a href="">
+					<h3 class="brandicon-facebook"><span class="shortcutTitle">Facebook</span></h3>
+				</a>
+			</div>
+			<div class="span3">
+				<a href="">
+					<h3 class="brandicon-linkedin"><span class="shortcutTitle">LinkedIn</span></h3>
+				</a>
+			</div>
+			<div class="span3">
+				<a href="">
+					<h3 class="brandicon-googleplus-rect"><span class="shortcutTitle">Google+</span></h3>
+				</a>
+			</div>
+		</div>
+</div>
+	<div class="span4">
+		<aside class="sidebar" role="complementary">
+    	<section class="sideBox">
+	      <div class="boxSidebarTitle"><i class="ico-list"></i></div>
+	      <h1 class="titSide">
+	        Resumo
+	      </h1>
+	      <div class="innerSideBox boxWhite">
+	        <div id="account_settings"> <img alt="" class="fLeft" src="/assets/email.png">
+	          <span class="dBlock">Incluso no plano</span>
+	          <strong class="dBlock">E-mail Business</strong>
+	          <hr class="cBoth">
+	          <span class="dBlock">Status</span>
+	          <span class="status enabled">
+	            <b>Ativo</b>
+	          </span>
+	          <hr class="cBoth">
+	          <span class="dBlock">Caixas postais</span>
+	          <p class="space_bottom"><strong>23</strong> de 25 Caixa(s)</p> 
+	          <div class="progress">
+	            <div class="bar" style="width: 71%"></div>
+	          </div>
+	          <b>71% </b><br>
+	          <a href="#" title="Alterar reserva" class="lnkArrow" tabindex="4">Alterar reserva</a>
+	          <hr class="cBoth">
+	          <span>Grupos de e-mail</span>
+	          <p><b>7</b> grupos de e-mails</p>
+	          <hr class="cBoth">
+	          <span>Agenda de contatos</span>
+	          <p><b>73</b> contatos</p>
+	          <hr class="cBoth">
+	          <span>Domínios associados</span>
+	          <p><span class="ico-right-open"></span>dominio.com.br</p>
+	          <p><span class="ico-right-open"></span>dominio.com</p>
+	          <p><span class="ico-right-open"></span>dominio.net</p>
+	          <p><span class="ico-right-open"></span>dominio.co.uk</p>
+	          <a href="#" class="lnkArrow" tabindex="4" title="Confira todos os domínios alternativos" aria-label="Confira todos os domínios alternativos">Todos os domínios alternativos</a>
+	        </div>
+	      </div>
+    	</section>
+    	<section class="sideBox">
+      <div class="boxSidebarTitle"><i class="ico-lamp"></i></div>
+      <h1 class="titSide">Dicas</h1>
+      <div class="innerSideBox boxWhite">
+        <div id="myCarousel" class="carousel slide">
+          <ul class="carousel-inner">
+            <li class="item active">
+              <h5>Publique seus arquivos pelo navegador</h5>
+              <p>Utilize o Gerenciador de Arquivos para publicar e fazer a manutenção dos arquivos do seu site.</p>
+              <a href="/" class="lnkSeta">Gerenciador de arquivos</a>
+            </li>
+            <li class="item">
+              <h5>Cadastre um endereço alternativo para seu site</h5>
+              <p>Os Domínios alternativos funcionam como espelhos do domínio principal e mostram seu conteúdo quando acessados.</p>
+              <a href="" class="lnkSeta">Dominios</a>
+            </li>
+            <li class="item">
+              <h5>Como criar caixas em domínios adicionais?</h5>
+              <p>As caixas postais criadas valem para todos os domínios adicionados e recebem mensagens enviadas em qualquer um deles.</p>
+            </li>
+            <li class="item">
+              <h5>O que meu desenvolvedor pode fazer no site?</h5>
+              <p>O cadastro de um desenvolvedor no seu site possibilita que ele tenha acesso restrito ao seu painel de controle.</p>
+              <a href="Link: http://wiki.locaweb.com.br/pt-br/Quais_permiss%C3%B5es_o_desenvolvedor_tem_sobre_um_site%3F" class="lnkSeta">Veja todas as permissões.</a>
+            </li>
+            <li class="item">
+              <h5>Facilite sua vida com o Instalador de aplicativos</h5>
+              <p>Instale aplicativos gratuitos que tornam seu site ainda mais atraente e fácil de gerenciar.</p>
+              <a href="" class="lnkSeta">Instaldor de aplicativos</a>
+            </li>
+          </ul>
+          <div class="carouselNav">
+            <a class="carousel-control left ico-left-open" href="#myCarousel" data-slide="prev"></a>
+            <b>1</b> de <i>5</i>
+            <a class="carousel-control right ico-right-open" href="#myCarousel" data-slide="next"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    	<section class="sideBox">
+      <div class="boxSidebarTitle"><i class="cmicon-help">?</i></div>
+      <h1 class="titSide">Ajuda e suporte</h1>
+      <div class="innerSideBox">
+        <ul class="listWhite">
+          <li><a href="http://ajuda.locaweb.com.br/pt-br/Hospedagem" tabindex="4" target="_blank" class="ico-right-open" title="Conheça nosso site de ajuda">Site de ajuda (wiki)<span class="ico-link-out"></span></a></li>
+          <li><a href="http://www.locaweb.com.br/atendimento.html" tabindex="4" target="_blank" class="ico-right-open" title="Entre em contato com nosso suporte 24 horas">Suporte 24hs<span class="ico-link-out"></span></a></li>
+        </ul>
+      </div>
+    </section>
+  	</aside>
 	</div>
 </div>
 <hr>
@@ -628,6 +757,9 @@
 			<p>Conteúdo</p>
 		</div>
 		<div class="boxCinzaInner">
+			<p>Conteúdo</p>
+		</div>
+		<div class="boxWhite">
 			<p>Conteúdo</p>
 		</div>
 	</div>
@@ -844,6 +976,22 @@
 <h1>Ícones</h1>
 <br>
 <div class="row">
+	<div class="span16">
+		<ul class="noListStyle">
+			<li class="chamaicon-addcontact">chamaicon-addcontact</li>
+			<li class="chamaicon-buzina">chamaicon-buzina</li>
+			<li class="chamaicon-configtools">chamaicon-configtools</li>
+			<li class="chamaicon-downloadbox">chamaicon-downloadbox</li>
+			<li class="chamaicon-editpaper">chamaicon-editpaper</li>
+			<li class="chamaicon-email">chamaicon-email</li>
+			<li class="chamaicon-layersbancos">chamaicon-layersbancos</li>
+			<li class="chamaicon-pincel">chamaicon-pincel</li>
+			<li class="chamaicon-sendemail">chamaicon-sendemail</li>
+			<li class="chamaicon-sendowindow">chamaicon-sendowindow</li>
+			<li class="chamaicon-stats">chamaicon-stats</li>
+			<li class="chamaicon-contato">chamaicon-contato</li>
+		</ul>
+	</div>
 	<div class="span4">
 		<ul class="the-icons">
 			<li class="ico-pencil-edit">ico-pencil-edit</li>

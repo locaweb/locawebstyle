@@ -53,10 +53,8 @@
 #{$theme_name} .sidebar h1,
 #{$theme_name} .chooseBox li:hover p,
 #{$theme_name} .chooseBox li.active p,
-#{$theme_name} .shortcutBox div:hover p a,
 #{$theme_name} .shortcutBox div:hover p,
-#{$theme_name} .shortcutBox div.active p,
-#{$theme_name} .shortcutBox div:active p a {
+#{$theme_name} .shortcutBox div.active p{
   color: $pallet_3
 }
 

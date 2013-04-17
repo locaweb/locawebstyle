@@ -68,9 +68,11 @@ p + .boxCollapse {margin-top:30px;}
   position: absolute;
   left: 0;
   top: 0;
+  outline: none;
 }
 
-.boxCollapse:hover {background-color: #ECECEC;}
+.boxCollapse:hover, 
+.boxCollapse.focus{background-color: #ECECEC;}
 
 .boxCollapse.active {
   background-image: url(img/setaCollapseTop.png);
