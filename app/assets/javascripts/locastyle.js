@@ -251,13 +251,6 @@ Locastyle = (function() {
       }
     },
 
-    coverAllLink: function(dom_scope) {
-      $('.chamadasBox div', dom_scope).each(function(){
-        var title = $(this).find('p').text()
-        $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll').attr('title',title).attr('aria-label',title) );
-      });
-    },
-
     // look down here to cover tests
     collapsesWeirdBehavior: function(dom_scope) {
       $('body').on('change.collapse.data-api', '[data-toggle=hide]', function (e) {
