@@ -849,6 +849,7 @@ td .progress {max-width: 70px;}
   padding: 0 4px;
   border-radius: 4px;
 }
+.infoHelp:hover{text-decoration: none;} 
 .progress.infoHelp {padding: 0;}
 
 .popover h3 {margin: 0 !important;}
@@ -1180,5 +1181,5 @@ hr.sep {background-color: #E5E5E5; }
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .forceClass .warning {
-  color: #b54646;
+  color: #dc0008;
 }

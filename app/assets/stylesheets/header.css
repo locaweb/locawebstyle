@@ -330,7 +330,7 @@
   padding-left: 13px;
 }
 .accessibility{
-  background: #999;
+  background: #2a2a2a;
   left: 0;
   padding: 3px 0;
   text-align: center;
@@ -341,7 +341,7 @@
 .accessibility.show{top:0;}
 .forceClass .accessibility .lnkContent{
   color: #fff;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 .accessibility,
 .accessibility.show{

@@ -5,7 +5,7 @@
   border-radius:3px;
   border:1px solid #e5e5e5;
   position:relative;
-  margin-bottom:45px;
+  margin-bottom: 20px;
 }
 
 .innerSideBox {
@@ -14,6 +14,7 @@
   font-size: 0.75em;
   border-radius:2px;
 }
+.innerSideBox h3{margin-bottom: 5px;}
 .innerSideBox b,
 .innerSideBox strong{ color: #2a2a2a;}
 .boxWhite {background:#FFF; padding:10px; border-radius:3px;}

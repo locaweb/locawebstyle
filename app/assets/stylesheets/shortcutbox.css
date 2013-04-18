@@ -159,11 +159,16 @@
   min-height: 56px;
 }
 .maxBox{margin-left: 0;}
-.maxBox div,
+.maxBox > div,
 .maxBox .lnkCoverAll{
-  padding: 50px 0 20px 200px;
+  padding: 50px 0 20px 0;
   min-height: 150px;
   text-align: left;
+}
+.maxBox > div{width: 99%;}
+.shortcutBox.maxBox > div p,
+.shortcutBox.maxBox > div h3{
+  margin-left: 200px;
 }
 .maxBox .lnkCoverAll{ display: block; cursor: pointer;}
 .shortcutBox.maxBox div.active .btn-primary[class*="ico-"]:before,
