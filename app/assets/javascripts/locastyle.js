@@ -27,7 +27,6 @@ Locastyle = (function() {
       this.notificationInfoHandler();
       this.minShortcutsCookieSetter();
       this.minShortcutsCookieHandler();
-      this.coverAllLink(dom_scope);
       this.linkPreventDefault();
       this.popover(dom_scope);
     },
