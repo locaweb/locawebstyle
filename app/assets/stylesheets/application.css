@@ -22,8 +22,8 @@
  *= require pathway
  *= require grid
  *= require shortcutbox
- *= require mobile
  *= require base
+ *= require mobile
  *= require functionalclasses
  *= require passwordStrength
  *= require print
