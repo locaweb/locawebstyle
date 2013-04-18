@@ -469,9 +469,7 @@ tr.active td .boxActions {padding-top: 0;}
 .messageInfo {
   border: 1px solid #e5e5e5;
   border-radius: 5px;
-  font-size: 12px;
-  font-weight: normal;
-  font-family: verdana, arial, sans-serif;
+  font: normal 12px verdana, arial, sans-serif;
   color: #767676;
   min-height: 33px;
   overflow: hidden;
