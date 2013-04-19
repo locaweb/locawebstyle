@@ -33,10 +33,10 @@ p a.btn {color: #333;}
 .btn.btn-danger:hover,
 .btn.btn-inverse,
 .btn.btn-inverse:hover,
-.btn.btn-primary,
-.btn.btn-primary:hover,
-.btn-primary[class^="ico-"],
-.btn-primary[class*=" ico-"] {color: #FFF;}
+.forceClass .btn.btn-primary,
+.forceClass .btn.btn-primary:hover,
+.forceClass .btn-primary[class^="ico-"],
+.forceClass .btn-primary[class*=" ico-"] {color: #FFF;}
 
 .btn.btn-large {
 	font-size: 14px;
@@ -68,6 +68,6 @@ p a.btn {color: #333;}
  	left: 42%
 }
 .btn-shadow:before{
-	border-color: #adadad transparent transparent transparent; 
+	border-color: #adadad transparent transparent transparent;
 	left: 42%;
 }

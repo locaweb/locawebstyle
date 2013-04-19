@@ -395,7 +395,7 @@ tr.active td .boxActions {padding-top: 0;}
   overflow: hidden;
 }
 
-.spanObs {
+.spanObs, .spanObs[class*="span"] {
   border-left: solid 2px #fff;
   padding: 6px 10px;
   margin: 5px 0 0 0;
@@ -785,8 +785,8 @@ td .progress {max-width: 70px;}
 }
 .progress .bar b {
   color: #fff;
-  display: inline-block; 
-  padding: 0 3px; 
+  display: inline-block;
+  padding: 0 3px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
@@ -847,7 +847,7 @@ td .progress {max-width: 70px;}
   padding: 0 4px;
   border-radius: 4px;
 }
-.infoHelp:hover{text-decoration: none;} 
+.infoHelp:hover{text-decoration: none;}
 .progress.infoHelp {padding: 0;}
 
 .popover h3 {margin: 0 !important;}

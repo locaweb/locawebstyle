@@ -27,7 +27,7 @@
 .shortcutBox div > a,
 .shortcutBox div{
   min-height: 250px;
-  
+
 }
 .shortcutBox.miniBox div,
 .shortcutBox.miniBox div > a,
@@ -121,8 +121,8 @@
 ***/
 .microBox div,
 .microBox div a {
-  min-height: 10px; 
-  text-align: left; 
+  min-height: 10px;
+  text-align: left;
 }
 .microBox div a{padding: 15px 0;}
 .microBox div h3, .microBox div h3:first-child {margin: 0; padding: 0;}
