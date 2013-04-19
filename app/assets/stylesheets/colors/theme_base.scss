@@ -82,13 +82,15 @@
 
 #{$theme_name} #menuPrincipal,
 #{$theme_name} .tabs li a:hover,
+#{$theme_name} .tabs li a:focus,
 #{$theme_name} .tabs li.active a,
 #{$theme_name} #menuPrincipal ul li ul {
   border-bottom-color: $pallet_1;
 }
 
 #{$theme_name} .tabs li.active a,
-#{$theme_name} .tabs li a:hover {
+#{$theme_name} .tabs li a:hover,
+#{$theme_name} .tabs li a:focus {
   border-top-color: $pallet_1;
 }
 

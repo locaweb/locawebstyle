@@ -124,10 +124,10 @@ p + .boxCollapse {margin-top:30px;}
   border-bottom: none;
 }
 
-.boxCollapse table td {
+/*.boxCollapse table td {
   border-right: none;
   border-bottom: 1px solid #ddd;
-}
+}*/
 
 .boxCollapse form {margin-bottom: 0;}
 

@@ -825,6 +825,15 @@ td .progress {max-width: 70px;}
   color: #767676;
   background: #fbfbfb;
   margin: 10px 0 0;
+  position: relative;
+}
+.lightGray .fRight{
+  border-left: 1px solid #ececec;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  padding: 5px 0 0 10px;
+  right: 50px;
 }
 
 /*** POPOVER
@@ -1180,4 +1189,26 @@ hr.sep {background-color: #E5E5E5; }
 }
 .forceClass .warning {
   color: #dc0008;
+}
+ol{font-size: 0.75em;}
+ol p{font-size: inherit;}
+.listInfos{
+  max-height: 250px;
+  overflow: auto;
+}
+.listInfos li:first-child{border-top: none;}
+.listInfos li{
+  border-top: 1px solid #ddd;
+  padding: 5px 10px;
+}
+.listInfos p{margin: 0}
+.listInfos .new p,
+.listInfos .alert p{color: #2a2a2a;}
+.listInfos .alert{
+  background: #fdeded;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  text-shadow: none;
+  margin: 0;
 }

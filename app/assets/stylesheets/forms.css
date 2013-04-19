@@ -395,10 +395,10 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
   box-shadow: none;
   color: #767676;
 }
-
+.select2-container,
+.select2-container .select2-choice div{background: #fff;}
 .select2-container .select2-choice div {
   border-left: none;
-  background: none;
 }
 
 .select2-container .select2-choice div b {background: url(img/setaIdentBaixo.png) no-repeat center;}

@@ -41,7 +41,6 @@
 
 td a[class*="span"] {margin-right: 0;}
 
-.tableList tbody td a {font-weight: bold;}
 .tableList tbody td.txtLeft, .tableList thead th.txtLeft {text-align: left;}
 .tableList tbody td.txtRight, .tableList thead th.txtRight {text-align: right;}
 .tableList tbody td.txtCenter, .tableList thead th.txtCenter {text-align: center;}

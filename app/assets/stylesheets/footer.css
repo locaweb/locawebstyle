@@ -74,4 +74,4 @@ footer#footer {
 
 #footer [class^="ico"]:before,
 #footer [class*=" ico"]:before {display: none;}
-#footer .lnkArrowWhite{margin: 20px 10px 0 0;}
+#footer .lnkArrowWhite{margin: 20px 10px 0 0; color: #fff;}

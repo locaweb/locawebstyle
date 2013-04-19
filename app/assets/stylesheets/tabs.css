@@ -34,6 +34,7 @@
 }
 
 .tabs li a:hover,
+.tabs li a:focus,
 .tabs li.active a {
   text-decoration: none;
   background:#FFF;
@@ -42,10 +43,12 @@
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
-
+.tabs li.active a{outline: none;}
 .tabs li a:hover .setaTab, 
+.tabs li a:focus .setaTab, 
 .tabs li.active a .setaTab, 
 .tabs li a:hover:after,
+.tabs li a:focus:after,
 .tabs li.active a:after {
   display: block;
 }
