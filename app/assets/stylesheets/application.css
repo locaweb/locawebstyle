@@ -4,27 +4,28 @@
  VENDOR
  *= require bootstrap/css/bootstrap
 
- *= require deprecated
- *= require colors/colors
+ *= require base
  *= require fonts
+ *= require shortcutbox
+ *= require buttons
+ *= require colors/colors
+ *= require icons
+ *= require grid
+ *= require footer
+ *= require header
+ *= require toolbar
+ *= require sidebar
+ *= require tables
+ *= require functionalclasses
+
+ *= require deprecated
  *= require collapse
  *= require tabs
- *= require toolbar
- *= require icons
- *= require buttons
- *= require header
- *= require footer
  *= require select2
  *= require forms
  *= require modal
- *= require sidebar
- *= require tables
  *= require pathway
- *= require grid
- *= require shortcutbox
- *= require mobile
- *= require base
- *= require functionalclasses
+
  *= require passwordStrength
  *= require print
  *= require ie
