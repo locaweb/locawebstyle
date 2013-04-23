@@ -202,4 +202,5 @@ tr.active .actionsTable {display: none;}
 .obsGray .boxCollapse{background-color: #f6f6f6;}
 .obsGray .boxCollapse:hover,
 .obsGray .boxCollapse.active,
+.obsGray .boxCollapse.focus,
 .obsGray .boxCollapse .in{background-color: #fff;}

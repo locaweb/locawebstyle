@@ -6,7 +6,8 @@
   	font-family: Ubuntu, verdana, arial, helvetica, tahoma, sans-serif;
 }
 
-.btn {border-radius: 3px;}
+.btn {border-radius: 3px; padding: 6px 12px;}
+.tab .btn-small{padding: 3px 12px;}
 
 /** arruma cor padrao de btns com icones **/
 table tr td a.btn,

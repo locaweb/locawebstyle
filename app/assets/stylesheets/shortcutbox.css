@@ -127,7 +127,7 @@
 .microBox div a{padding: 15px 0;}
 .microBox div h3, .microBox div h3:first-child {margin: 0; padding: 0;}
 .microBox div h3 .shortcutTitle {display: inline-block; width: 66%; vertical-align: middle;}
-.microBox h3:before {
+.microBox.shortcutBox h3:before {
   display: inline-block;
   vertical-align: middle;
   font-size: 3em;
