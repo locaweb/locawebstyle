@@ -20,13 +20,15 @@
 
  *= require deprecated
  *= require collapse
- *= require tabs
+ *= require modal
+ *= require ie
  *= require select2
  *= require forms
- *= require modal
+ 
  *= require pathway
-
  *= require passwordStrength
  *= require print
- *= require ie
+ 
+
+ *= require tabs
 */
