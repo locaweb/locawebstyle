@@ -107,7 +107,15 @@ $(function(){
   	$(this).parents('.boxCollapse').removeClass('focus');
   })
 
+  // Menu com focus
+  $('#menuPrincipal > ul > li > a').focus(function(){
+  	$(this).parents('li').addClass('selected');
+  }).blur(function(){
+  	$(this).parents('li').removeClass('selected');
+  })
 
+
+  
 
 
 })

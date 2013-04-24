@@ -41,6 +41,7 @@
 .shortcutBox.miniBox div > a{
   display: block;
   padding: 20px 0;
+  outline: none;
 }
 .shortcutBox.smallBox div > a,
 .shortcutBox.maxBox div > a{
@@ -184,7 +185,12 @@
   color: inherit;
   }
 .shortcutBox.maxBox h3 a{max-width: none;}
-.shortcutBox.maxBox div h3{font-size: 1.75em; padding: 0; letter-spacing: -0.6px;}
+.shortcutBox.maxBox div h3{
+  font-size: 1.75em; 
+  padding: 0; 
+  letter-spacing: -0.6px;
+  max-width: 99%;
+}
 .shortcutBox.maxBox div p{font-size: 14px; margin-bottom: 10px;}
 .shortcutBox.maxBox h3:before{
   position: absolute;
@@ -192,3 +198,4 @@
   font-size: 150px;
   top: 30px;
 }
+.shortcutBox.maxBox div:hover p{opacity: 1;}

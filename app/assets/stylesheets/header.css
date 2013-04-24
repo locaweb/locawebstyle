@@ -87,7 +87,7 @@
   -o-transition: all .1s ease-in;
   transition: all .1s ease-in;
 }
-
+#menuPrincipal a{outline: none;}
 #menuPrincipal > ul > li > a:hover {color: #666; background-color: transparent;}
 
 #menuPrincipal a.ico-home:before {
@@ -115,7 +115,6 @@
 }
 #menuPrincipal > ul > li.selected > a:hover{color: #fff;}
 #menuPrincipal .parent:hover > a {box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.2);}
-
 #menuPrincipal .parent > a:hover,
 #menuPrincipal .parent:hover > a,
 #menuPrincipal ul li.parent.focus > a {
@@ -330,7 +329,7 @@
   padding-left: 13px;
 }
 .accessibility{
-  background: #2a2a2a;
+  background: #bbb;
   left: 0;
   padding: 3px 0;
   text-align: center;
@@ -340,7 +339,7 @@
 }
 .accessibility.show{top:0;}
 .forceClass .accessibility .lnkContent{
-  color: #fff;
+  color: #333;
   font-size: 0.9em;
 }
 .accessibility,
@@ -369,9 +368,22 @@
   top: 12px;
   left: -12px;
 }
-.headerPrincipal .lnkAll.lnkArrow{
+#header .lnkAll.lnkArrow{
   border-left: 1px solid #cecece;
   float: left;
   padding: 0 0 0 10px;
   margin: 55px 0 0 10px;
+}
+.betalink{
+  background: url(img/ico-beta.png) 0 0 no-repeat;
+  display: inline-block;
+  height: 20px;
+  left: 6px;
+  text-indent: -9999px;
+  position: relative;
+  top: 3px;
+  width: 41px;
+}
+.forceClass #menuPrincipal > ul > li.selected.parent > a{
+  background: none;
 }
