@@ -204,3 +204,68 @@ tr.active .actionsTable {display: none;}
 .obsGray .boxCollapse.active,
 .obsGray .boxCollapse.focus,
 .obsGray .boxCollapse .in{background-color: #fff;}
+
+/***
+**** Notificações
+***/
+.notification.boxCollapse header{border-color: transparent;}
+.notification header h3{display: inline-block; margin-right: 5px;}
+.notification header:before{
+  content: "";
+  height: 17px;
+  left: -9px;
+  top: 5px;
+  position: absolute;
+  width: 9px;
+  border-radius: 0 10px 10px 0;
+  -moz-border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0 10px 10px 0;
+  z-index: 1;
+  box-shadow: inset -1px 0px 5px rgba(0,0,0,0.15);
+  -moz-box-shadow: inset -1px 0px 5px rgba(0,0,0,0.15);
+  -webkit-box-shadow: inset -1px 0px 5px rgba(0,0,0,0.15);
+}
+.notification header:after{
+  content: "";
+  background: rgba(256,256,256,0.55);
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  position: absolute;
+  height: 3px;
+  left: -7px;
+  top: 12px;
+  width: 3px;
+  z-index: 2;
+  background-color: #cdcdcd;
+}
+.notification .valueNotify{top: -2px;}
+.valueNotify{
+  background: #ea0019;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 0 5px;
+  position: relative;
+  
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+
+  box-shadow: inset -3px 0px 5px rgba(0,0,0,0.15);
+  -moz-box-shadow: inset -3px 0px 5px rgba(0,0,0,0.15);
+  -webkit-box-shadow: inset -3px 0px 5px rgba(0,0,0,0.15);
+}
+.valueNotify:before{
+  content: "";
+  width: 0; 
+  height: 0; 
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  
+  border-right:5px solid #ea0019;
+}

@@ -76,7 +76,8 @@
 
 #{$theme_name} .progress .bar,
 #{$theme_name} .pathWay li.active,
-#{$theme_name} .pathWay li:hover {
+#{$theme_name} .pathWay li:hover,
+#{$theme_name} .notification header:before {
   background-color: $pallet_1;
 }
 
