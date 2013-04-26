@@ -70,6 +70,7 @@ p + .boxCollapse {margin-top:30px;}
   left: 0;
   top: 0;
   outline: none;
+  z-index: 1;
 }
 
 .boxCollapse:hover, 
@@ -209,13 +210,16 @@ tr.active .actionsTable {display: none;}
 /***
 **** Notificações
 ***/
-.notification.boxCollapse header{border-color: transparent;}
+.notification.boxCollapse{position: relative;}
+.notification.boxCollapse header{
+  border-color: transparent; padding: 5px 10px;
+}
 .notification header h3{display: inline-block; margin-right: 5px;}
 .notification header:before{
   content: "";
   height: 17px;
   left: -9px;
-  top: 5px;
+  top: 9px;
   position: absolute;
   width: 9px;
   border-radius: 0 10px 10px 0;
@@ -235,10 +239,15 @@ tr.active .actionsTable {display: none;}
   position: absolute;
   height: 3px;
   left: -7px;
-  top: 12px;
+  top: 16px;
   width: 3px;
   z-index: 2;
   background-color: #cdcdcd;
+}
+.boxCollapse.notification .collapse:before{
+  padding: 0;
+  position: relative;
+  z-index: 1;
 }
 .notification .valueNotify{top: -2px;}
 .valueNotify{
@@ -270,3 +279,24 @@ tr.active .actionsTable {display: none;}
   
   border-right:5px solid #ea0019;
 }
+
+.boxCollapse .tabs{
+  background: none;
+  position: absolute;
+  top: -42px;
+  left: 200px;
+  z-index: 2;
+}
+/*.notification .tabs{display: none;}
+.notification.active .tabs{display: block;}*/
+
+.boxCollapse .tab-content{
+  border: none;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  margin-bottom: 0;
+}
+.boxCollapse .tabs li a:after, 
+.boxCollapse .tabs li.active a:after,
+.boxCollapse .tabs li a:hover:after{background: none;}

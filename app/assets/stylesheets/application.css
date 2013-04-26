@@ -7,8 +7,8 @@
  *= require base
  *= require fonts
  *= require shortcutbox
- *= require buttons
  *= require colors/colors
+ *= require buttons
  *= require icons
  *= require grid
  *= require footer
@@ -17,18 +17,16 @@
  *= require sidebar
  *= require tables
  *= require functionalclasses
-
+ *= require ie
+ *= require pathway
+ *= require modal
+ *= require tabs
  *= require deprecated
  *= require collapse
- *= require modal
- *= require ie
+ 
  *= require select2
  *= require forms
- 
- *= require pathway
  *= require passwordStrength
  *= require print
- 
 
- *= require tabs
 */

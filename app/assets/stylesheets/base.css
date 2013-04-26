@@ -119,7 +119,7 @@ h3 + .alert {margin-top: 15px;}
 .forceClass .alert a.btn {
   text-decoration: none;
 }
-
+.forceClass .alert a[class*="btn-"] {color: #fff;}
 .alert a.btn,
 .alert a.btn:hover {
   color: #333;
@@ -669,7 +669,7 @@ tr.active td .boxActions {padding-top: 0;}
 }
 
 /* Status Gradient */
-.countViews,
+.gradient,
 .forceClass .gradientSilver {
   background: -moz-linear-gradient(top,  #efefef 0%, #dfdfdf 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#dfdfdf)); /* Chrome,Safari4+ */
@@ -677,7 +677,7 @@ tr.active td .boxActions {padding-top: 0;}
   background: -o-linear-gradient(top,  #efefef 0%,#dfdfdf 100%); /* Opera 11.10+ */
   background: -ms-linear-gradient(top,  #efefef 0%,#dfdfdf 100%); /* IE10+ */
   background: linear-gradient(to bottom,  #efefef 0%,#dfdfdf 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#dfdfdf',GradientType=0 ); /* IE6-9 */
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#dfdfdf',GradientType=0 ); /* IE6-9 */
 
 }
 .forceClass .gradientRed {
@@ -770,10 +770,10 @@ tr.active td .boxActions {padding-top: 0;}
   border-radius: 3px;
 }
 .progressInfo{color: #2a2a2a; font-weight: bold;}
-.progressInfo .progress{
+.forceClass .progressInfo .progress{
   float: left;
   margin-right: 5px;
-  width: 80%;
+  width: 76%;
 }
 td .progress {max-width: 70px;}
 

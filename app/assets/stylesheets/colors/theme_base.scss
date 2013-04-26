@@ -141,7 +141,7 @@
 #{$theme_name} .chooseBox li:hover,
 #{$theme_name} .chooseBox li.active {
   border-color: $pallet_1;
-  background: #fdfcfa;
+  background-color: $pallet_6;
   background: -moz-linear-gradient(top,  #ffffff 0%, $pallet_6 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,$pallet_6));
   background: -webkit-linear-gradient(top,  #ffffff 0%,$pallet_6 100%);
@@ -160,6 +160,7 @@
   background-image: linear-gradient(to bottom,  $pallet_7 0%,$pallet_5 100%);
   // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_7', endColorstr='$pallet_5',GradientType=0 );
 }
+#{$theme_name}.ie9  .gradient{background-color: $pallet_5;}
 
 #{$theme_name} .pagination .current,
 #{$theme_name} .pagination .active a {

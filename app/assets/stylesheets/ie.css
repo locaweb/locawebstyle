@@ -22,9 +22,7 @@
 .ie8 .chooseBox a.lnkChoose,
 .ie9 .chooseBox a.lnkChoose,
 .ie7 .chooseBox a.lnkChoose {background: #FFF; filter: alpha(opacity = 0);}
-.ie8 .shortcutBox h3:before {
-	margin-left: 50px;
-}
+.ie8 .shortcutBox h3:before {text-align: center;}
 
 /***
 **** IE8 Fix 
@@ -38,7 +36,11 @@
 .ie8 .messageInfo .countViews:after {right: 0;}
 
 .ie8 .shortcutBox div {width: 29.6%;}
-.ie8 .maxBox.shortcutBox div {width: inherit;}
+.ie8 .shortcutBox .span3 {width: 22.1%;}
+.ie8 .maxBox.shortcutBox div {width: 100%;}
+
+.ie7 .messageInfo .countViews:after,
+.ie9 .messageInfo .countViews:after{margin-top: -10px; right: 0;}
 
 /***
 **** Fix do IE9 para Altura dos collapses em conjunto com actionsTable que aparecia e desaparecia
@@ -47,10 +49,12 @@
 .ie9 .boxCollapse.active, .ie9 .boxCollapse.active .in {overflow:visible; height:auto !important;}
 .ie9 #menuPrincipal > ul > li > a {font-size:13px;}
 
+
 .ie8 .progress .bar,
 .ie9 .progress .bar{filter: none;}
-.ie9 #menuPrincipal > ul > li.selected > a{padding-bottom: 11px;}
-.ie9 .messageInfo .countViews:after{margin-top: -12px; right: 0;}
+.ie9 #menuPrincipal > ul > li{height: 36px;}
+.ie9 #menuPrincipal > ul > li > a{padding-bottom: 11px;}
+
 
 .ie9 .boxCollapse.active,
 .ie9 .boxCollapse.active .in {
