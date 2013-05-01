@@ -1,24 +1,24 @@
 /***
 **** BOX Collpase
 ***/
-.boxGray > .lnkArrow {margin:0 15px 10px;}
-p + .boxCollapse {margin-top:30px;}
+.boxGray > .lnkArrow {margin: 0 15px 10px;}
+p + .boxCollapse {margin-top: 30px;}
 .collapse p + .btn {margin: 10px 0 5px;}
 .collapse h6:first-child {padding: 10px 0 0;}
 .collapse.in{overflow: visible;}
 
 .boxCollapse {
-  border-radius:3px;
-  padding:3px;
-  margin:0 0 10px;
-  border:1px solid #e5e5e5;
-  border-bottom-width:2px;
-  background:url(img/setaCollapseBottom.png) no-repeat 99% 11px;
-  -webkit-transition:all .2s linear;
-  -moz-transition:all .2s linear;
-  -ms-transition:all .2s linear;
-  -o-transition:all .2s linear;
-  transition:all .2s linear;
+  border-radius: 3px;
+  padding: 3px;
+  margin: 0 0 10px;
+  border: 1px solid #e5e5e5;
+  border-bottom-width: 2px;
+  background: url(img/setaCollapseBottom.png) no-repeat 99% 11px;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 .boxGray .boxCollapse {margin: 0 15px 5px;}
@@ -54,10 +54,9 @@ p + .boxCollapse {margin-top:30px;}
   letter-spacing: -1px;
 }
 
-.boxCollapse header  {
+.boxCollapse header {
   border-left: 5px solid #CCC;
-  min-height: 21px;
-  padding: 2px 10px 0px;
+  padding: 3px 10px 6px;
   cursor: pointer;
   outline: none;
   position: relative;
@@ -96,7 +95,7 @@ p + .boxCollapse {margin-top:30px;}
 
 
 .boxCollapse header h4 {
-  font: 0.85em verdana, arial, tahoma, sans-serif;
+  font: 0.9em verdana, arial, tahoma, sans-serif;
   margin-bottom: 0;
   outline: none;
 }
