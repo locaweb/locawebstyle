@@ -95,6 +95,7 @@ h3 + .alert {margin-top: 15px;}
   text-shadow: 0 1px 0 #fff;
   opacity: 0.2;
   filter: alpha(opacity=20);
+  right: 0;
 }
 
 .alert .close:hover {
