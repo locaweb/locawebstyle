@@ -23,6 +23,7 @@
  *= require tabs
  *= require deprecated
  *= require collapse
+ *= require mobile
  
  *= require select2
  *= require forms
