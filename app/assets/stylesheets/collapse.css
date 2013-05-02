@@ -5,7 +5,6 @@
 p + .boxCollapse {margin-top: 30px;}
 .collapse p + .btn {margin: 10px 0 5px;}
 .collapse h6:first-child {padding: 10px 0 0;}
-.collapse.in{overflow: visible;}
 
 .boxCollapse {
   border-radius: 3px;
@@ -72,7 +71,7 @@ p + .boxCollapse {margin-top: 30px;}
   z-index: 1;
 }
 
-.boxCollapse:hover, 
+.boxCollapse:hover,
 .boxCollapse.focus{background-color: #ECECEC;}
 
 .boxCollapse.active {
@@ -257,7 +256,7 @@ tr.active .actionsTable {display: none;}
   font-weight: bold;
   padding: 0 5px;
   position: relative;
-  
+
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -268,14 +267,14 @@ tr.active .actionsTable {display: none;}
 }
 .valueNotify:before{
   content: "";
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   position: absolute;
   top: 5px;
   left: -5px;
   border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent; 
-  
+  border-bottom: 5px solid transparent;
+
   border-right:5px solid #ea0019;
 }
 
@@ -296,6 +295,6 @@ tr.active .actionsTable {display: none;}
   -webkit-border-radius: 3px;
   margin-bottom: 0;
 }
-.boxCollapse .tabs li a:after, 
+.boxCollapse .tabs li a:after,
 .boxCollapse .tabs li.active a:after,
 .boxCollapse .tabs li a:hover:after{background: none;}
