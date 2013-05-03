@@ -30,6 +30,7 @@ Locastyle = (function() {
       this.linkPreventDefault();
       this.popover(dom_scope);
       this.formValidate(dom_scope);
+      this.labelSelectCustom();
     },
 
     popover: function(dom_scope){
@@ -207,6 +208,13 @@ Locastyle = (function() {
         $(this).on('slid', function() {
           $(this).find(".carouselNav b").html($(this).find(".active").index() + 1);
         });
+      });
+    },
+
+    labelSelectCustom: function(){
+      $(".label-for-custom2").on("click", function(){
+        var target = $(this).data("target");
+        $(target).select2("open");
       });
     },
 
