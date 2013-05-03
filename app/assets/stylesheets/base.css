@@ -522,7 +522,7 @@ tr.active td .boxActions {padding-top: 0;}
 .messageInfo > div .actionsTable {
   display: block;
   border-top: 1px solid #e5e5e5;
-  margin: 20px 0 -14px;
+  margin: 10px 0 -14px;
 }
 .messageInfo.overflowVisible > div.messageContent,
 .messageInfo > div.messageContent{
@@ -551,6 +551,7 @@ tr.active td .boxActions {padding-top: 0;}
   height: inherit;
   vertical-align: middle;
 }
+.messageInfo .headerInfo a{font-size: 1em; margin: 0;}
 .messageInfo [class*="span"] {margin-left: 0;}
 .messageInfo .headerInfo span.label-info,
 .messageInfo .headerInfo span.badge-info {color: #fff;}
@@ -596,7 +597,7 @@ tr.active td .boxActions {padding-top: 0;}
   overflow: hidden;
 }
 .messageInfo .headerInfo > span{
-  padding: 5px 10px;
+  padding: 5px 5px 5px 0;
   float: left;
 }
 .messageInfo .headerInfo > span,
@@ -631,7 +632,7 @@ tr.active td .boxActions {padding-top: 0;}
 
 .messageInfo .contentDescription .actionsTable {
   border: none;
-  padding: 2px 5px;
+  padding: 6px 5px 2px;
   margin: 0;
   float: left;
 }
@@ -818,7 +819,7 @@ td .progress {max-width: 70px;}
   color: #545454;
   font: bold 12px verdana, arial, tahoma;
 }
-
+.obsGray h6 .lnkArrow{font-size: 1em; font-weight: normal;}
 .obsGray h3 + p {padding-top: 0; margin-bottom: 20px;}
 
 .lightGray {
@@ -1193,6 +1194,8 @@ hr.sep {background-color: #E5E5E5; }
 }
 ol{font-size: 0.75em;}
 ol p{font-size: inherit;}
+.notification .listInfos{margin: 0;}
+.notification .tab-content .tab-pane{padding: 10px;}
 .listInfos{
   max-height: 250px;
   overflow: auto;

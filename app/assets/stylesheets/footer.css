@@ -44,8 +44,8 @@ footer#footer {
 #footer nav ul li:last-child  {border-right: none;}
 
 #footer ul li.ico-helpDesk {background-image: url(img/icoHelpDesk.png);}
-#footer ul li.ico-Chat {background-image: url(img/icoChat.png);}
-#footer ul li.ico-Telefone {background-image: url(img/icoTelefone.png);}
+#footer ul li.ico-chat {background-image: url(img/icoChat.png);}
+#footer ul li.ico-phone {background-image: url(img/icoTelefone.png);}
 
 .subfooter {
   padding: 10px 0;

@@ -285,8 +285,7 @@ tr.active .actionsTable {display: none;}
   left: 200px;
   z-index: 2;
 }
-/*.notification .tabs{display: none;}
-.notification.active .tabs{display: block;}*/
+.boxCollapse.notification .in{overflow: visible;}
 
 .boxCollapse .tab-content{
   border: none;

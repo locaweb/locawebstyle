@@ -5,7 +5,7 @@
 .shortcutBox:after {content: " "; display: block; clear: both;}
 
 .shortcutBox div {
-  width: 31.6%;
+  width:30.2%;
   text-align: center;
   border:3px solid #b7b7b7;
   border-radius: 10px;
@@ -52,8 +52,6 @@
 .shortcutBox.maxBox div > .btn.btn-large{padding: 10px 19px 10px 14px;}
 .shortcutBox.maxBox div > .btn{padding: 4px 12px; display: inline}
 
-.shortcutBox.expandBox div {padding: 10px 0 15px;}
-.shortcutBox.expandBox.microBox div {padding: 10px 0px;}
 
 
 
@@ -106,7 +104,7 @@
 .shortcutBox div p {
   font: 12px verdana, arial, tahoma, sans-serif;
   margin: 0 auto;
-  padding: 0 10%;
+  padding: 0 6%;
 }
 .shortcutBox div:hover p {opacity: 0.7;}
 

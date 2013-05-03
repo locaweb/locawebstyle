@@ -65,7 +65,7 @@ $(function(){
 	$('.collapse.in').find('[tabindex="0"]').attr('tabindex','3');
 
 	//Notificaçao
-	$('.flash_alert, .focusOn, .modal').attr('tabindex','-1').focus();
+	$('.flash_alert, .focusOn, .modal-header .close').attr('tabindex','-1').focus();
 
 	//Ir para o conteudo
 	$('.lnkContent').on('click',function(e){
@@ -114,15 +114,11 @@ $(function(){
   	$(this).parents('li').removeClass('selected');
   })
 
-
-  
-
-
 })
 
 function accessMenu(){
-	// Colocando o menu acessível logo depois do Logo. Assim o logo é lido primeiro.
-	$('.serviceName').after('<nav class="menuAccess" />');
+	// Menu acessivel, sendo lido apos o link de ir para o conteudo
+	$('#header .limit').prepend('<nav class="menuAccess" />');
 	$('[data-access]').each(function(){
 		var title = $(this).attr('title');
 		var  href = $(this).attr('href');
