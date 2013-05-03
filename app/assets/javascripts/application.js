@@ -10,6 +10,7 @@
 //= require jquery-ui.min
 //= require masked-input
 //= require cookie
+//= require validate
 // VENDOR >
 //
 // < APP

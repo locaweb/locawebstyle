@@ -29,6 +29,7 @@ Locastyle = (function() {
       this.minShortcutsCookieHandler();
       this.linkPreventDefault();
       this.popover(dom_scope);
+      this.formValidate(dom_scope);
     },
 
     popover: function(dom_scope){
@@ -293,6 +294,52 @@ Locastyle = (function() {
             }
         });
       });
+    },
+
+    formValidate: function(dom_scope) {
+      $('.validate').validate({
+        errorClass: "help-inline",
+        errorElement: "span",
+        errorPlacement: function(error, element) {
+          var label = $(element).parent().find("label[for="+$(element).attr('id')+"]:first").text().replace("*", "").toLowerCase();
+          error.text(error.text().replace('{label}', label));
+          error.insertAfter(element);
+          var msg = $(element).next('.help-inline').html();
+        },
+        highlight: function(element, errorClass){
+          $(element).parent().addClass('error');
+        },
+        unhighlight: function(element, errorClass){
+          $(element).parent().removeClass('error');
+        }
+      });
+      this.validatePt_br();
+    },
+
+    validatePt_br: function(){
+      $.extend($.validator.messages, {
+        required: "O campo {label} n&atilde;o pode ficar em branco",
+        remote: "Por favor, corrija este campo",
+        email: "O campo {label} deve ser um e-mail v&aacute;lido",
+        url: "O campo {label} deve ser uma url v&aacute;lido",
+        date: "O campo {label} deve ser uma data v&aacute;lida",
+        dateISO: "O campo {label} deve ser uma data v&aacute;lida (ISO)",
+        number: "O campo {label} deve ser um n&uacute;mero v&aacute;lido",
+        digits: "O campo {label} deve ser somente d&iacute;gitos",
+        creditcard: "O campo {label} deve ser um cart&atilde;o de cr&eacute;dito v&aacute;lido",
+        equalTo: "O campo {label} est&aacute; diferente da senha informada",
+        accept: "O campo {label} Por favor, forne&ccedil;a um arquivo com uma extens&atilde;o v&aacute;lida",
+        maxlength: $.validator.format("O campo {label} deve ser menor que {0} caracteres"),
+        minlength: $.validator.format("O campo {label} deve ser maior que {0} caracteres"),
+        rangelength: $.validator.format("O campo {label} deve ter entre {0} e {1} caracteres"),
+        range: $.validator.format("Use um valor entre {0} e {1}"),
+        max: $.format("O campo {label} deve ser menor do que {0}"),
+        min: $.format("O campo {label} deve ser maior do que {0}"),
+        maxValue: $.format("O campo {label} deve ser menor ou igual a {0}"),
+        minValue: $.format("O campo {label} deve ser maior ou igual a {0}")
+      });
     }
+
   }
+
 });
