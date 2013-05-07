@@ -37,7 +37,6 @@ p + .boxCollapse {margin-top: 30px;}
 }
 
 .boxCollapse.simpleCollapse header h4 {
-  font-size: 1em;
   font-family: Ubuntu, verdana, arial, helvetica, tahoma, sans-serif;
 }
 
@@ -45,13 +44,8 @@ p + .boxCollapse {margin-top: 30px;}
   padding-top: 12px;
 }
 
-.boxCollapse.simpleCollapse .collapse {padding-left: 2.5em;}
-.boxCollapse.simpleCollapse .collapse p{line-height: 1.45em;}
-
-.boxCollapse.simpleCollapse header h4 span {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-}
+.boxCollapse.simpleCollapse .collapse {padding-left: 38px;}
+.boxCollapse.simpleCollapse .collapse p{line-height: 16px;}
 
 .boxCollapse header {
   border-left: 5px solid #CCC;
@@ -94,7 +88,7 @@ p + .boxCollapse {margin-top: 30px;}
 
 
 .boxCollapse header h4 {
-  font: 0.9em verdana, arial, tahoma, sans-serif;
+  font: 16px verdana, arial, tahoma, sans-serif;
   margin-bottom: 0;
   outline: none;
 }
@@ -174,6 +168,7 @@ tr.active .actionsTable {display: none;}
   font: bold 18px Ubuntu, verdana, arial, tahoma, helvetica, sans-serif;
   color: #777;
   border: none;
+  letter-spacing: -1px;
 }
 
 .boxCollapse h4 span.ico-dot {
@@ -252,7 +247,7 @@ tr.active .actionsTable {display: none;}
   background: #ea0019;
   color: #fff;
   display: inline-block;
-  font-size: 0.7em;
+  font-size: 11px;
   font-weight: bold;
   padding: 0 5px;
   position: relative;

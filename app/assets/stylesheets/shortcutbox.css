@@ -78,7 +78,7 @@
 
 .shortcutBox div h3, .shortcutBox div h3:first-child {
   text-transform: uppercase;
-  font: 100 1.2em UbuntuLight, verdana, arial, tahoma, sans-serif;
+  font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;
   margin: 0 auto;
   padding: 0 0 10px;
 }
@@ -136,7 +136,7 @@
 .microBox.shortcutBox h3:before {
   display: inline-block;
   vertical-align: middle;
-  font-size: 3em;
+  font-size: 56px;
   margin: 0 10px;
   padding: 0;
   max-width: 53px;
@@ -175,6 +175,7 @@
 .shortcutBox.maxBox > div p,
 .shortcutBox.maxBox > div h3{
   margin-left: 200px;
+  padding: 0;
 }
 .maxBox .lnkCoverAll{ display: block; cursor: pointer;}
 .shortcutBox.maxBox div.active .btn-primary[class*="ico-"]:before,
@@ -191,7 +192,7 @@
   }
 .shortcutBox.maxBox h3 a{max-width: none;}
 .shortcutBox.maxBox div h3{
-  font-size: 1.75em; 
+  font-size: 25px; 
   padding: 0; 
   letter-spacing: -0.6px;
   max-width: 99%;

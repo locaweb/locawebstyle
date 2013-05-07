@@ -12,6 +12,7 @@
 [class^="ico-"]:before, [class*="ico-"]:before, .lnkArrow:before {
   display: inline-block;
   margin-right: 4px;
+  font-size: 13px;
   font-family: locaweb;
   font-weight: normal;
   speak: none;
@@ -22,7 +23,6 @@
   text-align: center;
   position: relative;
   top: -2px;
-  font-size: 1.1em;
 }
 
 .btn[class^="ico-"]:before, .btn[class*="ico-"]:before {top: 0;}
@@ -75,7 +75,7 @@ h6[class^="ico-"]:before {
   -webkit-font-smoothing: antialiased;
 }
 
-.shortcutBox h3:before{font-size: 6.5em;}
+.shortcutBox h3:before{font-size: 136px;}
 
 .chamaicon-addcontact:before {content: "\21"}
 .chamaicon-buzina:before {content: "\22"}

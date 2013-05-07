@@ -8,7 +8,7 @@
 .ie8 .maxBox.shortcutBox div {width: inherit;}
 .ie8 .sideBox h3,
 .ie9 .sideBox h3{margin-bottom: 5px;}
-.ie8 .lnkArrow:before{font-size: 0.9em;}
+.ie8 .lnkArrow:before{font-size: 12px;}
 .ie8 .boxInfo header h3 small{margin-left: 35px;}
 .ie8 .ico-calendar-more,
 .ie8 .ico-calendar-check{width: 35px;}

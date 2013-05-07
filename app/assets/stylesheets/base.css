@@ -1,7 +1,6 @@
 html, body {
   height: 100%;
   font-family: verdana, tahoma, arial, helvetica, sans-serif;
-  font-size: 100%;
 }
 
 .geral {position: relative; height: 100%; min-height: 75%;}
@@ -70,12 +69,12 @@ legend {border-bottom: none; padding-bottom: 5px;}
 h1 + p, h2 + p, h3 + p {padding-top: 7px;}
 p {
   color: #767676;
-  font: 0.75em verdana, arial, tahoma, sans-serif;
+  font: 12px verdana, arial, tahoma, sans-serif;
 }
 
 p small {
   color: #767676;
-  font: 0.85em verdana, arial, tahoma, sans-serif;
+  font: 11px verdana, arial, tahoma, sans-serif;
 }
 
 a {text-decoration: none;}
@@ -107,7 +106,7 @@ h3 + .alert {margin-top: 15px;}
 }
 
 .alert h5 {
-  font: bold 1em verdana,arial, tahoma, sans-serif;
+  font: bold 16px verdana,arial, tahoma, sans-serif;
   color: #2a2a2a !important;
   text-transform: uppercase;
   margin-right: 10px;
@@ -135,7 +134,7 @@ h3 + .alert {margin-top: 15px;}
   background: url(img/icoerro_404.png) no-repeat left center;
   padding: 15px 0 15px 45px;
   margin: 4px 0 10px;
-  font: bold 1.7em verdana, arial, tahoma, sans-serif;
+  font: bold 20px verdana, arial, tahoma, sans-serif;
   color: #545454;
 }
 
@@ -144,7 +143,7 @@ h3 + .alert {margin-top: 15px;}
 .error .help-placeholder {color: #767676 !important;}
 .help-placeholder, .error .help-placeholder {
   background: #e5e5e5;
-  font-size: 0.85em;
+  font-size: 14px;
   color: #767676;
   border-radius: 0 0 3px 3px;
   padding: 8px 10px;
@@ -181,10 +180,9 @@ textarea:focus + .help-placeholder {
   cursor: pointer;
   color: #666;
   font-family: Ubuntu, verdana, arial, sans-serif;
-  font-size: 0.75em;
+  font-size: 12px;
 }
 p .lnkArrow,
-table .lnkArrow{font-size: 1em;}
 table .lnkArrow{margin: 0;}
 
 
@@ -230,14 +228,14 @@ h6 .lnkArrow {
 .boxGray:after {content: " "; display: block; clear: both;}
 
 .boxGray h2 {
-  font-size: 1.6em;
+  font-size: 22px;
   padding: 10px 10px 0 15px; margin: 0 0 0 -1px;
   background: url(img/setaDetalheTit.png) no-repeat left 15px;
   letter-spacing: -1px;
 }
 
 .boxGray p {
-  font: 0.75em verdana, arial, tahoma, sans-serif;
+  font: 14px verdana, arial, tahoma, sans-serif;
   color: #797979;
   margin: 0;
   padding: 0 15px 11px 15px;
@@ -251,7 +249,7 @@ h6 .lnkArrow {
   padding: 5px 0 0;
   margin: 0;
   height: auto;
-  font-size: 0.8em;
+  font-size: 11px;
 }
 
 .pagination ul {
@@ -401,7 +399,7 @@ tr.active td .boxActions {padding-top: 0;}
   padding: 6px 10px;
   margin: 5px 0 0 0;
   line-height: 20px;
-  font-size: 0.75em;
+  font-size: 12px;
   background: #ececec;
 }
 
@@ -457,7 +455,7 @@ tr.active td .boxActions {padding-top: 0;}
 .ui-datepicker .ui-datepicker-next {background-position: -49px -193px; float: right;}
 .ui-datepicker-title {text-align: center; line-height: 14px;}
 
-.ui-datepicker table { width: 100%; font-size: 0.7em;}
+.ui-datepicker table { width: 100%; font-size: 12px;}
 .ui-datepicker table td {text-align: center; border: 1px solid #CCC;}
 .ui-datepicker table td:empty {border: none;}
 .ui-datepicker table td a {font-size: 11px; display: block; color: #333; text-decoration: none;}
@@ -551,7 +549,7 @@ tr.active td .boxActions {padding-top: 0;}
   height: inherit;
   vertical-align: middle;
 }
-.messageInfo .headerInfo a{font-size: 1em; margin: 0;}
+.messageInfo .headerInfo a{margin: 0;}
 .messageInfo [class*="span"] {margin-left: 0;}
 .messageInfo .headerInfo span.label-info,
 .messageInfo .headerInfo span.badge-info {color: #fff;}
@@ -582,7 +580,6 @@ tr.active td .boxActions {padding-top: 0;}
 .messageInfo p {
   color: #2a2a2a;
   margin: 0;
-  font-size: 0.9em;
 }
 
 .messageInfo i {
@@ -596,6 +593,7 @@ tr.active td .boxActions {padding-top: 0;}
   margin: -14px 0 10px;
   overflow: hidden;
 }
+.messageInfo.overflowVisible .headerInfo{ margin: 0 10px;}
 .messageInfo .headerInfo > span{
   padding: 5px 5px 5px 0;
   float: left;
@@ -819,7 +817,7 @@ td .progress {max-width: 70px;}
   color: #545454;
   font: bold 12px verdana, arial, tahoma;
 }
-.obsGray h6 .lnkArrow{font-size: 1em; font-weight: normal;}
+.obsGray h6 .lnkArrow{font-weight: normal;}
 .obsGray h3 + p {padding-top: 0; margin-bottom: 20px;}
 
 .lightGray {
@@ -937,7 +935,7 @@ td .progress {max-width: 70px;}
 **** Alertas para retornos e notificações
 ***/
 .alert {
-  font-size: 0.75em;
+  font-size: 12px;
   padding: 8px 14px;
 }
 .alert p{
@@ -1089,7 +1087,7 @@ td .progress {max-width: 70px;}
 .chooseBox [class^="ico-"]:before,
 .chooseBox [class*="ico-"]:before {
   color: #545454;
-  font-size: 2.4em;
+  font-size: 43px;
   margin: 10px;
   position: absolute;
   left: 0;
@@ -1109,9 +1107,7 @@ td .progress {max-width: 70px;}
   color: #333;
 }
 
-.popover-content {font-size: 14px;}
-
-.popover{font-size: 0.88em;}
+.popover-content {font-size: 12px;}
 
 .boxWithArrow {
   float: left;
@@ -1192,7 +1188,6 @@ hr.sep {background-color: #E5E5E5; }
 .forceClass .warning {
   color: #dc0008;
 }
-ol{font-size: 0.75em;}
 ol p{font-size: inherit;}
 .notification .listInfos{margin: 0;}
 .notification .tab-content .tab-pane{padding: 10px;}
@@ -1216,3 +1211,4 @@ ol p{font-size: inherit;}
   text-shadow: none;
   margin: 0;
 }
+.listDl{font-size: 12px;}

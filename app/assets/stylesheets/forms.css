@@ -375,7 +375,6 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 .select2-drop,
 .customSelect,
 .select2-container-active {
-  font-size:0.9em;
   border-radius: 2px;
   box-shadow: none;
   border-color: #d4d4d4;

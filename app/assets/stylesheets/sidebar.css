@@ -11,7 +11,7 @@
 .innerSideBox {
   color: #767676;
   margin:10px;
-  font-size: 0.75em;
+  font-size: 11px;
   border-radius:2px;
 }
 .innerSideBox h3{margin-bottom: 5px;}
@@ -82,14 +82,12 @@
 .listWhite [class^="ico-"]:before,
 .listWhite [class*="ico-"]:before{
   left: 5px;
-  font-size: 0.9em;
   top: 0;
 }
 .listWhite li a {
   color:inherit!important;
   padding: 3px 10px 3px 15px;
-
-  font: 12px verdana, tahoma, arial, sans-serif;
+  font: 11px verdana, tahoma, arial, sans-serif;
   display: inline-block;
 
 }
@@ -196,18 +194,22 @@ h5 + .innerSideBox {margin-top:5px;}
 }
 .boxSidebarTitle i {
   color: #fff!important;
-  font-size: 1.56em;
+  
   margin:6px 0 0 9px;
   font-weight: normal;
   font-style: normal;
 }
-
+.boxSidebarTitle i[class^="ico-"]:before, 
+.boxSidebarTitle i[class*="ico-"]:before{
+  font-size: 25px;
+}
 .boxSidebarTitle .ico-user,
 .boxSidebarTitle .ico-user-star,
 .boxSidebarTitle .ico-lamp{
   margin: 3px 0 0 5px;
 }
 .boxSidebarTitle .cmicon-help {
+  font-size: 25px;
   margin: 7px 0 0 10px;
   position: absolute;
   font-weight: bold;
@@ -216,10 +218,9 @@ h5 + .innerSideBox {margin-top:5px;}
   margin: 5px;
 }
 .boxSidebarTitle i.ico-list,
-.boxSidebarTitle i.ico-code{font-size: 1.16em;}
+.boxSidebarTitle i.ico-code{font-size: 21px;}
 .boxSidebarTitle i.ico-code{margin: 6px 0 0 7px;}
 
-.innerSideBox .lnkArrow {font-size: 1em;}
-.innerSideBox small{font-size: 0.9em; line-height: 1.1em; }
+.innerSideBox small{font-size: 11px; line-height: 1.1em; }
 .sidebar .progress{margin: 0;}
-.progressInfo{font-size: 0.9em; }
+.progressInfo{font-size: 11px; }

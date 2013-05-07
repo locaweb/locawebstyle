@@ -340,7 +340,7 @@
 .accessibility.show{top:0;}
 .forceClass .accessibility .lnkContent{
   color: #333;
-  font-size: 0.9em;
+  font-size: 13px;
 }
 .accessibility,
 .accessibility.show{
@@ -349,7 +349,7 @@
 
 .headerPrincipal .nav-pills .dropdown-menu,
 .headerPrincipal .dropdown-toggle{
-  font-size: 0.75em;
+  font-size: 12px;
 }
 .headerPrincipal .open .dropdown-toggle:hover{color: #fff;}
 .headerPrincipal .dropdown-toggle,
