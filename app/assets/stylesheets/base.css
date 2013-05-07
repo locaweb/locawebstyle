@@ -872,9 +872,6 @@ td .progress {max-width: 70px;}
   margin: 0 0 5px;
 }
 
-.popover.right .arrow {margin-top: -6px;} /** Corrije um desalinhamento da setinha... tem que pesquisar por que acontece isso. **/
-.popover.left {margin-left: -10px;}
-
 .popover li {
   white-space: nowrap;
   overflow: hidden;
