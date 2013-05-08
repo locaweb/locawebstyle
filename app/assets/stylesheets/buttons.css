@@ -44,6 +44,10 @@ p a.btn {color: #333;}
 	padding: 10px 19px 10px 14px;
 }
 
+.btn.btn-long {
+	 padding: 6px 32px;
+}
+
 .btn-choice {
 	width: 100px;
 	margin-bottom: 10px;
