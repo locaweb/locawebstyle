@@ -339,6 +339,7 @@ tr.active td .boxActions {padding-top: 0;}
 .obsGray h3:first-child {padding-top: 0;}
 .boxActions .btn {display: inline-block; margin-right: 5px; float: none;}
 .boxActions .btn.fright {color: #333; margin-left: 5px; float: right;}
+.boxActions .btn-primary.fright {color: #fff; margin-left:5px; float:right;}
 .boxActionsTools {padding-left: 0; border-top: none;}
 .boxActionsTools .btn {margin-right: 2px;}
 
