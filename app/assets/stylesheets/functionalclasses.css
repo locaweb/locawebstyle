@@ -130,7 +130,7 @@ table.txtRight td, table.txtRight th {text-align: right;}
 
 /** COLORS **/
 .bgWhite {background: white!important;}
-.colorBlack {color: #000;}
+.colorBlack {color: #000!important;}
 
 /**
 *** INPUTS

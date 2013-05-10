@@ -19,14 +19,18 @@
   #main div.limit {left:0 !important; padding:0 10px 40px 10px;}
 
   .shortcutBox div {
-    width:92% !important;
+    width:92%;
     min-height: inherit !important;
     padding-bottom:20px !important;
     height: auto !important;
     float:none !important;
   }
+  .shortcutBox.maxBox div {
+    width:99%;
+  }
+  /*.shortcutBox div p {display:none;}*/
 
-  .shortcutBox div p {display:none;}
+  .shortcutBox .lnkCoverAll p {display:none;}
 
   .infoLogin {display:none;}
 

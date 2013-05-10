@@ -408,9 +408,12 @@ footer#rodape {
 #rodape nav ul li a{color: #fff;}
 #rodape nav ul li:last-child  {border-right:none;}
 
-#rodape ul li.ico-helpDesk{background-image:url(img/icoHelpDesk.png);}
-#rodape ul li.ico-Chat{background-image:url(img/icoChat.png);}
-#rodape ul li.ico-Telefone {background-image:url(img/icoTelefone.png);}
+#rodape ul li.ico-helpDesk,
+#footer ul li.ico-helpDesk{background-image:url(img/icoHelpDesk.png);}
+#rodape ul li.ico-Chat,
+#footer ul li.ico-Chat{background-image:url(img/icoChat.png);}
+#rodape ul li.ico-Telefone,
+#footer ul li.ico-Telefone {background-image:url(img/icoTelefone.png);}
 
 #rodape nav .lnkArrow {margin:15px 20px 0; color:#FFF;}
 

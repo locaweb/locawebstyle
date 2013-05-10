@@ -37,7 +37,7 @@ input, textarea, select {
 ::-moz-input-placeholder,
 ::-ms-input-placeholder,
 ::-o-input-placeholder,
-::input-placeholder {color: #bfbfbf;}
+input-placeholder {color: #bfbfbf;}
 
 .control-group input {margin-bottom: 0;}
 
@@ -93,7 +93,6 @@ label.nomarginleft {margin-left: 0 !important;}
   display: inline-block;
   padding-top: 5px;
   padding-right: 10px;
-  width: 100px;
   text-align: right;
   font-weight: bold;
   font-size: 12px;

@@ -477,8 +477,15 @@ tr.active td .boxActions {padding-top: 0;}
   width: 100%;
 }
 .messageInfo:hover{background: #f0f0f0;}
-.messageInfo:hover .countViews[class*="span"]{box-shadow: inset 0 0 0 2px #f0f0f0;}
-.messageInfo:hover .countViews[class*="span"]:after{background: url(img/arrowSilver.png) no-repeat right center;}
+.messageInfo:hover .countViews[class*="span"]{
+  box-shadow: inset 0 0 0 2px #f0f0f0;
+}
+.messageInfo.noBgHover:hover .countViews[class*="span"]{
+  box-shadow: inset 0 0 0 2px #fff;
+}
+.messageInfo:hover .countViews[class*="span"]:after{
+  background: url(img/arrowSilver.png) no-repeat right center;
+}
 
 .messageInfo > div[class*="span"] {
   padding: 14px 10px;
@@ -508,7 +515,6 @@ tr.active td .boxActions {padding-top: 0;}
   padding: 0;
   width: 100%
 }
-
 .messageInfo.overflowVisible > div[class*="span"] {
   display: table-cell;
   border-left: 1px solid #e5e5e5;
@@ -564,8 +570,9 @@ tr.active td .boxActions {padding-top: 0;}
   display: table-cell;
   box-shadow: inset 0 0 0 2px #FFF;
 }
-.messageInfo .countViews strong {color: #545454;}
-.messageInfo .countViews:after {
+.messageInfo .countViews strong {color: #545454; font-size: 14px;}
+.messageInfo .countViews:after,
+.messageInfo.noBgHover:hover .countViews:after {
   background: url(img/arrowWhite.png) no-repeat right center;
   content: " ";
   width: 17px;
@@ -624,7 +631,6 @@ tr.active td .boxActions {padding-top: 0;}
 
 .messageInfo .contentDescription {
   overflow: hidden;
-  padding-left: 4px;
 }
 
 .messageInfo .contentDescription .actionsTable {
@@ -640,8 +646,9 @@ tr.active td .boxActions {padding-top: 0;}
 }
 
 .messageInfo .contentDescription p {
-  padding: 5px 5px;
+  padding: 5px 0;
   border-left: 1px solid #e5e5e5;
+  color: #767676;
 }
 
 .messageInfo .contentDescription.with_border p {
@@ -1182,7 +1189,7 @@ hr.sep {background-color: #E5E5E5; }
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .forceClass .warning {
-  color: #dc0008;
+  color: #b54646;
 }
 ol p{font-size: inherit;}
 .notification .listInfos{margin: 0;}
@@ -1208,3 +1215,10 @@ ol p{font-size: inherit;}
   margin: 0;
 }
 .listDl{font-size: 12px;}
+.pipeSeparator {
+  border-left: 1px solid #d0d0d0;
+  width:1px;
+  height:10px;
+  display: inline-block;
+  margin: 0 5px;
+}

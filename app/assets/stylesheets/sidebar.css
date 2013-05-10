@@ -217,8 +217,8 @@ h5 + .innerSideBox {margin-top:5px;}
 .boxSidebarTitle .ico-thumbs-up-1{
   margin: 5px;
 }
-.boxSidebarTitle i.ico-list,
-.boxSidebarTitle i.ico-code{font-size: 21px;}
+.boxSidebarTitle i.ico-list:before,
+.boxSidebarTitle i.ico-code:before{font-size: 21px;}
 .boxSidebarTitle i.ico-code{margin: 6px 0 0 7px;}
 
 .innerSideBox small{font-size: 11px; line-height: 1.1em; }
