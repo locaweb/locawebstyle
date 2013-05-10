@@ -326,9 +326,9 @@ Locastyle = (function() {
 
     validatePt_br: function(){
       $.extend($.validator.messages, {
-        required: "O campo {label} n&atilde;o pode ficar em branco",
+        required: "N&atilde;o pode ficar em branco",
         remote: "Por favor, corrija este campo",
-        email: "O campo {label} deve ser um e-mail v&aacute;lido",
+        email: "Preencha com um e-mail v&aacute;lido",
         url: "O campo {label} deve ser uma url v&aacute;lido",
         date: "O campo {label} deve ser uma data v&aacute;lida",
         dateISO: "O campo {label} deve ser uma data v&aacute;lida (ISO)",

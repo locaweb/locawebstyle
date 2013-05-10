@@ -1,4 +1,4 @@
-// $(function(){
+$(function(){
 	$.fn.passwordStrength = function(options) {
 		var getPasswordStrength;
 		getPasswordStrength = function(pass) {
@@ -57,4 +57,4 @@
 	$(document).ready(function() {
 		return $("#user_password, #account_password").passwordStrength();
 	});
-// })
+})
