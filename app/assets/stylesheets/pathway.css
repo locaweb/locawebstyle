@@ -17,11 +17,11 @@
   -o-transition: all .2s ease-out;
   transition: all .2s ease-out;
 }
-.pathWay.steps6 li {width: 16.582%;}
-.pathWay.steps5 li {width: 19.91%;}
-.pathWay.steps4 li {width: 24.916%;}
-.pathWay.steps3 li {width: 33.24%;}
-.pathWay.steps2 li {width: 49.916%;}
+.pathWay.steps6 li {width: 16.5%;}
+.pathWay.steps5 li {width: 19.8%;}
+.pathWay.steps4 li {width: 24.9%;}
+.pathWay.steps3 li {width: 33.2%;}
+.pathWay.steps2 li {width: 49.9%;}
 .pathWay.steps1 li {width: 100%;}
 
 .pathWay a, .pathWay li.disable:hover a {
