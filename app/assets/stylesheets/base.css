@@ -539,7 +539,10 @@ tr.active td .boxActions {padding-top: 0;}
 .messageInfo .messageContent p{margin: 0 0 10px;}
 
 .messageInfo .messageContent .actionsTable{margin: 0; border: none;}
-.forceClass .messageInfo h5, .forceClass .messageInfo h5 a {
+.forceClass .messageInfo h5,
+.forceClass .messageInfo h5 a,
+.forceClass .content .messageInfo h5, 
+.forceClass .content .messageInfo h5 a {
   color: #767676;
   font: normal 12px verdana, sans-serif;
 }
@@ -647,7 +650,7 @@ tr.active td .boxActions {padding-top: 0;}
 }
 
 .messageInfo .contentDescription p {
-  padding: 5px 0;
+  padding: 5px;
   border-left: 1px solid #e5e5e5;
   color: #767676;
 }

@@ -193,6 +193,7 @@
   top: -2px;
 }
 #menuPrincipal .btMenu a:hover,
+#menuPrincipal .btMenu a:focus,
 #menuPrincipal .btMenu a:active {
   background-color: #777;
   color: #FFF !important;

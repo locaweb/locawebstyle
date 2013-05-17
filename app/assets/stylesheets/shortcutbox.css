@@ -104,6 +104,7 @@
 .shortcutBox div p {
   font: 12px verdana, arial, tahoma, sans-serif;
   margin: 0 auto;
+  min-height: 45px;
   padding: 0 6%;
 }
 .shortcutBox div:hover p {opacity: 0.7;}

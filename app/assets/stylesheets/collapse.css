@@ -74,7 +74,8 @@ p + .boxCollapse {margin-top: 30px;}
   padding-bottom: 10px;
 }
 
-.boxCollapse.active header h4 {font-weight: bold;}
+.boxCollapse.active header h4,
+.boxCollapse.focus header h4{font-weight: bold;}
 
 .boxCollapse .collapse {padding: 0 15px;}
 
