@@ -179,7 +179,7 @@ Locastyle = (function() {
     },
 
     inputDataValue: function(dom_scope) {
-      $.each($('input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]'), function(i, e){
+      $.each($('textarea, input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]'), function(i, e){
         var value = $(this).attr("value");
         $(this).attr("data-value", value);
       });
