@@ -58,7 +58,7 @@ module Boostrap
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    config.assets.precompile += ['manual/application.css', 'manual/application.js', 'manual/example.css']
+    config.assets.precompile += ['manual/application.css', 'manual/application.js', 'manual/example.css', 'bootstrap.css']
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

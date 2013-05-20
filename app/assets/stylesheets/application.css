@@ -1,8 +1,6 @@
 /*
  *= require locastyle_head
  *
- VENDOR
- *= require bootstrap/css/bootstrap
 
  *= require base
  *= require fonts
@@ -24,7 +22,7 @@
  *= require deprecated
  *= require collapse
  *= require mobile
- 
+
  *= require select2
  *= require forms
  *= require passwordStrength
