@@ -87,7 +87,8 @@
 #{$theme_name} .tabs li a:hover,
 #{$theme_name} .tabs li a:focus,
 #{$theme_name} .tabs li.active a,
-#{$theme_name} #menuPrincipal ul li ul {
+#{$theme_name} #menuPrincipal ul li ul,
+#{$theme_name} .dropdown-menu.listIdent {
   border-bottom-color: $pallet_1;
 }
 
