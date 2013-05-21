@@ -89,6 +89,7 @@ h6[class^="ico-"]:before {
 .chamaicon-sendowindow:before {content: "\2a"}
 .chamaicon-stats:before {content: "\2b"}
 .chamaicon-contato:before {content: "\e000";}
+.chamaicon-pencil:before {content: "\e001";}
 
 /** ícones de redes sociais - brandicon **/
 [class^="brandicon-"]:before, [class*=" brandicon-"]:before {
