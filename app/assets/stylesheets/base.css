@@ -541,7 +541,7 @@ tr.active td .boxActions {padding-top: 0;}
 .messageInfo .messageContent .actionsTable{margin: 0; border: none;}
 .forceClass .messageInfo h5,
 .forceClass .messageInfo h5 a,
-.forceClass .content .messageInfo h5, 
+.forceClass .content .messageInfo h5,
 .forceClass .content .messageInfo h5 a {
   color: #767676;
   font: normal 12px verdana, sans-serif;
@@ -869,8 +869,6 @@ td .progress {max-width: 70px;}
 .infoHelp:hover{text-decoration: none;}
 .progress.infoHelp {padding: 0;}
 
-.popover h3 {margin: 0 !important;}
-
 .infoHelp:before {
   content: "?";
   color: #FFF !important;
@@ -882,17 +880,24 @@ td .progress {max-width: 70px;}
   margin: 0 0 5px;
 }
 
-.popover li {
-  white-space: nowrap;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  -ms-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-}
 /* quando nao existir conteudo no titulo */
 .popover .popover-title:empty{
   display: none;
 }
+
+.popover h3 {
+  margin: 0 !important;
+  padding-top: 8px !important;
+}
+
+.popover li {
+  list-style: none;
+}
+
+.popover-content {
+  overflow: hidden;
+}
+
 
 /*** COLLAPSE
 **** Algumas adequações
