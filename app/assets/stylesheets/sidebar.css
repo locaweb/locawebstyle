@@ -91,7 +91,7 @@
   display: inline-block;
 
 }
-
+.listWhite span[class^="ico-"]:before{font-size: 10px;}
 .listWhite li a:before {
   font-weight: bold;
   margin: -2px 10px 0 -10px;

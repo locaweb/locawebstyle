@@ -971,7 +971,7 @@ td .progress {max-width: 70px;}
 
 .alert.alert-notification .close {display: none;}
 
-.forceClass a.lnkNoShow {
+.forceClass .alert a.lnkNoShow {
   position: absolute;
   right: 0; bottom: -21px;
   font-size: 11px;
