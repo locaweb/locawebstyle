@@ -1,0 +1,26 @@
+{
+  "name": "locastyle",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-nodeunit": "~0.1.2"
+  },
+  "readmeFilename": "readme.md",
+  "gitHead": "4e08b50862e397960ae9336fe6d8dcd757f08de2",
+  "description": "Locaweb Style Guide",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-nodeunit": "~0.1.2"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/locaweb/locawebstyle.git"
+  },
+  "author": "Locaweb"
+}
