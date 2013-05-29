@@ -1,0 +1,148 @@
+
+<div class="aboutMini">
+  <div class="limite">
+    <div class="span5 widget_text" id="text-7">     <div class="textwidget"><h3 class="ico-what">O que é?</h3>
+    <p>Um lugar que reúne documentações sobre produtos da Locaweb como Cloud, Gateway, Email Marketing e outros. Informações sobre nossas APIs e também nossa plataforma de padrão de código e user interface.</p></div>
+    </div><div class="span5 widget_text" id="text-8">     <div class="textwidget">    <h3 class="ico-who">Para quem?</h3>
+    <p>Para qualquer desenvolvedor web que queira conhecer mais sobre os serviços e produtos da Locaweb e queira utilizar melhorar seus projetos pessoais.</p>
+</div>
+    </div><div class="span5 widget_text" id="text-9">     <div class="textwidget"><h3 class="ico-tweet">Últimos tweets</h3>
+  <script>
+    JQTWEET = {
+      user: 'locawebdevnet',
+      numTweets: 2,
+      appendTo: '#twitterfooter',
+      loadTweets: function() {
+        $.ajax({
+          url: 'http://api.twitter.com/1/statuses/user_timeline.json/',
+          type: 'GET',
+          dataType: 'jsonp',
+          data: {
+            screen_name: JQTWEET.user,
+            include_rts: true,
+            count: JQTWEET.numTweets,
+            include_entities: true
+          },
+          success: function(data, textStatus, xhr) {
+
+           var html = '&lt;li class="tweet"&gt;TWEET_TEXT&lt;div class="time"&gt;AGO&lt;/li&gt;';
+
+             for (var i = 0; i &lt; data.length; i++) {
+              $(JQTWEET.appendTo).append(
+                html.replace('TWEET_TEXT', JQTWEET.ify.clean(data[i].text))
+                  .replace(/USER/g, data[i].user.screen_name)
+                  .replace('AGO', JQTWEET.timeAgo(data[i].created_at))
+                  .replace(/ID/g, data[i].id_str)
+              );
+
+             }          
+          } 
+
+        });
+        
+      }, 
+      timeAgo: function(dateString) {
+      var rightNow = new Date();
+      var then = new Date(dateString);
+      
+      if ($.browser.msie) {
+        then = Date.parse(dateString.replace(/( \+)/, ' UTC$1'));
+      }
+
+      var diff = rightNow - then;
+
+      var second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24,
+      week = day * 7;
+
+      if (isNaN(diff) || diff &lt; 0) {
+        return "";
+      }
+
+      if (diff &lt; second * 2) {
+        return "right now";
+      }
+
+      if (diff &lt; minute) {
+        return Math.floor(diff / second) + " seconds ago";
+      }
+
+      if (diff &lt; minute * 2) {
+        return "about 1 minute ago";
+      }
+
+      if (diff &lt; hour) {
+        return Math.floor(diff / minute) + " minutes ago";
+      }
+
+      if (diff &lt; hour * 2) {
+        return "about 1 hour ago";
+      }
+
+      if (diff &lt; day) {
+        return  Math.floor(diff / hour) + " hours ago";
+      }
+
+      if (diff &gt; day &amp;&amp; diff &lt; day * 2) {
+        return "yesterday";
+      }
+
+      if (diff &lt; day * 365) {
+        return Math.floor(diff / day) + " days ago";
+      }
+
+      else {
+        return "over a year ago";
+      }
+    },
+
+      ify:  {
+        link: function(tweet) {
+          return tweet.replace(/\b(((https*\:\/\/)|www\.)[^\"\']+?)(([!?,.\)]+)?(\s|$))/g, function(link, m1, m2, m3, m4) {
+            var http = m2.match(/w/) ? 'http://' : '';
+            return '&lt;a class="twtr-hyperlink" target="_blank" href="' + http + m1 + '"&gt;' + ((m1.length &gt; 25) ? m1.substr(0, 24) + '...' : m1) + '&lt;/a&gt;' + m4;
+          });
+        },
+
+        at: function(tweet) {
+          return tweet.replace(/\B[@＠]([a-zA-Z0-9_]{1,20})/g, function(m, username) {
+            return '&lt;a target="_blank" class="twtr-atreply" href="http://twitter.com/intent/user?screen_name=' + username + '"&gt;@' + username + '&lt;/a&gt;';
+          });
+        },
+
+        list: function(tweet) {
+          return tweet.replace(/\B[@＠]([a-zA-Z0-9_]{1,20}\/\w+)/g, function(m, userlist) {
+            return '&lt;a target="_blank" class="twtr-atreply" href="http://twitter.com/' + userlist + '"&gt;@' + userlist + '&lt;/a&gt;';
+          });
+        },
+
+        hash: function(tweet) {
+          return tweet.replace(/(^|\s+)#(\w+)/gi, function(m, before, hash) {
+            return before + '&lt;a target="_blank" class="twtr-hashtag" href="http://twitter.com/search?q=%23' + hash + '"&gt;#' + hash + '&lt;/a&gt;';
+          });
+        },
+
+        clean: function(tweet) {
+          return this.hash(this.at(this.list(this.link(tweet))));
+        }
+      }
+    };
+
+    $(document).ready(function () {
+      JQTWEET.loadTweets();
+    });
+
+  </script> 
+<ul id="twitterfooter"><li class="tweet">Designing in the browser has all sorts of benefits removing the extra step of converting from image file to markup. <a href="http://t.co/YCGWtX0H7V" target="_blank" class="twtr-hyperlink">http://t.co/YCGWtX0H7V</a><div class="time">11 hours ago</div></li><li class="tweet">Guia de CSS do WebMonkey. <a href="http://t.co/HXzFWh0IuE" target="_blank" class="twtr-hyperlink">http://t.co/HXzFWh0IuE</a> <a href="http://twitter.com/search?q=%23soudev" class="twtr-hashtag" target="_blank">#soudev</a><div class="time">yesterday</div></li></ul></div>
+    </div>  </div>
+</div>
+
+<footer>
+  <div class="limite">
+    <a class="logoloca" title="Locaweb - Líder em hospedagem no Brasil" href="http://locaweb.com.br/?utm_source=Developer%2BNetwork&amp;utm_medium=linkRodape&amp;utm_campaign=link">Locaweb</a> <div class="widget_text" id="text-10">     <div class="textwidget">    <h1 class="logo"><a href="/">Locaweb Devnet</a></h1>
+    <p>Desenhado e construído pelos Desenvolvedores da Locaweb para você. <a href="sobre/termos-de-uso">Termo de uso</a>.</p>
+</div>
+    </div>  </div>
+</footer>
