@@ -1,0 +1,78 @@
+/** Resolve bug quando era colocado icon no botões de dropdown **/
+.btn-group > .btn + .dropdown-toggle {vertical-align: bottom;}
+
+[class*="btn"] {
+	line-height: normal;
+  	font-family: Ubuntu, verdana, arial, helvetica, tahoma, sans-serif;
+}
+
+.btn {border-radius: 3px; padding: 6px 12px;}
+.tab .btn-small{padding: 3px 12px;}
+
+/** arruma cor padrao de btns com icones **/
+table tr td a.btn,
+p a.btn,
+a[class*="btn"],
+a[class*="btn"]:hover,
+.btn[class^="ico-"],
+.btn[class*=" ico-"],
+.btn[class*=" ico-"]:hover,
+.btn[class^="ico-"]:hover {color: inherit;}
+
+p a.btn {color: #333;}
+
+/**
+*** Fixing: A linha 6042 do Bootstrap caga a cor desses botoes. Quando eles estão com ícones.
+**/
+.btn.btn-info,
+.btn.btn-info:hover,
+.btn.btn-warning,
+.btn.btn-warning:hover,
+.btn.btn-success,
+.btn.btn-success:hover,
+.btn.btn-danger,
+.btn.btn-danger:hover,
+.btn.btn-inverse,
+.btn.btn-inverse:hover,
+.forceClass .btn.btn-primary,
+.forceClass .btn.btn-primary:hover,
+.forceClass .btn-primary[class^="ico-"],
+.forceClass .btn-primary[class*=" ico-"] {color: #FFF;}
+
+.btn.btn-large {
+	font-size: 14px;
+	padding: 10px 19px 10px 14px;
+}
+
+.btn.btn-long {
+	 padding: 6px 32px;
+}
+
+.btn-choice {
+	width: 100px;
+	margin-bottom: 10px;
+}
+
+.btn-shadow {
+	position: relative;
+	background: #bfbfbf !important;
+	border-bottom: 1px solid #adadad !important;
+}
+
+.btn-shadow:after,
+.btn-shadow:before {
+	content: "";
+	position: absolute;
+	border: 9px;
+	border-style: solid;
+	top: 28px;
+}
+
+.btn-shadow:after{
+	border-color: #bfbfbf transparent transparent transparent;
+ 	left: 42%
+}
+.btn-shadow:before{
+	border-color: #adadad transparent transparent transparent;
+	left: 42%;
+}

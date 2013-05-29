@@ -1,0 +1,98 @@
+/***
+**** O CSS para Mobiles está em mobile.css
+**** Neste arquivo fica apenas o necessário para o Grid responsivo funcionar
+***/
+
+/**!
+*** GRID.CSS
+**/
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  margin-left: 20px;
+}
+
+/** Outras telas, desktops e até tablets
+***
+**/
+.limit,
+#menuPrincipal > ul,
+.container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {width: 988px;}
+
+.span16 {width: 988px;}
+.span15 {width: 925px;}
+.span14 {width: 862px;}
+.span13 {width: 799px;}
+.span12 {width: 736px;}
+.span11 {width: 673px;}
+.span10 {width: 610px;}
+.span9 {width: 547px;}
+.span8 {width: 484px;}
+.span7 {width: 421px;}
+.span6 {width: 358px;}
+.span5 {width: 295px;}
+.span4 {width: 232px;}
+.span3 {width: 169px;}
+.span2 {width: 106px;}
+.span1 {width: 43px;}
+
+/*input.input120, input.span2 {width:90px !important;}*/
+
+.span14 {width: 840px;}
+
+.revisit .shortcutBox h3{ font: 100 18px UbuntuLight, verdana, arial, tahoma, sans-serif; line-height: 25px; letter-spacing: -1px;}
+.statusMessageBox .overflowMessage {
+  overflow: hidden;
+  position: relative;
+  min-width: 10%;
+  max-width: 37%;
+}
+
+/** Desktop
+*** Passando de 1220px
+**/
+@media screen and (min-width: 1220px) {
+  .limit,
+  #menuPrincipal > ul,
+  .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {width: 1180px !important;}
+
+  .pathWay li a, .pathWay li.disable:hover a {font-size: 20px;}
+
+  .span16 {width: 1180px;}
+  .span15 {width: 1105px;}
+  .span14 {width: 1030px;}
+  .span13 {width: 955px;}
+  .span12 {width: 880px;}
+  .span11 {width: 805px;}
+  .span10 {width: 730px;}
+  .span9 {width: 655px;}
+  .span8 {width: 580px;}
+  .span7 {width: 505px;}
+  .span6 {width: 430px;}
+  .span5 {width: 355px;}
+  .span4 {width: 280px;}
+  .span3 {width: 205px;}
+  .span2 {width: 130px;}
+  .span1 {width: 55px;}
+
+  .revisit .shortcutBox h3 {font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;}
+}
+
+
+
+

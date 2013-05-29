@@ -1,0 +1,208 @@
+/*** Shortcut Box
+**** Caixa geralmente inserida na home do dashboard dos produtos contendo atalhos para as principais ações
+***/
+.shortcutBox {margin: 15px 0 0 15px; clear: both;}
+.shortcutBox:after {content: " "; display: block; clear: both;}
+
+.shortcutBox div {
+  width:30.2%;
+  text-align: center;
+  border:3px solid #b7b7b7;
+  border-radius: 10px;
+  display: inline-block;
+  margin-right: 1.9%;
+  margin-bottom: 20px;
+  position: relative;
+  vertical-align: top;
+  background: #f8f8f8;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjNmM2YzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  #f8f8f8 0%, #c6c6c6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#c6c6c6));
+  background: -webkit-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%);
+  background: -o-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%);
+  background: -ms-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%);
+  background: linear-gradient(to bottom,  #f8f8f8 0%,#c6c6c6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#c6c6c6',GradientType=0 );
+
+}
+.shortcutBox div > a,
+.shortcutBox div{
+  min-height: 250px;
+}
+.shortcutBox.miniBox div,
+.shortcutBox.miniBox div > a,
+.shortcutBox.maxBox div > a
+.shortcutBox.smallBox div,
+.shortcutBox.smallBox div > a{
+  min-height: 10px;
+}
+
+.shortcutBox div > a,
+.shortcutBox.miniBox div > a{
+  display: block;
+  padding: 20px 0;
+  outline: none;
+}
+.shortcutBox.smallBox div > a,
+.shortcutBox.maxBox div > a{
+  display: inline-block;
+  padding: 0;
+}
+.shortcutBox.maxBox div > .lnkCoverAll{padding: inherit;}
+.shortcutBox.maxBox div > .btn.btn-large{padding: 10px 19px 10px 14px;}
+.shortcutBox.maxBox div > .btn{padding: 4px 12px; display: inline}
+
+
+
+
+/** Hover padrão **/
+.shortcutBox div:hover {
+  border-color: #CCC;
+  background: rgb(248,248,248);
+  background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(237,237,237,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(248,248,248,1)), color-stop(100%,rgba(237,237,237,1)));
+  background: -webkit-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%);
+  background: -o-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%);
+  background: linear-gradient(to bottom,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#ededed',GradientType=0 );
+}
+
+.shortcutBox h3:before {display: block; margin-bottom: 10px; opacity: 0.7; }
+.shortcutBox > div:hover h3:before,
+.shortcutBox > div.active h3:before {opacity: 1;}
+
+.shortcutBox .span3 {width: 22.5%; margin-left: 0;}
+
+.shortcutBox div:last-child {margin-right: 0;}
+
+.shortcutBox div h3, .shortcutBox div h3:first-child {
+  text-transform: uppercase;
+  font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;
+  margin: 0 auto;
+  padding: 0 0 10px;
+}
+
+.shortcutBox h3 {
+  color: #1a2609;
+  display: block;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.shortcutBox [class^="tit"] a:before {
+  content:" ";
+  display: block;
+  width: 100px; height: 100px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin: 0 auto 10px;
+}
+
+.shortcutBox a:hover {text-decoration:none;}
+
+.shortcutBox div p {
+  font: 12px verdana, arial, tahoma, sans-serif;
+  margin: 0 auto;
+  min-height: 45px;
+  padding: 0 6%;
+}
+.shortcutBox div:hover p {opacity: 0.7;}
+
+
+/*** MINI BOX
+**** Quando não tem P e quando o box é pequeno
+***/
+.miniBox div {min-height: 140px;}
+.miniBox p, .microBox p { display: none;}
+.miniBox [class^="ico-"]:before,
+.miniBox [class*="ico-"]:before,
+.miniBox .lnkArrow::before, .lnkArrow:before{
+  width: auto;
+}
+
+/*** MICRO BOX
+**** Revisitado. Quando o usuário clica em MINIMIZAR ATALHOS/DICAS
+***/
+.microBox div,
+.microBox div a {
+  min-height: 10px;
+  text-align: left;
+}
+.microBox div a{padding: 15px 0;}
+.microBox div h3, .microBox div h3:first-child {margin: 0; padding: 0;}
+
+.microBox div h3 .shortcutTitle {display: inline-block; width: 66%; vertical-align: middle;}
+
+.microBox.shortcutBox h3:before {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 56px;
+  margin: 0 10px;
+  padding: 0;
+  max-width: 53px;
+}
+
+.lnkArrow.maxShortcuts,
+.lnkArrow.minShortcuts {margin-left: 17px;}
+
+/***
+**** Esse link é inserido via JQuery. ;-(
+***/
+.lnkCoverAll {
+  width: 100%;
+  height: 68%;
+  position: absolute;
+  top: 0; left: 0;
+}
+
+.smallBox div {
+  width: 76px;
+  min-height: 76px;
+}
+.smallMiniBox div {
+  border-width: 2px;
+  width: 56px;
+  min-height: 56px;
+}
+.maxBox{margin-left: 0;}
+.maxBox > div,
+.maxBox .lnkCoverAll{
+  padding: 50px 0 20px 0;
+  min-height: 150px;
+  text-align: left;
+}
+.maxBox > div{width: 99%;}
+.shortcutBox.maxBox > div p,
+.shortcutBox.maxBox > div h3{
+  margin-left: 200px;
+  padding: 0;
+}
+.maxBox .lnkCoverAll{ display: block; cursor: pointer;}
+.shortcutBox.maxBox div.active .btn-primary[class*="ico-"]:before,
+.shortcutBox.maxBox div.active .btn-primary[class^="ico-"]:before,
+.shortcutBox.maxBox div:hover .btn-primary[class*="ico-"]:before,
+.shortcutBox.maxBox div:hover .btn-primary[class^="ico-"]:before{
+  color: #fff;
+}
+.shortcutBox.maxBox div.active .btn[class*="ico-"]:before,
+.shortcutBox.maxBox div.active .btn[class^="ico-"]:before,
+.shortcutBox.maxBox div:hover .btn[class*="ico-"]:before,
+.shortcutBox.maxBox div:hover .btn[class^="ico-"]:before{
+  color: inherit;
+  }
+.shortcutBox.maxBox h3 a{max-width: none;}
+.shortcutBox.maxBox div h3{
+  font-size: 25px; 
+  padding: 0; 
+  letter-spacing: -0.6px;
+  max-width: 99%;
+}
+.shortcutBox.maxBox div p{font-size: 14px; margin-bottom: 10px;}
+.shortcutBox.maxBox h3:before{
+  position: absolute;
+  left: 30px;
+  font-size: 150px;
+  top: 30px;
+}
+.shortcutBox.maxBox div:hover p{opacity: 1;}
