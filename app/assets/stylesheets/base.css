@@ -427,6 +427,12 @@ tr.active td .boxActions {padding-top: 0;}
   background: #ddd;
   text-decoration: none;
 }
+.listOptions .lnkAll:hover .spanObs, 
+.listOptions .lnkAll:hover .spanObs[class*="span"],
+.listOptions .lnkAll:focus .spanObs, 
+.listOptions .lnkAll:focus .spanObs[class*="span"]{
+  border-left-color: #ddd; 
+}
 
 /**
 *** Calendário - Datepicker
