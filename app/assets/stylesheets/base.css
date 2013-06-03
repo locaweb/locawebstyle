@@ -356,7 +356,8 @@ tr.active td .boxActions {padding-top: 0;}
 **/
 .listOptions {padding: 0; margin: 0;}
 
-.listOptions li {
+.listOptions li,
+.listOptions .lnkAll {
   list-style: none;
   border: 1px solid #e5e5e5;
   position: relative;
@@ -418,6 +419,13 @@ tr.active td .boxActions {padding-top: 0;}
 
 .actLnk.fright a:last-child {
   border: none;
+}
+.listOptions .lnkAll,
+.listOptions .lnkAll:hover{color: inherit; display: block;}
+.listOptions .lnkAll:hover,
+.listOptions .lnkAll:focus{
+  background: #ddd;
+  text-decoration: none;
 }
 
 /**
