@@ -17,12 +17,12 @@ $(function(){
 
 	// Elementos Geral
 	$('.pathWays').attr('role','navigation');
-	$('#rodape').attr('role','contentinfo');
+	$('#footer').attr('role','contentinfo');
 	$('.alert').attr('role','alert');
 	$('a.btn, .modal-header .close').attr('role','button');
 	$('.boxGray').attr('role','region');
 	$('.boxGray h2').attr('role','presentation');
-	$('.headerPrincipal').attr('role','banner');
+	$('#header').attr('role','banner');
 	$('.content').attr('role','main');
 	$('.sidebar').attr('role','complementary');
 	$('input.required').attr('aria-required','true');
@@ -79,13 +79,6 @@ $(function(){
   	$(this).parents('div:first').addClass('active');
   }).blur(function(){
   	$('.shortcutBox > div').removeClass('active')
-  })
-
-  // Ativa visualmente os collapses ao receber o foco do teclado
-  $('.lnkCollapse').focus(function(){
-  	$(this).parents('.boxCollapse').addClass('focus');
-  }).blur(function(){
-  	$(this).parents('.boxCollapse').removeClass('focus');
   })
 
   // Menu com focus
