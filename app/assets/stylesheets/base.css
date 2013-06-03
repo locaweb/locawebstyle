@@ -1197,9 +1197,7 @@ hr.sep {background-color: #E5E5E5; }
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
-.forceClass .warning {
-  color: #b54646;
-}
+
 ol p{font-size: inherit;}
 .notification .listInfos{margin: 0;}
 .notification .tab-content .tab-pane{padding: 10px;}
@@ -1230,4 +1228,28 @@ ol p{font-size: inherit;}
   height:10px;
   display: inline-block;
   margin: 0 5px;
+}
+.boxInfoAction{
+  background: #e5e5e5;
+  border: 3px solid #cdcdcd;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  line-height: 30px;
+  overflow: hidden;
+  padding: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.boxInfoAction.sought{
+  background: #fff;
+}
+.boxInfoAction.utilized strong,
+.boxInfoAction.utilized b,
+.boxInfoAction.used{
+  color: #767676;
+}
+.boxInfoAction.utilized strong,
+.boxInfoAction.utilized b{
+  text-decoration: line-through;
 }

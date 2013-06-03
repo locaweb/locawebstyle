@@ -52,7 +52,7 @@ $(function(){
 	$('.collapse.in').find('[tabindex="0"]').attr('tabindex','3');
 
 	//Notificaçao
-	$('.onFocus, .modal-header .close').attr('tabindex','-1').focus();
+	$('.onFocus, .modal').attr('tabindex','-1').focus();
 
 	//Ir para o conteudo
 	$('.lnkContent').on('click',function(e){
