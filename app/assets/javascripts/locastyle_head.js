@@ -1,1 +1,1 @@
-/*! Locastyle version: 1.1.4*/
+/*! Locastyle version: 1.1.5*/
