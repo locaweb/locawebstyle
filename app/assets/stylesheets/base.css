@@ -1267,3 +1267,71 @@ ol p{font-size: inherit;}
 .boxInfoAction.utilized b{
   text-decoration: line-through;
 }
+
+/**
+*** Sticker de informação
+**/
+.sticker{
+  top: 10px;
+  height:10px;
+  width:9px;
+  position:absolute;
+  right:-3px;
+}
+.sticker:before {
+  content: "";
+  position: absolute;
+  border: 5px;
+  border-style: solid;
+  left: -10px;
+}
+.sticker:after{
+  content: "";
+  position: absolute;
+  border: 2px;
+  border-style: solid;
+  right:-2px;
+  bottom: -2px;
+}
+.sticker:hover {
+  cursor:pointer;
+}
+.sticker .bullet{
+  height: 4px;
+  width: 4px;
+  background: white;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 9;
+  top: 3px;
+  opacity: 0.5;
+}
+.sticker.red ~ .popover .popover-title{
+  color: #c40000!important;
+  font-weight:bold;
+}
+.sticker.red{
+    background: #c50000;
+}
+.sticker.red:before {
+  border-color: transparent #c50000 transparent transparent;
+}
+.sticker.red:after {
+  border-color: transparent transparent transparent #9e0000;
+}
+.sticker.yellow ~ .popover .popover-title{ 
+  color: #eda200!important;
+  font-weight:bold;
+}
+.sticker.yellow {
+  background: #ffae00;
+}
+.sticker.yellow:before {
+  border-color: transparent #ffae00 transparent transparent;
+}
+.sticker.yellow:after {
+  border-color: transparent transparent transparent #cc8b00;
+}
+  
+
+
