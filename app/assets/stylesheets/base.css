@@ -356,7 +356,7 @@ tr.active td .boxActions {padding-top: 0;}
 **/
 .listOptions {padding: 0; margin: 0;}
 
-.listOptions li,
+.listOptions > li,
 .listOptions .lnkAll {
   list-style: none;
   border: 1px solid #e5e5e5;
@@ -371,7 +371,7 @@ tr.active td .boxActions {padding-top: 0;}
 }
 .listOptions.listagemMeiosPagtos .pagtoAtivo {background: url(img/bgMeioPagamentoVerde.png) no-repeat left center;}
 
-.listOptions li img {
+.listOptions > li img {
   float: left;
   margin-right: 10px;
 }
@@ -394,7 +394,7 @@ tr.active td .boxActions {padding-top: 0;}
   line-height: 20px;
   overflow: hidden;
 }
-
+.listOptionsHeader{padding: 0 0 5px;}
 .spanObs, .spanObs[class*="span"] {
   border-left: solid 2px #fff;
   padding: 6px 10px;
@@ -911,7 +911,7 @@ td .progress {max-width: 70px;}
 .popover-content {
   overflow: hidden;
 }
-
+.popover p{margin-bottom: 10px;}
 
 /*** COLLAPSE
 **** Algumas adequações
@@ -1272,7 +1272,7 @@ ol p{font-size: inherit;}
 *** Sticker de informação
 **/
 .sticker{
-  top: 10px;
+  bottom: 20px;
   height:10px;
   width:9px;
   position:absolute;
