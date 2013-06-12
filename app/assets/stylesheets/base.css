@@ -570,10 +570,10 @@ tr.active td .boxActions {padding-top: 0;}
   display: table-cell;
   float: none;
   height: inherit;
+  margin-left: 0;
   vertical-align: middle;
 }
 .messageInfo .headerInfo a{margin: 0;}
-.messageInfo [class*="span"] {margin-left: 0;}
 .messageInfo .headerInfo span.label-info,
 .messageInfo .headerInfo span.badge-info {color: #fff;}
 .messageInfo .headerInfo span.label{padding: 2px 4px; top: 8px;}
@@ -1167,6 +1167,7 @@ hr.sep {background-color: #E5E5E5; }
 .removeAfter:after {background:none !important; border:none !important;}
 
 .boxArrowTop{
+  background: #fff;
   border: 1px solid #dfdfdf;
   border-radius: 3px;
   -moz-border-radius: 3px;
