@@ -202,35 +202,6 @@ describe("Locastyle", function() {
     });
   })
 
-  describe("Modal with Slider", function () {
-    describe("When the modal open", function () {
-      it("should hide the prev button", function () {
-        var dom_scope = $("#modalSlider");
-        var locastyle = new Locastyle();
-        locastyle.base.init(dom_scope);
-        $(".btn[data-target='#modalSlider']").trigger("click");
-        expect($("[data-slide='prev']", dom_scope)).toHaveClass("dNone");
-      });
-      it("should hide the save button", function () {
-        var dom_scope = $("#modalSlider");
-        var locastyle = new Locastyle();
-        locastyle.base.init(dom_scope);
-        $(".btn[data-target='#modalSlider']").trigger("click");
-        expect($(".btnSave", dom_scope)).toHaveClass("dNone");
-      });
-    });
-
-    describe("When the first slide don't have ACTIVE", function () {
-      it("should show the prev button", function () {
-        var dom_scope = $("#modalSlider");
-        var locastyle = new Locastyle();
-        locastyle.base.init(dom_scope);
-        $("[data-slide='next']", dom_scope).trigger('click');
-        expect($("[data-slide='prev']", dom_scope)).not.toHaveClass("dNone");
-      });
-    });
-  });
-
   describe("Pathway step counter", function () {
     it("should add a css class step(number) related to the number of steps", function () {
       var dom_scope = $("#locastyle_fixture");
@@ -431,15 +402,6 @@ describe("Locastyle", function() {
         locastyle.base.init(dom_scope);
         expect($("#min_shortcuts_fixture .expandBox")).toHaveClass("microBox");
       });
-    });
-  });
-
-  describe("Cover all link", function() {
-    it("should add a .lnkCoverAll inside each highlight box", function() {
-      var dom_scope = $("#min_shortcuts_fixture");
-      var locastyle = new Locastyle();
-      locastyle.base.init(dom_scope);
-      expect($("#min_shortcuts_fixture a.lnkCoverAll")).toExist();
     });
   });
 
