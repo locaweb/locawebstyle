@@ -60,6 +60,7 @@ describe("Locastyle", function() {
         it("should add .active css class on the parent .boxCollapse", function () {
           var locastyle = new Locastyle();
           locastyle.base.init($(document));
+          $(".boxCollapse.second .collapse").trigger("shown");
           expect($(".boxCollapse.second")).toHaveClass("active");
         });
       });
