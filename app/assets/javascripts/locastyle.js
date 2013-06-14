@@ -23,9 +23,9 @@ Locastyle = (function() {
       this.carouselCounter(dom_scope);
       this.initCustomSelect(dom_scope);
       this.collapseSetAnchor();
-      this.notificationInfoSet();
-      this.notificationInfoHandler();
-      this.minShortcutsCookieSetter();
+      this.notificationInfoSet(dom_scope);
+      this.notificationInfoHandler(dom_scope);
+      this.minShortcutsCookieSetter(dom_scope);
       this.minShortcutsCookieHandler();
       this.linkPreventDefault();
       this.popover(dom_scope);
@@ -34,7 +34,7 @@ Locastyle = (function() {
     },
 
     popover: function(dom_scope){
-      $("[rel=popover]").popover()
+      $("[rel=popover]", dom_scope).popover()
     },
 
     toggleTextOnClick: function(dom_scope) {
@@ -83,6 +83,7 @@ Locastyle = (function() {
 
     activateCollapseOnShown: function(dom_scope) {
       var self = this;
+      var self = this;
       $('.collapse', dom_scope).on('shown', function(){
         $(this).parents(".boxCollapse").addClass("active");
         $(this).find('[tabindex="0"]').attr('tabindex','3');
@@ -116,7 +117,7 @@ Locastyle = (function() {
     },
 
     preventDefaultOnDisabled: function(dom_scope) {
-      $(".btn.disabled").click( function(event) {
+      $(".btn.disabled", dom_scope).click( function(event) {
         event.preventDefault();
       })
     },
@@ -126,7 +127,7 @@ Locastyle = (function() {
     },
 
     autoOpenModal: function(dom_scope) {
-      $(".modalAutoOpen").modal("show");
+      $(".modalAutoOpen", dom_scope).modal("show");
     },
 
     showElement: function(element) {
@@ -170,7 +171,7 @@ Locastyle = (function() {
     },
 
     toggleChildValue: function(dom_scope) {
-      $(".btn.lnkToggle").on("click", function(e){
+      $(".btn.lnkToggle", dom_scope).on("click", function(e){
         var inputs = $(this).parents(".toggleChild").find('[data-value]')
         inputs.each(function(){
           $(this).val($(this).data('value'));
@@ -179,7 +180,7 @@ Locastyle = (function() {
     },
 
     inputDataValue: function(dom_scope) {
-      $.each($('textarea, input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]'), function(i, e){
+      $.each($('textarea, input[type="url"], input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"]', dom_scope), function(i, e){
         var value = $(this).attr("value");
         $(this).attr("data-value", value);
       });
@@ -202,7 +203,7 @@ Locastyle = (function() {
     },
 
     carouselCounter: function(dom_scope){
-      $.each($(".carousel"), function() {
+      $.each($(".carousel", dom_scope), function() {
         var items = $(".carousel-inner", this).children().size();
         $(".carouselNav i", this).html(items);
         $(this).on('slid', function() {
@@ -219,18 +220,18 @@ Locastyle = (function() {
     },
 
     initCustomSelect: function(dom_scope){
-      $("select.customSelect").select2();
+      $("select.customSelect", dom_scope).select2();
     },
 
-    notificationInfoSet: function(){
-      $('.lnkNoShow').on("click", function(){
+    notificationInfoSet: function(dom_scope){
+      $('.lnkNoShow', dom_scope).on("click", function(){
         $.cookie( $(this).data("target") , true );
         $($(this).data("target")).remove();
       });
     },
 
-    notificationInfoHandler: function(){
-      $.each($(".lnkNoShow"), function() {
+    notificationInfoHandler: function(dom_scope){
+      $.each($(".lnkNoShow", dom_scope), function() {
         var target = $(this).data("target");
         if($.cookie(target) === "true"){
           $(target).remove();
@@ -238,9 +239,9 @@ Locastyle = (function() {
       });
     },
 
-    minShortcutsCookieSetter: function(){
+    minShortcutsCookieSetter: function(dom_scope){
       var self = this;
-      $(".minShortcuts").on('click', function(){
+      $(".minShortcuts", dom_scope).on('click', function(){
         if($.cookie("minShortcuts") === "true"){
           $.cookie("minShortcuts", false);
           self.toggleText($(this));
@@ -283,7 +284,7 @@ Locastyle = (function() {
     },
 
     clearForms: function(dom_scope) {
-      $('.clearFormBt').live('click', function(e){
+      $('.clearFormBt', dom_scope).live('click', function(e){
         e.preventDefault();
         $(this).closest('.boxFiltro').find('.clearForm').not('.in').find(':input').each(function(){
           switch(this.type) {
@@ -305,7 +306,7 @@ Locastyle = (function() {
     },
 
     formValidate: function(dom_scope) {
-      $('.validate').validate({
+      $('.validate', dom_scope).validate({
         errorClass: "help-inline",
         errorElement: "span",
         errorPlacement: function(error, element) {

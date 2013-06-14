@@ -15,6 +15,7 @@ src_files:
   - assets/cookie.js
   - assets/jquery-ui.min.js
   - assets/select2.min.js
+  - assets/validate.js
   - assets/bootstrap/js/bootstrap.js
 # DEPENDENCIES
   - assets/locastyle.js
