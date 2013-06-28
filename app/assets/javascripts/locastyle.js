@@ -330,7 +330,7 @@ Locastyle = (function() {
         required: "N&atilde;o pode ficar em branco",
         remote: "Por favor, corrija este campo",
         email: "Preencha com um e-mail v&aacute;lido",
-        url: "O campo deve ser uma url v&aacute;lido",
+        url: "O campo deve ser uma url v&aacute;lida",
         date: "O campo deve ser uma data v&aacute;lida",
         dateISO: "O campo deve ser uma data v&aacute;lida (ISO)",
         number: "O campo deve ser um n&uacute;mero v&aacute;lido",
