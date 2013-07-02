@@ -1,31 +1,30 @@
-  <header class="cabecalho">
-    <div class="limite">
-      <h1 class="logo"><a title="Um lugar para desenvolvedores web" href="http://developer.locaweb.com.br">Locaweb Developer Network</a></h1> 
-      <div class="socialadd addthis_toolbox addthis_default_style">
-        <a addthis:userid="locawebdevnet" class="addthis_button_twitter_follow at300b" target="_blank" title="Follow on Twitter" href="#"><span class="at16nc at300bs at15nc at15t_twitter at16t_twitter"><span class="at_a11y">Share on twitter</span></span><span class="addthis_follow_label">Twitter</span></a>
-        <a addthis:userid="/feed/" class="addthis_button_rss_follow at300b" href="/feed/" target="_blank" title="Subscribe"><span class=" at300bs at15nc at15t_rss"><span class="at_a11y">Share on rss</span></span><span class="addthis_follow_label">RSS</span></a>
-        <div class="atclear"></div></div>
-        <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=locawebdevnet" type="text/javascript"></script>
-      </div>
-      <nav class="principalMenu">
-        <ul class="menu" id="menu-menu-principal">
-          <li class="menu-item-29" id="menu-item-29">
-            <a href="http://developer.locaweb.com.br/documentacoes/">Documentações</a>
-            <ul class="sub-menu">
-              <li class="menu-item-34" id="menu-item-34"><a href="http://developer.locaweb.com.br/documentacoes/email-marketing-parent/">Email Marketing</a></li>
-              <li class="menu-item-312" id="menu-item-312"><a href="http://developer.locaweb.com.br/documentacoes/gateway/">Gateway</a></li>
-              <li class="menu-item-543" id="menu-item-543"><a href="http://developer.locaweb.com.br/documentacoes/cloud-server-pro/">Cloud Server Pro</a></li>
-            </ul>
-          </li>
-          <li class="current_page_parent current_page_ancestor menu-item-30" id="menu-item-30"><a href="http://developer.locaweb.com.br/locawebstyle/">Locaweb Style</a>
-            <ul class="sub-menu">
-              <li class="current_page_item menu-item-1111" id="menu-item-1111"><a href="http://developer.locaweb.com.br/locawebstyle/">Manual</a></li>
-              <li class="menu-item-1106" id="menu-item-1106"><a href="http://developer.locaweb.com.br/locawebstyle/introducao/instalacao/">Como usar</a></li>
-              <li class="menu-item-1109" id="menu-item-1109"><a href="http://developer.locaweb.com.br/locawebstyle/exemplos/elementos/">Elementos</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-1040" id="menu-item-1040"><a href="http://developer.locaweb.com.br/blog/">Blog</a></li>
-          <li class="menu-item-300" id="menu-item-300"><a href="http://developer.locaweb.com.br/sobre/">Sobre</a></li>
-        </ul>
-      </nav>
-    </header>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title><%= data.page.title %> - Guia de Hospedagem de Sites</title>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width,initial-scale=1' />
+  <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/1.1.4/bootstrap.css">
+  <!-- <link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/edge/locastyle.css"> -->
+
+  <%= stylesheet_link_tag "/assets/locastyle/stylesheets/application.css", "style" %>
+  <%= javascript_include_tag "locastyle", "javascripts/manual" %>
+
+</head>
+<body class="<%= page_classes %>">
+
+<!-- topbar header -->
+<header id="topbar" class="clearfix">
+  <div class="limit">
+    <!-- <h1 class="logo"><a href="#"><img src="/assets/img/manual/logo.png" alt="Locaweb Hosting"></a></h1> -->
+    <h1 class="logo"><a href="/">LOCAWEB STYLE</a></h1>
+    <ul class="social-links">
+      <li><a href="#"><%= image_tag 'ico-facebook.png', :alt => 'Nosso Facebook',:class => 'img-facebook' %></a>
+      <li><a href="#"><%= image_tag 'ico-twitter.png', :alt => 'Nosso Twitter',:class => 'img-twitter' %></a>
+    </ul>
+  </div>
+</header>
+<!-- END topbar header -->
+
+  <div><%= yield_content :assets %></div>

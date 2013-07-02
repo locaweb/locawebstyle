@@ -47,11 +47,11 @@
 #   end
 # end
 
-set :css_dir, 'assets/stylesheets'
+set :css_dir, 'assets/manual/stylesheets'
 
-set :js_dir, 'assets/javascripts'
+set :js_dir, 'assets/manual/javascripts'
 
-set :images_dir, 'assets/img'
+set :images_dir, 'assets/manual/img'
 
 # Build-specific configuration
 configure :build do
