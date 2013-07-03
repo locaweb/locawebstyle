@@ -30,6 +30,7 @@ Locastyle = (function() {
       this.linkPreventDefault();
       this.popover(dom_scope);
       this.labelSelectCustom();
+			this.collapsedRadios(dom_scope);
     },
 
     popover: function(dom_scope){
@@ -260,7 +261,13 @@ Locastyle = (function() {
     },
 
     // look down here to cover tests
-    collapsesWeirdBehavior: function(dom_scope) {
+		collapsedRadios: function(dom_scope) {
+			$(".collapsedRadios [data-toggle='collapse']").on("click", function(){
+				$(this).parents(".collapsedRadios").find(".collapse.in").collapse("hide")
+			});
+		},
+
+		collapsesWeirdBehavior: function(dom_scope) {
       $('body').on('change.collapse.data-api', '[data-toggle=hide]', function (e) {
         e.preventDefault();
         $($(this).data('target')).collapse('hide');
