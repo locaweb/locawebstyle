@@ -21,66 +21,66 @@ body, li, p, a {
 /** ICONS **/
 @font-face {
   font-family: 'locaweb';
-  src: url('../fonts/locaicons/Locaweb-Icons.eot');
-  src: url('../fonts/locaicons/Locaweb-Icons.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/locaicons/Locaweb-Icons.svg#iefix') format('svg'),
-    url('../fonts/locaicons/Locaweb-Icons.ttf') format('truetype');
+  src: url('/assets/locastyle/fonts/locaicons/Locaweb-Icons.eot');
+  src: url('/assets/locastyle/fonts/locaicons/Locaweb-Icons.eot?#iefix') format('embedded-opentype'),
+    url('/assets/locastyle/fonts/locaicons/Locaweb-Icons.svg#iefix') format('svg'),
+    url('/assets/locastyle/fonts/locaicons/Locaweb-Icons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'chamaicons';
-  src: url('../fonts/locaicons/chamada-icons.eot');
-  src: url('../fonts/locaicons/chamada-icons.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/locaicons/chamada-icons.svg#iefix') format('svg'),
-    url('../fonts/locaicons/chamada-icons.ttf') format('truetype');
+  src: url('/assets/locastyle/fonts/locaicons/chamada-icons.eot');
+  src: url('/assets/locastyle/fonts/locaicons/chamada-icons.eot?#iefix') format('embedded-opentype'),
+    url('/assets/locastyle/fonts/locaicons/chamada-icons.svg#iefix') format('svg'),
+    url('/assets/locastyle/fonts/locaicons/chamada-icons.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'brandicon';
-  src: url('../fonts/locaicons/brandicon.eot');
-  src: url('../fonts/locaicons/brandicon.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/locaicons/brandicon.svg#iefix') format('svg'),
-    url('../fonts/locaicons/brandicon.ttf') format('truetype');
+  src: url('/assets/locastyle/fonts/locaicons/brandicon.eot');
+  src: url('/assets/locastyle/fonts/locaicons/brandicon.eot?#iefix') format('embedded-opentype'),
+    url('/assets/locastyle/fonts/locaicons/brandicon.svg#iefix') format('svg'),
+    url('/assets/locastyle/fonts/locaicons/brandicon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url('../fonts/ubuntu/ubuntu-regular-webfont.eot');
-  src: url('../fonts/ubuntu/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
-     url('../fonts/ubuntu/ubuntu-regular-webfont.ttf') format('truetype');
+  src: url('/assets/locastyle/fonts/ubuntu/ubuntu-regular-webfont.eot');
+  src: url('/assets/locastyle/fonts/ubuntu/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
+     url('/assets/locastyle/fonts/ubuntu/ubuntu-regular-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'UbuntuBold';
-  src: url('../fonts/ubuntu/ubuntu-bold-webfont.eot');
-  src: url('../fonts/ubuntu/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
-     url('../fonts/ubuntu/ubuntu-bold-webfont.ttf') format('truetype');
+  src: url('/assets/locastyle/fonts/ubuntu/ubuntu-bold-webfont.eot');
+  src: url('/assets/locastyle/fonts/ubuntu/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
+     url('/assets/locastyle/fonts/ubuntu/ubuntu-bold-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'UbuntuLight';
-  src: url('../fonts/ubuntu/ubuntu-light-webfont.eot');
-  src: url('../fonts/ubuntu/ubuntu-light-webfont.eot?#iefix') format('embedded-opentype'),
-     url('../fonts/ubuntu/ubuntu-light-webfont.ttf') format('truetype');
+  src: url('/assets/locastyle/fonts/ubuntu/ubuntu-light-webfont.eot');
+  src: url('/assets/locastyle/fonts/ubuntu/ubuntu-light-webfont.eot?#iefix') format('embedded-opentype'),
+     url('/assets/locastyle/fonts/ubuntu/ubuntu-light-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'UbuntuMedium';
-  src: url('../fonts/ubuntu/ubuntu-medium-webfont.eot');
-  src: url('../fonts/ubuntu/ubuntu-medium-webfont.eot?#iefix') format('embedded-opentype'),
-     url('../fonts/ubuntu/ubuntu-medium-webfont.ttf') format('truetype');
+  src: url('/assets/locastyle/fonts/ubuntu/ubuntu-medium-webfont.eot');
+  src: url('/assets/locastyle/fonts/ubuntu/ubuntu-medium-webfont.eot?#iefix') format('embedded-opentype'),
+     url('/assets/locastyle/fonts/ubuntu/ubuntu-medium-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 
@@ -88,9 +88,9 @@ body, li, p, a {
 
 @font-face {
   font-family: 'LacunaRegular';
-  src: url('../fonts/lacuna/lacuna-webfont.eot');
-  src: url('../fonts/lacuna/lacuna-webfont.eot?#iefix') format('embedded-opentype'),
-     url('../fonts/lacuna/lacuna-webfont.ttf') format('truetype');
+  src: url('/assets/locastyle/fonts/lacuna/lacuna-webfont.eot');
+  src: url('/assets/locastyle/fonts/lacuna/lacuna-webfont.eot?#iefix') format('embedded-opentype'),
+     url('/assets/locastyle/fonts/lacuna/lacuna-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 
@@ -98,9 +98,9 @@ body, li, p, a {
 
 @font-face {
   font-family: 'LacunaItalicRegular';
-  src: url('../fonts/lacuna/lacuna-italic-webfont.eot');
-  src: url('../fonts/lacuna/lacuna-italic-webfont.eot?#iefix') format('embedded-opentype'),
-     url('../fonts/lacuna/lacuna-italic-webfont.ttf') format('truetype');
+  src: url('/assets/locastyle/fonts/lacuna/lacuna-italic-webfont.eot');
+  src: url('/assets/locastyle/fonts/lacuna/lacuna-italic-webfont.eot?#iefix') format('embedded-opentype'),
+     url('/assets/locastyle/fonts/lacuna/lacuna-italic-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }

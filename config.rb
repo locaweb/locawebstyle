@@ -47,19 +47,22 @@
 #   end
 # end
 
-set :css_dir, 'assets/manual/stylesheets'
-
-set :js_dir, 'assets/manual/javascripts'
-
+set :css_dir, 'assets'
+set :js_dir, 'assets'
 set :images_dir, 'assets/manual/img'
+
+activate :directory_indexes
+
+# Define layouts
+page "/manual/*", :layout => "page"
 
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
   # activate :cache_buster

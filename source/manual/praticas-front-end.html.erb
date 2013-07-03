@@ -1,0 +1,69 @@
+---
+title: Informações Iniciais
+
+menu_page: sidebar-informacoes-iniciais.erb
+---
+
+	<header>
+		<!-- <h2 class="ico-edit">Aprenda o básico</h2> -->
+		<h1>O que utilizamos no Locaweb Style</h1>
+		<h3>Temos algumas depêndencias e informações importantes para você que vai incluir o Locaweb Style em seu projeto.</h3>
+	</header>
+	<article class="text">
+
+									<h1>Práticas de escrita front-end</h1>
+					<p>Como este é um projeto onde várias pessoas escrevem código front, precisamos manter alguns padrões de escrita. Isso é importante para que o projeto perdure e que novos integrantes entendam facilmente como tudo funciona. </p>
+
+<p>Quando definimos um padrão de escrita de código, queremos que o código seja uniforme. Isso quer dizer que o código precisa parecer que foi escrito por uma única pessoa. Assim, conseguimos manter a manutenção mais simples, garantindo que o projeto seja flexível e escalável de forma consistente. Abaixo separamos algumas das regras que devemos seguir para manter isso tudo funcionando. </p>
+
+<p>Pode ser que tenha alguma regra que você goste ou não esteja familiarizado. Infelizmente, você vai precisa seguir. Todo mundo tem um gosto e não é possível manter o gosto de todos, por isso precisamos escolher apenas um.</p>
+
+<h2>Estrutura básica para iniciar um HTML</h2>
+<p>Senhor programador back-end, utilize esse código para iniciar seu HTML. </p>
+
+<pre class="lang-html prettyprint linenums"><ol class="linenums"><li class="L0"><span class="dec">&lt;!DOCTYPE html&gt;</span></li><li class="L1"><span class="tag">&lt;html</span><span class="pln"> </span><span class="atn">lang</span><span class="pun">=</span><span class="atv">"pt-br"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">	</span><span class="tag">&lt;head&gt;</span></li><li class="L3"><span class="pln">		</span><span class="tag">&lt;title&gt;&lt;/title&gt;</span></li><li class="L4"><span class="pln">		</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">	</span><span class="tag">&lt;/head&gt;</span></li><li class="L6"><span class="pln">	</span><span class="tag">&lt;body&gt;</span></li><li class="L7"><span class="pln">&nbsp;</span></li><li class="L8"><span class="pln">	</span><span class="tag">&lt;/body&gt;</span></li><li class="L9"><span class="tag">&lt;/html&gt;</span></li></ol></pre>
+
+<h2>Espaços em brancos</h2>
+<p>Escolher entre tabs e espaços sempre é uma dúvida terrível. Mesmo assim, quando se trata de HTML/CSS e Javascript, o padrão sempre foi TABs, embora usemos espaços em linguagens como Ruby, Python e etc. </p>
+
+<h2>Descrição de várias classes ou IDs</h2>
+<p>Como tratamos vários patterns, precisamos sempre reutilizar muito código para manter a uniformidade visual dos elementos e facilitar a manutenção. Por isso, as vezes, precisamos definir o mesmo estilo para vários elementos, assim:</p>
+
+<pre class="lang-css prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pun">.</span><span class="pln">collapseGroup summary span</span><span class="pun">,</span></li><li class="L1"><span class="pun">.</span><span class="pln">boxGray</span><span class="pun">.</span><span class="pln">listDetail a</span><span class="pun">,</span></li><li class="L2"><span class="pun">.</span><span class="pln">serviceName a</span><span class="pun">,</span></li><li class="L3"><span class="pun">[</span><span class="kwd">class</span><span class="pun">^=</span><span class="str">"ico"</span><span class="pun">],</span></li><li class="L4"><span class="pun">[</span><span class="kwd">class</span><span class="pun">*=</span><span class="str">" ico"</span><span class="pun">],</span></li><li class="L5"><span class="com">#menuPrincipal .btMenu a,</span></li><li class="L6"><span class="com">#menuPrincipal .parent:hover &gt; a,</span></li><li class="L7"><span class="com">#menuPrincipal .parent &gt; a:hover,</span></li><li class="L8"><span class="com">#menuPrincipal &gt; ul &gt; li &gt; a:hover </span><b><span class="com">{color: #4B7CB8;}</span></b></li></ol></pre>
+
+<p>Para não ficar uma linha muito grande com vários elementos definidos, quebramos linha a cada seletor criado. Isso mantém a leitura legível e nos ajuda a identificar erros. Não se preocupe, o Ruby vai minificar todo esse código depois, por isso, ele não vai para a produção dessa forma.</p>
+
+<h2>Encoding</h2>
+<p>Eu sei que eu não preciso dizer, mas quem sabe, não é? <br>
+O encoding utilizado é o padrão da web inteira: <strong>UTF-8</strong>.</p>
+
+<pre class="lang-html prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span></li></ol></pre>
+
+<p>SEM BOM! Pelo amor de Deus. </p>
+
+<h2>Referências de Entidades</h2>
+<p>NUNCA use entidades do HTML. Como nós utilizamos UTF-8, coloque o caractere diretamente.</p>
+<p><strong>O simbolo do Euro é <b>€</b>. Cifrão <b>$</b> </strong></p>
+
+<h2>Cores</h2>
+<p>Sempre que utilizar uma cor hexadecimal que tenha repetição de valores, use sempre o valor de atalho, assim:</p>
+<pre class="lang-css prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln"> </span><span class="com">/** Recomendado **/</span></li><li class="L1"><span class="pln">p </span><span class="pun">{</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><b><span class="com">#AAA</span></b><span class="com">;}</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="com">/** Não Recomendado **/</span></li><li class="L4"><span class="pln">p </span><span class="pun">{</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><b><span class="com">#AAAAAA</span></b><span class="com">;}</span></li></ol></pre>
+
+<h4>RGBA</h4>
+<p>Sempre que possível, utilize RGBA e mantenha o fallback para browsers antigos. Nós utilizamos Modernizr para que isso seja simples. Um exemplo:</p>
+<pre class="lang-css prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln"> p </span><span class="pun">{</span><span class="pln"> color</span><span class="pun">:</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.5</span><span class="pun">);</span><span class="pln"> </span><span class="pun">}</span></li><li class="L1"><span class="pun">.</span><span class="kwd">no</span><span class="pun">-</span><span class="pln">rgba p </span><span class="pun">{</span><span class="pln"> color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#000; }</span></li></ol></pre>
+<h2>Aspas</h2>
+<p>Tanto no CSS quanto no HTML utilizamos ASPAS DUPLAS. Nunca aspas simples, a não ser no Javascript/JQuery.</p>
+<pre class="lang-css prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">input</span><span class="pun">[</span><b><span class="pln">type</span><span class="pun">=</span><span class="str">"checkout"</span></b><span class="pun">]</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></li><li class="L1"><span class="pln">div</span><span class="pun">:</span><span class="pln">after </span><span class="pun">{</span><span class="pln"> </span><b><span class="pln">content</span><span class="pun">:</span><span class="pln"> </span><span class="str">" "</span></b><span class="pun">;</span><span class="pln"> </span><span class="pun">}</span></li></ol></pre>
+
+<h2>Comentários</h2>
+<p>Para uma seção:</p>
+<pre class="lang-css prettyprint linenums"><ol class="linenums"><li class="L0"><b><span class="com">/***</span></b><span class="com"> HEADER</span></li><li class="L1"><b><span class="com">****</span></b><span class="com"> Header principal do site</span></li><li class="L2"><b><span class="com">***/</span></b></li></ol></pre>
+
+<p>Nunca use comentários na mesma linha da propriedade:</p>
+<pre class="lang-css prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln"> p </span><span class="pun">{</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#FFF;} /** Nunca use comentários assim **/</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pln">p </span><span class="pun">{</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#FFF; /** Nunca use comentários assim **/}</span></li></ol></pre>
+
+<p>Assim é melhor:</p>
+<pre class="lang-css prettyprint linenums"><ol class="linenums"><li class="L0"><span class="com">/** Assim é melhor **/</span></li><li class="L1"><span class="pln">p </span><span class="pun">{</span></li><li class="L2"><span class="pln">  color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#FFF;</span></li><li class="L3"><span class="pln">  background</span><span class="pun">:</span><span class="pln"> red</span><span class="pun">;</span></li><li class="L4"><span class="pln">  margin</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="com">/** Assim também é bom **/</span></li><li class="L7"><span class="pln">  padding</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></li><li class="L8"><span class="pun">}</span></li></ol></pre>				
+				
+	</article>

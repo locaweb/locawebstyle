@@ -27,6 +27,23 @@ body {
 	margin-left: 3px;
 }
 
+.navbar {
+	margin-top: -15px;
+	margin-bottom: 70px;
+}
+
+
+.navbar .navbar-inner {padding-left: 5px;}
+
+.navbar .nav > li > a {
+	font-size: 0.9em;
+	border-right: 1px solid rgba(0,0,0,0.1);
+	border-left: 1px solid rgba(255,255,255,1);
+}
+
+.navbar .nav > li:first-child > a {border-left: 0;}
+.navbar .nav > li:last-child > a {border-right: 0;}
+
 /*****
 ****** HIGHLIGHT
 *****/
@@ -35,7 +52,8 @@ body {
 	position: relative;
 	min-height: 415px;
 	overflow: hidden;
-	background: url(/assets/manual/img/highlight.jpg) no-repeat;
+	background: url(/assets/manual/img/highlight-locastyle.jpg) no-repeat;
+	/*background: url(/assets/manual/img/highlight.jpg) no-repeat;*/
 	background-size: cover;
 	border-bottom: 1px solid #b1d4d7;
 }
@@ -114,6 +132,12 @@ height: 22px !important;
 	letter-spacing: 0;
 }
 
+.highlight.heading h1 span {
+	text-align: left;
+	font: 700 1.2em Lato, Verdana, Arial, Helvetica, Tahoma, Sans-serif;
+	margin-left: 0;
+}
+
 .highlight h1.with-image:after {
 	content: "";
 	position: relative;
@@ -183,7 +207,7 @@ height: 22px !important;
 .channels h2,
 .content > header h3 {
 	max-width: 87%;
-	margin: 0 auto 55px;
+	margin: 0 auto 25px;
 	font-weight: 300;
 	font-size: 1.3em;
 	color: #767676;
@@ -341,9 +365,11 @@ height: 22px !important;
 	-moz-transform: scale(1.1);
 	opacity: 0.7;
 }
+
 /*****
 ****** ARTICLE
 *****/
+.content header {overflow: hidden;}
 .content header h2 {
 	color: #545454!important;
 	font-size: 0.8em;
@@ -358,35 +384,39 @@ height: 22px !important;
 	vertical-align: top !important;
 }
 .content header h1 {
-	margin-left: 84px;
+	/*margin-left: 84px;*/
     position: relative;
-    top: -25px;
     font-size: 2.3em;
 }
 
 .content > header h3 {
     font-size: 1.2em;
-    margin-left: 85px;
-    margin-top: -10px;
+    margin-left: 0;
     max-width: 85%;
 }
 
 /*** ARTICLE ***/
 .content .text {
 	overflow: hidden;
-	padding-left: 85px
+	padding-right: 25px
 }
 
 .content .text h2 {
-	margin-top: 20px;
+	margin-top: 30px;
 	font: bold 1.2em arial, helvetica, tahoma, sans-serif;
 	color: #2a2a2a;
 }
 
 .content .text h3 {
-	margin-top: 20px;
+	margin-top: 30px;
 	font: bold 1em arial, helvetica, tahoma, sans-serif;
 	color: #2a2a2a;
+}
+
+.content .text p {
+	font: 0.9em/1.4em arial, helvetica, tahoma, sans-serif;
+	margin-bottom: 15px;
+	/*color: #212121;*/
 }
 
 /*** SIDEBAR ***/
@@ -394,6 +424,7 @@ height: 22px !important;
 	float: right;
 	width: 25%;
 	margin-left: 20px;
+	margin-top: 0;
 }
 
 .sidebar nav {
@@ -498,8 +529,8 @@ height: 22px !important;
 	}
 	.content header h1{top: -20px;}
 	.content header h2:before{
-		font-size: 2em!important;
-		top: -5px!important;
+		font-size: 2em !important;
+		top: -5px !important;
 	}
 	.channels h1{line-height: 1.1em;}
 	.highlight .search-form{padding: 14px 0;}
@@ -519,4 +550,5 @@ height: 22px !important;
 		width: auto;
 	}
 }
+
 

@@ -1,0 +1,1 @@
+//= require manual/javascripts/scripts
