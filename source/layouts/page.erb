@@ -1,0 +1,33 @@
+<%= partial "partials/header" %>
+
+<!-- highlight -->
+<div class="highlight heading">
+	<div class="limit">
+		<h1>Documentação <span>Locaweb Style</span></h1>
+	</div>
+</div>
+<!-- END highlight -->
+
+<!-- Post content -->
+<section class="content limit">
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li><a href="#">Introdução</a></li>
+      <li><a href="#">Componentes</a></li>
+      <li><a href="#">Formulário</a></li>
+      <li><a href="#">Aplicações</a></li>
+      <li><a href="#">Layout</a></li>
+      <li><a href="#">Acessibilidade</a></li>
+    </ul>
+  </div>
+</div>
+	
+	<%= partial "partials/sidebar-manual" %>
+
+	<%= yield %>
+</section>
+<!-- END post content -->
+
+<%= partial "partials/footer" %>

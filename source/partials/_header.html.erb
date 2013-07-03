@@ -8,8 +8,7 @@
   <link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/1.1.4/bootstrap.css">
   <!-- <link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/edge/locastyle.css"> -->
 
-  <%= stylesheet_link_tag "/assets/locastyle/stylesheets/application.css", "style" %>
-  <%= javascript_include_tag "locastyle", "javascripts/manual" %>
+  <%= stylesheet_link_tag "locastyle", "manual" %>
 
 </head>
 <body class="<%= page_classes %>">
@@ -27,4 +26,3 @@
 </header>
 <!-- END topbar header -->
 
-  <div><%= yield_content :assets %></div>

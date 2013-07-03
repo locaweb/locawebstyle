@@ -1,0 +1,31 @@
+/*
+*=require locastyle/stylesheets/locastyle_head
+
+*=require locastyle/stylesheets/vendor/bootstrap/css/bootstrap
+
+*=require locastyle/stylesheets/base
+*=require locastyle/stylesheets/fonts
+*=require locastyle/stylesheets/shortcutbox
+*=require locastyle/stylesheets/colors/colors
+*=require locastyle/stylesheets/buttons
+*=require locastyle/stylesheets/icons
+*=require locastyle/stylesheets/grid
+*=require locastyle/stylesheets/footer
+*=require locastyle/stylesheets/header
+*=require locastyle/stylesheets/toolbar
+*=require locastyle/stylesheets/sidebar
+*=require locastyle/stylesheets/tables
+*=require locastyle/stylesheets/functionalclasses
+*=require locastyle/stylesheets/ie
+*=require locastyle/stylesheets/pathway
+*=require locastyle/stylesheets/modal
+*=require locastyle/stylesheets/tabs
+*=require locastyle/stylesheets/deprecated
+*=require locastyle/stylesheets/collapse
+*=require locastyle/stylesheets/mobile
+
+*=require locastyle/stylesheets/select2
+*=require locastyle/stylesheets/forms
+*=require locastyle/stylesheets/passwordStrength
+*=require locastyle/stylesheets/print
+*/
