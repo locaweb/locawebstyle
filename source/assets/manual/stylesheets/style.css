@@ -6,21 +6,13 @@ body {
 /*****
 ****** CODE PARTS
 *****/
-pre.prettyprint {
-	border-color: #CCC !important;
-	margin: 15px 0 !important;
-}
-
 pre .linenums {
 	font-size: 11px;
 	padding-left: 18px;
 }
-
-li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
-	list-style-type: decimal-leading-zero !important;
-	padding: 3px;
+ol.linenums {
+	margin: 0 0 0 14px !important;
 }
-
 
 /*****
 ****** HEADER TOPBAR
@@ -502,6 +494,7 @@ height: 22px !important;
 	border-top: 1px solid #CCC;
 	clear: both;
 	min-height: 50px;
+	margin-top: 50px;
 }
 
 .footer .logo {float: left;}
