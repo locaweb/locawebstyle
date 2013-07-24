@@ -11,20 +11,7 @@
 <!-- Post content -->
 <section class="content limit">
 
-    <div class="navbar">
-      <div class="navbar-inner">
-        <ul class="nav">
-          <li><%= link_to 'Introdução', '/manual/introducao/informacoes-iniciais.html' %></li>
-          <li><%= link_to 'Componentes', '/manual/componentes/abas.html' %></li>
-          <li><a href="#">Formulário</a></li>
-          <li><a href="#">Aplicações</a></li>
-          <li><a href="#">Layout</a></li>
-          <li><a href="#">Acessibilidade</a></li>
-          <li><%= link_to 'Cartilha de Elementos', '/manual/elementos.html' %></li>
-        </ul>
-      </div>
-    </div>
-
+  <%= partial "partials/navbar-manual" %>
 	<%= partial "partials/sidebar-manual" %>
 
 	<%= yield %>
