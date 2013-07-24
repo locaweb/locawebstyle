@@ -1,1 +1,3 @@
-console.log('eu')
+$(document).ready(function(){
+	prettyPrint();
+});
