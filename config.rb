@@ -55,6 +55,7 @@ activate :directory_indexes
 
 # Define layouts
 page "/manual/*", :layout => "page"
+page "/manual/exemplos/*", :layout => "system-example"
 
 # Build-specific configuration
 configure :build do
