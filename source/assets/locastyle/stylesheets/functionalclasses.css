@@ -131,6 +131,7 @@ table.txtRight td, table.txtRight th {text-align: right;}
 /** COLORS **/
 .bgWhite {background: white!important;}
 .colorBlack {color: #000!important;}
+.warning {color: #b54646!important;}
 
 /**
 *** INPUTS

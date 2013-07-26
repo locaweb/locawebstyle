@@ -63,7 +63,7 @@ legend {border-bottom: none; padding-bottom: 5px;}
 .titDots {
   padding: 0 10px 12px 0;
   margin: 0 0 15px;
-  background: url(img/titDots.png) repeat-X left bottom;
+  background: url(locastyle/img/titDots.png) repeat-X left bottom;
 }
 
 h1 + p, h2 + p, h3 + p {padding-top: 7px;}
@@ -125,13 +125,13 @@ h3 + .alert {margin-top: 15px;}
   color: #333;
 }
 
-.alert a[class*="btn-"],
-.alert a[class*="btn-"]:hover {
+.forceClass .alert a[class*="btn-"],
+.forceClass .alert a[class*="btn-"]:hover {
   color: #fff;
 }
 
 .titError {
-  background: url(img/icoerro_404.png) no-repeat left center;
+  background: url(locastyle/img/icoerro_404.png) no-repeat left center;
   padding: 15px 0 15px 45px;
   margin: 4px 0 10px;
   font: bold 20px verdana, arial, tahoma, sans-serif;
@@ -219,7 +219,7 @@ h6 .lnkArrow {
 **/
 .boxGray {
   clear: both;
-  background: #d5d5d5 url(img/bgBoxGray.png) repeat-X top center;
+  background: #d5d5d5 url(locastyle/img/bgBoxGray.png) repeat-X top center;
   border-radius: 3px;
   border: 1px solid #e3e3e3;
   padding-bottom: 3px;
@@ -230,7 +230,7 @@ h6 .lnkArrow {
 .boxGray h2 {
   font-size: 22px;
   padding: 10px 10px 0 15px; margin: 0 0 0 -1px;
-  background: url(img/setaDetalheTit.png) no-repeat left 15px;
+  background: url(locastyle/img/setaDetalheTit.png) no-repeat left 15px;
   letter-spacing: -1px;
 }
 
@@ -282,7 +282,7 @@ h6 .lnkArrow {
 }
 .pagination .first a, .pagination .last a {display: none;}
 
-.pagination .prev a, .pagination .next a {background: url(img/seta-pagination.png) no-repeat 0 0;}
+.pagination .prev a, .pagination .next a {background: url(locastyle/img/seta-pagination.png) no-repeat 0 0;}
 .pagination .prev a {background-position: left 6px; padding-left: 10px;}
 .pagination .next a {background-position: right -13px; padding-right: 10px;}
 .pagination .prev a:hover,
@@ -356,7 +356,8 @@ tr.active td .boxActions {padding-top: 0;}
 **/
 .listOptions {padding: 0; margin: 0;}
 
-.listOptions li {
+.listOptions > li,
+.listOptions .lnkAll {
   list-style: none;
   border: 1px solid #e5e5e5;
   position: relative;
@@ -365,12 +366,12 @@ tr.active td .boxActions {padding-top: 0;}
   padding: 10px;
 }
 .listOptions.listagemMeiosPagtos li {
-  background: url(img/bgMeioPagamentoCinza.png) no-repeat left center;
+  background: url(locastyle/img/bgMeioPagamentoCinza.png) no-repeat left center;
   padding: 10px 10px 10px 25px;
 }
-.listOptions.listagemMeiosPagtos .pagtoAtivo {background: url(img/bgMeioPagamentoVerde.png) no-repeat left center;}
+.listOptions.listagemMeiosPagtos .pagtoAtivo {background: url(locastyle/img/bgMeioPagamentoVerde.png) no-repeat left center;}
 
-.listOptions li img {
+.listOptions > li img {
   float: left;
   margin-right: 10px;
 }
@@ -393,7 +394,7 @@ tr.active td .boxActions {padding-top: 0;}
   line-height: 20px;
   overflow: hidden;
 }
-
+.listOptionsHeader{padding: 0 0 5px;}
 .spanObs, .spanObs[class*="span"] {
   border-left: solid 2px #fff;
   padding: 6px 10px;
@@ -418,6 +419,19 @@ tr.active td .boxActions {padding-top: 0;}
 
 .actLnk.fright a:last-child {
   border: none;
+}
+.listOptions .lnkAll,
+.listOptions .lnkAll:hover{color: inherit; display: block;}
+.listOptions .lnkAll:hover,
+.listOptions .lnkAll:focus{
+  background: #ddd;
+  text-decoration: none;
+}
+.listOptions .lnkAll:hover .spanObs,
+.listOptions .lnkAll:hover .spanObs[class*="span"],
+.listOptions .lnkAll:focus .spanObs,
+.listOptions .lnkAll:focus .spanObs[class*="span"]{
+  border-left-color: #ddd;
 }
 
 /**
@@ -447,7 +461,7 @@ tr.active td .boxActions {padding-top: 0;}
   display: block;
   text-indent: -9999px;
   overflow: hidden;
-  background-image: url(img/jqui.png);
+  background-image: url(locastyle/img/jqui.png);
   background-position: no-repeat;
   cursor: pointer;
 }
@@ -485,7 +499,7 @@ tr.active td .boxActions {padding-top: 0;}
   box-shadow: inset 0 0 0 2px #fff;
 }
 .messageInfo:hover .countViews[class*="span"]:after{
-  background: url(img/arrowSilver.png) no-repeat right center;
+  background: url(locastyle/img/arrowSilver.png) no-repeat right center;
 }
 
 .messageInfo > div[class*="span"] {
@@ -556,6 +570,7 @@ tr.active td .boxActions {padding-top: 0;}
   display: table-cell;
   float: none;
   height: inherit;
+  margin-left: 0;
   vertical-align: middle;
 }
 .messageInfo .headerInfo a{margin: 0;}
@@ -574,10 +589,11 @@ tr.active td .boxActions {padding-top: 0;}
   display: table-cell;
   box-shadow: inset 0 0 0 2px #FFF;
 }
+.messageInfo .headerInfo .pipeSeparator{margin: 8px 5px 0; padding: 0;}
 .messageInfo .countViews strong {color: #545454; font-size: 14px;}
 .messageInfo .countViews:after,
 .messageInfo.noBgHover:hover .countViews:after {
-  background: url(img/arrowWhite.png) no-repeat right center;
+  background: url(locastyle/img/arrowWhite.png) no-repeat right center;
   content: " ";
   width: 17px;
   height: 40px;
@@ -813,7 +829,7 @@ td .progress {max-width: 70px;}
 .obsGray:after {
   width: 12px;
   height: 6px;
-  background: url(img/setaTopObsGray.png) no-repeat center center;
+  background: url(locastyle/img/setaTopObsGray.png) no-repeat center center;
   position: absolute;
   top: -6px; left: 11px;
   content: " ";
@@ -897,7 +913,7 @@ td .progress {max-width: 70px;}
 .popover-content {
   overflow: hidden;
 }
-
+.popover p{margin-bottom: 10px;}
 
 /*** COLLAPSE
 **** Algumas adequações
@@ -971,7 +987,7 @@ td .progress {max-width: 70px;}
 
 .alert.alert-notification .close {display: none;}
 
-.forceClass a.lnkNoShow {
+.forceClass .alert a.lnkNoShow {
   position: absolute;
   right: 0; bottom: -21px;
   font-size: 11px;
@@ -1146,13 +1162,14 @@ td .progress {max-width: 70px;}
 
 
 hr.sepDot {border-bottom: 1px dotted #E5E5E5;}
-hr.dotsSep {height: 5px; background: url(img/titDots.png);  margin: 20px 0;}
+hr.dotsSep {height: 5px; background: url(locastyle/img/titDots.png);  margin: 20px 0;}
 hr.sep {background-color: #E5E5E5; }
 
 .removeBefore:before,
 .removeAfter:after {background:none !important; border:none !important;}
 
 .boxArrowTop{
+  background: #fff;
   border: 1px solid #dfdfdf;
   border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1197,9 +1214,7 @@ hr.sep {background-color: #E5E5E5; }
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
-.forceClass .warning {
-  color: #b54646;
-}
+
 ol p{font-size: inherit;}
 .notification .listInfos{margin: 0;}
 .notification .tab-content .tab-pane{padding: 10px;}
@@ -1231,3 +1246,95 @@ ol p{font-size: inherit;}
   display: inline-block;
   margin: 0 5px;
 }
+.boxInfoAction{
+  background: #e5e5e5;
+  border: 3px solid #cdcdcd;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  line-height: 30px;
+  overflow: hidden;
+  padding: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.boxInfoAction.sought{
+  background: #fff;
+}
+.boxInfoAction.utilized strong,
+.boxInfoAction.utilized b,
+.boxInfoAction.used{
+  color: #767676;
+}
+.boxInfoAction.utilized strong,
+.boxInfoAction.utilized b{
+  text-decoration: line-through;
+}
+
+/**
+*** Sticker de informação
+**/
+.sticker{
+  bottom: 20px;
+  height:10px;
+  width:9px;
+  position:absolute;
+  right:-3px;
+}
+.sticker:before {
+  content: "";
+  position: absolute;
+  border: 5px;
+  border-style: solid;
+  left: -10px;
+}
+.sticker:after{
+  content: "";
+  position: absolute;
+  border: 2px;
+  border-style: solid;
+  right:-2px;
+  bottom: -2px;
+}
+.sticker:hover {
+  cursor:pointer;
+}
+.sticker .bullet{
+  height: 4px;
+  width: 4px;
+  background: white;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 9;
+  top: 3px;
+  opacity: 0.5;
+}
+.sticker.red ~ .popover .popover-title{
+  color: #c40000!important;
+  font-weight:bold;
+}
+.sticker.red{
+    background: #c50000;
+}
+.sticker.red:before {
+  border-color: transparent #c50000 transparent transparent;
+}
+.sticker.red:after {
+  border-color: transparent transparent transparent #9e0000;
+}
+.sticker.yellow ~ .popover .popover-title{
+  color: #eda200!important;
+  font-weight:bold;
+}
+.sticker.yellow {
+  background: #ffae00;
+}
+.sticker.yellow:before {
+  border-color: transparent #ffae00 transparent transparent;
+}
+.sticker.yellow:after {
+  border-color: transparent transparent transparent #cc8b00;
+}
+
+
+
