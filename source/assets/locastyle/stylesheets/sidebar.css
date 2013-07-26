@@ -1,7 +1,7 @@
 .sidebar {margin:25px 0 0;}
 
 .sideBox {
-  background:#f0f0f0 url(img/bgSidebarBox.png) repeat-X top center;
+  background:#f0f0f0 url(locastyle/img/bgSidebarBox.png) repeat-X top center;
   border-radius:3px;
   border:1px solid #e5e5e5;
   position:relative;
@@ -58,13 +58,13 @@
   text-transform: uppercase;
   letter-spacing: -1px;
 }
-.titSide.titDadosConta {background-image:url(img/ico-dadosConta.png);}
-.titSide.titMeiosPagto {background-image:url(img/ico-convenios.png);}
-.titSide.titAjudaSuporte {background-image:url(img/ico-dadosConta.png);}
+.titSide.titDadosConta {background-image:url(locastyle/img/ico-dadosConta.png);}
+.titSide.titMeiosPagto {background-image:url(locastyle/img/ico-convenios.png);}
+.titSide.titAjudaSuporte {background-image:url(locastyle/img/ico-dadosConta.png);}
 
-.colorGreen .titSide.titDadosConta {background-image:url(img/ico-dadosContaGreen.png);}
-.colorGreen .titSide.titAjudaSuporte {background-image:url(img/ico-ajudasuporteGreen.png);}
-.colorGreen .titSide.titDicas {background-image:url(img/ico-dicasGreen.png);}
+.colorGreen .titSide.titDadosConta {background-image:url(locastyle/img/ico-dadosContaGreen.png);}
+.colorGreen .titSide.titAjudaSuporte {background-image:url(locastyle/img/ico-ajudasuporteGreen.png);}
+.colorGreen .titSide.titDicas {background-image:url(locastyle/img/ico-dicasGreen.png);}
 
 
 /** Lista com links em BG Branco **/
@@ -101,7 +101,7 @@
 .sidebar a[rel="external"]:after {
   content:" ";
   display:inline-block;
-  background: url(img/externalLnk.png) no-repeat right top;
+  background: url(locastyle/img/externalLnk.png) no-repeat right top;
   width:10px; height:10px;
   margin-left:5px;
 }
@@ -168,7 +168,7 @@ h5 + .innerSideBox {margin-top:5px;}
 
 /* Box para icones */
 .boxSidebarTitle {
-  background-image: url(img/bgIconSidebar.png);
+  background-image: url(locastyle/img/bgIconSidebar.png);
   background-position: 0 0;
   background-repeat: repeat-x;
   background-color: #ccc;
@@ -194,12 +194,12 @@ h5 + .innerSideBox {margin-top:5px;}
 }
 .boxSidebarTitle i {
   color: #fff!important;
-  
+
   margin:6px 0 0 9px;
   font-weight: normal;
   font-style: normal;
 }
-.boxSidebarTitle i[class^="ico-"]:before, 
+.boxSidebarTitle i[class^="ico-"]:before,
 .boxSidebarTitle i[class*="ico-"]:before{
   font-size: 25px;
 }
