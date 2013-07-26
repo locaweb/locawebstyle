@@ -58,7 +58,7 @@ h6[class^="ico-"]:before {
   display: inline-block;
   vertical-align: top;
   content: " ";
-  background: url(img/ico-alert.png) no-repeat center center;
+  background: url(locastyle/img/ico-alert.png) no-repeat center center;
   width: 17px;
   height: 15px;
 }

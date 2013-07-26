@@ -11,7 +11,9 @@
 #{$theme_name} .serviceName a,
 #{$theme_name} .innerSideBox [class^="ico-"],
 #{$theme_name} .innerSideBox [class*="ico-"],
-#{$theme_name} .listWhite li a:before {
+#{$theme_name} .listWhite li a:before,
+#{$theme_name} .boxInfoAction.sought strong,
+#{$theme_name} .boxInfoAction.sought b {
   color: $pallet_1;
 }
 

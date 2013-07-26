@@ -1,6 +1,6 @@
 #header {
   border-top: 4px solid #BBB;
-  background: #f0f0f0 url(img/bgHeader.gif) repeat-X top center;
+  background: #f0f0f0 url(locastyle/img/bgHeader.gif) repeat-X top center;
   position: relative;
   z-index: 1;
 }
@@ -54,7 +54,7 @@
   padding: 0 5px;
   float: left;
   position: relative;
-  background: #FFF url(img/dotMenuLi.gif) no-repeat right center;
+  background: #FFF url(locastyle/img/dotMenuLi.gif) no-repeat right center;
 }
 
 #menuPrincipal > ul > li:first-child {padding-left: 0;}
@@ -69,7 +69,7 @@
   margin-left: -4px;
   width: 11px;
   height: 5px;
-  background: url(img/setaDots.png) center center no-repeat;
+  background: url(locastyle/img/setaDots.png) center center no-repeat;
 }
 
 #menuPrincipal > ul > li > a {
@@ -106,7 +106,7 @@
 }
 
 #menuPrincipal > ul > li.selected > a {
-  background-image: url(img/bgMenu.png);
+  background-image: url(locastyle/img/bgMenu.png);
   background-repeat: repeat-x;
   color: #FFF;
   background-color: #777;
@@ -220,7 +220,7 @@
 /** Linkzinho de sugestões do Header **/
 .lnkSugestoes, #feedbackr.lnkSugestoes {
   float: right;
-  background: url(img/ico-lamp.png) no-repeat 10px center #fff;
+  background: url(locastyle/img/ico-lamp.png) no-repeat 10px center #fff;
   text-decoration: none;
   color: #545454;
   font: 12px verdana;
@@ -239,7 +239,7 @@
   font: 12px verdana;
   min-height: 50px;
   color: #545454;
-  background: url(img/bgIdentHeader.png) no-repeat right 20px;
+  background: url(locastyle/img/bgIdentHeader.png) no-repeat right 20px;
 }
 
 .infoLogin .accountName {
@@ -252,7 +252,7 @@
 .btn-group {font-size: inherit;}
 
 .btn-group .dropdown-toggle.identNumber {
-  background: url(img/setaIdentBaixo.png) no-repeat right 16px;
+  background: url(locastyle/img/setaIdentBaixo.png) no-repeat right 16px;
   cursor: pointer;
   padding: 11px 25px 5px 12px;
   border: 1px solid transparent;
@@ -262,7 +262,7 @@
   -webkit-box-shadow: none;
   cursor:pointer;
   -moz-box-shadow: none;
-  background:#FFF url(img/setaIdentTop.png) no-repeat right 16px;
+  background:#FFF url(locastyle/img/setaIdentTop.png) no-repeat right 16px;
   border: 1px solid #C7C7C7;
   border-bottom: none;
   border-radius: 0;
@@ -316,11 +316,11 @@
   display: block;
   font-weight: normal;
   color: #000;
-  background: url(img/setaDirList.png) no-repeat left center;
+  background: url(locastyle/img/setaDirList.png) no-repeat left center;
   padding-left: 10px;
 }
 .listIdent li span {
-  padding-left: 10px; 
+  padding-left: 10px;
   display: inline-block;
 }
 
@@ -376,7 +376,7 @@
   margin: 55px 0 0 10px;
 }
 .betalink{
-  background: url(img/ico-beta.png) 0 0 no-repeat;
+  background: url(locastyle/img/ico-beta.png) 0 0 no-repeat;
   display: inline-block;
   height: 20px;
   left: 6px;

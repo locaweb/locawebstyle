@@ -1,7 +1,7 @@
 .obsGray form {margin-bottom: 0; padding: 3px 0;}
 fieldset {
   border: none;
-  padding: 0; 
+  padding: 0;
   margin: 0 0 10px;
 }
 
@@ -132,13 +132,13 @@ label.nomarginleft {margin-left: 0 !important;}
 
 .boxGrayOpt:before {
   position: absolute;
-  top: -5px; 
+  top: -5px;
   left: 15px;
   content: " ";
   display: block;
-  width: 15px; 
+  width: 15px;
   height: 5px;
-  background: url(img/indicadorTopBoxGrayInput.png) no-repeat;
+  background: url(locastyle/img/indicadorTopBoxGrayInput.png) no-repeat;
 }
 
 label.checkbox.control-label, label.checkbox.control-label:first-child {
@@ -154,7 +154,7 @@ label.checkbox.control-label, label.checkbox.control-label:first-child {
 .filterCount {line-height: 28px;}
 
 .filterCount .control-group label {
-  font-weight: normal; 
+  font-weight: normal;
   width: auto !important;
   line-height: 28px;
 }
@@ -208,7 +208,7 @@ label.checkbox.control-label, label.checkbox.control-label:first-child {
 .periodoForm.formInline .control-group:first-child .help-inline {margin-left: 117px;}
 
 .periodoForm.formInline .control-group .help-inline {
-  margin-left: 0; 
+  margin-left: 0;
   padding-left: 0;
 }
 
@@ -319,7 +319,7 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 .simpleFilter.sideBySide p.fleft {margin-bottom: 0; margin-top: 6px;}
 
 .simpleFilter .searchInput {
-  background-image: url(img/lupaInput.png);
+  background-image: url(locastyle/img/lupaInput.png);
   background-position: 8px center;
   background-repeat: no-repeat;
   max-width: 185px;
@@ -349,7 +349,7 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 .lineFieldsContainer label.span3 {width: 217px;}
 
 .lineFields {
-  clear: both; 
+  clear: both;
   margin-bottom: 10px;
 }
 
@@ -358,13 +358,13 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 .lineFields select {vertical-align: top;}
 
 .lineFields .addRemoveLine {
-  width: 30px; 
-  height: 30px; 
+  width: 30px;
+  height: 30px;
   vertical-align: top;
 }
 
 .lineFields .addRemoveLine:before {
-  margin-left: -8px; 
+  margin-left: -8px;
   margin-top: 3px;
 }
 
@@ -399,7 +399,7 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
   border-left: none;
 }
 
-.select2-container .select2-choice div b {background: url(img/setaIdentBaixo.png) no-repeat center;}
-.select2-dropdown-open .select2-choice div b {background: url(img/setaIdentTop.png) no-repeat center;}
+.select2-container .select2-choice div b {background: url(locastyle/img/setaIdentBaixo.png) no-repeat center;}
+.select2-dropdown-open .select2-choice div b {background: url(locastyle/img/setaIdentTop.png) no-repeat center;}
 
 .select2-search {margin-top: 10px;}

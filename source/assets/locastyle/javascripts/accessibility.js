@@ -3,49 +3,36 @@ $(function(){
 	accessMenu();
 	subMenuAccess();
 
-	// $('select, textarea, h1, h2, h3, h4, h5, h6, p').attr('tabindex','0');
-	// $('input, select, .pathWay li.active > a, .btn-primary, .alert a').attr('tabindex','2');
-	// $('.btn-primary').attr('tabindex','3');
-	// $('.tabs li a').attr('tabindex','4');
-	//$('#menuPrincipal li > a, #main .shortcutBox h3 a, .headerContent h1, .alert').attr('tabindex','2');
 	$('#menuPrincipal li > a').attr('tabindex','2');
 	$('.btn, .tabs a').attr('tabindex','3');
-	//$('input, select, .btn.btn-primary').attr('tabindex','2');
 
 //
 // WAI-ARIA nos elementos
 //
 
-	//
 	// Menu
 	$('#menuPrincipal').attr('role','navigation');
 	$('#menuPrincipal li a').attr('role','menuitem');
 	$('#menuPrincipal li > a').attr('tabindex','2');
 
-
-	//
 	// Elementos Geral
 	$('.pathWays').attr('role','navigation');
-	$('#rodape').attr('role','contentinfo');
+	$('#footer').attr('role','contentinfo');
 	$('.alert').attr('role','alert');
 	$('a.btn, .modal-header .close').attr('role','button');
 	$('.boxGray').attr('role','region');
 	$('.boxGray h2').attr('role','presentation');
-	$('.headerPrincipal').attr('role','banner');
-	$('.content').attr('role','main'); // criar essa classe nos produtos ??
+	$('#header').attr('role','banner');
+	$('.content').attr('role','main');
 	$('.sidebar').attr('role','complementary');
 	$('input.required').attr('aria-required','true');
 	$('.lnkCoverAll').attr('tabindex','3');
-	//$('.shortcutBox h3 > a').attr('aria-hidden','true');
-
 	$('.lnkCoverAll .btn').attr('tabindex','0');
 
 
-	//
 	// TABS
 	$('.tabs').attr('role','tablist');
 
-	// Inserie ARIA-SELECTED em TABS ativas
 	$('.tabs li a').attr({
 		role: 'tab',
 		'aria-selected': 'false',
@@ -65,7 +52,7 @@ $(function(){
 	$('.collapse.in').find('[tabindex="0"]').attr('tabindex','3');
 
 	//Notificaçao
-	$('.flash_alert, .onFocus, .modal-header .close').attr('tabindex','-1').focus();
+	$('.onFocus, .modal').attr('tabindex','-1').focus();
 
 	//Ir para o conteudo
 	$('.lnkContent').on('click',function(e){
@@ -87,24 +74,11 @@ $(function(){
   	$('.serviceName a').focus();
   })
 
-  // Insere link sobre as chamadas
-  // $('.shortcutBox > div').each(function(){
-  //   var title = $(this).find('p').text()
-  //   $(this).append( $(this).find('h3 a').clone().addClass('lnkCoverAll').attr('title',title).attr('aria-label',title).attr('tabindex', '3') );
-  // })
-
   // Ativa visualmente as chamadas ao receber o foco do teclado
   $('.shortcutBox a').focus(function(){
   	$(this).parents('div:first').addClass('active');
   }).blur(function(){
   	$('.shortcutBox > div').removeClass('active')
-  })
-
-  // Ativa visualmente as chamadas ao receber o foco do teclado
-  $('.lnkCollapse').focus(function(){
-  	$(this).parents('.boxCollapse').addClass('focus');
-  }).blur(function(){
-  	$(this).parents('.boxCollapse').removeClass('focus');
   })
 
   // Menu com focus
