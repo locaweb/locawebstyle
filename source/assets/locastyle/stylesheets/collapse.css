@@ -113,7 +113,6 @@ p + .boxCollapse {margin-top: 30px;}
 
 .boxCollapse .tableList {
   margin-top: 0;
-  margin-bottom: 0.1em;
   border-collapse: separate;
   background: #FFF;
   border-bottom: none;
