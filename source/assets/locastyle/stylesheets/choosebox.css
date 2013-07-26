@@ -15,7 +15,7 @@
 .chooseBox h4,
 .chooseBox p {
 	padding: 0 15px 0 60px;
-	margin-bottom: 0;
+	margin-bottom: 0 !important;
 }
 
 .chooseBox h4 {
@@ -49,7 +49,7 @@
 
 .chooseBox li {
 	position: relative;
-	padding: 10px 0;
+	padding: 14px;
 	list-style: none;
 	margin-left: 17px;
 	background-color: whiteSmoke;
