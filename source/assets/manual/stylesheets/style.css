@@ -380,7 +380,12 @@ height: 22px !important;
 /*****
 ****** ARTICLE
 *****/
-.content header {overflow: hidden;}
+.content header {
+	overflow: hidden;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
 .content header h2 {
 	color: #545454!important;
 	font-size: 0.8em;
@@ -398,12 +403,15 @@ height: 22px !important;
 	/*margin-left: 84px;*/
     position: relative;
     font-size: 2.3em;
+    margin-bottom: 5px;
 }
 
-.content > header h3 {
+.content header h1 + h3 {
     font-size: 1.2em;
     margin-left: 0;
     max-width: 85%;
+    font-weight: 300;
+    font-family: Lato;
 }
 
 /*** ARTICLE ***/
@@ -425,9 +433,9 @@ height: 22px !important;
 }
 
 .content > .text > p {
-	font: 0.9em/1.4em arial, helvetica, tahoma, sans-serif;
+	font: 0.95em/1.4em "Helvetica Neue", arial, helvetica, tahoma, sans-serif;
 	margin-bottom: 15px;
-	/*color: #212121;*/
+	color: #212121;
 }
 
 /*** SIDEBAR ***/
