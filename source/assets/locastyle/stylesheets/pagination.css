@@ -1,0 +1,81 @@
+/**
+*** PAGINACAO e NAVEGACAO
+**/
+.pagination {
+  padding: 5px 0 0;
+  margin: 0;
+  height: auto;
+  font-size: 11px;
+}
+
+.pagination ul {
+  margin: 0;
+  box-shadow: none;
+}
+
+.pagination ul > li > a,
+.pagination .current {
+  float: none;
+  display: inline-block;
+  line-height: 16px;
+  padding: 0 5px;
+  border: 1px solid #D7D7D7;
+  border-radius: 4px;
+  color: #797979;
+}
+
+.pagination ul > li > span {
+  float: none;
+}
+
+.pagination ul > li.first-child > a,
+.pagination li.last-child a,
+.pagination .first a,
+.pagination .prev a,
+.pagination .next a,
+.pagination .last a {
+  border: none;
+  color: #666;
+}
+.pagination .first a, .pagination .last a {display: none;}
+
+.pagination .prev a, .pagination .next a {background: url(img/seta-pagination.png) no-repeat 0 0;}
+.pagination .prev a {background-position: left 6px; padding-left: 10px;}
+.pagination .next a {background-position: right -13px; padding-right: 10px;}
+.pagination .prev a:hover,
+.pagination .next a:hover {background-color: transparent; opacity: 0.8;}
+
+.pagination .current,
+.pagination ul > .active > a {
+  color: #FFF;
+  background-color: #666;
+  background-image: linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
+  background-image: -ms-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.21, rgb(133,133,133)), color-stop(1, rgb(209,209,209)));
+}
+
+.pagination .disabled,
+.pagination .disabled a {
+  border: none;
+  line-height: inherit;
+}
+
+.navView .pagination {float: right;}
+.tab-content .navView {padding: 15px 10px;}
+
+.navView {
+  margin: 20px 0;
+  padding: 9px 10px;
+  color: #767676;
+  clear: both;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navView.borderTop {border-top: 1px solid #e5e5e5; border-bottom: 0;}
+table ~ .navView {border-top: none; margin-top: -20px; padding: 15px 10px;}
+
+.navView label {color: #767676; width:auto; display: inline-block;}
+.navView .control-group {display: inline-block; margin-right: 5px;}

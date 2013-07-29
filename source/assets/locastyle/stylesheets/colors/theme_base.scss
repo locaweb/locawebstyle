@@ -32,7 +32,6 @@
 #{$theme_name} .pagination .prev a,
 #{$theme_name} .pagination .next a,
 #{$theme_name} .pagination .last a,
-#{$theme_name} p a,
 #{$theme_name} .lnkSeta, #{$theme_name} .lnkArrow,
 #{$theme_name} .breadcrumb a,
 #{$theme_name} [class^="ico-"],
@@ -145,7 +144,6 @@
   background-image: -o-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
   background-image: -ms-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
   background-image: linear-gradient(to bottom,  $pallet_1 0%,$pallet_2 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_1', endColorstr='$pallet_2',GradientType=0 );
 }
 
 #{$theme_name} .shortcutBox div.active,
@@ -158,7 +156,6 @@
   background: -o-linear-gradient(top,  #ffffff 0%,$pallet_6 100%);
   background: -ms-linear-gradient(top,  #ffffff 0%,$pallet_6 100%);
   background: linear-gradient(to bottom,  #ffffff 0%,$pallet_6 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$pallet_6',GradientType=0 );
 }
 
 #{$theme_name} .chooseBox li:hover,
@@ -176,7 +173,6 @@
   background-image: -o-linear-gradient(top,  $pallet_7 0%,$pallet_5 100%);
   background-image: -ms-linear-gradient(top,  $pallet_7 0%,$pallet_5 100%);
   background-image: linear-gradient(to bottom,  $pallet_7 0%,$pallet_5 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_7', endColorstr='$pallet_5',GradientType=0 );
 }
 #{$theme_name}.ie9  .gradient{background-color: $pallet_5;}
 
@@ -189,7 +185,6 @@
   background-image: -o-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
   background-image: -ms-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
   background-image: linear-gradient(to bottom,  $pallet_1 0%,$pallet_2 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_1', endColorstr='$pallet_2',GradientType=0 );
 }
 #{$theme_name} .progress .bar{
   background-color: $pallet_2;
@@ -198,5 +193,4 @@
   background-image: -o-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
   background-image: -ms-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
   background-image: linear-gradient(to bottom,  $pallet_1 0%,$pallet_2 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pallet_1', endColorstr='$pallet_2',GradientType=0 );
 }

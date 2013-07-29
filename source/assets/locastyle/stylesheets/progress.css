@@ -1,0 +1,40 @@
+/***
+**** PROGRESS BAR
+****/
+.progress {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	display: inline-block;
+	height: 14px;
+	margin: 0 0 0 4px;
+	width: 100%;
+}
+.progressInfo{color: #2a2a2a; font-weight: bold;}
+.progressInfo .progress{
+	float: left;
+	margin-right: 5px;
+	width: 78%;
+}
+td .progress {max-width: 70px;}
+.progress .bar {
+	border-radius: 3px; height: 100%;
+	line-height: 14px;
+	font-size:8px;
+	font-family:verdana;
+}
+.progress .bar b {
+	color: #fff;
+	display: inline-block;
+	padding: 0 3px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.progress{margin: 0;}
+.progressInfo{font-size: 11px; }
+.progress.infoHelp {padding: 0;}
+.progress.progress-striped .bar{
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
