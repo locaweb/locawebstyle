@@ -1,0 +1,124 @@
+.chooseBox {
+	padding: 0 0 20px;
+	margin: 0;
+}
+
+.chooseBox:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.chooseBox ul {
+	margin: 0;
+}
+
+.chooseBox h4,
+.chooseBox p {
+	padding: 0 0 0 55px;
+	margin-bottom: 0 !important;
+}
+
+.chooseBox h4 {
+	padding-bottom: 5px;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.chooseBox a.lnkChoose {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-indent: -9999px;
+	text-align: left;
+	overflow: hidden;
+}
+
+.chooseBox li h4[class^="ico-"]:before,
+.chooseBox li h4[class*=" ico-"]:before,
+.chooseBox li:hover p,
+.chooseBox li.active p {
+	opacity: 0.7;
+}
+
+.chooseBox li:first-child {
+	margin-left: 0;
+}
+
+.chooseBox li {
+	position: relative;
+	padding: 14px;
+	list-style: none;
+	background-color: whiteSmoke;
+	background-image: -ms-linear-gradient(top, white, #E6E6E6);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#E6E6E6));
+	background-image: -webkit-linear-gradient(top, white, #E6E6E6);
+	background-image: -o-linear-gradient(top, white, #E6E6E6);
+	background-image: linear-gradient(top, white, #E6E6E6);
+	background-image: -moz-linear-gradient(top, white, #E6E6E6);
+	background-repeat: repeat-x;
+	border: 1px solid #e5e5e5;
+	min-height: 70px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='white', endColorstr='#E6E6E6', GradientType=0);
+	filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+	box-shadow: 0 1px 2px #CCC, inset 0 8px 10px 0px rgba(255,255,255,0.5);
+}
+
+.chooseBox .active:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -13px;
+	bottom: -9px;
+	width: 0;
+	height: 0;
+	border-left: 11px solid transparent;
+	border-right: 11px solid transparent;
+	border-top: 10px solid #ccc;
+}
+
+.chooseBox .active:before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -14px;
+	bottom: -11px;
+	width: 0;
+	height: 0;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-top: 11px solid #ccc;
+}
+
+.chooseBox [class^="ico-"]:before,
+.chooseBox [class*="ico-"]:before {
+	color: #545454;
+	font-size: 42px;
+	position: absolute;
+	left: 0;
+	top: -8px;
+}
+
+.chooseBox li:hover h4,
+.chooseBox li.active h4 {
+	color: #333;
+}
+
+.chooseBox li:hover,
+.chooseBox li.active {
+	background: #cdcdcd;
+	border: 1px solid #999;
+}
+
+.chooseBox li:hover [class^="ico-"]:before,
+.chooseBox li:hover [class*="ico-"]:before,
+.chooseBox li.active [class^="ico-"]:before,
+.chooseBox li.active [class*="ico-"]:before {
+	color: #333;
+}
