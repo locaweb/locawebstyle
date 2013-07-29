@@ -4,81 +4,81 @@ title: Componentes - Tooltip ou Popovers
 menu_page: sidebar-componentes.erb
 ---
 
-<header>
-  <h1>Tooltips ou popover</h1>
-  <h3>Para mostrar balões de informação.</h3>
-</header>
-
 <article class="text">
-<p>As opções devem ser passadas via atributo data, <strong>ex: data-animation="false", data-trigger="click".</strong></p>
+  <header>
+    <h1>Tooltips ou popover</h1>
+    <h3>Para mostrar balões de informação.</h3>
+  </header>
 
-<div class="example">
-<label><input type="checkbox"> Um input qualquer <a data-content="Aqui vai um conteúdo maravilhoso para o popover... aceita &lt;b&gt;html&lt;/b&gt;" rel="popover" class="infoBubble" data-original-title="Exemplo de Popover"></a></label>
-</div>
+  <p>As opções devem ser passadas via atributo data, <strong>ex: data-animation="false", data-trigger="click".</strong></p>
 
-<pre class="lang-html prettyprint linenums">
-&lt;a data-content=&quot;Aqui vai um conte&uacute;do maravilhoso para o popover... aceita &amp;lt;b&amp;gt;html&amp;lt;/b&amp;gt;&quot; rel=&quot;popover&quot; data-original-title=&quot;Exemplo de Popover&quot;&gt;&lt;/a&gt;
-</pre>
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 100px;">type</th>
-      <th style="width: 50px;">default</th>
-      <th>description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>animation</td>
-      <td>boolean</td>
-      <td>true</td>
-      <td>Aplica uma transição de fade</td>
-    </tr>
-    <tr>
-      <td>placement</td>
-      <td>string|function</td>
-      <td>'right'</td>
-      <td>Onde o popover ficará posicionado - top | bottom | left | right</td>
-    </tr>
-    <tr>
-      <td>selector</td>
-      <td>string</td>
-      <td>false</td>
-      <td>Se um seletor é definido, os objetos do popover será delegado para alvos específicos</td>
-    </tr>
-    <tr>
-      <td>trigger</td>
-      <td>string</td>
-      <td>'hover'</td>
-      <td>Como o popover é ativado - hover | focus | manual</td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>string | function</td>
-      <td>''</td>
-      <td>Título padrão do popover se o atributo <b>title</b> não existir</td>
-    </tr>
-    <tr>
-      <td>content</td>
-      <td>string | function</td>
-      <td>''</td>
-      <td>Conteúdo padrão se o <b>data-content</b> não existir</td>
-    </tr>
-    <tr>
-      <td>delay</td>
-      <td>number | object</td>
-      <td>0</td>
-      <td>
-        <p>Delay para mostrar e esconder o popover (ms) - não aplicável para ativação manual.</p>
-        <p>Se um número é fornecido, o delay é aplicado no hide e show.</p>
-        <p>Estrutura do objeto é: <code>delay: { show: 500, hide: 100 }</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <div class="example">
+    <label><input type="checkbox"> Um input qualquer <a data-content="Aqui vai um conteúdo maravilhoso para o popover... aceita &lt;b&gt;html&lt;/b&gt;" rel="popover" class="infoBubble" data-original-title="Exemplo de Popover"></a></label>
+  </div>
 
-<h3>Classe .infoBubble</h3>
-<p>O .infoBubble faz a caixinha azul com o ponto de interrogação aparecer.</p>
+  <pre class="lang-html prettyprint linenums">
+    &lt;a data-content=&quot;Aqui vai um conte&uacute;do maravilhoso para o popover... aceita &amp;lt;b&amp;gt;html&amp;lt;/b&amp;gt;&quot; rel=&quot;popover&quot; data-original-title=&quot;Exemplo de Popover&quot;&gt;&lt;/a&gt;
+  </pre>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 100px;">Name</th>
+        <th style="width: 100px;">type</th>
+        <th style="width: 50px;">default</th>
+        <th>description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>animation</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Aplica uma transição de fade</td>
+      </tr>
+      <tr>
+        <td>placement</td>
+        <td>string|function</td>
+        <td>'right'</td>
+        <td>Onde o popover ficará posicionado - top | bottom | left | right</td>
+      </tr>
+      <tr>
+        <td>selector</td>
+        <td>string</td>
+        <td>false</td>
+        <td>Se um seletor é definido, os objetos do popover será delegado para alvos específicos</td>
+      </tr>
+      <tr>
+        <td>trigger</td>
+        <td>string</td>
+        <td>'hover'</td>
+        <td>Como o popover é ativado - hover | focus | manual</td>
+      </tr>
+      <tr>
+        <td>title</td>
+        <td>string | function</td>
+        <td>''</td>
+        <td>Título padrão do popover se o atributo <b>title</b> não existir</td>
+      </tr>
+      <tr>
+        <td>content</td>
+        <td>string | function</td>
+        <td>''</td>
+        <td>Conteúdo padrão se o <b>data-content</b> não existir</td>
+      </tr>
+      <tr>
+        <td>delay</td>
+        <td>number | object</td>
+        <td>0</td>
+        <td>
+          <p>Delay para mostrar e esconder o popover (ms) - não aplicável para ativação manual.</p>
+          <p>Se um número é fornecido, o delay é aplicado no hide e show.</p>
+          <p>Estrutura do objeto é: <code>delay: { show: 500, hide: 100 }</code></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Classe .infoBubble</h3>
+  <p>O .infoBubble faz a caixinha azul com o ponto de interrogação aparecer.</p>
 
 </article>
