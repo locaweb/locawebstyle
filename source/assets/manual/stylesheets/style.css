@@ -3,6 +3,16 @@ body {
 	background: url(/assets/manual/img/stripestop.png) repeat-X top;
 }
 
+a.btn.btn-download {
+	padding: 20px 35px;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+hr {
+	margin: 20px 0 !important;
+}
+
 /*****
 ****** CODE PARTS
 *****/
@@ -13,7 +23,6 @@ pre .linenums {
 ol.linenums {
 	margin: 0 0 0 14px !important;
 }
-
 /*****
 ****** HEADER TOPBAR
 *****/
@@ -82,21 +91,21 @@ ol.linenums {
 }
 
 .addthis_toolbox {
-height: 20px;
-margin: 0 !important;
-padding-bottom: 50px;
-text-align: center;
+	height: 20px;
+	margin: 0 !important;
+	padding-bottom: 50px;
+	text-align: center;
 }
 .addthis_toolbox a, .addthis_toolbox iframe, .addthis_toolbox div, .addthis_toolbox .fb_iframe_widget {
-float: none !important;
-display: inline-block !important;
-vertical-align: middle !important;
+	float: none !important;
+	display: inline-block !important;
+	vertical-align: middle !important;
 }
 .addthis_toolbox .githubbtn {
-width: 100px;
+	width: 100px;
 }
 .addthis_counter.addthis_pill_style {
-height: 22px !important;
+	height: 22px !important;
 }
 /*** highlight when in internal page ***/
 .highlight.heading {
@@ -184,8 +193,6 @@ height: 22px !important;
 	margin-right: 5px;
 }
 .highlight .search-form fieldset {margin: 0; display: inline-block;}
-
-
 
 .btn-primary[type="submit"] {
 	box-shadow: 0 0 6px rgba(255,255,255,0.6);
@@ -402,7 +409,7 @@ height: 22px !important;
 .content header h1 {
 	/*margin-left: 84px;*/
     position: relative;
-    font-size: 2.3em;
+    font-size: 2.5em !important;
     margin-bottom: 5px;
 }
 
@@ -419,10 +426,13 @@ height: 22px !important;
 	overflow: hidden;
 	padding-right: 25px
 }
+.content .text h1 {
+    font-size: 1.8em;
+}
 
 .content > .text > h2 {
 	margin-top: 30px;
-	font: bold 1.2em arial, helvetica, tahoma, sans-serif;
+	font: bold 1.5em arial, helvetica, tahoma, sans-serif;
 	color: #2a2a2a;
 }
 
