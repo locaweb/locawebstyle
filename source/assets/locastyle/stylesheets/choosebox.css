@@ -16,7 +16,7 @@
 .chooseBox h4,
 .chooseBox p {
 	padding: 0 0 0 55px;
-	margin-bottom: 0 !important;
+	margin-bottom: 0;
 }
 
 .chooseBox h4 {
