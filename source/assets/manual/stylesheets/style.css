@@ -28,7 +28,7 @@ ol.linenums {
 *****/
 #topbar .logo {
 	float: left;
-	font-size: 0.8em;
+	font-size: 1.2em;
 	text-transform: uppercase;
 	color: #000;
 	margin: 12px 0 0;
@@ -114,7 +114,7 @@ ol.linenums {
 
 .highlight.heading h1,
 .highlight.heading h1 span {
-	font-size: 1.2em;
+	font-size: 2em;
 	letter-spacing: 0px;
 }
 .highlight.heading h1{font-weight: 300;}
@@ -129,7 +129,7 @@ ol.linenums {
 }
 
 .highlight h1 {
-	padding: 40px 0 35px;
+	padding: 35px 0;
 	text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 	font: 100 6em Lato, Verdana, Arial, Helvetica, Tahoma, Sans-serif;
 	text-transform: uppercase;
