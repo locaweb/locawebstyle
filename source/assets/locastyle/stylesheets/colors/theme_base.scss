@@ -120,12 +120,12 @@
 }
 
 #{$theme_name} .chooseBox .active:after {
-  border-top: 13px solid $pallet_5;
+  border-top-color: $pallet_5;
   box-shadow: 0 -4px 0 0 $pallet_5;
 }
 
 #{$theme_name} .chooseBox .active:before {
-  border-top: 15px solid $pallet_1;
+  border-top-color: $pallet_1;
 }
 
 #{$theme_name} .chooseBox li:hover,

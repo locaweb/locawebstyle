@@ -1,5 +1,6 @@
 .chooseBox {
-	margin: 10px 0;
+	padding: 0 0 20px;
+	margin: 0;
 }
 
 .chooseBox:after {
@@ -59,7 +60,7 @@
 	background-image: linear-gradient(top, white, #E6E6E6);
 	background-image: -moz-linear-gradient(top, white, #E6E6E6);
 	background-repeat: repeat-x;
-	border: 1px solid #CCC;
+	border: 1px solid #e5e5e5;
 	min-height: 70px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -73,24 +74,26 @@
 	content: "";
 	position: absolute;
 	left: 50%;
-	margin-left: -15px;
-	bottom: -13px;
+	margin-left: -13px;
+	bottom: -9px;
 	width: 0;
 	height: 0;
-	border-left: 13px solid transparent;
-	border-right: 13px solid transparent;
+	border-left: 11px solid transparent;
+	border-right: 11px solid transparent;
+	border-top: 10px solid #ccc;
 }
 
 .chooseBox .active:before {
 	content: "";
 	position: absolute;
 	left: 50%;
-	margin-left: -17px;
-	bottom: -15px;
+	margin-left: -14px;
+	bottom: -11px;
 	width: 0;
 	height: 0;
-	border-left: 15px solid transparent;
-	border-right: 15px solid transparent;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-top: 11px solid #ccc;
 }
 
 .chooseBox [class^="ico-"]:before,
@@ -105,14 +108,6 @@
 .chooseBox li:hover h4,
 .chooseBox li.active h4 {
 	color: #333;
-}
-
-.chooseBox .active:after {
-	border-top: 13px solid #cdcdcd;
-}
-
-.chooseBox .active:before {
-	border-top: 15px solid #999;
 }
 
 .chooseBox li:hover,
