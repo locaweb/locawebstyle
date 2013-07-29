@@ -401,51 +401,24 @@ ol.linenums {
 	text-transform: uppercase;
 	vertical-align: top;
 }
+
 .content header h2:before {
 	font-size: 75px !important;
 	top: 12px !important;
 	vertical-align: top !important;
 }
-.content header h1 {
-	/*margin-left: 84px;*/
-    position: relative;
-    font-size: 2.5em !important;
-    margin-bottom: 5px;
-}
 
-.content header h1 + h3 {
-    font-size: 1.2em;
-    margin-left: 0;
+.content header h3 {
     max-width: 85%;
     font-weight: 300;
     font-family: Lato;
 }
 
+
 /*** ARTICLE ***/
 .content > .text {
 	overflow: hidden;
 	padding-right: 25px
-}
-.content .text h1 {
-    font-size: 1.8em;
-}
-
-.content > .text > h2 {
-	margin-top: 30px;
-	font: bold 1.5em arial, helvetica, tahoma, sans-serif;
-	color: #2a2a2a;
-}
-
-.content > .text > h3 {
-	margin-top: 30px;
-	font: bold 1em arial, helvetica, tahoma, sans-serif;
-	color: #2a2a2a;
-}
-
-.content > .text > p {
-	font: 0.95em/1.4em "Helvetica Neue", arial, helvetica, tahoma, sans-serif;
-	margin-bottom: 15px;
-	color: #212121;
 }
 
 /*** SIDEBAR ***/
