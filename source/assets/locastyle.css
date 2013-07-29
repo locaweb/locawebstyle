@@ -21,6 +21,9 @@
 *=require locastyle/stylesheets/deprecated
 *=require locastyle/stylesheets/collapse
 *=require locastyle/stylesheets/mobile
+*=require locastyle/stylesheets/alerts
+*=require locastyle/stylesheets/progress
+*=require locastyle/stylesheets/pagination
 
 *=require locastyle/stylesheets/select2
 *=require locastyle/stylesheets/forms

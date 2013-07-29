@@ -11,8 +11,32 @@ layout: false
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<%= stylesheet_link_tag "bootstrap" %>
 		<%= stylesheet_link_tag "locastyle" %>
+		<style>
+			#select_themes.formInline label{color: #fff;}
+		</style>
 	</head>
 	<body>
+<div id="toolbar">
+	<div class="limitToolbar">
+		<h1 class="logoToolbar">Central do Cliente</h1>
+		<div id="select_themes" class="menuToolbar formInline">
+			<label for="theme_selector">Selecione o Tema</label>
+			<select id="theme_selector" name="themes">
+				<option value="colorAqua">aqua</option>
+				<option value="colorBlue">blue</option>
+				<option value="colorGreen">green</option>
+				<option value="colorOrange">orange</option>
+				<option value="colorPurple">purple</option>
+				<option value="colorWine">wine</option>
+				<option value="colorNavyBlue">navy_blue</option>
+				<option value="colorLightBlue">light_blue</option>
+				<option value="colorYellow">yellow</option>
+				<option value="colorCyanogen">cyanogen</option>
+			</select>
+		</div>
+	</div>
+</div>
+
 
 
 		<div id="main">
@@ -1036,29 +1060,6 @@ layout: false
 								</div>
 							</div>
 							<hr>
-							<div class="control-group">
-								<label>Tipo de autenticação:</label>
-								<div class="controls">
-									<label class="control-label">
-										<input type="radio" data-target="#authOpt" name="control" data-toggle="show" checked="checked"> Autenticado
-									</label>
-									<label class="control-label">
-										<input type="radio" data-target="#authOpt2" name="control" data-toggle="hide"> Não autenticado
-									</label>
-									<div id="authOpt" class="collapse">
-										<div class="boxGrayOpt formInline">
-											<label><input type="checkbox" value="1"> CPF</label>
-											<label><input type="checkbox" value="1"> Endereço</label>
-											<label><input type="checkbox" value="1"> CEP</label>
-										</div>
-									</div>
-									<div id="authOpt2" class="collapse">
-										<div class="boxGrayOpt formInline">
-											<input type="text" class="span5">
-										</div>
-									</div>
-								</div>
-							</div>
 							<div class="row">
 								<div class="span5">
 									<div class="control-group">
@@ -1141,6 +1142,39 @@ layout: false
 						</form>
 					</div>
 				</div>
+				<h1>Grupo de radio com collapse</h1>
+							<div class="row">
+								<div class="span16">
+									<div class="collapsedRadios">
+										<div class="control-group formInline">
+											<input data-target="#list_1" data-toggle="collapse" id="input_01" name="message[receiver_kind]" type="radio" value="1">
+											<label for="input_01" class="noBold">Opção 1</label>
+											<div class="collapse" id="list_1">
+												<div class="obsGray noMarginBottom">
+													<p>Conteúdo 1</p>
+												</div>
+											</div>
+										</div>
+										<div class="control-group formInline">
+											<input data-target="#list_2" data-toggle="collapse" id="input_02" name="message[receiver_kind]" type="radio" value="1">
+											<label for="input_02" class="noBold">Opção 2</label>
+											<div class="collapse" id="list_2">
+												<div class="obsGray noMarginBottom">
+													<p>Conteúdo 2</p>
+												</div>
+											</div>
+										</div>
+										<div class="control-group formInline">
+											<input data-target="#list_3" data-toggle="collapse" id="input_03" name="message[receiver_kind]" type="radio" value="1">
+											<label for="input_03" class="noBold">Opção 3</label>
+											<div class="collapse" id="list_3">
+												<div class="obsGray noMarginBottom">
+													<p>Conteúdo 3</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div
 				<hr>
 				<h1>Steps - Pathway</h1>
 				<div class="row">
