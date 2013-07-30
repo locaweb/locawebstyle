@@ -1,0 +1,79 @@
+/*** NAV TABS ***/
+.nav-tabs
+	background: #e5e5e5
+	padding: 0 10px 1px
+	margin: 10px 0 0
+	border-top-left-radius: 3px
+	border-top-right-radius: 3px
+	height: 32px
+
+	li
+		display: inline
+		font: 500 11px Ubuntu, helvetica, tahoma, verdana, arial, sans-serif
+		border: none
+
+		a
+			color: #545454
+			display: inline-block
+			text-transform: uppercase
+			border-top: 2px solid transparent
+			position: relative
+			top: -3px
+			padding: 10px 15px 7px
+
+		&.active > a,
+		&.active > a:hover,
+		a:hover,
+		a:focus
+			border-bottom: none
+			background: #FFF
+			border-top-width: 2px
+
+		/*** SETA DAS TABS ***/
+		&.active > a:after,
+		a:hover:after,
+		&.active > a:before,
+		a:hover:before
+			border: solid transparent
+			content: " "
+			height: 0
+			width: 0
+			position: absolute
+			top: 100.2%
+			left: 50%
+			pointer-events: none
+			border-width: 6px
+			border-color: rgba(255, 255, 255, 0)
+			margin-left: -5px
+
+		&.active > a:after,
+		a:hover:after
+			border-top-color: #FFF
+
+		&.active > a:before,
+		a:hover:before
+			border-top-color: rgba(0,0,0, 0.6)
+
+
+.tab-content
+	border: 1px solid #e5e5e5
+	margin-bottom: 20px
+	min-width: 734px
+	width: auto
+	background: white
+
+.nav-tabs + .tab-content
+	border-top: none
+
+.tab-content .tab-pane
+	padding: 10px
+
+.tab-content.noborder
+	border: none
+
+.nav-tabs .searchInput
+	height: 17px
+	margin: 2px 0 0
+
+.nav-tabs .btn-small
+	padding: 5px 12px
