@@ -1,6 +1,7 @@
 body {
 	font: 100% Lato, Verdana, Arial, Helvetica, Tahoma, Sans-serif;
 	background: url(/assets/manual/img/stripestop.png) repeat-X top;
+	padding-top: 7px;
 }
 
 a.btn.btn-download {
@@ -31,7 +32,7 @@ ol.linenums {
 	font-size: 1.2em;
 	text-transform: uppercase;
 	color: #000;
-	margin: 12px 0 0;
+	margin: 8px 0 0;
 }
 .logo a {color: #000;}
 

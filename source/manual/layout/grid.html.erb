@@ -1,0 +1,68 @@
+---
+title: Layout - Grid
+
+menu_page: sidebar-layout.erb
+---
+
+<header>
+  <h1>Grid</h1>
+  <h3>Grid padrão para estruturação de layouts baseados no Locaweb Style.</h3>
+</header>
+
+<article class="text">
+    <h2>Baseado no Bootstrap</h2>
+    <p>
+        O nosso grid foi baseado inteirinho no Bootstrap. Fizemos apenas as duas alterações abaixo para adequar a largura do elemento <strong>.container</strong> para os tamanhos que padronizamos para nossos layouts.
+    </p>
+    <p>O elemento <strong>.container</strong> é o elemento que limita a largura geral do site. Ele tem sua largura alterada dependendo do tamanho da tela do visitante.</p>
+    <pre class="lang-css prettyprint linenums">
+@media(min-width: 992px) {
+    .container {
+        max-width: 980px
+    }
+}
+
+@media(min-width: 1200px) {
+    .container {
+        max-width: 1200px
+    }
+}
+    </pre>
+
+    <p>
+        Estas alterações estão no arquivo <strong>grid.sass</strong>.
+    </p>
+
+    <h2>Estrura padrão</h2>
+    <p>
+        A estrutura HTML padrão para o corpo do grid é simples. Abaixo veja um exemplo com a base do header e do corpo das estruturas.
+    </p>
+
+   <pre class="lang-html prettyprint linenums">
+&lt;header id=&quot;header&quot; role=&quot;banner&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1 class=&quot;serviceName&quot;&gt;&lt;a href=&quot;/&quot; onclick=&quot;_gaq.push(['_trackEvent', 'Logo', 'Clique', 'Nome do Servico']);&quot;&gt;Nome do projeto&lt;/a&gt;&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;menu id=&quot;menuPrincipal&quot; role=&quot;navigation&quot;&gt;
+        &lt;ul class=&quot;container&quot;&gt;
+            &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ico-home&quot; tabindex=&quot;2&quot; role=&quot;menuitem&quot;&gt;P&aacute;gina inicial&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot; tabindex=&quot;2&quot; role=&quot;menuitem&quot;&gt;Listas de contatos&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/menu&gt;
+&lt;/header&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-lg-9&quot;&gt;
+            Conteúdo da esquerda
+        &lt;/div&gt;
+        &lt;div class=&quot;col-lg-3&quot;&gt;
+            Sidebar
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+<p>Veja aqui um exemplo de <a href="/manual/exemplos/home/">HOME</a> feita com esse grid como base. Veja também aqui a <a href="/manual/exemplos/grid/">estrutura mostrando apenas os elementos que compõe o GRID</a>.</p>
+
+</article>
