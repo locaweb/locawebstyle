@@ -35,7 +35,7 @@
 		&.active > a:before,
 		a:hover:before
 			border: solid transparent
-			content: " "
+			content: ""
 			height: 0
 			width: 0
 			position: absolute
@@ -54,7 +54,17 @@
 		a:hover:before
 			border-top-color: rgba(0,0,0, 0.6)
 
+	.searchInput
+		height: 17px
+		margin: 2px 0 0
 
+	.btn-small
+		padding: 5px 12px
+
+	+ .tab-content
+		border-top: none
+
+/** CONTEÚDO DAS TABS **/
 .tab-content
 	border: 1px solid #e5e5e5
 	margin-bottom: 20px
@@ -62,18 +72,5 @@
 	width: auto
 	background: white
 
-.nav-tabs + .tab-content
-	border-top: none
-
-.tab-content .tab-pane
-	padding: 10px
-
-.tab-content.noborder
-	border: none
-
-.nav-tabs .searchInput
-	height: 17px
-	margin: 2px 0 0
-
-.nav-tabs .btn-small
-	padding: 5px 12px
+	.tab-pane
+		padding: 10px
