@@ -260,7 +260,7 @@ footer.site-footer{
   text-align: center;
 }
 
-footer#rodape {position:static;}
+footer#footer {position:static;}
 
 aside.boxes .collapseGroup summary.active { font-weight:normal; color:#B60000;   background:url(/assets/img/setaCollapseTop.png) no-repeat 99% 8px;}
 
