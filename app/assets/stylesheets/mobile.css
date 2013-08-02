@@ -144,22 +144,22 @@
   input.input360 {max-width:250px;}
 
   /** RODAPE **/
-  footer#rodape {position:static !important;}
-  footer#rodape .limit {padding:0;}
+  footer#footer {position:static !important;}
+  footer#footer .limit {padding:0;}
 
-  #rodape nav {height:70px;}
-  #rodape ul {width:100%; padding:5px 0; background:#000; text-align:center;}
-  #rodape ul li {display:inline;}
+  #footer nav {height:70px;}
+  #footer ul {width:100%; padding:5px 0; background:#000; text-align:center;}
+  #footer ul li {display:inline;}
 
-  #rodape nav h6 {display:none; font-size:10px; text-transform:lowercase; padding:12px 7px 11px;}
-  #rodape nav ul li a {
+  #footer nav h6 {display:none; font-size:10px; text-transform:lowercase; padding:12px 7px 11px;}
+  #footer nav ul li a {
     display:inline-block;
     font-size: 11px;
     background-size:20%;
     padding:6px 20px 6px 17px;
     margin-right:5px;
   }
-  #rodape nav .lnkArrow {
+  #footer nav .lnkArrow {
     margin: 2px 0 0 10px;
     font-size: 11px;
     text-align: center;
@@ -182,7 +182,7 @@
   /** TABELA Padrão **/
   table.tableList thead th, table.tableList tbody td {font-size:11px;}
   .subfooter .lastAccess {background-image:none; display:block; padding:0;}
-  #rodape nav .lnkArrow {margin:2px 0 0 10px; float:left; font-size:11px;}
+  #footer nav .lnkArrow {margin:2px 0 0 10px; float:left; font-size:11px;}
   .subfooter strong {margin-left:10px;}
   .icoInterroga {display:none;}
 
