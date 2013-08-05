@@ -409,10 +409,11 @@ ol.linenums {
 	vertical-align: top !important;
 }
 
-.content header h3 {
-    max-width: 85%;
-    font-weight: 300;
-    font-family: Lato;
+.content header > h3 {
+	text-align: left !important;
+	margin: 0;
+  max-width: 85%;
+  font: 300 2em Lato, sans-serif;
 }
 
 
