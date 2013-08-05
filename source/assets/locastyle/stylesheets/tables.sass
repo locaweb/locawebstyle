@@ -1,0 +1,91 @@
+@import "mixins"
+
+//
+// TABLES
+//
+@mixin cellFont
+  font: 12px verdana, arial, tahoma, sans-serif
+
+@mixin cellBorderRight
+  border-right: 1px solid rgba(0,0,0,0.05)
+
+.tableList
+  border-bottom: 1px solid rgba(0,0,0,0.05)
+  margin: 0 0 20px
+  width: 100%
+
+  tbody td
+    @include cellFont
+    @include cellBorderRight
+    padding: 10px
+    vertical-align: top
+
+    &:last-child
+      border-right: none
+
+  tr
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+
+  tbody tr:hover,
+  tbody tr:hover td
+    background: #ffffca
+
+  tr:hover .actionsTable
+    display: block
+
+  tr:nth-child(even)
+    background-color: #eee
+
+  thead
+    @include cellFont
+    color: #FFF
+    font-weight: bold
+    background-color: #545454
+
+    th
+      @include cellBorderRight
+      border-right-color: rgba(255,255,255,0.5)
+      padding: 10px
+
+    a
+      text-decoration: none
+      color: #FFF
+
+/** Setas de Ordenação **/
+.dataDescending,
+.dataAscending
+  background-color: #2a2a2a
+  padding-left: 20px
+
+.dataDescending a:after,
+.dataAscending a:after
+  margin-left: 10px
+
+.dataDescending a:after
+  @include arrowDown($arrowColor: white, $arrowSize: 5px)
+
+.dataAscending a:after
+  @include arrowUp($arrowColor: white, $arrowSize: 5px)
+
+//
+// Links de ação nas tabelas
+//
+.actionsTable
+  list-style: none
+  padding: 10px 0 0
+  margin: 0
+  display: none
+
+  li
+    display: inline-block
+
+    &:last-child a:after
+      display: none
+
+    a:after
+      content: ""
+      display: inline-block
+      border-right: 1px solid #bababa
+      height: 10px
+      margin: 0 2px 0 5px
+      vertical-align: middle

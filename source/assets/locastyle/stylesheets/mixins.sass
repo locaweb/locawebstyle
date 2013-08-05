@@ -1,0 +1,32 @@
+// ARROWS
+// Cria setas.
+// $arrowColor define a cor da seta. $arrowSize define o tamanho da seta.
+@mixin arrowStructure
+  content: ""
+  display: inline-block
+  width: 0
+  height: 0
+
+@mixin arrowUp($arrowColor, $arrowSize)
+  @include arrowStructure
+  border-left: $arrowSize solid transparent
+  border-right: $arrowSize solid transparent
+  border-bottom: $arrowSize solid $arrowColor
+
+@mixin arrowDown($arrowColor, $arrowSize)
+  @include arrowStructure
+  border-left: $arrowSize solid transparent
+  border-right: $arrowSize solid transparent
+  border-top: $arrowSize solid $arrowColor
+
+@mixin arrowRight($arrowColor, $arrowSize)
+  @include arrowStructure
+  border-top: $arrowSize solid transparent
+  border-bottom: $arrowSize solid transparent
+  border-left: $arrowSize solid $arrowColor
+
+@mixin arrowLeft($arrowColor, $arrowSize)
+  @include arrowStructure
+  border-top: $arrowSize solid transparent
+  border-bottom: $arrowSize solid transparent
+  border-right: $arrowSize solid $arrowColor
