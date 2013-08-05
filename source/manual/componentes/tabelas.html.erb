@@ -7,69 +7,101 @@ menu_page: sidebar-componentes.erb
 <article class="text">
         <header>
           <h1>Tabelas</h1>
-          <h3>Para exibir dados tabulares. Também seguem os padrões do Bootstrap, mas modificamos o seu design com uma classe nossa.</h3>
+          <h3>Para exibir dados tabulares. Nossas tabelas seguem o padrão do Bootstrap, adicionamos apenas uma classe para adequar ao padrão dos nossos designers.</h3>
       </header>
 
-      <p>Usamos tabelas para listar informações tabulares o tempo inteiro. Os padrões do Bootstrap ainda continuam, logo, se quiser utilizar o <a href="http://twitter.github.com/bootstrap/base-css.html#tables">estilo de tabelas que o Bootstrap oferece</a>, fique à vontade. Se quiser a nossa versão, basta inserir a classe <strong>tableList</strong> na tabela.</p>
+      <p>Usamos tabelas para listar informações tabulares o tempo inteiro. Os padrões do Bootstrap ainda continuam, logo, se quiser utilizar o <a href="http://twitter.github.com/bootstrap/base-css.html#tables">estilo de tabelas que o Bootstrap oferece</a>, fique à vontade. Se quiser a nossa versão, basta inserir a classe <strong>tableList</strong> no elemento <strong>table</strong>.</p>
 
+<div class="example">
+<table class="tableList">
+    <thead>
+        <tr>
+            <th class="txtLeft"><a href="#">Nome do cliente</a></th>
+            <th class="dataAscending"><a href="#"># do pedido</a></th>
+            <th><a href="#">Data - Hora</a></th>
+            <th class="dataDescending"><a href="#">Status</a></th>
+            <th><a href="#">Valor</a></th>
+            <th colspan="2">A&ccedil;&otilde;es</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="txtLeft">Helena da Silva
+                <ul class="actionsTable">
+                    <li><a href="#" class="ico-list">Relat&oacute;rio</a></li>
+                    <li><a href="#" class="ico-trash">Excluir</a></li>
+                </ul>
+            </td>
+            <td>74994</td>
+            <td>14/03/12 - 11h25</td>
+            <td>Autorizada</td>
+            <td>R$ 297,00</td>
+            <td><a href="#" class="ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
+            <td> <a href="#" class="ico ico-estornar" data-toggle="modal">Estornar</a></td>
+        </tr>
+        <tr>
+            <td class="txtLeft">Helena da Silva
+                <ul class="actionsTable">
+                    <li><a href="#" class="ico-list">Relat&oacute;rio</a></li>
+                    <li><a href="#" class="ico-trash">Excluir</a></li>
+                </ul>
+            </td>
+            <td>74994</td>
+            <td>14/03/12 - 11h25</td>
+            <td>Autorizada</td>
+            <td>R$ 297,00</td>
+            <td><a href="#" class="ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
+            <td> <a href="#" class="ico ico-estornar" data-toggle="modal">Estornar</a></td>
+        </tr>
+        <tr>
+            <td class="txtLeft">Helena da Silva
+                <ul class="actionsTable">
+                    <li><a href="#" class="ico-list">Relat&oacute;rio</a></li>
+                    <li><a href="#" class="ico-trash">Excluir</a></li>
+                </ul>
+            </td>
+            <td>74994</td>
+            <td>14/03/12 - 11h25</td>
+            <td>Autorizada</td>
+            <td>R$ 297,00</td>
+            <td><a href="#" class="ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
+            <td> <a href="#" class="ico ico-estornar" data-toggle="modal">Estornar</a></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<pre class="lang-html prettyprint linenums">
+    &lt;table class=&quot;tableList&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class=&quot;txtLeft&quot;&gt;&lt;a href=&quot;#&quot;&gt;Nome do cliente&lt;/a&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;a href=&quot;#&quot;&gt;# do pedido&lt;/a&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;a href=&quot;#&quot;&gt;Data - Hora&lt;/a&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;a href=&quot;#&quot;&gt;Valor&lt;/a&gt;&lt;/th&gt;
+            &lt;th colspan=&quot;2&quot;&gt;A&amp;ccedil;&amp;otilde;es&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;txtLeft&quot;&gt;Helena da Silva
+                &lt;ul class=&quot;actionsTable&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;ico-list&quot;&gt;Relat&amp;oacute;rio&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;ico-trash&quot;&gt;Excluir&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/td&gt;
+            &lt;td&gt;74994&lt;/td&gt;
+            &lt;td&gt;14/03/12 - 11h25&lt;/td&gt;
+            &lt;td&gt;Autorizada&lt;/td&gt;
+            &lt;td&gt;R$ 297,00&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;ico ico-tabela&quot; data-toggle=&quot;modal&quot;&gt;Ver Detalhes&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt; &lt;a href=&quot;#&quot; class=&quot;ico ico-estornar&quot; data-toggle=&quot;modal&quot;&gt;Estornar&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
       <p>Perceba que para deixar os títulos de colunas com marcação de ordenação, basta utilizar as classes <strong>dataDescending</strong> ou <strong>dataAscending</strong>.</p>
 
-      <table class="tableList">
-        <thead>
-            <tr>
-                <th class="txtLeft dataDescending"><a href="#">Nome do cliente</a></th>
-                <th class="dataAscending"><a href="#"># do pedido</a></th>
-                <th><a href="#">Data - Hora</a></th>
-                <th><a href="#">Status</a></th>
-                <th><a href="#">Valor</a></th>
-                <th colspan="2">Ações</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr class="success">
-                <td class="txtLeft span3">Helena da Silva
-                    <ul class="actionsTable">
-                        <li><a href="#" class="ico-list">Relatório</a></li>
-                        <li><a href="#" class="ico-trash">Excluir</a></li>
-                    </ul>
-                </td>           
-                <td class="span2">74994</td>
-                <td>14/03/12 - 11h25</td>
-                <td>Autorizada</td>
-                <td>R$ 297,00</td>
-                <td><a href="#" class="ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
-                <td> <a href="#" class="ico ico-estornar" data-toggle="modal">Estornar</a></td>
-            </tr>
-            <tr>
-                <td class="txtLeft span3">Helena da Silva
-                    <ul class="actionsTable">
-                        <li><a href="#" class="ico-list">Relatório</a></li>
-                        <li><a href="#" class="ico-trash">Excluir</a></li>
-                    </ul>
-                </td>
-                <td class="span2">74994</td>
-                <td>14/03/12 - 11h25</td>
-                <td>Autorizada</td>
-                <td>R$ 297,00</td>
-                <td><a href="#" class="ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
-                <td> <a href="#" class="ico ico-estornar" data-toggle="modal">Estornar</a></td>
-            </tr>
-            <tr>
-                <td class="txtLeft span3">Helena da Silva
-                    <ul class="actionsTable">
-                        <li><a href="#" class="ico-list">Relatório</a></li>
-                        <li><a href="#" class="ico-trash">Excluir</a></li>
-                    </ul>
-                </td>           
-                <td class="span2">74994</td>
-                <td>14/03/12 - 11h25</td>
-                <td>Autorizada</td>
-                <td>R$ 297,00</td>
-                <td><a href="#" class="ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
-                <td> <a href="#" class="ico ico-estornar" data-toggle="modal">Estornar</a></td>
-            </tr>
-
-        </tbody>
-    </table>
 </article>
