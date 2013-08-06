@@ -30,3 +30,13 @@
   border-top: $arrowSize solid transparent
   border-bottom: $arrowSize solid transparent
   border-right: $arrowSize solid $arrowColor
+
+// Gradiente Linear
+// $startColor: Cor inicial do gradiente, $endColor: Cor final do gradiente
+@mixin gradientLinear($colorHexa, $startColor, $endColor)
+  background-color: $colorHexa
+  background-image: -moz-linear-gradient(top, $startColor 0%, $endColor 100%)
+  background-image: -webkit-linear-gradient(top, $startColor 0%, $endColor 100%)
+  background-image: -o-linear-gradient(top, $startColor 0%, $endColor 100%)
+  background-image: -ms-linear-gradient(top, $startColor 0%, $endColor 100%)
+  background-image: linear-gradient(to bottom, $startColor 0%, $endColor 100%)

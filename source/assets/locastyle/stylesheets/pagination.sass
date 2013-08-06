@@ -1,3 +1,5 @@
+@import mixins
+
 @mixin pagination_structure
   float: none
   display: inline-block
@@ -8,14 +10,8 @@
   color: #797979
 
 @mixin pagination_active
+  +gradientLinear(#858585, rgb(133,133,133), rgb(209,209,209))
   color: #FFF
-  background-color: #666
-  background-image: linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%)
-  background-image: -o-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%)
-  background-image: -moz-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%)
-  background-image: -webkit-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%)
-  background-image: -ms-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%)
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.21, rgb(133,133,133)), color-stop(1, rgb(209,209,209)))
 
 .pagination
   padding: 5px 0 0
