@@ -1,0 +1,102 @@
+@mixin pagination_structure
+  float: none
+  display: inline-block
+  line-height: 16px
+  padding: 0 5px
+  border: 1px solid #D7D7D7
+  border-radius: 4px
+  color: #797979
+
+@mixin pagination_active
+  color: #FFF
+  background-color: #666
+  background-image: linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%)
+  background-image: -o-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%)
+  background-image: -moz-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%)
+  background-image: -webkit-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%)
+  background-image: -ms-linear-gradient(bottom, rgb(133,133,133) 21%, rgb(209,209,209) 100%)
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.21, rgb(133,133,133)), color-stop(1, rgb(209,209,209)))
+
+.pagination
+  padding: 5px 0 0
+  margin: 0
+  height: auto
+  font-size: 11px
+
+  ul
+    margin: 0
+    box-shadow: none
+
+    li
+      display: inline
+    li > a
+      @include pagination_structure
+    li > span
+    float: none
+    .active > a
+      @include pagination_active
+
+  .current
+    @include pagination_structure
+    @include pagination_active
+
+  a
+    border: none
+    color: #666
+
+  .first a,
+  .last a
+    display: none
+
+  .prev a,
+  .next a
+    background: url(img/seta-pagination.png) no-repeat 0 0
+
+  .prev a
+    background-position: left 6px
+    padding-left: 10px
+
+  .next a
+    background-position: right -13px
+    padding-right: 10px
+
+  .prev a:hover,
+  .next a:hover
+    background-color: transparent
+    opacity: 0.8
+
+  .disabled,
+  .disabled a
+    border: none
+    line-height: inherit
+
+.navView
+  margin: 20px 0
+  padding: 9px 10px
+  color: #767676
+  clear: both
+  border-bottom: 1px solid #e5e5e5
+  .pagination
+    float: right
+  &.borderTop
+    border-top: 1px solid #e5e5e5
+    border-bottom: 0
+
+.tab-content
+  .navView
+    padding: 15px 10px
+
+.navView
+  label
+    color: #767676
+    width: auto
+    display: inline-block
+    .control-group
+      display: inline-block
+      margin-right: 5px
+
+table
+  ~ .navView
+    border-top: none
+    margin-top: -20px
+    padding: 15px 10px
