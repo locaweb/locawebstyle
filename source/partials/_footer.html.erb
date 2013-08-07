@@ -47,7 +47,7 @@
 <footer class="footer">
   <div class="limit">
     <h1 class="logo">
-      <a href="http://developer.locaweb.com.br/locawebstyle/"><%= image_tag 'logo-footer.png', :alt => 'Locaweb Style',:class => 'img-logo-footer' %></a>
+      <a href="http://developer.locaweb.com.br/locawebstyle/"><%= image_tag 'manual/logo-footer.png', :alt => 'Locaweb Style',:class => 'img-logo-footer' %></a>
     </h1>
     <p>Copyright © 1997-2013 Locaweb Serviços de Internet S/A. <br>Todo o conteúdo deste site é de uso exclusivo da Locaweb.</p>
   </div>
@@ -72,7 +72,7 @@
 
   <%= javascript_include_tag "libs" %>
   <%= javascript_include_tag "locastyle" %>
-  <%= javascript_include_tag "bootstrap" %>
+  <script src="<%= bootstrap_js %>"></script>
   <%= javascript_include_tag "manual" %>
 
 </body>

@@ -1,6 +1,6 @@
 body {
 	font: 100% Lato, Verdana, Arial, Helvetica, Tahoma, Sans-serif;
-	background: url(/assets/manual/img/stripestop.png) repeat-X top;
+	background: url(/assets/images/manual/stripestop.png) repeat-X top;
 }
 
 a.btn.btn-download {
@@ -72,14 +72,14 @@ ol.linenums {
 	position: relative;
 	min-height: 415px;
 	overflow: hidden;
-	background: url(/assets/manual/img/highlight-locastyle.jpg) no-repeat;
-	/*background: url(/assets/manual/img/highlight.jpg) no-repeat;*/
+	background: url(/assets/images/manual/highlight-locastyle.jpg) no-repeat;
+	/*background: url(/assets/images/manual/highlight.jpg) no-repeat;*/
 	background-size: cover;
 	border-bottom: 1px solid #b1d4d7;
 }
 
 .highlight.high-locastyle {
-	background: url(/assets/manual/img/highlight-locastyle.jpg) no-repeat;
+	background: url(/assets/images/manual/highlight-locastyle.jpg) no-repeat;
 }
 
 .highbtn {
@@ -172,7 +172,7 @@ ol.linenums {
 .page_inside h1.title-host:after{background: none;}
 
 .highlight h1.title-host:after {
-	background: url(/assets/manual/img/title-host-after.png) no-repeat center top;
+	background: url(/assets/images/manual/title-host-after.png) no-repeat center top;
 }
 
 /*** Search form on highlight ***/
@@ -342,7 +342,7 @@ ol.linenums {
 ****** OTHER GUIDES CONTENT
 *****/
 .other-guides {
-	background: #0c1e1f url(/assets/manual/img/bgfooter.png);
+	background: #0c1e1f url(/assets/images/manual/bgfooter.png);
 	padding: 30px 0 20px;
 }
 
@@ -352,7 +352,7 @@ ol.linenums {
 	text-align: center;
 	padding: 0 0 25px;
 	margin-bottom: 25px;
-	background: url(/assets/manual/img/deco.png) no-repeat bottom center;
+	background: url(/assets/images/manual/deco.png) no-repeat bottom center;
 }
 
 .other-guides a {text-decoration: none;}

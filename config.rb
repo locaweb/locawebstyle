@@ -54,9 +54,12 @@ set :only_assets, "http://developer.locaweb.com.br/assets/edge.zip"
 set :download_github, "https://github.com/locaweb/locawebstyle/archive/master.zip"
 set :stable, "1.1.19"
 
-set :css_dir, 'assets'
-set :js_dir, 'assets'
-set :images_dir, 'assets/manual/img'
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
+
+set :bootstrap_js, 'assets/bootstrap/js/bootstrap.js'
+set :bootstrap_css, 'assets/bootstrap/css/bootstrap.css'
 
 activate :directory_indexes
 
