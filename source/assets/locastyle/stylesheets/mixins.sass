@@ -33,8 +33,8 @@
 
 // Gradiente Linear
 // $startColor: Cor inicial do gradiente, $endColor: Cor final do gradiente
-@mixin gradientLinear($colorHexa, $startColor, $endColor)
-  background-color: $colorHexa
+@mixin gradientLinear($startColor, $endColor)
+  background-color: $startColor
   background-image: -moz-linear-gradient(top, $startColor 0%, $endColor 100%)
   background-image: -webkit-linear-gradient(top, $startColor 0%, $endColor 100%)
   background-image: -o-linear-gradient(top, $startColor 0%, $endColor 100%)
