@@ -88,7 +88,4 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
-  set :css_dir, 'locawebstyle/assets/stylesheets'
-  set :js_dir, 'locawebstyle/assets/javascripts'
-  set :images_dir, 'locawebstyle/assets/images'
 end
