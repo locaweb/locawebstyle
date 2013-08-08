@@ -1,2 +1,1 @@
-//= require manual/vendor/prettify/src/prettify
-//= require manual/scripts
+//= require manual/_scripts

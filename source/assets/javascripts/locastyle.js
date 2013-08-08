@@ -1,8 +1,8 @@
-//= require locastyle/locastyle_head
+//= require locastyle/_locastyle_head
 
-//= require locastyle/locastyle
-//= require locastyle/initializer
-//= require locastyle/analytics_trackevent
-//= require locastyle/browser-detect
-//= require locastyle/passwordStrength
-//= require locastyle/accessibility
+//= require locastyle/_locastyle
+//= require locastyle/_initializer
+//= require locastyle/_analytics_trackevent
+//= require locastyle/_browser-detect
+//= require locastyle/_passwordStrength
+//= require locastyle/_accessibility

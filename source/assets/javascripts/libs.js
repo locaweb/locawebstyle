@@ -1,6 +1,6 @@
-//= require libs/jquery
-//= require libs/modernizr
-//= require libs/select2.min
-//= require libs/jquery-ui.min
-//= require libs/masked-input
-//= require libs/cookie
+//= require libs/_jquery
+//= require libs/_modernizr
+//= require libs/_select2.min
+//= require libs/_jquery-ui.min
+//= require libs/_masked-input
+//= require libs/_cookie
