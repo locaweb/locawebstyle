@@ -9,7 +9,7 @@ layout: false
 		<meta charset="utf-8">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<%= stylesheet_link_tag "bootstrap" %>
+		<link rel="stylesheet" type="text/css" href="<%= base_url + bootstrap_css %>">
 		<%= stylesheet_link_tag "locastyle" %>
 	</head>
 	<body>
@@ -1675,7 +1675,6 @@ layout: false
 
 		<%= javascript_include_tag "libs" %>
 		<%= javascript_include_tag "locastyle" %>
-		<%= javascript_include_tag "bootstrap" %>
-		<%= javascript_include_tag "manual" %>
+		<script src="<%= base_url + bootstrap_js %>"></script>
 	</body>
 </html>

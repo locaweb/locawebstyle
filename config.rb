@@ -58,8 +58,10 @@ set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 
-set :bootstrap_js, 'assets/bootstrap/js/bootstrap.js'
-set :bootstrap_css, 'assets/bootstrap/css/bootstrap.css'
+set :bootstrap_js, '/assets/bootstrap/js/bootstrap.js'
+set :bootstrap_css, '/assets/bootstrap/css/bootstrap.css'
+
+set :base_url, ""
 
 activate :directory_indexes
 
@@ -85,6 +87,7 @@ configure :build do
   # First: gem install middleman-smusher
   # require "middleman-smusher"
   # activate :smusher
+  set :base_url, "/locawebstyle"
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
