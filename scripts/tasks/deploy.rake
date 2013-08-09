@@ -5,43 +5,45 @@ namespace :deploy do
 
   desc "Build Locastyle assets, generates a new version tag and commit it"
   task :setup, :version do |t, args|
-    update_version(args[:version])
     precompile
     package(args[:version])
     git_commit_and_tag(args[:version])
   end
 
   def update_version(version)
-    File.open(File.join(Rails.root, "app/assets/stylesheets/locastyle_head.css"), "w") do |f|
+    File.open("deploy/stylesheets/locastyle.css", "r+") do |f|
       f.puts "/*! Locastyle version: #{version}*/"
     end
 
-    File.open(File.join(Rails.root, "app/assets/javascripts/locastyle_head.js"), "w") do |f|
+    File.open("deploy/javascripts/locastyle.js", "r+") do |f|
       f.puts "/*! Locastyle version: #{version}*/"
     end
   end
 
   def package(version)
     puts "#{@agent} Cleaning assets and creating deploy directory..."
-    sh %{cp -fr public/assets/ public/deploy/ &&
-         cd public/deploy &&
-         mv {application,locastyle}.css &&
-         mv {application,locastyle}.css.gz &&
-         mv {application,locastyle}.js &&
-         mv {application,locastyle}.js.gz &&
-         rm -f manifest.yml &&
-         rm -f .DS_Store &&
-         rm -rf manual/ &&
-         rm bootstrap/customize-bootstrap.png &&
-         zip -r #{version}.zip . &&
-         cp #{version}.zip edge.zip }
+    sh %{cp -fr build/assets/ deploy/ &&
+				cd deploy &&
+				rm -f .DS_Store &&
+				rm stylesheets/manual.css
+				rm javascripts/manual.js
+				rm -rf stylesheets/manual/}
+    update_version(version)
+		sh %{cd deploy &&
+				zip -r #{version}.zip . &&
+				cp #{version}.zip edge.zip &&
+				rm -rf bootstrap &&
+				rm -rf fonts &&
+				rm -rf images &&
+				rm -rf javascripts &&
+				rm -rf stylesheets}
     puts "#{@agent} Everything done, version #{version} of Locastyle is ready to upload."
   end
 
   def precompile
-    puts "#{@agent} Compiling assets..."
-    Rake::Task["assets:precompile"].invoke
-    puts "#{@agent} Assets fully compiled!"
+    puts "#{@agent} Building project..."
+    Rake::Task["build"].invoke
+    puts "#{@agent} Project builded."
   end
 
   def git_commit_and_tag(version)
