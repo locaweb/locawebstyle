@@ -47,30 +47,30 @@ menu_page: sidebar-informacoes-iniciais.erb
 </pre>
 
 	<div class="alert">
-		<p><strong>DEPENDÊNCIAS: </strong> O Locaweb Style <a href="/manual/introducao/informacoes-iniciais/">tem algumas dependências que precisam ser incluídas</a> para funcionar perfeitamente.</p>
+		<p><strong>DEPENDÊNCIAS: </strong> O Locaweb Style <a href="<%= base_url %>/manual/introducao/informacoes-iniciais/">tem algumas dependências que precisam ser incluídas</a> para funcionar perfeitamente.</p>
 	</div>
-	
+
 	<hr>
 
 	<h3>Versionamento</h3>
 	<p>O versionamento do Locaweb Style é simples: O nome dos arquivos tem essa estrutura: locastyle-[número do pacote stable].css. O resultado é este: locastyle-[major].[minor].[patch].css. O resultado fica locastyle-0.30.0.css.</p>
 
-	<p>De acordo com as mudanças e atualizações, nós vamos mudando a versão do arquivo. O número do minor sempre será um número par. Internamente trabalhamos com a versão de desenvolvimento utilizando o número ímpar. Logo, se a versão stable mais atual é 1.30.0, estamos trabalhando aqui na versão 1.31.0, 1.31.1 e etc. Quando terminarmos, vai para o ar a versão stable 1.32.0.</p>				
+	<p>De acordo com as mudanças e atualizações, nós vamos mudando a versão do arquivo. O número do minor sempre será um número par. Internamente trabalhamos com a versão de desenvolvimento utilizando o número ímpar. Logo, se a versão stable mais atual é 1.30.0, estamos trabalhando aqui na versão 1.31.0, 1.31.1 e etc. Quando terminarmos, vai para o ar a versão stable 1.32.0.</p>
 
 	<hr>
 	<h1>Template básico</h1>
 	<p>Utilize este código para iniciar seu projeto. Aqui você tem a estrutura básica para fazer o Locaweb Style funcionar perfeitamente:</p>
-	
+
 <pre class="lang-html prettyprint linenums">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;Locaweb Style&lt;/title&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-  	
+
   &lt;!-- CSS do Bootstrap --&gt;
-  &lt;link href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css&quot;&gt;	
-  
+  &lt;link href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css&quot;&gt;
+
   &lt;!-- CSS do Locaweb Style --&gt;
   &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://developer.locaweb.com.br/assets/edge/locastyle.css&quot;&gt;
 &lt;/head&gt;
@@ -79,10 +79,10 @@ menu_page: sidebar-informacoes-iniciais.erb
 
   &lt;!-- jQuery &eacute; obrigat&oacute;rio --&gt;
   &lt;script src=&quot;http://code.jquery.com/jquery.js&quot;&gt;&lt;/script&gt;
-  
+
   &lt;!-- Obrigat&oacute;rio o Bootstrap (aconselhamos usar sempre a &uacute;ltima) --&gt;
   &lt;script src=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-  
+
   &lt;!-- Javascript do Locaweb Style --&gt;
   &lt;script type=&quot;text/javascript&quot; src=&quot;http://developer.locaweb.com.br/assets/edge/locastyle.js&quot;&gt;&lt;/script&gt;
 
