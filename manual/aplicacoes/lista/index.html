@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Aplicações - Listagem - Guia de Hospedagem de Sites</title>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" type="text/css" href="/locawebstyle/assets/bootstrap/css/bootstrap.css">
+  <link href="../../../assets/stylesheets/locastyle.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../../../assets/stylesheets/manual.css" media="screen" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="manual manual_aplicacoes manual_aplicacoes_lista manual_aplicacoes_lista_index">
+
+<!-- topbar header -->
+<header id="topbar" class="clearfix">
+  <div class="limit">
+    <!-- <h1 class="logo"><a href="#"><img src="/assets/img/manual/logo.png" alt="Locaweb Hosting"></a></h1> -->
+    <h1 class="logo"><a href="/locawebstyle">LOCAWEB STYLE</a></h1>
+    <ul class="social-links">
+      <!-- <li><a href="#"><img alt="Nosso Facebook" class="img-facebook" src="../../../assets/images/manual/ico-facebook.png" /></a> -->
+      <li><a href="http://twitter.com/locawebdevnet"><img alt="Nosso Twitter" class="img-twitter" src="../../../assets/images/manual/ico-twitter.png" /></a>
+    </ul>
+  </div>
+</header>
+<!-- END topbar header -->
+<!-- highlight -->
+<div class="highlight heading">
+	<div class="limit">
+		<h1>Documentação <span>Locaweb Style</span></h1>
+	</div>
+</div>
+<!-- END highlight -->
+
+<!-- Post content -->
+<section class="content limit">
+
+      <div class="navbar">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><a href="/locawebstyle/manual/introducao/informacoes-iniciais">Introdução</a></li>
+          <li><a href="/locawebstyle/manual/componentes/abas">Componentes</a></li>
+          <li><a href="/locawebstyle/manual/formularios/campos">Formulários</a></li>
+          <li><a href="/locawebstyle/manual/aplicacoes/busca-avancada">Aplicações</a></li>
+          <li><a href="/locawebstyle/manual/layout/cores-principais">Layout</a></li>
+          <li><a href="/locawebstyle/manual/acessibilidade/tabindex">Acessibilidade</a></li>
+          <li><a href="/locawebstyle/manual/elementos">Cartilha de Elementos</a></li>
+        </ul>
+      </div>
+    </div>
+
+	<aside class="sidebar">
+	<!-- Menu de Informações Iniciais -->
+<nav>
+	<h1>Informações</h1>
+	<ul>
+		<li><a href="/locawebstyle/manual/aplicacoes/busca-avancada">Busca avançada</a></li>
+		<!-- <li><a href="/locawebstyle/manual/aplicacoes/chamada-varios-links">Chamada vários links</a></li> -->
+		<li><a href="/locawebstyle/manual/aplicacoes/collapse">Collapse</a></li>
+		<li><a href="/locawebstyle/manual/aplicacoes/paginacao">Filtro exibição e paginação</a></li>
+		<li><a href="/locawebstyle/manual/aplicacoes/lista">Lista</a></li>
+		<li><a href="/locawebstyle/manual/aplicacoes/alertas">Alertas e Notificações</a></li>
+	</ul>
+</nav>
+
+</aside>
+
+
+	<article class="text">
+    <header>
+      <h1>Listas complexas</h1>
+      <h3>Listas de exibição de grande quantidade de informações.</h3>
+    </header>
+    <p>São bem usadas em listagens de planos, hospedagens e outros serviços similares.</p>
+
+        <ul class="listOptions">
+            <li>
+                <p>Identificador: <strong>123456789</strong> | Nome: <strong>Lojinha do Régis</strong></p>
+                <span class="actLnk fright">
+                    <a href="#" class="lnkSeta">Administrar</a>
+                </span>
+                <p class="pObs"><strong>Gateway de pagamentos:</strong> (1000 transações)</p>
+            </li>
+        </ul>
+
+        <ul class="listOptions">
+            <li>
+                <p>Identificador: <strong>123456789</strong> | Nome: <strong>Lojinha com divisões na observação</strong></p>
+                <span class="actLnk fright">
+                    <a href="#" class="lnkSeta">Administrar</a>
+                </span>
+                <span class="fRight spanObs">Status: <strong>Ativo</strong></span>
+                <span class="fRight spanObs">
+                    Período de renovação: <strong>1 ano</strong>
+                    <a href="#" class="lnkSeta">Alterar</a>
+                </span>
+                <p class="pObs"><strong>Gateway de pagamentos:</strong> (1000 transações)</p>
+            </li>
+        </ul>
+
+        <ul class="listOptions listagemMeiosPagtos">
+            <li class="pagtoAtivo">
+                <img alt="Cartao" src="http://developer.locaweb.com.br/wp-content/uploads/cartaoCielo.png">
+                <h6>Cielo</h6>
+                <span class="actLnk fright">
+                    <a href="#" class="lnkSeta">Editar</a>
+                    <a href="#" class="lnkSeta">Desativar</a>
+                </span>
+                <p class="pObs"><strong>Gateway de pagamentos:</strong> (1000 transações)</p>
+            </li>
+            <li class="pagtoAtivo">
+                <img alt="Cartao" src="http://developer.locaweb.com.br/wp-content/uploads/cartaoBoletoBradesco.png">
+                <h6>Cielo</h6>
+                <span class="actLnk">
+                    <a href="#" class="lnkSeta">Editar</a>
+                    <a href="#" class="lnkSeta">Desativar</a>
+                </span>
+            </li>
+            <li>
+                <img alt="Cartao" src="http://developer.locaweb.com.br/wp-content/uploads/cartaoShopline.png">
+                <h6>Shopline</h6>
+                <span class="actLnk">
+                    <a href="#" class="lnkSeta">Ativar</a>
+                    <a href="#" class="lnkSeta">Como contratar este convênio?</a>
+                </span>
+            </li>
+        </ul>
+
+
+    <pre class="lang-html prettyprint linenums">
+
+    &lt;ul class="listOptions"&gt;
+        &lt;li&gt;
+            &lt;p&gt;Identificador: &lt;strong&gt;123456789&lt;/strong&gt; | Nome: &lt;strong&gt;Lojinha com divisões na observação&lt;/strong&gt;&lt;/p&gt;
+            &lt;span class="actLnk fright"&gt;
+                &lt;a href="#" class="lnkSeta"&gt;Administrar&lt;/a&gt;
+            &lt;/span&gt;
+            &lt;span class="fRight spanObs"&gt;Status: &lt;strong&gt;Ativo&lt;/strong&gt;&lt;/span&gt;
+            &lt;span class="fRight spanObs"&gt;
+                Período de renovação: &lt;strong&gt;1 ano&lt;/strong&gt;
+                &lt;a href="#" class="lnkSeta"&gt;Alterar&lt;/a&gt;
+            &lt;/span&gt;
+            &lt;p class="pObs"&gt;&lt;strong&gt;Gateway de pagamentos:&lt;/strong&gt; (1000 transações)&lt;/p&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    </pre>
+</article>
+</section>
+<!-- END post content -->
+
+
+
+<!-- Other Guides -->
+<!-- <section class="other-guides cBoth">
+	<div class="limit">
+		<h1>Outros guias Locaweb</h1>
+		<ul>
+			<li>
+				<a href="#">
+					<img src="images/thumb-email.png">
+					<h2>Email Marketing</h2>
+				</a>
+			</li>
+
+			<li>
+				<a href="#">
+					<img src="images/thumb-email.png">
+					<h2>Cloud e Servidores dedicados</h2>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/thumb-email.png">
+					<h2>Criador de sites mobile</h2>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/thumb-email.png">
+					<h2>Email Locaweb</h2>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/thumb-email.png">
+					<h2>Registro de Domínio</h2>
+				</a>
+			</li>
+		</ul>
+	</div>
+</section> -->
+<!-- END Other Guides -->
+
+
+
+<!-- footer -->
+<footer class="footer">
+  <div class="limit">
+    <h1 class="logo">
+      <a href="http://developer.locaweb.com.br/locawebstyle/"><img alt="Locaweb Style" class="img-logo-footer" src="../../../assets/images/manual/logo-footer.png" /></a>
+    </h1>
+    <p>Copyright © 1997-2013 Locaweb Serviços de Internet S/A. <br>Todo o conteúdo deste site é de uso exclusivo da Locaweb.</p>
+  </div>
+</footer>
+<!-- END footer-->
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32633790-2']);
+  _gaq.push(['_setDomainName', 'locaweb.com.br']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  <script src="../../../assets/javascripts/libs.js" type="text/javascript"></script>
+  <script src="../../../assets/javascripts/locastyle.js" type="text/javascript"></script>
+  <script src="/locawebstyle/assets/bootstrap/js/bootstrap.js"></script>
+  <script src="../../../assets/javascripts/manual.js" type="text/javascript"></script>
+
+</body>
+</html>

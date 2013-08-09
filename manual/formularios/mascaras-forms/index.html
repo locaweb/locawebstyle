@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Formulários - Máscaras de capos - Guia de Hospedagem de Sites</title>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" type="text/css" href="/locawebstyle/assets/bootstrap/css/bootstrap.css">
+  <link href="../../../assets/stylesheets/locastyle.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../../../assets/stylesheets/manual.css" media="screen" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="manual manual_formularios manual_formularios_mascaras-forms manual_formularios_mascaras-forms_index">
+
+<!-- topbar header -->
+<header id="topbar" class="clearfix">
+  <div class="limit">
+    <!-- <h1 class="logo"><a href="#"><img src="/assets/img/manual/logo.png" alt="Locaweb Hosting"></a></h1> -->
+    <h1 class="logo"><a href="/locawebstyle">LOCAWEB STYLE</a></h1>
+    <ul class="social-links">
+      <!-- <li><a href="#"><img alt="Nosso Facebook" class="img-facebook" src="../../../assets/images/manual/ico-facebook.png" /></a> -->
+      <li><a href="http://twitter.com/locawebdevnet"><img alt="Nosso Twitter" class="img-twitter" src="../../../assets/images/manual/ico-twitter.png" /></a>
+    </ul>
+  </div>
+</header>
+<!-- END topbar header -->
+<!-- highlight -->
+<div class="highlight heading">
+	<div class="limit">
+		<h1>Documentação <span>Locaweb Style</span></h1>
+	</div>
+</div>
+<!-- END highlight -->
+
+<!-- Post content -->
+<section class="content limit">
+
+      <div class="navbar">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><a href="/locawebstyle/manual/introducao/informacoes-iniciais">Introdução</a></li>
+          <li><a href="/locawebstyle/manual/componentes/abas">Componentes</a></li>
+          <li><a href="/locawebstyle/manual/formularios/campos">Formulários</a></li>
+          <li><a href="/locawebstyle/manual/aplicacoes/busca-avancada">Aplicações</a></li>
+          <li><a href="/locawebstyle/manual/layout/cores-principais">Layout</a></li>
+          <li><a href="/locawebstyle/manual/acessibilidade/tabindex">Acessibilidade</a></li>
+          <li><a href="/locawebstyle/manual/elementos">Cartilha de Elementos</a></li>
+        </ul>
+      </div>
+    </div>
+
+	<aside class="sidebar">
+	<!-- Menu de Formulários -->
+<nav>
+	<h1>Informações</h1>
+	<ul>
+      	<li><a href="/locawebstyle/manual/formularios/campos">Campos</a></li>
+      	<li><a href="/locawebstyle/manual/formularios/mascaras-forms">Máscaras de formulários</a></li>
+      	<li><a href="/locawebstyle/manual/formularios/validacoes">Indicando as validações</a></li>
+      	<li><a href="/locawebstyle/manual/formularios/calendarios">Calendários</a></li>
+      	<li><a href="/locawebstyle/manual/formularios/selects">Customizando os selects</a></li>
+      	<li><a href="/locawebstyle/manual/formularios/medidor-senhas">Medidor de senha</a></li>
+	</ul>
+</nav>
+
+</aside>
+
+
+	<article class="text">
+    <header>
+      <h1>Máscaras de formulários</h1>
+      <h3>Fazendo máscaras para formulários como CPF, datas e outros tipos.</h3>
+    </header>
+
+    <p>Utilizamos o plugin <a href="http://digitalbush.com/projects/masked-input-plugin/">Masked Input</a> para criar máscaras de campos de formulários. No Locaweb Style nós não tratamos nenhuma máscara por default, logo você precisará fazer isso no seu projeto. O funcionamento é muito simples. Você pode definir em uma linha no seu Javascript/JQuery como será a máscara dos determinados inputs.</p>
+
+    <div class="example">
+      <div class="formInline">
+        <div class="control-group">
+          <label>Data:</label>
+          <input type="text" id="data">
+        </div>
+        <div class="control-group">
+          <label>Telefone:</label>
+          <input type="text" id="telefone">
+        </div>
+        <div class="control-group">
+          <label>CPF:</label>
+          <input type="text" id="cpf">
+        </div>
+      </div>
+    </div>
+
+    <pre class="lang-javascript prettyprint linenums">$("#data").mask("99/99/9999");
+      //Aceita até 9 digitos
+      $('#telefone').mask("(99) 9999-9999?9").ready(function(event) {
+      var target, phone, element;
+      target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+      phone = target.value.replace(/\D/g, '');
+      element = $(target);
+      element.unmask();
+      if(phone.length &gt; 10) {
+      element.mask("(99) 99999-999?9");
+    } else {
+    element.mask("(99) 9999-9999?9");
+  }
+  });
+  $("#cpf").mask("999.999.999-99");
+  </pre>
+  <hr class="sep">
+  <h3>Trocando o Underline por outra coisa</h3>
+  <p>Se você não quer que a máscara fique com os underlines (___), você pode modificar pelo parâmetro placeholder, assim:</p>
+  <p>Assim, ele mostraria espaços em vez de _ (underline).</p>
+  <div class="example">
+    <div class="control-group formInline">
+      <label>CPF:</label>
+      <input type="text" id="cpf2">
+    </div>
+  </div>
+  <pre class="lang-javascript prettyprint linenums">$("#cpf").mask("999.999.999-99",{placeholder:" "});</pre>
+
+  <hr class="sep">
+
+  <h3>Executando uma função</h3>
+  <p>Você pode executar uma função quando o campo for totalmente completo.</p>
+
+  <div class="example">
+   <div class="control-group formInline">
+     <label>Data:</label>
+     <input type="text" id="data2">
+   </div>
+  </div>
+  <pre class="lang-javascript prettyprint linenums">$("#data").mask("99/99/9999",{completed:function(){alert("Você digitou a data: "+this.val());}});</pre>
+
+  <p>Veja <a href="http://digitalbush.com/projects/masked-input-plugin/">outras funções desse plugin aqui</a>.</p>
+
+</article>
+</section>
+<!-- END post content -->
+
+
+
+<!-- Other Guides -->
+<!-- <section class="other-guides cBoth">
+	<div class="limit">
+		<h1>Outros guias Locaweb</h1>
+		<ul>
+			<li>
+				<a href="#">
+					<img src="images/thumb-email.png">
+					<h2>Email Marketing</h2>
+				</a>
+			</li>
+
+			<li>
+				<a href="#">
+					<img src="images/thumb-email.png">
+					<h2>Cloud e Servidores dedicados</h2>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/thumb-email.png">
+					<h2>Criador de sites mobile</h2>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/thumb-email.png">
+					<h2>Email Locaweb</h2>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/thumb-email.png">
+					<h2>Registro de Domínio</h2>
+				</a>
+			</li>
+		</ul>
+	</div>
+</section> -->
+<!-- END Other Guides -->
+
+
+
+<!-- footer -->
+<footer class="footer">
+  <div class="limit">
+    <h1 class="logo">
+      <a href="http://developer.locaweb.com.br/locawebstyle/"><img alt="Locaweb Style" class="img-logo-footer" src="../../../assets/images/manual/logo-footer.png" /></a>
+    </h1>
+    <p>Copyright © 1997-2013 Locaweb Serviços de Internet S/A. <br>Todo o conteúdo deste site é de uso exclusivo da Locaweb.</p>
+  </div>
+</footer>
+<!-- END footer-->
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32633790-2']);
+  _gaq.push(['_setDomainName', 'locaweb.com.br']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  <script src="../../../assets/javascripts/libs.js" type="text/javascript"></script>
+  <script src="../../../assets/javascripts/locastyle.js" type="text/javascript"></script>
+  <script src="/locawebstyle/assets/bootstrap/js/bootstrap.js"></script>
+  <script src="../../../assets/javascripts/manual.js" type="text/javascript"></script>
+
+</body>
+</html>
