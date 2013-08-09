@@ -1,5 +1,3 @@
-//= require locastyle/_locastyle_head
-
 //= require locastyle/_locastyle
 //= require locastyle/_initializer
 //= require locastyle/_analytics_trackevent
