@@ -54,9 +54,14 @@ set :only_assets, "http://developer.locaweb.com.br/assets/edge.zip"
 set :download_github, "https://github.com/locaweb/locawebstyle/archive/master.zip"
 set :stable, "1.1.19"
 
-set :css_dir, 'assets'
-set :js_dir, 'assets'
-set :images_dir, 'assets/manual/img'
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
+
+set :bootstrap_js, '/assets/bootstrap/js/bootstrap.js'
+set :bootstrap_css, '/assets/bootstrap/css/bootstrap.css'
+
+set :base_url, ""
 
 activate :directory_indexes
 
@@ -67,21 +72,22 @@ page "/manual/exemplos/*", :layout => "system-example"
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  #activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  #activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
   # activate :cache_buster
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
   # require "middleman-smusher"
   # activate :smusher
+  set :base_url, "/locawebstyle"
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
