@@ -77,6 +77,23 @@ ol.linenums {
 	box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
 }
 
+.icons-list {
+	margin: 30px 0;
+}
+.icons-list td {
+	border: 1px solid rgba(0,0,0,0.05);
+	margin-bottom: 1px;
+	padding: 15px;
+	background: #FFF;
+	color: rgba(0,0,0,0.6);
+}
+
+.icons-list td:hover {
+	border-color: rgba(0,0,0,0.1);
+	background: rgba(0,0,0,0.02);
+	color: rgba(0,0,0,1);
+}
+
 /*****
 ****** HIGHLIGHT
 *****/
