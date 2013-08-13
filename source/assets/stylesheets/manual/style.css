@@ -1,5 +1,5 @@
 body {
-	font: 100% Lato, Verdana, Arial, Helvetica, Tahoma, Sans-serif;
+	/*font-family: Lato, Verdana, Arial, Helvetica, Tahoma, Sans-serif;*/
 	background: url(../images/manual/stripestop.png) repeat-X top;
 }
 
@@ -483,9 +483,9 @@ ol.linenums {
 }
 
 .content > .text > p {
-	font: 0.95em/1.4em "Helvetica Neue", arial, helvetica, tahoma, sans-serif;
+	/*font: 0.95em/1.4em "Helvetica Neue", arial, helvetica, tahoma, sans-serif;
 	margin-bottom: 15px;
-	color: #212121;
+	color: #212121;*/
 }
 
 /*** SIDEBAR ***/
@@ -507,7 +507,7 @@ ol.linenums {
 .sidebar > nav h1 {
 	font: 300 1.1em Lato, arial, helvetica, tahoma, sans-serif;
 	color: rgba(0,0,0,0.7);
-	margin-bottom: 5px;
+	margin: 0 0 5px;
 }
 
 .sidebar ul {margin: 0; padding: 0;}
@@ -519,7 +519,7 @@ ol.linenums {
 	margin-bottom: 2px;
 	border-radius: 2px;
 	color: #545454!important;
-	font: .8em arial, helvetica, verdana, tahoma, sans-serif;
+	font: 0.85em arial, helvetica, verdana, tahoma, sans-serif;
 	padding: 7px 7px 7px 11px;
 	position: relative;
 }
