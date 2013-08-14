@@ -12,7 +12,7 @@
 	font-style: normal;
 }
 
-[class*="ico-"].ico-pull-right:after,
+[class*="ico-"].ico-pos-right:after,
 [class*="ico-"]:before {
 	position: relative;
 	top: -2px;
@@ -29,8 +29,8 @@
 }
 
 [class*="ico-"]:after {display: none;}
-.ico-pull-right:after {margin-left: 4px;}
-.ico-pull-right:before {display: none;}
+.ico-pos-right:after {margin-left: 4px;}
+.ico-pos-right:before {display: none;}
 
 .ico-keyboard:before, .ico-keyboard:after {content: "\22";}
 .ico-split:before, .ico-split:after {content: "\23";}
