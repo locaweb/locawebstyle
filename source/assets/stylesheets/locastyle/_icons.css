@@ -493,6 +493,12 @@ h6[class^="ico-"]:before {
 .ico-user-star:before {content: "\e0f6";}
 .ico-pencil-edit:before {content: "\e0f7";}
 
+.ico-balancer:before {content: "\e0f9";}
+.ico-server-backup:before {content: "\e0fa";}
+.ico-server-cloud:before {content: "\e0fb";}
+.ico-server:before {content: "\e0fc";}
+.ico-vlan:before {content: "\e0fd";}
+
 [class^="icon-"], [class*=" icon-"],
 li [class^="icon-"], li [class*=" icon-"] {
   width: auto;
