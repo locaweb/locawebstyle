@@ -50,7 +50,7 @@
 ####
 #### Versões e URL de downloads
 ####
-set :only_assets, "http://developer.locaweb.com.br/assets/edge.zip"
+set :only_assets, "http://assets.locaweb.com.br/locastyle/edge.zip"
 set :download_github, "https://github.com/locaweb/locawebstyle/archive/master.zip"
 set :stable, "1.1.9"
 
