@@ -541,14 +541,14 @@ li [class^="icon-"], li [class*=" icon-"] {
 
 [class^="icon-"]:before, [class*=" icon-"]:before,
 .ui-datepicker-trigger.icon-calendar:before {
-  background-image: url(bootstrap/img/glyphicons-halflings.png);
+  background-image: url(../bootstrap/img/glyphicons-halflings.png);
   position: relative;
   left: 1px;
   top: 1px;
 }
 
 /*** Bootstrap Icons***/
-.icon-white {background-image: url("bootstrap/img/glyphicons-halflings-white.png");}
+.icon-white {background-image: url("../bootstrap/img/glyphicons-halflings-white.png");}
 .icon-glass:before {background-position: 0 0;}
 .icon-music:before {background-position: -24px 0;}
 .icon-search:before {background-position: -48px 0;}
