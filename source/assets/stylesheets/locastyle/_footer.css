@@ -7,7 +7,7 @@ footer#footer {
 }
 #footer .footerTop {
   padding: 15px 0 0;
-  background: url(locastyle/img/bgfooter.png);
+  background: url(../images/bgfooter.png);
 }
 #footer nav {height: 50px;}
 
@@ -43,9 +43,9 @@ footer#footer {
 #footer nav ul li a {color: #fff;}
 #footer nav ul li:last-child  {border-right: none;}
 
-#footer ul li.ico-helpDesk {background-image: url(locastyle/img/icoHelpDesk.png);}
-#footer ul li.ico-chat {background-image: url(locastyle/img/icoChat.png);}
-#footer ul li.ico-phone {background-image: url(locastyle/img/icoTelefone.png);}
+#footer ul li.ico-helpDesk {background-image: url(../images/icoHelpDesk.png);}
+#footer ul li.ico-chat {background-image: url(../images/icoChat.png);}
+#footer ul li.ico-phone {background-image: url(../images/icoTelefone.png);}
 
 .subfooter {
   padding: 10px 0;
@@ -59,14 +59,14 @@ footer#footer {
 .subfooter strong {color: #2a2a2a;}
 .subfooter .lastAccess {
   padding: 0 0 0 20px;
-  background: url(locastyle/img/ico-ultimoAcesso.png) no-repeat left center;
+  background: url(../images/ico-ultimoAcesso.png) no-repeat left center;
 }
 .copyRight {margin: 0;}
 
 .icoInterroga {
   display: inline-block;
   text-indent: -9999px;
-  background: url(locastyle/img/icoInterroga.png) no-repeat center;
+  background: url(../images/icoInterroga.png) no-repeat center;
   width: 12px;
   height: 12px;
   vertical-align: middle;

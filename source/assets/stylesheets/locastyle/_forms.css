@@ -138,7 +138,7 @@ label.nomarginleft {margin-left: 0 !important;}
   display: block;
   width: 15px;
   height: 5px;
-  background: url(locastyle/img/indicadorTopBoxGrayInput.png) no-repeat;
+  background: url(../images/indicadorTopBoxGrayInput.png) no-repeat;
 }
 
 label.checkbox.control-label, label.checkbox.control-label:first-child {
@@ -319,7 +319,7 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
 .simpleFilter.sideBySide p.fleft {margin-bottom: 0; margin-top: 6px;}
 
 .simpleFilter .searchInput {
-  background-image: url(locastyle/img/lupaInput.png);
+  background-image: url(../images/lupaInput.png);
   background-position: 8px center;
   background-repeat: no-repeat;
   max-width: 185px;
@@ -399,7 +399,7 @@ input[type="image"], input[type="checkbox"], input[type="radio"] {margin-top: 0;
   border-left: none;
 }
 
-.select2-container .select2-choice div b {background: url(locastyle/img/setaIdentBaixo.png) no-repeat center;}
-.select2-dropdown-open .select2-choice div b {background: url(locastyle/img/setaIdentTop.png) no-repeat center;}
+.select2-container .select2-choice div b {background: url(../images/setaIdentBaixo.png) no-repeat center;}
+.select2-dropdown-open .select2-choice div b {background: url(../images/setaIdentTop.png) no-repeat center;}
 
 .select2-search {margin-top: 10px;}
