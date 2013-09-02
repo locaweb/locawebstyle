@@ -52,7 +52,7 @@ header.headerPrincipal .limite:after {content:" "; display:block; clear:both;}
 /*** HEADER ***/
 header.headerPrincipal {
   border-top:4px solid #BBB;
-  background:#f0f0f0 url(locastyle/img/bgHeader.gif) repeat-X top center;
+  background:#f0f0f0 url(../images/bgHeader.gif) repeat-X top center;
 }
 header.headerPrincipal .limit {height:120px; position:relative;}
 header.headerPrincipal:after, header.headerPrincipal .limit:after {content:" "; display:block; clear:both;}
@@ -69,9 +69,9 @@ header.headerPrincipal .btn-group {display:inline-block;}
   cursor:pointer;
   font-family:verdana;
   display:block;
-  background:url(locastyle/img/setaCollapseBottom.png) no-repeat 99% center;
+  background:url(../images/setaCollapseBottom.png) no-repeat 99% center;
 }
-.collapseGroup .active summary { font-weight:bold;   background:url(locastyle/img/setaCollapseTop.png) no-repeat 99% 8px;}
+.collapseGroup .active summary { font-weight:bold;   background:url(../images/setaCollapseTop.png) no-repeat 99% 8px;}
 .collapseGroup summary span.ico-dot {
   font-size: 30px;
   line-height: 20px;
@@ -151,10 +151,10 @@ summary.ico-dot + div p {padding-left:23px !important;}
   text-align:center;
 }
 .lists .statusMessageBox:hover .countViews:after{
-   background:url(locastyle/img/arrowInfo.png) no-repeat 0 -99px;
+   background:url(../images/arrowInfo.png) no-repeat 0 -99px;
 }
 .lists .statusMessageBox .countViews:after{
-  background:url(locastyle/img/arrowInfo.png) no-repeat 0 0;
+  background:url(../images/arrowInfo.png) no-repeat 0 0;
   content: " ";
   position: absolute;
   top: 0;
@@ -372,7 +372,7 @@ footer#rodape {
 }
 #rodape .footerTop {
   padding:15px 0 0;
-  background:url(locastyle/img/bgfooter.png);
+  background:url(../images/bgfooter.png);
 }
 #rodape nav {height:50px;}
 
@@ -409,11 +409,11 @@ footer#rodape {
 #rodape nav ul li:last-child  {border-right:none;}
 
 #rodape ul li.ico-helpDesk,
-#footer ul li.ico-helpDesk{background-image:url(locastyle/img/icoHelpDesk.png);}
+#footer ul li.ico-helpDesk{background-image:url(../images/icoHelpDesk.png);}
 #rodape ul li.ico-Chat,
-#footer ul li.ico-Chat{background-image:url(locastyle/img/icoChat.png);}
+#footer ul li.ico-Chat{background-image:url(../images/icoChat.png);}
 #rodape ul li.ico-Telefone,
-#footer ul li.ico-Telefone {background-image:url(locastyle/img/icoTelefone.png);}
+#footer ul li.ico-Telefone {background-image:url(../images/icoTelefone.png);}
 
 #rodape nav .lnkArrow {margin:15px 20px 0; color:#FFF;}
 
@@ -421,14 +421,14 @@ footer#rodape {
 .subfooter strong {color:#2a2a2a;}
 .subfooter .lastAccess {
   padding:0 0 0 20px;
-  background:url(locastyle/img/ico-ultimoAcesso.png) no-repeat left center;
+  background:url(../images/ico-ultimoAcesso.png) no-repeat left center;
 }
 .copyRight {margin:0;}
 
 .icoInterroga {
   display:inline-block;
   text-indent:-9999px;
-  background:url(locastyle/img/icoInterroga.png) no-repeat center;
+  background:url(../images/icoInterroga.png) no-repeat center;
   width:12px; height:12px;
   vertical-align:middle;
 }
