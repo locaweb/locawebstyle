@@ -63,7 +63,7 @@ legend {border-bottom: none; padding-bottom: 5px;}
 .titDots {
   padding: 0 10px 12px 0;
   margin: 0 0 15px;
-  background: url(locastyle/img/titDots.png) repeat-X left bottom;
+  background: url(../images/titDots.png) repeat-X left bottom;
 }
 
 h1 + p, h2 + p, h3 + p {padding-top: 7px;}
@@ -131,7 +131,7 @@ h3 + .alert {margin-top: 15px;}
 }
 
 .titError {
-  background: url(locastyle/img/icoerro_404.png) no-repeat left center;
+  background: url(../images/icoerro_404.png) no-repeat left center;
   padding: 15px 0 15px 45px;
   margin: 4px 0 10px;
   font: bold 20px verdana, arial, tahoma, sans-serif;
@@ -219,7 +219,7 @@ h6 .lnkArrow {
 **/
 .boxGray {
   clear: both;
-  background: #d5d5d5 url(locastyle/img/bgBoxGray.png) repeat-X top center;
+  background: #d5d5d5 url(../images/bgBoxGray.png) repeat-X top center;
   border-radius: 3px;
   border: 1px solid #e3e3e3;
   padding-bottom: 3px;
@@ -230,7 +230,7 @@ h6 .lnkArrow {
 .boxGray h2 {
   font-size: 22px;
   padding: 10px 10px 0 15px; margin: 0 0 0 -1px;
-  background: url(locastyle/img/setaDetalheTit.png) no-repeat left 15px;
+  background: url(../images/setaDetalheTit.png) no-repeat left 15px;
   letter-spacing: -1px;
 }
 
@@ -282,7 +282,7 @@ h6 .lnkArrow {
 }
 .pagination .first a, .pagination .last a {display: none;}
 
-.pagination .prev a, .pagination .next a {background: url(locastyle/img/seta-pagination.png) no-repeat 0 0;}
+.pagination .prev a, .pagination .next a {background: url(../images/seta-pagination.png) no-repeat 0 0;}
 .pagination .prev a {background-position: left 6px; padding-left: 10px;}
 .pagination .next a {background-position: right -13px; padding-right: 10px;}
 .pagination .prev a:hover,
@@ -366,10 +366,10 @@ tr.active td .boxActions {padding-top: 0;}
   padding: 10px;
 }
 .listOptions.listagemMeiosPagtos li {
-  background: url(locastyle/img/bgMeioPagamentoCinza.png) no-repeat left center;
+  background: url(../images/bgMeioPagamentoCinza.png) no-repeat left center;
   padding: 10px 10px 10px 25px;
 }
-.listOptions.listagemMeiosPagtos .pagtoAtivo {background: url(locastyle/img/bgMeioPagamentoVerde.png) no-repeat left center;}
+.listOptions.listagemMeiosPagtos .pagtoAtivo {background: url(../images/bgMeioPagamentoVerde.png) no-repeat left center;}
 
 .listOptions > li img {
   float: left;
@@ -461,7 +461,7 @@ tr.active td .boxActions {padding-top: 0;}
   display: block;
   text-indent: -9999px;
   overflow: hidden;
-  background-image: url(locastyle/img/jqui.png);
+  background-image: url(../images/jqui.png);
   background-position: no-repeat;
   cursor: pointer;
 }
@@ -499,7 +499,7 @@ tr.active td .boxActions {padding-top: 0;}
   box-shadow: inset 0 0 0 2px #fff;
 }
 .messageInfo:hover .countViews[class*="span"]:after{
-  background: url(locastyle/img/arrowSilver.png) no-repeat right center;
+  background: url(../images/arrowSilver.png) no-repeat right center;
 }
 
 .messageInfo > div[class*="span"] {
@@ -593,7 +593,7 @@ tr.active td .boxActions {padding-top: 0;}
 .messageInfo .countViews strong {color: #545454; font-size: 14px;}
 .messageInfo .countViews:after,
 .messageInfo.noBgHover:hover .countViews:after {
-  background: url(locastyle/img/arrowWhite.png) no-repeat right center;
+  background: url(../images/arrowWhite.png) no-repeat right center;
   content: " ";
   width: 17px;
   height: 40px;
@@ -829,7 +829,7 @@ td .progress {max-width: 70px;}
 .obsGray:after {
   width: 12px;
   height: 6px;
-  background: url(locastyle/img/setaTopObsGray.png) no-repeat center center;
+  background: url(../images/setaTopObsGray.png) no-repeat center center;
   position: absolute;
   top: -6px; left: 11px;
   content: " ";
@@ -1162,7 +1162,7 @@ td .progress {max-width: 70px;}
 
 
 hr.sepDot {border-bottom: 1px dotted #E5E5E5;}
-hr.dotsSep {height: 5px; background: url(locastyle/img/titDots.png);  margin: 20px 0;}
+hr.dotsSep {height: 5px; background: url(../images/titDots.png);  margin: 20px 0;}
 hr.sep {background-color: #E5E5E5; }
 
 .removeBefore:before,

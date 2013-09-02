@@ -71,8 +71,8 @@ tr.active {background-color: #fffece;}
   margin-left: 10px;
 }
 
-.dataDesc a:after, .dataDescending a:after {background-image: url(locastyle/img/setaDescending.png);}
-.dataAsc a:after, .dataAscending a:after {background-image: url(locastyle/img/setaAscending.png);}
+.dataDesc a:after, .dataDescending a:after {background-image: url(../images/setaDescending.png);}
+.dataAsc a:after, .dataAscending a:after {background-image: url(../images/setaAscending.png);}
 
 /***
 **** Ações em Tabela
@@ -116,7 +116,7 @@ tr [class*="span"] {
   font-weight: normal !important;
   display: inline-block;
   padding-right: 10px;
-  background: url(locastyle/img/sepActionsTable.gif) no-repeat right center;
+  background: url(../images/sepActionsTable.gif) no-repeat right center;
 }
 .actionsTable li:last-child a {background-image: none;}
 

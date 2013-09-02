@@ -12,7 +12,7 @@ p + .boxCollapse {margin-top: 30px;}
   margin: 0 0 10px;
   border: 1px solid #e5e5e5;
   border-bottom-width: 2px;
-  background: url(locastyle/img/setaCollapseBottom.png) no-repeat 99% 11px;
+  background: url(../images/setaCollapseBottom.png) no-repeat 99% 11px;
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
   -ms-transition: all .2s linear;
@@ -69,7 +69,7 @@ p + .boxCollapse {margin-top: 30px;}
 .boxCollapse.focus{background-color: #ECECEC;}
 
 .boxCollapse.active {
-  background-image: url(locastyle/img/setaCollapseTop.png);
+  background-image: url(../images/setaCollapseTop.png);
   background-color: #ECECEC;
   padding-bottom: 10px;
 }
