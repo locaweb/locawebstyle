@@ -11,7 +11,7 @@
 /build
 
 # Ignore Sass' cache
-/.sass-cache
+.sass-cache
 
 source/.DS_Store
 
