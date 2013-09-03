@@ -1,0 +1,79 @@
+@import "../base/mixins"
+@import "../base/extends"
+
+//
+// Sidebox são as caixas que dividem as seções da sidebar
+//
+.sidebox
+	@extend .border-radius-3
+	margin-bottom: 20px
+	padding: 10px
+	background-color: #FFF
+	border: 1px solid rgba(0,0,0,0.1)
+	border-bottom-width: 4px
+
+	[class*="bg-layer"]
+		@extend .border-radius-3
+		margin-bottom: 10px
+		padding: 10px
+
+	hr
+		display: block
+		margin: 10px 0
+		border: none
+		border-top: 1px solid #fff
+		background: none
+
+
+	//
+	// Definimos como serão os títulos da Sidebar
+	//
+	.sidebox-title
+		font-size: 1.375em
+		font-family: ralewaylight
+		line-height: 30px
+		margin: 0 0 10px
+
+		[class^="ico-"]
+			height: 30px
+			width: 30px
+			margin: 0 7px 0 0
+			float: left
+			text-align: center
+			border-radius: 100%
+			background: #767676
+
+		[class^="ico-"]:before
+			color: #FFF
+			font-size: 18px
+			left: 2px
+
+	//
+	// Textos de status de informações da sidebar
+	//
+	.status-text
+		font-size: .68em
+
+		b
+			display: block
+			color: #545454
+			font-size: 1.09em
+
+		small
+			font-size: .9em
+
+	//
+	// Listagem padrão da sidebar
+	//
+	.sidebox-list
+		li
+			list-style: none
+
+		a
+			@extend .default-text
+			@extend .bg-layer-1
+			@extend .border-radius-3
+			padding: 10px
+			display: block
+			margin-bottom: 1px
+
