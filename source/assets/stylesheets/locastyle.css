@@ -1,4 +1,5 @@
 /*
-*=require locastyle/grid
-*=require locastyle/icons
+*=require_tree ./locastyle/structure
+*=require_tree ./locastyle/base
+*=require_tree ./locastyle/modules
 */

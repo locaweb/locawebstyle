@@ -7,61 +7,51 @@ layout: false
 <head>
 	<title>Locaweb Style</title>
 	<meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="<%= base_url + bootstrap_css %>">
-  <%= stylesheet_link_tag "locastyle" %>
+	<link rel="stylesheet" type="text/css" href="<%= base_url + bootstrap_css %>">
+	<%= stylesheet_link_tag "locastyle" %>
 
-  <style type="text/css">
+	<style type="text/css">
 
-  	.menu{margin: 0; padding: 0;}
-  	.menu ul {padding-left: 0;}
-  	.menu li {
-  		display: inline-block;
-  		list-style: none;
-  	}
+		.menu{margin: 0; padding: 0;}
+		.menu ul {padding-left: 0;}
+		.menu li {
+			display: inline-block;
+			list-style: none;
+		}
 
-  	[class*="col-"] {
-  		background-color: rgba(0,0,0,0.07);
-  		outline: 1px solid rgba(255,0,0,0.8);
-  	}
 
-  	.header {
-  		margin-bottom: 20px;
-  	}
+		.header {
+			margin-bottom: 20px;
+		}
 
-  	.menu {
-  		background: #94c83c;
-  		border-bottom: 5px solid rgba(0,0,0,0.1);
-  	}
+		.menu {
+			background: #94c83c;
+			border-bottom: 5px solid rgba(0,0,0,0.1);
+		}
 
-  	.menu ul {
-  		padding: 0;
-  		margin-bottom: -5px;
-  	}
+		.menu ul {
+			padding: 0;
+			margin-bottom: -5px;
+		}
 
-  	.menu li {
-  		float: left;
-  	}
+		.menu li {
+			float: left;
+		}
 
-  	.menu a {
-  		color: #FFF;
-  		text-decoration: none;
-  		display: inline-block;
-  		padding: 10px;
-  		border-bottom: 5px solid rgba(0,0,0,0);
-  	}
-  	.menu a:hover {
-  		background-color: rgba(0,0,0,0.18);
-  		border-bottom: 5px solid rgba(0,0,0,0.4);
-  	}
+		.menu a {
+			color: #FFF;
+			text-decoration: none;
+			display: inline-block;
+			padding: 10px;
+			border-bottom: 5px solid rgba(0,0,0,0);
+		}
+		.menu a:hover {
+			background-color: rgba(0,0,0,0.18);
+			border-bottom: 5px solid rgba(0,0,0,0.4);
+		}
 
-  	.sidebox {
-  		background: #FFF;
-  		border: 1px solid rgba(0,0,0,0.1);
-  		border-bottom-width: 4px;
-  		border-radius: 3px;
-  		margin-bottom: 20px;
-  	}
-  </style>
+
+	</style>
 
 </head>
 <body>
@@ -104,23 +94,37 @@ layout: false
 	</div>
 	<aside id="sidebar" class="sidebar col-md-3">
 
-		<div class="sidebox">
-			<h1>Dados da conta</h1>
-			<ul class="bg-gray">
-				<li>Plano <strong>Email Marketing</strong></li>
-				<li>Saldo mensal <strong>10.000 envios</strong></li>
-			</ul>
-			<a href="#" class="ico-arrow-right">Alterar Plano</a>
-		</div>
+		<section class="sidebox">
+			<h1 class="sidebox-title"> <span class="ico-user-star"></span> Dados da conta</h1>
+			<div class="bg-layer-1">
+				<span class="status-text">Plano
+					<b>Email Marketing III</b>
+				</span>
+				<hr>
+				<span class="status-text">Saldo Mensal
+					<b>10.000 envios</b>
+					<small>*Válido até 31/01/2012</small>
+				</span>
+			</div>
+			<a href="#" class="ico-right-circle">Alterar Plano</a>
+		</section>
 
-		<div class="sidebox">
-			<h1>Dicas</h1>
-			<div class="text bg-gray">
-				<h2>Cuidado com os bounces</h2>
+		<section class="sidebox">
+			<h1 class="sidebox-title"><span class="ico-lamp"></span>Dicas</h1>
+			<div class="bg-layer-1">
+				<h2 class="title-6">Cuidado com os bounces</h2>
 				<p>Bounces são tipos diversos de problemas que impedem que um contato receba a mensagem enviada.</p>
 				<p>Por exemplo: e-mail inválido, caixa postal cheia, lentidão no servidor do destinatário, etc.</p>
 			</div>
-		</div>
+		</section>
+
+		<section class="sidebox">
+			<h1 class="sidebox-title"><span class="ico-config"></span>Ajuda e suporte</h1>
+			<ul class="sidebox-list">
+				<li><a href="" class="ico-link-out ico-pos-right">Central de Ajuda (Wiki)</a></li>
+				<li><a href="" class="ico-link-out ico-pos-right">Suporte 24hs</a></li>
+			</ul>
+		</section>
 
 	</aside>
 
@@ -128,9 +132,9 @@ layout: false
 </main>
 
 
-  <%= javascript_include_tag "libs" %>
-  <%= javascript_include_tag "locastyle" %>
-  <script src="<%= base_url + bootstrap_js %>"></script>
+	<%= javascript_include_tag "libs" %>
+	<%= javascript_include_tag "locastyle" %>
+	<script src="<%= base_url + bootstrap_js %>"></script>
 
 </body>
 </html>
