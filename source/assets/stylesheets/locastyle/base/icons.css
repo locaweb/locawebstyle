@@ -12,6 +12,10 @@
 	font-style: normal;
 }
 
+[class*="ico-"]{
+	font-size: .75em;
+}
+
 [class*="ico-"].ico-pos-right:after,
 [class*="ico-"]:before {
 	position: relative;
