@@ -1,7 +1,7 @@
 .header
 	background-color: #8ecf00
 	border-bottom: 4px solid #7cbe00
-	
+
 	.project-name
 		overflow: hidden
 		padding: 10px 5px
@@ -17,7 +17,7 @@
 		color: #fff
 		font-size: 1.3em
 		margin-top: 8px
-	
+
 	.control-sidebar
 		float: right
 
@@ -47,7 +47,7 @@
 				list-style: none
 				margin: 0
 				padding: 0
-					
+
 				a
 					background-color: #303030
 					display: block
@@ -62,7 +62,11 @@
 					&:active,
 					&.active
 						background-color: #519700
-						border-left-color: #3f7900 
+						border-left-color: #3f7900
+
+					&.ico-home
+						&:before
+							display: none
 
 // Desktops
 @media (min-width: 1200px)
@@ -123,10 +127,11 @@
 
 						a
 							border: none
-							padding: 17px 15px 13px
+							padding: 15px 15px 13px
 							margin-left: 15px
 							display: inline-block
 							background-color: transparent
+							font: .88em ralewaybold
 
 							&:first-child
 								margin-left: 0
@@ -136,5 +141,15 @@
 								text-decoration: none
 								background-color: #519700
 								border-bottom: 4px solid #336500
+
+							&.ico-home
+								padding: 14px 12px 9px 15px
+								text-indent: -9999px
+
+								&:before
+									display: block
+									float: right
+									font-size: 1.5em
+									text-indent: 0
 
 
