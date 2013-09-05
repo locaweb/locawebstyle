@@ -1,0 +1,140 @@
+.header
+	background-color: #8ecf00
+	border-bottom: 4px solid #7cbe00
+	
+	.project-name
+		overflow: hidden
+		padding: 10px 5px
+		margin: 0 auto
+		color: #fff
+		text-align: center
+		font: 1.5em ralewaysemibold
+
+		a
+			color: #fff
+
+	[class*="control-"]
+		color: #fff
+		font-size: 1.3em
+		margin-top: 8px
+	
+	.control-sidebar
+		float: right
+
+	.control-menu
+		float: left
+
+	.nav-content
+		height: 100%
+		width: 240px
+		position: absolute
+		top: 0
+		left: 0
+		background-color: #252525
+		overflow: auto
+
+		&:before
+			content: ""
+			position: absolute
+			right: 0
+			top: 0
+			width: 15px
+			height: 100%
+			box-shadow: inset -5px 0 5px 0 rgba(0, 0, 0, 0.2)
+
+		.menu
+			ul
+				list-style: none
+				margin: 0
+				padding: 0
+					
+				a
+					background-color: #303030
+					display: block
+					padding: 13px 0 13px 10px
+					margin: 0 0 1px 0
+					border-left: 3px solid #76a70c
+					color: #fff
+					text-transform: uppercase
+					font: .75em ralewaybold
+
+					&:focus,
+					&:active,
+					&.active
+						background-color: #519700
+						border-left-color: #3f7900 
+
+// Desktops
+@media (min-width: 1200px)
+
+	.header
+		border-top: 4px solid #bbb
+		background-color: #FFF
+
+		[class*="control-"]
+			display: none
+
+		.container
+			padding: 0
+
+		.project-name
+			padding: 0
+			color: #8ecf00
+			font-size: 2.25em
+			text-align: left
+			padding-top: 40px
+
+			a
+				color: #8ecf00
+
+		.nav-content
+			width: 100%
+			height: auto
+			overflow: inherit
+			position: static
+			margin-top: 25px
+			background-color: #8ecf00
+
+			&:before
+				display: none
+
+			.menu
+				height: 44px
+
+				ul
+					margin-left: auto
+					margin-right: auto
+					line-height: 0
+
+					li
+						float: left
+
+						&:after
+							content: ""
+							display: inline-block
+							vertical-align: middle
+							width: 1px
+							height: 30px
+							margin: 0 3px
+							background: transparent url(#{$image_path}dot-menu.png) no-repeat center center
+
+						&:last-child:after
+							display: none
+
+						a
+							border: none
+							padding: 17px 15px 13px
+							margin-left: 15px
+							display: inline-block
+							background-color: transparent
+
+							&:first-child
+								margin-left: 0
+
+							&.active,
+							&:hover
+								text-decoration: none
+								background-color: #519700
+								border-bottom: 4px solid #336500
+
+
