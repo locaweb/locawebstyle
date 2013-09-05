@@ -7,74 +7,41 @@ layout: false
 <head>
 	<title>Locaweb Style</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="<%= base_url + bootstrap_css %>">
 	<%= stylesheet_link_tag "locastyle" %>
-
-	<style type="text/css">
-
-		.menu{margin: 0; padding: 0;}
-		.menu ul {padding-left: 0;}
-		.menu li {
-			display: inline-block;
-			list-style: none;
-		}
-
-
-		.header {
-			margin-bottom: 20px;
-		}
-
-		.menu {
-			background: #94c83c;
-			border-bottom: 5px solid rgba(0,0,0,0.1);
-		}
-
-		.menu ul {
-			padding: 0;
-			margin-bottom: -5px;
-		}
-
-		.menu li {
-			float: left;
-		}
-
-		.menu a {
-			color: #FFF;
-			text-decoration: none;
-			display: inline-block;
-			padding: 10px;
-			border-bottom: 5px solid rgba(0,0,0,0);
-		}
-		.menu a:hover {
-			background-color: rgba(0,0,0,0.18);
-			border-bottom: 5px solid rgba(0,0,0,0.4);
-		}
-
-
-	</style>
-
 </head>
 <body>
 
 <header class="header">
 	<div class="container">
-		<h1>Logo</h1>
+		<span class="control-menu ico-align-justify"></span>
+		<span class="control-sidebar ico-list"></span>
+		<h1 class="project-name"><a href="#">Email Marketing</a></h1>
+<!-- 		<a href="#" class="show-account">emkt2013</a>
+		<ul class="account">
+			<li>option 1</li>
+			<li>option 2</li>
+			<li>option 3</li>
+		</ul> -->
 	</div>
-	<menu class="menu">
-		<ul class="container">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Lista de contatos</a></li>
-			<li><a href="#">Mensagens</a></li>
-			<li><a href="#">Campanhas</a></li>
-			<li><a href="#">Templates</a></li>
-			<li><a href="#">Relatórios</a></li>
-			<li><a href="#">Configurações</a></li>
-			<li class="btn-sidebar" style="float: right;"><a href="#sidebar">Sidebar</a></li>
-		</ul>
-	</menu>
+	<div class="nav-content">
+		<menu class="menu">
+			<ul class="container">
+				<li><a href="#" class="active">Home</a></li>
+				<li><a href="#">Lista de contatos</a></li>
+				<li><a href="#">Mensagens</a></li>
+				<li><a href="#">Campanhas</a></li>
+				<li><a href="#">Templates</a></li>
+				<li><a href="#">Relatórios</a></li>
+				<li><a href="#">Configurações</a></li>
+			</ul>
+		</menu>
+	</div>
+	
 </header>
 
-<main class="container">
+<!-- <main class="container">
 <div class="row">
 
 	<div class="col-md-9">
@@ -130,7 +97,7 @@ layout: false
 
 </div>
 </main>
-
+ -->
 
 	<%= javascript_include_tag "libs" %>
 	<%= javascript_include_tag "locastyle" %>
