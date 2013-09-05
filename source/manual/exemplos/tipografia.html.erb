@@ -1,0 +1,32 @@
+---
+title: Home de um sistema
+layout: false
+---
+<!DOCTYPE html>
+<html lang="pt-br" class="color-green">
+<head>
+	<title>Locaweb Style</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="<%= base_url + bootstrap_css %>">
+	<%= stylesheet_link_tag "locastyle" %>
+
+</head>
+<body>
+
+<div class="limit">
+	<h1 class="title-1">Título h1</h1>
+	<h1 class="title-2">Título h2</h1>
+	<h1 class="title-3">Título h3</h1>
+	<h1 class="title-4">Título h4</h1>
+	<h1 class="title-5">Título h5</h1>
+	<h1 class="title-6">Título h6</h1>
+	<p>O Locaweb Style utiliza alguns plugins já conhecidos de todos os devs e que não precisam ser inseridos novamente no projeto.</p>
+</div>
+
+
+	<%= javascript_include_tag "libs" %>
+	<%= javascript_include_tag "locastyle" %>
+	<script src="<%= base_url + bootstrap_js %>"></script>
+
+</body>
+</html>
