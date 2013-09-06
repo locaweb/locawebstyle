@@ -42,6 +42,17 @@
 			height: 100%
 			box-shadow: inset -5px 0 5px 0 rgba(0, 0, 0, 0.2)
 
+		> ul > li > a
+			font: 12px verdana
+			color: #fff
+			display: block
+			padding-left: 10px
+
+			&:before
+				opacity: 0.3
+				font-size: 1.2em
+
+
 		.menu
 			ul
 				list-style: none
@@ -67,6 +78,22 @@
 					&.ico-home
 						&:before
 							display: none
+		
+		.title-sep
+			color: #fff
+			background-color: #3b3b3b
+			font: .68em ralewaybold
+			padding: 5px 0 5px 12px
+			margin-bottom: 5px
+			box-shadow: inset 0px -1px 0 0 rgba(0, 0, 0, 1)
+			border-top: 1px solid #767676
+			border-bottom: 1px solid #4a4a4a
+
+			a
+				color: #fff
+				font: .75em verdana
+				display: block
+				padding: 10px
 
 // Desktops
 @media (min-width: 1200px)
