@@ -1,6 +1,6 @@
 .header
-	border-bottom: 4px solid #4f4f4f
-	background-color: #717171
+	border-bottom: 4px solid $gray1
+	background-color: $gray2
 
 	.project-name
 		overflow: hidden
@@ -32,7 +32,7 @@
 		left: 0
 		z-index: 1
 		overflow: auto
-		background-color: #2a2a2a
+		background-color: $gray2
 
 		&:before
 			content: ""
@@ -65,7 +65,7 @@
 					display: block
 					padding: 13px 0 13px 10px
 					margin: 0 0 1px 0
-					border-left: 3px solid #4f4f4f
+					border-left: 3px solid $gray1
 					color: #fff
 					text-transform: uppercase
 					font: .75em ralewaybold
@@ -73,8 +73,8 @@
 					&:focus,
 					&:active,
 					&.active
-						background-color: #4f4f4f
-						border-left-color: #2a2a2a
+						background-color: $gray1
+						border-left-color: $gray3
 
 					&.ico-home
 						&:before
@@ -112,22 +112,25 @@
 
 		.project-name
 			padding: 0
-			color: #CCC
+			color: $gray2
 			font-size: 2.25em
 			text-align: left
 			padding-top: 40px
 
 			a
-				color: #666
+				color: $gray2
 
 		.help-sugestions
 			float: right
 			margin: -82px 0 0 0
 			padding: 10px
-			background-color: #717171
+			background-color: $gray2
 			color: #fff
 			font-size: .68em
 			border-radius: 0 0 3px 3px
+
+			&:hover
+				background-color: $gray1
 
 		.nav-content
 			width: 100%
@@ -177,8 +180,8 @@
 							&:focus,
 							&:hover
 								text-decoration: none
-								background-color: #4f4f4f
-								border-bottom: 4px solid #2a2a2a
+								background-color: $gray1
+								border-bottom: 4px solid $gray3
 
 							&.ico-home
 								padding: 14px 0 9px

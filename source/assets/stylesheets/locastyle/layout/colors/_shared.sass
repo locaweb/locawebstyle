@@ -2,6 +2,9 @@
 // Cores Mobile
 //
 #{$theme-color}
+	a
+		color: $color2
+
 	.header
 		background-color: $color1
 		border-bottom-color: $color3
@@ -15,11 +18,26 @@
 				&:hover
 					background-color: $color3
 					border-left-color: $color5
+
+	.sidebox
+		.sidebox-title
+			color: $color1
+
+			[class^="ico-"]
+				background-color: $color1
+
+		.sidebox-list
+			a
+				&[class*="ico-"]:after,
+				&[class*="ico-"]:before
+					color: $color2
+
 //
 // Cores desktop
 //
 @media #{$big-screens}
 	#{$theme-color}
+
 		.header
 			background-color: transparent
 			border-bottom-color: $color3
