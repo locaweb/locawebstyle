@@ -1,41 +1,41 @@
 // ARROWS
 // Cria setas.
-// $arrowColor define a cor da seta. $arrowSize define o tamanho da seta.
-@mixin arrowStructure
+// $arrow-color define a cor da seta. $arrow-size define o tamanho da seta.
+@mixin arrow-structure
   content: ""
   display: inline-block
   width: 0
   height: 0
 
-@mixin arrowUp($arrowColor, $arrowSize)
-  @include arrowStructure
-  border-left: $arrowSize solid transparent
-  border-right: $arrowSize solid transparent
-  border-bottom: $arrowSize solid $arrowColor
+@mixin arrow-up($arrow-color, $arrow-size)
+  @include arrow-structure
+  border-left: $arrow-size solid transparent
+  border-right: $arrow-size solid transparent
+  border-bottom: $arrow-size solid $arrow-color
 
-@mixin arrowDown($arrowColor, $arrowSize)
-  @include arrowStructure
-  border-left: $arrowSize solid transparent
-  border-right: $arrowSize solid transparent
-  border-top: $arrowSize solid $arrowColor
+@mixin arrow-down($arrow-color, $arrow-size)
+  @include arrow-structure
+  border-left: $arrow-size solid transparent
+  border-right: $arrow-size solid transparent
+  border-top: $arrow-size solid $arrow-color
 
-@mixin arrowRight($arrowColor, $arrowSize)
-  @include arrowStructure
-  border-top: $arrowSize solid transparent
-  border-bottom: $arrowSize solid transparent
-  border-left: $arrowSize solid $arrowColor
+@mixin arrow-right($arrow-color, $arrow-size)
+  @include arrow-structure
+  border-top: $arrow-size solid transparent
+  border-bottom: $arrow-size solid transparent
+  border-left: $arrow-size solid $arrow-color
 
-@mixin arrowLeft($arrowColor, $arrowSize)
-  @include arrowStructure
-  border-top: $arrowSize solid transparent
-  border-bottom: $arrowSize solid transparent
-  border-right: $arrowSize solid $arrowColor
+@mixin arrow-left($arrow-color, $arrow-size)
+  @include arrow-structure
+  border-top: $arrow-size solid transparent
+  border-bottom: $arrow-size solid transparent
+  border-right: $arrow-size solid $arrow-color
 
 // Gradiente Linear
-// $startColor: Cor inicial do gradiente, $endColor: Cor final do gradiente
-@mixin gradientLinear($startColor, $endColor)
-  background-color: $startColor
-  background-image: -webkit-linear-gradient(top, $startColor 0%, $endColor 100%)
-  background-image: -moz-linear-gradient(top, $startColor 0%, $endColor 100%)
-  background-image: -ms-linear-gradient(top, $startColor 0%, $endColor 100%)
-  background-image: linear-gradient(to bottom, $startColor 0%, $endColor 100%)
+// $start-color: Cor inicial do gradiente, $end-color: Cor final do gradiente
+@mixin gradient-linear($start-color, $end-color)
+  background-color: $start-color
+  background-image: -webkit-linear-gradient(top, $start-color 0%, $end-color 100%)
+  background-image: -moz-linear-gradient(top, $start-color 0%, $end-color 100%)
+  background-image: -ms-linear-gradient(top, $start-color 0%, $end-color 100%)
+  background-image: linear-gradient(to bottom, $start-color 0%, $end-color 100%)

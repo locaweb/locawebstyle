@@ -1,0 +1,46 @@
+//
+// Cores Mobile
+//
+#{$theme-color}
+	.header
+		background-color: $color1
+		border-bottom-color: $color3
+
+		.menu
+			ul li a
+				border-left-color: $color1
+
+				&.active,
+				&:focus,
+				&:hover
+					background-color: $color3
+					border-left-color: $color5
+//
+// Cores desktop
+//
+@media #{$big-screens}
+	#{$theme-color}
+		.header
+			background-color: transparent
+			border-bottom-color: $color3
+
+			.help-sugestions
+				background-color: $color3
+
+				&:hover
+					background-color: $color5
+
+			.nav-content
+				background-color: $color1
+
+			.project-name
+				a
+					color: $color1
+
+			.menu
+				ul li a
+					&.active,
+					&:focus,
+					&:hover
+						background-color: $color3
+						border-bottom-color: $color5
