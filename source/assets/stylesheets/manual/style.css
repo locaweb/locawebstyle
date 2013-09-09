@@ -12,7 +12,27 @@ a.btn.btn-download {
 hr {
 	margin: 20px 0 !important;
 }
-
+.example {
+	background: #FFF;
+	border: 1px solid #E1E1E8;
+	border-radius: 5px 5px 0 0;
+	padding: 45px 20px 20px;
+	position: relative;
+	margin-bottom: -3px;
+}
+.example:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 11px;
+	border-bottom: 1px solid #E1E1E8;
+	border-right: 1px solid #E1E1E8;
+	content: "Exemplo";
+	display: inline-block;
+	background: #EFEFEF;
+	color: #666;
+	padding: 5px 10px;
+}
 /*****
 ****** CODE PARTS
 *****/
