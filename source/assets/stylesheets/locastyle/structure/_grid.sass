@@ -2,14 +2,20 @@
 // Adequando a largura máxima para o GRID da Locaweb
 // Todo o resto é controlado pelo Bootstrap
 
+$small-screens: "only screen and (max-width: 980px)"
+$medium-screens: "only screen and (min-width: 980px)"
+$big-screens: "only screen and (min-width: 1200px)"
+
 // Smartphones e telas pequenas
-@media (max-width: 980px)
+@media #{$small-screens}
+	// Seu código aqui se houver
 
 
 // Tablets e telas médias
-@media (min-width: 980px)
+@media #{$medium-screens}
+	// Seu código aqui se houver
 
 
 // Desktops
-@media (min-width: 1200px)
-
+@media #{$big-screens}
+	// Seu código aqui se houver
