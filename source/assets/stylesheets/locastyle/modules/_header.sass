@@ -32,7 +32,7 @@
 		left: 0
 		z-index: 1
 		overflow: auto
-		background-color: $gray2
+		background-color: #252525
 
 		&:before
 			content: ""
@@ -98,6 +98,7 @@
 
 // Desktops
 @media #{$big-screens}
+	@import "../base/functionalclasses"
 
 	.header
 		border-top: 4px solid #bbb
@@ -131,6 +132,16 @@
 
 			&:hover
 				background-color: $gray1
+
+		.dropdown
+			.title-dropdown
+				font: .81em verdana
+				font-weight: bolder
+				color: #2a2a2a
+
+				&:after
+					@include arrow-down(#000, 5px)
+					margin: 0 0 0 5px
 
 		.nav-content
 			width: 100%
