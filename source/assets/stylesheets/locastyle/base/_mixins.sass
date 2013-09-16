@@ -39,3 +39,9 @@
   background-image: -moz-linear-gradient(top, $start-color 0%, $end-color 100%)
   background-image: -ms-linear-gradient(top, $start-color 0%, $end-color 100%)
   background-image: linear-gradient(to bottom, $start-color 0%, $end-color 100%)
+
+@mixin transition($property, $time, $effect)
+  -webkit-transition: $property $time $effect
+  -moz-transition: $property $time $effect
+  -ms-transition: $property $time $effect
+  transition: $property $time $effect
