@@ -1,3 +1,15 @@
+$mobile-left-number: "240px"
+
+.left-bar body
+	overflow: hidden
+	-webkit-transform: translate( #{$mobile-left-number}, 0px)
+
+body
+	background-color: #FFF
+	position: relative
+	-webkit-transform: translate( 0px, 0px)
+	@include transition(all, .25s, linear)
+
 .header
 	border-bottom: 4px solid $gray1
 	background-color: $gray2
@@ -17,6 +29,7 @@
 		color: #fff
 		font-size: 1.3em
 		margin-top: 8px
+		cursor: pointer
 
 	.control-sidebar
 		float: right
@@ -26,13 +39,14 @@
 
 	.nav-content
 		height: 100%
-		width: 240px
+		width: #{$mobile-left-number}
 		position: fixed
 		top: 0
-		left: 0
+		-webkit-transform: translate(-#{$mobile-left-number}, 0px)
 		z-index: 1
 		overflow: auto
 		background-color: $gray3
+		@include transition(all, .25s, linear)
 
 		&:before
 			content: ""
@@ -52,7 +66,6 @@
 			&:before
 				opacity: 0.3
 				font-size: 1.2em
-
 
 		.menu
 			ul
@@ -104,9 +117,6 @@
 		border-top: 4px solid #bbb
 		background-color: #FFF !important
 		margin-bottom: 10px
-
-		[class*="control-"]
-			display: none
 
 		.container
 			padding: 0
