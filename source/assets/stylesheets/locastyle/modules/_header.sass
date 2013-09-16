@@ -1,14 +1,11 @@
 $mobile-left-number: "240px"
 
-.left-bar body
-	overflow: hidden
-	-webkit-transform: translate( #{$mobile-left-number}, 0px)
-
 body
-	background-color: #FFF
-	position: relative
-	-webkit-transform: translate( 0px, 0px)
 	@include transition(all, .25s, linear)
+
+	.left-bar &
+		-webkit-transform: translate( #{$mobile-left-number}, 0px)
+		@include transition(all, .25s, linear)
 
 .header
 	border-bottom: 4px solid $gray1
@@ -42,11 +39,10 @@ body
 		width: #{$mobile-left-number}
 		position: fixed
 		top: 0
-		-webkit-transform: translate(-#{$mobile-left-number}, 0px)
 		z-index: 1
 		overflow: auto
 		background-color: $gray3
-		@include transition(all, .25s, linear)
+		-webkit-transform: translate(-#{$mobile-left-number}, 0px)
 
 		&:before
 			content: ""
@@ -158,6 +154,7 @@ body
 			overflow: inherit
 			position: static
 			margin-top: 25px
+			-webkit-transform: translate( 0px, 0px)
 
 			&:before
 				display: none
