@@ -97,12 +97,12 @@
 				padding: 10px
 
 // Desktops
-@media #{$big-screens}
+@media (min-width: #{$screen-sm})
 	@import "../base/functionalclasses"
 
 	.header
 		border-top: 4px solid #bbb
-		background-color: #FFF
+		background-color: #FFF !important
 		margin-bottom: 10px
 
 		[class*="control-"]
@@ -132,7 +132,6 @@
 
 			&:hover
 				background-color: $gray1
-
 
 		.title-dropdown
 			font: .81em verdana
