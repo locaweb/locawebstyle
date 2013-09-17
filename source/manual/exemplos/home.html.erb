@@ -15,15 +15,14 @@ layout: false
 	<%= stylesheet_link_tag "locastyle" %>
 </head>
 <body>
-
 <header class="header" role="banner">
 	<div class="container">
-		<span class="control-menu ico-align-justify"></span>
-		<span class="control-sidebar ico-list"></span>
+		<span class="control-menu visible-xs ico-align-justify"></span>
+		<span class="control-sidebar visible-xs ico-list"></span>
 		<h1 class="project-name"><a href="#">Email Marketing</a></h1>
-		<a href="#" class="help-sugestions ico-question visible-lg">Ajuda e Sugestões</a>
+		<a href="#" class="help-sugestions ico-help-circle hidden-xs">Ajuda e Sugestões</a>
 
-		<div class="dropdown visible-lg">
+		<div class="dropdown hidden-xs">
 			<a href="#" data-toggle="dropdown" class="title-dropdown">emkt2013</a>
 			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				<li><a href="#" role="menuitem">Option 1</a></li>
@@ -44,9 +43,9 @@ layout: false
 				<li><a href="#" role="menuitem">Configurações</a></li>
 			</ul>
 		</menu>
-		<h2 class="title-sep hidden-lg">Mais</h2>
-		<ul class="nav-mob-list  hidden-lg">
-			<li><a href="#" class="ico-question">Ajuda e sugestões</a></li>
+		<h2 class="title-sep visible-xs">Mais</h2>
+		<ul class="nav-mob-list visible-xs">
+			<li><a href="#" class="ico-help-circle">Ajuda e sugestões</a></li>
 		</ul>
 	</div>
 
@@ -132,7 +131,6 @@ layout: false
     </div>
   </div>
 </footer>
-
 
 	<%= javascript_include_tag "libs" %>
 	<%= javascript_include_tag "locastyle" %>
