@@ -1,3 +1,12 @@
+$mobile-left-number: "240px"
+
+body
+	@include transition(all, .25s, linear)
+
+	.left-bar &
+		-webkit-transform: translate( #{$mobile-left-number}, 0px)
+		@include transition(all, .25s, linear)
+
 .header
 	border-bottom: 4px solid $gray1
 	background-color: $gray2
@@ -17,6 +26,7 @@
 		color: #fff
 		font-size: 1.3em
 		margin-top: 8px
+		cursor: pointer
 
 	.control-sidebar
 		float: right
@@ -26,13 +36,13 @@
 
 	.nav-content
 		height: 100%
-		width: 240px
+		width: #{$mobile-left-number}
 		position: fixed
 		top: 0
-		left: 0
 		z-index: 1
 		overflow: auto
 		background-color: $gray3
+		-webkit-transform: translate(-#{$mobile-left-number}, 0px)
 
 		&:before
 			content: ""
@@ -52,7 +62,6 @@
 			&:before
 				opacity: 0.3
 				font-size: 1.2em
-
 
 		.menu
 			ul
@@ -97,16 +106,13 @@
 				padding: 10px
 
 // Desktops
-@media #{$big-screens}
+@media (min-width: #{$screen-sm})
 	@import "../base/functionalclasses"
 
 	.header
 		border-top: 4px solid #bbb
-		background-color: #FFF
+		background-color: #FFF !important
 		margin-bottom: 10px
-
-		[class*="control-"]
-			display: none
 
 		.container
 			padding: 0
@@ -133,15 +139,14 @@
 			&:hover
 				background-color: $gray1
 
-		.dropdown
-			.title-dropdown
-				font: .81em verdana
-				font-weight: bolder
-				color: #2a2a2a
+		.title-dropdown
+			font: .81em verdana
+			font-weight: bolder
+			color: #2a2a2a
 
-				&:after
-					@include arrow-down(#000, 5px)
-					margin: 0 0 0 5px
+			&:after
+				@include arrow-down(#000, 5px)
+				margin: 0 0 0 5px
 
 		.nav-content
 			width: 100%
@@ -149,6 +154,7 @@
 			overflow: inherit
 			position: static
 			margin-top: 25px
+			-webkit-transform: translate( 0px, 0px)
 
 			&:before
 				display: none
@@ -205,5 +211,3 @@
 									font-size: 1.5em
 									left: 15px
 									text-indent: 0
-
-

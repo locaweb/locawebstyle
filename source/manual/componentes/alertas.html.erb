@@ -7,86 +7,67 @@ menu_page: sidebar-componentes.erb
 
 <header>
 	<h1>Alertas</h1>
-	<h3>Alertas são usadas para enviar um feedback de sucesso, erro, warning ou apenas uma notificação de novas features no sistema. </h3>
+	<h3>Alertas são usadas para enviar um feedback contextual de sucesso, erro, warning ou apenas uma notificação de novas features no sistema. </h3>
 </header>
 
-<p>Os alertas seguem o mesmo padrão do Bootstrap. Usa-se as classes listadas abaixo para indicar qual o tipo de alerta:</p>
-	<table class="table table-bordered table-striped">
-	<thead>
-	<tr>
-		<th>Classe</th>
-		<th>Exemplo</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<td>.obsGray</td>
-		<td>
-<div class="obsGray">
-    <h6>Campus Online <small>Criado em 20/04/2012</small> <a href="#" class="lnkSeta">Editar</a></h6>
-    <p class="lightGray">Uma pequena lista de emails do Campus Online. Criado em 20/04/2012</p>
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td>.alert.alert-notification</td>
-		<td>
-<div class="alert alert-notification">
-    <strong>Notificação!</strong> Uma mensagem de notificação.
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td>.alert</td>
-		<td>
-<div class="alert">
-    <a class="close" data-dismiss="alert">×</a>
-    <strong>Aviso!</strong> Uma mensagem de aviso.
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td>.alert.alert-error</td>
-		<td>
-<div class="alert alert-error">
-    <a class="close" data-dismiss="alert">×</a>
-    <strong>Erro!</strong> Uma mensagem de erro.
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td>.alert.alert-success</td>
-		<td>
-<div class="alert alert-success">
-    <a class="close" data-dismiss="alert">×</a>
-    <strong>Sucesso!</strong> Uma mensagem de sucesso.
-</div>
-		</td>
-	</tr>
-		<tr>
-		<td>.alert.alert-info</td>
-		<td>
-<div class="alert alert-info">
-    <a class="close" data-dismiss="alert">×</a>
-    <strong>Info!</strong> Uma mensagem de informação.
-</div>
-		</td>
-	</tr>
-	</tbody>
-</table>
-
-<p>Um exemplo de uso do <strong>obsGray</strong>:</p>
-
-<h1>Exemplo de título seguido de obsGray</h1>
-<div class="obsGray">
-    <h6>Campus Online <small>Criado em 20/04/2012</small> <a href="#" class="lnkSeta">Editar</a></h6>
-    <p class="lightGray">Uma pequena lista de emails do Campus Online. Criado em 20/04/2012</p>
+<h2>Exemplos</h2>
+<p>Os alertas seguem o mesmo padrão do Bootstrap. Envolva qualquer texto com uma classe <strong>.alert</strong> juntamente com classes contextuais como <strong>.alert-sucess</strong>. Veja abaixo exemplos:</p>
+<div class="bs-callout bs-callout-info">
+	<h4>Não existe uma classe padrão</h4>
+	<p>Alertas não tem classes padrão, apenas uma classe de base (<strong>.alert</strong>) e as classes de modificação. Por isso você sempre deverá inserir uma classe de contexto para indicar qual o teor do alerta.</p>
 </div>
 
+<div class="example">
+	<div class="alert alert-success"><p><strong>Sucesso!</strong> Você conseguiu, parabéns!</p></div>
+	<div class="alert alert-info"><p><strong>Atenção:</strong> você tem informações importantes para ler.</p></div>
+	<div class="alert alert-warning"><p><strong>Cuidado:</strong> cheque duas vezes. Você pode ter esquecido alguma informação.</p></div>
+	<div class="alert alert-danger"><p><strong>Mórreu:</strong> Algo muito ruim aconteceu e você vai precisar refazer tudo.</p></div>
+</div>
 <pre class="lang-html prettyprint linenums">
-&lt;div class="alert alert-success"&gt;
-    &lt;a class="close" data-dismiss="alert"&gt;×&lt;/a&gt;
-    &lt;strong&gt;Sucesso!&lt;/strong&gt; Uma mensagem de sucesso.
+&lt;div class=&quot;alert alert-success&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-info&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-warning&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-danger&quot;&gt;...&lt;/div&gt;
+</pre>
+
+<h2>Fechando alertas</h2>
+<p>Você pode colocar um botãozinho para fechar o alerta inserindo a classe <strong>.alert-dismissable</strong> em qualquer alerta e também inserindo um botão de dismiss, que pode ser um botão ou um link.</p>
+
+<div class="example">
+	<div class="alert alert-success alert-dismissable">
+		<a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+		<p><strong>Sucesso!</strong> Você conseguiu, parabéns!</p>
+	</div>
+	<div class="alert alert-info alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		<p><strong>Atenção:</strong> você tem informações importantes para ler.</p>
+	</div>
+</div>
+<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;alert alert-success alert-dismissable&quot;&gt;
+	&lt;a href=&quot;#&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/a&gt;
+	&lt;p&gt;&lt;strong&gt;Sucesso!&lt;/strong&gt; Voc&ecirc; conseguiu, parab&eacute;ns!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-info alert-dismissable&quot;&gt;
+	&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;
+	&lt;p&gt;&lt;strong&gt;Aten&ccedil;&atilde;o:&lt;/strong&gt; voc&ecirc; tem informa&ccedil;&otilde;es importantes para ler.&lt;/p&gt;
 &lt;/div&gt;
 </pre>
-</article>	
+
+<h2>Links internos</h2>
+<p>Para que os links fiquem com estilizados conforme cada alerta, basta inserir os links com a classe <strong>.alert-link</strong></p>
+
+<div class="example">
+	<div class="alert alert-success alert-dismissable">
+		<a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+		<p><strong>Atenção:</strong> você tem informações importantes para ler. <a href="#" class="alert-link">Veja mais detalhes aqui.</a></p>
+	</div>
+</div>
+<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;alert alert-success alert-dismissable&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/a&gt;
+  &lt;p&gt;&lt;strong&gt;Aten&ccedil;&atilde;o:&lt;/strong&gt; voc&ecirc; tem informa&ccedil;&otilde;es importantes para ler. &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;Veja mais detalhes aqui.&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+</article>
