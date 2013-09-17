@@ -1,15 +1,28 @@
 $mobile-left-number: "240px"
 
-body
-	@include transition(all, .25s, linear)
+.left-bar
 
-	.left-bar &
-		-webkit-transform: translate( #{$mobile-left-number}, 0px)
-		@include transition(all, .25s, linear)
+	.header	.container,
+	main.container
+		-webkit-transform: translate3D( #{$mobile-left-number}, 0, 0)
+
+	.header .nav-content,
+	.header .nav-content *
+		-webkit-transform: translate3D( 0, 0, 0)
+
+main.container
+	@include transition(all, .25s, linear)
+	padding-top: 45px
 
 .header
 	border-bottom: 4px solid $gray1
 	background-color: $gray2
+	position: fixed
+	z-index: 1
+	width: 100%
+
+	.container
+		@include transition(all, .25s, linear)
 
 	.project-name
 		overflow: hidden
@@ -39,10 +52,12 @@ body
 		width: #{$mobile-left-number}
 		position: fixed
 		top: 0
+		left: 0
 		z-index: 1
 		overflow: auto
 		background-color: $gray3
-		-webkit-transform: translate(-#{$mobile-left-number}, 0px)
+		-webkit-transform: translate3D( -#{$mobile-left-number}, 0, 0)
+		@include transition(all, .25s, linear)
 
 		&:before
 			content: ""
