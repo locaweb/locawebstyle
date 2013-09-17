@@ -406,7 +406,7 @@ ol.linenums {
 
 .other-guides .channels .channel h3 {
 	color: rgba(255,255,255,0.8)!important;
-	font-size: 0.75em;
+	font-size: .81em;
 }
 
 .other-guides .channels .channel p {
@@ -658,5 +658,12 @@ h1, h2, h3, h4, h5, h6 {margin-top: 20px;}
 		width: auto;
 	}
 }
-
+.box1{
+	font-size: 16px;
+	display: inline-block;
+	width: 15em;
+	padding: .25em .5em;
+	background: #EEE;
+	margin: .5em 1em .5em 0;
+}
 
