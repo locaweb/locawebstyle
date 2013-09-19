@@ -1,84 +1,163 @@
 ---
 title: Componentes - Tooltip ou Popovers
-
 menu_page: sidebar-componentes.erb
 ---
 
 <article class="text">
   <header>
-    <h1>Tooltips ou popover</h1>
+    <h1>Tooltips</h1>
     <h3>Para mostrar balões de informação.</h3>
   </header>
 
-  <p>As opções devem ser passadas via atributo data, <strong>ex: data-animation="false", data-trigger="click".</strong></p>
-
   <div class="example">
-    <label><input type="checkbox"> Um input qualquer <a data-content="Aqui vai um conteúdo maravilhoso para o popover... aceita &lt;b&gt;html&lt;/b&gt;" rel="popover" class="infoBubble" data-original-title="Exemplo de Popover"></a></label>
+  	<p>Lorem ipsum dolor sit amet, <a href="#" data-toggle="tooltip" title="Tooltip padrão">consectetur</a> adipisicing elit. Laborum, veritatis, accusantium, omnis, doloribus at vitae perspiciatis ducimus dolore velit ut ea nisi adipisci quo debitis odit nemo illo doloremque quae!</p>
+  </div>
+  <pre class="lang-html linenums prettyprint">&lt;a href=&quot;#&quot; data-toggle=&quot;tooltip&quot; title=&quot;Tooltip padrão&quot;&gt;consectetur&lt;/a&gt;</pre>
+
+  <h4>Em todas as direções</h4>
+  <p>Use o atributo <code>data-placement</code> para definir a direção do tooltip.</p>
+  <div class="example text-center">
+  	<button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Esquerda">Esquerda</button>
+  	<button class="btn btn-default" data-toggle="tooltip" data-placement="top" title="em Cima">Cima</button>
+  	<button class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="em Baixo">Baixo</button>
+  	<button class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Direita">Direita</button>
+  </div>
+  <pre class="lang-html linenums prettyprint">
+&lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; title=&quot;Esquerda&quot;&gt;
+&lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;em Cima&quot;&gt;
+&lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;bottom&quot; title=&quot;em Baixo&quot;&gt;
+&lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;right&quot; title=&quot;Direita&quot;&gt;
+  </pre>
+
+  <h4>Como usar</h4>
+  <p>Utilize esse formato de Javascript.</p>
+  <pre class="lang-js linenums prettyprint">$('#exemplo').tooltip(options)</pre>
+
+  <h4>Opções</h4>
+  <p>As opções podem ser passadas através de atributos dentro do HTML, acrescentando a opção <code>data-</code>, como em <code>data-animation=""</code>.</p>
+
+  <div class="table-responsive">
+  	<table class="table table-bordered table-striped">
+  		<thead>
+  			<tr>
+		  		<th width="100">Nome</th>
+		  		<th width="100">tipo</th>
+		  		<th width="100">padrão</th>
+		  		<th width="510">descrição</th>
+		  	</tr>
+  		</thead>
+	  	<tbody>
+	  		<tr>
+	  			<td>animation</td>
+	  			<td>boolean</td>
+	  			<td>True</td>
+	  			<td>aplica um CSS fade transition no tooltip.</td>
+	  		</tr>
+	  		<tr>
+	  			<td>html</td>
+	  			<td>boolean</td>
+	  			<td>false</td>
+	  			<td>Insere HTML dentro do tooltip, se falso, o JQuey vai inserir um <code>texto</code> no conteúdo do DOM.</td>
+	  		</tr>
+	  		<tr>
+	  			<td>placement</td>
+	  			<td>string | function</td>
+	  			<td>'top'</td>
+	  			<td>
+	  				como posicionar o tooltip - top | bottom | left | right | auto.
+	  				<br>Quando "auto" é especificado, o tooltip será reorientado dinamicamente.
+	  				Por exemplo, se o placement é "auto left", o tooltip será exibido à esqiuerda quando possível, caso contrário, ele será exibido na direita.
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td>selector</td>
+	  			<td>string</td>
+	  			<td>false</td>
+	  			<td>se um objeto é fornecido, o objeto tooltip será delegado as metas especifícadas.</td>
+	  		</tr>
+	  		<tr>
+	  			<td>title</td>
+	  			<td>string | function</td>
+	  			<td>''</td>
+	  			<td>valor padrão, se não houver <code>title</code>, o tooltip não estará presente.</td>
+	  		</tr>
+	  		<tr>
+	  			<td>trigger</td>
+	  			<td>string</td>
+	  			<td>'hover focus'</td>
+	  			<td>como o tooltip é acionado - click | hover | focus | manual. Você pode passar multiplas ações, separando com espaços.</td>
+	  		</tr>
+	  		<tr>
+	  			<td>delay</td>
+	  			<td>number | object</td>
+	  			<td>0</td>
+	  			<td>
+	  				o delay de show (mostrar) ou hide (ocultar) o tooltip (ms) - não se aplica ao tipo de disparo manual.
+	  				<br>Se um número é fornecido, o delay é aplicado em ambos show/hide.
+	  				<br>A estrutura do objeto é: <code>delay: { show: 500, hide: 100 }</code>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td>container</td>
+	  			<td>string | false</td>
+	  			<td>false</td>
+	  			<td>Anexa o tooltip para um elemento específico. <br>Exemplo: <code>container: 'body'</code></td>
+	  		</tr>
+	  	</tbody>
+	  </table>
   </div>
 
-  <pre class="lang-html prettyprint linenums">
-    &lt;a data-content=&quot;Aqui vai um conte&uacute;do maravilhoso para o popover... aceita &amp;lt;b&amp;gt;html&amp;lt;/b&amp;gt;&quot; rel=&quot;popover&quot; data-original-title=&quot;Exemplo de Popover&quot;&gt;&lt;/a&gt;
-  </pre>
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th style="width: 100px;">Name</th>
-        <th style="width: 100px;">type</th>
-        <th style="width: 50px;">default</th>
-        <th>description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>animation</td>
-        <td>boolean</td>
-        <td>true</td>
-        <td>Aplica uma transição de fade</td>
-      </tr>
-      <tr>
-        <td>placement</td>
-        <td>string|function</td>
-        <td>'right'</td>
-        <td>Onde o popover ficará posicionado - top | bottom | left | right</td>
-      </tr>
-      <tr>
-        <td>selector</td>
-        <td>string</td>
-        <td>false</td>
-        <td>Se um seletor é definido, os objetos do popover será delegado para alvos específicos</td>
-      </tr>
-      <tr>
-        <td>trigger</td>
-        <td>string</td>
-        <td>'hover'</td>
-        <td>Como o popover é ativado - hover | focus | manual</td>
-      </tr>
-      <tr>
-        <td>title</td>
-        <td>string | function</td>
-        <td>''</td>
-        <td>Título padrão do popover se o atributo <b>title</b> não existir</td>
-      </tr>
-      <tr>
-        <td>content</td>
-        <td>string | function</td>
-        <td>''</td>
-        <td>Conteúdo padrão se o <b>data-content</b> não existir</td>
-      </tr>
-      <tr>
-        <td>delay</td>
-        <td>number | object</td>
-        <td>0</td>
-        <td>
-          <p>Delay para mostrar e esconder o popover (ms) - não aplicável para ativação manual.</p>
-          <p>Se um número é fornecido, o delay é aplicado no hide e show.</p>
-          <p>Estrutura do objeto é: <code>delay: { show: 500, hide: 100 }</code></p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+	<h4>Métodos</h4>
+	<h5>$().tooltip(options)</h5>
+	<p>Anexa um marcador para uma sequencia de elementos.</p>
 
-  <h3>Classe .infoBubble</h3>
-  <p>O .infoBubble faz a caixinha azul com o ponto de interrogação aparecer.</p>
+	<h5>.tooltip('show')</h5>
+	<p>Revela o elemento tooltip.</p>
+	<pre class="lang-js linenums prettyprint">$('#exemplo').tooltip('show')</pre>
 
+	<h5>.tooltip('hide')</h5>
+	<p>Esconde o elemento tooltip.</p>
+	<pre class="lang-js linenums prettyprint">$('#exemplo').tooltip('hide')</pre>
+
+	<h5>.tooltip('toggle')</h5>
+	<p>Alterna o elemento tooltip.</p>
+	<pre class="lang-js linenums prettyprint">$('#exemplo').tooltip('toggle')</pre>
+
+	<h5>.tooltip('destroy')</h5>
+	<p>Destrói o elemento tooltip.</p>
+	<pre class="lang-js linenums prettyprint">$('#exemplo').tooltip('destroy')</pre>
+
+	<h4>Eventos</h4>
+	<div class="table-responsive">
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th width="200">Tipo de evento</th>
+					<th width="610">Descrição</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>show.bs.tooltip</td>
+					<td>Este evento é acionado imediatamente quando o método de instância <code>show</code> é chamado.</td>
+				</tr>
+				<tr>
+					<td>shown.bs.tooltip</td>
+					<td>Este evento é disparado quando o tooltip se tornar visível ao usuário (vai esperar para transições CSS para completar).</td>
+				</tr>
+				<tr>
+					<td>hide.bs.tooltip</td>
+					<td>Este evento é acionado imediatamente quando o método de instância <code>hide</code> é chamada.</td>
+				</tr>
+				<tr>
+					<td>hidden.bs.tooltip</td>
+					<td>Este evento é disparado quando o tooltip terminou sendo escondidos do usuário (vai esperar para transições CSS para completar).</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<pre class="lang-js linenums prettyprint">
+$('#myTooltip').on('hidden.bs.tooltip', function () {
+  // Faça algo aqui…
+})</pre>
 </article>
