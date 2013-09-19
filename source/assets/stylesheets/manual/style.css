@@ -268,6 +268,13 @@ ol.linenums {
 }
 
 /*****
+****** TABLE
+*****/
+table {
+	font-size: 0.8em;
+}
+
+/*****
 ****** CHANNELS
 *****/
 .channels {
@@ -521,7 +528,7 @@ h1, h2, h3, h4, h5, h6 {margin-top: 20px;}
 }
 */
 .content > .text > p {
-	font: 0.95em/1.4em "Helvetica Neue", arial, helvetica, tahoma, sans-serif;
+	font: 0.95em/1.8em "Helvetica Neue", arial, helvetica, tahoma, sans-serif;
 	margin-bottom: 15px;
 	color: #212121;
 }
