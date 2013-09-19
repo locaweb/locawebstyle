@@ -4,18 +4,36 @@ locastyle.mobile = (function() {
   'use strict';
 
   function init(){
-    mobileSidebar();
+    mobileLeftBar();
+    mobileRightBar();
+    mobileBarOverlay();
   }
 
-  function mobileSidebar() {
+  function mobileLeftBar() {
     $('.control-menu').on('click', function(){
-      $('html').toggleClass('left-bar')
+      $('html').removeClass('right-bar').toggleClass('left-bar');
     });
+  }
+
+  function mobileRightBar() {
+    $('.control-sidebar').on('click', function(){
+      $('html').toggleClass('right-bar').removeClass('left-bar');
+    });
+  }
+
+  function mobileBarOverlay() {
+    $('body').append('<span class="overlay-bar"></span>');
+
+    $('.overlay-bar').on('click', function(){
+      $('html').removeClass('right-bar').removeClass('left-bar');
+    });
+
   }
 
   return {
     init: init,
-    leftBar: mobileSidebar
+    mobileLeftBar: mobileLeftBar,
+    mobileRightBar: mobileRightBar
   };
 
 }());
