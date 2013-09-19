@@ -1,7 +1,6 @@
 $mobile-left-number: "240px"
 
 .left-bar
-
 	.header	.container,
 	main.container
 		-webkit-transform: translate3D( #{$mobile-left-number}, 0, 0)
@@ -9,6 +8,10 @@ $mobile-left-number: "240px"
 	.header .nav-content,
 	.header .nav-content *
 		-webkit-transform: translate3D( 0, 0, 0)
+
+.right-bar
+	.header
+		z-index: 0
 
 .header
 	border-bottom: 4px solid $gray1
@@ -36,6 +39,9 @@ $mobile-left-number: "240px"
 		font-size: 1.3em
 		margin-top: 8px
 		cursor: pointer
+
+		&:active
+			text-shadow: 0 0 15px #FFF, 0 0 20px #FFF, 0 0 20px #FFF, 0 0 40px #FFF
 
 	.control-sidebar
 		float: right

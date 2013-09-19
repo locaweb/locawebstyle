@@ -5,44 +5,6 @@
 $mobile-sidebar-width: "240px"
 
 //
-// Mobile
-//
-@media (max-width: #{$screen-sm})
-	.sidebar
-		width: #{$mobile-sidebar-width}
-		position: absolute
-		top: -1px
-		right: 0
-		height: 0
-		padding: 0
-		z-index: 1
-		-webkit-transform: translateX(0px)
-
-		.sidebox
-			width: 220px
-
-	.sidebar-inner
-		position: absolute
-		right: -#{$mobile-sidebar-width}
-		top: 0
-		padding: 10px
-		background: #FFF
-
-	.right-bar
-		.sidebar
-			@include transition(all, .25s, linear)
-			padding: 0 10px
-			-webkit-transform: translateX(-#{$mobile-sidebar-width})
-			z-index: 2
-			box-shadow: 0 0 0 800px rgba(0,0,0,0.5)
-
-	main.container
-		padding-top: 46px
-
-		.content
-			position: fixed
-
-//
 // Herdado por todos os tamanhos das telas
 //
 .sidebox
@@ -76,7 +38,7 @@ $mobile-sidebar-width: "240px"
 		line-height: 30px
 		margin: 0 0 10px
 
-		[class^="ico-"]
+		[class*="ico-"]
 			height: 30px
 			width: 30px
 			margin: 0 7px 0 0
@@ -85,7 +47,7 @@ $mobile-sidebar-width: "240px"
 			border-radius: 100%
 			background-color: $gray2
 
-		[class^="ico-"]:before
+		[class*="ico-"]:before
 			color: #FFF
 			font-size: 18px
 			left: 2px
@@ -119,6 +81,63 @@ $mobile-sidebar-width: "240px"
 			padding: 10px
 			display: block
 			margin-bottom: 1px
+
+.overlay-bar
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 0
+	opacity: 0
+	background: #000
+	@include transition(all, .20s, linear)
+
+//
+// Mobile
+//
+@media (max-width: #{$screen-sm})
+
+	main.container
+		padding-top: 46px
+
+	.sidebar
+		@include transition(all, .20s, linear)
+		width: #{$mobile-sidebar-width}
+		position: absolute
+		top: -1px
+		right: 0
+		height: 0
+		padding: 0
+		z-index: 2
+		-webkit-transform: translateX(0px)
+
+		.sidebox
+			width: 220px
+
+		.sidebar-inner
+			position: absolute
+			right: -#{$mobile-sidebar-width}
+			top: 0
+			padding: 10px
+			background: #FFF
+
+	.right-bar
+		.sidebar
+			padding: 0 10px
+			-webkit-transform: translateX(-#{$mobile-sidebar-width})
+			z-index: 2
+
+		.sidebar-inner
+			box-shadow: 0 0 10px 10px rgba(0,0,0,.3)
+
+		main.container .content
+			position: fixed
+
+		.overlay-bar
+			opacity: 0.5
+			z-index: 1
+
 
 //
 // Desktops
