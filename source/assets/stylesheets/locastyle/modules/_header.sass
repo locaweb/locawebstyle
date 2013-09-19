@@ -10,10 +10,6 @@ $mobile-left-number: "240px"
 	.header .nav-content *
 		-webkit-transform: translate3D( 0, 0, 0)
 
-main.container
-	@include transition(all, .25s, linear)
-	padding-top: 45px
-
 .header
 	border-bottom: 4px solid $gray1
 	background-color: $gray2
@@ -120,7 +116,9 @@ main.container
 				display: block
 				padding: 10px
 
+//
 // Desktops
+//
 @media (min-width: #{$screen-sm})
 	@import "../base/functionalclasses"
 
