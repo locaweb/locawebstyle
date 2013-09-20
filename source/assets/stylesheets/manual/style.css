@@ -47,6 +47,11 @@ hr {
 	background-color: #f0f7fd;
 	border-color: #d0e3f0;
 }
+.bs-callout-danger {
+	background-color: #fcf2f2;
+	border-color: #dFb5b4;
+}
+
 /*****
 ****** CODE PARTS
 *****/
