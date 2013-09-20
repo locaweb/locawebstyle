@@ -33,6 +33,34 @@ hr {
 	color: #666;
 	padding: 5px 10px;
 }
+.example-popover {
+	overflow: hidden;
+}
+.example-popover .popover {
+	display: block;
+	position: relative;
+	float: left;
+	width: 260px;
+	margin: 20px;
+}
+.popover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1010;
+	display: none;
+	max-width: 276px;
+	padding: 1px;
+	text-align: left;
+	white-space: normal;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 6px;
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	background-clip: padding-box;
+}
 .bs-callout {
 	margin: 20px 0;
 	padding: 15px 30px 15px 15px;
