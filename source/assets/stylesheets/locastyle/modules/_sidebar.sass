@@ -82,17 +82,6 @@ $mobile-sidebar-width: "240px"
 			display: block
 			margin-bottom: 1px
 
-.overlay-bar
-	width: 100%
-	height: 100%
-	position: fixed
-	top: 0
-	left: 0
-	z-index: 0
-	opacity: 0
-	background: #000
-	@include transition(all, .20s, linear)
-
 //
 // Mobile
 //
@@ -122,6 +111,20 @@ $mobile-sidebar-width: "240px"
 			padding: 10px
 			background: #FFF
 
+	.overlay-bar
+		width: 100%
+		height: 100%
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 0
+		opacity: 0
+		background: #000
+		@include transition(all, .20s, linear)
+
+	//
+	// Quando está com a sidebar da direita aparecendo
+	//
 	.right-bar
 		.sidebar
 			padding: 0 10px
@@ -137,7 +140,6 @@ $mobile-sidebar-width: "240px"
 		.overlay-bar
 			opacity: 0.5
 			z-index: 1
-
 
 //
 // Desktops
