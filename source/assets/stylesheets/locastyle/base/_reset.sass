@@ -1,9 +1,21 @@
 *
 	margin: 0
 	padding: 0
+	-webkit-overflow-scrolling: touch
 
 body
 	line-height: inherit
 
 .progress-bar span
 	vertical-align: middle
+
+//
+// Desktops
+//
+@media (min-width: #{$screen-sm})
+	main.container
+		padding-top: 0
+		-moz-transition: none
+		-webkit-transition: none
+		-o-transition: color 0 ease-in
+		transition: none

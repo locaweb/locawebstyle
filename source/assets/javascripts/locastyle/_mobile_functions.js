@@ -11,7 +11,7 @@ locastyle.mobile = (function() {
 
   function mobileLeftBar() {
     $('.control-menu').on('click touchstart', function(e){
-      $('html').removeClass('right-bar').toggleClass('left-bar');
+      $('html').toggleClass('left-bar').removeClass('right-bar');
       e.preventDefault();
     });
   }

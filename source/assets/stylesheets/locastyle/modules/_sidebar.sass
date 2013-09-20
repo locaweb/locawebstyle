@@ -5,8 +5,16 @@
 $mobile-sidebar-width: "240px"
 
 //
-// Herdado por todos os tamanhos das telas
+// Sidebar
 //
+.sidebar
+	height: 100%
+	overflow: auto
+	-webkit-overflow-scrolling: touch
+	position: fixed
+	top: -1px
+	right: 0
+
 .sidebox
 	margin-bottom: 20px
 	padding: 10px
@@ -28,9 +36,7 @@ $mobile-sidebar-width: "240px"
 	[class*="ico-"]
 		font-size: .81em
 
-	//
-	// Definimos como serão os títulos da Sidebar
-	//
+	// Padrão dos títulos da Sidebar
 	.sidebox-title
 		color: $gray1
 		font-size: 1.375em
@@ -52,9 +58,7 @@ $mobile-sidebar-width: "240px"
 			font-size: 18px
 			left: 2px
 
-	//
 	// Textos de status de informações da sidebar
-	//
 	.status-text
 		font-size: .68em
 
@@ -66,9 +70,7 @@ $mobile-sidebar-width: "240px"
 		small
 			font-size: .9em
 
-	//
 	// Listagem padrão da sidebar
-	//
 	.sidebox-list
 		li
 			list-style: none
@@ -86,60 +88,19 @@ $mobile-sidebar-width: "240px"
 // Mobile
 //
 @media (max-width: #{$screen-sm})
-
-	main.container
-		padding-top: 46px
-
 	.sidebar
-		@include transition(all, .20s, linear)
-		width: #{$mobile-sidebar-width}
-		position: absolute
-		top: -1px
-		right: 0
-		height: 0
-		padding: 0
+		padding: 10px
+		background: #FFF
 		z-index: 2
-		-webkit-transform: translateX(0px)
+		width: #{$mobile-sidebar-width}
 
-		.sidebox
-			width: 220px
-
-		.sidebar-inner
-			position: absolute
-			right: -#{$mobile-sidebar-width}
-			top: 0
-			padding: 10px
-			background: #FFF
-
+	// Define características do Overlay que aparece quando usamos sidebar
 	.overlay-bar
-		width: 100%
-		height: 100%
 		position: fixed
 		top: 0
 		left: 0
-		z-index: 0
-		opacity: 0
 		background: #000
-		@include transition(all, .20s, linear)
 
-	//
-	// Quando está com a sidebar da direita aparecendo
-	//
-	.right-bar
-		.sidebar
-			padding: 0 10px
-			-webkit-transform: translateX(-#{$mobile-sidebar-width})
-			z-index: 2
-
-		.sidebar-inner
-			box-shadow: 0 0 10px 10px rgba(0,0,0,.3)
-
-		main.container .content
-			position: fixed
-
-		.overlay-bar
-			opacity: 0.5
-			z-index: 1
 
 //
 // Desktops
