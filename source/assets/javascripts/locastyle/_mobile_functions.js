@@ -10,21 +10,23 @@ locastyle.mobile = (function() {
   }
 
   function mobileLeftBar() {
-    $('.control-menu').on('click', function(){
-      $('html').removeClass('right-bar').toggleClass('left-bar');
+    $('.control-menu').on('click touchstart', function(e){
+      $('html').toggleClass('left-bar').removeClass('right-bar');
+      e.preventDefault();
     });
   }
 
   function mobileRightBar() {
-    $('.control-sidebar').on('click', function(){
+    $('.control-sidebar').on('click touchstart', function(e){
       $('html').toggleClass('right-bar').removeClass('left-bar');
+      e.preventDefault();
     });
   }
 
   function mobileBarOverlay() {
     $('body').append('<span class="overlay-bar"></span>');
 
-    $('.overlay-bar').on('click', function(){
+    $('.overlay-bar').on('click touchstart', function(){
       $('html').removeClass('right-bar').removeClass('left-bar');
     });
 
