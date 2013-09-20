@@ -1,0 +1,220 @@
+---
+title: Componentes - Popover
+menu_page: sidebar-componentes.erb
+---
+
+<article class="text">
+	<header>
+		<h1>Popover</h1>
+	</header>
+	<div class="bs-callout bs-callout-danger">
+		<h4>Dependencia de plugin</h4>
+		<p>Popovers necessita do <%= link_to "Plugin Tooltip", "#{base_url}/manual/componentes/tooltip" %> incluido no projeto.<p>
+	</div>
+	<div class="bs-callout bs-callout-info">
+		<h4>Popover em botões necessitam de uma configuração especial</h4>
+		<p>Quando usado popovers em elementos com uma classe <code>.btn-group</code> ou <code>.input-group</code>, você precisa especificar a opção <code>container: 'body'</code> para evitar efeitos colaterais indesejados.</p>
+	</div>
+
+	<h4>Popover estático</h4>
+	<p>Quatro opções disponíveis: top, right, bottom e lefta linhados.</p>
+	<div class="example example-popover">
+
+		<div class="popover top">
+			<div class="arrow"></div>
+			<h3 class="popover-title">Popover no Topo</h3>
+			<div class="popover-content">
+				<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+			</div>
+		</div>
+
+		<div class="popover right">
+			<div class="arrow"></div>
+			<h3 class="popover-title">Popover Direita</h3>
+			<div class="popover-content">
+				<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+			</div>
+		</div>
+
+		<div class="popover bottom">
+			<div class="arrow"></div>
+			<h3 class="popover-title">Popover em Baixo</h3>
+			<div class="popover-content">
+				<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+			</div>
+		</div>
+
+		<div class="popover left">
+			<div class="arrow"></div>
+			<h3 class="popover-title">Popover esquerda</h3>
+			<div class="popover-content">
+				<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+			</div>
+		</div>
+	</div>
+
+	<h4>Demo</h4>
+	<div class="example">
+		<div class="btn btn-lg btn-danger" data-toggle="popover" title="Um Título" data-content="And here's some amazing content. It's very engaging. right?">Clique para visualizar</div>
+	</div>
+
+	<h4>Nas quatro direções</h4>
+	<p>Usando o atributo <code>data-placement=""</code> com as opções <code>left</code>, <code>top</code>, <code>bottom</code> e <code>right</code>.</p>
+	<div class="example text-center">
+		<button class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Um texto bem legal a esquerda.">esquerda</button>
+		<button class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Um texto bem legal em cima.">esquerda</button>
+		<button class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Um texto bem legal em baixo.">esquerda</button>
+		<button class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Um texto bem legal a direita.">esquerda</button>
+	</div>
+
+	<h4>Como usar</h4>
+	<p>Habilite o popover via JavaScript.</p>
+	<pre class="lang-js linenums prettyprint">$('#exemplo').popover(options)</pre>
+
+	<h4>Opções</h4>
+	<p>As opções podem ser passadas via atributos de dados ou JavaScript. Para os atributos de dados, acrescente o nome da opção <code>data-</code>, como em <code>data-animation=""</code>.</p>
+	<div class="table-responsive">
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th width="100">Nome</th>
+					<th width="100">Tipo</th>
+					<th width="50">Padrão</th>
+					<th>Descrição</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>animation</td>
+					<td>boolean</td>
+					<td>true</td>
+					<td>aplica um CSS fade transition no popover.</td>
+				</tr>
+				<tr>
+					<td>html</td>
+					<td>boolean</td>
+					<td>false</td>
+					<td>Insere HTML dentro do popover, se falso, o JQuey vai inserir um texto no conteúdo do DOM.</td>
+				</tr>
+				<tr>
+					<td>placement</td>
+					<td>string | function</td>
+					<td>'right'</td>
+					<td>
+						como posicionar o popover - top | bottom | left | right | auto.
+						<br>Quando "auto" é especificado, o popover será reorientado dinamicamente. Por exemplo, se o placement é "auto left", o tooltip será exibido à esquerda quando possível, caso contrário, ele será exibido na direita.
+					</td>
+				</tr>
+				<tr>
+					<td>selector</td>
+					<td>string</td>
+					<td>false</td>
+					<td>
+						Se um seletor é fornecido, o objeto do tooltip será delegado para ele. Na pratica, isso é é usado para permitir que o popover tenha conteúdo HTML dinâmico.
+					</td>
+				</tr>
+				<tr>
+					<td>trigger</td>
+					<td>string</td>
+					<td>'click'</td>
+					<td>como o popover é acionado - click | hover | focus | manual</td>
+				</tr>
+				<tr>
+					<td>title</td>
+					<td>string | function</td>
+					<td>''</td>
+					<td>valor padrão, se não houver o atributo <code>title</code>, ele não estará presente.</td>
+				</tr>
+				<tr>
+					<td>content</td>
+					<td>string | function</td>
+					<td>''</td>
+					<td>valor padrão, se não houver o atributo <code>data-content</code>, ele não estará presente.</td>
+				</tr>
+				<tr>
+					<td>delay</td>
+					<td>number | object</td>
+					<td>0</td>
+					<td>
+						o delay de show (mostrar) ou hide (ocultar) o popover (ms) - não se aplica ao tipo de disparo manual.
+	  				<br>Se um número é fornecido, o delay é aplicado em ambos show/hide.
+	  				<br>A estrutura do objeto é: <code>delay: { show: 500, hide: 100 }</code>
+					</td>
+				</tr>
+				<tr>
+					<td>container</td>
+					<td>string | false</td>
+					<td>false</td>
+					<td>
+						Acrescenta o popover a um elemento específico.
+						<br>Exemplo: <code>continer: 'body'</code>.
+						<br>Está opção é particularmente útil na medida em que permite posicionar o popover no fluxo do documento próximo do elemento - gatilho que irá impedir que o popover flutuem para longe do elemento de disparo, durante um redimensionamento da janela.
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="bs-callout bs-callout-info">
+		<h4>Atributos de dados para popovers individuais</h4>
+		<p>Opções para popovers individuais podem, alternativamente, ser especificados através da utilização de dados de atributos, tal como explicado acima.</p>
+	</div>
+
+	<h4>Remarcação</h4>
+	<p>Options for individual popovers can alternatively be specified through the use of data attributes, as explained above.</p>
+
+	<h4>Métodos</h4>
+	<h5>$().popover(options)</h5>
+	<p>Anexa um marcador para uma sequencia de elementos.</p>
+
+	<h5>.popover('show')</h5>
+	<p>Revela o elemento popover.</p>
+	<pre class="lang-js linenums prettyprint">$('#exemplo').popover('show')</pre>
+
+	<h5>.popover('hide')</h5>
+	<p>Escondo o elemento popover.</p>
+	<pre class="lang-js linenums prettyprint">$('#exemplo').popover('hide')</pre>
+
+	<h5>.popover('toggle')</h5>
+	<p>Alterna o elemento popover.</p>
+	<pre class="lang-js linenums prettyprint">$('#exemplo').popover('toggle')</pre>
+
+	<h5>.popover('destroy')</h5>
+	<p>Destrói o elemento popover.</p>
+	<pre class="lang-js linenums prettyprint">$('#exemplo').popover('destroy')</pre>
+
+	<h4>Eventos</h4>
+	<div class="table-responsive">
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th width="150">Tipo de evento</th>
+					<th>Descrição</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>show.bs.popover</td>
+					<td>Este evento é acionado imediatamente quando o método de instância <code>show</code> é chamado.</td>
+				</tr>
+				<tr>
+					<td>shown.bs.popover</td>
+					<td>Este evento é disparado quando o popover foi tornado visível ao usuário (vai esperar para transições CSS se completarem).</td>
+				</tr>
+				<tr>
+					<td>hide.bs.popover</td>
+					<td>Este evento é acionado imediatamente quando o método de instância <code>hide</code> foi chamado.</td>
+				</tr>
+				<tr>
+					<td>hidden.bs.popover</td>
+					<td>Este evento é disparado quando o popover terminou sendo escondido do usuário (vai esperar para transições CSS se completarem).</td>
+				</tr>
+			</tbody>
+		</table>
+		<pre class="lang-js linenums prettyprint">
+$('#myPopover').on('hidden.bs.popover', function () {
+  // Faça algo aqui…
+})</pre>
+	</div>
+
+
+</article>
