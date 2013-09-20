@@ -4,138 +4,136 @@ layout: false
 ---
 <!DOCTYPE html>
 <html lang="pt-br" class="color-green">
-<head>
-	<title>Locaweb Style</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta charset="utf-8">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="<%= base_url + bootstrap_css %>">
-	<%= stylesheet_link_tag "locastyle" %>
-</head>
-<body>
-<header class="header" role="banner">
-	<div class="container">
-		<span class="control-menu visible-xs ico-menu-2"></span>
-		<span class="control-sidebar visible-xs ico-list"></span>
-		<h1 class="project-name"><a href="#">Email Marketing</a></h1>
-		<a href="#" class="help-sugestions ico-help-circle hidden-xs">Ajuda e Sugestões</a>
+	<head>
+		<title>Locaweb Style</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="<%= base_url + bootstrap_css %>">
+		<%= stylesheet_link_tag "locastyle" %>
+	</head>
+	<body>
+		<header class="header" role="banner">
+			<div class="container">
+				<span class="control-menu visible-xs ico-menu-2"></span>
+				<span class="control-sidebar visible-xs ico-list"></span>
+				<h1 class="project-name"><a href="#">Email Marketing</a></h1>
+				<a href="#" class="help-sugestions ico-help-circle hidden-xs">Ajuda e Sugestões</a>
 
-		<div class="dropdown hidden-xs">
-			<a href="#" data-toggle="dropdown" class="title-dropdown">emkt2013</a>
-			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-				<li><a href="#" role="menuitem">Option 1</a></li>
-				<li><a href="#" role="menuitem">Option 2</a></li>
-				<li><a href="#" role="menuitem">Option 3</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="nav-content">
-		<menu class="menu">
-			<ul class="container">
-				<li><a href="#" class="active ico-home" role="menuitem">Home</a></li>
-				<li><a href="#" role="menuitem">Lista de contatos</a></li>
-				<li><a href="#" role="menuitem">Mensagens</a></li>
-				<li><a href="#" role="menuitem">Campanhas</a></li>
-				<li><a href="#" role="menuitem">Templates</a></li>
-				<li><a href="#" role="menuitem">Relatórios</a></li>
-				<li><a href="#" role="menuitem">Configurações</a></li>
-			</ul>
-		</menu>
-		<h2 class="title-sep visible-xs">Mais</h2>
-		<ul class="nav-mob-list visible-xs">
-			<li><a href="#" class="ico-help-circle">Ajuda e sugestões</a></li>
-		</ul>
-	</div>
-
-</header>
-
-<main class="container">
-<div class="row">
-
-	<div class="col-md-9 content" role="main">
-
-		<div class="shortcut row">
-			<div class="col-md-4">
-				<h1><a href="#">Cadastre seus contatos</a></h1>
+				<div class="dropdown hidden-xs">
+					<a href="#" data-toggle="dropdown" class="title-dropdown">emkt2013</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li><a href="#" role="menuitem">Option 1</a></li>
+						<li><a href="#" role="menuitem">Option 2</a></li>
+						<li><a href="#" role="menuitem">Option 3</a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="col-md-4">
-				<h1><a href="#">Crie e Envie mensagens</a></h1>
+			<div class="nav-content">
+				<menu class="menu">
+					<ul class="container">
+						<li><a href="#" class="active ico-home" role="menuitem">Home</a></li>
+						<li><a href="#" role="menuitem">Lista de contatos</a></li>
+						<li><a href="#" role="menuitem">Mensagens</a></li>
+						<li><a href="#" role="menuitem">Campanhas</a></li>
+						<li><a href="#" role="menuitem">Templates</a></li>
+						<li><a href="#" role="menuitem">Relatórios</a></li>
+						<li><a href="#" role="menuitem">Configurações</a></li>
+					</ul>
+				</menu>
+				<h2 class="title-sep visible-xs">Mais</h2>
+				<ul class="nav-mob-list visible-xs">
+					<li><a href="#" class="ico-help-circle">Ajuda e sugestões</a></li>
+				</ul>
 			</div>
-			<div class="col-md-4">
-				<h1><a href="#">Acompanhe os resultados</a></h1>
+		</header>
+
+		<main class="container">
+			<div class="row">
+
+				<div class="col-md-9 content" role="main">
+					<div class="shortcut row">
+						<div class="col-md-4">
+							<h1><a href="#">Cadastre seus contatos</a></h1>
+						</div>
+						<div class="col-md-4">
+							<h1><a href="#">Crie e Envie mensagens</a></h1>
+						</div>
+						<div class="col-md-4">
+							<h1><a href="#">Acompanhe os resultados</a></h1>
+						</div>
+					</div>
+					<h1>Teste</h1>
+					<p>There may be times when you need to hide the overflow (scrollbars) being visible on a page. You can specify to have all scrollbars hidden or the x and y scroll bars separately. When trying to hide the overflow of a project I was working on I realized that the ‘overflow:hidden’ was not working on the Safari browser. This was very frustrating because it worked on all other browsers except Safari. Well, there is a very simple solution to solve this problem… All you have to do is set that element to have a relative position. For instance, if you were to specify for the body to hide the horizontal scrollbars you would want to have the following css in your stylesheet:</p>
+				</div>
+				<aside class="sidebar col-md-3" role="complementary">
+					<div class="sidebar-inner">
+						<section class="sidebox">
+							<h1 class="sidebox-title"> <span class="ico-user"></span> Dados da conta</h1>
+							<div class="bg-layer-1">
+								<span class="status-text">Plano
+									<b>Email Marketing III</b>
+								</span>
+								<hr>
+								<span class="status-text">Saldo Mensal
+									<b>10.000 envios</b>
+									<small>*Válido até 31/01/2012</small>
+								</span>
+							</div>
+							<a href="#" class="ico-arrow-right">Alterar Plano</a>
+						</section>
+
+						<section class="sidebox">
+							<h1 class="sidebox-title"><span class="ico-flag"></span>Dicas</h1>
+							<div class="bg-layer-1">
+								<h2 class="title-6">Cuidado com os bounces</h2>
+								<p>Bounces são tipos diversos de problemas que impedem que um contato receba a mensagem enviada.</p>
+								<p>Por exemplo: e-mail inválido, caixa postal cheia, lentidão no servidor do destinatário, etc.</p>
+							</div>
+						</section>
+
+						<section class="sidebox">
+							<h1 class="sidebox-title"><span class="ico-question"></span>Ajuda e suporte</h1>
+							<ul class="sidebox-list">
+								<li><a href="" class="ico-redo-2 ico-pos-right">Central de Ajuda (Wiki)</a></li>
+								<li><a href="" class="ico-redo-2 ico-pos-right">Suporte 24hs</a></li>
+							</ul>
+						</section>
+					</div>
+				</aside>
+
 			</div>
-		</div>
-		<h1>Teste</h1>
-		<p>There may be times when you need to hide the overflow (scrollbars) being visible on a page. You can specify to have all scrollbars hidden or the x and y scroll bars separately. When trying to hide the overflow of a project I was working on I realized that the ‘overflow:hidden’ was not working on the Safari browser. This was very frustrating because it worked on all other browsers except Safari. Well, there is a very simple solution to solve this problem… All you have to do is set that element to have a relative position. For instance, if you were to specify for the body to hide the horizontal scrollbars you would want to have the following css in your stylesheet:</p>
-	</div>
-	<aside class="sidebar col-md-3" role="complementary">
-<div class="sidebar-inner">
-		<section class="sidebox">
-			<h1 class="sidebox-title"> <span class="ico-user"></span> Dados da conta</h1>
-			<div class="bg-layer-1">
-				<span class="status-text">Plano
-					<b>Email Marketing III</b>
-				</span>
-				<hr>
-				<span class="status-text">Saldo Mensal
-					<b>10.000 envios</b>
-					<small>*Válido até 31/01/2012</small>
-				</span>
+		</main>
+
+		<footer class="footer">
+			<div class="footer-top">
+				<div class="container">
+					<nav>
+						<h2 class="f-left">atendimento</h2>
+						<ul class="no-liststyle">
+							<li><a href="#" class="ico-monitor">HelpDesk</a></li>
+							<li><a href="#" class="ico-bubble">Chat</a></li>
+							<li><a href="#" class="ico-phone">Telefone</a></li>
+						</ul>
+						<a href="#" class="ico-arrow-right f-right">Ver todas as formas de atendimento</a>
+					</nav>
+				</div>
 			</div>
-			<a href="#" class="ico-arrow-right">Alterar Plano</a>
-		</section>
-
-		<section class="sidebox">
-			<h1 class="sidebox-title"><span class="ico-flag"></span>Dicas</h1>
-			<div class="bg-layer-1">
-				<h2 class="title-6">Cuidado com os bounces</h2>
-				<p>Bounces são tipos diversos de problemas que impedem que um contato receba a mensagem enviada.</p>
-				<p>Por exemplo: e-mail inválido, caixa postal cheia, lentidão no servidor do destinatário, etc.</p>
+			<div class="footer-base">
+				<div class="container">
+					<span class="last-access ico-monitor-screen">
+						<strong>Último acesso: </strong>7/8/2011 22:35:49 <strong>IP:</strong> 201.87.65.217
+					</span>
+					<span class="copy-right f-right">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</span>
+				</div>
 			</div>
-		</section>
+		</footer>
 
-		<section class="sidebox">
-			<h1 class="sidebox-title"><span class="ico-question"></span>Ajuda e suporte</h1>
-			<ul class="sidebox-list">
-				<li><a href="" class="ico-redo-2 ico-pos-right">Central de Ajuda (Wiki)</a></li>
-				<li><a href="" class="ico-redo-2 ico-pos-right">Suporte 24hs</a></li>
-			</ul>
-		</section>
-</div>
-	</aside>
+		<%= javascript_include_tag "libs" %>
+		<%= javascript_include_tag "locastyle" %>
+		<script src="<%= base_url + bootstrap_js %>"></script>
 
-</div>
-</main>
-
-<footer class="footer">
-  <div class="footer-top">
-    <div class="container">
-      <nav>
-        <h2 class="f-left">atendimento</h2>
-        <ul class="no-liststyle">
-        	<li><a href="#" class="ico-monitor">HelpDesk</a></li>
-          <li><a href="#" class="ico-bubble">Chat</a></li>
-          <li><a href="#" class="ico-phone">Telefone</a></li>
-        </ul>
-        <a href="#" class="ico-arrow-right f-right">Ver todas as formas de atendimento</a>
-      </nav>
-    </div>
-  </div>
-  <div class="footer-base">
-    <div class="container">
-	      <span class="last-access ico-monitor-screen">
-	        <strong>Último acesso: </strong>7/8/2011 22:35:49 <strong>IP:</strong> 201.87.65.217
-	      </span>
-	      <span class="copy-right f-right">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</span>
-    </div>
-  </div>
-</footer>
-
-	<%= javascript_include_tag "libs" %>
-	<%= javascript_include_tag "locastyle" %>
-	<script src="<%= base_url + bootstrap_js %>"></script>
-
-</body>
+	</body>
 </html>
