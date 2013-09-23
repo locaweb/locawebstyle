@@ -18,14 +18,29 @@ a
 	+ .container
 		clear: both
 
-@media (max-width: #{$screen-xs})
-	main.container
-		@include transition(all, .25s, linear)
-		padding-top: 45px
-		overflow: hidden
+main.container
+	clear: both
 
-		.content
-			height: 100%
-			overflow: auto
-			-webkit-overflow-scrolling: touch
+// Define características do Overlay que aparece quando usamos sidebar
+.overlay-bar
+	@include transition(all, .20s, linear)
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 1
+	background: #000
+	opacity: 0
+	visibility: hidden
+	width: 100%
+	height: 100%
+
+@media #{$media-mobile}
+	main.container .content
+		padding-top: 45px
+		position: fixed
+		overflow: auto
+		-webkit-overflow-scrolling: touch
+		height: 100%
+		background-color: #FFF
+
 
