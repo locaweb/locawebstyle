@@ -8,9 +8,7 @@ $mobile-left-number: "240px"
 	left: 0
 	z-index: 1
 	width: 100%
-
-	.container
-		@include transition(all, .25s, linear)
+	opacity: 0.95
 
 	.project-name
 		overflow: hidden
@@ -40,87 +38,91 @@ $mobile-left-number: "240px"
 		float: left
 		margin-left: -12px
 
-	.nav-content
-		height: 100%
-		width: #{$mobile-left-number}
-		position: fixed
+.title-sep
+	color: #fff
+	background-color: #3b3b3b
+	font: .68em ralewaybold
+	padding: 5px 0 5px 12px
+	margin-bottom: 5px
+	box-shadow: inset 0px -1px 0 0 rgba(0, 0, 0, 1)
+	border-top: 1px solid #767676
+	border-bottom: 1px solid #4a4a4a
+
+	a
+		color: #fff
+		font-size: .81em
+		display: block
+		padding: 10px
+
+.nav-mob-list > li > a
+	font-size: .75em
+	color: #fff
+	display: block
+	padding-left: 10px
+
+	&:before
+		opacity: 0.3
+		font-size: 1.2em
+
+.nav-content
+	-webkit-overflow-scrolling: touch
+	height: 100%
+	width: #{$mobile-left-number}
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 0
+	overflow: auto
+	background-color: $gray3
+
+	&:before
+		content: ""
+		position: absolute
+		right: 0
 		top: 0
-		left: 0
-		z-index: 1
-		overflow: auto
-		background-color: $gray3
+		width: 15px
+		height: 100%
+		box-shadow: inset -5px 0 5px 0 rgba(0, 0, 0, 0.2)
 
-		&:before
-			content: ""
-			position: absolute
-			right: 0
-			top: 0
-			width: 15px
-			height: 100%
-			box-shadow: inset -5px 0 5px 0 rgba(0, 0, 0, 0.2)
-
-		.nav-mob-list > li > a
-			font-size: .75em
-			color: #fff
-			display: block
-			padding-left: 10px
-
-			&:before
-				opacity: 0.3
-				font-size: 1.2em
-
-		.menu
-			ul
-				list-style: none
-				margin: 0
-				padding: 0
-
-				a
-					background-color: #303030
-					display: block
-					padding: 13px 0 13px 10px
-					margin: 0 0 1px 0
-					border-left: 3px solid $gray1
-					color: #fff
-					text-transform: uppercase
-					font: .81em ralewaybold
-
-					&:focus,
-					&:active,
-					&.active
-						background-color: $gray1
-						border-left-color: $gray3
-
-					&.ico-home
-						&:before
-							display: none
-
-		.title-sep
-			color: #fff
-			background-color: #3b3b3b
-			font: .68em ralewaybold
-			padding: 5px 0 5px 12px
-			margin-bottom: 5px
-			box-shadow: inset 0px -1px 0 0 rgba(0, 0, 0, 1)
-			border-top: 1px solid #767676
-			border-bottom: 1px solid #4a4a4a
+	.menu
+		ul
+			list-style: none
+			margin: 0
+			padding: 0
 
 			a
-				color: #fff
-				font-size: .81em
+				margin-bottom: 1px
+				background-color: #303030
 				display: block
-				padding: 10px
+				padding: 13px 0 13px 10px
+				border-left: 3px solid $gray1
+				color: #fff
+				text-transform: uppercase
+				font: .81em ralewaybold
+
+				&:focus,
+				&:active,
+				&.active
+					background-color: $gray1
+					border-left-color: $gray3
+
+				&.ico-home
+					&:before
+						display: none
+
 
 //
-// Desktops
+// Essa formatação começa a partir do TABLET
 //
-@media (min-width: #{$screen-sm})
+@media #{$media-tablet}
 	@import "../base/functionalclasses"
 
 	.header
 		border-top: 4px solid #bbb
+		border-bottom: 0
 		background-color: #FFF !important
 		margin-bottom: 10px
+		z-index: 0
 		position: static
 
 		.container
@@ -161,70 +163,79 @@ $mobile-left-number: "240px"
 				@include arrow-down(#000, 5px)
 				margin: 0 0 0 5px
 
-		.nav-content
-			width: 100%
-			height: auto
-			overflow: inherit
-			position: static
-			margin-top: 25px
-			-webkit-transform: translate( 0px, 0px)
-			-moz-transition: none
-			-webkit-transition: none
-			-o-transition: color 0 ease-in
-			transition: none
+	.nav-content
+		border-bottom: 4px solid $gray1
+		width: 100%
+		height: auto
+		overflow: inherit
+		position: static
+		margin-top: 25px
+		-webkit-transform: translate( 0px, 0px)
+		-moz-transition: none
+		-webkit-transition: none
+		-o-transition: color 0 ease-in
+		transition: none
 
-			&:before
-				display: none
+		&:before
+			display: none
 
-			.menu
-				height: 44px
+		.menu
+			height: 44px
 
-				ul
-					margin-left: auto
-					margin-right: auto
-					line-height: 0
+			ul
+				margin-left: auto
+				margin-right: auto
+				line-height: 0
 
-					li
-						float: left
+				li
+					float: left
 
-						&:after
-							content: ""
-							display: inline-block
-							vertical-align: middle
-							width: 1px
-							height: 30px
-							margin: 0 3px
-							background: transparent url(#{$image_path}dot-menu.png) no-repeat center center
+					&:after
+						content: ""
+						display: inline-block
+						vertical-align: middle
+						width: 1px
+						height: 30px
+						margin: 0 3px
+						background: transparent url(#{$image_path}dot-menu.png) no-repeat center center
 
-						&:last-child:after
-							display: none
+					&:last-child:after
+						display: none
 
-						a
-							border: none
-							padding: 15px 15px 13px
-							margin-left: 15px
-							display: inline-block
-							background-color: transparent
-							font: .88em ralewaybold
+					a
+						border: none
+						padding: 15px 8px 13px
+						margin-bottom: 0
+						margin-left: 15px
+						display: inline-block
+						font-size: .78em
+						background-color: transparent
 
-							&:first-child
-								margin-left: 0
+						&:first-child
+							margin-left: 0
 
-							&.active,
-							&:focus,
-							&:hover
-								text-decoration: none
-								background-color: $gray1
-								border-bottom: 4px solid $gray3
+						&.active,
+						&:focus,
+						&:hover
+							text-decoration: none
+							background-color: $gray1
+							border-bottom: 4px solid $gray3
 
-							&.ico-home
-								padding: 14px 0 9px
-								text-indent: -9999px
-								width: 50px
+						&.ico-home
+							padding: 14px 0 9px
+							text-indent: -9999px
+							width: 50px
 
-								&:before
-									display: block
-									float: left
-									font-size: 1.5em
-									left: 15px
-									text-indent: 0
+							&:before
+								display: block
+								float: left
+								font-size: 1.5em
+								left: 15px
+								text-indent: 0
+
+//
+// Formatação específica para Desks
+//
+@media #{$media-desk}
+	.menu a
+		font-size: .88em !important

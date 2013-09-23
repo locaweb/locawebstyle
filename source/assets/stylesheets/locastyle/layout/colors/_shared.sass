@@ -9,6 +9,9 @@
 		background-color: $color1
 		border-bottom-color: $color3
 
+	.nav-content
+		border-bottom-color: $color3
+
 		.menu
 			ul li a
 				border-left-color: $color1
@@ -34,10 +37,11 @@
 	.dropdown-menu
 		a:hover
 			background-color: $color1
+
 //
-// Cores desktop
+// Cores do tablet para Desktop
 //
-@media (min-width: #{$screen-sm})
+@media #{$media-tablet}
 	#{$theme-color}
 
 		.header
@@ -50,12 +54,12 @@
 				&:hover
 					background-color: $color5
 
-			.nav-content
-				background-color: $color1
-
 			.project-name
 				a
 					color: $color1
+
+		.nav-content
+			background-color: $color1
 
 			.menu
 				ul li a

@@ -7,25 +7,21 @@ $screen-sm: "768px"
 $screen-md: "992px"
 $screen-lg: "1200px"
 
-//
-// Até 480px (que se refere a screen-xs) não tem media querie, já que é escrito inicialmente para aparelhos deste tamanho
-//
-@media (max-width: #{$screen-sm})
+$media-mobile: "(max-width: #{$screen-sm})"
+$media-tablet: "(min-width: #{$screen-sm})"
+$media-desk: "(min-width: #{$screen-md})"
+$media-desk-lg: "(min-width: #{$screen-lg})"
+
+@media #{$media-mobile}
 	html, body
 		height: 100%
 		overflow-x: hidden
 		position: relative
 
-
-//
-// Para aparelhos que tem uma largura mínima de tela de 768px
-//
-@media (min-width: #{$screen-sm})
-// seu código aqui se houver algo específico para este breakpoint
+@media #{$media-tablet}
 
 
-//
-// Para aparelhos que tem uma largura mínima de tela de 992px até infinito
-//
-@media (min-width: #{$screen-md})
-// seu código aqui se houver algo específico para este breakpoint
+@media #{$media-desk}
+
+
+@media #{$media-desk-lg}
