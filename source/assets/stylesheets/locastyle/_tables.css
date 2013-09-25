@@ -7,7 +7,9 @@
   margin: 0 0 20px;
 }
 
-.tableList tr {border-bottom: 1px solid #ddd;}
+.tableList tr,
+.boxCollapse .tableList tr td {border-bottom: 1px solid #ddd;}
+.boxCollapse .tableList tr:first-child td {border-top: 1px solid #ddd;}
 .tableList thead {background: #545454;}
 
 .tableList thead th {
