@@ -3,85 +3,70 @@ title: Componentes - Alertas
 menu_page: sidebar-componentes.erb
 ---
 <article class="text">
-	<header>
-		<h1>Alertas</h1>
-		<h3>Alertas são usadas para enviar um feedback contextual de sucesso, erro, warning ou apenas uma notificação de novas features no sistema. </h3>
-	</header>
-	<h4>Exemplo de alertas</h4>
-	<p>Adicione está funcionalidade para todas as suas mensagens de alerta.</p>
 
-	<div class="example">
-		<div class="alert alert-warning fade in">
-			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
-			Uma mensagem bem bonita de alerta.
-		</div>
+<header>
+	<h1>Alertas</h1>
+	<h3>Alertas são usadas para enviar um feedback contextual de sucesso, erro, warning ou apenas uma notificação de novas features no sistema. </h3>
+</header>
+
+<h2>Exemplos</h2>
+<p>Os alertas seguem o mesmo padrão do Bootstrap. Envolva qualquer texto com uma classe <strong>.alert</strong> juntamente com classes contextuais como <strong>.alert-sucess</strong>. Veja abaixo exemplos:</p>
+<div class="bs-callout bs-callout-info">
+	<h4>Não existe uma classe padrão</h4>
+	<p>Alertas não tem classes padrão, apenas uma classe de base (<strong>.alert</strong>) e as classes de modificação. Por isso você sempre deverá inserir uma classe de contexto para indicar qual o teor do alerta.</p>
+</div>
+
+<div class="example">
+	<div class="alert alert-success"><p><strong>Sucesso!</strong> Você conseguiu, parabéns!</p></div>
+	<div class="alert alert-info"><p><strong>Atenção:</strong> você tem informações importantes para ler.</p></div>
+	<div class="alert alert-warning"><p><strong>Cuidado:</strong> cheque duas vezes. Você pode ter esquecido alguma informação.</p></div>
+	<div class="alert alert-danger"><p><strong>Mórreu:</strong> Algo muito ruim aconteceu e você vai precisar refazer tudo.</p></div>
+</div>
+<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;alert alert-success&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-info&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-warning&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-danger&quot;&gt;...&lt;/div&gt;
+</pre>
+
+<h2>Fechando alertas</h2>
+<p>Você pode colocar um botãozinho para fechar o alerta inserindo a classe <strong>.alert-dismissable</strong> em qualquer alerta e também inserindo um botão de dismiss, que pode ser um botão ou um link.</p>
+
+<div class="example">
+	<div class="alert alert-success alert-dismissable">
+		<a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+		<p><strong>Sucesso!</strong> Você conseguiu, parabéns!</p>
 	</div>
-	<pre class="lang-html linenums prettyprint">&lt;div class=&quot;alert alert-warning fade in&quot;&gt;...&lt;/div&gt;</pre>
-
-
-	<div class="example">
-		<div class="alert alert-block alert-danger fade in">
-			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
-			<h4>Hey! Ocorreu um erro!</h4>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates blanditiis excepturi est saepe. Iste, doloremque, alias aspernatur itaque nobis minima ex corporis labore porro nostrum veritatis unde voluptatibus eaque officiis.
-			</p>
-			<p>
-				<a href="#" class="btn btn-danger">Tome está ação</a>
-				<a href="#" class="btn btn-default">ou tome está</a>
-			</p>
-		</div>
+	<div class="alert alert-info alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		<p><strong>Atenção:</strong> você tem informações importantes para ler.</p>
 	</div>
-	<pre class="lang-html linenums prettyprint">
-&lt;div class=&quot;alert alert-block alert-danger fade in&quot;&gt;
-  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;x&lt;/button&gt;
-  &lt;h4&gt;Hey, Ocorreu um erro!&lt;/h4&gt;
-  &lt;p&gt;...&lt;/p&gt;
-  &lt;p&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn btn-danger&quot;&gt;Tome está ação&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot;&gt;ou tome está&lt;/a&gt;
-  &lt;/p&gt;
+</div>
+<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;alert alert-success alert-dismissable&quot;&gt;
+	&lt;a href=&quot;#&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/a&gt;
+	&lt;p&gt;&lt;strong&gt;Sucesso!&lt;/strong&gt; Voc&ecirc; conseguiu, parab&eacute;ns!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-info alert-dismissable&quot;&gt;
+	&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;
+	&lt;p&gt;&lt;strong&gt;Aten&ccedil;&atilde;o:&lt;/strong&gt; voc&ecirc; tem informa&ccedil;&otilde;es importantes para ler.&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
-	<h4>Como Usar</h4>
-	<p>utilize esse formato de JavaScript.</p>
-	<pre class="lang-js linenums prettyprint">$(".alert").alert()</pre>
+<h2>Links internos</h2>
+<p>Para que os links fiquem com estilizados conforme cada alerta, basta inserir os links com a classe <strong>.alert-link</strong></p>
 
-	<h4>Remarcação</h4>
-	<h5>$().alert()</h5>
-	<p>Envolve todos os alertas com a funcionalidade fechar. Para ter os alertas animados quando fechar, verifique se as classes <code>.fade</code> e <code>.in</code> foram aplicadas.</p>
-
-	<h5>.alert('close')</h5>
-	<p>Fecha um alerta.</p>
-	<pre class="lang-js linenums prettyprint">$(".alert").alert('close')</pre>
-
-	<h4>Eventos</h4>
-	<p>Os Alertas expões alguns eventos para você modificar a sua funcionalidade.</p>
-
-	<div class="table-responsive">
-		<table class="table table-bordered table-striped">
-			<thead>
-				<tr>
-					<th>Evento</th>
-					<th>Descrição</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>close.bs.alert</td>
-					<td>este evento é acionado quando o método de intância <code>close</code> é chamado.</td>
-				</tr>
-				<tr>
-					<td>closed.bs.alert</td>
-					<td>Este evento é chamado quando o alerta foi fechado (irá esperar até a transição css estar completa).</td>
-				</tr>
-			</tbody>
-		</table>
+<div class="example">
+	<div class="alert alert-success alert-dismissable">
+		<a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+		<p><strong>Atenção:</strong> você tem informações importantes para ler. <a href="#" class="alert-link">Veja mais detalhes aqui.</a></p>
 	</div>
-	<pre class="lang-js linenums prettyprint">
-$('#my-alert').bind('closed.bs.alert', function () {
-  // Faça algo aqui…
-})</pre>
+</div>
+<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;alert alert-success alert-dismissable&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/a&gt;
+  &lt;p&gt;&lt;strong&gt;Aten&ccedil;&atilde;o:&lt;/strong&gt; voc&ecirc; tem informa&ccedil;&otilde;es importantes para ler. &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;Veja mais detalhes aqui.&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
 
 </article>
