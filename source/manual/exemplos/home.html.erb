@@ -57,6 +57,29 @@ layout: false
 
 		<div class="col-md-9 content" role="main">
 
+			<ul class="nav nav-tabs hidden-xs">
+				<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+				<li class="dropdown"><a href="#profile" data-toggle="tab">Profile</a></li>
+			</ul>
+
+			<ul class="nav nav-tabs visible-xs">
+        <li class="dropdown active">
+          <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Tabs <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+            <li><a href="#home" tabindex="-1" data-toggle="tab">Home</a></li>
+            <li><a href="#profile" tabindex="-1" data-toggle="tab">Profile</a></li>
+          </ul>
+        </li>
+      </ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="home">
+						<p>Content Home</p>
+				</div>
+				<div class="tab-pane" id="profile">
+					<p>Content Profile</p>
+				</div>
+			</div>
+
 			<div class="shortcut row">
 				<div class="col-md-4">
 					<h1><a href="#">Cadastre seus contatos</a></h1>
