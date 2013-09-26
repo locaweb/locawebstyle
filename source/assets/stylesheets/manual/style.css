@@ -98,7 +98,7 @@ ol.linenums {
 
 /*** Destacando categoria atual ***/
 .manual_introducao .navbar .nav a[href*="/introducao/"],
-.manual_formularios .navbar .nav a[href*="/formularios/"],
+.manual_formularios .navbar .nav a[href*="/formularios"],
 .manual_aplicacoes .navbar .nav a[href*="/aplicacoes/"],
 .manual_layout .navbar .nav a[href*="/layout/"],
 .manual_acessibilidade .navbar .nav a[href*="/acessibilidade/"],
