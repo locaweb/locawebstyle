@@ -704,8 +704,8 @@ tr.active td .boxActions {padding-top: 0;}
   background: -ms-linear-gradient(top,  #efefef 0%,#dfdfdf 100%); /* IE10+ */
   background: linear-gradient(to bottom,  #efefef 0%,#dfdfdf 100%); /* W3C */
   //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#dfdfdf',GradientType=0 ); /* IE6-9 */
-
 }
+
 .forceClass .gradientRed {
   background: #f0e1e1; /* Old browsers */
   background: -moz-linear-gradient(top,  #f0e1e1 0%, #e1c6c4 100%); /* FF3.6+ */
@@ -715,7 +715,6 @@ tr.active td .boxActions {padding-top: 0;}
   background: -ms-linear-gradient(top,  #f0e1e1 0%,#e1c6c4 100%); /* IE10+ */
   background: linear-gradient(to bottom,  #f0e1e1 0%,#e1c6c4 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0e1e1', endColorstr='#e1c6c4',GradientType=0 ); /* IE6-9 */
-
 }
 
 .forceClass .gradientGreen {
@@ -727,7 +726,20 @@ tr.active td .boxActions {padding-top: 0;}
   background: -ms-linear-gradient(top,  #e6efdd 0%,#ccdfbc 100%); /* IE10+ */
   background: linear-gradient(to bottom,  #e6efdd 0%,#ccdfbc 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6efdd', endColorstr='#ccdfbc',GradientType=0 ); /* IE6-9 */
+}
 
+.sideBox .gradient {
+  border: solid 1px #d5e6bc;
+  padding: 15px 0 20px;
+}
+
+.sideBox .gradient p strong {
+  color: #545454;
+}
+
+.sideBox .gradient .total-sent strong {
+  font-size: 26px;
+  color: #2a2a2a;
 }
 
 /* Utilizado dentro de collapse */
@@ -789,13 +801,29 @@ tr.active td .boxActions {padding-top: 0;}
 **** PROGRESS BAR
 ****/
 .progress {
-  width: 100%; height: 14px;
+  width: 100%;
+  height: 14px;
   display: inline-block;
   margin: 0 0 0 4px;
   border: 1px solid #ddd;
   border-radius: 3px;
 }
 .progressInfo{color: #2a2a2a; font-weight: bold;}
+
+.percentageOutside {
+  position: relative;
+  width: 85%;
+  overflow: inherit;
+}
+
+.percentageOutside strong {
+  position: absolute;
+  top: -3px;
+  right: -27px;
+  display: inline-block;
+  width: 25px;
+}
+
 .forceClass .progressInfo .progress{
   float: left;
   margin-right: 5px;
