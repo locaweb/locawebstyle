@@ -1,0 +1,186 @@
+---
+title: Posição dos campos
+menu_page: sidebar-formularios.erb
+---
+
+<article class="text">
+	<header>
+		<h1>Formulários</h1>
+		<h2>Posição dos campos</h2>
+	</header>
+	<h3>Formulários verticais</h3>
+	<p>Sim, esse é aquele formulário básico que você não perde muito tempo e a <code>&lt;label&gt;</code> fica em cima do <code>&lt;input&gt;</code>.</p>
+	<div class="example">
+		<form role="form">
+			<fieldset>
+				<legend>Legenda do formulário</legend>
+				<div class="row">
+					<div class="form-group col-lg-4">
+						<label for="exampleInputEmail1">Campo simples</label>
+						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+					</div>
+					<div class="form-group col-lg-4">
+						<label for="exampleInputEmail1">Campo simples</label>
+						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-lg-4">
+						<label for="exampleInputEmail1">Seletor</label>
+						<select class="form-control">
+							<option value="">Selecione algo</option>
+							<option value="">Opção 1</option>
+							<option value="">Opção 2</option>
+						</select>
+					</div>
+					<div class="form-group col-lg-4">
+						<label for="exampleInputEmail1">Senha</label>
+						<input type="password" class="form-control" id="exampleInputEmail1" placeholder="Insira sua senha aqui">
+					</div>
+				</div>
+				<button type="submit" class="btn btn-default">Enviar</button>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+&lt;form role=&quot;form&quot;&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Legenda do formul&#xe1;rio&lt;/legend&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;form-group col-lg-4&quot;&gt;
+				&lt;label for=&quot;exampleInputEmail1&quot;&gt;Campo simples&lt;/label&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Insira seu texto aqui&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;form-group col-lg-4&quot;&gt;
+				&lt;label for=&quot;exampleInputEmail1&quot;&gt;Campo simples&lt;/label&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Insira seu texto aqui&quot;&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;form-group col-lg-4&quot;&gt;
+				&lt;label for=&quot;exampleInputEmail1&quot;&gt;Seletor&lt;/label&gt;
+				&lt;select class=&quot;form-control&quot;&gt;
+					&lt;option value=&quot;&quot;&gt;Selecione algo&lt;/option&gt;
+					&lt;option value=&quot;&quot;&gt;Op&#xe7;&#xe3;o 1&lt;/option&gt;
+					&lt;option value=&quot;&quot;&gt;Op&#xe7;&#xe3;o 2&lt;/option&gt;
+				&lt;/select&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;form-group col-lg-4&quot;&gt;
+				&lt;label for=&quot;exampleInputEmail1&quot;&gt;Senha&lt;/label&gt;
+				&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Insira sua senha aqui&quot;&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Enviar&lt;/button&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;
+	</pre>
+	<h3>Formulários horizontais</h3>
+	<p>
+		Aposto que você gostaria de alinhar a <code>&lt;label&gt;</code> do seu formulário com o <code>&lt;input&gt;</code>, e agora?
+		<br>
+		Use a classe: <code>.form-horizontal</code> para fazer isso. Veja o Exemplo abaixo:
+	</p>
+	<div class="example">
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
+				<div class="col-lg-10">
+					<input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword1" class="col-lg-2 control-label">Senha</label>
+				<div class="col-lg-10">
+					<input type="password" class="form-control" id="inputPassword1" placeholder="Senha">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-offset-2 col-lg-10">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Me manter conectado
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-offset-2 col-lg-10">
+					<button type="submit" class="btn btn-default">Entrar</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+&lt;form class=&quot;form-horizontal&quot; role=&quot;form&quot;&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;label for=&quot;inputEmail1&quot; class=&quot;col-lg-2 control-label&quot;&gt;Email&lt;/label&gt;
+		&lt;div class=&quot;col-lg-10&quot;&gt;
+			&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;inputEmail1&quot; placeholder=&quot;Email&quot;&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;label for=&quot;inputPassword1&quot; class=&quot;col-lg-2 control-label&quot;&gt;Senha&lt;/label&gt;
+		&lt;div class=&quot;col-lg-10&quot;&gt;
+			&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;inputPassword1&quot; placeholder=&quot;Senha&quot;&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;div class=&quot;col-lg-offset-2 col-lg-10&quot;&gt;
+			&lt;div class=&quot;checkbox&quot;&gt;
+				&lt;label&gt;
+					&lt;input type=&quot;checkbox&quot;&gt; Me manter conectado
+				&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;div class=&quot;col-lg-offset-2 col-lg-10&quot;&gt;
+			&lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Entrar&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+	</pre>
+	<hr>
+	<h3>Formulários em linha</h3>
+	<p>Para criar formulários em linha, basta adicionar a classe <code>.form-inline</code> e o conteúdo será alinhado do lado esquerdo e receberá a propriedade de "display": <code>inline-block</code>.</p>
+	<div class="bs-callout bs-callout-warning">
+		<h4>Lembre-se!</h4>
+		<p>Nessa versão de formulário é necessário definir a largura para os campos</p>
+	</div>
+	<div class="example">
+		<form class="form-inline" role="form">
+			<div class="form-group">
+				<label class="sr-only" for="exampleInputEmail2">Endereço de email</label>
+				<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Digite seu email">
+			</div>
+			<div class="form-group">
+				<label class="sr-only" for="exampleInputPassword2">Senha</label>
+				<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Senha">
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Me manter conectado
+				</label>
+			</div>
+			<button type="submit" class="btn btn-default">Entrar</button>
+		</form>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+&lt;form class=&quot;form-inline&quot; role=&quot;form&quot;&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;label class=&quot;sr-only&quot; for=&quot;exampleInputEmail2&quot;&gt;Endere&#xe7;o de email&lt;/label&gt;
+		&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail2&quot; placeholder=&quot;Digite seu email&quot;&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;label class=&quot;sr-only&quot; for=&quot;exampleInputPassword2&quot;&gt;Senha&lt;/label&gt;
+		&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword2&quot; placeholder=&quot;Senha&quot;&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;checkbox&quot;&gt;
+		&lt;label&gt;
+			&lt;input type=&quot;checkbox&quot;&gt; Me manter conectado
+		&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Entrar&lt;/button&gt;
+&lt;/form&gt;
+	</pre>
+</article>
