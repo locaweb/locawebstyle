@@ -1,0 +1,105 @@
+---
+title: Formulários
+menu_page: sidebar-formularios.erb
+---
+
+<article class="text">
+	<header>
+		<h1>Formulários</h1>
+		<h2>Fácil criar formulários com diferentes estilos e layouts.</h2>
+	</header>
+	<h3>Funcionamento</h3>
+	<p>Nós sabemos que utilizar formulários e principalmente organizá-los visualmente é muito chato. Nós seguimos alguns pequenos padrões herdados do Bootstrap com algumas modificações para se adequar às nossas necessidades. Veja os exemplos abaixo:</p>
+	<p>Todos os elementos <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, e <code>&lt;select&gt;</code> com a classe <code>.form-control</code> recebem a largura de <code>100%</code> por padrão.</p>
+	<div class="example">
+		<form role="form">
+			<fieldset>
+				<legend>Legenda do formulário</legend>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Campo simples</label>
+					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+					<p class="help-block">Exemplo de texto de ajuda.</p>
+				</div>
+				<div class="form-group">
+					<label for="exampleSelect">Seletor</label>
+					<select id="exampleSelect" class="form-control">
+						<option value="">Escolha uma opção</option>
+						<option value="">Isso mesmo :D</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Campo de senha</label>
+					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputFile">Campo para envio de arquivo</label>
+					<input type="file" id="exampleInputFile">
+				</div>
+				<div class="checkbox">
+					<label><input type="checkbox"> Marque aqui</label>
+				</div>
+				<div class="checkbox">
+					<label><input type="checkbox"> Marque aqui</label>
+				</div>
+				<div class="checkbox">
+					<label><input type="checkbox"> Marque aqui</label>
+				</div>
+				<div class="radio">
+					<label><input name="radios" type="radio"> Ou aqui</label>
+				</div>
+				<div class="radio">
+					<label><input name="radios" type="radio"> Ou aqui</label>
+				</div>
+				<div class="radio">
+					<label><input name="radios" type="radio"> Ou aqui</label>
+				</div>
+				<button type="submit" class="btn btn-default">Enviar</button>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+&lt;form role=&quot;form&quot;&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Legenda do formul&#xe1;rio&lt;/legend&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+			&lt;label for=&quot;exampleInputEmail1&quot;&gt;Campo simples&lt;/label&gt;
+			&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Insira seu texto aqui&quot;&gt;
+			&lt;p class=&quot;help-block&quot;&gt;Exemplo de texto de ajuda.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+			&lt;label for=&quot;exampleSelect&quot;&gt;Seletor&lt;/label&gt;
+			&lt;select id=&quot;exampleSelect&quot; class=&quot;form-control&quot;&gt;
+				&lt;option value=&quot;&quot;&gt;Escolha uma op&#xe7;&#xe3;o&lt;/option&gt;
+				&lt;option value=&quot;&quot;&gt;Isso mesmo :D&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+			&lt;label for=&quot;exampleInputPassword1&quot;&gt;Campo de senha&lt;/label&gt;
+			&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Senha&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+			&lt;label for=&quot;exampleInputFile&quot;&gt;Campo para envio de arquivo&lt;/label&gt;
+			&lt;input type=&quot;file&quot; id=&quot;exampleInputFile&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;checkbox&quot;&gt;
+			&lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Marque aqui&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;checkbox&quot;&gt;
+			&lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Marque aqui&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;checkbox&quot;&gt;
+			&lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Marque aqui&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;radio&quot;&gt;
+			&lt;label&gt;&lt;input name=&quot;radios&quot; type=&quot;radio&quot;&gt; Ou aqui&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;radio&quot;&gt;
+			&lt;label&gt;&lt;input name=&quot;radios&quot; type=&quot;radio&quot;&gt; Ou aqui&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;radio&quot;&gt;
+			&lt;label&gt;&lt;input name=&quot;radios&quot; type=&quot;radio&quot;&gt; Ou aqui&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Enviar&lt;/button&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+</article>
