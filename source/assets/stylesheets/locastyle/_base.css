@@ -241,6 +241,12 @@ h6 .lnkArrow {
 }
 .boxGray h2 + p {margin-top: 10px;}
 
+/** DENTRO DO BOX
+**/
+.boxGray .boxGrayInner {
+  padding: 0 15px;
+}
+
 /**
 *** PAGINACAO e NAVEGACAO
 **/
