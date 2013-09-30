@@ -47,10 +47,13 @@
   transition: $property $time $effect
 
 @mixin border-circle($size, $font-size)
+  text-align: center
   background: $gray2
   font-size: $font-size
   height: $size
   width: $size
+  line-height: $size
   display: inline-block
   border-radius: 100%
   color: #fff
+
