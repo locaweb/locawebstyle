@@ -45,3 +45,12 @@
   -moz-transition: $property $time $effect
   -ms-transition: $property $time $effect
   transition: $property $time $effect
+
+@mixin border-circle($size, $font-size)
+  background: $gray2
+  font-size: $font-size
+  height: $size
+  width: $size
+  display: inline-block
+  border-radius: 100%
+  color: #fff
