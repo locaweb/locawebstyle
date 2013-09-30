@@ -1,6 +1,7 @@
 body {
-	font: 100% Lato, Verdana, Arial, Helvetica, Tahoma, Sans-serif;
+	font: 100% Verdana, Arial, Helvetica, Tahoma, Sans-serif;
 	background: url(../images/manual/stripestop.png) repeat-X top;
+	line-height: 20px;
 }
 
 a.btn.btn-download {
