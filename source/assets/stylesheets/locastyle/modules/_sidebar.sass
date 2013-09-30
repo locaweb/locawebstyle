@@ -39,21 +39,15 @@ $mobile-sidebar-width: "240px"
 
 	// Padrão dos títulos da Sidebar
 	.sidebox-title
-
 		color: $gray1
 		font-size: 1.375em
 		font-family: ralewaylight
 		line-height: 30px
+		letter-spacing: -1px
 		margin: 0 0 10px
 
-		[class*="ico-"]:before
-			@include border-circle(30px, 15px)
-			color: #FFF
-			font-size: 18px
-			left: 2px
-			margin: 0 7px 0 0
-			display: inline-block
-			text-align: center
+		&[class*="ico-"]:before
+			@include border-circle(30px, .8em)
 
 	// Textos de status de informações da sidebar
 	.status-text
@@ -99,6 +93,10 @@ $mobile-sidebar-width: "240px"
 	.sidebar
 		height: auto
 		position: static
+
+		&.shortcut-position
+			position: relative
+			top: -$height-short
 
 		.sidebar-inner
 			position: static

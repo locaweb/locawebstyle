@@ -6,20 +6,37 @@
 // Desktops
 //
 @media (min-width: #{$screen-sm})
-.shortcut
+.shortcuts
 	text-align: center
+	background-color: $gray4
+	padding: 40px 0
+	// position: relative
+	// z-index: 0
+
+	a
+		text-decoration: none
 
 	.shortcut-title
-		color: #163400 //variavel
+		color: rgba(0,0,0,0.5)
 		font-size: 1em
+		padding: 0 4px
 		font-family: 'ralewaysemibold'
 		text-transform: uppercase
-		opacity: .5
+
+		&.active
+			color: rgba(0,0,0,1)
+
+			&:before
+				-webkit-transform: scale(1.24)
+				color: #fff
 
 		&:before
-			@include border-circle(175px, 30px)
+			@include border-circle(140px, 4em)
 			display: block
-			margin: 0 auto
+			margin: 0 auto 20px
+			background: #fff
+
+
 
 	// 	&:before
 	// 		position: absolute
