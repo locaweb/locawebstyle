@@ -20,6 +20,7 @@ a
 
 main.container
 	clear: both
+	margin-top: 40px
 
 // Define características do Overlay que aparece quando usamos sidebar
 .overlay-bar
@@ -33,6 +34,11 @@ main.container
 	visibility: hidden
 	width: 100%
 	height: 100%
+
+.border-circle[class*="ico-"]:before,
+.border-circle[class*="ico-"]:after
+	font-size: inherit
+
 
 @media #{$media-mobile}
 	main.container .content
