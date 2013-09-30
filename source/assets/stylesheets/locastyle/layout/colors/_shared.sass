@@ -12,52 +12,55 @@
 	.nav-content
 		border-bottom-color: $color3
 
-		.menu
-			ul li a
-				border-left-color: $color1
+		.menu a
+			border-left-color: $color1
 
-				&.active,
-				&:focus,
-				&:hover
-					background-color: $color3
-					border-left-color: $color5
+			&.active,
+			&:focus,
+			&:hover
+				background-color: $color3
+				border-left-color: $color5
 
-	.sidebox
-		.sidebox-title
-			color: $color1
+	.sidebox-title
+		color: $color1
 
-			[class^="ico-"]
-				background-color: $color1
-
-		.sidebox-list
-			a
-				&[class*="ico-"]:after,
-				&[class*="ico-"]:before
-					color: $color2
-	.dropdown-menu
-		a:hover
+		&[class*="ico-"]:before
 			background-color: $color1
+
+	.sidebox-list a
+		&[class*="ico-"]:after,
+		&[class*="ico-"]:before
+			color: $color2
+
+	.dropdown-menu a:hover
+		background-color: $color1
 
 	.nav-tabs
 		a
 			background-color: $color2
 
-		.dropdown-menu
-			a
-				background-color: #fff
-				&:hover
-					background-color: $color2
-
-	.nav
-		a
-			.caret
-				border-top-color: $color2
-				border-bottom-color: $color2
+		.dropdown-menu a
+			background-color: #fff
 
 			&:hover
-				.caret
-					border-top-color: $color1
-					border-bottom-color: $color1
+				background-color: $color2
+
+	.nav a
+		&.caret
+			border-top-color: $color2
+			border-bottom-color: $color2
+
+		&:hover
+			&.caret
+				border-top-color: $color1
+				border-bottom-color: $color1
+
+
+	.shortcut-title:before
+		color: $color2
+
+	.shortcut-title.active:before
+		background-color: $color2
 
 
 //
@@ -76,17 +79,15 @@
 				&:hover
 					background-color: $color5
 
-			.project-name
-				a
-					color: $color1
+			.project-name a
+				color: $color1
 
 		.nav-content
 			background-color: $color1
 
-			.menu
-				ul li a
-					&.active,
-					&:focus,
-					&:hover
-						background-color: $color3
-						border-bottom-color: $color5
+			.menu a
+				&.active,
+				&:focus,
+				&:hover
+					background-color: $color3
+					border-bottom-color: $color5
