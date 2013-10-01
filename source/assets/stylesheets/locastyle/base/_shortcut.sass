@@ -1,15 +1,11 @@
-
-
-
-
 //
 // Desktops
 //
 @media (min-width: #{$screen-sm})
 .shortcuts
 	text-align: center
-	background-color: $gray4
-	padding: 40px 0
+	padding: 30px 0 55px
+	margin-bottom: 50px
 	position: relative
 	z-index: 0
 
@@ -36,22 +32,12 @@
 			margin: 0 auto 20px
 			background: #fff
 
-
-
-	// 	&:before
-	// 		position: absolute
-	// 		font-size: 6em
-	// 		left: 50%
-	// 		margin: -50px 0 0 -45px
-	// 		top: 50%
-
-	// 	h2
-
-
-	// 	&.active
-	// 		h2
-	// 			opacity: 1
-	// 	&:hover
-	// 		text-decoration: none
-
-
+.bg-shortcut-workaround
+	background-color: $gray4
+	display: block
+	width: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: -1
+	min-height: 340px
