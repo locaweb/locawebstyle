@@ -1373,6 +1373,20 @@ ol p{font-size: inherit;}
 .sticker.yellow:after {
   border-color: transparent transparent transparent #cc8b00;
 }
+/**
+** Para quando não houver dados de relatórios
+**/
+.report-empty {
+  padding: 120px 0;
+  margin-bottom: 20px;
+  border-width: 0 0 5px 0;
+  text-align: center;
+  border-bottom: 5px solid #e5e5e5;
+}
+
+.report-empty p {
+  font-size: 15px;
+}
 
 
 
