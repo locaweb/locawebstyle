@@ -38,15 +38,16 @@ a
 	[class*="title-"]
 		margin-bottom: 0
 
-
-
 @media #{$media-mobile}
-	.main
-		padding-top: 45px
-		position: fixed
+	.content[role="main"]
 		overflow: auto
 		-webkit-overflow-scrolling: touch
 		height: 100%
+		position: fixed
+		z-index: 0
 		background-color: #FFF
+		padding-top: 52px
 
-
+@media #{$media-tablet}
+	.main
+		position: relative

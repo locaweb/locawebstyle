@@ -1,10 +1,12 @@
+//
+// Execução de funções do Bootstrap
+// Se tiver alguma função do bootstrap que precisa ser iniciada logo de cara, use aqui.
 var locastyle = locastyle || {};
 
 locastyle.bootstrap = (function() {
   'use strict';
 
   function init(){
-    //here goes what you need to be executed at loading
     startTooltip();
     startPopover();
   }

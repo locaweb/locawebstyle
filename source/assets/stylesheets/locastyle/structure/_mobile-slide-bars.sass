@@ -7,37 +7,31 @@ $mobile-left-number: "240px"
 @media #{$media-mobile}
 	.sidebar
 		@include transition(all, .30s, ease-out)
-		-webkit-transform: translate3D(#{$mobile-sidebar-width}, 0, 0)
-		-moz-transform: translate3D(#{$mobile-sidebar-width}, 0, 0)
+		-webkit-transform: translateX(#{$mobile-sidebar-width})
+		-moz-transform: translateX(#{$mobile-sidebar-width})
 
 	.right-bar
 		.sidebar
-			-webkit-transform: translate3D(0, 0, 0)
-			-moz-transform: translate3D(0, 0, 0)
+			-webkit-transform: translateX(0)
+			-moz-transform: translateX(0)
 
 		.overlay-bar
 			opacity: .5
 			visibility: visible
 
-	.main
-		background-color: #fff
-		position: relative
-
-
-	.main,
+	.main .content,
 	.header,
 	.nav-content
 		@include transition(-webkit-transform, .30s, ease-out)
 		@include transition(-moz-transform, .30s, ease-out)
 
 	.left-bar
-
 		.nav-content
 			-webkit-transform: translateX(0)
 			-moz-transform: translateX(0)
 			z-index: 2
 
-		.main,
+		.main .content,
 		.header
 			-webkit-transform: translateX(#{$mobile-left-number})
 			-moz-transform: translateX(#{$mobile-left-number})

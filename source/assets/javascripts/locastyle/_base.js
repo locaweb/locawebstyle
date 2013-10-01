@@ -2,17 +2,24 @@ var locastyle = (function() {
   'use strict';
 
   function init(){
-    //here goes what you need to be executed at loading
-    myAwesomeFunction();
+    bgShortcutWorkaround();
   }
 
-  function myAwesomeFunction() {
-    console.log("Awesome function executed");
+  // Aquele background cinza que fica sempre atrás do elemento Shortcut
+  // Não nos orgulhamos disso. Mas não havia maneira melhor de fazer. ;-)
+  function bgShortcutWorkaround() {
+    if ($(".shortcuts").length > 0){
+      $('.main').prepend('<span class="bg-shortcut-workaround"></span>')
+    }
+
+    $( window ).resize(function() {
+      $('.bg-shortcut-workaround').css('height', $('.shortcuts').outerHeight());
+    });
+
   }
 
   return {
-    init: init,
-    sample: myAwesomeFunction
+    init: init
   };
 
 }());
