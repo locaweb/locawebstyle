@@ -17,5 +17,139 @@ menu_page: sidebar-formularios.erb
 			O locastyle da suporte a todas as variações de campos de formulário em HTML5, como:
 			<code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, e <code>color</code>.
 		</p>
+		<div class="example">
+			<form>
+				<input type="text" class="form-control" placeholder="Input de texto">
+			</form>
+		</div>
+		<pre class="lang-html prettyprint linenums">
+&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Input de texto&quot;&gt;</pre>
+	<h3>Textarea</h3>
+	<p>Você pode alterar o parâmetro <code>rows</code> se for necessário.</p>
+	<div class="example">
+		<form>
+			<textarea class="form-control" rows="3"></textarea>
+		</form>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+	&lt;textarea class=&quot;form-control&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;</pre>
 
+	<h3>Checkboxes e Radio Buttons</h3>
+	<p>Para selecionar <strong>mais de 1</strong> opção utilize os <code>checkboxes</code>, para selecionar <strong>apenas 1</strong> utilize o <code>radio buttons</code></p>
+	<div class="example">
+		<form>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="">
+					Marque aqui
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="">
+					E marque aqui também
+				</label>
+			</div>
+
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+					Ou marque aqui
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+					Ou marque aqui
+				</label>
+			</div>
+		</form>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;checkbox&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
+		Marque aqui
+	&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;checkbox&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
+		E marque aqui tamb&#xe9;m
+	&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;radio&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
+		Ou marque aqui
+	&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;radio&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&gt;
+		Ou marque aqui
+	&lt;/label&gt;
+&lt;/div&gt;</pre>
+	<h4>Checkboxes e Radio Buttons em linha</h4>
+	<p>Utilize as classes <code>.checkbox-inline</code> ou <code>.radio-inline</code> para alinhar os elementos na horizontal.</p>
+	<div class="example">
+		<form>
+			<label class="checkbox-inline">
+				<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+			</label>
+		</form>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+&lt;label class=&quot;checkbox-inline&quot;&gt;
+	&lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox1&quot; value=&quot;option1&quot;&gt; 1
+&lt;/label&gt;
+&lt;label class=&quot;checkbox-inline&quot;&gt;
+	&lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox2&quot; value=&quot;option2&quot;&gt; 2
+&lt;/label&gt;
+&lt;label class=&quot;checkbox-inline&quot;&gt;
+	&lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox3&quot; value=&quot;option3&quot;&gt; 3
+&lt;/label&gt;</pre>
+
+	<h3>Seletores</h3>
+	<p>Use a opção padrão ou adicione o parâmetro <code>multiple</code></p>
+	<div class="example">
+		<select class="form-control">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
+		<br>
+		<select multiple class="form-control">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+&lt;select class=&quot;form-control&quot;&gt;
+	&lt;option&gt;1&lt;/option&gt;
+	&lt;option&gt;2&lt;/option&gt;
+	&lt;option&gt;3&lt;/option&gt;
+	&lt;option&gt;4&lt;/option&gt;
+	&lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select multiple class=&quot;form-control&quot;&gt;
+	&lt;option&gt;1&lt;/option&gt;
+	&lt;option&gt;2&lt;/option&gt;
+	&lt;option&gt;3&lt;/option&gt;
+	&lt;option&gt;4&lt;/option&gt;
+	&lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;</pre>
 </article>
