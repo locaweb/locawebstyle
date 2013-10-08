@@ -488,6 +488,15 @@ ol.linenums {
 	margin-bottom: 15px;
 	color: #212121;
 }
+.the-icons{margin-left: 0;}
+.the-icons li{
+	font-size: 16px;
+	display: inline-block;
+	width: 15em;
+	padding: .25em .5em;
+	background: #EEE;
+	margin: .5em 1em .5em 0;
+}
 
 /*** SIDEBAR ***/
 .sidebar {
