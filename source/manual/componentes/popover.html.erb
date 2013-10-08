@@ -7,16 +7,12 @@ menu_page: sidebar-componentes.erb
 	<header>
 		<h1>Popover</h1>
 	</header>
-	<div class="bs-callout bs-callout-danger">
-		<h4>Dependencia de plugin</h4>
-		<p>Popovers necessita do <%= link_to "Plugin Tooltip", "#{base_url}/manual/componentes/tooltip" %> incluido no projeto.<p>
-	</div>
 	<div class="bs-callout bs-callout-info">
 		<h4>Popover em botões necessitam de uma configuração especial</h4>
 		<p>Quando usado popovers em elementos com uma classe <code>.btn-group</code> ou <code>.input-group</code>, você precisa especificar a opção <code>container: 'body'</code> para evitar efeitos colaterais indesejados.</p>
 	</div>
 
-	<h4>Popover estático</h4>
+	<h2>Popover estático</h2>
 	<p>Quatro opções disponíveis: top, right, bottom e lefta linhados.</p>
 	<div class="example example-popover">
 
@@ -53,7 +49,7 @@ menu_page: sidebar-componentes.erb
 		</div>
 	</div>
 
-	<h4>Demo</h4>
+	<h2>Demo</h2>
 	<div class="example">
 		<div class="btn btn-lg btn-danger" data-toggle="popover" title="Um Título" data-content="And here's some amazing content. It's very engaging. right?">Clique para visualizar</div>
 	</div>
@@ -66,12 +62,21 @@ menu_page: sidebar-componentes.erb
 		<button class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Um texto bem legal em baixo.">esquerda</button>
 		<button class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Um texto bem legal a direita.">esquerda</button>
 	</div>
+<pre class="lang-html prettyprint linenums">
+&lt;button data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;left&quot; data-content=&quot;Um texto bem legal a esquerda.&quot;&gt;esquerda&lt;/button&gt;
 
-	<h4>Como usar</h4>
+&lt;button data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;top&quot; data-content=&quot;Um texto bem legal em cima.&quot;&gt;esquerda&lt;/button&gt;
+
+&lt;button data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;bottom&quot; data-content=&quot;Um texto bem legal em baixo.&quot;&gt;esquerda&lt;/button&gt;
+
+&lt;button data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;right&quot; data-content=&quot;Um texto bem legal a direita.&quot;&gt;esquerda&lt;/button&gt;
+
+</pre>
+	<h2>Como usar</h2>
 	<p>Habilite o popover via JavaScript.</p>
 	<pre class="lang-js linenums prettyprint">$('#exemplo').popover(options)</pre>
 
-	<h4>Opções</h4>
+	<h2>Opções</h2>
 	<p>As opções podem ser passadas via atributos de dados ou JavaScript. Para os atributos de dados, acrescente o nome da opção <code>data-</code>, como em <code>data-animation=""</code>.</p>
 	<div class="table-responsive">
 		<table class="table table-bordered table-striped">
@@ -162,27 +167,47 @@ menu_page: sidebar-componentes.erb
 	<h4>Remarcação</h4>
 	<p>Options for individual popovers can alternatively be specified through the use of data attributes, as explained above.</p>
 
-	<h4>Métodos</h4>
-	<h5>$().popover(options)</h5>
-	<p>Anexa um marcador para uma sequencia de elementos.</p>
+	<h2>Métodos</h2>
 
-	<h5>.popover('show')</h5>
-	<p>Revela o elemento popover.</p>
-	<pre class="lang-js linenums prettyprint">$('#exemplo').popover('show')</pre>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Método</th>
+			<th>Descrição</th>
+			<th>Código</th>
+		</tr>
+	</thead>
+	<tbody>
 
-	<h5>.popover('hide')</h5>
-	<p>Escondo o elemento popover.</p>
-	<pre class="lang-js linenums prettyprint">$('#exemplo').popover('hide')</pre>
+<tr>
+	<td>$().popover(options)</td>
+	<td>Anexa um marcador para uma sequencia de elementos.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>.popover('show')</td>
+	<td>Revela o elemento popover.</td>
+	<td><pre class="lang-js linenums prettyprint">$('#exemplo').popover('show')</pre></td>
+</tr>
+<tr>
+	<td>.popover('hide')</td>
+	<td>Escondo o elemento popover.</td>
+	<td><pre class="lang-js linenums prettyprint">$('#exemplo').popover('hide')</pre></td>
+</tr>
+<tr>
+	<td>.popover('toggle')</td>
+	<td>Alterna o elemento popover.</td>
+	<td><pre class="lang-js linenums prettyprint">$('#exemplo').popover('toggle')</pre></td>
+</tr>
+<tr>
+	<td>.popover('destroy')</td>
+	<td>Destrói o elemento popover.</td>
+	<td><pre class="lang-js linenums prettyprint">$('#exemplo').popover('destroy')</pre></td>
+</tr>
+	</tbody>
+</table>
 
-	<h5>.popover('toggle')</h5>
-	<p>Alterna o elemento popover.</p>
-	<pre class="lang-js linenums prettyprint">$('#exemplo').popover('toggle')</pre>
-
-	<h5>.popover('destroy')</h5>
-	<p>Destrói o elemento popover.</p>
-	<pre class="lang-js linenums prettyprint">$('#exemplo').popover('destroy')</pre>
-
-	<h4>Eventos</h4>
+	<h2>Eventos</h2>
 	<div class="table-responsive">
 		<table class="table table-bordered table-striped">
 			<thead>
