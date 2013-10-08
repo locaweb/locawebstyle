@@ -12,7 +12,14 @@ layout: false
 		<link rel="stylesheet" type="text/css" href="<%= base_url + bootstrap_css %>">
 		<%= stylesheet_link_tag "locastyle" %>
 		<style>
-			.the-icons li{ display: block; margin: 5px 0;}
+			.the-icons li{
+				font-size: 16px;
+				display: inline-block;
+				width: 15em;
+				padding: .25em .5em;
+				background: #EEE;
+				margin: .5em 1em .5em 0;
+			}
 		</style>
 	</head>
 	<body>
@@ -38,7 +45,7 @@ layout: false
 										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-									<p><a class="lnkSeta" href="#">Saiba mais</a></p>
+									<p><a class="lnkArrow" href="#">Saiba mais</a></p>
 								</div>
 							</div>
 
@@ -48,7 +55,7 @@ layout: false
 								</header>
 								<div class="collapse" id="configMeioPagtoDesc">
 									<p>Texto conteúdo</p>
-									<p><a class="lnkSeta" href="#">Saiba mais</a></p>
+									<p><a class="lnkArrow" href="#">Saiba mais</a></p>
 								</div>
 							</div>
 
@@ -58,7 +65,7 @@ layout: false
 								</header>
 								<div class="collapse" id="impMeioPagtoDesc">
 									<p>Texto conteúdo</p>
-									<p><a class="lnkSeta" href="#">Saiba mais</a></p>
+									<p><a class="lnkArrow" href="#">Saiba mais</a></p>
 								</div>
 							</div>
 						</div>
@@ -114,7 +121,7 @@ layout: false
 											consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 											cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 											proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-										<p><a class="lnkSeta" href="#">Saiba mais</a></p>
+										<p><a class="lnkArrow" href="#">Saiba mais</a></p>
 									</div>
 								</div>
 
@@ -124,7 +131,7 @@ layout: false
 									</header>
 									<div class="collapse" id="configMeioPagtoDesc2">
 										<p>Texto conteúdo</p>
-										<p><a class="lnkSeta" href="#">Saiba mais</a></p>
+										<p><a class="lnkArrow" href="#">Saiba mais</a></p>
 									</div>
 								</div>
 
@@ -134,7 +141,7 @@ layout: false
 									</header>
 									<div class="collapse" id="impMeioPagtoDesc3">
 										<p>Texto conteúdo</p>
-										<p><a class="lnkSeta" href="#">Saiba mais</a></p>
+										<p><a class="lnkArrow" href="#">Saiba mais</a></p>
 									</div>
 								</div>
 							</div>
@@ -910,12 +917,12 @@ layout: false
 											<li class="item active">
 												<h5>Publique seus arquivos pelo navegador</h5>
 												<p>Utilize o Gerenciador de Arquivos para publicar e fazer a manutenção dos arquivos do seu site.</p>
-												<a href="/" class="lnkSeta">Gerenciador de arquivos</a>
+												<a href="/" class="lnkArrow">Gerenciador de arquivos</a>
 											</li>
 											<li class="item">
 												<h5>Cadastre um endereço alternativo para seu site</h5>
 												<p>Os Domínios alternativos funcionam como espelhos do domínio principal e mostram seu conteúdo quando acessados.</p>
-												<a href="" class="lnkSeta">Dominios</a>
+												<a href="" class="lnkArrow">Dominios</a>
 											</li>
 											<li class="item">
 												<h5>Como criar caixas em domínios adicionais?</h5>
@@ -924,12 +931,12 @@ layout: false
 											<li class="item">
 												<h5>O que meu desenvolvedor pode fazer no site?</h5>
 												<p>O cadastro de um desenvolvedor no seu site possibilita que ele tenha acesso restrito ao seu painel de controle.</p>
-												<a href="Link: http://wiki.locaweb.com.br/pt-br/Quais_permiss%C3%B5es_o_desenvolvedor_tem_sobre_um_site%3F" class="lnkSeta">Veja todas as permissões.</a>
+												<a href="Link: http://wiki.locaweb.com.br/pt-br/Quais_permiss%C3%B5es_o_desenvolvedor_tem_sobre_um_site%3F" class="lnkArrow">Veja todas as permissões.</a>
 											</li>
 											<li class="item">
 												<h5>Facilite sua vida com o Instalador de aplicativos</h5>
 												<p>Instale aplicativos gratuitos que tornam seu site ainda mais atraente e fácil de gerenciar.</p>
-												<a href="" class="lnkSeta">Instaldor de aplicativos</a>
+												<a href="" class="lnkArrow">Instaldor de aplicativos</a>
 											</li>
 										</ul>
 										<div class="carouselNav">
@@ -959,7 +966,7 @@ layout: false
 				<div class="row">
 					<div class="span16">
 						<div class="obsGray">
-							<h6>Campus Online <small>Criado em 20/04/2012</small> <a href="#" class="lnkSeta">Editar</a></h6>
+							<h6>Campus Online <small>Criado em 20/04/2012</small> <a href="#" class="lnkArrow">Editar</a></h6>
 							<p class="lightGray">Uma pequena lista de emails do Campus Online. Criado em 20/04/2012</p>
 						</div>
 					</div>
@@ -1357,12 +1364,20 @@ layout: false
 									<p>Crie uma nova caixa postal dentro do seu site.</p>
 								</a>
 							</div>
+
+							<div>
+								<a href="#" tabindex="3" title="Ícone de grupos">
+									<h3 class="chamaicon-group"><span class="shortcutTitle">Ícone de grupos</span> </h3>
+									<p>Crie novos grupos de e-mail.</p>
+								</a>
+							</div>
 						</div>
 
 
 					</div>
-					<div class="span4">
+					<div class="span16">
 						<ul class="the-icons">
+							<li class="ico-bar-consumption">ico-bar-consumption</li>
 							<li class="ico-balancer">ico-balancer</li>
 							<li class="ico-server-backup">ico-server-backup</li>
 							<li class="ico-server-cloud">ico-server-cloud</li>
@@ -1453,15 +1468,10 @@ layout: false
 							<li class="ico-window">ico-window</li>
 							<li class="ico-zoom-in">ico-zoom-in</li>
 							<li class="ico-zoom-out">ico-zoom-out</li>
-							<li class="ico-down-circle2">ico-down-circle2</li>
 							<li class="ico-left-circle2">ico-left-circle2</li>
 							<li class="ico-right-circle2">ico-right-circle2</li>
 							<li class="ico-up-circle2">ico-up-circle2</li>
 							<li class="ico-down-open">ico-down-open</li>
-						</ul>
-					</div>
-					<div class="span4">
-						<ul class="the-icons">
 							<li class="ico-left-open">ico-left-open</li>
 							<li class="ico-right-open">ico-right-open</li>
 							<li class="ico-up-open">ico-up-open</li>
@@ -1541,10 +1551,6 @@ layout: false
 							<li class="ico-hifen">ico-hifen</li>
 							<li class="ico-flight">ico-flight</li>
 							<li class="ico-leaf">ico-leaf</li>
-						</ul>
-					</div>
-					<div class="span4">
-						<ul class="the-icons">
 							<li class="ico-up-1">ico-up-1</li>
 							<li class="ico-volume-on">ico-volume-on</li>
 							<li class="ico-minus-circle">ico-minus-circle</li>
@@ -1622,10 +1628,6 @@ layout: false
 							<li class="ico-rocket">ico-rocket</li>
 							<li class="ico-pencil">ico-pencil</li>
 							<li class="ico-right-1">ico-right-1</li>
-						</ul>
-					</div>
-					<div class="span4">
-						<ul class="the-icons">
 							<li class="ico-phone">ico-phone</li>
 							<li class="ico-cd">ico-cd</li>
 							<li class="ico-shuffle-1">ico-shuffle-1</li>
