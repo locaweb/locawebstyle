@@ -10,87 +10,52 @@ menu_page: sidebar-componentes.erb
 
  <h4>Exemplo estático</h4>
  <p>Um exemplo de modal com header, body e footer.</p>
- <div class="example example-modal">
-   <div class="modal">
-     <div class="modal-dialog">
-       <div class="modal-content">
-         <div class="modal-header">
-           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-           <h4>Título do Modal</h4>
-         </div>
-         <div class="modal-body">
-           <p>Um texto bacana...</p>
-         </div>
-         <div class="modal-footer">
-           <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-           <button type="button" class="btn btn-primary">Salvar</button>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+<div class="example example-modal">
+	<div class="modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4>Título do Modal</h4>
+				</div>
+				<div class="modal-body">
+					<p>Um texto bacana...</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-primary">Salvar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
  <pre class="lang-html linenums prettyprint">
 &lt;div class=&quot;modal&quot;&gt;
-  &lt;div class=&quot;modal-dialog&quot;&gt;
-    &lt;div class=&quot;modal-content&quot;&gt;
-      &lt;div class=&quot;modal-header&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;×&lt;/button&gt;
-        &lt;h4&gt;Título do Modal&lt;/h4&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;modal-body&quot;&gt;
-        &lt;p&gt;Um texto bacana...&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;modal-footer&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;&gt;Fechar&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Salvar&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+	&lt;div class=&quot;modal-dialog&quot;&gt;
+		&lt;div class=&quot;modal-content&quot;&gt;
+			&lt;div class=&quot;modal-header&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&times;&lt;/button&gt;
+				&lt;h4&gt;T&iacute;tulo do Modal&lt;/h4&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-body&quot;&gt;
+				&lt;p&gt;Um texto bacana...&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-footer&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;&gt;Fechar&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Salvar&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 	<h4>Demo</h4>
 	<p>Abra o modal via JavaScript. Ele vai descer e fazer um efeito de fade a partir do topo da página.</p>
-	<div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h4 class="modal-title" id="myModalLabel">Título do Modal</h4>
-				</div>
-				<div class="modal-body">
-					<h4>Text in a modal</h4>
-					<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
 
-					<h4>Popover in a modal</h4>
-					<p>This <a href="#" role="button" class="btn btn-default popover-test" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
-
-          <h4>Tooltips in a modal</h4>
-          <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
-
-          <h4>Overflowing text to show scroll behavior</h4>
-          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-        </div>
-        <div class="modal-footer">
-        	<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-          <button type="button" class="btn btn-primary">Salvar</button>
-        </div>
-
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div>
-	
 	<div class="example">
 		<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Abrir modal</a>
 	</div>
+
 <pre class="lang-htmnl linenums prettyprint">
 &lt;!-- Button trigger modal --&gt;
 &lt;a data-toggle=&quot;modal&quot; href=&quot;#myModal&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Abrir modal&lt;/a&gt;
@@ -114,6 +79,46 @@ menu_page: sidebar-componentes.erb
   &lt;/div&gt;&lt;!-- /.modal-dialog --&gt;
 &lt;/div&gt;&lt;!-- /.modal --&gt;
 </pre>
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel">Modal Heading</h4>
+          </div>
+          <div class="modal-body">
+            <h4>Text in a modal</h4>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+            <h4>Popover in a modal</h4>
+            <p>This <a href="#" role="button" class="btn btn-default popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
+
+            <h4>Tooltips in a modal</h4>
+            <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+            <hr>
+
+            <h4>Overflowing text to show scroll behavior</h4>
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
 
 	<div class="bs-callout bs-callout-warning">
 		<h4>Crie modais acessíveis</h4>
