@@ -137,8 +137,6 @@ ol.linenums {
 	margin-bottom: 70px;
 }
 
-.navbar .navbar-inner {padding-left: 5px;}
-
 .navbar .nav > li > a {
 	font-size: 0.9em;
 	border-right: 1px solid rgba(0,0,0,0.1);
@@ -559,6 +557,9 @@ table {
 	overflow: hidden;
 	padding-right: 25px
 }
+.content > .text a,{text-decoration: underline;}
+.content > .text a:hover,
+.content> .text .btn{text-decoration: none;}
 
 h1, h2, h3, h4, h5, h6 {margin-top: 20px;}
 
