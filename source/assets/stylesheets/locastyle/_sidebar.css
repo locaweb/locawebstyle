@@ -160,8 +160,8 @@
   margin: 0;
 }
 
-h4 + .tableList {margin:10px 0 0;}
-h4 + .boxWhite {margin-top:4px;}
+h4 + .tableList { margin:10px 0 0; }
+h4 + .boxWhite { margin-top:4px; }
 
 .sideBox h5 {padding:10px 10px 0; margin:0;}
 h5 + .innerSideBox {margin-top:5px;}
@@ -182,7 +182,6 @@ h5 + .innerSideBox {margin-top:5px;}
   position: absolute;
   height: 32px;
 }
-
 .boxSidebarTitle:before {
   border-color: #000 transparent transparent transparent;
   border-width: 8px;
@@ -194,19 +193,16 @@ h5 + .innerSideBox {margin-top:5px;}
 }
 .boxSidebarTitle i {
   color: #fff!important;
-
-  margin:6px 0 0 9px;
   font-weight: normal;
   font-style: normal;
+  display: block;
+  text-align: center;
 }
 .boxSidebarTitle i[class^="ico-"]:before,
 .boxSidebarTitle i[class*="ico-"]:before{
   font-size: 25px;
-}
-.boxSidebarTitle .ico-user,
-.boxSidebarTitle .ico-user-star,
-.boxSidebarTitle .ico-lamp{
-  margin: 3px 0 0 5px;
+  padding: 3px 0 0;
+  margin: 0;
 }
 .boxSidebarTitle .cmicon-help {
   font-size: 25px;
