@@ -1,5 +1,5 @@
 ---
-title: Formulários - Adicionais nos campos
+title: Formulários - Prefixos e sufixos de campos
 
 menu_page: sidebar-formularios.erb
 ---
@@ -7,7 +7,7 @@ menu_page: sidebar-formularios.erb
 <article class="text">
 	<header>
 	  <h1>Formulários</h1>
-	  <h2>Adicionais nos campos.</h2>
+	  <h2>Prefixos e sufixos de campos.</h2>
 	</header>
 	<p>Você pode extender os campos de formulários adicionando textos antes ou depois do campo.</p>
 	<div class="bs-callout bs-callout-danger">
@@ -23,8 +23,8 @@ menu_page: sidebar-formularios.erb
 	<div class="example">
 		<form>
 			<div class="input-group">
-				<span class="input-group-addon">@</span>
-				<input type="text" class="form-control" placeholder="Nome do usuário">
+				<span class="input-group-addon">http://</span>
+				<input type="text" class="form-control" placeholder="site">
 			</div>
 			<br>
 			<div class="input-group">
@@ -41,8 +41,8 @@ menu_page: sidebar-formularios.erb
 	</div>
 	<pre class="lang-html prettyprint linenums">
 &lt;div class=&quot;input-group&quot;&gt;
-	&lt;span class=&quot;input-group-addon&quot;&gt;@&lt;/span&gt;
-	&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Nome do usu&#xe1;rio&quot;&gt;
+	&lt;span class=&quot;input-group-addon&quot;&gt;http://&lt;/span&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;site&quot;&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;input-group&quot;&gt;
@@ -92,7 +92,7 @@ menu_page: sidebar-formularios.erb
 	&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Nome do usu&#xe1;rio&quot;&gt;
 &lt;/div&gt;</pre>
 
-	<h2>Elementos adicionais com checkbox e radio buttons</h2>
+	<h2>Prefixos com checkbox e radio buttons</h2>
 	<p>Basta colocar os checkboxes e radio buttons dentro dos elementos com a classe <code>.input-group-addon</code> para obter o resultado abaixo:</p>
 	<div class="example">
 		<form>
@@ -103,17 +103,17 @@ menu_page: sidebar-formularios.erb
 							<input type="checkbox">
 						</span>
 						<input type="text" class="form-control">
-					</div><!-- /input-group -->
-				</div><!-- /.col-lg-6 -->
+					</div>
+				</div>
 				<div class="col-lg-6">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<input type="radio">
 						</span>
 						<input type="text" class="form-control">
-					</div><!-- /input-group -->
-				</div><!-- /.col-lg-6 -->
-			</div><!-- /.row -->
+					</div>
+				</div>
+			</div>
 		</form>
 	</div>
 	<pre class="lang-html prettyprint linenums">
@@ -129,5 +129,42 @@ menu_page: sidebar-formularios.erb
 		&lt;input type=&quot;radio&quot;&gt;
 	&lt;/span&gt;
 	&lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+&lt;/div&gt;</pre>
+	<h2>Prefixos com botões</h2>
+	<p>Prefixos e sufixos com botões são um pouco diferentes de serem implementados. Substitua a classe <code>.input-group-addon</code> por <code>.input-group-btn</code> e adicione os botões dentro. Veja como fica:</p>
+	<div class="example">
+		<form>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">Valendo!</button>
+						</span>
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="input-group">
+						<input type="text" class="form-control">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">Valendo!</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;input-group&quot;&gt;
+	&lt;span class=&quot;input-group-btn&quot;&gt;
+		&lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Valendo!&lt;/button&gt;
+	&lt;/span&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-group&quot;&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+	&lt;span class=&quot;input-group-btn&quot;&gt;
+		&lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Valendo!&lt;/button&gt;
+	&lt;/span&gt;
 &lt;/div&gt;</pre>
 </article>
