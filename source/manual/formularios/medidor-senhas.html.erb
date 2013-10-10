@@ -12,14 +12,14 @@ menu_page: sidebar-formularios.erb
 	<p>Este é um medidor de segurança de senha simples para a autenticação de alguns serviços nossos.</p>
 
 	<div class="example">
-		<div class="control-group userPass">
-			<label for="user_password">Nova senha</label>
-			<input class="password autoFocus span3" id="user_password"  name="" type="password">
-			<div class="securityPass ">
-				<small>Força da senha:</small>
-				<div id="passwordStrength" class="dInlineBlock np0"></div>
-			</div>
-		</div>
+	  <div class="control-group">
+            <label for="user_password">Nova senha</label>
+            <input class="password autoFocus span3" id="user_password" data-component="password_strength" data-monitor_id="password_strength_monitor" name="" type="password">
+            <div class="password_strength">
+              <small>Força da senha</small>
+              <div id="password_strength_monitor" class="monitor"></div>
+            </div>
+          </div>
 	</div>
 <pre class="lang-html prettyprint linenums">
 &lt;div class=&quot;control-group userPass&quot;&gt;
@@ -34,17 +34,17 @@ menu_page: sidebar-formularios.erb
 
 <h4>Informações adicionais referente ao campo de senha</h4>
 
-	<div class="example">
-		<div class="control-group userPass">
-			<label class="noMarginBottom" for="user_password">Nova senha</label>
-			<p>Senha entre 8 a 14 caracteres, contendo letras e números</p>
-			<input class="password autoFocus span3" id="user_password" type="password">
-			<div class="securityPass ">
-				<small>Força da senha:</small>
-				<div id="passwordStrength" class="dInlineBlock np0"></div>
-			</div>
-		</div>
-	</div>
+<div class="example">
+  <div class="control-group userPass">
+    <label class="noMarginBottom" for="user_password">Nova senha</label>
+    <p>Senha entre 8 a 14 caracteres, contendo letras e números</p>
+    <input class="password autoFocus span3" id="account_password" data-component="password_strength" data-monitor_id="password_strength_monitor_2" type="password">
+    <div class="securityPass ">
+      <small>Força da senha:</small>
+      <div id="password_strength_monitor_2" class="dInlineBlock np0"></div>
+    </div>
+  </div>
+</div>
 
 <pre class="lang-html prettyprint linenums">
 &lt;div class=&quot;control-group userPass&quot;&gt;
