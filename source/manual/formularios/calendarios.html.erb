@@ -7,16 +7,31 @@ menu_page: sidebar-formularios.erb
 <article class="text">
 	<header>
 	  <h1>Calendários</h1>
-	  <h3>Inputs com integração de formulário.</h3>
+	  <h2>Inputs com integração de formulário.</h2>
 	</header>
 
 	<p>Para o calendário utilizamos o <a href="http://api.jqueryui.com/datepicker/">módulo do JQuery UI</a>.</p>
+	<p>E para aplicar basta seguir alguns passos:</p>
+	<p>
+		1. Crie a estrutura abaixo.<br>
+		2. Lembre-se de adicionar a classe <code>datepicker</code>.<br>
+		3. Tome um suco de laranja. :D
+	</p>
 
-	<p>Crie um campo de texto e insira a classe <strong>datepicker</strong> e pronto.</p>
 
 	<div class="example">
-	<input class="input120 datepicker" id="" name="" size="50" type="text">
+		<form>
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="input-group datepicker">
+						<input type="text" class="form-control date-mask" placeholder="dd/mm/aaaa">
+					</div>
+				</div>
+			</div>
+		</form>
 	</div>
-
-	<pre class="lang-html linenums prettyprint">&lt;input class="datepicker" id="" name="" size="50" type="text"&gt;</pre>
+	<pre class="lang-html linenums prettyprint">
+&lt;div class=&quot;input-group datepicker&quot;&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control date-mask&quot; placeholder=&quot;dd/mm/aaaa&quot;&gt;
+&lt;/div&gt;</pre>
 </article>

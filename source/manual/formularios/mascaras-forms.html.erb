@@ -11,26 +11,88 @@ menu_page: sidebar-formularios.erb
 	</header>
 
 	<p>Utilizamos o plugin <a href="http://igorescobar.github.io/jQuery-Mask-Plugin/">Mask Plugin</a> para criar máscaras de campos de formulários. No Locaweb Style nós não tratamos nenhuma máscara por default, logo você precisará fazer isso no seu projeto. </p>
-
+	<h3>Definindo as mascaras através de classes.</h3>
+	<p>Definimos algumas classes padrões para campos como: data, horário, CEP, veja abaixo mais opções.</p>
 	<div class="example">
 		<form role="form">
 			<fieldset>
 				<div class="row">
 					<div class="form-group col-lg-4">
-						<label for="exampleInputEmail1">Data</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000">
+						<label for="example-input-1">Data</label>
+						<input type="text" class="form-control date-mask" id="example-input-1" placeholder="Ex.: dd/mm/aaaa">
+						<p class="help-block">Com a classe <code>.date-mask</code></p>
 					</div>
 					<div class="form-group col-lg-4">
-						<label for="exampleInputEmail1">CPF</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ex.: 000.000.000-00" data-mask="000.000.000-00">
+						<label for="example-input-2">CPF</label>
+						<input type="text" class="form-control cpf-mask" id="example-input-2" placeholder="Ex.: 000.000.000-00">
+						<p class="help-block">Com a classe <code>.cpf-mask</code></p>
 					</div>
 					<div class="form-group col-lg-4">
-						<label for="exampleInputEmail1">CEP</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ex.: 00000-000" data-mask="00000-000">
+						<label for="example-input-3">CEP</label>
+						<input type="text" class="form-control cep-mask" id="example-input-3" placeholder="Ex.: 00000-000">
+						<p class="help-block">Com a classe <code>.cep-mask</code></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-lg-4">
+						<label for="example-input-4">Horas</label>
+						<input type="text" class="form-control time-mask" id="example-input-4" placeholder="Ex.: 00:00:00">
+						<p class="help-block">Com a classe <code>.time-mask</code></p>
+					</div>
+					<div class="form-group col-lg-4">
+						<label for="example-input-5">Data e hora</label>
+						<input type="text" class="form-control date-time-mask" id="example-input-5" placeholder="Ex.: 00/00/0000 00:00:00">
+						<p class="help-block">Com a classe <code>.date-time-mask</code></p>
+					</div>
+					<div class="form-group col-lg-4">
+						<label for="example-input-6">Telefone</label>
+						<input type="text" class="form-control phone-mask" id="example-input-6" placeholder="Ex.: 0000-0000">
+						<p class="help-block">Com a classe <code>.phone-mask</code></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-lg-4">
+						<label for="example-input-7">Telefone com DDD</label>
+						<input type="text" class="form-control phone-ddd-mask" id="example-input-7" placeholder="Ex.: (00) 0000-0000">
+						<p class="help-block">Com a classe <code>.phone-ddd-mask</code></p>
+					</div>
+					<div class="form-group col-lg-4">
+						<label for="example-input-8">Celulares de São Paulo</label>
+						<input type="text" class="form-control cel-sp-mask" id="example-input-8" placeholder="Ex.: (00) 00000-0000">
+						<p class="help-block">Com a classe <code>.cel-sp-mask</code></p>
+					</div>
+					<div class="form-group col-lg-4">
+						<label for="example-input-9">Máscara Mista</label>
+						<input type="text" class="form-control cep-mask" id="example-input-9" placeholder="Ex.: AAA 000-S0S">
+						<p class="help-block">Com a classe <code>.mixed-mask</code></p>
 					</div>
 				</div>
 			</fieldset>
 		</form>
 	</div>
-
+	<pre class="lang-html prettyprint linenums">
+&lt;input type=&quot;text&quot; class=&quot;form-control cpf-mask&quot; placeholder=&quot;Ex.: 000.000.000-00&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control cep-mask&quot; placeholder=&quot;Ex.: 00000-000&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control time-mask&quot; placeholder=&quot;Ex.: 00:00:00&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control date-time-mask&quot; placeholder=&quot;Ex.: 00/00/0000 00:00:00&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control phone-mask&quot; placeholder=&quot;Ex.: 0000-0000&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control phone-ddd-mask&quot; placeholder=&quot;Ex.: (00) 0000-0000&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control cel-sp-mask&quot; placeholder=&quot;Ex.: (00) 00000-0000&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control cep-mask&quot; placeholder=&quot;Ex.: AAA 000-S0S&quot;&gt;
+	</pre>
+	<h3>Definindo as mascaras no HTML.</h3>
+	<p>Você pode criar máscaras para os seus campos editando o atributo <code>data-mask</code>, veja o exemplo abaixo:</p>
+	<div class="example">
+		<form role="form">
+			<fieldset>
+				<div class="row">
+					<div class="form-group col-lg-4">
+						<label for="example-input-10">Data</label>
+						<input type="text" class="form-control" id="example-input-10" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000">
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="lang-html prettyprint linenums">&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Ex.: dd/mm/aaaa&quot; data-mask=&quot;00/00/0000&quot;&gt;</pre>
 </article>

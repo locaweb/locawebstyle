@@ -1,0 +1,170 @@
+---
+title: Formulários - Prefixos e sufixos de campos
+
+menu_page: sidebar-formularios.erb
+---
+
+<article class="text">
+	<header>
+	  <h1>Formulários</h1>
+	  <h2>Prefixos e sufixos de campos.</h2>
+	</header>
+	<p>Você pode extender os campos de formulários adicionando textos antes ou depois do campo.</p>
+	<div class="bs-callout bs-callout-danger">
+		<h4>Compatibilidade entre navegadores</h4>
+		<p>Evite utilizar com o elemento <code>select</code> pois ele não é totalmente customizavel em navegadores Webkit.</p>
+	</div>
+	<div class="bs-callout bs-callout-info">
+		<h4>Tooltips ou Popovers nos grupos de campos precisa de uma configuração especial.</h4>
+		<p>Quando você usar tooltips ou popovers nos elementos com a classe <code>.input-group</code>, você terá que especificar a opção <code>container: 'body'</code>para evitar efeitos indesejados.</p>
+	</div>
+	<h2>Exemplo Básico</h2>
+	<br>
+	<div class="example">
+		<form>
+			<div class="input-group">
+				<span class="input-group-addon">http://</span>
+				<input type="text" class="form-control" placeholder="site">
+			</div>
+			<br>
+			<div class="input-group">
+				<input type="text" class="form-control">
+				<span class="input-group-addon">.00</span>
+			</div>
+			<br>
+			<div class="input-group">
+				<span class="input-group-addon">$</span>
+				<input type="text" class="form-control">
+				<span class="input-group-addon">.00</span>
+			</div>
+		</form>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;input-group&quot;&gt;
+	&lt;span class=&quot;input-group-addon&quot;&gt;http://&lt;/span&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;site&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+	&lt;span class=&quot;input-group-addon&quot;&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+	&lt;span class=&quot;input-group-addon&quot;&gt;$&lt;/span&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+	&lt;span class=&quot;input-group-addon&quot;&gt;.00&lt;/span&gt;
+&lt;/div&gt;</pre>
+
+	<h2>Modificando o tamanho dos campos</h2>
+	<p>Adicionando as classes de tamanho dos campos no elemento com a classe <code>.input-group</code>, seu conteúdo será <s>automagicamente</s> redimencionado.</p>
+	<div class="example">
+		<form>
+			<div class="input-group input-group-lg">
+				<span class="input-group-addon">@</span>
+				<input type="text" class="form-control input-lg" placeholder="Nome do usuário">
+			</div>
+			<br>
+			<div class="input-group">
+				<span class="input-group-addon">@</span>
+				<input type="text" class="form-control" placeholder="Nome do usuário">
+			</div>
+			<br>
+			<div class="input-group input-group-sm">
+				<span class="input-group-addon">@</span>
+				<input type="text" class="form-control" placeholder="Nome do usuário">
+			</div>
+		</form>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;input-group input-group-lg&quot;&gt;
+	&lt;span class=&quot;input-group-addon&quot;&gt;@&lt;/span&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control input-lg&quot; placeholder=&quot;Nome do usu&#xe1;rio&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+	&lt;span class=&quot;input-group-addon&quot;&gt;@&lt;/span&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Nome do usu&#xe1;rio&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group input-group-sm&quot;&gt;
+	&lt;span class=&quot;input-group-addon&quot;&gt;@&lt;/span&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Nome do usu&#xe1;rio&quot;&gt;
+&lt;/div&gt;</pre>
+
+	<h2>Prefixos com checkbox e radio buttons</h2>
+	<p>Basta colocar os checkboxes e radio buttons dentro dos elementos com a classe <code>.input-group-addon</code> para obter o resultado abaixo:</p>
+	<div class="example">
+		<form>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<input type="checkbox">
+						</span>
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<input type="radio">
+						</span>
+						<input type="text" class="form-control">
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;input-group&quot;&gt;
+	&lt;span class=&quot;input-group-addon&quot;&gt;
+		&lt;input type=&quot;checkbox&quot;&gt;
+	&lt;/span&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+	&lt;span class=&quot;input-group-addon&quot;&gt;
+		&lt;input type=&quot;radio&quot;&gt;
+	&lt;/span&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+&lt;/div&gt;</pre>
+	<h2>Prefixos com botões</h2>
+	<p>Prefixos e sufixos com botões são um pouco diferentes de serem implementados. Substitua a classe <code>.input-group-addon</code> por <code>.input-group-btn</code> e adicione os botões dentro. Veja como fica:</p>
+	<div class="example">
+		<form>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">Valendo!</button>
+						</span>
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="input-group">
+						<input type="text" class="form-control">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">Valendo!</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;input-group&quot;&gt;
+	&lt;span class=&quot;input-group-btn&quot;&gt;
+		&lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Valendo!&lt;/button&gt;
+	&lt;/span&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-group&quot;&gt;
+	&lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+	&lt;span class=&quot;input-group-btn&quot;&gt;
+		&lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Valendo!&lt;/button&gt;
+	&lt;/span&gt;
+&lt;/div&gt;</pre>
+</article>

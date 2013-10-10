@@ -4,6 +4,8 @@ var locastyle = (function() {
   function init(){
     bgShortcutWorkaround();
     breakpointWindowWidth();
+    inputsMask();
+    claimDatePicker();
   }
 
   // Aquele background cinza que fica sempre atrás do elemento Shortcut
@@ -57,6 +59,40 @@ var locastyle = (function() {
       $('html').removeClass('media-desk-lg');
     }
   }
+
+  // Definindo padrões de classes para as máscaras de formulários.
+  function inputsMask() {
+    $('.date-mask').mask('00/00/0000');
+    $('.time-mask').mask('00:00:00');
+    $('.date-time-mask').mask('00/00/0000 00:00:00');
+    $('.cep-mask').mask('00000-000');
+    $('.phone-mask').mask('0000-0000');
+    $('.phone-ddd-mask').mask('(00) 0000-0000');
+    $('.cel-sp-mask').mask('(00) 00009-0000');
+    $('.mixed-mask').mask('AAA 000-S0S');
+    $('.cpf-mask').mask('000.000.000-00', {reverse: true});
+  }
+
+  // Implementando o Jquery DatePicker e nas configurações definindo a internacionalização.
+  function claimDatePicker () {
+    $('.datepicker input').datepicker({
+      showOn: 'button',
+      dateFormat: 'dd/mm/yy',
+      monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+      monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+      dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
+      dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+      dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab']
+    });
+
+    var createWrap = '<span class="input-group-btn"></span>'
+    $('.datepicker').each(function () {
+      $(this).append(createWrap);
+      var parentGroupBtn = $(this).find('.input-group-btn');
+      $(this).find('.ui-datepicker-trigger').addClass('ico-calendar btn btn-default').html('').appendTo(parentGroupBtn);
+    });
+  }
+
 
   return {
     init: init
