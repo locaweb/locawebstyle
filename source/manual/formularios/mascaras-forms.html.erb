@@ -32,16 +32,16 @@ menu_page: sidebar-formularios.erb
     <pre class="lang-javascript prettyprint linenums">$("#data").mask("99/99/9999");
       //Aceita até 9 digitos
       $('#telefone').mask("(99) 9999-9999?9").ready(function(event) {
-      var target, phone, element;
-      target = (event.currentTarget) ? event.currentTarget : event.srcElement;
-      phone = target.value.replace(/\D/g, '');
-      element = $(target);
-      element.unmask();
-      if(phone.length &gt; 10) {
-      element.mask("(99) 99999-999?9");
+        var target, phone, element;
+        target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+        phone = target.value.replace(/\D/g, '');
+        element = $(target);
+        element.unmask();
+        if(phone.length &gt; 10) {
+        element.mask("(99) 99999-999?9");
     } else {
     element.mask("(99) 9999-9999?9");
-  }
+    }
   });
   $("#cpf").mask("999.999.999-99");
   </pre>
