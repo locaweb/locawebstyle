@@ -79,7 +79,7 @@
 #{$theme_name} .progress .bar,
 #{$theme_name} .pathWay li.active,
 #{$theme_name} .pathWay li:hover,
-#{$theme_name} #menuPrincipal .btMenu a:hover, 
+#{$theme_name} #menuPrincipal .btMenu a:hover,
 #{$theme_name} #menuPrincipal .btMenu a:active,
 #{$theme_name} .notification header:before {
   background-color: $pallet_1;
@@ -131,7 +131,9 @@
 #{$theme_name} .btn-primary,
 #{$theme_name} .dropdown-menu li > a:hover,
 #{$theme_name} .dropdown-menu li > a:focus,
-#{$theme_name} .dropdown-submenu:hover > a  {
+#{$theme_name} .dropdown-submenu:hover > a,
+#{$theme_name} div.hopscotch-bubble .hopscotch-nav-button.next,
+#{$theme_name} div.hopscotch-bubble .hopscotch-nav-button.next:hover  {
   background-color: $pallet_2;
   background-image: -moz-linear-gradient(top,  $pallet_1 0%, $pallet_2 100%);
   background-image: -webkit-linear-gradient(top,  $pallet_1 0%,$pallet_2 100%);
@@ -144,7 +146,7 @@
 #{$theme_name} .shortcutBox div.active,
 #{$theme_name} .shortcutBox div:hover,
 #{$theme_name} .chooseBox li:hover,
-#{$theme_name} .chooseBox li.active {
+#{$theme_name} .chooseBox li.active{
   border-color: $pallet_1;
   background-color: $pallet_6;
   background: -moz-linear-gradient(top,  #ffffff 0%, $pallet_6 100%);
