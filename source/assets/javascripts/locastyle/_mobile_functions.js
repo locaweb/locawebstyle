@@ -8,6 +8,7 @@ locastyle.mobile = (function() {
     mobileRightBar();
     mobileBarOverlay();
     tabDropDownMobile();
+    sliderMobile();
   }
 
   // Insere classe left-bar que controla a abertura da sidebar da ESQUERDA nos mobiles
@@ -45,10 +46,39 @@ locastyle.mobile = (function() {
     }
   }
 
+
+  function sliderMobile() {
+    var si = $('.sliderMobile').royalSlider({
+      addActiveClass: true,
+      arrowsNav: false,
+      startSlideId: 1,
+      controlNavigation: 'bullets',
+      autoScaleSlider: true,
+      // autoScaleSliderWidth: 960,
+      autoScaleSliderHeight: 540,
+      loop: false,
+      fadeinLoadedSlide: true,
+      globalCaption: false,
+      keyboardNavEnabled: false,
+      slidesSpacing: 0,
+      globalCaptionInside: false,
+
+      visibleNearby: {
+        enabled: true,
+        center: true,
+        breakpoint: 150,
+        breakpointCenterArea: 0.14,
+        navigateByCenterClick: false
+      }
+    }).data('royalSlider');
+  }
+
+
   return {
     init: init,
     mobileLeftBar: mobileLeftBar,
-    mobileRightBar: mobileRightBar
+    mobileRightBar: mobileRightBar,
+    sliderMobile: sliderMobile
   };
 
 }());
