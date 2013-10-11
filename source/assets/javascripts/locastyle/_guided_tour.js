@@ -16,7 +16,8 @@ Locastyle.prototype.guidedTour = (function() {
 	}
 
 	function openWelcomeTour(){
-		$('.guided-tour').addClass('on');
+		$('.guided-tour').toggleClass('on');
+		$('.btn-tour').focus().attr('tabindex', '-1');
 		return false;
 	}
 
@@ -53,10 +54,21 @@ Locastyle.prototype.guidedTour = (function() {
 		}
 	}
 
+	function ptBr(){
+		tourLocales = {
+			nextBtn: "Próximo",
+			prevBtn: "Anterior",
+			doneBtn: "Ok",
+			skipBtn: "Sair",
+			closeTooltip: "Fechar"
+		};
+	}
+
 	return {
 		init: init,
 		openWelcomeTour: openWelcomeTour,
-		closeWelcomeTour: closeWelcomeTour
+		closeWelcomeTour: closeWelcomeTour,
+		ptBr: ptBr
 	};
 
 }());

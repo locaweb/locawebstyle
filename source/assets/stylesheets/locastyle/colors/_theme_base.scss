@@ -13,7 +13,8 @@
 #{$theme_name} .innerSideBox [class*="ico-"],
 #{$theme_name} .listWhite li a:before,
 #{$theme_name} .boxInfoAction.sought strong,
-#{$theme_name} .boxInfoAction.sought b {
+#{$theme_name} .boxInfoAction.sought b,
+#{$theme_name} .guided-tour.on .lnk-suggestions {
   color: $pallet_1;
 }
 
@@ -85,6 +86,10 @@
   background-color: $pallet_1;
 }
 
+#{$theme_name} .guided-tour .guided-footer{
+  background-color: $pallet_7;
+}
+
 #{$theme_name} #menuPrincipal,
 #{$theme_name} .tabs li a:hover,
 #{$theme_name} .tabs li a:focus,
@@ -106,7 +111,8 @@
   border-left-color: $pallet_1;
 }
 
-#{$theme_name} #menuPrincipal > ul > li.selected > a {
+#{$theme_name} #menuPrincipal > ul > li.selected > a,
+#{$theme_name} .lnk-suggestions {
   background-color: $pallet_1;
 }
 

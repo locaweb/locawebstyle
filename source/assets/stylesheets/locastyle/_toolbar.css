@@ -4,6 +4,7 @@
   font: 300 12px verdana, tahoma, arial, helvetica, sans-serif;
   position: relative;
   z-index: 2;
+  border-bottom: 4px solid #BBB;
 }
 #toolbar .limitToolbar {position:relative; max-width: 1180px; margin:0 auto; height:33px;}
 

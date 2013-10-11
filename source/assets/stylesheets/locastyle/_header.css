@@ -1,5 +1,4 @@
 #header {
-  border-top: 4px solid #BBB;
   background: #f0f0f0 url(../images/bgHeader.gif) repeat-X top center;
   position: relative;
   z-index: 1;
@@ -218,18 +217,19 @@
 }
 
 /** Linkzinho de sugestões do Header **/
-.lnkSugestoes, #feedbackr.lnkSugestoes {
+.forceClass .lnk-suggestions,
+.forceClass .lnk-suggestions:hover{color: #fff;}
+
+.lnk-suggestions {
+  background-color: #ddd;
   float: right;
-  background: url(../images/ico-lamp.png) no-repeat 10px center #fff;
   text-decoration: none;
-  color: #545454;
   font: 12px verdana;
-  padding: 5px 10px 5px 25px;
-  border: 1px solid #EEE;
+  padding: 5px 10px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-
+.lnk-suggestions:before{font-size: 16px;}
 .infoLogin {
   min-width: 400px;
   position: absolute;

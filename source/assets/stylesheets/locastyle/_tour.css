@@ -1,33 +1,28 @@
 .guided-tour {
   background: #fff;
   border: 1px solid #ccc;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   display: block;
   width: 260px;
-
   position: absolute;
-  top:-80px;
+  top: -228px;
   right: 0;
-
   text-align: center;
-
-  overflow: hidden;
   z-index: 3;
+  border-bottom-left-radius: 5px;
 
-  opacity: 0;
-  visibility: hidden;
-
-  -webkit-transition: all 400ms ease-in-out;
-  -moz-transition: all 400ms ease-in-out;
-  -ms-transition: all 400ms ease-in-out;
-  -o-transition: all 400ms ease-in-out;
-  transition: all 400ms ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 .guided-tour .close{margin-right: 10px;}
 .guided-tour.on {
-  top:0px;
-  opacity: 1;
-  visibility: visible;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  top: -1px;
+}
+.guided-tour.on .lnk-suggestions{
+  background-color: #fff;
 }
 .guided-header{ clear: both; margin: 0 0 10px;}
 .guided-tour .btn-tour{ margin-bottom: 15px;}
@@ -45,6 +40,19 @@
   padding: 6px 0;
 }
 .hopscotch-nav-button.next:hover{opacity: 0.85;}
+.guided-tour .lnk-suggestions{
+  position: absolute;
+  right: -1px;
+  bottom: -28px;
+}
+.guided-tour.on .lnk-suggestions{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.title-guided{
+  font: 16px UbuntuMedium, arial, verdana, tahoma, sans-serif;
+}
 
 /*
   Tour
