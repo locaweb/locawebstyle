@@ -6,8 +6,8 @@ Locastyle.prototype.passwordStrength = (function() {
   }
 
   function searchPasswordCheckers() {
-    $("input[data-component=password_strength]").each(function (index, value) {
-      var monitorId = $(this).data("monitor_id");
+    $("input[data-component=password-strength]").each(function (index, value) {
+      var monitorId = $(this).data("monitor-id");
       var monitor = $("#" + monitorId);
       if(monitorId) {
         bindPasswordChecker(this, monitor);

@@ -14,47 +14,51 @@ menu_page: sidebar-formularios.erb
 	<div class="example">
 	  <div class="control-group">
             <label for="user_password">Nova senha</label>
-            <input class="password autoFocus span3" id="user_password" data-component="password_strength" data-monitor_id="password_strength_monitor" name="" type="password">
-            <div class="password_strength">
+            <input class="password autoFocus span3" id="user_password" data-component="password-strength" data-monitor-id="password-strength-monitor" name="" type="password">
+            <div class="password-strength">
               <small>Força da senha</small>
-              <div id="password_strength_monitor" class="monitor"></div>
+              <div id="password-strength-monitor" class="monitor"></div>
             </div>
           </div>
 	</div>
 <pre class="lang-html prettyprint linenums">
-&lt;div class=&quot;control-group userPass&quot;&gt;
-	&lt;label for=&quot;user_password&quot;&gt;Nova senha&lt;/label&gt;
-	&lt;input class=&quot;password autoFocus span3&quot; id=&quot;user_password&quot; type=&quot;password&quot;&gt;
-	&lt;div class=&quot;securityPass &quot;&gt;
-		&lt;small&gt;Força da senha:&lt;/small&gt;
-		&lt;div id=&quot;passwordStrength&quot; class=&quot;dInlineBlock np0&quot;&gt;&lt;/div&gt;
-	&lt;/div&gt;
+&lt;div class=&quot;example&quot;&gt;
+  &lt;div class=&quot;control-group&quot;&gt;
+    &lt;label for=&quot;user_password&quot;&gt;Nova senha&lt;/label&gt;
+    &lt;input class=&quot;password autoFocus span3&quot; id=&quot;user_password&quot; data-component=&quot;password-strength&quot; data-monitor-id=&quot;password-strength-monitor&quot; name=&quot;&quot; type=&quot;password&quot;&gt;
+    &lt;div class=&quot;password-strength&quot;&gt;
+      &lt;small&gt;For&#231;a da senha&lt;/small&gt;
+      &lt;div id=&quot;password-strength-monitor&quot; class=&quot;monitor&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <h4>Informações adicionais referente ao campo de senha</h4>
 
 <div class="example">
-  <div class="control-group userPass">
+  <div class="control-group">
     <label class="noMarginBottom" for="user_password">Nova senha</label>
     <p>Senha entre 8 a 14 caracteres, contendo letras e números</p>
-    <input class="password autoFocus span3" id="account_password" data-component="password_strength" data-monitor_id="password_strength_monitor_2" type="password">
-    <div class="securityPass ">
+    <input class="password autoFocus span3" id="account-password" data-component="password-strength" data-monitor-id="password-strength-monitor-2" type="password">
+    <div class="password-strength">
       <small>Força da senha:</small>
-      <div id="password_strength_monitor_2" class="dInlineBlock np0"></div>
+      <div id="password-strength-monitor-2" class="monitor"></div>
     </div>
   </div>
 </div>
 
 <pre class="lang-html prettyprint linenums">
-&lt;div class=&quot;control-group userPass&quot;&gt;
-	&lt;label class=&quot;noMarginBottom&quot; for=&quot;user_password&quot;&gt;Nova senha&lt;/label&gt;
-	&lt;p&gt;Senha entre 8 a 14 caracteres, contendo letras e números&lt;/p&gt;
-	&lt;input class=&quot;password autoFocus span3&quot; id=&quot;user_password&quot; type=&quot;password&quot;&gt;
-	&lt;div class=&quot;securityPass &quot;&gt;
-		&lt;small&gt;Força da senha:&lt;/small&gt;
-		&lt;div id=&quot;passwordStrength&quot; class=&quot;dInlineBlock np0&quot;&gt;&lt;/div&gt;
-	&lt;/div&gt;
+&lt;div class=&quot;example&quot;&gt;
+  &lt;div class=&quot;control-group&quot;&gt;
+    &lt;label class=&quot;noMarginBottom&quot; for=&quot;user_password&quot;&gt;Nova senha&lt;/label&gt;
+    &lt;p&gt;Senha entre 8 a 14 caracteres, contendo letras e n&#250;meros&lt;/p&gt;
+    &lt;input class=&quot;password autoFocus span3&quot; id=&quot;account-password&quot; data-component=&quot;password-strength&quot; data-monitor-id=&quot;password-strength-monitor-2&quot; type=&quot;password&quot;&gt;
+    &lt;div class=&quot;password-strength&quot;&gt;
+      &lt;small&gt;For&#231;a da senha:&lt;/small&gt;
+      &lt;div id=&quot;password-strength-monitor-2&quot; class=&quot;monitor&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 </article>
