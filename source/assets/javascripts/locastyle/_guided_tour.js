@@ -55,16 +55,6 @@ Locastyle.prototype.guidedTour = (function() {
 		}
 	}
 
-	function btnPtBr(){
-		tourLocales = {
-			nextBtn: "Próximo",
-			prevBtn: "Anterior",
-			doneBtn: "Ok",
-			skipBtn: "Sair",
-			closeTooltip: "Fechar"
-		};
-	}
-
 	function setCookie(){
 		if($.cookie("cookie_tour") != "true"){
 			$('.lnk-suggestions').click();
@@ -75,8 +65,7 @@ Locastyle.prototype.guidedTour = (function() {
 	return {
 		init: init,
 		openWelcomeTour: openWelcomeTour,
-		closeWelcomeTour: closeWelcomeTour,
-		btnPtBr: btnPtBr
+		closeWelcomeTour: closeWelcomeTour
 	};
 
 }());
