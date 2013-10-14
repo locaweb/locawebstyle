@@ -12,7 +12,7 @@
 	.nav-content
 		border-bottom-color: $color3
 
-		.menu a
+		.menu > li a
 			border-left-color: $color1
 
 			&.active,
@@ -36,9 +36,8 @@
 	.progress-bar
 		background-color: $color1
 
-	.nav-tabs
-		a
-			background-color: $color2
+	.nav-tabs	a
+		background-color: $color2
 
 		.dropdown-menu a
 			background-color: #fff
@@ -96,12 +95,32 @@
 		.nav-content
 			background-color: $color1
 
-			.menu a
-				&.active,
-				&:focus,
-				&:hover
-					background-color: $color3
-					border-bottom-color: $color5
+			.menu
+
+				li
+
+					& > a.active,
+					& > a:focus,
+					& > a:hover,
+					&:hover > a,
+						background-color: $color3
+						border-bottom-color: $color5
+
+					li:last-child a
+						border-bottom: none
+
+					& > ul
+						border-top-color: $color5
+
+						li a
+							background-color: $color3
+							color: #fff
+							border-bottom-color: rgba(0,0,0,0.2)
+
+							&:hover
+								background-color: $color4
+								border-bottom-color: rgba(0,0,0,0.1)
+								color: $color1
 
 		.shortcut-title.active:before,
 		.shortcut-title:hover:before
