@@ -39,7 +39,7 @@ menu_page: sidebar-formularios.erb
 		</tbody>
 	</table>
         <h3>Método</h3>
-	Há um método que retorna a classificação de força de uma determinada string quando passada via argumento.
+	<p>Há um método que retorna a classificação de força de uma determinada string quando passada via argumento.</p>
 
 	<table class="table table-stripped table-bordered">
 		<thead>
@@ -78,7 +78,7 @@ menu_page: sidebar-formularios.erb
 &lt;/div&gt;
 </pre>
 
-<h4>Informações adicionais referente ao campo de senha</h4>
+<h4>Outro exemplo</h4>
 
 <div class="example">
   <div class="control-group">
@@ -105,4 +105,10 @@ menu_page: sidebar-formularios.erb
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+
+<h3>Força da senha</h3>
+<p>Este não é o mesmo requisito de senha usado nos paineis da Locaweb, existe outra validação para estes casos. A proposta deste componente é prover um feedback de força de senha com requisitos simples.<p>
+<p>Não consideramos por exemplo sequência de caracteres, alta ocorrência do mesmo caractere, mesmo caractere consecutivo e outros requisitos usados para validar a força de uma senha.</p>
+<p>Lembrando também que este componente não valida a senha, ou seja, mesmo uma senha de classificação fraca (weak), passaria em um form de criação de senha, esta validação fica por sua conta.</p>
+
 </article>
