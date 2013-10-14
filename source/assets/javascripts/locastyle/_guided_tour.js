@@ -4,6 +4,7 @@ Locastyle.prototype.guidedTour = (function() {
 	function init(jsonSteps){
 		checkTour(jsonSteps);
 		keyCode();
+		setCookie();
 	}
 
 	var jsonTour;
@@ -54,7 +55,7 @@ Locastyle.prototype.guidedTour = (function() {
 		}
 	}
 
-	function ptBr(){
+	function btnPtBr(){
 		tourLocales = {
 			nextBtn: "Próximo",
 			prevBtn: "Anterior",
@@ -64,11 +65,18 @@ Locastyle.prototype.guidedTour = (function() {
 		};
 	}
 
+	function setCookie(){
+		if($.cookie("cookie_tour") != "true"){
+			$('.lnk-suggestions').click();
+			$.cookie('cookie_tour', "true");
+		}
+	}
+
 	return {
 		init: init,
 		openWelcomeTour: openWelcomeTour,
 		closeWelcomeTour: closeWelcomeTour,
-		ptBr: ptBr
+		btnPtBr: btnPtBr
 	};
 
 }());
