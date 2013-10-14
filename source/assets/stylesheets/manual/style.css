@@ -101,12 +101,16 @@ hr {
 /*****
 ****** CODE PARTS
 *****/
+pre.prettyprint {
+	-moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  overflow: auto;
+}
 pre .linenums {
 	font-size: 11px;
-	padding-left: 18px;
-}
-ol.linenums {
 	margin: 0 0 0 14px !important;
+	padding-left: 18px;
 }
 /*****
 ****** HEADER TOPBAR

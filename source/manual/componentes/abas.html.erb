@@ -1,9 +1,7 @@
 ---
 title: Componentes - Abas
-
 menu_page: sidebar-componentes.erb
 ---
-
 
 <article class="text">
 
@@ -27,23 +25,23 @@ menu_page: sidebar-componentes.erb
 	<pre class="lang-html prettyprint linenums">
 &lt;-- Tabs / Guias --&gt;
 &lt;ul class=&quot;tabs&quot;&gt;
-    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#tab1&quot; data-toggle=&quot;tab&quot;&gt;7 dias&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#tab2&quot; data-toggle=&quot;tab&quot;&gt;30 dias&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#tab3&quot; data-toggle=&quot;tab&quot;&gt;6 meses&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#tab1&quot; data-toggle=&quot;tab&quot;&gt;7 dias&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#tab2&quot; data-toggle=&quot;tab&quot;&gt;30 dias&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#tab3&quot; data-toggle=&quot;tab&quot;&gt;6 meses&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
  
 &lt;-- C&oacute;digo do conte&uacute;do das tabs --&gt;
 &lt;div class=&quot;tab-content&quot;&gt;
-    &lt;div class=&quot;tab-pane active&quot; id=&quot;tab1&quot;&gt;Conte&uacute;do Tab 1&lt;/div&gt;
-    &lt;div class=&quot;tab-pane&quot; id=&quot;tab2&quot;&gt;Conte&uacute;do Tab 2&lt;/div&gt;
-    &lt;div class=&quot;tab-pane&quot; id=&quot;tab3&quot;&gt;Conte&uacute;do Tab 3&lt;/div&gt;
+		&lt;div class=&quot;tab-pane active&quot; id=&quot;tab1&quot;&gt;Conte&uacute;do Tab 1&lt;/div&gt;
+		&lt;div class=&quot;tab-pane&quot; id=&quot;tab2&quot;&gt;Conte&uacute;do Tab 2&lt;/div&gt;
+		&lt;div class=&quot;tab-pane&quot; id=&quot;tab3&quot;&gt;Conte&uacute;do Tab 3&lt;/div&gt;
 &lt;/div&gt;</pre>
 
 	<h3>Ativando</h3>
 	<pre class="lang-javascript prettyprint linenums">
 $('#tabs a').click(function(e) {
-   $(this).tab('show');
-   e.preventDefault();
+	$(this).tab('show');
+	e.preventDefault();
 });	</pre>
 
 	<h3>Eventos</h3>
