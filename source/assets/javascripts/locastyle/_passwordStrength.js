@@ -86,7 +86,7 @@ Locastyle.prototype.passwordStrength = (function() {
   }
 
   function externalChecker(password) {
-    checkPasswordStrength(password);
+    return checkPasswordStrength(password);
   }
 
   return {
