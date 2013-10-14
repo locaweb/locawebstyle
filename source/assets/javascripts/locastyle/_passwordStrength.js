@@ -85,8 +85,13 @@ Locastyle.prototype.passwordStrength = (function() {
     return password.match(regexp);
   }
 
+  function externalChecker(password) {
+    checkPasswordStrength(password);
+  }
+
   return {
     init: init,
+    checkIt: externalChecker
   };
 
 }());
