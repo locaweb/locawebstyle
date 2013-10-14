@@ -181,12 +181,18 @@ $mobile-left-number: "240px"
 			display: none
 
 		.menu
-			ul
+			& > ul
 				margin: 0 auto
 				margin-bottom: -4px
 
-				li
+				& > li
 					float: left
+					position: relative
+
+					&:hover > a
+						text-decoration: none
+						background-color: $gray1
+						border-bottom: 4px solid $gray3
 
 					&:after
 						content: ""
@@ -213,7 +219,7 @@ $mobile-left-number: "240px"
 
 						&.active,
 						&:focus,
-						&:hover
+						&:hover,
 							text-decoration: none
 							background-color: $gray1
 							border-bottom: 4px solid $gray3
@@ -230,9 +236,38 @@ $mobile-left-number: "240px"
 								left: 15px
 								text-indent: 0
 
+
 //
 // Formatação específica para Desks
 //
 @media #{$media-desk}
-	.menu a
-		font-size: .88em !important
+
+	.nav-content
+		position: relative
+		z-index: 1
+
+		.menu li
+
+			&:hover ul
+				display: block
+
+			& > ul
+				display: none
+				position: absolute
+				top: 42px
+				z-index: 20
+				min-width: 150px
+				box-shadow: 0 5px 10px -2px rgba(0,0,0,0.5)
+				border-top: 4px solid $gray3
+
+				li a
+					display: block
+					color: $gray2
+					border: none
+					border-bottom: 1px solid $gray4
+					padding: 10px
+					text-transform: capitalize
+
+					&:hover
+						background-color: $gray5
+						border-bottom-width: 1px
