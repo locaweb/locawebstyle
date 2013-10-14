@@ -56,15 +56,15 @@
 				border-top-color: $color1
 				border-bottom-color: $color1
 
-
+	.shortcut-title.active:before,
+	.shortcut-title:hover:before,
 	.shortcut-title:before
 		color: $color2
+		background-color: #fff
 
-	.shortcut-title.active:before,
-	.shortcut-title:hover:before
+	.slider-mobile .rsActiveSlide .shortcut-title:before
 		background-color: $color2
-
-
+		color: #fff
 //
 // Cores do tablet para Desktop
 //
@@ -93,3 +93,8 @@
 				&:hover
 					background-color: $color3
 					border-bottom-color: $color5
+
+		.shortcut-title.active:before,
+		.shortcut-title:hover:before
+			background-color: $color2
+			color: #fff
