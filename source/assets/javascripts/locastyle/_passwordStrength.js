@@ -35,14 +35,20 @@ Locastyle.prototype.passwordStrength = (function() {
   }
 
   function checkPasswordStrength(password) {
-    if(isLongerEnough(password) && containsNumbers(password) && containsLetters(password) && containsCapitalLetters(password)){
+    if(isLongerEnough(password) && containsNumbers(password) && containsLetters(password) && containsCapitalLetters(password) && containsNonWordCharacter(password)){
       return "strong";
     }
-    if(isLongerEnough(password) && containsNumbers(password) && containsLetters(password)){
+    if(isLongerEnough(password) && containsNumbers(password) && containsLetters(password) && containsCapitalLetters(password)){
       return "good";
     }
-    if(isLongerEnough(password)){
+    if(isLongerEnough(password) && containsNumbers(password) && containsLetters(password) && containsNonWordCharacter(password)){
+      return "good";
+    }
+    if(isLongerEnough(password) && containsNumbers(password) && containsLetters(password)){
       return "medium";
+    }
+    if(isLongerEnough(password)){
+      return "weak";
     }
     if(isPresent(password)){
       return "weak";
@@ -71,6 +77,11 @@ Locastyle.prototype.passwordStrength = (function() {
 
   function containsCapitalLetters(password) {
     var regexp = new RegExp(/[A-Z]/);
+    return password.match(regexp);
+  }
+
+  function containsNonWordCharacter(password) {
+    var regexp = new RegExp(/\W/);
     return password.match(regexp);
   }
 
