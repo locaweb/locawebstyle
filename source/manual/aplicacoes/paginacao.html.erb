@@ -1,71 +1,161 @@
 ---
 title: Aplicações - Paginação
-
 menu_page: sidebar-aplicacoes.erb
 ---
-
-
 <article class="text">
+	<header>
+		<h1>Paginação</h1>
+		<h3>Exibição de navegação por páginas.</h3>
+	</header>
+	<p>Navegação entre páginas.</p>
 
-    <header>
-      <h1>Paginação</h1>
-      <h3>Exibição de navegação por páginas.</h3>
-    </header>
-    <p>Navegação entre páginas e controle de quantidade de elementos que serão exibidos nas páginas.</p>
+	<div class="example txt-center">
+		<ul class="pagination">
+			<li><a href="#">&laquo;</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
 
-        <div class="navView">
-            <div class="pagination">
-                <ul>
-                    <li class="prev"><span class="previous_page disabled">Anterior</span></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li class="disabled"><a href="#">...</a></li>
-                    <li class="next"><a href="#">Próximo</a></li>
-                </ul>
-            </div>
+<pre class="lang-html prettyprint linenums">
+&lt;ul class=&quot;pagination&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&laquo;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&raquo;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
 
-            <div class="filtroExibe">
-                <label class="select optional dinlineblock" for="per-page-top">Exibir </label>
-                <select class="select optional transaction-search-per-page" id="per-page-top" name="per_page">
-                    <option value=""></option>
-                    <option value="10">10</option>
-                    <option value="20">20</option>
-                    <option value="30">30</option>
-                    <option value="50">50</option>
-                    <option value="100">100</option>
-                </select>
-                ítens por página
-            </div>
-        </div>
+	<h4>Estados Ativado e Desativado</h4>
+	<p>Customize os links em diferentes circunstâncias. Utiliza a classe <code>.disabled</code> para links desativados e <code>.active</code> para indicar uma próxima pagina.</p>
+	<div class="example txt-center">
+		<ul class="pagination">
+			<li class="disabled"><a href="#">&laquo;</a></li>
+			<li class="active"><a href="#">1 </a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
 
-    <pre class="lang-html prettyprint linenums">
-        &lt;div class=&quot;navView&quot;&gt;
-            &lt;div class=&quot;pagination&quot;&gt;
-                &lt;ul&gt;
-                    &lt;li class=&quot;prev&quot;&gt;&lt;span class=&quot;previous_page disabled&quot;&gt;Anterior&lt;/span&gt;&lt;/li&gt;
-                    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
-                    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-                    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;Pr&oacute;ximo&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
+<pre class="lang-html prettyprint linenums">
+&lt;ul class=&quot;pagination&quot;&gt;
+	&lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&laquo;&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1 &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	...
+&lt;/ul&gt;
+</pre>
+	<p>Opcionalmente você também pode remover o link e manter apenas o <code>&lt;span&gt;</code> para manter o estilo e remover apenas a funcionalidade do click.</p>
 
-            &lt;div class=&quot;filtroExibe&quot;&gt;
-                &lt;label class=&quot;select optional dinlineblock&quot; for=&quot;per-page-top&quot;&gt;Exibir &lt;/label&gt;
-                &lt;select class=&quot;select optional transaction-search-per-page&quot; id=&quot;per-page-top&quot; name=&quot;per_page&quot;&gt;
-                    &lt;option value=&quot;&quot;&gt;&lt;/option&gt;
-                    &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
-                    &lt;option value=&quot;20&quot;&gt;20&lt;/option&gt;
-                    &lt;option value=&quot;30&quot;&gt;30&lt;/option&gt;
-                    &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
-                    &lt;option value=&quot;100&quot;&gt;100&lt;/option&gt;
-                &lt;/select&gt;
-                &iacute;tens por p&aacute;gina
-            &lt;/div&gt;
-        &lt;/div&gt;
-    </pre>
+<pre class="lang-html prettyprint linenums">
+&lt;ul class=&quot;pagination&quot;&gt;
+  &lt;li class=&quot;disabled&quot;&gt;&lt;span&gt;&amp;laquo;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;span&gt;1 &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+	<h4>Tamanhos</h4>
+	<p>Para alterar o tamanho, utilize as classes <code>.pagination-lg</code> ou <code>pagination-sm</code></p>
+
+	<div class="example txt-center">
+		<div class="d-block">
+			<ul class="pagination pagination-lg">
+				<li><a href="#">&laquo;</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+		</div>
+		<div class="d-block">
+			<ul class="pagination">
+				<li><a href="#">&laquo;</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+		</div>
+		<div class="d-block">
+			<ul class="pagination pagination-sm">
+				<li><a href="#">&laquo;</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+		</div>
+	</div>
+<pre class="lang-html prettyprint linenums">
+&lt;!-- Grande --&gt;
+&lt;ul class=&quot;pagination pagination-lg&quot;&gt;...&lt;/ul&gt;
+&lt;!--	Normal --&gt;
+&lt;ul class=&quot;pagination&quot;&gt;...&lt;/ul&gt;
+&lt;!--	Pequeno --&gt;
+&lt;ul class=&quot;pagination pagination-sm&quot;&gt;...&lt;/ul&gt;
+</pre>
+	<h4>Paginador</h4>
+	<p>Links rápidos para uma simples implementação de paginação com links de "anterior" e "próximo".</p>
+
+	<div class="example">
+		<ul class="pager">
+			<li><a href="#">Previous</a></li>
+			<li><a href="#">Next</a></li>
+		</ul>
+	</div>
+<pre class="lang-html prettyprint linenums">
+&lt;ul class=&quot;pager&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+	<h4>links Alinhados</h4>
+	<p>Você tem a opcão de alinhar um de cada lado</p>
+
+	<div class="example">
+		<ul class="pager">
+			<li class="previous"><a href="#">&larr; Older</a></li>
+			<li class="next"><a href="#">Newer &rarr;</a></li>
+		</ul>
+	</div>
+<pre class="lang-html prettyprint linenums">
+&lt;ul class=&quot;pager&quot;&gt;
+  &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;larr; Older&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;Newer &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+	<h4>Estado desabilitado opcional</h4>
+	<p>Esses links também usam a classe <code>.disabled</code> que é uma utilidade da paginação.</p>
+
+	<div class="example">
+		<ul class="pager">
+			<li class="previous disabled"><a href="#">&larr; Older</a></li>
+			<li class="next"><a href="#">Newer &rarr;</a></li>
+		</ul>
+	</div>
+<pre class="lang-html prettyprint linenums">
+&lt;ul class=&quot;pager&quot;&gt;
+  &lt;li class=&quot;previous disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;larr; Older&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;Newer &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
 </article>
