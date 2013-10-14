@@ -75,25 +75,25 @@
 
 	<p>Com WAI-ARIA também podemos definir áreas de navegação na página, avisando o leitor de tela que na página existem cabeçalho, rodapé, content, sidebar e etc... O Locaweb Style já faz uma captação automática destas áreas, inserindo as respectivas <strong>roles</strong>. Veja o pedaço de código exemplificando:</p>
 
-	<pre class="lang-javascript prettyprint linenums">
-	//
-	// Menu
-	$('#menuPrincipal').attr('role','navigation');
-	$('#menuPrincipal li a').attr('role','menuitem');
+<pre class="lang-javascript prettyprint linenums">
+//
+// Menu
+$('#menuPrincipal').attr('role','navigation');
+$('#menuPrincipal li a').attr('role','menuitem');
 
-	$('#rodape').attr('role','contentinfo');
-	$('.alert').attr('role','alert');
-	$('a.btn').attr('role','button');
-	$('.boxGray').attr('role','region');
-	$('.boxGray h2').attr('role','presentation');
-	$('.headerPrincipal').attr('role','banner');
-	$('.content').attr('role','main'); // criar essa classe nos produtos ??
-	$('.sidebar').attr('role','complementary');
+$('#rodape').attr('role','contentinfo');
+$('.alert').attr('role','alert');
+$('a.btn').attr('role','button');
+$('.boxGray').attr('role','region');
+$('.boxGray h2').attr('role','presentation');
+$('.headerPrincipal').attr('role','banner');
+$('.content').attr('role','main'); // criar essa classe nos produtos ??
+$('.sidebar').attr('role','complementary');
 
-	//
-	// TABS
-	$('.tabs').attr('role','tablist');
-	</pre>
+//
+// TABS
+$('.tabs').attr('role','tablist');
+</pre>
 </article>
 </section>
 <!-- END post content -->
