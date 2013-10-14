@@ -48,22 +48,12 @@ locastyle.mobile = (function() {
 
 
   function sliderMobile() {
-<<<<<<< HEAD
     var si = $('.media-mobile .slider-mobile').royalSlider({
-=======
-    var si = $('.sliderMobile').royalSlider({
->>>>>>> 53e2b8919222ce2bb17d3da62bdb19ffbe5cd6aa
       addActiveClass: true,
       arrowsNav: false,
       startSlideId: 1,
       controlNavigation: 'bullets',
-<<<<<<< HEAD
       autoScaleSlider: false,
-=======
-      autoScaleSlider: true,
-      // autoScaleSliderWidth: 960,
-      autoScaleSliderHeight: 540,
->>>>>>> 53e2b8919222ce2bb17d3da62bdb19ffbe5cd6aa
       loop: false,
       fadeinLoadedSlide: true,
       globalCaption: false,
