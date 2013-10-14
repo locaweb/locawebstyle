@@ -6,11 +6,55 @@ menu_page: sidebar-formularios.erb
 <article class="text">
 	<header>
 		<h1>Medidor de complexidade de senhas</h1>
-		<h3>Mede a complexidade da senha no padrão criado pelos projetos internos da Locaweb.</h3>
+		<h3>Mede a complexidade da senha de maneira simples.</h3>
 	</header>
 
-	<p>Este é um medidor de segurança de senha simples para a autenticação de alguns serviços nossos.</p>
+	<p>Este é um medidor de complexidade de senha simples, sem muitas restrições, apenas um indicador visual da "força" da senha.</p>
+        <p>O monitor deste componente não valida a senha, apenas mostra a força da senha baseado em regras bem simples conforme table abaixo.</p>
 
+	<table class="table table-stripped table-bordered">
+		<thead>
+			<tr>
+				<th class="span4">Classificação</th>
+				<th>Condições</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Forte (strong)</td>
+				<td>Deve conter mais de 8 caracteres, letras, números, letras maiúsculas e caracteres especiais.</td>
+			</tr>
+			<tr>
+				<td>Boa (good)</td>
+				<td>Deve conter mais de 8 caracteres, letras e números. Além de letras maiúsculas ou caracteres especiais.</td>
+			</tr>
+			<tr>
+				<td>Média (medium)</td>
+				<td>Deve conter mais de 8 caracteres, letras e números.</td>
+			</tr>
+			<tr>
+				<td>Fraca (weak)</td>
+				<td>Contém menos de 8 caracteres ou apenas números ou apenas letras.</td>
+			</tr>
+		</tbody>
+	</table>
+        <h3>Método</h3>
+	Há um método que retorna a classificação de força de uma determinada string quando passada via argumento.
+
+	<table class="table table-stripped table-bordered">
+		<thead>
+			<tr>
+				<th class="span4">Método</th>
+				<th>Exemplo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>checkIt</td>
+				<td>Ao executar locastyle.passwordStrength.checkIt("123") o resutado esperado é a string "weak".</td>
+			</tr>
+		</tbody>
+	</table>
 	<div class="example">
 	  <div class="control-group">
             <label for="user_password">Nova senha</label>
