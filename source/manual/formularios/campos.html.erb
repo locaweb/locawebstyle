@@ -31,79 +31,62 @@ menu_page: sidebar-formularios.erb
 			<textarea class="form-control" rows="3"></textarea>
 		</form>
 	</div>
-	<pre class="lang-html prettyprint linenums">
-	&lt;textarea class=&quot;form-control&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;</pre>
+	<pre class="lang-html prettyprint linenums">&lt;textarea class=&quot;form-control&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;</pre>
 
 	<h3>Checkboxes e Radio Buttons</h3>
 	<p>Para selecionar <strong>mais de 1</strong> opção utilize os <code>checkboxes</code>, para selecionar <strong>apenas 1</strong> utilize o <code>radio buttons</code></p>
 	<div class="example">
 		<form>
 			<div class="checkbox">
-				<label>
-					<input type="checkbox" value="">
-					Marque aqui
-				</label>
+				<input type="checkbox" value="" id="checkbox-1">
+				<label for="checkbox-1">Marque aqui</label>
 			</div>
 			<div class="checkbox">
-				<label>
-					<input type="checkbox" value="">
-					E marque aqui também
-				</label>
+				<input type="checkbox" value="" id="checkbox-2">
+				<label for="checkbox-2">E marque aqui também</label>
 			</div>
 
 			<div class="radio">
-				<label>
-					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-					Ou marque aqui
-				</label>
+				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				<label for="optionsRadios1">Ou marque aqui</label>
 			</div>
 			<div class="radio">
-				<label>
-					<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					Ou marque aqui
-				</label>
+				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				<label for="optionsRadios2">Ou marque aqui</label>
 			</div>
 		</form>
 	</div>
 	<pre class="lang-html prettyprint linenums">
 &lt;div class=&quot;checkbox&quot;&gt;
-	&lt;label&gt;
-		&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
-		Marque aqui
-	&lt;/label&gt;
+	&lt;input type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;checkbox-1&quot;&gt;
+	&lt;label for=&quot;checkbox-1&quot;&gt;Marque aqui&lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;checkbox&quot;&gt;
-	&lt;label&gt;
-		&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
-		E marque aqui tamb&#xe9;m
-	&lt;/label&gt;
+	&lt;input type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;checkbox-2&quot;&gt;
+	&lt;label for=&quot;checkbox-2&quot;&gt;E marque aqui tamb&#xe9;m&lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;radio&quot;&gt;
-	&lt;label&gt;
-		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
-		Ou marque aqui
-	&lt;/label&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
+	&lt;label for=&quot;optionsRadios1&quot;&gt;Ou marque aqui&lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;radio&quot;&gt;
-	&lt;label&gt;
-		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&gt;
-		Ou marque aqui
-	&lt;/label&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&gt;
+	&lt;label for=&quot;optionsRadios2&quot;&gt;Ou marque aqui&lt;/label&gt;
 &lt;/div&gt;</pre>
 	<h4>Checkboxes e Radio Buttons em linha</h4>
 	<p>Utilize as classes <code>.checkbox-inline</code> ou <code>.radio-inline</code> para alinhar os elementos na horizontal.</p>
 	<div class="example">
 		<form>
 			<label class="checkbox-inline">
-				<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
-			</label>
-			<label class="checkbox-inline">
-				<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
-			</label>
-			<label class="checkbox-inline">
-				<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-			</label>
+	<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+</label>
+<label class="checkbox-inline">
+	<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+</label>
+<label class="checkbox-inline">
+	<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+</label>
 		</form>
 	</div>
 	<pre class="lang-html prettyprint linenums">
