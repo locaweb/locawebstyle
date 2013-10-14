@@ -56,18 +56,15 @@
 				border-top-color: $color1
 				border-bottom-color: $color1
 
-
-	.shortcut-title:before,
-	.sliderMobile .shortcut-title:hover:before,
-	.sliderMobile .shortcut-title:active:before
-		color: $color2
-
 	.shortcut-title.active:before,
 	.shortcut-title:hover:before,
-	.rsActiveSlide .shortcut-title:before
+	.shortcut-title:before
+		color: $color2
+		background-color: #fff
+
+	.sliderMobile .rsActiveSlide .shortcut-title:before
 		background-color: $color2
-
-
+		color: #fff
 //
 // Cores do tablet para Desktop
 //
@@ -96,3 +93,8 @@
 				&:hover
 					background-color: $color3
 					border-bottom-color: $color5
+
+		.shortcut-title.active:before,
+		.shortcut-title:hover:before
+			background-color: $color2
+			color: #fff

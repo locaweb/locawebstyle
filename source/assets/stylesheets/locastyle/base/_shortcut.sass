@@ -3,15 +3,11 @@
 	display: block
 	width: 100%
 	position: absolute
-	top: 40px
+	top: 0
 	left: 0
 	z-index: -1
 	min-height: 450px
 
-//
-// Desktops
-//
-@media (min-width: #{$screen-sm})
 .shortcuts
 	text-align: center
 	padding: 30px 0 49px
@@ -33,7 +29,6 @@
 			color: rgba(0,0,0,1)
 
 			&:before
-				-webkit-transform: scale(1.24)
 				color: #fff
 
 		&:before
@@ -42,3 +37,16 @@
 			margin: 0 auto 20px
 			background: #fff
 
+
+//
+// Desktops
+//
+@media (min-width: #{$screen-sm})
+	.shortcuts
+		.shortcut-title
+			&:active, &:hover
+				&:before
+					-webkit-transform: scale(1.24)
+
+	.bg-shortcut-workaround
+		min-height: 340px

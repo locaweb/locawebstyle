@@ -48,7 +48,7 @@ locastyle.mobile = (function() {
 
 
   function sliderMobile() {
-    var si = $('.sliderMobile').royalSlider({
+    var si = $('.media-mobile .sliderMobile').royalSlider({
       addActiveClass: true,
       arrowsNav: false,
       startSlideId: 1,
