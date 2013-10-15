@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <title>Aplicações - Busca avançada - Guia de estilos da Locaweb</title>
+  <title>Aplicações - Tour Guiado - Guia de estilos da Locaweb</title>
   <meta charset="utf-8">
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
@@ -11,7 +11,7 @@
   <link href="../../../assets/stylesheets/manual.css" media="screen" rel="stylesheet" type="text/css" />
 
 </head>
-<body class="manual manual_aplicacoes manual_aplicacoes_busca-avancada manual_aplicacoes_busca-avancada_index">
+<body class="manual manual_aplicacoes manual_aplicacoes_tour-guiado manual_aplicacoes_tour-guiado_index">
 
 <!-- topbar header -->
 <header id="topbar" class="clearfix">
@@ -69,67 +69,96 @@
 
 
 	<article class="text">
-        <header>
-          <h1>Busca avançada</h1>
-          <h3>Busca avançada com collapse e diversos campos de formulário.</h3>
-      </header>
+    <header>
+      <h1>Tour Guiado</h1>
+      <h3>Exibe uma navegação explicativa de elementos pré definidos</h3>
+    </header>
 
-      <p>A busca avançada já reconhece se os inputs estão marcados com preenchidos. Se estiverem preenchidos, o busca avançada já fica aberto, caso contrário ele aparece fechado. </p>
-      <p>Quando o usuário clica no botão VOLTAR PARA BUSCA SIMPLES, executa uma ação de limpar os inputs de BUSCA AVANCADA para não submete-los quando o usuário clicar em BUSCAR.</p>
+    <p>Utilizamos o plugin  <a href="http://linkedin.github.io/hopscotch" target="_blank">hopscotch</a> (criado pelo linkedin), e aplicamos a identidade visual do LocawebStyle.</p>
+    <h2>Como funciona:</h2>
+    <p>Dentro de cada projeto existe um arquivo.js (específico), que determina onde exibirá o <strong>Tour Guiado</strong>, qual o próximo passo e assim por diante. Em cada passo podemos implementar outras funções de navegação ou mesmo de eventos simulando interações, vale a pena ler a <a href="http://linkedin.github.io/hopscotch" target="_blank">documentação do plugin</a> para entender melhor sobre esses eventos e funções.</p>
 
-      <div class="boxFiltro">
-        <h2>Busca avançada</h2>
+    <p>Abaixo segue um exemplo dos códigos necessários para implementar o <strong>Tour Guiado</strong>. </p>
 
-        <form action="">
-            <div class="sideBySide periodoForm">
-                <label class="control-label" for="transaction_search_updated_at_begin">Pedido: </label>
-                <div class="control-group">
-                    <input class="span3 datepicker" size="50" type="text">
-                    a
-                </div>
+    <h3>Chamando a função de navegação dentro do seu projeto</h3>
+    <pre class="lang-html prettyprint linenums">
+    $(window).load(function() {
+        //Onde tourDashboard é a variável que recebe os eventos do plugin no exemplo abaixo
+        locastyle.guidedTour.init(tourDashboard);
+      });
 
-                <div class="control-group">
-                    <input class="span3 datepicker" size="50" type="text">
-                </div>
-            </div>
+    </pre>
+    <h3>arquivo .js </h3>
+    <pre class="lang-html prettyprint linenums">
+    // Tradução dos botões
+    tourLocales = {
+      nextBtn: "Próximo",
+      prevBtn: "Anterior",
+      doneBtn: "Ok",
+      skipBtn: "Sair",
+      closeTooltip: "Fechar"
+    };
 
-            <div class="control-group sideBySide clearForm advancedSearch in collapse" id="search">
-                <fieldset>
-                    <h6>Opções de busca avançada</h6>
+    // o nome da variável está sendo chamada no load (exemplo acima)
+    var tourDashboard = {
+      id: 'tour-dashboard',
+      i18n: tourLocales,
+      bubbleWidth: 250,
+      steps: [
+        {
+          target: 'menu_home',
+          title: 'Saiba qual  site está administrando',
+          content: 'Sem confusão! A identificação do site administrado ficou mais fácil: o endereço principal é exibido no topo do painel.',
+          placement: 'bottom',
+          arrowOffset: 'center'
+        },
+        {
+          target: $('#header .lnkAll ')[0],
+          title: 'Administre outros sites',
+          content: 'Retorne à lista de sites a qualquer momento.',
+          placement: 'right',
+          arrowOffset: 'center',
+          yOffset: 'center',
+          onNext: function(){
+            locastyle.guidedTour.openWelcomeTour();
+          }
+        },
+        {
+          target: $('#btn_back_old_panel')[0],
+          title: 'Ajude a melhorar o painel',
+          content: 'Esta é a primeira fase do novo painel de Hospedagem de Sites. Fique à vontade para testar, enviar sugestões e comentários.',
+          placement: 'left',
+          arrowOffset: 'center',
+          yOffset: 20,
+          xOffset: -60,
+          onPrev: function(){
+            locastyle.guidedTour.closeWelcomeTour();
+          }
+        }
+      showPrevButton: true
+    };
+    </pre>
 
-                    <div class="control-group">
-                        <label>Meio de pagamento </label>
-                        <select>
-                            <option></option>
-                            <option>Opção 1</option>
-                            <option>Opção 2</option>
-                            <option>Opção 3</option>
-                            <option>Opção 4</option>
-                        </select>
-                    </div>
-                    <div class="control-group">
-                        <label>Nº do pedido </label>
-                        <input type="number" value="" class="span2">
-                    </div>
+    <h3>HTML </h3>
+    <pre class="lang-html prettyprint linenums">
+        &lt;div class="guided-tour"&gt;
+          &lt;a href="javascript:;" tabindex="2" class="btn-close close"&gt;x&lt;/a&gt;
+          &lt;header class="guided-header"&gt;
+            &lt;p&gt;Bem-vindo ao novo painel&lt;/p&gt;
+            &lt;h2 class="title-guided"&gt;Hospedagem de Sites&lt;/h2&gt;
+          &lt;/header&gt;
 
-                    <div class="control-group">
-                        <label>Status </label>
-                        <input type="text" value="completo" class="span3">
-                    </div>
-                    <div class="control-group">
-                        <label>Valor </label>
-                        <input type="number" value="" class="span2"> a
-                        <input type="number" value="" class="span2">
-                    </div>
-                </fieldset>
-            </div>
+          &lt;a href="javascript:;" class="btn btn-primary btn-large btn-tour" role="button"&gt;Fazer um tour&lt;/a&gt;
+          &lt;p&gt;&lt;a href="javascript:;" data-target="#modalBeta" data-toggle="modal" tabindex="2"&gt;O que mudou?&lt;/a&gt;&lt;/p&gt;
 
-            <div class="boxActions">
-                <input class="btn btn-primary" name="commit" type="submit" value="Buscar">
-                <a href="#" class="lnkSeta clearFormBt" id="1" data-text="Voltar para busca simples" data-toggletext="true" data-toggle="collapse" data-target="#search">Voltar para busca simples</a>
-            </div>
-        </form>
-    </div> 
+          &lt;footer class="guided-footer"&gt;
+            &lt;a href="https://www.feedbackr.com.br/projects/..." class="lnkArrow" tabindex="2" target="_blank"&gt;Enviar comentários e sugestões&lt;/a&gt;
+            &lt;a href="" class="lnkArrow" tabindex="2" target="_blank"&gt;Voltar ao painel antigo&lt;/a&gt;
+          &lt;/footer&gt;
+           &lt;a href="https://www.feedbackr.com.br/projects/..." alt="feedbackr" class="lnk-suggestions ico-help-circle" id="feedbackr" tabindex="1" target="_blank"&gt;Sugestões e novidades&lt;/a&gt;
+        &lt;/div&gt;
+    </pre>
+
 </article>
 </section>
 <!-- END post content -->
