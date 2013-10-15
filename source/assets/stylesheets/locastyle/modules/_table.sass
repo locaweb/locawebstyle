@@ -1,0 +1,79 @@
+$border-cell-color: #efefef
+$bg-actions-color:  #00a272
+$tr-hover-color:    #f8fcf0
+
+.table-style
+	border-bottom: 3px solid $border-cell-color
+
+	thead
+		background-color: $gray1
+		color: #fff
+
+		th
+			border-bottom: 1px solid $border-cell-color
+			border-right: 1px solid $border-cell-color
+
+			&:last-child
+				border-right: none
+
+	tbody
+		tr
+			&:nth-child(2n+1)
+				background-color: #f9f9f9
+			td
+				border-right: 1px solid $border-cell-color
+				position: relative
+
+				&:last-child
+					border-right: none
+
+			&:hover
+				background-color: $tr-hover-color
+
+.table-actions
+	position: absolute
+	right: 0
+	top: 0
+	width: 20px
+	-webkit-transition: width .25s ease-in
+	transition: width .25s ease-in
+	background-color: transparent
+	height: 34px
+	overflow: hidden
+	padding-left: 12px
+
+	ul
+		width: inherit
+		display: none
+
+	span[class*="ico-"]
+		display: inline-block
+		overflow: hidden
+		width: 9px
+		color: $bg-actions-color
+		position: absolute
+		top: 8px
+		left: 5px
+
+	&:hover
+		background-color: $bg-actions-color
+		width: 300px
+
+		span[class*="ico-"]
+			color: #fff
+
+		ul
+			width: inherit
+			min-width: 250px
+			list-style: none
+			float: left
+			display: block
+			margin-bottom: 0
+
+			li
+				display: inline-block
+
+				a
+					display: inline-block
+					padding: 7px
+					color: #fff
