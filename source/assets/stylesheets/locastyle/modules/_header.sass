@@ -169,7 +169,8 @@ $mobile-left-number: "240px"
 		width: 100%
 		height: auto
 		overflow: inherit
-		position: static
+		position: relative
+		z-index: 1
 		margin-top: 25px
 		-webkit-transform: translate( 0px, 0px)
 		-moz-transition: none
@@ -236,38 +237,29 @@ $mobile-left-number: "240px"
 								left: 15px
 								text-indent: 0
 
+					//
+					// Submenu
+					//
+					&:hover ul
+						display: block
 
-//
-// Formatação específica para Desks
-//
-@media #{$media-desk}
+					& > ul
+						display: none
+						position: absolute
+						top: 42px
+						z-index: 20
+						min-width: 150px
+						box-shadow: 0 5px 10px -2px rgba(0,0,0,0.5)
+						border-top: 4px solid $gray3
 
-	.nav-content
-		position: relative
-		z-index: 1
+						li a
+							display: block
+							color: $gray2
+							border: none
+							border-bottom: 1px solid $gray4
+							padding: 10px
+							text-transform: capitalize
 
-		.menu li
-
-			&:hover ul
-				display: block
-
-			& > ul
-				display: none
-				position: absolute
-				top: 42px
-				z-index: 20
-				min-width: 150px
-				box-shadow: 0 5px 10px -2px rgba(0,0,0,0.5)
-				border-top: 4px solid $gray3
-
-				li a
-					display: block
-					color: $gray2
-					border: none
-					border-bottom: 1px solid $gray4
-					padding: 10px
-					text-transform: capitalize
-
-					&:hover
-						background-color: $gray5
-						border-bottom-width: 1px
+							&:hover
+								background-color: $gray5
+								border-bottom-width: 1px
