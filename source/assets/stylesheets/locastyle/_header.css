@@ -14,6 +14,7 @@
   text-decoration: none;
   color: #4B7CB8;
   font: 33px LacunaRegular, verdana, arial, tahoma, sans-serif;
+  position: relative;
 }
 .serviceName a {text-decoration: none;  color: #777; margin-left: -4px;}
 .serviceName a:hover {text-decoration: none; opacity: 0.7;}
@@ -24,6 +25,27 @@
   letter-spacing: 7px;
   color: #727272;
   font-size: 13px;
+}
+.serviceName .betalink {
+  position: absolute;
+  left: auto;
+  top: 30px;
+  right: -30px;
+}
+.lnkOldpanel{
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+.betalink{
+  background: url(../images/ico-beta.png) 0 0 no-repeat;
+  display: inline-block;
+  height: 20px;
+  left: 6px;
+  text-indent: -9999px;
+  position: relative;
+  top: 3px;
+  width: 41px;
 }
 
 /*** MENU PRINCIPAL
@@ -374,16 +396,6 @@
   float: left;
   padding: 0 0 0 10px;
   margin: 55px 0 0 10px;
-}
-.betalink{
-  background: url(../images/ico-beta.png) 0 0 no-repeat;
-  display: inline-block;
-  height: 20px;
-  left: 6px;
-  text-indent: -9999px;
-  position: relative;
-  top: 3px;
-  width: 41px;
 }
 .forceClass #menuPrincipal > ul > li.selected.parent > a{
   background: none;
