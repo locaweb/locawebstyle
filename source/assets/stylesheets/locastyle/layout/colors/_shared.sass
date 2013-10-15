@@ -32,28 +32,22 @@
 		&[class*="ico-"]:before
 			color: $color2
 
-	.dropdown-menu a:hover,
 	.progress-bar
 		background-color: $color1
 
 	.nav-tabs	a
+		background-color: #fff
+		color: $color5
+		border-color: #efefef
+
+	.nav .open > a
+		border-color: rgba(0,0,0,0.2)
+
+	.dropdown-menu a:hover
 		background-color: $color2
 
-		.dropdown-menu a
-			background-color: #fff
-
-			&:hover
-				background-color: $color2
-
-	.nav a
-		&.caret
-			border-top-color: $color2
-			border-bottom-color: $color2
-
-		&:hover
-			&.caret
-				border-top-color: $color1
-				border-bottom-color: $color1
+	.dropdown-toggle:after
+		@include arrow-down($color2, 5px)
 
 	.shortcut-title.active:before,
 	.shortcut-title:hover:before,
