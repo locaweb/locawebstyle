@@ -13,6 +13,7 @@ var locastyle = (function() {
   function bgShortcutWorkaround() {
     if ($(".shortcuts").length > 0) {
       $('.main').prepend('<span class="bg-shortcut-workaround"></span>');
+      $('.bg-shortcut-workaround').css('height', $('.shortcuts').outerHeight());
     }
 
     $( window ).resize(function() {
