@@ -11,13 +11,13 @@ var locastyle = (function() {
   // Aquele background cinza que fica sempre atrás do elemento Shortcut
   // Não nos orgulhamos disso. Mas não havia maneira melhor de fazer. ;-)
   function bgShortcutWorkaround() {
-    if ($(".shortcuts").length > 0) {
+    if ($(".shortcut-box").length > 0) {
       $('.main').prepend('<span class="bg-shortcut-workaround"></span>');
-      $('.bg-shortcut-workaround').css('height', $('.shortcuts').outerHeight());
+      $('.bg-shortcut-workaround').css('height', $('.shortcut-box').outerHeight());
     }
 
     $( window ).resize(function() {
-      $('.bg-shortcut-workaround').css('height', $('.shortcuts').outerHeight());
+      $('.bg-shortcut-workaround').css('height', $('.shortcut-box').outerHeight());
     });
   }
 
