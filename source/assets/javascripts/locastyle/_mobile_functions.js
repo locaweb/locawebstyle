@@ -41,7 +41,7 @@ locastyle.mobile = (function() {
       var navLi = $('.nav > li');
       $('.nav').append('<li class="dropdown"><ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop"></ul></li>');
       navLi.clone().appendTo('.dropdown-menu');
-      $('.dropdown').prepend('<a href="#" id="myTabDrop" class="dropdown-toggle" data-toggle="dropdown">OPÇÕES <b class="caret"></b></a>');
+      $('.dropdown').prepend('<a href="#" id="myTabDrop" class="dropdown-toggle" data-toggle="dropdown">OPÇÕES</a>');
       navLi.hide()
     }
   }
