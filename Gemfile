@@ -4,3 +4,4 @@ source 'http://rubygems.org'
 
 gem "middleman", "~>3.0.14"
 gem 'middleman-gh-pages'
+gem 'jasmine'
