@@ -1,4 +1,7 @@
 script: "rake jasmine:ci"
 
+branches:
+  only:
+    - v2
 rvm:
   - "1.9.3"
