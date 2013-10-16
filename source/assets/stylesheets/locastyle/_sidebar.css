@@ -220,4 +220,4 @@ h5 + .innerSideBox {margin-top:5px;}
 .innerSideBox small{font-size: 11px; line-height: 1.1em; }
 .sidebar .progress{margin: 0;}
 .progressInfo{font-size: 11px; }
-.sideBox p.ellipsis{width: 100%;}
+.sideBox .ellipsis{width: 100%;}
