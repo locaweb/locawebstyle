@@ -172,11 +172,9 @@ $mobile-left-number: "240px"
 		position: relative
 		z-index: 1
 		margin-top: 25px
-		-webkit-transform: translate( 0px, 0px)
-		-moz-transition: none
-		-webkit-transition: none
-		-o-transition: color 0 ease-in
-		transition: none
+		-webkit-transform: translateX(0)
+		-moz-transform:  translateX(0)
+		transform:  translateX(0)
 
 		&:before
 			display: none
@@ -226,16 +224,23 @@ $mobile-left-number: "240px"
 							border-bottom: 4px solid $gray3
 
 						&.ico-home
-							padding: 14px 0 9px
+							// padding: 18px 0 7px
 							text-indent: -9999px
 							width: 50px
+							position: relative
 
 							&:before
 								display: block
-								float: left
 								font-size: 1.5em
-								left: 15px
 								text-indent: 0
+								position: absolute
+								top: 0
+								left: 0
+								width: 100%
+								height: 100%
+								margin: 0
+								text-align: center
+								line-height: 44px
 
 					//
 					// Submenu
