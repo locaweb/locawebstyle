@@ -6,6 +6,7 @@ var locastyle = (function() {
     breakpointWindowWidth();
     inputsMask();
     claimDatePicker();
+    showActions();
   }
 
   // Aquele background cinza que fica sempre atrás do elemento Shortcut
@@ -94,6 +95,30 @@ var locastyle = (function() {
     });
   }
 
+  // Quando as tabelas tiverem checkboxes e mais de dois checkboxes forem marcados, será exibido um box com ações( excluir, enviar, duplicar e etc).
+  function showActions () {
+    var tableCheckboxes = $('.table-style input[type="checkbox"]');
+
+    $(tableCheckboxes).change( function () {
+      var tableCheckboxesChecked = $('.table-style input[type="checkbox"]:checked').length
+
+      if( tableCheckboxesChecked >=2 ) {
+
+        $(this).parents('.table-style').parent().find('.well strong').text(tableCheckboxesChecked);
+        $(this).parents('.table-style').parent().find('.well').removeClass('hidden')
+
+      } else {
+
+        $(this).parents('.table-style').parent().find('.well').addClass('hidden')
+      }
+    });
+
+    // Em ambiente mobile os botões exibidos serão modificados com a class "btn-sm"
+    if(locastyle.breakpoint == "media-mobile") {
+      $('.well .btn').addClass('btn-xs');
+    }
+
+  }
 
   return {
     init: init
