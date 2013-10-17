@@ -1,4 +1,4 @@
-$border-cell-color: #efefef
+$border-cell-color: #ddd
 $bg-actions-color:  #00a272
 $tr-hover-color:    #f8fcf0
 
@@ -21,15 +21,16 @@ $tr-hover-color:    #f8fcf0
 	thead
 		background-color: #163400
 		color: #fff
-
+		tr
+			background-color: #163400
 		th
 			border-bottom: 1px solid $border-cell-color
-			border-right: 1px solid $border-cell-color
+			border-left: 1px solid $border-cell-color
 			font-size: .87em
 			vertical-align: middle
 
 			&:last-child
-				border-right: none
+				border-left: none
 
 	tbody
 		tr
@@ -37,12 +38,13 @@ $tr-hover-color:    #f8fcf0
 				background-color: #f9f9f9
 
 			td
-				border-right: 1px solid $border-cell-color
+				border-left: 1px solid $border-cell-color
 				position: relative
 				font-size: .87em
 
 				&:last-child
-					border-right: none
+					border-left: none
+					padding-right: 20px
 
 			&:hover
 				background-color: $tr-hover-color
@@ -54,9 +56,10 @@ $tr-hover-color:    #f8fcf0
 	width: 20px
 	-webkit-transition: width .25s ease-in
 	transition: width .25s ease-in
-	height: inherit
+	height: 100%
 	overflow: hidden
 	cursor: pointer
+	vertical-align: middle
 
 	&[class*="ico-"]:before,
 	& ul:before
@@ -73,7 +76,7 @@ $tr-hover-color:    #f8fcf0
 		transition: all .25s ease-in
 		position: relative
 		padding: 0 20px
-		height: inherit
+		height: 100%
 		width: auto
 		float: right
 		-webkit-transform: translateX(80%)
