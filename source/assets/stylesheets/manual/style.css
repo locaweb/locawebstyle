@@ -528,19 +528,21 @@ table {
 	padding-bottom: 30px;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
+
 .content header h2 {
 	color: #545454!important;
 	font-size: 0.8em;
-	line-height: 0;
 	padding: 0;
 	text-transform: uppercase;
 	vertical-align: top;
 }
+
 .content header h2:before {
 	font-size: 75px !important;
 	top: 12px !important;
 	vertical-align: top !important;
 }
+
 .content header h1 {
 	/*margin-left: 84px;*/
     position: relative;
