@@ -2,7 +2,7 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3
 
-script: "rake jasmine:ci"
+script: "xvfb-run rake jasmine:ci"
 
 branches:
   only:
