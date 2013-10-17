@@ -14,7 +14,7 @@ menu_page: sidebar-componentes.erb
 			<table class="table table-style">
 				<thead>
 					<tr>
-						<th>#</th>
+						<th class="txt-center"><input type="checkbox"></th>
 						<th>Título</th>
 						<th>Campanha</th>
 						<th>Status</th>
@@ -24,15 +24,14 @@ menu_page: sidebar-componentes.erb
 				<tbody>
 					<%- 4.times do |i| %>
 						<tr>
-							<td><%= i %></td>
-							<td>Mensagem Teste Locastyle 1</td>
-							<td>Campanha 1</td>
+							<td class="txt-center"><input type="checkbox"></td>
+							<td><a href="" title="">Mensagem Teste Locastyle <%= i %></a></td>
+							<td>Campanha <%= i %></td>
 							<td>Enviada</td>
 							<td>
-								21/09/2013
-								<div class="table-actions">
-									<span class="ico-th"></span>
-									<ul>
+								21/09/2013 as 20:00 PM
+								<div class="table-actions ico-grid">
+									<ul class="ico-grid">
 										<li><a href="#">Duplicar</a></li>
 										<li><a href="#">Relatório</a></li>
 										<li><a href="#">Arquivar</a></li>
