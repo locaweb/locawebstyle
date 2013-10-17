@@ -83,7 +83,51 @@ layout: false
 							</div>
 						</div>
 					</div>
-
+					<div class="well hidden well-sm clearfix">
+						<p>
+							<strong data-counter="true">8</strong>
+							itens selecionados
+						</p>
+						<div class="actions">
+							<div class="btn-group">
+								<button type="button" class="btn btn-default">Duplicar</button>
+								<a href="#" class="btn btn-default">Relatorio</a>
+								<a href="#" class="btn btn-default">Arquivar</a>
+							</div>
+							<button type="button" class="btn btn-danger">Excluir</button>
+						</div>
+					</div>
+					<table class="table table-style">
+						<thead>
+							<tr>
+								<th class="txt-center"><input type="checkbox"></th>
+								<th>Título</th>
+								<th class="hidden-xs">Campanha</th>
+								<th class="hidden-xs">Status</th>
+								<th>Data de envio</th>
+							</tr>
+						</thead>
+						<tbody>
+							<%- 4.times do |i| %>
+								<tr>
+									<td class="txt-center"><input type="checkbox"></td>
+									<td><a href="" title="">Mensagem Teste Locastyle <%= i %></a></td>
+									<td class="hidden-xs">Campanha <%= i %></td>
+									<td class="hidden-xs">Enviada</td>
+									<td>
+										21/09/2013 as 20:00 PM
+										<div class="table-actions ico-grid">
+											<ul class="ico-grid">
+												<li><a href="#">Duplicar</a></li>
+												<li><a href="#">Relatório</a></li>
+												<li><a href="#">Arquivar</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+							<% end %>
+						</tbody>
+					</table>
 					<ul id="myTab" class="nav nav-tabs">
 						<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
 						<li><a href="#profile" data-toggle="tab">Profile</a></li>
