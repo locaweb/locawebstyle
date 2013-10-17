@@ -1,0 +1,121 @@
+$border-cell-color: #efefef
+$bg-actions-color:  #00a272
+$tr-hover-color:    #f8fcf0
+
+
+.well
+	p
+		color: $gray6
+		display: inline-block
+
+	.actions
+		padding-left: 10px
+		display: inline-block
+
+
+.table-style
+	box-shadow: 0 3px 0 $border-cell-color
+	overflow: hidden
+	border-radius: 4px 4px 0 0
+
+	thead
+		background-color: #163400
+		color: #fff
+
+		th
+			border-bottom: 1px solid $border-cell-color
+			border-right: 1px solid $border-cell-color
+			font-size: .87em
+			vertical-align: middle
+
+			&:last-child
+				border-right: none
+
+	tbody
+		tr
+			&:nth-child(2n+1)
+				background-color: #f9f9f9
+
+			td
+				border-right: 1px solid $border-cell-color
+				position: relative
+				font-size: .87em
+
+				&:last-child
+					border-right: none
+
+			&:hover
+				background-color: $tr-hover-color
+
+.table-actions
+	position: absolute
+	right: 0
+	top: 0
+	width: 20px
+	-webkit-transition: width .25s ease-in
+	transition: width .25s ease-in
+	height: inherit
+	overflow: hidden
+	cursor: pointer
+
+	&[class*="ico-"]:before,
+	& ul:before
+		color: $bg-actions-color
+		display: inline-block
+		overflow: hidden
+		width: 9px
+		position: absolute
+		top: 12px
+		right: 7px
+		font-size: 12px
+	ul
+		-webkit-transition: all .25s ease-in
+		transition: all .25s ease-in
+		position: relative
+		padding: 0 20px
+		height: inherit
+		width: auto
+		float: right
+		-webkit-transform: translateX(80%)
+
+		&[class*="ico-"]:before
+			color: #fff
+
+		li
+			display: inline-block
+
+			a
+				display: inline-block
+				padding: 8px 7px
+				color: #fff
+
+				&:hover
+					background-color: #fff
+					color: $bg-actions-color
+
+	&:hover
+		width: 1000px
+
+	ul:hover
+		background-color: $bg-actions-color
+		-webkit-transform: translateX(0)
+		list-style: none
+		float: right
+		display: block
+		margin-bottom: 0
+
+
+		&[class*="ico-"]:before
+			color: #fff
+			left: 5px
+
+@media #{$media-mobile}
+
+	.wrap-table-actions
+		background-color: #163400
+
+		p
+			color: #fff
+
+		[class*="btn"]
+			// font-size: 10px
