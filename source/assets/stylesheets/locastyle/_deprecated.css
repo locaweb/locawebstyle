@@ -633,3 +633,15 @@ footer#rodape {
   display: inline-block  !important;
 }
 .nobold{font-weight: normal!important;}
+
+.lnkSugestoes {
+  background-color: #ddd;
+  color: #fff;
+  float: right;
+  text-decoration: none;
+  font: 12px verdana;
+  padding: 5px 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.lnkSugestoes:before{font-size: 16px;}

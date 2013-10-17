@@ -4,7 +4,7 @@
   display: block;
   width: 260px;
   position: absolute;
-  top: -228px;
+  top: -400px;
   right: 0;
   text-align: center;
   z-index: 3;
@@ -21,12 +21,8 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   top: -1px;
 }
-.guided-tour.on .lnk-suggestions{
-  background-color: #fff;
-}
 .guided-header{ clear: both; margin: 0 0 10px;}
 .guided-tour .btn-tour{ margin-bottom: 15px;}
- p{margin-bottom: 0;}
 .guided-tour .guided-footer {
   margin: 15px 10px 8px;
   text-align: left;
@@ -40,16 +36,6 @@
   padding: 6px 0;
 }
 .hopscotch-nav-button.next:hover{opacity: 0.85;}
-.guided-tour .lnk-suggestions{
-  position: absolute;
-  right: -1px;
-  bottom: -28px;
-}
-.guided-tour.on .lnk-suggestions{
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  border: 1px solid #ccc;
-  border-top: none;
-}
 .title-guided{
   font: 16px UbuntuMedium, arial, verdana, tahoma, sans-serif;
 }
@@ -155,7 +141,7 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-a
 div.hopscotch-bubble .hopscotch-bubble-arrow-container.right{
   right: -35px;
 }
-
+#hopscotch-prev{float: left;}
 
 
 
