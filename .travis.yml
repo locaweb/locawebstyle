@@ -4,7 +4,7 @@ before_script:
   - sleep 3
 
 script:
-  - rake jasmine:ci
+  - bundle exec rake jasmine:ci
 
 branches:
   only:
