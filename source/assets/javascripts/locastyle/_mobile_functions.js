@@ -38,11 +38,19 @@ locastyle.mobile = (function() {
   // Cria dropdown em TABS em mobiles
   function tabDropDownMobile() {
     if (locastyle.breakpoint === 'media-mobile') {
-      var navLi = $('.nav > li');
-      $('.nav').append('<li class="dropdown"><ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop"></ul></li>');
-      navLi.clone().appendTo('.dropdown-menu');
-      $('.dropdown').prepend('<a href="#" id="myTabDrop" class="dropdown-toggle" data-toggle="dropdown">OPÇÕES</a>');
-      navLi.hide()
+
+      $('.nav').each(function(index){
+
+        $(this).find('li').removeClass('active')
+
+        var navContent = $(this).html();
+
+        $(this).html('<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Ações</a><ul class="dropdown-menu" id="drop' + (index+1) +'" role="menu"></ul></li>');
+
+        $(this).find('.dropdown-menu').html(navContent);
+
+      });
+
     }
   }
 

@@ -40,11 +40,21 @@
 		color: #fff
 		border-color: #efefef
 
+	.dropdown .dropdown-toggle,
+	.dropdown.open .dropdown-toggle
+		background-color: #fff
+		color: $color5
+
 	.nav .open > a
 		border-color: rgba(0,0,0,0.2)
 
-	.dropdown-menu a:hover
-		background-color: $color2
+	.dropdown-menu
+		a
+			background-color: #fff
+			color: $color5
+
+			&:hover
+				background-color: $color2
 
 	.dropdown-toggle:after
 		@include arrow-down($color2, 5px)
@@ -64,8 +74,8 @@
 		opacity: .3
 
 	.rsBullet.rsNavSelected
-		opacity: 1
 		background-color: $color2
+		opacity: 1
 
 a[class*="btn"]
 	color: $gray3

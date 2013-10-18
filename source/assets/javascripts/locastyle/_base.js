@@ -113,7 +113,7 @@ var locastyle = (function() {
       }
     });
 
-    // Em ambiente mobile os botões exibidos serão modificados com a class "btn-sm"
+    // Em ambiente mobile os botões exibidos no WELL serão modificados com a class "btn-sm"
     if(locastyle.breakpoint == "media-mobile") {
       $('.well .btn').addClass('btn-xs');
     }
