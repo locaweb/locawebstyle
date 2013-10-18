@@ -95,7 +95,7 @@ var locastyle = (function() {
     });
   }
 
-  // Quando as tabelas tiverem checkboxes e mais de dois checkboxes forem marcados, será exibido um box com ações( excluir, enviar, duplicar e etc).
+  // Quando as tabelas tiverem checkboxes e mais de dois checkboxes forem marcados, será exibido um box com ações (ex: excluir, enviar, duplicar e etc).
   function showActions () {
     var tableCheckboxes = $('.table-style input[type="checkbox"]');
 

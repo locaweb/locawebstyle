@@ -47,6 +47,7 @@ locastyle.mobile = (function() {
   }
 
 
+  // Configurando o slider que aparece no mobile
   function sliderMobile() {
     var si = $('.media-mobile .shortcuts').royalSlider({
       addActiveClass: true,
@@ -59,18 +60,17 @@ locastyle.mobile = (function() {
       globalCaption: false,
       keyboardNavEnabled: false,
       slidesSpacing: 0,
+      allowCSS3: true,
+      minSlideOffset: 3,
       globalCaptionInside: false,
 
       visibleNearby: {
         enabled: true,
         center: true,
-        breakpoint: 150,
-        breakpointCenterArea: 0.14,
-        navigateByCenterClick: false
+        breakpointCenterArea: 0.14
       }
     }).data('royalSlider');
   }
-
 
   return {
     init: init,
