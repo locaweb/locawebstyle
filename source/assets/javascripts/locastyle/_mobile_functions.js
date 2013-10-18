@@ -53,6 +53,7 @@ locastyle.mobile = (function() {
       addActiveClass: true,
       arrowsNav: false,
       startSlideId: 1,
+      autoHeight: false,
       controlNavigation: 'bullets',
       autoScaleSlider: false,
       loop: false,
