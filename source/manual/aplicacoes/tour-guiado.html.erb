@@ -12,11 +12,38 @@ menu_page: sidebar-aplicacoes.erb
 
     <p>Utilizamos o plugin  <a href="http://linkedin.github.io/hopscotch" target="_blank">hopscotch</a> (criado pelo linkedin), e aplicamos a identidade visual do LocawebStyle.</p>
     <h2>Como funciona:</h2>
-    <p>Dentro de cada projeto existe um arquivo.js (específico), que determina onde exibirá o <strong>Tour Guiado</strong>, qual o próximo passo e assim por diante. Em cada passo podemos implementar outras funções de navegação ou mesmo de eventos simulando interações, vale a pena ler a <a href="http://linkedin.github.io/hopscotch" target="_blank">documentação do plugin</a> para entender melhor sobre esses eventos e funções.</p>
+    <p>Dentro de cada projeto existe um tour.js (específico), que determina onde exibirá o <strong>Tour Guiado</strong>, qual o próximo passo e assim por diante. Em cada passo podemos implementar outras funções de navegação ou mesmo de eventos simulando interações, vale a pena ler a <a href="http://linkedin.github.io/hopscotch" target="_blank">documentação do plugin</a> para entender melhor sobre esses eventos e funções.</p>
+
+    <h3>Cookie</h3>
+    <p>Ao carregar pela primeira vez,  a caixa de informação onde está o botão para iniciar o Tour, é exibida aberta logo após o carregamento da página, nas próximas vezes ela estará sempre fechada, a não ser que o cookie seja excluído.</p>
+
+
+    <table class="table-bordered table-striped table">
+      <thead>
+        <tr>
+          <th>Função</th>
+          <th>Significado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>*locastyle.guidedTour.init(elem)</td>
+          <td>Inicializa toda a função do Tour (inserir somente na página que essa navegação guiada existir)</td>
+        </tr><tr>
+          <td>locastyle.guidedTour.openWelcomeTour()</td>
+          <td>Exibe a caixa de informação do Header</td>
+        </tr>
+        <tr>
+          <td>locastyle.guidedTour.closeWelcomeTour();</td>
+          <td>Fecha a caixa de informação do Header</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>*<b>elem</b> é o nome da variável do tour.js da página específica.</p>
 
     <p>Abaixo segue um exemplo dos códigos necessários para implementar o <strong>Tour Guiado</strong>. </p>
 
-    <h3>Chamando a função de navegação dentro do seu projeto</h3>
+    <h3>Chamando a função de navegação dentro do seu projeto, propositalmente com window.load</h3>
     <pre class="lang-html prettyprint linenums">
     $(window).load(function() {
         //Onde tourDashboard é a variável que recebe os eventos do plugin no exemplo abaixo
@@ -24,7 +51,32 @@ menu_page: sidebar-aplicacoes.erb
       });
 
     </pre>
-    <h3>arquivo .js </h3>
+
+    <p>O valor do <strong>target</strong> (dentro do tour.js) server como referência de exibição do Tour Guiado. Na tabela abaixo alguns exemplos</p>
+
+    <table class="table-bordered table-striped table">
+      <thead>
+        <tr>
+          <th>Elemento</th>
+          <th>Tipo</th>
+          <th>Exemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>target</td>
+          <td>ID</td>
+          <td>target: 'header'</td>
+        </tr>
+        <tr>
+          <td>target</td>
+          <td>Classe</td>
+          <td>target: '.header .btn'</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>tour .js </h3>
     <pre class="lang-html prettyprint linenums">
     // Tradução dos botões
     tourLocales = {
@@ -37,19 +89,20 @@ menu_page: sidebar-aplicacoes.erb
 
     // o nome da variável está sendo chamada no load (exemplo acima)
     var tourDashboard = {
-      id: 'tour-dashboard',
+      id: 'tourDashboard',
       i18n: tourLocales,
       bubbleWidth: 250,
+      showPrevButton: true,
       steps: [
         {
-          target: 'menu_home',
+          target: 'header',
           title: 'Saiba qual  site está administrando',
           content: 'Sem confusão! A identificação do site administrado ficou mais fácil: o endereço principal é exibido no topo do painel.',
           placement: 'bottom',
           arrowOffset: 'center'
         },
         {
-          target: $('#header .lnkAll ')[0],
+          target: '.header',
           title: 'Administre outros sites',
           content: 'Retorne à lista de sites a qualquer momento.',
           placement: 'right',
@@ -60,7 +113,7 @@ menu_page: sidebar-aplicacoes.erb
           }
         },
         {
-          target: $('#btn_back_old_panel')[0],
+          target: '.btn',
           title: 'Ajude a melhorar o painel',
           content: 'Esta é a primeira fase do novo painel de Hospedagem de Sites. Fique à vontade para testar, enviar sugestões e comentários.',
           placement: 'left',
@@ -70,28 +123,27 @@ menu_page: sidebar-aplicacoes.erb
           onPrev: function(){
             locastyle.guidedTour.closeWelcomeTour();
           }
-        }
-      showPrevButton: true
+        ]
     };
     </pre>
 
     <h3>HTML </h3>
     <pre class="lang-html prettyprint linenums">
         &lt;div class="guided-tour"&gt;
-          &lt;a href="javascript:;" tabindex="2" class="btn-close close"&gt;x&lt;/a&gt;
+          &lt;a href="#" tabindex="2" aria-label="Fechar caixa de informação" class="btn-close close"&gt;x&lt;/a&gt;
           &lt;header class="guided-header"&gt;
             &lt;p&gt;Bem-vindo ao novo painel&lt;/p&gt;
             &lt;h2 class="title-guided"&gt;Hospedagem de Sites&lt;/h2&gt;
           &lt;/header&gt;
 
-          &lt;a href="javascript:;" class="btn btn-primary btn-large btn-tour" role="button"&gt;Fazer um tour&lt;/a&gt;
-          &lt;p&gt;&lt;a href="javascript:;" data-target="#modalBeta" data-toggle="modal" tabindex="2"&gt;O que mudou?&lt;/a&gt;&lt;/p&gt;
+          &lt;a href="#" class="btn btn-primary btn-large btn-tour" role="button"&gt;Fazer um tour&lt;/a&gt;
+          &lt;p&gt;&lt;a href="#" data-target="#modalBeta" data-toggle="modal" tabindex="2"&gt;O que mudou?&lt;/a&gt;&lt;/p&gt;
 
           &lt;footer class="guided-footer"&gt;
             &lt;a href="https://www.feedbackr.com.br/projects/..." class="lnkArrow" tabindex="2" target="_blank"&gt;Enviar comentários e sugestões&lt;/a&gt;
             &lt;a href="" class="lnkArrow" tabindex="2" target="_blank"&gt;Voltar ao painel antigo&lt;/a&gt;
           &lt;/footer&gt;
-           &lt;a href="https://www.feedbackr.com.br/projects/..." alt="feedbackr" class="lnk-suggestions ico-help-circle" id="feedbackr" tabindex="1" target="_blank"&gt;Sugestões e novidades&lt;/a&gt;
+           &lt;a href="" alt="feedbackr" class="lnk-suggestions ico-help-circle" id="feedbackr" tabindex="2" target="_blank"&gt;Sugestões e novidades&lt;/a&gt;
         &lt;/div&gt;
     </pre>
 
