@@ -48,24 +48,24 @@ locastyle.mobile = (function() {
   function tabDropdownMobile() {
     if (locastyle.breakpoint === 'media-mobile') {
 
-      $('.nav').each(function(index){
+      $('.nav').each(function(index) {
 
         // Texto que vai no Dropdown quando for mobile
-        var dropdownItemText = $(this).find('li.active a').text();
+        var $dropdownItemText = $(this).find('li.active a').text();
 
         // Grava o estado inicial das tabs
-        var navTabContent = $(this).html();
+        var $navTabContent = $(this).html();
 
         // Muda o HTML original das Navs/Tabs para o código do Dropdown
-        $(this).html('<li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">' + dropdownItemText + '</a><ul class="dropdown-menu" id="drop' + (index+1) +'" role="menu"></ul></li>');
+        $(this).html('<li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">' + $dropdownItemText + '</a><ul class="dropdown-menu" id="drop' + (index+1) +'" role="menu"></ul></li>');
 
         // Move o código das tabs originais para a estrutura nova do Dropdown
-        $(this).find('.dropdown-menu').html(navTabContent);
+        $(this).find('.dropdown-menu').html($navTabContent);
 
         // Muda o texto do dropdown-toggle de acordo com o ítem ativo
-        $(this).find('.dropdown-menu li a').on('click', function(){
-          var dropdownItemText = $(this).text();
-          $(this).parents('.dropdown').find('.dropdown-toggle').html(dropdownItemText)
+        $(this).find('.dropdown-menu li a').on('click', function() {
+          var $dropdownItemText = $(this).text();
+          $(this).parents('.dropdown').find('.dropdown-toggle').html($dropdownItemText);
         });
 
       });
@@ -82,7 +82,7 @@ locastyle.mobile = (function() {
       $('.actions').each(function(index){
 
         // Define uma variável para que o dev possa modificar o texto padrão do dropdown menu.
-        var dataToggleText = $(this).find('.btn-group').attr('data-toggle-text') || "Ações";
+        var $dataToggleText = $(this).find('.btn-group').attr('data-toggle-text') || "Ações";
 
         // Alinha o Actions para a direita
         $(this).addClass('pull-right');
@@ -98,7 +98,7 @@ locastyle.mobile = (function() {
 
         // Envolve todo o conteúdo do BTN-GROUP em um DROPDOWN-MENU, que faz o dropdown em si.
         // E insere o dropdown-toggle que é o botão que chama o dropdown
-        $(this).find('.btn-group').wrapInner('<ul class="dropdown-menu pull-right" role="menu"></ul>').prepend('<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> '+ dataToggleText +'</button>');
+        $(this).find('.btn-group').wrapInner('<ul class="dropdown-menu pull-right" role="menu"></ul>').prepend('<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> '+ $dataToggleText +'</button>');
 
       });
 
