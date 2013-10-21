@@ -7,7 +7,8 @@ locastyle.mobile = (function() {
     mobileLeftBar();
     mobileRightBar();
     mobileBarOverlay();
-    tabDropDownMobile();
+    tabDropdownMobile();
+    tabDropdownActions();
     sliderMobile();
   }
 
@@ -44,7 +45,7 @@ locastyle.mobile = (function() {
   //
   // Transforma as TABS em DROPDOWN em telas pequenas
   //
-  function tabDropDownMobile() {
+  function tabDropdownMobile() {
     if (locastyle.breakpoint === 'media-mobile') {
 
       $('.nav').each(function(index){
@@ -71,6 +72,39 @@ locastyle.mobile = (function() {
 
     }
   }
+
+  //
+  // Transforma um grupo de ações em dropdown
+  //
+  function tabDropdownActions() {
+    if (locastyle.breakpoint === 'media-mobile') {
+
+      $('.actions').each(function(index){
+
+        // Define uma variável para que o dev possa modificar o texto padrão do dropdown menu.
+        var dataToggleText = $(this).find('.btn-group').attr('data-toggle-text') || "Ações";
+
+        // Alinha o Actions para a direita
+        $(this).addClass('pull-right');
+
+        // Insere um divisor
+        $(this).find('.btn-group').append('<li class="divider"></li>');
+
+        // Pega todos os BTN e joga para dentro de BTN-GROUP
+        $(this).find('> .btn').appendTo($(this).find('.btn-group'));
+
+        // Pega todos os BTN e coloca um LI em volta
+        $(this).find('.btn').wrap('<li></li>').removeClass('btn');
+
+        // Envolve todo o conteúdo do BTN-GROUP em um DROPDOWN-MENU, que faz o dropdown em si.
+        // E insere o dropdown-toggle que é o botão que chama o dropdown
+        $(this).find('.btn-group').wrapInner('<ul class="dropdown-menu pull-right" role="menu"></ul>').prepend('<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> '+ dataToggleText +'</button>');
+
+      });
+
+    }
+  }
+
 
   //
   // Configurando o slider que aparece no mobile
