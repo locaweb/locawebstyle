@@ -11,7 +11,9 @@ locastyle.mobile = (function() {
     sliderMobile();
   }
 
+  //
   // Insere classe left-bar que controla a abertura da sidebar da ESQUERDA nos mobiles
+  //
   function mobileLeftBar() {
     $('.control-menu').on('click touchstart', function(e){
       $('html').toggleClass('left-bar').removeClass('right-bar');
@@ -19,7 +21,9 @@ locastyle.mobile = (function() {
     });
   }
 
+  //
   // Insere classe right-bar que controla a abertura da sidebar da DIREITA nos mobiles
+  //
   function mobileRightBar() {
     $('.control-sidebar').on('click touchstart', function(e){
       $('html').toggleClass('right-bar').removeClass('left-bar');
@@ -27,7 +31,9 @@ locastyle.mobile = (function() {
     });
   }
 
+  //
   // Insere um OVERLAY sem transparente para usar quando as sidebares forem ativadas no mobile
+  //
   function mobileBarOverlay() {
     $('body').append('<span class="overlay-bar"></span>');
     $('.overlay-bar').on('click touchstart', function(){
@@ -35,27 +41,40 @@ locastyle.mobile = (function() {
     });
   }
 
-  // Cria dropdown em TABS em mobiles
+  //
+  // Transforma as TABS em DROPDOWN em telas pequenas
+  //
   function tabDropDownMobile() {
-    if (locastyle.breakpoint === 'media-mobile') {
+    if (locastyle.breakpoint === 'media-desk-lg') {
 
       $('.nav').each(function(index){
 
-        $(this).find('li').removeClass('active')
+        // Texto que vai no Dropdown quando for mobile
+        var dropdownItemText = $(this).find('li.active a').text();
 
-        var navContent = $(this).html();
+        // Grava o estado inicial das tabs
+        var navTabContent = $(this).html();
 
-        $(this).html('<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Ações</a><ul class="dropdown-menu" id="drop' + (index+1) +'" role="menu"></ul></li>');
+        // Muda o HTML original das Navs/Tabs para o código do Dropdown
+        $(this).html('<li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">' + dropdownItemText + '</a><ul class="dropdown-menu" id="drop' + (index+1) +'" role="menu"></ul></li>');
 
-        $(this).find('.dropdown-menu').html(navContent);
+        // Move o código das tabs originais para a estrutura nova do Dropdown
+        $(this).find('.dropdown-menu').html(navTabContent);
+
+        // Muda o texto do dropdown-toggle de acordo com o ítem ativo
+        $(this).find('.dropdown-menu li a').on('click', function(){
+          var dropdownItemText = $(this).text();
+          $(this).parents('.dropdown').find('.dropdown-toggle').html(dropdownItemText)
+        });
 
       });
 
     }
   }
 
-
+  //
   // Configurando o slider que aparece no mobile
+  //
   function sliderMobile() {
     var si = $('.media-mobile .shortcuts').royalSlider({
       addActiveClass: true,
@@ -80,6 +99,7 @@ locastyle.mobile = (function() {
       }
     }).data('royalSlider');
   }
+
 
   return {
     init: init,
