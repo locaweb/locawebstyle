@@ -292,3 +292,11 @@ tr.active .actionsTable {display: none;}
 .boxCollapse .tabs li a:after,
 .boxCollapse .tabs li.active a:after,
 .boxCollapse .tabs li a:hover:after{background: none;}
+
+
+/***
+ **** Fix para collpases com toolip dentro (use com cuidado)
+ ***/
+.collapse.with-tooltip.in {
+  overflow: visible;
+}
