@@ -45,7 +45,7 @@ locastyle.mobile = (function() {
   // Transforma as TABS em DROPDOWN em telas pequenas
   //
   function tabDropDownMobile() {
-    if (locastyle.breakpoint === 'media-desk-lg') {
+    if (locastyle.breakpoint === 'media-mobile') {
 
       $('.nav').each(function(index){
 
