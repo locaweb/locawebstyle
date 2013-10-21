@@ -4,7 +4,9 @@
 #{$theme-color}
 	a
 		color: $color2
-
+	//
+	// Cores para HEADER
+	//
 	.header
 		background-color: $color1
 		border-bottom-color: $color3
@@ -21,6 +23,9 @@
 				background-color: $color3
 				border-left-color: $color5
 
+	//
+	// Cores para SIDEBAR
+	//
 	.sidebox-title
 		color: $color1
 
@@ -32,9 +37,15 @@
 		&[class*="ico-"]:before
 			color: $color2
 
+	//
+	// Barra de progresso
+	//
 	.progress-bar
 		background-color: $color1
 
+	//
+	// Tabs e Dropdown
+	//
 	.nav-tabs	a
 		background-color: $color2
 		color: #fff
@@ -64,6 +75,9 @@
 	.dropdown-toggle:after
 		@include arrow-down($color2, 5px)
 
+	//
+	// Shortcut da home
+	//
 	.shortcut-title.active:before,
 	.shortcut-title:hover:before,
 	.shortcut-title:before
@@ -82,9 +96,12 @@
 		background-color: $color2
 		opacity: 1
 
-a[class*="btn"]
-	color: $gray3
 
+	//
+	// Tables
+	//
+	.table-style thead
+		background-color: $color5
 
 
 //
@@ -92,6 +109,8 @@ a[class*="btn"]
 //
 @media #{$media-tablet}
 	#{$theme-color}
+		a[class*="btn"]
+			color: $gray3
 
 		.header
 			background-color: transparent
