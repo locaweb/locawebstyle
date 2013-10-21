@@ -83,10 +83,10 @@ layout: false
 							</div>
 						</div>
 					</div>
-					<div class="well hidden well-sm clearfix">
+
+					<div class="well hidden well-sm clearfix" data-target="tabela1">
 						<p>
-							<strong data-counter="true">8</strong>
-							itens selecionados
+							<strong class="counterChecks">0</strong> itens selecionados
 						</p>
 						<div class="actions">
 							<div class="btn-group">
@@ -97,7 +97,54 @@ layout: false
 							<button type="button" class="btn btn-danger">Excluir</button>
 						</div>
 					</div>
-					<table class="table table-style">
+					<table class="table table-style" id="tabela1">
+						<thead>
+							<tr>
+								<th class="txt-center"><input type="checkbox"></th>
+								<th>Título</th>
+								<th class="hidden-xs">Campanha</th>
+								<th>Status</th>
+								<th class="hidden-xs">Data de envio</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<%- 4.times do |i| %>
+								<tr>
+									<td class="txt-center"><input type="checkbox"></td>
+									<td><a href="" title="">Mensagem Teste Locastyle <%= i %></a></td>
+									<td class="hidden-xs">Campanha <%= i %></td>
+									<td>Enviada</td>
+									<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+									<td>
+										<div class="table-actions ico-grid">
+											<ul class="ico-grid">
+												<li><a href="#">Duplicar</a></li>
+												<li><a href="#">Relatório</a></li>
+												<li><a href="#">Arquivar</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+							<% end %>
+						</tbody>
+					</table>
+
+
+					<div class="well hidden well-sm clearfix" data-target="tabela2">
+						<p>
+							<b class="counterChecks">0</b> itens selecionados
+						</p>
+						<div class="actions">
+							<div class="btn-group">
+								<button type="button" class="btn btn-default">Duplicar</button>
+								<a href="#" class="btn btn-default">Relatorio</a>
+								<a href="#" class="btn btn-default">Arquivar</a>
+							</div>
+							<button type="button" class="btn btn-danger">Excluir</button>
+						</div>
+					</div>
+					<table class="table table-style" id="tabela2">
 						<thead>
 							<tr>
 								<th class="txt-center"><input type="checkbox"></th>
