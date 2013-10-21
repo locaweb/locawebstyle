@@ -12,17 +12,14 @@ $tr-hover-color:    #f8fcf0
 		padding-left: 10px
 		display: inline-block
 
-
 .table-style
 	box-shadow: 0 3px 0 $border-cell-color
-	overflow: hidden
 	border-radius: 4px 4px 0 0
 
 	thead
-		background-color: #163400
+		background-color: $gray1
 		color: #fff
-		tr
-			background-color: #163400
+
 		th
 			border-bottom: 1px solid $border-cell-color
 			border-left: 1px solid $border-cell-color
@@ -40,11 +37,15 @@ $tr-hover-color:    #f8fcf0
 			td
 				border-left: 1px solid $border-cell-color
 				font-size: .87em
+				position: static
+
+				&:first-child
+					border-left: none
 
 				&:last-child
-					position: relative
 					border-left: none
 					padding-right: 20px
+					position: relative
 
 			&:hover
 				background-color: $tr-hover-color
@@ -71,15 +72,16 @@ $tr-hover-color:    #f8fcf0
 		top: 12px
 		right: 7px
 		font-size: 12px
+
 	ul
 		-webkit-transition: all .25s ease-in
 		transition: all .25s ease-in
+		-webkit-transform: translateX(80%)
 		position: relative
 		padding: 0 20px
-		height: 100%
+		height: 36px
 		width: auto
 		float: right
-		-webkit-transform: translateX(80%)
 
 		&[class*="ico-"]:before
 			color: #fff
@@ -91,6 +93,7 @@ $tr-hover-color:    #f8fcf0
 				display: inline-block
 				padding: 8px 7px
 				color: #fff
+				vertical-align: middle
 
 				&:hover
 					background-color: #fff
@@ -100,8 +103,8 @@ $tr-hover-color:    #f8fcf0
 		width: 1000px
 
 	ul:hover
-		background-color: $bg-actions-color
 		-webkit-transform: translateX(0)
+		background-color: $bg-actions-color
 		list-style: none
 		float: right
 		display: block
