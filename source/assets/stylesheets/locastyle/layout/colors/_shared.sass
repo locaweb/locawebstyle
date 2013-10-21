@@ -4,7 +4,9 @@
 #{$theme-color}
 	a
 		color: $color2
-
+	//
+	// Cores para HEADER
+	//
 	.header
 		background-color: $color1
 		border-bottom-color: $color3
@@ -21,6 +23,9 @@
 				background-color: $color3
 				border-left-color: $color5
 
+	//
+	// Cores para SIDEBAR
+	//
 	.sidebox-title
 		color: $color1
 
@@ -32,23 +37,51 @@
 		&[class*="ico-"]:before
 			color: $color2
 
+	//
+	// Barra de progresso
+	//
 	.progress-bar
 		background-color: $color1
 
+	//
+	// Tabs e Dropdown
+	//
 	.nav-tabs	a
+		background-color: $color2
+		color: #fff
+		border-color: #efefef
+
+	.dropdown .dropdown-toggle,
+	.dropdown.open .dropdown-toggle
 		background-color: #fff
 		color: $color5
-		border-color: #efefef
 
 	.nav .open > a
 		border-color: rgba(0,0,0,0.2)
 
-	.dropdown-menu a:hover
-		background-color: $color2
+	.dropdown-menu
+
+		.active a
+			background-color: $color2
+			color: #fff
+
+		a
+			background-color: #fff
+			color: $color5
+
+			&:hover,
+				background-color: $color2
+
+		& button:hover
+			color: #fff
+			background-color: $color2
 
 	.dropdown-toggle:after
 		@include arrow-down($color2, 5px)
 
+	//
+	// Shortcut da home
+	//
 	.shortcut-title.active:before,
 	.shortcut-title:hover:before,
 	.shortcut-title:before
@@ -64,12 +97,15 @@
 		opacity: .3
 
 	.rsBullet.rsNavSelected
-		opacity: 1
 		background-color: $color2
+		opacity: 1
 
-a[class*="btn"]
-	color: $gray3
 
+	//
+	// Tables
+	//
+	.table-style thead
+		background-color: $color5
 
 
 //
@@ -77,6 +113,8 @@ a[class*="btn"]
 //
 @media #{$media-tablet}
 	#{$theme-color}
+		a[class*="btn"]
+			color: $gray3
 
 		.header
 			background-color: transparent
