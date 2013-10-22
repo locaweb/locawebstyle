@@ -107,7 +107,7 @@ var locastyle = (function() {
 
       // Quando clica no checkbox principal, seleciona todos os outros
       $checkAll.on('change', function(){
-        $checkboxes.prop('checked', $checkAll.prop('checked') )
+        $checkboxes.prop('checked', $checkAll.prop('checked') );
         showWellTable();
       });
 
