@@ -24,10 +24,10 @@ var locastyle = (function() {
 
   // Verifica qual breakpoint a janela está e insere uma classe no elemento HTML
   function breakpointWindowWidth() {
-    var mediaMobile = 480
-    var mediaTablet = 768
-    var mediaDesk = 992
-    var mediaDeskLg = 1200
+    var mediaMobile = 480;
+    var mediaTablet = 768;
+    var mediaDesk = 992;
+    var mediaDeskLg = 1200;
 
     // Se for mobile
     if (document.width <= mediaTablet) {
@@ -87,7 +87,8 @@ var locastyle = (function() {
       dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab']
     });
 
-    var createWrap = '<span class="input-group-btn"></span>'
+    var createWrap = '<span class="input-group-btn"></span>';
+
     $('.datepicker').each(function () {
       $(this).append(createWrap);
       var parentGroupBtn = $(this).find('.input-group-btn');
@@ -106,7 +107,7 @@ var locastyle = (function() {
 
       // Quando clica no checkbox principal, seleciona todos os outros
       $checkAll.on('change', function(){
-        $checkboxes.prop('checked', $checkAll.prop('checked') )
+        $checkboxes.prop('checked', $checkAll.prop('checked') );
         showWellTable();
       });
 
