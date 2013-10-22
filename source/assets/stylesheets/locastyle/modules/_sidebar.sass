@@ -23,7 +23,8 @@ $mobile-sidebar-width: "240px"
 	background-color: #FFF
 	border-bottom: 4px solid rgba(0,0,0,0.1)
 
-	[class*="bg-layer"]
+	.sidebox-inner
+		@extend .bg-gray4
 		margin-bottom: 10px
 		padding: 10px
 
@@ -34,20 +35,8 @@ $mobile-sidebar-width: "240px"
 		border-top: 1px solid #fff
 		background: none
 
-	[class*="ico-"]
+	.ico-arrow-right
 		font-size: .81em
-
-	// Padrão dos títulos da Sidebar
-	.sidebox-title
-		color: $gray1
-		font-size: 1.375em
-		font-family: ralewaylight
-		line-height: 30px
-		letter-spacing: -1px
-		margin: 0 0 10px
-
-		&[class*="ico-"]:before
-			@include border-circle(30px, .8em)
 
 	// Textos de status de informações da sidebar
 	.status-text
@@ -68,7 +57,7 @@ $mobile-sidebar-width: "240px"
 
 		a
 			@extend .default-text
-			@extend .bg-layer-1
+			@extend .bg-gray4
 			@extend .border-radius-3
 			color: #717171
 			padding: 10px
@@ -97,6 +86,21 @@ $mobile-sidebar-width: "240px"
 
 		i
 			font-style: normal
+
+		.carousel-control
+			font-size: 1em
+
+// Padrão dos títulos da Sidebar
+.sidebox-title
+	color: $gray1
+	font-size: 1.375em
+	font-family: ralewaylight
+	line-height: 30px
+	letter-spacing: -1px
+	margin: 0 0 10px
+
+	&[class*="ico-"]:before
+		@include border-circle(30px, .8em)
 
 //
 // Mobile

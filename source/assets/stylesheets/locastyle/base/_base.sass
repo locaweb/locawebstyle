@@ -2,6 +2,9 @@
 
 $height-short: 350px
 
+.content[role="main"]
+	padding-top: 40px
+
 a
 	color: $gray2
 
@@ -46,6 +49,17 @@ a
 		font-weight: normal
 		white-space: nowrap
 
+// Barra de progresso
+.progress
+	margin: 3px 0 10px 0
+
+	.progress-bar
+
+		span
+			padding-top: 3px
+			display: inline-block
+			font-weight: bold
+
 @media #{$media-mobile}
 	.content[role="main"]
 		overflow: auto
@@ -53,5 +67,5 @@ a
 		-webkit-overflow-scrolling: touch
 		position: fixed
 		z-index: 0
-		padding-top: 52px
+		padding-top: 70px
 
