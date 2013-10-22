@@ -16,7 +16,7 @@ locastyle.mobile = (function() {
   // Insere classe left-bar que controla a abertura da sidebar da ESQUERDA nos mobiles
   //
   function mobileLeftBar() {
-    $('.control-menu').on('click touchstart', function(e){
+    $('.control-menu').on('click touchstart', function(e) {
       $('html').toggleClass('left-bar').removeClass('right-bar');
       e.preventDefault();
     });
@@ -37,7 +37,7 @@ locastyle.mobile = (function() {
   //
   function mobileBarOverlay() {
     $('body').append('<span class="overlay-bar"></span>');
-    $('.overlay-bar').on('click touchstart', function(){
+    $('.overlay-bar').on('click touchstart', function() {
       $('html').removeClass('right-bar').removeClass('left-bar');
     });
   }
@@ -79,7 +79,7 @@ locastyle.mobile = (function() {
   function tabDropdownActions() {
     if (locastyle.breakpoint === 'media-mobile') {
 
-      $('.actions').each(function(index){
+      $('.actions').each(function(index) {
 
         // Define uma variável para que o dev possa modificar o texto padrão do dropdown menu.
         var $dataToggleText = $(this).find('.btn-group').attr('data-toggle-text') || "Ações";
