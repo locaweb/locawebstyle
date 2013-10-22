@@ -23,7 +23,8 @@ $mobile-sidebar-width: "240px"
 	background-color: #FFF
 	border-bottom: 4px solid rgba(0,0,0,0.1)
 
-	[class*="bg-layer"]
+	.sidebox-inner
+		@extend .bg-gray4
 		margin-bottom: 10px
 		padding: 10px
 
@@ -68,7 +69,7 @@ $mobile-sidebar-width: "240px"
 
 		a
 			@extend .default-text
-			@extend .bg-layer-1
+			@extend .bg-gray4
 			@extend .border-radius-3
 			color: #717171
 			padding: 10px
