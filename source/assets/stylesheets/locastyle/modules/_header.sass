@@ -122,7 +122,7 @@ $mobile-left-number: "240px"
 		border-bottom: 0
 		background-color: #FFF !important
 		margin-bottom: 10px
-		z-index: 1
+		z-index: 2
 		position: relative
 
 		.container
@@ -187,11 +187,6 @@ $mobile-left-number: "240px"
 					float: left
 					position: relative
 
-					&:hover > a
-						text-decoration: none
-						background-color: $gray1
-						border-bottom: 4px solid $gray3
-
 					&:after
 						content: ""
 						display: inline-block
@@ -211,6 +206,7 @@ $mobile-left-number: "240px"
 						display: inline-block
 						font-size: .78em
 						background-color: transparent
+						border-bottom: 4px solid transparent
 
 						&:first-child
 							margin-left: 0
@@ -220,7 +216,7 @@ $mobile-left-number: "240px"
 						&:hover,
 							text-decoration: none
 							background-color: $gray1
-							border-bottom: 4px solid $gray3
+							border-bottom-color: $gray3
 
 						&.ico-home
 							// padding: 18px 0 7px
