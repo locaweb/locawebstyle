@@ -1,0 +1,17 @@
+<nav>
+	<h2>Recentes</h2>
+	<ul>
+		<% blog.articles[0...10].each do |article| %>
+			<li><%= link_to article.title, article %> </li>
+		<% end %>
+	</ul>
+</nav>
+
+<nav>
+	<h2>Por ano</h2>
+	<ul>
+		<% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+			<li><%= link_to year, blog_year_path(year) %></li>
+		<% end %>
+	</ul>
+</nav>

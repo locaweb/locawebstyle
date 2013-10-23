@@ -1,0 +1,25 @@
+---
+layout: changelog_layout
+pageable: true
+per_page: 10
+---
+<% if paginate %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
+
+  <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
+<% end %>
+
+<% page_articles.each_with_index do |article, i| %>
+  <h3><%= link_to article.title, article %> <small><%= article.date.strftime('%Y/%m/%d') %></small></h3>
+  <!-- use article.summary(250) if you have Nokogiri available to show just
+       the first 250 characters -->
+  <%= article.body %>
+<% end %>
+
+<% if paginate %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>
