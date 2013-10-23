@@ -1,5 +1,7 @@
 describe("Password Strength", function() {
   beforeEach(function() {
+    loadFixtures('password_strength_fixture.html');
+    locastyle.passwordStregth.init();
   });
 
   describe("Complexity meter", function () {
@@ -21,6 +23,33 @@ describe("Password Strength", function() {
 
     it("should return 'weak' when I pass a string containing lass than eight chars", function () {
       expect(locastyle.passwordStregth.checkIt("s0mPa$")).toEqual("weak");
+    });
+  });
+
+  describe("Monitor feedback", function () {
+    it("should have the css 'strong' class when 's0mePas$' is typed", function () {
+      $("#form_to_password_strength #user_password").val("s0mePas$").trigger("keyup");
+      expect($("#form_to_password_strength .monitor")).toHaveClass("strong");
+    });
+
+    it("should have the css 'good' class when 'somePass12' is typed", function () {
+      $("#form_to_password_strength #user_password").val("somePass12").trigger("keyup");
+      expect($("#form_to_password_strength .monitor")).toHaveClass("good");
+    });
+
+    it("should have the css 'medium' class when 'somepass12' is typed", function () {
+      $("#form_to_password_strength #user_password").val("somepass12").trigger("keyup");
+      expect($("#form_to_password_strength .monitor")).toHaveClass("medium");
+    });
+
+    it("should have the css 'weak' class when 'somepass' is typed", function () {
+      $("#form_to_password_strength #user_password").val("somepass").trigger("keyup");
+      expect($("#form_to_password_strength .monitor")).toHaveClass("weak");
+    });
+
+    it("should have the css 'weak' class when 's0mPa$' is typed", function () {
+      $("#form_to_password_strength #user_password").val("s0mPa$").trigger("keyup");
+      expect($("#form_to_password_strength .monitor")).toHaveClass("weak");
     });
   });
 });
