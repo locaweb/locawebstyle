@@ -592,14 +592,14 @@ h1, h2, h3, h4, h5, h6 {margin-top: 20px;}
 }
 
 /*** SIDEBAR ***/
-.sidebar {
+.sidebar-manual {
 	float: right;
 	width: 25%;
 	margin-left: 20px;
 	margin-top: 0;
 }
 
-.sidebar > nav {
+.sidebar-manual > nav {
 	background: #f8f8f8;
 	border: 1px solid #e5e5e5;
 	border-radius: 5px;
@@ -607,16 +607,16 @@ h1, h2, h3, h4, h5, h6 {margin-top: 20px;}
 	margin-bottom: 20px;
 }
 
-.sidebar > nav h1 {
+.sidebar-manual > nav h1 {
 	font: 300 1.1em Lato, arial, helvetica, tahoma, sans-serif;
 	color: rgba(0,0,0,0.7);
 	margin: 0 0 5px;
 }
 
-.sidebar ul {margin: 0; padding: 0;}
-.sidebar ul li {list-style: none;}
+.sidebar-manual ul {margin: 0; padding: 0;}
+.sidebar-manual ul li {list-style: none;}
 
-.sidebar ul li a {
+.sidebar-manual ul li a {
 	display: block;
 	background: #FFF;
 	margin-bottom: 2px;
@@ -627,15 +627,15 @@ h1, h2, h3, h4, h5, h6 {margin-top: 20px;}
 	position: relative;
 }
 
-.sidebar ul li a:hover,
-.sidebar ul li a:focus {
+.sidebar-manual ul li a:hover,
+.sidebar-manual ul li a:focus {
 	background: #b1d4d7;
 	text-decoration: none;
 }
 
-.sidebar .with-arrow a:hover:before {border-left-color: #183b3e;}
+.sidebar-manual .with-arrow a:hover:before {border-left-color: #183b3e;}
 
-.sidebar .with-arrow a:before {
+.sidebar-manual .with-arrow a:before {
     border-bottom: 5px solid transparent;
     border-left: 5px solid #8B9D9E;
     border-top: 5px solid transparent;
@@ -677,7 +677,7 @@ h1, h2, h3, h4, h5, h6 {margin-top: 20px;}
 		width: 100%;
 	}
 	.channels .channel p,
-	.sidebar,
+	.sidebar-manual,
 	.highlight .search-form select{
 		display: none;
 	}
