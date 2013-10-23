@@ -1,54 +1,58 @@
 .footer
-  display: none
+	display: none
 
 // Desktops
 @media (min-width: #{$screen-sm})
 
-  .footer
-    display: block
+	.footer
+		display: block
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
 
-    .footer-top
-      padding: 15px 0 0
-      background-color: #252525
+		.footer-top
+			padding: 15px 0 0
+			background-color: #252525
 
-      nav
-        height: 54px
-        background: #141414
+			nav
+				height: 54px
+				background: #141414
 
-        h2
-          text-transform: uppercase
-          padding: 0 15px
-          margin: 0
-          background-color: #000
-          color: #fff
-          font-size: 1.06em
-          line-height: 54px
-          height: 54px
+				h2
+					text-transform: uppercase
+					padding: 0 15px
+					margin: 0
+					background-color: #000
+					color: #fff
+					font-size: 1.06em
+					line-height: 54px
+					height: 54px
 
-        a
-          margin: 0 15px 0
-          color: #FFF
-          line-height: 54px
+				a
+					margin: 0 15px 0
+					color: #FFF
+					line-height: 54px
 
-        > ul
-          float: left
-          height: 54px
-          margin: 0
-          > li
-            display: inline-block
-            padding: 0
+				> ul
+					float: left
+					height: 54px
+					margin: 0
+					> li
+						display: inline-block
+						padding: 0
 
-            > a
-              padding: 0 18px
-              color: #fff
-              float: left
-              margin: 0
+						> a
+							padding: 0 18px
+							color: #fff
+							float: left
+							margin: 0
 
-              &:hover,
-              &:focus
-                background-color: #666
-                text-decoration: none
+							&:hover,
+							&:focus
+								background-color: #666
+								text-decoration: none
 
-    .footer-base
-      padding: 10px 0
-      font-size: .75em
+		.footer-base
+			padding: 10px 0
+			font-size: .75em
