@@ -1,3 +1,5 @@
+@import "../layout/colors/gray-base"
+
 *
 	margin: 0
 	padding: 0
@@ -10,6 +12,20 @@ body
 
 .progress-bar span
 	vertical-align: middle
+
+.well
+	@extend .border-radius-default
+	@extend .bg-gray4
+
+	*:last-child
+		margin-bottom: 0
+
+	p
+		color: $gray6
+
+	.actions
+		padding-left: 10px
+		display: inline-block
 
 //
 // Desktops

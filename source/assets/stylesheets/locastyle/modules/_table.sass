@@ -3,21 +3,13 @@ $bg-actions-color:  #00a272
 $tr-hover-color:    #f8fcf0
 
 
-.well
-	p
-		color: $gray6
-
-	.actions
-		padding-left: 10px
-		display: inline-block
-
 .table-style
 	background-color: #fff
-	box-shadow: 0 3px 0 $border-cell-color
+	box-shadow: 0 1px 0 $border-cell-color
 	border-radius: 4px 4px 0 0
 
 	thead
-		background-color: $gray1
+		@extend .bg-gray1
 		color: #fff
 
 		th
@@ -31,12 +23,12 @@ $tr-hover-color:    #f8fcf0
 
 	tbody
 		tr
-			&:nth-child(2n+1)
-				background-color: #f9f9f9
+			&:nth-child(odd)
+				@extend .bg-gray4
 
 			td
 				border-left: 1px solid $border-cell-color
-				font-size: .87em
+				font-size: .81em
 				position: static
 
 				&:first-child
@@ -49,6 +41,13 @@ $tr-hover-color:    #f8fcf0
 
 			&:hover
 				background-color: $tr-hover-color
+
+	&.table-invert-bg
+		@extend .bg-gray4
+
+		tbody tr:nth-child(odd)
+			background-color: #fff
+
 
 .table-actions
 	position: absolute
