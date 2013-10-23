@@ -4,68 +4,137 @@ title: Layout - Sidebar
 menu_page: sidebar-layout.erb
 ---
 
-<header>
-  <h1>Sidebar</h1>
-  <h3>Exemplo de Sidebar padrão do Locaweb Style.</h3>
-</header>
-
 <article class="text">
-<p>Código comum da lateral</p>
+	<header>
+		<h1>Sidebar</h1>
+		<h2>Exemplo de Sidebar padrão do Locaweb Style.</h2>
+	</header>
+	<p>Você pode alterar a largura da sidebar trocando o valor da classe <code>.col-md-4</code>, pois ela utiliza os padrões de <a href="http://getbootstrap.com/css/#grid-options" target="_blank">grid do Boostrap</a>.</p>
+	<div class="bs-callout bs-callout-warning">
+		<h4>Lembre-se!</h4>
+		<p>Caso a largura da sidebar for alterada subtrair no valor do grid de seu container principal.</p>
+	</div>
+	<div class="example clearfix">
+		<div class="row">
+			<aside class="sidebar col-md-4" role="complementary">
+				<section class="sidebox">
+					<h1 class="sidebox-title ico-user">Título da sidebar</h1>
 
-<pre class="lang-html prettyprint linenums">
-&lt;div class="span4"&gt;
-    &lt;aside class="sidebar"&gt;
-        &lt;section class="sideBox"&gt;
-          &lt;div class="boxSidebarTitle"&gt;&lt;i class="ico-user-star"&gt;&lt;/i&gt;&lt;/div&gt;
-            &lt;h1 class="titSide"&gt;Dados da Conta&lt;/h1&gt;
-            &lt;div class="innerSideBox boxWhite"&gt;
-                &lt;h6&gt;Identificador&lt;/h6&gt;
-                &lt;p&gt;&lt;strong&gt;1234567890&lt;/strong&gt;&lt;/p&gt;
+					<div class="sidebox-inner">
+						<span class="status-text">Box de
+							<b>conteúdo</b>
+						</span>
+					</div>
+					<a class="ico-arrow-right" href="http://customer-workbench.systemintegration.locaweb.com.br/plans/0000000000012345/edit" target="_blank">Link com seta</a>
+				</section>
 
-                &lt;hr&gt;
+				<section class="sidebox">
+					<h1 class="sidebox-title ico-bars">Título da sidebar</h1>
 
-                &lt;h6&gt;Nome&lt;/h6&gt;
-                &lt;p&gt;&lt;strong&gt;Lojinha do Régis&lt;/strong&gt;&lt;/p&gt;
-                &lt;a class="edit-account-name lnkArrow" data-toggle="modal" data-target="#modalEditarNome" href="/accounts/1/edit_name"&gt;Editar Nome&lt;/a&gt;
-                &lt;hr&gt;
+					<div class="sidebox-inner">
 
-                &lt;h6&gt;Plano&lt;/h6&gt;
-                &lt;p&gt;&lt;strong&gt;Nome do plano&lt;/strong&gt;&lt;/p&gt;
-                &lt;p&gt;&lt;small&gt;observação qualquer&lt;/small&gt;&lt;/p&gt;
-                &lt;hr&gt;
+						<span class="status-text">Barrinha de progresso</span>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="25" aria-valuemax="100" style="width: 25%;">
+								<span>25%</span>
+							</div>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="50" aria-valuemax="100" style="width: 50%;">
+								<span>50%</span>
+							</div>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="75" aria-valuemax="100" style="width: 75%;">
+								<span>75%</span>
+							</div>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="100" aria-valuemax="100" style="width: 100%;">
+								<span>100%</span>
+							</div>
+						</div>
+						<span class="status-text">
+							Link de ajuda <span class="ico-question" data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Continue lendo nossa documentação que já já tudo ficará claro :D" data-original-title="Ainda não entendeu?"></span>
+						</span>
 
-                &lt;p&gt;Usadas &lt;strong&gt;300&lt;/strong&gt; de &lt;strong&gt;42&lt;/strong&gt; transações&lt;/p&gt;
-                &lt;a href="#" class="lnkArrow"&gt;Aumentar limite&lt;/a&gt;
+					</div>
+						<div class="well well-sm txt-center no-margin-bottom">
+							<p><strong>Box com informações e números</strong></p>
+							<p class="total-sent"><strong>1234567890</strong></p>
+						</div>
+				</section>
 
-            &lt;/div&gt;
-        &lt;/section&gt;
+				<section class="sidebox">
+					<h1 class="sidebox-title ico-question">Título da sidebar</h1>
+					<ul class="sidebox-list">
+						<li><a class="ico-redo-2 ico-pos-right" href="#" target="_blank">Links externos</a></li>
+						<li><a class="ico-redo-2 ico-pos-right" href="#" target="_blank">Links externos</a></li>
+						<li><a class="ico-redo-2 ico-pos-right" href="#" target="_blank">Links externos</a></li>
+					</ul>
+				</section>
 
-        &lt;section class="sideBox"&gt;
-            &lt;div class="boxSidebarTitle"&gt;&lt;i class="ico-user"&gt;&lt;/i&gt;&lt;/div&gt;
-            &lt;h1 class="titSide"&gt;Meios de Pagamento&lt;/h1&gt;
-            &lt;div class="innerSideBox active-settings"&gt;
-                &lt;img alt="Cartao" src="/img/cartaoCielo.png"&gt;
-                &lt;img alt="Cartao" src="/img/cartaoRedecard.png"&gt;
-                &lt;img alt="Cartao" src="/img/cartaoShopline.png"&gt;
-                &lt;img alt="Cartao" src="/img/cartaoBoleto.png"&gt;
-                &lt;img alt="Cartao" src="/img/cartaoBoletoBradesco.png"&gt;
+			</aside>
+		</div>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+&lt;aside class=&quot;sidebar col-md-4&quot; role=&quot;complementary&quot;&gt;
+	&lt;section class=&quot;sidebox&quot;&gt;
+		&lt;h1 class=&quot;sidebox-title ico-user&quot;&gt;T&#xed;tulo da sidebar&lt;/h1&gt;
 
-                &lt;a href="/settings" class="lnkArrow"&gt;Ir para meios de pagamentos&lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/section&gt;
+		&lt;div class=&quot;sidebox-inner&quot;&gt;
+			&lt;span class=&quot;status-text&quot;&gt;Box de
+				&lt;b&gt;conte&#xfa;do&lt;/b&gt;
+			&lt;/span&gt;
+		&lt;/div&gt;
+		&lt;a class=&quot;ico-arrow-right&quot; href=&quot;http://customer-workbench.systemintegration.locaweb.com.br/plans/0000000000012345/edit&quot; target=&quot;_blank&quot;&gt;Link com seta&lt;/a&gt;
+	&lt;/section&gt;
 
-        &lt;section class="sideBox"&gt;
-            &lt;div class="boxSidebarTitle"&gt;&lt;i class="cmicon-help"&gt;?&lt;/i&gt;&lt;/div&gt;
-            &lt;h1 class="titSide"&gt;Ajuda e Suporte&lt;/h1&gt;
-            &lt;div class="innerSideBox"&gt;
-                &lt;ul class="listWhite"&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;Documentação de implementação&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#" rel="external"&gt;Wiki do Gateway de pagamentos&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;Suporte 24h&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/section&gt;
-    &lt;/aside&gt;
-&lt;/div&gt;
-</pre>
+	&lt;section class=&quot;sidebox&quot;&gt;
+		&lt;h1 class=&quot;sidebox-title ico-bars&quot;&gt;T&#xed;tulo da sidebar&lt;/h1&gt;
+
+		&lt;div class=&quot;sidebox-inner&quot;&gt;
+
+			&lt;span class=&quot;status-text&quot;&gt;Barrinha de progresso&lt;/span&gt;
+			&lt;div class=&quot;progress&quot;&gt;
+				&lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;25&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 25%;&quot;&gt;
+					&lt;span&gt;25%&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;progress&quot;&gt;
+				&lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;50&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 50%;&quot;&gt;
+					&lt;span&gt;50%&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;progress&quot;&gt;
+				&lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;75&quot; aria-valuemin=&quot;75&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 75%;&quot;&gt;
+					&lt;span&gt;75%&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;progress&quot;&gt;
+				&lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;100&quot; aria-valuemin=&quot;100&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 100%;&quot;&gt;
+					&lt;span&gt;100%&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;span class=&quot;status-text&quot;&gt;
+				Link de ajuda &lt;span class=&quot;ico-question&quot; data-trigger=&quot;hover&quot; data-toggle=&quot;popover&quot; data-placement=&quot;right&quot; data-content=&quot;Continue lendo nossa documenta&#xe7;&#xe3;o que j&#xe1; j&#xe1; tudo ficar&#xe1; claro :D&quot; data-original-title=&quot;Ainda n&#xe3;o entendeu?&quot;&gt;&lt;/span&gt;
+			&lt;/span&gt;
+
+		&lt;/div&gt;
+			&lt;div class=&quot;well well-sm txt-center no-margin-bottom&quot;&gt;
+				&lt;p&gt;&lt;strong&gt;Box com informa&#xe7;&#xf5;es e n&#xfa;meros&lt;/strong&gt;&lt;/p&gt;
+				&lt;p class=&quot;total-sent&quot;&gt;&lt;strong&gt;1234567890&lt;/strong&gt;&lt;/p&gt;
+			&lt;/div&gt;
+	&lt;/section&gt;
+
+	&lt;section class=&quot;sidebox&quot;&gt;
+		&lt;h1 class=&quot;sidebox-title ico-question&quot;&gt;T&#xed;tulo da sidebar&lt;/h1&gt;
+		&lt;ul class=&quot;sidebox-list&quot;&gt;
+			&lt;li&gt;&lt;a class=&quot;ico-redo-2 ico-pos-right&quot; href=&quot;#&quot; target=&quot;_blank&quot;&gt;Links externos&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a class=&quot;ico-redo-2 ico-pos-right&quot; href=&quot;#&quot; target=&quot;_blank&quot;&gt;Links externos&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a class=&quot;ico-redo-2 ico-pos-right&quot; href=&quot;#&quot; target=&quot;_blank&quot;&gt;Links externos&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/section&gt;
+
+&lt;/aside&gt;</pre>
 </article>
