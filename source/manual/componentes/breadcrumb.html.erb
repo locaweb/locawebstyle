@@ -1,0 +1,48 @@
+---
+title: Componentes - Breadcrumb
+menu_page: sidebar-componentes.erb
+---
+<article class="text">
+
+	<header>
+		<h1>Breadcrumb</h1>
+		<h3>Indica a localização da página atual dentro de uma hierarquia de navegação.</h3>
+	</header>
+
+	<div class="example">
+		<!-- Breadcrumb com 1 item -->
+		<ol class="breadcrumb container">
+			<li class="active">Início</li>
+		</ol>
+		<!-- Breadcrumb com 2 itens -->
+		<ol class="breadcrumb container">
+			<li><a href="#">Início</a></li>
+			<li class="active">Mensagens</li>
+		</ol>
+		<!-- Breadcrumb com 3 itens -->
+		<ol class="breadcrumb container">
+			<li><a href="#">Início</a></li>
+			<li><a href="#">Mensagens</a></li>
+			<li class="active">Enviar</li>
+		</ol>
+
+	</div>
+<pre class="lang-html prettyprint linenums">
+&lt;!-- Breadcrumb com 1 item --&gt;
+&lt;ol class=&quot;breadcrumb container&quot;&gt;
+	&lt;li class=&quot;active&quot;&gt;Início&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- Breadcrumb com 2 itens --&gt;
+&lt;ol class=&quot;breadcrumb container&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Início&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;active&quot;&gt;Mensagens&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- Breadcrumb com 3 itens --&gt;
+&lt;ol class=&quot;breadcrumb container&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Início&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mensagens&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;active&quot;&gt;Enviar&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+</article>
