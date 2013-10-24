@@ -7,6 +7,7 @@ locastyle.carousel = (function() {
     counter();
   }
 
+//Função que mostra a quantidade de sliders no carousel
   function counter() {
     $.each($(".carousel"), function() {
       var items = $(".carousel-inner", this).children().size();

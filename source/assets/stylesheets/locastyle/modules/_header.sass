@@ -112,6 +112,30 @@ $mobile-left-number: "240px"
 					&:before
 						display: none
 
+.breadcrumb
+	margin-bottom: 0
+	padding: 8px 0
+	font-size: .75em
+	background: none
+	border-bottom: 1px solid $gray4
+	border-radius: 0
+
+	li
+		position: relative
+		padding-left: 12px
+
+		&:after
+			@include arrow-right ($gray2, 3px)
+			vertical-align: bottom
+			position: absolute
+			left: 0
+			top: 5px
+
+		&:before
+			display: none
+
+	.active
+		color: #555555
 //
 // Essa formatação começa a partir do TABLET
 //
