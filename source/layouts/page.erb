@@ -8,14 +8,16 @@
 </div>
 <!-- END highlight -->
 
-<!-- Post content -->
-<section class="content container">
+<main class="main">
+	<!-- Post content -->
+	<section class="content container">
 
-  <%= partial "partials/navbar-manual" %>
-	<%= partial "partials/sidebar-manual" %>
+		<%= partial "partials/navbar-manual" %>
+		<%= partial "partials/sidebar-manual" %>
 
-	<%= yield %>
-</section>
-<!-- END post content -->
+		<%= yield %>
+	</section>
+	<!-- END post content -->
 
-<%= partial "partials/footer" %>
+	<%= partial "partials/footer" %>
+</main>
