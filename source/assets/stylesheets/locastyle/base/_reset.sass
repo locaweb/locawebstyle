@@ -11,6 +11,14 @@ html, body
 body
 	line-height: inherit
 
+a
+	text-decoration: underline
+
+	&:hover,
+	&[class*="ico-"],
+	&.close
+		text-decoration: none
+
 .main
 	position: relative
 	min-height: 82%
@@ -32,6 +40,12 @@ body
 	.actions
 		padding-left: 10px
 		display: inline-block
+
+.label
+	font-size: 100%
+
+.alert[class*="alert-"] a
+	color: inherit
 
 //
 // Desktops
