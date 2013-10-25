@@ -1,0 +1,50 @@
+---
+title: Componentes - Alternando classes
+
+menu_page: sidebar-componentes.erb
+---
+
+<article class="text">
+	<header>
+		<h1>Alternando Classes</h1>
+		<h3>É possível alternar entre 2 classes no seu projeto utilizando LocawebStyle. </h3>
+	</header>
+
+	<p>As vezes surge a necessidade em alternar classes ao clicar em um determinado elemento. </p>
+	<p>É muito comum esse comportamento ser utilizado em <strong>alternância de ícones</strong>, agora ficou muito fácil executar essa funcionalidade. </p>
+
+	<div class="example">
+		<a href="#" class="ico-plus" data-classtoggle="ico-plus,ico-minus" ></a>
+		<a href="#" class="ico-eye" data-classtoggle="ico-eye,ico-eye-blocked" ></a>
+		<a href="#" class="ico-checkbox-unchecked" data-classtoggle="ico-checkbox-unchecked,ico-checkbox-partial" ></a>
+		<a href="#" class="ico-radio-unchecked" data-classtoggle="ico-radio-checked,ico-radio-unchecked"></a>
+	</div>
+	<pre class="lang-html prettyprint linenums">
+
+		&lt;a href="#" class="ico-plus" data-classtoggle="ico-plus,ico-minus" &gt;&lt;/a&gt;
+		&lt;a href="#" class="ico-eye" data-classtoggle="ico-eye,ico-eye-blocked" &gt;&lt;/a&gt;
+		&lt;a href="#" class="ico-checkbox-unchecked" data-classtoggle="ico-checkbox-unchecked,ico-checkbox-partial" &gt;&lt;/a&gt;
+		&lt;a href="#" class="ico-radio-unchecked" data-classtoggle="ico-radio-checked,ico-radio-unchecked"&gt;&lt;/a&gt;
+	</pre>
+
+	<h3>Atributos</h3>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="width: 150px;">Atributo</th>
+				<th>Descrição</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>class</td>
+				<td>A Classe que será exibida ao carregar a página</td>
+			</tr>
+			<tr>
+				<td>data-classtoggle</td>
+				<td>Inserimos 2 classes separadas por (,).<br>O primeiro é o mesma classe carregada no elemento, e a Segundo é a classe que será inserida ao ser clicado.</td>
+			</tr>
+		</tbody>
+	</table>
+
+</article>
