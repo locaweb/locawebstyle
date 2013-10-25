@@ -635,4 +635,107 @@ pre .linenums {
 	}
 }
 
+/*** BLOG ***/
+.blog hr {
+	background: url(../images/manual/title_dots.png);
+	border: none;
+	height: 10px;
+	margin: 50px 0;
+}
 
+.blog article {
+	font-family: Georgia, Times, Serif;
+	padding: 50px;
+}
+
+.blog article h1 {
+	font-family: Gilda Display, Georgia, Times, Serif;
+}
+
+.blog article h2 {
+	margin-top: 20px;
+}
+
+.blog article h2,
+.blog article h3,
+.blog article h4,
+.blog article h5,
+.blog article h6 {
+	font-family: inherit !important;
+}
+
+.blog blockquote {
+	padding: 60px 50px;
+	margin: 50px 0;
+	color: #444;
+	background-color: #f9f9f9;
+	border-left: 7px solid rgb(135,201,0);
+	font-size: 1.5em;
+	font-style: italic;
+}
+
+.blog article h1 {
+	text-align: center;
+	font-size: 2.5em;
+}
+.blog article h1 a {
+	color: #444;
+}
+
+.blog article h2 {font-size: 2.1em; margin-top: 30px;}
+.blog article h3 {font-size: 1.7em; margin-top: 30px;}
+
+.blog article h4 {
+	font-size: 1.3em;
+	margin: 30px 0 10px;
+	font-weight: bold;
+}
+
+.blog article h5 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 35px 0 10px;
+}
+
+.blog article h6 {font-size: 1.2em;}
+
+.blog .infoPost {
+	padding: 0;
+	margin-bottom: 30px;
+	color: #666;
+	text-align: center;
+	display: block;
+	font-style: italic;
+}
+
+.blog .infoPost * {
+	margin:0 15px;
+}
+
+.blog .author {
+	text-align: center;
+	display: inline-block;
+}
+
+.blog article p {
+	font-family: Gilda Display, Georgia, Times, Serif;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	color: #000;
+}
+
+.blog article > ul, .blog article > ol {
+	margin: 40px 20px;
+}
+
+.blog article > ul li, .blog article > ol li {
+	font-family: Gilda Display, Georgia, Times, Serif;
+	font-size: 1em;
+	color: #000;
+	margin-bottom:2px;
+}
+
+.blog .sidebar {
+	float: none;
+	width: 100%;
+}
