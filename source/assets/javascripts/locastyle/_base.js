@@ -7,6 +7,11 @@ var locastyle = (function() {
     inputsMask();
     claimDatePicker();
     showActions();
+    toggleTextOnClick();
+    toggleTextOnHover();
+    linkPreventDefault();
+    togglePassword();
+    classToggle();
   }
 
   // Aquele background cinza que fica sempre atrás do elemento Shortcut
@@ -131,6 +136,60 @@ var locastyle = (function() {
 
     });
 
+  }
+
+  function linkPreventDefault() {
+    $("a").on("click", function(e){
+      if($(this).attr("href") === "" || $(this).attr("href") === "#"){
+        e.preventDefault();
+      }
+    })
+  }
+
+  // Troca de texto
+  function toggleTextOnClick() {
+    $('[data-event="click"]').on("click", function(e) {
+      e.preventDefault();
+      toggleText(this);
+    });
+  }
+
+  function toggleTextOnHover() {
+    $('[data-event="hover"]').on("mouseover", function(e) {
+      e.preventDefault();
+      toggleText(this);
+    });
+  }
+
+  function toggleText(element) {
+    var $text, $replacementText;
+    $text = $(element).html();
+    $replacementText = $(element).data("text");
+    $(element).text($replacementText).data("text", $text).attr("title", $replacementText);
+  }
+
+
+  // Troca de input password para text
+  function togglePassword(){
+    $('.toggle-pass').on("click", function(e){
+      e.preventDefault();
+      var $self = $(this).data('target');
+
+      if($($self).attr('type') == 'password'){
+        $($self).removeAttr('attr').prop('type','text');
+
+      } else
+        $($self).removeAttr('attr').prop('type','password');
+    })
+  }
+
+  // Troca de classes
+  function classToggle(){
+    $('[data-classtoggle]').on('click', function(e){
+      e.preventDefault();
+      var classes = $(this).data('classtoggle').split(',');
+      $(this).toggleClass(classes[0]).toggleClass(classes[1]);
+    });
   }
 
   return {

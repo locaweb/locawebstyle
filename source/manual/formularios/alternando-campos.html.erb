@@ -1,0 +1,64 @@
+---
+title: Formulários - Alternando campos de formulário
+
+menu_page: sidebar-formularios.erb
+---
+
+<article class="text">
+	<header>
+		<h1>Formulários</h1>
+		<h2>Alternando campos de formulário.</h2>
+	</header>
+
+	<p>Para ativar essa funcionalidade o elemento precisa possuir a classe <strong>toggle-pass</strong> e receber o atributo <strong>data-target</strong> com o mesmo valor do <strong>ID do input</strong> que será alternado seu tipo de password/text.
+
+
+	<div class="example">
+		<form>
+			<div class="form-inline">
+				<label class="control-label" for="user_password">Nova senha</label>
+				<div class="input-group">
+					<input class="password form-control" id="user_password" name="" type="password">
+					<a class=" input-group-addon toggle-pass ico-eye" data-classtoggle="ico-eye,ico-eye-blocked" data-target="#user_password" href="#"></a>
+				</div>
+			</div>
+		</form>
+	</div>
+
+<pre class="lang-html prettyprint linenums">
+	&lt;form&gt;
+		&lt;div class="form-inline"&gt;
+			&lt;label class="control-label" for="user_password"&gt;Nova senha&lt;/label&gt;
+			&lt;div class="input-group"&gt;
+				&lt;input class="password form-control" id="user_password" data-component="password-strength" data-monitor-id="password-strength-monitor" name="" type="password"&gt;
+				&lt;a class=" input-group-addon toggle-pass ico-eye" data-classtoggle="ico-eye,ico-eye-blocked" data-target="#user_password" href="#"&gt;&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/form&gt;
+
+</pre>
+
+
+<div class="example">
+	<form>
+		<div class="form-inline">
+			<div class="form-group">
+				<label class="control-label" for="user_password2">Nova senha</label>
+				<div class="row">
+					<div class="input-group col-md-4">
+						<input class="password form-control" id="user_password2" data-component="password-strength" data-monitor-id="password-strength-monitor" name="" type="password">
+						<a class=" input-group-addon toggle-pass ico-eye" data-classtoggle="ico-eye,ico-eye-blocked" data-target="#user_password2" href="#"></a>
+					</div>
+
+					<div class="password-strength">
+						<p>Força da senha</p>
+						<div id="password-strength-monitor" class="monitor"></div>
+					</div>
+				</div>
+				<p class="help-block">Senha entre 8 a 14 caracteres, contendo letras e números</p>
+			</div>
+		</div>
+	</form>
+</div>
+
+</article>
