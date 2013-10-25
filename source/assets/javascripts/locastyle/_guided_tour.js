@@ -1,13 +1,20 @@
 Locastyle.prototype.guidedTour = (function() {
 	'use strict';
 
+	var jsonTour, 
+		openTour = false;
+
 	function init(jsonSteps){
 		checkTour(jsonSteps);
 		keyCode();
 		setCookie();
 	}
 
-	var jsonTour;
+	function checkTour(jsonSteps){
+		if(jsonSteps && hopscotch){
+			setTour(jsonSteps);
+		}
+	}
 
 	function setTour(tour){
 		jsonTour = tour;
@@ -16,21 +23,10 @@ Locastyle.prototype.guidedTour = (function() {
 		$('.guided-tour .btn-close').on({click: closeWelcomeTour});
 	}
 
-	function openWelcomeTour(){
-		$('.guided-tour').toggleClass('on');
-		$('.btn-tour').focus().attr('tabindex', '-1');
-		return false;
-	}
-
-	function closeWelcomeTour(){
-		$('.guided-tour').removeClass('on');
-	}
-
 	function initTour(){
 		hopscotch.startTour(jsonTour);
 		keyCode();
 		closeWelcomeTour();
-		return false;
 	}
 
 	function keyCode(element){
@@ -38,21 +34,28 @@ Locastyle.prototype.guidedTour = (function() {
 		var right = 37;
 		var esc = 27;
 		document.onkeyup = function(e){
-			var key = event.keyCode
-			if(key == left ){	hopscotch.nextStep(); }
-			if(key == right){	hopscotch.prevStep(); }
-			if(key == esc  ){	hopscotch.endTour();  }
+			if(openTour){
+				var key = event.keyCode
+				if(key == left ){	hopscotch.nextStep(); }
+				if(key == right){	hopscotch.prevStep(); }
+				if(key == esc  ){	hopscotch.endTour();  }
+			}
 		}
+	}
+
+	function openWelcomeTour(){
+		openTour = true;
+		$('.guided-tour').toggleClass('on');
+		$('.btn-tour').focus().attr('tabindex', '-1');
+	}
+
+	function closeWelcomeTour(){
+		$('.guided-tour').removeClass('on');
+		openTour = false;
 	}
 
 	function userAborted(xhr) {
 		return !xhr.getAllResponseHeaders();
-	}
-
-	function checkTour(jsonSteps){
-		if(jsonSteps && hopscotch){
-			setTour(jsonSteps);
-		}
 	}
 
 	function setCookie(){

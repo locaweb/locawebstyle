@@ -44,13 +44,13 @@ menu_page: sidebar-aplicacoes.erb
     <p>Abaixo segue um exemplo dos códigos necessários para implementar o <strong>Tour Guiado</strong>. </p>
 
     <h3>Chamando a função de navegação dentro do seu projeto, propositalmente com window.load</h3>
-    <pre class="lang-html prettyprint linenums">
-    $(window).load(function() {
-        //Onde tourDashboard é a variável que recebe os eventos do plugin no exemplo abaixo
-        locastyle.guidedTour.init(tourDashboard);
-      });
+<pre class="lang-html prettyprint linenums">
+$(window).load(function() {
+    //Onde tourDashboard é a variável que recebe os eventos do plugin no exemplo abaixo
+    locastyle.guidedTour.init(tourDashboard);
+  });
 
-    </pre>
+</pre>
 
     <p>O valor do <strong>target</strong> (dentro do tour.js) server como referência de exibição do Tour Guiado. Na tabela abaixo alguns exemplos</p>
 
@@ -77,74 +77,64 @@ menu_page: sidebar-aplicacoes.erb
     </table>
 
     <h3>tour .js </h3>
-    <pre class="lang-html prettyprint linenums">
-    // Tradução dos botões
-    tourLocales = {
-      nextBtn: "Próximo",
-      prevBtn: "Anterior",
-      doneBtn: "Ok",
-      skipBtn: "Sair",
-      closeTooltip: "Fechar"
-    };
+<pre class="lang-json prettyprint linenums">
+// Tradução dos botões
+tourLocales = {
+  nextBtn: "Próximo",
+  prevBtn: "Anterior",
+  doneBtn: "Ok",
+  skipBtn: "Sair",
+  closeTooltip: "Fechar"
+};
 
-    // o nome da variável está sendo chamada no load (exemplo acima)
-    var tourDashboard = {
-      id: 'tourDashboard',
-      i18n: tourLocales,
-      bubbleWidth: 250,
-      showPrevButton: true,
-      steps: [
-        {
-          target: 'header',
-          title: 'Saiba qual  site está administrando',
-          content: 'Sem confusão! A identificação do site administrado ficou mais fácil: o endereço principal é exibido no topo do painel.',
-          placement: 'bottom',
-          arrowOffset: 'center'
-        },
-        {
-          target: '.header',
-          title: 'Administre outros sites',
-          content: 'Retorne à lista de sites a qualquer momento.',
-          placement: 'right',
-          arrowOffset: 'center',
-          yOffset: 'center',
-          onNext: function(){
-            locastyle.guidedTour.openWelcomeTour();
-          }
-        },
-        {
-          target: '.btn',
-          title: 'Ajude a melhorar o painel',
-          content: 'Esta é a primeira fase do novo painel de Hospedagem de Sites. Fique à vontade para testar, enviar sugestões e comentários.',
-          placement: 'left',
-          arrowOffset: 'center',
-          yOffset: 20,
-          xOffset: -60,
-          onPrev: function(){
-            locastyle.guidedTour.closeWelcomeTour();
-          }
-        }
-      ]
-    };
-    </pre>
+// o nome da variável está sendo chamada no load (exemplo acima)
+var tourDashboard = {
+  id: 'tourDashboard',
+  i18n: tourLocales,
+  bubbleWidth: 250,
+  showPrevButton: true,
+  steps: [
+    {
+      target: 'passo1',
+      title: 'Titulo passo 1',
+      content: 'descrição passo 1',
+      placement: 'bottom',
+      arrowOffset: 'center'
+    },
+    {
+      target: '.header',
+      title: 'Título passo 2',
+      content: 'texto passo 2.',
+      placement: 'right',
+      arrowOffset: 'center',
+      yOffset: 'center',
+      onNext: function(){
+        locastyle.guidedTour.openWelcomeTour();
+      }
+    }
+  ]
+};
+</pre>
 
-    <h3>HTML </h3>
-    <pre class="lang-html prettyprint linenums">
-        &lt;div class="guided-tour"&gt;
-          &lt;a href="#" tabindex="2" aria-label="Fechar caixa de informação" class="btn-close close"&gt;x&lt;/a&gt;
-          &lt;header class="guided-header"&gt;
-            &lt;p&gt;Bem-vindo ao novo painel&lt;/p&gt;
-            &lt;h2 class="title-guided"&gt;Hospedagem de Sites&lt;/h2&gt;
-          &lt;/header&gt;
+    <h3>HTML</h3>
 
-          &lt;a href="#" class="btn btn-primary btn-large btn-tour" role="button"&gt;Fazer um tour&lt;/a&gt;
-          &lt;p&gt;&lt;a href="#" data-target="#modalBeta" data-toggle="modal" tabindex="2"&gt;O que mudou?&lt;/a&gt;&lt;/p&gt;
+<pre class="lang-html prettyprintCode linenums">
+<div class="guided-tour">
+  <a href="#" aria-label="Fechar" class="btn-close close">x</a>
+  <header class="guided-header">
+    <p>Bem-vindo ao novo painel</p>
+    <h2 class="title-guided">Hospedagem de Sites</h2>
+  </header>
 
-          &lt;footer class="guided-footer"&gt;
-            &lt;a href="https://www.feedbackr.com.br/projects/..." class="lnkArrow" tabindex="2" target="_blank"&gt;Enviar comentários e sugestões&lt;/a&gt;
-            &lt;a href="" class="lnkArrow" tabindex="2" target="_blank"&gt;Voltar ao painel antigo&lt;/a&gt;
-          &lt;/footer&gt;
-        &lt;/div&gt;
-    </pre>
+  <a href="#" class="btn btn-primary btn-large btn-tour" role="button">Iniciar</a>
+  <p>
+    <a href="#" data-target="#modalBeta" data-toggle="modal" >O que mudou?</a>
+  </p>
+  <footer class="guided-footer">
+    <a href="https://www.demo.com" class="lnkArrow" target="_blank">Link demo</a>
+    <a href="#" class="lnkArrow" target="_blank">Link</a>
+  </footer>
+</div>
+</pre>
 
 </article>
