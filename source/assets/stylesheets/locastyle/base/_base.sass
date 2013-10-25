@@ -60,6 +60,10 @@ a
 			display: inline-block
 			font-weight: bold
 
+[class*="ico-"][data-toggle="popover"]:before
+	@include border-circle(18px, 100%)
+
+
 @media #{$media-mobile}
 	.content[role="main"]
 		overflow: auto
