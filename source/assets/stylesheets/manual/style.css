@@ -2,7 +2,7 @@ body {
 	/*font-family: Lato, Verdana, Arial, Helvetica, Tahoma, Sans-serif;*/
 	background: url(../images/manual/stripestop.png) repeat-X top;
 }
-
+a{text-decoration: none;}
 a.btn.btn-download {
 	padding: 20px 35px;
 	font-weight: bold;
@@ -563,7 +563,7 @@ table {
 	overflow: hidden;
 	padding-right: 25px
 }
-.content > .text a,{text-decoration: underline;}
+.content > .text a {text-decoration: underline;}
 .content > .text a:hover,
 .content> .text .btn{text-decoration: none;}
 
