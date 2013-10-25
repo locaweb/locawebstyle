@@ -1,3 +1,9 @@
 $(document).ready(function(){
-	prettyPrint();
+  prettyPrint();
+  $('pre.prettyprintCode').each(function() {
+    var code = $(this).html();
+    $(this).text(code).addClass('prettyprint')
+    prettyPrint();
+  });
+
 });
