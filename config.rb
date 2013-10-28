@@ -25,6 +25,9 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
+# Automatic reload on save
+activate :livereload
+
 ###
 # Compass
 ###
