@@ -3,10 +3,19 @@ var locastyleManual = (function() {
 
 	function init(){
 		syntaxHightlight();
+		pageActive();
 	}
 
 	function syntaxHightlight() {
 		prettyPrint();
+	}
+
+	function pageActive(){
+		pageActive = window.location+"";
+		pageActive = pageActive.split("/").pop();
+		if(pageActive != ""){
+			$('a[href$="'+pageActive+'"]').addClass('active');
+		}
 	}
 
 	return {
