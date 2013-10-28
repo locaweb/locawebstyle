@@ -106,6 +106,7 @@ pre.prettyprint {
   -o-tab-size: 2;
   tab-size: 2;
   overflow: auto;
+  clear: both;
 }
 pre .linenums {
 	font-size: 11px;
