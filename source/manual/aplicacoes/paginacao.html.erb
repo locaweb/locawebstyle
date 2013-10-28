@@ -39,15 +39,32 @@ menu_page: sidebar-aplicacoes.erb
 	</div>
 
 <pre class="lang-html prettyprint linenums">
-&lt;ul class=&quot;pagination&quot;&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&laquo; Anterior&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Próximo &raquo;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class=&quot;pagination-filter&quot;&gt;
+
+	&lt;ul class=&quot;pagination&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&laquo Anterior&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Próximo &raquo&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;div class=&quot;filter-view&quot;&gt;
+		&lt;label for=&quot;&quot;&gt;Exibir&lt;/label&gt;
+		&lt;select name=&quot;&quot; id=&quot;&quot;&gt;
+			&lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+			&lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+			&lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+			&lt;option value=&quot;30&quot;&gt;30&lt;/option&gt;
+			&lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+			&lt;option value=&quot;100&quot;&gt;100&lt;/option&gt;
+		&lt;/select&gt;
+		ítens por página
+	&lt;/div&gt;
+
+&lt;/div&gt;
 </pre>
 
 	<h4>Estados Ativado e Desativado</h4>
