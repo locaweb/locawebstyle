@@ -1,2 +1,2 @@
-//= require manual/_geral
-//= require manual/_tour-guiado
+//= require manual/_general
+//= require manual/_guided-tour-demo
