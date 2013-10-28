@@ -76,21 +76,21 @@ $(window).load(function() {
       </tbody>
     </table>
 
-    <h3>tour .js </h3>
+    <h3 id="passo1" >tour.js </h3>
 <pre class="lang-json prettyprint linenums">
-// Tradução dos botões
-tourLocales = {
-  nextBtn: "Próximo",
-  prevBtn: "Anterior",
-  doneBtn: "Ok",
-  skipBtn: "Sair",
-  closeTooltip: "Fechar"
-};
-
-// o nome da variável está sendo chamada no load (exemplo acima)
-var tourDashboard = {
-  id: 'tourDashboard',
-  i18n: tourLocales,
+var configTour = {
+  id: 'tourDemo',
+  selectors: {
+    init:  '#demo-init'
+  },
+  // Tradução dos botões
+  i18n: {
+    nextBtn: "Próximo",
+    prevBtn: "Anterior",
+    doneBtn: "Ok",
+    skipBtn: "Sair",
+    closeTooltip: "Fechar"
+  },
   bubbleWidth: 250,
   showPrevButton: true,
   steps: [
@@ -102,21 +102,18 @@ var tourDashboard = {
       arrowOffset: 'center'
     },
     {
-      target: '.header',
+      target: 'passo2',
       title: 'Título passo 2',
       content: 'texto passo 2.',
       placement: 'right',
       arrowOffset: 'center',
-      yOffset: 'center',
-      onNext: function(){
-        locastyle.guidedTour.openWelcomeTour();
-      }
+      yOffset: 'center'
     }
   ]
 };
 </pre>
 
-    <h3>HTML</h3>
+    <h3 id="passo2">HTML</h3>
 
 <pre class="lang-html prettyprintCode linenums">
 <div class="guided-tour">
@@ -136,4 +133,7 @@ var tourDashboard = {
 </div>
 </pre>
 
+<h3>Exemplo</h3>
+<p>Faça um tour guiado usando as configurações do js de exemplo, acima:</p>
+<button id="demo-init" class="btn btn-primary btn-large btn-tour">Iniciar Tour</button>
 </article>
