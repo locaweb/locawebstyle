@@ -4,6 +4,15 @@ Locastyle.prototype.guidedTour = (function() {
 	var jsonTour, 
 		openTour = false;
 
+	var config = {
+		selectors : {
+			open:  '.lnk-suggestions',
+			init:  '.btn-tour',
+			close: '.btn-close',
+			tour:  '.guided-tour'
+		}
+	}
+
 	function init(jsonSteps){
 		checkTour(jsonSteps);
 		keyCode();
@@ -12,21 +21,28 @@ Locastyle.prototype.guidedTour = (function() {
 
 	function checkTour(jsonSteps){
 		if(jsonSteps && hopscotch){
+			if( jsonSteps.selectors ){
+				$.each( config.selectors, function(key,selector){
+					jsonSteps.selectors[key] = jsonSteps.selectors[key] || config.selectors[key];
+				});
+			}
 			setTour(jsonSteps);
 		}
 	}
 
 	function setTour(tour){
 		jsonTour = tour;
-		$('.lnk-suggestions').on({click: openWelcomeTour});
-		$('.guided-tour .btn-tour').on({click: initTour});
-		$('.guided-tour .btn-close').on({click: closeWelcomeTour});
+		$(config.selectors.open).on({click: openWelcomeTour});
+		$(config.selectors.init).on({click: initTour});
+		$(config.selectors.close).on({click: closeWelcomeTour});
 	}
 
 	function initTour(){
+		hopscotch.endTour();
 		hopscotch.startTour(jsonTour);
 		keyCode();
 		closeWelcomeTour();
+		clearState();
 	}
 
 	function keyCode(element){
@@ -45,12 +61,12 @@ Locastyle.prototype.guidedTour = (function() {
 
 	function openWelcomeTour(){
 		openTour = true;
-		$('.guided-tour').toggleClass('on');
-		$('.btn-tour').focus().attr('tabindex', '-1');
+		$(config.selectors.tour).toggleClass('on');
+		$(config.selectors.init).focus().attr('tabindex', '-1');
 	}
 
 	function closeWelcomeTour(){
-		$('.guided-tour').removeClass('on');
+		$(config.selectors.tour).removeClass('on');
 		openTour = false;
 	}
 
@@ -60,7 +76,7 @@ Locastyle.prototype.guidedTour = (function() {
 
 	function setCookie(){
 		if($.cookie("cookie_tour") != "true"){
-			$('.lnk-suggestions').click();
+			$(config.selectors.open).click();
 			$.cookie('cookie_tour', "true");
 		}
 	}
