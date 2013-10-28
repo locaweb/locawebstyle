@@ -65,6 +65,9 @@ set :base_url, ""
 
 activate :directory_indexes
 
+# Automatic reload on save
+activate :livereload
+
 # Define layouts
 page "/manual/*", :layout => "page"
 page "/manual/exemplos/*", :layout => "system-example"
