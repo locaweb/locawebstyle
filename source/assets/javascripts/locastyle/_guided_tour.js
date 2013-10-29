@@ -42,7 +42,6 @@ Locastyle.prototype.guidedTour = (function() {
 		hopscotch.startTour(jsonTour);
 		keyCode();
 		closeWelcomeTour();
-		clearState();
 	}
 
 	function keyCode(element){
