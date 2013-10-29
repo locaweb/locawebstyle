@@ -106,6 +106,7 @@ pre.prettyprint {
   -o-tab-size: 2;
   tab-size: 2;
   overflow: auto;
+  clear: both;
 }
 pre .linenums {
 	font-size: 11px;
@@ -563,9 +564,6 @@ table {
 	overflow: hidden;
 	padding-right: 25px
 }
-.content > .text a {text-decoration: underline;}
-.content > .text a:hover,
-.content> .text .btn{text-decoration: none;}
 
 h1, h2, h3, h4, h5, h6 {margin-top: 20px;}
 
