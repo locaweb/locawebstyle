@@ -1,6 +1,11 @@
+$font-light: open_sanslight
+$font-regular: open_sansregular
+$font-semibold: open_sanssemibold
+$font-bold: open_sansbold
+
 html, body
 	font-size: 100%
-	font-family: verdana, tahoma, arial, helvetica, sans-serif
+	font-family: $font-regular
 	-webkit-font-smoothing: antialiased
 	-moz-font-smoothing: antialiased
 	-ms-font-smoothing: antialiased
@@ -13,72 +18,72 @@ html, body
 	-ms-text-stroke: 1px transparent
 	text-stroke: 1px transparent
 
-[class*="btn"]
-	-webkit-font-smoothing: antialiased
-	-moz-font-smoothing: antialiased
-	-ms-font-smoothing: antialiased
-	font-smoothing: antialiased
-
-
 @font-face
-	font-family: 'ralewaythin'
-	src: url('/assets/fonts/raleway/raleway-thin-webfont.eot')
-	src: url('/assets/fonts/raleway/raleway-thin-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/raleway/raleway-thin-webfont.woff') format('woff'), url('/assets/fonts/raleway/raleway-thin-webfont.ttf') format('truetype'), url('/assets/fonts/raleway/raleway-thin-webfont.svg#ralewaythin') format('svg')
+	font-family: 'open_sansextrabold'
+	src: url('/assets/fonts/opensans/opensans-extrabold-webfont.eot')
+	src: url('/assets/fonts/opensans/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/opensans/opensans-extrabold-webfont.woff') format('woff'), url('/assets/fonts/opensans/opensans-extrabold-webfont.ttf') format('truetype'), url('/assets/fonts/opensans/opensans-extrabold-webfont.svg#open_sansextrabold') format('svg')
 	font-weight: normal
 	font-style: normal
 
 @font-face
-	font-family: 'ralewayregular'
-	src: url('/assets/fonts/raleway/raleway-regular-webfont.eot')
-	src: url('/assets/fonts/raleway/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/raleway/raleway-regular-webfont.woff') format('woff'), url('/assets/fonts/raleway/raleway-regular-webfont.ttf') format('truetype'), url('/assets/fonts/raleway/raleway-regular-webfont.svg#ralewayregular') format('svg')
+	font-family: 'open_sansbold_italic'
+	src: url('/assets/fonts/opensans/opensans-bolditalic-webfont.eot')
+	src: url('/assets/fonts/opensans/opensans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/opensans/opensans-bolditalic-webfont.woff') format('woff'), url('/assets/fonts/opensans/opensans-bolditalic-webfont.ttf') format('truetype'), url('/assets/fonts/opensans/opensans-bolditalic-webfont.svg#open_sansbold_italic') format('svg')
 	font-weight: normal
 	font-style: normal
 
 @font-face
-	font-family: 'ralewaysemibold'
-	src: url('/assets/fonts/raleway/raleway-semibold-webfont.eot')
-	src: url('/assets/fonts/raleway/raleway-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/raleway/raleway-semibold-webfont.woff') format('woff'), url('/assets/fonts/raleway/raleway-semibold-webfont.ttf') format('truetype'), url('/assets/fonts/raleway/raleway-semibold-webfont.svg#ralewaysemibold') format('svg')
+	font-family: 'open_sansbold'
+	src: url('/assets/fonts/opensans/opensans-bold-webfont.eot')
+	src: url('/assets/fonts/opensans/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/opensans/opensans-bold-webfont.woff') format('woff'), url('/assets/fonts/opensans/opensans-bold-webfont.ttf') format('truetype'), url('/assets/fonts/opensans/opensans-bold-webfont.svg#open_sansbold') format('svg')
 	font-weight: normal
 	font-style: normal
 
 @font-face
-	font-family: 'ralewaymedium'
-	src: url('/assets/fonts/raleway/raleway-medium-webfont.eot')
-	src: url('/assets/fonts/raleway/raleway-medium-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/raleway/raleway-medium-webfont.woff') format('woff'), url('/assets/fonts/raleway/raleway-medium-webfont.ttf') format('truetype'), url('/assets/fonts/raleway/raleway-medium-webfont.svg#ralewaymedium') format('svg')
+	font-family: 'open_sansextrabold_italic'
+	src: url('/assets/fonts/opensans/opensans-extrabolditalic-webfont.eot')
+	src: url('/assets/fonts/opensans/opensans-extrabolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/opensans/opensans-extrabolditalic-webfont.woff') format('woff'), url('/assets/fonts/opensans/opensans-extrabolditalic-webfont.ttf') format('truetype'), url('/assets/fonts/opensans/opensans-extrabolditalic-webfont.svg#open_sansextrabold_italic') format('svg')
 	font-weight: normal
 	font-style: normal
 
 @font-face
-	font-family: 'ralewaylight'
-	src: url('/assets/fonts/raleway/raleway-light-webfont.eot')
-	src: url('/assets/fonts/raleway/raleway-light-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/raleway/raleway-light-webfont.woff') format('woff'), url('/assets/fonts/raleway/raleway-light-webfont.ttf') format('truetype'), url('/assets/fonts/raleway/raleway-light-webfont.svg#ralewaylight') format('svg')
+	font-family: 'open_sansitalic'
+	src: url('/assets/fonts/opensans/opensans-italic-webfont.eot')
+	src: url('/assets/fonts/opensans/opensans-italic-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/opensans/opensans-italic-webfont.woff') format('woff'), url('/assets/fonts/opensans/opensans-italic-webfont.ttf') format('truetype'), url('/assets/fonts/opensans/opensans-italic-webfont.svg#open_sansitalic') format('svg')
 	font-weight: normal
 	font-style: normal
 
 @font-face
-	font-family: 'ralewayheavy'
-	src: url('/assets/fonts/raleway/raleway-heavy-webfont.eot')
-	src: url('/assets/fonts/raleway/raleway-heavy-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/raleway/raleway-heavy-webfont.woff') format('woff'), url('/assets/fonts/raleway/raleway-heavy-webfont.ttf') format('truetype'), url('/assets/fonts/raleway/raleway-heavy-webfont.svg#ralewayheavy') format('svg')
+	font-family: 'open_sanslight'
+	src: url('/assets/fonts/opensans/opensans-light-webfont.eot')
+	src: url('/assets/fonts/opensans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/opensans/opensans-light-webfont.woff') format('woff'), url('/assets/fonts/opensans/opensans-light-webfont.ttf') format('truetype'), url('/assets/fonts/opensans/opensans-light-webfont.svg#open_sanslight') format('svg')
 	font-weight: normal
 	font-style: normal
 
 @font-face
-	font-family: 'ralewaybold'
-	src: url('/assets/fonts/raleway/raleway-bold-webfont.eot')
-	src: url('/assets/fonts/raleway/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/raleway/raleway-bold-webfont.woff') format('woff'), url('/assets/fonts/raleway/raleway-bold-webfont.ttf') format('truetype'), url('/assets/fonts/raleway/raleway-bold-webfont.svg#ralewaybold') format('svg')
+	font-family: 'open_sanslight_italic'
+	src: url('/assets/fonts/opensans/opensans-lightitalic-webfont.eot')
+	src: url('/assets/fonts/opensans/opensans-lightitalic-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/opensans/opensans-lightitalic-webfont.woff') format('woff'), url('/assets/fonts/opensans/opensans-lightitalic-webfont.ttf') format('truetype'), url('/assets/fonts/opensans/opensans-lightitalic-webfont.svg#open_sanslight_italic') format('svg')
 	font-weight: normal
 	font-style: normal
 
 @font-face
-	font-family: 'ralewayextrabold'
-	src: url('/assets/fonts/raleway/raleway-extrabold-webfont.eot')
-	src: url('/assets/fonts/raleway/raleway-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/raleway/raleway-extrabold-webfont.woff') format('woff'), url('/assets/fonts/raleway/raleway-extrabold-webfont.ttf') format('truetype'), url('/assets/fonts/raleway/raleway-extrabold-webfont.svg#ralewayextrabold') format('svg')
+	font-family: 'open_sansregular'
+	src: url('/assets/fonts/opensans/opensans-regular-webfont.eot')
+	src: url('/assets/fonts/opensans/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/opensans/opensans-regular-webfont.woff') format('woff'), url('/assets/fonts/opensans/opensans-regular-webfont.ttf') format('truetype'), url('/assets/fonts/opensans/opensans-regular-webfont.svg#open_sansregular') format('svg')
 	font-weight: normal
 	font-style: normal
 
 @font-face
-	font-family: 'ralewayextralight'
-	src: url('/assets/fonts/raleway/raleway-extralight-webfont.eot')
-	src: url('/assets/fonts/raleway/raleway-extralight-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/raleway/raleway-extralight-webfont.woff') format('woff'), url('/assets/fonts/raleway/raleway-extralight-webfont.ttf') format('truetype'), url('/assets/fonts/raleway/raleway-extralight-webfont.svg#ralewayextralight') format('svg')
+	font-family: 'open_sanssemibold'
+	src: url('/assets/fonts/opensans/opensans-semibold-webfont.eot')
+	src: url('/assets/fonts/opensans/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/opensans/opensans-semibold-webfont.woff') format('woff'), url('/assets/fonts/opensans/opensans-semibold-webfont.ttf') format('truetype'), url('/assets/fonts/opensans/opensans-semibold-webfont.svg#open_sanssemibold') format('svg')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: 'open_sanssemibold_italic'
+	src: url('/assets/fonts/opensans/opensans-semibolditalic-webfont.eot')
+	src: url('/assets/fonts/opensans/opensans-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/opensans/opensans-semibolditalic-webfont.woff') format('woff'), url('/assets/fonts/opensans/opensans-semibolditalic-webfont.ttf') format('truetype'), url('/assets/fonts/opensans/opensans-semibolditalic-webfont.svg#open_sanssemibold_italic') format('svg')
 	font-weight: normal
 	font-style: normal
