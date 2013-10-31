@@ -33,14 +33,15 @@ body
 		padding-left: 10px
 		display: inline-block
 
-.label
-	font-size: 100%
 
-.alert
-	font-size: 13px
 
-.alert[class*="alert-"] a
-	color: inherit
+.alert[class*="alert-"]
+	a
+		color: inherit
+		text-decoration: underline
+
+		&:hover
+			text-decoration: none
 
 [class*="btn"]
 	-webkit-font-smoothing: antialiased
