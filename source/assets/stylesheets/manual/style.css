@@ -312,20 +312,14 @@ pre .linenums {
 }
 .highlight .search-form fieldset {margin: 0; display: inline-block;}
 
-.btn-primary[type="submit"] {
-	box-shadow: 0 0 6px rgba(255,255,255,0.6);
-	color: #FFF;
-	text-shadow: none;
-	font: 18px helvetica, arial, tahoma, sans-serif;
-	padding: 3px 20px;
 
-}
 
 /*****
 ****** TABLE
 *****/
-table {
-	font-size: 0.8em;
+table th,
+table td,{
+	font-size: 0.81em;
 }
 
 /*****
