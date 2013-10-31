@@ -1,0 +1,30 @@
+---
+title: Versão 0.38.0
+date: 2013-01-18 17:24 UTC
+tags:
+---
+
+## Track Events do Google Analytics
+
+Inserimos um padrão de trackevents para alguns elementos comuns dos Locaweb Style. São eles:
+
+*   Logo
+*   Botão de sair
+*   Link de Sugestões
+*   Link de expandir e minimizar shortcuts
+*   Seta de dica esquerda/direita da home e sidebar
+*   Links de atendimento: Helpdesk, Chat, Telefone e Outras formas
+
+Em cada produto haverá seu trackevent específico e te encorajamos fortemente a fazer essa prática. Por isso não colocamos em menus, collapses e etc por que isso deve ser personalizado em cada produto.
+
+## Github
+
+O Locaweb Style está agora publicado [no GitHub](https://github.com/locaweb/locawebstyle)
+
+## Classes funcionais
+
+Fazendo com que as classes funcionais tenham uma hierarquia maior, de forma que suas funções prevaleçam sobre as classes de outros projetos, como Bootstrap ou código externo.
+
+## Pequenas alterações
+
+Uma série de pequenas alterações em classes funcionais, scripts e botoes. Nada de outro mundo.
