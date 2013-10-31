@@ -1,0 +1,13 @@
+---
+title: Versão 0.48.0
+date: 2013-04-01 18:18 UTC
+tags:
+---
+
+*   Variação do elemento de lista messageInfo
+*   Tamanho em EM dos ícones do sidebar
+*   Link acessível para ir direto ao conteúdo
+*   Outras pequenas correções.
+
+<pre class="lang-html linenums prettyprint">&lt;link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/0.48.0/locastyle.css"&gt;
+&lt;script type="text/javascript" src="http://developer.locaweb.com.br/assets/0.48.0/locastyle.js"&gt;&lt;/script&gt;</pre>

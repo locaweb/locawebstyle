@@ -1,0 +1,26 @@
+---
+title: Versão 0.36.0
+date: 2013-01-14 17:24 UTC
+tags:
+---
+
+##### JQuery 1.8.3
+
+Estávamos com a versão 1.8.2 do JQuery. Atualizamos para 1.8.3. Nada muito grande.
+
+##### URL de assets
+
+Eu sei, eu sei... Já mudamos uma ou duas vezes o endereço dos assets do Locaweb Style. Queremos que essa seja a última. O padrão agora ficou mais parecido com outros serviços do mercado: **http://developer.locaweb.com.br/assets/[versão atual]/locastyle.css**. Fica assim: **http://developer.locaweb.com.br/assets/0.36.0/locastyle.css**
+
+Se você quiser usar sempre a versão mais atual, sem travar a versão, em vez da numeração você usa EDGE, assim: **http://developer.locaweb.com.br/assets/edge/locastyle.css**
+
+##### Minor bugs fixes
+
+Alguns pequenos problemas de cores, conflitos de cores em botões e etc.
+
+##### Links dos assets de 0.36.0
+
+<pre class="lang-html linenums prettyprint">
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://developer.locaweb.com.br/assets/0.36.0/locastyle.css&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://developer.locaweb.com.br/assets/0.36.0/locastyle.js&quot;&gt;&lt;/script&gt;	
+</pre>

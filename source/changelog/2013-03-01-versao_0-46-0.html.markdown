@@ -1,0 +1,15 @@
+---
+title: Versão 0.46.0
+date: 2013-03-01 17:24 UTC
+tags:
+---
+*   Inserção de novos ícones no pacote.
+*   Bugfix de tamanho de font em popover.
+*   Iniciando conversão de fonts para EM.
+*   Bugfix: corrigindo elementos com links no footer. Agora é possível inserir ícones em elementos sem link.
+*   Passando o elemento de contexto para o linkToggle e inputDataValue.
+*   Melhorando acessibilidade de collapses: agora é possível abrirmos o collapse pelo teclado e também há uma hierarquia de tabindex nos elementos de dentro da collapse.
+*   Outras pequenas correções.
+
+<pre class="lang-html linenums prettyprint">&lt;link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/0.46.0/locastyle.css"&gt;
+&lt;script type="text/javascript" src="http://developer.locaweb.com.br/assets/0.46.0/locastyle.js"&gt;&lt;/script&gt;</pre>
