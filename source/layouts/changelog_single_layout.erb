@@ -6,11 +6,16 @@
 	</div>
 </div>
 
-<section class="container">
+<section class="container blog">
 	<div class="row-fluid">
 		<div class="span9">
-			<h1><%= current_article.title %></h1>
-			<%= yield %>
+			<article>
+				<h1><%= current_article.title %></h1>
+				<div class="infoPost">
+					<small><%= current_article.date.strftime('%Y/%m/%d') %></small>
+				</div>
+				<%= yield %>
+			</article>
 		</div>
 		<div class="span3">
 			<%= partial "partials/sidebar-changelog" %>
