@@ -319,7 +319,7 @@ pre .linenums {
 *****/
 table th,
 table td,{
-	font-size: 0.81em;
+	font-size: 0.875em;
 }
 
 /*****
@@ -461,7 +461,7 @@ table td,{
 
 .other-guides .channels .channel h3 {
 	color: rgba(255,255,255,0.8)!important;
-	font-size: .81em;
+	font-size: .875em;
 }
 
 .other-guides .channels .channel p {
