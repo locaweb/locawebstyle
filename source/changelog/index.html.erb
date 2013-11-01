@@ -1,14 +1,14 @@
 ---
 layout: changelog_layout
 pageable: true
-per_page: 10
+per_page: 1
 ---
 <% if paginate %>
 	<div class="paginate">
 		<p class="page_counter">página <%= page_number %> de <%= num_pages %></p>
 
 		<% if prev_page %>
-			<p class="page_control prev"><%= link_to '< Página anterior', prev_page %></p>
+			<p class="page_control prev"><a href="<%= "#{base_url}/#{prev_page.url}" %>">< Página anterior</a>
 		<% end %>
 	</div>
 <% end %>
