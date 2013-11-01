@@ -8,7 +8,7 @@ per_page: 1
 		<p class="page_counter">página <%= page_number %> de <%= num_pages %></p>
 
 		<% if prev_page %>
-			<p class="page_control prev"><a href="<%= "#{base_url}/#{prev_page.url}" %>">< Página anterior</a>
+			<p class="page_control prev"><a href="<%= base_url + prev_page.url %>">< Página anterior</a>
 		<% end %>
 	</div>
 <% end %>
@@ -29,7 +29,7 @@ per_page: 1
 <% if paginate %>
 	<div class="paginate">
 		<% if next_page %>
-			<p class="page_control next"><%= link_to 'Próxima página >', next_page %></p>
+			<p class="page_control prev"><a href="<%= base_url + next_page.url %>">Próxima página ></a>
 		<% end %>
 	</div>
 <% end %>
