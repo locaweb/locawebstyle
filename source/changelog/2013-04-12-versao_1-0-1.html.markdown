@@ -16,16 +16,16 @@ Faltava ativar a função do Popover no Javascript. Já inserimos essa função 
 ##### Bug em Collapse
 
 Acontecia que quando fechávamos um collapse, ele retirava a classe .active de todos os outros, prejudicando o visual e o comportamento dos collapses disponíveis na mesma página.
-<p>
+
 Coisa básica de escopo de DOM. Foi resolvido e agora cada um dos collapses funciona individualmente como deve ser.
 
 ##### Botao de confirmar sumiam quando estavam em modais
 
-Esse comportamento fazia parte de uma função de setup de modais que podiam conter slider. Como não vamos mais usar sliders dentro de modais, retiramos esse script. 
+Esse comportamento fazia parte de uma função de setup de modais que podiam conter slider. Como não vamos mais usar sliders dentro de modais, retiramos esse script.
 
 ##### Inserir ícone de calendário em elementos datepicker
 
-Faltava uma chamada de função no Javascript. Era só inserir via JS uma classe icon-calendar nos elementos que tem datepicker. 
+Faltava uma chamada de função no Javascript. Era só inserir via JS uma classe icon-calendar nos elementos que tem datepicker.
 
 ##### Modal com efeito fade
 

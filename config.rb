@@ -20,9 +20,9 @@ activate :blog do |blog|
   blog.tag_template = "changelog/tag.html"
   blog.calendar_template = "changelog/calendar.html"
 
-  # blog.paginate = true
-  # blog.per_page = 10
-  # blog.page_link = "page/:num"
+  blog.paginate = true
+  blog.per_page = 10
+  blog.page_link = "page/:num"
 end
 
 # Automatic reload on save

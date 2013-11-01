@@ -40,5 +40,3 @@ Essa versão ficou mais robusta por que nos baseamos em elementos do Email Marke
 <dt>Slider</dt>
 <dd>Inserção de exemplo de Slider</dd>
 </dl>
-
-* * *

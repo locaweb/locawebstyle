@@ -24,5 +24,3 @@ tags:
 **CSS hash: **150e7fb2e1ae5eca5c1d1db269aa9bce
 
 **JS hash: **df8ee433f85065fbba3493fafc7a4dca
-
-* * *

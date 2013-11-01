@@ -11,5 +11,3 @@ tags:
 <dt>Nova cor</dt>
 <dd>Iniciando nova cor roxa/azul. Damos mais detalhes na próxima versão.</dd>
 </dl>
-
-* * *
