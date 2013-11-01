@@ -8,8 +8,10 @@ manual.geral = (function() {
   }
 
   function initRouter(){
-    var section = utils.camelCase( window.location.pathname.split('/')[3] );
-    manual[section] ? manual[section].init() : null ;
+    if( window.location.pathname.split('/')[3] ){
+      var section = utils.camelCase( window.location.pathname.split('/')[3] );
+      manual[section] ? manual[section].init() : null ;
+    }
   }
 
   function initPrettyPrint(){
