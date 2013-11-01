@@ -1,1 +1,86 @@
 .footer
+	display: block
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+
+	.footer-top
+		background-color: #131313
+
+		nav
+			background: #141414
+
+			.title-footer
+				position: relative
+				text-transform: uppercase
+				text-align: center
+				padding: 15px 0 0 0
+				margin: 0 auto
+				color: #fff
+				font-weight: bolder
+				font-size: .812em
+
+				&:after
+					@include arrow-down (#424242, 6px)
+					position: absolute
+					bottom: -16px
+					top: auto
+					left: 50%
+					margin-left: -5px
+					z-index: 1
+
+
+				&:before
+					@include arrow-down (#131313, 4px)
+					position: absolute
+					bottom: -14px
+					top: auto
+					left: 50%
+					margin-left: -3px
+					z-index: 2
+
+			a
+				color: #FFF
+				line-height: 54px
+
+			> ul
+				margin: 10px 0 0
+				text-align: center
+				position: relative
+
+				&:after
+					content: ""
+					position: absolute
+					border-top: solid 1px #424242
+					width: 38px
+					left: 50%
+					top: 0
+					margin-left: -19px
+
+				> li
+					display: inline-block
+					padding: 0
+					margin: 0 10px
+
+					> a
+
+						&:before
+							@include border-circle (30px, 1.25em)
+							background-color: #f9f9f9
+							color: #131313
+
+						&:hover,
+						&:focus
+							text-decoration: none
+
+	.footer-base
+		background-color: #fff
+		padding: 10px 0
+		font-size: .75em
+		text-align: center
+
+		.set-ip
+			border-bottom: solid 1px #d9d9d9
+			padding-bottom: 5px
+			margin-bottom: 5px
