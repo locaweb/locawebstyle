@@ -29,8 +29,6 @@ pageable: true
 		<div class="infoPost">
 			<small><%= article.date.strftime('%Y/%m/%d') %></small>
 		</div>
-		<!-- use article.summary(250) if you have Nokogiri available to show just
-		the first 250 characters -->
 		<%= article.summary(250) %>
 	</article>
 	<hr>
