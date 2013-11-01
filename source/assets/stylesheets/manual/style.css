@@ -635,7 +635,7 @@ pre .linenums {
 	}
 }
 
-/*** BLOG ***/
+/*** BLOG (changelog) ***/
 .blog hr {
 	background: url(../images/manual/title_dots.png);
 	border: none;
@@ -738,4 +738,17 @@ pre .linenums {
 .blog .sidebar {
 	float: none;
 	width: 100%;
+}
+
+/* pagination */
+.blog .paginate .page_counter {
+	text-align: right;
+}
+
+.blog .paginate .page_control.next {
+	text-align: right;
+}
+
+.blog .paginate .page_control.prev {
+	text-align: left;
 }
