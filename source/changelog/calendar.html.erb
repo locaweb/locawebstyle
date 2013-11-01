@@ -7,7 +7,7 @@ pageable: true
 		<p class="page_counter">página <%= page_number %> de <%= num_pages %></p>
 
 		<% if prev_page %>
-			<p class="page_control prev"><%= link_to '< Página anterior', prev_page %></p>
+			<p class="page_control prev"><a href="<%= base_url + prev_page.url %>">< Página anterior</a>
 		<% end %>
 	</div>
 <% end %>
@@ -37,7 +37,7 @@ pageable: true
 <% if paginate %>
 	<div class="paginate">
 		<% if next_page %>
-			<p class="page_control next"><%= link_to 'Próxima página >', next_page %></p>
+			<p class="page_control next"><a href="<%= base_url + next_page.url %>">Próxima página ></a>
 		<% end %>
 	</div>
 <% end %>
