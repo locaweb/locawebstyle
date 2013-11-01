@@ -22,5 +22,3 @@ tags:
 
 **JS hash:** bef750edc1e4f79ce36539092698ab6b
 
-* * *
-
