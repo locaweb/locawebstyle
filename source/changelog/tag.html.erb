@@ -1,22 +1,30 @@
 ---
+layout: changelog_layout
 pageable: true
 per_page: 12
 ---
-<h1>Articles tagged '<%= tagname %>'</h1>
-
 <% if paginate %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
+	<div class="paginate">
+		<p class="page_counter">página <%= page_number %> de <%= num_pages %></p>
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
+		<% if prev_page %>
+			<p class="page_control prev"><%= link_to '< Página anterior', prev_page %></p>
+		<% end %>
+	</div>
 <% end %>
 
-<ul>
-  <% page_articles.each_with_index do |article, i| %>
-    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-  <% end %>
-</ul>
+<h1>Changelogs com a tag '<%= tagname %>'</h1>
+
+<% page_articles.each_with_index do |article, i| %>
+	<article>
+		<h1><a href="<%= "#{base_url}/changelog/#{article.date.strftime('%Y/%m/%d')}/#{article.slug}" %>"><%= article.title %></a></h1>
+		<div class="infoPost">
+			<small><%= article.date.strftime('%Y/%m/%d') %></small>
+		</div>
+		<%= article.summary(250) %>
+	</article>
+	<hr>
+<% end %>
 
 <% if paginate %>
   <% if next_page %>
