@@ -145,6 +145,7 @@ pre .linenums {
 .navbar .nav > li > a {
 	font-size: 0.9em;
 	border-right: 1px solid rgba(0,0,0,0.1);
+	font-size: 13px;
 }
 
 .navbar .nav > li:first-child > a {border-left: 0;}
@@ -152,6 +153,7 @@ pre .linenums {
 
 /*** Destacando categoria atual ***/
 .manual_introducao .navbar .nav a[href*="/introducao/"],
+.manual_estilo .navbar .nav a[href*="/estilo/"],
 .manual_formularios .navbar .nav a[href*="/formularios"],
 .manual_aplicacoes .navbar .nav a[href*="/aplicacoes/"],
 .manual_layout .navbar .nav a[href*="/layout/"],
