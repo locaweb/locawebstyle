@@ -77,7 +77,14 @@ a
 
 
 [class*="ico-"][data-toggle="popover"]:before
-	@include border-circle(18px, 100%)
+	@include border-circle(14px, 75%)
+	background-color: #154297
+
+.popover
+	font-size: .875em
+
+	p
+		font-size: 1em
 
 .btn-primary:hover
 	opacity: .8
@@ -96,6 +103,22 @@ a
 	padding: 15px 0
 	margin: 15px 0 0
 	clear: both
+
+.info-label
+	font-size: .82em
+	margin: -5px 0 5px
+
+.toggle-pass
+	cursor: pointer
+	color: #333
+	line-height: 20px
+
+label
+	color: #333
+	font-family: open_sanssemibold
+
+
+
 
 
 @media #{$media-mobile}

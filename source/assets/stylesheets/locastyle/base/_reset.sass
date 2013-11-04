@@ -5,6 +5,7 @@
 	padding: 0
 
 html, body
+	color: #555
 	height: 100%
 	position: relative
 
@@ -34,7 +35,6 @@ body
 		display: inline-block
 
 
-
 .alert[class*="alert-"]
 	a
 		color: inherit
@@ -43,11 +43,22 @@ body
 		&:hover
 			text-decoration: none
 
+
 [class*="btn"]
 	-webkit-font-smoothing: antialiased
 	-moz-font-smoothing: antialiased
 	-ms-font-smoothing: antialiased
 	font-smoothing: antialiased
+	font-family: 'open_sanssemibold'
+
+
+.modal-header h3
+	color: #333
+	font-family: 'open_sanssemibold'
+	font-size: 1em
+
+.panel.panel-warning a
+	color: #c09853
 
 //
 // Desktops
