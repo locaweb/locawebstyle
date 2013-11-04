@@ -1,9 +1,10 @@
 var manual = {};
-manual.geral = (function() {
+manual.general = (function() {
   'use strict';
 
   function init() {
     initRouter();
+    activeMenu();
     initPrettyPrint();
   }
 
@@ -14,7 +15,11 @@ manual.geral = (function() {
     }
   }
 
-  function initPrettyPrint(){
+  function activeMenu(){
+    $('a[href="' + window.location.pathname + '"]', 'nav').addClass('active');
+  }
+
+  function initPrettyPrint(){ 
     prettyPrint();
     $('pre.prettyprintCode').each(function() {
       var code = $(this).html();
@@ -44,5 +49,5 @@ manual.geral = (function() {
 }());
 
 $(document).ready(function(){
-  manual.geral.init();
+  manual.general.init();
 });
