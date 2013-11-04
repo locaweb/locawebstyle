@@ -59,6 +59,23 @@ a
 			display: inline-block
 			font-weight: bold
 
+	&.percentage-outside
+		position: relative
+		margin-right: 40px
+		overflow: inherit
+
+		.progress-bar
+			border-radius: 4px
+
+			span
+				color: #333
+				position: absolute
+				top: 0
+				right: -40px
+				width: 35px
+
+
+
 [class*="ico-"][data-toggle="popover"]:before
 	@include border-circle(18px, 100%)
 

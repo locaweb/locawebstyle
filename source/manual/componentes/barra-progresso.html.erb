@@ -182,4 +182,23 @@ menu_page: sidebar-componentes.erb
 &lt;/div&gt;
 </pre>
 
+<h2>Barra de progresso com o valor percentual na lateral</h2>
+<p>Basta inserir a classe <code>percentage-outside</code> no elemento <code>.progress</code> e pronto a mágica está feita! </p>
+
+<div class="example">
+	<div class="progress percentage-outside">
+		<div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+			<span>35%</span>
+		</div>
+	</div>
+</div>
+
+<pre class="lang-html prettyprint linenums">
+&lt;div class="progress percentage-outside"&gt;
+	&lt;div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;"&gt;
+		&lt;span&gt;35%&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
 </article>
