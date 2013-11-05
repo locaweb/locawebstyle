@@ -8,7 +8,109 @@ menu_page: sidebar-guia-estilo.erb
   
   <header>
     <h1>Guia de estilo</h1>
-    <h3>Javascript</h3>
+    <h3>Padrões de código & melhores práticas em Javascript</h3>
   </header>
+  
+  <p>
+    Este guia de estilo mostra o padrão e algumas boas práticas seguidas no código do LocawebStyle que podem er mantidas nos seus projetos.
+  </p>
+  <p>
+    As principais vantagens de manter o padrão são:
+  </p>
+  <ol>
+    <li>
+      consistência de código
+    </li>
+    <li>
+      melhores práticas
+    </li>
+  </ol>
+  <p>
+    Mantendo a consistência de pattern, estilos de código e boas práticas, fica cada vez mais simples manter código legado, atualizar projetos e inserir novas funcionalidades. A idéia é que o código mantenha unidade, escrito por uma pessoa ou por várias, dentro de um projeto e entre projetos diferentes, diminuindo o tempo de aprendizado.
+  </p>
+  <p>
+    As regras a seguir propoem um padrão mímimo para desenvolvimento e não são obrigatórias. O mais importante é manter a consistência de estilo de código. O que for escolhido como estilo para o seu projeto deverá ser seguido em todos os arquivos.
+  </p>
+
+  <h2>
+    Diretrizes gerais
+  </h2>
+
+  <p>
+    Antes de mostrar o código, pattern, usado no LocawebStyle, é bom entender alguns princípios e convenções adotadas.
+  </p>
+
+  <h3>
+    Padrões de escrita
+  </h3>
+
+  <p>
+    <b>
+      Espaços em branco:
+    </b>
+    utilizamos 2 espaços, mas o mais importante é seguir um estilo único. Nunca misture espaços e tabs em único arquivo. Para facilitar incluímos no projeto um arquivo de configuraçao de editores, o ".editorconfig", saiba mais sobre ele em 
+    <a href="http://editorconfig.org/" target="_blank">
+      editorconfig.org
+    </a>
+  </p>
+
+  <p>
+    <b>
+      Sintaxe:
+    </b> 
+    para separaçao dos blocos de código, utilizamos o estilo 
+    <a href="http://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS" target="_blank">
+      1TBS
+    </a>. 
+    Exemplo:
+    <pre class="lang-javascript prettyprint linenums">
+    if ( x < 0 ) {
+      console.dir( x )
+    } else {
+      console.dir( y )
+    }
+    </pre>
+    <small>
+      Observe os alinhamentos, quebras de linhas, posição das chaves e espaços entre variáveis e operadores.
+    </small>
+  </p>
+
+  <!-- 
+    Código em apenas um idioma
+    separaçao mvc 
+    aspas simples em evz de duplas
+    declaraçao de variaveis no inicio
+    final de linahs vazias (editorconfig)
+    nomenclatura
+    this / _self / bind / apply / call / $name
+    switch nao
+    sem medo de ifs aninhados
+    Retornos antecipados 
+    retornos apenas com utilidade
+    chaining
+    
+    Notações literais:
+      var array = [],
+        object = {};
+    
+    apenas um `var` por escopo
+    var foo = "",
+      bar = "",
+      quux;
+    
+    // Expressão de função
+    var square = function( number ) {
+      // Retorna algo de valor e relevante
+      return number * number;
+    };
+
+    closures
+
+    refs
+      idiomatic.js
+      http://contribute.jquery.org/style-guide/js/
+   -->
+
+
 
 </article>
