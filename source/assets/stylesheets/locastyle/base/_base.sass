@@ -18,7 +18,7 @@ a
 
 // Define características do Overlay que aparece quando usamos sidebar
 .overlay-bar
-	@include transition(all, .20s, linear)
+	+transition(all, .20s, linear)
 	position: fixed
 	top: 0
 	left: 0
@@ -77,7 +77,7 @@ a
 
 
 [class*="ico-"][data-toggle="popover"]:before
-	@include border-circle(14px, 75%)
+	+border-circle(14px, 75%)
 	background-color: #154297
 
 .popover
