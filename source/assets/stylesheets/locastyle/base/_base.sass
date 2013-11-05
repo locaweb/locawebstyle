@@ -122,6 +122,33 @@ label
 	top: 50%
 	color: #FFF
 
+.well.arrow-up
+	position: relative
+
+	&:before
+		+arrow-up(#e7e7e7, 10px)
+		position: absolute
+		left: 5px
+		top: -10px
+		z-index: 1
+
+	&:after
+		+arrow-up(#f7f7f7, 8px)
+		position: absolute
+		left: 7px
+		top: -8px
+		z-index: 2
+
+	&.no-bg
+
+		&:after
+			+arrow-up(#fff, 8px)
+			position: absolute
+			left: 7px
+			top: -8px
+			z-index: 1
+
+
 @media #{$media-mobile}
 	.content[role="main"]
 		overflow: auto
