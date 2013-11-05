@@ -76,6 +76,8 @@ menu_page: sidebar-guia-estilo.erb
   </p>
 
   <!-- 
+    'use strict';
+    nomenclatura de arquivos
     Código em apenas um idioma
     separaçao mvc 
     aspas simples em evz de duplas
@@ -110,6 +112,137 @@ menu_page: sidebar-guia-estilo.erb
       idiomatic.js
       http://contribute.jquery.org/style-guide/js/
    -->
+
+   <h3>
+     Revealing Module Pattern
+   </h3>
+  <p>
+    Para melhorar a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, utilizamos o pattern 
+    <i>
+      Revealing Module
+    </i>
+    do
+    <a href="http://christianheilmann.com/" target="_blank">Christian Heilmann</a>.
+  </p>
+  <p>
+    As vantagens desse pattern são: organização, clareza, performance, expõe publicamente apenas as funções e variáveis que se deseja, namespace único evitando sobrescrever métodos facilmente.
+  </p>  
+  <p>
+    Leia mais sobre ele no livro do 
+    <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript">Addy Osmani</a>.
+  </p>
+  <p>
+    Um exemplo:
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  // define o objeto global do projeto, igual a já existente ou cria um novo objeto
+  var projeto = projeto || {};
+  // define o modulo no objeto global
+  projeto.modulo = (function() {
+    'use strict';
+
+    function init() {
+      // ...
+    }
+
+    function update() {
+      // ...
+    }
+
+    function internal() {
+      // ...
+    }
+
+    return {
+      start:init,
+      update: update
+    };
+
+  }());
+  </pre>
+
+  <p>
+    O ideal é ter um módulo por arquivo, e que eles nao se iniciem sozinhos. Então um módulo central que funcione como controlador de quais serão executados é uma boa prática.
+  </p>
+
+  <p>Exemplo:</p>
+  
+  <p>
+    Módulo de gráficos no arquivo graficos.js
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  var projeto = projeto || {};
+  projeto.charts = (function() {
+    'use strict';
+
+    function init() {
+      plotChart();
+    }
+
+    function plotChart() {
+      // ...
+    }
+
+    return {
+      init:init
+    };
+
+  }());
+  </pre>
+  
+  <p>
+    Módulo servidores no arquivo servers.js
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  var projeto = projeto || {};
+  projeto.servers = (function() {
+    'use strict';
+
+    function init() {
+      loadAllServers();
+    }
+
+    function loadAllServers() {
+      // ...
+    }
+
+    return {
+      init:init
+    };
+
+  }());
+  </pre>
+
+  <p>
+    e finalmente o arquivo que controla quando cada módulo será executado, da maneira que preferir:
+    Arquivo router.js
+  </p>
+
+  <pre class="lang-javascript prettyprint linenums">
+  var projeto = projeto || {};
+  projeto.router = (function($) {
+    'use strict';
+
+    function init() {
+
+      if ( $('.chart').size() ) {
+        projeto.charts.init();
+      }
+
+      if ( window.location.pathname === '/servers' ) {
+        projeto.servers.init();
+      }
+      
+    }
+
+    return {
+      init:init
+    };
+
+  }(jQuery));
+
+  projeto.router.init();
+  </pre>
 
 
 
