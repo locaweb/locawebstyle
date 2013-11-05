@@ -1,58 +1,108 @@
 .footer
 	display: none
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	background-color: #fff
 
-// Desktops
-@media (min-width: #{$screen-sm})
+	.footer-menu
+		background-color: #131313
+
+		nav
+
+			.title-footer
+				position: relative
+				text-transform: uppercase
+				text-align: center
+				padding: 15px 0
+				margin: 0 auto
+				color: #fff
+				font-weight: bolder
+				font-size: .875em
+				background: url(#{$image_path}footer/arrow-down.png) no-repeat center bottom
+
+			a
+				color: #FFF
+				line-height: 54px
+
+			> ul
+				margin: 0
+				text-align: center
+				position: relative
+
+				> li
+					display: inline-block
+					padding: 0
+					margin: 0 10px
+
+					> a
+						padding: 5px 0 5px 30px
+						&.customer-support
+							background: url(#{$image_path}footer/customer-support.png) no-repeat left
+						&.my-tickets
+							background: url(#{$image_path}footer/my-tickets.png) no-repeat left
+						&.help-desk
+							background: url(#{$image_path}footer/help-desk.png) no-repeat left
+						&.statusblog
+							background: url(#{$image_path}footer/statusblog.png) no-repeat left
+
+						&:hover,
+						&:focus
+							text-decoration: none
+
+	.footer-info
+		font-size: .687em
+		text-align: center
+		padding: 5px 15px 0
+
+		p
+			border-top: solid 1px #d9d9d9
+			margin-top: 5px
+			padding-top: 5px
+
+@media #{$media-desk}
 
 	.footer
-		display: block
+		margin: 10px 0 0 !important
 		position: absolute
-		bottom: 0
-		left: 0
-		width: 100%
+		display: block
 
-		.footer-top
-			padding: 15px 0 0
-			background-color: #252525
+		nav
+			position: relative
+			padding: 0
 
-			nav
-				height: 54px
-				background: #141414
+			.title-footer
+				float: left
+				line-height: 25px
+				padding: 15px 35px 15px 0 !important
+				background: url(#{$image_path}footer/arrow-left.png) no-repeat right !important
 
-				h2
-					text-transform: uppercase
-					padding: 0 15px
-					margin: 0
-					background-color: #000
-					color: #fff
-					font-size: 1.06em
-					line-height: 54px
-					height: 54px
+			ul
+				float: right
+				margin: 0 !important
 
-				a
-					margin: 0 15px 0
-					color: #FFF
-					line-height: 54px
+				li
+					margin-left: 25px !important
+					margin-right: 0 !important
+					font-size: .812em
 
-				> ul
-					float: left
-					height: 54px
-					margin: 0
-					> li
-						display: inline-block
-						padding: 0
+					a
+						span
+							display: inline-block !important
 
-						> a
-							padding: 0 18px
-							color: #fff
-							float: left
-							margin: 0
+		.footer-info
+			padding-bottom: 10px
+			padding: 5px 0
 
-							&:hover,
-							&:focus
-								background-color: #666
-								text-decoration: none
+			span
+				float: left
+				margin-right: 10px
 
-		.footer-base
-			padding: 10px 0
-			font-size: .75em
+			p
+				float: right
+				border: none
+				margin: 0
+				padding: 0
+
+
