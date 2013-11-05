@@ -135,10 +135,13 @@ pre .linenums {
 	padding-left: 18px;
 }
 
+<<<<<<< HEAD
 .text > ul, .text > ol {
 	margin: 21px;
 }
 
+=======
+>>>>>>> Implementando a documentação de grides
 /*****
 ****** HEADER TOPBAR
 *****/
@@ -854,3 +857,19 @@ table td,{
 	color: #00a272;
 }
 
+<<<<<<< HEAD
+=======
+
+/* GRIDS */
+.show-grid {
+	margin-bottom: 15px;
+}
+
+.show-grid [class^="col-"] {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #e6f6f1;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+>>>>>>> Implementando a documentação de grides
