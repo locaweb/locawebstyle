@@ -245,5 +245,211 @@ menu_page: sidebar-guia-estilo.erb
   </pre>
 
 
+  <h3>
+    Boas práticas
+  </h3>
+
+  <p>
+    Exemplos em jQuery
+  </p>
+  
+  <h4>
+    Seja compreensível
+  </h4>
+  <p>
+    Use nomes de variáveis e funções auto explicativos e simples. Crie algum padrão e mantenha em todo o projeto. Exemplos:
+  </p>
+  <p>
+    Variáveis com nomes ruins:
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  // curtos, posicionamento no código e abreviações
+  var x1;
+  var input1;
+  var posLT;
+
+  // longos demais
+  var valorEixoXGraficoConsumo;
+  var inputTextFirstName;
+  </pre>
+  <p>
+    Funções com nomes ruins:
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  // nomes que descrevem o código, nao o objetivo da função
+  function maiorDeDezoitoAnos(idade){
+    return idade >= 18;
+  }
+  // é melhor descrever o objetivo
+  function possuiMaioridade(idade){
+    return idade >= 18;
+  }
+  </pre>
+  <p>
+    É uma boa ideia criar um padrão para suas variáveis e funções, como por exemplo:
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  // variáveis com $ no início são elementos/objetos jQuery
+  var $header    = $('#header');
+  var $menuItens = $('#menu a');
+
+  // maiúsculas para constantes
+  var IMAGES_PATH = '/assets/images/';
+  var CLIENT_NAME = 'Fulan0';
+
+  // _ no início para variáveis e funções privadas
+  var _count = 0;
+  </pre>
+  <p>
+    Confira o padrão de nomenclatura do 
+    <a href="http://javascript.crockford.com/code.html#names" target="_blank">
+      Douglas Crockford
+    </a>
+  </p>
+
+  <h4>
+    Evite Globais
+  </h4>
+  <p>
+    No geral é uma péssima idéia, porque aumenta a chance de ter algo sobrescrito. 
+    Uma opçao é utilizar 
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures" target="_blank">closures</a> 
+    e 
+    <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript" target="_blank">module pattern</a>
+  </p>
+
+  <h4>
+    Seja consistente no estilo de código
+  </h4>
+  <p>
+    É possível  escrever seu código de muitas maneiras, mas procure manter o mesmo estilo em todo seu projeto, mantendo um padrão nos nomes, identacões, patterns, etc.
+  </p>
+  <p>
+    Uma dica, utilize o 
+    <a href="http://www.jslint.com/" target="_blank">jslint</a> 
+    para validar seu código.
+  </p>
+
+  <h4>
+    Escreva os comentários necessários
+  </h4>
+  <p>
+    É comum ouvir "Um bom código não precisa de explicação". Mas na prática em projetos maiores, procure explicar a finalidade do seu código.
+    Muitas pessoas, de diferentes níveis, podem ter que trabalhar no seu código e nem sempre elas tem experiencia, tempo ou conhecimento do negócio para entender tudo.
+    Facilite o desenvolvimento e manutenção comentando, mas não explicando o que ele faz, mas qual a regra de negócio. Exemplo:
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  // ruim: verifica se é maior de 18
+  // bom: menores de idade sao redirecionados
+  if( age >= 18 ){ ... }
+  </pre>
+  <p>
+    Lembrando que cometários devem existir apenas na versão de desenvolvimento, devendo ser removidos no arquivo minificado que é entregue em produção.
+  </p>
+
+  <h4>
+    Evite misturar tecnologias
+  </h4>
+  <p>
+    Na prática do dia a dia, algo bem simples: estilize seu HTML com CSS, nao com JS. Exemplo:
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  // Errado
+  $('.user-name').css({
+    'border'  : '1px solid red',
+    'color'   : 'red'
+  });
+  // Certo
+  $('.user-name.error').addClass('error');
+  </pre>
+  <p>
+    Crie os estilos que precisar (e animações, quando possível) no CSS, e no javascript controle quando os estilos são aplicados, em vez de aplicar propriedades.
+  </p>
+
+  <h4>
+    Use sintaxe abreviada
+  </h4>
+  <p>
+    Conheça as notações de variáveis e funções abreviadas e procure usá-las. Exemplos:
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  // Use
+  var cores = ['rosa', 'azul', 'verde'];
+  // em vez de
+  var cores = new Array();
+  lunch[0]='rosa';
+  lunch[1]='azul';
+  lunch[2]='verde';
+
+  // Use
+  var x = v || 10;
+  // em vez de 
+  if(v){
+     var x = v;
+  } else {
+     var x =10;
+  }
+
+  // Use
+  var direcao = (x > 100) ? 1 : -1;
+  // em vez de 
+  var direcao;
+  if(x > 100){
+     direcao = 1;
+  } else {
+     direcao = -1;
+  }
+  </pre>
+
+  <h4>
+    Modularize seu código
+  </h4>
+  <p>
+    Evite escrever funções, trechos de código muito longos, ou aninhados. Procure separar regras e evite códigos repetidos.
+    Exemplo:
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  // Em vez de 
+  $('#botao1').on('click', function(){
+    $('#resultado').load('ajax/lista-pessoas.html', function() {
+      $('#formulario').slideUp()
+    });
+  })
+  $('#botao2').on('click', function(){
+    $('#resultado').load('ajax/lista-empresas.html', function() {
+      $('#formulario').slideUp()
+    });
+  })
+  //...
+
+  // Faça
+  function hideForm(){
+      $('#formulario').slideUp();
+  }
+  $('#botao1').on('click', function(){
+    $('#resultado').load('ajax/lista-pessoas.html', function() {
+      hideForm();
+    });
+  })
+  $('#botao2').on('click', function(){
+    $('#resultado').load('ajax/lista-empresas.html', function() {
+      hideForm();
+    });
+  })
+
+  // Ou melhor
+  function hideForm(){
+    $('#formulario').slideUp();
+  }
+  function carregaDados( elemento, url){
+    $(elemento).on('click', function(){
+      $('#resultado').load(url, function() {
+        hideForm();
+      });
+    })  
+  }
+  carregaDados('#botao1', 'ajax/lista-pessoas.html');
+  carregaDados('#botao2', 'ajax/lista-empresas.html');
+  </pre>
 
 </article>
