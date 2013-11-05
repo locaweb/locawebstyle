@@ -17,7 +17,7 @@ $mobile-sidebar-width: "240px"
 	z-index: 3
 
 .sidebox
-	@extend .border-radius-default
+	+border-radius-default()
 	margin-bottom: 20px
 	padding: 10px
 	background-color: #FFF
@@ -72,7 +72,7 @@ $mobile-sidebar-width: "240px"
 		a
 			@extend .default-text
 			@extend .bg-gray4
-			@extend .border-radius-default
+			+border-radius-default()
 			color: #717171
 			padding: 10px
 			display: block
@@ -87,7 +87,7 @@ $mobile-sidebar-width: "240px"
 		font-size: .68em
 
 		a
-			@extend .border-radius-default
+			+border-radius-default()
 			position: relative
 			border: solid 1px #ccc
 			padding: 5px 0 3px 6px
@@ -142,7 +142,7 @@ $mobile-sidebar-width: "240px"
 			position: static
 
 		.sidebox
-			@extend .border-radius-default
+			+border-radius-default()
 			margin-bottom: 20px
 			padding: 10px
 			border: 1px solid rgba(0,0,0,0.1)
