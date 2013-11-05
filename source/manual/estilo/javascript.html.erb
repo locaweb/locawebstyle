@@ -1,35 +1,34 @@
 ---
-title: Guia de estilo
+title: Boas práticas de Javascript
 
 menu_page: sidebar-guia-estilo.erb
 ---
 
 <article class="text">
-  
+
   <header>
-    <h1>Guia de estilo</h1>
+    <h1>Boas práticas de Javascript</h1>
     <h3>Padrões de código & melhores práticas em Javascript</h3>
   </header>
-  
+
   <p>
-    Este guia de estilo mostra o padrão e algumas boas práticas seguidas no código do LocawebStyle que podem er mantidas nos seus projetos.
+    Este guia de estilo mostra o padrão e algumas boas práticas seguidas no código do Locaweb Style que podem ser mantidas nos seus projeto.
   </p>
   <p>
-    As principais vantagens de manter o padrão são:
+    As principais vantagens de manter este padrão são:
   </p>
   <ol>
-    <li>
-      consistência de código
-    </li>
-    <li>
-      melhores práticas
-    </li>
+    <li>Consistência de código</li>
+    <li>Melhores práticas</li>
+    <li>Escalabilidade</li>
+    <li>Fácil manutenção</li>
+    <li>Uniformidade entre projetos.</li>
   </ol>
   <p>
-    Mantendo a consistência de pattern, estilos de código e boas práticas, fica cada vez mais simples manter código legado, atualizar projetos e inserir novas funcionalidades. A idéia é que o código mantenha unidade, escrito por uma pessoa ou por várias, dentro de um projeto e entre projetos diferentes, diminuindo o tempo de aprendizado.
+    A idéia é que o código mantenha unidade, escrito por uma pessoa ou por várias, dentro de um projeto e entre projetos diferentes, diminuindo o tempo de aprendizado.
   </p>
   <p>
-    As regras a seguir propoem um padrão mímimo para desenvolvimento e não são obrigatórias. O mais importante é manter a consistência de estilo de código. O que for escolhido como estilo para o seu projeto deverá ser seguido em todos os arquivos.
+    As regras a seguir propoem um padrão mínimo para desenvolvimento. O mais importante é manter a consistência de estilo de código. O que for escolhido como estilo para o seu projeto deverá ser seguido em todos os arquivos.
   </p>
 
   <h2>
@@ -37,7 +36,7 @@ menu_page: sidebar-guia-estilo.erb
   </h2>
 
   <p>
-    Antes de mostrar o código, pattern, usado no LocawebStyle, é bom entender alguns princípios e convenções adotadas.
+    Antes de mostrar o código, pattern, usado no Locaweb Style, é bom entender alguns princípios e convenções adotadas.
   </p>
 
   <h3>
@@ -48,7 +47,7 @@ menu_page: sidebar-guia-estilo.erb
     <b>
       Espaços em branco:
     </b>
-    utilizamos 2 espaços, mas o mais importante é seguir um estilo único. Nunca misture espaços e tabs em único arquivo. Para facilitar incluímos no projeto um arquivo de configuraçao de editores, o ".editorconfig", saiba mais sobre ele em 
+    utilizamos 2 espaços, mas o mais importante é seguir um estilo único. Nunca misture espaços e tabs em único arquivo. Para facilitar incluímos no projeto um arquivo de configuraçao de editores, o ".editorconfig", saiba mais sobre ele em
     <a href="http://editorconfig.org/" target="_blank">
       editorconfig.org
     </a>
@@ -57,31 +56,30 @@ menu_page: sidebar-guia-estilo.erb
   <p>
     <b>
       Sintaxe:
-    </b> 
-    para separaçao dos blocos de código, utilizamos o estilo 
+    </b>
+    para separaçao dos blocos de código, utilizamos o estilo
     <a href="http://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS" target="_blank">
       1TBS
-    </a>. 
+    </a>.
     Exemplo:
-    <pre class="lang-javascript prettyprint linenums">
-    if ( x < 0 ) {
-      console.dir( x )
-    } else {
-      console.dir( y )
-    }
-    </pre>
+<pre class="lang-javascript prettyprint linenums">
+if ( x < 0 ) {
+  console.dir( x )
+} else {
+  console.dir( y )
+}</pre>
     <small>
       Observe os alinhamentos, quebras de linhas, posição das chaves e espaços entre variáveis e operadores.
     </small>
   </p>
 
-  <!-- 
+  <!--
     'use strict';
     escolha de plugins
     internacionalizaçao (plugin/semplugin/gem)
     nomenclatura de arquivos
     Código em apenas um idioma
-    separaçao mvc 
+    separaçao mvc
     aspas simples em evz de duplas
     declaraçao de variaveis no inicio
     final de linahs vazias (editorconfig)
@@ -89,7 +87,7 @@ menu_page: sidebar-guia-estilo.erb
     this / _self / bind / apply / call / $name
     switch nao
     sem medo de ifs aninhados
-    Retornos antecipados 
+    Retornos antecipados
     retornos apenas com utilidade
     chaining
      código deve ficar em arquivos externos.
@@ -109,18 +107,18 @@ menu_page: sidebar-guia-estilo.erb
     sem eval()
      parseInt() com tipo
      Capitalize Constructors
-     sem with continue Statement 
+     sem with continue Statement
      cuidado com Bitwise
-    
+
     Notações literais:
       var array = [],
         object = {};
-    
+
     apenas um `var` por escopo
     var foo = "",
       bar = "",
       quux;
-    
+
     // Expressão de função
     var square = function( number ) {
       // Retorna algo de valor e relevante
@@ -140,7 +138,7 @@ menu_page: sidebar-guia-estilo.erb
      Revealing Module Pattern
    </h3>
   <p>
-    Para melhorar a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, utilizamos o pattern 
+    Para melhorar a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, utilizamos o pattern
     <i>
       Revealing Module
     </i>
@@ -149,19 +147,19 @@ menu_page: sidebar-guia-estilo.erb
   </p>
   <p>
     As vantagens desse pattern são: organização, clareza, performance, expõe publicamente apenas as funções e variáveis que se deseja, namespace único evitando sobrescrever métodos facilmente.
-  </p>  
+  </p>
   <p>
-    Leia mais sobre ele no livro do 
+    Leia mais sobre ele no livro do
     <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript">Addy Osmani</a>.
   </p>
   <p>
     Um exemplo:
   </p>
   <pre class="lang-javascript prettyprint linenums">
-  // define o objeto global do projeto, igual a já existente ou cria um novo objeto
-  var projeto = projeto || {};
+  // define o objeto global do project. igual a já existente ou cria um novo objeto
+  var project = project || {};
   // define o modulo no objeto global
-  projeto.modulo = (function() {
+  project.modulo = (function() {
     'use strict';
 
     function init() {
@@ -185,17 +183,17 @@ menu_page: sidebar-guia-estilo.erb
   </pre>
 
   <p>
-    O ideal é ter um módulo por arquivo, e que eles nao se iniciem sozinhos. Então um módulo central que funcione como controlador de quais serão executados é uma boa prática.
+    O ideal é ter um módulo por arquivo, e que eles não se iniciem sozinhos. Então um módulo central que funcione como controlador de quais serão executados é uma boa prática.
   </p>
 
   <p>Exemplo:</p>
-  
+
   <p>
-    Módulo de gráficos no arquivo graficos.js
+    Módulo de gráficos no arquivo charts.js
   </p>
   <pre class="lang-javascript prettyprint linenums">
-  var projeto = projeto || {};
-  projeto.charts = (function() {
+  var project = project || {};
+  project.charts = (function() {
     'use strict';
 
     function init() {
@@ -212,13 +210,13 @@ menu_page: sidebar-guia-estilo.erb
 
   }());
   </pre>
-  
+
   <p>
     Módulo servidores no arquivo servers.js
   </p>
   <pre class="lang-javascript prettyprint linenums">
-  var projeto = projeto || {};
-  projeto.servers = (function() {
+  var project = project || {};
+  project.servers = (function() {
     'use strict';
 
     function init() {
@@ -242,20 +240,20 @@ menu_page: sidebar-guia-estilo.erb
   </p>
 
   <pre class="lang-javascript prettyprint linenums">
-  var projeto = projeto || {};
-  projeto.router = (function($) {
+  var project = project || {};
+  project.router = (function($) {
     'use strict';
 
     function init() {
 
       if ( $('.chart').size() ) {
-        projeto.charts.init();
+        project.charts.init();
       }
 
       if ( window.location.pathname === '/servers' ) {
-        projeto.servers.init();
+        project.servers.init();
       }
-      
+
     }
 
     return {
@@ -264,7 +262,7 @@ menu_page: sidebar-guia-estilo.erb
 
   }(jQuery));
 
-  projeto.router.init();
+  project.router.init();
   </pre>
 
 
@@ -272,15 +270,11 @@ menu_page: sidebar-guia-estilo.erb
     Boas práticas
   </h3>
 
-  <p>
-    Exemplos em jQuery
-  </p>
-  
   <h4>
     Seja compreensível
   </h4>
   <p>
-    Use nomes de variáveis e funções auto explicativos e simples. Crie algum padrão e mantenha em todo o projeto. Exemplos:
+    Use nomes de variáveis e funções auto explicativos e simples. Crie algum padrão e mantenha em todo o project. Exemplos:
   </p>
   <p>
     Variáveis com nomes ruins:
@@ -324,7 +318,7 @@ menu_page: sidebar-guia-estilo.erb
   var _count = 0;
   </pre>
   <p>
-    Confira o padrão de nomenclatura do 
+    Confira o padrão de nomenclatura do
     <a href="http://javascript.crockford.com/code.html#names" target="_blank">
       Douglas Crockford
     </a>
@@ -334,10 +328,10 @@ menu_page: sidebar-guia-estilo.erb
     Evite Globais
   </h4>
   <p>
-    No geral é uma péssima idéia, porque aumenta a chance de ter algo sobrescrito. 
-    Uma opçao é utilizar 
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures" target="_blank">closures</a> 
-    e 
+    No geral é uma péssima idéia, porque aumenta a chance de ter algo sobrescrito.
+    Uma opçao é utilizar
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures" target="_blank">closures</a>
+    e
     <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript" target="_blank">module pattern</a>
   </p>
 
@@ -345,11 +339,11 @@ menu_page: sidebar-guia-estilo.erb
     Seja consistente no estilo de código
   </h4>
   <p>
-    É possível  escrever seu código de muitas maneiras, mas procure manter o mesmo estilo em todo seu projeto, mantendo um padrão nos nomes, identacões, patterns, etc.
+    É possível  escrever seu código de muitas maneiras, mas procure manter o mesmo estilo em todo seu project. mantendo um padrão nos nomes, identacões, patterns, etc.
   </p>
   <p>
-    Uma dica, utilize o 
-    <a href="http://www.jslint.com/" target="_blank">jslint</a> 
+    Uma dica, utilize o
+    <a href="http://www.jslint.com/" target="_blank">jslint</a>
     para validar seu código.
   </p>
 
@@ -357,7 +351,7 @@ menu_page: sidebar-guia-estilo.erb
     Escreva os comentários necessários
   </h4>
   <p>
-    É comum ouvir "Um bom código não precisa de explicação". Mas na prática em projetos maiores, procure explicar a finalidade do seu código.
+    É comum ouvir "Um bom código não precisa de explicação". Mas na prática em project. maiores, procure explicar a finalidade do seu código.
     Muitas pessoas, de diferentes níveis, podem ter que trabalhar no seu código e nem sempre elas tem experiencia, tempo ou conhecimento do negócio para entender tudo.
     Facilite o desenvolvimento e manutenção comentando, mas não explicando o que ele faz, mas qual a regra de negócio. Exemplo:
   </p>
@@ -406,7 +400,7 @@ menu_page: sidebar-guia-estilo.erb
 
   // Use
   var x = v || 10;
-  // em vez de 
+  // em vez de
   if(v){
      var x = v;
   } else {
@@ -415,7 +409,7 @@ menu_page: sidebar-guia-estilo.erb
 
   // Use
   var direcao = (x > 100) ? 1 : -1;
-  // em vez de 
+  // em vez de
   var direcao;
   if(x > 100){
      direcao = 1;
@@ -432,7 +426,7 @@ menu_page: sidebar-guia-estilo.erb
     Exemplo:
   </p>
   <pre class="lang-javascript prettyprint linenums">
-  // Em vez de 
+  // Em vez de
   $('#botao1').on('click', function(){
     $('#resultado').load('ajax/lista-pessoas.html', function() {
       $('#formulario').slideUp()
@@ -469,7 +463,7 @@ menu_page: sidebar-guia-estilo.erb
       $('#resultado').load(url, function() {
         hideForm();
       });
-    })  
+    })
   }
   carregaDados('#botao1', 'ajax/lista-pessoas.html');
   carregaDados('#botao2', 'ajax/lista-empresas.html');
@@ -533,7 +527,7 @@ $.ajax({
     Evite muitos aninhamentos
   </h4>
   <p>
-    Facilite o entendimento e manutençao dos seus códigos. Utilize as práticas anteriores e evite um código do tipo: 
+    Facilite o entendimento e manutençao dos seus códigos. Utilize as práticas anteriores e evite um código do tipo:
   </p>
   <pre class="lang-javascript prettyprint linenums">
   $('#botao').on('click', function(){
@@ -543,7 +537,7 @@ $.ajax({
     success: function(data){
       $('resultado').fadeIn('fast', function(){
         $('#formulario').animate({
-          heigth: 0, 
+          heigth: 0,
           opacity: 0
         }, 300, function(){
             $('#mensagem').animate({
@@ -572,7 +566,7 @@ $.ajax({
   <pre class="lang-javascript prettyprint linenums">
   // Use
   var cores = ['Azul', 'verde', 'rosa', 'vermelho'];
-  for(var count=0, quantCores=cores.length; count < quantCores; count++){ // 
+  for(var count=0, quantCores=cores.length; count < quantCores; count++){ //
      console.log( cores[i] );
   }
 
@@ -583,8 +577,8 @@ $.ajax({
   }
   </pre>
   <p>
-    Para comparaçao, um teste de performance no 
-    <a href="http://jsperf.com/loops/111">jsperf</a> 
+    Para comparaçao, um teste de performance no
+    <a href="http://jsperf.com/loops/111">jsperf</a>
     comparando diversos tipos de loop. O loop otimizado, como acima, executou 159k vezes, contra 113k vezes do tradicional.
   </p>
 
@@ -626,7 +620,7 @@ $.ajax({
     Adicione funcionalidades com javascript, não conteúdo
   </h4>
   <p>
-    Se sua aplicação precisa criar e inserir muito HTML, códigos estao cheios de DIVs, TDs, etc, analise e repense sua aplicação, veja se nao é o caso de usar algum sistema de templates ( handlebars... ). 
+    Se sua aplicação precisa criar e inserir muito HTML, códigos estao cheios de DIVs, TDs, etc, analise e repense sua aplicação, veja se nao é o caso de usar algum sistema de templates ( handlebars... ).
     São códigos dificeis de manter, que podem etr problemas de desempenho. Caso precise, use templates separados do JS, ou carregue HTML do back-end com AJAX.
   </p>
 
@@ -642,7 +636,7 @@ $.ajax({
     Código de desenvolvimento não é código de produção
   </h4>
   <p>
-    Compacte, remova comentarios, concatene os javascripts antes de mandar para produção. Existem diversas ferramentas para isso, inclusive online. Tenha uma versão de desenvolvimento, normal, comentada e uma para o site em producão. 
+    Compacte, remova comentarios, concatene os javascripts antes de mandar para produção. Existem diversas ferramentas para isso, inclusive online. Tenha uma versão de desenvolvimento, normal, comentada e uma para o site em producão.
   </p>
 
 </article>
