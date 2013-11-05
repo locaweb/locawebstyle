@@ -6,7 +6,7 @@ $mobile-left-number: "240px"
 
 @media #{$media-mobile}
 	.sidebar
-		@include transition(all, .30s, ease-out)
+		+transition(all, .30s, ease-out)
 		-webkit-transform: translateX(#{$mobile-sidebar-width})
 		-moz-transform: translateX(#{$mobile-sidebar-width})
 
@@ -22,8 +22,8 @@ $mobile-left-number: "240px"
 	.main .content,
 	.header,
 	.nav-content
-		@include transition(-webkit-transform, .30s, ease-out)
-		@include transition(-moz-transform, .30s, ease-out)
+		+transition(-webkit-transform, .30s, ease-out)
+		+transition(-moz-transform, .30s, ease-out)
 
 	.left-bar
 		.nav-content
