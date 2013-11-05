@@ -1,13 +1,47 @@
 ---
-title: Guia de estilo
+title: Guia de estilo HTML
 
 menu_page: sidebar-guia-estilo.erb
 ---
 
 <article class="text">
   <header>
-    <h1>Guia de estilo</h1>
-    <h3>HTML</h3>
+    <h1>Padrões de escrita HTML</h1>
+    <h3>Escreva HTML de maneira organizada, semântica e escalável</h3>
   </header>
+
+	<h2>Estrutura básica para iniciar um HTML</h2>
+	<p>Senhor programador back-end, utilize esse código para iniciar seu HTML. </p>
+
+<pre class="lang-html prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+	<h2>Espaços em brancos</h2>
+	<p>Escolher entre tabs e espaços sempre é uma dúvida terrível. Mesmo assim, quando se trata de HTML, CSS e Javascript, o padrão sempre foi TABs, embora usemos espaços em linguagens como Ruby, Python e etc. </p>
+
+	<h2>Aspas</h2>
+	<p>Tanto no CSS quanto no HTML utilizamos ASPAS DUPLAS. Nunca aspas simples, a não ser no Javascript/JQuery.</p>
+<pre class="lang-css prettyprint linenums">
+&lt;div class="classe"&gt;&lt;/div&gt;
+&lt;a href="http://..."&gt;&lt;/a&gt;
+</pre>
+
+<h2>Encoding</h2>
+<p>Eu sei que eu não preciso dizer, mas quem sabe, não é? <br>
+	O encoding utilizado é o padrão da web inteira: <strong>UTF-8</strong>.</p>
+
+	<pre class="lang-html prettyprint linenums">&lt;meta charset="utf-8"&gt;</pre>
+
+	<p>SEM BOM! Pelo amor de Deus. </p>
 
 </article>
