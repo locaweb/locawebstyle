@@ -1,0 +1,168 @@
+---
+title: Layout - Grid
+
+menu_page: sidebar-layout.erb
+---
+
+<article class="text">
+	<header>
+		<h1>Grid</h1>
+		<h2>Entenda nosso sistema de grid.</h2>
+	</header>
+	<p>Sistemas de grid são usados para criar layouts em páginas com colunas e linhas que trabalham de forma responsiva. Veja como ele funciona:</p>
+	<p>Possuímos um sistema de grid de <strong>12 colunas</strong> baseado no <a href="http://getbootstrap.com/css/#grid" target="_blank">Bootstrap</a>, mantendo seus breakpoints (<code>1200px</code>, <code>992px</code>, <code>768px</code> e <code>480px</code>).</p>
+	<p>
+		- Linhas (<code>.row</code>), devem ser adicionadas dentro de um <code>.container</code>, para manter os espaçamentos e alinhamentos.<br>
+		- Use as linhas para criar grupos horizontais de colunas.<br>
+		- Conteúdos devem ser colocados dentro de colunasm e as colunas só devem ser filhos imediatos de linhas.
+	</p>
+	<p>Para ver a documentação completa, <a href="http://getbootstrap.com/css/#grid" target="_blank">clique aqui</a>.</p>
+
+	<div class="example clearfix">
+		<div class="row show-grid">
+			<div class="col-md-1">1</div>
+			<div class="col-md-1">1</div>
+			<div class="col-md-1">1</div>
+			<div class="col-md-1">1</div>
+			<div class="col-md-1">1</div>
+			<div class="col-md-1">1</div>
+			<div class="col-md-1">1</div>
+			<div class="col-md-1">1</div>
+			<div class="col-md-1">1</div>
+			<div class="col-md-1">1</div>
+			<div class="col-md-1">1</div>
+			<div class="col-md-1">1</div>
+		</div>
+		<div class="row show-grid">
+			<div class="col-md-8">8</div>
+			<div class="col-md-4">4</div>
+		</div>
+		<div class="row show-grid">
+			<div class="col-md-4">4</div>
+			<div class="col-md-4">4</div>
+			<div class="col-md-4">4</div>
+		</div>
+		<div class="row show-grid">
+			<div class="col-md-6">6</div>
+			<div class="col-md-6">6</div>
+		</div>
+	</div>
+<pre class="lang-html prettyprintCode linenums">
+<div class="example clearfix">
+	<div class="row">
+		<div class="col-md-1">1</div>
+		<div class="col-md-1">1</div>
+		<div class="col-md-1">1</div>
+		<div class="col-md-1">1</div>
+		<div class="col-md-1">1</div>
+		<div class="col-md-1">1</div>
+		<div class="col-md-1">1</div>
+		<div class="col-md-1">1</div>
+		<div class="col-md-1">1</div>
+		<div class="col-md-1">1</div>
+		<div class="col-md-1">1</div>
+		<div class="col-md-1">1</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">8</div>
+		<div class="col-md-4">4</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">4</div>
+		<div class="col-md-4">4</div>
+		<div class="col-md-4">4</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">6</div>
+		<div class="col-md-6">6</div>
+	</div>
+</div></pre>
+<h3>Identificando a largura do viewport através de classes.</h3>
+<p>Em alguns momentos utilizamos uma função de javascript (<code>breakpointWindowWidth()</code>) que é iniciada junto com o Locaweb Style, para adicionar classes na tag <code>&lt;html&gt;</code> de acordo com o tamanho do seu viewport.</p>
+<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th class="span2">Classes</th>
+				<th>Tamanhos do viewport</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code>.media-mobile</code></td>
+				<td>
+					Essa classe é adicionada para viewports menores ou iguais a <code>768px</code>.
+				</td>
+			</tr>
+			<tr>
+				<td><code>.media-tablet</code></td>
+				<td>
+					Essa classe é adicionada para viewports menores ou iguais a <code>992px</code> e maiores ou iguais a <code>768px</code>.
+				</td>
+			</tr>
+			<tr>
+				<td><code>.media-desk</code></td>
+				<td>
+					Essa classe é adicionada para viewports menores ou iguais a <code>1200px</code> e maiores ou iguais a <code>992px</code>.
+				</td>
+			</tr>
+			<tr>
+				<td><code>.media-desk-lg</code></td>
+				<td>
+					Essa classe é adicionada para viewports maiores ou iguais a <code>1200px</code>.
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>O padrão dos grids dos nossos paineis.</h3>
+	<p>Em nossos paineis utilizamos 2 padrões de estrutura, 1 com conteúdo principal (<code>.col-md-9</code>) e sidebar (<code>.col-md-3</code>) e outra com apenas o conteúdo principal(<code>.col-md-12</code>) </p>
+	<p>Veja abaixo o primeiro exemplo de nossos padrões.</p>
+	<div class="example clearfix">
+		<div class="row show-grid">
+			<div class="col-md-9">
+				<br>
+				<br>
+				Conteúdo Principal
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+			<aside class="sidebar col-md-3 no-margin-top" role="complementary">
+				<section class="sidebox">
+					<h1 class="sidebox-title ico-user">Sidebar</h1>
+
+					<div class="sidebox-inner">
+						<span class="status-text">Box de
+							<b>conteúdo</b>
+						</span>
+					</div>
+					<a class="ico-arrow-right" href="http://customer-workbench.systemintegration.locaweb.com.br/plans/0000000000012345/edit" target="_blank">Link com seta</a>
+				</section>
+
+			</aside>
+		</div>
+	</div>
+<pre class="lang-html prettyprintCode linenums">
+<div class="row">
+	<div class="col-md-9">Conteúdo Principal</div>
+	<aside class="sidebar col-md-3" role="complementary"></aside>
+</div></pre>
+<p>Veja abaixo o segundo exemplo de nossos padrões.</p>
+<div class="example clearfix">
+		<div class="row show-grid">
+			<div class="col-md-12">
+				<br>
+				<br>
+				Conteúdo Principal
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+		</div>
+	</div>
+<pre class="lang-html prettyprintCode linenums">
+<div class="row">
+	<div class="col-md-12">Conteúdo Principal</div>
+</div></pre>
+</article>
