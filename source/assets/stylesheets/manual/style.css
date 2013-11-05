@@ -21,7 +21,10 @@ hr {
 	border-radius: 5px 5px 0 0;
 	padding: 45px 20px 20px;
 	position: relative;
-	margin-bottom: -3px;
+}
+
+.example + pre {
+	margin-top: -3px;
 }
 
 .example ul, .example ol {margin: 0 !important;}
@@ -183,6 +186,7 @@ pre .linenums {
 
 
 /*** Destacando categoria atual ***/
+.manual_exemplos .navbar .nav a[href*="/exemplos/"],
 .manual_introducao .navbar .nav a[href*="/introducao/"],
 .manual_estilo .navbar .nav a[href*="/estilo/"],
 .manual_formularios .navbar .nav a[href*="/formularios"],
