@@ -567,4 +567,38 @@ $.ajax({
     comparando diversos tipos de loop. O loop otimizado, como acima, executou 159k vezes, contra 113k vezes do tradicional.
   </p>
 
+  <h4>
+    Minimize acessos ao DOM
+  </h4>
+  <p>
+    Evite ao máximo acessar o DOM para buscar ou inserir informações. É lento e não se pode confiar no que está no DOM. Coisas simples podem minimizar o acesso, por exemplo, se alguma funçao precisa atualizar uma atbela no seu HTML, em vez de percorrer td por td alterando os valores, pode ser mais eficiente criar uma funçao que reescreva toda a tabela, e depois simplesmente troque a antiga pela nova. Outra  simples é fazer cache de objetos jQuery, por exemplo:
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  // Em vez de
+  $('#botaoEnviar').on('click', function(){
+    $(this).prop('disabled', true);
+    $('$formulario').addClass('enviando');
+    $.post('ajax/contato', function(data) {
+      $('#mensagem').html(data);
+      $('$formulario').removeClass('enviando');
+      $('#botaoEnviar'),prop('disabled', false);
+    });
+  });
+
+  // Faça
+  var $botaoEnviar = $('#botaoEnviar');
+  var $formulario = $('#formulario');
+  var $mensagem = $('#mensagem');
+
+  $botaoEnviar.on('click', function(){
+    $botaoEnviar.prop('disabled', true);
+    $formulario.addClass('enviando');
+    $.post('ajax/contato', function(data) {
+      $mensagem.html(data);
+      $formulario.removeClass('enviando');
+      $botaoEnviar.prop('disabled', false);
+    });
+  });
+  </pre>
+
 </article>
