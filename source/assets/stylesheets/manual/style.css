@@ -186,6 +186,7 @@ pre .linenums {
 
 
 /*** Destacando categoria atual ***/
+.manual_exemplos .navbar .nav a[href*="/exemplos/"],
 .manual_introducao .navbar .nav a[href*="/introducao/"],
 .manual_estilo .navbar .nav a[href*="/estilo/"],
 .manual_formularios .navbar .nav a[href*="/formularios"],
