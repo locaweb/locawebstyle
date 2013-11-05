@@ -508,5 +508,39 @@ $.ajax({
 });
   </pre>
 
+  <h4>
+    Evite muitos aninhamentos
+  </h4>
+  <p>
+    Facilite o entendimento e manutençao dos seus códigos. Utilize as práticas anteriores e evite um código do tipo: 
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  $('#botao').on('click', function(){
+  $.ajax({
+    type: "POST",
+    url: 'usuarios',
+    success: function(data){
+      $('resultado').fadeIn('fast', function(){
+        $('#formulario').animate({
+          heigth: 0, 
+          opacity: 0
+        }, 300, function(){
+            $('#mensagem').animate({
+              heigth: 200,
+              opacity: 1
+            }, 300, function(){
+              //etc etc
+            })
+          }
+        )
+      })
+    },
+    error: function(){
+      $('#mensagem').text(config.messages.success);
+    }
+  });
+});
+  </pre>
+
 
 </article>
