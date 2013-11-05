@@ -77,6 +77,8 @@ menu_page: sidebar-guia-estilo.erb
 
   <!-- 
     'use strict';
+    escolha de plugins
+    internacionalizaçao (plugin/semplugin/gem)
     nomenclatura de arquivos
     Código em apenas um idioma
     separaçao mvc 
@@ -451,5 +453,60 @@ menu_page: sidebar-guia-estilo.erb
   carregaDados('#botao1', 'ajax/lista-pessoas.html');
   carregaDados('#botao2', 'ajax/lista-empresas.html');
   </pre>
+
+  <h4>
+    Configurações e internacionalização
+  </h4>
+  <p>
+    Quando estiver criando a aplicaçao, pense em cada valor, texto, variável, se é o caso de deixá-la separada, permitindo alterá-la depois. Exemplo:
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  // Em vez de
+  $.ajax({
+    type: "POST",
+    url: "api/usuarios",
+    data: {limit: 10},
+    success: function(data){
+      $('#formulario').hide();
+      $('#mensagem').text('Busca efetuada com sucesso');
+      $('#lista').html(data).fadeIn('fast');
+    },
+    error: function(){
+      $('#mensagem').text('Erro na busca');
+    }
+  });
+
+// Faça
+var config: {
+  messages = {
+    success: 'Busca efetuada com sucesso',
+    error: 'Erro na busca'
+  },
+  api: {
+    usuarios: "api/usuarios"
+  },
+  animate: {
+    velocity: "fast"
+  },
+  list: {
+    perPage: 10
+  }
+}
+//...
+$.ajax({
+  type: "POST",
+  url: config.api.usuarios,
+  data: {limit: config.list.perPage},
+  success: function(data){
+    $('#formulario').hide();
+    $('#mensagem').text(config.messages.success);
+    $('#lista').html(data).fadeIn(config.animate.velocity);
+  },
+  error: function(){
+    $('#mensagem').text(config.messages.success);
+  }
+});
+  </pre>
+
 
 </article>
