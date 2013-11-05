@@ -23,6 +23,8 @@ body
 .well
 	+border-radius-default()
 	@extend .bg-gray4
+	box-shadow: none
+	border-color: #e7e7e7
 
 	*:last-child
 		margin-bottom: 0
@@ -40,7 +42,8 @@ body
 		color: inherit
 		text-decoration: underline
 
-		&:hover
+		&:hover,
+		&.close
 			text-decoration: none
 
 
