@@ -542,5 +542,29 @@ $.ajax({
 });
   </pre>
 
+  <h4>
+    Otimize loops
+  </h4>
+  <p>
+    Existem várias maneiras de fazer loops, uma melhores que outras. Hoje, comum encontrar códigos usando loops do jquery ($.each) que loops nativos poderiam resolver. Uma técnica simples para melhorar ainda mais os loops for() nativos é fazer cache de variáveis de comparaçao, evitando executar o .length a cada iteração. Exemplo:
+  </p>
+  <pre class="lang-javascript prettyprint linenums">
+  // Use
+  var cores = ['Azul', 'verde', 'rosa', 'vermelho'];
+  for(var count=0, quantCores=cores.length; count < quantCores; count++){ // 
+     console.log( cores[i] );
+  }
+
+  // em vez de
+  var cores = ['Azul', 'verde', 'rosa', 'vermelho'];
+  for(var count=0; i < cores.length; count++){
+     console.log( cores[i]) ;
+  }
+  </pre>
+  <p>
+    Para comparaçao, um teste de performance no 
+    <a href="http://jsperf.com/loops/111">jsperf</a> 
+    comparando diversos tipos de loop. O loop otimizado, como acima, executou 159k vezes, contra 113k vezes do tradicional.
+  </p>
 
 </article>
