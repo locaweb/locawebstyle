@@ -13,21 +13,54 @@ menu_page: sidebar-layout.erb
 <p>Header principal dos sistemas. </p>
 
 <pre class="lang-html prettyprint linenums">
-&lt;header id="header"&gt;
-	&lt;div class="limit"&gt;
-		&lt;h1 class="serviceName"&gt;&lt;a href="/"&gt;Nome do projeto&lt;/a&gt;&lt;/h1&gt;
-	&lt;/div&gt;
 
-	&lt;menu id="menuPrincipal"&gt;
-		&lt;ul&gt;
-			&lt;li class="selected"&gt;&lt;a href="/"&gt;Página inicial&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href="#transactions"&gt;Transações&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href="#settings"&gt;Meios de pagamento&lt;/a&gt;&lt;/li&gt;
-			&lt;li class="btMenu"&gt;&lt;a href="#"&gt;Ambiente de testes&lt;/a&gt;&lt;/li&gt;
+&lt;!-- HEADER --&gt;
+&lt;header class=&quot;header&quot; role=&quot;banner&quot;&gt;
+	&lt;div class=&quot;container&quot;&gt;
+		&lt;span class=&quot;control-menu visible-xs ico-menu-2&quot;&gt;&lt;/span&gt;
+		&lt;span class=&quot;control-sidebar visible-xs ico-list&quot;&gt;&lt;/span&gt;
+		&lt;h1 class=&quot;project-name&quot;&gt;&lt;a href=&quot;#&quot;&gt;Email Marketing&lt;/a&gt;&lt;/h1&gt;
+		&lt;a href=&quot;#&quot; class=&quot;help-sugestions ico-help-circle hidden-xs&quot;&gt;Ajuda e Sugest&amp;otilde;es&lt;/a&gt;
+
+		&lt;div class=&quot;dropdown hidden-xs&quot;&gt;
+			&lt;a href=&quot;#&quot; data-toggle=&quot;dropdown&quot; class=&quot;title-dropdown&quot;&gt;emkt2013&lt;/a&gt;
+			&lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;dLabel&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 1&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 2&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 3&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/header&gt;
+&lt;!-- FIM DO HEADER --&gt;
+
+&lt;!-- MENU PRINCIPAL --&gt;
+&lt;div class=&quot;nav-content&quot;&gt;
+	&lt;menu class=&quot;menu&quot;&gt;
+		&lt;ul class=&quot;container&quot;&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active ico-home&quot; role=&quot;menuitem&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Lista de contatos&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Mensagens&lt;/a&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Enviar&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Criar&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Editar&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Relat&amp;oacute;rios&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Campanhas&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Templates&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Relat&amp;oacute;rios&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Configura&amp;ccedil;&amp;otilde;es&lt;/a&gt;&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/menu&gt;
-&lt;/header&gt;
+	&lt;h2 class=&quot;title-sep visible-xs&quot;&gt;Mais&lt;/h2&gt;
+	&lt;ul class=&quot;nav-mob-list visible-xs&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;ico-help-circle&quot;&gt;Ajuda e sugest&amp;otilde;es&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- FIM DO MENU PRINCIPAL --&gt;
 </pre>
 
-<p>Veja <a href="http://developer.locaweb.com.br/locawebstyle/exemplos/header/">um exemplo aqui</a>.</p>
+<p>Veja um <%= link_to "exemplo de header", "#{base_url}/manual/exemplos/home" %>.</p>
 </article>
