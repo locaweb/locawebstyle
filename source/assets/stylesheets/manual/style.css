@@ -652,8 +652,7 @@ table td,{
 	padding-right: 25px
 }
 
-
-h1, h2, h3, h4, h5, h6 {margin-top: 20px; color: #000;}
+.text > h1, .text > h2, .text > h3, .text > h4, .text > h5, .text > h6 {margin-top: 20px; color: #000;}
 
 .text > h4 {
 	margin: 30px 0 5px 0;

@@ -13,77 +13,74 @@ menu_page: sidebar-componentes.erb
   <p>Este slider pode ser usado utilizando imagens, como o exemplo abaixo ou como é usado para mostrar dicas na sidebar, com texto simples. Segue o mesmo padrão do Bootstrap e é muito flexível.</p>
   <br>
 
-  <div id="exampleCarousel" class="carousel slide" style="width: 640px;">
-    <div class="carousel-inner">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
       <div class="item active">
-        <img src="http://developer.locaweb.com.br/wp-content/uploads/img1.jpg" alt="">
+        <img src="http://31.media.tumblr.com/6c5d3876dd9858685cc8b584503101b1/tumblr_mve3kz3WG21st5lhmo1_1280.jpg" alt="">
         <div class="carousel-caption">
-          <h4>Primeiro Slide</h4>
-          <p>@lastshiro</p>
+          <h3>Primeiro Slide</h3>
         </div>
       </div>
       <div class="item">
-        <img src="http://developer.locaweb.com.br/wp-content/uploads/img2.jpg" alt="">
+        <img src="http://24.media.tumblr.com/23e3f4bb271b8bdc415275fb7061f204/tumblr_mve3rvxwaP1st5lhmo1_1280.jpg" alt="">
         <div class="carousel-caption">
-          <h4>Segundo Slide</h4>
-          <p>@xandolino</p>
+          <h3>Segundo Slide</h3>
         </div>
       </div>
       <div class="item">
-        <img src="http://developer.locaweb.com.br/wp-content/uploads/img3.jpg" alt="">
+        <img src="http://31.media.tumblr.com/098217f18533a8971385d0c59004d810/tumblr_muuj37kqN21st5lhmo1_1280.jpg" alt="">
         <div class="carousel-caption">
-          <h4>Terceiro Slide</h4>
-          <p>@lastshiro</p>
+          <h3>Terceiro Slide</h3>
         </div>
       </div>
-      <div class="item">
-        <img src="http://developer.locaweb.com.br/wp-content/uploads/img4.jpg" alt="">
-        <div class="carousel-caption">
-          <h4>Quarto Slide</h4>
-          <p>@xandolino</p>
-        </div>
-      </div>
-    </div>
-    <a class="left carousel-control" href="#exampleCarousel" data-slide="prev">‹</a>
-    <a class="right carousel-control" href="#exampleCarousel" data-slide="next">›</a>
   </div>
 
-  <pre class="lang-html prettyprint linenums">
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="ico-direction-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="ico-direction-right"></span>
+  </a>
+</div>
 
-    &lt;div id=&quot;exampleCarousel&quot; class=&quot;carousel slide&quot;&gt;
-    &lt;div class=&quot;carousel-inner&quot;&gt;
+
+  <pre class="lang-html prettyprint linenums">
+&lt;div id=&quot;carousel-example-generic&quot; class=&quot;carousel slide&quot; data-ride=&quot;carousel&quot;&gt;
+  &lt;!-- Indicaadores --&gt;
+  &lt;ol class=&quot;carousel-indicators&quot;&gt;
+    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;
+    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;
+    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;!-- Wrapper dos slides --&gt;
+  &lt;div class=&quot;carousel-inner&quot;&gt;
     &lt;div class=&quot;item active&quot;&gt;
-    &lt;img src=&quot;http://developer.locaweb.com.br/wp-content/uploads/img1.jpg&quot; alt=&quot;&quot;&gt;
-    &lt;div class=&quot;carousel-caption&quot;&gt;
-    &lt;h4&gt;Primeiro Slide&lt;/h4&gt;
-    &lt;p&gt;@lastshiro&lt;/p&gt;
+      &lt;img src=&quot;...&quot; alt=&quot;...&quot;&gt;
+      &lt;div class=&quot;carousel-caption&quot;&gt;
+        ...
+      &lt;/div&gt;
     &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;item&quot;&gt;
-    &lt;img src=&quot;http://developer.locaweb.com.br/wp-content/uploads/img2.jpg&quot; alt=&quot;&quot;&gt;
-    &lt;div class=&quot;carousel-caption&quot;&gt;
-    &lt;h4&gt;Segundo Slide&lt;/h4&gt;
-    &lt;p&gt;@xandolino&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;item&quot;&gt;
-    &lt;img src=&quot;http://developer.locaweb.com.br/wp-content/uploads/img3.jpg&quot; alt=&quot;&quot;&gt;
-    &lt;div class=&quot;carousel-caption&quot;&gt;
-    &lt;h4&gt;Terceiro Slide&lt;/h4&gt;
-    &lt;p&gt;@lastshiro&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;item&quot;&gt;
-    &lt;img src=&quot;http://developer.locaweb.com.br/wp-content/uploads/img4.jpg&quot; alt=&quot;&quot;&gt;
-    &lt;div class=&quot;carousel-caption&quot;&gt;
-    &lt;h4&gt;Quarto Slide&lt;/h4&gt;
-    &lt;p&gt;@xandolino&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;a class=&quot;left carousel-control&quot; href=&quot;#exampleCarousel&quot; data-slide=&quot;prev&quot;&gt;&lsaquo;&lt;/a&gt;
-    &lt;a class=&quot;right carousel-control&quot; href=&quot;#exampleCarousel&quot; data-slide=&quot;next&quot;&gt;&rsaquo;&lt;/a&gt;
-    &lt;/div&gt;
+    ...
+  &lt;/div&gt;
+
+  &lt;!-- Controles --&gt;
+  &lt;a class=&quot;left carousel-control&quot; href=&quot;#carousel-example-generic&quot; data-slide=&quot;prev&quot;&gt;
+    &lt;span class=&quot;glyphicon glyphicon-chevron-left&quot;&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;a class=&quot;right carousel-control&quot; href=&quot;#carousel-example-generic&quot; data-slide=&quot;next&quot;&gt;
+    &lt;span class=&quot;glyphicon glyphicon-chevron-right&quot;&gt;&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
   </pre>
 
   <h3>Utilização</h3>
