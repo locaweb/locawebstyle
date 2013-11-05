@@ -54,13 +54,12 @@ $tr-hover-color:    #f8fcf0
 
 
 .table-actions
+	+transition(width .25s ease-in)
 	position: absolute
 	right: 0
 	top: 0
 	height: 100%
 	width: 20px
-	-webkit-transition: width .25s ease-in
-	transition: width .25s ease-in
 	overflow: hidden
 	cursor: pointer
 	vertical-align: middle
@@ -77,8 +76,7 @@ $tr-hover-color:    #f8fcf0
 		font-size: 12px
 
 	ul
-		-webkit-transition: all .25s ease-in
-		transition: all .25s ease-in
+		+transition(all .25s ease-in)
 		-webkit-transform: translateX(80%)
 		position: relative
 		padding: 0 20px
