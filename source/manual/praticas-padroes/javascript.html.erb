@@ -12,7 +12,7 @@ menu_page: sidebar-praticas-padroes.erb
   </header>
 
   <p>
-    Este guia de estilo mostra o padrão e algumas boas práticas seguidas no código do Locaweb Style que podem ser mantidas nos seus projeto.
+    Aqui mostramos as práticas seguidas no código do Locaweb Style e podem ser mantidas nos projetos que usam este framework.
   </p>
   <p>
     As principais vantagens de manter este padrão são:
@@ -25,18 +25,10 @@ menu_page: sidebar-praticas-padroes.erb
     <li>Uniformidade entre projetos.</li>
   </ol>
   <p>
-    A idéia é que o código mantenha unidade, escrito por uma pessoa ou por várias, dentro de um projeto e entre projetos diferentes, diminuindo o tempo de aprendizado.
+    A idéia é que o código mantenha unidade, seja ele escrito por uma ou várias pessoas, dentro de um projeto e entre projetos diferentes, diminuindo o tempo de aprendizado.
   </p>
   <p>
     As regras a seguir propoem um padrão mínimo para desenvolvimento. O mais importante é manter a consistência de estilo de código. O que for escolhido como estilo para o seu projeto deverá ser seguido em todos os arquivos.
-  </p>
-
-  <h2>
-    Diretrizes gerais
-  </h2>
-
-  <p>
-    Antes de mostrar o código, pattern, usado no Locaweb Style, é bom entender alguns princípios e convenções adotadas.
   </p>
 
   <h3>
@@ -45,7 +37,7 @@ menu_page: sidebar-praticas-padroes.erb
 
   <p>
     <b>
-      Espaços em branco:
+      Identação:
     </b>
     utilizamos 2 espaços, mas o mais importante é seguir um estilo único. Nunca misture espaços e tabs em único arquivo. Para facilitar incluímos no projeto um arquivo de configuraçao de editores, o ".editorconfig", saiba mais sobre ele em
     <a href="http://editorconfig.org/" target="_blank">editorconfig.org</a>
@@ -79,7 +71,7 @@ if ( x < 0 ) {
      Revealing Module Pattern
    </h3>
   <p>
-    Para melhorar a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, utilizamos o
+    Para melhorar a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, adotamos o
     <i>
       Revealing Module Pattern
     </i>
@@ -87,7 +79,7 @@ if ( x < 0 ) {
     <a href="http://christianheilmann.com/" target="_blank">Christian Heilmann</a>.
   </p>
   <p>
-    As vantagens desse pattern são: organização, clareza, performance, expõe publicamente apenas as funções e variáveis que se deseja, namespace único evitando sobrescrever métodos facilmente.
+    As vantagens desse pattern são: organização, clareza, performance, expõe publicamente apenas as funções e variáveis que se deseja e namespace único evitando sobrescrever métodos facilmente.
   </p>
   <p>
     Leia mais sobre ele no livro do
@@ -101,7 +93,7 @@ if ( x < 0 ) {
   var project = project || {};
 
   // Define o módulo no objeto global.
-  project.modulo = (function() {
+  project.module = (function() {
     'use strict';
 
     function init() {
@@ -125,7 +117,9 @@ if ( x < 0 ) {
   </pre>
 
   <p>
-    O ideal é ter um módulo por arquivo, e que eles não se iniciem sozinhos. Então um módulo central que funcione como controlador de quais serão executados é uma boa prática.
+    O ideal é ter um módulo por arquivo, e que eles não se iniciem sozinhos.
+    <br>
+    Um módulo central que funcione como controlador de quais serão executados é uma boa prática.
   </p>
 
   <p>Exemplo:</p>
@@ -177,24 +171,24 @@ if ( x < 0 ) {
   </pre>
 
   <p>
-    e finalmente o arquivo que controla quando cada módulo será executado, da maneira que preferir:
+    Finalmente o arquivo que controla quando cada módulo será executado, da maneira que preferir:
     <br>
-    Arquivo router.js
+    Arquivo initializer.js
   </p>
 
   <pre class="lang-javascript prettyprint linenums">
   var project = project || {};
-  project.router = (function($) {
+  project.initializer = (function($) {
     'use strict';
 
     function init() {
 
       if ( $('.chart').size() ) {
-        project.charts.init();
+	project.charts.init();
       }
 
       if ( window.location.pathname === '/servers' ) {
-        project.servers.init();
+	project.servers.init();
       }
 
     }
@@ -210,12 +204,9 @@ if ( x < 0 ) {
 
 
   <h3>
-    Boas práticas
+    Seja compreensível
   </h3>
 
-  <h4>
-    Seja compreensível
-  </h4>
   <p>Use nomes de variáveis e funções auto explicativos e simples. Crie algum padrão e mantenha em todo o projeto.</p>
   <p>Exemplos:</p>
   <p>
@@ -294,7 +285,7 @@ if ( x < 0 ) {
   </h4>
   <p>
     É comum ouvir "Um bom código não precisa de explicação", mas na prática em projetos maiores, procure explicar a finalidade do seu código.
-    Muitas pessoas, de diferentes níveis, podem ter que trabalhar no seu código e nem sempre elas tem experiencia, tempo ou conhecimento do negócio para entender tudo.
+    Muitas pessoas, de diferentes níveis, podem ter que trabalhar no seu código e nem sempre elas tem experiência, tempo ou conhecimento do negócio para entender tudo.
     Facilite o desenvolvimento e manutenção comentando, mas não explicando o que ele faz, mas qual a regra de negócio.
   </p>
   <p>Exemplo:</p>
@@ -306,6 +297,11 @@ if ( x < 0 ) {
   <p>
     Lembrando que comentários devem existir apenas na versão de desenvolvimento, devendo ser removidos no arquivo minificado que é entregue em produção.
   </p>
+
+  <h4>
+	Use testes automatizados
+  </h4>
+  <p>Estamos usando <a href="http://pivotal.github.io/jasmine/" target="_blank">Jasmine</a> para testar o Locaweb Style, assim como os comentários, é uma ótima forma de explicar o que seu código faz ou deveria fazer. Além de ter o dispositivo de alerta quando algum teste quebra, dá mais segurança para manutenções e inclusão de novas funcionalidades.</p>
 
   <h4>
     Evite misturar tecnologias
@@ -406,7 +402,7 @@ if ( x < 0 ) {
   function carregaDados( elemento, url){
     $(elemento).on('click', function(){
       $('#resultado').load(url, function() {
-        hideForm();
+	hideForm();
       });
     })
   }
@@ -482,18 +478,18 @@ $.ajax({
     url: 'usuarios',
     success: function(data){
       $('resultado').fadeIn('fast', function(){
-        $('#formulario').animate({
-          heigth: 0,
-          opacity: 0
-        }, 300, function(){
-            $('#mensagem').animate({
-              heigth: 200,
-              opacity: 1
-            }, 300, function(){
-              //etc etc
-            })
-          }
-        )
+	$('#formulario').animate({
+	  heigth: 0,
+	  opacity: 0
+	}, 300, function(){
+	    $('#mensagem').animate({
+	      heigth: 200,
+	      opacity: 1
+	    }, 300, function(){
+	      //etc etc
+	    })
+	  }
+	)
       })
     },
     error: function(){
@@ -507,7 +503,7 @@ $.ajax({
     Otimize loops
   </h4>
   <p>
-    Existem várias maneiras de fazer loops, uma melhores que outras. Hoje, comum encontrar códigos usando loops do jquery (<code>$.each</code>) que loops nativos poderiam resolver. Uma técnica simples para melhorar ainda mais os loops <code>for()</code> nativos é fazer cache de variáveis de comparação, evitando executar o <code>.length</code> a cada iteração.
+    Existem várias maneiras de fazer loops, uma melhores que outras. Hoje, comum encontrar códigos usando loops do jquery (<code>$.each</code>) onde loops nativos poderiam resolver. Uma técnica simples para melhorar ainda mais os loops <code>for()</code> nativos é fazer cache de variáveis de comparação, evitando executar o <code>.length</code> a cada iteração.
   </p>
   <p>Exemplo:</p>
   <pre class="lang-javascript prettyprint linenums">
@@ -564,26 +560,26 @@ $.ajax({
   </pre>
 
   <h4>
-    Adicione funcionalidades com javascript, não conteúdo
+	  Adicione funcionalidades com javascript, não conteúdo
   </h4>
   <p>
-    Se sua aplicação precisa criar e inserir muito HTML, códigos estão cheios de <code>&lt;div&gt;</code>, <code>&lt;td&gt;</code> e etc, analise e repense sua aplicação, veja se não é o caso de usar algum sistema de templates ( handlebars... ).
-    São códigos dificeis de manter, que podem ter problemas de desempenho. Caso precise, use templates separados do JS, ou carregue HTML do back-end com AJAX.
+	  Se sua aplicação precisa criar e inserir muito HTML, códigos estão cheios de <code>&lt;div&gt;</code>, <code>&lt;td&gt;</code> e etc, analise e repense sua aplicação, veja se não é o caso de usar algum sistema de templates ( handlebars... ).
+	  São códigos dificeis de manter, que podem ter problemas de desempenho. Caso precise, use templates separados do JS, ou carregue HTML do back-end com AJAX.
   </p>
 
   <h4>
-    Não reinvente a roda
+	  Não reinvente a roda
   </h4>
   <p>
-    Use libraries e frameworks estáveis. Possuem estrutura conhecida, facilitando que outros trabalhem, funções comuns prontas, etc.
-    Antes de inserir libraries e plugins, verifique a real necessidade, o suporte e compatibilidade.
+	  Use bibliotecas e frameworks estáveis, que possuem estrutura conhecida.<br>
+	  Antes de inserir libraries e plugins, verifique a real necessidade, o suporte e compatibilidade.
   </p>
 
   <h4>
-    Código de desenvolvimento não é código de produção
+	  Código de desenvolvimento não é código de produção
   </h4>
   <p>
-    Compacte, remova comentarios, concatene os javascripts antes de mandar para produção. Existem diversas ferramentas para isso, inclusive online. Tenha uma versão de desenvolvimento, normal, comentada e uma para o site em producão.
+	  Compacte, remova comentarios, concatene os javascripts antes de mandar para produção. Existem diversas ferramentas para isso, inclusive online. Tenha uma versão de desenvolvimento, normal, comentada e uma para o site em producão.
   </p>
 
 </article>
