@@ -7,8 +7,8 @@ menu_page: sidebar-praticas-padroes.erb
 <article class="text">
 
   <header>
-    <h1>Boas práticas de Javascript</h1>
-    <h3>Padrões de código & melhores práticas em Javascript</h3>
+    <h1>Boas práticas de javascript</h1>
+    <h3>Padrões de código & melhores práticas em javascript</h3>
   </header>
 
   <p>
@@ -18,10 +18,10 @@ menu_page: sidebar-praticas-padroes.erb
     As principais vantagens de manter este padrão são:
   </p>
   <ol>
-    <li>Consistência de código</li>
-    <li>Melhores práticas</li>
-    <li>Escalabilidade</li>
-    <li>Fácil manutenção</li>
+    <li>Consistência de código;</li>
+    <li>Melhores práticas;</li>
+    <li>Escalabilidade;</li>
+    <li>Fácil manutenção;</li>
     <li>Uniformidade entre projetos.</li>
   </ol>
   <p>
@@ -54,8 +54,8 @@ menu_page: sidebar-praticas-padroes.erb
     Existem plugins para vários editores, no nosso time usamos:
   </p>
   <ul>
-	<li><a href="https://github.com/sindresorhus/editorconfig-sublime#readme" target="_blank">plugin para Sublime Text</a></li>
-	<li><a href="https://github.com/editorconfig/editorconfig-vim#readme" target="_blank">plugin para Vim</a></li>
+	<li><a href="https://github.com/sindresorhus/editorconfig-sublime#readme" target="_blank">Plugin para Sublime Text</a></li>
+	<li><a href="https://github.com/editorconfig/editorconfig-vim#readme" target="_blank">Plugin para Vim</a></li>
   </ul>
   <p>
     <b>
@@ -64,8 +64,7 @@ menu_page: sidebar-praticas-padroes.erb
     para separaçao dos blocos de código, utilizamos o estilo
     <a href="http://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS" target="_blank">
       1TBS
-    </a>.
-    Exemplo:
+    </a>, por exemplo:
 <pre class="lang-javascript prettyprint linenums">
 if ( x < 0 ) {
   console.dir( x )
@@ -80,9 +79,9 @@ if ( x < 0 ) {
      Revealing Module Pattern
    </h3>
   <p>
-    Para melhorar a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, utilizamos o pattern
+    Para melhorar a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, utilizamos o
     <i>
-      Revealing Module
+      Revealing Module Pattern
     </i>
     do
     <a href="http://christianheilmann.com/" target="_blank">Christian Heilmann</a>.
@@ -98,9 +97,10 @@ if ( x < 0 ) {
     Um exemplo:
   </p>
   <pre class="lang-javascript prettyprint linenums">
-  // define o objeto global do project. igual a já existente ou cria um novo objeto
+  // Define o objeto global do projeto, igual a um já existente ou cria um novo objeto.
   var project = project || {};
-  // define o modulo no objeto global
+
+  // Define o módulo no objeto global.
   project.modulo = (function() {
     'use strict';
 
@@ -178,6 +178,7 @@ if ( x < 0 ) {
 
   <p>
     e finalmente o arquivo que controla quando cada módulo será executado, da maneira que preferir:
+    <br>
     Arquivo router.js
   </p>
 
@@ -215,19 +216,18 @@ if ( x < 0 ) {
   <h4>
     Seja compreensível
   </h4>
-  <p>
-    Use nomes de variáveis e funções auto explicativos e simples. Crie algum padrão e mantenha em todo o project. Exemplos:
-  </p>
+  <p>Use nomes de variáveis e funções auto explicativos e simples. Crie algum padrão e mantenha em todo o projeto.</p>
+  <p>Exemplos:</p>
   <p>
     Variáveis com nomes ruins:
   </p>
   <pre class="lang-javascript prettyprint linenums">
-  // curtos, posicionamento no código e abreviações
+  // Curtos, posicionamento no código e abreviações
   var x1;
   var input1;
   var posLT;
 
-  // longos demais
+  // Longos demais
   var valorEixoXGraficoConsumo;
   var inputTextFirstName;
   </pre>
@@ -235,11 +235,11 @@ if ( x < 0 ) {
     Funções com nomes ruins:
   </p>
   <pre class="lang-javascript prettyprint linenums">
-  // nomes que descrevem o código, nao o objetivo da função
+  // Nomes que descrevem o código, nao o objetivo da função
   function maiorDeDezoitoAnos(idade){
     return idade >= 18;
   }
-  // é melhor descrever o objetivo
+  // É melhor descrever o objetivo
   function possuiMaioridade(idade){
     return idade >= 18;
   }
@@ -248,11 +248,11 @@ if ( x < 0 ) {
     É uma boa ideia criar um padrão para suas variáveis e funções, como por exemplo:
   </p>
   <pre class="lang-javascript prettyprint linenums">
-  // variáveis com $ no início são elementos/objetos jQuery
+  // Variáveis com $ no início são elementos/objetos jQuery
   var $header    = $('#header');
   var $menuItens = $('#menu a');
 
-  // maiúsculas para constantes
+  // Maiúsculas para constantes
   var IMAGES_PATH = '/assets/images/';
   var CLIENT_NAME = 'Fulan0';
 
@@ -267,21 +267,21 @@ if ( x < 0 ) {
   </p>
 
   <h4>
-    Evite Globais
+    Evite globais
   </h4>
   <p>
     No geral é uma péssima idéia, porque aumenta a chance de ter algo sobrescrito.
-    Uma opçao é utilizar
+    Uma opção é utilizar
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures" target="_blank">closures</a>
     e
-    <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript" target="_blank">module pattern</a>
+    <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript" target="_blank">module pattern</a>.
   </p>
 
   <h4>
     Seja consistente no estilo de código
   </h4>
   <p>
-    É possível  escrever seu código de muitas maneiras, mas procure manter o mesmo estilo em todo seu project. mantendo um padrão nos nomes, identacões, patterns, etc.
+    É possível  escrever seu código de muitas maneiras, mas procure manter o mesmo estilo em todo seu projeto. Mantendo um padrão nos nomes, identacões, patterns, etc.
   </p>
   <p>
     Uma dica, utilize o
@@ -293,25 +293,27 @@ if ( x < 0 ) {
     Escreva os comentários necessários
   </h4>
   <p>
-    É comum ouvir "Um bom código não precisa de explicação". Mas na prática em project. maiores, procure explicar a finalidade do seu código.
+    É comum ouvir "Um bom código não precisa de explicação", mas na prática em projetos maiores, procure explicar a finalidade do seu código.
     Muitas pessoas, de diferentes níveis, podem ter que trabalhar no seu código e nem sempre elas tem experiencia, tempo ou conhecimento do negócio para entender tudo.
-    Facilite o desenvolvimento e manutenção comentando, mas não explicando o que ele faz, mas qual a regra de negócio. Exemplo:
+    Facilite o desenvolvimento e manutenção comentando, mas não explicando o que ele faz, mas qual a regra de negócio.
   </p>
+  <p>Exemplo:</p>
   <pre class="lang-javascript prettyprint linenums">
-  // ruim: verifica se é maior de 18
-  // bom: menores de idade sao redirecionados
+  // Ruim: verifica se é maior de 18
+  // Bom: menores de idade sao redirecionados
   if( age >= 18 ){ ... }
   </pre>
   <p>
-    Lembrando que cometários devem existir apenas na versão de desenvolvimento, devendo ser removidos no arquivo minificado que é entregue em produção.
+    Lembrando que comentários devem existir apenas na versão de desenvolvimento, devendo ser removidos no arquivo minificado que é entregue em produção.
   </p>
 
   <h4>
     Evite misturar tecnologias
   </h4>
   <p>
-    Na prática do dia a dia, algo bem simples: estilize seu HTML com CSS, nao com JS. Exemplo:
+    Na prática do dia a dia, algo bem simples: Estilize seu HTML com CSS, Não com JS.
   </p>
+  <p>Exemplo:</p>
   <pre class="lang-javascript prettyprint linenums">
   // Errado
   $('.user-name').css({
@@ -329,12 +331,13 @@ if ( x < 0 ) {
     Use sintaxe abreviada
   </h4>
   <p>
-    Conheça as notações de variáveis e funções abreviadas e procure usá-las. Exemplos:
+    Conheça as notações de variáveis e funções abreviadas e procure usá-las.
   </p>
+  <p>Exemplos:</p>
   <pre class="lang-javascript prettyprint linenums">
   // Use
   var cores = ['rosa', 'azul', 'verde'];
-  // em vez de
+  // Em vez de
   var cores = new Array();
   lunch[0]='rosa';
   lunch[1]='azul';
@@ -342,7 +345,7 @@ if ( x < 0 ) {
 
   // Use
   var x = v || 10;
-  // em vez de
+  // Em vez de
   if(v){
      var x = v;
   } else {
@@ -351,7 +354,7 @@ if ( x < 0 ) {
 
   // Use
   var direcao = (x > 100) ? 1 : -1;
-  // em vez de
+  // Em vez de
   var direcao;
   if(x > 100){
      direcao = 1;
@@ -365,8 +368,8 @@ if ( x < 0 ) {
   </h4>
   <p>
     Evite escrever funções, trechos de código muito longos, ou aninhados. Procure separar regras e evite códigos repetidos.
-    Exemplo:
   </p>
+  <p>Exemplo:</p>
   <pre class="lang-javascript prettyprint linenums">
   // Em vez de
   $('#botao1').on('click', function(){
@@ -415,8 +418,9 @@ if ( x < 0 ) {
     Configurações e internacionalização
   </h4>
   <p>
-    Quando estiver criando a aplicaçao, pense em cada valor, texto, variável, se é o caso de deixá-la separada, permitindo alterá-la depois. Exemplo:
+    Quando estiver criando a aplicação, pense em cada valor, texto, variável, se é o caso de deixá-la separada, permitindo alterá-la depois.
   </p>
+  <p>Exemplo:</p>
   <pre class="lang-javascript prettyprint linenums">
   // Em vez de
   $.ajax({
@@ -503,8 +507,9 @@ $.ajax({
     Otimize loops
   </h4>
   <p>
-    Existem várias maneiras de fazer loops, uma melhores que outras. Hoje, comum encontrar códigos usando loops do jquery ($.each) que loops nativos poderiam resolver. Uma técnica simples para melhorar ainda mais os loops for() nativos é fazer cache de variáveis de comparaçao, evitando executar o .length a cada iteração. Exemplo:
+    Existem várias maneiras de fazer loops, uma melhores que outras. Hoje, comum encontrar códigos usando loops do jquery (<code>$.each</code>) que loops nativos poderiam resolver. Uma técnica simples para melhorar ainda mais os loops <code>for()</code> nativos é fazer cache de variáveis de comparação, evitando executar o <code>.length</code> a cada iteração.
   </p>
+  <p>Exemplo:</p>
   <pre class="lang-javascript prettyprint linenums">
   // Use
   var cores = ['Azul', 'verde', 'rosa', 'vermelho'];
@@ -519,16 +524,16 @@ $.ajax({
   }
   </pre>
   <p>
-    Para comparaçao, um teste de performance no
+    Para comparação, um teste de performance no
     <a href="http://jsperf.com/loops/111">jsperf</a>
-    comparando diversos tipos de loop. O loop otimizado, como acima, executou 159k vezes, contra 113k vezes do tradicional.
+    analisando diversos tipos de loop. O loop otimizado, como acima, executou 159k vezes, contra 113k vezes do tradicional.
   </p>
 
   <h4>
     Minimize acessos ao DOM
   </h4>
   <p>
-    Evite ao máximo acessar o DOM para buscar ou inserir informações. É lento e não se pode confiar no que está no DOM. Coisas simples podem minimizar o acesso, por exemplo, se alguma funçao precisa atualizar uma atbela no seu HTML, em vez de percorrer td por td alterando os valores, pode ser mais eficiente criar uma funçao que reescreva toda a tabela, e depois simplesmente troque a antiga pela nova. Outra  simples é fazer cache de objetos jQuery, por exemplo:
+    Evite ao máximo acessar o DOM para buscar ou inserir informações. É lento e não se pode confiar no que está no DOM. Coisas simples podem minimizar o acesso, por exemplo, se alguma função precisa atualizar uma tabela no seu HTML, em vez de percorrer <code>&lt;td&gt;</code> por <code>&lt;td&gt;</code> alterando os valores, pode ser mais eficiente criar uma função que reescreva toda a tabela, e depois simplesmente troque a antiga pela nova. Outra simples é fazer cache de objetos jQuery, por exemplo:
   </p>
   <pre class="lang-javascript prettyprint linenums">
   // Em vez de
@@ -562,8 +567,8 @@ $.ajax({
     Adicione funcionalidades com javascript, não conteúdo
   </h4>
   <p>
-    Se sua aplicação precisa criar e inserir muito HTML, códigos estao cheios de DIVs, TDs, etc, analise e repense sua aplicação, veja se nao é o caso de usar algum sistema de templates ( handlebars... ).
-    São códigos dificeis de manter, que podem etr problemas de desempenho. Caso precise, use templates separados do JS, ou carregue HTML do back-end com AJAX.
+    Se sua aplicação precisa criar e inserir muito HTML, códigos estão cheios de <code>&lt;div&gt;</code>, <code>&lt;td&gt;</code> e etc, analise e repense sua aplicação, veja se não é o caso de usar algum sistema de templates ( handlebars... ).
+    São códigos dificeis de manter, que podem ter problemas de desempenho. Caso precise, use templates separados do JS, ou carregue HTML do back-end com AJAX.
   </p>
 
   <h4>
