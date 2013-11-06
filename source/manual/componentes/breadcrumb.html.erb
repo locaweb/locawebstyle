@@ -9,40 +9,34 @@ menu_page: sidebar-componentes.erb
 		<h3>Indica a localização da página atual dentro de uma hierarquia de navegação.</h3>
 	</header>
 
+	<p>Breadcrumbs são listas ordenadas simples que indicam onde o usuário está juntamente com usa hierarquia de navegação.</p>
+	<p>O funcionamento é simples. Veja um exemplo abaixo:</p>
+
 	<div class="example">
 		<!-- Breadcrumb com 1 item -->
 		<ol class="breadcrumb container">
-			<li class="active">Início</li>
+			<li>Início</li>
 		</ol>
-		<!-- Breadcrumb com 2 itens -->
-		<ol class="breadcrumb container">
-			<li><a href="#">Início</a></li>
-			<li class="active">Mensagens</li>
-		</ol>
-		<!-- Breadcrumb com 3 itens -->
-		<ol class="breadcrumb container">
-			<li><a href="#">Início</a></li>
-			<li><a href="#">Mensagens</a></li>
-			<li class="active">Enviar</li>
-		</ol>
-
 	</div>
-<pre class="lang-html prettyprint linenums">
-&lt;!-- Breadcrumb com 1 item --&gt;
-&lt;ol class=&quot;breadcrumb container&quot;&gt;
-	&lt;li class=&quot;active&quot;&gt;Início&lt;/li&gt;
-&lt;/ol&gt;
-&lt;!-- Breadcrumb com 2 itens --&gt;
-&lt;ol class=&quot;breadcrumb container&quot;&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Início&lt;/a&gt;&lt;/li&gt;
-	&lt;li class=&quot;active&quot;&gt;Mensagens&lt;/li&gt;
-&lt;/ol&gt;
-&lt;!-- Breadcrumb com 3 itens --&gt;
-&lt;ol class=&quot;breadcrumb container&quot;&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Início&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mensagens&lt;/a&gt;&lt;/li&gt;
-	&lt;li class=&quot;active&quot;&gt;Enviar&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+	<pre class="lang-html prettyprint linenums">
+	&lt;!-- Breadcrumb com 1 item --&gt;
+	&lt;ol class=&quot;breadcrumb container&quot;&gt;
+		&lt;li&gt;Início&lt;/li&gt;
+	&lt;/ol&gt;
+	</pre>
 
+	<p>Exemplo com mais páginas visitadas:</p>
+		<div class="example">
+			<ol class="breadcrumb container">
+				<li><a href="#">Início</a></li>
+				<li><a href="#">Mensagens</a></li>
+				<li>Contato</li>
+			</ol>
+		</div>
+	<pre class="lang-html prettyprintCode linenums">
+	<ol class="breadcrumb container">
+		<li><a href="#">Início</a></li>
+		<li><a href="#">Mensagens</a></li>
+		<li>Contato</li>
+	</ol></pre>
 </article>
