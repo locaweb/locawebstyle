@@ -119,6 +119,7 @@ var locastyle = (function() {
       // Quando seleciona todos os checkboxes, seleciona o checkbox principal também
       $checkboxes.on('change', function () {
         $checkAll.prop('checked', $tableStyle.find('td input[type="checkbox"]:checked').size() == $checkboxes.size() );
+        $(this).parents('tr').toggleClass('selected');
         showWellTable();
       });
 
