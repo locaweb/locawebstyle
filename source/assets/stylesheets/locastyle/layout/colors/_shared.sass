@@ -32,6 +32,7 @@
 
 		&[class*="ico-"]:before
 			background-color: $color1
+			color: #fff
 
 	.sidebox-list a
 		&[class*="ico-"]:after,
@@ -129,6 +130,14 @@
 	.btn-primary
 		background-color: $color2
 		border-color: $color2
+
+	//
+	// Ícone de ajuda com popover
+	//
+	[class*="ico-"][data-toggle="popover"]:before
+		color: #fff
+		background-color: #154297
+
 
 //
 // Breadcrumb
