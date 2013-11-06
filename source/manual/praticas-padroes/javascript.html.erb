@@ -6,580 +6,503 @@ menu_page: sidebar-praticas-padroes.erb
 
 <article class="text">
 
-  <header>
-    <h1>Boas práticas de javascript</h1>
-    <h3>Padrões de código & melhores práticas em javascript</h3>
-  </header>
+	<header>
+		<h1>Boas práticas de javascript</h1>
+		<h3>Padrões de código & melhores práticas em javascript</h3>
+	</header>
 
-  <p>
-    Aqui mostramos as práticas seguidas no código do Locaweb Style e podem ser mantidas nos projetos que usam este framework.
-  </p>
-  <p>
-    As principais vantagens de manter este padrão são:
-  </p>
-  <ol>
-    <li>Consistência de código;</li>
-    <li>Melhores práticas;</li>
-    <li>Escalabilidade;</li>
-    <li>Fácil manutenção;</li>
-    <li>Uniformidade entre projetos.</li>
-  </ol>
-  <p>
-    A idéia é que o código mantenha unidade, seja ele escrito por uma ou várias pessoas, dentro de um projeto e entre projetos diferentes, diminuindo o tempo de aprendizado.
-  </p>
-  <p>
-    As regras a seguir propoem um padrão mínimo para desenvolvimento. O mais importante é manter a consistência de estilo de código. O que for escolhido como estilo para o seu projeto deverá ser seguido em todos os arquivos.
-  </p>
+	<p>
+		Aqui mostramos as práticas seguidas no código do Locaweb Style e podem ser mantidas nos projetos que usam este framework.
+	</p>
+	<p>
+		As principais vantagens de manter este padrão são:
+	</p>
+	<ol>
+		<li>Consistência de código;</li>
+		<li>Melhores práticas;</li>
+		<li>Escalabilidade;</li>
+		<li>Fácil manutenção;</li>
+		<li>Uniformidade entre projetos.</li>
+	</ol>
+	<p>
+		A idéia é que o código mantenha unidade, seja ele escrito por uma ou várias pessoas, dentro de um projeto e entre projetos diferentes, diminuindo o tempo de aprendizado.
+	</p>
+	<p>
+		As regras a seguir propoem um padrão mínimo para desenvolvimento. O mais importante é manter a consistência de estilo de código. O que for escolhido como estilo para o seu projeto deverá ser seguido em todos os arquivos.
+	</p>
 
-  <h3>
-    Padrões de escrita
-  </h3>
+	<h3>Padrões de escrita</h3>
+	<p>
+		<b>Identação:</b>
+		utilizamos 2 espaços, mas o mais importante é seguir um estilo único. Nunca misture espaços e tabs em único arquivo. Para facilitar incluímos no projeto um arquivo de configuraçao de editores, o ".editorconfig", saiba mais sobre ele em
+		<a href="http://editorconfig.org/" target="_blank">editorconfig.org</a>
+	</p>
+	<p>
+		Existem plugins para vários editores, no nosso time usamos:
+	</p>
+	<ul>
+		<li><a href="https://github.com/sindresorhus/editorconfig-sublime#readme" target="_blank">Plugin para Sublime Text</a></li>
+		<li><a href="https://github.com/editorconfig/editorconfig-vim#readme" target="_blank">Plugin para Vim</a></li>
+	</ul>
+	<p>
+		<b>Sintaxe:</b> para separaçao dos blocos de código, utilizamos o estilo
+		<a href="http://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS" target="_blank">1TBS</a>, por exemplo:
+	</p>
 
-  <p>
-    <b>
-      Identação:
-    </b>
-    utilizamos 2 espaços, mas o mais importante é seguir um estilo único. Nunca misture espaços e tabs em único arquivo. Para facilitar incluímos no projeto um arquivo de configuraçao de editores, o ".editorconfig", saiba mais sobre ele em
-    <a href="http://editorconfig.org/" target="_blank">editorconfig.org</a>
-  </p>
-  <p>
-    Existem plugins para vários editores, no nosso time usamos:
-  </p>
-  <ul>
-	<li><a href="https://github.com/sindresorhus/editorconfig-sublime#readme" target="_blank">Plugin para Sublime Text</a></li>
-	<li><a href="https://github.com/editorconfig/editorconfig-vim#readme" target="_blank">Plugin para Vim</a></li>
-  </ul>
-  <p>
-    <b>
-      Sintaxe:
-    </b>
-    para separaçao dos blocos de código, utilizamos o estilo
-    <a href="http://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS" target="_blank">
-      1TBS
-    </a>, por exemplo:
 <pre class="lang-javascript prettyprint linenums">
 if ( x < 0 ) {
-  console.dir( x )
+	console.dir( x )
 } else {
-  console.dir( y )
-}</pre>
-    <small>
-      Observe os alinhamentos, quebras de linhas, posição das chaves e espaços entre variáveis e operadores.
-    </small>
-  </p>
-   <h3>
-     Revealing Module Pattern
-   </h3>
-  <p>
-    Para melhorar a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, adotamos o
-    <i>
-      Revealing Module Pattern
-    </i>
-    do
-    <a href="http://christianheilmann.com/" target="_blank">Christian Heilmann</a>.
-  </p>
-  <p>
-    As vantagens desse pattern são: organização, clareza, performance, expõe publicamente apenas as funções e variáveis que se deseja e namespace único evitando sobrescrever métodos facilmente.
-  </p>
-  <p>
-    Leia mais sobre ele no livro do
-    <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript">Addy Osmani</a>.
-  </p>
-  <p>
-    Um exemplo:
-  </p>
-  <pre class="lang-javascript prettyprint linenums">
-  // Define o objeto global do projeto, igual a um já existente ou cria um novo objeto.
-  var project = project || {};
+	console.dir( y )
+}
+</pre>
 
-  // Define o módulo no objeto global.
-  project.module = (function() {
-    'use strict';
+	<small>Observe os alinhamentos, quebras de linhas, posição das chaves e espaços entre variáveis e operadores.</small>
+	<h3>Revealing Module Pattern</h3>
+	<p>
+		Para melhorar a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, adotamos o
+		<i>Revealing Module Pattern</i> do <a href="http://christianheilmann.com/" target="_blank">Christian Heilmann</a>.
+	</p>
+	<p>As vantagens desse pattern são: organização, clareza, performance, expõe publicamente apenas as funções e variáveis que se deseja e namespace único evitando sobrescrever métodos facilmente.</p>
+	<p>Leia mais sobre ele no livro do <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript">Addy Osmani</a>.</p>
+	<p>Um exemplo:</p>
 
-    function init() {
-      // ...
-    }
+<pre class="lang-javascript prettyprint linenums">
+// Define o objeto global do projeto, igual a um já existente ou cria um novo objeto.
+var project = project || {};
 
-    function update() {
-      // ...
-    }
+// Define o módulo no objeto global.
+project.module = (function() {
+	'use strict';
 
-    function internal() {
-      // ...
-    }
+	function init() {
+		// ...
+	}
 
-    return {
-      start:init,
-      update: update
-    };
+	function update() {
+		// ...
+	}
 
-  }());
-  </pre>
+	function internal() {
+		// ...
+	}
 
-  <p>
-    O ideal é ter um módulo por arquivo, e que eles não se iniciem sozinhos.
-    <br>
-    Um módulo central que funcione como controlador de quais serão executados é uma boa prática.
-  </p>
+	return {
+		start:init,
+		update: update
+	};
 
-  <p>Exemplo:</p>
+}());
+</pre>
 
-  <p>
-    Módulo de gráficos no arquivo charts.js
-  </p>
-  <pre class="lang-javascript prettyprint linenums">
-  var project = project || {};
-  project.charts = (function() {
-    'use strict';
+	<p>
+		O ideal é ter um módulo por arquivo, e que eles não se iniciem sozinhos.
+		<br>
+		Um módulo central que funcione como controlador de quais serão executados é uma boa prática.
+	</p>
+	<p>Exemplo:</p>
+	<p>Módulo de gráficos no arquivo charts.js</p>
 
-    function init() {
-      plotChart();
-    }
+<pre class="lang-javascript prettyprint linenums">
+var project = project || {};
+project.charts = (function() {
+	'use strict';
 
-    function plotChart() {
-      // ...
-    }
+	function init() {
+		plotChart();
+	}
 
-    return {
-      init:init
-    };
+	function plotChart() {
+		// ...
+	}
 
-  }());
-  </pre>
+	return {
+		init:init
+	};
 
-  <p>
-    Módulo servidores no arquivo servers.js
-  </p>
-  <pre class="lang-javascript prettyprint linenums">
-  var project = project || {};
-  project.servers = (function() {
-    'use strict';
+}());
+</pre>
 
-    function init() {
-      loadAllServers();
-    }
+<p>Módulo servidores no arquivo servers.js</p>
+<pre class="lang-javascript prettyprint linenums">
+var project = project || {};
+project.servers = (function() {
+	'use strict';
 
-    function loadAllServers() {
-      // ...
-    }
+	function init() {
+		loadAllServers();
+	}
 
-    return {
-      init:init
-    };
+	function loadAllServers() {
+		// ...
+	}
 
-  }());
-  </pre>
+	return {
+		init:init
+	};
 
-  <p>
-    Finalmente o arquivo que controla quando cada módulo será executado, da maneira que preferir:
-    <br>
-    Arquivo initializer.js
-  </p>
+}());
+</pre>
 
-  <pre class="lang-javascript prettyprint linenums">
-  var project = project || {};
-  project.initializer = (function($) {
-    'use strict';
+	<p>
+		Finalmente o arquivo que controla quando cada módulo será executado, da maneira que preferir:
+		<br>
+		Arquivo initializer.js
+	</p>
 
-    function init() {
+<pre class="lang-javascript prettyprint linenums">
+var project = project || {};
+project.initializer = (function($) {
+	'use strict';
 
-      if ( $('.chart').size() ) {
-	project.charts.init();
-      }
+	function init() {
+		if ( $('.chart').size() ) {
+			project.charts.init();
+		}
 
-      if ( window.location.pathname === '/servers' ) {
-	project.servers.init();
-      }
+		if ( window.location.pathname === '/servers' ) {
+			project.servers.init();
+		}
+	}
 
-    }
+	return {
+		init:init
+	};
 
-    return {
-      init:init
-    };
+}(jQuery));
 
-  }(jQuery));
+project.initializer.init();
+</pre>
 
-  project.router.init();
-  </pre>
+	<h3>Seja compreensível</h3>
 
+	<p>Use nomes de variáveis e funções auto explicativos e simples. Crie algum padrão e mantenha em todo o projeto.</p>
+	<p>Exemplos:</p>
+	<p>Variáveis com nomes ruins:</p>
 
-  <h3>
-    Seja compreensível
-  </h3>
+<pre class="lang-javascript prettyprint linenums">
+// Curtos, posicionamento no código e abreviações
+var x1;
+var input1;
+var posLT;
 
-  <p>Use nomes de variáveis e funções auto explicativos e simples. Crie algum padrão e mantenha em todo o projeto.</p>
-  <p>Exemplos:</p>
-  <p>
-    Variáveis com nomes ruins:
-  </p>
-  <pre class="lang-javascript prettyprint linenums">
-  // Curtos, posicionamento no código e abreviações
-  var x1;
-  var input1;
-  var posLT;
+// Longos demais
+var valorEixoXGraficoConsumo;
+var inputTextFirstName;
+</pre>
 
-  // Longos demais
-  var valorEixoXGraficoConsumo;
-  var inputTextFirstName;
-  </pre>
-  <p>
-    Funções com nomes ruins:
-  </p>
-  <pre class="lang-javascript prettyprint linenums">
-  // Nomes que descrevem o código, nao o objetivo da função
-  function maiorDeDezoitoAnos(idade){
-    return idade >= 18;
-  }
-  // É melhor descrever o objetivo
-  function possuiMaioridade(idade){
-    return idade >= 18;
-  }
-  </pre>
-  <p>
-    É uma boa ideia criar um padrão para suas variáveis e funções, como por exemplo:
-  </p>
-  <pre class="lang-javascript prettyprint linenums">
-  // Variáveis com $ no início são elementos/objetos jQuery
-  var $header    = $('#header');
-  var $menuItens = $('#menu a');
+	<p>Funções com nomes ruins:</p>
 
-  // Maiúsculas para constantes
-  var IMAGES_PATH = '/assets/images/';
-  var CLIENT_NAME = 'Fulan0';
+<pre class="lang-javascript prettyprint linenums">
+// Nomes que descrevem o código, nao o objetivo da função
+function maiorDeDezoitoAnos(idade){
+	return idade >= 18;
+}
+// É melhor descrever o objetivo
+function possuiMaioridade(idade){
+	return idade >= 18;
+}
+</pre>
 
-  // _ no início para variáveis e funções privadas
-  var _count = 0;
-  </pre>
-  <p>
-    Confira o padrão de nomenclatura do
-    <a href="http://javascript.crockford.com/code.html#names" target="_blank">
-      Douglas Crockford
-    </a>
-  </p>
+	<p>É uma boa ideia criar um padrão para suas variáveis e funções, como por exemplo:</p>
 
-  <h4>
-    Evite globais
-  </h4>
-  <p>
-    No geral é uma péssima idéia, porque aumenta a chance de ter algo sobrescrito.
-    Uma opção é utilizar
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures" target="_blank">closures</a>
-    e
-    <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript" target="_blank">module pattern</a>.
-  </p>
+<pre class="lang-javascript prettyprint linenums">
+// Variáveis com $ no início são elementos/objetos jQuery
+var $header    = $('#header');
+var $menuItens = $('#menu a');
 
-  <h4>
-    Seja consistente no estilo de código
-  </h4>
-  <p>
-    É possível  escrever seu código de muitas maneiras, mas procure manter o mesmo estilo em todo seu projeto. Mantendo um padrão nos nomes, identacões, patterns, etc.
-  </p>
-  <p>
-    Uma dica, utilize o
-    <a href="http://www.jslint.com/" target="_blank">jslint</a>
-    para validar seu código.
-  </p>
+// Maiúsculas para constantes
+var IMAGES_PATH = '/assets/images/';
+var CLIENT_NAME = 'Fulan0';
 
-  <h4>
-    Escreva os comentários necessários
-  </h4>
-  <p>
-    É comum ouvir "Um bom código não precisa de explicação", mas na prática em projetos maiores, procure explicar a finalidade do seu código.
-    Muitas pessoas, de diferentes níveis, podem ter que trabalhar no seu código e nem sempre elas tem experiência, tempo ou conhecimento do negócio para entender tudo.
-    Facilite o desenvolvimento e manutenção comentando, mas não explicando o que ele faz, mas qual a regra de negócio.
-  </p>
-  <p>Exemplo:</p>
-  <pre class="lang-javascript prettyprint linenums">
-  // Ruim: verifica se é maior de 18
-  // Bom: menores de idade sao redirecionados
-  if( age >= 18 ){ ... }
-  </pre>
-  <p>
-    Lembrando que comentários devem existir apenas na versão de desenvolvimento, devendo ser removidos no arquivo minificado que é entregue em produção.
-  </p>
+// _ no início para variáveis e funções privadas
+var _count = 0;
+</pre>
 
-  <h4>
-	Use testes automatizados
-  </h4>
-  <p>Estamos usando <a href="http://pivotal.github.io/jasmine/" target="_blank">Jasmine</a> para testar o Locaweb Style, assim como os comentários, é uma ótima forma de explicar o que seu código faz ou deveria fazer. Além de ter o dispositivo de alerta quando algum teste quebra, dá mais segurança para manutenções e inclusão de novas funcionalidades.</p>
+	<p>Confira o padrão de nomenclatura do <a href="http://javascript.crockford.com/code.html#names" target="_blank"> Douglas Crockford</a></p>
 
-  <h4>
-    Evite misturar tecnologias
-  </h4>
-  <p>
-    Na prática do dia a dia, algo bem simples: Estilize seu HTML com CSS, Não com JS.
-  </p>
-  <p>Exemplo:</p>
-  <pre class="lang-javascript prettyprint linenums">
-  // Errado
-  $('.user-name').css({
-    'border'  : '1px solid red',
-    'color'   : 'red'
-  });
-  // Certo
-  $('.user-name.error').addClass('error');
-  </pre>
-  <p>
-    Crie os estilos que precisar (e animações, quando possível) no CSS, e no javascript controle quando os estilos são aplicados, em vez de aplicar propriedades.
-  </p>
+	<h4>Evite globais</h4>
+	<p>
+		No geral é uma péssima idéia, porque aumenta a chance de ter algo sobrescrito.
+		Uma opção é utilizar <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures" target="_blank">closures</a> e
+		<a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript" target="_blank">module pattern</a>.
+	</p>
 
-  <h4>
-    Use sintaxe abreviada
-  </h4>
-  <p>
-    Conheça as notações de variáveis e funções abreviadas e procure usá-las.
-  </p>
-  <p>Exemplos:</p>
-  <pre class="lang-javascript prettyprint linenums">
-  // Use
-  var cores = ['rosa', 'azul', 'verde'];
-  // Em vez de
-  var cores = new Array();
-  lunch[0]='rosa';
-  lunch[1]='azul';
-  lunch[2]='verde';
+	<h4>Seja consistente no estilo de código</h4>
+	<p>É possível  escrever seu código de muitas maneiras, mas procure manter o mesmo estilo em todo seu projeto. Mantendo um padrão nos nomes, identacões, patterns, etc.</p>
+	<p>
+		Uma dica, utilize o <a href="http://www.jslint.com/" target="_blank">jslint</a> para validar seu código.
+	</p>
 
-  // Use
-  var x = v || 10;
-  // Em vez de
-  if(v){
-     var x = v;
-  } else {
-     var x =10;
-  }
+	<h4>Escreva os comentários necessários</h4>
+	<p>
+		É comum ouvir "Um bom código não precisa de explicação", mas na prática em projetos maiores, procure explicar a finalidade do seu código.
+		Muitas pessoas, de diferentes níveis, podem ter que trabalhar no seu código e nem sempre elas tem experiência, tempo ou conhecimento do negócio para entender tudo.
+		Facilite o desenvolvimento e manutenção comentando, mas não explicando o que ele faz, mas qual a regra de negócio.
+	</p>
+	<p>Exemplo:</p>
 
-  // Use
-  var direcao = (x > 100) ? 1 : -1;
-  // Em vez de
-  var direcao;
-  if(x > 100){
-     direcao = 1;
-  } else {
-     direcao = -1;
-  }
-  </pre>
+<pre class="lang-javascript prettyprint linenums">
+// Ruim: verifica se é maior de 18
+// Bom: menores de idade sao redirecionados
+if( age >= 18 ){ ... }
+</pre>
 
-  <h4>
-    Modularize seu código
-  </h4>
-  <p>
-    Evite escrever funções, trechos de código muito longos, ou aninhados. Procure separar regras e evite códigos repetidos.
-  </p>
-  <p>Exemplo:</p>
-  <pre class="lang-javascript prettyprint linenums">
-  // Em vez de
-  $('#botao1').on('click', function(){
-    $('#resultado').load('ajax/lista-pessoas.html', function() {
-      $('#formulario').slideUp()
-    });
-  })
-  $('#botao2').on('click', function(){
-    $('#resultado').load('ajax/lista-empresas.html', function() {
-      $('#formulario').slideUp()
-    });
-  })
-  //...
+	<p>Lembrando que comentários devem existir apenas na versão de desenvolvimento, devendo ser removidos no arquivo minificado que é entregue em produção.</p>
 
-  // Faça
-  function hideForm(){
-      $('#formulario').slideUp();
-  }
-  $('#botao1').on('click', function(){
-    $('#resultado').load('ajax/lista-pessoas.html', function() {
-      hideForm();
-    });
-  })
-  $('#botao2').on('click', function(){
-    $('#resultado').load('ajax/lista-empresas.html', function() {
-      hideForm();
-    });
-  })
+	<h4>Use testes automatizados</h4>
+	<p>Estamos usando <a href="http://pivotal.github.io/jasmine/" target="_blank">Jasmine</a> para testar o Locaweb Style, assim como os comentários, é uma ótima forma de explicar o que seu código faz ou deveria fazer. Além de ter o dispositivo de alerta quando algum teste quebra, dá mais segurança para manutenções e inclusão de novas funcionalidades.</p>
 
-  // Ou melhor
-  function hideForm(){
-    $('#formulario').slideUp();
-  }
-  function carregaDados( elemento, url){
-    $(elemento).on('click', function(){
-      $('#resultado').load(url, function() {
-	hideForm();
-      });
-    })
-  }
-  carregaDados('#botao1', 'ajax/lista-pessoas.html');
-  carregaDados('#botao2', 'ajax/lista-empresas.html');
-  </pre>
+	<h4>Evite misturar tecnologias</h4>
+	<p>Na prática do dia a dia, algo bem simples: Estilize seu HTML com CSS, Não com JS.</p>
+	<p>Exemplo:</p>
 
-  <h4>
-    Configurações e internacionalização
-  </h4>
-  <p>
-    Quando estiver criando a aplicação, pense em cada valor, texto, variável, se é o caso de deixá-la separada, permitindo alterá-la depois.
-  </p>
-  <p>Exemplo:</p>
-  <pre class="lang-javascript prettyprint linenums">
-  // Em vez de
-  $.ajax({
-    type: "POST",
-    url: "api/usuarios",
-    data: {limit: 10},
-    success: function(data){
-      $('#formulario').hide();
-      $('#mensagem').text('Busca efetuada com sucesso');
-      $('#lista').html(data).fadeIn('fast');
-    },
-    error: function(){
-      $('#mensagem').text('Erro na busca');
-    }
-  });
+<pre class="lang-javascript prettyprint linenums">
+// Errado
+$('.user-name').css({
+	'border': '1px solid red',
+	'color': 'red'
+});
+// Certo
+$('.user-name.error').addClass('error');
+</pre>
+
+	<p>Crie os estilos que precisar (e animações, quando possível) no CSS, e no javascript controle quando os estilos são aplicados, em vez de aplicar propriedades.</p>
+
+	<h4>Use sintaxe abreviada</h4>
+	<p>Conheça as notações de variáveis e funções abreviadas e procure usá-las.</p>
+	<p>Exemplos:</p>
+
+<pre class="lang-javascript prettyprint linenums">
+// Use
+var cores = ['rosa', 'azul', 'verde'];
+// Em vez de
+var cores = new Array();
+lunch[0]='rosa';
+lunch[1]='azul';
+lunch[2]='verde';
+
+// Use
+var x = v || 10;
+// Em vez de
+if(v){
+	var x = v;
+} else {
+	var x =10;
+}
+
+// Use
+var direcao = (x > 100) ? 1 : -1;
+// Em vez de
+var direcao;
+if(x > 100){
+	direcao = 1;
+} else {
+	direcao = -1;
+}
+</pre>
+
+	<h4>Modularize seu código</h4>
+	<p>Evite escrever funções, trechos de código muito longos, ou aninhados. Procure separar regras e evite códigos repetidos.</p>
+	<p>Exemplo:</p>
+
+<pre class="lang-javascript prettyprint linenums">
+// Em vez de
+$('#botao1').on('click', function(){
+	$('#resultado').load('ajax/lista-pessoas.html', function() {
+		$('#formulario').slideUp()
+	});
+})
+$('#botao2').on('click', function(){
+	$('#resultado').load('ajax/lista-empresas.html', function() {
+		$('#formulario').slideUp()
+	});
+})
+//...
+
+// Faça
+function hideForm(){
+	$('#formulario').slideUp();
+}
+$('#botao1').on('click', function(){
+	$('#resultado').load('ajax/lista-pessoas.html', function() {
+		hideForm();
+	});
+})
+$('#botao2').on('click', function(){
+	$('#resultado').load('ajax/lista-empresas.html', function() {
+		hideForm();
+	});
+})
+
+// Ou melhor
+function hideForm(){
+	$('#formulario').slideUp();
+}
+function carregaDados( elemento, url){
+	$(elemento).on('click', function(){
+		$('#resultado').load(url, function() {
+			hideForm();
+		});
+	})
+}
+carregaDados('#botao1', 'ajax/lista-pessoas.html');
+carregaDados('#botao2', 'ajax/lista-empresas.html');
+</pre>
+
+	<h4>Configurações e internacionalização</h4>
+	<p>Quando estiver criando a aplicação, pense em cada valor, texto, variável, se é o caso de deixá-la separada, permitindo alterá-la depois.</p>
+	<p>Exemplo:</p>
+
+<pre class="lang-javascript prettyprint linenums">
+// Em vez de
+$.ajax({
+	type: "POST",
+	url: "api/usuarios",
+	data: {limit: 10},
+	success: function(data){
+		$('#formulario').hide();
+		$('#mensagem').text('Busca efetuada com sucesso');
+		$('#lista').html(data).fadeIn('fast');
+	},
+	error: function(){
+		$('#mensagem').text('Erro na busca');
+	}
+});
 
 // Faça
 var config: {
-  messages = {
-    success: 'Busca efetuada com sucesso',
-    error: 'Erro na busca'
-  },
-  api: {
-    usuarios: "api/usuarios"
-  },
-  animate: {
-    velocity: "fast"
-  },
-  list: {
-    perPage: 10
-  }
+	messages = {
+		success: 'Busca efetuada com sucesso',
+		error: 'Erro na busca'
+	},
+	api: {
+		usuarios: "api/usuarios"
+	},
+	animate: {
+		velocity: "fast"
+	},
+	list: {
+		perPage: 10
+	}
 }
 //...
 $.ajax({
-  type: "POST",
-  url: config.api.usuarios,
-  data: {limit: config.list.perPage},
-  success: function(data){
-    $('#formulario').hide();
-    $('#mensagem').text(config.messages.success);
-    $('#lista').html(data).fadeIn(config.animate.velocity);
-  },
-  error: function(){
-    $('#mensagem').text(config.messages.success);
-  }
+	type: "POST",
+	url: config.api.usuarios,
+	data: {limit: config.list.perPage},
+	success: function(data){
+		$('#formulario').hide();
+		$('#mensagem').text(config.messages.success);
+		$('#lista').html(data).fadeIn(config.animate.velocity);
+	},
+	error: function(){
+		$('#mensagem').text(config.messages.success);
+	}
 });
-  </pre>
+</pre>
 
-  <h4>
-    Evite muitos aninhamentos
-  </h4>
-  <p>
-    Facilite o entendimento e manutençao dos seus códigos. Utilize as práticas anteriores e evite um código do tipo:
-  </p>
-  <pre class="lang-javascript prettyprint linenums">
-  $('#botao').on('click', function(){
-  $.ajax({
-    type: "POST",
-    url: 'usuarios',
-    success: function(data){
-      $('resultado').fadeIn('fast', function(){
-	$('#formulario').animate({
-	  heigth: 0,
-	  opacity: 0
-	}, 300, function(){
-	    $('#mensagem').animate({
-	      heigth: 200,
-	      opacity: 1
-	    }, 300, function(){
-	      //etc etc
-	    })
-	  }
-	)
-      })
-    },
-    error: function(){
-      $('#mensagem').text(config.messages.success);
-    }
-  });
+	<h4>Evite muitos aninhamentos</h4>
+	<p>Facilite o entendimento e manutençao dos seus códigos. Utilize as práticas anteriores e evite um código do tipo:</p>
+
+<pre class="lang-javascript prettyprint linenums">
+$('#botao').on('click', function(){
+	$.ajax({
+		type: "POST",
+		url: 'usuarios',
+		success: function(data){
+			$('resultado').fadeIn('fast', function(){
+				$('#formulario').animate({
+				  heigth: 0,
+				  opacity: 0
+				}, 300, function(){
+				    $('#mensagem').animate({
+				      heigth: 200,
+				      opacity: 1
+				    }, 300, function(){
+				      //etc etc
+				    })
+				  }
+				)
+			})
+		},
+		error: function(){
+			$('#mensagem').text(config.messages.success);
+		}
+	});
 });
-  </pre>
+</pre>
 
-  <h4>
-    Otimize loops
-  </h4>
-  <p>
-    Existem várias maneiras de fazer loops, uma melhores que outras. Hoje, comum encontrar códigos usando loops do jquery (<code>$.each</code>) onde loops nativos poderiam resolver. Uma técnica simples para melhorar ainda mais os loops <code>for()</code> nativos é fazer cache de variáveis de comparação, evitando executar o <code>.length</code> a cada iteração.
-  </p>
-  <p>Exemplo:</p>
-  <pre class="lang-javascript prettyprint linenums">
-  // Use
-  var cores = ['Azul', 'verde', 'rosa', 'vermelho'];
-  for(var count=0, quantCores=cores.length; count < quantCores; count++){ //
-     console.log( cores[i] );
-  }
+	<h4>Otimize loops</h4>
+	<p>Existem várias maneiras de fazer loops, uma melhores que outras. Hoje, comum encontrar códigos usando loops do jquery (<code>$.each</code>) onde loops nativos poderiam resolver. Uma técnica simples para melhorar ainda mais os loops <code>for()</code> nativos é fazer cache de variáveis de comparação, evitando executar o <code>.length</code> a cada iteração.</p>
+	<p>Exemplo:</p>
 
-  // em vez de
-  var cores = ['Azul', 'verde', 'rosa', 'vermelho'];
-  for(var count=0; i < cores.length; count++){
-     console.log( cores[i]) ;
-  }
-  </pre>
-  <p>
-    Para comparação, um teste de performance no
-    <a href="http://jsperf.com/loops/111">jsperf</a>
-    analisando diversos tipos de loop. O loop otimizado, como acima, executou 159k vezes, contra 113k vezes do tradicional.
-  </p>
+<pre class="lang-javascript prettyprint linenums">
+// Use
+var cores = ['Azul', 'verde', 'rosa', 'vermelho'];
+for(var count=0, quantCores=cores.length; count < quantCores; count++){ //
+	console.log( cores[i] );
+}
 
-  <h4>
-    Minimize acessos ao DOM
-  </h4>
-  <p>
-    Evite ao máximo acessar o DOM para buscar ou inserir informações. É lento e não se pode confiar no que está no DOM. Coisas simples podem minimizar o acesso, por exemplo, se alguma função precisa atualizar uma tabela no seu HTML, em vez de percorrer <code>&lt;td&gt;</code> por <code>&lt;td&gt;</code> alterando os valores, pode ser mais eficiente criar uma função que reescreva toda a tabela, e depois simplesmente troque a antiga pela nova. Outra simples é fazer cache de objetos jQuery, por exemplo:
-  </p>
-  <pre class="lang-javascript prettyprint linenums">
-  // Em vez de
-  $('#botaoEnviar').on('click', function(){
-    $(this).prop('disabled', true);
-    $('$formulario').addClass('enviando');
-    $.post('ajax/contato', function(data) {
-      $('#mensagem').html(data);
-      $('$formulario').removeClass('enviando');
-      $('#botaoEnviar'),prop('disabled', false);
-    });
-  });
+// em vez de
+var cores = ['Azul', 'verde', 'rosa', 'vermelho'];
+for(var count=0; i < cores.length; count++){
+	console.log( cores[i]) ;
+}
+</pre>
 
-  // Faça
-  var $botaoEnviar = $('#botaoEnviar');
-  var $formulario = $('#formulario');
-  var $mensagem = $('#mensagem');
+	<p>
+		Para comparação, um teste de performance no
+		<a href="http://jsperf.com/loops/111">jsperf</a>
+		analisando diversos tipos de loop. O loop otimizado, como acima, executou 159k vezes, contra 113k vezes do tradicional.
+	</p>
 
-  $botaoEnviar.on('click', function(){
-    $botaoEnviar.prop('disabled', true);
-    $formulario.addClass('enviando');
-    $.post('ajax/contato', function(data) {
-      $mensagem.html(data);
-      $formulario.removeClass('enviando');
-      $botaoEnviar.prop('disabled', false);
-    });
-  });
-  </pre>
+	<h4>Minimize acessos ao DOM</h4>
+	<p>Evite ao máximo acessar o DOM para buscar ou inserir informações. É lento e não se pode confiar no que está no DOM. Coisas simples podem minimizar o acesso, por exemplo, se alguma função precisa atualizar uma tabela no seu HTML, em vez de percorrer <code>&lt;td&gt;</code> por <code>&lt;td&gt;</code> alterando os valores, pode ser mais eficiente criar uma função que reescreva toda a tabela, e depois simplesmente troque a antiga pela nova. Outra simples é fazer cache de objetos jQuery, por exemplo:</p>
 
-  <h4>
-	  Adicione funcionalidades com javascript, não conteúdo
-  </h4>
-  <p>
+<pre class="lang-javascript prettyprint linenums">
+// Em vez de
+$('#botaoEnviar').on('click', function(){
+	$(this).prop('disabled', true);
+	$('$formulario').addClass('enviando');
+	$.post('ajax/contato', function(data) {
+		$('#mensagem').html(data);
+		$('$formulario').removeClass('enviando');
+		$('#botaoEnviar'),prop('disabled', false);
+	});
+});
+
+// Faça
+var $botaoEnviar = $('#botaoEnviar');
+var $formulario = $('#formulario');
+var $mensagem = $('#mensagem');
+
+$botaoEnviar.on('click', function(){
+	$botaoEnviar.prop('disabled', true);
+	$formulario.addClass('enviando');
+	$.post('ajax/contato', function(data) {
+		$mensagem.html(data);
+		$formulario.removeClass('enviando');
+		$botaoEnviar.prop('disabled', false);
+	});
+});
+</pre>
+
+	<h4>Adicione funcionalidades com javascript, não conteúdo</h4>
+	<p>
 	  Se sua aplicação precisa criar e inserir muito HTML, códigos estão cheios de <code>&lt;div&gt;</code>, <code>&lt;td&gt;</code> e etc, analise e repense sua aplicação, veja se não é o caso de usar algum sistema de templates ( handlebars... ).
 	  São códigos dificeis de manter, que podem ter problemas de desempenho. Caso precise, use templates separados do JS, ou carregue HTML do back-end com AJAX.
-  </p>
+	</p>
 
-  <h4>
-	  Não reinvente a roda
-  </h4>
-  <p>
+	<h4>Não reinvente a roda</h4>
+	<p>
 	  Use bibliotecas e frameworks estáveis, que possuem estrutura conhecida.<br>
 	  Antes de inserir libraries e plugins, verifique a real necessidade, o suporte e compatibilidade.
-  </p>
+	</p>
 
-  <h4>
-	  Código de desenvolvimento não é código de produção
-  </h4>
-  <p>
+	<h4>Código de desenvolvimento não é código de produção</h4>
+	<p>
 	  Compacte, remova comentarios, concatene os javascripts antes de mandar para produção. Existem diversas ferramentas para isso, inclusive online. Tenha uma versão de desenvolvimento, normal, comentada e uma para o site em producão.
-  </p>
+	</p>
 
 </article>
