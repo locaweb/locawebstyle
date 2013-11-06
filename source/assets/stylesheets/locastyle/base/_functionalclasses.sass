@@ -45,6 +45,9 @@
 .width-inherit
   width: inherit
 
+.full-width
+  width: 100% !important
+
 .height-inherit
   height: inherit
 
@@ -143,10 +146,16 @@ table
 .no-bullet, .no-list-style
   list-style: none !important
 
-.no-style-input
+.no-style-input,
+.no-style-input:focus,
+.no-style-input:active
+  outline: none !important
   background: none !important
   border: none !important
   box-shadow: none !important
+  // padding: 0 !important
+  outline: 1px solid transparent !important
+  margin: 0 !important
 
 
 

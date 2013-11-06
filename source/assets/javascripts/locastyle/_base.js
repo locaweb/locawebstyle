@@ -124,7 +124,7 @@ var locastyle = (function() {
 
       function showWellTable() {
         // Verifica quantidade de itens checados para mostrar as opções de ação
-        if ( $tableStyle.find('td input[type="checkbox"]:checked').size() > 1 ) {
+        if ( $tableStyle.find('td input[type="checkbox"]:checked').size() >= 1 ) {
           $('[data-target="'+ $wellTableId +'"]').removeClass('hidden');
         } else {
           $('[data-target="'+ $wellTableId +'"]').addClass('hidden');
