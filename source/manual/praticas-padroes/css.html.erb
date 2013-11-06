@@ -16,6 +16,7 @@ https://github.com/necolas/idiomatic-css/
 
 	<h2>Cores</h2>
 	<p>Sempre que utilizar uma cor hexadecimal que tenha repetição de valores, use sempre o valor de atalho, assim:</p>
+
 <pre class="lang-css prettyprint linenums">
 /** Recomendado **/
 p {color: #AAA;}
@@ -25,7 +26,7 @@ p {color: #AAAAAA;}
 </pre>
 
 	<h3>RGBA</h3>
-	<p>Sempre que possível, utilize RGBA e mantenha o fallback para browsers antigos. Nós utilizamos Modernizr para que isso seja simples. Um exemplo:</p>
+	<p>Sempre que possível, utilize RGBA e mantenha o fallback para browsers antigos. Um exemplo:</p>
 
 <pre class="lang-css prettyprint linenums">
 p { color: rgba(0, 0, 0, 0.5); }
@@ -33,7 +34,8 @@ p { color: rgba(0, 0, 0, 0.5); }
 </pre>
 
 	<h2>Aspas</h2>
-	<p>Tanto no CSS quanto no HTML utilizamos ASPAS DUPLAS. Nunca aspas simples, a não ser no Javascript/JQuery.</p>
+	<p>Utilizamos ASPAS DUPLAS no CSS.</p>
+
 <pre class="lang-css prettyprint linenums">
 input[type="checkout"] { ... }
 div:after { content: " "; }
@@ -41,6 +43,7 @@ div:after { content: " "; }
 
 	<h2>Comentários</h2>
 	<p>Para uma seção:</p>
+
 <pre class="lang-css prettyprint linenums">
 /*** HEADER
 **** Header principal do site
@@ -48,12 +51,14 @@ div:after { content: " "; }
 </pre>
 
 	<p>Nunca use comentários na mesma linha da propriedade:</p>
+
 <pre class="lang-css prettyprint linenums">
 p {color: #FFF;} /** Nunca use comentários assim **/
 p {color: #FFF; /** Nunca use comentários assim **/ }
 </pre>
 
 	<p>Assim é melhor:</p>
+
 <pre class="lang-css prettyprint linenums">
 /** Assim é melhor **/
 p {
