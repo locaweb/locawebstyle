@@ -1,7 +1,11 @@
 $border-cell-color: #ddd
 $bg-actions-color:  #00a272
-$tr-hover-color:    #f8fcf0
 
+.well + .table-style
+	margin-top: -10px
+
+.well.hidden + .table-style
+	margin-top: 0
 
 .table-style
 	background-color: #fff
@@ -40,7 +44,10 @@ $tr-hover-color:    #f8fcf0
 					font-size: 1em
 
 			&:hover
-				background-color: $tr-hover-color
+				background-color: $color4
+
+			&.selected
+				background-color: darken($color4, 4%)
 
 	&.table-invert-bg
 		@extend .bg-gray4
