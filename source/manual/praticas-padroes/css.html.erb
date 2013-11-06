@@ -14,27 +14,9 @@ https://github.com/necolas/idiomatic-css/
 
 
 
-	<h2>Descrição de várias classes ou IDs</h2>
-	<p>Como tratamos vários patterns, precisamos sempre reutilizar muito código para manter a uniformidade visual dos elementos e facilitar a manutenção. Por isso, as vezes, precisamos definir o mesmo estilo para vários elementos, assim:</p>
-
-<pre class="lang-css prettyprint linenums">
-.collapseGroup summary span,
-.boxGray.listDetail a,
-.serviceName a,
-[class^="ico"],
-[class*=" ico"],
-#menuPrincipal .btMenu a,
-#menuPrincipal .parent:hover > a,
-#menuPrincipal .parent > a:hover,
-#menuPrincipal > ul > li > a:hover {
-	color: #4B7CB8;
-}
-</pre>
-
-<p>Para não ficar uma linha muito grande com vários elementos definidos, quebramos linha a cada seletor criado. Isso mantém a leitura legível e nos ajuda a identificar erros. Não se preocupe, o Ruby vai minificar todo esse código depois, por isso, ele não vai para a produção dessa forma.</p>
-
 	<h2>Cores</h2>
 	<p>Sempre que utilizar uma cor hexadecimal que tenha repetição de valores, use sempre o valor de atalho, assim:</p>
+
 <pre class="lang-css prettyprint linenums">
 /** Recomendado **/
 p {color: #AAA;}
@@ -44,7 +26,7 @@ p {color: #AAAAAA;}
 </pre>
 
 	<h3>RGBA</h3>
-	<p>Sempre que possível, utilize RGBA e mantenha o fallback para browsers antigos. Nós utilizamos Modernizr para que isso seja simples. Um exemplo:</p>
+	<p>Sempre que possível, utilize RGBA e mantenha o fallback para browsers antigos. Um exemplo:</p>
 
 <pre class="lang-css prettyprint linenums">
 p { color: rgba(0, 0, 0, 0.5); }
@@ -52,7 +34,8 @@ p { color: rgba(0, 0, 0, 0.5); }
 </pre>
 
 	<h2>Aspas</h2>
-	<p>Tanto no CSS quanto no HTML utilizamos ASPAS DUPLAS. Nunca aspas simples, a não ser no Javascript/JQuery.</p>
+	<p>Utilizamos ASPAS DUPLAS no CSS.</p>
+
 <pre class="lang-css prettyprint linenums">
 input[type="checkout"] { ... }
 div:after { content: " "; }
@@ -60,6 +43,7 @@ div:after { content: " "; }
 
 	<h2>Comentários</h2>
 	<p>Para uma seção:</p>
+
 <pre class="lang-css prettyprint linenums">
 /*** HEADER
 **** Header principal do site
@@ -67,12 +51,14 @@ div:after { content: " "; }
 </pre>
 
 	<p>Nunca use comentários na mesma linha da propriedade:</p>
+
 <pre class="lang-css prettyprint linenums">
 p {color: #FFF;} /** Nunca use comentários assim **/
 p {color: #FFF; /** Nunca use comentários assim **/ }
 </pre>
 
 	<p>Assim é melhor:</p>
+
 <pre class="lang-css prettyprint linenums">
 /** Assim é melhor **/
 p {
