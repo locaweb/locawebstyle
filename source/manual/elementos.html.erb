@@ -11,836 +11,815 @@ layout: false
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" type="text/css" href="<%= base_url + bootstrap_css %>">
 	<%= stylesheet_link_tag "locastyle" %>
-	<%= stylesheet_link_tag "manual" %>
 	<style>
-		.separator{
-			margin: 100px 0 !important;
-			clear: both;
-		}
-		[class*="title-"] {
-			margin-bottom: 20px;
-		}
+	.separator{
+		margin: 100px 0 !important;
+		clear: both;
+	}
+	[class*="title-"] {
+		margin-bottom: 20px;
+	}
 
-		.box1 {
-			display: inline-block;
-			margin-bottom: 2px;
-			padding: 5px;
-			background-color: #efefef;
-			width: 16em;
-		}
-		.toggle-markup-example {
-			margin: 25px 0;
-		}
+	.box1 {
+		display: inline-block;
+		margin-bottom: 2px;
+		padding: 5px;
+		background-color: #efefef;
+		width: 16em;
+	}
+	.toggle-markup-example {
+		margin: 25px 0;
+	}
 	</style>
 </head>
 <body>
 
-	<header class="header" role="banner">
-		<div class="container">
-			<span class="control-menu visible-xs ico-menu-2"></span>
-			<span class="control-sidebar visible-xs ico-list"></span>
-			<h1 class="project-name"><a href="#">Nome do sistema</a></h1>
-			<a href="#" class="help-sugestions ico-help-circle hidden-xs">Ajuda e Sugestões</a>
+<header class="header" role="banner">
+	<div class="container">
+		<span class="control-menu visible-xs ico-menu-2"></span>
+		<span class="control-sidebar visible-xs ico-list"></span>
+		<h1 class="project-name"><a href="#">Nome do sistema</a></h1>
+		<a href="#" class="help-sugestions ico-help-circle hidden-xs">Ajuda e Sugestões</a>
 
-			<div class="dropdown hidden-xs">
-				<a href="#" data-toggle="dropdown" class="title-dropdown">emkt2013</a>
-				<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-					<li><a href="#" role="menuitem">Option 1</a></li>
-					<li><a href="#" role="menuitem">Option 2</a></li>
-					<li><a href="#" role="menuitem">Option 3</a></li>
+		<div class="dropdown hidden-xs">
+			<a href="#" data-toggle="dropdown" class="title-dropdown">emkt2013</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li><a href="#" role="menuitem">Option 1</a></li>
+				<li><a href="#" role="menuitem">Option 2</a></li>
+				<li><a href="#" role="menuitem">Option 3</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+
+<div class="nav-content">
+	<menu class="menu">
+		<ul class="container">
+			<li><a href="#" class="active ico-home" role="menuitem">Home</a></li>
+			<li><a href="#" role="menuitem">Lista de contatos</a></li>
+			<li><a href="#" role="menuitem">Mensagens</a>
+				<ul>
+					<li><a href="#">Enviar</a></li>
+					<li><a href="#">Criar</a></li>
+					<li><a href="#">Editar</a></li>
+					<li><a href="#">Relatórios</a></li>
 				</ul>
+			</li>
+			<li><a href="#" role="menuitem">Campanhas</a></li>
+			<li><a href="#" role="menuitem">Templates</a></li>
+			<li><a href="#" role="menuitem">Relatórios</a></li>
+			<li><a href="#" role="menuitem">Configurações</a></li>
+		</ul>
+	</menu>
+	<h2 class="title-sep visible-xs">Mais</h2>
+	<ul class="nav-mob-list visible-xs">
+		<li><a href="#" class="ico-help-circle">Ajuda e sugestões</a></li>
+	</ul>
+</div>
+
+<main class="main">
+<div class="container">
+	<span class="bg-shortcut-workaround" style="height: 324px;"></span>
+
+	<div class="content" role="main">
+
+		<div class="shortcut-box">
+			<header class="header-content">
+				<h1 class="title-2">Comece a usar seu sistema aqui</h1>
+				<p class="hidden-xs">It is a long established fact that a reader will be distracted</p>
+			</header>
+			<div class="shortcuts">
+				<div class="col-md-4 col-xs-4">
+					<a href="#"><h2 class="shortcut-title ico-user">Cadastre seus contatos</h2></a>
+				</div>
+				<div class="col-md-4 col-xs-4">
+					<a href="#"><h2 class="shortcut-title ico-download">Crie e Envie mensagens</h2></a>
+				</div>
+				<div class="col-md-4 col-xs-4">
+					<a href="#"><h2 class="shortcut-title ico-flag">Acompanhe os resultados</h2></a>
+				</div>
 			</div>
 		</div>
-	</header>
 
-	<div class="nav-content">
-		<menu class="menu">
-			<ul class="container">
-				<li><a href="#" class="active ico-home" role="menuitem">Home</a></li>
-				<li><a href="#" role="menuitem">Lista de contatos</a></li>
-				<li><a href="#" role="menuitem">Mensagens</a>
-					<ul>
-						<li><a href="#">Enviar</a></li>
-						<li><a href="#">Criar</a></li>
-						<li><a href="#">Editar</a></li>
-						<li><a href="#">Relatórios</a></li>
-					</ul>
-				</li>
-				<li><a href="#" role="menuitem">Campanhas</a></li>
-				<li><a href="#" role="menuitem">Templates</a></li>
-				<li><a href="#" role="menuitem">Relatórios</a></li>
-				<li><a href="#" role="menuitem">Configurações</a></li>
-			</ul>
-		</menu>
-		<h2 class="title-sep visible-xs">Mais</h2>
-		<ul class="nav-mob-list visible-xs">
-			<li><a href="#" class="ico-help-circle">Ajuda e sugestões</a></li>
-		</ul>
-	</div>
+			<hr class="separator">
 
-	<main id="main">
-
-		<span class="bg-shortcut-workaround" style="height: 324px;"></span>
-		<div class="container content" role="main">
-
-			<div class="shortcut-box row">
-				<header class="header-content">
-					<h1 class="title-2">Comece a usar seu sistema aqui</h1>
-					<p class="hidden-xs">It is a long established fact that a reader will be distracted</p>
-				</header>
-				<div class="shortcuts">
-					<div class="col-md-4 col-xs-4">
-						<a href="#"><h2 class="shortcut-title ico-user">Cadastre seus contatos</h2></a>
+			<h2 class="title-2" id="example-progress-bar">Barra de progresso</h2>
+			<div class="element-example">
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+						<span class="sr-only">40% Complete</span>
 					</div>
-					<div class="col-md-4 col-xs-4">
-						<a href="#"><h2 class="shortcut-title ico-download">Crie e Envie mensagens</h2></a>
+				</div>
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+						<span>60% Complete</span>
 					</div>
-					<div class="col-md-4 col-xs-4">
-						<a href="#"><h2 class="shortcut-title ico-flag">Acompanhe os resultados</h2></a>
+				</div>
+				<div class="progress progress-striped active">
+					<div class="progress-bar"  role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+						<span class="sr-only">25% Complete</span>
 					</div>
 				</div>
 			</div>
 
-		<div class="container content" role="main">
+			<hr class="separator">
 
-<div class="element-example">
-	<div class="shortcut-box row">
-		<header class="header-content">
-			<h1 class="title-2">Comece aqui suas ações de marketing</h1>
-			<p class="hidden-xs">It is a long established fact that a reader will be distracted</p>
-		</header>
-		<div class="shortcuts">
-			<div class="col-md-4 col-xs-4">
-				<a href="#"><h2 class="shortcut-title ico-user">Cadastre seus contatos</h2></a>
-			</div>
-			<div class="col-md-4 col-xs-4">
-				<a href="#"><h2 class="shortcut-title ico-download">Crie e Envie mensagens</h2></a>
-			</div>
-			<div class="col-md-4 col-xs-4">
-				<a href="#"><h2 class="shortcut-title ico-flag">Acompanhe os resultados</h2></a>
-			</div>
-		</div>
-	</div>
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-progress-bar">Barra de progresso</h2>
-<div class="element-example">
-	<div class="progress">
-		<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-			<span class="sr-only">40% Complete</span>
-		</div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-			<span>60% Complete</span>
-		</div>
-	</div>
-	<div class="progress progress-striped active">
-		<div class="progress-bar"  role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
-			<span class="sr-only">25% Complete</span>
-		</div>
-	</div>
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-tooltip">Tooltips</h2>
-<p>Passe o mouse para ver:</p>
-<div class="element-example">
-	<button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Esquerda">Esquerda</button>
-	<button class="btn btn-default" data-toggle="tooltip" data-placement="top" title="em Cima">em Cima</button>
-	<button class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="em Baixo">em Baixo</button>
-	<button class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Direita">Direita</button>
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-carousel">Carousel</h2>
-
-<div class="element-example">
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-	  <!-- Indicators -->
-	  <ol class="carousel-indicators">
-	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-	  </ol>
-
-	  <!-- Wrapper for slides -->
-	  <div class="carousel-inner">
-	      <div class="item active">
-	        <img src="http://31.media.tumblr.com/6c5d3876dd9858685cc8b584503101b1/tumblr_mve3kz3WG21st5lhmo1_1280.jpg" alt="">
-	        <div class="carousel-caption">
-	          <h3>Primeiro Slide</h3>
-	        </div>
-	      </div>
-	      <div class="item">
-	        <img src="http://24.media.tumblr.com/23e3f4bb271b8bdc415275fb7061f204/tumblr_mve3rvxwaP1st5lhmo1_1280.jpg" alt="">
-	        <div class="carousel-caption">
-	          <h3>Segundo Slide</h3>
-	        </div>
-	      </div>
-	      <div class="item">
-	        <img src="http://31.media.tumblr.com/098217f18533a8971385d0c59004d810/tumblr_muuj37kqN21st5lhmo1_1280.jpg" alt="">
-	        <div class="carousel-caption">
-	          <h3>Terceiro Slide</h3>
-	        </div>
-	      </div>
-	  </div>
-
-	  <!-- Controls -->
-	  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-	    <span class="ico-direction-left"></span>
-	  </a>
-	  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-	    <span class="ico-direction-right"></span>
-	  </a>
-	</div>
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-breadcrumb">Breadcrumb</h2>
-<div class="element-example">
-	<!-- Breadcrumb com 3 itens -->
-	<ol class="breadcrumb container">
-		<li><a href="#">Início</a></li>
-		<li><a href="#">Mensagens</a></li>
-		<li class="active">Enviar</li>
-	</ol>
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-popover">Popover</h2>
-<p>Clique nos botões para ver:</p>
-
-<div class="element-example">
-	<button data-container="body" data-toggle="popover" data-placement="left" class="btn btn-default" data-content="Um texto bem legal a esquerda.">esquerda</button>
-	<button data-container="body" data-toggle="popover" data-placement="top" class="btn btn-default" data-content="Um texto bem legal em cima.">topo</button>
-	<button data-container="body" data-toggle="popover" data-placement="bottom" class="btn btn-default" data-content="Um texto bem legal em baixo.">baixo</button>
-	<button data-container="body" data-toggle="popover" data-placement="right" class="btn btn-default" data-content="Um texto bem legal a direita.">direita</button>
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-well">Boxes Genéricos</h2>
-<div class="element-example">
-	<div class="row">
-		<div class="col-md-6">
-			<div class="well well-lg">
-				Texto de exemplo
-			</div>
-			<div class="well well-sm">
-				Texto de exemplo
+			<h2 class="title-2" id="example-tooltip">Tooltips</h2>
+			<p>Passe o mouse para ver:</p>
+			<div class="element-example">
+				<button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Esquerda">Esquerda</button>
+				<button class="btn btn-default" data-toggle="tooltip" data-placement="top" title="em Cima">em Cima</button>
+				<button class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="em Baixo">em Baixo</button>
+				<button class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Direita">Direita</button>
 			</div>
 
-		</div>
-		<div class="col-md-6">
+			<hr class="separator">
 
-			<div class="well well-lg no-bg">
-				Texto de exemplo
-			</div>
-			<div class="well well-sm no-bg">
-				Texto de exemplo
-			</div>
-		</div>
+			<h2 class="title-2" id="example-carousel">Carousel</h2>
 
-		<div class="col-md-6">
-			<div class="well arrow-up">
-			texto
-			</div>
-		</div>
-		<div class="col-md-6">
-			<div class="well arrow-up no-bg">
-			texto
-			</div>
-		</div>
-	</div>
+			<div class="element-example">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
 
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-tabs">Abas</h2>
-<div class="element-example">
-	<ul class="nav nav-tabs">
-		<li><a href="#home" data-toggle="tab">Home</a></li>
-		<li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
-	</ul>
-
-	<div class="tab-content">
-		<div class="tab-pane" id="home">
-			<p><strong>HOME</strong>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-		</div>
-		<div class="tab-pane active in" id="profile">
-			<p><strong>PROFILE</strong>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-		</div>
-	</div>
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-tables">Tabela</h2>
-	<div class="element-example">
-	<div class="well hidden well-sm clearfix" data-target="tabela1">
-		<p class="d-inline-block">
-			<strong class="counterChecks">0</strong> itens selecionados
-		</p>
-		<div class="actions">
-			<div class="btn-group">
-				<button type="button" class="btn btn-default">Duplicar</button>
-				<a href="#" class="btn btn-default">Relatorio</a>
-				<a href="#" class="btn btn-default">Arquivar</a>
-			</div>
-			<button type="button" class="btn btn-danger">Excluir</button>
-		</div>
-	</div>
-	<table class="table table-style" id="tabela1">
-		<thead>
-			<tr>
-				<th class="txt-center"><input type="checkbox"></th>
-				<th>Título</th>
-				<th class="hidden-xs">Campanha</th>
-				<th>Status</th>
-				<th class="hidden-xs">Data de envio</th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			<%- 4.times do |i| %>
-			<tr>
-				<td class="txt-center"><input type="checkbox"></td>
-				<td><a href="" title="">Mensagem Teste Locastyle <%= i %></a></td>
-				<td class="hidden-xs">Campanha <%= i %></td>
-				<td>Enviada</td>
-				<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-				<td>
-					<div class="table-actions ico-grid">
-						<ul class="ico-grid">
-							<li><a href="#">Duplicar</a></li>
-							<li><a href="#">Relatório</a></li>
-							<li><a href="#">Arquivar</a></li>
-						</ul>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="http://31.media.tumblr.com/6c5d3876dd9858685cc8b584503101b1/tumblr_mve3kz3WG21st5lhmo1_1280.jpg" alt="">
+							<div class="carousel-caption">
+								<h3>Primeiro Slide</h3>
+							</div>
+						</div>
+						<div class="item">
+							<img src="http://24.media.tumblr.com/23e3f4bb271b8bdc415275fb7061f204/tumblr_mve3rvxwaP1st5lhmo1_1280.jpg" alt="">
+							<div class="carousel-caption">
+								<h3>Segundo Slide</h3>
+							</div>
+						</div>
+						<div class="item">
+							<img src="http://31.media.tumblr.com/098217f18533a8971385d0c59004d810/tumblr_muuj37kqN21st5lhmo1_1280.jpg" alt="">
+							<div class="carousel-caption">
+								<h3>Terceiro Slide</h3>
+							</div>
+						</div>
 					</div>
-				</td>
-			</tr>
-			<% end %>
-		</tbody>
-	</table>
-</div>
 
-<hr class="separator">
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+						<span class="ico-direction-left"></span>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+						<span class="ico-direction-right"></span>
+					</a>
+				</div>
+			</div>
 
-<h2 class="title-2" id="example-collapse">Collapses</h2>
-<div class="element-example">
-	<div class="collapse-box">
-		<div class="panel-heading">
-			<span data-toggle="collapse" data-target="#collapseOne">
-				<h4 class="panel-title">Exemplo de layout com formulário</h4>
-				<p>Você pode colocar formulários da maneira que quiser aqui dentro.</p>
-			</span>
-		</div>
-		<div id="collapseOne" class="panel-collapse collapse">
-			<div class="panel-body">
-				<p>Um formulário de cadastro:</p>
+			<hr class="separator">
+
+			<h2 class="title-2" id="example-breadcrumb">Breadcrumb</h2>
+			<div class="element-example">
+				<!-- Breadcrumb com 3 itens -->
+				<ol class="breadcrumb container">
+					<li><a href="#">Início</a></li>
+					<li><a href="#">Mensagens</a></li>
+					<li class="active">Enviar</li>
+				</ol>
+			</div>
+
+			<hr class="separator">
+
+			<h2 class="title-2" id="example-popover">Popover</h2>
+			<p>Clique nos botões para ver:</p>
+
+			<div class="element-example">
+				<button data-container="body" data-toggle="popover" data-placement="left" class="btn btn-default" data-content="Um texto bem legal a esquerda.">esquerda</button>
+				<button data-container="body" data-toggle="popover" data-placement="top" class="btn btn-default" data-content="Um texto bem legal em cima.">topo</button>
+				<button data-container="body" data-toggle="popover" data-placement="bottom" class="btn btn-default" data-content="Um texto bem legal em baixo.">baixo</button>
+				<button data-container="body" data-toggle="popover" data-placement="right" class="btn btn-default" data-content="Um texto bem legal a direita.">direita</button>
+			</div>
+
+			<hr class="separator">
+
+			<h2 class="title-2" id="example-well">Boxes Genéricos</h2>
+			<div class="element-example">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="well well-lg">
+							Texto de exemplo
+						</div>
+						<div class="well well-sm">
+							Texto de exemplo
+						</div>
+
+					</div>
+					<div class="col-md-6">
+
+						<div class="well well-lg no-bg">
+							Texto de exemplo
+						</div>
+						<div class="well well-sm no-bg">
+							Texto de exemplo
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="well arrow-up">
+							texto
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="well arrow-up no-bg">
+							texto
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<hr class="separator">
+
+			<h2 class="title-2" id="example-tabs">Abas</h2>
+			<div class="element-example">
+				<ul class="nav nav-tabs">
+					<li><a href="#home" data-toggle="tab">Home</a></li>
+					<li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane" id="home">
+						<p><strong>HOME</strong>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+					</div>
+					<div class="tab-pane active in" id="profile">
+						<p><strong>PROFILE</strong>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+					</div>
+				</div>
+			</div>
+
+			<hr class="separator">
+
+			<h2 class="title-2" id="example-tables">Tabela</h2>
+			<div class="element-example">
+				<div class="well hidden well-sm clearfix" data-target="tabela1">
+					<p class="d-inline-block">
+						<strong class="counterChecks">0</strong> itens selecionados
+					</p>
+					<div class="actions">
+						<div class="btn-group">
+							<button type="button" class="btn btn-default">Duplicar</button>
+							<a href="#" class="btn btn-default">Relatorio</a>
+							<a href="#" class="btn btn-default">Arquivar</a>
+						</div>
+						<button type="button" class="btn btn-danger">Excluir</button>
+					</div>
+				</div>
+				<table class="table table-style" id="tabela1">
+					<thead>
+						<tr>
+							<th class="txt-center"><input type="checkbox"></th>
+							<th>Título</th>
+							<th class="hidden-xs">Campanha</th>
+							<th>Status</th>
+							<th class="hidden-xs">Data de envio</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<%- 4.times do |i| %>
+						<tr>
+							<td class="txt-center"><input type="checkbox"></td>
+							<td><a href="" title="">Mensagem Teste Locastyle <%= i %></a></td>
+							<td class="hidden-xs">Campanha <%= i %></td>
+							<td>Enviada</td>
+							<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+							<td>
+								<div class="table-actions ico-grid">
+									<ul class="ico-grid">
+										<li><a href="#">Duplicar</a></li>
+										<li><a href="#">Relatório</a></li>
+										<li><a href="#">Arquivar</a></li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+
+			<hr class="separator">
+
+			<h2 class="title-2" id="example-collapse">Collapses</h2>
+			<div class="element-example">
+				<div class="collapse-box">
+					<div class="panel-heading">
+						<span data-toggle="collapse" data-target="#collapseOne">
+							<h4 class="panel-title">Exemplo de layout com formulário</h4>
+							<p>Você pode colocar formulários da maneira que quiser aqui dentro.</p>
+						</span>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>Um formulário de cadastro:</p>
+							<form role="form">
+								<fieldset>
+									<div class="row">
+										<div class="form-group col-lg-4">
+											<label for="">Campo simples</label>
+											<input type="text" class="form-control" id="" placeholder="Insira seu texto aqui">
+										</div>
+										<div class="form-group col-lg-8">
+											<label for="">Campo simples</label>
+											<input type="text" class="form-control" id="" placeholder="Insira seu texto aqui">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-lg-6">
+											<label for="">Seletor</label>
+											<select class="form-control">
+												<option value="">Selecione algo</option>
+												<option value="">Opção 1</option>
+												<option value="">Opção 2</option>
+											</select>
+										</div>
+										<div class="form-group col-lg-6">
+											<label for="">Seletor</label>
+											<select class="form-control">
+												<option value="">Selecione algo</option>
+												<option value="">Opção 1</option>
+												<option value="">Opção 2</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-lg-3">
+											<label for="">Senha</label>
+											<input type="password" class="form-control" id="" placeholder="senha">
+										</div>
+										<div class="form-group col-lg-6">
+											<label for="">Email</label>
+											<input type="email" class="form-control" id="" placeholder="Insira seu emai aqui">
+										</div>
+										<div class="form-group col-lg-3">
+											<label for="">Data</label>
+											<input type="date" class="form-control" id="" placeholder="Insira seu emai aqui">
+										</div>
+									</div>
+									<div class="box-actions">
+										<button type="submit" class="btn btn-primary">Enviar</button>
+										<button class="btn btn-danger">Cancelar</button>
+									</div>
+								</fieldset>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="element-example">
+				<div class="collapse-box">
+					<div class="panel-heading">
+						<a data-toggle="collapse" href="#collapseTwo">
+							<h4 class="panel-title">Um exemplo simples com texto</h4>
+							<p>Se tiver só texto, o negócio funciona que é uma beleza.</p>
+						</a>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body">
+							<h3>Fernando Pessoa</h3>
+							<p>
+								Batatinha quando nasce espalha a rama pelo chão. Menininha quando dorme põe a mão no coração. Sou pequenininha do tamanho de um botão, carrego papai no bolso e mamãe no coração. O bolso furou e o papai caiu no chão. Mamãe que é mais querida ficou no coração.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr class="separator">
+
+			<h2 class="title-2" id="example-alerts">Alertas</h2>
+			<div class="element-example">
+				<div class="alert alert-success"><p><strong>Sucesso!</strong> Você conseguiu, parabéns!</p></div>
+				<div class="alert alert-info"><p><strong>Atenção:</strong> você tem informações importantes para ler.</p></div>
+				<div class="alert alert-warning"><p><strong>Cuidado:</strong> cheque duas vezes. Você pode ter esquecido alguma informação. <a href="#">Veja mais detalhes aqui</a> </p></div>
+				<div class="alert alert-danger"><p><strong>Mórreu:</strong> Algo muito ruim aconteceu e você vai precisar refazer tudo.</p></div>
+			</div>
+
+			<hr class="separator">
+
+			<h2 class="title-2" id="example-forms">Formulário</h2>
+			<div class="element-example">
 				<form role="form">
 					<fieldset>
-						<div class="row">
-							<div class="form-group col-lg-4">
-								<label for="">Campo simples</label>
-								<input type="text" class="form-control" id="" placeholder="Insira seu texto aqui">
-							</div>
-							<div class="form-group col-lg-8">
-								<label for="">Campo simples</label>
-								<input type="text" class="form-control" id="" placeholder="Insira seu texto aqui">
-							</div>
+						<div class="form-group">
+							<label for="ipt1">Campo simples</label>
+							<input type="email" class="form-control" id="ipt1" placeholder="Insira seu texto aqui">
+							<p class="help-block">Exemplo de texto de ajuda.</p>
 						</div>
-						<div class="row">
-							<div class="form-group col-lg-6">
-								<label for="">Seletor</label>
-								<select class="form-control">
-									<option value="">Selecione algo</option>
-									<option value="">Opção 1</option>
-									<option value="">Opção 2</option>
-								</select>
-							</div>
-							<div class="form-group col-lg-6">
-								<label for="">Seletor</label>
-								<select class="form-control">
-									<option value="">Selecione algo</option>
-									<option value="">Opção 1</option>
-									<option value="">Opção 2</option>
-								</select>
-							</div>
+						<div class="form-group">
+							<label for="exampleSelect">Seletor</label>
+							<select id="exampleSelect" class="form-control">
+								<option value="">Escolha uma opção</option>
+								<option value="">Isso mesmo :D</option>
+							</select>
 						</div>
-						<div class="row">
-							<div class="form-group col-lg-3">
-								<label for="">Senha</label>
-								<input type="password" class="form-control" id="" placeholder="senha">
-							</div>
-							<div class="form-group col-lg-6">
-								<label for="">Email</label>
-								<input type="email" class="form-control" id="" placeholder="Insira seu emai aqui">
-							</div>
-							<div class="form-group col-lg-3">
-								<label for="">Data</label>
-								<input type="date" class="form-control" id="" placeholder="Insira seu emai aqui">
-							</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Campo de senha</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputFile">Campo para envio de arquivo</label>
+							<input type="file" id="exampleInputFile">
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" id="checkbox-1">
+							<label for="checkbox-1">Marque aqui</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" id="checkbox-2">
+							<label for="checkbox-2">Marque aqui</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" id="checkbox-3">
+							<label for="checkbox-3">Marque aqui</label>
+						</div>
+						<div class="radio">
+							<input name="radios" type="radio" id="radio-button-1">
+							<label for="radio-button-1">Ou aqui</label>
+						</div>
+						<div class="radio">
+							<input name="radios" type="radio" id="radio-button-2">
+							<label for="radio-button-2">Ou aqui</label>
+						</div>
+						<div class="radio">
+							<input name="radios" type="radio" id="radio-button-3">
+							<label for="radio-button-3">Ou aqui</label>
 						</div>
 						<div class="box-actions">
 							<button type="submit" class="btn btn-primary">Enviar</button>
-							<button class="btn btn-danger">Cancelar</button>
 						</div>
 					</fieldset>
 				</form>
-
 			</div>
+
+			<hr class="separator">
+
+			<h2 class="title-2" id="example-formshor">Formulários horizontais</h2>
+			<div class="element-example">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
+						<div class="col-lg-10">
+							<input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword1" class="col-lg-2 control-label">Senha</label>
+						<div class="col-lg-10">
+							<input type="password" class="form-control" id="inputPassword1" placeholder="Senha">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-lg-offset-2 col-lg-10">
+							<div class="checkbox">
+								<input type="checkbox" id="checkbox-x">
+								<label for="checkbox-x">Me manter conectado</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-lg-offset-2 col-lg-10">
+							<button type="submit" class="btn btn-primary">Entrar</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<hr class="separator">
+
+			<h2 class="title-2" id="example-forms-line">Formulários em linha</h2>
+			<div class="element-example">
+				<form class="form-inline" role="form">
+					<div class="form-group">
+						<label class="sr-only" for="exampleInputEmail2">Endereço de email</label>
+						<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Digite seu email">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="exampleInputPassword2">Senha</label>
+						<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Senha">
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="checkbox-y">
+						<label for="checkbox-y">Me manter conectado</label>
+					</div>
+					<button type="submit" class="btn btn-primary">Entrar</button>
+				</form>
+			</div>
+
+			<hr class="separator">
+
+			<h2 class="title-2" id="example-buttons">Botões</h2>
+			<div class="element-example">
+				<button type="button" class="btn btn-xs btn-default">Default</button>
+				<button type="button" class="btn btn-xs btn-primary">Primary</button>
+				<button type="button" class="btn btn-xs btn-success">Success</button>
+				<button type="button" class="btn btn-xs btn-info">Info</button>
+				<button type="button" class="btn btn-xs btn-warning">Warning</button>
+				<button type="button" class="btn btn-xs btn-danger">Danger</button>
+				<br>
+				<br>
+				<button type="button" class="btn btn-sm btn-default">Default</button>
+				<button type="button" class="btn btn-sm btn-primary">Primary</button>
+				<button type="button" class="btn btn-sm btn-success">Success</button>
+				<button type="button" class="btn btn-sm btn-info">Info</button>
+				<button type="button" class="btn btn-sm btn-warning">Warning</button>
+				<button type="button" class="btn btn-sm btn-danger">Danger</button>
+				<br>
+				<br>
+				<button type="button" class="btn btn-default">Default</button>
+				<button type="button" class="btn btn-primary">Primary</button>
+				<button type="button" class="btn btn-success">Success</button>
+				<button type="button" class="btn btn-info">Info</button>
+				<button type="button" class="btn btn-warning">Warning</button>
+				<button type="button" class="btn btn-danger">Danger</button>
+				<br>
+				<br>
+				<button type="button" class="btn btn-lg btn-default">Default</button>
+				<button type="button" class="btn btn-lg btn-primary">Primary</button>
+				<button type="button" class="btn btn-lg btn-success">Success</button>
+				<button type="button" class="btn btn-lg btn-info">Info</button>
+				<button type="button" class="btn btn-lg btn-warning">Warning</button>
+				<button type="button" class="btn btn-lg btn-danger">Danger</button>
+			</div>
+
+
+			<hr class="separator">
+
+			<h2 class="title-2" id="example-label">Label ou Tags</h2>
+			<div class="element-example">
+				<span class="label label-default">Default</span>
+				<span class="label label-primary">Primary</span>
+				<span class="label label-success">Success</span>
+				<span class="label label-info">Info</span>
+				<span class="label label-warning">Warning</span>
+				<span class="label label-danger">Danger</span>
+			</div>
+
+			<hr class="separator">
+
+			<h2 class="title-2" id="example-icons">Ícones</h2>
+			<div class="element-example">
+				<span aria-hidden="true" class="ico-home"></span> &nbsp;ico-home
+			</div>
+			<span class="box1"><span aria-hidden="true" class="ico-home"></span>&nbsp;ico-home </span>
+			<span class="box1"><span aria-hidden="true" class="ico-pencil"></span> &nbsp;ico-pencil </span>
+			<span class="box1"><span aria-hidden="true" class="ico-image"></span> &nbsp;ico-image </span>
+			<span class="box1"><span aria-hidden="true" class="ico-images"></span> &nbsp;ico-images </span>
+			<span class="box1"><span aria-hidden="true" class="ico-calendar"></span> &nbsp;ico-calendar </span>
+			<span class="box1"><span aria-hidden="true" class="ico-camera"></span> &nbsp;ico-camera </span>
+			<span class="box1"><span aria-hidden="true" class="ico-music"></span> &nbsp;ico-music </span>
+			<span class="box1"><span aria-hidden="true" class="ico-play"></span> &nbsp;ico-play </span>
+			<span class="box1"><span aria-hidden="true" class="ico-feed"></span> &nbsp;ico-feed </span>
+			<span class="box1"><span aria-hidden="true" class="ico-podcast"></span> &nbsp;ico-podcast </span>
+			<span class="box1"><span aria-hidden="true" class="ico-book"></span> &nbsp;ico-book </span>
+			<span class="box1"><span aria-hidden="true" class="ico-folder"></span> &nbsp;ico-folder </span>
+			<span class="box1"><span aria-hidden="true" class="ico-folder-open"></span> &nbsp;ico-folder-open </span>
+			<span class="box1"><span aria-hidden="true" class="ico-tag"></span> &nbsp;ico-tag </span>
+			<span class="box1"><span aria-hidden="true" class="ico-cart"></span> &nbsp;ico-cart </span>
+			<span class="box1"><span aria-hidden="true" class="ico-phone"></span> &nbsp;ico-phone </span>
+			<span class="box1"><span aria-hidden="true" class="ico-address-book"></span> &nbsp;ico-address-book </span>
+			<span class="box1"><span aria-hidden="true" class="ico-envelop"></span> &nbsp;ico-envelop </span>
+			<span class="box1"><span aria-hidden="true" class="ico-location"></span> &nbsp;ico-location </span>
+			<span class="box1"><span aria-hidden="true" class="ico-history"></span> &nbsp;ico-history </span>
+			<span class="box1"><span aria-hidden="true" class="ico-clock"></span> &nbsp;ico-clock </span>
+			<span class="box1"><span aria-hidden="true" class="ico-screen"></span> &nbsp;ico-screen </span>
+			<span class="box1"><span aria-hidden="true" class="ico-mobile"></span> &nbsp;ico-mobile </span>
+			<span class="box1"><span aria-hidden="true" class="ico-tablet"></span> &nbsp;ico-tablet </span>
+			<span class="box1"><span aria-hidden="true" class="ico-drawer"></span> &nbsp;ico-drawer </span>
+			<span class="box1"><span aria-hidden="true" class="ico-drawer-2"></span> &nbsp;ico-drawer-2 </span>
+			<span class="box1"><span aria-hidden="true" class="ico-drawer-3"></span> &nbsp;ico-drawer-3 </span>
+			<span class="box1"><span aria-hidden="true" class="ico-box-add"></span> &nbsp;ico-box-add </span>
+			<span class="box1"><span aria-hidden="true" class="ico-box-remove"></span> &nbsp;ico-box-remove </span>
+			<span class="box1"><span aria-hidden="true" class="ico-download"></span> &nbsp;ico-download </span>
+			<span class="box1"><span aria-hidden="true" class="ico-upload"></span> &nbsp;ico-upload </span>
+			<span class="box1"><span aria-hidden="true" class="ico-undo"></span> &nbsp;ico-undo </span>
+			<span class="box1"><span aria-hidden="true" class="ico-redo"></span> &nbsp;ico-redo </span>
+			<span class="box1"><span aria-hidden="true" class="ico-undo-2"></span> &nbsp;ico-undo-2 </span>
+			<span class="box1"><span aria-hidden="true" class="ico-redo-2"></span> &nbsp;ico-redo-2 </span>
+			<span class="box1"><span aria-hidden="true" class="ico-forward"></span> &nbsp;ico-forward </span>
+			<span class="box1"><span aria-hidden="true" class="ico-reply"></span> &nbsp;ico-reply </span>
+			<span class="box1"><span aria-hidden="true" class="ico-bubble"></span> &nbsp;ico-bubble </span>
+			<span class="box1"><span aria-hidden="true" class="ico-bubbles"></span> &nbsp;ico-bubbles </span>
+			<span class="box1"><span aria-hidden="true" class="ico-bubbles-2"></span>&nbsp;ico-bubbles-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-user"></span>&nbsp;ico-user</span>
+			<span class="box1"><span aria-hidden="true" class="ico-users"></span>&nbsp;ico-users</span>
+			<span class="box1"><span aria-hidden="true" class="ico-spinner"></span>&nbsp;ico-spinner</span>
+			<span class="box1"><span aria-hidden="true" class="ico-search"></span>&nbsp;ico-search</span>
+			<span class="box1"><span aria-hidden="true" class="ico-zoom-in"></span>&nbsp;ico-zoom-in</span>
+			<span class="box1"><span aria-hidden="true" class="ico-zoom-out"></span>&nbsp;ico-zoom-out</span>
+			<span class="box1"><span aria-hidden="true" class="ico-expand"></span>&nbsp;ico-expand</span>
+			<span class="box1"><span aria-hidden="true" class="ico-contract"></span>&nbsp;ico-contract</span>
+			<span class="box1"><span aria-hidden="true" class="ico-expand-2"></span>&nbsp;ico-expand-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-contract-2"></span>&nbsp;ico-contract-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-key"></span>&nbsp;ico-key</span>
+			<span class="box1"><span aria-hidden="true" class="ico-cogs"></span>&nbsp;ico-cogs</span>
+			<span class="box1"><span aria-hidden="true" class="ico-cog"></span>&nbsp;ico-cog</span>
+			<span class="box1"><span aria-hidden="true" class="ico-stats"></span>&nbsp;ico-stats</span>
+			<span class="box1"><span aria-hidden="true" class="ico-bars"></span>&nbsp;ico-bars</span>
+			<span class="box1"><span aria-hidden="true" class="ico-remove"></span>&nbsp;ico-remove</span>
+			<span class="box1"><span aria-hidden="true" class="ico-airplane"></span>&nbsp;ico-airplane</span>
+			<span class="box1"><span aria-hidden="true" class="ico-truck"></span>&nbsp;ico-truck</span>
+			<span class="box1"><span aria-hidden="true" class="ico-list"></span>&nbsp;ico-list</span>
+			<span class="box1"><span aria-hidden="true" class="ico-numbered-list"></span>&nbsp;ico-numbered-list</span>
+			<span class="box1"><span aria-hidden="true" class="ico-menu"></span>&nbsp;ico-menu</span>
+			<span class="box1"><span aria-hidden="true" class="ico-menu-2"></span>&nbsp;ico-menu-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-tree"></span>&nbsp;ico-tree</span>
+			<span class="box1"><span aria-hidden="true" class="ico-cloud"></span>&nbsp;ico-cloud</span>
+			<span class="box1"><span aria-hidden="true" class="ico-cloud-download"></span>&nbsp;ico-cloud-download</span>
+			<span class="box1"><span aria-hidden="true" class="ico-cloud-upload"></span>&nbsp;ico-cloud-upload</span>
+			<span class="box1"><span aria-hidden="true" class="ico-download-2"></span>&nbsp;ico-download-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-upload-2"></span>&nbsp;ico-upload-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-download-3"></span>&nbsp;ico-download-3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-upload-3"></span>&nbsp;ico-upload-3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-globe"></span>&nbsp;ico-globe</span>
+			<span class="box1"><span aria-hidden="true" class="ico-earth"></span>&nbsp;ico-earth</span>
+			<span class="box1"><span aria-hidden="true" class="ico-link"></span>&nbsp;ico-link</span>
+			<span class="box1"><span aria-hidden="true" class="ico-flag"></span>&nbsp;ico-flag</span>
+			<span class="box1"><span aria-hidden="true" class="ico-attachment"></span>&nbsp;ico-attachment</span>
+			<span class="box1"><span aria-hidden="true" class="ico-eye-blocked"></span>&nbsp;ico-eye-blocked</span>
+			<span class="box1"><span aria-hidden="true" class="ico-eye"></span>&nbsp;ico-eye</span>
+			<span class="box1"><span aria-hidden="true" class="ico-bookmark"></span>&nbsp;ico-bookmark</span>
+			<span class="box1"><span aria-hidden="true" class="ico-brightness-medium"></span>&nbsp;ico-brightness-medium</span>
+			<span class="box1"><span aria-hidden="true" class="ico-brightness-contrast"></span>&nbsp;ico-brightness-contrast</span>
+			<span class="box1"><span aria-hidden="true" class="ico-contrast"></span>&nbsp;ico-contrast</span>
+			<span class="box1"><span aria-hidden="true" class="ico-star"></span>&nbsp;ico-star</span>
+			<span class="box1"><span aria-hidden="true" class="ico-star-2"></span>&nbsp;ico-star-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-star-3"></span>&nbsp;ico-star-3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-thumbs-up"></span>&nbsp;ico-thumbs-up</span>
+			<span class="box1"><span aria-hidden="true" class="ico-thumbs-up-2"></span>&nbsp;ico-thumbs-up-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-minus"></span>&nbsp;ico-minus</span>
+			<span class="box1"><span aria-hidden="true" class="ico-plus"></span>&nbsp;ico-plus</span>
+			<span class="box1"><span aria-hidden="true" class="ico-enter"></span>&nbsp;ico-enter</span>
+			<span class="box1"><span aria-hidden="true" class="ico-exit"></span>&nbsp;ico-exit</span>
+			<span class="box1"><span aria-hidden="true" class="ico-cancel-circle"></span>&nbsp;ico-cancel-circle</span>
+			<span class="box1"><span aria-hidden="true" class="ico-checkmark-circle"></span>&nbsp;ico-checkmark-circle</span>
+			<span class="box1"><span aria-hidden="true" class="ico-spam"></span>&nbsp;ico-spam</span>
+			<span class="box1"><span aria-hidden="true" class="ico-close"></span>&nbsp;ico-close</span>
+			<span class="box1"><span aria-hidden="true" class="ico-checkmark"></span>&nbsp;ico-checkmark</span>
+			<span class="box1"><span aria-hidden="true" class="ico-info"></span>&nbsp;ico-info</span>
+			<span class="box1"><span aria-hidden="true" class="ico-blocked"></span>&nbsp;ico-blocked</span>
+			<span class="box1"><span aria-hidden="true" class="ico-play-2"></span>&nbsp;ico-play-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-play-3"></span>&nbsp;ico-play-3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-pause"></span>&nbsp;ico-pause</span>
+			<span class="box1"><span aria-hidden="true" class="ico-stop"></span>&nbsp;ico-stop</span>
+			<span class="box1"><span aria-hidden="true" class="ico-backward"></span>&nbsp;ico-backward</span>
+			<span class="box1"><span aria-hidden="true" class="ico-forward-2"></span>&nbsp;ico-forward-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-first"></span>&nbsp;ico-first</span>
+			<span class="box1"><span aria-hidden="true" class="ico-last"></span>&nbsp;ico-last</span>
+			<span class="box1"><span aria-hidden="true" class="ico-previous"></span>&nbsp;ico-previous</span>
+			<span class="box1"><span aria-hidden="true" class="ico-next"></span>&nbsp;ico-next</span>
+			<span class="box1"><span aria-hidden="true" class="ico-eject"></span>&nbsp;ico-eject</span>
+			<span class="box1"><span aria-hidden="true" class="ico-volume-high"></span>&nbsp;ico-volume-high</span>
+			<span class="box1"><span aria-hidden="true" class="ico-volume-medium"></span>&nbsp;ico-volume-medium</span>
+			<span class="box1"><span aria-hidden="true" class="ico-volume-low"></span>&nbsp;ico-volume-low</span>
+			<span class="box1"><span aria-hidden="true" class="ico-volume-mute"></span>&nbsp;ico-volume-mute</span>
+			<span class="box1"><span aria-hidden="true" class="ico-volume-mute-2"></span>&nbsp;ico-volume-mute-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-volume-increase"></span>&nbsp;ico-volume-increase</span>
+			<span class="box1"><span aria-hidden="true" class="ico-volume-decrease"></span>&nbsp;ico-volume-decrease</span>
+			<span class="box1"><span aria-hidden="true" class="ico-loop"></span>&nbsp;ico-loop</span>
+			<span class="box1"><span aria-hidden="true" class="ico-loop-2"></span>&nbsp;ico-loop-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-loop-3"></span>&nbsp;ico-loop-3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-shuffle"></span>&nbsp;ico-shuffle</span>
+			<span class="box1"><span aria-hidden="true" class="ico-arrow-up"></span>&nbsp;ico-arrow-up</span>
+			<span class="box1"><span aria-hidden="true" class="ico-arrow-right"></span>&nbsp;ico-arrow-right</span>
+			<span class="box1"><span aria-hidden="true" class="ico-arrow-down"></span>&nbsp;ico-arrow-down</span>
+			<span class="box1"><span aria-hidden="true" class="ico-arrow-left"></span>&nbsp;ico-arrow-left</span>
+			<span class="box1"><span aria-hidden="true" class="ico-tab"></span>&nbsp;ico-tab</span>
+			<span class="box1"><span aria-hidden="true" class="ico-checkbox-checked"></span>&nbsp;ico-checkbox-checked</span>
+			<span class="box1"><span aria-hidden="true" class="ico-checkbox-partial"></span>&nbsp;ico-checkbox-partial</span>
+			<span class="box1"><span aria-hidden="true" class="ico-checkbox-unchecked"></span>&nbsp;ico-checkbox-unchecked</span>
+			<span class="box1"><span aria-hidden="true" class="ico-radio-checked"></span>&nbsp;ico-radio-checked</span>
+			<span class="box1"><span aria-hidden="true" class="ico-radio-unchecked"></span>&nbsp;ico-radio-unchecked</span>
+			<span class="box1"><span aria-hidden="true" class="ico-table"></span>&nbsp;ico-table</span>
+			<span class="box1"><span aria-hidden="true" class="ico-insert-template"></span>&nbsp;ico-insert-template</span>
+			<span class="box1"><span aria-hidden="true" class="ico-code"></span>&nbsp;ico-code</span>
+			<span class="box1"><span aria-hidden="true" class="ico-google"></span>&nbsp;ico-google</span>
+			<span class="box1"><span aria-hidden="true" class="ico-google-plus"></span>&nbsp;ico-google-plus</span>
+			<span class="box1"><span aria-hidden="true" class="ico-google-plus-2"></span>&nbsp;ico-google-plus-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-google-plus-3"></span>&nbsp;ico-google-plus-3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-google-plus-4"></span>&nbsp;ico-google-plus-4</span>
+			<span class="box1"><span aria-hidden="true" class="ico-google-drive"></span>&nbsp;ico-google-drive</span>
+			<span class="box1"><span aria-hidden="true" class="ico-facebook"></span>&nbsp;ico-facebook</span>
+			<span class="box1"><span aria-hidden="true" class="ico-facebook-2"></span>&nbsp;ico-facebook-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-facebook-3"></span>&nbsp;ico-facebook-3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-instagram"></span>&nbsp;ico-instagram</span>
+			<span class="box1"><span aria-hidden="true" class="ico-twitter"></span>&nbsp;ico-twitter</span>
+			<span class="box1"><span aria-hidden="true" class="ico-twitter-2"></span>&nbsp;ico-twitter-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-twitter-3"></span>&nbsp;ico-twitter-3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-feed-2"></span>&nbsp;ico-feed-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-feed-3"></span>&nbsp;ico-feed-3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-feed-4"></span>&nbsp;ico-feed-4</span>
+			<span class="box1"><span aria-hidden="true" class="ico-youtube"></span>&nbsp;ico-youtube</span>
+			<span class="box1"><span aria-hidden="true" class="ico-youtube-2"></span>&nbsp;ico-youtube-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-vimeo"></span>&nbsp;ico-vimeo</span>
+			<span class="box1"><span aria-hidden="true" class="ico-vimeo2"></span>&nbsp;ico-vimeo2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-vimeo-2"></span>&nbsp;ico-vimeo-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-flickr"></span>&nbsp;ico-flickr</span>
+			<span class="box1"><span aria-hidden="true" class="ico-flickr-2"></span>&nbsp;ico-flickr-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-flickr-3"></span>&nbsp;ico-flickr-3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-flickr-4"></span>&nbsp;ico-flickr-4</span>
+			<span class="box1"><span aria-hidden="true" class="ico-picassa"></span>&nbsp;ico-picassa</span>
+			<span class="box1"><span aria-hidden="true" class="ico-picassa-2"></span>&nbsp;ico-picassa-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-dribbble"></span>&nbsp;ico-dribbble</span>
+			<span class="box1"><span aria-hidden="true" class="ico-dribbble-2"></span>&nbsp;ico-dribbble-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-dribbble-3"></span>&nbsp;ico-dribbble-3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-lanyrd"></span>&nbsp;ico-lanyrd</span>
+			<span class="box1"><span aria-hidden="true" class="ico-forrst"></span>&nbsp;ico-forrst</span>
+			<span class="box1"><span aria-hidden="true" class="ico-forrst-2"></span>&nbsp;ico-forrst-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-deviantart"></span>&nbsp;ico-deviantart</span>
+			<span class="box1"><span aria-hidden="true" class="ico-deviantart-2"></span>&nbsp;ico-deviantart-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-steam"></span>&nbsp;ico-steam</span>
+			<span class="box1"><span aria-hidden="true" class="ico-steam-2"></span>&nbsp;ico-steam-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-github"></span>&nbsp;ico-github</span>
+			<span class="box1"><span aria-hidden="true" class="ico-github-2"></span>&nbsp;ico-github-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-github-3"></span>&nbsp;ico-github-3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-github-4"></span>&nbsp;ico-github-4</span>
+			<span class="box1"><span aria-hidden="true" class="ico-github-5"></span>&nbsp;ico-github-5</span>
+			<span class="box1"><span aria-hidden="true" class="ico-wordpress"></span>&nbsp;ico-wordpress</span>
+			<span class="box1"><span aria-hidden="true" class="ico-wordpress-2"></span>&nbsp;ico-wordpress-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-joomla"></span>&nbsp;ico-joomla</span>
+			<span class="box1"><span aria-hidden="true" class="ico-blogger"></span>&nbsp;ico-blogger</span>
+			<span class="box1"><span aria-hidden="true" class="ico-blogger-2"></span>&nbsp;ico-blogger-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-tumblr"></span>&nbsp;ico-tumblr</span>
+			<span class="box1"><span aria-hidden="true" class="ico-tumblr-2"></span>&nbsp;ico-tumblr-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-yahoo"></span>&nbsp;ico-yahoo</span>
+			<span class="box1"><span aria-hidden="true" class="ico-tux"></span>&nbsp;ico-tux</span>
+			<span class="box1"><span aria-hidden="true" class="ico-apple"></span>&nbsp;ico-apple</span>
+			<span class="box1"><span aria-hidden="true" class="ico-finder"></span>&nbsp;ico-finder</span>
+			<span class="box1"><span aria-hidden="true" class="ico-android"></span>&nbsp;ico-android</span>
+			<span class="box1"><span aria-hidden="true" class="ico-windows"></span>&nbsp;ico-windows</span>
+			<span class="box1"><span aria-hidden="true" class="ico-windows8"></span>&nbsp;ico-windows8</span>
+			<span class="box1"><span aria-hidden="true" class="ico-soundcloud"></span>&nbsp;ico-soundcloud</span>
+			<span class="box1"><span aria-hidden="true" class="ico-soundcloud-2"></span>&nbsp;ico-soundcloud-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-skype"></span>&nbsp;ico-skype</span>
+			<span class="box1"><span aria-hidden="true" class="ico-reddit"></span>&nbsp;ico-reddit</span>
+			<span class="box1"><span aria-hidden="true" class="ico-linkedin"></span>&nbsp;ico-linkedin</span>
+			<span class="box1"><span aria-hidden="true" class="ico-lastfm"></span>&nbsp;ico-lastfm</span>
+			<span class="box1"><span aria-hidden="true" class="ico-lastfm-2"></span>&nbsp;ico-lastfm-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-delicious"></span>&nbsp;ico-delicious</span>
+			<span class="box1"><span aria-hidden="true" class="ico-stumbleupon"></span>&nbsp;ico-stumbleupon</span>
+			<span class="box1"><span aria-hidden="true" class="ico-stumbleupon-2"></span>&nbsp;ico-stumbleupon-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-stackoverflow"></span>&nbsp;ico-stackoverflow</span>
+			<span class="box1"><span aria-hidden="true" class="ico-pinterest"></span>&nbsp;ico-pinterest</span>
+			<span class="box1"><span aria-hidden="true" class="ico-pinterest-2"></span>&nbsp;ico-pinterest-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-xing"></span>&nbsp;ico-xing</span>
+			<span class="box1"><span aria-hidden="true" class="ico-xing-2"></span>&nbsp;ico-xing-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-flattr"></span>&nbsp;ico-flattr</span>
+			<span class="box1"><span aria-hidden="true" class="ico-foursquare"></span>&nbsp;ico-foursquare</span>
+			<span class="box1"><span aria-hidden="true" class="ico-foursquare-2"></span>&nbsp;ico-foursquare-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-paypal"></span>&nbsp;ico-paypal</span>
+			<span class="box1"><span aria-hidden="true" class="ico-paypal-2"></span>&nbsp;ico-paypal-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-paypal-3"></span>&nbsp;ico-paypal-3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-yelp"></span>&nbsp;ico-yelp</span>
+			<span class="box1"><span aria-hidden="true" class="ico-libreoffice"></span>&nbsp;ico-libreoffice</span>
+			<span class="box1"><span aria-hidden="true" class="ico-file-pdf"></span>&nbsp;ico-file-pdf</span>
+			<span class="box1"><span aria-hidden="true" class="ico-file-openoffice"></span>&nbsp;ico-file-openoffice</span>
+			<span class="box1"><span aria-hidden="true" class="ico-file-word"></span>&nbsp;ico-file-word</span>
+			<span class="box1"><span aria-hidden="true" class="ico-file-excel"></span>&nbsp;ico-file-excel</span>
+			<span class="box1"><span aria-hidden="true" class="ico-file-zip"></span>&nbsp;ico-file-zip</span>
+			<span class="box1"><span aria-hidden="true" class="ico-file-powerpoint"></span>&nbsp;ico-file-powerpoint</span>
+			<span class="box1"><span aria-hidden="true" class="ico-file-xml"></span>&nbsp;ico-file-xml</span>
+			<span class="box1"><span aria-hidden="true" class="ico-file-css"></span>&nbsp;ico-file-css</span>
+			<span class="box1"><span aria-hidden="true" class="ico-html5"></span>&nbsp;ico-html5</span>
+			<span class="box1"><span aria-hidden="true" class="ico-html5-2"></span>&nbsp;ico-html5-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-css3"></span>&nbsp;ico-css3</span>
+			<span class="box1"><span aria-hidden="true" class="ico-chrome"></span>&nbsp;ico-chrome</span>
+			<span class="box1"><span aria-hidden="true" class="ico-firefox"></span>&nbsp;ico-firefox</span>
+			<span class="box1"><span aria-hidden="true" class="ico-IE"></span>&nbsp;ico-IE</span>
+			<span class="box1"><span aria-hidden="true" class="ico-opera"></span>&nbsp;ico-opera</span>
+			<span class="box1"><span aria-hidden="true" class="ico-safari"></span>&nbsp;ico-safari</span>
+			<span class="box1"><span aria-hidden="true" class="ico-IcoMoon"></span>&nbsp;ico-IcoMoon</span>
+			<span class="box1"><span aria-hidden="true" class="ico-switch"></span>&nbsp;ico-switch</span>
+			<span class="box1"><span aria-hidden="true" class="ico-cart-2"></span>&nbsp;ico-cart-2</span>
+			<span class="box1"><span aria-hidden="true" class="ico-question"></span>&nbsp;ico-question</span>
+			<span class="box1"><span aria-hidden="true" class="ico-monitor"></span>&nbsp;ico-monitor</span>
+			<span class="box1"><span aria-hidden="true" class="ico-direction-left"></span>&nbsp;ico-direction-left</span>
+			<span class="box1"><span aria-hidden="true" class="ico-direction-right"></span>&nbsp;ico-direction-right</span>
+			<span class="box1"><span aria-hidden="true" class="ico-grid"></span>&nbsp;ico-grid </span>
+
+			<hr class="separator">
+
 		</div>
 	</div>
 </div>
-<div class="element-example">
-	<div class="collapse-box">
-		<div class="panel-heading">
-			<a data-toggle="collapse" href="#collapseTwo">
-				<h4 class="panel-title">Um exemplo simples com texto</h4>
-				<p>Se tiver só texto, o negócio funciona que é uma beleza.</p>
-			</a>
-		</div>
-		<div id="collapseTwo" class="panel-collapse collapse">
-			<div class="panel-body">
-				<h3>Fernando Pessoa</h3>
-				<p>
-					Batatinha quando nasce espalha a rama pelo chão. Menininha quando dorme põe a mão no coração. Sou pequenininha do tamanho de um botão, carrego papai no bolso e mamãe no coração. O bolso furou e o papai caiu no chão. Mamãe que é mais querida ficou no coração.
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-alerts">Alertas</h2>
-<div class="element-example">
-	<div class="alert alert-success"><p><strong>Sucesso!</strong> Você conseguiu, parabéns!</p></div>
-	<div class="alert alert-info"><p><strong>Atenção:</strong> você tem informações importantes para ler.</p></div>
-	<div class="alert alert-warning"><p><strong>Cuidado:</strong> cheque duas vezes. Você pode ter esquecido alguma informação. <a href="#">Veja mais detalhes aqui</a> </p></div>
-	<div class="alert alert-danger"><p><strong>Mórreu:</strong> Algo muito ruim aconteceu e você vai precisar refazer tudo.</p></div>
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-forms">Formulário</h2>
-<div class="element-example">
-	<form role="form">
-		<fieldset>
-			<div class="form-group">
-				<label for="ipt1">Campo simples</label>
-				<input type="email" class="form-control" id="ipt1" placeholder="Insira seu texto aqui">
-				<p class="help-block">Exemplo de texto de ajuda.</p>
-			</div>
-			<div class="form-group">
-				<label for="exampleSelect">Seletor</label>
-				<select id="exampleSelect" class="form-control">
-					<option value="">Escolha uma opção</option>
-					<option value="">Isso mesmo :D</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="exampleInputPassword1">Campo de senha</label>
-				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-			</div>
-			<div class="form-group">
-				<label for="exampleInputFile">Campo para envio de arquivo</label>
-				<input type="file" id="exampleInputFile">
-			</div>
-			<div class="checkbox">
-				<input type="checkbox" id="checkbox-1">
-				<label for="checkbox-1">Marque aqui</label>
-			</div>
-			<div class="checkbox">
-				<input type="checkbox" id="checkbox-2">
-				<label for="checkbox-2">Marque aqui</label>
-			</div>
-			<div class="checkbox">
-				<input type="checkbox" id="checkbox-3">
-				<label for="checkbox-3">Marque aqui</label>
-			</div>
-			<div class="radio">
-				<input name="radios" type="radio" id="radio-button-1">
-				<label for="radio-button-1">Ou aqui</label>
-			</div>
-			<div class="radio">
-				<input name="radios" type="radio" id="radio-button-2">
-				<label for="radio-button-2">Ou aqui</label>
-			</div>
-			<div class="radio">
-				<input name="radios" type="radio" id="radio-button-3">
-				<label for="radio-button-3">Ou aqui</label>
-			</div>
-			<div class="box-actions">
-				<button type="submit" class="btn btn-primary">Enviar</button>
-			</div>
-	</fieldset>
-	</form>
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-formshor">Formulários horizontais</h2>
-<div class="element-example">
-	<form class="form-horizontal" role="form">
-		<div class="form-group">
-			<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
-			<div class="col-lg-10">
-				<input type="email" class="form-control" id="inputEmail1" placeholder="Email">
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="inputPassword1" class="col-lg-2 control-label">Senha</label>
-			<div class="col-lg-10">
-				<input type="password" class="form-control" id="inputPassword1" placeholder="Senha">
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-lg-offset-2 col-lg-10">
-				<div class="checkbox">
-					<input type="checkbox" id="checkbox-x">
-					<label for="checkbox-x">Me manter conectado</label>
-				</div>
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-primary">Entrar</button>
-			</div>
-		</div>
-	</form>
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-forms-line">Formulários em linha</h2>
-<div class="element-example">
-	<form class="form-inline" role="form">
-		<div class="form-group">
-			<label class="sr-only" for="exampleInputEmail2">Endereço de email</label>
-			<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Digite seu email">
-		</div>
-		<div class="form-group">
-			<label class="sr-only" for="exampleInputPassword2">Senha</label>
-			<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Senha">
-		</div>
-		<div class="checkbox">
-			<input type="checkbox" id="checkbox-y">
-			<label for="checkbox-y">Me manter conectado</label>
-		</div>
-		<button type="submit" class="btn btn-primary">Entrar</button>
-	</form>
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-buttons">Botões</h2>
-<div class="element-example">
-	<button type="button" class="btn btn-xs btn-default">Default</button>
-	<button type="button" class="btn btn-xs btn-primary">Primary</button>
-	<button type="button" class="btn btn-xs btn-success">Success</button>
-	<button type="button" class="btn btn-xs btn-info">Info</button>
-	<button type="button" class="btn btn-xs btn-warning">Warning</button>
-	<button type="button" class="btn btn-xs btn-danger">Danger</button>
-	<br>
-	<br>
-	<button type="button" class="btn btn-sm btn-default">Default</button>
-	<button type="button" class="btn btn-sm btn-primary">Primary</button>
-	<button type="button" class="btn btn-sm btn-success">Success</button>
-	<button type="button" class="btn btn-sm btn-info">Info</button>
-	<button type="button" class="btn btn-sm btn-warning">Warning</button>
-	<button type="button" class="btn btn-sm btn-danger">Danger</button>
-	<br>
-	<br>
-	<button type="button" class="btn btn-default">Default</button>
-	<button type="button" class="btn btn-primary">Primary</button>
-	<button type="button" class="btn btn-success">Success</button>
-	<button type="button" class="btn btn-info">Info</button>
-	<button type="button" class="btn btn-warning">Warning</button>
-	<button type="button" class="btn btn-danger">Danger</button>
-	<br>
-	<br>
-	<button type="button" class="btn btn-lg btn-default">Default</button>
-	<button type="button" class="btn btn-lg btn-primary">Primary</button>
-	<button type="button" class="btn btn-lg btn-success">Success</button>
-	<button type="button" class="btn btn-lg btn-info">Info</button>
-	<button type="button" class="btn btn-lg btn-warning">Warning</button>
-	<button type="button" class="btn btn-lg btn-danger">Danger</button>
-</div>
-
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-label">Label ou Tags</h2>
-<div class="element-example">
-	<span class="label label-default">Default</span>
-	<span class="label label-primary">Primary</span>
-	<span class="label label-success">Success</span>
-	<span class="label label-info">Info</span>
-	<span class="label label-warning">Warning</span>
-	<span class="label label-danger">Danger</span>
-</div>
-
-<hr class="separator">
-
-<h2 class="title-2" id="example-icons">Ícones</h2>
-<div class="element-example">
-		<span aria-hidden="true" class="ico-home"></span> &nbsp;ico-home
-</div>
-<span class="box1"><span aria-hidden="true" class="ico-home"></span>&nbsp;ico-home </span>
-<span class="box1"><span aria-hidden="true" class="ico-pencil"></span> &nbsp;ico-pencil </span>
-<span class="box1"><span aria-hidden="true" class="ico-image"></span> &nbsp;ico-image </span>
-<span class="box1"><span aria-hidden="true" class="ico-images"></span> &nbsp;ico-images </span>
-<span class="box1"><span aria-hidden="true" class="ico-calendar"></span> &nbsp;ico-calendar </span>
-<span class="box1"><span aria-hidden="true" class="ico-camera"></span> &nbsp;ico-camera </span>
-<span class="box1"><span aria-hidden="true" class="ico-music"></span> &nbsp;ico-music </span>
-<span class="box1"><span aria-hidden="true" class="ico-play"></span> &nbsp;ico-play </span>
-<span class="box1"><span aria-hidden="true" class="ico-feed"></span> &nbsp;ico-feed </span>
-<span class="box1"><span aria-hidden="true" class="ico-podcast"></span> &nbsp;ico-podcast </span>
-<span class="box1"><span aria-hidden="true" class="ico-book"></span> &nbsp;ico-book </span>
-<span class="box1"><span aria-hidden="true" class="ico-folder"></span> &nbsp;ico-folder </span>
-<span class="box1"><span aria-hidden="true" class="ico-folder-open"></span> &nbsp;ico-folder-open </span>
-<span class="box1"><span aria-hidden="true" class="ico-tag"></span> &nbsp;ico-tag </span>
-<span class="box1"><span aria-hidden="true" class="ico-cart"></span> &nbsp;ico-cart </span>
-<span class="box1"><span aria-hidden="true" class="ico-phone"></span> &nbsp;ico-phone </span>
-<span class="box1"><span aria-hidden="true" class="ico-address-book"></span> &nbsp;ico-address-book </span>
-<span class="box1"><span aria-hidden="true" class="ico-envelop"></span> &nbsp;ico-envelop </span>
-<span class="box1"><span aria-hidden="true" class="ico-location"></span> &nbsp;ico-location </span>
-<span class="box1"><span aria-hidden="true" class="ico-history"></span> &nbsp;ico-history </span>
-<span class="box1"><span aria-hidden="true" class="ico-clock"></span> &nbsp;ico-clock </span>
-<span class="box1"><span aria-hidden="true" class="ico-screen"></span> &nbsp;ico-screen </span>
-<span class="box1"><span aria-hidden="true" class="ico-mobile"></span> &nbsp;ico-mobile </span>
-<span class="box1"><span aria-hidden="true" class="ico-tablet"></span> &nbsp;ico-tablet </span>
-<span class="box1"><span aria-hidden="true" class="ico-drawer"></span> &nbsp;ico-drawer </span>
-<span class="box1"><span aria-hidden="true" class="ico-drawer-2"></span> &nbsp;ico-drawer-2 </span>
-<span class="box1"><span aria-hidden="true" class="ico-drawer-3"></span> &nbsp;ico-drawer-3 </span>
-<span class="box1"><span aria-hidden="true" class="ico-box-add"></span> &nbsp;ico-box-add </span>
-<span class="box1"><span aria-hidden="true" class="ico-box-remove"></span> &nbsp;ico-box-remove </span>
-<span class="box1"><span aria-hidden="true" class="ico-download"></span> &nbsp;ico-download </span>
-<span class="box1"><span aria-hidden="true" class="ico-upload"></span> &nbsp;ico-upload </span>
-<span class="box1"><span aria-hidden="true" class="ico-undo"></span> &nbsp;ico-undo </span>
-<span class="box1"><span aria-hidden="true" class="ico-redo"></span> &nbsp;ico-redo </span>
-<span class="box1"><span aria-hidden="true" class="ico-undo-2"></span> &nbsp;ico-undo-2 </span>
-<span class="box1"><span aria-hidden="true" class="ico-redo-2"></span> &nbsp;ico-redo-2 </span>
-<span class="box1"><span aria-hidden="true" class="ico-forward"></span> &nbsp;ico-forward </span>
-<span class="box1"><span aria-hidden="true" class="ico-reply"></span> &nbsp;ico-reply </span>
-<span class="box1"><span aria-hidden="true" class="ico-bubble"></span> &nbsp;ico-bubble </span>
-<span class="box1"><span aria-hidden="true" class="ico-bubbles"></span> &nbsp;ico-bubbles </span>
-<span class="box1"><span aria-hidden="true" class="ico-bubbles-2"></span>&nbsp;ico-bubbles-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-user"></span>&nbsp;ico-user</span>
-<span class="box1"><span aria-hidden="true" class="ico-users"></span>&nbsp;ico-users</span>
-<span class="box1"><span aria-hidden="true" class="ico-spinner"></span>&nbsp;ico-spinner</span>
-<span class="box1"><span aria-hidden="true" class="ico-search"></span>&nbsp;ico-search</span>
-<span class="box1"><span aria-hidden="true" class="ico-zoom-in"></span>&nbsp;ico-zoom-in</span>
-<span class="box1"><span aria-hidden="true" class="ico-zoom-out"></span>&nbsp;ico-zoom-out</span>
-<span class="box1"><span aria-hidden="true" class="ico-expand"></span>&nbsp;ico-expand</span>
-<span class="box1"><span aria-hidden="true" class="ico-contract"></span>&nbsp;ico-contract</span>
-<span class="box1"><span aria-hidden="true" class="ico-expand-2"></span>&nbsp;ico-expand-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-contract-2"></span>&nbsp;ico-contract-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-key"></span>&nbsp;ico-key</span>
-<span class="box1"><span aria-hidden="true" class="ico-cogs"></span>&nbsp;ico-cogs</span>
-<span class="box1"><span aria-hidden="true" class="ico-cog"></span>&nbsp;ico-cog</span>
-<span class="box1"><span aria-hidden="true" class="ico-stats"></span>&nbsp;ico-stats</span>
-<span class="box1"><span aria-hidden="true" class="ico-bars"></span>&nbsp;ico-bars</span>
-<span class="box1"><span aria-hidden="true" class="ico-remove"></span>&nbsp;ico-remove</span>
-<span class="box1"><span aria-hidden="true" class="ico-airplane"></span>&nbsp;ico-airplane</span>
-<span class="box1"><span aria-hidden="true" class="ico-truck"></span>&nbsp;ico-truck</span>
-<span class="box1"><span aria-hidden="true" class="ico-list"></span>&nbsp;ico-list</span>
-<span class="box1"><span aria-hidden="true" class="ico-numbered-list"></span>&nbsp;ico-numbered-list</span>
-<span class="box1"><span aria-hidden="true" class="ico-menu"></span>&nbsp;ico-menu</span>
-<span class="box1"><span aria-hidden="true" class="ico-menu-2"></span>&nbsp;ico-menu-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-tree"></span>&nbsp;ico-tree</span>
-<span class="box1"><span aria-hidden="true" class="ico-cloud"></span>&nbsp;ico-cloud</span>
-<span class="box1"><span aria-hidden="true" class="ico-cloud-download"></span>&nbsp;ico-cloud-download</span>
-<span class="box1"><span aria-hidden="true" class="ico-cloud-upload"></span>&nbsp;ico-cloud-upload</span>
-<span class="box1"><span aria-hidden="true" class="ico-download-2"></span>&nbsp;ico-download-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-upload-2"></span>&nbsp;ico-upload-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-download-3"></span>&nbsp;ico-download-3</span>
-<span class="box1"><span aria-hidden="true" class="ico-upload-3"></span>&nbsp;ico-upload-3</span>
-<span class="box1"><span aria-hidden="true" class="ico-globe"></span>&nbsp;ico-globe</span>
-<span class="box1"><span aria-hidden="true" class="ico-earth"></span>&nbsp;ico-earth</span>
-<span class="box1"><span aria-hidden="true" class="ico-link"></span>&nbsp;ico-link</span>
-<span class="box1"><span aria-hidden="true" class="ico-flag"></span>&nbsp;ico-flag</span>
-<span class="box1"><span aria-hidden="true" class="ico-attachment"></span>&nbsp;ico-attachment</span>
-<span class="box1"><span aria-hidden="true" class="ico-eye-blocked"></span>&nbsp;ico-eye-blocked</span>
-<span class="box1"><span aria-hidden="true" class="ico-eye"></span>&nbsp;ico-eye</span>
-<span class="box1"><span aria-hidden="true" class="ico-bookmark"></span>&nbsp;ico-bookmark</span>
-<span class="box1"><span aria-hidden="true" class="ico-brightness-medium"></span>&nbsp;ico-brightness-medium</span>
-<span class="box1"><span aria-hidden="true" class="ico-brightness-contrast"></span>&nbsp;ico-brightness-contrast</span>
-<span class="box1"><span aria-hidden="true" class="ico-contrast"></span>&nbsp;ico-contrast</span>
-<span class="box1"><span aria-hidden="true" class="ico-star"></span>&nbsp;ico-star</span>
-<span class="box1"><span aria-hidden="true" class="ico-star-2"></span>&nbsp;ico-star-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-star-3"></span>&nbsp;ico-star-3</span>
-<span class="box1"><span aria-hidden="true" class="ico-thumbs-up"></span>&nbsp;ico-thumbs-up</span>
-<span class="box1"><span aria-hidden="true" class="ico-thumbs-up-2"></span>&nbsp;ico-thumbs-up-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-minus"></span>&nbsp;ico-minus</span>
-<span class="box1"><span aria-hidden="true" class="ico-plus"></span>&nbsp;ico-plus</span>
-<span class="box1"><span aria-hidden="true" class="ico-enter"></span>&nbsp;ico-enter</span>
-<span class="box1"><span aria-hidden="true" class="ico-exit"></span>&nbsp;ico-exit</span>
-<span class="box1"><span aria-hidden="true" class="ico-cancel-circle"></span>&nbsp;ico-cancel-circle</span>
-<span class="box1"><span aria-hidden="true" class="ico-checkmark-circle"></span>&nbsp;ico-checkmark-circle</span>
-<span class="box1"><span aria-hidden="true" class="ico-spam"></span>&nbsp;ico-spam</span>
-<span class="box1"><span aria-hidden="true" class="ico-close"></span>&nbsp;ico-close</span>
-<span class="box1"><span aria-hidden="true" class="ico-checkmark"></span>&nbsp;ico-checkmark</span>
-<span class="box1"><span aria-hidden="true" class="ico-info"></span>&nbsp;ico-info</span>
-<span class="box1"><span aria-hidden="true" class="ico-blocked"></span>&nbsp;ico-blocked</span>
-<span class="box1"><span aria-hidden="true" class="ico-play-2"></span>&nbsp;ico-play-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-play-3"></span>&nbsp;ico-play-3</span>
-<span class="box1"><span aria-hidden="true" class="ico-pause"></span>&nbsp;ico-pause</span>
-<span class="box1"><span aria-hidden="true" class="ico-stop"></span>&nbsp;ico-stop</span>
-<span class="box1"><span aria-hidden="true" class="ico-backward"></span>&nbsp;ico-backward</span>
-<span class="box1"><span aria-hidden="true" class="ico-forward-2"></span>&nbsp;ico-forward-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-first"></span>&nbsp;ico-first</span>
-<span class="box1"><span aria-hidden="true" class="ico-last"></span>&nbsp;ico-last</span>
-<span class="box1"><span aria-hidden="true" class="ico-previous"></span>&nbsp;ico-previous</span>
-<span class="box1"><span aria-hidden="true" class="ico-next"></span>&nbsp;ico-next</span>
-<span class="box1"><span aria-hidden="true" class="ico-eject"></span>&nbsp;ico-eject</span>
-<span class="box1"><span aria-hidden="true" class="ico-volume-high"></span>&nbsp;ico-volume-high</span>
-<span class="box1"><span aria-hidden="true" class="ico-volume-medium"></span>&nbsp;ico-volume-medium</span>
-<span class="box1"><span aria-hidden="true" class="ico-volume-low"></span>&nbsp;ico-volume-low</span>
-<span class="box1"><span aria-hidden="true" class="ico-volume-mute"></span>&nbsp;ico-volume-mute</span>
-<span class="box1"><span aria-hidden="true" class="ico-volume-mute-2"></span>&nbsp;ico-volume-mute-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-volume-increase"></span>&nbsp;ico-volume-increase</span>
-<span class="box1"><span aria-hidden="true" class="ico-volume-decrease"></span>&nbsp;ico-volume-decrease</span>
-<span class="box1"><span aria-hidden="true" class="ico-loop"></span>&nbsp;ico-loop</span>
-<span class="box1"><span aria-hidden="true" class="ico-loop-2"></span>&nbsp;ico-loop-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-loop-3"></span>&nbsp;ico-loop-3</span>
-<span class="box1"><span aria-hidden="true" class="ico-shuffle"></span>&nbsp;ico-shuffle</span>
-<span class="box1"><span aria-hidden="true" class="ico-arrow-up"></span>&nbsp;ico-arrow-up</span>
-<span class="box1"><span aria-hidden="true" class="ico-arrow-right"></span>&nbsp;ico-arrow-right</span>
-<span class="box1"><span aria-hidden="true" class="ico-arrow-down"></span>&nbsp;ico-arrow-down</span>
-<span class="box1"><span aria-hidden="true" class="ico-arrow-left"></span>&nbsp;ico-arrow-left</span>
-<span class="box1"><span aria-hidden="true" class="ico-tab"></span>&nbsp;ico-tab</span>
-<span class="box1"><span aria-hidden="true" class="ico-checkbox-checked"></span>&nbsp;ico-checkbox-checked</span>
-<span class="box1"><span aria-hidden="true" class="ico-checkbox-partial"></span>&nbsp;ico-checkbox-partial</span>
-<span class="box1"><span aria-hidden="true" class="ico-checkbox-unchecked"></span>&nbsp;ico-checkbox-unchecked</span>
-<span class="box1"><span aria-hidden="true" class="ico-radio-checked"></span>&nbsp;ico-radio-checked</span>
-<span class="box1"><span aria-hidden="true" class="ico-radio-unchecked"></span>&nbsp;ico-radio-unchecked</span>
-<span class="box1"><span aria-hidden="true" class="ico-table"></span>&nbsp;ico-table</span>
-<span class="box1"><span aria-hidden="true" class="ico-insert-template"></span>&nbsp;ico-insert-template</span>
-<span class="box1"><span aria-hidden="true" class="ico-code"></span>&nbsp;ico-code</span>
-<span class="box1"><span aria-hidden="true" class="ico-google"></span>&nbsp;ico-google</span>
-<span class="box1"><span aria-hidden="true" class="ico-google-plus"></span>&nbsp;ico-google-plus</span>
-<span class="box1"><span aria-hidden="true" class="ico-google-plus-2"></span>&nbsp;ico-google-plus-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-google-plus-3"></span>&nbsp;ico-google-plus-3</span>
-<span class="box1"><span aria-hidden="true" class="ico-google-plus-4"></span>&nbsp;ico-google-plus-4</span>
-<span class="box1"><span aria-hidden="true" class="ico-google-drive"></span>&nbsp;ico-google-drive</span>
-<span class="box1"><span aria-hidden="true" class="ico-facebook"></span>&nbsp;ico-facebook</span>
-<span class="box1"><span aria-hidden="true" class="ico-facebook-2"></span>&nbsp;ico-facebook-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-facebook-3"></span>&nbsp;ico-facebook-3</span>
-<span class="box1"><span aria-hidden="true" class="ico-instagram"></span>&nbsp;ico-instagram</span>
-<span class="box1"><span aria-hidden="true" class="ico-twitter"></span>&nbsp;ico-twitter</span>
-<span class="box1"><span aria-hidden="true" class="ico-twitter-2"></span>&nbsp;ico-twitter-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-twitter-3"></span>&nbsp;ico-twitter-3</span>
-<span class="box1"><span aria-hidden="true" class="ico-feed-2"></span>&nbsp;ico-feed-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-feed-3"></span>&nbsp;ico-feed-3</span>
-<span class="box1"><span aria-hidden="true" class="ico-feed-4"></span>&nbsp;ico-feed-4</span>
-<span class="box1"><span aria-hidden="true" class="ico-youtube"></span>&nbsp;ico-youtube</span>
-<span class="box1"><span aria-hidden="true" class="ico-youtube-2"></span>&nbsp;ico-youtube-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-vimeo"></span>&nbsp;ico-vimeo</span>
-<span class="box1"><span aria-hidden="true" class="ico-vimeo2"></span>&nbsp;ico-vimeo2</span>
-<span class="box1"><span aria-hidden="true" class="ico-vimeo-2"></span>&nbsp;ico-vimeo-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-flickr"></span>&nbsp;ico-flickr</span>
-<span class="box1"><span aria-hidden="true" class="ico-flickr-2"></span>&nbsp;ico-flickr-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-flickr-3"></span>&nbsp;ico-flickr-3</span>
-<span class="box1"><span aria-hidden="true" class="ico-flickr-4"></span>&nbsp;ico-flickr-4</span>
-<span class="box1"><span aria-hidden="true" class="ico-picassa"></span>&nbsp;ico-picassa</span>
-<span class="box1"><span aria-hidden="true" class="ico-picassa-2"></span>&nbsp;ico-picassa-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-dribbble"></span>&nbsp;ico-dribbble</span>
-<span class="box1"><span aria-hidden="true" class="ico-dribbble-2"></span>&nbsp;ico-dribbble-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-dribbble-3"></span>&nbsp;ico-dribbble-3</span>
-<span class="box1"><span aria-hidden="true" class="ico-lanyrd"></span>&nbsp;ico-lanyrd</span>
-<span class="box1"><span aria-hidden="true" class="ico-forrst"></span>&nbsp;ico-forrst</span>
-<span class="box1"><span aria-hidden="true" class="ico-forrst-2"></span>&nbsp;ico-forrst-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-deviantart"></span>&nbsp;ico-deviantart</span>
-<span class="box1"><span aria-hidden="true" class="ico-deviantart-2"></span>&nbsp;ico-deviantart-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-steam"></span>&nbsp;ico-steam</span>
-<span class="box1"><span aria-hidden="true" class="ico-steam-2"></span>&nbsp;ico-steam-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-github"></span>&nbsp;ico-github</span>
-<span class="box1"><span aria-hidden="true" class="ico-github-2"></span>&nbsp;ico-github-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-github-3"></span>&nbsp;ico-github-3</span>
-<span class="box1"><span aria-hidden="true" class="ico-github-4"></span>&nbsp;ico-github-4</span>
-<span class="box1"><span aria-hidden="true" class="ico-github-5"></span>&nbsp;ico-github-5</span>
-<span class="box1"><span aria-hidden="true" class="ico-wordpress"></span>&nbsp;ico-wordpress</span>
-<span class="box1"><span aria-hidden="true" class="ico-wordpress-2"></span>&nbsp;ico-wordpress-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-joomla"></span>&nbsp;ico-joomla</span>
-<span class="box1"><span aria-hidden="true" class="ico-blogger"></span>&nbsp;ico-blogger</span>
-<span class="box1"><span aria-hidden="true" class="ico-blogger-2"></span>&nbsp;ico-blogger-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-tumblr"></span>&nbsp;ico-tumblr</span>
-<span class="box1"><span aria-hidden="true" class="ico-tumblr-2"></span>&nbsp;ico-tumblr-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-yahoo"></span>&nbsp;ico-yahoo</span>
-<span class="box1"><span aria-hidden="true" class="ico-tux"></span>&nbsp;ico-tux</span>
-<span class="box1"><span aria-hidden="true" class="ico-apple"></span>&nbsp;ico-apple</span>
-<span class="box1"><span aria-hidden="true" class="ico-finder"></span>&nbsp;ico-finder</span>
-<span class="box1"><span aria-hidden="true" class="ico-android"></span>&nbsp;ico-android</span>
-<span class="box1"><span aria-hidden="true" class="ico-windows"></span>&nbsp;ico-windows</span>
-<span class="box1"><span aria-hidden="true" class="ico-windows8"></span>&nbsp;ico-windows8</span>
-<span class="box1"><span aria-hidden="true" class="ico-soundcloud"></span>&nbsp;ico-soundcloud</span>
-<span class="box1"><span aria-hidden="true" class="ico-soundcloud-2"></span>&nbsp;ico-soundcloud-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-skype"></span>&nbsp;ico-skype</span>
-<span class="box1"><span aria-hidden="true" class="ico-reddit"></span>&nbsp;ico-reddit</span>
-<span class="box1"><span aria-hidden="true" class="ico-linkedin"></span>&nbsp;ico-linkedin</span>
-<span class="box1"><span aria-hidden="true" class="ico-lastfm"></span>&nbsp;ico-lastfm</span>
-<span class="box1"><span aria-hidden="true" class="ico-lastfm-2"></span>&nbsp;ico-lastfm-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-delicious"></span>&nbsp;ico-delicious</span>
-<span class="box1"><span aria-hidden="true" class="ico-stumbleupon"></span>&nbsp;ico-stumbleupon</span>
-<span class="box1"><span aria-hidden="true" class="ico-stumbleupon-2"></span>&nbsp;ico-stumbleupon-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-stackoverflow"></span>&nbsp;ico-stackoverflow</span>
-<span class="box1"><span aria-hidden="true" class="ico-pinterest"></span>&nbsp;ico-pinterest</span>
-<span class="box1"><span aria-hidden="true" class="ico-pinterest-2"></span>&nbsp;ico-pinterest-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-xing"></span>&nbsp;ico-xing</span>
-<span class="box1"><span aria-hidden="true" class="ico-xing-2"></span>&nbsp;ico-xing-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-flattr"></span>&nbsp;ico-flattr</span>
-<span class="box1"><span aria-hidden="true" class="ico-foursquare"></span>&nbsp;ico-foursquare</span>
-<span class="box1"><span aria-hidden="true" class="ico-foursquare-2"></span>&nbsp;ico-foursquare-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-paypal"></span>&nbsp;ico-paypal</span>
-<span class="box1"><span aria-hidden="true" class="ico-paypal-2"></span>&nbsp;ico-paypal-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-paypal-3"></span>&nbsp;ico-paypal-3</span>
-<span class="box1"><span aria-hidden="true" class="ico-yelp"></span>&nbsp;ico-yelp</span>
-<span class="box1"><span aria-hidden="true" class="ico-libreoffice"></span>&nbsp;ico-libreoffice</span>
-<span class="box1"><span aria-hidden="true" class="ico-file-pdf"></span>&nbsp;ico-file-pdf</span>
-<span class="box1"><span aria-hidden="true" class="ico-file-openoffice"></span>&nbsp;ico-file-openoffice</span>
-<span class="box1"><span aria-hidden="true" class="ico-file-word"></span>&nbsp;ico-file-word</span>
-<span class="box1"><span aria-hidden="true" class="ico-file-excel"></span>&nbsp;ico-file-excel</span>
-<span class="box1"><span aria-hidden="true" class="ico-file-zip"></span>&nbsp;ico-file-zip</span>
-<span class="box1"><span aria-hidden="true" class="ico-file-powerpoint"></span>&nbsp;ico-file-powerpoint</span>
-<span class="box1"><span aria-hidden="true" class="ico-file-xml"></span>&nbsp;ico-file-xml</span>
-<span class="box1"><span aria-hidden="true" class="ico-file-css"></span>&nbsp;ico-file-css</span>
-<span class="box1"><span aria-hidden="true" class="ico-html5"></span>&nbsp;ico-html5</span>
-<span class="box1"><span aria-hidden="true" class="ico-html5-2"></span>&nbsp;ico-html5-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-css3"></span>&nbsp;ico-css3</span>
-<span class="box1"><span aria-hidden="true" class="ico-chrome"></span>&nbsp;ico-chrome</span>
-<span class="box1"><span aria-hidden="true" class="ico-firefox"></span>&nbsp;ico-firefox</span>
-<span class="box1"><span aria-hidden="true" class="ico-IE"></span>&nbsp;ico-IE</span>
-<span class="box1"><span aria-hidden="true" class="ico-opera"></span>&nbsp;ico-opera</span>
-<span class="box1"><span aria-hidden="true" class="ico-safari"></span>&nbsp;ico-safari</span>
-<span class="box1"><span aria-hidden="true" class="ico-IcoMoon"></span>&nbsp;ico-IcoMoon</span>
-<span class="box1"><span aria-hidden="true" class="ico-switch"></span>&nbsp;ico-switch</span>
-<span class="box1"><span aria-hidden="true" class="ico-cart-2"></span>&nbsp;ico-cart-2</span>
-<span class="box1"><span aria-hidden="true" class="ico-question"></span>&nbsp;ico-question</span>
-<span class="box1"><span aria-hidden="true" class="ico-monitor"></span>&nbsp;ico-monitor</span>
-<span class="box1"><span aria-hidden="true" class="ico-direction-left"></span>&nbsp;ico-direction-left</span>
-<span class="box1"><span aria-hidden="true" class="ico-direction-right"></span>&nbsp;ico-direction-right</span>
-<span class="box1"><span aria-hidden="true" class="ico-grid"></span>&nbsp;ico-grid </span>
-
-<hr class="separator">
-
-			</div>
-	</main>
+</main>
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<%= javascript_include_tag "locastyle" %>
 	<script src="<%= base_url + bootstrap_js %>"></script>
 	<script src="<%= base_url + '/assets/google-code-prettify/src/prettify.js' %>"></script>
-	<%= javascript_include_tag "manual" %>
 </body>
 </html>
