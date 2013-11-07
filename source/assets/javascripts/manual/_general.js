@@ -35,12 +35,11 @@ manual.general = (function() {
   }
 
   function initPrettyPrint(){ 
-    prettyPrint();
-    $('pre.prettyprintCode').each(function() {
-      var code = $(this).html();
+    $('pre.prettyprint-code').each(function() {
+      var code = $(this).html()
       $(this).text(code).addClass('prettyprint')
-      prettyPrint();
     });
+      prettyPrint();
   }
 
   var utils = (function() {
