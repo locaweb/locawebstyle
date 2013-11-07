@@ -10,6 +10,7 @@ locastyle.mobile = (function() {
     tabDropdownMobile();
     tabDropdownActions();
     sliderMobile();
+    hideIconSidebar();
   }
 
   //
@@ -87,6 +88,13 @@ locastyle.mobile = (function() {
 
       });
 
+    }
+  }
+
+  // Caso não exista o sidebar, o ícone no mobile será escondido
+  function hideIconSidebar() {
+    if( $('.sidebar').length < 1){
+      $('.control-sidebar').addClass('d-none');
     }
   }
 
