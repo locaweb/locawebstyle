@@ -125,17 +125,17 @@ $mobile-left-number: "240px"
 	li
 		position: relative
 		padding-left: 12px
-		color: #888
+		color: $gray2
 
 		&:after
-			+arrow-right (#333, 3px)
+			+arrow-right ($gray1, 3px)
 			vertical-align: bottom
 			position: absolute
 			left: 0
 			top: 6px
 
 		&:last-child:after
-			+arrow-right (#888, 3px)
+			+arrow-right ($gray2, 3px)
 			vertical-align: bottom
 			position: absolute
 			left: 0
@@ -145,10 +145,10 @@ $mobile-left-number: "240px"
 			display: none
 
 		a
-			color: #333
+			color: $gray1
 
 	.active
-		color: #888
+		color: $gray2
 //
 // Essa formatação começa a partir do TABLET
 //
