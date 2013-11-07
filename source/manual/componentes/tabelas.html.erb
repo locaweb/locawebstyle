@@ -1,6 +1,5 @@
 ---
 title: Componentes - Tabelas
-
 menu_page: sidebar-componentes.erb
 ---
 
@@ -59,11 +58,10 @@ menu_page: sidebar-componentes.erb
 	</div>
 	</div>
 </div>
-<pre class="lang-html prettyprintCode linenums">
-	<div class="well hidden well-sm" data-target="tabela1">
-	<p class="d-inline-block">
-		<strong class="counterChecks">0</strong> itens selecionados
-	</p>
+
+<pre class="lang-html prettyprint-code linenums">
+<div class="well hidden well-sm" data-target="tabela1">
+	<p class="d-inline-block"><strong class="counterChecks">0</strong> itens selecionados</p>
 	<div class="actions">
 		<div class="btn-group">
 			<button type="button" class="btn btn-default">Duplicar</button>
@@ -72,7 +70,7 @@ menu_page: sidebar-componentes.erb
 		</div>
 		<button type="button" class="btn btn-danger">Excluir</button>
 	</div>
-	</div>
+</div>
 </pre>
 
 <p>O elemento <code>.well</code> tem a classe <code>hidden</code>, que faz com que ele não seja exibido inicialmente. O script retirará essa classe assim que o usuário selecionar mais de dois checkbox nas linhas da tabela. </p>
@@ -117,41 +115,50 @@ menu_page: sidebar-componentes.erb
 			</table>
 		</div>
 	</div>
-<pre class="lang-html prettyprintCode linenums">
-	<!-- Botões de ação da Tabela para edição em massa -->
-	<div class="well hidden well-sm clearfix" data-target="tabela1">
-			<p class="d-inline-block">
-				<strong class="counterChecks">0</strong> itens selecionados
-			</p>
-			<div class="actions">
-				<div class="btn-group">
-					<button type="button" class="btn btn-default">Duplicar</button>
-					<a href="#" class="btn btn-default">Relatorio</a>
-					<a href="#" class="btn btn-default">Arquivar</a>
-				</div>
-				<button type="button" class="btn btn-danger">Excluir</button>
+<pre class="lang-html prettyprint-code linenums">
+<!-- Botões de ação da Tabela para edição em massa -->
+<div class="well hidden well-sm clearfix" data-target="tabela1">
+		<p class="d-inline-block"><strong class="counterChecks">0</strong> itens selecionados</p>
+		<div class="actions">
+			<div class="btn-group">
+				<button type="button" class="btn btn-default">Duplicar</button>
+				<a href="#" class="btn btn-default">Relatorio</a>
+				<a href="#" class="btn btn-default">Arquivar</a>
 			</div>
-	</div>
+			<button type="button" class="btn btn-danger">Excluir</button>
+		</div>
+</div>
 
-	<!-- Tabela -->
-	<table class="table table-style" id="tabela1">
-		<thead>
-			<tr>
-				<th class="txt-center"><input type="checkbox"></th>
-				<th>Título</th>
-				<th class="hidden-xs">Campanha</th>
-				<th>Status</th>
-				<th class="hidden-xs">Data de envio</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td class="txt-center"><input type="checkbox"></td>
-				<td><a href="" title="">Mensagem Teste Locastyle 1</a></td>
-				<td class="hidden-xs">Campanha 1</td>
-				<td>Enviada</td>
-				<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-			</tr>
-		</tbody>
-	</table></pre>
+<!-- Tabela -->
+<table class="table table-style" id="tabela1">
+	<thead>
+		<tr>
+			<th class="txt-center"><input type="checkbox"></th>
+			<th>Título</th>
+			<th class="hidden-xs">Campanha</th>
+			<th>Status</th>
+			<th class="hidden-xs">Data de envio</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="txt-center"><input type="checkbox"></td>
+			<td><a href="" title="">Mensagem Teste Locastyle 1</a></td>
+			<td class="hidden-xs">Campanha 1</td>
+			<td>Enviada</td>
+			<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+			<td>
+				<div class="table-actions ico-grid">
+					<ul class="ico-grid">
+						<li><a href="#">Duplicar</a></li>
+						<li><a href="#">Relatório</a></li>
+						<li><a href="#">Arquivar</a></li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</pre>
 </article>
