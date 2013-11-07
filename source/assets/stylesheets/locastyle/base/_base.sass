@@ -1,6 +1,11 @@
-@import "../layout/colors/gray-base"
-
 $height-short: 350px
+
+.no-menu
+	.header
+		padding-bottom: 40px
+
+	.header-content
+		margin-top: 30px
 
 .content[role="main"]
 	padding-top: 40px
@@ -76,6 +81,8 @@ a
 
 [class*="ico-"][data-toggle="popover"]:before
 	+border-circle(14px, 75%)
+	background-color: #154297
+	color: #FFF
 
 .popover
 	font-size: .875em

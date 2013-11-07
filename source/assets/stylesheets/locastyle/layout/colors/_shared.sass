@@ -2,8 +2,23 @@
 // Cores Mobile
 //
 #{$theme-color}
+
+	a[class*="btn"]
+		color: #fff
+
+	a.btn-default
+		color: $gray3
+
+
 	a
 		color: $color2
+
+	&.no-menu
+		.header
+			border-bottom: 4px solid $color1 !important
+
+		.nav-content
+			display: none
 
 	//
 	// Cores para HEADER
@@ -12,7 +27,9 @@
 		background-color: $color1
 		border-bottom-color: $color3
 
-	.nav-content
+
+	.nav-content,
+	.no-menu .header
 		border-bottom-color: $color3
 
 		.menu > li a
@@ -169,15 +186,9 @@
 //
 @media #{$media-tablet}
 	#{$theme-color}
-		a[class*="btn"]
-			color: #fff
-
-		a.btn-default
-			color: $gray3
 
 		.header
 			background-color: transparent
-			border-bottom-color: $color3
 
 			.help-sugestions
 				background-color: $color3
