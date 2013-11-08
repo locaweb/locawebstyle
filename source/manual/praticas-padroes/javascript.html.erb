@@ -51,9 +51,9 @@ menu_page: sidebar-praticas-padroes.erb
 
 <pre class="lang-javascript prettyprint linenums">
 if ( x < 0 ) {
-	console.dir( x )
+	console.log( x )
 } else {
-	console.dir( y )
+	console.log( y )
 }
 </pre>
 
@@ -69,27 +69,28 @@ if ( x < 0 ) {
 
 <pre class="lang-javascript prettyprint linenums">
 // Define o objeto global do projeto, igual a um já existente ou cria um novo objeto.
-var project = project || {};
+var projeto = projeto || {};
 
 // Define o módulo no objeto global.
-project.module = (function() {
+projeto.moduloUm = (function() {
 	'use strict';
 
-	function init() {
+	function iniciar() {
+		interno();
 		// ...
 	}
 
-	function update() {
+	function atualizar() {
 		// ...
 	}
 
-	function internal() {
+	function interno() {
 		// ...
 	}
 
 	return {
-		start:init,
-		update: update
+		iniciar:iniciar,
+		atualizar: atualizar
 	};
 
 }());
@@ -104,20 +105,20 @@ project.module = (function() {
 	<p>Módulo de gráficos no arquivo charts.js</p>
 
 <pre class="lang-javascript prettyprint linenums">
-var project = project || {};
-project.charts = (function() {
+var projeto = projeto || {};
+project.Grafico = (function() {
 	'use strict';
 
-	function init() {
-		plotChart();
+	function iniciar() {
+		inserirGrafico();
 	}
 
-	function plotChart() {
+	function inserirGrafico() {
 		// ...
 	}
 
 	return {
-		init:init
+		iniciar:iniciar
 	};
 
 }());
@@ -125,20 +126,21 @@ project.charts = (function() {
 
 <p>Módulo servidores no arquivo servers.js</p>
 <pre class="lang-javascript prettyprint linenums">
-var project = project || {};
-project.servers = (function() {
+var projeto = projeto || {};
+projeto.Servidores = (function() {
 	'use strict';
 
-	function init() {
-		loadAllServers();
+	function iniciar() {
+		buscaServidores();
 	}
 
-	function loadAllServers() {
+	function buscaServidores() {
+	  insereListaServidores()
 		// ...
 	}
 
 	return {
-		init:init
+		iniciar:iniciar
 	};
 
 }());
@@ -147,31 +149,31 @@ project.servers = (function() {
 	<p>
 		Finalmente o arquivo que controla quando cada módulo será executado, da maneira que preferir:
 		<br>
-		Arquivo initializer.js
+		Arquivo carregaModulos.js
 	</p>
 
 <pre class="lang-javascript prettyprint linenums">
-var project = project || {};
-project.initializer = (function($) {
+var projeto = projeto || {};
+projeto.carregaModulos = (function($) {
 	'use strict';
 
-	function init() {
-		if ( $('.chart').size() ) {
-			project.charts.init();
+	function inicio() {
+		if ( $('.grafico').size() ) {
+			projeto.graficos.inicio();
 		}
 
-		if ( window.location.pathname === '/servers' ) {
-			project.servers.init();
+		if ( window.location.pathname === '/servidores' ) {
+			projeto.servidores.inicio();
 		}
 	}
 
 	return {
-		init:init
+		inicio:inicio
 	};
 
 }(jQuery));
 
-project.initializer.init();
+projeto.carregaModulos.inicio();
 </pre>
 
 	<h3>Código em apenas um idioma</h3>
@@ -237,12 +239,12 @@ project.initializer.init();
 <pre class="lang-javascript prettyprint linenums">
 // Curtos, posicionamento no código e abreviações
 var x1;
-var input1;
-var posLT;
+var campo1;
+var latXY;
 
 // Longos demais
 var valorEixoXGraficoConsumo;
-var inputTextFirstName;
+var campoTextoPrimeiroNome;
 </pre>
 
 	<p>Funções com nomes ruins:</p>
@@ -266,11 +268,11 @@ var $header    = $('#header');
 var $menuItens = $('#menu a');
 
 // Maiúsculas para constantes
-var IMAGES_PATH = '/assets/images/';
-var CLIENT_NAME = 'Fulan0';
+var PASTA_IMAGENS = '/assets/images/';
+var NOME_CLIENTE = 'Fulano de Tal';
 
 // _ no início para variáveis e funções privadas
-var _count = 0;
+var _contador = 0;
 </pre>
 
 	<p>Confira o padrão de nomenclatura do <a href="http://javascript.crockford.com/code.html#names" target="_blank"> Douglas Crockford</a></p>
@@ -299,7 +301,7 @@ var _count = 0;
 <pre class="lang-javascript prettyprint linenums">
 // Ruim: verifica se é maior de 18
 // Bom: menores de idade sao redirecionados
-if( age >= 18 ){ ... }
+if( idade >= 18 ){ ... }
 </pre>
 
 	<p>Lembrando que comentários devem existir apenas na versão de desenvolvimento, devendo ser removidos no arquivo minificado que é entregue em produção.</p>
@@ -313,12 +315,12 @@ if( age >= 18 ){ ... }
 
 <pre class="lang-javascript prettyprint linenums">
 // Errado
-$('.user-name').css({
+$('#nome-usuario').css({
 	'border': '1px solid red',
 	'color': 'red'
 });
 // Certo
-$('.user-name.error').addClass('error');
+$('#nome-usuario').addClass('erro');
 </pre>
 
 	<p>Crie os estilos que precisar (e animações, quando possível) no CSS, e no javascript controle quando os estilos são aplicados, em vez de aplicar propriedades.</p>
@@ -332,17 +334,17 @@ $('.user-name.error').addClass('error');
 var cores = ['rosa', 'azul', 'verde'];
 // Em vez de
 var cores = new Array();
-lunch[0]='rosa';
-lunch[1]='azul';
-lunch[2]='verde';
+cores[0]='rosa';
+cores[1]='azul';
+cores[2]='verde';
 
 // Use
-var x = v || 10;
+var margem = altura || 10;
 // Em vez de
-if(v){
-	var x = v;
+if(altura === undefined){
+	var margem = altura;
 } else {
-	var x =10;
+	var margem = 10;
 }
 
 // Use
@@ -375,28 +377,28 @@ $('#botao2').on('click', function(){
 //...
 
 // Faça
-function hideForm(){
+function ocultaFormulario(){
 	$('#formulario').slideUp();
 }
 $('#botao1').on('click', function(){
 	$('#resultado').load('ajax/lista-pessoas.html', function() {
-		hideForm();
+		ocultaFormulario();
 	});
 })
 $('#botao2').on('click', function(){
 	$('#resultado').load('ajax/lista-empresas.html', function() {
-		hideForm();
+		ocultaFormulario();
 	});
 })
 
 // Ou melhor
-function hideForm(){
+function ocultaFormulario(){
 	$('#formulario').slideUp();
 }
 function carregaDados( elemento, url){
 	$(elemento).on('click', function(){
 		$('#resultado').load(url, function() {
-			hideForm();
+			ocultaFormulario();
 		});
 	})
 }
@@ -411,47 +413,47 @@ carregaDados('#botao2', 'ajax/lista-empresas.html');
 <pre class="lang-javascript prettyprint linenums">
 // Em vez de
 $.ajax({
-	type: "POST",
-	url: "api/usuarios",
-	data: {limit: 10},
-	success: function(data){
+	type   : "POST",
+	url    : "api/usuarios",
+	data   : { limite: 10 },
+	success: function( dados ){
 		$('#formulario').hide();
-		$('#mensagem').text('Busca efetuada com sucesso');
-		$('#lista').html(data).fadeIn('fast');
+		$('#mensagem').text( 'Busca efetuada com sucesso' );
+		$('#lista').html( dados ).fadeIn('fast');
 	},
-	error: function(){
-		$('#mensagem').text('Erro na busca');
+	error  : function(){
+		$('#mensagem').text( 'Erro na busca' );
 	}
 });
 
 // Faça
-var config: {
-	messages = {
-		success: 'Busca efetuada com sucesso',
-		error: 'Erro na busca'
+var configuracoes: {
+	mensagens = {
+		successo : 'Busca efetuada com sucesso',
+		erro     : 'Erro na busca'
 	},
 	api: {
 		usuarios: "api/usuarios"
 	},
-	animate: {
-		velocity: "fast"
+	animacao: {
+		velocidade: "fast"
 	},
-	list: {
-		perPage: 10
+	lista: {
+		porPagina: 10
 	}
 }
 //...
 $.ajax({
-	type: "POST",
-	url: config.api.usuarios,
-	data: {limit: config.list.perPage},
-	success: function(data){
+	type   : "POST",
+	url    : configuracoes.api.usuarios,
+	data   : { limite: configuracoes.lista.porPagina} ,
+	success: function( dados ){
 		$('#formulario').hide();
-		$('#mensagem').text(config.messages.success);
-		$('#lista').html(data).fadeIn(config.animate.velocity);
+		$('#mensagem').text( configuracoes.mensagens.successo );
+		$('#lista').html( dados ).fadeIn( configuracoes.animacao.velocity );
 	},
-	error: function(){
-		$('#mensagem').text(config.messages.success);
+	error  : function(){
+		$('#mensagem').text( configuracoes.mensagens.erro );
 	}
 });
 </pre>
@@ -506,21 +508,21 @@ $('#botao').on('click', function(){
 		success: function(data){
 			$('resultado').fadeIn('fast', function(){
 				$('#formulario').animate({
-				  heigth: 0,
+				  heigth : 0,
 				  opacity: 0
 				}, 300, function(){
 				    $('#mensagem').animate({
-				      heigth: 200,
+				      heigth : 200,
 				      opacity: 1
 				    }, 300, function(){
-				      //etc etc
+				      // ...
 				    })
 				  }
 				)
 			})
 		},
 		error: function(){
-			$('#mensagem').text(config.messages.success);
+			$('#mensagem').text(mensageErro);
 		}
 	});
 });
@@ -555,28 +557,28 @@ for(var count=0; i < cores.length; count++){
 
 <pre class="lang-javascript prettyprint linenums">
 // Em vez de
-$('#botaoEnviar').on('click', function(){
-	$(this).prop('disabled', true);
-	$('$formulario').addClass('enviando');
-	$.post('ajax/contato', function(data) {
-		$('#mensagem').html(data);
-		$('$formulario').removeClass('enviando');
-		$('#botaoEnviar'),prop('disabled', false);
+$('#botaoEnviar').on( 'click', function(){
+	$(this).prop( 'disabled', true );
+	$('$formulario').addClass( 'enviando' );
+	$.post( 'ajax/contato', function( dados ) {
+		$('#mensagem').html( dados );
+		$('$formulario').removeClass( 'enviando' );
+		$('#botaoEnviar').prop( 'disabled', false );
 	});
 });
 
 // Faça
 var $botaoEnviar = $('#botaoEnviar');
-var $formulario = $('#formulario');
-var $mensagem = $('#mensagem');
+var $formulario  = $('#formulario');
+var $mensagem    = $('#mensagem');
 
-$botaoEnviar.on('click', function(){
-	$botaoEnviar.prop('disabled', true);
-	$formulario.addClass('enviando');
-	$.post('ajax/contato', function(data) {
-		$mensagem.html(data);
-		$formulario.removeClass('enviando');
-		$botaoEnviar.prop('disabled', false);
+$botaoEnviar.on( 'click', function(){
+	$botaoEnviar.prop( 'disabled', true );
+	$formulario.addClass( 'enviando' );
+	$.post('ajax/contato', function( dados ) {
+		$mensagem.html( dados );
+		$formulario.removeClass( 'enviando' );
+		$botaoEnviar.prop( 'disabled', false );
 	});
 });
 </pre>
