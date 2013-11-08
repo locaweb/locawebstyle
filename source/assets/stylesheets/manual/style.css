@@ -672,9 +672,6 @@ table td,{
 
 /*** SIDEBAR ***/
 .sidebar-manual {
-	float: right;
-	width: 25%;
-	margin-left: 20px;
 	margin-top: 0;
 }
 
