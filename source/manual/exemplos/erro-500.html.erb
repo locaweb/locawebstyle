@@ -14,6 +14,9 @@ layout: false
 	<link rel="apple-touch-icon" href="/assets/images/locastyle/ico_app_114.png">
 	<link rel="stylesheet" type="text/css" href="<%= base_url + bootstrap_css %>">
 	<%= stylesheet_link_tag "locastyle" %>
+
+    <!-- CSS do manual apenas -->
+  <%= stylesheet_link_tag "manual" %>
 </head>
 
 <body>
@@ -28,20 +31,27 @@ layout: false
 
   <main class="main">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12 content" role="main">
-          <header class="header-content">
-            <h1 class="title-1">Erro interno do sistema</h1>
-            <p>Ocorreu uma instabilidade do sistema que impediu a exibição do conteúdo. Nossa equipe técnica foi notificada e está trabalhando para resolver o problema.</p>
-          </header>
+      <div class="element-example">
+<div class="row">
+  <div class="col-md-12 content" role="main">
+    <header class="header-content">
+      <h1 class="title-1">Erro interno do sistema</h1>
+      <p>
+        Ocorreu uma instabilidade do sistema que impediu a exibição do conteúdo. Nossa equipe técnica foi notificada e está trabalhando para resolver o problema.
+      </p>
+    </header>
 
-          <h2 class="title-5">Você pode:</h2>
-          <ol>
-            <li>Recarregar a página clicando no botão Atualizar do navegador.</li>
-            <li>Retornar à <a href="/">página inicial</a>.</li>
-          </ol>
-          <p>Se o problema persistir, entre em contato através de um dos <a href="https://centraldocliente.locaweb.com.br/tickets/treatment" target="_blank">canais de atendimento</a>.</p>
-        </div>
+    <h2 class="title-5">Você pode:</h2>
+    <ol>
+      <li>Recarregar a página clicando no botão Atualizar do navegador.</li>
+      <li>Retornar à <a href="/">página inicial</a>.</li>
+    </ol>
+    <p>
+      Se o problema persistir, entre em contato através de um dos
+      <a href="https://centraldocliente.locaweb.com.br/tickets/treatment" target="_blank">canais de atendimento</a>.
+    </p>
+  </div>
+</div>
       </div>
     </div>
   </main>
@@ -64,9 +74,13 @@ layout: false
     </div>
   </footer>
 
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<%= javascript_include_tag "locastyle" %>
-	<script src="<%= base_url + bootstrap_js %>"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <%= javascript_include_tag "locastyle" %>
+  <script src="<%= base_url + bootstrap_js %>"></script>
+
+  <!-- JS do manual apenas -->
+  <script src="<%= base_url + '/assets/google-code-prettify/src/prettify.js' %>"></script>
+  <%= javascript_include_tag "manual" %>
 
 </body>
 </html>
