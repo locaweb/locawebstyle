@@ -66,6 +66,7 @@ layout: false
 			<div class="row">
 				<div class="col-md-9 content" role="main">
 
+
 					<div class="shortcut-box row">
 						<header class="header-content">
 							<h1 class="title-2">Comece aqui suas ações de marketing</h1>
@@ -84,7 +85,31 @@ layout: false
 						</div>
 					</div>
 
+					<!-- Button trigger modal -->
+					<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Abrir modal</a>
+
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									<h4 class="modal-title">Título do Modal</h4>
+								</div>
+								<div class="modal-body">
+									...
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+									<button type="button" class="btn btn-primary">Salvar</button>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+
+
 					<div class="collapse-box">
+
 						<div class="panel-heading">
 							<span data-toggle="collapse" data-target="#collapseOne">
 								<h4 class="panel-title">Exemplo de layout com formulário</h4>
@@ -144,11 +169,10 @@ layout: false
 								</form>
 							</div>
 						</div>
-
 					</div>
 
-
 					<div class="collapse-box">
+
 						<div class="panel-heading">
 							<a data-toggle="collapse" href="#collapseTwo">
 								<h4 class="panel-title">Um exemplo simples com texto</h4>
@@ -166,6 +190,7 @@ layout: false
 					</div>
 
 					<div class="collapse-box">
+
 						<div class="panel-heading">
 							<a data-toggle="collapse" href="#collapseThree">
 								<h4 class="panel-title">Exemplo com tabela</h4>
@@ -290,9 +315,9 @@ layout: false
 							</label>
 						</div>
 					</div>
-
 				</div>
 				<aside class="sidebar col-md-3" role="complementary">
+
 					<section class="sidebox">
 						<h1 class="sidebox-title ico-user">Dados da conta</h1>
 						<div class="sidebox-inner">
@@ -381,26 +406,26 @@ layout: false
 			</div>
 		</div>
 
-		<footer class="footer">
-			<div class="footer-menu">
-				<nav class="container">
-					<h2 class="title-footer">suporte e ajuda</h2>
-					<ul class="no-liststyle">
-						<li><a href="#" class="customer-support"><span class="visible-lg">Atendimento</span></a></li>
-						<li><a href="#" class="my-tickets"><span class="visible-lg">Meus Chamados</span></a></li>
-						<li><a href="#" class="help-desk"><span class="visible-lg">Central de Ajuda (Wiki)</span></a></li>
-						<li><a href="#" class="statusblog"><span class="visible-lg">Statusblog</span></a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="container footer-info">
-				<span class="last-access ico-screen"><strong>Último acesso: </strong>7/8/2011 22:35:49</span>
-				<div class="set-ip"><span class="set-ip"><strong>IP:</strong> 201.87.65.217</span></span></div>
-				<p class="copy-right">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</p>
-			</div>
-		</footer>
-
 	</main>
+
+	<footer class="footer">
+		<div class="footer-menu">
+			<nav class="container">
+				<h2 class="title-footer">suporte e ajuda</h2>
+				<ul class="no-liststyle">
+					<li><a href="#" class="customer-support"><span class="visible-lg">Atendimento</span></a></li>
+					<li><a href="#" class="my-tickets"><span class="visible-lg">Meus Chamados</span></a></li>
+					<li><a href="#" class="help-desk"><span class="visible-lg">Central de Ajuda (Wiki)</span></a></li>
+					<li><a href="#" class="statusblog"><span class="visible-lg">Statusblog</span></a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="container footer-info">
+			<span class="last-access ico-screen"><strong>Último acesso: </strong>7/8/2011 22:35:49</span>
+			<div class="set-ip"><span class="set-ip"><strong>IP:</strong> 201.87.65.217</span></span></div>
+			<p class="copy-right">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</p>
+		</div>
+	</footer>
 
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<%= javascript_include_tag "locastyle" %>
