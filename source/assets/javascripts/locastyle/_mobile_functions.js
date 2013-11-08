@@ -10,6 +10,7 @@ locastyle.mobile = (function() {
     tabDropdownMobile();
     tabDropdownActions();
     sliderMobile();
+    hideIconSidebar();
   }
 
   //
@@ -56,20 +57,44 @@ locastyle.mobile = (function() {
         // Grava o estado inicial das tabs
         var $navTabContent = $(this).html();
 
+
         // Muda o HTML original das Navs/Tabs para o código do Dropdown
         $(this).html('<li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">' + $dropdownItemText + '</a><ul class="dropdown-menu" id="drop' + (index+1) +'" role="menu"></ul></li>');
 
+        var $dropdownMenu = $(this).find('.dropdown-menu');
+
         // Move o código das tabs originais para a estrutura nova do Dropdown
-        $(this).find('.dropdown-menu').html($navTabContent);
+        $dropdownMenu.html($navTabContent);
 
         // Muda o texto do dropdown-toggle de acordo com o ítem ativo
-        $(this).find('.dropdown-menu li a').on('click', function() {
+        $dropdownMenu.find('li a').on('click', function() {
+
           var $dropdownItemText = $(this).text();
           $(this).parents('.dropdown').find('.dropdown-toggle').html($dropdownItemText);
+
+          var itemTextActive = $(this).parents('.dropdown').find('.dropdown-toggle').text();
+
+          $dropdownMenu.find('li.active').removeClass('active');
+
+          // Mantem a classe active no elemento selecionado
+          $dropdownMenu.find('li a').each(function(){
+            var itemText = $(this).text();
+            if(itemText === itemTextActive){
+              $(this).parents('li').addClass('active');
+            }
+          });
+
         });
 
       });
 
+    }
+  }
+
+  // Caso não exista o sidebar, o ícone no mobile será escondido
+  function hideIconSidebar() {
+    if( $('.sidebar').length < 1){
+      $('.control-sidebar').addClass('d-none');
     }
   }
 
