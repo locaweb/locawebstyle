@@ -174,6 +174,11 @@ project.initializer = (function($) {
 project.initializer.init();
 </pre>
 
+	<h3>Código em apenas um idioma</h3>
+	<p>Para facilitar a manutençao e a legibilidade do código, procure usar apenas um idioma, em nomes de funções, variáveis e comentários.</p>
+	<p>O mais importante é seguir um padrão, mantendo ele do início ao fim do projeto. Exceções, claro, sao libraries e plugins que utilizados.</p>
+	<p>Seja qual for a língua utilizada é importante ser claro, utilizando nomes descritivos, evitando ser prolixo nos nomes, func'ões e comentários, como abordado no tópico <a href="#seja-compreensivel">Seja compreensívelvel</a> abaixo.</p>
+
 	<h3>'use strict';</h3>
 	<p> Ao utilizar <b>"use strict";</b> no início de códigos ou funções, declara-se uma mudança na sintaxe do Javascript, que lança mais exceções mostrando problemas no código. Os erros mais comus são uso de palavras reservadas do javascript (ECMAScript 5 e 6), uso de variáveis não declaradas e uso de funcções descontinuadas. </p>
 	<p> Para utilizar, basta inserir a string <i>'use strict';</i> antes do bloco de código a ser avaliado ou função. Exemplos:<p>
@@ -222,9 +227,10 @@ project.initializer.init();
 	</pre>
 
 
-	<h3>Seja compreensível</h3>
+	<h3 id="seja-compreensivel">Seja compreensível</h3>
 
 	<p>Use nomes de variáveis e funções auto explicativos e simples. Crie algum padrão e mantenha em todo o projeto.</p>
+	<p>No Locastyle utilizamos variáveis e funções camelCase, pela facilidade de leitura, escrita e praticidade ao se trabalhar.</p>
 	<p>Exemplos:</p>
 	<p>Variáveis com nomes ruins:</p>
 
