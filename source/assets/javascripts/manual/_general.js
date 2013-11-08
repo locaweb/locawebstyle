@@ -23,7 +23,7 @@ manual.general = (function() {
         var HTML = $(this).html();
         $(e).after('<div><button class=" toggle-markup-example btn btn-default">Ver código HTML</button><pre class="lang-html prettyprint linenums hidden" id="code-example-'+i+'"></pre></div>');
         $('#code-example-'+i).text(HTML);
-        // prettyPrint();
+         prettyPrint();
       });
       $('.toggle-markup-example').on('click', function(){
         $(this).next().toggleClass('hidden')
@@ -35,7 +35,7 @@ manual.general = (function() {
     $('a[href="' + window.location.pathname + '"]', 'nav').addClass('active');
   }
 
-  function initPrettyPrint(){ 
+  function initPrettyPrint(){
     $('pre.prettyprint-code').each(function() {
       var code = $(this).html()
       $(this).text(code).addClass('prettyprint')
@@ -45,7 +45,7 @@ manual.general = (function() {
 
   var utils = (function() {
 
-    function camelCase(input) { 
+    function camelCase(input) {
       return input.toLowerCase().replace(/-(.)/g, function(match, group) {
         return group.toUpperCase();
       });
