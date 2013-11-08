@@ -7,12 +7,18 @@
 html, body
 	color: #555
 	position: relative
+	height: 100%
 
 body
 	line-height: inherit
 
 .main
 	background-color: #fff
+	padding-top: 40px
+	padding-bottom: 50px
+	min-height: 100%
+	height: auto !important
+	height: 100%
 
 .progress-bar span
 	vertical-align: middle
@@ -59,9 +65,5 @@ body
 // Desktops
 //
 @media (min-width: #{$screen-sm})
-	html, body
-		height: 90%
-
 	.main
-		min-height: 82%
-		padding-bottom: 140px
+		padding-top: 0
