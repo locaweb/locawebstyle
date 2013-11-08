@@ -1,8 +1,4 @@
 .footer
-	// display: none
-	// position: absolute
-	// bottom: 0
-	// left: 0
 	position: relative
 	z-index: 0
 	width: 100%
@@ -66,32 +62,40 @@
 @media #{$media-desk}
 
 	.footer
-		margin: 10px 0 0 !important
+		margin: 10px 0 0
 		position: absolute
 		display: block
 
-		nav
-			position: relative
-			padding: 0
+		.footer-menu
 
-			.title-footer
-				float: left
-				line-height: 25px
-				padding: 15px 35px 15px 0 !important
-				background: url(#{$image_path}footer/arrow-left.png) no-repeat right !important
+			nav
+				position: relative
+				padding: 0
 
-			ul
-				float: right
-				margin: 0 !important
+				.title-footer
+					float: left
+					line-height: 25px
+					padding: 15px 35px 15px 0
+					background: url(#{$image_path}footer/arrow-left.png) no-repeat right
 
-				li
-					margin-left: 25px !important
-					margin-right: 0 !important
-					font-size: .812em
+				ul
+					margin: 0
 
-					a
-						span
-							display: inline-block !important
+					li
+						margin-left: 20px
+						margin-right: 0
+						font-size: .812em
+						width: 18%
+
+						a
+							.visible-lg
+								display: inline-block!important
+								opacity: 1
+
+						&:hover,
+						&:focus,
+						&:active
+							opacity: .8
 
 		.footer-info
 			padding-bottom: 10px
