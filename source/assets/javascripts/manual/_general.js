@@ -6,6 +6,7 @@ manual.general = (function() {
     initRouter();
     activeMenu();
     initPrettyPrint();
+    insertMarkupExample();
   }
 
   function initRouter(){
@@ -13,21 +14,21 @@ manual.general = (function() {
       var section = utils.camelCase( window.location.pathname.split('/')[3] );
       manual[section] ? manual[section].init() : null ;
     }
-    if( window.location.pathname.split('/')[2] === 'elementos' ){
-      insertMarkupExample();
-    }
   }
 
   function insertMarkupExample(){
-    $('.element-example').each(function(i,e){
-      var HTML = $(this).html();
-      $(e).after('<div><button class=" toggle-markup-example btn btn-default">Ver código HTML</button><pre class="lang-html prettyprint linenums hidden" id="code-example-'+i+'"></pre></div>');
-      $('#code-example-'+i).text(HTML);
-      // prettyPrint();
-    });
-    $('.toggle-markup-example').on('click', function(){
-      $(this).next().toggleClass('hidden')
-    });
+    var $elementExample = $('.element-example');
+    if( $elementExample.size() ){
+      $('.element-example').each(function(i,e){
+        var HTML = $(this).html();
+        $(e).after('<div><button class=" toggle-markup-example btn btn-default">Ver código HTML</button><pre class="lang-html prettyprint linenums hidden" id="code-example-'+i+'"></pre></div>');
+        $('#code-example-'+i).text(HTML);
+        // prettyPrint();
+      });
+      $('.toggle-markup-example').on('click', function(){
+        $(this).next().toggleClass('hidden')
+      });
+    }
   }
 
   function activeMenu(){
