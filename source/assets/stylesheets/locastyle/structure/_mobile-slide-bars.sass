@@ -11,11 +11,6 @@ $mobile-left-number: "240px"
 		-moz-transform: translate3D(#{$mobile-sidebar-width},0,0)
 
 	.right-bar
-		overflow: auto
-
-		body
-			overflow: auto
-
 		.sidebar
 			-webkit-transform: translate3D(0,0,0)
 			-moz-transform: translate3D(0,0,0)
@@ -33,14 +28,12 @@ $mobile-left-number: "240px"
 		+transition(-moz-transform .30s ease-out)
 
 	.left-bar
-		overflow: hidden
+		overflow-x: hidden
 
 		body
-			overflow: hidden
+			overflow-x: hidden
 
 		.nav-content
-			// -webkit-transform: translateX(0)
-			// -moz-transform: translateX(0)
 			z-index: 0
 
 		.main
