@@ -456,6 +456,45 @@ $.ajax({
 });
 </pre>
 
+	<h4>Utilização correta de Eventos</h4>
+	<p>Ao escrever seu código e registrar comportamentos e eventos na iteração do usuário é importante ter cuidado na escolha correta dos eventos.</p>
+	<p>Um caso comum de erro é vinclular uma função no clique do botão enviar de um formulário, em vez de chamar a ação no submit do formulário:</p>
+	<pre class="lang-javascript prettyprint linenums">
+	// Errado
+	// se o usuário submeter o form teclando ENTER a função não é executada
+	$('#meuForm').delegate('#enviar', 'click', function(event){
+		if( $('#meuForm').isValid() ){
+			// ... ação
+	  }
+	});
+	// correto
+	// a ação é executada no clique ou no ENTER
+	$('#meuForm').on('submit', function(event){
+		if( $('#meuForm').isValid() ){
+			// ... ação
+	  }
+	});
+	</pre>
+	<p>Também é preciso saber o uso correto e diferenças entre os métodos, no caso do jQuery, sabendo os corretos para cada situação e os que estão em desuso.</p>
+	<pre class="lang-javascript prettyprint linenums">
+		// Os seguintes foram descontinuados
+		.die()   .load()
+		.error() .unload()
+		.live()  .toggle()
+		// os seguintes métodos podem ser evitados
+		.mousedown()   .blur()     .rezise()   .keyup()     .keypress()
+		.mousenter()   .change()   .hover()    .ready()     .focusin() 
+		.mouseleave()  .click()    .scroll()   .submit()    .mouseup()     
+		.mouseout()    .dblclick() .keydown()  .focusout() 
+		.mouseover()   .focus()    .select()         
+		// e devem ser substitídos por
+		$('#elemento').on('blur', function(){ ... })
+		$('#elementoPai').delegate('#elemento', 'blur', function(){ ...});
+		// de prefrência o .delegate() que tem melhor performance 
+		// por fazer a seleção dentro de um escopo ( '#elementoPai' )
+		$('#escopo').delegate('#elemento', 'click', function(){ ...});
+	</pre>
+
 	<h4>Evite muitos aninhamentos</h4>
 	<p>Facilite o entendimento e manutençao dos seus códigos. Utilize as práticas anteriores e evite um código do tipo:</p>
 
