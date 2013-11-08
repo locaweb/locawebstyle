@@ -191,6 +191,37 @@ project.initializer.init();
 		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" target="_blank">MDN - Strict mode</a>
 	</p>
 
+	<h3>Nomenclatura de pastas, arquivos, módulos e plugins</h3>
+	<p>Um projeto pode ter muitos arquivos javascript, então é importante que estejam bem organizados desde o início, separados e bem nomeados.</p>
+	<p>A estrutura pode variar muito de projeto para projeto, mas as recomendações mínimas são:</p>
+	<ul>
+		<li>Nomes dos arquivos na mesma língua em que são escritos;</li>
+		<li>Nomes sem camelCase;</li>
+		<li>Pastas separadas por tipos (bibliotecas/frameworks/plugins);</li>
+		<li>Plugins identificados por versão.</li>
+	</ul>
+	<p>Exemplo:</p>
+	<pre class="lang-javascript prettyprint linenums">
+	── javascripts
+	   ├── libs
+	   │   ├── jquery.min.js
+	   │   └── underscore.min.js
+	   │   └── highcharts.min.js
+	   ├── plugins
+	   │   ├── jquery.validate-1.2.js
+	   │   ├── jquery.slider-3.1.js
+	   │   └── jquery.validate.addicional-methods-0.8.js
+	   ├── modules
+	   │   ├── charts
+	   │   |   ├── servers.js
+	   │   |   └── transfer.js
+	   │   ├── servers.js
+	   │   └── servers.forms.js
+	   ├── utils.js
+	   └── main.js
+	</pre>
+
+
 	<h3>Seja compreensível</h3>
 
 	<p>Use nomes de variáveis e funções auto explicativos e simples. Crie algum padrão e mantenha em todo o projeto.</p>
