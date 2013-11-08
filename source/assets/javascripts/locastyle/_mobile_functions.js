@@ -10,6 +10,17 @@ locastyle.mobile = (function() {
     tabDropdownMobile();
     tabDropdownActions();
     sliderMobile();
+    checkSidebarExist();
+  }
+
+  function checkSidebarExist() {
+    if ( $(".header .container").has(".sidebar").length ) {
+      $('.control-sidebar').removeClass('hidden');
+    }
+
+    if ( $("body").has(".nav-content").length ) {
+      $('.control-menu').removeClass('hidden');
+    }
   }
 
   //
