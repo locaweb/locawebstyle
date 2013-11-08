@@ -7,31 +7,48 @@ $mobile-left-number: "240px"
 @media #{$media-mobile}
 	.sidebar
 		+transition(all .30s ease-out)
-		-webkit-transform: translateX(#{$mobile-sidebar-width})
-		-moz-transform: translateX(#{$mobile-sidebar-width})
+		-webkit-transform: translate3D(#{$mobile-sidebar-width},0,0)
+		-moz-transform: translate3D(#{$mobile-sidebar-width},0,0)
 
 	.right-bar
+		overflow: auto
+
+		body
+			overflow: auto
+
 		.sidebar
-			-webkit-transform: translateX(0)
-			-moz-transform: translateX(0)
+			-webkit-transform: translate3D(0,0,0)
+			-moz-transform: translate3D(0,0,0)
+			height: 100%
+			overflow: auto
 
 		.overlay-bar
 			opacity: .5
 			visibility: visible
 
-	.main .content,
+	.main,
 	.header,
-	.nav-content
+	.footer,
 		+transition(-webkit-transform .30s ease-out)
 		+transition(-moz-transform .30s ease-out)
 
 	.left-bar
-		.nav-content
-			-webkit-transform: translateX(0)
-			-moz-transform: translateX(0)
-			z-index: 2
+		overflow: hidden
 
-		.main .content,
-		.header
-			-webkit-transform: translateX(#{$mobile-left-number})
-			-moz-transform: translateX(#{$mobile-left-number})
+		body
+			overflow: hidden
+
+		.nav-content
+			// -webkit-transform: translateX(0)
+			// -moz-transform: translateX(0)
+			z-index: 0
+
+		.main
+			height: 100%
+			overflow: hidden
+
+		.main,
+		.header,
+		.footer
+			-webkit-transform: translate3D(#{$mobile-left-number},0,0)
+			-moz-transform: translate3D(#{$mobile-left-number},0,0)
