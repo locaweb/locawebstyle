@@ -771,7 +771,6 @@ table td,{
 		display: none;
 	}
 
-	.content .text{padding-left: 0;}
 
 	.channels h2, .content > header h3{
 		max-width: 99%;
