@@ -51,9 +51,9 @@ menu_page: sidebar-praticas-padroes.erb
 
 <pre class="lang-javascript prettyprint linenums">
 if ( x < 0 ) {
-	console.dir( x )
+	console.log( x )
 } else {
-	console.dir( y )
+	console.log( y )
 }
 </pre>
 
@@ -69,27 +69,28 @@ if ( x < 0 ) {
 
 <pre class="lang-javascript prettyprint linenums">
 // Define o objeto global do projeto, igual a um já existente ou cria um novo objeto.
-var project = project || {};
+var projeto = projeto || {};
 
 // Define o módulo no objeto global.
-project.module = (function() {
+projeto.moduloUm = (function() {
 	'use strict';
 
-	function init() {
+	function iniciar() {
+		interno();
 		// ...
 	}
 
-	function update() {
+	function atualizar() {
 		// ...
 	}
 
-	function internal() {
+	function interno() {
 		// ...
 	}
 
 	return {
-		start:init,
-		update: update
+		iniciar:iniciar,
+		atualizar: atualizar
 	};
 
 }());
@@ -104,20 +105,20 @@ project.module = (function() {
 	<p>Módulo de gráficos no arquivo charts.js</p>
 
 <pre class="lang-javascript prettyprint linenums">
-var project = project || {};
-project.charts = (function() {
+var projeto = projeto || {};
+project.Grafico = (function() {
 	'use strict';
 
-	function init() {
-		plotChart();
+	function iniciar() {
+		inserirGrafico();
 	}
 
-	function plotChart() {
+	function inserirGrafico() {
 		// ...
 	}
 
 	return {
-		init:init
+		iniciar:iniciar
 	};
 
 }());
@@ -125,20 +126,21 @@ project.charts = (function() {
 
 <p>Módulo servidores no arquivo servers.js</p>
 <pre class="lang-javascript prettyprint linenums">
-var project = project || {};
-project.servers = (function() {
+var projeto = projeto || {};
+projeto.Servidores = (function() {
 	'use strict';
 
-	function init() {
-		loadAllServers();
+	function iniciar() {
+		buscaServidores();
 	}
 
-	function loadAllServers() {
+	function buscaServidores() {
+	  insereListaServidores()
 		// ...
 	}
 
 	return {
-		init:init
+		iniciar:iniciar
 	};
 
 }());
@@ -147,48 +149,102 @@ project.servers = (function() {
 	<p>
 		Finalmente o arquivo que controla quando cada módulo será executado, da maneira que preferir:
 		<br>
-		Arquivo initializer.js
+		Arquivo carregaModulos.js
 	</p>
 
 <pre class="lang-javascript prettyprint linenums">
-var project = project || {};
-project.initializer = (function($) {
+var projeto = projeto || {};
+projeto.carregaModulos = (function($) {
 	'use strict';
 
-	function init() {
-		if ( $('.chart').size() ) {
-			project.charts.init();
+	function inicio() {
+		if ( $('.grafico').size() ) {
+			projeto.graficos.inicio();
 		}
 
-		if ( window.location.pathname === '/servers' ) {
-			project.servers.init();
+		if ( window.location.pathname === '/servidores' ) {
+			projeto.servidores.inicio();
 		}
 	}
 
 	return {
-		init:init
+		inicio:inicio
 	};
 
 }(jQuery));
 
-project.initializer.init();
+projeto.carregaModulos.inicio();
 </pre>
 
-	<h3>Seja compreensível</h3>
+	<h3>Código em apenas um idioma</h3>
+	<p>Para facilitar a manutençao e a legibilidade do código, procure usar apenas um idioma, em nomes de funções, variáveis e comentários.</p>
+	<p>O mais importante é seguir um padrão, mantendo ele do início ao fim do projeto. Exceções, claro, sao libraries e plugins que utilizados.</p>
+	<p>Seja qual for a língua utilizada é importante ser claro, utilizando nomes descritivos, evitando ser prolixo nos nomes, func'ões e comentários, como abordado no tópico <a href="#seja-compreensivel">Seja compreensívelvel</a> abaixo.</p>
+
+	<h3>'use strict';</h3>
+	<p> Ao utilizar <b>"use strict";</b> no início de códigos ou funções, declara-se uma mudança na sintaxe do Javascript, que lança mais exceções mostrando problemas no código. Os erros mais comus são uso de palavras reservadas do javascript (ECMAScript 5 e 6), uso de variáveis não declaradas e uso de funcções descontinuadas. </p>
+	<p> Para utilizar, basta inserir a string <i>'use strict';</i> antes do bloco de código a ser avaliado ou função. Exemplos:<p>
+	<pre class="lang-javascript prettyprint linenums">
+		"use strict";
+		idade = 17; // lança um erro de referência
+
+		function soma(a, a, c){ // erro de sintaxe
+			"use strict";
+			return a + b + c; // exibe o erro se a função é chamada
+		}
+	</pre>
+	<p>
+		Leia mais em 
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" target="_blank">MDN - Strict mode</a>
+	</p>
+
+	<h3>Nomenclatura de pastas, arquivos, módulos e plugins</h3>
+	<p>Um projeto pode ter muitos arquivos javascript, então é importante que estejam bem organizados desde o início, separados e bem nomeados.</p>
+	<p>A estrutura pode variar muito de projeto para projeto, mas as recomendações mínimas são:</p>
+	<ul>
+		<li>Nomes dos arquivos na mesma língua em que são escritos;</li>
+		<li>Nomes sem camelCase;</li>
+		<li>Pastas separadas por tipos (bibliotecas/frameworks/plugins);</li>
+		<li>Plugins identificados por versão.</li>
+	</ul>
+	<p>Exemplo:</p>
+	<pre class="lang-javascript prettyprint linenums">
+	── javascripts
+	   ├── libs
+	   │   ├── jquery.min.js
+	   │   └── underscore.min.js
+	   │   └── highcharts.min.js
+	   ├── plugins
+	   │   ├── jquery.validate-1.2.js
+	   │   ├── jquery.slider-3.1.js
+	   │   └── jquery.validate.addicional-methods-0.8.js
+	   ├── modules
+	   │   ├── charts
+	   │   |   ├── servers.js
+	   │   |   └── transfer.js
+	   │   ├── servers.js
+	   │   └── servers.forms.js
+	   ├── utils.js
+	   └── main.js
+	</pre>
+
+
+	<h3 id="seja-compreensivel">Seja compreensível</h3>
 
 	<p>Use nomes de variáveis e funções auto explicativos e simples. Crie algum padrão e mantenha em todo o projeto.</p>
+	<p>No Locastyle utilizamos variáveis e funções camelCase, pela facilidade de leitura, escrita e praticidade ao se trabalhar.</p>
 	<p>Exemplos:</p>
 	<p>Variáveis com nomes ruins:</p>
 
 <pre class="lang-javascript prettyprint linenums">
 // Curtos, posicionamento no código e abreviações
 var x1;
-var input1;
-var posLT;
+var campo1;
+var latXY;
 
 // Longos demais
 var valorEixoXGraficoConsumo;
-var inputTextFirstName;
+var campoTextoPrimeiroNome;
 </pre>
 
 	<p>Funções com nomes ruins:</p>
@@ -212,11 +268,11 @@ var $header    = $('#header');
 var $menuItens = $('#menu a');
 
 // Maiúsculas para constantes
-var IMAGES_PATH = '/assets/images/';
-var CLIENT_NAME = 'Fulan0';
+var PASTA_IMAGENS = '/assets/images/';
+var NOME_CLIENTE = 'Fulano de Tal';
 
 // _ no início para variáveis e funções privadas
-var _count = 0;
+var _contador = 0;
 </pre>
 
 	<p>Confira o padrão de nomenclatura do <a href="http://javascript.crockford.com/code.html#names" target="_blank"> Douglas Crockford</a></p>
@@ -245,7 +301,7 @@ var _count = 0;
 <pre class="lang-javascript prettyprint linenums">
 // Ruim: verifica se é maior de 18
 // Bom: menores de idade sao redirecionados
-if( age >= 18 ){ ... }
+if( idade >= 18 ){ ... }
 </pre>
 
 	<p>Lembrando que comentários devem existir apenas na versão de desenvolvimento, devendo ser removidos no arquivo minificado que é entregue em produção.</p>
@@ -259,12 +315,12 @@ if( age >= 18 ){ ... }
 
 <pre class="lang-javascript prettyprint linenums">
 // Errado
-$('.user-name').css({
+$('#nome-usuario').css({
 	'border': '1px solid red',
 	'color': 'red'
 });
 // Certo
-$('.user-name.error').addClass('error');
+$('#nome-usuario').addClass('erro');
 </pre>
 
 	<p>Crie os estilos que precisar (e animações, quando possível) no CSS, e no javascript controle quando os estilos são aplicados, em vez de aplicar propriedades.</p>
@@ -278,17 +334,17 @@ $('.user-name.error').addClass('error');
 var cores = ['rosa', 'azul', 'verde'];
 // Em vez de
 var cores = new Array();
-lunch[0]='rosa';
-lunch[1]='azul';
-lunch[2]='verde';
+cores[0]='rosa';
+cores[1]='azul';
+cores[2]='verde';
 
 // Use
-var x = v || 10;
+var margem = altura || 10;
 // Em vez de
-if(v){
-	var x = v;
+if(altura === undefined){
+	var margem = altura;
 } else {
-	var x =10;
+	var margem = 10;
 }
 
 // Use
@@ -321,28 +377,28 @@ $('#botao2').on('click', function(){
 //...
 
 // Faça
-function hideForm(){
+function ocultaFormulario(){
 	$('#formulario').slideUp();
 }
 $('#botao1').on('click', function(){
 	$('#resultado').load('ajax/lista-pessoas.html', function() {
-		hideForm();
+		ocultaFormulario();
 	});
 })
 $('#botao2').on('click', function(){
 	$('#resultado').load('ajax/lista-empresas.html', function() {
-		hideForm();
+		ocultaFormulario();
 	});
 })
 
 // Ou melhor
-function hideForm(){
+function ocultaFormulario(){
 	$('#formulario').slideUp();
 }
 function carregaDados( elemento, url){
 	$(elemento).on('click', function(){
 		$('#resultado').load(url, function() {
-			hideForm();
+			ocultaFormulario();
 		});
 	})
 }
@@ -357,50 +413,89 @@ carregaDados('#botao2', 'ajax/lista-empresas.html');
 <pre class="lang-javascript prettyprint linenums">
 // Em vez de
 $.ajax({
-	type: "POST",
-	url: "api/usuarios",
-	data: {limit: 10},
-	success: function(data){
+	type   : "POST",
+	url    : "api/usuarios",
+	data   : { limite: 10 },
+	success: function( dados ){
 		$('#formulario').hide();
-		$('#mensagem').text('Busca efetuada com sucesso');
-		$('#lista').html(data).fadeIn('fast');
+		$('#mensagem').text( 'Busca efetuada com sucesso' );
+		$('#lista').html( dados ).fadeIn('fast');
 	},
-	error: function(){
-		$('#mensagem').text('Erro na busca');
+	error  : function(){
+		$('#mensagem').text( 'Erro na busca' );
 	}
 });
 
 // Faça
-var config: {
-	messages = {
-		success: 'Busca efetuada com sucesso',
-		error: 'Erro na busca'
+var configuracoes: {
+	mensagens = {
+		successo : 'Busca efetuada com sucesso',
+		erro     : 'Erro na busca'
 	},
 	api: {
 		usuarios: "api/usuarios"
 	},
-	animate: {
-		velocity: "fast"
+	animacao: {
+		velocidade: "fast"
 	},
-	list: {
-		perPage: 10
+	lista: {
+		porPagina: 10
 	}
 }
 //...
 $.ajax({
-	type: "POST",
-	url: config.api.usuarios,
-	data: {limit: config.list.perPage},
-	success: function(data){
+	type   : "POST",
+	url    : configuracoes.api.usuarios,
+	data   : { limite: configuracoes.lista.porPagina} ,
+	success: function( dados ){
 		$('#formulario').hide();
-		$('#mensagem').text(config.messages.success);
-		$('#lista').html(data).fadeIn(config.animate.velocity);
+		$('#mensagem').text( configuracoes.mensagens.successo );
+		$('#lista').html( dados ).fadeIn( configuracoes.animacao.velocity );
 	},
-	error: function(){
-		$('#mensagem').text(config.messages.success);
+	error  : function(){
+		$('#mensagem').text( configuracoes.mensagens.erro );
 	}
 });
 </pre>
+
+	<h4>Utilização correta de Eventos</h4>
+	<p>Ao escrever seu código e registrar comportamentos e eventos na iteração do usuário é importante ter cuidado na escolha correta dos eventos.</p>
+	<p>Um caso comum de erro é vinclular uma função no clique do botão enviar de um formulário, em vez de chamar a ação no submit do formulário:</p>
+	<pre class="lang-javascript prettyprint linenums">
+	// Errado
+	// se o usuário submeter o form teclando ENTER a função não é executada
+	$('#meuForm').delegate('#enviar', 'click', function(event){
+		if( $('#meuForm').isValid() ){
+			// ... ação
+	  }
+	});
+	// correto
+	// a ação é executada no clique ou no ENTER
+	$('#meuForm').on('submit', function(event){
+		if( $('#meuForm').isValid() ){
+			// ... ação
+	  }
+	});
+	</pre>
+	<p>Também é preciso saber o uso correto e diferenças entre os métodos, no caso do jQuery, sabendo os corretos para cada situação e os que estão em desuso.</p>
+	<pre class="lang-javascript prettyprint linenums">
+		// Os seguintes foram descontinuados
+		.die()   .load()
+		.error() .unload()
+		.live()  .toggle()
+		// os seguintes métodos podem ser evitados
+		.mousedown()   .blur()     .rezise()   .keyup()     .keypress()
+		.mousenter()   .change()   .hover()    .ready()     .focusin() 
+		.mouseleave()  .click()    .scroll()   .submit()    .mouseup()     
+		.mouseout()    .dblclick() .keydown()  .focusout() 
+		.mouseover()   .focus()    .select()         
+		// e devem ser substitídos por
+		$('#elemento').on('blur', function(){ ... })
+		$('#elementoPai').delegate('#elemento', 'blur', function(){ ...});
+		// de prefrência o .delegate() que tem melhor performance 
+		// por fazer a seleção dentro de um escopo ( '#elementoPai' )
+		$('#escopo').delegate('#elemento', 'click', function(){ ...});
+	</pre>
 
 	<h4>Evite muitos aninhamentos</h4>
 	<p>Facilite o entendimento e manutençao dos seus códigos. Utilize as práticas anteriores e evite um código do tipo:</p>
@@ -413,21 +508,21 @@ $('#botao').on('click', function(){
 		success: function(data){
 			$('resultado').fadeIn('fast', function(){
 				$('#formulario').animate({
-				  heigth: 0,
+				  heigth : 0,
 				  opacity: 0
 				}, 300, function(){
 				    $('#mensagem').animate({
-				      heigth: 200,
+				      heigth : 200,
 				      opacity: 1
 				    }, 300, function(){
-				      //etc etc
+				      // ...
 				    })
 				  }
 				)
 			})
 		},
 		error: function(){
-			$('#mensagem').text(config.messages.success);
+			$('#mensagem').text(mensageErro);
 		}
 	});
 });
@@ -462,28 +557,28 @@ for(var count=0; i < cores.length; count++){
 
 <pre class="lang-javascript prettyprint linenums">
 // Em vez de
-$('#botaoEnviar').on('click', function(){
-	$(this).prop('disabled', true);
-	$('$formulario').addClass('enviando');
-	$.post('ajax/contato', function(data) {
-		$('#mensagem').html(data);
-		$('$formulario').removeClass('enviando');
-		$('#botaoEnviar'),prop('disabled', false);
+$('#botaoEnviar').on( 'click', function(){
+	$(this).prop( 'disabled', true );
+	$('$formulario').addClass( 'enviando' );
+	$.post( 'ajax/contato', function( dados ) {
+		$('#mensagem').html( dados );
+		$('$formulario').removeClass( 'enviando' );
+		$('#botaoEnviar').prop( 'disabled', false );
 	});
 });
 
 // Faça
 var $botaoEnviar = $('#botaoEnviar');
-var $formulario = $('#formulario');
-var $mensagem = $('#mensagem');
+var $formulario  = $('#formulario');
+var $mensagem    = $('#mensagem');
 
-$botaoEnviar.on('click', function(){
-	$botaoEnviar.prop('disabled', true);
-	$formulario.addClass('enviando');
-	$.post('ajax/contato', function(data) {
-		$mensagem.html(data);
-		$formulario.removeClass('enviando');
-		$botaoEnviar.prop('disabled', false);
+$botaoEnviar.on( 'click', function(){
+	$botaoEnviar.prop( 'disabled', true );
+	$formulario.addClass( 'enviando' );
+	$.post('ajax/contato', function( dados ) {
+		$mensagem.html( dados );
+		$formulario.removeClass( 'enviando' );
+		$botaoEnviar.prop( 'disabled', false );
 	});
 });
 </pre>
