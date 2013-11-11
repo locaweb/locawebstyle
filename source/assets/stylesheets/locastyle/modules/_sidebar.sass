@@ -21,7 +21,9 @@ $mobile-sidebar-width: "240px"
 	margin-bottom: 20px
 	padding: 10px
 	background-color: #FFF
-	border-bottom: 4px solid rgba(0,0,0,0.1)
+	border-color: rgba(0,0,0,0.1)
+	border-bottom-style: solid
+	@extend .border-bottom-default
 
 	.sidebox-inner
 		@extend .bg-gray4
@@ -146,4 +148,4 @@ $mobile-sidebar-width: "240px"
 			margin-bottom: 20px
 			padding: 10px
 			border: 1px solid rgba(0,0,0,0.1)
-			border-bottom-width: 4px
+			@extend .border-bottom-default
