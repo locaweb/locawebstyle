@@ -767,7 +767,6 @@ table td,{
 	}
 
 	.channels .channel p,
-	.sidebar-manual,
 	.highlight .search-form select{
 		display: none;
 	}
