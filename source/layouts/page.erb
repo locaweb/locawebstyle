@@ -13,9 +13,11 @@
 	<section class="content container">
 
 		<%= partial "partials/navbar-manual" %>
-		<%= partial "partials/sidebar-manual" %>
+		<div class="row">
+			<%= partial "partials/sidebar-manual" %>
+			<%= yield %>
+		</div>
 
-		<%= yield %>
 	</section>
 	<!-- END post content -->
 
