@@ -1,0 +1,46 @@
+---
+title: Versão 1.0.1
+date: 2013-04-12 18:26 UTC
+tags:
+---
+## Resolução de Bugs da versão 1.0
+
+##### Família de font de botões e links (.btn)
+
+O botões estavam com 3 tipos de fonts diferentes. Fomos perceber isso apenas e agora. Foi arrumado e agora todos eles estão com a font definida no layout, que é Ubuntu.
+
+##### Popover
+
+Faltava ativar a função do Popover no Javascript. Já inserimos essa função e agora está tudo ok.
+
+##### Bug em Collapse
+
+Acontecia que quando fechávamos um collapse, ele retirava a classe .active de todos os outros, prejudicando o visual e o comportamento dos collapses disponíveis na mesma página.
+
+Coisa básica de escopo de DOM. Foi resolvido e agora cada um dos collapses funciona individualmente como deve ser.
+
+##### Botao de confirmar sumiam quando estavam em modais
+
+Esse comportamento fazia parte de uma função de setup de modais que podiam conter slider. Como não vamos mais usar sliders dentro de modais, retiramos esse script.
+
+##### Inserir ícone de calendário em elementos datepicker
+
+Faltava uma chamada de função no Javascript. Era só inserir via JS uma classe icon-calendar nos elementos que tem datepicker.
+
+##### Modal com efeito fade
+
+Retiramos do Javascript a função que inseria a classe .fade nas modais para que elas animassem por padrão. Agora, se você quiser que a modal anime quando ela for invocada, a classe .fade deve ser manualmente inserida no HTML.
+
+## Assets da versão
+
+<pre class="lang-html linenums prettyprint">&lt;link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/1.0.1/locastyle.css"&gt;
+&lt;script type="text/javascript" src="http://developer.locaweb.com.br/assets/1.0.1/locastyle.js"&gt;&lt;/script&gt;</pre>
+
+##### Edge
+
+<pre class="lang-html linenums prettyprint">&lt;link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/edge/locastyle.css"&gt;
+&lt;script type="text/javascript" src="http://developer.locaweb.com.br/assets/edge/locastyle.js"&gt;&lt;/script&gt;</pre>
+
+##### Versão para download
+
+[Baixar ZIP v1.0.1](http://developer.locaweb.com.br/assets/1.0.1.zip)

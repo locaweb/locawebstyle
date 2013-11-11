@@ -3,7 +3,7 @@ title: Formulários
 menu_page: sidebar-formularios.erb
 ---
 
-<article class="text">
+<article class="text col-xs-12 col-lg-9">
 	<header>
 		<h1>Formulários</h1>
 		<h2>Fácil criar formulários com diferentes estilos e layouts.</h2>
@@ -58,56 +58,57 @@ menu_page: sidebar-formularios.erb
 			</fieldset>
 		</form>
 	</div>
-	<pre class="lang-html prettyprint linenums">
-&lt;form role=&quot;form&quot;&gt;
-	&lt;fieldset&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label for=&quot;exampleInputEmail1&quot;&gt;Campo simples&lt;/label&gt;
-			&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Insira seu texto aqui&quot;&gt;
-			&lt;p class=&quot;help-block&quot;&gt;Exemplo de texto de ajuda.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label for=&quot;exampleSelect&quot;&gt;Seletor&lt;/label&gt;
-			&lt;select id=&quot;exampleSelect&quot; class=&quot;form-control&quot;&gt;
-				&lt;option value=&quot;&quot;&gt;Escolha uma op&#xe7;&#xe3;o&lt;/option&gt;
-				&lt;option value=&quot;&quot;&gt;Isso mesmo :D&lt;/option&gt;
-			&lt;/select&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label for=&quot;exampleInputPassword1&quot;&gt;Campo de senha&lt;/label&gt;
-			&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Senha&quot;&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label for=&quot;exampleInputFile&quot;&gt;Campo para envio de arquivo&lt;/label&gt;
-			&lt;input type=&quot;file&quot; id=&quot;exampleInputFile&quot;&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;checkbox&quot;&gt;
-			&lt;input type=&quot;checkbox&quot; id=&quot;checkbox-1&quot;&gt;
-			&lt;label for=&quot;checkbox-1&quot;&gt;Marque aqui&lt;/label&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;checkbox&quot;&gt;
-			&lt;input type=&quot;checkbox&quot; id=&quot;checkbox-2&quot;&gt;
-			&lt;label for=&quot;checkbox-2&quot;&gt;Marque aqui&lt;/label&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;checkbox&quot;&gt;
-			&lt;input type=&quot;checkbox&quot; id=&quot;checkbox-3&quot;&gt;
-			&lt;label for=&quot;checkbox-3&quot;&gt;Marque aqui&lt;/label&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;radio&quot;&gt;
-			&lt;input name=&quot;radios&quot; type=&quot;radio&quot; id=&quot;radio-button-1&quot;&gt;
-			&lt;label for=&quot;radio-button-1&quot;&gt;Ou aqui&lt;/label&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;radio&quot;&gt;
-			&lt;input name=&quot;radios&quot; type=&quot;radio&quot; id=&quot;radio-button-2&quot;&gt;
-			&lt;label for=&quot;radio-button-2&quot;&gt;Ou aqui&lt;/label&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;radio&quot;&gt;
-			&lt;input name=&quot;radios&quot; type=&quot;radio&quot; id=&quot;radio-button-3&quot;&gt;
-			&lt;label for=&quot;radio-button-3&quot;&gt;Ou aqui&lt;/label&gt;
-		&lt;/div&gt;
-		&lt;div class="box-actions"&gt;
-			&lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Enviar&lt;/button&gt;
-		&lt;/div&gt;
-	&lt;/fieldset&gt;
-&lt;/form&gt;</pre>
+<pre class="lang-html prettyprint-code linenums">
+<form role="form">
+	<fieldset>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Campo simples</label>
+			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+			<p class="help-block">Exemplo de texto de ajuda.</p>
+		</div>
+		<div class="form-group">
+			<label for="exampleSelect">Seletor</label>
+			<select id="exampleSelect" class="form-control">
+				<option value="">Escolha uma opção</option>
+				<option value="">Isso mesmo :D</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword1">Campo de senha</label>
+			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputFile">Campo para envio de arquivo</label>
+			<input type="file" id="exampleInputFile">
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" id="checkbox-1">
+			<label for="checkbox-1">Marque aqui</label>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" id="checkbox-2">
+			<label for="checkbox-2">Marque aqui</label>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" id="checkbox-3">
+			<label for="checkbox-3">Marque aqui</label>
+		</div>
+		<div class="radio">
+			<input name="radios" type="radio" id="radio-button-1">
+			<label for="radio-button-1">Ou aqui</label>
+		</div>
+		<div class="radio">
+			<input name="radios" type="radio" id="radio-button-2">
+			<label for="radio-button-2">Ou aqui</label>
+		</div>
+		<div class="radio">
+			<input name="radios" type="radio" id="radio-button-3">
+			<label for="radio-button-3">Ou aqui</label>
+		</div>
+		<div class="box-actions">
+			<button type="submit" class="btn btn-default">Enviar</button>
+		</div>
+	</fieldset>
+</form>
+</pre>
 </article>

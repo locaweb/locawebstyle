@@ -5,4 +5,6 @@ source 'http://rubygems.org'
 gem "middleman", "~>3.0.14"
 gem 'middleman-gh-pages'
 gem 'jasmine'
+gem "middleman-blog"
+gem "nokogiri"
 gem "middleman-livereload", :github => "middleman/middleman-livereload"

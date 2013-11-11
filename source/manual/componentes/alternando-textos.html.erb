@@ -1,10 +1,9 @@
 ---
 title: Componentes - Alternando textos
-
 menu_page: sidebar-componentes.erb
 ---
 
-<article class="text">
+<article class="text col-xs-12 col-lg-9">
 	<header>
 		<h1>Alternando Textos</h1>
 		<h3>É possível alterar textos facilmente nos seus projetos. </h3>
@@ -17,11 +16,12 @@ menu_page: sidebar-componentes.erb
 		<a href="#" data-text="Mudando de texto" data-event="click" class="btn btn-primary">Clique no botão</a>
 		<a href="#" data-text="Mudou!" data-event="hover" class="btn btn-primary">Mudando com Hover</a>
 	</div>
-	<pre class="lang-html prettyprint linenums">
-		&lt;a href="#" data-text="Outro texto" data-event="click"&gt;Exemplo com link&lt;/a&gt;
-		&lt;a href="#" data-text="Mudando de texto" data-event="click" class="btn btn-primary"&gt;Clique no botão&lt;/a&gt;
-		&lt;a href="#" data-text="Mudou!" data-event="hover" class="btn btn-primary"&gt;Mudando com Hover&lt;/a&gt;
-	</pre>
+
+<pre class="lang-html prettyprint-code linenums">
+<a href="#" data-text="Outro texto" data-event="click">Exemplo com link</a>
+<a href="#" data-text="Mudando de texto" data-event="click" class="btn btn-primary">Clique no botão</a>
+<a href="#" data-text="Mudou!" data-event="hover" class="btn btn-primary">Mudando com Hover</a>
+</pre>
 
 	<h3 class-"title-3">Atributos</h3>
 	<table class="table table-bordered table-striped">
@@ -38,7 +38,7 @@ menu_page: sidebar-componentes.erb
 			</tr>
 			<tr>
 				<td>data-event</td>
-				<td>O valor <strong>hover</strong> define para mudar o texto no hover. <br>O valor <strong>click</strong> define que o texto deverá ser mudado ao clicar.</td>
+				<td>O valor <code>hover</code> define para mudar o texto no hover. <br>O valor <code>click</code> define que o texto deverá ser mudado ao clicar.</td>
 			</tr>
 		</tbody>
 	</table>

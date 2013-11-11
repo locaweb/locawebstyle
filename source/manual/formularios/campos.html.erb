@@ -1,10 +1,9 @@
 ---
 title: Formulários - Campos
-
 menu_page: sidebar-formularios.erb
 ---
 
-<article class="text">
+<article class="text col-xs-12 col-lg-9">
 	<header>
 		<h1>Formulários</h1>
 		<h2>Tipos de campos de formulários.</h2>
@@ -22,7 +21,7 @@ menu_page: sidebar-formularios.erb
 			<input type="text" class="form-control" placeholder="Input de texto">
 		</form>
 	</div>
-	<pre class="lang-html prettyprint linenums">&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Input de texto&quot;&gt;</pre>
+	<pre class="lang-html prettyprint-code linenums"><input type="text" class="form-control" placeholder="Input de texto"></pre>
 	<h3>Textarea</h3>
 	<p>Você pode alterar o parâmetro <code>rows</code> se for necessário.</p>
 	<div class="example">
@@ -30,7 +29,7 @@ menu_page: sidebar-formularios.erb
 			<textarea class="form-control" rows="3"></textarea>
 		</form>
 	</div>
-	<pre class="lang-html prettyprint linenums">&lt;textarea class=&quot;form-control&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;</pre>
+	<pre class="lang-html prettyprint-code linenums"><textarea class="form-control" rows="3"></textarea></pre>
 
 	<h3>Checkboxes e Radio Buttons</h3>
 	<p>Para selecionar <strong>mais de 1</strong> opção utilize os <code>checkboxes</code>, para selecionar <strong>apenas 1</strong> utilize o <code>radio buttons</code></p>
@@ -55,24 +54,27 @@ menu_page: sidebar-formularios.erb
 			</div>
 		</form>
 	</div>
-	<pre class="lang-html prettyprint linenums">
-&lt;div class=&quot;checkbox&quot;&gt;
-	&lt;input type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;checkbox-1&quot;&gt;
-	&lt;label for=&quot;checkbox-1&quot;&gt;Marque aqui&lt;/label&gt;
-&lt;/div&gt;
-&lt;div class=&quot;checkbox&quot;&gt;
-	&lt;input type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;checkbox-2&quot;&gt;
-	&lt;label for=&quot;checkbox-2&quot;&gt;E marque aqui tamb&#xe9;m&lt;/label&gt;
-&lt;/div&gt;
 
-&lt;div class=&quot;radio&quot;&gt;
-	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
-	&lt;label for=&quot;optionsRadios1&quot;&gt;Ou marque aqui&lt;/label&gt;
-&lt;/div&gt;
-&lt;div class=&quot;radio&quot;&gt;
-	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&gt;
-	&lt;label for=&quot;optionsRadios2&quot;&gt;Ou marque aqui&lt;/label&gt;
-&lt;/div&gt;</pre>
+<pre class="lang-html prettyprint-code linenums">
+<div class="checkbox">
+	<input type="checkbox" value="" id="checkbox-1">
+	<label for="checkbox-1">Marque aqui</label>
+</div>
+<div class="checkbox">
+	<input type="checkbox" value="" id="checkbox-2">
+	<label for="checkbox-2">E marque aqui também</label>
+</div>
+
+<div class="radio">
+	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+	<label for="optionsRadios1">Ou marque aqui</label>
+</div>
+<div class="radio">
+	<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+	<label for="optionsRadios2">Ou marque aqui</label>
+</div>
+</pre>
+
 	<h4>Checkboxes e Radio Buttons em linha</h4>
 	<p>Utilize as classes <code>.checkbox-inline</code> ou <code>.radio-inline</code> para alinhar os elementos na horizontal.</p>
 	<div class="example">
@@ -88,16 +90,18 @@ menu_page: sidebar-formularios.erb
 </label>
 		</form>
 	</div>
-	<pre class="lang-html prettyprint linenums">
-&lt;label class=&quot;checkbox-inline&quot;&gt;
-	&lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox1&quot; value=&quot;option1&quot;&gt; 1
-&lt;/label&gt;
-&lt;label class=&quot;checkbox-inline&quot;&gt;
-	&lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox2&quot; value=&quot;option2&quot;&gt; 2
-&lt;/label&gt;
-&lt;label class=&quot;checkbox-inline&quot;&gt;
-	&lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox3&quot; value=&quot;option3&quot;&gt; 3
-&lt;/label&gt;</pre>
+
+<pre class="lang-html prettyprint-code linenums">
+<label class="checkbox-inline">
+	<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+</label>
+<label class="checkbox-inline">
+	<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+</label>
+<label class="checkbox-inline">
+	<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+</label>
+</pre>
 
 	<h3>Seletores</h3>
 	<p>Use a opção padrão ou adicione o parâmetro <code>multiple</code></p>
@@ -118,20 +122,22 @@ menu_page: sidebar-formularios.erb
 			<option>5</option>
 		</select>
 	</div>
-	<pre class="lang-html prettyprint linenums">
-&lt;select class=&quot;form-control&quot;&gt;
-	&lt;option&gt;1&lt;/option&gt;
-	&lt;option&gt;2&lt;/option&gt;
-	&lt;option&gt;3&lt;/option&gt;
-	&lt;option&gt;4&lt;/option&gt;
-	&lt;option&gt;5&lt;/option&gt;
-&lt;/select&gt;
 
-&lt;select multiple class=&quot;form-control&quot;&gt;
-	&lt;option&gt;1&lt;/option&gt;
-	&lt;option&gt;2&lt;/option&gt;
-	&lt;option&gt;3&lt;/option&gt;
-	&lt;option&gt;4&lt;/option&gt;
-	&lt;option&gt;5&lt;/option&gt;
-&lt;/select&gt;</pre>
+<pre class="lang-html prettyprint-code linenums">
+<select class="form-control">
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+</select>
+
+<select multiple class="form-control">
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+</select>
+</pre>
 </article>

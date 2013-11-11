@@ -1,0 +1,24 @@
+---
+title: Versão 0.14
+date: 2012-12-07 17:21 UTC
+tags:
+---
+
+<dl>
+<dt>JQuery 1.8</dt>
+<dd>Atualização do JQuery</dd>
+
+<dt>Termos de Uso</dt>
+<dd>Inserindo texto de termos de uso.</dd>
+
+<dt>Bootstrap 2.1</dt>
+<dd>Implementação do Bootstrap 2.1</dd>
+
+<dt>Pequenos bugs resolvidos</dt>
+<dd>Pequenas modificações e adequações.</dd>
+</dl>
+
+**CSS hash:** 1175fdbf8f0b9c95c5e4631560e51c4f
+
+**JS hash:** bef750edc1e4f79ce36539092698ab6b
+

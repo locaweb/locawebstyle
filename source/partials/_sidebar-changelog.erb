@@ -1,0 +1,19 @@
+<div class="sidebar-manual">
+	<nav>
+		<h2>Recentes</h2>
+		<ul>
+			<% blog.articles[0...10].each do |article| %>
+			<li><a href="<%= base_url + article.url %>"><%= article.title %></a></li>
+			<% end %>
+		</ul>
+	</nav>
+
+	<nav>
+		<h2>Por ano</h2>
+		<ul>
+			<% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+			<li><a href="<%= base_url + blog_year_path(year) %>"><%= year %></a></li>
+			<% end %>
+		</ul>
+	</nav>
+</div>
