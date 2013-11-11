@@ -1,4 +1,4 @@
-/** 
+/**
 *** FLOAT E CLEAR
 **/
 .noFloat {float: none !important;}
@@ -12,7 +12,7 @@
 .overflowHidden { overflow: hidden !important;}
 .overflowVisible {overflow: visible !important;}
 
-/** 
+/**
 *** BLOCO E LINHA
 **/
 .dBlock {display: block !important;}
@@ -20,7 +20,7 @@
 .dInlineBlock {display: inline-block !important; float: none !important;}
 .dNone, .hide {display: none !important;}
 
-/** 
+/**
 *** TAMANHO
 **/
 .widthAuto {width: auto !important;}
@@ -28,7 +28,7 @@
 .heightInherit {height: inherit;}
 .heightAuto {height: auto !important;}
 
-/** 
+/**
 *** MARGIN E PADDING
 **/
 .noMargin {margin: 0 !important;}
@@ -50,7 +50,7 @@
 
 .marginBottom40 {margin-bottom: 40px;}
 
-/** 
+/**
 *** ALINHAMENTO DE TEXTO
 **/
 .txtLeft {text-align: left !important;}
@@ -61,7 +61,7 @@
 table.txtLeft td, table.txtLeft th {text-align: left;}
 table.txtRight td, table.txtRight th {text-align: right;}
 
-/** 
+/**
 *** ALINHAMENTO VERTICAL
 **/
 .vAlignTop {vertical-align: top !important;}
@@ -71,7 +71,7 @@ table.txtRight td, table.txtRight th {text-align: right;}
 .vAlignMiddleImportant {vertical-align: middle  !important;}
 .vAlignBottomImportant {vertical-align: bottom  !important;}
 
-/** 
+/**
 *** BACKGROUND E BORDA
 **/
 .noBackground {background: none !important;}
@@ -85,7 +85,7 @@ table.txtRight td, table.txtRight th {text-align: right;}
 
 .noBullet, .noListStyle {list-style: none !important;}
 
-/** 
+/**
 *** CURSOR DE MOUSE
 **/
 .cursorPointer {cursor: pointer !important;}
@@ -133,12 +133,14 @@ table.txtRight td, table.txtRight th {text-align: right;}
 .colorBlack {color: #000!important;}
 .warning {color: #b54646!important;}
 
+.disabled{ opacity: .6!important;}
+
 /**
 *** INPUTS
 **/
 .noSpin::-webkit-inner-spin-button {-webkit-appearance: none;}
 
-/** 
+/**
 *** HR - LINHA HORIZONTAL
 **/
 hr, hr.sepDot {border: none; border-bottom: 1px solid #e5e5e5; background: none; display: block; margin: 15px 0;}
