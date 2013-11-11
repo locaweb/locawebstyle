@@ -3,8 +3,7 @@ title: Acessibilidade - Link direto para conteúdo
 menu_page: sidebar-acessibilidade.erb
 ---
 
-
-<article class="text">
+<article class="text col-xs-12 col-lg-9">
 	<header>
 	  <h1>Link direto para conteúdo</h1>
 	  <h3>Inserindo link direto para o conteúdo importante da página</h3>
@@ -13,7 +12,7 @@ menu_page: sidebar-acessibilidade.erb
 
 	<p>O link abaixo deve ser implementado antes de qualquer outro link, já que ele ficará oculto e será exibido apenas ao receber foco do teclado</p>
 
-	<p>Ex: <code>&lt;a href="#" tabindex="1" class="lnkContent"&gt;Ir para o conteúdo&lt;/a&gt;</code></p>
+	<p>Exemplo:</p> <pre class="lang-html prettyprint-code linenums"><a href="#" tabindex="1" class="lnkContent">Ir para o conteúdo</a></pre>
 
 	<p>É necessário que o título (de conteúdo) de todas as páginas possua a classe: "titleContent"</p>
 	<p>Obs: é necessário apenas a implementação dessa classe em um título por página.</p>

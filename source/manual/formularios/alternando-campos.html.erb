@@ -1,10 +1,9 @@
 ---
 title: Formulários - Alternando campos de formulário
-
 menu_page: sidebar-formularios.erb
 ---
 
-<article class="text">
+<article class="text col-xs-12 col-lg-9">
 	<header>
 		<h1>Formulários</h1>
 		<h2>Alternando campos de formulário.</h2>
@@ -25,20 +24,19 @@ menu_page: sidebar-formularios.erb
 		</form>
 	</div>
 
-<pre class="lang-html prettyprint linenums">
-&lt;form&gt;
-	&lt;div class="form-inline"&gt;
-		&lt;label class="control-label" for="user_password"&gt;Nova senha&lt;/label&gt;
-		&lt;div class="input-group"&gt;
-			&lt;input class="password form-control" id="user_password" type="password"&gt;
-			&lt;a class=" input-group-addon toggle-pass ico-eye" data-classtoggle="ico-eye,ico-eye-blocked" data-target="#user_password" href="#"&gt;&lt;/a&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/form&gt;
+<pre class="lang-html prettyprint-code linenums">
+<form>
+	<div class="form-inline">
+		<label class="control-label" for="user_password">Nova senha</label>
+		<div class="input-group">
+			<input class="password form-control" id="user_password" type="password">
+			<a class=" input-group-addon toggle-pass ico-eye" data-classtoggle="ico-eye,ico-eye-blocked" data-target="#user_password" href="#"></a>
+		</div>
+	</div>
+</form>
 </pre>
 
 <h3 class="title-3">Campo com força da senha</h3>
-
 
 	<div class="example">
 		<form>
@@ -62,26 +60,26 @@ menu_page: sidebar-formularios.erb
 			</div>
 		</form>
 	</div>
-<pre class="lang-html prettyprint linenums">
-&lt;form&gt;
-	&lt;div class="form-inline"&gt;
-		&lt;div class="form-group"&gt;
-			&lt;label class="control-label" for="user_password2"&gt;Nova senha&lt;/label&gt;
-			&lt;p class="help-block"&gt;Senha entre 8 a 14 caracteres, contendo letras e números&lt;/p&gt;
-			&lt;div class="row"&gt;
-				&lt;div class="input-group col-md-4"&gt;
-					&lt;input class="password form-control" id="user_password2" data-component="password-strength" data-monitor-id="password-strength-monitor" type="password"&gt;
-					&lt;a class=" input-group-addon toggle-pass ico-eye" data-classtoggle="ico-eye,ico-eye-blocked" data-target="#user_password2" href="#"&gt;&lt;/a&gt;
-				&lt;/div&gt;
+<pre class="lang-html prettyprint-code linenums">
+<form>
+	<div class="form-inline">
+		<div class="form-group">
+			<label class="control-label" for="user_password2">Nova senha</label>
+			<p class="help-block">Senha entre 8 a 14 caracteres, contendo letras e números</p>
+			<div class="row">
+				<div class="input-group col-md-4">
+					<input class="password form-control" id="user_password2" data-component="password-strength" data-monitor-id="password-strength-monitor" type="password">
+					<a class=" input-group-addon toggle-pass ico-eye" data-classtoggle="ico-eye,ico-eye-blocked" data-target="#user_password2" href="#"></a>
+				</div>
 
-				&lt;div class="password-strength"&gt;
-					&lt;p&gt;Força da senha&lt;/p&gt;
-					&lt;div id="password-strength-monitor" class="monitor"&gt;&lt;/div&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/form&gt;
+				<div class="password-strength">
+					<p>Força da senha</p>
+					<div id="password-strength-monitor" class="monitor"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
 </pre>
 
 </article>

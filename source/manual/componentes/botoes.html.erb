@@ -1,33 +1,30 @@
 ---
 title: Componentes - Barra de Progresso
-
 menu_page: sidebar-componentes.erb
 ---
 
-<article class="text">
-        <header>
-        	<h1>Botões</h1>
-        	<h3>Formatação de botões</h3>
-        </header>
+<article class="text col-xs-12 col-lg-9">
+	<header>
+		<h1>Botões</h1>
+		<h3>Formatação de botões</h3>
+	</header>
 
-        <p>
-            Os botões são feitos <a href="http://twitter.github.com/bootstrap/base-css.html#buttons">utilizando o padrão do Bootstrap</a>. É muito simples de implementar.
-        </p>
+	<p>Os botões são feitos <a href="http://twitter.github.com/bootstrap/base-css.html#buttons">utilizando o padrão do Bootstrap</a>. É muito simples de implementar.</p>
 
-<div class="example">
-<button type="button" class="btn btn-default">Default</button>
+	<div class="example">
+		<button type="button" class="btn btn-default">Default</button>
 
-<button type="button" class="btn btn-primary">Primary</button>
+		<button type="button" class="btn btn-primary">Primary</button>
 
-<button type="button" class="btn btn-success">Success</button>
+		<button type="button" class="btn btn-success">Success</button>
 
-<button type="button" class="btn btn-info">Info</button>
+		<button type="button" class="btn btn-info">Info</button>
 
-<button type="button" class="btn btn-warning">Warning</button>
+		<button type="button" class="btn btn-warning">Warning</button>
 
-<button type="button" class="btn btn-danger">Danger</button>
+		<button type="button" class="btn btn-danger">Danger</button>
 
-</div>
+	</div>
 <pre class="lang-html linenums prettyprint">
 &lt;!-- Padrão cinza --&gt;
 &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Default&lt;/button&gt;
@@ -48,26 +45,26 @@ menu_page: sidebar-componentes.erb
 &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
 </pre>
 
-<h2>Botões grandes, médios e pequenos</h2>
-<p>Bata inserir a classe <strong>btn-lg</strong>, <strong>btn-sm</strong> ou <strong>btn-xs</strong> para modificar o tamanho do seu botão.</p>
-<div class="example">
-<p>
-  <button type="button" class="btn btn-primary btn-lg">Botão grande</button>
-  <button type="button" class="btn btn-default btn-lg">Botão grande</button>
-</p>
-<p>
-  <button type="button" class="btn btn-primary">Botão padrão</button>
-  <button type="button" class="btn btn-default">Botão padrão</button>
-</p>
-<p>
-  <button type="button" class="btn btn-primary btn-sm">Botão pequeno</button>
-  <button type="button" class="btn btn-default btn-sm">Botão pequeno</button>
-</p>
-<p>
-  <button type="button" class="btn btn-primary btn-xs">Extra Botão pequeno</button>
-  <button type="button" class="btn btn-default btn-xs">Extra Botão pequeno</button>
-</p>
-</div>
+	<h2>Botões grandes, médios e pequenos</h2>
+	<p>Bata inserir a classe <strong>btn-lg</strong>, <strong>btn-sm</strong> ou <strong>btn-xs</strong> para modificar o tamanho do seu botão.</p>
+	<div class="example">
+		<p>
+			<button type="button" class="btn btn-primary btn-lg">Botão grande</button>
+			<button type="button" class="btn btn-default btn-lg">Botão grande</button>
+		</p>
+		<p>
+			<button type="button" class="btn btn-primary">Botão padrão</button>
+			<button type="button" class="btn btn-default">Botão padrão</button>
+		</p>
+		<p>
+			<button type="button" class="btn btn-primary btn-sm">Botão pequeno</button>
+			<button type="button" class="btn btn-default btn-sm">Botão pequeno</button>
+		</p>
+		<p>
+			<button type="button" class="btn btn-primary btn-xs">Extra Botão pequeno</button>
+			<button type="button" class="btn btn-default btn-xs">Extra Botão pequeno</button>
+		</p>
+	</div>
 <pre class="line-html linenums prettyprint">
 &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Botão grande&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-lg&quot;&gt;Botão grande&lt;/button&gt;
@@ -80,42 +77,41 @@ menu_page: sidebar-componentes.erb
 
 &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-xs&quot;&gt;Extra Botão pequeno&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-xs&quot;&gt;Extra Botão pequeno&lt;/button&gt;
-</div>
 </pre>
 
-<h2>Botões blocados</h2>
-<p>Às vezes podemos usamos botões que ocupem todo o espaço disponível, para tanto use a classe <strong>btn-block</strong>. Isso aplicará um <em>display: block;</em> ao elemento.</p>
+	<h2>Botões blocados</h2>
+	<p>Às vezes podemos usamos botões que ocupem todo o espaço disponível, para tanto use a classe <strong>btn-block</strong>. Isso aplicará um <em>display: block;</em> ao elemento.</p>
 
-<div class="example">
-<button type="button" class="btn btn-primary btn-lg btn-block">Botão em forma de bloco</button>
-<button type="button" class="btn btn-default btn-lg btn-block">Botão em forma de bloco</button>
-</div>
+	<div class="example">
+		<button type="button" class="btn btn-primary btn-lg btn-block">Botão em forma de bloco</button>
+		<button type="button" class="btn btn-default btn-lg btn-block">Botão em forma de bloco</button>
+	</div>
 <pre class="lang-html linenums prettyprint">
 &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg btn-block&quot;&gt;Botão em forma de bloco&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-lg btn-block&quot;&gt;Botão em forma de bloco&lt;/button&gt;
 </pre>
 
-<h2>Desabilitando botões</h2>
-<p>Se os botões forem feitos com input, basta inserir o atributo disabled que os browsers cuidarão do resto. Se o botõa foi feito usando links, use a classe <strong>.disabled</strong>. Esta classe é apenas visual, não aplicamos nenhum funcionalidade. Para tanto, use um script customizado para desabilitar cliques e outras funções.</p>
+	<h2>Desabilitando botões</h2>
+	<p>Se os botões forem feitos com input, basta inserir o atributo disabled que os browsers cuidarão do resto. Se o botõa foi feito usando links, use a classe <strong>.disabled</strong>. Esta classe é apenas visual, não aplicamos nenhum funcionalidade. Para tanto, use um script customizado para desabilitar cliques e outras funções.</p>
 
-<div class="example">
-<button type="button" class="btn btn-lg btn-primary" disabled="disabled">Botão desabilitado</button>
-<a href="#" class="btn btn-primary btn-lg disabled">Botão como link</a>
-</div>
+	<div class="example">
+		<button type="button" class="btn btn-lg btn-primary" disabled="disabled">Botão desabilitado</button>
+		<a href="#" class="btn btn-primary btn-lg disabled">Botão como link</a>
+	</div>
 <pre class="lang-html linenums prettyprint">
 &lt;button type=&quot;button&quot; class=&quot;btn btn-lg btn-primary&quot; disabled=&quot;disabled&quot;&gt;Bot&atilde;o desabilitado&lt;/button&gt;
 &lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-lg disabled&quot;&gt;Bot&atilde;o como link&lt;/a&gt;
 </pre>
 
 
-<h2>Botões com ícones</h2>
-<p>Se você adicionar classes de ícones nos botões, eles já aparecerão no lugar correto, dispensando a inserção de elementos vazios para fazer os ícones. Veja exemplos abaixo.</p>
+	<h2>Botões com ícones</h2>
+	<p>Se você adicionar classes de ícones nos botões, eles já aparecerão no lugar correto, dispensando a inserção de elementos vazios para fazer os ícones. Veja exemplos abaixo.</p>
 
-<div class="example">
-<button class="btn btn-success ico-user-add" href="#">Adicionar Usuário</button>
-<button class="btn btn-danger ico-trash" href="#">Apagar</button>
-<button class="btn ico-right-open-2 ico-pos-right" href="#">Próximo</button>
-</div>
+	<div class="example">
+		<button class="btn btn-success ico-user-add" href="#">Adicionar Usuário</button>
+		<button class="btn btn-danger ico-trash" href="#">Apagar</button>
+		<button class="btn ico-right-open-2 ico-pos-right" href="#">Próximo</button>
+	</div>
 
 <pre class="lang-html linenums prettyprint">
 &lt;button class=&quot;btn btn-success ico-user-add&quot; href=&quot;#&quot;&gt;Adicionar Usu&aacute;rio&lt;/button&gt;
@@ -123,81 +119,86 @@ menu_page: sidebar-componentes.erb
 &lt;button class=&quot;btn ico-right-open-2 ico-pos-right&quot; href=&quot;#&quot;&gt;Pr&oacute;ximo&lt;/button&gt;
 </pre>
 
-<h2>Botões com dropdown</h2>
-<p>Botões que acompanham algum dropdown precisam tem os atributos abaixo:</p>
+	<h2>Botões com dropdown</h2>
+	<p>Botões que acompanham algum dropdown precisam tem os atributos abaixo:</p>
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Atributo</th>
-            <th>Valor</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>class</td>
-            <td>dropdown-toggle</td>
-        </tr>
-        <tr>
-            <td>data-toggle</td>
-            <td>dropdown</td>
-        </tr>
-    </tbody>
-</table>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Atributo</th>
+				<th>Valor</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>class</td>
+				<td>dropdown-toggle</td>
+			</tr>
+			<tr>
+				<td>data-toggle</td>
+				<td>dropdown</td>
+			</tr>
+		</tbody>
+	</table>
 
-<p>Juntamente com o código do dropdown, que é feito aqui com UL.</p>
-<p>Lembre-se que é necessário que eles estejam dentro de um elemento chamado <strong>.btn-group</strong> para que a seta de dropdown fique "acoplado" ao botão.</p>
-<div class="example">
+	<p>Juntamente com o código do dropdown, que é feito aqui com UL.</p>
+	<p>Lembre-se que é necessário que eles estejam dentro de um elemento chamado <strong>.btn-group</strong> para que a seta de dropdown fique "acoplado" ao botão.</p>
+	<div class="example">
+		<div class="btn-group">
+			<a class="btn btn-primary ico-user" href="#">User</a><a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+				<li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+				<li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+				<li class="divider"></li>
+				<li><a href="#"><i class="i"></i> Make admin</a></li>
+			</ul>
+		</div>
+	</div>
+
+<pre class="lang-html linenums prettyprint-code">
 <div class="btn-group">
-    <a class="btn btn-primary ico-user" href="#">User</a><a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-    <ul class="dropdown-menu">
-        <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
-        <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
-        <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
-        <li class="divider"></li>
-        <li><a href="#"><i class="i"></i> Make admin</a></li>
-    </ul>
+	<a class="btn btn-primary ico-user" href="#">User</a>
+	<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+		<span class="caret"></span>
+	</a>
+	<ul class="dropdown-menu">
+		<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+		<li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+		<li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+		<li class="divider"></li>
+		<li><a href="#"><i class="i"></i> Make admin</a></li>
+	</ul>
 </div>
-</div>
-
-<pre class="lang-html linenums prettyprint">
-&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;a class=&quot;btn btn-primary ico-user&quot; href=&quot;#&quot;&gt;User&lt;/a&gt;&lt;a class=&quot;btn btn-primary dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-    &lt;ul class=&quot;dropdown-menu&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-pencil&quot;&gt;&lt;/i&gt; Edit&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-trash&quot;&gt;&lt;/i&gt; Delete&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-ban-circle&quot;&gt;&lt;/i&gt; Ban&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;i&quot;&gt;&lt;/i&gt; Make admin&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
 </pre>
 
-<p>Um outro exemplo seria o que segue abaixo, sem a seta:</p>
-<div class="example">
+	<p>Um outro exemplo seria o que segue abaixo, sem a seta:</p>
+	<div class="example">
 
-<div class="btn-group">
-    <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li class="divider"></li>
-        <li><a href="#">Separated link</a></li>
-    </ul>
-</div>
+		<div class="btn-group">
+			<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a href="#">Action</a></li>
+				<li><a href="#">Another action</a></li>
+				<li><a href="#">Something else here</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Separated link</a></li>
+			</ul>
+		</div>
 
-</div>
-<pre class="lang-html linenums prettyprint">
-&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;button class=&quot;btn btn-danger dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Danger &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-    &lt;ul class=&quot;dropdown-menu&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
+	</div>
+<pre class="lang-html linenums prettyprint-code">
+	<div class="btn-group">
+		<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+			Danger <span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+			<li><a href="#">Action</a></li>
+			<li><a href="#">Another action</a></li>
+			<li><a href="#">Something else here</a></li>
+			<li class="divider"></li>
+			<li><a href="#">Separated link</a></li>
+		</ul>
+	</div>
 </pre>
 </article>
