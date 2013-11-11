@@ -62,8 +62,11 @@ ol
 	font-family: 'open_sanssemibold'
 	font-size: 1em
 
-.panel.panel-warning a
-	color: #c09853
+.panel
+	@extend .border-bottom-default
+
+	&.panel-warning a
+		color: #c09853
 
 //
 // Desktops
