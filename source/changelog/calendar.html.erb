@@ -3,18 +3,17 @@ layout: changelog_layout
 pageable: true
 ---
 <% if paginate %>
-	<div class="paginate">
-		<p class="page_counter">página <%= page_number %> de <%= num_pages %></p>
+	<ul class="pager">
+		<p class="page_counter">Página <%= page_number %> de <%= num_pages %></p>
 
 		<% if prev_page %>
-			<p class="page_control prev"><a href="<%= base_url + prev_page.url %>">< Página anterior</a>
+			<li class="previous"><a href="<%= base_url + prev_page.url %>">< Página anterior</a></li>
 		<% end %>
-	</div>
+	</ul>
 <% end %>
 
 <h1>Arquivo de
-  <% case page_type
-     when 'day' %>
+  <% case page_type when 'day' %>
     <%= Date.new(year, month, day).strftime('%b %e %Y') %>
   <% when 'month' %>
     <%= Date.new(year, month, 1).strftime('%b %Y') %>
@@ -35,9 +34,9 @@ pageable: true
 <% end %>
 
 <% if paginate %>
-	<div class="paginate">
+	<ul class="pager">
 		<% if next_page %>
-			<p class="page_control next"><a href="<%= base_url + next_page.url %>">Próxima página ></a>
+			<li class="next"><a href="<%= base_url + next_page.url %>">Próxima página ></a></li>
 		<% end %>
-	</div>
+	</ul>
 <% end %>
