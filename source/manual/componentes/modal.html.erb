@@ -30,24 +30,26 @@ menu_page: sidebar-componentes.erb
 			</div>
 		</div>
 	</div>
-	<pre class="lang-html linenums prettyprint">
-&lt;div class=&quot;modal&quot;&gt;
-	&lt;div class=&quot;modal-dialog&quot;&gt;
-		&lt;div class=&quot;modal-content&quot;&gt;
-			&lt;div class=&quot;modal-header&quot;&gt;
-				&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&times;&lt;/button&gt;
-				&lt;h4&gt;T&iacute;tulo do Modal&lt;/h4&gt;
-			&lt;/div&gt;
-			&lt;div class=&quot;modal-body&quot;&gt;
-				&lt;p&gt;Um texto bacana...&lt;/p&gt;
-			&lt;/div&gt;
-			&lt;div class=&quot;modal-footer&quot;&gt;
-				&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;&gt;Fechar&lt;/button&gt;
-				&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Salvar&lt;/button&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</pre>
+
+<pre class="lang-html linenums prettyprint-code">
+<div class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4>Título do Modal</h4>
+			</div>
+			<div class="modal-body">
+				<p>Um texto bacana...</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				<button type="button" class="btn btn-primary">Salvar</button>
+			</div>
+		</div>
+	</div>
+</div>
+</pre>
 
 	<h4>Demo</h4>
 	<p>Abra o modal via JavaScript. Ele vai descer e fazer um efeito de fade a partir do topo da página.</p>
@@ -56,28 +58,29 @@ menu_page: sidebar-componentes.erb
 		<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Abrir modal</a>
 	</div>
 
-	<pre class="lang-htmnl linenums prettyprint">
-&lt;!-- Button trigger modal --&gt;
-&lt;a data-toggle=&quot;modal&quot; href=&quot;#myModal&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Abrir modal&lt;/a&gt;
+<pre class="lang-htmnl linenums prettyprint-code">
+<!-- Button trigger modal -->
+<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Abrir modal</a>
 
-&lt;!-- Modal --&gt;
-&lt;div class=&quot;modal fade&quot; id=&quot;myModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
-	&lt;div class=&quot;modal-dialog&quot;&gt;
-		&lt;div class=&quot;modal-content&quot;&gt;
-			&lt;div class=&quot;modal-header&quot;&gt;
-				&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&times;&lt;/button&gt;
-				&lt;h4 class=&quot;modal-title&quot;&gt;Título do Modal&lt;/h4&gt;
-			&lt;/div&gt;
-			&lt;div class=&quot;modal-body&quot;&gt;
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title">Título do Modal</h4>
+			</div>
+			<div class="modal-body">
 				...
-			&lt;/div&gt;
-			&lt;div class=&quot;modal-footer&quot;&gt;
-				&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;&gt;Fechar&lt;/button&gt;
-				&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Salvar&lt;/button&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;&lt;!-- /.modal-content --&gt;
-	&lt;/div&gt;&lt;!-- /.modal-dialog --&gt;
-&lt;/div&gt;&lt;!-- /.modal --&gt;</pre>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				<button type="button" class="btn btn-primary">Salvar</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</pre>
 
 	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
 		<div class="modal-dialog">
@@ -132,7 +135,7 @@ menu_page: sidebar-componentes.erb
 	<h4>Como Usar</h4>
 	<p>Utilizando o atributo <code>data</code>.</p>
 	<p>Como ativar o modal sem escrever JavaScript. Use <code>data-toggle="modal"</code> no elemento que vai chama-lo, use também o <code>data-target="#foo"</code> ou <code>href="#foo"</code> para específicar o modal a ser aberto.</p>
-	<pre class="lang-html linenums prettyprint">&lt;button type=&quot;button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#myModal&quot;&gt;Launch modal&lt;/button&gt;</pre>
+	<pre class="lang-html linenums prettyprint-code"><button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button></pre>
 
 	<h4>Via javaScript</h4>
 	<p>Chame um modal com o id <code>myModal</code>com apenas uma linha de JavaScript.</p>
@@ -179,7 +182,7 @@ menu_page: sidebar-componentes.erb
 							Se a URL remota é fornecida, o conteúdo será carregado via método load do jQuery injetado dentro do elemento raiz do modal. Se você estiver usando data api, você pode usar o atributo href="" para específicar a fonte remota. Um exemplo disso é mostrado abaixo:
 						</p>
 						<div>
-							<pre class="lang-html linenums prettyprint">&lt;a data-toggle=&quot;modal&quot; href=&quot;remote.html&quot; data-target=&quot;#modal&quot;&gt;Click me&lt;/a&gt;</pre>
+							<pre class="lang-html linenums prettyprint-code"><a data-toggle="modal" href="remote.html" data-target="#modal">Click me</a></pre>
 						</div>
 					</td>
 				</tr>

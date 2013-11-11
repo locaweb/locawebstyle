@@ -52,40 +52,38 @@ menu_page: sidebar-componentes.erb
 </div>
 
 
-  <pre class="lang-html prettyprint linenums">
-&lt;div id=&quot;carousel-example-generic&quot; class=&quot;carousel slide&quot; data-ride=&quot;carousel&quot;&gt;
-  &lt;!-- Indicaadores --&gt;
-  &lt;ol class=&quot;carousel-indicators&quot;&gt;
-    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;
-    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;
-    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;
-  &lt;/ol&gt;
+<pre class="lang-html prettyprint-code linenums">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicaadores -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
 
-  &lt;!-- Wrapper dos slides --&gt;
-  &lt;div class=&quot;carousel-inner&quot;&gt;
-    &lt;div class=&quot;item active&quot;&gt;
-      &lt;img src=&quot;...&quot; alt=&quot;...&quot;&gt;
-      &lt;div class=&quot;carousel-caption&quot;&gt;
+  <!-- Wrapper dos slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="..." alt="...">
+      <div class="carousel-caption">
         ...
-      &lt;/div&gt;
-    &lt;/div&gt;
+      </div>
+    </div>
     ...
-  &lt;/div&gt;
+  </div>
 
-  &lt;!-- Controles --&gt;
-  &lt;a class=&quot;left carousel-control&quot; href=&quot;#carousel-example-generic&quot; data-slide=&quot;prev&quot;&gt;
-    &lt;span class=&quot;glyphicon glyphicon-chevron-left&quot;&gt;&lt;/span&gt;
-  &lt;/a&gt;
-  &lt;a class=&quot;right carousel-control&quot; href=&quot;#carousel-example-generic&quot; data-slide=&quot;next&quot;&gt;
-    &lt;span class=&quot;glyphicon glyphicon-chevron-right&quot;&gt;&lt;/span&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-  </pre>
+  <!-- Controles -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+</pre>
 
   <h3>Utilização</h3>
-  <pre class="lang-javascript prettyprint linenums">
-    $('.carousel').carousel();
-  </pre>
+  <pre class="lang-javascript prettyprint linenums">$('.carousel').carousel();</pre>
 
   <p>Você pode definir os intervalos com o atributo <strong>data-interval</strong> ou quando o slider irá pausar:</p>
 

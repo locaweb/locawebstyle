@@ -70,21 +70,20 @@ menu_page: sidebar-formularios.erb
             </div>
           </form>
 	</div>
-<pre class="lang-html prettyprint linenums">
-&lt;form&gt;
-  &lt;div class=&quot;form-inline&quot;&gt;
-    &lt;div class=&quot;form-group&quot;&gt;
-      &lt;label class=&quot;control-label&quot; for=&quot;user_password&quot;&gt;Nova senha&lt;/label&gt;
-      &lt;input class=&quot;password form-control&quot; id=&quot;user_password&quot; data-component=&quot;password-strength&quot; data-monitor-id=&quot;password-strength-monitor&quot; name=&quot;&quot; type=&quot;password&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;password-strength&quot;&gt;
-      &lt;p&gt;For&#231;a da senha&lt;/p&gt;
-      &lt;div id=&quot;password-strength-monitor&quot; class=&quot;monitor&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;p class=&quot;help-block&quot;&gt;Senha entre 8 a 14 caracteres, contendo letras e n&#250;meros&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-
+<pre class="lang-html prettyprint-code linenums">
+<form>
+  <div class="form-inline">
+    <div class="form-group">
+      <label class="control-label" for="user_password">Nova senha</label>
+      <input class="password form-control" id="user_password" data-component="password-strength" data-monitor-id="password-strength-monitor" name="" type="password">
+    </div>
+    <div class="password-strength">
+      <p>Força da senha</p>
+      <div id="password-strength-monitor" class="monitor"></div>
+    </div>
+    <p class="help-block">Senha entre 8 a 14 caracteres, contendo letras e números</p>
+  </div>
+</form>
 </pre>
 
 <h3>Força da senha</h3>
