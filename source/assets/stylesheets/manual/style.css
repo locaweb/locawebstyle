@@ -186,14 +186,12 @@ pre .linenums {
 
 
 /*** Destacando categoria atual ***/
-.manual_exemplos .navbar .nav a[href*="/exemplos/"],
 .manual_introducao .navbar .nav a[href*="/introducao/"],
-.manual_estilo .navbar .nav a[href*="/estilo/"],
-.manual_formularios .navbar .nav a[href*="/formularios"],
-.manual_aplicacoes .navbar .nav a[href*="/aplicacoes/"],
 .manual_layout .navbar .nav a[href*="/layout/"],
-.manual_acessibilidade .navbar .nav a[href*="/acessibilidade/"],
-.manual_componentes .navbar .nav a[href*="/componentes/"] {
+.manual_praticas-padroes .navbar .nav a[href*="/praticas-padroes/"],
+.manual_componentes .navbar .nav a[href*="/componentes/"],
+.manual_formularios .navbar .nav a[href*="/formularios"],
+.manual_exemplos .navbar .nav a[href*="/exemplos"]{
 	color: #555555;
 	text-decoration: none;
 	background-color: #e5e5e5;
