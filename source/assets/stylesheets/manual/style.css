@@ -757,7 +757,7 @@ table td,{
 /*****
 ****** MOBILE
 *****/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 	.channels .channel,
 	.other-guides .channels .channel,
 	.other-guides li{
