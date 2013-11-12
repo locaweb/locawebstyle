@@ -757,7 +757,19 @@ table td,{
 /*****
 ****** MOBILE
 *****/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+	.navbar {
+		margin-bottom: 30px;
+	}
+
+	.navbar .navbar-inner .navbar-nav {
+		margin: 0;
+	}
+
+	.navbar .navbar-inner .navbar-nav li a {
+		border: 0;
+	}
+
 	.channels .channel,
 	.other-guides .channels .channel,
 	.other-guides li{
