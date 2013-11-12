@@ -88,6 +88,17 @@ hr {
 	display: block;
 }
 
+.example > .dropdown > .dropdown-menu {
+	position: static;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.example > .navbar:last-child {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
 .bs-callout {
 	margin: 20px 0;
 	padding: 15px 30px 15px 15px;
