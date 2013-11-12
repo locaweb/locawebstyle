@@ -11,12 +11,14 @@ namespace :deploy do
   end
 
   def update_version(version)
-    File.open("deploy/stylesheets/locastyle.css", "r+") do |f|
-      f.puts "/*! Locastyle version: #{version}*/"
+    css_content = File.open("deploy/stylesheets/locastyle.css", "r").read
+    File.open("deploy/stylesheets/locastyle.css", "w") do |f|
+      f.write "/*! Locastyle version: #{version}*/ " + css_content
     end
 
-    File.open("deploy/javascripts/locastyle.js", "r+") do |f|
-      f.puts "/*! Locastyle version: #{version}*/"
+    js_content = File.open("deploy/javascripts/locastyle.js", "r").read
+    File.open("deploy/javascripts/locastyle.js", "w") do |f|
+      f.write "/*! Locastyle version: #{version}*/ " + js_content
     end
   end
 
