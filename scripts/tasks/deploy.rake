@@ -25,6 +25,8 @@ namespace :deploy do
     sh %{cp -fr build/assets/ deploy/ &&
 				cd deploy &&
 				rm -f .DS_Store &&
+				rm -rf google-code-prettify
+				rm -rf images/manual
 				rm stylesheets/manual.css
 				rm javascripts/manual.js
 				rm -rf stylesheets/manual/}
