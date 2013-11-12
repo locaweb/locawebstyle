@@ -25,11 +25,11 @@
 .ie8 .shortcutBox h3:before {text-align: center;}
 
 /***
-**** IE8 Fix 
+**** IE8 Fix
 ***/
-.ie8 [class^="ico-"]:before, 
-.ie8 [class*="ico-"]:before, 
-.ie8 .lnkSeta:before, 
+.ie8 [class^="ico-"]:before,
+.ie8 [class*="ico-"]:before,
+.ie8 .lnkSeta:before,
 .ie8 .lnkArrow:before {
   text-decoration: none !important;
 }
@@ -38,6 +38,10 @@
 .ie8 .shortcutBox div {width: 29.6%;}
 .ie8 .shortcutBox .span3 {width: 22.1%;}
 .ie8 .maxBox.shortcutBox div {width: 100%;}
+
+.ie8 .statusDisabled{
+	filter: alpha(opacity=60)!important;
+}
 
 .ie7 .messageInfo .countViews:after,
 .ie9 .messageInfo .countViews:after{margin-top: -10px; right: 0;}

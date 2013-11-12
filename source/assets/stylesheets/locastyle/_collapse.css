@@ -55,7 +55,7 @@ p + .boxCollapse {margin-top: 30px;}
   position: relative;
 }
 
-.boxCollapse .lnkCollapse{
+.boxCollapse header .lnkCollapse{
   height: 100%;
   width: 100%;
   position: absolute;
@@ -98,6 +98,8 @@ p + .boxCollapse {margin-top: 30px;}
   color: #767676;
   margin: 0;
   outline: none;
+  position: relative;
+  z-index: 2;
 }
 
 .boxCinzaInner {
@@ -293,10 +295,11 @@ tr.active .actionsTable {display: none;}
 .boxCollapse .tabs li.active a:after,
 .boxCollapse .tabs li a:hover:after{background: none;}
 
-
 /***
  **** Fix para collpases com toolip dentro (use com cuidado)
  ***/
 .collapse.with-tooltip.in {
   overflow: visible;
 }
+
+.boxCollapse header a {z-index: 2;}
