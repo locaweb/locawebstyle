@@ -253,14 +253,8 @@ tr.active .actionsTable {display: none;}
   font-weight: bold;
   padding: 0 5px;
   position: relative;
-
   border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-
   box-shadow: inset -3px 0px 5px rgba(0,0,0,0.15);
-  -moz-box-shadow: inset -3px 0px 5px rgba(0,0,0,0.15);
-  -webkit-box-shadow: inset -3px 0px 5px rgba(0,0,0,0.15);
 }
 .valueNotify:before{
   content: "";
@@ -271,8 +265,14 @@ tr.active .actionsTable {display: none;}
   left: -5px;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-
   border-right:5px solid #ea0019;
+}
+.valueNotify.empty{
+  background-color: #cdcdcd;
+  box-shadow: inset -3px 0px 5px rgba(0,0,0,0.05);
+}
+.valueNotify.empty:before{
+  border-right:5px solid #cdcdcd;
 }
 
 .boxCollapse .tabs{
