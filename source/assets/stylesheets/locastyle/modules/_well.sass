@@ -1,0 +1,44 @@
+.well
+	&.arrow-up
+		position: relative
+		top: 10px
+
+		&:before
+			+arrow-up(#e7e7e7, 10px)
+			position: absolute
+			left: 5px
+			top: -10px
+			z-index: 1
+
+		&:after
+			+arrow-up(#f7f7f7, 8px)
+			position: absolute
+			left: 7px
+			top: -8px
+			z-index: 2
+
+		&.no-bg
+
+			&:after
+				+arrow-up(#fff, 8px)
+				position: absolute
+				left: 7px
+				top: -8px
+				z-index: 1
+
+
+	&.no-data
+		border: none
+		text-align: center
+		background-color: transparent
+		color: $gray2
+
+		[class*="ico-"]
+			display: block
+			font-size: 40px
+			opacity: .6
+
+		p
+			max-width: 70%
+			margin: 18px auto 0
+			font-size: 1em
