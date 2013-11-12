@@ -133,7 +133,7 @@ table.txtRight td, table.txtRight th {text-align: right;}
 .colorBlack {color: #000!important;}
 .warning {color: #b54646!important;}
 
-.disabled{ opacity: .6!important;}
+.statusDisabled{ opacity: .6!important;}
 
 /**
 *** INPUTS

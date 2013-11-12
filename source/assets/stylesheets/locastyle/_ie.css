@@ -39,7 +39,7 @@
 .ie8 .shortcutBox .span3 {width: 22.1%;}
 .ie8 .maxBox.shortcutBox div {width: 100%;}
 
-.ie8 .disabled{
+.ie8 .statusDisabled{
 	filter: alpha(opacity=60)!important;
 }
 
