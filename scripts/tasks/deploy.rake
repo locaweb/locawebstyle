@@ -7,7 +7,7 @@ namespace :deploy do
   task :setup, :version do |t, args|
     precompile
     package(args[:version])
-    git_commit_and_tag(args[:version])
+    git_tag(args[:version])
   end
 
   def update_version(version)
@@ -50,11 +50,9 @@ namespace :deploy do
     puts "#{@agent} Project builded."
   end
 
-  def git_commit_and_tag(version)
-    puts "#{@agent} Let's commit it..."
-    sh %{git add . &&
-         git commit -m "bump de versão: #{version}" &&
-         git tag -a "#{version}" -m "" }
+  def git_tag(version)
+    puts "#{@agent} Let's create de tag..."
+    sh %{git tag -a "#{version}" -m "" }
     puts "#{@agent} Done, now to push the code is up to you."
   end
 
