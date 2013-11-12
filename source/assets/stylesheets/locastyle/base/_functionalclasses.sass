@@ -242,12 +242,17 @@ hr
   background: none
   display: block
   margin: 15px 0
+
   &.sep-dot
-    border: none
-    border-bottom: 1px solid #e5e5e5
-    background: none
-    display: block
-    margin: 15px 0
+    border-top: 1px dotted rgba($gray1, .3)
+    border-bottom: 1px dotted rgba($gray1, .3)
+    height: 3px
+
+    &:before
+      display: block
+      content: ""
+      border-bottom: 1px dotted rgba($gray1, .3)
+      margin: 1px 0 0
 
 // ESPAÇAMENTO DE TEXTO
 .small-letter-spacing
