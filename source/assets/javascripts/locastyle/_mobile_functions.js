@@ -47,7 +47,9 @@ locastyle.mobile = (function() {
   // Insere um OVERLAY sem transparente para usar quando as sidebares forem ativadas no mobile
   //
   function mobileBarOverlay() {
-    $('body').append('<span class="overlay-bar"></span>');
+    if ( $('.overlay-bar').length === 0 ) {
+      $('body').append('<span class="overlay-bar"></span>');
+    }
     $('.overlay-bar').on('click touchstart', function() {
       $('html').removeClass('right-bar').removeClass('left-bar');
     });
@@ -62,50 +64,47 @@ locastyle.mobile = (function() {
       $('.nav').each(function(index) {
 
         // Texto que vai no Dropdown quando for mobile
-        var $dropdownItemText = $(this).find('li.active a').text();
+        var dropdownItemText = $(this).find('li.active a').text();
 
         // Grava o estado inicial das tabs
-        var $navTabContent = $(this).html();
-
+        var navTabContent = $(this).html();
 
         // Muda o HTML original das Navs/Tabs para o código do Dropdown
-        $(this).html('<li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">' + $dropdownItemText + '</a><ul class="dropdown-menu" id="drop' + (index+1) +'" role="menu"></ul></li>');
+        $(this).html('<li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">' + dropdownItemText + '</a><ul class="dropdown-menu" id="drop' + (index+1) +'" role="menu"></ul></li>');
 
         var $dropdownMenu = $(this).find('.dropdown-menu');
 
         // Move o código das tabs originais para a estrutura nova do Dropdown
-        $dropdownMenu.html($navTabContent);
+        $dropdownMenu.html(navTabContent);
 
-        // Muda o texto do dropdown-toggle de acordo com o ítem ativo
-        $dropdownMenu.find('li a').on('click', function() {
-
-          var $dropdownItemText = $(this).text();
-          $(this).parents('.dropdown').find('.dropdown-toggle').html($dropdownItemText);
-
-          var itemTextActive = $(this).parents('.dropdown').find('.dropdown-toggle').text();
-
-          $dropdownMenu.find('li.active').removeClass('active');
-
-          // Mantem a classe active no elemento selecionado
-          $dropdownMenu.find('li a').each(function(){
-            var itemText = $(this).text();
-            if(itemText === itemTextActive){
-              $(this).parents('li').addClass('active');
-            }
-          });
-
-        });
-
+        // Chama função para mudar o texto do tab de acordo com a tab ativa
+        changeTextTabActive($dropdownMenu);
       });
-
     }
   }
 
-  // Caso não exista o sidebar, o ícone no mobile será escondido
-  function hideIconSidebar() {
-    if( $('.sidebar').length < 1){
-      $('.control-sidebar').addClass('d-none');
-    }
+  //
+  // Quando clicamos no ítem da tab do dropdown, mudamos o texto do dropdown-toggle de acordo com o ítem ativo
+  //
+  function changeTextTabActive($dropdownMenu) {
+    $dropdownMenu.find('li a').on('click', function() {
+
+      var dropdownItemText = $(this).text();
+      $(this).parents('.dropdown').find('.dropdown-toggle').html(dropdownItemText);
+
+      var itemTextActive = $(this).parents('.dropdown').find('.dropdown-toggle').text();
+
+      $dropdownMenu.find('li.active').removeClass('active');
+
+      // Mantem a classe active no elemento selecionado
+      $dropdownMenu.find('li a').each(function(){
+        var itemText = $(this).text();
+        if(itemText === itemTextActive){
+          $(this).parents('li').addClass('active');
+        }
+      });
+
+    });
   }
 
   //
@@ -174,7 +173,8 @@ locastyle.mobile = (function() {
     init: init,
     mobileLeftBar: mobileLeftBar,
     mobileRightBar: mobileRightBar,
-    sliderMobile: sliderMobile
+    sliderMobile: sliderMobile,
+    tabDropdownMobile: tabDropdownMobile
   };
 
 }());
