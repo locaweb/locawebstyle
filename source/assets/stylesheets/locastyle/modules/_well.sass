@@ -1,10 +1,21 @@
 .well
+	+border-radius-default()
+	@extend .bg-gray4
+	box-shadow: none
+
+	*:last-child
+		margin-bottom: 0
+
+	.actions
+		padding-left: 10px
+		display: inline-block
+
 	&.arrow-up
 		position: relative
 		top: 10px
 
 		&:before
-			+arrow-up(#e7e7e7, 10px)
+			+arrow-up($gray6, 10px)
 			position: absolute
 			left: 5px
 			top: -10px
