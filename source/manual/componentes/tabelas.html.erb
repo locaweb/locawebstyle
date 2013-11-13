@@ -3,7 +3,7 @@ title: Componentes - Tabelas
 menu_page: sidebar-componentes.erb
 ---
 
-<article class="text col-lg-9">
+
 	<header>
 		<h1>Tabelas</h1>
 		<h3>Seguimos os padrões do bootstrap com um toque de usabilidade.</h3>
@@ -42,39 +42,6 @@ menu_page: sidebar-componentes.erb
 
 	<h2 class="title-2">Selecionando vários elementos</h2>
 	<p>Para fazer uma tabela com edições múltiplas, basta colocar, acima da tabela em questão, o elemento como o descrito abaixo:</p>
-
-<div class="example">
-	<div class="well well-sm" data-target="id-da-tabela">
-	<p class="d-inline-block">
-		<strong class="counterChecks">0</strong> itens selecionados
-	</p>
-	<div class="actions">
-		<div class="btn-group">
-			<button type="button" class="btn btn-default">Duplicar</button>
-			<a href="#" class="btn btn-default">Relatorio</a>
-			<a href="#" class="btn btn-default">Arquivar</a>
-		</div>
-		<button type="button" class="btn btn-danger">Excluir</button>
-	</div>
-	</div>
-</div>
-
-<pre class="lang-html prettyprint-code linenums">
-<div class="well hidden well-sm" data-target="tabela1">
-	<p class="d-inline-block"><strong class="counterChecks">0</strong> itens selecionados</p>
-	<div class="actions">
-		<div class="btn-group">
-			<button type="button" class="btn btn-default">Duplicar</button>
-			<a href="#" class="btn btn-default">Relatorio</a>
-			<a href="#" class="btn btn-default">Arquivar</a>
-		</div>
-		<button type="button" class="btn btn-danger">Excluir</button>
-	</div>
-</div>
-</pre>
-
-<p>O elemento <code>.well</code> tem a classe <code>hidden</code>, que faz com que ele não seja exibido inicialmente. O script retirará essa classe assim que o usuário selecionar mais de dois checkbox nas linhas da tabela. </p>
-<p>Perceba também que existe um atributo <code>data-target</code> cujo valor é a tabela que você quer relacionar à estas ações.</p>
 
 	<div class="example">
 		<div class="table-responsive">
@@ -161,4 +128,36 @@ menu_page: sidebar-componentes.erb
 	</tbody>
 </table>
 </pre>
-</article>
+<div class="example">
+	<div class="well well-sm" data-target="id-da-tabela">
+	<p class="d-inline-block">
+		<strong class="counterChecks">0</strong> itens selecionados
+	</p>
+	<div class="actions">
+		<div class="btn-group">
+			<button type="button" class="btn btn-default">Duplicar</button>
+			<a href="#" class="btn btn-default">Relatorio</a>
+			<a href="#" class="btn btn-default">Arquivar</a>
+		</div>
+		<button type="button" class="btn btn-danger">Excluir</button>
+	</div>
+	</div>
+</div>
+
+<pre class="lang-html prettyprint-code linenums">
+<div class="well hidden well-sm" data-target="tabela1">
+	<p class="d-inline-block"><strong class="counterChecks">0</strong> itens selecionados</p>
+	<div class="actions">
+		<div class="btn-group">
+			<button type="button" class="btn btn-default">Duplicar</button>
+			<a href="#" class="btn btn-default">Relatorio</a>
+			<a href="#" class="btn btn-default">Arquivar</a>
+		</div>
+		<button type="button" class="btn btn-danger">Excluir</button>
+	</div>
+</div>
+</pre>
+
+<p>O elemento <code>.well</code> tem a classe <code>hidden</code>, que faz com que ele não seja exibido inicialmente. O script retirará essa classe assim que o usuário selecionar mais de dois checkbox nas linhas da tabela. </p>
+<p>Perceba também que existe um atributo <code>data-target</code> cujo valor é a tabela que você quer relacionar à estas ações.</p>
+

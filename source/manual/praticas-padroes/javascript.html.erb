@@ -3,7 +3,7 @@ title: Boas práticas de Javascript
 menu_page: sidebar-praticas-padroes.erb
 ---
 
-<article class="text col-lg-9">
+
 	<header>
 		<h1>Boas práticas de javascript</h1>
 		<h3>Padrões de código & melhores práticas em javascript</h3>
@@ -192,7 +192,7 @@ projeto.carregaModulos.inicio();
 		}
 	</pre>
 	<p>
-		Leia mais em 
+		Leia mais em
 		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" target="_blank">MDN - Strict mode</a>
 	</p>
 
@@ -483,14 +483,14 @@ $.ajax({
 		.live()  .toggle()
 		// os seguintes métodos podem ser evitados
 		.mousedown()   .blur()     .rezise()   .keyup()     .keypress()
-		.mousenter()   .change()   .hover()    .ready()     .focusin() 
-		.mouseleave()  .click()    .scroll()   .submit()    .mouseup()     
-		.mouseout()    .dblclick() .keydown()  .focusout() 
-		.mouseover()   .focus()    .select()         
+		.mousenter()   .change()   .hover()    .ready()     .focusin()
+		.mouseleave()  .click()    .scroll()   .submit()    .mouseup()
+		.mouseout()    .dblclick() .keydown()  .focusout()
+		.mouseover()   .focus()    .select()
 		// e devem ser substitídos por
 		$('#elemento').on('blur', function(){ ... })
 		$('#elementoPai').delegate('#elemento', 'blur', function(){ ...});
-		// de prefrência o .delegate() que tem melhor performance 
+		// de prefrência o .delegate() que tem melhor performance
 		// por fazer a seleção dentro de um escopo ( '#elementoPai' )
 		$('#escopo').delegate('#elemento', 'click', function(){ ...});
 	</pre>
@@ -598,4 +598,4 @@ $botaoEnviar.on( 'click', function(){
 	  Compacte, remova comentarios, concatene os javascripts antes de mandar para produção. Existem diversas ferramentas para isso, inclusive online. Tenha uma versão de desenvolvimento, normal, comentada e uma para o site em producão.
 	</p>
 
-</article>
+
