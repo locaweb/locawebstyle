@@ -52,12 +52,16 @@ describe("Mobile Functions", function() {
       expect($('body .overlay-bar').length).toEqual(1);
     });
 
-    it("Check if we remove .right-bar and .left-bar when click in .overlay-bar", function() {
-      $('html').addClass('left-bar right-bar')
+    it("Check if we remove .left-bar when click in .overlay-bar", function() {
+      $('html').addClass('left-bar')
       $('.overlay-bar').trigger('click');
       expect($('html')).not.toHaveClass("left-bar");
-      expect($('html')).not.toHaveClass("right-bar");
     });
 
+    it("Check if we remove .right-bar when click in .overlay-bar", function() {
+      $('html').addClass('right-bar')
+      $('.overlay-bar').trigger('click');
+      expect($('html')).not.toHaveClass("right-bar");
+    });
   });
 });
