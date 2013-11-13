@@ -31,7 +31,17 @@ manual.tourGuiado = (function() {
         placement: 'right',
         arrowOffset: 'center',
         yOffset: 'center'
+      },
+      {
+        target: 'demo-init',
+        title: 'Título passo 3- Final',
+        content: 'texto passo 3.',
+        placement: 'right',
+        arrowOffset: 'center',
+        yOffset: 'center',
+        showNextButton: false
       }
+
     ]
   };
 
