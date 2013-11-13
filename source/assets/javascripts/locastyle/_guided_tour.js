@@ -1,5 +1,5 @@
 Locastyle.prototype.guidedTour = ( function() {
-	// 'use strict';
+	'use strict';
 
 	var jsonTour;
 
