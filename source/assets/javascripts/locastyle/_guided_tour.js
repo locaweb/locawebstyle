@@ -64,7 +64,8 @@ Locastyle.prototype.guidedTour = ( function() {
 		closeWelcomeTour();
 	}
 
-	function openWelcomeTour(){
+	function openWelcomeTour(e){
+		e.preventDefault();
 		$(config.selectors.tour).toggleClass('on');
 		$(config.selectors.init).focus().attr('tabindex', '-1');
 	}
