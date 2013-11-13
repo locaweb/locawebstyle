@@ -3,7 +3,7 @@ title: Como usar o Locaweb Style
 menu_page: sidebar-informacoes-iniciais.erb
 ---
 
-<article class="text col-lg-9">
+
 	<header>
 		<!-- <h2 class="ico-edit">Aprenda o básico</h2> -->
 		<h1>Download do Locaweb Style</h1>
@@ -33,21 +33,29 @@ menu_page: sidebar-informacoes-iniciais.erb
 	<h2>Use nosso servidor</h2>
 	<p>Adicione as tags abaixo para adicionar o pacote de CSS e Javascript.</p>
 
+	<p>No Header, coloque o CSS.</p>
 <pre class="lang-html prettyprint linenums">
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://developer.locaweb.com.br/assets/<%= settings.stable %>/locastyle.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://developer.locaweb.com.br/assets/<%= settings.stable %>/bootstrap.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Se estiver usando bootstrap, coloque o CSS do Locastyle logo após a sua chamada --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://assets.locaweb.com.br/locastyle/<%= settings.stable %>/stylesheets/locastyle.css&quot;&gt;
 </pre>
+
+<p>Coloque no final do documento o JS.</p>
+
+<pre class="lang-html prettyprint linenums">
+&lt;!-- Atente-se para a ordem: primeiro jquery, depois locastyle, depois o JS do Bootstrap. --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://code.jquery.com/jquery-1.10.2.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://assets.locaweb.com.br/locastyle/<%= settings.stable %>/stylesheets/locastyle.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+</pre>
+
 
 	<p>Se você quiser utilizar sempre a versão mais atual, use os caminhos dos assets sem a versão travada:</p>
 
 <pre class="lang-html prettyprint linenums">
-&lt;link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/edge/locastyle.css"&gt;
-&lt;script type="text/javascript" src="http://developer.locaweb.com.br/assets/edge/locastyle.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" type="text/css" href="http://assets.locaweb.com.br/locastyle/edge/stylesheets/locastyle.css"&gt;
+&lt;script type="text/javascript" src="http://assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"&gt;&lt;/script&gt;
 </pre>
-
-	<div class="alert">
-		<p><strong>DEPENDÊNCIAS: </strong> O Locaweb Style <a href="<%= base_url %>/manual/introducao/informacoes-iniciais/">tem algumas dependências que precisam ser incluídas</a> para funcionar perfeitamente.</p>
-	</div>
 
 	<hr>
 
@@ -57,36 +65,110 @@ menu_page: sidebar-informacoes-iniciais.erb
 	<p>De acordo com as mudanças e atualizações, nós vamos mudando a versão do arquivo. O número do minor sempre será um número par. Internamente trabalhamos com a versão de desenvolvimento utilizando o número ímpar. Logo, se a versão stable mais atual é 1.30.0, estamos trabalhando aqui na versão 1.31.0, 1.31.1 e etc. Quando terminarmos, vai para o ar a versão stable 1.32.0.</p>
 
 	<hr>
-	<h1>Template básico</h1>
+	<h1>Boilerplate do Template básico</h1>
 	<p>Utilize este código para iniciar seu projeto. Aqui você tem a estrutura básica para fazer o Locaweb Style funcionar perfeitamente:</p>
 
 <pre class="lang-html prettyprint linenums">
 &lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;Locaweb Style&lt;/title&gt;
-		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+	&lt;title&gt;Seu produto&lt;/title&gt;
+	&lt;meta charset=&quot;utf-8&quot;&gt;
 
-		&lt;!-- CSS do Bootstrap --&gt;
-		&lt;link href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css&quot;&gt;
+	&lt;!-- Isso é necessário para funcionar a versão mobile --&gt;
+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
 
-		&lt;!-- CSS do Locaweb Style --&gt;
-		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://developer.locaweb.com.br/assets/edge/locastyle.css&quot;&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;h1&gt;Ol&aacute;, Mund&atilde;o!&lt;/h1&gt;
+	&lt;!-- CSS --&gt;
+	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css&quot;&gt;
+	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://assets.locaweb.com.br/locastyle/<%= settings.stable %>/stylesheets/locastyle.css&quot;&gt;
 
-		&lt;!-- jQuery &eacute; obrigat&oacute;rio --&gt;
-		&lt;script src=&quot;http://code.jquery.com/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
 
-		&lt;!-- Obrigat&oacute;rio o Bootstrap (aconselhamos usar sempre a &uacute;ltima) --&gt;
-		&lt;script src=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Header principal --&gt;
+&lt;header class=&quot;header&quot; role=&quot;banner&quot;&gt;
+	&lt;div class=&quot;container&quot;&gt;
+		&lt;span class=&quot;control-menu visible-xs ico-menu-2&quot;&gt;&lt;/span&gt;
+		&lt;span class=&quot;control-sidebar visible-xs ico-list&quot;&gt;&lt;/span&gt;
+		&lt;h1 class=&quot;project-name&quot;&gt;&lt;a href=&quot;#&quot;&gt;Nome do Sistema&lt;/a&gt;&lt;/h1&gt;
+		&lt;a href=&quot;#&quot; class=&quot;help-sugestions ico-question hidden-xs&quot;&gt;Ajuda e Sugest&otilde;es&lt;/a&gt;
 
-		&lt;!-- Javascript do Locaweb Style --&gt;
-		&lt;script type=&quot;text/javascript&quot; src=&quot;http://developer.locaweb.com.br/assets/edge/locastyle.js&quot;&gt;&lt;/script&gt;
+		&lt;div class=&quot;dropdown hidden-xs&quot;&gt;
+			&lt;a href=&quot;#&quot; data-toggle=&quot;dropdown&quot; class=&quot;title-dropdown&quot;&gt;emkt2013&lt;/a&gt;
+			&lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;dLabel&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 1&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 2&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 3&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/header&gt;
 
-		&lt;/body&gt;
+&lt;!-- Menu --&gt;
+&lt;div class=&quot;nav-content&quot;&gt;
+	&lt;menu class=&quot;menu&quot;&gt;
+		&lt;ul class=&quot;container&quot;&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active ico-home&quot; role=&quot;menuitem&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Lista de contatos&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Mensagens&lt;/a&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Enviar&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Criar&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Editar&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Relat&oacute;rios&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Campanhas&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Templates&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Relat&oacute;rios&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Configura&ccedil;&otilde;es&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/menu&gt;
+	&lt;h2 class=&quot;title-sep visible-xs&quot;&gt;Mais&lt;/h2&gt;
+	&lt;ul class=&quot;nav-mob-list visible-xs&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;ico-help-circle&quot;&gt;Ajuda e sugest&otilde;es&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!-- Aqui começa a parte de conteúdo dividido por colunas --&gt;
+&lt;main class=&quot;main&quot;&gt;
+	&lt;div class=&quot;container&quot;&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col-md-9 content&quot; role=&quot;main&quot;&gt;
+				Coluna da esquerda com o conte&uacute;do.
+			&lt;/div&gt;
+			&lt;aside class=&quot;col-md-3 sidebar&quot; role=&quot;complementary&quot;&gt;
+				Sidebar
+			&lt;/aside&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/main&gt;
+
+&lt;!-- Footer --&gt;
+&lt;footer class=&quot;footer&quot;&gt;
+		&lt;div class=&quot;footer-menu&quot;&gt;
+			&lt;nav class=&quot;container&quot;&gt;
+				&lt;h2 class=&quot;title-footer&quot;&gt;suporte e ajuda&lt;/h2&gt;
+				&lt;ul class=&quot;no-liststyle&quot;&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;bg-customer-support&quot;&gt;&lt;span class=&quot;visible-lg&quot;&gt;Atendimento&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;bg-my-tickets&quot;&gt;&lt;span class=&quot;visible-lg&quot;&gt;Meus Chamados&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;bg-help-desk&quot;&gt;&lt;span class=&quot;visible-lg&quot;&gt;Central de Ajuda (Wiki)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;bg-statusblog&quot;&gt;&lt;span class=&quot;visible-lg&quot;&gt;Statusblog&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/nav&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;container footer-info&quot;&gt;
+			&lt;span class=&quot;last-access ico-screen&quot;&gt;&lt;strong&gt;&Uacute;ltimo acesso: &lt;/strong&gt;7/8/2011 22:35:49&lt;/span&gt;
+			&lt;div class=&quot;set-ip&quot;&gt;&lt;span class=&quot;set-ip&quot;&gt;&lt;strong&gt;IP:&lt;/strong&gt; 201.87.65.217&lt;/span&gt;&lt;/div&gt;
+			&lt;p class=&quot;copy-right&quot;&gt;Copyright &copy; 1997-2011 Locaweb Servi&ccedil;os de Internet S/A.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/footer&gt;
+
+	&lt;!-- Scripts - Atente-se na ordem das chamadas --&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;http://code.jquery.com/jquery-1.10.2.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;http://assets.locaweb.com.br/locastyle/<%= settings.stable %>/stylesheets/locastyle.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
 &lt;/html&gt;
 </pre>
 
-</article>
