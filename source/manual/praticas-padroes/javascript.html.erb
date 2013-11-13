@@ -23,7 +23,7 @@ menu_page: sidebar-praticas-padroes.erb
 		<li>Uniformidade entre projetos.</li>
 	</ol>
 	<p>
-		A idéia é que o código mantenha unidade, seja ele escrito por uma ou várias pessoas, dentro de um projeto e entre projetos diferentes, diminuindo o tempo de aprendizado.
+		A ideia é que o código mantenha unidade, seja ele escrito por uma ou várias pessoas, dentro de um projeto e entre projetos diferentes, diminuindo o tempo de aprendizado.
 	</p>
 	<p>
 		As regras a seguir propoem um padrão mínimo para desenvolvimento. O mais importante é manter a consistência de estilo de código. O que for escolhido como estilo para o seu projeto deverá ser seguido em todos os arquivos.
@@ -177,10 +177,10 @@ projeto.carregaModulos.inicio();
 	<h3>Código em apenas um idioma</h3>
 	<p>Para facilitar a manutençao e a legibilidade do código, procure usar apenas um idioma, em nomes de funções, variáveis e comentários.</p>
 	<p>O mais importante é seguir um padrão, mantendo ele do início ao fim do projeto. Exceções, claro, sao libraries e plugins que utilizados.</p>
-	<p>Seja qual for a língua utilizada é importante ser claro, utilizando nomes descritivos, evitando ser prolixo nos nomes, func'ões e comentários, como abordado no tópico <a href="#seja-compreensivel">Seja compreensívelvel</a> abaixo.</p>
+	<p>Seja qual for a língua utilizada é importante ser claro, utilizando nomes descritivos, evitando ser prolixo nos nomes, funções e comentários, como abordado no tópico <a href="#seja-compreensivel">Seja compreensível</a> abaixo.</p>
 
 	<h3>'use strict';</h3>
-	<p> Ao utilizar <b>"use strict";</b> no início de códigos ou funções, declara-se uma mudança na sintaxe do Javascript, que lança mais exceções mostrando problemas no código. Os erros mais comus são uso de palavras reservadas do javascript (ECMAScript 5 e 6), uso de variáveis não declaradas e uso de funcções descontinuadas. </p>
+	<p> Ao utilizar <b>"use strict";</b> no início de códigos ou funções, declara-se uma mudança na sintaxe do Javascript, que lança mais exceções mostrando problemas no código. Os erros mais comus são uso de palavras reservadas do javascript (ECMAScript 5 e 6), uso de variáveis não declaradas e uso de funções descontinuadas. </p>
 	<p> Para utilizar, basta inserir a string <i>'use strict';</i> antes do bloco de código a ser avaliado ou função. Exemplos:<p>
 	<pre class="lang-javascript prettyprint linenums">
 		"use strict";
@@ -457,8 +457,8 @@ $.ajax({
 </pre>
 
 	<h4>Utilização correta de Eventos</h4>
-	<p>Ao escrever seu código e registrar comportamentos e eventos na iteração do usuário é importante ter cuidado na escolha correta dos eventos.</p>
-	<p>Um caso comum de erro é vinclular uma função no clique do botão enviar de um formulário, em vez de chamar a ação no submit do formulário:</p>
+	<p>Ao escrever seu código e registrar comportamentos e eventos na interação do usuário é importante ter cuidado na escolha correta dos eventos.</p>
+	<p>Um caso comum de erro é vincular uma função no clique do botão enviar de um formulário, em vez de chamar a ação no submit do formulário:</p>
 	<pre class="lang-javascript prettyprint linenums">
 	// Errado
 	// se o usuário submeter o form teclando ENTER a função não é executada
@@ -595,7 +595,7 @@ $botaoEnviar.on( 'click', function(){
 
 	<h4>Código de desenvolvimento não é código de produção</h4>
 	<p>
-	  Compacte, remova comentarios, concatene os javascripts antes de mandar para produção. Existem diversas ferramentas para isso, inclusive online. Tenha uma versão de desenvolvimento, normal, comentada e uma para o site em producão.
+	  Compacte, remova comentários, concatene os javascripts antes de mandar para produção. Existem diversas ferramentas para isso, inclusive online. Tenha uma versão de desenvolvimento, normal, comentada e uma para o site em produção.
 	</p>
 
 
