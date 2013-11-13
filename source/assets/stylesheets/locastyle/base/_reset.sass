@@ -23,23 +23,6 @@ body
 .progress-bar span
 	vertical-align: middle
 
-.well
-	+border-radius-default()
-	@extend .bg-gray4
-	box-shadow: none
-	border-color: #e7e7e7
-
-	*:last-child
-		margin-bottom: 0
-
-	p
-		color: $gray2
-
-	.actions
-		padding-left: 10px
-		display: inline-block
-
-
 .alert[class*="alert-"]
 	a
 		color: inherit
@@ -56,6 +39,10 @@ ol
 [class*="btn"]
 	font-family: 'open_sanssemibold'
 	+font-smoothing(antialiased)
+
+	& label[class*="btn"]
+		font-family: 'open_sansregular'
+
 
 .modal-header h3
 	color: #333
