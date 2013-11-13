@@ -1,8 +1,7 @@
-Locastyle.prototype.guidedTour = (function() {
-	'use strict';
+Locastyle.prototype.guidedTour = ( function() {
+	// 'use strict';
 
-	var jsonTour, 
-		openTour = false;
+	var jsonTour;
 
 	var config = {
 		selectors : {
@@ -15,7 +14,6 @@ Locastyle.prototype.guidedTour = (function() {
 
 	function init(jsonSteps){
 		checkTour(jsonSteps);
-		keyCode();
 		setCookie();
 	}
 
@@ -37,40 +35,19 @@ Locastyle.prototype.guidedTour = (function() {
 		$(config.selectors.close).on({click: closeWelcomeTour});
 	}
 
-	function initTour(){
-		hopscotch.endTour();
-		hopscotch.startTour(jsonTour);
-		keyCode();
-		closeWelcomeTour();
-	}
-
 	function keyCode(element){
 		var left = 39;
 		var right = 37;
 		var esc = 27;
-		document.onkeyup = function(e){
-			if(openTour){
-				var key = event.keyCode
-				if(key == left ){	hopscotch.nextStep(); }
-				if(key == right){	hopscotch.prevStep(); }
-				if(key == esc  ){	hopscotch.endTour();  }
+		var stepsSize = hopscotch.getCurrTour().steps.length -1;
+		$('body').off('keyup').on('keyup', function(e){
+			var key = e.keyCode
+			if( hopscotch.getCurrStepNum() < stepsSize ){
+				if( key === 39){	hopscotch.nextStep(); }
+				if( key === 37 ){	hopscotch.prevStep(); }
 			}
-		}
-	}
-
-	function openWelcomeTour(){
-		openTour = true;
-		$(config.selectors.tour).toggleClass('on');
-		$(config.selectors.init).focus().attr('tabindex', '-1');
-	}
-
-	function closeWelcomeTour(){
-		$(config.selectors.tour).removeClass('on');
-		openTour = false;
-	}
-
-	function userAborted(xhr) {
-		return !xhr.getAllResponseHeaders();
+			if( key === 27  ){	hopscotch.endTour();  }
+		});
 	}
 
 	function setCookie(){
@@ -79,6 +56,27 @@ Locastyle.prototype.guidedTour = (function() {
 			$.cookie('cookie_tour', "true");
 		}
 	}
+
+	function initTour(){
+		hopscotch.endTour();
+		hopscotch.startTour(jsonTour);
+		keyCode();
+		closeWelcomeTour();
+	}
+
+	function openWelcomeTour(){
+		$(config.selectors.tour).toggleClass('on');
+		$(config.selectors.init).focus().attr('tabindex', '-1');
+	}
+
+	function closeWelcomeTour(){
+		$(config.selectors.tour).removeClass('on');
+	}
+
+	function userAborted(xhr) {
+		return !xhr.getAllResponseHeaders();
+	}
+
 
 	return {
 		init: init,
