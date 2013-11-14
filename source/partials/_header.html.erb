@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <title><%= data.page.title %></title>
-  <meta charset="utf-8">
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+	<title><%= data.page.title %></title>
+	<meta charset="utf-8">
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+	<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="<%= base_url + bootstrap_css %>">
-  <%= stylesheet_link_tag "locastyle" %>
-  <%= stylesheet_link_tag "manual" %>
-
+	<link rel="stylesheet" type="text/css" href="<%= base_url + bootstrap_css %>">
+	<%= stylesheet_link_tag "locastyle" %>
+	<%= stylesheet_link_tag "manual" %>
 </head>
 <body class="<%= page_classes %>">
 
-<!-- topbar header -->
-<header id="topbar" class="clearfix">
-  <div class="container">
-    <!-- <h1 class="logo"><a href="#"><img src="/assets/img/manual/logo.png" alt="Locaweb Hosting"></a></h1> -->
-    <h1 class="logo"><a href="<%= base_url %>">LOCAWEB STYLE</a></h1>
-    <ul class="social-links">
-      <!-- <li><a href="#"><%= image_tag 'manual/ico-facebook.png', :alt => 'Nosso Facebook',:class => 'img-facebook' %></a> -->
-      <li><a href="http://twitter.com/locawebdevnet"><%= image_tag 'manual/ico-twitter.png', :alt => 'Nosso Twitter',:class => 'img-twitter' %></a>
-    </ul>
-  </div>
-</header>
-<!-- END topbar header -->
+	<!-- topbar header -->
+	<header id="topbar" class="clearfix">
+		<div class="container">
+			<h1 class="logo"><%= link_to "LOCAWEB STYLE", "#{base_url}/" %></h1>
+			<ul class="social-links">
+				<li>
+					<% link_to "http://twitter.com/locawebdevnet", :target => "_blank" do %>
+						<%= image_tag "manual/ico-twitter.png", :alt => "Nosso Twitter", :class => "img-twitter" %>
+					<% end %>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<!-- END topbar header -->
