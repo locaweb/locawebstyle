@@ -1,7 +1,8 @@
 ---
 title: Componentes - Abas
 
-menu_page: sidebar-componentes.erb
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-componentes.erb
 ---
 
 
@@ -17,7 +18,7 @@ menu_page: sidebar-componentes.erb
 		    <li><a href="#tab2" data-toggle="tab">30 dias</a></li>
 		    <li><a href="#tab3" data-toggle="tab">6 meses</a></li>
 		</ul>
-		 
+
 		<div class="tab-content">
 		    <div class="tab-pane active" id="tab1"><p>Conteúdo Tab 1</p></div>
 		    <div class="tab-pane" id="tab2"><p>Conteúdo Tab 2</p></div>
@@ -31,7 +32,7 @@ menu_page: sidebar-componentes.erb
     &lt;li&gt;&lt;a href=&quot;#tab2&quot; data-toggle=&quot;tab&quot;&gt;30 dias&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#tab3&quot; data-toggle=&quot;tab&quot;&gt;6 meses&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
- 
+
 &lt;-- C&oacute;digo do conte&uacute;do das tabs --&gt;
 &lt;div class=&quot;tab-content&quot;&gt;
     &lt;div class=&quot;tab-pane active&quot; id=&quot;tab1&quot;&gt;Conte&uacute;do Tab 1&lt;/div&gt;
@@ -73,4 +74,4 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 	e.target // tab ativada
 	e.relatedTarget // tab anterior
 });</pre>
-</article>	
+</article>
