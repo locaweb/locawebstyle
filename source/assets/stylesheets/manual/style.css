@@ -446,10 +446,9 @@ table td {
 }
 
 .channels .channel {
-	margin-right: 5%;
+	margin-left: 6%;
 	margin-bottom: 95px;
-	float: none;
-	display: inline-block;
+	float: left;
 	vertical-align: top;
 	width: 25%;
 }
