@@ -2,58 +2,57 @@
 title: Formulários - Campos
 menu_page: sidebar-formularios.erb
 ---
+<header>
+	<h1>Formulários</h1>
+	<h2>Tipos de campos de formulários.</h2>
+</header>
 
+<p>Veja abaixo alguns exemplos e as variações de campos de formulários que podemos usar.</p>
 
-	<header>
-		<h1>Formulários</h1>
-		<h2>Tipos de campos de formulários.</h2>
-	</header>
+<h3>Campos suportados</h3>
+<p>
+	O locastyle da suporte a todas as variações de campos de formulário em HTML5, como:
+	<code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, e <code>color</code>.
+</p>
+<div class="example">
+	<form>
+		<input type="text" class="form-control" placeholder="Input de texto">
+	</form>
+</div>
+<pre class="lang-html prettyprint-code linenums"><input type="text" class="form-control" placeholder="Input de texto"></pre>
+<h3>Textarea</h3>
+<p>Você pode alterar o parâmetro <code>rows</code> se for necessário.</p>
+<div class="example">
+	<form>
+		<textarea class="form-control" rows="3"></textarea>
+	</form>
+</div>
 
-	<p>Veja abaixo alguns exemplos e as variações de campos de formulários que podemos usar.</p>
+<pre class="lang-html prettyprint-code linenums"><textarea class="form-control" rows="3"></textarea></pre>
 
-	<h3>Campos suportados</h3>
-	<p>
-		O locastyle da suporte a todas as variações de campos de formulário em HTML5, como:
-		<code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, e <code>color</code>.
-	</p>
-	<div class="example">
-		<form>
-			<input type="text" class="form-control" placeholder="Input de texto">
-		</form>
-	</div>
-	<pre class="lang-html prettyprint-code linenums"><input type="text" class="form-control" placeholder="Input de texto"></pre>
-	<h3>Textarea</h3>
-	<p>Você pode alterar o parâmetro <code>rows</code> se for necessário.</p>
-	<div class="example">
-		<form>
-			<textarea class="form-control" rows="3"></textarea>
-		</form>
-	</div>
-	<pre class="lang-html prettyprint-code linenums"><textarea class="form-control" rows="3"></textarea></pre>
+<h3>Checkboxes e Radio Buttons</h3>
+<p>Para selecionar <strong>mais de 1</strong> opção utilize os <code>checkboxes</code>, para selecionar <strong>apenas 1</strong> utilize o <code>radio buttons</code></p>
+<div class="example">
+	<form>
+		<div class="checkbox">
+			<input type="checkbox" value="" id="checkbox-1">
+			<label for="checkbox-1">Marque aqui</label>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" value="" id="checkbox-2">
+			<label for="checkbox-2">E marque aqui também</label>
+		</div>
 
-	<h3>Checkboxes e Radio Buttons</h3>
-	<p>Para selecionar <strong>mais de 1</strong> opção utilize os <code>checkboxes</code>, para selecionar <strong>apenas 1</strong> utilize o <code>radio buttons</code></p>
-	<div class="example">
-		<form>
-			<div class="checkbox">
-				<input type="checkbox" value="" id="checkbox-1">
-				<label for="checkbox-1">Marque aqui</label>
-			</div>
-			<div class="checkbox">
-				<input type="checkbox" value="" id="checkbox-2">
-				<label for="checkbox-2">E marque aqui também</label>
-			</div>
-
-			<div class="radio">
-				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-				<label for="optionsRadios1">Ou marque aqui</label>
-			</div>
-			<div class="radio">
-				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-				<label for="optionsRadios2">Ou marque aqui</label>
-			</div>
-		</form>
-	</div>
+		<div class="radio">
+			<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+			<label for="optionsRadios1">Ou marque aqui</label>
+		</div>
+		<div class="radio">
+			<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+			<label for="optionsRadios2">Ou marque aqui</label>
+		</div>
+	</form>
+</div>
 
 <pre class="lang-html prettyprint-code linenums">
 <div class="checkbox">
@@ -75,21 +74,21 @@ menu_page: sidebar-formularios.erb
 </div>
 </pre>
 
-	<h4>Checkboxes e Radio Buttons em linha</h4>
-	<p>Utilize as classes <code>.checkbox-inline</code> ou <code>.radio-inline</code> para alinhar os elementos na horizontal.</p>
-	<div class="example">
-		<form>
-			<label class="checkbox-inline">
-	<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
-</label>
-<label class="checkbox-inline">
-	<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
-</label>
-<label class="checkbox-inline">
-	<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-</label>
-		</form>
-	</div>
+<h4>Checkboxes e Radio Buttons em linha</h4>
+<p>Utilize as classes <code>.checkbox-inline</code> ou <code>.radio-inline</code> para alinhar os elementos na horizontal.</p>
+<div class="example">
+	<form>
+		<label class="checkbox-inline">
+			<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+		</label>
+		<label class="checkbox-inline">
+			<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+		</label>
+		<label class="checkbox-inline">
+			<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+		</label>
+	</form>
+</div>
 
 <pre class="lang-html prettyprint-code linenums">
 <label class="checkbox-inline">
@@ -103,25 +102,26 @@ menu_page: sidebar-formularios.erb
 </label>
 </pre>
 
-	<h3>Seletores</h3>
-	<p>Use a opção padrão ou adicione o parâmetro <code>multiple</code></p>
-	<div class="example">
-		<select class="form-control">
-			<option>1</option>
-			<option>2</option>
-			<option>3</option>
-			<option>4</option>
-			<option>5</option>
-		</select>
-		<br>
-		<select multiple class="form-control">
-			<option>1</option>
-			<option>2</option>
-			<option>3</option>
-			<option>4</option>
-			<option>5</option>
-		</select>
-	</div>
+<h3>Seletores</h3>
+<p>Use a opção padrão ou adicione o parâmetro <code>multiple</code></p>
+
+<div class="example">
+	<select class="form-control">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select>
+	<br>
+	<select multiple class="form-control">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select>
+</div>
 
 <pre class="lang-html prettyprint-code linenums">
 <select class="form-control">

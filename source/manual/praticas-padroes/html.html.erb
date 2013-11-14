@@ -2,15 +2,13 @@
 title: Guia de estilo HTML
 menu_page: sidebar-praticas-padroes.erb
 ---
+<header>
+	<h1>Padrões de escrita HTML</h1>
+	<h3>Escreva HTML de maneira organizada, semântica e escalável</h3>
+</header>
 
-
-	<header>
-		<h1>Padrões de escrita HTML</h1>
-		<h3>Escreva HTML de maneira organizada, semântica e escalável</h3>
-	</header>
-
-	<h2>Estrutura básica para iniciar um HTML</h2>
-	<p>Utilize esse código para iniciar seu HTML. </p>
+<h2>Estrutura básica para iniciar um HTML</h2>
+<p>Utilize esse código para iniciar seu HTML. </p>
 
 <pre class="lang-html prettyprint linenums">
 &lt;!DOCTYPE html&gt;
@@ -19,34 +17,24 @@ menu_page: sidebar-praticas-padroes.erb
 	&lt;meta charset=&quot;utf-8&quot;&gt;
 &lt;/head&gt;
 &lt;body&gt;
-
+...
 &lt;/body&gt;
 </pre>
 
-	<h2>Identação</h2>
-	<p>
-		Escolher entre tabs e espaços sempre é uma dúvida terrível, mesmo assim, quando se trata de HTML, o padrão sempre foi TABs.
-		<br>
-		Usamos TABs para HTML.
-	</p>
-	<h2>Aspas</h2>
-	<p>Utilizamos ASPAS DUPLAS.</p>
+<h2>Identação</h2>
+<p>	Escolher entre tabs e espaços sempre é uma dúvida terrível, mesmo assim, quando se trata de HTML, o padrão sempre foi TABs.	<br>	Usamos TABs para HTML.</p>
+
+<h2>Aspas</h2>
+<p>Utilizamos ASPAS DUPLAS.</p>
 
 <pre class="lang-css prettyprint-code linenums">
 <div class="classe"></div>
 <a href="http://..."></a>
 </pre>
 
-	<h2>Encoding</h2>
-	<p>
-		Eu sei que eu não preciso dizer, mas quem sabe, não é?
-		<br>
-		O encoding utilizado é o padrão da web inteira: <strong>UTF-8</strong>.
-	</p>
+<h2>Encoding</h2>
+<p>	Eu sei que eu não preciso dizer, mas quem sabe, não é?<br> O encoding utilizado é o padrão da web inteira: <code>UTF-8</code>.</p>
 
-<pre class="lang-html prettyprint-code linenums">
-<meta charset="utf-8">
-</pre>
+<pre class="lang-html prettyprint-code linenums"><meta charset="utf-8"></pre>
 
-	<p>SEM <a href="http://en.wikipedia.org/wiki/Byte_order_mark" target="_blank">BOM!</a> Pelo amor de Deus. </p>
-
+<p>SEM <a href="http://en.wikipedia.org/wiki/Byte_order_mark" target="_blank">BOM!</a> Pelo amor de Deus.</p>

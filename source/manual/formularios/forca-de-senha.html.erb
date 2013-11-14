@@ -2,87 +2,85 @@
 title: Formulários - Medidor de senhas
 menu_page: sidebar-formularios.erb
 ---
+<header>
+	<h1>Medidor de complexidade de senhas</h1>
+	<h3>Mede a complexidade da senha de maneira simples.</h3>
+</header>
 
+<p>Este é um medidor de complexidade de senha simples, sem muitas restrições, apenas um indicador visual da "força" da senha.</p>
+<p>O monitor deste componente não valida a senha, apenas mostra a força da senha baseado em regras bem simples conforme table abaixo.</p>
 
-	<header>
-		<h1>Medidor de complexidade de senhas</h1>
-		<h3>Mede a complexidade da senha de maneira simples.</h3>
-	</header>
+<table class="table table-stripped table-bordered table-hover">
+	<thead>
+		<tr>
+			<th class="span4">Classificação</th>
+			<th>Condições</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Forte (strong)</td>
+			<td>Deve conter mais de 8 caracteres, letras, números, letras maiúsculas e caracteres especiais.</td>
+		</tr>
+		<tr>
+			<td>Boa (good)</td>
+			<td>Deve conter mais de 8 caracteres, letras e números. Além de letras maiúsculas ou caracteres especiais.</td>
+		</tr>
+		<tr>
+			<td>Média (medium)</td>
+			<td>Deve conter mais de 8 caracteres, letras e números.</td>
+		</tr>
+		<tr>
+			<td>Fraca (weak)</td>
+			<td>Contém menos de 8 caracteres ou apenas números ou apenas letras.</td>
+		</tr>
+	</tbody>
+</table>
+<h3>Método</h3>
+<p>Há um método que retorna a classificação de força de uma determinada string quando passada via argumento.</p>
 
-	<p>Este é um medidor de complexidade de senha simples, sem muitas restrições, apenas um indicador visual da "força" da senha.</p>
-        <p>O monitor deste componente não valida a senha, apenas mostra a força da senha baseado em regras bem simples conforme table abaixo.</p>
-
-	<table class="table table-stripped table-bordered table-hover">
-		<thead>
-			<tr>
-				<th class="span4">Classificação</th>
-				<th>Condições</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Forte (strong)</td>
-				<td>Deve conter mais de 8 caracteres, letras, números, letras maiúsculas e caracteres especiais.</td>
-			</tr>
-			<tr>
-				<td>Boa (good)</td>
-				<td>Deve conter mais de 8 caracteres, letras e números. Além de letras maiúsculas ou caracteres especiais.</td>
-			</tr>
-			<tr>
-				<td>Média (medium)</td>
-				<td>Deve conter mais de 8 caracteres, letras e números.</td>
-			</tr>
-			<tr>
-				<td>Fraca (weak)</td>
-				<td>Contém menos de 8 caracteres ou apenas números ou apenas letras.</td>
-			</tr>
-		</tbody>
-	</table>
-        <h3>Método</h3>
-	<p>Há um método que retorna a classificação de força de uma determinada string quando passada via argumento.</p>
-
-	<table class="table table-stripped table-bordered table-hover">
-		<thead>
-			<tr>
-				<th class="span4">Método</th>
-				<th>Exemplo</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>checkIt</td>
-				<td>Ao executar locastyle.passwordStrength.checkIt("123") o resultado esperado é a string "weak".</td>
-			</tr>
-		</tbody>
-	</table>
-	<div class="example">
-          <form>
-            <div class="form-inline">
-              <div class="form-group">
-                <label class="control-label" for="user_password">Nova senha</label>
-                <input class="password form-control" id="user_password" data-component="password-strength" data-monitor-id="password-strength-monitor" name="" type="password">
-              </div>
-              <div class="password-strength">
-                <p>Força da senha</p>
-                <div id="password-strength-monitor" class="monitor"></div>
-              </div>
-              <p class="help-block">Senha entre 8 a 14 caracteres, contendo letras e números</p>
-            </div>
-          </form>
-	</div>
+<table class="table table-stripped table-bordered table-hover">
+	<thead>
+		<tr>
+			<th class="span4">Método</th>
+			<th>Exemplo</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>checkIt</td>
+			<td>Ao executar <code>locastyle.passwordStrength.checkIt("123")</code> o resultado esperado é a string <code>"weak"</code>.</td>
+		</tr>
+	</tbody>
+</table>
+<div class="example">
+	<form>
+		<div class="form-inline">
+			<div class="form-group">
+				<label class="control-label" for="user_password">Nova senha</label>
+				<input class="password form-control" id="user_password" data-component="password-strength" data-monitor-id="password-strength-monitor" name="" type="password">
+			</div>
+			<div class="password-strength">
+				<p>Força da senha</p>
+				<div id="password-strength-monitor" class="monitor"></div>
+			</div>
+			<p class="help-block">Senha entre 8 a 14 caracteres, contendo letras e números</p>
+		</div>
+	</form>
+</div>
 <pre class="lang-html prettyprint-code linenums">
 <form>
-  <div class="form-inline">
-    <div class="form-group">
-      <label class="control-label" for="user_password">Nova senha</label>
-      <input class="password form-control" id="user_password" data-component="password-strength" data-monitor-id="password-strength-monitor" name="" type="password">
-    </div>
-    <div class="password-strength">
-      <p>Força da senha</p>
-      <div id="password-strength-monitor" class="monitor"></div>
-    </div>
-    <p class="help-block">Senha entre 8 a 14 caracteres, contendo letras e números</p>
-  </div>
+	<div class="form-inline">
+		<div class="form-group">
+			<label class="control-label" for="user_password">Nova senha</label>
+			<input class="password form-control" id="user_password" data-component="password-strength" data-monitor-id="password-strength-monitor" name="" type="password">
+		</div>
+		<div class="password-strength">
+			<p>Força da senha</p>
+			<div id="password-strength-monitor" class="monitor"></div>
+		</div>
+		<p class="help-block">Senha entre 8 a 14 caracteres, contendo letras e números</p>
+	</div>
 </form>
 </pre>
 

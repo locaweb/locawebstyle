@@ -55,11 +55,13 @@ ol
 	&.panel-warning a
 		color: #c09853
 
+[class*="btn-"].dropdown-toggle:after
+	+arrow-down(#fff, 5px)
+
+.dropdown-toggle:after,
 .btn-default.dropdown-toggle:after
 	+arrow-down($gray2, 5px)
 
-.dropdown-toggle:after
-	+arrow-down(#fff, 5px)
 
 
 //

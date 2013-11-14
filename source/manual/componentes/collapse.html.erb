@@ -2,101 +2,105 @@
 title: Aplicações - Collapse
 menu_page: sidebar-componentes.erb
 ---
+<header>
+  <h1>Collapse</h1>
+  <h3>Agrupando grandes quantidades de informações.</h3>
+</header>
 
+<p>Collapses são usados para organizar grandes quantidades de conteúdo que trazem uma informação ou comportamentos do sistema para a interação com o usuário. Veja os exemplos abaixo:</p>
 
-	<header>
-	  <h1>Collapse</h1>
-	  <h3>Agrupando grandes quantidades de informações.</h3>
-	</header>
-
-	<p>Collapses são usados para organizar grandes quantidades de conteúdo que trazem uma informação ou comportamentos do sistema para a interação com o usuário. Veja os exemplos abaixo:</p>
-
-	<div class="example">
-		<div class="collapse-box">
-			<div class="panel-heading">
-				<a data-toggle="collapse" href="#collapseOne">
-					<h4 class="panel-title">Exemplo de layout com formulário</h4>
-					<p>Você pode colocar formulários da maneira que quiser aqui dentro.</p>
-				</a>
-			</div>
-			<div id="collapseOne" class="panel-collapse collapse">
-				<div class="panel-body">
-					<p>Um formulário de cadastro:</p>
-					<form role="form">
-						<fieldset>
-							<div class="row">
-								<div class="form-group col-lg-4">
-									<label for="exampleInputEmail1">Campo simples</label>
-									<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
-								</div>
-								<div class="form-group col-lg-8">
-									<label for="exampleInputEmail1">Campo simples</label>
-									<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
-								</div>
+<div class="example">
+	<div class="collapse-box">
+		<div class="panel-heading">
+			<a data-toggle="collapse" href="#collapseOne">
+				<h4 class="panel-title">Exemplo de layout com formulário</h4>
+				<p>Você pode colocar formulários da maneira que quiser aqui dentro.</p>
+			</a>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>Um formulário de cadastro:</p>
+				<form role="form">
+					<fieldset>
+						<div class="row">
+							<div class="form-group col-lg-4">
+								<label for="exampleInputEmail1">Campo simples</label>
+								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
 							</div>
-							<div class="row">
-								<div class="form-group col-lg-6">
-									<label for="exampleInputEmail1">Seletor</label>
-									<select class="form-control">
-										<option value="">Selecione algo</option>
-										<option value="">Opção 1</option>
-										<option value="">Opção 2</option>
-									</select>
-								</div>
-								<div class="form-group col-lg-6">
-									<label for="exampleInputEmail1">Seletor</label>
-									<select class="form-control">
-										<option value="">Selecione algo</option>
-										<option value="">Opção 1</option>
-										<option value="">Opção 2</option>
-									</select>
-								</div>
+							<div class="form-group col-lg-8">
+								<label for="exampleInputEmail1">Campo simples</label>
+								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
 							</div>
-							<div class="row">
-								<div class="form-group col-lg-3">
-									<label for="exampleInputEmail1">Senha</label>
-									<input type="password" class="form-control" id="exampleInputEmail1" placeholder="senha">
-								</div>
-								<div class="form-group col-lg-6">
-									<label for="exampleInputEmail1">Email</label>
-									<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
-								</div>
-								<div class="form-group col-lg-3">
-									<label for="exampleInputEmail1">Data</label>
-									<input type="date" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
-								</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-lg-6">
+								<label for="exampleInputEmail1">Seletor</label>
+								<select class="form-control">
+									<option value="">Selecione algo</option>
+									<option value="">Opção 1</option>
+									<option value="">Opção 2</option>
+								</select>
 							</div>
-							<button type="submit" class="btn btn-default">Enviar</button>
-							<button class="btn btn-danger">Cancelar</button>
-						</fieldset>
-					</form>
+							<div class="form-group col-lg-6">
+								<label for="exampleInputEmail1">Seletor</label>
+								<select class="form-control">
+									<option value="">Selecione algo</option>
+									<option value="">Opção 1</option>
+									<option value="">Opção 2</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-lg-3">
+								<label for="exampleInputEmail1">Senha</label>
+								<input type="password" class="form-control" id="exampleInputEmail1" placeholder="senha">
+							</div>
+							<div class="form-group col-lg-6">
+								<label for="exampleInputEmail1">Email</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+							</div>
+							<div class="form-group col-lg-3">
+								<label for="exampleInputEmail1">Data</label>
+								<input type="date" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+							</div>
+						</div>
+						<button type="submit" class="btn btn-default">Enviar</button>
+						<button class="btn btn-danger">Cancelar</button>
+					</fieldset>
+				</form>
 
-				</div>
 			</div>
 		</div>
 	</div>
-<pre class="linenums prettyprint lang-html">
-&lt;div class=&quot;collapse-box&quot;&gt;
-	&lt;div class=&quot;panel-heading&quot;&gt;
-		&lt;a data-toggle=&quot;collapse&quot; href=&quot;#collapseOne&quot;&gt;
-			&lt;h4 class=&quot;panel-title&quot;&gt;T&iacute;tulo do Collapse&lt;/h4&gt;
-			&lt;p&gt;Descri&ccedil;&atilde;o do collapse, se houver.&lt;/p&gt;
-		&lt;/a&gt;
-	&lt;/div&gt;
-	&lt;div id=&quot;collapseOne&quot; class=&quot;panel-collapse collapse&quot;&gt;
-		&lt;div class=&quot;panel-body&quot;&gt;
-
-			&lt;p&gt;Aqui &eacute; onde voc&ecirc; coloca o conte&uacute;do do Collapse&lt;/p&gt;
-
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
+</div>
+<pre class="linenums prettyprint-code lang-html">
+<div class="collapse-box">
+	<div class="panel-heading">
+		<a data-toggle="collapse" href="#collapseOne">
+			<h4 class="panel-title">Título do Collapse</h4>
+			<p>Descrição do collapse, se houver.</p>
+		</a>
+	</div>
+	<div id="collapseOne" class="panel-collapse collapse">
+		<div class="panel-body">
+ 
+			<p>Aqui é onde você coloca o conteúdo do Collapse</p>
+ 
+		</div>
+	</div>
+</div>
 </pre>
 
 <p>O collapse é responsivo, logo se adapta de acordo com o tamanho da tela do usuário. Como todos elementos do Locaweb Style são responsivos, os elementos que ficarão dentro do collapse não devem que quebrar na mudança de largura de tela.</p>
 
 <h2>Utilização com atributos</h2>
-<p>Dentro do elemento <code>.panel-heading</code> deve haver qualquer elemento HTML com os seguintes atributos: <code>data-toggle="collapse"</code>, que avisa que aquele trigger se refere a um collapse e <code>data-target="#id"</code> que define o collapse alvo. <strong>Atenção: </strong>Se você estiver usando um link como trigger, o atributo <code>data-target</code> é dispensável. Nesse caso você pode colocar o alvo direto no atributo <code>href="#id"</code> do link.</p>
+<p>Dentro do elemento <code>.panel-heading</code> deve haver qualquer elemento HTML com os seguintes atributos: <code>data-toggle="collapse"</code>, que avisa que aquele trigger se refere a um collapse e <code>data-target="#id"</code> que define o collapse alvo.</p> 
+
+<div class="bs-callout bs-callout-warning">
+	<h4>Atenção: </h4>
+	<p>Se você estiver usando um link como trigger, o atributo <code>data-target</code> é dispensável. Nesse caso você pode colocar o alvo direto no atributo <code>href="#id"</code> do link.</p>
+</div>
+	
 
 <h2>Utilização com Javascript</h2>
 <p>Ative um collapse manualmente usando o código abaixo:</p>
@@ -135,39 +139,38 @@ $('#myCollapsible').collapse({
 	</tbody>
 </table>
 
-	<h3>Eventos</h3>
-	<table class="table table-bordered table-striped">
-		<thead>
-			<tr>
-				<th style="width: 150px;">Evento</th>
-				<th>Descrição</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>show.bs.collapse</td>
-				<td>Este evento é disparado imediatamente quando a instância <strong>show</strong> é chamada.</td>
-			</tr>
-			<tr>
-				<td>shown.bs.collapse</td>
-				<td>Este evento é disparado quando um elemento de collapse está visível para o usuário. Irá esperar pela transição do CSS ser completada.</td>
-			</tr>
-			<tr>
-				<td>hide.bs.collapse</td>
-				<td>
-					Este evento é disparado imediatamente quando o método <strong>hide</strong> for chamado.
-				</td>
-			</tr>
-			<tr>
-				<td>hidden.bs.collapse</td>
-				<td>Este evento é disparado quando um elemento de collapse ficou escondido para o usuário. Ele espera até as transições do CSS terminarem. </td>
-			</tr>
-		</tbody>
-	</table>
+<h3>Eventos</h3>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th style="width: 150px;">Evento</th>
+			<th>Descrição</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>show.bs.collapse</td>
+			<td>Este evento é disparado imediatamente quando a instância <code>show</code> é chamada.</td>
+		</tr>
+		<tr>
+			<td>shown.bs.collapse</td>
+			<td>Este evento é disparado quando um elemento de collapse está visível para o usuário. Irá esperar pela transição do CSS ser completada.</td>
+		</tr>
+		<tr>
+			<td>hide.bs.collapse</td>
+			<td>
+				Este evento é disparado imediatamente quando o método <code>hide</code> for chamado.
+			</td>
+		</tr>
+		<tr>
+			<td>hidden.bs.collapse</td>
+			<td>Este evento é disparado quando um elemento de collapse ficou escondido para o usuário. Ele espera até as transições do CSS terminarem. </td>
+		</tr>
+	</tbody>
+</table>
 
 <pre class="linenums prettyprint lang-javascript">
 $('#myCollapsible').on('hidden.bs.collapse', function() {
-// Faça algo
+	// Faça algo aqui
 });
 </pre>
-

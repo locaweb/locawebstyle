@@ -2,56 +2,55 @@
 title: Exemplos de uso do Locaweb Style
 layout: no-sidebar
 ---
+<header>
+	<h1>Exemplos</h1>
+	<h3>Exemplos de telas usando Locaweb Style</h3>
+</header>
 
-	<header>
-		<h1>Exemplos</h1>
-		<h3>Exemplos de telas usando Locaweb Style</h3>
-	</header>
-
-	<div class="row bs-examples">
-		<div class="col-xs-6 col-md-4">
-			<% link_to 'exemplos/home', :class => 'thumbnail' do %>
-				<%= image_tag 'manual/example-thumb1.jpg', :alt => 'Exemplo de duas colunas' %>
-			<% end %>
-			<h4>Duas colunas</h4>
-			<p>Exemplo duas colunas, com sidebar e conteúdo principal</p>
-		</div>
-
-		<div class="col-xs-6 col-md-4">
-			<% link_to 'exemplos/uma-coluna', :class => 'thumbnail' do %>
-				<%= image_tag 'manual/example-thumb2.jpg', :alt => 'Exemplo de uma coluna' %>
-			<% end %>
-			<h4>Uma coluna</h4>
-			<p>Exemplo com apenas uma coluna, sem sidebar.</p>
-		</div>
-
-		<div class="clearfix visible-xs"></div>
-
-		<div class="col-xs-6 col-md-4">
-			<% link_to 'exemplos/estrutura-inicial', :class => 'thumbnail' do %>
-				<%= image_tag 'manual/example-thumb3.jpg', :alt => 'Exemplo da estrutura inicial' %>
-			<% end %>
-			<h4>Estrutura inicial</h4>
-			<p>Estrutura inicial para iniciar uma view da maneira correta.</p>
-		</div>
+<div class="row bs-examples">
+	<div class="col-xs-6 col-md-4">
+		<% link_to 'exemplos/home', :class => 'thumbnail' do %>
+		<%= image_tag 'manual/example-thumb1.jpg', :alt => 'Exemplo de duas colunas' %>
+		<% end %>
+		<h4>Duas colunas</h4>
+		<p>Exemplo duas colunas, com sidebar e conteúdo principal</p>
 	</div>
 
-	<div class="row bs-examples">
-		<div class="col-xs-6 col-md-4">
-			<% link_to 'exemplos/erro-404', :class => 'thumbnail' do %>
-				<%= image_tag 'manual/example-thumb404.jpg', :alt => 'Exemplo de erro 404' %>
-			<% end %>
-			<h4>Erro 404</h4>
-			<p>Exemplo com página de Erro 404</p>
-		</div>
-
-		<div class="col-xs-6 col-md-4">
-			<% link_to 'exemplos/erro-500', :class => 'thumbnail' do %>
-				<%= image_tag 'manual/example-thumb500.jpg', :alt => 'Exemplo de erro 500' %>
-			<% end %>
-			<h4>Erro 500</h4>
-			<p>Exemplo com página de Erro 500</p>
-		</div>
-
-		<div class="clearfix visible-xs"></div>
+	<div class="col-xs-6 col-md-4">
+		<% link_to 'exemplos/uma-coluna', :class => 'thumbnail' do %>
+		<%= image_tag 'manual/example-thumb2.jpg', :alt => 'Exemplo de uma coluna' %>
+		<% end %>
+		<h4>Uma coluna</h4>
+		<p>Exemplo com apenas uma coluna, sem sidebar.</p>
 	</div>
+
+	<div class="clearfix visible-xs"></div>
+
+	<div class="col-xs-6 col-md-4">
+		<% link_to 'exemplos/estrutura-inicial', :class => 'thumbnail' do %>
+		<%= image_tag 'manual/example-thumb3.jpg', :alt => 'Exemplo da estrutura inicial' %>
+		<% end %>
+		<h4>Estrutura inicial</h4>
+		<p>Estrutura inicial para iniciar uma view da maneira correta.</p>
+	</div>
+</div>
+
+<div class="row bs-examples">
+	<div class="col-xs-6 col-md-4">
+		<% link_to 'exemplos/erro-404', :class => 'thumbnail' do %>
+		<%= image_tag 'manual/example-thumb404.jpg', :alt => 'Exemplo de erro 404' %>
+		<% end %>
+		<h4>Erro 404</h4>
+		<p>Exemplo com página de Erro 404</p>
+	</div>
+
+	<div class="col-xs-6 col-md-4">
+		<% link_to 'exemplos/erro-500', :class => 'thumbnail' do %>
+		<%= image_tag 'manual/example-thumb500.jpg', :alt => 'Exemplo de erro 500' %>
+		<% end %>
+		<h4>Erro 500</h4>
+		<p>Exemplo com página de Erro 500</p>
+	</div>
+
+	<div class="clearfix visible-xs"></div>
+</div>

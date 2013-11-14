@@ -2,20 +2,18 @@
 title: Componentes - Alternando textos
 menu_page: sidebar-componentes.erb
 ---
+<header>
+	<h1>Alternando Textos</h1>
+	<h3>É possível alterar textos facilmente nos seus projetos. </h3>
+</header>
 
+<p>As vezes surge a necessidade da mudança de texto de algum botão quando ele é clicado ou acionado. O texto alternativo é guardado no atributo <code>data-text</code> e essa funcionalidade é ativada com o atributo <code>data-event="click/hover"</code>, que define o tipo de evento aplicado. </p>
 
-	<header>
-		<h1>Alternando Textos</h1>
-		<h3>É possível alterar textos facilmente nos seus projetos. </h3>
-	</header>
-
-	<p>As vezes surge a necessidade da mudança de texto de algum botão quando ele é clicado ou acionado. O texto alternativo é guardado no atributo <strong>data-text</strong> e essa funcionalidade é ativada com o atributo <strong>data-event="click/hover"</strong>, que define o tipo de evento aplicado. </p>
-
-	<div class="example">
-		<a href="#" data-text="Outro texto" data-event="click">Exemplo com link</a><br><br>
-		<a href="#" data-text="Mudando de texto" data-event="click" class="btn btn-primary">Clique no botão</a>
-		<a href="#" data-text="Mudou!" data-event="hover" class="btn btn-primary">Mudando com Hover</a>
-	</div>
+<div class="example">
+	<a href="#" data-text="Outro texto" data-event="click">Exemplo com link</a><br><br>
+	<a href="#" data-text="Mudando de texto" data-event="click" class="btn btn-primary">Clique no botão</a>
+	<a href="#" data-text="Mudou!" data-event="hover" class="btn btn-primary">Mudando com Hover</a>
+</div>
 
 <pre class="lang-html prettyprint-code linenums">
 <a href="#" data-text="Outro texto" data-event="click">Exemplo com link</a>
@@ -23,23 +21,23 @@ menu_page: sidebar-componentes.erb
 <a href="#" data-text="Mudou!" data-event="hover" class="btn btn-primary">Mudando com Hover</a>
 </pre>
 
-	<h3 class-"title-3">Atributos</h3>
-	<table class="table table-bordered table-striped">
-		<thead>
-			<tr>
-				<th style="width: 150px;">Atributo</th>
-				<th>Descrição</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>data-text</td>
-				<td>É onde o texto alternativo fica guardado</td>
-			</tr>
-			<tr>
-				<td>data-event</td>
-				<td>O valor <code>hover</code> define para mudar o texto no hover. <br>O valor <code>click</code> define que o texto deverá ser mudado ao clicar.</td>
-			</tr>
-		</tbody>
-	</table>
+<h3 class-"title-3">Atributos</h3>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th style="width: 150px;">Atributo</th>
+			<th>Descrição</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>data-text</td>
+			<td>É onde o texto alternativo fica guardado</td>
+		</tr>
+		<tr>
+			<td>data-event</td>
+			<td>O valor <code>hover</code> define para mudar o texto no hover. <br>O valor <code>click</code> define que o texto deverá ser mudado ao clicar.</td>
+		</tr>
+	</tbody>
+</table>
 

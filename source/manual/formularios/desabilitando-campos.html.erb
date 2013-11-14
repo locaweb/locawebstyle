@@ -2,43 +2,40 @@
 title: Formulários - Desabilitando campos de formulário
 menu_page: sidebar-formularios.erb
 ---
+<header>
+	<h1>Formulários</h1>
+	<h2>Desabilitando campos de formulário.</h2>
+</header>
 
-
-	<header>
-		<h1>Formulários</h1>
-		<h2>Desabilitando campos de formulário.</h2>
-	</header>
-
-	<p>Basta adicionar o atributo <code>disabled</code> e os campos ficarão da seguinte forma:</p>
-	<div class="example">
-		<input class="form-control" id="disabledInput" type="text" placeholder="Campo desabilitado" disabled>
-	</div>
+<p>Basta adicionar o atributo <code>disabled</code> e os campos ficarão da seguinte forma:</p>
+<div class="example">
+	<input class="form-control" id="disabledInput" type="text" placeholder="Campo desabilitado" disabled>
+</div>
 <pre class="lang-html prettyprint-code linenums"><input class="form-control" id="disabledInput" type="text" placeholder="Campo desabilitado" disabled></pre>
-	<div class="bs-callout bs-callout-danger">
-		<h4>Compatibilidade com a maioria dos navegadores</h4>
-		<p>Veja que a maioria dos navegadores aceitam o atributo <code>disabled</code> em <code>fieldsets</code>, mas o Internet Explorer 9 pra baixo não suporta, mas isso não é surpresa pra ninguém, não é mesmo?</p>
-	</div>
-	<div class="example">
-		<form role="form">
-			<fieldset disabled>
-				<div class="form-group">
-					<label for="disabledTextInput">Campo desabilitado</label>
-					<input type="text" id="disabledTextInput" class="form-control" placeholder="Campo desabilitado">
-				</div>
-				<div class="form-group">
-					<label for="disabledSelect">Seletor desabilitado</label>
-					<select id="disabledSelect" class="form-control">
-						<option>Seletor desabilitado</option>
-					</select>
-				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox"> Não pode marcar isso
-					</label>
-				</div>
-				<button type="submit" class="btn btn-primary">Enviar</button>
-			</fieldset>
-		</form>
-	</div>
+<div class="bs-callout bs-callout-danger">
+	<h4>Compatibilidade com a maioria dos navegadores</h4>
+	<p>Veja que a maioria dos navegadores aceitam o atributo <code>disabled</code> em <code>fieldsets</code>, mas o Internet Explorer 9 pra baixo não suporta, mas isso não é surpresa pra ninguém, não é mesmo?</p>
+</div>
+<div class="example">
+	<form role="form">
+		<fieldset disabled>
+			<div class="form-group">
+				<label for="disabledTextInput">Campo desabilitado</label>
+				<input type="text" id="disabledTextInput" class="form-control" placeholder="Campo desabilitado">
+			</div>
+			<div class="form-group">
+				<label for="disabledSelect">Seletor desabilitado</label>
+				<select id="disabledSelect" class="form-control">
+					<option>Seletor desabilitado</option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Não pode marcar isso
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</fieldset>
+	</form>
+</div>
 <pre class="lang-html prettyprint-code linenums"><input class="form-control" id="disabledInput" type="text" placeholder="Campo desabilitado" disabled></pre>
-

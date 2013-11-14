@@ -2,66 +2,64 @@
 title: Posição dos campos
 menu_page: sidebar-formularios.erb
 ---
-
-
-	<header>
-		<h1>Formulários</h1>
-		<h2>Posição dos campos</h2>
-	</header>
-	<h3>Formulários verticais</h3>
-	<p>Sim, esse é aquele formulário básico que você não perde muito tempo e a <code>&lt;label&gt;</code> fica em cima do <code>&lt;input&gt;</code>.</p>
-	<div class="example">
-		<form role="form">
-			<fieldset>
-				<div class="row">
-					<div class="form-group col-lg-4">
-						<label for="example1">Campo simples</label>
-						<input type="text" class="form-control" id="example1" placeholder="Insira seu texto aqui">
-					</div>
-					<div class="form-group col-lg-8">
-						<label for="example2">Campo simples</label>
-						<input type="text" class="form-control" id="example2" placeholder="Insira seu texto aqui">
-					</div>
+<header>
+	<h1>Formulários</h1>
+	<h2>Posição dos campos</h2>
+</header>
+<h3>Formulários verticais</h3>
+<p>Sim, esse é aquele formulário básico que você não perde muito tempo e a <code>&lt;label&gt;</code> fica em cima do <code>&lt;input&gt;</code>.</p>
+<div class="example">
+	<form role="form">
+		<fieldset>
+			<div class="row">
+				<div class="form-group col-lg-4">
+					<label for="example1">Campo simples</label>
+					<input type="text" class="form-control" id="example1" placeholder="Insira seu texto aqui">
 				</div>
-				<div class="row">
-					<div class="form-group col-lg-6">
-						<label for="example3">Seletor</label>
-						<select class="form-control" id="example3">
-							<option value="">Selecione algo</option>
-							<option value="">Opção 1</option>
-							<option value="">Opção 2</option>
-						</select>
-					</div>
-					<div class="form-group col-lg-6">
-						<label for="example4">Seletor</label>
-						<select class="form-control" id="example4">
-							<option value="">Selecione algo</option>
-							<option value="">Opção 1</option>
-							<option value="">Opção 2</option>
-						</select>
-					</div>
+				<div class="form-group col-lg-8">
+					<label for="example2">Campo simples</label>
+					<input type="text" class="form-control" id="example2" placeholder="Insira seu texto aqui">
 				</div>
-				<div class="row">
-					<div class="form-group col-lg-3">
-						<label for="example5">Senha</label>
-						<input type="password" class="form-control" id="example5" placeholder="senha">
-					</div>
-					<div class="form-group col-lg-6">
-						<label for="example6">Email</label>
-						<input type="email" class="form-control" id="example6" placeholder="Insira seu emai aqui">
-					</div>
-					<div class="form-group col-lg-3">
-						<label for="example7">Data</label>
-						<input type="date" class="form-control" id="example7" placeholder="Insira seu emai aqui">
-					</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-lg-6">
+					<label for="example3">Seletor</label>
+					<select class="form-control" id="example3">
+						<option value="">Selecione algo</option>
+						<option value="">Opção 1</option>
+						<option value="">Opção 2</option>
+					</select>
 				</div>
-				<div class="box-actions">
-					<button type="submit" class="btn btn-primary">Enviar</button>
-					<button class="btn btn-danger">Cancelar</button>
+				<div class="form-group col-lg-6">
+					<label for="example4">Seletor</label>
+					<select class="form-control" id="example4">
+						<option value="">Selecione algo</option>
+						<option value="">Opção 1</option>
+						<option value="">Opção 2</option>
+					</select>
 				</div>
-			</fieldset>
-		</form>
-	</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-lg-3">
+					<label for="example5">Senha</label>
+					<input type="password" class="form-control" id="example5" placeholder="senha">
+				</div>
+				<div class="form-group col-lg-6">
+					<label for="example6">Email</label>
+					<input type="email" class="form-control" id="example6" placeholder="Insira seu emai aqui">
+				</div>
+				<div class="form-group col-lg-3">
+					<label for="example7">Data</label>
+					<input type="date" class="form-control" id="example7" placeholder="Insira seu emai aqui">
+				</div>
+			</div>
+			<div class="box-actions">
+				<button type="submit" class="btn btn-primary">Enviar</button>
+				<button class="btn btn-danger">Cancelar</button>
+			</div>
+		</fieldset>
+	</form>
+</div>
 
 <pre class="lang-html prettyprint-code linenums">
 <form role="form">
@@ -117,41 +115,38 @@ menu_page: sidebar-formularios.erb
 </form>
 </pre>
 
-	<h3>Formulários horizontais</h3>
-	<p>
-		Aposto que você gostaria de alinhar a <code>&lt;label&gt;</code> do seu formulário com o <code>&lt;input&gt;</code>, e agora?
-		<br>
-		Use a classe: <code>.form-horizontal</code> para fazer isso. Veja o Exemplo abaixo:
-	</p>
-	<div class="example">
-		<form class="form-horizontal" role="form">
-			<div class="form-group">
-				<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
-				<div class="col-lg-10">
-					<input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+<h3>Formulários horizontais</h3>
+<p>Aposto que você gostaria de alinhar a <code>&lt;label&gt;</code> do seu formulário com o <code>&lt;input&gt;</code>, e agora?<br>	Use a classe: <code>.form-horizontal</code> para fazer isso. Veja o Exemplo abaixo:</p>
+<div class="example">
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
+			<div class="col-lg-10">
+				<input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputPassword1" class="col-lg-2 control-label">Senha</label>
+			<div class="col-lg-10">
+				<input type="password" class="form-control" id="inputPassword1" placeholder="Senha">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-offset-2 col-lg-10">
+				<div class="checkbox">
+					<input type="checkbox" id="checkbox-1"><label for="checkbox-1">Me manter conectado</label>
 				</div>
 			</div>
-			<div class="form-group">
-				<label for="inputPassword1" class="col-lg-2 control-label">Senha</label>
-				<div class="col-lg-10">
-					<input type="password" class="form-control" id="inputPassword1" placeholder="Senha">
-				</div>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-offset-2 col-lg-10">
+				<button type="submit" class="btn btn-primary">Entrar</button>
 			</div>
-			<div class="form-group">
-				<div class="col-lg-offset-2 col-lg-10">
-					<div class="checkbox">
-						<input type="checkbox" id="checkbox-1"><label for="checkbox-1">Me manter conectado</label>
-					</div>
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-lg-offset-2 col-lg-10">
-					<button type="submit" class="btn btn-primary">Entrar</button>
-				</div>
-			</div>
-		</form>
-	</div>
-	<pre class="lang-html prettyprint-code linenums">
+		</div>
+	</form>
+</div>
+
+<pre class="lang-html prettyprint-code linenums">
 <form class="form-horizontal" role="form">
 	<div class="form-group">
 		<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
@@ -180,33 +175,36 @@ menu_page: sidebar-formularios.erb
 	</div>
 </form>
 </pre>
-	<hr>
-	<h3>Formulários em linha</h3>
-	<p>Para criar formulários em linha, basta adicionar a classe <code>.form-inline</code> e o conteúdo será alinhado do lado esquerdo e receberá a propriedade de "display": <code>inline-block</code>.</p>
-	<div class="bs-callout bs-callout-warning">
-		<h4>Lembre-se!</h4>
-		<p>Nessa versão de formulário é necessário definir a largura para os campos.</p>
-		<h4>Acessibilidade</h4>
-		<p>Ao usar  o atributo<code>placeholder</code> continuamos criando o <code>label </code> e o escondemos com a classe <code>sr-only</code>, porém os leitores de tela conseguem entender. Faça isso e a Acessibilidade agradece =)</p>
-	</div>
-	<div class="example">
-		<form class="form-inline" role="form">
-			<div class="form-group">
-				<label class="sr-only" for="example8">Endereço de email</label>
-				<input type="email" class="form-control" id="example8" placeholder="Digite seu email">
-			</div>
-			<div class="form-group">
-				<label class="sr-only" for="example9">Senha</label>
-				<input type="password" class="form-control" id="example9" placeholder="Senha">
-			</div>
-			<div class="checkbox">
-				<input type="checkbox" id="checkbox-2">
-				<label for="checkbox-2">Me manter conectado</label>
-			</div>
-			<button type="submit" class="btn btn-primary">Entrar</button>
-		</form>
-	</div>
-	<pre class="lang-html prettyprint-code linenums">
+
+<hr>
+
+<h3>Formulários em linha</h3>
+<p>Para criar formulários em linha, basta adicionar a classe <code>.form-inline</code> e o conteúdo será alinhado do lado esquerdo e receberá a propriedade de "display": <code>inline-block</code>.</p>
+<div class="bs-callout bs-callout-warning">
+	<h4>Lembre-se!</h4>
+	<p>Nessa versão de formulário é necessário definir a largura para os campos.</p>
+	<h4>Acessibilidade</h4>
+	<p>Ao usar  o atributo<code>placeholder</code> continuamos criando o <code>label </code> e o escondemos com a classe <code>sr-only</code>, porém os leitores de tela conseguem entender. Faça isso e a Acessibilidade agradece =)</p>
+</div>
+<div class="example">
+	<form class="form-inline" role="form">
+		<div class="form-group">
+			<label class="sr-only" for="example8">Endereço de email</label>
+			<input type="email" class="form-control" id="example8" placeholder="Digite seu email">
+		</div>
+		<div class="form-group">
+			<label class="sr-only" for="example9">Senha</label>
+			<input type="password" class="form-control" id="example9" placeholder="Senha">
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" id="checkbox-2">
+			<label for="checkbox-2">Me manter conectado</label>
+		</div>
+		<button type="submit" class="btn btn-primary">Entrar</button>
+	</form>
+</div>
+
+<pre class="lang-html prettyprint-code linenums">
 <form class="form-inline" role="form">
 	<div class="form-group">
 		<label class="sr-only" for="exampleInputEmail2">Endereço de email</label>

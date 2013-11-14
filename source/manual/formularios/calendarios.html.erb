@@ -2,34 +2,32 @@
 title: Formulários - Calendários
 menu_page: sidebar-formularios.erb
 ---
+<header>
+	<h1>Calendários</h1>
+	<h2>Inputs com integração de formulário.</h2>
+</header>
+
+<p>Para o calendário utilizamos o <a href="http://api.jqueryui.com/datepicker/" target="_blank">módulo do JQuery UI</a>.</p>
+<p>E para aplicar basta seguir alguns passos:</p>
+<p>
+	1. Crie a estrutura abaixo.<br>
+	2. Lembre-se de adicionar a classe <code>datepicker</code>.<br>
+	3. Tome um suco de laranja. :D
+</p>
 
 
-	<header>
-	  <h1>Calendários</h1>
-	  <h2>Inputs com integração de formulário.</h2>
-	</header>
-
-	<p>Para o calendário utilizamos o <a href="http://api.jqueryui.com/datepicker/" target="_blank">módulo do JQuery UI</a>.</p>
-	<p>E para aplicar basta seguir alguns passos:</p>
-	<p>
-		1. Crie a estrutura abaixo.<br>
-		2. Lembre-se de adicionar a classe <code>datepicker</code>.<br>
-		3. Tome um suco de laranja. :D
-	</p>
-
-
-	<div class="example">
-		<form>
-			<div class="row">
-				<div class="col-lg-3">
-					<label for="example1" class="sr-only">Data</label>
-					<div class="input-group datepicker">
-						<input type="text" class="form-control date-mask" id="example1" placeholder="dd/mm/aaaa">
-					</div>
+<div class="example">
+	<form>
+		<div class="row">
+			<div class="col-lg-3">
+				<label for="example1" class="sr-only">Data</label>
+				<div class="input-group datepicker">
+					<input type="text" class="form-control date-mask" id="example1" placeholder="dd/mm/aaaa">
 				</div>
 			</div>
-		</form>
-	</div>
+		</div>
+	</form>
+</div>
 <pre class="lang-html linenums prettyprint-code">
 <label for="example1" class="sr-only">Data</label>
 <div class="input-group datepicker">

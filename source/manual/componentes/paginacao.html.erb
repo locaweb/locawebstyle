@@ -2,43 +2,42 @@
 title: Aplicações - Paginação
 menu_page: sidebar-componentes.erb
 ---
+<header>
+	<h1>Filtro de exibição e Paginação</h1>
+	<h3>Exibição de navegação por páginas e controle de quantidade.</h3>
+</header>
+<p>Navegação entre páginas e controle de quantidade de elementos que serão exibidos por página.</p>
 
-	<header>
-		<h1>Filtro de exibição e Paginação</h1>
-		<h3>Exibição de navegação por páginas e controle de quantidade.</h3>
-	</header>
-	<p>Navegação entre páginas e controle de quantidade de elementos que serão exibidos por página.</p>
+<div class="example">
+	<div class="pagination-filter">
 
-	<div class="example">
-		<div class="pagination-filter">
+		<ul class="pagination">
+			<li><a href="#">&laquo; Anterior</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">Próximo &raquo;</a></li>
+		</ul>
 
-			<ul class="pagination">
-				<li><a href="#">&laquo; Anterior</a></li>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">Próximo &raquo;</a></li>
-			</ul>
-
-			<div class="filter-view">
-				<label for="">
-					Exibir
-					<select name="" id="">
-						<option value=""></option>
-						<option value="10">10</option>
-						<option value="10">10</option>
-						<option value="30">30</option>
-						<option value="50">50</option>
-						<option value="100">100</option>
-					</select>
-					ítens por página
-				</label>
-			</div>
-
+		<div class="filter-view">
+			<label for="">
+				Exibir
+				<select name="" id="">
+					<option value=""></option>
+					<option value="10">10</option>
+					<option value="10">10</option>
+					<option value="30">30</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+				</select>
+				ítens por página
+			</label>
 		</div>
+
 	</div>
+</div>
 
 <pre class="lang-html prettyprint-code linenums">
 <div class="pagination-filter">
@@ -71,19 +70,19 @@ menu_page: sidebar-componentes.erb
 </div>
 </pre>
 
-	<h4>Estados Ativado e Desativado</h4>
-	<p>Customize os links em diferentes circunstâncias. Utiliza a classe <code>.disabled</code> para links desativados e <code>.active</code> para indicar uma próxima pagina.</p>
-	<div class="example txt-center">
-		<ul class="pagination">
-			<li class="disabled"><a href="#">&laquo; Anterior</a></li>
-			<li class="active"><a href="#">1 </a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">Próximo &raquo;</a></li>
-		</ul>
-	</div>
+<h4>Estados Ativado e Desativado</h4>
+<p>Customize os links em diferentes circunstâncias. Utiliza a classe <code>.disabled</code> para links desativados e <code>.active</code> para indicar uma próxima pagina.</p>
+<div class="example txt-center">
+	<ul class="pagination">
+		<li class="disabled"><a href="#">&laquo; Anterior</a></li>
+		<li class="active"><a href="#">1 </a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+		<li><a href="#">Próximo &raquo;</a></li>
+	</ul>
+</div>
 
 <pre class="lang-html prettyprint-code linenums">
 <ul class="pagination">
@@ -92,7 +91,7 @@ menu_page: sidebar-componentes.erb
 	...
 </ul>
 </pre>
-	<p>Opcionalmente você também pode remover o link e manter apenas o <code>&lt;span&gt;</code> para manter o estilo e remover apenas a funcionalidade do click.</p>
+<p>Opcionalmente você também pode remover o link e manter apenas o <code>&lt;span&gt;</code> para manter o estilo e remover apenas a funcionalidade do click.</p>
 
 <pre class="lang-html prettyprint-code linenums">
 <ul class="pagination">
@@ -102,44 +101,44 @@ menu_page: sidebar-componentes.erb
 </ul>
 </pre>
 
-	<h4>Tamanhos</h4>
-	<p>Para alterar o tamanho, utilize as classes <code>.pagination-lg</code> ou <code>pagination-sm</code></p>
+<h4>Tamanhos</h4>
+<p>Para alterar o tamanho, utilize as classes <code>.pagination-lg</code> ou <code>pagination-sm</code></p>
 
-	<div class="example txt-center">
-		<div class="d-block">
-			<ul class="pagination pagination-lg">
-				<li><a href="#">&laquo; Anterior</a></li>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">Próximo &raquo;</a></li>
-			</ul>
-		</div>
-		<div class="d-block">
-			<ul class="pagination">
-				<li><a href="#">&laquo; Anterior</a></li>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">Próximo &raquo;</a></li>
-			</ul>
-		</div>
-		<div class="d-block">
-			<ul class="pagination pagination-sm">
-				<li><a href="#">&laquo; Anterior</a></li>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">Próximo &raquo;</a></li>
-			</ul>
-		</div>
+<div class="example txt-center">
+	<div class="d-block">
+		<ul class="pagination pagination-lg">
+			<li><a href="#">&laquo; Anterior</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">Próximo &raquo;</a></li>
+		</ul>
 	</div>
+	<div class="d-block">
+		<ul class="pagination">
+			<li><a href="#">&laquo; Anterior</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">Próximo &raquo;</a></li>
+		</ul>
+	</div>
+	<div class="d-block">
+		<ul class="pagination pagination-sm">
+			<li><a href="#">&laquo; Anterior</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">Próximo &raquo;</a></li>
+		</ul>
+	</div>
+</div>
 <pre class="lang-html prettyprint-code linenums">
 <!-- Grande -->
 <ul class="pagination pagination-lg">...</ul>
@@ -148,15 +147,15 @@ menu_page: sidebar-componentes.erb
 <!--	Pequeno -->
 <ul class="pagination pagination-sm">...</ul>
 </pre>
-	<h4>Paginador</h4>
-	<p>Links rápidos para uma simples implementação de paginação com links de "anterior" e "próximo".</p>
+<h4>Paginador</h4>
+<p>Links rápidos para uma simples implementação de paginação com links de "anterior" e "próximo".</p>
 
-	<div class="example">
-		<ul class="pager">
-			<li><a href="#">Previous</a></li>
-			<li><a href="#">Next</a></li>
-		</ul>
-	</div>
+<div class="example">
+	<ul class="pager">
+		<li><a href="#">Previous</a></li>
+		<li><a href="#">Next</a></li>
+	</ul>
+</div>
 <pre class="lang-html prettyprint-code linenums">
 <ul class="pager">
 	<li><a href="#">Previous</a></li>
@@ -164,15 +163,15 @@ menu_page: sidebar-componentes.erb
 </ul>
 </pre>
 
-	<h4>links Alinhados</h4>
-	<p>Você tem a opcão de alinhar um de cada lado</p>
+<h4>links Alinhados</h4>
+<p>Você tem a opcão de alinhar um de cada lado</p>
 
-	<div class="example">
-		<ul class="pager">
-			<li class="previous"><a href="#">&larr; Older</a></li>
-			<li class="next"><a href="#">Newer &rarr;</a></li>
-		</ul>
-	</div>
+<div class="example">
+	<ul class="pager">
+		<li class="previous"><a href="#">&larr; Older</a></li>
+		<li class="next"><a href="#">Newer &rarr;</a></li>
+	</ul>
+</div>
 <pre class="lang-html prettyprint-code linenums">
 <ul class="pager">
   <li class="previous"><a href="#">&larr; Older</a></li>
@@ -180,15 +179,15 @@ menu_page: sidebar-componentes.erb
 </ul>
 </pre>
 
-	<h4>Estado desabilitado opcional</h4>
-	<p>Esses links também usam a classe <code>.disabled</code> que é uma utilidade da paginação.</p>
+<h4>Estado desabilitado opcional</h4>
+<p>Esses links também usam a classe <code>.disabled</code> que é uma utilidade da paginação.</p>
 
-	<div class="example">
-		<ul class="pager">
-			<li class="previous disabled"><a href="#">&larr; Older</a></li>
-			<li class="next"><a href="#">Newer &rarr;</a></li>
-		</ul>
-	</div>
+<div class="example">
+	<ul class="pager">
+		<li class="previous disabled"><a href="#">&larr; Older</a></li>
+		<li class="next"><a href="#">Newer &rarr;</a></li>
+	</ul>
+</div>
 <pre class="lang-html prettyprint-code linenums">
 <ul class="pager">
   <li class="previous disabled"><a href="#">&larr; Older</a></li>

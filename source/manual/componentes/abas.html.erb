@@ -2,30 +2,27 @@
 title: Componentes - Abas
 menu_page: sidebar-componentes.erb
 ---
+<header>
+	<h1>Abas ou tabs</h1>
+	<h3>Tabs são perfeitos para organizar informações em painéis de conteúdo, onde o acesso precisa ser rápido e quando há muito conteúdo sobre um determinado assunto.</h3>
+</header>
 
+<div class="example">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#first-tab" data-toggle="tab">Primeira Aba</a></li>
+		<li><a href="#second-tab" data-toggle="tab">Segunda</a></li>
+	</ul>
 
-
-	<header>
-		<h1>Abas ou tabs</h1>
-		<h3>Tabs são perfeitos para organizar informações em painéis de conteúdo, onde o acesso precisa ser rápido e quando há muito conteúdo sobre um determinado assunto.</h3>
-	</header>
-
-	<div class="example">
-		<ul class="nav nav-tabs">
-			<li class="active"><a href="#first-tab" data-toggle="tab">Primeira Aba</a></li>
-			<li><a href="#second-tab" data-toggle="tab">Segunda</a></li>
-		</ul>
-
-		<div class="tab-content">
-			<div class="tab-pane active in" id="first-tab">
-				<p>Aqui vai o conteúdo da primeira aba.</p>
-				<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-			</div>
-			<div class="tab-pane" id="second-tab">
-				<p>Aqui vai o conteúdo da segunda aba.</p>
-				<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-			</div>
+	<div class="tab-content">
+		<div class="tab-pane active in" id="first-tab">
+			<p>Aqui vai o conteúdo da primeira aba.</p>
+			<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
 		</div>
+		<div class="tab-pane" id="second-tab">
+			<p>Aqui vai o conteúdo da segunda aba.</p>
+			<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+		</div>
+	</div>
 	</div>
 <pre class="lang-html prettyprint linenums">
 &lt;ul class=&quot;nav nav-tabs&quot;&gt;
@@ -55,51 +52,54 @@ menu_page: sidebar-componentes.erb
 
 <p>Se você quiser ativar as tabs manualmente, use o código abaixo. Cada tab precisa ser ativada individualmente:</p>
 
-	<pre class="lang-javascript prettyprint linenums">
+<pre class="lang-javascript prettyprint linenums">
 $('#tab a').click(function(e) {
   e.preventDefault();
   $(this).tab('show');
-});</pre>
+});
+</pre>
 
 <p>Você pode ativar as tabs individualmente de várias maneiras:</p>
-	<pre class="lang-javascript prettyprint linenums">
+
+<pre class="lang-javascript prettyprint linenums">
 $('#tab a[href="#profile"]').tab('show') // Selecione a tab pelo nome
 $('#tab a:first').tab('show') // Selecione a primeira tab
 $('#tab a:last').tab('show') // Selecione a última tab
-$('#tab li:eq(2) a').tab('show') // Selecione a terceira tab (0-indexed)</pre>
+$('#tab li:eq(2) a').tab('show') // Selecione a terceira tab (0-indexed)
+</pre>
 
-	<h3>Eventos</h3>
-	<table class="table table-bordered table-striped">
-		<thead>
-			<tr>
-				<th class="span2">Evento</th>
-				<th>Descrição</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>show.bs.tab</td>
-				<td>
-					Este evento é disparado quando a tab aparece, mas antes da nova tab ser mostrada. Use <code>event.target</code> e <code>event.relatedTarget</code> para pegar a tab ativa e a tab ativa anteriormente, se disponível, respectivamente.
-				</td>
-			</tr>
-			<tr>
-				<td>shown.bs.tab</td>
-				<td>
-					Este evento é disparado quando a tab aparece, mas depois da nova tab ser mostrada. Use <code>event.target</code> e <code>event.relatedTarget</code> para pegar a tab ativa e a tab ativa anteriormente, se disponível, respectivamente.
-				</td>
-			</tr>
-		</tbody>
-	</table>
+<h3>Eventos</h3>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th class="span2">Evento</th>
+			<th>Descrição</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>show.bs.tab</td>
+			<td>
+				Este evento é disparado quando a tab aparece, mas antes da nova tab ser mostrada. Use <code>event.target</code> e <code>event.relatedTarget</code> para pegar a tab ativa e a tab ativa anteriormente, se disponível, respectivamente.
+			</td>
+		</tr>
+		<tr>
+			<td>shown.bs.tab</td>
+			<td>
+				Este evento é disparado quando a tab aparece, mas depois da nova tab ser mostrada. Use <code>event.target</code> e <code>event.relatedTarget</code> para pegar a tab ativa e a tab ativa anteriormente, se disponível, respectivamente.
+			</td>
+		</tr>
+	</tbody>
+</table>
 
-	<p>Use event.target e event.relatedTarget para pegar a tab ativa e a tab anterior ativa, se disponível respectivamente.</p>
+<p>Use event.target e event.relatedTarget para pegar a tab ativa e a tab anterior ativa, se disponível respectivamente.</p>
 
 <pre class="lang-javascript prettyprint linenums">
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   e.target // tab ativada
   e.relatedTarget // tab anterior
-})</pre>
+})
+</pre>
 
 <h2>Responsividade</h2>
 <p>Quando a tab é carregada em telas pequenas, a tab é transformada automaticamente em um dropdown. Este comportamento não existe no Bootstrap.</p>
-

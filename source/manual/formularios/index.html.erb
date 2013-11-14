@@ -2,79 +2,77 @@
 title: Formulários
 menu_page: sidebar-formularios.erb
 ---
+<header>
+	<h1>Formulários</h1>
+	<h2>Fácil criar formulários com diferentes estilos e layouts.</h2>
+</header>
 
-
-	<header>
-		<h1>Formulários</h1>
-		<h2>Fácil criar formulários com diferentes estilos e layouts.</h2>
-	</header>
-
-	<div class="bs-callout bs-callout-info">
-		<h4>Boas práticas</h4>
-		<p>Pode parecer simples, mas muitos desenvolvedores deixam passar essa importância ao construir formulários.</p>
-		<p> Todo <code>label</code> precisa ter o atributo <code>for</code> com o mesmo valor do <code>ID</code> do elemento. </p>
-		<p>Isso é um diferencial tremendo ao acessarmos formulários utilizando leitores de tela. A acessibilidade agradece =)</p>
-			<div class="example">
-				<label for="elemento">Campo de senha</label>
-				<input type="password" class="form-control" id="elemento">
-			</div>
+<div class="bs-callout bs-callout-info">
+	<h4>Boas práticas</h4>
+	<p>Pode parecer simples, mas muitos desenvolvedores deixam passar essa importância ao construir formulários.</p>
+	<p> Todo <code>label</code> precisa ter o atributo <code>for</code> com o mesmo valor do <code>ID</code> do elemento. </p>
+	<p>Isso é um diferencial tremendo ao acessarmos formulários utilizando leitores de tela. A acessibilidade agradece =)</p>
+	<div class="example">
+		<label for="elemento">Campo de senha</label>
+		<input type="password" class="form-control" id="elemento">
+	</div>
 <pre class="lang-html prettyprint-code linenums">
 <label for="elemento">Campo de senha</label>
 <input type="password" class="form-control" id="elemento">
 </pre>
+</div>
 
-		</p>
-	</div>
-	<h3>Funcionamento</h3>
-	<p>Nós sabemos que utilizar formulários e principalmente organizá-los visualmente é muito chato. Nós seguimos alguns pequenos padrões herdados do Bootstrap com algumas modificações para se adequar às nossas necessidades. Veja os exemplos abaixo:</p>
-	<p>Todos os elementos <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, e <code>&lt;select&gt;</code> com a classe <code>.form-control</code> recebem a largura de <code>100%</code> por padrão.</p>
-	<div class="example">
-		<form role="form">
-			<fieldset>
-				<div class="form-group">
-					<label for="exampleInputEmail1">Campo simples</label>
-					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
-					<p class="help-block">Exemplo de texto de ajuda.</p>
-				</div>
-				<div class="form-group">
-					<label for="exampleSelect">Seletor</label>
-					<select id="exampleSelect" class="form-control">
-						<option value="">Escolha uma opção</option>
-						<option value="">Isso mesmo :D</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="exampleInputPassword1">Campo de senha</label>
-					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-				</div>
-				<div class="form-group">
-					<label for="exampleInputFile">Campo para envio de arquivo</label>
-					<input type="file" id="exampleInputFile">
-				</div>
-				<div class="checkbox">
-					<input type="checkbox" id="checkbox-1"><label for="checkbox-1">Marque aqui</label>
-				</div>
-				<div class="checkbox">
-					<input type="checkbox" id="checkbox-2"><label for="checkbox-2">Marque aqui</label>
-				</div>
-				<div class="checkbox">
-					<input type="checkbox" id="checkbox-3"><label for="checkbox-3">Marque aqui</label>
-				</div>
-				<div class="radio">
-					<input name="radios" type="radio" id="radio-button-1"><label for="radio-button-1">Ou aqui</label>
-				</div>
-				<div class="radio">
-					<input name="radios" type="radio" id="radio-button-2"><label for="radio-button-2">Ou aqui</label>
-				</div>
-				<div class="radio">
-					<input name="radios" type="radio" id="radio-button-3"><label for="radio-button-3">Ou aqui</label>
-				</div>
-				<div class="box-actions">
-					<button type="submit" class="btn btn-primary">Enviar</button>
-				</div>
-			</fieldset>
-		</form>
-	</div>
+<h3>Funcionamento</h3>
+<p>Nós sabemos que utilizar formulários e principalmente organizá-los visualmente é muito chato. Nós seguimos alguns pequenos padrões herdados do Bootstrap com algumas modificações para se adequar às nossas necessidades. Veja os exemplos abaixo:</p>
+<p>Todos os elementos <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, e <code>&lt;select&gt;</code> com a classe <code>.form-control</code> recebem a largura de <code>100%</code> por padrão.</p>
+<div class="example">
+	<form role="form">
+		<fieldset>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Campo simples</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+				<p class="help-block">Exemplo de texto de ajuda.</p>
+			</div>
+			<div class="form-group">
+				<label for="exampleSelect">Seletor</label>
+				<select id="exampleSelect" class="form-control">
+					<option value="">Escolha uma opção</option>
+					<option value="">Isso mesmo :D</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Campo de senha</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputFile">Campo para envio de arquivo</label>
+				<input type="file" id="exampleInputFile">
+			</div>
+			<div class="checkbox">
+				<input type="checkbox" id="checkbox-1"><label for="checkbox-1">Marque aqui</label>
+			</div>
+			<div class="checkbox">
+				<input type="checkbox" id="checkbox-2"><label for="checkbox-2">Marque aqui</label>
+			</div>
+			<div class="checkbox">
+				<input type="checkbox" id="checkbox-3"><label for="checkbox-3">Marque aqui</label>
+			</div>
+			<div class="radio">
+				<input name="radios" type="radio" id="radio-button-1"><label for="radio-button-1">Ou aqui</label>
+			</div>
+			<div class="radio">
+				<input name="radios" type="radio" id="radio-button-2"><label for="radio-button-2">Ou aqui</label>
+			</div>
+			<div class="radio">
+				<input name="radios" type="radio" id="radio-button-3"><label for="radio-button-3">Ou aqui</label>
+			</div>
+			<div class="box-actions">
+				<button type="submit" class="btn btn-primary">Enviar</button>
+			</div>
+		</fieldset>
+	</form>
+</div>
+
 <pre class="lang-html prettyprint-code linenums">
 <form role="form">
 	<fieldset>
