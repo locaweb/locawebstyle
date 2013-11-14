@@ -1,4 +1,4 @@
-<%= partial "partials/header" %>
+<%= partial "v1/partials/header" %>
 
 <!-- highlight -->
 <div class="highlight heading">
@@ -10,12 +10,11 @@
 
 <!-- Post content -->
 <section class="content limit">
-
-  <%= partial "partials/navbar-manual" %>
-	<%= partial "partials/sidebar-manual" %>
+	<%= partial "v1/partials/navbar-manual" %>
+	<%= partial "v1/partials/sidebar-manual" %>
 
 	<%= yield %>
 </section>
 <!-- END post content -->
 
-<%= partial "partials/footer" %>
+<%= partial "v1/partials/footer" %>
