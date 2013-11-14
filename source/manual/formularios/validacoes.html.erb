@@ -2,36 +2,35 @@
 title: Formulários - Validações
 menu_page: sidebar-formularios.erb
 ---
+<header>
+  <h1>Formulários</h1>
+  <h2>Padrões de validações client-side.</h2>
+</header>
+<p>Utilizamos os padrões do Bootstrap para incluir estilos de erros, atenção e sucesso nos campos de formulário, e para utilizá-los basta adicionar as classes <code>.has-error</code>, <code>.has-warning</code> ou <code>.has-success</code> no elemento pai deles.</p>
+<div class="bs-callout bs-callout-warning">
+	<h4>Estilos nos elementos</h4>
+	<p>Apenas os elementos <code>control-label</code>, <code>.form-control</code>, e <code>.help-block</code>, receberão esse estilo.</p>
+</div>
+<div class="example">
+	<form>
+		<div class="form-group has-success">
+			<label class="control-label" for="inputSuccess">Campo com sucesso</label>
+			<input type="text" class="form-control" id="inputSuccess">
+			<p class="help-block">Exemplo de texto de sucesso.</p>
+		</div>
+		<div class="form-group has-warning">
+			<label class="control-label" for="inputWarning">Campo com alerta</label>
+			<input type="text" class="form-control" id="inputWarning">
+			<p class="help-block">Exemplo de texto de alerta.</p>
+		</div>
+		<div class="form-group has-error">
+			<label class="control-label" for="inputError">Campo com erro</label>
+			<input type="text" class="form-control" id="inputError">
+			<p class="help-block">Exemplo de texto de erro.</p>
+		</div>
+	</form>
+</div>
 
-
-	<header>
-	  <h1>Formulários</h1>
-	  <h2>Padrões de validações client-side.</h2>
-	</header>
-	<p>Utilizamos os padrões do Bootstrap para incluir estilos de erros, atenção e sucesso nos campos de formulário, e para utilizá-los basta adicionar as classes <code>.has-error</code>, <code>.has-warning</code> ou <code>.has-success</code> no elemento pai deles.</p>
-	<div class="bs-callout bs-callout-warning">
-		<h4>Estilos nos elementos</h4>
-		<p>Apenas os elementos <code>control-label</code>, <code>.form-control</code>, e <code>.help-block</code>, receberão esse estilo.</p>
-	</div>
-	<div class="example">
-		<form>
-			<div class="form-group has-success">
-				<label class="control-label" for="inputSuccess">Campo com sucesso</label>
-				<input type="text" class="form-control" id="inputSuccess">
-				<p class="help-block">Exemplo de texto de sucesso.</p>
-			</div>
-			<div class="form-group has-warning">
-				<label class="control-label" for="inputWarning">Campo com alerta</label>
-				<input type="text" class="form-control" id="inputWarning">
-				<p class="help-block">Exemplo de texto de alerta.</p>
-			</div>
-			<div class="form-group has-error">
-				<label class="control-label" for="inputError">Campo com erro</label>
-				<input type="text" class="form-control" id="inputError">
-				<p class="help-block">Exemplo de texto de erro.</p>
-			</div>
-		</form>
-	</div>
 <pre class="lang-html prettyprint-code linenums">
 <div class="form-group has-success">
 	<label class="control-label" for="inputSuccess">Campo com sucesso</label>

@@ -2,34 +2,32 @@
 title: Componentes - Modal
 menu_page: sidebar-componentes.erb
 ---
+<header>
+	<h1>Modais ou Lightbox</h1>
+	<h3>Boxes simplificados e flexíveis de diálogo que necessitam do minímo de funcionalidades para funcionar.</h3>
+</header>
 
-
-	<header>
-		<h1>Modais ou Lightbox</h1>
-		<h3>Boxes simplificados e flexíveis de diálogo que necessitam do minímo de funcionalidades para funcionar.</h3>
-	</header>
-
-	<h4>Exemplo estático</h4>
-	<p>Um exemplo de modal com header, body e footer.</p>
-	<div class="example example-modal">
-		<div class="modal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h4>Título do Modal</h4>
-					</div>
-					<div class="modal-body">
-						<p>Um texto bacana...</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-						<button type="button" class="btn btn-primary">Salvar</button>
-					</div>
+<h4>Exemplo estático</h4>
+<p>Um exemplo de modal com header, body e footer.</p>
+<div class="example example-modal">
+	<div class="modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4>Título do Modal</h4>
+				</div>
+				<div class="modal-body">
+					<p>Um texto bacana...</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-primary">Salvar</button>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
 <pre class="lang-html linenums prettyprint-code">
 <div class="modal">
@@ -51,12 +49,12 @@ menu_page: sidebar-componentes.erb
 </div>
 </pre>
 
-	<h4>Demo</h4>
-	<p>Abra o modal via JavaScript. Ele vai descer e fazer um efeito de fade a partir do topo da página.</p>
+<h4>Demo</h4>
+<p>Abra o modal via JavaScript. Ele vai descer e fazer um efeito de fade a partir do topo da página.</p>
 
-	<div class="example">
-		<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Abrir modal</a>
-	</div>
+<div class="example">
+	<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Abrir modal</a>
+</div>
 
 <pre class="lang-htmnl linenums prettyprint-code">
 <!-- Button trigger modal -->
@@ -82,166 +80,167 @@ menu_page: sidebar-componentes.erb
 </div><!-- /.modal -->
 </pre>
 
-	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-		<div class="modal-dialog">
-			<div class="modal-content">
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content">
 
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h4 class="modal-title" id="myModalLabel">Modal Heading</h4>
-				</div>
-				<div class="modal-body">
-					<h4>Text in a modal</h4>
-					<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title" id="myModalLabel">Modal Heading</h4>
+			</div>
+			<div class="modal-body">
+				<h4>Text in a modal</h4>
+				<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
 
-					<h4>Popover in a modal</h4>
-					<p>This <a href="#" role="button" class="btn btn-default popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
+				<h4>Popover in a modal</h4>
+				<p>This <a href="#" role="button" class="btn btn-default popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
 
-					<h4>Tooltips in a modal</h4>
-					<p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+				<h4>Tooltips in a modal</h4>
+				<p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
 
-					<hr>
+				<hr>
 
-					<h4>Overflowing text to show scroll behavior</h4>
-					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
-				</div>
+				<h4>Overflowing text to show scroll behavior</h4>
+				<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+				<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+				<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+				<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+				<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+				<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
 
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
 
-	<div class="bs-callout bs-callout-warning">
-		<h4>Crie modais acessíveis</h4>
-		<p>
-			Não esqueça de adicionar <code>role="dialog"</code> a sua div primária. No exemplo acima é a <code>div#myModal</code><br>
-			Também, o atributo <code>aria-labelledby</code> é referente ao título do modal, no exemplo é <code>h4#myModalLabel</code>.<br>
-			Finalmente, <code>aria-hidden="true"</code> diz para tecnologias assistivas pularem o elemento DOM. <br>
-			Opcionalmente, você pode dar uma descrição para o modal. Use o atributo <code>aria-describedby</code> na div primária do modal para tal.
-		</p>
-	</div>
+<div class="bs-callout bs-callout-warning">
+	<h4>Crie modais acessíveis</h4>
+	<p>
+		Não esqueça de adicionar <code>role="dialog"</code> a sua div primária. No exemplo acima é a <code>div#myModal</code><br>
+		Também, o atributo <code>aria-labelledby</code> é referente ao título do modal, no exemplo é <code>h4#myModalLabel</code>.<br>
+		Finalmente, <code>aria-hidden="true"</code> diz para tecnologias assistivas pularem o elemento DOM. <br>
+		Opcionalmente, você pode dar uma descrição para o modal. Use o atributo <code>aria-describedby</code> na div primária do modal para tal.
+	</p>
+</div>
 
-	<h4>Como Usar</h4>
-	<p>Utilizando o atributo <code>data</code>.</p>
-	<p>Como ativar o modal sem escrever JavaScript. Use <code>data-toggle="modal"</code> no elemento que vai chama-lo, use também o <code>data-target="#foo"</code> ou <code>href="#foo"</code> para específicar o modal a ser aberto.</p>
-	<pre class="lang-html linenums prettyprint-code"><button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button></pre>
+<h4>Como Usar</h4>
+<p>Utilizando o atributo <code>data</code>.</p>
+<p>Como ativar o modal sem escrever JavaScript. Use <code>data-toggle="modal"</code> no elemento que vai chama-lo, use também o <code>data-target="#foo"</code> ou <code>href="#foo"</code> para específicar o modal a ser aberto.</p>
+<pre class="lang-html linenums prettyprint-code"><button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button></pre>
 
-	<h4>Via javaScript</h4>
-	<p>Chame um modal com o id <code>myModal</code>com apenas uma linha de JavaScript.</p>
-	<pre class="lang-js linenums prettyprint">$('#myModal').modal(options)</pre>
+<h4>Via javaScript</h4>
+<p>Chame um modal com o id <code>myModal</code>com apenas uma linha de JavaScript.</p>
+<pre class="lang-js linenums prettyprint">$('#myModal').modal(options)</pre>
 
-	<h4>Opções</h4>
-	<p>Opções que podem ser passadas via atributo ou JavaScript. Para atributos, use o prefixo <code>data-</code>, por exemplo <code>data-backdrop=""</code>.</p>
+<h4>Opções</h4>
+<p>Opções que podem ser passadas via atributo ou JavaScript. Para atributos, use o prefixo <code>data-</code>, por exemplo <code>data-backdrop=""</code>.</p>
 
-	<div class="table-responsive">
-		<table class="table table-bordered table-striped">
-			<thead>
-				<tr>
-					<th width="100">Nome</th>
-					<th width="50">Tipo</th>
-					<th width="50">Padrão</th>
-					<th>Descrição</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>backdrop</td>
-					<td>boolean</td>
-					<td>true</td>
-					<td>Inclui um elemento modal-backdrop. Como alternativa, use <code>static</code> para que o backdrop não feche o modal no 'click'.</td>
-				</tr>
-				<tr>
-					<td>keyboard</td>
-					<td>boolean</td>
-					<td>true</td>
-					<td>Fecha o modal quando o botão 'esc' é pressionado.</td>
-				</tr>
-				<tr>
-					<td>show</td>
-					<td>boolean</td>
-					<td>true</td>
-					<td>Mostra o modal logo que inicializado.</td>
-				</tr>
-				<tr>
-					<td>remote</td>
-					<td>path</td>
-					<td>false</td>
-					<td>
-						<p>
-							Se a URL remota é fornecida, o conteúdo será carregado via método load do jQuery injetado dentro do elemento raiz do modal. Se você estiver usando data api, você pode usar o atributo href="" para específicar a fonte remota. Um exemplo disso é mostrado abaixo:
-						</p>
-						<div>
-							<pre class="lang-html linenums prettyprint-code"><a data-toggle="modal" href="remote.html" data-target="#modal">Click me</a></pre>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+<div class="table-responsive">
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th width="100">Nome</th>
+				<th width="50">Tipo</th>
+				<th width="50">Padrão</th>
+				<th>Descrição</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>backdrop</td>
+				<td>boolean</td>
+				<td>true</td>
+				<td>Inclui um elemento modal-backdrop. Como alternativa, use <code>static</code> para que o backdrop não feche o modal no 'click'.</td>
+			</tr>
+			<tr>
+				<td>keyboard</td>
+				<td>boolean</td>
+				<td>true</td>
+				<td>Fecha o modal quando o botão 'esc' é pressionado.</td>
+			</tr>
+			<tr>
+				<td>show</td>
+				<td>boolean</td>
+				<td>true</td>
+				<td>Mostra o modal logo que inicializado.</td>
+			</tr>
+			<tr>
+				<td>remote</td>
+				<td>path</td>
+				<td>false</td>
+				<td>
+					<p>
+						Se a URL remota é fornecida, o conteúdo será carregado via método load do jQuery injetado dentro do elemento raiz do modal. Se você estiver usando data api, você pode usar o atributo href="" para específicar a fonte remota. Um exemplo disso é mostrado abaixo:
+					</p>
+					<div>
+						<pre class="lang-html linenums prettyprint-code"><a data-toggle="modal" href="remote.html" data-target="#modal">Click me</a></pre>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 
-	<h4>Métodos</h4>
-	<h5>.modal(options)</h5>
-	<p>Ativa seu conteúdo como modal. Aceita um objeto de opções <code>object</code>.</p>
+<h4>Métodos</h4>
+<h5>.modal(options)</h5>
+<p>Ativa seu conteúdo como modal. Aceita um objeto de opções <code>object</code>.</p>
 
 <pre class="lang-js linenums prettyprint">
 $('#myModal').modal({
 	keyboard: false
-})</pre>
+})
+</pre>
 
-	<h5>.modal('toggle')</h5>
-	<p>Manualmente alterna um modal.</p>
-	<pre class="lang-js linenums prettyprint">$('#myModal').modal('toggle')</pre>
+<h5>.modal('toggle')</h5>
+<p>Manualmente alterna um modal.</p>
+<pre class="lang-js linenums prettyprint">$('#myModal').modal('toggle')</pre>
 
-	<h5>.modal('show')</h5>
-	<p>Abre um modal manualmente.</p>
-	<pre class="lang-js linenums prettyprint">$('#myModal').modal('show')</pre>
+<h5>.modal('show')</h5>
+<p>Abre um modal manualmente.</p>
+<pre class="lang-js linenums prettyprint">$('#myModal').modal('show')</pre>
 
-	<h5>.modal('hide')</h5>
-	<p>Esconde um modal manualmente.</p>
-	<pre class="lang-js linenums prettyprint">$('#myModal').modal('hide')</pre>
+<h5>.modal('hide')</h5>
+<p>Esconde um modal manualmente.</p>
+<pre class="lang-js linenums prettyprint">$('#myModal').modal('hide')</pre>
 
-	<h4>Eventos</h4>
-	<p>O modal expôe alguns eventos para manipular algumas funcionalidades.</p>
+<h4>Eventos</h4>
+<p>O modal expôe alguns eventos para manipular algumas funcionalidades.</p>
 
-	<div class="table-responsive">
-		<table class="table table-bordered table-striped">
-			<thead>
-				<tr>
-					<th>Tipo de Evento</th>
-					<th>Descrição</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>show.bs.modal</td>
-					<td>Este evento dispara imediatamente quando o método <code>show</code> é chamado.</td>
-				</tr>
-				<tr>
-					<td>shown.bs.modal</td>
-					<td>Este evento é acionado quando o modal fica visível para o usuário (espera até a transição css estar completa).</td>
-				</tr>
-				<tr>
-					<td>hide.bs.modal</td>
-					<td>Este evento é disparado imediatamente quando o método de instância <code>hide</code> é chamado.</td>
-				</tr>
-				<tr>
-					<td>hidden.bs.modal</td>
-					<td>Este evento é disparado quando o modal deixou de ficar escondido para o usuário (espera completar a transição css).</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+<div class="table-responsive">
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Tipo de Evento</th>
+				<th>Descrição</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>show.bs.modal</td>
+				<td>Este evento dispara imediatamente quando o método <code>show</code> é chamado.</td>
+			</tr>
+			<tr>
+				<td>shown.bs.modal</td>
+				<td>Este evento é acionado quando o modal fica visível para o usuário (espera até a transição css estar completa).</td>
+			</tr>
+			<tr>
+				<td>hide.bs.modal</td>
+				<td>Este evento é disparado imediatamente quando o método de instância <code>hide</code> é chamado.</td>
+			</tr>
+			<tr>
+				<td>hidden.bs.modal</td>
+				<td>Este evento é disparado quando o modal deixou de ficar escondido para o usuário (espera completar a transição css).</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 
 <pre class="lang-js linenums prettyprint">
 $('#myModal').on('hidden.bs.modal', function () {

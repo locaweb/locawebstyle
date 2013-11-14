@@ -1,66 +1,60 @@
 ---
 title: Layout - Header
-
 menu_page: sidebar-layout.erb
 ---
-
-
-
-
-	<header>
-	  <h1>Header</h1>
-	  <h3>Exemplo de header padrão do Locaweb Style.</h3>
-	</header>
+<header>
+	<h1>Header</h1>
+	<h3>Exemplo de header padrão do Locaweb Style.</h3>
+</header>
 <p>Header principal dos sistemas. </p>
 
-<pre class="lang-html prettyprint linenums">
+<pre class="lang-html prettyprint-code linenums">
+<!-- HEADER -->
+<header class="header" role="banner">
+	<div class="container">
+		<span class="control-menu visible-xs ico-menu-2"></span>
+		<span class="control-sidebar visible-xs ico-list"></span>
+		<h1 class="project-name"><a href="#">Email Marketing</a></h1>
+		<a href="#" class="help-sugestions ico-help-circle hidden-xs">Ajuda e Sugestões</a>
+		
+		<div class="dropdown hidden-xs">
+			<a href="#" data-toggle="dropdown" class="title-dropdown">emkt2013</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li><a href="#" role="menuitem">Option 1</a></li>
+				<li><a href="#" role="menuitem">Option 2</a></li>
+				<li><a href="#" role="menuitem">Option 3</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<!-- FIM DO HEADER -->
 
-&lt;!-- HEADER --&gt;
-&lt;header class=&quot;header&quot; role=&quot;banner&quot;&gt;
-	&lt;div class=&quot;container&quot;&gt;
-		&lt;span class=&quot;control-menu visible-xs ico-menu-2&quot;&gt;&lt;/span&gt;
-		&lt;span class=&quot;control-sidebar visible-xs ico-list&quot;&gt;&lt;/span&gt;
-		&lt;h1 class=&quot;project-name&quot;&gt;&lt;a href=&quot;#&quot;&gt;Email Marketing&lt;/a&gt;&lt;/h1&gt;
-		&lt;a href=&quot;#&quot; class=&quot;help-sugestions ico-help-circle hidden-xs&quot;&gt;Ajuda e Sugest&amp;otilde;es&lt;/a&gt;
-
-		&lt;div class=&quot;dropdown hidden-xs&quot;&gt;
-			&lt;a href=&quot;#&quot; data-toggle=&quot;dropdown&quot; class=&quot;title-dropdown&quot;&gt;emkt2013&lt;/a&gt;
-			&lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;dLabel&quot;&gt;
-				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 1&lt;/a&gt;&lt;/li&gt;
-				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 2&lt;/a&gt;&lt;/li&gt;
-				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 3&lt;/a&gt;&lt;/li&gt;
-			&lt;/ul&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/header&gt;
-&lt;!-- FIM DO HEADER --&gt;
-
-&lt;!-- MENU PRINCIPAL --&gt;
-&lt;div class=&quot;nav-content&quot;&gt;
-	&lt;menu class=&quot;menu&quot;&gt;
-		&lt;ul class=&quot;container&quot;&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active ico-home&quot; role=&quot;menuitem&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Lista de contatos&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Mensagens&lt;/a&gt;
-				&lt;ul&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Enviar&lt;/a&gt;&lt;/li&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Criar&lt;/a&gt;&lt;/li&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Editar&lt;/a&gt;&lt;/li&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Relat&amp;oacute;rios&lt;/a&gt;&lt;/li&gt;
-				&lt;/ul&gt;
-			&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Campanhas&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Templates&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Relat&amp;oacute;rios&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Configura&amp;ccedil;&amp;otilde;es&lt;/a&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/menu&gt;
-	&lt;h2 class=&quot;title-sep visible-xs&quot;&gt;Mais&lt;/h2&gt;
-	&lt;ul class=&quot;nav-mob-list visible-xs&quot;&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;ico-help-circle&quot;&gt;Ajuda e sugest&amp;otilde;es&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-&lt;!-- FIM DO MENU PRINCIPAL --&gt;
+<!-- MENU PRINCIPAL -->
+<div class="nav-content">
+	<menu class="menu">
+		<ul class="container">
+			<li><a href="#" class="active ico-home" role="menuitem">Home</a></li>
+			<li><a href="#" role="menuitem">Lista de contatos</a></li>
+			<li><a href="#" role="menuitem">Mensagens</a>
+				<ul>
+					<li><a href="#">Enviar</a></li>
+					<li><a href="#">Criar</a></li>
+					<li><a href="#">Editar</a></li>
+					<li><a href="#">Relatórios</a></li>
+				</ul>
+			</li>
+			<li><a href="#" role="menuitem">Campanhas</a></li>
+			<li><a href="#" role="menuitem">Templates</a></li>
+			<li><a href="#" role="menuitem">Relatórios</a></li>
+			<li><a href="#" role="menuitem">Configurações</a></li>
+		</ul>
+	</menu>
+	<h2 class="title-sep visible-xs">Mais</h2>
+	<ul class="nav-mob-list visible-xs">
+		<li><a href="#" class="ico-help-circle">Ajuda e sugestões</a></li>
+	</ul>
+</div>
+<!-- FIM DO MENU PRINCIPAL -->
 </pre>
 
-<p>Veja um <%= link_to "exemplo de header", "#{base_url}/manual/exemplos/home" %>.</p>
+	<p>Veja um <%= link_to "exemplo de header", "#{base_url}/manual/exemplos/home" %>.</p>
