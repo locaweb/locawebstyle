@@ -173,8 +173,11 @@ pre .linenums {
 	float: right;
 }
 
-.main .content .dropdown-toggle:after {
+#menu .dropdown-toggle:after {
 	content: "menu";
+}
+#menu .dropdown-toggle:after{
+	border-top: none;
 }
 
 #topbar .social-links li {
