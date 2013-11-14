@@ -122,7 +122,10 @@ table
   vertical-align: bottom !important
 
 // BACKGROUND E BORDA
-.no-background, .no-bg
+.no-bg
+  background: none !important
+
+.no-bghover
   background: none !important
 
 .no-shadow
@@ -143,20 +146,6 @@ table
 .no-border-top
   border-top: none !important
 
-.no-bullet, .no-list-style
-  list-style: none !important
-
-.no-style-input,
-.no-style-input:focus,
-.no-style-input:active
-  outline: none !important
-  background: none !important
-  border: none !important
-  box-shadow: none !important
-  outline: 1px solid transparent !important
-  margin: 0 !important
-  padding: 0 !important
-  height: auto !important
 
 // CURSOR DE MOUSE
 .cursor-pointer
@@ -201,22 +190,6 @@ table
   cursor: -moz-grabbing
   cursor: -webkit-grabbing
 
-.ellipsis
-  overflow: hidden
-  text-overflow: ellipsis
-  white-space: nowrap
-  display: inline-block  !important
-
-.no-bold
-  font-weight: normal !important
-
-.no-bghover
-  background: none !important
-
-.no-radius
-  border-radius: 0 !important
-  -moz-border-radius: 0 !important
-  -webkit-border-radius: 0 !important
 
 // COLORS
 .bg-white
@@ -254,6 +227,37 @@ hr
       border-bottom: 1px dotted rgba($gray1, .3)
       margin: 1px 0 0
 
+// ESTILOS
+.ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+  display: inline-block  !important
+
+.no-bold
+  font-weight: normal !important
+
+
+.no-radius
+  border-radius: 0 !important
+  -moz-border-radius: 0 !important
+  -webkit-border-radius: 0 !important
+
+.no-bullet, .no-list-style
+  list-style: none !important
+
+.no-style-input,
+.no-style-input:focus,
+.no-style-input:active
+  outline: none !important
+  background: none !important
+  border: none !important
+  box-shadow: none !important
+  outline: 1px solid transparent !important
+  margin: 0 !important
+  padding: 0 !important
+  height: auto !important
+
 // ESPAÇAMENTO DE TEXTO
 .small-letter-spacing
   letter-spacing: -1px
@@ -261,3 +265,7 @@ hr
 // LINK
 .text-underline
   text-decoration: underline
+
+  &:hover,
+  &:focus
+    text-decoration: none
