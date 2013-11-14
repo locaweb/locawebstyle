@@ -9,9 +9,9 @@ title: Locaweb Style
 		<!-- <h2>Uma biblioteca de elementos e comportamentos em CSS e Javascript para facilitar a produção de layouts.</h2> -->
 
 		<div class="highbtn txt-center">
-			<a class="btn btn-primary btn-lg ico-download-2" href="<%= base_url %>/manual/introducao/como-usar" tabindex="3" role="button">Use agora</a>
-			<a class="btn btn-md btn-default ico-github-3" href="https://github.com/locaweb/locawebstyle/" tabindex="3" role="button" target="_blank">Github</a>
-			<a class="btn btn-md btn-default ico-numbered-list" href="/changelog" tabindex="3" role="button">Changelog</a>
+			<%= link_to "Use agora", "#{base_url}/manual/introducao/como-usar", :class => "btn btn-primary btn-lg ico-download-2" %>
+			<%= link_to "Github", "https://github.com/locaweb/locawebstyle/", :class => "btn btn-md btn-default ico-github-3", :target => "_blank" %>
+			<%= link_to "Changelog", "#{base_url}/changelog", :class => "btn btn-md btn-default ico-numbered-list" %>
 		</div>
 	</div>
 </div>
@@ -23,24 +23,24 @@ title: Locaweb Style
 	<h2>Construa sistemas rapidamente utilizando nosso framework. <br>Disponibilizamos comportamentos e uma interface usada por milhares de usuários.</h2>
 
 	<div class="channel">
-		<a href="<%= base_url %>/manual/introducao/como-usar/">
+		<% link_to "#{base_url}/manual/introducao/como-usar" do %>
 			<h3 class="ico-download-2">Baixe ou use direto do server</h3>
 			<p>Use via CDN ou baixe o ZIP com os assets necessários. Simples e Rápido.</p>
-		</a>
+		<% end %>
 	</div>
 
 	<div class="channel">
-		<a href="<%= base_url %>/manual/introducao/informacoes-iniciais/">
+		<% link_to "#{base_url}/manual/introducao/informacoes-iniciais/" do %>
 			<h3 class="ico-book">Documentação</h3>
 			<p>Confira a documentação e saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
-		</a>
+		<% end %>
 	</div>
 
 	<div class="channel">
-		<a href="/changelog">
+		<% link_to "#{base_url}/changelog" do %>
 			<h3 class="ico-numbered-list">Changelog e Blog</h3>
 			<p>Leia sobre assuntos técnicos de alto nível e saiba quais as últimas atualizações do Locaweb Style.</p>
-		</a>
+		<% end %>
 	</div>
 
 	<!-- AddThis Button BEGIN -->
