@@ -1,0 +1,355 @@
+---
+title: Componentes - Classes funcionais
+menu_page: sidebar-componentes.erb
+---
+
+
+	<header>
+		<h1>Classes funcionais</h1>
+		<h3>Foram criadas pra facilitar o desenvolvimento</h3>
+	</header>
+
+	<h2>Classe <code>sep-dot</code></h2>
+	<p>Utilizado somente no elemento <code>hr</code>, conforme o exemplo abaixo.</p>
+	<div class="example">
+		<hr class="sep-dot">
+	</div>
+<pre class="lang-html linenums prettyprint-code">
+<hr class="sep-dot">
+</pre>
+
+	<h2>Classe <code>ellipsis</code></h2>
+	<p>Utilizado em casos onde o texto é maior que o elemento assim ele cria <code>...</code> automaticamente, deixando tudo em apenas uma linha. </p>
+	<p>Importante dizer que o elemento precisa possuir uma largura, no exemplo abaixo utilizamos a classe <code>col-md-12</code> que faz parte do grid.</p>
+	<div class="example">
+		<p>Batatinha quando nasce espalha a rama pelo chão. Menininha quando dorme põe a mão no coração. Sou pequenininha do tamanho de um botão, carrego papai no bolso e mamãe no coração. O bolso furou e o papai caiu no chão. Mamãe que é mais querida ficou no coração.</p>
+		<div class="row">
+			<p class="ellipsis col-md-12">Batatinha quando nasce espalha a rama pelo chão. Menininha quando dorme põe a mão no coração. Sou pequenininha do tamanho de um botão, carrego papai no bolso e mamãe no coração. O bolso furou e o papai caiu no chão. Mamãe que é mais querida ficou no coração.</p>
+		</div>
+	</div>
+<pre class="lang-html linenums prettyprint-code">
+<p>Batatinha quando nasce espalha a rama pelo chão. Menininha quando dorme põe a mão no coração. Sou pequenininha do tamanho de um botão, carrego papai no bolso e mamãe no coração. O bolso furou e o papai caiu no chão. Mamãe que é mais querida ficou no coração.</p>
+
+<p class="ellipsis col-md-12">Batatinha quando nasce espalha a rama pelo chão. Menininha quando dorme põe a mão no coração. Sou pequenininha do tamanho de um botão, carrego papai no bolso e mamãe no coração. O bolso furou e o papai caiu no chão. Mamãe que é mais querida ficou no coração.</p>
+
+</pre>
+
+	<h2>Classe <code>no-style-input</code></h2>
+	<p>Remove todo o estilo do <code>input</code>.</p>
+	<div class="example">
+			<input class="form-control" value="Locaweb Style" type="text"><br>
+			<input class="form-control no-style-input" value="Locaweb Style" type="text">
+	</div>
+<pre class="lang-html linenums prettyprint-code">
+<input class="form-control" value="Locaweb Style" type="text">
+<input class="form-control no-style-input" value="Locaweb Style" type="text">
+</pre>
+
+<h2>Classes <code>no-bold</code></h2>
+	<div class="example">
+			<strong>Locaweb Style</strong><br>
+			<strong class="no-bold">Locaweb Style</strong>
+	</div>
+<pre class="lang-html linenums prettyprint-code">
+<strong>Locaweb Style</strong><br>
+<strong class="no-bold">Locaweb Style</strong>
+</pre>
+
+<h2>Classes <code>no-radius</code></h2>
+<p>Exemplo inserido no elemento <code>well</code></p>
+	<div class="example">
+		<div class="well"></div>
+		<div class="well no-radius"></div>
+	</div>
+<pre class="lang-html linenums prettyprint-code">
+<div class="well"></div>
+<div class="well no-radius"></div>
+</pre>
+
+<h2>Classes <code>no-bullet</code></h2>
+<p>Para remover estilo da <code>ul</code> ou <code>ol</code></p>
+	<div class="example">
+		<ul class="d-inline-block">
+			<li>Nome</li>
+			<li>Idade</li>
+			<li>Cidade</li>
+		</ul>
+		<ul class="d-inline-block no-bullet">
+			<li>Nome</li>
+			<li>Idade</li>
+			<li>Cidade</li>
+		</ul>
+	</div>
+<pre class="lang-html linenums prettyprint-code">
+<ul class="d-inline-block">
+	<li>Nome</li>
+	<li>Idade</li>
+	<li>Cidade</li>
+</ul>
+<ul class="d-inline-block no-bullet">
+	<li>Nome</li>
+	<li>Idade</li>
+	<li>Cidade</li>
+</ul>
+</pre>
+
+<h2>Classes <code>text-underline</code></h2>
+<p>Para inserir underline nos links, pois por default eles nao possuem</p>
+	<div class="example">
+		<a href="#">Link para Locastyle</a>
+		<a href="#" class="text-underline">Link para Locastyle</a>
+	</div>
+<pre class="lang-html linenums prettyprint-code">
+<a href="#">Link para Locastyle</a>
+<a href="#" class="text-underline">Link para Locastyle</a>
+</pre>
+
+
+<h2>Conheça outras classes</h2>
+<p>Elas são aplicadas em caso de existir exceções dentro dos elementos. </p>
+
+	<h3 class="title-3">float e clear</h3>
+	<pre class="lang-html linenums prettyprint-code">
+// FLOAT E CLEAR
+.no-float{
+	float: none !important
+}
+
+.f-right{
+	float: right !important
+}
+
+.f-left{
+	float: left !important
+}
+.c-Both{
+	clear: both !important
+}
+.c-right{
+	clear: right !important
+}
+.c-left{
+	clear: left !important
+}
+.overflow-hidden{
+	overflow: hidden !important
+}
+.overflow-visible{
+	overflow: visible !important
+}
+	</pre>
+
+	<h3 class="title-3">Bloco e linha</h3>
+<pre class="lang-html linenums prettyprint-code">
+.d-block{
+	display: block !important
+}
+.d-inline{
+	display: inline !important
+	float: none !important
+}
+.d-inline-block{
+	display: inline-block !important
+	float: none !important
+}
+.d-none, .hide{
+	display: none !important
+}
+</pre>
+
+<h3 class="title-3">Tamanho</h3>
+<pre class="lang-html linenums prettyprint-code">
+.width-auto{
+	width: auto !important
+}
+.width-inherit{
+	width: inherit
+}
+.full-width{
+	width: 100% !important
+}
+.height-inherit{
+	height: inherit
+}
+.height-auto{
+	height: auto !important
+}
+</pre>
+
+
+<h3 class="title-3">Margin e padding</h3>
+<pre class="lang-html linenums prettyprint-code">
+.no-margin{
+	margin: 0 !important
+}
+.no-margin-left, .row.no-margin-left{
+	margin-left: 0 !important
+}
+.no-margin-right{
+	margin-right: 0 !important
+}
+.no-margin-top{
+	margin-top: 0 !important
+}
+.no-margin-bottom{
+	margin-bottom: 0 !important
+}
+.no-padding{
+	padding: 0 !important
+}
+.no-padding-left{
+	padding-left: 0 !important
+}
+.no-padding-right{
+	padding-right: 0 !important
+}
+.no-padding-top{
+	padding-top: 0 !important
+}
+.no-padding-bottom{
+	padding-bottom: 0 !important
+}
+.margin-auto{
+	margin-left: auto !important
+	margin-right: auto !important
+}
+</pre>
+
+
+<h3 class="title-3">Alinhamento de texto</h3>
+<pre class="lang-html linenums prettyprint-code">
+.txt-left{
+	text-align: left !important
+}
+.txt-right{
+	text-align: right !important
+}
+.txt-justify{
+	text-align: justify !important
+}
+.txt-center{
+	text-align: center !important
+}
+
+</pre>
+
+
+<h3 class="title-3">Alinhamento vertical</h3>
+<pre class="lang-html linenums prettyprint-code">
+.v-align-top{
+	vertical-align: top !important
+}
+.v-align-middle{
+	vertical-align: middle !important
+}
+.v-align-bottom{
+	vertical-align: bottom !important
+}
+</pre>
+
+
+<h3 class="title-3">Backgrounds e bordas</h3>
+<pre class="lang-html linenums prettyprint-code">
+.no-bg{
+	background: none !important
+}
+.no-bghover{
+	background: none !important
+}
+.no-shadow{
+	box-shadow: none !important
+}
+.no-border{
+	border: none !important
+}
+.no-border-right{
+	border-right: none !important
+}
+.no-border-left{
+	border-left: none !important
+}
+.no-border-bottom{
+	border-bottom: none !important
+}
+.no-border-top{
+	border-top: none !important
+}
+.no-bullet, .no-list-style{
+	list-style: none !important
+}
+.no-style-input,
+.no-style-input:focus,
+.no-style-input:active{
+	outline: none !important
+	background: none !important
+	border: none !important
+	box-shadow: none !important
+	outline: 1px solid transparent !important
+	margin: 0 !important
+	padding: 0 !important
+	height: auto !important
+}
+</pre>
+
+
+<h3 class="title-3">Cursor de mouse</h3>
+<pre class="lang-html linenums prettyprint-code">
+.cursor-pointer{
+	cursor: pointer !important
+}
+.cursor-default{
+	cursor: default !important
+}
+.cursor-crosshair{
+	cursor: crosshair !important
+}
+.cursor-move{
+	cursor: move !important
+}
+.cursor-help{
+	cursor: help !important
+}
+.cursor-wait{
+	cursor: wait !important
+}
+.cursor-inherit{
+	cursor: inherit !important
+}
+.cursor-text{
+	cursor: text !important
+}
+.cursor-progress{
+	cursor: progress !important
+}
+.cursor-grab{
+	cursor: hand
+	cursor: grab
+	cursor: -o-grab
+	cursor: -ms-grab
+	cursor: -moz-grab
+	cursor: -webkit-grab
+}
+.cursor-grabbing{
+	cursor: grabbing
+	cursor: -o-grabbing
+	cursor: -ms-grabbing
+	cursor: -moz-grabbing
+	cursor: -webkit-grabbing
+}
+</pre>
+
+
+<h3 class="title-3">CORES</h3>
+<pre class="lang-html linenums prettyprint-code">
+.bg-white{
+	background: white !important
+}
+.color-black{
+	color: #000 !important
+}
+.color-danger{
+	color: #bd4b4b !important
+}
+</pre>
+
+
