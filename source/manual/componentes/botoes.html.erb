@@ -25,24 +25,25 @@ menu_page: sidebar-componentes.erb
 		<button type="button" class="btn btn-danger">Danger</button>
 
 	</div>
-<pre class="lang-html linenums prettyprint">
-&lt;!-- Padrão cinza --&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Default&lt;/button&gt;
 
-&lt;!-- Para botões com ação primária --&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+<pre class="lang-html prettyprint-code linenums">
+<!-- Padrão cinza -->
+<button type="button" class="btn btn-default">Default</button>
 
-&lt;!-- Botões que indicam ação positiva ou de sucesso --&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+<!-- Para botões com ação primária -->
+<button type="button" class="btn btn-primary">Primary</button>
 
-&lt;!-- Botão de de informação ou mensagens alerta --&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+<!-- Botões que indicam ação positiva ou de sucesso -->
+<button type="button" class="btn btn-success">Success</button>
 
-&lt;!-- Indica cuidado com esta ação --&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+<!-- Botão de de informação ou mensagens alerta -->
+<button type="button" class="btn btn-info">Info</button>
 
-&lt;!-- Indica perigo ou ação negativa --&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+<!-- Indica cuidado com esta ação -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indica perigo ou ação negativa -->
+<button type="button" class="btn btn-danger">Danger</button>
 </pre>
 
 	<h2>Botões grandes, médios e pequenos</h2>
@@ -65,18 +66,21 @@ menu_page: sidebar-componentes.erb
 			<button type="button" class="btn btn-default btn-xs">Extra Botão pequeno</button>
 		</p>
 	</div>
-<pre class="line-html linenums prettyprint">
-&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Botão grande&lt;/button&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-lg&quot;&gt;Botão grande&lt;/button&gt;
 
-&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Botão padrão&lt;/button&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Botão padrão&lt;/button&gt;
+<pre class="lang-html prettyprint-code linenums">
 
-&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Botão pequeno&lt;/button&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-sm&quot;&gt;Botão pequeno&lt;/button&gt;
+<button type="button" class="btn btn-primary btn-lg">Botão grande</button>
+<button type="button" class="btn btn-default btn-lg">Botão grande</button>
 
-&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-xs&quot;&gt;Extra Botão pequeno&lt;/button&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-xs&quot;&gt;Extra Botão pequeno&lt;/button&gt;
+<button type="button" class="btn btn-primary">Botão padrão</button>
+<button type="button" class="btn btn-default">Botão padrão</button>
+
+<button type="button" class="btn btn-primary btn-sm">Botão pequeno</button>
+<button type="button" class="btn btn-default btn-sm">Botão pequeno</button>
+
+<button type="button" class="btn btn-primary btn-xs">Extra Botão pequeno</button>
+<button type="button" class="btn btn-default btn-xs">Extra Botão pequeno</button>
+
 </pre>
 
 	<h2>Botões blocados</h2>
@@ -86,38 +90,49 @@ menu_page: sidebar-componentes.erb
 		<button type="button" class="btn btn-primary btn-lg btn-block">Botão em forma de bloco</button>
 		<button type="button" class="btn btn-default btn-lg btn-block">Botão em forma de bloco</button>
 	</div>
-<pre class="lang-html linenums prettyprint">
-&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg btn-block&quot;&gt;Botão em forma de bloco&lt;/button&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-lg btn-block&quot;&gt;Botão em forma de bloco&lt;/button&gt;
+
+
+<pre class="lang-html prettyprint-code linenums">
+<button type="button" class="btn btn-primary btn-lg btn-block">Botão em forma de bloco</button>
+<button type="button" class="btn btn-default btn-lg btn-block">Botão em forma de bloco</button>
 </pre>
 
+
+
 	<h2>Desabilitando botões</h2>
-	<p>Se os botões forem feitos com input, basta inserir o atributo disabled que os browsers cuidarão do resto. Se o botõa foi feito usando links, use a classe <strong>.disabled</strong>. Esta classe é apenas visual, não aplicamos nenhum funcionalidade. Para tanto, use um script customizado para desabilitar cliques e outras funções.</p>
+	<p>Se os botões forem feitos com input, basta inserir o atributo disabled que os browsers cuidarão do resto. Se o botõa foi feito usando links, use a classe <strong>.disabled</strong>. Esta classe além de visual, remove a ação do link. </p>
 
 	<div class="example">
 		<button type="button" class="btn btn-lg btn-primary" disabled="disabled">Botão desabilitado</button>
-		<a href="#" class="btn btn-primary btn-lg disabled">Botão como link</a>
+		<a href="http://developer.locaweb.com.br" class="btn btn-primary btn-lg disabled">Botão como link</a>
 	</div>
-<pre class="lang-html linenums prettyprint">
-&lt;button type=&quot;button&quot; class=&quot;btn btn-lg btn-primary&quot; disabled=&quot;disabled&quot;&gt;Bot&atilde;o desabilitado&lt;/button&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-lg disabled&quot;&gt;Bot&atilde;o como link&lt;/a&gt;
+<pre class="lang-html prettyprint-code linenums">
+<button type="button" class="btn btn-lg btn-primary" disabled="disabled">Botão desabilitado</button>
+<a href="http://developer.locaweb.com.br" class="btn btn-primary btn-lg disabled">Botão como link</a>
 </pre>
+
+
 
 
 	<h2>Botões com ícones</h2>
 	<p>Se você adicionar classes de ícones nos botões, eles já aparecerão no lugar correto, dispensando a inserção de elementos vazios para fazer os ícones. Veja exemplos abaixo.</p>
 
 	<div class="example">
-		<button class="btn btn-success ico-user-add" href="#">Adicionar Usuário</button>
-		<button class="btn btn-danger ico-trash" href="#">Apagar</button>
-		<button class="btn ico-right-open-2 ico-pos-right" href="#">Próximo</button>
+		<button class="btn btn-success  ico-user " href="#">Adicionar Usuário</button>
+		<button class="btn btn-danger ico-remove" href="#">Apagar</button>
+		<button class="btn btn-default ico-cog" href="#">Configurar</button>
+		<button class="btn  ico-direction-right ico-pos-right" href="#">Próximo</button>
 	</div>
 
-<pre class="lang-html linenums prettyprint">
-&lt;button class=&quot;btn btn-success ico-user-add&quot; href=&quot;#&quot;&gt;Adicionar Usu&aacute;rio&lt;/button&gt;
-&lt;button class=&quot;btn btn-danger ico-trash&quot; href=&quot;#&quot;&gt;Apagar&lt;/button&gt;
-&lt;button class=&quot;btn ico-right-open-2 ico-pos-right&quot; href=&quot;#&quot;&gt;Pr&oacute;ximo&lt;/button&gt;
+<pre class="lang-html prettyprint-code linenums">
+<button class="btn btn-success  ico-user " href="#">Adicionar Usuário</button>
+<button class="btn btn-danger ico-remove" href="#">Apagar</button>
+<button class="btn btn-default ico-cog" href="#">Configurar</button>
+<button class="btn  ico-direction-right ico-pos-right" href="#">Próximo</button>
 </pre>
+
+
+
 
 	<h2>Botões com dropdown</h2>
 	<p>Botões que acompanham algum dropdown precisam tem os atributos abaixo:</p>
@@ -141,11 +156,27 @@ menu_page: sidebar-componentes.erb
 		</tbody>
 	</table>
 
+	<div class="bs-callout bs-callout-danger">
+		<h4>Setinhas dentro de dropdown</h4>
+		<p>No Locaweb Style fizemos uma melhoria, então as setinhas são inseridas diretas <code>:before</code> do elemento, sendo assim não há a necessidade de ter o html	<pre class="lang-html prettyprint-code linenums"><span class="caret"></span></pre>que vem do boostrap, senão ficará com 2 setinhas, conforme no exemplo abaixo: </p>
+
+		<div class="dropdown">
+			<a id="drop1" href="#" role="button" class="dropdown-toggle btn btn-default" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Action</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Another action</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Something else here</a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Separated link</a></li>
+			</ul>
+		</div>
+	</div>
+
 	<p>Juntamente com o código do dropdown, que é feito aqui com UL.</p>
 	<p>Lembre-se que é necessário que eles estejam dentro de um elemento chamado <strong>.btn-group</strong> para que a seta de dropdown fique "acoplado" ao botão.</p>
 	<div class="example">
 		<div class="btn-group">
-			<a class="btn btn-primary ico-user" href="#">User</a><a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+			<a class="btn btn-primary ico-user" href="#">User</a><a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"></a>
 			<ul class="dropdown-menu">
 				<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
 				<li><a href="#"><i class="icon-trash"></i> Delete</a></li>
@@ -160,7 +191,7 @@ menu_page: sidebar-componentes.erb
 <div class="btn-group">
 	<a class="btn btn-primary ico-user" href="#">User</a>
 	<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
-		<span class="caret"></span>
+
 	</a>
 	<ul class="dropdown-menu">
 		<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
@@ -176,7 +207,7 @@ menu_page: sidebar-componentes.erb
 	<div class="example">
 
 		<div class="btn-group">
-			<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></button>
+			<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger </button>
 			<ul class="dropdown-menu">
 				<li><a href="#">Action</a></li>
 				<li><a href="#">Another action</a></li>
@@ -190,7 +221,7 @@ menu_page: sidebar-componentes.erb
 <pre class="lang-html linenums prettyprint-code">
 	<div class="btn-group">
 		<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-			Danger <span class="caret"></span>
+			Danger
 		</button>
 		<ul class="dropdown-menu">
 			<li><a href="#">Action</a></li>

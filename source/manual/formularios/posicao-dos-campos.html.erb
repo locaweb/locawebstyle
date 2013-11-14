@@ -15,26 +15,26 @@ menu_page: sidebar-formularios.erb
 			<fieldset>
 				<div class="row">
 					<div class="form-group col-lg-4">
-						<label for="exampleInputEmail1">Campo simples</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+						<label for="example1">Campo simples</label>
+						<input type="text" class="form-control" id="example1" placeholder="Insira seu texto aqui">
 					</div>
 					<div class="form-group col-lg-8">
-						<label for="exampleInputEmail1">Campo simples</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+						<label for="example2">Campo simples</label>
+						<input type="text" class="form-control" id="example2" placeholder="Insira seu texto aqui">
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col-lg-6">
-						<label for="exampleInputEmail1">Seletor</label>
-						<select class="form-control">
+						<label for="example3">Seletor</label>
+						<select class="form-control" id="example3">
 							<option value="">Selecione algo</option>
 							<option value="">Opção 1</option>
 							<option value="">Opção 2</option>
 						</select>
 					</div>
 					<div class="form-group col-lg-6">
-						<label for="exampleInputEmail1">Seletor</label>
-						<select class="form-control">
+						<label for="example4">Seletor</label>
+						<select class="form-control" id="example4">
 							<option value="">Selecione algo</option>
 							<option value="">Opção 1</option>
 							<option value="">Opção 2</option>
@@ -43,16 +43,16 @@ menu_page: sidebar-formularios.erb
 				</div>
 				<div class="row">
 					<div class="form-group col-lg-3">
-						<label for="exampleInputEmail1">Senha</label>
-						<input type="password" class="form-control" id="exampleInputEmail1" placeholder="senha">
+						<label for="example5">Senha</label>
+						<input type="password" class="form-control" id="example5" placeholder="senha">
 					</div>
 					<div class="form-group col-lg-6">
-						<label for="exampleInputEmail1">Email</label>
-						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+						<label for="example6">Email</label>
+						<input type="email" class="form-control" id="example6" placeholder="Insira seu emai aqui">
 					</div>
 					<div class="form-group col-lg-3">
-						<label for="exampleInputEmail1">Data</label>
-						<input type="date" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+						<label for="example7">Data</label>
+						<input type="date" class="form-control" id="example7" placeholder="Insira seu emai aqui">
 					</div>
 				</div>
 				<div class="box-actions">
@@ -186,16 +186,18 @@ menu_page: sidebar-formularios.erb
 	<div class="bs-callout bs-callout-warning">
 		<h4>Lembre-se!</h4>
 		<p>Nessa versão de formulário é necessário definir a largura para os campos.</p>
+		<h4>Acessibilidade</h4>
+		<p>Ao usar  o atributo<code>placeholder</code> continuamos criando o <code>label </code> e o escondemos com a classe <code>sr-only</code>, porém os leitores de tela conseguem entender. Faça isso e a Acessibilidade agradece =)</p>
 	</div>
 	<div class="example">
 		<form class="form-inline" role="form">
 			<div class="form-group">
-				<label class="sr-only" for="exampleInputEmail2">Endereço de email</label>
-				<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Digite seu email">
+				<label class="sr-only" for="example8">Endereço de email</label>
+				<input type="email" class="form-control" id="example8" placeholder="Digite seu email">
 			</div>
 			<div class="form-group">
-				<label class="sr-only" for="exampleInputPassword2">Senha</label>
-				<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Senha">
+				<label class="sr-only" for="example9">Senha</label>
+				<input type="password" class="form-control" id="example9" placeholder="Senha">
 			</div>
 			<div class="checkbox">
 				<input type="checkbox" id="checkbox-2">
