@@ -1,0 +1,647 @@
+@media print {
+  .filtroExibe {display:none;}
+}
+
+/***
+**** Tudo o que é deprecated e está dentro de MOBILE.CSS
+***/
+@media screen and (max-width:767px) {
+  #rodape nav .lnkSeta, #rodape nav .lnkArrow {margin:2px 0 0 10px; float:left; font-size:11px;}
+  .chamadasBox div {
+    width:92% !important;
+    min-height: inherit !important;
+    padding-bottom:20px !important;
+    height: auto !important;
+    float:none !important;
+  }
+  .chamadasBox div p {display:none;}
+  .revisit .chamadasBox h3{ font: 100 22px UbuntuLight, verdana, arial, tahoma, sans-serif;}
+  .revisit .chamadasBox div{ padding-bottom: 0!important;}
+
+  .limite {
+    width:95% !important;
+    position:relative; left:0;
+    padding-bottom:0;
+    margin:0 auto;
+  }
+
+  header.headerPrincipal .limite {height:auto; padding:0;}
+  #main div.limite {left:0 !important; padding:0 10px 40px 10px;}
+  footer#rodape .limite {padding:0;}
+}
+
+@media screen and (min-width: 1220px) {
+   .limite {width: 1180px !important;}
+  .revisit .chamadasBox h3{ font: 100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;}
+}
+
+/** LIMITE TOOLBAR **/
+@media screen and (min-width:481px) and (max-width:640px) {#toolbar .limiteToolbar {width:100%; height:63px;}}
+@media screen and (max-width:480px) {#toolbar .limiteToolbar {width:100%; height:auto; overflow: hidden;}}
+#toolbar .limiteToolbar {position:relative; max-width: 1180px; margin:0 auto; height:33px;}
+
+/*** LIMITE ***/
+#main > .limite {padding-bottom:160px;}
+.limite {margin: 0 auto; width: 988px;}
+header.headerPrincipal .limite {height:120px; position:relative;}
+header.headerPrincipal .limite:after {content:" "; display:block; clear:both;}
+.gridCode #main .limite [class^="span"] {margin-bottom:10px; background:#e3e3e3;}
+.gridCode #main .limite [class^="span"] p {margin:0; padding:10px;}
+.gridCode #main .limite [class^="span"]:hover {color:#000; background:#CCC; font-weight:bold;}
+
+/*** HEADER ***/
+header.headerPrincipal {
+  border-top:4px solid #BBB;
+  background:#f0f0f0 url(../images/bgHeader.gif) repeat-X top center;
+}
+header.headerPrincipal .limit {height:120px; position:relative;}
+header.headerPrincipal:after, header.headerPrincipal .limit:after {content:" "; display:block; clear:both;}
+header.headerPrincipal .btn-group {display:inline-block;}
+
+/*** PAGINACAO E FILTRO ***/
+.filtroExibe .control-group label {font-weight: normal; width: auto !important;}
+.filtroExibe .control-group {margin: 0;}
+.filtroExibe .controlg-group input, .filtroExibe .controlg-group select {margin: 0;}
+
+/*** COLLAPSE ***/
+.collapseGroup summary {
+  color:#545454;
+  cursor:pointer;
+  font-family:verdana;
+  display:block;
+  background:url(../images/setaCollapseBottom.png) no-repeat 99% center;
+}
+.collapseGroup .active summary { font-weight:bold;   background:url(../images/setaCollapseTop.png) no-repeat 99% 8px;}
+.collapseGroup summary span.ico-dot {
+  font-size: 30px;
+  line-height: 20px;
+  margin-right: 0;
+  width: 25px;
+  text-align: center;
+}
+
+summary.ico-dot:before {font-size:25px; margin-top:-1px;}
+summary.ico-dot + div p {padding-left:23px !important;}
+.collapseGroup summary span {
+  font:bold 18px Ubuntu, verdana, arial, tahoma, helvetica, sans-serif;
+  color:#777;
+  border:none;
+}
+.collapseGroup {padding-top:20px; margin:0 10px;}
+.collapseGroup .details {
+  background:#f1f1f1;
+  padding:3px 7px;
+  margin-bottom:5px;
+  border-radius:3px;
+  border:1px solid #d6d6d6;
+}
+.collapseGroup .details.active {background-color:#FFF;}
+.collapseGroup .details p {padding:10px 30px;}
+
+/*** statusMessageBox
+**** Usado inicialmente na home de Email Marketing
+***/
+.statusMessageBox {
+  list-style:none;
+  border:1px solid #e5e5e5;
+  border-radius:3px;
+  margin:0 0 5px;
+  font-family:verdana;
+  position: relative;
+}
+.statusMessageBox:hover {
+  background: #f0f0f0;
+}
+.statusMessageBox .viewMessage{
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 53px;
+  width: 100%;
+  z-index: 2;
+}
+.statusMessageBox li:first-child {text-align:center;}
+.statusMessageBox > li {
+  vertical-align:middle;
+  border-right:1px solid #e5e5e5;
+  margin-right:5px;
+  padding:13px 5px 12px 0;
+  min-width:65px;
+}
+.statusMessageBox > li.statusContact{ padding-left: 10px;}
+
+.statusMessageBox li a {color:#2a2a2a;}
+
+.statusMessageBox h6 {
+  color:#767676;
+  font:11px verdana, tahoma, arial, helvetica, sans-serif;
+}
+.statusMessageBox p {margin:0; color:#2a2a2a;}
+.statusMessageBox b {
+  font:bold 15px verdana, tahoma, arial, helvetica, sans-serif;
+  color:#2a2a2a;
+}
+.statusMessageBox .countViews h6 {color:rgba(0,0,0,0.5);}
+.statusMessageBox .countViews {
+  margin:2px;
+  min-width:102px;
+  position:relative;
+  border-right:none;
+  padding:9px 8px 9px 0;
+  text-align:center;
+}
+.lists .statusMessageBox:hover .countViews:after{
+   background:url(../images/arrowInfo.png) no-repeat 0 -99px;
+}
+.lists .statusMessageBox .countViews:after{
+  background:url(../images/arrowInfo.png) no-repeat 0 0;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7px;
+  height: 98px;
+}
+.overflowMessage + .overflowMessage {border-right:none; margin-right:0; width:29%;}
+.statusMessageBox .overflowMessage p {width:10000px;}
+.lists .statusMessageBox p{height: 27px;}
+.lists .statusMessageBox .countViews {
+  padding: 21px 10px 19px 0;
+  height: 57px;
+  font-weight:normal;
+}
+.lists .statusMessageBox > li{padding: 10px 5px 0 0; position: relative;}
+.lists .statusMessageBox .countViews h6 {padding-left:0; font-weight:normal;}
+.lists .statusMessageBox .countViews p {padding-left:0;}
+
+.statusMessageBox > li {margin-left:0; border-right:none; ; margin-left:2px;}
+.lists .statusMessageBox h6 {
+  font:bold 12px verdana, arial, tahoma, sans-serif;
+  color:#545454;
+}
+.lists .statusMessageBox p {color:#767676; padding:3px 0 0 10px; font:12px verdana, arial, helvetica, tahoma, sans-serif;}
+
+h6 small {font-weight:normal; font-size:11px; padding:0 0 0 10px; margin:0 8px; border-left:1px solid #CCC; color:#767676;}
+.statusMessageBox > li.messageBorder{
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  padding: 13px 5px 12px 10px;
+}
+
+/* inserindo Status */
+.lists .statusMessageBox .status{
+  border-left: 1px solid #E5E5E5;
+  padding: 8px 0 8px 10px;
+  position: absolute;
+  left: 80%;
+  top: 0;
+}
+
+.statusMessageBox .actionsTable{margin: 7px 0px 7px 10px;}
+.lists .statusMessageBox > li{ padding: 10px 0px 0 0;}
+.lists .statusMessageBox .countViews h6{font-weight: bold;}
+.countViews small{ color: #767676;}
+.lists .statusMessageBox .status > span {font-weight: normal;}
+.lists .statusMessageBox .status b{font-size: 12px;}
+
+/** usado no lugar de campos de formulário para listar KEYs de APIS no Email Marketing e Revenda de EMKT **/
+pre {
+  background:#FFF;
+  margin:5px 0;
+  padding:10px;
+  box-shadow:inset 0 2px 5px -2px rgba(0,0,0,0.2);
+  font-weight:normal;
+}
+/*** POPOVER
+***/
+.infoBubble {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  background-color: #194092;
+  border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  box-shadow: 0 0 3px #224c9b inset;
+  color: #FFF !important;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  height: 14px;
+  line-height: 14px;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+.progress.infoBubble{padding: 0;}
+
+
+/*** POPOVER
+**** Novo icone infoBubble testado na Revenda
+***/
+.infoBubble:before {
+  content: "?";
+  color:#FFF !important;
+}
+
+.infoBubble h6 {
+  color:#1a4294;
+  font:bold 12px verdana, arial, tahoma, sans-serif;
+  margin:0 0 5px;
+}
+/** usado no lugar de campos de formulário para listar KEYs de APIS no Email Marketing e Revenda de EMKT **/
+pre {
+  background:#FFF;
+  margin:5px 0;
+  padding:10px;
+  box-shadow:inset 0 2px 5px -2px rgba(0,0,0,0.2);
+  font-weight:normal;
+}
+
+/*** POPOVER
+***/
+.infoBubble {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  background-color: #194092;
+  border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  box-shadow: 0 0 3px #224c9b inset;
+  color: #FFF !important;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  height: 14px;
+  line-height: 14px;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+.progress.infoBubble{padding: 0;}
+
+
+/*** POPOVER
+**** Novo icone infoBubble testado na Revenda
+***/
+.infoBubble:before {
+  content: "?";
+  color:#FFF !important;
+}
+
+.infoBubble h6 {
+  color:#1a4294;
+  font:bold 12px verdana, arial, tahoma, sans-serif;
+  margin:0 0 5px;
+}
+/** usado no lugar de campos de formulário para listar KEYs de APIS no Email Marketing e Revenda de EMKT **/
+pre {
+  background:#FFF;
+  margin:5px 0;
+  padding:10px;
+  box-shadow:inset 0 2px 5px -2px rgba(0,0,0,0.2);
+  font-weight:normal;
+}
+
+/****
+***** Nomenclaturas antigas
+****/
+
+
+/*** LNKSETA  ***/
+.lnkSeta {
+  cursor:pointer;
+  color:#666;
+  font: 12px Ubuntu, verdana, arial, sans-serif;
+  display:inline-block;
+  padding:0;
+  margin:5px 0;
+  vertical-align: middle;
+}
+h3 .lnkSeta {border-left:1px solid #CCC; padding-left:7px; margin-left:5px;}
+h4 + .lnkSeta {border-left:1px solid #bababa; margin-left:10px; padding-left:10px;}
+h6 .lnkSeta {position:relative; top:-1px; margin:0;   border-left:1px solid #CCC; padding-left:10px;}
+
+.spanObs .lnkSeta {margin: 0;}
+.innerSideBox + .lnkSeta {margin:-5px 0 10px 10px;}
+.chamadasBox + .lnkSeta {position:relative; top:-5px;}
+
+.miniBox .lnkSeta::before, .lnkSeta:before{width: auto;}
+.lnkSeta.maxShortcuts,
+.lnkSeta.minShortcuts {margin-left: 17px;}
+.boxGray > .lnkSeta {margin:0 15px 10px;}
+#rodape nav .lnkSeta {margin:15px 20px 0; color:#FFF;}
+.dropdown-menu.listIdent .lnkSeta {margin:10px; background-position:left 4px; padding-left:13px;}
+
+footer#rodape .limite {padding:0;}
+
+.lnkSeta:before {
+  display:inline-block;
+  margin-right:4px;
+  font-family: locaweb;
+  font-weight:normal;
+  speak: none;
+  text-decoration:none;
+  width:auto;
+  line-height: 1.1em;
+  vertical-align: middle;
+  text-align: center;
+  position:relative;
+  top:-2px;
+  font-size: 14px;
+}
+.ie8 .lnkSeta:before {vertical-align:top; text-decoration: none !important;}
+.lnkSeta.setaInv:before, .lnkSeta.setaLeft:before {content: "\e0a0";}
+.lnkSeta:before {content: "\e0a2";}
+
+#rodape nav .lnkSeta {
+  margin: 2px 0 0 10px;
+  font-size: 11px;
+  text-align: center;
+  float: none !important;
+  display: block;
+  padding: 7px 0 0;
+  clear: both;
+}
+
+/*** FOOTER ***/
+footer#rodape {
+  clear:both;
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+#rodape .footerTop {
+  padding:15px 0 0;
+  background:url(../images/bgfooter.png);
+}
+#rodape nav {height:50px;}
+
+#rodape nav h6 {
+  font: 300 17px Ubuntu, verdana, tahoma, arial, helvetica, sans-serif;
+  color:#FFF;
+  text-transform:uppercase;
+  background:#000;
+  padding:15px;
+  margin:0;
+  float:left;
+}
+
+#rodape nav {
+  background:#141414;
+  border:1px solid #383838;
+  border-bottom:0;
+  border-radius:3px;
+}
+
+#rodape ul{float:left; padding:15px; margin:0;}
+#rodape ul li {display:inline;}
+
+#rodape nav ul li  {
+  display:inline-block;
+  color:#FFF;
+  padding:5px 35px;
+  background-position:left center;
+  background-repeat:no-repeat;
+  border-right:1px solid #434343;
+  margin-right:25px;
+}
+#rodape nav ul li a{color: #fff;}
+#rodape nav ul li:last-child  {border-right:none;}
+
+#rodape ul li.ico-helpDesk,
+#footer ul li.ico-helpDesk{background-image:url(../images/icoHelpDesk.png);}
+#rodape ul li.ico-Chat,
+#footer ul li.ico-Chat{background-image:url(../images/icoChat.png);}
+#rodape ul li.ico-Telefone,
+#footer ul li.ico-Telefone {background-image:url(../images/icoTelefone.png);}
+
+#rodape nav .lnkArrow {margin:15px 20px 0; color:#FFF;}
+
+.subfooter {padding:10px 0; color:#545454; font-size:11px; background:#FFF; clear:both; overflow: hidden;}
+.subfooter strong {color:#2a2a2a;}
+.subfooter .lastAccess {
+  padding:0 0 0 20px;
+  background:url(../images/ico-ultimoAcesso.png) no-repeat left center;
+}
+.copyRight {margin:0;}
+
+.icoInterroga {
+  display:inline-block;
+  text-indent:-9999px;
+  background:url(../images/icoInterroga.png) no-repeat center;
+  width:12px; height:12px;
+  vertical-align:middle;
+}
+
+#rodape [class^="ico"]:before,
+#rodape [class*=" ico"]:before {display:none;}
+
+/***
+**** CHAMADAS NO BOXGRAY
+***/
+.chamadasBox {margin:15px 0 0 15px; clear:both;}
+.chamadasBox:after {content: " "; display:block; clear:both;}
+
+.chamadasBox div {
+  width:30.2%;
+  min-height:250px;
+  text-align:center;
+  border:3px solid #b7b7b7;
+  border-radius:10px;
+  display:inline-block;
+  margin-right:1.9%;
+  margin-bottom:20px;
+  padding:20px 0;
+  position: relative;
+  vertical-align: top;
+
+  background: #f8f8f8;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjNmM2YzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  #f8f8f8 0%, #c6c6c6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#c6c6c6));
+  background: -webkit-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%);
+  background: -o-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%);
+  background: -ms-linear-gradient(top,  #f8f8f8 0%,#c6c6c6 100%);
+  background: linear-gradient(to bottom,  #f8f8f8 0%,#c6c6c6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#c6c6c6',GradientType=0 );
+
+}
+
+/** Hover padrão **/
+.chamadasBox div:hover {
+  border-color:#CCC;
+  background: rgb(248,248,248); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(248,248,248,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(248,248,248,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+
+}
+
+.chamadasBox h3:before {display:inline-block; margin-bottom:10px; opacity:0.7; }
+.chamadasBox > div:hover h3:before {opacity:1;}
+
+.chamadasBox .span3 {width:22.5%; margin-left:0;}
+
+.ie8 .chamadasBox div {width:29.6%;}
+.ie8 .maxBox.chamadasBox div {width:inherit;}
+
+.chamadasBox div:last-child {margin-right:0;}
+
+.chamadasBox div h3, .chamadasBox div h3:first-child {
+  text-transform:uppercase;
+  font:100 20px UbuntuLight, verdana, arial, tahoma, sans-serif;
+  margin:0 auto;
+  padding:0 0 10px;
+}
+
+.chamadasBox h3 a {
+  color:#1a2609;
+  display:block;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.chamadasBox [class^="tit"] a:before {
+  content:" ";
+  display:block;
+  width:100px; height:100px;
+  background-position: center top;
+  background-repeat:no-repeat;
+  margin:0 auto 10px;
+}
+
+.chamadasBox a:hover {text-decoration:none;}
+
+.chamadasBox div p {
+  font: 12px verdana, arial, tahoma, sans-serif;
+  margin:0 auto;
+  margin: 0 7px;
+  padding:0;
+}
+.chamadasBox div:hover p {opacity: 0.7;}
+.chamadasBox div p a {
+  color:#767676;
+  display:block;
+  padding:0px 20px 15px;
+}
+
+.chamadasBox + .lnkArrow {position:relative; top:-5px;}
+.revisit .chamadasBox h3{ font: 100 18px UbuntuLight, verdana, arial, tahoma, sans-serif; line-height: 25px; letter-spacing: -1px;}
+.chamadasBox h3:before{font-size: 56px;}
+
+
+
+
+/******
+******* CLASSES FUNCIONAIS DEPRECATED
+******/
+/**
+*** FLOAT E CLEAR
+**/
+.nofloat {float: none !important;}
+.fright {float: right !important;}
+.fleft {float: left !important;}
+
+.cboth {clear: both !important;}
+.cright {clear: right !important;}
+.cleft {clear: left !important;}
+
+.overflowhidden{ overflow: hidden !important;}
+
+/**
+*** BLOCO E LINHA
+**/
+.dblock {display: block !important;}
+.dinline {display: inline !important; float: none !important;}
+.dinlineblock {display: inline-block !important; float: none !important;}
+.dnone, .hide {display: none !important;}
+
+/**
+*** TAMANHO
+**/
+.widthauto {width: auto !important;}
+
+/**
+*** MARGIN E PADDING
+**/
+.nomargin {margin: 0 !important;}
+.nomarginleft {margin-left: 0 !important;}
+.nomarginright {margin-right: 0 !important;}
+.nomargintop {margin-top: 0 !important;}
+.nomarginbottom {margin-bottom: 0 !important;}
+
+.nopadding {padding: 0 !important;}
+.nopaddingleft {padding-left: 0 !important;}
+.nopaddingright {padding-right: 0 !important;}
+.nopaddingtop {padding-top: 0 !important;}
+.nopaddingbottom {padding-bottom: 0 !important;}
+
+/**
+*** ALINHAMENTO DE TEXTO
+**/
+.txtleft {text-align: left !important;}
+.txtright {text-align: right !important;}
+.txtjustify {text-align: justify !important;}
+.txtcenter {text-align: center !important;}
+
+/**
+*** BACKGROUND E BORDA
+**/
+.noborder {border: none !important;}
+.noborderright {border-right: none !important;}
+.noborderleft {border-left: none !important;}
+.noborderbottom {border-bottom: none !important;}
+.nobordertop {border-top: none !important;}
+
+/**
+*** CURSOR DE MOUSE
+**/
+.cursorpointer {cursor: pointer !important;}
+.cursordefault {cursor: default !important;}
+.cursorcrosshair {cursor: crosshair !important;}
+.cursormove {cursor: move !important;}
+.cursorhelp {cursor: help !important;}
+.cursorwait {cursor: wait !important;}
+.cursorinherit {cursor: inherit !important;}
+.cursortext {cursor: text !important;}
+.cursorprogress {cursor: progress !important;}
+
+.cursorgrab {
+  cursor: hand;
+  cursor: grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.cursorgrabbing {
+  cursor: grabbing;
+  cursor: -o-grabbing;
+  cursor: -ms-grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block  !important;
+}
+.nobold{font-weight: normal!important;}
+
+.lnkSugestoes {
+  background-color: #ddd;
+  color: #fff;
+  float: right;
+  text-decoration: none;
+  font: 12px verdana;
+  padding: 5px 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.lnkSugestoes:before{font-size: 16px;}

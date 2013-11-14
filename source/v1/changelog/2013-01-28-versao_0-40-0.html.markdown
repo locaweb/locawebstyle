@@ -1,0 +1,25 @@
+---
+title: Versão 0.40.0
+date: 2013-01-28 17:24 UTC
+tags:
+---
+## Modal abrindo automaticamente
+
+Inserimos uma classe chamada **modalAutoOpen** que faz a modal abrir automaticamente ao carregar a página.
+
+## Collapse
+
+Agora com o mesmo código HTML, podemos contruir todos os tipos de collapses que existem no. O código antigo estará disponível até a versão 0.50.0, por isso sugerimos que atualize seu código.
+
+## Deprecated
+
+Para manter a retrocompatibilidade, iniciamos um arquivo chamado deprecated.css que conterá o código de estilo de HTMLs antigos. Conforme vamos mudando o código para algo mais novo e flexível, iremos manter o código de estilo antigo neste arquivo. Os códigos que esterão no deprecated.css serão apagados a cada 4 ciclos de atualização. Todo código que ficará deprecated será avisado aqui no Changelog.
+
+### Histórico de commits
+
+Visite nosso GitHub para conferir o [histórico completo de commits](http://github.com/locaweb/locawebstyle/commits/master).
+
+### Código
+
+<pre class="lang-html linenums prettyprint">&lt;link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/0.40.0/locastyle.css"&gt;
+&lt;script type="text/javascript" src="http://developer.locaweb.com.br/assets/0.40.0/locastyle.js"&gt;&lt;/script&gt;</pre>

@@ -1,0 +1,67 @@
+.ie8 a:hover {text-decoration: none;}
+.ie8 .messageInfo .countViews:after{right: 0!important;}
+.ie8 .in.collapse {height:auto !important;}
+.ie8 .chooseBox a.lnkChoose,
+.ie9 .chooseBox a.lnkChoose,
+.ie7 .chooseBox a.lnkChoose {background:#FFF; filter: alpha(opacity = 0);}
+.ie8 .shortcutBox > div {width:29.6%;}
+.ie8 .maxBox.shortcutBox div {width: inherit;}
+.ie8 .sideBox h3,
+.ie9 .sideBox h3{margin-bottom: 5px;}
+.ie8 .lnkArrow:before{font-size: 12px;}
+.ie8 .boxInfo header h3 small{margin-left: 35px;}
+.ie8 .ico-calendar-more,
+.ie8 .ico-calendar-check{width: 35px;}
+
+.ie8 .pathWay.steps6 li {width:16.382%;}
+.ie8 .pathWay.steps5 li {width:19.81%;}
+.ie8 .pathWay.steps4 li {width:24.816%;}
+.ie8 .pathWay.steps3 li {width:33.14%;}
+.ie8 .pathWay.steps2 li {width:49.816%;}
+
+.ie8 .chooseBox a.lnkChoose,
+.ie9 .chooseBox a.lnkChoose,
+.ie7 .chooseBox a.lnkChoose {background: #FFF; filter: alpha(opacity = 0);}
+.ie8 .shortcutBox h3:before {text-align: center;}
+
+/***
+**** IE8 Fix
+***/
+.ie8 [class^="ico-"]:before,
+.ie8 [class*="ico-"]:before,
+.ie8 .lnkSeta:before,
+.ie8 .lnkArrow:before {
+  text-decoration: none !important;
+}
+.ie8 .messageInfo .countViews:after {right: 0;}
+
+.ie8 .shortcutBox div {width: 29.6%;}
+.ie8 .shortcutBox .span3 {width: 22.1%;}
+.ie8 .maxBox.shortcutBox div {width: 100%;}
+
+.ie8 .statusDisabled{
+	filter: alpha(opacity=60)!important;
+}
+
+.ie7 .messageInfo .countViews:after,
+.ie9 .messageInfo .countViews:after{margin-top: -10px; right: 0;}
+
+/***
+**** Fix do IE9 para Altura dos collapses em conjunto com actionsTable que aparecia e desaparecia
+***/
+.ie9 .boxCollapse {overflow:hidden;}
+.ie9 .boxCollapse.active, .ie9 .boxCollapse.active .in {overflow:visible; height:auto !important;}
+.ie9 #menuPrincipal > ul > li > a {font-size:13px;}
+
+
+.ie8 .progress .bar,
+.ie9 .progress .bar{filter: none;}
+.ie9 #menuPrincipal > ul > li{height: 36px;}
+.ie9 #menuPrincipal > ul > li > a{padding-bottom: 11px;}
+
+
+.ie9 .boxCollapse.active,
+.ie9 .boxCollapse.active .in {
+  overflow: visible;
+  height: auto !important;
+}

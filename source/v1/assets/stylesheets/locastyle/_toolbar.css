@@ -1,0 +1,142 @@
+#toolbar {
+  background:url(../images/bgToolbar.png) repeat-X center center;
+  position:relative;
+  font: 300 12px verdana, tahoma, arial, helvetica, sans-serif;
+  position: relative;
+  z-index: 2;
+  border-bottom: 4px solid #BBB;
+}
+#toolbar .limitToolbar {position:relative; max-width: 1180px; margin:0 auto; height:33px;}
+
+#toolbar ul {margin:0; padding:0;}
+#toolbar li {list-style:none;}
+
+#toolbar h1.logoToolbar {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width:80px; height:18px;
+  margin:-9px 0 0 0;
+  position:absolute;
+  top:50%;
+  background:url(../images/tit-toolBar.png) no-repeat left center;
+}
+
+#toolbar .menuToolbar {
+  position:absolute;
+  left:260px; top:50%;
+  height:34px;
+  margin-top:-17px;
+}
+#toolbar .menuToolbar li {float:left;}
+#toolbar .menuToolbar li a {
+  margin:1px 0 0;
+  float: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font: 300 12px Ubuntu;
+  background: #373737 url(../images/bgOptToolbar.png) repeat-X left center;
+  border-right: 1px solid #444;
+  border-left: 1px solid #242424;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 20px;
+}
+#toolbar .menuToolbar li a:hover {background:#333; text-decoration:none;}
+
+#toolbar .userName, #toolbar .logOut  {float:right;}
+
+#toolbar .userName {
+  background: url(../images/bgUsuario.png) no-repeat left center;
+  font-size: 13px;
+  height: 17px;
+  color: #D1D1D1;
+  padding: 0 15px 3px 32px;
+  border-right: 1px solid #616161;
+  margin: 7px 15px 0 0;
+}
+
+#toolbar .logOut {
+  font-size: 13px;
+  color: #D1D1D1;
+  background: url(../images/btSair.png) no-repeat center center;
+  padding: 2px 8px 2px 30px;
+  margin: 5px 0 0;
+}
+#toolbar .logOut:hover {color:#FFF; text-decoration:none;}
+
+/**** RESPONSIVE TOOLBAR ****/
+@media screen and (max-width:480px) {
+  #toolbar .limitToolbar {width:100%; height:auto; overflow: hidden;}
+  #toolbar h1.logoToolbar {width:80px; background-size:auto; float:left; position:static; margin:7px 0 5px 10px;}
+  #toolbar .menuToolbar {
+    text-align:center;
+    height:30px;
+    width:100%;
+    clear:left;
+    position:static;
+  }
+  #toolbar .menuToolbar li {margin-right:-5px;float:none; display:inline-block;}
+  #toolbar .menuToolbar li:last-child {margin-right:0;}
+  #toolbar .menuToolbar li a {
+    height:29px;
+    line-height:29px;
+    font-size:10px;
+    padding:0 10px;
+  }
+  #toolbar .userName {
+   margin:0;
+   font-size:10px; background:none;
+   float:none;
+   position: absolute; top:8px; right:50px;
+ }
+ #toolbar .logOut {
+   margin:0;
+   float:none;
+   background:#333;
+   padding:3px 5px;
+   font-size:12px;
+   position: absolute; top:5px; right:8px;
+ }
+}
+
+@media screen and (min-width:481px) and (max-width:640px) {
+  #toolbar .limitToolbar {width:100%; height:63px;}
+  #toolbar h1.logoToolbar {float:left; position:static; margin:7px 0 5px 10px;}
+  #toolbar .menuToolbar {text-align:center; height:30px;  position:absolute; top:50px; left:0; width:100%; clear:left;}
+  #toolbar .menuToolbar li {
+    float:none;
+    display:inline-block;
+  }
+  #toolbar .menuToolbar li a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font: 300 12px Ubuntu;
+    background: #373737 url(../images/bgOptToolbar.png) repeat-X left center;
+    border-right: 1px solid #444;
+    border-left: 1px solid #242424;
+    height: 29px;
+    line-height: 29px;
+    padding: 0 20px;
+    margin-left: -4px;
+    width: 124px;
+  }
+  #toolbar .userName {
+   margin:0;
+   font-size:10px; background:none;
+   float:none;
+   position: absolute; top:8px; right:50px;
+ }
+ #toolbar .logOut {
+   margin:0;
+   float:none;
+   background:#333;
+   padding:3px 5px;
+   font-size:12px;
+   position: absolute; top:5px; right:8px;
+ }
+}
+

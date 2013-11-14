@@ -1,0 +1,77 @@
+/* FOOTER */
+footer#footer {
+  clear: both;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+#footer .footerTop {
+  padding: 15px 0 0;
+  background: url(../images/bgfooter.png);
+}
+#footer nav {height: 50px;}
+
+#footer nav h6 {
+  font: 300 17px Ubuntu, verdana, tahoma, arial, helvetica, sans-serif;
+  color: #FFF;
+  text-transform: uppercase;
+  background: #000;
+  padding: 15px;
+  margin: 0;
+  float: left;
+}
+
+#footer nav {
+  background: #141414;
+  border: 1px solid #383838;
+  border-bottom: 0;
+  border-radius: 3px;
+}
+
+#footer ul{float: left; padding: 15px; margin: 0;}
+#footer ul li {display: inline;}
+
+#footer nav ul li  {
+  display: inline-block;
+  color: #FFF;
+  padding: 5px 35px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-right: 1px solid #434343;
+  margin-right: 25px;
+}
+#footer nav ul li a {color: #fff;}
+#footer nav ul li:last-child  {border-right: none;}
+
+#footer ul li.ico-helpDesk {background-image: url(../images/icoHelpDesk.png);}
+#footer ul li.ico-chat {background-image: url(../images/icoChat.png);}
+#footer ul li.ico-phone {background-image: url(../images/icoTelefone.png);}
+
+.subfooter {
+  padding: 10px 0;
+  color: #545454;
+  font-size: 11px;
+  background: #FFF;
+  clear:both;
+  overflow: hidden;
+}
+
+.subfooter strong {color: #2a2a2a;}
+.subfooter .lastAccess {
+  padding: 0 0 0 20px;
+  background: url(../images/ico-ultimoAcesso.png) no-repeat left center;
+}
+.copyRight {margin: 0;}
+
+.icoInterroga {
+  display: inline-block;
+  text-indent: -9999px;
+  background: url(../images/icoInterroga.png) no-repeat center;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+}
+
+#footer [class^="ico"]:before,
+#footer [class*=" ico"]:before {display: none;}
+#footer .lnkArrowWhite{margin: 20px 10px 0 0; color: #fff;}

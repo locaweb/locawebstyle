@@ -1,0 +1,97 @@
+---
+title: Como usar o Locaweb Style
+
+menu_page: sidebar-informacoes-iniciais.erb
+---
+
+<article class="text">
+	<header>
+		<!-- <h2 class="ico-edit">Aprenda o básico</h2> -->
+		<h1>Download do Locaweb Style</h1>
+		<h3>Use direto pelo CDN ou baixe uma versão estável para usar em projetos offline.</h3>
+	</header>
+
+	<h2>Download do CSS e JS compilados</h2>
+	<p>O caminho mais rápido para você utilizar o Locaweb Style é baixando o CSS e o JS compilados e minificados prontos para utilizar. Deste modo você apenas baixa apenas o CSS e JS para usar em seu projeto, sem documentação, arquivos originais e etc...</p>
+	<p><a href="<%= settings.only_assets %>" class="btn btn-primary btn-large btn-download">Baixar Locaweb Style</a></p>
+
+	<hr>
+	<h2>Mais opções de download</h2>
+	<p>Você também pode baixar os arquivos por estes meios:</p>
+	<ul>
+		<li>
+			<h4><a href="<%= settings.download_github %>">Pelo GitHub</a></h4>
+			<p>Baixe direto pelo nosso GitHub</p>
+		</li>
+		<li>
+			<h4><a href="https://github.com/locaweb/locawebstyle">Clone ou Fork pelo Github</a></h4>
+			<p>Clone o projeto pelo GitHub ou Fork sua própria versão</p>
+		</li>
+	</ul>
+
+	<hr>
+
+	<h2>Use nosso servidor</h2>
+	<p>Adicione as tags abaixo para adicionar o pacote de CSS e Javascript.</p>
+
+<pre class="lang-html prettyprint linenums">
+/** no header **/
+&lt;link rel="stylesheet" href="//assets.locaweb.com.br/locastyle/<%= settings.stable %>/locastyle.css"&gt;
+&lt;link rel="stylesheet" href="//assets.locaweb.com.br/locastyle/<%= settings.stable %>/bootstrap.css"&gt;
+
+/** no footer **/
+&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable %>/locastyle.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable %>/bootstrap.js&quot;&gt;&lt;/script&gt;
+</pre>
+
+	<p>Se você quiser utilizar sempre a versão mais atual, use os caminhos dos assets sem a versão travada:</p>
+
+<pre class="lang-html prettyprint linenums">
+&lt;link rel="stylesheet" href="http://assets.locaweb.com.br/locastyle/edge/stylesheets/locastyle.css"&gt;
+&lt;script type="text/javascript" src="http://assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"&gt;&lt;/script&gt;
+</pre>
+
+	<div class="alert">
+		<p><strong>DEPENDÊNCIAS: </strong> O Locaweb Style <a href="<%= base_url %>/manual/introducao/informacoes-iniciais/">tem algumas dependências que precisam ser incluídas</a> para funcionar perfeitamente.</p>
+	</div>
+
+	<hr>
+
+	<h3>Versionamento</h3>
+	<p>O versionamento do Locaweb Style é simples: O nome dos arquivos tem essa estrutura: locastyle-[número do pacote stable].css. O resultado é este: locastyle-[major].[minor].[patch].css. O resultado fica locastyle-0.30.0.css.</p>
+
+	<p>De acordo com as mudanças e atualizações, nós vamos mudando a versão do arquivo. O número do minor sempre será um número par. Internamente trabalhamos com a versão de desenvolvimento utilizando o número ímpar. Logo, se a versão stable mais atual é 1.30.0, estamos trabalhando aqui na versão 1.31.0, 1.31.1 e etc. Quando terminarmos, vai para o ar a versão stable 1.32.0.</p>
+
+	<hr>
+	<h1>Template básico</h1>
+	<p>Utilize este código para iniciar seu projeto. Aqui você tem a estrutura básica para fazer o Locaweb Style funcionar perfeitamente:</p>
+
+<pre class="lang-html prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+	  &lt;title&gt;Locaweb Style&lt;/title&gt;
+	  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+	  &lt;!-- CSS do Bootstrap --&gt;
+	  &lt;link href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css&quot;&gt;
+	  &lt;!-- CSS do Locaweb Style --&gt;
+	  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://developer.locaweb.com.br/assets/edge/locastyle.css&quot;&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+	 &lt;h1&gt;Ol&aacute;, Mund&atilde;o!&lt;/h1&gt;
+
+	  &lt;!-- jQuery &eacute; obrigat&oacute;rio --&gt;
+	  &lt;script src=&quot;http://code.jquery.com/jquery.js&quot;&gt;&lt;/script&gt;
+	  &lt;!-- Obrigat&oacute;rio o Bootstrap (aconselhamos usar sempre a &uacute;ltima) --&gt;
+	  &lt;script src=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+	  &lt;!-- Javascript do Locaweb Style --&gt;
+	  &lt;script type=&quot;text/javascript&quot; src=&quot;http://developer.locaweb.com.br/assets/edge/locastyle.js&quot;&gt;&lt;/script&gt;
+
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+
+</article>

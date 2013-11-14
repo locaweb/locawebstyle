@@ -1,0 +1,66 @@
+@media print {
+
+	body {
+		font:100% verdana, arial, tahoma, sans-serif;
+	}
+
+	a {color:#000; text-decoration: none}
+	h1.serviceName a {color:#666 !important;}
+
+	.modal,
+	#rodape,
+	.actionsTable,
+	.boxActions,
+	#menuPrincipal,
+	#toolbar,
+	.lnkSugestoes,
+	.statusGraphic,
+	.chart,
+	.filterCount,
+	#menuPrincipal {
+		display:none;
+	}
+
+	.breadcrumb {margin:0 0 20px; padding:20px 0; border:non;}
+	.breadcrumb li {
+		display:inline;
+		list-style: none;
+	}
+
+	.breadcrumb li:after {content: " > ";}
+	.breadcrumb li:last-child:after {display:none;}
+
+	textarea {
+		width:100%;
+		min-height:200px;
+	}
+
+	th, td,
+	.tableList tbody .motivoDefault td {color:#000;}
+
+	p {
+		color:#000;
+		font-size:0.8em;
+		margin-bottom:10px;
+	}
+
+	.boxCollapse {
+		border-bottom:1px solid #CCC;
+		padding:10px 0 20px;
+	}
+
+	/** TABLE **/
+	th {
+		padding:10px;
+		text-align:left;
+	}
+
+	td {
+		font-size:0.8em;
+		padding:10px;
+	}
+
+	.tableList tbody td a {color:#666;}
+
+
+}

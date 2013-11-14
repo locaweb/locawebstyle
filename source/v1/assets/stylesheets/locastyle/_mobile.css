@@ -1,0 +1,217 @@
+/** Tamanhos padrão de Smartphones
+*** 320 x 480
+**/
+@media screen and (max-width:767px) {
+  #select_themes {display: none;}
+  
+  body {padding:0 !important;}
+  body:after {content:" "; display:block; clear:both;}
+  
+  .select_themes {display: none;}
+
+  .limit {
+    width:95% !important;
+    position:relative; left:0;
+    padding-bottom:0;
+    margin:0 auto;
+  }
+
+  #main div.limit {left:0 !important; padding:0 10px 40px 10px;}
+
+  .shortcutBox div {
+    width:92%;
+    min-height: inherit !important;
+    padding-bottom:20px !important;
+    height: auto !important;
+    float:none !important;
+  }
+  .shortcutBox.maxBox div {
+    width:99%;
+  }
+  /*.shortcutBox div p {display:none;}*/
+
+  .shortcutBox .lnkCoverAll p {display:none;}
+
+  .infoLogin {display:none;}
+
+  [class*="span"] {
+    width:auto;
+    margin-left:0;
+    float:none;
+  }
+
+  .row {
+    width:auto;
+    margin:0;
+  }
+
+  #header .limit {height:auto; padding:0;}
+  .revisit .shortcutBox h3{ font: 100 22px UbuntuLight, verdana, arial, tahoma, sans-serif;}
+  .revisit .shortcutBox div{ padding-bottom: 0!important;}
+  .sidebar {padding:40px 0 0;}
+
+  /** NOME DO PRODUTO - Logo ***/
+  .serviceName {
+    padding:15px 10px;
+    margin:0;
+    text-transform:uppercase;
+    font-size:20px !important;
+    font-weight:bold;
+  }
+
+  .logOut {border-radius:5px;}
+
+  /*** MENU PRINCIPAL ***/
+  #menuPrincipal {
+    width:100%;
+    padding:0;
+  }
+
+  #menuPrincipal > ul {width:auto;}
+  #menuPrincipal > ul > li {float:none; padding:0;}
+  #menuPrincipal > ul > li > a:before {display:none;}
+  #menuPrincipal > ul > li > a {
+    display:block;
+    color:#545454;
+    text-decoration:none;
+    font:14px 'Ubuntu', verdana, arial, tahoma, sans-serif;
+    text-transform:uppercase;
+    border:1px solid #EFEFEF;
+    border-bottom-color:transparent;
+    border-radius:none;
+    padding:9px;
+    -webkit-transition:all .15s linear;
+  }
+  #menuPrincipal > ul > li > a:after {display: none;}
+  #menuPrincipal > ul > li > a:hover, #menuPrincipal > ul > li.selected > a {
+    border-radius:0;
+    background-image:none;
+  }
+
+  #menuPrincipal a.ico-home {
+    width: inherit;
+    height: auto;
+    overflow: inherit;
+    text-indent: inherit;
+  }
+
+  #menuPrincipal .btMenu {float:none; background:none; border-right:none;}
+  #menuPrincipal .btMenu a {background:none; color:inherit; float:none; border-radius:0; padding-left:5px;}
+
+  #menuPrincipal .parent > a:hover, #menuPrincipal .parent:hover > a {
+    color:#666;
+    font:14px 'Ubuntu', verdana, arial, tahoma, sans-serif;
+    text-transform:uppercase;
+    border-radius:3px 3px 0 0;
+  }
+  /*** Caixa inicial de collapse ***/
+  .boxGray h2 {font-size:19px;}
+  .collapseGroup .details p {font-size:11px; padding-left:20px;}
+  .collapseGroup summary {font-size:11px; padding-right:30px;}
+  .collapseGroup summary span {font-size:13px;}
+
+  /** TABS **/
+  .tab-content {min-width:0px; margin-bottom:40px;}
+
+  /*** Paginação e Select Exibir ***/
+  .navView {text-align:center;}
+
+  .navView .pagination {
+    float:none;
+    padding:10px 0;
+  }
+
+  /*** MODAIS ***/
+  .modal {
+    margin:10px;
+    width:auto;
+    height: auto;
+    max-height: inherit !important;
+    overflow:visible;
+    position:absolute;
+    top:0; left:0;
+  }
+
+  .modal-body {
+    max-height:inherit !important;
+    height:auto;
+    overflow:visible;
+  }
+  /** TABELA DE MENSAGEM NA HOME ***/
+  .statusMessageBox .overflowMessage {overflow:hidden; position:relative; min-width:10%; max-width:19%;}
+
+  /** FORMS **/
+  input.input360 {max-width:250px;}
+
+  /** RODAPE **/
+  footer#rodape {position:static !important;}
+  footer#rodape .limit {padding:0;}
+
+  #rodape nav {height:70px;}
+  #rodape ul {width:100%; padding:5px 0; background:#000; text-align:center;}
+  #rodape ul li {display:inline;}
+
+  #rodape nav h6 {display:none; font-size:10px; text-transform:lowercase; padding:12px 7px 11px;}
+  #rodape nav ul li a {
+    display:inline-block;
+    font-size: 11px;
+    background-size:20%;
+    padding:6px 20px 6px 17px;
+    margin-right:5px;
+  }
+  #rodape nav .lnkArrow {
+    margin: 2px 0 0 10px;
+    font-size: 11px;
+    text-align: center;
+    float: none !important;
+    display: block;
+    padding: 7px 0 0;
+    clear: both;
+  }
+  .lastAccess {display:none !important;}
+
+  .copyRight {
+    font-size: 10px;
+    float: none !important;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  /** TABELA Padrão **/
+  table.tableList thead th, table.tableList tbody td {font-size:11px;}
+  .subfooter .lastAccess {background-image:none; display:block; padding:0;}
+  #rodape nav .lnkArrow {margin:2px 0 0 10px; float:left; font-size:11px;}
+  .subfooter strong {margin-left:10px;}
+  .icoInterroga {display:none;}
+
+  .footerTop [class^="ico"], .footerTop [class*=" ico"] {padding-left:4px;}
+
+  /** PATH **/
+  #steps.pathWay li {
+    float:none;
+    width:100%;
+    border:none;
+  }
+  #steps.pathWay li b {display:none;}
+  #steps.pathWay li a {width:100%;border:none; font-size:15px; margin-bottom:3px;}
+  #steps.pathWay span {display:inline-block; padding-right:5px;}
+
+    /** LISTAS  **/
+ .lists .statusMessageBox > li{display: block;}
+ .lists .statusMessageBox h6, .lists .statusMessageBox p, .lists .statusMessageBox .actionsTable{text-align: center;}
+ .lists .statusMessageBox .countViews::after{background: none;}
+
+ .simpleFilter.sideBySide .control-group {margin-left:0; padding-left:0; clear:both; border-left:none;}
+ .simpleFilter .control-group.fright {
+    padding-right: 0;
+    float: none !important;
+    padding: 10px 0;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .lists .statusMessageBox .countViews:after{background: none!important;}
+}

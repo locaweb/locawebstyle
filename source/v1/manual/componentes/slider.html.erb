@@ -1,0 +1,170 @@
+---
+title: Componentes - Slider
+menu_page: sidebar-componentes.erb
+---
+
+<article class="text">
+	<header>
+		<h1>Slider</h1>
+		<h3>Alternando entre informações ou imagens</h3>
+	</header>
+
+	<p>Este slider pode ser usado utilizando imagens, como o exemplo abaixo ou como é usado para mostrar dicas na sidebar, com texto simples. Segue o mesmo padrão do Bootstrap e é muito flexível.</p>
+	<br>
+
+	<div id="exampleCarousel" class="carousel slide" style="width: 640px;">
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="http://developer.locaweb.com.br/wp-content/uploads/img1.jpg" alt="">
+				<div class="carousel-caption">
+					<h4>Primeiro Slide</h4>
+					<p>@lastshiro</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="http://developer.locaweb.com.br/wp-content/uploads/img2.jpg" alt="">
+				<div class="carousel-caption">
+					<h4>Segundo Slide</h4>
+					<p>@xandolino</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="http://developer.locaweb.com.br/wp-content/uploads/img3.jpg" alt="">
+				<div class="carousel-caption">
+					<h4>Terceiro Slide</h4>
+					<p>@lastshiro</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="http://developer.locaweb.com.br/wp-content/uploads/img4.jpg" alt="">
+				<div class="carousel-caption">
+					<h4>Quarto Slide</h4>
+					<p>@xandolino</p>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#exampleCarousel" data-slide="prev">‹</a>
+		<a class="right carousel-control" href="#exampleCarousel" data-slide="next">›</a>
+	</div>
+
+<pre class="lang-html prettyprint linenums">
+&lt;div id=&quot;exampleCarousel&quot; class=&quot;carousel slide&quot;&gt;
+	&lt;div class=&quot;carousel-inner&quot;&gt;
+		&lt;div class=&quot;item active&quot;&gt;
+			&lt;img src=&quot;http://developer.locaweb.com.br/wp-content/uploads/img1.jpg&quot; alt=&quot;&quot;&gt;
+			&lt;div class=&quot;carousel-caption&quot;&gt;
+				&lt;h4&gt;Primeiro Slide&lt;/h4&gt;
+				&lt;p&gt;@lastshiro&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;item&quot;&gt;
+			&lt;img src=&quot;http://developer.locaweb.com.br/wp-content/uploads/img2.jpg&quot; alt=&quot;&quot;&gt;
+			&lt;div class=&quot;carousel-caption&quot;&gt;
+				&lt;h4&gt;Segundo Slide&lt;/h4&gt;
+				&lt;p&gt;@xandolino&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;item&quot;&gt;
+			&lt;img src=&quot;http://developer.locaweb.com.br/wp-content/uploads/img3.jpg&quot; alt=&quot;&quot;&gt;
+			&lt;div class=&quot;carousel-caption&quot;&gt;
+				&lt;h4&gt;Terceiro Slide&lt;/h4&gt;
+				&lt;p&gt;@lastshiro&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;item&quot;&gt;
+			&lt;img src=&quot;http://developer.locaweb.com.br/wp-content/uploads/img4.jpg&quot; alt=&quot;&quot;&gt;
+			&lt;div class=&quot;carousel-caption&quot;&gt;
+				&lt;h4&gt;Quarto Slide&lt;/h4&gt;
+				&lt;p&gt;@xandolino&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;a class=&quot;left carousel-control&quot; href=&quot;#exampleCarousel&quot; data-slide=&quot;prev&quot;&gt;&lsaquo;&lt;/a&gt;
+	&lt;a class=&quot;right carousel-control&quot; href=&quot;#exampleCarousel&quot; data-slide=&quot;next&quot;&gt;&rsaquo;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+	<h3>Utilização</h3>
+	<pre class="lang-javascript prettyprint linenums">$('.carousel').carousel();</pre>
+
+	<p>Você pode definir os intervalos com o atributo <strong>data-interval</strong> ou quando o slider irá pausar:</p>
+
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="width: 100px;">Nome</th>
+				<th style="width: 50px;">type</th>
+				<th style="width: 50px;">Padrãoth>
+					<th>Descrição</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>interval</td>
+					<td>number</td>
+					<td>5000</td>
+					<td>A quantidade de tempo de delay entre o ciclo automático do ítem. Se for false, o carousel não irá circular automaticamente. </td>
+				</tr>
+				<tr>
+					<td>pause</td>
+					<td>string</td>
+					<td>"hover"</td>
+					<td>Pausa o ciclo do carousel no mouseenter e volta o ciclo no mouseleave.</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>Métodos</h3>
+		<p>Para utilização em scripts personalizados, você pode utilizar os seguinte métodos para controlar o carousel/slider.</p>
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Tipo</th>
+					<th>Descrição</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>.carousel('cycle')</td>
+					<td>Faz o carousel circular da esquerda para direita.</td>
+				</tr>
+				<tr>
+					<td>.carousel('pause')</td>
+					<td>Pára o carousel.</td>
+				</tr>
+				<tr>
+					<td>.carousel(number)</td>
+					<td>Circula o carousel para um item em particular. Similar a uma array.</td>
+				</tr>
+				<tr>
+					<td>.carousel('prev')</td>
+					<td>Circula o carousel para o ítem anterior.</td>
+				</tr>
+				<tr>
+					<td>.carousel('next')</td>
+					<td>Circula o carousel para um ítem a frente.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3>Eventos</h3>
+		<p>Eventos que são ativados quando o carousel/slider for utilizado.</p>
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th style="width: 150px;">Evento</th>
+					<th>Descrição</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>slide</td>
+					<td>Este evento dispara imediatamente quando a instacia do método é chamada.</td>
+				</tr>
+				<tr>
+					<td>slid</td>
+					<td>Este evento é disparado quando a transição do carousel for completada.</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</article>

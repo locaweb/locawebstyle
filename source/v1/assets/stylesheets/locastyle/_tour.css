@@ -1,0 +1,155 @@
+.guided-tour {
+  background: #fff;
+  border: 1px solid #ccc;
+  display: block;
+  width: 260px;
+  position: absolute;
+  top: -400px;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  border-bottom-left-radius: 5px;
+
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.guided-tour .close{margin-right: 10px;}
+.guided-tour.on {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  top: -1px;
+}
+.guided-header{ clear: both; margin: 0 0 10px;}
+.guided-tour .btn-tour{ margin-bottom: 15px;}
+.guided-tour .guided-footer {
+  margin: 15px 10px 8px;
+  text-align: left;
+  background: #ececec;
+}
+.guided-footer a:first-child{border-top: none;}
+.guided-footer a{
+  border-top:  1px solid #dbe0e6;
+  display: block;
+  margin: 0 8px;
+  padding: 6px 0;
+}
+.hopscotch-nav-button.next:hover{opacity: 0.85;}
+.title-guided{
+  font: 16px UbuntuMedium, arial, verdana, tahoma, sans-serif;
+}
+
+/*
+  Tour
+*/
+
+div.hopscotch-bubble{
+  border: 1px solid #CCC;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+div.hopscotch-bubble .hopscotch-bubble-container{padding: 0!important;}
+div.hopscotch-bubble .hopscotch-bubble-content{
+  margin: 0;
+  padding: 15px 15px 0 15px;
+}
+.hopscotch-actions{
+  background: #f7f7f7;
+  border-top: 1px solid #ebebeb;
+  border-radius: 0 0 5px 5px;
+  margin-top: 0;
+  padding: 10px 15px;
+}
+.hopscotch-content{color: #767676;}
+div.hopscotch-bubble h3{color: #2c2c2c;}
+div.hopscotch-bubble .hopscotch-bubble-number{ display: none;}
+div.hopscotch-bubble .hopscotch-bubble-close{z-index: 1;}
+
+/*
+  Arrow Down
+*/
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-arrow-border{
+  border-top-color: #CCC;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  border-width: 10px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-arrow {
+  border-top: 10px solid #FFF;
+  border-left: 10px solid rgba(0, 0, 0, 0);
+  border-right: 10px solid rgba(0, 0, 0, 0);
+  position: relative;
+  top: -12px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.down{
+  bottom: -35px;
+}
+/*
+  Arrow Left
+*/
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.left .hopscotch-bubble-arrow-border{
+  border-right-color: #CCC;
+  border-right-color: rgba(0, 0, 0, 0.2);
+  border-width: 10px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.left .hopscotch-bubble-arrow{
+  border-bottom: 10px solid rgba(0, 0, 0, 0);
+  border-right: 10px solid #fff;
+  border-top: 10px solid rgba(0, 0, 0, 0);
+  position: relative;
+  left: 2px;
+  top: -20px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.left{
+  left: -11px;
+}
+/*
+  Arrow Top
+*/
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.up .hopscotch-bubble-arrow-border{
+  border-bottom-color: #CCC;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  border-width: 10px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.up .hopscotch-bubble-arrow{
+  border-bottom: 10px solid #fff;
+  border-left: 10px solid rgba(0, 0, 0, 0);
+  border-right: 10px solid rgba(0, 0, 0, 0);
+  position: relative;
+  top: -8px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.up{
+  top: -11px;
+}
+/*
+  Arrow Right
+*/
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-arrow-border{
+  border-left-color: #CCC;
+  border-left-color: rgba(0, 0, 0, 0.2);
+  border-width: 10px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-arrow{
+  border-bottom: 10px solid rgba(0, 0, 0, 0);
+  border-left: 10px solid #fff;
+  border-top: 10px solid rgba(0, 0, 0, 0);
+  position: relative;
+  left: -2px;
+  top: -20px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.right{
+  right: -35px;
+}
+#hopscotch-prev{float: left;}
+
+
+
+
+
+
+
+
+
+
+

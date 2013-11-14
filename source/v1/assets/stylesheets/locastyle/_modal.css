@@ -1,0 +1,199 @@
+/** MODAL **/
+.modal {
+  padding: 10px;
+  max-height: 590px;
+  display: none;
+  overflow: hidden;
+  word-break: normal;
+}
+
+.modalSmall {
+  width: 450px;
+  margin-left: -200px;
+}
+
+.modal-header {
+  border: none;
+  padding-bottom: 0;
+  padding: 0;
+  margin: 0;
+}
+.modal-header .close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+
+.modal-header .close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+.modal-header button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.modal h1 {
+  max-width: 490px;
+  margin: 0 auto 10px;
+}
+
+.modal-header h3 {
+  text-align: left;
+  margin: 0;
+  color: #000;
+  padding: 0 5px 10px;
+  font-size: 20px;
+  font-weight: 400;
+  border-bottom: 1px solid #EEE;
+  font: 400 20px Ubuntu, arial, verdana, tahoma, sans-serif;
+}
+
+.modal-header p {padding: 0 5px;}
+.modal-header h3 + p {padding-top: 20px;}
+
+.modal-body {
+  padding: 15px 5px 0;
+  min-height: auto;
+  margin: 0 0 15px;
+}
+
+.modal-body .titAlert {
+  font: bold 18px verdana, arial, tahoma, sans-serif;
+  padding: 15px 0;
+}
+
+.modal-body p {
+  line-height: 18px;
+  margin: 0 0 10px;
+}
+
+.modal-body h2:first-child {margin-top: 0;}
+.modal-footer .btn.close {
+  float: none;
+  display: inline-block;
+}
+
+.modal-footer {
+  border-top: 5px solid #e5e5e5;
+  background-color: transparent;
+  clear: both;
+  text-align: left;
+  padding: 20px 0 10px 0;
+  margin-top: 20px;
+}
+.modal-footer form {display: inline-block;}
+.modal-footer .btn + .btn {margin-left: 0;}
+.modal form {margin-bottom: 0;}
+
+.boxGray.listDetail {padding: 10px;}
+
+.listDetail {
+  font-size: 13px;
+  font-family: verdana, arial, tahoma, sans-serif;
+  clear: both;
+  margin: 0 0 20px;
+}
+
+.listDetail:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.listDetail.boxGray {
+  background-color: #e2e2e2;
+  padding: 10px 0;
+  margin-bottom: 15px;
+}
+
+.listDetail li {
+  color: #616161;
+  float: left;
+  list-style: none;
+  width: 270px;
+  padding: 5px 0;
+}
+.listDetail li.nofloat {float: none;}
+.listDetail strong {display: block;}
+
+.listDetail dt {
+  width: 150px;
+  text-align: right;
+  font-weight: normal;
+  clear: left;
+  margin: 0 0 6px;
+  color: #767676;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.listDetail dd {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.listDetail .sep {
+  display: block;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-footer .slidePrev,
+.modal-footer .slideNext,
+.modalSlider .modal-footer .btn-primary {float:left;}
+
+.modal-footer .slidePrev:before, .modal-footer .slideNext:after {
+  content: " ";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+}
+.modal-footer .slidePrev:before {background: url(../images/arrowLeftGray.png) no-repeat center; margin-right: 5px;}
+.modal-footer .slideNext:after {background: url(../images/arrowRightGray.png) no-repeat center; margin-left: 5px;}
+
+.modal-footer .btn {margin: 0 5px;}
+
+.modal.txtCenter .modal-body,
+.modal.txtCenter .modal-footer,
+.modal.txtCenter .modal-header,
+.modal.txtCenter .modal-header h3,
+.modalCenter .modal-body,
+.modalCenter .modal-header,
+.modalCenter .modal-header h3,
+.modalCenter .modal-footer {text-align: center;}
+
+.modal.modalCenter .btn {margin: 0;}
+
+/*** Modal Nude
+**** Modal sem background, transparentes, sem bordas, sem nada... Totalmente nu!
+***/
+.modalNude {
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+.modalNude .close {
+  border-radius: 50%;
+  background-color: white;
+  color: #666;
+  padding: 1px 4px 4px 4px;
+  opacity: 1;
+}

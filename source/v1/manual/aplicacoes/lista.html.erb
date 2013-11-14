@@ -1,0 +1,86 @@
+---
+title: Aplicações - Listagem
+menu_page: sidebar-aplicacoes.erb
+---
+
+<article class="text">
+	<header>
+		<h1>Listas complexas</h1>
+		<h3>Listas de exibição de grande quantidade de informações.</h3>
+	</header>
+	<p>São bem usadas em listagens de planos, hospedagens e outros serviços similares.</p>
+
+	<ul class="listOptions">
+		<li>
+			<p>Identificador: <strong>123456789</strong> | Nome: <strong>Lojinha do Régis</strong></p>
+			<span class="actLnk fright">
+				<a href="#" class="lnkSeta">Administrar</a>
+			</span>
+			<p class="pObs"><strong>Gateway de pagamentos:</strong> (1000 transações)</p>
+		</li>
+	</ul>
+
+	<ul class="listOptions">
+		<li>
+			<p>Identificador: <strong>123456789</strong> | Nome: <strong>Lojinha com divisões na observação</strong></p>
+			<span class="actLnk fright">
+				<a href="#" class="lnkSeta">Administrar</a>
+			</span>
+			<span class="fRight spanObs">Status: <strong>Ativo</strong></span>
+			<span class="fRight spanObs">
+				Período de renovação: <strong>1 ano</strong>
+				<a href="#" class="lnkSeta">Alterar</a>
+			</span>
+			<p class="pObs"><strong>Gateway de pagamentos:</strong> (1000 transações)</p>
+		</li>
+	</ul>
+
+	<ul class="listOptions listagemMeiosPagtos">
+		<li class="pagtoAtivo">
+			<img alt="Cartao" src="http://developer.locaweb.com.br/wp-content/uploads/cartaoCielo.png">
+			<h6>Cielo</h6>
+			<span class="actLnk fright">
+				<a href="#" class="lnkSeta">Editar</a>
+				<a href="#" class="lnkSeta">Desativar</a>
+			</span>
+			<p class="pObs"><strong>Gateway de pagamentos:</strong> (1000 transações)</p>
+		</li>
+		<li class="pagtoAtivo">
+			<img alt="Cartao" src="http://developer.locaweb.com.br/wp-content/uploads/cartaoBoletoBradesco.png">
+			<h6>Cielo</h6>
+			<span class="actLnk">
+				<a href="#" class="lnkSeta">Editar</a>
+				<a href="#" class="lnkSeta">Desativar</a>
+			</span>
+		</li>
+		<li>
+			<img alt="Cartao" src="http://developer.locaweb.com.br/wp-content/uploads/cartaoShopline.png">
+			<h6>Shopline</h6>
+			<span class="actLnk">
+				<a href="#" class="lnkSeta">Ativar</a>
+				<a href="#" class="lnkSeta">Como contratar este convênio?</a>
+			</span>
+		</li>
+	</ul>
+
+
+<pre class="lang-html prettyprint linenums">
+&lt;ul class="listOptions"&gt;
+	&lt;li&gt;
+		&lt;p&gt;Identificador: &lt;strong&gt;
+			123456789&lt;/strong&gt; | Nome: 
+			&lt;strong&gt;Lojinha com divisões na observação&lt;/strong&gt;
+		&lt;/p&gt;
+		&lt;span class="actLnk fright"&gt;
+			&lt;a href="#" class="lnkSeta"&gt;Administrar&lt;/a&gt;
+		&lt;/span&gt;
+		&lt;span class="fRight spanObs"&gt;Status: &lt;strong&gt;Ativo&lt;/strong&gt;&lt;/span&gt;
+		&lt;span class="fRight spanObs"&gt;
+			Período de renovação: &lt;strong&gt;1 ano&lt;/strong&gt;
+			&lt;a href="#" class="lnkSeta"&gt;Alterar&lt;/a&gt;
+		&lt;/span&gt;
+		&lt;p class="pObs"&gt;&lt;strong&gt;Gateway de pagamentos:&lt;/strong&gt; (1000 transações)&lt;/p&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</article>

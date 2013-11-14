@@ -1,0 +1,91 @@
+---
+title: Componentes - Abas
+menu_page: sidebar-componentes.erb
+---
+<article class="text">
+
+<header>
+	<h1>Alertas</h1>
+	<h3>Alertas são usadas para enviar um feedback de sucesso, erro, warning ou apenas uma notificação de novas features no sistema. </h3>
+</header>
+
+<p>Os alertas seguem o mesmo padrão do Bootstrap. Usa-se as classes listadas abaixo para indicar qual o tipo de alerta:</p>
+	<table class="table table-bordered table-striped">
+	<thead>
+	<tr>
+		<th>Classe</th>
+		<th>Exemplo</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>.obsGray</td>
+		<td>
+<div class="obsGray">
+    <h6>Campus Online <small>Criado em 20/04/2012</small> <a href="#" class="lnkSeta">Editar</a></h6>
+    <p class="lightGray">Uma pequena lista de emails do Campus Online. Criado em 20/04/2012</p>
+</div>
+		</td>
+	</tr>
+	<tr>
+		<td>.alert.alert-notification</td>
+		<td>
+<div class="alert alert-notification">
+    <strong>Notificação!</strong> Uma mensagem de notificação.
+</div>
+		</td>
+	</tr>
+	<tr>
+		<td>.alert</td>
+		<td>
+<div class="alert">
+    <a class="close" data-dismiss="alert">×</a>
+    <strong>Aviso!</strong> Uma mensagem de aviso.
+</div>
+		</td>
+	</tr>
+	<tr>
+		<td>.alert.alert-error</td>
+		<td>
+<div class="alert alert-error">
+    <a class="close" data-dismiss="alert">×</a>
+    <strong>Erro!</strong> Uma mensagem de erro.
+</div>
+		</td>
+	</tr>
+	<tr>
+		<td>.alert.alert-success</td>
+		<td>
+<div class="alert alert-success">
+    <a class="close" data-dismiss="alert">×</a>
+    <strong>Sucesso!</strong> Uma mensagem de sucesso.
+</div>
+		</td>
+	</tr>
+		<tr>
+		<td>.alert.alert-info</td>
+		<td>
+<div class="alert alert-info">
+    <a class="close" data-dismiss="alert">×</a>
+    <strong>Info!</strong> Uma mensagem de informação.
+</div>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<p>Um exemplo de uso do <strong>obsGray</strong>:</p>
+
+<h1>Exemplo de título seguido de obsGray</h1>
+<div class="obsGray">
+    <h6>Campus Online <small>Criado em 20/04/2012</small> <a href="#" class="lnkSeta">Editar</a></h6>
+    <p class="lightGray">Uma pequena lista de emails do Campus Online. Criado em 20/04/2012</p>
+</div>
+
+<pre class="lang-html prettyprint linenums">
+&lt;div class="alert alert-success"&gt;
+    &lt;a class="close" data-dismiss="alert"&gt;×&lt;/a&gt;
+    &lt;strong&gt;Sucesso!&lt;/strong&gt; Uma mensagem de sucesso.
+&lt;/div&gt;
+</pre>
+</article>	

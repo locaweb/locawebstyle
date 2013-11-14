@@ -1,0 +1,26 @@
+---
+title: Versão 0.32.0
+date: 2012-12-11 17:23 UTC
+tags:
+---
+
+#### Bug Background IE
+
+Havia um background cinza maluco aparecendo no IE. Isso acontece por causa do degrade que usamos para decorar o fundo. Fazemos esse degrade com CSS e o IE não entende direito. Logo, para Internet Explorer deixamos tudo branco, sem o degrade. Como esse gradiente é muito discreto, não há tantos problemas visuais.
+
+#### Alternando textos
+
+Melhoramos o sistema para alternar textos em elementos quando necessário. [Leia a documentação aqui](http://developer.locaweb.com.br/locawebstyle/elementos/alternando-textos/).
+
+#### Pacote padrão acessibilidade
+
+Estamos começando a inserir features de acessibilidade no Locaweb Style. A ideia é que o Locaweb Style preveja uma camada padrão de Acessibilidade para suprir necessidades genéricas de todos os projetos. Para tarefas de acessibilidade mais específicas é sugerido que cada projeto tenha suas soluções individuais.
+O Locaweb Style vai criar um menu acessível escondido e vai marcar com WAI-ARIA os elementos padrões do Locaweb Style.
+
+#### Mudança de nomenclatura
+
+A nomenclatura que escolhemos para nomear o CSS e JS do Locaweb Style vai mudar. Antes usávamos algo como: **locastyle-0-30-0.js** e agora vamos mudar para **locastyle-0.32.0.js**. Tanto para JS quanto para CSS.
+
+#### Minor bug fixes
+
+Colocando em ordem algumas coisas, acertando alguns bugs. Nada muito de outro mundo, apenas retalhos para alguns serviços da Locaweb funcionarem melhor.
