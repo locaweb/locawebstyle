@@ -403,22 +403,18 @@ table td {
 
 
 .channels p {
-	font-family: Lato, Verdana, Arial, Helvetica, Tahoma, Sans-serif;
 	line-height: 1.5em;
-	font-size: 1em;
 }
 
 
 .channels h1,
 .channels h2 {
-	font-family: Lato, Verdana, Arial, Helvetica, Tahoma, Sans-serif;
 	text-align: center;
 }
 
 
 .channels h1 {
 	padding-bottom: 15px;
-	color: #000 !important;
 	font-weight: 500;
 	font-size: 2.3em;
 }
@@ -514,7 +510,6 @@ table td {
 .channels .channel h3 {
 	font-size: 1em;
 	font-weight: bold;
-	font-family: arial, helvetica, verdana, tahoma, sans-serif;
 	color: #2a2a2a!important;
 	margin: 5px 0 10px;
 }
