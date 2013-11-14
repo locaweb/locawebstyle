@@ -1,0 +1,71 @@
+---
+title: Layout - Sidebar
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-layout.erb
+---
+
+<header>
+  <h1>Sidebar</h1>
+  <h3>Exemplo de Sidebar padrão do Locaweb Style.</h3>
+</header>
+
+<article class="text">
+<p>Código comum da lateral</p>
+
+<pre class="lang-html prettyprint linenums">
+&lt;div class="span4"&gt;
+    &lt;aside class="sidebar"&gt;
+        &lt;section class="sideBox"&gt;
+          &lt;div class="boxSidebarTitle"&gt;&lt;i class="ico-user-star"&gt;&lt;/i&gt;&lt;/div&gt;
+            &lt;h1 class="titSide"&gt;Dados da Conta&lt;/h1&gt;
+            &lt;div class="innerSideBox boxWhite"&gt;
+                &lt;h6&gt;Identificador&lt;/h6&gt;
+                &lt;p&gt;&lt;strong&gt;1234567890&lt;/strong&gt;&lt;/p&gt;
+
+                &lt;hr&gt;
+
+                &lt;h6&gt;Nome&lt;/h6&gt;
+                &lt;p&gt;&lt;strong&gt;Lojinha do Régis&lt;/strong&gt;&lt;/p&gt;
+                &lt;a class="edit-account-name lnkArrow" data-toggle="modal" data-target="#modalEditarNome" href="/accounts/1/edit_name"&gt;Editar Nome&lt;/a&gt;
+                &lt;hr&gt;
+
+                &lt;h6&gt;Plano&lt;/h6&gt;
+                &lt;p&gt;&lt;strong&gt;Nome do plano&lt;/strong&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;small&gt;observação qualquer&lt;/small&gt;&lt;/p&gt;
+                &lt;hr&gt;
+
+                &lt;p&gt;Usadas &lt;strong&gt;300&lt;/strong&gt; de &lt;strong&gt;42&lt;/strong&gt; transações&lt;/p&gt;
+                &lt;a href="#" class="lnkArrow"&gt;Aumentar limite&lt;/a&gt;
+
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section class="sideBox"&gt;
+            &lt;div class="boxSidebarTitle"&gt;&lt;i class="ico-user"&gt;&lt;/i&gt;&lt;/div&gt;
+            &lt;h1 class="titSide"&gt;Meios de Pagamento&lt;/h1&gt;
+            &lt;div class="innerSideBox active-settings"&gt;
+                &lt;img alt="Cartao" src="/img/cartaoCielo.png"&gt;
+                &lt;img alt="Cartao" src="/img/cartaoRedecard.png"&gt;
+                &lt;img alt="Cartao" src="/img/cartaoShopline.png"&gt;
+                &lt;img alt="Cartao" src="/img/cartaoBoleto.png"&gt;
+                &lt;img alt="Cartao" src="/img/cartaoBoletoBradesco.png"&gt;
+
+                &lt;a href="/settings" class="lnkArrow"&gt;Ir para meios de pagamentos&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section class="sideBox"&gt;
+            &lt;div class="boxSidebarTitle"&gt;&lt;i class="cmicon-help"&gt;?&lt;/i&gt;&lt;/div&gt;
+            &lt;h1 class="titSide"&gt;Ajuda e Suporte&lt;/h1&gt;
+            &lt;div class="innerSideBox"&gt;
+                &lt;ul class="listWhite"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Documentação de implementação&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#" rel="external"&gt;Wiki do Gateway de pagamentos&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Suporte 24h&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/aside&gt;
+&lt;/div&gt;
+</pre>
+</article>

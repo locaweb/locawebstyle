@@ -1,0 +1,116 @@
+---
+title: Formulários - Medidor de senhas
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-formularios.erb
+
+---
+
+<article class="text">
+	<header>
+		<h1>Medidor de complexidade de senhas</h1>
+		<h3>Mede a complexidade da senha de maneira simples.</h3>
+	</header>
+
+	<p>Este é um medidor de complexidade de senha simples, sem muitas restrições, apenas um indicador visual da "força" da senha.</p>
+        <p>O monitor deste componente não valida a senha, apenas mostra a força da senha baseado em regras bem simples conforme table abaixo.</p>
+
+	<table class="table table-stripped table-bordered">
+		<thead>
+			<tr>
+				<th class="span4">Classificação</th>
+				<th>Condições</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Forte (strong)</td>
+				<td>Deve conter mais de 8 caracteres, letras, números, letras maiúsculas e caracteres especiais.</td>
+			</tr>
+			<tr>
+				<td>Boa (good)</td>
+				<td>Deve conter mais de 8 caracteres, letras e números. Além de letras maiúsculas ou caracteres especiais.</td>
+			</tr>
+			<tr>
+				<td>Média (medium)</td>
+				<td>Deve conter mais de 8 caracteres, letras e números.</td>
+			</tr>
+			<tr>
+				<td>Fraca (weak)</td>
+				<td>Contém menos de 8 caracteres ou apenas números ou apenas letras.</td>
+			</tr>
+		</tbody>
+	</table>
+        <h3>Método</h3>
+	<p>Há um método que retorna a classificação de força de uma determinada string quando passada via argumento.</p>
+
+	<table class="table table-stripped table-bordered">
+		<thead>
+			<tr>
+				<th class="span4">Método</th>
+				<th>Exemplo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>checkIt</td>
+				<td>Ao executar locastyle.passwordStrength.checkIt("123") o resultado esperado é a string "weak".</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="example">
+	  <div class="control-group">
+            <label for="user_password">Nova senha</label>
+            <input class="password autoFocus span3" id="user_password" data-component="password-strength" data-monitor-id="password-strength-monitor" name="" type="password">
+            <div class="password-strength">
+              <p>Força da senha</p>
+              <div id="password-strength-monitor" class="monitor"></div>
+            </div>
+          </div>
+	</div>
+<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;example&quot;&gt;
+  &lt;div class=&quot;control-group&quot;&gt;
+    &lt;label for=&quot;user_password&quot;&gt;Nova senha&lt;/label&gt;
+    &lt;input class=&quot;password autoFocus span3&quot; id=&quot;user_password&quot; data-component=&quot;password-strength&quot; data-monitor-id=&quot;password-strength-monitor&quot; name=&quot;&quot; type=&quot;password&quot;&gt;
+    &lt;div class=&quot;password-strength&quot;&gt;
+      &lt;p&gt;For&#231;a da senha&lt;/p&gt;
+      &lt;div id=&quot;password-strength-monitor&quot; class=&quot;monitor&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<h4>Outro exemplo</h4>
+
+<div class="example">
+  <div class="control-group">
+    <label class="noMarginBottom" for="user_password">Nova senha</label>
+    <p>Senha entre 8 a 14 caracteres, contendo letras e números</p>
+    <input class="password autoFocus span3" id="account-password" data-component="password-strength" data-monitor-id="password-strength-monitor-2" type="password">
+    <div class="password-strength">
+      <p>Força da senha:</p>
+      <div id="password-strength-monitor-2" class="monitor"></div>
+    </div>
+  </div>
+</div>
+
+<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;example&quot;&gt;
+  &lt;div class=&quot;control-group&quot;&gt;
+    &lt;label class=&quot;noMarginBottom&quot; for=&quot;user_password&quot;&gt;Nova senha&lt;/label&gt;
+    &lt;p&gt;Senha entre 8 a 14 caracteres, contendo letras e n&#250;meros&lt;/p&gt;
+    &lt;input class=&quot;password autoFocus span3&quot; id=&quot;account-password&quot; data-component=&quot;password-strength&quot; data-monitor-id=&quot;password-strength-monitor-2&quot; type=&quot;password&quot;&gt;
+    &lt;div class=&quot;password-strength&quot;&gt;
+      &lt;p&gt;For&#231;a da senha:&lt;/p&gt;
+      &lt;div id=&quot;password-strength-monitor-2&quot; class=&quot;monitor&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<h3>Força da senha</h3>
+<p>Este não é o mesmo requisito de senha usado nos paineis da Locaweb, existe outra validação para estes casos. A proposta deste componente é prover um feedback de força de senha com requisitos simples.<p>
+<p>Não consideramos por exemplo sequência de caracteres, alta ocorrência do mesmo caractere, mesmo caractere consecutivo e outros requisitos usados para validar a força de uma senha.</p>
+<p>Lembrando também que este componente não valida a senha, ou seja, mesmo uma senha de classificação fraca (weak), passaria em um form de criação de senha, esta validação fica por sua conta.</p>
+
+</article>

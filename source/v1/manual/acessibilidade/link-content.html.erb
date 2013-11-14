@@ -1,0 +1,23 @@
+---
+title: Acessibilidade - Link direto para conteúdo
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-acessibilidade.erb
+---
+
+
+<article class="text">
+	<header>
+	  <h1>Link direto para conteúdo</h1>
+	  <h3>Inserindo link direto para o conteúdo importante da página</h3>
+	</header>
+	<p>Link acessível para ir direto ao seu conteúdo, com isso o usuário tem essa facilidade utilizando somente o teclado e/ou o leitor de tela.
+
+	<p>O link abaixo deve ser implementado antes de qualquer outro link, já que ele ficará oculto e será exibido apenas ao receber foco do teclado</p>
+
+	<p>Ex: <code>&lt;a href="#" tabindex="1" class="lnkContent"&gt;Ir para o conteúdo&lt;/a&gt;</code></p>
+
+	<p>É necessário que o título (de conteúdo) de todas as páginas possua a classe: "titleContent"</p>
+	<p>Obs: é necessário apenas a implementação dessa classe em um título por página.</p>
+
+	<pre class="lang-html prettyprint linenums">&lt;h1 class="titleContent"&gt;Cadastrar cliente &lt;/h1&gt;</pre>
+</article>

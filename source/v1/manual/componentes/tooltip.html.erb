@@ -1,0 +1,87 @@
+---
+title: Componentes - Tooltip ou Popovers
+
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-componentes.erb
+
+---
+
+<article class="text">
+	<header>
+		<h1>Tooltips ou popover</h1>
+		<h3>Para mostrar balões de informação.</h3>
+	</header>
+
+	<p>As opções devem ser passadas via atributo data, <strong>ex: data-animation="false", data-trigger="click".</strong></p>
+
+	<div class="example">
+		<label><input type="checkbox"> Um input qualquer <a data-content="Aqui vai um conteúdo maravilhoso para o popover... aceita &lt;b&gt;html&lt;/b&gt;" rel="popover" class="infoBubble" data-original-title="Exemplo de Popover"></a></label>
+	</div>
+
+	<pre class="lang-html prettyprint linenums">&lt;a data-content=&quot;Aqui vai um conte&uacute;do maravilhoso para o popover... aceita &amp;lt;b&amp;gt;html&amp;lt;/b&amp;gt;&quot; rel=&quot;popover&quot; data-original-title=&quot;Exemplo de Popover&quot;&gt;&lt;/a&gt;</pre>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="width: 100px;">Name</th>
+				<th style="width: 100px;">type</th>
+				<th style="width: 50px;">default</th>
+				<th>description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>animation</td>
+				<td>boolean</td>
+				<td>true</td>
+				<td>Aplica uma transição de fade</td>
+			</tr>
+			<tr>
+				<td>placement</td>
+				<td>string|function</td>
+				<td>'right'</td>
+				<td>Onde o popover ficará posicionado - top | bottom | left | right</td>
+			</tr>
+			<tr>
+				<td>selector</td>
+				<td>string</td>
+				<td>false</td>
+				<td>Se um seletor é definido, os objetos do popover será delegado para alvos específicos</td>
+			</tr>
+			<tr>
+				<td>trigger</td>
+				<td>string</td>
+				<td>'hover'</td>
+				<td>Como o popover é ativado - hover | focus | manual</td>
+			</tr>
+			<tr>
+				<td>title</td>
+				<td>string | function</td>
+				<td>''</td>
+				<td>Título padrão do popover se o atributo <b>title</b> não existir</td>
+			</tr>
+			<tr>
+				<td>content</td>
+				<td>string | function</td>
+				<td>''</td>
+				<td>Conteúdo padrão se o <b>data-content</b> não existir</td>
+			</tr>
+			<tr>
+				<td>delay</td>
+				<td>number | object</td>
+				<td>0</td>
+				<td>
+					<p>Delay para mostrar e esconder o popover (ms) - não aplicável para ativação manual.</p>
+					<p>Se um número é fornecido, o delay é aplicado no hide e show.</p>
+					<p>Estrutura do objeto é: <code>delay: { show: 500, hide: 100 }</code></p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3>Classe .infoBubble</h3>
+	<p>O .infoBubble faz a caixinha azul com o ponto de interrogação aparecer.</p>
+
+	<h3>Tooltip dentro de collapse</h3>
+	<p>Se você precisou colocar um tooltip dentro de um collapse, pode ser que o seu tooltip fique cortado, se estiver com este problema, use a classe <strong>.with-tooltip</strong> no elemento de collapse.</p>
+	<p>Este é um fix temporário e você deve usar com cuidado. O problema já foi corrigido nas últimas versões do Bootstrap e na próxima versão do Locastyle, a 2.0.</p>
+</article>

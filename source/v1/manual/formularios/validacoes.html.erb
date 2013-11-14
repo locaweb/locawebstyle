@@ -1,0 +1,32 @@
+---
+title: Formulários - Validações
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-formularios.erb
+---
+
+<article class="text">
+	<header>
+	  <h1>Validando campos</h1>
+	  <h3>Padrões de validações client-side.</h3>
+	</header>
+
+	<p>Tipos de validações. Normalmente usamos apenas a validação de error. Mas existem outras possibilidades.</p>
+
+	<p>O segredo está nas classes <strong>warning, error e sucess</strong>.</p>
+
+	<div class="control-group warning">
+		<label class="control-label" for="inputWarning">Input with warning</label>
+		<input type="text" id="inputWarning">
+		<span class="help-inline" style="width: 206px; ">Something may have gone wrong</span>
+	</div>
+	<div class="control-group error">
+		<label class="control-label" for="inputError">Input with error</label>
+		<input type="text" id="inputError">
+		<span class="help-inline" style="width: 206px; ">Please correct the error</span>
+	</div>
+	<div class="control-group success">
+		<label class="control-label" for="inputSuccess">Input with success</label>
+		<input type="text" id="inputSuccess">
+		<span class="help-inline" style="width: 206px; ">Woohoo!</span>
+	</div>
+</article>

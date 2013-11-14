@@ -1,0 +1,20 @@
+<%= partial "v1/partials/header" %>
+
+<!-- highlight -->
+<div class="highlight heading">
+	<div class="limit">
+		<h1>Documentação <span>Locaweb Style</span></h1>
+	</div>
+</div>
+<!-- END highlight -->
+
+<!-- Post content -->
+<section class="content limit">
+	<%= partial "v1/partials/navbar-manual" %>
+	<%= partial "v1/partials/sidebar-manual" %>
+
+	<%= yield %>
+</section>
+<!-- END post content -->
+
+<%= partial "v1/partials/footer" %>

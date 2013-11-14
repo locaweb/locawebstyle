@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="colorGreen">
+<head>
+  <title><%= data.page.title %></title>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width,initial-scale=1' />
+
+  <link rel="stylesheet" type="text/css" href="<%= base_url_v1 + bootstrap_css %>">
+  <%= stylesheet_link_tag "locastyle" %>
+
+</head>
+<body>
+
+<header id="header" role="banner">
+	<div class="accessibility">
+		<a href="#" tabindex="1" class="lnkContent">Ir para o conteúdo</a>
+	</div>
+	<div class="limit">
+		<a id="feedbackr" class="iframe lnkSugestoes" href="http://www.feedbackr.com.br/projects/4ffaceb03d7218307c00000c/feedbacks/new?feedback[referer]=::trial" target="_blank" alt="feedbackr">Sugestões</a><script type="text/javascript" charset="utf-8"> (function() { var s = document.createElement('script'); s.type = "text/javascript"; s.src = ('https:' == document.location.protocol ? 'https://www.feedbackr.com.br' : 'http://www.feedbackr.com.br') + "/projects/4ffaceb03d7218307c00000c/widget"; document.getElementsByTagName("body")[0].appendChild(s); })(); </script>
+
+		<h1 class="serviceName"><a href="/">Nome do projeto</a></h1>
+	</div>
+
+	<menu id="menuPrincipal" role="navigation">
+		<ul>
+			<li class="selected"><a href="/" class="ico-home" tabindex="2" role="menuitem">Página inicial</a></li>
+			<li><a href="/panel/lists" tabindex="2" role="menuitem">Listas de contatos</a></li>
+			<li><a href="/panel/messages" tabindex="2" role="menuitem">Mensagens</a></li>
+			<li><a href="/panel/campaigns" tabindex="2" role="menuitem">Campanhas</a></li>
+			<li><a href="/panel/template_defaults" tabindex="2" role="menuitem">Templates</a></li>
+			<li><a href="/panel/reports" tabindex="2" role="menuitem">Relatórios</a></li>
+			<li><a href="/panel/forms" tabindex="2" role="menuitem">Formulários</a></li>
+			<li><a href="/panel/settings" tabindex="2" role="menuitem">Configurações</a></li>
+		</ul>
+	</menu>
+</header>
+
+<div id="main">
+	<div class="limit">
+		<%= yield %>
+	</div>
+
+	<footer id="footer">
+	    <div class="footerTop">
+	        <div class="limit">
+	            <nav>
+	                <h6>Atendimento</h6>
+	                <ul>
+	                    <li class="ico-helpDesk"><a href="#">HelpDesk</a></li>
+	                    <li class="ico-Chat"><a href="#">Chat</a></li>
+	                    <li class="ico-Telefone"><a href="#">Telefone</a></li>
+	                </ul>
+	                <a href="#" class="lnkSeta lnkSetaWhite fright">Ver todas as formas de atendimento</a>
+	            </nav>
+	        </div>
+	    </div>
+	    <div class="subfooter">
+	        <div class="limit">
+	            <span class="lastAccess"><strong>Último acesso:</strong> 7/8/2011 22:35:49   <strong>IP:</strong> 201.87.65.217 <a href="#" class="icoInterroga">?</a></span>
+
+	            <p class="copyRight fright">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</p>
+	        </div>
+	    </div>
+	</footer>
+</div>
+</body>
+</html>

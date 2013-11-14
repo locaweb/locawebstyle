@@ -1,0 +1,49 @@
+---
+title: Componentes - Alternando textos
+
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-componentes.erb
+
+---
+
+<article class="text">
+	<header>
+		<h1>Alternando textos</h1>
+		<h3>Alterna textos alternativos em elementos diversos, por exemplo botões com ações alternativas</h3>
+	</header>
+
+	<p>As vezes surge a necessidade da mudança de texto de algum botão quando ele é clicado ou acionado. O texto alternativo é guardado no atributo <strong>data-text</strong> e essa funcionalidade é ativa com o atributo <strong>data-toggletext="true"</strong>. </p>
+
+	<div class="example">
+		<a href="#" data-text="Outro texto" data-toggle_text="click">Exemplo com link</a><br><br>
+		<a href="#" data-text="Mudando de texto" data-toggle_text="click" class="btn">Um botão simples</a>
+		<a href="#" data-text="Mudou!" data-toggle_text="hover" class="btn">Mudando com Hover</a>
+	</div>
+
+<pre class="lang-html prettyprint linenums">
+&lt;a href="#" data-text="Outro texto" data-toggle_text="click"&gt;Exemplo com link&lt;/a&gt;
+&lt;a href="#" data-text="Mudando de texto" data-toggle_text="click" class="btn"&gt;Um botão simples&lt;/a&gt;
+&lt;a href="#" data-text="Mudou!" data-toggle_text="hover" class="btn"&gt;Mudando com Hover&lt;/a&gt;
+</pre>
+
+	<h3>Atributos</h3>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th style="width: 150px;">Atributo</th>
+				<th>Descrição</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>data-text</td>
+				<td>É onde o texto alternativo é guardado</td>
+			</tr>
+			<tr>
+				<td>data-toggle_text</td>
+				<td>Com o valor <strong>hover</strong> define para mudar o texto no hover. O valor <strong>click</strong> define que o texto deverá ser mudado ao clicar.</td>
+			</tr>
+		</tbody>
+	</table>
+
+</article>

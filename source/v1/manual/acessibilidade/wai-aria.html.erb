@@ -1,0 +1,37 @@
+---
+title: Acessibilidade - WAI-ARIA
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-acessibilidade.erb
+---
+
+
+<article class="text">
+	<header>
+	  <h1>WAI-ARIA</h1>
+	  <h3>Extendendo a acessibilidade nas páginas por meio da semântica.</h3>
+	</header>
+
+	<p>O WAI-ARIA melhora ajuda a melhorar a semântica de elementos e ações do HTML. Essa semântica é estendida para widgets, estruturas e comportamentos, dessa forma os leitores de tela conseguem entender quando o usuário está interagindo com TABS ou elementos formatados. Por exemplo: você utiliza uma imagem personalizada para simular o comportamento de um <strong>input radio</strong>. É possível fazer todo o comportamento emulando as ações de um input radio via javascript. O problema é que os leitores de tela não vão entender esse comportamento, e é aí que entra o WAI-ARIA, avisando ao leitor de tela que determinado elemento é um input radio. </p>
+
+	<p>Com WAI-ARIA também podemos definir áreas de navegação na página, avisando o leitor de tela que na página existem cabeçalho, rodapé, content, sidebar e etc... O Locaweb Style já faz uma captação automática destas áreas, inserindo as respectivas <strong>roles</strong>. Veja o pedaço de código exemplificando:</p>
+
+<pre class="lang-javascript prettyprint linenums">
+//
+// Menu
+$('#menuPrincipal').attr('role','navigation');
+$('#menuPrincipal li a').attr('role','menuitem');
+
+$('#rodape').attr('role','contentinfo');
+$('.alert').attr('role','alert');
+$('a.btn').attr('role','button');
+$('.boxGray').attr('role','region');
+$('.boxGray h2').attr('role','presentation');
+$('.headerPrincipal').attr('role','banner');
+$('.content').attr('role','main'); // criar essa classe nos produtos ??
+$('.sidebar').attr('role','complementary');
+
+//
+// TABS
+$('.tabs').attr('role','tablist');
+</pre>
+</article>

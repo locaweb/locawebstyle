@@ -83,6 +83,7 @@ set :bootstrap_js, '/assets/bootstrap/js/bootstrap.js'
 set :bootstrap_css, '/assets/bootstrap/css/bootstrap.css'
 
 set :base_url, ""
+set :base_url_v1, "/v1"
 
 activate :directory_indexes
 
@@ -112,6 +113,7 @@ configure :build do
   # require "middleman-smusher"
   # activate :smusher
   set :base_url, "/locawebstyle"
+  set :base_url_v1, "/locawebstyle/v1"
 
   # Or use a different image path
   # set :http_path, "/Content/images/"

@@ -1,0 +1,75 @@
+---
+title: Formulários - Máscaras de capos
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-formularios.erb
+---
+
+<article class="text">
+    <header>
+      <h1>Máscaras de formulários</h1>
+      <h3>Fazendo máscaras para formulários como CPF, datas e outros tipos.</h3>
+    </header>
+
+    <p>Utilizamos o plugin <a href="http://digitalbush.com/projects/masked-input-plugin/">Masked Input</a> para criar máscaras de campos de formulários. No Locaweb Style nós não tratamos nenhuma máscara por default, logo você precisará fazer isso no seu projeto. O funcionamento é muito simples. Você pode definir em uma linha no seu Javascript/JQuery como será a máscara dos determinados inputs.</p>
+
+    <div class="example">
+      <div class="formInline">
+        <div class="control-group">
+          <label>Data:</label>
+          <input type="text" id="data">
+        </div>
+        <div class="control-group">
+          <label>Telefone:</label>
+          <input type="text" id="telefone">
+        </div>
+        <div class="control-group">
+          <label>CPF:</label>
+          <input type="text" id="cpf">
+        </div>
+      </div>
+    </div>
+
+    <pre class="lang-javascript prettyprint linenums">$("#data").mask("99/99/9999");
+      //Aceita até 9 digitos
+      $('#telefone').mask("(99) 9999-9999?9").ready(function(event) {
+        var target, phone, element;
+        target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+        phone = target.value.replace(/\D/g, '');
+        element = $(target);
+        element.unmask();
+        if(phone.length &gt; 10) {
+        element.mask("(99) 99999-999?9");
+    } else {
+    element.mask("(99) 9999-9999?9");
+    }
+  });
+  $("#cpf").mask("999.999.999-99");
+  </pre>
+  <hr class="sep">
+  <h3>Trocando o Underline por outra coisa</h3>
+  <p>Se você não quer que a máscara fique com os underlines (___), você pode modificar pelo parâmetro placeholder, assim:</p>
+  <p>Assim, ele mostraria espaços em vez de _ (underline).</p>
+  <div class="example">
+    <div class="control-group formInline">
+      <label>CPF:</label>
+      <input type="text" id="cpf2">
+    </div>
+  </div>
+  <pre class="lang-javascript prettyprint linenums">$("#cpf").mask("999.999.999-99",{placeholder:" "});</pre>
+
+  <hr class="sep">
+
+  <h3>Executando uma função</h3>
+  <p>Você pode executar uma função quando o campo for totalmente completo.</p>
+
+  <div class="example">
+   <div class="control-group formInline">
+     <label>Data:</label>
+     <input type="text" id="data2">
+   </div>
+  </div>
+  <pre class="lang-javascript prettyprint linenums">$("#data").mask("99/99/9999",{completed:function(){alert("Você digitou a data: "+this.val());}});</pre>
+
+  <p>Veja <a href="http://digitalbush.com/projects/masked-input-plugin/">outras funções desse plugin aqui</a>.</p>
+
+</article>

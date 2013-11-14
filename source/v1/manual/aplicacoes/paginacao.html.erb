@@ -1,0 +1,71 @@
+---
+title: Aplicações - Paginação
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-aplicacoes.erb
+---
+
+
+<article class="text">
+
+	<header>
+		<h1>Paginação</h1>
+		<h3>Exibição de navegação por páginas.</h3>
+	</header>
+	<p>Navegação entre páginas e controle de quantidade de elementos que serão exibidos nas páginas.</p>
+
+	<div class="navView">
+		<div class="pagination">
+			<ul>
+				<li class="prev"><span class="previous_page disabled">Anterior</span></li>
+				<li class="active"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li class="disabled"><a href="#">...</a></li>
+				<li class="next"><a href="#">Próximo</a></li>
+			</ul>
+		</div>
+
+		<div class="filtroExibe">
+			<label class="select optional dinlineblock" for="per-page-top">Exibir </label>
+			<select class="select optional transaction-search-per-page" id="per-page-top" name="per_page">
+				<option value=""></option>
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="30">30</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+			</select>
+			ítens por página
+		</div>
+	</div>
+
+<pre class="lang-html prettyprint linenums">
+&lt;div class=&quot;navView&quot;&gt;
+	&lt;div class=&quot;pagination&quot;&gt;
+		&lt;ul&gt;
+			&lt;li class=&quot;prev&quot;&gt;&lt;span class=&quot;previous_page disabled&quot;&gt;Anterior&lt;/span&gt;&lt;/li&gt;
+			&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;Pr&oacute;ximo&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;filtroExibe&quot;&gt;
+		&lt;label class=&quot;select optional dinlineblock&quot; for=&quot;per-page-top&quot;&gt;Exibir &lt;/label&gt;
+		&lt;select class=&quot;select optional transaction-search-per-page&quot; id=&quot;per-page-top&quot; name=&quot;per_page&quot;&gt;
+			&lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+			&lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+			&lt;option value=&quot;20&quot;&gt;20&lt;/option&gt;
+			&lt;option value=&quot;30&quot;&gt;30&lt;/option&gt;
+			&lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+			&lt;option value=&quot;100&quot;&gt;100&lt;/option&gt;
+		&lt;/select&gt;
+		&iacute;tens por p&aacute;gina
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</article>
