@@ -9,8 +9,9 @@ layout: false
 		<meta charset="utf-8">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link rel="stylesheet" type="text/css" href="<%= base_url_v1 + bootstrap_css %>">
-		<%= stylesheet_link_tag "locastyle" %>
+
+		<link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/1.2.8/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/1.2.8/stylesheets/locastyle.css">
 		<style>
 			.the-icons li{
 				font-size: 16px;
@@ -187,7 +188,7 @@ layout: false
 					</div>
 				</div>
 				<hr>
-				
+
 				<div class="boxCollapse active notification">
 					<header data-target="#info_notify" data-toggle="collapse">
 						<h3>Notificações</h3>
@@ -289,7 +290,7 @@ layout: false
 						</div>
 					</div>
 				</div>
-							
+
 				<p>
 					Notificações desabilitadas/vazia
 				</p>
@@ -299,7 +300,7 @@ layout: false
 						<span class="valueNotify empty ">0</span>
 					</header>
 					<div id="info_notify_empty" class="collapse in">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 					</div>
 				</div>
 
@@ -1726,9 +1727,8 @@ layout: false
 			</div>
 		</div>
 
-
-		<%= javascript_include_tag "libs" %>
-		<%= javascript_include_tag "locastyle" %>
-		<script src="<%= base_url_v1 + bootstrap_js %>"></script>
+		<script src="//assets.locaweb.com.br/locastyle/1.2.8/javascripts/libs.js"></script>
+		<script src="//assets.locaweb.com.br/locastyle/1.2.8/javascripts/locastyle.js"></script>
+		<script src="//assets.locaweb.com.br/locastyle/1.2.8/bootstrap/js/bootstrap.js"></script>
 	</body>
 </html>
