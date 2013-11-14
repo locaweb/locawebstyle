@@ -68,6 +68,9 @@ end
 #   end
 # end
 
+#ignore files
+ignore "/v1/layouts/*.html"
+
 ####
 #### Versões e URL de downloads
 ####
