@@ -1,267 +1,322 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <title>Componentes - Barra de Progresso - Guia de estilos da Locaweb</title>
-  <meta charset="utf-8">
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+	<title>Componentes - Barra de Progresso</title>
+	<meta charset="utf-8">
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+	<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/locawebstyle/assets/bootstrap/css/bootstrap.css">
-  <link href="../../../assets/stylesheets/locastyle.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="../../../assets/stylesheets/manual.css" media="screen" rel="stylesheet" type="text/css" />
-
+	<link rel="stylesheet" type="text/css" href="/locawebstyle/assets/bootstrap/css/bootstrap.css">
+	<link href="../../../assets/stylesheets/locastyle.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../../../assets/stylesheets/manual.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body class="manual manual_componentes manual_componentes_botoes manual_componentes_botoes_index">
 
-<!-- topbar header -->
-<header id="topbar" class="clearfix">
-  <div class="limit">
-    <!-- <h1 class="logo"><a href="#"><img src="/assets/img/manual/logo.png" alt="Locaweb Hosting"></a></h1> -->
-    <h1 class="logo"><a href="/locawebstyle">LOCAWEB STYLE</a></h1>
-    <ul class="social-links">
-      <!-- <li><a href="#"><img alt="Nosso Facebook" class="img-facebook" src="../../../assets/images/manual/ico-facebook.png" /></a> -->
-      <li><a href="http://twitter.com/locawebdevnet"><img alt="Nosso Twitter" class="img-twitter" src="../../../assets/images/manual/ico-twitter.png" /></a>
-    </ul>
-  </div>
-</header>
-<!-- END topbar header -->
+	<!-- topbar header -->
+	<header id="topbar" class="clearfix">
+		<div class="container">
+			<h1 class="logo"><a href="/locawebstyle/">LOCAWEB STYLE</a></h1>
+			<ul class="social-links">
+				<li>
+					<a target="_blank" href="http://twitter.com/locawebdevnet">
+						<img alt="Nosso Twitter" class="img-twitter" src="../../../assets/images/manual/ico-twitter.png" />
+					</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<!-- END topbar header -->
 <!-- highlight -->
 <div class="highlight heading">
-	<div class="limit">
+	<div class="container">
 		<h1>Documentação <span>Locaweb Style</span></h1>
 	</div>
 </div>
 <!-- END highlight -->
 
-<!-- Post content -->
-<section class="content limit">
+<main class="main">
+	<!-- Post content -->
+	<section class="content container">
 
-      <div class="navbar">
-      <div class="navbar-inner">
-        <ul class="nav">
-          <li><a href="/locawebstyle/manual/introducao/informacoes-iniciais">Introdução</a></li>
-          <li><a href="/locawebstyle/manual/componentes/abas">Componentes</a></li>
-          <li><a href="/locawebstyle/manual/formularios/campos">Formulários</a></li>
-          <li><a href="/locawebstyle/manual/aplicacoes/busca-avancada">Aplicações</a></li>
-          <li><a href="/locawebstyle/manual/layout/cores-principais">Layout</a></li>
-          <li><a href="/locawebstyle/manual/acessibilidade/tabindex">Acessibilidade</a></li>
-          <li><a href="/locawebstyle/manual/elementos">Cartilha de Elementos</a></li>
-        </ul>
-      </div>
-    </div>
-
-	<aside class="sidebar">
+		<nav id="menu" class="navbar navbar-default navbar-static-top" role="navigation">
+	<div class="navbar-inner">
+		<ul class="nav navbar-nav">
+			<li><a href="/locawebstyle/manual/introducao/como-usar">Introdução</a></li>
+			<li><a href="/locawebstyle/manual/praticas-padroes/introducao">Práticas e Padrões</a></li>
+			<li><a href="/locawebstyle/manual/layout/grid">Layout</a></li>
+			<li><a href="/locawebstyle/manual/componentes/abas">Componentes</a></li>
+			<li><a href="/locawebstyle/manual/formularios">Formulários</a></li>
+			<li><a href="/locawebstyle/manual/exemplos">Telas de Exemplos</a></li>
+			<li><a target="_blank" href="/locawebstyle/manual/elementos">Cartilha de Elementos</a></li>
+		</ul>
+	</div>
+</nav>
+		<div class="row">
+			<aside class="sidebar-manual col-lg-3 col-md-3">
 	<!-- Menu de Componentes -->
 <nav>
 	<h1>Informações</h1>
 	<ul>
 		<li><a href="/locawebstyle/manual/componentes/abas">Abas ou Tabs</a></li>
+		<li><a href="/locawebstyle/manual/componentes/collapse">Collapse</a></li>
+		<li><a href="/locawebstyle/manual/componentes/dropdowns">Dropdowns</a></li>
 		<li><a href="/locawebstyle/manual/componentes/alertas">Alertas</a></li>
+		<li><a href="/locawebstyle/manual/componentes/paginacao">Filtro exibição e paginação</a></li>
 		<li><a href="/locawebstyle/manual/componentes/alternando-textos">Alternador de texto</a></li>
+		<li><a href="/locawebstyle/manual/componentes/alternando-classes">Alternador de classes</a></li>
 		<li><a href="/locawebstyle/manual/componentes/barra-progresso">Barra de progresso</a></li>
 		<li><a href="/locawebstyle/manual/componentes/botoes">Botões</a></li>
-		<!--
-		<li>Chamada 1 elemento</li>
-		<li>Choose box</li>
-		-->
-		<li><a href="/locawebstyle/manual/componentes/icones">Ícones</a></li>
-		<li><a href="/locawebstyle/manual/componentes/labels">Labels</a></li>
+		<li><a href="/locawebstyle/manual/componentes/breadcrumb">Breadcrumb</a></li>
+		<li><a href="/locawebstyle/manual/componentes/labels">Labels ou Tags</a></li>
 		<li><a href="/locawebstyle/manual/componentes/modal">Modal ou Lightbox</a></li>
-		<li><a href="/locawebstyle/manual/componentes/path">Paths</a></li>
-		<li><a href="/locawebstyle/manual/componentes/slider">Slider</a></li>
+		<!-- <li><a href="/locawebstyle/manual/componentes/path">Paths</a></li> -->
+		<li><a href="/locawebstyle/manual/componentes/popover">Popover</a></li>
+		<li><a href="/locawebstyle/manual/componentes/carousel">Carousel</a></li>
 		<!-- <li><a href="/locawebstyle/manual/componentes/submenu">Sub-menu</a></li> -->
 		<li><a href="/locawebstyle/manual/componentes/tabelas">Tabelas</a></li>
 		<li><a href="/locawebstyle/manual/componentes/tooltip">Tooltip</a></li>
+		<li><a href="/locawebstyle/manual/componentes/wells">Wells ou boxes</a></li>
+		<li><a href="/locawebstyle/manual/componentes/classes-funcionais">Classes funcionais</a></li>
 	</ul>
 </nav>
 
 </aside>
 
 
-	<article class="text">
-	<header>
-		<h1>Botões</h1>
-		<h3>Formatação de botões</h3>
-	</header>
+			<article class="text col-lg-9 col-md-9">
+				<header>
+	<h1>Botões</h1>
+	<h3>Formatação de botões</h3>
+</header>
 
-	<p>
-		Os botões são feitos <a href="http://twitter.github.com/bootstrap/base-css.html#buttons">utilizando o padrão do Bootstrap</a>. É muito simples de implementar. Basta fazer um link ou input submit e inserir a classe <strong>btn</strong>. Dependendo da utilidade do botão, insira as <a href="http://twitter.github.com/bootstrap/base-css.html#buttons">classes descritas no Bootstrap</a>:
-	</p>
+<p>Os botões são feitos <a href="http://twitter.github.com/bootstrap/base-css.html#buttons">utilizando o padrão do Bootstrap</a>. É muito simples de implementar.</p>
 
-	<table class="table table-bordered table-striped">
-		<thead>
-			<tr>
-				<th class="span3">Botão</th>
-				<th>Classe</th>
-				<th>Descrição</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>
-					<button class="btn disabled">Desabilitado</button>
-				</td>
-				<td><code>btn disabled</code></td>
-				<td>Quando tem a classe DISABLED, desabilitamos o evento de clique.</td>
-			</tr>
-			<tr>
-				<td>
-					<button class="btn">Padrão</button>
-				</td>
-				<td><code>btn</code></td>
-				<td>Cinza padrão</td>
-			</tr>
-			<tr>
-				<td>
-					<button class="btn ico-plus">Padrão</button>
-				</td>
-				<td><code>btn</code></td>
-				<td>Cinza padrão</td>
-			</tr>
-			<tr>
-				<td><button class="btn btn-primary" href="#">Primário</button></td>
-				<td><code>btn btn-primary</code></td>
-				<td>Botões primários</td>
-			</tr>
-			<tr>
-				<td><button class="btn btn-success ico-user-add" href="#">Primário</button></td>
-				<td><code>btn btn-success ico-plus</code></td>
-				<td>Botões primários</td>
-			</tr>
-			<tr>
-				<td><button class="btn btn-info" href="#">Info</button></td>
-				<td><code>btn btn-info</code></td>
-				<td>Usado como uma alternativa para os botões default</td>
-			</tr>
-			<tr>
-				<td><button class="btn btn-success" href="#">Sucesso</button></td>
-				<td><code>btn btn-success</code></td>
-				<td>Indica uma ação de sucesso ou positiva</td>
-			</tr>
-			<tr>
-				<td><button class="btn btn-warning" href="#">Warning</button></td>
-				<td><code>btn btn-warning</code></td>
-				<td>Indica que o usuário deve ter cuidado com essa ação</td>
-			</tr>
-			<tr>
-				<td><button class="btn btn-danger" href="#">Danger</button></td>
-				<td><code>btn btn-danger</code></td>
-				<td>Indica perigo, ação negativa</td>
-			</tr>
-			<tr>
-				<td><button class="btn btn-inverse" href="#">Neutro</button></td>
-				<td><code>btn btn-inverse</code></td>
-				<td>Botão preto, alternativo, com semântica e significado neutro</td>
-			</tr>
-			<tr>
-				<td><button class="btn btn-primary ico-right-open-2 icoPosRight btn-large" id="submit">Próximo passo</button></td>
-				<td><code>btn btn-primary ico-right-open-2 icoPosRight btn-large</code></td>
-				<td>Botões com ícones do lado direito. Basta inserir a classe <strong>icoPosRight</strong></td>
-			</tr>
-			<tr>
-				<td>
-					<div class="btn-group">
-						<a class="btn btn-primary ico-user" href="#">User</a><a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
-							<li><a href="#"><i class="icon-trash"></i> Delete</a></li>
-							<li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
-							<li class="divider"></li>
-							<li><a href="#"><i class="i"></i> Make admin</a></li>
-						</ul>
-					</div>
-				</td>
-				<td><code>btn btn-primary ico-right-open-2 icoPosRight btn-large</code></td>
-				<td>Botões com ícones do lado direito. Basta inserir a classe <strong>icoPosRight</strong></td>
-			</tr>
-			<tr>
-				<td>
-					<div class="btn-group">
-						<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></button>
-						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-						</ul>
-					</div>
-				</td>
-				<td>Atríbutos: <code> class="btn btn-danger dropdown-toggle" data-toggle="dropdown"</code></td>
-				<td>Opções agrupadas, mas ativados no próprio botão</td>
-			</tr>
-		</tbody>
-	</table>
-	<hr>
-	<h3>Agrupando botões</h3>
-	<p>Você pode utilizar os botões dentro de uma caixa, que é padrão nas modais e em diversos lugares dos sistemas.</p>
-	<br><br>
-	<div class="example">
-		<div class="boxActions">
-			<input class="btn btn-primary" name="commit" type="submit" value="Atualizar Conta">
-			<a href="#" class="btn" data-dismiss="modal">Cancelar</a>
-		</div>
-	</div>
+<div class="example">
+	<button type="button" class="btn btn-default">Default</button>
 
-<pre class="lang-html prettyprint linenums">
-&lt;div class="boxActions"&gt;
-&lt;input class="btn btn-primary" name="commit" type="submit" value="Atualizar Conta"&gt;
-&lt;a href="#" class="btn" data-dismiss="modal"&gt;Cancelar&lt;/a&gt;
-&lt;/div&gt;
+	<button type="button" class="btn btn-primary">Primary</button>
+
+	<button type="button" class="btn btn-success">Success</button>
+
+	<button type="button" class="btn btn-info">Info</button>
+
+	<button type="button" class="btn btn-warning">Warning</button>
+
+	<button type="button" class="btn btn-danger">Danger</button>
+</div>
+
+<pre class="lang-html prettyprint-code linenums">
+<!-- Padrão cinza -->
+<button type="button" class="btn btn-default">Default</button>
+
+<!-- Para botões com ação primária -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Botões que indicam ação positiva ou de sucesso -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Botão de de informação ou mensagens alerta -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indica cuidado com esta ação -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indica perigo ou ação negativa -->
+<button type="button" class="btn btn-danger">Danger</button>
 </pre>
 
-</article>	
-</section>
-<!-- END post content -->
+<h2>Botões grandes, médios e pequenos</h2>
+<p>Bata inserir a classe <code>.btn-lg</code>, <code>.btn-sm</code> ou <code>.btn-xs</code> para modificar o tamanho do seu botão.</p>
+<div class="example">
+	<p>
+		<button type="button" class="btn btn-primary btn-lg">Botão grande</button>
+		<button type="button" class="btn btn-default btn-lg">Botão grande</button>
+	</p>
+	<p>
+		<button type="button" class="btn btn-primary">Botão padrão</button>
+		<button type="button" class="btn btn-default">Botão padrão</button>
+	</p>
+	<p>
+		<button type="button" class="btn btn-primary btn-sm">Botão pequeno</button>
+		<button type="button" class="btn btn-default btn-sm">Botão pequeno</button>
+	</p>
+	<p>
+		<button type="button" class="btn btn-primary btn-xs">Extra Botão pequeno</button>
+		<button type="button" class="btn btn-default btn-xs">Extra Botão pequeno</button>
+	</p>
+</div>
+
+<pre class="lang-html prettyprint-code linenums">
+<button type="button" class="btn btn-primary btn-lg">Botão grande</button>
+<button type="button" class="btn btn-default btn-lg">Botão grande</button>
+
+<button type="button" class="btn btn-primary">Botão padrão</button>
+<button type="button" class="btn btn-default">Botão padrão</button>
+
+<button type="button" class="btn btn-primary btn-sm">Botão pequeno</button>
+<button type="button" class="btn btn-default btn-sm">Botão pequeno</button>
+
+<button type="button" class="btn btn-primary btn-xs">Extra Botão pequeno</button>
+<button type="button" class="btn btn-default btn-xs">Extra Botão pequeno</button>
+</pre>
+
+<h2>Botões blocados</h2>
+<p>Às vezes podemos usamos botões que ocupem todo o espaço disponível, para tanto use a classe <code>.btn-block</code>. Isso aplicará um <code>display: block;</code> ao elemento.</p>
+
+<div class="example">
+	<button type="button" class="btn btn-primary btn-lg btn-block">Botão em forma de bloco</button>
+	<button type="button" class="btn btn-default btn-lg btn-block">Botão em forma de bloco</button>
+</div>
 
 
+<pre class="lang-html prettyprint-code linenums">
+<button type="button" class="btn btn-primary btn-lg btn-block">Botão em forma de bloco</button>
+<button type="button" class="btn btn-default btn-lg btn-block">Botão em forma de bloco</button>
+</pre>
 
-<!-- Other Guides -->
-<!-- <section class="other-guides cBoth">
-	<div class="limit">
-		<h1>Outros guias Locaweb</h1>
-		<ul>
-			<li>
-				<a href="#">
-					<img src="images/thumb-email.png">
-					<h2>Email Marketing</h2>
-				</a>
-			</li>
+<h2>Desabilitando botões</h2>
+<p>Se os botões forem feitos com input, basta inserir o atributo disabled que os browsers cuidarão do resto. Se o botõa foi feito usando links, use a classe <code>.disabled</code>. Esta classe além de visual, remove a ação do link. </p>
 
-			<li>
-				<a href="#">
-					<img src="images/thumb-email.png">
-					<h2>Cloud e Servidores dedicados</h2>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/thumb-email.png">
-					<h2>Criador de sites mobile</h2>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/thumb-email.png">
-					<h2>Email Locaweb</h2>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/thumb-email.png">
-					<h2>Registro de Domínio</h2>
-				</a>
-			</li>
+<div class="example">
+	<button type="button" class="btn btn-lg btn-primary" disabled="disabled">Botão desabilitado</button>
+	<a href="http://developer.locaweb.com.br" class="btn btn-primary btn-lg disabled">Botão como link</a>
+</div>
+
+<pre class="lang-html prettyprint-code linenums">
+<button type="button" class="btn btn-lg btn-primary" disabled="disabled">Botão desabilitado</button>
+<a href="http://developer.locaweb.com.br" class="btn btn-primary btn-lg disabled">Botão como link</a>
+</pre>
+
+<h2>Botões com ícones</h2>
+<p>Se você adicionar classes de ícones nos botões, eles já aparecerão no lugar correto, dispensando a inserção de elementos vazios para fazer os ícones. Veja exemplos abaixo.</p>
+
+<div class="example">
+	<button class="btn btn-success  ico-user " href="#">Adicionar Usuário</button>
+	<button class="btn btn-danger ico-remove" href="#">Apagar</button>
+	<button class="btn btn-default ico-cog" href="#">Configurar</button>
+	<button class="btn  ico-direction-right ico-pos-right" href="#">Próximo</button>
+</div>
+
+<pre class="lang-html prettyprint-code linenums">
+<button class="btn btn-success  ico-user " href="#">Adicionar Usuário</button>
+<button class="btn btn-danger ico-remove" href="#">Apagar</button>
+<button class="btn btn-default ico-cog" href="#">Configurar</button>
+<button class="btn  ico-direction-right ico-pos-right" href="#">Próximo</button>
+</pre>
+
+<h2>Botões com dropdown</h2>
+<p>Botões que acompanham algum dropdown precisam tem os atributos abaixo:</p>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Atributo</th>
+			<th>Valor</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>dropdown-toggle</td>
+		</tr>
+		<tr>
+			<td>data-toggle</td>
+			<td>dropdown</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="bs-callout bs-callout-danger">
+	<h4>Setinhas dentro de dropdown</h4>
+	<p>No Locaweb Style fizemos uma melhoria, então as setinhas são inseridas diretas <code>:before</code> do elemento, sendo assim não há a necessidade de ter o html	<pre class="lang-html prettyprint-code linenums"><span class="caret"></span></pre>que vem do boostrap, senão ficará com 2 setinhas, conforme no exemplo abaixo: </p>
+
+	<div class="dropdown">
+		<a id="drop1" href="#" role="button" class="dropdown-toggle btn btn-default" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Action</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Another action</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Something else here</a></li>
+			<li role="presentation" class="divider"></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Separated link</a></li>
 		</ul>
 	</div>
-</section> -->
-<!-- END Other Guides -->
+</div>
 
+<p>Juntamente com o código do dropdown, que é feito aqui com UL.</p>
+<p>Lembre-se que é necessário que eles estejam dentro de um elemento chamado <code>.btn-group</code> para que a seta de dropdown fique "acoplado" ao botão.</p>
 
+<div class="example">
+	<div class="btn-group">
+		<a class="btn btn-primary ico-user" href="#">User</a><a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"></a>
+		<ul class="dropdown-menu">
+			<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+			<li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+			<li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+			<li class="divider"></li>
+			<li><a href="#"><i class="i"></i> Make admin</a></li>
+		</ul>
+	</div>
+</div>
+
+<pre class="lang-html linenums prettyprint-code">
+<div class="btn-group">
+	<a class="btn btn-primary ico-user" href="#">User</a>
+	<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+
+	</a>
+	<ul class="dropdown-menu">
+		<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+		<li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+		<li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+		<li class="divider"></li>
+		<li><a href="#"><i class="i"></i> Make admin</a></li>
+	</ul>
+</div>
+</pre>
+
+<p>Um outro exemplo seria o que segue abaixo, sem a seta:</p>
+
+<div class="example">
+
+	<div class="btn-group">
+		<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger</button>
+		<ul class="dropdown-menu">
+			<li><a href="#">Action</a></li>
+			<li><a href="#">Another action</a></li>
+			<li><a href="#">Something else here</a></li>
+			<li class="divider"></li>
+			<li><a href="#">Separated link</a></li>
+		</ul>
+	</div>
+
+</div>
+
+<pre class="lang-html linenums prettyprint-code">
+	<div class="btn-group">
+		<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+			Danger
+		</button>
+		<ul class="dropdown-menu">
+			<li><a href="#">Action</a></li>
+			<li><a href="#">Another action</a></li>
+			<li><a href="#">Something else here</a></li>
+			<li class="divider"></li>
+			<li><a href="#">Separated link</a></li>
+		</ul>
+	</div>
+</pre>
+
+			</article>
+		</div>
+
+	</section>
+	<!-- END post content -->
+
+	
 
 <!-- footer -->
 <footer class="footer">
-  <div class="limit">
+  <div class="container">
     <h1 class="logo">
       <a href="http://developer.locaweb.com.br/locawebstyle/"><img alt="Locaweb Style" class="img-logo-footer" src="../../../assets/images/manual/logo-footer.png" /></a>
     </h1>
@@ -270,6 +325,13 @@
 </footer>
 <!-- END footer-->
 
+
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="../../../assets/javascripts/locastyle.js" type="text/javascript"></script>
+  <script src="/locawebstyle/assets/bootstrap/js/bootstrap.js"></script>
+  <script src="/locawebstyle/assets/google-code-prettify/src/prettify.js"></script>
+  <script src="../../../assets/javascripts/manual.js" type="text/javascript"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -281,12 +343,7 @@
   ga('send', 'pageview');
 
 </script>
-
-  <script src="../../../assets/javascripts/libs.js" type="text/javascript"></script>
-<script src="../../../assets/javascripts/locastyle.js" type="text/javascript"></script>
-<script src="../../../assets/javascripts/manual.js" type="text/javascript"></script>
-  <script src="/locawebstyle/assets/bootstrap/js/bootstrap.js"></script>
-  <script src="/locawebstyle/assets/prettify/prettify.js"></script>
-
 </body>
 </html>
+
+</main>

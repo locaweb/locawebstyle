@@ -1,244 +1,480 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="colorGreen">
+<html lang="pt-br" class="color-green">
 <head>
-  <title>Home de um sistema</title>
-  <meta charset="utf-8">
-  <meta name='viewport' content='width=device-width,initial-scale=1' />
-
-  <link rel="stylesheet" type="text/css" href="/locawebstyle/assets/bootstrap/css/bootstrap.css">
-  <link href="../../../assets/stylesheets/locastyle.css" media="screen" rel="stylesheet" type="text/css" />
-
+	<title>Locaweb Style</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucid">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="apple-touch-icon" href="/assets/images/locastyle/ico_app_114.png">
+	<link rel="stylesheet" type="text/css" href="/locawebstyle/assets/bootstrap/css/bootstrap.css">
+	<link href="../../../assets/stylesheets/locastyle.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-<header id="header" role="banner">
-	<div class="accessibility">
-		<a href="#" tabindex="1" class="lnkContent">Ir para o conteúdo</a>
-	</div>
-	<div class="limit">
-		<a id="feedbackr" class="iframe lnkSugestoes" href="http://www.feedbackr.com.br/projects/4ffaceb03d7218307c00000c/feedbacks/new?feedback[referer]=::trial" target="_blank" alt="feedbackr">Sugestões</a><script type="text/javascript" charset="utf-8"> (function() { var s = document.createElement('script'); s.type = "text/javascript"; s.src = ('https:' == document.location.protocol ? 'https://www.feedbackr.com.br' : 'http://www.feedbackr.com.br') + "/projects/4ffaceb03d7218307c00000c/widget"; document.getElementsByTagName("body")[0].appendChild(s); })(); </script>
+	<header class="header" role="banner">
+		<div class="container">
+			<span class="control-menu hidden visible-xs ico-menu-2"></span>
+			<span class="control-sidebar hidden visible-xs ico-list"></span>
+			<h1 class="project-name"><a href="#">Nome do Sistema</a></h1>
+			<a href="#" class="help-sugestions ico-question hidden-xs">Ajuda e Sugestões</a>
 
-		<h1 class="serviceName"><a href="/">Nome do projeto</a></h1>
-	</div>
-
-	<menu id="menuPrincipal" role="navigation">
-		<ul>
-			<li class="selected"><a href="/" class="ico-home" tabindex="2" role="menuitem">Página inicial</a></li>
-			<li><a href="/panel/lists" tabindex="2" role="menuitem">Listas de contatos</a></li>
-			<li><a href="/panel/messages" tabindex="2" role="menuitem">Mensagens</a></li>
-			<li><a href="/panel/campaigns" tabindex="2" role="menuitem">Campanhas</a></li>
-			<li><a href="/panel/template_defaults" tabindex="2" role="menuitem">Templates</a></li>
-			<li><a href="/panel/reports" tabindex="2" role="menuitem">Relatórios</a></li>
-			<li><a href="/panel/forms" tabindex="2" role="menuitem">Formulários</a></li>
-			<li><a href="/panel/settings" tabindex="2" role="menuitem">Configurações</a></li>
-		</ul>
-	</menu>
-</header>
-
-<div id="main">
-	<div class="limit">
-		<div class="row">
-	<div class="span12">
-
-		<div class="boxGray revisit" role="region">
-				<h2 class="titleContent" role="presentation">Acesso rápido</h2>
-
-			<div class="shortcutBox expandBox microBox">
-				<div>
-					<a href="/panel/lists" tabindex="2" title="Você pode cadastrar os seus contatos manualmente ou importá-los de uma lista.">
-						<h3 class="chamaicon-addcontact"><span class="shortcutTitle">Cadastre seus<br>contatos</span></h3>
-						<p>Você pode cadastrar os seus contatos manualmente ou importá-los de uma lista.</p>
-					</a>
-				</div>
-				<div>
-					<a href="/panel/messages" tabindex="2" title="Crie e personalize suas mensagens através de um dos nossos templates pré-definidos.">
-						<h3 class="chamaicon-sendemail"><span class="shortcutTitle">Crie e envie <br>mensagens</span></h3>
-						<p>Crie e personalize suas mensagens através de um dos nossos templates pré-definidos.</p>
-					</a>
-				</div>
-				<div>
-					<a href="/panel/reports" tabindex="2" title="Acompanhe a evolução de suas mensagens através de relatórios detalhados.">
-						<h3 class="chamaicon-stats"><span class="shortcutTitle">Acompanhe os resultados</span></h3>
-						<p>Acompanhe a evolução de suas mensagens através de relatórios detalhados.</p>
-					</a>
-				</div>
-			</div>
-			<a href="#" class="lnkArrow minShortcuts" data-text="Expandir Atalhos" title="Expandir Atalhos">Expandir Atalhos</a>
-		</div>
-
-		<section class="statusMessageInfo">
-			<h2 class="titDots">Visualizações últimas mensagens</h2>
-					<div class="messageInfo" style="cursor: pointer; ">
-						<div class="span2 countViews gradient">
-							<h5>Visualizações</h5>
-							<h6>4</h6>
-						</div>
-						<div class="span2 statusContact txtCenter">
-							<h5>Contatos</h5>
-							<p><strong>9</strong></p>
-						</div>
-						<div class="span5">
-							<h5>Mensagens</h5>
-							<p><a href="/panel/reports/51f1109838a5823de5000d5d" data-clickable=".messageInfo">BID-20130725</a></p>
-						</div>
-						<div class="span2">
-							<h5>Campanha</h5>
-							<p>-</p>
-						</div>
-					</div>
-					<div class="messageInfo" style="cursor: pointer; ">
-						<div class="span2 countViews gradient">
-							<h5>Visualizações</h5>
-							<h6>4</h6>
-						</div>
-						<div class="span2 statusContact txtCenter">
-							<h5>Contatos</h5>
-							<p><strong>9</strong></p>
-						</div>
-						<div class="span5">
-							<h5>Mensagens</h5>
-							<p><a href="/panel/reports/51f1109838a5823de5000d5d" data-clickable=".messageInfo">BID-20130725</a></p>
-						</div>
-						<div class="span2">
-							<h5>Campanha</h5>
-							<p>-</p>
-						</div>
-					</div>
-					<div class="messageInfo" style="cursor: pointer; ">
-						<div class="span2 countViews gradient">
-							<h5>Visualizações</h5>
-							<h6>4</h6>
-						</div>
-						<div class="span2 statusContact txtCenter">
-							<h5>Contatos</h5>
-							<p><strong>9</strong></p>
-						</div>
-						<div class="span5">
-							<h5>Mensagens</h5>
-							<p><a href="/panel/reports/51f1109838a5823de5000d5d" data-clickable=".messageInfo">BID-20130725</a></p>
-						</div>
-						<div class="span2">
-							<h5>Campanha</h5>
-							<p>-</p>
-						</div>
-					</div>
-				<a href="/panel/reports" class="lnkArrow">Ver mais mensagens</a>
-		</section>
-
-	</div>
-
-	<div class="span4">
-		<aside class="sidebar" role="complementary">
-	<!-- account -->
-	<section class="sideBox">
-		<div class="boxSidebarTitle"><i class="ico-user-star"></i></div>
-		<h1 class="titSide">Minha conta</h1>
-		<div class="innerSideBox boxWhite">
-				<h6>Plano</h6>
-				<p><strong>Trial</strong></p>
-				<p><small>(10 envios por mês)</small></p>
-			<hr>
-			<h6>Envios realizados</h6>
-			<p><strong>9</strong></p>
-			<hr>
-			<h6>Envios agendados até 24/08/2013</h6>
-			<p><strong>0</strong></p>
-			<hr>
-			<h6>Enviando agora</h6>
-			<p><strong>0</strong></p>
-			<hr>
-			<h6>Saldo disponível</h6>
-			<p><strong>1</strong></p>
-			<p><small>Válido até 24/08/2013</small></p>
-		</div>
-
-			<a href="https://centraldocliente.locaweb.com.br/plans/" class="lnkArrow" tabindex="4" target="_blank">Mudar de plano</a>
-
-		<div class="innerSideBox boxWhite">
-			<h6>Envios avulsos</h6>
-				<p><strong>0</strong></p>
-			<p><small>Válido até 24/08/2013</small></p>
-		</div>
-		
-	</section>
-
-	<!-- suport -->
-	<section class="sideBox">
-		<div class="boxSidebarTitle"><i class="ico-lamp"></i></div>
-		<h1 class="titSide">Dicas</h1>
-		<div class="innerSideBox boxWhite">
-			<div id="myCarousel" class="carousel slide">
-				<ul class="carousel-inner">
-					<li class="item active">
-						<h5>O que são os erros de recebimentos ou bounces?</h5>
-						<p>Bounces são tipos diversos de problemas que impedem que um contato receba a mensagem enviada. Por exemplo: e-mail inválido, caixa postal cheia, lentidão no servidor do destinatário, etc</p>
-					</li>
-					<li class="item">
-						<h5>Evite expressões "clique aqui"</h5>
-						<p>Evite usar textos que podem ser interpretados como SPAM. Veja a lista com as expressões que você deve evitar:</p>
-						<ul>
-							<li>Clique aqui</li>
-							<li>Mailmkt</li>
-							<li>Crédito</li>
-							<li>Grátis</li>
-							<li>Curso</li>
-							<li>De/Para sua empresa</li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Não use apenas uma imagem para enviar todo o seu conteúdo</h5>
-						<p>Evite utilizar uma única grande imagem como conteúdo do email, pois isso é considerado prática de spam. Em vez disso, prefira quebrar a imagem em pedaços menores caso seu conteúdo seja apenas esta imagem.</p>
-					</li>
+			<div class="dropdown hidden-xs">
+				<a href="#" data-toggle="dropdown" class="title-dropdown">emkt2013</a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+					<li><a href="#" role="menuitem">Option 1</a></li>
+					<li><a href="#" role="menuitem">Option 2</a></li>
+					<li><a href="#" role="menuitem">Option 3</a></li>
 				</ul>
-				<div class="carouselNav">
-					<a class="carousel-control left ico-left-open" href="#myCarousel" data-slide="prev"></a>
-					<b>1</b> de <i>3</i>
-					<a class="carousel-control right ico-right-open" href="#myCarousel" data-slide="next"></a>
-				</div>
 			</div>
 		</div>
-	</section>
-	<!-- help -->
-	<section class="sideBox">
-	<div class="boxSidebarTitle"><i class="cmicon-help">?</i></div>
-	<h1 class="titSide">Precisa de ajuda?</h1>
-	<div class="innerSideBox">
-		<ul class="listWhite">
-			<li>
-					<a href="http://wiki.locaweb.com.br/pt-br/Categoria:Novo_Email_Marketing" class="ico-right-open" tabindex="4" target="_blank">Central de Ajuda (Wiki) <span class="ico-link-out"></span>
-</a>				</li>
+	</header>
+
+	<div class="nav-content">
+		<menu class="menu">
+			<ul class="container">
+				<li><a href="#" class="active ico-home" role="menuitem">Home</a></li>
+				<li><a href="#" role="menuitem">Lista de contatos</a></li>
+				<li><a href="#" role="menuitem">Mensagens</a>
+					<ul>
+						<li><a href="#">Enviar</a></li>
+						<li><a href="#">Criar</a></li>
+						<li><a href="#">Editar</a></li>
+						<li><a href="#">Relatórios</a></li>
+					</ul>
+				</li>
+				<li><a href="#" role="menuitem">Campanhas</a></li>
+				<li><a href="#" role="menuitem">Templates</a></li>
+				<li><a href="#" role="menuitem">Relatórios</a></li>
+				<li><a href="#" role="menuitem">Configurações</a></li>
+			</ul>
+		</menu>
+		<h2 class="title-sep visible-xs">Mais</h2>
+		<ul class="nav-mob-list visible-xs">
+			<li><a href="#" class="ico-help-circle">Ajuda e sugestões</a></li>
 		</ul>
 	</div>
-</section>
 
-</aside>
+	<main class="main">
 
-	</div>
-</div>
-	</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 content" role="main">
 
-	<footer id="footer">
-	    <div class="footerTop">
-	        <div class="limit">
-	            <nav>
-	                <h6>Atendimento</h6>
-	                <ul>
-	                    <li class="ico-helpDesk"><a href="#">HelpDesk</a></li>
-	                    <li class="ico-Chat"><a href="#">Chat</a></li>
-	                    <li class="ico-Telefone"><a href="#">Telefone</a></li>
-	                </ul>
-	                <a href="#" class="lnkSeta lnkSetaWhite fright">Ver todas as formas de atendimento</a>
-	            </nav>
-	        </div>
-	    </div>
-	    <div class="subfooter">
-	        <div class="limit">
-	            <span class="lastAccess"><strong>Último acesso:</strong> 7/8/2011 22:35:49   <strong>IP:</strong> 201.87.65.217 <a href="#" class="icoInterroga">?</a></span>
 
-	            <p class="copyRight fright">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</p>
-	        </div>
-	    </div>
+					<div class="shortcut-box row">
+						<header class="header-content">
+							<h1 class="title-2">Comece aqui suas ações de marketing</h1>
+							<p class="hidden-xs">It is a long established fact that a reader will be distracted</p>
+						</header>
+						<div class="shortcuts">
+							<div class="col-md-4 col-xs-4">
+								<a href="#"><h2 class="shortcut-title ico-user">Cadastre seus contatos</h2></a>
+							</div>
+							<div class="col-md-4 col-xs-4">
+								<a href="#"><h2 class="shortcut-title ico-download">Crie e Envie mensagens</h2></a>
+							</div>
+							<div class="col-md-4 col-xs-4">
+								<a href="#"><h2 class="shortcut-title ico-flag">Acompanhe os resultados</h2></a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Button trigger modal -->
+					<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Abrir modal</a>
+					<br>
+					<br>
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									<h4 class="modal-title">Título do Modal</h4>
+								</div>
+								<div class="modal-body">
+									...
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+									<button type="button" class="btn btn-primary">Salvar</button>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+
+
+					<div class="collapse-box">
+
+						<div class="panel-heading">
+							<span data-toggle="collapse" data-target="#collapseOne">
+								<h4 class="panel-title">Exemplo de layout com formulário</h4>
+								<p>Você pode colocar formulários da maneira que quiser aqui dentro.</p>
+							</span>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>Um formulário de cadastro:</p>
+								<form role="form">
+									<fieldset>
+										<div class="row">
+											<div class="form-group col-lg-4">
+												<label for="exampleInputEmail1">Campo simples</label>
+												<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+											</div>
+											<div class="form-group col-lg-8">
+												<label for="exampleInputEmail1">Campo simples</label>
+												<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-lg-6">
+												<label for="exampleInputEmail1">Seletor</label>
+												<select class="form-control">
+													<option value="">Selecione algo</option>
+													<option value="">Opção 1</option>
+													<option value="">Opção 2</option>
+												</select>
+											</div>
+											<div class="form-group col-lg-6">
+												<label for="exampleInputEmail1">Seletor</label>
+												<select class="form-control">
+													<option value="">Selecione algo</option>
+													<option value="">Opção 1</option>
+													<option value="">Opção 2</option>
+												</select>
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-lg-3">
+												<label for="exampleInputEmail1">Senha</label>
+												<input type="password" class="form-control" id="exampleInputEmail1" placeholder="senha">
+											</div>
+											<div class="form-group col-lg-6">
+												<label for="exampleInputEmail1">Email</label>
+												<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+											</div>
+											<div class="form-group col-lg-3">
+												<label for="exampleInputEmail1">Data</label>
+												<input type="date" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+											</div>
+										</div>
+										<button type="submit" class="btn btn-default">Enviar</button>
+										<button class="btn btn-danger">Cancelar</button>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="collapse-box">
+
+						<div class="panel-heading">
+							<a data-toggle="collapse" href="#collapseTwo">
+								<h4 class="panel-title">Um exemplo simples com texto</h4>
+								<p>Se tiver só texto, o negócio funciona que é uma beleza.</p>
+							</a>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse">
+							<div class="panel-body">
+								<h3>Fernando Pessoa</h3>
+								<p>
+									Batatinha quando nasce espalha a rama pelo chão. Menininha quando dorme põe a mão no coração. Sou pequenininha do tamanho de um botão, carrego papai no bolso e mamãe no coração. O bolso furou e o papai caiu no chão. Mamãe que é mais querida ficou no coração.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="collapse-box">
+
+						<div class="panel-heading">
+							<a data-toggle="collapse" href="#collapseThree">
+								<h4 class="panel-title">Exemplo com tabela</h4>
+								<p>Se tiver uma tabela, funciona muito bem também.</p>
+							</a>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="well hidden well-sm clearfix" data-target="tabelax">
+									<p class="d-inline-block">
+										<strong class="counterChecks">0</strong> itens selecionados
+									</p>
+									<div class="actions">
+										<div class="btn-group">
+											<button type="button" class="btn btn-default">Duplicar</button>
+											<a href="#" class="btn btn-default">Relatorio</a>
+											<a href="#" class="btn btn-default">Arquivar</a>
+										</div>
+										<button type="button" class="btn btn-danger">Excluir</button>
+									</div>
+								</div>
+								<table class="table table-style" id="tabelax">
+									<thead>
+										<tr>
+											<th class="txt-center"><input type="checkbox"></th>
+											<th>Título</th>
+											<th class="hidden-xs">Campanha</th>
+											<th>Status</th>
+											<th class="hidden-xs">Data de envio</th>
+										</tr>
+									</thead>
+									<tbody>
+										
+										<tr>
+											<td class="txt-center"><input type="checkbox"></td>
+											<td><a href="" title="">Mensagem Teste Locastyle 0</a></td>
+											<td class="hidden-xs">Campanha 0</td>
+											<td>Enviada</td>
+											<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+										</tr>
+										
+										<tr>
+											<td class="txt-center"><input type="checkbox"></td>
+											<td><a href="" title="">Mensagem Teste Locastyle 1</a></td>
+											<td class="hidden-xs">Campanha 1</td>
+											<td>Enviada</td>
+											<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+										</tr>
+										
+										<tr>
+											<td class="txt-center"><input type="checkbox"></td>
+											<td><a href="" title="">Mensagem Teste Locastyle 2</a></td>
+											<td class="hidden-xs">Campanha 2</td>
+											<td>Enviada</td>
+											<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+										</tr>
+										
+										<tr>
+											<td class="txt-center"><input type="checkbox"></td>
+											<td><a href="" title="">Mensagem Teste Locastyle 3</a></td>
+											<td class="hidden-xs">Campanha 3</td>
+											<td>Enviada</td>
+											<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+										</tr>
+										
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="well hidden well-sm clearfix" data-target="tabela1">
+						<p class="d-inline-block">
+							<strong class="counterChecks">0</strong> itens selecionados
+						</p>
+						<div class="actions">
+							<div class="btn-group">
+								<button type="button" class="btn btn-default">Duplicar</button>
+								<a href="#" class="btn btn-default">Relatorio</a>
+								<a href="#" class="btn btn-default">Arquivar</a>
+							</div>
+							<button type="button" class="btn btn-danger">Excluir</button>
+						</div>
+					</div>
+					<table class="table table-style" id="tabela1">
+						<thead>
+							<tr>
+								<th class="txt-center"><input type="checkbox"></th>
+								<th>Título</th>
+								<th class="hidden-xs">Campanha</th>
+								<th>Status</th>
+								<th class="hidden-xs">Data de envio</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+							<tr>
+								<td class="txt-center"><input type="checkbox"></td>
+								<td><a href="" title="">Mensagem Teste Locastyle 0</a></td>
+								<td class="hidden-xs">Campanha 0</td>
+								<td>Enviada</td>
+								<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+							</tr>
+							
+							<tr>
+								<td class="txt-center"><input type="checkbox"></td>
+								<td><a href="" title="">Mensagem Teste Locastyle 1</a></td>
+								<td class="hidden-xs">Campanha 1</td>
+								<td>Enviada</td>
+								<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+							</tr>
+							
+							<tr>
+								<td class="txt-center"><input type="checkbox"></td>
+								<td><a href="" title="">Mensagem Teste Locastyle 2</a></td>
+								<td class="hidden-xs">Campanha 2</td>
+								<td>Enviada</td>
+								<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+							</tr>
+							
+							<tr>
+								<td class="txt-center"><input type="checkbox"></td>
+								<td><a href="" title="">Mensagem Teste Locastyle 3</a></td>
+								<td class="hidden-xs">Campanha 3</td>
+								<td>Enviada</td>
+								<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+							</tr>
+							
+						</tbody>
+					</table>
+
+					<ul class="nav nav-tabs">
+						<li><a href="#home" data-toggle="tab">Home</a></li>
+						<li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
+					</ul>
+
+					<div class="tab-content">
+						<div class="tab-pane" id="home">
+							<p><strong>HOME</strong>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+						</div>
+						<div class="tab-pane active in" id="profile">
+							<p><strong>PROFILE</strong>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+						</div>
+					</div>
+
+					<div class="pagination-filter">
+
+						<ul class="pagination">
+							<li><a href="#">&laquo; Anterior</a></li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">Próximo &raquo;</a></li>
+						</ul>
+
+						<div class="filter-view">
+							<label for="">
+								Exibir
+								<select name="" id="">
+									<option value=""></option>
+									<option value="10">10</option>
+									<option value="10">10</option>
+									<option value="30">30</option>
+									<option value="50">50</option>
+									<option value="100">100</option>
+								</select>
+								ítens por página
+							</label>
+						</div>
+					</div>
+				</div>
+				<aside class="sidebar col-md-3" role="complementary">
+
+					<section class="sidebox">
+						<h1 class="sidebox-title ico-user">Dados da conta</h1>
+						<div class="sidebox-inner">
+							<span class="status-text">Plano
+								<b>Email Marketing III</b>
+							</span>
+							<hr>
+							<span class="status-text">Saldo Mensal
+								<b>10.000 envios</b>
+								<small>*Válido até 31/01/2012</small>
+							</span>
+						</div>
+						<a href="#" class="ico-arrow-right">Alterar Plano</a>
+					</section>
+
+					<section class="sidebox">
+						<h1 class="sidebox-title ico-bars">Consumo</h1>
+
+						<div class="sidebox-inner">
+
+							<span class="status-text">
+								Envios do plano
+								<strong>0</strong> de 20000
+							</span>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+									<span>70%</span>
+								</div>
+							</div>
+							<span class="status-text">
+								Quantidade válida até 03/11/2013
+							</span>
+							<hr>
+							<span class="status-text">
+								Envios excedentes
+								<span class="ico-question" data-trigger="hover" data-toggle="popover" data-placement="left" data-content="Isso permite que os envios não sejam interrompidos após atingir o limite do plano contratado." data-original-title="Envios excedentes está ativado!"></span>
+							</span>
+
+							<span class="status-text">
+								<strong>0</strong> de 20000
+							</span>
+
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+									<span>45%</span>
+								</div>
+							</div>
+						</div>
+						<div class="well well-sm well-status-sidebar txt-center no-margin-bottom">
+							<p>Total de envios utilizados</p>
+							<b>5.000</b>
+						</div>
+					</section>
+
+					<section class="sidebox">
+						<h1 class="sidebox-title ico-flag">Dicas</h1>
+						<div id="carousel" class="carousel slide">
+							<div class="carousel-inner">
+								<div class="item active sidebox-inner">
+									<h2 class="title-6">Cuidado com os bounces</h2>
+									<p>Bounces são tipos diversos de problemas que impedem que um contato receba a mensagem enviada.</p>
+									<p>Por exemplo: e-mail inválido, caixa postal cheia, lentidão no servidor do destinatário, etc.</p>
+								</div>
+								<div class="item sidebox-inner">
+									<h2 class="title-6">Cuidado com os bounces 2</h2>
+									<p>Bounces são tipos diversos de problemas que impedem que um contato receba a mensagem enviada.</p>
+									<p>Por exemplo: e-mail inválido, caixa postal cheia, lentidão no servidor do destinatário, etc.</p>
+								</div>
+							</div>
+							<div class="carousel-nav">
+								<a href="#carousel" class="left carousel-control ico-direction-left" data-slide="prev"></a>
+								<b>1</b> de <i>2</i>
+								<a href="#carousel" class="right carousel-control ico-direction-right" data-slide="next"></a>
+							</div>
+						</div>
+					</section>
+
+					<section class="sidebox">
+						<h1 class="sidebox-title ico-question">Ajuda e suporte</h1>
+						<ul class="sidebox-list">
+							<li><a href="" class="ico-redo-2 ico-pos-right">Central de Ajuda (Wiki)</a></li>
+							<li><a href="" class="ico-redo-2 ico-pos-right">Suporte 24hs</a></li>
+						</ul>
+					</section>
+				</aside>
+			</div>
+		</div>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer-menu">
+			<nav class="container">
+				<h2 class="title-footer">suporte e ajuda</h2>
+				<ul class="no-liststyle">
+					<li><a href="#" class="bg-customer-support"><span class="visible-lg">Atendimento</span></a></li>
+					<li><a href="#" class="bg-my-tickets"><span class="visible-lg">Meus Chamados</span></a></li>
+					<li><a href="#" class="bg-help-desk"><span class="visible-lg">Central de Ajuda (Wiki)</span></a></li>
+					<li><a href="#" class="bg-statusblog"><span class="visible-lg">Statusblog</span></a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="container footer-info">
+			<span class="last-access ico-screen"><strong>Último acesso: </strong>7/8/2011 22:35:49</span>
+			<div class="set-ip"><span class="set-ip"><strong>IP:</strong> 201.87.65.217</span></span></div>
+			<p class="copy-right">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</p>
+		</div>
 	</footer>
-</div>
+
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="../../../assets/javascripts/locastyle.js" type="text/javascript"></script>
+	<script src="/locawebstyle/assets/bootstrap/js/bootstrap.js"></script>
+
 </body>
 </html>
