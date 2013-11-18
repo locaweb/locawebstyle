@@ -32,7 +32,7 @@ manual.general = (function() {
   }
 
   function activeMenu(){
-    $('a[href="' + window.location.pathname + '"]', 'nav').addClass('active');
+    $('a[href="' + window.location.pathname.replace(/\/$/, '') + '"]', 'nav').addClass('active');
   }
 
   function initPrettyPrint(){
