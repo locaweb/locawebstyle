@@ -81,6 +81,7 @@ set :stable, "2.0.0-a4"
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
+set :fonts_dir, 'assets/fonts'
 
 set :bootstrap_js, '/assets/bootstrap/js/bootstrap.js'
 set :bootstrap_css, '/assets/bootstrap/css/bootstrap.css'
