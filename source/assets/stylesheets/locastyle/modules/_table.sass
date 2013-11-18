@@ -1,4 +1,3 @@
-$border-cell-color: #ddd
 $bg-actions-color:  #00a272
 
 .well + .table-style
@@ -9,7 +8,7 @@ $bg-actions-color:  #00a272
 
 .table-style
 	background-color: #fff
-	box-shadow: 0 1px 0 $border-cell-color
+	box-shadow: 0 1px 0 $gray6
 	border-radius: 4px 4px 0 0
 
 	thead
@@ -17,19 +16,26 @@ $bg-actions-color:  #00a272
 		color: #fff
 
 		tr th
-			border-bottom: 1px solid $border-cell-color
-			border-left: 1px solid $border-cell-color
+			border-bottom: 1px solid $gray6
+			border-left: 1px solid $gray6
 			font-size: .875em
 			vertical-align: middle
 			font-family: $font-bold
 
+			&:first-child
+				border-radius: 4px 0 0 0
+
+			&:last-child
+				border-radius: 0 4px 0 0
+
 	tbody
+
 		tr
 			&:nth-child(odd)
 				@extend .bg-gray4
 
 			td
-				border-left: 1px solid $border-cell-color
+				border-left: 1px solid $gray6
 				font-size: .875em
 				vertical-align: middle
 				position: static
