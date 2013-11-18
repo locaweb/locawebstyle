@@ -1,0 +1,70 @@
+---
+title: Contribua com o Locaweb Style
+menu_page: sidebar-contribua.erb
+---
+<header>
+  <!-- <h2 class="ico-edit">Aprenda o básico</h2> -->
+  <h1>Contribuindo com o Locaweb Style</h1>
+  <h3>Quer ajudar no desenvolvimento? Ótimo! <br> Escolha uma das áreas e leia o guia para desenvolvedores a seguir:</h3>
+</header>
+
+  <ol>
+    <li>
+      <b>Javascript:</b> melhorias de performance, novos comportamentos e componentes;
+    </li>
+    <li>
+      <b>Componentes/HTML:</b> novos componentes e combinações;
+    </li>
+    <li>
+      <b>Documentação & Exemplos:</b> melhorias na documentação e inclusão de novos exemplos de componentes e páginas combinando elementos.
+    </li>
+  </ol>
+
+  <hr>
+
+  <h3>Problemas & Sugestões</h3>
+  <p>Utilizamos a parte de <a href="https://github.com/locaweb/locawebstyle/issues?state=open" target="_blank">issues do Github</a> para registrar, discutir e acompanhar bugs e melhorias.</p>
+  <p>Fique á vontade para registrar novos bugs/sugestões/pedidos e discutir os que já existem.</p>
+  
+  <hr>
+
+  <h3>Estilo de código</h3>
+  <p>
+    Para o desenvolvimento, utilizamos as mesmas regras que sugerimos na seção 
+    <%= link_to "Práticas e Padrões", "#{base_url}/manual/praticas-padroes/introducao" %>
+  </p>
+  <p>
+    Algumas informações adicionais estão apenas na parte "Contribua", por serem especificas de tecnologias utilizadas apenas no desenvolvimento do Locaweb Style, como 
+    <%= link_to "SASS", "#{base_url}/manual/contribua/sass" %> e 
+    <%= link_to "Middleman", "#{base_url}/manual/contribua/middleman" %>.
+  </p>
+
+  <hr>
+
+  <h3>Documentação</h3>
+  <p>Contibua melhorando a documentação e adicionando novos exemplos.</p>
+  <p>
+    As regras de como escrever documentação, como fazer exemplos ou inserir exemplos de código com syntax highlight estão na seção 
+    <%= link_to "Documentação", "#{base_url}/manual/contribua/documentação" %>.
+  </p>
+
+  <hr>
+  
+  <h3>Testes</h3>
+  <p>Utilizamos Jasmine para testes automáticos de javascript.</p>
+  <p>Confira os que já existem, e utilize o mesmo padrão:</p>
+  <ol>
+    <li>Códigos e describes em Inglês</li>
+    <li>Testes assertivos positivos de preferência</li>
+  </ol>
+  <p>Exemplos de componentes na <%= link_to "Cartilha de Elementos", "#{base_url}/manual/elementos" %> <b>NÃO</b> são considerados testes!</p>
+  <hr>
+
+  <h3>História</h3>
+  <p>Sempre que alterar algum elemento, adicionar algo ou fizer alguma alteração grande na documentação, anote no <b>changelog</b>, para que todos possam acompanhar de uma forma simples a evolução do Locaweb Style. </p>
+  <p>
+    Para o controle de versões e documentação nos guiamos pelo 
+    <a href="http://semver.org/" target="_blank">Semantic Versioning 2.0.0</a>
+  </p>
+  
+
