@@ -223,3 +223,28 @@ menu_page: sidebar-componentes.erb
 		</ul>
 	</div>
 </pre>
+	<h2>Botão switch</h2>
+	<p>Por padrão esse botão não tem variações de tamanho, apenas variações de cores, dependendo da cor tema que você utilizar.</p>
+	<p>Abaixo existe um exemplo onde é adicionado a classe <code>.active</code> para alterar a customização do botão.</p>
+	<div class="example">
+		<span class="btn-switch"><a href="#"></a></span>
+		<span class="btn-switch"><a href="#" class="active"></a></span>
+	</div>
+<pre class="lang-html linenums prettyprint-code">
+	<span class="btn-switch"><a href="#"></a></span>
+	<span class="btn-switch"><a href="#" class="active"></a></span>
+</pre>
+	<p>Utilize também dentro de seus formulários, para valores boleanos, utilize o input <code>checkbox</code> e veja como fica:</p>
+	<div class="example">
+		<p>Liga e desliga</p>
+		<div class="btn-switch">
+			<input type="checkbox" id="on-off">
+			<label for="on-off" name="label-on-off">label</label>
+		</div>
+	</div>
+<pre class="lang-html linenums prettyprint-code">
+	<div class="btn-switch">
+		<input type="checkbox" id="teste">
+		<label for="teste" name="label-teste">label</label>
+	</div>
+</pre>
