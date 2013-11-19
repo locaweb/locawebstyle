@@ -1,7 +1,13 @@
 $font-light: open_sans_light
+$font-light-italic: open_sans_light_italic
 $font-regular: open_sans_regular
+$font-regular-italic: open_sans_regular_italic
 $font-semibold: open_sans_semibold
+$font-semibold-italic: open_sans_semibold_italic
 $font-bold: open_sans_bold
+$font-bold-italic: open_sans_bold_italic
+$font-extrabold: open_sans_extrabold
+$font-extrabold-italic: open_sans_extrabold_italic
 
 html, body
 	font-size: 100%
@@ -17,16 +23,13 @@ html, body
 	text-stroke: 1px transparent
 
 
-+font-face( "open_sans_light", font-files("opensans/opensans-light-webfont.woff", "opensans/opensans-light-webfont.ttf", "opensans/opensans-light-webfont.svg#open_sansextrabold"), "opensans/opensans-light-webfont.eot", normal, normal)
-+font-face( "open_sans_light_italic", font-files("opensans/opensans-lightitalic-webfont.woff", "opensans/opensans-lightitalic-webfont.ttf", "opensans/opensans-lightitalic-webfont.svg#open_sansextrabold"), "opensans/opensans-lightitalic-webfont.eot", normal, normal)
-+font-face( "open_sans_regular", font-files("opensans/opensans-regular-webfont.woff", "opensans/opensans-regular-webfont.ttf", "opensans/opensans-regular-webfont.svg#open_sansextrabold"), "opensans/opensans-regular-webfont.eot", normal, normal)
-+font-face( "open_sans_regular_italic", font-files("opensans/opensans-italic-webfont.woff", "opensans/opensans-italic-webfont.ttf", "opensans/opensans-italic-webfont.svg#open_sansextrabold"), "opensans/opensans-italic-webfont.eot", normal, normal)
-+font-face( "open_sans_semibold", font-files("opensans/opensans-semibold-webfont.woff", "opensans/opensans-semibold-webfont.ttf", "opensans/opensans-semibold-webfont.svg#open_sansextrabold"), "opensans/opensans-semibold-webfont.eot", normal, normal)
-+font-face( "open_sans_semibold_italic", font-files("opensans/opensans-semibolditalic-webfont.woff", "opensans/opensans-semibolditalic-webfont.ttf", "opensans/opensans-semibolditalic-webfont.svg#open_sansextrabold"), "opensans/opensans-semibolditalic-webfont.eot", normal, normal)
-+font-face( "open_sans_bold", font-files("opensans/opensans-bold-webfont.woff", "opensans/opensans-bold-webfont.ttf", "opensans/opensans-bold-webfont.svg#open_sansbold_italic"), "opensans/opensans-bold-webfont.eot", normal, normal)
-+font-face( "open_sans_bold_italic", font-files("opensans/opensans-bolditalic-webfont.woff", "opensans/opensans-bolditalic-webfont.ttf", "opensans/opensans-bolditalic-webfont.svg#open_sansbold_italic"), "opensans/opensans-bolditalic-webfont.eot", normal, normal)
-+font-face( "open_sans_extrabold", font-files("opensans/opensans-extrabold-webfont.woff", "opensans/opensans-extrabold-webfont.ttf", "opensans/opensans-extrabold-webfont.svg#open_sansextrabold"), "opensans/opensans-extrabold-webfont.eot", normal, normal)
-+font-face( "open_sans_extrabold_italic", font-files("opensans/opensans-extrabolditalic-webfont.woff", "opensans/opensans-extrabolditalic-webfont.ttf", "opensans/opensans-extrabolditalic-webfont.svg#open_sansextrabold"), "opensans/opensans-extrabolditalic-webfont.eot", normal, normal)
-
-
-
++font-face( "#{$font-light}", font-files("opensans/opensans-light-webfont.woff", "opensans/opensans-light-webfont.ttf", "opensans/opensans-light-webfont.svg#open_sansextrabold"), "opensans/opensans-light-webfont.eot", normal, normal)
++font-face( "#{$font-light-italic}", font-files("opensans/opensans-lightitalic-webfont.woff", "opensans/opensans-lightitalic-webfont.ttf", "opensans/opensans-lightitalic-webfont.svg#open_sansextrabold"), "opensans/opensans-lightitalic-webfont.eot", normal, normal)
++font-face( "#{$font-regular}", font-files("opensans/opensans-regular-webfont.woff", "opensans/opensans-regular-webfont.ttf", "opensans/opensans-regular-webfont.svg#open_sansextrabold"), "opensans/opensans-regular-webfont.eot", normal, normal)
++font-face( "#{$font-regular-italic}", font-files("opensans/opensans-italic-webfont.woff", "opensans/opensans-italic-webfont.ttf", "opensans/opensans-italic-webfont.svg#open_sansextrabold"), "opensans/opensans-italic-webfont.eot", normal, normal)
++font-face( "#{$font-semibold}", font-files("opensans/opensans-semibold-webfont.woff", "opensans/opensans-semibold-webfont.ttf", "opensans/opensans-semibold-webfont.svg#open_sansextrabold"), "opensans/opensans-semibold-webfont.eot", normal, normal)
++font-face( "#{$font-semibold-italic}", font-files("opensans/opensans-semibolditalic-webfont.woff", "opensans/opensans-semibolditalic-webfont.ttf", "opensans/opensans-semibolditalic-webfont.svg#open_sansextrabold"), "opensans/opensans-semibolditalic-webfont.eot", normal, normal)
++font-face( "#{$font-bold}", font-files("opensans/opensans-bold-webfont.woff", "opensans/opensans-bold-webfont.ttf", "opensans/opensans-bold-webfont.svg#open_sansbold_italic"), "opensans/opensans-bold-webfont.eot", normal, normal)
++font-face( "#{$font-bold-italic}", font-files("opensans/opensans-bolditalic-webfont.woff", "opensans/opensans-bolditalic-webfont.ttf", "opensans/opensans-bolditalic-webfont.svg#open_sansbold_italic"), "opensans/opensans-bolditalic-webfont.eot", normal, normal)
++font-face( "#{$font-extrabold}", font-files("opensans/opensans-extrabold-webfont.woff", "opensans/opensans-extrabold-webfont.ttf", "opensans/opensans-extrabold-webfont.svg#open_sansextrabold"), "opensans/opensans-extrabold-webfont.eot", normal, normal)
++font-face( "#{$font-extrabold-italic}", font-files("opensans/opensans-extrabolditalic-webfont.woff", "opensans/opensans-extrabolditalic-webfont.ttf", "opensans/opensans-extrabolditalic-webfont.svg#open_sansextrabold"), "opensans/opensans-extrabolditalic-webfont.eot", normal, normal)
