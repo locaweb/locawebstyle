@@ -16,7 +16,17 @@ locastyle.bootstrap = (function() {
   }
 
   function startPopover() {
-    $("[data-toggle='popover']").popover();
+    var $popovers = $("[data-toggle='popover']");
+    $("[data-toggle='popover'][data-inherit]").on('show.bs.popover', function (e) {
+      var inheritedProperty = $(this).data('inherit');
+      if( $(this).attr('class').match(/(ico)/) ){
+        var inheritedValue = window.getComputedStyle(this,':before')[inheritedProperty]; // ie9+
+      } else {
+        var inheritedValue = $(this).css(inheritedProperty);
+      }
+      $(this).data('bs.popover').$tip.find('.popover-title').css('color', inheritedValue );
+    });
+    $popovers.popover();
   }
 
   return {
