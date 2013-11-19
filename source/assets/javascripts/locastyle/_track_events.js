@@ -13,7 +13,7 @@ locastyle.trackEvents = (function() {
     $(links).each(function (index, item) {
       var options = {}
       options.category = $("body").data("controller");
-      options.action = 'open_link';
+      options.action = 'open_link_#' + $(item).attr("href");
       if($(item).attr("href") === "#") {
         options.action = 'on_page_link';
         options.reload = true;
