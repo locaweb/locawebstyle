@@ -1,13 +1,7 @@
 //
 // Define a font padrão dos ícones.
 //
-@font-face
-	font-family: 'locaicons'
-	src: url('../fonts/locaicons/locaicons.eot')
-	src: url('../fonts/locaicons/locaicons.eot?#iefix') format('embedded-opentype'), url('../fonts/locaicons/locaicons.woff') format('woff'), url('../fonts/locaicons/locaicons.ttf') format('truetype'), url('../fonts/locaicons/locaicons.svg#locaicons') format('svg')
-	font-weight: normal
-	font-style: normal
-
++font-face( "locaicons", font-files("locaicons/locaicons.woff", "locaicons/locaicons.ttf", "locaicons/locaicons.svg#locaicons"), "locaicons/locaicons.eot", normal, normal)
 
 [class*="ico-"].ico-pos-right:after,
 [class*="ico-"]:before
@@ -32,970 +26,251 @@
 	padding: 0
 	width: 5px
 
-.ico-home:before,
-.ico-home:after
-	content: "\e601"
 
-.ico-pencil:before,
-.ico-pencil:after
-	content: "\e001"
-
-.ico-image:before,
-.ico-image:after
-	content: "\e002"
-
-.ico-calendar:before,
-.ico-calendar:after
-	content: "\e0e8"
-
-.ico-images:before,
-.ico-images:after
-	content: "\e003"
-
-.ico-camera:before,
-.ico-camera:after
-	content: "\e004"
-
-.ico-music:before,
-.ico-music:after
-	content: "\e005"
-
-.ico-play:before,
-.ico-play:after
-	content: "\e006"
-
-.ico-feed:before,
-.ico-feed:after
-	content: "\e007"
-
-.ico-podcast:before,
-.ico-podcast:after
-	content: "\e008"
-
-.ico-book:before,
-.ico-book:after
-	content: "\e009"
-
-.ico-folder:before,
-.ico-folder:after
-	content: "\e00a"
-
-.ico-folder-open:before,
-.ico-folder-open:after
-	content: "\e00b"
-
-.ico-tag:before,
-.ico-tag:after
-	content: "\e00c"
-
-.ico-cart:before,
-.ico-cart:after
-	content: "\e00d"
-
-.ico-phone:before,
-.ico-phone:after
-	content: "\e00e"
-
-.ico-address-book:before,
-.ico-address-book:after
-	content: "\e00f"
-
-.ico-envelop:before,
-.ico-envelop:after
-	content: "\e010"
-
-.ico-location:before,
-.ico-location:after
-	content: "\e011"
-
-.ico-history:before,
-.ico-history:after
-	content: "\e012"
-
-.ico-clock:before,
-.ico-clock:after
-	content: "\e013"
-
-.ico-screen:before,
-.ico-screen:after
-	content: "\e014"
-
-.ico-mobile:before,
-.ico-mobile:after
-	content: "\e015"
-
-.ico-tablet:before,
-.ico-tablet:after
-	content: "\e016"
-
-.ico-drawer:before,
-.ico-drawer:after
-	content: "\e017"
-
-.ico-drawer-2:before,
-.ico-drawer-2:after
-	content: "\e018"
-
-.ico-drawer-3:before,
-.ico-drawer-3:after
-	content: "\e019"
-
-.ico-box-add:before,
-.ico-box-add:after
-	content: "\e01a"
-
-.ico-box-remove:before,
-.ico-box-remove:after
-	content: "\e01b"
-
-.ico-download:before,
-.ico-download:after
-	content: "\e01c"
-
-.ico-upload:before,
-.ico-upload:after
-	content: "\e01d"
-
-.ico-undo:before,
-.ico-undo:after
-	content: "\e01e"
-
-.ico-redo:before,
-.ico-redo:after
-	content: "\e01f"
-
-.ico-undo-2:before,
-.ico-undo-2:after
-	content: "\e020"
-
-.ico-redo-2:before,
-.ico-redo-2:after
-	content: "\e021"
-
-.ico-forward:before,
-.ico-forward:after
-	content: "\e022"
-
-.ico-reply:before,
-.ico-reply:after
-	content: "\e023"
-
-.ico-bubble:before,
-.ico-bubble:after
-	content: "\e024"
-
-.ico-bubbles:before,
-.ico-bubbles:after
-	content: "\e025"
-
-.ico-bubbles-2:before,
-.ico-bubbles-2:after
-	content: "\e026"
-
-.ico-user:before,
-.ico-user:after
-	content: "\e604"
-
-.ico-users:before,
-.ico-users:after
-	content: "\e605"
-
-.ico-spinner:before,
-.ico-spinner:after
-	content: "\e029"
-
-.ico-search:before,
-.ico-search:after
-	content: "\e02a"
-
-.ico-zoom-in:before,
-.ico-zoom-in:after
-	content: "\e02b"
-
-.ico-zoom-out:before,
-.ico-zoom-out:after
-	content: "\e02c"
-
-.ico-expand:before,
-.ico-expand:after
-	content: "\e02d"
-
-.ico-contract:before,
-.ico-contract:after
-	content: "\e02e"
-
-.ico-expand-2:before,
-.ico-expand-2:after
-	content: "\e02f"
-
-.ico-contract-2:before,
-.ico-contract-2:after
-	content: "\e030"
-
-.ico-key:before,
-.ico-key:after
-	content: "\e031"
-
-.ico-cogs:before,
-.ico-cogs:after
-	content: "\e032"
-
-.ico-cog:before,
-.ico-cog:after
-	content: "\e033"
-
-.ico-stats:before,
-.ico-stats:after
-	content: "\e034"
-
-.ico-bars:before,
-.ico-bars:after
-	content: "\e035"
-
-.ico-remove:before,
-.ico-remove:after
-	content: "\e036"
-
-.ico-airplane:before,
-.ico-airplane:after
-	content: "\e037"
-
-.ico-truck:before,
-.ico-truck:after
-	content: "\e038"
-
-.ico-list:before,
-.ico-list:after
-	content: "\e039"
-
-.ico-numbered-list:before,
-.ico-numbered-list:after
-	content: "\e03a"
-
-.ico-menu:before,
-.ico-menu:after
-	content: "\e03b"
-
-.ico-menu-2:before,
-.ico-menu-2:after
-	content: "\e03c"
-
-.ico-tree:before,
-.ico-tree:after
-	content: "\e03d"
-
-.ico-cloud:before,
-.ico-cloud:after
-	content: "\e03e"
-
-.ico-cloud-download:before,
-.ico-cloud-download:after
-	content: "\e03f"
-
-.ico-cloud-upload:before,
-.ico-cloud-upload:after
-	content: "\e040"
-
-.ico-download-2:before,
-.ico-download-2:after
-	content: "\e041"
-
-.ico-upload-2:before,
-.ico-upload-2:after
-	content: "\e042"
-
-.ico-download-3:before,
-.ico-download-3:after
-	content: "\e043"
-
-.ico-upload-3:before,
-.ico-upload-3:after
-	content: "\e044"
-
-.ico-globe:before,
-.ico-globe:after
-	content: "\e045"
-
-.ico-earth:before,
-.ico-earth:after
-	content: "\e046"
-
-.ico-link:before,
-.ico-link:after
-	content: "\e047"
-
-.ico-flag:before,
-.ico-flag:after
-	content: "\e048"
-
-.ico-attachment:before,
-.ico-attachment:after
-	content: "\e049"
-
-.ico-eye-blocked:before,
-.ico-eye-blocked:after
-	content: "\e04a"
-
-.ico-eye:before,
-.ico-eye:after
-	content: "\e04b"
-
-.ico-bookmark:before,
-.ico-bookmark:after
-	content: "\e04c"
-
-.ico-brightness-medium:before,
-.ico-brightness-medium:after
-	content: "\e04d"
-
-.ico-brightness-contrast:before,
-.ico-brightness-contrast:after
-	content: "\e04e"
-
-.ico-contrast:before,
-.ico-contrast:after
-	content: "\e04f"
-
-.ico-star:before,
-.ico-star:after
-	content: "\e050"
-
-.ico-star-2:before,
-.ico-star-2:after
-	content: "\e051"
-
-.ico-star-3:before,
-.ico-star-3:after
-	content: "\e052"
-
-.ico-thumbs-up:before,
-.ico-thumbs-up:after
-	content: "\e053"
-
-.ico-thumbs-up-2:before,
-.ico-thumbs-up-2:after
-	content: "\e054"
-
-.ico-minus:before,
-.ico-minus:after
-	content: "\e055"
-
-.ico-plus:before,
-.ico-plus:after
-	content: "\e056"
-
-.ico-enter:before,
-.ico-enter:after
-	content: "\e057"
-
-.ico-exit:before,
-.ico-exit:after
-	content: "\e058"
-
-.ico-cancel-circle:before,
-.ico-cancel-circle:after
-	content: "\e059"
-
-.ico-checkmark-circle:before,
-.ico-checkmark-circle:after
-	content: "\e05a"
-
-.ico-spam:before,
-.ico-spam:after
-	content: "\e05b"
-
-.ico-close:before,
-.ico-close:after
-	content: "\e05c"
-
-.ico-checkmark:before,
-.ico-checkmark:after
-	content: "\e05d"
-
-.ico-info:before,
-.ico-info:after
-	content: "\e05e"
-
-.ico-blocked:before,
-.ico-blocked:after
-	content: "\e05f"
-
-.ico-play-2:before,
-.ico-play-2:after
-	content: "\e060"
-
-.ico-play-3:before,
-.ico-play-3:after
-	content: "\e061"
-
-.ico-pause:before,
-.ico-pause:after
-	content: "\e062"
-
-.ico-stop:before,
-.ico-stop:after
-	content: "\e063"
-
-.ico-backward:before,
-.ico-backward:after
-	content: "\e064"
-
-.ico-forward-2:before,
-.ico-forward-2:after
-	content: "\e065"
-
-.ico-first:before,
-.ico-first:after
-	content: "\e066"
-
-.ico-last:before,
-.ico-last:after
-	content: "\e067"
-
-.ico-previous:before,
-.ico-previous:after
-	content: "\e068"
-
-.ico-next:before,
-.ico-next:after
-	content: "\e069"
-
-.ico-eject:before,
-.ico-eject:after
-	content: "\e06a"
-
-.ico-volume-high:before,
-.ico-volume-high:after
-	content: "\e06b"
-
-.ico-volume-medium:before,
-.ico-volume-medium:after
-	content: "\e06c"
-
-.ico-volume-low:before,
-.ico-volume-low:after
-	content: "\e06d"
-
-.ico-volume-mute:before,
-.ico-volume-mute:after
-	content: "\e06e"
-
-.ico-volume-mute-2:before,
-.ico-volume-mute-2:after
-	content: "\e06f"
-
-.ico-volume-increase:before,
-.ico-volume-increase:after
-	content: "\e070"
-
-.ico-volume-decrease:before,
-.ico-volume-decrease:after
-	content: "\e071"
-
-.ico-loop:before,
-.ico-loop:after
-	content: "\e072"
-
-.ico-loop-2:before,
-.ico-loop-2:after
-	content: "\e073"
-
-.ico-loop-3:before,
-.ico-loop-3:after
-	content: "\e074"
-
-.ico-shuffle:before,
-.ico-shuffle:after
-	content: "\e075"
-
-.ico-arrow-up:before,
-.ico-arrow-up:after
-	content: "\e0ed"
-
-.ico-arrow-right:before,
-.ico-arrow-right:after
-	content: "\e0ee"
-
-.ico-arrow-down:before,
-.ico-arrow-down:after
-	content: "\e0eb"
-
-.ico-arrow-left:before,
-.ico-arrow-left:after
-	content: "\e0ec"
-
-.ico-tab:before,
-.ico-tab:after
-	content: "\e07a"
-
-.ico-checkbox-checked:before,
-.ico-checkbox-checked:after
-	content: "\e07b"
-
-.ico-checkbox-partial:before,
-.ico-checkbox-partial:after
-	content: "\e07c"
-
-.ico-checkbox-unchecked:before,
-.ico-checkbox-unchecked:after
-	content: "\e07d"
-
-.ico-radio-checked:before,
-.ico-radio-checked:after
-	content: "\e07e"
-
-.ico-radio-unchecked:before,
-.ico-radio-unchecked:after
-	content: "\e07f"
-
-.ico-table:before,
-.ico-table:after
-	content: "\e081"
-
-.ico-table-alt:before,
-.ico-table-alt:after
-	content: "\e606"
-
-.ico-insert-template:before,
-.ico-insert-template:after
-	content: "\e082"
-
-.ico-code:before,
-.ico-code:after
-	content: "\e083"
-
-.ico-google:before,
-.ico-google:after
-	content: "\e084"
-
-.ico-google-plus:before,
-.ico-google-plus:after
-	content: "\e085"
-
-.ico-google-plus-2:before,
-.ico-google-plus-2:after
-	content: "\e086"
-
-.ico-google-plus-3:before,
-.ico-google-plus-3:after
-	content: "\e087"
-
-.ico-google-plus-4:before,
-.ico-google-plus-4:after
-	content: "\e088"
-
-.ico-google-drive:before,
-.ico-google-drive:after
-	content: "\e089"
-
-.ico-facebook:before,
-.ico-facebook:after
-	content: "\e08a"
-
-.ico-facebook-2:before,
-.ico-facebook-2:after
-	content: "\e08b"
-
-.ico-facebook-3:before,
-.ico-facebook-3:after
-	content: "\e08c"
-
-.ico-instagram:before,
-.ico-instagram:after
-	content: "\e08d"
-
-.ico-twitter:before,
-.ico-twitter:after
-	content: "\e08e"
-
-.ico-twitter-2:before,
-.ico-twitter-2:after
-	content: "\e08f"
-
-.ico-twitter-3:before,
-.ico-twitter-3:after
-	content: "\e090"
-
-.ico-feed-2:before,
-.ico-feed-2:after
-	content: "\e091"
-
-.ico-feed-3:before,
-.ico-feed-3:after
-	content: "\e092"
-
-.ico-feed-4:before,
-.ico-feed-4:after
-	content: "\e093"
-
-.ico-youtube:before,
-.ico-youtube:after
-	content: "\e094"
-
-.ico-youtube-2:before,
-.ico-youtube-2:after
-	content: "\e095"
-
-.ico-vimeo:before,
-.ico-vimeo:after
-	content: "\e096"
-
-.ico-vimeo2:before,
-.ico-vimeo2:after
-	content: "\e097"
-
-.ico-vimeo-2:before,
-.ico-vimeo-2:after
-	content: "\e098"
-
-.ico-flickr:before,
-.ico-flickr:after
-	content: "\e099"
-
-.ico-flickr-2:before,
-.ico-flickr-2:after
-	content: "\e09a"
-
-.ico-flickr-3:before,
-.ico-flickr-3:after
-	content: "\e09b"
-
-.ico-flickr-4:before,
-.ico-flickr-4:after
-	content: "\e09c"
-
-.ico-picassa:before,
-.ico-picassa:after
-	content: "\e09d"
-
-.ico-picassa-2:before,
-.ico-picassa-2:after
-	content: "\e09e"
-
-.ico-dribbble:before,
-.ico-dribbble:after
-	content: "\e09f"
-
-.ico-dribbble-2:before,
-.ico-dribbble-2:after
-	content: "\e0a0"
-
-.ico-dribbble-3:before,
-.ico-dribbble-3:after
-	content: "\e0a1"
-
-.ico-lanyrd:before,
-.ico-lanyrd:after
-	content: "\e0a2"
-
-.ico-forrst:before,
-.ico-forrst:after
-	content: "\e0a3"
-
-.ico-forrst-2:before,
-.ico-forrst-2:after
-	content: "\e0a4"
-
-.ico-deviantart:before,
-.ico-deviantart:after
-	content: "\e0a5"
-
-.ico-deviantart-2:before,
-.ico-deviantart-2:after
-	content: "\e0a6"
-
-.ico-steam:before,
-.ico-steam:after
-	content: "\e0a7"
-
-.ico-steam-2:before,
-.ico-steam-2:after
-	content: "\e0a8"
-
-.ico-github:before,
-.ico-github:after
-	content: "\e0a9"
-
-.ico-github-2:before,
-.ico-github-2:after
-	content: "\e0aa"
-
-.ico-github-3:before,
-.ico-github-3:after
-	content: "\e0ab"
-
-.ico-github-4:before,
-.ico-github-4:after
-	content: "\e0ac"
-
-.ico-github-5:before,
-.ico-github-5:after
-	content: "\e0ad"
-
-.ico-wordpress:before,
-.ico-wordpress:after
-	content: "\e0ae"
-
-.ico-wordpress-2:before,
-.ico-wordpress-2:after
-	content: "\e0af"
-
-.ico-joomla:before,
-.ico-joomla:after
-	content: "\e0b0"
-
-.ico-blogger:before,
-.ico-blogger:after
-	content: "\e0b1"
-
-.ico-blogger-2:before,
-.ico-blogger-2:after
-	content: "\e0b2"
-
-.ico-tumblr:before,
-.ico-tumblr:after
-	content: "\e0b3"
-
-.ico-tumblr-2:before,
-.ico-tumblr-2:after
-	content: "\e0b4"
-
-.ico-yahoo:before,
-.ico-yahoo:after
-	content: "\e0b5"
-
-.ico-tux:before,
-.ico-tux:after
-	content: "\e0b6"
-
-.ico-apple:before,
-.ico-apple:after
-	content: "\e0b7"
-
-.ico-finder:before,
-.ico-finder:after
-	content: "\e0b8"
-
-.ico-android:before,
-.ico-android:after
-	content: "\e0b9"
-
-.ico-windows:before,
-.ico-windows:after
-	content: "\e0ba"
-
-.ico-windows8:before,
-.ico-windows8:after
-	content: "\e0bb"
-
-.ico-soundcloud:before,
-.ico-soundcloud:after
-	content: "\e0bc"
-
-.ico-soundcloud-2:before,
-.ico-soundcloud-2:after
-	content: "\e0bd"
-
-.ico-skype:before,
-.ico-skype:after
-	content: "\e0be"
-
-.ico-reddit:before,
-.ico-reddit:after
-	content: "\e0bf"
-
-.ico-linkedin:before,
-.ico-linkedin:after
-	content: "\e0c0"
-
-.ico-lastfm:before,
-.ico-lastfm:after
-	content: "\e0c1"
-
-.ico-lastfm-2:before,
-.ico-lastfm-2:after
-	content: "\e0c2"
-
-.ico-delicious:before,
-.ico-delicious:after
-	content: "\e0c3"
-
-.ico-stumbleupon:before,
-.ico-stumbleupon:after
-	content: "\e0c4"
-
-.ico-stumbleupon-2:before,
-.ico-stumbleupon-2:after
-	content: "\e0c5"
-
-.ico-stackoverflow:before,
-.ico-stackoverflow:after
-	content: "\e0c6"
-
-.ico-pinterest:before,
-.ico-pinterest:after
-	content: "\e0c7"
-
-.ico-pinterest-2:before,
-.ico-pinterest-2:after
-	content: "\e0c8"
-
-.ico-xing:before,
-.ico-xing:after
-	content: "\e0c9"
-
-.ico-xing-2:before,
-.ico-xing-2:after
-	content: "\e0ca"
-
-.ico-flattr:before,
-.ico-flattr:after
-	content: "\e0cb"
-
-.ico-foursquare:before,
-.ico-foursquare:after
-	content: "\e0cc"
-
-.ico-foursquare-2:before,
-.ico-foursquare-2:after
-	content: "\e0cd"
-
-.ico-paypal:before,
-.ico-paypal:after
-	content: "\e0ce"
-
-.ico-paypal-2:before,
-.ico-paypal-2:after
-	content: "\e0cf"
-
-.ico-paypal-3:before,
-.ico-paypal-3:after
-	content: "\e0d0"
-
-.ico-yelp:before,
-.ico-yelp:after
-	content: "\e0d1"
-
-.ico-libreoffice:before,
-.ico-libreoffice:after
-	content: "\e0d2"
-
-.ico-file-pdf:before,
-.ico-file-pdf:after
-	content: "\e0d3"
-
-.ico-file-openoffice:before,
-.ico-file-openoffice:after
-	content: "\e0d4"
-
-.ico-file-word:before,
-.ico-file-word:after
-	content: "\e0d5"
-
-.ico-file-excel:before,
-.ico-file-excel:after
-	content: "\e0d6"
-
-.ico-file-zip:before,
-.ico-file-zip:after
-	content: "\e0d7"
-
-.ico-file-powerpoint:before,
-.ico-file-powerpoint:after
-	content: "\e0d8"
-
-.ico-file-xml:before,
-.ico-file-xml:after
-	content: "\e0d9"
-
-.ico-file-css:before,
-.ico-file-css:after
-	content: "\e0da"
-
-.ico-html5:before,
-.ico-html5:after
-	content: "\e0db"
-
-.ico-html5-2:before,
-.ico-html5-2:after
-	content: "\e0dc"
-
-.ico-css3:before,
-.ico-css3:after
-	content: "\e0dd"
-
-.ico-chrome:before,
-.ico-chrome:after
-	content: "\e0de"
-
-.ico-firefox:before,
-.ico-firefox:after
-	content: "\e0df"
-
-.ico-IE:before,
-.ico-IE:after
-	content: "\e0e0"
-
-.ico-opera:before,
-.ico-opera:after
-	content: "\e0e1"
-
-.ico-safari:before,
-.ico-safari:after
-	content: "\e0e2"
-
-.ico-IcoMoon:before,
-.ico-IcoMoon:after
-	content: "\e0e3"
-
-.ico-switch:before,
-.ico-switch:after
-	content: "\e0e4"
-
-.ico-cart-2:before,
-.ico-cart-2:after
-	content: "\e0e5"
-
-.ico-question:before,
-.ico-question:after
-	content: "\e600"
-
-.ico-monitor:before,
-.ico-monitor:after
-	content: "\e0e7"
-
-.ico-direction-right:before,
-.ico-direction-right:after
-	content: "\e080"
-
-.ico-direction-left:before,
-.ico-direction-left:after
-	content: "\e0e9"
-
-.ico-th-large:before,
-.ico-th-large:after
-	content: "\f009"
-
-.ico-grid:before,
-.ico-grid:after
-	content: "\e0ea"
-
-.ico-calendar-check:before,
-.ico-calendar-check:after
-	content: "\e0f2"
-
-.ico-calendar-more:before,
-.ico-calendar-more:after
-	content: "\e0f3"
-
-.ico-lamp:before,
-.ico-lamp:after
-	content: "\e0f4"
-
-.ico-accessibility:before,
-.ico-accessibility:after
-	content: "\e603"
-
-.ico-export:before,
-.ico-export:after
-	content: "\e602"
+=ico($name, $content)
+	.ico-#{$name}:before,
+	.ico-#{$name}:after
+		content: "#{$content}"
+
++ico(accessibility, \e603)
++ico(address-book, \e00f)
++ico(airplane, \e037)
++ico(android, \e0b9)
++ico(apple, \e0b7)
++ico(arrow-down, \e0eb)
++ico(arrow-left, \e0ec)
++ico(arrow-right, \e0ee)
++ico(arrow-up, \e0ed)
++ico(attachment, \e049)
++ico(backward, \e064)
++ico(bars, \e035)
++ico(blocked, \e05f)
++ico(blogger, \e0b1)
++ico(blogger-2, \e0b2)
++ico(book, \e009)
++ico(bookmark, \e04c)
++ico(box-add, \e01a)
++ico(box-remove, \e01b)
++ico(brightness-contrast, \e04e)
++ico(brightness-medium, \e04d)
++ico(bubble, \e024)
++ico(bubbles, \e025)
++ico(bubbles-2, \e026)
++ico(calendar, \e0e8)
++ico(calendar-check, \e0f2)
++ico(calendar-more, \e0f3)
++ico(camera, \e004)
++ico(cancel-circle, \e059)
++ico(cart, \e00d)
++ico(cart-2, \e0e5)
++ico(checkbox-checked, \e07b)
++ico(checkbox-partial, \e07c)
++ico(checkbox-unchecked, \e07d)
++ico(checkmark, \e05d)
++ico(checkmark-circle, \e05a)
++ico(chrome, \e0de)
++ico(clock, \e013)
++ico(close, \e05c)
++ico(cloud, \e03e)
++ico(cloud-download, \e03f)
++ico(cloud-upload, \e040)
++ico(code, \e083)
++ico(cog, \e033)
++ico(cogs, \e032)
++ico(contract, \e02e)
++ico(contract-2, \e030)
++ico(contrast, \e04f)
++ico(css3, \e0dd)
++ico(delicious, \e0c3)
++ico(deviantart, \e0a5)
++ico(deviantart-2, \e0a6)
++ico(direction-left, \e0e9)
++ico(direction-right, \e080)
++ico(download, \e01c)
++ico(download-2, \e041)
++ico(download-3, \e043)
++ico(drawer, \e017)
++ico(drawer-2, \e018)
++ico(drawer-3, \e019)
++ico(dribbble, \e09f)
++ico(dribbble-2, \e0a0)
++ico(dribbble-3, \e0a1)
++ico(earth, \e046)
++ico(eject, \e06a)
++ico(enter, \e057)
++ico(envelop, \e010)
++ico(exit, \e058)
++ico(expand, \e02d)
++ico(expand-2, \e02f)
++ico(export, \e602)
++ico(eye, \e04b)
++ico(eye-blocked, \e04a)
++ico(facebook, \e08a)
++ico(facebook-2, \e08b)
++ico(facebook-3, \e08c)
++ico(feed, \e007)
++ico(feed-2, \e091)
++ico(feed-3, \e092)
++ico(feed-4, \e093)
++ico(file-css, \e0da)
++ico(file-excel, \e0d6)
++ico(file-openoffice, \e0d4)
++ico(file-pdf, \e0d3)
++ico(file-powerpoint, \e0d8)
++ico(file-word, \e0d5)
++ico(file-xml, \e0d9)
++ico(file-zip, \e0d7)
++ico(finder, \e0b8)
++ico(firefox, \e0df)
++ico(first, \e066)
++ico(flag, \e048)
++ico(flattr, \e0cb)
++ico(flickr, \e099)
++ico(flickr-2, \e09a)
++ico(flickr-3, \e09b)
++ico(flickr-4, \e09c)
++ico(folder, \e00a)
++ico(folder-open, \e00b)
++ico(forrst, \e0a3)
++ico(forrst-2, \e0a4)
++ico(forward, \e022)
++ico(forward-2, \e065)
++ico(foursquare, \e0cc)
++ico(foursquare-2, \e0cd)
++ico(github, \e0a9)
++ico(github-2, \e0aa)
++ico(github-3, \e0ab)
++ico(github-4, \e0ac)
++ico(github-5, \e0ad)
++ico(globe, \e045)
++ico(google, \e084)
++ico(google-drive, \e089)
++ico(google-plus, \e085)
++ico(google-plus-2, \e086)
++ico(google-plus-3, \e087)
++ico(google-plus-4, \e088)
++ico(grid, \e0ea)
++ico(history, \e012)
++ico(home, \e601)
++ico(html5, \e0db)
++ico(html5-2, \e0dc)
++ico(IcoMoon, \e0e3)
++ico(IE, \e0e0)
++ico(image, \e002)
++ico(images, \e003)
++ico(info, \e05e)
++ico(insert-template, \e082)
++ico(instagram, \e08d)
++ico(joomla, \e0b0)
++ico(key, \e031)
++ico(lamp, \e0f4)
++ico(lanyrd, \e0a2)
++ico(last, \e067)
++ico(lastfm, \e0c1)
++ico(lastfm-2, \e0c2)
++ico(libreoffice, \e0d2)
++ico(link, \e047)
++ico(linkedin, \e0c0)
++ico(list, \e039)
++ico(location, \e011)
++ico(loop, \e072)
++ico(loop-2, \e073)
++ico(loop-3, \e074)
++ico(menu, \e03b)
++ico(menu-2, \e03c)
++ico(minus, \e055)
++ico(mobile, \e015)
++ico(monitor, \e0e7)
++ico(music, \e005)
++ico(next, \e069)
++ico(numbered-list, \e03a)
++ico(opera, \e0e1)
++ico(pause, \e062)
++ico(paypal, \e0ce)
++ico(paypal-2, \e0cf)
++ico(paypal-3, \e0d0)
++ico(pencil, \e001)
++ico(phone, \e00e)
++ico(picassa, \e09d)
++ico(picassa-2, \e09e)
++ico(pinterest, \e0c7)
++ico(pinterest-2, \e0c8)
++ico(play, \e006)
++ico(play-2, \e060)
++ico(play-3, \e061)
++ico(plus, \e056)
++ico(podcast, \e008)
++ico(previous, \e068)
++ico(question, \e600)
++ico(radio-checked, \e07e)
++ico(radio-unchecked, \e07f)
++ico(reddit, \e0bf)
++ico(redo, \e01f)
++ico(redo-2, \e021)
++ico(remove, \e036)
++ico(reply, \e023)
++ico(safari, \e0e2)
++ico(screen, \e014)
++ico(search, \e02a)
++ico(shuffle, \e075)
++ico(skype, \e0be)
++ico(soundcloud, \e0bc)
++ico(soundcloud-2, \e0bd)
++ico(spam, \e05b)
++ico(spinner, \e029)
++ico(stackoverflow, \e0c6)
++ico(star, \e050)
++ico(star-2, \e051)
++ico(star-3, \e052)
++ico(stats, \e034)
++ico(steam, \e0a7)
++ico(steam-2, \e0a8)
++ico(stop, \e063)
++ico(stumbleupon, \e0c4)
++ico(stumbleupon-2, \e0c5)
++ico(switch, \e0e4)
++ico(tab, \e07a)
++ico(table, \e081)
++ico(table-alt, \e606)
++ico(tablet, \e016)
++ico(tag, \e00c)
++ico(th-large, \f009)
++ico(thumbs-up, \e053)
++ico(thumbs-up-2, \e054)
++ico(tree, \e03d)
++ico(truck, \e038)
++ico(tumblr, \e0b3)
++ico(tumblr-2, \e0b4)
++ico(tux, \e0b6)
++ico(twitter, \e08e)
++ico(twitter-2, \e08f)
++ico(twitter-3, \e090)
++ico(undo, \e01e)
++ico(undo-2, \e020)
++ico(upload, \e01d)
++ico(upload-2, \e042)
++ico(upload-3, \e044)
++ico(user, \e604)
++ico(users, \e605)
++ico(vimeo, \e096)
++ico(vimeo-2, \e098)
++ico(vimeo2, \e097)
++ico(volume-decrease, \e071)
++ico(volume-high, \e06b)
++ico(volume-increase, \e070)
++ico(volume-low, \e06d)
++ico(volume-medium, \e06c)
++ico(volume-mute, \e06e)
++ico(volume-mute-2, \e06f)
++ico(windows, \e0ba)
++ico(windows8, \e0bb)
++ico(wordpress, \e0ae)
++ico(wordpress-2, \e0af)
++ico(xing, \e0c9)
++ico(xing-2, \e0ca)
++ico(yahoo, \e0b5)
++ico(yelp, \e0d1)
++ico(youtube, \e094)
++ico(youtube-2, \e095)
++ico(zoom-in, \e02b)
++ico(zoom-out, \e02c)
