@@ -17,11 +17,14 @@ locastyle.bootstrap = (function() {
 
   function startPopover() {
     var $popovers = $("[data-toggle='popover']");
-    $popovers.on('show.bs.popover', function (e) {
-      var popover = $(this).data('bs.popover');
+    $("[data-toggle='popover'][data-inherit]").on('show.bs.popover', function (e) {
       var inheritedProperty = $(this).data('inherit');
-      var inheritedValue = $(this).css(inheritedProperty);
-      popover.$tip.find('.popover-title').css('color', inheritedValue );
+      if( $(this).attr('class').match(/(ico)/) ){
+        var inheritedValue = window.getComputedStyle(this,':before')[inheritedProperty]; // ie9+
+      } else {
+        var inheritedValue = $(this).css(inheritedProperty);
+      }
+      $(this).data('bs.popover').$tip.find('.popover-title').css('color', inheritedValue );
     });
     $popovers.popover();
   }
