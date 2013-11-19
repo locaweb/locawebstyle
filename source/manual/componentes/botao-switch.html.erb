@@ -1,0 +1,35 @@
+---
+title: Componentes - Barra de Progresso
+menu_page: sidebar-componentes.erb
+---
+<header>
+	<h1>Botão switch</h1>
+
+</header>
+<p>Abaixo existe um exemplo onde é adicionado a classe <code>.active</code> para alterar a customização do botão.</p>
+<div class="example">
+	<span class="btn-switch"><a href="#">Opção Desativada</a></span>
+	<span class="btn-switch"><a href="#" class="active">Opção Ativada</a></span>
+</div>
+<pre class="lang-html linenums prettyprint-code">
+	<span class="btn-switch"><a href="#">Opção Desativada</a></span>
+	<span class="btn-switch"><a href="#" class="active">Opção Ativada</a></span>
+</pre>
+<p>Utilize também dentro de seus formulários, para valores boleanos.</p>
+<div class="bs-callout bs-callout-danger">
+	<h4>Lembre-se de manter a estrutura abaixo.</h4>
+	<p>Você deve seguir a estrutura abaixo, que verifica se o checkbox está marcado ou não.</p>
+</div>
+<div class="example">
+	<p>Liga e desliga</p>
+	<span class="btn-switch">
+		<input type="checkbox" id="on-off">
+		<label for="on-off" name="label-on-off">label</label>
+	</span>
+</div>
+<pre class="lang-html linenums prettyprint-code">
+	<span class="btn-switch">
+		<input type="checkbox" id="teste">
+		<label for="teste" name="label-teste">label</label>
+	</span>
+</pre>

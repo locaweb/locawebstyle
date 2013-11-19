@@ -1,5 +1,6 @@
 // Criando Botão de Switch
 .btn-switch
+	position: relative
 
 	label,
 	a
@@ -11,6 +12,11 @@
 		margin-right: 10px
 		border-radius: 3px
 		display: inline-block
+		cursor: pointer
+		-webkit-user-select: none
+		-moz-user-select: none
+		-ms-user-select: none
+		user-select: none
 
 		&:before
 			content: ""
@@ -31,15 +37,21 @@
 				background-color: #ebebeb
 
 		&:focus
-			outline: thin dotted #333
 			outline: 5px auto -webkit-focus-ring-color
 			outline-offset: -2px
 
 	input
-		display: none
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 2
+		width: 23px
+		height: 20px
+		opacity: 0
+
 
 	a.active,
-	input:checked + label,
+	input:checked + label
 		box-shadow: none
 		background-position: 7px center
 
@@ -48,3 +60,7 @@
 			left: auto
 			right: 2px
 			border-radius: 0 2px 2px 0
+
+	input:focus + label
+		outline: 5px auto -webkit-focus-ring-color
+		outline-offset: -2px
