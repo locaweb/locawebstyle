@@ -70,6 +70,18 @@ menu_page: sidebar-componentes.erb
 <button data-container="body" data-toggle="popover" data-placement="right" data-content="Um texto bem legal a direita.">direita</button>
 </pre>
 
+<h4>Herança de cores no título do popver</h4>
+<p> Para que o título do popover tenha a mesma cor do elemento que ativa o popover, basta adicionar o atributo <code>data-inherit=""</code> com a propriedade CSS onde ele deve buscar a cor para o título. </p>
+
+<div class="example">
+	<button class="btn btn-danger" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal a esquerda." data-title="Título">Top herdando as cores</button>
+	<span class="label label-warning" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal a esquerda." data-title="Título">label</span>
+	<button class="btn label" style="color: navy;" data-container="body" data-inherit="color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal a esquerda." data-title="Título">label</button>
+</div>
+<pre class="lang-html prettyprint-code linenums">
+<button class="btn btn-danger" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal a esquerda." data-title="Título">Top herdando as cores</button>
+</pre>
+
 <h2>Como usar</h2>
 <p>Habilite o popover via JavaScript.</p>
 <pre class="lang-js linenums prettyprint">$('#exemplo').popover(options)</pre>
