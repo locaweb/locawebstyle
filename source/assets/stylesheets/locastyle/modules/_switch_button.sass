@@ -4,6 +4,7 @@
 
 	label,
 	a
+		+user-select(none)
 		text-indent: -9999px
 		background: $gray2 url(#{$image_path}ico-switch-on-off.png) -159px center no-repeat
 		height: 24px
@@ -13,10 +14,6 @@
 		border-radius: 3px
 		display: inline-block
 		cursor: pointer
-		-webkit-user-select: none
-		-moz-user-select: none
-		-ms-user-select: none
-		user-select: none
 
 		&:before
 			content: ""
