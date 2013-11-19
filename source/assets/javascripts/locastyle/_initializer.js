@@ -4,4 +4,5 @@ $(window).load(function() {
   locastyle.bootstrap.init();
   locastyle.passwordStregth.init();
   locastyle.carousel.init();
+  locastyle.trackEvents.init();
 });
