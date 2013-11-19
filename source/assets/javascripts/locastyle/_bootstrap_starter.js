@@ -16,7 +16,14 @@ locastyle.bootstrap = (function() {
   }
 
   function startPopover() {
-    $("[data-toggle='popover']").popover();
+    var $popovers = $("[data-toggle='popover']");
+    $popovers.on('show.bs.popover', function (e) {
+      var popover = $(this).data('bs.popover');
+      var inheritedProperty = $(this).data('inherit');
+      var inheritedValue = $(this).css(inheritedProperty);
+      popover.$tip.find('.popover-title').css('color', inheritedValue );
+    });
+    $popovers.popover();
   }
 
   return {
