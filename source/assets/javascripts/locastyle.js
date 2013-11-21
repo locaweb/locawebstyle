@@ -4,4 +4,5 @@
 //= require locastyle/_bootstrap_starter
 //= require locastyle/_password_strength
 //= require locastyle/_carousel_extends
+//= require locastyle/_collapse_extends
 //= require locastyle/_initializer
