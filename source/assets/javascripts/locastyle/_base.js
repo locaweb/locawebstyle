@@ -12,6 +12,7 @@ var locastyle = (function() {
     linkPreventDefault();
     togglePassword();
     classToggle();
+    toggleClassParentCollapse();
   }
 
   // Aquele background cinza que fica sempre atrás do elemento Shortcut
@@ -193,6 +194,17 @@ var locastyle = (function() {
       e.preventDefault();
       var classes = $(this).data('classtoggle').split(',');
       $(this).toggleClass(classes[0]).toggleClass(classes[1]);
+    });
+  }
+
+  //Função que alterna classe no elemento pai do Collapse
+  function toggleClassParentCollapse() {
+    $('.collapse').on('shown.bs.collapse', function () {
+      $(this).parents('.collapse-box').addClass('active')
+    });
+
+    $('.collapse').on('hidden.bs.collapse', function () {
+      $(this).parents('.collapse-box').removeClass('active')
     });
   }
 
