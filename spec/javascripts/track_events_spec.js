@@ -133,4 +133,18 @@ describe("Track Events", function() {
     });
   });
 
+  describe("Forms", function () {
+    describe("When submit the #my_sample_form", function () {
+      it("should call ga with ('send', 'event', 'locastyle#track-events-test', 'submit_form_#my_sample_form', 'Submit') arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "submit_form_#my_sample_form",
+          label: "Submit"
+        }
+        spyOn(window, "ga");
+        $("#my_sample_form").trigger("submit");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+  });
 });
