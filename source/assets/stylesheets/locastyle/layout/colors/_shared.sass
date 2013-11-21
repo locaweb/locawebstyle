@@ -22,7 +22,6 @@
 
 	[class*="btn"]
 		color: #fff
-
 	.btn-default
 		color: $gray3
 
@@ -128,11 +127,26 @@
 	//
 	// Collapses
 	//
-	.collapse-box .panel-heading
-		border-left-color: $color2
+	.collapse-box
 
-	.panel-title
-		color: $color3
+		&:after
+			border-color: $color1
+			color: $color1
+
+		.panel-heading
+			border-left-color: $color2
+
+		.panel-title
+			color: $color1
+
+		&.active
+
+			.panel-title
+				color: $color3
+
+			&:after
+				border-color: $color3
+				color: $color3
 
 
 	//
