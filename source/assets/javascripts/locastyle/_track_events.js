@@ -68,7 +68,6 @@ locastyle.trackEvents = (function() {
         }
       }
       ga('send', 'event', options.category, options.action, options.label);
-      console.log(options)
     });
   }
 
