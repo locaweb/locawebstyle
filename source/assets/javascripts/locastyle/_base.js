@@ -175,7 +175,7 @@ var locastyle = (function() {
 
 
   // Troca de input password para text
-  function togglePassword(){
+  function togglePassword() {
     $('.toggle-pass').on("click", function(e){
       e.preventDefault();
       var $self = $(this).data('target');
@@ -189,7 +189,7 @@ var locastyle = (function() {
   }
 
   // Troca de classes
-  function classToggle(){
+  function classToggle() {
     $('[data-classtoggle]').on('click', function(e){
       e.preventDefault();
       var classes = $(this).data('classtoggle').split(',');
