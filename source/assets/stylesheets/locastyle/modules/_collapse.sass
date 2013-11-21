@@ -17,6 +17,27 @@
 	border: 1px solid #e5e5e5
 	border-radius: 3px
 	background-color: #fff
+	position: relative
+
+	&:after
+		+single-transition(all, .15s, linear, 0)
+		content: "\e608"
+		font-family: 'locaicons'
+		position: absolute
+		top: 15px
+		right: 15px
+		width: 22px
+		height: 22px
+		border: 3px solid $gray2
+		border-radius: 50%
+		text-align: center
+		line-height: 1.35em
+		font-size: .8em
+
+	&.active
+
+		&:after
+			+rotate(-180deg)
 
 	*:last-child
 		margin-bottom: 0
@@ -37,7 +58,8 @@
 			margin-bottom: 0
 
 		.panel-title
-			font-family: $font-bold
+			+single-transition(color, .15s, linear, 0)
+			font-family: $font-semibold
 
 	.panel-collapse
 		.panel-body

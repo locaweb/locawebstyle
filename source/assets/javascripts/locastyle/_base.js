@@ -12,6 +12,7 @@ var locastyle = (function() {
     linkPreventDefault();
     togglePassword();
     classToggle();
+    toggleClassParentCollapse();
   }
 
   // Aquele background cinza que fica sempre atrás do elemento Shortcut
@@ -174,7 +175,7 @@ var locastyle = (function() {
 
 
   // Troca de input password para text
-  function togglePassword(){
+  function togglePassword() {
     $('.toggle-pass').on("click", function(e){
       e.preventDefault();
       var $self = $(this).data('target');
@@ -188,11 +189,22 @@ var locastyle = (function() {
   }
 
   // Troca de classes
-  function classToggle(){
+  function classToggle() {
     $('[data-classtoggle]').on('click', function(e){
       e.preventDefault();
       var classes = $(this).data('classtoggle').split(',');
       $(this).toggleClass(classes[0]).toggleClass(classes[1]);
+    });
+  }
+
+  //Função que alterna classe no elemento pai do Collapse
+  function toggleClassParentCollapse() {
+    $('.collapse').on('shown.bs.collapse', function () {
+      $(this).parents('.collapse-box').addClass('active')
+    });
+
+    $('.collapse').on('hidden.bs.collapse', function () {
+      $(this).parents('.collapse-box').removeClass('active')
     });
   }
 
