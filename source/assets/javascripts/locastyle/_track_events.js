@@ -6,6 +6,7 @@ locastyle.trackEvents = (function() {
   function init(){
     findLinks();
     findButtons();
+    findForms();
   }
 
   function findLinks(){
@@ -53,6 +54,16 @@ locastyle.trackEvents = (function() {
     });
   }
 
+  function findForms() {
+    var forms = $("form");
+    $(forms).each(function (index, item) {
+      var options = {}
+      options.category = $("body").data("controller") + "#" + $("body").data("action");
+      options.action = "submit_form_#" + ($(item).data("action") || $(item).attr("id") || $(item).attr("action"));
+      options.label = $(item).find(":submit[type=submit]").val();
+      bindFormEvent(item, options);
+    });
+  }
 
   function bindSendEvent(element, options){
     $(element).on("click", function () {
@@ -69,6 +80,12 @@ locastyle.trackEvents = (function() {
       }
       ga('send', 'event', options.category, options.action, options.label);
     });
+  }
+
+  function bindFormEvent(element, options) {
+    $(element).on("submit", function () {
+      ga('send', 'event', options.category, options.action, options.label);
+    })
   }
 
   return {
