@@ -13,7 +13,7 @@ locastyle.trackEvents = (function() {
     var links = $("a");
     $(links).each(function (index, item) {
       var options = {}
-      options.category = $("body").data("controller");
+      options.category = $("body").data("controller") + "#" + $("body").data("action");
       options.action = 'open_link_#' + $(item).attr("href");
       if($(item).attr("href") === "#") {
         options.action = 'on_page_link';
@@ -36,7 +36,7 @@ locastyle.trackEvents = (function() {
     var buttons = $("button");
     $(buttons).each(function (index, item) {
       var options = {}
-      options.category = $("body").data("controller");
+      options.category = $("body").data("controller") + "#" + $("body").data("action");
       options.action = 'open_button';
       if($(item).attr("href") === "#") {
         options.action = 'on_page_button';
