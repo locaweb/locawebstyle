@@ -7,3 +7,5 @@
 //= require locastyle/_track_events
 //= require locastyle/_collapse_extends
 //= require locastyle/_initializer
+//= require locastyle/_accessibility
+//= require locastyle/_initializer
