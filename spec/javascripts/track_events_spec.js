@@ -37,7 +37,7 @@ describe("Track Events", function() {
   });
 
   describe("Modal", function () {
-    describe("When click on #closed_modal_sample which is a modal trigger", function () {
+    describe("When click on #closed_modal_sample_trigger which is a trigger to open modal", function () {
       it("it should call ga with ('send', 'event', 'locastyle#track-events-test', 'open_modal_#closed_modal_sample', 'Open modal') arguments", function () {
         var expectedOptions = {
           category: "locastyle#track-events-test",
@@ -46,6 +46,30 @@ describe("Track Events", function() {
         }
         spyOn(window, "ga");
         $("#closed_modal_test #closed_modal_sample_trigger").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
+    describe("When closing modal", function () {
+      it("by [x], it should call ga with ('send', 'event', 'locastyle#track-events-test', 'close_modal_#opened_modal_test', 'x') arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "close_modal_#opened_modal_test",
+          label: "x"
+        }
+        spyOn(window, "ga");
+        $("#opened_modal_test #close_modal_sample_by_x").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+
+      it("by cancel button, it should call ga with ('send', 'event', 'locastyle#track-events-test', 'close_modal_#opened_modal_test', 'close_modal') arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "close_modal_#opened_modal_test",
+          label: "close_modal"
+        }
+        spyOn(window, "ga");
+        $("#opened_modal_test #close_modal_sample_by_button").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });
