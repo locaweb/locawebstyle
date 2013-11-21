@@ -29,7 +29,6 @@ locastyle.trackEvents = (function() {
       }
       if($(item).data("toggle") === "collapse"){
         options.type = "collapse";
-        options.action = 'open_collapse';
       }
       if($(this).parents(".nav-tabs").length > 0){
         options.action = 'tab_navigation';
