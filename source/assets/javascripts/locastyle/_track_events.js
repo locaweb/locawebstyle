@@ -23,6 +23,10 @@ locastyle.trackEvents = (function() {
         var modal = $(item).data("target") ? $(item).data("target") : $(item).attr("href");
         options.action = 'open_modal_' + modal;
       }
+      if($(item).data("dismiss") === "modal"){
+        var modal = $($(item).parents(".modal")).attr("id");
+        options.action = 'close_modal_#' + modal;
+      }
       if($(item).data("toggle") === "collapse"){
         options.type = "collapse";
         options.action = 'open_collapse';
@@ -46,7 +50,7 @@ locastyle.trackEvents = (function() {
       }
       if($(item).data("dismiss") === "modal"){
         var modal = $($(item).parents(".modal")).attr("id");
-        options.action = 'close_modal_' + modal;
+        options.action = 'close_modal_#' + modal;
       }
       if($(item).data("toggle") === "dropdown"){
         var modal = $($(item).parents(".modal")).attr("id");

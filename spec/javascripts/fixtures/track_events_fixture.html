@@ -3,11 +3,13 @@
 		<li><a id="home_menu_sample" href="/home">Open link sample</a></li>
 	</ul>
 </div>
+
 <div id="on_page_links">
 	<ul class="container">
 		<li><a id="on_page_link_to_nowhere" href="#">On page link sample</a></li>
 	</ul>
 </div>
+
 <div id="closed_modal_test">
 	<a data-toggle="modal" id="closed_modal_sample_trigger" href="#closed_modal_sample">Open modal</a>
 	<div id="closed_modal_sample" class="modal fade" role="dialog">
@@ -16,6 +18,20 @@
 		</div>
 	</div>
 </div>
+
+<div id="opened_modal_test" class="modal fade in" role="dialog" tabindex="-1" aria-labelledby="title_change_pass" aria-hidden="false" style="display: block;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<a id="close_modal_sample_by_x" type="button" class="close" data-dismiss="modal">x</a>
+			</div>
+			<div class="modal-footer">
+				<button id="close_modal_sample_by_button" class="btn btn-default" data-dismiss="modal">close_modal</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
