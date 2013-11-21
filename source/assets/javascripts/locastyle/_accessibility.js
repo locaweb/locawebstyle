@@ -6,6 +6,7 @@ locastyle.accessibility = (function() {
   function init(){
     areaAccess();
     anchorContent();
+    subMenuAccess();
   }
 
   function areaAccess(){
@@ -23,6 +24,23 @@ locastyle.accessibility = (function() {
       $('html, body').animate({
         scrollTop: $('.title-content').offset().top
       }, 500);
+    })
+  }
+
+  // Submenu acessível via teclado
+  function subMenuAccess(){
+    $('.menu li a').on('focus', function(){
+    $(this).parents('li').addClass('in');
+    $(this).parents('li').find('ul').attr({
+      'aria-expanded' : true,
+         'aria-hidden': false
+      })
+    }).on('blur', function(){
+      $(this).parents('li').removeClass('in');
+      $(this).parents('li').find('ul').attr({
+        'aria-expanded' : false,
+           'aria-hidden': true
+      })
     })
   }
 
