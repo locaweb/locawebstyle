@@ -31,7 +31,7 @@ locastyle.trackEvents = (function() {
         options.action = 'tab_navigation';
       }
       options.label = $(item).attr("title") ? $(item).attr("title") : $(item).text();
-      bindSendEvent(item, options);
+      bindClickEvents(item, options);
     });
   }
 
@@ -53,7 +53,7 @@ locastyle.trackEvents = (function() {
         options.action = 'dropdown_toggle';
       }
       options.label = $(item).attr("title") ? $(item).attr("title") : $(item).text();
-      bindSendEvent(item, options);
+      bindClickEvents(item, options);
     });
   }
 
@@ -64,11 +64,11 @@ locastyle.trackEvents = (function() {
       options.category = $("body").data("controller") + "#" + $("body").data("action");
       options.action = "submit_form_#" + ($(item).data("action") || $(item).attr("id") || $(item).attr("action"));
       options.label = $(item).find(":submit[type=submit]").val();
-      bindFormEvent(item, options);
+      bindFormEvents(item, options);
     });
   }
 
-  function bindSendEvent(element, options){
+  function bindClickEvents(element, options){
     $(element).on("click", function () {
       if(options.reload){
         options.label = $(element).text();
@@ -85,14 +85,14 @@ locastyle.trackEvents = (function() {
     });
   }
 
-  function bindFormEvent(element, options) {
+  function bindFormEvents(element, options) {
     $(element).on("submit", function () {
       ga('send', 'event', options.category, options.action, options.label);
     })
   }
 
   return {
-    init: init,
+    init: init
   };
 
 }());
