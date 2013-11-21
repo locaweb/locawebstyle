@@ -102,4 +102,20 @@ describe("Track Events", function() {
       });
     });
   });
+
+  describe("Dropdown", function () {
+    describe("When click on #dropdown_trigger which is a trigger to toggle a dropdown", function () {
+      it("should call ga with ('send', 'event', 'locastyle#track-events-test', 'dropdown_toggle', 'Toggle dropdown') arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "dropdown_toggle",
+          label: "Toggle dropdown"
+        }
+        spyOn(window, "ga");
+        $("#dropdown_sample_box #dropdown_trigger").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+  });
+
 });
