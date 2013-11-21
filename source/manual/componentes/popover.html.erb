@@ -164,14 +164,14 @@ menu_page: sidebar-componentes.erb
 	</table>
 </div>
 
-<p> Para que o título do popover tenha a mesma cor do elemento que ativa o popover, basta adicionar o atributo <code>data-inherit=""</code> com a propriedade CSS onde ele deve buscar a cor para o título. </p>
 <h4>Herança de cores no título do popover</h4>
+<p>Para que o título do popover tenha a mesma cor do elemento que ativa o popover, basta adicionar o atributo <code>data-inherit=""</code>, as opções desse atributo são <code>color</code> e <code>background-color</code>, com a propriedade CSS onde ele deve buscar a cor para o título. </p>
 
 <div class="example">
-	<a href="#" class="ico-question" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal a esquerda." data-title="Título"></a>
-	<button class="btn btn-danger" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal a esquerda." data-title="Título">Top herdando as cores</button>
-	<span class="label label-warning" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal a esquerda." data-title="Título">label</span>
-	<button class="btn label" style="color: navy;" data-container="body" data-inherit="color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal a esquerda." data-title="Título">label</button>
+	<a href="#" class="ico-question" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="left" data-content="Um texto bem legal e bonito por aqui." data-title="Título"></a>
+	<button class="btn btn-danger" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal e bonito por aqui." data-title="Título">Top herdando as cores</button>
+	<span class="label label-warning" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="right" data-content="Um texto bem legal e bonito por aqui." data-title="Título">label</span>
+	<button class="btn label" style="color: navy;" data-container="body" data-inherit="color" data-toggle="popover" data-placement="bottom" data-content="Um texto bem legal e bonito por aqui." data-title="Título">label</button>
 </div>
 <pre class="lang-html prettyprint-code linenums">
 <button class="btn btn-danger" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal a esquerda." data-title="Título">Top herdando as cores</button>
