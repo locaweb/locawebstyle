@@ -199,11 +199,11 @@ var locastyle = (function() {
 
   //Função que alterna classe no elemento pai do Collapse
   function toggleClassParentCollapse() {
-    $('.collapse').on('shown.bs.collapse', function () {
+    $('.collapse').on('show.bs.collapse', function () {
       $(this).parents('.collapse-box').addClass('active')
     });
 
-    $('.collapse').on('hidden.bs.collapse', function () {
+    $('.collapse').on('hide.bs.collapse', function () {
       $(this).parents('.collapse-box').removeClass('active')
     });
   }
