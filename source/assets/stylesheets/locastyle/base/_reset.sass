@@ -18,8 +18,11 @@ body
 	height: auto !important
 	height: 100%
 
-.progress-bar span
-	vertical-align: middle
+.progress-bar
+	background-color: $gray2
+
+	span
+		vertical-align: middle
 
 .alert[class*="alert-"]
 	a
@@ -59,6 +62,21 @@ ol
 .dropdown-toggle:after,
 .btn-default.dropdown-toggle:after
 	+arrow-down($gray2, 5px)
+
+.btn-primary
+	background-color: $gray2
+	border-color: $gray2
+
+	&:hover,
+	&:focus
+		background-color: $gray2
+		border-color: $gray2
+
+.dropdown-menu
+	li
+		a:hover,
+		a:focus
+			background-color: $gray2
 
 
 // Posicionando corretamente o botão de fechar nos paineis
