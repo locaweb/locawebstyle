@@ -1,0 +1,228 @@
+<style>
+@font-face {
+  font-family: "open_sans_regular";
+  src: url("/assets/fonts/opensans/opensans-regular-webfont.eot");
+  src: url("/assets/fonts/opensans/opensans-regular-webfont.eot?#iefix") format('eot'), url("/assets/fonts/opensans/opensans-regular-webfont.woff") format('woff'), url("/assets/fonts/opensans/opensans-regular-webfont.ttf") format('truetype'), url("/assets/fonts/opensans/opensans-regular-webfont.svg#open_sansextrabold") format('svg');
+  font-weight: normal;
+  font-style: normal; 
+}
+@font-face {
+  font-family: "open_sans_semibold";
+  src: url("/assets/fonts/opensans/opensans-semibold-webfont.eot");
+  src: url("/assets/fonts/opensans/opensans-semibold-webfont.eot?#iefix") format('eot'), url("/assets/fonts/opensans/opensans-semibold-webfont.woff") format('woff'), url("/assets/fonts/opensans/opensans-semibold-webfont.ttf") format('truetype'), url("/assets/fonts/opensans/opensans-semibold-webfont.svg#open_sansextrabold") format('svg');
+  font-weight: normal;
+  font-style: normal; 
+}
+@font-face {
+  font-family: "locaicons";
+  src: url("/assets/fonts/locaicons/locaicons.eot");
+  src: url("/assets/fonts/locaicons/locaicons.eot?#iefix") format('eot'), url("/assets/fonts/locaicons/locaicons.woff") format('woff'), url("/assets/fonts/locaicons/locaicons.ttf") format('truetype'), url("/assets/fonts/locaicons/locaicons.svg#locaicons") format('svg');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+#locaweb-barra-footer {
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(85, 85, 85);
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    font: normal normal normal 16px/normal open_sans_regular;
+    height: 80px;
+    margin: 10px 0 0;
+    outline: rgb(85, 85, 85) none 0px;
+    position: absolute;
+    text-shadow: rgba(0, 0, 0, 0.008) 0 0px 1px;
+    width: 1065px;
+    z-index: 0;
+}
+#locaweb-barra-footer-nav-container {
+    background: rgb(19, 19, 19) none repeat scroll 0% 0% / auto;
+    border: 0px none rgb(85, 85, 85);
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    height: 55px;
+    width: 1065px;
+}
+#locaweb-barra-footer-nav {
+    border: 0px none rgb(85, 85, 85);
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    height: 55px;
+    margin: 0 47.5px;
+    max-width: 970px;
+    outline: rgb(85, 85, 85) none 0;
+    position: relative;
+    text-shadow: rgba(0, 0, 0, 0.00784314) 0 0 1px;
+    width: 970px;
+}
+#locaweb-barra-footer-nav-title {
+    background-position: 100% 50%;
+    background: rgba(0, 0, 0, 0) url(http://0.0.0.0:4567/assets/images/locastyle/footer/arrow-left.png) no-repeat scroll 100% 50% / auto padding-box border-box;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    float: left;
+    font: normal normal bold 14px/25px open_sans_semibold;
+    height: 55px;
+    margin: 0px;
+    padding: 15px 35px 15px 0px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 171px;
+}
+#locaweb-barra-footer-nav-list {
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    font-size: 16px;
+    height: 54px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    text-align: center;
+    width: 970px;
+}
+#locaweb-barra-footer-nav-list .locaweb-barra-footer-nav-item{
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    display: inline-block;
+    font-size: 13px;
+    height: 54px;
+    margin: 0 0 0 20px;
+    text-align: center;
+    width: 174.59375px;
+}
+#locaweb-barra-footer-nav-list .locaweb-barra-footer-nav-item a{
+    box-sizing: border-box;
+    color: #fff;
+    font: normal normal normal 13px/54px open_sans_regular;
+    padding: 5px 0px 5px 30px;
+    text-align: center;
+    text-decoration: none;
+    background-position: 0% 50%;
+    background: rgba(0, 0, 0, 0) url(http://0.0.0.0:4567/assets/images/locastyle/footer/customer-support.png) no-repeat scroll 0% 50% / auto padding-box border-box;
+    background: rgba(0, 0, 0, 0) url(http://0.0.0.0:4567/assets/images/locastyle/footer/my-tickets.png) no-repeat scroll 0% 50% / auto padding-box border-box;
+    background: rgba(0, 0, 0, 0) url(http://0.0.0.0:4567/assets/images/locastyle/footer/help-desk.png) no-repeat scroll 0% 50% / auto padding-box border-box;
+    background: rgba(0, 0, 0, 0) url(http://0.0.0.0:4567/assets/images/locastyle/footer/statusblog.png) no-repeat scroll 0% 50% / auto padding-box border-box;
+}
+#locaweb-barra-footer-nav-list .locaweb-barra-footer-nav-item a span{
+    /*
+    border: 0px none rgb(255, 255, 255);
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font: normal normal normal 13px/54px open_sans_regular;
+    height: 54px;
+    outline: rgb(255, 255, 255) none 0px;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.00784314) 0px 0px 1px;
+    width: 79px;
+    */
+}
+
+#locaweb-barra-footer-info {
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    font-size: 11px;
+    height: 25px;
+    margin: 0px 47.5px;
+    max-width: 970px;
+    padding: 5px 0px;
+    text-align: center;
+    width: 970px;
+}
+/*
+
+#DIV_18:after {
+    border: 0px none rgb(85, 85, 85);
+    box-sizing: border-box;
+    clear: both;
+    color: rgb(85, 85, 85);
+    content: ' ';
+    display: table;
+    font: normal normal normal 11px/normal open_sans_regular;
+    outline: rgb(85, 85, 85) none 0px;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.00784314) 0px 0px 1px;
+    width: 1px;
+}
+
+#DIV_18:before {
+    border: 0px none rgb(85, 85, 85);
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    content: ' ';
+    display: table;
+    font: normal normal normal 11px/normal open_sans_regular;
+    outline: rgb(85, 85, 85) none 0px;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.00784314) 0px 0px 1px;
+    width: 1px;
+}
+*/
+
+#locaweb-barra-footer-info-last-access {
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    display: block;
+    float: left;
+    font-style: 11px;
+    height: 15px;
+    margin: 0 10 0 0;
+    text-align: center;
+    width: 197px;
+}
+#locaweb-barra-footer-info-last-access:after {
+    /*
+    border: 0px none rgb(85, 85, 85);
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    content: '';
+    display: none;
+    font: normal normal normal 11px/normal open_sans_regular;
+    height: 15px;
+    outline: rgb(85, 85, 85) none 0px;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.00784314) 0px 0px 1px;
+    width: 197px;*/
+}
+#locaweb-barra-footer-info-last-access:before {
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    content: '';
+    display: inline-block;
+    font: normal normal normal 11px/10px locaicons;
+    height: 11px;
+    margin: 0px 4px 0px 0px;
+    outline: rgb(85, 85, 85) none 0px;
+    position: relative;
+    speak: none;
+    text-align: center;
+    top: -2px;
+    vertical-align: middle;
+    width: 11px;
+}
+#locaweb-barra-footer-info strong{
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    font-size: 11px;
+    outline: rgb(85, 85, 85) none 0px;
+    text-align: center;
+}
+#locaweb-barra-footer-info-ip{
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    font-size: 11px;
+    text-align: center;
+    width: 970px;
+}
+#locaweb-barra-footer-info-copyright {
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    float: right;
+    font-size: 10px;
+    height: 13px;
+    margin: 0px;
+    text-align: center;
+    width: 275px;
+}
+</style>
