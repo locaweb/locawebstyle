@@ -1,0 +1,92 @@
+<div id="open_links">
+	<ul class="container">
+		<li><a id="home_menu_sample" href="/home">Open link sample</a></li>
+	</ul>
+</div>
+
+<div id="on_page_links">
+	<ul class="container">
+		<li><a id="on_page_link_to_nowhere" href="#">On page link sample</a></li>
+	</ul>
+</div>
+
+<div id="closed_modal_test">
+	<a data-toggle="modal" id="closed_modal_sample_trigger" href="#closed_modal_sample">Open modal</a>
+	<div id="closed_modal_sample" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content"></div>
+		</div>
+	</div>
+</div>
+
+<div id="opened_modal_test" class="modal fade in" role="dialog" tabindex="-1" aria-labelledby="title_change_pass" aria-hidden="false" style="display: block;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<a id="close_modal_sample_by_x" type="button" class="close" data-dismiss="modal">x</a>
+			</div>
+			<div class="modal-footer">
+				<button id="close_modal_sample_by_button" class="btn btn-default" data-dismiss="modal">close_modal</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="collapse-box" id="closed_collapse_sample_box">
+	<div class="panel-heading">
+		<a data-toggle="collapse" id="closed_collapse_sample_trigger" href="#closed_collapse_sample" class="collapsed">Open collapse</a>
+	</div>
+	<div class="panel-collapse collapse" id="closed_collapse_sample" style="height: 0px;">
+		<div class="panel-body">
+		</div>
+	</div>
+</div>
+
+<div class="collapse-box" id="opened_collapse_sample_box">
+	<div class="panel-heading">
+		<a data-toggle="collapse" id="opened_collapse_sample_trigger" href="#opened_collapse_sample" class="">Close collapse</a>
+	</div>
+	<div class="panel-collapse in" id="opened_collapse_sample" style="height: auto;">
+	</div>
+</div>
+
+
+<div id="dropdown_sample_box" class="btn-group f-right">
+	<button class="btn btn-default dropdown-toggle" id="dropdown_trigger" type="button" data-toggle="dropdown">Toggle dropdown</button>
+	<ul class="dropdown-menu pull-right">
+		<li><a href="#">Action</a></li>
+	</ul>
+</div>
+
+<div id="tabs_sample">
+	<ul class="nav nav-tabs">
+		<li><a href="#">Tab 1</a></li>
+		<li><a href="#" id="tab_trigger">Tab 2</a></li>
+		<li><a href="#">Tab 3</a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active" id="general">
+			<h1>Content</h1>
+		</div>
+	</div>
+</div>
+
+<form action="#" id="my_sample_form" method="post" onSubmit="return false;">
+	<div class="well ">
+		<label for="email">E-mail</label>
+		<input class="form-control" id="email" name="sender[email]" type="text">
+		<input class="btn btn-primary" name="commit" type="submit" value="Submit">
+	</div>
+</form>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-45255130-1', {'cookieDomain': 'localhost'});
+	ga('send', 'pageview');
+</script>
+
