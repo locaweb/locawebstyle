@@ -5,4 +5,6 @@ $(window).load(function() {
   locastyle.passwordStregth.init();
   locastyle.carousel.init();
   locastyle.trackEvents.init();
+  locastyle.collapse.init();
+  locastyle.trackEvents.init();
 });
