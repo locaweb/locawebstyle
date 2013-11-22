@@ -6,4 +6,5 @@ $(window).load(function() {
   locastyle.carousel.init();
   locastyle.trackEvents.init();
   locastyle.collapse.init();
+  locastyle.trackEvents.init();
 });
