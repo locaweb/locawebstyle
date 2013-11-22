@@ -4,6 +4,15 @@ locastyle.trackEvents = (function() {
   'use strict';
 
   function init(){
+    if(window.ga){
+      findTriggers();
+      this.gaPresent = true;
+    } else {
+      this.gaPresent = false;
+    }
+  }
+
+  function findTriggers(){
     findLinks();
     findButtons();
     findForms();
