@@ -11,11 +11,7 @@ locastyle.collapse = (function() {
 
   // Verifica se o Collapse está aberto
   function verifyOpenedCollapse() {
-    $('.collapse').each(function(){
-      if ( $(this).hasClass('in') ) {
-        $(this).parents('.collapse-box').addClass('active');
-      }
-    });
+    $('.collapse.in').parents('.collapse-box').addClass('active');
   }
 
   // Função que adiciona classe no elemento pai do Collapse
