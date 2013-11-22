@@ -1262,8 +1262,9 @@ ol p{font-size: inherit;}
   padding: 5px 10px;
 }
 .listInfos p{margin: 0}
-.listInfos .new p,
-.listInfos .alert p{color: #2a2a2a;}
+.notification .listInfos p a{color: #0088cc;}
+.listInfos .alert p{color: #727272;}
+.listInfos .new p{color: #2a2a2a;}
 .listInfos .alert{
   background: #fdeded;
   border-radius: 0;
