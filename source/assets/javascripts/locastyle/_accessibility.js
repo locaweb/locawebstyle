@@ -7,9 +7,12 @@ locastyle.accessibility = (function() {
     titleAccess();
     areaAccess();
     anchorContent();
+    initSubMenu();
     subMenuAccess();
     accessMenu();
     focusAlert();
+    ariaTabs();
+    accessTab();
   }
 
   function areaAccess(){
@@ -37,21 +40,32 @@ locastyle.accessibility = (function() {
     }
   }
 
+  function initSubMenu(){
+    $('.menu li').find('ul').addClass('submenu');
+    ariaElementToggle($('.submenu'), false, true);
+    $('.menu a').attr({ role : 'menuitem' })
+  }
+
+
   // Submenu acessível via teclado
   function subMenuAccess(){
-    $('.menu li a').on('focus', function(){
-    $(this).parents('li').addClass('in');
-    $(this).parents('li').find('ul').attr({
-      'aria-expanded' : true,
-         'aria-hidden': false
-      })
-    }).on('blur', function(){
+    $('.menu a').on('focus mouseover', function(){
+      $(this).parents('li').addClass('in');
+      ariaElementToggle($(this).parents('.in').find('.submenu'), true, false);
+
+    }).on('blur mouseout', function(){
       $(this).parents('li').removeClass('in');
-      $(this).parents('li').find('ul').attr({
-        'aria-expanded' : false,
-           'aria-hidden': true
-      })
+      ariaElementToggle($('.submenu'), false, true);
     })
+  }
+
+
+  // Aria genérica (para submenu, collapses e dropdown)
+  function ariaElementToggle(elem, expanded, hidden){
+    $(elem).attr({
+      'aria-expanded' : expanded,
+         'aria-hidden': hidden
+    });
   }
 
   // Rola a tela até o elemento
@@ -79,6 +93,21 @@ locastyle.accessibility = (function() {
       scrollAcess($element);
       $element.attr('tabindex','-1').focus();
     }
+  }
+
+  function ariaTabs(){
+    $('.nav-tabs li a').attr({
+      role: 'tab',
+      'aria-selected': 'false',
+      'aria-hidden': 'true'
+    });
+    $('.nav-tabs li.active a').attr('aria-selected','true').attr('aria-hidden','false');
+  }
+
+  function accessTab(){
+    $('.nav-tabs a').on('shown.bs.tab', function() {
+      ariaTabs();
+    })
   }
 
   return {
