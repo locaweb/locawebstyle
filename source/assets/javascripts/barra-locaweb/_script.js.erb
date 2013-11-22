@@ -1,0 +1,67 @@
+(function() {
+  var locaweb = locaweb || {}
+  locaweb.barra = (function() {
+    'use strict';
+
+    var config = {
+      header: {},
+      footer: {
+        title: 'Suporte e Ajuda',
+        links: [
+          { label: 'Atendimento', url: '#1', icon: ''},
+          { label: 'Meus Chamados', url: '#2', icon: ''},
+          { label: 'Central de Ajuda (Wiki)', url: '#3', icon: ''},
+          { label: 'Statusblog', url: '#4', icon: ''}
+        ],
+        info: {
+          lastAcess: '7/8/2011 22:35:49',
+          ip: '201.87.65.217'
+        }
+      }
+    }
+
+    function init() {
+      console.log('init');
+      insertStylesheet();
+      insertFooter();
+    }
+
+    function insertStylesheet(){
+      console.log('insertStylesheet');
+      utils._appendHtml( document.head, JST['barra-locaweb/_style']() );
+    }
+
+    function insertFooter(){
+      console.log('insertFooter');
+      utils._appendHtml(document.body, JST["barra-locaweb/_footer"]( config.footer ));
+    }
+
+    insertFooter
+
+    var utils = (function() {
+    
+      function appendHtml(el, str) {
+        var div = document.createElement('div');
+        div.innerHTML = str;
+        while (div.children.length > 0) {
+          el.appendChild(div.children[0]);
+        }
+      }
+
+      return {
+        _appendHtml : appendHtml
+      };
+    
+    }());
+
+
+    return {
+      init:init
+    };
+    
+// var html = '<h1 id="title">Some Title</h1><span style="display:inline-block; width=100px;">Some arbitrary text</span>';
+// appendHtml(document.body, html); // "body" has two more children - h1 and span.
+
+  }());
+  locaweb.barra.init();
+})();
