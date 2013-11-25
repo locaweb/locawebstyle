@@ -13,7 +13,6 @@ locastyle.accessibility = (function() {
     focusAlert();
     ariaTabs();
     accessTab();
-    autoFocus();
     modalAutoFocus();
     collapseAutoFocus();
   }
@@ -28,9 +27,10 @@ locastyle.accessibility = (function() {
 
   function anchorContent(){
     $('.link-content').on('click',function(e){
+      var $anchorTitle = $('.title-content');
       e.preventDefault();
-      $('.title-content').attr('tabindex', '-1').focus().css('outline','none');
-      scrollAcess($('.title-content'));
+      $anchorTitle.attr('tabindex', '-1').focus().css('outline','none');
+      scrollAcess($anchorTitle);
     })
   }
 
@@ -113,19 +113,19 @@ locastyle.accessibility = (function() {
     })
   }
 
-  function autoFocus(){
-    $('.auto-focus').focus();
+  function autoFocus(scope){
+    $('.auto-focus', scope).focus();
   }
 
   function modalAutoFocus(){
     $('.modal').on('shown.bs.modal',function(){
-      autoFocus();
+      autoFocus( this );
     })
   }
 
   function collapseAutoFocus(){
     $('.collapse-box').on('shown.bs.collapse',function(){
-      autoFocus();
+      autoFocus(this);
     })
   }
 
