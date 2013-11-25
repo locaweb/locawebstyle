@@ -22,7 +22,7 @@ As vantagens desse pattern são: organização, clareza, performance, expõe pub
 
 Leia mais sobre ele no livro do <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript">Addy Osmani</a>.
 
-## Responsive e Mobile First
+## Mobile First
 Locaweb Style é Mobile First. Os designers começaram a desenhar o novo layout pensando primeiro em Mobiles e somente depois para Desktops.
 
 Ao produzir, fizemos a mesma coisa. Sempre escrevemos primeiro para Mobiles para depois escrevemos a versão desktop. Controlamos as media queries especificamente para cada módulo.
@@ -31,6 +31,12 @@ Para facilitar o nosso desenvolvimento e também os desenvolvedores que estivere
 
 Assim fica simples de customizar algo específico para cada uma das viewports.
 Existem alguns elementos do Bootstrap que extendemos a responsividade, como as Tabs, que viram um menu dropdown em celulares. Mobile First Rulez.
+
+### Adaptive Delivery
+O Locaweb Style não é exatamente Responsivo. Existem alguns gaps ao fazer um layout responsivo que não são facilmente resolvidas. Por exemplo, quando há a necessidade de mudança de elementos para se adaptarem a determinados dispositivos. Você entrega exatamente o que o usuário precisa ver, da forma que ele precisa ver, naquele tipo de dispositivo.
+Um exemplo clássico é quando você precisa transformar um menu em um selectbox (combobox).
+
+Não há a necessidade de detectar via back-end, mas essa prática também é possível e é adotada em algumas empresas. Mas se você fizer um bom trabalho de estrutura HTML, o DOM mudará muito pouco e você terá poucas interferências do Javascript para mudar elementos.
 
 ## Histórico de problemas e novidades
 Tínhamos muitos problemas, principalmente em produtos internos, sobre como implementar novos elementos, qual o fluxo de criação e produção desses elementos, seus fluxos e interações. Fechamos um padrão de desenvolvimento juntamente com UX para melhorar a criação e manutenção dos elementos existentes e também de novos elementos.
@@ -44,13 +50,14 @@ Passamos a usar o GitHub em vez de manter o projeto internamente. Agora todas as
 
 Já temos 37 forks de desenvolvedores interessados e recebemos várias sugestões de outros desenvolvedores que viram o projeto que gostaram do que fizemos. Fique à vontade para nos ajudar a manter esse framework.
 
-## Páginas de Exemplos
-Criamos algumas páginas de exemplos para facilitar a produção de novas páginas e para mostrarmos quais as possibilidades e combinações de elementos e estruturas. São exemplos de páginas reais, usadas em nossos produtos.
+## Páginas de Exemplos e Cartilha de Elementos
+Criamos algumas páginas de exemplos para facilitar a produção de novas páginas e para mostrarmos quais as possibilidades e combinações de elementos e estruturas. Você pode <a href="http://locaweb.github.io/locawebstyle/manual/exemplos/">ver estes exemplos aqui</a>.
 
-Também mudamos um pouco a cartilha de elementos, que reúne todos os elementos encontrados no Locastyle em apenas uma página. Dessa forma é simples de identificar cada elemento e testá-los quando necessário.
+Também mudamos um pouco a <a href="http://locaweb.github.io/locawebstyle/manual/elementos/">cartilha de elementos</a>, que reúne todos os elementos encontrados no Locastyle em apenas uma página. Dessa forma é simples de identificar cada elemento e testá-los quando necessário.
 
 A ideia é que você consiga encontrar exemplos de estruturas básicas para montar seus próprios projetos e verificar as possibilidades aos juntar os componentes em uma mesma página.
 
+## Links para usar o Locaweb Style
 Maneiras para usar o Locastyle:
 
 *   <a href="http://locaweb.github.io/locawebstyle/manual/introducao/como-usar/">Endereço CDN</a>
