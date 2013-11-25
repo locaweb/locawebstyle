@@ -34,7 +34,7 @@ locastyle.accessibility = (function() {
   function titleAccess(){
     var $titleAcess = $('.title-content').size();
     var message = 'Ir para o conteúdo';
-    var $htmlAcess = '<div class="area-access"><a href="#" class="link-content ico-accessibility" tabindex="1">'+ message+ '</a></div>'
+    var $htmlAcess = '<div class="area-access hidden-xs"><a href="#" class="link-content  ico-accessibility" tabindex="1">'+ message+ '</a></div>'
     if( $titleAcess >= 1){
       $('.header').prepend($htmlAcess);
     }
