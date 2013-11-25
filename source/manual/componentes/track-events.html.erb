@@ -1,0 +1,35 @@
+---
+title: Analytics - Track Events
+menu_page: sidebar-componentes.erb
+---
+<header>
+	<h1>Tracking de eventos do Analytics</h1>
+	<h3>Registrando eventos de forma automática. Fácil, rápido e efetivo.</h3>
+</header>
+
+<h3>O que é?</h3>
+<p>É uma forma de registrar os eventos comuns em projetos com Locastyle, por exemplo se a ação está abrindo um collapse ou fechando, se é um link, se está abrindo um modal e etc.</p>
+
+<h3>Como usar?</h3>
+<p>Basta ter o objeto <code>ga</code> configurado e o track de eventos do locastyle começa a funcionar.</p>
+
+<h3>Requisitos</h3>
+<p>Este componente funciona apenas na versão V2 do Locastyle e suporta apenas o novo analytics, ou "<a href="https://support.google.com/analytics/answer/2790010?hl=pt-BR" target="_blank">Universal Analytics</a>".</p>
+<p>Se você ainda usa o antigo, procure atualizar, existem <a href="http://analytics.blogspot.com.br/2013/10/an-easy-way-to-upgrade-to-universal_23.html" target="_blank">documentações de como fazer este upgrade.</a>
+
+<p>Este é um exemplo de disparo de evento no código antigo:</p>
+<pre class="lang-javascript linenums prettyprint-code">
+_gaq.push(['_trackEvent', 'Videos', 'Play', 'Baby\'s First Birthday']);
+</pre>
+
+<p>E este é um exemplo de disparo de evento no código novo:</p>
+<pre class="lang-javascript linenums prettyprint-code">
+ga('send', 'event', 'category', 'action', 'opt_label', opt_value, {'nonInteraction': 1});
+</pre>
+
+<h3>E se eu não quiser usar?</h3>
+<p>Se você não tiver o código <code>ga</code> configurado o componente não faz nada, mas se você tiver e mesmo assim quiser desativar o track de eventos, pode usar a forma padrão de desabilitar os eventos.</p>
+<pre class="lang-javascript linenums prettyprint-code">
+window['ga-disable-UA-XXXXXX-Y'] = true;
+</pre>
+<p>Veja a documnetação de como <a href="https://developers.google.com/analytics/devguides/collection/gajs/#disable" target="_blank">desabilitar o tracking de eventos.</a></p>
