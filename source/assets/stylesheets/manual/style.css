@@ -615,15 +615,14 @@ table td {
 /*****
 ****** ARTICLE
 *****/
-.content header {
+.man-article > header {
 	overflow: hidden;
 	margin-bottom: 30px;
 	padding-bottom: 30px;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-
-.content header h2 {
+.man-article > header h2 {
 	color: #545454!important;
 	font-size: 0.8em;
 	padding: 0;
@@ -632,14 +631,14 @@ table td {
 }
 
 
-.content header h2:before {
+.man-article > header h2:before {
 	font-size: 75px !important;
 	top: 12px !important;
 	vertical-align: top !important;
 }
 
 
-.content header h1 {
+.man-article > header h1 {
 	/*margin-left: 84px;*/
     position: relative;
     font-size: 2.5em !important;
@@ -647,7 +646,7 @@ table td {
 }
 
 
-.content header h1 + h3 {
+.man-article > header h1 + h3 {
     font-size: 1.2em;
     margin-left: 0;
     max-width: 85%;
@@ -675,12 +674,10 @@ table td {
 	color: #212121;
 }
 
-
 /*** SIDEBAR ***/
 .sidebar-manual {
 	margin-top: 0;
 }
-
 
 .sidebar-manual > nav {
 	background: #f8f8f8;
@@ -690,18 +687,15 @@ table td {
 	margin-bottom: 20px;
 }
 
-
 .sidebar-manual > nav h1 {
 	font: 300 1.1em Lato, arial, helvetica, tahoma, sans-serif;
 	color: rgba(0,0,0,0.7);
 	margin: 0 0 5px;
 }
 
-
 .sidebar-manual ul {margin: 0; padding: 0;}
 
 .sidebar-manual ul li {list-style: none;}
-
 
 .sidebar-manual ul li a {
 	display: block;
@@ -714,17 +708,13 @@ table td {
 	position: relative;
 }
 
-
 .sidebar-manual ul li a:hover,
 .sidebar-manual ul li .active,
 .sidebar-manual ul li a:focus {
 	background: #b1d4d7;
 	text-decoration: none;
 }
-
-
 .sidebar-manual .with-arrow a:hover:before {border-left-color: #183b3e;}
-
 
 .sidebar-manual .with-arrow a:before {
     border-bottom: 5px solid transparent;
@@ -739,7 +729,6 @@ table td {
     width: 0;
 }
 
-
 /*****
 ****** FOOTER
 *****/
@@ -749,7 +738,6 @@ table td {
 	min-height: 50px;
 	margin-top: 50px;
 }
-
 
 .footer .logo {float: left;}
 
@@ -801,7 +789,7 @@ table td {
 		line-height: 1.3em;
 	}
 
-	.content header h2{font-size: 1.2em;}
+	.man-article > header h2{font-size: 1.2em;}
 
 	.channel h3:before{
 		font-size: 80px;
@@ -809,13 +797,13 @@ table td {
 	}
 
 	.other-guides li,
-	.content header h3,
-	.content header h1{
+	.man-article > header h3,
+	.man-article > header h1{
 		margin-left: 0;
 	}
 
 
-	.content header h2:before{
+	.man-article > header h2:before{
 		font-size: 2em !important;
 		top: -5px !important;
 	}
