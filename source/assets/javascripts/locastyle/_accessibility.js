@@ -13,6 +13,9 @@ locastyle.accessibility = (function() {
     focusAlert();
     ariaTabs();
     accessTab();
+    autoFocus();
+    modalAutoFocus();
+    collapseAutoFocus();
   }
 
   function areaAccess(){
@@ -110,9 +113,26 @@ locastyle.accessibility = (function() {
     })
   }
 
+  function autoFocus(){
+    $('.auto-focus').focus();
+  }
+
+  function modalAutoFocus(){
+    $('.modal').on('shown.bs.modal',function(){
+      autoFocus();
+    })
+  }
+
+  function collapseAutoFocus(){
+    $('.collapse-box').on('shown.bs.collapse',function(){
+      autoFocus();
+    })
+  }
+
   return {
     init: init,
-    titleAccess: titleAccess
+    titleAccess: titleAccess,
+    autoFocus: autoFocus
   }
 
 }());
