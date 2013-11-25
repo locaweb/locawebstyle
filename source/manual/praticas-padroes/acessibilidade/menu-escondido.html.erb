@@ -4,13 +4,13 @@ menu_page: sidebar-acessibilidade.erb
 ---
 <header>
 	<h1>Menu escondido</h1>
-	<h3>Menu acessível para leitores de tela e escondido para usuários normais.</h3>
+	<h3>Menu acessível apenas para leitores de tela e escondido visualmente.</h3>
 </header>
 
 <p>Para facilitar a navegação via tabs, é comum criarmos um menu escondido para que os leitores de tela o leiam antes de todas as outras opções da página. Esse menu contém sempre atalhos priorizados para que as tarefas do serviço sejam executadas mais rapidamente. Você pode montar um menu escondido de maneira muito simples no Locaweb Style.</p>
 
 <p>As informações que estarão neste menu oculto será definida inserindo o atributo <code>data-access="true"</code>. Adicionando esse atributo em algum link, botão e etc, automaticamente nosso script irá adicionar a ação ao menu. Veja um exemplo:</p>
 
-<pre class="lang-html prettyprint-code linenums"><a href="#" data-access="true" title="Transações do Gateway de Pagamento">Transações</a></pre>
+<pre class="lang-html prettyprint-code linenums"><a href="#" data-access="true" aria-label="Cadastrar um novo cliente">Cadastrar</a></pre>
 
-<p>Sugerimos que o menu não tenha mais de 5 ítens. É muito importante que ele seja curto para que o usuário não se perca... caso contrário o menu perde todo o sentido. Faça um estudo em seu projeto para entender quais ações em cada página é mais importante e insira um atalho no menu escondido.</p>
+<p>Sugerimos que o menu não tenha mais de 3 ítens. É muito importante que ele seja curto para que o usuário não se perca... caso contrário o menu perde todo o sentido. Faça um estudo em seu projeto para entender quais ações em cada página é mais importante e insira um atalho no menu escondido.</p>

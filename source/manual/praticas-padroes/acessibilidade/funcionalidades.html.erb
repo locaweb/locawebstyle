@@ -1,0 +1,88 @@
+---
+title: Acessibilidade - Funcionalidades
+menu_page: sidebar-acessibilidade.erb
+---
+<header>
+	<h1>Funcionalidades Gerais</h1>
+	<h3>Melhorias acessíveis no Locaweb Style</h3>
+</header>
+<p>Dentro do nosso framework Locaweb Style foram inseridas funcionalidades para a acessibilidade, conheça elas:</p>
+
+<h2 class="title-4">Submenu Acessível</h2>
+<p>Caso o projeto possua submenu, já o deixamos acessível via teclado. Isso ajuda muito quem utiliza leitores de tela.</p>
+
+<h2 class="title-4">Dando foco ao input</h2>
+<p>Em alguns casos precisaremos dar foco ao input dentro de <strong>modal ou collapse</strong>, basta inserir a classe <code>auto-focus</code> e a mágica acontece, pode parecer algo simples, no entanto essa funcionalidade ajuda muito para o usuário.</p>
+
+<p><strong>Confira o exemplo clicando no botão abaixo:</strong></p>
+<a class="btn btn-primary" data-toggle="modal" href="#change_password_modal">Alterar senha</a>
+
+<div id="change_password_modal" class="modal fade" role="dialog" tabindex="-1" aria-labelledby="title_change_pass" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="title_change_pass">Alteração de senha</h3>
+      </div>
+      <form accept-charset="UTF-8" action="/panel/account" class="edit_account" id="edit_account_2" method="post">
+
+        <div class="modal-body">
+
+          <div class="form-inline">
+            <div class="form-group">
+              <label class="control-label" for="user_password">Nova senha</label>
+              <p class="info-label">Senha entre 8 a 14 caracteres, contendo letras e números</p>
+              <div class="row">
+                <div class="input-group col-md-5 col-xs-7">
+                  <input class="password form-control auto-focus" data-component="password-strength" data-monitor-id="password-strength-monitor" id="user_password" maxlength="14" name="account[smtp_pass]" size="14" type="password">
+                  <a class=" input-group-addon toggle-pass ico-eye" data-classtoggle="ico-eye,ico-eye-blocked" data-target="#user_password" href="#"></a>
+                </div>
+                <div class="password-strength">
+                  <p>Força da senha:</p>
+                  <div id="password-strength-monitor" class="monitor empty"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <input class="btn btn-primary" name="commit" type="submit" value="Confirmar">
+        </div>
+			</form>
+		</div>
+  </div>
+</div>
+
+<br><br>
+<div class="collapse-box" id="sender_registration">
+
+	<div class="panel-heading">
+		<a data-toggle="collapse" href="#register_sender">
+			<h2 class="panel-title">E-mail de remetente</h2>
+			<p>Gerencie seus e-mails de rementente</p>
+		</a>
+	</div>
+
+	<div class="panel-collapse collapse" id="register_sender">
+		<div class="panel-body">
+			<form accept-charset="UTF-8" action="/panel/senders" class="new_sender" id="new_sender" method="post">
+				<div class="well ">
+					<label for="sender_email">E-mail</label>
+					<div class="form-inline row">
+						<div class="form-group col-md-4">
+							<input class="form-control auto-focus" id="sender_email" name="sender[email]" type="text">
+						</div>
+						<div class="form-group col-md-4">
+							<input class="btn btn-primary" name="commit" type="submit" value="Adicionar">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
