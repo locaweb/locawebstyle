@@ -1,0 +1,65 @@
+---
+title: Versão 2.0.0
+date: 2013-11-22 18:26 UTC
+tags:
+---
+## Bootstrap 3.0 e mudanças no HTML
+A segunda versão do Locastyle está usando o Bootstrap 3.0. Nessa nova versão o Bootstrap mudou praticamente todo o HTML e CSS.
+Aproveitamos essa mudança do Bootstrap para iniciar a versão 2 do Locastyle. Por esse motivo muito do HTML que era usado para fazer os módulos de elementos do Locastyle mudou.
+
+Não existe migração graciosa da versão 1.0 para a 2.0. Você vai precisar rever todos os elementos e principalmente verificar se os elementos que você usa em seus projetos já existem no versão 2.0. Estamos inserindo aos poucos novos elementos e pode ser alguns elementos antigos não entrem novamente na cartilha, por exemplo, busca avançada. Pode ser também que outros elementos voltem, mas totalmente remodelados.
+
+## Testes Jasmine
+Cobrimos nossas funções com Jasmine.
+Cada módulo agora é testado e nenhum script é produzido sem termos criado testes antes (claro, na medida do possível. :-)
+
+Dessa maneira conseguimos garantir que erros básicos não aconteçam e a coordenação de novas funções se torna mais simples de manter.
+
+## Estrutura de Javascript (Revealing Module Pattern)
+Reestruturamos o Javascript modularizando as funções e adequando o padrão de escrita do Javascript sob o padrão Revealing Module do <a href="http://christianheilmann.com/">Christian Heilmann</a>, melhorarando a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, adotamos o Revealing Module Pattern
+
+As vantagens desse pattern são: organização, clareza, performance, expõe publicamente apenas as funções e variáveis que se deseja e namespace único evitando sobrescrever métodos facilmente.
+
+Leia mais sobre ele no livro do <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript">Addy Osmani</a>.
+
+## Mobile First
+Locaweb Style é Mobile First. Os designers começaram a desenhar o novo layout pensando primeiro em Mobiles e somente depois para Desktops.
+
+Ao produzir, fizemos a mesma coisa. Sempre escrevemos primeiro para Mobiles para depois escrevemos a versão desktop. Controlamos as media queries especificamente para cada módulo.
+
+Para facilitar o nosso desenvolvimento e também os desenvolvedores que estiverem usando o nosso framework, sempre que a página é carregada, verificamos o tamanho da tela do usuário e inserimos classes na tag HTML. As classes são: .media-mobile, .media-tablet, .media-desk, .media-desk-lg.
+
+Assim fica simples de customizar algo específico para cada uma das viewports.
+Existem alguns elementos do Bootstrap que extendemos a responsividade, como as Tabs, que viram um menu dropdown em celulares. Mobile First Rulez.
+
+### Adaptive Delivery
+O Locaweb Style não é exatamente Responsivo. Existem alguns gaps ao fazer um layout responsivo que não são facilmente resolvidas. Por exemplo, quando há a necessidade de mudança de elementos para se adaptarem a determinados dispositivos. Você entrega exatamente o que o usuário precisa ver, da forma que ele precisa ver, naquele tipo de dispositivo.
+Um exemplo clássico é quando você precisa transformar um menu em um selectbox (combobox).
+
+Não há a necessidade de detectar via back-end, mas essa prática também é possível e é adotada em algumas empresas. Mas se você fizer um bom trabalho de estrutura HTML, o DOM mudará muito pouco e você terá poucas interferências do Javascript para mudar elementos.
+
+## Histórico de problemas e novidades
+Tínhamos muitos problemas, principalmente em produtos internos, sobre como implementar novos elementos, qual o fluxo de criação e produção desses elementos, seus fluxos e interações. Fechamos um padrão de desenvolvimento juntamente com UX para melhorar a criação e manutenção dos elementos existentes e também de novos elementos.
+
+O Locaweb Style v1 foi criado de acordo com a necessidade de cada projeto. Estávamos numa fase aqui na Locaweb onde os painéis estavam sendo refeitos. Por isso cada elemento ou interação era feita somente quando surgia uma demanda específica. Não houve um longo planejamento para a criação de cada elemento ou cada interação. Sem contar que cada membro de UX decidia uma interação diferente para cada painél.
+
+Na versão 2 sentamos junto com o pessoal de UX para acertarmos essas arestas. Com a bagagem de conhecimento que tivemos na primeira versão, sabíamos quais componentes se tornaram obsoletos e quais foram realmente usados. Por isso, na versão 2 conseguimos manter uma grande simplicidade na quantidade de elementos e principalmente nas suas interações.
+
+## Uso do Github
+Passamos a usar o GitHub em vez de manter o projeto internamente. Agora todas as issues e histórico de commits e tarefas é mantido publicamente no endereço: <a href="http://github.com/locaweb/locawestyle/">http://github.com/locaweb/locawestyle/</a>
+
+Já temos 37 forks de desenvolvedores interessados e recebemos várias sugestões de outros desenvolvedores que viram o projeto que gostaram do que fizemos. Fique à vontade para nos ajudar a manter esse framework.
+
+## Páginas de Exemplos e Cartilha de Elementos
+Criamos algumas páginas de exemplos para facilitar a produção de novas páginas e para mostrarmos quais as possibilidades e combinações de elementos e estruturas. Você pode <a href="http://locaweb.github.io/locawebstyle/manual/exemplos/">ver estes exemplos aqui</a>.
+
+Também mudamos um pouco a <a href="http://locaweb.github.io/locawebstyle/manual/elementos/">cartilha de elementos</a>, que reúne todos os elementos encontrados no Locastyle em apenas uma página. Dessa forma é simples de identificar cada elemento e testá-los quando necessário.
+
+A ideia é que você consiga encontrar exemplos de estruturas básicas para montar seus próprios projetos e verificar as possibilidades aos juntar os componentes em uma mesma página.
+
+## Links para usar o Locaweb Style
+Maneiras para usar o Locastyle:
+
+*   <a href="http://locaweb.github.io/locawebstyle/manual/introducao/como-usar/">Endereço CDN</a>
+*   <a href="https://github.com/locaweb/locawebstyle">Github (clone)</a>
+*   <a href="http://developer.locaweb.com.br/assets/edge.zip">Download dos assets (EDGE)</a>
