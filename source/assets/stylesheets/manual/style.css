@@ -914,6 +914,7 @@ table td {
 .blog article h5,
 .blog article h6 {
 	font-family: inherit !important;
+	color: #000;
 }
 
 .blog blockquote {
@@ -934,7 +935,7 @@ table td {
 	color: #444;
 }
 
-.blog article h2 {font-size: 2.1em; margin-top: 30px;}
+.blog article h2 {font-size: 1.90em; margin-top: 30px;}
 .blog article h3 {font-size: 1.7em; margin-top: 30px;}
 
 .blog article h4 {
@@ -971,7 +972,7 @@ table td {
 
 .blog article p {
 	font-family: Gilda Display, Georgia, Times, Serif;
-	font-size: 1.2em;
+	font-size: 1.05em;
 	line-height: 1.5em;
 	color: #000;
 }
