@@ -5,7 +5,7 @@
       <a href="/logout" accesskey="q" class="logOut" title="Para sair, pressione CONTROL + ALT + Q">Sair</a>
     <% end %>
     <% if @userName :%>
-      <span class="userName"><strong>herbsdois</strong></span>
+      <span class="userName"><strong><%= @userName %></strong></span>
     <% end %>
   </div>
 </div>
