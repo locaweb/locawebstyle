@@ -168,9 +168,14 @@
 	//
 	// Botoes
 	//
-	.btn-primary
+	%btn-theme
 		background-color: $color2
 		border-color: $color2
+
+	.btn-primary
+		@extend %btn-theme
+		&:hover, &:focus
+			@extend %btn-theme
 
 	//
 	// Switch Button
