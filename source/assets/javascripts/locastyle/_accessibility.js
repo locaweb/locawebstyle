@@ -17,6 +17,7 @@ locastyle.accessibility = (function() {
     collapseAutoFocus();
   }
 
+  // Exibe link acessível com a tecla Tab
   function areaAccess(){
     $('.area-access a').on('focus', function(){
       $(this).parent().addClass('in');
@@ -25,15 +26,18 @@ locastyle.accessibility = (function() {
     });
   }
 
+  // Rola a tela até o titulo principal, indo direto para o conteúdo
   function anchorContent(){
     $('.link-content').on('click',function(e){
-      var $anchorTitle = $('.title-content');
       e.preventDefault();
-      $anchorTitle.attr('tabindex', '-1').focus().css('outline','none');
+      var $anchorTitle = $('.title-content');
+      $anchorTitle.attr('tabindex', '-1').focus();
       scrollAcess($anchorTitle);
     })
   }
 
+
+  // Link acessivel para ir direto ao conteudo
   function titleAccess(){
     var $titleAcess = $('.title-content').size();
     var message = 'Ir para o conteúdo';
@@ -43,6 +47,7 @@ locastyle.accessibility = (function() {
     }
   }
 
+  //fFuncionalidades especificas do submenu (quando existir)
   function initSubMenu(){
     $('.menu li').find('ul').addClass('submenu');
     ariaElementToggle($('.submenu'), false, true);
@@ -89,6 +94,7 @@ locastyle.accessibility = (function() {
     })
   }
 
+  // Dá foco visual e como leitor de tela no elemento alerta
   function focusAlert(){
     var $element = $('.alert').not('.alert-warning');
     var $size = $element.size();
@@ -98,6 +104,7 @@ locastyle.accessibility = (function() {
     }
   }
 
+  //Insere Wai-aria nas Abas
   function ariaTabs(){
     $('.nav-tabs li a').attr({
       role: 'tab',
@@ -113,16 +120,19 @@ locastyle.accessibility = (function() {
     })
   }
 
+  // Da foco ao elemento
   function autoFocus(scope){
     $('.auto-focus', scope).focus();
   }
 
+  // Foco no elemento dentro do modal
   function modalAutoFocus(){
     $('.modal').on('shown.bs.modal',function(){
       autoFocus( this );
     })
   }
 
+  // Foco no elemento dentro do collapse
   function collapseAutoFocus(){
     $('.collapse-box').on('shown.bs.collapse',function(){
       autoFocus(this);
