@@ -92,7 +92,7 @@ set :base_url_v1, "/v1"
 activate :directory_indexes
 
 # Automatic reload on save
-activate :livereload
+activate :livereload if ENV["LIVERELOAD"]
 
 # Define layouts
 page "/manual/*", :layout => "page"
