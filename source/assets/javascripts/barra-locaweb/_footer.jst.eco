@@ -1,46 +1,27 @@
-<footer id="locaweb-barra-footer">
-  <div id="locaweb-barra-footer-nav-container">
-    <nav id="locaweb-barra-footer-nav">
-      <h2 id="locaweb-barra-footer-nav-title">
-        suporte e ajuda
-      </h2>
-      <ul id="locaweb-barra-footer-nav-list">
-        <% for link  in @links: %>
-        <% console.log( link ) %>
-          <li class="locaweb-barra-footer-nav-item">
-            <a href="<%= link.url %>" class="bg-customer-support">
-              <span class="visible-lg" id="SPAN_8">
-                <%= link.label %>
-              </span>
-            </a>
-          </li>
-        <% end %>
-        <!-- 
-        <li id="LI_6"> <a href="#" class="bg-customer-support" id="A_7"><span class="visible-lg" id="SPAN_8">Atendimento</span></a> </li>
-        <li id="LI_9"> <a href="#" class="bg-my-tickets" id="A_10"><span class="visible-lg" id="SPAN_11">Meus Chamados</span></a> </li>
-        <li id="LI_12"> <a href="#" class="bg-help-desk" id="A_13"><span class="visible-lg" id="SPAN_14">Central de Ajuda (Wiki)</span></a> </li>
-        <li id="LI_15"> <a href="#" class="bg-statusblog" id="A_16"><span class="visible-lg" id="SPAN_17">Statusblog</span></a> </li>
-         -->
-      </ul>
-    </nav>
-  </div>
-  <div id="locaweb-barra-footer-info">
-    <span id="locaweb-barra-footer-info-last-access">
-      <strong id="STRONG_20">
-        Último acesso:
-      </strong> 
-      <%= @info.lastAcess %>
-    </span>
-    <div id="locaweb-barra-footer-info-ip">
-      <span class="set-ip" id="SPAN_22">
-        <strong id="STRONG_23">
-          IP:
-        </strong> 
-        <%= @info.ip %>
-      </span>
+ <footer class="footer" id="locaweb-barra-footer">
+    <div class="footer-menu">
+      <nav class="container">
+        <h2 class="title-footer">suporte e ajuda</h2>
+        <ul class="no-liststyle">
+          <% for link  in @footer.links: %>
+            <li class="locaweb-barra-footer-nav-item">
+              <a href="<%= link.url %>" class="<%= link.icon %>">
+                <span class="visible-lg">
+                  <%= link.label %>
+                </span>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
     </div>
-    <p id="locaweb-barra-footer-info-copyright">
-      Copyright © 1997-2013 Locaweb Serviços de Internet S/A.
-    </p>
-  </div>
-</footer>
+    <div class="container footer-info">
+      <% if @infoLastacess :%>
+      <span class="last-access ico-screen"><strong>Último acesso:</strong> <%= @infoLastacess %></span>
+      <% end %>
+      <% if @infoIp :%>
+      <div class="set-ip"><span class="set-ip"><strong>IP:</strong> <%= @infoIp  %></span></div>
+      <% end %>
+      <p class="copy-right">Copyright © 1997-2011 Locaweb Serviços de Internet S/A.</p>
+    </div>
+  </footer>
