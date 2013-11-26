@@ -11,10 +11,8 @@
     function loadConfig (config) {
       var scripts = document.getElementsByTagName( 'script' );
       var scriptTag = scripts[ scripts.length - 1 ];
-      console.log(scriptTag)
       for (var prop in scriptTag.dataset) {
         if (scriptTag.dataset.hasOwnProperty(prop)) {
-          console.log(scriptTag.dataset )
           config[prop] = scriptTag.dataset[prop] || config[prop];
         }
       }
