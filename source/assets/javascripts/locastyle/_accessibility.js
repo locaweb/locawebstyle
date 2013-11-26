@@ -128,7 +128,7 @@ locastyle.accessibility = (function() {
   // Foco no elemento dentro do modal
   function modalAutoFocus(){
     $('.modal').on('shown.bs.modal',function(){
-      autoFocus( this );
+      autoFocus(this);
     })
   }
 
