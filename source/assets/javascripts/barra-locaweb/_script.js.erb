@@ -3,40 +3,36 @@
   locaweb.barra = (function() {
     'use strict';
 
-    var config = {
-      header: {},
-      footer: {
-        title: 'Suporte e Ajuda',
-        links: [
-          { label: 'Atendimento', url: '#1', icon: ''},
-          { label: 'Meus Chamados', url: '#2', icon: ''},
-          { label: 'Central de Ajuda (Wiki)', url: '#3', icon: ''},
-          { label: 'Statusblog', url: '#4', icon: ''}
-        ],
-        info: {
-          lastAcess: '7/8/2011 22:35:49',
-          ip: '201.87.65.217'
-        }
-      }
+    function init(config) {
+      insertStylesheet();
+      loadConfig(config);
     }
 
-    function init() {
-      console.log('init');
-      insertStylesheet();
-      insertFooter();
+    function loadConfig (config) {
+      var scripts = document.getElementsByTagName( 'script' );
+      var scriptTag = scripts[ scripts.length - 1 ];
+      console.log(scriptTag)
+      for (var prop in scriptTag.dataset) {
+        if (scriptTag.dataset.hasOwnProperty(prop)) {
+          console.log(scriptTag.dataset )
+          config[prop] = scriptTag.dataset[prop] || config[prop];
+        }
+      }
+      insertFooter(config);
+      insertHeader(config);
     }
 
     function insertStylesheet(){
-      console.log('insertStylesheet');
       utils._appendHtml( document.head, JST['barra-locaweb/_style']() );
     }
 
-    function insertFooter(){
-      console.log('insertFooter');
-      utils._appendHtml(document.body, JST["barra-locaweb/_footer"]( config.footer ));
+    function insertFooter(config){
+      utils._appendHtml(document.body, JST["barra-locaweb/_footer"]( config ));
     }
 
-    insertFooter
+    function insertHeader(config){
+      utils._prependHtml(document.body, JST["barra-locaweb/_header"]( config ));
+    }
 
     var utils = (function() {
     
@@ -48,8 +44,15 @@
         }
       }
 
+      function prependHtml (el, str) {
+        var div = document.createElement('div');
+        div.innerHTML = str;
+        document.body.insertBefore(div.children[0], document.body.firstChild);
+      }
+
       return {
-        _appendHtml : appendHtml
+        _appendHtml  : appendHtml,
+        _prependHtml : prependHtml,
       };
     
     }());
@@ -58,10 +61,7 @@
     return {
       init:init
     };
-    
-// var html = '<h1 id="title">Some Title</h1><span style="display:inline-block; width=100px;">Some arbitrary text</span>';
-// appendHtml(document.body, html); // "body" has two more children - h1 and span.
 
   }());
-  locaweb.barra.init();
+  locaweb.barra.init( barraConfig );
 })();
