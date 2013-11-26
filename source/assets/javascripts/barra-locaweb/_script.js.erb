@@ -16,8 +16,13 @@
           config[prop] = scriptTag.dataset[prop] || config[prop];
         }
       }
-      insertFooter(config);
-      insertHeader(config);
+      config.bar = scriptTag.dataset.bar || config.bar;
+      if( config.bar === 'both' || config.bar === 'header' ){
+        insertHeader(config);
+      }
+      if( config.bar === 'both' || config.bar === 'footer' ){
+        insertFooter(config);
+      }
     }
 
     function insertStylesheet(){
