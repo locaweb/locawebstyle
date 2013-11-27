@@ -5,7 +5,7 @@
         <ul class="no-liststyle">
           <% for link  in @footer.links: %>
             <li class="locaweb-lwbar-footer-nav-item">
-              <a href="<%= link.url %>" class="<%= link.icon %>">
+              <a href="<%= link.url %>" class="<%= link.icon %>" target="_blank">
                 <span class="visible-lg">
                   <%= link.label %>
                 </span>
