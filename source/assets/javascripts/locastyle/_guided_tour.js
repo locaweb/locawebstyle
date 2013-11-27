@@ -14,17 +14,16 @@ Locastyle.prototype.guidedTour = ( function() {
 
 	function init(jsonSteps){
 		checkTour(jsonSteps);
-		setCookie();
 	}
 
+	// Override default selectors if user provide
 	function checkTour(jsonSteps){
-		if(jsonSteps && hopscotch){
-			if( jsonSteps.selectors ){
-				$.each( config.selectors, function(key,selector){
-					jsonSteps.selectors[key] = jsonSteps.selectors[key] || config.selectors[key];
-				});
-			}
+		if(jsonSteps && jsonSteps.selectors && hopscotch){
+			$.each( config.selectors, function(key,selector){
+				jsonSteps.selectors[key] = jsonSteps.selectors[key] || config.selectors[key];
+			});
 			setTour(jsonSteps);
+			setCookie();
 		}
 	}
 
@@ -35,16 +34,34 @@ Locastyle.prototype.guidedTour = ( function() {
 		$(config.selectors.close).on({click: closeWelcomeTour});
 	}
 
+	function openWelcomeTour(e){
+		e.preventDefault();
+		$(config.selectors.tour).toggleClass('on');
+		$(config.selectors.init).focus().attr('tabindex', '-1');
+	}
+
+	function initTour(){
+		hopscotch.endTour();
+		hopscotch
+		hopscotch.startTour(jsonTour, 0);
+		keyCode();
+		closeWelcomeTour();
+	}
+
+	function closeWelcomeTour(){
+		$(config.selectors.tour).removeClass('on');
+	}
+
 	function keyCode(element){
 		var left = 39;
 		var right = 37;
 		var esc = 27;
-		var stepsSize = hopscotch.getCurrTour().steps.length -1;
+		var stepsSize = hopscotch.getCurrTour().steps.length;
 		$('body').off('keyup').on('keyup', function(e){
 			var key = e.keyCode
-			if( hopscotch.getCurrStepNum() < stepsSize ){
-				if( key === 39){	hopscotch.nextStep(); }
-				if( key === 37 ){	hopscotch.prevStep(); }
+			if( hopscotch.getCurrStepNum() < stepsSize && hopscotch.getState() ){
+				if( key === 39){ hopscotch.nextStep(); }
+				if( key === 37){ hopscotch.prevStep(); }
 			}
 			if( key === 27  ){	hopscotch.endTour();  }
 		});
@@ -57,27 +74,9 @@ Locastyle.prototype.guidedTour = ( function() {
 		}
 	}
 
-	function initTour(){
-		hopscotch.endTour();
-		hopscotch.startTour(jsonTour);
-		keyCode();
-		closeWelcomeTour();
-	}
-
-	function openWelcomeTour(e){
-		e.preventDefault();
-		$(config.selectors.tour).toggleClass('on');
-		$(config.selectors.init).focus().attr('tabindex', '-1');
-	}
-
-	function closeWelcomeTour(){
-		$(config.selectors.tour).removeClass('on');
-	}
-
 	function userAborted(xhr) {
 		return !xhr.getAllResponseHeaders();
 	}
-
 
 	return {
 		init: init,
