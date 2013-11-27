@@ -11,21 +11,9 @@ div.hopscotch-bubble
   text-align: left
   white-space: normal
   &.animate
-    -moz-transition-property: top, left
-    -moz-transition-duration: 1s
-    -moz-transition-timing-function: ease-in-out
-    -ms-transition-property: top, left
-    -ms-transition-duration: 1s
-    -ms-transition-timing-function: ease-in-out
-    -o-transition-property: top, left
-    -o-transition-duration: 1s
-    -o-transition-timing-function: ease-in-out
-    -webkit-transition-property: top, left
-    -webkit-transition-duration: 1s
-    -webkit-transition-timing-function: ease-in-out
-    transition-property: top, left
-    transition-duration: 1s
-    transition-timing-function: ease-in-out
+    +transition-property(top, left)
+    +transition-duration(1s)
+    +transition-timing-function(ease-in-out)
   &.invisible
     opacity: 0
   &.hide
@@ -40,30 +28,43 @@ div.hopscotch-bubble
   .hopscotch-bubble-arrow-container
     position: absolute
     width: 22px
-    height: 11px
+    height: 22px
+    .hopscotch-bubble-arrow, .hopscotch-bubble-arrow-border
+      border: 11px solid transparent
+      position: absolute
+      width: 0
+      height: 0
+      top: 0
+      left: 0
+      border: 11px solid transparent
     &.up
-      top: -11px
-      left: 10px
+      top: -21px
       .hopscotch-bubble-arrow
-        border-bottom: 11px solid #f7f7f7
-        border-left: 11px solid transparent
-        border-right: 11px solid transparent
-        position: relative
-        top: -10px
+        border-color: transparent transparent #f7f7f7 transparent
       .hopscotch-bubble-arrow-border
-        border-bottom: 11px solid #000000
-        border-bottom: 11px solid rgba(0, 0, 0, 0.5)
-        border-left: 11px solid transparent
-        border-right: 11px solid transparent
+        border-color: transparent transparent rgba(0, 0, 0, 0.2) transparent
+        top: -2px
     &.down
-      bottom: -11px
-      left: 10px
+      bottom: -21px
+      .hopscotch-bubble-arrow
+        border-color: #fff transparent transparent transparent
+      .hopscotch-bubble-arrow-border
+        border-color: rgba(0, 0, 0, 0.2) transparent transparent transparent
+        bottom: -2px
     &.left
-      top: 10px
-      left: -11px
+      left: -21px
+      .hopscotch-bubble-arrow
+        border-color: transparent #fff transparent transparent
+      .hopscotch-bubble-arrow-border
+        border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent
+        left: -2px
     &.right
-      top: 10px
-      right: -11px
+      right: -21px
+      .hopscotch-bubble-arrow
+        border-color: transparent transparent transparent #fff
+      .hopscotch-bubble-arrow-border
+        border-color: transparent transparent transparent rgba(0, 0, 0, 0.2)
+        right: -2px
   
   .hopscotch-bubble-number
     display: none
