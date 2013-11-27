@@ -22,9 +22,6 @@
 		&.active, &:hover
 			color: rgba(0,0,0,1)
 
-			&:before
-				color: #fff
-
 		&:before
 			+border-circle(140px, 4em)
 			display: block
@@ -32,7 +29,33 @@
 			background: #fff
 
 //
-// Desktops
+// Específico Mobiles
+//
+@media #{$media-mobile}
+
+	.header-content
+		padding-top: 20px
+
+		.title-2
+			font-size: 1.3em
+
+	.shortcuts
+		height: 170px
+
+	.shortcut-box
+		padding-bottom: 25px
+
+		.shortcut-title
+			font-size: .8em
+			text-transform: lowercase
+
+			&:before
+				+border-circle(90px, 3em)
+				background: #fff
+				display: block
+
+//
+// De tablet para Desktops
 //
 @media (min-width: #{$screen-sm})
 	.shortcut-box
