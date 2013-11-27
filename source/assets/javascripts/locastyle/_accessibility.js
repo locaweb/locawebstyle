@@ -39,19 +39,19 @@ locastyle.accessibility = (function() {
 
   // Link acessivel para ir direto ao conteudo
   function titleAccess(){
-    var $titleAcess = $('.title-content').size();
+    var titleAcess = $('.title-content').size();
     var message = 'Ir para o conteúdo';
     var $htmlAcess = '<div class="area-access hidden-xs"><a href="#" class="link-content  ico-accessibility" tabindex="1">'+ message+ '</a></div>'
-    if( $titleAcess >= 1){
+    if( titleAcess >= 1){
       $('.header').prepend($htmlAcess);
     }
   }
 
-  //fFuncionalidades especificas do submenu (quando existir)
+  //Funcionalidades especificas do submenu (quando existir)
   function initSubMenu(){
     $('.menu li').find('ul').addClass('submenu');
     ariaElementToggle($('.submenu'), false, true);
-    $('.menu a').attr({ role : 'menuitem' })
+    $('.menu a').attr({ role : 'menuitem' });
   }
 
 
