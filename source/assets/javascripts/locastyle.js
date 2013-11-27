@@ -8,4 +8,5 @@
 //= require locastyle/_collapse_extends
 //= require locastyle/_initializer
 //= require locastyle/_accessibility
+//= require locastyle/_guided_tour
 //= require locastyle/_initializer
