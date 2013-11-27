@@ -1,0 +1,170 @@
+div.hopscotch-bubble
+  position: absolute
+  max-width: 276px
+  padding: 1px
+  text-align: left
+  white-space: normal
+  background-color: #fff
+  border: 1px solid #cccccc
+  border: 1px solid rgba(0, 0, 0, 0.2)
+  border-radius: 6px
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+  background-clip: padding-box
+  .hopscotch-bubble-container
+    padding: 0 !important
+  .hopscotch-bubble-number
+    display: none
+  .hopscotch-title
+    margin: 0
+    padding: 8px 14px
+    font-size: 14px
+    font-weight: normal
+    line-height: 18px
+    background-color: #f7f7f7
+    border-bottom: 1px solid #ebebeb
+    border-radius: 5px 5px 0 0
+  .hopscotch-content
+    padding: 9px 14px
+    text-align: left
+    white-space: normal
+    font-size: 0.875em
+    color: #555
+  .hopscotch-actions
+    padding: 9px 14px
+    button
+      display: inline-block
+      padding: 6px 12px
+      margin-bottom: 0
+      font-size: 14px
+      font-weight: normal
+      line-height: 1.428571429
+      text-align: center
+      vertical-align: middle
+      cursor: pointer
+      border: 1px solid transparent
+      border-radius: 4px
+      white-space: nowrap
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      -o-user-select: none
+      user-select: none
+      color: #ffffff
+      background-color: #5bc0de
+      border-color: #46b8da
+      margin-right: 1em
+      &#hopscotch-done
+        background-color: #5cb85c
+        border-color: #4cae4c
+  .hopscotch-bubble-close
+    @extend %force-icon
+    @extend .ico-close
+    font-size: .7em
+    position: absolute
+    top: 4px
+    right: 4px
+    overflow: hidden
+    cursor: pointer
+    width: 1.3em
+    height: 1.3em
+    text-align: center
+    &:after
+      display: none
+    &:hover
+      opacity: .7
+
+
+  &.animate
+    -moz-transition-property: top, left
+    -moz-transition-duration: 1s
+    -moz-transition-timing-function: ease-in-out
+    -ms-transition-property: top, left
+    -ms-transition-duration: 1s
+    -ms-transition-timing-function: ease-in-out
+    -o-transition-property: top, left
+    -o-transition-duration: 1s
+    -o-transition-timing-function: ease-in-out
+    -webkit-transition-property: top, left
+    -webkit-transition-duration: 1s
+    -webkit-transition-timing-function: ease-in-out
+    transition-property: top, left
+    transition-duration: 1s
+    transition-timing-function: ease-in-out
+  &.invisible
+    opacity: 0
+  &.hide
+    display: none
+  .hide, .hide-all 
+    display: none
+    
+
+div.hopscotch-bubble 
+  
+  &.hide, &.hide-all
+    display: none
+  .hopscotch-bubble-arrow-container
+    // position: absolute;
+    // width: 34px;
+    // height: 34px;
+    &.up
+      // top: -22px;
+      // left: 10px;
+      .hopscotch-bubble-arrow
+        // border-bottom: 17px solid #ffffff;
+        // border-left: 17px solid transparent;
+        // border-right: 17px solid transparent;
+        // position: relative;
+        // top: -10px;
+      .hopscotch-bubble-arrow-border
+        // border-bottom: 17px solid #000000;
+        // border-bottom: 17px solid rgba(0, 0, 0, 0.5);
+        // border-left: 17px solid transparent;
+        // border-right: 17px solid transparent;
+    &.down
+      // bottom: -39px;
+      // left: 10px;
+      .hopscotch-bubble-arrow
+        // border-top: 17px solid #ffffff;
+        // border-left: 17px solid transparent;
+        // border-right: 17px solid transparent;
+        // position: relative;
+        // top: -24px;
+      .hopscotch-bubble-arrow-border
+        // border-top: 17px solid #000000;
+        // border-top: 17px solid rgba(0, 0, 0, 0.5);
+        // border-left: 17px solid transparent;
+        // border-right: 17px solid transparent;
+    &.left
+      // top: 10px;
+      // left: -22px;
+      .hopscotch-bubble-arrow
+        // border-bottom: 17px solid transparent;
+        // border-right: 17px solid #ffffff;
+        // border-top: 17px solid transparent;
+        // position: relative;
+        // left: 7px;
+        // top: -34px;
+      .hopscotch-bubble-arrow-border
+        // border-right: 17px solid #000000;
+        // border-right: 17px solid rgba(0, 0, 0, 0.5);
+        // border-bottom: 17px solid transparent;
+        // border-top: 17px solid transparent;
+    &.right
+      // top: 10px;
+      // right: -39px;
+      .hopscotch-bubble-arrow
+        // border-bottom: 17px solid transparent;
+        // border-left: 17px solid #ffffff;
+        // border-top: 17px solid transparent;
+        // position: relative;
+        // left: -7px;
+        // top: -34px;
+      .hopscotch-bubble-arrow-border
+        // border-left: 17px solid #000000;
+        // border-left: 17px solid rgba(0, 0, 0, 0.5);
+        // border-bottom: 17px solid transparent;
+        // border-top: 17px solid transparent;
+    .hopscotch-bubble-arrow, .hopscotch-bubble-arrow-border
+      // width: 0;
+      // height: 0;
+    // text-align: right;
