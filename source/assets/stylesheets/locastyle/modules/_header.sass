@@ -16,7 +16,7 @@ $mobile-left-number: "240px"
 		margin: 0 auto
 		color: #fff
 		text-align: center
-		font: 1.5em $font-regular
+		font: 1.3em $font-regular
 
 		a
 			color: #fff
@@ -70,8 +70,6 @@ $mobile-left-number: "240px"
 	overflow: auto
 	height: 100%
 	width: #{$mobile-left-number}
-	// -webkit-transform: translate3D(-#{$mobile-left-number},0,0)
-	// -moz-transform: translate3D(-#{$mobile-left-number},0,0)
 	position: fixed
 	top: 0
 	left: 0
@@ -100,7 +98,8 @@ $mobile-left-number: "240px"
 				border-bottom: 1px solid $gray3
 				color: #fff
 				text-transform: uppercase
-				font: .875em $font-semibold
+				// font: .875em $font-semibold
+				font: .84em $font-semibold
 				text-decoration: none
 
 				&:focus,
@@ -148,8 +147,9 @@ $mobile-left-number: "240px"
 
 	.active
 		color: $gray2
+
 //
-// Essa formatação começa a partir do TABLET
+// De tablet para Desktop
 //
 @media #{$media-tablet}
 
@@ -261,7 +261,6 @@ $mobile-left-number: "240px"
 							border-bottom-color: $gray3
 
 						&.ico-home
-							// padding: 18px 0 7px
 							text-indent: -9999px
 							width: 50px
 							position: relative
