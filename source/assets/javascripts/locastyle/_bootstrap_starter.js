@@ -17,14 +17,20 @@ locastyle.bootstrap = (function() {
 
   function startPopover() {
     var $popovers = $("[data-toggle='popover']");
-    $("[data-toggle='popover'][data-inherit]").on('show.bs.popover', function (e) {
+    $("[data-toggle='popover'][data-inherit]").on('shown.bs.popover', function (e) {
       var inheritedProperty = $(this).data('inherit');
+      var apply = $(this).data('inherit-apply') || 'color';
       if( $(this).attr('class').match(/(ico)/) ){
         var inheritedValue = window.getComputedStyle(this,':before')[inheritedProperty]; // ie9+
       } else {
         var inheritedValue = $(this).css(inheritedProperty);
       }
-      $(this).data('bs.popover').$tip.find('.popover-title').css('color', inheritedValue );
+      var $popover = $(this).data('bs.popover')
+      $popover.$tip.find('.popover-title').css( apply, inheritedValue );
+      $($popover.$tip[0]).find('a').css('color', inheritedValue );
+      if( apply === 'background'){
+        $popover.$tip.find('.popover-title').css( 'color', 'white' );
+      }
     });
     $popovers.popover();
   }
