@@ -282,7 +282,8 @@ $mobile-left-number: "240px"
 					//
 					// Submenu
 					//
-					&:hover ul
+					&:hover ul,
+					&.in ul
 						display: block
 
 					& > ul
@@ -303,7 +304,24 @@ $mobile-left-number: "240px"
 							padding: 10px
 							text-transform: capitalize
 
-							&:hover
+							&:hover,
+							&:focus
 								background-color: $gray5
 								border-bottom-width: 1px
 								color: #fff
+
+	.area-access
+		padding: 5px 0
+		text-align: center
+		font-size: 0.875em
+		position: absolute
+		top: -70px
+		left: 0
+		width: 100%
+		z-index: 1
+
+		a
+			color: #000
+
+		&.in
+			top: 0

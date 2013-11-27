@@ -7,4 +7,5 @@ $(window).load(function() {
   locastyle.trackEvents.init();
   locastyle.collapse.init();
   locastyle.trackEvents.init();
+  locastyle.accessibility.init();
 });
