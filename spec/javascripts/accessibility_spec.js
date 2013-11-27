@@ -19,9 +19,19 @@ describe("Accessibility", function() {
     });
   });
   describe("Submenu Access", function(){
-    it("should add .in class on parent li when focus on .menu a", function(){
-      $('#submenu_test').trigger('focus');
-      expect($('#submenu_parent')).toHaveClass('in');
+    describe("when focus on .menu a", function(){
+      it("should add .in class on parent li", function(){
+        $('#submenu_test').trigger('focus');
+        expect($('#submenu_parent')).toHaveClass('in');
+      });
+      it("should change aria-expanded attr to true", function(){
+        $('#submenu_test').trigger('focus');
+        expect($('#submenu_parent > ul').attr('aria-expanded')).toEqual('true');
+      });
+      it("should change aria-hidden attr to false", function(){
+        $('#submenu_test').trigger('focus');
+        expect($('#submenu_parent > ul').attr('aria-hidden')).toEqual('false');
+      });
     })
   })
 });
