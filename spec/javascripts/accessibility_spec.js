@@ -17,8 +17,9 @@ describe("Accessibility", function() {
     it("should defined links of menu if contain attr role menuitem", function(){
       expect($('.menu')).toContain('a[role="menuitem"]');
     });
+
   });
-  describe("Submenu Access", function(){
+  describe("Submenu Access events of keyboard and mouse", function(){
     describe("when focus on .menu a", function(){
       it("should add .in class on parent li", function(){
         $('#submenu_test').trigger('focus');
@@ -32,6 +33,23 @@ describe("Accessibility", function() {
         $('#submenu_test').trigger('focus');
         expect($('#submenu_parent > ul').attr('aria-hidden')).toEqual('false');
       });
-    })
-  })
+    });
+    describe("when blur on .menu a", function(){
+      it("should remove .in class on parent li", function(){
+        $('#submenu_parent').addClass('in');
+        $('#submenu_test').trigger('blur');
+        expect($('#submenu_parent')).not.toHaveClass('in');
+      });
+      it("should change aria-expanded attr to false", function(){
+        $('#submenu_parent > ul').attr('aria-expanded','true');
+        $('#submenu_test').trigger('blur');
+        expect($('#submenu_parent > ul').attr('aria-expanded')).toEqual('false');
+      });
+      it("should change aria-hidden attr to true", function(){
+        $('#submenu_parent > ul').attr('aria-hidden','false');
+        $('#submenu_test').trigger('blur');
+        expect($('#submenu_parent > ul').attr('aria-hidden')).toEqual('true');
+      });
+    });
+  });
 });
