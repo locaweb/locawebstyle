@@ -1,0 +1,103 @@
+
+
+	<header class="header" role="banner">
+	</header>
+
+	<h1 class="title-1 title-content">Aqui vai seu conteúdo</h1>
+	<a href="#" data-acess="true">Link</a>
+
+	<div class="menu">
+		<ul class="container">
+			<li><a href="#" class="active ico-home">Home</a></li>
+			<li><a href="#">Lista de contatos</a></li>
+			<li id="submenu_parent"><a href="#" id="submenu_test">Mensagens</a>
+				<ul>
+					<li><a href="#">Enviar</a></li>
+					<li><a href="#">Criar</a></li>
+					<li><a href="#">Editar</a></li>
+					<li><a href="#">Relatórios</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Campanhas</a></li>
+			<li><a href="#">Templates</a></li>
+			<li><a href="#">Relatórios</a></li>
+			<li><a href="#">Configurações</a></li>
+		</ul>
+	</div>
+
+	<div id="alert_no" class="alert alert-warning">Alerta de Warning</div>
+	<div id="alert_yes" class="alert alert-success">Alerta de Sucesso</div>
+
+	<ul class="nav nav-tabs">
+		<li><a href="#home" data-toggle="tab" aria-labelledby="home">Home</a></li>
+		<li class="active"><a href="#profile" data-toggle="tab" aria-labelledby="profile">Profile</a></li>
+	</ul>
+
+	<div class="tab-content">
+		<div class="tab-pane" id="home">
+			<p>Aqui está o conteúdo da Aba Home, podemos inserir qualquer elemento aqui.</p>
+		</div>
+		<div class="tab-pane active in" id="profile">
+			<p>Conteúdo da Aba Profile. Exibiremos todos os dados do seu usuário bla bla bla...</p>
+		</div>
+	</div>
+
+	<a id="modal_click" data-toggle="modal" href="#change_password_modal">Alterar</a>
+
+	<div id="change_password_modal" class="modal fade in" role="dialog" tabindex="-1" aria-labelledby="title_change_pass" aria-hidden="false" style="display: block;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h3 id="title_change_pass">Alteração de senha</h3>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-inline">
+						<div class="form-group">
+							<div class="row">
+								<div class="input-group col-md-5 col-xs-7">
+									<input class="password form-control auto-focus" data-component="password-strength"  id="modal_focus" maxlength="14" name="account[smtp_pass]" size="14" type="password">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal">Cancelar</button>
+					<input class="btn btn-primary" name="commit" type="submit" value="Confirmar">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="collapse-box config active" id="sender_registration">
+
+		<div class="panel-heading">
+			<a data-toggle="collapse" id="collapse_click" href="#register_sender">
+				<h2 class="panel-title">E-mail de remetente</h2>
+				<p>Gerencie seus e-mails de rementente</p>
+			</a>
+		</div>
+
+		<div class="panel-collapse " id="register_sender" style="height: auto;">
+			<div class="panel-body">
+
+				<div class="well ">
+					<label for="sender_email">E-mail</label>
+					<div class="form-inline row">
+						<div class="form-group col-md-4">
+							<input class="form-control auto-focus" id="collapse_focus" name="sender[email]" type="text">
+						</div>
+						<div class="form-group col-md-4">
+							<input class="btn btn-primary" name="commit" type="submit" value="Adicionar">
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>

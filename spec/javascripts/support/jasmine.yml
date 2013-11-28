@@ -14,7 +14,14 @@ src_files:
     - spec/javascripts/libs/*.js
     - source/assets/javascripts/locastyle/vendor/*.js
     - source/assets/bootstrap/js/bootstrap.js
-    - source/assets/javascripts/locastyle/**/*.js
+    - source/assets/javascripts/locastyle/_base.js
+    - source/assets/javascripts/locastyle/_mobile_functions.js
+    - source/assets/javascripts/locastyle/_bootstrap_starter.js
+    - source/assets/javascripts/locastyle/_password_strength.js
+    - source/assets/javascripts/locastyle/_carousel_extends.js
+    - source/assets/javascripts/locastyle/_accessibility.js
+    - source/assets/javascripts/locastyle/_track_events.js
+    - source/assets/javascripts/locastyle/_collapse_extends.js
 
 # stylesheets
 #
