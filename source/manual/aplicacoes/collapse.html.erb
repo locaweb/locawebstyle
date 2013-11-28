@@ -15,83 +15,135 @@ menu_page: sidebar-aplicacoes.erb
 	<h3>Collapses complexos</h3>
 	<p>Geralmente estes collapses são utilizados para conter grandes quantidades de informação, formulários e etc. São usados em telas de configurações ou onde precisamos seccionar muita informação referente a um mesmo assunto.</p>
 	<div class="example">
-	  <div class="boxCollapse">
-		<header data-target="#addMotivo" data-toggle="collapse" class="collapsed">
-			<h4>Motivos de descadastramento</h4>
-			<p>Você pode editar os já cadastrados ou pode criar novos motivos para a sua lista.</p>
-		</header>
-		<div id="addMotivo" class="collapse">
-			<div class="boxCinzaInner">
-				<form>
-					<div class="control-group">
-						<label for="unsubscribe_reason_create" class="required control-label">Adicione um motivo <b>*</b></label><input type="text" name="unsubscribe_reason[name]" id="unsubscribe_reason_create" class="span5">
-						<input type="submit" value="Adicionar" class="btn btn-primary">
-					</div>
-				</form>
-			</div>
+		
+		<div class="accordion" id="nomeGrupoAccordion">
+		  
+		  <div class="boxCollapse accordion-group accordion-heading">
+		    <header class="noMarginBottom">
+		    	<h4>Passo 1</h4>
+					<p>Descrição passo 1</p>
+		    </header>
+		    <div id="passo1" class="accordion-body collapse in">
+		    		<p>
+		        	Instruções Passo 1
+		    		</p>
+		        <button class="accordion-toggle btn btn-primary" data-toggle="collapse" data-parent="#nomeGrupoAccordion" href="#passo2">
+		        	Ir para o passo 2
+		      	</button>
+		      	<br>
+		    </div>
+		  </div>
+		  
+		  <div class="boxCollapse accordion-group accordion-heading">
+		    <header class="noMarginBottom">
+		    	<h4>Passo 2</h4>
+					<p>Descrição passo 2</p>
+		    </header>
+		    <div id="passo2" class="accordion-body collapse">
+		      <p>
+		      	Instruções passo 2
+		      </p>
+					<button class="accordion-toggle btn btn-primary" data-toggle="collapse" data-parent="#nomeGrupoAccordion" href="#passo1">
+						Voltar para o passo 1
+					</button>
+		      
+		    </div>
+		  </div>
 
-			<h6>Motivos adicionados</h6>
-			<table class="tableList">
-				<thead>
-					<tr>
-						<th class="txtLeft">Motivo</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="txtLeft">
-							Lorem Ipsum dolor sit amet
-							<ul class="actionsTable">
-								<li><a data-disable="edit" class="ico-pencil" href="#edit">Editar</a></li>
-								<li><a data-toggle="modal" data-target="#deleteModal" class="ico-trash" href="#">Excluir</a></li>
-							</ul>
-							<div id="deleteModal" class="modal modalCenter modalSmall fade">
-								<div class="modal-header">
-									<a data-dismiss="modal" class="close">×</a>
-									<h3>Um título qualquer</h3>
-								</div>
-
-								<div class="modal-body">
-									<h2 class="titAlert">Aqui é um título do alerta</h2>
-									<p>Aqui vai a mensagem de alerta, aviso, notificação ou qualquer outro aviso que você deseja aplicar.</p>
-								</div>
-
-								<div class="modal-footer">
-									<a data-method="delete" class="btn btn-primary" href="#">sim</a>
-									<a data-dismiss="modal" class="btn" href="#">Não tenho certeza</a>
-								</div>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="txtLeft">
-							Consectuer dip alet Lorem Ipsum
-							<ul class="actionsTable">
-								<li><a data-disable="edit" class="ico-pencil" href="#edit">Editar</a></li>
-								<li><a data-toggle="modal" data-target="#deleteModal" class="ico-trash" href="#">Excluir</a></li>
-							</ul>
-							<div id="deleteModal" class="modal modalCenter modalSmall fade">
-								<div class="modal-header">
-									<a data-dismiss="modal" class="close">×</a>
-									<h3>Um título qualquer</h3>
-								</div>
-
-								<div class="modal-body">
-									<h2 class="titAlert">Aqui é um título do alerta</h2>
-									<p>Aqui vai a mensagem de alerta, aviso, notificação ou qualquer outro aviso que você deseja aplicar.</p>
-								</div>
-
-								<div class="modal-footer">
-									<a data-method="delete" class="btn btn-primary" href="#">sim</a>
-									<a data-dismiss="modal" class="btn" href="#">Não tenho certeza</a>
-								</div>
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
 		</div>
+
+		<hr>
+
+	  <div class="boxCollapse">
+			<header data-target="#addMotivo" data-toggle="collapse" class="collapsed">
+				<h4>Motivos de descadastramento</h4>
+				<p>Você pode editar os já cadastrados ou pode criar novos motivos para a sua lista.</p>
+			</header>
+			<div id="addMotivo" class="collapse">
+				<div class="boxCinzaInner">
+					<form>
+						<div class="control-group">
+							<label for="unsubscribe_reason_create" class="required control-label">Adicione um motivo <b>*</b></label><input type="text" name="unsubscribe_reason[name]" id="unsubscribe_reason_create" class="span5">
+							<input type="submit" value="Adicionar" class="btn btn-primary">
+						</div>
+					</form>
+				</div>
+
+				<h6>Motivos adicionados</h6>
+				<table class="tableList">
+					<thead>
+						<tr>
+							<th class="txtLeft">Motivo</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="txtLeft">
+								Lorem Ipsum dolor sit amet
+								<ul class="actionsTable">
+									<li><a data-disable="edit" class="ico-pencil" href="#edit">Editar</a></li>
+									<li><a data-toggle="modal" data-target="#deleteModal" class="ico-trash" href="#">Excluir</a></li>
+								</ul>
+								<div id="deleteModal" class="modal modalCenter modalSmall fade">
+									<div class="modal-header">
+										<a data-dismiss="modal" class="close">×</a>
+										<h3>Um título qualquer</h3>
+									</div>
+
+									<div class="modal-body">
+										<h2 class="titAlert">Aqui é um título do alerta</h2>
+										<p>Aqui vai a mensagem de alerta, aviso, notificação ou qualquer outro aviso que você deseja aplicar.</p>
+									</div>
+
+									<div class="modal-footer">
+										<a data-method="delete" class="btn btn-primary" href="#">sim</a>
+										<a data-dismiss="modal" class="btn" href="#">Não tenho certeza</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="txtLeft">
+								Consectuer dip alet Lorem Ipsum
+								<ul class="actionsTable">
+									<li><a data-disable="edit" class="ico-pencil" href="#edit">Editar</a></li>
+									<li><a data-toggle="modal" data-target="#deleteModal" class="ico-trash" href="#">Excluir</a></li>
+								</ul>
+								<div id="deleteModal" class="modal modalCenter modalSmall fade">
+									<div class="modal-header">
+										<a data-dismiss="modal" class="close">×</a>
+										<h3>Um título qualquer</h3>
+									</div>
+
+									<div class="modal-body">
+										<h2 class="titAlert">Aqui é um título do alerta</h2>
+										<p>Aqui vai a mensagem de alerta, aviso, notificação ou qualquer outro aviso que você deseja aplicar.</p>
+									</div>
+
+									<div class="modal-footer">
+										<a data-method="delete" class="btn btn-primary" href="#">sim</a>
+										<a data-dismiss="modal" class="btn" href="#">Não tenho certeza</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<button class="btn btn-primary" data-target="#outroCollapse" data-toggle="collapse" type="button">Próxima etapa</button>
+			</div>
 	  </div>
+	  <div class="boxCollapse">
+			<header data-target="#outroCollapse" data-toggle="collapse" class="collapsed">
+				<h4>Informações adicionais</h4>
+				<p>Comentários e outras informações.</p>
+			</header>
+			<div id="outroCollapse" class="collapse">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, esse perspiciatis debitis iste ducimus itaque molestias at ipsam doloremque minus. Assumenda recusandae culpa soluta praesentium quidem voluptatum repellendus laborum excepturi.
+				</p>
+			<button class="btn btn-primary" data-target="#addMotivo" data-toggle="collapse" type="button">Etapa Anterior</button>
+			</div>
+		</div>
 	</div>
 
 	<h3>Collapses simples</h3>
