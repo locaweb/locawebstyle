@@ -42,7 +42,7 @@ locastyle.accessibility = (function() {
     var titleAcess = $('.title-content').size();
     var message = 'Ir para o conteúdo';
     var $htmlAcess = '<div class="area-access hidden-xs"><a href="#" class="link-content  ico-accessibility" tabindex="1">'+ message+ '</a></div>'
-    if( titleAcess >= 1){
+    if(titleAcess >= 1){
       $('.header').prepend($htmlAcess);
     }
   }
@@ -97,8 +97,8 @@ locastyle.accessibility = (function() {
   // Dá foco visual e como leitor de tela no elemento alerta
   function focusAlert(){
     var $element = $('.alert').not('.alert-warning');
-    var $size = $element.size();
-    if ($size >= 1){
+    var size = $element.size();
+    if (size >= 1){
       scrollAcess($element);
       $element.attr('tabindex','-1').focus();
     }
