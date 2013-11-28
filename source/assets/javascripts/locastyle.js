@@ -5,4 +5,5 @@
 //= require locastyle/_hopscotch
 //= require locastyle/_guided_tour
 //= require locastyle/_passwordStrength
+//= require locastyle/_step-form
 //= require locastyle/_accessibility
