@@ -432,7 +432,7 @@ pre .linenums {
 /*****
 ****** ARTICLE
 *****/
-.content header {
+article.text > header {
 	overflow: hidden;
 	margin-bottom: 30px;
 	padding-bottom: 30px;
