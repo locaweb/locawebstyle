@@ -13,20 +13,20 @@ locastyle.collapse = (function() {
 
   // Verifica se o Collapse está aberto
   function verifyOpenedCollapse() {
-    $('.collapse.in').parents('.collapse-box').addClass('active');
+    $('.collapse.in').parents('.ls-collapse').addClass('active');
   }
 
   // Função que adiciona classe no elemento pai do Collapse
   function addClassParentCollapse() {
     $('.collapse').on('show.bs.collapse', function () {
-      $(this).parents('.collapse-box').addClass('active');
+      $(this).parents('.ls-collapse').addClass('active');
     });
   }
 
   // Função que remove classe no elemento pai do Collapse
   function removeClassParentCollapse() {
     $('.collapse').on('hide.bs.collapse', function () {
-      $(this).parents('.collapse-box').removeClass('active');
+      $(this).parents('.ls-collapse').removeClass('active');
     });
   }
 
