@@ -134,7 +134,7 @@ locastyle.accessibility = (function() {
 
   // Foco no elemento dentro do collapse
   function collapseAutoFocus(){
-    $('.collapse-box').on('shown.bs.collapse',function(){
+    $('.ls-collapse').on('shown.bs.collapse',function(){
       autoFocus(this);
     })
   }

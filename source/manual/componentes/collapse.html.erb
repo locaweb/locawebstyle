@@ -3,14 +3,16 @@ title: Aplicações - Collapse
 menu_page: sidebar-componentes.erb
 ---
 <header>
-  <h1>Collapse</h1>
-  <h3>Agrupando grandes quantidades de informações.</h3>
+	<h1>Collapse</h1>
+	<h3>Agrupando grandes quantidades de informações.</h3>
 </header>
 
-<p>Collapses são usados para organizar grandes quantidades de conteúdo que trazem uma informação ou comportamentos do sistema para a interação com o usuário. Veja os exemplos abaixo:</p>
+
+<p>Collapses são usados para organizar grandes quantidades de conteúdo que trazem uma informação ou comportamentos do sistema para a interação com o usuário. </p>
+<p>No Locaweb Style alteramos o visual que vem do boostrap, basta inserir a classe <code>ls-collapse</code>. Veja os exemplos abaixo:</p>
 
 <div class="example">
-	<div class="collapse-box">
+	<div class="panel panel-default ls-collapse">
 		<div class="panel-heading">
 			<a data-toggle="collapse" href="#collapseOne">
 				<h4 class="panel-title">Exemplo de layout com formulário</h4>
@@ -74,7 +76,7 @@ menu_page: sidebar-componentes.erb
 	</div>
 </div>
 <pre class="linenums prettyprint-code lang-html">
-<div class="collapse-box">
+<div class="panel panel-default ls-collapse">
 	<div class="panel-heading">
 		<a data-toggle="collapse" href="#collapseOne">
 			<h4 class="panel-title">Título do Collapse</h4>
@@ -83,9 +85,9 @@ menu_page: sidebar-componentes.erb
 	</div>
 	<div id="collapseOne" class="panel-collapse collapse">
 		<div class="panel-body">
- 
+
 			<p>Aqui é onde você coloca o conteúdo do Collapse</p>
- 
+
 		</div>
 	</div>
 </div>
@@ -96,11 +98,11 @@ menu_page: sidebar-componentes.erb
 <h2>Accordion para formulários em etapas</h2>
 <p>Para criar em formulários em etapas utilize o componente <b>Accordion</b> que é um conjunto de <b>Collapses</b> que interagem entre si.</p>
 <div class="example">
-	
+
 	<form role="form">
 	<div class="panel-group" id="formularioSteps">
 			<!-- Passo 1 -->
-			<div class="panel panel-default collapse-box">
+			<div class="panel panel-default ls-collapse">
 				<div class="panel-heading">
 					<h4 class="panel-title">Passo 1</h4>
 					<p>Descrição do passo 1</p>
@@ -119,7 +121,7 @@ menu_page: sidebar-componentes.erb
 			</div>
 
 			<!-- Passo 2 -->
-			<div class="panel panel-default collapse-box">
+			<div class="panel panel-default ls-collapse">
 				<div class="panel-heading">
 					<h4 class="panel-title">Passo 2</h4>
 					<p>Descrição do passo 2</p>
@@ -142,19 +144,155 @@ menu_page: sidebar-componentes.erb
 
 	</div>
 	</form>
-	
+
 </div>
+
+<h2>Unindo Collapses a elementos de formulários</h2>
+<p>Basta criar uma <code>div</code> com a classe <code>no-style-collapse</code> envolvendo os collapses</p>
+<p>Se o elemento já vier checado automaticamente o collapse estará aberto.</p>
+
+<h3>Elemento [checkbox]</h3><br>
+<div class="example">
+	<div class="no-style-collapse" >
+		<div class="panel panel-default">
+			<input type="checkbox" checked="checked" data-toggle="collapse" data-target="#collapse_checkbox1" id="checkbox1">
+			<label for="checkbox1" >Checkbox 1</label>
+			<div id="collapse_checkbox1"  class="panel-collapse collapse">
+				<div class="well arrow-up">
+					<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<input type="checkbox" data-toggle="collapse" data-target="#collapse_checkbox2" id="checkbox2">
+			<label for="checkbox2" >Checkbox 2</label>
+			<div id="collapse_checkbox2" class="panel-collapse collapse">
+				<div class="well arrow-up">
+					<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<input type="checkbox" data-toggle="collapse" data-target="#collapse_checkbox3" id="checkbox3">
+			<label for="checkbox3" >Checkbox 3</label>
+			<div id="collapse_checkbox3" class="panel-collapse collapse">
+				<div class="well arrow-up">
+					<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<pre class="linenums prettyprint-code lang-html">
+<div class="no-style-collapse" >
+	<div class="panel panel-default">
+		<input type="checkbox" checked="checked" data-toggle="collapse" data-target="#collapse_checkbox1" id="checkbox1">
+		<label for="checkbox1" >Checkbox 1</label>
+		<div id="collapse_checkbox1"  class="panel-collapse collapse">
+			<div class="well arrow-up">
+				<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<input type="checkbox" data-toggle="collapse" data-target="#collapse_checkbox2" id="checkbox2">
+		<label for="checkbox2" >Checkbox 2</label>
+		<div id="collapse_checkbox2" class="panel-collapse collapse">
+			<div class="well arrow-up">
+				<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<input type="checkbox" data-toggle="collapse" data-target="#collapse_checkbox3" id="checkbox3">
+		<label for="checkbox3" >Checkbox 3</label>
+		<div id="collapse_checkbox3" class="panel-collapse collapse">
+			<div class="well arrow-up">
+				<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+			</div>
+		</div>
+	</div>
+</div>
+</pre>
+
+<h3>Elemento [radio]</h3>
+<p>Nesse caso precisamos criar um <code>id</code> na classe	<code>no-style-collapse</code> e adicionar o atributo <code>data-parent</code> com o mesmo valor do <code>id</code> no <code>input[radio]</code>. </p>
+
+<div class="example">
+	<div class="no-style-collapse" id="collapse_radio">
+		<div class="panel panel-default">
+			<input type="radio" data-parent="#collapse_radio" checked="checked" data-toggle="collapse" data-target="#collapse_radio1" name="teste" id="radio1">
+			<label for="radio1" >Opçao 1</label>
+			<div id="collapse_radio1"  class="panel-collapse collapse">
+				<div class="well arrow-up">
+					<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<input type="radio" data-parent="#collapse_radio" data-toggle="collapse" data-target="#collapse_radio2" name="teste" id="radio2">
+			<label for="radio2" >Opçao 2</label>
+			<div id="collapse_radio2" class="panel-collapse collapse">
+				<div class="well arrow-up">
+					<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<input type="radio" data-parent="#collapse_radio" data-toggle="collapse" data-target="#collapse_radio3" name="teste" id="radio3">
+			<label for="radio3" >Opçao 3</label>
+			<div id="collapse_radio3" class="panel-collapse collapse">
+				<div class="well arrow-up">
+					<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<pre class="linenums prettyprint-code lang-html">
+<div class="no-style-collapse" id="collapse_radio">
+	<div class="panel panel-default">
+		<input type="radio" data-parent="#collapse_radio" checked="checked" data-toggle="collapse" data-target="#collapse_radio1" name="teste" id="radio1">
+		<label for="radio1" >Opçao 1</label>
+		<div id="collapse_radio1"  class="panel-collapse collapse">
+			<div class="well arrow-up">
+				<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<input type="radio" data-parent="#collapse_radio" data-toggle="collapse" data-target="#collapse_radio2" name="teste" id="radio2">
+		<label for="radio2" >Opçao 2</label>
+		<div id="collapse_radio2" class="panel-collapse collapse">
+			<div class="well arrow-up">
+				<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<input type="radio" data-parent="#collapse_radio" data-toggle="collapse" data-target="#collapse_radio3" name="teste" id="radio3">
+		<label for="radio3" >Opçao 3</label>
+		<div id="collapse_radio3" class="panel-collapse collapse">
+			<div class="well arrow-up">
+				<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+			</div>
+		</div>
+	</div>
+</div>
+</pre>
+
 
 
 
 <h2>Utilização com atributos</h2>
-<p>Dentro do elemento <code>.panel-heading</code> deve haver qualquer elemento HTML com os seguintes atributos: <code>data-toggle="collapse"</code>, que avisa que aquele trigger se refere a um collapse e <code>data-target="#id"</code> que define o collapse alvo.</p> 
+<p>Dentro do elemento <code>.panel-heading</code> deve haver qualquer elemento HTML com os seguintes atributos: <code>data-toggle="collapse"</code>, que avisa que aquele trigger se refere a um collapse e <code>data-target="#id"</code> que define o collapse alvo.</p>
 
 <div class="bs-callout bs-callout-warning">
 	<h4>Atenção: </h4>
 	<p>Se você estiver usando um link como trigger, o atributo <code>data-target</code> é dispensável. Nesse caso você pode colocar o alvo direto no atributo <code>href="#id"</code> do link.</p>
 </div>
-	
+
 
 <h2>Utilização com Javascript</h2>
 <p>Ative um collapse manualmente usando o código abaixo:</p>
@@ -166,7 +304,7 @@ $(".collapse").collapse();
 <p>Ativa seu conteúdo como um elemento de collapse.</p>
 <pre class="linenums prettyprint lang-javascript">
 $('#myCollapsible').collapse({
-  toggle: false
+	toggle: false
 });
 </pre>
 
