@@ -8,6 +8,7 @@ locastyle.collapse = (function() {
     addClassParentCollapse();
     removeClassParentCollapse();
     collapseChecked();
+    collapseRadioChecked();
   }
 
   // Verifica se o Collapse está aberto
@@ -29,10 +30,23 @@ locastyle.collapse = (function() {
     });
   }
 
+   // Verifica se o elemento está checado e exibe o conteudo
   function collapseChecked(scope) {
     $('[data-toggle="collapse"]:checked', scope).each(function(){
       $(this).parent().find('.panel-collapse').addClass('in');
-    })
+    });
+  }
+
+  // Quando checado não dispara evento ao clicar
+  function collapseRadioChecked(scope) {
+    $('[type="radio"][data-toggle="collapse"]', scope).each(function(i,e){
+      var $elem = $(this);
+      $($elem.data('target')).on('hide.bs.collapse', function(e){
+        if( $elem.prop('checked') === true ){
+          e.preventDefault();
+        }
+      })
+    });
   }
 
   return {
