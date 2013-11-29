@@ -93,6 +93,60 @@ menu_page: sidebar-componentes.erb
 
 <p>O collapse é responsivo, logo se adapta de acordo com o tamanho da tela do usuário. Como todos elementos do Locaweb Style são responsivos, os elementos que ficarão dentro do collapse não devem que quebrar na mudança de largura de tela.</p>
 
+<h2>Accordion para formulários em etapas</h2>
+<p>Para criar em formulários em etapas utilize o componente <b>Accordion</b> que é um conjunto de <b>Collapses</b> que interagem entre si.</p>
+<div class="example">
+	
+	<form role="form">
+	<div class="panel-group" id="formularioSteps">
+			<!-- Passo 1 -->
+			<div class="panel panel-default collapse-box">
+				<div class="panel-heading">
+					<h4 class="panel-title">Passo 1</h4>
+					<p>Descrição do passo 1</p>
+				</div>
+				<div id="passo1" class="panel-collapse collapse in">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Campo simples</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+						</div>
+						<div class="box-actions">
+							<button class="btn" data-toggle="collapse" data-parent="#formularioSteps" data-target="#passo2" type="button">Ir para o passo 2</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Passo 2 -->
+			<div class="panel panel-default collapse-box">
+				<div class="panel-heading">
+					<h4 class="panel-title">Passo 2</h4>
+					<p>Descrição do passo 2</p>
+				</div>
+				<div id="passo2" class="panel-collapse collapse">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="exampleSelect">Seletor</label>
+							<select id="exampleSelect" class="form-control">
+								<option value="">Escolha uma opção</option>
+								<option value="">Isso mesmo :D</option>
+							</select>
+						</div>
+						<div class="box-actions">
+							<button class="btn" data-toggle="collapse" data-parent="#formularioSteps" data-target="#passo1" type="button">Voltar ao passo 1</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</div>
+	</form>
+	
+</div>
+
+
+
 <h2>Utilização com atributos</h2>
 <p>Dentro do elemento <code>.panel-heading</code> deve haver qualquer elemento HTML com os seguintes atributos: <code>data-toggle="collapse"</code>, que avisa que aquele trigger se refere a um collapse e <code>data-target="#id"</code> que define o collapse alvo.</p> 
 
