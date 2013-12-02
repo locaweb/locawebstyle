@@ -12,6 +12,7 @@ var locastyle = (function() {
     linkPreventDefault();
     togglePassword();
     classToggle();
+    select2();
   }
 
   // Aquele background cinza que fica sempre atrás do elemento Shortcut
@@ -193,6 +194,12 @@ var locastyle = (function() {
       e.preventDefault();
       var classes = $(this).data('classtoggle').split(',');
       $(this).toggleClass(classes[0]).toggleClass(classes[1]);
+    });
+  }
+
+  function select2(){
+    $('.select2').each(function(i, el){
+      $(el).select2();
     });
   }
 
