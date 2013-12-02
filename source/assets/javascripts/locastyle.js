@@ -3,8 +3,8 @@
 //= require locastyle/vendor/_jquery.royalslider.min
 //= require locastyle/vendor/_jquery.mask
 //= require locastyle/vendor/_jquery.ui.datepicker
-//= require locastyle/vendor/select2/select2
-//= require locastyle/vendor/select2/select2.locale.pt-BR
+//= require locastyle/vendor/select2/_select2
+//= require locastyle/vendor/select2/_select2.locale.pt-BR
 //= require locastyle/_base
 //= require locastyle/_mobile_functions
 //= require locastyle/_bootstrap_starter
