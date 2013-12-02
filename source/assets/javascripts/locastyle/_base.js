@@ -199,7 +199,25 @@ var locastyle = (function() {
 
   function select2(){
     $('.select2').each(function(i, el){
-      $(el).select2();
+      var $select = $(el);
+      var $optionList = $select.find('option');
+      var visible;
+      if( $select.data('search') == false  ){
+        visible = -1;
+      } else {
+        visible = ( $optionList.size() <= 10 ? -1 : 7 )
+      }
+      if( $select.attr('placeholder') && !$select.attr('multiple') ){
+        if( $select.find('[selected]').size() === 0 ){
+          $select.prepend('<option selected></option>')
+        }else{
+          $select.prepend('<option></option>')
+        }
+      }
+      $select.select2({
+        allowClear: true,
+        minimumResultsForSearch: visible
+      });
     });
   }
 
