@@ -14,6 +14,9 @@ manual.general = (function() {
       var section = utils.camelCase( window.location.pathname.split('/')[3] );
       manual[section] ? manual[section].init() : null ;
     }
+    if( window.location.pathname.split('/')[2] ){
+      manual.icones.init();
+    }
   }
 
   function insertMarkupExample(){
