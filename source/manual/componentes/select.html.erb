@@ -1,0 +1,132 @@
+---
+title: Componentes - Select personalizado
+menu_page: sidebar-componentes.erb
+---
+<header>
+	<h1>Select personalizado</h1>
+	<h3>Como estilizar o select e usar outras opções do select2</h3>
+</header>
+
+<p>Utilizamos o plugin <a href="http://ivaynberg.github.io/select2/" target="_blank">Select2</a> para alterar o <code>select</code> padrão. Todas as opções e configurações do plugin original podem ser feitas, mas adicionamos algumas confidurações e atalhos no padrão LocawebStyle, listadas abaixo: </p>
+
+<h3>Simples</h3>
+<p>Para ativar o <b>selec2</b> basta usar o HTML de <code>select</code> padrão, com a classe <code>select2</code></p>
+<p>Apenas listas com mais de 10 itens possuem o campo de busca e exibem 10 itens visíveis dentro da rolagem. Para ocultar o campo de busca em uma lista maior, insira o atributo <code>data-visible</code> com o valor <code>-1</code></p>
+<div class="example">
+  <select name="select-simples" class="select2">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP">São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+  </select>
+  <br>
+  <br>
+  <select name="select-simples-grande" class="select2" style="width:300px">
+    <option value="ac">Acre</option>
+    <option value="al">Alagoas</option>
+    <option value="ap">Amapá</option>
+    <option value="am">Amazonas</option>
+    <option value="ba">Bahia</option>
+    <option value="ce">Ceará</option>
+    <option value="df">Distrito Federal</option>
+    <option value="es">Espirito Santo</option>
+    <option value="go">Goiás</option>
+    <option value="ma">Maranhão</option>
+    <option value="ms">Mato Grosso do Sul</option>
+    <option value="mt">Mato Grosso</option>
+    <option value="mg">Minas Gerais</option>
+    <option value="pa">Pará</option>
+    <option value="pb">Paraíba</option>
+    <option value="pr">Paraná</option>
+    <option value="pe">Pernambuco</option>
+    <option value="pi">Piauí</option>
+    <option value="rj">Rio de Janeiro</option>
+    <option value="rn">Rio Grande do Norte</option>
+    <option value="rs">Rio Grande do Sul</option>
+    <option value="ro">Rondônia</option>
+    <option value="rr">Roraima</option>
+    <option value="sc">Santa Catarina</option>
+    <option value="sp">São Paulo</option>
+    <option value="se">Sergipe</option>
+    <option value="to">Tocantins</option>
+  </select>
+  <br>
+  <br>
+  <select name="select-simples-grande-sem-busca" class="select2" style="width:300px" data-search="false">
+    <option value="ac">Acre</option>
+    <option value="al">Alagoas</option>
+    <option value="ap">Amapá</option>
+    <option value="am">Amazonas</option>
+    <option value="ba">Bahia</option>
+    <option value="ce">Ceará</option>
+    <option value="df">Distrito Federal</option>
+    <option value="es">Espirito Santo</option>
+    <option value="go">Goiás</option>
+    <option value="ma">Maranhão</option>
+    <option value="ms">Mato Grosso do Sul</option>
+    <option value="mt">Mato Grosso</option>
+    <option value="mg">Minas Gerais</option>
+    <option value="pa">Pará</option>
+    <option value="pb">Paraíba</option>
+    <option value="pr">Paraná</option>
+    <option value="pe">Pernambuco</option>
+    <option value="pi">Piauí</option>
+    <option value="rj">Rio de Janeiro</option>
+    <option value="rn">Rio Grande do Norte</option>
+    <option value="rs">Rio Grande do Sul</option>
+    <option value="ro">Rondônia</option>
+    <option value="rr">Roraima</option>
+    <option value="sc">Santa Catarina</option>
+    <option value="sp">São Paulo</option>
+    <option value="se">Sergipe</option>
+    <option value="to">Tocantins</option>
+  </select>
+</div>
+
+<hr>
+
+<h3>Seleção de múltiplos valores</h3>
+<p>O HTML é idêntico ao simples, com o atributo <code>multiple</code>.</p>
+<p>O select também deve estar com a largura definida. </p>
+<div class="example">
+  <select multiple name="select-multiplo" class="select2" style="width:300px">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP">São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+  </select>
+</div>
+
+<hr>
+
+<h3>Placeholder</h3>
+<p>Para inserir um placeholder, basta adicionar o atributo <code>placeholder="valor"</code></p>
+<p>Exemplos <b>sem</b> valor inicial</p>
+<div class="example">
+  <select name="select-simples-placeholder" class="select2" placeholder="Selecione um estado">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP">São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+  </select>
+  <br>
+  <br>
+  <select multiple name="select-multiplo-placeholder" class="select2" style="width:300px" placeholder="Selecione um estado">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP">São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+  </select>
+</div>
+<br>
+<p>Exemplos <b>com</b> valor inicial</p>
+<div class="example">
+  <select name="select-simples-placeholder-selected" class="select2" placeholder="Selecione um estado">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP" selected>São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+  </select>
+  <br>
+  <br>
+  <select multiple name="select-multiplo-placeholder-selects" class="select2" style="width:300px" placeholder="Selecione um estado">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP">São Paulo</option>
+    <option value="RJ" selected>Rio de Janeiro</option>
+  </select>
+</div>

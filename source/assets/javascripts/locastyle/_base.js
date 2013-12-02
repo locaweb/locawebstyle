@@ -12,6 +12,7 @@ var locastyle = (function() {
     linkPreventDefault();
     togglePassword();
     classToggle();
+    select2();
   }
 
   // Aquele background cinza que fica sempre atrás do elemento Shortcut
@@ -193,6 +194,30 @@ var locastyle = (function() {
       e.preventDefault();
       var classes = $(this).data('classtoggle').split(',');
       $(this).toggleClass(classes[0]).toggleClass(classes[1]);
+    });
+  }
+
+  function select2(){
+    $('.select2').each(function(i, el){
+      var $select = $(el);
+      var $optionList = $select.find('option');
+      var visible;
+      if( $select.data('search') == false  ){
+        visible = -1;
+      } else {
+        visible = ( $optionList.size() <= 10 ? -1 : 7 )
+      }
+      if( $select.attr('placeholder') && !$select.attr('multiple') ){
+        if( $select.find('[selected]').size() === 0 ){
+          $select.prepend('<option selected></option>')
+        }else{
+          $select.prepend('<option></option>')
+        }
+      }
+      $select.select2({
+        allowClear: true,
+        minimumResultsForSearch: visible
+      });
     });
   }
 
