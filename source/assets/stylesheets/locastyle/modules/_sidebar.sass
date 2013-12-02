@@ -133,10 +133,14 @@ $mobile-sidebar-width: "240px"
 		.ico-question
 			display: none
 
+// Para arrumar um bug maluco que deixava a largura da sidebar
 @media (width: 768px)
 	.sidebar
 		width: 100%
 		-webkit-transform: translate3D(0, 0, 0)
+		-moz-transform: translate3D(0, 0, 0)
+		-ms-transform: translate3D(0, 0, 0)
+		transform: translate3D(0, 0, 0)
 
 //
 // Desktops
