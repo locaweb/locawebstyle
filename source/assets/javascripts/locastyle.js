@@ -1,5 +1,5 @@
-//= require locastyle/vendor/_cookie
 //= require locastyle/vendor/_hopscotch
+//= require locastyle/vendor/_jquery.cookie
 //= require locastyle/vendor/_jquery.royalslider.min
 //= require locastyle/vendor/_jquery.mask
 //= require locastyle/vendor/_jquery.ui.datepicker
