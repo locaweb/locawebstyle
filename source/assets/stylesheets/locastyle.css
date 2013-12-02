@@ -1,8 +1,7 @@
 /*
-*=require locastyle/vendor/_jquery_datepicker
-*=require locastyle/vendor/_royal_slider
-*=require locastyle/vendor/_select2
-*=require locastyle/vendor/_select2-bootstrap
-*=require locastyle/vendor/
+*=require locastyle/vendor/_jquery.ui.datepicker
+*=require locastyle/vendor/_jquery.royalslider
+*=require locastyle/vendor/select2/_select2
+*=require locastyle/vendor/select2/_select2.bootstrap
 *=require locastyle/_locastyle
 */
