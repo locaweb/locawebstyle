@@ -1,6 +1,6 @@
  /**
  * jquery.mask.js
- * @version: v1.3.0
+ * @version: v1.4.0
  * @author: Igor Escobar
  *
  * Created by Igor Escobar on 2012-03-10. Please report any bug at http://blog.igorescobar.com
@@ -34,16 +34,15 @@
 (function ($) {
     "use strict";
     var Mask = function (el, mask, options) {
-        var jMask = this,
-            el = $(el),
-            old_value;
+        var jMask = this, old_value;
+        el = $(el);
 
-        mask = typeof mask == "function" ? mask(el.val(), options) : mask;
+        mask = typeof mask === "function" ? mask(el.val(), undefined, el,  options) : mask;
 
         jMask.init = function() {
             options = options || {};
 
-            jMask.byPassKeys = [8, 9, 37, 38, 39, 40, 46];
+            jMask.byPassKeys = [8, 9, 16, 36, 37, 38, 39, 40, 46, 91];
             jMask.translation = {
                 '0': {pattern: /\d/},
                 '9': {pattern: /\d/, optional: true},
@@ -56,8 +55,9 @@
             jMask = $.extend(true, {}, jMask, options);
 
             el.each(function() {
-                if (options.maxlength !== false)
+                if (options.maxlength !== false) {
                     el.attr('maxlength', mask.length);
+                }
 
                 el.attr('autocomplete', 'off');
                 p.destroyEvents();
@@ -67,6 +67,39 @@
         };
 
         var p = {
+            getCaret: function () {
+                var sel,
+                    pos = 0,
+                    ctrl = el.get(0);
+
+                // IE Support
+                if (document.selection && navigator.appVersion.indexOf("MSIE 10") === -1) {
+                    ctrl.focus();
+                    sel = document.selection.createRange ();
+                    sel.moveStart ('character', -ctrl.value.length);
+                    pos = sel.text.length;
+                } 
+                // Firefox support
+                else if (ctrl.selectionStart || ctrl.selectionStart === '0') {
+                    pos = ctrl.selectionStart;
+                }
+                
+                return pos;
+            },
+            setCaret: function(pos) {
+                var range, ctrl = el.get(0);
+
+                if (ctrl.setSelectionRange) {
+                    ctrl.focus();
+                    ctrl.setSelectionRange(pos,pos);
+                } else if (ctrl.createTextRange) {
+                    range = ctrl.createTextRange();
+                    range.collapse(true);
+                    range.moveEnd('character', pos);
+                    range.moveStart('character', pos);
+                    range.select();
+                }
+            },
             events: function() {
                 el.on('keydown.mask', function() {
                     old_value = p.val();
@@ -88,7 +121,18 @@
             behaviour: function(e) {
                 e = e || window.event;
                 if ($.inArray(e.keyCode || e.which, jMask.byPassKeys) === -1) {
+                    
+                    var changeCaret, caretPos = p.getCaret();
+                    if (caretPos < p.val().length) {
+                        changeCaret = true;
+                    }
+                    
                     p.val(p.getMasked());
+                    
+                    if (changeCaret) {
+                        p.setCaret(caretPos);     
+                    }
+
                     return p.callbacks(e);
                 }
             },
@@ -127,13 +171,15 @@
                         if (valDigit.match(translation.pattern)) {
                             buf[addMethod](valDigit);
                              if (translation.recursive) {
-                                if (resetPos == -1) {
+                                if (resetPos === -1) {
                                     resetPos = m;
-                                } else if (m == lastMaskChar) {
+                                } else if (m === lastMaskChar) {
                                     m = resetPos - offset;
                                 }
-                                if (lastMaskChar == resetPos)
+
+                                if (lastMaskChar === resetPos) {
                                     m -= offset;
+                                }
                             }
                             m += offset;
                         } else if (translation.optional) {
@@ -143,8 +189,11 @@
                         v += offset;
                     } else {
                         buf[addMethod](maskDigit);
-                        if (valDigit == maskDigit)
+                        
+                        if (valDigit === maskDigit) {
                             v += offset;
+                        }
+
                         m += offset;
                     }
                 }
@@ -153,16 +202,19 @@
             callbacks: function (e) {
                 var val = p.val(),
                     changed = p.val() !== old_value;
-                if (changed === true){
-                    if (typeof options.onChange == "function")
+                if (changed === true) {
+                    if (typeof options.onChange === "function") {
                         options.onChange(val, e, el, options);
+                    }
                 }
 
-                if (changed === true && typeof options.onKeyPress == "function")
+                if (changed === true && typeof options.onKeyPress === "function") {
                     options.onKeyPress(val, e, el, options);
+                }
 
-                if (typeof options.onComplete === "function" && val.length === mask.length)
+                if (typeof options.onComplete === "function" && val.length === mask.length) {
                     options.onComplete(val, e, el, options);
+                }
             }
         };
 
@@ -177,8 +229,9 @@
             var buf = [],
                 string = p.val();
             for (var m = 0, mLen = mask.length; m < mLen; m++) {
-                if (jMask.translation[mask.charAt(m)])
+                if (jMask.translation[mask.charAt(m)]) {
                     buf["push"](string.charAt(m));
+                }
             }
             return buf.join("");
         };
@@ -194,7 +247,10 @@
 
     $.fn.unmask = function() {
         return this.each(function() {
-            $(this).data('mask').remove();
+            try {
+                $(this).data('mask').remove();    
+            } catch (e) {}
+            
         });
     };
 
