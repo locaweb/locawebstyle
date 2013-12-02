@@ -96,11 +96,13 @@ locastyle.accessibility = (function() {
 
   // Dá foco visual e como leitor de tela no elemento alerta
   function focusAlert(){
-    var $element = $('.alert').not('.alert-warning');
-    var size = $element.size();
-    if (size >= 1){
-      scrollAcess($element);
-      $element.attr('tabindex','-1').focus();
+    if( $('[nofocus]').size()  === 0 ){
+      var $element = $('.alert').not('.alert-warning');
+      var size = $element.size();
+      if (size >= 1){
+        scrollAcess($element);
+        $element.attr('tabindex','-1').focus();
+      }
     }
   }
 
