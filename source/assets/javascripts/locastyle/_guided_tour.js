@@ -37,7 +37,7 @@ locastyle.guidedTour = (function() {
 	}
 
 	function openWelcomeTour(e){
-		e.preventDefault();
+		// e.preventDefault();
 		$(config.selectors.tour).toggleClass('on');
 		$(config.selectors.init).focus().attr('tabindex', '-1');
 	}
