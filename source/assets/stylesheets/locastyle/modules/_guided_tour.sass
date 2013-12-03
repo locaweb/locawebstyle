@@ -1,4 +1,5 @@
 div.hopscotch-bubble
+	z-index: 5
 	background-clip: padding-box
 	background-color: #fff
 	border-radius: 6px
@@ -47,23 +48,23 @@ div.hopscotch-bubble
 		&.down
 			bottom: -21px
 			.hopscotch-bubble-arrow
-				border-color: #fff transparent transparent transparent
+				border-color: #f7f7f7 transparent transparent transparent
 			.hopscotch-bubble-arrow-border
-				border-color: rgba(0, 0, 0, 0.2) transparent transparent transparent
+				border-color: #000 transparent transparent transparent
 				bottom: -2px
 		&.left
-			left: -21px
+			left: -19px
 			.hopscotch-bubble-arrow
 				border-color: transparent #fff transparent transparent
 			.hopscotch-bubble-arrow-border
 				border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent
 				left: -2px
 		&.right
-			right: -21px
+			right: -22px
 			.hopscotch-bubble-arrow
 				border-color: transparent transparent transparent #fff
 			.hopscotch-bubble-arrow-border
-				border-color: transparent transparent transparent rgba(0, 0, 0, 0.2)
+				border-color: transparent transparent transparent #000
 				right: -2px
 
 	.hopscotch-bubble-number
@@ -87,7 +88,12 @@ div.hopscotch-bubble
 		white-space: normal
 
 	.hopscotch-actions
-		padding: 9px 14px
+		background: #f7f7f7
+		border-top: 1px solid #ebebeb
+		border-radius: 0 0 5px 5px
+		margin-top: 0
+		padding: 10px 15px
+		overflow: hidden
 		button
 			display: inline-block
 			padding: 6px 12px
@@ -106,13 +112,16 @@ div.hopscotch-bubble
 			-ms-user-select: none
 			-o-user-select: none
 			user-select: none
-			color: #ffffff
-			background-color: #5bc0de
-			border-color: #46b8da
+			color: #fff
+			background-color: $gray2
+			border-color: $gray2
 			margin-right: 1em
 			&#hopscotch-done
-				background-color: #5cb85c
-				border-color: #4cae4c
+				background-color: $gray2
+				border-color: $gray2
+			&.hopscotch-nav-button.next
+				float: right
+				margin: 0
 
 	.hopscotch-bubble-close
 		@extend %force-icon
