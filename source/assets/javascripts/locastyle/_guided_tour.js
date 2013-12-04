@@ -7,7 +7,7 @@ locastyle.guidedTour = (function() {
 
 	var config = {
 		selectors : {
-			open:  '.lnk-suggestions',
+			open:  '.help-suggestions',
 			init:  '.btn-tour',
 			close: '.btn-close',
 			tour:  '.guided-tour'
