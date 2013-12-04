@@ -57,31 +57,29 @@
 <nav>
 	<h1>Informações</h1>
 	<ul>
-		<li><a href="/locawebstyle/manual/praticas-padroes/acessibilidade/tabindex">Tabindex</a></li>
+		<li><a href="/locawebstyle/manual/praticas-padroes/acessibilidade/acessibilidade">Acessibilidade</a></li>
+		<li><a href="/locawebstyle/manual/praticas-padroes/acessibilidade/funcionalidades">Funcionalidades Gerais</a></li>
 		<li><a href="/locawebstyle/manual/praticas-padroes/acessibilidade/menu-escondido">Menu escondido</a></li>
-		<li><a href="/locawebstyle/manual/praticas-padroes/acessibilidade/wai-aria">WAI-ARIA</a></li>
 		<li><a href="/locawebstyle/manual/praticas-padroes/acessibilidade/link-content">Link ir direto para o conteúdo</a></li>
+		<li><a href="/locawebstyle/manual/praticas-padroes/acessibilidade/leitores-de-tela">Leitores de tela</a></li>
+		<li><a href="/locawebstyle/manual/praticas-padroes/acessibilidade/wai-aria">WAI-ARIA</a></li>
 	</ul>
 </nav>
 
 </aside>
 
 
-			<article class="text col-lg-9 col-md-9">
+			<article class="text col-lg-9 col-md-9 man-article">
 				<header>
 	<h1>Link direto para conteúdo</h1>
 	<h3>Inserindo link direto para o conteúdo importante da página</h3>
 </header>
-<p>Link acessível para ir direto ao seu conteúdo, com isso o usuário tem essa facilidade utilizando somente o teclado e/ou o leitor de tela.</p>
+<p>Com isso o usuário tem essa facilidade de chegar no conteúdo utilizando somente o teclado e/ou o leitor de tela, ele faz com que o teclado ignore o menu e outros links e o fluxo segue dentro do conteúdo da página.</p>
 
-<p>O link abaixo deve ser implementado antes de qualquer outro link, já que ele ficará oculto e será exibido apenas ao receber foco do teclado</p>
+<p>Basta inserir a classe <code>title-content</code> no título principal do seu conteúdo que um link será criado, e só será exibido via teclado/leitor de tela, nas páginas que não possuirem essa classe, logicamente não exibirá esse Link de conteúdo.</p>
 
-<p>Exemplo:</p> <pre class="lang-html prettyprint-code linenums"><a href="#" tabindex="1" class="lnkContent">Ir para o conteúdo</a></pre>
-
-<p>É necessário que o título (de conteúdo) de todas as páginas possua a classe <code>.titleContent</code></p>
-<p>Obs: é necessário apenas a implementação dessa classe em um título por página.</p>
-
-<pre class="lang-html prettyprint-code linenums"><h1 class="titleContent">Cadastrar cliente </h1></pre>\
+<pre class="lang-html prettyprint-code linenums"><h1 class="title-content title-1">Cadastrar cliente </h1></pre>
+<p><strong>Importante:</strong> Só podemos ter um <code>title-content</code> por página.</p>
 			</article>
 		</div>
 

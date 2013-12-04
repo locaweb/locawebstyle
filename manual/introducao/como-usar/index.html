@@ -58,14 +58,15 @@
 	<h1>Informações</h1>
 	<ul>
 		<li><a href="/locawebstyle/manual/introducao/como-usar">Instalação e como usar</a></li>
-		<li><a href="/locawebstyle/manual/introducao/informacoes-iniciais">Dependências e instruções</a></li>
+    <li><a href="/locawebstyle/manual/introducao/informacoes-iniciais">Dependências e instruções</a></li>
+		<li><a href="/locawebstyle/manual/contribua/inicio">Contribua</a></li>
 	</ul>
 </nav>
 
 </aside>
 
 
-			<article class="text col-lg-9 col-md-9">
+			<article class="text col-lg-9 col-md-9 man-article">
 				<header>
 	<!-- <h2 class="ico-edit">Aprenda o básico</h2> -->
 	<h1>Download do Locaweb Style</h1>
@@ -97,26 +98,23 @@
 
 <p>No Header, coloque o CSS.</p>
 <pre class="lang-html prettyprint-code linenums">
-	<!-- Se estiver usando bootstrap, coloque o CSS do Locastyle logo após a sua chamada -->
-	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="http://assets.locaweb.com.br/locastyle/2.0.0-a4/stylesheets/locastyle.css">
+<!-- Se estiver usando bootstrap, coloque o CSS do Locastyle logo após a sua chamada -->
+<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="http://assets.locaweb.com.br/locastyle/2.0.0-a4/stylesheets/locastyle.css">
 </pre>
 
 <p>Coloque no final do documento o JS.</p>
-
 <pre class="lang-html prettyprint-code linenums">
-	<!-- Atente-se para a ordem: primeiro jquery, depois locastyle, depois o JS do Bootstrap. -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="http://assets.locaweb.com.br/locastyle/2.0.0-a4/stylesheets/locastyle.js"></script>
-	<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<!-- Atente-se para a ordem: primeiro jquery, depois locastyle, depois o JS do Bootstrap. -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://assets.locaweb.com.br/locastyle/2.0.0-a4/javascripts/locastyle.js"></script>
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 </pre>
 
-
 <p>Se você quiser utilizar sempre a versão mais atual, use os caminhos dos assets sem a versão travada:</p>
-
 <pre class="lang-html prettyprint-code linenums">
-	<link rel="stylesheet" type="text/css" href="http://assets.locaweb.com.br/locastyle/edge/stylesheets/locastyle.css">
-	<script type="text/javascript" src="http://assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
+<link rel="stylesheet" type="text/css" href="http://assets.locaweb.com.br/locastyle/edge/stylesheets/locastyle.css">
+<script type="text/javascript" src="http://assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
 </pre>
 
 <hr>
@@ -147,67 +145,67 @@
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;!-- Header principal --&gt;
-&lt;header class=&quot;header&quot; role=&quot;banner&quot;&gt;
-	&lt;div class=&quot;container&quot;&gt;
-		&lt;span class=&quot;control-menu visible-xs ico-menu-2&quot;&gt;&lt;/span&gt;
-		&lt;span class=&quot;control-sidebar visible-xs ico-list&quot;&gt;&lt;/span&gt;
-		&lt;h1 class=&quot;project-name&quot;&gt;&lt;a href=&quot;#&quot;&gt;Nome do Sistema&lt;/a&gt;&lt;/h1&gt;
-		&lt;a href=&quot;#&quot; class=&quot;help-sugestions ico-question hidden-xs&quot;&gt;Ajuda e Sugest&otilde;es&lt;/a&gt;
+	&lt;!-- Header principal --&gt;
+	&lt;header class=&quot;header&quot; role=&quot;banner&quot;&gt;
+		&lt;div class=&quot;container&quot;&gt;
+			&lt;span class=&quot;control-menu visible-xs ico-menu-2&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;control-sidebar visible-xs ico-list&quot;&gt;&lt;/span&gt;
+			&lt;h1 class=&quot;project-name&quot;&gt;&lt;a href=&quot;#&quot;&gt;Nome do Sistema&lt;/a&gt;&lt;/h1&gt;
+			&lt;a href=&quot;#&quot; class=&quot;help-sugestions ico-question hidden-xs&quot;&gt;Ajuda e Sugest&otilde;es&lt;/a&gt;
 
-		&lt;div class=&quot;dropdown hidden-xs&quot;&gt;
-			&lt;a href=&quot;#&quot; data-toggle=&quot;dropdown&quot; class=&quot;title-dropdown&quot;&gt;emkt2013&lt;/a&gt;
-			&lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;dLabel&quot;&gt;
-				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 1&lt;/a&gt;&lt;/li&gt;
-				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 2&lt;/a&gt;&lt;/li&gt;
-				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 3&lt;/a&gt;&lt;/li&gt;
-			&lt;/ul&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/header&gt;
-
-&lt;!-- Menu --&gt;
-&lt;div class=&quot;nav-content&quot;&gt;
-	&lt;menu class=&quot;menu&quot;&gt;
-		&lt;ul class=&quot;container&quot;&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active ico-home&quot; role=&quot;menuitem&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Lista de contatos&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Mensagens&lt;/a&gt;
-				&lt;ul&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Enviar&lt;/a&gt;&lt;/li&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Criar&lt;/a&gt;&lt;/li&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Editar&lt;/a&gt;&lt;/li&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Relat&oacute;rios&lt;/a&gt;&lt;/li&gt;
+			&lt;div class=&quot;dropdown hidden-xs&quot;&gt;
+				&lt;a href=&quot;#&quot; data-toggle=&quot;dropdown&quot; class=&quot;title-dropdown&quot;&gt;emkt2013&lt;/a&gt;
+				&lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;dLabel&quot;&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 1&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 2&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 3&lt;/a&gt;&lt;/li&gt;
 				&lt;/ul&gt;
-			&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Campanhas&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Templates&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Relat&oacute;rios&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Configura&ccedil;&otilde;es&lt;/a&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/menu&gt;
-	&lt;h2 class=&quot;title-sep visible-xs&quot;&gt;Mais&lt;/h2&gt;
-	&lt;ul class=&quot;nav-mob-list visible-xs&quot;&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;ico-help-circle&quot;&gt;Ajuda e sugest&otilde;es&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;!-- Aqui começa a parte de conteúdo dividido por colunas --&gt;
-&lt;main class=&quot;main&quot;&gt;
-	&lt;div class=&quot;container&quot;&gt;
-		&lt;div class=&quot;row&quot;&gt;
-			&lt;div class=&quot;col-md-9 content&quot; role=&quot;main&quot;&gt;
-				Coluna da esquerda com o conte&uacute;do.
 			&lt;/div&gt;
-			&lt;aside class=&quot;col-md-3 sidebar&quot; role=&quot;complementary&quot;&gt;
-				Sidebar
-			&lt;/aside&gt;
 		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/main&gt;
+	&lt;/header&gt;
 
-&lt;!-- Footer --&gt;
-&lt;footer class=&quot;footer&quot;&gt;
+	&lt;!-- Menu --&gt;
+	&lt;div class=&quot;nav-content&quot;&gt;
+		&lt;menu class=&quot;menu&quot;&gt;
+			&lt;ul class=&quot;container&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active ico-home&quot; role=&quot;menuitem&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Lista de contatos&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Mensagens&lt;/a&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Enviar&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Criar&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Editar&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Relat&oacute;rios&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Campanhas&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Templates&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Relat&oacute;rios&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Configura&ccedil;&otilde;es&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/menu&gt;
+		&lt;h2 class=&quot;title-sep visible-xs&quot;&gt;Mais&lt;/h2&gt;
+		&lt;ul class=&quot;nav-mob-list visible-xs&quot;&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;ico-help-circle&quot;&gt;Ajuda e sugest&otilde;es&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+
+	&lt;!-- Aqui começa a parte de conteúdo dividido por colunas --&gt;
+	&lt;main class=&quot;main&quot;&gt;
+		&lt;div class=&quot;container&quot;&gt;
+			&lt;div class=&quot;row&quot;&gt;
+				&lt;div class=&quot;col-md-9 content&quot; role=&quot;main&quot;&gt;
+					Coluna da esquerda com o conte&uacute;do.
+				&lt;/div&gt;
+				&lt;aside class=&quot;col-md-3 sidebar&quot; role=&quot;complementary&quot;&gt;
+					Sidebar
+				&lt;/aside&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/main&gt;
+
+	&lt;!-- Footer --&gt;
+	&lt;footer class=&quot;footer&quot;&gt;
 		&lt;div class=&quot;footer-menu&quot;&gt;
 			&lt;nav class=&quot;container&quot;&gt;
 				&lt;h2 class=&quot;title-footer&quot;&gt;suporte e ajuda&lt;/h2&gt;

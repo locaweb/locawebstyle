@@ -57,33 +57,37 @@
 <nav>
 	<h1>Informações</h1>
 	<ul>
+		<!-- <li><a href="/locawebstyle/manual/componentes/path">Paths</a></li> -->
+		<!-- <li><a href="/locawebstyle/manual/componentes/submenu">Sub-menu</a></li> -->
 		<li><a href="/locawebstyle/manual/componentes/abas">Abas ou Tabs</a></li>
-		<li><a href="/locawebstyle/manual/componentes/collapse">Collapse</a></li>
-		<li><a href="/locawebstyle/manual/componentes/dropdowns">Dropdowns</a></li>
 		<li><a href="/locawebstyle/manual/componentes/alertas">Alertas</a></li>
-		<li><a href="/locawebstyle/manual/componentes/paginacao">Filtro exibição e paginação</a></li>
-		<li><a href="/locawebstyle/manual/componentes/alternando-textos">Alternador de texto</a></li>
 		<li><a href="/locawebstyle/manual/componentes/alternando-classes">Alternador de classes</a></li>
+		<li><a href="/locawebstyle/manual/componentes/alternando-textos">Alternador de texto</a></li>
 		<li><a href="/locawebstyle/manual/componentes/barra-progresso">Barra de progresso</a></li>
+		<li><a href="/locawebstyle/manual/componentes/botao-switch">Botão switch</a></li>
 		<li><a href="/locawebstyle/manual/componentes/botoes">Botões</a></li>
 		<li><a href="/locawebstyle/manual/componentes/breadcrumb">Breadcrumb</a></li>
+		<li><a href="/locawebstyle/manual/componentes/carousel">Carousel</a></li>
+		<li><a href="/locawebstyle/manual/componentes/classes-funcionais">Classes funcionais</a></li>
+		<li><a href="/locawebstyle/manual/componentes/collapse">Collapse</a></li>
+		<li><a href="/locawebstyle/manual/componentes/dropdowns">Dropdowns</a></li>
+		<li><a href="/locawebstyle/manual/componentes/paginacao">Filtro de exibição e paginação</a></li>
 		<li><a href="/locawebstyle/manual/componentes/labels">Labels ou Tags</a></li>
 		<li><a href="/locawebstyle/manual/componentes/modal">Modal ou Lightbox</a></li>
-		<!-- <li><a href="/locawebstyle/manual/componentes/path">Paths</a></li> -->
 		<li><a href="/locawebstyle/manual/componentes/popover">Popover</a></li>
-		<li><a href="/locawebstyle/manual/componentes/carousel">Carousel</a></li>
-		<!-- <li><a href="/locawebstyle/manual/componentes/submenu">Sub-menu</a></li> -->
+		<li><a href="/locawebstyle/manual/componentes/select">Select personalizado</a></li>
 		<li><a href="/locawebstyle/manual/componentes/tabelas">Tabelas</a></li>
 		<li><a href="/locawebstyle/manual/componentes/tooltip">Tooltip</a></li>
-		<li><a href="/locawebstyle/manual/componentes/wells">Wells ou boxes</a></li>
-		<li><a href="/locawebstyle/manual/componentes/classes-funcionais">Classes funcionais</a></li>
+		<li><a href="/locawebstyle/manual/componentes/tour-guiado">Tour Guiado</a></li>
+		<li><a href="/locawebstyle/manual/componentes/track-events">Track Events</a></li>
+		<li><a href="/locawebstyle/manual/componentes/wells">Wells ou Boxes</a></li>
 	</ul>
 </nav>
 
 </aside>
 
 
-			<article class="text col-lg-9 col-md-9">
+			<article class="text col-lg-9 col-md-9 man-article">
 				<header>
 	<h1>Popover</h1>
 </header>
@@ -176,6 +180,12 @@
 				<td>aplica um CSS fade transition no popover.</td>
 			</tr>
 			<tr>
+				<td>inherit</td>
+				<td>string</td>
+				<td>null</td>
+				<td>Insere a cor da propriedade CSS no título do popover. Em ícones busca no css do <code>:before</code></td>
+			</tr>
+			<tr>
 				<td>html</td>
 				<td>boolean</td>
 				<td>false</td>
@@ -239,6 +249,23 @@
 		</tbody>
 	</table>
 </div>
+
+<h4>Herança de cores no título do popover</h4>
+<p>Para que o título do popover tenha a mesma cor do elemento que ativa o popover, basta adicionar o atributo <code>data-inherit=""</code>, as opções desse atributo são <code>color</code> e <code>background-color</code>, com a propriedade CSS onde ele deve buscar a cor para o título. </p>
+<p>Para que a cor herdada apareça como background do título do popover, adicione <code>data-inherit-apply="background"</code>, lembrando que o texto do título ficará em branco.</p>
+
+<div class="example">
+	<button class="btn btn-danger" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal e bonito por aqui." data-title="Título">Top herdando a cor</button>
+	<button class="btn btn-info" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-html="true" data-content="Um texto e um <a href='#'>link colorido</a>." data-title="Título">Top herdando a cor, com link</button>
+	<button class="btn btn-warning" data-container="body" data-inherit="background-color" data-inherit-apply="background" data-toggle="popover" data-placement="top" data-html="true" data-content="Um texto e um <a href='#'>link colorido</a>." data-title="Título">Cor no background</button>
+	<br>
+	<button class="btn label" style="color: navy;" data-container="body" data-inherit="color" data-toggle="popover" data-placement="bottom" data-content="Um texto bem legal e bonito por aqui." data-title="Título">label</button>
+	<span class="label label-warning" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="right" data-content="Um texto bem legal e bonito por aqui." data-title="Título">label</span>
+	<a href="#" class="ico-question" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="left" data-content="Um texto bem legal e bonito por aqui." data-title="Título"></a>
+</div>
+<pre class="lang-html prettyprint-code linenums">
+<button class="btn btn-danger" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal a esquerda." data-title="Título">Top herdando as cores</button>
+</pre>
 
 <div class="bs-callout bs-callout-info">
 	<h4>Atributos de dados para popovers individuais</h4>
