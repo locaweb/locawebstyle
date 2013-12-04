@@ -10,6 +10,9 @@ $mobile-left-number: "240px"
 	width: 100%
 	opacity: 0.95
 
+	.guided-tour
+		display: none
+
 	.project-name
 		overflow: hidden
 		padding: 10px 5px
@@ -158,14 +161,58 @@ $mobile-left-number: "240px"
 		border-bottom: 0
 		background-color: #FFF !important
 		margin-bottom: 10px
-		z-index: 2
+		z-index: 4
 		position: relative
+
+		.guided-tour
+			background: #fff
+			border: 1px solid #ccc
+			display: block
+			width: 260px
+			position: absolute
+			top: -400px
+			right: 0
+			text-align: center
+			z-index: 4
+			border-bottom-left-radius: 5px
+			+transition(all .3s ease-in-out)
+
+			.btn-tour
+				margin-bottom: 15px
+
+			.guided-footer
+				margin: 15px 10px 8px
+				text-align: left
+				background: #ececec
+				font-size: .81rem
+
+			.close
+				margin-right: 10px
+				color: $gray1
+
+			&.on
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+				top: -1px
+
+		.guided-header
+			clear: both
+			margin: 0 0 10px
+
+		.guided-footer a
+			&:first-child
+				border-top: 1px solid #dbe0e6
+				display: block
+				margin: 0 8px
+				padding: 6px 0
+
+		.title-guided
+			font-size: .875rem
+			margin-top: 0
 
 		.container
 			+transition(none)
 			position: relative
 			padding: 0
-
 
 		.project-name
 			padding: 0
