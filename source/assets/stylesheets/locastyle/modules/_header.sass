@@ -176,9 +176,20 @@ $mobile-left-number: "240px"
 			z-index: 4
 			border-bottom-left-radius: 5px
 			+transition(all .3s ease-in-out)
+
+			.btn-tour
+				margin-bottom: 15px
+
+			.guided-footer
+				margin: 15px 10px 8px
+				text-align: left
+				background: #ececec
+				font-size: .81rem
+
 			.close
 				margin-right: 10px
 				color: $gray1
+
 			&.on
 				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
 				top: -1px
@@ -186,15 +197,6 @@ $mobile-left-number: "240px"
 		.guided-header
 			clear: both
 			margin: 0 0 10px
-
-		.guided-tour
-			.btn-tour
-				margin-bottom: 15px
-			.guided-footer
-				margin: 15px 10px 8px
-				text-align: left
-				background: #ececec
-				font-size: .81em
 
 		.guided-footer a
 			&:first-child
@@ -204,14 +206,13 @@ $mobile-left-number: "240px"
 				padding: 6px 0
 
 		.title-guided
-			font-size: .875em
+			font-size: .875rem
 			margin-top: 0
 
 		.container
 			+transition(none)
 			position: relative
 			padding: 0
-
 
 		.project-name
 			padding: 0
