@@ -81,5 +81,75 @@ menu_page: sidebar-formularios.erb
 
 		</div>
 	</form>
+	
+	<h4>Steps livres</h4>
+	<p>É possível exibir mais de um step de cada vez, com navegação por botões dentro de cada step ou pelos títulos de cada step</p>
+
+		<form action="#">
+		<div id="steps-livres" class="collapseGroup">
+		  
+		  <div class="boxCollapse">
+	    	<header class="noBorder" data-toggle="collapse" data-parent="#steps-livres" href="#steps-livres-passo-1">
+        	<h4><span>01.</span> Passo 1</h4>
+        </header>
+		    <div id="steps-livres-passo-1" class="collapse in">
+		      <div class="accordion-inner">
+						<div class="control-group">
+							<label>Nome</label>
+							<input type="text" placeholder="nome e sobrenome">
+						</div>
+		      	<a class="btn btn-primary" data-collapse-nav="#steps-livres-passo-2">Ir para o passo 2</a>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="boxCollapse">
+	    	<header class="noBorder"  data-toggle="collapse" data-parent="#steps-livres" href="#steps-livres-passo-2">
+        	<h4><span>02.</span> Passo 2</h4>
+        </header>
+		    <div id="steps-livres-passo-2" class="collapse">
+		      <div class="accordion-inner">
+		        <div class="control-group">
+							<label>Endereço</label>
+							<input type="text" placeholder="cidade e estado">
+						</div>
+						<div class="btn-group">
+		      		<a class="btn" data-collapse-nav="#steps-livres-passo-3">Voltar para o passo 1</a><a class="btn btn-primary" data-collapse-nav="#steps-livres-passo-3">Ir para o passo 3</a>
+						</div>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="boxCollapse">
+	    	<header class="noBorder"  data-toggle="collapse" data-parent="#steps-livres" href="#steps-livres-passo-3">
+        	<h4><span>03.</span> Passo 3</h4>
+        </header>
+		    <div id="steps-livres-passo-3" class="collapse">
+		      <div class="accordion-inner">
+		        <div class="control-group">
+							<label>Profissão</label>
+							<input type="text" placeholder="nome do cargo">
+						</div>
+						<div class="btn-group">
+		      		<a class="btn" data-collapse-nav="#steps-livres-passo-3">Voltar para o passo 2</a><a class="btn btn-primary" data-collapse-nav="#steps-livres-passo-4">Finalizar</a>
+						</div>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="boxCollapse noBorder noBackground">
+		    <div id="steps-livres-passo-4" class="accordion-body collapse">
+		      <div class="accordion-inner noBorder noPadding">
+		      	<p>Revise seus dados e clique em enviar</p>
+		      	<div class="boxActions noMarginTop">
+		      		<a class="btn" data-collapse-nav="#steps-livres-passo-3">Voltar para o passo 3</a>
+		      		<button class="btn btn-primary">Enviar</button>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+
+		</div>
+	</form>
 
 </article>
