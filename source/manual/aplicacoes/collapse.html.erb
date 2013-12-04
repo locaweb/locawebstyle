@@ -27,9 +27,9 @@ menu_page: sidebar-aplicacoes.erb
 		    		<p>
 		        	Instruções Passo 1
 		    		</p>
-		        <button class="accordion-toggle btn btn-primary" data-toggle="collapse" data-parent="#nomeGrupoAccordion" href="#passo2">
-		        	Ir para o passo 2
-		      	</button>
+		    		<div class="btn-group">
+			      	<button class="btn btn-primary accordion-toggle dInlineBlock" data-toggle="collapse" data-parent="#nomeGrupoAccordion" href="#passo2">Ir para o passo 2 </button>
+		    		</div>
 		      	<br>
 		    </div>
 		  </div>
@@ -43,10 +43,24 @@ menu_page: sidebar-aplicacoes.erb
 		      <p>
 		      	Instruções passo 2
 		      </p>
-					<button class="accordion-toggle btn btn-primary" data-toggle="collapse" data-parent="#nomeGrupoAccordion" href="#passo1">
-						Voltar para o passo 1
-					</button>
-		      
+		      <div class="btn-group">
+			      <button class="btn accordion-toggle dInlineBlock" data-toggle="collapse" data-parent="#nomeGrupoAccordion" href="#passo1"> Voltar para o passo 1 </button><button class="btn btn-primary accordion-toggle dInlineBlock" data-toggle="collapse" data-parent="#nomeGrupoAccordion" href="#passo3"> Ir para o passo 3 </button>
+		    	</div>
+		    </div>
+		  </div>
+
+		  <div class="boxCollapse accordion-group accordion-heading">
+		    <header class="noMarginBottom">
+		    	<h4>Passo 3</h4>
+					<p>Descrição passo 3</p>
+		    </header>
+		    <div id="passo3" class="accordion-body collapse">
+		      <p>
+		      	Instruções passo 3
+		      </p>
+		      <div class="btn-group">
+			      <button class="btn accordion-toggle dInlineBlock" data-toggle="collapse" data-parent="#nomeGrupoAccordion" href="#passo2">Voltar para o passo 2 </button>
+		    	</div>
 		    </div>
 		  </div>
 
