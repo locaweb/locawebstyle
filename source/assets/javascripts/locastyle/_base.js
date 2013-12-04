@@ -104,7 +104,7 @@ var locastyle = (function() {
 
   // Quando as tabelas tiverem checkboxes e mais de dois checkboxes forem marcados, será exibido um box com ações (ex: excluir, enviar, duplicar e etc).
   function showActions () {
-    $('.table-style').each(function() {
+    $('.ls-table').each(function() {
 
       var $tableStyle = $(this);
       var $wellTableId = $(this).prop('id');

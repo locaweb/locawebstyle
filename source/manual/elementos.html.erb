@@ -273,51 +273,43 @@ layout: false
 
 			<h2 class="title-2" id="example-tables">Tabela</h2>
 			<div class="element-example">
-				<div class="well hidden well-sm clearfix" data-target="tabela1">
-					<p class="d-inline-block">
-						<strong class="counterChecks">0</strong> itens selecionados
-					</p>
-					<div class="actions">
-						<div class="btn-group">
-							<button type="button" class="btn btn-default">Duplicar</button>
-							<a href="#" class="btn btn-default">Relatorio</a>
-							<a href="#" class="btn btn-default">Arquivar</a>
+				<div class="table-responsive">
+					<div class="well hidden well-sm clearfix" data-target="tabela1">
+						<p class="d-inline-block">
+							<strong class="counterChecks">0</strong> itens selecionados
+						</p>
+						<div class="actions">
+							<div class="btn-group">
+								<button type="button" class="btn btn-default">Duplicar</button>
+								<a href="#" class="btn btn-default">Relatorio</a>
+								<a href="#" class="btn btn-default">Arquivar</a>
+							</div>
+							<button type="button" class="btn btn-danger">Excluir</button>
 						</div>
-						<button type="button" class="btn btn-danger">Excluir</button>
 					</div>
+					<table class="table ls-table" id="tabela1">
+						<thead>
+							<tr>
+								<th class="txt-center"><input type="checkbox"></th>
+								<th>Título</th>
+								<th class="hidden-xs">Campanha</th>
+								<th>Status</th>
+								<th class="hidden-xs">Data de envio</th>
+							</tr>
+						</thead>
+						<tbody>
+							<%- 4.times do |i| %>
+							<tr>
+								<td class="txt-center"><input type="checkbox"></td>
+								<td><a href="" title="">Mensagem Teste Locastyle <%= i %></a></td>
+								<td class="hidden-xs">Campanha <%= i %></td>
+								<td>Enviada</td>
+								<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+							</tr>
+							<% end %>
+						</tbody>
+					</table>
 				</div>
-				<table class="table table-style" id="tabela1">
-					<thead>
-						<tr>
-							<th class="txt-center"><input type="checkbox"></th>
-							<th>Título</th>
-							<th class="hidden-xs">Campanha</th>
-							<th>Status</th>
-							<th class="hidden-xs">Data de envio</th>
-							<th></th>
-						</tr>
-					</thead>
-					<tbody>
-						<%- 4.times do |i| %>
-						<tr>
-							<td class="txt-center"><input type="checkbox"></td>
-							<td><a href="" title="">Mensagem Teste Locastyle <%= i %></a></td>
-							<td class="hidden-xs">Campanha <%= i %></td>
-							<td>Enviada</td>
-							<td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-							<td>
-								<div class="table-actions ico-grid">
-									<ul class="ico-grid">
-										<li><a href="#">Duplicar</a></li>
-										<li><a href="#">Relatório</a></li>
-										<li><a href="#">Arquivar</a></li>
-									</ul>
-								</div>
-							</td>
-						</tr>
-						<% end %>
-					</tbody>
-				</table>
 			</div>
 
 			<hr class="separator">
@@ -632,7 +624,7 @@ layout: false
 				<span aria-hidden="true" class="ico-home"></span> &nbsp;ico-home
 			</div>
 			<%= partial 'partials/elements/icons' %>
-			
+
 			<hr class="separator">
 
 		</div>
