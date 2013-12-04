@@ -32,6 +32,7 @@ Locastyle = (function() {
 			this.labelSelectCustom();
 			this.collapsedRadios(dom_scope);
 			this.collapseWithTooltip(dom_scope);
+			this.collapseNavButtons(dom_scope);
 		},
 
 		popover: function(dom_scope){
@@ -279,6 +280,17 @@ Locastyle = (function() {
 							$(collapse).removeClass('with-tooltip');
 						});
 				}
+			});
+		},
+
+		collapseNavButtons: function(dom_scope){
+			$(".collapseGroup", dom_scope).each(function(i, collapse){
+				$(collapse).find('[data-collapse-nav]').on('click', function(evt){
+						evt.preventDefault();
+						var dest = $(this).data('collapse-nav');
+						$(collapse).find('.collapse').not(dest).collapse('hide');
+						$( dest ).collapse('show');
+				});
 			});
 		},
 
