@@ -31,6 +31,7 @@ Locastyle = (function() {
 			this.popover(dom_scope);
 			this.labelSelectCustom();
 			this.collapsedRadios(dom_scope);
+			this.collapseWithTooltip(dom_scope);
 		},
 
 		popover: function(dom_scope){
@@ -264,6 +265,20 @@ Locastyle = (function() {
 		collapsedRadios: function(dom_scope) {
 			$(".collapsedRadios [data-toggle='collapse']").on("click", function(){
 				$(this).parents(".collapsedRadios").find(".collapse.in").collapse("hide")
+			});
+		},
+
+		collapseWithTooltip: function(dom_scope){
+			$(".collapse", dom_scope).each(function(i, collapse){
+				if( $(collapse).find('[rel="popover"]')[0] ){
+					$(collapse)
+						.on('shown', function(){
+							$(collapse).addClass('with-tooltip');
+						})
+						.on('hidden', function(){
+							$(collapse).removeClass('with-tooltip');
+						});
+				}
 			});
 		},
 
