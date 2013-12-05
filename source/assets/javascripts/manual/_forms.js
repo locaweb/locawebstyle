@@ -13,7 +13,17 @@ manual.forms = (function() {
       jQuery.extend(jQuery.validator.messages, {
         required: "Campo obrigatório."
       });
-      $('.validate').validate();
+      $('.validate').validate({
+        errorClass: "help-inline",
+        errorElement: 'span',
+        success: function(label) {
+          label.parent(".control-group").removeClass('error').addClass('success');
+        },
+        errorPlacement: function(error, element) {
+          element.parent(".control-group").addClass('error');
+          error.appendTo( element.parent(".control-group") );
+        }
+      });
     });
   }
 
