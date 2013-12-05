@@ -285,10 +285,18 @@ Locastyle = (function() {
 
 		collapseNavButtons: function(dom_scope){
 			$(".collapseGroup", dom_scope).each(function(i, collapse){
+				var hasValidate = false;
+				if( $(collapse).hasClass('step-validate') &&  jQuery().validate ){
+					hasValidate = true;
+				}
 				$(collapse).find('[data-collapse-nav]').on('click', function(evt){
 						evt.preventDefault();
+						var $step = $(this).parents('.collapse')
+						if( hasValidate && !$(':input:visible', $step ).valid() ){
+							return false;
+						}
 						var dest = $(this).data('collapse-nav');
-						$(collapse).find('.collapse').not(dest).collapse('hide');
+						$step.collapse('hide');
 						$( dest ).collapse('show');
 				});
 			});

@@ -1,0 +1,225 @@
+---
+title: Formulários - Passo a passo
+
+menu_page: sidebar-formularios.erb
+---
+
+<article class="text">
+	<header>
+	  <h1>Formulários em Steps</h1>
+	  <h3>Formulários divididos em etapas com collapseGroup</h3>
+	</header>
+
+	<p>Para formulários divididos em passos, utilizamos o componente <b>collapse</b> do LocawebStyle, agrupado em um <b>collapseGroup</b></p>
+
+	<p>As diferenças principais são o modo como se navega no collapse, e as opções são:</p>
+
+	<h4>Steps bloqueados</h4>
+	<p>Só é possível exibir um step de cada vez, com navegação por botões dentro de cada step</p>
+
+	<form action="#">
+		<div class="accordion" id="steps-bloqueados">
+		  
+		  <div class="accordion-group boxCollapse">
+	    	<header class="noBorder">
+        	<h4><span>01.</span> Passo 1</h4>
+        </header>
+		    <div id="steps-bloqueados-passo-1" class="accordion-body collapse in">
+		      <div class="accordion-inner">
+						<div class="control-group">
+							<label>Nome</label>
+							<input name="a1" type="text" placeholder="nome e sobrenome">
+						</div>
+		      	<a class="btn btn-primary" data-toggle="collapse" data-parent="#steps-bloqueados" href="#steps-bloqueados-passo-2">Ir para o passo 2</a>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="accordion-group boxCollapse">
+	    	<header class="noBorder">
+        	<h4><span>02.</span> Passo 2</h4>
+        </header>
+		    <div id="steps-bloqueados-passo-2" class="accordion-body collapse">
+		      <div class="accordion-inner">
+		        <div class="control-group">
+							<label>Endereço</label>
+							<input name="a2" type="text" placeholder="cidade e estado">
+						</div>
+		      	<a class="btn" data-toggle="collapse" data-parent="#steps-bloqueados" href="#steps-bloqueados-passo-1">Voltar para o passo 1</a>
+		      	<a class="btn btn-primary" data-toggle="collapse" data-parent="#steps-bloqueados" href="#steps-bloqueados-passo-3">Ir para o passo 3</a>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="accordion-group boxCollapse">
+	    	<header class="noBorder">
+        	<h4><span>03.</span> Passo 3</h4>
+        </header>
+		    <div id="steps-bloqueados-passo-3" class="accordion-body collapse">
+		      <div class="accordion-inner">
+		        <div class="control-group">
+							<label>Profissão</label>
+							<input name="a3" type="text" placeholder="nome do cargo">
+						</div>
+		      	<a class="btn" data-toggle="collapse" data-parent="#steps-bloqueados" href="#steps-bloqueados-passo-2">Voltar para o passo 2</a>
+		      	<a class="btn btn-primary" data-toggle="collapse" data-parent="#steps-bloqueados" href="#steps-bloqueados-passo-4">Finalizar</a>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="accordion-group boxCollapse noBorder noBackground">
+		    <div id="steps-bloqueados-passo-4" class="accordion-body collapse">
+		      <div class="accordion-inner noBorder noPadding">
+		      	<p>Revise seus dados e clique em enviar</p>
+		      	<div class="boxActions noMarginTop">
+			      	<a class="btn" data-toggle="collapse" data-parent="#steps-bloqueados" href="#steps-bloqueados-passo-3">Voltar para o passo 3</a>
+			      	<button class="btn btn-primary" type="button">Enviar</button>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+
+		</div>
+	</form>
+	
+	<h4>Steps livres</h4>
+	<p>É possível exibir mais de um step de cada vez, com navegação por botões dentro de cada step ou pelos títulos de cada step</p>
+
+		<form action="#">
+		<div id="steps-livres" class="collapseGroup">
+		  
+		  <div class="boxCollapse">
+	    	<header class="noBorder" data-toggle="collapse" data-parent="#steps-livres" href="#steps-livres-passo-1">
+        	<h4><span>01.</span> Passo 1</h4>
+        </header>
+		    <div id="steps-livres-passo-1" class="collapse in">
+		      <div class="accordion-inner">
+						<div class="control-group">
+							<label>Nome</label>
+							<input name="b1" type="text" placeholder="nome e sobrenome">
+						</div>
+		      	<a class="btn btn-primary" data-collapse-nav="#steps-livres-passo-2">Ir para o passo 2</a>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="boxCollapse">
+	    	<header class="noBorder"  data-toggle="collapse" data-parent="#steps-livres" href="#steps-livres-passo-2">
+        	<h4><span>02.</span> Passo 2</h4>
+        </header>
+		    <div id="steps-livres-passo-2" class="collapse">
+		      <div class="accordion-inner">
+		        <div class="control-group">
+							<label>Endereço</label>
+							<input name="b2" type="text" placeholder="cidade e estado">
+						</div>
+						<div class="btn-group">
+		      		<a class="btn" data-collapse-nav="#steps-livres-passo-3">Voltar para o passo 1</a><a class="btn btn-primary" data-collapse-nav="#steps-livres-passo-3">Ir para o passo 3</a>
+						</div>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="boxCollapse">
+	    	<header class="noBorder"  data-toggle="collapse" data-parent="#steps-livres" href="#steps-livres-passo-3">
+        	<h4><span>03.</span> Passo 3</h4>
+        </header>
+		    <div id="steps-livres-passo-3" class="collapse">
+		      <div class="accordion-inner">
+		        <div class="control-group">
+							<label>Profissão</label>
+							<input name="b3" type="text" placeholder="nome do cargo">
+						</div>
+						<div class="btn-group">
+		      		<a class="btn" data-collapse-nav="#steps-livres-passo-2">Voltar para o passo 2</a><a class="btn btn-primary" data-collapse-nav="#steps-livres-passo-4">Finalizar</a>
+						</div>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="boxCollapse noBorder noBackground">
+		    <div id="steps-livres-passo-4" class="accordion-body collapse">
+		      <div class="accordion-inner noBorder noPadding">
+		      	<p>Revise seus dados e clique em enviar</p>
+		      	<div class="boxActions noMarginTop">
+		      		<a class="btn" data-collapse-nav="#steps-livres-passo-3">Voltar para o passo 3</a>
+		      		<button class="btn btn-primary">Enviar</button>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+
+		</div>
+	</form>
+
+	<h4>Steps com validação</h4>
+	<p>Adicionando a classe <code>step-validate</code> a navegação entre steps só funcionará se os campos visíveis do step forem válidos, com o <b>jQuery validate</b></p>
+	
+	<form action="#" class="validate" id="test-form-step-validate">
+		<div id="steps-validate" class="collapseGroup step-validate">
+		  
+		  <div class="boxCollapse">
+	    	<header class="noBorder" data-toggle="collapse" data-parent="#steps-validate" href="#steps-validate-passo-1">
+        	<h4><span>01.</span> Passo 1</h4>
+        </header>
+		    <div id="steps-validate-passo-1" class="collapse in">
+		      <div class="accordion-inner">
+						<div class="control-group">
+							<label class="control-label" for="c1">Nome</label>
+							<input name="c1" type="text" placeholder="nome e sobrenome" required>
+						</div>
+		      	<a class="btn btn-primary" data-collapse-nav="#steps-validate-passo-2">Ir para o passo 2</a>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="boxCollapse">
+	    	<header class="noBorder"  data-toggle="collapse" data-parent="#steps-validate" href="#steps-validate-passo-2">
+        	<h4><span>02.</span> Passo 2</h4>
+        </header>
+		    <div id="steps-validate-passo-2" class="collapse">
+		      <div class="accordion-inner">
+		        <div class="control-group">
+							<label class="control-label" for="c2">Endereço</label>
+							<input name="c2" type="text" placeholder="cidade e estado" required>
+						</div>
+						<div class="btn-group">
+		      		<a class="btn" data-collapse-nav="#steps-validate-passo-1">Voltar para o passo 1</a><a class="btn btn-primary" data-collapse-nav="#steps-validate-passo-3">Ir para o passo 3</a>
+						</div>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="boxCollapse">
+	    	<header class="noBorder"  data-toggle="collapse" data-parent="#steps-validate" href="#steps-validate-passo-3">
+        	<h4><span>03.</span> Passo 3</h4>
+        </header>
+		    <div id="steps-validate-passo-3" class="collapse">
+		      <div class="accordion-inner">
+		        <div class="control-group">
+							<label class="control-label" for="c3">Profissão</label>
+							<input name="c3" type="text" placeholder="nome do cargo" required>
+						</div>
+						<div class="btn-group">
+		      		<a class="btn" data-collapse-nav="#steps-validate-passo-2">Voltar para o passo 2</a><a class="btn btn-primary" data-collapse-nav="#steps-validate-passo-4">Finalizar</a>
+						</div>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="boxCollapse noBorder noBackground">
+		    <div id="steps-validate-passo-4" class="accordion-body collapse">
+		      <div class="accordion-inner noBorder noPadding">
+		      	<p>Revise seus dados e clique em enviar</p>
+		      	<div class="boxActions noMarginTop">
+		      		<a class="btn" data-collapse-nav="#steps-validate-passo-3">Voltar para o passo 3</a>
+		      		<button class="btn btn-primary">Enviar</button>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+
+		</div>
+	</form>
+
+</article>
