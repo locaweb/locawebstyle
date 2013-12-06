@@ -4,21 +4,21 @@
   src: url("/assets/fonts/opensans/opensans-regular-webfont.eot");
   src: url("/assets/fonts/opensans/opensans-regular-webfont.eot?#iefix") format('eot'), url("/assets/fonts/opensans/opensans-regular-webfont.woff") format('woff'), url("/assets/fonts/opensans/opensans-regular-webfont.ttf") format('truetype'), url("/assets/fonts/opensans/opensans-regular-webfont.svg#open_sansextrabold") format('svg');
   font-weight: normal;
-  font-style: normal; 
+  font-style: normal;
 }
 @font-face {
   font-family: "open_sans_semibold";
   src: url("/assets/fonts/opensans/opensans-semibold-webfont.eot");
   src: url("/assets/fonts/opensans/opensans-semibold-webfont.eot?#iefix") format('eot'), url("/assets/fonts/opensans/opensans-semibold-webfont.woff") format('woff'), url("/assets/fonts/opensans/opensans-semibold-webfont.ttf") format('truetype'), url("/assets/fonts/opensans/opensans-semibold-webfont.svg#open_sansextrabold") format('svg');
   font-weight: normal;
-  font-style: normal; 
+  font-style: normal;
 }
 @font-face {
   font-family: "locaicons";
   src: url("/assets/fonts/locaicons/locaicons.eot");
   src: url("/assets/fonts/locaicons/locaicons.eot?#iefix") format('eot'), url("/assets/fonts/locaicons/locaicons.woff") format('woff'), url("/assets/fonts/locaicons/locaicons.ttf") format('truetype'), url("/assets/fonts/locaicons/locaicons.svg#locaicons") format('svg');
   font-weight: normal;
-  font-style: normal; 
+  font-style: normal;
 }
 
 
@@ -28,14 +28,16 @@
     font: 300 12px verdana,tahoma,arial,helvetica,sans-serif;
     position: relative;
     z-index: 2;
-    border-bottom: 4px solid #BBB;
+    border-bottom: 1px solid #ffffff;
 }
+
 #locaweb-lwbar-header .limiteToolbar {
     position: relative;
     max-width: 1180px;
     margin: 0 auto;
     height: 33px;
 }
+
 #locaweb-lwbar-header h1.logoToolbar {
     text-indent: 100%;
     white-space: nowrap;
@@ -49,6 +51,7 @@
     font: 30px UbuntuMedium,Ubuntu,arial,verdana,tahoma,sans-serif;
     color: #000;
 }
+
 #locaweb-lwbar-header .logOut {
     font-size: 13px;
     color: #D1D1D1;
@@ -57,6 +60,7 @@
     margin: 5px 0 0;
     float: right;
 }
+
 #locaweb-lwbar-header .userName {
     background: url(https://assets.locaweb.com.br/locastyle/1.2.8/images/bgUsuario.png) no-repeat left center;
     font-size: 13px;
@@ -66,13 +70,16 @@
     border-right: 1px solid #616161;
     margin: 7px 15px 0 0;
 }
+
 #locaweb-lwbar-header .userName, #locaweb-lwbar-header .logOut {
     float: right;
 }
+
 #locaweb-lwbar-header .userName {
     font-size: 13px;
     color: #D1D1D1;
 }
+
 #locaweb-lwbar-footer * {
   margin: 0;x
   padding: 0;
@@ -82,16 +89,19 @@
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
   box-sizing: border-box;
 }
+
 #locaweb-lwbar-footer nav {
   display: block;
 }
+
 #locaweb-lwbar-footer .container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-#locaweb-lwbar-footer [class*="ico-"].ico-pos-right:after, 
+
+#locaweb-lwbar-footer [class*="ico-"].ico-pos-right:after,
 #locaweb-lwbar-footer [class*="ico-"]:before {
   position: relative;
   top: -2px;
@@ -105,12 +115,15 @@
   text-transform: none;
   line-height: 1;
 }
+
 #locaweb-lwbar-footer .ico-screen:before, .ico-screen:after {
   content: "\e014";
 }
+
 #locaweb-lwbar-footer .visible-lg {
   display: none !important;
 }
+
 #locaweb-lwbar-footer.footer {
   position: relative;
   z-index: 0;
@@ -118,9 +131,11 @@
   background-color: white;
   color: #555;
 }
+
 #locaweb-lwbar-footer.footer .footer-menu {
   background-color: #131313;
 }
+
 #locaweb-lwbar-footer.footer .footer-menu nav .title-footer {
   position: relative;
   text-transform: uppercase;
@@ -135,40 +150,50 @@
   display: block;
   line-height: 1.1;
 }
+
 #locaweb-lwbar-footer.footer .footer-menu nav a {
   color: white;
   line-height: 54px;
   text-decoration: none;
 }
+
 #locaweb-lwbar-footer.footer .footer-menu nav > ul {
   margin: 0;
   text-align: center;
   position: relative;
 }
+
 #locaweb-lwbar-footer.footer .footer-menu nav > ul > li {
   display: inline-block;
   padding: 0;
   margin: 0 10px;
 }
+
 #locaweb-lwbar-footer.footer .footer-menu nav > ul > li > a {
   padding: 5px 0 5px 30px;
 }
-#locaweb-lwbar-footer.footer .footer-menu nav > ul > li > a:hover, 
+
+#locaweb-lwbar-footer.footer .footer-menu nav > ul > li > a:hover,
 #locaweb-lwbar-footer.footer .footer-menu nav > ul > li > a:focus {
-  text-decoration: none; 
+  text-decoration: none;
 }
+
 #locaweb-lwbar-footer.footer .footer-menu nav > ul > li > a.bg-customer-support {
   background: url(http://locaweb.github.io/locawebstyle/assets/images/locastyle/footer/customer-support.png) no-repeat left;
 }
+
 #locaweb-lwbar-footer.footer .footer-menu nav > ul > li > a.bg-my-tickets {
   background: url(http://locaweb.github.io/locawebstyle/assets/images/locastyle/footer/my-tickets.png) no-repeat left;
 }
+
 #locaweb-lwbar-footer.footer .footer-menu nav > ul > li > a.bg-help-desk {
   background: url(http://locaweb.github.io/locawebstyle/assets/images/locastyle/footer/help-desk.png) no-repeat left;
 }
+
 #locaweb-lwbar-footer.footer .footer-menu nav > ul > li > a.bg-statusblog {
   background: url(http://locaweb.github.io/locawebstyle/assets/images/locastyle/footer/statusblog.png) no-repeat left;
 }
+
 #locaweb-lwbar-footer.footer .footer-info {
   font-size: 0.687em;
   text-align: center;
@@ -176,17 +201,20 @@
   line-height: 14px;
   display: block;
 }
+
 #locaweb-lwbar-footer.footer .footer-info p {
   border-top: solid 1px #d9d9d9;
   margin-top: 5px;
-  padding-top: 5px; 
+  padding-top: 5px;
   font-size: 10px;
 }
+
 @media (min-width: 768px){
   #locaweb-lwbar-footer .container {
     max-width: 750px;
-  }  
+  }
 }
+
 @media (min-width: 992px){
   #locaweb-lwbar-footer .container {
     max-width: 970px;
@@ -219,10 +247,10 @@
     display: inline-block !important;
     opacity: 1;
   }
-  #locaweb-lwbar-footer.footer .footer-menu nav ul li:hover, 
-  #locaweb-lwbar-footer.footer .footer-menu nav ul li:focus, 
+  #locaweb-lwbar-footer.footer .footer-menu nav ul li:hover,
+  #locaweb-lwbar-footer.footer .footer-menu nav ul li:focus,
   #locaweb-lwbar-footer.footer .footer-menu nav ul li:active {
-    opacity: 0.8; 
+    opacity: 0.8;
   }
   #locaweb-lwbar-footer.footer .footer-info {
     padding-bottom: 10px;
@@ -239,6 +267,7 @@
     padding: 0;
   }
 }
+
 @media (min-width: 1200px) {
   #locaweb-lwbar-footer .container {
     max-width: 1170px;
