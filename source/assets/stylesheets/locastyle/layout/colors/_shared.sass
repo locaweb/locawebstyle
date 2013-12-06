@@ -9,13 +9,32 @@
 	a.btn-default
 		color: $gray3
 
-
-	a:not[class*="text-"]
+	a
 		color: $color2
 
 		&:hover,
 		&:focus
 			color: $color2
+
+
+		// mantendo padrao do bootstrap
+		&.text-muted
+			color: #999
+
+		&.text-primary
+			color: #428BCA
+
+		&.text-success
+			color: #3C763D
+
+		&.text-info
+			color: #31708F
+
+		&.text-danger
+			color: #8A6D3B
+
+		&.text-warning
+			color: #A94442
 
 	&.no-menu
 		.header
