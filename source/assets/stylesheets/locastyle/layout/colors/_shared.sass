@@ -13,6 +13,10 @@
 	a
 		color: $color2
 
+		&:hover,
+		&:focus
+			color: $color2
+
 	&.no-menu
 		.header
 			border-bottom: 4px solid $color1 !important
@@ -97,6 +101,10 @@
 			&:focus
 				background-color: $color2
 
+		li > a:hover,
+		li > a:focus
+			color: #fff
+
 		& button:hover,
 		& button:focus
 			color: #fff
@@ -173,7 +181,7 @@
 		border-color: $color2
 
 	.btn-primary,
-	div.hopscotch-bubble .hopscotch-actions button
+	div.hopscotch-bubble .hopscotch-actions button.hopscotch-nav-button.next
 		@extend %btn-theme
 		&:hover, &:focus
 			@extend %btn-theme
@@ -195,7 +203,8 @@
 
 	.alert[class*="alert-"]
 
-		a:hover
+		a:hover,
+		a:focus
 			color: $color5
 
 
@@ -211,7 +220,8 @@
 			background-color: $color2
 			border-color: $color2
 
-			&:hover
+			&:hover,
+			&:focus
 				background-color: $color2
 				border-color: $color2
 
@@ -227,7 +237,8 @@
 			.help-suggestions
 				background-color: $color3
 
-				&:hover
+				&:hover,
+				&:focus
 					background-color: $color5
 
 				&[class*="ico-"]:before
@@ -247,6 +258,7 @@
 					& > a:focus,
 					& > a:hover,
 					&:hover > a,
+					&:focus > a
 						background-color: $color3
 						border-bottom-color: $color5
 
@@ -268,6 +280,7 @@
 								color: $color1
 
 		.shortcut-title.active:before,
-		.shortcut-title:hover:before
+		.shortcut-title:hover:before,
+		.shortcut-title:focus:before
 			background-color: $color2
 			color: #fff
