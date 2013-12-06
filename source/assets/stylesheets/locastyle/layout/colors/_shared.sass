@@ -203,7 +203,8 @@
 
 	.alert[class*="alert-"]
 
-		a:hover
+		a:hover,
+		a:focus
 			color: $color5
 
 
@@ -219,7 +220,8 @@
 			background-color: $color2
 			border-color: $color2
 
-			&:hover
+			&:hover,
+			&:focus
 				background-color: $color2
 				border-color: $color2
 
@@ -235,7 +237,8 @@
 			.help-suggestions
 				background-color: $color3
 
-				&:hover
+				&:hover,
+				&:focus
 					background-color: $color5
 
 				&[class*="ico-"]:before
@@ -255,6 +258,7 @@
 					& > a:focus,
 					& > a:hover,
 					&:hover > a,
+					&:focus > a
 						background-color: $color3
 						border-bottom-color: $color5
 
@@ -276,6 +280,7 @@
 								color: $color1
 
 		.shortcut-title.active:before,
-		.shortcut-title:hover:before
+		.shortcut-title:hover:before,
+		.shortcut-title:focus:before
 			background-color: $color2
 			color: #fff
