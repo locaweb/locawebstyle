@@ -28,7 +28,7 @@ manual.tourGuiado = (function() {
         target: 'passo2',
         title: 'Título passo 2',
         content: 'texto passo 2.',
-        placement: 'right',
+        placement: 'left',
         arrowOffset: 'center',
         yOffset: 'center'
       },

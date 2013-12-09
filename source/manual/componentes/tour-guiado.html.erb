@@ -14,6 +14,11 @@ menu_page: sidebar-componentes.erb
 <h3>Cookie</h3>
 <p>Ao carregar pela primeira vez,  a caixa de informação onde está o botão para iniciar o Tour, é exibida aberta logo após o carregamento da página, nas próximas vezes ela estará sempre fechada, a não ser que o cookie seja excluído.</p>
 
+<div class="bs-callout bs-callout-warning">
+	<h4>Acessibilidade</h4>
+	<p>Implementamos navegação via teclado, utilizando seta pra frente (prosseguir), trás (voltar) e a tecla ESC (fechar). Faça um teste!</p>
+</div>
+
 
 <table class="table-bordered table-striped table">
 	<thead>
@@ -118,12 +123,9 @@ var configTour = {
 		<h2 class="title-guided">Título</h2>
 	</header>
 	<a href="#" class="btn btn-primary btn-tour" role="button">Iniciar</a>
-	<p>
-		<a href="#" data-target="#modalBeta" data-toggle="modal" >Texto</a>
-	</p>
 	<footer class="guided-footer">
-		<a href="https://www.demo.com" class="lnkArrow" target="_blank">Link demo</a>
-		<a href="#" class="lnkArrow" target="_blank">Link</a>
+		<a href="https://www.demo.com" class="ico-arrow-right" target="_blank">Link demo</a>
+		<a href="#" class="ico-arrow-right" target="_blank">Link</a>
 	</footer>
 </div>
 </pre>
