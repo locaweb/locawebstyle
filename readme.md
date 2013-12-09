@@ -35,7 +35,7 @@ Este projeto foi baseado em alguns frameworks já conhecidos de todos os desenvo
 Os estilos e comportamentos foram baseados no Bootstrap, framework criado pelo [Mark Otto](http://twitter.com/mdo/) e [Jacob Thornton](http://twitter.com/fat) para agilizar a criação de interface do Twitter.
 
 Se você não conhece, visite o github do projeto e conheça já!
-[Bootstrap](twitter.github.com/bootstrap/)
+[Bootstrap](http://github.com/twbs/bootstrap)
 
 *Curiosidade* --
 Dentro do Bootstrap eles usam o Normalize, que é um CSS Reset bastante completo. Ele reseta e compatibiliza alguns problemas de textos e valores padrões em elementos HTML. O Normalize foi criado por [Nicolas Gallagher](@necolas) e [Jonathan Neal](@jon_neal).
