@@ -37,7 +37,7 @@ Os estilos e comportamentos foram baseados no Bootstrap, framework criado pelo [
 Se você não conhece, visite o [site](http://getbootstrap.com/) do projeto, ou o [repositório](http://github.com/twbs/bootstrap) no github.
 
 *Curiosidade* --
-Dentro do Bootstrap eles usam o Normalize, que é um CSS Reset bastante completo. Ele reseta e compatibiliza alguns problemas de textos e valores padrões em elementos HTML. O Normalize foi criado por [Nicolas Gallagher](@necolas) e [Jonathan Neal](@jon_neal).
+Dentro do Bootstrap eles usam o Normalize, que é um CSS Reset bastante completo. Ele reseta e compatibiliza alguns problemas de textos e valores padrões em elementos HTML. O Normalize foi criado por [Nicolas Gallagher](http://github.com/necolas) e [Jonathan Neal](http://github.com/jonathantneal).
 [Dê uma olhada no projeto](http://necolas.github.com/normalize.css/)
 
 ***JQuery***
