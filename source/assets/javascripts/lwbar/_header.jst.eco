@@ -1,4 +1,4 @@
-<div id="locaweb-lwbar-header">
+<div id="lwbar-header">
   <div class="limiteToolbar">
     <h1 class="logoToolbar">Central do Cliente</h1>
     <% if @logoutUrl :%>
