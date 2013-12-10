@@ -24,8 +24,42 @@ locastyle.tables = (function() {
         tds.eq(i).addClass( thClasses[i] )
       };
     });
+    lineActions($table);
   }
-  
+
+  function lineActions($table){
+    $table.find('td.ls-table-actions').each(function(itd, td){
+      var $actions = $(td).find('a, button');
+      if( $actions[1] ){
+        $(td).html((function(){
+          var dropdownHtml = '<div class="btn-group"> <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">Ações</button><ul class="dropdown-menu pull-right" role="menu">';
+          $actions.each(function(i, action){
+            var  textClasses;
+            if( $(action).attr('class') ){
+               textClasses = $.grep( $(action).attr('class').split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
+            }
+            if( textClasses ){
+              $(action).wrapInner('<span class="' + textClasses + '" />')
+              if( textClasses.match(/(danger)/) ){
+                dropdownHtml += '<li role="presentation" class="divider"></li>';
+              }
+            }
+            dropdownHtml += '<li>' + action.outerHTML + '</li>';
+          })
+          dropdownHtml += '</ul></div>'
+          return dropdownHtml;
+        })());
+      }else{
+        $actions.addClass('btn btn-xs btn-default');
+        var  textClasses = $.grep( $actions.attr('class').split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
+        if( textClasses ){
+          $actions.wrapInner('<span class="' + textClasses + '" />')
+        }
+      }
+    });
+  }
+
+
   // Quando as tabelas tiverem checkboxes e mais de dois checkboxes forem marcados, será exibido um box com ações (ex: excluir, enviar, duplicar e etc).
   function showActions () {
     $('.ls-table').each(function() {
