@@ -35,10 +35,11 @@ locastyle.tables = (function() {
         $(td).html((function(){
           var dropdownHtml = '<div class="btn-group"> <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">Ações</button><ul class="dropdown-menu pull-right" role="menu">';
           $actions.each(function(i, action){
-            var  textClasses;
+            var  textClasses,
+              actionClass = $(action).attr('class');
             // verifica necessidade e insere cor original da acao
-            if( $(action).attr('class') ){
-               textClasses = $.grep( $(action).attr('class').split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
+            if( actionClass ){
+               textClasses = $.grep( actionClass.split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
               if( textClasses ){
                 $(action).wrapInner('<span class="' + textClasses + '" />')
                 if( textClasses.match(/(danger)/) ){
