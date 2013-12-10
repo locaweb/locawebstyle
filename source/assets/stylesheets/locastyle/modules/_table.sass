@@ -10,7 +10,6 @@ $bg-actions-color:  #00a272
 	background-color: #fff
 	box-shadow: 0 1px 0 $gray6
 	border-radius: 4px 4px 0 0
-
 	thead
 		@extend .bg-gray1
 		color: #fff
@@ -27,101 +26,30 @@ $bg-actions-color:  #00a272
 
 			&:last-child
 				border-radius: 0 4px 0 0
-
 	tbody
-
 		tr
 			&:nth-child(odd)
 				@extend .bg-gray4
-
 			td
 				border-left: 1px solid $gray6
 				font-size: .875rem
 				vertical-align: middle
 				position: static
-
 				&:first-child
 					border-left: none
-
 				&:last-child
 					padding-right: 20px
 					position: relative
-
-				p,
-				label
+				p, label
 					font-size: 1rem
-
+				&.ls-table-actions, &:last-child
+					button, a
+						@extend .btn
+						@extend .btn-xs
+						display: none
+						&:first-child
+							display: inline-block
 			&:hover
 				background-color: $color4
-
 			&.selected
 				background-color: darken($color4, 4%)
-
-	&.table-invert-bg
-		@extend .bg-gray4
-
-		tbody tr:nth-child(odd)
-			background-color: #fff
-
-
-.table-actions
-	+transition(width .25s ease-in)
-	position: absolute
-	right: 0
-	top: 0
-	height: 100%
-	width: 20px
-	overflow: hidden
-	cursor: pointer
-	vertical-align: middle
-
-	&[class*="ico-"]:before,
-	& ul:before
-		color: $bg-actions-color
-		display: inline-block
-		overflow: hidden
-		width: 9px
-		position: absolute
-		top: 12px
-		right: 7px
-		font-size: 12px
-
-	ul
-		+transition(all .25s ease-in)
-		-webkit-transform: translateX(80%)
-		position: relative
-		padding: 0 20px
-		height: 36px
-		width: auto
-		float: right
-
-		&[class*="ico-"]:before
-			color: #fff
-
-		li
-			display: inline-block
-
-			a
-				display: inline-block
-				padding: 8px 7px
-				color: #fff
-				vertical-align: middle
-
-				&:hover
-					background-color: #fff
-					color: $bg-actions-color
-
-	&:hover
-		width: 1000px
-
-	ul:hover
-		-webkit-transform: translateX(0)
-		background-color: $bg-actions-color
-		list-style: none
-		float: right
-		display: block
-		margin-bottom: 0
-
-		&[class*="ico-"]:before
-			color: #fff
-			left: 5px
