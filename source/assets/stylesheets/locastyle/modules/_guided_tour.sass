@@ -1,3 +1,50 @@
+.header	.guided-tour
+	background: #fff
+	border: 1px solid #ccc
+	display: block
+	width: 260px
+	position: absolute
+	top: -400px
+	right: 0
+	text-align: center
+	z-index: 4
+	border-bottom-left-radius: 5px
+	+transition(all .3s ease-in-out)
+
+
+	.guided-footer
+		margin: 15px 10px 8px
+		text-align: left
+		background: #ececec
+		font-size: .75rem
+
+	.close
+		margin-right: 10px
+		color: $gray1
+
+	&.on
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+		top: -1px
+
+.guided-header
+	clear: both
+	margin: 0 0 10px
+
+	p
+		font-size: .8125rem
+		margin-bottom: 0
+
+.guided-footer a
+	&:first-child
+		border-top: 1px solid #dbe0e6
+		display: block
+		margin: 0 8px
+		padding: 6px 0
+
+.title-guided
+	font-size: 1.125rem
+	margin-top: 0
+
 div.hopscotch-bubble
 	z-index: 5
 	background-clip: padding-box
