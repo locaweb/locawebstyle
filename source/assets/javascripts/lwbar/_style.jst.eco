@@ -31,14 +31,14 @@
     border-bottom: 1px solid #ffffff;
 }
 
-#lwbar-header .limiteToolbar {
+#lwbar-header .limit-toolbar {
     position: relative;
     max-width: 1180px;
     margin: 0 auto;
     height: 33px;
 }
 
-#lwbar-header h1.logoToolbar {
+#lwbar-header h1.logo-toolbar {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -52,7 +52,7 @@
     color: #000;
 }
 
-#lwbar-header .logOut {
+#lwbar-header .log-out {
     font-size: 13px;
     color: #D1D1D1;
     background: url(https://assets.locaweb.com.br/locastyle/1.2.8/images/btSair.png) no-repeat center center;
@@ -61,7 +61,7 @@
     float: right;
 }
 
-#lwbar-header .userName {
+#lwbar-header .user-name {
     background: url(https://assets.locaweb.com.br/locastyle/1.2.8/images/bgUsuario.png) no-repeat left center;
     font-size: 13px;
     height: 17px;
@@ -71,11 +71,11 @@
     margin: 7px 15px 0 0;
 }
 
-#lwbar-header .userName, #lwbar-header .logOut {
+#lwbar-header .user-name, #lwbar-header .log-out {
     float: right;
 }
 
-#lwbar-header .userName {
+#lwbar-header .user-name {
     font-size: 13px;
     color: #D1D1D1;
 }
@@ -206,7 +206,7 @@
   border-top: solid 1px #d9d9d9;
   margin-top: 5px;
   padding-top: 5px;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 @media (min-width: 768px){
