@@ -27,6 +27,7 @@ locastyle.tables = (function() {
     lineActions($table);
   }
 
+  // Insere dropdown para cada linha da coluna de acoes se for necessário
   function lineActions($table){
     $table.find('td.ls-table-actions').each(function(itd, td){
       var $actions = $(td).find('a, button');
@@ -35,13 +36,14 @@ locastyle.tables = (function() {
           var dropdownHtml = '<div class="btn-group"> <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">Ações</button><ul class="dropdown-menu pull-right" role="menu">';
           $actions.each(function(i, action){
             var  textClasses;
+            // verifica necessidade e insere cor original da acao
             if( $(action).attr('class') ){
                textClasses = $.grep( $(action).attr('class').split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
-            }
-            if( textClasses ){
-              $(action).wrapInner('<span class="' + textClasses + '" />')
-              if( textClasses.match(/(danger)/) ){
-                dropdownHtml += '<li role="presentation" class="divider"></li>';
+              if( textClasses ){
+                $(action).wrapInner('<span class="' + textClasses + '" />')
+                if( textClasses.match(/(danger)/) ){
+                  dropdownHtml += '<li role="presentation" class="divider"></li>';
+                }
               }
             }
             dropdownHtml += '<li>' + action.outerHTML + '</li>';
@@ -51,6 +53,7 @@ locastyle.tables = (function() {
         })());
       }else{
         $actions.addClass('btn btn-xs btn-default');
+        // verifica necessidade e insere cor original da acao
         var  textClasses = $.grep( $actions.attr('class').split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
         if( textClasses ){
           $actions.wrapInner('<span class="' + textClasses + '" />')
