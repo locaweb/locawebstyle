@@ -134,6 +134,17 @@ table.txtRight td, table.txtRight th {text-align: right;}
 .warning {color: #b54646!important;}
 
 .statusDisabled{ opacity: .6!important;}
+.noStyleInput,
+.noStyleInput:focus,
+.noStyleInput:active{
+  outline: none !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+}
 
 /**
 *** INPUTS
