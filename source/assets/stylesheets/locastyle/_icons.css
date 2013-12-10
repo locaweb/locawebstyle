@@ -88,10 +88,11 @@ h6[class^="ico-"]:before {
 .chamaicon-sendemail:before {content: "\29"}
 .chamaicon-sendowindow:before {content: "\2a"}
 .chamaicon-stats:before {content: "\2b"}
-.chamaicon-contato:before {content: "\e000";}
-.chamaicon-pencil:before {content: "\e001";}
+.chamaicon-contato:before {content: "\e076";}
+.chamaicon-pencil:before {content: "\e077";}
 .chamaicon-migration:before {content: "\002c";}
 .chamaicon-group:before {content: "\2d";}
+.chamaicon-addDomain:before {content: "\e600";}
 
 /** ícones de redes sociais - brandicon **/
 [class^="brandicon-"]:before, [class*=" brandicon-"]:before {
