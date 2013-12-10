@@ -20,12 +20,13 @@ $bg-actions-color:  #00a272
 			font-size: .875rem
 			vertical-align: middle
 			font-family: $font-bold
-
 			&:first-child
 				border-radius: 4px 0 0 0
-
 			&:last-child
 				border-radius: 0 4px 0 0
+			&.ls-table-actions
+				border-left: none
+				color: $gray1
 	tbody
 		tr
 			&:nth-child(odd)
@@ -49,6 +50,9 @@ $bg-actions-color:  #00a272
 						display: none
 						&:first-child
 							display: inline-block
+				&.ls-table-actions
+					border-left: none
+					text-align: right
 			&:hover
 				background-color: $color4
 			&.selected
