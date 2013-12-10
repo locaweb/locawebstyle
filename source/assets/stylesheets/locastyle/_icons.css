@@ -502,6 +502,7 @@ h6[class^="ico-"]:before {
 .ico-vlan:before {content: "\e0fd";}
 
 .ico-bar-consumption:before {content: "\e0f8";}
+.ico-server-config:before {content: "\e600";}
 
 [class^="icon-"], [class*=" icon-"],
 li [class^="icon-"], li [class*=" icon-"] {
