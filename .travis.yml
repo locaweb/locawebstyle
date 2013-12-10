@@ -9,5 +9,7 @@ script:
 branches:
   only:
     - v2
+
+language: ruby
 rvm:
   - "1.9.3"
