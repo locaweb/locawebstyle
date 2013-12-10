@@ -1,10 +1,10 @@
- <footer class="footer" id="locaweb-lwbar-footer">
+ <footer class="footer" id="lwbar-footer">
     <div class="footer-menu">
       <nav class="container">
         <h2 class="title-footer">suporte e ajuda</h2>
         <ul class="no-liststyle">
           <% for link  in @footer.links: %>
-            <li class="locaweb-lwbar-footer-nav-item">
+            <li class="lwbar-footer-nav-item">
               <a href="<%= link.url %>" class="<%= link.icon %>" target="_blank">
                 <span class="visible-lg">
                   <%= link.label %>
