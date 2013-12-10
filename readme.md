@@ -54,4 +54,6 @@ Ele foi criado por desenvolvedores muito renomados como [Paul Irish](http://paul
 
 ***Changelog***
 
-Para verificar o changelog, visite a página oficial: [http://developer.locaweb.com.br/locawebstyle/introducao/changelog/](http://developer.locaweb.com.br/locawebstyle/introducao/changelog/)
+Para verificar o changelog, visite a página oficial: [http://locaweb.github.io/locawebstyle/changelog/](http://locaweb.github.io/locawebstyle/changelog/)
+
+Está procurando a documentação da primeira versão do Locastyle? [Vá para este link](http://locaweb.github.io/locawebstyle/v1/).
