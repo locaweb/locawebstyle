@@ -1,7 +1,7 @@
 Locaweb Style Guide
 =================
 
-[![Build Status](https://travis-ci.org/renatocn/locawebstyle.png?branch=v2)](https://travis-ci.org/renatocn/locawebstyle)
+[![Build Status](https://api.travis-ci.org/locaweb/locawebstyle.png?branch=master)](https://travis-ci.org/locaweb/locawebstyle)
 
 O Locaweb Style são os padrões de interface utilizados nos produtos da Locaweb. Ele explora um simples e flexível HTML, CSS e Javascript para as necessidades comuns na manutenção e criação dos nossos serviços.
 
