@@ -3,10 +3,29 @@ var locastyle = locastyle || {};
 locastyle.tables = (function() {
   'use strict';
 
+  var $tables = $('.ls-table', 'body');
+
   function init(){
-    console.log('tables')
+    $tables.each(function(it, table){
+      var $table = $(table);
+      applyHeaderBehavior($table);
+    });
   }
 
+  // Aplica as classes do header da tabela nos seus equivalentes no tbody
+  function applyHeaderBehavior($table){
+    var thClasses = [];
+    $table.find('thead tr th').each(function(ith, th){
+      thClasses.push($(th).attr('class') );
+    });
+    $table.find('tbody tr').each(function(itr, tr){
+      var tds = $(tr).find('td');
+      for (var i = thClasses.length - 1; i >= 0; i--) {
+        tds.eq(i).addClass( thClasses[i] )
+      };
+    });
+  }
+  
   // Quando as tabelas tiverem checkboxes e mais de dois checkboxes forem marcados, será exibido um box com ações (ex: excluir, enviar, duplicar e etc).
   function showActions () {
     $('.ls-table').each(function() {
@@ -45,8 +64,8 @@ locastyle.tables = (function() {
       }
 
     });
-
   }
+
   return {
     init: init
   };
