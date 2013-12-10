@@ -6,7 +6,6 @@ var locastyle = (function() {
     breakpointWindowWidth();
     inputsMask();
     claimDatePicker();
-    showActions();
     toggleTextOnClick();
     toggleTextOnHover();
     linkPreventDefault();
