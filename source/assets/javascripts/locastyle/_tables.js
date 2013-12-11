@@ -34,12 +34,15 @@ locastyle.tables = (function() {
     $checkAll.on('change', function (evt) {
       $checkboxes
         .prop('checked', evt.currentTarget.checked)
-        .parents('tr').toggleClass('selected',  evt.currentTarget.checked )
+        .parents('tr').toggleClass('selected',  evt.currentTarget.checked );
+        toggleTableGroupActions($table, !evt.currentTarget.checked );
     });
     $checkboxes.on('change', function (evt) {
-      var checked = $checkboxes.size() === $checkboxes.filter(':checked').size()
-      $checkAll.prop('checked', $checkboxes.size() === $checkboxes.filter(':checked').size());
-      $(this).parents('tr').toggleClass('selected',  evt.currentTarget.checked )
+      var checkeds = $checkboxes.filter(':checked').size();
+      var checkAllStatus = $checkboxes.size() === checkeds;
+      $checkAll.prop('checked', checkAllStatus );
+      $(this).parents('tr').toggleClass('selected',  evt.currentTarget.checked );
+      toggleTableGroupActions($table, checkeds < 2 );
     });
   }
 
@@ -79,6 +82,9 @@ locastyle.tables = (function() {
     });
   }
 
+  function toggleTableGroupActions ($table, hidden) {
+    $table.prev('.ls-table-group-actions').toggleClass('hidden', hidden );
+  }
 
   // Quando as tabelas tiverem checkboxes e mais de dois checkboxes forem marcados, será exibido um box com ações (ex: excluir, enviar, duplicar e etc).
   function showActions () {
