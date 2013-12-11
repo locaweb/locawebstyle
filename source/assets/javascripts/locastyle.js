@@ -6,6 +6,7 @@
 //= require locastyle/vendor/select2/_select2
 //= require locastyle/vendor/select2/_select2.locale.pt-BR
 //= require locastyle/_base
+//= require locastyle/_forms
 //= require locastyle/_mobile_functions
 //= require locastyle/_bootstrap_starter
 //= require locastyle/_password_strength
