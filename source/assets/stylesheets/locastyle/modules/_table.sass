@@ -28,6 +28,11 @@ $bg-actions-color:  #00a272
 				border-left: none
 				color: $gray1
 	tbody
+		&.ls-table-invert-bg
+			@extend .bg-gray4
+
+			tbody tr:nth-child(odd)
+				background-color: #fff
 		tr
 			&:nth-child(odd)
 				@extend .bg-gray4
