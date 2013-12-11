@@ -76,7 +76,7 @@ locastyle.tables = (function() {
         // verifica necessidade e insere cor original da acao
         var  textClasses = $.grep( $actions.attr('class').split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
         if( textClasses ){
-          $actions.wrapInner('<span class="' + textClasses + '" />')
+          $actions.wrapInner('<span class="' + textClasses + '" />');
         }
       }
     });
