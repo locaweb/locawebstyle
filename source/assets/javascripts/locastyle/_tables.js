@@ -52,7 +52,7 @@ locastyle.tables = (function() {
       var $actions = $(td).find('a, button');
       if( $actions[1] ){
         $(td).html((function(){
-          var dropdownHtml = '<div class="btn-group"> <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">Ações</button><ul class="dropdown-menu pull-right" role="menu">';
+          var dropdownHtml = '<div class="btn-group"> <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"><span>Ações</span></button><ul class="dropdown-menu pull-right" role="menu">';
           $actions.each(function(i, action){
             var  textClasses,
               actionClass = $(action).attr('class');
