@@ -63,3 +63,12 @@ $bg-actions-color:  #00a272
 				background-color: $color4
 			&.selected
 				background-color: darken($color4, 4%)
+
+@media (max-width: 767px)
+	.ls-table
+		.ls-table-actions
+			.dropdown-toggle
+				span
+					display: none
+				&:after
+					margin-left: 0
