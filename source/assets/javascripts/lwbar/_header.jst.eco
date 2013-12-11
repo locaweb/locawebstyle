@@ -1,11 +1,11 @@
 <div id="lwbar-header">
-  <div class="limiteToolbar">
-    <h1 class="logoToolbar">Central do Cliente</h1>
+  <div class="limit-toolbar">
+    <h1 class="logo-toolbar">Central do Cliente</h1>
     <% if @logoutUrl :%>
-      <a href="<%= @logoutUrl %>" accesskey="q" data-method="delete" class="logOut" title="Para sair, pressione CONTROL + ALT + Q">Sair</a>
+      <a href="<%= @logoutUrl %>" accesskey="q" data-method="delete" class="log-out" title="Para sair, pressione CONTROL + ALT + Q">Sair</a>
     <% end %>
     <% if @userName :%>
-      <span class="userName"><strong><%= @userName %></strong></span>
+      <span class="user-name"><strong><%= @userName %></strong></span>
     <% end %>
   </div>
 </div>

@@ -1,7 +1,7 @@
 Locaweb Style Guide
 =================
 
-[![Build Status](https://travis-ci.org/renatocn/locawebstyle.png?branch=v2)](https://travis-ci.org/renatocn/locawebstyle)
+[![Build Status](https://api.travis-ci.org/locaweb/locawebstyle.png?branch=master)](https://travis-ci.org/locaweb/locawebstyle)
 
 O Locaweb Style são os padrões de interface utilizados nos produtos da Locaweb. Ele explora um simples e flexível HTML, CSS e Javascript para as necessidades comuns na manutenção e criação dos nossos serviços.
 
@@ -34,11 +34,10 @@ Este projeto foi baseado em alguns frameworks já conhecidos de todos os desenvo
 
 Os estilos e comportamentos foram baseados no Bootstrap, framework criado pelo [Mark Otto](http://twitter.com/mdo/) e [Jacob Thornton](http://twitter.com/fat) para agilizar a criação de interface do Twitter.
 
-Se você não conhece, visite o github do projeto e conheça já!
-[Bootstrap](twitter.github.com/bootstrap/)
+Se você não conhece, visite o [site](http://getbootstrap.com/) do projeto, ou o [repositório](http://github.com/twbs/bootstrap) no github.
 
 *Curiosidade* --
-Dentro do Bootstrap eles usam o Normalize, que é um CSS Reset bastante completo. Ele reseta e compatibiliza alguns problemas de textos e valores padrões em elementos HTML. O Normalize foi criado por [Nicolas Gallagher](@necolas) e [Jonathan Neal](@jon_neal).
+Dentro do Bootstrap eles usam o Normalize, que é um CSS Reset bastante completo. Ele reseta e compatibiliza alguns problemas de textos e valores padrões em elementos HTML. O Normalize foi criado por [Nicolas Gallagher](http://github.com/necolas) e [Jonathan Neal](http://github.com/jonathantneal).
 [Dê uma olhada no projeto](http://necolas.github.com/normalize.css/)
 
 ***JQuery***
@@ -55,4 +54,6 @@ Ele foi criado por desenvolvedores muito renomados como [Paul Irish](http://paul
 
 ***Changelog***
 
-Para verificar o changelog, visite a página oficial: [http://developer.locaweb.com.br/locawebstyle/introducao/changelog/](http://developer.locaweb.com.br/locawebstyle/introducao/changelog/)
+Para verificar o changelog, visite a página oficial: [http://locaweb.github.io/locawebstyle/changelog/](http://locaweb.github.io/locawebstyle/changelog/)
+
+Está procurando a documentação da primeira versão do Locastyle? [Vá para este link](http://locaweb.github.io/locawebstyle/v1/).
