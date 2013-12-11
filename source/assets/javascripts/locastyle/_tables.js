@@ -83,10 +83,9 @@ locastyle.tables = (function() {
   }
 
   function toggleTableGroupActions ($table, checkeds) {
-    console.log( checkeds )
     $table.prev('.ls-table-group-actions')
       .toggleClass('hidden', checkeds < 2 )
-      .find('.counterChecks').text( checkeds )
+      .find('.counterChecks').text( checkeds );
   }
 
   return {
