@@ -12,6 +12,13 @@ locastyle.forms = (function() {
       claimDatePicker($form);
       togglePassword($form);
       select2($form);
+      toggleInputsEdit($form);
+    });
+  }
+
+  function toggleInputsEdit($form){
+    $('[data-enable-edit]', $form).on('click', function(evt){
+      $(evt).preventDefault();
     });
   }
 
