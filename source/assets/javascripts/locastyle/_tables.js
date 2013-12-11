@@ -9,6 +9,7 @@ locastyle.tables = (function() {
     $tables.each(function(it, table){
       var $table = $(table);
       applyHeaderBehavior($table);
+      toggleHeaderCheckbox($table);
     });
   }
 
@@ -25,6 +26,21 @@ locastyle.tables = (function() {
       };
     });
     lineActions($table);
+  }
+
+  function toggleHeaderCheckbox($table){
+    var $checkboxes = $table.find('tbody input[type="checkbox"]'),
+        $checkAll = $table.find('thead input[type="checkbox"]');
+    $checkAll.on('change', function (evt) {
+      $checkboxes
+        .prop('checked', evt.currentTarget.checked)
+        .parents('tr').toggleClass('selected',  evt.currentTarget.checked )
+    });
+    $checkboxes.on('change', function (evt) {
+      var checked = $checkboxes.size() === $checkboxes.filter(':checked').size()
+      $checkAll.prop('checked', $checkboxes.size() === $checkboxes.filter(':checked').size());
+      $(this).parents('tr').toggleClass('selected',  evt.currentTarget.checked )
+    });
   }
 
   // Insere dropdown para cada linha da coluna de acoes se for necessário
@@ -76,9 +92,7 @@ locastyle.tables = (function() {
       // Quando clica no checkbox principal, seleciona todos os outros
       $checkAll.on('change', function(){
         $checkboxes.prop('checked', $checkAll.prop('checked') );
-
         ( !$(this).prop('checked') ? $checkboxes.parents('tr').removeClass('selected') : $checkboxes.parents('tr').addClass('selected') );
-
         showWellTable();
       });
 
