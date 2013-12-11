@@ -50,7 +50,7 @@ locastyle.tables = (function() {
   function lineActions($table){
     $table.find('td.ls-table-actions').each(function(itd, td){
       var $actions = $(td).find('a, button');
-      if( $actions[1] ){
+      if( $actions[1] || window.innerWidth <= 767 ){
         $(td).html((function(){
           var dropdownHtml = '<div class="btn-group"> <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"><span>Ações</span></button><ul class="dropdown-menu pull-right" role="menu">';
           $actions.each(function(i, action){
@@ -61,7 +61,7 @@ locastyle.tables = (function() {
                textClasses = $.grep( actionClass.split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
               if( textClasses ){
                 $(action).wrapInner('<span class="' + textClasses + '" />')
-                if( textClasses.match(/(danger)/) ){
+                if( textClasses.match(/(danger)/) && $actions[1] ){
                   dropdownHtml += '<li role="presentation" class="divider"></li>';
                 }
               }
