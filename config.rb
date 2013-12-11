@@ -90,6 +90,7 @@ set :base_url, ""
 set :base_url_v1, "/v1"
 
 activate :directory_indexes
+activate :relative_assets
 
 # Automatic reload on save
 activate :livereload if ENV["LIVERELOAD"]
