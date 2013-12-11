@@ -1,27 +1,4 @@
 <style>
-@font-face {
-  font-family: "open_sans_regular";
-  src: url("/assets/fonts/opensans/opensans-regular-webfont.eot");
-  src: url("/assets/fonts/opensans/opensans-regular-webfont.eot?#iefix") format('eot'), url("/assets/fonts/opensans/opensans-regular-webfont.woff") format('woff'), url("/assets/fonts/opensans/opensans-regular-webfont.ttf") format('truetype'), url("/assets/fonts/opensans/opensans-regular-webfont.svg#open_sansextrabold") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "open_sans_semibold";
-  src: url("/assets/fonts/opensans/opensans-semibold-webfont.eot");
-  src: url("/assets/fonts/opensans/opensans-semibold-webfont.eot?#iefix") format('eot'), url("/assets/fonts/opensans/opensans-semibold-webfont.woff") format('woff'), url("/assets/fonts/opensans/opensans-semibold-webfont.ttf") format('truetype'), url("/assets/fonts/opensans/opensans-semibold-webfont.svg#open_sansextrabold") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "locaicons";
-  src: url("/assets/fonts/locaicons/locaicons.eot");
-  src: url("/assets/fonts/locaicons/locaicons.eot?#iefix") format('eot'), url("/assets/fonts/locaicons/locaicons.woff") format('woff'), url("/assets/fonts/locaicons/locaicons.ttf") format('truetype'), url("/assets/fonts/locaicons/locaicons.svg#locaicons") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
 #lwbar-header {
     background: url(https://assets.locaweb.com.br/locastyle/1.2.8/images/bgToolbar.png) repeat-X center center;
     position: relative;
