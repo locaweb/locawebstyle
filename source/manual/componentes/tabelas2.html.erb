@@ -1,0 +1,124 @@
+---
+title: Componentes - Tabelas
+menu_page: sidebar-componentes.erb
+---
+<header>
+	<h1>Tabelas</h1>
+	<h3>Seguimos os padrões do bootstrap com um toque de usabilidade.</h3>
+</header>
+
+
+<h2 class="title-2">Tabela simples</h2>
+
+	<div class="table-responsive">
+		
+		<div class="well hidden well-sm clearfix ls-table-group-actions">
+			<p class="d-inline-block">
+				<strong class="counterChecks">0</strong> itens selecionados
+			</p>
+			<div class="actions">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default">Duplicar</button>
+					<a href="#" class="btn btn-default">Relatorio</a>
+					<a href="#" class="btn btn-default">Arquivar</a>
+				</div>
+				<button type="button" class="btn btn-default"><span class="text-danger">Excluir</span></button>
+			</div>
+		</div>
+
+		<table class="table ls-table">
+			<thead>
+				<tr>
+					<th class="txt-center"><input type="checkbox"></th>
+					<th>Título</th>
+					<th class="hidden-xs">Campanha</td>
+					<th>Status</th>
+					<th class="hidden-xs">Data de envio</th>
+					<th class="ls-table-actions">Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>Mensagem Teste Locastyle</td>
+					<td>Campanha</td>
+					<td>Enviada</td>
+					<td>21/09/2013 as 20:00 PM</td>
+					<td>
+						<a href="/">acao 1/4</a>
+						<a href="/">acao 2/4</a>
+						<a href="/">acao com texto muito mais longo 3/4</a>
+						<a class="text-danger" href="/">acao danger 4/4</a>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>Mensagem Teste Locastyle</td>
+					<td>Campanha</td>
+					<td>Enviada</td>
+					<td>21/09/2013 as 20:00 PM</td>
+					<td>
+						<a class="text-danger text-alert" href="/">
+							acao 1/1
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>Mensagem Teste Locastyle</td>
+					<td>Campanha</td>
+					<td>Enviada</td>
+					<td>21/09/2013 as 20:00 PM</td>
+					<td>
+						<a href="/"> acao 1/1 </a>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>Mensagem Teste Locastyle</td>
+					<td>Campanha</td>
+					<td>Enviada</td>
+					<td>21/09/2013 as 20:00 PM</td>
+					<td>
+						<a href="/"> texto longo 1/1 </a>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>Mensagem Teste Locastyle</td>
+					<td>Campanha</td>
+					<td>Enviada</td>
+					<td>21/09/2013 as 20:00 PM</td>
+					<td>
+						<a href="/">acao 1/2</a>
+						<a href="/">acao 2/2</a>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td><input type="text" value="Mensagem Teste Locastyle" readonly/></td>
+					<td>
+						<select name="teste" disabled>
+							<option value="a">Campanha</option>
+							<option value="a">Opção</option>
+						</select>
+					</td>
+					<td>
+						<select name="teste" class="select2" disabled>
+							<option value="a">Enviada</option>
+							<option value="a">Opção</option>
+						</select>
+					</td>
+					<td>
+						<div class="input-group datepicker" disabled>
+							<input type="text" class="form-control date-mask datepicker" placeholder="dd/mm/aaaa" value="21/09/2013 as 20:00 PM" disabled>
+						</div>
+					</td>
+					<td>
+						<a href="/">acao 1/2</a>
+						<a href="/">acao 2/2</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div>
