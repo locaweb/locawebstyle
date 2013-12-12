@@ -20,3 +20,4 @@
 //= require locastyle/_initializer
 //= require locastyle/templates/_modal
 //= require locastyle/templates/_button_dropdown_single
+//= require locastyle/templates/_form
