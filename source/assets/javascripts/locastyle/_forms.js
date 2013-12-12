@@ -16,9 +16,11 @@ locastyle.forms = (function() {
     });
   }
 
-  function toggleInputsEdit($form){
-    $('[data-enable-edit]', $form).on('click', function(evt){
-      $(evt).preventDefault();
+  function toggleInputsEdit(){
+    $form.delegate('[data-enable-edit]', "click", function(evt) {
+      evt.preventDefault();
+      var editableContainer = $(this).data('enableEdit');
+      $(editableContainer).find('[disabled]').prop('disabled', false)
     });
   }
 
@@ -91,7 +93,10 @@ locastyle.forms = (function() {
   }
 
   return {
-    init: init
+    init: init,
+    insertDatepicker: claimDatePicker,
+    insertSelect2: select2,
+    insertMasks: inputsMask
   };
 
 }());
