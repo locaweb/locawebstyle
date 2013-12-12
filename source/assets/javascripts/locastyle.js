@@ -16,4 +16,7 @@
 //= require locastyle/_track_events
 //= require locastyle/_collapse_extends
 //= require locastyle/_guided_tour
+//= require locastyle/_templates
 //= require locastyle/_initializer
+//= require locastyle/templates/_modal
+//= require locastyle/templates/_button_dropdown_single
