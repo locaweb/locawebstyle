@@ -9,13 +9,14 @@ locastyle.templates = (function() {
   function init(){
   }
 
-  function modal(config){
-    $body.append( JST[baseNameModal + 'modal'](config) );
+  function modal(container, config, idModal){
+    config.idModal = idModal || 'template-modal';
+    $(container).append( JST[baseNameModal + 'modal'](config) );
+    return $('#' + config.idModal);
   }
 
   function button_dropdown_single(config){
     $(config.actions).each(function(ia, action){
-      console.log(action )
     });
     return JST[baseNameModal + 'button_dropdown_single'](config);
   }

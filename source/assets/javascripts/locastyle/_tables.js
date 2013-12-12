@@ -25,7 +25,7 @@ locastyle.tables = (function() {
         label: 'Ações',
         addClass: 'pull-right',
         actions: [
-          {label: 'Visualizar', link: '#1',
+          {label: 'Visualizar', link: '#1'},
           {label: 'Editar', link: '#2'}
         ]
       })
@@ -40,8 +40,7 @@ locastyle.tables = (function() {
           action: 'Salvar'
         }
       }
-      locastyle.templates.modal(config)
-      $('#template-modal').modal('show')
+      locastyle.templates.modal('body', config).modal('show');
     });
   }
 
