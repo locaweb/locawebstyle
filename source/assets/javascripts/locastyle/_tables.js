@@ -11,9 +11,37 @@ locastyle.tables = (function() {
       applyHeaderBehavior($table);
       toggleHeaderCheckbox($table);
       toggleInputsEdit($table);
+      showModal($table);
       locastyle.forms.insertDatepicker($table);
       locastyle.forms.insertSelect2($table);
       locastyle.forms.insertMasks($table);
+    });
+  }
+
+  function showModal($table){
+    $('[data-edit-line]', $table).on('click', function(evt) {
+      evt.preventDefault();
+      var headerAction = locastyle.templates.button_dropdown_single({
+        label: 'Ações',
+        addClass: 'pull-right',
+        actions: [
+          {label: 'Visualizar', link: '#1',
+          {label: 'Editar', link: '#2'}
+        ]
+      })
+      var config = {
+        header : {
+          title: 'Editar',
+          close: false,
+          action: headerAction
+        },
+        body: 'conteudo',
+        footer: {
+          action: 'Salvar'
+        }
+      }
+      locastyle.templates.modal(config)
+      $('#template-modal').modal('show')
     });
   }
 
