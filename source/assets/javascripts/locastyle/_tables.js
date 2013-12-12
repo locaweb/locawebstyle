@@ -12,10 +12,14 @@ locastyle.tables = (function() {
       toggleHeaderCheckbox($table);
       toggleInputsEdit($table);
       showModal($table);
-      locastyle.forms.insertDatepicker($table);
-      locastyle.forms.insertSelect2($table);
-      locastyle.forms.insertMasks($table);
+      enableFormControls($table);
     });
+  }
+
+  function enableFormControls($container){
+      locastyle.forms.insertDatepicker($container);
+      locastyle.forms.insertSelect2($container, '[disabled]');
+      locastyle.forms.insertMasks($container);
   }
 
   function showModal($table){
@@ -25,8 +29,8 @@ locastyle.tables = (function() {
         label: 'Ações',
         addClass: 'pull-right',
         actions: [
-          {label: 'Visualizar', link: '#1'},
-          {label: 'Editar', link: '#2'}
+          {label: 'Visualizar', link: '#view'},
+          {label: 'Editar', link: '#edit'}
         ]
       })
       var config = {
@@ -35,21 +39,43 @@ locastyle.tables = (function() {
           close: false,
           action: headerAction
         },
-        body: 'conteudo',
+        body: locastyle.templates.form(formModalFields($table, $(this).parents('tr') )),
         footer: {
           actions: [
             {label: 'Salvar', classes: 'btn-primary'},
           ]
         }
       }
-      locastyle.templates.modal('body', config).modal('show');
+      var $modal = locastyle.templates.modal('body', config).modal('show');
+      $modal.on('hidden.bs.modal', function (e) {
+        $modal.remove();
+      });
+      locastyle.forms.insertSelect2($modal);
     });
+  }
+
+  // busca os campos da linha, label sendo o th da coluna, descarta as colunas checkAll e Acoes
+  function formModalFields($table, $tr){
+    var formData = {},
+        labels = [];
+    formData.fields = [];
+    $table.find('thead th').each(function(itr, th){
+      labels.push( $.trim($(th).text()) );
+    });
+    $tr.find('td').each(function(itd, td){
+      var inputHTML =  $(td).find(':input, select').clone().removeAttr('disabled')[0].outerHTML;
+      formData.fields.push({ label: labels[itd] , input: inputHTML });
+    });
+    formData.fields = formData.fields.slice(1, formData.fields.length -1 );
+    return formData;
   }
 
   function toggleInputsEdit($table){
     $('[data-enable-edit]', $table).on('click', function(evt) {
       evt.preventDefault();
-      $(this).parents('tr').find('[disabled]').each(function(ii, el){
+      var $tr = $(this).parents('tr');
+      locastyle.forms.insertSelect2( $tr );
+      $tr.find('[disabled]').each(function(ii, el){
         var $el = $(el),
             originalValue = $el.val();
         $el.data('originalValue', originalValue);
