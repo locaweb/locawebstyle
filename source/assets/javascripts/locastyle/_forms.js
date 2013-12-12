@@ -16,6 +16,13 @@ locastyle.forms = (function() {
     });
   }
 
+  function formReadOnly($form, disable){
+    $form.prop('disabled', disable).toggleClass('ls-form-read-only');
+    $form.find(':input, select').each(function(ii, input){
+      $(input).prop('disabled', disable);
+    });
+  }
+
   function toggleInputsEdit(){
     $form.delegate('[data-enable-edit]', "click", function(evt) {
       evt.preventDefault();
@@ -38,8 +45,8 @@ locastyle.forms = (function() {
   }
 
   // Implementando o Jquery DatePicker e nas configurações definindo a internacionalização.
-  function claimDatePicker ($form) {
-    $('.datepicker input', $form).datepicker({
+  function claimDatePicker ($form, exclude) {
+    $('.datepicker input', $form).not(exclude).datepicker({
       showOn: 'button',
       dateFormat: 'dd/mm/yy',
       monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
@@ -49,7 +56,7 @@ locastyle.forms = (function() {
       dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab']
     });
     var createWrap = '<span class="input-group-btn"></span>';
-    $('.datepicker', $form).each(function () {
+    $('.datepicker', $form).not(exclude).each(function () {
       $(this).append(createWrap);
       var parentGroupBtn = $(this).find('.input-group-btn');
       $(this).find('.ui-datepicker-trigger').addClass('ico-calendar btn btn-default').html('').appendTo(parentGroupBtn);
@@ -96,7 +103,8 @@ locastyle.forms = (function() {
     init: init,
     insertDatepicker: claimDatePicker,
     insertSelect2: select2,
-    insertMasks: inputsMask
+    insertMasks: inputsMask,
+    formReadOnly: formReadOnly
   };
 
 }());
