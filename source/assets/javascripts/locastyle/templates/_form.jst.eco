@@ -1,0 +1,20 @@
+<form role="form">
+  <fieldset>
+    <% for field in @fields: %>
+      <div class="form-group">
+        <label><%= field.label %></label>
+        <%- field.input %>
+        <% if field.help :%>
+          <p class="help-block"><%= field.help %></p>
+        <% end %>
+      </div>
+    <% end %>
+    <% if @actions :%>
+      <div class="box-actions">
+        <% for action  in @actions: %>
+          <button type="<%= action.type %>" class="btn <%= action.classes %>"><%= action.label %></button>
+        <% end %>
+      </div>
+    <% end %>
+  </fieldset>
+</form>
