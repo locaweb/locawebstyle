@@ -24,7 +24,6 @@ locastyle.tables = (function() {
         var $el = $(el),
             originalValue = $el.val();
         $el.data('originalValue', originalValue);
-        console.log($el.data())
         $el.removeAttr('disabled');
       })
     });
