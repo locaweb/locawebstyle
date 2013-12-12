@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="template-modal" tabindex="-1" role="dialog" aria-labelledby="templateModal" aria-hidden="true">
+<div class="modal fade" id="<%= @idModal %>" tabindex="-1" role="dialog" aria-labelledby="templateModal" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <% if @header :%>
