@@ -27,7 +27,7 @@
           <% end %>
           <% for action  in @footer.actions: %>
             <% if action.link :%>
-              <a href="#ola" class="btn <%= action.classes %>" <%= action.add %>><%= action.label %></a>
+              <a href="<%= action.link %>" class="btn <%= action.classes %>" <%= action.add %>><%= action.label %></a>
             <% else :%>
               <button type="button" class="btn <%= action.classes %>"><%= action.label%></button>
             <% end %>
