@@ -10,6 +10,19 @@ locastyle.tables = (function() {
       var $table = $(table);
       applyHeaderBehavior($table);
       toggleHeaderCheckbox($table);
+      toggleInputsEdit($table);
+      locastyle.forms.insertDatepicker($table);
+      locastyle.forms.insertSelect2($table);
+      locastyle.forms.insertMasks($table);
+    });
+  }
+
+  function toggleInputsEdit($table){
+    $('[data-enable-edit]', $table).on('click', function(evt) {
+      evt.preventDefault();
+      // var editableContainer = $(this).data('enableEdit');
+      console.log( $(this).parents('tr') )
+      $(this).parents('tr').find('[disabled]').removeAttr('disabled')
     });
   }
 
