@@ -68,8 +68,8 @@ locastyle.forms = (function() {
     });
   }
 
-  function select2($form){
-    $('.select2', $form).each(function(i, el){
+  function select2($form, exclude){
+    $('.select2', $form).not(exclude).each(function(i, el){
       var $select = $(el);
       var $optionList = $select.find('option');
       var visible;
