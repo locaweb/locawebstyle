@@ -20,9 +20,13 @@ locastyle.tables = (function() {
   function toggleInputsEdit($table){
     $('[data-enable-edit]', $table).on('click', function(evt) {
       evt.preventDefault();
-      // var editableContainer = $(this).data('enableEdit');
-      console.log( $(this).parents('tr') )
-      $(this).parents('tr').find('[disabled]').removeAttr('disabled')
+      $(this).parents('tr').find('[disabled]').each(function(ii, el){
+        var $el = $(el),
+            originalValue = $el.val();
+        $el.data('originalValue', originalValue);
+        console.log($el.data())
+        $el.removeAttr('disabled');
+      })
     });
   }
 
