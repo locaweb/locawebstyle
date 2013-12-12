@@ -12,7 +12,15 @@ locastyle.templates = (function() {
   function modal(container, config, idModal){
     config.idModal = idModal || 'template-modal';
     $(container).append( JST[baseNameModal + 'modal'](config) );
-    return $('#' + config.idModal);
+    var $modal = $('#' + config.idModal);
+    $(config.footer.actions).each(function(ia, action){
+      if( $.isFunction(action.click) ){
+        $modal.find('.modal-footer button:contains("' + action.label + '")' ).on('click', function(evt){
+          action.click();
+        });
+      }
+    });
+    return $modal;
   }
 
   function button_dropdown_single(config){
