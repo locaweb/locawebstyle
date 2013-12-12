@@ -17,14 +17,15 @@ locastyle.tables = (function() {
   }
 
   function enableFormControls($container){
-      locastyle.forms.insertDatepicker($container);
+      locastyle.forms.insertDatepicker($container, '[disabled]');
       locastyle.forms.insertSelect2($container, '[disabled]');
       locastyle.forms.insertMasks($container);
   }
 
   function showModal($table){
-    $('[data-edit-line]', $table).on('click', function(evt) {
+    $('[data-action-modal]', $table).on('click', function(evt) {
       evt.preventDefault();
+      var actionModal = $(this).data('actionModal')
       var headerAction = locastyle.templates.button_dropdown_single({
         label: 'Ações',
         addClass: 'pull-right',
@@ -35,7 +36,7 @@ locastyle.tables = (function() {
       })
       var config = {
         header : {
-          title: 'Editar',
+          title: $(this).text(),
           close: false,
           action: headerAction
         },
@@ -50,7 +51,8 @@ locastyle.tables = (function() {
       $modal.on('hidden.bs.modal', function (e) {
         $modal.remove();
       });
-      locastyle.forms.insertSelect2($modal);
+      locastyle.forms.formReadOnly($modal.find('.modal-body'), actionModal === 'view');
+      enableFormControls($modal);
     });
   }
 
@@ -63,7 +65,13 @@ locastyle.tables = (function() {
       labels.push( $.trim($(th).text()) );
     });
     $tr.find('td').each(function(itd, td){
-      var inputHTML =  $(td).find(':input, select').clone().removeAttr('disabled')[0].outerHTML;
+      if( $(td).find('div.datepicker')[0] ){
+        var datepicker = $(td).find('div.datepicker').clone().removeAttr('disabled')
+        datepicker.find('input').removeAttr('disabled');
+        var inputHTML = datepicker[0].outerHTML;
+      }else{
+        var inputHTML =  $(td).find(':input, select').clone().removeAttr('disabled')[0].outerHTML;
+      }
       formData.fields.push({ label: labels[itd] , input: inputHTML });
     });
     formData.fields = formData.fields.slice(1, formData.fields.length -1 );
