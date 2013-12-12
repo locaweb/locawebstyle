@@ -25,7 +25,13 @@
           <% if @footer.close != false :%>
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
           <% end %>
-            <!-- <button type="button" class="btn btn-primary">Salvar</button> -->
+          <% for action  in @footer.actions: %>
+            <% if action.link :%>
+              <a href="#ola" class="btn <%= action.classes %>" <%= action.add %>><%= action.label %></a>
+            <% else :%>
+              <button type="button" class="btn <%= action.classes %>"><%= action.label%></button>
+            <% end %>
+          <% end %>
         </div>
       <% end %>
     </div><!-- /.modal-content -->

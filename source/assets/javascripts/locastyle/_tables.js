@@ -37,7 +37,9 @@ locastyle.tables = (function() {
         },
         body: 'conteudo',
         footer: {
-          action: 'Salvar'
+          actions: [
+            {label: 'Salvar', classes: 'btn-primary'},
+          ]
         }
       }
       locastyle.templates.modal('body', config).modal('show');
