@@ -29,8 +29,13 @@ locastyle.templates = (function() {
     return JST[baseNameModal + 'button_dropdown_single'](config);
   }
 
+  function form(config){
+    return JST[baseNameModal + 'form'](config);
+  }
+
   return {
     modal: modal,
+    form: form,
     button_dropdown_single: button_dropdown_single
   };
 
