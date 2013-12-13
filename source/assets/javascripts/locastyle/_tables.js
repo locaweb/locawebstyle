@@ -48,10 +48,15 @@ locastyle.tables = (function() {
         }
       }
       var $modal = locastyle.templates.modal('body', config).modal('show');
-      $modal.on('hidden.bs.modal', function (e) {
-        $modal.remove();
-      });
-      locastyle.forms.formReadOnly($modal.find('.modal-body'), actionModal === 'view');
+      var $modalBody = $modal.find('.modal-body');
+      $modal
+        .on('hidden.bs.modal', function (e) {
+          $modal.remove();
+        })
+        .on('shown.bs.modal', function (e) {
+          $modalBody.find(':input').eq(0).focus();
+        })
+      locastyle.forms.formReadOnly($modalBody, actionModal === 'view');
       enableFormControls($modal);
     });
   }
@@ -82,13 +87,16 @@ locastyle.tables = (function() {
     $('[data-enable-edit]', $table).on('click', function(evt) {
       evt.preventDefault();
       var $tr = $(this).parents('tr');
+
+      $(this).parents('td').addClass('ls-table-actions-show').html('<button class="btn btn-xs btn-success  ico-checkmark" type="button"><span class="hidden">Cancelar</span></button> <button class="btn btn-default btn-xs ico-close" type="button"><span class="hidden">Salvar</span></button> ')
+      
       locastyle.forms.insertSelect2( $tr );
       $tr.find('[disabled]').each(function(ii, el){
         var $el = $(el),
             originalValue = $el.val();
         $el.data('originalValue', originalValue);
         $el.removeAttr('disabled');
-      })
+      }).eq(0).focus();
     });
   }
 
