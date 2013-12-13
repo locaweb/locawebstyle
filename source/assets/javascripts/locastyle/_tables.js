@@ -13,6 +13,7 @@ locastyle.tables = (function() {
       toggleInputsEdit($table);
       showModal($table);
       enableFormControls($table);
+      confirmDanger($table);
     });
   }
 
@@ -33,7 +34,7 @@ locastyle.tables = (function() {
           {label: 'Visualizar', link: '#view'},
           {label: 'Editar', link: '#edit'}
         ]
-      })
+      });
       var config = {
         header : {
           title: $(this).text(),
@@ -184,6 +185,28 @@ locastyle.tables = (function() {
           $actions.wrapInner('<span class="' + textClasses + '" />');
         }
       }
+    });
+  }
+
+  function confirmDanger($table){
+    $('a[data-confirm-text]', $table).on('click', function(evt){
+      evt.preventDefault();
+      var config = {
+        header : {
+          title: 'Confirmação',
+        },
+        body: $(this).data('confirmText'),
+        footer: {
+          actions: [
+            {label: $(this).text(), classes: 'btn-danger', link: $(this).attr('href') }
+          ]
+        }
+      }
+      var $modal = locastyle.templates.modal('body', config).modal('show');
+      var $modalBody = $modal.find('.modal-body');
+      $modal.on('hidden.bs.modal', function (e) {
+        $modal.remove();
+      });
     });
   }
 
