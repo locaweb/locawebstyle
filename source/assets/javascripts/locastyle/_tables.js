@@ -44,7 +44,7 @@ locastyle.tables = (function() {
   function showModal($table){
     $('[data-action-modal]', $table).on('click', function(evt) {
       evt.preventDefault();
-      var actionModal = $(this).data('actionModal')
+      var actionModal = $(this).data('actionModal');
       var headerAction = locastyle.templates.button_dropdown_single({
         label: 'Ações',
         addClass: 'pull-right',
@@ -176,11 +176,15 @@ locastyle.tables = (function() {
 
   // Insere dropdown para cada linha da coluna de acoes se for necessário
   function lineActions($table){
-    $table.find('td.ls-table-actions').each(function(itd, td){
+    var $tableActions = $table.find('td.ls-table-actions');
+    var isMobile = window.innerWidth <= 767 ;
+    console.log(isMobile)
+    $tableActions.each(function(itd, td){
       var $actions = $(td).find('a, button');
-      if( $actions[1] || window.innerWidth <= 767 ){
+      if( $actions[1] || isMobile ){
         $(td).html((function(){
-          var dropdownHtml = '<div class="btn-group"> <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"><span>Ações</span></button><ul class="dropdown-menu pull-right" role="menu">';
+          
+          var dropdownHtml = '<div class="btn-group ' + ( $tableActions.size() - itd  <= 2 && isMobile ? 'dropup' : '' ) + ' "> <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"><span>Ações</span></button><ul class="dropdown-menu pull-right" role="menu">';
           $actions.each(function(i, action){
             var  textClasses,
               actionClass = $(action).attr('class');
