@@ -30,7 +30,7 @@ describe("Accessibility", function() {
     });
     it("should modal have focus element .auto-focus class", function(){
       $('#modal_click').click();
-      waits(500);
+      waits(1000);
       runs(function(){
         var elem = $('#modal_focus').attr('id');
         expect($(':focus').attr('id')).toEqual(elem);
@@ -38,7 +38,7 @@ describe("Accessibility", function() {
     });
     it("should collapse have focus element .auto-focus class", function(){
       $('#collapse_click').click();
-      waits(500);
+      waits(1000);
       runs(function(){
         var elem = $('#collapse_focus').attr('id');
         expect($(':focus').attr('id')).toEqual(elem);
