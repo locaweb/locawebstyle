@@ -1,0 +1,9 @@
+---
+title: Versão 2.0.0-b8
+date: 2013-12-13 18:39 UTC
+tags:
+---
+
+## Nova tela de Login da locaweb
+
+ Adicionando nova tela de login da locaweb no locastyle. <a href="http://locaweb.github.io/locawebstyle/manual/exemplos/login" target="_blank">Veja o exemplo na documentação.</a>
