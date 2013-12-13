@@ -110,9 +110,13 @@ locastyle.tables = (function() {
     $buttons.on('click', function(evt){
       evt.preventDefault();
       if( $(this).hasClass('ico-close') ){
-        $(this).parents('tr').find(':input, select, div.datepicker').attr('disabled', true);
+        $(this).parents('tr').each(function(itr, tr){
+          $(tr).find('td:gt(0):not(.ls-table-actions)').find(':input, select, div.datepicker').attr('disabled', true);
+          $(tr).find('.datepicker').datepicker("destroy");
+          $(tr).find('.datepicker .input-group-btn').remove();
+        });
         $(this).parents('tr').find('.btn-group').show();
-        $(this).parents('.lsa').remove()
+        $(this).parents('.lsa').remove();
       }else{
 
       }
