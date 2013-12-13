@@ -8,7 +8,7 @@
       <% if action.hasDivider == true :%>
         <li class="divider"></li>
       <% end %>
-      <li><a href="<%= action.link %>"><%= action.label %></a></li>
+      <li><a href="<%= action.link %>" class="<%= action.classes %>"><%= action.label %></a></li>
     <% end %>
   </ul>
   <% end %>
