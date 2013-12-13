@@ -23,6 +23,24 @@ locastyle.tables = (function() {
       locastyle.forms.insertMasks($container);
   }
 
+  function modalDropdownActions($modal){
+    $('.ls-modal-action', $modal).off().on('click', function(evt){
+      evt.preventDefault();
+      var disabled = $(this).attr('href') === '#view';
+      if( disabled ){
+        $modal.find('.modal-body').find(':input, select, div.datepicker').attr('disabled', true);
+        $modal.find('.modal-body').find('.datepicker').datepicker("destroy");
+        $modal.find('.modal-body').find('.datepicker .input-group-btn').remove();
+        $modal.find('.select2').select2('destroy');
+        $modal.find('.modal-footer').find('.btn.btn-primary').hide();
+      } else{
+        $modal.find('.modal-body').find(':input, select, div.datepicker').attr('disabled', false);
+        enableFormControls($modal);
+        $modal.find('.modal-footer').find('.btn.btn-primary').show();
+      }
+    });
+  }
+
   function showModal($table){
     $('[data-action-modal]', $table).on('click', function(evt) {
       evt.preventDefault();
@@ -31,8 +49,8 @@ locastyle.tables = (function() {
         label: 'Ações',
         addClass: 'pull-right',
         actions: [
-          {label: 'Visualizar', link: '#view'},
-          {label: 'Editar', link: '#edit'}
+          {label: 'Visualizar', link: '#view', classes: 'ls-modal-action'},
+          {label: 'Editar', link: '#edit', classes: 'ls-modal-action'}
         ]
       });
       var config = {
@@ -59,6 +77,7 @@ locastyle.tables = (function() {
         })
       locastyle.forms.formReadOnly($modalBody, actionModal === 'view');
       enableFormControls($modal);
+      modalDropdownActions($modal);
     });
   }
 
@@ -118,7 +137,6 @@ locastyle.tables = (function() {
         $(this).parents('tr').find('.btn-group').show();
         $(this).parents('.lsa').remove();
       }else{
-
       }
     });
   }
@@ -216,7 +234,7 @@ locastyle.tables = (function() {
 
   function toggleTableGroupActions ($table, checkeds) {
     $table.prev('.ls-table-group-actions')
-      .toggleClass('hidden', checkeds < 2 )
+      .toggleClass('hidden', checkeds < 1 )
       .find('.counterChecks').text( checkeds );
   }
 
