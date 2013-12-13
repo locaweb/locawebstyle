@@ -43,7 +43,7 @@ locastyle.tables = (function() {
         body: locastyle.templates.form(formModalFields($table, $(this).parents('tr') )),
         footer: {
           actions: [
-            {label: 'Salvar', classes: 'btn-primary'},
+            {label: 'Salvar', classes: 'btn-primary'}
           ]
         }
       }
@@ -87,16 +87,21 @@ locastyle.tables = (function() {
     $('[data-enable-edit]', $table).on('click', function(evt) {
       evt.preventDefault();
       var $tr = $(this).parents('tr');
-
       $(this).parents('td').addClass('ls-table-actions-show').html('<button class="btn btn-xs btn-success  ico-checkmark" type="button"><span class="hidden">Cancelar</span></button> <button class="btn btn-default btn-xs ico-close" type="button"><span class="hidden">Salvar</span></button> ')
-      
-      locastyle.forms.insertSelect2( $tr );
       $tr.find('[disabled]').each(function(ii, el){
         var $el = $(el),
             originalValue = $el.val();
         $el.data('originalValue', originalValue);
         $el.removeAttr('disabled');
       }).eq(0).focus();
+      actionsEditInline( $tr.find('.ls-table-actions-show button') );
+      enableFormControls($tr);
+    });
+  }
+
+  function actionsEditInline($buttons){
+    $buttons.on('click', function(evt){
+      evt.preventDefault();
     });
   }
 
