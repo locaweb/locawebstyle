@@ -70,12 +70,17 @@ locastyle.tables = (function() {
       labels.push( $.trim($(th).text()) );
     });
     $tr.find('td').each(function(itd, td){
-      if( $(td).find('div.datepicker')[0] ){
-        var datepicker = $(td).find('div.datepicker').clone().removeAttr('disabled')
-        datepicker.find('input').removeAttr('disabled');
-        var inputHTML = datepicker[0].outerHTML;
-      }else{
-        var inputHTML =  $(td).find(':input, select').clone().removeAttr('disabled')[0].outerHTML;
+      var $input = $(td).find(':input, select');
+      if( $input[0] ){
+        if( $(td).find('div.datepicker')[0] ){
+          var datepicker = $(td).find('div.datepicker').clone().removeAttr('disabled')
+          datepicker.find('input').removeAttr('disabled');
+          var inputHTML = datepicker[0].outerHTML;
+        }else{
+          var inputHTML =  $input.clone().removeAttr('disabled')[0].outerHTML;
+        }
+      } else{
+          var inputHTML =  '<p>' + $(td).html() + '</p>';
       }
       formData.fields.push({ label: labels[itd] , input: inputHTML });
     });
@@ -87,7 +92,8 @@ locastyle.tables = (function() {
     $('[data-enable-edit]', $table).on('click', function(evt) {
       evt.preventDefault();
       var $tr = $(this).parents('tr');
-      $(this).parents('td').addClass('ls-table-actions-show').html('<button class="btn btn-xs btn-success  ico-checkmark" type="button"><span class="hidden">Cancelar</span></button> <button class="btn btn-default btn-xs ico-close" type="button"><span class="hidden">Salvar</span></button> ')
+      $(this).parents('.btn-group').hide();
+      $(this).parents('td').addClass('ls-table-actions-show').append('<div class="lsa"><button class="btn btn-xs btn-success  ico-checkmark" type="button"><span class="hidden">Cancelar</span></button> <button class="btn btn-default btn-xs ico-close" type="button"><span class="hidden">Salvar</span></button></div>')
       $tr.find('[disabled]').each(function(ii, el){
         var $el = $(el),
             originalValue = $el.val();
@@ -102,6 +108,13 @@ locastyle.tables = (function() {
   function actionsEditInline($buttons){
     $buttons.on('click', function(evt){
       evt.preventDefault();
+      if( $(this).hasClass('ico-close') ){
+        $(this).parents('tr').find(':input, select, div.datepicker').attr('disabled', true);
+        $(this).parents('tr').find('.btn-group').show();
+        $(this).parents('.lsa').remove()
+      }else{
+
+      }
     });
   }
 
