@@ -23,7 +23,7 @@ locastyle.tables = (function() {
     if( isXsmall ){
       $table.find('tbody tr').each(function(itr, tr){
         if( $(tr).find('.hidden-xs')[0] ){
-          $(tr).attr('data-action-modal', 'view');
+          $(tr).find('td').not('.ls-table-actions').attr('data-action-modal', 'view');
         }
       });
     }
@@ -39,16 +39,18 @@ locastyle.tables = (function() {
     $('.ls-modal-action', $modal).off().on('click', function(evt){
       evt.preventDefault();
       var disabled = $(this).attr('href') === '#view';
+      var $modalBody = $modal.find('.modal-body');
+      var $modalFooter = $modal.find('.modal-footer');
       if( disabled ){
-        $modal.find('.modal-body').find(':input, select, div.datepicker').attr('disabled', true);
-        $modal.find('.modal-body').find('.datepicker').datepicker("destroy");
-        $modal.find('.modal-body').find('.datepicker .input-group-btn').remove();
-        $modal.find('.select2').select2('destroy');
-        $modal.find('.modal-footer').find('.btn.btn-primary').hide();
+        $modalBody.find(':input, select, div.datepicker').attr('disabled', true);
+        $modalBody.find('.datepicker').datepicker("destroy");
+        $modalBody.find('.datepicker .input-group-btn').remove();
+        $modalBody.find('.select2').select2('destroy');
+        $modalFooter.find('.btn.btn-primary').hide();
       } else{
-        $modal.find('.modal-body').find(':input, select, div.datepicker').attr('disabled', false);
+        $modalBody.find(':input, select, div.datepicker').attr('disabled', false);
         enableFormControls($modal);
-        $modal.find('.modal-footer').find('.btn.btn-primary').show();
+        $modalFooter.find('.btn.btn-primary').show();
       }
     });
   }
@@ -56,8 +58,7 @@ locastyle.tables = (function() {
   function showModal($table){
     $('[data-action-modal]', $table).on('click', function(evt) {
       evt.preventDefault();
-      var headerTitle = this.nodeName == 'TR' ? 'Visualizar' : $(this).text();
-      var $contentTag = this.nodeName == 'TR' ? $(this) :$(this).parents('tr');
+      var headerTitle = this.nodeName == 'TD' ? 'Visualizar' : $(this).text();
       var actionModal = $(this).data('actionModal');
       var headerAction = locastyle.templates.button_dropdown_single({
         label: 'Ações',
@@ -73,7 +74,7 @@ locastyle.tables = (function() {
           close: false,
           action: headerAction
         },
-        body: locastyle.templates.form(formModalFields($table, $contentTag )),
+        body: locastyle.templates.form(formModalFields($table, $(this).parents('tr') )),
         footer: {
           actions: [
             {label: 'Salvar', classes: 'btn-primary'}
@@ -196,36 +197,36 @@ locastyle.tables = (function() {
       if( $actions[1] || isXsmall ){
         $(td).html((function(){
           var dropdownHtml = '<div class="btn-group ' + ( $tableActions.size() - itd  <= 2 && isXsmall ? 'dropup' : '' ) + ' "> <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"><span>Ações</span></button><ul class="dropdown-menu pull-right" role="menu">';
-          $actions.each(function(i, action){
-            var  textClasses,
-              actionClass = $(action).attr('class');
-            // verifica necessidade e insere cor original da acao
-            if( actionClass ){
-               textClasses = $.grep( actionClass.split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
-              if( textClasses ){
-                $(action).wrapInner('<span class="' + textClasses + '" />')
-                if( textClasses.match(/(danger)/) && $actions[1] ){
-                  dropdownHtml += '<li role="presentation" class="divider"></li>';
+          if( $actions.size()  ){
+            $actions.each(function(i, action){
+              var  textClasses,
+                actionClass = $(action).attr('class');
+              // verifica necessidade e insere cor original da acao
+              if( actionClass ){
+                 textClasses = $.grep( actionClass.split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
+                if( textClasses ){
+                  $(action).wrapInner('<span class="' + textClasses + '" />')
+                  if( textClasses.match(/(danger)/) && $actions[1] ){
+                    dropdownHtml += '<li role="presentation" class="divider"></li>';
+                  }
                 }
               }
-            }
-            dropdownHtml += '<li>' + action.outerHTML + '</li>';
-          })
+              dropdownHtml += '<li>' + action.outerHTML + '</li>';
+            });
+          }else{
+            dropdownHtml += '<li><a href="/" data-action-modal="view">Visualizar</a></li>';
+          }
           dropdownHtml += '</ul></div>'
           return dropdownHtml;
         })());
       }else{
-        if(  $actions[0] ){
-          $actions.addClass('btn btn-xs btn-default');
-          // verifica necessidade e insere cor original da acao
-          if( $actions.attr('class') ){
-            var  textClasses = $.grep( $actions.attr('class').split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
-          }
-          if( textClasses ){
-            $actions.wrapInner('<span class="' + textClasses + '" />');
-          }
-        }else{
-          console.log('sem botao')
+        $actions.addClass('btn btn-xs btn-default');
+        // verifica necessidade e insere cor original da acao
+        if( $actions.attr('class') ){
+          var  textClasses = $.grep( $actions.attr('class').split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
+        }
+        if( textClasses ){
+          $actions.wrapInner('<span class="' + textClasses + '" />');
         }
       }
     });
