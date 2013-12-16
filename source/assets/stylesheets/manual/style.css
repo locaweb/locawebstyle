@@ -6,9 +6,7 @@ a.btn.btn-download {
 	font-size: 1.5em;
 }
 
-hr {
-	margin: 20px 0 !important;
-}
+hr {margin: 20px 0 !important;}
 
 .example {
 	background: #FFF;
@@ -18,9 +16,7 @@ hr {
 	position: relative;
 }
 
-.example + pre {
-	margin-top: -3px;
-}
+.example + pre {margin-top: -3px;}
 
 .example ul, .example ol {margin: 0 !important;}
 
@@ -38,9 +34,7 @@ hr {
 	padding: 5px 10px;
 }
 
-.example-popover {
-	overflow: hidden;
-}
+.example-popover {overflow: hidden;}
 
 .example-popover .popover {
 	display: block;
@@ -69,9 +63,7 @@ hr {
 	background-clip: padding-box;
 }
 
-.example-modal {
-	background-color: #f5f5f5;
-}
+.example-modal {background-color: #f5f5f5;}
 
 .example-modal .modal {
 	position: relative;
@@ -100,13 +92,9 @@ hr {
 	border-left: 5px solid #eee;
 }
 
-.bs-callout h4 {
-	margin: 0;
-}
+.bs-callout h4 {margin: 0;}
 
-.bs-callout p {
-	margin-top: 10px;
-}
+.bs-callout p {margin-top: 10px;}
 
 .bs-callout-warning {
 	background-color: #fefbed;
@@ -122,7 +110,6 @@ hr {
 	background-color: #fcf2f2;
 	border-color: #dFb5b4;
 }
-
 
 /*****
 ****** CODE PARTS
@@ -167,18 +154,14 @@ pre .linenums {
 
 .logo a {color: #000;}
 
-
 #topbar .social-links {
 	margin: 0;
 	float: right;
 }
 
-#menu .dropdown-toggle:after {
-	content: "menu";
-}
-#menu .dropdown-toggle:after{
-	border-top: none;
-}
+#menu .dropdown-toggle:after {content: "menu";}
+
+#menu .dropdown-toggle:after {border-top: none;}
 
 #topbar .social-links li {
 	list-style: none;
@@ -186,13 +169,11 @@ pre .linenums {
 	margin-left: 3px;
 }
 
-
 .content .navbar {
 	margin-top: -15px;
 	margin-bottom: 70px;
 	min-height: 0;
 }
-
 
 .content .navbar .nav > li > a {
 	font-size: 0.9em;
@@ -200,11 +181,9 @@ pre .linenums {
 	font-size: 13px;
 }
 
-
 .content .navbar .nav > li:first-child > a {border-left: 0;}
 
 .content .navbar .nav > li:last-child > a {border-right: 0;}
-
 
 /*** Destacando categoria atual ***/
 .manual_introducao .navbar .nav a[href*="/introducao/"],
@@ -221,10 +200,7 @@ pre .linenums {
 	box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
 }
 
-
-.icons-list {
-	margin: 30px 0;
-}
+.icons-list {margin: 30px 0;}
 
 .icons-list td {
 	border: 1px solid rgba(0,0,0,0.05);
@@ -235,13 +211,11 @@ pre .linenums {
 	font-size: 17px;
 }
 
-
 .icons-list td:hover {
 	border-color: rgba(0,0,0,0.1);
 	background: rgba(0,0,0,0.02);
 	color: rgba(0,0,0,1);
 }
-
 
 /*****
 ****** HIGHLIGHT
@@ -256,10 +230,7 @@ pre .linenums {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.highbtn {
-	padding: 50px 0 0;
-}
-
+.highbtn {padding: 50px 0 0;}
 
 .highbtn .btn {margin-right: 10px;}
 
@@ -285,10 +256,7 @@ pre .linenums {
 }
 
 /*** highlight when in internal page ***/
-.highlight.heading {
-	min-height: 120px;
-}
-
+.highlight.heading {min-height: 120px;}
 
 .highlight.heading h1,
 .highlight.heading h1 span {
@@ -297,7 +265,6 @@ pre .linenums {
 }
 
 .highlight.heading h1{font-weight: 300;}
-
 
 .highlight:after {
 	content: "";
@@ -309,7 +276,6 @@ pre .linenums {
 	width: 100%;
 }
 
-
 .highlight h1 {
 	padding: 40px 0 0;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
@@ -317,7 +283,6 @@ pre .linenums {
 	text-transform: uppercase;
 	color: #FFF;
 }
-
 
 .highlight h1 span,
 .highlight h2 {
@@ -333,13 +298,11 @@ pre .linenums {
 	letter-spacing: 0;
 }
 
-
 .highlight.heading h1 span {
 	text-align: left;
 	font: 700 1.2em Lato, Verdana, Arial, Helvetica, Tahoma, Sans-serif;
 	margin-left: 0;
 }
-
 
 .highlight h1.with-image:after {
 	content: "";
@@ -352,14 +315,11 @@ pre .linenums {
 	height: 245px;
 }
 
-
 .page_inside h1.title-host:after{background: none;}
-
 
 .highlight h1.title-host:after {
 	background: url(../images/manual/title-host-after.png) no-repeat center top;
 }
-
 
 /*** Search form on highlight ***/
 .highlight .search-form {
@@ -409,19 +369,16 @@ table td {
 	line-height: 1.5em;
 }
 
-
 .channels h1,
 .channels h2 {
 	text-align: center;
 }
-
 
 .channels h1 {
 	padding-bottom: 15px;
 	font-weight: 500;
 	font-size: 2.3em;
 }
-
 
 .channels h2,
 .content > header h3 {
@@ -433,9 +390,7 @@ table td {
 	font-family: Lato;
 }
 
-
 .channels h2 {margin-bottom: 70px;}
-
 
 .channels.subjects h1,
 .channels.subjects h2 {
@@ -452,16 +407,12 @@ table td {
 	width: 25%;
 }
 
-
 .other-guides .channels .channel {width: 19%;}
-
 
 .channels .channel a {text-decoration: none;}
 
-
 .channel a:hover,
 .channel a:focus {opacity: 0.8; outline: none;}
-
 
 .channel a:hover h3:before,
 .channel a:focus h3:before {
@@ -471,7 +422,6 @@ table td {
 	transform: scale(1.1);
 }
 
-
 .channel a h3:before,
 .channels h1:before,
 .content > header h2[class*="ico-"]:before {
@@ -480,7 +430,6 @@ table td {
 	font-size: 75px;
 	width: 100%;
 }
-
 
 .channel h3:before,
 .channels h1:before,
@@ -496,7 +445,6 @@ table td {
 	transition: all linear 0.05s;
 }
 
-
 .channels.subjects h1:before,
 .content > header h2[class*="ico-"]:before{
 	text-align: left;
@@ -509,14 +457,12 @@ table td {
 	line-height: 15px;
 }
 
-
 .channels .channel h3 {
 	font-size: 1em;
 	font-weight: bold;
 	color: #2a2a2a!important;
 	margin: 5px 0 10px;
 }
-
 
 .channels.subjects h3 {
 	text-transform: inherit;
@@ -546,17 +492,14 @@ table td {
 	transform: scale(1.4);
 }
 
-
 .other-guides .channels .channel h3 {
 	color: rgba(255,255,255,0.8)!important;
 	font-size: .875em;
 }
 
-
 .other-guides .channels .channel p {
 	color: rgba(255,255,255,0.5);
 }
-
 
 /*****
 ****** OTHER GUIDES CONTENT
@@ -565,7 +508,6 @@ table td {
 	background: #0c1e1f url(../images/manual/bgfooter.png);
 	padding: 30px 0 20px;
 }
-
 
 .other-guides h1 {
 	font-family:  Lato, Verdana, Arial, Helvetica, Tahoma, Sans-serif;
@@ -576,9 +518,7 @@ table td {
 	background: url(../images/manual/deco.png) no-repeat bottom center;
 }
 
-
 .other-guides a {text-decoration: none;}
-
 
 .other-guides a h2 {
 	font: 12px arial, tahoma, verdana, sans-serif;
@@ -611,7 +551,6 @@ table td {
 	opacity: 0.7;
 }
 
-
 /*****
 ****** ARTICLE
 *****/
@@ -630,7 +569,6 @@ table td {
 	vertical-align: top;
 }
 
-
 .man-article > header h2:before {
 	font-size: 75px !important;
 	top: 12px !important;
@@ -640,20 +578,19 @@ table td {
 
 .man-article > header h1 {
 	/*margin-left: 84px;*/
-    position: relative;
-    font-size: 2.5em !important;
-    margin-bottom: 5px;
+  position: relative;
+  font-size: 2.5em !important;
+  margin-bottom: 5px;
 }
 
 
 .man-article > header h1 + h3 {
-    font-size: 1.2em;
-    margin-left: 0;
-    max-width: 85%;
-    font-weight: 300;
-    font-family: Lato;
+  font-size: 1.2em;
+  margin-left: 0;
+  max-width: 85%;
+  font-weight: 300;
+  font-family: Lato;
 }
-
 
 /*** ARTICLE ***/
 .content > .text {
@@ -717,16 +654,16 @@ table td {
 .sidebar-manual .with-arrow a:hover:before {border-left-color: #183b3e;}
 
 .sidebar-manual .with-arrow a:before {
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid #8B9D9E;
-    border-top: 5px solid transparent;
-    content: "";
-    display: inline-block;
-    height: 0;
-    margin-left: -11px;
-    margin-right: 5px;
-    vertical-align: middle;
-    width: 0;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #8B9D9E;
+  border-top: 5px solid transparent;
+  content: "";
+  display: inline-block;
+  height: 0;
+  margin-left: -11px;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 0;
 }
 
 /*****
@@ -749,7 +686,6 @@ table td {
 	text-align: right;
 	margin-top: 10px;
 }
-
 
 /*****
 ****** MOBILE
@@ -778,7 +714,6 @@ table td {
 		display: none;
 	}
 
-
 	.channels h2, .content > header h3{
 		max-width: 99%;
 	}
@@ -801,7 +736,6 @@ table td {
 	.man-article > header h1{
 		margin-left: 0;
 	}
-
 
 	.man-article > header h2:before{
 		font-size: 2em !important;
@@ -865,7 +799,6 @@ table td {
 	-ms-transform: scale(1.2);
 	transform: scale(1.2);
 }
-
 
 /******
 ******* BREADCRUMB
@@ -931,6 +864,7 @@ table td {
 	text-align: center;
 	font-size: 2.5em;
 }
+
 .blog article h1 a {
 	color: #444;
 }
@@ -961,9 +895,7 @@ table td {
 	font-style: italic;
 }
 
-.blog .infoPost * {
-	margin:0 15px;
-}
+.blog .infoPost * {margin:0 15px;}
 
 .blog .author {
 	text-align: center;
@@ -994,14 +926,8 @@ table td {
 }
 
 /* pagination */
-.blog .paginate .page_counter {
-	text-align: right;
-}
+.blog .paginate .page_counter {text-align: right;}
 
-.blog .paginate .page_control.next {
-	text-align: right;
-}
+.blog .paginate .page_control.next {text-align: right;}
 
-.blog .paginate .page_control.prev {
-	text-align: left;
-}
+.blog .paginate .page_control.prev {text-align: left;}
