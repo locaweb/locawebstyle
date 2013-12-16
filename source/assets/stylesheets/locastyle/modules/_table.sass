@@ -34,6 +34,8 @@ $bg-actions-color:  #00a272
 			tbody tr:nth-child(odd)
 				background-color: #fff
 		tr
+			&[data-action-modal="view"]
+				cursor: pointer
 			&:nth-child(odd)
 				@extend .bg-gray4
 			td
