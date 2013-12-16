@@ -1,0 +1,53 @@
+$color-login: #831e22
+
+.ls-login-page body
+	background-color: #f7f7f7
+	height: inherit
+
+	.box-login
+		width: 310px
+		margin-top: -165px
+		margin-left: -155px
+		position: absolute
+		top: 50%
+		left: 50%
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
+
+		a
+			color: $color-login
+
+	.ls-login-logo
+		background: url(#{$image_path}/login-locaweb.jpg) no-repeat center
+		text-indent: -9999px
+		margin-bottom: 20px
+
+	.form-group 
+
+		label
+			display: none
+
+		.ls-login-bg-user,
+		.ls-login-bg-password
+			background-repeat: no-repeat
+			background-position: 10px center
+			padding-left: 35px
+			font-size: .875rem 
+
+		.ls-login-bg-user
+			background-image: url(#{$image_path}/bg-user.jpg)
+
+		.ls-login-bg-password
+			background-image: url(#{$image_path}/bg-password.jpg)
+
+	.ls-login-password
+		margin-bottom: 0
+
+	.ls-login-forgot
+		font-size: .875rem
+
+	.btn-primary
+		background-color: $color-login
+		border-color: $color-login
+		font-size: 1rem
+		margin-top: 20px
+		margin-bottom: 30px
