@@ -4,17 +4,29 @@ locastyle.tables = (function() {
   'use strict';
 
   var $tables = $('.ls-table', 'body');
+  var isXsmall = window.innerWidth <= 767;
 
   function init(){
     $tables.each(function(it, table){
       var $table = $(table);
       applyHeaderBehavior($table);
       toggleHeaderCheckbox($table);
+      addViewClickLine($table);
       toggleInputsEdit($table);
       showModal($table);
       enableFormControls($table);
       confirmDanger($table);
     });
+  }
+
+  function addViewClickLine($table){
+    if( isXsmall ){
+      $table.find('tbody tr').each(function(itr, tr){
+        if( $(tr).find('.hidden-xs')[0] ){
+          $(tr).attr('data-action-modal', 'view');
+        }
+      });
+    }
   }
 
   function enableFormControls($container){
@@ -44,6 +56,8 @@ locastyle.tables = (function() {
   function showModal($table){
     $('[data-action-modal]', $table).on('click', function(evt) {
       evt.preventDefault();
+      var headerTitle = this.nodeName == 'TR' ? 'Visualizar' : $(this).text();
+      var $contentTag = this.nodeName == 'TR' ? $(this) :$(this).parents('tr');
       var actionModal = $(this).data('actionModal');
       var headerAction = locastyle.templates.button_dropdown_single({
         label: 'Ações',
@@ -55,11 +69,11 @@ locastyle.tables = (function() {
       });
       var config = {
         header : {
-          title: $(this).text(),
+          title: headerTitle,
           close: false,
           action: headerAction
         },
-        body: locastyle.templates.form(formModalFields($table, $(this).parents('tr') )),
+        body: locastyle.templates.form(formModalFields($table, $contentTag )),
         footer: {
           actions: [
             {label: 'Salvar', classes: 'btn-primary'}
@@ -177,14 +191,11 @@ locastyle.tables = (function() {
   // Insere dropdown para cada linha da coluna de acoes se for necessário
   function lineActions($table){
     var $tableActions = $table.find('td.ls-table-actions');
-    var isMobile = window.innerWidth <= 767 ;
-    console.log(isMobile)
     $tableActions.each(function(itd, td){
       var $actions = $(td).find('a, button');
-      if( $actions[1] || isMobile ){
+      if( $actions[1] || isXsmall ){
         $(td).html((function(){
-          
-          var dropdownHtml = '<div class="btn-group ' + ( $tableActions.size() - itd  <= 2 && isMobile ? 'dropup' : '' ) + ' "> <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"><span>Ações</span></button><ul class="dropdown-menu pull-right" role="menu">';
+          var dropdownHtml = '<div class="btn-group ' + ( $tableActions.size() - itd  <= 2 && isXsmall ? 'dropup' : '' ) + ' "> <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"><span>Ações</span></button><ul class="dropdown-menu pull-right" role="menu">';
           $actions.each(function(i, action){
             var  textClasses,
               actionClass = $(action).attr('class');
@@ -204,11 +215,17 @@ locastyle.tables = (function() {
           return dropdownHtml;
         })());
       }else{
-        $actions.addClass('btn btn-xs btn-default');
-        // verifica necessidade e insere cor original da acao
-        var  textClasses = $.grep( $actions.attr('class').split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
-        if( textClasses ){
-          $actions.wrapInner('<span class="' + textClasses + '" />');
+        if(  $actions[0] ){
+          $actions.addClass('btn btn-xs btn-default');
+          // verifica necessidade e insere cor original da acao
+          if( $actions.attr('class') ){
+            var  textClasses = $.grep( $actions.attr('class').split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
+          }
+          if( textClasses ){
+            $actions.wrapInner('<span class="' + textClasses + '" />');
+          }
+        }else{
+          console.log('sem botao')
         }
       }
     });
