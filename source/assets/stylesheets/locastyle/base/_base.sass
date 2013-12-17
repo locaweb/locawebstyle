@@ -128,6 +128,25 @@ label
 	top: 50%
 	color: #FFF
 
+// estilizando outline dos alerts
+.alert:focus
+	outline-offset: -2px
+	outline-style: auto
+	outline-width: 6px
+	border-radius: 4px
+
+	&.alert-success:focus
+		outline-color: #D6E9C6
+
+	&.alert-info:focus
+		outline-color: #BCE8F1
+
+	&.alert-warning:focus
+		outline-color: #FAEBCC
+
+	&.alert-danger:focus
+		outline-color: #EBCCD1
+
 @media (min-width: #{$screen-sm})
 	.no-menu
 		.header
