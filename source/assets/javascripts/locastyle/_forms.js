@@ -83,13 +83,13 @@ locastyle.forms = (function() {
       if( $select.data('search') == false  ){
         visible = -1;
       } else {
-        visible = ( $optionList.size() <= 10 ? -1 : 7 )
+        visible = ( $optionList.size() <= 10 ? -1 : 7 );
       }
       if( $select.attr('placeholder') && !$select.attr('multiple') ){
         if( $select.find('[selected]').size() === 0 ){
-          $select.prepend('<option selected></option>')
+          $select.prepend('<option selected></option>');
         }else{
-          $select.prepend('<option></option>')
+          $select.prepend('<option></option>');
         }
       }
       $select.select2({
