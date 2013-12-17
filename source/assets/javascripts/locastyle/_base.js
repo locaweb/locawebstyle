@@ -4,15 +4,10 @@ var locastyle = (function() {
   function init(){
     bgShortcutWorkaround();
     breakpointWindowWidth();
-    inputsMask();
-    claimDatePicker();
-    showActions();
     toggleTextOnClick();
     toggleTextOnHover();
     linkPreventDefault();
-    togglePassword();
     classToggle();
-    select2();
   }
 
   // Aquele background cinza que fica sempre atrás do elemento Shortcut
@@ -68,81 +63,6 @@ var locastyle = (function() {
     }
   }
 
-  // Definindo padrões de classes para as máscaras de formulários.
-  function inputsMask() {
-    $('.date-mask').mask('00/00/0000');
-    $('.time-mask').mask('00:00:00');
-    $('.date-time-mask').mask('00/00/0000 00:00:00');
-    $('.cep-mask').mask('00000-000');
-    $('.phone-mask').mask('0000-0000');
-    $('.phone-ddd-mask').mask('(00) 0000-0000');
-    $('.cel-sp-mask').mask('(00) 00009-0000');
-    $('.mixed-mask').mask('AAA 000-S0S');
-    $('.cpf-mask').mask('000.000.000-00', {reverse: true});
-  }
-
-  // Implementando o Jquery DatePicker e nas configurações definindo a internacionalização.
-  function claimDatePicker () {
-    $('.datepicker input').datepicker({
-      showOn: 'button',
-      dateFormat: 'dd/mm/yy',
-      monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
-      monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-      dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
-      dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
-      dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab']
-    });
-
-    var createWrap = '<span class="input-group-btn"></span>';
-
-    $('.datepicker').each(function () {
-      $(this).append(createWrap);
-      var parentGroupBtn = $(this).find('.input-group-btn');
-      $(this).find('.ui-datepicker-trigger').addClass('ico-calendar btn btn-default').html('').appendTo(parentGroupBtn);
-    });
-  }
-
-  // Quando as tabelas tiverem checkboxes e mais de dois checkboxes forem marcados, será exibido um box com ações (ex: excluir, enviar, duplicar e etc).
-  function showActions () {
-    $('.ls-table').each(function() {
-
-      var $tableStyle = $(this);
-      var $wellTableId = $(this).prop('id');
-      var $checkAll   = $tableStyle.find('th input[type="checkbox"]');
-      var $checkboxes = $tableStyle.find('td input[type="checkbox"]');
-
-      // Quando clica no checkbox principal, seleciona todos os outros
-      $checkAll.on('change', function(){
-        $checkboxes.prop('checked', $checkAll.prop('checked') );
-
-        ( !$(this).prop('checked') ? $checkboxes.parents('tr').removeClass('selected') : $checkboxes.parents('tr').addClass('selected') );
-
-        showWellTable();
-      });
-
-      // Quando seleciona todos os checkboxes, seleciona o checkbox principal também
-      $checkboxes.on('change', function () {
-        $checkAll.prop('checked', $tableStyle.find('td input[type="checkbox"]:checked').size() == $checkboxes.size() );
-        $(this).parents('tr').toggleClass('selected');
-        showWellTable();
-      });
-
-      function showWellTable() {
-        // Verifica quantidade de itens checados para mostrar as opções de ação
-        if ( $tableStyle.find('td input[type="checkbox"]:checked').size() >= 1 ) {
-          $('[data-target="'+ $wellTableId +'"]').removeClass('hidden');
-        } else {
-          $('[data-target="'+ $wellTableId +'"]').addClass('hidden');
-        }
-
-        // Conta quantos checkboxes existe checados e marca no Counter
-        $('[data-target="'+ $wellTableId +'"]').find('.counterChecks').html($tableStyle.find('td input[type="checkbox"]:checked').size());
-      }
-
-    });
-
-  }
-
   function linkPreventDefault() {
     $("a").on("click", function(e){
       if($(this).attr("href") === "" || $(this).attr("href") === "#"){
@@ -173,51 +93,12 @@ var locastyle = (function() {
     $(element).text($replacementText).data("text", $text).attr("title", $replacementText);
   }
 
-
-  // Troca de input password para text
-  function togglePassword() {
-    $('.toggle-pass').on("click", function(e){
-      e.preventDefault();
-      var $self = $(this).data('target');
-
-      if($($self).attr('type') == 'password'){
-        $($self).removeAttr('attr').prop('type','text');
-
-      } else
-        $($self).removeAttr('attr').prop('type','password');
-    })
-  }
-
   // Troca de classes
   function classToggle() {
     $('[data-classtoggle]').on('click', function(e){
       e.preventDefault();
       var classes = $(this).data('classtoggle').split(',');
       $(this).toggleClass(classes[0]).toggleClass(classes[1]);
-    });
-  }
-
-  function select2(){
-    $('.select2').each(function(i, el){
-      var $select = $(el);
-      var $optionList = $select.find('option');
-      var visible;
-      if( $select.data('search') == false  ){
-        visible = -1;
-      } else {
-        visible = ( $optionList.size() <= 10 ? -1 : 7 )
-      }
-      if( $select.attr('placeholder') && !$select.attr('multiple') ){
-        if( $select.find('[selected]').size() === 0 ){
-          $select.prepend('<option selected></option>')
-        }else{
-          $select.prepend('<option></option>')
-        }
-      }
-      $select.select2({
-        allowClear: true,
-        minimumResultsForSearch: visible
-      });
     });
   }
 

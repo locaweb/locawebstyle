@@ -1,0 +1,38 @@
+<div class="modal fade" id="<%= @idModal %>" tabindex="-1" role="dialog" aria-labelledby="templateModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <% if @header :%>
+      <div class="modal-header">
+        <% if @header.close != false :%>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <% end %>
+        <h4 class="modal-title" id="templateModalLabel">
+          <%=  @header.title %>
+          <% if @header.action :%>
+            <span class="f-right">
+              <%-  @header.action %>
+            </span>
+          <% end %>
+        </h4>
+      </div>
+      <% end %>
+      <div class="modal-body">
+        <%- @body %>
+      </div>
+      <% if @footer :%>
+        <div class="modal-footer">
+          <% if @footer.close != false :%>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          <% end %>
+          <% for action  in @footer.actions: %>
+            <% if action.link :%>
+              <a href="<%= action.link %>" class="btn <%= action.classes %>" <%= action.add %>><%= action.label %></a>
+            <% else :%>
+              <button type="button" class="btn <%= action.classes %>"><%= action.label%></button>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
