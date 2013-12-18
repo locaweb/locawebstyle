@@ -23,7 +23,7 @@ locastyle.forms = (function() {
     });
   }
 
-  function toggleInputsEdit(){
+  function toggleInputsEdit($form){
     $form.delegate('[data-enable-edit]', "click", function(evt) {
       evt.preventDefault();
       var editableContainer = $(this).data('enableEdit');
