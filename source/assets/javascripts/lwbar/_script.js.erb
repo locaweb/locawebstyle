@@ -50,7 +50,7 @@
       function prependHtml (el, str) {
         var div = document.createElement('div');
         div.innerHTML = str;
-        document.body.insertBefore(div.children[0], document.body.firstChild);
+        document.getElementById('wrap').insertBefore(div.children[0], document.getElementById('wrap').firstChild);
       }
 
       return {
