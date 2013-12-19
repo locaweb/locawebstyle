@@ -197,9 +197,7 @@
     max-width: 970px;
   }
   #lwbar-footer.footer {
-    margin: 10px 0 0;
-    position: absolute;
-    display: block;
+
   }
   #lwbar-footer.footer .footer-menu nav {
     position: relative;
