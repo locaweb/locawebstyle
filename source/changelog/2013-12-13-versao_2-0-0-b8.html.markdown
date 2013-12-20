@@ -8,3 +8,6 @@ tags:
 
 - Adicionando nova tela de login da locaweb no locastyle ([Veja exemplo na documentação](http://locaweb.github.io/locawebstyle/manual/exemplos/login "Veja o exemplo na documentação"){:target="_blank"} e a [issue no Github](https://github.com/locaweb/locawebstyle/issues/487 "Veja a issue no Github."){:target="_blank"}).
 - Arrumando URL do edge e versão atual no config ([Veja issue no Github](https://github.com/locaweb/locawebstyle/pull/486 "Veja issue no Github"){:target="_blank"}).
+
+- Tracking de eventos nos selects
+- Ativação/Desativação de botões dentro de .btn-group
