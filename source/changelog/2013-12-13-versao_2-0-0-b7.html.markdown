@@ -1,0 +1,88 @@
+---
+title: Versão 2.0.0-b7
+date: 2013-12-13 16:31 UTC
+tags:
+---
+
+
+**Popover**
+
+\- Correção da issue [#470](https://github.com/locaweb/locawebstyle/issues/470 "#470");
+
+---
+
+**Barra de Progresso**
+
+\- Correção da issue [#471](https://github.com/locaweb/locawebstyle/issues/471 "#471");
+
+---
+
+**Collapse**
+
+\- Correções de cor de botão e setas do collapse crossbrowser;
+
+\- Removido CSS do collapse que zerava margem do último elemento;
+
+\- Documentação e correções do collapse no mobile;
+
+---
+
+**Tour Guiado**
+
+\- Correções e melhorias na documentação do tour guiado;
+
+\- Alterado a estrutura para atender acessibilidade;
+
+\- Ajustes no box de inicialização de Tour Guiado;
+
+---
+
+**Sidebar**
+
+\- Ajustando o 'b' e 'strong' na sidebar;
+
+\- Arrumando font-size do sidebar para o tamanho de font do layout;
+
+\- Tirando margin-bottom do parágrafo do status da sidebar;
+
+---
+
+**Formulários**
+
+\- Correção da issue [#474](https://github.com/locaweb/locawebstyle/issues/474 "#474");
+
+---
+
+**Barra Unificada**
+
+\- Adicionado parâmetro no html da barra/header;
+
+\- Colocado o CSS da barra unificada dentro dos padrões de escrita FrontEnd;
+
+\- Corrigido BUG que replicava as fontes na barra unificada ([#485](https://github.com/locaweb/locawebstyle/pull/485 "485"));
+
+---
+
+**Bug Fixes e Melhorias**
+
+\- Correção da issue [#434](https://github.com/locaweb/locawebstyle/issues/434 "434");
+
+\- Melhoria na escrita SASS;
+
+\- Adicionando método delete no link sair para aplicações rails;
+
+\- Correções de texto na documentação das classes funcionáis;
+
+\- Ajustes em elementos com :hover e :focus;
+
+\- Removendo a cor do paragrafo do '.well';
+
+\- Ajustado o id da barra unificada para um nome mais semântico e corrigido a borda com tamanho exagerado que saia dos padrões do layout;
+
+\- Perfumaria na cartilha de elementos;
+
+\- Ajustado o link do bootstrap no arquivo readme.md;
+
+\- Travis arrumado;
+
+\- Alteração nas classes com padrão camelCase e ajuste no footer;

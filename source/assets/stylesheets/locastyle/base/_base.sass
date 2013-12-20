@@ -128,6 +128,28 @@ label
 	top: 50%
 	color: #FFF
 
+// estilizando outline dos alerts
+.alert:focus
+	outline-offset: -2px
+	outline-style: auto
+	outline-width: 6px
+	border-radius: 4px
+
+	&.alert-success:focus
+		outline-color: #D6E9C6
+
+	&.alert-info:focus
+		outline-color: #BCE8F1
+
+	&.alert-warning:focus
+		outline-color: #FAEBCC
+
+	&.alert-danger:focus
+		outline-color: #EBCCD1
+
+a.label
+	color: #fff
+
 @media (min-width: #{$screen-sm})
 	.no-menu
 		.header
@@ -144,12 +166,3 @@ label
 	// 	position: fixed
 	// 	z-index: 0
 	// 	padding-top: 70px
-
-
-// Adicionando text-decoration quando houver links no breadcrumb
-// Ajustando espaçamento entre itens do breadcrumb
-.breadcrumb
-	li
-		margin-right: 12px
-	a
-		text-decoration: underline

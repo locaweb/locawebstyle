@@ -18,11 +18,9 @@ describe("Accessibility", function() {
       expect($('.menu')).toContain('a[role="menuitem"]');
     });
     it("should have atrr tabindex in alert", function(){
-      expect($('#alert_yes')).toHaveAttr('tabindex', '-1');
+      expect($('.alert-focus')).toHaveAttr('tabindex', '-1');
     });
-    it("should not have atrr tabindex in alert", function(){
-      expect($('#alert_no')).not.toHaveAttr('tabindex', '-1');
-    });
+
     /*
     it("should focus alert", function(){
       var element = $('#alert_yes').attr('id');

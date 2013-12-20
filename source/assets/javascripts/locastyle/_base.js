@@ -8,6 +8,7 @@ var locastyle = (function() {
     toggleTextOnHover();
     linkPreventDefault();
     classToggle();
+    btnGroupActivationToogle();
   }
 
   // Aquele background cinza que fica sempre atrás do elemento Shortcut
@@ -99,6 +100,13 @@ var locastyle = (function() {
       e.preventDefault();
       var classes = $(this).data('classtoggle').split(',');
       $(this).toggleClass(classes[0]).toggleClass(classes[1]);
+    });
+  }
+
+  function btnGroupActivationToogle() {
+    $(".btn-group.activation-toggle .btn").on("click", function() {
+      $(this).siblings().removeClass("active");
+      $(this).addClass("active");
     });
   }
 
