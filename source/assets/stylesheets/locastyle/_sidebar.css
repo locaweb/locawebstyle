@@ -197,25 +197,17 @@ h5 + .innerSideBox {margin-top:5px;}
   font-style: normal;
   display: block;
   text-align: center;
+  line-height: 32px;
 }
 .boxSidebarTitle i[class^="ico-"]:before,
 .boxSidebarTitle i[class*="ico-"]:before{
   font-size: 25px;
-  padding: 3px 0 0;
   margin: 0;
 }
 .boxSidebarTitle .cmicon-help {
   font-size: 25px;
-  margin: 7px 0 0 10px;
-  position: absolute;
   font-weight: bold;
 }
-.boxSidebarTitle .ico-thumbs-up-1{
-  margin: 5px;
-}
-.boxSidebarTitle i.ico-list:before,
-.boxSidebarTitle i.ico-code:before{font-size: 21px;}
-.boxSidebarTitle i.ico-code{margin: 6px 0 0 7px;}
 
 .innerSideBox small{font-size: 11px; line-height: 1.1em; }
 .sidebar .progress{margin: 0;}
