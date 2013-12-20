@@ -27,7 +27,6 @@ menu_page: sidebar-componentes.erb
 				<select name="" id="">
 					<option value=""></option>
 					<option value="10">10</option>
-					<option value="10">10</option>
 					<option value="30">30</option>
 					<option value="50">50</option>
 					<option value="100">100</option>
@@ -58,7 +57,6 @@ menu_page: sidebar-componentes.erb
 			<select name="" id="">
 				<option value=""></option>
 				<option value="10">10</option>
-				<option value="10">10</option>
 				<option value="30">30</option>
 				<option value="50">50</option>
 				<option value="100">100</option>
@@ -69,6 +67,34 @@ menu_page: sidebar-componentes.erb
 
 </div>
 </pre>
+
+<h4>Paginação com muitos elementos</h4>
+<p>Quando houver mais de 5 páginas, utilizamos a classe <code>.gap</code> para especificar que há mais páginas.</p>
+<div class="example txt-center">
+	<ul class="pagination">
+		<li><a href="#">« Anterior</a></li>
+		<li class="active"><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+		<li class="gap">...</li>
+		<li><a href="#">Próximo »</a></li>
+	</ul>
+</div>
+<pre class="lang-html prettyprint-code linenums">
+<ul class="pagination">
+	<li><a href="#">« Anterior</a></li>
+	<li class="active"><a href="#">1</a></li>
+	<li><a href="#">2</a></li>
+	<li><a href="#">3</a></li>
+	<li><a href="#">4</a></li>
+	<li><a href="#">5</a></li>
+	<li class="gap">...</li>
+	<li><a href="#">Próximo »</a></li>
+</ul>
+</pre>
+
 
 <h4>Estados Ativado e Desativado</h4>
 <p>Customize os links em diferentes circunstâncias. Utiliza a classe <code>.disabled</code> para links desativados e <code>.active</code> para indicar uma próxima pagina.</p>

@@ -926,6 +926,8 @@ table td {
 }
 
 /* pagination */
+.example .pagination .gap {padding: 6px 12px;}
+
 .blog .paginate .page_counter {text-align: right;}
 
 .blog .paginate .page_control.next {text-align: right;}
