@@ -21,78 +21,84 @@ $bg-actions-color:  #00a272
 			font-size: .875rem
 			vertical-align: middle
 			font-family: $font-bold
-	
+
 			&:first-child
 				border-radius: 4px 0 0 0
-	
+
 			&:last-child
 				border-radius: 0 4px 0 0
-	
+
 			&.ls-table-actions
 				border-left: none
 				color: $gray1
-	
+
 	tbody
-	
+
 		&.ls-table-invert-bg
 			@extend .bg-gray4
 
 			tbody tr:nth-child(odd)
 				background-color: #fff
-	
+
 		tr
-	
+
 			&[data-action-modal="view"]
 				cursor: pointer
-	
+
 			&:nth-child(odd)
 				@extend .bg-gray4
-	
+
 			td
 				border-left: 1px solid $gray6
 				font-size: .875rem
 				vertical-align: middle
 				position: static
-	
+
 				&:first-child
 					border-left: none
-	
+
 				&:last-child
 					padding-right: 20px
 					position: relative
-	
+
 				p, label
 					font-size: 1rem
-	
+
 				&.ls-table-actions, &:last-child
-	
+
 					button, a
 						display: none
 						text-align: left
-	
+
 						&:first-child
 							display: inline-block
-	
-						span:hover
+
+					.dropdown-menu
+
+						.text-danger:hover
 							color: #fff
-	
+
+							span
+								color: #fff
+
+
 					&.ls-table-actions-show
-	
+
 						button
 							display: inline-block
-	
+
 							&:before
 								margin: 0 2px
-	
+
 				&.ls-table-actions
 					border-left: none
 					text-align: right
-	
+
 					.dropdown-menu
-	
+
 						a
 							display: block
-	
+
 				input[disabled], input[readonly], select[disabled]
 					+box-shadow(none)
 					border: 1px solid transparent
@@ -103,46 +109,46 @@ $bg-actions-color:  #00a272
 					color: inherit
 					cursor: auto
 					height: auto
-	
+
 					&:-ms-input-placeholder
 						color: transparent
-	
+
 					&::-moz-placeholder
 						color: transparent
-	
+
 					&::-webkit-input-placeholder
 						color: transparent
-	
-				.select2-container.select2-container-disabled 
-	
+
+				.select2-container.select2-container-disabled
+
 					.select2-choice
 						border: 1px solid transparent
 						background-color: transparent
 						padding: 0
-	
+
 					.select2-arrow
 						opacity: 0
-	
+
 				.input-group.datepicker[disabled]
-	
+
 					.input-group-btn
 						display: none
-	
+
 			&:hover
 				background-color: $color4
-	
+
 			&.selected
 				background-color: darken($color4, 4%)
 
 @media (max-width: 767px)
 	.ls-table
-	
+
 		.ls-table-actions
-	
+
 			.dropdown-toggle
-	
+
 				span
 					display: none
-	
+
 				&:after
 					margin-left: 0
