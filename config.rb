@@ -77,6 +77,7 @@ ignore "/v1/layouts/*.html"
 set :only_assets, "http://assets.locaweb.com.br/locastyle/edge.zip"
 set :download_github, "https://github.com/locaweb/locawebstyle/archive/master.zip"
 set :stable, "2.0.0-b7"
+set :stable_v1, "1.2.15"
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
