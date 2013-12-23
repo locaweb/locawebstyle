@@ -83,7 +83,7 @@ locastyle.forms = (function() {
       if( $select.data('search') == false  ){
         visible = -1;
       } else {
-        visible = ( $optionList.size() <= 10 ? -1 : 7 )
+        visible = ( $optionList.size() <= 10 ? -1 : 7 );
       }
       if( $select.attr('placeholder') && !$select.attr('multiple') ){
         if( $select.find('[selected]').size() === 0 ){
