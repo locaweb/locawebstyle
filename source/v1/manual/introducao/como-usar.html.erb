@@ -36,12 +36,13 @@ menu_page: v1/partials/sidebar-informacoes-iniciais.erb
 
 <pre class="lang-html prettyprint linenums">
 /** no header **/
-&lt;link rel="stylesheet" href="//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/locastyle.css"&gt;
-&lt;link rel="stylesheet" href="//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/bootstrap.css"&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/bootstrap/css/bootstrap.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/stylesheets/locastyle.css&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/javascripts/libs.js&quot;&gt;&lt;/script&gt;
 
 /** no footer **/
-&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/locastyle.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/bootstrap.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/javascripts/locastyle.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;
 </pre>
 
 
@@ -65,24 +66,25 @@ menu_page: v1/partials/sidebar-informacoes-iniciais.erb
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 	&lt;head&gt;
-	  &lt;title&gt;Locaweb Style&lt;/title&gt;
-	  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+		&lt;title&gt;Locaweb Style&lt;/title&gt;
+		&lt;meta charset=&quot;utf-8&quot;;&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
 
-	  &lt;!-- CSS do Bootstrap --&gt;
-	  &lt;link href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css&quot;&gt;
-	  &lt;!-- CSS do Locaweb Style --&gt;
-	  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://developer.locaweb.com.br/assets/edge/locastyle.css&quot;&gt;
+		&lt;!-- CSS do Bootstrap  --&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/bootstrap.css&quot;&gt;
+		&lt;!-- CSS do Locaweb Style --&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/locastyle.css"&gt;
+		&lt;!-- Libs: jQuery e Modernizr --&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/javascripts/libs.js&quot;&gt;&lt;/script&gt;
 	&lt;/head&gt;
 
 	&lt;body&gt;
 	 &lt;h1&gt;Ol&aacute;, Mund&atilde;o!&lt;/h1&gt;
 
-	  &lt;!-- jQuery &eacute; obrigat&oacute;rio --&gt;
-	  &lt;script src=&quot;http://code.jquery.com/jquery.js&quot;&gt;&lt;/script&gt;
-	  &lt;!-- Obrigat&oacute;rio o Bootstrap (aconselhamos usar sempre a &uacute;ltima) --&gt;
-	  &lt;script src=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-	  &lt;!-- Javascript do Locaweb Style --&gt;
-	  &lt;script type=&quot;text/javascript&quot; src=&quot;http://developer.locaweb.com.br/assets/edge/locastyle.js&quot;&gt;&lt;/script&gt;
+		&lt;!-- Javascript do Locaweb Style --&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/javascripts/locastyle.js&quot;&gt;&lt;/script&gt;
+		&lt;!-- Obrigat&oacute;rio o Bootstrap --&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/<%= settings.stable_v1 %>/bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;
 
 	&lt;/body&gt;
 &lt;/html&gt;
