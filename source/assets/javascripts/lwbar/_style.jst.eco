@@ -122,7 +122,7 @@
   color: white;
   font-weight: bolder;
   font-size: 0.875em;
-  background: url(http://locaweb.github.io/locawebstyle/assets/images/locastyle/footer/arrow-down.png) no-repeat center bottom;
+  background: url(https://assets.locaweb.com.br/locastyle/2.0.0-b7/images/locastyle/footer/arrow-down.png) no-repeat center bottom;
   font-family: open_sans_semibold;
   display: block;
   line-height: 1.1;
@@ -156,19 +156,19 @@
 }
 
 #lwbar-footer.footer .footer-menu nav > ul > li > a.bg-customer-support {
-  background: url(http://locaweb.github.io/locawebstyle/assets/images/locastyle/footer/customer-support.png) no-repeat left;
+  background: url(https://assets.locaweb.com.br/locastyle/2.0.0-b7/images/locastyle/footer/customer-support.png) no-repeat left;
 }
 
 #lwbar-footer.footer .footer-menu nav > ul > li > a.bg-my-tickets {
-  background: url(http://locaweb.github.io/locawebstyle/assets/images/locastyle/footer/my-tickets.png) no-repeat left;
+  background: url(https://assets.locaweb.com.br/locastyle/2.0.0-b7/images/locastyle/footer/my-tickets.png) no-repeat left;
 }
 
 #lwbar-footer.footer .footer-menu nav > ul > li > a.bg-help-desk {
-  background: url(http://locaweb.github.io/locawebstyle/assets/images/locastyle/footer/help-desk.png) no-repeat left;
+  background: url(https://assets.locaweb.com.br/locastyle/2.0.0-b7/images/locastyle/footer/help-desk.png) no-repeat left;
 }
 
 #lwbar-footer.footer .footer-menu nav > ul > li > a.bg-statusblog {
-  background: url(http://locaweb.github.io/locawebstyle/assets/images/locastyle/footer/statusblog.png) no-repeat left;
+  background: url(https://assets.locaweb.com.br/locastyle/2.0.0-b7/images/locastyle/footer/statusblog.png) no-repeat left;
 }
 
 #lwbar-footer.footer .footer-info {
@@ -207,7 +207,7 @@
     float: left;
     line-height: 25px;
     padding: 15px 35px 15px 0;
-    background: url(http://locaweb.github.io/locawebstyle/assets/images/locastyle/footer/arrow-left.png) no-repeat right;
+    background: url(https://assets.locaweb.com.br/locastyle/2.0.0-b7/images/locastyle/footer/arrow-left.png) no-repeat right;
   }
   #lwbar-footer.footer .footer-menu nav ul {
     margin: 0;
