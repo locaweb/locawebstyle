@@ -432,13 +432,13 @@ pre .linenums {
 /*****
 ****** ARTICLE
 *****/
-.content header {
+.content > header {
 	overflow: hidden;
 	margin-bottom: 30px;
 	padding-bottom: 30px;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
-.content header h2 {
+.content > header h2 {
 	color: #545454!important;
 	font-size: 0.8em;
 	line-height: 0;
@@ -446,19 +446,19 @@ pre .linenums {
 	text-transform: uppercase;
 	vertical-align: top;
 }
-.content header h2:before {
+.content > header h2:before {
 	font-size: 75px !important;
 	top: 12px !important;
 	vertical-align: top !important;
 }
-.content header h1 {
+.content > header h1 {
 	/*margin-left: 84px;*/
     position: relative;
     font-size: 2.5em !important;
     margin-bottom: 5px;
 }
 
-.content header h1 + h3 {
+.content > header h1 + h3 {
     font-size: 1.2em;
     margin-left: 0;
     max-width: 85%;
@@ -601,18 +601,18 @@ pre .linenums {
 		font-size: 1.2em;
 		line-height: 1.3em;
 	}
-	.content header h2{font-size: 1.2em;}
+	.content > header h2{font-size: 1.2em;}
 	.channel h3:before{
 		font-size: 80px;
 		top: 10px;
 	}
 	.other-guides li,
-	.content header h3,
-	.content header h1{
+	.content > header h3,
+	.content > header h1{
 		margin-left: 0;
 	}
-	.content header h1{top: -20px;}
-	.content header h2:before{
+	.content > header h1{top: -20px;}
+	.content > header h2:before{
 		font-size: 2em !important;
 		top: -5px !important;
 	}
