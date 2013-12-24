@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/1.2.15/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/1.2.15/stylesheets/locastyle.css">
-  <link rel="stylesheet" type="text/css" href="/locawebstyle/v1/assets/1.2.8/stylesheets/manual.css">
+  <link rel="stylesheet" type="text/css" href="/locawebstyle/v1/assets/legacy/stylesheets/manual.css">
 
 </head>
 <body class="v1 v1_manual v1_manual_introducao v1_manual_introducao_como-usar v1_manual_introducao_como-usar_index">
@@ -73,14 +73,14 @@
 
 	<h2>Download do CSS e JS compilados</h2>
 	<p>O caminho mais rápido para você utilizar o Locaweb Style é baixando o CSS e o JS compilados e minificados prontos para utilizar. Deste modo você apenas baixa apenas o CSS e JS para usar em seu projeto, sem documentação, arquivos originais e etc...</p>
-	<p><a href="http://assets.locaweb.com.br/locastyle/edge.zip" class="btn btn-primary btn-large btn-download">Baixar Locaweb Style</a></p>
+	<p><a href="http://assets.locaweb.com.br/locastyle/1.2.15.zip" class="btn btn-primary btn-large btn-download">Baixar Locaweb Style</a></p>
 
 	<hr>
 	<h2>Mais opções de download</h2>
 	<p>Você também pode baixar os arquivos por estes meios:</p>
 	<ul>
 		<li>
-			<h4><a href="https://github.com/locaweb/locawebstyle/archive/master.zip">Pelo GitHub</a></h4>
+			<h4><a href="https://github.com/locaweb/locawebstyle/archive/v1-legacy.zip">Pelo GitHub</a></h4>
 			<p>Baixe direto pelo nosso GitHub</p>
 		</li>
 		<li>
@@ -96,20 +96,16 @@
 
 <pre class="lang-html prettyprint linenums">
 /** no header **/
-&lt;link rel="stylesheet" href="//assets.locaweb.com.br/locastyle/2.0.0-b7/locastyle.css"&gt;
-&lt;link rel="stylesheet" href="//assets.locaweb.com.br/locastyle/2.0.0-b7/bootstrap.css"&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//assets.locaweb.com.br/locastyle/1.2.15/bootstrap/css/bootstrap.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//assets.locaweb.com.br/locastyle/1.2.15/stylesheets/locastyle.css&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/1.2.15/javascripts/libs.js&quot;&gt;&lt;/script&gt;
 
 /** no footer **/
-&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/2.0.0-b7/locastyle.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/2.0.0-b7/bootstrap.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/1.2.15/javascripts/locastyle.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/1.2.15/bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;
 </pre>
 
-	<p>Se você quiser utilizar sempre a versão mais atual, use os caminhos dos assets sem a versão travada:</p>
 
-<pre class="lang-html prettyprint linenums">
-&lt;link rel="stylesheet" href="http://assets.locaweb.com.br/locastyle/edge/stylesheets/locastyle.css"&gt;
-&lt;script type="text/javascript" src="http://assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"&gt;&lt;/script&gt;
-</pre>
 
 	<div class="alert">
 		<p><strong>DEPENDÊNCIAS: </strong> O Locaweb Style <a href="/locawebstyle/v1/manual/introducao/informacoes-iniciais/">tem algumas dependências que precisam ser incluídas</a> para funcionar perfeitamente.</p>
@@ -130,24 +126,25 @@
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 	&lt;head&gt;
-	  &lt;title&gt;Locaweb Style&lt;/title&gt;
-	  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+		&lt;title&gt;Locaweb Style&lt;/title&gt;
+		&lt;meta charset=&quot;utf-8&quot;;&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
 
-	  &lt;!-- CSS do Bootstrap --&gt;
-	  &lt;link href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css&quot;&gt;
-	  &lt;!-- CSS do Locaweb Style --&gt;
-	  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://developer.locaweb.com.br/assets/edge/locastyle.css&quot;&gt;
+		&lt;!-- CSS do Bootstrap  --&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;//assets.locaweb.com.br/locastyle/1.2.15/bootstrap.css&quot;&gt;
+		&lt;!-- CSS do Locaweb Style --&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//assets.locaweb.com.br/locastyle/1.2.15/locastyle.css"&gt;
+		&lt;!-- Libs: jQuery e Modernizr --&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/1.2.15/javascripts/libs.js&quot;&gt;&lt;/script&gt;
 	&lt;/head&gt;
 
 	&lt;body&gt;
 	 &lt;h1&gt;Ol&aacute;, Mund&atilde;o!&lt;/h1&gt;
 
-	  &lt;!-- jQuery &eacute; obrigat&oacute;rio --&gt;
-	  &lt;script src=&quot;http://code.jquery.com/jquery.js&quot;&gt;&lt;/script&gt;
-	  &lt;!-- Obrigat&oacute;rio o Bootstrap (aconselhamos usar sempre a &uacute;ltima) --&gt;
-	  &lt;script src=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-	  &lt;!-- Javascript do Locaweb Style --&gt;
-	  &lt;script type=&quot;text/javascript&quot; src=&quot;http://developer.locaweb.com.br/assets/edge/locastyle.js&quot;&gt;&lt;/script&gt;
+		&lt;!-- Javascript do Locaweb Style --&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/1.2.15/javascripts/locastyle.js&quot;&gt;&lt;/script&gt;
+		&lt;!-- Obrigat&oacute;rio o Bootstrap --&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/1.2.15/bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;
 
 	&lt;/body&gt;
 &lt;/html&gt;
@@ -228,9 +225,9 @@
 </script>
   <script src="//assets.locaweb.com.br/locastyle/1.2.15/javascripts/libs.js"></script>
   <script src="//assets.locaweb.com.br/locastyle/1.2.15/javascripts/locastyle.js"></script>
-  <script src="/locawebstyle/v1/assets/1.2.8/javascripts/manual.js"></script>
+  <script src="/locawebstyle/v1/assets/legacy/javascripts/manual.js"></script>
 
   <script src="//assets.locaweb.com.br/locastyle/1.2.15/bootstrap/js/bootstrap.js"></script>
-  <script src="/locawebstyle/v1/assets/1.2.8/prettify/prettify.js"></script>
+  <script src="/locawebstyle/v1/assets/legacy/prettify/prettify.js"></script>
 </body>
 </html>
