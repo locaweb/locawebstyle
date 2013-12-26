@@ -1,3 +1,5 @@
+var manual = manual || {};
+
 manual.forms = (function() {
   'use strict';
 
@@ -37,3 +39,4 @@ manual.forms = (function() {
 $(document).ready(function(){
   manual.forms.init();
 });
+
