@@ -1,3 +1,5 @@
+var manual = manual || {};
+
 manual.tourGuiado = (function() {
   'use strict';
 

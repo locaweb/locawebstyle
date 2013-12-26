@@ -1,4 +1,5 @@
-var manual = {};
+var manual = manual || {};
+
 manual.geral = (function() {
   'use strict';
 
