@@ -16,15 +16,15 @@ menu_page: sidebar-formularios.erb
       <div class="formInline">
         <div class="control-group">
           <label>Data:</label>
-          <input type="text" id="data">
+          <input type="text" id="manual_data">
         </div>
         <div class="control-group">
           <label>Telefone:</label>
-          <input type="text" id="telefone">
+          <input type="text" id="manual_telefone">
         </div>
         <div class="control-group">
           <label>CPF:</label>
-          <input type="text" id="cpf">
+          <input type="text" id="manual_cpf">
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@ menu_page: sidebar-formularios.erb
   <div class="example">
     <div class="control-group formInline">
       <label>CPF:</label>
-      <input type="text" id="cpf2">
+      <input type="text" id="manual_cpf2">
     </div>
   </div>
   <pre class="lang-javascript prettyprint linenums">$("#cpf").mask("999.999.999-99",{placeholder:" "});</pre>
@@ -65,7 +65,7 @@ menu_page: sidebar-formularios.erb
   <div class="example">
    <div class="control-group formInline">
      <label>Data:</label>
-     <input type="text" id="data2">
+     <input type="text" id="manual_data2">
    </div>
   </div>
   <pre class="lang-javascript prettyprint linenums">$("#data").mask("99/99/9999",{completed:function(){alert("Você digitou a data: "+this.val());}});</pre>
