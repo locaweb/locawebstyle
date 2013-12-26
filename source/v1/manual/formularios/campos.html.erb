@@ -98,20 +98,25 @@ menu_page: v1/partials/sidebar-formularios.erb
 	<p>Insere uma classe <strong>.add-on</strong> no elemento, formatando-o de forma que ele fique acomplado ao campo.</p>
 
 	<div class="example">
-		<div class="control-group">
+		<div class="control-group collapsedRadios">
 			<label>Tipo de autenticação:</label>
 			<div class="controls">
 				<label class="control-label">
-					<input type="radio" name="r1" data-target="#authOpt" data-toggle="show" checked="checked"> Autenticado
+					<input type="radio" data-target="#authOpt" name="control" data-toggle="collapse" checked="checked"> Autenticado
 				</label>
 				<label class="control-label">
-					<input type="radio" name="r1" data-target="#authOpt" data-toggle="hide"> Não autenticado
+					<input type="radio" data-target="#authOpt2" name="control" data-toggle="collapse"> Não autenticado
 				</label>
-				<div id="authOpt" class="collapse">
+				<div id="authOpt" class="collapse in">
 					<div class="boxGrayOpt formInline">
 						<label><input type="checkbox" value="1"> CPF</label>
 						<label><input type="checkbox" value="1"> Endereço</label>
 						<label><input type="checkbox" value="1"> CEP</label>
+					</div>
+				</div>
+				<div id="authOpt2" class="collapse">
+					<div class="boxGrayOpt formInline">
+						<input type="text" class="span5">
 					</div>
 				</div>
 			</div>
@@ -119,20 +124,25 @@ menu_page: v1/partials/sidebar-formularios.erb
 	</div>
 
 <pre class="lang-html prettyprint linenums">
-&lt;div class="control-group"&gt;
+&lt;div class="control-group collapsedRadios"&gt;
 	&lt;label&gt;Tipo de autenticação:&lt;/label&gt;
-		&lt;div class="controls"&gt;
-			&lt;label class="control-label"&gt;
-				&lt;input type="radio" data-target="#authOpt" data-toggle="show" checked="checked"&gt; Autenticado
-			&lt;/label&gt;
-			&lt;label class="control-label"&gt;
-				&lt;input type="radio" data-target="#authOpt" data-toggle="hide"&gt; Não autenticado
-			&lt;/label&gt;
-			&lt;div id="authOpt" class="collapse"&gt;
-				&lt;div class="boxGrayOpt formInline"&gt;
-					&lt;label&gt;&lt;input type="checkbox" value="1"&gt; CPF&lt;/label&gt;
-					&lt;label&gt;&lt;input type="checkbox" value="1"&gt; Endereço&lt;/label&gt;
-					&lt;label&gt;&lt;input type="checkbox" value="1"&gt; CEP&lt;/label&gt;
+	&lt;div class="controls"&gt;
+		&lt;label class="control-label"&gt;
+			&lt;input type="radio" data-target="#authOpt" name="control" data-toggle="collapse" checked="checked"&gt; Autenticado
+		&lt;/label&gt;
+		&lt;label class="control-label"&gt;
+			&lt;input type="radio" data-target="#authOpt2" name="control" data-toggle="collapse"&gt; Não autenticado
+		&lt;/label&gt;
+		&lt;div id="authOpt" class="collapse in"&gt;
+			&lt;div class="boxGrayOpt formInline"&gt;
+				&lt;label&gt;&lt;input type="checkbox" value="1"&gt; CPF&lt;/label&gt;
+				&lt;label&gt;&lt;input type="checkbox" value="1"&gt; Endereço&lt;/label&gt;
+				&lt;label&gt;&lt;input type="checkbox" value="1"&gt; CEP&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div id="authOpt2" class="collapse"&gt;
+			&lt;div class="boxGrayOpt formInline"&gt;
+				&lt;input type="text" class="span5"&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
