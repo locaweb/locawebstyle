@@ -69,11 +69,17 @@ pre .linenums {
 
 /*** Destacando categoria atual ***/
 .manual_introducao .navbar .nav a[href*="/introducao/"],
+.v1_manual_introducao .navbar .nav a[href*="/introducao/"],
 .manual_formularios .navbar .nav a[href*="/formularios/"],
+.v1_manual_formularios .navbar .nav a[href*="/formularios/"],
 .manual_aplicacoes .navbar .nav a[href*="/aplicacoes/"],
+.v1_manual_aplicacoes .navbar .nav a[href*="/aplicacoes/"],
 .manual_layout .navbar .nav a[href*="/layout/"],
+.v1_manual_layout .navbar .nav a[href*="/layout/"],
 .manual_acessibilidade .navbar .nav a[href*="/acessibilidade/"],
-.manual_componentes .navbar .nav a[href*="/componentes/"] {
+.v1_manual_acessibilidade .navbar .nav a[href*="/acessibilidade/"],
+.manual_componentes .navbar .nav a[href*="/componentes/"],
+.v1_manual_componentes .navbar .nav a[href*="/componentes/"] {
 	color: #555555;
 	text-decoration: none;
 	background-color: #e5e5e5;
@@ -539,7 +545,8 @@ article.text > header {
 }
 
 .sidebar ul li a:hover,
-.sidebar ul li a:focus {
+.sidebar ul li a:focus,
+.sidebar ul li a.active {
 	background: #b1d4d7;
 	text-decoration: none;
 }
