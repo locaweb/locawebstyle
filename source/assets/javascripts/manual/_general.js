@@ -5,6 +5,7 @@ manual.geral = (function() {
 
   function init() {
     initRouter();
+    activeMenu();
     initPrettyPrint();
   }
 
@@ -13,6 +14,10 @@ manual.geral = (function() {
       var section = utils.camelCase( window.location.pathname.split('/')[3] );
       manual[section] ? manual[section].init() : null ;
     }
+  }
+
+  function activeMenu(){
+    $('a[href="' + window.location.pathname.replace(/\/$/, '') + '"]', 'nav').addClass('active');
   }
 
   function initPrettyPrint(){
