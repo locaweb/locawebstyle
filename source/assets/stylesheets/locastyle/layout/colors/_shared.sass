@@ -6,6 +6,10 @@
 	a[class*="btn"]
 		color: #fff
 
+		&:hover,
+		&:focus
+			color: #fff
+
 	a.btn-default
 		color: $gray3
 
@@ -15,7 +19,6 @@
 		&:hover,
 		&:focus
 			color: $color2
-
 
 		// mantendo padrao do bootstrap
 		&.text-muted
@@ -38,7 +41,7 @@
 
 	&.no-menu
 		.header
-			border-bottom: 4px solid $color1 !important
+			border-bottom: 4px solid $color1
 
 		.nav-content
 			display: none
@@ -47,7 +50,6 @@
 		color: #fff
 	.btn-default
 		color: $gray3
-
 
 	//
 	// Cores para HEADER
@@ -233,8 +235,6 @@
 		a:hover,
 		a:focus
 			color: $color5
-
-
 
 	//
 	// Paginação
