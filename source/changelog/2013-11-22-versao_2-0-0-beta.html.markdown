@@ -1,5 +1,5 @@
 ---
-title: Versão 2.0.0
+title: Versão 2.0.0-beta
 date: 2013-11-22 18:26 UTC
 tags:
 ---
