@@ -7,4 +7,3 @@ tags:
 #### Minor bug fixes
 
 Colocando em ordem algumas coisas, acertando alguns bugs. Nada muito de outro mundo, apenas retalhos para alguns serviços da Locaweb funcionarem melhor.
-

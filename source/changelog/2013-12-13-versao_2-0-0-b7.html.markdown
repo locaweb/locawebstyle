@@ -4,13 +4,11 @@ date: 2013-12-13 16:31 UTC
 tags:
 ---
 
-
 **Popover**
 
 \- Correção da issue [#470](https://github.com/locaweb/locawebstyle/issues/470 "#470");
 
 ---
-
 **Barra de Progresso**
 
 \- Correção da issue [#471](https://github.com/locaweb/locawebstyle/issues/471 "#471");

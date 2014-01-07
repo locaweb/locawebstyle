@@ -1,8 +1,9 @@
 ---
-title: Versão 2.0.0 Alfa 1
+title: Versão 2.0.0-a1
 date: 2013-11-22 18:26 UTC
 tags:
 ---
+
 ## Bootstrap 3.0 e mudanças no HTML
 A segunda versão do Locastyle está usando o Bootstrap 3.0. Nessa nova versão o Bootstrap mudou praticamente todo o HTML e CSS.
 Aproveitamos essa mudança do Bootstrap para iniciar a versão 2 do Locastyle. Por esse motivo muito do HTML que era usado para fazer os módulos de elementos do Locastyle mudou.
