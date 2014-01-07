@@ -10,11 +10,12 @@ manual.general = (function() {
   }
 
   function initRouter(){
-    if( window.location.pathname.split('/')[3] ){
-      var section = utils.camelCase( window.location.pathname.split('/')[3] );
+    var isGithub = /locawebstyle/.test(window.location.pathname) ? 4 : 3;
+    if( window.location.pathname.split('/')[isGithub] ){
+      var section = utils.camelCase( window.location.pathname.split('/')[isGithub] );
       manual[section] ? manual[section].init() : null ;
     }
-    if( window.location.pathname.split('/')[2] === 'elementos' ){
+    if( window.location.pathname.split('/')[isGithub-1] === 'elementos' ){
       manual.icones.init();
     }
   }
