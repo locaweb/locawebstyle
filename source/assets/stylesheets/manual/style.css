@@ -230,7 +230,7 @@ pre .linenums {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.highbtn {padding: 50px 0 0;}
+.highbtn {padding: 30px 0;}
 
 .highbtn .btn {margin-right: 10px;}
 
@@ -341,6 +341,11 @@ pre .linenums {
 }
 
 .highlight .search-form fieldset {margin: 0; display: inline-block;}
+
+.doc-v1 a{
+	color: #fff;
+	font-weight: bold;
+}
 
 /*****
 ****** TABLE
