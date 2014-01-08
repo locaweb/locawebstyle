@@ -255,7 +255,7 @@ locastyle.tables = (function() {
   }
 
   function toggleTableGroupActions ($table, checkeds) {
-    $table.prev('.ls-table-group-actions')
+    $table.prev('.ls-table-group-actions, [data-target]')
       .toggleClass('hidden', checkeds < 1 )
       .find('.counterChecks').text( checkeds );
   }
