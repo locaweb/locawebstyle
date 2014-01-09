@@ -39,26 +39,35 @@ locastyle.tables = (function() {
   function modalDropdownActions($modal){
     $('.ls-modal-action', $modal).off().on('click', function(evt){
       evt.preventDefault();
-      var disabled = $(this).attr('href') === '#view';
+      $modal.find('.modal-title-text').text( $(this).text() );
       var $modalBody = $modal.find('.modal-body');
       var $modalFooter = $modal.find('.modal-footer');
-      if( disabled ){
+      var isEdit = $(this).attr('href') === '#edit';
+      if( isEdit ){
+        if( $modalBody.find('[disabled]').length === 0  ){
+          return;
+        }
+        $modalBody.find(':input, select, div.datepicker').attr('disabled', false);
+        $modalBody.find('div.datepicker .input-group-btn').remove();
+        enableFormControls($modal);
+        $modalFooter.find('.btn.btn-primary').show();
+      } else {
         $modalBody.find(':input, select, div.datepicker').attr('disabled', true);
         $modalBody.find('.datepicker').datepicker("destroy");
         $modalBody.find('.datepicker .input-group-btn').remove();
         $modalBody.find('.select2').select2('destroy');
         $modalFooter.find('.btn.btn-primary').hide();
-      } else{
-        $modalBody.find(':input, select, div.datepicker').attr('disabled', false);
-        enableFormControls($modal);
-        $modalFooter.find('.btn.btn-primary').show();
       }
     });
   }
 
   function showModal($table){
     $('[data-action-modal]', $table).on('click', function(evt) {
+      if($(this).index() === 0 && this.nodeName === 'TD' ){
+        return;
+      }
       evt.preventDefault();
+      var modalActionType = $(this).data('action-modal');
       var headerTitle = this.nodeName == 'TD' ? 'Visualizar' : $(this).text();
       var actionModal = $(this).data('actionModal');
       var headerAction = locastyle.templates.button_dropdown_single({
@@ -78,7 +87,13 @@ locastyle.tables = (function() {
         body: locastyle.templates.form(formModalFields($table, $(this).parents('tr') )),
         footer: {
           actions: [
-            {label: 'Salvar', classes: 'btn-primary'}
+            (function(){
+              if( modalActionType === 'edit' ){
+                return {label: 'Salvar', classes: 'btn-primary'}
+              } else {
+                return {}
+              }
+            })()
           ]
         }
       }
