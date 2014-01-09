@@ -16,6 +16,7 @@ locastyle.tables = (function() {
       showModal($table);
       enableFormControls($table);
       confirmDanger($table);
+      mobileTableGroupActions($table);
     });
   }
 
@@ -255,9 +256,32 @@ locastyle.tables = (function() {
   }
 
   function toggleTableGroupActions ($table, checkeds) {
-    $table.prev('.ls-table-group-actions')
+    $table.prev('.ls-table-group-actions, [data-target]')
       .toggleClass('hidden', checkeds < 1 )
-      .find('.counterChecks').text( checkeds );
+      .find('.counterChecks').text( checkeds )
+      .next('.counterChecksStr').text( checkeds > 1 ? 'itens selecionados' : 'item selecionado' );
+  }
+
+  function mobileTableGroupActions($table){
+    if( isXsmall ){
+      var $groupActions = $table.prev('.ls-table-group-actions, [data-target]')
+      var bts = $groupActions.find('a, button')
+      var headerAction = locastyle.templates.button_dropdown_single({
+        label: 'Ações',
+        addClass: 'pull-right',
+        actions: (function(){
+          var actions = [];
+          $groupActions.find('a, button').each(function(i, action){
+            var $action = $(action);
+            var hasDivider = /danger/.test( $action.attr('class') ) || $action.find('[class*="danger"]')[0] ? true : false;
+            actions.push( {label: $action.html(), link: $action.attr('href'), classes:  (hasDivider ? 'text-danger' : '') , hasDivider: hasDivider } );
+          });
+          return actions;
+        })()
+      });
+      $groupActions.find('.actions').html( '<p class="pull-left"></p>' + headerAction )
+      
+    }
   }
 
   return {
