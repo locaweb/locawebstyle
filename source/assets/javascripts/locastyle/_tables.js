@@ -67,6 +67,7 @@ locastyle.tables = (function() {
         return;
       }
       evt.preventDefault();
+      var modalActionType = $(this).data('action-modal');
       var headerTitle = this.nodeName == 'TD' ? 'Visualizar' : $(this).text();
       var actionModal = $(this).data('actionModal');
       var headerAction = locastyle.templates.button_dropdown_single({
@@ -86,7 +87,13 @@ locastyle.tables = (function() {
         body: locastyle.templates.form(formModalFields($table, $(this).parents('tr') )),
         footer: {
           actions: [
-            {label: 'Salvar', classes: 'btn-primary'}
+            (function(){
+              if( modalActionType === 'edit' ){
+                return {label: 'Salvar', classes: 'btn-primary'}
+              } else {
+                return {}
+              }
+            })()
           ]
         }
       }

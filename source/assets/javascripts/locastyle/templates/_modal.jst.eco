@@ -28,7 +28,9 @@
             <% if action.link :%>
               <a href="<%= action.link %>" class="btn <%= action.classes %>" <%= action.add %>><%= action.label %></a>
             <% else :%>
-              <button type="button" class="btn <%= action.classes %>"><%= action.label%></button>
+              <% if action.label :%>
+                <button type="button" class="btn <%= action.classes %>"><%= action.label%></button>
+              <% end %>
             <% end %>
           <% end %>
         </div>
