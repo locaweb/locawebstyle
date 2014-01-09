@@ -7,7 +7,9 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <% end %>
         <h4 class="modal-title" id="templateModalLabel">
-          <%=  @header.title %>
+          <span class="modal-title-text">
+            <%=  @header.title %>
+          </span>
           <% if @header.action :%>
             <span class="f-right">
               <%-  @header.action %>

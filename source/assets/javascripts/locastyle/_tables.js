@@ -39,6 +39,7 @@ locastyle.tables = (function() {
   function modalDropdownActions($modal){
     $('.ls-modal-action', $modal).off().on('click', function(evt){
       evt.preventDefault();
+      $modal.find('.modal-title-text').text( $(this).text() );
       var $modalBody = $modal.find('.modal-body');
       var $modalFooter = $modal.find('.modal-footer');
       var isEdit = $(this).attr('href') === '#edit';
