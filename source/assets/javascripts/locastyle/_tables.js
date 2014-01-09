@@ -51,7 +51,6 @@ locastyle.tables = (function() {
         $modalBody.find('div.datepicker .input-group-btn').remove();
         enableFormControls($modal);
         $modalFooter.find('.btn.btn-primary').show();
-
       } else {
         $modalBody.find(':input, select, div.datepicker').attr('disabled', true);
         $modalBody.find('.datepicker').datepicker("destroy");
