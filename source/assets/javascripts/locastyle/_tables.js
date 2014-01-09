@@ -39,19 +39,23 @@ locastyle.tables = (function() {
   function modalDropdownActions($modal){
     $('.ls-modal-action', $modal).off().on('click', function(evt){
       evt.preventDefault();
-      var disabled = $(this).attr('href') === '#view';
       var $modalBody = $modal.find('.modal-body');
       var $modalFooter = $modal.find('.modal-footer');
-      if( disabled ){
+      var isEdit = $(this).attr('href') === '#edit';
+      if( isEdit ){
+        if( $modalBody.find('[disabled]').length === 0  ){
+          return;
+        }
+        $modalBody.find(':input, select, div.datepicker').attr('disabled', false);
+        enableFormControls($modal);
+        $modalFooter.find('.btn.btn-primary').show();
+
+      } else {
         $modalBody.find(':input, select, div.datepicker').attr('disabled', true);
         $modalBody.find('.datepicker').datepicker("destroy");
         $modalBody.find('.datepicker .input-group-btn').remove();
         $modalBody.find('.select2').select2('destroy');
         $modalFooter.find('.btn.btn-primary').hide();
-      } else{
-        $modalBody.find(':input, select, div.datepicker').attr('disabled', false);
-        enableFormControls($modal);
-        $modalFooter.find('.btn.btn-primary').show();
       }
     });
   }
