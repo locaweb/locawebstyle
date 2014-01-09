@@ -58,6 +58,9 @@ locastyle.tables = (function() {
 
   function showModal($table){
     $('[data-action-modal]', $table).on('click', function(evt) {
+      if($(this).index() === 0 && this.nodeName === 'TD' ){
+        return;
+      }
       evt.preventDefault();
       var headerTitle = this.nodeName == 'TD' ? 'Visualizar' : $(this).text();
       var actionModal = $(this).data('actionModal');
