@@ -11,7 +11,7 @@ locastyle.forms = (function() {
       inputsMask($form);
       claimDatePicker($form);
       togglePassword($form);
-      select2($form);
+      select2DefaultConfig($form);
       toggleInputsEdit($form);
     });
   }
@@ -75,7 +75,8 @@ locastyle.forms = (function() {
     });
   }
 
-  function select2($form, exclude){
+  //Minimiza o resultado para a busca
+  function select2DefaultConfig($form, exclude){
     $('.select2', $form).not(exclude).each(function(i, el){
       var $select = $(el);
       var $optionList = $select.find('option');
@@ -102,7 +103,7 @@ locastyle.forms = (function() {
   return {
     init: init,
     insertDatepicker: claimDatePicker,
-    insertSelect2: select2,
+    insertSelect2: select2DefaultConfig,
     insertMasks: inputsMask,
     formReadOnly: formReadOnly
   };
