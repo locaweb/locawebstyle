@@ -21,4 +21,3 @@ describe("Locastyle in general", function() {
   });
 
 });
-Tr
