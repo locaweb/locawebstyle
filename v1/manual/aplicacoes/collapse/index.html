@@ -76,6 +76,7 @@
 
 	<p>Collapses são usados para organizar grandes quantidades de conteúdo que trazem uma informação ou comportamentos do sistema para a interação com o usuário. Veja os exemplos abaixo:</p>
 
+
 	<h3>Collapses complexos</h3>
 	<p>Geralmente estes collapses são utilizados para conter grandes quantidades de informação, formulários e etc. São usados em telas de configurações ou onde precisamos seccionar muita informação referente a um mesmo assunto.</p>
 	<div class="example">
@@ -234,6 +235,55 @@
 </pre>
 
 
+	<h2>Collapse com navegação</h2>
+	<div class="accordion" id="nomeGrupoAccordion">
+		<div class="boxCollapse accordion-group accordion-heading">
+			<header class="noMarginBottom">
+				<h4>Passo 1</h4>
+				<p>Descrição passo 1</p>
+			</header>
+			<div id="passo1" class="accordion-body collapse in">
+				<p>
+					Instruções Passo 1
+				</p>
+				<div class="btn-group">
+					<button class="btn btn-primary accordion-toggle dInlineBlock" data-toggle="collapse" data-parent="#nomeGrupoAccordion" href="#passo2">Ir para o passo 2 </button>
+				</div>
+				<br>
+			</div>
+		</div>
+
+		<div class="boxCollapse accordion-group accordion-heading">
+			<header class="noMarginBottom">
+				<h4>Passo 2</h4>
+				<p>Descrição passo 2</p>
+			</header>
+			<div id="passo2" class="accordion-body collapse">
+				<p>
+					Instruções passo 2
+				</p>
+				<div class="btn-group">
+					<button class="btn accordion-toggle dInlineBlock" data-toggle="collapse" data-parent="#nomeGrupoAccordion" href="#passo1"> Voltar para o passo 1 </button><button class="btn btn-primary accordion-toggle dInlineBlock" data-toggle="collapse" data-parent="#nomeGrupoAccordion" href="#passo3"> Ir para o passo 3 </button>
+				</div>
+			</div>
+		</div>
+
+		<div class="boxCollapse accordion-group accordion-heading">
+			<header class="noMarginBottom">
+				<h4>Passo 3</h4>
+				<p>Descrição passo 3</p>
+			</header>
+			<div id="passo3" class="accordion-body collapse">
+				<p>
+					Instruções passo 3
+				</p>
+				<div class="btn-group">
+					<button class="btn accordion-toggle dInlineBlock" data-toggle="collapse" data-parent="#nomeGrupoAccordion" href="#passo2">Voltar para o passo 2 </button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<h2>Utilização</h2>
 	<p>Apenas coloque <strong>data-toggle="collapse"</strong> e o <strong>data-target</strong> para dar o controle de um elemento com collapse. Lembre-se de colocar a classe <strong>collapse</strong> para o elemento que terá o collapse. Se você quiser um determinado collapse já apareça aberto, insira a classe <strong>in</strong>.</p>
 
@@ -241,9 +291,7 @@
 
 	<p>Se quiser ativar manualmente, utilize o código abaixo:</p>
 
-	<pre class="lang-javascript prettyprint linenums">
-	$(".collapse").collapse();
-	</pre>
+	<pre class="lang-javascript prettyprint linenums">$(".collapse").collapse();</pre>
 
 	<h3>Eventos</h3>
 	<table class="table table-bordered table-striped">
@@ -276,7 +324,6 @@
 	</table>
 
 </article>
-
 </section>
 <!-- END post content -->
 
