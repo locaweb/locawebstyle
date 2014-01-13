@@ -11,3 +11,5 @@ tags:
 
 - Tracking de eventos nos selects
 - Ativação/Desativação de botões dentro de .btn-group
+
+- Atualizandpo a versão do jquery de 1.10.2 para 2.0.3, sem suporte a ie 7/8
