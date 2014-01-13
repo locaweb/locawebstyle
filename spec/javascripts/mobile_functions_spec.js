@@ -7,11 +7,11 @@ describe("Mobile Functions", function() {
   describe("checkSidebarExist() - Check if exist sidebar and nav-content. If exist we need to remove class HIDDEN of .control-sidebar and .control-menu", function () {
 
     it("If .sidebar exist .control-sidebar not to have .hidden", function () {
-      expect($('.control-sidebar')).not.toHaveClass("hidden");
+      expect($('.control-sidebar').hasClass('hidden')).toBeFalsy();
     });
 
     it("If .nav-content exist .control-menu not to have .hidden", function () {
-      expect($('.control-menu')).not.toHaveClass("hidden");
+      expect($('.control-menu').hasClass('hidden')).toBeFalsy();
     });
 
   });
@@ -23,11 +23,11 @@ describe("Mobile Functions", function() {
     });
 
     it("Check if we toggle class .left-bar of HTML element", function () {
-      expect($('html')).toHaveClass("left-bar");
+      expect($('html').hasClass("left-bar")).toBeTruthy();
     });
 
     it("Check if we remove class .right-bar of HTML element", function () {
-      expect($('html')).not.toHaveClass("right-bar");
+      expect($('html').hasClass("right-bar")).toBeFalsy();
     });
   });
 
@@ -38,11 +38,11 @@ describe("Mobile Functions", function() {
     });
 
     it("Verify if we toggle class .right-bar of HTML element", function () {
-      expect($('html')).toHaveClass("right-bar");
+      expect($('html').hasClass("right-bar")).toBeTruthy();
     });
 
     it("Verify if we remove class .left-bar of HTML element", function () {
-      expect($('html')).not.toHaveClass("left-bar");
+      expect($('html').hasClass("left-bar")).toBeFalsy();
     });
   });
 
@@ -55,13 +55,13 @@ describe("Mobile Functions", function() {
     it("Check if we remove .left-bar when click in .overlay-bar", function() {
       $('html').addClass('left-bar')
       $('.overlay-bar').trigger('click');
-      expect($('html')).not.toHaveClass("left-bar");
+      expect($('html').hasClass("left-bar")).toBeFalsy();
     });
 
     it("Check if we remove .right-bar when click in .overlay-bar", function() {
       $('html').addClass('right-bar')
       $('.overlay-bar').trigger('click');
-      expect($('html')).not.toHaveClass("right-bar");
+      expect($('html').hasClass("right-bar")).toBeFalsy();
     });
   });
 });
