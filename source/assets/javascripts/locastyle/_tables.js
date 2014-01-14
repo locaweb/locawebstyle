@@ -14,7 +14,7 @@ locastyle.tables = (function() {
       addViewClickLine($table);
       toggleInputsEdit($table);
       showModal($table);
-      enableFormControls($table);
+      // enableFormControls($table);
       confirmDanger($table);
       mobileTableGroupActions($table);
     });
