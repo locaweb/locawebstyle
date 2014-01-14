@@ -938,3 +938,8 @@ table td {
 .blog .paginate .page_control.next {text-align: right;}
 
 .blog .paginate .page_control.prev {text-align: left;}
+
+/*Fonts*/
+.font-example {
+	font-size: 1.8em;
+}
