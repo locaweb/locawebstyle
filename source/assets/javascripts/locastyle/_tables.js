@@ -272,7 +272,7 @@ locastyle.tables = (function() {
 
   function toggleTableGroupActions ($table, checkeds) {
     $table.prev('.ls-table-group-actions, [data-target]')
-      .toggleClass('hidden', checkeds < 1 )
+      .slideToggle('fast')
       .find('.counterChecks').text( checkeds )
       .next('.counterChecksStr').text( checkeds > 1 ? 'itens selecionados' : 'item selecionado' );
   }
