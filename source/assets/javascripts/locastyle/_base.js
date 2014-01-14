@@ -32,7 +32,7 @@ var locastyle = (function() {
     var mediaDeskLg = 1200;
 
     // Se for mobile
-    if (document.width <= mediaTablet) {
+    if ($(document).width() <= mediaTablet) {
       $('html').addClass('media-mobile').removeClass('media-tablet media-desk media-desk-lg');
       locastyle.breakpoint = "media-mobile";
     } else {
@@ -40,7 +40,7 @@ var locastyle = (function() {
     }
 
     // Se for Tablet
-    if (document.width <= mediaDesk && document.width >= mediaTablet) {
+    if ($(document).width() <= mediaDesk && $(document).width() >= mediaTablet) {
       $('html').addClass('media-tablet').removeClass('media-mobile media-desk media-desk-lg');
       locastyle.breakpoint = "media-tablet";
     } else {
@@ -48,7 +48,7 @@ var locastyle = (function() {
     }
 
     // Se for Desk
-    if (document.width <= mediaDeskLg && document.width >= mediaDesk) {
+    if ($(document).width() <= mediaDeskLg && $(document).width() >= mediaDesk) {
       $('html').addClass('media-desk').removeClass('media-mobile media-tablet media-desk-lg');
       locastyle.breakpoint = "media-desk";
     } else {
@@ -56,7 +56,7 @@ var locastyle = (function() {
     }
 
     // Se for Desk Large
-    if (document.width >= mediaDeskLg) {
+    if ($(document).width() >= mediaDeskLg) {
       $('html').addClass('media-desk-lg').removeClass('media-mobile media-tablet media-desk');
       locastyle.breakpoint = "media-desk-lg";
     } else {
