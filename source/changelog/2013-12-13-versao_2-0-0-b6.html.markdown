@@ -4,15 +4,16 @@ date: 2013-12-13 15:05 UTC
 tags:
 ---
 
-## Melhoria e Correções
-* Melhoria no visual dos botões do Tour Guiado.
-* Correção da cor do link do botão de sugestão quando recebe hover ou focus.
-* Padronizando btn-primary quando recebe foco possui a mesma alteracao visual, quando está com hover.
+**Melhoria e Correções**
 
+\- Melhoria no visual dos botões do Tour Guiado.
 
-## Novidades
-Novas classes funcionais que dão transparência aos elementos com 3 variações 25%, 50% e 75%. <a href="http://locaweb.github.io/locawebstyle/manual/componentes/classes-funcionais/">Veja aqui</a>
+\- Correção da cor do link do botão de sugestão quando recebe hover ou focus.
 
-* Classe: transparent-25
-* Classe: transparent-50
-* Classe: transparent-75
+\- Padronizando <code>btn-primary</code> quando recebe foco possui a mesma alteração visual, quando está com hover.
+
+---
+
+**Novidades**
+
+\- Novas classes funcionais que dão transparência aos elementos com 3 variações 25% (<code>.transparent-25</code>), 50% (<code>.transparent-50</code>) e 75% (<code>.transparent-75</code>). [Veja documentação.](http://locaweb.github.io/locawebstyle/manual/componentes/classes-funcionais "Veja documentação"){:target="_blank"}
