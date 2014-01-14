@@ -1,0 +1,55 @@
+---
+title: Mixins do Locaweb Style
+menu_page: sidebar-contribua.erb
+---
+<header>
+	<h1>Mixin</h1>
+	<h3>Conheça os mixins do Locaweb Style</h3>
+</header>
+
+<p>Eles permitem definir estilos que podem ser re-utilizados em todo o estilo, sem necessidade de recorrer a classes não-semânticas. Mixins também pode conter regras CSS completas, e qualquer outra coisa permitida em outras partes de um documento Sass. Eles podem até mesmo ter argumentos que lhe permite produzir uma ampla variedade de estilos, com muito poucos mixins.</p>
+<p>Quando algum trecho de css for repetitivo, vale pena analisar, e se necessário criar mixins para reaproveitar esse código em outros elementos.</p>
+<p>Pra saber mais detalhes sobre mixins, vale a pena conferir a <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins" class="text-underline" target="_blank">documentação</a>.</p>
+<p>Para criar um novo mixin basta inserí-lo no arquivo <code>mixins.sass</code>.  </p>
+
+<h4>Nomenclatura</h4>
+<p>Recomendamos que a nomenclatura seja clara e evite abreviaturas. O ideal é que o nome do mixin já indique sua funcionalidade.</p>
+<p><strong>Não usar: </strong><code>=absTL(...)</code></p>
+<p><strong>Assim é melhor: </strong><code>=absoluteTopLeft(...)</code></p>
+
+<h3>Conheça os mixins do Locaweb Style</h3>
+
+<h4>Setas</h4>
+<p><strong>$arrow-color</strong> = cor da seta <br> <strong>$arrow-size</strong> = tamanho da seta</p>
+<p><code>=arrow-up</code>($arrow-color, $arrow-size)</p>
+<p><code>=arrow-right</code>($arrow-color, $arrow-size)</p>
+<p><code>=arrow-down</code>($arrow-color, $arrow-size)</p>
+<p><code>=arrow-left</code>($arrow-color, $arrow-size)</p>
+<div class="example">
+<div class="well arrow-up">Box com seta para cima</div>
+<pre class="lang-html linenums prettyprint-code">
+<div class="well arrow-up">Box com seta para cima</div>
+</pre>
+</div>
+
+<h4>Círculo com ícone</h4>
+<p>Normalmente utilizado no <code>:before</code> do elemento.</p>
+<p><strong>$size</strong> = largura e altura<br><strong>$font-size</strong> = tamanho da fonte do ícone</p>
+<p><code>=border-circle</code>($size, $font-size)</p>
+<div class="example">
+		<h1 class="sidebox-title ico-user">Dados da conta</h1>
+<pre class="lang-html linenums prettyprint-code">
+<h1 class="sidebox-title ico-user">Dados da conta</h1>
+</pre>
+</div>
+
+<h4>Gradiente Linear</h4>
+<p><strong>$start-color</strong> = Cor inicial <br><strong>$end-color</strong> = Cor final</p>
+<p><code>=gradient-linear</code>($start-color, $end-color)</p>
+
+<h4>Bordas arredondadas</h4>
+<p><code>=border-radius-default</code> - utilizado para definir cantos arredondados e padronizados de elementos do Locawe Style.</p>
+
+<h4>Largura de bordas no fim de elemento</h4>
+<p><code>=border-bottom-default</code> - largura da borda utilizada no fim de alguns elementos. Utilizado em  abas e boxes de sidebar.</p>
+
