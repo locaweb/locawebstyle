@@ -17,11 +17,11 @@ Cada módulo agora é testado e nenhum script é produzido sem termos criado tes
 Dessa maneira conseguimos garantir que erros básicos não aconteçam e a coordenação de novas funções se torna mais simples de manter.
 
 ## Estrutura de Javascript (Revealing Module Pattern)
-Reestruturamos o Javascript modularizando as funções e adequando o padrão de escrita do Javascript sob o padrão Revealing Module do <a href="http://christianheilmann.com/">Christian Heilmann</a>, melhorarando a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, adotamos o Revealing Module Pattern
+Reestruturamos o Javascript modularizando as funções e adequando o padrão de escrita do Javascript sob o padrão Revealing Module do [Christian Heilmann](http://christianheilmann.com){:target="_blank"}, melhorarando a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, adotamos o Revealing Module Pattern
 
 As vantagens desse pattern são: organização, clareza, performance, expõe publicamente apenas as funções e variáveis que se deseja e namespace único evitando sobrescrever métodos facilmente.
 
-Leia mais sobre ele no livro do <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript">Addy Osmani</a>.
+Leia mais sobre ele no livro do [Addy Osmani](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript){:target="_blank"}.
 
 ## Mobile First
 Locaweb Style é Mobile First. Os designers começaram a desenhar o novo layout pensando primeiro em Mobiles e somente depois para Desktops.
@@ -47,20 +47,20 @@ O Locaweb Style v1 foi criado de acordo com a necessidade de cada projeto. Está
 Na versão 2 sentamos junto com o pessoal de UX para acertarmos essas arestas. Com a bagagem de conhecimento que tivemos na primeira versão, sabíamos quais componentes se tornaram obsoletos e quais foram realmente usados. Por isso, na versão 2 conseguimos manter uma grande simplicidade na quantidade de elementos e principalmente nas suas interações.
 
 ## Uso do Github
-Passamos a usar o GitHub em vez de manter o projeto internamente. Agora todas as issues e histórico de commits e tarefas é mantido publicamente no endereço: <a href="http://github.com/locaweb/locawestyle/">http://github.com/locaweb/locawestyle/</a>
+Passamos a usar o GitHub em vez de manter o projeto internamente. Agora todas as issues e histórico de commits e tarefas é mantido publicamente no endereço: [http://github.com/locaweb/locawestyle](https://github.com/locaweb/locawebstyle){:target="_blank"}.
 
 Já temos 37 forks de desenvolvedores interessados e recebemos várias sugestões de outros desenvolvedores que viram o projeto que gostaram do que fizemos. Fique à vontade para nos ajudar a manter esse framework.
 
 ## Páginas de Exemplos e Cartilha de Elementos
-Criamos algumas páginas de exemplos para facilitar a produção de novas páginas e para mostrarmos quais as possibilidades e combinações de elementos e estruturas. Você pode <a href="http://locaweb.github.io/locawebstyle/manual/exemplos/">ver estes exemplos aqui</a>.
+Criamos algumas páginas de exemplos para facilitar a produção de novas páginas e para mostrarmos quais as possibilidades e combinações de elementos e estruturas. Você pode [ver estes exemplos aqui](http://locaweb.github.io/locawebstyle/manual/exemplos){:target="_blank"}.
 
-Também mudamos um pouco a <a href="http://locaweb.github.io/locawebstyle/manual/elementos/">cartilha de elementos</a>, que reúne todos os elementos encontrados no Locastyle em apenas uma página. Dessa forma é simples de identificar cada elemento e testá-los quando necessário.
+Também mudamos um pouco a [cartilha de elementos](http://locaweb.github.io/locawebstyle/manual/elementos){:target="_blank"}, que reúne todos os elementos encontrados no Locastyle em apenas uma página. Dessa forma é simples de identificar cada elemento e testá-los quando necessário.
 
 A ideia é que você consiga encontrar exemplos de estruturas básicas para montar seus próprios projetos e verificar as possibilidades aos juntar os componentes em uma mesma página.
 
 ## Links para usar o Locaweb Style
 Maneiras para usar o Locastyle:
 
-*   <a href="http://locaweb.github.io/locawebstyle/manual/introducao/como-usar/">Endereço CDN</a>
-*   <a href="https://github.com/locaweb/locawebstyle">Github (clone)</a>
-*   <a href="http://developer.locaweb.com.br/assets/edge.zip">Download dos assets (EDGE)</a>
+*   [Endereço CDN](http://locaweb.github.io/locawebstyle/manual/introducao/como-usar){:target="_blank"}
+*   [Github (clone)](https://github.com/locaweb/locawebstyle){:target="_blank"}
+*   [Download dos assets (EDGE)](http://developer.locaweb.com.br/assets/edge.zip){:target="_blank"}
