@@ -67,7 +67,6 @@ locastyle.tables = (function() {
         return;
       }
       evt.preventDefault();
-      // var hasEdit = $(this).parents('td').find('[data-action-modal="edit"]')[0] ? true : false;
       var modalActionType = $(this).data('action-modal');
       var headerTitle = this.nodeName == 'TD' ? 'Visualizar' : $(this).text();
       var actionModal = $(this).data('actionModal');
