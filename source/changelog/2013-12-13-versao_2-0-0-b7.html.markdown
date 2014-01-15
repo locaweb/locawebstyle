@@ -6,12 +6,12 @@ tags:
 
 **Popover**
 
-\- Correção da issue [#470](https://github.com/locaweb/locawebstyle/issues/470 "#470");
+\- [#470](https://github.com/locaweb/locawebstyle/issues/470 "#470"){:target="_blank"}: Correção da issue;
 
 ---
 **Barra de Progresso**
 
-\- Correção da issue [#471](https://github.com/locaweb/locawebstyle/issues/471 "#471");
+\- [#471](https://github.com/locaweb/locawebstyle/issues/471 "#471"){:target="_blank"}: Correção da issue;
 
 ---
 
@@ -37,7 +37,7 @@ tags:
 
 **Sidebar**
 
-\- Ajustando o 'b' e 'strong' na sidebar;
+\- Ajustando o <code>b</code> e <code>strong</code> na sidebar;
 
 \- Arrumando font-size do sidebar para o tamanho de font do layout;
 
@@ -47,7 +47,7 @@ tags:
 
 **Formulários**
 
-\- Correção da issue [#474](https://github.com/locaweb/locawebstyle/issues/474 "#474");
+\- [#474](https://github.com/locaweb/locawebstyle/issues/474 "#474"){:target="_blank"}: Correção da issue;
 
 ---
 
@@ -57,13 +57,13 @@ tags:
 
 \- Colocado o CSS da barra unificada dentro dos padrões de escrita FrontEnd;
 
-\- Corrigido BUG que replicava as fontes na barra unificada ([#485](https://github.com/locaweb/locawebstyle/pull/485 "485"));
+\- [#485](https://github.com/locaweb/locawebstyle/pull/485 "485"){:target="_blank"}: Corrigido BUG que replicava as fontes na barra unificada;
 
 ---
 
 **Bug Fixes e Melhorias**
 
-\- Correção da issue [#434](https://github.com/locaweb/locawebstyle/issues/434 "434");
+\- [#434](https://github.com/locaweb/locawebstyle/issues/434 "434"){:target="_blank"}: Correção da issue;
 
 \- Melhoria na escrita SASS;
 
@@ -73,7 +73,7 @@ tags:
 
 \- Ajustes em elementos com :hover e :focus;
 
-\- Removendo a cor do paragrafo do '.well';
+\- Removendo a cor do paragrafo do <code>.well</code>;
 
 \- Ajustado o id da barra unificada para um nome mais semântico e corrigido a borda com tamanho exagerado que saia dos padrões do layout;
 

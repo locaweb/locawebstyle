@@ -3,7 +3,10 @@ title: Versão 1.2.15
 date: 2013-12-13 16:40 UTC
 tags:
 ---
+**Melhorias e correções**
 
-* Criação de 2 novos ícones (chamaicon-addDomain e ico-server-config).
-* Criaçao do documentação de classes funcionais.
-* Nova classe funcional .noStyleInput (remove estilo dos inputs).
+\- Criação de 2 novos ícones (<code>chamaicon-addDomain</code> e <code>ico-server-config</code>).
+
+\- Criaçao do documentação de classes funcionais.
+
+\- Nova classe funcional <code>.noStyleInput</code> (remove estilo dos inputs).
