@@ -71,7 +71,7 @@ locastyle.tables = (function() {
       var headerTitle = this.nodeName == 'TD' ? 'Visualizar' : $(this).text();
       var actionModal = $(this).data('actionModal');
       var headerAction;
-      var hasEdit = $(this).parents('td').find('[data-action-modal="edit"]')[0] && $(this).parents('tr').find(':input, select')
+      var hasEdit = $(this).parents('td').find('[data-action-modal="edit"]')[0] && $(this).parents('tr').find(':input, select');
       if( hasEdit ){
         headerAction = locastyle.templates.button_dropdown_single({
           label: 'Ações',
@@ -212,33 +212,29 @@ locastyle.tables = (function() {
   // Insere dropdown para cada linha da coluna de acoes se for necessário
   function lineActions($table){
     var $tableActions = $table.find('td.ls-table-actions');
+    var tableLines = $table.find('tbody tr').size();
     $tableActions.each(function(itd, td){
       var $actions = $(td).find('a, button');
+      var line = $(td).parent('tr').index() ;
       if( $actions[1] || isXsmall ){
-        $(td).html((function(){
-          var dropdownHtml = '<div class="btn-group ' + ( $tableActions.size() - itd  <= 2 && isXsmall ? 'dropup' : '' ) + ' "> <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"><span>Ações</span></button><ul class="dropdown-menu pull-right" role="menu">';
-          if( $actions.size()  ){
+        var dropdown = locastyle.templates.button_dropdown_single({
+          label     : isXsmall ? "" : "Ações",
+          labelClass: 'btn-xs',
+          addClass  : 'pull-right' + ( tableLines - line < 3 ? ' dropup' : '' ),
+          actions   : (function(){
+            var actions = [];
+            if ( !$(td).find('[data-action-modal="view"]')[0] && isXsmall ){
+              actions.push({label: 'Visualizar', link: '#', extra: 'data-action-modal="view"'})
+            }
             $actions.each(function(i, action){
-              var  textClasses,
-                actionClass = $(action).attr('class');
-              // verifica necessidade e insere cor original da acao
-              if( actionClass ){
-                 textClasses = $.grep( actionClass.split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
-                if( textClasses ){
-                  $(action).wrapInner('<span class="' + textClasses + '" />')
-                  if( textClasses.match(/(danger)/) && $actions[1] ){
-                    dropdownHtml += '<li role="presentation" class="divider"></li>';
-                  }
-                }
-              }
-              dropdownHtml += '<li>' + action.outerHTML + '</li>';
+              var $action = $(action);
+              var hasDivider = /danger/.test( $action.attr('class') ) || $action.find('[class*="danger"]')[0] ? true : false;
+              actions.push( {label: $action.html(), link: $action.attr('href'), classes:  (hasDivider ? 'text-danger' : '') , hasDivider: hasDivider } );
             });
-          }else{
-            dropdownHtml += '<li><a href="/" data-action-modal="view">Visualizar</a></li>';
-          }
-          dropdownHtml += '</ul></div>'
-          return dropdownHtml;
-        })());
+            return actions;
+          })()
+        });
+        $(td).html(dropdown);
       }else{
         $actions.addClass('btn btn-xs btn-default');
         // verifica necessidade e insere cor original da acao
