@@ -67,17 +67,21 @@ locastyle.tables = (function() {
         return;
       }
       evt.preventDefault();
+      // var hasEdit = $(this).parents('td').find('[data-action-modal="edit"]')[0] ? true : false;
       var modalActionType = $(this).data('action-modal');
       var headerTitle = this.nodeName == 'TD' ? 'Visualizar' : $(this).text();
       var actionModal = $(this).data('actionModal');
-      var headerAction = locastyle.templates.button_dropdown_single({
-        label: 'Ações',
-        addClass: 'pull-right',
-        actions: [
-          {label: 'Visualizar', link: '#view', classes: 'ls-modal-action'},
-          {label: 'Editar', link: '#edit', classes: 'ls-modal-action'}
-        ]
-      });
+      var headerAction
+      if( $(this).parents('td').find('[data-action-modal="edit"]')[0]  ){
+        headerAction = locastyle.templates.button_dropdown_single({
+          label: 'Ações',
+          addClass: 'pull-right',
+          actions: [
+            {label: 'Visualizar', link: '#view', classes: 'ls-modal-action'},
+            {label: 'Editar', link: '#edit', classes: 'ls-modal-action'}
+          ]
+        });
+      }
       var config = {
         header : {
           title: headerTitle,
