@@ -4,18 +4,20 @@ date: 2013-12-13 18:39 UTC
 tags:
 ---
 
-**Tela de Login**
+**Adições**
 
 \- [#487](https://github.com/locaweb/locawebstyle/pull/487){:target="_blank"}: Adicionando nova tela de login da locaweb no locastyle, [veja exemplo na documentação](http://locaweb.github.io/locawebstyle/manual/exemplos/login "Veja o exemplo na documentação"){:target="_blank"}.
 
 ---
-**URL no config**
+
+**Melhorias e correções**
+
+\- Ativação/Desativação de botões dentro de .btn-group
+
+\- Tracking de eventos nos selects
 
 \- [#486](https://github.com/locaweb/locawebstyle/pull/486){:target="_blank"}: Arrumando URL do edge e versão atual no config.
 
----
-**Melhorias e correções**
-
-\- Tracking de eventos nos selects.
+\- Atualizandpo a versão do jquery de 1.10.2 para 2.0.3, sem suporte a ie 7/8
 
 \- Ativação/Desativação de botões dentro de <code>.btn-group</code>.

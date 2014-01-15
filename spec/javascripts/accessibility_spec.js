@@ -6,19 +6,19 @@ describe("Accessibility", function() {
 
   describe("DOM manipulation", function () {
     it("should prepend defined html on .header if .title-content exists", function(){
-      expect($('.area-access')).toExist();
+      expect($('.area-access')[0]).not.toBeUndefined();
     });
     it("should prepend defined html on .header if attr data-access exists", function(){
-      expect($('.menu-access')).toExist();
+      expect($('.menu-access')[0]).not.toBeUndefined();
     });
     it("should prepend defined html on .menu if submenu exists", function(){
-      expect($('.menu li').find('ul')).toHaveClass('submenu');
+      expect($('.menu li').find('ul').hasClass("submenu")).toBeTruthy();
     });
     it("should defined links of menu if contain attr role menuitem", function(){
-      expect($('.menu')).toContain('a[role="menuitem"]');
+      expect($('.menu').find('a[role="menuitem"]')[0]  ).not.toBeUndefined();
     });
     it("should have atrr tabindex in alert", function(){
-      expect($('.alert-focus')).toHaveAttr('tabindex', '-1');
+      expect( $('.alert-focus').attr('tabindex') ).toEqual('-1');
     });
 
     /*
@@ -85,7 +85,7 @@ describe("Accessibility", function() {
       it("should remove .in class on parent li", function(){
         $('#submenu_parent').addClass('in');
         $('#submenu_test').trigger('blur');
-        expect($('#submenu_parent')).not.toHaveClass('in');
+        expect( $('#submenu_parent').hasClass('in') ).toBeFalsy();
       });
       it("should change aria-expanded attr to false", function(){
         $('#submenu_parent > ul').attr('aria-expanded','true');

@@ -14,7 +14,7 @@ locastyle.tables = (function() {
       addViewClickLine($table);
       toggleInputsEdit($table);
       showModal($table);
-      enableFormControls($table);
+      // enableFormControls($table);  
       confirmDanger($table);
       mobileTableGroupActions($table);
     });
@@ -272,7 +272,7 @@ locastyle.tables = (function() {
 
   function toggleTableGroupActions ($table, checkeds) {
     $table.prev('.ls-table-group-actions, [data-target]')
-      .toggleClass('hidden', checkeds < 1 )
+      .toggle( checkeds >= 1 )
       .find('.counterChecks').text( checkeds )
       .next('.counterChecksStr').text( checkeds > 1 ? 'itens selecionados' : 'item selecionado' );
   }

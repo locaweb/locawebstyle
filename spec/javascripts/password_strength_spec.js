@@ -29,27 +29,27 @@ describe("Password Strength", function() {
   describe("Monitor feedback", function () {
     it("should have the css 'strong' class when 's0mePas$' is typed", function () {
       $("#form_to_password_strength #user_password").val("s0mePas$").trigger("keyup");
-      expect($("#form_to_password_strength .monitor")).toHaveClass("strong");
+      expect($("#form_to_password_strength .monitor").hasClass('strong') ).toBeTruthy();
     });
 
     it("should have the css 'good' class when 'somePass12' is typed", function () {
       $("#form_to_password_strength #user_password").val("somePass12").trigger("keyup");
-      expect($("#form_to_password_strength .monitor")).toHaveClass("good");
+      expect($("#form_to_password_strength .monitor").hasClass('good') ).toBeTruthy();
     });
 
     it("should have the css 'medium' class when 'somepass12' is typed", function () {
       $("#form_to_password_strength #user_password").val("somepass12").trigger("keyup");
-      expect($("#form_to_password_strength .monitor")).toHaveClass("medium");
+      expect($("#form_to_password_strength .monitor").hasClass('medium') ).toBeTruthy();
     });
 
     it("should have the css 'weak' class when 'somepass' is typed", function () {
       $("#form_to_password_strength #user_password").val("somepass").trigger("keyup");
-      expect($("#form_to_password_strength .monitor")).toHaveClass("weak");
+      expect($("#form_to_password_strength .monitor").hasClass('weak') ).toBeTruthy();
     });
 
     it("should have the css 'weak' class when 's0mPa$' is typed", function () {
       $("#form_to_password_strength #user_password").val("s0mPa$").trigger("keyup");
-      expect($("#form_to_password_strength .monitor")).toHaveClass("weak");
+      expect($("#form_to_password_strength .monitor").hasClass('weak') ).toBeTruthy();
     });
   });
 });
