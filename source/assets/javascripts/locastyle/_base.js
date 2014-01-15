@@ -91,9 +91,7 @@ var locastyle = (function() {
     var $text, $replacementText;
     $text = $(element).html();
     $replacementText = $(element).data("text");
-    setTimeout(function() {
-      $(element).text($replacementText).data("text", $text).attr("title", $replacementText);
-    }, 100);
+    $(element).text($replacementText).data("text", $text).attr("title", $replacementText);
   }
 
   // Troca de classes
