@@ -70,8 +70,9 @@ locastyle.tables = (function() {
       var modalActionType = $(this).data('action-modal');
       var headerTitle = this.nodeName == 'TD' ? 'Visualizar' : $(this).text();
       var actionModal = $(this).data('actionModal');
-      var headerAction
-      if( $(this).parents('td').find('[data-action-modal="edit"]')[0]  ){
+      var headerAction;
+      var hasEdit = $(this).parents('td').find('[data-action-modal="edit"]')[0] && $(this).parents('tr').find(':input, select')
+      if( hasEdit ){
         headerAction = locastyle.templates.button_dropdown_single({
           label: 'Ações',
           addClass: 'pull-right',
