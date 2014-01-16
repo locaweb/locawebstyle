@@ -32,7 +32,7 @@ locastyle.tables = (function() {
 
   function enableFormControls($container){
       locastyle.forms.insertDatepicker($container, '[disabled]');
-      locastyle.forms.insertSelect2($container, '[disabled]');
+      locastyle.select2DefaultConfig($container, '[disabled]');
       locastyle.forms.insertMasks($container);
   }
 
