@@ -16,8 +16,9 @@ layout: false
 	<%= stylesheet_link_tag "locastyle" %>
 </head>
 <body>
+<div id="wrap">
 	<div class="bar">
-		<a href="" class="identify" class="ico-forward-2">subdominio.locaweb.com.br</a>
+		<a href="" class="identify ico-forward-2">subdominio.locaweb.com.br</a>
 		<nav class="nav-icons">
 			<a href="#" class="ico-bubble">Texto do link</a>
 			<a href="#" class="ico-question">Texto do link</a>
@@ -52,23 +53,20 @@ layout: false
 		<div class="col-md-9 content" role="main">
 			<h1 class="title-1 title-content">Aqui vai seu conteúdo</h1>
 			<p>Grid col com 9 colunas de medida.</p>
-			<br>
-			<br>
-			&lt;div class="col-md-9 content" role="main"&gt;
 		</div>
 		<aside class="sidebar col-md-3" role="complementary">
 			<h1 class="title-1">Aqui vai a sidebar</h1 class="title-1">
 			<p>Grid col com 3 colunas de medida.</p>
 			<br>
 			<br>
-			&lt;aside class="sidebar col-md-3" role="complementary"&gt;
 		</aside>
 	</main>
-
+</div>
 
 	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 	<%= javascript_include_tag "locastyle" %>
 	<script src="<%= base_url + bootstrap_js %>"></script>
+	<script src="http://assets.devintegration.locaweb.com.br/lwbar/0.1/lwbar.js"></script>
 
 
 </body>
