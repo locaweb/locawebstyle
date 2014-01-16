@@ -8,6 +8,7 @@ var locastyle = (function() {
     toggleTextOnHover();
     linkPreventDefault();
     classToggle();
+    select2DefaultConfig();
     btnGroupActivationToogle();
   }
 
@@ -100,6 +101,31 @@ var locastyle = (function() {
       e.preventDefault();
       var classes = $(this).data('classtoggle').split(',');
       $(this).toggleClass(classes[0]).toggleClass(classes[1]);
+    });
+  }
+
+  //Minimiza o resultado para a busca
+  function select2DefaultConfig(exclude){
+    $('.select2').not(exclude).each(function(i, el){
+      var $select = $(el);
+      var $optionList = $select.find('option');
+      var visible;
+      if( $select.data('search') == false  ){
+        visible = -1;
+      } else {
+        visible = ( $optionList.size() <= 10 ? -1 : 7 );
+      }
+      if( $select.attr('placeholder') && !$select.attr('multiple') ){
+        if( $select.find('[selected]').size() === 0 ){
+          $select.prepend('<option selected></option>');
+        }else{
+          $select.prepend('<option></option>');
+        }
+      }
+      $select.select2({
+        allowClear: true,
+        minimumResultsForSearch: visible
+      });
     });
   }
 
