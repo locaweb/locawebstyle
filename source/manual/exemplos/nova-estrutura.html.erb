@@ -16,78 +16,71 @@ layout: false
 	<%= stylesheet_link_tag "locastyle" %>
 </head>
 <body>
-	<div id="wrap">
-		<header class="header" role="banner">
-			<div class="container">
-				<span class="control-menu visible-xs ico-menu-2"></span>
-				<span class="control-sidebar visible-xs ico-list"></span>
-				<h1 class="project-name"><a href="#">Nome do projeto</a></h1>
-				<a href="#" class="help-suggestions ico-question hidden-xs">Ajuda e Sugestões</a>
-
-				<div class="dropdown hidden-xs">
-					<a href="#" data-toggle="dropdown" class="title-dropdown">Outros ambientes</a>
-					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-						<li><a href="#" role="menuitem">Option 1</a></li>
-						<li><a href="#" role="menuitem">Option 2</a></li>
-						<li><a href="#" role="menuitem">Option 3</a></li>
-					</ul>
-				</div>
-			</div>
-		</header>
-
-		<div class="nav-content">
-			<menu class="menu">
-				<ul class="container">
-					<li><a href="#" class="active ico-home" role="menuitem">Home</a></li>
-					<li><a href="#" role="menuitem">Lista de contatos</a></li>
-					<li><a href="#" role="menuitem">Mensagens</a>
-						<ul>
-							<li><a href="#">Enviar</a></li>
-							<li><a href="#">Criar</a></li>
-							<li><a href="#">Editar</a></li>
-							<li><a href="#">Relatórios</a></li>
-						</ul>
-					</li>
-					<li><a href="#" role="menuitem">Campanhas</a></li>
-					<li><a href="#" role="menuitem">Templates</a></li>
-					<li><a href="#" role="menuitem">Relatórios</a></li>
-					<li><a href="#" role="menuitem">Configurações</a></li>
+<div id="wrap">
+	<div class="bar">
+		<a href="" class="identify ico-forward-2">subdominio.locaweb.com.br</a>
+		<nav class="nav-icons">
+			<a href="#" class="ico-bubble">Texto do link</a>
+			<a href="#" class="ico-question">Texto do link</a>
+			<a href="#" class="ico-clock">Texto do link</a>
+		</nav>
+	</div>
+	<div class="sidebar-master">
+		<h1 class="logo ico-envelop">
+			Email Marketing
+		</h1>
+		<ul>
+			<li><a class="active" href="">Página principal</a></li>
+			<li><a href="">Lista de contatos</a></li>
+			<li><a href="">Mensagens</a></li>
+			<li><a href="">Campanhas</a></li>
+			<li><a href="">Templates</a></li>
+			<li>
+				<a href="" data-toggle="submenu">Relatórios</a>
+				<ul class="submenu hidden" aria-expanded="false" aria-hidden="true">
+					<li> <a href="">submenu</a> </li>
+					<li> <a href="">submenu</a> </li>
+					<li> <a href="">submenu</a> </li>
 				</ul>
-			</menu>
-			<h2 class="title-sep visible-xs">Mais</h2>
-			<ul class="nav-mob-list visible-xs">
-				<li><a href="#" class="ico-help-circle">Ajuda e sugestões</a></li>
-			</ul>
-		</div>
-
-		<main class="main">
-
-			<div class="container">
-				<div class="row">
-					<div class="col-md-9 content" role="main">
-						<h1 class="title-1 title-content">Aqui vai seu conteúdo</h1>
-						<p>Grid col com 9 colunas de medida.</p>
-						<br>
-						<br>
-						&lt;div class="col-md-9 content" role="main"&gt;
-					</div>
-					<aside class="sidebar col-md-3" role="complementary">
-						<h1 class="title-1">Aqui vai a sidebar</h1 class="title-1">
-						<p>Grid col com 3 colunas de medida.</p>
-						<br>
-						<br>
-						&lt;aside class="sidebar col-md-3" role="complementary"&gt;
-					</aside>
-				</div>
-			</div>
-		</main>
+			</li>
+			<li><a href="">Formulários</a></li>
+			<li><a href="">Configurações</a></li>
+		</ul>
 	</div>
 
+
+	<main class="main-content">
+		<div class="col-md-9 content" role="main">
+			<h1 class="title-1 title-content">Aqui vai seu conteúdo</h1>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+			<p>Grid col com 9 colunas de medida.</p><br><br><br>
+		</div>
+		<aside class="sidebar col-md-3" role="complementary">
+			<h1 class="title-1">Aqui vai a sidebar</h1 class="title-1">
+			<p>Grid col com 3 colunas de medida.</p>
+			<br>
+			<br>
+		</aside>
+	</main>
+</div>
 
 	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 	<%= javascript_include_tag "locastyle" %>
 	<script src="<%= base_url + bootstrap_js %>"></script>
-	<script src="/assets/javascripts/lwbar.js" type="text/javascript" data-info-ip="123.456.789" data-info-lastAcess="07/11/2013" data-logout-url="#teste" data-user-name="locaweb" ></script>
+	<script src="http://assets.devintegration.locaweb.com.br/lwbar/0.1/lwbar.js"></script>
 
 
 </body>
