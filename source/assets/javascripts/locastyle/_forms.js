@@ -11,7 +11,6 @@ locastyle.forms = (function() {
       inputsMask($form);
       claimDatePicker($form);
       togglePassword($form);
-      select2DefaultConfig($form);
       toggleInputsEdit($form);
     });
   }
@@ -75,35 +74,9 @@ locastyle.forms = (function() {
     });
   }
 
-  //Minimiza o resultado para a busca
-  function select2DefaultConfig(exclude){
-    $('.select2').not(exclude).each(function(i, el){
-      var $select = $(el);
-      var $optionList = $select.find('option');
-      var visible;
-      if( $select.data('search') == false  ){
-        visible = -1;
-      } else {
-        visible = ( $optionList.size() <= 10 ? -1 : 7 );
-      }
-      if( $select.attr('placeholder') && !$select.attr('multiple') ){
-        if( $select.find('[selected]').size() === 0 ){
-          $select.prepend('<option selected></option>');
-        }else{
-          $select.prepend('<option></option>');
-        }
-      }
-      $select.select2({
-        allowClear: true,
-        minimumResultsForSearch: visible
-      });
-    });
-  }
-
   return {
     init: init,
     insertDatepicker: claimDatePicker,
-    insertSelect2: select2DefaultConfig,
     insertMasks: inputsMask,
     formReadOnly: formReadOnly
   };
