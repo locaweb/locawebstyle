@@ -224,12 +224,16 @@ locastyle.tables = (function() {
           actions   : (function(){
             var actions = [];
             if ( !$(td).find('[data-action-modal="view"]')[0] && isXsmall ){
-              actions.push({label: 'Visualizar', link: '#', extra: 'data-action-modal="view"'})
+              actions.push({label: 'Visualizar', link: '#', extras: 'data-action-modal="view"'})
             }
             $actions.each(function(i, action){
+              var extraData = '';
+              $.each($(action).data(), function(name, value){
+                extraData += 'data-' + name.replace(/[A-Z]/g, '-$&').toLowerCase() + '="' + value + '" ';
+              });
               var $action = $(action);
               var hasDivider = /danger/.test( $action.attr('class') ) || $action.find('[class*="danger"]')[0] ? true : false;
-              actions.push( {label: $action.html(), link: $action.attr('href'), classes:  (hasDivider ? 'text-danger' : '') , hasDivider: hasDivider } );
+              actions.push( {label: $action.html(), link: $action.attr('href'), classes:  (hasDivider ? 'text-danger' : '') , extras: extraData,  hasDivider: hasDivider } );
             });
             return actions;
           })()
