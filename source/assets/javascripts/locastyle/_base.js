@@ -9,6 +9,7 @@ var locastyle = (function() {
     linkPreventDefault();
     classToggle();
     btnGroupActivationToogle();
+    subMenu();
   }
 
   // Aquele background cinza que fica sempre atrás do elemento Shortcut
@@ -108,6 +109,15 @@ var locastyle = (function() {
       $(this).siblings().removeClass("active");
       $(this).addClass("active");
     });
+  }
+
+  var subMenu = function(){
+    $("[data-toggle='submenu']").on('click', function(e){
+      e.preventDefault();
+      $(this).prev('.submenu').toggleClass('hidden');
+      $(this).next('.submenu').toggleClass('hidden');
+      $(this).toggleClass("active");
+    })
   }
 
   return {
