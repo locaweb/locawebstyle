@@ -1,6 +1,6 @@
 $widthSidebar: 300px
 
-.main
+.main-content
 	height: 100%
 	overflow: hidden
 	margin-right: 10px
@@ -21,16 +21,16 @@ $widthSidebar: 300px
 	z-index: 3
 
 	.logo
-		background-color: #85c005
+		background-color: $gray2
 		color: #fff
-		text-align: center
-		padding: 70px 0
-		font-size: 30px
+		height: 60px
+		font-size: 24px
+		padding: 15px
 
 		&:before
-			font-size: 90px
+			display: inline
+			font-size: 32px
 			margin-bottom: 10px
-			display: block
 
 	ul
 		&.submenu
@@ -54,53 +54,7 @@ $widthSidebar: 300px
 				&.active,
 				&:hover,
 				&:focus
-					background: #464646
-					color: #85c005
+					background: $gray1
 					text-decoration: none
-					border-left-color: #85c005
-
-	&.mini-logo
-
-		.logo
-			height: 60px
-			line-height: 60px
-			font-size: 24px
-			padding: 0 15px
-			text-align: left
-
-			&:before
-				display: inline
-				font-size: 32px
-
-	.box-identify
-		background: url(/images/identify.png) no-repeat 15px 9px #1e1e1e
-		border-bottom: 2px solid #323232
-		padding-left: 45px
-		padding-top: 10px
-
-		h2
-			color: rgba(255,255,255,0.5)
-			font-size: 12px
-			text-transform: uppercase
-
-		h3
-			font-family: open_sans_regular
-			font-size: 14px
-			color: #fff
-			padding: 8px 0
-
-		a
-			display: block
-			padding: 6px 0
-			border-top: 1px solid #2a2a2a
-
-	.area-menu
-		background-color: #0a0a0a
-		font-size: 12px
-		color: rgba(255,255,255,0.5)
-		margin: 0
-		padding: 12px 16px
-
-		&:before
-			font-size: 24px
-			margin-right: 10px
+					border-left-color: $gray2
+					color: #fff
