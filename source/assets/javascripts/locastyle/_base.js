@@ -137,7 +137,8 @@ var locastyle = (function() {
   }
 
   return {
-    init: init
+    init: init,
+    select2DefaultConfig: select2DefaultConfig
   };
 
 }());
