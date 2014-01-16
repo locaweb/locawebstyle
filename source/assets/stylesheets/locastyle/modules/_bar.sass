@@ -1,0 +1,51 @@
+.bar
+	background-color: $gray1
+	height: 60px
+	position: fixed
+	width: 100%
+	z-index: 2
+
+	.identify
+		color: #fff
+		display: inline-block
+		margin-left: 320px
+		margin-top: 14px
+
+	.nav-icons
+		margin: 14px
+		float: right
+
+		a
+			display: inline-block
+			margin: 0 3px
+			opacity: 1
+			overflow: hidden
+			padding-top: 2px
+			height: 32px
+			width: 32px
+
+			&:before
+				+border-circle(32px, 18px)
+				color: #fff
+
+	.dropdown
+		margin-top: 12px
+		margin-right: 30px
+		span
+			vertical-align: middle !important
+			&:before
+				border: 2px solid white
+				width: 40px
+				height: 40px
+				font-size: 20px
+				line-height: 35px
+
+		.dropdown-toggle
+			color: #FFF !important
+
+			&:focus,
+			&:hover
+				text-decoration: none
+
+			&:after
+				border-top-color: #fff
