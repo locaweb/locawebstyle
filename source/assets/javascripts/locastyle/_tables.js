@@ -20,9 +20,9 @@ locastyle.tables = (function() {
   }
 
   function addViewClickLine($table){
-    if( isXsmall ){
+    if ( isXsmall ){
       $table.find('tbody tr').each(function(itr, tr){
-        if( $(tr).find('.hidden-xs')[0] ){
+        if ( $(tr).find('.hidden-xs')[0] ){
           $(tr).find('td').not('.ls-table-actions').attr('data-action-modal', 'view');
         }
       });
@@ -42,13 +42,13 @@ locastyle.tables = (function() {
       var $modalBody = $modal.find('.modal-body');
       var $modalFooter = $modal.find('.modal-footer');
       var isEdit = $(this).attr('href') === '#edit';
-      if( isEdit ){
-        if( $modalBody.find('[disabled]').length === 0  ){
+      if ( isEdit ){
+        if ( $modalBody.find('[disabled]').length === 0  ){
           return;
         }
         $modalBody.find(':input, select, div.datepicker').attr('disabled', false);
         $modalBody.find('div.datepicker .input-group-btn').remove();
-        enableFormControls($modal);
+        // enableFormControls($modal);
         $modalFooter.find('.btn.btn-primary').show();
       } else {
         $modalBody.find(':input, select, div.datepicker').attr('disabled', true);
@@ -62,7 +62,7 @@ locastyle.tables = (function() {
 
   function showModal($table){
     $('[data-action-modal]', $table).on('click', function(evt) {
-      if($(this).index() === 0 && this.nodeName === 'TD' ){
+      if ($(this).index() === 0 && this.nodeName === 'TD' ){
         return;
       }
       evt.preventDefault();
@@ -71,7 +71,7 @@ locastyle.tables = (function() {
       var actionModal = $(this).data('actionModal');
       var headerAction;
       var hasEdit = $(this).parents('td').find('[data-action-modal="edit"]')[0] && $(this).parents('tr').find(':input, select');
-      if( hasEdit ){
+      if ( hasEdit ){
         headerAction = locastyle.templates.button_dropdown_single({
           label: 'Ações',
           addClass: 'pull-right',
@@ -91,7 +91,7 @@ locastyle.tables = (function() {
         footer: {
           actions: [
             (function(){
-              if( modalActionType === 'edit' ){
+              if ( modalActionType === 'edit' ){
                 return {label: 'Salvar', classes: 'btn-primary'}
               } else {
                 return {}
@@ -110,7 +110,7 @@ locastyle.tables = (function() {
           $modalBody.find(':input').eq(0).focus();
         })
       locastyle.forms.formReadOnly($modalBody, actionModal === 'view');
-      enableFormControls($modal);
+      // enableFormControls($modal);
       modalDropdownActions($modal);
     });
   }
@@ -125,18 +125,18 @@ locastyle.tables = (function() {
     });
     $tr.find('td').each(function(itd, td){
       var $input = $(td).find(':input, select');
-      if( $input[0] ){
-        if( $(td).find('div.datepicker')[0] ){
+      if ( $input[0] ){
+        if ( $(td).find('div.datepicker')[0] ){
           var datepicker = $(td).find('div.datepicker').clone().removeAttr('disabled')
           datepicker.find('input').removeAttr('disabled');
           var inputHTML = datepicker[0].outerHTML;
-        }else{
+        } else {
           var inputHTML =  $input.clone().removeAttr('disabled')[0].outerHTML;
         }
-      } else{
+      } else {
           var inputHTML =  '<p>' + $(td).html() + '</p>';
       }
-      formData.fields.push({ label: labels[itd] , input: inputHTML });
+      formData.fields.push({ label: labels[itd], input: inputHTML });
     });
     formData.fields = formData.fields.slice(1, formData.fields.length -1 );
     return formData;
@@ -162,7 +162,7 @@ locastyle.tables = (function() {
   function actionsEditInline($buttons){
     $buttons.on('click', function(evt){
       evt.preventDefault();
-      if( $(this).hasClass('ico-close') ){
+      if ( $(this).hasClass('ico-close') ){
         $(this).parents('tr').each(function(itr, tr){
           $(tr).find('td:gt(0):not(.ls-table-actions)').find(':input, select, div.datepicker').attr('disabled', true);
           $(tr).find('.datepicker').datepicker("destroy");
@@ -170,7 +170,7 @@ locastyle.tables = (function() {
         });
         $(this).parents('tr').find('.btn-group').show();
         $(this).parents('.lsa').remove();
-      }else{
+      } else {
       }
     });
   }
@@ -215,7 +215,7 @@ locastyle.tables = (function() {
     $tableActions.each(function(itd, td){
       var $actions = $(td).find('a, button');
       var line = $(td).parent('tr').index() ;
-      if( $actions[1] || isXsmall ){
+      if ( $actions[1] || isXsmall ){
         var dropdown = locastyle.templates.button_dropdown_single({
           label     : isXsmall ? "" : "Ações",
           labelClass: 'btn-xs',
@@ -232,19 +232,19 @@ locastyle.tables = (function() {
               });
               var $action = $(action);
               var hasDivider = /danger/.test( $action.attr('class') ) || $action.find('[class*="danger"]')[0] ? true : false;
-              actions.push( {label: $action.html(), link: $action.attr('href'), classes:  (hasDivider ? 'text-danger' : '') , extras: extraData,  hasDivider: hasDivider } );
+              actions.push( {label: $action.html(), link: $action.attr('href'), classes: (hasDivider ? 'text-danger' : ''), extras: extraData, hasDivider: hasDivider } );
             });
             return actions;
           })()
         });
         $(td).html(dropdown);
-      }else{
+      } else {
         $actions.addClass('btn btn-xs btn-default');
         // verifica necessidade e insere cor original da acao
-        if( $actions.attr('class') ){
+        if ( $actions.attr('class') ){
           var  textClasses = $.grep( $actions.attr('class').split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
         }
-        if( textClasses ){
+        if ( textClasses ){
           $actions.wrapInner('<span class="' + textClasses + '" />');
         }
       }
@@ -281,7 +281,7 @@ locastyle.tables = (function() {
   }
 
   function mobileTableGroupActions($table){
-    if( isXsmall ){
+    if ( isXsmall ){
       var $groupActions = $table.prev('.ls-table-group-actions, [data-target]')
       var bts = $groupActions.find('a, button')
       var headerAction = locastyle.templates.button_dropdown_single({
@@ -292,7 +292,7 @@ locastyle.tables = (function() {
           $groupActions.find('a, button').each(function(i, action){
             var $action = $(action);
             var hasDivider = /danger/.test( $action.attr('class') ) || $action.find('[class*="danger"]')[0] ? true : false;
-            actions.push( {label: $action.html(), link: $action.attr('href'), classes:  (hasDivider ? 'text-danger' : '') , hasDivider: hasDivider } );
+            actions.push( {label: $action.html(), link: $action.attr('href'), classes:  (hasDivider ? 'text-danger' : ''), hasDivider: hasDivider } );
           });
           return actions;
         })()
