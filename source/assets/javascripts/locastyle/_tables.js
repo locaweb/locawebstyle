@@ -216,11 +216,9 @@ locastyle.tables = (function() {
       var $addInputs = $tr.parents('form').find('input').filter(function () {
         return $(this).parents('table').length === 0;
       });
-      var dataForm = $tr.parents('form').serialize() 
-      + '&' +$addInputs.serialize();
-      console.log( dataForm )
+      var dataForm = $modal.find('form').serialize()  + '&' +$addInputs.serialize();
       $.ajax({
-        data        : '',
+        data        : dataForm,
         type        : 'POST',
         url         : $modal.find('form').attr('action'),
         beforeSend  : blockModal($modal, true),
