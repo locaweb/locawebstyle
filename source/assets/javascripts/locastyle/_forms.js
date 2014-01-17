@@ -67,10 +67,11 @@ locastyle.forms = (function() {
     $('.toggle-pass', $form).on("click", function(e){
       e.preventDefault();
       var $self = $(this).data('target');
-      if($($self).attr('type') == 'password'){
+      if ($($self).attr('type') == 'password'){
         $($self).removeAttr('attr').prop('type','text');
-      } else
+      } else {
         $($self).removeAttr('attr').prop('type','password');
+      }
     });
   }
 
