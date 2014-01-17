@@ -19,6 +19,89 @@ locastyle.tables = (function() {
     });
   }
 
+  // Aplica as classes do header da tabela nos seus equivalentes no tbody
+  function applyHeaderBehavior($table){
+    var thClasses = [];
+    $table.find('thead tr th').each(function(ith, th){
+      thClasses.push($(th).attr('class') );
+    });
+    $table.find('tbody tr').each(function(itr, tr){
+      var tds = $(tr).find('td');
+      for (var i = thClasses.length - 1; i >= 0; i--) {
+        tds.eq(i).addClass( thClasses[i] )
+      };
+    });
+    lineActions($table);
+  }
+
+  // Insere dropdown para cada linha da coluna de acoes se for necessário
+  function lineActions($table){
+    var $tableActions = $table.find('td.ls-table-actions');
+    var tableLines = $table.find('tbody tr').size();
+    $tableActions.each(function(itd, td){
+      var $actions = $(td).find('a, button');
+      var line = $(td).parent('tr').index() ;
+      if ( $actions[1] || isXsmall ){
+        var dropdown = locastyle.templates.button_dropdown_single({
+          label     : isXsmall ? "" : "Ações",
+          labelClass: 'btn-xs',
+          addClass  : 'pull-right' + ( tableLines - line < 3 ? ' dropup' : '' ),
+          actions   : (function(){
+            var actions = [];
+            if ( !$(td).find('[data-action-modal="view"]')[0] && isXsmall ){
+              actions.push({label: 'Visualizar', link: '#', extras: 'data-action-modal="view"'})
+            }
+            $actions.each(function(i, action){
+              var extraData = '';
+              $.each($(action).data(), function(name, value){
+                extraData += 'data-' + name.replace(/[A-Z]/g, '-$&').toLowerCase() + '="' + value + '" ';
+              });
+              var $action = $(action);
+              var hasDivider = /danger/.test( $action.attr('class') ) || $action.find('[class*="danger"]')[0] ? true : false;
+              actions.push( {label: $action.html(), link: $action.attr('href'), classes: (hasDivider ? 'text-danger' : ''), extras: extraData, hasDivider: hasDivider } );
+            });
+            return actions;
+          })()
+        });
+        $(td).html(dropdown);
+      } else {
+        $actions.addClass('btn btn-xs btn-default');
+        // verifica necessidade e insere cor original da acao
+        if ( $actions.attr('class') ){
+          var  textClasses = $.grep( $actions.attr('class').split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
+        }
+        if ( textClasses ){
+          $actions.wrapInner('<span class="' + textClasses + '" />');
+        }
+      }
+    });
+  }
+
+  function toggleHeaderCheckbox($table){
+    var $checkboxes = $table.find('tbody input[type="checkbox"]'),
+        $checkAll = $table.find('thead input[type="checkbox"]');
+    $checkAll.on('change', function (evt) {
+      $checkboxes
+        .prop('checked', evt.currentTarget.checked)
+        .parents('tr').toggleClass('selected',  evt.currentTarget.checked );
+        toggleTableGroupActions($table, (evt.currentTarget.checked ? $checkboxes.size() : 0 ) );
+    });
+    $checkboxes.on('change', function (evt) {
+      var checkeds = $checkboxes.filter(':checked').size(),
+          checkAllStatus = $checkboxes.size() === checkeds;
+      $checkAll.prop('checked', checkAllStatus );
+      $(this).parents('tr').toggleClass('selected',  evt.currentTarget.checked );
+      toggleTableGroupActions($table, checkeds );
+    });
+  }
+
+  function toggleTableGroupActions ($table, checkeds) {
+    $table.prev('.ls-table-group-actions, [data-target]')
+      .toggle( checkeds >= 1 )
+      .find('.counterChecks').text( checkeds )
+      .next('.counterChecksStr').text( checkeds > 1 ? 'itens selecionados' : 'item selecionado' );
+  }
+
   function addViewClickLine($table){
     if ( isXsmall ){
       $table.find('tbody tr').each(function(itr, tr){
@@ -29,35 +112,43 @@ locastyle.tables = (function() {
     }
   }
 
+  function toggleInputsEdit($table){
+    $('[data-enable-edit]', $table).on('click', function(evt) {
+      evt.preventDefault();
+      var $tr = $(this).parents('tr');
+      $(this).parents('.btn-group').hide();
+      $(this).parents('td').addClass('ls-table-actions-show').append('<div class="lsa"><button class="btn btn-xs btn-success  ico-checkmark" type="button"><span class="hidden">Cancelar</span></button> <button class="btn btn-default btn-xs ico-close" type="button"><span class="hidden">Salvar</span></button></div>')
+      $tr.find('[disabled]').each(function(ii, el){
+        var $el = $(el),
+            originalValue = $el.val();
+        $el.data('originalValue', originalValue);
+        $el.removeAttr('disabled');
+      }).eq(0).focus();
+      actionsEditInline( $tr.find('.ls-table-actions-show button') );
+      enableFormControls($tr);
+    });
+  }
+
+  function actionsEditInline($buttons){
+    $buttons.on('click', function(evt){
+      evt.preventDefault();
+      if ( $(this).hasClass('ico-close') ){
+        $(this).parents('tr').each(function(itr, tr){
+          $(tr).find('td:gt(0):not(.ls-table-actions)').find(':input, select, div.datepicker').attr('disabled', true);
+          $(tr).find('.datepicker').datepicker("destroy");
+          $(tr).find('.datepicker .input-group-btn').remove();
+        });
+        $(this).parents('tr').find('.btn-group').show();
+        $(this).parents('.lsa').remove();
+      } else {
+      }
+    });
+  }
+
   function enableFormControls($container){
       locastyle.forms.insertDatepicker($container, '[disabled]');
       locastyle.select2DefaultConfig($container, '[disabled]');
       locastyle.forms.insertMasks($container);
-  }
-
-  function modalDropdownActions($modal){
-    $('.ls-modal-action', $modal).off().on('click', function(evt){
-      evt.preventDefault();
-      $modal.find('.modal-title-text').text( $(this).text() );
-      var $modalBody = $modal.find('.modal-body');
-      var $modalFooter = $modal.find('.modal-footer');
-      var isEdit = $(this).attr('href') === '#edit';
-      if ( isEdit ){
-        if ( $modalBody.find('[disabled]').length === 0  ){
-          return;
-        }
-        $modalBody.find(':input, select, div.datepicker').attr('disabled', false);
-        $modalBody.find('div.datepicker .input-group-btn').remove();
-        // enableFormControls($modal);
-        $modalFooter.find('.btn.btn-primary').show();
-      } else {
-        $modalBody.find(':input, select, div.datepicker').attr('disabled', true);
-        $modalBody.find('.datepicker').datepicker("destroy");
-        $modalBody.find('.datepicker .input-group-btn').remove();
-        $modalBody.find('.select2').select2('destroy');
-        $modalFooter.find('.btn.btn-primary').hide();
-      }
-    });
   }
 
   function showModal($table){
@@ -110,7 +201,7 @@ locastyle.tables = (function() {
           $modalBody.find(':input').eq(0).focus();
         })
       locastyle.forms.formReadOnly($modalBody, actionModal === 'view');
-      // enableFormControls($modal);
+      enableFormControls($modal);
       modalDropdownActions($modal);
     });
   }
@@ -123,130 +214,47 @@ locastyle.tables = (function() {
     $table.find('thead th').each(function(itr, th){
       labels.push( $.trim($(th).text()) );
     });
-    $tr.find('td').each(function(itd, td){
+    var $trClone = $tr.clone();
+    $trClone.find('td').each(function(itd, td){
       var $input = $(td).find(':input, select');
-      if ( $input[0] ){
-        if ( $(td).find('div.datepicker')[0] ){
-          var datepicker = $(td).find('div.datepicker').clone().removeAttr('disabled')
-          datepicker.find('input').removeAttr('disabled');
-          var inputHTML = datepicker[0].outerHTML;
-        } else {
-          var inputHTML =  $input.clone().removeAttr('disabled')[0].outerHTML;
-        }
-      } else {
-          var inputHTML =  '<p>' + $(td).html() + '</p>';
-      }
-      formData.fields.push({ label: labels[itd], input: inputHTML });
+    //   if ( $input[0] ){
+    //     if ( $(td).find('div.datepicker')[0] ){
+    //       var datepicker = $(td).find('div.datepicker').clone().removeAttr('disabled')
+    //       datepicker.find('input').removeAttr('disabled');
+    //       var inputHTML = datepicker[0].outerHTML;
+    //     } else {
+    //       var inputHTML =  $input.clone().removeAttr('disabled')[0].outerHTML;
+    //     }
+    //   } else {
+    //       var inputHTML =  '<p>' + $(td).html() + '</p>';
+    //   }
+      formData.fields.push({ label: labels[itd], input: $(td).html() });
     });
     formData.fields = formData.fields.slice(1, formData.fields.length -1 );
     return formData;
   }
 
-  function toggleInputsEdit($table){
-    $('[data-enable-edit]', $table).on('click', function(evt) {
+  function modalDropdownActions($modal){
+    $('.ls-modal-action', $modal).off().on('click', function(evt){
       evt.preventDefault();
-      var $tr = $(this).parents('tr');
-      $(this).parents('.btn-group').hide();
-      $(this).parents('td').addClass('ls-table-actions-show').append('<div class="lsa"><button class="btn btn-xs btn-success  ico-checkmark" type="button"><span class="hidden">Cancelar</span></button> <button class="btn btn-default btn-xs ico-close" type="button"><span class="hidden">Salvar</span></button></div>')
-      $tr.find('[disabled]').each(function(ii, el){
-        var $el = $(el),
-            originalValue = $el.val();
-        $el.data('originalValue', originalValue);
-        $el.removeAttr('disabled');
-      }).eq(0).focus();
-      actionsEditInline( $tr.find('.ls-table-actions-show button') );
-      enableFormControls($tr);
-    });
-  }
-
-  function actionsEditInline($buttons){
-    $buttons.on('click', function(evt){
-      evt.preventDefault();
-      if ( $(this).hasClass('ico-close') ){
-        $(this).parents('tr').each(function(itr, tr){
-          $(tr).find('td:gt(0):not(.ls-table-actions)').find(':input, select, div.datepicker').attr('disabled', true);
-          $(tr).find('.datepicker').datepicker("destroy");
-          $(tr).find('.datepicker .input-group-btn').remove();
-        });
-        $(this).parents('tr').find('.btn-group').show();
-        $(this).parents('.lsa').remove();
-      } else {
-      }
-    });
-  }
-
-  // Aplica as classes do header da tabela nos seus equivalentes no tbody
-  function applyHeaderBehavior($table){
-    var thClasses = [];
-    $table.find('thead tr th').each(function(ith, th){
-      thClasses.push($(th).attr('class') );
-    });
-    $table.find('tbody tr').each(function(itr, tr){
-      var tds = $(tr).find('td');
-      for (var i = thClasses.length - 1; i >= 0; i--) {
-        tds.eq(i).addClass( thClasses[i] )
-      };
-    });
-    lineActions($table);
-  }
-
-  function toggleHeaderCheckbox($table){
-    var $checkboxes = $table.find('tbody input[type="checkbox"]'),
-        $checkAll = $table.find('thead input[type="checkbox"]');
-    $checkAll.on('change', function (evt) {
-      $checkboxes
-        .prop('checked', evt.currentTarget.checked)
-        .parents('tr').toggleClass('selected',  evt.currentTarget.checked );
-        toggleTableGroupActions($table, (evt.currentTarget.checked ? $checkboxes.size() : 0 ) );
-    });
-    $checkboxes.on('change', function (evt) {
-      var checkeds = $checkboxes.filter(':checked').size(),
-          checkAllStatus = $checkboxes.size() === checkeds;
-      $checkAll.prop('checked', checkAllStatus );
-      $(this).parents('tr').toggleClass('selected',  evt.currentTarget.checked );
-      toggleTableGroupActions($table, checkeds );
-    });
-  }
-
-  // Insere dropdown para cada linha da coluna de acoes se for necessário
-  function lineActions($table){
-    var $tableActions = $table.find('td.ls-table-actions');
-    var tableLines = $table.find('tbody tr').size();
-    $tableActions.each(function(itd, td){
-      var $actions = $(td).find('a, button');
-      var line = $(td).parent('tr').index() ;
-      if ( $actions[1] || isXsmall ){
-        var dropdown = locastyle.templates.button_dropdown_single({
-          label     : isXsmall ? "" : "Ações",
-          labelClass: 'btn-xs',
-          addClass  : 'pull-right' + ( tableLines - line < 3 ? ' dropup' : '' ),
-          actions   : (function(){
-            var actions = [];
-            if ( !$(td).find('[data-action-modal="view"]')[0] && isXsmall ){
-              actions.push({label: 'Visualizar', link: '#', extras: 'data-action-modal="view"'})
-            }
-            $actions.each(function(i, action){
-              var extraData = '';
-              $.each($(action).data(), function(name, value){
-                extraData += 'data-' + name.replace(/[A-Z]/g, '-$&').toLowerCase() + '="' + value + '" ';
-              });
-              var $action = $(action);
-              var hasDivider = /danger/.test( $action.attr('class') ) || $action.find('[class*="danger"]')[0] ? true : false;
-              actions.push( {label: $action.html(), link: $action.attr('href'), classes: (hasDivider ? 'text-danger' : ''), extras: extraData, hasDivider: hasDivider } );
-            });
-            return actions;
-          })()
-        });
-        $(td).html(dropdown);
-      } else {
-        $actions.addClass('btn btn-xs btn-default');
-        // verifica necessidade e insere cor original da acao
-        if ( $actions.attr('class') ){
-          var  textClasses = $.grep( $actions.attr('class').split(' '), function(e, i){  return e.indexOf('text-') != -1 }).join(' ');
+      $modal.find('.modal-title-text').text( $(this).text() );
+      var $modalBody = $modal.find('.modal-body');
+      var $modalFooter = $modal.find('.modal-footer');
+      var isEdit = $(this).attr('href') === '#edit';
+      if ( isEdit ){
+        if ( $modalBody.find('[disabled]').length === 0  ){
+          return;
         }
-        if ( textClasses ){
-          $actions.wrapInner('<span class="' + textClasses + '" />');
-        }
+        $modalBody.find(':input, select, div.datepicker').attr('disabled', false);
+        $modalBody.find('div.datepicker .input-group-btn').remove();
+        // enableFormControls($modal);
+        $modalFooter.find('.btn.btn-primary').show();
+      } else {
+        $modalBody.find(':input, select, div.datepicker').attr('disabled', true);
+        $modalBody.find('.datepicker').datepicker("destroy");
+        $modalBody.find('.datepicker .input-group-btn').remove();
+        $modalBody.find('.select2').select2('destroy');
+        $modalFooter.find('.btn.btn-primary').hide();
       }
     });
   }
@@ -271,13 +279,6 @@ locastyle.tables = (function() {
         $modal.remove();
       });
     });
-  }
-
-  function toggleTableGroupActions ($table, checkeds) {
-    $table.prev('.ls-table-group-actions, [data-target]')
-      .toggle( checkeds >= 1 )
-      .find('.counterChecks').text( checkeds )
-      .next('.counterChecksStr').text( checkeds > 1 ? 'itens selecionados' : 'item selecionado' );
   }
 
   function mobileTableGroupActions($table){
