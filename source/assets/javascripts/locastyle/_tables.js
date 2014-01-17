@@ -186,7 +186,7 @@ locastyle.tables = (function() {
           actions: [
             (function(){
               if ( modalActionType === 'edit' ){
-                return {label: 'Salvar', classes: 'btn-primary'}
+                return {label: 'Salvar', classes: 'btn-primary table-modal-save'}
               } else {
                 return {}
               }
@@ -206,7 +206,30 @@ locastyle.tables = (function() {
       locastyle.forms.formReadOnly($modalBody, actionModal === 'view');
       enableFormControls($modal);
       modalDropdownActions($modal);
+      saveModalEdit($modal);
     });
+  }
+
+  function saveModalEdit($modal){
+    $modal.find('.table-modal-save').on('click', function(e){
+      e.preventDefault();
+      $.ajax({
+        url         : 'a',
+        beforeSend  : blockModal($modal),
+        complete    : updateTable($modal),
+        data        : '',
+        // dataType    : ,
+        error       : blockModal($modal),
+        // statusCode  : ,
+        timeout     : blockModal($modal),
+        type        : 'POST'
+      });
+    });
+  }
+
+  function blockModal($modal){
+  }
+  function updateTable($modal){
   }
 
   // busca os campos da linha, label sendo o th da coluna, descarta as colunas checkAll e Acoes
