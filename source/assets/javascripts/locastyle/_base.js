@@ -140,8 +140,8 @@ var locastyle = (function() {
   var subMenu = function(){
     $("[data-toggle='submenu']").on('click', function(e){
       e.preventDefault();
-      $(this).prev('.submenu').toggleClass('hidden');
-      $(this).next('.submenu').toggleClass('hidden');
+      $('.submenu').addClass('hidden');
+      $(this).next('.submenu').removeClass('hidden');
       $(this).toggleClass("active");
     })
   }
