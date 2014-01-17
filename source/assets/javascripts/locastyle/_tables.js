@@ -216,7 +216,7 @@ locastyle.tables = (function() {
       var $addInputs = $tr.parents('form').find('input').filter(function () {
         return $(this).parents('table').length === 0;
       });
-      var dataForm = $modal.find('form').serialize()  + '&' +$addInputs.serialize();
+      var dataForm = $modal.find('form').serialize()  + '&' + $addInputs.serialize();
       $.ajax({
         data        : dataForm,
         type        : 'POST',
@@ -246,7 +246,14 @@ locastyle.tables = (function() {
   }
 
   function updateTable($modal, $tr, data){
-    showMessage($modal, $tr, 'success')
+    showMessage($modal, $tr, 'success');
+    $modal.find('form').find(':input').each(function(indM, inputModal){
+      $tr.find(':input').each(function(indT, inputTr){
+        if ( $(inputTr).attr('name') == $(inputModal).attr('name') ){
+          $(inputTr).val( $(inputModal).val() );
+        }
+      });
+    });
   }
 
   // busca os campos da linha, label sendo o th da coluna, descarta as colunas checkAll e Acoes
