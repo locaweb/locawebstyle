@@ -47,9 +47,21 @@ $bg-actions-color:  #00a272
 				background-color: #fff
 
 		tr
+			// +single-transition(color, .5s, false, .5)
+			+single-transition()
 
 			&[data-action-modal="view"]
 				cursor: pointer
+
+			&.line-save-success, &.line-save-success:hover
+				color: #3c763d
+				background-color: #dff0d8
+				border-color: #d6e9c6
+				
+			&.line-save-error, &.line-save-error:hover
+				color: #a94442
+				background-color: #f2dede
+				border-color: #ebccd1
 
 			&:nth-child(odd)
 				@extend .bg-gray4
