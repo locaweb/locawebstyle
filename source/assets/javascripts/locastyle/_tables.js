@@ -206,30 +206,49 @@ locastyle.tables = (function() {
       locastyle.forms.formReadOnly($modalBody, actionModal === 'view');
       enableFormControls($modal);
       modalDropdownActions($modal);
-      saveModalEdit($modal);
+      saveModalEdit($modal, $(this).parents('tr'));
     });
   }
 
-  function saveModalEdit($modal){
+  function saveModalEdit($modal, $tr){
     $modal.find('.table-modal-save').on('click', function(e){
       e.preventDefault();
+      var $addInputs = $tr.parents('form').find('input').filter(function () {
+        return $(this).parents('table').length === 0;
+      });
+      var dataForm = $tr.parents('form').serialize() 
+      + '&' +$addInputs.serialize();
+      console.log( dataForm )
       $.ajax({
-        url         : 'a',
-        beforeSend  : blockModal($modal),
-        complete    : updateTable($modal),
         data        : '',
-        // dataType    : ,
-        error       : blockModal($modal),
-        // statusCode  : ,
-        timeout     : blockModal($modal),
-        type        : 'POST'
+        type        : 'POST',
+        url         : $modal.find('form').attr('action'),
+        beforeSend  : blockModal($modal, true),
+        complete    : blockModal($modal, false),
+        error       : function(jqXHR, textStatus, errorThrown){
+          showMessage($modal, $tr, 'error');
+        },
+        success     : function(data){
+          updateTable($modal, $tr, data);
+        }
       });
     });
   }
 
-  function blockModal($modal){
+  function showMessage($modal, $tr, type){
+    $tr.addClass('line-save-' + type);
+    setTimeout(function(){
+      $tr.removeClass('line-save-' + type);
+    }, 1500);
+    $modal.modal('hide');
   }
-  function updateTable($modal){
+
+  function blockModal($modal, block){
+    $modal.find('.modal-footer').find('button').prop('disabled', block);
+  }
+
+  function updateTable($modal, $tr, data){
+    showMessage($modal, $tr, 'success')
   }
 
   // busca os campos da linha, label sendo o th da coluna, descarta as colunas checkAll e Acoes
