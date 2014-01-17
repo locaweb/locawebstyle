@@ -172,13 +172,16 @@ locastyle.tables = (function() {
           ]
         });
       }
+      var formData = {}
+      formData.fields = formModalFields($table, $(this).parents('tr'));
+      formData.action = $(this).attr('href');
       var config = {
         header : {
           title: headerTitle,
           close: false,
           action: headerAction
         },
-        body: locastyle.templates.form(formModalFields($table, $(this).parents('tr') )),
+        body: locastyle.templates.form( formData ),
         footer: {
           actions: [
             (function(){
@@ -208,9 +211,9 @@ locastyle.tables = (function() {
 
   // busca os campos da linha, label sendo o th da coluna, descarta as colunas checkAll e Acoes
   function formModalFields($table, $tr){
-    var formData = {},
+    var fields = {},
         labels = [];
-    formData.fields = [];
+    fields = [];
     $table.find('thead th').each(function(itr, th){
       labels.push( $.trim($(th).text()) );
     });
@@ -228,10 +231,10 @@ locastyle.tables = (function() {
     //   } else {
     //       var inputHTML =  '<p>' + $(td).html() + '</p>';
     //   }
-      formData.fields.push({ label: labels[itd], input: $(td).html() });
+      fields.push({ label: labels[itd], input: $(td).html() });
     });
-    formData.fields = formData.fields.slice(1, formData.fields.length -1 );
-    return formData;
+    fields = fields.slice(1, fields.length -1 );
+    return fields;
   }
 
   function modalDropdownActions($modal){
