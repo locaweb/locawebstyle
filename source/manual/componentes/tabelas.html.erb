@@ -150,4 +150,24 @@ menu_page: sidebar-componentes.erb
 <p>Perceba também que existe um atributo <code>data-target</code> cujo valor é a tabela que você quer relacionar à estas ações.</p>
 
 <h2 class="title-2">Tabela complexa</h2>
+<p>Tabelas complexas possuem ações para cada linha de registros, como editar, visualizar, excluir, etc.</p>
+<p>Essas tabelas, <b>obrigatoriamente</b>, devem possuir a coluna de seleção de elementos, com checkboxes e uma coluna com ações, em lnks ou botões</p>
+<p>A tabela, com o mesmo código, possui algumas diferenças na visualizaçao, dependendo do dispositivo.</p>
+<p>Todas as regras, comportamentos e configuraçoes das tabelas compexas, listadas:</p>
+<ul>
+	<li><b>Ação única</b>: exibida como um botão em desktop e como um dropdown em mobile</li>
+	<li><b>Dropdown</b>: exibido com o label "<i>Ações</i>" no desktop e apenas com uma seta no mobile</li>
+	<li><b>Dropdown em mobile</b>: nas últimas duas linhas da tabela o dropdown de açoes abre para cima, evitando ficar fora da área da tela, caso a tabela seja o último elemento da página.</li>
+	<li><b>Colunas</b>: todas são exibidas no desktop e pode-se ocultar em mobile, bastando adicionar a class <code>hidden-xs</code> na coluna equivalente no cabeçalho (<code>th</code>).</li>
+	<li><b>Visualização</b>: em mobile, ao se clicar em qualquer lugar da linha é exibida uma <i>modal</i> com todas as informações.</li>
+	<li><b>Visualização em mobile</b>: mesmoq ue nao exista no código a ação <i>Visualizar</i>, ela é inserida em dispositivos com  telas pequenas.</li>
+	<li><b>Ações <i>danger</i></b>: ações que possuam a classe <code>danger</code>, ao clicadas, abrem um modal de confirmação com o texto atribuído no paraâmetro <code>data-confirm-text</code>.<br> Exemplo: <code>data-confirm-text="Confirma exclusão do item?"</code>.</li>
+	<li><b>Excluisão</b>: ao se excluir uma linha de dados, é exibida uma sinalizaçao da linha que foi excluída, antes da remoçao dela da tabela.</li>
+	<li><b>Edição com sucesso</b>: quando uma linha é editada com sucesso, o modal é fechado e é exibida a linha em verde por um instante.</li>
+	<li><b>Falha na edição</b>: é exibida a linha com fundo vermelho.</li>
+
+</ul>
+<p>Algumas ações comuns já tem seus comportamentos definidos.</p>
+<p>Exemplo:</p>
 <%= partial "manual/componentes/partials/tabela-complexa.html.erb" %>
+
