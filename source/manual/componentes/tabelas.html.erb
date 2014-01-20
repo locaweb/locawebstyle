@@ -173,3 +173,48 @@ menu_page: sidebar-componentes.erb
 <p>Exemplo:</p>
 <%= partial "manual/componentes/partials/tabela-complexa.html.erb" %>
 
+<div class="example">
+	<form action="/servidor/salvar" method="post">
+		<input type="hidden" name="token" value="ehOCabraMesmo">
+		<div class="well well-sm clearfix ls-table-group-actions">
+			<p class="d-inline-block">
+				<strong class="counterChecks">0</strong> 
+				<span class="counterChecksStr">item selecionado</span> 
+			</p>
+			<div class="actions pull-right">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default">Duplicar</button>
+					<a href="#" class="btn btn-default">Relatorio</a>
+					<a href="#" class="btn btn-default">Arquivar</a>
+				</div>
+				<button type="button" class="btn btn-default"><span class="text-danger">Excluir</span></button>
+			</div>
+		</div>
+		<table class="table ls-table">
+			<thead>
+				<tr>
+					<th class="txt-center"><input type="checkbox"></th>
+					<th class="ls-nowrap col-xs-3">Título</th>
+					<th class="hidden-xs">Campanha</td>
+					<th>Status</th>
+					<th class="hidden-xs">Data de envio</th>
+					<th class="ls-table-actions">Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td> <input type="checkbox"> </td>
+					<td>Somente texto <span class="label label-success">Success</span></td>
+					<td>Campanha</td>
+					<td>Enviada</td>
+					<td>21/09/2013</td>
+					<td>
+						<a href="#/fake-server/1/acao-nao-prevista">Ação qualquer</a>
+						<a href="/fake-server/1/view"   data-action-modal="view">Visualizar</a>
+						<a href="/fake-server/1/delete" data-confirm-text="Confirma exclusão do item?" class="text-danger">Excluir</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</div>
