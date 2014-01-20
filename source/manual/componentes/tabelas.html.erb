@@ -160,6 +160,8 @@ menu_page: sidebar-componentes.erb
 	<li><b>Dropdown</b>: exibido com o label "<i>Ações</i>" no desktop e apenas com uma seta no mobile</li>
 	<li><b>Dropdown em mobile</b>: nas últimas duas linhas da tabela o dropdown de açoes abre para cima, evitando ficar fora da área da tela, caso a tabela seja o último elemento da página.</li>
 	<li><b>Colunas</b>: todas são exibidas no desktop e pode-se ocultar em mobile, bastando adicionar a class <code>hidden-xs</code> na coluna equivalente no cabeçalho (<code>th</code>).</li>
+	<li><b>Edição</b>: Para que um ação tenha o comportamento de edição, ela deve possuir o parâmetro <code>data-action-modal="edit"</code></li>
+	<li><b>Visualização</b>: Para que um ação tenha o comportamento de visualização, ela deve possuir o parâmetro <code>data-action-modal="view"</code></li>
 	<li><b>Visualização</b>: em mobile, ao se clicar em qualquer lugar da linha é exibida uma <i>modal</i> com todas as informações.</li>
 	<li><b>Visualização em mobile</b>: mesmoq ue nao exista no código a ação <i>Visualizar</i>, ela é inserida em dispositivos com  telas pequenas.</li>
 	<li><b>Ações <i>danger</i></b>: ações que possuam a classe <code>danger</code>, ao clicadas, abrem um modal de confirmação com o texto atribuído no paraâmetro <code>data-confirm-text</code>.<br> Exemplo: <code>data-confirm-text="Confirma exclusão do item?"</code>.</li>
@@ -171,9 +173,11 @@ menu_page: sidebar-componentes.erb
 </ul>
 <p>Algumas ações comuns já tem seus comportamentos definidos.</p>
 <p>Exemplo:</p>
-<%= partial "manual/componentes/partials/tabela-complexa.html.erb" %>
-
 <div class="example">
+	<%= partial "manual/componentes/partials/tabela-complexa.html.erb" %>
+</div>
+
+<pre class="lang-html prettyprint-code linenums">
 	<form action="/servidor/salvar" method="post">
 		<input type="hidden" name="token" value="ehOCabraMesmo">
 		<div class="well well-sm clearfix ls-table-group-actions">
@@ -187,7 +191,9 @@ menu_page: sidebar-componentes.erb
 					<a href="#" class="btn btn-default">Relatorio</a>
 					<a href="#" class="btn btn-default">Arquivar</a>
 				</div>
-				<button type="button" class="btn btn-default"><span class="text-danger">Excluir</span></button>
+				<button type="button" class="btn btn-default">
+					<span class="text-danger">Excluir</span>
+				</button>
 			</div>
 		</div>
 		<table class="table ls-table">
@@ -217,4 +223,4 @@ menu_page: sidebar-componentes.erb
 			</tbody>
 		</table>
 	</form>
-</div>
+</pre>
