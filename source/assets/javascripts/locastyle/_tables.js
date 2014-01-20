@@ -328,7 +328,42 @@ locastyle.tables = (function() {
       $modal.on('hidden.bs.modal', function (e) {
         $modal.remove();
       });
+      var $tr = $(this).parents('tr');
+      excludeLine($modal, $table, $tr);
     });
+  }
+
+  function  excludeLine($modal, $table, $tr) {
+    $modal.find('.modal-footer .btn-danger').on('click', function(){
+      var $addInputs = $table.parents('form').find('input').filter(function () {
+        return $(this).parents('table').length === 0;
+      });
+      var dataForm = $modal.find('form').serialize()  + '&' + $addInputs.serialize();
+      var url = $(this).attr('href');
+      $.ajax({
+        data        : dataForm,
+        type        : 'POST',
+        url         : url,
+        beforeSend  : blockModal($modal, true),
+        complete    : blockModal($modal, false),
+        error       : function(jqXHR, textStatus, errorThrown){
+          showMessage($modal, $tr, 'error');
+        },
+        success     : function(data){
+          removeLine($modal, $tr);
+        }
+      });
+    });
+  }
+
+  function removeLine ($modal, $tr) {
+    $modal.modal('hide');
+    $tr.addClass('line-save-warn');
+    setTimeout(function(){
+      $tr.slideUp('fast', function(){
+        $tr.remove();
+      });
+    }, 1000);
   }
 
   function mobileTableGroupActions($table){
