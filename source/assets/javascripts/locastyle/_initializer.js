@@ -8,5 +8,5 @@ $(window).load(function() {
   locastyle.passwordStregth.init();
   locastyle.carousel.init();
   locastyle.accessibility.init();
-  locastyle.collapse.init();
+  locastyle.collapse.init($(document));
 });
