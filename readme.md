@@ -5,7 +5,7 @@ Locaweb Style Guide
 
 O Locaweb Style são os padrões de interface utilizados nos produtos da Locaweb. Ele explora um simples e flexível HTML, CSS e Javascript para as necessidades comuns na manutenção e criação dos nossos serviços.
 
-Este projeto foi criado para manter uniforme a identidade de todas as interfaces dos produtos da Locaweb. Outro objetivo importante para tal iniciativa é a uniformização do código da Locaweb, melhorando a perfomance de produção, facilitando o aprendizado de novos integrantes e agilizando a implementação de novas ideias.
+Este projeto foi criado para manter uma uniformidade da identidade de todas as interfaces dos produtos da Locaweb. Outro objetivo importante é a padronização do código front-end, melhorando a perfomance de produção, facilitando o aprendizado de novos integrantes e agilizando a implementação de novas ideias.
 
 Com essa estrutura, a Locaweb integra de forma consistente as necessidades de interface e programação, trabalhando em um código client-side robusto e escalável. Assim mantemos a fidelidade do layout sob um código limpo e enxuto, que se adequa às necessidades dos programadores.
 
@@ -43,12 +43,6 @@ Dentro do Bootstrap eles usam o Normalize, que é um CSS Reset bastante completo
 ***JQuery***
 
 O JQuery é o framework mais utilizado para controlar comportamentos de elementos e outras coisinhas mais. Acho que ele dispensa apresentações. [Link do projeto](http://jquery.com)
-
-***Modernizr***
-
-O Modernizr é um script de detecção de suporte HTML5. Ele nos avisa se o browser suporta ou não suporta as novas propriedades do CSS, nos dando a possibilidade de criar fallbacks para os browsers incompatíveis. Assim fica muito fácil saber qual browser suporta ou não SVG, Canvas, RGBA, drop shadow, gradiente e tudo o mais.
-
-Ele foi criado por desenvolvedores muito renomados como [Paul Irish](http://paulirish.com/) e [Faruk Ates](http://farukat.es/). [Site do projeto](http://www.modernizr.com/)
 
 -----
 
