@@ -77,7 +77,7 @@ ignore "/v1/layouts/*.html"
 set :only_assets, "http://assets.locaweb.com.br/locastyle/edge.zip"
 set :download_github, "https://github.com/locaweb/locawebstyle/archive/master.zip"
 set :download_github_v1, "https://github.com/locaweb/locawebstyle/archive/v1-legacy.zip"
-set :stable, "2.0.0-b7"
+set :stable, "2.0.0-b8"
 set :stable_v1, "1.2.15"
 
 set :css_dir, 'assets/stylesheets'
@@ -87,6 +87,8 @@ set :fonts_dir, 'assets/fonts'
 
 set :bootstrap_js, '/assets/bootstrap/js/bootstrap.js'
 set :bootstrap_css, '/assets/bootstrap/css/bootstrap.css'
+set :bootstrap_cdn_css, '//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'
+set :bootstrap_cdn_js, '//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js'
 
 set :base_url, ""
 set :base_url_v1, "/v1"
