@@ -34,4 +34,4 @@ tags: changelog
 
 **Documentação**
 
-\- Atualizamos as versões do Bootstrap e Locaweb Style no texto de COMO USAR.
+\- Atualizamos as versões do Bootstrap e Locaweb Style no texto de [COMO USAR](http://locaweb.github.io/locawebstyle/manual/introducao/como-usar/).
