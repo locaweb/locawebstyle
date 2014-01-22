@@ -99,16 +99,16 @@
 <p>No Header, coloque o CSS.</p>
 <pre class="lang-html prettyprint-code linenums">
 <!-- Se estiver usando bootstrap, coloque o CSS do Locastyle logo após a sua chamada -->
-<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/2.0.0-b7/stylesheets/locastyle.css">
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/2.0.0-b8/stylesheets/locastyle.css">
 </pre>
 
 <p>Coloque no final do documento o JS.</p>
 <pre class="lang-html prettyprint-code linenums">
 <!-- Atente-se para a ordem: primeiro jquery, depois locastyle, depois o JS do Bootstrap. -->
-<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.0-b7/javascripts/locastyle.js"></script>
-<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.0-b8/javascripts/locastyle.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 </pre>
 
 <p>Se você quiser utilizar sempre a versão mais atual, use os caminhos dos assets sem a versão travada:</p>
@@ -139,72 +139,71 @@
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
 
   &lt;!-- CSS --&gt;
-  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//assets.locaweb.com.br/locastyle/2.0.0-b7/stylesheets/locastyle.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//assets.locaweb.com.br/locastyle/2.0.0-b8/stylesheets/locastyle.css&quot;&gt;
 
 &lt;/head&gt;
 &lt;body&gt;
 
-  &lt;div id="wrap"&gt;
-    &lt;!-- Header principal --&gt;
-    &lt;header class=&quot;header&quot; role=&quot;banner&quot;&gt;
-      &lt;div class=&quot;container&quot;&gt;
-        &lt;span class=&quot;control-menu visible-xs ico-menu-2&quot;&gt;&lt;/span&gt;
-        &lt;span class=&quot;control-sidebar visible-xs ico-list&quot;&gt;&lt;/span&gt;
-        &lt;h1 class=&quot;project-name&quot;&gt;&lt;a href=&quot;#&quot;&gt;Nome do Sistema&lt;/a&gt;&lt;/h1&gt;
-        &lt;a href=&quot;#&quot; class=&quot;help-suggestions ico-question hidden-xs&quot;&gt;Ajuda e Sugest&otilde;es&lt;/a&gt;
 
-        &lt;div class=&quot;dropdown hidden-xs&quot;&gt;
-          &lt;a href=&quot;#&quot; data-toggle=&quot;dropdown&quot; class=&quot;title-dropdown&quot;&gt;emkt2013&lt;/a&gt;
-          &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;dLabel&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 3&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/header&gt;
+  &lt;!-- Header principal --&gt;
+  &lt;header class=&quot;header&quot; role=&quot;banner&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;span class=&quot;control-menu visible-xs ico-menu-2&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;control-sidebar visible-xs ico-list&quot;&gt;&lt;/span&gt;
+      &lt;h1 class=&quot;project-name&quot;&gt;&lt;a href=&quot;#&quot;&gt;Nome do Sistema&lt;/a&gt;&lt;/h1&gt;
+      &lt;a href=&quot;#&quot; class=&quot;help-suggestions ico-question hidden-xs&quot;&gt;Ajuda e Sugest&otilde;es&lt;/a&gt;
 
-    &lt;!-- Menu --&gt;
-    &lt;div class=&quot;nav-content&quot;&gt;
-      &lt;menu class=&quot;menu&quot;&gt;
-        &lt;ul class=&quot;container&quot;&gt;
-          &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active ico-home&quot; role=&quot;menuitem&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Lista de contatos&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Mensagens&lt;/a&gt;
-            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Enviar&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Criar&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Editar&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Relat&oacute;rios&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Campanhas&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Templates&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Relat&oacute;rios&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Configura&ccedil;&otilde;es&lt;/a&gt;&lt;/li&gt;
+      &lt;div class=&quot;dropdown hidden-xs&quot;&gt;
+        &lt;a href=&quot;#&quot; data-toggle=&quot;dropdown&quot; class=&quot;title-dropdown&quot;&gt;emkt2013&lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;dLabel&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Option 3&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
-      &lt;/menu&gt;
-      &lt;h2 class=&quot;title-sep visible-xs&quot;&gt;Mais&lt;/h2&gt;
-      &lt;ul class=&quot;nav-mob-list visible-xs&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;ico-help-circle&quot;&gt;Ajuda e sugest&otilde;es&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;!-- Aqui começa a parte de conteúdo dividido por colunas --&gt;
-    &lt;main class=&quot;main&quot;&gt;
-      &lt;div class=&quot;container&quot;&gt;
-        &lt;div class=&quot;row&quot;&gt;
-          &lt;div class=&quot;col-md-9 content&quot; role=&quot;main&quot;&gt;
-            Coluna da esquerda com o conte&uacute;do.
-          &lt;/div&gt;
-          &lt;aside class=&quot;col-md-3 sidebar&quot; role=&quot;complementary&quot;&gt;
-            Sidebar
-          &lt;/aside&gt;
-        &lt;/div&gt;
       &lt;/div&gt;
-    &lt;/main&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;!-- Menu --&gt;
+  &lt;div class=&quot;nav-content&quot;&gt;
+    &lt;menu class=&quot;menu&quot;&gt;
+      &lt;ul class=&quot;container&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active ico-home&quot; role=&quot;menuitem&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Lista de contatos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Mensagens&lt;/a&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Enviar&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Criar&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Editar&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Relat&oacute;rios&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Campanhas&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Templates&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Relat&oacute;rios&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; role=&quot;menuitem&quot;&gt;Configura&ccedil;&otilde;es&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/menu&gt;
+    &lt;h2 class=&quot;title-sep visible-xs&quot;&gt;Mais&lt;/h2&gt;
+    &lt;ul class=&quot;nav-mob-list visible-xs&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;ico-help-circle&quot;&gt;Ajuda e sugest&otilde;es&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/div&gt;
+
+  &lt;!-- Aqui começa a parte de conteúdo dividido por colunas --&gt;
+  &lt;main class=&quot;main&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-9 content&quot; role=&quot;main&quot;&gt;
+          Coluna da esquerda com o conte&uacute;do.
+        &lt;/div&gt;
+        &lt;aside class=&quot;col-md-3 sidebar&quot; role=&quot;complementary&quot;&gt;
+          Sidebar
+        &lt;/aside&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
 
   &lt;!-- Footer --&gt;
   &lt;footer class=&quot;footer&quot;&gt;
@@ -227,9 +226,9 @@
   &lt;/footer&gt;
 
   &lt;!-- Scripts - Atente-se na ordem das chamadas --&gt;
-  &lt;script type=&quot;text/javascript&quot; src=&quot;//code.jquery.com/jquery-1.10.2.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/2.0.0-b7/javascripts/locastyle.js&quot;&gt;&lt;/script&gt;
-  &lt;script type=&quot;text/javascript&quot; src=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;//code.jquery.com/jquery-2.0.3.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;//assets.locaweb.com.br/locastyle/2.0.0-b8/javascripts/locastyle.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
@@ -255,7 +254,7 @@
 
 
 
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
   <script src="../../../assets/javascripts/locastyle.js" type="text/javascript"></script>
   <script src="/locawebstyle/assets/bootstrap/js/bootstrap.js"></script>
   <script src="/locawebstyle/assets/google-code-prettify/src/prettify.js"></script>

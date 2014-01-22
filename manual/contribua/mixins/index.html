@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Contribua - CSS & SASS</title>
+	<title>Mixins do Locaweb Style</title>
 	<meta charset="utf-8">
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
 	<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
@@ -10,7 +10,7 @@
 	<link href="../../../assets/stylesheets/locastyle.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="../../../assets/stylesheets/manual.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
-<body class="manual manual_contribua manual_contribua_sass manual_contribua_sass_index">
+<body class="manual manual_contribua manual_contribua_mixins manual_contribua_mixins_index">
 
 	<!-- topbar header -->
 	<header id="topbar" class="clearfix">
@@ -69,10 +69,56 @@
 
 			<article class="text col-lg-9 col-md-9 man-article">
 				<header>
-  <!-- <h2 class="ico-edit">Aprenda o básico</h2> -->
-  <h1>CSS & SASS</h1>
-  <h3>Padrões de nomenclatura, criação de novos componentes e uso do SASS</h3>
+	<h1>Mixin</h1>
+	<h3>Conheça os mixins do Locaweb Style</h3>
 </header>
+
+<p>Eles permitem definir estilos que podem ser re-utilizados em todo o estilo, sem necessidade de recorrer a classes não-semânticas. Mixins também pode conter regras CSS completas, e qualquer outra coisa permitida em outras partes de um documento Sass. Eles podem até mesmo ter argumentos que lhe permite produzir uma ampla variedade de estilos, com muito poucos mixins.</p>
+<p>Quando algum trecho de css for repetitivo, vale pena analisar, e se necessário criar mixins para reaproveitar esse código em outros elementos.</p>
+<p>Pra saber mais detalhes sobre mixins, vale a pena conferir a <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins" class="text-underline" target="_blank">documentação</a>.</p>
+<p>Para criar um novo mixin basta inserí-lo no arquivo <code>mixins.sass</code>.  </p>
+
+<h4>Nomenclatura</h4>
+<p>Recomendamos que a nomenclatura seja clara e evite abreviaturas. O ideal é que o nome do mixin já indique sua funcionalidade.</p>
+<p><strong>Não usar: </strong><code>=absTL(...)</code></p>
+<p><strong>Assim é melhor: </strong><code>=absoluteTopLeft(...)</code></p>
+
+<h3>Conheça os mixins do Locaweb Style</h3>
+
+<h4>Setas</h4>
+<p><strong>$arrow-color</strong> = cor da seta <br> <strong>$arrow-size</strong> = tamanho da seta</p>
+<p><code>=arrow-up</code>($arrow-color, $arrow-size)</p>
+<p><code>=arrow-right</code>($arrow-color, $arrow-size)</p>
+<p><code>=arrow-down</code>($arrow-color, $arrow-size)</p>
+<p><code>=arrow-left</code>($arrow-color, $arrow-size)</p>
+<div class="example">
+<div class="well arrow-up">Box com seta para cima</div>
+<pre class="lang-html linenums prettyprint-code">
+<div class="well arrow-up">Box com seta para cima</div>
+</pre>
+</div>
+
+<h4>Círculo com ícone</h4>
+<p>Normalmente utilizado no <code>:before</code> do elemento.</p>
+<p><strong>$size</strong> = largura e altura<br><strong>$font-size</strong> = tamanho da fonte do ícone</p>
+<p><code>=border-circle</code>($size, $font-size)</p>
+<div class="example">
+		<h1 class="sidebox-title ico-user">Dados da conta</h1>
+<pre class="lang-html linenums prettyprint-code">
+<h1 class="sidebox-title ico-user">Dados da conta</h1>
+</pre>
+</div>
+
+<h4>Gradiente Linear</h4>
+<p><strong>$start-color</strong> = Cor inicial <br><strong>$end-color</strong> = Cor final</p>
+<p><code>=gradient-linear</code>($start-color, $end-color)</p>
+
+<h4>Bordas arredondadas</h4>
+<p><code>=border-radius-default</code> - utilizado para definir cantos arredondados e padronizados de elementos do Locawe Style.</p>
+
+<h4>Largura de bordas no fim de elemento</h4>
+<p><code>=border-bottom-default</code> - largura da borda utilizada no fim de alguns elementos. Utilizado em  abas e boxes de sidebar.</p>
+
 
 			</article>
 		</div>
