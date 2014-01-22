@@ -11,7 +11,9 @@
 				<a href="#" class="btn btn-default">Relatorio</a>
 				<a href="#" class="btn btn-default">Arquivar</a>
 			</div>
-			<button type="button" class="btn btn-default"><span class="text-danger">Excluir</span></button>
+			<button type="button" class="btn btn-default">
+				<span class="text-danger">Excluir</span>
+			</button>
 		</div>
 	</div>
 	<table class="table ls-table">
@@ -27,36 +29,43 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td> <input type="checkbox"> </td>
-				<td>Somente texto <span class="label label-success">Success</span></td>
+				<td> <input name="id" value="1" type="checkbox"> </td>
+				<td>Texto 1 <span class="label label-success">Success</span></td>
 				<td>Campanha</td>
 				<td>Enviada</td>
 				<td>21/09/2013</td>
 				<td>
-					<a href="#/fake-server/1/acao-nao-prevista">Ação qualquer</a>
 					<a href="/fake-server/1/view"   data-action-modal="view">Visualizar</a>
-					<a href="/fake-server/1/delete" data-confirm-text="Confirma exclusão do item?" class="text-danger">Excluir</a>
+					<a href="/fake-server/1/delete" data-confirm-text="Confirma exclusão do item?" class="text-danger">
+						Excluir
+					</a>
 				</td>
 			</tr>
 			<tr>
-				<td> <input type="checkbox"> </td>
-				<td>Somente texto e só visualizar e excluir</td>
+				<td> <input name="id" value="2" type="checkbox"> </td>
+				<td>Texto 2 </td>
 				<td>Campanha</td>
 				<td>Enviada</td>
 				<td>21/09/2013</td>
 				<td>
-					<a href="/fake-server/2/view"   data-action-modal="view">Visualizar</a>
-					<a href="/fake-server/2/delete" data-confirm-text="Confirma exclusão do item?" class="text-danger">Excluir</a>
+					<a href="/fake-server/1/view"   data-action-modal="view">Visualizar</a>
+					<a href="/fake-server/1/delete" data-confirm-text="Confirma exclusão do item?" class="text-danger">
+						Excluir
+					</a>
 				</td>
 			</tr>
 			<tr>
-				<td><input type="checkbox"></td>
-				<td>Texto, excluir com confirm</td>
+				<td> <input name="id" value="2" type="checkbox"> </td>
+				<td>Texto 3 </td>
 				<td>Campanha</td>
 				<td>Enviada</td>
 				<td>21/09/2013</td>
 				<td>
-					<a href="#/fake-server/3/delete" class="text-danger" data-confirm-text="Confirma exclusão do item?">Excluir</a>
+					<a href="/fake-server/1/view"   data-action-modal="view">Visualizar</a>
+					<a href="/fake-server/1/view"   data-action-modal="edit">Editar</a>
+					<a href="/fake-server/1/delete" data-confirm-text="Confirma exclusão do item?" class="text-danger">
+						Excluir
+					</a>
 				</td>
 			</tr>
 		</tbody>
