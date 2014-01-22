@@ -34,6 +34,4 @@ tags: changelog
 
 **Documentação**
 
-\- Atualizamos as versões do Bootstrap no texto
-
-\- Atualizamos as a versão do Locaweb Style no texto
+\- Atualizamos as versões do Bootstrap e Locaweb Style no texto de COMO USAR.
