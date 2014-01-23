@@ -17,8 +17,11 @@ locastyle.forms = (function() {
 
   function formReadOnly($form, disable){
     $form.prop('disabled', disable).toggleClass('ls-form-read-only');
-    $form.find(':input, select').each(function(ii, input){
+    $form.find(':input, select, [disabled]').each(function(ii, input){
       $(input).prop('disabled', disable);
+      if(disable){
+        $(input).removeAttr('disabled');
+      }
     });
   }
 
