@@ -204,7 +204,7 @@ locastyle.tables = (function() {
           $modalBody.find(':input').eq(0).focus();
         })
       locastyle.forms.formReadOnly($modalBody, actionModal === 'view');
-      enableFormControls($modal);
+      // enableFormControls($modal);
       modalDropdownActions($modal);
       saveModalEdit($modal, $(this).parents('tr'));
     });
@@ -267,20 +267,21 @@ locastyle.tables = (function() {
     var $trClone = $tr.clone();
     $trClone.find('td').each(function(itd, td){
       var $input = $(td).find(':input, select');
-    //   if ( $input[0] ){
-    //     if ( $(td).find('div.datepicker')[0] ){
-    //       var datepicker = $(td).find('div.datepicker').clone().removeAttr('disabled')
-    //       datepicker.find('input').removeAttr('disabled');
-    //       var inputHTML = datepicker[0].outerHTML;
-    //     } else {
-    //       var inputHTML =  $input.clone().removeAttr('disabled')[0].outerHTML;
-    //     }
-    //   } else {
-    //       var inputHTML =  '<p>' + $(td).html() + '</p>';
-    //   }
+      if ( $input[0] ){
+        if ( $(td).find('div.datepicker')[0] ){
+          var datepicker = $(td).find('div.datepicker').clone().removeAttr('disabled')
+          datepicker.find('input').removeAttr('disabled');
+          var inputHTML = datepicker[0].outerHTML;
+        } else {
+          var inputHTML =  $input.clone().removeAttr('disabled')[0].outerHTML;
+        }
+      } else {
+          var inputHTML =  '<p>' + $(td).html() + '</p>';
+      }
       fields.push({ label: labels[itd], input: $(td).html() });
     });
     fields = fields.slice(1, fields.length -1 );
+    console.log( fields )
     return fields;
   }
 
@@ -384,7 +385,7 @@ locastyle.tables = (function() {
         })()
       });
       $groupActions.find('.actions').html( '<p class="pull-left"></p>' + headerAction )
-      
+
     }
   }
 
