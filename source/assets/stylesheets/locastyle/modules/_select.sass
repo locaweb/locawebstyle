@@ -1,0 +1,135 @@
+.select2-container
+
+  .select2-choice
+    border-color: #ccc
+    background: #fff
+    height: 32px
+    line-height: 32px
+
+    abbr
+      right: 29px
+      top: 10px
+
+    .select2-chosen
+      background: #fff
+      font-size: 14px
+      margin-right: 42px
+      color: #333
+
+    .select2-arrow
+      border: none
+      background: #fff
+      width: 32px
+      height: 32px
+
+      b
+        background: none
+        position: relative
+
+        &::before
+          content: ""
+          position: absolute
+          top: 50%
+          left: 50%
+          margin-top: -2px
+          margin-left: -5px
+
+          width: 0
+          height: 0
+          display: block
+          border: 5px solid transparent
+          border-top-color: #333
+
+  &.select2-dropdown-open b::before
+    border-top-color: transparent !important
+    border-bottom-color: #333 !important
+    margin-top: -7px !important
+
+  &.select2-drop-above .select2-choice
+    border-color: #ccc
+    background: #fff
+    border-top: none
+
+  &.select2-container-multi
+
+    &.select2-drop-above.select2-dropdown-open .select2-choices
+      border-radius: 0 0 4px 4px
+      border-top: none
+
+    &.select2-container-active .select2-choices
+      border-color: #ccc
+
+    &.select2-dropdown-open .select2-choices
+      border-radius: 4px 4px 0 0
+
+    .select2-choices
+      border-radius: 4px
+      border-color: #ccc
+      background: #fff
+
+      .select2-search-choice
+        padding: 5px 5px 5px 18px
+        border-color: #ccc
+        background: $gray4
+        font-size: 14px
+
+    .select2-search-field input
+      font-size: 14px
+      color: #555 !important
+      font-family: open_sans_regular !important
+
+.select2-drop
+  border-color: #ccc
+
+  .select2-search input
+    background: #fff
+
+  .select2-result-label
+    font-size: 14px
+    color: #333
+
+  .select2-highlighted .select2-result-label,
+  .select2-result-label:hover
+    color: #fff
+    background: $gray1
+
+.select2-search-choice-close
+  top: 5px
+
+.select2-drop.select2-drop-above.select2-drop-active
+  border-color: #ccc
+
+
+// Validação do select
+.has-success
+  .select2-container
+    .select2-choice
+      border-color: #2b542c
+
+    &.select2-container-active
+      .select2-choice,
+      .select2-choices
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168
+
+.has-error
+  .select2-container
+    .select2-choice
+      border-color: #a94442
+
+    &.select2-container-active
+      .select2-choice,
+      .select2-choices
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483
+
+.has-warning
+  .select2-container
+    .select2-choice
+      border-color: #8a6d3b
+
+    &.select2-container-active
+      .select2-choice,
+      .select2-choices
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b

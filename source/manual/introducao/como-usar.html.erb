@@ -34,7 +34,7 @@ menu_page: sidebar-informacoes-iniciais.erb
 <p>No Header, coloque o CSS.</p>
 <pre class="lang-html prettyprint-code linenums">
 <!-- Se estiver usando bootstrap, coloque o CSS do Locastyle logo após a sua chamada -->
-<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<%= bootstrap_cdn_css %>">
 <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/<%= stable %>/stylesheets/locastyle.css">
 </pre>
 
@@ -43,7 +43,7 @@ menu_page: sidebar-informacoes-iniciais.erb
 <!-- Atente-se para a ordem: primeiro jquery, depois locastyle, depois o JS do Bootstrap. -->
 <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
 <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/<%= stable %>/javascripts/locastyle.js"></script>
-<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<%= bootstrap_cdn_js %>"></script>
 </pre>
 
 <p>Se você quiser utilizar sempre a versão mais atual, use os caminhos dos assets sem a versão travada:</p>

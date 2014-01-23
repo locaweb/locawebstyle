@@ -1,7 +1,7 @@
 ---
 title: Versão 2.0.0-b8
 date: 2013-12-13 18:39 UTC
-tags:
+tags: changelog
 ---
 
 **Adições**
@@ -12,12 +12,26 @@ tags:
 
 **Melhorias e correções**
 
-\- Ativação/Desativação de botões dentro de .btn-group
-
 \- Tracking de eventos nos selects
 
 \- [#486](https://github.com/locaweb/locawebstyle/pull/486){:target="_blank"}: Arrumando URL do edge e versão atual no config.
 
-\- Atualizandpo a versão do jquery de 1.10.2 para 2.0.3, sem suporte a ie 7/8
+\- Atualizando a versão do jquery de 1.10.2 para 2.0.3, sem suporte a ie 7/8.
 
 \- Ativação/Desativação de botões dentro de <code>.btn-group</code>.
+
+\- Na tela de Login, foi inserido um div pai chamado <code>.box-parent-login</code> para dar mais flexibilidade em customizações.
+
+\- [e6d17dc37a](https://github.com/locaweb/locawebstyle/commit/e6d17dc37afd3447f51acc0a6b0577c47a38ae3b) Fixando footer sempre no bottom da página.
+
+\- [c3e5dc7d93](https://github.com/locaweb/locawebstyle/commit/c3e5dc7d9372150213035c691b1b582cf0ab55e3) Barra da Locaweb foi excluída do projeto.
+
+\- [ef7a14bf85](https://github.com/locaweb/locawebstyle/commit/ef7a14bf8594649af63c85eeaa3ae17281533169) Antes o Select2 só podia ser aplicado se o select estivesse dentro de um form, agora retiramos essa restrição.
+
+\- [7db75fe0b2](https://github.com/locaweb/locawebstyle/commit/7db75fe0b204207d221333019b6148c383347525) Correção da função que insere classes do Breakpoints na tag HTML.
+
+---
+
+**Documentação**
+
+\- Atualizamos as versões do Bootstrap e Locaweb Style no texto de [COMO USAR](http://locaweb.github.io/locawebstyle/manual/introducao/como-usar/).

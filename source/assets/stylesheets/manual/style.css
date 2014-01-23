@@ -808,6 +808,10 @@ table td {
 /******
 ******* BREADCRUMB
 ******/
+.example .breadcrumb {
+	width: 100%;
+}
+
 .breadcrumb a {
 	color: #00a272;
 }

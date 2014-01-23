@@ -115,7 +115,7 @@ menu_page: sidebar-componentes.erb
       <option value="SP">São Paulo</option>
       <option value="RJ">Rio de Janeiro</option>
     </select>
-  </form>    
+  </form>
   <br>
   <br>
   <form>
@@ -143,6 +143,34 @@ menu_page: sidebar-componentes.erb
       <option value="MG">Minas Gerais</option>
       <option value="SP">São Paulo</option>
       <option value="RJ" selected>Rio de Janeiro</option>
+    </select>
+  </form>
+</div>
+<br>
+<h3>Estilos de validação</h3>
+<p>Para estilizar os campos nas validações adicionar as classes: <code>has-success</code>, <code>has-warning</code> ou <code>has-error</code> no elemento pai dos <code>&lt;select&gt;</code>.</p>
+<div class="example">
+  <form class="has-success">
+    <select name="select-simples" class="select2">
+      <option value="MG">Minas Gerais</option>
+      <option value="SP">São Paulo</option>
+      <option value="RJ">Rio de Janeiro</option>
+    </select>
+  </form>
+  <br>
+  <form class="has-error">
+    <select name="select-simples" class="select2">
+      <option value="MG">Minas Gerais</option>
+      <option value="SP">São Paulo</option>
+      <option value="RJ">Rio de Janeiro</option>
+    </select>
+  </form>
+  <br>
+  <form class="has-warning">
+    <select name="select-simples" class="select2">
+      <option value="MG">Minas Gerais</option>
+      <option value="SP">São Paulo</option>
+      <option value="RJ">Rio de Janeiro</option>
     </select>
   </form>
 </div>
