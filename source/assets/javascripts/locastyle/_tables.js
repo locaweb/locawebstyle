@@ -234,9 +234,9 @@ locastyle.tables = (function() {
   }
 
   function showMessage($modal, $tr, type){
-    $tr.addClass('line-save-' + type);
+    $tr.addClass(type);
     setTimeout(function(){
-      $tr.removeClass('line-save-' + type);
+      $tr.removeClass(type);
     }, 1500);
     $modal.modal('hide');
   }
@@ -348,7 +348,7 @@ locastyle.tables = (function() {
         beforeSend  : blockModal($modal, true),
         complete    : blockModal($modal, false),
         error       : function(jqXHR, textStatus, errorThrown){
-          showMessage($modal, $tr, 'error');
+          showMessage($modal, $tr, 'danger');
         },
         success     : function(data){
           removeLine($modal, $tr);
