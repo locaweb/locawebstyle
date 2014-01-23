@@ -39,7 +39,7 @@ locastyle.tables = (function() {
     var $tableActions = $table.find('td.ls-table-actions');
     var tableLines = $table.find('tbody tr').size();
     $tableActions.each(function(itd, td){
-      var $actions = $(td).find('a, button');
+      var $actions = $(td).find('a, button').not('.dropdown-toggle');
       var line = $(td).parent('tr').index() ;
       if ( $actions[1] || isXsmall ){
         var dropdown = locastyle.templates.button_dropdown_single({
