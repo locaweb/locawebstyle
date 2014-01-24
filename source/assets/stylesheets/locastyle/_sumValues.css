@@ -1,3 +1,8 @@
+.sumItem.active .sumItemLabel,
+.sumItem.active .sumValue{
+  color: #0848b3;
+}
+
 .sumItemAddLine{
   clear: both;
   display: block;
