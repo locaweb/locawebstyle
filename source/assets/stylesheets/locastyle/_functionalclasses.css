@@ -76,16 +76,14 @@ table.txtRight td, table.txtRight th {text-align: right;}
 **/
 .noBackground {background: none !important;}
 .noShadow {box-shadow: none !important;}
-
 .noBorder {border: none !important;}
 .noBorderRight {border-right: none !important;}
 .noBorderLeft {border-left: none !important;}
 .noBorderBottom {border-bottom: none !important;}
 .noBorderTop {border-top: none !important;}
-
 .noBullet, .noListStyle {list-style: none !important;}
 .borderBottomDotted{border-bottom: 1px dotted #999;}
-
+.ls-borderLeft{border-left: 1px solid #e5e5e5;}
 
 /**
 *** CURSOR DE MOUSE
