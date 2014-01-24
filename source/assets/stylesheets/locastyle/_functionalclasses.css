@@ -49,6 +49,8 @@
 }
 
 .marginBottom40 {margin-bottom: 40px;}
+.paddingVertical10{padding-top: 10px; padding-bottom: 10px;}
+.paddingHorizontal{padding-left: 10px; padding-right: 10px;}
 
 /**
 *** ALINHAMENTO DE TEXTO
@@ -122,6 +124,7 @@ table.txtRight td, table.txtRight th {text-align: right;}
 }
 .noBold {font-weight: normal!important;}
 .noBgHover {background: none!important;}
+.grayHover:hover{background-color: #f3f3f3 !important;}
 .noRadius{
   border-radius: 0!important;
   -moz-border-radius: 0!important;
