@@ -5,7 +5,9 @@ Locastyle.prototype.sumValues = (function() {
     selector: {
       container: '.ls-sum-values-container',
       item: '.sumItem',
-      elemTrigger: ':radio, :checkbox'
+      elemTrigger: ':radio, :checkbox',
+      sumTotal: '.sumResumeTotal',
+      sumText: '.sumResumeText'
     },
     itemActiveClass: 'active'
   }
@@ -33,8 +35,19 @@ Locastyle.prototype.sumValues = (function() {
           $input = $(this);
       $('[name="' + $input.attr('name') + '"]', $sumContainer ).parents(config.selector.item).removeClass(config.itemActiveClass);
       $itemSum.toggleClass(config.itemActiveClass, $input.prop('checked') );
-
+      sumItens($sumContainer);
     });
+  }
+
+  function sumItens($sumContainer){
+    var total = 0,
+        text = '';
+    $sumContainer.find(':checked').each(function(i, item){
+      total += $(item).data('sumvalue');
+      text += $(item).data('sumlabel');
+    });
+    $(config.selector.sumTotal).text(total);
+    $(config.selector.sumText).text(text);
   }
 
   return {
