@@ -9,7 +9,8 @@ Locastyle.prototype.sumValues = (function() {
       sumTotal: '.sumResumeTotal',
       sumText: '.sumResumeText'
     },
-    itemActiveClass: 'active'
+    itemActiveClass: 'active',
+    textLabelSeparator: ' + '
   }
 
   function init(){
@@ -44,9 +45,12 @@ Locastyle.prototype.sumValues = (function() {
         text = '';
     $sumContainer.find(':checked').each(function(i, item){
       total += $(item).data('sumvalue');
-      text += $(item).data('sumlabel');
+      text += ( i > 0 ? config.textLabelSeparator: '') + $(item).data('sumlabel');
     });
-    $(config.selector.sumTotal).text(total);
+    var $sumTotal = $(config.selector.sumTotal)
+    var totalPattern = $sumTotal.data('sumpattern');
+    var pat = totalPattern.match(/\{\{(.*)\}\}/)
+    $sumTotal.text(total);
     $(config.selector.sumText).text(text);
   }
 
