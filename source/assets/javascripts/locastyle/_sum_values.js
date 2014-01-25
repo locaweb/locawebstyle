@@ -10,6 +10,7 @@ Locastyle.prototype.sumValues = (function() {
       sumText: '.sumResumeText'
     },
     itemActiveClass: 'active',
+    defaultText: 'Nenhuma opção selecionada',
     textLabelSeparator: ' + '
   }
 
@@ -22,7 +23,8 @@ Locastyle.prototype.sumValues = (function() {
         heightAdjust($itemSum);
         selectItem($sumContainer, $itemSum);
       });
-    })
+      $sumContainer.find(config.selector.elemTrigger).eq(0).trigger('change');
+    });
   }
 
   function heightAdjust($itemSum){
@@ -49,9 +51,8 @@ Locastyle.prototype.sumValues = (function() {
     });
     var $sumTotal = $(config.selector.sumTotal)
     var totalPattern = $sumTotal.data('sumpattern');
-    var pat = totalPattern.match(/\{\{(.*)\}\}/)
-    $sumTotal.text(total);
-    $(config.selector.sumText).text(text);
+    $sumTotal.text(totalPattern.replace(/\{\{val\}\}/, total));
+    $(config.selector.sumText).text( text === '' ? config.defaultText : text );
   }
 
   return {
