@@ -6,7 +6,7 @@ locastyle.tables = (function() {
   var config = {
     selectors: {
       table : '.ls-table'
-    }s
+    }
   }
 
   var $tables = $( config.selectors.table, 'body');
