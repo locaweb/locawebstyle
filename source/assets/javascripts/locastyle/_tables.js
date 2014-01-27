@@ -287,7 +287,6 @@ locastyle.tables = (function() {
       fields.push({ label: labels[itd], input: $(td).html() });
     });
     fields = fields.slice(1, fields.length -1 );
-    console.log( fields )
     return fields;
   }
 
