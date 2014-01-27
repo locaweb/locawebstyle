@@ -13,6 +13,15 @@ locastyle.forms = (function() {
       togglePassword($form);
       toggleInputsEdit($form);
     });
+    toggleFormAsText();
+  }
+
+  function toggleFormAsText(){
+    $('[data-toggle-form]').on('click', function(evt){
+      evt.preventDefault();
+      var destForm = $(this).data('toggle-form');
+      $(destForm).toggleClass('ls-form-text');
+    });
   }
 
   function formReadOnly($form, disable){
