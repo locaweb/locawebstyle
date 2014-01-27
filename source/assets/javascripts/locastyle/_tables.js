@@ -6,7 +6,13 @@ locastyle.tables = (function() {
   var config = {
     selectors: {
       table : '.ls-table'
+    },
+    trClasses: {
+      success : 'success',
+      warn    : 'warning',
+      error   : 'danger'
     }
+
   }
 
   var $tables = $( config.selectors.table, 'body');
@@ -230,7 +236,7 @@ locastyle.tables = (function() {
         beforeSend  : blockModal($modal, true),
         complete    : blockModal($modal, false),
         error       : function(jqXHR, textStatus, errorThrown){
-          showMessage($modal, $tr, 'error');
+          showMessage($modal, $tr, config.trClasses.error);
         },
         success     : function(data){
           updateTable($modal, $tr, data);
@@ -252,7 +258,7 @@ locastyle.tables = (function() {
   }
 
   function updateTable($modal, $tr, data){
-    showMessage($modal, $tr, 'success');
+    showMessage($modal, $tr, config.trClasses.success);
     $modal.find('form').find(':input').each(function(indM, inputModal){
       $tr.find(':input').each(function(indT, inputTr){
         if ( $(inputTr).attr('name') == $(inputModal).attr('name') ){
@@ -364,7 +370,7 @@ locastyle.tables = (function() {
 
   function removeLine ($modal, $tr) {
     $modal.modal('hide');
-    $tr.addClass('line-save-warn');
+    $tr.addClass( config.config.trClasses.warn);
     setTimeout(function(){
       $tr.slideUp('fast', function(){
         $tr.remove();
