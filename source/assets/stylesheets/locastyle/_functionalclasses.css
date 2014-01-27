@@ -84,6 +84,8 @@ table.txtRight td, table.txtRight th {text-align: right;}
 .noBorderTop {border-top: none !important;}
 
 .noBullet, .noListStyle {list-style: none !important;}
+.borderBottomDotted{border-bottom: 1px dotted #999;}
+
 
 /**
 *** CURSOR DE MOUSE
