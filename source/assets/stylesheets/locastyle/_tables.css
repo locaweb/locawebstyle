@@ -57,14 +57,18 @@ tr.active {background-color: #fffece;}
 .tableList .txtLeft td, .tableList .txtLeft th {text-align: left;}
 
 /** Ordenação **/
-.dataDesc, .dataAsc,
-.dataDescending, .dataAscending {
+.tableList .dataDesc,
+.tableList .dataAsc,
+.tableList .dataDescending,
+.tableList .dataAscending {
   background-color: #2a2a2a;
   padding-left: 20px;
 }
 
-.dataDesc a:after, .dataAsc a:after,
-.dataDescending a:after, .dataAscending a:after {
+.tableList .dataDesc a:after,
+.tableList .dataAsc a:after,
+.tableList .dataDescending a:after,
+.tableList .dataAscending a:after {
   content: " ";
   display:inline-block;
   width:7px; height:7px;
@@ -73,8 +77,16 @@ tr.active {background-color: #fffece;}
   margin-left: 10px;
 }
 
-.dataDesc a:after, .dataDescending a:after {background-image: url(../images/setaDescending.png);}
-.dataAsc a:after, .dataAscending a:after {background-image: url(../images/setaAscending.png);}
+.tableList .dataDesc a:after,
+.tableList .dataDescending a:after {
+  background-image: url(../images/setaDescending.png);
+}
+
+.tableList .dataAsc a:after,
+.tableList .dataAscending a:after
+{
+  background-image: url(../images/setaAscending.png);
+}
 
 /***
 **** Ações em Tabela
@@ -140,4 +152,38 @@ tr [class*="span"] {
 
 .tableList .totalFooter td:last-child {
   border-right: none;
+}
+
+/*
+  Aplicando o mínimo de estilo de .table para o LocawebStyle
+*/
+
+.table tbody td{
+  font-size: 12px;
+}
+.table thead th{
+  font-size: 13px;
+}
+.table thead a{
+  color: #333;
+}
+.table .dataDesc a:after,
+.table .dataAsc a:after,
+.table .dataDescending a:after,
+.table .dataAscending a:after {
+  content: " ";
+  display:inline-block;
+  margin-left: 5px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+.table .dataDesc a:after,
+.table .dataDescending a:after{
+  border-top: 6px solid #333;
+}
+.table .dataAsc a:after,
+.table .dataAscending a:after{
+  border-bottom: 6px solid #333;
 }
