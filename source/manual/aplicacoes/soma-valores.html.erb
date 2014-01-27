@@ -107,6 +107,21 @@ menu_page: sidebar-aplicacoes.erb
     </div>
   </div>
 
+  <h2>Atributos & Classes</h2>
+
+  <p>A lista deve estar dentro de um container com a classe <code>ls-sum-values-container</code></p>
+  <p>Cada item da lista deve possuir a classe <code>sumItem</code></p>
+  <p>O elemento que contem a classe <code>sumItem</code> deve possuir o atributo <code>data-sumvalue-target="ID"</code> com o <b>id</b> do elemento que exibirá o resumo.</p>
+  <p>O <code>input radio</code> ou <code>input checkbox</code> dentro do <code>itemSum</code> deverá possuir os atributos:</p>
+  <ul>
+    <li><code>data-sumvalue="999"</code>: valor a ser somado e exibido.</li>
+    <li><code>data-sumlabel="TEXTO"</code>: texto a ser exibido no resumo.</li>
+  </ul>
+  <p>O resumo, texto e soma numérica, será exibido dentro de um elemnto que possua a classe <code>sumResume</code>, com elementos filhos com as classes:</p>
+  <ul>
+    <li><code>sumResumeText</code>: exibe os textos, concatenados, das opçoes selecionadas.</li>
+    <li><code>sumResumeTotal</code>: exibe a soma numérica, exibida de acordo com o atributo <code>data-sumpattern="R$ {{val}}/mês"</code></li>
+  </ul>
 
 
 </article>
