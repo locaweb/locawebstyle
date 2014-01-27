@@ -5,12 +5,30 @@ locastyle.tables = (function() {
 
   var config = {
     selectors: {
-      table : '.ls-table'
+      table         : '.ls-table',
+      actionsColumn : 'td.ls-table-actions'
     },
     trClasses: {
       success : 'success',
       warn    : 'warning',
       error   : 'danger'
+    },
+    dropdownLabel: 'Ações',
+    actionsExclude: '.dropdown-toggle',
+    actionDangerClass: 'danger',
+    actions:{
+      view: {
+        label: 'Visualizar',
+        attr: 'data-action-modal="view"'
+      },
+      edit: {
+        label: 'Editar',
+        attr: 'data-action-modal="edit"'
+      }
+    },
+    groupActions:{
+      one: 'item selecionado',
+      other: 'itens selecionados'
     }
 
   }
@@ -48,20 +66,20 @@ locastyle.tables = (function() {
 
   // Insere dropdown para cada linha da coluna de acoes se for necessário
   function lineActions($table){
-    var $tableActions = $table.find('td.ls-table-actions');
+    var $tableActions = $table.find( config.selectors.actionsColumn);
     var tableLines = $table.find('tbody tr').size();
     $tableActions.each(function(itd, td){
-      var $actions = $(td).find('a, button').not('.dropdown-toggle');
+      var $actions = $(td).find('a, button').not(config.actionsExclude);
       var line = $(td).parent('tr').index() ;
       if ( $actions[1] || isXsmall ){
         var dropdown = locastyle.templates.button_dropdown_single({
-          label     : isXsmall ? "" : "Ações",
+          label     : isXsmall ? "" : config.dropdownLabel,
           labelClass: 'btn-xs',
           addClass  : 'pull-right' + ( tableLines - line < 3 ? ' dropup' : '' ),
           actions   : (function(){
             var actions = [];
-            if ( !$(td).find('[data-action-modal="view"]')[0] && isXsmall ){
-              actions.push({label: 'Visualizar', link: '#', extras: 'data-action-modal="view"'})
+            if ( !$(td).find('[' + config.actions.view.attr + ']')[0] && isXsmall ){
+              actions.push({label: config.actions.view.label, link: '#', extras: config.actions.view.attr })
             }
             $actions.each(function(i, action){
               var extraData = '';
@@ -69,7 +87,7 @@ locastyle.tables = (function() {
                 extraData += 'data-' + name.replace(/[A-Z]/g, '-$&').toLowerCase() + '="' + value + '" ';
               });
               var $action = $(action);
-              var hasDivider = /danger/.test( $action.attr('class') ) || $action.find('[class*="danger"]')[0] ? true : false;
+              var hasDivider = /danger/.test( $action.attr('class') ) || $action.find('[class*="' + config.actionDangerClass  + '"]')[0] ? true : false;
               actions.push( {label: $action.html(), link: $action.attr('href'), classes: (hasDivider ? 'text-danger' : ''), extras: extraData, hasDivider: hasDivider } );
             });
             return actions;
@@ -111,14 +129,14 @@ locastyle.tables = (function() {
     $table.prev('.ls-table-group-actions, [data-target]')
       .toggle( checkeds >= 1 )
       .find('.counterChecks').text( checkeds )
-      .next('.counterChecksStr').text( checkeds > 1 ? 'itens selecionados' : 'item selecionado' );
+      .next('.counterChecksStr').text( checkeds > 1 ? config.groupActions.other : config.groupActions.one );
   }
 
   function addViewClickLine($table){
     if ( isXsmall ){
       $table.find('tbody tr').each(function(itr, tr){
         if ( $(tr).find('.hidden-xs')[0] ){
-          $(tr).find('td').not('.ls-table-actions').attr('data-action-modal', 'view');
+          $(tr).find('td').not(  config.config.selectors.actionsColumn).attr('data-action-modal', 'view');
         }
       });
     }
@@ -176,11 +194,11 @@ locastyle.tables = (function() {
       var hasEdit = $(this).parents('td').find('[data-action-modal="edit"]')[0] && $(this).parents('tr').find(':input, select');
       if ( hasEdit ){
         headerAction = locastyle.templates.button_dropdown_single({
-          label: 'Ações',
+          label: config.dropdownLabel,
           addClass: 'pull-right',
           actions: [
-            {label: 'Visualizar', link: '#view', classes: 'ls-modal-action'},
-            {label: 'Editar', link: '#edit', classes: 'ls-modal-action'}
+            {label: config.actions.view.label, link: '#view', classes: 'ls-modal-action'},
+            {label: config.actions.view.edit, link: '#edit', classes: 'ls-modal-action'}
           ]
         });
       }
