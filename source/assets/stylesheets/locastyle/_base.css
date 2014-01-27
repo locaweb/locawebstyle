@@ -856,6 +856,14 @@ td .progress {max-width: 70px;}
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
+.progress.progress-default .bar{
+  background-color: #999;
+  background-image: -moz-linear-gradient(top,#999,#999);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#999),to(#999));
+  background-image: -webkit-linear-gradient(top,#999,#999);
+  background-image: -o-linear-gradient(top,#999,#999);
+  background-image: linear-gradient(to bottom,#999,#999);
+}
 
 /** Caixa Cinza que geralmente vem abaixo de títulos **/
 .obsGray {
