@@ -32,6 +32,9 @@
   top: 30px;
   right: -30px;
 }
+.serviceName.ellipsis{
+  width: 600px;
+}
 .lnkOldpanel{
   position: absolute;
   top: 50px;
