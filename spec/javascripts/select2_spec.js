@@ -6,7 +6,7 @@ describe("Select2", function(){
   describe("Custom select", function(){
     it("should init select2 on selects with .select2", function(){
       locastyle.init($(document));
-      expect($("#selectToTest select.select2-offscreen")).toExist();
+      expect($("#selectToTest select").hasClass("select2-offscreen")).toBeTruthy();
     });
   });
 
