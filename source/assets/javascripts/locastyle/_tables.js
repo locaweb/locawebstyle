@@ -3,7 +3,13 @@ var locastyle = locastyle || {};
 locastyle.tables = (function() {
   'use strict';
 
-  var $tables = $('.ls-table', 'body');
+  var config = {
+    selectors: {
+      table : '.ls-table'
+    }s
+  }
+
+  var $tables = $( config.selectors.table, 'body');
   var isXsmall = window.innerWidth <= 767;
 
   function init(){
