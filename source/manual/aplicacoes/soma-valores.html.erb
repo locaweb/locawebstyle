@@ -124,4 +124,53 @@ menu_page: sidebar-aplicacoes.erb
   </ul>
 
 
+  <h3>Exemplo, com layout padrão</h3>
+
+  <pre class="lang-html prettyprintCode linenums">
+    <div class="ls-sum-values-container span11">
+      <h4>
+        Selecione um plano
+      </h4>
+
+      <!-- Item 1 -->
+      <label class="sumItem row boxWhite grayHover noPadding " data-sumvalue-target="#somaValores">
+        <span class="span8 paddingVertical10">
+          <span class="fLeft">
+              <input type="radio" name="preco" value="1" data-sumvalue="10" data-sumlabel="Load balancer de 1 Mbps">
+          </span>
+          <span class="dInlineBlock paddingHorizontal">
+              <span class="sumItemLabel">1  Mbps </span>
+          </span>
+        </span>
+        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+          R$ 10,00/mês
+        </span>
+      </label>
+
+      <!-- Item 2 -->
+      <label class="sumItem row boxWhite grayHover noPadding " data-sumvalue-target="#somaValores">
+        <span class="span8 paddingVertical10">
+          <span class="fLeft">
+              <input type="radio" name="preco" value="1"  data-sumvalue="99" data-sumlabel="Load balancer de 20 Mbps">
+          </span>
+          <span class="dInlineBlock paddingHorizontal">
+              <span class="sumItemLabel">20  Mbps </span>
+          </span>
+          <span class="noBold sumItemAddLine">Banda + conexão padrão</span>
+        </span>
+        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+          R$ 100,00/mês
+        </span>
+      </label>
+
+      <div class="boxGray sumResume noPadding">
+        <span class="sumResumeText  span8 paddingVertical10"></span>
+        <span class="sumResumeTotal span3 paddingVertical10 noMarginLeft txtCenter fRight " data-sumpattern="R$ {{val}}/mês"></span>
+      </div>
+
+    </div>
+
+  </pre>
+
+
 </article>
