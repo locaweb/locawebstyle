@@ -12,8 +12,30 @@ locastyle.forms = (function() {
       claimDatePicker($form);
       togglePassword($form);
       toggleInputsEdit($form);
+      formDisable($form);
     });
     toggleFormAsText();
+    toggleFormEdit();
+  }
+
+  function toggleFormEdit(){
+    $('[data-toggle-form-edit]').on('click', function(evt){
+      evt.preventDefault();
+      var destForm = $(this).data('toggle-form-edit');
+      if( $(destForm).attr('disabled') ){
+        $(destForm).removeAttr('disabled');
+        $(destForm).find(':input, :checkbox, :radio').removeAttr('disabled');
+      } else {
+        $(destForm).attr('disabled', true);
+        $(destForm).find(':input, :checkbox, :radio').prop('disabled', true);
+      }
+    });
+  }
+
+  function formDisable($form){
+    if( $form.attr('disabled') ){
+      $form.find(':input, :checkbox, :radio').prop('disabled', true);
+    }
   }
 
   function toggleFormAsText(){
@@ -23,6 +45,8 @@ locastyle.forms = (function() {
       $(destForm).toggleClass('ls-form-text');
     });
   }
+
+
 
   function formReadOnly($form, disable){
     $form.prop('disabled', disable).toggleClass('ls-form-read-only');
