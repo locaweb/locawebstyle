@@ -8,7 +8,7 @@ var locastyle = (function() {
     toggleTextOnHover(dom_scope);
     linkPreventDefault(dom_scope);
     classToggle(dom_scope);
-    select2DefaultConfig(dom_scope);
+    select2DefaultConfig(dom_scope, '');
     btnGroupActivationToogle(dom_scope);
   }
 
@@ -105,7 +105,7 @@ var locastyle = (function() {
   }
 
   //Minimiza o resultado para a busca
-  function select2DefaultConfig(exclude, dom_scope){
+  function select2DefaultConfig(dom_scope, exclude){
     $('.select2', dom_scope).not(exclude).each(function(i, el){
       var $select = $(el);
       var $optionList = $select.find('option');
@@ -137,7 +137,8 @@ var locastyle = (function() {
   }
 
   return {
-    init: init
+    init: init,
+    select2DefaultConfig: select2DefaultConfig
   };
 
 }());
