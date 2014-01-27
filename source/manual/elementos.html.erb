@@ -694,6 +694,74 @@ layout: false
 
 					</div>
 				</div>
+
+				<hr>
+				<div class="row">
+					<h1>Soma de valores</h1>
+					<div class="ls-sum-values-container span16">
+			      <h4>
+			        Selecione um plano
+			      </h4>
+
+			      <!-- Item 1 -->
+			      <label class="sumItem row boxWhite grayHover noPadding " data-sumvalue-target="#somaValores">
+			        <span class="span12 paddingVertical10">
+			          <span class="fLeft">
+			              <input type="radio" name="preco" value="1" data-sumvalue="10" data-sumlabel="Load balancer de 1 Mbps">
+			          </span>
+			          <span class="dInlineBlock paddingHorizontal">
+			              <span class="sumItemLabel">1  Mbps </span>
+			          </span>
+			        </span>
+			        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+			          R$ 10,00/mês
+			        </span>
+			      </label>
+
+			      <!-- Item 2 -->
+			      <label class="sumItem row boxWhite grayHover noPadding " data-sumvalue-target="#somaValores">
+			        <span class="span12 paddingVertical10">
+			          <span class="fLeft">
+			              <input type="radio" name="preco" value="1"  data-sumvalue="99" data-sumlabel="Load balancer de 20 Mbps">
+			          </span>
+			          <span class="dInlineBlock paddingHorizontal">
+			              <span class="sumItemLabel">20  Mbps </span>
+			          </span>
+			          <span class="noBold sumItemAddLine">Banda + conexão padrão</span>
+			        </span>
+			        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+			          R$ 100,00/mês
+			        </span>
+			      </label>
+
+			      <br>
+			      <h4>Inclua conexão segura (suporte a SSL)</h4>
+
+			      <label class="sumItem row boxWhite grayHover noPadding ">
+			        <span class="span12 paddingVertical10">
+			          <span class="fLeft">
+			            <input type="checkbox" name="ssl" value="1" data-sumvalue="20" data-sumlabel="Suporte a SSL">
+			          </span>
+			          <span class="dInlineBlock paddingHorizontal">
+			            Incluir conexão segiura SSL
+			          </span>
+			          <span class="noBold sumItemAddLine">
+			            Para ativar a conexão segura, você precisa ter um certificado SSL. Após contratar o Load Balancer, se necessário, adquira o certificado com nossos parceiros Symantec, Comodo e Thawte. Dúvidas? Fale com nosso <a href="#">Atendimento</a>.
+			          </span>
+			        </span>
+			        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+			          R$ 20,00/mês
+			        </span>
+			      </label>
+
+			      <div class="boxGray sumResume noPadding">
+			        <span class="sumResumeText  span12 paddingVertical10"></span>
+			        <span class="sumResumeTotal span4 paddingVertical10 noMarginLeft txtCenter fRight " data-sumpattern="R$ {{val}}/mês"></span>
+			      </div>
+
+    			</div>
+				</div>
+
 				<hr>
 				<h1>Tabelas</h1>
 				<br>
