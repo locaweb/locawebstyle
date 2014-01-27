@@ -20,7 +20,7 @@ menu_page: sidebar-aplicacoes.erb
         Selecione um plano
       </h4>
 
-      <label class="sumItem row boxWhite grayHover noPadding " data-sumvalue-target="#somaValores">
+      <label class="sumItem row boxWhite grayHover noPadding ">
         <span class="span8 paddingVertical10">
           <span class="fLeft">
               <input type="radio" name="preco" value="1" data-sumvalue="10" data-sumlabel="Load balancer de 1 Mbps">
@@ -34,7 +34,7 @@ menu_page: sidebar-aplicacoes.erb
         </span>
       </label>
 
-      <label class="sumItem row boxWhite grayHover noPadding" data-sumvalue-target="#somaValores">
+      <label class="sumItem row boxWhite grayHover noPadding">
         <span class="span8 paddingVertical10">
           <span class="fLeft">
               <input type="radio" name="preco" value="1" data-sumvalue="59" data-sumlabel="Load balancer de 10 Mbps">
@@ -49,7 +49,7 @@ menu_page: sidebar-aplicacoes.erb
         </span>
       </label>
 
-      <label class="sumItem row boxWhite grayHover noPadding " data-sumvalue-target="#somaValores">
+      <label class="sumItem row boxWhite grayHover noPadding ">
         <span class="span8 paddingVertical10">
           <span class="fLeft">
               <input type="radio" name="preco" value="1"  data-sumvalue="99" data-sumlabel="Load balancer de 20 Mbps">
@@ -64,7 +64,7 @@ menu_page: sidebar-aplicacoes.erb
         </span>
       </label>
 
-      <label class="sumItem row boxWhite grayHover noPadding " data-sumvalue-target="#somaValores">
+      <label class="sumItem row boxWhite grayHover noPadding ">
         <span class="span8 paddingVertical10">
           <span class="fLeft">
               <input type="radio" name="preco" value="1" data-sumvalue="179" data-sumlabel="Load balancer de 40 Mbps">
@@ -82,7 +82,7 @@ menu_page: sidebar-aplicacoes.erb
       <br>
       <h4>Inclua conexão segura (suporte a SSL)</h4>
 
-      <label class="sumItem row boxWhite grayHover noPadding " data-sumvalue-target="#somaValores">
+      <label class="sumItem row boxWhite grayHover noPadding ">
         <span class="span8 paddingVertical10">
           <span class="fLeft">
             <input type="checkbox" name="ssl" value="1" data-sumvalue="20" data-sumlabel="Suporte a SSL">
@@ -111,7 +111,6 @@ menu_page: sidebar-aplicacoes.erb
 
   <p>A lista deve estar dentro de um container com a classe <code>ls-sum-values-container</code></p>
   <p>Cada item da lista deve possuir a classe <code>sumItem</code></p>
-  <p>O elemento que contem a classe <code>sumItem</code> deve possuir o atributo <code>data-sumvalue-target="ID"</code> com o <b>id</b> do elemento que exibirá o resumo.</p>
   <p>O <code>input radio</code> ou <code>input checkbox</code> dentro do <code>itemSum</code> deverá possuir os atributos:</p>
   <ul>
     <li><code>data-sumvalue="999"</code>: valor a ser somado e exibido.</li>
