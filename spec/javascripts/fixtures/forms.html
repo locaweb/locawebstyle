@@ -1,0 +1,22 @@
+<form id="formWithDisable" role="form" action="#" disabled>
+  <fieldset>
+    <div class="form-group">
+      <label for="disabledTextInput">Campo como texto</label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="Campo como texto">
+    </div>
+    <div class="form-group">
+      <label for="disabledSelect">Select como texto</label>
+      <select id="disabledSelect" class="form-control">
+        <option>Seletor desabilitado</option>
+      </select>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> Não pode marcar isso
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </fieldset>
+  <br>
+  <a href="#" class="btn btn-danger" id="enableForm" data-text="Desabilitar Form" data-event="click" data-toggle-form-edit="#formWithDisable">Habilitar Form</a>
+</form>
