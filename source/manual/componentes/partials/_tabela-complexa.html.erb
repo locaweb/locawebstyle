@@ -1,4 +1,4 @@
-<form action="/servidor/salvar" method="post">
+<form action="/servidor/salvar" method="post" disabled class="ls-form-text">
 	<input type="hidden" name="token" value="ehOCabraMesmo">
 	<div class="well well-sm clearfix ls-table-group-actions">
 		<p class="d-inline-block">
@@ -55,9 +55,7 @@
 				<td>Campanha</td>
 				<td>Enviada</td>
 				<td>
-					<div class="input-group datepicker" disabled>
-						<input type="text" class="form-control date-mask" id="row3-date" value="2/01/2014" placeholder="dd/mm/aaaa" disabled>
-					</div>
+					<input type="text" class="form-control" id="row3-date" value="2/01/2014" placeholder="dd/mm/aaaa">
 				</td>
 				<td>
 					<a href="/assets/javascripts/manual/fake-response/save.json"   data-action-modal="edit">Editar</a>
