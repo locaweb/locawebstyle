@@ -3,20 +3,18 @@ var locastyle = locastyle || {};
 locastyle.forms = (function() {
   'use strict';
 
-  var $forms = $('form', 'body');
-
   function init(){
+    var $forms = $('form');
     $forms.each(function(ifr, form){
       var $form = $(form);
       inputsMask($form);
       claimDatePicker($form);
       togglePassword($form);
-      bindToggleFormEdit($form);
-      bindToggleFormText($form);
+      bindformEditable($form);
+      bindformAsText($form);
       formDisable($form);
     });
-    // toggleFormText();
-    toggleFormEdit();
+    formEditable();
   }
 
   function formDisable($form){
@@ -25,19 +23,19 @@ locastyle.forms = (function() {
     }
   }
 
-  function bindToggleFormEdit($form){
+  function bindformEditable($form){
     $('[data-toggle-form-edit]', $form).on('click', function(evt){
       evt.preventDefault();
       var formId = $(this).data('toggle-form-edit');
       if( $(formId).attr('disabled') ){
-        toggleFormEdit(formId, true);
+        formEditable(formId, true);
       } else {
-        toggleFormEdit(formId, false);
+        formEditable(formId, false);
       }
     });
   }
 
-  function toggleFormEdit(formId, editable){
+  function formEditable(formId, editable){
     if( editable ){
       $(formId).removeAttr('disabled');
       $(formId).find(':input, :checkbox, :radio').removeAttr('disabled');
@@ -47,7 +45,7 @@ locastyle.forms = (function() {
     }
   }
 
-  function bindToggleFormText($form){
+  function bindformAsText($form){
     $('[data-toggle-form-text]', $form).on('click', function(evt){
       evt.preventDefault();
       var destForm = $(this).data('toggle-form-text');
@@ -55,9 +53,13 @@ locastyle.forms = (function() {
     });
   }
 
-  function toggleFormText(formId, asText){
+  function formAsText(formId, asText){
     var destForm = $(this).data('toggle-form-text');
-    $(formId).toggleClass('ls-form-text', asText);
+    if(asText){
+      $(formId).addClass('ls-form-text');
+    } else {
+      $(formId).removeClass('ls-form-text');
+    }
   }
 
   // Definindo padrões de classes para as máscaras de formulários.
@@ -109,8 +111,8 @@ locastyle.forms = (function() {
     init: init,
     insertDatepicker: claimDatePicker,
     insertMasks: inputsMask,
-    toggleFormEdit: toggleFormEdit,
-    toggleFormText: toggleFormText
+    formEditable: formEditable,
+    formAsText: formAsText
   };
 
 }());
