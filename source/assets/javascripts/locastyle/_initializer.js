@@ -3,4 +3,5 @@ $(window).load(function() {
 
   locastyle.base.init($(document));
   locastyle.passwordStrength.init();
+  locastyle.sumValues.init();
 });

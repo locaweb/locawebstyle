@@ -1,0 +1,39 @@
+.sumItem.active .sumItemLabel,
+.sumItem.active .sumValue{
+  color: #0848b3;
+}
+
+.sumItemAddLine{
+  clear: both;
+  display: block;
+  margin-left: 22px;
+  margin-top: 5px;
+}
+
+.boxGray.sumResume{
+  margin-left: -20px;
+  margin-top: 10px;
+  font-size: 14px;
+  display: inline-block;
+}
+.boxGray.sumResumeText{
+}
+.boxGray .sumResumeTotal{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #5b5b5b;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+}
+.boxGray .sumResumeTotal:before{
+  content: "";
+  border: 5px solid transparent;
+  border-color: transparent transparent transparent #d5d5d5;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0px;
+  top: calc(50% - 5px);
+}

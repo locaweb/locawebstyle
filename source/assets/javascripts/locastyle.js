@@ -6,4 +6,5 @@
 //= require locastyle/_guided_tour
 //= require locastyle/_password_strength
 //= require locastyle/_step_form
+//= require locastyle/_sum_values
 //= require locastyle/_accessibility
