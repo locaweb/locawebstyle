@@ -37,7 +37,7 @@ menu_page: sidebar-aplicacoes.erb
       <label class="sumItem row boxWhite grayHover noPadding">
         <span class="span8 paddingVertical10">
           <span class="fLeft">
-              <input type="radio" name="preco" value="1" data-sumvalue="59" data-sumlabel="Load balancer de 10 Mbps">
+              <input type="radio" name="preco" value="1" data-sumvalue="60" data-sumlabel="Load balancer de 10 Mbps">
           </span>
           <span class="dInlineBlock paddingHorizontal">
               <span class="sumItemLabel">10  Mbps </span>
@@ -52,7 +52,7 @@ menu_page: sidebar-aplicacoes.erb
       <label class="sumItem row boxWhite grayHover noPadding ">
         <span class="span8 paddingVertical10">
           <span class="fLeft">
-              <input type="radio" name="preco" value="1"  data-sumvalue="99" data-sumlabel="Load balancer de 20 Mbps">
+              <input type="radio" name="preco" value="1"  data-sumvalue="100" data-sumlabel="Load balancer de 20 Mbps">
           </span>
           <span class="dInlineBlock paddingHorizontal">
               <span class="sumItemLabel">20  Mbps </span>
@@ -67,7 +67,7 @@ menu_page: sidebar-aplicacoes.erb
       <label class="sumItem row boxWhite grayHover noPadding ">
         <span class="span8 paddingVertical10">
           <span class="fLeft">
-              <input type="radio" name="preco" value="1" data-sumvalue="179" data-sumlabel="Load balancer de 40 Mbps">
+              <input type="radio" name="preco" value="1" data-sumvalue="150" data-sumlabel="Load balancer de 40 Mbps">
           </span>
           <span class="dInlineBlock paddingHorizontal">
               <span class="sumItemLabel">40  Mbps </span>
@@ -105,6 +105,64 @@ menu_page: sidebar-aplicacoes.erb
       </div>
 
     </div>
+
+    <br>
+    <p>Podem existir várias lista para soma de valores em uma mesma tela, independentes:</p>
+    <br>
+
+    <div class="ls-sum-values-container span11">
+      <h4>
+        Selecione um plano
+      </h4>
+
+      <label class="sumItem row boxWhite grayHover noPadding ">
+        <span class="span8 paddingVertical10">
+          <span class="fLeft">
+              <input type="radio" name="preco" value="1" data-sumvalue="10" data-sumlabel="Load balancer de 1 Mbps">
+          </span>
+          <span class="dInlineBlock paddingHorizontal">
+              <span class="sumItemLabel">1  Mbps </span>
+          </span>
+        </span>
+        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+          R$ 10,00/mês
+        </span>
+      </label>
+
+      <label class="sumItem row boxWhite grayHover noPadding">
+        <span class="span8 paddingVertical10">
+          <span class="fLeft">
+              <input type="radio" name="preco" value="1" data-sumvalue="59" data-sumlabel="Load balancer de 10 Mbps">
+          </span>
+          <span class="dInlineBlock paddingHorizontal">
+              <span class="sumItemLabel">10  Mbps </span>
+          </span>
+        </span>
+        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+          R$ 60,00/mês
+        </span>
+      </label>
+
+      <div class="boxGray sumResume noPadding">
+        <span class="sumResumeText  span8 paddingVertical10"></span>
+        <span class="sumResumeTotal span3 paddingVertical10 noMarginLeft txtCenter fRight " data-sumpattern="R$ {{val}}/mês"></span>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
 
   <h2>Atributos & Classes</h2>
