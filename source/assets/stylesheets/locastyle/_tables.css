@@ -196,5 +196,7 @@ table .percentageOutside span{
   top: -1px;
   right: -40px;
   width: 40px;
-
+}
+table tr.statusDisabled .colorTheme{
+  color: #333;
 }
