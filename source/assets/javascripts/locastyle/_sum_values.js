@@ -49,10 +49,10 @@ Locastyle.prototype.sumValues = (function() {
       total += $(item).data('sumvalue');
       text += ( i > 0 ? config.textLabelSeparator: '') + $(item).data('sumlabel');
     });
-    var $sumTotal = $(config.selector.sumTotal)
+    var $sumTotal = $(config.selector.sumTotal, $sumContainer);
     var totalPattern = $sumTotal.data('sumpattern');
     $sumTotal.text(totalPattern.replace(/\{\{val\}\}/, total));
-    $(config.selector.sumText).text( text === '' ? config.defaultText : text );
+    $(config.selector.sumText, $sumContainer).text( text === '' ? config.defaultText : text );
   }
 
   return {
