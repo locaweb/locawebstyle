@@ -29,7 +29,6 @@ locastyle.forms = (function() {
     $('[data-toggle-form-edit]', $form).on('click', function(evt){
       evt.preventDefault();
       var formId = $(this).data('toggle-form-edit');
-      console.log( formId )
       if( $(formId).attr('disabled') ){
         toggleFormEdit(formId, true);
       } else {
