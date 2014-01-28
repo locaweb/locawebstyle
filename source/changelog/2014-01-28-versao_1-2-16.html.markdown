@@ -6,4 +6,8 @@ tags:
 
 ## Adições
 
-\-  Nova aplicação "Soma valores" para exibir <code>input[radio]</code> e <code>input[checkbox]</code> e exibir resumo de valores selecionados
+\-  Nova aplicação "<a href="/manual/aplicacoes/soma-valores">Soma valores</a>" para exibir <code>input[radio]</code> e <code>input[checkbox]</code> e exibir resumo de valores selecionados.
+
+## Documentação
+
+\- Criada documentação da nova aplicaçao <a href="/manual/aplicacoes/soma-valores">Soma valores</a>.
