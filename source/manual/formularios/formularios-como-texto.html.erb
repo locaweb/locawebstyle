@@ -84,3 +84,29 @@ menu_page: sidebar-formularios.erb
 	</form>
 </div>
 
+<br>
+<p>Quando utilizar formulário como texto, é recomendado desabilitar a edição, usando os atributos mostrados na seção "<a href="desabilitando-campos">Desabilitando campos de formulário</a>.</p>
+<div class="example">
+	<form id="form4" role="form" class="ls-form-text" disabled>
+		<fieldset>
+			<div class="form-group">
+				<label for="disabledTextInput">Campo como texto</label>
+				<input type="text" id="disabledTextInput" class="form-control" placeholder="Campo como texto">
+			</div>
+			<div class="form-group">
+				<label for="disabledSelect">Select como texto</label>
+				<select id="disabledSelect" class="form-control">
+					<option>Seletor desabilitado</option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Não pode marcar isso
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</fieldset>
+	<br>
+	<a href="#" class="btn btn-danger" data-text="Desabilitar form" data-event="click" data-toggle-form-edit="#form4" data-toggle-form-text="#form4">Habilitar form</a>
+	</form>
+</div>
