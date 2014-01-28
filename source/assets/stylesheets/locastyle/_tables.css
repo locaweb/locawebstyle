@@ -160,6 +160,7 @@ tr [class*="span"] {
 
 .table tbody td{
   font-size: 12px;
+  vertical-align: middle;
 }
 .table thead th{
   font-size: 13px;
@@ -186,4 +187,14 @@ tr [class*="span"] {
 .table .dataAsc a:after,
 .table .dataAscending a:after{
   border-bottom: 6px solid #333;
+}
+table .percentageOutside .bar{
+  color: #333;
+  font-size: 11px;
+}
+table .percentageOutside span{
+  top: -1px;
+  right: -40px;
+  width: 40px;
+
 }
