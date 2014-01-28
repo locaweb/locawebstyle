@@ -162,14 +162,8 @@ locastyle.tables = (function() {
     $buttons.on('click', function(evt){
       evt.preventDefault();
       if ( $(this).hasClass('ico-close') ){
-        $(this).parents('tr').each(function(itr, tr){
-          $(tr).find('td:gt(0):not(.ls-table-actions)').find(':input, select, div.datepicker').attr('disabled', true);
-          $(tr).find('.datepicker').datepicker("destroy");
-          $(tr).find('.datepicker .input-group-btn').remove();
-        });
         $(this).parents('tr').find('.btn-group').show();
         $(this).parents('.lsa').remove();
-      } else {
       }
     });
   }
@@ -219,6 +213,11 @@ locastyle.tables = (function() {
         }
       }
       var $modal = locastyle.templates.modal('body', config).modal('show');
+
+      // locastyle.forms.formAsText( $modal.find('form'), true )
+      locastyle.forms.formEditable($modal.find('form'), true)
+      locastyle.forms.formAsText($modal.find('form'), true)
+
       var $modalBody = $modal.find('.modal-body');
       $modal
         .on('hidden.bs.modal', function (e) {
@@ -288,18 +287,6 @@ locastyle.tables = (function() {
     });
     var $trClone = $tr.clone();
     $trClone.find('td').each(function(itd, td){
-      var $input = $(td).find(':input, select');
-      if ( $input[0] ){
-        if ( $(td).find('div.datepicker')[0] ){
-          var datepicker = $(td).find('div.datepicker').clone().removeAttr('disabled')
-          datepicker.find('input').removeAttr('disabled');
-          var inputHTML = datepicker[0].outerHTML;
-        } else {
-          var inputHTML =  $input.clone().removeAttr('disabled')[0].outerHTML;
-        }
-      } else {
-          var inputHTML =  '<p>' + $(td).html() + '</p>';
-      }
       fields.push({ label: labels[itd], input: $(td).html() });
     });
     fields = fields.slice(1, fields.length -1 );
@@ -324,7 +311,6 @@ locastyle.tables = (function() {
         $modalBody.find(':input, select, div.datepicker').attr('disabled', true);
         $modalBody.find('.datepicker').datepicker("destroy");
         $modalBody.find('.datepicker .input-group-btn').remove();
-        $modalBody.find('.select2').select2('destroy');
         $modalFooter.find('.btn.btn-primary').hide();
       }
     });
