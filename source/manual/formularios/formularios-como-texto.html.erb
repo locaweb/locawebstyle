@@ -7,7 +7,7 @@ menu_page: sidebar-formularios.erb
 	<h2>Exibindo um <code>form</code> com aparência de texto, desabilitado ou editável.</h2>
 </header>
 
-<p>Basta adicionar a classe <code>ls-form-text</code> ou chamar a função javascript <code>locastyle.forms.toggleFormText('#form')</code> e os campos ficarão da seguinte forma:</p>
+<p>Basta adicionar a classe <code>ls-form-text</code> ou chamar a função javascript <code>locastyle.forms.formAsText('#form')</code> e os campos ficarão da seguinte forma:</p>
 <br>
 <div class="example">
 	<form role="form" class="ls-form-text">
@@ -58,7 +58,7 @@ menu_page: sidebar-formularios.erb
 </div>
 
 <br>
-<p>Para alternar entre um form como texto e um form normal, basta inserir o atributo <code>data-toggle-form-text="#id-form"</code> em um link ou botão, ou executar a função <code>locastyle.forms.toggleFormText('#form')</code>.</p>
+<p>Para alternar entre um form como texto e um form normal, basta inserir o atributo <code>data-toggle-form-text="#id-form"</code> em um link ou botão, ou executar a função <code>locastyle.forms.formAsText('#form')</code>.</p>
 <div class="example">
 	<form id="form-que-alterna" role="form" class="ls-form-text" >
 		<fieldset>

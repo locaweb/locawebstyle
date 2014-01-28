@@ -13,7 +13,7 @@ published: false
 
 \- Adicionado a classe <code>.ls-form-text</code> na tag <code>form</code> para exibir um formulário como texto.
 
-\- Adicionada função <code>locastyle.forms.toggleFormText('#form')</code> para alternar entre formulários normais/texto com o atributo <code>data-toggle-form-text="#id-form"</code> em um link.
+\- Adicionada função <code>locastyle.forms.formAsText('#form')</code> para alternar entre formulários normais/texto com o atributo <code>data-toggle-form-text="#id-form"</code> em um link.
 
 \- Adicionada função <code>locastyle.forms.formDisable('#form', true)</code> para alternar entre formulários editaveis/nã0 editáveis com o atributo <code>data-toggle-form-edit="#id-form"</code> em um link.
 
