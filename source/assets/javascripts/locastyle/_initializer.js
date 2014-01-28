@@ -1,6 +1,6 @@
 $(window).load(function() {
   locastyle.trackEvents.init();
-  locastyle.init();
+  locastyle.init($(document));
   locastyle.mobile.init();
   locastyle.bootstrap.init();
   locastyle.forms.init();
@@ -8,5 +8,5 @@ $(window).load(function() {
   locastyle.passwordStregth.init();
   locastyle.carousel.init();
   locastyle.accessibility.init();
-  locastyle.collapse.init();
+  locastyle.collapse.init($(document));
 });

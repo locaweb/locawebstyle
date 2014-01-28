@@ -12,7 +12,7 @@
 #
 src_files:
     - spec/javascripts/libs/*.js
-    - source/assets/javascripts/locastyle/vendor/*.js
+    - source/assets/javascripts/locastyle/vendor/**/*.js
     - source/assets/bootstrap/js/bootstrap.js
     - source/assets/javascripts/locastyle/_base.js
     - source/assets/javascripts/locastyle/_mobile_functions.js
