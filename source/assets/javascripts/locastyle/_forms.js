@@ -12,24 +12,12 @@ locastyle.forms = (function() {
       claimDatePicker($form);
       togglePassword($form);
       toggleInputsEdit($form);
+      bindToggleFormEdit($form);
+      bindToggleFormText($form);
       formDisable($form);
     });
-    toggleFormAsText();
+    // toggleFormText();
     toggleFormEdit();
-  }
-
-  function toggleFormEdit(){
-    $('[data-toggle-form-edit]').on('click', function(evt){
-      evt.preventDefault();
-      var destForm = $(this).data('toggle-form-edit');
-      if( $(destForm).attr('disabled') ){
-        $(destForm).removeAttr('disabled');
-        $(destForm).find(':input, :checkbox, :radio').removeAttr('disabled');
-      } else {
-        $(destForm).attr('disabled', true);
-        $(destForm).find(':input, :checkbox, :radio').prop('disabled', true);
-      }
-    });
   }
 
   function formDisable($form){
@@ -38,8 +26,32 @@ locastyle.forms = (function() {
     }
   }
 
-  function toggleFormAsText(){
-    $('[data-toggle-form]').on('click', function(evt){
+  function bindToggleFormEdit($form){
+    $('[data-toggle-form-edit]', $form).on('click', function(evt){
+      evt.preventDefault();
+      var formId = $(this).data('toggle-form-edit');
+      console.log( formId )
+      if( $(formId).attr('disabled') ){
+        toggleFormEdit(formId, true);
+      } else {
+        toggleFormEdit(formId, false);
+      }
+    });
+  }
+
+  function toggleFormEdit(formId, editable){
+    if( editable ){
+      $(formId).removeAttr('disabled');
+      $(formId).find(':input, :checkbox, :radio').removeAttr('disabled');
+    } else {
+      $(formId).attr('disabled', true);
+      $(formId).find(':input, :checkbox, :radio').prop('disabled', true);
+    }
+  }
+
+
+  function bindToggleFormText($form){
+    $('[data-toggle-form]', $form).on('click', function(evt){
       evt.preventDefault();
       var destForm = $(this).data('toggle-form');
       $(destForm).toggleClass('ls-form-text');
@@ -115,7 +127,8 @@ locastyle.forms = (function() {
     init: init,
     insertDatepicker: claimDatePicker,
     insertMasks: inputsMask,
-    formReadOnly: formReadOnly
+    formReadOnly: formReadOnly,
+    toggleFormEdit: toggleFormEdit
   };
 
 }());
