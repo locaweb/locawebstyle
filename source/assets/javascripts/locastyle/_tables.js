@@ -155,7 +155,6 @@ locastyle.tables = (function() {
         $el.removeAttr('disabled');
       }).eq(0).focus();
       actionsEditInline( $tr.find('.ls-table-actions-show button') );
-      enableFormControls($tr);
     });
   }
 
@@ -173,12 +172,6 @@ locastyle.tables = (function() {
       } else {
       }
     });
-  }
-
-  function enableFormControls($container){
-      locastyle.forms.insertDatepicker($container, '[disabled]');
-      locastyle.select2DefaultConfig($container, '[disabled]');
-      locastyle.forms.insertMasks($container);
   }
 
   function showModal($table){
@@ -233,8 +226,6 @@ locastyle.tables = (function() {
         .on('shown.bs.modal', function (e) {
           $modalBody.find(':input').eq(0).focus();
         })
-      locastyle.forms.formReadOnly($modalBody, actionModal === 'view');
-      // enableFormControls($modal);
       modalDropdownActions($modal);
       saveModalEdit($modal, $(this).parents('tr'));
     });
@@ -327,7 +318,6 @@ locastyle.tables = (function() {
         }
         $modalBody.find(':input, select, div.datepicker').attr('disabled', false);
         $modalBody.find('div.datepicker .input-group-btn').remove();
-        // enableFormControls($modal);
         $modalFooter.find('.btn.btn-primary').show();
       } else {
         $modalBody.find(':input, select, div.datepicker').attr('disabled', true);
