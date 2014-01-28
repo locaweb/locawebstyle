@@ -1,4 +1,4 @@
-describe("Track Events", function() {
+describe("Track Events: ", function() {
   beforeEach(function() {
     loadFixtures('track_events_fixture.html');
     $("body").data("controller", "locastyle");

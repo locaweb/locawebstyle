@@ -1,4 +1,4 @@
-describe("Password Strength", function() {
+describe("Password Strength: ", function() {
   beforeEach(function() {
     loadFixtures('password_strength_fixture.html');
     locastyle.passwordStregth.init();
