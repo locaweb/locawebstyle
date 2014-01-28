@@ -136,7 +136,7 @@ locastyle.tables = (function() {
     if ( isXsmall ){
       $table.find('tbody tr').each(function(itr, tr){
         if ( $(tr).find('.hidden-xs')[0] ){
-          $(tr).find('td').not(  config.config.selectors.actionsColumn).attr('data-action-modal', 'view');
+          $(tr).find('td').not(  config.selectors.actionsColumn).attr('data-action-modal', 'view');
         }
       });
     }
@@ -176,6 +176,7 @@ locastyle.tables = (function() {
 
   function showModal($table){
     $('[data-action-modal]', $table).on('click', function(evt) {
+      var config = locastyle.tables.config;
       if ($(this).index() === 0 && this.nodeName === 'TD' ){
         return;
       }
@@ -409,7 +410,8 @@ locastyle.tables = (function() {
   }
 
   return {
-    init: init
+    init: init,
+    config: config
   };
 
 }());
