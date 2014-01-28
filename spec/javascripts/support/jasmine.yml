@@ -22,6 +22,7 @@ src_files:
     - source/assets/javascripts/locastyle/_accessibility.js
     - source/assets/javascripts/locastyle/_track_events.js
     - source/assets/javascripts/locastyle/_collapse_extends.js
+    - source/assets/javascripts/locastyle/_forms.js
 
 # stylesheets
 #
