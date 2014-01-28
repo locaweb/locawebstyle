@@ -58,9 +58,9 @@ menu_page: sidebar-formularios.erb
 </div>
 
 <br>
-<p>Para alternar entre um form como texto e um form normal, basta inserir o atributo <code>data-toggle-form="#id-form"</code> em um link ou botão, ou executar a função <code>locastyle.forms.toggleFormText('#form')</code>.</p>
+<p>Para alternar entre um form como texto e um form normal, basta inserir o atributo <code>data-toggle-form-text="#id-form"</code> em um link ou botão, ou executar a função <code>locastyle.forms.toggleFormText('#form')</code>.</p>
 <div class="example">
-	<form id="form-que-alterna" role="form" class="ls-form-text" disabled>
+	<form id="form-que-alterna" role="form" class="ls-form-text" >
 		<fieldset>
 			<div class="form-group">
 				<label for="disabledTextInput">Campo como texto</label>
@@ -79,7 +79,8 @@ menu_page: sidebar-formularios.erb
 			</div>
 			<button type="submit" class="btn btn-primary">Enviar</button>
 		</fieldset>
-	</form>
 	<br>
-	<a href="#" class="btn btn-danger" data-text="Desabilitar Form" data-event="click" data-toggle-form-edit="#form-que-alterna" data-toggle-form="#form-que-alterna">Habilitar Form</a>
+	<a href="#" class="btn btn-danger" data-text="Ver formulário como texto" data-event="click" data-toggle-form-text="#form-que-alterna">Ver formulário normal</a>
+	</form>
 </div>
+
