@@ -822,7 +822,8 @@ tr.active td .boxActions {padding-top: 0;}
   overflow: inherit;
 }
 
-.percentageOutside strong {
+.percentageOutside strong,
+.percentageOutside span {
   position: absolute;
   top: -3px;
   right: -27px;
@@ -849,14 +850,16 @@ td .progress {max-width: 70px;}
   padding: 0 3px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
-.forceClass .progress.progress-striped .bar{
+.forceClass .progress.progress-striped .bar,
+.forceClass .progress.progress-default.progress-striped .bar{
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
-.progress.progress-default .bar{
+
+.forceClass .progress.progress-default .bar{
   background-color: #999;
   background-image: -moz-linear-gradient(top,#999,#999);
   background-image: -webkit-gradient(linear,0 0,0 100%,from(#999),to(#999));
