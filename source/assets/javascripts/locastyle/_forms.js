@@ -11,7 +11,6 @@ locastyle.forms = (function() {
       inputsMask($form);
       claimDatePicker($form);
       togglePassword($form);
-      toggleInputsEdit($form);
       bindToggleFormEdit($form);
       bindToggleFormText($form);
       formDisable($form);
@@ -49,33 +48,17 @@ locastyle.forms = (function() {
     }
   }
 
-
   function bindToggleFormText($form){
-    $('[data-toggle-form]', $form).on('click', function(evt){
+    $('[data-toggle-form-text]', $form).on('click', function(evt){
       evt.preventDefault();
-      var destForm = $(this).data('toggle-form');
+      var destForm = $(this).data('toggle-form-text');
       $(destForm).toggleClass('ls-form-text');
     });
   }
 
-
-
-  function formReadOnly($form, disable){
-    $form.prop('disabled', disable).toggleClass('ls-form-read-only');
-    $form.find(':input, select, [disabled]').each(function(ii, input){
-      $(input).prop('disabled', disable);
-      if(disable){
-        $(input).removeAttr('disabled');
-      }
-    });
-  }
-
-  function toggleInputsEdit($form){
-    $form.delegate('[data-enable-edit]', "click", function(evt) {
-      evt.preventDefault();
-      var editableContainer = $(this).data('enableEdit');
-      $(editableContainer).find('[disabled]').prop('disabled', false)
-    });
+  function toggleFormText(formId, asText){
+    var destForm = $(this).data('toggle-form-text');
+    $(formId).toggleClass('ls-form-text', asText);
   }
 
   // Definindo padrões de classes para as máscaras de formulários.
@@ -127,8 +110,8 @@ locastyle.forms = (function() {
     init: init,
     insertDatepicker: claimDatePicker,
     insertMasks: inputsMask,
-    formReadOnly: formReadOnly,
-    toggleFormEdit: toggleFormEdit
+    toggleFormEdit: toggleFormEdit,
+    toggleFormText: toggleFormText
   };
 
 }());
