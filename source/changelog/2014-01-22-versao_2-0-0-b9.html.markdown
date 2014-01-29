@@ -1,18 +1,17 @@
 ---
 title: Versão 2.0.0-b9
 date: 2014-01-22 20:12 UTC
-tags:
 published: false
 ---
 
 **Adições**
 
 \- [#415](https://github.com/locaweb/locawebstyle/pull/415){:target="_blank"}: Implementado o layout do select personalizado, [veja exemplo na documentação](http://locaweb.github.io/locawebstyle/manual/componentes/select "Veja o exemplo na documentação"){:target="_blank"}.
-
+<br>
+\- Adicionado testes para o dom_scope, select2 e collapses.
 <br>
 **Documentação**
 
 \- Foi adicionada uma página na nossa documentação referente a nova adição do <code>select</code> personalizado.
-
 
 \- Em formulários foi adicionado em validação de campos a customização para <code>select</code> personalizados

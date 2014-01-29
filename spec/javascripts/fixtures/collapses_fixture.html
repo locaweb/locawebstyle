@@ -1,0 +1,81 @@
+<!-- Page load with active class on collapse -->
+<div id="haveActiveClassOnLoad" class="panel panel-default ls-collapse active">
+	<div class="panel-heading">
+		<a data-toggle="collapse" href="#collapseOne">
+			<h4 class="panel-title">Título do Collapse</h4>
+			<p>Descrição do collapse, se houver.</p>
+		</a>
+	</div>
+	<div id="collapseOne" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>Aqui é onde você coloca o conteúdo do Collapse</p>
+		</div>
+	</div>
+</div>
+
+<!-- When .collapse click add .active class in .ls-collapse -->
+<div id="addActiveClass" class="panel panel-default ls-collapse">
+	<div class="panel-heading">
+		<a data-toggle="collapse" href="#collapseOne">
+			<h4 class="panel-title">Título do Collapse</h4>
+			<p>Descrição do collapse, se houver.</p>
+		</a>
+	</div>
+	<div id="collapseOne" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>Aqui é onde você coloca o conteúdo do Collapse</p>
+		</div>
+	</div>
+</div>
+
+
+<!-- If .ls-collapse has class .active -->
+<div id="removeActiveClass" class="panel panel-default ls-collapse active">
+	<div class="panel-heading">
+		<a data-toggle="collapse" href="#collapseOne">
+			<h4 class="panel-title">Título do Collapse</h4>
+			<p>Descrição do collapse, se houver.</p>
+		</a>
+	</div>
+	<div id="collapseOne" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>Aqui é onde você coloca o conteúdo do Collapse</p>
+		</div>
+	</div>
+</div>
+
+<!-- If checkbox has checked open collapse -->
+<div class="panel panel-default">
+	<input type="checkbox" checked="checked" data-toggle="collapse" data-target="#collapse_checkbox1" id="checkbox1">
+	<label for="checkbox1">Checkbox 1</label>
+	<div id="collapse_checkbox1" class="panel-collapse collapse in">
+		<div class="well arrow-up">
+			<p>Conteúdo</p>
+		</div>
+	</div>
+</div>
+
+<!-- If checkbox not checked the collapse not opened -->
+<div class="panel panel-default">
+	<input type="checkbox" data-toggle="collapse" data-target="#collapse_checkbox2" id="checkbox2">
+	<label for="checkbox2">Checkbox 2</label>
+	<div id="collapse_checkbox2" class="panel-collapse collapse">
+		<div class="well arrow-up">
+			<p>Conteúdo</p>
+		</div>
+	</div>
+</div>
+
+<!-- When click on radio the collapse must be opened -->
+<div class="panel panel-default">
+	<input type="radio" data-parent="#collapse_radio" checked="checked" data-toggle="collapse" data-target="#collapse_radio1" name="teste" id="radio1">
+	<label for="radio1">Opçao 1</label>
+	<div id="collapse_radio1" class="panel-collapse collapse">
+		<div class="well arrow-up">
+			<p>Conteúdo</p>
+		</div>
+	</div>
+</div>
+
+
+

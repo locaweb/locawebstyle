@@ -1,4 +1,4 @@
-describe("Select2", function(){
+describe("Select2: ", function(){
   beforeEach(function(){
     loadFixtures('select2_fixture.html');
   });

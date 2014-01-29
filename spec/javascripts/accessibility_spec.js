@@ -1,4 +1,4 @@
-describe("Accessibility", function() {
+describe("Accessibility: ", function() {
   beforeEach(function() {
     loadFixtures('accessibility_fixture.html');
     locastyle.accessibility.init();
