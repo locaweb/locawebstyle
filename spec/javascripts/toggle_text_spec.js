@@ -1,4 +1,4 @@
-describe("Toggle text", function(){
+describe("Toggle text: ", function(){
 
   beforeEach(function(){
     loadFixtures('toggle_text_fixture.html');

@@ -1,5 +1,5 @@
 $(window).load(function() {
-  locastyle.trackEvents.init();
+  locastyle.trackEvents.init($(document));
   locastyle.init($(document));
   locastyle.mobile.init();
   locastyle.bootstrap.init();

@@ -1,4 +1,4 @@
-describe("Mobile Functions", function() {
+describe("Mobile Functions: ", function() {
   beforeEach(function() {
     loadFixtures('mobile_functions_fixture.html');
     locastyle.mobile.init();

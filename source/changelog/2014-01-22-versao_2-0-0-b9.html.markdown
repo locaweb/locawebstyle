@@ -1,13 +1,13 @@
 ---
 title: Versão 2.0.0-b9
 date: 2014-01-22 20:12 UTC
-tags:
-published: false
+tags: changelog
 ---
 
 **Adições**
 
 \- [#415](https://github.com/locaweb/locawebstyle/pull/415){:target="_blank"}: Implementado o layout do select personalizado, [veja exemplo na documentação](http://locaweb.github.io/locawebstyle/manual/componentes/select "Veja o exemplo na documentação"){:target="_blank"}.
+<<<<<<< HEAD
 
 \- Adicionado o atributo <code>disabled</code> na tag <code>form</code> para desabilitar a edição de todos os inputs de um form.
 
@@ -17,8 +17,8 @@ published: false
 
 \- Adicionada função <code>locastyle.forms.formDisable('#form', true)</code> para alternar entre formulários editaveis/nã0 editáveis com o atributo <code>data-toggle-form-edit="#id-form"</code> em um link.
 
+\- Adicionado testes para o dom_scope, select2 e collapses.
 
-<br>
 **Documentação**
 
 \- Foi adicionada uma página na nossa documentação referente a nova adição do <code>select</code> personalizado.

@@ -1,4 +1,4 @@
-describe("Dom Scope", function(){
+describe("Dom Scope: ", function(){
 
   beforeEach(function(){
     loadFixtures('dom_scope_fixture.html');
