@@ -3,7 +3,7 @@ describe("Track Events: ", function() {
     loadFixtures('track_events_fixture.html');
     $("body").data("controller", "locastyle");
     $("body").data("action", "track-events-test");
-    locastyle.trackEvents.init();
+    locastyle.trackEvents.init($(document));
   });
 
   describe("Initialization", function () {
@@ -14,9 +14,26 @@ describe("Track Events: ", function() {
 
       it("should not call findTriggers if window.ga is NOT present", function () {
         window.ga = null;
-        locastyle.trackEvents.init();
+        locastyle.trackEvents.init($(document));
         expect(locastyle.trackEvents.gaPresent).toEqual(false);
       });
+    });
+  });
+
+  describe('When dom_scope is given', function () {
+    it('should NOT bind events on elements outside dom_scope', function () {
+      $("a").unbind(); //clean previous binds
+      spyOn(window, "ga");
+      locastyle.trackEvents.init($("#scoped_links"));
+      $("#scoped_links_wrapper #outside_scope_link").trigger("click");
+      expect(window.ga).not.toHaveBeenCalled();
+    });
+
+    it('should bind events on elements inside dom_scope', function () {
+      spyOn(window, "ga");
+      locastyle.trackEvents.init($("#scoped_links"));
+      $("#scoped_links_wrapper #inside_scope_link").trigger("click");
+      expect(window.ga).toHaveBeenCalled();
     });
   });
 

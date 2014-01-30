@@ -3,24 +3,24 @@ var locastyle = locastyle || {};
 locastyle.trackEvents = (function() {
   'use strict';
 
-  function init(){
+  function init(dom_scope){
     if(window.ga){
-      findTriggers();
+      findTriggers(dom_scope);
       this.gaPresent = true;
     } else {
       this.gaPresent = false;
     }
   }
 
-  function findTriggers(){
-    findLinks();
-    findButtons();
-    findForms();
-    findSelects();
+  function findTriggers(dom_scope){
+    findLinks(dom_scope);
+    findButtons(dom_scope);
+    findForms(dom_scope);
+    findSelects(dom_scope);
   }
 
-  function findLinks(){
-    var links = $("a");
+  function findLinks(dom_scope){
+    var links = $("a", dom_scope);
     $(links).each(function (index, item) {
       var options = {}
       options.category = $("body").data("controller") + "#" + $("body").data("action");
@@ -48,8 +48,8 @@ locastyle.trackEvents = (function() {
     });
   }
 
-  function findButtons(){
-    var buttons = $("button");
+  function findButtons(dom_scope){
+    var buttons = $("button", dom_scope);
     $(buttons).each(function (index, item) {
       var options = {}
       options.category = $("body").data("controller") + "#" + $("body").data("action");
@@ -70,8 +70,8 @@ locastyle.trackEvents = (function() {
     });
   }
 
-  function findForms() {
-    var forms = $("form");
+  function findForms(dom_scope) {
+    var forms = $("form", dom_scope);
     $(forms).each(function (index, item) {
       var options = {}
       options.category = $("body").data("controller") + "#" + $("body").data("action");
@@ -81,8 +81,8 @@ locastyle.trackEvents = (function() {
     });
   }
 
-  function findSelects() {
-    var selects = $("select");
+  function findSelects(dom_scope) {
+    var selects = $("select", dom_scope);
     $(selects).each(function (index, item) {
       var options = {}
       options.category = $("body").data("controller") + "#" + $("body").data("action");
