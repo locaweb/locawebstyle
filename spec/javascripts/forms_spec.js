@@ -8,25 +8,58 @@ describe("Forms", function() {
   describe("When has attr disabled", function () {
 
     it("inputs also have attr disabled", function(){
-      expect( $('#disabledTextInput') ).toHaveAttr('disabled');
+      expect( $('#enabledTextInput1') ).toHaveAttr('disabled');
     });
 
     it("and a link with [data-toggle-form-edit] is clicked, form is editable", function(){
-      $('#enableForm').trigger('click');
-      expect( $('#disabledTextInput') ).not.toHaveAttr('disabled');
+      $('#enableForm1').trigger('click');
+      expect( $('#enabledTextInput1') ).not.toHaveAttr('disabled');
     });
 
-    it("and a link with [data-toggle-form-edit] is clicked again, form is not editabe", function(){
-      $('#enableForm').trigger('click').trigger('click');
-      expect( $('#disabledTextInput') ).toHaveAttr('disabled');
+    it("and a link with [data-toggle-form-edit] is clicked again, form is NOT editable", function(){
+      $('#enableForm1').trigger('click').trigger('click');
+      expect( $('#enabledTextInput1') ).toHaveAttr('disabled');
     });
 
-    it("and function formEditable(formId, true) is called, form is editable ", function(){
+    it("and function formEditable(formId, TRUE) is called, form is editable ", function(){
       locastyle.forms.formEditable('#formWithDisable', true);
-      console.log( $('#disabledTextInput')[0] )
-      expect( $('#disabledTextInput') ).not.toHaveAttr('disabled');
+      expect( $('#enabledTextInput1') ).not.toHaveAttr('disabled');
     });
 
-  }); // disable forms
+    it("and function formEditable(formId, FALSE) is called, form is NOT editable ", function(){
+      locastyle.forms.formEditable('#formWithDisable', false);
+      expect( $('#enabledTextInput1') ).toHaveAttr('disabled');
+    });
+
+
+  });
+
+  describe("When NOT has attr disabled", function () {
+
+    it("inputs will NOT have attr disabled", function(){
+      expect( $('#enabledTextInput2') ).not.toHaveAttr('disabled');
+    });
+
+    it("and a link with [data-toggle-form-edit] is clicked, form is NOT editable", function(){
+      $('#enableForm2').trigger('click');
+      expect( $('#enabledTextInput2') ).toHaveAttr('disabled');
+    });
+
+    it("and a link with [data-toggle-form-edit] is clicked, form IS editable", function(){
+      $('#enableForm2').trigger('click').trigger('click');
+      expect( $('#enabledTextInput2') ).not.toHaveAttr('disabled');
+    });
+
+    it("and function formEditable(formId, FALSE) is called, form is NOT editable ", function(){
+      locastyle.forms.formEditable('#formWithoutDisable', false);
+      expect( $('#enabledTextInput2') ).toHaveAttr('disabled');
+    });
+
+    it("and function formEditable(formId, TRUE) is called, form is NOT editable ", function(){
+      locastyle.forms.formEditable('#formWithoutDisable', true);
+      expect( $('#enabledTextInput2') ).not.toHaveAttr('disabled');
+    });
+
+  });
 
 });
