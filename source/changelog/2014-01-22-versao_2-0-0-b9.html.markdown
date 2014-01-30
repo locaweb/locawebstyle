@@ -1,7 +1,7 @@
 ---
 title: Versão 2.0.0-b9
 date: 2014-01-22 20:12 UTC
-published: false
+tags: changelog
 ---
 
 **Adições**
