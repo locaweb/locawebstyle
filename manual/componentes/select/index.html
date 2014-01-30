@@ -96,11 +96,11 @@
 <p>Utilizamos o plugin <a href="http://ivaynberg.github.io/select2/" target="_blank">Select2</a> para alterar o <code>select</code> padrão. Todas as opções e configurações do plugin original podem ser feitas, mas adicionamos algumas confidurações e atalhos no padrão LocawebStyle, listadas abaixo: </p>
 
 <h3>Simples</h3>
-<p>Para ativar o <b>selec2</b> basta usar o HTML de <code>select</code> padrão, com a classe <code>select2</code></p>
-<p>Apenas listas com mais de 10 itens possuem o campo de busca e exibem 10 itens visíveis dentro da rolagem. Para ocultar o campo de busca em uma lista maior, insira o atributo <code>data-visible</code> com o valor <code>-1</code></p>
+<p>Para ativar o <b>selec2</b> basta usar o HTML de <code>select</code> padrão, com a classe <code>ls-select</code></p>
+<p>Apenas listas com mais de 10 itens possuem o campo de busca e exibem 10 itens visíveis dentro da rolagem. Para ocultar o campo de busca em uma lista maior, insira o atributo <code>data-visible</code> com o valor <code>-1</code>.</p>
 <div class="example">
   <form>
-    <select name="select-simples" class="select2">
+    <select name="select-simples" class="ls-select">
       <option value="MG">Minas Gerais</option>
       <option value="SP">São Paulo</option>
       <option value="RJ">Rio de Janeiro</option>
@@ -109,7 +109,7 @@
   <br>
   <br>
   <form>
-    <select name="select-simples-grande" class="select2" style="width:300px">
+    <select name="select-simples-grande" class="ls-select" style="width:300px">
       <option value="ac">Acre</option>
       <option value="al">Alagoas</option>
       <option value="ap">Amapá</option>
@@ -142,7 +142,7 @@
   <br>
   <br>
   <form>
-    <select name="select-simples-grande-sem-busca" class="select2" style="width:300px" data-search="false">
+    <select name="select-simples-grande-sem-busca" class="ls-select" style="width:300px" data-search="false">
       <option value="ac">Acre</option>
       <option value="al">Alagoas</option>
       <option value="ap">Amapá</option>
@@ -173,30 +173,67 @@
     </select>
   </form>
 </div>
+<pre class="lang-html linenums prettyprint-code">
+<!-- Exemplo 1 -->
+<form>
+  <select name="select-simples" class="select2">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP">São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+  </select>
+</form>
+
+<!-- Exemplo 2 -->
+<form>
+  <select name="select-simples-grande" class="select2" style="width:300px">
+    <option value="ac">Acre</option>
+    <option value="al">Alagoas</option>
+    ...
+  </select>
+</form>
+
+<!-- Exemplo 3 -->
+<form>
+  <select name="select-simples-grande-sem-busca" class="select2" style="width:300px" data-search="false">
+    <option value="ac">Acre</option>
+    <option value="al">Alagoas</option>
+    ...
+  </select>
+</form>
+</pre>
 
 <hr>
 
 <h3>Seleção de múltiplos valores</h3>
 <p>O HTML é idêntico ao simples, com o atributo <code>multiple</code>.</p>
-<p>O select também deve estar com a largura definida. </p>
+<p>O select também deve estar com a largura definida.</p>
 <div class="example">
   <form>
-    <select multiple name="select-multiplo" class="select2" style="width:300px">
+    <select multiple name="select-multiplo" class="ls-select" style="width:300px">
       <option value="MG">Minas Gerais</option>
       <option value="SP">São Paulo</option>
       <option value="RJ">Rio de Janeiro</option>
     </select>
   </form>
 </div>
+<pre class="lang-html prettyprint-code linenums">
+<form>
+  <select multiple name="select-multiplo" class="select2" style="width:300px">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP">São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+  </select>
+</form>
+</pre>
 
 <hr>
 
 <h3>Placeholder</h3>
-<p>Para inserir um placeholder, basta adicionar o atributo <code>placeholder="valor"</code></p>
-<p>Exemplos <b>sem</b> valor inicial</p>
+<p>Para inserir um placeholder, basta adicionar o atributo <code>placeholder="valor"</code>.</p>
+<p>Exemplos <b>sem</b> valor inicial.</p>
 <div class="example">
   <form>
-    <select name="select-simples-placeholder" class="select2" placeholder="Selecione um estado">
+    <select name="select-simples-placeholder" class="ls-select" placeholder="Selecione um estado">
       <option value="MG">Minas Gerais</option>
       <option value="SP">São Paulo</option>
       <option value="RJ">Rio de Janeiro</option>
@@ -205,18 +242,38 @@
   <br>
   <br>
   <form>
-    <select multiple name="select-multiplo-placeholder" class="select2" style="width:300px" placeholder="Selecione um estado">
+    <select multiple name="select-multiplo-placeholder" class="ls-select" style="width:300px" placeholder="Selecione um estado">
       <option value="MG">Minas Gerais</option>
       <option value="SP">São Paulo</option>
       <option value="RJ">Rio de Janeiro</option>
     </select>
   </form>
 </div>
+<pre class="lang-html linenums prettyprint-code">
+<!-- Exemplo 1 -->
+<form>
+  <select name="select-simples-placeholder" class="select2" placeholder="Selecione um estado">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP">São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+  </select>
+</form>
+
+<!-- Exemplo 2 -->
+<form>
+  <select multiple name="select-multiplo-placeholder" class="select2" placeholder="Selecione um estado">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP">São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+  </select>
+</form>
+</pre>
+
 <br>
-<p>Exemplos <b>com</b> valor inicial</p>
+<p>Exemplos <b>com</b> valor inicial.</p>
 <div class="example">
   <form>
-    <select name="select-simples-placeholder-selected" class="select2" placeholder="Selecione um estado">
+    <select name="select-simples-placeholder-selected" class="ls-select" placeholder="Selecione um estado">
       <option value="MG">Minas Gerais</option>
       <option value="SP" selected>São Paulo</option>
       <option value="RJ">Rio de Janeiro</option>
@@ -225,19 +282,39 @@
   <br>
   <br>
   <form>
-    <select multiple name="select-multiplo-placeholder-selects" class="select2" style="width:300px" placeholder="Selecione um estado">
+    <select multiple name="select-multiplo-placeholder-selects" class="ls-select" style="width:300px" placeholder="Selecione um estado">
       <option value="MG">Minas Gerais</option>
       <option value="SP">São Paulo</option>
       <option value="RJ" selected>Rio de Janeiro</option>
     </select>
   </form>
 </div>
+<pre class="lang-html-linenums prettyprint-code">
+<!-- Exemplo 1 -->
+<form>
+  <select name="select-simples-placeholder-selected" class="select2" placeholder="Selecione um estado">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP" selected>São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+  </select>
+</form>
+
+<!-- Exemplo 2 -->
+<form>
+  <select multiple name="select-multiplo-placeholder-selects" class="select2" placeholder="Selecione um estado">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP">São Paulo</option>
+    <option value="RJ" selected>Rio de Janeiro</option>
+  </select>
+</form>
+</pre>
+
 <br>
 <h3>Estilos de validação</h3>
 <p>Para estilizar os campos nas validações adicionar as classes: <code>has-success</code>, <code>has-warning</code> ou <code>has-error</code> no elemento pai dos <code>&lt;select&gt;</code>.</p>
 <div class="example">
   <form class="has-success">
-    <select name="select-simples" class="select2">
+    <select name="select-simples" class="ls-select">
       <option value="MG">Minas Gerais</option>
       <option value="SP">São Paulo</option>
       <option value="RJ">Rio de Janeiro</option>
@@ -245,7 +322,7 @@
   </form>
   <br>
   <form class="has-error">
-    <select name="select-simples" class="select2">
+    <select name="select-simples" class="ls-select">
       <option value="MG">Minas Gerais</option>
       <option value="SP">São Paulo</option>
       <option value="RJ">Rio de Janeiro</option>
@@ -253,13 +330,43 @@
   </form>
   <br>
   <form class="has-warning">
-    <select name="select-simples" class="select2">
+    <select name="select-simples" class="ls-select">
       <option value="MG">Minas Gerais</option>
       <option value="SP">São Paulo</option>
       <option value="RJ">Rio de Janeiro</option>
     </select>
   </form>
 </div>
+
+<pre class="lang-html linenums prettyprint-code">
+<!-- Exemplo 1: has-sucess -->
+<form class="has-success">
+  <select name="select-simples" class="select2">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP">São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+  </select>
+</form>
+
+<!-- Exemplo 2: has-error -->
+<form class="has-error">
+  <select name="select-simples" class="select2">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP">São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+  </select>
+</form>
+
+<!-- Exemplo 3: has-warning -->
+<form class="has-warning">
+  <select name="select-simples" class="select2">
+    <option value="MG">Minas Gerais</option>
+    <option value="SP">São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+  </select>
+</form>
+</pre>
+
 			</article>
 		</div>
 
