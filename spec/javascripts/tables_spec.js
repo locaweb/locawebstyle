@@ -1,13 +1,13 @@
 describe("Tables", function() {
-  beforeEach(function() {
+
+  beforeEach(function(done) {
     loadFixtures('tables.html');
+    locastyle.forms.init();
     locastyle.tables.init();
   });
 
-  describe("Simple tables", function () {
-  }); // Simples tables
-
-  describe("Complex tables", function () {
-  }); // Complex tables
+  it("group actions checkbox are always enabled", function(){
+      expect( $('#groupCheckbox1') ).toHaveAttr('disabled');
+  });
 
 });
