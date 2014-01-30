@@ -33,13 +33,15 @@ locastyle.tables = (function() {
 
   }
 
-  var $tables = $( config.selectors.table, 'body');
   var isXsmall = window.innerWidth <= 767;
 
   function init(){
+    var $tables = $( config.selectors.table, 'body');
+    console.log( $tables )
     $tables.each(function(it, table){
       var $table = $(table);
       applyHeaderBehavior($table);
+      enableGroupActions($table);
       toggleHeaderCheckbox($table);
       addViewClickLine($table);
       toggleInputsEdit($table);
@@ -62,6 +64,12 @@ locastyle.tables = (function() {
       };
     });
     lineActions($table);
+  }
+
+  function enableGroupActions($table){
+    $table.find('tr').each(function(itr, tr){
+      $(tr).find('td:eq(0) input[type="checkbox"]').prop('disabled', false);
+    });
   }
 
   // Insere dropdown para cada linha da coluna de acoes se for necessário

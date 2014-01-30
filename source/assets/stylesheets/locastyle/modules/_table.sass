@@ -61,6 +61,10 @@ $bg-actions-color:  #00a272
 				font-size: .875rem
 				vertical-align: middle
 				position: static
+				&:nth-child(1)
+					input[type="checkbox"]
+						+appearance(checkbox)
+						display: inline-block
 
 				&:first-child
 					border-left: none
