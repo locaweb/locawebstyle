@@ -1,7 +1,7 @@
 describe("Mobile Functions: ", function() {
   beforeEach(function() {
     loadFixtures('mobile_functions_fixture.html');
-    locastyle.mobile.init();
+    locastyle.mobile.init($(document));
   });
 
   describe("checkSidebarExist() - Check if exist sidebar and nav-content. If exist we need to remove class HIDDEN of .control-sidebar and .control-menu", function () {

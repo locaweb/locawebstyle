@@ -1,7 +1,7 @@
 $(window).load(function() {
   locastyle.trackEvents.init();
   locastyle.init($(document));
-  locastyle.mobile.init();
+  locastyle.mobile.init($(document));
   locastyle.bootstrap.init();
   locastyle.forms.init();
   locastyle.tables.init();

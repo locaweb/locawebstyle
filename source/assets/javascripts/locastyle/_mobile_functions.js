@@ -3,10 +3,10 @@ var locastyle = locastyle || {};
 locastyle.mobile = (function() {
   'use strict';
 
-  function init(){
-    mobileLeftBar();
-    mobileRightBar();
-    mobileBarOverlay();
+  function init(dom_scope){
+    mobileLeftBar(dom_scope);
+    mobileRightBar(dom_scope);
+    mobileBarOverlay(dom_scope);
     tabDropdownMobile();
     tabDropdownActions();
     sliderMobile();
@@ -26,8 +26,8 @@ locastyle.mobile = (function() {
   //
   // Insere classe left-bar que controla a abertura da sidebar da ESQUERDA nos mobiles
   //
-  function mobileLeftBar() {
-    $('.control-menu').on('click touchstart', function(e) {
+  function mobileLeftBar(dom_scope) {
+    $('.control-menu', dom_scope).on('click touchstart', function(e) {
       $('html').toggleClass('left-bar').removeClass('right-bar');
       e.preventDefault();
     });
@@ -36,8 +36,8 @@ locastyle.mobile = (function() {
   //
   // Insere classe right-bar que controla a abertura da sidebar da DIREITA nos mobiles
   //
-  function mobileRightBar() {
-    $('.control-sidebar').on('click touchstart', function(e){
+  function mobileRightBar(dom_scope) {
+    $('.control-sidebar', dom_scope).on('click touchstart', function(e){
       $('html').toggleClass('right-bar').removeClass('left-bar');
       e.preventDefault();
     });
@@ -46,11 +46,11 @@ locastyle.mobile = (function() {
   //
   // Insere um OVERLAY sem transparente para usar quando as sidebares forem ativadas no mobile
   //
-  function mobileBarOverlay() {
+  function mobileBarOverlay(dom_scope) {
     if ( $('.overlay-bar').length === 0 ) {
       $('body').append('<span class="overlay-bar"></span>');
     }
-    $('.overlay-bar').on('click touchstart', function() {
+    $('.overlay-bar', dom_scope).on('click touchstart', function() {
       $('html').removeClass('right-bar').removeClass('left-bar');
     });
   }
