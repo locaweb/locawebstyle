@@ -3,22 +3,22 @@ var locastyle = locastyle || {};
 locastyle.mobile = (function() {
   'use strict';
 
-  function init(){
-    mobileLeftBar();
-    mobileRightBar();
-    mobileBarOverlay();
-    tabDropdownMobile();
-    tabDropdownActions();
-    sliderMobile();
-    checkSidebarExist();
+  function init(dom_scope){
+    mobileLeftBar(dom_scope);
+    mobileRightBar(dom_scope);
+    mobileBarOverlay(dom_scope);
+    tabDropdownMobile(dom_scope);
+    tabDropdownActions(dom_scope);
+    sliderMobile(dom_scope);
+    checkSidebarExist(dom_scope);
   }
 
-  function checkSidebarExist() {
-    if ( $(".sidebar").length ) {
-      $('.control-sidebar').removeClass('hidden');
+  function checkSidebarExist(dom_scope) {
+    if ( $(".sidebar", dom_scope).length ) {
+      $('.control-sidebar', dom_scope).removeClass('hidden');
     }
 
-    if ( $(".nav-content").length ) {
+    if ( $(".nav-content", dom_scope).length ) {
       $('.control-menu').removeClass('hidden');
     }
   }
@@ -26,8 +26,8 @@ locastyle.mobile = (function() {
   //
   // Insere classe left-bar que controla a abertura da sidebar da ESQUERDA nos mobiles
   //
-  function mobileLeftBar() {
-    $('.control-menu').on('click touchstart', function(e) {
+  function mobileLeftBar(dom_scope) {
+    $('.control-menu', dom_scope).on('click touchstart', function(e) {
       $('html').toggleClass('left-bar').removeClass('right-bar');
       e.preventDefault();
     });
@@ -36,8 +36,8 @@ locastyle.mobile = (function() {
   //
   // Insere classe right-bar que controla a abertura da sidebar da DIREITA nos mobiles
   //
-  function mobileRightBar() {
-    $('.control-sidebar').on('click touchstart', function(e){
+  function mobileRightBar(dom_scope) {
+    $('.control-sidebar', dom_scope).on('click touchstart', function(e){
       $('html').toggleClass('right-bar').removeClass('left-bar');
       e.preventDefault();
     });
@@ -46,8 +46,8 @@ locastyle.mobile = (function() {
   //
   // Insere um OVERLAY sem transparente para usar quando as sidebares forem ativadas no mobile
   //
-  function mobileBarOverlay() {
-    if ( $('.overlay-bar').length === 0 ) {
+  function mobileBarOverlay(dom_scope) {
+    if ( $('.overlay-bar', dom_scope).length === 0 ) {
       $('body').append('<span class="overlay-bar"></span>');
     }
     $('.overlay-bar').on('click touchstart', function() {
@@ -58,10 +58,10 @@ locastyle.mobile = (function() {
   //
   // Transforma as TABS em DROPDOWN em telas pequenas
   //
-  function tabDropdownMobile() {
+  function tabDropdownMobile(dom_scope) {
     if (locastyle.breakpoint === 'media-mobile') {
 
-      $('.nav').each(function(index) {
+      $('.nav', dom_scope).each(function(index) {
 
         // Texto que vai no Dropdown quando for mobile
         var dropdownItemText = $(this).find('li.active a').text();
@@ -110,10 +110,10 @@ locastyle.mobile = (function() {
   //
   // Transforma um grupo de ações em dropdown
   //
-  function tabDropdownActions() {
+  function tabDropdownActions(dom_scope) {
     if (locastyle.breakpoint === 'media-mobile') {
 
-      $('.actions').each(function(index) {
+      $('.actions', dom_scope).each(function(index) {
 
         // Define uma variável para que o dev possa modificar o texto padrão do dropdown menu.
         var $dataToggleText = $(this).find('.btn-group').attr('data-toggle-text') || "Ações";
@@ -143,8 +143,8 @@ locastyle.mobile = (function() {
   //
   // Configurando o slider que aparece no mobile
   //
-  function sliderMobile() {
-    var si = $('.media-mobile .shortcuts').royalSlider({
+  function sliderMobile(dom_scope) {
+    var si = $('.media-mobile .shortcuts', dom_scope).royalSlider({
       addActiveClass: true,
       arrowsNav: false,
       startSlideId: 1,

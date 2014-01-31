@@ -6,18 +6,18 @@ var locastyle = locastyle || {};
 locastyle.bootstrap = (function() {
   'use strict';
 
-  function init(){
-    startTooltip();
-    startPopover();
+  function init(dom_scope){
+    startTooltip(dom_scope);
+    startPopover(dom_scope);
   }
 
-  function startTooltip() {
-   $("[data-toggle='tooltip']").tooltip();
+  function startTooltip(dom_scope) {
+    $("[data-toggle='tooltip']", dom_scope).tooltip();
   }
 
-  function startPopover() {
-    var $popovers = $("[data-toggle='popover']");
-    $("[data-toggle='popover'][data-inherit]").on('shown.bs.popover', function (e) {
+  function startPopover(dom_scope) {
+    var $popovers = $("[data-toggle='popover']", dom_scope);
+    $("[data-toggle='popover'][data-inherit]", dom_scope).on('shown.bs.popover', function (e) {
       var inheritedProperty = $(this).data('inherit');
       var apply = $(this).data('inherit-apply') || 'color';
       if( $(this).attr('class').match(/(ico)/) ){
