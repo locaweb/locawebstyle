@@ -7,12 +7,12 @@ describe("Dom Scope: ", function(){
   describe("When using a specific scope", function(){
     it("should call functions on received scope", function(){
       locastyle.init('#myAwesomeId');
-      expect($("#myAwesomeId .select2").hasClass('select2-offscreen')).toBeTruthy();
+      expect($("#myAwesomeId .ls-select").hasClass('select2-offscreen')).toBeTruthy();
     });
 
     it("should NOT call function on NOT received scope", function(){
       locastyle.init("#myAwesomeId");
-      expect($("#myNotAwesomeId .select2").hasClass('select2-offscreen')).toBeFalsy();
+      expect($("#myNotAwesomeId .ls-select").hasClass('select2-offscreen')).toBeFalsy();
     });
   });
 
