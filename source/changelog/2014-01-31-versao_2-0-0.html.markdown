@@ -8,3 +8,5 @@ published: false
 **Adições**
 
 \- Escopo de DOM adicionado aos módulos, trackEvents, base, mobile, bootstrap, collapse;
+
+\- Adicionado sessão de ícones destinadas a produtos Locaweb.
