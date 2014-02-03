@@ -37,7 +37,6 @@ locastyle.tables = (function() {
 
   function init(){
     var $tables = $( config.selectors.table, 'body');
-    console.log( $tables )
     $tables.each(function(it, table){
       var $table = $(table);
       applyHeaderBehavior($table);
