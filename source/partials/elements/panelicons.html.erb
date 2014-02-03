@@ -1,0 +1,8 @@
+<% icons = [
+  {name: "smtp", keyword: ""}
+]%>
+
+
+<% icons.each do |icon| %>
+  <span class="box1"><span aria-hidden="true" class="icopanel-<%= icon[:name] %>" data-keyword="<%= icon[:keyword] %>"></span>&nbsp;icopanel-<%= icon[:name] %></span>
+<% end %>

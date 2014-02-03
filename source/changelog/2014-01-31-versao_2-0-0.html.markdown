@@ -1,0 +1,12 @@
+---
+title: Versão_2.0.0
+date: 2014-01-31 16:01 UTC
+tags: changelog
+published: false
+---
+
+**Adições**
+
+\- Escopo de DOM adicionado aos módulos, trackEvents, base, mobile, bootstrap, collapse;
+
+\- Adicionado sessão de ícones destinadas a produtos Locaweb.

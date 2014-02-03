@@ -106,7 +106,7 @@ var locastyle = (function() {
 
   //Minimiza o resultado para a busca
   function select2DefaultConfig(dom_scope, exclude){
-    $('.select2', dom_scope).not(exclude).each(function(i, el){
+    $('.ls-select', dom_scope).not(exclude).each(function(i, el){
       var $select = $(el);
       var $optionList = $select.find('option');
       var visible;
