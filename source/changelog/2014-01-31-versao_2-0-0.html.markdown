@@ -1,5 +1,5 @@
 ---
-title: Versão_2.0.0
+title: Versão 2.0.0
 date: 2014-01-31 16:01 UTC
 tags: changelog
 ---

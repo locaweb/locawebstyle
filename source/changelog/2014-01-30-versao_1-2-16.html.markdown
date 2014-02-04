@@ -1,0 +1,31 @@
+---
+title: Versão 1.2.16
+date: 2014-01-30 19:10 UTC
+tags: changelog
+---
+
+
+**Correções**
+
+Centralização dos ícones do sidebar.
+
+Aplicação visual da classe <code>.table</code> que vem do bootstrap.
+
+Tratamento com a classe <code>.ellipsis</code> no título do Painel, afim de evitar que nomes grandes quebrem o layout.
+
+<br>
+
+**Adições**
+
+Nova classe funcional <code>.borderBottomDotted</code> que insere borda pontinha abaixo do elemento.
+
+Barra de progresso na cor cinza aplicando a classe <code>.progress-default</code>.
+
+Nova aplicação "<a href="http://locaweb.github.io/locawebstyle/v1/manual/aplicacoes/soma-valores">Soma valores</a>" para exibir <code>input[radio]</code> e <code>input[checkbox]</code> e exibir resumo de valores selecionados.
+
+<br>
+
+**Documentação**
+
+Criada documentação da nova aplicaçao <a href="http://locaweb.github.io/locawebstyle/v1/manual/aplicacoes/soma-valores">Soma valores</a>.
+Atualização da documentacão da barra de progresso, classes funcionais e tabela.
