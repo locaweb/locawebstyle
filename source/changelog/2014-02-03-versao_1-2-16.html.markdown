@@ -1,7 +1,0 @@
----
-title: versao_1-2-16
-date: 2014-02-03 19:10 UTC
-tags: changelog
-published: false
----
-
