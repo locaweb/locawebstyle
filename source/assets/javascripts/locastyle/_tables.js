@@ -29,11 +29,11 @@ locastyle.tables = (function() {
     groupActions:{
       one: 'item selecionado',
       other: 'itens selecionados'
-    }
+    },
+
+    isXsmall : window.innerWidth <= 767
 
   }
-
-  var isXsmall = window.innerWidth <= 767;
 
   function init(){
     var $tables = $( config.selectors.table, 'body');
@@ -78,14 +78,14 @@ locastyle.tables = (function() {
     $tableActions.each(function(itd, td){
       var $actions = $(td).find('a, button').not(config.actionsExclude);
       var line = $(td).parent('tr').index() ;
-      if ( $actions[1] || isXsmall ){
+      if ( $actions[1] || config.isXsmall ){
         var dropdown = locastyle.templates.button_dropdown_single({
-          label     : isXsmall ? "" : config.dropdownLabel,
+          label     : config.isXsmall ? "" : config.dropdownLabel,
           labelClass: 'btn-xs',
           addClass  : 'pull-right' + ( tableLines - line < 3 ? ' dropup' : '' ),
           actions   : (function(){
             var actions = [];
-            if ( !$(td).find('[' + config.actions.view.attr + ']')[0] && isXsmall ){
+            if ( !$(td).find('[' + config.actions.view.attr + ']')[0] && config.isXsmall ){
               actions.push({label: config.actions.view.label, link: '#', extras: config.actions.view.attr })
             }
             $actions.each(function(i, action){
@@ -140,7 +140,7 @@ locastyle.tables = (function() {
   }
 
   function addViewClickLine($table){
-    if ( isXsmall ){
+    if ( config.isXsmall ){
       $table.find('tbody tr').each(function(itr, tr){
         if ( $(tr).find('.hidden-xs')[0] ){
           $(tr).find('td').not(  config.selectors.actionsColumn).attr('data-action-modal', 'view');
@@ -375,7 +375,7 @@ locastyle.tables = (function() {
   }
 
   function mobileTableGroupActions($table){
-    if ( isXsmall ){
+    if ( config.isXsmall ){
       var $groupActions = $table.prev('.ls-table-group-actions, [data-target]')
       var bts = $groupActions.find('a, button')
       var headerAction = locastyle.templates.button_dropdown_single({
