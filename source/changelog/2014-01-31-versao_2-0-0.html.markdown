@@ -70,11 +70,10 @@ Também mudamos um pouco a [cartilha de elementos](http://locaweb.github.io/loca
 
 A ideia é que você consiga encontrar exemplos de estruturas básicas para montar seus próprios projetos e verificar as possibilidades aos juntar os componentes em uma mesma página.
 
-**Adições**
+## Versão 1.0
+Para você que ainda precisa dar suporte para a primeira versão do Locaweb Style (como nós), [a documentação se encontra nesse link](http://localhost:4567/v1).
 
-\- Escopo de DOM adicionado aos módulos, trackEvents, base, mobile, bootstrap, collapse;
-
-\- Adicionado sessão de ícones destinadas a produtos Locaweb.
+Nós ainda estamos atualizando elementos e dado suporte para produtos internos. Quando esse suporte vai acabar? Quando não tivermos mais que lidar com essa versão aqui dentro da Locaweb. Até lá, sugiro que você migre quando puder seus produtos para a versão nova do Locaweb Style.
 
 ## Links para usar o Locaweb Style
 Maneiras para usar o Locastyle:
