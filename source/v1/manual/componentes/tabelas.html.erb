@@ -8,15 +8,85 @@ menu_page: v1/partials/sidebar-componentes.erb
 
 <article class="text">
         <header>
-          <h1>Tabelas</h1>
-          <h3>Para exibir dados tabulares. Também seguem os padrões do Bootstrap, mas modificamos o seu design com uma classe nossa.</h3>
+            <h1>Tabelas</h1>
+            <h3>Exibindo dados tabulares.</h3>
       </header>
 
-      <p>Usamos tabelas para listar informações tabulares o tempo inteiro. Os padrões do Bootstrap ainda continuam, logo, se quiser utilizar o <a href="http://twitter.github.com/bootstrap/base-css.html#tables">estilo de tabelas que o Bootstrap oferece</a>, fique à vontade. Se quiser a nossa versão, basta inserir a classe <strong>tableList</strong> na tabela.</p>
 
       <p>Perceba que para deixar os títulos de colunas com marcação de ordenação, basta utilizar as classes <strong>dataDescending</strong> ou <strong>dataAscending</strong>.</p>
 
-      <table class="tableList">
+      <p>Tabela no padrão do bootstrap utilizamos a classe <code>.table</code>. Esse tipo de tabela não possue bordas laterais.</p>
+
+      <h3>Classes que manipulam o estilo da tabela padrão.</h3>
+      <p>Para alterar o estilo da tabela padrão com a classe <code>.table</code>, basta adicionar as classes abaixo:</p>
+      <p><code>table-bordered</code>: adiciona borda</p>
+      <p><code>table-striped</code>: adiciona background nas linhas ímpares</p>
+      <p><code>table-hover</code>: adiciona background ao passar o mouse</p>
+
+      <table class="table">
+        <thead>
+            <tr>
+                <th class="txtLeft dataDescending"><a href="#">Nome do cliente</a></th>
+                <th class="dataAscending"><a href="#"># do pedido</a></th>
+                <th><a href="#">Data - Hora</a></th>
+                <th><a href="#">Status</a></th>
+                <th><a href="#">Valor</a></th>
+                <th colspan="2">Ações</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr class="success">
+                <td class="txtLeft span3">Helena da Silva
+                    <ul class="actionsTable">
+                        <li><a href="#" class="ico-list">Relatório</a></li>
+                        <li><a href="#" class="ico-trash">Excluir</a></li>
+                    </ul>
+                </td>
+                <td class="span2">74994</td>
+                <td>14/03/12 - 11h25</td>
+                <td>Autorizada</td>
+                <td>R$ 297,00</td>
+                <td><a href="#" class="ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
+                <td> <a href="#" class="ico ico-estornar" data-toggle="modal">Estornar</a></td>
+            </tr>
+            <tr>
+                <td class="txtLeft span3">Helena da Silva
+                    <ul class="actionsTable">
+                        <li><a href="#" class="ico-list">Relatório</a></li>
+                        <li><a href="#" class="ico-trash">Excluir</a></li>
+                    </ul>
+                </td>
+                <td class="span2">74994</td>
+                <td>14/03/12 - 11h25</td>
+                <td>Autorizada</td>
+                <td>R$ 297,00</td>
+                <td><a href="#" class="ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
+                <td> <a href="#" class="ico ico-estornar" data-toggle="modal">Estornar</a></td>
+            </tr>
+            <tr>
+                <td class="txtLeft span3">Helena da Silva
+                    <ul class="actionsTable">
+                        <li><a href="#" class="ico-list">Relatório</a></li>
+                        <li><a href="#" class="ico-trash">Excluir</a></li>
+                    </ul>
+                </td>
+                <td class="span2">74994</td>
+                <td>14/03/12 - 11h25</td>
+                <td>Autorizada</td>
+                <td>R$ 297,00</td>
+                <td><a href="#" class="ico ico-tabela" data-toggle="modal">Ver Detalhes</a></td>
+                <td> <a href="#" class="ico ico-estornar" data-toggle="modal">Estornar</a></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+  <h2>Tabela com a classe tableList</h2>
+
+  <p>Usamos tabelas para listar informações tabulares o tempo inteiro. Os padrões do Bootstrap ainda continuam, logo, se quiser utilizar o <a href="http://twitter.github.com/bootstrap/base-css.html#tables">estilo de tabelas que o Bootstrap oferece</a>, fique à vontade. Se quiser a nossa versão, basta inserir a classe <code>tableList</code> na tabela pra ter o visual abaixo:</p>
+    <table class="tableList">
         <thead>
             <tr>
                 <th class="txtLeft dataDescending"><a href="#">Nome do cliente</a></th>

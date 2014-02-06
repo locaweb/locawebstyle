@@ -1,0 +1,221 @@
+---
+title: Aplicações - Soma valores
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-aplicacoes.erb
+---
+
+<article class="text">
+  <header>
+    <h1>Soma Valores</h1>
+    <h3>Exibe um conjunto de <i>radio-buttons</i> ou <i>checkboxes</i> para seleção e exibe um sumário dos selecionados</h3>
+  </header>
+
+  <p>O componente usa alguns atributos <code>data</code> no html para exibir um resumo das opçoes selecionadas.</p>
+
+  <p>No exemplo abaixo, utilizamos esses atributos, inseridos no markup que mostra a exibição padrão, sugerida, para essa aplicação de listagem de opções e exibição do resumo:</p>
+
+
+  <div class="example overflowHidden">
+    <div class="ls-sum-values-container span11">
+      <h4>
+        Selecione um plano
+      </h4>
+
+      <label class="sumItem row boxWhite grayHover noPadding ">
+        <span class="span8 paddingVertical10">
+          <span class="fLeft">
+              <input type="radio" name="preco" value="1" data-sumvalue="10" data-sumlabel="Load balancer de 1 Mbps">
+          </span>
+          <span class="dInlineBlock paddingHorizontal">
+              <span class="sumItemLabel">1  Mbps </span>
+          </span>
+        </span>
+        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+          R$ 10,00/mês
+        </span>
+      </label>
+
+      <label class="sumItem row boxWhite grayHover noPadding">
+        <span class="span8 paddingVertical10">
+          <span class="fLeft">
+              <input type="radio" name="preco" value="1" data-sumvalue="60" data-sumlabel="Load balancer de 10 Mbps">
+          </span>
+          <span class="dInlineBlock paddingHorizontal">
+              <span class="sumItemLabel">10  Mbps </span>
+          </span>
+          <span class="noBold sumItemAddLine">Banda + conexão padrão</span>
+        </span>
+        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+          R$ 60,00/mês
+        </span>
+      </label>
+
+      <label class="sumItem row boxWhite grayHover noPadding ">
+        <span class="span8 paddingVertical10">
+          <span class="fLeft">
+              <input type="radio" name="preco" value="1"  data-sumvalue="100" data-sumlabel="Load balancer de 20 Mbps">
+          </span>
+          <span class="dInlineBlock paddingHorizontal">
+              <span class="sumItemLabel">20  Mbps </span>
+          </span>
+          <span class="noBold sumItemAddLine">Banda + conexão padrão</span>
+        </span>
+        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+          R$ 100,00/mês
+        </span>
+      </label>
+
+      <label class="sumItem row boxWhite grayHover noPadding ">
+        <span class="span8 paddingVertical10">
+          <span class="fLeft">
+              <input type="radio" name="preco" value="1" data-sumvalue="150" data-sumlabel="Load balancer de 40 Mbps">
+          </span>
+          <span class="dInlineBlock paddingHorizontal">
+              <span class="sumItemLabel">40  Mbps </span>
+          </span>
+          <span class="noBold sumItemAddLine">Banda + conexão padrão</span>
+        </span>
+        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+          R$ 150,00/mês
+        </span>
+      </label>
+
+      <br>
+      <h4>Inclua conexão segura (suporte a SSL)</h4>
+
+      <label class="sumItem row boxWhite grayHover noPadding ">
+        <span class="span8 paddingVertical10">
+          <span class="fLeft">
+            <input type="checkbox" name="ssl" value="1" data-sumvalue="20" data-sumlabel="Suporte a SSL">
+          </span>
+          <span class="dInlineBlock paddingHorizontal">
+            Incluir conexão segiura SSL
+          </span>
+          <span class="noBold sumItemAddLine">
+            Para ativar a conexão segura, você precisa ter um certificado SSL. Após contratar o Load Balancer, se necessário, adquira o certificado com nossos parceiros Symantec, Comodo e Thawte. Dúvidas? Fale com nosso <a href="#">Atendimento</a>.
+          </span>
+        </span>
+        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+          R$ 20,00/mês
+        </span>
+      </label>
+
+      <div class="boxGray sumResume noPadding">
+        <span class="sumResumeText  span8 paddingVertical10"></span>
+        <span class="sumResumeTotal span3 paddingVertical10 noMarginLeft txtCenter fRight " data-sumpattern="R$ {{val}}/mês"></span>
+      </div>
+
+    </div>
+
+    <br>
+    <p>Podem existir várias lista para soma de valores em uma mesma tela, independentes:</p>
+    <br>
+
+    <div class="ls-sum-values-container span11">
+      <h4>
+        Selecione um plano
+      </h4>
+
+      <label class="sumItem row boxWhite grayHover noPadding ">
+        <span class="span8 paddingVertical10">
+          <span class="fLeft">
+              <input type="radio" name="preco" value="1" data-sumvalue="10" data-sumlabel="Load balancer de 1 Mbps">
+          </span>
+          <span class="dInlineBlock paddingHorizontal">
+              <span class="sumItemLabel">1  Mbps </span>
+          </span>
+        </span>
+        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+          R$ 10,00/mês
+        </span>
+      </label>
+
+      <label class="sumItem row boxWhite grayHover noPadding">
+        <span class="span8 paddingVertical10">
+          <span class="fLeft">
+              <input type="radio" name="preco" value="1" data-sumvalue="59" data-sumlabel="Load balancer de 10 Mbps">
+          </span>
+          <span class="dInlineBlock paddingHorizontal">
+              <span class="sumItemLabel">10  Mbps </span>
+          </span>
+        </span>
+        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+          R$ 60,00/mês
+        </span>
+      </label>
+
+      <div class="boxGray sumResume noPadding">
+        <span class="sumResumeText  span8 paddingVertical10"></span>
+        <span class="sumResumeTotal span3 paddingVertical10 noMarginLeft txtCenter fRight " data-sumpattern="R$ {{val}}/mês"></span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <h2>Atributos & Classes</h2>
+
+  <p>A lista deve estar dentro de um container com a classe <code>ls-sum-values-container</code></p>
+  <p>Cada item da lista deve possuir a classe <code>sumItem</code></p>
+  <p>O <code>input radio</code> ou <code>input checkbox</code> dentro do <code>itemSum</code> deverá possuir os atributos:</p>
+  <ul>
+    <li><code>data-sumvalue="999"</code>: valor a ser somado e exibido.</li>
+    <li><code>data-sumlabel="TEXTO"</code>: texto a ser exibido no resumo.</li>
+  </ul>
+  <p>O resumo, texto e soma numérica, será exibido dentro de um elemnto que possua a classe <code>sumResume</code>, com elementos filhos com as classes:</p>
+  <ul>
+    <li><code>sumResumeText</code>: exibe os textos, concatenados, das opçoes selecionadas.</li>
+    <li><code>sumResumeTotal</code>: exibe a soma numérica, exibida de acordo com o atributo <code>data-sumpattern="R$ {{val}}/mês"</code></li>
+  </ul>
+
+
+  <h3>Exemplo, com layout padrão</h3>
+
+  <pre class="lang-html prettyprintCode linenums">
+    <div class="ls-sum-values-container span11">
+      <h4>
+        Selecione um plano
+      </h4>
+
+      <!-- Item 1 -->
+      <label class="sumItem row boxWhite grayHover noPadding " data-sumvalue-target="#somaValores">
+        <span class="span8 paddingVertical10">
+          <span class="fLeft">
+              <input type="radio" name="preco" value="1" data-sumvalue="10" data-sumlabel="Load balancer de 1 Mbps">
+          </span>
+          <span class="dInlineBlock paddingHorizontal">
+              <span class="sumItemLabel">1  Mbps </span>
+          </span>
+        </span>
+        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+          R$ 10,00/mês
+        </span>
+      </label>
+
+      <!-- Item 2 -->
+      <label class="sumItem row boxWhite grayHover noPadding " data-sumvalue-target="#somaValores">
+        <span class="span8 paddingVertical10">
+          <span class="fLeft">
+              <input type="radio" name="preco" value="1"  data-sumvalue="99" data-sumlabel="Load balancer de 20 Mbps">
+          </span>
+          <span class="dInlineBlock paddingHorizontal">
+              <span class="sumItemLabel">20  Mbps </span>
+          </span>
+          <span class="noBold sumItemAddLine">Banda + conexão padrão</span>
+        </span>
+        <span class="sumValue span3 noMargin ls-borderLeft txtCenter paddingVertical10">
+          R$ 100,00/mês
+        </span>
+      </label>
+
+      <div class="boxGray sumResume noPadding">
+        <span class="sumResumeText  span8 paddingVertical10"></span>
+        <span class="sumResumeTotal span3 paddingVertical10 noMarginLeft txtCenter fRight " data-sumpattern="R$ {{val}}/mês"></span>
+      </div>
+
+    </div>
+
+  </pre>
+
+
+</article>
