@@ -3,10 +3,10 @@
 **/
 @media screen and (max-width:767px) {
   #select_themes {display: none;}
-  
+
   body {padding:0 !important;}
   body:after {content:" "; display:block; clear:both;}
-  
+
   .select_themes {display: none;}
 
   .limit {
@@ -208,6 +208,19 @@
     padding-right: 0;
     float: none !important;
     padding: 10px 0;
+  }
+
+  .boxList .boxListGrids{
+    padding: 0;
+  }
+  .boxList .boxListGrids [class*="span"]:first-child{ border-top-color: transparent; }
+  .boxList .boxListGrids [class*="span"]{
+    display: block;
+    border-top: 1px solid #e5e5e5;
+    border-left-color: transparent;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
   }
 
 }
