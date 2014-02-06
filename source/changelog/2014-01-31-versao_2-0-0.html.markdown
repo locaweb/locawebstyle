@@ -4,13 +4,15 @@ date: 2014-01-31 16:01 UTC
 tags: changelog
 ---
 
-A versão 2.0 do Locaweb Style é uma versão importante por vários motivos. O primeiro deles é que nessa versão trabalhamos mais próximos do time de UX. Todos os elementos e módulos que criarmos a partir de agora envolve o time de UX e o time de front-end INTEIROS. Cada módulo é planejado pelas duas equipes em reuniões regulares. Tirando o Foundation, não sei qual outro framework web tem duas equipes praticamente dedicadas a construir um framework web.
+A versão 2.0 do Locaweb Style é uma versão importante por vários motivos. Vamos destacar a seguir os dois principais. Mas sugiro que você leia atentamente as modificações que fizemos logo depois deste texto.
 
-O segundo motivo pelo qual essa versão é importante é que além de uma série de mudanças e atualizações, talvez a principal característica é que agora o Locaweb Style é Responsivo. Todos os elementos são pensados primeiro para pequenas telas, depois para telas maiores. Estamos levando bem a sério essa metodologia. Isso tem causado alguns debates interessantes e temos aprendido bastante.
+A primeira grande modificação é que os times de UX e Front-end estão trabalhando realmente juntos para planejar todos os novos elementos e módulos. Cada módulo é planejado pelas duas equipes em reuniões regulares, onde são discutidos tanto a versão mobile, quanto a versão desktop. Tirando o Foundation, não conheço outro lugar onede há duas equipes praticamente dedicadas ao desenvolvimento de um framework público.
 
-Com o framework responsivo, seu cliente pode usufruir do painel do seu produto em qualquer dispositivo, de forma prática e rápida. Não achamos que sua versão mobile precisa ser apenas para consulta de informações, pelo contrário, nosso alvo é que o cliente consiga fazer 90% das tarefas em dispositivos com telas pequenas. Esse é o verdadeiro objetivo do Mobile First.
+A segunda grande modificação é que o Locaweb Style agora é Responsivo. Todos os elementos são pensados primeiro para pequenas telas, depois para telas maiores. Estamos levando bem a sério essa metodologia. Isso tem causado alguns debates interessantes e temos aprendido bastante. Na verdade é bem mais que Responsivo. Temos princípios de adapção a nível de elemento. Isso quer dizer que modificamos alguns elementos para que sua experiência em diversos contextos sejam melhores. Por exemplo: navegações com tabs não são uma boa solução para mobiles ou telas pequenas. Nestes casos, nós adaptamos as tabs pra dropdowns, facilitando o acesso.
 
-Nas próximas versões haverão mudanças drásticas na estrutura do Layout. Queremos deixar o layout mais homogeneo entre os dispositivos. Não acreditamos em um layout diferente para cada aparelho. Queremos que o cliente não sinta muita diferença entre as versões e que ele tenha uma curva de aprendizado mais branda entre as versões mobile e desktop. Estamos fazendo de tudo para manter as duas estruturas no código. Teremos mais informações nos próximos meses.
+Não achamos que a versão mobile seja apenas utilizada para consulta de informações, pelo contrário, nosso alvo é que o cliente consiga fazer 90% das tarefas em todos os dispositivos, não importa qual seja. Esse é o verdadeiro objetivo do Mobile First, adaptive web design e responsive.
+
+Nas próximas versões haverão mudanças drásticas na estrutura e layout. Queremos produzir um layout mais uniforme entre os dispositivos. Não acreditamos em um layout diferente para cada aparelho. Queremos que o cliente não sinta muita diferença entre as versões e que ele tenha uma curva de aprendizado mais branda entre as versões mobile e desktop. Nossa primeira ideia é manter as duas versões: clássica e a nova estrutura e estamos trabalhando para manter as duas estruturas no código. Teremos mais informações nos próximos meses.
 
 Abaixo, segue o Changelog com as mudanças mais importantes que fizemos. Qualquer coisa, comente!
 
