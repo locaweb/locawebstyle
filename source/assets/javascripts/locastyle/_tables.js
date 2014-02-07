@@ -188,13 +188,13 @@ locastyle.tables = (function() {
       var actionModal = $(this).data('actionModal');
       var headerAction;
       var hasEdit = $(this).parents('td').find('[data-action-modal="edit"]')[0] && $(this).parents('tr').find(':input, select');
-      if ( hasEdit ){
+      if ( hasEdit && config.isXsmall ){
         headerAction = locastyle.templates.button_dropdown_single({
           label: config.dropdownLabel,
           addClass: 'pull-right',
           actions: [
             {label: config.actions.view.label, link: '#view', classes: 'ls-modal-action'},
-            {label: config.actions.view.edit, link: '#edit', classes: 'ls-modal-action'}
+            {label: config.actions.edit.label, link: '#edit', classes: 'ls-modal-action'}
           ]
         });
       }
@@ -221,10 +221,9 @@ locastyle.tables = (function() {
         }
       }
       var $modal = locastyle.templates.modal('body', config).modal('show');
-
-      locastyle.forms.formEditable($modal.find('form'), hasEdit)
-      locastyle.forms.formAsText($modal.find('form'), !hasEdit)
-
+      var editable = modalActionType == 'edit' ? true : false;
+      locastyle.forms.formEditable($modal.find('form'), editable)
+      locastyle.forms.formAsText($modal.find('form'), !editable)
       var $modalBody = $modal.find('.modal-body');
       $modal
         .on('hidden.bs.modal', function (e) {
@@ -343,7 +342,8 @@ locastyle.tables = (function() {
   }
 
   function  excludeLine($modal, $table, $tr) {
-    $modal.find('.modal-footer .btn-danger').on('click', function(){
+    $modal.find('.modal-footer .btn-danger').on('click', function(e){
+      e.preventDefault();
       var $addInputs = $table.parents('form').find('input').filter(function () {
         return $(this).parents('table').length === 0;
       });
@@ -367,7 +367,8 @@ locastyle.tables = (function() {
 
   function removeLine ($modal, $tr) {
     $modal.modal('hide');
-    $tr.addClass( config.config.trClasses.warn);
+    $tr.addClass( config.trClasses.warn);
+    $tr.find('td:eq(0) :checkbox').prop('checked', false).trigger('change');
     setTimeout(function(){
       $tr.slideUp('fast', function(){
         $tr.remove();
