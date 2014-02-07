@@ -9,7 +9,7 @@
         <li class="divider"></li>
       <% end %>
       <li>
-        <a href="<%= action.link %>"<% if action.classes :%>class="<%= action.classes %>"<% end %> <% if action.extras :%><%- action.extras %><% end %> >
+        <a href="<%= action.link %>" <% if action.classes :%>class="<%= action.classes %>"<% end %> <% if action.extras :%><%- action.extras %><% end %> >
           <%- action.label %>
         </a>
       </li>

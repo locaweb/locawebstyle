@@ -318,7 +318,7 @@ locastyle.tables = (function() {
   }
 
   function confirmDanger($table){
-    $('a[data-confirm-text]', $table).on('click', function(evt){
+    $('[data-confirm-text]', $table).on('click', function(evt){
       evt.preventDefault();
       var config = {
         header : {
@@ -342,8 +342,8 @@ locastyle.tables = (function() {
   }
 
   function  excludeLine($modal, $table, $tr) {
-    $modal.find('.modal-footer .btn-danger').on('click', function(e){
-      e.preventDefault();
+    $modal.find('.modal-footer .btn-danger').on('click', function(evt){
+      evt.preventDefault();
       var $addInputs = $table.parents('form').find('input').filter(function () {
         return $(this).parents('table').length === 0;
       });
