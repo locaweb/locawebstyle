@@ -3,7 +3,6 @@ describe("Tables", function() {
   beforeEach(function() {
     loadFixtures('tables.html');
     locastyle.init();
-    // locastyle.forms.init();
   });
 
   describe("Always", function() {
@@ -80,6 +79,10 @@ describe("Tables", function() {
       expect( $('#complex-table tbody tr:last()').find('.btn-group') ).toHaveClass('dropup');
     });
 
+    it("click in link/button with [data-action-modal='edit'] show modal with editable form", function(){
+      $('#complex-table tbody').find('[data-action-modal="edit"]').eq(0).trigger('click');
+      expect( $('#template-modal').find('form') ).not.toHaveAttr('disabled');
+    });
 
   });
 
@@ -120,7 +123,6 @@ describe("Tables", function() {
       expect( hasDropdown ).toBe( true );;
     });
 
-
   });
 
   describe("Mobile", function() {
@@ -135,7 +137,6 @@ describe("Tables", function() {
       $('.overlay-bar').remove();
       $('.modal-backdrop').remove();
     });
-
 
     it("actions always inside dropdown", function(){
       var $complexTable  = $('#complex-table');
@@ -165,10 +166,5 @@ describe("Tables", function() {
     });
 
   });
-
-
-
-
-
 
 });
