@@ -39,9 +39,6 @@ src_files:
 #   - stylesheets/*.css
 #
 stylesheets:
-    - source/assets/bootstrap/css/bootstrap.css
-    - source/assets/stylesheets/locastyle.css
-
 
 # helpers
 #
