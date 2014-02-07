@@ -175,8 +175,8 @@ locastyle.mobile = (function() {
   function lwbarMobile() {
 
     // Verifica se existe a barra da locaweb
-    var existLwBar = $('html[class*="with-lwbar"]').length
-    if (existLwBar) {
+    var existLwBar = $('#lwbar-header').length
+    if (existLwBar == 0) {
 
       // Guarda o HTML da barra barra em uma variável
       var lwbarMobileHtml = '<div class="lwbar-id ico-user"><span class="lwbar-login-name"></span><span class="lwbar-plan"></span></div>';
@@ -195,9 +195,6 @@ locastyle.mobile = (function() {
     }
 
   }
-  // 1. verifica se a barra locaweb existe
-  // 2. Pega html da barra e joga no HTML customizado na sidebar
-
 
   return {
     init: init,
