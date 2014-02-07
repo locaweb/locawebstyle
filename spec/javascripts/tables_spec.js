@@ -13,17 +13,47 @@ describe("Tables", function() {
       locastyle.tables.init();
     });
 
-    it("group actions checkbox are always enabled", function(){
-        expect( $('#groupCheckbox1') ).toHaveAttr('disabled');
+    it("group actions checkbox in header start enabled", function(){
+        expect( $('#groupCheckbox1') ).not.toHaveAttr('disabled');
     });
 
-    it("check line, show group actions", function(){
-      // $('#complex-table tbody tr:eq(0) td:eq(0) :checkbox').click();
-      console.log( $('.ls-table-group-actions') )
-      alert('a')
-      expect( $('.ls-table-group-actions') ).not.toBeHidden();
+    it("actions in box group actions, start enabled", function(){
+      $('.ls-table-group-actions').find('button').each(function(i, action){
+        expect( $(action) ).not.toHaveAttr('disabled');
+      });
     });
 
+    it("check input line, show group actions", function(){
+      var $groupActions = $('.ls-table-group-actions');
+      $groupActions.hide();
+      $('#complex-table tbody tr:eq(0) td:eq(0) :checkbox').click();
+      expect( $('.ls-table-group-actions') ).toBeVisible();
+    });
+
+    it("uncheck input line, hide group actions", function(){
+      var $groupActions = $('.ls-table-group-actions');
+      $groupActions.hide();
+      $('#complex-table tbody tr:eq(0) td:eq(0) :checkbox').click();
+      $('#complex-table tbody tr:eq(0) td:eq(0) :checkbox').click();
+      expect( $('.ls-table-group-actions') ).toBeHidden();
+    });
+
+    it("group actions count equal inputs checked", function(){
+      var $groupActions = $('.ls-table-group-actions');
+      $('#complex-table tbody tr:eq(0) td:eq(0) :checkbox').click();
+      $('#complex-table tbody tr:eq(1) td:eq(0) :checkbox').click();
+      expect( $('.counterChecks', $groupActions ).text() ).toEqual('2');
+      // uncheck
+      $('#complex-table tbody tr:eq(1) td:eq(0) :checkbox').click();
+      expect( $('.counterChecks', $groupActions ).text() ).toEqual('1');
+    });
+
+    it("only if all lines checkbox checked, header check checked", function(){
+       $('#complex-table tbody').find(':checkbox').trigger('click');
+        expect( $('#groupCheckbox1') ).toBeChecked();
+        $('#complex-table tbody tr:eq(0) td:eq(0) :checkbox').click();
+        expect( $('#groupCheckbox1') ).not.toBeChecked();
+    });
 
 
     // on delete row, if only checked, hide group actions
@@ -45,8 +75,11 @@ describe("Tables", function() {
       expect( hasSameClasses ).toBe( true );;
     });
 
+    it("last line, dropdown drop up", function(){
+      expect( $('#complex-table tbody tr:eq(2)').find('.btn-group') ).not.toHaveClass('dropup');
+      expect( $('#complex-table tbody tr:last()').find('.btn-group') ).toHaveClass('dropup');
+    });
 
-    //dropup
 
   });
 
