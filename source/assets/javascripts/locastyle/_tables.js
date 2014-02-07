@@ -67,8 +67,9 @@ locastyle.tables = (function() {
 
   function enableGroupActions($table){
     $table.find('tr').each(function(itr, tr){
-      $(tr).find('td:eq(0) input[type="checkbox"]').prop('disabled', false);
+      $(tr).find('td:eq(0) input[type="checkbox"], th:eq(0) input[type="checkbox"]').prop('disabled', false);
     });
+    $table.prev('.ls-table-group-actions').find('button').prop('disabled', false);
   }
 
   // Insere dropdown para cada linha da coluna de acoes se for necessário
