@@ -11,8 +11,12 @@ locastyle.mobile = (function() {
     tabDropdownActions(dom_scope);
     sliderMobile(dom_scope);
     checkSidebarExist(dom_scope);
+    lwbarMobile();
   }
 
+  //
+  // Checa se a sidebar e o nav-content existem.
+  //
   function checkSidebarExist(dom_scope) {
     if ( $(".sidebar", dom_scope).length ) {
       $('.control-sidebar', dom_scope).removeClass('hidden');
@@ -167,6 +171,32 @@ locastyle.mobile = (function() {
       }
     }).data('royalSlider');
   }
+
+  function lwbarMobile() {
+
+    // Verifica se existe a barra da locaweb
+    var existLwBar = $('html[class*="with-lwbar"]').length
+    if (existLwBar) {
+
+      // Guarda o HTML da barra barra em uma variável
+      var lwbarMobileHtml = '<div class="lwbar-id ico-user"><span class="lwbar-login-name"></span><span class="lwbar-plan"></span></div>';
+
+      // Insere o HTML da barra versão mobile no nav-content
+      $('.nav-content').prepend(lwbarMobileHtml);
+
+      // Guarda o botão sair(logout) e o nome do usuário logado
+      var $btnSair = $('#lwbar-header .log-out')
+      var $lwbarLoginName = $('#lwbar-header .user-name')
+
+      // Clona e move estes dados para a versão mobile
+      $($btnSair).clone().appendTo('.nav-content').addClass('btn-logout');
+      $($lwbarLoginName).clone().appendTo('.lwbar-login-name');
+
+    }
+
+  }
+  // 1. verifica se a barra locaweb existe
+  // 2. Pega html da barra e joga no HTML customizado na sidebar
 
 
   return {
