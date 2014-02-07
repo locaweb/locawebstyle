@@ -41,3 +41,63 @@ $mobile-left-number: "240px"
 
 		.main
 			overflow: hidden
+
+	//
+	// LWBAR
+	//
+
+	#lwbar-header
+		display: none
+
+	#lwbar-header.lwbar-test
+		display: block
+
+	#lwbar-header.lwbar-test
+		display: none
+
+	.lwbar-id
+		padding: 10px
+		font-size: 0.69rem
+		font-weight: bold
+		line-height: 0.69rem
+		color: #FFF
+		overflow: hidden
+
+		&:before
+			float: left
+			padding: 5px
+			border-radius: 50%
+			border-width: 2px
+			border-style: solid
+			font-size: 1rem
+
+		.lwbar-plan
+			display: block
+			font-weight: normal
+			padding-top: 2px
+
+			&:empty
+				display: none
+
+		.lwbar-login-name
+			padding-top: 7px
+			display: inline-block
+			font-size: .9rem
+
+	.btn-logout
+		padding: 7px 20px
+		width: 70px
+		margin: 60px auto 0
+		display: block
+		border-width: 1px
+		border-style: solid
+		border-radius: 3px
+		font-size: .9rem
+
+		&:hover
+			opacity: .6
+
+@media (min-width: #{$screen-sm})
+	.lwbar-id,
+	.btn-logout
+		display: none
