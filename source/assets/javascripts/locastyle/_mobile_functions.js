@@ -184,11 +184,11 @@ locastyle.mobile = (function() {
       $('.nav-content').prepend(lwbarMobileHtml);
 
       // Guarda o botão sair(logout) e o nome do usuário logado
-      var $btnSair = $('#lwbar-header .log-out')
-      var $lwbarLoginName = $('#lwbar-header .user-name')
+      var $btnLogout = $('#lwbar-header .log-out');
+      var $lwbarLoginName = $('#lwbar-header .user-name');
 
       // Clona e move estes dados para a versão mobile
-      $($btnSair).clone().appendTo('.nav-content').addClass('btn-logout');
+      $($btnLogout).clone().appendTo('.nav-content').addClass('btn-logout');
       $($lwbarLoginName).clone().appendTo('.lwbar-login-name');
 
     }
