@@ -86,7 +86,7 @@ locastyle.tables = (function() {
           addClass  : 'pull-right' + ( tableLines - line < 3 ? ' dropup' : '' ),
           actions   : (function(){
             var actions = [];
-            if ( !$(td).find('[' + config.actions.view.attr + ']')[0] && config.isXsmall && $(td).parent('tr').find('hidden-xs')[0]  ){
+            if ( !$(td).find('[' + config.actions.view.attr + ']')[0] && config.isXsmall && $(td).parent('tr').find('.hidden-xs')[0]  ){
               actions.push({label: config.actions.view.label, link: '#', extras: config.actions.view.attr })
             }
             $actions.each(function(i, action){
@@ -96,7 +96,7 @@ locastyle.tables = (function() {
               });
               var $action = $(action);
               var hasDivider = /danger/.test( $action.attr('class') ) || $action.find('[class*="' + config.actionDangerClass  + '"]')[0] ? true : false;
-              actions.push( {label: $action.html(), link: $action.attr('href'), classes: (hasDivider ? 'text-danger' : ''), extras: extraData, hasDivider: hasDivider } );
+              actions.push( {label: $action.html(), link: $action.attr('href'), classes: (hasDivider ? 'text-danger' : ''), extras: extraData, hasDivider: ( hasDivider ? true : false ) } );
             });
             return actions;
           })()
@@ -389,7 +389,7 @@ locastyle.tables = (function() {
         addClass: 'pull-right',
         actions: (function(){
           var actions = [];
-          $groupActions.find('a, button').each(function(i, action){
+          $groupActions.find('a, button:not(.dropdown-toggle)').each(function(i, action){
             var $action = $(action);
             var hasDivider = /danger/.test( $action.attr('class') ) || $action.find('[class*="danger"]')[0] ? true : false;
             actions.push( {label: $action.html(), link: $action.attr('href'), classes:  (hasDivider ? 'text-danger' : ''), hasDivider: hasDivider } );
