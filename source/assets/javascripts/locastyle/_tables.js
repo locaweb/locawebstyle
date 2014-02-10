@@ -86,7 +86,7 @@ locastyle.tables = (function() {
           addClass  : 'pull-right' + ( tableLines - line < 3 ? ' dropup' : '' ),
           actions   : (function(){
             var actions = [];
-            if ( !$(td).find('[' + config.actions.view.attr + ']')[0] && config.isXsmall ){
+            if ( !$(td).find('[' + config.actions.view.attr + ']')[0] && config.isXsmall && $(td).parent('tr').find('hidden-xs')[0]  ){
               actions.push({label: config.actions.view.label, link: '#', extras: config.actions.view.attr })
             }
             $actions.each(function(i, action){
@@ -238,6 +238,10 @@ locastyle.tables = (function() {
   }
 
   function saveModalEdit($modal, $tr){
+    $modal.find('form').on('submit', function(e){
+      e.preventDefault();
+      $modal.find('.table-modal-save').trigger('click');
+    });
     $modal.find('.table-modal-save').on('click', function(e){
       e.preventDefault();
       var $addInputs = $tr.parents('form').find('input').filter(function () {
