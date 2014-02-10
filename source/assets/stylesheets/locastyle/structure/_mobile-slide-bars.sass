@@ -23,12 +23,13 @@ $mobile-left-number: "240px"
 		.overlay-bar
 			opacity: .5
 			visibility: visible
+			z-index: 5
 
 	.nav-content
 		+transition(all .30s ease-out)
 		-webkit-transform: translate3D(-#{$mobile-sidebar-width},0,0)
 		-moz-transform: translate3D(-#{$mobile-sidebar-width},0,0)
-		z-index: 3
+		z-index: 6
 
 	.left-bar
 		.nav-content
@@ -38,6 +39,7 @@ $mobile-left-number: "240px"
 		.overlay-bar
 			opacity: .5
 			visibility: visible
+			z-index: 5
 
 		.main
 			overflow: hidden
