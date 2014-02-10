@@ -1,0 +1,19 @@
+<form id="formWithDisable" role="form" action="#" disabled>
+  <fieldset>
+    <div class="form-group">
+      <label for="enabledTextInput1">Campo como texto</label>
+      <input type="text" id="enabledTextInput1" class="form-control" placeholder="Campo como texto">
+    </div>
+  </fieldset>
+  <a href="#" class="btn btn-danger" id="enableForm1" data-text="Desabilitar Form" data-event="click" data-toggle-form-edit="#formWithDisable">Habilitar Form</a>
+</form>
+
+<form id="formWithoutDisable" role="form" action="#">
+  <fieldset>
+    <div class="form-group">
+      <label for="enabledTextInput2">Campo como texto</label>
+      <input type="text" id="enabledTextInput2" class="form-control" placeholder="Campo como texto">
+    </div>
+  </fieldset>
+  <a href="#" class="btn btn-danger" id="enableForm2" data-text="Desabilitar Form" data-event="click" data-toggle-form-edit="#formWithoutDisable">Habilitar Form</a>
+</form>

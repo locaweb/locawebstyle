@@ -1,0 +1,112 @@
+---
+title: Formulários - Desabilitando campos de formulário
+menu_page: sidebar-formularios.erb
+---
+<header>
+	<h1>Formulários</h1>
+	<h2>Exibindo um <code>form</code> com aparência de texto, desabilitado ou editável.</h2>
+</header>
+
+<p>Basta adicionar a classe <code>ls-form-text</code> ou chamar a função javascript <code>locastyle.forms.formAsText('#form')</code> e os campos ficarão da seguinte forma:</p>
+<br>
+<div class="example">
+	<form role="form" class="ls-form-text">
+		<fieldset>
+			<div class="form-group">
+				<label for="disabledTextInput">Campo como texto</label>
+				<input type="text" id="disabledTextInput" class="form-control" placeholder="Campo como texto">
+			</div>
+			<div class="form-group">
+				<label for="disabledSelect">Select como texto</label>
+				<select id="disabledSelect" class="form-control">
+					<option>Seletor desabilitado</option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Não pode marcar isso
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</fieldset>
+	</form>
+</div>
+
+<br>
+<p>Pode-se combinar formulários com aparência de texto com formulários desabilitados, utilizando o atributo <code>disabled</code>, para evitar a edição e aparência destacada no <code>:focus</code> e <code>:active</code>.</p>
+<div class="example">
+	<form role="form" class="ls-form-text" disabled>
+		<fieldset>
+			<div class="form-group">
+				<label for="disabledTextInput">Campo como texto</label>
+				<input type="text" id="disabledTextInput" class="form-control" placeholder="Campo como texto">
+			</div>
+			<div class="form-group">
+				<label for="disabledSelect">Select como texto</label>
+				<select id="disabledSelect" class="form-control">
+					<option>Seletor desabilitado</option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Não pode marcar isso
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</fieldset>
+	</form>
+</div>
+
+<br>
+<p>Para alternar entre um form como texto e um form normal, basta inserir o atributo <code>data-toggle-form-text="#id-form"</code> em um link ou botão, ou executar a função <code>locastyle.forms.formAsText('#form')</code>.</p>
+<div class="example">
+	<form id="form-que-alterna" role="form" class="ls-form-text" >
+		<fieldset>
+			<div class="form-group">
+				<label for="disabledTextInput">Campo como texto</label>
+				<input type="text" id="disabledTextInput" class="form-control" placeholder="Campo como texto">
+			</div>
+			<div class="form-group">
+				<label for="disabledSelect">Select como texto</label>
+				<select id="disabledSelect" class="form-control">
+					<option>Seletor desabilitado</option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Não pode marcar isso
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</fieldset>
+	<br>
+	<a href="#" class="btn btn-danger" data-text="Ver formulário como texto" data-event="click" data-toggle-form-text="#form-que-alterna">Ver formulário normal</a>
+	</form>
+</div>
+
+<br>
+<p>Quando utilizar formulário como texto, é recomendado desabilitar a edição, usando os atributos mostrados na seção "<a href="desabilitando-campos">Desabilitando campos de formulário</a>.</p>
+<div class="example">
+	<form id="form4" role="form" class="ls-form-text" disabled>
+		<fieldset>
+			<div class="form-group">
+				<label for="disabledTextInput">Campo como texto</label>
+				<input type="text" id="disabledTextInput" class="form-control" placeholder="Campo como texto">
+			</div>
+			<div class="form-group">
+				<label for="disabledSelect">Select como texto</label>
+				<select id="disabledSelect" class="form-control">
+					<option>Seletor desabilitado</option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Não pode marcar isso
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</fieldset>
+	<br>
+	<a href="#" class="btn btn-danger" data-text="Desabilitar form" data-event="click" data-toggle-form-edit="#form4" data-toggle-form-text="#form4">Habilitar form</a>
+	</form>
+</div>

@@ -22,7 +22,7 @@
       color: transparent
     &::-webkit-input-placeholder
       color: transparent
-  .select2-container.select2-container-disabled 
+  .select2-container.select2-container-disabled
     .select2-choice
       border: 1px solid transparent
       background-color: transparent
@@ -32,3 +32,30 @@
   .input-group.datepicker[disabled]
     .input-group-btn
       display: none
+
+.ls-form-text
+  input, select
+    +box-shadow(none)
+    background: transparent
+    border-color: transparent
+    padding: 0
+    -moz-appearance: none
+    -webkit-appearance: none
+    &:-ms-input-placeholder
+      color: inherit
+    &::-moz-placeholder
+      color: inherit
+    &::-webkit-input-placeholder
+      color: inherit
+    &[type="radio"], &[type="checkbox"]
+      display: none
+  .checkbox
+    padding-left: 0
+  &[disabled]
+    input, select
+      background: transparent
+      cursor: auto
+      &:focus, &:active
+        +box-shadow(none)
+        border: none
+

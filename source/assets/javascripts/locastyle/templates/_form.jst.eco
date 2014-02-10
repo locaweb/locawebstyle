@@ -1,4 +1,4 @@
-<form role="form">
+<form role="form" method="post" action="<%= @action %>">
   <fieldset>
     <% for field in @fields: %>
       <div class="form-group">

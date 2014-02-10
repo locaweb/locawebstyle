@@ -38,6 +38,11 @@ $bg-actions-color:  #00a272
 				border-left: none
 				color: $gray1
 
+			&:nth-child(1)
+				input[type="checkbox"]
+					+appearance(checkbox)
+					display: inline-block
+
 	tbody
 
 		&.ls-table-invert-bg
@@ -47,6 +52,8 @@ $bg-actions-color:  #00a272
 				background-color: #fff
 
 		tr
+			// +single-transition(color, .5s, false, .5)
+			+single-transition()
 
 			&[data-action-modal="view"]
 				cursor: pointer
@@ -59,6 +66,10 @@ $bg-actions-color:  #00a272
 				font-size: .875rem
 				vertical-align: middle
 				position: static
+				&:nth-child(1)
+					input[type="checkbox"]
+						+appearance(checkbox)
+						display: inline-block
 
 				&:first-child
 					border-left: none
@@ -101,44 +112,10 @@ $bg-actions-color:  #00a272
 					text-align: right
 
 					.dropdown-menu
-
 						a
 							display: block
-
-				input[disabled], input[readonly], select[disabled]
-					+box-shadow(none)
-					border: 1px solid transparent
-					background-color: transparent
-					padding: 0
-					-moz-appearance: none
-					-webkit-appearance: none
-					color: inherit
-					cursor: auto
-					height: auto
-
-					&:-ms-input-placeholder
-						color: transparent
-
-					&::-moz-placeholder
-						color: transparent
-
-					&::-webkit-input-placeholder
-						color: transparent
-
-				.select2-container.select2-container-disabled
-
-					.select2-choice
-						border: 1px solid transparent
-						background-color: transparent
-						padding: 0
-
-					.select2-arrow
-						opacity: 0
-
-				.input-group.datepicker[disabled]
-
-					.input-group-btn
-						display: none
+							&.text-danger
+								color: #a94442 !important
 
 			&:hover
 				background-color: $color4

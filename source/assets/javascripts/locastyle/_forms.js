@@ -3,31 +3,63 @@ var locastyle = locastyle || {};
 locastyle.forms = (function() {
   'use strict';
 
-  var $forms = $('form', 'body');
-
   function init(){
+    var $forms = $('form');
     $forms.each(function(ifr, form){
       var $form = $(form);
       inputsMask($form);
       claimDatePicker($form);
       togglePassword($form);
-      toggleInputsEdit($form);
+      bindformEditable($form);
+      bindformAsText($form);
+      formDisable($form);
     });
+    formEditable();
   }
 
-  function formReadOnly($form, disable){
-    $form.prop('disabled', disable).toggleClass('ls-form-read-only');
-    $form.find(':input, select').each(function(ii, input){
-      $(input).prop('disabled', disable);
-    });
+  function formDisable($form){
+    if( $form.attr('disabled') ){
+      $form.find(':input, :checkbox, :radio').prop('disabled', true);
+    }
   }
 
-  function toggleInputsEdit($form){
-    $form.delegate('[data-enable-edit]', "click", function(evt) {
+  function bindformEditable($form){
+    $('[data-toggle-form-edit]', $form).on('click', function(evt){
       evt.preventDefault();
-      var editableContainer = $(this).data('enableEdit');
-      $(editableContainer).find('[disabled]').prop('disabled', false)
+      var formId = $(this).data('toggle-form-edit');
+      if( $(formId).attr('disabled') ){
+        formEditable(formId, true);
+      } else {
+        formEditable(formId, false);
+      }
     });
+  }
+
+  function formEditable(formId, editable){
+    if( editable ){
+      $(formId).removeAttr('disabled');
+      $(formId).find(':input, :checkbox, :radio').removeAttr('disabled');
+    } else {
+      $(formId).attr('disabled', true);
+      $(formId).find(':input, :checkbox, :radio').prop('disabled', true);
+    }
+  }
+
+  function bindformAsText($form){
+    $('[data-toggle-form-text]', $form).on('click', function(evt){
+      evt.preventDefault();
+      var destForm = $(this).data('toggle-form-text');
+      $(destForm).toggleClass('ls-form-text');
+    });
+  }
+
+  function formAsText(formId, asText){
+    var destForm = $(this).data('toggle-form-text');
+    if(asText){
+      $(formId).addClass('ls-form-text');
+    } else {
+      $(formId).removeClass('ls-form-text');
+    }
   }
 
   // Definindo padrões de classes para as máscaras de formulários.
@@ -67,10 +99,11 @@ locastyle.forms = (function() {
     $('.toggle-pass', $form).on("click", function(e){
       e.preventDefault();
       var $self = $(this).data('target');
-      if($($self).attr('type') == 'password'){
+      if ($($self).attr('type') == 'password'){
         $($self).removeAttr('attr').prop('type','text');
-      } else
+      } else {
         $($self).removeAttr('attr').prop('type','password');
+      }
     });
   }
 
@@ -78,7 +111,8 @@ locastyle.forms = (function() {
     init: init,
     insertDatepicker: claimDatePicker,
     insertMasks: inputsMask,
-    formReadOnly: formReadOnly
+    formEditable: formEditable,
+    formAsText: formAsText
   };
 
 }());

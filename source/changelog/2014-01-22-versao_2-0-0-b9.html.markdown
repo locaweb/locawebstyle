@@ -7,11 +7,24 @@ tags: changelog
 **Adições**
 
 \- [#415](https://github.com/locaweb/locawebstyle/pull/415){:target="_blank"}: Implementado o layout do select personalizado, [veja exemplo na documentação](http://locaweb.github.io/locawebstyle/manual/componentes/select "Veja o exemplo na documentação"){:target="_blank"}.
-<br>
+<<<<<<< HEAD
+
+\- Adicionado o atributo <code>disabled</code> na tag <code>form</code> para desabilitar a edição de todos os inputs de um form.
+
+\- Adicionado a classe <code>.ls-form-text</code> na tag <code>form</code> para exibir um formulário como texto.
+
+\- Adicionada função <code>locastyle.forms.formAsText('#form')</code> para alternar entre formulários normais/texto com o atributo <code>data-toggle-form-text="#id-form"</code> em um link.
+
+\- Adicionada função <code>locastyle.forms.formDisable('#form', true)</code> para alternar entre formulários editaveis/nã0 editáveis com o atributo <code>data-toggle-form-edit="#id-form"</code> em um link.
+
 \- Adicionado testes para o dom_scope, select2 e collapses.
-<br>
+
 **Documentação**
 
 \- Foi adicionada uma página na nossa documentação referente a nova adição do <code>select</code> personalizado.
 
 \- Em formulários foi adicionado em validação de campos a customização para <code>select</code> personalizados
+
+\- Update da documentação "Desabilitando campos de formulário"
+
+\- Inserida documentação de "Formulários como texto"

@@ -39,3 +39,31 @@ menu_page: sidebar-formularios.erb
 	</form>
 </div>
 <pre class="lang-html prettyprint-code linenums"><input class="form-control" id="disabledInput" type="text" placeholder="Campo desabilitado" disabled></pre>
+
+<br>
+<p>Para desabilitar todos os campos de um formulário, basta adicionar oa tributo <code>disabled</code> na tag <code>form</code></p>
+<p>Para alternar entre um form editável e não editável, basta inserir o atributo <code>data-toggle-form-edit="#id-form"</code> em um link ou botão, ou executar a função <code>locastyle.forms.formDisable('#form', true)</code>.</p>
+<div class="example">
+	<form id="form-que-alterna" role="form" disabled>
+		<fieldset>
+			<div class="form-group">
+				<label for="disabledTextInput">Campo como texto</label>
+				<input type="text" id="disabledTextInput" class="form-control" placeholder="Campo como texto">
+			</div>
+			<div class="form-group">
+				<label for="disabledSelect">Select como texto</label>
+				<select id="disabledSelect" class="form-control">
+					<option>Seletor desabilitado</option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Não pode marcar isso
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</fieldset>
+		<br>
+		<a href="#" class="btn btn-danger" data-text="Desabilitar Form" data-event="click" data-toggle-form-edit="#form-que-alterna">Habilitar Form</a>
+	</form>
+</div>

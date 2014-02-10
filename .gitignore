@@ -21,3 +21,5 @@ source/.DS_Store
 /tmp
 /deploy
 .rvmrc
+.jscs.json
+bs-config.js

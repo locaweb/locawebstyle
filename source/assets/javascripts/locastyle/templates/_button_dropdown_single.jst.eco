@@ -1,15 +1,21 @@
-<div class="btn-group <%= @addClass %>">
-  <button type="button" class="btn btn-default dropdown-toggle <%= @labelClass %>" data-toggle="dropdown">
-    <%= @label %>
-  </button>
-  <% if @actions :%>
-  <ul class="dropdown-menu <%= @addClass %>" role="menu">
-    <% for action  in @actions: %>
-      <% if action.hasDivider == true :%>
-        <li class="divider"></li>
-      <% end %>
-      <li><a href="<%= action.link %>" class="<%= action.classes %>"><%- action.label %></a></li>
-    <% end %>
-  </ul>
-  <% end %>
-</div>
+<% if @actions[0] :%>
+	<div class="btn-group <%= @addClass %>">
+	  <button type="button" class="btn btn-default dropdown-toggle <%= @labelClass %>" data-toggle="dropdown">
+	    <%= @label %>
+	  </button>
+	  <% if @actions :%>
+	  <ul class="dropdown-menu <%= @addClass %>" role="menu">
+	    <% for action  in @actions: %>
+	      <% if action.hasDivider == true :%>
+	        <li class="divider"></li>
+	      <% end %>
+	      <li>
+	        <a href="<%= action.link %>" <% if action.classes :%>class="<%= action.classes %>"<% end %> <% if action.extras :%><%- action.extras %><% end %> >
+	          <%- action.label %>
+	        </a>
+	      </li>
+	    <% end %>
+	  </ul>
+	  <% end %>
+	</div>
+ <% end %>
