@@ -15,7 +15,7 @@
 #{$theme_name} .boxInfoAction.sought strong,
 #{$theme_name} .boxInfoAction.sought b,
 #{$theme_name} .guided-tour.on .lnk-suggestions,
-#{$theme_name} .colorTheme {
+#{$theme_name} .colorTheme{
   color: $pallet_1;
 }
 
@@ -46,7 +46,8 @@
 #{$theme_name} .chooseBox li:hover [class^="ico-"]:before,
 #{$theme_name} .chooseBox li:hover [class*="ico-"]:before,
 #{$theme_name} .chooseBox li.active [class^="ico-"]:before,
-#{$theme_name} .chooseBox li.active [class*="ico-"]:before {
+#{$theme_name} .chooseBox li.active [class*="ico-"]:before,
+#{$theme_name} .boxList .titleBoxList[class*="ico-"]:before {
   color: $pallet_2;
 }
 
@@ -74,7 +75,8 @@
 #{$theme_name} .chooseBox li h4[class^="ico-"]:before,
 #{$theme_name} .chooseBox li h4,
 #{$theme_name} .chooseBox li:hover h4,
-#{$theme_name} .chooseBox li.active h4{
+#{$theme_name} .chooseBox li.active h4,
+#{$theme_name} .boxList .titleBoxList{
   color: $pallet_4;
 }
 

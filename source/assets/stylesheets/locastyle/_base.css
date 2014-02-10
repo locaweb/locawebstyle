@@ -1395,6 +1395,74 @@ ol p{font-size: inherit;}
 .report-empty p {
   font-size: 15px;
 }
+/**
+** Variações de boxes com grids e alguns elementos específicos
+**/
+.boxList{
+  border-radius: 3px;
+  border: 1px solid #E5E5E5;
+  margin: 15px 0;
+}
+.boxList header{
+  border-bottom: 1px solid #E5E5E5;
+  overflow: hidden;
+  padding: 10px;
+}
+.boxList .titleBoxList[class*="ico-"] ~ .btn{
+  margin-top: 10px;
+}
+.boxList .boxListGrids {
+  background-color: #f9f9f9;
+  overflow: hidden;
+  padding: 10px 0;
+  display: table;
+}
+.boxList .titleBoxList{
+  float: left;
+  font-size: 20px;
+}
+.boxList .titleBox{
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.boxList .titleBoxList[class*="ico-"] small{
+  display: block;
+  position: relative;
+  font-size: 12px;
+  top: -10px;
+  left: 45px;
+}
+.boxList .titleBoxList[class*="ico-"]:before{
+  font-size: 36px;
+  position: relative;
+  top: 3px;
+  margin-right: 0;
+}
+.boxList .valueBox{
+  font-size: 20px;
+}
+.boxList [class*="span"]:first-child{
+  border-color: transparent;
 
-
-
+}
+.boxList [class*="span"]{
+  border-left: 1px solid #E5E5E5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+}
+.boxList [class*="span"].txtLeft{
+  padding-left: 15px;
+}
+.boxList5.boxList [class*="span"]{
+  margin-left: 0;
+  width: 20%;
+}
+.boxList .boxListContent{
+  border-top: 1px solid #E5E5E5;
+  padding: 10px;
+}
