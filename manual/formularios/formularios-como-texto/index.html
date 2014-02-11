@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Formulários - Calendários</title>
+	<title>Formulários - Desabilitando campos de formulário</title>
 	<meta charset="utf-8">
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
 	<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
@@ -10,7 +10,7 @@
 	<link href="../../../assets/stylesheets/locastyle.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="../../../assets/stylesheets/manual.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
-<body class="manual manual_formularios manual_formularios_calendarios manual_formularios_calendarios_index">
+<body class="manual manual_formularios manual_formularios_formularios-como-texto manual_formularios_formularios-como-texto_index">
 
 	<!-- topbar header -->
 	<header id="topbar" class="clearfix">
@@ -76,38 +76,113 @@
 
 			<article class="text col-lg-9 col-md-9 man-article">
 				<header>
-	<h1>Calendários</h1>
-	<h2>Inputs com integração de formulário.</h2>
+	<h1>Formulários</h1>
+	<h2>Exibindo um <code>form</code> com aparência de texto, desabilitado ou editável.</h2>
 </header>
 
-<p>Para o calendário utilizamos o <a href="http://api.jqueryui.com/datepicker/" target="_blank">módulo do JQuery UI</a>.</p>
-<p>E para aplicar basta seguir alguns passos:</p>
-<p>
-	1. Crie a estrutura abaixo.<br>
-	2. Lembre-se de adicionar a classe <code>datepicker</code>.<br>
-	3. Tome um suco de laranja. :D
-</p>
-
-
+<p>Basta adicionar a classe <code>ls-form-text</code> ou chamar a função javascript <code>locastyle.forms.formAsText('#form')</code> e os campos ficarão da seguinte forma:</p>
+<br>
 <div class="example">
-	<form>
-		<div class="row">
-			<div class="col-lg-3">
-				<label for="example1" class="sr-only">Data</label>
-				<div class="input-group datepicker">
-					<input type="text" class="form-control date-mask" id="example1" placeholder="dd/mm/aaaa">
-				</div>
+	<form role="form" class="ls-form-text">
+		<fieldset>
+			<div class="form-group">
+				<label for="disabledTextInput">Campo como texto</label>
+				<input type="text" id="disabledTextInput" class="form-control" placeholder="Campo como texto">
 			</div>
-		</div>
+			<div class="form-group">
+				<label for="disabledSelect">Select como texto</label>
+				<select id="disabledSelect" class="form-control">
+					<option>Seletor desabilitado</option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Não pode marcar isso
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</fieldset>
 	</form>
 </div>
-<pre class="lang-html linenums prettyprint-code">
-<label for="example1" class="sr-only">Data</label>
-<div class="input-group datepicker">
-	<input type="text" class="form-control date-mask" id="example1" placeholder="dd/mm/aaaa">
-</div>
-</pre>
 
+<br>
+<p>Pode-se combinar formulários com aparência de texto com formulários desabilitados, utilizando o atributo <code>disabled</code>, para evitar a edição e aparência destacada no <code>:focus</code> e <code>:active</code>.</p>
+<div class="example">
+	<form role="form" class="ls-form-text" disabled>
+		<fieldset>
+			<div class="form-group">
+				<label for="disabledTextInput">Campo como texto</label>
+				<input type="text" id="disabledTextInput" class="form-control" placeholder="Campo como texto">
+			</div>
+			<div class="form-group">
+				<label for="disabledSelect">Select como texto</label>
+				<select id="disabledSelect" class="form-control">
+					<option>Seletor desabilitado</option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Não pode marcar isso
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</fieldset>
+	</form>
+</div>
+
+<br>
+<p>Para alternar entre um form como texto e um form normal, basta inserir o atributo <code>data-toggle-form-text="#id-form"</code> em um link ou botão, ou executar a função <code>locastyle.forms.formAsText('#form')</code>.</p>
+<div class="example">
+	<form id="form-que-alterna" role="form" class="ls-form-text" >
+		<fieldset>
+			<div class="form-group">
+				<label for="disabledTextInput">Campo como texto</label>
+				<input type="text" id="disabledTextInput" class="form-control" placeholder="Campo como texto">
+			</div>
+			<div class="form-group">
+				<label for="disabledSelect">Select como texto</label>
+				<select id="disabledSelect" class="form-control">
+					<option>Seletor desabilitado</option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Não pode marcar isso
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</fieldset>
+	<br>
+	<a href="#" class="btn btn-danger" data-text="Ver formulário como texto" data-event="click" data-toggle-form-text="#form-que-alterna">Ver formulário normal</a>
+	</form>
+</div>
+
+<br>
+<p>Quando utilizar formulário como texto, é recomendado desabilitar a edição, usando os atributos mostrados na seção "<a href="desabilitando-campos">Desabilitando campos de formulário</a>.</p>
+<div class="example">
+	<form id="form4" role="form" class="ls-form-text" disabled>
+		<fieldset>
+			<div class="form-group">
+				<label for="disabledTextInput">Campo como texto</label>
+				<input type="text" id="disabledTextInput" class="form-control" placeholder="Campo como texto">
+			</div>
+			<div class="form-group">
+				<label for="disabledSelect">Select como texto</label>
+				<select id="disabledSelect" class="form-control">
+					<option>Seletor desabilitado</option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Não pode marcar isso
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</fieldset>
+	<br>
+	<a href="#" class="btn btn-danger" data-text="Desabilitar form" data-event="click" data-toggle-form-edit="#form4" data-toggle-form-text="#form4">Habilitar form</a>
+	</form>
+</div>
 			</article>
 		</div>
 
