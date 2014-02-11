@@ -1,0 +1,14 @@
+---
+title: versao_2.0.2
+date: 2014-02-11 18:53 UTC
+tags:
+---
+
+
+# Novo
+ - Tabelas complexas, com ações excluir, editar, visualizar
+ - Função javascript para formulários como texto
+ - Função javascript para formulários desabilitados
+ - Templates JST de botões, formulários e modais.
+ - Testes Jasmine de Tabelas
+ - Testes Jasmine de Formulários
