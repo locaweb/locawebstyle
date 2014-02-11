@@ -1,5 +1,5 @@
 ---
-title: Finalmente chegou a versão 2.0.0
+title: Versão 2.0 chegou!
 date: 2014-01-31 16:01 UTC
 tags: changelog
 ---
@@ -8,12 +8,16 @@ A versão 2.0 do Locaweb Style é uma versão importante por vários motivos. Va
 
 A primeira grande modificação é que os times de UX e Front-end estão trabalhando realmente juntos para planejar todos os novos elementos e módulos. Cada módulo é planejado pelas duas equipes em reuniões regulares, onde são discutidos tanto a versão mobile, quanto a versão desktop. Tirando o Foundation, não conheço outro lugar onede há duas equipes praticamente dedicadas ao desenvolvimento de um framework público.
 
-A segunda grande modificação é que o Locaweb Style agora é Responsivo. Todos os elementos são pensados primeiro para pequenas telas, depois para telas maiores. Estamos levando bem a sério essa metodologia. Isso tem causado alguns debates interessantes e temos aprendido bastante. Na verdade é bem mais que Responsivo. Temos princípios de adapção a nível de elemento. Isso quer dizer que modificamos alguns elementos para que sua experiência em diversos contextos sejam melhores. Por exemplo: navegações com tabs não são uma boa solução para mobiles ou telas pequenas. Nestes casos, nós adaptamos as tabs pra dropdowns, facilitando o acesso.
+A segunda grande modificação é que o Locaweb Style agora é Responsivo. Todos os elementos são pensados primeiro para pequenas telas, depois para telas maiores. Estamos levando bem a sério essa metodologia. Isso tem causado alguns debates interessantes e temos aprendido bastante. Na verdade é bem mais que Responsivo. Temos princípios de adaptação a nível de elemento. Isso quer dizer que modificamos alguns elementos para que mudem em determinados contextos.
 
-Não achamos que a versão mobile seja apenas utilizada para consulta de informações, pelo contrário, nosso alvo é que o cliente consiga fazer 90% das tarefas em todos os dispositivos, não importa qual seja. Esse é o verdadeiro objetivo do Mobile First, adaptive web design e responsive.
+Não achamos que a versão mobile de algum produto sirva apenas para consulta de informações, pelo contrário, nosso alvo é que o cliente consiga fazer 90% das tarefas em todos os dispositivos, não importa qual seja. Esse é o verdadeiro objetivo do Mobile First, adaptive web design e responsive.
 
+<h3>O que pode vir por aí</h3>
 Nas próximas versões haverão mudanças drásticas na estrutura e layout. Queremos produzir um layout mais uniforme entre os dispositivos. Não acreditamos em um layout diferente para cada aparelho. Queremos que o cliente não sinta muita diferença entre as versões e que ele tenha uma curva de aprendizado mais branda entre as versões mobile e desktop. Nossa primeira ideia é manter as duas versões: clássica e a nova estrutura e estamos trabalhando para manter as duas estruturas no código. Teremos mais informações nos próximos meses.
 
+Estamos também preparando uma GEM para facilitar a utilização do Locaweb Style pelos desenvolvedores back-end. Essa GEM também nos dará algum controle para atualizar o código dos projetos sem tanto impacto.
+
+<h3>Changelog</h3>
 Abaixo, segue o Changelog com as mudanças mais importantes que fizemos. Qualquer coisa, comente!
 
 ## Bootstrap 3.0 e mudanças no HTML
