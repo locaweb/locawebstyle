@@ -7,7 +7,7 @@ tags: changelog
 **Adições**
 
 \- [#415](https://github.com/locaweb/locawebstyle/pull/415){:target="_blank"}: Implementado o layout do select personalizado, [veja exemplo na documentação](http://locaweb.github.io/locawebstyle/manual/componentes/select "Veja o exemplo na documentação"){:target="_blank"}.
-<<<<<<< HEAD
+
 
 \- Adicionado o atributo <code>disabled</code> na tag <code>form</code> para desabilitar a edição de todos os inputs de um form.
 
