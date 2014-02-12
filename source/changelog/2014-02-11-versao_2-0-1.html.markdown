@@ -4,11 +4,26 @@ date: 2014-02-11 18:53 UTC
 tags:
 ---
 
+**Adições**
 
-# Novo
- - Tabelas complexas, com ações excluir, editar, visualizar
- - Função javascript para formulários como texto
- - Função javascript para formulários desabilitados
- - Templates JST de botões, formulários e modais.
- - Testes Jasmine de Tabelas
- - Testes Jasmine de Formulários
+\- Tabelas complexas, com ações excluir, editar, visualizar
+
+\- Função javascript para formulários como texto
+
+\- Função javascript para formulários desabilitados
+
+\- Templates JST de botões, formulários e modais.
+
+\- Testes Jasmine de Tabelas
+
+\- Testes Jasmine de Formulários
+
+\- Estilo de página de confirmação
+
+**Correções**
+
+\- [#628](https://github.com/locaweb/locawebstyle/pull/628){:target="_blank"}: Ajuste do select customizado no android.
+
+\- [#629](https://github.com/locaweb/locawebstyle/pull/629){:target="_blank"}: Ajuste de z-index no mobile.
+
+\- [#630](https://github.com/locaweb/locawebstyle/pull/630){:target="_blank"}: Alerta colado no menu em mobile.
