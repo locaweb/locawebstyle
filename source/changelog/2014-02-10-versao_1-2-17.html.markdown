@@ -1,8 +1,7 @@
 ---
-title: Versão 1-2-17
+title: Versão 1.2.17
 date: 2014-02-10 18:50 UTC
 tags:
-published: false
 ---
 
 ## Adições
