@@ -1,0 +1,258 @@
+---
+title: Aplicações - Box com colunas
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-aplicacoes.erb
+
+---
+
+<article class="text">
+  <header>
+    <h1>Boxes com colunas</h1>
+    <h3>Box com variações de layout com colunas de informações que utilizam os grids do bootstrap.</h3>
+  </header>
+
+  <h3>Caixa com 3 colunas sem o header</h3>
+  <div class="boxList">
+    <div class="boxListGrids row-fluid">
+      <div class="span4">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+      <div class="span4">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+      <div class="span4">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+    </div>
+  </div>
+<pre class="lang-html prettyprint linenums">
+&lt;div class="boxList"&gt;
+  &lt;div class="boxListGrids row-fluid"&gt;
+    &lt;div class="span4"&gt;
+      &lt;span class="titleBox"&gt;informação&lt;/span&gt;
+      &lt;strong class="valueBox"&gt;0&lt;/strong&gt;
+    &lt;/div&gt;
+    &lt;div class="span4"&gt;
+      &lt;span class="titleBox"&gt;informação&lt;/span&gt;
+      &lt;strong class="valueBox"&gt;0&lt;/strong&gt;
+    &lt;/div&gt;
+    &lt;div class="span4"&gt;
+      &lt;span class="titleBox"&gt;informação&lt;/span&gt;
+      &lt;strong class="valueBox"&gt;0&lt;/strong&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<h3>Caixas com header + 2 colunas</h3>
+  <div class="boxList">
+    <header>
+      <h3 class="titleBoxList">Título</h3>
+      <a href="#" class="btn btn-primary fRight">Botão</a>
+    </header>
+    <div class="boxListGrids row-fluid">
+      <div class="span3">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+      <div class="span9 txtLeft">
+        <a href="#" class="lnkArrow" tabindex="3" title="Cancelar recorrência">Cancelar recorrência</a>
+        <span data-content="Ao desabilitar a recorrência, os envios desse cliente não serão renovados para os próximos períodos." class="infoHelp" rel="popover" data-original-title="Cancelar recorrência"></span>
+      </div>
+    </div>
+  </div>
+
+<pre class="lang-html prettyprint linenums">
+  &lt;div class="boxList"&gt;
+    &lt;header&gt;
+      &lt;h3 class="titleBoxList"&gt;Título&lt;/h3&gt;
+      &lt;a href="#" class="btn btn-primary fRight"&gt;Botão&lt;/a&gt;
+    &lt;/header&gt;
+    &lt;div class="boxListGrids row-fluid"&gt;
+      &lt;div class="span3"&gt;
+        &lt;span class="titleBox"&gt;informação&lt;/span&gt;
+        &lt;strong class="valueBox"&gt;0&lt;/strong&gt;
+      &lt;/div&gt;
+      &lt;div class="span9 txtLeft"&gt;
+        &lt;a href="#" class="lnkArrow" tabindex="3" title="Cancelar recorrência"&gt;Cancelar recorrência&lt;/a&gt;
+        &lt;span data-content="Ao desabilitar a recorrência, os envios desse cliente não serão renovados para os próximos períodos." class="infoHelp" rel="popover" data-original-title="Cancelar recorrência"&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+
+  <h3>Caixas com header + 4 colunas + conteúdo qualquer</h3>
+  <div class="boxList">
+    <header>
+      <h3 class="titleBoxList">Título</h3>
+      <a href="#" class="btn btn-primary fRight">Botão</a>
+    </header>
+    <div class="boxListGrids row-fluid">
+      <div class="span3">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+      <div class="span3">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+      <div class="span3">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+      <div class="span3">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+    </div>
+    <div class="boxListContent">
+      <p>aqui vai qualquer conteúdo </p>
+    </div>
+  </div>
+
+<pre class="lang-html prettyprint linenums">
+&lt;div class="boxList"&gt;
+    &lt;header&gt;
+      &lt;h3 class="titleBoxList"&gt;Título&lt;/h3&gt;
+      &lt;a href="#" class="btn btn-primary fRight"&gt;Botão&lt;/a&gt;
+    &lt;/header&gt;
+    &lt;div class="boxListGrids row-fluid"&gt;
+      &lt;div class="span3"&gt;
+        &lt;span class="titleBox"&gt;informação&lt;/span&gt;
+        &lt;strong class="valueBox"&gt;0&lt;/strong&gt;
+      &lt;/div&gt;
+      &lt;div class="span3"&gt;
+        &lt;span class="titleBox"&gt;informação&lt;/span&gt;
+        &lt;strong class="valueBox"&gt;0&lt;/strong&gt;
+      &lt;/div&gt;
+      &lt;div class="span3"&gt;
+        &lt;span class="titleBox"&gt;informação&lt;/span&gt;
+        &lt;strong class="valueBox"&gt;0&lt;/strong&gt;
+      &lt;/div&gt;
+      &lt;div class="span3"&gt;
+        &lt;span class="titleBox"&gt;informação&lt;/span&gt;
+        &lt;strong class="valueBox"&gt;0&lt;/strong&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="boxListContent"&gt;
+      &lt;p&gt;aqui vai qualquer conteúdo &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+
+
+  <h3>Caixas com header + título com ícone </h3>
+  <div class="boxList">
+    <header>
+      <h3 class="titleBoxList ico-calendar-check">
+        Título com ícone
+        <small>alguma descrição aqui</small>
+      </h3>
+      <a href="#" class="btn btn-primary fRight">Botão</a>
+    </header>
+    <div class="boxListGrids row-fluid">
+      <div class="span4">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+      <div class="span4">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+      <div class="span4">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+    </div>
+  </div>
+<pre class="lang-html prettyprint linenums">
+   &lt;div class="boxList"&gt;
+     &lt;header&gt;
+       &lt;h3 class="titleBoxList ico-calendar-check"&gt;
+        Título com ícone
+         &lt;small&gt;alguma descrição aqui &lt;/small&gt;
+       &lt;/h3&gt;
+       &lt;a href="#" class="btn btn-primary fRight"&gt;Botão &lt;/a&gt;
+     &lt;/header&gt;
+     &lt;div class="boxListGrids row-fluid"&gt;
+       &lt;div class="span4"&gt;
+         &lt;span class="titleBox"&gt;informação &lt;/span&gt;
+         &lt;strong class="valueBox"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+       &lt;div class="span4"&gt;
+         &lt;span class="titleBox"&gt;informação &lt;/span&gt;
+         &lt;strong class="valueBox"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+       &lt;div class="span4"&gt;
+         &lt;span class="titleBox"&gt;informação &lt;/span&gt;
+         &lt;strong class="valueBox"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+</pre>
+
+  <h3>Caixas com 5 colunas</h3>
+  <p>É necessário inserir a class <code>.boxList5</code> e tudo fica perfeito.</p>
+  <div class="boxList boxList5">
+    <header>
+      <h3 class="titleBoxList">Com 5 boxes</h3>
+      <a href="#" class="btn btn-primary fRight">Botão</a>
+    </header>
+    <div class="boxListGrids row-fluid">
+      <div class="span2">
+        <span class="titleBox ">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+      <div class="span2">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+      <div class="span2">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+      <div class="span2">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+      <div class="span2">
+        <span class="titleBox">informação</span>
+        <strong class="valueBox">0</strong>
+      </div>
+    </div>
+  </div>
+<pre class="lang-html prettyprint linenums">
+   &lt;div class="boxList boxList5"&gt;
+     &lt;header&gt;
+       &lt;h3 class="titleBoxList"&gt;Com 5 boxes &lt;/h3&gt;
+       &lt;a href="#" class="btn btn-primary fRight"&gt;Botão &lt;/a&gt;
+     &lt;/header&gt;
+     &lt;div class="boxListGrids row-fluid"&gt;
+       &lt;div class="span2"&gt;
+         &lt;span class="titleBox "&gt;informação &lt;/span&gt;
+         &lt;strong class="valueBox"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+       &lt;div class="span2"&gt;
+         &lt;span class="titleBox"&gt;informação &lt;/span&gt;
+         &lt;strong class="valueBox"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+       &lt;div class="span2"&gt;
+         &lt;span class="titleBox"&gt;informação &lt;/span&gt;
+         &lt;strong class="valueBox"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+       &lt;div class="span2"&gt;
+         &lt;span class="titleBox"&gt;informação &lt;/span&gt;
+         &lt;strong class="valueBox"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+       &lt;div class="span2"&gt;
+         &lt;span class="titleBox"&gt;informação &lt;/span&gt;
+         &lt;strong class="valueBox"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+</pre>
+
+</article>
