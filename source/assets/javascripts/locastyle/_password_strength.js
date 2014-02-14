@@ -3,12 +3,12 @@ var locastyle = locastyle || {};
 locastyle.passwordStregth = (function() {
   'use strict';
 
-  function init(){
-    searchPasswordCheckers();
+  function init(dom_scope){
+    searchPasswordCheckers(dom_scope);
   }
 
-  function searchPasswordCheckers() {
-    $("input[data-component=password-strength]").each(function (index, value) {
+  function searchPasswordCheckers(dom_scope) {
+    $("input[data-component=password-strength]", dom_scope).each(function (index, value) {
       var monitorId = $(this).data("monitor-id");
       var monitor = $("#" + monitorId);
       if(monitorId) {
