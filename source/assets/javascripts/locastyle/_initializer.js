@@ -5,7 +5,7 @@ $(window).load(function() {
   locastyle.bootstrap.init($(document));
   locastyle.forms.init();
   locastyle.tables.init();
-  locastyle.passwordStregth.init();
+  locastyle.passwordStregth.init($(document));
   locastyle.accessibility.init();
   locastyle.collapse.init($(document));
 });
