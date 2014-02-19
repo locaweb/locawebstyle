@@ -6,6 +6,6 @@ $(window).load(function() {
   locastyle.forms.init();
   locastyle.tables.init();
   locastyle.passwordStregth.init($(document));
-  locastyle.accessibility.init();
+  locastyle.accessibility.init($(document));
   locastyle.collapse.init($(document));
 });

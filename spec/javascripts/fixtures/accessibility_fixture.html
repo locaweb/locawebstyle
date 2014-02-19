@@ -1,6 +1,27 @@
+  <div id="scope_test">
+    <div class="menu" id="outside_scope_menu">
+      <ul class="container">
+        <li id="submenu_parent"><a href="#" id="submenu_test">Mensagens</a>
+          <ul>
+            <li><a href="#">Enviar</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="scoped_dom">
+      <div class="menu" id="inside_scope_menu">
+        <ul class="container">
+          <li id="submenu_parent"><a href="#" id="submenu_test">Mensagens</a>
+            <ul>
+              <li><a href="#">Enviar</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-
-	<header class="header" role="banner">
+  <header class="header" role="banner">
 	</header>
 
 	<h1 class="title-1 title-content">Aqui vai seu conteúdo</h1>
