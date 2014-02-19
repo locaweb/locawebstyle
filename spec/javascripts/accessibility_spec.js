@@ -37,16 +37,17 @@ describe("Accessibility: ", function() {
       });
 
       it("should modal have focus element .auto-focus class", function(){
+        var elementToBeFocused = $('#modal_focus').get(0);
         $('#modal_click').click();
         jasmine.clock().tick(500);
-        var elem = $('#modal_focus').attr('id');
-        expect($(':focus').attr('id')).toEqual(elem);
+        expect(elementToBeFocused).toEqual(document.activeElement);
       });
+
       it("should collapse have focus element .auto-focus class", function(){
+        var elementToBeFocused = $('#collapse_focus').get(0);
         $('#collapse_click').click();
         jasmine.clock().tick(500);
-        var elem = $('#collapse_focus').attr('id');
-        expect($(':focus').attr('id')).toEqual(elem);
+        expect(elementToBeFocused).toEqual(document.activeElement);
       });
     });
 
