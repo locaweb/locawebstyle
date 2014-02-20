@@ -14,7 +14,7 @@ describe("Accessibility: ", function() {
     });
   });
 
-  describe('when...', function () {
+  describe('Document as scope', function () {
     beforeEach(function() {
       locastyle.accessibility.init($(document));
     });
