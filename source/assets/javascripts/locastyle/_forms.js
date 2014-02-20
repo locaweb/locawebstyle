@@ -3,8 +3,8 @@ var locastyle = locastyle || {};
 locastyle.forms = (function() {
   'use strict';
 
-  function init(){
-    var $forms = $('form');
+  function init(dom_scope){
+    var $forms = $('form', dom_scope);
     $forms.each(function(ifr, form){
       var $form = $(form);
       inputsMask($form);
