@@ -1,0 +1,19 @@
+---
+title: Versão 2.0.2
+date: 2014-02-21 09:30 UTC
+tags:
+---
+
+**O que tem de novo?**
+
+\- Inicialização de módulos com escopo de DOM
+
+\- Cobertura de testes finalizada
+
+**O que corrigimos**
+
+\- Testes de accessibilidade que quebravam no CI (travis)
+
+**Limpeza de código**
+
+\- Código de carrossel que não estava sendo usado
