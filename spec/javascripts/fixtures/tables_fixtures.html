@@ -1,4 +1,9 @@
-<form action="/servidor/salvar" method="post" disabled="" class="ls-form-text">
+<div id="myTableForm">
+	<form action="/servidor/salvar" method="post" disabled="" class="ls-form-text">
+		<input type="checkbox" id="myCheckbox" class="myClassModafoca">
+	</form>
+</div>
+<form action="/servidor/salvar" method="post" disabled="" class="ls-form-text" id="myTable">
 	<input type="hidden" name="token" value="ehOCabraMesmo">
 	<div class="well well-sm clearfix ls-table-group-actions">
 		<p class="d-inline-block">
@@ -14,6 +19,9 @@
 			<button type="button" class="btn btn-default">
 				<span class="text-danger">Excluir</span>
 			</button>
+			<button type="button" class="btn btn-default" id='myButton' disabled>
+				<span class="text-danger">Excluir</span>
+			</button>
 		</div>
 	</div>
 	<table id="complex-table" class="table ls-table">
@@ -25,13 +33,13 @@
 				<th class="ls-nowrap col-xs-3">Título</th>
 				<th class="hidden-xs">Campanha
 				</th><th>Status</th>
-				<th class="hidden-xs">Data de envio</th>
+				<th class="hidden-xscomplex-table">Data de envio</th>
 				<th class="ls-table-actions">Ações</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td> <input name="id" value="1" type="checkbox"> </td>
+			<tr id="myTr">
+				<td> <input name="id" value="1" type="checkbox" id="myCheckboxTable"> </td>
 				<td>Texto 1 <span class="label label-success">Success</span></td>
 				<td>Campanha</td>
 				<td>Enviada</td>

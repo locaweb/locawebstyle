@@ -1,15 +1,22 @@
 describe("Tables", function() {
 
   beforeEach(function() {
-    loadFixtures('tables.html');
-    locastyle.init();
+    loadFixtures('tables_fixtures.html');
+  });
+
+  describe("Dom Scope", function(){
+    it("when clicked in checkbox inside td, add class in the tr parent", function(){
+      locastyle.tables.init($("#myTable"));
+      $("#myCheckboxTable").trigger("click");
+      expect($('#myTr').hasClass('selected')).toBeTruthy();
+    });
   });
 
   describe("Always", function() {
 
     beforeEach(function() {
       locastyle.forms.init();
-      locastyle.tables.init();
+      locastyle.tables.init($(document));
     });
 
     it("group actions checkbox in header start enabled", function(){
@@ -90,7 +97,7 @@ describe("Tables", function() {
 
     beforeEach(function() {
       locastyle.tables.config.isXsmall = false;
-      locastyle.tables.init();
+      locastyle.tables.init($(document));
     });
 
     it("if has only one action, show one button", function(){
@@ -129,7 +136,7 @@ describe("Tables", function() {
 
     beforeEach(function() {
       locastyle.tables.config.isXsmall = true;
-      locastyle.tables.init();
+      locastyle.tables.init($(document));
     });
 
     afterEach(function() {
