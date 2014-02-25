@@ -6,13 +6,13 @@ tags:
 
 **O que tem de novo?**
 
-\- Inicialização de módulos com escopo de DOM
+\- Inicialização de módulos com escopo de DOM [#579](https://github.com/locaweb/locawebstyle/issues/579)
 
 \- Cobertura de testes finalizada
 
 **O que corrigimos**
 
-\- Testes de accessibilidade que quebravam no CI (travis)
+\- Testes de accessibilidade que quebravam no CI (travis) [#490](https://github.com/locaweb/locawebstyle/issues/490)
 
 **Limpeza de código**
 
