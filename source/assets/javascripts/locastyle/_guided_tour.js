@@ -71,7 +71,7 @@ locastyle.guidedTour = (function() {
 
 	function setCookie(){
 		if($.cookie("cookie_tour") != "true"){
-			$(config.selectors.open).click();
+			$(config.selectors.open).trigger('click');
 			$.cookie('cookie_tour', "true");
 		}
 	}
