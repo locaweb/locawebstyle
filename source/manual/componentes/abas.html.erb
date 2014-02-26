@@ -53,7 +53,7 @@ menu_page: sidebar-componentes.erb
 <p>Se você quiser ativar as tabs manualmente, use o código abaixo. Cada tab precisa ser ativada individualmente:</p>
 
 <pre class="lang-javascript prettyprint linenums">
-$('#tab a').click(function(e) {
+$('#tab a').on('click', function(e) {
   e.preventDefault();
   $(this).tab('show');
 });
