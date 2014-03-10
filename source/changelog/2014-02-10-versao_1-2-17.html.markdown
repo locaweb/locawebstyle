@@ -5,4 +5,4 @@ tags:
 ---
 
 ## Adições
-Novo elemento <code>.boxList</code> (caixa com colunas de informações). Ele tem muitas variações de layout, veja o [exemplo na documentação](http://locaweb.github.io/locawebstyle/v1/manual/componentes/boxes-com-colunas).
+Novo elemento <code>.boxList</code> (caixa com colunas de informações). Ele tem muitas variações de layout, veja o [exemplo na documentação](http://locaweb.github.io/locawebstyle/v1/manual/aplicacoes/box-com-colunas/).
