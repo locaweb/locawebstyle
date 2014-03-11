@@ -1,0 +1,256 @@
+---
+title: Componentes - Box de informações
+menu_page: sidebar-componentes.erb
+---
+<header>
+	<h1>Box de Informações</h1>
+	<h3>Box com variações de layout com colunas de informações que utilizam os grids do bootstrap. </h3>
+</header>
+
+
+  <h3>Caixa com 3 colunas sem o header</h3>
+  <div class="box-info">
+    <div class="box-info-grid row-fluid">
+      <div class="col-md-4">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+      <div class="col-md-4">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+      <div class="col-md-4">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+    </div>
+  </div>
+<pre class="lang-html prettyprint linenums">
+&lt;div class="box-info"&gt;
+  &lt;div class="box-info-grid row-fluid"&gt;
+    &lt;div class="col-md-4"&gt;
+      &lt;span class="title-box"&gt;informação&lt;/span&gt;
+      &lt;strong class="value-box"&gt;0&lt;/strong&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-4"&gt;
+      &lt;span class="title-box"&gt;informação&lt;/span&gt;
+      &lt;strong class="value-box"&gt;0&lt;/strong&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-4"&gt;
+      &lt;span class="title-box"&gt;informação&lt;/span&gt;
+      &lt;strong class="value-box"&gt;0&lt;/strong&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<h3>Caixas com header + 2 colunas</h3>
+  <div class="box-info">
+    <header>
+      <h3 class="title-box-info">Título</h3>
+      <a href="#" class="btn btn-primary f-right">Botão</a>
+    </header>
+    <div class="box-info-grid row-fluid">
+      <div class="col-md-3">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+      <div class="col-md-8 txt-left">
+
+        <a href="#" class="ico-question" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal e bonito por aqui." data-title="Título"  title=""></a>
+        Cancelar recorrência
+      </div>
+    </div>
+  </div>
+
+<pre class="lang-html prettyprint linenums">
+  &lt;div class="box-info"&gt;
+    &lt;header&gt;
+      &lt;h3 class="title-box-info"&gt;Título&lt;/h3&gt;
+      &lt;a href="#" class="btn btn-primary f-right"&gt;Botão&lt;/a&gt;
+    &lt;/header&gt;
+    &lt;div class="box-info-grid row-fluid"&gt;
+      &lt;div class="col-md-3"&gt;
+        &lt;span class="title-box"&gt;informação&lt;/span&gt;
+        &lt;strong class="value-box"&gt;0&lt;/strong&gt;
+      &lt;/div&gt;
+      &lt;div class="col-md-8 txt-left"&gt;
+				&lt;a href="#" class="ico-question" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal e bonito por aqui." data-title="Título"  title=""&gt;&lt;/a&gt;
+        Cancelar recorrência
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+
+  <h3>Caixas com header + 4 colunas + conteúdo qualquer</h3>
+  <div class="box-info">
+    <header>
+      <h3 class="title-box-info">Título</h3>
+      <a href="#" class="btn btn-primary f-right">Botão</a>
+    </header>
+    <div class="box-info-grid row-fluid">
+      <div class="col-md-3">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+      <div class="col-md-3">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+      <div class="col-md-3">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+      <div class="col-md-3">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+    </div>
+    <div class="box-info-content">
+      <p>aqui vai qualquer conteúdo </p>
+    </div>
+  </div>
+
+<pre class="lang-html prettyprint linenums">
+&lt;div class="box-info"&gt;
+    &lt;header&gt;
+      &lt;h3 class="title-box-info"&gt;Título&lt;/h3&gt;
+      &lt;a href="#" class="btn btn-primary f-right"&gt;Botão&lt;/a&gt;
+    &lt;/header&gt;
+    &lt;div class="box-info-grid row-fluid"&gt;
+      &lt;div class="col-md-3"&gt;
+        &lt;span class="title-box"&gt;informação&lt;/span&gt;
+        &lt;strong class="value-box"&gt;0&lt;/strong&gt;
+      &lt;/div&gt;
+      &lt;div class="col-md-3"&gt;
+        &lt;span class="title-box"&gt;informação&lt;/span&gt;
+        &lt;strong class="value-box"&gt;0&lt;/strong&gt;
+      &lt;/div&gt;
+      &lt;div class="col-md-3"&gt;
+        &lt;span class="title-box"&gt;informação&lt;/span&gt;
+        &lt;strong class="value-box"&gt;0&lt;/strong&gt;
+      &lt;/div&gt;
+      &lt;div class="col-md-3"&gt;
+        &lt;span class="title-box"&gt;informação&lt;/span&gt;
+        &lt;strong class="value-box"&gt;0&lt;/strong&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="box-info-content"&gt;
+      &lt;p&gt;aqui vai qualquer conteúdo &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+
+
+  <h3>Caixas com header + título com ícone </h3>
+  <div class="box-info">
+    <header>
+      <h3 class="title-box-info ico-calendar-check">
+        Título com ícone
+        <small>alguma descrição aqui</small>
+      </h3>
+      <a href="#" class="btn btn-primary f-right">Botão</a>
+    </header>
+    <div class="box-info-grid row-fluid">
+      <div class="col-md-4">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+      <div class="col-md-4">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+      <div class="col-md-4">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+    </div>
+  </div>
+<pre class="lang-html prettyprint linenums">
+   &lt;div class="box-info"&gt;
+     &lt;header&gt;
+       &lt;h3 class="title-box-info ico-calendar-check"&gt;
+        Título com ícone
+         &lt;small&gt;alguma descrição aqui &lt;/small&gt;
+       &lt;/h3&gt;
+       &lt;a href="#" class="btn btn-primary f-right"&gt;Botão &lt;/a&gt;
+     &lt;/header&gt;
+     &lt;div class="box-info-grid row-fluid"&gt;
+       &lt;div class="col-md-4"&gt;
+         &lt;span class="title-box"&gt;informação &lt;/span&gt;
+         &lt;strong class="value-box"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+       &lt;div class="col-md-4"&gt;
+         &lt;span class="title-box"&gt;informação &lt;/span&gt;
+         &lt;strong class="value-box"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+       &lt;div class="col-md-4"&gt;
+         &lt;span class="title-box"&gt;informação &lt;/span&gt;
+         &lt;strong class="value-box"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+</pre>
+
+  <h3>Caixas com 5 colunas</h3>
+  <p>É necessário inserir a class <code>.box-info-5</code> e tudo fica perfeito.</p>
+  <div class="box-info box-info-5">
+    <header>
+      <h3 class="title-box-info">Título simples</h3>
+      <a href="#" class="btn btn-primary f-right">Botão</a>
+    </header>
+    <div class="box-info-grid row-fluid">
+      <div class="col-md-2">
+        <span class="title-box ">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+      <div class="col-md-2">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+      <div class="col-md-2">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+      <div class="col-md-2">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+      <div class="col-md-2">
+        <span class="title-box">informação</span>
+        <strong class="value-box">0</strong>
+      </div>
+    </div>
+  </div>
+<pre class="lang-html prettyprint linenums">
+   &lt;div class="box-info box-info-5"&gt;
+     &lt;header&gt;
+       &lt;h3 class="title-box-info"&gt;Com 5 boxes &lt;/h3&gt;
+       &lt;a href="#" class="btn btn-primary f-right"&gt;Botão &lt;/a&gt;
+     &lt;/header&gt;
+     &lt;div class="box-info-grid row-fluid"&gt;
+       &lt;div class="col-md-2"&gt;
+         &lt;span class="title-box "&gt;informação &lt;/span&gt;
+         &lt;strong class="value-box"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+       &lt;div class="col-md-2"&gt;
+         &lt;span class="title-box"&gt;informação &lt;/span&gt;
+         &lt;strong class="value-box"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+       &lt;div class="col-md-2"&gt;
+         &lt;span class="title-box"&gt;informação &lt;/span&gt;
+         &lt;strong class="value-box"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+       &lt;div class="col-md-2"&gt;
+         &lt;span class="title-box"&gt;informação &lt;/span&gt;
+         &lt;strong class="value-box"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+       &lt;div class="col-md-2"&gt;
+         &lt;span class="title-box"&gt;informação &lt;/span&gt;
+         &lt;strong class="value-box"&gt;0 &lt;/strong&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+</pre>
+
