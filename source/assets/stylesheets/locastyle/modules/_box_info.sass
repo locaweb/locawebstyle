@@ -1,0 +1,74 @@
+
+// Variações de boxes com grids e alguns elementos específicos
+
+.box-info
+	border-radius: 3px
+	border: 1px solid #E5E5E5
+	margin: 15px 0
+
+	header
+		border-bottom: 1px solid #E5E5E5
+		overflow: hidden
+		padding: 10px
+
+		.title-box-info
+			float: left
+			font-size: 20px
+
+			&[class*="ico-"] small
+				display: block
+				position: relative
+				font-size: 12px
+				top: -10px
+				left: 45px
+
+			&[class*="ico-"]:before
+				font-size: 36px
+				position: relative
+				top: 3px
+				margin-right: 0
+
+			&[class*="ico-"] ~ .btn
+				margin-top: 10px
+
+	.box-info-grid
+		background-color: #f9f9f9
+		overflow: hidden
+		padding: 10px 0
+		display: table
+		width: 100%
+
+		.title-box
+			color: $gray2
+			display: block
+			font-size: .785rem
+			margin-bottom: 5px
+
+		.value-box
+			font-size: 1.4rem
+			color: $gray3
+
+	[class*="col-md"]:last-child
+		border-color: transparent
+
+
+	[class*="col-md"]
+		border-right: 1px solid #E5E5E5
+		margin-top: 10px
+		margin-bottom: 10px
+		text-align: center
+		display: table-cell
+		vertical-align: middle
+		float: none
+
+	[class*="col-md"].txt-left
+		padding-left: 15px
+
+	.box-info-content
+		border-top: 1px solid #E5E5E5
+		padding: 10px
+
+.box-info-5.box-info [class*="col-md"]
+	margin-left: 0
+	width: 20%
+
