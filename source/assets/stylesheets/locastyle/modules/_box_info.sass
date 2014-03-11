@@ -48,10 +48,6 @@
 			font-size: 1.4rem
 			color: $gray3
 
-	[class*="col-md"]:last-child
-		border-color: transparent
-
-
 	[class*="col-md"]
 		border-right: 1px solid #E5E5E5
 		margin-top: 10px
@@ -61,14 +57,17 @@
 		vertical-align: middle
 		float: none
 
-	[class*="col-md"].txt-left
-		padding-left: 15px
+		&:last-child
+			border-color: transparent
+
+		&.txt-left
+			padding-left: 15px
 
 	.box-info-content
 		border-top: 1px solid #E5E5E5
 		padding: 10px
 
-.box-info-5.box-info [class*="col-md"]
-	margin-left: 0
-	width: 20%
+	&.box-info-5 [class*="col-md"]
+		margin-left: 0
+		width: 20%
 
