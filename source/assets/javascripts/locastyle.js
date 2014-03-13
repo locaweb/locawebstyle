@@ -11,6 +11,7 @@
 //= require locastyle/_bootstrap_starter
 //= require locastyle/_password_strength
 //= require locastyle/_tables
+//= require locastyle/_lists
 //= require locastyle/_accessibility
 //= require locastyle/_track_events
 //= require locastyle/_collapse_extends
