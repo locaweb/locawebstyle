@@ -25,6 +25,7 @@ src_files:
     - source/assets/javascripts/locastyle/_forms.js
     - source/assets/javascripts/locastyle/_templates.js
     - source/assets/javascripts/locastyle/_tables.js
+    - source/assets/javascripts/locastyle/_lists.js
 
 # stylesheets
 #
