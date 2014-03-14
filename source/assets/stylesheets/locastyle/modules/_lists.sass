@@ -10,8 +10,9 @@
 			float: right
 
 		.ls-list-image
-			float: left
+			display: inline-block
 			margin-right: 10px
+			vertical-align: top
 
 		.ls-list-title
 			display: inline-block
@@ -35,25 +36,22 @@
 	.ls-list-content
 		border-top: 1px solid $gray6
 		font-size: .82rem
+		overflow: hidden
 		padding: 0 12px
 
-		[class*="col-md"]
-			border-bottom: 1px solid $gray6
-			border-right-color: transparent
-			float: none
-			padding: 12px 0
+		[class*="col-"]
+			border-left: 1px solid $gray6
+			padding-bottom: 12px
+			padding-top: 12px
 
-			&:last-child
+			&:first-child
 				border-color: transparent
 
 			.ls-list-label
 				display: block
 
 
-//
-// Desktops
-//
-@media (min-width: #{$screen-md})
+@media (min-width: #{$screen-sm})
 
 	.ls-list
 
@@ -65,13 +63,9 @@
 			padding: 12px
 			width: 100%
 
-			[class*="col-md"]
-				border-right: 1px solid $gray6
-				border-bottom-color: transparent
+			[class*="col-"]
+
 				padding: 0 15px
 				display: table-cell
 				vertical-align: middle
-
-				&:first-child
-					padding-left: 0
 
