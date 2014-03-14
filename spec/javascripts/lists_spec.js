@@ -13,12 +13,12 @@ describe("Lists of Locaweb Style", function() {
 
     it("actions dropdown don't have text 'Ações'", function(){
       var textDropdown = $('.ls-list-actions .dropdown-toggle').text();
-      expect( textDropdown  === '' ).toBe( true );
+      expect( $.trim( textDropdown ) ).toEqual( '' );
     });
 
     it("should link have btn-primary class",function(){
-      var $btn = $('.ls-list-actions').find('a');
-      expect( $btn.hasClass('btn-primary') ).toBe( true );
+      var $btn = $('.ls-list-actions').find('.btn-primary');
+      expect( $btn.size() ).toEqual( 1 );
     });
 
   });
@@ -31,14 +31,13 @@ describe("Lists of Locaweb Style", function() {
     });
 
     it("actions dropdown have text 'Ações'", function(){
-      locastyle.lists.config.isXsmall = true;
       var textDropdown = $('.ls-list-actions .dropdown-toggle').text();
-      expect( textDropdown  === 'Ações' ).toBe( true );
+      expect( $.trim( textDropdown ) ).toEqual( 'Ações' );
     });
 
     it("should no exist link with btn-primary class",function(){
       var $btn = $('.ls-list-actions').find('.btn-primary');
-      expect( $btn.size() === 0 ).toBe( true );
+      expect( $btn.size() ).toEqual( 0 );
     });
 
   });
