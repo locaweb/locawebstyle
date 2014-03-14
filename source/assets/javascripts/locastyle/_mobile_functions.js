@@ -12,7 +12,10 @@ locastyle.mobile = (function() {
     sliderMobile(dom_scope);
     checkSidebarExist(dom_scope);
     lwbarMobile();
+    mobileGroupActions(dom_scope);
   }
+
+
 
   //
   // Checa se a sidebar e o nav-content existem.
@@ -195,12 +198,47 @@ locastyle.mobile = (function() {
 
   }
 
+
+  var config = {
+    selectors: {
+      groupActions: '.ls-group-actions'
+    },
+    isMobile : window.innerWidth <= 767
+  }
+
+  function mobileGroupActions (dom_scope){
+    if( locastyle.mobile.config.isMobile ){
+      var $item = $( config.selectors.groupActions, dom_scope);
+      $item.each(function(i, elem){
+        var $elem = $(elem);
+        groupActions($elem);
+      });
+    }
+  }
+
+  function groupActions ($elem) {
+      var config = {
+        label: 'Ações',
+        addClass: 'pull-right',
+        actions: []
+      };
+      $('a, button', $elem).not('.dropdown-toggle').each(function(i, action){
+        var $action = $(action);
+        var hasDanger = $action.hasClass('color-danger');
+        config.actions.push( {label: $action.text(), link: $action.attr('href'), classes: ( hasDanger ? 'color-danger' : ''), hasDivider: hasDanger } )
+      });
+      var HTML = locastyle.templates.button_dropdown_single(config)
+      $elem.html( locastyle.templates.button_dropdown_single(config) );
+  }
+
   return {
     init: init,
     mobileLeftBar: mobileLeftBar,
     mobileRightBar: mobileRightBar,
     sliderMobile: sliderMobile,
-    tabDropdownMobile: tabDropdownMobile
+    tabDropdownMobile: tabDropdownMobile,
+    mobileGroupActions: mobileGroupActions,
+    config: config
   };
 
 }());
