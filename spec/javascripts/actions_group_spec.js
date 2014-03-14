@@ -1,23 +1,23 @@
-describe("Lists of Locaweb Style", function() {
+describe("Group's actions of Locaweb Style", function() {
 
   beforeEach(function() {
-    loadFixtures('lists_fixture.html');
+    loadFixtures('actions_group_fixture.html');
   });
 
   describe("Desktop", function() {
 
     beforeEach(function() {
-      locastyle.lists.config.isXsmall = false;
-      locastyle.lists.init($(document));
+      locastyle.mobile.config.isMobile = false;
+      locastyle.mobile.mobileGroupActions($(document));
     });
 
     it("actions dropdown don't have text 'Ações'", function(){
-      var textDropdown = $('.ls-list-actions .dropdown-toggle').text();
+      var textDropdown = $('.ls-group-actions .dropdown-toggle').text();
       expect( $.trim( textDropdown ) ).toEqual( '' );
     });
 
     it("should link have btn-primary class",function(){
-      var $btn = $('.ls-list-actions').find('.btn-primary');
+      var $btn = $('.ls-group-actions').find('.btn-primary');
       expect( $btn.size() ).toEqual( 1 );
     });
 
@@ -26,17 +26,17 @@ describe("Lists of Locaweb Style", function() {
   describe("Mobile", function() {
 
     beforeEach(function() {
-      locastyle.lists.config.isXsmall = true;
-      locastyle.lists.init($(document));
+      locastyle.mobile.config.isMobile = true;
+      locastyle.mobile.mobileGroupActions($(document));
     });
 
     it("actions dropdown have text 'Ações'", function(){
-      var textDropdown = $('.ls-list-actions .dropdown-toggle').text();
+      var textDropdown = $('.ls-group-actions .dropdown-toggle').text();
       expect( $.trim( textDropdown ) ).toEqual( 'Ações' );
     });
 
     it("should no exist link with btn-primary class",function(){
-      var $btn = $('.ls-list-actions').find('.btn-primary');
+      var $btn = $('.ls-group-actions').find('.btn-primary');
       expect( $btn.size() ).toEqual( 0 );
     });
 
