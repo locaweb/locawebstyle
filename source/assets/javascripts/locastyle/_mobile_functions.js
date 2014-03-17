@@ -218,7 +218,7 @@ locastyle.mobile = (function() {
 
   function groupActions ($elem) {
       var config = {
-        label: 'Ações',
+        label: '',
         addClass: 'pull-right',
         actions: []
       };

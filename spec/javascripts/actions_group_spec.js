@@ -11,11 +11,6 @@ describe("Group's actions of Locaweb Style", function() {
       locastyle.mobile.mobileGroupActions($(document));
     });
 
-    it("actions dropdown don't have text 'Ações'", function(){
-      var textDropdown = $('.ls-group-actions .dropdown-toggle').text();
-      expect( $.trim( textDropdown ) ).toEqual( '' );
-    });
-
     it("should link have btn-primary class",function(){
       var $btn = $('.ls-group-actions').find('.btn-primary');
       expect( $btn.size() ).toEqual( 1 );
@@ -30,10 +25,6 @@ describe("Group's actions of Locaweb Style", function() {
       locastyle.mobile.mobileGroupActions($(document));
     });
 
-    it("actions dropdown have text 'Ações'", function(){
-      var textDropdown = $('.ls-group-actions .dropdown-toggle').text();
-      expect( $.trim( textDropdown ) ).toEqual( 'Ações' );
-    });
 
     it("should no exist link with btn-primary class",function(){
       var $btn = $('.ls-group-actions').find('.btn-primary');
