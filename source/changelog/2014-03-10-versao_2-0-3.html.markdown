@@ -14,5 +14,5 @@ published: false
 **O que corrigimos**
 
 \- A página ativa da paginação se comporta igual sendo link ou span [#657](https://github.com/locaweb/locawebstyle/issues/657)
-
 \- Contraste de cor no hover/focus em links com a classe btn-default [#655](https://github.com/locaweb/locawebstyle/issues/655)
+\- Layout de <code>input</code> com elemento força da senha.
