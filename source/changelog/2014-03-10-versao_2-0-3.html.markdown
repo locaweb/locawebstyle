@@ -7,9 +7,12 @@ published: false
 
 **O que tem de novo?**
 
-\- Box de informações, ele possui variações com a mesma estrutura além de utilizar os grids do bootstrap. [#662](https://github.com/locaweb/locawebstyle/issues/662)
+\- Box de informações, possui variações com a mesma estrutura além de utilizar os grids do bootstrap. [#662](https://github.com/locaweb/locawebstyle/issues/662)
+
+\- Listas, possui variações com a mesma estrutura além de utilizar os grids do bootstrap. [#97](https://github.com/locaweb/locawebstyle/issues/97)
 
 **O que corrigimos**
 
 \- A página ativa da paginação se comporta igual sendo link ou span [#657](https://github.com/locaweb/locawebstyle/issues/657)
+
 \- Contraste de cor no hover/focus em links com a classe btn-default [#655](https://github.com/locaweb/locawebstyle/issues/655)
