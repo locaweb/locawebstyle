@@ -1,0 +1,71 @@
+.ls-list
+	border: 1px solid $gray6
+	+border-radius-default()
+	margin-bottom: 15px
+
+	header.ls-list-header
+		padding: 12px
+
+		.ls-group-actions
+			float: right
+
+		.ls-list-image
+			display: inline-block
+			margin-right: 10px
+			vertical-align: top
+
+		.ls-list-title
+			display: inline-block
+
+			a
+				font-size: 1rem
+				font-weight: bold
+
+			small
+				color: $gray2
+				display: block
+				font-size: .82rem
+
+		[class*="btn-"]
+			float: right
+
+		.dropdown-toggle:after,
+		.btn-default.dropdown-toggle:after
+			margin-left: 0
+
+	.ls-list-content
+		border-top: 1px solid $gray6
+		font-size: .82rem
+		overflow: hidden
+		padding: 0 12px
+
+		[class*="col-"]
+			border-left: 1px solid $gray6
+			padding-bottom: 12px
+			padding-top: 12px
+
+			&:first-child
+				border-color: transparent
+
+			.ls-list-label
+				display: block
+
+
+@media (min-width: #{$screen-sm})
+
+	.ls-list
+
+		.btn-group
+			margin-left: 10px
+
+		.ls-list-content
+			display: table
+			padding: 12px
+			width: 100%
+
+			[class*="col-"]
+
+				padding: 0 15px
+				display: table-cell
+				vertical-align: middle
+
