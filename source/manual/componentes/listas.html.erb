@@ -8,6 +8,42 @@ menu_page: sidebar-componentes.erb
 </header>
 
 <h3 class="title-3">Lista com header + imagem e grids de informações</h3>
+<div class="example">
+	<div class="ls-list">
+		<header class="ls-list-header">
+			<div class="ls-group-actions">
+				<a href="#" class="btn btn-primary f-left">Ação principal</a>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="sr-only">Toggle Dropdown</span>
+					</button>
+					<ul class="dropdown-menu pull-right" role="menu">
+						<li><a href="#">Editar</a></li>
+						<li><a href="#">Adicionar</a></li>
+						<li class="divider"></li>
+						<li><a href="#" class="color-danger">excluir</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="ls-list-image"><img alt="linux" src="http://developer.locaweb.com.br/assets/edge/img/os/linux.gif"></div>
+			<div class="ls-list-title">
+				<a href="">Identificador</a>
+				<small>Descrição de plano ou caracsterística do produto e recurso <a href="#" class="ico-question" data-container="body" data-inherit="background-color" data-toggle="popover" data-placement="top" data-content="Um texto bem legal e bonito por aqui." data-title="Título" data-original-title="" title=""></a></small>
+			</div>
+		</header>
+		<div class="ls-list-content ">
+			<div class="col-xs-6 col-md-6">
+				<strong class="ls-list-label">Status</strong>
+				Publicado
+			</div>
+			<div class="col-xs-6 col-md-6">
+				<strong class="ls-list-label">Status</strong>
+				Publicado
+			</div>
+		</div>
+	</div>
+</div>
+<pre class="linenums prettyprint-code lang-html">
 <div class="ls-list">
 	<header class="ls-list-header">
 		<div class="ls-group-actions">
@@ -41,8 +77,23 @@ menu_page: sidebar-componentes.erb
 		</div>
 	</div>
 </div>
+</pre>
 
 <h3 class="title-3">Lista somente com header</h3>
+<div class="example">
+	<div class="ls-list">
+		<header class="ls-list-header">
+			<div class="ls-group-actions">
+				<a href="#" class="btn btn-primary f-left">Ação principal</a>
+			</div>
+			<div class="ls-list-title">
+				<a href="">Identificador</a>
+				<small>Descrição de plano ou caracsterística do produto e recurso </small>
+			</div>
+		</header>
+	</div>
+</div>
+<pre class="linenums prettyprint-code lang-html">
 <div class="ls-list">
 	<header class="ls-list-header">
 		<div class="ls-group-actions">
@@ -54,8 +105,37 @@ menu_page: sidebar-componentes.erb
 		</div>
 	</header>
 </div>
+</pre>
 
 <h3 class="title-3">Lista sem grids</h3>
+<div class="example">
+	<div class="ls-list">
+		<header class="ls-list-header">
+			<div class="ls-group-actions">
+				<a href="#" class="btn btn-primary f-left">Ação principal</a>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="sr-only">Toggle Dropdown</span>
+					</button>
+					<ul class="dropdown-menu pull-right" role="menu">
+						<li><a href="#">Editar</a></li>
+						<li><a href="#">Adicionar</a></li>
+						<li class="divider"></li>
+						<li><a href="#" class="color-danger">excluir</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="ls-list-title">
+				<a href="">Identificador</a>
+				<small>Descrição de plano ou caracsterística do produto e recurso </small>
+			</div>
+		</header>
+		<div class="ls-list-content ">
+				<strong>3</strong> servidores associados
+		</div>
+	</div>
+</div>
+<pre class="linenums prettyprint-code lang-html">
 <div class="ls-list">
 	<header class="ls-list-header">
 		<div class="ls-group-actions">
@@ -81,4 +161,5 @@ menu_page: sidebar-componentes.erb
 			<strong>3</strong> servidores associados
 	</div>
 </div>
+</pre>
 
