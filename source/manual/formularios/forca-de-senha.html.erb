@@ -53,33 +53,49 @@ menu_page: sidebar-formularios.erb
 		</tr>
 	</tbody>
 </table>
+
 <div class="example">
 	<form>
 		<div class="form-inline">
 			<div class="form-group">
-				<label class="control-label" for="user_password">Nova senha</label>
-				<input class="password form-control" id="user_password" data-component="password-strength" data-monitor-id="password-strength-monitor" name="" type="password">
+				<label class="control-label" for="user_password2">Nova senha</label>
+				<p class="info-label">Senha entre 8 a 14 caracteres, contendo letras e números</p>
+				<div>
+					<div class="input-group col-md-4 f-left">
+						<input class="password form-control" id="user_password2" data-component="password-strength" data-monitor-id="password-strength-monitor" type="password">
+						<a class=" input-group-addon toggle-pass ico-eye" data-classtoggle="ico-eye,ico-eye-blocked" data-target="#user_password2" href="#"></a>
+					</div>
+
+					<div class="password-strength">
+						<p>Força da senha</p>
+						<div id="password-strength-monitor" class="monitor"></div>
+					</div>
+				</div>
+
 			</div>
-			<div class="password-strength">
-				<p>Força da senha</p>
-				<div id="password-strength-monitor" class="monitor"></div>
-			</div>
-			<p class="help-block">Senha entre 8 a 14 caracteres, contendo letras e números</p>
 		</div>
 	</form>
 </div>
+
 <pre class="lang-html prettyprint-code linenums">
 <form>
 	<div class="form-inline">
 		<div class="form-group">
-			<label class="control-label" for="user_password">Nova senha</label>
-			<input class="password form-control" id="user_password" data-component="password-strength" data-monitor-id="password-strength-monitor" name="" type="password">
+			<label class="control-label" for="user_password2">Nova senha</label>
+			<p class="info-label">Senha entre 8 a 14 caracteres, contendo letras e números</p>
+			<div>
+				<div class="input-group col-md-4 f-left">
+					<input class="password form-control" id="user_password2" data-component="password-strength" data-monitor-id="password-strength-monitor" type="password">
+					<a class=" input-group-addon toggle-pass ico-eye" data-classtoggle="ico-eye,ico-eye-blocked" data-target="#user_password2" href="#"></a>
+				</div>
+
+				<div class="password-strength">
+					<p>Força da senha</p>
+					<div id="password-strength-monitor" class="monitor"></div>
+				</div>
+			</div>
+
 		</div>
-		<div class="password-strength">
-			<p>Força da senha</p>
-			<div id="password-strength-monitor" class="monitor"></div>
-		</div>
-		<p class="help-block">Senha entre 8 a 14 caracteres, contendo letras e números</p>
 	</div>
 </form>
 </pre>
@@ -88,5 +104,3 @@ menu_page: sidebar-formularios.erb
 <p>Este não é o mesmo requisito de senha usado nos paineis da Locaweb, existe outra validação para estes casos. A proposta deste componente é prover um feedback de força de senha com requisitos simples.<p>
 <p>Não consideramos por exemplo sequência de caracteres, alta ocorrência do mesmo caractere, mesmo caractere consecutivo e outros requisitos usados para validar a força de uma senha.</p>
 <p>Lembrando também que este componente não valida a senha, ou seja, mesmo uma senha de classificação fraca (weak), passaria em um form de criação de senha, esta validação fica por sua conta.</p>
-
-
