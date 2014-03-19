@@ -2,7 +2,6 @@
 title: Versão 2.0.3
 date: 2014-03-10 17:04 UTC
 tags:
-published: false
 ---
 
 **O que tem de novo?**
