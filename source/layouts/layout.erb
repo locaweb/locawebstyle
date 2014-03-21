@@ -6,10 +6,12 @@
     <title><%= current_page.data.title %></title>
     <meta name="description" content="<%= current_page.data.description %>" />
     <meta name="keywords" content="<%= current_page.data.keywords %>" />
-    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= stylesheet_link_tag "locastyle" %>
+    <%= stylesheet_link_tag "documentacao" %>
   </head>
   <body class="<%= page_classes %>">
     <%= yield %>
-    <%= javascript_include_tag  "all" %>
+    <%= javascript_include_tag  "locastyle" %>
+    <%= javascript_include_tag  "documentacao" %>
   </body>
 </html>
