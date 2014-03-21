@@ -45,6 +45,8 @@
 #   end
 # end
 
+set :stable, "3.0.0"
+
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
