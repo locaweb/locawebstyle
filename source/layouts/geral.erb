@@ -10,7 +10,17 @@
     <%= stylesheet_link_tag "documentacao" %>
   </head>
   <body class="<%= page_classes %>">
+    <header class="header">
+      <h1>
+        <a href="/">
+          <%= I18n.t(:name) %>
+        </a>
+      </h1>
+    </header>
     <%= yield %>
+    <footer>
+      <%= I18n.t(:name) %>
+    </footer>
     <%= javascript_include_tag  "locastyle" %>
     <%= javascript_include_tag  "documentacao" %>
   </body>
