@@ -55,6 +55,7 @@ set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 
 activate :directory_indexes
+activate :i18n
 
 activate :blog do |blog|
   # set options on blog
