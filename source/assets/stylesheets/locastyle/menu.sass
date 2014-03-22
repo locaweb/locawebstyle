@@ -24,12 +24,15 @@ $information-phone: "screen and (min-width: 600px)"
 @media #{$information-phone}
   .show-menu
     display: none
+  .nav-menu
+    position: relative
 
 
 nav.menu
   background: $base2
   width: 13rem
   height: calc(100% - 3rem)
+  float: left
   overflow: hidden
   position: absolute
   z-index: 1
