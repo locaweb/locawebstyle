@@ -1,10 +1,12 @@
 /*
 *=require _vendor/bootstrap/grid
-*=require locastyle/fonts
-*=require locastyle/reset
-*=require locastyle/colors
-*=require locastyle/base
-*=require locastyle/footer
-*=require locastyle/topbar
-*=require locastyle/sidebar
+*=require locastyle/_fonts
+*=require locastyle/_reset
+*=require locastyle/_colors
+*=require locastyle/_buttons
+*=require locastyle/_base
+*=require locastyle/_footer
+*=require locastyle/_topbar
+*=require locastyle/_sidebar
+
 */
