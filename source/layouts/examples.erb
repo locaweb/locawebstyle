@@ -10,12 +10,9 @@
   <%= stylesheet_link_tag "documentacao" %>
 </head>
 <body class="<%= page_classes %>">
-
   <div class="ls-topbar">
-    <div class="product-name">
-      <h1>
-        Revenda de email
-      </h1>
+    <div class="brand-name">
+      <h1><a href="#">Revenda Email Marketing</a></h1>
     </div>
   </div>
   <aside class="ls-sidebar">Sidebar</aside>
@@ -24,7 +21,6 @@
       <%= yield %>
     </div>
   </main>
-
   <%= javascript_include_tag  "locastyle" %>
   <%= javascript_include_tag  "documentacao" %>
 </body>
