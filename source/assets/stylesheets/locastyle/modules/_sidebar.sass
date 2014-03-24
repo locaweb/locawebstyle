@@ -10,6 +10,12 @@
     border-bottom: 1px solid #292929
     padding: 20px 15px
 
+    &[class*="ls-ico"]:before
+      color: $gray-1
+      float: left
+      font-size: 1.55em
+      margin-right: 10px
+
     .ls-title-2
       color: $gray-1
       font-size: .6875rem
@@ -22,6 +28,9 @@
       font-weight: normal
       margin: 3px 0 15px
 
+    [class*="ls-btn"]
+      margin-left: 35px
+
   .ls-menu ul
     a
       color: $gray-1
@@ -31,13 +40,13 @@
       text-decoration: none
       padding: 20px
 
-      &[class*="ls-ico"]::before
+      &[class*="ls-ico"]:before
         font-size: 1.25rem
         margin-right: 20px
 
       &:hover,
       &:focus
-        background-color: $gray-2
+        background-color: $gray-3
         border-left-color: #000
         color: #fff
     li
