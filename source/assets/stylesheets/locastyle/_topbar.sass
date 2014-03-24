@@ -1,0 +1,36 @@
+//
+// Toda customização da topbar estará abaixo
+//
+.ls-topbar
+	background: #333
+	height: 60px
+
+
+	//
+	// Nome do produto/marca
+	//
+	.ls-brand-name
+		display: inline-block
+
+		h1
+			margin: 0
+			font-size: 1.5rem
+			font-weight: 300
+			color: #fff
+
+			a
+				text-decoration: none
+				color: #fff
+				padding: 16px
+				display: block
+				position: relative
+
+				&::before
+					margin-right: 12px
+					font-size: 1.875rem
+
+	//
+	// Ítens clicáveis incluindo notificações e possível dropdown com informações de usuário.
+	//
+	.ls-notification-topbar
+		float: right

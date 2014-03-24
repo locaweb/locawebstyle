@@ -11,11 +11,52 @@
 </head>
 <body class="<%= page_classes %>">
   <div class="ls-topbar">
-    <div class="brand-name">
-      <h1><a href="#">Revenda Email Marketing</a></h1>
+
+    <!-- Barra de Notificações -->
+    <div class="ls-notification-topbar">
+
+      <!-- Links de apoio -->
+      <a href="#">Notificações</a>
+      <a href="#">Ajuda</a>
+      <a href="#">Sugestões</a>
+
+      <!-- Dropdown com detalhes da conta de usuário -->
+      <div class="ls-user-account">
+        <a href="#">
+          Franco&nbsp;
+          <small>(fmolina)</small>
+          <input type="checkbox" name="user" value="">
+        </a>
+      </div>
+    </div>
+
+    <!-- Nome do produto/marca -->
+    <div class="ls-brand-name">
+      <h1><a href="#" class='ls-ico-envelope'>Revenda Email Marketing</a></h1>
     </div>
   </div>
-  <aside class="ls-sidebar">Sidebar</aside>
+  <aside class="ls-sidebar">
+    <div class="ls-area-account">
+      <h2>Administrando</h2>
+      <h3>subdominio.locaweb.com.br</h3>
+      <a href="#" class="btn-small btn-dark">Ver todos</a>
+    </div>
+    <nav class="ls-menu">
+      <ul>
+         <li><a href="#">Página inicial</a></li>
+         <li><a href="#">Clientes</a></li>
+         <li><a href="#">Relatórios</a></li>
+         <li>
+          <a href="#">Configurações</a>
+          <ul>
+            <li><a href="">Submenu</a></li>
+            <li><a href="">Submenu</a></li>
+            <li><a href="">Submenu</a></li>
+          </ul>
+        </li>
+       </ul>
+    </nav>
+  </aside>
   <main class="ls-main">
     <div class="ls-container">
       <%= yield %>
