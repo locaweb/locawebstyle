@@ -1,7 +1,6 @@
 //
 // Default color - gray (no class in HTML needed)
 //
-$default-color: #888
 $color-1: #888
 $color-2: #ccc
 $color-3: #333
@@ -19,34 +18,39 @@ $gray-5: #222
 // Green color
 //
 .ls-theme-green
-  $default-color: #8ecf00
   $color-1: #8ecf00
   $color-2: #00a272
   $color-3: #519700
   $color-4: #f8fcf0
   $color-5: #163400
 
-// //
-// // Light Green color
-// //
-// .ls-theme-light-green
-//   $color-1: #1abc9c
-//   $color-2: #99d419
-//   $color-3: #10715e
-//   $color-4: #e8f8f5
-//   $color-5: #05261f
-
-// //
-// // Blue color
-// //
-// .ls-theme-blue
-//   $color-1: #0848b3
-//   $color-2: #25abd1
-//   $color-3: #0e3d8b
-//   $color-4: #edf7ff
-//   $color-5: #0b2552
-
-$profiles: (bandcamp: #4e9bac, delicious: #248cff, facebook: #3b5998, ficly: #b51c2c, flickr: #0063db, github: #4183c4, googleplus: #dd4b39, instagram: #517fa4, kickstarter: #76cc1e, lanyrd: #152e51, lastfm: #d51007, linkedin: #007bb6, photodrop: #cdb6e3, pinterest: #cb2027, rdio: #0088da, soundcloud: #f60, twitter: #00aced, vimeo: #aad450, youtube: #b00 )
-@each $profile, $bgcolor in $profiles
-  .profile-link--#{$profile}:focus, .profile-link--#{$profile}:hover
-    background: $bgcolor
+// $colors: (
+//   ls-theme-gray: (
+//     $color-1: #888,
+//     $color-2: #ccc,
+//     $color-3: #333,
+//     $color-4: #dfdfdf,
+//     $color-5: #222
+//   ),
+//   ls-theme-green: (
+//     $color-1: #8ecf00,
+//     $color-2: #00a272,
+//     $color-3: #519700,
+//     $color-4: #f8fcf0,
+//     $color-5: #163400
+//   ),
+//   ls-theme-light-green: (
+//     $color-1: #1abc9c,
+//     $color-2: #99d419,
+//     $color-3: #10715e,
+//     $color-4: #e8f8f5,
+//     $color-5: #05261f
+//   ),
+//   ls-theme-blue: (
+//     $color-1: #0848b3,
+//     $color-2: #25abd1,
+//     $color-3: #0e3d8b,
+//     $color-4: #edf7ff,
+//     $color-5: #0b2552
+//   )
+// )
