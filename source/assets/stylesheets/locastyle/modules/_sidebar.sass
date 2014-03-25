@@ -4,6 +4,8 @@
   float: left
   height: calc(100% - 50px)
   overflow: auto
+  position: absolute
+  z-index: 1
 
   .ls-area-account
     background-color: #111
@@ -59,3 +61,11 @@
 
     ul
       display: none
+
+@media (min-width: 768px)
+  .ls-sidebar
+    position: relative
+
+
+
+
