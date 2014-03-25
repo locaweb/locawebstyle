@@ -10,6 +10,7 @@
       border-top: none
 
   .ls-collapse-title
+    +transition (all .1s linear)
     border: 1px solid #ccc
     padding: 10px
     cursor: pointer
@@ -19,6 +20,11 @@
       background-color: #ccc
       color: #fff
     &:after
+      +rotate(0deg)
+      +transition (all .3s linear)
+      color: #fff
+      background-color: #aaa
+      border-radius: 100%
       content: "V"
       position: absolute
       display: block
@@ -30,22 +36,24 @@
       text-align: center
 
   .ls-collapse-body
-    height: 0
+    +transition (all .3s linear)
+    display: none
     overflow: hidden
-    padding: 0
     border: 0px solid transparent
 
-  &.ls-collapse-open
+  &.ls-collapse-open, &.ls-collapse-always-open
 
     .ls-collapse-title
       background-color: #aaa
       border-color: #aaa
       color: #fff
       &:after
+        color: #aaa
         +rotate(180deg)
+        background-color: #fff
 
     .ls-collapse-body
-      padding: 10px
-      height: auto
+      // padding: 10px
+      display: block
       overflow: visible
       border: 1px solid #aaa
