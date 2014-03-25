@@ -1,22 +1,38 @@
 [class*="ls-btn"]
-  border: 1px solid #ccc
+  border: 1px solid $gray-2
   padding: 6px 12px
-  border-radius: 4px
-  color: #FFF
+  border-radius: 3px
   cursor: pointer
   display: inline-block
-  font-size: 14px
-  text-decoration: none
-  white-space: nowrap
-
-.ls-btn-sm,
-.ls-btn-xs
   font-size: .75rem
-  line-height: 1.5
-  border-radius: 3px
+  text-decoration: none
+
+.ls-btn
+  color: #000
+  background-color: #fff
+
+  &:hover,
+  &:focus
+    opacity: .8
+
+.ls-btn-primary
+  background-color: $gray-2
+  border-color: #3d3c3c
+  color: #fff
+
+.ls-btn-dark
+  background-color: $gray-3
+  color: #9d9d9d
+  border-color: #3d3c3c
+
+.ls-btn-lg
+  padding: 10px 16px
+  font-size: 1.125rem
+  border-radius: 6px
 
 .ls-btn-sm
-  padding: 5px 10px
+  padding: 6px 10px
 
 .ls-btn-xs
-  padding: 1px 5px
+  font-size: .5rem
+  padding: 5px 7px

@@ -5,7 +5,6 @@
 	background: #333
 	height: 60px
 
-
 	//
 	// Nome do produto/marca
 	//
@@ -23,10 +22,12 @@
 				color: #fff
 				padding: 16px
 				display: block
-				position: relative
+				vertical-align: top
 
 				&::before
+					display: inline-block
 					margin-right: 12px
+					margin-top: -4px
 					font-size: 1.875rem
 
 	//
@@ -34,3 +35,28 @@
 	//
 	.ls-notification-topbar
 		float: right
+
+		.ls-alerts-list
+			display: inline-block
+			vertical-align: middle
+
+			a
+				color: #fff
+
+				span
+					display: none
+
+
+		.ls-user-account
+			background: #666
+			display: inline-block
+			height: 60px
+			padding: 16px
+
+			a
+				color: #fff
+				text-decoration: none
+				vertical-align: middle
+
+			input[type='checkbox']
+				display: none
