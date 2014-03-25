@@ -4,5 +4,117 @@ description: collapse
 ---
 
 <h1>Collapse</h1>
+<h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
+
+<h2>Um collapse</h2>
+
+<div class="ls-collapse">
+  <div class="ls-collapse-title">
+    Titulo collapse
+  </div>
+  <div class="ls-collapse-body">
+    corpo collapse
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<h2>dois collapses</h2>
+<% 2.times do |num| %>
+<div class="ls-collapse">
+  <div class="ls-collapse-title">
+    Titulo collapse <%= num %>
+  </div>
+  <div class="ls-collapse-body">
+    corpo collapse
+  </div>
+</div>
+<% end %>
+
+<br>
+<br>
+<br>
+
+<h2>tres collapses</h2>
+<% 3.times do |num| %>
+<div class="ls-collapse">
+  <div class="ls-collapse-title">
+    Titulo collapse <%= num %>
+  </div>
+  <div class="ls-collapse-body">
+    corpo collapse
+  </div>
+</div>
+<% end %>
+
+<br>
+<br>
+<br>
+
+<h2>Collapse titulo duas linhas</h2>
+<div class="ls-collapse">
+  <div class="ls-collapse-title">
+    Titulo collapse
+    <p>segunda linha</p>
+  </div>
+  <div class="ls-collapse-body">
+    corpo collapse
+  </div>
+</div>
+
+<br>
+<br>
+<br>
 
 
+<h2>Um collapse, aberto</h2>
+
+<div class="ls-collapse ls-collapse-open">
+  <div class="ls-collapse-title">
+    Titulo collapse
+  </div>
+  <div class="ls-collapse-body">
+    corpo collapse
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+
+
+<h2>collapse Group / accordeon</h2>
+<div class="ls-collapse-group">
+  <% 5.times do |num| %>
+  <div class="ls-collapse">
+    <div class="ls-collapse-title">
+      Titulo collapse <%= num %>
+    </div>
+    <div class="ls-collapse-body">
+      corpo collapse
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
+<br>
+<br>
+<br>
+
+<h2>collapse Group, abertos</h2>
+<div class="ls-collapse-group">
+  <% 5.times do |num| %>
+  <div class="ls-collapse<% if num == 3 %> ls-collapse-open<% end%>">
+    <div class="ls-collapse-title">
+      Titulo collapse <%= num %>
+    </div>
+    <div class="ls-collapse-body">
+      corpo collapse
+    </div>
+  </div>
+  <% end %>
+</div>

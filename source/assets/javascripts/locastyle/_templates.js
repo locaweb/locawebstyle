@@ -8,8 +8,8 @@ locastyle.templates = (function() {
   function init(){
   }
 
-  function popover(target, title, content){
-    $(target).append( JST[templatesPath + 'popover']({title: title, content: content}) );
+  function popover(target, title, content, placement){
+    $(target).append( JST[templatesPath + 'popover']({title: title, content: content, placement: placement}) );
   }
 
   return {
