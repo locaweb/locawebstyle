@@ -54,10 +54,19 @@
     li
       border-bottom: 1px solid #292929
 
-    .ls-submenu a:after
-      content: "\e607"
-      float: right
-      margin-top: 5px
+    .ls-submenu
+      > a:after
+        content: "\e607"
+        float: right
+        margin-top: 5px
+
+      &.active
+
+        > a:after
+          content: "\e60a"
+
+        ul
+          display: block
 
     ul
       display: none
