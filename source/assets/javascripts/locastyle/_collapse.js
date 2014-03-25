@@ -3,16 +3,41 @@ locastyle.collapse = (function() {
   'use strict';
 
   var config = {
-    selector: '.ls-collapse'
+    selectors: {
+      container: '.ls-collapse',
+      trigger: '.ls-collapse-title',
+      content: '.ls-collapse-body',
+      groupContainer: '.ls-collapse-group'
+    },
+    classes: {
+      open: 'ls-collapse-open',
+      alwaysOpen: 'ls-collapse-always-open'
+    }
+
   };
 
   function init() {
-
-    $(config.selector).each(function(i, collapse){
-      console.log(collapse);
+    $(config.selectors.container).each(function(i, collapse){
+      var $collapse = $(this);
+      toggleCollapse($collapse);
     });
-
   }
+
+  function toggleCollapse($collapse){
+    $(config.selectors.trigger, $collapse).on('click', function(evt){
+      evt.preventDefault();
+      // if( $collapse.hasClass(config.classes.alwaysOpen) ){
+      //   return;
+      // }
+      var $group = $collapse.parents(config.selectors.groupContainer);
+      if( $group[0] ){
+        console.log('grupo');
+        $group.find(config.selectors.container).not($collapse).removeClass(config.classes.open).find(config.selectors.content).slideUp();
+      }
+      $collapse.toggleClass(config.classes.open)//.find(config.selectors.content).slideToggle();
+    });
+  }
+
 
   return {
     init:init
