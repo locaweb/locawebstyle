@@ -13,13 +13,13 @@
     padding: 20px 15px
 
     &[class*="ls-ico"]:before
-      color: $color-1
+      color: $color-3
       float: left
       font-size: 1.55em
       margin-right: 10px
 
     .ls-title-2
-      color: $color-1
+      color: $color-3
       font-size: .6875rem
       font-weight: normal
       text-transform: uppercase
@@ -54,10 +54,19 @@
     li
       border-bottom: 1px solid #292929
 
-    .ls-submenu a:after
-      content: "\e607"
-      float: right
-      margin-top: 5px
+    .ls-submenu
+      > a:after
+        content: "\e607"
+        float: right
+        margin-top: 5px
+
+      &.active
+
+        > a:after
+          content: "\e60a"
+
+        ul
+          display: block
 
     ul
       display: none
