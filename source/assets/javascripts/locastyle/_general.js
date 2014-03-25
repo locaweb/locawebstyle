@@ -1,10 +1,6 @@
 var locastyle = locastyle || {};
-locastyle.collapse = (function() {
+locastyle.general = (function() {
   'use strict';
-
-  var config = {
-    selector: '.ls-collapse'
-  };
 
   function init() {
 

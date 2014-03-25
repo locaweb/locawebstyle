@@ -1,0 +1,51 @@
+.ls-collapse-group
+  border: 1px solid red
+  padding: 10px
+
+.ls-collapse
+  border-bottom: 0px
+
+  & + .ls-collapse
+    .ls-collapse-title
+      border-top: none
+
+  .ls-collapse-title
+    border: 1px solid #ccc
+    padding: 10px
+    cursor: pointer
+    position: relative
+    display: block
+    &:hover
+      background-color: #ccc
+      color: #fff
+    &:after
+      content: "V"
+      position: absolute
+      display: block
+      top: calc( (100% - 30px)/2)
+      right: 0
+      height: 30px
+      width: 30px
+      line-height: 30px
+      text-align: center
+
+  .ls-collapse-body
+    height: 0
+    overflow: hidden
+    padding: 0
+    border: 0px solid transparent
+
+  &.ls-collapse-open
+
+    .ls-collapse-title
+      background-color: #aaa
+      border-color: #aaa
+      color: #fff
+      &:after
+        +rotate(180deg)
+
+    .ls-collapse-body
+      padding: 10px
+      height: auto
+      overflow: visible
+      border: 1px solid #aaa
