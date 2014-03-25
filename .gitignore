@@ -25,3 +25,5 @@ vendor/*
 # Vim
 *.swp
 *.swo
+
+Gemfile.lock

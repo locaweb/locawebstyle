@@ -3,7 +3,6 @@ locastyle.modal = (function() {
   'use strict';
 
   function init() {
-    console.log('_modal.js');
 
   }
 
