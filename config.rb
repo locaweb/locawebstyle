@@ -54,7 +54,7 @@ set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 
-activate :directory_indexes
+# activate :directory_indexes
 activate :i18n
 
 activate :blog do |blog|
