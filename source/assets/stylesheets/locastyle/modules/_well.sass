@@ -1,0 +1,17 @@
+.ls-well
+  padding: 15px
+  margin-bottom: 40px
+  background-color: #fff
+  border-radius: 2px
+  border: 1px solid rgba(0, 0, 0, .05)
+
+  &:after
+    @extend .ls-clearfix
+
+  .ls-small-info
+    font-size: .75rem
+    color: $gray-1
+
+[class*="ls-title"] + .ls-well
+  margin-top: 10px
+  clear: both

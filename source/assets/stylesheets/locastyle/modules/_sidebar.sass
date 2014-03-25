@@ -1,45 +1,57 @@
 .ls-sidebar
-	background: #222
-	width: 300px
-	float: left
-	height: calc(100% - 50px)
-	overflow: auto
+  background: #222
+  width: 300px
+  float: left
+  height: calc(100% - 50px)
+  overflow: auto
 
-	.ls-area-account
-		background-color: #111
-		border-bottom: 1px solid #292929
-		padding: 20px 15px
+  .ls-area-account
+    background-color: #111
+    border-bottom: 1px solid #292929
+    padding: 20px 15px
 
-		h2
-			color: #888
-			font-size: .6875rem
-			font-weight: normal
-			text-transform: uppercase
+    &[class*="ls-ico"]:before
+      color: $gray-1
+      float: left
+      font-size: 1.55em
+      margin-right: 10px
 
-		h3
-			color: #fff
-			font-size: .875rem
-			font-weight: normal
-			margin: 3px 0 10px
+    .ls-title-2
+      color: $gray-1
+      font-size: .6875rem
+      font-weight: normal
+      text-transform: uppercase
 
-	.ls-menu
-		ul
-			a
-				color: #888
-				border-left: 5px solid transparent
-				display: block
-				font-size: 0.875em
-				text-decoration: none
-				padding: 20px
+    .ls-title-3
+      color: #fff
+      font-size: .875rem
+      font-weight: normal
+      margin: 3px 0 15px
 
-				&:hover,
-				&:focus
-					background-color: #333
-					border-left-color: #000
-					color: #fff
-			li
-				border-bottom: 1px solid #292929
+    [class*="ls-btn"]
+      margin-left: 35px
 
-			ul
-				display: none
+  .ls-menu ul
+    a
+      color: $gray-1
+      border-left: 5px solid transparent
+      display: block
+      font-size: .875rem
+      text-decoration: none
+      padding: 20px
+
+      &[class*="ls-ico"]:before
+        font-size: 1.25rem
+        margin-right: 20px
+
+      &:hover,
+      &:focus
+        background-color: $gray-3
+        border-left-color: #000
+        color: #fff
+    li
+      border-bottom: 1px solid #292929
+
+    ul
+      display: none
 
