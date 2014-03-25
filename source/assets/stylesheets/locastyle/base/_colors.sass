@@ -2,3 +2,7 @@ $gray-1: #888
 $gray-2: #ccc
 $gray-3: #333
 
+$profiles: (bandcamp: #4e9bac, delicious: #248cff, facebook: #3b5998, ficly: #b51c2c, flickr: #0063db, github: #4183c4, googleplus: #dd4b39, instagram: #517fa4, kickstarter: #76cc1e, lanyrd: #152e51, lastfm: #d51007, linkedin: #007bb6, photodrop: #cdb6e3, pinterest: #cb2027, rdio: #0088da, soundcloud: #f60, twitter: #00aced, vimeo: #aad450, youtube: #b00 )
+@each $profile, $bgcolor in $profiles
+  .profile-link--#{$profile}:focus, .profile-link--#{$profile}:hover
+    background: $bgcolor
