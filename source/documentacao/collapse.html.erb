@@ -10,10 +10,25 @@ description: collapse
 
 <div class="ls-collapse">
   <div class="ls-collapse-title">
-    Titulo collapse
+    <%= lorem.words 3 %>
   </div>
   <div class="ls-collapse-body">
-    corpo collapse
+    <p><%= lorem.paragraphs 3%></p>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<h2>Um collapsesempre aberto</h2>
+
+<div class="ls-collapse ls-collapse-always-open">
+  <div class="ls-collapse-title">
+    <%= lorem.words 3 %>
+  </div>
+  <div class="ls-collapse-body">
+    <p><%= lorem.paragraphs 3%></p>
   </div>
 </div>
 
@@ -25,10 +40,10 @@ description: collapse
 <% 2.times do |num| %>
 <div class="ls-collapse">
   <div class="ls-collapse-title">
-    Titulo collapse <%= num %>
+    <%= lorem.words num+1 %>
   </div>
   <div class="ls-collapse-body">
-    corpo collapse
+    <p><%= lorem.paragraphs 3%></p>
   </div>
 </div>
 <% end %>
@@ -41,10 +56,10 @@ description: collapse
 <% 3.times do |num| %>
 <div class="ls-collapse">
   <div class="ls-collapse-title">
-    Titulo collapse <%= num %>
+    <%= lorem.words num+1 %>
   </div>
   <div class="ls-collapse-body">
-    corpo collapse
+    <p><%= lorem.paragraphs 3%></p>
   </div>
 </div>
 <% end %>
@@ -56,11 +71,27 @@ description: collapse
 <h2>Collapse titulo duas linhas</h2>
 <div class="ls-collapse">
   <div class="ls-collapse-title">
-    Titulo collapse
-    <p>segunda linha</p>
+    <h5><%= lorem.words 2 %></h5>
+    <p><%= lorem.words 5 %></p>
   </div>
   <div class="ls-collapse-body">
-    corpo collapse
+    <p><%= lorem.paragraphs 3 %></p>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<h2>Collapse titulo tres linhas</h2>
+<div class="ls-collapse">
+  <div class="ls-collapse-title">
+    <h5><%= lorem.words 2 %></h5>
+    <p><%= lorem.words 3 %></p>
+    <p><%= lorem.words 5 %></p>
+  </div>
+  <div class="ls-collapse-body">
+    <p><%= lorem.paragraphs 3 %></p>
   </div>
 </div>
 
@@ -73,10 +104,10 @@ description: collapse
 
 <div class="ls-collapse ls-collapse-open">
   <div class="ls-collapse-title">
-    Titulo collapse
+    <%= lorem.words 2 %>
   </div>
   <div class="ls-collapse-body">
-    corpo collapse
+    <p><%= lorem.paragraphs 3%></p>
   </div>
 </div>
 
@@ -91,10 +122,10 @@ description: collapse
   <% 5.times do |num| %>
   <div class="ls-collapse">
     <div class="ls-collapse-title">
-      Titulo collapse <%= num %>
+      <%= lorem.words num+1 %>
     </div>
     <div class="ls-collapse-body">
-      corpo collapse
+      <p><%= lorem.paragraphs num+1%></p>
     </div>
   </div>
   <% end %>
@@ -110,10 +141,28 @@ description: collapse
   <% 5.times do |num| %>
   <div class="ls-collapse<% if num == 3 %> ls-collapse-open<% end%>">
     <div class="ls-collapse-title">
-      Titulo collapse <%= num %>
+      <%= lorem.words num+1 %>
     </div>
     <div class="ls-collapse-body">
-      corpo collapse
+      <p><%= lorem.paragraphs num+1%></p>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<br>
+<br>
+<br>
+
+<h2>collapse Group, XXX</h2>
+<div class="ls-collapse-group">
+  <% 5.times do |num| %>
+  <div class="ls-collapse<% if num == 3 %> ls-collapse-open<% end%>">
+    <div class="ls-collapse-title">
+      <%= lorem.words num+1 %>
+    </div>
+    <div class="ls-collapse-body">
+      <p><%= lorem.paragraphs num+1%></p>
     </div>
   </div>
   <% end %>
