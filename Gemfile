@@ -4,3 +4,5 @@ source 'http://rubygems.org'
 
 gem "middleman", "~>3.2.2"
 gem "middleman-blog"
+gem 'compass', '~> 1.0.0.alpha.19'
+gem 'sass', '~> 3.3.4'
