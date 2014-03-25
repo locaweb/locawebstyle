@@ -1,15 +1,25 @@
 var locastyle = locastyle || {};
+
 locastyle.popover = (function() {
   'use strict';
 
-  var options = {
-    'dataTrigger': 'hover',
-    'contentClass': 'popover',
-    'dataToggle': 'popover'
+  function init(dom_scope) {
+    getPopover();
   }
 
-  function init() {
+  function getPopover(){
+    $('[data-toggle="popover"]').each(function(i,e){
+      var dataTrigger = $(this).data("trigger");
+      var eventType = dataTrigger == 'hover' ? 'mouseenter' : 'click'
+      $(e).on(eventType, function(e){
+        e.preventDefault();
 
+        var title = $(this).data("title");
+        var content = $(this).data("content");
+        locastyle.templates.popover($(this), title, content);
+
+      })
+    })
   }
 
   function show(){
@@ -22,6 +32,6 @@ locastyle.popover = (function() {
 
   return {
     init: init
-  };
+  }
 
 }());
