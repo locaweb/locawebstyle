@@ -4,6 +4,8 @@
   float: left
   height: calc(100% - 50px)
   overflow: auto
+  position: absolute
+  z-index: 1
 
   .ls-area-account
     background-color: #111
@@ -11,13 +13,13 @@
     padding: 20px 15px
 
     &[class*="ls-ico"]:before
-      color: $gray-1
+      color: $color-1
       float: left
       font-size: 1.55em
       margin-right: 10px
 
     .ls-title-2
-      color: $gray-1
+      color: $color-1
       font-size: .6875rem
       font-weight: normal
       text-transform: uppercase
@@ -47,11 +49,23 @@
       &:hover,
       &:focus
         background-color: $gray-3
-        border-left-color: #000
+        border-left-color: $color-3
         color: #fff
     li
       border-bottom: 1px solid #292929
 
+    .ls-submenu a:after
+      content: "\e607"
+      float: right
+      margin-top: 5px
+
     ul
       display: none
+
+@media (min-width: 768px)
+  .ls-sidebar
+    position: relative
+
+
+
 
