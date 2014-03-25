@@ -2,8 +2,15 @@ var locastyle = locastyle || {};
 locastyle.collapse = (function() {
   'use strict';
 
+  var config = {
+    selector: '.ls-collapse'
+  };
+
   function init() {
-    console.log('_collapse.js');
+
+    $(config.selector).each(function(i, collapse){
+      console.log(collapse);
+    });
 
   }
 
