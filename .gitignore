@@ -17,3 +17,11 @@
 .DS_Store
 .cache
 .rvmrc
+
+vendor/*
+
+.DS_Store
+
+# Vim
+*.swp
+*.swo
