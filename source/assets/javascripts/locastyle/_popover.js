@@ -16,9 +16,9 @@ locastyle.popover = (function() {
   }
 
   function setAction(element, eventType){
-    $(element).on(eventType, function(evt){
-      evt.preventDefault();
-      evt.stopPropagation();
+    $(element).on(eventType, function(event){
+      event.preventDefault();
+      event.stopPropagation();
       var title = $(element).data("title");
       var content = $(element).data("content");
       var placement = $(element).data("placement");
