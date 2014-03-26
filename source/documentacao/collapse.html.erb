@@ -3,118 +3,101 @@ title: Collapse
 description: collapse
 ---
 
-<h1>Collapse</h1>
-<h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
-
-<h2>Um collapse</h2>
-
-<div class="ls-collapse">
-  <div class="ls-collapse-title">
-    <%= lorem.words 3 %>
-  </div>
-  <div class="ls-collapse-body">
-    <p><%= lorem.paragraphs 3%></p>
-  </div>
+<div class="row">
+  <h1 class="ls-title-intro">Collapse</h1>
+  <p class="ls-title-2">
+    Collapse é um componente para exibir conteúdo comparte dele oculto.
+  </p>
+  <br>
 </div>
 
-<br>
-<br>
-<br>
+<div class="row doc-block">
+  <h2 class="ls-title-2">Collapse simples</h2>
 
-<h2>Um collapsesempre aberto</h2>
+  <p>Um <i>collapse</i> usa a seguinte estrutura no html:</p>
 
-<div class="ls-collapse ls-collapse-always-open">
-  <div class="ls-collapse-title">
-    <%= lorem.words 3 %>
+  <code class="language-html">
+    <div id="teste" class="ls-collapse">
+      <div class="ls-collapse-title">
+        Título
+      </div>
+      <div class="ls-collapse-body">
+        Conteúdo
+      </div>
+    </div>
+  </code>
+
+  <p>Que é exibido da seguinte forma:</p>
+
+  <div id="teste" class="ls-collapse">
+    <div class="ls-collapse-title">
+      Título
+    </div>
+    <div class="ls-collapse-body">
+      <% 5.times do |num| %>
+      Conteúdo <br>
+      <% end %>
+    </div>
   </div>
-  <div class="ls-collapse-body">
-    <p><%= lorem.paragraphs 3%></p>
+
+  <p>Os títulos, vísiveis quando o <i>collapse</i> está fechado, podem conter qualquer conteúdo, por exemplo:</p>
+
+  <div id="teste" class="ls-collapse">
+    <div class="ls-collapse-title">
+      <h3>Título</h3>
+      <p>Texto adicional</p>
+    </div>
+    <div class="ls-collapse-body">
+      <% 5.times do |num| %>
+      Conteúdo <br>
+      <% end %>
+    </div>
   </div>
+
+  <br>
+
+  <div id="teste" class="ls-collapse">
+    <div class="ls-collapse-title">
+      <div class="row ls-overflow-hidden">
+        <div class="col-md-3">
+          <img src="holder.js/180x50/sky/text:Imagem qualquer">
+        </div>
+        <div class="col-md-4">
+          <h2>Título</h2>
+        </div>
+      </div>
+    </div>
+    <div class="ls-collapse-body">
+      <% 5.times do |num| %>
+      Conteúdo <br>
+      <% end %>
+    </div>
+  </div>
+
 </div>
 
-<br>
-<br>
-<br>
+<div class="row doc-block">
+  <h2 class="ls-title-2">Parâmetros adicionais</h2>
+  <ul>
+    <li>
+      .ls-collapse-always-open: mantem um collapse sempre aberto
+    </li>
+    <li>
+      ls-collapse-open: inicia aberto
+    </li>
+  </ul>
 
-<h2>dois collapses</h2>
-<% 2.times do |num| %>
-<div class="ls-collapse">
-  <div class="ls-collapse-title">
-    <%= lorem.words num+1 %>
-  </div>
-  <div class="ls-collapse-body">
-    <p><%= lorem.paragraphs 3%></p>
-  </div>
-</div>
-<% end %>
+  <p>collapse seguidos</p>
 
-<br>
-<br>
-<br>
-
-<h2>tres collapses</h2>
-<% 3.times do |num| %>
-<div class="ls-collapse">
-  <div class="ls-collapse-title">
-    <%= lorem.words num+1 %>
-  </div>
-  <div class="ls-collapse-body">
-    <p><%= lorem.paragraphs 3%></p>
-  </div>
-</div>
-<% end %>
-
-<br>
-<br>
-<br>
-
-<h2>Collapse titulo duas linhas</h2>
-<div class="ls-collapse">
-  <div class="ls-collapse-title">
-    <h5><%= lorem.words 2 %></h5>
-    <p><%= lorem.words 5 %></p>
-  </div>
-  <div class="ls-collapse-body">
-    <p><%= lorem.paragraphs 3 %></p>
-  </div>
-</div>
-
-<br>
-<br>
-<br>
-
-<h2>Collapse titulo tres linhas</h2>
-<div class="ls-collapse">
-  <div class="ls-collapse-title">
-    <h5><%= lorem.words 2 %></h5>
-    <p><%= lorem.words 3 %></p>
-    <p><%= lorem.words 5 %></p>
-  </div>
-  <div class="ls-collapse-body">
-    <p><%= lorem.paragraphs 3 %></p>
-  </div>
-</div>
-
-<br>
-<br>
-<br>
-
-
-<h2>Um collapse, aberto</h2>
-
-<div class="ls-collapse ls-collapse-open">
-  <div class="ls-collapse-title">
-    <%= lorem.words 2 %>
-  </div>
-  <div class="ls-collapse-body">
-    <p><%= lorem.paragraphs 3%></p>
-  </div>
 </div>
 
 
 <br>
 <br>
 <br>
+
+
+
 
 
 <h2>collapse Group / accordeon</h2>
@@ -177,9 +160,9 @@ description: collapse
 <button type="button" data-toggle-collapse="#collapse1"></button>
  <div id="collapse1" class="ls-collapse">
     <div class="ls-collapse-title">
-      <%= lorem.words num+1 %>
+      <%= lorem.words 2 %>
     </div>
     <div class="ls-collapse-body">
-      <p><%= lorem.paragraphs num+1%></p>
+      <p><%= lorem.paragraphs 2 %></p>
     </div>
   </div>
