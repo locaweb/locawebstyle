@@ -4,7 +4,7 @@ locastyle.popover = (function() {
   'use strict';
 
   var config = {
-    defaultContainer: '.popovers'
+    defaultContainer: 'body'
   }
 
   function init() {
@@ -18,7 +18,6 @@ locastyle.popover = (function() {
       var dataTrigger = $(element).data("trigger");
       var eventType = dataTrigger == 'hover' ? 'mouseenter' : 'click'
       setAction(element, eventType);
-
     })
   }
 
@@ -26,7 +25,6 @@ locastyle.popover = (function() {
     $(element).on(eventType, function(event){
       //Remove popover when init
       destroyPopover();
-
       event.preventDefault();
       event.stopPropagation();
 
@@ -36,7 +34,6 @@ locastyle.popover = (function() {
       var placement = $(element).data("placement");
 
       buildPopover(element, title, content, placement)
-
     });
     if(eventType == 'mouseenter'){
       $(element).on('mouseleave', function(){
