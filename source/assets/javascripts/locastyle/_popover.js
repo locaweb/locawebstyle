@@ -52,21 +52,38 @@ locastyle.popover = (function() {
     var height = $(element).height();
     var top = $(element).position().top;
     var left = $(element).position().left;
-    var setTop = placement == 'top' ? (top-height-10) : (top+height+10)
-    setPosition(setTop, left);
+    var setSide = left;
+    var setTop = top;
+
+    if(placement == 'top')
+      setTop =  (top-height-10)
+
+    if(placement == 'bottom')
+      setTop =  (top+height+10)
+
+    if(placement == 'left')
+      //184 fix popover size
+      setSide =  (left-width)-(184/2-10)
+
+    if(placement == 'right')
+      setSide =  (left+width+10)
+
+    setPopoverPosition(setTop, setSide);
   }
 
+  //Create a popover
   function buildPopover(element, title, content, placement){
     //Return template popover
     $(config.defaultContainer).append(locastyle.templates.popover(title, content, placement));
+
+    //Call this method to create popover close enough of your parent
     getElementPosition(element, placement);
   }
 
-  function setPosition(top, left){
+  //Create a popover close element
+  function setPopoverPosition(top, left){
     $(".ls-popover").css({'position':'absolute', 'top': top+"px", 'left': left+"px", "background": "yellow"});
   }
-
-
 
   //Destroy popover
   function destroyPopover(){
@@ -74,7 +91,8 @@ locastyle.popover = (function() {
   }
 
   return {
-    init: init
+    init: init,
+    destroyPopover: destroyPopover
   }
 
 }());
