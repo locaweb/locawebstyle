@@ -17,7 +17,7 @@ description: collapse
   <p>Um <i>collapse</i> usa a seguinte estrutura no html:</p>
 
   <code class="language-html">
-    <div id="teste" class="ls-collapse">
+    <div class="ls-collapse">
       <div class="ls-collapse-title">
         Título
       </div>
@@ -29,7 +29,7 @@ description: collapse
 
   <p>Que é exibido da seguinte forma:</p>
 
-  <div id="teste" class="ls-collapse">
+  <div class="ls-collapse">
     <div class="ls-collapse-title">
       Título
     </div>
@@ -56,7 +56,7 @@ description: collapse
 
   <br>
 
-  <div id="teste" class="ls-collapse">
+  <div class="ls-collapse">
     <div class="ls-collapse-title">
       <div class="row ls-overflow-hidden">
         <div class="col-md-3">
@@ -78,78 +78,78 @@ description: collapse
 
 <div class="row doc-block">
   <h2 class="ls-title-2">Parâmetros adicionais</h2>
-  <ul>
-    <li>
-      .ls-collapse-always-open: mantem um collapse sempre aberto
-    </li>
-    <li>
-      ls-collapse-open: inicia aberto
-    </li>
-  </ul>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>
+          ls-collapse-always-open
+      </td>
+      <td>classe</td>
+      <td>mantem um collapse sempre aberto</td>
+    </tr>
+    <tr>
+      <td>ls-collapse-open</td>
+      <td>classe</td>
+      <td>inicia aberto</td>
+    </tr>
+  </table>
 
   <p>collapse seguidos</p>
 
 </div>
 
+<div class="row doc-block">
+  <h2 class="ls-title-2">Accordeon</h2>
+  <p><i>Accordeon</i> é um conjunto de <i>collapses</i> agrupados, onde apenas deles pernace aberto</p>
 
-<br>
-<br>
-<br>
+  <p>Um <i>accordeon</i> usa a seguinte estrutura no html:</p>
 
-
-
-
-
-<h2>collapse Group / accordeon</h2>
-<div class="ls-collapse-group">
-  <% 5.times do |num| %>
-  <div class="ls-collapse">
-    <div class="ls-collapse-title">
-      <%= lorem.words num+1 %>
+  <code class="language-html">
+    <div class="ls-collapse-group">
+      <% 5.times do |num| %>
+      <!-- início do collapse <%= num+1 %> -->
+      <div class="ls-collapse">
+        <div class="ls-collapse-title">
+          Título do collapse <%= num+1 %>
+        </div>
+        <div class="ls-collapse-body">
+          <%= lorem.paragraphs 1%>
+        </div>
+      </div>
+      <!-- fim do collapse <%= num+1 %> -->
+      <% end %>
     </div>
-    <div class="ls-collapse-body">
-      <p><%= lorem.paragraphs num+1%></p>
+  </code>
+
+  <p>Que é exibido da seguinte forma:</p>
+
+  <div class="ls-collapse-group">
+    <% 5.times do |num| %>
+    <!-- início do collapse <%= num+1 %> -->
+    <div class="ls-collapse">
+      <div class="ls-collapse-title">
+        Título do collapse <%= num+1 %>
+      </div>
+      <div class="ls-collapse-body">
+        <%= lorem.paragraphs 1%>
+      </div>
     </div>
+    <!-- fim do collapse <%= num+1 %> -->
+    <% end %>
   </div>
-  <% end %>
+
+  <p>Os <i>collapse</i> agrupados em um <i>accordeon</i> aceitam as mesmas configurações que um <i>collapse</i> normal.</p>
+
 </div>
 
 
-<br>
-<br>
-<br>
-
-<h2>collapse Group, abertos</h2>
-<div class="ls-collapse-group">
-  <% 5.times do |num| %>
-  <div class="ls-collapse<% if num == 3 %> ls-collapse-open<% end%>">
-    <div class="ls-collapse-title">
-      <%= lorem.words num+1 %>
-    </div>
-    <div class="ls-collapse-body">
-      <p><%= lorem.paragraphs num+1%></p>
-    </div>
-  </div>
-  <% end %>
-</div>
-
-<br>
-<br>
-<br>
-
-<h2>collapse Group, XXX</h2>
-<div class="ls-collapse-group">
-  <% 5.times do |num| %>
-  <div class="ls-collapse<% if num == 3 %> ls-collapse-open<% end%>">
-    <div class="ls-collapse-title">
-      <%= lorem.words num+1 %>
-    </div>
-    <div class="ls-collapse-body">
-      <p><%= lorem.paragraphs num+1%></p>
-    </div>
-  </div>
-  <% end %>
-</div>
 
 <br>
 <br>
