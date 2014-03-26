@@ -4,7 +4,7 @@ locastyle.popover = (function() {
   'use strict';
 
   var config = {
-    defaultContainer: 'body'
+    defaultContainer: '.ls-main'
   }
 
   function init() {

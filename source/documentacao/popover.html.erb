@@ -2,28 +2,82 @@
 title: Popover
 description: popover
 ---
-
-<h1>Popover</h1>
-<br>
-<div style="width: 400px; margin: 0 auto;padding-bottom: 1100px">
-  <p>
-    <a href="#" data-toggle="popover" data-trigger="click" data-title="Titulo do popover 1" data-content="Conteúdo do popover 1" data-placement="bottom">
-      Popover 1 (bottom)
-    </a>
+<div class="row">
+  <h1 class="ls-title-intro">Popover</h1>
+  <p class="ls-title-2">
+    Popover é um componente para exibir uma informação em um determinado elemento.
   </p>
-  <p style="margin-top: 20px">
-    <a href="#" data-toggle="popover" data-trigger="hover" data-title="Titulo do popover 2" data-content="Conteúdo do popover 2" data-placement="top">
-      Popover 2 (top)
-    </a>
-  </p>
-  <p style="margin-top: 20px">
-    <a href="#" data-toggle="popover" data-trigger="hover" data-title="Titulo do popover 3" data-content="Conteúdo do popover 3" data-placement="left">
-      Popover 3 (left)
-    </a>
-  </p>
-  <p style="margin-top: 20px">
-    <a href="#" data-toggle="popover" data-trigger="click" data-title="Titulo do popover 4" data-content="Conteúdo do popover 4" data-placement="right">
-      Popover 4 (right)
-    </a>
-  </p>
+  <br>
 </div>
+<div class="row doc-block">
+  <h2 class="ls-title-2">Como usar</h2>
+</div>
+<table class="ls-table">
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Default</th>
+    <th>Description</th>
+  </tr>
+
+  <tr>
+    <td>data-trigger</td>
+    <td>click / hover</td>
+    <td> click </td>
+    <td> cria o popover baseado na posição do elemento </td>
+  </tr>
+
+  <tr>
+    <td>data-placement</td>
+    <td>top / bottom / left / right</td>
+    <td> top </td>
+    <td> posiciona o popover </td>
+  </tr>
+
+  <tr>
+    <td>data-title</td>
+    <td> text </td>
+    <td></td>
+    <td> insere o título no popover </td>
+  </tr>
+
+  <tr>
+    <td>data-content</td>
+    <td> text and html tags </td>
+    <td></td>
+    <td> insere o conteúdo no popover </td>
+  </tr>
+</table>
+<div class="row doc-block">
+  <h2 class="ls-title-2">Exemplos</h2>
+</div>
+
+<div class="ls-well ls-txt-center">
+  <a href="#" class="ls-btn-primary" data-toggle="popover" data-trigger="click" data-title="Titulo do popover 1" data-content="Conteúdo do popover 1" data-placement="bottom">
+    Popover (bottom)
+  </a>
+  <a href="#" class="ls-btn-primary" data-toggle="popover" data-trigger="hover" data-title="Titulo do popover 2" data-content="Conteúdo do popover 2" data-placement="top">
+    Popover (top)
+  </a>
+  <a href="#" class="ls-btn-primary" data-toggle="popover" data-trigger="hover" data-title="Titulo do popover 3" data-content="Conteúdo do popover 3" data-placement="left">
+    Popover (left)
+  </a>
+  <a href="#" class="ls-btn-primary" data-toggle="popover" data-trigger="click" data-title="Titulo do popover 4" data-content="Conteúdo do popover 4" data-placement="right">
+    Popover (right)
+  </a>
+</div>
+
+<code class="language-html">
+  <a href="#" data-toggle="popover" data-trigger="click" data-title="Titulo do popover 1" data-content="Conteúdo do popover 1" data-placement="bottom">
+    Popover 1 (bottom)
+  </a>
+  <a href="#" data-toggle="popover" data-trigger="hover" data-title="Titulo do popover 2" data-content="Conteúdo do popover 2" data-placement="top">
+    Popover 2 (top)
+  </a>
+  <a href="#" data-toggle="popover" data-trigger="hover" data-title="Titulo do popover 3" data-content="Conteúdo do popover 3" data-placement="left">
+    Popover 3 (left)
+  </a>
+  <a href="#" data-toggle="popover" data-trigger="click" data-title="Titulo do popover 4" data-content="Conteúdo do popover 4" data-placement="right">
+    Popover 4 (right)
+  </a>
+</code>
