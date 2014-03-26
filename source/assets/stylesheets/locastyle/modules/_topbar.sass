@@ -9,6 +9,7 @@
   top: 0
   left: 0
   z-index: 3
+  text-align: center
 
   //
   // Nome do produto/marca
@@ -26,9 +27,7 @@
       vertical-align: middle
 
     &:before
-      vertical-align: middle
-      margin-right: 12px
-      font-size: 2rem
+      display: none
 
   //
   // Ítens clicáveis incluindo notificações e possível dropdown com informações de usuário.
@@ -39,6 +38,7 @@
     .ls-alerts-list
       display: inline-block
       vertical-align: middle
+      margin-top: 20px
 
       & :before
         font-size: 1.2rem
@@ -47,6 +47,7 @@
         color: #fff
         margin-right: 14px
         position: relative
+        display: none
 
         &:after
           content: attr(data-counter)
@@ -66,11 +67,14 @@
         span
           display: none
 
+        &.ls-ico-question
+          display: inline-block
+
 
     .ls-user-account
       background-color: rgba(0, 0, 0, 0.15)
       box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.05)
-      display: inline-block
+      display: none
       vertical-align: middle
       height: 60px
       padding: 0 15px
@@ -109,3 +113,35 @@
         display: none
         background: $color-1
         height: 60px
+
+  .ls-ico-menu:before
+    color: #FFF
+    display: inline-block
+    font-size: 2em
+    position: relative
+    top: 7px
+    left: 10px
+
+@media (min-width: 768px)
+  .ls-topbar
+
+    .ls-brand-name:before
+      display: inline-block
+      vertical-align: middle
+      margin-right: 12px
+      font-size: 2rem
+
+    .ls-ico-menu:before
+      display: none
+
+    .ls-notification-topbar
+
+      .ls-alerts-list
+        margin-top: 0
+
+        a
+          display: inline-block
+
+      .ls-user-account
+        display: inline-block
+
