@@ -3,6 +3,10 @@ var locastyle = locastyle || {};
 locastyle.popover = (function() {
   'use strict';
 
+  var config = {
+    defaultContainer: 'body'
+  }
+
   function init() {
     getPopover();
   }
@@ -14,13 +18,14 @@ locastyle.popover = (function() {
       var dataTrigger = $(element).data("trigger");
       var eventType = dataTrigger == 'hover' ? 'mouseenter' : 'click'
       setAction(element, eventType);
+
     })
   }
 
   function setAction(element, eventType){
     $(element).on(eventType, function(event){
-      //Hide popover when init
-      hide();
+      //Remove popover when init
+      destroyPopover();
 
       event.preventDefault();
       event.stopPropagation();
@@ -30,20 +35,42 @@ locastyle.popover = (function() {
       var content = $(element).data("content");
       var placement = $(element).data("placement");
 
-      //Return template popover
-      $(element).append(locastyle.templates.popover(title, content, placement));
-    }).on('mouseleave', function(){
-      //Hide popover when mouse out
-      hide();
-    })
+      buildPopover(element, title, content, placement)
+
+    });
+    if(eventType == 'mouseenter'){
+      $(element).on('mouseleave', function(){
+        // Remove popover when mouse out
+        destroyPopover();
+      })
+    }
   }
 
-  function show(){
-
+  // Get position of data-toggle
+  function getElementPosition(element, placement){
+    var width = $(element).width();
+    var height = $(element).height();
+    var top = $(element).position().top;
+    var left = $(element).position().left;
+    var setTop = placement == 'top' ? (top-height-10) : (top+height+10)
+    setPosition(setTop, left);
   }
 
-  function hide(){
-    $(".ls-popover").hide()
+  function buildPopover(element, title, content, placement){
+    //Return template popover
+    $(config.defaultContainer).append(locastyle.templates.popover(title, content, placement));
+    getElementPosition(element, placement);
+  }
+
+  function setPosition(top, left){
+    $(".ls-popover").css({'position':'absolute', 'top': top+"px", 'left': left+"px", "background": "yellow"});
+  }
+
+
+
+  //Destroy popover
+  function destroyPopover(){
+    $(".ls-popover").remove()
   }
 
   return {
