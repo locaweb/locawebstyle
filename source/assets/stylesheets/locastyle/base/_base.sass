@@ -1,17 +1,23 @@
 .ls-main
-  padding-top: 60px
-  margin-left: 300px
+  padding-top: $heightTopbar
+  margin-left: 0
   z-index: 2
   overflow: auto
   -webkit-overflow-scrolling: touch
   -moz-overflow-scrolling: touch
   overflow-scrolling: touch
-  height: calc(100% - 60px)
+  height: calc(100% - $heightTopbar)
   background-color: #f7f7f7
+  position: relative
+  z-index: 3
+  -webkit-transform: translate3D(0, 0, 0)
+  -webkit-transition: all .30s linear
+
+  .sidebar-visible &
+    -webkit-transform: translate3D($sidebarWidth, 0, 0)
 
 .ls-container
   padding: 0 30px
-
 
 ///
 /// Titles
@@ -34,8 +40,9 @@
     opacity: .15
 
 
-.ls-title-2
+.ls-title-2, .ls-title-3
   font-size: 1.38rem
 
-.ls-title-3
-  font-size: 1.38rem
+@media (min-width: 768px)
+  .ls-main
+    margin-left: $sidebarWidth
