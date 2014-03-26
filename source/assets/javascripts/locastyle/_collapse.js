@@ -21,6 +21,17 @@ locastyle.collapse = (function() {
       var $collapse = $(this);
       toggleCollapse($collapse);
     });
+
+    toggleCollapseButton();
+  }
+
+  function toggleCollapseButton(){
+    $('[data-toggle-collapse]').on('click', function (evt) {
+      evt.preventDefault();
+      evt.stopPropagation();
+      var id = $(this).data('#toggle-collapse');
+      console.log(id);
+    });
   }
 
   function toggleCollapse($collapse){
@@ -34,7 +45,7 @@ locastyle.collapse = (function() {
         console.log('grupo');
         $group.find(config.selectors.container).not($collapse).removeClass(config.classes.open).find(config.selectors.content).slideUp();
       }
-      $collapse.toggleClass(config.classes.open)//.find(config.selectors.content).slideToggle();
+      $collapse.toggleClass(config.classes.open)//.find(config.selectors.content).slideToggle(300, 'linear');
     });
   }
 
