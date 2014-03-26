@@ -3,22 +3,27 @@
 //
 .ls-topbar
   background-color: $color-3
-  height: 60px
+  height: $heightTopbar
   position: fixed
   width: 100%
   top: 0
   left: 0
-  z-index: 3
+  z-index: 10
+  -webkit-transform: translate3D(0, 0, 0)
+  -webkit-transition: all .30s linear
+
+  .sidebar-visible &
+    -webkit-transform: translate3D($sidebarWidth, 0, 0)
 
   //
   // Nome do produto/marca
   //
   .ls-brand-name
-    display: inline-block
     font-size: 1.5rem
     font-weight: 300
     color: #fff
     padding: 15px
+    text-align: center
 
     a
       text-decoration: none
@@ -26,9 +31,7 @@
       vertical-align: middle
 
     &:before
-      vertical-align: middle
-      margin-right: 12px
-      font-size: 2rem
+      display: none
 
   //
   // Ítens clicáveis incluindo notificações e possível dropdown com informações de usuário.
@@ -39,6 +42,7 @@
     .ls-alerts-list
       display: inline-block
       vertical-align: middle
+      margin-top: 20px
 
       & :before
         font-size: 1.2rem
@@ -47,6 +51,7 @@
         color: #fff
         margin-right: 14px
         position: relative
+        display: none
 
         &:after
           content: attr(data-counter)
@@ -66,13 +71,16 @@
         span
           display: none
 
+        &.ls-ico-question
+          display: inline-block
+
 
     .ls-user-account
       background-color: rgba(0, 0, 0, 0.15)
       box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.05)
-      display: inline-block
+      display: none
       vertical-align: middle
-      height: 60px
+      height: $heightTopbar
       padding: 0 15px
 
       &:before
@@ -109,3 +117,41 @@
         display: none
         background: $color-1
         height: 60px
+
+  .ls-ico-menu:before
+    float: left
+    padding: 15px 15px 0
+    height: $heightTopbar
+    display: inline-block
+    color: #FFF
+    font-size: 2em
+    vertical-align: middle
+    cursor: pointer
+
+@media (min-width: 768px)
+  .ls-topbar
+    text-align: left
+
+    .ls-brand-name
+      text-align: left
+
+      &:before
+        display: inline-block
+        vertical-align: middle
+        margin-right: 12px
+        font-size: 2rem
+
+    .ls-ico-menu:before
+      display: none
+
+    .ls-notification-topbar
+
+      .ls-alerts-list
+        margin-top: 0
+
+        a
+          display: inline-block
+
+      .ls-user-account
+        display: inline-block
+

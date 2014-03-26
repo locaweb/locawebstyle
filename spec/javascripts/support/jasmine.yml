@@ -14,9 +14,8 @@ src_files:
     - spec/javascripts/libs/*.js
     - source/assets/javascripts/locastyle/libs/*.js
     - source/assets/javascripts/locastyle/_initializer.js
-    # - source/assets/javascripts/templates.js
-    # - source/assets/javascripts/locastyle/_templates.js
-    # - source/assets/javascripts/locastyle/_popover.js
+    - source/assets/javascripts/locastyle/_popover.js
+    - source/assets/javascripts/locastyle/_templates.js
 
 # stylesheets
 #

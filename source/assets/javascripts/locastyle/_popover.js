@@ -18,7 +18,6 @@ locastyle.popover = (function() {
       var dataTrigger = $(element).data("trigger");
       var eventType = dataTrigger == 'hover' ? 'mouseenter' : 'click'
       setAction(element, eventType);
-
     })
   }
 
@@ -26,7 +25,6 @@ locastyle.popover = (function() {
     $(element).on(eventType, function(event){
       //Remove popover when init
       destroyPopover();
-
       event.preventDefault();
       event.stopPropagation();
 
@@ -36,7 +34,6 @@ locastyle.popover = (function() {
       var placement = $(element).data("placement");
 
       buildPopover(element, title, content, placement)
-
     });
     if(eventType == 'mouseenter'){
       $(element).on('mouseleave', function(){
@@ -48,27 +45,31 @@ locastyle.popover = (function() {
 
   // Get position of data-toggle
   function getElementPosition(element, placement){
-    var width = $(element).width();
-    var height = $(element).height();
+    var width = $(element).outerWidth();
+    var height = $(element).outerHeight();
     var top = $(element).position().top;
     var left = $(element).position().left;
     var setSide = left;
     var setTop = top;
+    var leftPlacement = false;
+    var topPlacement = false;
+
 
     if(placement == 'top')
-      setTop =  (top-height-10)
+      topPlacement = true;
+      setTop = top
 
     if(placement == 'bottom')
-      setTop =  (top+height+10)
+      setTop = (top+height)
 
     if(placement == 'left')
-      //184 fix popover size
-      setSide =  (left-width)-(184/2-10)
+      leftPlacement = true;
+      setSide = left
 
     if(placement == 'right')
-      setSide =  (left+width+10)
+      setSide = (left+width)
 
-    setPopoverPosition(setTop, setSide);
+    setPopoverPosition(setTop, setSide, leftPlacement, topPlacement);
   }
 
   //Create a popover
@@ -81,8 +82,14 @@ locastyle.popover = (function() {
   }
 
   //Create a popover close element
-  function setPopoverPosition(top, left){
-    $(".ls-popover").css({'position':'absolute', 'top': top+"px", 'left': left+"px", "background": "yellow"});
+  function setPopoverPosition(top, left, leftPlacement, topPlacement){
+    $(".ls-popover").css({'position':'absolute', 'top': top+"px", 'left': left+"px", "background": "purple", "z-index": "4"});
+    if(leftPlacement){
+      $(".ls-popover").css({'left': (left)-($(".ls-popover").width())+"px"});
+    }
+    if(topPlacement){
+      $(".ls-popover").css({'top': (top)-($(".ls-popover").height())+"px"});
+    }
   }
 
   //Destroy popover

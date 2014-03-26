@@ -13,12 +13,18 @@ html
 html,
 body
   height: 100%
-  // overflow: hidden
+
+.sidebar-visible html,
+.sidebar-visible body
+  overflow: hidden
 
 body
   font-size: 100%
   line-height: 1
   font-family: Open Sans, Arial, Helvetica, Sans-serif
+  -webkit-perspective: 1200
+  -webkit-perspective-origin: 40% 0
+
 
 a, a:hover
   text-decoration: none
