@@ -17,7 +17,7 @@
 				"name": "uniE600",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 0,
 			"iconIdx": 0
 		},
 		{
@@ -36,7 +36,7 @@
 				"name": "uniE601",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 0,
 			"iconIdx": 1
 		},
 		{
@@ -55,7 +55,7 @@
 				"name": "uniE602",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 0,
 			"iconIdx": 2
 		},
 		{
@@ -74,7 +74,7 @@
 				"name": "uniE604",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 0,
 			"iconIdx": 3
 		},
 		{
@@ -93,7 +93,7 @@
 				"name": "uniE605",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 0,
 			"iconIdx": 4
 		},
 		{
@@ -112,7 +112,7 @@
 				"name": "uniE606",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 0,
 			"iconIdx": 5
 		},
 		{
@@ -131,7 +131,7 @@
 				"name": "uniE608",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 0,
 			"iconIdx": 6
 		},
 		{
@@ -150,7 +150,7 @@
 				"name": "uniF0A1",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 0,
 			"iconIdx": 7
 		},
 		{
@@ -169,7 +169,7 @@
 				"name": "uniF0E4",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 0,
 			"iconIdx": 8
 		},
 		{
@@ -189,7 +189,7 @@
 				"name": "uniF0F3",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 0,
 			"iconIdx": 9
 		},
 		{
@@ -213,8 +213,8 @@
 				"name": "chevron-down",
 				"ligatures": ""
 			},
-			"setIdx": 6,
-			"iconIdx": 113
+			"setIdx": 0,
+			"iconIdx": 10
 		},
 		{
 			"icon": {
@@ -238,8 +238,8 @@
 				"name": "chevron-right",
 				"ligatures": ""
 			},
-			"setIdx": 6,
-			"iconIdx": 79
+			"setIdx": 0,
+			"iconIdx": 11
 		},
 		{
 			"icon": {
@@ -263,8 +263,8 @@
 				"name": "chevron-left",
 				"ligatures": ""
 			},
-			"setIdx": 6,
-			"iconIdx": 78
+			"setIdx": 0,
+			"iconIdx": 12
 		},
 		{
 			"icon": {
@@ -287,8 +287,33 @@
 				"name": "chevron-up",
 				"ligatures": ""
 			},
-			"setIdx": 6,
-			"iconIdx": 112
+			"setIdx": 0,
+			"iconIdx": 13
+		},
+		{
+			"icon": {
+				"paths": [
+					"M64 192h896v192h-896zM64 448h896v192h-896zM64 704h896v192h-896z"
+				],
+				"tags": [
+					"menu",
+					"list",
+					"items",
+					"lines",
+					"options"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 184,
+				"order": 15,
+				"prevSize": 32,
+				"code": 58891,
+				"name": "menu",
+				"ligatures": ""
+			},
+			"setIdx": 2,
+			"iconIdx": 184
 		}
 	],
 	"height": 1024,

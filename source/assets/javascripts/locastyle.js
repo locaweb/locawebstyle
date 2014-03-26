@@ -6,3 +6,4 @@
 //= require locastyle/_popover
 //= require locastyle/_tooltip
 //= require locastyle/_templates
+//= require locastyle/_general
