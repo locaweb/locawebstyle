@@ -17,14 +17,23 @@ body
 .sidebar-visible html,
 .sidebar-visible body
   overflow: hidden
+  -webkit-perspective: 1200
+  -moz-perspective: 1200
+  -ms-perspective: 1200
+  perspective: 1200
+  -webkit-perspective-origin: 40% 0
+  -moz-perspective-origin: 40% 0
+  -ms-perspective-origin: 40% 0
+  perspective-origin: 40% 0
+  -webkit-transform-style: preserve-3d
+  -moz-transform-style: preserve-3d
+  -ms-transform-style: preserve-3d
+  transform-style: preserve-3d
 
 body
   font-size: 100%
   line-height: 1
   font-family: Open Sans, Arial, Helvetica, Sans-serif
-  -webkit-perspective: 1200
-  -webkit-perspective-origin: 40% 0
-
 
 a, a:hover
   text-decoration: none
