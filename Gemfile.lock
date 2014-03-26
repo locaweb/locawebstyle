@@ -23,6 +23,11 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.4)
       sass (>= 3.2, < 3.5)
+    eco (1.0.0)
+      coffee-script
+      eco-source
+      execjs
+    eco-source (1.1.0.rc.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.9.3)
@@ -113,6 +118,7 @@ PLATFORMS
 
 DEPENDENCIES
   compass (~> 1.0.0.alpha.19)
+  eco
   jasmine
   middleman (~> 3.2.2)
   middleman-blog
