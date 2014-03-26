@@ -14,7 +14,6 @@ describe("Popover: ", function(){
     it("Should create a popover", function(){
       $('[data-toggle="popover"]').trigger("click");
       jasmine.clock().tick(1000);
-      console.log($(".ls-popover"))
       expect($(".ls-popover")).toBeVisible();
     });
   });
