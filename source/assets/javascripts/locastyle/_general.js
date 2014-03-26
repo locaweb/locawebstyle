@@ -8,18 +8,17 @@ locastyle.general = (function() {
     //   console.log(collapse);
     // });
 
-    showHide.addEventListener('click', showSidebar);
+    showSidebar();
+
   }
 
-  var showHide = document.querySelector('.ls-ico-menu'),
-  body = document.querySelector('body');
-
   function showSidebar() {
-    if (body.className.match(/ls-show-sidebar/g)) {
-      body.classList.remove('ls-show-sidebar');
-    } else {
-      body.classList.add('ls-show-sidebar');
-    }
+    var $showHide = $('.show-sidebar');
+    var $html = $('html');
+
+    $showHide.on('click touchstart', function(){
+      $html.toggleClass('sidebar-visible');
+    });
   }
 
   return {
