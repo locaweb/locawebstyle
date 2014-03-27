@@ -3,13 +3,8 @@ locastyle.general = (function() {
   'use strict';
 
   function init() {
-
-    // $(config.selector).each(function(i, collapse){
-    //   console.log(collapse);
-    // });
-
     showSidebar();
-
+    subMenu();
   }
 
   function showSidebar() {
@@ -20,6 +15,13 @@ locastyle.general = (function() {
       $html.toggleClass('sidebar-visible');
       evt.preventDefault();
     });
+  }
+
+  function subMenu() {
+    $('.ls-submenu > a').on('click', function(evt){
+      $(this).parent().toggleClass('active');
+      evt.preventDefault();
+    })
   }
 
   return {
