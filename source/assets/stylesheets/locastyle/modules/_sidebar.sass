@@ -4,14 +4,14 @@
   position: fixed
   left: 0
   top: 0
-  z-index: 1
-  height: calc(100% - 60px)
+  height: 120%
   overflow: auto
-  -webkit-transform: translate3D(-50%, 0, 0) rotateY(-90deg)
-  -webkit-transition: all .30s linear
+
+  +single-transition(all, .5s)
+  +translate(-50%, 0)
 
   .sidebar-visible &
-    -webkit-transform: translate3D(0, 0, 0) rotateY(0deg)
+    +translate(0, 0)
 
   .ls-area-account
     background-color: #111
@@ -82,3 +82,5 @@
     float: none
     -webkit-transform: none
     top: $heightTopbar
+    height: 100%
+
