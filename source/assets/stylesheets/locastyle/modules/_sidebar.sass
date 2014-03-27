@@ -39,8 +39,13 @@
     [class*="ls-btn"]
       margin-left: 35px
 
-  .ls-menu ul
+  .ls-menu
+
+    li
+      border-bottom: 1px solid $gray-3
+
     a
+      +single-transition(all, .2s)
       color: $gray-1
       border-left: 5px solid transparent
       display: block
@@ -48,7 +53,7 @@
       text-decoration: none
       padding: 20px
 
-      &[class*="ls-ico"]:before
+      &:before
         font-size: 1.25rem
         margin-right: 20px
 
@@ -57,10 +62,14 @@
         background-color: $gray-3
         border-left-color: $color-3
         color: #fff
-    li
-      border-bottom: 1px solid #292929
+        padding-left: 30px
 
     .ls-submenu
+
+      ul
+        height: 0
+        opacity: 0
+
       > a:after
         content: "\e607"
         float: right
@@ -72,10 +81,19 @@
           content: "\e60a"
 
         ul
-          display: block
+          +single-transition(opacity, .3s)
+          border-top: 1px solid $gray-3
+          height: auto
+          opacity: 1
 
-    ul
-      display: none
+          li:last-child
+            border-bottom: none
+
+          a
+            +single-transition(none)
+            font-size: 0.75rem
+            padding: 15px 15px 15px 60px
+
 
 @media (min-width: 768px)
   .ls-sidebar
@@ -83,4 +101,5 @@
     -webkit-transform: none
     top: $heightTopbar
     height: 100%
+    +translate(0, 0)
 

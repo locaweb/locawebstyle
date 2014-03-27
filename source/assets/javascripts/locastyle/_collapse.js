@@ -59,7 +59,6 @@ locastyle.collapse = (function() {
     return $collapse;
   }
 
-
   return {
     init:init,
     toggle: toggle
