@@ -6,7 +6,7 @@ description: collapse
 <div class="row">
   <h1 class="ls-title-intro">Collapse</h1>
   <p class="ls-title-2">
-    Collapse é um componente para exibir conteúdo comparte dele oculto.
+    Collapse é um componente para exibir conteúdo com parte dele oculto.
   </p>
   <br>
 </div>
@@ -14,20 +14,7 @@ description: collapse
 <div class="row doc-block">
   <h2 class="ls-title-2">Collapse simples</h2>
 
-  <p>Um <i>collapse</i> usa a seguinte estrutura no html:</p>
-
-  <code class="language-html">
-    <div class="ls-collapse">
-      <div class="ls-collapse-title">
-        Título
-      </div>
-      <div class="ls-collapse-body">
-        Conteúdo
-      </div>
-    </div>
-  </code>
-
-  <p>Que é exibido da seguinte forma:</p>
+  <p>A aparência e comportamento de um collapse são:</p>
 
   <div class="ls-collapse">
     <div class="ls-collapse-title">
@@ -39,6 +26,19 @@ description: collapse
       <% end %>
     </div>
   </div>
+
+  <p>Um <i>collapse</i> precisa da seguinte estrutura no html:</p>
+
+  <code class="language-html">
+    <div class="ls-collapse">
+      <div class="ls-collapse-title">
+        Título
+      </div>
+      <div class="ls-collapse-body">
+        Conteúdo
+      </div>
+    </div>
+  </code>
 
   <p>Os títulos, vísiveis quando o <i>collapse</i> está fechado, podem conter qualquer conteúdo, por exemplo:</p>
 
@@ -99,12 +99,12 @@ description: collapse
           ls-collapse-always-open
       </td>
       <td>classe</td>
-      <td>mantém um collapse sempre aberto</td>
+      <td>mantém um <i>collapse</i> sempre aberto</td>
     </tr>
     <tr>
       <td>ls-collapse-open</td>
       <td>classe</td>
-      <td>inicia um collapse aberto</td>
+      <td>inicia um <i>collapse</i> aberto</td>
     </tr>
   </table>
 
@@ -145,9 +145,9 @@ description: collapse
 
 <div class="row doc-block">
   <h2 class="ls-title-2">Accordeon</h2>
-  <p><i>Accordeon</i> é um conjunto de <i>collapses</i> agrupados, onde apenas deles pernace aberto</p>
+  <p><i>Accordeon</i> é um conjunto de <i>collapses</i> agrupados, onde apenas um deles pernace aberto</p>
 
-  <p>Um <i>accordeon</i> é um conjunto de <i>collapses</i> como mostrados acima, com um elemento que os agrupa, com a classe <i>ls-collapse-group</i>.</p>
+  <p>Um <i>accordeon</i> é um conjunto de <i>collapses</i>, como mostrados acima, com um elemento que os agrupa, com a classe <i>ls-collapse-group</i>.</p>
 
   <div class="ls-collapse-group">
     <% 5.times do |num| %>
@@ -208,7 +208,7 @@ description: collapse
     <button type="button" class="ls-btn-primary" data-toggle-collapse="#collapse1">Abre/Fecha o collapse #collapse1</button>
   </code>
 
-  <p>Para abrir/gechar um collase usando javascript, use:</p>
+  <p>Para abrir/fechar um <i>collapse</i> usando javascript, use:</p>
 
   <code class="language-javascript">
     locastyle.collapse.toggle('#collapse1')
