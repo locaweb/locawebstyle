@@ -13,45 +13,48 @@ locastyle.collapse = (function() {
       open: 'ls-collapse-open',
       alwaysOpen: 'ls-collapse-always-open'
     }
-
   };
 
   function init() {
     $(config.selectors.container).each(function(i, collapse){
       var $collapse = $(this);
-      toggleCollapse($collapse);
+      bindHeader($collapse);
     });
-
-    toggleCollapseButton();
+    bindButton();
   }
 
-  function toggleCollapseButton(){
+  function bindButton(){
     $('[data-toggle-collapse]').on('click', function (evt) {
       evt.preventDefault();
       evt.stopPropagation();
-      var id = $(this).data('#toggle-collapse');
-      console.log(id);
+      var id = $(this).data('toggle-collapse');
+      toggle($(id));
     });
   }
 
-  function toggleCollapse($collapse){
+  function bindHeader($collapse){
     $(config.selectors.trigger, $collapse).on('click', function(evt){
       evt.preventDefault();
-      // if( $collapse.hasClass(config.classes.alwaysOpen) ){
-      //   return;
-      // }
-      var $group = $collapse.parents(config.selectors.groupContainer);
-      if( $group[0] ){
-        console.log('grupo');
-        $group.find(config.selectors.container).not($collapse).removeClass(config.classes.open).find(config.selectors.content).slideUp();
-      }
-      $collapse.toggleClass(config.classes.open)//.find(config.selectors.content).slideToggle(300, 'linear');
+      toggle($collapse)
     });
+  }
+
+  function toggle ($collapse) {
+    $collapse = $collapse instanceof $ ? $collapse : $($collapse);
+    var $group = $collapse.parents(config.selectors.groupContainer);
+    if( $group[0] ){
+      $group.find(config.selectors.container).not($collapse).removeClass(config.classes.open).find(config.selectors.content).slideUp();
+    }
+    $collapse.find(config.selectors.content).slideToggle(300, 'linear', function(){
+      $collapse.toggleClass(config.classes.open);
+    });
+    return $collapse;
   }
 
 
   return {
-    init:init
+    init:init,
+    toggle: toggle
   };
 
 }());
