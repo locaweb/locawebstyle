@@ -6,7 +6,7 @@ locastyle.popover = (function() {
   // Default config
   var config = {
     defaultContainer: 'body',
-    defaultTrigger: 'click',
+    defaultTrigger  : 'click',
     defaultPlacement: 'top'
   }
 
@@ -35,7 +35,7 @@ locastyle.popover = (function() {
 
   function setElementAction(elementActions){
 
-    var element = elementActions.element
+    var element   = elementActions.element
     var eventType = elementActions.eventType
 
     $(element).on(eventType, function(event){
@@ -45,10 +45,10 @@ locastyle.popover = (function() {
 
       var title, content, placement, container, customClasses
 
-      title = $(element).data("title");
-      content = $(element).data("content");
-      placement = $(element).data("placement");
-      container = $(element).data("container");
+      title         = $(element).data("title");
+      content       = $(element).data("content");
+      placement     = $(element).data("placement");
+      container     = $(element).data("container");
       customClasses = $(element).data("custom-class");
 
       if(container == undefined){
@@ -60,11 +60,11 @@ locastyle.popover = (function() {
       }
 
       var constructPopover = {
-        'element': element,
-        'title': title,
-        'content': content,
-        'placement': placement,
-        'container': container,
+        'element'      : element,
+        'title'        : title,
+        'content'      : content,
+        'placement'    : placement,
+        'container'    : container,
         'customClasses': customClasses
       }
 
@@ -80,18 +80,20 @@ locastyle.popover = (function() {
   // Create a popover
   function buildPopover(constructPopover){
 
-    var element = constructPopover.element
-    var title = constructPopover.title
-    var content = constructPopover.content
-    var placement = constructPopover.placement
-    var container = constructPopover.container
-    var customClasses = constructPopover.customClasses
+    var element, title, content, placement, container, customClasses
+
+    element       = constructPopover.element
+    title         = constructPopover.title
+    content       = constructPopover.content
+    placement     = constructPopover.placement
+    container     = constructPopover.container
+    customClasses = constructPopover.customClasses
 
     // Return template popover
     $(container).append(locastyle.templates.popover(title, content, placement, customClasses));
 
     var elementPosition = {
-      'element': element,
+      'element'  : element,
       'placement': placement,
       'container': container
     }
@@ -99,25 +101,24 @@ locastyle.popover = (function() {
   }
 
   function getElementPosition(elementPosition){
-    var element = elementPosition.element
-    var placement = elementPosition.placement
-    var container = elementPosition.container
+    var elementWidth, elementHeight, top, left, setTop, setSide, leftPlacement, topPlacement, element, placement, container
 
-    var elementWidth, elementHeight, top, left, setTop, setSide, leftPlacement, topPlacement
-
-    elementWidth = $(element).outerWidth();
+    element       = elementPosition.element
+    placement     = elementPosition.placement
+    container     = elementPosition.container
+    elementWidth  = $(element).outerWidth();
     elementHeight = $(element).outerHeight();
 
     if(container == 'body'){
-      top = $(element).offset().top;
+      top  = $(element).offset().top;
       left = $(element).offset().left;
     }else{
-      top = $(element).position().top;
+      top  = $(element).position().top;
       left = $(element).position().left;
     }
 
     setSide = left;
-    setTop = top;
+    setTop  = top;
 
     if(placement == 'top'){
       topPlacement = true;
@@ -130,7 +131,7 @@ locastyle.popover = (function() {
 
     if(placement == 'left'){
       leftPlacement = true;
-      setSide = left
+      setSide       = left
     }
 
     if(placement == 'right'){
@@ -138,12 +139,12 @@ locastyle.popover = (function() {
     }
 
     var popoverPosition = {
-      'setTop': setTop,
-      'placement': placement,
-      'setSide': setSide,
+      'setTop'       : setTop,
+      'placement'    : placement,
+      'setSide'      : setSide,
       'leftPlacement': leftPlacement,
-      'topPlacement': topPlacement,
-      'elementWidth': elementWidth,
+      'topPlacement' : topPlacement,
+      'elementWidth' : elementWidth,
       'elementHeight': elementHeight
     }
 
