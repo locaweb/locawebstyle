@@ -7,7 +7,8 @@ locastyle.popover = (function() {
   var config = {
     defaultContainer: 'body',
     defaultTrigger  : 'click',
-    defaultPlacement: 'top'
+    defaultPlacement: 'top',
+    popoverClass    : '.ls-popover'
   }
 
   function init() {
@@ -140,15 +141,15 @@ locastyle.popover = (function() {
 
   function setPopoverPosition(popoverPosition){
 
-    var positionWithTop  = (popoverPosition.setTop-$(".ls-popover").height()/2+popoverPosition.elementHeight/2);
-    var positionWithLeft = (popoverPosition.setSide-$(".ls-popover").width()/2+popoverPosition.elementWidth/2);
+    var positionWithTop  = (popoverPosition.setTop-$(config.popoverClass).height()/2+popoverPosition.elementHeight/2);
+    var positionWithLeft = (popoverPosition.setSide-$(config.popoverClass).width()/2+popoverPosition.elementWidth/2);
 
     var _default = {
       top   : {
         css   : 'top',
         value : positionWithTop,
         adjust: {'left': positionWithLeft},
-        add   : {'top': (popoverPosition.setTop-$(".ls-popover").height())}
+        add   : {'top': (popoverPosition.setTop-$(config.popoverClass).height())}
       },
       right : {
         css   : 'left',
@@ -162,23 +163,22 @@ locastyle.popover = (function() {
       },
       left  : {
         css   : 'left',
-        value : (popoverPosition.setSide-$(".ls-popover").width()),
+        value : (popoverPosition.setSide-$(config.popoverClass).width()),
         adjust: {'top': positionWithTop},
-        add   : {'left': (popoverPosition.setSide-$(".ls-popover").width()), 'top': positionWithTop}
+        add   : {'left': (popoverPosition.setSide-$(config.popoverClass).width()), 'top': positionWithTop}
       }
     }
 
-    $(".ls-popover")
+    $(config.popoverClass)
                     .css(  _default[popoverPosition.placement].css , _default[popoverPosition.placement].value )
                     .css(_default[popoverPosition.placement].adjust);
     if( _default[popoverPosition.placement].add ){
-      $(".ls-popover").css(  _default[popoverPosition.placement].add  );
+      $(config.popoverClass).css(  _default[popoverPosition.placement].add  );
     }
-
   }
 
   function destroyPopover(){
-    $(".ls-popover").remove()
+    $(config.popoverClass).remove()
   }
 
   return {
