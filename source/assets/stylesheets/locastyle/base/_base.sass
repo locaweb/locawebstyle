@@ -10,11 +10,11 @@
   background-color: #f7f7f7
   position: relative
   z-index: 3
-  -webkit-transform: translate3D(0, 0, 0)
-  -webkit-transition: all .30s linear
+  +single-transition(all, .5s)
+  +translate(0, 0)
 
   .sidebar-visible &
-    -webkit-transform: translate3D($sidebarWidth, 0, 0)
+    +translate($sidebarWidth, 0)
 
 .ls-container
   padding: 0 30px
