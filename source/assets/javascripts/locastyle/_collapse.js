@@ -38,10 +38,12 @@ locastyle.collapse = (function() {
   }
 
   function bindHeader($collapse){
-    $(config.selectors.trigger, $collapse).on('click', function(evt){
-      evt.preventDefault();
-      toggle($collapse)
-    });
+    if(!$collapse.hasClass( config.classes.alwaysOpen )){
+      $(config.selectors.trigger, $collapse).on('click', function(evt){
+        evt.preventDefault();
+        toggle($collapse)
+      });
+    }
   }
 
   function toggle ($collapse) {
@@ -50,9 +52,10 @@ locastyle.collapse = (function() {
     if( $group[0] ){
       $group.find(config.selectors.container).not($collapse).removeClass(config.classes.open).find(config.selectors.content).slideUp();
     }
-    $collapse.find(config.selectors.content).slideToggle(300, 'linear', function(){
-      $collapse.toggleClass(config.classes.open);
-    });
+    $collapse.toggleClass(config.classes.open);
+    // $collapse.find(config.selectors.content).slideToggle(300, 'linear', function(){
+    //   $collapse.toggleClass(config.classes.open);
+    // });
     return $collapse;
   }
 
