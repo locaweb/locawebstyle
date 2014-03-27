@@ -39,9 +39,13 @@
     [class*="ls-btn"]
       margin-left: 35px
 
-  .ls-menu ul
+  .ls-menu
+
+    li
+      border-bottom: 1px solid $gray-3
+
     a
-      +single-transition(all, .3s)
+      +single-transition(all, .2s)
       color: $gray-1
       border-left: 5px solid transparent
       display: block
@@ -55,16 +59,17 @@
 
       &:hover,
       &:focus
-        +single-transition(all, .3s)
         background-color: $gray-3
         border-left-color: $color-3
         color: #fff
         padding-left: 30px
 
-    li
-      border-bottom: 1px solid #292929
-
     .ls-submenu
+
+      ul
+        height: 0
+        opacity: 0
+
       > a:after
         content: "\e607"
         float: right
@@ -76,14 +81,19 @@
           content: "\e60a"
 
         ul
+          +single-transition(opacity, .3s)
+          border-top: 1px solid $gray-3
           height: auto
           opacity: 1
-          +single-transition(all, .3s)
 
-    ul
-      height: 0
-      opacity: 0
-      +single-transition(all, .2s)
+          li:last-child
+            border-bottom: none
+
+          a
+            +single-transition(none)
+            font-size: 0.75rem
+            padding: 15px 15px 15px 60px
+
 
 @media (min-width: 768px)
   .ls-sidebar
