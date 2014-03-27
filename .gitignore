@@ -27,3 +27,5 @@ vendor/*
 *.swo
 
 Gemfile.lock
+.vagrant
+Vagrantfile

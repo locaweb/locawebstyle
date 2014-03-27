@@ -6,37 +6,32 @@ locastyle.popover = (function() {
   // Default config
   var config = {
     defaultContainer: 'body',
-    defaultTrigger: 'click',
+    defaultTrigger  : 'click',
     defaultPlacement: 'top'
   }
 
   function init() {
-    togglePopover();
+    loadElements();
   }
 
-  function togglePopover(){
+  function loadElements(){
     $('[data-toggle="popover"]').each(function(index, element){
       var dataTrigger = $(element).data("trigger");
-
-      if(dataTrigger == undefined)
+      if(dataTrigger == undefined){
         dataTrigger = config.defaultTrigger;
-
+      }
       var eventType = dataTrigger == 'hover' ? 'mouseenter' : 'click'
-
       var elementActions = {
         'element': element,
         'eventType': eventType
       }
-
-      setAction(elementActions);
+      setElementAction(elementActions);
     })
   }
 
-  function setAction(elementActions){
-
-    var element = elementActions.element
+  function setElementAction(elementActions){
+    var element   = elementActions.element
     var eventType = elementActions.eventType
-
     $(element).on(eventType, function(event){
       destroyPopover();
       event.preventDefault();
@@ -44,51 +39,48 @@ locastyle.popover = (function() {
 
       var title, content, placement, container, customClasses
 
-      title = $(element).data("title");
-      content = $(element).data("content");
-      placement = $(element).data("placement");
-      container = $(element).data("container");
+      title         = $(element).data("title");
+      content       = $(element).data("content");
+      placement     = $(element).data("placement");
+      container     = $(element).data("container");
       customClasses = $(element).data("custom-class");
 
-      if(container == undefined)
-        container = config.defaultContainer;
-
-      if(placement == undefined)
-        placement = config.defaultPlacement;
+      if(container == undefined){ container = config.defaultContainer; }
+      if(placement == undefined){ placement = config.defaultPlacement; }
 
       var constructPopover = {
-        'element': element,
-        'title': title,
-        'content': content,
-        'placement': placement,
-        'container': container,
+        'element'      : element,
+        'title'        : title,
+        'content'      : content,
+        'placement'    : placement,
+        'container'    : container,
         'customClasses': customClasses
       }
 
       buildPopover(constructPopover)
     });
     if(eventType == 'mouseenter'){
-      $(element).on('mouseleave', function(){
-        destroyPopover();
-      })
+      $(element).on('mouseleave', function(){ destroyPopover(); })
     }
   }
 
   // Create a popover
   function buildPopover(constructPopover){
 
-    var element = constructPopover.element
-    var title = constructPopover.title
-    var content = constructPopover.content
-    var placement = constructPopover.placement
-    var container = constructPopover.container
-    var customClasses = constructPopover.customClasses
+    var element, title, content, placement, container, customClasses
+
+    element       = constructPopover.element
+    title         = constructPopover.title
+    content       = constructPopover.content
+    placement     = constructPopover.placement
+    container     = constructPopover.container
+    customClasses = constructPopover.customClasses
 
     // Return template popover
     $(container).append(locastyle.templates.popover(title, content, placement, customClasses));
 
     var elementPosition = {
-      'element': element,
+      'element'  : element,
       'placement': placement,
       'container': container
     }
@@ -96,47 +88,50 @@ locastyle.popover = (function() {
   }
 
   function getElementPosition(elementPosition){
-    var element = elementPosition.element
-    var placement = elementPosition.placement
-    var container = elementPosition.container
+    var elementWidth, elementHeight, top, left, setTop, setSide, leftPlacement, topPlacement, element, placement, container
 
-    var elementWidth, elementHeight, top, left, setTop, setSide, leftPlacement, topPlacement
-
-    elementWidth = $(element).outerWidth();
+    element       = elementPosition.element
+    placement     = elementPosition.placement
+    container     = elementPosition.container
+    elementWidth  = $(element).outerWidth();
     elementHeight = $(element).outerHeight();
 
     if(container == 'body'){
-      top = $(element).offset().top;
+      top  = $(element).offset().top;
       left = $(element).offset().left;
     }else{
-      top = $(element).position().top;
+      top  = $(element).position().top;
       left = $(element).position().left;
     }
 
     setSide = left;
-    setTop = top;
+    setTop  = top;
 
-    if(placement == 'top')
+    if(placement == 'top'){
       topPlacement = true;
       setTop = top
+    }
 
-    if(placement == 'bottom')
+    if(placement == 'bottom'){
       setTop = (top+elementHeight)
+    }
 
-    if(placement == 'left')
+    if(placement == 'left'){
       leftPlacement = true;
-      setSide = left
+      setSide       = left
+    }
 
-    if(placement == 'right')
+    if(placement == 'right'){
       setSide = (left+elementWidth)
+    }
 
     var popoverPosition = {
-      'setTop': setTop,
-      'placement': placement,
-      'setSide': setSide,
+      'setTop'       : setTop,
+      'placement'    : placement,
+      'setSide'      : setSide,
       'leftPlacement': leftPlacement,
-      'topPlacement': topPlacement,
-      'elementWidth': elementWidth,
+      'topPlacement' : topPlacement,
+      'elementWidth' : elementWidth,
       'elementHeight': elementHeight
     }
 
@@ -144,25 +139,41 @@ locastyle.popover = (function() {
   }
 
   function setPopoverPosition(popoverPosition){
-    $(".ls-popover").css({'top': popoverPosition.setTop+'px', 'left': popoverPosition.setSide+'px'});
 
-    if(popoverPosition.placement == 'left')
-      $(".ls-popover").css({'left': (popoverPosition.setSide-$(".ls-popover").width())+'px', 'top': (popoverPosition.setTop-$(".ls-popover").height()/2+popoverPosition.elementHeight/2)+'px'});
+    var positionWithTop  = (popoverPosition.setTop-$(".ls-popover").height()/2+popoverPosition.elementHeight/2);
+    var positionWithLeft = (popoverPosition.setSide-$(".ls-popover").width()/2+popoverPosition.elementWidth/2);
 
-    if(popoverPosition.placement == 'right')
-      $(".ls-popover").css({'left': (popoverPosition.setSide)+'px', 'top': (popoverPosition.setTop-$(".ls-popover").height()/2+popoverPosition.elementHeight/2)+'px'});
+    var _default = {
+      top   : {
+        css   : 'top',
+        value : positionWithTop,
+        adjust: {'left': positionWithLeft},
+        add   : {'top': (popoverPosition.setTop-$(".ls-popover").height())}
+      },
+      right : {
+        css   : 'left',
+        value : (popoverPosition.setSide),
+        adjust: {'top': positionWithTop}
+      },
+      bottom: {
+        css   : 'top',
+        value : (popoverPosition.setTop),
+        adjust: {'left': positionWithLeft}
+      },
+      left  : {
+        css   : 'left',
+        value : (popoverPosition.setSide-$(".ls-popover").width()),
+        adjust: {'top': positionWithTop},
+        add   : {'left': (popoverPosition.setSide-$(".ls-popover").width()), 'top': positionWithTop}
+      }
+    }
 
-    if(popoverPosition.placement == 'top')
-      $(".ls-popover").css({'left': (popoverPosition.setSide-$(".ls-popover").width()/2+popoverPosition.elementWidth/2)+'px', 'top': (popoverPosition.setTop-$(".ls-popover").height()/2+popoverPosition.elementHeight/2)+'px'});
-
-    if(popoverPosition.placement == 'bottom')
-      $(".ls-popover").css({'left': (popoverPosition.setSide-$(".ls-popover").width()/2+popoverPosition.elementWidth/2)+'px', 'top': (popoverPosition.setTop)+'px'});
-
-    if(popoverPosition.topPlacement)
-      $(".ls-popover").css({'top': (popoverPosition.setTop-$(".ls-popover").height())+'px'});
-
-    if(popoverPosition.leftPlacement)
-      $(".ls-popover").css({'left': (popoverPosition.setSide-$(".ls-popover").width())+'px', 'top': (popoverPosition.setTop-$(".ls-popover").height()/2+popoverPosition.elementHeight/2)+'px'});
+    $(".ls-popover")
+                    .css(  _default[popoverPosition.placement].css , _default[popoverPosition.placement].value )
+                    .css(_default[popoverPosition.placement].adjust);
+    if( _default[popoverPosition.placement].add ){
+      $(".ls-popover").css(  _default[popoverPosition.placement].add  );
+    }
 
   }
 
