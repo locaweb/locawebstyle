@@ -11,10 +11,10 @@ locastyle.popover = (function() {
   }
 
   function init() {
-    togglePopover();
+    loadElements();
   }
 
-  function togglePopover(){
+  function loadElements(){
     $('[data-toggle="popover"]').each(function(index, element){
       var dataTrigger = $(element).data("trigger");
 
@@ -29,11 +29,11 @@ locastyle.popover = (function() {
         'eventType': eventType
       }
 
-      setAction(elementActions);
+      setElementAction(elementActions);
     })
   }
 
-  function setAction(elementActions){
+  function setElementAction(elementActions){
 
     var element = elementActions.element
     var eventType = elementActions.eventType
