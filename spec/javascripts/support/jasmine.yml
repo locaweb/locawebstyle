@@ -16,6 +16,7 @@ src_files:
     - source/assets/javascripts/locastyle/_initializer.js
     - source/assets/javascripts/locastyle/_popover.js
     - source/assets/javascripts/locastyle/_templates.js
+    - source/assets/javascripts/locastyle/_collapse.js
 
 # stylesheets
 #
@@ -29,6 +30,7 @@ src_files:
 #   - stylesheets/*.css
 #
 stylesheets:
+  - source/assets/stylesheets/locastyle.css
 
 # helpers
 #
