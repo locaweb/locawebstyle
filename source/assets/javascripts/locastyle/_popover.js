@@ -152,41 +152,41 @@ locastyle.popover = (function() {
 
   function setPopoverPosition(popoverPosition){
 
-    if(popoverPosition.placement == 'left'){
-      $(".ls-popover").css({'left': (popoverPosition.setSide-$(".ls-popover").width())+'px'});
-      fixVertical(popoverPosition);
+    var positionWithTop  = (popoverPosition.setTop-$(".ls-popover").height()/2+popoverPosition.elementHeight/2);
+    var positionWithLeft = (popoverPosition.setSide-$(".ls-popover").width()/2+popoverPosition.elementWidth/2);
+
+    var _default = {
+      top   : {
+        css   : 'top',
+        value : positionWithTop,
+        adjust: {'left': positionWithLeft},
+        add   : {'top': (popoverPosition.setTop-$(".ls-popover").height())}
+      },
+      right : {
+        css   : 'left',
+        value : (popoverPosition.setSide),
+        adjust: {'top': positionWithTop}
+      },
+      bottom: {
+        css   : 'top',
+        value : (popoverPosition.setTop),
+        adjust: {'left': positionWithLeft}
+      },
+      left  : {
+        css   : 'left',
+        value : (popoverPosition.setSide-$(".ls-popover").width()),
+        adjust: {'top': positionWithTop},
+        add   : {'left': (popoverPosition.setSide-$(".ls-popover").width()), 'top': positionWithTop}
+      }
     }
 
-    if(popoverPosition.placement == 'top'){
-      $(".ls-popover").css({'top': (popoverPosition.setTop-$(".ls-popover").height()/2+popoverPosition.elementHeight/2)+'px'});
-      fixHorizontal(popoverPosition);
+    $(".ls-popover")
+      .css(  _default[popoverPosition.placement].css , _default[popoverPosition.placement].value )
+      .css(_default[popoverPosition.placement].adjust);
+    if( _default[popoverPosition.placement].add ){
+      $(".ls-popover").css(  _default[popoverPosition.placement].add  );
     }
 
-    if(popoverPosition.placement == 'bottom'){
-      $(".ls-popover").css({'top': (popoverPosition.setTop)+'px'});
-      fixHorizontal(popoverPosition);
-    }
-
-    if(popoverPosition.placement == 'right'){
-      $(".ls-popover").css({'left': (popoverPosition.setSide)+'px'});
-      fixVertical(popoverPosition);
-    }
-
-    if(popoverPosition.topPlacement) {
-      $(".ls-popover").css({'top': (popoverPosition.setTop-$(".ls-popover").height())+'px'});
-    }
-
-    if(popoverPosition.leftPlacement){
-      $(".ls-popover").css({'left': (popoverPosition.setSide-$(".ls-popover").width())+'px', 'top': (popoverPosition.setTop-$(".ls-popover").height()/2+popoverPosition.elementHeight/2)+'px'});
-    }
-  }
-
-  function fixVertical(popoverPosition) {
-    $(".ls-popover").css({'top': (popoverPosition.setTop-$(".ls-popover").height()/2+popoverPosition.elementHeight/2)+'px'});
-  }
-
-  function fixHorizontal(popoverPosition) {
-    $(".ls-popover").css({'left': (popoverPosition.setSide-$(".ls-popover").width()/2+popoverPosition.elementWidth/2)+'px'});
   }
 
   function destroyPopover(){
