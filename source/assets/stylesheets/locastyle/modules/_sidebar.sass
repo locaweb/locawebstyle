@@ -72,10 +72,14 @@
           content: "\e60a"
 
         ul
-          display: block
+          height: auto
+          opacity: 1
+          +single-transition(all, .3s)
 
     ul
-      display: none
+      height: 0
+      opacity: 0
+      +single-transition(all, .2s)
 
 @media (min-width: 768px)
   .ls-sidebar
