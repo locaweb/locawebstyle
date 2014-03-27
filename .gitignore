@@ -27,4 +27,3 @@ vendor/*
 *.swo
 
 Gemfile.lock
-source/assets/javascripts/libs/zeroclipboard-1.3.5/

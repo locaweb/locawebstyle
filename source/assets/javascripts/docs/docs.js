@@ -2,23 +2,37 @@ var lsdocs = (function() {
   'use strict';
 
   function init() {
-    convertCodeExamples()
+    convertCodeExamples();
+    copyMarkup();
   }
 
-  function htmlencode(str) {
-    return str.replace(/[&<>"']/g, function($0) {
-        return "&" + {"&":"amp", "<":"lt", ">":"gt", '"':"quot", "'":"#39"}[$0] + ";";
-    });
-}
+  function copyMarkup(){
+
+    ZeroClipboard.config( { moviePath: '/assets/flash/ZeroClipboard.swf' } );
+
+    var client = new ZeroClipboard($(".copy-button")[0]);
+
+
+    client.on( "ready", function( readyEvent ) {
+    console.log( "ZeroClipboard SWF is ready!" );
+
+  client.on( "aftercopy", function( event ) {
+    // `this` === `client`
+    // `event.target` === the element that was clicked
+    event.target.style.display = "none";
+    alert("Copied text to clipboard: " + event.data["text/plain"] );
+  } );
+} );
+  }
+
 
   function convertCodeExamples(){
     $('code.language-html').each(function (i,e) {
       var html = $(this).html();
-      // $(this).text(htmlencode(html));
       $(this).text(html);
-      $(this).removeClass('language-html').addClass('language-markup')
+      $(this).removeClass('language-html').addClass('language-markup');
     });
-    Prism.highlightAll()
+    Prism.highlightAll();
   }
 
   return {
