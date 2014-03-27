@@ -8,8 +8,8 @@ locastyle.templates = (function() {
   function init(){
   }
 
-  function popover(title, content, placement){
-    return JST[templatesPath + 'popover']({title: title, content: content, placement: placement})
+  function popover(title, content, placement, customClasses){
+    return JST[templatesPath + 'popover']({title: title, content: content, placement: placement, customClasses: customClasses})
   }
 
   return {

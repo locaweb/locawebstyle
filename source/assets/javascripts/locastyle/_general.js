@@ -16,8 +16,9 @@ locastyle.general = (function() {
     var $showHide = $('.show-sidebar');
     var $html = $('html');
 
-    $showHide.on('click touchstart', function(){
+    $showHide.on('touchstart click', function(evt){
       $html.toggleClass('sidebar-visible');
+      evt.preventDefault();
     });
   }
 
