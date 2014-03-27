@@ -1,3 +1,8 @@
+// @todo: prevent-open
+// @todo: hash init
+// @todo: hash change
+// @todo: toggle hover ?
+
 var locastyle = locastyle || {};
 locastyle.collapse = (function() {
   'use strict';
