@@ -10,33 +10,35 @@
   <%= stylesheet_link_tag "locastyle" %>
 </head>
 <body class="<%= page_classes %>">
-  <div class="ls-topbar">
 
-    <!-- Barra de Notificações -->
-    <div class="ls-notification-topbar">
+<div class="ls-topbar">
 
-      <!-- Links de apoio -->
-      <div class="ls-alerts-list">
-        <a href="#" class="ls-ico-bell-o" data-counter="8"><span>Notificações</span></a>
-        <a href="#" class="ls-ico-bullhorn" data-counter="6"><span>Ajuda</span></a>
-        <a href="#" class="ls-ico-question"><span>Sugestões</span></a>
-      </div>
+  <!-- Barra de Notificações -->
+  <div class="ls-notification-topbar">
 
-      <!-- Dropdown com detalhes da conta de usuário -->
-      <div class="ls-user-account">
-        <a href="#" class="ls-ico-user">
-          Franco
-          <small>(fmolina)</small>
-          <input type="checkbox" name="user" value="">
-        </a>
-      </div>
+    <!-- Links de apoio -->
+    <div class="ls-alerts-list">
+      <a href="#" class="ls-ico-bell-o" data-counter="8"><span>Notificações</span></a>
+      <a href="#" class="ls-ico-bullhorn" data-counter="6"><span>Ajuda</span></a>
+      <a href="#" class="ls-ico-question"><span>Sugestões</span></a>
     </div>
 
-    <span class="show-sidebar ls-ico-menu"></span>
-
-    <!-- Nome do produto/marca -->
-    <h1 class="ls-brand-name ls-ico-envelope"><a href="#">Revenda Email Marketing</a></h1>
+    <!-- Dropdown com detalhes da conta de usuário -->
+    <div class="ls-user-account">
+      <a href="#" class="ls-ico-user">
+        Franco
+        <small>(fmolina)</small>
+        <input type="checkbox" name="user" value="">
+      </a>
+    </div>
   </div>
+
+  <span class="show-sidebar ls-ico-menu"></span>
+
+  <!-- Nome do produto/marca -->
+  <h1 class="ls-brand-name ls-ico-envelope"><a href="#">Revenda Email Marketing</a></h1>
+</div>
+<div class="geral">
   <aside class="ls-sidebar">
     <div class="ls-area-account ls-ico-user">
       <h2 class="ls-title-2">Administrando</h2>
@@ -66,5 +68,6 @@
   </main>
   <%= javascript_include_tag  "libs/jquery-2.1.0.min" %>
   <%= javascript_include_tag  "locastyle" %>
+
 </body>
 </html>

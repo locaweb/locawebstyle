@@ -9,11 +9,11 @@
   top: 0
   left: 0
   z-index: 10
-  -webkit-transform: translate3D(0, 0, 0)
-  -webkit-transition: all .30s linear
+  +single-transition(all, .5s)
+  +translate(0, 0)
 
   .sidebar-visible &
-    -webkit-transform: translate3D($sidebarWidth, 0, 0)
+    +translate($sidebarWidth, 0)
 
   //
   // Nome do produto/marca
@@ -141,6 +141,9 @@
     .ls-brand-name
       font-size: 1.5rem
       text-align: left
+      width: auto
+      display: inline-block
+      padding-left: 15px
 
       &:before
         display: inline-block
