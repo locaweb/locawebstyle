@@ -184,24 +184,38 @@ description: collapse
   </code>
 
 
-  <p>Os <i>collapse</i> agrupados em um <i>accordeon</i> aceitam as mesmas configurações que um <i>collapse</i> normal.</p>
+  <p>Os <i>collapses</i> agrupados em um <i>accordeon</i> aceitam as mesmas configurações que um <i>collapse</i> normal.</p>
 
 </div>
 
+<div class="row doc-block">
+  <h2 class="ls-title-2">Abrir com ação externa</h2>
 
+  <p>Para usar um botão ou <i>link</i> para controlar um <i>collapse</i> utilize o atributo <i>data-toggle-collapse</i> com o valor do <b>id</b> do collapse.</p>
 
-<br>
-<br>
-<br>
+  <button type="button" class="ls-btn-primary" data-toggle-collapse="#collapse1">Abre/Fecha o <i>collapse</i> <b>#collapse1</b></button>
 
-<h2>Abrir com acao externa</h2>
-
-<button type="button" data-toggle-collapse="#collapse1"></button>
- <div id="collapse1" class="ls-collapse">
+  <div id="collapse1" class="ls-collapse">
     <div class="ls-collapse-title">
-      <%= lorem.words 2 %>
+      <i>Collapse</i> com id <b>#collapse1</b>
     </div>
     <div class="ls-collapse-body">
       <p><%= lorem.paragraphs 2 %></p>
     </div>
   </div>
+
+  <code class="language-html">
+    <button type="button" class="ls-btn-primary" data-toggle-collapse="#collapse1">Abre/Fecha o collapse #collapse1</button>
+  </code>
+
+  <p>Para abrir/gechar um collase usando javascript, use:</p>
+
+  <code class="language-javascript">
+    locastyle.collapse.toggle('#collapse1')
+  </code>
+
+  <p>Exemplo</p>
+
+  <button class="ls-btn-primary" type="button" onclick="javascript:locastyle.collapse.toggle('#collapse1')">Abre/Fecha o <i>collapse</i> <b>#collapse1</b> com <i>javascript</i></button>
+
+</div>
