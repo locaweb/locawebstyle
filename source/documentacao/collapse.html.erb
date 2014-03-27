@@ -42,7 +42,7 @@ description: collapse
 
   <p>Os títulos, vísiveis quando o <i>collapse</i> está fechado, podem conter qualquer conteúdo, por exemplo:</p>
 
-  <div id="teste" class="ls-collapse">
+  <div class="ls-collapse">
     <div class="ls-collapse-title">
       <h3>Título</h3>
       <p>Texto adicional</p>
@@ -60,7 +60,7 @@ description: collapse
     <div class="ls-collapse-title">
       <div class="row ls-overflow-hidden">
         <div class="col-md-3">
-          <img src="holder.js/180x50/sky/text:Imagem qualquer">
+          <img data-src="holder.js/180x50/sky/text:Imagem qualquer">
         </div>
         <div class="col-md-4">
           <h2>Título</h2>
@@ -69,7 +69,14 @@ description: collapse
     </div>
     <div class="ls-collapse-body">
       <% 5.times do |num| %>
-      Conteúdo <br>
+      <div class="row ls-overflow-hidden">
+        <div class="col-md-3">
+          <img data-src="holder.js/180x50/sky/text:Imagem qualquer">
+        </div>
+        <div class="col-md-7">
+          <%= lorem.words 5%>
+        </div>
+      </div>
       <% end %>
     </div>
   </div>
@@ -92,16 +99,47 @@ description: collapse
           ls-collapse-always-open
       </td>
       <td>classe</td>
-      <td>mantem um collapse sempre aberto</td>
+      <td>mantém um collapse sempre aberto</td>
     </tr>
     <tr>
       <td>ls-collapse-open</td>
       <td>classe</td>
-      <td>inicia aberto</td>
+      <td>inicia um collapse aberto</td>
     </tr>
   </table>
 
-  <p>collapse seguidos</p>
+  <h2 class="ls-title-2">Exemplos</h2>
+
+  <div class="ls-collapse ls-collapse-open">
+    <div class="ls-collapse-title">
+      Collapse inicia aberto com a classe .ls-collapse-open
+    </div>
+    <div class="ls-collapse-body">
+      <% 5.times do |num| %>
+      Conteúdo <br>
+      <% end %>
+    </div>
+  </div>
+  <div class="ls-collapse">
+    <div class="ls-collapse-title">
+      Collapse normal, inicia fechado
+    </div>
+    <div class="ls-collapse-body">
+      <% 5.times do |num| %>
+      Conteúdo <br>
+      <% end %>
+    </div>
+  </div>
+  <div class="ls-collapse ls-collapse-always-open">
+    <div class="ls-collapse-title">
+      Collapse inicia aberto e não fecha com a classe .ls-collapse-always-open
+    </div>
+    <div class="ls-collapse-body">
+      <% 5.times do |num| %>
+      Conteúdo <br>
+      <% end %>
+    </div>
+  </div>
 
 </div>
 
@@ -109,7 +147,24 @@ description: collapse
   <h2 class="ls-title-2">Accordeon</h2>
   <p><i>Accordeon</i> é um conjunto de <i>collapses</i> agrupados, onde apenas deles pernace aberto</p>
 
-  <p>Um <i>accordeon</i> usa a seguinte estrutura no html:</p>
+  <p>Um <i>accordeon</i> é um conjunto de <i>collapses</i> como mostrados acima, com um elemento que os agrupa, com a classe <i>ls-collapse-group</i>.</p>
+
+  <div class="ls-collapse-group">
+    <% 5.times do |num| %>
+    <!-- início do collapse <%= num+1 %> -->
+    <div class="ls-collapse">
+      <div class="ls-collapse-title">
+        Título do collapse <%= num+1 %>
+      </div>
+      <div class="ls-collapse-body">
+        <%= lorem.paragraphs 1%>
+      </div>
+    </div>
+    <!-- fim do collapse <%= num+1 %> -->
+    <% end %>
+  </div>
+
+  <p>O <i>accordeon</i> acima possui o seguinte código:</p>
 
   <code class="language-html">
     <div class="ls-collapse-group">
@@ -128,22 +183,6 @@ description: collapse
     </div>
   </code>
 
-  <p>Que é exibido da seguinte forma:</p>
-
-  <div class="ls-collapse-group">
-    <% 5.times do |num| %>
-    <!-- início do collapse <%= num+1 %> -->
-    <div class="ls-collapse">
-      <div class="ls-collapse-title">
-        Título do collapse <%= num+1 %>
-      </div>
-      <div class="ls-collapse-body">
-        <%= lorem.paragraphs 1%>
-      </div>
-    </div>
-    <!-- fim do collapse <%= num+1 %> -->
-    <% end %>
-  </div>
 
   <p>Os <i>collapse</i> agrupados em um <i>accordeon</i> aceitam as mesmas configurações que um <i>collapse</i> normal.</p>
 
