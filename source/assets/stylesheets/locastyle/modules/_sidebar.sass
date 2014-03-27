@@ -41,6 +41,7 @@
 
   .ls-menu ul
     a
+      +single-transition(all, .3s)
       color: $gray-1
       border-left: 5px solid transparent
       display: block
@@ -48,15 +49,18 @@
       text-decoration: none
       padding: 20px
 
-      &[class*="ls-ico"]:before
+      &:before
         font-size: 1.25rem
         margin-right: 20px
 
       &:hover,
       &:focus
+        +single-transition(all, .3s)
         background-color: $gray-3
         border-left-color: $color-3
         color: #fff
+        padding-left: 30px
+
     li
       border-bottom: 1px solid #292929
 
