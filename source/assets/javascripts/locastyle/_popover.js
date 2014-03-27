@@ -17,27 +17,21 @@ locastyle.popover = (function() {
   function loadElements(){
     $('[data-toggle="popover"]').each(function(index, element){
       var dataTrigger = $(element).data("trigger");
-
       if(dataTrigger == undefined){
         dataTrigger = config.defaultTrigger;
       }
-
       var eventType = dataTrigger == 'hover' ? 'mouseenter' : 'click'
-
       var elementActions = {
         'element': element,
         'eventType': eventType
       }
-
       setElementAction(elementActions);
     })
   }
 
   function setElementAction(elementActions){
-
     var element   = elementActions.element
     var eventType = elementActions.eventType
-
     $(element).on(eventType, function(event){
       destroyPopover();
       event.preventDefault();
@@ -51,13 +45,8 @@ locastyle.popover = (function() {
       container     = $(element).data("container");
       customClasses = $(element).data("custom-class");
 
-      if(container == undefined){
-        container = config.defaultContainer;
-      }
-
-      if(placement == undefined){
-        placement = config.defaultPlacement;
-      }
+      if(container == undefined){ container = config.defaultContainer; }
+      if(placement == undefined){ placement = config.defaultPlacement; }
 
       var constructPopover = {
         'element'      : element,
@@ -71,9 +60,7 @@ locastyle.popover = (function() {
       buildPopover(constructPopover)
     });
     if(eventType == 'mouseenter'){
-      $(element).on('mouseleave', function(){
-        destroyPopover();
-      })
+      $(element).on('mouseleave', function(){ destroyPopover(); })
     }
   }
 
@@ -182,8 +169,8 @@ locastyle.popover = (function() {
     }
 
     $(".ls-popover")
-      .css(  _default[popoverPosition.placement].css , _default[popoverPosition.placement].value )
-      .css(_default[popoverPosition.placement].adjust);
+                    .css(  _default[popoverPosition.placement].css , _default[popoverPosition.placement].value )
+                    .css(_default[popoverPosition.placement].adjust);
     if( _default[popoverPosition.placement].add ){
       $(".ls-popover").css(  _default[popoverPosition.placement].add  );
     }
