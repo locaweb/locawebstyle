@@ -3,38 +3,85 @@ var locastyle = locastyle || {};
 locastyle.popover = (function() {
   'use strict';
 
+  // Default config
   var config = {
-    defaultContainer: '.ls-main'
+    defaultContainer: 'body',
+    defaultTrigger: 'click',
+    defaultPlacement: 'top'
   }
 
   function init() {
-    getPopover();
+    togglePopover();
   }
 
-  function getPopover(){
+  function togglePopover(){
     // Get all popover with data-toggle popover
     // and send element and eventType to setAction() method
     $('[data-toggle="popover"]').each(function(index, element){
       var dataTrigger = $(element).data("trigger");
+
+      // If element dont have data-trigger use default config
+      if(dataTrigger == undefined)
+        dataTrigger = config.defaultTrigger;
+
+      // If trigger is hover set mouseenter else, set click
       var eventType = dataTrigger == 'hover' ? 'mouseenter' : 'click'
-      setAction(element, eventType);
+
+      var elementActions = {
+        'element': element,
+        'eventType': eventType
+      }
+
+      // setAction to element, click or hover
+      setAction(elementActions);
     })
   }
 
-  function setAction(element, eventType){
+  function setAction(elementActions){
+
+    var element = elementActions.element
+    var eventType = elementActions.eventType
+
     $(element).on(eventType, function(event){
-      //Remove popover when init
+      // Remove popover when init
       destroyPopover();
       event.preventDefault();
       event.stopPropagation();
 
-      //Declare variables to data usage on popover
-      var title = $(element).data("title");
-      var content = $(element).data("content");
-      var placement = $(element).data("placement");
+      // Declare variables to data usage on popover
+      var title, content, placement, container, customClasses
 
-      buildPopover(element, title, content, placement)
+      // Assigns values to variables
+      title = $(element).data("title");
+      content = $(element).data("content");
+      placement = $(element).data("placement");
+      container = $(element).data("container");
+      customClasses = $(element).data("custom-class");
+
+      // Check is data-title exists, if doesn't exists use attribute title
+      if(title == undefined)
+        var title = $(element).attr("title");
+
+      // If element dont have data-placement  use default config
+      if(container == undefined)
+        container = config.defaultContainer;
+
+      // If element dont have data-placement  use default config
+      if(placement == undefined)
+        placement = config.defaultPlacement;
+
+      var constructPopover = {
+        'element': element,
+        'title': title,
+        'content': content,
+        'placement': placement,
+        'container': container,
+        'customClasses': customClasses
+      }
+
+      buildPopover(constructPopover)
     });
+    // If eventType is hover when mouse out of element call method destroyPopover()
     if(eventType == 'mouseenter'){
       $(element).on('mouseleave', function(){
         // Remove popover when mouse out
@@ -43,17 +90,57 @@ locastyle.popover = (function() {
     }
   }
 
-  // Get position of data-toggle
-  function getElementPosition(element, placement){
-    var width = $(element).outerWidth();
-    var height = $(element).outerHeight();
-    var top = $(element).position().top;
-    var left = $(element).position().left;
-    var setSide = left;
-    var setTop = top;
-    var leftPlacement = false;
-    var topPlacement = false;
+  // Create a popover
+  function buildPopover(constructPopover){
 
+    var element = constructPopover.element
+    var title = constructPopover.title
+    var content = constructPopover.content
+    var placement = constructPopover.placement
+    var container = constructPopover.container
+    var customClasses = constructPopover.customClasses
+
+    // Return template popover
+    $(container).append(locastyle.templates.popover(title, content, placement, customClasses));
+
+    var elementPosition = {
+      'element': element,
+      'placement': placement,
+      'container': container
+    }
+
+    // Call this method to create popover close enough of your parent
+    getElementPosition(elementPosition);
+  }
+
+
+  // Get position of data-toggle
+  function getElementPosition(elementPosition){
+    var element = elementPosition.element
+    var placement = elementPosition.placement
+    var container = elementPosition.container
+
+    var width, height, top, left, setTop, setSide, leftPlacement, topPlacement
+
+    // Get width and height of element
+    // Use outer to get exactly size
+    width = $(element).outerWidth();
+    height = $(element).outerHeight();
+
+    // If container is body use offset to get position
+    // Else use position
+    if(container == 'body'){
+      top = $(element).offset().top;
+      left = $(element).offset().left;
+    }else{
+      top = $(element).position().top;
+      left = $(element).position().left;
+    }
+
+    setSide = left;
+    setTop = top;
+    leftPlacement;
+    topPlacement;
 
     if(placement == 'top')
       topPlacement = true;
@@ -69,34 +156,34 @@ locastyle.popover = (function() {
     if(placement == 'right')
       setSide = (left+width)
 
-    setPopoverPosition(setTop, setSide, leftPlacement, topPlacement);
-  }
-
-  //Create a popover
-  function buildPopover(element, title, content, placement){
-    //Return template popover
-    $(config.defaultContainer).append(locastyle.templates.popover(title, content, placement));
-
-    //Call this method to create popover close enough of your parent
-    getElementPosition(element, placement);
-  }
-
-  //Create a popover close element
-  function setPopoverPosition(top, left, leftPlacement, topPlacement){
-    $(".ls-popover").css({'position':'absolute', 'top': top+"px", 'left': left+"px", "background": "purple", "z-index": "4"});
-    if(leftPlacement){
-      $(".ls-popover").css({'left': (left)-($(".ls-popover").width())+"px"});
+    var popoverPosition = {
+      'setTop': setTop,
+      'setSide': setSide,
+      'leftPlacement': leftPlacement,
+      'topPlacement': topPlacement
     }
-    if(topPlacement){
-      $(".ls-popover").css({'top': (top)-($(".ls-popover").height())+"px"});
+
+    // Set popover position
+    setPopoverPosition(popoverPosition);
+  }
+
+  // Set popover position close element
+  function setPopoverPosition(popoverPosition){
+    $(".ls-popover").css({'position':'absolute', 'top': popoverPosition.setTop+"px", 'left': popoverPosition.setSide+"px", "z-index": "4"});
+    if(popoverPosition.leftPlacement){
+      $(".ls-popover").css({'left': (popoverPosition.setSide)-($(".ls-popover").width())+"px"});
+    }
+    if(popoverPosition.topPlacement){
+      $(".ls-popover").css({'top': (popoverPosition.setTop)-($(".ls-popover").height())+"px"});
     }
   }
 
-  //Destroy popover
+  // Destroy popover, only one popover created by time
   function destroyPopover(){
     $(".ls-popover").remove()
   }
 
+  // Set method as public
   return {
     init: init,
     destroyPopover: destroyPopover
