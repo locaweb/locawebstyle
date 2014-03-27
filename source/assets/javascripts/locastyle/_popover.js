@@ -18,8 +18,9 @@ locastyle.popover = (function() {
     $('[data-toggle="popover"]').each(function(index, element){
       var dataTrigger = $(element).data("trigger");
 
-      if(dataTrigger == undefined)
+      if(dataTrigger == undefined){
         dataTrigger = config.defaultTrigger;
+      }
 
       var eventType = dataTrigger == 'hover' ? 'mouseenter' : 'click'
 
@@ -50,11 +51,13 @@ locastyle.popover = (function() {
       container = $(element).data("container");
       customClasses = $(element).data("custom-class");
 
-      if(container == undefined)
+      if(container == undefined){
         container = config.defaultContainer;
+      }
 
-      if(placement == undefined)
+      if(placement == undefined){
         placement = config.defaultPlacement;
+      }
 
       var constructPopover = {
         'element': element,
@@ -116,19 +119,23 @@ locastyle.popover = (function() {
     setSide = left;
     setTop = top;
 
-    if(placement == 'top')
+    if(placement == 'top'){
       topPlacement = true;
       setTop = top
+    }
 
-    if(placement == 'bottom')
+    if(placement == 'bottom'){
       setTop = (top+elementHeight)
+    }
 
-    if(placement == 'left')
+    if(placement == 'left'){
       leftPlacement = true;
       setSide = left
+    }
 
-    if(placement == 'right')
+    if(placement == 'right'){
       setSide = (left+elementWidth)
+    }
 
     var popoverPosition = {
       'setTop': setTop,
