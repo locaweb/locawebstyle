@@ -18,7 +18,7 @@ locastyle.popover = (function() {
   function loadElements(){
     $('[data-toggle="popover"]').each(function(index, element){
       var dataTrigger = $(element).data("trigger");
-      if(dataTrigger){
+      if(dataTrigger == undefined){
         dataTrigger = config.defaultTrigger;
       }
       var eventType = dataTrigger == 'hover' ? 'mouseenter' : 'click'
