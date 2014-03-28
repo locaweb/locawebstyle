@@ -4,13 +4,15 @@ locastyle.general = (function() {
 
   var events = {
     '[data-toggle-class]|click' : _toggleClass,
-    '[data-toggle-text]|click' : _toggleText
+    '[data-toggle-text]|click' : _toggleText,
+    '.ls-link-smooth|click' : _smoothScroll
   }
 
   function init() {
     _loadEvents();
     showSidebar();
     subMenu();
+    _locationHashTrigger();
   }
 
   function _loadEvents () {
@@ -37,6 +39,22 @@ locastyle.general = (function() {
         textOriginal = $target.text();
     $this.data('toggle-text', textOriginal);
     $target.text(textChange);
+  }
+
+  function _smoothScroll (evt, $this) {
+    evt.preventDefault();
+    var $target = $($this.attr('href'));
+    if($target[0]){
+      $('html,body').animate({
+       scrollTop: $target.offset().top -70
+      }, 1000);
+    }
+  }
+
+  function _locationHashTrigger () {
+    if(window.location.hash){
+      $('a[class*="ls-"][href="'+window.location.hash+'"]').trigger('click');
+    }
   }
 
   function showSidebar() {
