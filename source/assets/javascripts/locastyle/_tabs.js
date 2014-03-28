@@ -12,11 +12,12 @@ locastyle.tabs = (function() {
       evt.preventDefault();
       var $target = $($(this).attr("href"));
       deactivateTab($target);
-      activateTab($target);
+      activateTab(this, $target);
     });
   }
 
-  function activateTab($target) {
+  function activateTab(el, $target) {
+    $(el).parents("li").addClass("active");
     $target.addClass("active");
   }
 
