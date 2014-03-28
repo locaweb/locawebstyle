@@ -11,7 +11,7 @@ locastyle.tabs = (function() {
     $(".ls-tabs-nav [data-toggle=tab]").on("click", function (evt) {
       evt.preventDefault();
       var $target = $($(this).attr("href"));
-      deactivateTab($target);
+      deactivateTab(this, $target);
       activateTab(this, $target);
     });
   }
@@ -21,7 +21,8 @@ locastyle.tabs = (function() {
     $target.addClass("active");
   }
 
-  function deactivateTab($target) {
+  function deactivateTab(el, $target) {
+    $(el).parents("li").siblings().removeClass("active");
     $target.siblings().removeClass("active");
   }
 

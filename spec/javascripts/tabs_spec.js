@@ -29,6 +29,12 @@ describe("Tabs: ", function(){
         expect($($parentLi).hasClass("active")).toEqual(true);
       });
 
+      it("should deactivate the siblings of parent li", function(){
+        var $siblingOfParentLi = $("#tab-trigger-1").parents("li");
+        $("#tab-trigger-2").trigger("click");
+        expect($siblingOfParentLi.hasClass("active")).toEqual(false);
+      });
+
     });
   });
 
