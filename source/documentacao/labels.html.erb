@@ -3,26 +3,31 @@ title: Labels
 description: labels
 ---
 <div class="row">
-  <h1 class="ls-title-intro">Labels ou tags <span class="ls-label-default">Novo</span></h1>
+  <h1 class="ls-title-intro">Labels ou tags</h1>
   <p class="ls-title-2">Servem para marcar informações importantes de forma discreta e organizada.</p>
-</div>
 
-<div class="row">
-  <span class="ls-label-default">Novo</span>
-  <a href="#" class="ls-label-default">label link</a>
+  <div class="ls-well">
+    <h1>Exemplo de Título <span class="ls-label-default">Novo</span></h1>
+    <h2>Exemplo de Título <span class="ls-label-default">Novo</span></h2>
+    <h3>Exemplo de Título <span class="ls-label-default">Novo</span></h3>
+    <h4>Exemplo de Título <span class="ls-label-default">Novo</span></h4>
+    <h5>Exemplo de Título <span class="ls-label-default">Novo</span></h5>
+    <h6>Exemplo de Título <span class="ls-label-default">Novo</span></h6>
+  </div>
+  <code class="language-html">
+    <%= partial 'documentacao/shared/labels' %>
+  </code>
 
-  <span class="ls-label-primary">Novo</span>
-  <a href="#" class="ls-label-primary">label link</a>
-
-  <span class="ls-label-success">Novo</span>
-  <a href="#" class="ls-label-success">label link</a>
-
-  <span class="ls-label-info">Novo</span>
-  <a href="#" class="ls-label-info">label link</a>
-
-  <span class="ls-label-warning">Novo</span>
-  <a href="#" class="ls-label-warning">label link</a>
-
-  <span class="ls-label-danger">Novo</span>
-  <a href="#" class="ls-label-danger">label link</a>
+  <h2 class="ls-title-2">Variações em forma de links</h2>
+  <div class="ls-well ls-txt-center">
+    <a href="#" class="ls-label-default">Default</a>
+    <a href="#" class="ls-label-primary">Primary</a>
+    <a href="#" class="ls-label-success">Succes</a>
+    <a href="#" class="ls-label-info">Info</a>
+    <a href="#" class="ls-label-warning">Warning</a>
+    <a href="#" class="ls-label-danger">Danger</a>
+  </div>
+  <code class="language-html">
+    <%= partial 'documentacao/shared/labels-links' %>
+  </code>
 </div>
