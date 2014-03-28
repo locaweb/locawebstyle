@@ -3,7 +3,8 @@ locastyle.general = (function() {
   'use strict';
 
   var events = {
-    '[data-toggle-class]|click' : _toggleClass
+    '[data-toggle-class]|click' : _toggleClass,
+    '[data-toggle-text]|click' : _toggleText
   }
 
   function init() {
@@ -23,9 +24,19 @@ locastyle.general = (function() {
   }
 
   function _toggleClass(evt, $this) {
-    var $target = $this.data('target') ? $($this.data('target')) : $this;
-    var cssClass = $this.data('toggle-class');
+    evt.preventDefault();
+    var $target = $this.data('target') ? $($this.data('target')) : $this,
+        cssClass = $this.data('toggle-class');
     $target.toggleClass(cssClass);
+  }
+
+  function _toggleText(evt, $this) {
+    evt.preventDefault();
+    var $target = $this.data('target') ? $($this.data('target')) : $this,
+        textChange = $this.data('toggle-text'),
+        textOriginal = $target.text();
+    $this.data('toggle-text', textOriginal);
+    $target.text(textChange);
   }
 
   function showSidebar() {
