@@ -4,10 +4,10 @@ locastyle.tabs = (function() {
   'use strict';
 
   function init() {
-    watchTabs();
+    bindClickOnTriggers();
   }
 
-  function watchTabs() {
+  function bindClickOnTriggers() {
     $(".ls-tabs-nav [data-toggle=tab]").on("click", function () {
       var $target = $($(this).attr("href"));
       deactivateTab($target);
