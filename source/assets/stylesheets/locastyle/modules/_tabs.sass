@@ -1,62 +1,36 @@
+.ls-tabs-nav
+
+  li
+    list-style: none
+    display: inline-block
+    background-color: $color-3
+    border: 1px solid $gray-4
+    border-bottom: none
+    border-radius: 7px 7px 0 0
+
+    a
+      color: #fff
+      display: inline-block
+      padding: 12px 15px
+
+    &.active
+      background-color: #fff
+
+      a
+        color: $color-3
+
+
 .ls-tab-content
   display: none
+  padding: 20px
+  margin-bottom: 20px
+  margin-top: -1px
+  border: 1px solid $gray-4
+  background-color: #fff
+
   &.active
     display: block
-.ls-tabs-nav
-  padding-left: 0
-  margin-bottom: 0
-  list-style: none
-  &:before
-    display: table
-    content: " "
-  &:after
-    display: table
-    content: " "
-    clear: both
-  &:before
-    display: table
-    content: " "
-  &:after
-    display: table
-    content: " "
-    clear: both
-  > li
-    position: relative
-    display: block
-    > a
-      position: relative
-      display: block
-      padding: 10px 15px
-      &:hover, &:focus
-        text-decoration: none
-        background-color: #eeeeee
-  .nav-divider
-    height: 1px
-    margin: 9px 0
-    overflow: hidden
-    background-color: #e5e5e5
 
-.ls-tabs-nav
-  border-bottom: 1px solid #dddddd
-  > li
-    float: left
-    margin-bottom: -1px
-    > a
-      margin-right: 2px
-      line-height: 1.428571429
-      border: 1px solid transparent
-      border-radius: 4px 4px 0 0
-      &:hover
-        border-color: #eeeeee #eeeeee #dddddd
-    &.active > a
-      color: #555555
-      cursor: default
-      background-color: #ffffff
-      border: 1px solid #dddddd
-      border-bottom-color: transparent
-      &:hover, &:focus
-        color: #555555
-        cursor: default
-        background-color: #ffffff
-        border: 1px solid #dddddd
-        border-bottom-color: transparent
+  p
+    margin: 0
+    padding: 0
