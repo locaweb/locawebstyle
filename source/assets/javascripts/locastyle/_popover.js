@@ -18,7 +18,7 @@ locastyle.popover = (function() {
   function loadElements(){
     $('[data-toggle="popover"]').each(function(index, element){
       var dataTrigger = $(element).data("trigger");
-      if(dataTrigger == undefined){
+      if(dataTrigger){
         dataTrigger = config.defaultTrigger;
       }
       var eventType = dataTrigger == 'hover' ? 'mouseenter' : 'click'
@@ -27,65 +27,43 @@ locastyle.popover = (function() {
         'eventType': eventType
       }
       setElementAction(elementActions);
-    })
+    });
   }
 
   function setElementAction(elementActions){
-    var element   = elementActions.element
-    var eventType = elementActions.eventType
-    $(element).on(eventType, function(event){
+    var element   = elementActions.element;
+    var eventType = elementActions.eventType;
+    $(element).on(eventType, function(evt){
       destroyPopover();
-      event.preventDefault();
-      event.stopPropagation();
-
-      var title, content, placement, container, customClasses
-
-      title         = $(element).data("title");
-      content       = $(element).data("content");
-      placement     = $(element).data("placement");
-      container     = $(element).data("container");
-      customClasses = $(element).data("custom-class");
-
-      if(container == undefined){ container = config.defaultContainer; }
-      if(placement == undefined){ placement = config.defaultPlacement; }
-
-      var constructPopover = {
-        'element'      : element,
-        'title'        : title,
-        'content'      : content,
-        'placement'    : placement,
-        'container'    : container,
-        'customClasses': customClasses
-      }
-
-      buildPopover(constructPopover)
+      evt.preventDefault();
+      evt.stopPropagation();
+      var elementData = $(element).data();
+      elementData.container  =  elementData.container || config.defaultContainer;
+      elementData.placement  =  elementData.placement || config.defaultPlacement;
+      elementData.element    = element;
+      buildPopover(elementData);
     });
-    if(eventType == 'mouseenter'){
+    if(eventType === 'mouseenter'){
       $(element).on('mouseleave', function(){ destroyPopover(); })
     }
   }
 
   // Create a popover
   function buildPopover(constructPopover){
-
-    var element, title, content, placement, container, customClasses
-
-    element       = constructPopover.element
-    title         = constructPopover.title
-    content       = constructPopover.content
-    placement     = constructPopover.placement
-    container     = constructPopover.container
-    customClasses = constructPopover.customClasses
-
     // Return template popover
-    $(container).append(locastyle.templates.popover(title, content, placement, customClasses));
-
-    var elementPosition = {
-      'element'  : element,
-      'placement': placement,
-      'container': container
-    }
-    getElementPosition(elementPosition);
+    $(constructPopover.container).append(
+      locastyle.templates.popover(
+        constructPopover.title,
+        constructPopover.content,
+        constructPopover.placement,
+        constructPopover.customClasses
+        )
+      );
+    getElementPosition({
+      'element'  : constructPopover.element,
+      'placement': constructPopover.placement,
+      'container': constructPopover.container
+    });
   }
 
   function getElementPosition(elementPosition){
