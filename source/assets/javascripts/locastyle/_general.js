@@ -13,6 +13,7 @@ locastyle.general = (function() {
     showSidebar();
     subMenu();
     _locationHashTrigger();
+    _elementDisabled();
   }
 
   function _loadEvents () {
@@ -70,6 +71,13 @@ locastyle.general = (function() {
   function subMenu() {
     $('.ls-submenu > a').on('click', function(evt){
       $(this).parent().toggleClass('active');
+      evt.preventDefault();
+    })
+  }
+
+  function _elementDisabled() {
+    var $elementDisabled = $('.disabled') || [disabled='disabled'];
+    $elementDisabled.on('click', function(evt){
       evt.preventDefault();
     })
   }
