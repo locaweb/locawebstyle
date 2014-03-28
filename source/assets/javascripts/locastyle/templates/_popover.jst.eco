@@ -1,5 +1,9 @@
 <div class="ls-popover ls-popover-<%= @placement %> <%= @customClasses %>">
   <div class="arrow"></div>
+  <% if @title :%>
   <h3 class="ls-popover-title"> <%= @title %> </h3>
+  <% end %>
+  <% if @content :%>
+  <% end %>
   <div class="ls-popover-content"> <%= @content %> </div>
 </div>
