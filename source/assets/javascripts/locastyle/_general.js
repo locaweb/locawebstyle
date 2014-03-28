@@ -14,6 +14,7 @@ locastyle.general = (function() {
     subMenu();
     _locationHashTrigger();
     _elementDisabled();
+    _linkPreventDefault();
   }
 
   function _loadEvents () {
@@ -79,6 +80,14 @@ locastyle.general = (function() {
     var $elementDisabled = $('.disabled') || [disabled='disabled'];
     $elementDisabled.on('click', function(evt){
       evt.preventDefault();
+    });
+  }
+
+  function _linkPreventDefault(dom_scope) {
+    $("a", dom_scope).on("click", function(e){
+      if($(this).attr("href") === "" || $(this).attr("href") === "#"){
+        e.preventDefault();
+      }
     })
   }
 
