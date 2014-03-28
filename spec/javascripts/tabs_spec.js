@@ -22,6 +22,13 @@ describe("Tabs: ", function(){
         $("#tab-trigger-2").trigger("click");
         expect(spyEvent).toHaveBeenPrevented();
       })
+
+      it("should activate the parent li", function(){
+        var $parentLi = $("#tab-trigger-2").parents("li");
+        $("#tab-trigger-2").trigger("click");
+        expect($($parentLi).hasClass("active")).toEqual(true);
+      });
+
     });
   });
 
