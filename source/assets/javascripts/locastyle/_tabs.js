@@ -9,12 +9,18 @@ locastyle.tabs = (function() {
 
   function watchTabs() {
     $(".ls-tabs-nav [data-toggle=tab]").on("click", function () {
-      activateTab($($(this).attr("href")));
+      var $target = $($(this).attr("href"));
+      deactivateTab($target);
+      activateTab($target);
     });
   }
 
   function activateTab($target) {
     $target.addClass("active");
+  }
+
+  function deactivateTab($target) {
+    $target.siblings().removeClass("active");
   }
 
   return {
