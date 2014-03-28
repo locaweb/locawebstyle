@@ -1,7 +1,7 @@
 [class*="ls-btn"]
   border: 1px solid $gray-2
   padding: 8px 15px
-  border-radius: 3px
+  border-radius: 4px
   cursor: pointer
   display: inline-block
   font-size: .875rem
@@ -12,21 +12,64 @@
 
   &:hover,
   &:focus
+    +single-transition(all, .3s)
     opacity: .8
+
+  &.active,
+  &:active
+    +box-shadow(inset 0 3px 5px rgba(0, 0, 0, 0.15))
+
+    // Botões com disabled
+  &.disabled,
+  &[disabled]
+    opacity: .6
+
+  &[data-toggle]:after
+    content: ""
+    border: 5px solid transparent
+    border-top-color: $color-5
+    display: inline-block
+    width: 0
+    height: 0
+    margin-left: 5px
+    position: relative
+    top: 2px
+
+  &:empty:after
+    margin-left: 0
+
+// Tratando diferença na setinha dos botões dropdown
+[class*="ls-btn-"]
+  &[data-toggle]:after
+    border-top-color: #fff
+
+.ls-btn-block
+  display: block
+  width: 100%
+  padding-right: 0
+  padding-left: 0
 
 .ls-btn
   color: #000
   background-color: #fff
 
+  &:hover,
+  &:focus,
+  &.active
+    background-color: $gray-2
+
 .ls-btn-primary
   background-color: $color-3
-  border-color: $color-2
+  border-color: $color-4
   color: #fff
 
 .ls-btn-dark
   background-color: $gray-3
-  border-color: #3d3c3c
-  color: #9d9d9d
+  border-color: $gray-5
+  color: $gray-1
+
+  &[data-toggle]:after
+    border-top-color: $gray-1
 
 .ls-btn-danger
   background-color: #F74B57
@@ -43,9 +86,32 @@
   font-size: .75rem
   padding: 6px 10px
   line-height: 1.5
+  border-radius: 3px
 
 .ls-btn-xs
   font-size: .5rem
   padding: 5px 7px
   line-height: 1.5
+  border-radius: 3px
+
+// Grupo de botões
+.ls-group-btn
+  overflow: hidden
+
+  [class*="ls-btn"]
+    float: left
+
+    &:first-child:not(:last-child)
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+
+    &:not(:first-child):not(:last-child)
+      border-radius: 0
+
+    &:last-child:not(:first-child),
+      border-bottom-left-radius: 0
+      border-top-left-radius: 0
+
+    & +[class*="ls-btn"],
+      margin-left: -1px
 
