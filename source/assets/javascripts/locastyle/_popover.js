@@ -18,15 +18,11 @@ locastyle.popover = (function() {
   function bindPopover(){
     $('[data-toggle="popover"]').each(function(index, element){
       var dataTrigger = $(element).data("trigger");
-      if(dataTrigger == undefined){
-        dataTrigger = config.defaultTrigger;
-      }
-      var eventType = dataTrigger == 'hover' ? 'mouseenter' : 'click'
-      var elementActions = {
+      dataTrigger = dataTrigger || config.defaultTrigger
+      bindAction({
         'element': element,
-        'eventType': eventType
-      }
-      bindAction(elementActions);
+        'eventType': dataTrigger == 'hover' ? 'mouseenter' : 'click'
+      });
     });
   }
 
@@ -109,7 +105,7 @@ locastyle.popover = (function() {
       setSide = (left+elementWidth)
     }
 
-    var popoverPosition = {
+    setPopoverPosition({
       'setTop'       : setTop,
       'placement'    : placement,
       'setSide'      : setSide,
@@ -117,9 +113,7 @@ locastyle.popover = (function() {
       'topPlacement' : topPlacement,
       'elementWidth' : elementWidth,
       'elementHeight': elementHeight
-    }
-
-    setPopoverPosition(popoverPosition);
+    });
   }
 
   function setPopoverPosition(popoverPosition){
