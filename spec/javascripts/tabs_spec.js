@@ -17,6 +17,11 @@ describe("Tabs: ", function(){
         expect($("#laps").hasClass("active")).toEqual(true);
       });
 
+      it("should prevent default event", function () {
+        var spyEvent = spyOnEvent('#tab-trigger-2', 'click');
+        $("#tab-trigger-2").trigger("click");
+        expect(spyEvent).toHaveBeenPrevented();
+      })
     });
   });
 
