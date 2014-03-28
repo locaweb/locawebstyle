@@ -12,10 +12,10 @@ locastyle.popover = (function() {
   }
 
   function init() {
-    loadElements();
+    bindPopover();
   }
 
-  function loadElements(){
+  function bindPopover(){
     $('[data-toggle="popover"]').each(function(index, element){
       var dataTrigger = $(element).data("trigger");
       if(dataTrigger == undefined){
@@ -26,13 +26,14 @@ locastyle.popover = (function() {
         'element': element,
         'eventType': eventType
       }
-      setElementAction(elementActions);
+      bindAction(elementActions);
     });
   }
 
-  function setElementAction(elementActions){
+  function bindAction(elementActions){
     var element   = elementActions.element;
     var eventType = elementActions.eventType;
+    $(element).unbind(eventType);
     $(element).on(eventType, function(evt){
       destroyPopover();
       evt.preventDefault();
@@ -41,15 +42,16 @@ locastyle.popover = (function() {
       elementData.container  =  elementData.container || config.defaultContainer;
       elementData.placement  =  elementData.placement || config.defaultPlacement;
       elementData.element    = element;
-      buildPopover(elementData);
+      build(elementData);
     });
+
     if(eventType === 'mouseenter'){
       $(element).on('mouseleave', function(){ destroyPopover(); })
     }
   }
 
   // Create a popover
-  function buildPopover(constructPopover){
+  function build(constructPopover){
     // Return template popover
     $(constructPopover.container).append(
       locastyle.templates.popover(
@@ -59,14 +61,17 @@ locastyle.popover = (function() {
         constructPopover.customClasses
         )
       );
-    getElementPosition({
+
+    unBindClick(constructPopover.element);
+
+    getTriggerPosition({
       'element'  : constructPopover.element,
       'placement': constructPopover.placement,
       'container': constructPopover.container
     });
   }
 
-  function getElementPosition(elementPosition){
+  function getTriggerPosition(elementPosition){
     var elementWidth, elementHeight, top, left, setTop, setSide, leftPlacement, topPlacement, element, placement, container
 
     element       = elementPosition.element
@@ -152,6 +157,12 @@ locastyle.popover = (function() {
                     .css(_default[popoverPosition.placement].adjust);
     if( _default[popoverPosition.placement].add ){
       $(config.popoverClass).css(  _default[popoverPosition.placement].add  );
+    }
+  }
+
+  function unBindClick(element){
+    if($(config.popoverClass).is(":visible")){
+      $(element).on('click', function(){ destroyPopover(); bindPopover(); })
     }
   }
 
