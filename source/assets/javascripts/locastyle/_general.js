@@ -13,6 +13,8 @@ locastyle.general = (function() {
     showSidebar();
     subMenu();
     _locationHashTrigger();
+    _elementDisabled();
+    _linkPreventDefault();
   }
 
   function _loadEvents () {
@@ -71,6 +73,21 @@ locastyle.general = (function() {
     $('.ls-submenu > a').on('click', function(evt){
       $(this).parent().toggleClass('active');
       evt.preventDefault();
+    })
+  }
+
+  function _elementDisabled() {
+    var $elementDisabled = $('.disabled') || [disabled='disabled'];
+    $elementDisabled.on('click', function(evt){
+      evt.preventDefault();
+    });
+  }
+
+  function _linkPreventDefault(dom_scope) {
+    $("a", dom_scope).on("click", function(e){
+      if($(this).attr("href") === "" || $(this).attr("href") === "#"){
+        e.preventDefault();
+      }
     })
   }
 
