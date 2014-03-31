@@ -25,6 +25,15 @@ $small-width: 450px
     &.opened
       opacity: 1
 
+  .ls-modal-overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 15
+    +single-transition(opacity, .35s, linear)
+
 .ls-modal-box
   position: relative
   z-index: 16
@@ -39,13 +48,3 @@ $small-width: 450px
   &.ls-modal-small
     width: $small-width
     margin-left: -$small-width / 2
-
-.ls-modal-overlay
-  position: fixed
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  z-index: 15
-  background: rgba(0,0,0, 0.5)
-  +single-transition(opacity, .35s, linear)
