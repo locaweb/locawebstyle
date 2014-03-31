@@ -12,6 +12,7 @@
     padding: .1rem
     border-radius: .2rem
     position: relative
+    z-index: 0
 
   &::-webkit-progress-value, .ls-progress-value
     border-radius: .2rem
@@ -19,13 +20,14 @@
     position: relative
     height: .8rem
     display: block
+    z-index: 1
 
   .ls-progress-value
     position: absolute
     top: .1rem
     left: .1rem
 
-  &.ls-progress-bar-gray
+  &.ls-progress-gray
     &::-webkit-progress-bar
       background: #ccc
     &::-webkit-progress-value
@@ -33,26 +35,27 @@
 
   &.ls-progress-animated
     &::-webkit-progress-value, .ls-progress-value
-      background-color: #900
-      width: 0
+      // opacity: 0
 
-  // &.ls-progress-bar-percent
-  //   &:before
-  //     content: attr(value)
-  //     display: inline-block
-  //     position: absolute
-  //     top: 0
-  //     left: .5rem
-  //     font-size: .8rem
-  //     color: #fff
-  //   &:after
-  //     content: attr(max)
-  //     display: inline-block
-  //     position: absolute
-  //     top: 0
-  //     right: .5rem
-  //     font-size: .8rem
-  //     color: #fff
+  &.ls-progress-percent
+    &:before
+      content: attr(value)
+      display: inline-block
+      position: absolute
+      top: 0
+      left: .5rem
+      font-size: .8rem
+      color: #fff
+      z-index: 2
+
+    &:after
+      content: attr(max)
+      display: inline-block
+      position: absolute
+      top: 0
+      right: .5rem
+      font-size: .8rem
+      color: #fff
   //   &::-webkit-progress-value
 
 
