@@ -1,4 +1,4 @@
-<div class="ls-modal fade" id="">
+<div class="ls-modal fade opened">
   <div class="ls-modal-box">
     <div class="ls-modal-header">
       <button type="button" data-dismiss="modal" class="close">&times;</button>
@@ -8,8 +8,9 @@
       <p><%= @content %></p>
     </div>
     <div class="ls-modal-footer">
-      <button type="button" class="btn btn-default" data-dismiss="modal"><%= @close %></button>
-      <button type="button" class="btn btn-primary"><%= @save %></button>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      <button type="button" class="btn btn-primary">Salvar</button>
     </div>
   </div>
+  <div class="ls-modal-overlay"></div>
 </div><!-- /.modal -->

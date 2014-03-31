@@ -1,4 +1,6 @@
 //= require locastyle/templates/_popover
+//= require locastyle/templates/_modal
+
 //= require locastyle/_initializer
 //= require locastyle/_collapse
 //= require locastyle/_modal
