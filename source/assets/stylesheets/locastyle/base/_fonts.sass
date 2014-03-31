@@ -24,60 +24,33 @@
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-
-
 [class*="ls-ico-"]:after,
-.ls-ico-after:before
+.ls-ico-right:before
   display: none
 
-.ls-ico-after:after
+.ls-ico-right:after
   display: inline-block
   margin-left: 5px
   padding: 0
   width: 5px
 
-.ls-ico-bullhorn:before
-  content: "\f0a1"
+=ico($name, $content)
+  .ls-ico-#{$name}:before,
+  .ls-ico-#{$name}:after
+    content: "#{$content}"
 
-.ls-ico-dashboard:before
-  content: "\f0e4"
-
-.ls-ico-bell-o:before
-  content: "\f0f3"
-
-.ls-ico-home:before,
-.ls-ico-home:after
-  content: "\e600"
-
-.ls-ico-users:before
-  content: "\e601"
-
-.ls-ico-stats:before
-  content: "\e606"
-
-.ls-ico-envelope:before
-  content: "\e602"
-
-.ls-ico-cog:before
-  content: "\e605"
-
-.ls-ico-user:before
-  content: "\e604"
-
-.ls-ico-question:before
-  content: "\e608"
-
-.ls-ico-chevron-left:before
-  content: "\e609"
-
-.ls-ico-chevron-right:before
-  content: "\e603"
-
-.ls-ico-chevron-up:before
-  content: "\e60a"
-
-.ls-ico-chevron-down:before
-  content: "\e607"
-
-.ls-ico-menu:before
-  content: "\e60b"
++ico(bullhorn,\f0a1)
++ico(dashboard,\f0e4)
++ico(bell-o,\f0f3)
++ico(home,\e600)
++ico(users,\e601)
++ico(stats,\e606)
++ico(envelope,\e602)
++ico(cog,\e605)
++ico(user,\e604)
++ico(question,\e608)
++ico(chevron-left,\e609)
++ico(chevron-right,\e603)
++ico(chevron-up,\e60a)
++ico(chevron-down,\e607)
++ico(menu,\e60b)
