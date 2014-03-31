@@ -31,6 +31,7 @@ locastyle.modal = (function() {
   function close(){
     $(".ls-modal-overlay, " + config.close.trigger).on('click', function(){
       $(config.modal).removeClass( "opened");
+      $(".ls-modal-overlay").remove();
     })
   }
 
