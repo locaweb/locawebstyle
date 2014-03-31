@@ -12,7 +12,7 @@ locastyle.popover = (function() {
   }
 
   function init() {
-    $('[data-toggle="popover"]').each(function(index, element){
+    $('[data-module="popover"]').each(function(index, element){
       var dataTrigger = $(element).data("trigger");
       dataTrigger = dataTrigger || config.defaultTrigger
       bindAction({
@@ -25,7 +25,9 @@ locastyle.popover = (function() {
   function bindAction(elementActions){
     var element   = elementActions.element;
     var eventType = elementActions.eventType;
+
     $(element).unbind(eventType);
+
     $(element).on(eventType, function(evt){
       destroyPopover();
       evt.preventDefault();
