@@ -34,7 +34,7 @@ locastyle.popover = (function() {
       elementData.container  =  elementData.container || config.defaultContainer;
       elementData.placement  =  elementData.placement || config.defaultPlacement;
       elementData.element    = element;
-      build(elementData);
+      build(elementData, element);
     });
 
     if(eventType === 'mouseenter'){
@@ -43,11 +43,11 @@ locastyle.popover = (function() {
   }
 
   // Create a popover
-  function build(elementData){
+  function build(elementData, element){
     // Return template popover
     $(elementData.container).append( locastyle.templates.popover(elementData) );
 
-    unBindClick(elementData);
+    unBindClick(element);
     getTriggerPosition(elementData);
   }
 
