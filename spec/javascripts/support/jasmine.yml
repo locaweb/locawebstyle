@@ -21,6 +21,7 @@ src_files:
     - source/assets/javascripts/locastyle/_dropdown.js
     - source/assets/javascripts/locastyle/_general.js
     - source/assets/javascripts/locastyle/_modal.js
+    - source/assets/javascripts/locastyle/_dismiss.js
 
 # stylesheets
 #
