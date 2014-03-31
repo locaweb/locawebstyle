@@ -13,7 +13,6 @@
   &:hover,
   &:focus
     +single-transition(all, .3s)
-    opacity: .8
 
   &.active,
   &:active
@@ -24,7 +23,7 @@
   &[disabled]
     opacity: .6
 
-  &[data-toggle]:after
+  &[data-module]:after
     content: ""
     border: 5px solid transparent
     border-top-color: $color-5
@@ -40,7 +39,7 @@
 
 // Tratando diferença na setinha dos botões dropdown
 [class*="ls-btn-"]
-  &[data-toggle]:after
+  &[data-module]:after
     border-top-color: #fff
 
 .ls-btn-block
@@ -68,7 +67,7 @@
   border-color: $gray-5
   color: $gray-1
 
-  &[data-toggle]:after
+  &[data-module]:after
     border-top-color: $gray-1
 
 .ls-btn-danger
@@ -85,14 +84,16 @@
 .ls-btn-sm
   font-size: .75rem
   padding: 6px 10px
-  line-height: 1.5
-  border-radius: 3px
 
 .ls-btn-xs
   font-size: .5rem
   padding: 5px 7px
-  line-height: 1.5
+
+.ls-btn-sm,
+.ls-btn-xs
   border-radius: 3px
+  line-height: 1.5
+
 
 // Grupo de botões
 .ls-group-btn
