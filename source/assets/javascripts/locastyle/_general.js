@@ -15,6 +15,7 @@ locastyle.general = (function() {
     _locationHashTrigger();
     _elementDisabled();
     _linkPreventDefault();
+    _btnGroupActivationToogle(dom_scope);
   }
 
   function _loadEvents () {
@@ -88,7 +89,14 @@ locastyle.general = (function() {
       if($(this).attr("href") === "" || $(this).attr("href") === "#"){
         e.preventDefault();
       }
-    })
+    });
+  }
+
+  function _btnGroupActivationToogle(dom_scope) {
+    $(".ls-group-active .ls-btn", dom_scope).on("click", function() {
+      $(this).siblings().removeClass("active");
+      $(this).addClass("active");
+    });
   }
 
   return {
