@@ -4,20 +4,28 @@
     list-style: none
     display: inline-block
     background-color: $color-3
-    border: 1px solid $gray-4
+    border: 1px solid $gray-1
     border-bottom: none
     border-radius: 7px 7px 0 0
+    position: relative
+    top: 2px
+
+    &:hover
+      background-color: $color-4
 
     a
       color: #fff
       display: inline-block
-      padding: 12px 15px
+      padding: 10px 15px
 
     &.active
       background-color: #fff
+      top: 0
 
       a
         color: $color-3
+        padding-top: 12px
+        padding-bottom: 12px
 
 
 .ls-tab-content
@@ -25,7 +33,7 @@
   padding: 20px
   margin-bottom: 20px
   margin-top: -1px
-  border: 1px solid $gray-4
+  border: 1px solid $gray-1
   background-color: #fff
 
   &.active
