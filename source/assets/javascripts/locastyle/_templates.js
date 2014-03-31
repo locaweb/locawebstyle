@@ -12,9 +12,14 @@ locastyle.templates = (function() {
     return JST[templatesPath + 'popover'](elementData)
   }
 
+  function modal(elementData){
+    return JST[templatesPath + 'modal'](elementData)
+  }
+
   return {
     init: init,
-    popover: popover
+    popover: popover,
+    modal: modal
   }
 
 }());

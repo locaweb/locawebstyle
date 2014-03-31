@@ -14,13 +14,17 @@ locastyle.modal = (function() {
 
   function init() {
     $(config.open.trigger).on('click', function(){
-      open($(this).data('target'));
+      open($(this).data());
     })
   }
 
-  function open(target){
-    $(target).addClass("opened");
-    $(target).append('<div class="ls-modal-overlay"></div>');
+  function open($element){
+    if(!$element.target){
+      $('body').append( locastyle.templates.modal($element) );
+    }else{
+      $($element.target).addClass("opened");
+      $($element.target).append('<div class="ls-modal-overlay"></div>');
+    }
     close();
   }
 
