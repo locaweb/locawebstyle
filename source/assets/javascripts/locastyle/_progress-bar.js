@@ -5,19 +5,41 @@ locastyle.progress = (function() {
 
   // Default config
   var config = {
+    classes: {
+      animate: 'ls-progress-animated'
+    }
   }
 
   function init() {
     $('.ls-progress').each(function(index, progressbar){
       var $progressbar = $(progressbar);
+      animate($progressbar);
     });
   }
 
+  function animate ($progressbar) {
+    if( $progressbar.hasClass( config.classes.animate )  ){
+      var originalValue = $progressbar.prop('value');
+      var resetValue = 0;
+      $progressbar.prop('value', resetValue);
+      var animProgress = setInterval(function(){
+        $progressbar.prop('value', resetValue++);
+        if( resetValue >= originalValue ){
+          window.clearInterval(animProgress);
+        }
+      }, 400/originalValue );
+      reAnimate($progressbar);
+    }
+  }
 
+  function reAnimate($progressbar){
+    document.addEventListener('visibilitychange', function(event) {
+      animate($progressbar);
+    });
+  }
 
   return {
     init: init,
-    destroyPopover: destroyPopover
   }
 
 }());
