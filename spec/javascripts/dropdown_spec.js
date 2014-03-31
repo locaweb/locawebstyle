@@ -12,6 +12,11 @@ describe("Dropdown: ", function(){
         expect($("#dropdown-test").hasClass("active")).toEqual(true);
       });
 
+      it("should the activate related dropdown module", function() {
+        $("#dropdown-test-2 > a:first-child").trigger("click");
+        expect($("#dropdown-test-2").hasClass("active")).toEqual(false);
+      });
+
     });
   });
 

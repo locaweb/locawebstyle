@@ -11,12 +11,12 @@ locastyle.dropdown = (function() {
     $("[data-module=dropdown] > a:first-child").on("click", function (evt) {
       evt.preventDefault();
       var $target = $($(this).parents("[data-module=dropdown]"));
-      activateDropdown($target);
+      toggleDropdown($target);
     });
   }
 
-  function activateDropdown ($target) {
-    $target.addClass('active');
+  function toggleDropdown ($target) {
+    $target.toggleClass('active');
   }
 
   return {
