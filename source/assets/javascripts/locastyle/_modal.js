@@ -20,14 +20,13 @@ locastyle.modal = (function() {
 
   function open(target){
     $(target).addClass("opened");
-    $('body').append( '<div class="ls-modal-overlay"></div>');
+    $(target).append('<div class="ls-modal-overlay"></div>');
     close();
   }
 
   function close(){
     $(".ls-modal-overlay, " + config.close.trigger).on('click', function(){
       $(config.modal).removeClass( "opened");
-      $(".ls-modal-overlay").remove()
     })
   }
 
