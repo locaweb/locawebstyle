@@ -3,6 +3,7 @@
 //= require locastyle/_collapse
 //= require locastyle/_modal
 //= require locastyle/_popover
+//= require locastyle/_dropdown
 //= require locastyle/_tooltip
 //= require locastyle/_tabs
 //= require locastyle/_templates
