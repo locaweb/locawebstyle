@@ -18,6 +18,7 @@ src_files:
     - source/assets/javascripts/locastyle/_templates.js
     - source/assets/javascripts/locastyle/_collapse.js
     - source/assets/javascripts/locastyle/_tabs.js
+    - source/assets/javascripts/locastyle/_dropdown.js
     - source/assets/javascripts/locastyle/_general.js
     - source/assets/javascripts/locastyle/_modal.js
 
