@@ -29,6 +29,12 @@ code, pre
 .doc-block
   margin-bottom: 2rem
 
+a
+  color: #000
+
+p
+  line-height: 1.2
+
 p
   code
     padding: 4px 6px
@@ -37,3 +43,40 @@ p
     background-color: #F9F2F4
     border-radius: 4px
     font: .875rem Open Sans, Arial, Helvetica, Sans-serif
+
+.list-icons
+  list-style: none
+
+  li
+
+    display: inline-block
+    vertical-align: top
+    width: 138px
+    min-height: 128px
+    padding: 33px 15px 0
+    background: #EEE
+    margin: 3px 3px 3px 0
+    background: rgba(0,0,0,0.1)
+    text-align: center
+    border-radius: 50%
+
+    span
+      font-size: .875rem
+      margin-bottom: 5px
+
+      &:before
+        display: block
+        font-size: 1.875rem
+
+    &:hover
+      background: rgba(0,0,0,0.5)
+      color: #FFF
+      transition: all .2s linear
+      -moz-transition: all .2s linear
+      -webkit-transition: all .2s linear
+      -webkit-transform: scale(1.2)
+      -moz-transform: scale(1.2)
+      -ms-transform: scale(1.2)
+      transform: scale(1.2)
+
+
