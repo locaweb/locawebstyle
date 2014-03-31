@@ -15,7 +15,7 @@ locastyle.general = (function() {
     _locationHashTrigger();
     _elementDisabled();
     _linkPreventDefault();
-    _btnGroupActivationToogle(dom_scope);
+    _btnGroupActivationToogle();
   }
 
   function _loadEvents () {
