@@ -1,0 +1,29 @@
+.ls-modal
+  &.fade
+    opacity: 0
+
+.ls-modal
+  display: none
+  position: absolute
+  top: 10%
+  left: 50%
+  margin-left: -300px
+  background: red
+  padding: 50px
+  z-index: 11
+  width: 600px
+
+.ls-modal
+  &.fade
+    opacity: 1
+    +single-transition(opacity .15s linear)
+
+
+.ls-modal-overlay
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 10
+  background: rgba(0,0,0, 0.5)
