@@ -12,6 +12,8 @@ description: barra de progresso
 
 <div class="row">
 
+  <h2>Utilizando a tag <i>progress</i></h2>
+
   <table class="ls-table">
     <thead>
       <tr>
@@ -25,7 +27,7 @@ description: barra de progresso
     </tr>
     <tr>
       <td>Animada</td>
-      <td>.progress.ls-progress .ls-progress-animated</td>
+      <td>.ls-progress .ls-progress-animated</td>
       <td><progress class="ls-progress ls-progress-animated" value="20" max="100"></progress></td>
     </tr>
     <tr>
@@ -38,19 +40,47 @@ description: barra de progresso
       <td>.ls-progress .ls-progress-percent</td>
       <td><progress class="ls-progress ls-progress-percent" value="40" max="100"></progress></td>
     </tr>
+  </table>
+
+  <h3>Código</h3>
+
+  <code class="language-html">
+    <!-- Estática -->
+    <progress class="ls-progress" value="10" max="100"></progress>
+    <!-- Animada -->
+    <progress class="ls-progress ls-progress-animated" value="20" max="100"></progress>
+    <!-- Cinza -->
+    <progress class="ls-progress ls-progress-gray" value="30" max="100"></progress>
+    <!-- Com números -->
+    <progress class="ls-progress ls-progress-percent" value="40" max="100"></progress>
+  </code>
+
+
+
+</div>
+<!--
+<div class="row">
+
+  <h2>Utilizando outras tags</h2>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>tipo</th><th>Classe</th><th>Exemplo</th>
+      </tr>
+    </thead>
     <tr>
-      <td>Etapas</td>
+      <td>Estática</td>
       <td>.ls-progress</td>
-      <td><progress class="ls-progress" value="50" max="100"></progress></td>
+      <td>
+        <div class="ls-progress">
+          <div class="ls-progress-bar">40</div>
+          <div class="ls-progress-value">100</div>
+        </div>
+      </td>
     </tr>
   </table>
 
-  <div class="ls-progress">
-    <div class="ls-progress-bar">40</div>
-    <div class="ls-progress-value">100</div>
-  </div>
-
-
-  <p></p>
 
 </div>
+ -->
