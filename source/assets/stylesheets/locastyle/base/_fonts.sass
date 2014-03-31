@@ -24,6 +24,18 @@
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+
+
+[class*="ls-ico-"]:after,
+.ls-ico-after:before
+  display: none
+
+.ls-ico-after:after
+  display: inline-block
+  margin-left: 5px
+  padding: 0
+  width: 5px
+
 .ls-ico-bullhorn:before
   content: "\f0a1"
 
@@ -33,7 +45,8 @@
 .ls-ico-bell-o:before
   content: "\f0f3"
 
-.ls-ico-home:before
+.ls-ico-home:before,
+.ls-ico-home:after
   content: "\e600"
 
 .ls-ico-users:before
