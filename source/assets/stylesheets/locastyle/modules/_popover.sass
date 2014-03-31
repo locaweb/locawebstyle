@@ -43,11 +43,11 @@ $colorBorderPop: rgba(0, 0, 0, 0.2)
       border-color: $colorArrow transparent transparent transparent
 
     &:before
-      bottom: -($arrowWidth - 1)
+      bottom: -($arrowWidth + 1)
       left: 46.5%
       margin-left: -8px
       border-width: $arrowWidth $arrowWidth 0 $arrowWidth
-      border-color: $colorArrow transparent transparent transparent
+      border-color: $colorBorderPop transparent transparent transparent
 
   &.ls-popover-right
     &:after
@@ -93,7 +93,7 @@ $colorBorderPop: rgba(0, 0, 0, 0.2)
       border-color: transparent transparent transparent $colorBorderPop
 
   .ls-popover-header [class*="title-"]
-    padding: 15px 20px
+    padding: 13px 20px 12px
     margin: 0
     font-size: 1rem
     background-color: #f7f7f7
