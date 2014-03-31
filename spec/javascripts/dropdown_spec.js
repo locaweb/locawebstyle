@@ -17,6 +17,12 @@ describe("Dropdown: ", function(){
         expect($("#dropdown-test-2").hasClass("active")).toEqual(false);
       });
 
+      it("should prevent default event on dropdown module", function () {
+        var spyEvent = spyOnEvent('#dropdown-test > a:first-child', 'click');
+        $("#dropdown-test > a:first-child").trigger("click");
+        expect(spyEvent).toHaveBeenPrevented();
+      });
+
     });
   });
 
