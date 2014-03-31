@@ -14,6 +14,7 @@ describe("Modal: ", function(){
 
   describe('When click on data-dismiss on modal', function(){
     it('should remove class opened on .ls-modal', function(){
+      locastyle.modal.close();
       $('[data-dismiss="modal"]').trigger("click");
       expect($("#myModalOpened .ls-modal").hasClass('opened')).toBeFalsy();
     })

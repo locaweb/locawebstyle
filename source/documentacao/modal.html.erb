@@ -4,22 +4,75 @@ description: modal system
 keywords: documentação, locastyle, modal
 ---
 
-<button data-module="modal" data-target="#myAwesomeModal">
-  Open modal
-</button>
+<h1 class="ls-title-intro">Modal</h1>
+<p class="ls-title-2">Modal é um componente para exibir uma informação ou ...</p>
 
-<div class="ls-modal fade" id="myAwesomeModal">
-  <div class="ls-modal-box">
-    <div class="ls-modal-header">
-      <button type="button" data-dismiss="modal" class="close">&times;</button>
-      <h4 class="ls-modal-title">Modal title</h4>
-    </div>
-    <div class="ls-modal-body">
-      <p><%= lorem.sentences 15 %></p>
-    </div>
-    <div class="ls-modal-footer">
-      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      <button type="button" class="btn btn-primary">Save changes</button>
-    </div>
-  </div>
-</div><!-- /.modal -->
+<div class="doc-block">
+  <h2 class="ls-title-2">Como usar</h2>
+</div>
+<table class="ls-table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Padrão</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>effect</td>
+      <td>fade, crazy, chumba</td>
+      <td>fade</td>
+      <td>Cria uma animação</td>
+    </tr>
+
+    <tr>
+      <td>target</td>
+      <td>#myTarget</td>
+      <td>--</td>
+      <td>Abre a modal com o mesmo nome do target</td>
+    </tr>
+
+    <tr>
+      <td>content</td>
+      <td>um texto curto</td>
+      <td>--</td>
+      <td>
+        Abre a modal com o texto inserido
+        <p>Só funciona se não houver <strong>data-target</strong></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>title</td>
+      <td>um titulo curto</td>
+      <td>--</td>
+      <td>
+        Abre a modal com o titulo inserido
+        <p>Só funciona se não houver <strong>data-target</strong></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>footer</td>
+      <td>html</td>
+      <td>--</td>
+      <td>
+        Abre a modal com o html inserido
+        <p>Só funciona se não houver <strong>data-target</strong></p>
+      </td>
+    </tr>
+
+
+
+  </tbody>
+</table>
+
+<%= partial 'documentacao/shared/modal' %>
+
+
+<code class="language-html">
+  <%= partial 'documentacao/shared/modal' %>
+</code>
