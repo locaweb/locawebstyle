@@ -7,8 +7,8 @@
   overflow-scrolling: touch
   height: calc(100% - $heightTopbar)
   background-color: #f7f7f7
-  position: relative
-  z-index: 3
+  height: 100%
+  overflow: auto
   +single-transition(all, .5s)
   +translate(0, 0)
 
@@ -46,4 +46,5 @@
   .ls-main
     margin-left: $sidebarWidth
     +single-transition(none)
+    +transform(none)
 

@@ -1,29 +1,51 @@
+$default-width: 600px
+$large-width: 750px
+$small-width: 450px
+
 .ls-modal
+  visibility: hidden
+  position: fixed
+  background-color: rgba(0, 0, 0, 0.4)
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 16
+  overflow: auto
+  overflow-y: scroll
+  +single-transition(opacity, .15s, linear)
+
+  &.opened
+    visibility: visible
+
   &.fade
     opacity: 0
+    +single-transition(opacity, .15s, linear)
 
-.ls-modal
-  display: none
-  position: absolute
-  top: 10%
-  left: 50%
-  margin-left: -300px
+    &.opened
+      opacity: 1
+
+.ls-modal-box
+  position: relative
+  z-index: 16
+  margin: 5% auto 0
+  width: $default-width
   background: red
-  padding: 50px
-  z-index: 11
-  width: 600px
 
-.ls-modal
-  &.fade
-    opacity: 1
-    +single-transition(opacity .15s linear)
+  &.ls-modal-large
+    width: $large-width
+    margin-left: -$large-width / 2
 
+  &.ls-modal-small
+    width: $small-width
+    margin-left: -$small-width / 2
 
 .ls-modal-overlay
   position: fixed
   top: 0
-  right: 0
-  bottom: 0
   left: 0
-  z-index: 10
+  width: 100%
+  height: 100%
+  z-index: 15
   background: rgba(0,0,0, 0.5)
+  +single-transition(opacity, .35s, linear)

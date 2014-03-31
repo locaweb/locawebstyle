@@ -4,7 +4,6 @@ locastyle.modal = (function() {
 
   var config = {
     modal: '.ls-modal',
-    effetct: 'fade',
     open: {
       trigger: '[data-module="modal"]'
     },
@@ -14,28 +13,27 @@ locastyle.modal = (function() {
   }
 
   function init() {
-    _open();
-    _close();
+    open();
   }
 
-  function _open(){
+  function open(){
     $(config.open.trigger).on('click', function(){
-      $('body').append(
-        $(config.modal).addClass("opened "+config.effetct).show()
-      );
+      $(config.modal).addClass("opened");
       $('body').append( '<div class="ls-modal-overlay"></div>');
+      close();
     })
   }
 
-  function _close(){
-    $(config.close.trigger).on('click', function(){
-      $(config.modal).removeClass("opened").hide();
+  function close(){
+    $(".ls-modal-overlay, " + config.close.trigger).on('click', function(){
+      $(config.modal).removeClass("opened");
       $(".ls-modal-overlay").remove()
     })
   }
 
   return {
-    init: init
+    init: init,
+    close: close
   };
 
 }());
