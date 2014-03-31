@@ -7,12 +7,12 @@ describe("Dropdown: ", function(){
   describe("Dropdown toggle", function(){
     describe('when click on a dropdown trigger', function () {
 
-      it("should activate the related target dropdown", function(){
+      it("should activate a disabled related dropdown module", function(){
         $("#dropdown-test > a:first-child").trigger("click");
         expect($("#dropdown-test").hasClass("active")).toEqual(true);
       });
 
-      it("should the activate related dropdown module", function() {
+      it("should disable an active related dropdown module", function() {
         $("#dropdown-test-2 > a:first-child").trigger("click");
         expect($("#dropdown-test-2").hasClass("active")).toEqual(false);
       });
