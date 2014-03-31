@@ -42,11 +42,18 @@ page "/documentacao/*", :layout => "documentacao"
 # activate :livereload
 
 # Methods defined in the helpers block are available in templates
-# helpers do
+helpers do
 #   def some_helper
 #     "Helping"
 #   end
-# end
+  # Returns all pages under a certain directory.
+  def sub_pages(dir)
+    sitemap.resources.select do |resource|
+      resource.path.start_with?(dir)
+    end
+  end
+
+end
 
 set :stable, "3.0.0"
 
