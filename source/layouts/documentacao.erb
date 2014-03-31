@@ -15,14 +15,9 @@
   <aside class="ls-sidebar">
     <nav class="ls-menu">
       <ul>
-        <li><a href="/documentacao/abas/">Abas</a></li>
-        <li><a href="/documentacao/barra-de-progresso/">Barra de progresso</a></li>
-        <li><a href="/documentacao/botoes/">Botões</a></li>
-        <li><a href="/documentacao/classes-funcionais/">Classes funcionais</a></li>
-        <li><a href="/documentacao/collapse/">Collapse</a></li>
-        <li><a href="/documentacao/geral/">Geral</a></li>
-        <li><a href="/documentacao/labels/">Labels</a></li>
-        <li><a href="/documentacao/popover/">Popover</a></li>
+      <% sub_pages('documentacao').each do |resource| %>
+          <li><%= link_to resource.data.title, resource.url %></li>
+      <% end %>
        </ul>
     </nav>
   </aside>
