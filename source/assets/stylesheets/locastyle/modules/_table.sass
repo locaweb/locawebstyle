@@ -1,16 +1,47 @@
 .ls-table
   width: 100%
   border-collapse: collapse
+  background-color: #fff
+  margin: 20px 0
+
+  &.ls-bg-header thead
+    background-color: $color-3
+
+    th
+      color: $color-1
+
+  tbody tr:hover
+    background-color: rgba($color-4, .02)
+
+  &.ls-no-hover
+    tbody tr:hover
+      background-color: inherit
 
   td, th
-    padding: 10px
-    border-bottom: 1px solid $gray-4
+    padding: 13px
+    border-bottom: 1px solid $gray-1
     text-align: left
     font-size: .88rem
-    color: $gray-3
+    color: $gray-4
 
-  th
+    a
+      color: $color-2
+
+      &:hover
+        color: $color-3
+
+  thead th
     border-bottom-width: 2px
 
-  tr:last-child td
+  tbody tr:last-child td,
+  tbody tr:last-child th
     border-bottom: none
+
+  &.ls-big-space
+    td, th
+      padding: 20px 15px
+
+  &.ls-small-space
+    td, th
+      padding: 5px
+      font-size: .78rem
