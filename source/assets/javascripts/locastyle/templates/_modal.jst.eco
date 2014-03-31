@@ -1,17 +1,15 @@
-<div class="ls-modal fade" id="myAwesomeModal">
-  <div class="ls-modal-dialog">
-    <div class="ls-modal-content">
-      <div class="ls-modal-header">
-        <button type="button" class="close">&times;</button>
-        <h4 class="ls-modal-title">Modal title</h4>
-      </div>
-      <div class="ls-modal-body">
-        <p>Modal Body&hellip;</p>
-      </div>
-      <div class="ls-modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
+<div class="ls-modal fade" id="">
+  <div class="ls-modal-box">
+    <div class="ls-modal-header">
+      <button type="button" data-dismiss="modal" class="close">&times;</button>
+      <h4 class="ls-modal-title"><%= @title %></h4>
+    </div>
+    <div class="ls-modal-body">
+      <p><%= @content %></p>
+    </div>
+    <div class="ls-modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal"><%= @close %></button>
+      <button type="button" class="btn btn-primary"><%= @save %></button>
+    </div>
+  </div>
 </div><!-- /.modal -->
