@@ -7,3 +7,4 @@
 //= require locastyle/_tabs
 //= require locastyle/_templates
 //= require locastyle/_general
+//= require locastyle/_progress-bar
