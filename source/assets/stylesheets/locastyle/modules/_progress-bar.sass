@@ -11,12 +11,18 @@ progress.ls-progress-bar
   height: 1rem
   display: block
   border: none
-progress::-webkit-progress-bar
-  background: $color-1
-  padding: .1rem
-  border-radius: .2rem
-  // box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2)
-progress::-webkit-progress-value
-  border-radius: .2rem
-  // box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4)
-  background: $color-2
+
+  progress::-webkit-progress-bar
+    background: $color-1
+    padding: .1rem
+    border-radius: .2rem
+
+  progress::-webkit-progress-value
+    border-radius: .2rem
+    background: $color-2
+
+  // &.ls-progress-bar-gray
+  //   progress::-webkit-progress-bar
+  //     background: $color-2
+
+
