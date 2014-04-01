@@ -16,6 +16,7 @@ locastyle.general = (function() {
     _elementDisabled();
     _linkPreventDefault();
     _btnGroupActivationToogle();
+    menuAnchor();
   }
 
   function _loadEvents () {
@@ -26,6 +27,10 @@ locastyle.general = (function() {
         fn(evt, $this);
       });
     });
+  }
+
+  function menuAnchor(){
+    $(".ls-active").focus().css('outline', 'none')
   }
 
   function _toggleClass(evt, $this) {
