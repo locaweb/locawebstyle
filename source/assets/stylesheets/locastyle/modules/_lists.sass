@@ -5,6 +5,8 @@
 
   header.ls-list-header
     padding: 12px
+    display: table
+    width: 100%
 
     .ls-group-actions
       float: right
@@ -25,9 +27,6 @@
         color: $gray-3
         display: block
         font-size: .82rem
-
-    [class*="btn-"]
-      float: right
 
     .dropdown-toggle:after,
     .btn-default.dropdown-toggle:after
@@ -50,22 +49,22 @@
       .ls-list-label
         display: block
 
+    [class*="col-xs-12"]
+      border-left: none
+      border-top: 1px solid $gray-2
+      text-align: center
+
+      &:first-child
+        border-top: none
+
+
+
 
 @media (min-width: 768px)
 
-  .ls-list
+  .ls-list .ls-list-content
 
-    .btn-group
-      margin-left: 10px
-
-    .ls-list-content
-      display: table
-      padding: 12px
-      width: 100%
-
-      [class*="col-"]
-
-        padding: 0 15px
-        display: table-cell
-        vertical-align: middle
-
+    [class*="col-xs-12"]
+      border-left: 1px solid $gray-2
+      border-top: none
+      text-align: left
