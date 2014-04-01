@@ -56,7 +56,7 @@ helpers do
 
   def assets_files(dir)
     Dir["source/#{dir}/*"].map do |resource|
-      resource
+      resource.match('_?([^\/]+)\.[\w]+$')
     end
   end
 
