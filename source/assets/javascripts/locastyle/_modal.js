@@ -24,7 +24,7 @@ locastyle.modal = (function() {
       $('body').append( locastyle.templates.modal($element) );
     }else{
       $($element.target)
-        .addClass("opened");
+        .addClass("opened")
         .append('<div class="ls-modal-overlay"></div>');
     }
     close();
