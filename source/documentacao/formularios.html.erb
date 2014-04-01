@@ -3,7 +3,7 @@ title: Formulários
 description: Elementos padrão de formulários e disposição de campos
 ---
 
-<div class="row doc-section">
+<div class="doc-section">
   <h3 class="doc-section-title">Campos de formulário</h3>
 
   <p>No <b>Locastyle</b> usamos o padrão de <i>input</i> dentro do <i>label</i>, para evitar <i>markup</i> adicional envolvendo o campo e seu nome e aproveitar o comportamento nativo de clique no label dando foco no campo, sem precisar adicionar o atributo <code>for="#id-do-elemento"</code>.</p>
@@ -35,6 +35,33 @@ description: Elementos padrão de formulários e disposição de campos
           <input type="text" name="email" placeholder="email" required />
         </label>
       </div>
+      <div class="row" >
+        <label class="ls-field col-md-3">
+          <span class="ls-label">Nome</span>
+          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
+        </label>
+        <label class="ls-field col-md-4">
+          <span class="ls-label">Email</span>
+          <input type="text" name="email" placeholder="email" required />
+        </label>
+      </div>
+    </form>
+
+    <br>
+    <p>Form inline</p>
+
+    <form action="" class="ls-form">
+      <div class="row" >
+        <label class="ls-field">
+          <span class="ls-label col-md-2">Nome</span>
+          <input class="col-md-4" type="text" name="nome" placeholder="Nome e sobrenome" required />
+        </label>
+        <label class="ls-field">
+          <span class="ls-label">Email</span>
+          <input type="text" name="email" placeholder="email" required />
+        </label>
+      </div>
+
     </form>
 
   </div>
