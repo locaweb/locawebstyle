@@ -2,83 +2,86 @@
 title: Popover
 description: popover
 ---
-<h1 class="ls-title-intro">Popover</h1>
-<p class="ls-title-2">Popover é um componente para exibir uma informação de um determinado elemento.</p>
 
-<div class="doc-block">
-  <h2 class="ls-title-2">Como usar</h2>
+<div class="row">
+
+  <div class="doc-block">
+    <h2 class="ls-title-2">Como usar</h2>
+  </div>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Padrão</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>data-trigger</td>
+        <td>click / hover</td>
+        <td>click</td>
+        <td>cria o popover baseado na posição do elemento</td>
+      </tr>
+
+      <tr>
+        <td>data-placement</td>
+        <td>top / bottom / left / right</td>
+        <td>top</td>
+        <td>posiciona o popover</td>
+      </tr>
+
+      <tr>
+        <td>data-title</td>
+        <td>text</td>
+        <td>--</td>
+        <td>insere o título no popover</td>
+      </tr>
+
+      <tr>
+        <td>data-container</td>
+        <td>classe ou id</td>
+        <td>body</td>
+        <td>posiciona o popover de acordo com elemento clicado</td>
+      </tr>
+
+      <tr>
+        <td>data-content</td>
+        <td>texto e/ou tags HTML</td>
+        <td>--</td>
+        <td>insere o conteúdo no popover</td>
+      </tr>
+
+      <tr>
+        <td>data-custom-class</td>
+        <td>classe</td>
+        <td>--</td>
+        <td>permite inserir qualquer classe para customização do popover</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="doc-block">
+    <h2 class="ls-title-2">Exemplos completos</h2>
+  </div>
+
+  <div class="ls-well ls-txt-center">
+    <%= partial 'documentacao/shared/popover' %>
+  </div>
+
+  <div class="doc-block">
+    <h2 class="ls-title-2">Exemplo utilizando os parametros default do popover</h2>
+  </div>
+
+  <div class="ls-well ls-txt-center">
+    <a href="#" class="ls-btn-primary" data-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a>
+  </div>
+
+  <code class="language-html">
+    <%= partial 'documentacao/shared/popover' %>
+  </code>
+
 </div>
 
-<table class="ls-table">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Tipo</th>
-      <th>Padrão</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>data-trigger</td>
-      <td>click / hover</td>
-      <td>click</td>
-      <td>cria o popover baseado na posição do elemento</td>
-    </tr>
 
-    <tr>
-      <td>data-placement</td>
-      <td>top / bottom / left / right</td>
-      <td>top</td>
-      <td>posiciona o popover</td>
-    </tr>
-
-    <tr>
-      <td>data-title</td>
-      <td>text</td>
-      <td>--</td>
-      <td>insere o título no popover</td>
-    </tr>
-
-    <tr>
-      <td>data-container</td>
-      <td>classe ou id</td>
-      <td>body</td>
-      <td>posiciona o popover de acordo com elemento clicado</td>
-    </tr>
-
-    <tr>
-      <td>data-content</td>
-      <td>texto e/ou tags HTML</td>
-      <td>--</td>
-      <td>insere o conteúdo no popover</td>
-    </tr>
-
-    <tr>
-      <td>data-custom-class</td>
-      <td>classe</td>
-      <td>--</td>
-      <td>permite inserir qualquer classe para customização do popover</td>
-    </tr>
-  </tbody>
-</table>
-
-<div class="doc-block">
-  <h2 class="ls-title-2">Exemplos completos</h2>
-</div>
-
-<div class="ls-well ls-txt-center">
-  <%= partial 'documentacao/shared/popover' %>
-</div>
-
-<div class="doc-block">
-  <h2 class="ls-title-2">Exemplo utilizando os parametros default do popover</h2>
-</div>
-
-<div class="ls-well ls-txt-center">
-  <a href="#" class="ls-btn-primary" data-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a>
-</div>
-
-<code class="language-html">
-  <%= partial 'documentacao/shared/popover' %>
-</code>
