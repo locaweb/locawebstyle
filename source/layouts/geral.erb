@@ -1,26 +1,43 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <title><%= current_page.data.title %></title>
-    <meta name="description" content="<%= current_page.data.description %>" />
-    <meta name="keywords" content="<%= current_page.data.keywords %>" />
-    <%= stylesheet_link_tag "locastyle" %>
-    <%= stylesheet_link_tag "documentacao" %>
-  </head>
-  <body class="<%= page_classes %>">
-    <header class="header">
-      <button type="button" class="show-menu">Exibir menu</button>
-      <h1>
-        <a href="/">
-          <%= I18n.t(:name) %>
-        </a>
-      </h1>
-    </header>
-    <%= yield %>
-    <%= javascript_include_tag  "libs/jquery-2.1.0.min" %>
-    <%= javascript_include_tag  "locastyle" %>
-    <%= javascript_include_tag  "documentacao" %>
-  </body>
+<html class="ls-theme-green">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title><%= current_page.data.title %></title>
+  <meta name="description" content="<%= current_page.data.description %>" />
+  <meta name="keywords" content="<%= current_page.data.keywords %>" />
+  <%= stylesheet_link_tag "locastyle" %>
+  <%= stylesheet_link_tag "docs" %>
+</head>
+<body class="<%= page_classes %>">
+  <div class="ls-topbar"><h1 class="ls-brand-name ls-ico-question"><a href="/">Documentação Locastyle</a></h1></div>
+  <aside class="ls-sidebar">
+    <nav class="ls-menu">
+      <ul>
+        <% sub_pages('').each do |resource| %>
+          <% if resource.url.split('/').size == 2 %>
+            <li>
+              <a href="<%= resource.url %>"><%= resource.data.title%></a>
+            </li>
+          <% end %>
+        <% end %>
+       </ul>
+    </nav>
+  </aside>
+  <main class="ls-main">
+    <div class="ls-container">
+    <div class="row">
+      <h1 class="ls-title-intro"><%= current_page.data.title %></h1>
+      <p class="ls-title-2">
+        <%= current_page.data.description %>
+      </p>
+    </div>
+      <%= yield %>
+    </div>
+  </main>
+  <%= javascript_include_tag  "libs/jquery-2.1.0.min" %>
+  <%= javascript_include_tag  "locastyle" %>
+  <%= javascript_include_tag  "docs" %>
+ </body>
 </html>
