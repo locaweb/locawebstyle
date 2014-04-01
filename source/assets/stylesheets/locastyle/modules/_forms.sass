@@ -4,12 +4,20 @@
   .row
     margin-bottom: .5rem
 
+    &:after
+      @extend .ls-clearfix
+
   .ls-field
     display: block
+    padding-bottom: 15px
 
   .ls-label
     display: block
     font-size: .8rem
+
+  input
+    display: block
+    width: 100%
 
 
   // [class*="col-"]
@@ -20,8 +28,6 @@
   // .ls-field-join
   //   [class*="col-"]
   //     padding: 0
-
-  input
 
   input[type="color"],
   input[type="date"],
@@ -43,8 +49,8 @@
     border: 1px solid $color-1
     height: 2rem
     padding: 0 .5rem
-    display: block
-    width: 100%
+    // display: block
+
 
     // color
     // date
@@ -74,3 +80,8 @@
   //   submit
   // textarea
   // datalist
+
+@media (min-width: $screen-sm)
+  .ls-field
+    padding-bottom: 0
+
