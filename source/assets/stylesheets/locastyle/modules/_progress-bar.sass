@@ -54,7 +54,20 @@
       left: 1rem
 
     &::-webkit-progress-value
-      background-color: pink
+      display: none
+
+    &::after
+      content: ""
+      background-color: #fff
+      border-radius: 0
+      position: absolute
+      top: 50%
+      left: 50%
+      height: 3rem
+      width: 3rem
+      display: block
+      // -webkit-transform: skew(43deg)
+      -webkit-transform: rotate(1deg)
 
   &.ls-progress-percent
     &:before
