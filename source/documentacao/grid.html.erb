@@ -4,4 +4,18 @@ description: grid system
 keywords: documentação, locastyle, grid
 ---
 
-grid
+<div class="row">
+  <h1 class="ls-title-intro">Grid</h1>
+  <p class="ls-title-2">
+
+  </p>
+</div>
+
+<div class="doc-example-grid">
+    <% (1..12).each do |num| %>
+      <div class="row">
+          <div class="col-sm-<%= num %>">.col-sm-<%= num %></div>
+          <div class="col-sm-<%= 12-num %>">.col-sm-<%= 12-num %></div>
+      </div>
+    <% end %>
+</div>
