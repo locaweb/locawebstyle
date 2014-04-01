@@ -8,6 +8,7 @@ description: Um painel com título visível e contenúdo oculto
 
   <p>A aparência e comportamento de um collapse são:</p>
 
+  <div class="doc-example doc-example-markup">
   <div class="ls-collapse">
     <div class="ls-collapse-title">
       Título
@@ -18,19 +19,8 @@ description: Um painel com título visível e contenúdo oculto
       <% end %>
     </div>
   </div>
+  </div>
 
-  <p>Um <i>collapse</i> precisa da seguinte estrutura no html:</p>
-
-  <code class="language-html ls-well-example">
-    <div class="ls-collapse">
-      <div class="ls-collapse-title">
-        Título
-      </div>
-      <div class="ls-collapse-body">
-        Conteúdo
-      </div>
-    </div>
-  </code>
 
   <p>Os títulos, vísiveis quando o <i>collapse</i> está fechado, podem conter qualquer conteúdo, por exemplo:</p>
 
@@ -141,6 +131,7 @@ description: Um painel com título visível e contenúdo oculto
 
   <p>Um <i>accordeon</i> é um conjunto de <i>collapses</i>, como mostrados acima, com um elemento que os agrupa, com a classe <i>ls-collapse-group</i>.</p>
 
+  <div class="doc-example doc-example-markup">
   <div class="ls-collapse-group">
     <% 5.times do |num| %>
     <!-- início do collapse <%= num+1 %> -->
@@ -155,25 +146,8 @@ description: Um painel com título visível e contenúdo oculto
     <!-- fim do collapse <%= num+1 %> -->
     <% end %>
   </div>
+  </div>
 
-  <p>O <i>accordeon</i> acima possui o seguinte código:</p>
-
-  <code class="language-html ls-well-example">
-    <div class="ls-collapse-group">
-      <% 5.times do |num| %>
-      <!-- início do collapse <%= num+1 %> -->
-      <div class="ls-collapse">
-        <div class="ls-collapse-title">
-          Título do collapse <%= num+1 %>
-        </div>
-        <div class="ls-collapse-body">
-          <%= lorem.paragraphs 1%>
-        </div>
-      </div>
-      <!-- fim do collapse <%= num+1 %> -->
-      <% end %>
-    </div>
-  </code>
 
 
   <p>Os <i>collapses</i> agrupados em um <i>accordeon</i> aceitam as mesmas configurações que um <i>collapse</i> normal.</p>
@@ -185,6 +159,7 @@ description: Um painel com título visível e contenúdo oculto
 
   <p>Para usar um botão ou <i>link</i> para controlar um <i>collapse</i> utilize o atributo <i>data-toggle-collapse</i> com o valor do <b>id</b> do collapse.</p>
 
+  <div class="doc-example doc-example-markup">
   <button type="button" class="ls-btn-primary" data-toggle-collapse="#collapse1">Abre/Fecha o <i>collapse</i> <b>#collapse1</b></button>
 
   <div id="collapse1" class="ls-collapse">
@@ -195,10 +170,7 @@ description: Um painel com título visível e contenúdo oculto
       <p><%= lorem.paragraphs 2 %></p>
     </div>
   </div>
-
-  <code class="language-html ls-well-example">
-    <button type="button" class="ls-btn-primary" data-toggle-collapse="#collapse1">Abre/Fecha o collapse #collapse1</button>
-  </code>
+  </div>
 
   <p>Para abrir/fechar um <i>collapse</i> usando javascript, use:</p>
 
