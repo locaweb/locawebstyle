@@ -5,8 +5,11 @@
   border-width: 1px
   border-radius: 4px
 
-  &:first-child
-    margin-top: 20px
+  &.ls-big-space
+    @extend .ls-big-space
+
+  &.ls-small-space
+    @extend .ls-small-space
 
   .ls-link-alert
     font-weight: 700
