@@ -1,0 +1,60 @@
+// Criando Botão de Switch
+.ls-switch-btn
+  position: relative
+
+  label
+    +user-select(none)
+    text-indent: -9999px
+    background: $gray-3 url(../images/ico-switch-on-off.png) -159px center no-repeat
+    height: 24px
+    width: 50px
+    position: relative
+    margin-right: 10px
+    border-radius: 3px
+    display: inline-block
+    cursor: pointer
+
+    &:before
+      content: ""
+      position: absolute
+      top: 2px
+      left: 2px
+      display: block
+      width: 23px
+      height: 20px
+      border: 1px solid rgba($gray-5, .15)
+      background: #fff url(../images/ico-switch.png) center no-repeat
+      border-radius: 2px 0 0 2px
+
+    &:hover,
+    &:focus
+
+      &:before
+        background-color: #ebebeb
+
+    &:focus
+      outline: 5px auto -webkit-focus-ring-color
+      outline-offset: -2px
+
+  input
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 2
+    width: 23px
+    height: 20px
+    opacity: 0
+
+  input:checked + label
+    box-shadow: none
+    background-position: 7px center
+
+    &:before
+      top: 2px
+      left: auto
+      right: 2px
+      border-radius: 0 2px 2px 0
+
+  input:focus + label
+    outline: 5px auto -webkit-focus-ring-color
+    outline-offset: -2px
