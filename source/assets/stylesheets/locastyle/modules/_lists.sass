@@ -1,0 +1,70 @@
+.ls-list
+  border: 1px solid $gray-2
+  border-radius: 3px
+  margin-bottom: 15px
+
+  header.ls-list-header
+    padding: 12px
+    display: table
+    width: 100%
+
+    .ls-group-actions
+      float: right
+
+    .ls-list-image
+      display: inline-block
+      margin-right: 10px
+      vertical-align: top
+
+    .ls-list-title
+      display: inline-block
+
+      a
+        font-size: 1rem
+        font-weight: bold
+
+      small
+        color: $gray-3
+        display: block
+        font-size: .82rem
+
+    .dropdown-toggle:after,
+    .btn-default.dropdown-toggle:after
+      margin-left: 0
+
+  .ls-list-content
+    border-top: 1px solid $gray-2
+    font-size: .82rem
+    overflow: hidden
+    padding: 0 12px
+
+    [class*="col-"]
+      border-left: 1px solid $gray-2
+      padding-bottom: 12px
+      padding-top: 12px
+
+      &:first-child
+        border-color: transparent
+
+      .ls-list-label
+        display: block
+
+    [class*="col-xs-12"]
+      border-left: none
+      border-top: 1px solid $gray-2
+      text-align: center
+
+      &:first-child
+        border-top: none
+
+
+
+
+@media (min-width: 768px)
+
+  .ls-list .ls-list-content
+
+    [class*="col-xs-12"]
+      border-left: 1px solid $gray-2
+      border-top: none
+      text-align: left

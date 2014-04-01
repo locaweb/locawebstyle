@@ -3,6 +3,40 @@ title: Listas
 description: Listas simples e complexas
 ---
 
-<div class="row">
-  <p>listas</p>
-</div>
+  <h2 class="ls-title-2">Lista com header + imagem e grids de informações</h2>
+  <div class="ls-well ls-well-example">
+    <br>
+    <%= partial 'documentacao/shared/lists' %>
+    <code class="language-html ">
+      <%= partial 'documentacao/shared/lists' %>
+    </code>
+  </div>
+
+  <h2 class="ls-title-2">Lista somente com header</h2>
+  <div class="ls-well ls-well-example">
+    <br>
+    <div class="ls-list">
+      <header class="ls-list-header">
+        <div class="ls-group-actions">
+          <a href="#" class="ls-btn-primary">Ação principal</a>
+        </div>
+        <div class="ls-list-title">
+          <a href="">Identificador</a>
+          <small>Descrição de plano ou caracsterística do produto e recurso </small>
+        </div>
+      </header>
+    </div>
+ <code class="language-html ">
+  <div class="ls-list">
+    <header class="ls-list-header">
+      <div class="ls-group-actions">
+        <a href="#" class="ls-btn-primary">Ação principal</a>
+      </div>
+      <div class="ls-list-title">
+        <a href="">Identificador</a>
+        <small>Descrição de plano ou caracsterística do produto e recurso </small>
+      </div>
+    </header>
+  </div>
+</code>
+  </div>
