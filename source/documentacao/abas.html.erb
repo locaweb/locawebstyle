@@ -1,34 +1,44 @@
 ---
 title: Abas
-description: Uma área de conteúdo única com múltiplos painéis, com um menu de navegação horizontal
+description: Abas são perfeitas para organizar informações em painéis de conteúdo, onde o acesso precisa ser rápido e quando há muito conteúdo sobre um determinado assunto.
 ---
 
-  <div class="doc-block">
-    <h2 class="ls-title-2">Como usar</h2>
-  </div>
+<hr>
+<table class="ls-table">
+  <thead>
+    <tr>
+      <th>Seletor</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>.ls-tabs-nav</td>
+      <td>Vai no elemento pai da navegação das abas, normalmente "ul".</td>
+    </tr>
+    <tr>
+      <td>data-module="tab"</td>
+      <td>Vai no elemento que servirá de "trigger" da ativação das abas, normalmente um link "a".</td>
+    </tr>
+    <tr>
+      <td>.ls-tab-container</td>
+      <td>Vai no elemento que servirá de "container" para o conteúdo das abas, normalmente uma "div".</td>
+    </tr>
+    <tr>
+      <td>.ls-tab-content</td>
+      <td>Vai no elemento que contém o conteúdo, normalmente uma "div".</td>
+    </tr>
+    <tr>
+      <td>.active</td>
+      <td>É a classe que indica qual aba está ativa, ela vai na "li" ativa da navegação e também no ".ls-tab-content" ativo.</td>
+    </tr>
+  </tbody>
+</table>
 
-  <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Tipo</th>
-        <th>Padrão</th>
-        <th>Descrição</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+
+<%= partial 'documentacao/shared/abas' %>
 
 
+<code class="language-html ls-well-example">
   <%= partial 'documentacao/shared/abas' %>
-
-  <code class="language-html ls-well-example">
-    <%= partial 'documentacao/shared/abas' %>
-  </code>
+</code>

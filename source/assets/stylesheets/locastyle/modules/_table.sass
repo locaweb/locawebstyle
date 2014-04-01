@@ -4,6 +4,10 @@
   background-color: #fff
   margin: 20px 0
 
+  .ls-well &:first-child
+    margin-top: 0
+    margin-bottom: 0
+
   &.ls-bg-header thead
     background-color: $color-3
 
@@ -39,9 +43,8 @@
 
   &.ls-big-space
     td, th
-      padding: 20px 15px
+      @extend .ls-big-space
 
   &.ls-small-space
     td, th
-      padding: 5px
-      font-size: .78rem
+      @extend .ls-small-space
