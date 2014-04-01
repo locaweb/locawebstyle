@@ -96,12 +96,12 @@
             padding: 15px 15px 15px 60px
 
 
-@media (min-width: 768px)
+@media (min-width: $screen-sm)
   .ls-sidebar
-    float: none
-    -webkit-transform: none
-    top: $heightTopbar
-    height: calc(100% - 60px)
+    +transform(none)
     +translate(0, 0)
     +single-transition(none)
+    float: none
+    top: $heightTopbar
+    height: calc(100% - 60px)
 
