@@ -21,7 +21,7 @@ describe("Tabs: ", function(){
         var spyEvent = spyOnEvent('#tab-trigger-2', 'click');
         $("#tab-trigger-2").trigger("click");
         expect(spyEvent).toHaveBeenPrevented();
-      })
+      });
 
       it("should activate the parent li", function(){
         var $parentLi = $("#tab-trigger-2").parents("li");
