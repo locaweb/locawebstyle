@@ -8,8 +8,8 @@
       <p><%= @content %></p>
     </div>
     <div class="ls-modal-footer">
-      <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-      <button type="button" class="btn btn-primary">Salvar</button>
+      <button type="button" class="ls-btn float-right ls-float-right" data-dismiss="modal"><%= @close %></button>
+      <button type="button" class="ls-btn ls-btn-primary"><%= @save %></button>
     </div>
   </div>
   <div class="ls-modal-overlay"></div>
