@@ -9,12 +9,20 @@ locastyle.dismiss = (function() {
 
   function bindClickOnTriggers() {
     $('[data-module=dismiss]').on('click', function() {
-      dismiss(this);
+      checkTarget(this);
     });
   }
 
+  function checkTarget(el) {
+    var target = $(el).parents('.ls-dismissable');
+    if ($(el).data('target')) {
+      target = ($(el).data('target'));
+    };
+    dismiss(target);
+  }
+
   function dismiss(el) {
-    $(el).parents('.ls-dismissable').addClass('dismissed');
+    $(el).addClass('dismissed');
   }
 
   return {
