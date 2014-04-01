@@ -1,0 +1,31 @@
+---
+title: Downloads
+description: Aqui você pode baixar separadamente os módulos do Locastyle para usar em seu projeto.
+---
+
+  <div class="doc-block">
+    <h2 class="ls-title-2">Downloads</h2>
+  </div>
+  <ul>
+    <li> <h2 class="ls-title-2">Javascripts</h2> </li>
+    <% assets_files('assets/javascripts/locastyle').each do |resource| %>
+      <li>
+        <label>
+          <input type="checkbox"> <%= resource %>
+        </label>
+      </li>
+    <% end %>
+  </ul>
+  <br><hr><br>
+  <ul>
+    <li> <h2 class="ls-title-2">Stylesheets</h2> </li>
+    <% assets_files('assets/stylesheets/locastyle/base').each do |resource| %>
+      <li>
+        <label>
+          <input type="checkbox"> <%= resource %>
+        </label>
+      </li>
+    <% end %>
+  </ul>
+  <br>
+  <input type="submit" class="ls-btn ls-btn-primary" value="Download">
