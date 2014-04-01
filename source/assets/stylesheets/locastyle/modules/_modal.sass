@@ -63,23 +63,21 @@ $paddingDefault: 20px
   padding: $paddingDefault
   border-bottom: 1px solid $gray-1
 
-  [data-dismiss]:before
+  [data-dismiss]
     position: absolute
-    right: -10px
-    top: -10px
+    right: 10px
+    top: 14px
     border: none
     text-align: center
     background: none
-    content: "x"
-    background-color: $gray-2
-    color: $gray-5
-    font-size: .8rem
+    color: #212121
+    font-size: 1.3rem
     font-weight: bold
-    border-radius: 50%
-    padding: 3px 8px 6px
+    cursor: pointer
+    opacity: .3
 
     &:hover
-      background-color: $gray-3
+      opacity: 1
 
   .ls-modal-title
     font-size: 1rem
