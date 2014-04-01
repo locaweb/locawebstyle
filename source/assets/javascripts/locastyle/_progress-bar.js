@@ -14,6 +14,7 @@ locastyle.progress = (function() {
     $('.ls-progress').each(function(index, progressbar){
       var $progressbar = $(progressbar);
       animate($progressbar);
+      percent($progressbar);
     });
   }
 
@@ -36,6 +37,14 @@ locastyle.progress = (function() {
     document.addEventListener('visibilitychange', function(event) {
       animate($progressbar);
     });
+  }
+
+  function percent ($progressbar) {
+    if( $progressbar.hasClass('ls-progress-percent') ){
+      if( $progressbar[0].nodeName == 'PROGRESS' ){
+
+      }
+    }
   }
 
   return {
