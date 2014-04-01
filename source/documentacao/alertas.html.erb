@@ -1,14 +1,30 @@
 ---
 title: Alertas
-description: Alertas
+description: Alertas são usadas para enviar um feedback contextual de sucesso, erro, warning ou apenas uma notificação de novas features no sistema.
 ---
 
-<h1 class="ls-title-intro">Alertas</h1>
-<p class="ls-title-2">é isto.</p>
-
-<div class="ls-alert-success">Nesta casa tem <a class="ls-link-alert">palmeiras</a></div>
-
-<div class="ls-alert-warning ls-dismissable" data-module="dismiss">
-  <button class="ls-dismiss">&times;</button>
-  Atenção neste ponto.
+<div class="ls-well ls-well-example">
+  <%= partial 'documentacao/shared/alertas' %>
 </div>
+<code class="language-html"><%= partial 'documentacao/shared/alertas' %></code>
+
+<h2 class="ls-title-2">Alertas com links</h2>
+<p>Links dentro de alertas precisam da classe <code>.ls-link-alert</code>.</p>
+
+<div class="ls-well ls-well-example">
+  <%= partial 'documentacao/shared/alertas-links' %>
+</div>
+<code class="language-html"><%= partial 'documentacao/shared/alertas-links' %></code>
+
+<h2 class="ls-title-2">Fechando alertas</h2>
+<p>
+  Para utilizar este tipo de alerta, utilize a classe
+  <code>.ls-dismissable</code> junto com o atributo
+  <code>data-module="dismiss"</code>, dentro do alerta você terá um botão com a classe
+  <code>.ls-dismiss</code>.
+</p>
+
+<div class="ls-well ls-well-example">
+  <%= partial 'documentacao/shared/alertas-fechando' %>
+</div>
+<code class="language-html"><%= partial 'documentacao/shared/alertas-fechando' %></code>
