@@ -8,6 +8,7 @@ locastyle.modal = (function() {
       trigger: '[data-module="modal"]'
     },
     close: {
+      classes: '.ls-modal-overlay',
       trigger: '[data-dismiss="modal"]'
     }
   }
@@ -22,14 +23,15 @@ locastyle.modal = (function() {
     if(!$element.target){
       $('body').append( locastyle.templates.modal($element) );
     }else{
-      $($element.target).addClass("opened");
-      $($element.target).append('<div class="ls-modal-overlay"></div>');
+      $($element.target)
+        .addClass("opened");
+        .append('<div class="ls-modal-overlay"></div>');
     }
     close();
   }
 
   function close(){
-    $(".ls-modal-overlay, " + config.close.trigger).on('click', function(){
+    $( config.close.classes + ", " + config.close.trigger).on('click', function(){
       $(config.modal).removeClass( "opened");
       $(".ls-modal-overlay").remove();
     })
