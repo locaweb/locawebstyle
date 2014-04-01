@@ -16,9 +16,13 @@
     <nav class="ls-menu">
       <ul>
       <% sub_pages('documentacao').each do |resource| %>
-          <li>
-            <a <% if current_page.url ==  resource.url%>class="ls-active"<% end %> href="<%= resource.url %>"><%= resource.data.title%></a>
-          </li>
+          <% if resource.url.split('/')[2] == 'exemplos' %>
+
+          <% else %>
+            <li>
+              <a <% if current_page.url ==  resource.url%>class="ls-active"<% end %> href="<%= resource.url %>"><%= resource.data.title%></a>
+            </li>
+          <% end %>
       <% end %>
        </ul>
     </nav>
