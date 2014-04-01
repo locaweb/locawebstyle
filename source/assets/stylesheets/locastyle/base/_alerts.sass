@@ -1,0 +1,66 @@
+[class*="ls-alert-"]
+  padding: 15px
+  margin-bottom: 20px
+  border-style: solid
+  border-width: 1px
+  border-radius: 4px
+
+  &:first-child
+    margin-top: 20px
+
+  .ls-link-alert
+    font-weight: 700
+
+.ls-alert-success
+  background-color: #dff0d8
+  border-color: #d6e9c6
+  color: #3c763d
+
+  .ls-link-alert
+    color: #2b542c
+
+.ls-alert-info
+  background-color: #d9edf7
+  border-color: #bce8f1
+  color: #31708f
+
+  .ls-link-alert
+    color: #245269
+
+.ls-alert-warning
+  background-color: #fcf8e3
+  border-color: #faebcc
+  color: #8a6d3b
+
+  .ls-link-alert
+    color: #66512c
+
+.ls-alert-danger
+  background-color: #f2dede
+  border-color: #ebccd1
+  color: #a94442
+
+  .ls-link-alert
+    color: #843534
+
+[data-module=dismiss]
+  padding-right: 35px
+
+  &.dismissed
+    display: none
+
+  .ls-dismiss
+    float: right
+    position: relative
+    top: -3px
+    right: -25px
+    background: none
+    border: none
+    cursor: pointer
+    color: inherit
+    font-size: 1.31rem
+    opacity: .3
+    line-height: 1
+
+    &:hover
+      opacity: .5
