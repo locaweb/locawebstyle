@@ -47,9 +47,16 @@ helpers do
 #     "Helping"
 #   end
   # Returns all pages under a certain directory.
+
   def sub_pages(dir)
     sitemap.resources.select do |resource|
       resource.path.start_with?(dir)
+    end
+  end
+
+  def assets_files(dir)
+    Dir["source/#{dir}/*"].map do |resource|
+      resource
     end
   end
 

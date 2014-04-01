@@ -14,3 +14,4 @@ gem 'jasmine'
 gem 'therubyracer' # faster JS compiles
 gem 'oj' # faster JS compiles
 
+gem "pry"
