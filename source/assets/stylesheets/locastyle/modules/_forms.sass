@@ -1,6 +1,27 @@
 .ls-form
   label
-  .ls-input-label
+
+  .row
+    margin-bottom: .5rem
+
+  .ls-field
+    display: block
+
+  .ls-label
+    display: block
+    font-size: .8rem
+
+
+  // [class*="col-"]
+  //   // padding: 0 5px
+  //   [class*="col-"]
+  //     padding: 2px
+
+  // .ls-field-join
+  //   [class*="col-"]
+  //     padding: 0
+
+  input
 
   input[type="color"],
   input[type="date"],
@@ -17,7 +38,13 @@
   input[type="time"],
   input[type="url"],
   input[type="week"],
-    background-color: #900
+  input[type="text"]
+    background-color: #ccc
+    border: 1px solid $color-1
+    height: 2rem
+    padding: 0 .5rem
+    display: block
+    width: 100%
 
     // color
     // date
