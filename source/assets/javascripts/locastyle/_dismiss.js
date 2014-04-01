@@ -8,13 +8,21 @@ locastyle.dismiss = (function() {
   }
 
   function bindClickOnTriggers() {
-    $('[data-module=dismiss] .ls-dismiss').on('click', function() {
-      dismiss(this);
+    $('[data-module=dismiss]').on('click', function() {
+      checkTarget(this);
     });
   }
 
+  function checkTarget(el) {
+    var target = $(el).parents('.ls-dismissable');
+    if ($(el).data('target')) {
+      target = ($(el).data('target'));
+    };
+    dismiss(target);
+  }
+
   function dismiss(el) {
-    $(el).parents('[data-module=dismiss]').addClass('dismissed');
+    $(el).addClass('dismissed');
   }
 
   return {
