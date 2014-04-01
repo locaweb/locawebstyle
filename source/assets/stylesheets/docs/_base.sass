@@ -11,7 +11,7 @@
   padding: 2rem 1rem 1rem 1rem
   position: relative
   &:before
-    content: "Exemplo"
+    content: "Exemplo funcional"
     position: absolute
     top: 0
     left: 0
@@ -23,6 +23,44 @@
     line-height: 1rem
   &:after
     @extend .ls-clearfix
+
+  .doc-example-menu
+    height: 1.5rem
+    position: absolute
+    top: -1.5rem
+    right: .5rem
+    button
+      height: 1.5rem
+      background: #ddd
+      border: none
+      padding: 0 .3rem
+      cursor: pointer
+      color: #666
+      &.doc-example-menu-active
+        background-color: #fff
+        color: #333
+
+  .doc-example-markup-area
+    background-color: #fff
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    display: none
+    overflow: scroll
+    &:before
+      content: "Código do exemplo"
+      position: absolute
+      top: 0
+      left: 0
+      height: 1rem
+      background-color: #ddd
+      color: #666
+      padding: 0 .5rem
+      font-size: .6rem
+      line-height: 1rem
+      z-index: 4
 
 code
   // font-size: 12px
