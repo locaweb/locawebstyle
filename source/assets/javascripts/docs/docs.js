@@ -38,7 +38,7 @@ var lsdocs = (function() {
         .append('<div class="doc-example-markup-area"><code class="language-markup"></code></div>');
       var html = $example.html();
       $example.find('.doc-example-markup-area code').text(html);
-      // Prism.highlightAll();
+      Prism.highlightAll();
       menuExamples($example);
     });
   }
@@ -60,7 +60,6 @@ var lsdocs = (function() {
   }
 
   function convertCodeExamples(){
-    return;
     $('code.language-html').each(function (i,e) {
       var html = $(this).html();
       $(this).text(html);
