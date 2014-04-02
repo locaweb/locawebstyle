@@ -1,4 +1,4 @@
-[data-tips]
+[aria-label]
   position: relative
   text-decoration: none
 
@@ -9,7 +9,7 @@
     opacity: 0
 
   &:after
-    content: attr(data-tips)
+    content: attr(aria-label)
     height: 25px
     line-height: 25px
     padding: 0 10px
@@ -40,8 +40,9 @@
 
 /* Top tips */
 
-  &.top-tip:after,
-  &.top-tip:before
+.ls-tooltip-top
+  &:after,
+  &:before
     -webkit-transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out
     -moz-transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out
     transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out
@@ -49,21 +50,22 @@
     left: -9999px
     margin-bottom: 12px
 
-  &.top-tip:before
+  &:before
     border-color: #222 transparent transparent transparent
     margin-bottom: 0
 
-  &.top-tip:hover:after,
-  &.top-tip:hover:before
-    bottom: 100%
+  &:hover:after,
+  &:hover:before
+    bottom: 80%
     left: 0
 
-  &.top-tip:hover:before
+  &:hover:before
     left: 15px
 
 /* Bottom tip */
-  &.bottom-tip:after,
-  &.bottom-tip:before
+.ls-tooltip-bottom
+  &:after,
+  &:before
     -webkit-transition: top 0.25s ease-in-out, opacity 0.25s ease-in-out
     -moz-transition: top 0.25s ease-in-out, opacity 0.25s ease-in-out
     transition: top 0.25s ease-in-out, opacity 0.25s ease-in-out
@@ -71,21 +73,22 @@
     left: -9999px
     margin-top: 12px
 
-  &.bottom-tip:before
+  &:before
     border-color: transparent transparent #222 transparent
     margin-top: 0
 
-  &.bottom-tip:hover:after,
-  &.bottom-tip:hover:before
-    top: 100%
+  &:hover:after,
+  &:hover:before
+    top: 80%
     left: 0
 
-  &.bottom-tip:hover:before
+  &:hover:before
     left: 15px
 
 /* Right tip */
-  &.right-tip:after,
-  &.right-tip:before
+.ls-tooltip-right
+  &:after,
+  &:before
     -webkit-transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out
     -moz-transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out
     transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out
@@ -93,21 +96,22 @@
     left: 96%
     margin-left: 12px
 
-  &.right-tip:before
+  &:before
     border-color: transparent #222 transparent transparent
     margin-left: 0
 
-  &.right-tip:hover:after,
-  &.right-tip:hover:before
+  &:hover:after,
+  &:hover:before
     left: 100%
     top: 0
 
-  &.right-tip:hover:before
+  &:hover:before
     top: 7px
 
 /* Left tip */
-  &.left-tip:after,
-  &.left-tip:before
+.ls-tooltip-left
+  &:after,
+  &:before
     -webkit-transition: right 0.25s ease-in-out, opacity 0.25s ease-in-out
     -moz-transition: right 0.25s ease-in-out, opacity 0.25s ease-in-out
     transition: right 0.25s ease-in-out, opacity 0.25s ease-in-out
@@ -115,15 +119,15 @@
     right: 96%
     margin-right: 12px
 
-  &.left-tip:before
+  &:before
     border-color: transparent transparent transparent #222
     margin-right: 0
 
-  &.left-tip:hover:after,
-  &.left-tip:hover:before
+  &:hover:after,
+  &:hover:before
     right: 100%
     top: 0
 
-  &.left-tip:hover:before
+  &:hover:before
     top: 7px
 
