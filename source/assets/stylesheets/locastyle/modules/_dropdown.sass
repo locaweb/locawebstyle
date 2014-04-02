@@ -1,8 +1,25 @@
 [data-module="dropdown"]
+  position: relative
 
   > ul
     list-style: none
     display: none
+    background: #fff
+    position: absolute
+    top: 100%
+    z-index: 2
+    margin-top: 2px
+    border-radius: 4px
+    overflow: hidden
+    font-size: .75rem
+
+    a
+      padding: 10px 20px
+      display: block
+
+      &:hover
+        background: $gray-1
+
 
   &.active > ul
     display: block
