@@ -1,4 +1,4 @@
-[aria-label]
+[class*="ls-tooltip"]
   position: relative
   text-decoration: none
 
@@ -19,13 +19,8 @@
     background: #222
     border-radius: 5px
     text-shadow: 0 0 5px #000
-    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3)
-    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3)
-    box-shadow: 0 0 5px rgba(0,0,0,0.3)
+    +single-box-shadow(rgba(0,0,0,0.3), 0, 0, 5px)
     white-space: nowrap
-    -moz-box-sizing: border-box
-    -webkit-box-sizing: border-box
-    box-sizing: border-box
 
   &:before
     content: ""
@@ -35,17 +30,18 @@
     border-style: solid
 
   &:hover:after,
-  &:hover:before
+  &:focus:after,
+  &:hover:before,
+  &:focus:before
     opacity: 1
 
-/* Top tips */
+/* Top */
 
 .ls-tooltip-top
   &:after,
   &:before
-    -webkit-transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out
-    -moz-transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out
-    transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out
+    +single-transition(bottom, 0.25s, ease-in-out)
+    +single-transition(opacity, 0.25s, ease-in-out)
     bottom: 90%
     left: -9999px
     margin-bottom: 12px
@@ -55,20 +51,24 @@
     margin-bottom: 0
 
   &:hover:after,
-  &:hover:before
+  &:focus:after,
+  &:focus:after,
+  &:hover:before,
+  &:focus:before,
+  &:focus:before
     bottom: 80%
     left: 0
 
-  &:hover:before
+  &:hover:before,
+  &:focus:before
     left: 15px
 
-/* Bottom tip */
+/* Bottom */
 .ls-tooltip-bottom
   &:after,
   &:before
-    -webkit-transition: top 0.25s ease-in-out, opacity 0.25s ease-in-out
-    -moz-transition: top 0.25s ease-in-out, opacity 0.25s ease-in-out
-    transition: top 0.25s ease-in-out, opacity 0.25s ease-in-out
+    +single-transition(top, 0.25s, ease-in-out)
+    +single-transition(opacity, 0.25s, ease-in-out)
     top: 90%
     left: -9999px
     margin-top: 12px
@@ -78,20 +78,22 @@
     margin-top: 0
 
   &:hover:after,
-  &:hover:before
+  &:focus:after,
+  &:hover:before,
+  &:focus:before
     top: 80%
     left: 0
 
-  &:hover:before
+  &:hover:before,
+  &:focus:before
     left: 15px
 
-/* Right tip */
+/* Right */
 .ls-tooltip-right
   &:after,
   &:before
-    -webkit-transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out
-    -moz-transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out
-    transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out
+    +single-transition(left, 0.25s, ease-in-out)
+    +single-transition(opacity, 0.25s, ease-in-out)
     top: -9999px
     left: 96%
     margin-left: 12px
@@ -101,20 +103,22 @@
     margin-left: 0
 
   &:hover:after,
-  &:hover:before
+  &:focus:after,
+  &:hover:before,
+  &:focus:before
     left: 100%
     top: 0
 
-  &:hover:before
+  &:hover:before,
+  &:focus:before
     top: 7px
 
-/* Left tip */
+/* Left */
 .ls-tooltip-left
   &:after,
   &:before
-    -webkit-transition: right 0.25s ease-in-out, opacity 0.25s ease-in-out
-    -moz-transition: right 0.25s ease-in-out, opacity 0.25s ease-in-out
-    transition: right 0.25s ease-in-out, opacity 0.25s ease-in-out
+    +single-transition(right, 0.25s, ease-in-out)
+    +single-transition(opacity, 0.25s, ease-in-out)
     top: -9999px
     right: 96%
     margin-right: 12px
@@ -124,10 +128,12 @@
     margin-right: 0
 
   &:hover:after,
-  &:hover:before
+  &:focus:after,
+  &:hover:before,
+  &:focus:before
     right: 100%
     top: 0
 
-  &:hover:before
+  &:hover:before,
+  &:focus:before
     top: 7px
-
