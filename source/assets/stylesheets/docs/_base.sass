@@ -159,3 +159,42 @@ p
   .row
     overflow: hidden
     margin-bottom: .3rem
+
+
+.tips
+  background: #f8c647
+  background: -moz-linear-gradient(left,  #f8c647 0%, #e9962d 40%, #d77b27 100%)
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f8c647), color-stop(40%,#e9962d), color-stop(100%,#d77b27))
+  background: -webkit-linear-gradient(left,  #f8c647 0%,#e9962d 40%,#d77b27 100%)
+  background: -o-linear-gradient(left,  #f8c647 0%,#e9962d 40%,#d77b27 100%)
+  background: -ms-linear-gradient(left,  #f8c647 0%,#e9962d 40%,#d77b27 100%)
+  background: linear-gradient(to right,  #f8c647 0%,#e9962d 40%,#d77b27 100%)
+  box-shadow:  rgba(0,0,0,.3) 2px 2px 3px
+
+  padding: 13px
+  width: 100px
+  border-radius: 5px
+  position: relative
+
+  -webkit-animation: animate 1.5s linear infinite
+  animation: animate 1.5s linear infinite
+  -moz-animation: animate 1.5s linear infinite
+
+  &:before
+    content: ""
+    border-top: 10px solid transparent
+    border-bottom: 10px solid transparent
+    border-right: 10px solid #f8c647
+    position: absolute
+    left: -10px
+    top: 3px
+    width: 0
+    height: 0
+
++keyframes(animate)
+  0%
+    margin-left: 0
+  50%
+    margin-left: 10px
+  100%
+    margin-left: 0
