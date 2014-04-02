@@ -6,26 +6,33 @@ description: Aqui você pode baixar separadamente os módulos do Locastyle para 
   <div class="doc-block">
     <h2 class="ls-title-2">Downloads</h2>
   </div>
-  <ul class="ls-no-list-style">
+  <ul class="ls-no-list-style js-modules">
     <li> <h2 class="ls-title-2">Javascripts</h2> </li>
     <% assets_files('assets/javascripts/locastyle').each do |resource| %>
-      <li>
-        <label>
-          <input type="checkbox"> <%= resource %>
-        </label>
-      </li>
+      <% resource.match('_?([^\/]+)\.[\w]+$').tap do |path| %>
+        <% next if path.nil? %>
+        <li>
+          <label>
+            <input type="checkbox" value="https://github.com/locaweb/locawebstyle/tree/reboot/<%= resource %>" data-dependence="" name="assets_js"> <%= path %>
+          </label>
+        </li>
+      <% end %>
     <% end %>
   </ul>
   <br><hr><br>
-  <ul class="ls-no-list-style">
+  <ul class="ls-no-list-style css-modules">
     <li> <h2 class="ls-title-2">Stylesheets</h2> </li>
     <% assets_files('assets/stylesheets/locastyle/base').each do |resource| %>
-      <li>
-        <label>
-          <input type="checkbox"> <%= resource %>
-        </label>
-      </li>
+      <% resource.match('_?([^\/]+)\.[\w]+$').tap do |path| %>
+        <% next if path.nil? %>
+        <li>
+          <label>
+            <input type="checkbox" value="https://github.com/locaweb/locawebstyle/tree/reboot/<%= resource %>" data-dependence="" name="assets_css"> <%= path %>
+          </label>
+        </li>
+      <% end %>
     <% end %>
   </ul>
   <br>
-  <input type="submit" class="ls-btn ls-btn-primary" value="Download">
+  <a href="" class="ls-btn ls-btn-primary" data-module="download"> Gerar </a>
+  <div class="download-done"></div>
