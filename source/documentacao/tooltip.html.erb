@@ -1,11 +1,40 @@
 ---
 title: Tooltip
-description:
+description: Para exibir balões de informação.
 ---
 
+<p>O tooltip exibe conteúdo curto, caso necessite de um conteúdo longo, por favor utilize nosso <a href="../popover/">popover</a>.</p>
+<p>Indicamos utilizar esse elemento em links, para que ele funcione ao receber o foco do teclado.</p>
 
-<a href="#" class="ls-tooltip-top" aria-label="Go to bavotasan.com">up aaaaa</a>
-<a href="#" class="ls-tooltip-right" aria-label="Go to bavotasan.com">right aaaaaa</a>
-<a href="#" class="ls-tooltip-bottom" aria-label="Go to bavotasan.com">bottom aaaaa</a>
-<a href="#" class="ls-tooltip-left" aria-label="Go to bavotasan.com">left aaaa</a>
+<p>O conteúdo do tooltip é inserido no atributo <code>aria-label</code>, assim ele funciona perfeitamente nos leitores de tela.</p>
 
+<div class="doc-example doc-example-markup">
+<%= partial 'documentacao/shared/tooltip' %>
+</div>
+
+<table class="ls-table ls-no-hover">
+  <thead>
+    <tr>
+      <th>Classe</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ls-tooltip-top</th>
+      <td>Exibe acima do elemento.</td>
+    </tr>
+    <tr>
+      <th>ls-tooltip-right</th>
+      <td>Exibe ao lado direito do elemento.</td>
+    </tr>
+    <tr>
+      <th>ls-tooltip-bottom</th>
+      <td>Exibe abaixo do elemento.</td>
+    </tr>
+    <tr>
+      <th>ls-tooltip-left</th>
+      <td>Exibe ao lado esquerdo do elemento.</td>
+    </tr>
+  </tbody>
+</table>
