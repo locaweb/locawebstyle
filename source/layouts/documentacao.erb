@@ -40,12 +40,11 @@
   </aside>
   <main class="ls-main">
     <div class="ls-container">
-      <div class="row">
-        <h1 class="ls-title-intro"><%= current_page.data.title %></h1>
-        <p class="ls-title-2">
-          <%= current_page.data.description %>
-        </p>
-      </div>
+      <h1 class="ls-title-intro"><%= current_page.data.title %></h1>
+      <p class="ls-title-2">
+        <%= current_page.data.description %>
+      </p>
+      <hr class="ls-sep">
       <%= yield %>
     </div>
   </main>
