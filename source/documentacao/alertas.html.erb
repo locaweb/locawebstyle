@@ -2,17 +2,17 @@
 title: Alertas
 description: Alertas são usadas para enviar um feedback contextual de sucesso, erro, warning ou apenas uma notificação de novas features no sistema.
 ---
-
-<div class="doc-example doc-example-markup">
+<%= partial 'documentacao/shared/alerts/alerts' %>
+<code class="language-html ls-well-example">
   <%= partial 'documentacao/shared/alerts/alerts' %>
-</div>
+</code>
 
 <h2 class="ls-title-2">Alertas com links</h2>
 <p>Links dentro de alertas precisam da classe <code>.ls-link-alert</code>.</p>
-
-<div class="doc-example doc-example-markup">
+<%= partial 'documentacao/shared/alerts/links-alerts' %>
+<code class="language-html ls-well-example">
   <%= partial 'documentacao/shared/alerts/links-alerts' %>
-</div>
+</code>
 
 <h2 class="ls-title-2">Fechando alertas</h2>
 <p>
@@ -21,14 +21,14 @@ description: Alertas são usadas para enviar um feedback contextual de sucesso, 
   <code>data-module="dismiss"</code>, dentro do alerta você terá um botão com a classe
   <code>.ls-dismiss</code>.
 </p>
-
-<div class="doc-example doc-example-markup">
+<%= partial 'documentacao/shared/alerts/close-alerts' %>
+<code class="language-html ls-well-example">
   <%= partial 'documentacao/shared/alerts/close-alerts' %>
-</div>
+</code>
 
 <h2 class="ls-title-2">Tamanhos dos alertas</h2>
 <p>Como as tabelas, você pode usar as classes <code>ls-big-space</code> ou <code>ls-small-space</code> para aumentar ou diminuir o tamanho do alerta.</p>
-
-<div class="doc-example doc-example-markup">
+<%= partial 'documentacao/shared/alerts/width-alerts' %>
+<code class="language-html ls-well-example">
   <%= partial 'documentacao/shared/alerts/width-alerts' %>
-</div>
+</code>
