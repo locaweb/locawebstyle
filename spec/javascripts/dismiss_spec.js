@@ -1,5 +1,5 @@
-describe('Dismiss:', function(){
-  beforeEach(function(){
+describe('Dismiss:', function() {
+  beforeEach(function() {
     loadFixtures('dismiss_fixture.html');
     locastyle.dismiss.init();
   });
