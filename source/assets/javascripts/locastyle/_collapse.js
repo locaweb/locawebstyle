@@ -21,15 +21,15 @@ locastyle.collapse = (function() {
   };
 
   function init() {
-    $(config.selectors.container).each(function(i, collapse){
+    $(config.selectors.container).each(function(i, collapse) {
       var $collapse = $(this);
       bindHeader($collapse);
     });
     bindButton();
   }
 
-  function bindButton(){
-    $('[data-toggle-collapse]').on('click', function (evt) {
+  function bindButton() {
+    $('[data-toggle-collapse]').on('click', function(evt) {
       evt.preventDefault();
       evt.stopPropagation();
       var id = $(this).data('toggle-collapse');
@@ -37,19 +37,19 @@ locastyle.collapse = (function() {
     });
   }
 
-  function bindHeader($collapse){
-    if(!$collapse.hasClass( config.classes.alwaysOpen )){
-      $(config.selectors.trigger, $collapse).on('click', function(evt){
+  function bindHeader($collapse) {
+    if (!$collapse.hasClass(config.classes.alwaysOpen)) {
+      $(config.selectors.trigger, $collapse).on('click', function(evt) {
         evt.preventDefault();
         toggle($collapse)
       });
     }
   }
 
-  function toggle ($collapse) {
+  function toggle($collapse) {
     $collapse = $collapse instanceof $ ? $collapse : $($collapse);
     var $group = $collapse.parents(config.selectors.groupContainer);
-    if( $group[0] ){
+    if ($group[0]) {
       $group.find(config.selectors.container).not($collapse).removeClass(config.classes.open).find(config.selectors.content).slideUp();
     }
     $collapse.toggleClass(config.classes.open);
@@ -60,7 +60,7 @@ locastyle.collapse = (function() {
   }
 
   return {
-    init:init,
+    init: init,
     toggle: toggle
   };
 
