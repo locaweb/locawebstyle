@@ -5,6 +5,14 @@
   border-width: 1px
   border-radius: 4px
 
+  a
+    color: inherit
+    text-decoration: underline
+
+    &:hover,
+    &:focus
+      text-decoration: none
+
   &.ls-big-space
     @extend .ls-big-space
 
@@ -49,21 +57,18 @@
   .ls-link-alert
     color: #843534
 
-[data-module=dismiss]
-  padding-right: 35px
+.ls-dismiss
+  float: right
+  position: relative
+  top: -3px
+  right: 5px
+  background: none
+  border: none
+  cursor: pointer
+  color: inherit
+  font-size: 1.31rem
+  opacity: .3
+  line-height: 1
 
-  .ls-dismiss
-    float: right
-    position: relative
-    top: -3px
-    right: -25px
-    background: none
-    border: none
-    cursor: pointer
-    color: inherit
-    font-size: 1.31rem
-    opacity: .3
-    line-height: 1
-
-    &:hover
-      opacity: .5
+  &:hover
+    opacity: .5
