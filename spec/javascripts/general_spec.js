@@ -1,22 +1,22 @@
 describe("Locastyle in general: ", function() {
 
-  beforeEach(function(){
+  beforeEach(function() {
     loadFixtures('general_fixture.html');
     locastyle.general.init();
   });
 
 
-  describe("Submenu Toggle ", function(){
+  describe("Submenu Toggle ", function() {
 
-    describe("When click on any link element of ls-submenu", function(){
-      it("should add .active class on self", function(){
+    describe("When click on any link element of ls-submenu", function() {
+      it("should add .active class on self", function() {
         $(".ls-submenu > a").trigger("click");
-        expect( $(".ls-submenu").hasClass("active") ).toEqual(true);
+        expect($(".ls-submenu").hasClass("active")).toEqual(true);
       });
 
-      it("should remove .active class on self", function(){
+      it("should remove .active class on self", function() {
         $(".ls-submenu.active > a").trigger("click");
-        expect( $(".ls-submenu").hasClass("active") ).toEqual(false);
+        expect($(".ls-submenu").hasClass("active")).toEqual(false);
       });
 
     });
@@ -27,12 +27,12 @@ describe("Locastyle in general: ", function() {
 
       it("should remove any .active class from siblings", function() {
         $("#activation_toggle_button_2").trigger("click");
-        expect( $("#activation_toggle_button_1").hasClass('active') ).toEqual(false);
+        expect($("#activation_toggle_button_1").hasClass('active')).toEqual(false);
       });
 
       it("should add .active class on self", function() {
         $("#activation_toggle_button_3").trigger("click");
-        expect( $("#activation_toggle_button_3").hasClass("active") ).toEqual(true);
+        expect($("#activation_toggle_button_3").hasClass("active")).toEqual(true);
       });
 
     });
