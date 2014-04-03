@@ -4,13 +4,13 @@ var locastyle = (function() {
   function init() {
     for (var module in locastyle) {
       if (locastyle.hasOwnProperty(module)) {
-        module != 'init'? locastyle[module].init() : null;
+        module != 'init' ? locastyle[module].init() : null;
       }
     }
   }
 
   return {
-    init:init
+    init: init
   };
 
 }());
