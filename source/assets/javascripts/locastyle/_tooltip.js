@@ -6,7 +6,7 @@ locastyle.tooltip = (function() {
   }
 
   return {
-    init:init
+    init: init
   };
 
 }());
