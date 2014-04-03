@@ -14,15 +14,15 @@ locastyle.modal = (function() {
   }
 
   function init() {
-    $(config.open.trigger).on('click', function(){
+    $(config.open.trigger).on('click', function() {
       open($(this).data());
     })
   }
 
-  function open($element){
-    if(!$element.target){
-      $('body').append( locastyle.templates.modal($element) );
-    }else{
+  function open($element) {
+    if (!$element.target) {
+      $('body').append(locastyle.templates.modal($element));
+    } else {
       $($element.target)
         .addClass("opened")
         .append('<div class="ls-modal-overlay"></div>');
@@ -30,9 +30,9 @@ locastyle.modal = (function() {
     close();
   }
 
-  function close(){
-    $( config.close.classes + ", " + config.close.trigger).on('click', function(){
-      $(config.modal).removeClass( "opened");
+  function close() {
+    $(config.close.classes + ", " + config.close.trigger).on('click', function() {
+      $(config.modal).removeClass("opened");
       $(".ls-modal-overlay").remove();
     })
   }
