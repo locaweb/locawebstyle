@@ -17,6 +17,7 @@ locastyle.general = (function() {
     _linkPreventDefault();
     _btnGroupActivationToogle();
     menuAnchor();
+    openSelect();
   }
 
   function _loadEvents () {
@@ -97,11 +98,19 @@ locastyle.general = (function() {
     });
   }
 
-  function _btnGroupActivationToogle(dom_scope) {
-    $(".ls-group-active .ls-btn", dom_scope).on("click", function() {
+  function _btnGroupActivationToogle() {
+    $(".ls-group-active .ls-btn").on("click", function() {
       $(this).siblings().removeClass("active");
       $(this).addClass("active");
     });
+  }
+
+  function openSelect() {
+    $(".ls-custom-select").on("click", function() {
+      console.log('cliquei');
+      $('select',this).click();
+    });
+
   }
 
   return {
