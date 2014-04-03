@@ -5,14 +5,18 @@ description: Sistema de grids do locastyle
 
 
 <div class="doc-example-grid">
-<div class="doc-example doc-example-markup">
   <% (1..12).each do |num| %>
     <div class="row">
         <div class="col-sm-<%= num %>">.col-sm-<%= num %></div>
         <div class="col-sm-<%= 12-num %>">.col-sm-<%= 12-num %></div>
     </div>
   <% end %>
+  <code class="language-html ls-well-example">
+    <% (1..12).each do |num| %>
+      <div class="row">`
+          <div class="col-sm-<%= num %>">.col-sm-<%= num %></div>
+          <div class="col-sm-<%= 12-num %>">.col-sm-<%= 12-num %></div>
+      </div>
+    <% end %>
+  </code>
 </div>
-</div>
-
-
