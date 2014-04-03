@@ -8,14 +8,14 @@ locastyle.dropdown = (function() {
   }
 
   function bindClickOnTriggers() {
-    $("[data-module=dropdown] > a:first-child").on("click", function (evt) {
+    $("[data-module=dropdown] > a:first-child").on("click", function(evt) {
       evt.preventDefault();
       var $target = $($(this).parents("[data-module=dropdown]"));
       toggleDropdown($target);
     });
   }
 
-  function toggleDropdown ($target) {
+  function toggleDropdown($target) {
     $target.toggleClass('active');
   }
 
