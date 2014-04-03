@@ -11,12 +11,24 @@
   <%= stylesheet_link_tag "docs" %>
 </head>
 <body class="<%= page_classes %>">
-  <div class="ls-topbar"><h1 class="ls-brand-name ls-ico-question"><a href="/">Documentação Locastyle</a></h1></div>
+  <div class="ls-topbar">
+    <h1 class="ls-brand-name ls-ico-question">
+      <a href="/">Documentação Locastyle</a>
+    </h1>
+    <div class="ls-float-right">
+      <form role="form">
+        <div class="form-group">
+          <input type="email" class="form-control input-lg" id="search" placeholder="Sart type 'a' ....">
+          <div id="results"></div>
+        </div>
+      </form>
+    </div>
+  </div>
   <aside class="ls-sidebar">
     <nav class="ls-menu">
       <ul>
       <% sub_pages('documentacao').each do |resource| %>
-        <% if resource.url.split('/')[2] == 'exemplos' %>
+        <% if resource.url.split('/')[2] == 'data.json' %>
         <% else %>
           <li>
             <a <% if current_page.url ==  resource.url%>class="ls-active"<% end %> href="<%= resource.url %>"><%= resource.data.title%></a>

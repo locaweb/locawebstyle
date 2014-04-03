@@ -3,6 +3,7 @@
 
 //= require locastyle/_initializer
 //= require _custom
+//= require _search
 //= require locastyle/_collapse
 //= require locastyle/_modal
 //= require locastyle/_dismiss
