@@ -9,3 +9,39 @@
   line-height: $size
   display: inline-block
   border-radius: 100%
+
+// ARROWS
+// Cria setas.
+// $arrow-color define a cor da seta. $arrow-size define o tamanho da seta.
+=arrow-structure
+  content: ""
+  display: inline-block
+  width: 0
+  height: 0
+  margin-left: 5px
+  position: relative
+  top: -2px
+
+=arrow-up($arrow-color, $arrow-size)
+  +arrow-structure
+  border-left: $arrow-size solid transparent
+  border-right: $arrow-size solid transparent
+  border-bottom: $arrow-size solid $arrow-color
+
+=arrow-down($arrow-color, $arrow-size)
+  +arrow-structure
+  border-left: $arrow-size solid transparent
+  border-right: $arrow-size solid transparent
+  border-top: $arrow-size solid $arrow-color
+
+=arrow-right($arrow-color, $arrow-size)
+  +arrow-structure
+  border-top: $arrow-size solid transparent
+  border-bottom: $arrow-size solid transparent
+  border-left: $arrow-size solid $arrow-color
+
+=arrow-left($arrow-color, $arrow-size)
+  +arrow-structure
+  border-top: $arrow-size solid transparent
+  border-bottom: $arrow-size solid transparent
+  border-right: $arrow-size solid $arrow-color
