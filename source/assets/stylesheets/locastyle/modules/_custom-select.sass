@@ -1,16 +1,41 @@
 .ls-custom-select
   width: 240px
-  height: 34px
+  height: 30px
   overflow: hidden
   background: #FFF
-  border: 1px solid #509742
+  border: 1px solid $gray-3
+  position: relative
+
+  &:before
+    content: ""
+    +arrow-down($gray-3, .62rem)
+    position: absolute
+    top: 10px
+    right: 3px
+    z-index: 3
+
+  &:after
+    content: ""
+    background-color: #fff
+    position: absolute
+    top: 0
+    right: 0
+    height: 30px
+    width: 26px
+    z-index: 2
 
   select
-    width: 268px
+    width: 110%
     padding: 5px
-    font-size: 16px
+    font-size: 1rem
     line-height: 1
     border: 0
     border-radius: 0
-    height: 34px
+    height: 30px
     -webkit-appearance: none
+    background-color: transparent
+    position: relative
+    z-index: 1
+
+    &:focus
+      outline: none
