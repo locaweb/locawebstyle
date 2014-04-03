@@ -74,5 +74,13 @@
   {
     "name":"Tooltip",
     "location":"/documentacao/tooltip/"
+  },
+  {
+    "name":"Paginação",
+    "location":"/documentacao/paginacao/"
+  },
+  {
+    "name":"Select personalziado",
+    "location":"/documentacao/select-customizado/"
   }
 ]
