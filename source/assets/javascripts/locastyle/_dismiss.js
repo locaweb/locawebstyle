@@ -17,7 +17,7 @@ locastyle.dismiss = (function() {
     var target = $(el).parents('.ls-dismissable');
     if ($(el).data('target')) {
       target = ($(el).data('target'));
-    };
+    }
     dismiss(target);
   }
 
