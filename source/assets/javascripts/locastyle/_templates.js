@@ -5,14 +5,14 @@ locastyle.templates = (function() {
 
   var templatesPath = 'locastyle/templates/_';
 
-  function init(){
+  function init() {
   }
 
-  function popover(elementData){
+  function popover(elementData) {
     return JST[templatesPath + 'popover'](elementData)
   }
 
-  function modal(elementData){
+  function modal(elementData) {
     return JST[templatesPath + 'modal'](elementData)
   }
 
