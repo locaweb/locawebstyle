@@ -1,3 +1,5 @@
+//= require libs/_hopscotch
+
 //= require locastyle/templates/_popover
 //= require locastyle/templates/_modal
 
@@ -14,3 +16,4 @@
 //= require locastyle/_templates
 //= require locastyle/_general
 //= require locastyle/_progress-bar
+//= require locastyle/_guided-tour
