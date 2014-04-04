@@ -1,57 +1,53 @@
 // .ls-collapse-group
 
 .ls-collapse
-  border-bottom: 0px
+  border: 1px solid $gray-2
+  border-radius: 3px
   background-color: #fff
+  font-size: .875rem
+  margin-bottom: 10px
 
-  & + .ls-collapse
-    .ls-collapse-title
-      border-top: none
-
-  .ls-collapse-title
-    +transition (all .1s linear)
-    border: 1px solid #ccc
+  .ls-collapse-header
     padding: 10px
     cursor: pointer
     position: relative
-    display: block
-    &:hover
-      background-color: #ccc
-      color: #fff
-    &:after
+
+    &:before
       +rotate(0deg)
-      +transition (all .3s linear)
-      color: #fff
-      background-color: #aaa
+      +transition (all .35s ease)
+      color: $color-3
+      border: 3px solid $color-3
       border-radius: 100%
-      content: "V"
+      content: "\e607"
+      font-family: 'locastyle'
+      font-size: .8rem
       position: absolute
-      display: block
-      top: calc( (100% - 30px)/2)
+      top: calc( (100% - 24px)/2)
       right: 10px
-      height: 30px
-      width: 30px
-      line-height: 30px
+      height: 24px
+      width: 24px
+      line-height: 1.4
       text-align: center
 
+    .ls-collapse-title
+      color: $gray-4
+      font-size: 1rem
+      margin-bottom: 0
+
+    p
+      margin-bottom: 0
+      color: $gray-3
+
   .ls-collapse-body
-    +transition (all .3s linear)
-    display: none
-    overflow: hidden
     border: 0px solid transparent
+    display: none
+
 
   &.ls-collapse-open, &.ls-collapse-always-open
 
-    .ls-collapse-title
-      background-color: #aaa
-      border-color: #aaa
-      color: #fff
-      &:after
-        color: #aaa
-        +rotate(180deg)
-        background-color: #fff
+    .ls-collapse-header:before
+      +rotate(180deg)
 
     .ls-collapse-body
-      overflow: visible
       display: block
-      border: 1px solid #aaa
+      padding: 10px
