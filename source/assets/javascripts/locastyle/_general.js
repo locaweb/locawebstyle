@@ -17,7 +17,6 @@ locastyle.general = (function() {
     _linkPreventDefault();
     _btnGroupActivationToogle();
     menuAnchor();
-    openSelect();
   }
 
   function _loadEvents () {
@@ -103,14 +102,6 @@ locastyle.general = (function() {
       $(this).siblings().removeClass("active");
       $(this).addClass("active");
     });
-  }
-
-  function openSelect() {
-    $(".ls-custom-select").on("click", function() {
-      console.log('cliquei');
-      $('select',this).click();
-    });
-
   }
 
   return {
