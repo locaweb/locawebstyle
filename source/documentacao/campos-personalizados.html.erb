@@ -1,0 +1,17 @@
+---
+title: Campos personalizados
+description: Campos personalizados
+---
+
+<form class="ls-form">
+  <select>
+    <% (1..10).each do |i| %>
+      <option value="<%= i %>"> Opção <%= i %> </option>
+    <% end %>
+  </select>
+
+  <input type="text" class="ls-form">
+  <input type="radio" class="ls-form">
+  <input type="checkbox" class="ls-form">
+  <input type="file" class="ls-form">
+</form>

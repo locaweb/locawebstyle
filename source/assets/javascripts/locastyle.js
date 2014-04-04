@@ -18,3 +18,4 @@
 //= require locastyle/_general
 //= require locastyle/_progress-bar
 //= require locastyle/_guided-tour
+//= require locastyle/_custom-fields
