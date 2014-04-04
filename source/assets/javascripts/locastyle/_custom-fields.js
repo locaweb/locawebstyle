@@ -25,7 +25,7 @@ locastyle.customFields = (function() {
   }
 
   function setSize($field){
-    $(".ls-field-container-" + $field[0].type ).css( { 'width': $field.width(), 'height': $field.height() } )
+    $(".ls-field-container-" + $field[0].type ).css( { 'width': $field.width() } );
   }
 
   function customSelect($field){
