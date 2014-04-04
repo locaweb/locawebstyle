@@ -15,14 +15,12 @@ locastyle.guidedTour = (function() {
 	}
 
 	function init(jsonSteps){
-    console.log("yo")
 		checkTour(jsonSteps);
 	}
 
 	// Override default selectors if user provide
 	function checkTour(jsonSteps){
 		if(jsonSteps && jsonSteps.selectors && hopscotch){
-      console.log("checked")
 			$.each( config.selectors, function(key,selector){
 				jsonSteps.selectors[key] = jsonSteps.selectors[key] || config.selectors[key];
 			});
@@ -39,7 +37,6 @@ locastyle.guidedTour = (function() {
 	}
 
 	function openWelcomeTour(e){
-    console.log("welcome")
 		e ? e.preventDefault() : null;
 		$(config.selectors.tour).toggleClass('on');
 		$(config.selectors.init).focus().attr('tabindex', '-1');
