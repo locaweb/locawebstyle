@@ -1,4 +1,5 @@
 //= require libs/_hopscotch
+//= require libs/_jquery.cookie
 
 //= require locastyle/templates/_popover
 //= require locastyle/templates/_modal
