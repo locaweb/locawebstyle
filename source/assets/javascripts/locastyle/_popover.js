@@ -72,7 +72,7 @@ locastyle.popover = (function() {
 
     var setSide = left;
     var setTop  = top;
-    console.log($(element).position().top)
+
     if(placement == 'top'){ topPlacement = true; setTop = top }
 
     if(placement == 'bottom'){ setTop = (top+elementHeight) }
