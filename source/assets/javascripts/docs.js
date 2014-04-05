@@ -3,4 +3,5 @@
 //= require libs/holder
 //= require docs/docs
 //= require docs/icons
+//= require docs/_search
 
