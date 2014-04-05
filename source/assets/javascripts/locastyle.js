@@ -13,3 +13,4 @@
 //= require locastyle/_templates
 //= require locastyle/_general
 //= require locastyle/_progress-bar
+//= require locastyle/_form
