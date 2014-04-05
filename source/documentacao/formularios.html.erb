@@ -122,7 +122,79 @@ description: Elementos padrão de formulários e disposição de campos
 </div>
 
 <div class="row doc-section">
-  <h3 class="doc-section-title">Prefixos e sufixos de campos</h3>
+  <h3 class="doc-section-title" id="formularios-em-linha">Formulários em linha</h3>
+
+  <p>Usando o <i>grid</i></p>
+  <div class="doc-example doc-example-markup">
+
+    <form action="" class="ls-form">
+      <div class="row" >
+        <label class="ls-field col-md-3">
+          <span class="ls-label">Nome</span>
+          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
+        </label>
+        <label class="ls-field col-md-4">
+          <span class="ls-label">Email</span>
+          <input type="text" name="email" placeholder="email" required />
+        </label>
+        <label class="ls-field col-md-4">
+          <span class="ls-label">Senha</span>
+          <input type="password" name="senha" placeholder="Números e letras" required />
+        </label>
+      </div>
+      <div class="row" >
+        <label class="ls-field col-md-2">
+          <span class="ls-label">Sexo</span>
+          <select name="sexo">
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+          </select>
+        </label>
+        <label class="ls-field col-md-2">
+          <span class="ls-label">Idade</span>
+          <input type="text" name="idade" placeholder="NN" required />
+        </label>
+        <label class="ls-field col-md-2">
+          <span class="ls-label">Sexo</span>
+          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
+        </label>
+        <label class="ls-field col-md-2">
+          <span class="ls-label">Nome</span>
+          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
+        </label>
+        <label class="ls-field col-md-2">
+          <span class="ls-label">Nome</span>
+          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
+        </label>
+        <label class="ls-field col-md-2">
+          <span class="ls-label">Nome</span>
+          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
+        </label>
+      </div>
+    </form>
+  </div>
+
+  <p>Usando classe</p>
+  <div class="doc-example doc-example-markup">
+    <form action="" class="ls-form ls-form-inline">
+      <div class="row" >
+        <label class="ls-field col-md-3">
+          <span class="ls-label">Nome</span>
+          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
+        </label>
+        <label class="ls-field col-md-4">
+          <span class="ls-label">Email</span>
+          <input type="text" name="email" placeholder="email" required />
+        </label>
+        <label class="ls-field col-md-4">
+          <span class="ls-label">Senha</span>
+          <input type="password" name="senha" placeholder="Números e letras" required />
+        </label>
+      </div>
+    </form>
+  </div>
+
+
 </div>
 
 <div class="row doc-section">
