@@ -21,6 +21,19 @@
     font-size: .75rem
     color: $gray-3
 
+  &[class*="ls-ico-"]
+    overflow: hidden
+    position: relative
+
+    &:before
+      float: left
+      vertical-align: top
+      font-size: 6rem
+      margin: 0 20px
+
+  p
+    margin: 10px 0
+
 [class*="ls-title"] + .ls-box
   margin-top: 10px
   clear: both
