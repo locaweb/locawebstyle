@@ -1,6 +1,4 @@
 [class*="ls-field-container-"]
-  +filter-gradient(#c9de96, #398235, vertical)
-  +background-image(linear-gradient(top,  #c9de96 0%,#8ab66b 44%,#398235 100%))
   position: relative
   color: white
   padding: 5px
@@ -22,12 +20,16 @@
     height: 30px
 
   .ls-field-custom-checkbox
-    position: relative
+    padding: 5px 32px
+    background: #FFF url('https://cdn1.iconfinder.com/data/icons/Keyamoon-IcoMoon--limited/32/checkbox-unchecked.png') no-repeat
     &.checked
-      &:before
-        content: " √ "
-        width: 30px
-        height: 30px
+      background: #FFF url('https://cdn1.iconfinder.com/data/icons/Keyamoon-IcoMoon--limited/32/checkbox-checked.png') no-repeat
+
+  .ls-field-custom-radio
+    padding: 5px 16px
+    background: #FFF url('https://cdn1.iconfinder.com/data/icons/blueberry/32/radio-button_off.png') no-repeat
+    &.checked
+      background: #FFF url('https://cdn1.iconfinder.com/data/icons/blueberry/32/radio-button_on.png') no-repeat
 
 .ls-field-container-select-one
   border: 1px solid $gray-2
