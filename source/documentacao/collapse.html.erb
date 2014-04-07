@@ -10,9 +10,9 @@ description: Um painel com título visível e contenúdo oculto
 
   <div class="doc-example doc-example-markup">
   <div class="ls-collapse">
-    <div class="ls-collapse-title">
+    <a href="#" class="ls-collapse-header">
       Título
-    </div>
+    </a>
     <div class="ls-collapse-body">
       <% 5.times do |num| %>
       Conteúdo <br>
@@ -25,10 +25,10 @@ description: Um painel com título visível e contenúdo oculto
   <p>Os títulos, vísiveis quando o <i>collapse</i> está fechado, podem conter qualquer conteúdo, por exemplo:</p>
 
   <div class="ls-collapse">
-    <div class="ls-collapse-title">
-      <h3>Título</h3>
+    <a href="#" class="ls-collapse-header">
+      <h3 class="ls-collapse-title">Título</h3>
       <p>Texto adicional</p>
-    </div>
+    </a>
     <div class="ls-collapse-body">
       <% 5.times do |num| %>
       Conteúdo <br>
@@ -39,7 +39,7 @@ description: Um painel com título visível e contenúdo oculto
   <br>
 
   <div class="ls-collapse">
-    <div class="ls-collapse-title">
+    <div class="ls-collapse-header">
       <div class="row ls-overflow-hidden">
         <div class="col-md-3">
           <img data-src="holder.js/180x50/sky/text:Imagem qualquer">
@@ -93,7 +93,7 @@ description: Um painel com título visível e contenúdo oculto
   <h2 class="ls-title-2">Exemplos</h2>
 
   <div class="ls-collapse ls-collapse-open">
-    <div class="ls-collapse-title">
+    <div class="ls-collapse-header">
       Collapse inicia aberto com a classe .ls-collapse-open
     </div>
     <div class="ls-collapse-body">
@@ -103,7 +103,7 @@ description: Um painel com título visível e contenúdo oculto
     </div>
   </div>
   <div class="ls-collapse">
-    <div class="ls-collapse-title">
+    <div class="ls-collapse-header">
       Collapse normal, inicia fechado
     </div>
     <div class="ls-collapse-body">
@@ -113,7 +113,7 @@ description: Um painel com título visível e contenúdo oculto
     </div>
   </div>
   <div class="ls-collapse ls-collapse-always-open">
-    <div class="ls-collapse-title">
+    <div class="ls-collapse-header">
       Collapse inicia aberto e não fecha com a classe .ls-collapse-always-open
     </div>
     <div class="ls-collapse-body">
@@ -136,7 +136,7 @@ description: Um painel com título visível e contenúdo oculto
     <% 5.times do |num| %>
     <!-- início do collapse <%= num+1 %> -->
     <div class="ls-collapse">
-      <div class="ls-collapse-title">
+      <div class="ls-collapse-header">
         Título do collapse <%= num+1 %>
       </div>
       <div class="ls-collapse-body">
@@ -163,7 +163,7 @@ description: Um painel com título visível e contenúdo oculto
   <button type="button" class="ls-btn-primary" data-toggle-collapse="#collapse1">Abre/Fecha o <i>collapse</i> <b>#collapse1</b></button>
 
   <div id="collapse1" class="ls-collapse">
-    <div class="ls-collapse-title">
+    <div class="ls-collapse-header">
       <i>Collapse</i> com id <b>#collapse1</b>
     </div>
     <div class="ls-collapse-body">

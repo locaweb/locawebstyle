@@ -9,12 +9,11 @@ lsdocs.icones = (function() {
   }
 
   function insertSearch(){
-    var searchHtml =  '<form><div class="form-group">' +
-      '<label for="searchIcons">Busca de ícones</label>' +
-      '<input type="search" id="searchIcons" placeholder="Busca ícone" class="form-control col-md-4"/>' +
-      '<p id="searchResultText">&nbsp;</p>' +
+    var searchHtml =  '<form class="doc-search-ico"><div class="form-group">' +
+      '<input type="search" id="searchIcons" aria-label="Buscar ícone" placeholder="Buscar ícone" class="form-control col-md-4"/>' +
+      '<p id="searchResultText">Nenhum ícone encontrado.</p>' +
       '</div></form>'
-    $icons.eq(0).before(searchHtml);
+    $('.list-icons').eq(0).before(searchHtml);
   }
 
   function searchIcons(){
@@ -25,7 +24,7 @@ lsdocs.icones = (function() {
       console.log($foundIcons)
       if( query.length > 0){
         if( $foundIcons.size() === 0 ){
-          $searchResultText.html('Nenhum ícone encontrado com o termo:<b>' + query + '</b>');
+          $searchResultText.html('Nenhum ícone encontrado com o termo: <b>' + query + '</b>');
           $icons.hide();
         } else {
           $icons.hide();

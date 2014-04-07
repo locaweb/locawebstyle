@@ -10,7 +10,7 @@ locastyle.collapse = (function() {
   var config = {
     selectors: {
       container: '.ls-collapse',
-      trigger: '.ls-collapse-title',
+      trigger: '.ls-collapse-header',
       content: '.ls-collapse-body',
       groupContainer: '.ls-collapse-group'
     },

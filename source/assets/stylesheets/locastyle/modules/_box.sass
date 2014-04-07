@@ -1,4 +1,4 @@
-.ls-well
+.ls-box
   padding: 15px
   margin-bottom: 40px
   background-color: #fff
@@ -8,10 +8,19 @@
   &:after
     @extend .ls-clearfix
 
+  &.ls-box-gray
+    background-color: rgba($gray-1, .2)
+
+  &.ls-big-space
+    @extend .ls-big-space
+
+  &.ls-small-space
+    @extend .ls-small-space
+
   .ls-small-info
     font-size: .75rem
-    color: $gray-1
+    color: $gray-3
 
-[class*="ls-title"] + .ls-well
+[class*="ls-title"] + .ls-box
   margin-top: 10px
   clear: both
