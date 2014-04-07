@@ -5,6 +5,7 @@ locastyle.customFields = (function() {
 
   function init() {
     findFields();
+    bindRemoveCustomClass();
   }
 
   function findFields(){
@@ -21,7 +22,7 @@ locastyle.customFields = (function() {
 
       if($(field)[0].type === 'checkbox'){ customCheckbox($(field)); }
 
-      if($(field)[0].type === 'radio'){ customRadio($(field)); }
+      if($(field)[0].type === 'radio'){ customRadio($(field)); checkRadio($(field)) }
 
     })
   }
@@ -30,7 +31,7 @@ locastyle.customFields = (function() {
     $(".ls-field-container-" + $field[0].type ).css( { 'width': $field.width() } );
   }
 
-  function fieldWrap($field){
+  function fieldSpan($field){
     $('<span class="ls-field-custom-'+ $field[0].type + '"></span>').insertBefore($field[0]);
   }
 
@@ -48,26 +49,41 @@ locastyle.customFields = (function() {
   }
 
   function customCheckbox($field){
-    fieldWrap($field);
+    fieldSpan($field);
     var $labelField = labelField($field)
     $field.on('click', function(){
       $field.is(":checked") ? $labelField.addClass("checked") : $labelField.removeClass("checked")
     })
   }
 
-  function customRadio($field){
-    fieldWrap($field);
-
+  function bindRemoveCustomClass(){
     $('.ls-input-original').on('click', function(){
       $('.ls-field-custom-radio').removeClass("checked");
-    })
-
-    var $labelField = labelField($field)
-    $field.unbind('click');
-    $field.on('click', function(){
-      $('.ls-field-custom-radio').removeClass("checked");
-      $field.is(":checked") ? $labelField.addClass("checked") : $labelField.removeClass("checked")
     });
+  }
+
+  function customRadio($field){
+    fieldSpan($field);
+    bindCustomRadio($field);
+  }
+
+  function bindCustomRadio($field){
+    $field.on('click', function(){
+      uncheckRadios($field);
+      checkRadio($field)
+    });
+  }
+
+  function uncheckRadios($field){
+    var group = $field.attr("name");
+    $field.parents().find('.ls-field-custom-radio').removeClass("checked");
+  }
+
+  function checkRadio($field){
+    var $labelField = labelField($field);
+    if($field.is(":checked")){
+      $labelField.addClass("checked")
+    }
   }
 
   return {
