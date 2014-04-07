@@ -1,3 +1,6 @@
+//= require libs/_hopscotch
+//= require libs/_jquery.cookie
+
 //= require locastyle/templates/_popover
 //= require locastyle/templates/_modal
 
@@ -14,3 +17,5 @@
 //= require locastyle/_general
 //= require locastyle/_progress-bar
 //= require locastyle/_form
+//= require locastyle/_guided-tour
+//= require locastyle/_custom-fields

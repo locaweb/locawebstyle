@@ -1,0 +1,81 @@
+---
+title: Campos personalizados
+description: Campos personalizados
+---
+
+<div class="doc-section">
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classes</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>.ls-form</td>
+        <td>Customiza todos os selects, checkbox, radios.</td>
+      </tr>
+      <tr>
+        <td>.ls-input-original</td>
+        <td>Mantém a aparência original do input.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="ls-title-1">Exemplos</h2>
+  <div class="ls-custom">
+    <!-- Select -->
+    <div class="ls-box-demo">
+      <p class="ls-title2"> Select customizada </p>
+      <%= partial 'documentacao/shared/custom-fields/custom-select' %>
+    </div>
+    <code class="language-html ls-well-example">
+      <%= partial 'documentacao/shared/custom-fields/custom-select' %>
+    </code>
+
+    <div class="ls-box-demo">
+      <p class="ls-title2"> Select original </p>
+      <%= partial 'documentacao/shared/custom-fields/original-select' %>
+    </div>
+    <code class="language-html ls-well-example">
+      <%= partial 'documentacao/shared/custom-fields/original-select' %>
+    </code>
+    <!-- End Select -->
+    <!-- Radio -->
+    <div class="ls-box-demo">
+      <p cl ass="ls-title2"> Radio customizado </p>
+      <input type="radio" name="radio1" checked="checked" value="1">
+      <input type="radio" name="radio1" value="2">
+    </div>
+    <code class="language-html ls-well-example">
+      <%= partial 'documentacao/shared/custom-fields/custom-radio' %>
+    </code>
+
+    <div class="ls-box-demo">
+      <p cl ass="ls-title2"> Radio original </p>
+      <%= partial 'documentacao/shared/custom-fields/original-radio' %>
+    </div>
+    <code class="language-html ls-well-example">
+      <%= partial 'documentacao/shared/custom-fields/original-radio' %>
+    </code>
+    <!-- End Radio -->
+    <!-- Checkbox -->
+    <div class="ls-box-demo">
+      <p class="ls-title2"> Checkbox customizada </p>
+      <%= partial 'documentacao/shared/custom-fields/custom-checkbox' %>
+    </div>
+    <code class="language-html ls-well-example">
+      <%= partial 'documentacao/shared/custom-fields/custom-checkbox' %>
+    </code>
+
+    <div class="ls-box-demo">
+      <p class="ls-title2"> Checkbox original </p>
+      <%= partial 'documentacao/shared/custom-fields/original-checkbox' %>
+    </div>
+    <code class="language-html ls-well-example">
+      <%= partial 'documentacao/shared/custom-fields/original-checkbox' %>
+    </code>
+    <!-- End Checkbox -->
+  </div>

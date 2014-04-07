@@ -1,0 +1,57 @@
+---
+title: Box genérico
+description: Um box genérico usado para dividir ou agrupar conteúdos
+---
+
+<div class="doc-section">
+  <p>Geralmente precisamos agrupar ou dividir algumas informações em caixas no layout. Essas caixas são simples e bem genéricas que podem conter qualquer outro elemento. </p>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classes</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>.ls-big-space</td>
+        <td>Aumenta o espaço do box.</td>
+      </tr>
+      <tr>
+        <td>.ls-small-space</td>
+        <td>Diminui o espaço do box.</td>
+      </tr>
+      <tr>
+        <td>.ls-box-gray</td>
+        <td>O box tem background cinza.</td>
+      </tr>
+    </tbody>
+  </table>
+
+<h2 class="title-2">Box genérico</h2>
+
+<div class="ls-box-demo">
+  <%= partial 'documentacao/shared/box/box' %>
+</div>
+<code class="language-html ls-well-example">
+  <%= partial 'documentacao/shared/box/box' %>
+</code>
+
+<h2 class="title-2">Box com a classe .ls-gray</h2>
+<div class="ls-box-demo">
+  <%= partial 'documentacao/shared/box/box-gray' %>
+</div>
+<code class="language-html ls-well-example">
+  <%= partial 'documentacao/shared/box/box-gray' %>
+</code>
+
+<h3 class="title-3">Box com as classes ls-big-space e ls-small-space</h3>
+<div class="ls-box-demo">
+  <%= partial 'documentacao/shared/box/box-big-small' %>
+</div>
+<code class="language-html ls-well-example">
+  <%= partial 'documentacao/shared/box/box-big-small' %>
+</code>
+
+</div>

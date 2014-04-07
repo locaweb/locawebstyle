@@ -1,0 +1,218 @@
+.header	.guided-tour
+	background: #fff
+	border: 1px solid #ccc
+	display: block
+	width: 260px
+	position: absolute
+	top: -400px
+	right: 0
+	text-align: center
+	z-index: 4
+	border-bottom-left-radius: 5px
+	+transition(all .3s ease-in-out)
+
+	.btn-tour
+		margin: 15px 0
+		background-color: #ddd
+		border-color: #ccc
+
+	.guided-footer
+		margin: 15px 10px 8px
+		text-align: left
+		background: #ececec
+		font-size: .75rem
+
+	.close
+		margin-right: 10px
+		color: #ddd
+
+		&:hover
+			color: #ccc
+
+	&.on
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+		top: -1px
+
+.guided-header
+	clear: both
+	margin: 0 0 10px
+
+	[class*="icopanel-"]
+		font-size: 52px
+		color: rgba(#ddd, 0.5)
+
+	p
+		font-size: .8125rem
+		margin-bottom: 0
+
+.guided-footer a
+	&:first-child
+		border-top: 1px solid #dbe0e6
+		display: block
+		margin: 0 8px
+		padding: 6px 0
+
+.title-guided
+	font-size: 1.125rem
+	margin-top: 0
+
+div.hopscotch-bubble
+	z-index: 5
+	background-clip: padding-box
+	background-color: #fff
+	border-radius: 6px
+	border: 1px solid #cccccc
+	border: 1px solid rgba(0, 0, 0, 0.2)
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+	max-width: 276px
+	padding: 1px
+	position: absolute
+	text-align: left
+	white-space: normal
+
+	&.animate
+		+transition-property(top, left)
+		+transition-duration(1s)
+		+transition-timing-function(ease-in-out)
+
+	&.invisible
+		opacity: 0
+
+	&.hide
+		display: none
+
+	.hide, .hide-all
+		display: none
+
+	.hopscotch-bubble-container
+		padding: 0 !important
+
+	.hopscotch-bubble-arrow-container
+		position: absolute
+		width: 22px
+		height: 22px
+
+		.hopscotch-bubble-arrow, .hopscotch-bubble-arrow-border
+			border: 11px solid transparent
+			position: absolute
+			width: 0
+			height: 0
+			top: 0
+			left: 0
+			border: 11px solid transparent
+
+		&.up
+			top: -21px
+
+			.hopscotch-bubble-arrow
+				border-color: transparent transparent #f7f7f7 transparent
+
+			.hopscotch-bubble-arrow-border
+				border-color: transparent transparent rgba(0, 0, 0, 0.2) transparent
+				top: -2px
+
+		&.down
+			bottom: -21px
+
+			.hopscotch-bubble-arrow
+				border-color: #f7f7f7 transparent transparent transparent
+
+			.hopscotch-bubble-arrow-border
+				border-color: #000 transparent transparent transparent
+				bottom: -2px
+
+		&.left
+			left: -19px
+
+			.hopscotch-bubble-arrow
+				border-color: transparent #fff transparent transparent
+
+			.hopscotch-bubble-arrow-border
+				border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent
+				left: -2px
+
+		&.right
+			right: -22px
+
+			.hopscotch-bubble-arrow
+				border-color: transparent transparent transparent #fff
+
+			.hopscotch-bubble-arrow-border
+				border-color: transparent transparent transparent #000
+				right: -2px
+
+	.hopscotch-bubble-number
+		display: none
+
+	.hopscotch-title
+		background-color: #f7f7f7
+		border-bottom: 1px solid #ebebeb
+		border-radius: 5px 5px 0 0
+		font-size: 14px
+		font-weight: normal
+		line-height: 18px
+		margin: 0
+		padding: 8px 14px
+
+	.hopscotch-content
+		color: #555
+		font-size: 0.875rem
+		padding: 9px 14px
+		text-align: left
+		white-space: normal
+
+	.hopscotch-actions
+		background: #f7f7f7
+		border-top: 1px solid #ebebeb
+		border-radius: 0 0 5px 5px
+		margin-top: 0
+		padding: 10px 15px
+		overflow: hidden
+
+		button
+			display: inline-block
+			padding: 6px 12px
+			margin-bottom: 0
+			font-size: .75rem
+			font-weight: normal
+			line-height: 1.428571429
+			font-family: "open_sans_semibold"
+			text-align: center
+			vertical-align: middle
+			cursor: pointer
+			border: 1px solid transparent
+			border-radius: 4px
+			white-space: nowrap
+			-webkit-user-select: none
+			-moz-user-select: none
+			-ms-user-select: none
+			-o-user-select: none
+			user-select: none
+			color: #ddd
+			background-color: #fff
+			border-color: #ccc
+			margin-right: 1rem
+
+			&.hopscotch-nav-button.next
+				background-color: #ccc
+				border-color: #ccc
+				color: #fff
+				float: right
+				margin: 0
+
+	.hopscotch-bubble-close
+		cursor: pointer
+		font-size: .7rem
+		height: 1.2rem
+		overflow: hidden
+		position: absolute
+		right: 11px
+		text-align: center
+		top: 10px
+		width: 1.3rem
+
+		&:after
+			display: none
+
+		&:hover
+			opacity: .7

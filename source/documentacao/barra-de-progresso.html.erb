@@ -47,22 +47,10 @@ description: Exibe o status de um processo
 
   <h3>Código</h3>
 
-  <div class="doc-example doc-example-markup">
-    <!-- Estática -->
-    <progress class="ls-progress" value="10" max="100"></progress>
-    <br>
-    <!-- Animada -->
-    <progress class="ls-progress ls-progress-animated" value="20" max="100"></progress>
-    <br>
-
-    <!-- Cinza -->
-    <progress class="ls-progress ls-progress-gray" value="30" max="100"></progress>
-    <br>
-
-    <!-- Com números -->
-    <progress class="ls-progress ls-progress-percent" value="40" max="100"></progress>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/progress-bar/progress' %>
   </div>
-
-
-
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/progress-bar/progress' %>
+  </code>
 </div>

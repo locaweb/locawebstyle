@@ -1,3 +1,29 @@
+.documentacao
+
+  .ls-main
+    background: #FFF
+    margin-left: 220px
+
+    .ls-sep
+      padding: 10px 0
+
+  .ls-title-intro
+    text-align: center
+    font-size: 3rem
+
+  .ls-title-2, .ls-title-3
+    font-size: 1rem
+
+  .ls-container
+    width: 960px
+    margin: 0 auto
+
+  .ls-topbar, aside
+    width: 220px
+
+    .ls-menu li a
+      padding: 12px 20px
+
 .doc-section
   margin-bottom: 2rem
 
@@ -22,8 +48,6 @@
     padding: 0 .5rem
     font-size: .6rem
     line-height: 1rem
-  &:after
-    @extend .ls-clearfix
 
   .doc-example-menu
     height: 1.5rem
@@ -135,9 +159,14 @@ p
       background: rgba(0,0,0,0.5)
       color: #FFF
 
-.ls-well-example
+.ls-box-demo
+  overflow: hidden
   position: relative
-
+  background: white
+  padding: 25px
+  border:  1px solid #ddd
+  border-radius: 5px 5px 0 0
+  border-bottom: none
   &:before
     content: "Exemplo funcional"
     position: absolute
@@ -154,14 +183,13 @@ p
   [class*="col"]
     background-color: #ddd
     outline: 1px solid #999
-    font-size: .5rem
+    font-size: .75rem
     text-align: center
     height: 1.5rem
     line-height: 1.5rem
   .row
     overflow: hidden
     margin-bottom: .3rem
-
 
 .tips
   background: #f8c647
@@ -193,10 +221,24 @@ p
     width: 0
     height: 0
 
-+keyframes(animate)
-  0%
-    margin-left: 0
-  50%
-    margin-left: 10px
-  100%
-    margin-left: 0
+.doc-search-ico
+  background-color: #fff
+  margin-bottom: 15px
+  padding: 10px 10px 5px
+
+  p
+    clear: both
+    font-size: .75rem
+    padding-top: 5px
+
+
+#results
+  position: absolute
+  z-index: 9
+
+///
+/// Formatação de Box dentro de exemplos
+///
+.ls-box-demo .ls-box
+  margin: 0
+
