@@ -9,16 +9,13 @@
   text-decoration: none
   text-align: center
   white-space: nowrap
-
-  &:hover,
-  &:focus
-    +single-transition(all, .3s)
+  +single-transition(all, .2s)
 
   &.active,
   &:active
-    +box-shadow(inset 0 3px 5px rgba(0, 0, 0, 0.15))
+    +box-shadow(inset 0 3px 5px rgba(0, 0, 0, 0.05))
 
-    // Botões com disabled
+  // Botões com disabled
   &.ls-disabled,
   &[disabled]
     opacity: .6
@@ -55,7 +52,7 @@
   &:hover,
   &:focus,
   &.active
-    background-color: $gray-2
+    background-color: $gray-1
 
 .ls-btn-primary
   color: #fff
@@ -118,5 +115,3 @@
     &:focus
       +single-transition(none)
       outline: none
-
-
