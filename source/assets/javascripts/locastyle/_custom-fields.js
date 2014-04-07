@@ -20,9 +20,9 @@ locastyle.customFields = (function() {
 
       if($(field)[0].type === 'select-one'){ customSelect($(field)); }
 
-      if($(field)[0].type === 'checkbox'){ customCheckbox($(field)); }
+      if($(field)[0].type === 'checkbox'){ customCheckbox($(field)); checkInputs($(field))}
 
-      if($(field)[0].type === 'radio'){ customRadio($(field)); checkRadio($(field)) }
+      if($(field)[0].type === 'radio'){ customRadio($(field)); checkInputs($(field)) }
 
     })
   }
@@ -50,6 +50,10 @@ locastyle.customFields = (function() {
 
   function customCheckbox($field){
     fieldSpan($field);
+    bindCustomCheckbox($field)
+  }
+
+  function bindCustomCheckbox($field){
     var $labelField = labelField($field)
     $field.on('click', function(){
       $field.is(":checked") ? $labelField.addClass("checked") : $labelField.removeClass("checked")
@@ -69,17 +73,17 @@ locastyle.customFields = (function() {
 
   function bindCustomRadio($field){
     $field.on('click', function(){
-      uncheckRadios($field);
-      checkRadio($field)
+      uncheckInputs($field);
+      checkInputs($field)
     });
   }
 
-  function uncheckRadios($field){
+  function uncheckInputs($field){
     var group = $field.attr("name");
     $field.parents().find('.ls-field-custom-radio').removeClass("checked");
   }
 
-  function checkRadio($field){
+  function checkInputs($field){
     var $labelField = labelField($field);
     if($field.is(":checked")){
       $labelField.addClass("checked")
