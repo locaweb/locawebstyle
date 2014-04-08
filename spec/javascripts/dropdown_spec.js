@@ -23,7 +23,13 @@ describe("Dropdown: ", function() {
         expect(spyEvent).toHaveBeenPrevented();
       });
 
+      it("should close any opened dropdown", function() {
+        $("#dropdown-test-4 #dropdown-default > a:first-child").trigger("click");
+        expect($("#dropdown-test-4 #dropdown-active").hasClass("active")).toEqual(false);
+      });
+
     });
+
     describe("When click outside dropdown click", function() {
       it("should close opened dropdown", function() {
         $("#fake-body").trigger("click");

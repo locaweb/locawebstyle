@@ -13,6 +13,7 @@ locastyle.dropdown = (function() {
       evt.preventDefault();
       var $target = $($(this).parents("[data-module=dropdown]"));
       toggleDropdown($target);
+      closeDropdown($target);
       evt.stopPropagation();
     });
   }
@@ -24,13 +25,12 @@ locastyle.dropdown = (function() {
   function bindClickOutsideTriggers() {
     $("body").on("click", function(){
       closeDropdown();
-    })
+    });
   }
 
-  function closeDropdown() {
-    $("[data-module=dropdown]").removeClass("active");
+  function closeDropdown(el) {
+    $("[data-module=dropdown]").not(el).removeClass("active");
   }
-
 
   return {
     init: init
