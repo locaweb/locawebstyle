@@ -2,7 +2,7 @@
 title: Dropdown
 description: Componente para agrupar listas de links.
 ---
-<h2>Utilizando o dropdown.</h2>
+<h2 class="ls-title-2">Utilizando o dropdown.</h2>
 <hr>
 <table class="ls-table">
   <thead>
@@ -30,12 +30,129 @@ description: Componente para agrupar listas de links.
   <%= partial 'documentacao/shared/dropdown' %>
 </code>
 
-<h2>Mudando a posição da droplist.</h2>
+<h2 class="ls-title-2">Mudando a posição da droplist.</h2>
+<p>Basta inserir a classe <code>.ls-pos-right</code>, que o dropdown abre à direita do elemento</p>
 <hr>
 
 <div class="ls-box-demo">
-  <%= partial 'documentacao/shared/dropdown' %>
+  <div data-module="dropdown" class="ls-dropdown ls-pos-right">
+    <a href="#" class="ls-btn-primary">Users</a>
+    <ul>
+        <li><a href="#">Edit</a></li>
+        <li><a href="#">Config</a></li>
+        <li><a href="#">Save</a></li>
+    </ul>
+  </div>
+
 </div>
 <code class="language-html ls-well-example">
-  <%= partial 'documentacao/shared/dropdown' %>
+  <div data-module="dropdown" class="ls-dropdown ls-pos-right">
+    <a href="#" class="ls-btn-primary">Users</a>
+    <ul>
+        <li><a href="#">Edit</a></li>
+        <li><a href="#">Config</a></li>
+        <li><a href="#">Save</a></li>
+    </ul>
+  </div>
+</code>
+
+
+<h2 class="ls-title-2">Dropdown com  último link em destaque.</h2>
+<p>Utilizando a classe funcional <code>.ls-color-danger</code> pra diferenciar o link dentro do droplist</p>
+<div class="ls-box-demo">
+  <div data-module="dropdown" class="ls-dropdown">
+    <a href="#" class="ls-btn-primary">Users</a>
+    <ul>
+        <li><a href="#">Edit</a></li>
+        <li><a href="#">Config</a></li>
+        <li><a href="#">Save</a></li>
+        <li><a href="#" class="ls-color-danger">Remove</a></li>
+    </ul>
+  </div>
+</div>
+
+<code class="language-html ls-well-example">
+  <div data-module="dropdown" class="ls-dropdown">
+    <a href="#" class="ls-btn-primary">Users</a>
+    <ul>
+        <li><a href="#">Edit</a></li>
+        <li><a href="#">Config</a></li>
+        <li><a href="#">Save</a></li>
+        <li><a href="#" class="ls-color-danger">Remove</a></li>
+    </ul>
+  </div>
+</code>
+
+<h2 class="ls-title-2">Dropdown sem texto.</h2>
+<p>Basta deixar o link sem texto, conforme o exemplo abaixo</p>
+
+<div class="ls-box-demo">
+  <div data-module="dropdown" class="ls-dropdown">
+    <a href="#" class="ls-btn"></a>
+    <ul>
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+    </ul>
+  </div>
+  <div data-module="dropdown" class="ls-dropdown">
+    <a href="#" class="ls-btn-primary"></a>
+    <ul>
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+    </ul>
+  </div>
+  <div data-module="dropdown" class="ls-dropdown">
+    <a href="#" class="ls-btn-dark"></a>
+    <ul>
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+    </ul>
+  </div>
+  <div data-module="dropdown" class="ls-dropdown">
+    <a href="#" class="ls-btn-danger"></a>
+    <ul>
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+    </ul>
+  </div>
+</div>
+
+<code class="language-html ls-well-example">
+<div data-module="dropdown" class="ls-dropdown">
+  <a href="#" class="ls-btn"></a>
+  <ul>
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+  </ul>
+</div>
+<div data-module="dropdown" class="ls-dropdown">
+  <a href="#" class="ls-btn-primary"></a>
+  <ul>
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+  </ul>
+</div>
+<div data-module="dropdown" class="ls-dropdown">
+  <a href="#" class="ls-btn-dark"></a>
+  <ul>
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+  </ul>
+</div>
+<div data-module="dropdown" class="ls-dropdown">
+  <a href="#" class="ls-btn-danger"></a>
+  <ul>
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+  </ul>
+</div>
+
 </code>
