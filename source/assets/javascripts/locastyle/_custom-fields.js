@@ -35,7 +35,7 @@ locastyle.customFields = (function() {
     $('<span class="ls-field-custom-'+ $field[0].type + '"></span>').insertBefore($field[0]);
   }
 
-  function labelField($field){
+  function siblingsField($field){
     return $field.siblings('.ls-field-custom-'+ $field[0].type);
   }
 
@@ -47,9 +47,9 @@ locastyle.customFields = (function() {
   }
 
   function bindCustomSelect($field){
-    var $labelField = labelField($field)
+    var $siblingsField = siblingsField($field)
     $field.on('change', function(){
-      $labelField.text($field.find('option:selected').text())
+      $siblingsField.text($field.find('option:selected').text())
     })
   }
 
@@ -60,9 +60,9 @@ locastyle.customFields = (function() {
   }
 
   function bindCustomCheckbox($field){
-    var $labelField = labelField($field)
+    var $siblingsField = siblingsField($field)
     $field.on('click', function(){
-      $field.is(":checked") ? $labelField.addClass("checked") : $labelField.removeClass("checked")
+      $field.is(":checked") ? $siblingsField.addClass("checked") : $siblingsField.removeClass("checked")
     })
   }
   // Radio
@@ -84,9 +84,9 @@ locastyle.customFields = (function() {
   }
 
   function checkInputs($field){
-    var $labelField = labelField($field);
+    var $siblingsField = siblingsField($field);
     if($field.is(":checked")){
-      $labelField.addClass("checked")
+      $siblingsField.addClass("checked")
     }
   }
 
