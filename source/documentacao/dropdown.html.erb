@@ -1,17 +1,41 @@
 ---
 title: Dropdown
-description: dropdown
+description: Componente para agrupar listas de links.
 ---
-<h1 class="ls-title-intro">Dropdown</h1>
+<h2>Utilizando o dropdown.</h2>
+<hr>
+<table class="ls-table">
+  <thead>
+    <tr>
+      <th>Seletor</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>.ls-dropdown</td>
+      <td>Vai no elemento pai da listagem de links, normalmente "div".</td>
+    </tr>
+    <tr>
+      <td>data-module="dropdown"</td>
+      <td>Vai no elemento pai e ativará a função de dropdown na estrutura.</td>
+    </tr>
+  </tbody>
+</table>
 
-<div class="doc-block">
-  <p>Botões que acompanham algum dropdown precisam tem os atributos <code>data-module="dropdown"</code></p>
-
-  <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/dropdown' %>
-  </div>
-  <code class="language-html ls-well-example">
-    <%= partial 'documentacao/shared/dropdown' %>
-  </code>
-
+<div class="ls-box-demo">
+  <%= partial 'documentacao/shared/dropdown' %>
 </div>
+<code class="language-html ls-well-example">
+  <%= partial 'documentacao/shared/dropdown' %>
+</code>
+
+<h2>Mudando a posição da droplist.</h2>
+<hr>
+
+<div class="ls-box-demo">
+  <%= partial 'documentacao/shared/dropdown' %>
+</div>
+<code class="language-html ls-well-example">
+  <%= partial 'documentacao/shared/dropdown' %>
+</code>

@@ -21,23 +21,8 @@
     opacity: .6
     cursor: default
 
-  &[data-module]:after
-    content: ""
-    border: 5px solid transparent
-    display: inline-block
-    width: 0
-    height: 0
-    margin-left: 5px
-    position: relative
-    top: 2px
-
   &:empty:after
     margin-left: 0
-
-// Tratando diferença na setinha dos botões dropdown
-[class*="ls-btn-"]
-  &[data-module]:after
-    border-top-color: #fff
 
 .ls-btn-block
   display: block

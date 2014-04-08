@@ -12,6 +12,7 @@
     border-radius: 4px
     overflow: hidden
     font-size: .75rem
+    border: 1px solid $gray-1
 
     a
       padding: 10px 20px
@@ -20,6 +21,21 @@
       &:hover
         background: $gray-1
 
-
   &.active > ul
     display: block
+
+
+  > a:after
+    content: ""
+    +arrow-down(#fff, 5px)
+    display: inline-block
+    width: 0
+    height: 0
+    margin-left: 14px
+    position: relative
+    top: 2px
+
+// Tratando diferença na setinha dos botões dropdown
+[class*="ls-btn-"]
+  &[data-module]:after
+    border-top-color: #fff
