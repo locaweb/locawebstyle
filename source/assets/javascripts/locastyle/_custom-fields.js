@@ -39,15 +39,21 @@ locastyle.customFields = (function() {
     return $field.siblings('.ls-field-custom-'+ $field[0].type);
   }
 
+  // Select
   function customSelect($field){
     var selectText = $field.children('option:selected').eq(0).text();
     $('<span class="ls-field-custom-'+ $field[0].type +'"> ' + selectText + ' </span>').insertBefore($field[0]);
+    bindCustomSelect($field)
+  }
+
+  function bindCustomSelect($field){
     var $labelField = labelField($field)
     $field.on('change', function(){
       $labelField.text($field.find('option:selected').text())
     })
   }
 
+  // Checkbox
   function customCheckbox($field){
     fieldSpan($field);
     bindCustomCheckbox($field)
@@ -59,13 +65,7 @@ locastyle.customFields = (function() {
       $field.is(":checked") ? $labelField.addClass("checked") : $labelField.removeClass("checked")
     })
   }
-
-  function bindRemoveCustomClass(){
-    $('.ls-input-original').on('click', function(){
-      $('.ls-field-custom-radio').removeClass("checked");
-    });
-  }
-
+  // Radio
   function customRadio($field){
     fieldSpan($field);
     bindCustomRadio($field);
@@ -89,6 +89,13 @@ locastyle.customFields = (function() {
       $labelField.addClass("checked")
     }
   }
+
+  function bindRemoveCustomClass(){
+    $('.ls-input-original').on('click', function(){
+      $('.ls-field-custom-radio').removeClass("checked");
+    });
+  }
+
 
   return {
     init: init
