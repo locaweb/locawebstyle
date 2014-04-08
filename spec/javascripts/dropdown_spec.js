@@ -24,6 +24,13 @@ describe("Dropdown: ", function() {
       });
 
     });
+    describe("When click outside dropdown click", function() {
+      it("should close opened dropdown", function() {
+        $("#fake-body").trigger("click");
+        expect($("#dropdown-test-3").hasClass("active")).toEqual(false);
+      });
+    });
+
   });
 
 });
