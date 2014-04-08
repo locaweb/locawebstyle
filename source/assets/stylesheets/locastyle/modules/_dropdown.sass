@@ -11,29 +11,51 @@
     margin-top: 2px
     border-radius: 4px
     overflow: hidden
-    font-size: .75rem
-    border: 1px solid $gray-1
+    font-size: .875rem
+    border: 1px solid $gray-2
 
     a
       padding: 10px 20px
       display: block
 
-      &:hover
+      &:hover,
+      &:focus
         background: $gray-1
+
+      &.ls-color-danger
+        border-top: 1px solid $gray-2
+        padding-top: 10px
+
+        &:hover,
+        &:focus
+          color: #fff !important
+
 
   &.active > ul
     display: block
 
+  [class*="ls-btn"]
 
-  > a:after
-    content: ""
+    &:empty:after
+      margin-left: 0
+
+    &:after
+      content: ""
+      +arrow-down($gray-4, 5px)
+      display: inline-block
+      width: 0
+      height: 0
+      margin-left: 14px
+      position: relative
+      top: 2px
+
+  [class*="ls-btn-"]:after
     +arrow-down(#fff, 5px)
-    display: inline-block
-    width: 0
-    height: 0
-    margin-left: 14px
-    position: relative
-    top: 2px
+    top: 3px
+
+  &.ls-pos-right ul
+    left: auto
+    right: 0
 
 // Tratando diferença na setinha dos botões dropdown
 [class*="ls-btn-"]
