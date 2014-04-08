@@ -1,5 +1,12 @@
 #{$theme-color}
 
+  a:not([class*="ls-btn"])
+    color: $color-2
+
+  &:hover
+  &:focus
+    color: $color-3
+
   //
   // Topbar
   //
@@ -137,14 +144,6 @@
     tbody tr:hover
       background-color: rgba($color-4, .02)
 
-    td, th
-
-      a:not([class*="ls-btn"])
-        color: $color-2
-
-        &:hover
-          color: $color-3
-
   //
   // Tabs
   //
@@ -182,3 +181,14 @@
     &[class*="ls-ico"]:before
       color: $color-3
       border: 4px solid $color-3
+
+  //
+  // Dropdown
+  //
+  .ls-dropdown ul a
+
+    &:hover,
+    &:focus
+      background-color: $color-3
+      color: #fff
+
