@@ -18,14 +18,34 @@
 .ls-container
   padding: 0 30px
 
-.ls-search
-  li
-    background: white
-    a
-      padding: 5px
-      &:hover
-        background: gray
-        color: white
+.ls-search li
+  background: white
+
+  a
+    padding: 5px
+
+    &:hover
+      background: gray
+      color: white
+
+.ls-lnk-nav
+  font-size: 1.25rem
+  color: #000
+  text-decoration: none
+  display: block
+  line-height: 1.25
+  padding-top: 2px
+
+  &[class*="ls-ico"]:before
+    position: relative
+    top: -2px
+    padding: 3px 5px 3px 6px
+    margin-right: 5px
+    display: inline-block
+    vertical-align: middle
+    border-radius: 100%
+    font-size: 1rem
+    text-align: center
 
 @media (min-width: $screen-sm)
   .ls-main
