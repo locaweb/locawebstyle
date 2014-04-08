@@ -33,10 +33,14 @@
     .ls-menu
       a
         &:hover,
-        &:focus,
-        &.ls-active
+        &:focus
           background-color: $gray-4
           border-left-color: $color-3
+
+      .ls-submenu.active > a
+        background-color: $gray-4
+        border-left-color: $color-3
+
 
   //
   // Dashboard Info
