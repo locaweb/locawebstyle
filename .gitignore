@@ -23,3 +23,6 @@ source/.DS_Store
 .rvmrc
 .jscs.json
 bs-config.js
+
+.vagrant
+Vagrantfile

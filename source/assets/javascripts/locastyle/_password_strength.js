@@ -1,6 +1,6 @@
 var locastyle = locastyle || {};
 
-locastyle.passwordStregth = (function() {
+locastyle.passwordStrength = (function() {
   'use strict';
 
   function init(dom_scope){

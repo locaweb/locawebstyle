@@ -5,40 +5,40 @@ describe("Password Strength: ", function() {
 
   describe('Dom scope', function () {
     it('should load password strength and add related class in scoped dom', function () {
-      locastyle.passwordStregth.init($("#scoped_dom"));
+      locastyle.passwordStrength.init($("#scoped_dom"));
       expect($("#inside_scope_monitor").hasClass('empty')).toBeTruthy();
     });
 
     it('should NOT load password strength and add NOTHING in scoped dom', function () {
-      locastyle.passwordStregth.init($("#scoped_dom"));
+      locastyle.passwordStrength.init($("#scoped_dom"));
       expect($("#outside_scope_monitor").hasClass('empty')).not.toBeTruthy();
     });
   });
 
   describe('When init with document as dom_scope', function () {
     beforeEach(function() {
-      locastyle.passwordStregth.init($(document));
+      locastyle.passwordStrength.init($(document));
     });
 
     describe("Complexity meter", function () {
       it("should return 'strong' when I pass a string containing at least eight chars, letters, numbers, capital letters and special characters", function () {
-        expect(locastyle.passwordStregth.checkIt("s0mePas$")).toEqual("strong");
+        expect(locastyle.passwordStrength.checkIt("s0mePas$")).toEqual("strong");
       });
 
       it("should return 'good' when I pass a string containing at least eight chars, letters, numbers and capital letters", function () {
-        expect(locastyle.passwordStregth.checkIt("somePass12")).toEqual("good");
+        expect(locastyle.passwordStrength.checkIt("somePass12")).toEqual("good");
       });
 
       it("should return 'medium' when I pass a string containing at least eight chars, letters and numbers", function () {
-        expect(locastyle.passwordStregth.checkIt("somepass12")).toEqual("medium");
+        expect(locastyle.passwordStrength.checkIt("somepass12")).toEqual("medium");
       });
 
       it("should return 'weak' when I pass a string containing at least eight chars and only letters", function () {
-        expect(locastyle.passwordStregth.checkIt("somepass")).toEqual("weak");
+        expect(locastyle.passwordStrength.checkIt("somepass")).toEqual("weak");
       });
 
       it("should return 'weak' when I pass a string containing lass than eight chars", function () {
-        expect(locastyle.passwordStregth.checkIt("s0mPa$")).toEqual("weak");
+        expect(locastyle.passwordStrength.checkIt("s0mPa$")).toEqual("weak");
       });
     });
 
