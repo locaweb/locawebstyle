@@ -27,6 +27,21 @@
   thead th
     border-bottom-width: 2px
 
+    a
+      padding-right: 5px
+
+      &:after
+        margin-left: 0
+
+    &.ls-data-descending a:after
+      +arrow-down(#000,6px)
+      position: relative
+      top: 5px
+
+    &.ls-data-ascending a:after
+      +arrow-up(#000,6px)
+
+
   tbody tr:last-child td,
   tbody tr:last-child th
     border-bottom: none
