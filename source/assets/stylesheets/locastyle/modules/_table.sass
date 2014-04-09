@@ -1,137 +1,143 @@
 $bg-actions-color:  #00a272
 
 .well.hidden + .ls-table
-	margin-top: 0
+  margin-top: 0
 
 .ls-table-group-actions
-	display: none
-	height: 54px
-	margin-bottom: 10px
-	p
-		float: left !important
-		margin-bottom: 0
-		line-height: 34px
+  display: none
+  height: 54px
+  margin-bottom: 10px
+  p
+    float: left !important
+    margin-bottom: 0
+    line-height: 34px
 
 .ls-table
-	background-color: #fff
-	box-shadow: 0 1px 0 $gray6
-	border-radius: 4px 4px 0 0
+  background-color: #fff
+  box-shadow: 0 1px 0 $gray6
+  border-radius: 4px 4px 0 0
 
-	thead
-		@extend .bg-gray1
-		color: #fff
+  thead
+    @extend .bg-gray1
+    color: #fff
 
-		tr th
-			border-bottom: 1px solid $gray6
-			border-left: 1px solid $gray6
-			font-size: .875rem
-			vertical-align: middle
-			font-family: $font-bold
+    tr th
+      border-bottom: 1px solid $gray6
+      border-left: 1px solid $gray6
+      font-size: .875rem
+      vertical-align: middle
+      font-family: $font-bold
 
-			&:first-child
-				border-radius: 4px 0 0 0
+      &:first-child
+        border-radius: 4px 0 0 0
 
-			&:last-child
-				border-radius: 0 4px 0 0
+      &:last-child
+        border-radius: 0 4px 0 0
 
-			&.ls-table-actions
-				border-left: none
-				color: $gray1
+      &.ls-table-actions
+        border-left: none
+        color: $gray1
 
-			&:nth-child(1)
-				input[type="checkbox"]
-					+appearance(checkbox)
-					display: inline-block
+      &:nth-child(1)
+        input[type="checkbox"]
+          +appearance(checkbox)
+          display: inline-block
 
-	tbody
+  tbody
 
-		&.ls-table-invert-bg
-			@extend .bg-gray4
+    &.ls-table-invert-bg
+      @extend .bg-gray4
 
-			tbody tr:nth-child(odd)
-				background-color: #fff
+      tbody tr:nth-child(odd)
+        background-color: #fff
 
-		tr
-			// +single-transition(color, .5s, false, .5)
-			+single-transition()
+    tr
+      // +single-transition(color, .5s, false, .5)
+      +single-transition()
 
-			&[data-action-modal="view"]
-				cursor: pointer
+      &[data-action-modal="view"]
+        cursor: pointer
 
-			&:nth-child(odd)
-				@extend .bg-gray4
+      &:nth-child(odd)
+        @extend .bg-gray4
 
-			td
-				border-left: 1px solid $gray6
-				font-size: .875rem
-				vertical-align: middle
-				position: static
-				&:nth-child(1)
-					input[type="checkbox"]
-						+appearance(checkbox)
-						display: inline-block
+      td
+        border-left: 1px solid $gray6
+        font-size: .875rem
+        vertical-align: middle
+        position: static
+        &:nth-child(1)
+          input[type="checkbox"]
+            +appearance(checkbox)
+            display: inline-block
 
-				&:first-child
-					border-left: none
+        &:first-child
+          border-left: none
 
-				&:last-child
-					padding-right: 20px
-					position: relative
+        &:last-child
+          padding-right: 20px
+          position: relative
 
-				p, label
-					font-size: 1rem
+        p, label
+          font-size: 1rem
 
-				&.ls-table-actions, &:last-child
+        &.ls-table-actions, &:last-child
 
-					button, a
-						display: none
-						text-align: left
+          button, a
+            display: none
+            text-align: left
 
-						&:first-child
-							display: inline-block
+            &:first-child
+              display: inline-block
 
-					.dropdown-menu
+          .dropdown-menu
 
-						.text-danger:hover
-							color: #fff
+            .text-danger:hover
+              color: #fff
+              background-color: #d2322d
 
-							span
-								color: #fff
+              span
+                color: #fff
 
 
-					&.ls-table-actions-show
+          &.ls-table-actions-show
 
-						button
-							display: inline-block
+            button
+              display: inline-block
 
-							&:before
-								margin: 0 2px
+              &:before
+                margin: 0 2px
 
-				&.ls-table-actions
-					border-left: none
-					text-align: right
+        &.ls-table-actions
+          border-left: none
+          text-align: right
 
-					.dropdown-menu
-						a
-							display: block
-							&.text-danger
-								color: #a94442 !important
+          .btn-danger
+            color: #fff
 
-			&:hover
-				background-color: $color4
+          .dropdown-menu
+            a
+              display: block
+              &.text-danger
+                color: #a94442 !important
+                &:hover
+                  color: #fff !important
 
-			&.selected
-				background-color: darken($color4, 4%)
+      &:hover
+        background-color: $color4
+
+      &.selected
+        background-color: darken($color4, 4%)
 
 @media (max-width: 767px)
-	.ls-table
+  .ls-table
 
-		.ls-table-actions
+    .ls-table-actions
 
-			.dropdown-toggle
+      .dropdown-toggle
 
-				span
-					display: none
+        span
+          display: none
 
-				&:after
-					margin-left: 0
+        &:after
+          margin-left: 0

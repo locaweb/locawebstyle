@@ -7,10 +7,10 @@ menu_page: sidebar-componentes.erb
 	<h3>Seguimos os padrões do bootstrap com um toque de usabilidade.</h3>
 </header>
 
-<p>A tabela é elemento comum e bastante usado para listagem de conteúdo com muitas informações agregadas. Nossa tabela tem uma série de ações que extendem as funcionalidades da simples tabela que o Bootstrap dá. </p>
+<p>A tabela é um elemento comum e bastante usado para listagem de conteúdo com muitas informações agregadas. Nossa tabela tem uma série de ações que extendem as funcionalidades da simples tabela que o Bootstrap dá. </p>
 
 <h2 class="title-2">Tabela básica</h2>
-<p>A tabela funciona totalmente igual ao do Bootstrap, incluse as classes. Fizemos uma classe customizada para fazer nosso estilo, essa classe é a <code>ls-table</code>.</p>
+<p>A tabela funciona totalmente igual ao do Bootstrap, inclusive as classes. Fizemos uma classe customizada para fazer nosso estilo, essa classe é a <code>ls-table</code>.</p>
 
 <table class="table ls-table">
 	<thead>
@@ -152,21 +152,21 @@ menu_page: sidebar-componentes.erb
 <h2 class="title-2">Tabela complexa</h2>
 <p>Tabelas complexas possuem ações para cada linha de registros, como editar, visualizar, excluir, etc.</p>
 <p>Essas tabelas, <b>obrigatoriamente</b>, devem possuir a coluna de seleção de elementos, com checkboxes e uma coluna com ações, em lnks ou botões</p>
-<p>A tabela, com o mesmo código, possui algumas diferenças na visualizaçao, dependendo do dispositivo.</p>
+<p>A tabela, com o mesmo código, possui algumas diferenças na visualização, dependendo do dispositivo.</p>
 <p>Todas as regras, comportamentos e configuraçoes das tabelas compexas, listadas:</p>
 <ul>
-	<li><b>Formulários</b>: Tabelas complexas devem estar dentro de um form.</li>
-	<li><b>Ação única</b>: exibida como um botão em desktop e como um dropdown em mobile</li>
-	<li><b>Dropdown</b>: exibido com o label "<i>Ações</i>" no desktop e apenas com uma seta no mobile</li>
-	<li><b>Dropdown em mobile</b>: nas últimas duas linhas da tabela o dropdown de açoes abre para cima, evitando ficar fora da área da tela, caso a tabela seja o último elemento da página.</li>
-	<li><b>Colunas</b>: todas são exibidas no desktop e pode-se ocultar em mobile, bastando adicionar a class <code>hidden-xs</code> na coluna equivalente no cabeçalho (<code>th</code>).</li>
-	<li><b>Edição</b>: Para que um ação tenha o comportamento de edição, ela deve possuir o parâmetro <code>data-action-modal="edit"</code></li>
-	<li><b>Visualização</b>: Para que um ação tenha o comportamento de visualização, ela deve possuir o parâmetro <code>data-action-modal="view"</code></li>
-	<li><b>Visualização</b>: em mobile, ao se clicar em qualquer lugar da linha é exibida uma <i>modal</i> com todas as informações.</li>
-	<li><b>Visualização em mobile</b>: mesmoq ue nao exista no código a ação <i>Visualizar</i>, ela é inserida em dispositivos com  telas pequenas.</li>
-	<li><b>Ações <i>danger</i></b>: ações que possuam a classe <code>danger</code>, ao clicadas, abrem um modal de confirmação com o texto atribuído no paraâmetro <code>data-confirm-text</code>.<br> Exemplo: <code>data-confirm-text="Confirma exclusão do item?"</code>.</li>
-	<li><b>Falha na edição</b>: é exibida a linha com fundo vermelho.</li>
-	<li><b>Dados extras</b>: quando desejar enviar dados extras, como <i>tokens</i> de validaçao nas requisiçoes ajax de edição/exclusão, basta inseri-los no form, normalmente, fora da tabela.</li>
+	<li><strong>Formulários</strong>: Tabelas complexas devem estar dentro de um form;</li>
+	<li><strong>Ação única</strong>: exibida como um botão em desktop e como um dropdown em mobile;</li>
+	<li><strong>Dropdown</strong>: exibido com o label "<i>Ações</i>" no desktop e apenas com uma seta no mobile;</li>
+	<li><strong>Dropdown em mobile</strong>: nas últimas duas linhas da tabela o dropdown de açoes abre para cima, evitando ficar fora da área da tela, caso a tabela seja o último elemento da página;</li>
+	<li><strong>Colunas</strong>: todas são exibidas no desktop e pode-se ocultar em mobile, bastando adicionar a class <code>hidden-xs</code> na coluna equivalente no cabeçalho <code>th</code>;</li>
+	<li><strong>Edição</strong>: Para que um ação tenha o comportamento de edição, ela deve possuir o parâmetro <code>data-action-modal="edit"</code>;</li>
+	<li><strong>Visualização</strong>: Para que um ação tenha o comportamento de visualização, ela deve possuir o parâmetro <code>data-action-modal="view"</code>;</li>
+	<li><strong>Visualização</strong>: em mobile, ao se clicar em qualquer lugar da linha é exibida uma <em>modal</em> com todas as informações;</li>
+	<li><strong>Visualização em mobile</strong>: mesmoq ue nao exista no código a ação <em>Visualizar</em>, ela é inserida em dispositivos com  telas pequenas;</li>
+	<li><strong>Ações <em>danger</em></strong>: ações que possuam a classe <code>danger</code>, ao clicadas, abrem um modal de confirmação com o texto atribuído no paraâmetro <code>data-confirm-text</code>.<br> Exemplo: <code>data-confirm-text="Confirma exclusão do item?"</code>;</li>
+	<li><strong>Falha na edição</strong>: é exibida a linha com fundo vermelho;</li>
+	<li><strong>Dados extras</strong>: quando desejar enviar dados extras, como <em>tokens</em> de validaçao nas requisiçoes ajax de edição/exclusão, basta inseri-los no form, normalmente, fora da tabela.</li>
 
 </ul>
 <p>Algumas ações comuns já tem seus comportamentos definidos.</p>
