@@ -1,6 +1,6 @@
 #{$theme-color}
 
-  a:not([class*="ls-btn"])
+  a:not([class*="ls-"])
     color: $color-2
 
   &:hover
@@ -144,6 +144,12 @@
 
       th
         color: $color-1
+
+        a
+          color: #fff
+
+    thead th a
+      color: #000
 
     tbody tr:hover
       background-color: rgba($color-4, .02)
