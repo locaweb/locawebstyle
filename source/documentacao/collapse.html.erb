@@ -3,7 +3,7 @@ title: Collapse
 description: Um painel com título visível e contenúdo oculto
 ---
 
-<div class="row doc-block">
+<div class=" doc-block">
   <h2 class="ls-title-2">Collapse simples</h2>
 
   <p>A aparência e comportamento de um collapse são:</p>
@@ -11,7 +11,7 @@ description: Um painel com título visível e contenúdo oculto
   <div class="doc-example doc-example-markup">
   <div class="ls-collapse">
     <a href="#" class="ls-collapse-header">
-      Título
+      <h2 class="ls-collapse-title">Título</h2>
     </a>
     <div class="ls-collapse-body">
       <% 5.times do |num| %>
@@ -38,34 +38,9 @@ description: Um painel com título visível e contenúdo oculto
 
   <br>
 
-  <div class="ls-collapse">
-    <div class="ls-collapse-header">
-      <div class="row ls-overflow-hidden">
-        <div class="col-md-3">
-          <img data-src="holder.js/180x50/sky/text:Imagem qualquer">
-        </div>
-        <div class="col-md-4">
-          <h2>Título</h2>
-        </div>
-      </div>
-    </div>
-    <div class="ls-collapse-body">
-      <% 5.times do |num| %>
-      <div class="row ls-overflow-hidden">
-        <div class="col-md-3">
-          <img data-src="holder.js/180x50/sky/text:Imagem qualquer">
-        </div>
-        <div class="col-md-7">
-          <%= lorem.words 5%>
-        </div>
-      </div>
-      <% end %>
-    </div>
-  </div>
-
 </div>
 
-<div class="row doc-block">
+<div class=" doc-block">
   <h2 class="ls-title-2">Parâmetros adicionais</h2>
 
   <table class="ls-table">
@@ -125,7 +100,7 @@ description: Um painel com título visível e contenúdo oculto
 
 </div>
 
-<div class="row doc-block">
+<div class=" doc-block">
   <h2 class="ls-title-2">Accordeon</h2>
   <p><i>Accordeon</i> é um conjunto de <i>collapses</i> agrupados, onde apenas um deles pernace aberto</p>
 
@@ -154,7 +129,7 @@ description: Um painel com título visível e contenúdo oculto
 
 </div>
 
-<div class="row doc-block">
+<div class=" doc-block">
   <h2 class="ls-title-2">Abrir com ação externa</h2>
 
   <p>Para usar um botão ou <i>link</i> para controlar um <i>collapse</i> utilize o atributo <i>data-toggle-collapse</i> com o valor do <b>id</b> do collapse.</p>
