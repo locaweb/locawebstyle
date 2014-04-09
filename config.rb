@@ -62,6 +62,8 @@ helpers do
 
 end
 
+set :base_url, ""
+
 set :stable, "3.0.0"
 
 set :css_dir, 'assets/stylesheets'
@@ -91,4 +93,6 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+  set :base_url, "/locastyle/build"
 end
