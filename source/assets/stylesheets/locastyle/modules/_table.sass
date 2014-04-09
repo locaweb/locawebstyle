@@ -17,6 +17,17 @@
     tbody tr:nth-child(odd) td
       background-color: $gray-1
 
+  &.ls-bg-header thead th
+
+    &.ls-data-descending a:after
+      +arrow-down(#fff,6px)
+      position: relative
+      top: 5px
+
+    &.ls-data-ascending a:after
+      +arrow-up(#fff,6px)
+
+
   td, th
     padding: 13px
     border-bottom: 1px solid $gray-1
