@@ -7,3 +7,5 @@ tags:
 **O que corrigimos**
 
 \- Correção no nome do [objeto] do módulo de força de senha. [#676](https://github.com/locaweb/locawebstyle/issues/676)
+
+\- Cores do botão danger dentro de dropdown em tabelas. [#674](https://github.com/locaweb/locawebstyle/issues/674)
