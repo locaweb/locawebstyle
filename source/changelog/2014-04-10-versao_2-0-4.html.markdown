@@ -1,0 +1,9 @@
+---
+title: Versão 2.0.4
+date: 2014-04-10 18:21 UTC
+tags:
+---
+
+**O que corrigimos**
+
+\- Correção no nome do [objeto] do módulo de força de senha. [#676](https://github.com/locaweb/locawebstyle/issues/676)
