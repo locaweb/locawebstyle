@@ -1,213 +1,222 @@
-#{$theme-color}
+=theme-color($theme-name, $colors)
+  $color1: map-fetch($colors, color1)
+  $color2: map-fetch($colors, color2)
+  $color3: map-fetch($colors, color3)
+  $color4: map-fetch($colors, color4)
+  $color5: map-fetch($colors, color5)
 
-  a:not([class*="ls-"])
-    color: $color-2
+  .ls-theme-#{$theme-name}
 
-  &:hover
-  &:focus
-    color: $color-3
-
-  //
-  // Topbar
-  //
-  .ls-topbar
-    background-color: $color-3
-
-  .ls-user-account
-    input[type='checkbox']
-      background: $color-1
-
-  //
-  // SIDEBAR
-  //
-  .ls-sidebar
-
-    .ls-area-account
-
-      &[class*="ls-ico"]:before
-        color: $color-3
-
-    .ls-title-2
-      color: $color-3
-
-    .ls-menu
-      a
-        &:hover,
-        &:focus
-          background-color: $gray-4
-          border-left-color: $color-3
-
-      .ls-submenu.active > a
-        background-color: $gray-4
-        border-left-color: $color-3
-
-
-  //
-  // Dashboard Info
-  //
-  .ls-board-info > .ls-title-3
-    color: $color-3
-
-  //
-  // Buttons
-  //
-  [class*="ls-btn"]
-    &[data-module]:after
-      border-top-color: $color-5
-
-  .ls-btn-primary
-    background-color: $color-3
-    border-color: $color-4
-
-    &:hover
-      background-color: $color-4
-
-
-  //
-  // Collpase
-  //
-  .ls-collapse
-    .ls-collapse-header
-      &:before
-        color: $color-3
-        border: 3px solid $color-3
-
-  //
-  // FORM
-  //
-  .ls-form
-
-    input[type="color"],
-    input[type="date"],
-    input[type="datetime"],
-    input[type="datetime-local"],
-    input[type="email"],
-    input[type="month"],
-    input[type="number"],
-    input[type="password"],
-    input[type="range"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="text"],
-    input[type="time"],
-    input[type="url"],
-    input[type="week"],
-    input[type="text"]
-      border: 1px solid $color-1
-
-  //
-  // Paginação
-  //
-  [class*="ls-pagination"] li
-
-    &.active a
-      background-color: $color-2
-
-    &.gap,
-    a
-      border: 1px solid $color-2
-      color: $color-2
-
-      &:hover,
-      &:focus
-        background-color: $color-2
-
-  .pager
-    li
-      a
-        border: 1px solid $color-2
-        color: $color-2
-
-        &:hover,
-        &:focus
-          background-color: $color-2
-
-  //
-  // Progress Bar
-  //
-  .ls-progress
-    &::-webkit-progress-bar, .ls-progress-bar
-    background: $color-2
-
-    &::-webkit-progress-value, .ls-progress-value
-      background: $color-3
-
-    &.ls-progress-donut
-      background-color: $color-3
-
-  //
-  // Tables
-  //
-  .ls-table
-    &.ls-bg-header thead
-      background-color: $color-3
-
-      th
-        color: $color-1
-
-        a
-          color: #fff
-
-    thead th a
-      color: #000
-
-    tbody tr:hover
-      background-color: rgba($color-4, .02)
-
-    &.ls-table-striped tbody tr:hover td
-      background-color: rgba($color-4, .02)
-
-  //
-  // Tabs
-  //
-  .ls-tabs-nav
-    li
-      background-color: $color-3
-
-      &:hover
-        background-color: $color-4
-
-      &.active
-
-        a
-          color: $color-3
-
-  //
-  // Shortcuts
-  //
-  .shortcuts
-    [class*="ls-ico-"]:before
-      background: $color-3
-
-  //
-  // Links de Referência
-  //
-  .ls-lnk-nav
-
-    &:hover
-      color: $color-4
-
-      &[class*="ls-ico"]:before
-        color: $color-4
-        border-color: $color-4
-
-    &[class*="ls-ico"]:before
-      color: $color-3
-      border: 4px solid $color-3
-
-  //
-  // Dropdown
-  //
-  .ls-dropdown ul a
+    a:not([class*="ls-"])
+      color: $color2
 
     &:hover,
     &:focus
-      background-color: $color-3
-      color: #fff
+      color: $color3
 
-  //
-  // Switch button
-  //
-  .ls-switch-btn label
-    background-color: $color-3
+    //
+    // Topbar
+    //
+    .ls-topbar
+      background-color: $color3
 
+    .ls-user-account
+      input[type='checkbox']
+        background: $color1
+
+    //
+    // SIDEBAR
+    //
+    .ls-sidebar
+
+      .ls-area-account
+
+        &[class*="ls-ico"]:before
+          color: $color3
+
+      .ls-title-2
+        color: $color3
+
+      .ls-menu
+        a
+          &:hover,
+          &:focus
+            background-color: $gray-4
+            border-left-color: $color3
+
+        .ls-submenu.active > a
+          background-color: $gray-4
+          border-left-color: $color3
+
+
+    //
+    // Dashboard Info
+    //
+    .ls-board-info > .ls-title-3
+      color: $color3
+
+    //
+    // Buttons
+    //
+    [class*="ls-btn"]
+      &[data-module]:after
+        border-top-color: $color5
+
+    .ls-btn-primary
+      background-color: $color3
+      border-color: $color4
+
+      &:hover
+        background-color: $color4
+
+
+    //
+    // Collpase
+    //
+    .ls-collapse
+      .ls-collapse-header
+        &:before
+          color: $color3
+          border: 3px solid $color3
+
+    //
+    // FORM
+    //
+    .ls-form
+
+      input[type="color"],
+      input[type="date"],
+      input[type="datetime"],
+      input[type="datetime-local"],
+      input[type="email"],
+      input[type="month"],
+      input[type="number"],
+      input[type="password"],
+      input[type="range"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="text"],
+      input[type="time"],
+      input[type="url"],
+      input[type="week"],
+      input[type="text"]
+        border: 1px solid $color1
+
+    //
+    // Paginação
+    //
+    [class*="ls-pagination"] li
+
+      &.active a
+        background-color: $color2
+
+      &.gap,
+      a
+        border: 1px solid $color2
+        color: $color2
+
+        &:hover,
+        &:focus
+          background-color: $color2
+
+    .pager
+      li
+        a
+          border: 1px solid $color2
+          color: $color2
+
+          &:hover,
+          &:focus
+            background-color: $color2
+
+    //
+    // Progress Bar
+    //
+    .ls-progress
+      &::-webkit-progress-bar, .ls-progress-bar
+        background: $color2
+
+      &::-webkit-progress-value, .ls-progress-value
+        background: $color3
+
+      &.ls-progress-donut
+        background-color: $color3
+
+    //
+    // Tables
+    //
+    .ls-table
+      &.ls-bg-header thead
+        background-color: $color3
+
+        th
+          color: $color1
+
+          a
+            color: #fff
+
+      thead th a
+        color: #000
+
+      tbody tr:hover
+        background-color: rgba($color4, .02)
+
+      &.ls-table-striped tbody tr:hover td
+        background-color: rgba($color4, .02)
+
+    //
+    // Tabs
+    //
+    .ls-tabs-nav
+      li
+        background-color: $color3
+
+        &:hover
+          background-color: $color4
+
+        &.active
+
+          a
+            color: $color3
+
+    //
+    // Shortcuts
+    //
+    .shortcuts
+      [class*="ls-ico-"]:before
+        background: $color3
+
+    //
+    // Links de Referência
+    //
+    .ls-lnk-nav
+
+      &:hover
+        color: $color4
+
+        &[class*="ls-ico"]:before
+          color: $color4
+          border-color: $color4
+
+      &[class*="ls-ico"]:before
+        color: $color3
+        border: 4px solid $color3
+
+    //
+    // Dropdown
+    //
+    .ls-dropdown ul a
+
+      &:hover,
+      &:focus
+        background-color: $color3
+        color: #fff
+
+    //
+    // Switch button
+    //
+    .ls-switch-btn label
+      background-color: $color3
+
+@each $theme-name, $colors in $themes-colors
+  @include theme-color($theme-name, $colors)
