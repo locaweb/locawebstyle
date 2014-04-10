@@ -19,15 +19,25 @@
   <aside class="ls-sidebar">
     <nav class="ls-menu">
       <ul>
-      <% sub_pages('documentacao').each do |resource| %>
-        <% if resource.url.split('/')[2] == 'exemplos' %>
-        <% else %>
-          <li>
-            <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title%></a>
-          </li>
+        <% sub_pages('documentacao').each do |resource| %>
+          <% if resource.url.split('/')[2] == 'exemplos' %>
+          <% else %>
+            <li>
+              <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title%></a>
+            </li>
+          <% end %>
         <% end %>
-      <% end %>
-       </ul>
+        <li class="ls-submenu">
+          <a href="#">Exemplos</a>
+          <ul>
+            <% sub_pages('documentacao/exemplos').each do |resource| %>
+              <li>
+                <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title%></a>
+              </li>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
     </nav>
   </aside>
   <main class="ls-main">
