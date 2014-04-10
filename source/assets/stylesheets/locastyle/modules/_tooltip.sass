@@ -9,6 +9,7 @@
     opacity: 0
 
   &:after
+    +single-box-shadow(0, 0, 5px, 0, rgba(0,0,0,0.3))
     content: attr(aria-label)
     height: 25px
     line-height: 25px
@@ -19,7 +20,6 @@
     background: #222
     border-radius: 5px
     text-shadow: 0 0 5px #000
-    +single-box-shadow(rgba(0,0,0,0.3), 0, 0, 5px)
     white-space: nowrap
 
   &:before
