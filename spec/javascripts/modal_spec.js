@@ -5,9 +5,9 @@ describe("Modal: ", function() {
     locastyle.modal.init();
   });
 
-  describe('When click on element with data-module="modal"', function() {
+  describe('When click on element with data-ls-module="modal"', function() {
     it('should add class opened on .ls-modal', function() {
-      $('[data-module="modal"]').trigger("click");
+      $('[data-ls-module="modal"]').trigger("click");
       expect($("body .ls-modal")).toHaveClass('opened');
     })
   })
