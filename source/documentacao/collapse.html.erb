@@ -1,47 +1,33 @@
 ---
-title: Collapse
-description: Um painel com título visível e contenúdo oculto
+title: Collapse & Accordeon
+description: Um painel com título visível e conteúdo oculto
 ---
 
-<div class=" doc-block">
-  <h2 class="ls-title-2">Collapse simples</h2>
+<div class="doc-section">
+  <h3 class="ls-title-3">Collapse simples</h3>
 
   <p>A aparência e comportamento de um collapse são:</p>
 
   <div class="doc-example doc-example-markup">
-  <div class="ls-collapse">
-    <a href="#" class="ls-collapse-header">
-      <h2 class="ls-collapse-title">Título</h2>
-    </a>
-    <div class="ls-collapse-body">
-      <% 5.times do |num| %>
-      Conteúdo <br>
-      <% end %>
-    </div>
+    <%= partial('documentacao/shared/collapse', :locals => { :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %>
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/collapse', :locals => { :quant => 2, :header => "Título", content: (lorem.words 1)}))%>
+    </code>
   </div>
-  </div>
-
 
   <p>Os títulos, vísiveis quando o <i>collapse</i> está fechado, podem conter qualquer conteúdo, por exemplo:</p>
 
-  <div class="ls-collapse">
-    <a href="#" class="ls-collapse-header">
-      <h3 class="ls-collapse-title">Título</h3>
-      <p>Texto adicional</p>
-    </a>
-    <div class="ls-collapse-body">
-      <% 5.times do |num| %>
-      Conteúdo <br>
-      <% end %>
-    </div>
+  <div class="doc-example doc-example-markup">
+    <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.paragraphs 1)  }) %>
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.words 3)  })) %>
+    </code>
   </div>
-
-  <br>
 
 </div>
 
-<div class=" doc-block">
-  <h2 class="ls-title-2">Parâmetros adicionais</h2>
+<div class="doc-section">
+  <h3 class="ls-title-3">Parâmetros adicionais</h3>
 
   <table class="ls-table">
     <thead>
@@ -53,7 +39,7 @@ description: Um painel com título visível e contenúdo oculto
     </thead>
     <tr>
       <td>
-          ls-collapse-always-open
+          ls-collapse-open-always
       </td>
       <td>classe</td>
       <td>mantém um <i>collapse</i> sempre aberto</td>
@@ -65,43 +51,24 @@ description: Um painel com título visível e contenúdo oculto
     </tr>
   </table>
 
-  <h2 class="ls-title-2">Exemplos</h2>
+  <h2 class="ls-title-2">Exemplos:</h2>
 
-  <div class="ls-collapse ls-collapse-open">
-    <div class="ls-collapse-header">
-      Collapse inicia aberto com a classe .ls-collapse-open
-    </div>
-    <div class="ls-collapse-body">
-      <% 5.times do |num| %>
-      Conteúdo <br>
-      <% end %>
-    </div>
-  </div>
-  <div class="ls-collapse">
-    <div class="ls-collapse-header">
-      Collapse normal, inicia fechado
-    </div>
-    <div class="ls-collapse-body">
-      <% 5.times do |num| %>
-      Conteúdo <br>
-      <% end %>
-    </div>
-  </div>
-  <div class="ls-collapse ls-collapse-always-open">
-    <div class="ls-collapse-header">
-      Collapse inicia aberto e não fecha com a classe .ls-collapse-always-open
-    </div>
-    <div class="ls-collapse-body">
-      <% 5.times do |num| %>
-      Conteúdo <br>
-      <% end %>
-    </div>
+  <div class="doc-example doc-example-markup">
+    <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.paragraphs 2), startOpen: false  }) %>
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.words 2), startOpen: false  })) %>
+    </code>
+    <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.paragraphs 2), startOpen: false, alwaysOpen: true  }) %>
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.words 2), startOpen: false, alwaysOpen: true  })) %>
+    </code>
   </div>
 
 </div>
 
-<div class=" doc-block">
+<div class="doc-section">
   <h2 class="ls-title-2">Accordeon</h2>
+
   <p><i>Accordeon</i> é um conjunto de <i>collapses</i> agrupados, onde apenas um deles pernace aberto</p>
 
   <p>Um <i>accordeon</i> é um conjunto de <i>collapses</i>, como mostrados acima, com um elemento que os agrupa, com a classe <i>ls-collapse-group</i>.</p>
@@ -129,22 +96,17 @@ description: Um painel com título visível e contenúdo oculto
 
 </div>
 
-<div class=" doc-block">
-  <h2 class="ls-title-2">Abrir com ação externa</h2>
+<div class="doc-section">
+  <h3 class="ls-title-3">Abrir com ação externa</h3>
 
   <p>Para usar um botão ou <i>link</i> para controlar um <i>collapse</i> utilize o atributo <i>data-toggle-collapse</i> com o valor do <b>id</b> do collapse.</p>
 
   <div class="doc-example doc-example-markup">
+
   <button type="button" class="ls-btn-primary" data-toggle-collapse="#collapse1">Abre/Fecha o <i>collapse</i> <b>#collapse1</b></button>
 
-  <div id="collapse1" class="ls-collapse">
-    <div class="ls-collapse-header">
-      <i>Collapse</i> com id <b>#collapse1</b>
-    </div>
-    <div class="ls-collapse-body">
-      <p><%= lorem.paragraphs 2 %></p>
-    </div>
-  </div>
+  <%= partial('documentacao/shared/collapse', :locals => { id: "collapse1",:quant => 1, :header => "Título", content: (lorem.paragraphs 1)  }) %>
+
   </div>
 
   <p>Para abrir/fechar um <i>collapse</i> usando javascript, use:</p>
