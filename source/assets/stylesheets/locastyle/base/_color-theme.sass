@@ -96,31 +96,45 @@
         border: 1px solid $color1
 
     //
-    // Paginação
+    // Pagination
     //
-    [class*="ls-pagination"] li
+    [class*="ls-pagination"]
 
-      &.active a
-        background-color: $color2
-
-      &.gap,
-      a
-        border: 1px solid $color2
-        color: $color2
-
-        &:hover,
-        &:focus
-          background-color: $color2
-
-    .pager
       li
+
+        &.active a
+          background-color: $gray-1
+
+        &.gap,
         a
-          border: 1px solid $color2
-          color: $color2
+          border: 1px solid $gray-1
+          color: $gray-4
 
           &:hover,
           &:focus
-            background-color: $color2
+            background-color: $gray-1
+
+    .pager
+
+      li
+
+        a
+          border: 1px solid $gray-2
+          color: $gray-4
+
+          &:hover,
+          &:focus
+            background-color: $gray-2
+
+        &.disabled
+
+          a
+            border: 1px solid $gray-2
+            color: $gray-1
+
+            &:hover,
+            &:focus
+              background: none
 
     //
     // Progress Bar
