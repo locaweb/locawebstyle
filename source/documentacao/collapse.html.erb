@@ -74,20 +74,9 @@ description: Um painel com título visível e conteúdo oculto
   <p>Um <i>accordeon</i> é um conjunto de <i>collapses</i>, como mostrados acima, com um elemento que os agrupa, com a classe <i>ls-collapse-group</i>.</p>
 
   <div class="doc-example doc-example-markup">
-  <div class="ls-collapse-group">
-    <% 5.times do |num| %>
-    <!-- início do collapse <%= num+1 %> -->
-    <div class="ls-collapse">
-      <div class="ls-collapse-header">
-        Título do collapse <%= num+1 %>
-      </div>
-      <div class="ls-collapse-body">
-        <%= lorem.paragraphs 1%>
-      </div>
+    <div class="ls-collapse-group">
+        <%= partial('documentacao/shared/collapse', :locals => { :quant => 5, :header => "Título", content: (lorem.paragraphs 1)  }) %>
     </div>
-    <!-- fim do collapse <%= num+1 %> -->
-    <% end %>
-  </div>
   </div>
 
 
