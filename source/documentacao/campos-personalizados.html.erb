@@ -29,18 +29,10 @@ description: Campos personalizados
     <!-- Select -->
     <div class="ls-box-demo">
       <p class="ls-title2"> Select customizada </p>
-      <%= partial 'documentacao/shared/custom-fields/custom-select' %>
+      <%= partial 'documentacao/shared/custom-fields/custom-fields', locals: {field: 'select'} %>
     </div>
     <code class="language-html ls-well-example">
-      <%= partial 'documentacao/shared/custom-fields/custom-select' %>
-    </code>
-
-    <div class="ls-box-demo">
-      <p class="ls-title2"> Select original </p>
-      <%= partial 'documentacao/shared/custom-fields/original-select' %>
-    </div>
-    <code class="language-html ls-well-example">
-      <%= partial 'documentacao/shared/custom-fields/original-select' %>
+      <%= partial 'documentacao/shared/custom-fields/custom-fields', locals: {field: 'select'} %>
     </code>
     <!-- End Select -->
     <!-- Radio -->
@@ -50,17 +42,10 @@ description: Campos personalizados
       <input type="radio" name="radio1" value="2">
     </div>
     <code class="language-html ls-well-example">
-      <%= partial 'documentacao/shared/custom-fields/custom-radio' %>
-    </code>
-
-    <div class="ls-box-demo">
-      <p cl ass="ls-title2"> Radio original </p>
-      <%= partial 'documentacao/shared/custom-fields/original-radio' %>
-    </div>
-    <code class="language-html ls-well-example">
-      <%= partial 'documentacao/shared/custom-fields/original-radio' %>
+      <%= partial 'documentacao/shared/custom-fields/custom-fields', locals: {field: 'radio'} %>
     </code>
     <!-- End Radio -->
+
     <!-- Checkbox -->
     <div class="ls-box-demo">
       <p class="ls-title2"> Checkbox customizada </p>
@@ -69,15 +54,7 @@ description: Campos personalizados
       <input type="checkbox" name="checkboxes">
     </div>
     <code class="language-html ls-well-example">
-      <%= partial 'documentacao/shared/custom-fields/custom-checkbox' %>
-    </code>
-
-    <div class="ls-box-demo">
-      <p class="ls-title2"> Checkbox original </p>
-      <%= partial 'documentacao/shared/custom-fields/original-checkbox' %>
-    </div>
-    <code class="language-html ls-well-example">
-      <%= partial 'documentacao/shared/custom-fields/original-checkbox' %>
+      <%= partial 'documentacao/shared/custom-fields/custom-fields', locals: {field: 'checkbox'} %>
     </code>
     <!-- End Checkbox -->
   </div>
