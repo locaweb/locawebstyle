@@ -1,23 +1,60 @@
 ---
-title: Base Layout
+title: Clientes
 layout: examples
 ---
 
-<h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
+<h1 class="ls-title-intro ls-ico-users">Clientes</h1>
+
+
+
+
+<div class="ls-box">
+  <div class="ls-float-right">
+    <a href="" class="ls-btn-primary ls-float-left ">Administrar</a>
+    <a href="" class="ls-btn ls-float-left ">Editar</a>
+    <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right ls-float-left">
+      <a href="#" class="ls-btn"></a>
+      <ul>
+        <li><a href="#">Desativar Clientes</a></li>
+        <li><a href="#">Alterar senha</a></li>
+        <li><a href="#">Acessar o Painel</a></li>
+      </ul>
+    </div>
+  </div>
+  <h2 class="ls-title-4">Nome<br><strong>Fulano de tal</strong></h2>
+  <hr>
+  <p><strong>login/E-mail:</strong></p>
+  <p>emaildocliente@cliente.com.br</p>
+  <hr>
+  <p><strong>Status:</strong></p>
+  <p>Ativo</p>
+  <hr>
+  <p><strong>Data de cadastro:</strong></p>
+  <p>dd/mm/aaaa</p>
+  <hr>
+  <p><strong>Informações:</strong></p>
+  <p>Contato com Fulano de Tal no telefone: 11 5555-5555. Horários entre 12:00 e 16:00 dias úteis.</p>
+</div>
+
+
 
 <div class="ls-box ls-board-info">
-  <span class="ls-small-info ls-float-right">Válido até <b>01.05.2014</b></span>
-  <h2 class="ls-title-3 ls-color-default ls-ico-dashboard">Consumo de envios</h2>
+
+  <div class="ls-float-right">
+    <a href="" class="ls-btn-primary ls-float-left ">Adicionar envios</a>
+    <a href="" class="ls-btn ls-float-left ">Remover envios</a>
+  </div>
+
+  <h2 class="ls-title-3 ls-color-default ls-ico-dashboard">Período atual </h2>
+  <small>dd/mm/aaaa a dd/mm/aaaa</small>
+
 
   <div class="row">
 
     <div class="col-sm-6 col-md-3">
       <div class="ls-box ls-board-box">
-        <h6 class="ls-title-4">Contratado
-          <a href="" data-ls-module="popover" data-title="Precisa de ajuda?" data-content="Lorem Ipsum is text." data-placement="top">(?)</a>
-        </h6>
-        <strong class="ls-board-info">1 <small>milhão</small></strong>
-        <a href="#" class="ls-btn">Alterar plano</a>
+        <strong class="ls-board-info">9 <small>milhões</small></strong>
+        <small>Válido até dd/mm/aaaa</small>
       </div>
     </div>
 
@@ -25,21 +62,20 @@ layout: examples
       <div class="ls-box ls-board-box">
         <h6 class="ls-title-4">Avulso</h6>
         <strong class="ls-board-info">0</strong>
-        <a href="#" class="ls-btn">Contratar</a>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
       <div class="ls-box ls-board-box">
-        <h6 class="ls-title-4">Distribuído</h6>
-        <strong class="ls-board-info">10.743 <small>mil</small></strong>
+        <h6 class="ls-title-4">Removidos</h6>
+        <strong class="ls-board-info">0</strong>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
       <div class="ls-box ls-board-box">
-        <h6 class="ls-title-4 color-default">Disponível</h6>
-        <strong class="ls-board-info">81% <small class="ls-weight-normal">989.257 mil</small></strong>
+        <h6 class="ls-title-4 color-default">Utilizados</h6>
+        <strong class="ls-board-info">10.743 mil</strong>
       </div>
     </div>
 
@@ -47,62 +83,206 @@ layout: examples
 </div>
 
 
-<a href="#" class="ls-btn ls-float-right">Ver mais relatórios</a>
-<h2 class="ls-title-2">Clientes que mais contrataram envios</h2>
-<div class="ls-box">
-  <img src="/<%= images_dir %>/graph-example.jpg">
+<div class="ls-box ls-board-info">
+
+  <a href="" class="ls-btn ls-float-right ">Alterar quantidade</a>
+
+  <h2 class="ls-title-3 ls-color-default ls-ico-dashboard">Próximo período </h2>
+  <small>dd/mm/aaaa a dd/mm/aaaa</small>
+
+
+  <div class="row">
+
+    <div class="col-sm-6 col-md-3">
+      <div class="ls-box ls-board-box">
+        <strong class="ls-board-info">9 <small>milhões</small></strong>
+        <small>Válido até dd/mm/aaaa</small>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-9">
+      <div class="ls-box ls-board-box">
+        <p><a href="">Cancelar recorrência</a></p>
+      </div>
+    </div>
+
+  </div>
 </div>
 
-<div class="row">
 
-  <div class="col-md-6">
-      <a href="#" class="ls-btn ls-float-right">Ver todos</a>
-      <h2 class="ls-title-2">Clientes que mais contrataram envios</h2>
-    <div class="ls-box">
+
+
+<div class="ls-group-btn ls-group-active ls-float-right">
+  <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn active">Gráfico</button>
+  <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn">Tabela</button>
+</div>
+<h2 class="ls-title-3">Relatórios</h2>
+
+<ul class="ls-tabs-nav" id="awesome-tab">
+  <li class="active"><a data-ls-module="tabs" href="#tab1">Contratação x uso</a></li>
+  <li><a data-ls-module="tabs" href="#tab2">Estatísticas de envios</a></li>
+</ul>
+<div class="ls-tabs-container" id="awesome-tab-content">
+  <div id="tab1" class="ls-tab-content active">
+
+    <div class="ls-tab-content child1 active">
+      <p>Contratação x uso</p>
+      <img src="/<%= images_dir %>/graph-example.jpg">
+    </div>
+
+    <div class="ls-tab-content child2">
+
       <table class="ls-table">
         <thead>
-          <th>Nome do cliente</th>
-          <th>Data de expiração</th>
+          <tr>
+            <th class="ls-txt-center">Período</th>
+            <th class="ls-txt-center">Contratados</th>
+            <th class="ls-txt-center" colspan="2">Distribuídos</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td class="ls-txt-center">28/03/2014 a 27/04/2014</td>
+              <td class="ls-txt-center">1000000</td>
+              <td class="ls-txt-center">10741</td>
+              <td class="ls-txt-center">1%</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">28/03/2014 a 27/04/2014</td>
+              <td class="ls-txt-center">1000000</td>
+              <td class="ls-txt-center">10741</td>
+              <td class="ls-txt-center">1%</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">28/03/2014 a 27/04/2014</td>
+              <td class="ls-txt-center">1000000</td>
+              <td class="ls-txt-center">10741</td>
+              <td class="ls-txt-center">1%</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">28/03/2014 a 27/04/2014</td>
+              <td class="ls-txt-center">1000000</td>
+              <td class="ls-txt-center">10741</td>
+              <td class="ls-txt-center">1%</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">28/03/2014 a 27/04/2014</td>
+              <td class="ls-txt-center">1000000</td>
+              <td class="ls-txt-center">10741</td>
+              <td class="ls-txt-center">1%</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="tab2" class="ls-tab-content">
+
+    <div class="ls-tab-content child1 active">
+      <p>Estatísticas de envios</p>
+      <img src="/<%= images_dir %>/graph-example.jpg">
+    </div>
+
+    <div class="ls-tab-content child2">
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th class="ls-txt-center">Data</th>
+            <th class="ls-txt-center">Todos</th>
+            <th class="ls-txt-center" colspan="2">Ativos</th>
+            <th class="ls-txt-center" colspan="2">Desativados</th>
+            <th class="ls-txt-center" colspan="2">Bloqueados por bounce</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Mark da Silva</td>
-            <td>10.04.2014</td>
-          </tr>
-          <tr>
-            <td>Jacob Lorem Ipsum</td>
-            <td>10.04.2014</td>
-          </tr>
-          <tr>
-            <td>Larry Barbosa</td>
-            <td>10.04.2014</td>
+            <td class="ls-txt-center">Hoje</td>
+            <td class="ls-txt-center">29</td>
+            <td class="ls-txt-center">26</td>
+            <td class="ls-txt-center">89%</td>
+            <td class="ls-txt-center">3</td>
+            <td class="ls-txt-center">10%</td>
+            <td class="ls-txt-center">0</td>
+            <td class="ls-txt-center">0%</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
-  <div class="col-md-6">
-      <a href="#" class="ls-btn ls-float-right">Ver todos</a>
-      <h2 class="ls-title-2">Clientes bloqueados por bounce</h2>
-    <div class="ls-box">
-      <table class="ls-table">
-        <thead>
-          <th>Nome do cliente</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Mark da Silva</td>
-          </tr>
-          <tr>
-            <td>Jacob Lorem Ipsum</td>
-          </tr>
-          <tr>
-            <td>Larry Barbosa</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
 </div>
 
+
+<h2 class="ls-title-3">Histórico de transações</h2>
+<form action="">
+  <label for="">Período</label>
+  <input type="date">a
+  <input type="date">
+  <button class="ls-btn" type="send">Filtrar</button>
+</form>
+
+<table class="ls-table">
+  <thead>
+    <tr>
+      <th>Descrição</th>
+      <th>Ação</th>
+      <th>Envios</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Crédito envios mensais</td>
+      <td>Crédito</td>
+      <td>10.000</td>
+      <td>01/01/2012 - 15h00</td>
+    </tr>
+    <tr>
+      <td>Crédito envios mensais</td>
+      <td>Crédito</td>
+      <td>10.000</td>
+      <td>01/01/2012 - 15h00</td>
+    </tr>
+    <tr>
+      <td>Crédito envios mensais</td>
+      <td>Crédito</td>
+      <td>10.000</td>
+      <td>01/01/2012 - 15h00</td>
+    </tr>
+    <tr>
+      <td>Crédito envios mensais</td>
+      <td>Crédito</td>
+      <td>10.000</td>
+      <td>01/01/2012 - 15h00</td>
+    </tr>
+    <tr>
+      <td>Crédito envios mensais</td>
+      <td>Crédito</td>
+      <td>10.000</td>
+      <td>01/01/2012 - 15h00</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="ls-pagination-filter">
+  <ul class="ls-pagination">
+    <li><a href="#">« Anterior</a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Próximo »</a></li>
+  </ul>
+
+  <div class="ls-filter-view">
+    <label for="">
+      Exibir
+      <select name="" id="">
+        <option value="10">10</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+      ítens por página
+    </label>
+  </div>
+</div>
