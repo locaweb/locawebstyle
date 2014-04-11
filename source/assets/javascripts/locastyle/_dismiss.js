@@ -8,7 +8,7 @@ locastyle.dismiss = (function() {
   }
 
   function bindClickOnTriggers() {
-    $('[data-module=dismiss]').on('click', function() {
+    $('[data-ls-module=dismiss]').on('click', function() {
       checkTarget(this);
     });
   }

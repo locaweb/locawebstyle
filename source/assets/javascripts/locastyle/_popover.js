@@ -12,7 +12,7 @@ locastyle.popover = (function() {
   }
 
   function init() {
-    $('[data-module="popover"]').each(function(index, element) {
+    $('[data-ls-module="popover"]').each(function(index, element) {
       var dataTrigger = $(element).data("trigger");
       dataTrigger = dataTrigger || config.defaultTrigger
       bindAction({

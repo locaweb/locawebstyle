@@ -9,9 +9,9 @@ locastyle.dropdown = (function() {
   }
 
   function bindClickOnTriggers() {
-    $("[data-module=dropdown] > a:first-child").on("click", function(evt) {
+    $("[data-ls-module=dropdown] > a:first-child").on("click", function(evt) {
       evt.preventDefault();
-      var $target = $($(this).parents("[data-module=dropdown]"));
+      var $target = $($(this).parents("[data-ls-module=dropdown]"));
       toggleDropdown($target);
       closeDropdown($target);
       evt.stopPropagation();
@@ -29,7 +29,7 @@ locastyle.dropdown = (function() {
   }
 
   function closeDropdown(el) {
-    $("[data-module=dropdown]").not(el).removeClass("active");
+    $("[data-ls-module=dropdown]").not(el).removeClass("active");
   }
 
   return {
