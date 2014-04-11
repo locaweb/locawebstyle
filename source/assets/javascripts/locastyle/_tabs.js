@@ -11,7 +11,6 @@ locastyle.tabs = (function() {
     $("[data-ls-module=tabs]").on("click", function(evt) {
       evt.preventDefault();
       var $target = $($(this).attr("href") || $(this).data("target"));
-      console.log($target);
       deactivateTab(this, $target);
       activateTab(this, $target);
     });
