@@ -29,4 +29,5 @@ var locastyle = (function() {
 
 $(window).load(function() {
   locastyle.init();
+  locastyle.general.init();
 });

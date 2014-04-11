@@ -8,14 +8,16 @@ layout: examples
 <a href="#" class="ls-btn-primary">Cadastrar novo</a>
 
 <div>
-  <label for="">Status</label>
-  <select name="" id="">
-    <option value="">Todos</option>
-    <option value="">Ativo</option>
-    <option value="">Desativados</option>
-    <option value="">Bloqueados por bounce</option>
-  </select>
-  <form action="" class="ls-float-right">
+  <div class="col-sm-2" data-ls-module="customFields">
+    <label for="">Status</label>
+    <select name="" id="">
+      <option value="">Todos</option>
+      <option value="">Ativo</option>
+      <option value="">Desativados</option>
+      <option value="">Bloqueados por bounce</option>
+    </select>
+  </div>
+    <form action="" class="ls-float-right">
     <input type="text" placeholder="Nome do cliente">
     <button type="submit">Buscar</button>
   </form>
