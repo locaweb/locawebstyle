@@ -1,107 +1,23 @@
 ---
-title: Base Layout
+title: Relatórios
 layout: examples
 ---
 
-<h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
+<h1 class="ls-title-intro ls-ico-stats">Relatórios da revenda</h1>
 
-<div class="ls-box ls-board-info">
-  <span class="ls-small-info ls-float-right">Válido até <b>01.05.2014</b></span>
-  <h2 class="ls-title-3 ls-color-default ls-ico-dashboard">Consumo de envios</h2>
-
-  <div class="row">
-
-    <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-board-box">
-        <h6 class="ls-title-4">Contratado
-          <a href="" data-ls-module="popover" data-title="Precisa de ajuda?" data-content="Lorem Ipsum is text." data-placement="top">(?)</a>
-        </h6>
-        <strong class="ls-board-info">1 <small>milhão</small></strong>
-        <a href="#" class="ls-btn">Alterar plano</a>
-      </div>
-    </div>
-
-    <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-board-box">
-        <h6 class="ls-title-4">Avulso</h6>
-        <strong class="ls-board-info">0</strong>
-        <a href="#" class="ls-btn">Contratar</a>
-      </div>
-    </div>
-
-    <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-board-box">
-        <h6 class="ls-title-4">Distribuído</h6>
-        <strong class="ls-board-info">10.743 <small>mil</small></strong>
-      </div>
-    </div>
-
-    <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-board-box">
-        <h6 class="ls-title-4 color-default">Disponível</h6>
-        <strong class="ls-board-info">81% <small class="ls-weight-normal">989.257 mil</small></strong>
-      </div>
-    </div>
-
+<ul class="ls-tabs-nav" id="awesome-tab">
+  <li class="active"><a data-ls-module="tabs" href="#tab1">Contratos x distribuídos</a></li>
+  <li><a data-ls-module="tabs" href="#tab2">Status de clientes</a></li>
+</ul>
+<div class="ls-tabs-container" id="awesome-tab-content">
+  <div id="tab1" class="ls-tab-content active">
+    <p>Contratos e Distribuídos</p>
+    <img src="/<%= images_dir %>/graph-example.jpg">
+  </div>
+  <div id="tab2" class="ls-tab-content">
+    <p>Status do cliente</p>
+    <img src="/<%= images_dir %>/graph-example.jpg">
   </div>
 </div>
 
 
-<a href="#" class="ls-btn ls-float-right">Ver mais relatórios</a>
-<h2 class="ls-title-2">Clientes que mais contrataram envios</h2>
-<div class="ls-box">
-  <img src="/<%= images_dir %>/graph-example.jpg">
-</div>
-
-<div class="row">
-
-  <div class="col-md-6">
-      <a href="#" class="ls-btn ls-float-right">Ver todos</a>
-      <h2 class="ls-title-2">Clientes que mais contrataram envios</h2>
-    <div class="ls-box">
-      <table class="ls-table">
-        <thead>
-          <th>Nome do cliente</th>
-          <th>Data de expiração</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Mark da Silva</td>
-            <td>10.04.2014</td>
-          </tr>
-          <tr>
-            <td>Jacob Lorem Ipsum</td>
-            <td>10.04.2014</td>
-          </tr>
-          <tr>
-            <td>Larry Barbosa</td>
-            <td>10.04.2014</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="col-md-6">
-      <a href="#" class="ls-btn ls-float-right">Ver todos</a>
-      <h2 class="ls-title-2">Clientes bloqueados por bounce</h2>
-    <div class="ls-box">
-      <table class="ls-table">
-        <thead>
-          <th>Nome do cliente</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Mark da Silva</td>
-          </tr>
-          <tr>
-            <td>Jacob Lorem Ipsum</td>
-          </tr>
-          <tr>
-            <td>Larry Barbosa</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-</div>
