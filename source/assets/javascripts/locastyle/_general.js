@@ -80,6 +80,9 @@ locastyle.general = (function() {
       $(this).parent().toggleClass('active');
       evt.preventDefault();
     })
+    if($('.ls-submenu-item').hasClass('active')){
+      console.log($('.ls-submenu-item').closest('ul').parent().addClass('active'))
+    }
   }
 
   function _elementDisabled() {
