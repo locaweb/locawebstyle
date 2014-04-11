@@ -2,7 +2,7 @@ var lsdocs = (function() {
   'use strict';
 
   function init() {
-    // convertCodeExamples();
+    convertCodeExamples();
     // copyMarkup();
     // markupExamples();
     Prism.highlightAll();
