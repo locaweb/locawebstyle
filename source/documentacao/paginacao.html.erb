@@ -6,40 +6,40 @@ keywords: documentação, locastyle, filtro, exibição, paginação
 
 <p>Navegação entre páginas e controle de quantidade de elementos que serão exibidos por página.</p>
 
-<div class="ls-box-demo">
+<div class="ls-box-demo ls-overflow-hidden">
   <%= partial 'documentacao/shared/pagination/pagination' %>
 </div>
-<code class="language-html ls-well-example">
+<code class="ls-well-example language-html">
   <%= partial 'documentacao/shared/pagination/pagination' %>
 </code>
 
 <h2 class="ls-title-2">Paginação com muitos elementos</h2>
 <p>Quando houver mais de 5 páginas, utilizamos a classe <code>.gap</code> para especificar que há mais páginas.</p>
 
-<div class="ls-box-demo">
+<div class="ls-box-demo ls-overflow-hidden">
   <%= partial 'documentacao/shared/pagination/pagination-gap' %>
 </div>
-<code class="language-html ls-well-example">
+<code class="ls-well-example language-html">
   <%= partial 'documentacao/shared/pagination/pagination-gap' %>
 </code>
 
 <h2 class="ls-title-3">Estados Ativado e Desativado</h2>
 <p>Customize os links em diferentes circunstâncias. Utiliza a classe <code>.disabled</code> para links desativados e <code>.active</code> para indicar uma próxima pagina.</p>
 
-<div class="ls-box-demo">
+<div class="ls-box-demo ls-overflow-hidden">
   <%= partial 'documentacao/shared/pagination/pagination-status' %>
 </div>
-<code class="language-html ls-well-example">
+<code class="ls-well-example language-html">
   <%= partial 'documentacao/shared/pagination/pagination-status' %>
 </code>
 
 <h2 class="ls-title-3">Tamanhos</h2>
 <p>Para alterar o tamanho, utilize as classes <code>.pagination-lg</code> ou <code>.pagination-sm</code>.</p>
 
-<div class="ls-box-demo">
+<div class="ls-box-demo ls-overflow-hidden">
   <%= partial 'documentacao/shared/pagination/pagination-widths' %>
 </div>
-<code class="language-html ls-well-example">
+<code class="ls-well-example language-html">
   <%= partial 'documentacao/shared/pagination/pagination-widths' %>
 </code>
 
@@ -49,7 +49,7 @@ keywords: documentação, locastyle, filtro, exibição, paginação
 <div class="ls-box-demo">
   <%= partial 'documentacao/shared/pagination/pager' %>
 </div>
-<code class="language-html ls-well-example">
+<code class="ls-well-example language-html">
   <%= partial 'documentacao/shared/pagination/pager' %>
 </code>
 
@@ -59,10 +59,9 @@ keywords: documentação, locastyle, filtro, exibição, paginação
 <div class="ls-box-demo">
   <%= partial 'documentacao/shared/pagination/pager-align' %>
 </div>
-<code class="language-html ls-well-example">
+<code class="ls-well-example language-html">
   <%= partial 'documentacao/shared/pagination/pager-align' %>
 </code>
-
 
 <h2 class="ls-title-3">Estado desabilitado opcional</h2>
 <p>Esses links também usam a classe <code>.disabled</code> que é uma utilidade da paginação.</p>
@@ -70,6 +69,6 @@ keywords: documentação, locastyle, filtro, exibição, paginação
 <div class="ls-box-demo">
   <%= partial 'documentacao/shared/pagination/pager-option-disabled' %>
 </div>
-<code class="language-html ls-well-example">
+<code class="ls-well-example language-html">
   <%= partial 'documentacao/shared/pagination/pager-option-disabled' %>
 </code>
