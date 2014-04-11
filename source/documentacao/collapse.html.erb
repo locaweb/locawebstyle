@@ -11,7 +11,7 @@ description: Um painel com título visível e conteúdo oculto
   <div class="doc-example doc-example-markup">
     <%= partial('documentacao/shared/collapse', :locals => { :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %>
     <code class="language-markup">
-<%= escape_html(partial('documentacao/shared/collapse', :locals => { :quant => 2, :header => "Título", content: (lorem.words 1)}))%>
+<%= escape_html(partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => "Título", content: (lorem.words 1)}))%>
     </code>
   </div>
 
