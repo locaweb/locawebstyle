@@ -2,9 +2,10 @@ var lsdocs = (function() {
   'use strict';
 
   function init() {
-    convertCodeExamples();
-    copyMarkup();
-    markupExamples();
+    // convertCodeExamples();
+    // copyMarkup();
+    // markupExamples();
+    Prism.highlightAll();
   }
 
   function copyMarkup(){
