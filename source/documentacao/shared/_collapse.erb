@@ -1,0 +1,19 @@
+<% quant.times do |num| %>
+<div <% if defined?(id) %>id="<%= id %>" <% end %>class="ls-collapse<% if defined?(startOpen) %> ls-collapse-open<% end %><% if defined?(alwaysOpen) %> ls-collapse-open-always<% end %>">
+  <div class="ls-collapse-header">
+    <% if header.is_a? String %>
+    <%= header %> <%= num+1 %>
+    <% else %>
+    <h3 class="ls-collapse-title">
+      <%= header[:title] %>
+    </h3>
+    <p>
+      <%= header[:desc] %>
+    </p>
+    <% end %>
+  </div>
+  <div class="ls-collapse-body">
+    <%= content %>
+  </div>
+</div>
+<% end %>
