@@ -5,6 +5,8 @@ var locastyle = (function() {
     var modules = getModules();
     for (var i in modules) {
       locastyle[modules[i]].init();
+      // I know it is a console.log, let it to be here for a while
+      console.log("Locastyle: module [" + modules[i] + "] successfully initialized.")
     }
   }
 
