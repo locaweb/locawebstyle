@@ -9,7 +9,7 @@ locastyle.customFields = (function() {
   }
 
   function findFields(){
-    $('[data-lsModule="customFields"]').find(':input').not('.ls-input-original').each(function(index, field){
+    $('[data-ls-module="customFields"]').find(':input').not('.ls-input-original').each(function(index, field){
       if($(field).eq(0).attr('class') !== undefined){
         $(field).wrap( '<div class="ls-field-container-' + $(field)[0].type + ' ' + $(field).eq(0).attr('class') + ' " />' );
       }else{
