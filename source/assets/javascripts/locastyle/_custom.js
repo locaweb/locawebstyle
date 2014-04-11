@@ -4,7 +4,7 @@ locastyle.custom = (function() {
   'use strict';
 
   function init(){
-    $('[data-module="download"]').on('click', function(e){
+    $('[data-ls-module="download"]').on('click', function(e){
       e.preventDefault();
       if($('input[type="checkbox"]').is(':checked')){
         var fileName = $('input[type="checkbox"]').val().match(/_?([^\/]+)\.[\w]+$/)[1];

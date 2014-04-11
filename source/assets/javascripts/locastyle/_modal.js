@@ -5,7 +5,7 @@ locastyle.modal = (function() {
   var config = {
     modal: '.ls-modal',
     open: {
-      trigger: '[data-module="modal"]'
+      trigger: '[data-ls-module="modal"]'
     },
     close: {
       classes: '.ls-modal-overlay',
