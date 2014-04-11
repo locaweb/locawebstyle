@@ -16,7 +16,7 @@ locastyle.collapse = (function() {
     },
     classes: {
       open: 'ls-collapse-open',
-      alwaysOpen: 'ls-collapse-always-open'
+      alwaysOpen: 'ls-collapse-open-always'
     }
   };
 

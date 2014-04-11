@@ -21,7 +21,7 @@ describe('Collapse:', function() {
       expect($collapse.hasClass('ls-collapse-open')).toBe(false);
     });
 
-    it('with class .ls-collapse-always-open dont close on click', function() {
+    it('with class .ls-collapse-open-always dont close on click', function() {
       var $collapse = $('#collapse3')
       var $collapseTitle = $collapse.find('.ls-collapse-header');
       $collapseTitle.trigger("click");
