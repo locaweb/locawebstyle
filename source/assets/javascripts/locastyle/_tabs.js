@@ -8,9 +8,10 @@ locastyle.tabs = (function() {
   }
 
   function bindClickOnTriggers() {
-    $(".ls-tabs-nav [data-ls-module=tabs]").on("click", function(evt) {
+    $("[data-ls-module=tabs]").on("click", function(evt) {
       evt.preventDefault();
-      var $target = $($(this).attr("href"));
+      var $target = $($(this).attr("href") || $(this).data("target"));
+      console.log($target);
       deactivateTab(this, $target);
       activateTab(this, $target);
     });

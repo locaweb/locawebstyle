@@ -34,8 +34,15 @@ describe("Tabs: ", function() {
         $("#tab-trigger-2").trigger("click");
         expect($siblingOfParentLi.hasClass("active")).toEqual(false);
       });
-
     });
+
+    describe("when click on element with data-ls-module without a href", function() {
+      it("should use a data-target to active tab", function() {
+        $('#myButtons').trigger("click");
+        expect($('#myButtons').hasClass("active")).toEqual(true);
+      });
+    });
+
   });
 
 });
