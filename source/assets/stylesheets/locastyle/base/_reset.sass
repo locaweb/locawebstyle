@@ -22,9 +22,15 @@ body
 a, a:hover
   text-decoration: none
 
-p a
+p a,
+a.color-theme
   border-bottom-style: solid
   border-bottom-width: 1px
+
+  &:hover,
+  &:focus
+    border-bottom-color: transparent
+
 
 img
   max-width: 100%
