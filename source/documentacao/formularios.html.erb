@@ -94,7 +94,29 @@ description: Elementos padrão de formulários e disposição de campos
 
 <div id="mascaras-de-campos" class="doc-section">
   <h3 class="ls-title-3">Máscaras de campos</h3>
-  <p>Adicione a classe <code>ls-form-disable</code> para desabilitar tudo dentro do elemento (uma <code>div</code> ou todo o <code>form</code>) ou <code>ls-field-disable</code> para desabilitar um campo.</p>
+  <p>Para as máscaras utilizamos o plugin <a href="https://github.com/igorescobar/jQuery-Mask-Plugin">jQuery-Mask-Plugin</a> com alguns atalhos definidos</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>classe</th>
+        <th>mascara</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <tr><td>ls-mask-date</td><td></td></tr>
+        <tr><td>ls-mask-time</td><td></td></tr>
+        <tr><td>ls-mask-date_time</td><td></td></tr>
+        <tr><td>ls-mask-cep</td><td></td></tr>
+        <tr><td>ls-mask-phone</td><td></td></tr>
+        <tr><td>ls-mask-phone_with_ddd</td><td></td></tr>
+        <tr><td>ls-mask-mixed</td><td></td></tr>
+        <tr><td>ls-mask-cpf</td><td></td></tr>
+        <tr><td>ls-mask-ip_address</td><td></td></tr>
+        <tr><td>ls-mask-percent</td><td></td></tr>
+      </tr>
+    </tbody>
+  </table>
   <div class="doc-example">
     <%= partial('documentacao/shared/form/fields-masks.erb') %>
     <code class="language-markup">
