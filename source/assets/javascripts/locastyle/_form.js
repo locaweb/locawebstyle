@@ -3,26 +3,23 @@ var locastyle = locastyle || {};
 locastyle.form = (function() {
   'use strict';
 
+  var config = {
+    selectors: {
+      disable: '.ls-form-disable'
+    }
+  }
+
   function init() {
 
-    formInline();
+    formDisable();
 
   }
 
-  function formInline () {
-    $('.ls-form-inline').each(function (iform, form) {
-      var $form = $(form);
-      $form.find('.ls-field').each(function (ifield, field ) {
-        var $field = $(field);
-        var $label = $field.find('.ls-label');
-        var $input = $field.find(':input');
-
-        var labelW = $label.width();
-        var fieldW = $field.width();
-        var inputW = $input.width();
-
-        console.log(labelW, inputW,  fieldW)
-        $input.width( fieldW-labelW-30)
+  function formDisable () {
+    $( config.selectors.disable ).each(function(ic, container){
+      $(container).find(':input').each(function(ie, field){
+        console.log( $(field) )
+        $(field).attr('disabled', 'disabled')
       });
     });
   }
