@@ -34,10 +34,40 @@
   </div>
 
   <span class="show-sidebar ls-ico-menu"></span>
+  <span class="show-notifications ls-ico-question"></span>
 
   <!-- Nome do produto/marca -->
   <h1 class="ls-brand-name ls-ico-envelope"><a href="#">Revenda Email Marketing</a></h1>
+
 </div>
+
+  <main class="ls-main">
+    <div class="container-fluid">
+      <%= yield %>
+
+      <button data-module="modal" data-target="#myAwesomeModal" class="ls-btn-primary"> Modal com target </button>
+      <button data-module="modal" data-content="Conteúdo" data-title="Titulo" data-save="Salvar" data-close="Fechar" class="ls-btn-primary"> Modal sem target </button>
+
+      <div class="ls-modal fade" id="myAwesomeModal">
+        <div class="ls-modal-box">
+          <div class="ls-modal-header">
+            <button data-dismiss="modal">×</button>
+            <h4 class="ls-modal-title">Modal title</h4>
+          </div>
+          <div class="ls-modal-body">
+            <p>Repudiandae ea voluptatem et sit optio velit amet. Adipisci perspiciatis ad dignissimos culpa distinctio distinctio perspiciatis consequatur ut accusantium qui vel. Consequuntur nulla rem iure. Quos est a iure voluptates. Illum officiis accusantium quo enim aliquid debitis asperiores omnis perspiciatis. Est numquam dolor laudantium occaecati soluta. Eum non deleniti voluptate ipsa aut aut minus esse dicta architecto nulla amet. Sit sapiente impedit veritatis vel autem velit non tempore delectus aut. Repudiandae et nam enim voluptatem sed deleniti sed perferendis officia veritatis tempore similique doloremque. Quis fugiat quaerat neque optio nobis quidem nostrum amet aut corporis quasi omnis qui. Incidunt facere voluptatum ut saepe sit perspiciatis est impedit quasi neque occaecati magnam dolor ut. Cupiditate facilis omnis ut iure est sed tempora voluptate ducimus aliquid pariatur ea. Esse minus nobis quia nulla repellat quam itaque ut neque. Deleniti quo accusantium et non voluptatem. Voluptatibus perspiciatis et esse tempora qui reiciendis rerum quia voluptatibus</p>
+          </div>
+          <div class="ls-modal-footer">
+            <a class="ls-btn float-right ls-float-right" data-dismiss="modal">Close</a>
+            <a class="ls-btn-primary">Save changes</a>
+          </div>
+        </div>
+      </div><!-- /.modal -->
+
+      <%= partial 'documentacao/shared/footer' %>
+    </div>
+  </main>
+
   <aside class="ls-sidebar">
     <div class="ls-area-account ls-ico-user">
       <h2 class="ls-title-2">Administrando</h2>
@@ -62,12 +92,38 @@
        </ul>
     </nav>
   </aside>
-  <main class="ls-main">
-    <div class="container-fluid">
-      <%= yield %>
-      <%= partial 'documentacao/shared/footer' %>
-    </div>
-  </main>
+
+  <aside class="ls-notification">
+    <nav class="ls-notification-list">
+      <h3 class="ls-title-2">Notificações</h3>
+      <ul>
+        <%- 5.times do %>
+          <li>
+            <a href="#"><%= lorem.sentence%></a>
+            <a href="#" class="ls-ico-delete ls-close-notification">close</a>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+    <nav class="ls-notification-list">
+      <h3 class="ls-title-2">Ajuda</h3>
+      <ul>
+        <li class="ls-txt-center">
+          <a href="#" class="ls-btn-dark">Fazer um Tour</a>
+        </li>
+        <li><a href="#">> Guia</a></li>
+        <li><a href="#">> Wiki</a></li>
+      </ul>
+    </nav>
+    <nav class="ls-notification-list">
+      <h3 class="ls-title-2">Feedback</h3>
+      <ul>
+        <%- 2.times do %>
+          <li><a href="#">> <%= lorem.words 6 %></a></li>
+        <% end %>
+      </ul>
+    </nav>
+  </aside>
 
   <%= javascript_include_tag  "libs/jquery-2.1.0.min" %>
   <%= javascript_include_tag  "locastyle" %>
