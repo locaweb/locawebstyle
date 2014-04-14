@@ -43,26 +43,26 @@
 
   <main class="ls-main">
     <div class="container-fluid">
+ <button data-ls-module="modal" data-target="#myAwesomeModal" class="ls-btn-primary"> Modal com target </button>
+<button data-ls-module="modal" data-content="Conteúdo" data-title="Titulo" data-save="Salvar" data-close="Fechar" class="ls-btn-primary"> Modal sem target </button>
+
+<div class="ls-modal fade" id="myAwesomeModal">
+  <div class="ls-modal-box">
+    <div class="ls-modal-header">
+      <button data-dismiss="modal">×</button>
+      <h4 class="ls-modal-title">Modal title</h4>
+    </div>
+    <div class="ls-modal-body">
+      <p>Amet fugit eveniet incidunt molestiae sunt sequi autem voluptatem tenetur aut esse in assumenda ipsam. Eveniet et tempore blanditiis id et natus eius. Repellendus quaerat maxime cumque sed sint est molestias. Autem libero sit quidem facilis error aliquam qui dolor sint dolorem repudiandae impedit. Occaecati consequatur rerum vel atque dolorem omnis reiciendis itaque neque voluptas. Sunt saepe fugiat maxime eaque quibusdam aut optio dignissimos vel. Et aut veniam inventore. Voluptatem mollitia qui rerum. Porro id laudantium ad maiores debitis quia ut repudiandae quae qui sint hic. Distinctio mollitia iure voluptatem accusamus. Aut et vel non repellendus rem quia. Provident reprehenderit iste tempore et id nihil tempora. Tempora dignissimos quia enim quam rerum. Eius fuga neque est in est voluptatem fugit maxime suscipit consequatur sed sed. Alias est et eaque magni voluptas ut nostrum</p>
+    </div>
+    <div class="ls-modal-footer">
+      <a class="ls-btn float-right ls-float-right" data-dismiss="modal">Close</a>
+      <a class="ls-btn-primary">Save changes</a>
+    </div>
+  </div>
+</div><!-- /.modal -->
+
       <%= yield %>
-
-      <button data-module="modal" data-target="#myAwesomeModal" class="ls-btn-primary"> Modal com target </button>
-      <button data-module="modal" data-content="Conteúdo" data-title="Titulo" data-save="Salvar" data-close="Fechar" class="ls-btn-primary"> Modal sem target </button>
-
-      <div class="ls-modal fade" id="myAwesomeModal">
-        <div class="ls-modal-box">
-          <div class="ls-modal-header">
-            <button data-dismiss="modal">×</button>
-            <h4 class="ls-modal-title">Modal title</h4>
-          </div>
-          <div class="ls-modal-body">
-            <p>Repudiandae ea voluptatem et sit optio velit amet. Adipisci perspiciatis ad dignissimos culpa distinctio distinctio perspiciatis consequatur ut accusantium qui vel. Consequuntur nulla rem iure. Quos est a iure voluptates. Illum officiis accusantium quo enim aliquid debitis asperiores omnis perspiciatis. Est numquam dolor laudantium occaecati soluta. Eum non deleniti voluptate ipsa aut aut minus esse dicta architecto nulla amet. Sit sapiente impedit veritatis vel autem velit non tempore delectus aut. Repudiandae et nam enim voluptatem sed deleniti sed perferendis officia veritatis tempore similique doloremque. Quis fugiat quaerat neque optio nobis quidem nostrum amet aut corporis quasi omnis qui. Incidunt facere voluptatum ut saepe sit perspiciatis est impedit quasi neque occaecati magnam dolor ut. Cupiditate facilis omnis ut iure est sed tempora voluptate ducimus aliquid pariatur ea. Esse minus nobis quia nulla repellat quam itaque ut neque. Deleniti quo accusantium et non voluptatem. Voluptatibus perspiciatis et esse tempora qui reiciendis rerum quia voluptatibus</p>
-          </div>
-          <div class="ls-modal-footer">
-            <a class="ls-btn float-right ls-float-right" data-dismiss="modal">Close</a>
-            <a class="ls-btn-primary">Save changes</a>
-          </div>
-        </div>
-      </div><!-- /.modal -->
 
       <%= partial 'documentacao/shared/footer' %>
     </div>
