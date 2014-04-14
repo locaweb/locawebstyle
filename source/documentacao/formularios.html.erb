@@ -3,7 +3,17 @@ title: Formulários
 description: Elementos padrão de formulários e disposição de campos
 ---
 
-<div class="doc-section">
+<div class="doc-menu-internal">
+  <ol>
+    <li><a href="#campos-de-formulario">Campos de formulário</a></li>
+    <li><a href="#formularios-verticais">Formulários verticais</a></li>
+    <li><a href="#formularios-horizontais">Formulários horizontais</a></li>
+    <li><a href="#desabilitando-campos">Desabilitando campos</a></li>
+    <li><a href="#formularios-como-texto">Formulários como texto</a></li>
+  </ol>
+</div>
+
+<div id="campos-de-formulario" class="doc-section">
   <h3 class="ls-title-3">Campos de formulário</h3>
 
   <p>No <b>Locastyle</b> usamos o padrão de <i>input</i> dentro do <i>label</i>, para evitar <i>markup</i> adicional envolvendo o campo e seu nome e aproveitar o comportamento nativo de clique no label dando foco no campo, sem precisar adicionar o atributo <code>for="#id-do-elemento"</code>.</p>
@@ -23,7 +33,7 @@ description: Elementos padrão de formulários e disposição de campos
   </div>
 </div>
 
-<div class="doc-section">
+<div id="formularios-verticais" class="doc-section">
   <h3 class="ls-title-3">Formulários verticais</h3>
   <p>Basta usar o <i>grid</i> padrão.</p>
   <div class="doc-example">
@@ -34,7 +44,7 @@ description: Elementos padrão de formulários e disposição de campos
   </div>
 </div>
 
-<div class="doc-section">
+<div id="formularios-horizontais" class="doc-section">
   <h3 class="ls-title-3">Formulários horizontais</h3>
   <p>Basta usar o <i>grid</i> padrão, novamente:</p>
   <div class="doc-example">
@@ -52,9 +62,8 @@ description: Elementos padrão de formulários e disposição de campos
   </div>
 </div>
 
-
 <div id="desabilitando-campos" class="doc-section">
-  <h3 class="ls-title-3">Desabilitando campos de formulário</h3>
+  <h3 class="ls-title-3">Desabilitando campos</h3>
   <p>Adicione a classe <code>ls-form-disable</code> para desabilitar tudo dentro do elemento (uma <code>div</code> ou todo o <code>form</code>) ou <code>ls-field-disable</code> para desabilitar um campo.</p>
   <div class="doc-example">
     <%= partial('documentacao/shared/form/form-disable.erb') %>
