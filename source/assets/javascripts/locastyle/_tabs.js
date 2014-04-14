@@ -4,11 +4,12 @@ locastyle.tabs = (function() {
   'use strict';
 
   function init() {
+    unbind();
     bindClickOnTriggers();
   }
 
   function bindClickOnTriggers() {
-    $("[data-ls-module=tabs]").on("click", function(evt) {
+    $("[data-ls-module=tabs]").on("click.ls", function(evt) {
       evt.preventDefault();
       var $target = $($(this).attr("href") || $(this).data("target"));
       deactivateTab(this, $target);
@@ -26,8 +27,13 @@ locastyle.tabs = (function() {
     $target.siblings().removeClass("active");
   }
 
+  function unbind() {
+    $("[data-ls-module=tabs]").off("click.ls");
+  }
+
   return {
     init: init,
+    unbind: unbind
   }
 
 }());
