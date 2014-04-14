@@ -11,6 +11,7 @@ locastyle.general = (function() {
   function init() {
     _loadEvents();
     showSidebar();
+    showNotifications();
     subMenu();
     _locationHashTrigger();
     _elementDisabled();
@@ -71,6 +72,16 @@ locastyle.general = (function() {
 
     $showHide.on('touchstart click', function(evt) {
       $html.toggleClass('sidebar-visible');
+      evt.preventDefault();
+    });
+  }
+
+  function showNotifications() {
+    var $showHide = $('.show-notifications');
+    var $html = $('html');
+
+    $showHide.on('touchstart click', function(evt) {
+      $html.toggleClass('notifications-visible');
       evt.preventDefault();
     });
   }

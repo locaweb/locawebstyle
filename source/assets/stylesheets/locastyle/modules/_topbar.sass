@@ -7,12 +7,15 @@
   width: 100%
   top: 0
   left: 0
-  z-index: 10
+  z-index: 11
   +single-transition(all, .5s)
   +translate(0, 0)
 
   .sidebar-visible &
     +translate($sidebarWidth, 0)
+
+  .notifications-visible &
+    +translate(-$sidebarWidth, 0)
 
   //
   // Nome do produto/marca
@@ -76,10 +79,6 @@
         span
           display: none
 
-        &.ls-ico-question
-          display: inline-block
-
-
     .ls-user-account
       background-color: rgba(0, 0, 0, 0.15)
       box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.05)
@@ -122,8 +121,9 @@
         display: none
         height: 60px
 
-  .ls-ico-menu:before
-    float: left
+  .ls-ico-menu:before,
+  .show-notifications.ls-ico-question:before
+    position: fixed
     padding: 15px 15px 0
     height: $heightTopbar
     display: inline-block
@@ -131,6 +131,9 @@
     font-size: 2em
     vertical-align: middle
     cursor: pointer
+
+  .show-notifications.ls-ico-question:before
+    right: 0
 
 @media (min-width: 768px)
   .ls-topbar
@@ -150,7 +153,8 @@
         margin-right: 12px
         font-size: 2rem
 
-    .ls-ico-menu:before
+    .ls-ico-menu:before,
+    .show-notifications.ls-ico-question:before
       display: none
 
     .ls-notification-topbar
