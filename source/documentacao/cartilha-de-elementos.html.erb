@@ -3,40 +3,90 @@ title: Cartilha de elementos
 description:
 ---
 
-
+<h2 class="ls-title-2">Abas</h2>
+<hr>
 <%= partial 'documentacao/shared/abas' %>
-<br>
+
+<h2 class="ls-title-2">Alertas</h2>
+<hr>
 <%= partial 'documentacao/shared/alerts/alerts' %>
-<br>
+<%= partial 'documentacao/shared/alerts/close-alerts' %>
+
+<h2 class="ls-title-2">Barra de progresso</h2>
+<hr>
 <%= partial 'documentacao/shared/progress-bar/progress' %>
-<br>
+<hr class="ls-no-border">
+
+<h2 class="ls-title-2">Botão Switch</h2>
+<hr>
 <%= partial 'documentacao/shared/switch' %>
-<br>
+<hr class="ls-no-border">
+
+<h2 class="ls-title-2">Botões</h2>
+<hr>
 <%= partial 'documentacao/shared/botoes' %>
-<br>
+<hr class="ls-no-border">
+
+<h2 class="ls-title-2">Box</h2>
+<hr>
 <%= partial 'documentacao/shared/box/box' %>
-<br>
-<%= partial 'documentacao/shared/breadcrumb/breadcrumb' %>
+
+<h2 class="ls-title-2">Breadcrumb</h2>
+<hr>
 <%= partial 'documentacao/shared/breadcrumb/breadcrumb-more' %>
-<br>
+<hr class="ls-no-border">
+
+<h2 class="ls-title-2">Campos Personalizados</h2>
+<hr>
 <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
 <%= partial 'documentacao/shared/custom-fields', locals: {field: 'radio'} %>
 <%= partial 'documentacao/shared/custom-fields', locals: {field: 'checkbox'} %>
-<br>
+
+<h2 class="ls-title-2">Collapses</h2>
+<hr >
+<%= partial('documentacao/shared/collapse', :locals => { :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %>
+<hr class="ls-no-border">
+
+<h2 class="ls-title-2">Dropdown</h2>
+<hr>
 <%= partial 'documentacao/shared/dropdown' %>
-<br>
+<hr class="ls-no-border">
+
+<h2 class="ls-title-2">Footer</h2>
+<hr>
 <%= partial 'documentacao/shared/footer' %>
-<br>
+<hr class="ls-no-border">
+
+<h2 class="ls-title-2">Icones</h2>
+<hr>
 <%= partial 'documentacao/shared/icons' %>
-<br>
+
+<h2 class="ls-title-2">Modal</h2>
+<hr>
 <%= partial 'documentacao/shared/modal' %>
-<br>
+<hr class="ls-no-border">
+
+<h2 class="ls-title-2">Filtro de exibição e Paginação</h2>
+<hr>
 <%= partial 'documentacao/shared/pagination/pagination' %>
-<br>
+
+<h2 class="ls-title-2">Listas</h2>
+<hr>
+<%= partial 'documentacao/shared/lists' %>
+<hr class="ls-no-border">
+
+<h2 class="ls-title-2">Popover</h2>
+<hr>
 <%= partial 'documentacao/shared/popover' %>
-<br>
+<hr class="ls-no-border">
+
+<h2 class="ls-title-2">Tags</h2>
+<hr>
 <%= partial 'documentacao/shared/tags' %>
+<hr class="ls-no-border">
 <%= partial 'documentacao/shared/tags-links' %>
-<br>
+<hr class="ls-no-border">
+
+<h2 class="ls-title-2">Toltiop</h2>
+<hr>
 <%= partial 'documentacao/shared/tooltip' %>
-<br>
