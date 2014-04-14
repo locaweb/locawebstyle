@@ -4,83 +4,93 @@ description: Elementos padrão de formulários e disposição de campos
 ---
 
 <div class="doc-section">
-  <h3 class="doc-section-title">Campos de formulário</h3>
+  <h3 class="ls-title-3">Campos de formulário</h3>
 
   <p>No <b>Locastyle</b> usamos o padrão de <i>input</i> dentro do <i>label</i>, para evitar <i>markup</i> adicional envolvendo o campo e seu nome e aproveitar o comportamento nativo de clique no label dando foco no campo, sem precisar adicionar o atributo <code>for="#id-do-elemento"</code>.</p>
   <p>Os formulários, por padrão são horizontais, um campo abaixo do outro, mas isos pode ser alterado usando classes de configuração mostradas nas seções baixo:</p>
 
   <p>Exemplo:</p>
 
-  <div class="doc-example doc-example-markup">
 
+  <div class="doc-example">
     <p>Campos sempre ocupam toda a largura disponível:</p>
-
     <form action="" class="ls-form">
-      <label class="ls-field">
-        <span class="ls-label">Nome</span>
-        <input type="text" name="nome" placeholder="Nome e sobrenome" required />
-      </label>
+      <%= partial('documentacao/shared/form/form-field.erb') %>
     </form>
-
-    <br>
-    <p>Use o <i>grid</i> do <b>Locastyle</b> para definir as larguras de campos</p>
-
-    <form action="" class="ls-form">
-      <div class="row" >
-        <label class="ls-field col-md-3">
-          <span class="ls-label">Nome</span>
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
-        </label>
-        <label class="ls-field col-md-4">
-          <span class="ls-label">Email</span>
-          <input type="text" name="email" placeholder="email" required />
-        </label>
-      </div>
-      <div class="row" >
-        <label class="ls-field col-md-3">
-          <span class="ls-label">Nome</span>
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
-        </label>
-        <label class="ls-field col-md-4">
-          <span class="ls-label">Email</span>
-          <input type="text" name="email" placeholder="email" required />
-        </label>
-      </div>
-    </form>
-
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/form/form-field.erb')) %>
+    </code>
   </div>
+</div>
+
+<div class="doc-section">
+  <h3 class="ls-title-3">Formulários verticais</h3>
+  <p>Basta usar o <i>grid</i> padrão.</p>
+  <div class="doc-example">
+    <%= partial('documentacao/shared/form/form-vertical.erb') %>
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/form/form-vertical.erb')) %>
+    </code>
+  </div>
+</div>
+
+<div class="doc-section">
+  <h3 class="ls-title-3">Formulários horizontais</h3>
+  <p>Basta usar o <i>grid</i> padrão, novamente:</p>
+  <div class="doc-example">
+    <%= partial('documentacao/shared/form/form-horizontal.erb') %>
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/form/form-horizontal.erb')) %>
+    </code>
+  </div>
+  <p>Ou usar a classe <code>ls-form-inline</code> para um formulário <i>inline</i>.</p>
+  <div class="doc-example">
+    <%= partial('documentacao/shared/form/form-horizontal-inline.erb') %>
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/form/form-horizontal-inline.erb')) %>
+    </code>
+  </div>
+</div>
+
 <!--
+<div class="row doc-section">
+  <h3 class="doc-section-title">Posição dos campos</h3>
+</div>
 
-      <form action="" class="ls-form">
-        <input type="text" results="10" />
-        <input type="search" results="10" />
-        <input type="number" name=""/>
-        <input type="range"  name=""/>
-        <input type="color" name=""/>
-        <input type="tel" name=""/>
-        <input type="url" name=""/>
-        <input type="email" name=""/>
-        <input type="date" name=""/>
-        <input type="month" name=""/>
-        <input type="week" name=""/>
-        <input type="time" name=""/>
-        <input type="datetime" name=""/>
-        <input type="datetime-local" name=""/>
-        <select name="">
-          <option value="">Nome</option>
-        </select>
-        <input type="checkbox" />
-        <input type="password">
-        <input type="radio">
-        <input type="file">
-        <input type="hidden">
-        <input type="image" src="">
-        <button type="reset"></button>
-        <button type="submit"></button>
-  <textarea name="" id="" cols="30" rows="10"></textarea>
+<div class="row doc-section">
+  <h3 class="doc-section-title">Formulário Básico</h3>
+</div>
 
-      </form>
- -->
+<div class="row doc-section">
+  <h3 class="doc-section-title">Desabilitando campos de formulário</h3>
+</div>
+
+<div class="row doc-section">
+  <h3 class="doc-section-title">Formulários como texto</h3>
+</div>
+
+<div class="row doc-section">
+  <h3 class="doc-section-title">Máscaras de formulários</h3>
+</div>
+
+<div class="row doc-section">
+  <h3 class="doc-section-title">Indicando as validações</h3>
+</div>
+
+<div class="row doc-section">
+  <h3 class="doc-section-title">Calendários</h3>
+</div>
+
+
+<div class="row doc-section">
+  <h3 class="doc-section-title">Força de senha</h3>
+</div>
+
+Alternando campos
+<div class="row doc-section">
+  <h3 class="doc-section-title"></h3>
+</div> -->
+
   <!--
   datalist
     list
@@ -118,156 +128,3 @@ description: Elementos padrão de formulários e disposição de campos
     url: URL input. Use <input type="url"> if possible instead.
 
    -->
-
-
-</div>
-
-
-<div class="doc-section">
-  <h3 class="ls-title-3">Formulários verticais</h3>
-  <p>Basta usar o <i>grid</i> padrão</p>
-  <div class="doc-example">
-    <%= partial('documentacao/shared/form/form-vertical.erb') %>
-    <code class="language-markup">
-<%= escape_html(partial('documentacao/shared/form/form-vertical.erb')) %>
-    </code>
-  </div>
-</div>
-
-<div class="doc-section">
-  <h3 class="ls-title-3">Formulários horizontais</h3>
-  <p>Basta usar o <i>grid</i> padrão, novamente:</p>
-  <div class="doc-example">
-    <%= partial('documentacao/shared/form/form-horizontal.erb') %>
-    <code class="language-markup">
-<%= escape_html(partial('documentacao/shared/form/form-horizontal.erb')) %>
-    </code>
-  </div>
-</div>>
-
-<div class="row doc-section">
-  <h3 class="doc-section-title" id="formularios-em-linha">Formulários em linha</h3>
-
-  <p>Usando o <i>grid</i></p>
-  <div class="doc-example doc-example-markup">
-
-    <form action="" class="ls-form">
-      <div class="row" >
-        <label class="ls-field col-md-3">
-          <span class="ls-label">Nome</span>
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
-        </label>
-        <label class="ls-field col-md-4">
-          <span class="ls-label">Email</span>
-          <input type="text" name="email" placeholder="email" required />
-        </label>
-        <label class="ls-field col-md-4">
-          <span class="ls-label">Senha</span>
-          <input type="password" name="senha" placeholder="Números e letras" required />
-        </label>
-      </div>
-      <div class="row" data-ls-module="customFields">
-        <label class="ls-field col-md-2">
-          <span class="ls-label">Sexo</span>
-          <select name="sexo">
-            <option value="M">Masculino</option>
-            <option value="F">Feminino</option>
-          </select>
-        </label>
-        <label class="ls-field col-md-2">
-          <span class="ls-label">Idade</span>
-          <input type="text" name="idade" placeholder="NN" required />
-        </label>
-        <label class="ls-field col-md-2">
-          <span class="ls-label">Sexo</span>
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
-        </label>
-        <label class="ls-field col-md-2">
-          <span class="ls-label">Nome</span>
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
-        </label>
-        <label class="ls-field col-md-2">
-          <span class="ls-label">Nome</span>
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
-        </label>
-        <label class="ls-field col-md-2">
-          <span class="ls-label">Nome</span>
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
-        </label>
-      </div>
-    </form>
-  </div>
-
-  <p>Usando classe</p>
-  <div class="doc-example doc-example-markup">
-    <form action="" class="ls-form ls-form-inline">
-      <div class="row" >
-        <label class="ls-field col-md-3">
-          <span class="ls-label">Nome</span>
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
-        </label>
-        <label class="ls-field col-md-4">
-          <span class="ls-label">Email</span>
-          <input type="text" name="email" placeholder="email" required />
-        </label>
-        <label class="ls-field col-md-4">
-          <span class="ls-label">Senha</span>
-          <input type="password" name="senha" placeholder="Números e letras" required />
-        </label>
-      </div>
-      <div class="row">
-        <label class="ls-field col-md-3">
-          <span class="ls-label">Nome</span>
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
-        </label>
-      </div>
-      <div class="row">
-        <label class="ls-field col-md-3">
-          <span class="ls-label">Nome</span>
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required />
-        </label>
-      </div>
-    </form>
-  </div>
-
-
-</div>
-
-<div class="row doc-section">
-  <h3 class="doc-section-title">Posição dos campos</h3>
-</div>
-
-<div class="row doc-section">
-  <h3 class="doc-section-title">Formulário Básico</h3>
-</div>
-
-<div class="row doc-section">
-  <h3 class="doc-section-title">Desabilitando campos de formulário</h3>
-</div>
-
-<div class="row doc-section">
-  <h3 class="doc-section-title">Formulários como texto</h3>
-</div>
-
-<div class="row doc-section">
-  <h3 class="doc-section-title">Máscaras de formulários</h3>
-</div>
-
-<div class="row doc-section">
-  <h3 class="doc-section-title">Indicando as validações</h3>
-</div>
-
-<div class="row doc-section">
-  <h3 class="doc-section-title">Calendários</h3>
-</div>
-
-
-<div class="row doc-section">
-  <h3 class="doc-section-title">Força de senha</h3>
-</div>
-
-Alternando campos
-<div class="row doc-section">
-  <h3 class="doc-section-title"></h3>
-</div>
-
