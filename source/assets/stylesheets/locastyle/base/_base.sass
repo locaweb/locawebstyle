@@ -1,7 +1,8 @@
 .ls-main
   padding-top: $heightTopbar
   margin-left: 0
-  z-index: 2
+  z-index: 10
+  position: relative
   -webkit-overflow-scrolling: touch
   -moz-overflow-scrolling: touch
   overflow-scrolling: touch
@@ -14,6 +15,9 @@
 
   .sidebar-visible &
     +translate($sidebarWidth, 0)
+
+  .notifications-visible &
+    +translate(-$sidebarWidth, 0)
 
 .ls-container
   padding: 0 30px
