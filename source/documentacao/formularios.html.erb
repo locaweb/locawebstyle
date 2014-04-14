@@ -10,6 +10,7 @@ description: Elementos padrão de formulários e disposição de campos
     <li><a href="#formularios-horizontais">Formulários horizontais</a></li>
     <li><a href="#desabilitando-campos">Desabilitando campos</a></li>
     <li><a href="#formularios-como-texto">Formulários como texto</a></li>
+    <li><a href="#mascaras-de-campos">Máscaras</a></li>
   </ol>
 </div>
 
@@ -89,10 +90,23 @@ description: Elementos padrão de formulários e disposição de campos
     </code>
   </div>
 </div>
+
+<div id="mascaras-de-campos" class="doc-section">
+  <h3 class="ls-title-3">Máscaras de campos</h3>
+  <p>Adicione a classe <code>ls-form-disable</code> para desabilitar tudo dentro do elemento (uma <code>div</code> ou todo o <code>form</code>) ou <code>ls-field-disable</code> para desabilitar um campo.</p>
+  <div class="doc-example">
+    <%= partial('documentacao/shared/form/fields-masks.erb') %>
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/form/fields-masks.erb')) %>
+    </code>
+
+  </div>
+</div>
+
 <!--
 
 <div class="row doc-section">
-  <h3 class="doc-section-title">Máscaras de formulários</h3>
+  <h3 class="doc-section-title"></h3>
 </div>
 
 <div class="row doc-section">
