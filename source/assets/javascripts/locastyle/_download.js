@@ -1,6 +1,6 @@
 var locastyle = locastyle || {};
 
-locastyle.custom = (function() {
+locastyle.download = (function() {
   'use strict';
 
   function init(){
