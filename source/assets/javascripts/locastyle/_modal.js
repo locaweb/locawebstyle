@@ -41,11 +41,15 @@ locastyle.modal = (function() {
   }
 
   function close() {
-    $(config.close.classes + ", " + config.close.trigger).on('click', function() {
+    $(config.close.classes + ", " + config.close.trigger).on('click.ls', function() {
       $(config.modal).removeClass("opened");
       $(".ls-modal-overlay, " + config.template.classes).remove();
       $('body').removeClass('modal-opened');
     })
+  }
+
+  function unbind(){
+    $(config.open.modal).off('click.ls')
   }
 
   return {
