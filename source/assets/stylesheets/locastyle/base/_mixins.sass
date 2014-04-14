@@ -1,4 +1,30 @@
 //
+// Keyframe
+//
+=keyframes($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+
+  @-moz-keyframes #{$animation-name}
+    @content
+
+  @-ms-keyframes #{$animation-name}
+    @content
+
+  @keyframes #{$animation-name}
+    @content
+
+//
+// Animations
+//
+=animation($str)
+  -webkit-animation: #{$str}
+  -moz-animation: #{$str}
+  -ms-animation: #{$str}
+  animation: #{$str}
+
+
+//
 // Adiciona bordas arredondadas em ícones.
 //
 =border-circle($size, $font-size)
