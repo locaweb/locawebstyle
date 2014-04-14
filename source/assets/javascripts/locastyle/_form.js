@@ -25,7 +25,6 @@ locastyle.form = (function() {
     $('.ls-mask-cep').mask('00000-000');
     $('.ls-mask-phone').mask('0000-0000');
     $('.ls-mask-phone_with_ddd').mask('(00) 0000-0000');
-    $('.ls-mask-mixed').mask('AAA 000-S0S');
     $('.ls-mask-cpf').mask('000.000.000-00', {reverse: true});
     $('.ls-mask-ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {translation: {'Z': {pattern: /[0-9]/, optional: true}}});
     $('.ls-mask-percent').mask('##0,00%', {reverse: true});
