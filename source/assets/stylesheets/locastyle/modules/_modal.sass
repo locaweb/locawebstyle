@@ -1,4 +1,4 @@
-$defaultWidth: 600px
+$defaultWidth: 90%
 $largeWidth: 750px
 $smallWidth: 450px
 $paddingDefault: 20px
@@ -13,31 +13,39 @@ $paddingDefault: 20px
   z-index: 16
   overflow: auto
   overflow-y: scroll
-  +single-transition(opacity, .15s, linear)
+  text-align: center
 
   &.opened
     visibility: visible
 
-  &.fade
-    opacity: 0
-    +single-transition(opacity, .25s, linear)
-
-    &.opened
-      opacity: 1
+  &.fade.opened
+    -webkit-animation: modal-fadein 0.15s linear
 
   .ls-modal-overlay
+    +single-transition(opacity, .35s, linear)
     position: fixed
     top: 0
     left: 0
     width: 100%
     height: 100%
     z-index: 15
-    +single-transition(opacity, .35s, linear)
+    background: rgba(0,0,0, 0.65)
+
+body.modal-opened .ls-topbar,
+body.modal-opened .ls-main,
+body.modal-opened .ls-sidebar,
+  -webkit-filter: blur(3px)
+  -moz-filter: blur(3px)
+  -ms-filter: blur(3px)
+  filter: blur(3px)
 
 .ls-modal-box
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7)
+  text-align: left
+  display: inline-block
   position: relative
   z-index: 16
-  margin: 5% auto 0
+  margin: 10% 20px 100px
   width: $defaultWidth
   background-color: #fff
 
@@ -48,16 +56,6 @@ $paddingDefault: 20px
   &.ls-modal-small
     width: $smallWidth
     margin-left: -$smallWidth / 2
-
-.ls-modal-overlay
-  position: fixed
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  z-index: 15
-  background: rgba(0,0,0, 0.5)
-  +single-transition(opacity, .35s, linear)
 
 .ls-modal-header
   padding: $paddingDefault
@@ -94,3 +92,25 @@ $paddingDefault: 20px
 .ls-modal-footer
   padding: $paddingDefault
   border-top: 1px solid $gray1
+
++keyframes(modal-fadein)
+  0%
+    visibility: hidden
+    opacity: 0
+  1%
+    visibility: visible
+  100%
+    opacity: 1
+
++keyframes(modal-fadeout)
+  0%
+    visibility: visible
+    opacity: 1
+  1%
+    opacity: 0
+  100%
+    visibility: hidden
+
+@media (min-width: $screen-sm)
+  .ls-modal-box
+    width: 600px
