@@ -10,10 +10,13 @@ locastyle.customFields = (function() {
 
   function findFields(){
     $('[data-ls-module="customFields"]').find(':input').not('.ls-input-original').each(function(index, field){
-      if($(field).eq(0).attr('class') !== undefined){
-        $(field).wrap( '<div class="ls-field-container-' + $(field)[0].type + ' ' + $(field).eq(0).attr('class') + ' " />' );
-      }else{
-        $(field).wrap( '<div class="ls-field-container-' + $(field)[0].type + ' " />' );
+      var fieldType = $(field)[0].type;
+      if(fieldType === 'select-one' || fieldType === 'radio' || fieldType === 'checkbox'){
+        if($(field).eq(0).attr('class') !== undefined){
+          $(field).wrap( '<div class="ls-field-container-' + fieldType + ' ' + $(field).eq(0).attr('class') + ' " />' );
+        }else{
+          $(field).wrap( '<div class="ls-field-container-' + fieldType + ' " />' );
+        }
       }
 
       setSize($(field))

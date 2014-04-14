@@ -1,0 +1,56 @@
+.ls-notification
+  background: #222
+  width: $sidebarWidth
+  position: fixed
+  right: 0
+  top: 0
+  height: 120%
+  overflow: auto
+  +single-transition(all, .5s)
+  +translate(50%, 0)
+
+
+  .notifications-visible &
+    +translate(0, 0)
+
+  .ls-notification-list
+
+    ul li
+      border-bottom: 1px solid $gray-4
+      position: relative
+
+    [class*="ls-title"]
+      padding: 20px
+      color: #fff
+      background: $gray-4
+
+    a:not([class*="btn"])
+      -moz-transition: all 0.2s
+      -o-transition: all 0.2s
+      -webkit-transition: all 0.2s
+      transition: all 0.2s
+      color: $gray-3
+      border-left: 5px solid transparent
+      display: block
+      font-size: 0.875rem
+      text-decoration: none
+      padding: 20px
+
+      &.ls-close-notification
+        padding: 0
+        position: absolute
+        top: 0
+        right: 0
+
+    a[class*="btn"]
+      margin: 20px 0
+
+
+@media (min-width: $screen-sm)
+  .ls-notification
+    +transform(none)
+    +translate(100%, 0)
+    +single-transition(none)
+    float: none
+    top: $heightTopbar
+    height: calc(100% - 60px)

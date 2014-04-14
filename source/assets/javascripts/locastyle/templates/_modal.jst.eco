@@ -1,4 +1,4 @@
-<div class="ls-modal fade opened">
+<div class="ls-modal fade opened ls-modal-template">
   <div class="ls-modal-box">
     <div class="ls-modal-header">
       <button type="button" data-dismiss="modal" class="close">&times;</button>
@@ -13,4 +13,4 @@
     </div>
   </div>
   <div class="ls-modal-overlay"></div>
-</div><!-- /.modal -->
+</div>
