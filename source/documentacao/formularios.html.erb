@@ -65,16 +65,17 @@ description: Elementos padrão de formulários e disposição de campos
   </div>
 </div>
 
-
+<div id="formularios-como-texto" class="doc-section">
+  <h3 class="ls-title-3">Formulários como texto</h3>
+  <p>Adicione a classe <code>ls-form-disable</code> para desabilitar tudo dentro do elemento (uma <code>div</code> ou todo o <code>form</code>) ou <code>ls-field-disable</code> para desabilitar um campo.</p>
+  <div class="doc-example">
+    <%= partial('documentacao/shared/form/form-as-text.erb') %>
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/form/form-as-text.erb')) %>
+    </code>
+  </div>
+</div>
 <!--
-
-<div class="row doc-section">
-  <h3 class="doc-section-title"></h3>
-</div>
-
-<div class="row doc-section">
-  <h3 class="doc-section-title"></h3>
-</div>
 
 <div class="row doc-section">
   <h3 class="doc-section-title">Máscaras de formulários</h3>
@@ -87,7 +88,6 @@ description: Elementos padrão de formulários e disposição de campos
 <div class="row doc-section">
   <h3 class="doc-section-title">Calendários</h3>
 </div>
-
 
 <div class="row doc-section">
   <h3 class="doc-section-title">Força de senha</h3>
