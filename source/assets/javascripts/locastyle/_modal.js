@@ -10,6 +10,9 @@ locastyle.modal = (function() {
     close: {
       classes: '.ls-modal-overlay',
       trigger: '[data-dismiss="modal"]'
+    },
+    template: {
+      classes: '.ls-modal-template'
     }
   }
 
@@ -33,6 +36,7 @@ locastyle.modal = (function() {
   function close() {
     $(config.close.classes + ", " + config.close.trigger).on('click', function() {
       $(config.modal).removeClass("opened");
+      $(config.template.classes).remove();
       $(".ls-modal-overlay").remove();
     })
   }
