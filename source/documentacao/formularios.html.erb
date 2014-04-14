@@ -117,7 +117,9 @@ description: Elementos padrão de formulários e disposição de campos
     </tbody>
   </table>
   <div class="doc-example">
-    <%= partial('documentacao/shared/form/fields-masks.erb') %>
+    <form action="" class="ls-form" data-ls-module="form">
+      <%= partial('documentacao/shared/form/fields-masks.erb') %>
+    </form>
     <code class="language-markup">
 <%= escape_html(partial('documentacao/shared/form/fields-masks.erb')) %>
     </code>
