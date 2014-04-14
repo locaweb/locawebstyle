@@ -1,12 +1,13 @@
 [class*="ls-field-container-"]
   position: relative
-  color: white
-  padding: 5px
-  margin-bottom: 10px
-  height: 30px
+  color: #fff
+  // padding: 5px
+  // margin-bottom: 10px
+  // height: 30px
 
   select, input[type='radio'], input[type='checkbox']
     opacity: 0
+    border-radius: 0
 
   select, input
     position: absolute
@@ -20,7 +21,7 @@
     height: 30px
 
   .ls-field-custom-checkbox
-    padding: 5px 32px
+    // padding: 5px 32px
     background: #FFF url('https://cdn1.iconfinder.com/data/icons/Keyamoon-IcoMoon--limited/32/checkbox-unchecked.png') no-repeat
     &.checked
       background: #FFF url('https://cdn1.iconfinder.com/data/icons/Keyamoon-IcoMoon--limited/32/checkbox-checked.png') no-repeat
@@ -32,17 +33,25 @@
       background: #FFF url('https://cdn1.iconfinder.com/data/icons/blueberry/32/radio-button_on.png') no-repeat
 
 .ls-field-container-select-one
-  border: 1px solid $gray2
+  border: 1px solid $gray3
   background: none
-  border-radius: 3px
   color: $gray4
   position: relative
+  height: 2rem
+  line-height: 2rem
+
+  select
+    +appearance(none)
+    display: block
+    height: 2rem
+    line-height: 2rem
 
   .ls-field-custom-select-one
     overflow: hidden
-    height: 20px
+    height: 2rem
+    line-height: 2rem
     display: block
-    line-height: 1.3
+    text-indent: .5rem
 
     &:before
       +arrow-down(#000, .5rem)
