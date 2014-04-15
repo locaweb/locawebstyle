@@ -15,17 +15,8 @@ locastyle.form = (function() {
     formDisable();
     formText();
     masks();
-    textarea();
     textareaAutoresize();
 
-  }
-
-  function textarea () {
-    $('textarea', '.ls-field').each(function (it, textarea) {
-      var $textarea = $(textarea);
-      var rows = parseInt($textarea.attr('rows'), 10) + 1;
-      $textarea.height( $textarea.height() * rows );
-    });
   }
 
   function textareaAutoresize (argument) {
