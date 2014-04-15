@@ -13,23 +13,23 @@ layout: examples
         <label class="ls-field">
           Nome da revenda
           <input type="text">
-          <span>máximo de 30 caracteres</span>
+          <span class="ls-label">máximo de 30 caracteres</span>
         </label>
       </div>
 
       <hr class="ls-clear-both">
 
-      <div class="col-md-9">
+      <div class="col-md-12">
         <h2 class="ls-title-2">Identificação do painel e dos e-mails</h2>
         <p class="ls-title-5">Será exibido no cabeçalho do painel e dos e-mails recebidos pelos clientes</p>
 
         <label class="ls-field ls-display-block">
-          <input type="radio"> Nome da revenda
+          <input type="radio" name="type"> Nome da revenda
         </label>
 
         <label class="ls-field ls-display-block">
-          <input type="radio"> Escolher uma imagem do meu computador
-          <span>Envie uma imagem JPG, PNG ou GIF. Ela será exibida com no máximo 440 pixels de largura e 70 pixels de altura.</span>
+          <input type="radio" name="type"> Escolher uma imagem do meu computador
+          <span class="ls-label">Envie uma imagem JPG, PNG ou GIF. Ela será exibida com no máximo 440 pixels de largura e 70 pixels de altura.</span>
         </label>
 
         <label class="ls-field ls-display-block">
@@ -40,11 +40,11 @@ layout: examples
 
       <hr class="ls-clear-both">
 
-      <div class="col-md-9">
+      <div class="col-md-12">
         <h2 class="ls-title-2">Cor padrão</h2>
         <p class="ls-title-5">Escolha uma cor como padrão para o seu email marketing.</p>
 
-        <% (1..5).each do |i| %>
+        <% (1..8).each do |i| %>
           <div class="col-md-1">
             <label>
               cor <%= i %>
@@ -55,6 +55,10 @@ layout: examples
 
       </div>
 
+      <hr class="ls-clear-both">
+
+      <input type="submit" value="Salvar" class="ls-btn-primary">
+      <a href="" class="ls-btn ls-float-right">Cancelar</a>
     </form>
   </div>
   <div class="col-md-3 ls-float-right">
