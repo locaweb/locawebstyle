@@ -14,12 +14,21 @@ html
 .ls-title-intro
   font-size: 2.25rem
   font-weight: 300
-  color: #000
+  color: $gray4
   padding: 30px 0
 
   &:before
     margin-right: 10px
     opacity: .15
+
+  .ls-box &
+    font-weight: 400
+    font-size: 2rem
+    color: $gray4
+    margin-bottom: 20px
+    padding: 0
+    padding-bottom: 20px
+    border-bottom: 1px solid $gray1
 
 .ls-title-1
   color: #000
@@ -39,6 +48,10 @@ html
 
 .ls-title-6
   font-size: 0.875rem
+
+p
+  font-size: .95rem
+  margin-bottom: 10px
 
 @media (min-width: $screen-sm)
   html
