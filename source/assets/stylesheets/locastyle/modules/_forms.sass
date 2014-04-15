@@ -9,30 +9,36 @@
     display: block
     padding-bottom: 15px
 
+    textarea
+      padding: $inputHeight/4
+      line-height: $inputHeight / 2
+      // height: $inputHeight * 2
+      resize: none
+      max-height: $inputHeight * 10
+      max-width: 100%
+
+      &.ls-textarea-resize-both
+        resize: both
+      &.ls-textarea-resize-horizontal
+        resize: none
+      &.ls-textarea-resize-vertical
+        resize: vertical
+
+    input, select, textarea
+      display: block
+      width: 100%
+      line-height: $inputHeight / 2
+
   .ls-label
     display: block
-    font-size: .8rem
-
-  input, select
-    display: block
-    width: 100%
+    font-size: $inputHeight/2 * .8
+    line-height: $inputHeight/2
 
   &.ls-form-inline
     .ls-label
       display: inline
     input
       display: inline
-
-
-
-  // [class*="col-"]
-  //   // padding: 0 5px
-  //   [class*="col-"]
-  //     padding: 2px
-
-  // .ls-field-join
-  //   [class*="col-"]
-  //     padding: 0
 
   input[type="color"],
   input[type="date"],
@@ -49,10 +55,13 @@
   input[type="time"],
   input[type="url"],
   input[type="week"],
-  input[type="text"]
+  input[type="text"],
+  textarea
     border: 1px solid  $gray3
     height: $inputHeight
     padding: 0 $inputHeight/4
+
+
 
     &[disabled]
       border-color: $gray1
