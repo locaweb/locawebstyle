@@ -15,7 +15,14 @@ html
   font-size: 2.25rem
   font-weight: 300
   color: $gray4
-  padding: 30px 0
+  padding: 30px
+  margin: 0 -30px 30px
+  background-color: #f7f7f7
+  border-bottom: 1px solid rgba($gray1, .4)
+
+  .no-main-bg &
+    border: none
+    margin-bottom: 0
 
   &:before
     margin-right: 10px
@@ -25,10 +32,12 @@ html
     font-weight: 400
     font-size: 2rem
     color: $gray4
+    margin: 0
     margin-bottom: 20px
     padding: 0
     padding-bottom: 20px
     border-bottom: 1px solid $gray1
+    background-color: transparent
 
 .ls-title-1
   color: #000
