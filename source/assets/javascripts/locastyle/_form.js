@@ -15,7 +15,34 @@ locastyle.form = (function() {
     formDisable();
     formText();
     masks();
+    textarea();
+    textareaAutoresize();
 
+  }
+
+  function textarea () {
+    $('textarea', '.ls-field').each(function (it, textarea) {
+      var $textarea = $(textarea);
+      var rows = parseInt($textarea.attr('rows'), 10) + 1;
+      $textarea.height( $textarea.height() * rows );
+    });
+  }
+
+  function textareaAutoresize (argument) {
+    $('textarea.ls-textarea-autoresize', '.ls-field').each(function (it, textarea) {
+      var $textarea = $(textarea);
+      var height = $textarea.height();
+      $textarea.keyup(function (e) {
+        if (!$textarea.prop('scrollTop')) {
+          do {
+            var b = $textarea.prop('scrollHeight');
+            var h = $textarea.height();
+            $textarea.height(h - 5);
+          } while (b && (b != $textarea.prop('scrollHeight')));
+        };
+        $textarea.height($textarea.prop('scrollHeight') );
+      });
+    });
   }
 
   function masks() {
