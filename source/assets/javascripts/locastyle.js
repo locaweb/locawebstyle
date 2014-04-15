@@ -6,7 +6,6 @@
 //= require locastyle/templates/_modal
 
 //= require locastyle/_initializer
-//= require locastyle/_download
 //= require locastyle/_collapse
 //= require locastyle/_modal
 //= require locastyle/_dismiss
