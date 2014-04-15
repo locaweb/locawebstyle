@@ -36,29 +36,7 @@ layout: examples
   <tbody>
     <tr>
       <td>
-        <a href="">Fulano de tal</a>
-      </td>
-      <td>Ativo</td>
-      <td>
-        <p>100.000</p>
-        <small>até dd/mm/aaaa</small>
-      </td>
-      <td>
-        <a href="" class="ls-btn-primary ls-float-left ">Administrar</a>
-        <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right ls-float-left">
-          <a href="#" class="ls-btn"></a>
-          <ul>
-              <li><a href="#">Reativar</a></li>
-              <li><a href="#">Editar</a></li>
-              <li><a href="#" class="ls-color-danger">Excluir</a></li>
-          </ul>
-        </div>
-
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="">Fulano de tal</a>
+        <a href="" class="ls-color-theme">Fulano de tal</a>
         <span class="ls-tag">Não recorrente</span>
       </td>
       <td>Ativo</td>
@@ -67,16 +45,42 @@ layout: examples
         <small>até dd/mm/aaaa</small>
       </td>
       <td>
-        <a href="" class="ls-btn-primary ls-float-left">Administrar</a>
+        <a href="/documentacao/exemplos/rev/client" class="ls-btn-primary ls-float-left">Administrar</a>
         <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right ls-float-left">
           <a href="#" class="ls-btn"></a>
           <ul>
-              <li><a href="#">Reativar</a></li>
-              <li><a href="#">Editar</a></li>
+            <li><a href="#">Reativar</a></li>
+            <li><a href="#">Editar</a></li>
           </ul>
         </div>
       </td>
     </tr>
+
+    <%- 5.times do %>
+      <tr>
+        <td>
+          <a href="" class="ls-color-theme">Fulano de tal</a>
+        </td>
+        <td>Ativo</td>
+        <td>
+          <p>100.000</p>
+          <small>até dd/mm/aaaa</small>
+        </td>
+        <td>
+          <a href="/documentacao/exemplos/rev/client" class="ls-btn-primary ls-float-left ">Administrar</a>
+          <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right ls-float-left">
+            <a href="#" class="ls-btn"></a>
+            <ul>
+              <li><a href="#">Reativar</a></li>
+              <li><a href="#">Editar</a></li>
+              <li><a href="#" class="ls-color-danger">Excluir</a></li>
+            </ul>
+          </div>
+
+        </td>
+      </tr>
+    <% end %>
+
   </tbody>
 </table>
 
