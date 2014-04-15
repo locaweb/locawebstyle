@@ -1,0 +1,69 @@
+---
+title: Cadastrar cliente
+layout: examples
+---
+
+<h1 class="ls-title-intro ls-ico-users">Cadastrar cliente</h1>
+<h2 class="ls-title-2">Identificação</h2>
+
+<form action="../rev/clients" class="ls-form">
+  <div class="row">
+    <label class="ls-field col-md-4">
+      <span class="ls-label">Nome</span>
+      <input type="text" name="name">
+    </label>
+  </div>
+  <div class="row">
+    <label class="ls-field col-md-4">
+      <span class="ls-label">Email</span>
+      <input type="text" name="email">
+    </label>
+  </div>
+  <div class="row">
+    <label class="ls-field col-md-3">
+      <span class="ls-label">Senha</span>
+      <input type="password" name="password">
+    </label>
+  </div>
+  <div class="row">
+    <label class="ls-field col-md-3">
+      <span class="ls-label">Confirmação de senha</span>
+      <input type="password" name="password-confirmation">
+    </label>
+  </div>
+  <div class="row">
+    <label class="ls-field col-md-5">
+      <span class="ls-label">Informação</span>
+      <textarea name=""></textarea>
+      <p class="ls-helper-text">Preencha informações adicionais do seu cliente. Ex.: Dados de contato, endereço, etc.</p>
+    </label>
+  </div>
+
+  <hr>
+  <h2 class="ls-title-2">Envios</h2>
+  <p>Verifique o seu saldo de revenda e adicione envios para seu cliente.</p>
+
+  <div class="ls-box">
+    <div class="row">
+      <label class="ls-field col-md-2">
+        <span class="ls-label">Saldo disponível</span>
+        <input type="text" name="total-value" value="100.000" readonly>
+      </label>
+      <label class="ls-field col-md-3">
+        <span class="ls-label">Quantidade de envios à adicionar</span>
+        <input type="text" name="add-value" placeholder="0">
+      </label>
+    </div>
+    <hr>
+    <div class="row">
+      <label class="ls-field  ">
+        <input type="checkbox" name="nome" placeholder="Nome e sobrenome"/>
+        <span class="ls-label">Tornar essa quantidade de envios recorrente.</span>
+      </label>
+    </div>
+  </div>
+  <p>Os envios têm data de expiração de 30 dias a partir da data que foram creditados.</p>
+  <hr>
+  <button type="submit" class="ls-btn-primary">Salvar</button>
+  <a href="../rev/no-clients" class="ls-btn">Cancelar</a>
+</form>
