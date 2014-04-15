@@ -114,9 +114,6 @@ code, pre
 .doc-block
   margin-bottom: 2rem
 
-a
-  color: #000
-
 p
   line-height: 1.2
 
@@ -236,6 +233,24 @@ p
 ///
 /// Formatação de Box dentro de exemplos
 ///
-.ls-box-demo .ls-box
-  margin: 0
+// .ls-box-demo .ls-box
+//   margin: 0
+
+.doc-menu-internal
+  margin: 1rem 0 2rem 0
+  border: 1px solid #ccc
+  padding: .5rem
+  font-size: .8rem
+  display: inline-block
+  li
+    list-style: none
+    display: inline-block
+    border-right: 1px solid #ccc
+    &:last-child
+      border-right: none
+    a
+      line-height: 1.3rem
+      padding: .3rem
+      color: #509742
+
 

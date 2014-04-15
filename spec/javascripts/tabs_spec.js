@@ -42,7 +42,31 @@ describe("Tabs: ", function() {
         expect($('#myButtons').hasClass("active")).toEqual(true);
       });
     });
+  });
 
+  describe("Unbind:", function() {
+    describe("when unbind is called in module", function() {
+      it("should unbind events handled by module", function() {
+        locastyle.tabs.unbind();
+        $('#tab-trigger-2').trigger("click");
+        expect($('#laps').hasClass("active")).toEqual(false);
+      });
+
+      it("should NOT unbind common events handled by other code", function() {
+        window.test = {
+          method: function(){
+            //my fake function
+          }
+        };
+        var spy = spyOn(window.test, "method");
+        $('#tab-trigger-2').on("click", function () {
+          window.test.method();
+        })
+        locastyle.tabs.unbind();
+        $('#tab-trigger-2').trigger("click");
+        expect(window.test.method).toHaveBeenCalled();
+      });
+    });
   });
 
 });
