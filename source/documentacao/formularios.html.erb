@@ -23,7 +23,6 @@ description: Elementos padrão de formulários e disposição de campos
 
   <p>Exemplo:</p>
 
-
   <div class="doc-example">
     <p>Campos sempre ocupam toda a largura disponível:</p>
     <form action="" class="ls-form">
@@ -32,7 +31,23 @@ description: Elementos padrão de formulários e disposição de campos
     <code class="language-markup">
 <%= escape_html(partial('documentacao/shared/form/form-field.erb')) %>
     </code>
+    <p>O elemento <code>textarea</code> tem a altura determinada pela propriedade padrão <code>rows="10"</code> com o número de linhas desejadas.</p>
+    <form action="" class="ls-form">
+      <%= partial('documentacao/shared/form/form-field-textarea.erb') %>
+    </form>
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/form/form-field-textarea.erb')) %>
+    </code>
+    <p>O <code>textarea</code> vem com o <i>resize</i> desabilitado por padrão, mas pode ser ativado usando as classes <code>ls-textarea-resize-both</code>, <code>ls-textarea-resize-horizontal</code>, <code>ls-textarea-resize-vertical</code>.</p>
+    <p>Para um <code>textarea</code> com o comportamento de aumentar de acordo com o texto, insira a classe <code>ls-textarea-autoresize</code> no <code>textarea</code></p>
+    <form action="" class="ls-form">
+      <%= partial('documentacao/shared/form/form-field-textarea-autoresize.erb') %>
+    </form>
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/form/form-field-textarea-autoresize.erb')) %>
+    </code>
   </div>
+
 </div>
 
 <div id="formularios-verticais" class="doc-section">
