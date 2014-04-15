@@ -18,7 +18,7 @@ locastyle.form = (function() {
 
   }
 
-  function masks () {
+  function masks() {
     $('.ls-mask-date').mask('11/11/1111');
     $('.ls-mask-time').mask('00:00:00');
     $('.ls-mask-date_time').mask('00/00/0000 00:00:00');
@@ -30,15 +30,15 @@ locastyle.form = (function() {
     $('.ls-mask-percent').mask('##0,00%', {reverse: true});
   }
 
-  function formDisable () {
+  function formDisable() {
     $( config.selectors.disable ).each(function(ic, container){
       $(container).find(':input').each(function(ie, field){
         $(field).attr('disabled', 'disabled')
       });
     });
   }
-  function formText ()
-  {
+
+  function formText() {
     $( config.selectors.text ).each(function(ic, container){
       $(container).find(':input').each(function(ie, field){
         $(field).addClass('ls-form-text');
