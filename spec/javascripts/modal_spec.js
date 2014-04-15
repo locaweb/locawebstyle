@@ -20,4 +20,28 @@ describe("Modal: ", function() {
     })
   })
 
+  describe("Unbind:", function() {
+    describe("when unbind is called in module", function() {
+      it("should unbind events handled by module", function() {
+        locastyle.modal.unbind();
+        $('[data-ls-module="modal"]').trigger("click");
+        expect($("#myModalClosed .ls-modal")).not.toHaveClass('opened');
+      });
+
+      it("should NOT unbind common events handled by other code", function() {
+        window.test = {
+          method: function(){
+            //my fake function
+          }
+        };
+        var spy = spyOn(window.test, "method");
+        $('[data-ls-module="modal"]').on("click", function () {
+          window.test.method();
+        })
+        locastyle.modal.unbind();
+        $('[data-ls-module="modal"]').trigger("click");
+        expect(window.test.method).toHaveBeenCalled();
+      });
+    });
+  });
 });

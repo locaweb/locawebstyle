@@ -17,9 +17,14 @@ locastyle.modal = (function() {
   }
 
   function init() {
-    $(config.open.trigger).on('click', function() {
+    unbind();
+    $(config.open.trigger).on('click.ls', function() {
       open($(this).data());
-    })
+    });
+  }
+
+  function unbind() {
+    $(config.open.trigger).off('click.ls');
   }
 
   function open($element) {
@@ -36,16 +41,21 @@ locastyle.modal = (function() {
   }
 
   function close() {
-    $(config.close.classes + ", " + config.close.trigger).on('click', function() {
+    $(config.close.classes + ", " + config.close.trigger).on('click.ls', function() {
       $(config.modal).removeClass("opened");
       $(".ls-modal-overlay, " + config.template.classes).remove();
       $('body').removeClass('modal-opened');
     })
   }
 
+  function unbind(){
+    $(config.open.modal).off('click.ls')
+  }
+
   return {
     init: init,
-    close: close
+    close: close,
+    unbind: unbind
   };
 
 }());

@@ -5,3 +5,4 @@
 //= require docs/_docs
 //= require docs/_icons
 //= require docs/_guided-tour-demo
+//= require docs/_download

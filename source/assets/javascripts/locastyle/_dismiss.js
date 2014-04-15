@@ -4,11 +4,16 @@ locastyle.dismiss = (function() {
   'use strict';
 
   function init() {
+    unbind();
     bindClickOnTriggers();
   }
 
+  function unbind() {
+    $('[data-ls-module=dismiss]').off('click.ls');
+  }
+
   function bindClickOnTriggers() {
-    $('[data-ls-module=dismiss]').on('click', function() {
+    $('[data-ls-module=dismiss]').on('click.ls', function() {
       checkTarget(this);
     });
   }
@@ -26,7 +31,8 @@ locastyle.dismiss = (function() {
   }
 
   return {
-    init: init
+    init: init,
+    unbind: unbind
   }
 
 }());
