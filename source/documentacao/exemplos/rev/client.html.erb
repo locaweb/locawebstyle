@@ -5,77 +5,263 @@ layout: examples
 
 <h1 class="ls-title-intro ls-ico-users">Clientes</h1>
 
-<a href="#" class="ls-btn-primary">Cadastrar novo</a>
 
-<div>
-  <div class="col-sm-2" data-ls-module="customFields">
-    <label for="">Status</label>
-    <select name="" id="">
-      <option value="">Todos</option>
-      <option value="">Ativo</option>
-      <option value="">Desativados</option>
-      <option value="">Bloqueados por bounce</option>
-    </select>
+
+
+<div class="ls-box">
+  <div class="ls-float-right">
+    <a href="" class="ls-btn-primary ls-float-left ">Administrar</a>
+    <a href="" class="ls-btn ls-float-left ">Editar</a>
+    <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right ls-float-left">
+      <a href="#" class="ls-btn"></a>
+      <ul>
+        <li><a href="#">Desativar Clientes</a></li>
+        <li><a href="#">Alterar senha</a></li>
+        <li><a href="#">Acessar o Painel</a></li>
+      </ul>
+    </div>
   </div>
-    <form action="" class="ls-float-right">
-    <input type="text" placeholder="Nome do cliente">
-    <button type="submit">Buscar</button>
-  </form>
+  <h2 class="ls-title-4">Nome<br><strong>Fulano de tal</strong></h2>
+  <hr>
+  <p><strong>login/E-mail:</strong></p>
+  <p>emaildocliente@cliente.com.br</p>
+  <hr>
+  <p><strong>Status:</strong></p>
+  <p>Ativo</p>
+  <hr>
+  <p><strong>Data de cadastro:</strong></p>
+  <p>dd/mm/aaaa</p>
+  <hr>
+  <p><strong>Informações:</strong></p>
+  <p>Contato com Fulano de Tal no telefone: 11 5555-5555. Horários entre 12:00 e 16:00 dias úteis.</p>
 </div>
 
+
+
+<div class="ls-box ls-board-info">
+
+  <div class="ls-float-right">
+    <a href="" class="ls-btn-primary ls-float-left ">Adicionar envios</a>
+    <a href="" class="ls-btn ls-float-left ">Remover envios</a>
+  </div>
+
+  <h2 class="ls-title-3 ls-title-ico ls-ico-dashboard">
+    Período atual
+    <small>dd/mm/aaaa a dd/mm/aaaa</small>
+  </h2>
+
+  <div class="row">
+
+    <div class="col-sm-6 col-md-3">
+      <div class="ls-box ls-board-box">
+        <strong class="ls-board-info">9 <small>milhões</small></strong>
+        <small>Válido até dd/mm/aaaa</small>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="ls-box ls-board-box">
+        <h6 class="ls-title-4">Avulso</h6>
+        <strong class="ls-board-info">0</strong>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="ls-box ls-board-box">
+        <h6 class="ls-title-4">Removidos</h6>
+        <strong class="ls-board-info">0</strong>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="ls-box ls-board-box">
+        <h6 class="ls-title-4 color-default">Utilizados</h6>
+        <strong class="ls-board-info">10.743 mil</strong>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="ls-box ls-board-info">
+
+  <a href="" class="ls-btn ls-float-right ">Alterar quantidade</a>
+
+  <h2 class="ls-title-3 ls-title-ico ls-ico-dashboard">
+    Próximo período
+    <small>dd/mm/aaaa a dd/mm/aaaa</small>
+  </h2>
+
+
+
+  <div class="row">
+
+    <div class="col-sm-6 col-md-3">
+      <div class="ls-box ls-board-box">
+        <strong class="ls-board-info">9 <small>milhões</small></strong>
+        <small>Válido até dd/mm/aaaa</small>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-9">
+      <div class="ls-box ls-board-box">
+        <p><a href="">Cancelar recorrência</a></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="ls-group-btn ls-group-active ls-float-right">
+  <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn active">Gráfico</button>
+  <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn">Tabela</button>
+</div>
+<h2 class="ls-title-3">Relatórios</h2>
+
+<ul class="ls-tabs-nav" id="awesome-tab">
+  <li class="active"><a data-ls-module="tabs" href="#tab1">Contratação x uso</a></li>
+  <li><a data-ls-module="tabs" href="#tab2">Estatísticas de envios</a></li>
+</ul>
+<div class="ls-tabs-container" id="awesome-tab-content">
+  <div id="tab1" class="ls-tab-content active">
+
+    <div class="ls-tab-content child1 active">
+      <p>Contratação x uso</p>
+      <img src="/<%= images_dir %>/graph-example.jpg">
+    </div>
+
+    <div class="ls-tab-content child2">
+
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th class="ls-txt-center">Período</th>
+            <th class="ls-txt-center">Contratados</th>
+            <th class="ls-txt-center" colspan="2">Distribuídos</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td class="ls-txt-center">28/03/2014 a 27/04/2014</td>
+              <td class="ls-txt-center">1000000</td>
+              <td class="ls-txt-center">10741</td>
+              <td class="ls-txt-center">1%</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">28/03/2014 a 27/04/2014</td>
+              <td class="ls-txt-center">1000000</td>
+              <td class="ls-txt-center">10741</td>
+              <td class="ls-txt-center">1%</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">28/03/2014 a 27/04/2014</td>
+              <td class="ls-txt-center">1000000</td>
+              <td class="ls-txt-center">10741</td>
+              <td class="ls-txt-center">1%</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">28/03/2014 a 27/04/2014</td>
+              <td class="ls-txt-center">1000000</td>
+              <td class="ls-txt-center">10741</td>
+              <td class="ls-txt-center">1%</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">28/03/2014 a 27/04/2014</td>
+              <td class="ls-txt-center">1000000</td>
+              <td class="ls-txt-center">10741</td>
+              <td class="ls-txt-center">1%</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="tab2" class="ls-tab-content">
+
+    <div class="ls-tab-content child1 active">
+      <p>Estatísticas de envios</p>
+      <img src="/<%= images_dir %>/graph-example.jpg">
+    </div>
+
+    <div class="ls-tab-content child2">
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th class="ls-txt-center">Data</th>
+            <th class="ls-txt-center">Todos</th>
+            <th class="ls-txt-center" colspan="2">Ativos</th>
+            <th class="ls-txt-center" colspan="2">Desativados</th>
+            <th class="ls-txt-center" colspan="2">Bloqueados por bounce</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ls-txt-center">Hoje</td>
+            <td class="ls-txt-center">29</td>
+            <td class="ls-txt-center">26</td>
+            <td class="ls-txt-center">89%</td>
+            <td class="ls-txt-center">3</td>
+            <td class="ls-txt-center">10%</td>
+            <td class="ls-txt-center">0</td>
+            <td class="ls-txt-center">0%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<h2 class="ls-title-3">Histórico de transações</h2>
+<form action="">
+  <label for="">Período</label>
+  <input type="date">a
+  <input type="date">
+  <button class="ls-btn" type="send">Filtrar</button>
+</form>
 
 <table class="ls-table">
   <thead>
     <tr>
-      <th>Nome do cliente</th>
-      <th>Status</th>
-      <th>Envios disponíveis</th>
-      <th></th>
+      <th>Descrição</th>
+      <th>Ação</th>
+      <th>Envios</th>
+      <th>Data</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>
-        <a href="">Fulano de tal</a>
-      </td>
-      <td>Ativo</td>
-      <td>
-        <p>100.000</p>
-        <small>até dd/mm/aaaa</small>
-      </td>
-      <td>
-        <a href="" class="ls-btn-primary ls-float-left ">Administrar</a>
-        <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right ls-float-left">
-          <a href="#" class="ls-btn"></a>
-          <ul>
-              <li><a href="#">Reativar</a></li>
-              <li><a href="#">Editar</a></li>
-              <li><a href="#" class="ls-color-danger">Excluir</a></li>
-          </ul>
-        </div>
-
-      </td>
+      <td>Crédito envios mensais</td>
+      <td>Crédito</td>
+      <td>10.000</td>
+      <td>01/01/2012 - 15h00</td>
     </tr>
     <tr>
-      <td>
-        <a href="">Fulano de tal</a>
-        <span class="ls-tag">Não recorrente</span>
-      </td>
-      <td>Ativo</td>
-      <td>
-        <p>100.000</p>
-        <small>até dd/mm/aaaa</small>
-      </td>
-      <td>
-        <a href="" class="ls-btn-primary ls-float-left">Administrar</a>
-        <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right ls-float-left">
-          <a href="#" class="ls-btn"></a>
-          <ul>
-              <li><a href="#">Reativar</a></li>
-              <li><a href="#">Editar</a></li>
-          </ul>
-        </div>
-      </td>
+      <td>Crédito envios mensais</td>
+      <td>Crédito</td>
+      <td>10.000</td>
+      <td>01/01/2012 - 15h00</td>
+    </tr>
+    <tr>
+      <td>Crédito envios mensais</td>
+      <td>Crédito</td>
+      <td>10.000</td>
+      <td>01/01/2012 - 15h00</td>
+    </tr>
+    <tr>
+      <td>Crédito envios mensais</td>
+      <td>Crédito</td>
+      <td>10.000</td>
+      <td>01/01/2012 - 15h00</td>
+    </tr>
+    <tr>
+      <td>Crédito envios mensais</td>
+      <td>Crédito</td>
+      <td>10.000</td>
+      <td>01/01/2012 - 15h00</td>
     </tr>
   </tbody>
 </table>
