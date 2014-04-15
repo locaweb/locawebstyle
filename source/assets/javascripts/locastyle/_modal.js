@@ -17,9 +17,14 @@ locastyle.modal = (function() {
   }
 
   function init() {
-    $(config.open.trigger).on('click', function() {
+    unbind();
+    $(config.open.trigger).on('click.ls', function() {
       open($(this).data());
-    })
+    });
+  }
+
+  function unbind() {
+    $(config.open.trigger).off('click.ls');
   }
 
   function open($element) {
@@ -45,7 +50,8 @@ locastyle.modal = (function() {
 
   return {
     init: init,
-    close: close
+    close: close,
+    unbind: unbind
   };
 
 }());
