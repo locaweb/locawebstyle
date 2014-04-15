@@ -9,11 +9,11 @@ layout: examples
   <div class="ls-float-right">
     <a href="" class="ls-btn-primary ls-float-left ">Administrar</a>
     <a href="" class="ls-btn ls-float-left ">Editar</a>
-    <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right ls-float-left">
+    <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
       <a href="#" class="ls-btn"></a>
       <ul>
         <li><a href="#">Desativar Clientes</a></li>
-        <li><a href="#">Alterar senha</a></li>
+        <li><a href="#" data-ls-module="modal" data-target="#editPassword">Alterar senha</a></li>
         <li><a href="#">Acessar o Painel</a></li>
       </ul>
     </div>
@@ -38,8 +38,8 @@ layout: examples
 <div class="ls-box ls-board-info">
 
   <div class="ls-float-right">
-    <a href="" class="ls-btn-primary ls-float-left ">Adicionar envios</a>
-    <a href="" class="ls-btn ls-float-left ">Remover envios</a>
+    <a href="" data-ls-module="modal" data-target="#addMessage" class="ls-btn-primary ls-float-left ">Adicionar envios</a>
+    <a href="" data-ls-module="modal" data-target="#removeMessage" class="ls-btn ls-float-left ">Remover envios</a>
   </div>
 
   <h2 class="ls-title-3 ls-title-ico ls-ico-dashboard">
@@ -83,14 +83,12 @@ layout: examples
 
 <div class="ls-box ls-board-info">
 
-  <a href="" class="ls-btn ls-float-right ">Alterar quantidade</a>
+  <a href="" data-ls-module="modal" data-target="#editAmount" class="ls-btn ls-float-right ">Alterar quantidade</a>
 
   <h2 class="ls-title-3 ls-title-ico ls-ico-dashboard">
     Próximo período
     <small>dd/mm/aaaa a dd/mm/aaaa</small>
   </h2>
-
-
 
   <div class="row">
 
@@ -288,3 +286,121 @@ layout: examples
     </div>
   </div>
 
+
+<!-- Modal de senha -->
+<div class="ls-modal fade" id="editPassword">
+  <form action="" class="ls-form">
+    <div class="ls-modal-box">
+      <div class="ls-modal-header">
+        <button data-dismiss="modal">×</button>
+        <h4 class="ls-modal-title">Alterar senha</h4>
+      </div>
+      <div class="ls-modal-body">
+
+          <label class="ls-field">
+            <span class="ls-label">Senha *</span>
+            <input type="password" name="nome" placeholder="Nome e sobrenome" required />
+          </label>
+          <label class="ls-field">
+            <span class="ls-label">Confirmação de senha *</span>
+            <input type="password" name="nome" placeholder="Nome e sobrenome" required />
+          </label>
+      </div>
+      <div class="ls-modal-footer">
+        <button type="submit" class="ls-btn-primary">Salvar</button>
+        <a class="ls-btn ls-float-right" data-dismiss="modal">Cancelar</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<!-- Modal Adicionar envios -->
+<div class="ls-modal fade" id="addMessage">
+  <form action="" class="ls-form">
+    <div class="ls-modal-box">
+      <div class="ls-modal-header">
+        <button data-dismiss="modal">×</button>
+        <h4 class="ls-modal-title">Adicionar envios avulsos</h4>
+      </div>
+      <div class="ls-modal-body">
+        <p>Os envios avulsos terão o mesmo prazo de expiração que os envios normais cadastrados para esse cliente. 07/05/2014</p>
+        <p>
+          <strong>Saldo disponível da sua revenda</strong>
+          <span>889.239</span>
+        </p>
+        <hr>
+        <label class="ls-field">
+          <strong class="ls-label">Quantidade de envios avulsos a adicionar</strong>
+          <input type="text" name="" required />
+        </label>
+      </div>
+      <div class="ls-modal-footer">
+        <button type="submit" class="ls-btn-primary">Adicionar</button>
+        <a class="ls-btn ls-float-right" data-dismiss="modal">Cancelar</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<!-- Modal Remover envios -->
+<div class="ls-modal fade" id="removeMessage">
+  <form action="" class="ls-form">
+    <div class="ls-modal-box">
+      <div class="ls-modal-header">
+        <button data-dismiss="modal">×</button>
+        <h4 class="ls-modal-title">Remover envios</h4>
+      </div>
+      <div class="ls-modal-body">
+        <p>Os envios serão removidos automaticamente após esta ação.</p>
+        <p>
+          <strong>Saldo disponível do cliente</strong>
+          <span class="ls-float-right">8</span>
+        </p>
+        <hr>
+        <p>
+          <strong>Disponível para remoção até 27/04/2014</strong>
+          <span class="ls-float-right">8</span>
+        </p>
+        <hr>
+        <label class="ls-field">
+          <strong class="ls-label">Quantidade de envios a remover</strong>
+          <input type="text" name="" required >
+        </label>
+      </div>
+      <div class="ls-modal-footer">
+        <button type="submit" class="ls-btn-primary">Remover</button>
+        <a class="ls-btn ls-float-right" data-dismiss="modal">Cancelar</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Modal Alterar quantidade -->
+<div class="ls-modal fade" id="editAmount">
+  <form action="" class="ls-form">
+    <div class="ls-modal-box">
+      <div class="ls-modal-header">
+        <button data-dismiss="modal">×</button>
+        <h4 class="ls-modal-title">Alterar quantidade de envios</h4>
+      </div>
+      <div class="ls-modal-body">
+        <p>O novo valor só entrará em vigor após a data de 08/05/2014</p>
+        <p>
+          <strong>Saldo disponível da sua revenda</strong>
+          <span class="ls-float-right">889.239</span>
+        </p>
+        <hr>
+        <label class="ls-field">
+          <strong class="ls-label">Quantidade de envios</strong>
+          <input type="text" name="" value="10" required >
+        </label>
+      </div>
+      <div class="ls-modal-footer">
+        <button type="submit" class="ls-btn-primary">Alterar</button>
+        <a class="ls-btn ls-float-right" data-dismiss="modal">Cancelar</a>
+      </div>
+    </div>
+  </form>
+</div>
