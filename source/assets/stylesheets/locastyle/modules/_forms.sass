@@ -38,8 +38,18 @@
       &.ls-textarea-resize-vertical
         resize: vertical
 
-    &:not(.ls-label-prefix) + ,
-    &:not(.ls-field-inline) input, select, textarea
+    // &:not(.ls-label-prefix) + ,
+    &.ls-field-prefix + input,
+    &.ls-field-prefix + select,
+    &.ls-field-prefix + textarea
+    &.ls-field-inline input,
+    &.ls-field-inline select,
+    &.ls-field-inline textarea
+      display: auto
+      width: auto
+      // line-height: $inputHeight / 2
+
+    input, select, textarea
       display: inline-block
       width: 100%
       line-height: $inputHeight / 2
