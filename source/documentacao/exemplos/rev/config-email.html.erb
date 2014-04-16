@@ -12,12 +12,21 @@ layout: examples
     <div class="ls-box">
       <h2 class="ls-title-2">E-mail atual</h2>
       <hr>
-      <p>
-        <strong>fulano@fulano.com.br</strong><br>
-        <small>Status do e-mail: Aprovado</small>
-      </p>
-      <a href="" class="ls-btn-primary">Editar</a>
+
+      <form action="#" class="ls-form" data-ls-module="form">
+        <div class="row ls-form-disable ls-form-text" id="email-form">
+          <label class="ls-field col-md-5">
+            <span class="ls-label ls-txt-access">email</span>
+            <input class="ls-form-text" name="email" placeholder="email" required="" type="text" value="fulano@dominio.com">
+            <small class="email-actions">Status do e-mail: Aprovado</small>
+          </label>
+        </div>
+        <div id="email_actions" class="email-actions ls-display-none">
+          <button type="submit" class="ls-btn-primary">Salvar</button>
+          <button class="ls-btn" data-ls-toggle-fields="#email-form" data-toggle-class="ls-display-none" data-target=".email-actions" >Cancelar</button>
+        </div>
+        <button data-ls-toggle-fields="#email-form" data-toggle-class="ls-display-none" data-target=".email-actions" class="ls-btn-primary email-actions">Editar</button>
+      </form>
     </div>
   </div>
-
-
+</div>
