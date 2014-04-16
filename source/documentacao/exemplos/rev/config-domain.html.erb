@@ -21,11 +21,13 @@ layout: examples
       <form action="#" class="ls-form" data-ls-module="form">
         <div class="row">
           <label class="ls-field col-md-8">
-            <input name="dns" placeholder="dominio" required type="text" value="opa.entregaemails.com">
+            <span class="ls-label ls-txt-access">dominio</span>
+            <input name="dominio" placeholder="dominio" required type="text" value="opa.entregaemails.com">
           </label>
         </div>
-        <a href="" class="ls-btn-primary">Salvar</a>
+        <button type="submit" class="ls-btn-primary">Salvar</button>
         <a href="" class="ls-btn">Cancelar</a>
+        <a href="" class="ls-float-right ls-color-theme">Restaurar padrão</a>
       </form>
 
     </div>
@@ -37,10 +39,12 @@ layout: examples
       <p><a href="">Como configurar o seu domínio para ser o novo endereço de acesso.</a></p>
       <hr>
       <form action="" class="ls-form">
-        <label for="" class="ls-field">
-          <span class="ls-txt-access">Domínio de acesso</span>
-          <input type="text" placeholder="opa.entregaemails.com">
-        </label>
+        <div class="row">
+          <label for="" class="ls-field col-md-8">
+            <span class="ls-label ls-txt-access">Domínio de acesso</span>
+            <input type="text" placeholder="opa.entregaemails.com">
+          </label>
+        </div>
         <div>
           <button type="submit" class="ls-btn-primary">Salvar</button>
           <a href="" class="ls-btn">Cancelar</a>
