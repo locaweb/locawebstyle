@@ -18,6 +18,22 @@ locastyle.general = (function() {
     _linkPreventDefault();
     _btnGroupActivationToogle();
     menuAnchor();
+    toggleFields();
+  }
+
+  function toggleFields(){
+    $('[data-ls-toggle-fields]').on('click', function(evt) {
+      console.log('ah lek')
+      evt.preventDefault();
+      var $this = $(this);
+      var $container = $($this.data('ls-toggle-fields'));
+      $container
+        .toggleClass('ls-form-disable')
+        .toggleClass('ls-form-text');
+      $container.find(':input')
+        .toggleClass('ls-form-text')
+        .removeAttr('disabled')
+    });
   }
 
   function _loadEvents() {
@@ -43,7 +59,7 @@ locastyle.general = (function() {
 
   function _toggleText(evt, $this) {
     evt.preventDefault();
-    var $target = $this.data('target') ? $($this.data('target')) : $this,
+    var $target = $this.data('target-text') ? $($this.data('target-text')) : $this,
       textChange = $this.data('toggle-text'),
       textOriginal = $target.text();
     $this.data('toggle-text', textOriginal);
