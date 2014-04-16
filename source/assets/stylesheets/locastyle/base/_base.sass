@@ -1,18 +1,21 @@
 .ls-main
+  +single-transition(all, .5s)
+  +translate(0, 0)
+  height: 100%
+  overflow: auto
   padding-top: $heightTopbar
   margin-left: 0
   z-index: 10
+  height: calc(100% - $heightTopbar)
   position: relative
   -webkit-overflow-scrolling: touch
   -moz-overflow-scrolling: touch
+  -ms-overflow-scrolling: touch
   overflow-scrolling: touch
-  height: calc(100% - $heightTopbar)
-  // background-color: #f7f7f7
   background-color: #fff
-  height: 100%
-  overflow: auto
-  +single-transition(all, .5s)
-  +translate(0, 0)
+
+  .container-fluid
+    min-height: 78%
 
   &.no-main-bg
     background-color: #f7f7f7
