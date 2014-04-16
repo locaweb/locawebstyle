@@ -24,10 +24,6 @@
       line-height: $inputHeight
       text-align: right
 
-      & + input
-        border-color: red
-        width: calc(50%)
-
     textarea
       padding: $inputHeight/4
       line-height: $inputHeight / 2
@@ -42,6 +38,7 @@
       &.ls-textarea-resize-vertical
         resize: vertical
 
+    &:not(.ls-label-prefix) + ,
     &:not(.ls-field-inline) input, select, textarea
       display: inline-block
       width: 100%
@@ -59,6 +56,26 @@
     font-weight: bold
     font-size: .875rem
     line-height: $inputHeight/2 * 1.2
+
+  .ls-label-prefix, .ls-label-sufix
+    border: 1px solid $gray2
+    background-color: $gray1
+    height: $inputHeight
+    line-height: $inputHeight
+  .ls-label-prefix
+    border-right: none
+    +border-left-radius(4px)
+    & + input
+      +border-left-radius(0)
+
+  .ls-label-sufix
+    border-left: none
+    +border-right-radius(4px)
+
+  // input! + .ls-label-sufix soon!
+  // input + .ls-label-sufix
+  //   border: 1px solid red
+  //   +border-right-radius(0)
 
 
 input[type="color"],
@@ -89,7 +106,7 @@ textarea
   vertical-align: middle
   background-color: #fff
   background-image: none
-  border: 1px solid $gray1
+  border: 1px solid $gray2
   border-radius: 4px
 
   &[disabled]
