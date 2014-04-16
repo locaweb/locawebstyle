@@ -29,12 +29,13 @@ layout: examples
       <h2 class="ls-title-2">Webdesk</h2>
       <p>Configure a sua conta do WebDesk para atender as solicitaçoes dos seus clientes através de chamados.</p>
       <hr>
-      <form action="" class="ls-form">
+      <form action="" class="ls-form" data-ls-module="form">
         <label for="" class="ls-field">
-          <span>https://</span>
-          <span class="ls-txt-access">Configurar seu webdesk</span>
-          <input type="text" placeholder="opa.entregaemails.com">
-          <span>.webdesklw.com.br</span>
+          <span class="row">
+            <span class="ls-label-prefix col-md-2">https://</span>
+            <input class="col-md-4" type="text" placeholder="entregaemails">
+            <span class="ls-label-sufix col-md-4">.webdesklw.com.br</span>
+          </span>
         </label>
         <div>
           <button type="submit" class="ls-btn-primary">Salvar</button>
