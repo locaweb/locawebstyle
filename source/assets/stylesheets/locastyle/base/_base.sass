@@ -7,11 +7,15 @@
   -moz-overflow-scrolling: touch
   overflow-scrolling: touch
   height: calc(100% - $heightTopbar)
-  background-color: #f7f7f7
+  // background-color: #f7f7f7
+  background-color: #fff
   height: 100%
   overflow: auto
   +single-transition(all, .5s)
   +translate(0, 0)
+
+  &.no-main-bg
+    background-color: #f7f7f7
 
   .sidebar-visible &
     +translate($sidebarWidth, 0)
@@ -19,7 +23,9 @@
   .notifications-visible &
     +translate(-$sidebarWidth, 0)
 
-.ls-container
+.ls-container,
+.ls-main > .container-fluid,
+.ls-main > .container
   padding: 0 30px
 
 .ls-search li
