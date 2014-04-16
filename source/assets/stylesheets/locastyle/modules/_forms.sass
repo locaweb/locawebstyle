@@ -1,3 +1,10 @@
+.ls-form-text
+  .ls-label-prefix, .ls-label-sufix
+    background-color: lighten($gray1, 10%) !important
+    color: lighten( invert($gray1) , 50%) !important
+    & + input
+      border-color: $gray2 !important
+
 .ls-form
   .row
     margin-bottom: .5rem
@@ -44,7 +51,6 @@
 
     input, select, textarea
       display: inline-block
-      // width: 100%
       line-height: $inputHeight / 2
 
     &.ls-field-inline
@@ -70,21 +76,19 @@
     background-color: $gray1
     height: $inputHeight
     line-height: $inputHeight
+    text-overflow: ellipsis
+    overflow: hidden
+
   .ls-label-prefix
     border-right: none
     +border-left-radius(4px)
     & + input
       +border-left-radius(0)
+      padding: 6px $inputHeight/4 !important
 
   .ls-label-sufix
     border-left: none
     +border-right-radius(4px)
-
-  // input! + .ls-label-sufix soon!
-  // input + .ls-label-sufix
-  //   border: 1px solid red
-  //   +border-right-radius(0)
-
 
 input[type="color"],
 input[type="date"],
