@@ -43,47 +43,48 @@
     input
       display: inline
 
-  input[type="color"],
-  input[type="date"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="email"],
-  input[type="month"],
-  input[type="number"],
-  input[type="password"],
-  input[type="range"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="text"],
-  input[type="time"],
-  input[type="url"],
-  input[type="week"],
-  input[type="text"],
-  textarea
-    height: $inputHeight
-    padding: 6px $inputHeight/4
-    font-size: 14px
-    line-height: 1.428571429
-    color: #555
-    vertical-align: middle
-    background-color: #fff
-    background-image: none
-    border: 1px solid $gray1
-    border-radius: 4px
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
-    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
-    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+  &[data-ls-sufix]
 
-    &[disabled]
-      border-color: $gray1
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[type="text"],
+textarea
+  vertical-align: middle
+  height: $inputHeight
+  padding: 6px $inputHeight/4
+  font-size: 14px
+  line-height: 1.428571429
+  color: #555
+  vertical-align: middle
+  background-color: #fff
+  background-image: none
+  border: 1px solid $gray1
+  border-radius: 4px
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
 
-    &.ls-form-text
-      border-color: transparent
-      background-color: transparent
-      padding: 0
+  &[disabled]
+    border-color: $gray1
 
-    &[data-ls-sufix]
+  &.ls-form-text
+    border-color: transparent
+    background-color: transparent
+    padding: 0
 
 @media (min-width: $screen-sm)
   .ls-field

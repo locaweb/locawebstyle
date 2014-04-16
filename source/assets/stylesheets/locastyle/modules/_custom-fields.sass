@@ -30,12 +30,14 @@
       background: #FFF url('https://cdn1.iconfinder.com/data/icons/blueberry/32/radio-button_on.png') no-repeat
 
 .ls-field-container-select-one
-  border: 1px solid $gray3
-  background: none
+  border: 1px solid $gray2
+  border-radius: 3px
+  background-color: #fff
   color: $gray4
   position: relative
   height: $inputHeight
   line-height: $inputHeight
+  font-size: .8rem
 
   select
     +appearance(none)
@@ -51,7 +53,7 @@
     text-indent: $inputHeight/4
 
     &:before
-      +arrow-down($gray4, $inputHeight/4)
+      +arrow-down($gray4, $inputHeight/6)
       position: absolute
       top: calc( (#{$inputHeight}/2) - (#{$inputHeight}/8))
       right: $inputHeight/4
