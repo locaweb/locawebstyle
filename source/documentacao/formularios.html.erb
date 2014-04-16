@@ -10,6 +10,7 @@ description: Elementos padrão de formulários e disposição de campos
     <li><a href="#formularios-horizontais">Formulários horizontais</a></li>
     <li><a href="#desabilitando-campos">Desabilitando campos</a></li>
     <li><a href="#formularios-como-texto">Formulários como texto</a></li>
+    <li><a href="#habilitando-e-desabilitando-campos">Habilitando e desabilitando campos</a></li>
     <li><a href="#mascaras-de-campos">Máscaras</a></li>
     <li><a href="#prefixos-e-sufixos">Prefixos e sufixos</a></li>
   </ol>
@@ -110,6 +111,18 @@ description: Elementos padrão de formulários e disposição de campos
     <%= partial('documentacao/shared/form/form-as-text-disabled.erb') %>
     <code class="language-markup">
 <%= escape_html(partial('documentacao/shared/form/form-as-text-disabled.erb')) %>
+    </code>
+  </div>
+</div>
+
+<div id="habilitando-e-desabilitando-campos" class="doc-section">
+  <h3 class="ls-title-3">Habilitando e desabilitando campos</h3>
+  <p>Coloque o atributo <code>data-ls-toggle-fields=".classe-ou-#id-do-container"</code> em um botão ou <i>link</i>.</p>
+  <p>É comum usar esse comportamento associado a outros, como troca de textos e exibir/ocultar botões.</p>
+  <div class="doc-example">
+    <%= partial('documentacao/shared/form/fields-toggle.erb') %>
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/form/fields-toggle.erb')) %>
     </code>
   </div>
 </div>
