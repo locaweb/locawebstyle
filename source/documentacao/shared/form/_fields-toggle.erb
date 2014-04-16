@@ -4,18 +4,21 @@
     <% 3.times do |num| %>
     <label class="ls-field col-md-3">
       <span class="ls-label">Nome</span>
-      <input type="text" name="nome" placeholder="Nome e sobrenome" required >
+      <input type="text" name="nome" value="<%= lorem.words 2 %>" placeholder="Nome e sobrenome" required >
     </label>
     <% end %>
   </div>
   <% end %>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-4">
       <p>Exemplo simples:</p>
       <button class="ls-btn-primary" data-ls-toggle-fields=".exemplo-linha-desabilitada">Editar campos</button>
       <p>Comportamentos combinados:</p>
-      <button class="ls-btn-primary" data-toggle-class="ls-display-none" data-target="#botao-salvar" data-toggle-text="Cancelar" data-ls-toggle-fields=".exemplo-linha-desabilitada">Editar campos</button>
-      <button class="ls-btn-primary ls-display-none" id="botao-salvar" type="submit">Salvar</button>
+      <button class="ls-btn-primary" data-toggle-class="ls-display-none" data-target=".meus-campos-ocultos" data-toggle-text="Cancelar" data-ls-toggle-fields=".exemplo-linha-desabilitada">Editar campos</button>
+      <button class="ls-btn-primary ls-display-none meus-campos-ocultos" type="submit">Salvar</button>
+    </div>
+    <div class="col-md-6">
+      <div class="meus-campos-ocultos ls-box">Um texto qualquer</div>
     </div>
   </div>
 </form>
