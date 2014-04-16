@@ -42,10 +42,15 @@
       &.ls-textarea-resize-vertical
         resize: vertical
 
-    input, select, textarea
+    &:not(.ls-field-inline) input, select, textarea
       display: inline-block
       width: 100%
       line-height: $inputHeight / 2
+
+    &.ls-field-inline
+      .ls-label
+        height: $inputHeight
+        line-height: $inputHeight
 
   .ls-label
     display: block
@@ -55,13 +60,6 @@
     font-size: .875rem
     line-height: $inputHeight/2 * 1.2
 
-  &.ls-form-inline
-    .ls-label
-      display: inline
-    input
-      display: inline
-
-  &[data-ls-sufix]
 
 input[type="color"],
 input[type="date"],

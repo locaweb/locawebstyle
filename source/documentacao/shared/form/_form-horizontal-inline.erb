@@ -1,12 +1,21 @@
-<form action="" class="ls-form ls-form-inline">
-  <% 2.times do |num| %>
+<form action="" class="ls-form">
+
   <div class="row" >
-    <% 3.times do |num| %>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">Nome</span>
-      <input type="text" name="nome" placeholder="Nome e sobrenome" required />
+    <label class="ls-field ls-field-inline">
+      <span class="ls-label col-md-1">Nome</span>
+      <input class="col-md-4" type="text" name="nome" placeholder="Nome e sobrenome" required />
     </label>
-    <% end %>
   </div>
-  <% end %>
+
+  <div class="row" >
+    <label class="ls-field ls-field-inline">
+      <span class="ls-label col-md-1">Email 1</span>
+      <input class="col-md-4" type="text" name="nome" placeholder="Nome e sobrenome" required />
+    </label>
+    <label class="ls-field ls-field-inline">
+      <span class="ls-label col-md-1">Email 2</span>
+      <input class="col-md-4" type="text" name="nome" placeholder="Nome e sobrenome" required />
+    </label>
+  </div>
+
 </form>
