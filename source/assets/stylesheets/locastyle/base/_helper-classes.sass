@@ -229,10 +229,19 @@
   word-break: normal !important
 
 .ls-no-radius
-  -webkit-border-radius: 0 !important
-  -moz-border-radius: 0 !important
-  -ms-border-radius: 0 !important
-  border-radius: 0 !important
+  +border-radius(0 !important)
+
+.ls-no-left-radius
+  +border-left-radius(0 !important)
+
+.ls-no-right-radius
+  +border-right-radius(0 !important)
+
+.ls-no-top-radius
+  +border-top-radius(0 !important)
+
+.ls-no-bottom-radius
+  +border-bottom-radius(0 !important)
 
 .ls-no-list-style
   list-style: none !important
