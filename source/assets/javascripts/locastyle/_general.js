@@ -19,6 +19,15 @@ locastyle.general = (function() {
     _btnGroupActivationToogle();
     menuAnchor();
     toggleFields();
+    equalHeight();
+  }
+
+  function equalHeight () {
+    $('[data-ls-target-height]').each(function (i, elem) {
+      var selector = $(this).data('ls-target-height')
+      var heightMain = $(this).height();
+      $(selector).height(heightMain);
+    });
   }
 
   function toggleFields(){
