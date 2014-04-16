@@ -11,7 +11,7 @@ locastyle.customFields = (function() {
   function findFields(){
     $('[data-ls-module="customFields"]').find(':input').not('.ls-input-original').each(function(index, field){
       var fieldType = $(field)[0].type;
-      if(fieldType === 'select-one' || fieldType === 'radio' || fieldType === 'checkbox'){
+      if(fieldType === 'select-one'){
         if($(field).eq(0).attr('class') !== undefined){
           $(field).wrap( '<div class="ls-field-container-' + fieldType + ' ' + $(field).eq(0).attr('class') + ' " />' );
         }else{
@@ -23,9 +23,9 @@ locastyle.customFields = (function() {
 
       if($(field)[0].type === 'select-one'){ customSelect($(field)); }
 
-      if($(field)[0].type === 'checkbox'){ customCheckbox($(field)); checkInputs($(field))}
+      // if($(field)[0].type === 'checkbox'){ customCheckbox($(field)); checkInputs($(field))}
 
-      if($(field)[0].type === 'radio'){ customRadio($(field)); checkInputs($(field)) }
+      // if($(field)[0].type === 'radio'){ customRadio($(field)); checkInputs($(field)) }
 
     })
   }

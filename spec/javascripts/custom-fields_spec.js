@@ -14,20 +14,4 @@ describe('Custom Fields:', function(){
     })
 
   })
-
-  describe('When click on checkbox with .ls-custom', function(){
-    it('should add class checked on .ls-field-custom-checkbox', function(){
-      $("#myAwesomeCheckbox input[type='checkbox']").trigger('click');
-      expect($('#myAwesomeCheckbox .ls-field-custom-checkbox')).toHaveClass('checked');
-    })
-  })
-
-  describe('When click on radio with .ls-custom', function(){
-    it('should add class checked on .ls-field-custom-radio', function(){
-      $("#myAwesomeRadio input[type='radio']").attr('checked', true);
-      $("#myAwesomeRadio input[type='radio']").trigger('click');
-      expect($('#myAwesomeRadio .ls-field-custom-radio')).toHaveClass('checked');
-    })
-  })
-
 });

@@ -15,7 +15,7 @@ description: Campos personalizados
     <tbody>
       <tr>
         <td>.ls-form</td>
-        <td>Customiza todos os selects, checkbox, radios.</td>
+        <td>Customiza todos os selects.</td>
       </tr>
       <tr>
         <td>.ls-input-original</td>
@@ -35,26 +35,4 @@ description: Campos personalizados
       <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
     </code>
     <!-- End Select -->
-    <!-- Radio -->
-    <div class="ls-box-demo">
-      <p cl ass="ls-title2"> Radio customizado </p>
-      <input type="radio" name="radio1" checked="checked" value="1">
-      <input type="radio" name="radio1" value="2">
-    </div>
-    <code class="language-html ls-well-example">
-      <%= partial 'documentacao/shared/custom-fields', locals: {field: 'radio'} %>
-    </code>
-    <!-- End Radio -->
-
-    <!-- Checkbox -->
-    <div class="ls-box-demo">
-      <p class="ls-title2"> Checkbox customizada </p>
-      <input type="checkbox" name="checkboxes" checked="checked">
-      <input type="checkbox" name="checkboxes">
-      <input type="checkbox" name="checkboxes">
-    </div>
-    <code class="language-html ls-well-example">
-      <%= partial 'documentacao/shared/custom-fields', locals: {field: 'checkbox'} %>
-    </code>
-    <!-- End Checkbox -->
   </div>

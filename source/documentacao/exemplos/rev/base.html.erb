@@ -1,5 +1,6 @@
 ---
 title: Base Layout
+body_class: no-main-bg
 layout: examples
 ---
 
@@ -8,7 +9,7 @@ layout: examples
 <div class="ls-box ls-big-space">
     <h1 class="ls-title-1 ls-title-intro">Cadastre contatos na sua revenda</h1>
     <p>Comece agora: cadastre seu primeiro cliente, adicione envios e acompanhe o seu desenvolvimento.</p>
-    <a href="#" class="ls-btn-primary">Cadastrar meu primeiro cliente</a>
+    <%= link_to 'Cadastrar meu primeiro cliente', 'new-client', :class => 'ls-btn-primary' %>
 </div>
 
 <div class="ls-box ls-big-space">
@@ -17,17 +18,17 @@ layout: examples
     <div class="col-md-4">
       <h1 class="ls-title-3">Aparência</h1>
       <p>Fortaleça ainda mais a sua revenda personalizando o painel de acesso dos seus clientes. Mude as cores, o nome ou insira a sua marca.</p>
-      <a href="#" class="ls-btn-primary">Editar aparência e conteúdo</a>
+      <%= link_to 'Editar aparência e conteúdo', 'config-aspect', :class => 'ls-btn-primary' %>
     </div>
     <div class="col-md-4">
       <h1 class="ls-title-3">Endereço de acesso</h1>
       <p>Você pode personalizar a URL de acesso no painel dos seus clientes. Uma boa prática para que eles associem a revenda ao nome da sua empresa.</p>
-      <a href="#" class="ls-btn-primary">Editar endereço de acesso</a>
+      <%= link_to 'Editar endereço de acesso', 'config-domain', :class => 'ls-btn-primary' %>
     </div>
     <div class="col-md-4">
       <h1 class="ls-title-3">E-mail</h1>
       <p>Cadastre um endereço de e-mail para enviar notificações aos seus clientes.</p>
-      <a href="#" class="ls-btn-primary">Editar e-mail de remetente</a>
+      <%= link_to 'Editar e-mail de remetente', 'config-email', :class => 'ls-btn-primary' %>
     </div>
   </div>
 </div>
