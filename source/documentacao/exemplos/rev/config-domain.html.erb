@@ -19,15 +19,18 @@ layout: examples
       <hr>
 
       <form action="#" class="ls-form" data-ls-module="form">
-        <div class="row">
+        <div id="domain-form" class="row ls-form-text ls-form-disable">
           <label class="ls-field col-md-8">
             <span class="ls-label ls-txt-access">dominio</span>
             <input name="dominio" placeholder="dominio" required type="text" value="opa.entregaemails.com">
           </label>
         </div>
-        <button type="submit" class="ls-btn-primary">Salvar</button>
-        <a href="" class="ls-btn">Cancelar</a>
-        <a href="" class="ls-float-right ls-color-theme">Restaurar padrão</a>
+        <div class="domain-actions ls-display-none">
+          <button type="submit" class="ls-btn-primary">Salvar</button>
+          <button class="ls-btn" data-ls-toggle-fields="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" >Cancelar</button>
+          <a href="" class="ls-float-right ls-color-theme">Restaurar padrão</a>
+        </div>
+        <button data-ls-toggle-fields="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" class="ls-btn-primary domain-actions">Editar</button>
       </form>
 
     </div>
@@ -38,18 +41,19 @@ layout: examples
       <p>Este é o endereço que seus clientes usarão para acessar a API e o painel de email markerting. Você pode utilizar o seu domínio para personalizar este endereço, para isso, certifique-se de que o DNS esteja configurado corretamente.</p>
       <p><a href="">Como configurar o seu domínio para ser o novo endereço de acesso.</a></p>
       <hr>
-      <form action="" class="ls-form">
-        <div class="row">
+      <form action="" class="ls-form" data-ls-module="form">
+        <div id="access-domain-form" class="row ls-form-text ls-form-disable">
           <label for="" class="ls-field col-md-8">
             <span class="ls-label ls-txt-access">Domínio de acesso</span>
             <input type="text" placeholder="opa.entregaemails.com">
           </label>
         </div>
-        <div>
+        <div class="access-domain-actions ls-display-none">
           <button type="submit" class="ls-btn-primary">Salvar</button>
-          <a href="" class="ls-btn">Cancelar</a>
+          <button class="ls-btn" data-ls-toggle-fields="#access-domain-form" data-toggle-class="ls-display-none" data-target=".access-domain-actions" >Cancelar</button>
           <a href="" class="ls-float-right ls-color-theme">Restaurar padrão</a>
         </div>
+        <button data-ls-toggle-fields="#access-domain-form" data-toggle-class="ls-display-none" data-target=".access-domain-actions" class="ls-btn-primary access-domain-actions">Editar</button>
       </form>
     </div>
   </div>
