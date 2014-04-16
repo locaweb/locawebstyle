@@ -23,16 +23,15 @@ locastyle.general = (function() {
 
   function toggleFields(){
     $('[data-ls-toggle-fields]').on('click', function(evt) {
-      console.log('ah lek')
       evt.preventDefault();
       var $this = $(this);
       var $container = $($this.data('ls-toggle-fields'));
       $container
         .toggleClass('ls-form-disable')
         .toggleClass('ls-form-text');
-      $container.find(':input')
-        .toggleClass('ls-form-text')
-        .removeAttr('disabled')
+      $container
+        .find(':input').toggleClass('ls-form-text')
+        .toggleAttr('disabled');
     });
   }
 
@@ -133,6 +132,13 @@ locastyle.general = (function() {
       $(this).addClass("active");
     });
   }
+
+  jQuery.fn.toggleAttr = function(attr) {
+    return this.each(function() {
+      var $this = $(this);
+      $this.attr(attr) ? $this.removeAttr(attr) : $this.attr(attr, attr);
+    });
+  };
 
   return {
     init: init
