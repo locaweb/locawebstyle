@@ -13,8 +13,15 @@ layout: examples
       <h2 class="ls-title-2">Telefone de contato</h2>
       <p>Cadastre um telefone para que seus clientes possam entrar em contato direto com você. Este telefone será exibido na barra de atendimento quando o seu cliente acessar o seu Email Marketing.</p>
       <hr>
-      <p><strong>(11) 9999-9999</strong></p>
-      <a href="" class="ls-btn-primary">Editar</a>
+      <form action="#" class="ls-form ls-form-text ls-form-disable" data-ls-module="form">
+        <div class="row">
+          <label class="ls-field col-md-5">
+            <span class="ls-label">Telefone</span>
+            <input class="ls-form-text" name="telefone" placeholder="Número do telefone" required="" type="text" value="(11) 99999-9999">
+          </label>
+        </div>
+        <a href="" class="ls-btn-primary">Editar</a>
+      </form>
     </div>
   </div>
   <div class="col-md-6">
@@ -22,12 +29,13 @@ layout: examples
       <h2 class="ls-title-2">Webdesk</h2>
       <p>Configure a sua conta do WebDesk para atender as solicitaçoes dos seus clientes através de chamados.</p>
       <hr>
-      <form action="" class="ls-form">
+      <form action="" class="ls-form" data-ls-module="form">
         <label for="" class="ls-field">
-          <span>https://</span>
-          <span class="ls-txt-access">Configurar seu webdesk</span>
-          <input type="text" placeholder="opa.entregaemails.com">
-          <span>.webdesklw.com.br</span>
+          <span class="row">
+            <span class="ls-label-prefix col-md-2">https://</span>
+            <input class="col-md-6" type="text" placeholder="entregaemails">
+            <span class="ls-label-sufix col-md-4">.webdesklw.com.br</span>
+          </span>
         </label>
         <div>
           <button type="submit" class="ls-btn-primary">Salvar</button>
@@ -37,5 +45,3 @@ layout: examples
     </div>
   </div>
 </div>
-
-

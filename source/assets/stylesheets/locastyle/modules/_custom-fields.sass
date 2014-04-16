@@ -1,60 +1,55 @@
-[class*="ls-field-container-"]
+[class*="ls-custom-"]
   position: relative
-  color: #fff
+  display: inline-block
 
-  select, input[type='radio'], input[type='checkbox']
+  select, input[type="radio"], input[type="checkbox"]
     opacity: 0
-    border-radius: 0
 
-  select, input
+  select
+    left: 10px
+
+  .ls-field-custom-checkbox,
+  .ls-field-custom-radio
+    width: 30px
+    height: 30px
+    outline: 1px solid red
+    display: inline-block
+    margin: 1px
+
+// input:checked ~ [class*="ls-field-custom"]
+
+.ls-custom-select-one
+  position: relative
+
+  .ls-field-custom-select-one
     position: absolute
     top: 0
     left: 0
-    // width: 100%
-    // height: 100%
-
-  input[type='checkbox']
-    width: 30px
-    height: 30px
-
-  .ls-field-custom-checkbox
-    // padding: 5px 32px
-    background: #FFF url('https://cdn1.iconfinder.com/data/icons/Keyamoon-IcoMoon--limited/32/checkbox-unchecked.png') no-repeat
-    &.checked
-      background: #FFF url('https://cdn1.iconfinder.com/data/icons/Keyamoon-IcoMoon--limited/32/checkbox-checked.png') no-repeat
-
-  .ls-field-custom-radio
-    padding: 5px 16px
-    background: #FFF url('https://cdn1.iconfinder.com/data/icons/blueberry/32/radio-button_off.png') no-repeat
-    &.checked
-      background: #FFF url('https://cdn1.iconfinder.com/data/icons/blueberry/32/radio-button_on.png') no-repeat
-
-.ls-field-container-select-one
-  border: 1px solid $gray2
-  border-radius: 3px
-  background-color: #fff
-  color: $gray4
-  position: relative
-  height: $inputHeight
-  line-height: $inputHeight
-  font-size: .8rem
-
-  select
-    +appearance(none)
-    display: block
     height: $inputHeight
+    width: 150%
+    display: inline-block
+    padding: 0 10px
+    border: 1px solid $gray2
+    border-radius: 3px
+    background-color: #fff
+    color: $gray4
     line-height: $inputHeight
-
-  .ls-field-custom-select-one
-    overflow: hidden
-    height: $inputHeight
-    line-height: $inputHeight
-    display: block
-    text-indent: $inputHeight/4
+    font-size: .8rem
 
     &:before
       +arrow-down($gray4, $inputHeight/6)
       position: absolute
       top: calc( (#{$inputHeight}/2) - (#{$inputHeight}/8))
       right: $inputHeight/4
+      z-index: 1
+
+  select
+    +appearance(none)
+    display: block
+    height: 100%
+    width: 148%
+    line-height: $inputHeight
+    border: none
+    position: relative
+    z-index: 1
 

@@ -17,11 +17,17 @@ layout: examples
       <p><a href="">Saiba como configurar o DNS do seu domínio.</a></p>
       <p>As alterações só serão aplicadas para os novos clientes, cadastrados após esta ação.</p>
       <hr>
-      <p>
-        <strong>opa.entregaemails.com</strong><br>
-        <small>Status do DNS: Configurado corretamente</small>
-      </p>
-      <a href="" class="ls-btn-primary">Editar</a>
+
+      <form action="#" class="ls-form" data-ls-module="form">
+        <div class="row">
+          <label class="ls-field col-md-8">
+            <input name="dns" placeholder="dominio" required type="text" value="opa.entregaemails.com">
+          </label>
+        </div>
+        <a href="" class="ls-btn-primary">Salvar</a>
+        <a href="" class="ls-btn">Cancelar</a>
+      </form>
+
     </div>
   </div>
   <div class="col-md-6">
@@ -44,5 +50,3 @@ layout: examples
     </div>
   </div>
 </div>
-
-
