@@ -21,6 +21,13 @@ description: Elementos padrão de formulários e disposição de campos
   <p>No <b>Locastyle</b> usamos o padrão de <i>input</i> dentro do <i>label</i>, para evitar <i>markup</i> adicional envolvendo o campo e seu nome e aproveitar o comportamento nativo de clique no label dando foco no campo, sem precisar adicionar o atributo <code>for="#id-do-elemento"</code>.</p>
   <p>Os formulários, por padrão são horizontais, um campo abaixo do outro, mas isos pode ser alterado usando classes de configuração mostradas nas seções baixo:</p>
 
+  <div class="ls-box ls-box-gray">
+    <h4>Lembre-se!</h4>
+    <p>Nessa versão de formulário é necessário usar os grids pra definir a largura dos inputs.</p>
+    <h4>Acessibilidade</h4>
+    <p>Ao usar  o atributo<code>placeholder</code> adicionamos a classe <code>ls-txt-access </code> no <code>ls-label</code>, assim escondemos o elemento, porém os leitores de tela conseguem entender. Faça isso e a Acessibilidade agradece =)</p>
+  </div>
+
   <p>Exemplo:</p>
 
   <div class="doc-example">
