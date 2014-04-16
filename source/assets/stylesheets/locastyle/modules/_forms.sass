@@ -9,11 +9,6 @@
     display: block
     margin-bottom: $inputHeight/4
 
-
-    & + .ls-field-prefix
-      font-size: 0
-
-
     .ls-field-prefix
       display: inline-block
       padding: 0 $inputHeight/4
@@ -49,7 +44,7 @@
 
     input, select, textarea
       display: inline-block
-      width: 100%
+      // width: 100%
       line-height: $inputHeight / 2
 
     &.ls-field-inline
@@ -64,6 +59,11 @@
     font-weight: bold
     font-size: .875rem
     line-height: $inputHeight/2 * 1.2
+
+    & + input,
+    & + select,
+    & + textarea
+      width: 100%
 
   .ls-label-prefix, .ls-label-sufix
     border: 1px solid $gray2
