@@ -13,14 +13,18 @@ layout: examples
       <h2 class="ls-title-2">Telefone de contato</h2>
       <p>Cadastre um telefone para que seus clientes possam entrar em contato direto com você. Este telefone será exibido na barra de atendimento quando o seu cliente acessar o seu Email Marketing.</p>
       <hr>
-      <form action="#" class="ls-form ls-form-text ls-form-disable" data-ls-module="form">
-        <div class="row">
+      <form action="#" class="ls-form" data-ls-module="form">
+        <div id="phone-form" class="row ls-form-text ls-form-disable">
           <label class="ls-field col-md-5">
             <span class="ls-label">Telefone</span>
-            <input class="ls-form-text" name="telefone" placeholder="Número do telefone" required="" type="text" value="(11) 99999-9999">
+            <input class="ls-form-text ls-mask-phone_with_ddd" name="telefone" placeholder="Número do telefone" required="" type="text" value="(11) 99999-9999">
           </label>
         </div>
-        <a href="" class="ls-btn-primary">Editar</a>
+        <div class="phone-actions ls-display-none">
+          <button type="submit" class="ls-btn-primary">Salvar</button>
+          <button class="ls-btn" data-ls-toggle-fields="#phone-form" data-toggle-class="ls-display-none" data-target=".phone-actions" >Cancelar</button>
+        </div>
+        <button data-ls-toggle-fields="#phone-form" data-toggle-class="ls-display-none" data-target=".phone-actions" class="ls-btn-primary phone-actions">Editar</button>
       </form>
     </div>
   </div>
@@ -29,19 +33,20 @@ layout: examples
       <h2 class="ls-title-2">Webdesk</h2>
       <p>Configure a sua conta do WebDesk para atender as solicitaçoes dos seus clientes através de chamados.</p>
       <hr>
-      <form action="" class="ls-form" data-ls-module="form">
+      <form action="#" class="ls-form" data-ls-module="form">
         <label for="" class="ls-field">
-          <span class="row">
+          <span id="webdesk-form" class="row ls-form-text ls-form-disable">
             <span class="ls-label ls-txt-access">webdesk account</span>
             <span class="ls-label-prefix col-md-2">https://</span>
             <input class="col-md-6" type="text" placeholder="entregaemails">
             <span class="ls-label-sufix col-md-4">.webdesklw.com.br</span>
           </span>
         </label>
-        <div>
+        <div class="webdesk-actions ls-display-none">
           <button type="submit" class="ls-btn-primary">Salvar</button>
-          <a href="" class="ls-btn">Cancelar</a>
+          <button class="ls-btn" data-ls-toggle-fields="#webdesk-form" data-toggle-class="ls-display-none" data-target=".webdesk-actions">Cancelar</button>
         </div>
+        <button data-ls-toggle-fields="#webdesk-form" data-toggle-class="ls-display-none" data-target=".webdesk-actions" class="ls-btn-primary webdesk-actions">Editar</button>
       </form>
     </div>
   </div>
