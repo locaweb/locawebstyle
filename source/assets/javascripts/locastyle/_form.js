@@ -16,7 +16,12 @@ locastyle.form = (function() {
     formText();
     masks();
     textareaAutoresize();
+    sufixBorder();
 
+  }
+
+  function sufixBorder () {
+    $(':input + .ls-label-sufix', '.ls-form').prev().addClass('ls-no-right-radius');
   }
 
   function textareaAutoresize (argument) {
