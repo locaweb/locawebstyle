@@ -18,7 +18,7 @@ description: Elementos padrão de formulários e disposição de campos
 <div id="campos-de-formulario" class="doc-section">
   <h3 class="ls-title-3">Campos de formulário</h3>
 
-  <p>No <b>Locastyle</b> usamos o padrão de <i>input</i> dentro do <i>label</i>, para evitar <i>markup</i> adicional envolvendo o campo e seu nome e aproveitar o comportamento nativo de clique no label dando foco no campo, sem precisar adicionar o atributo <code>for="#id-do-elemento"</code>.</p>
+  <p>No <b>Locastyle</b> usamos <b>SEMPRE</b> o padrão de <i>input</i> dentro do <i>label</i> com um <code>span</code> separando o texto do <i>label</i>, para evitar <i>markup</i> adicional envolvendo o campo e seu nome e aproveitar o comportamento nativo de clique no label dando foco no campo, sem precisar adicionar o atributo <code>for="#id-do-elemento"</code>.</p>
   <p>Os formulários, por padrão são horizontais, um campo abaixo do outro, mas isos pode ser alterado usando classes de configuração mostradas nas seções baixo:</p>
 
   <div class="ls-box ls-box-gray">
@@ -151,7 +151,7 @@ description: Elementos padrão de formulários e disposição de campos
 
 <div id="prefixos-e-sufixos" class="doc-section">
   <h3 class="ls-title-3">Prefixos e sufixos de campo</h3>
-  <p>Adicione um elemento extra, <code>span.ls-field-prefix</code> antes, ou <code>ls-field-sufix</code> depois do <i>input</i>, seguindo o <s>grid</s>.</p>
+  <p>Adicione um elemento extra, <code>span.ls-field-prefix</code> antes, ou <code>span.ls-field-sufix</code> depois do <i>input</i>, seguindo o <s>grid</s>.</p>
   <div class="doc-example">
     <%= partial('documentacao/shared/form/fields-prefix-sufix.erb') %>
     <code class="language-markup">
