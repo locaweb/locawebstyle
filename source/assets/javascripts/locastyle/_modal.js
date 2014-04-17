@@ -18,13 +18,23 @@ locastyle.modal = (function() {
 
   function init() {
     unbind();
-    $(config.open.trigger).on('click.ls', function() {
-      open($(this).data());
-    });
+    bindOpen();
   }
 
   function unbind() {
     $(config.open.trigger).off('click.ls');
+  }
+
+  function bindOpen() {
+    $(config.open.trigger).on('click.ls', function() {
+      locastyle.modal.open($(this).data());
+    });
+  }
+
+  function bindClose(){
+    $(config.close.classes + ", " + config.close.trigger).on('click.ls', function() {
+      locastyle.modal.close();
+    });
   }
 
   function open($element) {
@@ -37,23 +47,18 @@ locastyle.modal = (function() {
         .appendTo('body');
         $('body').addClass('modal-opened');
     }
-    close();
+    bindClose();
   }
 
   function close() {
-    $(config.close.classes + ", " + config.close.trigger).on('click.ls', function() {
-      $(config.modal).removeClass("opened");
-      $(".ls-modal-overlay, " + config.template.classes).remove();
-      $('body').removeClass('modal-opened');
-    })
-  }
-
-  function unbind(){
-    $(config.open.modal).off('click.ls')
+    $(config.modal).removeClass("opened");
+    $(".ls-modal-overlay, " + config.template.classes).remove();
+    $('body').removeClass('modal-opened');
   }
 
   return {
     init: init,
+    open: open,
     close: close,
     unbind: unbind
   };

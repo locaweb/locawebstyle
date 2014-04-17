@@ -21,11 +21,13 @@ describe("Modal: ", function() {
   })
 
   describe("Unbind:", function() {
-    describe("when unbind is called in module", function() {
-      it("should unbind events handled by module", function() {
-        locastyle.modal.unbind();
+    describe("when unbind is called in module init", function() {
+      it("should prevent events from being called twice or more times", function() {
+        var spy = spyOn(locastyle.modal, "open");
+        locastyle.modal.init();
+        locastyle.modal.init();
         $('[data-ls-module="modal"]').trigger("click");
-        expect($("#myModalClosed .ls-modal")).not.toHaveClass('opened');
+        expect(locastyle.modal.open.calls.count()).toEqual(1);
       });
 
       it("should NOT unbind common events handled by other code", function() {
