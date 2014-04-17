@@ -28,7 +28,6 @@
     &.ls-data-ascending a:after
       +arrow-up(#fff,6px)
 
-
   td, th
     padding: 13px
     border-bottom: 1px solid $gray1
@@ -57,6 +56,21 @@
   tbody tr:last-child td,
   tbody tr:last-child th
     border-bottom: none
+
+  &.ls-txt-center,
+  tbody.ls-txt-center
+    td, th
+      @extend .ls-txt-center
+
+  &.ls-txt-right,
+  tbody.ls-txt-right
+    td, th
+      @extend .ls-txt-right
+
+  &.ls-txt-left,
+  tbody.ls-txt-left
+    td, th
+      @extend .ls-txt-left
 
   &.ls-big-space
     td, th
