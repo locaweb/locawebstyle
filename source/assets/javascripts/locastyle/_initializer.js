@@ -27,7 +27,9 @@ var locastyle = (function() {
 
 }());
 
+var ls = locastyle;
+
 $(window).load(function() {
-  locastyle.init();
-  locastyle.general.init();
+  ls.init();
+  ls.general.init();
 });
