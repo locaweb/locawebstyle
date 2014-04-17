@@ -23,6 +23,7 @@ locastyle.modal = (function() {
 
   function unbind() {
     $(config.open.trigger).off('click.ls');
+    $(config.close.classes + ", " + config.close.trigger).off('click.ls');
   }
 
   function bindOpen() {
