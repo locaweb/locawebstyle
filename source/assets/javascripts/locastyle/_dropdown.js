@@ -18,15 +18,16 @@ locastyle.dropdown = (function() {
     });
   }
 
-  function toggleDropdown($target) {
-    $target.toggleClass("active");
-  }
-
   function bindClickOutsideTriggers() {
     $("body").on("click", function(){
       closeDropdown();
     });
   }
+
+  function toggleDropdown($target) {
+    $target.toggleClass("active");
+  }
+
 
   function closeDropdown(el) {
     $("[data-ls-module=dropdown]").not(el).removeClass("active");
