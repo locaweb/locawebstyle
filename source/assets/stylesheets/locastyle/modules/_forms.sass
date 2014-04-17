@@ -90,47 +90,78 @@
     border-left: none
     +border-right-radius(4px)
 
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="range"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
-input[type="text"],
-textarea
-  +box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075))
-  +transition(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s)
-  vertical-align: middle
-  height: $inputHeight
-  padding: 6px $inputHeight/4
-  font-size: 14px
-  line-height: 1.428571429
-  color: $gray4
-  vertical-align: middle
-  background-color: #fff
-  background-image: none
-  border: 1px solid $gray2
-  border-radius: 4px
+  &.ls-form-inline
 
-  &[disabled]
-    border-color: $gray1
+    .ls-field
+      display: inline-block
+      margin-right: 5px
+      padding: 0
+      width: auto
 
-  &.ls-form-text
-    +box-shadow(none)
-    border-color: transparent
-    background-color: transparent
-    padding: 0
+      .ls-label
+        display: inline-block
+        margin-right: 5px
 
-@media (min-width: $screen-sm)
-  .ls-field
-    padding-bottom: 0
+        & + input,
+        & + select,
+        & + textarea
+          width: inherit
+
+      .ls-txt-access
+        & + input,
+        & + select,
+        & + textarea
+          width: 100%
+
+      [class*="ls-btn"]
+        position: relative
+        top: 1px
+
+
+
+
+
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="range"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  input[type="text"],
+  textarea
+    +box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075))
+    +transition(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s)
+    vertical-align: middle
+    height: $inputHeight
+    padding: 6px $inputHeight/4
+    font-size: 14px
+    line-height: 1.428571429
+    color: $gray4
+    vertical-align: middle
+    background-color: #fff
+    background-image: none
+    border: 1px solid $gray2
+    border-radius: 4px
+
+    &[disabled]
+      border-color: $gray1
+
+    &.ls-form-text
+      +box-shadow(none)
+      border-color: transparent
+      background-color: transparent
+      padding: 0
+
+  @media (min-width: $screen-sm)
+    .ls-field
+      padding-bottom: 0
 
