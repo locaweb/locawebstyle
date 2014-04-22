@@ -52,6 +52,16 @@
       position: relative
       top: 2px
 
+    &[class*="ls-btn-"]:after
+      +arrow-down($gray4, 5px)
+      top: 4px
+      margin-left: 0
+
+    &.ls-btn-lg:after
+      +arrow-down($gray4, 7px)
+      top: 4px
+      margin-left: 0
+
   [class*="ls-btn-"]:after
     +arrow-down(#fff, 5px)
     top: 3px
