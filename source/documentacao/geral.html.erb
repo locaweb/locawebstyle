@@ -69,7 +69,7 @@ description: Funções, métodos e configurações gerais do locastyle
 
   <p>Um bom exemplo do uso deste módulo são os alertas, mensagens que podem ser dispensadas depois de lidas</p>
   <div class="ls-alert-warning ls-dismissable">
-    <span data-ls-module="dismiss">&times;</span>
+    <span class="ls-dismiss" data-ls-module="dismiss">&times;</span>
     <strong>Olá!</strong> Este é um alerta que pode ser dispensado.
   </div>
 
@@ -86,6 +86,41 @@ description: Funções, métodos e configurações gerais do locastyle
   <h2 class="ls-title-2">Inicializador de módulos</h2>
   <p>Atualmente o Locastyle está dividido em módulos, temos um inicializador que roda apenas os módulos presentes na tela para evitar ficar instanciando módulos e fazendo "bind" de eventos desnecessários.</p>
   <p>Para que isto funcione, basta usar os módulos conforme os exemplos, pois o incializador procura por atributos data-ls-module e inicializa os módulos conforme o valor do atributo.</p>
+</div>
+
+<div class="doc-section">
+  <h2 class="ls-title-2">Backgrounds Padrões</h2>
+  <p>Backgrounds definidos com as cores padrões de tags e alertas.</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classe</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="ls-background-primary">
+        <td><code>.ls-background-primary</code></td>
+        <td>Background primario</td>
+      </tr>
+      <tr class="ls-background-sucess">
+        <td><code>.ls-background-sucess</code></td>
+        <td>Background informando uma ação completada/válida, sucesso</td>
+      </tr>
+      <tr class="ls-background-info">
+        <td><code>.ls-background-info</code></td>
+        <td>Background informativo</td>
+      </tr>
+      <tr class="ls-background-warning">
+        <td><code>.ls-background-warning</code></td>
+        <td>Background informando atenção</td>
+      </tr>
+      <tr class="ls-background-danger">
+        <td><code>.ls-background-danger</code></td>
+        <td>Ferrou tudo!</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <div id="final">#final</div>
