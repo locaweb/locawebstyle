@@ -38,32 +38,13 @@ layout: examples
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>
-        Fulano de tal
-        <span class="ls-tag">Não recorrente</span>
-      </td>
-      <td class="ls-txt-center">Ativo</td>
-      <td class="ls-txt-center">
-        100.000
-        <small class="ls-display-block">até dd/mm/aaaa</small>
-      </td>
-      <td class="ls-txt-right">
-        <a href="/documentacao/exemplos/rev/client" class="ls-btn ls-btn-sm">Administrar</a>
-        <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
-          <a href="#" class="ls-btn ls-btn-sm"></a>
-          <ul>
-            <li><a href="#">Reativar</a></li>
-            <li><a href="#">Editar</a></li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-
-    <%- 5.times do %>
+    <%- 5.times do |num| %>
       <tr>
         <td>
-          Fulano de tal
+          <%= lorem.name %>
+          <% if num%2 == 0 %>
+            <span class='ls-tag'>Não recorrente</span>
+          <% end %>
         </td>
         <td class="ls-txt-center">Ativo</td>
         <td class="ls-txt-center">
