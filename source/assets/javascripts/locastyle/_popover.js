@@ -5,30 +5,28 @@ locastyle.popover = (function() {
 
   // Default config
   var config = {
-    defaultContainer: 'body',
-    defaultTrigger: 'click',
-    defaultPlacement: 'top',
-    popoverClass: '.ls-popover',
-    trigger: '[data-ls-module="popover"]'
+    defaultContainer : 'body',
+    defaultTrigger   : 'click.ls',
+    defaultPlacement : 'top',
+    popoverClass     : '.ls-popover',
+    trigger          : '[data-ls-module="popover"]'
   }
 
   function init() {
     unbind();
+    destroyPopover();
     $(config.trigger).each(function(index, element) {
       var dataTrigger = $(element).data("trigger");
-      dataTrigger = dataTrigger || config.defaultTrigger
       bindAction({
-        'element': element,
-        'eventType': dataTrigger == 'hover' ? 'mouseenter.ls' : 'click.ls'
+        'element'  : element,
+        'eventType': dataTrigger == 'hover' ? 'mouseenter.ls' : config.defaultTrigger
       });
     });
   }
 
   function bindAction(elementActions) {
-    var element = elementActions.element;
+    var element   = elementActions.element;
     var eventType = elementActions.eventType;
-
-    $(element).unbind(eventType);
 
     $(element).on(eventType, function(evt) {
       destroyPopover();
@@ -37,7 +35,7 @@ locastyle.popover = (function() {
       var elementData = $(element).data();
       elementData.container = elementData.container || config.defaultContainer;
       elementData.placement = elementData.placement || config.defaultPlacement;
-      elementData.element = element;
+      elementData.element   = element;
       build(elementData, element);
     });
 
@@ -57,34 +55,30 @@ locastyle.popover = (function() {
     getTriggerPosition(elementData);
   }
 
-  function getTriggerPosition(elementPosition) {
-    var left,
-    top,
-    leftPlacement,
-    setSide,
-    setTop,
-    topPlacement
-    var element = elementPosition.element
-    var placement = elementPosition.placement
-    var container = elementPosition.container
-    var elementWidth = $(element).outerWidth();
-    var elementHeight = $(element).outerHeight();
+  function getTriggerPosition(elementData) {
+    var left, top, leftPlacement, setSide, setTop, topPlacement
+    var element         = elementData.element
+    var placement       = elementData.placement
+    var container       = elementData.container
+    var elementWidth    = $(element).outerWidth();
+    var elementHeight   = $(element).outerHeight();
+    var elementOffset   = $(element).offset()
+    var elementPosition = $(element).position()
 
     if (container == 'body') {
-      top = $(element).offset().top;
-      left = $(element).offset().left;
+      top  = elementOffset.top;
+      left = elementOffset.left;
     } else {
-      top = $(element).position().top;
-      left = $(element).position().left;
+      top  = elementPosition.top;
+      left = elementPosition.left;
     }
-
 
     var setSide = left;
     var setTop  = top;
 
     if(placement == 'top'){
       topPlacement = true;
-      setTop = top
+      setTop       = top
     }
 
     if (placement == 'bottom') {
@@ -93,7 +87,7 @@ locastyle.popover = (function() {
 
     if (placement == 'left') {
       leftPlacement = true;
-      setSide = left
+      setSide       = left
     }
 
     if (placement == 'right') {
@@ -101,19 +95,19 @@ locastyle.popover = (function() {
     }
 
     setPopoverPosition({
-      'setTop': setTop,
-      'placement': placement,
-      'setSide': setSide,
+      'setTop'       : setTop,
+      'placement'    : placement,
+      'setSide'      : setSide,
       'leftPlacement': leftPlacement,
-      'topPlacement': topPlacement,
-      'elementWidth': elementWidth,
+      'topPlacement' : topPlacement,
+      'elementWidth' : elementWidth,
       'elementHeight': elementHeight
     });
   }
 
   function setPopoverPosition(popoverPosition) {
 
-    var positionWithTop = (popoverPosition.setTop - $(config.popoverClass).height() / 2 + popoverPosition.elementHeight / 2);
+    var positionWithTop  = (popoverPosition.setTop - $(config.popoverClass).height() / 2 + popoverPosition.elementHeight / 2);
     var positionWithLeft = (popoverPosition.setSide - $(config.popoverClass).width() / 2 + popoverPosition.elementWidth / 2);
 
     var _default = {
@@ -155,8 +149,8 @@ locastyle.popover = (function() {
     }
 
     $(config.popoverClass)
-    .css(_default[popoverPosition.placement].css, _default[popoverPosition.placement].value)
-    .css(_default[popoverPosition.placement].adjust);
+      .css(_default[popoverPosition.placement].css, _default[popoverPosition.placement].value)
+      .css(_default[popoverPosition.placement].adjust);
     if (_default[popoverPosition.placement].add) {
       $(config.popoverClass).css(_default[popoverPosition.placement].add);
     }
@@ -165,7 +159,6 @@ locastyle.popover = (function() {
   function unbindPopoverTrigger(element) {
     if ($(config.popoverClass).is(":visible")) {
       $(element).on('click.ls', function() {
-        destroyPopover();
         init();
       })
     }
