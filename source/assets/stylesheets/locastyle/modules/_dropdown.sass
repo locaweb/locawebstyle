@@ -52,15 +52,15 @@
       position: relative
       top: 2px
 
-    &[class*="ls-btn-"]:after
+    &.ls-btn-lg:after,
+    &.ls-btn-sm:after,
+    &.ls-btn-xs:after
       +arrow-down($gray4, 5px)
       top: 4px
       margin-left: 0
 
     &.ls-btn-lg:after
       +arrow-down($gray4, 7px)
-      top: 4px
-      margin-left: 0
 
   [class*="ls-btn-"]:after
     +arrow-down(#fff, 5px)
