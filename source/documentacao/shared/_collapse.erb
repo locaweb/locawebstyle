@@ -1,8 +1,8 @@
 <% quant.times do |num| %>
 <div data-ls-module="collapse" <% if defined?(id) %>id="<%= id %>" <% end %>class="ls-collapse<% if defined?(startOpen) %> ls-collapse-open<% end %><% if defined?(alwaysOpen) %> ls-collapse-open-always<% end %>">
-  <div class="ls-collapse-header">
+  <a href="#" class="ls-collapse-header">
     <% if header.is_a? String %>
-    <%= header %> <%= num+1 %>
+    <h3 class="ls-collapse-title"><%= header %> <%= num+1 %></h3>
     <% else %>
     <h3 class="ls-collapse-title">
       <%= header[:title] %>
@@ -11,7 +11,7 @@
       <%= header[:desc] %>
     </p>
     <% end %>
-  </div>
+  </a>
   <div class="ls-collapse-body">
     <%= content %>
   </div>
