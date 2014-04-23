@@ -55,6 +55,7 @@ locastyle.modal = (function() {
     $(config.modal).removeClass("opened");
     $(".ls-modal-overlay, " + config.template.classes).remove();
     $('body').removeClass('modal-opened');
+    locastyle.popover.destroyPopover();
   }
 
   return {
