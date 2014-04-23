@@ -3,16 +3,12 @@ locastyle.modal = (function() {
   'use strict';
 
   var config = {
-    modal: '.ls-modal',
     open: {
       trigger: '[data-ls-module="modal"]'
     },
     close: {
       classes: '.ls-modal-overlay',
       trigger: '[data-dismiss="modal"]'
-    },
-    template: {
-      classes: '.ls-modal-template'
     }
   }
 
@@ -52,8 +48,8 @@ locastyle.modal = (function() {
   }
 
   function close() {
-    $(config.modal).removeClass("opened");
-    $(".ls-modal-overlay, " + config.template.classes).remove();
+    $('.ls-modal').removeClass("opened");
+    $(".ls-modal-overlay, .ls-modal-template").remove();
     $('body').removeClass('modal-opened');
     locastyle.popover.destroyPopover();
   }
