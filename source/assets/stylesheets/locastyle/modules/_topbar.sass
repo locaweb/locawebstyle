@@ -2,14 +2,14 @@
 // Toda customização da topbar estará abaixo
 //
 .ls-topbar
+  +single-transition(all, .5s)
+  +translate(0, 0)
   height: $heightTopbar
   position: fixed
   width: 100%
   top: 0
   left: 0
   z-index: 11
-  +single-transition(all, .5s)
-  +translate(0, 0)
 
   .sidebar-visible &
     +translate($sidebarWidth, 0)
@@ -137,10 +137,16 @@
   .show-notifications.ls-ico-question:before
     right: 0
 
-@media (min-width: 768px)
+@media (min-width: $screen-sm)
   .ls-topbar
     text-align: left
     +single-transition(none)
+
+    .sidebar-visible &
+      +translate(0, 0)
+
+    .notifications-visible &
+      +translate(0, 0)
 
     .ls-brand-name
       font-size: 1.5rem
@@ -169,4 +175,3 @@
 
       .ls-user-account
         display: inline-block
-
