@@ -3,23 +3,20 @@ var locastyle = locastyle || {};
 locastyle.popover = (function() {
   'use strict';
 
-  // Default config
-  var config = {
-    defaultContainer : 'body',
-    defaultTrigger   : 'click.ls',
-    defaultPlacement : 'top',
-    popoverClass     : '.ls-popover',
-    trigger          : '[data-ls-module="popover"]'
+  // Defaults
+  var defaults = {
+    trigger      : 'click.ls',
+    popoverClass : '.ls-popover'
   }
 
   function init() {
     unbind();
     destroyPopover();
-    $(config.trigger).each(function(index, element) {
+    $('[data-ls-module="popover"]').each(function(index, element) {
       var dataTrigger = $(element).data("trigger");
       bindAction({
         'element'  : element,
-        'eventType': dataTrigger == 'hover' ? 'mouseenter.ls' : config.defaultTrigger
+        'eventType': dataTrigger == 'hover' ? 'mouseenter.ls' : defaults.trigger
       });
     });
   }
@@ -33,14 +30,14 @@ locastyle.popover = (function() {
       evt.preventDefault();
       evt.stopPropagation();
       var elementData = $(element).data();
-      elementData.container = elementData.container || config.defaultContainer;
-      elementData.placement = elementData.placement || config.defaultPlacement;
+      elementData.container = elementData.container || 'body';
+      elementData.placement = elementData.placement || 'top';
       elementData.element   = element;
       build(elementData, element);
     });
 
-    if (eventType === 'mouseenter') {
-      $(element).on('mouseleave', function() {
+    if (eventType === 'mouseenter.ls') {
+      $(element).on('mouseleave.ls', function() {
         destroyPopover();
       })
     }
@@ -107,8 +104,8 @@ locastyle.popover = (function() {
 
   function setPopoverPosition(popoverPosition) {
 
-    var positionWithTop  = (popoverPosition.setTop - $(config.popoverClass).height() / 2 + popoverPosition.elementHeight / 2);
-    var positionWithLeft = (popoverPosition.setSide - $(config.popoverClass).width() / 2 + popoverPosition.elementWidth / 2);
+    var positionWithTop  = (popoverPosition.setTop - $(defaults.popoverClass).height() / 2 + popoverPosition.elementHeight / 2);
+    var positionWithLeft = (popoverPosition.setSide - $(defaults.popoverClass).width() / 2 + popoverPosition.elementWidth / 2);
 
     var _default = {
       top: {
@@ -118,7 +115,7 @@ locastyle.popover = (function() {
           'left': positionWithLeft
         },
         add: {
-          'top':( popoverPosition.setTop - $(config.popoverClass).height())
+          'top':( popoverPosition.setTop - $(defaults.popoverClass).height())
         }
       },
       right: {
@@ -137,27 +134,27 @@ locastyle.popover = (function() {
       },
       left: {
         css: 'left',
-        value:( popoverPosition.setSide - $(config.popoverClass).width()),
+        value:( popoverPosition.setSide - $(defaults.popoverClass).width()),
         adjust: {
           'top': positionWithTop
         },
         add: {
-          'left':( popoverPosition.setSide - $(config.popoverClass).width()),
+          'left':( popoverPosition.setSide - $(defaults.popoverClass).width()),
           'top': positionWithTop
         }
       }
     }
 
-    $(config.popoverClass)
+    $(defaults.popoverClass)
       .css(_default[popoverPosition.placement].css, _default[popoverPosition.placement].value)
       .css(_default[popoverPosition.placement].adjust);
     if (_default[popoverPosition.placement].add) {
-      $(config.popoverClass).css(_default[popoverPosition.placement].add);
+      $(defaults.popoverClass).css(_default[popoverPosition.placement].add);
     }
   }
 
   function unbindPopoverTrigger(element) {
-    if ($(config.popoverClass).is(":visible")) {
+    if ($(defaults.popoverClass).is(":visible")) {
       $(element).on('click.ls', function() {
         init();
       })
@@ -165,12 +162,12 @@ locastyle.popover = (function() {
   }
 
   function destroyPopover() {
-    $(config.popoverClass).remove()
+    $(defaults.popoverClass).remove()
   }
 
   function unbind(){
-    $(config.trigger).off('click.ls')
-    $(config.trigger).off('mouseenter.ls')
+    $(defaults.trigger).off('click.ls')
+    $(defaults.trigger).off('mouseenter.ls')
   }
 
   return {
