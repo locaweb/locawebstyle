@@ -29,7 +29,7 @@ var locastyle = (function() {
 
 var ls = locastyle;
 
-$(window).load(function() {
+$(document).ready(function() {
   locastyle.init();
   locastyle.general.init();
   locastyle.breakpoints.init();
