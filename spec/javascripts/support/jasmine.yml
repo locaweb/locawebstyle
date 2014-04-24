@@ -23,6 +23,7 @@ src_files:
     - source/assets/javascripts/locastyle/_modal.js
     - source/assets/javascripts/locastyle/_dismiss.js
     - source/assets/javascripts/locastyle/_custom-fields.js
+    - source/assets/javascripts/locastyle/_breakpoint-check.js
 
 # stylesheets
 #
@@ -96,5 +97,3 @@ spec_dir:
 # spec_helper: spec/support/jasmine_helper.rb
 #
 spec_helper: spec/support/jasmine_helper.rb
-
-
