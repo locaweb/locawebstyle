@@ -30,8 +30,7 @@ var locastyle = (function() {
 var ls = locastyle;
 
 $(document).ready(function() {
+  locastyle.breakpoints.init();
   locastyle.init();
   locastyle.general.init();
-  locastyle.breakpoints.init();
-  locastyle.tabs.init();
 });
