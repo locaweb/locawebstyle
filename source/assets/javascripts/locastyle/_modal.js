@@ -39,6 +39,7 @@ locastyle.modal = (function() {
       $('body').addClass('modal-opened').append(locastyle.templates.modal($element));
     } else {
       $($element.target)
+        .show()
         .addClass('opened')
         .append('<div class="ls-modal-overlay"></div>')
         .appendTo('body');
@@ -48,7 +49,7 @@ locastyle.modal = (function() {
   }
 
   function close() {
-    $('.ls-modal').removeClass("opened");
+    $('.ls-modal').hide().removeClass("opened");
     $(".ls-modal-overlay, .ls-modal-template").remove();
     $('body').removeClass('modal-opened');
     locastyle.popover.destroyPopover();
