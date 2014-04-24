@@ -33,4 +33,5 @@ $(window).load(function() {
   locastyle.init();
   locastyle.general.init();
   locastyle.breakpoints.init();
+  locastyle.tabs.init();
 });
