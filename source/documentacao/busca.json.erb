@@ -1,30 +1,14 @@
 ---
 layout: false
 ---
+{
+  <% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) } %>
+  <% pages.each do |p, index| %>
+  "<%=p.destination_path.gsub('/index.html','')%>" :   {
+      "title": "<%= p.data.title %>",
+      "description": "<%= p.data.description %>",
+      "path": "<%=p.destination_path.gsub('/index.html','')%>"
+  }<% if pages.last != p %>,<% end %>
+  <% end %>
+}
 
-
-<%
-entries = []
-
-pages = sitemap.resources
-pages = pages.find_all{|p| p.source_file.match(/\.html/) && !p.directory_index? && p.data.hide_listing != true }
-
-# pages.each do |article|
-#   file = File.open(article.source_file,'r')
-#   file_contents = file.read.split('---').last.gsub(/\t|\n/,' ')
-#   content = Nokogiri::HTML(file_contents).xpath("//text()").to_s
-
-#   revision_date = article.data.revisions ? article.data.revisions.collect{|r,d| r}.max : nil
-
-#   entry = {
-#     :title => article.data.title,
-#     :timestamp => revision_date,
-#     :description => article.data.description,
-#     :url => article.destination_path.gsub(/help\/|\/index\.html/,''),
-#     :content => content
-#   }
-
-#   entries << entry
-# end
-%>
-<%=pages.to_json %>
