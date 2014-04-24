@@ -23,7 +23,7 @@
           <a href="<%= base_url %>/documentacao/">Documentação</a>
         </li>
         <% sub_pages('documentacao').each do |resource| %>
-          <% if resource.url.split('/')[2] != 'exemplos' && resource.url.split('/')[2].to_s != '' %>
+          <% if resource.url.split('/')[2] != 'exemplos' && resource.url.split('/')[2].to_s != '' && resource.url.split('.')[1] != 'json' %>
             <li>
               <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title%></a>
             </li>
