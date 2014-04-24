@@ -42,6 +42,14 @@ describe("Tabs: ", function() {
         expect($('#myButtons').hasClass("active")).toEqual(true);
       });
     });
+
+    describe("when resolution class is .ls-screen-sm", function () {
+      it("should turn dropdown", function () {
+        locastyle.breakpointClass = "ls-screen-sm";
+        locastyle.tabs.init();
+        expect($('#my-tabs-in-mobile').parents(".ls-dropdown").length).toEqual(1);
+      });
+    })
   });
 
   describe("Unbind:", function() {

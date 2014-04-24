@@ -6,6 +6,7 @@ locastyle.tabs = (function() {
   function init() {
     unbind();
     bindClickOnTriggers();
+    checkBreakpointClass();
   }
 
   function bindClickOnTriggers() {
@@ -15,6 +16,15 @@ locastyle.tabs = (function() {
       deactivateTab(this, $target);
       activateTab(this, $target);
     });
+  }
+
+  function checkBreakpointClass() {
+    if(locastyle.breakpointClass == "ls-screen-sm"){
+      $(".ls-tabs-nav").wrap('<div data-ls-module="dropdown" class="ls-dropdown">');
+      $(".ls-dropdown").prepend('<a class="ls-btn-primary" href="#track">Aba 1</a>');
+      $(".ls-tabs-nav").addClass("in-dropdown");
+      locastyle.dropdown.init();
+    }
   }
 
   function activateTab(el, $target) {
