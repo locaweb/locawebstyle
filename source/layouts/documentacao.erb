@@ -32,7 +32,7 @@
         <li class="ls-submenu">
           <a href="#">Exemplos</a>
           <ul>
-            <% sub_pages('documentacao/exemplos').each do |resource| %>
+            <% sub_pages('documentacao/exemplos/rev').each do |resource| %>
               <li>
                 <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title%></a>
               </li>
