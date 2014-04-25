@@ -27,22 +27,29 @@ locastyle.tabs = (function() {
     })
   }
 
-  // verifica qual é o breakpoint e altera o modo para dropdoown se necessário
+  // verifica o breakpoint e se a tab já está em modo droppdown
   function checkBreakpoint() {
     if(locastyle.breakpointClass == "ls-screen-sm"){
       $(".ls-tabs-nav").each(function (index, value) {
-        // coloca a div de dropdown em volta da navegação de abas
-        $(value).wrap('<div data-ls-module="dropdown" class="ls-dropdown">');
-
-        // coloca a aba ativa como link do dropdown
-        $(value).parents(".ls-dropdown").prepend($(value).find("li.active").html());
-
-        // adiciona a classe que altera o estilo dos links
-        $(value).addClass("in-dropdown");
-      })
+        if(!$(value).hasClass('in-dropdown')){
+          dropdownShape(value);
+        };
+      });
 
       locastyle.dropdown.init();
     }
+  }
+
+  // altera a tab para o modo dropdown
+  function dropdownShape(tabNav) {
+    // coloca a div de dropdown em volta da navegação de abas
+    $(tabNav).wrap('<div data-ls-module="dropdown" class="ls-dropdown">');
+
+    // coloca a aba ativa como link do dropdown
+    $(tabNav).parents(".ls-dropdown").prepend($(tabNav).find("li.active").html());
+
+    // adiciona a classe que altera o estilo dos links
+    $(tabNav).addClass("in-dropdown");
   }
 
   // ativa a aba de acordo com os argumentos recebidos

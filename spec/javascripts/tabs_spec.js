@@ -70,6 +70,12 @@ describe("Tabs: ", function() {
         $(document).trigger('breakpoint-updated');
         expect(locastyle.tabs.checkBreakpoint).toHaveBeenCalled();
       });
+
+      it("should not run dropdownShape if it is already a dropdown", function(){
+        locastyle.breakpointClass = "ls-screen-sm";
+        locastyle.tabs.init();
+        expect($('#my-tabs-in-dropdown-shape .ls-dropdown > a').size()).toEqual(1);
+      });
     });
 
   });
