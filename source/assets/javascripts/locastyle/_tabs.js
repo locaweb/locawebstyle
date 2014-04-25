@@ -48,6 +48,9 @@ locastyle.tabs = (function() {
     // coloca a aba ativa como link do dropdown
     $(tabNav).parents(".ls-dropdown").prepend($(tabNav).find("li.active").html());
 
+    // adiciona classe de estilo no trigger
+    $(tabNav).parents(".ls-dropdown").find("> a").addClass("ls-btn");
+
     // adiciona a classe que altera o estilo dos links
     $(tabNav).addClass("in-dropdown");
   }
