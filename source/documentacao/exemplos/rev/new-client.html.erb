@@ -6,7 +6,7 @@ layout: examples
 <h1 class="ls-title-intro ls-ico-users">Cadastrar cliente</h1>
 <h2 class="ls-title-2">Identificação</h2>
 
-<form action="../rev/clients" class="ls-form">
+<form action="<%= base_url %>/rev/clients" class="ls-form">
   <div class="row">
     <label class="ls-field col-md-5">
       <span class="ls-label">Nome</span>
@@ -63,5 +63,5 @@ layout: examples
   <p>Os envios têm data de expiração de 30 dias a partir da data que foram creditados.</p>
   <hr>
   <button type="submit" class="ls-btn-primary">Salvar</button>
-  <a href="../rev/no-clients" class="ls-btn">Cancelar</a>
+  <a href="<%= base_url %>/rev/no-clients" class="ls-btn">Cancelar</a>
 </form>
