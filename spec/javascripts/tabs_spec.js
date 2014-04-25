@@ -62,7 +62,16 @@ describe("Tabs: ", function() {
         locastyle.tabs.init();
         expect($('#my-tabs-in-mobile-wrapper .ls-dropdown .ls-tabs-nav').hasClass('in-dropdown')).toEqual(true);
       });
-    })
+    });
+
+    describe("when breakpoint-updated event is fired", function () {
+      it("should run the breakpoint checker", function () {
+        var spy = spyOn(locastyle.tabs, "breakpointChecker");
+        $(document).trigger('breakpoint-updated');
+        expect(locastyle.tabs.breakpointChecker).toHaveBeenCalled();
+      });
+    });
+
   });
 
   describe("Unbind:", function() {
