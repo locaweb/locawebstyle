@@ -9,6 +9,7 @@ locastyle.tabs = (function() {
     checkBreakpointClass();
   }
 
+  // adiciona o bind de click no modulo e chama os métodos necessários
   function bindClickOnTriggers() {
     $("[data-ls-module=tabs]").on("click.ls", function(evt) {
       evt.preventDefault();
@@ -18,6 +19,7 @@ locastyle.tabs = (function() {
     });
   }
 
+  //  verifica qual é o breakpoint e altera o modo para dropdoown se necessário
   function checkBreakpointClass() {
     if(locastyle.breakpointClass == "ls-screen-sm"){
       $(".ls-tabs-nav").wrap('<div data-ls-module="dropdown" class="ls-dropdown">');
@@ -27,16 +29,19 @@ locastyle.tabs = (function() {
     }
   }
 
+  // ativa a aba de acordo com os argumentos recebidos
   function activateTab(el, $target) {
     $(el).parents("li").addClass("active");
     $target.addClass("active");
   }
 
+  // desativa a aba de acordo com os argumentos recebidos
   function deactivateTab(el, $target) {
     $(el).parents("li").siblings().removeClass("active");
     $target.siblings().removeClass("active");
   }
 
+  // remove os binds que o próprio modulo adiciona
   function unbind() {
     $("[data-ls-module=tabs]").off("click.ls");
   }
