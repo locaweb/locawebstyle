@@ -17,6 +17,9 @@ locastyle.tabs = (function() {
       var $target = $($(this).attr("href") || $(this).data("target"));
       deactivateTab(this, $target);
       activateTab(this, $target);
+      if(isDropdownMode($(this).parents(".ls-tabs-nav"))){
+        updateTriggerLink($(this).parents(".ls-tabs-nav"));
+      }
     });
   }
 
@@ -27,17 +30,35 @@ locastyle.tabs = (function() {
     })
   }
 
+  // checa se a tab está em modo dropdown
+  function isDropdownMode(el) {
+    return $(el).hasClass('in-dropdown');
+  }
+
   // verifica o breakpoint e se a tab já está em modo droppdown
   function checkBreakpoint() {
     if(locastyle.breakpointClass == "ls-screen-sm"){
       $(".ls-tabs-nav").each(function (index, value) {
-        if(!$(value).hasClass('in-dropdown')){
+        if(!isDropdownMode(value)){
           dropdownShape(value);
         };
       });
-
-      locastyle.dropdown.init();
     }
+  }
+
+  // atualiza o link do dropdowna com valor da aba ativa
+  function updateTriggerLink(tabNav) {
+    //limpa trigger o atual
+    $(tabNav).parents(".ls-dropdown").find("> a").remove();
+
+    //atualiza com o novo trigger
+    $(tabNav).parents(".ls-dropdown").prepend($(tabNav).find("li.active").html());
+
+    // adiciona classe de estilo no trigger
+    $(tabNav).parents(".ls-dropdown").find("> a").addClass("ls-btn");
+
+    // reinicializa o módulo de dropdown para pegar o novo trigger
+    locastyle.dropdown.init();
   }
 
   // altera a tab para o modo dropdown
@@ -46,10 +67,7 @@ locastyle.tabs = (function() {
     $(tabNav).wrap('<div data-ls-module="dropdown" class="ls-dropdown">');
 
     // coloca a aba ativa como link do dropdown
-    $(tabNav).parents(".ls-dropdown").prepend($(tabNav).find("li.active").html());
-
-    // adiciona classe de estilo no trigger
-    $(tabNav).parents(".ls-dropdown").find("> a").addClass("ls-btn");
+    updateTriggerLink(tabNav);
 
     // adiciona a classe que altera o estilo dos links
     $(tabNav).addClass("in-dropdown");

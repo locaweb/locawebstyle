@@ -34,6 +34,13 @@ describe("Tabs: ", function() {
         $("#tab-trigger-2").trigger("click");
         expect($siblingOfParentLi.hasClass("active")).toEqual(false);
       });
+
+      describe('and tabs is in dropdown mode', function () {
+        it("should update the trigger value with the current active tab value", function () {
+          $("#my-tabs-in-dropdown-shape #tab-trigger-6").trigger("click");
+          expect($("#my-tabs-in-dropdown-shape .ls-dropdown > a").text()).toEqual("Laps");
+        })
+      })
     });
 
     describe("when click on element with data-ls-module without a href", function() {
