@@ -12,33 +12,47 @@ locastyle.breakpoints = (function() {
     screenLg: '1200'
   }
 
-  function init() {
-    breakpointWindowWidth();
+  function init(userConfig) {
+    breakpointWindowWidth(userConfig);
     changeClassBreakpoint();
   }
 
   //
   // Coloca classe na tag html de acordo com o tamanho do breakpoint
   //
-  function breakpointWindowWidth() {
+  function breakpointWindowWidth(userConfig) {
+    if (userConfig){
+      var documentWidth = userConfig.documentWidth;
+    } else {
+      var documentWidth = $(document).width();
+    }
 
-    var documentWidth = $(document).width();
+    console.log(documentWidth)
 
+    // Se for menor que 768 - xs
+    if (documentWidth < config.screenSm) {
+      $('html').addClass('ls-screen-xs');
+      locastyle.breakpointClass = "ls-screen-xs";
+    }
 
-    if (documentWidth <= config.screenSm) {
+    // Se for maior ou igual a 768 e menor que 992 - sm
+    else if (documentWidth >= config.screenSm && documentWidth < config.screenMd) {
       $('html').addClass('ls-screen-sm');
       locastyle.breakpointClass = "ls-screen-sm";
     }
 
-    else if (documentWidth > config.screenSm && documentWidth <= config.screenMd) {
+    // Se for maior ou igual a 992 e menor que 1200 - md
+    else if (documentWidth >= config.screenMd && documentWidth < config.screenLg) {
       $('html').addClass('ls-screen-md');
       locastyle.breakpointClass = "ls-screen-md";
     }
 
+    // Se for maior ou igual a 1200 - lg
     else {
       $('html').addClass('ls-screen-lg');
       locastyle.breakpointClass = "ls-screen-lg";
     };
+    console.log(locastyle.breakpointClass)
   }
 
   //
@@ -58,7 +72,7 @@ locastyle.breakpoints = (function() {
 
         breakpointWindowWidth();
 
-        //dispara evento para informar outros modulos que o breakpoint foi atualizado
+        // dispara evento para informar outros modulos que o breakpoint foi atualizado
         $.event.trigger("breakpoint-updated");
       }, 300);
     };
