@@ -6,7 +6,8 @@ locastyle.tabs = (function() {
   function init() {
     unbind();
     bindClickOnTriggers();
-    checkBreakpointClass();
+    bindBreakpointUpdateOnChecker();
+    breakpointChecker();
   }
 
   // adiciona o bind de click no modulo e chama os métodos necessários
@@ -19,8 +20,15 @@ locastyle.tabs = (function() {
     });
   }
 
+  // adiciona o bind de breakpoint-updated e chama o checker quando o evento ocorre
+  function bindBreakpointUpdateOnChecker() {
+    $(document).on("breakpoint-updated", function () {
+      locastyle.tabs.breakpointChecker();
+    })
+  }
+
   // verifica qual é o breakpoint e altera o modo para dropdoown se necessário
-  function checkBreakpointClass() {
+  function breakpointChecker() {
     if(locastyle.breakpointClass == "ls-screen-sm"){
       $(".ls-tabs-nav").each(function (index, value) {
         // coloca a div de dropdown em volta da navegação de abas
@@ -56,7 +64,8 @@ locastyle.tabs = (function() {
 
   return {
     init: init,
-    unbind: unbind
+    unbind: unbind,
+    breakpointChecker: breakpointChecker
   }
 
 }());
