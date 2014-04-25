@@ -49,6 +49,19 @@ describe("Tabs: ", function() {
         locastyle.tabs.init();
         expect($('#my-tabs-in-mobile').parents(".ls-dropdown").length).toEqual(1);
       });
+
+      it("should insert the active tab as link in dropdown", function () {
+        var expectedContent = $("#my-tabs-in-mobile li.active a").html();
+        locastyle.breakpointClass = "ls-screen-sm";
+        locastyle.tabs.init();
+        expect($('#my-tabs-in-mobile-wrapper .ls-dropdown > a').html()).toEqual(expectedContent);
+      });
+
+      it("should insert the .in-dropdown css class in .ls-tabs-nav", function () {
+        locastyle.breakpointClass = "ls-screen-sm";
+        locastyle.tabs.init();
+        expect($('#my-tabs-in-mobile-wrapper .ls-dropdown .ls-tabs-nav').hasClass('in-dropdown')).toEqual(true);
+      });
     })
   });
 

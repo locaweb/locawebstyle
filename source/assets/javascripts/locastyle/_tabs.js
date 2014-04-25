@@ -19,12 +19,20 @@ locastyle.tabs = (function() {
     });
   }
 
-  //  verifica qual é o breakpoint e altera o modo para dropdoown se necessário
+  // verifica qual é o breakpoint e altera o modo para dropdoown se necessário
   function checkBreakpointClass() {
     if(locastyle.breakpointClass == "ls-screen-sm"){
-      $(".ls-tabs-nav").wrap('<div data-ls-module="dropdown" class="ls-dropdown">');
-      $(".ls-dropdown").prepend('<a class="ls-btn-primary" href="#track">Aba 1</a>');
-      $(".ls-tabs-nav").addClass("in-dropdown");
+      $(".ls-tabs-nav").each(function (index, value) {
+        // coloca a div de dropdown em volta da navegação de abas
+        $(value).wrap('<div data-ls-module="dropdown" class="ls-dropdown">');
+
+        // coloca a aba ativa como link do dropdown
+        $(value).parents(".ls-dropdown").prepend($(value).find("li.active").html());
+
+        // adiciona a classe que altera o estilo dos links
+        $(value).addClass("in-dropdown");
+      })
+
       locastyle.dropdown.init();
     }
   }
