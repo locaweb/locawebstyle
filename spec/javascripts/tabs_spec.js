@@ -57,11 +57,18 @@ describe("Tabs: ", function() {
         expect($('#my-tabs-in-mobile-wrapper .ls-dropdown > a').html()).toEqual(expectedContent);
       });
 
+      it("should insert the .ls-btn css class in the dropdown trigger link", function () {
+        locastyle.breakpointClass = "ls-screen-sm";
+        locastyle.tabs.init();
+        expect($('#my-tabs-in-mobile-wrapper .ls-dropdown').find("> a").hasClass('ls-btn')).toEqual(true);
+      });
+
       it("should insert the .in-dropdown css class in .ls-tabs-nav", function () {
         locastyle.breakpointClass = "ls-screen-sm";
         locastyle.tabs.init();
         expect($('#my-tabs-in-mobile-wrapper .ls-dropdown .ls-tabs-nav').hasClass('in-dropdown')).toEqual(true);
       });
+
     });
 
     describe("when breakpoint-updated event is fired", function () {
