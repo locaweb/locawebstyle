@@ -58,6 +58,8 @@ locastyle.breakpoints = (function() {
 
         breakpointWindowWidth();
 
+        //dispara evento para informar outros modulos que o breakpoint foi atualizado
+        $.event.trigger("breakpoint-updated");
       }, 300);
     };
   }
