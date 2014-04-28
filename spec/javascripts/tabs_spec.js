@@ -50,7 +50,13 @@ describe("Tabs: ", function() {
       });
     });
 
-    describe("when resolution class is .ls-screen-sm", function () {
+    describe("when resolution class is .ls-screen-sm or ls-screen-xs", function () {
+      it("should turn dropdown", function () {
+        locastyle.breakpointClass = "ls-screen-xs";
+        locastyle.tabs.init();
+        expect($('#my-tabs-in-mobile').parents(".ls-dropdown").length).toEqual(1);
+      });
+
       it("should turn dropdown", function () {
         locastyle.breakpointClass = "ls-screen-sm";
         locastyle.tabs.init();
