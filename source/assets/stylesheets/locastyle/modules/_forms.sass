@@ -98,7 +98,10 @@
     option
       background-color: #fff
 
-  input[type="range"],
+  input[type="range"]
+    &.ls-input-range-vertical
+      -webkit-appearance: slider-vertical
+      writing-mode: bt-lr
   //   -webkit-appearance: none
   //   background: red
   //   height: 7px
