@@ -40,10 +40,28 @@
       margin-right: 5px
       font-size: 2.6rem
 
+  [class*="ls-btn"]
+    margin-bottom: 10px
+    text-align: center
+    width: 100%
 
-@media screen and (min-width: 992px)
+    ~ .ls-dropdown,
+    ~ [class*="ls-btn"]
+      margin-left: 0
+
+
+@media (min-width: $screen-sm)
   .ls-board-info
     font-size: 1.5rem
 
     .ls-board-box
       margin-bottom: 0
+
+    [class*="ls-btn"]
+      margin-bottom: 0
+      text-align: left
+      width: auto
+
+      ~ .ls-dropdown,
+      ~ [class*="ls-btn"]
+        margin-left: 5px

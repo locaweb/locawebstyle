@@ -34,7 +34,7 @@ layout: examples
   <thead>
     <tr>
       <th>Nome do cliente</th>
-      <th class="ls-txt-center">Status</th>
+      <th class="ls-txt-center hidden-xs">Status</th>
       <th class="ls-txt-center">Envios disponíveis</th>
       <th></th>
     </tr>
@@ -45,10 +45,10 @@ layout: examples
         <td>
           <%= lorem.name %>
           <% if num%2 == 0 %>
-            <span class='ls-tag'>Não recorrente</span>
+            <span class='ls-tag hidden-xs'>Não recorrente</span>
           <% end %>
         </td>
-        <td class="ls-txt-center">Ativo</td>
+        <td class="ls-txt-center hidden-xs">Ativo</td>
         <td class="ls-txt-center">
           100.000
           <small class="ls-display-block">até dd/mm/aaaa</small>
@@ -77,8 +77,8 @@ layout: examples
     <li class="active"><a href="#">1</a></li>
     <li><a href="#">2</a></li>
     <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
+    <li><a href="#" class="hidden-xs">4</a></li>
+    <li><a href="#" class="hidden-xs">5</a></li>
     <li><a href="#">Próximo »</a></li>
   </ul>
 
