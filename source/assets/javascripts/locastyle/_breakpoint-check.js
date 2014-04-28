@@ -27,8 +27,6 @@ locastyle.breakpoints = (function() {
       var documentWidth = $(document).width();
     }
 
-    console.log(documentWidth)
-
     // Se for menor que 768 - xs
     if (documentWidth < config.screenSm) {
       $('html').addClass('ls-screen-xs');
@@ -52,7 +50,6 @@ locastyle.breakpoints = (function() {
       $('html').addClass('ls-screen-lg');
       locastyle.breakpointClass = "ls-screen-lg";
     };
-    console.log(locastyle.breakpointClass)
   }
 
   //
