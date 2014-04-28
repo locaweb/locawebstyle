@@ -13,6 +13,7 @@ description: Elementos padrão de formulários e disposição de campos
     <li><a href="#habilitando-e-desabilitando-campos">Habilitando e desabilitando campos</a></li>
     <li><a href="#mascaras-de-campos">Máscaras</a></li>
     <li><a href="#prefixos-e-sufixos">Prefixos e sufixos</a></li>
+    <li><a href="#todos-campos-de-formulario">Campos de formulário</a></li>
   </ol>
 </div>
 
@@ -173,24 +174,126 @@ description: Elementos padrão de formulários e disposição de campos
 
   </div>
 </div>
+
+<div id="todos-campos-de-formulario" class="doc-section">
+  <h3 class="ls-title-3">Campos de formulário</h3>
+  <p>Aparência de <i>inputs</i> dentro de um <i>container</i> com a classe <code>ls-form</code></p>
+  <div class="doc-example">
+
+
+<form action="" class="ls-form">
+  <div class="row" >
+    <label class="ls-field col-md-3" data-doc-support="">
+      <span class="ls-label">Text</span>
+      <input type="text" name="nome" placeholder="text" required >
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">Url</span>
+      <input type="url" name="nome" placeholder="url" required >
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">Email</span>
+      <input type="email" name="nome" placeholder="email" required >
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">Tel</span>
+      <input type="tel" name="nome" placeholder="tel" required >
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">Number</span>
+      <input type="number" name="nome" placeholder="number" required >
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">date</span>
+      <input type="date" name="date" placeholder="date" required >
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">time</span>
+      <input type="time" name="time" placeholder="time" required >
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">datetime</span>
+      <input type="datetime" name="datetime" placeholder="datetime" required >
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">datetime-local</span>
+      <input type="datetime-local" name="datetime-local" placeholder="datetime-local" required >
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">week</span>
+      <input type="week" name="week" placeholder="week" required >
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">month</span>
+      <input type="month" name="month" placeholder="month" required >
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">password</span>
+      <input type="password" name="password" placeholder="password" required >
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">search</span>
+      <input type="search" name="search" placeholder="search" required >
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">range</span>
+      <input type="range" name="range" placeholder="range" min="10" max="100" step="5">
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">select original</span>
+      <select name="">
+        <option value="">Selecione</option>
+        <option value="">um</option>
+        <option value="">dois</option>
+      </select>
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">select customizado</span>
+      <div data-ls-module="customFields">
+        <select name="" class="ls-custom-select-one">
+          <option value="">Selecione</option>
+          <option value="">um</option>
+          <option value="">dois</option>
+        </select>
+      </div>
+    </label>
+     <label class="ls-field col-md-3">
+      <span class="ls-label">Text com datalist</span>
+      <input type="text" name="nome" placeholder="text" list="opcoes" >
+      <datalist id="opcoes">
+        <option value="opção 1">
+        <option value="opção 2">
+        <option value="opção 3">
+      </datalist>
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">radio</span>
+      <input type="radio" name="range">
+    </label>
+    <label class="ls-field col-md-3">
+      <span class="ls-label">radio group</span>
+      <input type="radio" name="rangegroup" value="1">
+      <input type="radio" name="rangegroup" value="2">
+    </label>
+    <keygen name="name" challenge="challenge string" keytype="type" keyparams="pqg-params">
+  </div>
+</form>
+
+
+
+
+
+  </div>
+
+</div>
 <!--
 
-<div class="row doc-section">
   <h3 class="doc-section-title">Indicando as validações</h3>
-</div>
 
-<div class="row doc-section">
   <h3 class="doc-section-title">Calendários</h3>
-</div>
 
-<div class="row doc-section">
   <h3 class="doc-section-title">Força de senha</h3>
-</div>
 
-Alternando campos
-<div class="row doc-section">
-  <h3 class="doc-section-title"></h3>
-</div> -->
 
   <!--
   datalist
