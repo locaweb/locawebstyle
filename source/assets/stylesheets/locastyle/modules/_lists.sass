@@ -4,12 +4,9 @@
   margin-bottom: 15px
 
   header.ls-list-header
-    padding: 12px
+    padding: 15px 0
     display: table
     width: 100%
-
-    .ls-group-actions
-      float: right
 
     .ls-list-image
       display: inline-block
@@ -17,7 +14,7 @@
       vertical-align: top
 
     .ls-list-title
-      display: inline-block
+      margin-bottom: 5px
 
       a
         font-size: 1rem
@@ -32,11 +29,13 @@
     .btn-default.dropdown-toggle:after
       margin-left: 0
 
+    [class*="ls-btn"] + [class*="ls-btn"]
+      margin-right: 5px
+
   .ls-list-content
     border-top: 1px solid $gray2
     font-size: .82rem
     overflow: hidden
-    padding: 0 12px
 
     [class*="col-"]
       border-left: 1px solid $gray2

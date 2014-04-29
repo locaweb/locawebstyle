@@ -28,26 +28,33 @@
         display: block
         font-size: .88rem
 
-  .ls-title-ico
-    small
-      display: block
-      color: $gray3
-      font-size: .875rem
-      margin-top: 3px
-
-    &:before
-      float: left
-      margin-right: 5px
-      font-size: 2.6rem
-
-  [class*="ls-btn"]
-    margin-bottom: 10px
-    text-align: center
+  .ls-info-header
+    display: table
+    margin-bottom: 5px
     width: 100%
 
-    ~ .ls-dropdown,
-    ~ [class*="ls-btn"]
-      margin-left: 0
+
+    [class*="ls-ico"]
+
+      small
+        display: block
+        color: $gray3
+        font-size: .875rem
+        margin-top: 3px
+
+      &:before
+        float: left
+        margin-right: 5px
+        font-size: 2.6rem
+
+    [class*="ls-btn"]
+      margin-bottom: 10px
+      text-align: center
+      width: 100%
+
+      ~ .ls-dropdown,
+      ~ [class*="ls-btn"]
+        margin-left: 0
 
 
 @media (min-width: $screen-sm)
@@ -57,11 +64,13 @@
     .ls-board-box
       margin-bottom: 0
 
-    [class*="ls-btn"]
-      margin-bottom: 0
-      text-align: left
-      width: auto
+    .ls-info-header
 
-      ~ .ls-dropdown,
-      ~ [class*="ls-btn"]
-        margin-left: 5px
+      [class*="ls-btn"]
+        margin-bottom: 0
+        text-align: left
+        width: auto
+
+        ~ .ls-dropdown,
+        ~ [class*="ls-btn"]
+          margin-left: 5px
