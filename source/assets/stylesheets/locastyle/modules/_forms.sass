@@ -57,6 +57,11 @@
         height: $inputHeight
         line-height: $inputHeight
 
+  .ls-form-text-inline
+    height: $inputHeight
+    line-height: $inputHeight
+    text-align: center
+
   .ls-label
     display: block
     padding-bottom: 3px
@@ -90,10 +95,9 @@
     +border-right-radius(4px)
 
   select
+    +box-shadow(0px 1px 0px #ddd, 0px -1px 0px #ddd, -1px -1px 0px #ddd, 1px -1px 0px #ddd, inset 1px 1px 0 #ddd, inset -1px -1px 0 #ddd)
     border: 11px solid transparent
     background: #fff
-    // +box-shadow( 0px 1px 0px #ddd, 0px -1px 0px #ddd, -1px -1px 0px #DDD, 1px -1px 0px #ddd, inset 155px 0px 0 #fff)
-    +box-shadow( 0px 1px 0px #ddd, 0px -1px 0px #ddd, -1px -1px 0px #DDD, 1px -1px 0px #ddd)
     width: 100%
 
   input[type="range"]
