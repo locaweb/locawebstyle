@@ -21,7 +21,6 @@ locastyle.form = (function() {
   }
 
   function sufixBorder () {
-    console.log('teste')
     $(':input + .ls-label-sufix', '.ls-form').prev().addClass('ls-no-right-radius');
     $('.ls-label-prefix + :input', '.ls-form').addClass('ls-no-left-radius');
   }
