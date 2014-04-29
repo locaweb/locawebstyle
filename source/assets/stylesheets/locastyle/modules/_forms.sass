@@ -47,7 +47,6 @@
     &.ls-field-inline input,
     &.ls-field-inline select,
     &.ls-field-inline textarea
-      width: auto
 
     input, select, textarea
       display: inline-block
@@ -93,10 +92,9 @@
   select
     border: 11px solid transparent
     background: #fff
-    // outline: 1px solid #ddd
-    +box-shadow( 0px 1px 0px #ddd, 0px -1px 0px #ddd, -1px -1px 0px #DDD, 1px -1px 0px #ddd, inset 155px 0px 0 #fff)
-    option
-      background-color: #fff
+    // +box-shadow( 0px 1px 0px #ddd, 0px -1px 0px #ddd, -1px -1px 0px #DDD, 1px -1px 0px #ddd, inset 155px 0px 0 #fff)
+    +box-shadow( 0px 1px 0px #ddd, 0px -1px 0px #ddd, -1px -1px 0px #DDD, 1px -1px 0px #ddd)
+    width: 100%
 
   input[type="range"]
     &.ls-input-range-vertical
@@ -140,6 +138,7 @@
     background-image: none
     border: 1px solid $gray2
     border-radius: 4px
+    width: 100%
 
     &[disabled]
       border-color: $gray1
