@@ -225,5 +225,12 @@
     .ls-switch-btn label
       background-color: $color3
 
+
+    //
+    // Listas
+    //
+    .ls-list .ls-list-title a
+      color: $color3
+
 @each $theme-name, $colors in $themes-colors
   @include theme-color($theme-name, $colors)
