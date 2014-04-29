@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="ls-theme-gold">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title><%= current_page.data.title %></title>
+  <meta name="description" content="<%= current_page.data.description %>" />
+  <meta name="keywords" content="<%= current_page.data.keywords %>" />
+  <%= stylesheet_link_tag "locastyle" %>
+</head>
+<body class="<%= page_classes %>">
+
+<div class="ls-topbar">
+
+  <!-- Barra de Notificações -->
+  <div class="ls-notification-topbar">
+
+    <!-- Links de apoio -->
+    <div class="ls-alerts-list">
+      <a href="#" class="ls-ico-bell-o" data-counter="8"><span>Notificações</span></a>
+      <a href="#" class="ls-ico-bullhorn" data-counter="6"><span>Ajuda</span></a>
+      <a href="#" class="ls-ico-question"><span>Sugestões</span></a>
+    </div>
+
+    <!-- Dropdown com detalhes da conta de usuário -->
+    <div class="ls-user-account">
+      <a href="#" class="ls-ico-user">
+        Franco
+        <small>(fmolina)</small>
+        <input type="checkbox" name="user" value="">
+      </a>
+    </div>
+  </div>
+
+  <span class="show-sidebar ls-ico-menu"></span>
+
+  <h1 class="ls-brand-name ls-ico-envelope"><%= link_to 'Revenda Email Marketing', 'base' %></h1>
+
+</div>
+
+  <main class="ls-main <%= current_page.data.body_class %>">
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+
+    <%= partial 'documentacao/shared/footer' %>
+  </main>
+
+  <aside class="ls-sidebar">
+    <nav class="ls-menu">
+      <ul>
+         <li><a href="<%= base_url %>/documentacao/exemplos/rev/base" >Contas</a></li>
+         <li><a href="<%= base_url %>/documentacao/exemplos/rev/base" >Recurso A</a></li>
+         <li><a href="<%= base_url %>/documentacao/exemplos/rev/base" >Serviço A</a></li>
+       </ul>
+    </nav>
+  </aside>
+
+
+  <%= javascript_include_tag  "libs/jquery-2.1.0.min" %>
+  <%= javascript_include_tag  "locastyle" %>
+
+</body>
+</html>
