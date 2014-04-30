@@ -29,10 +29,7 @@
         font-size: .88rem
 
   .ls-info-header
-    display: table
     margin-bottom: 5px
-    width: 100%
-
 
     [class*="ls-ico"]
 
@@ -45,7 +42,11 @@
       &:before
         float: left
         margin-right: 5px
+        margin-bottom: 7px
         font-size: 2.6rem
+
+    [class*="ls-btn"]  + [class*="ls-btn"]
+      margin-right: 5px
 
     [class*="ls-btn"]
       margin-bottom: 10px
@@ -55,6 +56,9 @@
       ~ .ls-dropdown,
       ~ [class*="ls-btn"]
         margin-left: 0
+
+  .row
+    clear: both
 
 
 @media (min-width: $screen-sm)
