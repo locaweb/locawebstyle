@@ -10,9 +10,10 @@ locastyle.topbarCurtain = (function() {
   function positionTarget () {
     $("[data-ls-module='topbarCurtain']").each(function (index, item){
       var rightDistance = $(item).position().left - $(window).width();
-      var iconWidth = $(item).width() / 2;
+      var iconWidth = (22/ 2);
       var curtainWidth = $($(item).data("target")).width() / 2;
-      $($(item).data("target")).css({left: rightDistance - curtainWidth - iconWidth + "px"});
+
+      $($(item).data("target")).css({left: rightDistance - curtainWidth + iconWidth + "px"});
     });
   }
 

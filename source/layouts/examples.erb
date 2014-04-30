@@ -18,9 +18,9 @@
 
     <!-- Links de apoio -->
     <div class="ls-alerts-list">
-      <a href="#" class="ls-ico-bell-o" data-counter="8"><span>Notificações</span></a>
-      <a href="#" class="ls-ico-bullhorn" data-counter="6" data-ls-module="topbarCurtain" data-target="#item-1"><span>Ajuda</span></a>
-      <a href="#" class="ls-ico-question"><span>Sugestões</span></a>
+      <a href="#" class="ls-ico-bell-o" data-counter="8" data-ls-module="topbarCurtain" data-target="#ls-notification-curtain"><span>Notificações</span></a>
+      <a href="#" class="ls-ico-bullhorn" data-counter="6" data-ls-module="topbarCurtain" data-target="#ls-help-curtain"><span>Ajuda</span></a>
+      <a href="#" class="ls-ico-question" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain"><span>Sugestões</span></a>
     </div>
 
     <!-- Dropdown com detalhes da conta de usuário -->
@@ -76,7 +76,7 @@
   </aside>
 
   <aside class="ls-notification">
-    <nav class="ls-notification-list" id="item-1">
+    <nav class="ls-notification-list" id="ls-notification-curtain">
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
         <%- 5.times do %>
@@ -87,7 +87,7 @@
         <% end %>
       </ul>
     </nav>
-    <nav class="ls-notification-list">
+    <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Ajuda</h3>
       <ul>
         <li class="ls-txt-center">
@@ -97,7 +97,7 @@
         <li><a href="#">> Wiki</a></li>
       </ul>
     </nav>
-    <nav class="ls-notification-list">
+    <nav class="ls-notification-list" id="ls-feedback-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
         <%- 2.times do %>
