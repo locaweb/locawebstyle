@@ -20,3 +20,4 @@
 //= require locastyle/_form
 //= require locastyle/_guided-tour
 //= require locastyle/_custom-fields
+//= require locastyle/_topbar-curtain
