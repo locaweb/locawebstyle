@@ -18,6 +18,10 @@
     </h1>
   </div>
   <aside class="ls-sidebar">
+    <form action="" class="ls-form">
+      <input type="email" id="search" placeholder="Buscar páginas">
+      <div id="results"></div>
+    </form>
     <nav class="ls-menu">
       <ul>
         <li>
@@ -70,12 +74,6 @@
   </aside>
   <main class="ls-main">
     <div class="ls-container">
-    <div class="ls-float-right">
-      <form role="form">
-        <input type="email" id="search" placeholder="Buscar páginas">
-        <div id="results"></div>
-      </form>
-    </div>
       <h1 class="ls-title-intro"><%= current_page.data.title %></h1>
       <p class="ls-title-2">
         <%= current_page.data.description %>
