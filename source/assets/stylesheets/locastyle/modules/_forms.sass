@@ -1,3 +1,4 @@
+
 .ls-form-text
   .ls-label-prefix, .ls-label-sufix
     background-color: lighten($gray1, 10%) !important
@@ -15,6 +16,7 @@
   .ls-field
     display: block
     margin-bottom: $inputHeight/4
+    min-height: 63px
 
     .ls-field-prefix
       display: inline-block
@@ -41,12 +43,12 @@
         resize: vertical
 
     // &:not(.ls-label-prefix) + ,
-    &.ls-field-prefix + input,
-    &.ls-field-prefix + select,
-    &.ls-field-prefix + textarea
-    &.ls-field-inline input,
-    &.ls-field-inline select,
-    &.ls-field-inline textarea
+    // &.ls-field-prefix + input,
+    // &.ls-field-prefix + select,
+    // &.ls-field-prefix + textarea
+    // &.ls-field-inline input,
+    // &.ls-field-inline select,
+    // &.ls-field-inline textarea
 
     input, select, textarea
       display: inline-block
@@ -61,6 +63,8 @@
     height: $inputHeight
     line-height: $inputHeight
     text-align: center
+    display: inline-block
+    font-size: .875rem
 
   .ls-label
     display: block
@@ -70,10 +74,16 @@
     font-size: .875rem
     line-height: $inputHeight/2 * 1.2
 
-    & + input,
+    & + input:not([type="radio"]):not([type="checkbox"]),
     & + select,
     & + textarea
       width: 100%
+
+  input[type="radio"], input[type="checkbox"]
+    height: $inputHeight
+    display: inline-block
+    vertical-align: middle
+    margin: 0 .3rem 0 0
 
   .ls-label-prefix, .ls-label-sufix
     border: 1px solid $gray2
@@ -84,11 +94,16 @@
     overflow: hidden
 
   .ls-label-prefix
-    border-right: none
     +border-left-radius(4px)
-    & + input
-      +border-left-radius(0)
-      padding: 6px $inputHeight/4 !important
+    border-right: none
+    margin-left: 15px
+    &+ [class*="col-"]
+      padding-left: 0
+      input
+        +border-left-radius(0)
+
+  [class*="col-"]! + .ls-label-sufix
+    padding-right: 0
 
   .ls-label-sufix
     border-left: none
