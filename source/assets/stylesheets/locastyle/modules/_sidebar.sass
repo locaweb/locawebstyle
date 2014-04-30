@@ -74,12 +74,13 @@
 
       &:after
         +single-transition(all, .2s)
+        +translate(-50%, -50%)
         content: "\e60b"
         color: $gray3
         font-family: 'locastyle'
         position: absolute
-        top: 22px
-        right: 15px
+        top: 50%
+        right: 10px
         pointer-events: none
 
       &.active
