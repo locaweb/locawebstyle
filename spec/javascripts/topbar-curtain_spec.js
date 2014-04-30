@@ -15,4 +15,11 @@ describe("Topbar Curtain:", function() {
     });
   });
 
+  describe("When click on top-curtain trigger module", function() {
+    it("should add 'active' css class to target", function() {
+      locastyle.topbarCurtain.init();
+      $("#link-clicked").click();
+      expect($("#item-1").hasClass('active')).toEqual(true);
+    });
+  });
 });
