@@ -116,7 +116,7 @@ locastyle.general = (function() {
       evt.preventDefault();
     })
     if($('.ls-submenu-item').hasClass('active')){
-      console.log($('.ls-submenu-item').closest('ul').parent().addClass('active'))
+      $('.ls-submenu-item').closest('ul').parent().addClass('active')
     }
   }
 
