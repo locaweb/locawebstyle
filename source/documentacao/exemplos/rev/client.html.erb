@@ -62,17 +62,20 @@ layout: examples
 
 <div class="ls-box ls-board-info">
 
-  <header class="ls-info-header">
-    <div class="ls-float-right-sm">
-      <a href="" data-ls-module="modal" data-target="#addMessage" class="ls-btn-primary ls-float-left ">Adicionar envios</a>
-      <a href="" data-ls-module="modal" data-target="#removeMessage" class="ls-btn ls-float-left ">Remover envios</a>
+  <header class="ls-info-header row">
+    <div class="col-md-6 col-sm-12">
+      <h2 class="ls-title-3 ls-ico-calendar-check">
+        Período atual
+        <small>dd/mm/aaaa a dd/mm/aaaa</small>
+      </h2>
     </div>
 
-    <h2 class="ls-title-3 ls-ico-calendar-check">
-      Período atual
-      <small>dd/mm/aaaa a dd/mm/aaaa</small>
-    </h2>
+    <div class="col-md-6 col-sm-12">
+      <a href="" data-ls-module="modal" data-target="#addMessage" class="ls-btn-primary ls-float-right-sm ">Adicionar envios</a>
+      <a href="" data-ls-module="modal" data-target="#removeMessage" class="ls-btn ls-float-right-sm ">Remover envios</a>
+    </div>
   </header>
+
 
   <div class="row">
 
@@ -109,13 +112,18 @@ layout: examples
 
 
 <div class="ls-box ls-board-info">
-  <header class="ls-info-header">
-    <a href="" data-ls-module="modal" data-target="#editAmount" class="ls-btn ls-float-right-sm">Alterar quantidade</a>
 
-    <h2 class="ls-title-3 ls-ico-calendar-more">
-      Próximo período
-      <small>dd/mm/aaaa a dd/mm/aaaa</small>
-    </h2>
+  <header class="ls-info-header row">
+    <div class="col-md-6 col-sm-12">
+      <h2 class="ls-title-3 ls-ico-calendar-more">
+        Próximo período
+        <small>dd/mm/aaaa a dd/mm/aaaa</small>
+      </h2>
+    </div>
+
+    <div class="col-md-6 col-sm-12 ls-txt-right-sm">
+      <a href="" data-ls-module="modal" data-target="#editAmount" class="ls-btn">Alterar quantidade</a>
+    </div>
   </header>
 
   <div class="row">
@@ -140,13 +148,18 @@ layout: examples
 </div>
 
 
-
-<h2 class="ls-title-3">Relatórios</h2>
-
-<div class="ls-group-btn ls-group-active ls-float-right-sm">
-  <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn active ls-ico-chart-bar-up"></button>
-  <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
+<div class="row">
+  <div class="col-md-8 col-xs-6">
+    <h2 class="ls-title-3">Relatórios</h2>
+  </div>
+  <div class="col-md-4 col-xs-6">
+    <div class="ls-group-btn ls-group-active ls-float-right">
+      <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn active ls-ico-chart-bar-up"></button>
+      <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
+    </div>
+  </div>
 </div>
+
 
 <ul class="ls-tabs-nav" id="awesome-tab">
   <li class="active"><a data-ls-module="tabs" href="#tab1">Contratação x uso</a></li>
@@ -281,26 +294,6 @@ layout: examples
     </form>
   </div>
 </div>
-
-<!--
-<form action="" class="ls-form">
-
-  <div class="row" >
-    <label class="ls-field ls-field-inline">
-      <span class="ls-label col-md-1 col-xs-2">Período:</span>
-    </label>
-    <label class="ls-field ls-field-inline">
-      <span class="ls-label ls-txt-center col-md-1 col-xs-2">a</span>
-      <input class="col-md-4 col-xs-8" type="date" required >
-    </label>
-    <span class="ls-field col-md-2">
-      <button type="button" class="ls-btn">Filtrar</button>
-    </span>
-  </div>
-
-</form>
-
-   -->
 
 
 <table class="ls-table">
