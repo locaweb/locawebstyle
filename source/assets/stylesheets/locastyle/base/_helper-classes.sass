@@ -295,9 +295,19 @@
 .ls-text-underline
   text-decoration: underline !important
 
-
 .ls-float-right-sm
   float: none !important
+
+.ls-line-separator
+  width: calc(100% -2rem)
+  float: none
+  clear: both
+  border: 1px solid red
+  border-color: #ccc transparent #ddd transparent
+  margin: 2rem 1rem
+  &:before, &:after
+    content: " "
+    display: table
 
 @media (min-width: $screen-sm)
 
