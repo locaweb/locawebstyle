@@ -263,23 +263,62 @@ description: Elementos padrão de formulários e disposição de campos
       </datalist>
     </label>
 
+
     <label class="ls-field col-md-3">
-      <span class="ls-label">range</span>
-      <input type="range" name="range" value="30" min="10" max="100" step="5" onchange="rangeValueId.value=value">
-      <output id="rangeValueId">30</output>
+      <span class="ls-label">radio</span>
+      <input type="radio" name="radio1">
+      <span class="ls-form-text-inline">Aceito os termos.</span>
     </label>
+
+    <span class="ls-field col-md-3">
+      <span class="ls-label">radio group</span>
+      <label>
+        <input type="radio" name="radio2" value="1">
+        <span class="ls-form-text-inline">Opção 1</span>
+      </label>
+      <label>
+        <input type="radio" name="radio2" value="2">
+        <span class="ls-form-text-inline">Opção 2</span>
+      </label>
+    </span>
+
     <label class="ls-field col-md-3">
-      <span class="ls-label">range 2</span>
-      <input type="range" name="range2" value="30" min="0" max="100" step="5" list="rangeLines">
-      <datalist id="rangeLines">
-        <option>0</option>
-        <option>20</option>
-        <option>40</option>
-        <option>60</option>
-        <option>80</option>
-        <option>100</option>
-      </datalist>
+      <span class="ls-label">checkbox</span>
+      <input type="checkbox" name="checkbox1">
+      <span class="ls-form-text-inline">Aceito os termos.</span>
     </label>
+
+    <span class="ls-field col-md-3">
+      <span class="ls-label">checkboxes</span>
+      <label>
+        <input type="checkbox" name="checkbox2" value="1">
+        <span class="ls-form-text-inline">Opção 1</span>
+      </label>
+      <label>
+        <input type="checkbox" name="checkbox2" value="2">
+        <span class="ls-form-text-inline">Opção 2</span>
+      </label>
+    </span>
+
+    <span class="col-md-3">
+      <label class="ls-field">
+        <span class="ls-label">range</span>
+        <input type="range" name="range" value="30" min="10" max="100" step="5" onchange="rangeValueId.value=value">
+        <output id="rangeValueId">30</output>
+      </label>
+      <label class="ls-field">
+        <span class="ls-label">range com marcadores</span>
+        <input type="range" name="range2" value="30" min="0" max="100" step="20" list="rangeLines">
+        <datalist id="rangeLines">
+          <option>0</option>
+          <option>20</option>
+          <option>40</option>
+          <option>60</option>
+          <option>80</option>
+          <option>100</option>
+        </datalist>
+      </label>
+    </span>
     <label class="ls-field col-md-1">
       <span class="ls-label">vertical</span>
       <input type="range" name="range3" value="30" min="0" max="100" step="5" class="ls-input-range-vertical">
@@ -297,24 +336,6 @@ description: Elementos padrão de formulários e disposição de campos
       </datalist>
     </label>
 
-    <label class="ls-field col-md-3">
-      <span class="ls-label">radio</span>
-      <input type="radio" name="radio">
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">radio group</span>
-      <input type="radio" name="rangegroup" value="1">
-      <input type="radio" name="rangegroup" value="2">
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">checkbox</span>
-      <input type="checkbox" name="radio">
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">2 checkbox</span>
-      <input type="checkbox" name="checkbox2">
-      <input type="checkbox" name="checkbox3">
-    </label>
     <label class="ls-field col-md-3">
       <span class="ls-label">textarea</span>
       <textarea name="" id=""rows="3"></textarea>
