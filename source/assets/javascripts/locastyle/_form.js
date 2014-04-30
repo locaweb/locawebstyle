@@ -21,12 +21,9 @@ locastyle.form = (function() {
   }
 
   function prefixSufix () {
-    // $(':input + .ls-label-sufix', '.ls-form').prev().addClass('ls-no-right-radius');
-    // $('.ls-label-prefix + :input', '.ls-form').addClass('ls-no-left-radius');
     $('.ls-label-sufix').prev('[class*="col-"]')
       .addClass('ls-no-padding-right')
-      .find(':input').addClass('ls-no-right-radius')
-
+      .find(':input').addClass('ls-no-right-radius ls-border')
   }
 
   function textareaAutoresize (argument) {
