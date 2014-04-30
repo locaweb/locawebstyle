@@ -16,13 +16,17 @@ locastyle.form = (function() {
     formText();
     masks();
     textareaAutoresize();
-    sufixBorder();
+    prefixSufix();
 
   }
 
-  function sufixBorder () {
-    $(':input + .ls-label-sufix', '.ls-form').prev().addClass('ls-no-right-radius');
-    $('.ls-label-prefix + :input', '.ls-form').addClass('ls-no-left-radius');
+  function prefixSufix () {
+    // $(':input + .ls-label-sufix', '.ls-form').prev().addClass('ls-no-right-radius');
+    // $('.ls-label-prefix + :input', '.ls-form').addClass('ls-no-left-radius');
+    $('.ls-label-sufix').prev('[class*="col-"]')
+      .addClass('ls-no-padding-right')
+      .find(':input').addClass('ls-no-right-radius')
+
   }
 
   function textareaAutoresize (argument) {
