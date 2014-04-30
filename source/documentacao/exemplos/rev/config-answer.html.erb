@@ -38,14 +38,18 @@ layout: examples
       </div>
       <hr>
       <form action="#" class="ls-form" data-ls-module="form">
-        <label class="ls-field">
-          <span id="webdesk-form" class="row ls-form-text ls-form-disable">
-            <span class="ls-label ls-hidden-accessible">webdesk account</span>
-            <span class="ls-label-prefix col-md-2 col-xs-3">https://</span>
-            <input class="col-md-6 col-xs-6" type="text" placeholder="entregaemails">
-            <span class="ls-label-sufix col-md-4 col-xs-4">.webdesklw.com.br</span>
-          </span>
-        </label>
+        <div id="webdesk-form" class="row ls-form-text ls-form-disable">
+
+          <label class="ls-field ls-field-inline col-md-12">
+            <span class="ls-label-prefix col-md-2">https://</span>
+            <span class="col-md-6">
+              <input class="col-md-10" type="text" placeholder="entregaemails">
+            </span>
+            <span class="ls-label-sufix col-md-3">.webdesklw.com.br</span>
+          </label>
+
+        </div>
+
         <div class="webdesk-actions ls-display-none">
           <button type="submit" class="ls-btn-primary">Salvar</button>
           <button class="ls-btn" data-ls-toggle-fields="#webdesk-form" data-toggle-class="ls-display-none" data-target=".webdesk-actions">Cancelar</button>
