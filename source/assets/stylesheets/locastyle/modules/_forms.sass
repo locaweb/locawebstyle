@@ -59,6 +59,16 @@
         height: $inputHeight
         line-height: $inputHeight
 
+        &[class*="col"]
+          padding-right: 0
+
+      &[class*="col"]
+        padding-left: 0
+        padding-right: 30px
+
+        [class*="col"]
+          padding-right: 0
+
   .ls-form-text-inline
     height: $inputHeight
     line-height: $inputHeight
@@ -171,4 +181,8 @@
   @media (min-width: $screen-sm)
     .ls-field
       padding-bottom: 0
+
+  @media (min-width: $screen-md)
+    .ls-field .ls-field-inline[class*="col"]
+      padding: 0
 
