@@ -1,3 +1,4 @@
+<% @documentation = sub_pages('documentacao') %>
 <!doctype html>
 <html class="ls-theme-green">
 <head>
@@ -22,13 +23,38 @@
         <li>
           <a href="<%= base_url %>/documentacao/">Documentação</a>
         </li>
-        <% sub_pages('documentacao').each do |resource| %>
-          <% if resource.url.split('/')[2] != 'exemplos' && resource.url.split('/')[2].to_s != '' && resource.url.split('.')[1] != 'json' %>
+        <% @documentation.each do |resource| %>
+          <% if resource.data.type != 'css' && resource.data.type != 'component' && resource.url.split('/')[2] != 'exemplos' && resource.url.split('/')[2].to_s != '' && resource.url.split('.')[1] != 'json' %>
             <li>
               <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title%></a>
             </li>
           <% end %>
         <% end %>
+
+        <li class="ls-submenu">
+          <a href="">Estilos</a>
+          <ul>
+            <% @documentation.each do |resource| %>
+              <% if resource.data.type == 'css' %>
+                <li>
+                  <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title %></a>
+                </li>
+              <% end %>
+            <% end %>
+          </ul>
+        </li>
+        <li class="ls-submenu">
+          <a href="">Módulos</a>
+          <ul>
+            <% @documentation.each do |resource| %>
+              <% if resource.data.type == 'component' %>
+                <li>
+                  <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title %></a>
+                </li>
+              <% end %>
+            <% end %>
+          </ul>
+        </li>
         <li class="ls-submenu">
           <a href="#">Exemplos</a>
           <ul>
