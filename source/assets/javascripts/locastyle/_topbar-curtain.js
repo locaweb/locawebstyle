@@ -21,12 +21,20 @@ locastyle.topbarCurtain = (function() {
 
   function bindTopCurtainTrigger(trigger) {
     $(trigger).on("click", function(){
-      showCurtain($(trigger).data("target"));
+      var targetState = $($(trigger).data("target")).hasClass("active");
+      hideCurtains(trigger);
+      if(!targetState) {
+        showCurtain($(trigger).data("target"));
+      }
     });
   }
 
   function showCurtain(curtain) {
     $(curtain).addClass("active");
+  }
+
+  function hideCurtains(trigger) {
+    $(".ls-notification-list").removeClass("active");
   }
 
   return {

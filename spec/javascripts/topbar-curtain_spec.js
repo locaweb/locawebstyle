@@ -21,5 +21,17 @@ describe("Topbar Curtain:", function() {
       $("#link-clicked").click();
       expect($("#item-1").hasClass('active')).toEqual(true);
     });
+
+    it("should remove 'active' css class from any curtain", function() {
+      locastyle.topbarCurtain.init();
+      $("#link-clicked").click();
+      expect($("#awesome-curtain").hasClass('active')).toEqual(false);
+    });
+
+    it("should NOT add 'active' css class on target if it already have it", function() {
+      locastyle.topbarCurtain.init();
+      $("#link-clicked-2").click();
+      expect($("#item-2").hasClass('active')).toEqual(false);
+    });
   });
 });
