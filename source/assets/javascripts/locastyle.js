@@ -4,6 +4,7 @@
 
 //= require locastyle/templates/_popover
 //= require locastyle/templates/_modal
+//= require locastyle/templates/_dropdown
 
 //= require locastyle/_initializer
 //= require locastyle/_breakpoint-check
@@ -21,3 +22,4 @@
 //= require locastyle/_guided-tour
 //= require locastyle/_custom-fields
 //= require locastyle/_topbar-curtain
+//= require locastyle/_btn-group

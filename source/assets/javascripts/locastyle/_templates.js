@@ -16,10 +16,15 @@ locastyle.templates = (function() {
     return JST[templatesPath + 'modal'](elementData)
   }
 
+  function dropdown(element) {
+    return JST[templatesPath + 'dropdown']({element: element})
+  }
+
   return {
     init: init,
     popover: popover,
-    modal: modal
+    modal: modal,
+    dropdown: dropdown
   }
 
 }());

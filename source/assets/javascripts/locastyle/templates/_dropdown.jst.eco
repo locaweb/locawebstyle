@@ -1,0 +1,6 @@
+<div data-ls-module="dropdown" class="ls-dropdown">
+  <a href="#" class="ls-btn"></a>
+  <ul>
+    <%= @element %>
+  </ul>
+</div>

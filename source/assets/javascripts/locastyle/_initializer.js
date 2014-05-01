@@ -33,5 +33,5 @@ $(document).ready(function() {
   locastyle.breakpoints.init();
   locastyle.init();
   locastyle.general.init();
-  //locastyle.search.init();
+  locastyle.btnGroup.init();
 });
