@@ -3,7 +3,9 @@
   <ul>
     <% for element in @elements: %>
       <% if element.text != '': %>
-        <li> <a href="<%= element.href %>"><%= element.text %></a> </li>
+        <li><%- element %></li>
+        <li><%= console.log(element) %></li>
+        <li><a href="<%= element.href %>"><%= element.text %></a> </li>
       <% end %>
     <% end %>
   </ul>
