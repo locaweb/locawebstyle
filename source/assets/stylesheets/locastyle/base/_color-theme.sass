@@ -48,6 +48,9 @@
           background-color: $gray4
           border-left-color: $color3
 
+      .ls-brand-name
+        background-color: $color3
+
 
     //
     // Dashboard Info
@@ -231,6 +234,11 @@
     //
     .ls-list .ls-list-title a
       color: $color3
+
+    &.ls-pre-panel
+      .ls-topbar
+        background-color: #f7f7f7
+
 
 @each $theme-name, $colors in $themes-colors
   @include theme-color($theme-name, $colors)
