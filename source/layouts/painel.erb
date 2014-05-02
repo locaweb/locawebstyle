@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="ls-theme-gold">
+<html class="ls-theme-gold ls-pre-panel">
 <head>
   <meta charset="utf-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -34,8 +34,8 @@
   </div>
 
   <span class="show-sidebar ls-ico-menu"></span>
+  <span class="show-notifications ls-ico-question"></span>
 
-  <h1 class="ls-brand-name ls-ico-envelope"><%= link_to 'Revenda Email Marketing', 'base' %></h1>
 
 </div>
 
@@ -48,12 +48,45 @@
   </main>
 
   <aside class="ls-sidebar">
+    <h1 class="ls-brand-name ls-ico-envelope"><%= link_to 'Revenda Email Marketing', 'base' %></h1>
     <nav class="ls-menu">
       <ul>
-         <li><a href="<%= base_url %>/documentacao/exemplos/rev/base" >Contas</a></li>
-         <li><a href="<%= base_url %>/documentacao/exemplos/rev/base" >Recurso A</a></li>
-         <li><a href="<%= base_url %>/documentacao/exemplos/rev/base" >Serviço A</a></li>
+         <li><a href="<%= base_url %>/documentacao/exemplos/rev/base" class="ls-ico-list2">Contas</a></li>
+         <li><a href="<%= base_url %>/documentacao/exemplos/rev/base" class="ls-ico-users" >Recurso A</a></li>
+         <li><a href="<%= base_url %>/documentacao/exemplos/rev/base" class="ls-ico-stats" >Serviço A</a></li>
        </ul>
+    </nav>
+  </aside>
+
+  <aside class="ls-notification">
+    <nav class="ls-notification-list" id="ls-notification-curtain">
+      <h3 class="ls-title-2">Notificações</h3>
+      <ul>
+        <%- 5.times do %>
+          <li>
+            <a href="#"><%= lorem.sentence%></a>
+            <a href="#" class="ls-ico-delete ls-close-notification">close</a>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+    <nav class="ls-notification-list" id="ls-help-curtain">
+      <h3 class="ls-title-2">Ajuda</h3>
+      <ul>
+        <li class="ls-txt-center">
+          <a href="#" class="ls-btn-dark">Fazer um Tour</a>
+        </li>
+        <li><a href="#">> Guia</a></li>
+        <li><a href="#">> Wiki</a></li>
+      </ul>
+    </nav>
+    <nav class="ls-notification-list" id="ls-feedback-curtain">
+      <h3 class="ls-title-2">Feedback</h3>
+      <ul>
+        <%- 2.times do %>
+          <li><a href="#">> <%= lorem.words 6 %></a></li>
+        <% end %>
+      </ul>
     </nav>
   </aside>
 
