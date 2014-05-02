@@ -57,7 +57,7 @@
         margin: 0
 
       a
-        color: #fff
+        color: rgba(0, 0, 0, .4)
         margin-right: 14px
         position: relative
         display: none
@@ -70,14 +70,17 @@
           font-family: arial, sans-serif
           +border-circle(17px, .625rem)
           background: #cc0000
+          color: #fff
           top: -10px
           left: 10px
           display: none
           -webkit-font-smoothing: auto
           -moz-osx-font-smoothing: grayscale
 
-        &[data-counter]:after
-          display: block
+        &[data-counter]
+          color: #fff
+          &:after
+            display: block
 
         span
           display: none

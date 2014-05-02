@@ -25,6 +25,7 @@ src_files:
     - source/assets/javascripts/locastyle/_custom-fields.js
     - source/assets/javascripts/locastyle/_breakpoint-check.js
     - source/assets/javascripts/locastyle/_topbar-curtain.js
+    - source/assets/javascripts/locastyle/_btn-group.js
 
 # stylesheets
 #

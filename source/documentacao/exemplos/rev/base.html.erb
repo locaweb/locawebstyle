@@ -3,32 +3,105 @@ title: Base Layout
 body_class: no-main-bg
 layout: examples
 ---
-
-<h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
-
-<div class="ls-box ls-big-space">
-    <h1 class="ls-title-1 ls-title-intro">Cadastre contatos na sua revenda</h1>
-    <p>Comece agora: cadastre seu primeiro cliente, adicione envios e acompanhe o seu desenvolvimento.</p>
-    <%= link_to 'Cadastrar meu primeiro cliente', 'new-client', :class => 'ls-btn-primary' %>
-</div>
-
-<div class="ls-box ls-big-space">
-  <h2 class="ls-title-1 ls-title-intro">Personalize</h2>
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-4">
-      <h1 class="ls-title-3">Aparência</h1>
-      <p>Fortaleça ainda mais a sua revenda personalizando o painel de acesso dos seus clientes. Mude as cores, o nome ou insira a sua marca.</p>
-      <%= link_to 'Editar aparência e conteúdo', 'config-aspect', :class => 'ls-btn-primary' %>
+    <div class="col-md-12">
+      <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
     </div>
-    <div class="col-md-4">
-      <h1 class="ls-title-3">Endereço de acesso</h1>
-      <p>Você pode personalizar a URL de acesso no painel dos seus clientes. Uma boa prática para que eles associem a revenda ao nome da sua empresa.</p>
-      <%= link_to 'Editar endereço de acesso', 'config-domain', :class => 'ls-btn-primary' %>
+  </div>
+
+  <div class="row">
+    <div class="ls-box ls-big-space col-md-12">
+      <div class="row">
+        <div class="col-md-10">
+          <h1 class="ls-title-1">Consumo de envios</h1>
+        </div>
+        <div class="col-md-2">
+          <p>Valido até <strong>01.05.2014</strong></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="ls-txt-center ls-box ls-box-gray">
+            <p>contratado</p>
+            <p>1<br>milhão</p>
+            <a href="#" class="ls-btn">Alterar plano</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="ls-txt-center ls-box ls-box-gray">
+            <p>avulso</p>
+            <p>0</p>
+            <a href="#" class="ls-btn">Contratar</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="ls-txt-center ls-box ls-box-gray">
+            <p>distribuído</p>
+            <p>10.743<br>mil</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="ls-txt-center ls-box ls-box-gray">
+            <p>disponível</p>
+            <p>81%<br>989.257 mil</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-md-4">
-      <h1 class="ls-title-3">E-mail</h1>
-      <p>Cadastre um endereço de e-mail para enviar notificações aos seus clientes.</p>
-      <%= link_to 'Editar e-mail de remetente', 'config-email', :class => 'ls-btn-primary' %>
+  </div>
+
+  <div class="ls-box ls-big-space row">
+    <div class="col-md-8">
+      <h1 class="ls-title-1">Cadastre contatos na sua revenda</h1>
+      <p>Comece agora: cadastre seu primeiro cliente, adicione envios e acompanhe o seu desenvolvimento.</p>
+      <%= link_to 'Cadastrar meu primeiro cliente', 'new-client', :class => 'ls-btn-primary' %>
+    </div>
+    <div class="col-md-4 hidden-xs">
+      [icon]
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="ls-title-1 ls-title-intro">Personalize</h2>
+      <p>Deixe o painel de acesso do seu cliente com a cara da sua empresa. Personalize a aparência, o endereço de acesso e mais.</p>
+    </div>
+  </div>
+
+  <div class="ls-box ls-big-space row">
+    <div class="col-md-2">
+      [icon]
+    </div>
+    <div class="col-md-10">
+      <% link_to 'config-aspect' do %>
+        <h3 class="ls-title-3">Aparência e conteúdo</h3>
+        <p>Fortaleça ainda mais a sua revenda personalizando o painel de acesso dos seus clientes. Mude as cores, o nome ou insira a sua marca.</p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="ls-box ls-big-space row">
+    <div class="col-md-2">
+      [icon]
+    </div>
+    <div class="col-md-10">
+      <% link_to 'config-domain' do %>
+        <h3 class="ls-title-3">Endereço de acesso</h3>
+        <p>Você pode personalizar a URL de acesso no painel dos seus clientes. Uma boa prática para que eles associem a revenda ao nome da sua empresa.</p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="ls-box ls-big-space row">
+    <div class="col-md-2">
+      [icon]
+    </div>
+    <div class="col-md-10">
+      <% link_to 'config-email' do %>
+        <h3 class="ls-title-3">E-mail</h3>
+        <p>Cadastre um endereço de e-mail para enviar notificações aos seus clientes.</p>
+      <% end %>
     </div>
   </div>
 </div>

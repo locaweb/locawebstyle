@@ -18,7 +18,7 @@ locastyle.btnGroup = (function() {
   function checkBreakpoint() {
     if(locastyle.breakpointClass == "ls-screen-sm" || locastyle.breakpointClass == "ls-screen-xs"){
       $(".ls-regroup").each(function (index, $element) {
-        group($($element).find('[class*="ls-btn"]'));
+        group($($element).find('a, button'));
       });
     }
   }
@@ -26,7 +26,7 @@ locastyle.btnGroup = (function() {
   // agrupa os botões em um dropdown
   function group($element){
     var list = $($element).wrap('<li class="hidden-xs hidden-sm">');
-    $(".ls-regroup").append(locastyle.templates.dropdown(list));
+    $(".ls-regroup").html(locastyle.templates.dropdown(list));
 
     // para funcionar o dropdown
     locastyle.dropdown.init()
