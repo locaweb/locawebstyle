@@ -63,11 +63,21 @@
     position: fixed
     background: #222
     width: 280px
-    top: 0
-    display: none
+    top: -20px
+    display: block
+    -ms-transition: all .2s ease-out
+    -moz-transition: all .2s ease-out
+    -webkit-transition: all .2s ease-out
+    transition: all .2s ease-out
+    opacity: 0
+    height: 0
+    overflow: hidden
 
     &.active
-      display: block
+      top: 0
+      opacity: 1
+      height: auto
+      overflow: visible
 
     &:before
       +arrow-structure(10px)
