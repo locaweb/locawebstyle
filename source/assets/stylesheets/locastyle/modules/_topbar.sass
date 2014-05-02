@@ -92,6 +92,7 @@
       vertical-align: middle
       height: $heightTopbar
       padding: 0 15px
+      position: relative
 
       &:before
         content: ""
@@ -99,7 +100,7 @@
         vertical-align: middle
         height: inherit
 
-      a
+      > a
         color: #fff
         text-decoration: none
         vertical-align: middle
@@ -126,8 +127,57 @@
           margin-left: 10px
 
       input[type='checkbox']
-        display: none
         height: 60px
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        cursor: pointer
+
+        &:checked + .ls-user-menu
+          opacity: 1
+          height: auto
+          overflow: visible
+
+
+      .ls-user-menu
+        background: $gray5
+        position: absolute
+        left: 0
+        top: 100%
+        width: 100%
+        display: block
+        -ms-transition: all .2s ease-out
+        -moz-transition: all .2s ease-out
+        -webkit-transition: all .2s ease-out
+        transition: all .2s ease-out
+        opacity: 0
+        height: 0
+        overflow: hidden
+
+        ul
+          list-style: none
+
+          a
+            color: $gray3
+            padding: 15px 20px
+            display: block
+            border-bottom: 1px solid $gray4
+            font-weight: 300
+            -ms-transition: all .2s ease-out
+            -moz-transition: all .2s ease-out
+            -webkit-transition: all .2s ease-out
+            transition: all .2s ease-out
+
+            &:hover,
+            &:focus
+              color: #fff
+              padding-left: 25px
+
+          li:last-child a
+            border-bottom: none
+
 
   .ls-ico-menu:before,
   .show-notifications.ls-ico-question:before
