@@ -26,10 +26,13 @@ locastyle.btnGroup = (function() {
   // agrupa os botões em um dropdown
   function group($element){
     var list = $($element).wrap('<li class="hidden-xs hidden-sm">');
-    $(".ls-regroup").html(locastyle.templates.dropdown(list));
+    $(".ls-regroup a[class*='ls-btn']").removeClass()
+    $('.ls-regroup').html(locastyle.templates.dropdown(list));
 
-    // para funcionar o dropdown
+    // chama os inits para os itens dentro do dropdown
     locastyle.dropdown.init()
+    locastyle.modal.init()
+    locastyle.general.init()
   }
 
   return {
