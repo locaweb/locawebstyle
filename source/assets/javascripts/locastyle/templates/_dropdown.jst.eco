@@ -1,6 +1,8 @@
 <div data-ls-module="dropdown" class="ls-dropdown">
   <a href="#" class="ls-btn"></a>
   <ul>
-    <%= @element %>
+    <% for element in @elements: %>
+      <li> <a href="<%= element.href %>"><%= element.text %></a> </li>
+    <% end %>
   </ul>
 </div>

@@ -16,8 +16,8 @@ locastyle.templates = (function() {
     return JST[templatesPath + 'modal'](elementData)
   }
 
-  function dropdown(element) {
-    return JST[templatesPath + 'dropdown']({element: element})
+  function dropdown(elements) {
+    return JST[templatesPath + 'dropdown']({elements: $(elements)})
   }
 
   return {
