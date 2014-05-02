@@ -1,0 +1,47 @@
+.ls-pre-panel
+  .ls-sidebar
+    top: 0
+    height: 100%
+
+  .ls-title-intro
+    background-color: transparent
+    border-bottom: none
+
+  .ls-topbar
+    .ls-notification-topbar
+
+      .ls-alerts-list a
+        color: rgba(85,85,85,.4)
+
+        &[data-counter]
+          color: rgba(85,85,85,1)
+
+          &:after
+            color: #fff
+
+      .ls-user-account a
+        color: rgba(85,85,85,1)
+
+        small
+          color: rgba(85,85,85,1)
+
+        &:before
+          color: rgba(85,85,85,.5)
+          box-shadow: inset 0 0 0 2px rgba(85,85,85,.3)
+
+        &:after
+          border-top-color: rgba(85,85,85,1)
+
+      .ls-user-account
+        background-color: #dedede
+
+    .ls-ico-menu:before,
+    .show-notifications.ls-ico-question:before
+      color: rgba(85,85,85,1)
+
+
+@media (min-width: $screen-sm)
+
+  .ls-pre-panel
+    .ls-sidebar
+      z-index: 12
