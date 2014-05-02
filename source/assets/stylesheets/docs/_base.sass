@@ -221,11 +221,6 @@ p
     font-size: .75rem
     padding-top: 5px
 
-
-#results
-  position: absolute
-  z-index: 9
-
 ///
 /// Formatação de Box dentro de exemplos
 ///
@@ -248,3 +243,64 @@ p
       line-height: 1.3rem
       padding: .3rem
       color: #509742
+
+
+      background: #f7f7f7
+
+.ls-sidebar .ls-doc-form
+  position: relative
+  padding: 20px
+  border-bottom: 1px solid $gray4
+
+  #results
+    width: 100%
+    position: absolute
+    top: 100%
+    left: 0
+    z-index: 9
+
+  .ls-search
+    background: #fff
+    padding: 10px
+    margin: 0 20px
+    overflow: auto
+    max-height: 300px
+    overflow: auto
+    border-radius: 6px
+
+    &::-webkit-scrollbar
+      width: 8px
+
+    &::-webkit-scrollbar-track
+      background: rgba(0,0,0,0.8)
+      border-radius: 6px
+
+    &::-webkit-scrollbar-thumb
+      background: $gray3
+      border-radius: 6px
+
+    p
+      width: 210px
+      text-overflow: ellipsis
+      overflow-x: hidden
+      font-size: 10px
+
+    li
+      border-bottom: 1px solid rgba(223, 223, 222, 0.4)
+
+      &:last-child
+        border-bottom: none
+
+    a
+      padding: 10px
+      color: $gray5
+      display: block
+      font-size: 1rem
+      line-height: 1.3
+
+      &:hover,
+      &:focus
+        color: $gray4
+
+      p
+        margin: 0
