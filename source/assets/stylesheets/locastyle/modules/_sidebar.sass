@@ -47,6 +47,10 @@
     li
       border-bottom: 1px solid $gray4
 
+      &.active > a
+        color: #fff
+        padding-left: 30px
+
     a
       +single-transition(all, .2s)
       color: $gray3
@@ -83,10 +87,6 @@
         pointer-events: none
 
       &.active
-
-        > a
-          color: #fff
-          padding-left: 30px
 
         &:after
           +rotate(180deg)
