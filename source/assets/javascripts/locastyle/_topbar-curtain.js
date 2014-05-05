@@ -5,6 +5,7 @@ locastyle.topbarCurtain = (function() {
 
   function init() {
     positionTarget();
+    bindCloseCurtains();
   }
 
   function positionTarget() {
@@ -19,8 +20,15 @@ locastyle.topbarCurtain = (function() {
     });
   }
 
+  function bindCloseCurtains(item) {
+    $("body").on("click", function () {
+      hideCurtains();
+    });
+  }
+
   function bindTopCurtainTrigger(trigger) {
-    $(trigger).on("click", function(){
+    $(trigger).on("click", function(evt){
+      evt.stopPropagation();
       var targetState = $($(trigger).data("target")).hasClass("active");
       hideCurtains();
       if(!targetState) {

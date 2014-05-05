@@ -34,4 +34,12 @@ describe("Topbar Curtain:", function() {
       expect($("#item-2").hasClass('active')).toEqual(false);
     });
   });
+
+  describe("When click outside curtain", function() {
+    it("should close opened curtains", function() {
+      locastyle.topbarCurtain.init();
+      $("#outside_element").click();
+      expect($("#awesome-curtain").hasClass('active')).toEqual(false);
+    })
+  })
 });
