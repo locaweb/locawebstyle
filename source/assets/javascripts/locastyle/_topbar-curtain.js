@@ -22,7 +22,7 @@ locastyle.topbarCurtain = (function() {
   function bindTopCurtainTrigger(trigger) {
     $(trigger).on("click", function(){
       var targetState = $($(trigger).data("target")).hasClass("active");
-      hideCurtains(trigger);
+      hideCurtains();
       if(!targetState) {
         showCurtain($(trigger).data("target"));
       }
@@ -33,7 +33,7 @@ locastyle.topbarCurtain = (function() {
     $(curtain).addClass("active");
   }
 
-  function hideCurtains(trigger) {
+  function hideCurtains() {
     $(".ls-notification-list").removeClass("active");
   }
 
