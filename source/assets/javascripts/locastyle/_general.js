@@ -115,8 +115,8 @@ locastyle.general = (function() {
       $(this).parent().toggleClass('active');
       evt.preventDefault();
     })
-    if($('.ls-submenu-item').hasClass('active')){
-      $('.ls-submenu-item').closest('ul').parent().addClass('active')
+    if($('.ls-submenu').find('a').hasClass('ls-active')){
+      $('.ls-submenu a.ls-active').parents('.ls-submenu').addClass('active')
     }
   }
 
@@ -150,7 +150,8 @@ locastyle.general = (function() {
   };
 
   return {
-    init: init
+    init: init,
+    subMenu: subMenu
   };
 
 }());

@@ -39,9 +39,8 @@ description:
 <h2 class="ls-title-2">Campos Personalizados</h2>
 <hr>
 <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
-<%= partial 'documentacao/shared/custom-fields', locals: {field: 'radio'} %>
-<%= partial 'documentacao/shared/custom-fields', locals: {field: 'checkbox'} %>
-
+<br>
+<hr>
 <h2 class="ls-title-2">Collapses</h2>
 <hr >
 <%= partial('documentacao/shared/collapse', :locals => { :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %>
