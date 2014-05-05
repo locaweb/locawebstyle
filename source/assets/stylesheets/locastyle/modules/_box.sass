@@ -11,8 +11,8 @@
   &.ls-box-gray
     background-color: rgba($gray1, .2)
 
-  &.ls-big-space
-    @extend .ls-big-space
+  &.ls-md-space
+    @extend .ls-md-space
 
   &.ls-small-space
     @extend .ls-small-space
@@ -20,6 +20,8 @@
   .ls-small-info
     font-size: .75rem
     color: $gray3
+    margin: 0
+    padding: 0
 
   &[class*="ls-ico-"]
     overflow: hidden
@@ -30,11 +32,6 @@
       vertical-align: top
       font-size: 6rem
       margin: 0 20px
-
-  p
-    margin: 10px 0
-    font-size: .8rem
-    color: $gray4
 
 [class*="ls-title"] + .ls-box
   margin-top: 10px
