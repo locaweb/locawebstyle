@@ -11,7 +11,7 @@ describe("Popover: ", function() {
   });
 
 
-  describe("Popover cre ation", function() {
+  describe("Popover creation", function() {
 
     it("Should create a popover on click event", function() {
       $('[data-ls-module="popover"]').trigger("click");
