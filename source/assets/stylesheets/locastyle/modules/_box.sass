@@ -5,6 +5,9 @@
   border-radius: 2px
   border: 1px solid rgba(0, 0, 0, .07)
 
+  .ls-box-group &
+    margin-bottom: 10px
+
   &:after
     @extend .ls-clearfix
 
@@ -37,7 +40,6 @@
   margin-top: 10px
   clear: both
 
-
 .ls-box-filter
   @extend .ls-box
   @extend .ls-box-gray
@@ -55,3 +57,10 @@
     padding: 0 0 20px
     font-size: 1rem
 
+.ls-ico-bg:before
+  @extend .ls-color-theme
+  opacity: .1
+  position: absolute
+  top: -25%
+  right: 30px
+  font-size: 17rem !important

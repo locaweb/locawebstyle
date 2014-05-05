@@ -59,23 +59,24 @@ layout: examples
 
 </div>
 
-<div class="ls-box ls-lg-space">
+<div class="ls-box ls-lg-space ls-ico-user-add ls-ico-bg">
   <h1 class="ls-title-1 ls-color-theme">Cadastre contatos na sua revenda</h1>
   <p>Comece agora: cadastre seu primeiro cliente, adicione envios e acompanhe o seu desenvolvimento.</p>
   <%= link_to 'Cadastrar meu primeiro cliente', 'new-client', :class => 'ls-btn-primary' %>
 </div>
 
-  <h2 class="ls-title-3">Personalize</h2>
-  <p>Deixe o painel de acesso do seu cliente com a cara da sua empresa. Personalize a aparência, o endereço de acesso e mais.</p>
+<h2 class="ls-title-3">Personalize</h2>
+<p>Deixe o painel de acesso do seu cliente com a cara da sua empresa. Personalize a aparência, o endereço de acesso e mais.</p>
 
+<div class="ls-box-group">
   <div class="ls-box ls-md-space">
     <div class="row">
-      <div class="col-md-2">
-        [icon]
+      <div class="col-md-2 ls-txt-center">
+        <span class="ls-icon-alone ls-ico-paint-format"></span>
       </div>
       <div class="col-md-10">
         <% link_to 'config-aspect' do %>
-          <h3 class="ls-title-3">Aparência e conteúdo</h3>
+          <h3 class="ls-title-5"><strong>Aparência e conteúdo</strong></h3>
           <p>Fortaleça ainda mais a sua revenda personalizando o painel de acesso dos seus clientes. Mude as cores, o nome ou insira a sua marca.</p>
         <% end %>
       </div>
@@ -84,12 +85,12 @@ layout: examples
 
   <div class="ls-box ls-md-space">
     <div class="row">
-      <div class="col-md-2">
-        [icon]
+      <div class="col-md-2 ls-txt-center">
+        <span class="ls-icon-alone ls-ico-screen"></span>
       </div>
       <div class="col-md-10">
         <% link_to 'config-domain' do %>
-          <h3 class="ls-title-3">Endereço de acesso</h3>
+          <h3 class="ls-title-5"><strong>Endereço de acesso</strong></h3>
           <p>Você pode personalizar a URL de acesso no painel dos seus clientes. Uma boa prática para que eles associem a revenda ao nome da sua empresa.</p>
         <% end %>
       </div>
@@ -98,17 +99,17 @@ layout: examples
 
   <div class="ls-box ls-md-space">
     <div class="row">
-      <div class="col-md-2">
-        [icon]
+      <div class="col-md-2 ls-txt-center">
+        <span class="ls-icon-alone ls-ico-envelope"></span>
       </div>
       <div class="col-md-10">
         <% link_to 'config-email' do %>
-          <h3 class="ls-title-3">E-mail</h3>
+          <h3 class="ls-title-5"><strong>E-mail</strong></h3>
           <p>Cadastre um endereço de e-mail para enviar notificações aos seus clientes.</p>
         <% end %>
       </div>
     </div>
   </div>
-
+</div>
 
 
