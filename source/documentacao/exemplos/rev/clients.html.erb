@@ -50,7 +50,7 @@ layout: examples
     <%- 5.times do |num| %>
       <tr>
         <td>
-          <%= lorem.name %>
+          <a href="<%= base_url %>/documentacao/exemplos/rev/client"><%= lorem.name %></a>
           <% if num%2 == 0 %>
             <span class='ls-tag hidden-xs'>Não recorrente</span>
           <% end %>
