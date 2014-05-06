@@ -82,6 +82,12 @@ describe("Tabs: ", function() {
         expect($('#my-tabs-in-mobile-wrapper .ls-dropdown .ls-tabs-nav').hasClass('in-dropdown')).toEqual(true);
       });
 
+      it("should insert the .ls-dropdown-nav css class in .ls-tabs-nav", function () {
+        locastyle.breakpointClass = "ls-screen-sm";
+        locastyle.tabs.init();
+        expect($('#my-tabs-in-mobile-wrapper .ls-dropdown .ls-tabs-nav').hasClass('ls-dropdown-nav')).toEqual(true);
+      });
+
     });
 
     describe("when breakpoint-updated event is fired", function () {
