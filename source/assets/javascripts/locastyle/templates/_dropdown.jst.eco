@@ -1,6 +1,6 @@
 <div data-ls-module="dropdown" class="ls-dropdown">
   <a href="#" class="ls-btn"></a>
-  <ul>
+  <ul class="ls-dropdown-nav">
     <% for element in @elements: %>
       <% if element.text != '': %>
         <li><%- element.outerHTML %></li>
