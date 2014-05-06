@@ -6,6 +6,7 @@ locastyle.topbarCurtain = (function() {
   function init() {
     positionTarget();
     bindCloseCurtains();
+    bindPreventClosing();
   }
 
   function positionTarget() {
@@ -18,6 +19,12 @@ locastyle.topbarCurtain = (function() {
 
       bindTopCurtainTrigger(item);
     });
+  }
+
+  function bindPreventClosing() {
+    $(".ls-notification-list").on("click", function(evt) {
+      evt.stopPropagation();
+    })
   }
 
   function bindCloseCurtains(item) {
