@@ -42,4 +42,12 @@ describe("Topbar Curtain:", function() {
       expect($("#awesome-curtain").hasClass('active')).toEqual(false);
     })
   })
+
+  describe("When click on .ls-notification-list", function() {
+    it("should not close the curtain", function() {
+      locastyle.topbarCurtain.init();
+      $(".ls-notification-list").trigger("click");
+      expect($("#awesome-curtain").hasClass('active')).toEqual(true);
+    })
+  })
 });
