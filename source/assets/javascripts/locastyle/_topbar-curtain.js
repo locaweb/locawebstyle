@@ -46,6 +46,7 @@ locastyle.topbarCurtain = (function() {
 
   function showCurtain(curtain) {
     $(curtain).addClass("active");
+    locastyle.dropdown.closeDropdown();
   }
 
   function hideCurtains() {
@@ -53,7 +54,8 @@ locastyle.topbarCurtain = (function() {
   }
 
   return {
-    init: init
+    init: init,
+    hideCurtains: hideCurtains
   }
 
 }());
