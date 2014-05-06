@@ -27,7 +27,7 @@ locastyle.topbarCurtain = (function() {
     })
   }
 
-  function bindCloseCurtains(item) {
+  function bindCloseCurtains() {
     $("body").on("click", function () {
       hideCurtains();
     });
