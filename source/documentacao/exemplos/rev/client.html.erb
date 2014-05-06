@@ -401,10 +401,14 @@ layout: examples
           <span>889.239</span>
         </p>
         <hr>
-        <label class="ls-field">
-          <strong class="ls-label">Quantidade de envios avulsos a adicionar</strong>
-          <input type="number" name="" required />
-        </label>
+        <div class="row" >
+          <label class="ls-field ls-field-inline">
+            <span class="ls-label col-md-8">Quantidade de envios avulsos a adicionar</span>
+            <span class="col-md-2 col-md-offset-2">
+              <input type="number" name="" required >
+            </span>
+          </label>
+        </div>
       </div>
       <div class="ls-modal-footer">
         <button type="submit" class="ls-btn-primary">Adicionar</button>
@@ -425,20 +429,27 @@ layout: examples
       </div>
       <div class="ls-modal-body">
         <p>Os envios serão removidos automaticamente após esta ação.</p>
-        <p>
-          <strong>Saldo disponível do cliente</strong>
-          <span class="ls-float-right">8</span>
-        </p>
-        <hr>
-        <p>
-          <strong>Disponível para remoção até 27/04/2014</strong>
-          <span class="ls-float-right">8</span>
-        </p>
-        <hr>
-        <label class="ls-field">
-          <strong class="ls-label">Quantidade de envios a remover</strong>
-          <input type="number" name="" required >
-        </label>
+
+        <div class="row" >
+          <label class="ls-field ls-field-inline">
+            <span class="ls-label col-md-8">Saldo disponível do cliente</span>
+            <span class="col-md-2 col-md-offset-2">
+              <input type="number" disabled="disabled" readonly="readonly" name="" value="8" >
+            </span>
+          </label>
+          <label class="ls-field ls-field-inline">
+            <span class="ls-label col-md-8">Disponível para remoção até 27/04/2014</span>
+            <span class="col-md-2 col-md-offset-2">
+              <input type="number" disabled="disabled" readonly="readonly" name="" value="8" >
+            </span>
+          </label>
+          <label class="ls-field ls-field-inline">
+            <span class="ls-label col-md-8">Quantidade de envios a remover</span>
+            <span class="col-md-2 col-md-offset-2">
+              <input type="number" name="" required >
+            </span>
+          </label>
+        </div>
       </div>
       <div class="ls-modal-footer">
         <button type="submit" class="ls-btn-primary">Remover</button>
@@ -458,15 +469,20 @@ layout: examples
       </div>
       <div class="ls-modal-body">
         <p>O novo valor só entrará em vigor após a data de 08/05/2014</p>
-        <p>
-          <strong>Saldo disponível da sua revenda</strong>
-          <span class="ls-float-right">889.239</span>
-        </p>
-        <hr>
-        <label class="ls-field">
-          <strong class="ls-label">Quantidade de envios</strong>
-          <input type="number" name="" value="10" required >
-        </label>
+        <div class="row" >
+          <label class="ls-field ls-field-inline">
+            <span class="ls-label col-md-7">Saldo disponível da sua revenda</span>
+            <span class="col-md-3 col-md-offset-2">
+              <input type="number" disabled="disabled" readonly="readonly" name="" value="889.239" >
+            </span>
+          </label>
+          <label class="ls-field ls-field-inline">
+            <span class="ls-label col-md-8">Quantidade de envios</span>
+            <span class="col-md-2 col-md-offset-2">
+              <input type="number" name="" value="10" >
+            </span>
+          </label>
+        </div>
       </div>
       <div class="ls-modal-footer">
         <button type="submit" class="ls-btn-primary">Alterar</button>
