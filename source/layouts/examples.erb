@@ -87,9 +87,9 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
         <%- 5.times do %>
-          <li>
+          <li class="ls-dismissable">
             <a href="#"><%= lorem.sentence%></a>
-            <a href="#" class="ls-ico-close ls-close-notification"></a>
+            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
         <% end %>
       </ul>
