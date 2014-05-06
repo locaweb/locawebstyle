@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Página Inicial
 body_class: no-main-bg
 layout: examples
 ---
@@ -7,38 +7,43 @@ layout: examples
 <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
 
 <div class="ls-box ls-board-info">
-  <span class="ls-small-info ls-float-right">Válido até <b>01.05.2014</b></span>
-  <h2 class="ls-title-3 ls-color-default ls-ico-dashboard">Consumo de envios</h2>
+  <header class="ls-info-header row">
+    <div class="col-md-9">
+      <h2 class="ls-title-3 ls-ico-dashboard">Consumo de envios</h2>
+    </div>
+    <div class="col-md-3">
+      <p class="ls-txt-right ls-small-info">Valido até <strong>01.05.2014</strong></p>
+    </div>
+  </header>
 
   <div class="row">
 
     <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-board-box">
+      <div class="ls-board-box">
         <h6 class="ls-title-4">Contratado
-          <a href="" data-ls-module="popover" data-title="Precisa de ajuda?" data-content="Lorem Ipsum is text." data-placement="top">(?)</a>
         </h6>
         <strong class="ls-board-info">1 <small>milhão</small></strong>
-        <a href="#" class="ls-btn">Alterar plano</a>
+        <a href="#" class="ls-btn ls-btn-sm">Alterar plano</a>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-board-box">
+      <div class="ls-board-box">
         <h6 class="ls-title-4">Avulso</h6>
         <strong class="ls-board-info">0</strong>
-        <a href="#" class="ls-btn">Contratar</a>
+        <a href="#" class="ls-btn ls-btn-sm">Contratar</a>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-board-box">
+      <div class="ls-board-box">
         <h6 class="ls-title-4">Distribuído</h6>
         <strong class="ls-board-info">10.743 <small>mil</small></strong>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-board-box">
+      <div class="ls-board-box">
         <h6 class="ls-title-4 color-default">Disponível</h6>
         <strong class="ls-board-info">81% <small class="ls-weight-normal">989.257 mil</small></strong>
       </div>
@@ -47,7 +52,7 @@ layout: examples
   </div>
 </div>
 
-<h2 class="ls-title-2">Clientes que mais contrataram envios <a href="#" class="ls-btn ls-float-right">Ver mais relatórios</a></h2>
+<h2 class="ls-title-2">Clientes que mais contrataram envios <a href="#" class="ls-btn ls-float-right-sm ls-btn-block-sm">Ver mais relatórios</a></h2>
 <div class="ls-box">
   <img src="<%= base_url %>/<%= images_dir %>/graph-example.jpg">
 </div>
@@ -56,7 +61,7 @@ layout: examples
 
   <div class="col-md-6">
 
-    <h2 class="ls-title-2">Clientes que mais contrataram envios <a href="#" class="ls-btn ls-float-right">Ver todos</a></h2>
+    <h2 class="ls-title-2">Clientes que mais contrataram envios <a href="#" class="ls-btn ls-float-right-sm ls-btn-block-sm">Ver todos</a></h2>
     <div class="ls-box">
       <table class="ls-table">
         <thead>
@@ -86,7 +91,7 @@ layout: examples
 
   </div>
   <div class="col-md-6">
-    <h2 class="ls-title-2">Clientes bloqueados por bounce <a href="#" class="ls-btn ls-float-right">Ver todos</a></h2>
+    <h2 class="ls-title-2">Clientes bloqueados por bounce <a href="#" class="ls-btn ls-float-right-sm ls-btn-block-sm">Ver todos</a></h2>
     <div class="ls-box">
       <table class="ls-table">
         <thead>
