@@ -31,9 +31,10 @@
       </a>
       <nav class="ls-dropdown-nav ls-user-menu">
         <ul>
-          <li><a href="#">Minha conta</a></li>
-          <li><a href="#">outro link</a></li>
-          <li><a href="#">Loggout</a></li>
+          <li><a href="#">Meus dados</a></li>
+          <li><a href="#">Faturas</a></li>
+          <li><a href="#">Planos</a></li>
+          <li><a href="#">Sair</a></li>
          </ul>
       </nav>
     </div>
@@ -59,14 +60,14 @@
   <aside class="ls-sidebar">
     <div class="ls-area-account ls-ico-user">
       <h2 class="ls-title-2">Administrando</h2>
-      <h3 class="ls-title-3">subdominio.locaweb.com.br</h3>
+      <h3 class="ls-title-3">revenda.fmolina</h3>
       <a href="<%= base_url %>/documentacao/exemplos/rev/pre-painel" class="ls-btn-xs ls-btn-dark">VER TODOS</a>
     </div>
     <nav class="ls-menu">
       <ul>
          <li><a href="<%= base_url %>/documentacao/exemplos/rev/home" class="ls-ico-home">Página inicial</a></li>
-         <li><a href="<%= base_url %>/documentacao/exemplos/rev/base" class="ls-ico-home">Primeiros passos</a></li>
-         <li><a href="<%= base_url %>/documentacao/exemplos/rev/no-clients" class="ls-ico-users">Clientes</a></li>
+         <!-- <li><a href="<%= base_url %>/documentacao/exemplos/rev/base" class="ls-ico-home">Primeiros passos</a></li> -->
+         <li><a href="<%= base_url %>/documentacao/exemplos/rev/clients" class="ls-ico-users">Clientes</a></li>
          <li><a href="<%= base_url %>/documentacao/exemplos/rev/stats" class="ls-ico-stats">Relatórios da revenda</a></li>
          <li class="ls-submenu">
           <a href="#" class="ls-ico-cog">Configurações</a>
@@ -95,6 +96,14 @@
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-help-curtain">
+      <h3 class="ls-title-2">Feedback</h3>
+      <ul>
+        <%- 2.times do %>
+          <li><a href="#">> <%= lorem.words 6 %></a></li>
+        <% end %>
+      </ul>
+    </nav>
+    <nav class="ls-notification-list" id="ls-feedback-curtain">
       <h3 class="ls-title-2">Ajuda</h3>
       <ul>
         <li class="ls-txt-center hidden-xs">
@@ -102,14 +111,6 @@
         </li>
         <li><a href="#">> Guia</a></li>
         <li><a href="#">> Wiki</a></li>
-      </ul>
-    </nav>
-    <nav class="ls-notification-list" id="ls-feedback-curtain">
-      <h3 class="ls-title-2">Feedback</h3>
-      <ul>
-        <%- 2.times do %>
-          <li><a href="#">> <%= lorem.words 6 %></a></li>
-        <% end %>
       </ul>
     </nav>
   </aside>
