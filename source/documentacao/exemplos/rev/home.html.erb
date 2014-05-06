@@ -6,7 +6,7 @@ layout: examples
 
 <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
 
-<div class="ls-box ls-board-info">
+<div class="ls-box ls-md-space">
   <header class="ls-info-header row">
     <div class="col-md-9">
       <h2 class="ls-title-3 ls-ico-dashboard">Consumo de envios</h2>
@@ -16,13 +16,13 @@ layout: examples
     </div>
   </header>
 
-  <div class="row">
-
+  <div id="sending-stats" class="row">
     <div class="col-sm-6 col-md-3">
       <div class="ls-board-box">
-        <h6 class="ls-title-4">Contratado
-        </h6>
-        <strong class="ls-board-info">1 <small>milhão</small></strong>
+        <h6 class="ls-title-4">Contratado</h6>
+        <span class="ls-board-data">
+          <strong>1 <small>milhão</small></strong>
+        </span>
         <a href="#" class="ls-btn ls-btn-sm">Alterar plano</a>
       </div>
     </div>
@@ -30,7 +30,9 @@ layout: examples
     <div class="col-sm-6 col-md-3">
       <div class="ls-board-box">
         <h6 class="ls-title-4">Avulso</h6>
-        <strong class="ls-board-info">0</strong>
+        <span class="ls-board-data">
+          <strong>0</strong>
+        </span>
         <a href="#" class="ls-btn ls-btn-sm">Contratar</a>
       </div>
     </div>
@@ -38,18 +40,23 @@ layout: examples
     <div class="col-sm-6 col-md-3">
       <div class="ls-board-box">
         <h6 class="ls-title-4">Distribuído</h6>
-        <strong class="ls-board-info">10.743 <small>mil</small></strong>
+        <span class="ls-board-data">
+          <strong>10.743 <small>mil</small></strong>
+        </span>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
       <div class="ls-board-box">
         <h6 class="ls-title-4 color-default">Disponível</h6>
-        <strong class="ls-board-info">81% <small class="ls-weight-normal">989.257 mil</small></strong>
+        <span class="ls-board-data">
+          <strong class="ls-color-theme">81%</strong>
+          989.257 mil
+        </span>
       </div>
     </div>
-
   </div>
+
 </div>
 
 <h2 class="ls-title-2">Clientes que mais contrataram envios <a href="#" class="ls-btn ls-float-right-sm ls-btn-block-sm">Ver mais relatórios</a></h2>
