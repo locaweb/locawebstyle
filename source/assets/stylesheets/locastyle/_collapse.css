@@ -207,7 +207,6 @@ tr.active .actionsTable {display: none;}
 ***/
 .notification.boxCollapse {
   position: relative;
-  overflow: hidden;
 }
 
 .notification.boxCollapse header{
