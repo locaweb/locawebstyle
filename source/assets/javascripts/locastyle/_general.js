@@ -9,17 +9,28 @@ locastyle.general = (function() {
   }
 
   function init() {
+    _autoTrigger();
     _loadEvents();
     showSidebar();
     showNotifications();
     subMenu();
-    _locationHashTrigger();
     _elementDisabled();
     _linkPreventDefault();
     _btnGroupActivationToogle();
     menuAnchor();
     toggleFields();
     equalHeight();
+  }
+
+  // Quando tem uma hash na url que seja igual a algum target no html
+  // esse método faz um trigger click no elemento
+  function _autoTrigger(){
+    // Esse ponto de exclamação é para funcionar no IE
+    var hash = window.location.hash.replace("!/#", "");
+    if(hash != ''){
+      $("[data-target="+hash+"]").trigger('click');
+      $("a[href="+hash+"]").trigger('click');
+    }
   }
 
   function equalHeight () {
@@ -81,12 +92,6 @@ locastyle.general = (function() {
       $('html,body').animate({
         scrollTop: $target.offset().top - 70
       }, 1000);
-    }
-  }
-
-  function _locationHashTrigger() {
-    if (window.location.hash) {
-      $('a[class*="ls-"][href="' + window.location.hash + '"]').trigger('click');
     }
   }
 
