@@ -212,7 +212,11 @@ tr.active .actionsTable {display: none;}
 .notification.boxCollapse header{
   border-color: transparent; padding: 5px 10px;
 }
-.notification header h3{display: inline-block; margin-right: 5px;}
+.notification header h3{
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 0;
+}
 .notification header:before{
   content: "";
   height: 17px;
