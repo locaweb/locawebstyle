@@ -7,65 +7,79 @@ layout: examples
   <h1 class="ls-title-intro ls-ico-cog">Aparência</h1>
   <p>Personalize e deixe o e-mail marketing com a cara da sua empresa.</p>
 </div>
+<form action="" class="ls-form">
+  <div class="row">
+    <div class="col-md-9">
 
-<div class="row">
-  <div class="col-md-9">
-
-    <div class="ls-box">
-      <form class="ls-form">
-        <label class="ls-field">
-          <span class="ls-label ">Nome da Revenda</span>
-          <input type="text" name="nome" required>
-          <small>Máximo de 30 caracteres</small>
-        </label>
-      </form>
-    </div>
-
-    <div class="ls-box">
-      <h2 class="ls-title-2">Identificação do painel e dos e-mails</h2>
-      <p>Será exibido no cabeçalho do painel e dos e-mails recebidos pelos clientes</p>
-
-      <div class="ls-box ls-box-gray">
-        <label class="ls-field  ">
-          <input type="radio" name="nome" placeholder="Nome e sobrenome">
-          <span class="ls-label ls-display-inline-block">Nome do Produto</span>
-        </label>
+      <div class="ls-box">
+        <form class="ls-form">
+          <label class="ls-field">
+            <span class="ls-label ">Nome da Revenda</span>
+            <input type="text" name="nome" required>
+            <small>Máximo de 30 caracteres</small>
+          </label>
+        </form>
       </div>
 
-      <div class="ls-box ls-box-gray">
-        <label class="ls-field  ">
-          <input type="radio" name="nome" placeholder="Nome e sobrenome">
-          <span class="ls-label ls-display-inline-block">logo</span>
-          <p>Envie uma imagem JPG, PNG ou GIF. Ela será exibida com no máximo 440 pixels de largura e 70 pixels de altura.</p>
-        </label>
-        <input type="file" >
+      <div class="ls-box">
+        <h2 class="ls-title-2">Identificação do painel e dos e-mails</h2>
+        <p>Será exibido no cabeçalho do painel e dos e-mails recebidos pelos clientes</p>
+
+        <div class="ls-box ls-box-gray">
+          <label class="ls-field  ">
+            <input type="radio" name="nome" placeholder="Nome e sobrenome">
+            <span class="ls-label ls-display-inline-block">Nome do Produto</span>
+          </label>
+        </div>
+
+        <div class="ls-box ls-box-gray">
+          <label class="ls-field  ">
+            <input type="radio" name="nome" placeholder="Nome e sobrenome">
+            <span class="ls-label ls-display-inline-block">logo</span>
+            <p>Envie uma imagem JPG, PNG ou GIF. Ela será exibida com no máximo 440 pixels de largura e 70 pixels de altura.</p>
+          </label>
+          <input type="file" >
+        </div>
+      </div>
+
+      <div class="ls-box">
+        <h2 class="ls-title-2">Cor Padrão</h2>
+        <p>Escolha uma cor como padrão para o seu email marketing.</p>
+        <div class="row ls-select-color">
+          <div class="col-md-1">
+            <input id="color1" checked="checked" type="radio" name="radio">
+            <label for="color1" class="ls-label-color ls-bg-theme-blue"></label>
+          </div>
+          <div class="col-md-1">
+            <input type="radio" id="color2" name="radio">
+            <label for="color2" class="ls-label-color ls-bg-theme-gold"></label>
+          </div>
+          <div class="col-md-1">
+            <input type="radio" id="color3" name="radio">
+            <label for="color3" class="ls-label-color ls-bg-theme-gray"></label>
+          </div>
+          <div class="col-md-1">
+            <input type="radio" id="color4" name="radio">
+            <label for="color4" class="ls-label-color ls-bg-theme-light-green"></label>
+          </div>
+          <div class="col-md-1">
+            <input type="radio" id="color5" name="radio">
+            <label for="color5" class="ls-label-color ls-bg-theme-green"></label>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="ls-box">
-      <h2 class="ls-title-2">Cor Padrão</h2>
-      <p>Escolha uma cor como padrão para o seu email marketing.</p>
-      <% (1..8).each do |i| %>
-      <div class="col-md-1">
-        <label>
-          cor <%= i %>
-          <input type="radio" name="radio">
-        </label>
-      </div>
-      <% end %>
+    <div class="col-md-3">
+      <img src="https://emkt-assets.locaweb.com.br/assets/img/blue.jpg">
+    </div>
+
+    <div class="col-md-12">
+      <hr>
+      <input type="submit" class="ls-btn-primary" value="Salvar">
+      <a href="#" class="ls-btn">Cancelar</a>
+      <hr class="ls-clearfix ls-no-border">
     </div>
 
   </div>
-
-  <div class="col-md-3">
-    <img src="https://emkt-assets.locaweb.com.br/assets/img/blue.jpg">
-  </div>
-
-  <div class="col-md-12">
-    <hr>
-    <input type="submit" class="ls-btn-primary" value="Salvar">
-    <a href="#" class="ls-btn">Cancelar</a>
-    <hr class="ls-clearfix ls-no-border">
-  </div>
-
-  </div>
+</form>
