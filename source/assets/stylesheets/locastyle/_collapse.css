@@ -311,3 +311,8 @@ tr.active .actionsTable {display: none;}
   position: absolute;
   top: 8px;
 }
+
+/* Indicador no Collapse */
+.boxCollapse .valueNotify.scoreIndicator {
+  box-shadow: none;
+}
