@@ -306,4 +306,8 @@ tr.active .actionsTable {display: none;}
   overflow: visible;
 }
 
-.boxCollapse header a {z-index: 2;}
+.boxCollapse header a {
+  z-index: 2;
+  position: absolute;
+  top: 8px;
+}
