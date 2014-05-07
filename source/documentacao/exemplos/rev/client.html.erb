@@ -161,111 +161,117 @@ layout: examples
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-12">
+    <ul class="ls-tabs-nav" id="awesome-tab">
+      <li class="active"><a data-ls-module="tabs" href="#tab1">Contratação x uso</a></li>
+      <li><a data-ls-module="tabs" href="#tab2">Estatísticas de envios</a></li>
+    </ul>
 
-<ul class="ls-tabs-nav" id="awesome-tab">
-  <li class="active"><a data-ls-module="tabs" href="#tab1">Contratação x uso</a></li>
-  <li><a data-ls-module="tabs" href="#tab2">Estatísticas de envios</a></li>
-</ul>
-<div class="ls-tabs-container" id="awesome-tab-content">
-  <div id="tab1" class="ls-tab-content active">
+    <div class="ls-tabs-container" id="awesome-tab-content">
+      <div id="tab1" class="ls-tab-content active">
 
-    <div class="ls-tab-content child1 active">
-      <p>Contratação x uso</p>
-      <img src="<%= base_url %>/<%= images_dir %>/graph-example.jpg">
-    </div>
+        <div class="ls-tab-content child1 active">
+          <p>Contratação x uso</p>
+          <img src="<%= base_url %>/<%= images_dir %>/graph-example.jpg">
+        </div>
 
-    <div class="ls-tab-content child2">
+        <div class="ls-tab-content child2">
 
-      <table class="ls-table">
-        <thead>
-          <tr>
-            <th class="ls-txt-center hidden-xs">Período</th>
-            <th class="ls-txt-center">Contratados</th>
-            <th class="ls-txt-center" colspan="2">Distribuídos</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-              <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-              <td class="ls-txt-center">1000000</td>
-              <td class="ls-txt-center">10741</td>
-              <td class="ls-txt-center">1%</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-              <td class="ls-txt-center">1000000</td>
-              <td class="ls-txt-center">10741</td>
-              <td class="ls-txt-center">1%</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-              <td class="ls-txt-center">1000000</td>
-              <td class="ls-txt-center">10741</td>
-              <td class="ls-txt-center">1%</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-              <td class="ls-txt-center">1000000</td>
-              <td class="ls-txt-center">10741</td>
-              <td class="ls-txt-center">1%</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-              <td class="ls-txt-center">1000000</td>
-              <td class="ls-txt-center">10741</td>
-              <td class="ls-txt-center">1%</td>
-            </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div id="tab2" class="ls-tab-content">
+          <table class="ls-table">
+            <thead>
+              <tr>
+                <th class="ls-txt-center hidden-xs">Período</th>
+                <th class="ls-txt-center">Contratados</th>
+                <th class="ls-txt-center" colspan="2">Distribuídos</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
+                  <td class="ls-txt-center">1000000</td>
+                  <td class="ls-txt-center">10741</td>
+                  <td class="ls-txt-center">1%</td>
+                </tr>
+                <tr>
+                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
+                  <td class="ls-txt-center">1000000</td>
+                  <td class="ls-txt-center">10741</td>
+                  <td class="ls-txt-center">1%</td>
+                </tr>
+                <tr>
+                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
+                  <td class="ls-txt-center">1000000</td>
+                  <td class="ls-txt-center">10741</td>
+                  <td class="ls-txt-center">1%</td>
+                </tr>
+                <tr>
+                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
+                  <td class="ls-txt-center">1000000</td>
+                  <td class="ls-txt-center">10741</td>
+                  <td class="ls-txt-center">1%</td>
+                </tr>
+                <tr>
+                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
+                  <td class="ls-txt-center">1000000</td>
+                  <td class="ls-txt-center">10741</td>
+                  <td class="ls-txt-center">1%</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="tab2" class="ls-tab-content">
 
-    <div class="ls-tab-content child1 active">
-      <p>Estatísticas de envios</p>
-      <img src="<%= base_url %>/<%= images_dir %>/graph-example.jpg">
-    </div>
+        <div class="ls-tab-content child1 active">
+          <p>Estatísticas de envios</p>
+          <img src="<%= base_url %>/<%= images_dir %>/graph-example.jpg">
+        </div>
 
-    <div class="ls-tab-content child2">
-      <table class="ls-table">
-        <thead>
-          <tr>
-            <th class="ls-txt-center">Data</th>
-            <th class="ls-txt-center">Todos</th>
-            <th class="ls-txt-center" colspan="2">Ativos</th>
-            <th class="ls-txt-center hidden-xs" colspan="2">Desativados</th>
-            <th class="ls-txt-center hidden-xs" colspan="2">Bloqueados por bounce</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="ls-txt-center">Hoje</td>
-            <td class="ls-txt-center">29</td>
-            <td class="ls-txt-center">26</td>
-            <td class="ls-txt-center hidden-xs">89%</td>
-            <td class="ls-txt-center hidden-xs">3</td>
-            <td class="ls-txt-center hidden-xs">10%</td>
-            <td class="ls-txt-center hidden-xs">0</td>
-            <td class="ls-txt-center hidden-xs">0%</td>
-          </tr>
-          <tr>
-            <td class="ls-txt-center">Hoje</td>
-            <td class="ls-txt-center">29</td>
-            <td class="ls-txt-center">26</td>
-            <td class="ls-txt-center hidden-xs">89%</td>
-            <td class="ls-txt-center hidden-xs">3</td>
-            <td class="ls-txt-center hidden-xs">10%</td>
-            <td class="ls-txt-center hidden-xs">0</td>
-            <td class="ls-txt-center hidden-xs">0%</td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="ls-tab-content child2">
+          <table class="ls-table">
+            <thead>
+              <tr>
+                <th class="ls-txt-center">Data</th>
+                <th class="ls-txt-center">Todos</th>
+                <th class="ls-txt-center" colspan="2">Ativos</th>
+                <th class="ls-txt-center hidden-xs" colspan="2">Desativados</th>
+                <th class="ls-txt-center hidden-xs" colspan="2">Bloqueados por bounce</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="ls-txt-center">Hoje</td>
+                <td class="ls-txt-center">29</td>
+                <td class="ls-txt-center">26</td>
+                <td class="ls-txt-center hidden-xs">89%</td>
+                <td class="ls-txt-center hidden-xs">3</td>
+                <td class="ls-txt-center hidden-xs">10%</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+                <td class="ls-txt-center hidden-xs">0%</td>
+              </tr>
+              <tr>
+                <td class="ls-txt-center">Hoje</td>
+                <td class="ls-txt-center">29</td>
+                <td class="ls-txt-center">26</td>
+                <td class="ls-txt-center hidden-xs">89%</td>
+                <td class="ls-txt-center hidden-xs">3</td>
+                <td class="ls-txt-center hidden-xs">10%</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+                <td class="ls-txt-center hidden-xs">0%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="row">
-  <h2 class="ls-title-3 col-md-12">Histórico de transações</h2>
+  <div class="col-md-8 col-xs-6">
+    <h2 class="ls-title-3">Histórico de transações</h2>
+  </div>
   <div class="col-md-12">
     <form action="" class="ls-form row">
         <label class="ls-field ls-field-inline col-md-4">
