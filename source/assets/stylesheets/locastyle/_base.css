@@ -1259,9 +1259,14 @@ hr.sep {background-color: #E5E5E5; }
   -webkit-border-radius: 5px;
 }
 
-
 ol p{font-size: inherit;}
-.notification .listInfos{margin: 0;}
+
+.notification .listInfos {
+  margin: 0;
+  background-color: #fff;
+  list-style: none;
+}
+
 .notification .tab-content .tab-pane{padding: 10px;}
 .listInfos{
   max-height: 250px;
