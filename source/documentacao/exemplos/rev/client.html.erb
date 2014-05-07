@@ -10,13 +10,14 @@ layout: examples
     <div id="domain-form" class="ls-form-text ls-form-disable">
       <div class="ls-group-btn-right ls-regroup">
         <a href="" class="ls-btn-primary ls-float-left" target="_blank">Acessar o Painel</a>
-        <a href="" data-ls-toggle-fields="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" class="ls-btn ls-float-left domain-actions">Editar</a>
         <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
           <a href="#" class="ls-btn"></a>
           <ul class="ls-dropdown-nav">
-            <li><a href="#">Desativar Clientes</a></li>
+            <li>
+              <a href="" data-ls-toggle-fields="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" class="domain-actions">Editar</a>
+            </li>
             <li><a href="#" data-ls-module="modal" data-target="#editPassword">Alterar senha</a></li>
-            <li><a href="#">Acessar o Painel</a></li>
+            <li><a href="#">Desativar</a></li>
           </ul>
         </div>
       </div>
@@ -71,8 +72,8 @@ layout: examples
     </div>
 
     <div class="col-md-6 col-sm-12">
-      <a href="" data-ls-module="modal" data-target="#addMessage" class="ls-btn-primary ls-float-right-sm ls-btn-block-sm">Adicionar envios</a>
       <a href="" data-ls-module="modal" data-target="#removeMessage" class="ls-btn ls-float-right-sm ls-btn-block-sm">Remover envios</a>
+      <a href="" data-ls-module="modal" data-target="#addMessage" class="ls-btn-primary ls-float-right-sm ls-btn-block-sm">Adicionar envios</a>
     </div>
   </header>
 
