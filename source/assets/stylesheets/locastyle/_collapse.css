@@ -316,3 +316,8 @@ tr.active .actionsTable {display: none;}
 .boxCollapse .valueNotify.scoreIndicator {
   box-shadow: none;
 }
+
+/* Popover dentro do Collapse */
+.boxCollapse header .popover-title {
+  display: block;
+}
