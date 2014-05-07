@@ -205,7 +205,11 @@ tr.active .actionsTable {display: none;}
 /***
 **** Notificações
 ***/
-.notification.boxCollapse{position: relative;}
+.notification.boxCollapse {
+  position: relative;
+  overflow: hidden;
+}
+
 .notification.boxCollapse header{
   border-color: transparent; padding: 5px 10px;
 }
