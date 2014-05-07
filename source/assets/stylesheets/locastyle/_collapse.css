@@ -1,10 +1,12 @@
-/***
-**** BOX Collpase
-***/
-.boxGray > .lnkArrow {margin: 0 15px 10px;}
-p + .boxCollapse {margin-top: 30px;}
-.collapse p + .btn {margin: 10px 0 5px;}
-.collapse h6:first-child {padding: 10px 0 0;}
+/* Box Collpase */
+
+.boxGray > .lnkArrow { margin: 0 15px 10px; }
+
+p + .boxCollapse { margin-top: 30px; }
+
+.collapse p + .btn { margin: 10px 0 5px; }
+
+.collapse h6:first-child { padding: 10px 0 0; }
 
 .boxCollapse {
   border-radius: 3px;
@@ -22,9 +24,8 @@ p + .boxCollapse {margin-top: 30px;}
 
 .boxGray .boxCollapse {margin: 0 15px 5px;}
 
-/**
-  boxCollapse quando existir numeração
-**/
+/* boxCollapse quando existir numeração */
+
 .boxCollapse.simpleCollapse {
   border: 1px solid #d0d0d0;
   margin-bottom: 5px;
@@ -40,22 +41,21 @@ p + .boxCollapse {margin-top: 30px;}
   font-family: Ubuntu, verdana, arial, helvetica, tahoma, sans-serif;
 }
 
-.boxCollapse.simpleCollapse .collapse::before {
-  padding-top: 12px;
-}
+.boxCollapse.simpleCollapse .collapse:before { padding-top: 12px; }
 
-.boxCollapse.simpleCollapse .collapse {padding-left: 38px;}
+.boxCollapse.simpleCollapse .collapse { padding-left: 38px; }
+
 .boxCollapse.simpleCollapse .collapse p{line-height: 16px;}
 
 .boxCollapse header {
-  border-left: 5px solid #CCC;
+  border-left: 5px solid #ccc;
   padding: 3px 10px 6px;
   cursor: pointer;
   outline: none;
   position: relative;
 }
 
-.boxCollapse header .lnkCollapse{
+.boxCollapse header .lnkCollapse {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -66,27 +66,26 @@ p + .boxCollapse {margin-top: 30px;}
 }
 
 .boxCollapse:hover,
-.boxCollapse.focus{background-color: #ECECEC;}
+.boxCollapse.focus { background-color: #ececec; }
 
 .boxCollapse.active {
   background-image: url(../images/setaCollapseTop.png);
-  background-color: #ECECEC;
+  background-color: #ececec;
   padding-bottom: 10px;
 }
 
 .boxCollapse.active header h4,
-.boxCollapse.focus header h4{font-weight: bold;}
+.boxCollapse.focus header h4{ font-weight: bold; }
 
-.boxCollapse .collapse {padding: 0 15px;}
+.boxCollapse .collapse { padding: 0 15px; }
 
-.boxCollapse .collapse::before {
+.boxCollapse .collapse:before {
   content: "";
   display: block;
   padding: 10px 0 0;
 }
 
-.boxCollapse.whiteCollapse .collapse::before {padding: 10px 0 0;}
-
+.boxCollapse.whiteCollapse .collapse::before { padding: 10px 0 0; }
 
 .boxCollapse header h4 {
   font: 16px verdana, arial, tahoma, sans-serif;
@@ -108,24 +107,19 @@ p + .boxCollapse {margin-top: 30px;}
   margin-bottom: 30px;
 }
 
-.boxCinzaInner + .boxCinzaInner {margin-top: -25px;}
-.boxCinzaInner .control-group {margin: 0 0 10px;}
+.boxCinzaInner + .boxCinzaInner { margin-top: -25px; }
+.boxCinzaInner .control-group { margin: 0 0 10px; }
 
-.boxCinzaInner p + div.control-group {margin-top: 20px;}
+.boxCinzaInner p + div.control-group { margin-top: 20px; }
 
 .boxCollapse .tableList {
   margin-top: 0;
   border-collapse: separate;
-  background: #FFF;
+  background: #fff;
   border-bottom: none;
 }
 
-/*.boxCollapse table td {
-  border-right: none;
-  border-bottom: 1px solid #ddd;
-}*/
-
-.boxCollapse form {margin-bottom: 0;}
+.boxCollapse form { margin-bottom: 0; }
 
 .boxCollapse .tableList td .disabled {
   background: none;
@@ -138,7 +132,8 @@ p + .boxCollapse {margin-top: 30px;}
   color: #555;
 }
 
-.boxCollapse .tableList tr:nth-child(even){background-color: #f4f4f4;}
+.boxCollapse .tableList tr:nth-child(even) { background-color: #f4f4f4; }
+
 .boxCollapse .tableList thead th {
   background: #cecece;
   color: #545454;
@@ -163,8 +158,9 @@ tr.active .boxActions {
   padding: 10px 0 5px;
 }
 
-tr.active .boxActions .btn {margin-right: 0;}
-tr.active .actionsTable {display: none;}
+tr.active .boxActions .btn { margin-right: 0; }
+
+tr.active .actionsTable { display: none; }
 
 .boxCollapse h4 span {
   font: bold 18px Ubuntu, verdana, arial, tahoma, helvetica, sans-serif;
@@ -185,39 +181,38 @@ tr.active .actionsTable {display: none;}
 }
 
 .boxCollapse hr,
-.boxCollapse hr.sepDot {
-  border-color: #c9c9c9;
-}
+.boxCollapse hr.sepDot { border-color: #c9c9c9; }
 
 .boxCollapse .toggleChild hr {
   border-bottom-width: 5px;
   margin: 10px 0;
 }
-/***
-**** Collapse dentro de obsGray
-***/
-.obsGray .boxCollapse{background-color: #f6f6f6;}
+
+/* Collapse dentro de obsGray */
+
+.obsGray .boxCollapse { background-color: #f6f6f6; }
+
 .obsGray .boxCollapse:hover,
 .obsGray .boxCollapse.active,
 .obsGray .boxCollapse.focus,
-.obsGray .boxCollapse .in{background-color: #fff;}
+.obsGray .boxCollapse .in { background-color: #fff; }
 
-/***
-**** Notificações
-***/
-.notification.boxCollapse {
-  position: relative;
+/* Notificações */
+
+.notification.boxCollapse { position: relative; }
+
+.notification.boxCollapse header {
+  border-color: transparent;
+  padding: 5px 10px;
 }
 
-.notification.boxCollapse header{
-  border-color: transparent; padding: 5px 10px;
-}
-.notification header h3{
+.notification header h3 {
   display: inline-block;
   margin-right: 5px;
   margin-bottom: 0;
 }
-.notification header:before{
+
+.notification header:before {
   content: "";
   height: 17px;
   left: -9px;
@@ -232,7 +227,8 @@ tr.active .actionsTable {display: none;}
   -moz-box-shadow: inset -1px 0px 5px rgba(0,0,0,0.15);
   -webkit-box-shadow: inset -1px 0px 5px rgba(0,0,0,0.15);
 }
-.notification header:after{
+
+.notification header:after {
   content: "";
   background: rgba(255,255,255,0.5);
   border-radius: 10px;
@@ -246,13 +242,16 @@ tr.active .actionsTable {display: none;}
   z-index: 2;
   background-color: #cdcdcd;
 }
-.boxCollapse.notification .collapse:before{
+
+.boxCollapse.notification .collapse:before {
   padding: 0;
   position: relative;
   z-index: 1;
 }
-.notification .valueNotify{top: -2px;}
-.valueNotify{
+
+.notification .valueNotify { top: -2px; }
+
+.valueNotify {
   background: #ea0019;
   color: #fff;
   display: inline-block;
@@ -263,7 +262,8 @@ tr.active .actionsTable {display: none;}
   border-radius: 3px;
   box-shadow: inset -3px 0px 5px rgba(0,0,0,0.15);
 }
-.valueNotify:before{
+
+.valueNotify:before {
   content: "";
   width: 0;
   height: 0;
@@ -274,40 +274,37 @@ tr.active .actionsTable {display: none;}
   border-bottom: 5px solid transparent;
   border-right:5px solid #ea0019;
 }
-.valueNotify.empty{
+
+.valueNotify.empty {
   background-color: #cdcdcd;
   box-shadow: inset -3px 0px 5px rgba(0,0,0,0.05);
 }
-.valueNotify.empty:before{
-  border-right:5px solid #cdcdcd;
-}
 
-.boxCollapse .tabs{
+.valueNotify.empty:before { border-right: 5px solid #cdcdcd; }
+
+.boxCollapse .tabs {
   background: none;
   position: absolute;
   top: -42px;
   left: 200px;
   z-index: 2;
 }
-.boxCollapse.notification .in{overflow: visible;}
 
-.boxCollapse .tab-content{
+.boxCollapse .tab-content {
   border: none;
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   margin-bottom: 0;
 }
+
 .boxCollapse .tabs li a:after,
 .boxCollapse .tabs li.active a:after,
-.boxCollapse .tabs li a:hover:after{background: none;}
+.boxCollapse .tabs li a:hover:after{ background: none; }
 
-/***
- **** Fix para collpases com toolip dentro (use com cuidado)
- ***/
-.collapse.with-tooltip.in {
-  overflow: visible;
-}
+/* Fix para collpases com toolip dentro (use com cuidado) */
+
+.collapse.with-tooltip.in { overflow: visible; }
 
 .boxCollapse header a {
   z-index: 2;
@@ -316,11 +313,7 @@ tr.active .actionsTable {display: none;}
 }
 
 /* Indicador no Collapse */
-.boxCollapse .valueNotify.scoreIndicator {
-  box-shadow: none;
-}
+.boxCollapse .valueNotify.scoreIndicator { box-shadow: none; }
 
 /* Popover dentro do Collapse */
-.boxCollapse header .popover-title {
-  display: block;
-}
+.boxCollapse header .popover-title { display: block; }
