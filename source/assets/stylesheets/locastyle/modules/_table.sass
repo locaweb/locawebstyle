@@ -46,6 +46,23 @@ $bg-actions-color:  #00a272
           +appearance(checkbox)
           display: inline-block
 
+      a
+        display: block
+        color: #fff
+
+        &:hover
+          color: #fff
+          text-decoration: none
+
+        &[class*="ico"]:before
+          display: none
+
+        &[class*="ico"]:after
+          top: 0
+          display: inline
+          font-weight: bold
+
+
   tbody
 
     &.ls-table-invert-bg
