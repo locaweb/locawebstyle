@@ -1268,6 +1268,15 @@ ol p{font-size: inherit;}
   list-style: none;
 }
 
+.notification .listInfos li[class*="ico-"] {padding-left: 54px; }
+
+.notification .listInfos li[class*="ico-"]:before {
+  position: absolute;
+  left: 10px;
+  font-size: 30px;
+  top: 50%;
+  margin-top: -17px;
+}
 .notification .tab-content .tab-pane{padding: 10px;}
 .listInfos{
   max-height: 250px;
