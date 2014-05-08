@@ -90,6 +90,11 @@
     & + textarea
       width: 100%
 
+    &.ls-label-has-prefix.ls-label-has-sufix
+      border: 1px solid red
+      input, select, textarea
+        border-radius: 0
+
   input[type="radio"], input[type="checkbox"]
     height: $inputHeight
     display: inline-block
@@ -103,6 +108,8 @@
     line-height: $inputHeight
     text-overflow: ellipsis
     overflow: hidden
+    position: relative
+    z-index: 1
 
   .ls-label-prefix
     +border-left-radius(4px)
@@ -113,12 +120,13 @@
       input
         +border-left-radius(0)
 
+
   [class*="col-"]! + .ls-label-sufix
     padding-right: 0
 
   .ls-label-sufix
-    border-left: none
     +border-right-radius(4px)
+    border-left: none
 
   select
     +box-shadow(0px 1px 0px #ddd, 0px -1px 0px #ddd, -1px -1px 0px #ddd, 1px -1px 0px #ddd, inset 1px 1px 0 #ddd, inset -1px -1px 0 #ddd)
@@ -169,6 +177,8 @@
     border-radius: 4px
     font-size: .875rem
     width: 100%
+    position: relative
+    z-index: 2
 
     &[disabled]
       border-color: $gray1
@@ -202,21 +212,33 @@
 
   @media (max-width: $screen-md)
     .ls-field
+
+      &.ls-label-has-sufix .row [class*="col-"]:first-child:not(.ls-label-prefix)
+        padding-left: 0
+        padding-right: 0
+        input, select, textarea
+          +border-top-radius(4px)
+          +border-bottom-radius(0)
+
       .ls-label-prefix
         +border-top-radius(4px)
         +border-bottom-radius(0)
         border: 1px solid $gray2
         border-bottom: none
         margin-left: 0
+        position: relative
+        z-index: 1
         & + [class*="col-"]
-          input
+          input, select, textarea
             +border-top-radius(0)
             +border-bottom-radius(4px)
+
       .ls-label-sufix
         +border-top-radius(0)
         +border-bottom-radius(4px)
+        position: relative
+        z-index: 1
         border: 1px solid $gray2
-        // border-top: none
         margin-left: 0
         & + [class*="col-"]
           input
