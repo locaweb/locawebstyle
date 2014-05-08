@@ -4,9 +4,17 @@ locastyle.topbarCurtain = (function() {
   'use strict';
 
   function init() {
+    unbind();
     positionTarget();
     bindCloseCurtains();
     bindPreventClosing();
+  }
+
+  function unbind() {
+    $("[data-ls-module='topbarCurtain']").off("click.ls");
+    $(".ls-notification-list").off("click.ls");
+    //review this
+    $("body").off("click");
   }
 
   function positionTarget() {
@@ -22,19 +30,20 @@ locastyle.topbarCurtain = (function() {
   }
 
   function bindPreventClosing() {
-    $(".ls-notification-list").on("click", function(evt) {
+    $(".ls-notification-list").on("click.ls", function(evt) {
       evt.stopPropagation();
     })
   }
 
   function bindCloseCurtains() {
+    // review this
     $("body").on("click", function () {
       hideCurtains();
     });
   }
 
   function bindTopCurtainTrigger(trigger) {
-    $(trigger).on("click", function(evt){
+    $(trigger).on("click.ls", function(evt){
       evt.stopPropagation();
       var targetState = $($(trigger).data("target")).hasClass("active");
       hideCurtains();
@@ -55,7 +64,8 @@ locastyle.topbarCurtain = (function() {
 
   return {
     init: init,
-    hideCurtains: hideCurtains
+    hideCurtains: hideCurtains,
+    unbind: unbind
   }
 
 }());
