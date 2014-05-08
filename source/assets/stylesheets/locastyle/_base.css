@@ -1266,6 +1266,7 @@ ol p{font-size: inherit;}
   margin: 0;
   background-color: #fff;
   list-style: none;
+  border-radius: 4px;
 }
 
 .notification .listInfos li[class*="ico-"] {padding-left: 54px; }
