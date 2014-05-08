@@ -1262,6 +1262,7 @@ hr.sep {background-color: #E5E5E5; }
 ol p{font-size: inherit;}
 
 .notification .listInfos {
+  padding: 10px;
   margin: 0;
   background-color: #fff;
   list-style: none;
