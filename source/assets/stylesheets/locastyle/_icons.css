@@ -140,6 +140,8 @@ h6[class^="ico-"]:before {
 .brandicon-out-2:before {content: "\e004";}
 
 /** ícones gerais **/
+.ico-update-calendar:before { content: "\e602"; }
+.ico-block-user:before { content: "\e601"; }
 .ico-keyboard:before {content: "\22";}
 .ico-split:before {content: "\23";}
 .ico-up-dir:before {content: "\24";}
