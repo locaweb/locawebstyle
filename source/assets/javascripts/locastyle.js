@@ -1,6 +1,8 @@
 //= require libs/_hopscotch
 //= require libs/_jquery.cookie
 //= require libs/jquery.mask
+//= require libs/pikaday
+//= require libs/pikaday.jquery
 
 //= require locastyle/templates/_popover
 //= require locastyle/templates/_modal

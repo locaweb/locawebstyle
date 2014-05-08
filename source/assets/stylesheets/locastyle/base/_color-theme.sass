@@ -238,6 +238,17 @@
       .ls-topbar
         background-color: #f7f7f7
 
+    //
+    // Datepicker
+    //
+    .is-selected .pika-button
+      color: white
+      background: $color3
+      box-shadow: none
+
+    .pika-button:hover
+      color: white !important
+      background: $color2 !important
 
 @each $theme-name, $colors in $themes-colors
   @include theme-color($theme-name, $colors)
