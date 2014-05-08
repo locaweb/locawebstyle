@@ -17,7 +17,23 @@ locastyle.form = (function() {
     masks();
     textareaAutoresize();
     prefixSufix();
+    datepicker();
 
+  }
+
+  function datepicker (argument) {
+     var $datepicker = $('.datepicker').pikaday({
+      numberOfMonths: 2,
+      i18n: {
+        previousMonth : 'Mês anterior',
+        nextMonth     : 'Próximo mês',
+        months        : ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+        weekdays      : ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
+        weekdaysShort : ['Dom','Seg','Ter','Qua','Qui','Sex','Sab']
+      }
+    });
+    // chain a few methods for the first datepicker, jQuery style!
+    $datepicker.pikaday('show').pikaday('nextMonth');
   }
 
   function prefixSufix () {
