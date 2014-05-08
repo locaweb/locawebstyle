@@ -28,8 +28,9 @@ locastyle.general = (function() {
     // Esse ponto de exclamação é para funcionar no IE
     var hash = window.location.hash.replace("!/#", "");
     if(hash != ''){
-      $("[data-target="+hash+"]").trigger('click');
-      $("a[href="+hash+"]").trigger('click');
+      $('[data-target=' + hash + ']').trigger('click');
+      $('a[href=' + hash + ']').trigger('click');
+      locastyle.collapse.toggle(hash)
     }
   }
 
