@@ -25,6 +25,15 @@ locastyle.modal = (function() {
   function bindOpen() {
     $(config.open.trigger).on('click.ls', function() {
       locastyle.modal.open($(this).data());
+      bindKeypress();
+    });
+  }
+
+  function bindKeypress(){
+    $(document).keyup(function(e) {
+      if(e.keyCode == 27){
+        locastyle.modal.close()
+      }
     });
   }
 

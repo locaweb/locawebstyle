@@ -6,19 +6,38 @@ locastyle.popover = (function() {
   // Defaults
   var defaults = {
     trigger      : 'click.ls',
-    popoverClass : '.ls-popover'
+    popoverClass : '.ls-popover',
+    module       : '[data-ls-module="popover"]'
   }
 
   function init() {
     unbind();
     destroyPopover();
-    $('[data-ls-module="popover"]').each(function(index, element) {
+    bindBreakpointUpdate();
+    changeModuleName();
+
+    $(defaults.module).each(function(index, element) {
       var dataTrigger = $(element).data("trigger");
       bindAction({
         'element'  : element,
         'eventType': dataTrigger == 'hover' ? 'mouseenter.ls' : defaults.trigger
       });
     });
+  }
+
+  // adiciona o bind de breakpoint-updated
+  function bindBreakpointUpdate() {
+    $(document).on("breakpoint-updated", function () {
+      changeModuleName();
+    })
+  }
+
+  // Esse método é usado quando existir um popover em dispositivos móveis.
+  function changeModuleName(){
+    if(locastyle.breakpointClass == "ls-screen-sm" || locastyle.breakpointClass == "ls-screen-xs"){
+      $(defaults.module).attr('data-ls-module', 'modal').removeAttr('data-trigger')
+      locastyle.modal.init();
+    }
   }
 
   function bindAction(elementActions) {
