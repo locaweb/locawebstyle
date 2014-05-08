@@ -71,6 +71,9 @@ locastyle.tabs = (function() {
 
     // adiciona a classe que altera o estilo dos links
     $(tabNav).addClass("in-dropdown");
+
+    // adiciona a classe usada pelo dropdown para fazer o toggle
+    $(tabNav).addClass("ls-dropdown-nav");
   }
 
   // ativa a aba de acordo com os argumentos recebidos

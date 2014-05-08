@@ -1,75 +1,76 @@
 ///
 /// Dashboard info
 ///
-.ls-board-info
 
-  & > .ls-title-3
-    padding-bottom: 15px
+.ls-board-box
+  background-color: #f8f8f8
+  text-align: center
+  min-height: 60px
+  margin-bottom: 10px
+  border-radius: 3px
+  padding: 15px
 
-  .ls-board-box
-    background-color: #f8f8f8
-    text-align: center
-    min-height: 60px
+  .ls-title-4
+    text-transform: uppercase
+    color: $gray3
+    font-weight: 400
+    font-size: .88rem
+    margin-bottom: 8px
+
+  strong
+    display: block
+    font-size: 2.5rem
     margin-bottom: 10px
 
-    .ls-title-4
-      text-transform: uppercase
-      color: $gray3
-      font-weight: 400
-      font-size: .88rem
-      padding-bottom: 14px
-
-    .ls-board-info
+    small
       display: block
-      padding: 0 0 14px
-      font-size: 2.5rem
+      font-size: .88rem
 
-      small
-        display: block
-        font-size: .88rem
+.ls-board-data
+  display: block
+  margin-bottom: 15px
+
+.ls-info-header
+  @extend .ls-clearfix
+  margin-bottom: 5px
+
+  [class*="ls-ico"]
+
+    small
+      display: block
+      color: $gray3
+      font-size: .875rem
+      margin-top: 3px
+
+    &:before
+      float: left
+      margin-right: 5px
+      margin-bottom: 7px
+
+
+  [class*="ls-btn"]
+
+    ~ .ls-dropdown,
+    ~ [class*="ls-btn"]
+      margin-left: 0
+      margin-right: 0
+
+
+@media (min-width: $screen-sm)
+  .ls-board-box
+    margin-bottom: 0
+    min-height: 170px
 
   .ls-info-header
-    margin-bottom: 5px
-
-    [class*="ls-ico"]
-
-      small
-        display: block
-        color: $gray3
-        font-size: .875rem
-        margin-top: 3px
-
-      &:before
-        float: left
-        margin-right: 5px
-        margin-bottom: 7px
-        font-size: 2.6rem
-
 
     [class*="ls-btn"]
 
       ~ .ls-dropdown,
       ~ [class*="ls-btn"]
-        margin-left: 0
-        margin-right: 0
+        margin-left: 5px
+        margin-right: 5px
 
-  .row
-    clear: both
-
-
-@media (min-width: $screen-sm)
-  .ls-board-info
-    font-size: 1.5rem
-
-    .ls-board-box
-      margin-bottom: 0
-      min-height: 170px
-
-    .ls-info-header
-
-      [class*="ls-btn"]
-
-        ~ .ls-dropdown,
-        ~ [class*="ls-btn"]
-          margin-left: 5px
-          margin-right: 5px
+@media (max-width: $screen-lg)
+  .ls-board-box strong
+    display: block
+    font-size: 2rem

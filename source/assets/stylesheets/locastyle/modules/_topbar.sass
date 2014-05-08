@@ -11,6 +11,17 @@
   left: 0
   z-index: 11
 
+  &:after
+    +box-shadow(0px 5px 8px -1px rgba(255,255,255,.5))
+    // +box-shadow(0px 5px 8px -1px red)
+    content: ""
+    width: 100%
+    height: 6px
+    position: absolute
+    bottom: 0
+    left: 0
+
+
   .sidebar-visible &
     +translate($sidebarWidth, 0)
 
@@ -135,26 +146,20 @@
         opacity: 0
         cursor: pointer
 
-        &:checked + .ls-user-menu
-          opacity: 1
-          height: auto
-          overflow: visible
-
-
       .ls-user-menu
         background: $gray5
         position: absolute
         left: 0
         top: 100%
         width: 100%
-        display: block
         -ms-transition: all .2s ease-out
         -moz-transition: all .2s ease-out
         -webkit-transition: all .2s ease-out
         transition: all .2s ease-out
-        opacity: 0
-        height: 0
         overflow: hidden
+        border: none
+        border-radius: 0
+        margin-top: 0
 
         ul
           list-style: none
@@ -197,6 +202,9 @@
   .ls-topbar
     text-align: left
     +single-transition(none)
+
+    &:after
+      left: $sidebarWidth
 
     .sidebar-visible &
       +translate(0, 0)

@@ -9,17 +9,28 @@ locastyle.general = (function() {
   }
 
   function init() {
+    _autoTrigger();
     _loadEvents();
     showSidebar();
     showNotifications();
     subMenu();
-    _locationHashTrigger();
     _elementDisabled();
     _linkPreventDefault();
     _btnGroupActivationToogle();
     menuAnchor();
     toggleFields();
     equalHeight();
+  }
+
+  // Quando tem uma hash na url que seja igual a algum target no html
+  // esse método faz um trigger click no elemento
+  function _autoTrigger(){
+    // Esse ponto de exclamação é para funcionar no IE
+    var hash = window.location.hash.replace("!/#", "");
+    if(hash != ''){
+      $("[data-target="+hash+"]").trigger('click');
+      $("a[href="+hash+"]").trigger('click');
+    }
   }
 
   function equalHeight () {
@@ -84,12 +95,6 @@ locastyle.general = (function() {
     }
   }
 
-  function _locationHashTrigger() {
-    if (window.location.hash) {
-      $('a[class*="ls-"][href="' + window.location.hash + '"]').trigger('click');
-    }
-  }
-
   function showSidebar() {
     var $showHide = $('.show-sidebar');
     var $html = $('html');
@@ -115,8 +120,8 @@ locastyle.general = (function() {
       $(this).parent().toggleClass('active');
       evt.preventDefault();
     })
-    if($('.ls-submenu-item').hasClass('active')){
-      $('.ls-submenu-item').closest('ul').parent().addClass('active')
+    if($('.ls-submenu').find('a').hasClass('ls-active')){
+      $('.ls-submenu a.ls-active').parents('.ls-submenu').addClass('active')
     }
   }
 
@@ -150,7 +155,8 @@ locastyle.general = (function() {
   };
 
   return {
-    init: init
+    init: init,
+    subMenu: subMenu
   };
 
 }());

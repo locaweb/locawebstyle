@@ -32,6 +32,7 @@ locastyle.dropdown = (function() {
 
   function toggleDropdown($target) {
     $target.toggleClass("active");
+    locastyle.topbarCurtain.hideCurtains();
   }
 
   function closeDropdown(el) {

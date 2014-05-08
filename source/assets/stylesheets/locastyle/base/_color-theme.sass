@@ -5,6 +5,9 @@
   $color4: map-fetch($colors, color4)
   $color5: map-fetch($colors, color5)
 
+  .ls-bg-theme-#{$theme-name}
+    background-color: $color3
+
   .ls-theme-#{$theme-name}
 
     p a:not([class*="ls-btn"]),
@@ -164,11 +167,15 @@
       thead th a
         color: #000
 
-      tbody tr:hover
-        background-color: rgba($color4, .02)
+      tbody
+        tr:hover
+          background-color: rgba($color4, .02)
+        a:not([class*="ls-btn"]),
+          color: $color3
 
       &.ls-table-striped tbody tr:hover td
         background-color: rgba($color4, .02)
+
 
     //
     // Tabs

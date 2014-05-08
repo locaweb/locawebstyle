@@ -5,6 +5,8 @@ locastyle.topbarCurtain = (function() {
 
   function init() {
     positionTarget();
+    bindCloseCurtains();
+    bindPreventClosing();
   }
 
   function positionTarget() {
@@ -19,10 +21,23 @@ locastyle.topbarCurtain = (function() {
     });
   }
 
+  function bindPreventClosing() {
+    $(".ls-notification-list").on("click", function(evt) {
+      evt.stopPropagation();
+    })
+  }
+
+  function bindCloseCurtains() {
+    $("body").on("click", function () {
+      hideCurtains();
+    });
+  }
+
   function bindTopCurtainTrigger(trigger) {
-    $(trigger).on("click", function(){
+    $(trigger).on("click", function(evt){
+      evt.stopPropagation();
       var targetState = $($(trigger).data("target")).hasClass("active");
-      hideCurtains(trigger);
+      hideCurtains();
       if(!targetState) {
         showCurtain($(trigger).data("target"));
       }
@@ -31,14 +46,16 @@ locastyle.topbarCurtain = (function() {
 
   function showCurtain(curtain) {
     $(curtain).addClass("active");
+    locastyle.dropdown.closeDropdown();
   }
 
-  function hideCurtains(trigger) {
+  function hideCurtains() {
     $(".ls-notification-list").removeClass("active");
   }
 
   return {
-    init: init
+    init: init,
+    hideCurtains: hideCurtains
   }
 
 }());

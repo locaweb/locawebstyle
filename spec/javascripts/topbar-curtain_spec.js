@@ -34,4 +34,20 @@ describe("Topbar Curtain:", function() {
       expect($("#item-2").hasClass('active')).toEqual(false);
     });
   });
+
+  describe("When click outside curtain", function() {
+    it("should close opened curtains", function() {
+      locastyle.topbarCurtain.init();
+      $("#outside_element").click();
+      expect($("#awesome-curtain").hasClass('active')).toEqual(false);
+    })
+  })
+
+  describe("When click on .ls-notification-list", function() {
+    it("should not close the curtain", function() {
+      locastyle.topbarCurtain.init();
+      $(".ls-notification-list").trigger("click");
+      expect($("#awesome-curtain").hasClass('active')).toEqual(true);
+    })
+  })
 });

@@ -10,42 +10,43 @@ layout: examples
     <div id="domain-form" class="ls-form-text ls-form-disable">
       <div class="ls-group-btn-right ls-regroup">
         <a href="" class="ls-btn-primary ls-float-left" target="_blank">Acessar o Painel</a>
-        <a href="" data-ls-toggle-fields="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" class="ls-btn ls-float-left domain-actions">Editar</a>
         <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
           <a href="#" class="ls-btn"></a>
-          <ul>
-            <li><a href="#">Desativar Clientes</a></li>
+          <ul class="ls-dropdown-nav">
+            <li>
+              <a href="" data-ls-toggle-fields="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" class="domain-actions">Editar</a>
+            </li>
             <li><a href="#" data-ls-module="modal" data-target="#editPassword">Alterar senha</a></li>
-            <li><a href="#">Acessar o Painel</a></li>
+            <li><a href="#">Desativar</a></li>
           </ul>
         </div>
       </div>
       <div class="row" >
-        <label class="ls-field col-md-3">
+        <label class="ls-field col-md-6 col-lg-8">
           <span class="ls-label">Nome</span>
           <input type="text" value="Fulano de tal" required >
         </label>
       </div>
       <div class="row" >
-        <label class="ls-field col-md-3">
+        <label class="ls-field col-md-6 col-lg-8">
           <span class="ls-label">login/E-mail:</span>
           <input type="text" value="emaildocliente@cliente.com.br" required >
         </label>
       </div>
       <div class="row" >
-        <label class="ls-field col-md-3">
+        <label class="ls-field col-md-6 col-lg-8">
           <span class="ls-label">Status:</span>
           <input type="text" value="Ativo" required >
         </label>
       </div>
       <div class="row" >
-        <label class="ls-field col-md-3">
+        <label class="ls-field col-md-6 col-lg-8">
           <span class="ls-label">Data de cadastro:</span>
           <input type="text" value="18/05/1987" required >
         </label>
       </div>
       <div class="row" >
-        <label class="ls-field col-md-3">
+        <label class="ls-field col-md-6 col-lg-8">
           <span class="ls-label">Informações:</span>
           <textarea name="" id="" cols="30" rows="5">com Fulano de Tal no telefone: 11 5555-5555. Horários entre 12:00 e 16:00 dias úteis.</textarea>
         </label>
@@ -66,13 +67,13 @@ layout: examples
     <div class="col-md-6 col-sm-12">
       <h2 class="ls-title-3 ls-ico-calendar-check">
         Período atual
-        <small>dd/mm/aaaa a dd/mm/aaaa</small>
+        <small>01/01/2014 a 01/01/2015</small>
       </h2>
     </div>
 
     <div class="col-md-6 col-sm-12">
-      <a href="" data-ls-module="modal" data-target="#addMessage" class="ls-btn-primary ls-float-right-sm ls-btn-block-sm">Adicionar envios</a>
       <a href="" data-ls-module="modal" data-target="#removeMessage" class="ls-btn ls-float-right-sm ls-btn-block-sm">Remover envios</a>
+      <a href="" data-ls-module="modal" data-target="#addMessage" class="ls-btn-primary ls-float-right-sm ls-btn-block-sm">Adicionar envios</a>
     </div>
   </header>
 
@@ -80,30 +81,30 @@ layout: examples
   <div class="row">
 
     <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-board-box">
+      <div class="ls-board-box">
         <strong class="ls-board-info">9 <small>milhões</small></strong>
-        <small>Válido até dd/mm/aaaa</small>
+        <small>Válido até 01/01/2014</small>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-board-box">
+      <div class="ls-board-box">
         <h6 class="ls-title-4">Avulso</h6>
         <strong class="ls-board-info">0</strong>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-board-box">
+      <div class="ls-board-box">
         <h6 class="ls-title-4">Removidos</h6>
         <strong class="ls-board-info">0</strong>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-board-box">
+      <div class="ls-board-box">
         <h6 class="ls-title-4 color-default">Utilizados</h6>
-        <strong class="ls-board-info">10.743 mil</strong>
+        <strong class="ls-board-info">10.743 <small>mil</small></strong>
       </div>
     </div>
 
@@ -117,7 +118,7 @@ layout: examples
     <div class="col-md-6 col-sm-12">
       <h2 class="ls-title-3 ls-ico-calendar-more">
         Próximo período
-        <small>dd/mm/aaaa a dd/mm/aaaa</small>
+        <small>01/01/2014 a 01/01/2015</small>
       </h2>
     </div>
 
@@ -129,14 +130,14 @@ layout: examples
   <div class="row">
 
     <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-board-box">
+      <div class="ls-board-box">
         <strong class="ls-board-info">9 <small>milhões</small></strong>
-        <small>Válido até dd/mm/aaaa</small>
+        <small>Válido até 01/01/2014</small>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-9">
-      <div class="ls-box ls-board-box">
+      <div class="ls-board-box">
         <p class="ls-txt-center-all">
           <a href="">Cancelar recorrência</a>
           <span class="ls-ico-help" data-ls-module="popover" data-trigger="hover" data-title="Cancelar recorrência" data-content="Ao desabilitar a recorrência, os envios desse cliente não serão renovados para os próximos períodos." data-placement="top"></span>
@@ -160,127 +161,136 @@ layout: examples
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-12">
+    <ul class="ls-tabs-nav" id="awesome-tab">
+      <li class="active"><a data-ls-module="tabs" href="#tab1">Contratação x uso</a></li>
+      <li><a data-ls-module="tabs" href="#tab2">Estatísticas de envios</a></li>
+    </ul>
 
-<ul class="ls-tabs-nav" id="awesome-tab">
-  <li class="active"><a data-ls-module="tabs" href="#tab1">Contratação x uso</a></li>
-  <li><a data-ls-module="tabs" href="#tab2">Estatísticas de envios</a></li>
-</ul>
-<div class="ls-tabs-container" id="awesome-tab-content">
-  <div id="tab1" class="ls-tab-content active">
+    <div class="ls-tabs-container" id="awesome-tab-content">
+      <div id="tab1" class="ls-tab-content active">
 
-    <div class="ls-tab-content child1 active">
-      <p>Contratação x uso</p>
-      <img src="/<%= images_dir %>/graph-example.jpg">
-    </div>
+        <div class="ls-tab-content child1 active">
+          <p>Contratação x uso</p>
+          <img src="<%= base_url %>/<%= images_dir %>/graph-example.jpg">
+        </div>
 
-    <div class="ls-tab-content child2">
+        <div class="ls-tab-content child2">
 
-      <table class="ls-table">
-        <thead>
-          <tr>
-            <th class="ls-txt-center hidden-xs">Período</th>
-            <th class="ls-txt-center">Contratados</th>
-            <th class="ls-txt-center" colspan="2">Distribuídos</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-              <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-              <td class="ls-txt-center">1000000</td>
-              <td class="ls-txt-center">10741</td>
-              <td class="ls-txt-center">1%</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-              <td class="ls-txt-center">1000000</td>
-              <td class="ls-txt-center">10741</td>
-              <td class="ls-txt-center">1%</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-              <td class="ls-txt-center">1000000</td>
-              <td class="ls-txt-center">10741</td>
-              <td class="ls-txt-center">1%</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-              <td class="ls-txt-center">1000000</td>
-              <td class="ls-txt-center">10741</td>
-              <td class="ls-txt-center">1%</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-              <td class="ls-txt-center">1000000</td>
-              <td class="ls-txt-center">10741</td>
-              <td class="ls-txt-center">1%</td>
-            </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div id="tab2" class="ls-tab-content">
+          <table class="ls-table">
+            <thead>
+              <tr>
+                <th class="ls-txt-center hidden-xs">Período</th>
+                <th class="ls-txt-center">Contratados</th>
+                <th class="ls-txt-center" colspan="2">Distribuídos</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
+                  <td class="ls-txt-center">1000000</td>
+                  <td class="ls-txt-center">10741</td>
+                  <td class="ls-txt-center">1%</td>
+                </tr>
+                <tr>
+                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
+                  <td class="ls-txt-center">1000000</td>
+                  <td class="ls-txt-center">10741</td>
+                  <td class="ls-txt-center">1%</td>
+                </tr>
+                <tr>
+                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
+                  <td class="ls-txt-center">1000000</td>
+                  <td class="ls-txt-center">10741</td>
+                  <td class="ls-txt-center">1%</td>
+                </tr>
+                <tr>
+                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
+                  <td class="ls-txt-center">1000000</td>
+                  <td class="ls-txt-center">10741</td>
+                  <td class="ls-txt-center">1%</td>
+                </tr>
+                <tr>
+                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
+                  <td class="ls-txt-center">1000000</td>
+                  <td class="ls-txt-center">10741</td>
+                  <td class="ls-txt-center">1%</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="tab2" class="ls-tab-content">
 
-    <div class="ls-tab-content child1 active">
-      <p>Estatísticas de envios</p>
-      <img src="/<%= images_dir %>/graph-example.jpg">
-    </div>
+        <div class="ls-tab-content child1 active">
+          <p>Estatísticas de envios</p>
+          <img src="<%= base_url %>/<%= images_dir %>/graph-example.jpg">
+        </div>
 
-    <div class="ls-tab-content child2">
-      <table class="ls-table">
-        <thead>
-          <tr>
-            <th class="ls-txt-center">Data</th>
-            <th class="ls-txt-center">Todos</th>
-            <th class="ls-txt-center" colspan="2">Ativos</th>
-            <th class="ls-txt-center hidden-xs" colspan="2">Desativados</th>
-            <th class="ls-txt-center hidden-xs" colspan="2">Bloqueados por bounce</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="ls-txt-center">Hoje</td>
-            <td class="ls-txt-center">29</td>
-            <td class="ls-txt-center">26</td>
-            <td class="ls-txt-center hidden-xs">89%</td>
-            <td class="ls-txt-center hidden-xs">3</td>
-            <td class="ls-txt-center hidden-xs">10%</td>
-            <td class="ls-txt-center hidden-xs">0</td>
-            <td class="ls-txt-center hidden-xs">0%</td>
-          </tr>
-          <tr>
-            <td class="ls-txt-center">Hoje</td>
-            <td class="ls-txt-center">29</td>
-            <td class="ls-txt-center">26</td>
-            <td class="ls-txt-center hidden-xs">89%</td>
-            <td class="ls-txt-center hidden-xs">3</td>
-            <td class="ls-txt-center hidden-xs">10%</td>
-            <td class="ls-txt-center hidden-xs">0</td>
-            <td class="ls-txt-center hidden-xs">0%</td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="ls-tab-content child2">
+          <table class="ls-table">
+            <thead>
+              <tr>
+                <th class="ls-txt-center">Data</th>
+                <th class="ls-txt-center">Todos</th>
+                <th class="ls-txt-center" colspan="2">Ativos</th>
+                <th class="ls-txt-center hidden-xs" colspan="2">Desativados</th>
+                <th class="ls-txt-center hidden-xs" colspan="2">Bloqueados por bounce</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="ls-txt-center">Hoje</td>
+                <td class="ls-txt-center">29</td>
+                <td class="ls-txt-center">26</td>
+                <td class="ls-txt-center hidden-xs">89%</td>
+                <td class="ls-txt-center hidden-xs">3</td>
+                <td class="ls-txt-center hidden-xs">10%</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+                <td class="ls-txt-center hidden-xs">0%</td>
+              </tr>
+              <tr>
+                <td class="ls-txt-center">Hoje</td>
+                <td class="ls-txt-center">29</td>
+                <td class="ls-txt-center">26</td>
+                <td class="ls-txt-center hidden-xs">89%</td>
+                <td class="ls-txt-center hidden-xs">3</td>
+                <td class="ls-txt-center hidden-xs">10%</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+                <td class="ls-txt-center hidden-xs">0%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="row">
-  <h2 class="ls-title-3 col-md-12">Histórico de transações</h2>
+  <div class="col-md-8 col-xs-6">
+    <h2 class="ls-title-3">Histórico de transações</h2>
+  </div>
   <div class="col-md-12">
     <form action="" class="ls-form row">
         <label class="ls-field ls-field-inline col-md-4">
-          <span class="ls-label col-md-4">Período</span>
-          <span class="col-md-8">
+          <span class="ls-label col-md-3 col-xs-12">Período</span>
+          <span class="col-md-7 col-xs-12">
             <input type="date" required >
           </span>
+          <span class="ls-label-sufix col-md-2 hidden-xs hidden-sm ls-ico-calendar"></span>
         </label>
 
         <label class="ls-field ls-field-inline col-md-4">
-          <span class="ls-label col-md-1">a</span>
-          <span class="col-md-10">
+          <span class="ls-label col-md-2 col-xs-12">a</span>
+          <span class="col-md-7 col-xs-12">
             <input type="date" required >
           </span>
+          <span class="ls-label-sufix col-md-2 hidden-xs hidden-sm ls-ico-calendar"></span>
         </label>
-        <span class=" ls-field ls-field-inline col-md-4">
+
+        <span class=" ls-field ls-field-inline col-md-2 col-xs-12">
           <span class="col-md-12">
             <button type="button" class="ls-btn">Filtrar</button>
           </span>
@@ -401,10 +411,14 @@ layout: examples
           <span>889.239</span>
         </p>
         <hr>
-        <label class="ls-field">
-          <strong class="ls-label">Quantidade de envios avulsos a adicionar</strong>
-          <input type="number" name="" required />
-        </label>
+        <div class="row" >
+          <label class="ls-field ls-field-inline">
+            <span class="ls-label col-md-8">Quantidade de envios avulsos a adicionar</span>
+            <span class="col-md-2 col-md-offset-2">
+              <input type="number" name="" required >
+            </span>
+          </label>
+        </div>
       </div>
       <div class="ls-modal-footer">
         <button type="submit" class="ls-btn-primary">Adicionar</button>
@@ -425,20 +439,27 @@ layout: examples
       </div>
       <div class="ls-modal-body">
         <p>Os envios serão removidos automaticamente após esta ação.</p>
-        <p>
-          <strong>Saldo disponível do cliente</strong>
-          <span class="ls-float-right">8</span>
-        </p>
-        <hr>
-        <p>
-          <strong>Disponível para remoção até 27/04/2014</strong>
-          <span class="ls-float-right">8</span>
-        </p>
-        <hr>
-        <label class="ls-field">
-          <strong class="ls-label">Quantidade de envios a remover</strong>
-          <input type="number" name="" required >
-        </label>
+
+        <div class="row" >
+          <label class="ls-field ls-field-inline">
+            <span class="ls-label col-md-8">Saldo disponível do cliente</span>
+            <span class="col-md-2 col-md-offset-2">
+              <input type="number" disabled="disabled" readonly="readonly" name="" value="8" >
+            </span>
+          </label>
+          <label class="ls-field ls-field-inline">
+            <span class="ls-label col-md-8">Disponível para remoção até 27/04/2014</span>
+            <span class="col-md-2 col-md-offset-2">
+              <input type="number" disabled="disabled" readonly="readonly" name="" value="8" >
+            </span>
+          </label>
+          <label class="ls-field ls-field-inline">
+            <span class="ls-label col-md-8">Quantidade de envios a remover</span>
+            <span class="col-md-2 col-md-offset-2">
+              <input type="number" name="" required >
+            </span>
+          </label>
+        </div>
       </div>
       <div class="ls-modal-footer">
         <button type="submit" class="ls-btn-primary">Remover</button>
@@ -458,15 +479,20 @@ layout: examples
       </div>
       <div class="ls-modal-body">
         <p>O novo valor só entrará em vigor após a data de 08/05/2014</p>
-        <p>
-          <strong>Saldo disponível da sua revenda</strong>
-          <span class="ls-float-right">889.239</span>
-        </p>
-        <hr>
-        <label class="ls-field">
-          <strong class="ls-label">Quantidade de envios</strong>
-          <input type="number" name="" value="10" required >
-        </label>
+        <div class="row" >
+          <label class="ls-field ls-field-inline">
+            <span class="ls-label col-md-7">Saldo disponível da sua revenda</span>
+            <span class="col-md-3 col-md-offset-2">
+              <input type="number" disabled="disabled" readonly="readonly" name="" value="889.239" >
+            </span>
+          </label>
+          <label class="ls-field ls-field-inline">
+            <span class="ls-label col-md-8">Quantidade de envios</span>
+            <span class="col-md-2 col-md-offset-2">
+              <input type="number" name="" value="10" >
+            </span>
+          </label>
+        </div>
       </div>
       <div class="ls-modal-footer">
         <button type="submit" class="ls-btn-primary">Alterar</button>

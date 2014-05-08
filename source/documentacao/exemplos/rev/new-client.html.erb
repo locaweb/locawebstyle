@@ -4,17 +4,17 @@ layout: examples
 ---
 
 <h1 class="ls-title-intro ls-ico-users">Cadastrar cliente</h1>
-<h2 class="ls-title-2">Identificação</h2>
 
-<form action="<%= base_url %>/documentacao/exemplos/rev/clients" class="ls-form">
+<form action="<%= base_url %>/documentacao/exemplos/rev/client" class="ls-form">
+  <legend class="ls-title-2">Identificação</legend>
   <div class="row">
-    <label class="ls-field col-md-5">
+    <label class="ls-field col-md-6">
       <span class="ls-label">Nome</span>
       <input type="text" name="name">
     </label>
   </div>
   <div class="row">
-    <label class="ls-field col-md-5">
+    <label class="ls-field col-md-6">
       <span class="ls-label">Email</span>
       <input type="text" name="email">
     </label>
@@ -24,8 +24,6 @@ layout: examples
       <span class="ls-label">Senha</span>
       <input type="password" name="password">
     </label>
-  </div>
-  <div class="row">
     <label class="ls-field col-md-3">
       <span class="ls-label">Confirmação de senha</span>
       <input type="password" name="password-confirmation">

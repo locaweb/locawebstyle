@@ -5,12 +5,7 @@ layout: examples
 
 <h1 class="ls-title-intro ls-ico-users">Clientes</h1>
 
-<div class="ls-alert-success ls-dismissable">
-  <span class="ls-dismiss" data-ls-module="dismiss">×</span>
-  Cliente cadastrado com sucesso!
-</div>
-
-<a href="#" class="ls-btn-primary">Cadastrar novo</a>
+<a href="<%= base_url %>/documentacao/exemplos/rev/new-client" class="ls-btn-primary">Cadastrar novo</a>
 
 <div class="ls-box-filter row">
   <form action="#" class="ls-form col-md-4">
@@ -50,7 +45,7 @@ layout: examples
     <%- 5.times do |num| %>
       <tr>
         <td>
-          <%= lorem.name %>
+          <a href="<%= base_url %>/documentacao/exemplos/rev/client"><%= lorem.name %></a>
           <% if num%2 == 0 %>
             <span class='ls-tag hidden-xs'>Não recorrente</span>
           <% end %>
@@ -58,15 +53,14 @@ layout: examples
         <td class="ls-txt-center hidden-xs">Ativo</td>
         <td class="ls-txt-center">
           100.000
-          <small class="ls-display-block">até dd/mm/aaaa</small>
+          <small class="ls-display-block">até 01/01/2014</small>
         </td>
         <td class="ls-txt-right ls-regroup">
           <a href="<%= base_url %>/documentacao/exemplos/rev/client" class="ls-btn ls-btn-sm">Administrar</a>
           <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
             <a href="#" class="ls-btn ls-btn-sm"></a>
-            <ul>
-              <li><a href="#">Reativar</a></li>
-              <li><a href="#">Editar</a></li>
+            <ul class="ls-dropdown-nav">
+              <li><a href="#">Desativar</a></li>
               <li><a href="#" class="ls-color-danger">Excluir</a></li>
             </ul>
           </div>
