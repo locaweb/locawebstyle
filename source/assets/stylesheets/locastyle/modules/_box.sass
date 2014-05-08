@@ -5,21 +5,29 @@
   border-radius: 2px
   border: 1px solid rgba(0, 0, 0, .07)
 
+  p
+    margin: 5px 0 0
+
+  .ls-box-group &
+    margin-bottom: 10px
+
   &:after
     @extend .ls-clearfix
 
   &.ls-box-gray
     background-color: rgba($gray1, .2)
 
-  &.ls-big-space
-    @extend .ls-big-space
+  &.ls-md-space
+    @extend .ls-md-space
 
-  &.ls-small-space
-    @extend .ls-small-space
+  &.ls-sm-space
+    @extend .ls-sm-space
 
   .ls-small-info
     font-size: .75rem
     color: $gray3
+    margin: 0
+    padding: 0
 
   &[class*="ls-ico-"]
     overflow: hidden
@@ -31,15 +39,9 @@
       font-size: 6rem
       margin: 0 20px
 
-  p
-    margin: 10px 0
-    font-size: .8rem
-    color: $gray4
-
 [class*="ls-title"] + .ls-box
   margin-top: 10px
   clear: both
-
 
 .ls-box-filter
   @extend .ls-box
@@ -57,4 +59,16 @@
   p
     padding: 0 0 20px
     font-size: 1rem
+
+.ls-ico-bg:before
+  @extend .ls-color-theme
+  opacity: .1
+  position: absolute
+  top: -25%
+  right: 30px
+  font-size: 17rem !important
+
+@media (max-width: $screen-sm)
+  .ls-ico-bg:before
+    display: none
 

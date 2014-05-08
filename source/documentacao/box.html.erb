@@ -16,12 +16,12 @@ type: css
     </thead>
     <tbody>
       <tr>
-        <td>.ls-big-space</td>
-        <td>Aumenta o espaço do box.</td>
+        <td>Classes de tamanho: ls-xs-space, ls-sm-space, ls-md-space e ls-lg-space</td>
+        <td>Aumenta ou diminui o espaço do box.</td>
       </tr>
       <tr>
-        <td>.ls-small-space</td>
-        <td>Diminui o espaço do box.</td>
+        <td>.ls-ico-bg</td>
+        <td>Faz com que o ícone do :before de ls-box seja posicionado à direita, com uma opacidade baixa. Como se fosse um background.</td>
       </tr>
       <tr>
         <td>.ls-box-gray</td>
@@ -29,7 +29,7 @@ type: css
       </tr>
       <tr>
         <td>.ls-box-filter</td>
-        <td>Faz um box preparado para receber elementos de filtro. Ela herda as classes <strong>.ls-box-gray</strong>, <strong>.ls-small-space</strong> e <strong>.ls-box</strong></td>
+        <td>Faz um box preparado para receber elementos de filtro. Ela herda as classes <strong>.ls-box-gray</strong>, <strong>.ls-sm-space</strong> e <strong>.ls-box</strong></td>
       </tr>
     </tbody>
   </table>
@@ -51,7 +51,15 @@ type: css
   <%= partial 'documentacao/shared/box/box-gray' %>
 </code>
 
-<h3 class="title-3">Box com as classes ls-big-space e ls-small-space</h3>
+<h2 class="ls-title-2">Box com ícone de background</h2>
+<div class="ls-box-demo">
+  <%= partial 'documentacao/shared/box/_box-bg-icon' %>
+</div>
+<code class="language-html ls-well-example">
+  <%= partial 'documentacao/shared/box/_box-bg-icon' %>
+</code>
+
+<h3 class="title-3">Box com as classes ls-md-space e ls-sm-space</h3>
 <div class="ls-box-demo">
   <%= partial 'documentacao/shared/box/box-big-small' %>
 </div>
