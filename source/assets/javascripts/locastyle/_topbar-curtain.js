@@ -13,8 +13,7 @@ locastyle.topbarCurtain = (function() {
   function unbind() {
     $("[data-ls-module='topbarCurtain']").off("click.ls");
     $(".ls-notification-list").off("click.ls");
-    //review this
-    $("body").off("click");
+    $("body").off("click.lsTopCurtain");
   }
 
   function positionTarget() {
@@ -36,8 +35,7 @@ locastyle.topbarCurtain = (function() {
   }
 
   function bindCloseCurtains() {
-    // review this
-    $("body").on("click", function () {
+    $("body").on("click.lsTopCurtain", function () {
       hideCurtains();
     });
   }
