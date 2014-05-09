@@ -73,8 +73,12 @@
       border-color: $color4
       color: #fff
 
-      &:hover
+      &:hover:not([disabled="disabled"])
         background-color: $color4
+
+      &.ls-disabled:hover,
+      &.ls-disabled:focus
+        background-color: $color3
 
 
     //
