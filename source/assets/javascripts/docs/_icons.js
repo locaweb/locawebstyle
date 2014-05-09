@@ -9,8 +9,8 @@ lsdocs.icones = (function() {
   }
 
   function insertSearch(){
-    var searchHtml =  '<form class="doc-search-ico"><div class="form-group">' +
-      '<input type="search" id="searchIcons" aria-label="Buscar ícone" placeholder="Buscar ícone" class="form-control col-md-4"/>' +
+    var searchHtml =  '<form class="ls-form"><div class="form-group">' +
+      '<input type="search" id="searchIcons" aria-label="Buscar ícone" placeholder="Buscar ícone" />' +
       '<p id="searchResultText">Nenhum ícone encontrado.</p>' +
       '</div></form>'
     $('.list-icons').eq(0).before(searchHtml);
