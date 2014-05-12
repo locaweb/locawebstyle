@@ -98,5 +98,5 @@ configure :build do
   #set :base_url, "/locastyle/build"
 
   # base url for gh-pages
-  set :base_url, "/lwrevenda"
+  set :base_url, "/revenda"
 end
