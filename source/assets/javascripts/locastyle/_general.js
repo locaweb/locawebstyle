@@ -19,7 +19,6 @@ locastyle.general = (function() {
     _btnGroupActivationToogle();
     menuAnchor();
     toggleFields();
-    equalHeight();
   }
 
   // Quando tem uma hash na url que seja igual a algum target no html
@@ -32,14 +31,6 @@ locastyle.general = (function() {
       $('a[href=' + hash + ']').trigger('click');
       locastyle.collapse.toggle(hash)
     }
-  }
-
-  function equalHeight () {
-    $('[data-ls-target-height]').each(function (i, elem) {
-      var selector = $(this).data('ls-target-height')
-      var heightMain = $(this).height();
-      $(selector).height(heightMain);
-    });
   }
 
   function toggleFields(){
