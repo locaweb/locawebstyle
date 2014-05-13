@@ -29,3 +29,4 @@ vendor/*
 Gemfile.lock
 .vagrant
 Vagrantfile
+.ruby-version
