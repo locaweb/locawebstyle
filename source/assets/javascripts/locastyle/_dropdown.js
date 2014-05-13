@@ -20,6 +20,7 @@ locastyle.dropdown = (function() {
       var $target = $($(this).parents("[data-ls-module=dropdown]"));
       locastyle.dropdown.toggleDropdown($target);
       locastyle.dropdown.closeDropdown($target);
+      setPositionVisible($target);
       evt.stopPropagation();
     });
   }
@@ -37,6 +38,13 @@ locastyle.dropdown = (function() {
 
   function closeDropdown(el) {
     $("[data-ls-module=dropdown]").not(el).removeClass("active");
+  }
+
+  function setPositionVisible($target){
+    var $main = $('.ls-main');
+    if($main.get(0).scrollWidth > $main.width()){
+      $($target).addClass('ls-pos-right')
+    }
   }
 
   return {
