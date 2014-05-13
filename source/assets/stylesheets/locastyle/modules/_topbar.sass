@@ -184,19 +184,34 @@
             border-bottom: none
 
 
-  .ls-ico-menu:before,
-  .show-notifications.ls-ico-question:before
-    position: fixed
-    padding: 15px 15px 0
-    height: $heightTopbar
-    display: inline-block
-    color: #FFF
-    font-size: 2em
-    vertical-align: middle
-    cursor: pointer
+  .ls-ico-menu,
+  .show-notifications.ls-ico-question
+    &:before
+      position: fixed
+      padding: 15px 15px 0
+      height: $heightTopbar
+      display: inline-block
+      color: #FFF
+      font-size: 2em
+      vertical-align: middle
+      cursor: pointer
+
+    &:after
+      content: ""
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 2424px
+      display: none
 
   .show-notifications.ls-ico-question:before
     right: 0
+
+.sidebar-visible .ls-ico-menu:after,
+.notifications-visible .show-notifications.ls-ico-question:after
+  display: block
+
 
 @media (min-width: $screen-sm)
   .ls-topbar
