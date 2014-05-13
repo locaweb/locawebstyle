@@ -12,6 +12,7 @@ type: component
     <li><a href="#desabilitando-campos">Desabilitando campos</a></li>
     <li><a href="#formularios-como-texto">Formulários como texto</a></li>
     <li><a href="#habilitando-e-desabilitando-campos">Habilitando e desabilitando campos</a></li>
+    <li><a href="#estilo-de-validacao">Estilos de validação</a></li>
     <li><a href="#mascaras-de-campos">Máscaras</a></li>
     <li><a href="#prefixos-e-sufixos">Prefixos e sufixos</a></li>
     <li><a href="#todos-campos-de-formulario">Campos de formulário</a></li>
@@ -126,6 +127,19 @@ type: component
     <%= partial('documentacao/shared/form/fields-toggle.erb') %>
     <code class="language-markup">
 <%= escape_html(partial('documentacao/shared/form/fields-toggle.erb')) %>
+    </code>
+  </div>
+</div>
+
+
+<div id="estilo-de-validacao" class="doc-section">
+<h3 class="ls-title-3">Habilitando e desabilitando campos</h3>
+<p>O Padrão do Locaweb Style para indicar validação de formulários, basta utilizar as classes <code>.ls-error</code>, <code>.ls-warning</code> ou <code>.ls-success</code> no elemento pai deles, ou seja no <code>.ls-field</code>.</p>
+<p>A mensagem de ajuda é exibida na classe <code>.ls-help-message</code>, conforme o exemplo abaixo:</p>
+<div class="doc-example">
+    <%= partial('documentacao/shared/form/form-vertical-validacao.erb') %>
+    <code class="language-markup">
+<%= escape_html(partial('documentacao/shared/form/form-vertical-validacao.erb')) %>
     </code>
   </div>
 </div>
