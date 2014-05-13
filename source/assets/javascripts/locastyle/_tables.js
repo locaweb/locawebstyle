@@ -259,6 +259,7 @@ locastyle.tables = (function() {
         },
         success     : function(data){
           updateTable($modal, $tr, data);
+          $tr.trigger("change");
         }
       });
     });
