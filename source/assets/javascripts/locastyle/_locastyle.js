@@ -31,7 +31,7 @@ Locastyle = (function() {
 			this.popover(dom_scope);
 			this.labelSelectCustom();
 			this.collapsedRadios(dom_scope);
-			this.collapsedAllCollapse(dom_scope);
+			this.closedAllCollapse(dom_scope);
 			this.collapseWithTooltip(dom_scope);
 			this.collapseNavButtons(dom_scope);
 		},
@@ -267,7 +267,6 @@ Locastyle = (function() {
 		collapsedRadios: function(dom_scope) {
 			$(".collapsedRadios [data-toggle='collapse']").on("click", function(){
 				var dataTarget = $(this).data('target');
-				// $(this).parents('.collapsedRadios').find('.in').not(dataTarget).collapse('hide');
 				if( $(dataTarget).hasClass('in') ){
 					return false
 				}
@@ -275,7 +274,7 @@ Locastyle = (function() {
 			});
 		},
 
-		collapsedAllCollapse: function(dom_scope) {
+		closedAllCollapse: function(dom_scope) {
 			$('.closeAllCollapse').on('click', function(){
 				$(this).parents('.collapsedRadios').find('.in').collapse('hide');
 			})
