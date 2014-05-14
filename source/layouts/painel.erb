@@ -11,33 +11,7 @@
 </head>
 <body class="<%= page_classes %>">
 
-<div class="ls-topbar">
-
-  <!-- Barra de Notificações -->
-  <div class="ls-notification-topbar">
-
-    <!-- Links de apoio -->
-    <div class="ls-alerts-list">
-      <a href="#" class="ls-ico-bell-o" data-counter="8" data-ls-module="topbarCurtain" data-target="#ls-notification-curtain"><span>Notificações</span></a>
-      <a href="#" class="ls-ico-bullhorn" data-ls-module="topbarCurtain" data-target="#ls-help-curtain"><span>Ajuda</span></a>
-      <a href="#" class="ls-ico-question" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain"><span>Sugestões</span></a>
-    </div>
-
-    <!-- Dropdown com detalhes da conta de usuário -->
-    <div class="ls-user-account">
-      <a href="#" class="ls-ico-user">
-        Franco
-        <small>(fmolina)</small>
-        <input type="checkbox" name="user" value="">
-      </a>
-    </div>
-  </div>
-
-  <span class="show-sidebar ls-ico-menu"></span>
-  <span class="show-notifications ls-ico-question"></span>
-
-
-</div>
+  <%= partial "layouts/topbar" %>
 
   <main class="ls-main <%= current_page.data.body_class %>">
     <div class="container-fluid">
