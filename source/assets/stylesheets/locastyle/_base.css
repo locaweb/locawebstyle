@@ -1259,9 +1259,25 @@ hr.sep {background-color: #E5E5E5; }
   -webkit-border-radius: 5px;
 }
 
-
 ol p{font-size: inherit;}
-.notification .listInfos{margin: 0;}
+
+.notification .listInfos {
+  padding: 10px;
+  margin: 0;
+  background-color: #fff;
+  list-style: none;
+  border-radius: 4px;
+}
+
+.notification .listInfos li[class*="ico-"] {padding-left: 54px; }
+
+.notification .listInfos li[class*="ico-"]:before {
+  position: absolute;
+  left: 10px;
+  font-size: 30px;
+  top: 50%;
+  margin-top: -17px;
+}
 .notification .tab-content .tab-pane{padding: 10px;}
 .listInfos{
   max-height: 250px;

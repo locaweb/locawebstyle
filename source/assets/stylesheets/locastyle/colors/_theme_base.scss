@@ -114,6 +114,10 @@
   border-left-color: $pallet_1;
 }
 
+#{$theme_name} .boxCollapse .valueNotify.scoreIndicator { background-color: $pallet_1; }
+#{$theme_name} .boxCollapse .valueNotify.scoreIndicator:before { border-right-color: $pallet_1; }
+#{$theme_name} .boxCollapse.notification .listInfos li a { color: $pallet_2; }
+
 #{$theme_name} #menuPrincipal > ul > li.selected > a,
 #{$theme_name} .lnk-suggestions {
   background-color: $pallet_1;

@@ -26,7 +26,7 @@ activate :blog do |blog|
 end
 
 # Automatic reload on save
-activate :livereload
+# activate :livereload
 
 ###
 # Compass
