@@ -58,6 +58,7 @@ locastyle.topbarCurtain = (function() {
   }
 
   function hideCurtains() {
+    $("[data-ls-module='topbarCurtain']").removeClass("ls-active");
     $(".ls-notification-list").removeClass("active");
   }
 
