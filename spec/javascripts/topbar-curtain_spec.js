@@ -34,6 +34,12 @@ describe("Topbar Curtain:", function() {
       expect($("#awesome-curtain").hasClass('active')).toEqual(false);
     });
 
+    it("should remove 'ls-active' css class from any trigger link", function() {
+      locastyle.topbarCurtain.init();
+      $("#link-clicked-2").click();
+      expect($("#link-clicked-2").hasClass('ls-active')).toEqual(false);
+    });
+
     it("should NOT add 'active' css class on target if it already have it", function() {
       locastyle.topbarCurtain.init();
       $("#link-clicked-2").click();
@@ -46,6 +52,12 @@ describe("Topbar Curtain:", function() {
       locastyle.topbarCurtain.init();
       $("#outside_element").click();
       expect($("#awesome-curtain").hasClass('active')).toEqual(false);
+    })
+
+    it("should remove 'ls-active' css class of the links already clicked", function() {
+      locastyle.topbarCurtain.init();
+      $("#outside_element").click();
+      expect($("#item-2").hasClass('ls-active')).toEqual(false);
     })
   })
 
