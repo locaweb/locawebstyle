@@ -948,6 +948,7 @@ td .progress {max-width: 70px;}
 }
 
 /* quando nao existir conteudo no titulo */
+.forceClass .popover{ z-index: 2;}
 .popover .popover-title:empty{
   display: none;
 }

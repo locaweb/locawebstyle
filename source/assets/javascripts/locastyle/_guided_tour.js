@@ -13,18 +13,8 @@ Locastyle.prototype.guidedTour = ( function() {
 	}
 
 	function init(jsonSteps){
-		checkTour(jsonSteps);
-	}
-
-	// Override default selectors if user provide
-	function checkTour(jsonSteps){
-		if(jsonSteps && jsonSteps.selectors && hopscotch){
-			$.each( config.selectors, function(key,selector){
-				jsonSteps.selectors[key] = jsonSteps.selectors[key] || config.selectors[key];
-			});
-			setTour(jsonSteps);
-			setCookie();
-		}
+		setTour(jsonSteps);
+		setCookie();
 	}
 
 	function setTour(tour){
@@ -34,10 +24,10 @@ Locastyle.prototype.guidedTour = ( function() {
 		$(config.selectors.close).on({click: closeWelcomeTour});
 	}
 
-	function openWelcomeTour(e){
-		e.preventDefault();
+	function openWelcomeTour(){
 		$(config.selectors.tour).toggleClass('on');
 		$(config.selectors.init).focus().attr('tabindex', '-1');
+		return false
 	}
 
 	function initTour(){
