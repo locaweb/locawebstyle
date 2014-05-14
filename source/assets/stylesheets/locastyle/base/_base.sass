@@ -20,10 +20,10 @@
   &.no-main-bg
     background-color: #f7f7f7
 
-  .sidebar-visible &
+  .ls-sidebar-visible &
     +translate($sidebarWidth, 0)
 
-  .notifications-visible &
+  .ls-notifications-visible &
     +translate(-$sidebarWidth, 0)
 
 .ls-container,
@@ -96,8 +96,8 @@
     +transform(none)
     margin-left: $sidebarWidth
 
-    .sidebar-visible &
+    .ls-sidebar-visible &
       +translate(0, 0)
 
-    .notifications-visible &
+    .ls-notifications-visible &
       +translate(0, 0)

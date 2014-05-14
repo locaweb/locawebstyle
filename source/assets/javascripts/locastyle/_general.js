@@ -88,21 +88,21 @@ locastyle.general = (function() {
   }
 
   function showSidebar() {
-    var $showHide = $('.show-sidebar');
+    var $showHide = $('.ls-show-sidebar');
     var $html = $('html');
 
     $showHide.on('touchstart click', function(evt) {
-      $html.toggleClass('sidebar-visible');
+      $html.toggleClass('ls-sidebar-visible');
       evt.preventDefault();
     });
   }
 
   function showNotifications() {
-    var $showHide = $('.show-notifications');
+    var $showHide = $('.ls-show-notifications');
     var $html = $('html');
 
     $showHide.on('touchstart click', function(evt) {
-      $html.toggleClass('notifications-visible');
+      $html.toggleClass('ls-notifications-visible');
       evt.preventDefault();
     });
   }
