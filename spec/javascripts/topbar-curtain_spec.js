@@ -22,6 +22,12 @@ describe("Topbar Curtain:", function() {
       expect($("#item-1").hasClass('active')).toEqual(true);
     });
 
+    it("should add 'ls-active' css class on trigger", function() {
+      locastyle.topbarCurtain.init();
+      $("#link-clicked").click();
+      expect($("#link-clicked").hasClass('ls-active')).toEqual(true);
+    });
+
     it("should remove 'active' css class from any curtain", function() {
       locastyle.topbarCurtain.init();
       $("#link-clicked").click();

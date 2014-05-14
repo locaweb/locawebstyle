@@ -46,6 +46,7 @@ locastyle.topbarCurtain = (function() {
       var targetState = $($(trigger).data("target")).hasClass("active");
       hideCurtains();
       if(!targetState) {
+        $(trigger).addClass("ls-active");
         showCurtain($(trigger).data("target"));
       }
     });
