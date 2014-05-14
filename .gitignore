@@ -29,4 +29,9 @@ vendor/*
 Gemfile.lock
 .vagrant
 Vagrantfile
+
+# rbenv
 .ruby-version
+
+# Ignore deploy related files
+deploy
