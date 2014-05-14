@@ -22,10 +22,10 @@
     left: 0
 
 
-  .sidebar-visible &
+  .ls-sidebar-visible &
     +translate($sidebarWidth, 0)
 
-  .notifications-visible &
+  .ls-notifications-visible &
     +translate(-$sidebarWidth, 0)
 
   //
@@ -90,10 +90,10 @@
 
         &[data-counter]
           color: #fff
-          
+
           &:after
             display: block
-        
+
         &.ls-active
           color: #fff
 
@@ -189,7 +189,9 @@
 
 
   .ls-ico-menu,
-  .show-notifications.ls-ico-question
+  .ls-show-notifications.ls-ico-question
+    cursor: pointer
+
     &:before
       position: fixed
       padding: 15px 15px 0
@@ -209,11 +211,11 @@
       height: 2424px
       display: none
 
-  .show-notifications.ls-ico-question:before
+  .ls-show-notifications.ls-ico-question:before
     right: 0
 
-.sidebar-visible .ls-ico-menu:after,
-.notifications-visible .show-notifications.ls-ico-question:after
+.ls-sidebar-visible .ls-ico-menu:after,
+.ls-notifications-visible .ls-show-notifications.ls-ico-question:after
   display: block
 
 
@@ -225,10 +227,10 @@
     &:after
       left: $sidebarWidth
 
-    .sidebar-visible &
+    .ls-sidebar-visible &
       +translate(0, 0)
 
-    .notifications-visible &
+    .ls-notifications-visible &
       +translate(0, 0)
 
     .ls-brand-name
@@ -245,7 +247,7 @@
         font-size: 2rem
 
     .ls-ico-menu:before,
-    .show-notifications.ls-ico-question:before
+    .ls-show-notifications.ls-ico-question:before
       display: none
 
     .ls-notification-topbar
