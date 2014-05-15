@@ -101,14 +101,18 @@ menu_page: v1/partials/sidebar-formularios.erb
 	<p>Insere uma classe <strong>.add-on</strong> no elemento, formatando-o de forma que ele fique acomplado ao campo.</p>
 
 	<div class="example">
+		<p>OBS: O último elemento fecha todos e não exibe nada, pra isso basta inserir a classe <code>.closeAllCollapse</code>, o elemento não pode possuir o atributo <code>data-toggle="collapse"</code>, isso é usado apenas em algumas exceções.</p>
 		<div class="control-group collapsedRadios">
 			<label>Tipo de autenticação:</label>
 			<div class="controls">
 				<label class="control-label">
-					<input type="radio" data-target="#authOpt" name="control" data-toggle="collapse" checked="checked"> Autenticado
+					<input type="radio" data-target="#authOpt" name="control" data-toggle="collapse" checked="checked"> Tipo checados
 				</label>
 				<label class="control-label">
-					<input type="radio" data-target="#authOpt2" name="control" data-toggle="collapse"> Não autenticado
+					<input type="radio" data-target="#authOpt2" name="control" data-toggle="collapse"> Tipo texto
+				</label>
+				<label class="control-label">
+					<input type="radio" data-target="#authOpt3" class="closeAllCollapse" name="control"> Nenhum tipo
 				</label>
 				<div id="authOpt" class="collapse in">
 					<div class="boxGrayOpt formInline">
@@ -122,6 +126,8 @@ menu_page: v1/partials/sidebar-formularios.erb
 						<input type="text" class="span5">
 					</div>
 				</div>
+				<div id="authOpt3" class="collapse">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -131,11 +137,14 @@ menu_page: v1/partials/sidebar-formularios.erb
 	&lt;label&gt;Tipo de autenticação:&lt;/label&gt;
 	&lt;div class="controls"&gt;
 		&lt;label class="control-label"&gt;
-			&lt;input type="radio" data-target="#authOpt" name="control" data-toggle="collapse" checked="checked"&gt; Autenticado
+			&lt;input type="radio" data-target="#authOpt" name="control" data-toggle="collapse" checked="checked"&gt; Tipo checados
 		&lt;/label&gt;
 		&lt;label class="control-label"&gt;
-			&lt;input type="radio" data-target="#authOpt2" name="control" data-toggle="collapse"&gt; Não autenticado
+			&lt;input type="radio" data-target="#authOpt2" name="control" data-toggle="collapse"&gt; Tipo texto
 		&lt;/label&gt;
+		&lt;label class="control-label"&gt;
+					&lt;input type="radio" data-target="#authOpt3" class="closeAllCollapse" name="control"&gt; Nenhum tipo
+				&lt;/label&gt;
 		&lt;div id="authOpt" class="collapse in"&gt;
 			&lt;div class="boxGrayOpt formInline"&gt;
 				&lt;label&gt;&lt;input type="checkbox" value="1"&gt; CPF&lt;/label&gt;
@@ -147,6 +156,8 @@ menu_page: v1/partials/sidebar-formularios.erb
 			&lt;div class="boxGrayOpt formInline"&gt;
 				&lt;input type="text" class="span5"&gt;
 			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div id="authOpt3" class="collapse"&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
