@@ -1,0 +1,9 @@
+---
+title: Versão 2.0.5
+date: 2014-05-15 22:04 UTC
+tags:
+---
+
+**O que tem de novo?**
+
+\- Adição de evento de "change" na linha da [tabela](http://locaweb.github.io/locawebstyle/manual/componentes/tabelas/) complexa.
