@@ -22,3 +22,4 @@ source/.DS_Store
 /deploy
 .rvmrc
 .jscs.json
+.ruby-version
