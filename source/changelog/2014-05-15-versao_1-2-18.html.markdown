@@ -1,0 +1,18 @@
+---
+title: Versão 1.2.18
+date: 2014-05-15 18:38 UTC
+tags:
+---
+
+**O que tem de novo?**
+
+\- 3 novos ícones: <code>.ico-send-email</code>, <code>.ico-update-calendar</code>, <code>.ico-block-user</code>. [Confira](http://locaweb.github.io/locawebstyle/v1/manual/componentes/icones/)
+
+
+**O que corrigimos**
+
+\- Tour Guiado, que estava com problemas entre as versões 1.2.14 à 1.2.17.
+
+\- Toggle nos inputs do tipo radio, conforme issue [#684](https://github.com/locaweb/locawebstyle/issues/684)
+
+\- Collapse de Notificação, foi retirado as abas que existiam nesse elemento e inserido no bullet de valor, a cor do tema, [confira exemplo](http://locaweb.github.io/locawebstyle/v1/manual/elementos/#notificacao)
