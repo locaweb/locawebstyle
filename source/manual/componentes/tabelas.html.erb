@@ -169,6 +169,7 @@ menu_page: sidebar-componentes.erb
 	<li><strong>Dados extras</strong>: quando desejar enviar dados extras, como <em>tokens</em> de validaçao nas requisiçoes ajax de edição/exclusão, basta inseri-los no form, normalmente, fora da tabela.</li>
 
 </ul>
+
 <p>Algumas ações comuns já tem seus comportamentos definidos.</p>
 <p>Exemplo:</p>
 <div class="example">
@@ -177,4 +178,15 @@ menu_page: sidebar-componentes.erb
 
 <pre class="lang-html prettyprint-code linenums">
 <%= partial "manual/componentes/partials/tabela-complexa.html.erb" %>
+</pre>
+
+
+<h3 class-"title-3">Evento</h3>
+<p>A tabela complexa faz um disparo de evento no elemento <code>tr</code> afetado pela ação de salvar.</p>
+<p>Quando a ação de salvar do form/modal retornar sucesso, será disparado um evento de <code>change</code> na linha afetada. Com isto, sua aplicação pode tomar alguma ação baseada na alteração daquela linha específica na tabela.</p>
+<pre class="example lang-javascript prettyprint-code linenums">
+
+$("my_table tr").on("change", function() {
+	//do something
+});
 </pre>
