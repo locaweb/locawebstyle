@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="colorBlue">
 	<head>
 		<title>Cartilha de elementos do Locaweb Style</title>
 
@@ -7,8 +7,8 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-		<link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/1.2.15/bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/1.2.15/stylesheets/locastyle.css">
+		<link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/1.2.18/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/1.2.18/stylesheets/locastyle.css">
 		<style>
 			.the-icons li{
 				font-size: 16px;
@@ -185,120 +185,113 @@
 				</div>
 				<hr>
 
-				<div class="boxCollapse active notification">
-					<header data-target="#info_notify" data-toggle="collapse">
-						<h3>Notificações</h3>
-						<span class="valueNotify">15</span>
-					</header>
+				<div id="notificacao">
+	    <div class="boxCollapse notification">
+	      <header data-target="#info_notify" data-toggle="collapse">
+	        <h3>Notificações</h3>
+	        <span class="valueNotify">15</span>
+	      </header>
 
-					<div id="info_notify" class="collapse in">
-						<ul class="tabs" role="tablist">
-							<li class="active"><a href="#tab1" data-toggle="tab" tabindex="3">Todas</a></li>
-							<li><a href="#tab2" data-toggle="tab" tabindex="3">Novas</a></li>
-							<li><a href="#tab3" data-toggle="tab" tabindex="3">Alertas</a></li>
-						</ul>
-						<div class="tab-content">
-							<div class="tab-pane active" id="tab1">
-								<ul class="listInfos noListStyle noMargin">
+	      <div id="info_notify" class="collapse">
+	            <ul class="listInfos">
+	              <li class="alert new">
+	                <p><b>Alert New - DNS do site não configurado</b></p>
+	                <p>Certifique-se que o domínio que quer cadastrar está com a entrada do seu DNS pronta para ser acessada pelo servidor da Locaweb. <a href="#" tabindex="3">Como configurar o DNS no meu domínio?</a> </p>
+	              </li>
+	              <li class="alert">
+	                <p><b>Alert - DNS do site não configurado</b></p>
+	                <p>Certifique-se que o domínio que quer cadastrar está com a entrada do seu DNS pronta para ser acessada pelo servidor da Locaweb. <a href="#" tabindex="3">Como configurar o DNS no meu domínio?</a> </p>
+	              </li>
+	              <li class="new">
+	                <p><b>New - Limite de caixas postais atingido</b></p>
+	                <p>Você atingiu o limite de caixas postais disponíveis nesse domínio e não será mais possível criar novas caixas postais. <a href="#" tabindex="3">Contrate novas caixas postais.</a>
+	                </p>
+	              </li>
+	              <li>
+	                <p><b>Normal - Domínio não registrado</b></p>
+	                <p>Você pode cadastrar caixas postais e configurar sua conta mas os e-mails não funcionarão até que o domínio esteja
+	                  configurado corretamente. Providencie o registro ou <a href="#" tabindex="3">registre-o agora mesmo</a>.
+	                </p>
+	              </li>
+	            </ul>
+	      </div>
+	    </div>
 
-									<li class="alert">
-										<p><b>DNS do site não configurado</b></p>
-										<p>Certifique-se que o domínio que quer cadastrar está com a entrada do seu DNS pronta para ser acessada pelo servidor da Locaweb. <a href="#" tabindex="3">Como configurar o DNS no meu domínio?</a> </p>
-									</li>
-									<li class="new">
-										<p><b>Limite de caixas postais atingido</b></p>
-										<p>Você atingiu o limite de caixas postais disponíveis nesse domínio e não será mais possível criar novas caixas postais. <a href="#" tabindex="3">Contrate novas caixas postais.</a>
-										</p>
-									</li>
-									<li>
-										<p><b>Domínio não registrado</b></p>
-										<p>Você pode cadastrar caixas postais e configurar sua conta mas os e-mails não funcionarão até que o domínio esteja
-											configurado corretamente. Providencie o registro ou <a href="#" tabindex="3">registre-o agora mesmo</a>.
-										</p>
-									</li>
-								</ul>
-							</div>
-							<div class="tab-pane" id="tab2">
-								<ul class="listInfos noListStyle noMargin">
-									<li class="new">
-										<p><b>Limite de caixas postais atingido</b></p>
-										<p>Você atingiu o limite de caixas postais disponíveis nesse domínio e não será mais possível criar novas caixas postais. <a href="#" tabindex="3">Contrate novas caixas postais.</a>
-										</p>
-									</li>
-									<li class="new">
-										<p><b>DNS do site não configurado</b></p>
-										<p>Certifique-se que o domínio que quer cadastrar está com a entrada do seu DNS pronta para ser acessada pelo servidor da Locaweb. <a href="#" tabindex="3">Como configurar o DNS no meu domínio?</a> </p>
-									</li>
-									<li class="new">
-										<p><b>Domínio não registrado</b></p>
-										<p>Você pode cadastrar caixas postais e configurar sua conta mas os e-mails não funcionarão até que o domínio esteja
-											configurado corretamente. Providencie o registro ou <a href="#" tabindex="3">registre-o agora mesmo</a>.
-										</p>
-									</li>
-									<li>
-										<p><b>Domínio não registrado</b></p>
-										<p>Você pode cadastrar caixas postais e configurar sua conta mas os e-mails não funcionarão até que o domínio esteja
-											configurado corretamente. Providencie o registro ou <a href="#" tabindex="3">registre-o agora mesmo</a>.
-										</p>
-									</li>
-								</ul>
-							</div>
-							<div class="tab-pane" id="tab3">
-								<ul class="listInfos noListStyle noMargin">
+	    <div class="boxCollapse notification">
+	      <header data-target="#info_notify2" data-toggle="collapse">
+	        <h3>Notificações</h3>
+	        <span class="valueNotify scoreIndicator">15</span>
+	      </header>
 
-									<li class="alert">
-										<p><b>Domínio não registrado</b></p>
-										<p>Você pode cadastrar caixas postais e configurar sua conta mas os e-mails não funcionarão até que o domínio esteja
-											configurado corretamente. Providencie o registro ou <a href="#" tabindex="3">registre-o agora mesmo</a>.
-										</p>
-									</li>
-									<li class="alert">
-										<p><b>Domínio não registrado</b></p>
-										<p>Você pode cadastrar caixas postais e configurar sua conta mas os e-mails não funcionarão até que o domínio esteja
-											configurado corretamente. Providencie o registro ou <a href="#" tabindex="3">registre-o agora mesmo</a>.
-										</p>
-									</li>
-									<li class="alert">
-										<p><b>Domínio não registrado</b></p>
-										<p>Você pode cadastrar caixas postais e configurar sua conta mas os e-mails não funcionarão até que o domínio esteja
-											configurado corretamente. Providencie o registro ou <a href="#" tabindex="3">registre-o agora mesmo</a>.
-										</p>
-									</li>
-									<li class="alert">
-										<p><b>Limite de caixas postais atingido</b></p>
-										<p>Você atingiu o limite de caixas postais disponíveis nesse domínio e não será mais possível criar novas caixas postais. <a href="#" tabindex="3">Contrate novas caixas postais.</a>
-										</p>
-									</li>
-									<li class="alert">
-										<p><b>DNS do site não configurado</b></p>
-										<p>Certifique-se que o domínio que quer cadastrar está com a entrada do seu DNS pronta para ser acessada pelo servidor da Locaweb. <a href="#" tabindex="3">Como configurar o DNS no meu domínio?</a> </p>
-									</li>
-									<li class="alert">
-										<p><b>DNS do site não configurado</b></p>
-										<p>Certifique-se que o domínio que quer cadastrar está com a entrada do seu DNS pronta para ser acessada pelo servidor da Locaweb. <a href="#" tabindex="3">Como configurar o DNS no meu domínio?</a> </p>
-									</li>
-									<li class="alert">
-										<p><b>DNS do site não configurado</b></p>
-										<p>Certifique-se que o domínio que quer cadastrar está com a entrada do seu DNS pronta para ser acessada pelo servidor da Locaweb. <a href="#" tabindex="3">Como configurar o DNS no meu domínio?</a> </p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+	      <div id="info_notify2" class="collapse">
+	            <ul class="listInfos">
+	              <li class="alert new">
+	                <p><b>Alert New - DNS do site não configurado</b></p>
+	                <p>Certifique-se que o domínio que quer cadastrar está com a entrada do seu DNS pronta para ser acessada pelo servidor da Locaweb. <a href="#" tabindex="3">Como configurar o DNS no meu domínio?</a> </p>
+	              </li>
+	              <li class="alert">
+	                <p><b>Alert - DNS do site não configurado</b></p>
+	                <p>Certifique-se que o domínio que quer cadastrar está com a entrada do seu DNS pronta para ser acessada pelo servidor da Locaweb. <a href="#" tabindex="3">Como configurar o DNS no meu domínio?</a> </p>
+	              </li>
+	              <li class="new">
+	                <p><b>New - Limite de caixas postais atingido</b></p>
+	                <p>Você atingiu o limite de caixas postais disponíveis nesse domínio e não será mais possível criar novas caixas postais. <a href="#" tabindex="3">Contrate novas caixas postais.</a>
+	                </p>
+	              </li>
+	              <li>
+	                <p><b>Normal - Domínio não registrado</b></p>
+	                <p>Você pode cadastrar caixas postais e configurar sua conta mas os e-mails não funcionarão até que o domínio esteja
+	                  configurado corretamente. Providencie o registro ou <a href="#" tabindex="3">registre-o agora mesmo</a>.
+	                </p>
+	              </li>
+	            </ul>
+	      </div>
+	    </div>
 
-				<p>
-					Notificações desabilitadas/vazia
-				</p>
-				<div class="boxCollapse active notification">
-					<header data-target="#info_notify_empty" data-toggle="collapse">
-						<h3>Box notificações desabilitado/vazio</h3>
-						<span class="valueNotify empty ">0</span>
-					</header>
-					<div id="info_notify_empty" class="collapse in">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					</div>
-				</div>
+	    <div class="boxCollapse notification">
+	      <header data-target="#info_notify3" data-toggle="collapse">
+	        <h3>Notificações</h3>
+	        <span class="valueNotify empty">0</span>
+	      </header>
+
+	      <div id="info_notify3" class="collapse">
+	            <ul class="listInfos">
+	              <li class="alert new">
+	                <p><b>Alert New - DNS do site não configurado</b></p>
+	                <p>Certifique-se que o domínio que quer cadastrar está com a entrada do seu DNS pronta para ser acessada pelo servidor da Locaweb. <a href="#" tabindex="3">Como configurar o DNS no meu domínio?</a> </p>
+	              </li>
+	              <li class="alert">
+	                <p><b>Alert - DNS do site não configurado</b></p>
+	                <p>Certifique-se que o domínio que quer cadastrar está com a entrada do seu DNS pronta para ser acessada pelo servidor da Locaweb. <a href="#" tabindex="3">Como configurar o DNS no meu domínio?</a> </p>
+	              </li>
+	              <li class="new">
+	                <p><b>New - Limite de caixas postais atingido</b></p>
+	                <p>Você atingiu o limite de caixas postais disponíveis nesse domínio e não será mais possível criar novas caixas postais. <a href="#" tabindex="3">Contrate novas caixas postais.</a>
+	                </p>
+	              </li>
+	              <li>
+	                <p><b>Normal - Domínio não registrado</b></p>
+	                <p>Você pode cadastrar caixas postais e configurar sua conta mas os e-mails não funcionarão até que o domínio esteja
+	                  configurado corretamente. Providencie o registro ou <a href="#" tabindex="3">registre-o agora mesmo</a>.
+	                </p>
+	              </li>
+	            </ul>
+	      </div>
+	    </div>
+
+	    <p>
+	      Notificações desabilitadas/vazia
+	    </p>
+	    <div class="boxCollapse notification">
+	      <header data-target="#info_notify_empty" data-toggle="collapse">
+	        <h3>Box notificações desabilitado/vazio</h3>
+	        <span class="valueNotify empty ">0</span>
+	      </header>
+	      <div id="info_notify_empty" class="collapse">
+	        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+	      </div>
+	    </div>
+   </div>
 
 
 
@@ -599,7 +592,7 @@
 								</p>
 								<span class="fRight spanObs">Status: <strong>Ativo</strong></span>
 								<div class="boxWithArrow">
-									<div><img alt="linux" src="http://assets.locaweb.com.br/locastyle/1.2.17/images/os/linux.gif"></div>
+									<div><img alt="linux" src="http://assets.locaweb.com.br/locastyle/1.2.18/images/os/linux.gif"></div>
 								</div>
 								<p class="pObs"><strong> Hospedagem Basic</strong></p>
 							</li>
@@ -621,7 +614,7 @@
 								</span>
 								<div class="boxWithArrow">
 									<div>
-										<img alt="linux" src="http://assets.locaweb.com.br/locastyle/1.2.17/images/os/linux.gif">
+										<img alt="linux" src="http://assets.locaweb.com.br/locastyle/1.2.18/images/os/linux.gif">
 									</div>
 								</div>
 								<p class="pObs"><strong>Hospedagem Max</strong></p>
@@ -653,7 +646,7 @@
 								<span class="fRight spanObs">Status: <strong>Ativo</strong></span>
 								<div class="boxWithArrow">
 									<div>
-										<img alt="linux" src="http://assets.locaweb.com.br/locastyle/1.2.17/images/os/linux.gif">
+										<img alt="linux" src="http://assets.locaweb.com.br/locastyle/1.2.18/images/os/linux.gif">
 									</div>
 								</div>
 								<p class="pObs">
@@ -717,7 +710,7 @@
 								<tr>
 									<td class="span7 noBorderRight txtLeft">
 										<b>Plataforma: </b>
-										<img src="http://assets.locaweb.com.br/locastyle/1.2.17/images/os/linux.gif" alt="plataforma">
+										<img src="http://assets.locaweb.com.br/locastyle/1.2.18/images/os/linux.gif" alt="plataforma">
 										Linux CentOS 5 - 64 bits
 									</td>
 									<td class="span3"></td>
@@ -861,7 +854,7 @@
 									Resumo
 								</h1>
 								<div class="innerSideBox boxWhite">
-									<div id="account_settings"> <img class="fLeft" src="http://assets.locaweb.com.br/locastyle/1.2.17/images/cartaoBoleto.png">
+									<div id="account_settings"> <img class="fLeft" src="http://assets.locaweb.com.br/locastyle/1.2.18/images/cartaoBoleto.png">
 										<span class="dBlock">Incluso no plano</span>
 										<strong class="dBlock">E-mail Business</strong>
 										<hr class="cBoth">
@@ -1376,6 +1369,9 @@
 					</div>
 					<div class="span16">
 						<ul class="the-icons">
+							<li class="ico-send-email">ico-send-email</li>
+							<li class="ico-update-calendar">ico-update-calendar</li>
+						 <li class="ico-block-user">ico-block-user</li>
 							<li class="ico-server-config">ico-server-config</li>
 							<li class="ico-bar-consumption">ico-bar-consumption</li>
 							<li class="ico-balancer">ico-balancer</li>
@@ -1713,8 +1709,8 @@
 			</div>
 		</div>
 
-		<script src="//assets.locaweb.com.br/locastyle/1.2.15/javascripts/libs.js"></script>
-		<script src="//assets.locaweb.com.br/locastyle/1.2.15/javascripts/locastyle.js"></script>
-		<script src="//assets.locaweb.com.br/locastyle/1.2.15/bootstrap/js/bootstrap.js"></script>
+		<script src="//assets.locaweb.com.br/locastyle/1.2.18/javascripts/libs.js"></script>
+  <script src="//assets.locaweb.com.br/locastyle/1.2.18/javascripts/locastyle.js"></script>
+  <script src="//assets.locaweb.com.br/locastyle/1.2.18/bootstrap/js/bootstrap.js"></script>
 	</body>
 </html>

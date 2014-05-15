@@ -44,6 +44,64 @@
 	</ul>
 
 	<article>
+		<h1><a href="/locawebstyle/changelog/2013/12/13/versao_2-0-0-b8">Versão 2.0.0-b8</a></h1>
+		<div class="infoPost">
+			<small>2013/12/13</small>
+		</div>
+		<!-- use article.summary(250) if you have Nokogiri available to show just
+		the first 250 characters -->
+		<p><strong>Adições</strong></p>
+
+<p>- <a target="_blank" href="https://github.com/locaweb/locawebstyle/pull/487">#487</a>: Adicionando nova tela de login da locaweb no locastyle, <a title="Veja o exemplo na documentação" target="_blank" href="http://locaweb.github.io/locawebstyle/manual/exemplos/login">veja exemplo na documentação</a>.</p>
+
+<hr />
+
+<p><strong>Melhorias e correções</strong></p>
+
+<p>- Tracking de eventos nos selects</p>
+
+<p>- <a target="_blank" href="https://github.com/locaweb/locawebstyle/pull/486">#486</a>: Arrumando URL do edge e versão atual no config.</p>
+
+<p>- Atualizando a versão do jquery de 1.10.2 para 2.0.3, sem suporte a ie 7/8.</p>
+
+<p>- Ativação/Desativação de botões dentro de <code>.btn-group</code>.</p>
+
+<p>- Na tela de Login, foi inserido um div pai chamado <code>.box-parent-login</code> para dar mais flexibilidade em customizações.</p>
+
+<p>- <a href="https://github.com/locaweb/locawebstyle/commit/e6d17dc37afd3447f51acc0a6b0577c47a38ae3b">e6d17dc37a</a> Fixando footer sempre no bottom da página.</p>
+
+<p>- <a href="https://github.com/locaweb/locawebstyle/commit/c3e5dc7d9372150213035c691b1b582cf0ab55e3">c3e5dc7d93</a> Barra da Locaweb foi excluída do projeto.</p>
+
+<p>- <a href="https://github.com/locaweb/locawebstyle/commit/ef7a14bf8594649af63c85eeaa3ae17281533169">ef7a14bf85</a> Antes o Select2 só podia ser aplicado se o select estivesse dentro de um form, agora retiramos essa restrição.</p>
+
+<p>- <a href="https://github.com/locaweb/locawebstyle/commit/7db75fe0b204207d221333019b6148c383347525">7db75fe0b2</a> Correção da função que insere classes do Breakpoints na tag HTML.</p>
+
+<hr />
+
+<p><strong>Documentação</strong></p>
+
+<p>- Atualizamos as versões do Bootstrap e Locaweb Style no texto de <a href="http://locaweb.github.io/locawebstyle/manual/introducao/como-usar/">COMO USAR</a>.</p>
+
+	</article>
+	<hr>
+	<article>
+		<h1><a href="/locawebstyle/changelog/2013/12/13/versao_1-2-15">Versão 1.2.15</a></h1>
+		<div class="infoPost">
+			<small>2013/12/13</small>
+		</div>
+		<!-- use article.summary(250) if you have Nokogiri available to show just
+		the first 250 characters -->
+		<p><strong>Melhorias e correções</strong></p>
+
+<p>- Criação de 2 novos ícones (<code>chamaicon-addDomain</code> e <code>ico-server-config</code>).</p>
+
+<p>- Criaçao do documentação de classes funcionais.</p>
+
+<p>- Nova classe funcional <code>.noStyleInput</code> (remove estilo dos inputs).</p>
+
+	</article>
+	<hr>
+	<article>
 		<h1><a href="/locawebstyle/changelog/2013/12/13/versao_2-0-0-b7">Versão 2.0.0-b7</a></h1>
 		<div class="infoPost">
 			<small>2013/12/13</small>
@@ -460,72 +518,6 @@ $(".customSelect").select2({
 
 	</article>
 	<hr>
-	<article>
-		<h1><a href="/locawebstyle/changelog/2013/01/18/versao_0-38-0">Versão 0.38.0</a></h1>
-		<div class="infoPost">
-			<small>2013/01/18</small>
-		</div>
-		<!-- use article.summary(250) if you have Nokogiri available to show just
-		the first 250 characters -->
-		<h2 id="track-events-do-google-analytics">Track Events do Google Analytics</h2>
-
-<p>Inserimos um padrão de trackevents para alguns elementos comuns dos Locaweb Style. São eles:</p>
-
-<ul>
-  <li>Logo</li>
-  <li>Botão de sair</li>
-  <li>Link de Sugestões</li>
-  <li>Link de expandir e minimizar shortcuts</li>
-  <li>Seta de dica esquerda/direita da home e sidebar</li>
-  <li>Links de atendimento: Helpdesk, Chat, Telefone e Outras formas</li>
-</ul>
-
-<p>Em cada produto haverá seu trackevent específico e te encorajamos fortemente a fazer essa prática. Por isso não colocamos em menus, collapses e etc por que isso deve ser personalizado em cada produto.</p>
-
-<h2 id="github">Github</h2>
-
-<p>O Locaweb Style está agora publicado <a href="https://github.com/locaweb/locawebstyle">no GitHub</a></p>
-
-<h2 id="classes-funcionais">Classes funcionais</h2>
-
-<p>Fazendo com que as classes funcionais tenham uma hierarquia maior, de forma que suas funções prevaleçam sobre as classes de outros projetos, como Bootstrap ou código externo.</p>
-
-<h2 id="pequenas-alteraes">Pequenas alterações</h2>
-
-<p>Uma série de pequenas alterações em classes funcionais, scripts e botoes. Nada de outro mundo.</p>
-
-	</article>
-	<hr>
-	<article>
-		<h1><a href="/locawebstyle/changelog/2013/01/14/versao_0-36-0">Versão 0.36.0</a></h1>
-		<div class="infoPost">
-			<small>2013/01/14</small>
-		</div>
-		<!-- use article.summary(250) if you have Nokogiri available to show just
-		the first 250 characters -->
-		<h5 id="jquery-183">JQuery 1.8.3</h5>
-
-<p>Estávamos com a versão 1.8.2 do JQuery. Atualizamos para 1.8.3. Nada muito grande.</p>
-
-<h5 id="url-de-assets">URL de assets</h5>
-
-<p>Eu sei, eu sei… Já mudamos uma ou duas vezes o endereço dos assets do Locaweb Style. Queremos que essa seja a última. O padrão agora ficou mais parecido com outros serviços do mercado: <strong>http://developer.locaweb.com.br/assets/[versão atual]/locastyle.css</strong>. Fica assim: <strong>http://developer.locaweb.com.br/assets/0.36.0/locastyle.css</strong></p>
-
-<p>Se você quiser usar sempre a versão mais atual, sem travar a versão, em vez da numeração você usa EDGE, assim: <strong>http://developer.locaweb.com.br/assets/edge/locastyle.css</strong></p>
-
-<h5 id="minor-bugs-fixes">Minor bugs fixes</h5>
-
-<p>Alguns pequenos problemas de cores, conflitos de cores em botões e etc.</p>
-
-<h5 id="links-dos-assets-de-0360">Links dos assets de 0.36.0</h5>
-
-<pre class="lang-html linenums prettyprint">
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://developer.locaweb.com.br/assets/0.36.0/locastyle.css&quot;&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://developer.locaweb.com.br/assets/0.36.0/locastyle.js&quot;&gt;&lt;/script&gt;	
-</pre>
-
-	</article>
-	<hr>
 
 	<ul class="pager">
 		
@@ -539,6 +531,10 @@ $(".customSelect").select2({
 	<nav>
 		<h2>Recentes</h2>
 		<ul>
+			
+			<li><a href="/locawebstyle/changelog/2014/05/15/versao-2-0-5/">Versão 2.0.5</a></li>
+			
+			<li><a href="/locawebstyle/changelog/2014/05/15/versao_1-2-18/">Versão 1.2.18</a></li>
 			
 			<li><a href="/locawebstyle/changelog/2014/04/10/versao_2-0-4/">Versão 2.0.4</a></li>
 			
@@ -555,10 +551,6 @@ $(".customSelect").select2({
 			<li><a href="/locawebstyle/changelog/2014/01/30/versao_1-2-16/">Versão 1.2.16</a></li>
 			
 			<li><a href="/locawebstyle/changelog/2014/01/22/versao_2-0-0-b9/">Versão 2.0.0-b9</a></li>
-			
-			<li><a href="/locawebstyle/changelog/2013/12/13/versao_2-0-0-b8/">Versão 2.0.0-b8</a></li>
-			
-			<li><a href="/locawebstyle/changelog/2013/12/13/versao_1-2-15/">Versão 1.2.15</a></li>
 			
 		</ul>
 	</nav>
