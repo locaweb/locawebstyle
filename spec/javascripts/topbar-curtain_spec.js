@@ -16,10 +16,10 @@ describe("Topbar Curtain:", function() {
   });
 
   describe("When click on top-curtain trigger module", function() {
-    it("should add 'active' css class to target", function() {
+    it("should add 'ls-active' css class to target", function() {
       locastyle.topbarCurtain.init();
       $("#link-clicked").click();
-      expect($("#item-1").hasClass('active')).toEqual(true);
+      expect($("#item-1").hasClass('ls-active')).toEqual(true);
     });
 
     it("should add 'ls-active' css class on trigger", function() {
@@ -28,10 +28,10 @@ describe("Topbar Curtain:", function() {
       expect($("#link-clicked").hasClass('ls-active')).toEqual(true);
     });
 
-    it("should remove 'active' css class from any curtain", function() {
+    it("should remove 'ls-active' css class from any curtain", function() {
       locastyle.topbarCurtain.init();
       $("#link-clicked").click();
-      expect($("#awesome-curtain").hasClass('active')).toEqual(false);
+      expect($("#awesome-curtain").hasClass('ls-active')).toEqual(false);
     });
 
     it("should remove 'ls-active' css class from any trigger link", function() {
@@ -40,10 +40,10 @@ describe("Topbar Curtain:", function() {
       expect($("#link-clicked-2").hasClass('ls-active')).toEqual(false);
     });
 
-    it("should NOT add 'active' css class on target if it already have it", function() {
+    it("should NOT add 'ls-active' css class on target if it already have it", function() {
       locastyle.topbarCurtain.init();
       $("#link-clicked-2").click();
-      expect($("#item-2").hasClass('active')).toEqual(false);
+      expect($("#item-2").hasClass('ls-active')).toEqual(false);
     });
   });
 
@@ -51,7 +51,7 @@ describe("Topbar Curtain:", function() {
     it("should close opened curtains", function() {
       locastyle.topbarCurtain.init();
       $("#outside_element").click();
-      expect($("#awesome-curtain").hasClass('active')).toEqual(false);
+      expect($("#awesome-curtain").hasClass('ls-active')).toEqual(false);
     })
 
     it("should remove 'ls-active' css class of the links already clicked", function() {
@@ -65,7 +65,7 @@ describe("Topbar Curtain:", function() {
     it("should not close the curtain", function() {
       locastyle.topbarCurtain.init();
       $(".ls-notification-list").trigger("click");
-      expect($("#awesome-curtain").hasClass('active')).toEqual(true);
+      expect($("#awesome-curtain").hasClass('ls-active')).toEqual(true);
     })
   })
 });

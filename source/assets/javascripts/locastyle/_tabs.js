@@ -52,7 +52,7 @@ locastyle.tabs = (function() {
     $(tabNav).parents(".ls-dropdown").find("> a").remove();
 
     //atualiza com o novo trigger
-    $(tabNav).parents(".ls-dropdown").prepend($(tabNav).find("li.active").html());
+    $(tabNav).parents(".ls-dropdown").prepend($(tabNav).find("li.ls-active").html());
 
     // adiciona classe de estilo no trigger
     $(tabNav).parents(".ls-dropdown").find("> a").addClass("ls-btn");
@@ -78,14 +78,14 @@ locastyle.tabs = (function() {
 
   // ativa a aba de acordo com os argumentos recebidos
   function activateTab(el, $target) {
-    $(el).parents("li").addClass("active");
-    $target.addClass("active");
+    $(el).parents("li").addClass("ls-active");
+    $target.addClass("ls-active");
   }
 
   // desativa a aba de acordo com os argumentos recebidos
   function deactivateTab(el, $target) {
-    $(el).parents("li").siblings().removeClass("active");
-    $target.siblings().removeClass("active");
+    $(el).parents("li").siblings().removeClass("ls-active");
+    $target.siblings().removeClass("ls-active");
   }
 
   // remove os binds que o próprio modulo adiciona

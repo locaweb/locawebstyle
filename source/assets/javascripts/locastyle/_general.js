@@ -109,11 +109,11 @@ locastyle.general = (function() {
 
   function subMenu() {
     $('.ls-submenu > a').on('click', function(evt) {
-      $(this).parent().toggleClass('active');
+      $(this).parent().toggleClass('ls-active');
       evt.preventDefault();
     })
     if($('.ls-submenu').find('a').hasClass('ls-active')){
-      $('.ls-submenu a.ls-active').parents('.ls-submenu').addClass('active')
+      $('.ls-submenu a.ls-active').parents('.ls-submenu').addClass('ls-active')
     }
   }
 
@@ -134,8 +134,8 @@ locastyle.general = (function() {
 
   function _btnGroupActivationToogle() {
     $(".ls-group-active .ls-btn").on("click", function() {
-      $(this).siblings().removeClass("active");
-      $(this).addClass("active");
+      $(this).siblings().removeClass("ls-active");
+      $(this).addClass("ls-active");
     });
   }
 

@@ -43,7 +43,7 @@ locastyle.topbarCurtain = (function() {
   function bindTopCurtainTrigger(trigger) {
     $(trigger).on("click.ls", function(evt){
       evt.stopPropagation();
-      var targetState = $($(trigger).data("target")).hasClass("active");
+      var targetState = $($(trigger).data("target")).hasClass("ls-active");
       hideCurtains();
       if(!targetState) {
         $(trigger).addClass("ls-active");
@@ -53,13 +53,13 @@ locastyle.topbarCurtain = (function() {
   }
 
   function showCurtain(curtain) {
-    $(curtain).addClass("active");
+    $(curtain).addClass("ls-active");
     locastyle.dropdown.closeDropdown();
   }
 
   function hideCurtains() {
     $("[data-ls-module='topbarCurtain']").removeClass("ls-active");
-    $(".ls-notification-list").removeClass("active");
+    $(".ls-notification-list").removeClass("ls-active");
   }
 
   return {
