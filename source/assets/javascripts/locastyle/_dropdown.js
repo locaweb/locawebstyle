@@ -32,12 +32,12 @@ locastyle.dropdown = (function() {
   }
 
   function toggleDropdown($target) {
-    $target.toggleClass("active");
+    $target.toggleClass("ls-active");
     locastyle.topbarCurtain.hideCurtains();
   }
 
   function closeDropdown(el) {
-    $("[data-ls-module=dropdown]").not(el).removeClass("active");
+    $("[data-ls-module=dropdown]").not(el).removeClass("ls-active");
   }
 
   function setPositionVisible($target){

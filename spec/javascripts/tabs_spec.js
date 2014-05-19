@@ -9,12 +9,12 @@ describe("Tabs: ", function() {
 
       it("should deactivate the siblings tabs of related target tab", function() {
         $("#tab-trigger-2").trigger("click");
-        expect($("#track").hasClass("active")).toEqual(false);
+        expect($("#track").hasClass("ls-active")).toEqual(false);
       });
 
       it("should activate the related target tab", function() {
         $("#tab-trigger-2").trigger("click");
-        expect($("#laps").hasClass("active")).toEqual(true);
+        expect($("#laps").hasClass("ls-active")).toEqual(true);
       });
 
       it("should prevent default event", function() {
@@ -26,13 +26,13 @@ describe("Tabs: ", function() {
       it("should activate the parent li", function() {
         var $parentLi = $("#tab-trigger-2").parents("li");
         $("#tab-trigger-2").trigger("click");
-        expect($($parentLi).hasClass("active")).toEqual(true);
+        expect($($parentLi).hasClass("ls-active")).toEqual(true);
       });
 
       it("should deactivate the siblings of parent li", function() {
         var $siblingOfParentLi = $("#tab-trigger-1").parents("li");
         $("#tab-trigger-2").trigger("click");
-        expect($siblingOfParentLi.hasClass("active")).toEqual(false);
+        expect($siblingOfParentLi.hasClass("ls-active")).toEqual(false);
       });
 
       describe('and tabs is in dropdown mode', function () {
@@ -46,7 +46,7 @@ describe("Tabs: ", function() {
     describe("when click on element with data-ls-module without a href", function() {
       it("should use a data-target to active tab", function() {
         $('#myButtons').trigger("click");
-        expect($('#myButtons').hasClass("active")).toEqual(true);
+        expect($('#myButtons').hasClass("ls-active")).toEqual(true);
       });
     });
 
@@ -64,7 +64,7 @@ describe("Tabs: ", function() {
       });
 
       it("should insert the active tab as link in dropdown", function () {
-        var expectedContent = $("#my-tabs-in-mobile li.active a").html();
+        var expectedContent = $("#my-tabs-in-mobile li.ls-active a").html();
         locastyle.breakpointClass = "ls-screen-sm";
         locastyle.tabs.init();
         expect($('#my-tabs-in-mobile-wrapper .ls-dropdown > a').html()).toEqual(expectedContent);
@@ -111,7 +111,7 @@ describe("Tabs: ", function() {
       it("should unbind events handled by module", function() {
         locastyle.tabs.unbind();
         $('#tab-trigger-2').trigger("click");
-        expect($('#laps').hasClass("active")).toEqual(false);
+        expect($('#laps').hasClass("ls-active")).toEqual(false);
       });
 
       it("should NOT unbind common events handled by other code", function() {
