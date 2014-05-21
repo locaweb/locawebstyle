@@ -133,7 +133,7 @@ locastyle.general = (function() {
   }
 
   function _btnGroupActivationToogle() {
-    $(".ls-group-active .ls-btn").on("click", function() {
+    $(".ls-group-active [class*='ls-btn']").on("click", function() {
       $(this).siblings().removeClass("ls-active");
       $(this).addClass("ls-active");
     });
