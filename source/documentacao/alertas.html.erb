@@ -1,6 +1,6 @@
 ---
 title: Alertas
-description: Alertas são usadas para enviar um feedback contextual de sucesso, erro, warning ou apenas uma notificação de novas features no sistema.
+description: Os Alertas são usados para enviar um feedback contextual de sucesso, erro, warning ou apenas uma notificação de novas features no sistema.
 type: css
 ---
 
@@ -11,34 +11,28 @@ type: css
 <%= partial 'documentacao/shared/alerts/alerts' %>
 </code>
 
-<h2 class="ls-title-2">Alertas com links</h2>
-<p>Links dentro de alertas precisam da classe <code>.ls-link-alert</code>.</p>
-
-<div class="ls-box-demo">
-  <%= partial 'documentacao/shared/alerts/links-alerts' %>
-</div>
-<code class="language-html ls-well-example">
-<%= partial 'documentacao/shared/alerts/links-alerts' %>
-</code>
-
 <h2 class="ls-title-2">Fechando alertas</h2>
 <p>
-  Para utilizar este tipo de alerta, utilize a classe
-  <code>.ls-dismissable</code> junto com o atributo
-  <code>data-ls-module="dismiss"</code>, dentro do alerta você terá um botão com a classe
-  <code>.ls-dismiss</code>.
+  Para inserir um <strong>X</strong> para que o usuário possa fechar o alerta, basta utilizar a classe <code>ls-dismissable</code> no elemento de alert.
 </p>
 
 <div class="ls-box-demo">
   <%= partial 'documentacao/shared/alerts/close-alerts' %>
 </div>
-<code class="language-html ls-well-example">
-<%= partial 'documentacao/shared/alerts/close-alerts' %>
-</code>
 
 <h2 class="ls-title-2">Tamanhos dos alertas</h2>
-<p>Como as tabelas, você pode usar as classes <code>ls-md-space</code> ou <code>ls-sm-space</code> para aumentar ou diminuir o tamanho do alerta.</p>
-
+<p>O Locawebstyle tem algumas classes funcionais para nos ajudar a aumentar o espaçamento dos elementos. Basta usar uma das classes abaixo para aumentar o tamanho dos alertas:</p>
+   <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Nome</th><th>Descrição</th>
+      </tr>
+    </thead>
+    <tr><td>.ls-xs-space</td><td>Coloca um padding de 5px na caixa</td></tr>
+    <tr><td>.ls-sm-space</td><td>Coloca um padding de 10px na caixa</td></tr>
+    <tr><td>.ls-md-space</td><td>Coloca um padding de 20px na caixa</td></tr>
+    <tr><td>.ls-lg-space</td><td>Coloca um padding de 40px na caixa</td></tr>
+  </table>
 <div class="ls-box-demo">
   <%= partial 'documentacao/shared/alerts/width-alerts' %>
 </div>
