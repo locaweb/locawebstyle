@@ -62,7 +62,7 @@ p + .boxCollapse { margin-top: 30px; }
   left: 0;
   top: 0;
   outline: none;
-  z-index: 1;
+  z-index: 0;
 }
 
 .boxCollapse:hover,
@@ -222,7 +222,7 @@ tr.active .actionsTable { display: none; }
   border-radius: 0 10px 10px 0;
   -moz-border-radius: 0 10px 10px 0;
   -webkit-border-radius: 0 10px 10px 0;
-  z-index: 1;
+  z-index: 0;
   box-shadow: inset -1px 0px 5px rgba(0,0,0,0.15);
   -moz-box-shadow: inset -1px 0px 5px rgba(0,0,0,0.15);
   -webkit-box-shadow: inset -1px 0px 5px rgba(0,0,0,0.15);
@@ -239,7 +239,7 @@ tr.active .actionsTable { display: none; }
   left: -7px;
   top: 16px;
   width: 3px;
-  z-index: 2;
+  z-index: 0;
   background-color: #cdcdcd;
 }
 
