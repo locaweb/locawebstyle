@@ -1,94 +1,64 @@
 ---
 title: Botões
-description: Botões e conjuntos de botões com temas.
+description: Como os botões funcionam no Locaweb Style
 type: css
 ---
 
 <div class="row">
 
-  <div class="doc-example doc-example-markup ls-regroup">
-    <%= partial 'documentacao/shared/botoes' %>
-    <div data-ls-module="dropdown" class="ls-dropdown">
-      <a href="#" class="ls-btn"></a>
-      <ul class="ls-dropdown-nav">
-        <li><a href="#">Edit</a></li>
-        <li><a href="#">Config</a></li>
-        <li><a href="#">Save</a></li>
-        <li><a href="#" class="ls-color-danger">Remove</a></li>
-      </ul>
-    </div>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/botoes/botoes' %>
   </div>
 
-  <div>
-    <h5 class="ls-title-2">Aplicando os botões em elementos</h5>
-    <p>Use as classes de botões em elementos <code>&lt;a&gt;</code>, <code>&lt;button&gt; </code> e <code>&lt;input&gt;</code></p>
-    <p>
-      <a href="#" class="ls-btn">Link</a>
-      <button type="button" value= "teste" class="ls-btn">Button</button>
-      <input type="submit" value= "input" class="ls-btn"/>
-    </p>
+    <h5 class="ls-title-2">Criando botões</h5>
+    <p>Teoricamente você pode dar o visual de botão para qualquer elemento, mas geralmente os elementos <code>&lt;a&gt;</code>, <code>&lt;button&gt; </code> e <code>&lt;input&gt;</code> serão os mais utilizados e também é o que aconselhamos. </p>
+    <p>Basta aplicar a classe <code>ls-btn</code> em um desses elementos e pronto.</p>
 
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/botoes/simple-button-class' %>
   </div>
+  <code class="language-html ls-well-example">
+  <%= partial 'documentacao/shared/botoes/simple-button-class' %>
+  </code>
 
-  <br>
+  <h4 class="ls-title-2">Alterando o tamanho</h4>
+  <p>Para alterar o tamanho dos botões, basta incluir as classes abaixo:</p>
+    <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tr><td>ls-btn-lg</td><td><a href="#" class="ls-btn ls-btn-lg ls-btn-primary">Grande</a></td></tr>
+      <tr><td>ls-btn-md</td><td><a href="#" class="ls-btn ls-btn-md ls-btn-primary">Médio</a></td></tr>
+      <tr><td>ls-btn-sm</td><td><a href="#" class="ls-btn ls-btn-sm ls-btn-primary">Pequeno</a></td></tr>
+      <tr><td>ls-btn-xs</td><td><a href="#" class="ls-btn ls-btn-xs ls-btn-primary">Bem pequeno</a></td></tr>
+    </table>
 
-  <h4>Tamanhos de botões basta inserir as respectivas classes abaixo:</h4>
-  <br>
-  <p>Grande: <code>ls-btn-lg</code></p>
-  <p>Pequeno:<code>ls-btn-sm</code></p>
-  <p>Extra Pequeno:<code>ls-btn-xs</code></p>
-
-  <div class="doc-example doc-example-markup">
-
-    <p>
-      <a href="#" class="ls-btn-primary ls-btn-lg">Botão grande</a>
-      <a href="#" class="ls-btn ls-btn-lg">Botão grande</a>
-    </p>
-
-    <p>
-      <a href="#" class="ls-btn-primary">Botão padrão</a>
-      <a href="#" class="ls-btn">Botão padrão</a>
-    </p>
-    <p>
-      <a href="#" class="ls-btn-primary ls-btn-sm">Botão pequeno</a>
-      <a href="#" class="ls-btn ls-btn-sm">Botão pequeno</a>
-    </p>
-
-
-    <p>
-      <a href="#" class="ls-btn-primary ls-btn-xs">Botão extra pequeno</a>
-      <a href="#" class="ls-btn ls-btn-xs">Botão extra pequeno</a>
-    </p>
-
-
-  </div>
-
-  <div class="doc-block">
 
     <h5 class="ls-title-2">Botões blocados</h5>
-    <p>Às vezes podemos usamos botões que ocupem todo o espaço disponível, para tanto use a classe <code>.ls-btn-block</code>. Isso aplicará um <code>display: block;</code> ao elemento.</p>
+    <p>As vezes usamos botões que precisam ocupar todo o espaço disponível, para fazer isso use a classe <code>.ls-btn-block</code>. Isso aplicará um <code>display: block;</code> ao botão, dando uma largura de 100%.</p>
 
-    <div class="doc-example doc-example-markup">
-      <button type="button" class="ls-btn-primary ls-btn-lg ls-btn-block">Botão em forma de bloco</button>
-      <br>
+    <div class="ls-box-demo">
       <button type="button" class="ls-btn ls-btn-lg ls-btn-block">Botão em forma de bloco</button>
     </div>
 
-  </div>
-
-  <div class="doc-block">
     <h5 class="ls-title-2">Botões desativados</h5>
-    <p>Se os botões forem feitos com input, basta inserir o atributo <code>[disabled]</code> que os browsers cuidarão do resto. Se o botões foi feito usando links, use a classe <code>.disabled</code>. Esta classe além de visual, remove a ação do link.</p>
-    <div class="doc-example doc-example-markup">
-      <a href="#" class="ls-btn-primary ls-disabled">Link desativado</a>
+    <p>Para desabilitar um botão, basta inserir o atributo <code>[disabled]</code> que os browsers cuidarão do resto. </p>
+
+    <div class="ls-box-demo">
+      <a href="#" class="ls-btn-primary" disabled="disabled">Link desativado</a>
       <button class="ls-btn-primary" disabled="disabled">Botão Desativado</button>
     </div>
-  </div>
+    <code class="language-html ls-well-example">
+      <a href="#" class="ls-btn-primary" disabled="disabled">Link desativado</a>
+      <button class="ls-btn-primary" disabled="disabled">Button Desativado</button>
+    </code>
 
-  <div class="doc-block">
     <h5 class="ls-title-2">Botões com ícones</h5>
-    <p>Se você adicionar classes de ícones nos botões, eles já aparecerão no lugar correto, dispensando a inserção de elementos vazios para fazer os ícones. Veja exemplos abaixo.</p>
-    <div class="doc-example doc-example-markup">
+    <p>Escolha uma classe de ícone do Locastyle e adicione no botão, simple like that. Veja exemplos abaixo:</p>
+    <div class="ls-box-demo">
       <a href="#" class="ls-btn-primary ls-ico-user">Adicionar usuário</a>
       <button class="ls-btn-dark ls-ico-chevron-left">Anterior</button>
       <button class="ls-btn ls-ico-cog">Configurações</button>
@@ -96,76 +66,31 @@ type: css
     </div>
 
 
-  </div>
-
-  <div class="doc-block">
-
-  <h5 class="ls-title-2">Botões com dropdown</h5>
-  <p>Botões que acompanham algum dropdown precisam ter a classe <code>.ls-dropdown</code> e o atributo <code>data-ls-module="dropdown"</code>, conforme nossa <a href="../dropdown">documentação</a>. </p>
-  <div class="doc-example doc-example-markup">
-    <div data-ls-module="dropdown" class="ls-dropdown">
-      <a href="#" class="ls-btn-primary">Users</a>
-      <ul class="ls-dropdown-nav">
-          <li><a href="#">Edit</a></li>
-          <li><a href="#">Config</a></li>
-          <li><a href="#">Save</a></li>
-          <li><a href="#" class="ls-color-danger">Remove</a></li>
-      </ul>
-    </div>
-    <div data-ls-module="dropdown" class="ls-dropdown">
-      <a href="#" class="ls-btn-primary"></a>
-      <ul class="ls-dropdown-nav">
-          <li><a href="#">Edit</a></li>
-          <li><a href="#">Config</a></li>
-          <li><a href="#">Save</a></li>
-          <li><a href="#" class="ls-color-danger">Remove</a></li>
-      </ul>
-    </div>
-
-    <div data-ls-module="dropdown" class="ls-dropdown">
-      <a href="#" class="ls-btn">Users</a>
-      <ul class="ls-dropdown-nav">
-          <li><a href="#">Edit</a></li>
-          <li><a href="#">Config</a></li>
-          <li><a href="#">Save</a></li>
-          <li><a href="#" class="ls-color-danger">Remove</a></li>
-      </ul>
-    </div>
-    <div data-ls-module="dropdown" class="ls-dropdown">
-      <a href="#" class="ls-btn"></a>
-      <ul class="ls-dropdown-nav">
-          <li><a href="#">Edit</a></li>
-          <li><a href="#">Config</a></li>
-          <li><a href="#">Save</a></li>
-          <li><a href="#" class="ls-color-danger">Remove</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="doc-block">
     <h5 class="ls-title-2">Grupo de botões</h5>
     <p>Os grupos de botões são botões dentro de um elemento <code>.ls-group-btn</code>.</p>
-    <div class="doc-example doc-example-markup">
-    <div class="ls-group-btn">
-      <button type="button" class="ls-btn">Botão 1</button>
-      <button type="button" class="ls-btn">Botão 2</button>
-      <button type="button" class="ls-btn">Botão 3</button>
+    <div class="ls-box-demo">
+      <div class="ls-group-btn">
+        <button type="button" class="ls-btn">Botão 1</button>
+        <button type="button" class="ls-btn">Botão 2</button>
+        <button type="button" class="ls-btn">Botão 3</button>
+      </div>
     </div>
-    </div>
+    <code class="language-html ls-well-example">
+      <div class="ls-group-btn">
+        <button type="button" class="ls-btn">Botão 1</button>
+        <button type="button" class="ls-btn">Botão 2</button>
+        <button type="button" class="ls-btn">Botão 3</button>
+      </div>
+    </code>
 
-
-  </div>
-
-  <div class="doc-block">
     <h5 class="ls-title-2">Botões Ativados/Desativados</h5>
     <p>Adicionamos uma chave para ativar/desativar o grupo de botões, para usá-la adicione a classe <code>.ls-group-active</code> no mesmo elemento com <code>.ls-group-btn</code>.</p>
     <div class="doc-example doc-example-markup">
     <div class="ls-group-btn ls-group-active">
-      <button type="button" class="ls-btn active">Botão 1</button>
-      <button type="button" class="ls-btn">Botão 2</button>
-      <button type="button" class="ls-btn">Botão 3</button>
+      <button type="button" class="ls-btn-primary ls-active">Botão 1</button>
+      <button type="button" class="ls-btn-primary">Botão 2</button>
+      <button type="button" class="ls-btn-primary">Botão 3</button>
     </div>
     </div>
 
-  </div>
 </div>
