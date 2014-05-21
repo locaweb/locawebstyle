@@ -28,3 +28,4 @@ bs-config.js
 Vagrantfile
 
 .cache/
+.ruby-version
