@@ -4,5 +4,5 @@ date: 2014-05-21 17:49 UTC
 tags:
 ---
 
-## Ajustes
+**Ajustes**
 Corrigido o z-index dos bullets do collapse de notificação.
