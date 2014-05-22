@@ -5,4 +5,5 @@ tags:
 ---
 
 **Ajustes**
-Corrigido as fonts no firefox do mac e também melhorado a chamadas das fontes no formato SVG.
+
+\- Corrigido as fonts no firefox do mac e também melhorado a chamadas das fontes no formato SVG.

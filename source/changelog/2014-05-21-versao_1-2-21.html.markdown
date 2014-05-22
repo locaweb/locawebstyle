@@ -5,4 +5,5 @@ tags:
 ---
 
 **Ajustes**
-Corrigido o z-index dos bullets do collapse de notificação.
+
+\- Corrigido o z-index dos bullets do collapse de notificação.
