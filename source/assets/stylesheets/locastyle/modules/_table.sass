@@ -19,7 +19,16 @@
   &.ls-table-striped
 
     tbody tr:nth-child(odd) td
-      background-color: $gray1
+      background-color: lighten($gray1, 10%)
+
+    &.ls-bg-header tbody tr:nth-child(even) td
+      background-color: lighten($gray1, 10%)
+
+    &.ls-bg-header tbody tr:nth-child(odd) td
+      background-color: #fff
+
+  &.ls-table-bordered
+    border: 1px solid $gray1
 
   &.ls-bg-header thead th
 
