@@ -1,31 +1,39 @@
 ---
 title: Listas
-description: Listas simples e complexas
+description: Descrição e listagem de informações
 type: css
 ---
 
-  <h2 class="ls-title-2">Lista com header + imagem e grids de informações</h2>
-  <div class="ls-well ls-well-example">
-    <br>
-    <%= partial 'documentacao/shared/lists' %>
-    <code class="language-html ">
-      <%= partial 'documentacao/shared/lists' %>
-    </code>
-  </div>
+<p>As listas são usadas para exibir de forma organizada pequenas informações como status, descrições, nomes e ações. Geralmente essas informações não se encaixariam em listagens simples, por isso criamos um elemento que consegue agrupar todas essas informações.</p>
+
 
   <h2 class="ls-title-2">Lista somente com header</h2>
-  <div class="ls-list">
-    <header class="ls-list-header">
-      <div class="ls-list-title col-md-4">
-        <a href="#" >Identificador da conta</a>
-        <small>Revenda Email Marketing I </small>
-      </div>
-      <div class="col-md-3 col-md-offset-5">
-        <a href="#" class="ls-btn-primary ls-float-right-sm">Administrar</a>
-      </div>
-    </header>
+  <p>Listagem com elementos simples:</p>
+  <div class="ls-box-demo">
+    <div class="ls-list">
+      <header class="ls-list-header">
+        <div class="ls-list-title col-md-4">
+          <a href="#" >Identificador da conta</a>
+          <small>Revenda Email Marketing I </small>
+        </div>
+        <div class="col-md-3 col-md-offset-5">
+          <a href="#" class="ls-btn-primary ls-float-right-sm">Administrar</a>
+        </div>
+      </header>
+    </div>
+    <div class="ls-list">
+      <header class="ls-list-header">
+        <div class="ls-list-title col-md-4">
+          <a href="#" >Identificador da conta</a>
+          <small>Revenda Email Marketing I </small>
+        </div>
+        <div class="col-md-3 col-md-offset-5">
+          <a href="#" class="ls-btn-primary ls-float-right-sm">Administrar</a>
+        </div>
+      </header>
+    </div>
   </div>
- <code class="language-html ">
+  <code class="language-html ls-well-example">
   <div class="ls-list">
     <header class="ls-list-header">
       <div class="ls-list-title col-md-4">
@@ -38,3 +46,13 @@ type: css
     </header>
   </div>
 </code>
+
+
+
+  <h2 class="ls-title-2">Lista com header + imagem e grids de informações</h2>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/lists' %>
+  </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/lists' %>
+  </code>
