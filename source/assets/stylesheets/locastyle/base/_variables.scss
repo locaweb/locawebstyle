@@ -1,5 +1,3 @@
-$heightTopbar: 60px;
-$sidebarWidth: 280px;
 
 /* Small devices (tablets, 768px and up) */
 // @media (min-width: @screen-sm-min) { ... }
@@ -13,6 +11,12 @@ $screen-md : 992px;
 // @media (min-width: @screen-lg-min) { ... }
 $screen-lg : 1200px;
 
+$heightTopbar: 60px;
+$sidebarWidth: 280px;
+
+//
+// Default colors of themes and other elements.
+//
 $themes-colors: (
   blue        : (color1: #edf7fd, color2: #23aad0, color3: #254fa2, color4: #214087, color5: #182651 ),
   gold        : (color1: #eeead2, color2: #bcae5d, color3: #b39d31, color4: #8d7c2f, color5: #242111 ),
@@ -27,11 +31,13 @@ $gray3: #878787;
 $gray4: #323232;
 $gray5: #212121;
 
-// Inputs
-$inputHeight: 2.35rem;
-
 $colorPrimary: #428bca;
 $colorSuccess: #3c763d;
 $colorInfo: #31708f;
 $colorWarning: #d28f2f;
 $colorDanger: #a94442;
+
+// FORM FIELDS
+// Size and other measurements of forms and fields
+//
+$inputHeight: 2.35rem;
