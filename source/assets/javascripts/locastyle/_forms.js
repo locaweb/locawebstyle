@@ -103,8 +103,12 @@ locastyle.forms = (function() {
   function maxDateSetup(element, selectedDate) {
     var $dateRange = $(element).parents('.date-range');
     $dateRange.find('.to-date').datepicker( "option", "minDate", selectedDate );
-    var parentGroupBtn = $dateRange.find('.to-date').parent().find('.input-group-btn');
-    $dateRange.find('.to-date + .ui-datepicker-trigger').addClass('ico-calendar btn btn-default').html('').appendTo(parentGroupBtn);
+    datepickerStyle($dateRange.find('.to-date'));
+  }
+
+  function datepickerStyle (element) {
+     var parentGroupBtn = $(element).parent().find('.input-group-btn');
+    $(element).parent().find('.ui-datepicker-trigger').addClass('ico-calendar btn btn-default').html('').appendTo(parentGroupBtn);
   }
 
   // Troca de input password para text
