@@ -84,7 +84,12 @@ locastyle.forms = (function() {
       monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
       dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
       dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
-      dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab']
+      dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+      onClose: function( selectedDate ) {
+        if ($(this).hasClass('from-date')) {
+          maxDateSetup(this, selectedDate);
+        }
+      }
     });
     var createWrap = '<span class="input-group-btn"></span>';
     $('.datepicker', $form).not(exclude).each(function () {
@@ -92,6 +97,14 @@ locastyle.forms = (function() {
       var parentGroupBtn = $(this).find('.input-group-btn');
       $(this).find('.ui-datepicker-trigger').addClass('ico-calendar btn btn-default').html('').appendTo(parentGroupBtn);
     });
+  }
+
+  // Fazendo Setup na data máxima
+  function maxDateSetup(element, selectedDate) {
+    var $dateRange = $(element).parents('.date-range');
+    $dateRange.find('.to-date').datepicker( "option", "minDate", selectedDate );
+    var parentGroupBtn = $dateRange.find('.to-date').parent().find('.input-group-btn');
+    $dateRange.find('.to-date + .ui-datepicker-trigger').addClass('ico-calendar btn btn-default').html('').appendTo(parentGroupBtn);
   }
 
   // Troca de input password para text
