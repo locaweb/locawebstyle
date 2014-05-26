@@ -109,6 +109,7 @@ locastyle.forms = (function() {
     datepickerStyle($dateRange.find('.to-date'));
   }
 
+  //Adicionando classes no botão
   function datepickerStyle (element) {
      var parentGroupBtn = $(element).parent().find('.input-group-btn');
     $(element).parent().find('.ui-datepicker-trigger').addClass('ico-calendar btn btn-default').html('').appendTo(parentGroupBtn);
