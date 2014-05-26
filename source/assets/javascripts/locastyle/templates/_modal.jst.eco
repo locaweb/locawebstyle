@@ -1,4 +1,4 @@
-<div class="ls-modal fade opened ls-modal-template">
+<div class="ls-modal fade opened ls-modal-template <%= this.lsModule %> ">
   <div class="ls-modal-box">
     <div class="ls-modal-header">
       <button type="button" data-dismiss="modal" class="close">&times;</button>
