@@ -93,6 +93,9 @@ locastyle.forms = (function() {
     });
     var createWrap = '<span class="input-group-btn"></span>';
     $('.datepicker', $form).not(exclude).each(function () {
+      if ($(this).find('.hasDatepicker').data('maxDate') === 'today' ) {
+        $(this).find('.hasDatepicker').datepicker( "option", "maxDate", new Date() );
+      };
       $(this).append(createWrap);
       var parentGroupBtn = $(this).find('.input-group-btn');
       $(this).find('.ui-datepicker-trigger').addClass('ico-calendar btn btn-default').html('').appendTo(parentGroupBtn);
