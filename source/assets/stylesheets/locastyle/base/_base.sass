@@ -91,13 +91,17 @@
 
 
 @media (min-width: $screen-sm)
-  .ls-main
-    +single-transition(none)
-    +transform(none)
-    margin-left: $sidebarWidth
+  html
+    overflow: auto
 
-    .ls-sidebar-visible &
-      +translate(0, 0)
+    .ls-main
+      +single-transition(none)
+      +transform(none)
+      margin-left: $sidebarWidth
+      overflow: visible
 
-    .ls-notifications-visible &
-      +translate(0, 0)
+      .ls-sidebar-visible &
+        +translate(0, 0)
+
+      .ls-notifications-visible &
+        +translate(0, 0)
