@@ -1,6 +1,6 @@
 .header	.guided-tour
 	background: #fff
-	border: 1px solid #ccc
+	border: 1px solid $gray2
 	display: block
 	width: 260px
 	position: absolute
@@ -14,7 +14,7 @@
 	.btn-tour
 		margin: 15px 0
 		background-color: #ddd
-		border-color: #ccc
+		border-color: $gray2
 
 	.guided-footer
 		margin: 15px 10px 8px
@@ -27,7 +27,7 @@
 		color: #ddd
 
 		&:hover
-			color: #ccc
+			color: $gray2
 
 	&.on
 		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
@@ -56,12 +56,12 @@
 	font-size: 1.125rem
 	margin-top: 0
 
-div.hopscotch-bubble
-	z-index: 5
+.hopscotch-bubble
+	z-index: 11
 	background-clip: padding-box
 	background-color: #fff
 	border-radius: 6px
-	border: 1px solid #cccccc
+	border: 1px solid $gray2
 	border: 1px solid rgba(0, 0, 0, 0.2)
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
 	max-width: 276px
@@ -70,11 +70,6 @@ div.hopscotch-bubble
 	text-align: left
 	white-space: normal
 
-	&.animate
-		+transition-property(top, left)
-		+transition-duration(1s)
-		+transition-timing-function(ease-in-out)
-
 	&.invisible
 		opacity: 0
 
@@ -82,7 +77,7 @@ div.hopscotch-bubble
 		display: none
 
 	.hide, .hide-all
-		display: none
+		display: none !important
 
 	.hopscotch-bubble-container
 		padding: 0 !important
@@ -152,7 +147,7 @@ div.hopscotch-bubble
 		font-weight: normal
 		line-height: 18px
 		margin: 0
-		padding: 8px 14px
+		padding: 6px 14px
 
 	.hopscotch-content
 		color: #555
@@ -166,21 +161,20 @@ div.hopscotch-bubble
 		border-top: 1px solid #ebebeb
 		border-radius: 0 0 5px 5px
 		margin-top: 0
-		padding: 10px 15px
+		padding: 6px 15px
 		overflow: hidden
 
 		button
 			display: inline-block
-			padding: 6px 12px
+			padding: 4px 10px
 			margin-bottom: 0
 			font-size: .75rem
 			font-weight: normal
 			line-height: 1.428571429
-			font-family: "open_sans_semibold"
 			text-align: center
 			vertical-align: middle
 			cursor: pointer
-			border: 1px solid transparent
+			border: none
 			border-radius: 4px
 			white-space: nowrap
 			-webkit-user-select: none
@@ -188,14 +182,11 @@ div.hopscotch-bubble
 			-ms-user-select: none
 			-o-user-select: none
 			user-select: none
-			color: #ddd
-			background-color: #fff
-			border-color: #ccc
+			color: $gray4
+			background-color: $gray2
 			margin-right: 1rem
 
 			&.hopscotch-nav-button.next
-				background-color: #ccc
-				border-color: #ccc
 				color: #fff
 				float: right
 				margin: 0
