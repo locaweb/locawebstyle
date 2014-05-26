@@ -3,34 +3,126 @@ title: Formulários - Calendários
 menu_page: sidebar-formularios.erb
 ---
 <header>
-	<h1>Calendários</h1>
-	<h2>Inputs com integração de formulário.</h2>
+  <h1>Calendários</h1>
+  <h2>Inputs com integração de formulário.</h2>
 </header>
 
 <p>Para o calendário utilizamos o <a href="http://api.jqueryui.com/datepicker/" target="_blank">módulo do JQuery UI</a>.</p>
 <p>E para aplicar basta seguir alguns passos:</p>
 <p>
-	1. Crie a estrutura abaixo.<br>
-	2. Lembre-se de adicionar a classe <code>datepicker</code>.<br>
-	3. Tome um suco de laranja. :D
+  1. Crie a estrutura abaixo.<br>
+  2. Lembre-se de adicionar a classe <code>datepicker</code>.<br>
+  3. Tome um suco de laranja. :D
 </p>
 
-
 <div class="example">
-	<form>
-		<div class="row">
-			<div class="col-lg-3">
-				<label for="example1" class="sr-only">Data</label>
-				<div class="input-group datepicker">
-					<input type="text" class="form-control date-mask" id="example1" placeholder="dd/mm/aaaa">
-				</div>
-			</div>
-		</div>
-	</form>
+  <form>
+    <div class="row">
+      <div class="col-lg-3">
+        <label for="example1" class="sr-only">Data</label>
+        <div class="input-group datepicker">
+          <input type="text" class="form-control date-mask" id="example1" placeholder="dd/mm/aaaa">
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
 <pre class="lang-html linenums prettyprint-code">
 <label for="example1" class="sr-only">Data</label>
 <div class="input-group datepicker">
-	<input type="text" class="form-control date-mask" id="example1" placeholder="dd/mm/aaaa">
+  <input type="text" class="form-control date-mask" id="example1" placeholder="dd/mm/aaaa">
 </div>
+</pre>
+
+<h3>Limitador de data</h3>
+<p>Com o limitador de data, você pode definir a data minima entre dois inputs relacionados.</p>
+<div class="example">
+  <form>
+    <div class="row date-range">
+      <div class="col-lg-3">
+        <label for="example1" class="sr-only">Data</label>
+        <div class="input-group datepicker">
+          <input type="text" class="form-control date-mask from-date" placeholder="dd/mm/aaaa">
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <label for="example1" class="sr-only">Data</label>
+        <div class="input-group datepicker">
+          <input type="text" class="form-control date-mask to-date" placeholder="dd/mm/aaaa">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<pre class="lang-html linenums prettyprint-code">
+<form>
+  <div class="row date-range">
+    <div class="col-lg-3">
+      <label for="example1" class="sr-only">Data</label>
+      <div class="input-group datepicker">
+        <input type="text" class="form-control date-mask from-date" placeholder="dd/mm/aaaa">
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <label for="example1" class="sr-only">Data</label>
+      <div class="input-group datepicker">
+        <input type="text" class="form-control date-mask to-date" placeholder="dd/mm/aaaa">
+      </div>
+    </div>
+  </div>
+</form>
+</pre>
+
+<h3>Data Minima</h3>
+<p>Utilize o atributo <code>data-min-date=""</code> para definir uma data minima.</p>
+<div class="example">
+  <form>
+    <div class="row date-range">
+      <div class="col-lg-3">
+        <label for="example1" class="sr-only">Data</label>
+        <div class="input-group datepicker">
+          <input type="text" data-min-date="today" class="form-control date-mask to-date" placeholder="dd/mm/aaaa">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<pre class="lang-html linenums prettyprint-code">
+<form>
+  <div class="row date-range">
+    <div class="col-lg-3">
+      <label for="example1" class="sr-only">Data</label>
+      <div class="input-group datepicker">
+        <input type="text" data-min-date="today" class="form-control date-mask to-date" placeholder="dd/mm/aaaa">
+      </div>
+    </div>
+  </div>
+</form>
+</pre>
+
+<h3>Data Máxima</h3>
+<p>Utilize o atributo <code>data-max-date=""</code> para definir uma data maxima.</p>
+<div class="example">
+  <form>
+    <div class="row date-range">
+      <div class="col-lg-3">
+        <label for="example1" class="sr-only">Data</label>
+        <div class="input-group datepicker">
+          <input type="text" data-max-date="today" class="form-control date-mask to-date" placeholder="dd/mm/aaaa">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<pre class="lang-html linenums prettyprint-code">
+<form>
+  <div class="row date-range">
+    <div class="col-lg-3">
+      <label for="example1" class="sr-only">Data</label>
+      <div class="input-group datepicker">
+        <input type="text" data-max-date="today" class="form-control date-mask to-date" placeholder="dd/mm/aaaa">
+      </div>
+    </div>
+  </div>
+</form>
 </pre>
