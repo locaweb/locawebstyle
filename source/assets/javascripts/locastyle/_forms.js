@@ -96,6 +96,9 @@ locastyle.forms = (function() {
       if ($(this).find('.hasDatepicker').data('maxDate') === 'today' ) {
         $(this).find('.hasDatepicker').datepicker( "option", "maxDate", new Date() );
       };
+      if ($(this).find('.hasDatepicker').data('minDate') === 'today' ) {
+        $(this).find('.hasDatepicker').datepicker( "option", "minDate", new Date() );
+      };
       $(this).append(createWrap);
       var parentGroupBtn = $(this).find('.input-group-btn');
       $(this).find('.ui-datepicker-trigger').addClass('ico-calendar btn btn-default').html('').appendTo(parentGroupBtn);
