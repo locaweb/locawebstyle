@@ -7,10 +7,9 @@ locastyle.guidedTour = (function() {
 
 	var config = {
 		selectors : {
-			open:  '.help-suggestions',
-			init:  '.btn-tour',
+			init:  '.ls-btn-tour',
 			close: '.btn-close',
-			tour:  '.guided-tour'
+			tour:  '.ls-alerts-list > a'
 		}
 	}
 
@@ -31,15 +30,16 @@ locastyle.guidedTour = (function() {
 
 	function setTour(tour){
 		jsonTour = tour;
-		$(config.selectors.open).on({click: openWelcomeTour});
+		// $(config.selectors.open).on({click: openWelcomeTour});
 		$(config.selectors.init).on({click: initTour});
 		$(config.selectors.close).on({click: closeWelcomeTour});
 	}
 
 	function openWelcomeTour(e){
+    // $(config.selectors.tour).toggleClass('ls-active');
+    $(config.selectors.tour).click();
+    $(config.selectors.init).focus().attr('tabindex', '-1');
 		e ? e.preventDefault() : null;
-		$(config.selectors.tour).toggleClass('on');
-		$(config.selectors.init).focus().attr('tabindex', '-1');
 	}
 
 	function initTour(){
@@ -51,7 +51,8 @@ locastyle.guidedTour = (function() {
 	}
 
 	function closeWelcomeTour(){
-		$(config.selectors.tour).removeClass('on');
+		// $(config.selectors.tour).removeClass('ls-active');
+    $(config.selectors.tour).click();
 	}
 
 	function keyCode(element){
