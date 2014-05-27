@@ -109,11 +109,11 @@ locastyle.general = (function() {
 
   function subMenu() {
     $('.ls-submenu > a').on('click', function(evt) {
-      $(this).parent().toggleClass('ls-active');
       evt.preventDefault();
+      $(this).parent().toggleClass('ls-active');
     })
-    if($('.ls-submenu').find('a').hasClass('ls-active')){
-      $('.ls-submenu a.ls-active').parents('.ls-submenu').addClass('ls-active')
+    if($('.ls-submenu').find('li').hasClass('ls-active')){
+      $('.ls-submenu li.ls-active').parents('.ls-submenu').addClass('ls-active')
     }
   }
 
