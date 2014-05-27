@@ -38,5 +38,19 @@ describe("Locastyle in general: ", function() {
     });
   });
 
-});
+  describe("Submenu:", function() {
+    describe("When click on .ls-sumenu > a", function(){
+      it("should add 'ls-active' class on parent", function(){
+        $("#parent_link2").trigger("click");
+        expect($("#submenu_test1 #parent_item2").hasClass("ls-active")).toEqual(true);
+      });
+    });
 
+    describe("When submenu have the 'ls-active' css class", function(){
+      it("should add 'ls-active' class on parent .ls-submenu item", function(){
+        expect($("#submenu_test1 #parent_item1").hasClass("ls-active")).toEqual(true);
+      });
+    });
+  });
+
+});
