@@ -9,7 +9,8 @@ locastyle.guidedTour = (function() {
 		selectors : {
 			init:  '.ls-btn-tour',
 			close: '.btn-close',
-			tour:  '.ls-alerts-list > a'
+			tour:  '.ls-alerts-list > a',
+      feedback: '#feedbackr'
 		}
 	}
 
@@ -37,7 +38,7 @@ locastyle.guidedTour = (function() {
 
 	function openWelcomeTour(e){
     // $(config.selectors.tour).toggleClass('ls-active');
-    $(config.selectors.tour).click();
+    $(config.selectors.feedback).trigger('click');
     $(config.selectors.init).focus().attr('tabindex', '-1');
 		e ? e.preventDefault() : null;
 	}
@@ -52,7 +53,7 @@ locastyle.guidedTour = (function() {
 
 	function closeWelcomeTour(){
 		// $(config.selectors.tour).removeClass('ls-active');
-    $(config.selectors.tour).click();
+    $(config.selectors.feedback).trigger('click');
 	}
 
 	function keyCode(element){
@@ -72,7 +73,8 @@ locastyle.guidedTour = (function() {
 
 	function setCookie(){
 		if($.cookie("cookie_tour") != "true"){
-			$(config.selectors.open).trigger('click');
+			$(config.selectors.tour).trigger('click');
+      $(config.selectors.init).focus().attr('tabindex', '-1');
 			$.cookie('cookie_tour', "true");
 		}
 	}

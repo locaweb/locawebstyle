@@ -1,61 +1,3 @@
-.header	.guided-tour
-	background: #fff
-	border: 1px solid $gray2
-	display: block
-	width: 260px
-	position: absolute
-	top: -400px
-	right: 0
-	text-align: center
-	z-index: 4
-	border-bottom-left-radius: 5px
-	+transition(all .3s ease-in-out)
-
-	.btn-tour
-		margin: 15px 0
-		background-color: #ddd
-		border-color: $gray2
-
-	.guided-footer
-		margin: 15px 10px 8px
-		text-align: left
-		background: #ececec
-		font-size: .75rem
-
-	.close
-		margin-right: 10px
-		color: #ddd
-
-		&:hover
-			color: $gray2
-
-	&.on
-		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
-		top: -1px
-
-.guided-header
-	clear: both
-	margin: 0 0 10px
-
-	[class*="icopanel-"]
-		font-size: 52px
-		color: rgba(#ddd, 0.5)
-
-	p
-		font-size: .8125rem
-		margin-bottom: 0
-
-.guided-footer a
-	&:first-child
-		border-top: 1px solid #dbe0e6
-		display: block
-		margin: 0 8px
-		padding: 6px 0
-
-.title-guided
-	font-size: 1.125rem
-	margin-top: 0
-
 .hopscotch-bubble
 	z-index: 11
 	background-clip: padding-box
@@ -182,12 +124,11 @@
 			-ms-user-select: none
 			-o-user-select: none
 			user-select: none
-			color: $gray4
-			background-color: $gray2
+			color: #fff
+			background-color: $gray3
 			margin-right: 1rem
 
 			&.hopscotch-nav-button.next
-				color: #fff
 				float: right
 				margin: 0
 
@@ -200,10 +141,14 @@
 		right: 11px
 		text-align: center
 		top: 10px
-		width: 1.3rem
+		width: 10px
 
-		&:after
-			display: none
+		&:before
+			content: "\e63c"
+			color: $gray2
+			font-family: 'locastyle'
+			font-size: .55rem
+			margin-right: 10px
 
 		&:hover
 			opacity: .7
