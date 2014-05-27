@@ -310,6 +310,7 @@ tr.active .actionsTable { display: none; }
   z-index: 2;
   position: absolute;
   top: 8px;
+  margin-left: 5px;
 }
 
 /* Indicador no Collapse */
