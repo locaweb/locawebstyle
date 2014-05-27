@@ -249,7 +249,10 @@ tr.active .actionsTable { display: none; }
   z-index: 1;
 }
 
-.notification .valueNotify { top: -2px; }
+.notification .valueNotify { 
+  top: -2px;
+  margin-left: 5px;
+}
 
 .valueNotify {
   background: #ea0019;
@@ -313,10 +316,7 @@ tr.active .actionsTable { display: none; }
 }
 
 /* Indicador no Collapse */
-.boxCollapse .valueNotify.scoreIndicator { 
-  box-shadow: none; 
-  margin-left: 5px;
-}
+.boxCollapse .valueNotify.scoreIndicator { box-shadow: none; }
 
 /* Popover dentro do Collapse */
 .boxCollapse header .popover-title { display: block; }
