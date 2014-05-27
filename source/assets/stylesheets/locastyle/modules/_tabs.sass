@@ -23,24 +23,27 @@
         padding-top: 12px
         padding-bottom: 12px
 
-.ls-tab-content
-  +border-radius(0 4px 4px 4px)
-  display: none
-  padding: 20px
-  margin-bottom: 20px
-  margin-top: -1px
-  border: 1px solid $gray2
-  background-color: #fff
-
-  &.ls-active
-    display: block
-
-  p
-    margin: 0
-    padding: 0
+.ls-tabs-container
+  clear: both
 
   .ls-tab-content
-    padding: 0
-    border: none
-    background: none
-    margin: 0
+    +border-radius(0 4px 4px 4px)
+    display: none
+    padding: 20px
+    margin-bottom: 20px
+    margin-top: -1px
+    border: 1px solid $gray2
+    background-color: #fff
+
+    &.ls-active
+      display: block
+
+    p
+      margin: 0
+      padding: 0
+
+    .ls-tab-content
+      padding: 0
+      border: none
+      background: none
+      margin: 0
