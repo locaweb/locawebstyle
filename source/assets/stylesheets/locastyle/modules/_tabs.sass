@@ -1,5 +1,7 @@
 .ls-tabs-nav:not(.in-dropdown)
   clear: both
+  position: relative
+  z-index: 2
 
   li
     list-style: none
@@ -25,13 +27,15 @@
 
 .ls-tabs-container
   clear: both
+  position: relative
+  z-index: 1
+  top: -1px
 
   .ls-tab-content
     +border-radius(0 4px 4px 4px)
     display: none
     padding: 20px
     margin-bottom: 20px
-    margin-top: -1px
     border: 1px solid $gray2
     background-color: #fff
 
