@@ -25,17 +25,13 @@
 
   describe("Unbind:", function() {
     describe("when unbind is called in module", function() {
-      it("should not remove the .ls-sidebar-visible css class from html tag", function() {
-        $('html').removeClass('ls-sidebar-visible');
+      it("should unbind events handled by sidebar module", function() {
         locastyle.sidebars.unbind();
-        $('.ls-show-sidebar').trigger('click');
-        expect($('html').hasClass('ls-sidebar-visible')).toEqual(false);
+        expect($._data($(".ls-show-sidebar")[0], "events")).toEqual(undefined);
       });
-      it("should not remove the .ls-notifications-visible css class from html tag", function() {
-        $('html').removeClass('ls-notifications-visible');
+      it("should unbind events handled by notifications module", function() {
         locastyle.sidebars.unbind();
-        $('.ls-show-notifications').trigger('click');
-        expect($('html').hasClass('ls-notifications-visible')).toEqual(false);
+        expect($._data($(".ls-show-notifications")[0], "events")).toEqual(undefined);
       });
     });
   });

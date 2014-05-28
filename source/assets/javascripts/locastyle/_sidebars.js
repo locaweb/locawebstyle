@@ -4,8 +4,7 @@ locastyle.sidebars = (function() {
   'use strict';
 
   function init() {
-    // unbind();
-    $('.ls-show-sidebar').on('change.ls', function() {});
+    unbind();
     bindShowSidebar();
     bindShowNotifications();
   }
