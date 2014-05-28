@@ -30,7 +30,7 @@
         </li>
         <% @documentation.each do |resource| %>
           <% if resource.data.type != 'css' && resource.data.type != 'component' && resource.url.split('/')[2] != 'exemplos' && resource.url.split('/')[2].to_s != '' && resource.url.split('.')[1] != 'json' %>
-            <li>
+            <li <% if current_page.url == resource.url%>class="ls-active"<% end %>>
               <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title%></a>
             </li>
           <% end %>
@@ -41,7 +41,7 @@
           <ul>
             <% @documentation.each do |resource| %>
               <% if resource.data.type == 'css' %>
-                <li>
+                <li <% if current_page.url == resource.url%>class="ls-active"<% end %>>
                   <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title %></a>
                 </li>
               <% end %>
@@ -53,7 +53,7 @@
           <ul>
             <% @documentation.each do |resource| %>
               <% if resource.data.type == 'component' %>
-                <li>
+                <li <% if current_page.url == resource.url%>class="ls-active"<% end %>>
                   <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title %></a>
                 </li>
               <% end %>
@@ -64,7 +64,7 @@
           <a href="#">Exemplos</a>
           <ul>
             <% sub_pages('documentacao/exemplos/rev').each do |resource| %>
-              <li>
+              <li <% if current_page.url == resource.url%>class="ls-active"<% end %>>
                 <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title%></a>
               </li>
             <% end %>
