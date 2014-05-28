@@ -33,5 +33,6 @@ $(document).ready(function() {
   locastyle.breakpoints.init();
   locastyle.init();
   locastyle.general.init();
+  locastyle.sidebars.init();
   locastyle.btnGroup.init();
 });
