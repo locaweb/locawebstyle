@@ -9,10 +9,9 @@ locastyle.general = (function() {
   }
 
   function init() {
+    unbind();
     _autoTrigger();
     _loadEvents();
-    showSidebar();
-    showNotifications();
     subMenu();
     _elementDisabled();
     _linkPreventDefault();
@@ -87,26 +86,6 @@ locastyle.general = (function() {
     }
   }
 
-  function showSidebar() {
-    var $showHide = $('.ls-show-sidebar');
-    var $html = $('html');
-
-    $showHide.on('touchstart click', function(evt) {
-      $html.toggleClass('ls-sidebar-visible');
-      evt.preventDefault();
-    });
-  }
-
-  function showNotifications() {
-    var $showHide = $('.ls-show-notifications');
-    var $html = $('html');
-
-    $showHide.on('touchstart click', function(evt) {
-      $html.toggleClass('ls-notifications-visible');
-      evt.preventDefault();
-    });
-  }
-
   function subMenu() {
     $('.ls-submenu > a').on('click', function(evt) {
       evt.preventDefault();
@@ -145,6 +124,11 @@ locastyle.general = (function() {
       $this.attr(attr) ? $this.removeAttr(attr) : $this.attr(attr, attr);
     });
   };
+
+  function unbind () {
+    $('[data-ls-toggle-fields]').off('click');
+    $('.ls-submenu > a').off('click');
+  }
 
   return {
     init: init,
