@@ -189,7 +189,7 @@
 
 
   .ls-ico-menu,
-  .ls-show-notifications.ls-ico-question
+  .ls-show-notifications
     cursor: pointer
 
     &:before
@@ -198,7 +198,7 @@
       height: $heightTopbar
       display: inline-block
       color: #FFF
-      font-size: 2em
+      font-size: 2rem
       vertical-align: middle
       cursor: pointer
 
@@ -211,11 +211,14 @@
       height: 2424px
       display: none
 
-  .ls-show-notifications.ls-ico-question:before
+  .ls-show-notifications:before
     right: 0
+    font-size: 1.5rem
+    top: -3px
+    +rotate(180deg)
 
 .ls-sidebar-visible .ls-ico-menu:after,
-.ls-notifications-visible .ls-show-notifications.ls-ico-question:after
+.ls-notifications-visible .ls-show-notifications:after
   display: block
 
 
@@ -247,7 +250,7 @@
         font-size: 2rem
 
     .ls-ico-menu:before,
-    .ls-show-notifications.ls-ico-question:before
+    .ls-show-notifications:before
       display: none
 
     .ls-notification-topbar
