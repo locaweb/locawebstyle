@@ -124,7 +124,7 @@ locastyle.popover = (function() {
   function setPopoverPosition(popoverPosition) {
 
     var positionWithTop  = (popoverPosition.setTop - $(defaults.popoverClass).height() / 2 + popoverPosition.elementHeight / 2);
-    var positionWithLeft = (popoverPosition.setSide - $(defaults.popoverClass).width() / 2 + popoverPosition.elementWidth / 2);
+    var positionWithLeft = (parseInt(popoverPosition.setSide) - $(defaults.popoverClass).width() / 2 + popoverPosition.elementWidth / 2 + 10);
 
     var _default = {
       top: {
