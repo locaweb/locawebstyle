@@ -16,15 +16,23 @@ locastyle.download = (function() {
   function createGist(configJson, callback) {
     var configData = getCustomizerData()
     configJson = JSON.stringify(configData, null, 2);
-    var data = {
-      description: 'Locastyle Customizer Config',
-      'public': true,
-      files: {
-        'config.json': {
-          content: configJson
-        }
-      }
+    var data, i;
+    for(i = 0; i < configData.js.length; i++){
+      var fileJSName = configData.js[i].split('/').pop();
+
+      $.get(configData.js[i], function(data){
+        var filesObj = {};
+        filesObj.files = {};
+        filesObj.files[fileJSName] = {content: data}
+
+        // sendToGist(filesObj)
+      })
+
     }
+
+  }
+
+  function sendToGist(data){
     $.ajax({
       url: 'https://api.github.com/gists',
       type: 'POST',
@@ -35,16 +43,22 @@ locastyle.download = (function() {
       var origin = window.location.protocol + '//' + window.location.host
       var newUrl = origin + window.location.pathname + '?id=' + result.id
       history.replaceState(false, document.title, newUrl)
-      // callback(result.html_url, newUrl)
-      $(".download-done").html( '<a class="ls-btn ls-btn-lg ls-btn-block" href="https://gist.github.com/anonymous/'+result.id+'/download">download</a>' )
+      $(".download-done").html(
+        '<a class="ls-btn ls-btn-lg ls-btn-block" href="https://gist.github.com/anonymous/'
+          + result.id +
+        '/download">download</a>'
+      )
     })
   }
 
-  function getCustomizerData() {
-
+  function getCustomizerData(){
     var data = {
-      css: $('.css-modules input:checked').map(function () { return this.value }).toArray(),
-      js:  $('.js-modules input:checked').map(function () { return this.value }).toArray()
+      css: $('.css-modules input:checked').map(function(){
+        return this.value
+      }).toArray(),
+      js : $('.js-modules input:checked').map(function(){
+        return this.value
+      }).toArray()
     }
 
     if ($.isEmptyObject(data.vars) && !data.css.length && !data.js.length) return
