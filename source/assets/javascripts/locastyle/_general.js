@@ -57,7 +57,7 @@ locastyle.general = (function() {
   }
 
   function menuAnchor() {
-    $("li.ls-active a").focus().css('outline', 'none')
+    $(".ls-menu .ls-active > a").focus().css('outline', 'none')
   }
 
   function _toggleClass(evt, $this) {
