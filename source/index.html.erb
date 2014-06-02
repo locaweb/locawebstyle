@@ -4,13 +4,28 @@ layout: base
 description: Página inicial
 keywords: documentação, locastyle
 ---
-
-<ul class="row">
-  <li class="col-md-4"><a href="<%= base_url %>/documentacao">Documentação</a></li>
-  <li class="col-md-4"><a href="<%= base_url %>/download">Download</a></li>
-  <li class="col-md-4"><a href="<%= base_url %>/blog">Blog</a></li>
-</ul>
-
-<p>
-  Versão atual: <%= settings.stable %>
-</p>
+<div class="row">
+	<div class="col-md-4">
+		<div class="ls-box ls-lg-space ls-ico-book ls-ico-bg">
+			<h1 class="ls-title-1 ls-color-theme">Documentação</h1>
+			<p>Aplique nossos modulos em seu projeto com muito mais facilidade.</p>
+			<%= link_to 'Comece aqui', base_url+'/documentacao', :class => 'ls-btn-primary' %>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="ls-box ls-lg-space ls-ico-download2 ls-ico-bg">
+			<h1 class="ls-title-1 ls-color-theme">Download</h1>
+			<p>Baixe nosso conteúdo e integre nossos modulos em seu projeto.</p>
+			<%= link_to 'Baixe aqui', base_url+'/download', :class => 'ls-btn-primary' %>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="ls-box ls-lg-space ls-ico-pencil2 ls-ico-bg">
+			<h1 class="ls-title-1 ls-color-theme">Blog</h1>
+			<p>Fique de olho nas atualizações, changelog e alguns avanços de FrontEnd.</p>
+			<%= link_to 'veja mais', base_url+'/blog', :class => 'ls-btn-primary' %>
+		</div>
+	</div>
+</div>
+<br>
+<span class="ls-tag">Versão atual: <%= settings.stable %></span>
