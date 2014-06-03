@@ -11,7 +11,6 @@ locastyle.popover = (function() {
   }
 
   function init() {
-    unbind();
     destroyPopover();
     bindBreakpointUpdate();
     changeModuleName();
@@ -25,7 +24,7 @@ locastyle.popover = (function() {
     });
   }
 
-  // adiciona o bind de breakpoint-updated
+  // Adiciona o bind de breakpoint-updated
   function bindBreakpointUpdate() {
     $(document).on("breakpoint-updated", function () {
       changeModuleName();
@@ -35,7 +34,7 @@ locastyle.popover = (function() {
   // Esse método é usado quando existir um popover em dispositivos móveis.
   function changeModuleName(){
     if(locastyle.breakpointClass == "ls-screen-sm" || locastyle.breakpointClass == "ls-screen-xs"){
-      $(defaults.module).attr('data-ls-module', 'modal').removeAttr('data-trigger')
+      $(defaults.module).attr('data-ls-module', 'modal').removeAttr('data-trigger');
       locastyle.modal.init();
     }
   }
@@ -72,14 +71,14 @@ locastyle.popover = (function() {
   }
 
   function getTriggerPosition(elementData) {
-    var left, top, leftPlacement, setSide, setTop, topPlacement
-    var element         = elementData.element
-    var placement       = elementData.placement
-    var container       = elementData.container
+    var left, top, leftPlacement, setSide, setTop, topPlacement;
+    var element         = elementData.element;
+    var placement       = elementData.placement;
+    var container       = elementData.container;
     var elementWidth    = $(element).outerWidth();
     var elementHeight   = $(element).outerHeight();
-    var elementOffset   = $(element).offset()
-    var elementPosition = $(element).position()
+    var elementOffset   = $(element).offset();
+    var elementPosition = $(element).position();
 
     if (container == 'body') {
       top  = elementOffset.top;
@@ -94,20 +93,20 @@ locastyle.popover = (function() {
 
     if(placement == 'top'){
       topPlacement = true;
-      setTop       = top
+      setTop       = top;
     }
 
     if (placement == 'bottom') {
-      setTop = (top + elementHeight)
+      setTop = (top + elementHeight);
     }
 
     if (placement == 'left') {
       leftPlacement = true;
-      setSide       = left
+      setSide       = left;
     }
 
     if (placement == 'right') {
-      setSide = (left + elementWidth)
+      setSide = (left + elementWidth);
     }
 
     setPopoverPosition({
@@ -181,18 +180,12 @@ locastyle.popover = (function() {
   }
 
   function destroyPopover() {
-    $(defaults.popoverClass).remove()
-  }
-
-  function unbind(){
-    $(defaults.trigger).off('click.ls')
-    $(defaults.trigger).off('mouseenter.ls')
+    $(defaults.popoverClass).remove();
   }
 
   return {
     init: init,
-    destroyPopover: destroyPopover,
-    unbind: unbind
+    destroyPopover: destroyPopover
   }
 
 }());
