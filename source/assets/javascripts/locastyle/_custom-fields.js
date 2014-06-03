@@ -11,10 +11,9 @@ locastyle.customFields = (function() {
     $('[data-ls-module="customFields"]').find(':input').not('.ls-input-original').each(function(index, field){
       var fieldType = $(field)[0].type;
       var classParent = $(field).eq(0).attr('class');
-      classParent = classParent != undefined ? classParent : ''
+      classParent = classParent != undefined ? classParent : '';
 
       $(field).wrap( '<div class="ls-custom-' + fieldType + ' ' + classParent + '" />' );
-
       fieldSpan($(field));
     });
   }
@@ -22,7 +21,7 @@ locastyle.customFields = (function() {
   function fieldSpan($field){
     var selectText = $field.children('option:selected').eq(0).text();
     $('<span class="ls-field-custom-'+ $field[0].type + '">' + selectText + '</span>').insertAfter($field[0]);
-    bindCustomSelect($field)
+    bindCustomSelect($field);
   }
 
   function siblingsField($field){
