@@ -5,11 +5,11 @@
       <h4 class="ls-modal-title"><%= @title %></h4>
     </div>
     <div class="ls-modal-body">
-      <p><%= @content %></p>
+      <p><%- @content %></p>
     </div>
     <div class="ls-modal-footer">
       <button type="button" class="ls-btn float-right ls-float-right" data-dismiss="modal"><%= @close %></button>
-      <a href="<%= @action %>" class="ls-btn-primary"><%= @save %></a>
+      <a href="<%= @action %>" class=" ls-btn <%= @class %>"><%= @save %></a>
     </div>
   </div>
   <div class="ls-modal-overlay"></div>
