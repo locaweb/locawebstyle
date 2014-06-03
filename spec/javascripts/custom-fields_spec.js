@@ -11,10 +11,10 @@ describe('Custom Fields:', function(){
   });
 
   describe("Unbind", function() {
-  	it("should bind change only one time on the element", function() {
-  		locastyle.customFields.init();
-  		locastyle.customFields.init();
-  		expect($('#trueId')).toHaveBeenBindedOnce('change');
-  	});
+    it("should bind change only one time on the element", function() {
+      locastyle.customFields.init();
+      locastyle.customFields.init();
+      expect($('#trueId')).toHaveBeenBindedOnce('change');
+    });
   });
 });
