@@ -546,32 +546,6 @@ layout: false
             </div>
 
 
-            <div class="messageInfo selectable">
-              <label for="data1" class="span4">
-                <input id="data1" type="radio" name="data">
-                <img alt="linux" src="/<%= images_dir %>/bd/logo-mysql-mini.png" alt="">
-                <span class="selectableTitle">MySQL</span>
-              </label>
-              <div class="span9">
-                <p>Banco de dados de fácil administração e otimizado para aplicações web.</p>
-                <strong>Recomendado para uso em:</strong>
-                <ul>
-                  <li>Uso de Wordpress, Joomla!, SugarCRM, Drupal e outros aplicativos web;</li>
-                  <li>Desenvolvimento de aplicações onde a velocidade em consultas e adição de dados
-                são importantes;</li>
-                  <li>Baixo consumo de recursos de processamento.</li>
-                </ul>
-              </div>
-              <div class="span3 txtCenter">
-                  <strong class="selectableTitle">MySQL</strong>
-                  <p>bancos disponíveis</p>
-              </div>
-            </div>
-
-
-
-
-
             <div class="messageInfo">
               <div class="span2 countViews gradient">
                 <img src="http://placehold.it/100x60&amp;text=[Logo]">
@@ -738,7 +712,147 @@ layout: false
         </div>
 
         <hr>
-        <div class="row">
+
+        <h1>Lista selecionável</h1>
+
+        <div class="messageInfo selectable">
+          <label for="data1" class="span4">
+            <input id="data1" checked="checked" class="selectableCheck" type="radio" name="data">
+            <img alt="linux" src="/<%= images_dir %>/bd/logo-mysql-mini.png" alt="logo Mysql">
+            <span class="selectableTitle">MySQL</span>
+          </label>
+          <div class="span9">
+            <p>Banco de dados de fácil administração e otimizado para aplicações web.</p>
+            <strong>Recomendado para uso em:</strong>
+            <ul>
+              <li>Uso de Wordpress, Joomla!, SugarCRM, Drupal e outros aplicativos web;</li>
+              <li>Desenvolvimento de aplicações onde a velocidade em consultas e adição de dados
+            são importantes;</li>
+              <li>Baixo consumo de recursos de processamento.</li>
+            </ul>
+          </div>
+          <div class="span3 txtCenter">
+              <strong class="selectableTitle">8</strong>
+              <p>bancos disponíveis</p>
+          </div>
+        </div>
+
+
+        <div class="messageInfo selectable">
+          <label for="data2" class="span4">
+            <input id="data2" class="selectableCheck" type="radio" name="data">
+            <img alt="linux" src="/<%= images_dir %>/bd/logo-postgre-mini.png" alt="logo postgreSql">
+            <span class="selectableTitle">SQL Server 2008</span>
+          </label>
+          <div class="span9">
+            <p>Banco de dados mais robusto e com mais recursos para adminstração.</p>
+            <strong>Recomendado para uso em:</strong>
+            <ul>
+              <li>Desenvolvimento de aplicações com fortes componentes transacionais;</li>
+              <li>Banco de dados otimizado para aplicações complexas</li>
+            </ul>
+          </div>
+          <div class="span3 txtCenter">
+              <strong class="selectableTitle">8</strong>
+              <p>bancos disponíveis</p>
+          </div>
+        </div>
+
+
+        <div class="messageInfo selectable">
+          <label for="data3" class="span4">
+            <input id="data3" class="selectableCheck" type="radio" name="data">
+            <img alt="linux" src="/<%= images_dir %>/bd/logo-sqlserver-mini.png" alt="logo sqlserver">
+            <span class="selectableTitle">PostgreSQL</span>
+          </label>
+          <div class="span9">
+            <p>Com o MS SQL Server 2008, você otimiza a gestão de dados e aplicações do seu site.</p>
+            <strong>Recomendado para uso em:</strong>
+            <ul>
+              <li>Desenvolvimento utilizando framework .Net;</li>
+              <li>Ideal para grandes volumes de dados e de transações;</li>
+              <li>Banco de dados robusto e usado por sistemas corporativos dos mais diversos portes.</li>
+            </ul>
+          </div>
+          <div class="span3 txtCenter">
+              <p>a partir de</p>
+              <strong class="selectableTitle">R$ 30,00</strong>
+              <p>por mês</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <h1>Lista selecionável desabilitada</h1>
+
+        <div class="messageInfo selectable disabled">
+          <label for="data11" class="span4">
+            <input id="data11"  class="selectableCheck" type="radio" name="data2">
+            <img alt="linux" src="/<%= images_dir %>/bd/logo-mysql-mini.png" alt="logo Mysql">
+            <span class="selectableTitle">MySQL</span>
+          </label>
+          <div class="span9">
+            <p>Banco de dados de fácil administração e otimizado para aplicações web.</p>
+            <strong>Recomendado para uso em:</strong>
+            <ul>
+              <li>Uso de Wordpress, Joomla!, SugarCRM, Drupal e outros aplicativos web;</li>
+              <li>Desenvolvimento de aplicações onde a velocidade em consultas e adição de dados
+            são importantes;</li>
+              <li>Baixo consumo de recursos de processamento.</li>
+            </ul>
+          </div>
+          <div class="span3 txtCenter">
+              <strong class="selectableTitle">8</strong>
+              <p>bancos disponíveis</p>
+          </div>
+        </div>
+
+
+        <div class="messageInfo selectable">
+          <label for="data22" class="span4">
+            <input id="data22" class="selectableCheck" type="radio" name="data2">
+            <img alt="linux" src="/<%= images_dir %>/bd/logo-postgre-mini.png" alt="logo postgreSql">
+            <span class="selectableTitle">SQL Server 2008</span>
+          </label>
+          <div class="span9">
+            <p>Banco de dados mais robusto e com mais recursos para adminstração.</p>
+            <strong>Recomendado para uso em:</strong>
+            <ul>
+              <li>Desenvolvimento de aplicações com fortes componentes transacionais;</li>
+              <li>Banco de dados otimizado para aplicações complexas</li>
+            </ul>
+          </div>
+          <div class="span3 txtCenter">
+              <strong class="selectableTitle">8</strong>
+              <p>bancos disponíveis</p>
+          </div>
+        </div>
+
+
+        <div class="messageInfo selectable">
+          <label for="data33" class="span4">
+            <input id="data33" class="selectableCheck" type="radio" name="data2">
+            <img alt="linux" src="/<%= images_dir %>/bd/logo-sqlserver-mini.png" alt="logo sqlserver">
+            <span class="selectableTitle">PostgreSQL</span>
+          </label>
+          <div class="span9">
+            <p>Com o MS SQL Server 2008, você otimiza a gestão de dados e aplicações do seu site.</p>
+            <strong>Recomendado para uso em:</strong>
+            <ul>
+              <li>Desenvolvimento utilizando framework .Net;</li>
+              <li>Ideal para grandes volumes de dados e de transações;</li>
+              <li>Banco de dados robusto e usado por sistemas corporativos dos mais diversos portes.</li>
+            </ul>
+          </div>
+          <div class="span3 txtCenter">
+              <p>a partir de</p>
+              <strong class="selectableTitle">R$ 30,00</strong>
+              <p>por mês</p>
+          </div>
+        </div>
+
+        <hr>
+        <div class="">
           <h1>Soma de valores</h1>
           <div class="ls-sum-values-container span16">
             <h4>
