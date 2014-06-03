@@ -15,7 +15,8 @@
 #{$theme_name} .boxInfoAction.sought strong,
 #{$theme_name} .boxInfoAction.sought b,
 #{$theme_name} .guided-tour.on .lnk-suggestions,
-#{$theme_name} .colorTheme{
+#{$theme_name} .colorTheme,
+#{$theme_name} .messageInfo.selectable.active .selectableTitle{
   color: $pallet_1;
 }
 
