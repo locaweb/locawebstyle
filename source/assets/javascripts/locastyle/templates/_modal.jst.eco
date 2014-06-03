@@ -9,7 +9,7 @@
     </div>
     <div class="ls-modal-footer">
       <button type="button" class="ls-btn float-right ls-float-right" data-dismiss="modal"><%= @close %></button>
-      <button type="button" class="ls-btn-primary"><%= @save %></button>
+      <a href="<%= @action %>" class="ls-btn-primary"><%= @save %></a>
     </div>
   </div>
   <div class="ls-modal-overlay"></div>
