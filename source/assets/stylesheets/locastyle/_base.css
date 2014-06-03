@@ -639,20 +639,20 @@ tr.active td .boxActions {padding-top: 0;}
   float: left;
 }
 .messageInfo .headerInfo > span,
-.messageInfo .headerInfo > div[class*="span"] {
+.messageInfo .headerInfo > [class*="span"] {
   color: #767676;
   position: relative;
   margin: 0 5px;
 }
-.messageInfo .headerInfo > div[class*="span"]{border-left: 1px solid #e5e5e5;}
+.messageInfo .headerInfo > [class*="span"]{border-left: 1px solid #e5e5e5;}
 
-.messageInfo .headerInfo > div[class*="span"]{
+.messageInfo .headerInfo > [class*="span"]{
   padding: 10px;
 }
 .messageInfo .headerInfo strong {color: #545454;}
 
 .messageInfo .headerInfo span:first-child,
-.messageInfo .headerInfo > div[class*="span"]:first-child {border-left: none;}
+.messageInfo .headerInfo > [class*="span"]:first-child {border-left: none;}
 .messageInfo .headerInfo .translation_missing {top: 0; padding: 0;}
 .messageInfo .headerInfo .fRight {
   display: inline-block;
@@ -720,10 +720,13 @@ tr.active td .boxActions {padding-top: 0;}
 .messageInfo.selectable li{
   line-height: 1.4
 }
+.messageInfo.selectable .selectableCheck{
+  margin-right: 5px;
+}
 .messageInfo.selectable:hover{
   background: none;
 }
-.messageInfo.selectable strong{
+.messageInfo.selectable .headerInfo strong{
   color: #545454;
 }
 .messageInfo.selectable .selectableTitle{
@@ -734,6 +737,36 @@ tr.active td .boxActions {padding-top: 0;}
 .messageInfo.selectable input ~ .selectableTitle{
   font-size: 13px;
   display: inline-block;
+}
+
+.messageInfo.selectable .headerInfo,
+.messageInfo.selectable .messageContent{
+  margin: 0;
+  border: none;
+}
+.messageInfo.selectable.disabled{
+  border-color: #f7e7cb;
+}
+.messageInfo.selectable.disabled .messageContent{
+  background-color: #fcf7e4;
+  padding: 6px 20px;
+}
+.messageInfo.selectable.disabled .messageContent p,
+.messageInfo.selectable.disabled .messageContent a{
+  color: #c3903f;
+}
+.messageInfo.selectable.disabled .messageContent a{
+  text-decoration: underline;
+}
+.messageInfo.selectable.disabled .messageContent a:hover,
+.messageInfo.selectable.disabled .messageContent a:focus{
+  text-decoration: none;
+}
+.messageInfo.selectable.disabled .headerInfo{
+  opacity: .5;
+}
+.messageInfo.selectable.disabled label{
+  cursor: not-allowed;
 }
 
 /* Status Gradient */
