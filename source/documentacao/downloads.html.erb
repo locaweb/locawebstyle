@@ -7,54 +7,55 @@ description: Aqui você pode baixar separadamente os módulos do Locastyle para 
     <h2 class="ls-title-2">Downloads</h2>
   </div>
   <h2 class="ls-title-2">Javascripts</h2>
-  <div class="col-md-4">
-    <table class="ls-table ls-table-striped js-modules">
-      <thead>
-        <tr>
-          <th> # </th>
-          <th>Módulo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% assets_files('assets/javascripts/locastyle').each do |resource| %>
-          <% resource.match('_?([^\/]+)\.[\w]+$').tap do |path| %>
-            <tr>
-              <td>
-                <input type="checkbox" data-file="<%= path %>" value="https://rawgit.com/locaweb/locawebstyle/reboot/<%= resource %>" data-dependence="" name="assets_js">
-              </td>
-              <td>
-                <%= path %>
-              </td>
-            </tr>
+  <form action="http://162.248.164.209/zipper/" method="post">
+    <div class="col-md-4">
+      <table class="ls-table ls-table-striped js-modules">
+        <thead>
+          <tr>
+            <th> # </th>
+            <th>Módulo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% assets_files('assets/javascripts/locastyle').each do |resource| %>
+            <% resource.match('_?([^\/]+)\.[\w]+$').tap do |path| %>
+              <tr>
+                <td>
+                  <input name="files[]" type="checkbox" data-file="<%= path %>" value="https://rawgit.com/locaweb/locawebstyle/reboot/<%= resource %>" data-dependence="">
+                </td>
+                <td>
+                  <%= path %>
+                </td>
+              </tr>
+            <% end %>
           <% end %>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-  <div class="col-md-4">
-    <h2 class="ls-title-2">Stylesheets</h2>
-    <table class="ls-table ls-table-striped css-modules">
-      <thead>
-        <tr>
-          <th> # </th>
-          <th>Módulo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% assets_files('assets/stylesheets/locastyle/base').each do |resource| %>
-          <% resource.match('_?([^\/]+)\.[\w]+$').tap do |path| %>
-            <tr>
-              <td>
-                <input type="checkbox" data-file="<%= path %>" value="https://rawgit.com/locaweb/locawebstyle/reboot/<%= resource %>" data-dependence="" name="assets_css">
-              </td>
-              <td>
-                <%= path %>
-              </td>
-            </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <h2 class="ls-title-2">Stylesheets</h2>
+      <table class="ls-table ls-table-striped css-modules">
+        <thead>
+          <tr>
+            <th> # </th>
+            <th>Módulo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% assets_files('assets/stylesheets/locastyle/base').each do |resource| %>
+            <% resource.match('_?([^\/]+)\.[\w]+$').tap do |path| %>
+              <tr>
+                <td>
+                  <input name="files[]" type="checkbox" data-file="<%= path %>" value="https://rawgit.com/locaweb/locawebstyle/reboot/<%= resource %>" data-dependence="">
+                </td>
+                <td>
+                  <%= path %>
+                </td>
+              </tr>
+            <% end %>
           <% end %>
-        <% end %>
-      </tbody>
-    </table>
-    <a href="" class="ls-btn-primary" data-ls-module="download"> Gerar </a>
-    <div class="download-done"></div>
-  </div>
+        </tbody>
+      </table>
+      <input type="submit" class="ls-btn-primary" value="Gerar">
+    </div>
+  </form>
