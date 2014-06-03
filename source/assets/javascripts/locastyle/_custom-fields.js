@@ -30,10 +30,15 @@ locastyle.customFields = (function() {
   }
 
   function bindCustomSelect($field){
-    var $siblingsField = siblingsField($field)
-    $field.on('change', function(){
-      $siblingsField.text($field.find('option:selected').text())
+    unbind($field);
+    var $siblingsField = siblingsField($field);
+    $field.on('change.ls', function(){
+      $siblingsField.text($field.find('option:selected').text());
     });
+  }
+
+  function unbind ($field) {
+    $($field).off('change.ls');
   }
 
   return {
