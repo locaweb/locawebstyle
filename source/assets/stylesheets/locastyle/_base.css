@@ -651,7 +651,7 @@ tr.active td .boxActions {padding-top: 0;}
 }
 .messageInfo .headerInfo strong {color: #545454;}
 
-.messageInfo .headerInfo span:first-child,
+.messageInfo .headerInfo > span:first-child,
 .messageInfo .headerInfo > [class*="span"]:first-child {border-left: none;}
 .messageInfo .headerInfo .translation_missing {top: 0; padding: 0;}
 .messageInfo .headerInfo .fRight {
