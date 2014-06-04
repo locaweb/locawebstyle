@@ -68,7 +68,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#ededed',GradientType=0 );
 }
 
-.shortcutBox h3:before {display: block; margin-bottom: 10px; opacity: 0.7; }
+.shortcutBox h3:before {display: block; margin-bottom: 10px; }
 .shortcutBox > div:hover h3:before,
 .shortcutBox > div.active h3:before {opacity: 1;}
 
