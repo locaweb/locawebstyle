@@ -1,3 +1,9 @@
+.ls-notifications-visible,
+.ls-sidebar-visible,
+.ls-notifications-visible body,
+.ls-sidebar-visible body
+  overflow: hidden !important
+
 .ls-main
   +single-transition(all, .5s)
   +translate(0, 0)
@@ -20,9 +26,11 @@
 
   .ls-sidebar-visible &
     +translate($sidebarWidth, 0)
+    overflow: hidden
 
   .ls-notifications-visible &
     +translate(-$sidebarWidth, 0)
+    overflow: hidden
 
 .ls-lnk-nav
   padding: 7px 10px 5px
