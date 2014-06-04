@@ -562,7 +562,7 @@ tr.active td .boxActions {padding-top: 0;}
   border-top: 1px solid #e5e5e5;
   border-left: none;
   margin: 0 10px;
-  padding: 0;
+  padding: 5px 0;
 }
 .messageInfo .messageContent p{margin: 0 0 10px;}
 
