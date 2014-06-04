@@ -73,4 +73,18 @@ describe('Collapse:', function() {
     });
   });
 
+  describe("Unbind", function() {
+    it("should bind click only one time on the button with [data-toggle-collapse]", function() {
+      locastyle.collapse.init();
+      locastyle.collapse.init();
+      expect($('#button1')).toHaveBeenBindedOnce('click');
+    });
+
+    it("should bind click only one time on the collapse header", function() {
+      locastyle.collapse.init();
+      locastyle.collapse.init();
+      expect($('#collapse1 .ls-collapse-header')).toHaveBeenBindedOnce('click');
+    });
+  });
+
 });

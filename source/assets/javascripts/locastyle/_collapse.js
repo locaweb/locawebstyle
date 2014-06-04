@@ -29,7 +29,9 @@ locastyle.collapse = (function() {
   }
 
   function bindButton() {
-    $('[data-toggle-collapse]').on('click', function(evt) {
+    // unbind
+    $('[data-toggle-collapse]').off('click.ls'); // <- unbind
+    $('[data-toggle-collapse]').on('click.ls', function(evt) {
       evt.preventDefault();
       evt.stopPropagation();
       var id = $(this).data('toggle-collapse');
@@ -39,9 +41,10 @@ locastyle.collapse = (function() {
 
   function bindHeader($collapse) {
     if (!$collapse.hasClass(config.classes.alwaysOpen)) {
-      $(config.selectors.trigger, $collapse).on('click', function(evt) {
+      $(config.selectors.trigger, $collapse).off('click.ls'); // <- unbind
+      $(config.selectors.trigger, $collapse).on('click.ls', function(evt) {
         evt.preventDefault();
-        toggle($collapse)
+        toggle($collapse);
       });
     }
   }
