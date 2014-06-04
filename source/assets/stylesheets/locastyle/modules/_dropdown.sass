@@ -1,21 +1,21 @@
 .ls-dropdown
   position: relative
   display: inline-block
-  z-index: 2
 
   .ls-dropdown-nav
     list-style: none
     display: none
-    background: #fff
     position: absolute
     top: 100%
     z-index: 2
+    min-width: 160px
+    margin: 0
     margin-top: 2px
-    border-radius: 4px
     overflow: hidden
+    border-radius: 4px
     font-size: .875rem
     border: 1px solid $gray2
-    min-width: 160px
+    background: #fff
 
     a
       padding: 10px 15px
@@ -35,10 +35,10 @@
         &:focus
           color: #fff !important
 
-  [class*="ls-btn"][data-ls-module="tabs"]
-    border-bottom: none
-    border-bottom-right-radius: 0
-    border-bottom-left-radius: 0
+  & + .ls-tabs-container
+    top: 0
+    margin-top: 5px
+
 
     &:hover,
     &:focus
