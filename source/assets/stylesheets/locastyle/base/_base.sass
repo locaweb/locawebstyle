@@ -1,12 +1,10 @@
 .ls-main
   +single-transition(all, .5s)
   +translate(0, 0)
-  height: 100%
-  overflow: auto
+  height: calc(100% - $heightTopbar)
   padding-top: $heightTopbar
   margin-left: 0
   z-index: 10
-  height: calc(100% - $heightTopbar)
   position: relative
   -webkit-overflow-scrolling: touch
   -moz-overflow-scrolling: touch
@@ -93,7 +91,7 @@
       +single-transition(none)
       +transform(none)
       margin-left: $sidebarWidth
-      overflow: scroll
+      overflow: auto
 
       .ls-sidebar-visible &
         +translate(0, 0)
