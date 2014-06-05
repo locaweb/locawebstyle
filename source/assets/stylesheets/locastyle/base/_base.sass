@@ -1,9 +1,3 @@
-.ls-notifications-visible,
-.ls-sidebar-visible,
-.ls-notifications-visible body,
-.ls-sidebar-visible body
-  overflow: hidden !important
-
 .ls-main
   +single-transition(all, .5s)
   +translate(0, 0)
@@ -92,20 +86,18 @@
 
 
 @media (min-width: $screen-sm)
-  html
+
+  .ls-main
+    +single-transition(none)
+    +transform(none)
+    margin-left: $sidebarWidth
     overflow: auto
 
-    .ls-main
-      +single-transition(none)
-      +transform(none)
-      margin-left: $sidebarWidth
-      overflow: auto
+    .ls-sidebar-visible &
+      +translate(0, 0)
 
-      .ls-sidebar-visible &
-        +translate(0, 0)
-
-      .ls-notifications-visible &
-        +translate(0, 0)
+    .ls-notifications-visible &
+      +translate(0, 0)
 
   .ls-container,
   .ls-main > .container-fluid,
