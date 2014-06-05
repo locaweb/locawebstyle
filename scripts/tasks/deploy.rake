@@ -7,7 +7,7 @@ namespace :deploy do
   task :setup, :version do |t, args|
     precompile
     package(args[:version])
-    #git_tag(args[:version])
+    git_tag(args[:version])
   end
 
   def update_version(version)
