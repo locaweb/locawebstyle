@@ -7,7 +7,7 @@ $('#search').keyup(function(){
     console.log(this)
     $.each(data, function(key, val){
       if ((val.title.search(myExp) != -1) || (val.path.search(myExp) != -1)) {
-        output += '<li class="ls-no-list-style"><a class="ls-display-block" href="/'+ val.path +'">' + val.title;
+        output += '<li class="ls-no-list-style"><a class="ls-display-block" href="<%= base_url %>/'+ val.path +'">' + val.title;
         output += '<p>' + val.description + '</p></a></li>';
       }
     });
