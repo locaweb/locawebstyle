@@ -35,19 +35,19 @@ locastyle.breakpoints = (function() {
 
     // Se for maior ou igual a 768 e menor que 992 - sm
     else if (documentWidth >= config.screenSm && documentWidth < config.screenMd) {
-      $('html').addClass('ls-screen-sm');
+      $('html').addClass('ls-screen-sm').removeClass('ls-sidebar-visible ls-notifications-visible ');
       locastyle.breakpointClass = "ls-screen-sm";
     }
 
     // Se for maior ou igual a 992 e menor que 1200 - md
     else if (documentWidth >= config.screenMd && documentWidth < config.screenLg) {
-      $('html').addClass('ls-screen-md');
+      $('html').addClass('ls-screen-md').removeClass('ls-sidebar-visible ls-notifications-visible ');;
       locastyle.breakpointClass = "ls-screen-md";
     }
 
     // Se for maior ou igual a 1200 - lg
     else {
-      $('html').addClass('ls-screen-lg');
+      $('html').addClass('ls-screen-lg').removeClass('ls-sidebar-visible ls-notifications-visible ');;
       locastyle.breakpointClass = "ls-screen-lg";
     };
   }

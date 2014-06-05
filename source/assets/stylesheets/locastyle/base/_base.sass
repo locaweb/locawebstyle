@@ -12,19 +12,17 @@
   overflow-scrolling: touch
   background-color: #fff
 
-  .container-fluid
-    min-height: 84%
+  // .container-fluid
+  //   min-height: 84%
 
   &.ls-no-main-bg
     background-color: #f7f7f7
 
   .ls-sidebar-visible &
     +translate($sidebarWidth, 0)
-    overflow: hidden
 
   .ls-notifications-visible &
     +translate(-$sidebarWidth, 0)
-    overflow: hidden
 
 .ls-lnk-nav
   padding: 7px 10px 5px
@@ -91,12 +89,8 @@
     +single-transition(none)
     +transform(none)
     margin-left: $sidebarWidth
-    overflow: auto
-    height: 100%
 
-    .ls-sidebar-visible &
-      +translate(0, 0)
-
+    .ls-sidebar-visible &,
     .ls-notifications-visible &
       +translate(0, 0)
 
