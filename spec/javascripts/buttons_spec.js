@@ -10,7 +10,16 @@ describe("Buttons group: ", function(){
       locastyle.btnGroup.init();
       expect($("#myButtonInDropdown").closest(".ls-dropdown").hasClass("ls-dropdown")).toBe(true);
     })
+  });
 
-  })
+  describe("Unbind", function() {
+    it("should bind breakpoint-updated only one time on the $(document)", function() {
+      locastyle.btnGroup.init();
+      locastyle.btnGroup.init();
+      expect($(document)).toHaveBeenBindedOnce('breakpoint-updated');
+    });
+
+  });
+
 
 });

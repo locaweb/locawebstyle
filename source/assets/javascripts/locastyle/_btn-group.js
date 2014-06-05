@@ -7,8 +7,14 @@ locastyle.btnGroup = (function() {
     bindBreakpointUpdateOnChecker();
   }
 
+  function unbind () {
+    $(document).off("breakpoint-updated");
+  }
+
   // adiciona o bind de breakpoint-updated e chama o checker quando o evento ocorre
   function bindBreakpointUpdateOnChecker() {
+    unbind();
+
     $(document).on("breakpoint-updated", function () {
       checkBreakpoint();
     })
@@ -30,9 +36,7 @@ locastyle.btnGroup = (function() {
     $('.ls-regroup').html(locastyle.templates.dropdown(list));
 
     // chama os inits para os itens dentro do dropdown
-    locastyle.dropdown.init()
-    locastyle.modal.init()
-    locastyle.general.init()
+    locastyle.init()
   }
 
   return {
