@@ -177,265 +177,200 @@ type: component
       </tr>
     </tbody>
   </table>
-  <div class="doc-example">
-    <form action="" class="ls-form" data-ls-module="form">
-      <%= partial 'documentacao/shared/form/fields-masks.erb' %>
-    </form>
-    <code class="language-markup">
-<%= partial 'documentacao/shared/form/fields-masks.erb' %>
-    </code>
 
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/form/fields-masks.erb' %>
   </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/form/fields-masks.erb' %>
+  </code>
+
 </div>
 
 <div id="prefixos-e-sufixos" class="doc-section">
   <h3 class="ls-title-3">Prefixos e sufixos de campo</h3>
-  <p>Adicione um elemento extra, <code>span.ls-field-prefix</code> antes, ou <code>span.ls-field-sufix</code> depois do <i>input</i>, seguindo o <s>grid</s>.</p>
-  <div class="doc-example">
-    <%= partial 'documentacao/shared/form/fields-prefix-sufix.erb' %>
-    <code class="language-markup">
-<%= partial 'documentacao/shared/form/fields-prefix-sufix.erb' %>
-    </code>
+  <p>Pra inserir um adendo ao input no início ou no final, envolva o <code>input</code> em um elemento com a classe <code>ls-prefix-group</code>. Depois coloque outro elemento (sugerimos <code>span</code>) com a classe <code>ls-label-prefix</code> antes ou depois do input.</p>
 
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/form/fields-prefix-sufix.erb' %>
   </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/form/fields-prefix-sufix.erb' %>
+  </code>
+
 </div>
 
-<div id="todos-campos-de-formulario" class="doc-section">
+<!-- <div id="todos-campos-de-formulario" class="doc-section">
   <h3 class="ls-title-3">Campos de formulário</h3>
   <p>Aparência de <i>inputs</i> dentro de um <i>container</i> com a classe <code>ls-form</code></p>
   <div class="doc-example">
 
 
-<form action="" class="ls-form">
-  <div class="row" >
-    <label class="ls-field col-md-3" data-doc-support="">
-      <span class="ls-label">Text</span>
-      <input type="text" name="nome" placeholder="text" required >
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">Url</span>
-      <input type="url" name="nome" placeholder="url" required >
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">Email</span>
-      <input type="email" name="nome" placeholder="email" required >
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">Tel</span>
-      <input type="tel" name="nome" placeholder="tel" required >
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">Number</span>
-      <input type="number" name="nome" placeholder="number" required >
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">date</span>
-      <input type="date" name="date" placeholder="date" required >
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">time</span>
-      <input type="time" name="time" placeholder="time" required >
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">datetime</span>
-      <input type="datetime" name="datetime" placeholder="datetime" required >
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">datetime-local</span>
-      <input type="datetime-local" name="datetime-local" placeholder="datetime-local" required >
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">week</span>
-      <input type="week" name="week" placeholder="week" required >
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">month</span>
-      <input type="month" name="month" placeholder="month" required >
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">password</span>
-      <input type="password" name="password" placeholder="password" required >
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">search</span>
-      <input type="search" name="search" placeholder="search" required >
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">select original</span>
-      <select name="">
-        <option value="">Selecione</option>
-        <option value="">um</option>
-        <option value="">dois</option>
-      </select>
-    </label>
-    <label class="ls-field col-md-3">
-      <span class="ls-label">select customizado</span>
-      <div data-ls-module="customFields">
-        <select name="" class="ls-custom-select-one">
-          <option value="">Selecione</option>
-          <option value="">um</option>
-          <option value="">dois</option>
-        </select>
-      </div>
-    </label>
-     <label class="ls-field col-md-3">
-      <span class="ls-label">Text com datalist</span>
-      <input type="text" name="nome" placeholder="text" list="opcoes" >
-      <datalist id="opcoes">
-        <option value="opção 1">
-        <option value="opção 2">
-        <option value="opção 3">
-      </datalist>
-    </label>
+    <form action="" class="ls-form">
+      <div class="row" >
+        <label class="ls-field col-md-3" data-doc-support="">
+          <span class="ls-label">Text</span>
+          <input type="text" name="nome" placeholder="text" required >
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">Url</span>
+          <input type="url" name="nome" placeholder="url" required >
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">Email</span>
+          <input type="email" name="nome" placeholder="email" required >
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">Tel</span>
+          <input type="tel" name="nome" placeholder="tel" required >
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">Number</span>
+          <input type="number" name="nome" placeholder="number" required >
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">date</span>
+          <input type="date" name="date" placeholder="date" required >
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">time</span>
+          <input type="time" name="time" placeholder="time" required >
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">datetime</span>
+          <input type="datetime" name="datetime" placeholder="datetime" required >
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">datetime-local</span>
+          <input type="datetime-local" name="datetime-local" placeholder="datetime-local" required >
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">week</span>
+          <input type="week" name="week" placeholder="week" required >
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">month</span>
+          <input type="month" name="month" placeholder="month" required >
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">password</span>
+          <input type="password" name="password" placeholder="password" required >
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">search</span>
+          <input type="search" name="search" placeholder="search" required >
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">select original</span>
+          <select name="">
+            <option value="">Selecione</option>
+            <option value="">um</option>
+            <option value="">dois</option>
+          </select>
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">select customizado</span>
+          <div data-ls-module="customFields">
+            <select name="" class="ls-custom-select-one">
+              <option value="">Selecione</option>
+              <option value="">um</option>
+              <option value="">dois</option>
+            </select>
+          </div>
+        </label>
+        <label class="ls-field col-md-3">
+          <span class="ls-label">Text com datalist</span>
+          <input type="text" name="nome" placeholder="text" list="opcoes" >
+          <datalist id="opcoes">
+            <option value="opção 1">
+              <option value="opção 2">
+                <option value="opção 3">
+                </datalist>
+              </label>
 
 
-    <label class="ls-field col-md-3">
-      <span class="ls-label">radio</span>
-      <input type="radio" name="radio1">
-      <span class="ls-form-text-inline">Aceito os termos.</span>
-    </label>
+              <label class="ls-field col-md-3">
+                <span class="ls-label">radio</span>
+                <input type="radio" name="radio1">
+                <span class="ls-form-text-inline">Aceito os termos.</span>
+              </label>
 
-    <span class="ls-field col-md-3">
-      <span class="ls-label">radio group</span>
-      <label>
-        <input type="radio" name="radio2" value="1">
-        <span class="ls-form-text-inline">Opção 1</span>
-      </label>
-      <label>
-        <input type="radio" name="radio2" value="2">
-        <span class="ls-form-text-inline">Opção 2</span>
-      </label>
-    </span>
+              <span class="ls-field col-md-3">
+                <span class="ls-label">radio group</span>
+                <label>
+                  <input type="radio" name="radio2" value="1">
+                  <span class="ls-form-text-inline">Opção 1</span>
+                </label>
+                <label>
+                  <input type="radio" name="radio2" value="2">
+                  <span class="ls-form-text-inline">Opção 2</span>
+                </label>
+              </span>
 
-    <label class="ls-field col-md-3">
-      <span class="ls-label">checkbox</span>
-      <input type="checkbox" name="checkbox1">
-      <span class="ls-form-text-inline">Aceito os termos.</span>
-    </label>
+              <label class="ls-field col-md-3">
+                <span class="ls-label">checkbox</span>
+                <input type="checkbox" name="checkbox1">
+                <span class="ls-form-text-inline">Aceito os termos.</span>
+              </label>
 
-    <span class="ls-field col-md-3">
-      <span class="ls-label">checkboxes</span>
-      <label>
-        <input type="checkbox" name="checkbox2" value="1">
-        <span class="ls-form-text-inline">Opção 1</span>
-      </label>
-      <label>
-        <input type="checkbox" name="checkbox2" value="2">
-        <span class="ls-form-text-inline">Opção 2</span>
-      </label>
-    </span>
+              <span class="ls-field col-md-3">
+                <span class="ls-label">checkboxes</span>
+                <label>
+                  <input type="checkbox" name="checkbox2" value="1">
+                  <span class="ls-form-text-inline">Opção 1</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="checkbox2" value="2">
+                  <span class="ls-form-text-inline">Opção 2</span>
+                </label>
+              </span>
 
-    <span class="col-md-3">
-      <label class="ls-field">
-        <span class="ls-label">range</span>
-        <input type="range" name="range" value="30" min="10" max="100" step="5" onchange="rangeValueId.value=value">
-        <output id="rangeValueId">30</output>
-      </label>
-      <label class="ls-field">
-        <span class="ls-label">range com marcadores</span>
-        <input type="range" name="range2" value="30" min="0" max="100" step="20" list="rangeLines">
-        <datalist id="rangeLines">
-          <option>0</option>
-          <option>20</option>
-          <option>40</option>
-          <option>60</option>
-          <option>80</option>
-          <option>100</option>
-        </datalist>
-      </label>
-    </span>
-    <label class="ls-field col-md-1">
-      <span class="ls-label">vertical</span>
-      <input type="range" name="range3" value="30" min="0" max="100" step="5" class="ls-input-range-vertical">
-    </label>
-    <label class="ls-field col-md-1">
-      <span class="ls-label">vertical</span>
-      <input type="range" name="range2" value="30" min="0" max="100" step="5" list="rangeLines" class="ls-input-range-vertical">
-      <datalist id="rangeLines">
-        <option>0</option>
-        <option>20</option>
-        <option>40</option>
-        <option>60</option>
-        <option>80</option>
-        <option>100</option>
-      </datalist>
-    </label>
+              <span class="col-md-3">
+                <label class="ls-field">
+                  <span class="ls-label">range</span>
+                  <input type="range" name="range" value="30" min="10" max="100" step="5" onchange="rangeValueId.value=value">
+                  <output id="rangeValueId">30</output>
+                </label>
+                <label class="ls-field">
+                  <span class="ls-label">range com marcadores</span>
+                  <input type="range" name="range2" value="30" min="0" max="100" step="20" list="rangeLines">
+                  <datalist id="rangeLines">
+                    <option>0</option>
+                    <option>20</option>
+                    <option>40</option>
+                    <option>60</option>
+                    <option>80</option>
+                    <option>100</option>
+                  </datalist>
+                </label>
+              </span>
+              <label class="ls-field col-md-1">
+                <span class="ls-label">vertical</span>
+                <input type="range" name="range3" value="30" min="0" max="100" step="5" class="ls-input-range-vertical">
+              </label>
+              <label class="ls-field col-md-1">
+                <span class="ls-label">vertical</span>
+                <input type="range" name="range2" value="30" min="0" max="100" step="5" list="rangeLines" class="ls-input-range-vertical">
+                <datalist id="rangeLines">
+                  <option>0</option>
+                  <option>20</option>
+                  <option>40</option>
+                  <option>60</option>
+                  <option>80</option>
+                  <option>100</option>
+                </datalist>
+              </label>
 
-    <label class="ls-field col-md-3">
-      <span class="ls-label">textarea</span>
-      <textarea name="" id=""rows="3"></textarea>
-    </label>
-  </div>
-</form>
-
-
+              <label class="ls-field col-md-3">
+                <span class="ls-label">textarea</span>
+                <textarea name="" id=""rows="3"></textarea>
+              </label>
+            </div>
+          </form>
 
 
 
-  </div>
-
-</div>
-<!--
-<div id="datepickers" class="doc-section">
-  <h3 class="ls-title-3">Prefixos e sufixos de campo</h3>
-  <p>datepicker config</p>
-  <div class="doc-example">
-
-    <div class="ls-form">
-      <label class="ls-field">
-        <span class="ls-label ls-hidden-accessible">Data</span>
-        <input type="text" class="datepicker">
-      </label>
-    </div>
-
-    <code class="language-markup">
-    </code>
-  </div>
-</div>
-datepicker -->
-<!--
-
-  <h3 class="doc-section-title">Indicando as validações</h3>
-
-  <h3 class="doc-section-title">Calendários</h3>
-
-  <h3 class="doc-section-title">Força de senha</h3>
 
 
-  <!--
-  datalist
-    list
-  max
-  maxlength
-  min
-  multiple
-  readonly
-  spellcheck
-  step
-  autofocus
-  placeholder
-  form
-  required
-  autocomplete
-  pattern
-  dirname
-  novalidate
-  formaction(input/button
-  formnovalidate)
-  accept
-  autosave
-  disabled
-  inputmode
-    verbatim: Alphanumeric, non-prose content such as usernames and passwords.
-    latin: Latin-script input in the user's preferred language with typing aids such as text prediction enabled. For human-to-computer communication such as search boxes.
-    latin-name: As latin, but for human names.
-    latin-prose: As latin, but with more aggressive typing aids. For human-to-human communication such as instant messaging for email.
-    full-width-latin: As latin-prose, but for the user's secondary languages.
-    kana: Kana or romaji input, typically hiragana input, using full-width characters, with support for converting to kanji. Intended for Japanese text input.
-    katakana: Katakana input, using full-width characters, with support for converting to kanji. Intended for Japanese text input.
-    numeric: Numeric input, including keys for the digits 0 to 9, the user's preferred thousands separator character, and the character for indicating negative numbers. Intended for numeric codes, e.g. credit card numbers. For actual numbers, prefer using <input type="number">
-    tel: Telephone input, including asterisk and pound key. Use <input type="tel"> if possible instead.
-    email: Email input. Use <input type="email"> if possible instead.
-    url: URL input. Use <input type="url"> if possible instead.
-
-   -->
+        </div>
+</div> -->

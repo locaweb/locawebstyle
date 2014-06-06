@@ -1,7 +1,25 @@
-<label class="ls-field">
-  <span class="ls-label">Telefone</span>
-  <input type="text" name="cel1" class="ls-mask-phone8" placeholder="9999-9999" >
-  <input type="text" name="cel2" class="ls-mask-phone9" placeholder="[9]9999-9999" >
-  <input type="text" name="cel3" class="ls-mask-phone8_with_ddd" placeholder="(99) 9999-9999" >
-  <input type="text" name="cel4" class="ls-mask-phone9_with_ddd" placeholder="(99) [9]9999-9999" >
-</label>
+<form action="" class="ls-form ls-form-horizontal" data-ls-module="form">
+  <label class="ls-field col-md-2">
+    <b class="ls-label">Telefone sem prefixo</b>
+    <input type="text" name="cel1" class="ls-mask-phone8" placeholder="9999-9999" >
+  </label>
+
+  <label class="ls-field col-md-2">
+    <b class="ls-label">Telefone com prefixo</b>
+    <input type="text" name="cel2" class="ls-mask-phone8_with_ddd" placeholder="(99) 9999-9999" >
+  </label>
+
+  <label class="ls-field col-md-2">
+    <b class="ls-label">CNPJ</b>
+    <input type="text" name="cnpj" class="ls-mask-cnpj" placeholder="00.000.000/0000-00" >
+  </label>
+
+  <label class="ls-field col-md-2">
+    <b class="ls-label">CPF</b>
+    <input type="text" name="cpf" class="ls-mask-cpf" placeholder="000.000.000-00" >
+  </label>
+  <label class="ls-field col-md-2">
+    <b class="ls-label">CEP</b>
+    <input type="text" name="cep" class="ls-mask-cep" placeholder="00000-000" >
+  </label>
+</form>
