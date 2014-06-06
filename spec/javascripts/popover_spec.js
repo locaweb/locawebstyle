@@ -46,4 +46,13 @@ describe("Popover: ", function() {
 
   });
 
+  describe("[unbind] When locastyle.init is called multiple times", function () {
+    it("should bind events on popover elements only one time", function () {
+      locastyle.init();
+      locastyle.init();
+      locastyle.init();
+      expect($("[data-ls-module='popover']")).toHaveBeenBindedOnce("click");
+    });
+  });
+
 });
