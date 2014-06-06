@@ -8,7 +8,7 @@ locastyle.guidedTour = (function() {
 	var config = {
 		selectors : {
 			init:  '.ls-btn-tour',
-			tour:  '.ls-alerts-list > .ls-ico-question'
+			tour:  '.ls-alerts-list .ls-ico-question'
 		}
 	}
 
@@ -62,7 +62,7 @@ locastyle.guidedTour = (function() {
 
 	function setCookie(){
 		if($.cookie("cookie_tour") != "true"){
-			openWelcomeTour();
+			$(config.selectors.tour).trigger('click');
       $(config.selectors.init).focus().attr('tabindex', '-1');
 			$.cookie('cookie_tour', "true");
 		}
