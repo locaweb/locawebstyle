@@ -1,293 +1,403 @@
-
-.ls-form-text
-  .ls-label-prefix, .ls-label-sufix
-    background-color: lighten($gray1, 10%)
-    color: lighten( invert($gray1) , 50%)
-    & + input
-      border-color: $gray2 !important
-
 .ls-form
+  [class*="ls-btn"]
+    margin-left: 15px
 
-  .row
-    margin-bottom: .5rem
-    .ls-field
-      margin-bottom: 0
+// Element that envolve the label and the input field. This class can be inserted on tag label or anyother
+.ls-field
+  display: block
+  float: none
+  vertical-align: top
+  margin-bottom: 15px
 
-    &:after
-      @extend .ls-clearfix
+  @extend .ls-clearfix
 
-  .ls-field
-    display: block
-    margin-bottom: $inputHeight/4
-    min-height: 63px
-
-    .ls-form-vertical &
-      float: none
-      display: block
-
-    .ls-field-prefix
-      display: inline-block
-      padding: 0 $inputHeight/4
-      background-color: $gray1
-      color: invert($gray1)
-      border: 1px solid  $gray3
-      height: $inputHeight
-      line-height: $inputHeight
-      text-align: right
-
-    textarea
-      padding: $inputHeight/4
-      line-height: $inputHeight / 2
-      height: auto
-      resize: none
-      max-width: 100%
-
-      &.ls-textarea-resize-both
-        resize: both
-      &.ls-textarea-resize-horizontal
-        resize: none
-      &.ls-textarea-resize-vertical
-        resize: vertical
-
-    input, select, textarea
-      display: inline-block
-      line-height: $inputHeight / 2
-
-    &.ls-field-inline
-      min-height: 20px
-      margin-bottom: 0
-
-      .ls-label
-        height: $inputHeight
-        line-height: $inputHeight
-
-        &[class*="col"]
-          padding-right: 0
-
-      &[class*="col"]
-        padding-left: 0
-        padding-right: 30px
-
-        [class*="col"]
-          padding-right: 0
-
-      input[type="checkbox"],
-      input[type="radio"]
-        float: left
-
-  .ls-form-text-inline
-    height: $inputHeight
-    line-height: $inputHeight
-    text-align: center
-    display: inline-block
-    font-size: .875rem
-
-  .ls-label
+  b,
+  label
     display: block
     color: $gray4
     font-weight: bold
     line-height: $inputHeight/2 * 1.2
     font-size: .875rem
+    margin-right: 5px
 
-    & + input:not([type="radio"]):not([type="checkbox"]),
-    & + select,
-    & + textarea
-      width: 100%
+  b ~ label
+    font-weight: normal
 
-    &.ls-label-has-prefix.ls-label-has-sufix
-      border: 1px solid red
-      input, select, textarea
-        border-radius: 0
+.ls-input-text,
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[type="text"],
+textarea
+  +box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075))
+  +transition(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s)
+  font-family: Open Sans, Arial, Helvetica, Sans-serif
+  padding: 8px
+  padding-bottom: 7px
+  vertical-align: middle
+  background-color: #fff
+  background-image: none
+  border: 1px solid $gray2
+  border-radius: 4px
+  font-size: .875rem
+  width: 100%
 
-  input[type="radio"], input[type="checkbox"]
-    height: $inputHeight
+  .ls-form-inline &
+    width: auto
+
+  &[disabled]
+    border-color: $gray1
+    background-color: #f9f9f9
+
+.ls-actions-btn
+  padding: 15px 0
+  margin: 30px 15px
+  border-top: 1px solid rgba(0, 0, 0, .2)
+
+//
+// Form when is inline
+//
+.ls-form-horizontal
+
+  .ls-field
+
+    &[class*="col-"]
+      float: none
+      display: inline-block
+
+  .ls-actions-btn
+    padding: 0
+    border: none
+    display: inline
+
+  [class*="ls-btn"]
+    vertical-align: top
+    margin-top: 21px
+
+//
+// Label and input side by side
+//
+.ls-form-inline
+  @extend .ls-clearfix
+
+  [data-ls-module="customFields"],
+  .ls-custom-select-one
+    width: auto
     display: inline-block
     vertical-align: middle
-    margin: 0 .3rem 0 0
 
-  .ls-label-prefix, .ls-label-sufix
-    border: 1px solid $gray2
-    background-color: $gray1
-    height: $inputHeight
-    line-height: $inputHeight
-    text-overflow: ellipsis
-    overflow: hidden
-    position: relative
-    z-index: 1
-    &[class*="ls-ico-"], & + [class*="ls-ico-"]
-      text-align: center
+  .ls-field
+    display: inline-block
+    margin-right: 15px
+    margin-bottom: 0
 
-  .ls-label-prefix
-    +border-left-radius(4px)
-    border-right: none
-    margin-left: 15px
-    &+ [class*="col-"]
-      padding-left: 0
-      input
-        +border-left-radius(0)
-
-
-  [class*="col-"]! + .ls-label-sufix
-    padding-right: 0
-
-  .ls-label-sufix
-    +border-right-radius(4px)
-    border-left: none
-
-  select
-    +box-shadow(0px 1px 0px #ddd, 0px -1px 0px #ddd, -1px -1px 0px #ddd, 1px -1px 0px #ddd, inset 1px 1px 0 #ddd, inset -1px -1px 0 #ddd)
-    border: 11px solid transparent
-    background: #fff
-    width: 100%
-
-  input[type="range"]
-    &.ls-input-range-vertical
-      -webkit-appearance: slider-vertical
-      writing-mode: bt-lr
-  //   -webkit-appearance: none
-  //   background: red
-  //   height: 7px
-  //   &::-webkit-slider-thumb
-  //     -webkit-appearance: none
-  //     background: blue
-  //     height: 10px
-  //     width: 10px
-
-  input[type="color"],
-  input[type="date"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="email"],
-  input[type="month"],
-  input[type="number"],
-  input[type="password"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="text"],
-  input[type="time"],
-  input[type="url"],
-  input[type="week"],
-  input[type="text"],
-  textarea
-    +box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075))
-    +transition(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s)
-    font-family: Open Sans, Arial, Helvetica, Sans-serif
-    vertical-align: middle
-    height: $inputHeight
-    padding: 6px $inputHeight/4
-    line-height: 1.428571429
-    color: $gray4
-    vertical-align: middle
-    background-color: #fff
-    background-image: none
-    border: 1px solid $gray2
-    border-radius: 4px
-    font-size: .875rem
-    width: 100%
-    position: relative
-    z-index: 2
-
-    &[disabled]
-      border-color: $gray1
-      background-color: #f9f9f9
-
-    &.ls-form-text
-      +box-shadow(none)
-      border-color: transparent
-      background-color: transparent
-      padding: 0
-
-  .ls-select-color
-
-    .ls-label-color
-      border: 1px solid $gray1
-      cursor: pointer
-      display: block
-      height: 30px
-      text-indent: -99999px
-      width: 100%
-
-    input
-      opacity: 0
-      height: 0
-      width: 0
-      outline: none
-
-      &:checked ~ .ls-label-color
-        border: 1px solid $gray4
-        box-shadow: inset 0 0 0 1px $gray4
-
-      &:focus ~ .ls-label-color
-        outline: -webkit-focus-ring-color auto 5px
-
-  .ls-help-message
-    font-size: .815rem
-
-  .ls-warning
-    .ls-label,
-    .ls-help-message
-      color: $colorWarning
-
-    input
-      border-color: $colorWarning
-
-  .ls-success
-    .ls-label,
-    .ls-help-message
-      color: $colorSuccess
-
-    input
-      border-color: $colorSuccess
-
-  .ls-error
-    .ls-label,
-    .ls-help-message
-      color: $colorDanger
-
-    input
-      border-color: $colorDanger
+    b
+      display: inline-block
+      margin-right: 5px
 
 
 
-  @media (max-width: $screen-md)
-    .ls-field
 
-      &.ls-label-has-sufix .row [class*="col-"]:first-child:not(.ls-label-prefix)
-        padding-left: 0
-        padding-right: 0
-        input, select, textarea
-          +border-top-radius(4px)
-          +border-bottom-radius(0)
+// .ls-form-text
+//   .ls-label-prefix, .ls-label-sufix
+//     background-color: lighten($gray1, 10%)
+//     color: lighten( invert($gray1) , 50%)
+//     & + input
+//       border-color: $gray2 !important
 
-      .ls-label-prefix
-        +border-top-radius(4px)
-        +border-bottom-radius(0)
-        border: 1px solid $gray2
-        border-bottom: none
-        margin-left: 0
-        position: relative
-        z-index: 1
-        & + [class*="col-"]
-          input, select, textarea
-            +border-top-radius(0)
-            +border-bottom-radius(4px)
+// .ls-form
 
-      .ls-label-sufix
-        +border-top-radius(0)
-        +border-bottom-radius(4px)
-        position: relative
-        z-index: 1
-        border: 1px solid $gray2
-        margin-left: 0
-        & + [class*="col-"]
-          input
-            +border-top-radius(0)
+//   .row
+//     margin-bottom: .5rem
+//     .ls-field
+//       margin-bottom: 0
 
-  @media (min-width: $screen-sm)
-    .ls-field
-      padding-bottom: 0
+//     &:after
+//       @extend .ls-clearfix
 
-  @media (min-width: $screen-md)
-    .ls-field .ls-field-inline[class*="col"]
-      padding: 0
+//   .ls-field
+//     display: block
+//     margin-bottom: $inputHeight/4
+//     min-height: 63px
+
+//     .ls-form-vertical &
+//       float: none
+//       display: block
+
+//     .ls-field-prefix
+//       display: inline-block
+//       padding: 0 $inputHeight/4
+//       background-color: $gray1
+//       color: invert($gray1)
+//       border: 1px solid  $gray3
+//       height: $inputHeight
+//       line-height: $inputHeight
+//       text-align: right
+
+//     textarea
+//       padding: $inputHeight/4
+//       line-height: $inputHeight / 2
+//       height: auto
+//       resize: none
+//       max-width: 100%
+
+//       &.ls-textarea-resize-both
+//         resize: both
+//       &.ls-textarea-resize-horizontal
+//         resize: none
+//       &.ls-textarea-resize-vertical
+//         resize: vertical
+
+//     input, select, textarea
+//       display: inline-block
+//       line-height: $inputHeight / 2
+
+//     &.ls-field-inline
+//       min-height: 20px
+//       margin-bottom: 0
+
+//       .ls-label
+//         height: $inputHeight
+//         line-height: $inputHeight
+
+//         &[class*="col"]
+//           padding-right: 0
+
+//       &[class*="col"]
+//         padding-left: 0
+//         padding-right: 30px
+
+//         [class*="col"]
+//           padding-right: 0
+
+//       input[type="checkbox"],
+//       input[type="radio"]
+//         float: left
+
+//   .ls-form-text-inline
+//     height: $inputHeight
+//     line-height: $inputHeight
+//     text-align: center
+//     display: inline-block
+//     font-size: .875rem
+
+//   .ls-label
+//     display: block
+//     color: $gray4
+//     font-weight: bold
+//     line-height: $inputHeight/2 * 1.2
+//     font-size: .875rem
+
+//     & + input:not([type="radio"]):not([type="checkbox"]),
+//     & + select,
+//     & + textarea
+//       width: 100%
+
+//     &.ls-label-has-prefix.ls-label-has-sufix
+//       border: 1px solid red
+//       input, select, textarea
+//         border-radius: 0
+
+//   input[type="radio"], input[type="checkbox"]
+//     height: $inputHeight
+//     display: inline-block
+//     vertical-align: middle
+//     margin: 0 .3rem 0 0
+
+//   .ls-label-prefix, .ls-label-sufix
+//     border: 1px solid $gray2
+//     background-color: $gray1
+//     height: $inputHeight
+//     line-height: $inputHeight
+//     text-overflow: ellipsis
+//     overflow: hidden
+//     position: relative
+//     z-index: 1
+//     &[class*="ls-ico-"], & + [class*="ls-ico-"]
+//       text-align: center
+
+//   .ls-label-prefix
+//     +border-left-radius(4px)
+//     border-right: none
+//     margin-left: 15px
+//     &+ [class*="col-"]
+//       padding-left: 0
+//       input
+//         +border-left-radius(0)
+
+
+//   [class*="col-"]! + .ls-label-sufix
+//     padding-right: 0
+
+//   .ls-label-sufix
+//     +border-right-radius(4px)
+//     border-left: none
+
+//   select
+//     +box-shadow(0px 1px 0px #ddd, 0px -1px 0px #ddd, -1px -1px 0px #ddd, 1px -1px 0px #ddd, inset 1px 1px 0 #ddd, inset -1px -1px 0 #ddd)
+//     border: 11px solid transparent
+//     background: #fff
+//     width: 100%
+
+//   input[type="range"]
+//     &.ls-input-range-vertical
+//       -webkit-appearance: slider-vertical
+//       writing-mode: bt-lr
+//   //   -webkit-appearance: none
+//   //   background: red
+//   //   height: 7px
+//   //   &::-webkit-slider-thumb
+//   //     -webkit-appearance: none
+//   //     background: blue
+//   //     height: 10px
+//   //     width: 10px
+
+//   input[type="color"],
+//   input[type="date"],
+//   input[type="datetime"],
+//   input[type="datetime-local"],
+//   input[type="email"],
+//   input[type="month"],
+//   input[type="number"],
+//   input[type="password"],
+//   input[type="search"],
+//   input[type="tel"],
+//   input[type="text"],
+//   input[type="time"],
+//   input[type="url"],
+//   input[type="week"],
+//   input[type="text"],
+//   textarea
+//     +box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075))
+//     +transition(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s)
+//     font-family: Open Sans, Arial, Helvetica, Sans-serif
+//     vertical-align: middle
+//     height: $inputHeight
+//     padding: 6px $inputHeight/4
+//     line-height: 1.428571429
+//     color: $gray4
+//     vertical-align: middle
+//     background-color: #fff
+//     background-image: none
+//     border: 1px solid $gray2
+//     border-radius: 4px
+//     font-size: .875rem
+//     width: 100%
+//     position: relative
+//     z-index: 2
+
+//     &[disabled]
+//       border-color: $gray1
+//       background-color: #f9f9f9
+
+//     &.ls-form-text
+//       +box-shadow(none)
+//       border-color: transparent
+//       background-color: transparent
+//       padding: 0
+
+//   .ls-select-color
+
+//     .ls-label-color
+//       border: 1px solid $gray1
+//       cursor: pointer
+//       display: block
+//       height: 30px
+//       text-indent: -99999px
+//       width: 100%
+
+//     input
+//       opacity: 0
+//       height: 0
+//       width: 0
+//       outline: none
+
+//       &:checked ~ .ls-label-color
+//         border: 1px solid $gray4
+//         box-shadow: inset 0 0 0 1px $gray4
+
+//       &:focus ~ .ls-label-color
+//         outline: -webkit-focus-ring-color auto 5px
+
+//   .ls-help-message
+//     font-size: .815rem
+
+//   .ls-warning
+//     .ls-label,
+//     .ls-help-message
+//       color: $colorWarning
+
+//     input
+//       border-color: $colorWarning
+
+//   .ls-success
+//     .ls-label,
+//     .ls-help-message
+//       color: $colorSuccess
+
+//     input
+//       border-color: $colorSuccess
+
+//   .ls-error
+//     .ls-label,
+//     .ls-help-message
+//       color: $colorDanger
+
+//     input
+//       border-color: $colorDanger
+
+
+
+//   @media (max-width: $screen-md)
+//     .ls-field
+
+//       &.ls-label-has-sufix .row [class*="col-"]:first-child:not(.ls-label-prefix)
+//         padding-left: 0
+//         padding-right: 0
+//         input, select, textarea
+//           +border-top-radius(4px)
+//           +border-bottom-radius(0)
+
+//       .ls-label-prefix
+//         +border-top-radius(4px)
+//         +border-bottom-radius(0)
+//         border: 1px solid $gray2
+//         border-bottom: none
+//         margin-left: 0
+//         position: relative
+//         z-index: 1
+//         & + [class*="col-"]
+//           input, select, textarea
+//             +border-top-radius(0)
+//             +border-bottom-radius(4px)
+
+//       .ls-label-sufix
+//         +border-top-radius(0)
+//         +border-bottom-radius(4px)
+//         position: relative
+//         z-index: 1
+//         border: 1px solid $gray2
+//         margin-left: 0
+//         & + [class*="col-"]
+//           input
+//             +border-top-radius(0)
+
+//   @media (min-width: $screen-sm)
+//     .ls-field
+//       padding-bottom: 0
+
+//   @media (min-width: $screen-md)
+//     .ls-field .ls-field-inline[class*="col"]
+//       padding: 0
 

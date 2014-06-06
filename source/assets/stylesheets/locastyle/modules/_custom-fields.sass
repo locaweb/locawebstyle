@@ -6,7 +6,8 @@
     opacity: 0
 
   select
-    left: 10px
+    left: 0
+    top: 7px
 
   .ls-field-custom-checkbox,
   .ls-field-custom-radio
@@ -43,6 +44,9 @@
       top: calc( (#{$inputHeight}/2) - (#{$inputHeight}/8))
       right: $inputHeight/4
       z-index: 1
+
+[data-ls-module="customFields"]
+  height: 37px
 
   select
     // +appearance(none)
