@@ -179,7 +179,12 @@ p
     font-size: .6rem
     line-height: 1rem
 
-.ls-well-example
+  &:after
+    content: ""
+    display: block
+    clear: both
+
+.ls-box-demo + .ls-well-example
   position: relative
   top: -32px
 
