@@ -1,24 +1,13 @@
-<form action="" class="ls-form" data-ls-module="form">
-  <% 1.times do |num| %>
-  <div class="row ls-form-disable ls-form-text exemplo-linha-desabilitada" >
+<form action="" class="ls-form ls-form-horizontal" data-ls-module="form">
+  <fieldset id="fields-disabled" class="ls-form-disable ls-form-text">
     <% 3.times do |num| %>
     <label class="ls-field col-md-3">
-      <span class="ls-label">Nome</span>
+      <b class="ls-label">Nome</b>
       <input type="text" name="nome" value="<%= lorem.words 2 %>" placeholder="Nome e sobrenome" required >
     </label>
-    <% end %>
-  </div>
   <% end %>
-  <div class="row">
-    <div class="col-md-4">
-      <p>Exemplo simples:</p>
-      <button class="ls-btn-primary" data-ls-toggle-fields=".exemplo-linha-desabilitada">Editar campos</button>
-      <p>Comportamentos combinados:</p>
-      <button class="ls-btn-primary" data-toggle-class="ls-display-none" data-target=".meus-campos-ocultos" data-toggle-text="Cancelar" data-ls-toggle-fields=".exemplo-linha-desabilitada">Editar campos</button>
-      <button class="ls-btn-primary ls-display-none meus-campos-ocultos" type="submit">Salvar</button>
-    </div>
-    <div class="col-md-6">
-      <div class="meus-campos-ocultos ls-box">Um texto qualquer</div>
-    </div>
-  </div>
+  </fieldset>
+  <button class="ls-btn-primary hidden-elements" data-toggle-class="ls-display-none"  data-target=".hidden-elements" data-ls-toggle-fields="#fields-disabled">Editar campos</button>
+  <button class="ls-btn-primary ls-display-none hidden-elements" type="submit">Salvar</button>
+  <button data-toggle-class="ls-display-none"  data-target=".hidden-elements" data-ls-toggle-fields="#fields-disabled" class="ls-btn-danger ls-display-none hidden-elements" type="submit">Cancelar</button>
 </form>
