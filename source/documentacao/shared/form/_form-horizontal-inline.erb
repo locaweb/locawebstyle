@@ -1,61 +1,51 @@
-<form action="" class="ls-form">
+<p>Com caixa de filtro:</p>
+<div class="ls-box-filter">
+  <form action="" class="ls-form ls-form-inline">
+    <label class="ls-field">
+      <b class="ls-label">Status</b>
+      <div data-ls-module="customFields">
+        <select name="">
+          <option value="">Todos</option>
+          <option value="">Ativo</option>
+          <option value="">Desativados</option>
+          <option value="">Bloqueados por bounce</option>
+        </select>
+      </div>
+    </label>
+    <label class="ls-field">
+      <b class="ls-label">Nome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" required >
+    </label>
+    <label class="ls-field ls-float-right">
+      <b class="ls-label">Busca</b>
+      <input type="text" name="search" placeholder="Faça sua pesquisa" required >
+      <button class="ls-btn">Buscar</button>
+    </label>
+  </form>
+</div>
 
-  <div class="row" >
-    <label class="ls-field ls-field-inline col-md-6">
-      <span class="row">
-        <span class="ls-label col-md-2">Nome</span>
-        <span class="col-md-10">
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required >
-        </span>
-      </span>
-    </label>
-  </div>
 
-  <div class="row" >
-    <label class="ls-field ls-field-inline col-md-4">
-      <span class="row">
-        <span class="ls-label col-md-3">Nome</span>
-        <span class="col-md-9">
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required >
-        </span>
-      </span>
-    </label>
-    <label class="ls-field ls-field-inline col-md-4">
-      <span class="row">
-        <span class="ls-label col-md-3">Nome</span>
-        <span class="col-md-9">
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required >
-        </span>
-      </span>
-    </label>
-    <label class="ls-field ls-field-inline col-md-4">
-      <span class="row">
-        <span class="ls-label col-md-3">Nome</span>
-        <span class="col-md-9">
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required >
-        </span>
-      </span>
-    </label>
+<br>
+<br>
 
-  </div>
 
-  <div class="row" >
-    <label class="ls-field ls-field-inline col-md-4">
-      <span class="row">
-        <span class="ls-label col-md-3">Nome</span>
-        <span class="col-md-9">
-          <input type="text" name="nome" placeholder="Nome e sobrenome" required >
-        </span>
-      </span>
-    </label>
-    <label class="ls-field ls-field-inline col-md-4">
-    <span class="row">
-      <span class="ls-label ls-hidden-accessible">Nome</span>
-      <span class="col-md-9">
-        <input type="text" name="nome" placeholder="Nome e sobrenome" required >
-      </span>
-    </span>
-    </label>
-  </div>
 
-</form>
+<p>Opção sem caixa:</p>
+  <form action="" class="ls-form ls-form-inline">
+  <label class="ls-field">
+    <b class="ls-label">Nome</b>
+    <input type="text" name="nome" placeholder="Nome e sobrenome" required >
+  </label>
+  <label class="ls-field">
+    <b class="ls-label">E-mail</b>
+    <input type="text" name="email" placeholder="Escreva seu email" required >
+  </label>
+  <label class="ls-field">
+    <b class="ls-label">Rua</b>
+    <input type="text" name="rua" placeholder="O nome da sua rua" required >
+  </label>
+  <button class="ls-btn">Salvar</button>
+  <button class="ls-btn-danger">Cancelar</button>
+  </form>
+<br>
+<br>

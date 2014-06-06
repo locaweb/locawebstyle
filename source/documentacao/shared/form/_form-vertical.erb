@@ -1,10 +1,15 @@
-<form action="" class="ls-form">
-  <% 3.times do |num| %>
-  <div class="row" >
-    <label class="ls-field col-md-3">
-      <span class="ls-label">Nome</span>
-      <input type="text" name="nome" placeholder="Nome e sobrenome" required >
-    </label>
-  </div>
-  <% end %>
+<form action="" class="ls-form row">
+  <label class="ls-field col-md-3">
+    <b class="ls-label">Nome</b>
+    <input type="text" name="nome" placeholder="Nome e sobrenome" required >
+  </label>
+  <label class="ls-field col-md-4">
+    <b class="ls-label">E-mail</b>
+    <input type="text" name="email" placeholder="Escreva seu email" required >
+  </label>
+  <label class="ls-field col-md-5">
+    <b class="ls-label">Rua</b>
+    <input type="text" name="rua" placeholder="O nome da sua rua" required >
+  </label>
+  <button class="ls-btn">Salvar</button>
 </form>
