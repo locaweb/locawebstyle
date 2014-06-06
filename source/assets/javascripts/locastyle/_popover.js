@@ -60,7 +60,7 @@ locastyle.popover = (function() {
 
     if (eventType === 'mouseenter.ls') {
       //unbind before binding an event
-      //$(element).off('mouseenter.ls');
+      $(element).off('mouseleave.ls');
 
       $(element).on('mouseleave.ls', function() {
         destroyPopover();

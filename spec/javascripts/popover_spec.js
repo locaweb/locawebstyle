@@ -54,6 +54,13 @@ describe("Popover: ", function() {
       expect($("[data-ls-module='popover']")).toHaveBeenBindedOnce("click");
     });
 
+    it("should bind events on popover elements only one time", function () {
+      locastyle.init();
+      locastyle.popover.init();
+      locastyle.popover.init();
+      expect($("#mouseenterbinded")).toHaveBeenBindedOnce("mouseout");
+    });
+
     it("should bind events for breakpoint only one time", function () {
       locastyle.init();
       locastyle.popover.init();
