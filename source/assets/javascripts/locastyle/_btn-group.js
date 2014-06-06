@@ -26,6 +26,9 @@ locastyle.btnGroup = (function() {
       $(".ls-regroup").each(function (index, $element) {
         group($($element).find('a, button'));
       });
+
+      // chama os inits para os itens dentro do dropdown
+      locastyle.init();
     }
   }
 
@@ -34,9 +37,6 @@ locastyle.btnGroup = (function() {
     var list = $($element).wrap('<li class="hidden-xs hidden-sm">');
     $(".ls-regroup a[class*='ls-btn']").removeClass()
     $('.ls-regroup').html(locastyle.templates.dropdown(list));
-
-    // chama os inits para os itens dentro do dropdown
-    locastyle.init()
   }
 
   return {
