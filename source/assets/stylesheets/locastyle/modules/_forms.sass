@@ -158,6 +158,48 @@ input.ls-form-text,
   padding-right: 0 !important
   padding-left: 0 !important
 
+
+//
+// Prefix and Suffix of forms
+//
+.ls-prefix-group
+  position: relative
+  display: table
+
+  input
+    position: relative
+    z-index: 2
+    float: left
+    width: 100%
+    margin-bottom: 0
+    display:table-cell
+
+.ls-label-prefix
+  width: 1%
+  display: table-cell
+  padding: 6px 12px
+  white-space: nowrap
+  vertical-align: middle
+  font-size: .88rem
+  font-weight: 400
+  line-height: 1
+  color: lighten($gray4, 30%)
+  text-align: center
+  background-color: lighten($gray3, 45%)
+  border: 1px solid $gray2
+  border-radius: 4px 0 0 4px
+
+.ls-label-prefix + input
+  border-left: none
+  border-bottom-left-radius: 0
+  border-top-left-radius: 0
+
+input + .ls-label-prefix
+  border: 1px solid $gray2
+  border-radius: 0 4px 4px 0
+  position: relative
+  left: -4px
+
 @media (max-width: $screen-sm)
   .ls-form-inline
 
