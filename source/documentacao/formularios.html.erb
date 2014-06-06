@@ -46,22 +46,27 @@ type: component
   </div>
   <code class="language-html ls-well-example">
     <%= partial 'documentacao/shared/form/form-disable.erb' %>
-    </code>
+  </code>
 </div>
 
 <div id="formularios-como-texto" class="doc-section">
   <h3 class="ls-title-3">Formulários como texto</h3>
-  <p>Adicione a classe <code>ls-form-disable</code> para desabilitar tudo dentro do elemento (uma <code>div</code> ou todo o <code>form</code>) ou <code>ls-field-disable</code> para desabilitar um campo.</p>
-  <div class="doc-example">
-    <%= partial('documentacao/shared/form/form-as-text.erb') %>
-    <code class="language-markup">
-<%= escape_html(partial('documentacao/shared/form/form-as-text.erb')) %>
-    </code>
-    <p>Você pode combinar os comportamentos para ter um formulário como texto e não editável.</p>
-    <%= partial('documentacao/shared/form/form-as-text-disabled.erb') %>
-    <code class="language-markup">
-<%= escape_html(partial('documentacao/shared/form/form-as-text-disabled.erb')) %>
-    </code>
+  <p>Adicione a classe <code>ls-form-text</code> no elemento pai para desabilitar tudo dentro do elemento (uma <code>div</code> ou todo o <code>form</code>) ou insira essa mesma classe no input desejado para desabilitá-lo.</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/form/form-as-text.erb' %>
+  </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/form/form-as-text.erb' %>
+  </code>
+
+  <p>Você pode combinar os comportamentos para ter um formulário como texto e não editável.</p>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/form/form-as-text-disabled.erb' %>
+  </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/form/form-as-text-disabled.erb' %>
+  </code>
   </div>
 </div>
 
