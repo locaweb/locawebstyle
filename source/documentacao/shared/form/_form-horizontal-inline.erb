@@ -1,36 +1,38 @@
 <p>Com caixa de filtro:</p>
 <div class="ls-box-filter">
-  <form action="" class="ls-form ls-form-inline">
+
+  <!-- To do this -->
+  <form action="" class="ls-form ls-form-inline ls-float-left">
     <label class="ls-field">
       <b class="ls-label">Status</b>
       <div data-ls-module="customFields">
-        <select name="">
-          <option value="">Todos</option>
-          <option value="">Ativo</option>
-          <option value="">Desativados</option>
-          <option value="">Bloqueados por bounce</option>
-        </select>
+        <div class="ls-custom-select-one go-to-option"><select class="go-to-option" name="">
+          <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
+          <option value="/resale/clients?state=unblocked">Ativos</option>
+          <option value="/resale/clients?state=disabled">Desativados</option>
+          <option value="/resale/clients?state=blocked">Bloqueados por bounce</option>
+        </select><span class="ls-field-custom-select-one">Todos</span></div>
       </div>
     </label>
-    <label class="ls-field">
-      <b class="ls-label">Nome</b>
-      <input type="text" name="nome" placeholder="Nome e sobrenome" required >
-    </label>
-    <label class="ls-field ls-float-right">
-      <b class="ls-label">Busca</b>
-      <input type="text" name="search" placeholder="Faça sua pesquisa" required >
-      <button class="ls-btn">Buscar</button>
-    </label>
   </form>
+
+  <form accept-charset="UTF-8" action="/resale/clients" class="ls-form ls-float-right buffer-inserted" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+    <label class="ls-field" role="search">
+
+      <b class="ls-label ls-hidden-accessible">Nome do cliente</b>
+      <input type="text" id="q" name="q" aria-label="Faça sua busca por cliente" accesskey="s" placeholder="Nome do cliente" required="">
+    </label>
+    <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
+  </form>
+
 </div>
 
-
 <br>
 <br>
 
 
 
-<p>Opção sem caixa:</p>
+<p>Opção sem caixa de filtro:</p>
   <form action="" class="ls-form ls-form-inline">
   <label class="ls-field">
     <b class="ls-label">Nome</b>
