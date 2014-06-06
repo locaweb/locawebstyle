@@ -8,9 +8,7 @@ locastyle.guidedTour = (function() {
 	var config = {
 		selectors : {
 			init:  '.ls-btn-tour',
-			close: '.btn-close',
-			tour:  '.ls-alerts-list > a',
-      feedback: '#feedbackr'
+			tour:  '.ls-alerts-list > .ls-ico-question'
 		}
 	}
 
@@ -31,14 +29,11 @@ locastyle.guidedTour = (function() {
 
 	function setTour(tour){
 		jsonTour = tour;
-		// $(config.selectors.open).on({click: openWelcomeTour});
 		$(config.selectors.init).on({click: initTour});
-		$(config.selectors.close).on({click: closeWelcomeTour});
 	}
 
 	function openWelcomeTour(e){
-    // $(config.selectors.tour).toggleClass('ls-active');
-    $(config.selectors.feedback).trigger('click');
+    $(config.selectors.tour).trigger('click');
     $(config.selectors.init).focus().attr('tabindex', '-1');
 		e ? e.preventDefault() : null;
 	}
@@ -48,12 +43,6 @@ locastyle.guidedTour = (function() {
 		hopscotch
 		hopscotch.startTour(jsonTour, 0);
 		keyCode();
-		closeWelcomeTour();
-	}
-
-	function closeWelcomeTour(){
-		// $(config.selectors.tour).removeClass('ls-active');
-    $(config.selectors.feedback).trigger('click');
 	}
 
 	function keyCode(element){
@@ -73,7 +62,7 @@ locastyle.guidedTour = (function() {
 
 	function setCookie(){
 		if($.cookie("cookie_tour") != "true"){
-			$(config.selectors.tour).trigger('click');
+			openWelcomeTour();
       $(config.selectors.init).focus().attr('tabindex', '-1');
 			$.cookie('cookie_tour', "true");
 		}
@@ -85,8 +74,7 @@ locastyle.guidedTour = (function() {
 
 	return {
 		init: init,
-		openWelcomeTour: openWelcomeTour,
-		closeWelcomeTour: closeWelcomeTour
+		openWelcomeTour: openWelcomeTour
 	};
 
 }());
