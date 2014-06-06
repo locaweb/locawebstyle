@@ -60,6 +60,33 @@ textarea
     border-color: $gray1
     background-color: #f9f9f9
 
+.ls-help-message
+  font-size: .815rem
+
+.ls-warning
+  .ls-label,
+  .ls-help-message
+    color: $colorWarning
+
+  input
+    border-color: $colorWarning
+
+.ls-success
+  .ls-label,
+  .ls-help-message
+    color: $colorSuccess
+
+  input
+    border-color: $colorSuccess
+
+.ls-error
+  .ls-label,
+  .ls-help-message
+    color: $colorDanger
+
+  input
+    border-color: $colorDanger
+
 .ls-actions-btn
   padding: 15px 0
   margin: 30px 15px
@@ -128,8 +155,8 @@ input.ls-form-text,
   +box-shadow(none)
   border-color: transparent !important
   background-color: transparent !important
-  padding: 3px 0 !important
-
+  padding-right: 0 !important
+  padding-left: 0 !important
 
 @media (max-width: $screen-sm)
   .ls-form-inline
