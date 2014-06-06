@@ -96,8 +96,7 @@ locastyle.general = (function() {
   }
 
   function _elementDisabled() {
-    var $elementDisabled = $('.disabled') || [disabled = 'disabled'];
-    $elementDisabled.on('click', function(evt) {
+    $(".disabled, [disabled='disabled']").on('click.ls', function(evt) {
       evt.preventDefault();
     });
   }
