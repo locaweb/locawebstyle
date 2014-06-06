@@ -2,6 +2,14 @@ var locastyle = (function() {
   'use strict';
 
   function init() {
+    locastyle.breakpoints.init();
+    loadModules();
+    locastyle.general.init();
+    locastyle.sidebars.init();
+    locastyle.btnGroup.init();
+  }
+
+  function loadModules() {
     var modules = getModules();
     for (var i in modules) {
       locastyle[modules[i]].init();
@@ -30,9 +38,5 @@ var locastyle = (function() {
 var ls = locastyle;
 
 $(document).ready(function() {
-  locastyle.breakpoints.init();
   locastyle.init();
-  locastyle.general.init();
-  locastyle.sidebars.init();
-  locastyle.btnGroup.init();
 });
