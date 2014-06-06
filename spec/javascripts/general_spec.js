@@ -53,4 +53,25 @@ describe("Locastyle in general: ", function() {
     });
   });
 
+
+  describe("Unbind:", function() {
+    describe("Auto events", function () {
+      it("should not bind the same event twice os elements with auto event", function(){
+        locastyle.init();
+        locastyle.init();
+        expect($("[data-toggle-class]")).toHaveBeenBindedOnce("click");
+      });
+    });
+
+    describe("Custom events", function () {
+      it("should not bind the same event twice os elements with custom event", function(){
+        locastyle.init();
+        locastyle.init();
+        expect($('[data-ls-toggle-fields]')).toHaveBeenBindedOnce("click");
+        expect($('.ls-submenu > a')).toHaveBeenBindedOnce("click");
+        expect($(".disabled, [disabled='disabled']")).toHaveBeenBindedOnce("click");
+      });
+    });
+  });
+
 });

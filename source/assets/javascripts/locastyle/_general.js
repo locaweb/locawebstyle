@@ -32,7 +32,7 @@ locastyle.general = (function() {
   }
 
   function toggleFields(){
-    $('[data-ls-toggle-fields]').on('click', function(evt) {
+    $('[data-ls-toggle-fields]').on('click.ls', function(evt) {
       evt.preventDefault();
       var $this = $(this);
       var $container = $($this.data('ls-toggle-fields'));
@@ -47,7 +47,8 @@ locastyle.general = (function() {
 
   function _loadEvents() {
     $.each(events, function(eventDesc, fn) {
-      var selectorEvent = eventDesc.split('|')
+      var selectorEvent = eventDesc.split('|');
+      $(selectorEvent[0]).off(selectorEvent[1], selectorEvent[2]);
       $(selectorEvent[0]).on(selectorEvent[1], selectorEvent[2], function(evt) {
         var $this = $(this);
         fn(evt, $this);
@@ -86,7 +87,7 @@ locastyle.general = (function() {
   }
 
   function subMenu() {
-    $('.ls-submenu > a').on('click', function(evt) {
+    $('.ls-submenu > a').on('click.ls', function(evt) {
       evt.preventDefault();
       $(this).parent().toggleClass('ls-active');
     })
@@ -116,8 +117,9 @@ locastyle.general = (function() {
   };
 
   function unbind () {
-    $('[data-ls-toggle-fields]').off('click');
-    $('.ls-submenu > a').off('click');
+    $('[data-ls-toggle-fields]').off('click.ls');
+    $('.ls-submenu > a').off('click.ls');
+    $(".disabled, [disabled='disabled']").off('click.ls');
   }
 
   return {
