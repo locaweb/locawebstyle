@@ -26,6 +26,7 @@ locastyle.popover = (function() {
 
   // Adiciona o bind de breakpoint-updated
   function bindBreakpointUpdate() {
+    $(document).off("breakpoint-updated");
     $(document).on("breakpoint-updated", function () {
       changeModuleName();
     })
@@ -58,6 +59,9 @@ locastyle.popover = (function() {
     });
 
     if (eventType === 'mouseenter.ls') {
+      //unbind before binding an event
+      //$(element).off('mouseenter.ls');
+
       $(element).on('mouseleave.ls', function() {
         destroyPopover();
       })
