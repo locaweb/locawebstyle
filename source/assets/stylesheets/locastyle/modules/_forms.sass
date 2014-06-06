@@ -106,8 +106,49 @@ textarea
       display: inline-block
       margin-right: 5px
 
+.ls-box-filter
+  form.ls-float-right
+    min-width: 230px
+    text-align: right
+
+    .ls-field
+      width: 65% !important
+      display: inline-block
+      margin: 0
+
+      input
+        width: 100%
+
+//
+// Form like text
+//
+.ls-form-text input,
+input.ls-form-text,
+.ls-form-text[disabled]
+  +box-shadow(none)
+  border-color: transparent !important
+  background-color: transparent !important
+  padding: 3px 0 !important
 
 
+@media (max-width: $screen-sm)
+  .ls-form-inline
+
+    .ls-field
+      margin-bottom: 15px
+
+    .ls-float-right
+      float: none !important
+
+
+@media (max-width: $screen-sm)
+  .ls-box-filter
+    form.ls-float-right
+      text-align: left
+      float: none !important
+
+      .ls-field
+        width: 64% !important
 
 // .ls-form-text
 //   .ls-label-prefix, .ls-label-sufix
