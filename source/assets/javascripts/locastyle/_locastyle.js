@@ -36,6 +36,8 @@ Locastyle = (function() {
 			this.collapseNavButtons(dom_scope);
 			this.listChecked(dom_scope);
 			this.clickListChecked(dom_scope);
+			this.togglePassword(dom_scope);
+			this.classToggle(dom_scope);
 		},
 
 		popover: function(dom_scope){
@@ -374,6 +376,27 @@ Locastyle = (function() {
 			$('.selectableCheck').on('change', function(){
 				locastyle.base.listChecked();
 			})
+		},
+
+		// Troca de input password para text
+		togglePassword: function(dom_scope)  {
+			$('.togglePass', dom_scope).on("click", function(e){
+				e.preventDefault();
+				var $self = $(this).data('target');
+				if ($($self).attr('type') == 'password'){
+					$($self).removeAttr('attr').prop('type','text');
+				} else {
+					$($self).removeAttr('attr').prop('type','password');
+				}
+			});
+		},
+
+		classToggle: function(dom_scope) {
+		    $('[data-classtoggle]', dom_scope).on('click', function(e){
+		      e.preventDefault();
+		      var classes = $(this).data('classtoggle').split(',');
+		      $(this).toggleClass(classes[0]).toggleClass(classes[1]);
+		    });
 		}
 
 
