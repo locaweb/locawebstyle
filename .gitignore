@@ -20,10 +20,10 @@ source/.DS_Store
 /log
 /tmp
 /deploy
+.cache
 .rvmrc
 .jscs.json
 bs-config.js
-
 .vagrant
 Vagrantfile
 
