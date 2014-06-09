@@ -1027,8 +1027,8 @@ td .progress {max-width: 70px;}
   padding-top: 8px !important;
 }
 
-.popover li {
-  list-style: none;
+.popover ul {
+  margin: 0 0 0 15px;
 }
 
 .popover-content {
