@@ -43,7 +43,7 @@ $(function(){
 	$('.tabs li.active a').attr('tabindex','3');
 
 	//collapse
-	$('.boxCollapse header').each(function(){
+	$('.boxCollapse header[data-target]').each(function(){
 		var title = $(this).find('h4').text();
 		var target = $(this).data('target');
 		$(this).prepend('<a href="#" role="button" aria-haspopup="true" aria-controls="'+target+'" aria-label="'+title+'" title="'+title+'" class="lnkCollapse" tabindex="3"></a>');
