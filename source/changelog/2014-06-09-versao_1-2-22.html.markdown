@@ -1,0 +1,16 @@
+---
+title: Versão 1.2.22
+date: 2014-06-09 20:55 UTC
+tags:
+---
+
+**O que tem de novo?**
+
+\- Novo formato de lista, com  [elemento selecionável](http://locaweb.github.io/locawebstyle/v1/manual/aplicacoes/lista#listaSelecionavel) que possui também variação de status [desativado](http://locaweb.github.io/locawebstyle/v1/manual/aplicacoes/lista#listaDesativada).
+
+\- [Alternador de campo](http://locaweb.github.io/locawebstyle/v1/manual/formularios/alternando-campos), que exibe/esconde o conteúdo do input password.
+
+\- [Alternador de classes](http://locaweb.github.io/locawebstyle/v1/manual/componentes/alternando-classes/), que faz um toggle de ícones.
+
+
+\- [Collapse desativado](http://locaweb.github.io/locawebstyle/v1/manual/aplicacoes/collapse#collapseDesativado), cria um box com visual do collapse, porém sem as suas funcionalidades.
