@@ -420,4 +420,167 @@ menu_page: v1/partials/sidebar-aplicacoes.erb
 	&lt;/a&gt;
 &lt;/div&gt;
 </pre>
+
+
+  <h4>Lista selecionável</h4>
+  <p>Basta deixar o input com atributo <code>checked</code></p>
+  <div class="messageInfo selectable">
+    <header class="headerInfo">
+      <label for="data1" class="span3">
+        <input id="data1" checked="checked" class="selectableCheck" type="radio" name="data">
+        <img alt="linux" src="http://assets.locaweb.com.br/locastyle/1.2.22/images/bd/logo-mysql-mini.png" alt="logo Mysql">
+        <span class="selectableTitle">MySQL</span>
+      </label>
+      <div class="span6">
+        <p>Banco de dados de fácil administração e otimizado para aplicações web.</p>
+        <strong>Recomendado para uso em:</strong>
+        <ul>
+          <li>Uso de Wordpress, Joomla!, SugarCRM, Drupal e outros aplicativos web;</li>
+          <li>Desenvolvimento de aplicações onde a velocidade em consultas e adição de dados
+        são importantes;</li>
+          <li>Baixo consumo de recursos de processamento.</li>
+        </ul>
+      </div>
+      <div class="span3 txtCenter">
+          <strong class="selectableTitle">8</strong>
+          <p>bancos disponíveis</p>
+      </div>
+    </header>
+  </div>
+
+  <div class="messageInfo selectable">
+    <header class="headerInfo">
+      <label for="data3" class="span3">
+        <input id="data3" class="selectableCheck" type="radio" name="data">
+        <img alt="linux" src="http://assets.locaweb.com.br/locastyle/1.2.22/images/bd/logo-postgre-mini.png" alt="logo sqlserver">
+        <span class="selectableTitle">PostgreSQL</span>
+      </label>
+      <div class="span6">
+        <p>Com o MS SQL Server 2008, você otimiza a gestão de dados e aplicações do seu site.</p>
+        <strong>Recomendado para uso em:</strong>
+        <ul>
+          <li>Desenvolvimento utilizando framework .Net;</li>
+          <li>Ideal para grandes volumes de dados e de transações;</li>
+          <li>Banco de dados robusto e usado por sistemas corporativos dos mais diversos portes.</li>
+        </ul>
+      </div>
+      <div class="span3 txtCenter">
+          <strong class="selectableTitle">8</strong>
+          <p>bancos disponíveis</p>
+      </div>
+    </header>
+  </div>
+
+
+  <div class="messageInfo selectable">
+    <header class="headerInfo">
+      <label for="data2" class="span3">
+        <input id="data2" class="selectableCheck" type="radio" name="data">
+        <img alt="linux" src="http://assets.locaweb.com.br/locastyle/1.2.22/images/bd/logo-sqlserver-mini.png" alt="logo postgreSql">
+        <span class="selectableTitle">SQL Server 2008</span>
+      </label>
+      <div class="span6">
+        <p>Banco de dados mais robusto e com mais recursos para adminstração.</p>
+        <strong>Recomendado para uso em:</strong>
+        <ul>
+          <li>Desenvolvimento de aplicações com fortes componentes transacionais;</li>
+          <li>Banco de dados otimizado para aplicações complexas</li>
+        </ul>
+      </div>
+      <div class="span3 txtCenter">
+          <p>a partir de</p>
+          <strong class="selectableTitle">R$ 30,00</strong>
+          <p>por mês</p>
+      </div>
+    </header>
+  </div>
+
+  <pre class="lang-html prettyprint linenums">
+&lt;div class="messageInfo selectable"&gt;
+  &lt;header class="headerInfo"&gt;
+    &lt;label for="data1" class="span3"&gt;
+      &lt;input id="data1" checked="checked" class="selectableCheck" type="radio" name="data"&gt;
+      &lt;img alt="linux" src="http://assets.locaweb.com.br/locastyle/1.2.22/images/bd/logo-mysql-mini.png" alt="logo Mysql"&gt;
+      &lt;span class="selectableTitle"&gt;MySQL&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;div class="span6"&gt;
+      &lt;p&gt;Banco de dados de fácil administração e otimizado para aplicações web.&lt;/p&gt;
+      &lt;strong&gt;Recomendado para uso em:&lt;/strong&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Uso de Wordpress, Joomla!, SugarCRM, Drupal e outros aplicativos web;&lt;/li&gt;
+        &lt;li&gt;Desenvolvimento de aplicações onde a velocidade em consultas e adição de dados
+      são importantes;&lt;/li&gt;
+        &lt;li&gt;Baixo consumo de recursos de processamento.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="span3 txtCenter"&gt;
+        &lt;strong class="selectableTitle"&gt;8&lt;/strong&gt;
+        &lt;p&gt;bancos disponíveis&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+&lt;/div&gt;
+  </pre>
+
+
+  <h4>Lista selecionável desabilitada</h4>
+  <p>Basta inserir o classe <code>disabled</code> + o da mensagem de alerta.</p>
+  <div class="messageInfo selectable disabled">
+    <header class="headerInfo">
+      <label for="data11" class="span3">
+        <input id="data11" disabled="disabled"  class="selectableCheck" type="radio" name="data2">
+        <img alt="linux" src="http://assets.locaweb.com.br/locastyle/1.2.22/images/bd/logo-mysql-mini.png" alt="logo Mysql">
+        <span class="selectableTitle">MySQL</span>
+      </label>
+      <div class="span6">
+        <p>Banco de dados de fácil administração e otimizado para aplicações web.</p>
+        <strong>Recomendado para uso em:</strong>
+        <ul>
+          <li>Uso de Wordpress, Joomla!, SugarCRM, Drupal e outros aplicativos web;</li>
+          <li>Desenvolvimento de aplicações onde a velocidade em consultas e adição de dados
+        são importantes;</li>
+          <li>Baixo consumo de recursos de processamento.</li>
+        </ul>
+      </div>
+      <div class="span3 txtCenter">
+          <strong class="selectableTitle">8</strong>
+          <p>bancos disponíveis</p>
+      </div>
+    </header>
+     <div class="messageContent txtCenter">
+      <p>Você atingiu o limite de bancos de dados inclusos no site <strong>dominio.com.br</strong>.</p>
+      <p><a href="">Remova um banco de dados</a> existente neste site ou <a href="">instale um novo banco</a> em outro site.</p>
+      </div>
+  </div>
+
+<pre class="lang-html prettyprint linenums">
+&lt;div class="messageInfo selectable disabled"&gt;
+  &lt;header class="headerInfo"&gt;
+    &lt;label for="data11" class="span3"&gt;
+      &lt;input id="data11" disabled="disabled"  class="selectableCheck" type="radio" name="data2"&gt;
+      &lt;img alt="linux" src="http://assets.locaweb.com.br/locastyle/1.2.22/images/bd/logo-mysql-mini.png" alt="logo Mysql"&gt;
+      &lt;span class="selectableTitle"&gt;MySQL&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;div class="span6"&gt;
+      &lt;p&gt;Banco de dados de fácil administração e otimizado para aplicações web.&lt;/p&gt;
+      &lt;strong&gt;Recomendado para uso em:&lt;/strong&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Uso de Wordpress, Joomla!, SugarCRM, Drupal e outros aplicativos web;&lt;/li&gt;
+        &lt;li&gt;Desenvolvimento de aplicações onde a velocidade em consultas e adição de dados
+      são importantes;&lt;/li&gt;
+        &lt;li&gt;Baixo consumo de recursos de processamento.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="span3 txtCenter"&gt;
+        &lt;strong class="selectableTitle"&gt;8&lt;/strong&gt;
+        &lt;p&gt;bancos disponíveis&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+   &lt;div class="messageContent txtCenter"&gt;
+    &lt;p&gt;Você atingiu o limite de bancos de dados inclusos no site &lt;strong&gt;dominio.com.br&lt;/strong&gt;.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=""&gt;Remova um banco de dados&lt;/a&gt; existente neste site ou &lt;a href=""&gt;instale um novo banco&lt;/a&gt; em outro site.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+
 </article>
