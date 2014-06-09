@@ -1,0 +1,69 @@
+---
+title: Formulários - Alternando campos
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-formularios.erb
+
+---
+
+<article class="text">
+	<header>
+		<h1>Alternando campos</h1>
+		<h3>Exibindo conteúdo do campo de senha</h3>
+	</header>
+
+  <p>Para ativar essa funcionalidade o elemento precisa possuir a classe <code>togglePass</code> e receber o atributo data-target com o mesmo valor do ID do input que será alternado seu tipo de password/text.</p>
+
+  <div class="example">
+    <div class="control-group">
+      <label class="noMarginBottom" for="user_password">Nova senha</label>
+      <p>Senha entre 8 a 14 caracteres, contendo letras e números</p>
+      <div class="input-append">
+        <input class="span3" id="account-password" type="password">
+        <a href="#" tabindex="3" class="add-on togglePass ico-eye" data-classtoggle="ico-eye,ico-eye-off" data-target="#account-password"></a>
+      </div>
+    </div>
+  </div>
+<pre class="lang-html prettyprint linenums">
+&lt;div class="example"&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="noMarginBottom" for="user_password"&gt;Nova senha&lt;/label&gt;
+    &lt;p&gt;Senha entre 8 a 14 caracteres, contendo letras e números&lt;/p&gt;
+    &lt;div class="input-append"&gt;
+      &lt;input class="span3" id="account-password" type="password"&gt;
+      &lt;a href="#" tabindex="3" class="add-on togglePass ico-eye" data-classtoggle="ico-eye,ico-eye-off" data-target="#account-password"&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+  <h3>Com força de senha</h3>
+  <div class="example">
+    <div class="control-group">
+      <label class="noMarginBottom" for="user_password">Nova senha</label>
+      <p>Senha entre 8 a 14 caracteres, contendo letras e números</p>
+      <div class="input-append fLeft">
+        <input class="span3" id="account-password2" data-component="password-strength" data-monitor-id="password-strength-monitor-2" type="password">
+        <a href="#" tabindex="3" class="add-on togglePass ico-eye" data-classtoggle="ico-eye,ico-eye-off" data-target="#account-password2"></a>
+      </div>
+      <div class="password-strength">
+        <p>Força da senha:</p>
+        <div id="password-strength-monitor-2" class="monitor"></div>
+      </div>
+    </div>
+  </div>
+<pre class="lang-html prettyprint linenums">
+&lt;div class="control-group"&gt;
+  &lt;label class="noMarginBottom" for="user_password"&gt;Nova senha&lt;/label&gt;
+  &lt;p&gt;Senha entre 8 a 14 caracteres, contendo letras e números&lt;/p&gt;
+  &lt;div class="input-append fLeft"&gt;
+    &lt;input class="span3" id="account-password2" data-component="password-strength" data-monitor-id="password-strength-monitor-2" type="password"&gt;
+    &lt;a href="#" tabindex="3" class="add-on togglePass ico-eye" data-classtoggle="ico-eye,ico-eye-off" data-target="#account-password2"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="password-strength"&gt;
+    &lt;p&gt;Força da senha:&lt;/p&gt;
+    &lt;div id="password-strength-monitor-2" class="monitor"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+</article>
