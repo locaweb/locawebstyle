@@ -79,10 +79,10 @@ layout: false
             <h2>Collapse Complexo</h2>
             <div class="collapseGroup">
               <div class="boxCollapse">
-                <header data-target="#addMotivo" data-toggle="collapse"><a href="#" role="button" aria-haspopup="true" aria-controls="#addMotivo" aria-label="Motivos de descadastramento" title="Motivos de descadastramento" class="lnkCollapse" tabindex="3"></a>
+                <header data-target="#addMotivo" data-toggle="collapse">
                   <h4>Collapse apenas com o título</h4>
                 </header>
-                <div id="addMotivo" class="collapse" aria-hidden="false" aria-expanded="true">
+                <div id="addMotivo" class="collapse">
                   <h2>Título 1</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                     <a data-content="Aqui vai um conteúdo maravilhoso para o popover... aceita <b>HTML</b> também" rel="popover" data-html="true" data-container="body" class="infoBubble" data-original-title="Exemplo de Popover"></a>
@@ -94,7 +94,7 @@ layout: false
                 </div>
               </div>
               <div class="boxCollapse">
-                <header data-target="#addMotivo1" data-toggle="collapse"><a href="#" role="button" aria-haspopup="true" aria-controls="#addMotivo1" aria-label="Motivos de descadastramento" title="Motivos de descadastramento" class="lnkCollapse" tabindex="3"></a>
+                <header data-target="#addMotivo1" data-toggle="collapse">
                   <h4>Collapse com título e texto</h4>
                   <p>Você pode editar os já cadastrados ou pode criar novos motivos para a sua lista.</p>
                 </header>
@@ -159,7 +159,7 @@ layout: false
             <div class="obsGray noPadding">
               <div class="collapseGroup">
                 <div class="boxCollapse">
-                  <header data-target="#addMotivo2" data-toggle="collapse"><a href="#" role="button" aria-haspopup="true" aria-controls="#addMotivo" aria-label="Motivos de descadastramento" title="Motivos de descadastramento" class="lnkCollapse" tabindex="3"></a>
+                  <header data-target="#addMotivo2" data-toggle="collapse">
                     <h4>Motivos de descadastramento</h4>
                     <p>Você pode editar os já cadastrados ou pode criar novos motivos para a sua lista.</p>
                   </header>
@@ -174,7 +174,7 @@ layout: false
                   </div>
                 </div>
                 <div class="boxCollapse">
-                  <header data-target="#addMotivo3" data-toggle="collapse"><a href="#" role="button" aria-haspopup="true" aria-controls="#addMotivo1" aria-label="Motivos de descadastramento" title="Motivos de descadastramento" class="lnkCollapse" tabindex="3"></a>
+                  <header data-target="#addMotivo3" data-toggle="collapse">
                     <h4>Motivos de descadastramento</h4>
                     <p>Você pode editar os já cadastrados ou pode criar novos motivos para a sua lista.</p>
                   </header>
@@ -192,6 +192,24 @@ layout: false
             </div>
           </div>
         </div>
+        
+
+        <h2>Collapse desativado</h2>
+        <div class="boxCollapse inactive">
+          <header>
+            <h4>Collapse apenas com o título</h4>
+          </header>
+          <div id="addMotivo" class="collapse in">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+              <a data-content="Aqui vai um conteúdo maravilhoso para o popover... aceita <b>HTML</b> também" rel="popover" data-html="true" data-container="body" class="infoBubble" data-original-title="Exemplo de Popover"></a>
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+
         <hr>
 
         <div class="boxCollapse notification">

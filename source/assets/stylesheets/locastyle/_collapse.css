@@ -320,3 +320,12 @@ tr.active .actionsTable { display: none; }
 
 /* Popover dentro do Collapse */
 .boxCollapse header .popover-title { display: block; }
+
+.boxCollapse.inactive header{
+  cursor: default;
+}
+.boxCollapse.inactive{
+  background-color: #fff;
+  background-image: none;
+}
+.boxCollapse.inactive .collapse{overflow: visible;}
