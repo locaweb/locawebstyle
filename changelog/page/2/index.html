@@ -44,6 +44,113 @@
 	</ul>
 
 	<article>
+		<h1><a href="/locawebstyle/changelog/2014/02/10/versao_1-2-17">Versão 1.2.17</a></h1>
+		<div class="infoPost">
+			<small>2014/02/10</small>
+		</div>
+		<!-- use article.summary(250) if you have Nokogiri available to show just
+		the first 250 characters -->
+		<h2 id="adies">Adições</h2>
+<p>Novo elemento <code>.boxList</code> (caixa com colunas de informações). Ele tem muitas variações de layout, veja o <a href="http://locaweb.github.io/locawebstyle/v1/manual/aplicacoes/box-com-colunas/">exemplo na documentação</a>.</p>
+
+	</article>
+	<hr>
+	<article>
+		<h1><a href="/locawebstyle/changelog/2014/01/31/versao_2-0-0">Versão 2.0 chegou!</a></h1>
+		<div class="infoPost">
+			<small>2014/01/31</small>
+		</div>
+		<!-- use article.summary(250) if you have Nokogiri available to show just
+		the first 250 characters -->
+		<p>A versão 2.0 do Locaweb Style é uma versão importante por vários motivos. Vamos destacar a seguir os dois principais. Mas sugiro que você leia atentamente as modificações que fizemos logo depois deste texto.</p>
+
+<p>A primeira grande modificação é que os times de UX e Front-end estão trabalhando realmente juntos para planejar todos os novos elementos e módulos. Cada módulo é planejado pelas duas equipes em reuniões regulares, onde são discutidos tanto a versão mobile, quanto a versão desktop. Tirando o Foundation, não conheço outro lugar onede há duas equipes praticamente dedicadas ao desenvolvimento de um framework público.</p>
+
+<p>A segunda grande modificação é que o Locaweb Style agora é Responsivo. Todos os elementos são pensados primeiro para pequenas telas, depois para telas maiores. Estamos levando bem a sério essa metodologia. Isso tem causado alguns debates interessantes e temos aprendido bastante. Na verdade é bem mais que Responsivo. Temos princípios de adaptação a nível de elemento. Isso quer dizer que modificamos alguns elementos para que mudem em determinados contextos.</p>
+
+<p>Não achamos que a versão mobile de algum produto sirva apenas para consulta de informações, pelo contrário, nosso alvo é que o cliente consiga fazer 90% das tarefas em todos os dispositivos, não importa qual seja. Esse é o verdadeiro objetivo do Mobile First, adaptive web design e responsive.</p>
+
+<h3>O que pode vir por aí</h3>
+<p>Nas próximas versões haverão mudanças drásticas na estrutura e layout. Queremos produzir um layout mais uniforme entre os dispositivos. Não acreditamos em um layout diferente para cada aparelho. Queremos que o cliente não sinta muita diferença entre as versões e que ele tenha uma curva de aprendizado mais branda entre as versões mobile e desktop. Nossa primeira ideia é manter as duas versões: clássica e a nova estrutura e estamos trabalhando para manter as duas estruturas no código. Teremos mais informações nos próximos meses.</p>
+
+<p>Estamos também preparando uma GEM para facilitar a utilização do Locaweb Style pelos desenvolvedores back-end. Essa GEM também nos dará algum controle para atualizar o código dos projetos sem tanto impacto.</p>
+
+<h3>Changelog</h3>
+<p>Abaixo, segue o Changelog com as mudanças mais importantes que fizemos. Qualquer coisa, comente!</p>
+
+<h2 id="bootstrap-30-e-mudanas-no-html">Bootstrap 3.0 e mudanças no HTML</h2>
+<p>A segunda versão do Locastyle está usando o Bootstrap 3.0. Nessa nova versão o Bootstrap mudou praticamente todo o HTML e CSS.
+Aproveitamos essa mudança do Bootstrap para iniciar a versão 2 do Locastyle. Por esse motivo muito do HTML que era usado para fazer os módulos de elementos do Locastyle mudou.</p>
+
+<p>Não existe migração graciosa da versão 1.0 para a 2.0. Você vai precisar rever todos os elementos e principalmente verificar se os elementos que você usa em seus projetos já existem no versão 2.0. Estamos inserindo aos poucos novos elementos e pode ser alguns elementos antigos não entrem novamente na cartilha, por exemplo, busca avançada. Pode ser também que outros elementos voltem, mas totalmente remodelados.</p>
+
+<p>É muito importante que você leia <a href="http://getbootstrap.com/getting-started/#migration">como migrar do Bootstrap 2 para 3</a>.</p>
+
+<h2 id="testes-jasmine">Testes Jasmine</h2>
+<p>Cobrimos nossas funções com Jasmine.
+Cada módulo agora é testado e nenhum script é produzido sem termos criado testes antes (claro, na medida do possível. :-)</p>
+
+<p>Dessa maneira conseguimos garantir que erros básicos não aconteçam e a coordenação de novas funções se torna mais simples de manter.</p>
+
+<h2 id="estrutura-de-javascript-revealing-module-pattern">Estrutura de Javascript (Revealing Module Pattern)</h2>
+<p>Reestruturamos o Javascript modularizando as funções e adequando o padrão de escrita do Javascript sob o padrão Revealing Module do <a target="_blank" href="http://christianheilmann.com">Christian Heilmann</a>, melhorarando a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, adotamos o Revealing Module Pattern</p>
+
+<p>As vantagens desse pattern são: organização, clareza, performance, expõe publicamente apenas as funções e variáveis que se deseja e namespace único evitando sobrescrever métodos facilmente.</p>
+
+<p>Leia mais sobre ele no livro do <a target="_blank" href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript">Addy Osmani</a>.</p>
+
+<h2 id="mobile-first">Mobile First</h2>
+<p>Locaweb Style é Mobile First. Os designers começaram a desenhar o novo layout pensando primeiro em Mobiles e somente depois para Desktops.</p>
+
+<p>Ao produzir, fizemos a mesma coisa. Sempre escrevemos primeiro para Mobiles para depois escrevemos a versão desktop. Controlamos as media queries especificamente para cada módulo.</p>
+
+<p>Para facilitar o nosso desenvolvimento e também os desenvolvedores que estiverem usando o nosso framework, sempre que a página é carregada, verificamos o tamanho da tela do usuário e inserimos classes na tag HTML. As classes são: .media-mobile, .media-tablet, .media-desk, .media-desk-lg.</p>
+
+<p>Assim fica simples de customizar algo específico para cada uma das viewports.
+Existem alguns elementos do Bootstrap que extendemos a responsividade, como as Tabs, que viram um menu dropdown em celulares. Mobile First Rulez.</p>
+
+<h3 id="adaptive-delivery">Adaptive Delivery</h3>
+<p>O Locaweb Style não é exatamente Responsivo. Existem alguns gaps ao fazer um layout responsivo que não são facilmente resolvidas. Por exemplo, quando há a necessidade de mudança de elementos para se adaptarem a determinados dispositivos. Você entrega exatamente o que o usuário precisa ver, da forma que ele precisa ver, naquele tipo de dispositivo.
+Um exemplo clássico é quando você precisa transformar um menu em um selectbox (combobox).</p>
+
+<p>Não há a necessidade de detectar via back-end, mas essa prática também é possível e é adotada em algumas empresas. Mas se você fizer um bom trabalho de estrutura HTML, o DOM mudará muito pouco e você terá poucas interferências do Javascript para mudar elementos.</p>
+
+<h2 id="histrico-de-problemas-e-novidades">Histórico de problemas e novidades</h2>
+<p>Tínhamos muitos problemas, principalmente em produtos internos, sobre como implementar novos elementos, qual o fluxo de criação e produção desses elementos, seus fluxos e interações. Fechamos um padrão de desenvolvimento juntamente com UX para melhorar a criação e manutenção dos elementos existentes e também de novos elementos.</p>
+
+<p>O Locaweb Style v1 foi criado de acordo com a necessidade de cada projeto. Estávamos numa fase aqui na Locaweb onde os painéis estavam sendo refeitos. Por isso cada elemento ou interação era feita somente quando surgia uma demanda específica. Não houve um longo planejamento para a criação de cada elemento ou cada interação. Sem contar que cada membro de UX decidia uma interação diferente para cada painél.</p>
+
+<p>Na versão 2 sentamos junto com o pessoal de UX para acertarmos essas arestas. Com a bagagem de conhecimento que tivemos na primeira versão, sabíamos quais componentes se tornaram obsoletos e quais foram realmente usados. Por isso, na versão 2 conseguimos manter uma grande simplicidade na quantidade de elementos e principalmente nas suas interações.</p>
+
+<h2 id="uso-do-github">Uso do Github</h2>
+<p>Passamos a usar o GitHub em vez de manter o projeto internamente. Agora todas as issues e histórico de commits e tarefas é mantido publicamente no endereço: <a target="_blank" href="https://github.com/locaweb/locawebstyle">http://github.com/locaweb/locawestyle</a>.</p>
+
+<p>Já temos 37 forks de desenvolvedores interessados e recebemos várias sugestões de outros desenvolvedores que viram o projeto que gostaram do que fizemos. Fique à vontade para nos ajudar a manter esse framework.</p>
+
+<h2 id="pginas-de-exemplos-e-cartilha-de-elementos">Páginas de Exemplos e Cartilha de Elementos</h2>
+<p>Criamos algumas páginas de exemplos para facilitar a produção de novas páginas e para mostrarmos quais as possibilidades e combinações de elementos e estruturas. Você pode <a target="_blank" href="http://locaweb.github.io/locawebstyle/manual/exemplos">ver estes exemplos aqui</a>.</p>
+
+<p>Também mudamos um pouco a <a target="_blank" href="http://locaweb.github.io/locawebstyle/manual/elementos">cartilha de elementos</a>, que reúne todos os elementos encontrados no Locastyle em apenas uma página. Dessa forma é simples de identificar cada elemento e testá-los quando necessário.</p>
+
+<p>A ideia é que você consiga encontrar exemplos de estruturas básicas para montar seus próprios projetos e verificar as possibilidades aos juntar os componentes em uma mesma página.</p>
+
+<h2 id="verso-10">Versão 1.0</h2>
+<p>Para você que ainda precisa dar suporte para a primeira versão do Locaweb Style (como nós), <a href="http://localhost:4567/v1">a documentação se encontra nesse link</a>.</p>
+
+<p>Nós ainda estamos atualizando elementos e dado suporte para produtos internos. Quando esse suporte vai acabar? Quando não tivermos mais que lidar com essa versão aqui dentro da Locaweb. Até lá, sugiro que você migre quando puder seus produtos para a versão nova do Locaweb Style.</p>
+
+<h2 id="links-para-usar-o-locaweb-style">Links para usar o Locaweb Style</h2>
+<p>Maneiras para usar o Locastyle:</p>
+
+<ul>
+  <li><a target="_blank" href="http://locaweb.github.io/locawebstyle/manual/introducao/como-usar">Endereço CDN</a></li>
+  <li><a target="_blank" href="https://github.com/locaweb/locawebstyle">Github (clone)</a></li>
+  <li><a target="_blank" href="http://developer.locaweb.com.br/assets/edge.zip">Download dos assets (EDGE)</a></li>
+</ul>
+
+	</article>
+	<hr>
+	<article>
 		<h1><a href="/locawebstyle/changelog/2014/01/30/versao_1-2-16">Versão 1.2.16</a></h1>
 		<div class="infoPost">
 			<small>2014/01/30</small>
@@ -404,135 +511,6 @@ Um exemplo clássico é quando você precisa transformar um menu em um selectbox
 
 	</article>
 	<hr>
-	<article>
-		<h1><a href="/locawebstyle/changelog/2013/04/11/versao_1-0-0">Versão 1.0.0</a></h1>
-		<div class="infoPost">
-			<small>2013/04/11</small>
-		</div>
-		<!-- use article.summary(250) if you have Nokogiri available to show just
-		the first 250 characters -->
-		<p>É com grande orgulho que anunciamos a versão 1.0 do Locaweb Style com vários bugs resolvidos. Leia com atenção, principalmente no que se refere ao Jquery e aos domínios antigos. Segue abaixo:</p>
-
-<h3 id="esta-ser-a-ltima-verso-com-jquery-compatvel-com-ie8-e-anteriores">Esta será a última versão com Jquery compatível com IE8 e anteriores</h3>
-
-<p>O <a href="http://www.sitepoint.com/jquery-2-support-ie6-ie7-ie8/">Jquery vai deixar de suportar browsers antigos como IE8 ou anteriores</a> a partir da versão 2.0. Estamos usando hoje no Locaweb Style a versão 1.8.3 e continuaremos com essa versão. Determinamos que não atualizaremos o Locaweb Style para a versão 1.9.1 do Jquery por que há muitas mudanças que podem impactar projetos da Locaweb e de terceiros.</p>
-
-<p>Não se preocupe, iremos avisar aqui no blog quando formos fazer o jump para a versão 2.0 do Jquery. Isso será definitivo para o Locaweb Style, porque a partir de então iremos apenas suportar browsers mais atuais.</p>
-
-<h3 id="domnios-stylelocawebcombr-e-locastylelocawebcombr-sero-desativados">Domínios style.locaweb.com.br e locastyle.locaweb.com.br serão desativados.</h3>
-
-<p>Se você tem um projeto com Locaweb Style e utiliza os domínios style.locaweb.com.br ou locastyle.locaweb.com.br, por favor atualize seu projeto trocando o domínio para developer.locaweb.com.br.</p>
-
-<p><strong>Estes domínios serão desabilitados</strong>.</p>
-
-<p>A URL ficará assim:</p>
-
-<pre class="lang-html linenums prettyprint">
-//developer.locaweb.com.br/assets/application-[sua hash de versão].css
-//developer.locaweb.com.br/assets/application-[sua hash de versão].js
-</pre>
-
-<p>Isso manterá a mesma versão que você está usando atualmente mas com o domínio mais novo.</p>
-
-<h3 id="zip-para-download-do-pacote">Zip para download do pacote</h3>
-
-<p>Muitos usuários tem alguma restrição para utilizar assets hospedados fora de suas empresas. Por isso iremos disponibilizar a partir de hoje um ZIP, com todos os assets compilados para quem quiser utilizar o Locaweb Style em seu próprio servidor. Por enquanto vamos apenas disponibilizar os arquivos minificados. Mesmo assim os arquivos modulados de javascript e css estão sempre disponíveis no projeto no GitHub.</p>
-
-<p>Para baixar o zip que precisar, a nomenclatura é esta: http://developer.locaweb.com.br/assets/[versão].zip </p>
-
-<p>Para a versão 1.0.1, ficaria assim: http://developer.locaweb.com.br/assets/1.0.1.zip</p>
-
-<p>Já temos um patch para essa versão, veja os <a title="Locaweb Style: v1.0.1 – Changelog" href="http://developer.locaweb.com.br/locaweb-style-v1-0-1-changelog/">detalhes aqui</a> ou <a href="http://developer.locaweb.com.br/assets/1.0.1.zip">baixe direto nesse link</a>: http://developer.locaweb.com.br/assets/1.0.1.zip</p>
-
-<h3 id="problema-de-fonts-no-firefox">Problema de Fonts no Firefox</h3>
-
-<p>Resolvemos o problema de font que acontecia apenas para usuários do Firefox. Por padrão o Firefox não permite fazer crossdomain de fonts, para resolver modificamos uma configuração do Nginx. Simples assim.</p>
-
-<h3 id="refatoramento-de-javascript">Refatoramento de Javascript</h3>
-
-<p>O Locaweb Style nasceu desenfreadamente. Precisávamos entregar produtos ao mesmo tempo que estruturávamos a área de front-end. Não tínhamos mão de obra e não tínhamos tempo. Por isso todas as funções javascript que criamos, foram feitas sem o mínimo de asseio de escrita ou estruturação de código.</p>
-
-<p>Nessa versão refatoramos todos os scripts que produzimos desde o início. Agora tudo está em ordem. Utilizamos prototype (não o framework) e o código está sob testes feitos com Jasmine. Agora o código está bem mais organizado que o código original. Prometemos mantê-lo assim. :-)</p>
-
-<h3 id="imagens-antigas">Imagens antigas</h3>
-
-<p>Apagamos as imagens antigas, não usadas e não referenciadas pelo CSS ou JS.</p>
-
-<p>São imagens que foram substituídas por fonts ou outras soluções. Ainda existem imagens que devem ser apagadas, mas agora são minoria e ainda estão sendo usadas em partes remotas do projeto.</p>
-
-<h3 id="aplicao-de-padronizao-de-escrita">Aplicação de padronização de escrita</h3>
-
-<p>Quando trabalhamos em equipe, cada um tem um estilo de organizar e estruturar o código. Pensando nisso criamos um padrão de codificação comum, com a ideia de manter um padrão único de escrita.</p>
-
-<p>Muito do código do Locaweb Style, principalmente o código CSS, estava fora desses padrões. O que fizemos foi revisar o código, aplicando esses padrões.</p>
-
-<p>Se você contribuir via GitHub, por favor, siga também esses padrões. <a href="http://developer.locaweb.com.br/locawebstyle/introducao/escrita-front-end/">Para ver as regras, visite</a>.</p>
-
-<h3 id="reviso-de-design">Revisão de Design</h3>
-
-<p>Além de utilizarmos os elementos do Bootstrap para compor nossos layouts, também criamos muitos outros elementos com comportamentos diferentes para suprir necessidades de cada projeto e também para aumentar as possibilidades dos comportamentos do Bootstrap. O que fizemos nessa revisão foi melhorar a fidelidade de design dos layouts do Locaweb Style com os designs originais que desenhamos aqui.</p>
-
-<h3 id="parmetros-do-select2">Parâmetros do Select2</h3>
-
-<p>Utilizamos o plugin Select2 para customizar o design e para adicionar algumas funcionalidades de busca dos selects. Nas versões anteriores nós adicionávamos 3 parâmetros como padrão: </p>
-
-<pre class="lang-javascript linenums prettyprint">
-$(".customSelect").select2({
-   placeholder: "Selecione uma opção",
-   formatNoMatches: "Nenhum resultado encontrado",
-   allowClear: false
-});
-</pre>
-
-<p>Nesta atualização retiramos estes valores e deixamos apenas a função do select2, dessa forma você tem a liberdade de customizar os valores desses parâmetros.</p>
-
-<h3 id="mudana-de-unidades-de-font-para-em">Mudança de unidades de font para EM</h3>
-
-<p>Estamos iniciando um processo de fazer o Locaweb Style compatível com diversos tamanhos de tela. Por isso é importante que as fonts tenham um tamanho relativo. Por isso começamos um trabalho de converter as unidades de fonts em PX para EM. Dessa forma, quando fizermos versões mobiles, podemos manipular a font de forma mais simples e uniforme.</p>
-
-<h3 id="ajustes-na-nomenclatura-pt-br--en">Ajustes na Nomenclatura pt-br / en</h3>
-
-<p>Renomeamos uma série de classes e nomes de elementos que estavam misturando português com inglês. Os nomes antigos estão no arquivo deprecated.css e funcionarão durante um tempo.</p>
-
-<hr />
-
-<h2 id="assets-da-verso">Assets da versão</h2>
-
-<pre class="lang-html linenums prettyprint">
-&lt;link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/1.0.0/locastyle.css"&gt;
-&lt;script type="text/javascript" src="http://developer.locaweb.com.br/assets/1.0.0/locastyle.js"&gt;&lt;/script&gt;</pre>
-
-<h5 id="edge">Edge</h5>
-
-<pre class="lang-html linenums prettyprint">
-&lt;link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/edge/locastyle.css"&gt;
-&lt;script type="text/javascript" src="http://developer.locaweb.com.br/assets/edge/locastyle.js"&gt;&lt;/script&gt;</pre>
-
-<h5 id="verso-para-download-com-patch-de-atualizao">Versão para download (com patch de atualização)</h5>
-
-<p><a href="http://developer.locaweb.com.br/assets/1.0.1.zip">Baixar ZIP v1.0.1</a></p>
-
-	</article>
-	<hr>
-	<article>
-		<h1><a href="/locawebstyle/changelog/2013/04/01/versao_0-48-0">Versão 0.48.0</a></h1>
-		<div class="infoPost">
-			<small>2013/04/01</small>
-		</div>
-		<!-- use article.summary(250) if you have Nokogiri available to show just
-		the first 250 characters -->
-		<ul>
-  <li>Variação do elemento de lista messageInfo</li>
-  <li>Tamanho em EM dos ícones do sidebar</li>
-  <li>Link acessível para ir direto ao conteúdo</li>
-  <li>Outras pequenas correções.</li>
-</ul>
-
-<pre class="lang-html linenums prettyprint">&lt;link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/0.48.0/locastyle.css"&gt;
-&lt;script type="text/javascript" src="http://developer.locaweb.com.br/assets/0.48.0/locastyle.js"&gt;&lt;/script&gt;</pre>
-
-	</article>
-	<hr>
 
 	<ul class="pager">
 		
@@ -546,6 +524,10 @@ $(".customSelect").select2({
 	<nav>
 		<h2>Recentes</h2>
 		<ul>
+			
+			<li><a href="/locawebstyle/changelog/2014/06/09/versao_1-2-22/">Versão 1.2.22</a></li>
+			
+			<li><a href="/locawebstyle/changelog/2014/06/09/versao_2-0-6/">Versão 2.0.6</a></li>
 			
 			<li><a href="/locawebstyle/changelog/2014/05/21/versao_1-2-21/">Versão 1.2.21</a></li>
 			
@@ -562,10 +544,6 @@ $(".customSelect").select2({
 			<li><a href="/locawebstyle/changelog/2014/02/21/versao-2-0-2/">Versão 2.0.2</a></li>
 			
 			<li><a href="/locawebstyle/changelog/2014/02/11/versao_2-0-1/">Versão 2.0.1</a></li>
-			
-			<li><a href="/locawebstyle/changelog/2014/02/10/versao_1-2-17/">Versão 1.2.17</a></li>
-			
-			<li><a href="/locawebstyle/changelog/2014/01/31/versao_2-0-0/">Versão 2.0 chegou!</a></li>
 			
 		</ul>
 	</nav>
