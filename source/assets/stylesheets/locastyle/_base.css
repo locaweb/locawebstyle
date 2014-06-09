@@ -508,7 +508,7 @@ tr.active td .boxActions {padding-top: 0;}
   background: url(../images/arrowSilver.png) no-repeat right center;
 }
 
-.messageInfo > div[class*="span"] {
+.messageInfo > [class*="span"] {
   padding: 14px 10px;
   height: inherit;
   position: relative;
@@ -528,20 +528,28 @@ tr.active td .boxActions {padding-top: 0;}
 }
 .messageInfo .countViews:before,
 .messageInfo .countViews + div:before,
-.messageInfo.overflowVisible > div:before {display: none;}
+.messageInfo.overflowVisible > div:before,
+.messageInfo.selectable > div:before {
+  display: none;
+}
 
-.messageInfo.overflowVisible > div.headerInfo{
+.messageInfo.overflowVisible > div.headerInfo,
+.messageInfo.selectable > div.headerInfo{
   display: table;
   margin: 0 10px;
   padding: 0;
   width: 100%
 }
-.messageInfo.overflowVisible > div[class*="span"] {
+.messageInfo.overflowVisible > [class*="span"],
+.messageInfo.selectable > [class*="span"] {
   display: table-cell;
   border-left: 1px solid #e5e5e5;
   padding: 5px 10px;
 }
-.messageInfo.overflowVisible > div:first-child {border: none;}
+.messageInfo.overflowVisible > [class*="span"]:first-child,
+.messageInfo.selectable > [class*="span"]:first-child {
+  border: none;
+}
 
 .messageInfo > div .actionsTable {
   display: block;
@@ -554,7 +562,7 @@ tr.active td .boxActions {padding-top: 0;}
   border-top: 1px solid #e5e5e5;
   border-left: none;
   margin: 0 10px;
-  padding: 0;
+  padding: 5px 0;
 }
 .messageInfo .messageContent p{margin: 0 0 10px;}
 
@@ -631,20 +639,20 @@ tr.active td .boxActions {padding-top: 0;}
   float: left;
 }
 .messageInfo .headerInfo > span,
-.messageInfo .headerInfo > div[class*="span"] {
+.messageInfo .headerInfo > [class*="span"] {
   color: #767676;
   position: relative;
   margin: 0 5px;
 }
-.messageInfo .headerInfo > div[class*="span"]{border-left: 1px solid #e5e5e5;}
+.messageInfo .headerInfo > [class*="span"]{border-left: 1px solid #e5e5e5;}
 
-.messageInfo .headerInfo > div[class*="span"]{
+.messageInfo .headerInfo > [class*="span"]{
   padding: 10px;
 }
 .messageInfo .headerInfo strong {color: #545454;}
 
-.messageInfo .headerInfo span:first-child,
-.messageInfo .headerInfo > div[class*="span"]:first-child {border-left: none;}
+.messageInfo .headerInfo > span:first-child,
+.messageInfo .headerInfo > [class*="span"]:first-child {border-left: none;}
 .messageInfo .headerInfo .translation_missing {top: 0; padding: 0;}
 .messageInfo .headerInfo .fRight {
   display: inline-block;
@@ -698,6 +706,67 @@ tr.active td .boxActions {padding-top: 0;}
 
 .messageInfo .contentDescription p a:last-child {
   background: none;
+}
+.messageInfo.selectable > div[class*="span"]{
+  padding: 10px 20px;
+}
+.messageInfo.selectable p{
+  color: #777;
+  margin-bottom: 5px;
+}
+.messageInfo.selectable ul{
+  margin: 0 0 10px 17px;
+}
+.messageInfo.selectable li{
+  line-height: 1.4
+}
+.messageInfo.selectable .selectableCheck{
+  margin-right: 5px;
+}
+.messageInfo.selectable:hover{
+  background: none;
+}
+.messageInfo.selectable .headerInfo strong{
+  color: #545454;
+}
+.messageInfo.selectable .selectableTitle{
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px;
+}
+.messageInfo.selectable input ~ .selectableTitle{
+  font-size: 13px;
+  display: inline-block;
+}
+
+.messageInfo.selectable .headerInfo,
+.messageInfo.selectable .messageContent{
+  margin: 0;
+  border: none;
+}
+.messageInfo.selectable.disabled{
+  border-color: #f7e7cb;
+}
+.messageInfo.selectable.disabled .messageContent{
+  background-color: #fcf7e4;
+  padding: 6px 20px;
+}
+.messageInfo.selectable.disabled .messageContent p,
+.messageInfo.selectable.disabled .messageContent a{
+  color: #c3903f;
+}
+.messageInfo.selectable.disabled .messageContent a{
+  text-decoration: underline;
+}
+.messageInfo.selectable.disabled .messageContent a:hover,
+.messageInfo.selectable.disabled .messageContent a:focus{
+  text-decoration: none;
+}
+.messageInfo.selectable.disabled .headerInfo{
+  opacity: .5;
+}
+.messageInfo.selectable.disabled label{
+  cursor: not-allowed;
 }
 
 /* Status Gradient */

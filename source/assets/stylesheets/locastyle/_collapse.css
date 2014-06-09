@@ -309,10 +309,10 @@ tr.active .actionsTable { display: none; }
 
 .collapse.with-tooltip.in { overflow: visible; }
 
-.boxCollapse header > a {
+.boxCollapse header p a {
   z-index: 2;
-  position: absolute;
-  top: 8px;
+  position: relative;
+  top: 2px;
 }
 
 /* Indicador no Collapse */

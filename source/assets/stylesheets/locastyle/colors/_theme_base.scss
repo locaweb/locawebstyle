@@ -15,7 +15,8 @@
 #{$theme_name} .boxInfoAction.sought strong,
 #{$theme_name} .boxInfoAction.sought b,
 #{$theme_name} .guided-tour.on .lnk-suggestions,
-#{$theme_name} .colorTheme{
+#{$theme_name} .colorTheme,
+#{$theme_name} .messageInfo.selectable.active .selectableTitle{
   color: $pallet_1;
 }
 
@@ -41,7 +42,7 @@
 #{$theme_name} [class*=" ico-"],
 #{$theme_name} .pathWay li.active b,
 #{$theme_name} .pathWay li:hover b,
-#{$theme_name} .shortcutBox :hover :before,
+#{$theme_name} .shortcutBox :before,
 #{$theme_name} .shortcutBox .active :before,
 #{$theme_name} .chooseBox li:hover [class^="ico-"]:before,
 #{$theme_name} .chooseBox li:hover [class*="ico-"]:before,

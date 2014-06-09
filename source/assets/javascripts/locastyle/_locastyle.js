@@ -34,6 +34,8 @@ Locastyle = (function() {
 			this.closedAllCollapse(dom_scope);
 			this.collapseWithTooltip(dom_scope);
 			this.collapseNavButtons(dom_scope);
+			this.listChecked(dom_scope);
+			this.clickListChecked(dom_scope);
 		},
 
 		popover: function(dom_scope){
@@ -355,7 +357,25 @@ Locastyle = (function() {
 					}
 				});
 			});
+		},
+
+
+		listChecked: function(dom_scope) {
+			$('.selectableCheck').each(function(){
+				var inputChecked = $(this).is(':checked');
+				if (inputChecked == true) {
+					$('.selectable').removeClass('active');	
+					$(this).parents('.selectable').addClass('active');	
+				};
+			})
+		},
+
+		clickListChecked: function(dom_scope) {
+			$('.selectableCheck').on('change', function(){
+				locastyle.base.listChecked();
+			})
 		}
+
 
 	}
 
