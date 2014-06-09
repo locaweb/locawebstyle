@@ -1,0 +1,55 @@
+---
+title: Componentes - Alternando classes
+
+layout: v1/layouts/page
+menu_page: v1/partials/sidebar-componentes.erb
+
+---
+
+<article class="text">
+	<header>
+		<h1>Alternando classes</h1>
+		<h3>É possível alternar entre 2 classes no seu projeto utilizando LocawebStyle.</h3>
+	</header>
+
+	<p>As vezes surge a necessidade em alternar classes ao clicar em um determinado elemento.</p>
+
+  <p>É muito comum esse comportamento ser utilizado em <strong>alternância de ícones</strong>, agora ficou muito fácil executar essa funcionalidade.</p>
+
+  <p>Basta clicar abaixo e ver a interação visual</p>
+
+	<div class="example">
+    <a href="#" class="ico-heart-empty" data-classtoggle="ico-heart-empty,ico-heart-1"></a>
+    <a href="#" class="ico-plus-circle-1" data-classtoggle="ico-plus-circle-1,ico-minus-circle"></a>
+    <a href="#" class="ico-lock-1" data-classtoggle="ico-lock-1,ico-unlock-1"></a>
+    <a href="#" class="ico-folder" data-classtoggle="ico-folder,ico-folder-open"></a>
+  </div>
+<pre class="lang-html prettyprint linenums">
+&lt;a href="#" class="ico-heart-empty" data-classtoggle="ico-heart-empty,ico-heart-1"&gt;&lt;/a&gt;
+&lt;a href="#" class="ico-plus-circle-1" data-classtoggle="ico-plus-circle-1,ico-minus-circle"&gt;&lt;/a&gt;
+&lt;a href="#" class="ico-lock-1" data-classtoggle="ico-lock-1,ico-unlock-1"&gt;&lt;/a&gt;
+&lt;a href="#" class="ico-folder" data-classtoggle="ico-folder,ico-folder-open"&gt;&lt;/a&gt;
+</pre>
+
+<br><br>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Atributo</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>class</td>
+        <td>A Classe que será exibida ao carregar a página</td>
+      </tr>
+      <tr>
+        <td>data-classtoggle</td>
+        <td>Inserimos 2 classes separadas por (,).<br>O primeiro é o mesma classe carregada no elemento, e o Segundo é a classe que será inserida ao ser clicado.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
