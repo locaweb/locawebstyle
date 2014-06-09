@@ -18,11 +18,19 @@ locastyle.topbarCurtain = (function() {
 
   function positionTarget() {
     $("[data-ls-module='topbarCurtain']").each(function (index, item){
-      var rightDistance = $(item).position().left - $(window).width();
+      var leftDistance = $(item).position().left;
       var iconWidth = (22/ 2);
       var curtainWidth = $($(item).data("target")).width() / 2;
 
-      $($(item).data("target")).css({left: rightDistance - curtainWidth + iconWidth + "px"});
+      var ua = window.navigator.userAgent;
+      var msie = ua.indexOf('MSIE ');
+      var trident = ua.indexOf('Trident/');
+
+      if (msie > 0 || trident > 0) {
+        $($(item).data("target")).css({left: (leftDistance + iconWidth) - curtainWidth  + "px", top: "60px"});
+      } else {
+        $($(item).data("target")).css({left: (leftDistance + iconWidth) + curtainWidth  + "px"});
+      }
 
       bindTopCurtainTrigger(item);
     });
