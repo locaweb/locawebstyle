@@ -1,0 +1,9 @@
+---
+title: Versão 2.0.6
+date: 2014-06-09 20:50 UTC
+tags:
+---
+
+**O que tem de novo?**
+
+\- Adição do limitador de data inserida no datepicker do [calendário](http://locaweb.github.io/locawebstyle/manual/formularios/calendarios/).
