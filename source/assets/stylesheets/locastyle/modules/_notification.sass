@@ -61,7 +61,7 @@
 @media (min-width: $screen-sm)
   .ls-notification
     +transform(none)
-    +translate(100%, 0)
+    +translate(-100%, 0)
     +single-transition(none)
     float: none
     top: $heightTopbar
@@ -69,6 +69,8 @@
     z-index: 11
     position: fixed
     overflow: visible
+    right: auto
+    left: 0
 
   .ls-notification-list
     position: fixed
