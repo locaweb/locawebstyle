@@ -7,11 +7,11 @@ layout: examples
 
 <a href="<%= base_url %>/documentacao/exemplos/rev/new-client" class="ls-btn-primary">Cadastrar novo</a>
 
-<div class="ls-box-filter row">
-  <form action="#" class="ls-form col-md-4">
-    <label class="row ls-field ls-field-inline">
-        <span class="ls-label col-md-3">Status</span>
-        <div class="col-md-9" data-ls-module="customFields">
+<div class="ls-box-filter">
+  <form action="#" class="ls-form ls-form-inline ls-float-left">
+    <label class="ls-field">
+        <b class="ls-label">Status</b>
+        <div data-ls-module="customFields">
           <select name="">
             <option value="">Todos</option>
             <option value="">Ativo</option>
@@ -21,14 +21,12 @@ layout: examples
         </div>
       </label>
   </form>
-  <form action="#" class="ls-form col-md-4  col-md-offset-4">
-      <label class="col-md-8 ls-field ls-field-inline">
-        <span class="ls-label ls-hidden-accessible">Nome do cliente</span>
-        <input type="text" name="nome" placeholder="Nome e sobrenome" required >
-      </label>
-      <div class="col-md-4 ls-field ls-field-inline">
-        <button type="submit" class="ls-btn">Buscar</button>
-      </div>
+  <form action="#" class="ls-form ls-float-right">
+    <label class="ls-field">
+      <b class="ls-label ls-hidden-accessible">Nome do cliente</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" required >
+    </label>
+    <button type="submit" class="ls-btn">Buscar</button>
   </form>
 </div>
 
