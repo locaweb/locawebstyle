@@ -14,6 +14,7 @@ locastyle.general = (function() {
     _loadEvents();
     subMenu();
     _elementDisabled();
+    _linkPreventDefault();
     _btnGroupActivationToogle();
     menuAnchor();
     toggleFields();
@@ -99,6 +100,14 @@ locastyle.general = (function() {
   function _elementDisabled() {
     $(".disabled, [disabled='disabled']").on('click.ls', function(evt) {
       evt.preventDefault();
+    });
+  }
+
+  function _linkPreventDefault(dom_scope) {
+    $("a", dom_scope).on("click", function(e) {
+      if ($(this).attr("href") === "" || $(this).attr("href") === "#") {
+        e.preventDefault();
+      }
     });
   }
 
