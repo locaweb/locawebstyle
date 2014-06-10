@@ -5,7 +5,7 @@
 .ls-board-box
   background-color: #f8f8f8
   text-align: center
-  min-height: 60px
+  min-height: 110px
   margin-bottom: 10px
   border-radius: 3px
   padding: 15px
@@ -32,7 +32,7 @@
 
 .ls-info-header
   @extend .ls-clearfix
-  margin-bottom: 5px
+  margin-bottom: 10px
 
   [class*="ls-ico"]
 
@@ -47,7 +47,6 @@
       margin-right: 5px
       margin-bottom: 7px
 
-
   [class*="ls-btn"]
 
     ~ .ls-dropdown,
@@ -60,12 +59,18 @@
     padding: 0
     margin: 20px 0 0
 
+//
+// Até Tablet
+//
 @media (min-width: $screen-sm)
   .ls-board-box
     margin-bottom: 0
     min-height: 170px
 
   .ls-info-header
+
+    .ls-actions-btn
+      margin: 0
 
     [class*="ls-btn"]
 
@@ -74,7 +79,11 @@
         margin-left: 5px
         margin-right: 5px
 
+//
+// DESKTOP
+//
 @media (max-width: $screen-lg)
   .ls-board-box strong
     display: block
     font-size: 2rem
+
