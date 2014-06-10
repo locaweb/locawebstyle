@@ -2,6 +2,9 @@
   [class*="ls-btn"]
     margin-left: 15px
 
+  [class*="ls-title"] + &
+    padding-top: 15px
+
 // Element that envolve the label and the input field. This class can be inserted on tag label or anyother
 .ls-field
   display: block
@@ -168,6 +171,9 @@ input.ls-form-text,
     border-left: none !important
     padding-left: 8px !important
 
+.ls-middle-label
+  display: inline-block
+  padding-top: 9px
 
 //
 // Prefix and Suffix of forms
@@ -175,6 +181,18 @@ input.ls-form-text,
 .ls-prefix-group
   position: relative
   display: table
+
+  .ls-form-inline &
+    float: none
+    display: inline-block
+    width: 200px
+    vertical-align: middle
+
+    input + .ls-label-prefix
+      height: 36px
+
+    input
+      width: 78%
 
   input
     position: relative
@@ -209,6 +227,7 @@ input + .ls-label-prefix
   border-radius: 0 4px 4px 0
   position: relative
   left: -4px
+  z-index: 2
 
 @media (max-width: $screen-sm)
   .ls-form-inline
