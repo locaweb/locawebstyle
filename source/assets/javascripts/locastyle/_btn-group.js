@@ -28,7 +28,9 @@ locastyle.btnGroup = (function() {
       });
 
       // chama os inits para os itens dentro do dropdown
-      locastyle.init();
+      locastyle.dropdown.init()
+      locastyle.modal.init()
+      locastyle.general.init()
     }
   }
 
