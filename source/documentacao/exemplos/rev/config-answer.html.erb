@@ -13,18 +13,16 @@ layout: examples
         <p>Cadastre um telefone para que seus clientes possam entrar em contato direto com você. Este telefone será exibido na barra de atendimento quando o seu cliente acessar o seu Email Marketing.</p>
       </div>
       <hr>
-      <form action="#" class="ls-form" data-ls-module="form">
-        <div id="phone-form" class="row ls-form-text ls-form-disable">
-          <label class="ls-field col-md-5">
-            <span class="ls-label">Telefone</span>
+      <form action="#" class="ls-form row" data-ls-module="form">
+          <label id="phone-form" class="ls-field col-md-5 ls-form-text ls-form-disable">
+            <b class="ls-label">Telefone</b>
             <input class="ls-form-text ls-mask-phone_with_ddd" name="telefone" placeholder="Número do telefone" required="" type="text" value="(11) 99999-9999">
           </label>
-        </div>
-        <div class="phone-actions ls-display-none">
-          <button type="submit" class="ls-btn-primary">Salvar</button>
-          <button class="ls-btn" data-ls-toggle-fields="#phone-form" data-toggle-class="ls-display-none" data-target=".phone-actions" >Cancelar</button>
-        </div>
-        <button data-ls-toggle-fields="#phone-form" data-toggle-class="ls-display-none" data-target=".phone-actions" class="ls-btn-primary phone-actions">Editar</button>
+          <div class="phone-actions ls-display-none">
+            <button type="submit" class="ls-btn-primary">Salvar</button>
+            <button class="ls-btn" data-ls-toggle-fields="#phone-form" data-toggle-class="ls-display-none" data-target=".phone-actions" >Cancelar</button>
+          </div>
+          <button data-ls-toggle-fields="#phone-form" data-toggle-class="ls-display-none" data-target=".phone-actions" class="ls-btn-primary phone-actions">Editar</button>
       </form>
     </div>
   </div>
@@ -36,16 +34,14 @@ layout: examples
       </div>
       <hr>
       <form action="#" class="ls-form" data-ls-module="form">
-        <div id="webdesk-form" class="row ls-form-text ls-form-disable">
-
-          <label class="ls-field ls-field-inline col-md-12">
-            <span class="ls-label-prefix col-md-2">https://</span>
-            <span class="col-md-4">
+        <div id="webdesk-form" class="ls-form-text ls-form-disable">
+          <label class="ls-field col-md-8">
+            <div class="ls-prefix-group">
+              <span class="ls-label-prefix">https://</span>
               <input type="text" placeholder="entregaemails">
-            </span>
-            <span class="ls-label-sufix col-md-5">.webdesklw.com.br</span>
+              <span class="ls-label-prefix">.webdesklw.com.br</span>
+            </div>
           </label>
-
         </div>
 
         <div class="webdesk-actions ls-display-none">
