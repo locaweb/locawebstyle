@@ -14,7 +14,7 @@ locastyle.general = (function() {
     _loadEvents();
     subMenu();
     _elementDisabled();
-    // _linkPreventDefault();
+    _linkPreventDefault();
     _btnGroupActivationToogle();
     menuAnchor();
     toggleFields();
