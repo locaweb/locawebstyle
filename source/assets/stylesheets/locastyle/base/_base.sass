@@ -88,14 +88,19 @@
     [class*="col-md"]
       margin-bottom: 10px
 
+
 @media (min-width: $screen-sm)
 
   .ls-main
     +single-transition(none)
     +transform(none)
+    padding-top: 0
+    padding-bottom: 60px
+    margin-top: $heightTopbar
     margin-left: $sidebarWidth
     height: 100%
     min-height: 100%
+    overflow: auto
 
     &:after
       clear: both
