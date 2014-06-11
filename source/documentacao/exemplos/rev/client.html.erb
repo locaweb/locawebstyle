@@ -6,52 +6,43 @@ layout: examples
 <h1 class="ls-title-intro ls-ico-users">Clientes</h1>
 
 <div class="ls-box">
-  <form action="" class="ls-form" data-ls-module="form">
-    <div id="domain-form" class="ls-form-text ls-form-disable">
-      <div class="ls-group-btn-right ls-regroup">
-        <a href="" class="ls-btn-primary" target="_blank">Acessar o Painel</a>
-        <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
-          <a href="#" class="ls-btn"></a>
-          <ul class="ls-dropdown-nav">
-            <li>
-              <a href="" data-ls-toggle-fields="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" class="domain-actions">Editar</a>
-            </li>
-            <li><a href="#" data-ls-module="modal" data-target="#editPassword">Alterar senha</a></li>
-            <li><a href="#">Desativar</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row" >
-        <label class="ls-field col-md-6 col-lg-8">
-          <span class="ls-label">Nome</span>
-          <input type="text" value="Fulano de tal" required >
-        </label>
-      </div>
-      <div class="row" >
-        <label class="ls-field col-md-6 col-lg-8">
-          <span class="ls-label">login/E-mail:</span>
-          <input type="text" value="emaildocliente@cliente.com.br" required >
-        </label>
-      </div>
-      <div class="row" >
-        <label class="ls-field col-md-6 col-lg-8">
-          <span class="ls-label">Status:</span>
-          <input type="text" value="Ativo" required >
-        </label>
-      </div>
-      <div class="row" >
-        <label class="ls-field col-md-6 col-lg-8">
-          <span class="ls-label">Data de cadastro:</span>
-          <input type="text" value="18/05/1987" required >
-        </label>
-      </div>
-      <div class="row" >
-        <label class="ls-field col-md-6 col-lg-8">
-          <span class="ls-label">Informações:</span>
-          <textarea name="" id="" cols="30" rows="5">com Fulano de Tal no telefone: 11 5555-5555. Horários entre 12:00 e 16:00 dias úteis.</textarea>
-        </label>
-      </div>
+  <div class="ls-float-right ls-regroup">
+    <a href="" class="ls-btn-primary" target="_blank">Acessar o Painel</a>
+    <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+      <a href="#" class="ls-btn"></a>
+      <ul class="ls-dropdown-nav">
+        <li>
+          <a href="" data-ls-toggle-fields="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" class="domain-actions">Editar</a>
+        </li>
+        <li><a href="#" data-ls-module="modal" data-target="#editPassword">Alterar senha</a></li>
+        <li><a href="#">Desativar</a></li>
+      </ul>
     </div>
+  </div>
+
+  <form action="" class="ls-form row" data-ls-module="form">
+    <fieldset id="domain-form" class="ls-form-text ls-form-disable">
+      <label class="ls-field col-md-6 col-lg-8">
+        <b class="ls-label">Nome</b>
+        <input type="text" value="Fulano de tal" required>
+      </label>
+      <label class="ls-field col-md-6 col-lg-8">
+        <b class="ls-label">login/E-mail:</b>
+        <input type="text" value="emaildocliente@cliente.com.br" required>
+      </label>
+      <label class="ls-field col-md-6 col-lg-8">
+        <b class="ls-label">Status:</b>
+        <input type="text" value="Ativo" required>
+      </label>
+      <label class="ls-field col-md-6 col-lg-8">
+        <b class="ls-label">Data de cadastro:</b>
+        <input type="text" value="18/05/1987" required>
+      </label>
+      <label class="ls-field col-md-6 col-lg-8">
+        <b class="ls-label">Informações:</b>
+        <textarea name="" id="" cols="30" rows="5">com Fulano de Tal no telefone: 11 5555-5555. Horários entre 12:00 e 16:00 dias úteis.</textarea>
+      </label>
+    </fieldset>
     <div class="domain-actions ls-display-none">
       <button type="submit" class="ls-btn-primary">Salvar</button>
       <button class="ls-btn" data-ls-toggle-fields="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" >Cancelar</button>
@@ -64,15 +55,15 @@ layout: examples
 <div class="ls-box ls-board-info">
 
   <header class="ls-info-header">
-      <h2 class="ls-title-3 col-md-6 ls-ico-calendar-check">
-        Período atual
-        <small>01/01/2014 a 01/01/2015</small>
-      </h2>
+    <h2 class="ls-title-3 col-md-6 ls-ico-calendar-check">
+      Período atual
+      <small>01/01/2014 a 01/01/2015</small>
+    </h2>
 
-      <div class="ls-actions-btn ls-float-right">
-        <a href="" data-ls-module="modal" data-target="#removeMessage" class="ls-btn">Remover envios</a>
-        <a href="" data-ls-module="modal" data-target="#addMessage" class="ls-btn-primary">Adicionar envios</a>
-      </div>
+    <div class="ls-actions-btn ls-float-right">
+      <a href="" data-ls-module="modal" data-target="#removeMessage" class="ls-btn">Remover envios</a>
+      <a href="" data-ls-module="modal" data-target="#addMessage" class="ls-btn-primary">Adicionar envios</a>
+    </div>
   </header>
 
 
@@ -383,7 +374,7 @@ layout: examples
           <label class="ls-field ls-field-inline">
             <span class="ls-label col-xs-12 col-md-7">Quantidade de envios avulsos a adicionar</span>
             <span class="col-md-3 col-xs-12 col-md-offset-2">
-              <input type="number" name="" required >
+              <input type="number" name="" required>
             </span>
           </label>
         </div>
@@ -428,7 +419,7 @@ layout: examples
           <label class="ls-field ls-field-inline">
             <span class="ls-label col-md-8 col-xs-12">Quantidade de envios a remover</span>
             <span class="col-md-2 col-xs-12 col-md-offset-2">
-              <input type="number" name="" required >
+              <input type="number" name="" required>
             </span>
           </label>
         </div>
