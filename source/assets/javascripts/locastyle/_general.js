@@ -104,7 +104,7 @@ locastyle.general = (function() {
   }
 
   function _linkPreventDefault(dom_scope) {
-    $("a", dom_scope).on("click", function(e) {
+    $("a", dom_scope).on("click.lsPreventDefault", function(e) {
       if ($(this).attr("href") === "" || $(this).attr("href") === "#") {
         e.preventDefault();
       }
