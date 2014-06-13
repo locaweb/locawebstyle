@@ -15,17 +15,13 @@ describe("Popover: ", function() {
 
     it("Should create a popover on click event", function() {
       // Added as pending because the tests broke while I was testing other functionality
-      pending();
       $('[data-ls-module="popover"]').trigger("click");
-      jasmine.clock().tick(1000);
       expect($(".ls-popover")).toBeVisible();
     });
 
     it("Should create a popover on hover event", function() {
       // Added as pending because the tests broke while I was testing other functionality
-      pending();
       $('[data-ls-module="popover"]').trigger("mouseenter");
-      jasmine.clock().tick(1000);
       expect($(".ls-popover")).toBeVisible();
     });
 
