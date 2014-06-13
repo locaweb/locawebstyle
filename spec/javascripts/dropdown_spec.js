@@ -8,21 +8,18 @@ describe("Dropdown: ", function() {
     describe('when click on a dropdown trigger', function() {
       it("should activate a disabled related dropdown module", function() {
         // Added as pending because the tests broke while I was testing other functionality
-        pending();
         $("#dropdown-test > a:first-child").trigger("click");
         expect($("#dropdown-test").hasClass("ls-active")).toEqual(true);
       });
 
       it("should disable an active related dropdown module", function() {
         // Added as pending because the tests broke while I was testing other functionality
-        pending();
         $("#dropdown-test-2 > a:first-child").trigger("click");
         expect($("#dropdown-test-2").hasClass("ls-active")).toEqual(false);
       });
 
       it("should prevent default event on dropdown module", function() {
         // Added as pending because the tests broke while I was testing other functionality
-        pending();
         var spyEvent = spyOnEvent('#dropdown-test > a:first-child', 'click');
         $("#dropdown-test > a:first-child").trigger("click");
         expect(spyEvent).toHaveBeenPrevented();
@@ -30,7 +27,6 @@ describe("Dropdown: ", function() {
 
       it("should close any opened dropdown", function() {
         // Added as pending because the tests broke while I was testing other functionality
-        pending();
         $("#dropdown-test-4 #dropdown-default > a:first-child").trigger("click");
         expect($("#dropdown-test-4 #dropdown-active").hasClass("ls-active")).toEqual(false);
       });
