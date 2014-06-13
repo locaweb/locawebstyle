@@ -29,12 +29,12 @@ describe("Popover: ", function() {
 
     it("Should remove popover on click event", function() {
       $('[data-ls-module="popover"]').trigger("click");
-      expect($(".ls-popover")).toBeTruthy();
+      expect($("#mypopovervisible .ls-popover")).not.toExist();
     });
 
     it("Should remove popover on mouseleave of element", function() {
       $('[data-ls-module="popover"]').trigger("mouseleave");
-      expect($(".ls-popover")).toBeTruthy();
+      expect($("#mypopovervisible .ls-popover")).not.toExist();
     });
 
   });
