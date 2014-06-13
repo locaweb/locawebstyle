@@ -4,7 +4,16 @@ description: Exibe o status de um processo
 type: component
 ---
 
-<div class="row">
+<%= partial 'partials/doc-menu-components'%>
+
+<section class="col-md-9">
+
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
+
 
   <h2>Utilizando a tag <i>progress</i></h2>
 
@@ -54,4 +63,4 @@ type: component
   <code class="language-html ls-well-example">
     <%= partial 'documentacao/shared/progress-bar/progress' %>
   </code>
-</div>
+</section>

@@ -3,60 +3,72 @@ title: Abas
 description: Abas são perfeitas para organizar informações em painéis de conteúdo, onde o acesso precisa ser rápido e quando há muito conteúdo sobre um determinado assunto.
 type: component
 ---
-<div class="ls-alert-info">
-  Para abrir uma aba automaticamente basta na url passar esse parametro com o target da Aba ou o Href.
-  <strong><a href="/documentacao/abas/#!/#laps" target="blank">/#!/#laps</a></strong>
-</div>
-<table class="ls-table">
-  <thead>
-    <tr>
-      <th>Seletor</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>.ls-tabs-nav</td>
-      <td>Vai no elemento pai da navegação das abas, normalmente "ul".</td>
-    </tr>
-    <tr>
-      <td>data-ls-module="tabs"</td>
-      <td>Vai no elemento que servirá de "trigger" da ativação das abas, normalmente um link "a".</td>
-    </tr>
-    <tr>
-      <td>.ls-tab-container</td>
-      <td>Vai no elemento que servirá de "container" para o conteúdo das abas, normalmente uma "div".</td>
-    </tr>
-    <tr>
-      <td>.ls-tab-content</td>
-      <td>Vai no elemento que contém o conteúdo, normalmente uma "div".</td>
-    </tr>
-    <tr>
-      <td>.ls-active</td>
-      <td>É a classe que indica qual aba está ativa, ela vai na "li" ativa da navegação e também no ".ls-tab-content" ativo.</td>
-    </tr>
-  </tbody>
-</table>
 
-<div class="ls-box-demo">
-  <%= partial 'documentacao/shared/abas' %>
-</div>
-<code class="language-html ls-well-example">
-  <%= partial 'documentacao/shared/abas' %>
-</code>
+<%= partial 'partials/doc-menu-components'%>
 
-<hr>
+<section class="col-md-9">
 
-<div class="doc-section">
-  <h2>Navegação de Abas em forma de dropdown</h2>
-  <p>Em dispositivos com telas pequenas, a navegação das abas são apresentadas em forma de dropdown.</p>
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
 
-  <p>Não é comum, mas caso queira usar a navegação em forma de dropdown também em telas maiores, basta usar o html conforme exemplo abaixo. Perceba que apenas a parte da navegação muda, a parte do conteúdo continua da mesma forma.</p>
-</div>
+  <div class="ls-alert-info">
+    Para abrir uma aba automaticamente basta na url passar esse parametro com o target da Aba ou o Href.
+    <strong><a href="/documentacao/abas/#!/#laps" target="blank">/#!/#laps</a></strong>
+  </div>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Seletor</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>.ls-tabs-nav</td>
+        <td>Vai no elemento pai da navegação das abas, normalmente "ul".</td>
+      </tr>
+      <tr>
+        <td>data-ls-module="tabs"</td>
+        <td>Vai no elemento que servirá de "trigger" da ativação das abas, normalmente um link "a".</td>
+      </tr>
+      <tr>
+        <td>.ls-tab-container</td>
+        <td>Vai no elemento que servirá de "container" para o conteúdo das abas, normalmente uma "div".</td>
+      </tr>
+      <tr>
+        <td>.ls-tab-content</td>
+        <td>Vai no elemento que contém o conteúdo, normalmente uma "div".</td>
+      </tr>
+      <tr>
+        <td>.ls-active</td>
+        <td>É a classe que indica qual aba está ativa, ela vai na "li" ativa da navegação e também no ".ls-tab-content" ativo.</td>
+      </tr>
+    </tbody>
+  </table>
 
-<div class="ls-box-demo">
-  <%= partial 'documentacao/shared/abas-dropdown-nav' %>
-</div>
-<code class="language-html ls-well-example">
-  <%= partial 'documentacao/shared/abas-dropdown-nav' %>
-</code>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/abas' %>
+  </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/abas' %>
+  </code>
+
+  <hr>
+
+  <div class="doc-section">
+    <h2>Navegação de Abas em forma de dropdown</h2>
+    <p>Em dispositivos com telas pequenas, a navegação das abas são apresentadas em forma de dropdown.</p>
+
+    <p>Não é comum, mas caso queira usar a navegação em forma de dropdown também em telas maiores, basta usar o html conforme exemplo abaixo. Perceba que apenas a parte da navegação muda, a parte do conteúdo continua da mesma forma.</p>
+  </div>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/abas-dropdown-nav' %>
+  </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/abas-dropdown-nav' %>
+  </code>
+</section>

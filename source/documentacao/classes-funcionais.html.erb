@@ -4,260 +4,271 @@ description: Classes e atributos que alteram o layout padrão e comprotamento de
 type: css
 ---
 
-<div class="row">
-  <nav>
-    <ul><li><a href="#posicionamento" class="ls-link-smooth">Posicionamento</a></li></ul>
-    <ul><li><a href="#bloco-e-linha" class="ls-link-smooth">Bloco e linha</a></li></ul>
-    <ul><li><a href="#tamanho" class="ls-link-smooth">Tamanho</a></li></ul>
-    <ul><li><a href="#margin-e-padding" class="ls-link-smooth">Margin e Padding</a></li></ul>
-    <ul><li><a href="#texto-e-alinhamento" class="ls-link-smooth">Texto e alinhamento</a></li></ul>
-    <ul><li><a href="#borda-e-transparencia" class="ls-link-smooth">Fundo e borda e transparencia</a></li></ul>
-    <ul><li><a href="#cursor-e-mouse" class="ls-link-smooth">Cursor e mouse</a></li></ul>
-    <ul><li><a href="#cores" class="ls-link-smooth">Cores</a></li></ul>
-    <ul><li><a href="#formulario-e-inputs" class="ls-link-smooth">Formulários e inputs</a></li></ul>
-    <ul><li><a href="#geral" class="ls-link-smooth">Geral</a></li></ul>
-  </nav>
-</div>
+<%= partial 'partials/doc-menu-layout'%>
 
-<div class="row" id="posicionamento">
-  <h1 class="ls-title-intro">Posicionamento</h1>
-  <p>
-    Classes que alteram o posicionamento dos elementos
-  </p>
-   <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Nome</th><th>Descrição</th>
-      </tr>
-    </thead>
-    <tr><td>.ls-clearfix</td><td>classe</td></tr>
-    <tr><td>.ls-no-float</td><td>classe</td></tr>
-    <tr><td>.ls-float-right</td><td>classe</td></tr>
-    <tr><td>.ls-float-left</td><td>classe</td></tr>
-    <tr><td>.ls-clear-both</td><td>classe</td></tr>
-    <tr><td>.ls-clear-right</td><td>classe</td></tr>
-    <tr><td>.ls-clear-left</td><td>classe</td></tr>
-    <tr><td>.ls-overflow-hidden</td><td>classe</td></tr>
-    <tr><td>.ls-overflow-visible</td><td>classe</td></tr>
-  </table>
-</div>
+<section class="col-md-9">
 
-<div class="row" id="bloco-e-linha">
-  <h1 class="ls-title-intro">Bloco e linha</h1>
-  <p>
-    Classes que alteram o <i>display</i> de elementos
-  </p>
-   <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Nome</th><th>Descrição</th>
-      </tr>
-    </thead>
-    <tr><td>.ls-display-block</td><td>classe</td></tr>
-    <tr><td>.ls-display-inline</td><td>classe</td></tr>
-    <tr><td>.ls-display-inline-block</td><td>classe</td></tr>
-    <tr><td>.ls-display-none</td><td>classe</td></tr>
-  </table>
-</div>
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
 
-<div class="row" id="tamanho">
-  <h1 class="ls-title-intro">Tamanho</h1>
-  <p>
-    Classes que alteram o <i>tamanho</i> de elementos
-  </p>
-   <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Nome</th><th>Descrição</th>
-      </tr>
-    </thead>
-    <tr><td>.ls-width-auto</td><td>classe</td></tr>
-    <tr><td>.ls-width-inherit</td><td>classe</td></tr>
-    <tr><td>.ls-full-width</td><td>classe</td></tr>
-    <tr><td>.ls-height-inherit</td><td>classe</td></tr>
-    <tr><td>.ls-height-auto</td><td>classe</td></tr>
-  </table>
-</div>
+  <div class="row">
+    <nav>
+      <ul><li><a href="#posicionamento" class="ls-link-smooth">Posicionamento</a></li></ul>
+      <ul><li><a href="#bloco-e-linha" class="ls-link-smooth">Bloco e linha</a></li></ul>
+      <ul><li><a href="#tamanho" class="ls-link-smooth">Tamanho</a></li></ul>
+      <ul><li><a href="#margin-e-padding" class="ls-link-smooth">Margin e Padding</a></li></ul>
+      <ul><li><a href="#texto-e-alinhamento" class="ls-link-smooth">Texto e alinhamento</a></li></ul>
+      <ul><li><a href="#borda-e-transparencia" class="ls-link-smooth">Fundo e borda e transparencia</a></li></ul>
+      <ul><li><a href="#cursor-e-mouse" class="ls-link-smooth">Cursor e mouse</a></li></ul>
+      <ul><li><a href="#cores" class="ls-link-smooth">Cores</a></li></ul>
+      <ul><li><a href="#formulario-e-inputs" class="ls-link-smooth">Formulários e inputs</a></li></ul>
+      <ul><li><a href="#geral" class="ls-link-smooth">Geral</a></li></ul>
+    </nav>
+  </div>
 
-<div class="row" id="margin-e-padding">
-  <h1 class="ls-title-intro">Margin e Padding</h1>
-  <p>
-    Classes que alteram o <i>tamanho</i> de elementos
-  </p>
-   <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Nome</th><th>Descrição</th>
-      </tr>
-    </thead>
-    <tr><td>.ls-no-margin</td><td>classe</td></tr>
-    <tr><td>.ls-no-margin-left</td><td>classe</td></tr>
-    <tr><td>.ls-no-margin-right</td><td>classe</td></tr>
-    <tr><td>.ls-no-margin-top</td><td>classe</td></tr>
-    <tr><td>.ls-no-margin-bottom</td><td>classe</td></tr>
-    <tr><td>.ls-no-padding</td><td>classe</td></tr>
-    <tr><td>.ls-no-padding-left</td><td>classe</td></tr>
-    <tr><td>.ls-no-padding-right</td><td>classe</td></tr>
-    <tr><td>.ls-no-padding-top</td><td>classe</td></tr>
-    <tr><td>.ls-no-padding-bottom</td><td>classe</td></tr>
-    <tr><td>.ls-margin-auto</td><td>classe</td></tr>
-    <tr><td>.ls-xs-space</td><td>Coloca um padding de 5px na caixa</td></tr>
-    <tr><td>.ls-sm-space</td><td>Coloca um padding de 10px na caixa</td></tr>
-    <tr><td>.ls-md-space</td><td>Coloca um padding de 20px na caixa</td></tr>
-    <tr><td>.ls-lg-space</td><td>Coloca um padding de 40px na caixa</td></tr>
-  </table>
-</div>
+  <div class="row" id="posicionamento">
+    <h1 class="ls-title-intro">Posicionamento</h1>
+    <p>
+      Classes que alteram o posicionamento dos elementos
+    </p>
+     <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th><th>Descrição</th>
+        </tr>
+      </thead>
+      <tr><td>.ls-clearfix</td><td>classe</td></tr>
+      <tr><td>.ls-no-float</td><td>classe</td></tr>
+      <tr><td>.ls-float-right</td><td>classe</td></tr>
+      <tr><td>.ls-float-left</td><td>classe</td></tr>
+      <tr><td>.ls-clear-both</td><td>classe</td></tr>
+      <tr><td>.ls-clear-right</td><td>classe</td></tr>
+      <tr><td>.ls-clear-left</td><td>classe</td></tr>
+      <tr><td>.ls-overflow-hidden</td><td>classe</td></tr>
+      <tr><td>.ls-overflow-visible</td><td>classe</td></tr>
+    </table>
+  </div>
 
-<div class="row" id="texto-e-alinhamento">
-  <h1 class="ls-title-intro">Texto e alinhamento</h1>
-  <p>
-    Classes que alteram o <i>tamanho</i> de elementos
-  </p>
-   <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Nome</th><th>Descrição</th>
-      </tr>
-    </thead>
-    <tr><td>.ls-txt-left</td><td>classe</td></tr>
-    <tr><td>.ls-txt-right</td><td>classe</td></tr>
-    <tr><td>.ls-txt-justify</td><td>classe</td></tr>
-    <tr><td>.ls-txt-center</td><td>classe</td></tr>
-    <tr><td>.ls-txt-center-all</td><td>classe</td></tr>
-    <tr><td>.ls-v-align-top</td><td>classe</td></tr>
-    <tr><td>.ls-v-align-middle</td><td>classe</td></tr>
-    <tr><td>.ls-v-align-bottom</td><td>classe</td></tr>
-    <tr><td>.ls-ellipsis</td><td>classe</td></tr>
-    <tr><td>.ls-ls-nowrap</td><td>classe</td></tr>
-    <tr><td>.ls-no-bold</td><td>classe</td></tr>
-    <tr><td>.ls-word-break-all</td><td>classe</td></tr>
-    <tr><td>.ls-word-break</td><td>classe</td></tr>
-    <tr><td>.ls-no-word-break</td><td>classe</td></tr>
-    <tr><td>.ls-no-list-style</td><td>classe</td></tr>
-    <tr><td>.ls-text-underline</td><td>classe</td></tr>
-    <tr><td>.ls-small-letter-spacing</td><td>classe</td></tr>
+  <div class="row" id="bloco-e-linha">
+    <h1 class="ls-title-intro">Bloco e linha</h1>
+    <p>
+      Classes que alteram o <i>display</i> de elementos
+    </p>
+     <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th><th>Descrição</th>
+        </tr>
+      </thead>
+      <tr><td>.ls-display-block</td><td>classe</td></tr>
+      <tr><td>.ls-display-inline</td><td>classe</td></tr>
+      <tr><td>.ls-display-inline-block</td><td>classe</td></tr>
+      <tr><td>.ls-display-none</td><td>classe</td></tr>
+    </table>
+  </div>
 
-    <tr><td>.ls-text-uppercase</td><td>Transforma todas letras para maiúsculas.</td></tr>
-    <tr><td>.ls-text-lowercase</td><td>Transforma todas letras para minúsculas.</td></tr>
-    <tr><td>.ls-text-capitalize</td><td>Transforma a primeira letra para maiúscula.</td></tr>
-  </table>
-</div>
+  <div class="row" id="tamanho">
+    <h1 class="ls-title-intro">Tamanho</h1>
+    <p>
+      Classes que alteram o <i>tamanho</i> de elementos
+    </p>
+     <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th><th>Descrição</th>
+        </tr>
+      </thead>
+      <tr><td>.ls-width-auto</td><td>classe</td></tr>
+      <tr><td>.ls-width-inherit</td><td>classe</td></tr>
+      <tr><td>.ls-full-width</td><td>classe</td></tr>
+      <tr><td>.ls-height-inherit</td><td>classe</td></tr>
+      <tr><td>.ls-height-auto</td><td>classe</td></tr>
+    </table>
+  </div>
 
-<div class="row" id="borda-e-transparencia">
-  <h1 class="ls-title-intro">Fundo, borda e transparência</h1>
-  <p>
-    Classes que alteram o fundo e a borda de elementos
-  </p>
-   <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Nome</th><th>Descrição</th>
-      </tr>
-    </thead>
-    <tr><td>.ls-no-bg</td><td>classe</td></tr>
-    <tr><td>.ls-no-bghover</td><td>classe</td></tr>
-    <tr><td>.ls-no-shadow</td><td>classe</td></tr>
-    <tr><td>.ls-border</td><td>Adiciona borda ao elemento</td></tr>
-    <tr><td>.ls-no-border</td><td>classe</td></tr>
-    <tr><td>.ls-no-border-right</td><td>classe</td></tr>
-    <tr><td>.ls-no-border-left</td><td>classe</td></tr>
-    <tr><td>.ls-no-border-bottom</td><td>classe</td></tr>
-    <tr><td>.ls-no-border-top</td><td>classe</td></tr>
-    <tr><td>.ls-transparent-25</td><td>classe</td></tr>
-    <tr><td>.ls-transparent-50</td><td>classe</td></tr>
-    <tr><td>.ls-transparent-75</td><td>classe</td></tr>
-  </table>
-</div>
+  <div class="row" id="margin-e-padding">
+    <h1 class="ls-title-intro">Margin e Padding</h1>
+    <p>
+      Classes que alteram o <i>tamanho</i> de elementos
+    </p>
+     <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th><th>Descrição</th>
+        </tr>
+      </thead>
+      <tr><td>.ls-no-margin</td><td>classe</td></tr>
+      <tr><td>.ls-no-margin-left</td><td>classe</td></tr>
+      <tr><td>.ls-no-margin-right</td><td>classe</td></tr>
+      <tr><td>.ls-no-margin-top</td><td>classe</td></tr>
+      <tr><td>.ls-no-margin-bottom</td><td>classe</td></tr>
+      <tr><td>.ls-no-padding</td><td>classe</td></tr>
+      <tr><td>.ls-no-padding-left</td><td>classe</td></tr>
+      <tr><td>.ls-no-padding-right</td><td>classe</td></tr>
+      <tr><td>.ls-no-padding-top</td><td>classe</td></tr>
+      <tr><td>.ls-no-padding-bottom</td><td>classe</td></tr>
+      <tr><td>.ls-margin-auto</td><td>classe</td></tr>
+      <tr><td>.ls-xs-space</td><td>Coloca um padding de 5px na caixa</td></tr>
+      <tr><td>.ls-sm-space</td><td>Coloca um padding de 10px na caixa</td></tr>
+      <tr><td>.ls-md-space</td><td>Coloca um padding de 20px na caixa</td></tr>
+      <tr><td>.ls-lg-space</td><td>Coloca um padding de 40px na caixa</td></tr>
+    </table>
+  </div>
 
-<div class="row" id="cursor-e-mouse">
-  <h1 class="ls-title-intro">Cursor e mouse</h1>
-  <p>
-    Classes que alteram o fundo e a borda de elementos
-  </p>
-   <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Nome</th><th>Descrição</th>
-      </tr>
-    </thead>
-    <tr><td>.ls-cursor-pointer</td><td>classe</td></tr>
-    <tr><td>.ls-cursor-default</td><td>classe</td></tr>
-    <tr><td>.ls-cursor-crosshair</td><td>classe</td></tr>
-    <tr><td>.ls-cursor-move</td><td>classe</td></tr>
-    <tr><td>.ls-cursor-help</td><td>classe</td></tr>
-    <tr><td>.ls-cursor-wait</td><td>classe</td></tr>
-    <tr><td>.ls-cursor-inherit</td><td>classe</td></tr>
-    <tr><td>.ls-cursor-text</td><td>classe</td></tr>
-    <tr><td>.ls-cursor-progress</td><td>classe</td></tr>
-    <tr><td>.ls-cursor-grab</td><td>classe</td></tr>
-    <tr><td>.ls-cursor-grabbing</td><td>classe</td></tr>
-  </table>
-</div>
+  <div class="row" id="texto-e-alinhamento">
+    <h1 class="ls-title-intro">Texto e alinhamento</h1>
+    <p>
+      Classes que alteram o <i>tamanho</i> de elementos
+    </p>
+     <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th><th>Descrição</th>
+        </tr>
+      </thead>
+      <tr><td>.ls-txt-left</td><td>classe</td></tr>
+      <tr><td>.ls-txt-right</td><td>classe</td></tr>
+      <tr><td>.ls-txt-justify</td><td>classe</td></tr>
+      <tr><td>.ls-txt-center</td><td>classe</td></tr>
+      <tr><td>.ls-txt-center-all</td><td>classe</td></tr>
+      <tr><td>.ls-v-align-top</td><td>classe</td></tr>
+      <tr><td>.ls-v-align-middle</td><td>classe</td></tr>
+      <tr><td>.ls-v-align-bottom</td><td>classe</td></tr>
+      <tr><td>.ls-ellipsis</td><td>classe</td></tr>
+      <tr><td>.ls-ls-nowrap</td><td>classe</td></tr>
+      <tr><td>.ls-no-bold</td><td>classe</td></tr>
+      <tr><td>.ls-word-break-all</td><td>classe</td></tr>
+      <tr><td>.ls-word-break</td><td>classe</td></tr>
+      <tr><td>.ls-no-word-break</td><td>classe</td></tr>
+      <tr><td>.ls-no-list-style</td><td>classe</td></tr>
+      <tr><td>.ls-text-underline</td><td>classe</td></tr>
+      <tr><td>.ls-small-letter-spacing</td><td>classe</td></tr>
 
-<div class="row" id="cores">
-  <h1 class="ls-title-intro">Cores</h1>
-  <p>
-    Classes que alteram cores de fundo e de texto.
-  </p>
-   <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Nome</th><th>Descrição</th>
-      </tr>
-    </thead>
-    <tr><td>.ls-bg-white</td><td>classe</td></tr>
-    <tr><td>.ls-color-black</td><td>classe</td></tr>
-    <tr><td>.ls-color-danger</td><td>classe</td></tr>
-    <tr><td>.ls-dropdown-menu</td><td>classe</td></tr>
-    <tr><td>.ls-color-theme</td><td>Insere a cor do tema</td></tr>
-  </table>
-</div>
+      <tr><td>.ls-text-uppercase</td><td>Transforma todas letras para maiúsculas.</td></tr>
+      <tr><td>.ls-text-lowercase</td><td>Transforma todas letras para minúsculas.</td></tr>
+      <tr><td>.ls-text-capitalize</td><td>Transforma a primeira letra para maiúscula.</td></tr>
+    </table>
+  </div>
 
-<div class="row" id="formulario-e-inputs">
-  <h1 class="ls-title-intro">Formulários e inputs</h1>
-  <p>
-    Classes que alteram elementos de formulário
-  </p>
-   <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Nome</th><th>Descrição</th>
-      </tr>
-    </thead>
-    <tr><td>.ls-no-style-input</td><td>classe</td></tr>
-  </table>
-</div>
+  <div class="row" id="borda-e-transparencia">
+    <h1 class="ls-title-intro">Fundo, borda e transparência</h1>
+    <p>
+      Classes que alteram o fundo e a borda de elementos
+    </p>
+     <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th><th>Descrição</th>
+        </tr>
+      </thead>
+      <tr><td>.ls-no-bg</td><td>classe</td></tr>
+      <tr><td>.ls-no-bghover</td><td>classe</td></tr>
+      <tr><td>.ls-no-shadow</td><td>classe</td></tr>
+      <tr><td>.ls-border</td><td>Adiciona borda ao elemento</td></tr>
+      <tr><td>.ls-no-border</td><td>classe</td></tr>
+      <tr><td>.ls-no-border-right</td><td>classe</td></tr>
+      <tr><td>.ls-no-border-left</td><td>classe</td></tr>
+      <tr><td>.ls-no-border-bottom</td><td>classe</td></tr>
+      <tr><td>.ls-no-border-top</td><td>classe</td></tr>
+      <tr><td>.ls-transparent-25</td><td>classe</td></tr>
+      <tr><td>.ls-transparent-50</td><td>classe</td></tr>
+      <tr><td>.ls-transparent-75</td><td>classe</td></tr>
+    </table>
+  </div>
 
-<div class="row" id="geral">
-  <h1 class="ls-title-intro">Gerais</h1>
-  <p>
-    classes gerais
-  </p>
-   <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Nome</th><th>Descrição</th>
-      </tr>
-    </thead>
-    <tr><td>.ls-no-spin</td><td>classe</td></tr>
-    <tr><td>.ls-no-radius</td><td>classe</td></tr>
-    <tr><td>.ls-break-text</td><td>Força quebra de texto, mesmo quando não há espaçamento entre a palavra.</td></tr>
-    <tr><td>.ls-txt-access</td><td>Classe que esconde texto, mas fica acessível a leitores de tela.</td></tr>
-  </table>
-</div>
+  <div class="row" id="cursor-e-mouse">
+    <h1 class="ls-title-intro">Cursor e mouse</h1>
+    <p>
+      Classes que alteram o fundo e a borda de elementos
+    </p>
+     <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th><th>Descrição</th>
+        </tr>
+      </thead>
+      <tr><td>.ls-cursor-pointer</td><td>classe</td></tr>
+      <tr><td>.ls-cursor-default</td><td>classe</td></tr>
+      <tr><td>.ls-cursor-crosshair</td><td>classe</td></tr>
+      <tr><td>.ls-cursor-move</td><td>classe</td></tr>
+      <tr><td>.ls-cursor-help</td><td>classe</td></tr>
+      <tr><td>.ls-cursor-wait</td><td>classe</td></tr>
+      <tr><td>.ls-cursor-inherit</td><td>classe</td></tr>
+      <tr><td>.ls-cursor-text</td><td>classe</td></tr>
+      <tr><td>.ls-cursor-progress</td><td>classe</td></tr>
+      <tr><td>.ls-cursor-grab</td><td>classe</td></tr>
+      <tr><td>.ls-cursor-grabbing</td><td>classe</td></tr>
+    </table>
+  </div>
 
-<div class="row" id="geral">
-  <h1 class="ls-title-intro">Classes Responsivas</h1>
-  <p>
-    classes
-  </p>
-   <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Nome</th><th>Descrição</th>
-      </tr>
-    </thead>
-    <tr><td>.ls-float-right-sm</td><td>Insere float: right apenas para resolução acima de 768px</td></tr>
-    <tr><td>.ls-btn-block-sm</td><td>Faz com que o botão fique com visual de block na resolução abaixo de 768px</td></tr>
-  </table>
-</div>
+  <div class="row" id="cores">
+    <h1 class="ls-title-intro">Cores</h1>
+    <p>
+      Classes que alteram cores de fundo e de texto.
+    </p>
+     <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th><th>Descrição</th>
+        </tr>
+      </thead>
+      <tr><td>.ls-bg-white</td><td>classe</td></tr>
+      <tr><td>.ls-color-black</td><td>classe</td></tr>
+      <tr><td>.ls-color-danger</td><td>classe</td></tr>
+      <tr><td>.ls-dropdown-menu</td><td>classe</td></tr>
+      <tr><td>.ls-color-theme</td><td>Insere a cor do tema</td></tr>
+    </table>
+  </div>
+
+  <div class="row" id="formulario-e-inputs">
+    <h1 class="ls-title-intro">Formulários e inputs</h1>
+    <p>
+      Classes que alteram elementos de formulário
+    </p>
+     <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th><th>Descrição</th>
+        </tr>
+      </thead>
+      <tr><td>.ls-no-style-input</td><td>classe</td></tr>
+    </table>
+  </div>
+
+  <div class="row" id="geral">
+    <h1 class="ls-title-intro">Gerais</h1>
+    <p>
+      classes gerais
+    </p>
+     <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th><th>Descrição</th>
+        </tr>
+      </thead>
+      <tr><td>.ls-no-spin</td><td>classe</td></tr>
+      <tr><td>.ls-no-radius</td><td>classe</td></tr>
+      <tr><td>.ls-break-text</td><td>Força quebra de texto, mesmo quando não há espaçamento entre a palavra.</td></tr>
+      <tr><td>.ls-txt-access</td><td>Classe que esconde texto, mas fica acessível a leitores de tela.</td></tr>
+    </table>
+  </div>
+
+  <div class="row" id="geral">
+    <h1 class="ls-title-intro">Classes Responsivas</h1>
+    <p>
+      classes
+    </p>
+     <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th><th>Descrição</th>
+        </tr>
+      </thead>
+      <tr><td>.ls-float-right-sm</td><td>Insere float: right apenas para resolução acima de 768px</td></tr>
+      <tr><td>.ls-btn-block-sm</td><td>Faz com que o botão fique com visual de block na resolução abaixo de 768px</td></tr>
+    </table>
+  </div>
+</section>

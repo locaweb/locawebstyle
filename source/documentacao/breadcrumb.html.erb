@@ -5,18 +5,29 @@ keywords: documentação, locastyle, breadcrumb
 type: css
 ---
 
-<p>Breadcrumbs são listas ordenadas simples que indicam onde o usuário está juntamente com usa hierarquia de navegação.</p>
-<div class="ls-box-demo">
-  <%= partial 'documentacao/shared/breadcrumb/breadcrumb' %>
-</div>
-<code class="language-html ls-well-example">
-  <%= partial 'documentacao/shared/breadcrumb/breadcrumb' %>
-</code>
+<%= partial 'partials/doc-menu-layout'%>
 
-<p>Exemplo com  mais páginas visitadas.</p>
-<div class="ls-box-demo">
-  <%= partial 'documentacao/shared/breadcrumb/breadcrumb-more' %>
-</div>
-<code class="language-html ls-well-example">
-  <%= partial 'documentacao/shared/breadcrumb/breadcrumb-more' %>
-</code>
+<section class="col-md-9">
+
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
+
+  <p>Breadcrumbs são listas ordenadas simples que indicam onde o usuário está juntamente com usa hierarquia de navegação.</p>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/breadcrumb/breadcrumb' %>
+  </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/breadcrumb/breadcrumb' %>
+  </code>
+
+  <p>Exemplo com  mais páginas visitadas.</p>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/breadcrumb/breadcrumb-more' %>
+  </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/breadcrumb/breadcrumb-more' %>
+  </code>
+</section>

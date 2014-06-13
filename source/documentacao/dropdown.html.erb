@@ -3,157 +3,168 @@ title: Dropdown
 description: Componente para agrupar listas de links.
 type: component
 ---
-<h2 class="ls-title-2">Utilizando o dropdown.</h2>
-<hr>
-<table class="ls-table">
-  <thead>
-    <tr>
-      <th>Seletor</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>.ls-dropdown</td>
-      <td>Vai no elemento pai da listagem de links, normalmente "div".</td>
-    </tr>
-    <tr>
-      <td>data-ls-module="dropdown"</td>
-      <td>Vai no elemento pai e ativará a função de dropdown na estrutura.</td>
-    </tr>
-  </tbody>
-</table>
+<%= partial 'partials/doc-menu-components'%>
 
-<div class="ls-box-demo">
-  <%= partial 'documentacao/shared/dropdown' %>
-</div>
-<code class="language-html ls-well-example">
-  <%= partial 'documentacao/shared/dropdown' %>
-</code>
+<section class="col-md-9">
 
-<h2 class="ls-title-2">Mudando a posição da droplist.</h2>
-<p>Basta inserir a classe <code>.ls-pos-right</code>, que o dropdown abre à direita do elemento</p>
-<hr>
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
 
-<div class="ls-box-demo">
-  <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
-    <a href="#" class="ls-btn-primary">Users</a>
-    <ul class="ls-dropdown-nav">
+  <h2 class="ls-title-2">Utilizando o dropdown.</h2>
+  <hr>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Seletor</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>.ls-dropdown</td>
+        <td>Vai no elemento pai da listagem de links, normalmente "div".</td>
+      </tr>
+      <tr>
+        <td>data-ls-module="dropdown"</td>
+        <td>Vai no elemento pai e ativará a função de dropdown na estrutura.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/dropdown' %>
+  </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/dropdown' %>
+  </code>
+
+  <h2 class="ls-title-2">Mudando a posição da droplist.</h2>
+  <p>Basta inserir a classe <code>.ls-pos-right</code>, que o dropdown abre à direita do elemento</p>
+  <hr>
+
+  <div class="ls-box-demo">
+    <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+      <a href="#" class="ls-btn-primary">Users</a>
+      <ul class="ls-dropdown-nav">
+          <li><a href="#">Edit</a></li>
+          <li><a href="#">Config</a></li>
+          <li><a href="#">Save</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <code class="language-html ls-well-example">
+    <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+      <a href="#" class="ls-btn-primary">Users</a>
+      <ul class="ls-dropdown-nav">
+          <li><a href="#">Edit</a></li>
+          <li><a href="#">Config</a></li>
+          <li><a href="#">Save</a></li>
+      </ul>
+    </div>
+  </code>
+
+
+  <h2 class="ls-title-2">Dropdown com  último link em destaque.</h2>
+  <p>Utilizando a classe funcional <code>.ls-color-danger</code> pra diferenciar o link dentro do droplist</p>
+  <div class="ls-box-demo">
+    <div data-ls-module="dropdown" class="ls-dropdown">
+      <a href="#" class="ls-btn-primary">Users</a>
+      <ul class="ls-dropdown-nav">
+          <li><a href="#">Edit</a></li>
+          <li><a href="#">Config</a></li>
+          <li><a href="#">Save</a></li>
+          <li><a href="#" class="ls-color-danger">Remove</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <code class="language-html ls-well-example">
+    <div data-ls-module="dropdown" class="ls-dropdown">
+      <a href="#" class="ls-btn-primary">Users</a>
+      <ul class="ls-dropdown-nav">
+          <li><a href="#">Edit</a></li>
+          <li><a href="#">Config</a></li>
+          <li><a href="#">Save</a></li>
+          <li><a href="#" class="ls-color-danger">Remove</a></li>
+      </ul>
+    </div>
+  </code>
+
+  <h2 class="ls-title-2">Dropdown sem texto.</h2>
+  <p>Basta deixar o link sem texto, conforme o exemplo abaixo</p>
+
+  <div class="ls-box-demo">
+    <div data-ls-module="dropdown" class="ls-dropdown">
+      <a href="#" class="ls-btn"></a>
+      <ul class="ls-dropdown-nav">
         <li><a href="#">Edit</a></li>
         <li><a href="#">Config</a></li>
         <li><a href="#">Save</a></li>
-    </ul>
-  </div>
-
-</div>
-<code class="language-html ls-well-example">
-  <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
-    <a href="#" class="ls-btn-primary">Users</a>
-    <ul class="ls-dropdown-nav">
+      </ul>
+    </div>
+    <div data-ls-module="dropdown" class="ls-dropdown">
+      <a href="#" class="ls-btn-primary"></a>
+      <ul class="ls-dropdown-nav">
         <li><a href="#">Edit</a></li>
         <li><a href="#">Config</a></li>
         <li><a href="#">Save</a></li>
-    </ul>
-  </div>
-</code>
-
-
-<h2 class="ls-title-2">Dropdown com  último link em destaque.</h2>
-<p>Utilizando a classe funcional <code>.ls-color-danger</code> pra diferenciar o link dentro do droplist</p>
-<div class="ls-box-demo">
-  <div data-ls-module="dropdown" class="ls-dropdown">
-    <a href="#" class="ls-btn-primary">Users</a>
-    <ul class="ls-dropdown-nav">
+      </ul>
+    </div>
+    <div data-ls-module="dropdown" class="ls-dropdown">
+      <a href="#" class="ls-btn-dark"></a>
+      <ul class="ls-dropdown-nav">
         <li><a href="#">Edit</a></li>
         <li><a href="#">Config</a></li>
         <li><a href="#">Save</a></li>
-        <li><a href="#" class="ls-color-danger">Remove</a></li>
-    </ul>
-  </div>
-</div>
-
-<code class="language-html ls-well-example">
-  <div data-ls-module="dropdown" class="ls-dropdown">
-    <a href="#" class="ls-btn-primary">Users</a>
-    <ul class="ls-dropdown-nav">
+      </ul>
+    </div>
+    <div data-ls-module="dropdown" class="ls-dropdown">
+      <a href="#" class="ls-btn-danger"></a>
+      <ul class="ls-dropdown-nav">
         <li><a href="#">Edit</a></li>
         <li><a href="#">Config</a></li>
         <li><a href="#">Save</a></li>
-        <li><a href="#" class="ls-color-danger">Remove</a></li>
-    </ul>
+      </ul>
+    </div>
   </div>
-</code>
 
-<h2 class="ls-title-2">Dropdown sem texto.</h2>
-<p>Basta deixar o link sem texto, conforme o exemplo abaixo</p>
-
-<div class="ls-box-demo">
+  <code class="language-html ls-well-example">
   <div data-ls-module="dropdown" class="ls-dropdown">
     <a href="#" class="ls-btn"></a>
     <ul class="ls-dropdown-nav">
-      <li><a href="#">Edit</a></li>
-      <li><a href="#">Config</a></li>
-      <li><a href="#">Save</a></li>
+        <li><a href="#">Edit</a></li>
+        <li><a href="#">Config</a></li>
+        <li><a href="#">Save</a></li>
     </ul>
   </div>
   <div data-ls-module="dropdown" class="ls-dropdown">
     <a href="#" class="ls-btn-primary"></a>
     <ul class="ls-dropdown-nav">
-      <li><a href="#">Edit</a></li>
-      <li><a href="#">Config</a></li>
-      <li><a href="#">Save</a></li>
+        <li><a href="#">Edit</a></li>
+        <li><a href="#">Config</a></li>
+        <li><a href="#">Save</a></li>
     </ul>
   </div>
   <div data-ls-module="dropdown" class="ls-dropdown">
     <a href="#" class="ls-btn-dark"></a>
     <ul class="ls-dropdown-nav">
-      <li><a href="#">Edit</a></li>
-      <li><a href="#">Config</a></li>
-      <li><a href="#">Save</a></li>
+        <li><a href="#">Edit</a></li>
+        <li><a href="#">Config</a></li>
+        <li><a href="#">Save</a></li>
     </ul>
   </div>
   <div data-ls-module="dropdown" class="ls-dropdown">
     <a href="#" class="ls-btn-danger"></a>
     <ul class="ls-dropdown-nav">
-      <li><a href="#">Edit</a></li>
-      <li><a href="#">Config</a></li>
-      <li><a href="#">Save</a></li>
+        <li><a href="#">Edit</a></li>
+        <li><a href="#">Config</a></li>
+        <li><a href="#">Save</a></li>
     </ul>
   </div>
-</div>
 
-<code class="language-html ls-well-example">
-<div data-ls-module="dropdown" class="ls-dropdown">
-  <a href="#" class="ls-btn"></a>
-  <ul class="ls-dropdown-nav">
-      <li><a href="#">Edit</a></li>
-      <li><a href="#">Config</a></li>
-      <li><a href="#">Save</a></li>
-  </ul>
-</div>
-<div data-ls-module="dropdown" class="ls-dropdown">
-  <a href="#" class="ls-btn-primary"></a>
-  <ul class="ls-dropdown-nav">
-      <li><a href="#">Edit</a></li>
-      <li><a href="#">Config</a></li>
-      <li><a href="#">Save</a></li>
-  </ul>
-</div>
-<div data-ls-module="dropdown" class="ls-dropdown">
-  <a href="#" class="ls-btn-dark"></a>
-  <ul class="ls-dropdown-nav">
-      <li><a href="#">Edit</a></li>
-      <li><a href="#">Config</a></li>
-      <li><a href="#">Save</a></li>
-  </ul>
-</div>
-<div data-ls-module="dropdown" class="ls-dropdown">
-  <a href="#" class="ls-btn-danger"></a>
-  <ul class="ls-dropdown-nav">
-      <li><a href="#">Edit</a></li>
-      <li><a href="#">Config</a></li>
-      <li><a href="#">Save</a></li>
-  </ul>
-</div>
-
-</code>
+  </code>
+</section>

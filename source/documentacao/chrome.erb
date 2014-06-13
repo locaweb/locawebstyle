@@ -3,10 +3,19 @@ title: Extensão para o chrome
 description: Veja a documentação sem precisar mudar de aba ou janela.
 type: component
 ---
-<div class="row">
+
+<%= partial 'partials/doc-menu-components'%>
+
+<section class="col-md-9">
+
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
 
   <h5 class="ls-title-2">Chrome</h5>
   <p>
     <a href="https://chrome.google.com/webstore/detail/bgagjahkkicokocplofmomgpkpmdckam">Instale a extensão para o Google Chrome</a>
   </p>
-</div>
+</section>

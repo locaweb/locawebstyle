@@ -4,41 +4,52 @@ description: Para exibir balões de informação.
 type: component
 ---
 
-<p>O tooltip exibe conteúdo curto, caso necessite de um conteúdo longo, por favor utilize nosso <a href="../popover/">popover</a>.</p>
-<p>Indicamos utilizar esse elemento em links, para que ele funcione ao receber o foco do teclado.</p>
+<%= partial 'partials/doc-menu-components'%>
 
-<p>O conteúdo do tooltip é inserido no atributo <code>aria-label</code>, assim ele funciona perfeitamente nos leitores de tela.</p>
+<section class="col-md-9">
 
-<div class="ls-box-demo">
-  <%= partial 'documentacao/shared/tooltip' %>
-</div>
-<code class="language-html ls-well-example">
-  <%= partial 'documentacao/shared/tooltip' %>
-</code>
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
 
-<table class="ls-table ls-no-hover">
-  <thead>
-    <tr>
-      <th>Classe</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>ls-tooltip-top</th>
-      <td>Exibe acima do elemento.</td>
-    </tr>
-    <tr>
-      <th>ls-tooltip-right</th>
-      <td>Exibe ao lado direito do elemento.</td>
-    </tr>
-    <tr>
-      <th>ls-tooltip-bottom</th>
-      <td>Exibe abaixo do elemento.</td>
-    </tr>
-    <tr>
-      <th>ls-tooltip-left</th>
-      <td>Exibe ao lado esquerdo do elemento.</td>
-    </tr>
-  </tbody>
-</table>
+  <p>O tooltip exibe conteúdo curto, caso necessite de um conteúdo longo, por favor utilize nosso <a href="../popover/">popover</a>.</p>
+  <p>Indicamos utilizar esse elemento em links, para que ele funcione ao receber o foco do teclado.</p>
+
+  <p>O conteúdo do tooltip é inserido no atributo <code>aria-label</code>, assim ele funciona perfeitamente nos leitores de tela.</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/tooltip' %>
+  </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/tooltip' %>
+  </code>
+
+  <table class="ls-table ls-no-hover">
+    <thead>
+      <tr>
+        <th>Classe</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>ls-tooltip-top</th>
+        <td>Exibe acima do elemento.</td>
+      </tr>
+      <tr>
+        <th>ls-tooltip-right</th>
+        <td>Exibe ao lado direito do elemento.</td>
+      </tr>
+      <tr>
+        <th>ls-tooltip-bottom</th>
+        <td>Exibe abaixo do elemento.</td>
+      </tr>
+      <tr>
+        <th>ls-tooltip-left</th>
+        <td>Exibe ao lado esquerdo do elemento.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

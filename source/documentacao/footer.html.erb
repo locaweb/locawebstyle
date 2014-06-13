@@ -3,11 +3,22 @@ title: Footer
 description: Exemplo de footer padrão do Locaweb Style
 type: css
 ---
-<p>
-  O footer do Locaweb Style é todo responsivo, se adapta a sua tela (desktop, tablet ou mobile). Basta inserí-lo dentro e no final do <code>.ls-main</code>.
-</p>
-<%= partial 'documentacao/shared/footer' %>
-<code class="language-html ls-well-example">
-  <%= partial 'documentacao/shared/footer' %>
-</code>
+<%= partial 'partials/doc-menu-layout'%>
 
+<section class="col-md-9">
+
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
+
+
+  <p>
+    O footer do Locaweb Style é todo responsivo, se adapta a sua tela (desktop, tablet ou mobile). Basta inserí-lo dentro e no final do <code>.ls-main</code>.
+  </p>
+  <%= partial 'documentacao/shared/footer' %>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/footer' %>
+  </code>
+</section>

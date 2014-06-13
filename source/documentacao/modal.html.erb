@@ -4,104 +4,114 @@ description: Modal é um componente para exibir uma informação ou ...
 keywords: documentação, locastyle, modal
 type: component
 ---
+<%= partial 'partials/doc-menu-components'%>
 
-<div class="doc-block">
-  <h2 class="ls-title-2">Como usar</h2>
-</div>
-<div class="ls-alert-info">
-  Para abrir a modal automaticamente basta na url passar esse parametro com o target da Modal.
-  <strong><a href="/documentacao/modal/#!/#myAwesomeModal" target="blank">/#!/#myAwesomeModal</a></strong>
-</div>
-<table class="ls-table">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Tipo</th>
-      <th>Padrão</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
+<section class="col-md-9">
 
-    <tr>
-      <td>effect</td>
-      <td>fade, crazy</td>
-      <td>fade</td>
-      <td>Cria uma animação</td>
-    </tr>
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
 
-    <tr>
-      <td>target</td>
-      <td>#myTarget</td>
-      <td>--</td>
-      <td>Abre a modal com o mesmo nome do target</td>
-    </tr>
+  <div class="doc-block">
+    <h2 class="ls-title-2">Como usar</h2>
+  </div>
+  <div class="ls-alert-info">
+    Para abrir a modal automaticamente basta na url passar esse parametro com o target da Modal.
+    <strong><a href="/documentacao/modal/#!/#myAwesomeModal" target="blank">/#!/#myAwesomeModal</a></strong>
+  </div>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Padrão</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
 
-    <tr>
-      <td>content</td>
-      <td>um texto curto</td>
-      <td>--</td>
-      <td>
-        Abre a modal com o texto inserido
-        <p>Só funciona se não houver <strong>data-target</strong></p>
-      </td>
-    </tr>
+      <tr>
+        <td>effect</td>
+        <td>fade, crazy</td>
+        <td>fade</td>
+        <td>Cria uma animação</td>
+      </tr>
 
-    <tr>
-      <td>title</td>
-      <td>um titulo curto</td>
-      <td>--</td>
-      <td>
-        Abre a modal com o titulo inserido
-        <p>Só funciona se não houver <strong>data-target</strong></p>
-      </td>
-    </tr>
+      <tr>
+        <td>target</td>
+        <td>#myTarget</td>
+        <td>--</td>
+        <td>Abre a modal com o mesmo nome do target</td>
+      </tr>
 
-    <tr>
-      <td>save</td>
-      <td>texto</td>
-      <td>--</td>
-      <td>
-        Coloca um texto no botão de salvar
-        <p>Só funciona se não houver <strong>data-target</strong></p>
-      </td>
-    </tr>
+      <tr>
+        <td>content</td>
+        <td>um texto curto</td>
+        <td>--</td>
+        <td>
+          Abre a modal com o texto inserido
+          <p>Só funciona se não houver <strong>data-target</strong></p>
+        </td>
+      </tr>
 
-    <tr>
-      <td>close</td>
-      <td>texto</td>
-      <td>--</td>
-      <td>
-        Coloca um texto no botão de fechar
-        <p>Só funciona se não houver <strong>data-target</strong></p>
-      </td>
-    </tr>
+      <tr>
+        <td>title</td>
+        <td>um titulo curto</td>
+        <td>--</td>
+        <td>
+          Abre a modal com o titulo inserido
+          <p>Só funciona se não houver <strong>data-target</strong></p>
+        </td>
+      </tr>
 
-    <tr>
-      <td>action</td>
-      <td>link</td>
-      <td>--</td>
-      <td>
-        Coloca um link no botão de salvar
-        <p>Só funciona se não houver <strong>data-target</strong></p>
-      </td>
-    </tr>
+      <tr>
+        <td>save</td>
+        <td>texto</td>
+        <td>--</td>
+        <td>
+          Coloca um texto no botão de salvar
+          <p>Só funciona se não houver <strong>data-target</strong></p>
+        </td>
+      </tr>
 
-    <tr>
-      <td>class</td>
-      <td>texto</td>
-      <td>--</td>
-      <td>
-        Coloca uma classe no botão de salvar
-        <p>Só funciona se não houver <strong>data-target</strong></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+      <tr>
+        <td>close</td>
+        <td>texto</td>
+        <td>--</td>
+        <td>
+          Coloca um texto no botão de fechar
+          <p>Só funciona se não houver <strong>data-target</strong></p>
+        </td>
+      </tr>
 
-<div class="ls-box-demo">
-  <%= partial 'documentacao/shared/modal' %>
-</div>
-<code class="language-html ls-well-example">
-  <%= partial 'documentacao/shared/modal' %>
-</code>
+      <tr>
+        <td>action</td>
+        <td>link</td>
+        <td>--</td>
+        <td>
+          Coloca um link no botão de salvar
+          <p>Só funciona se não houver <strong>data-target</strong></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>class</td>
+        <td>texto</td>
+        <td>--</td>
+        <td>
+          Coloca uma classe no botão de salvar
+          <p>Só funciona se não houver <strong>data-target</strong></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/modal' %>
+  </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/modal' %>
+  </code>
+</section>
