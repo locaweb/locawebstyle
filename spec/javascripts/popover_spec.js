@@ -51,6 +51,10 @@ describe("Popover: ", function() {
       locastyle.init();
       locastyle.init();
       locastyle.init();
+
+      // clean prevent default events
+      $("a").off("click.lsPreventDefault");
+
       expect($("[data-ls-module='popover']")).toHaveBeenBindedOnce("click");
     });
 
