@@ -46,7 +46,6 @@ describe("Dropdown: ", function() {
     describe("when unbind is called in module init", function() {
       it("should prevent toggleDropdown from being called twice or more times", function() {
         // Added as pending because the tests broke while I was testing other functionality
-        pending();
         var spy = spyOn(locastyle.dropdown, "toggleDropdown");
         locastyle.dropdown.init();
         locastyle.dropdown.init();
