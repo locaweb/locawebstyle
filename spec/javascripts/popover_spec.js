@@ -2,11 +2,9 @@ describe("Popover: ", function() {
   beforeEach(function() {
     loadFixtures('popover_fixture.html');
     locastyle.popover.init();
-    jasmine.clock().install();
   });
 
   afterEach(function() {
-    jasmine.clock().uninstall();
     locastyle.popover.destroyPopover();
   });
 
@@ -36,7 +34,6 @@ describe("Popover: ", function() {
 
     it("Should remove popover on mouseleave of element", function() {
       $('[data-ls-module="popover"]').trigger("mouseleave");
-      jasmine.clock().tick(1000);
       expect($(".ls-popover")).toBeTruthy();
     });
 
