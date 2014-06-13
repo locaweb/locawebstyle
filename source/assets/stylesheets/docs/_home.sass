@@ -1,0 +1,146 @@
+.doc-highlight
+  background: url(../images/docs/bg-highlight.jpg) fixed no-repeat top center
+
+  .container
+    color: #fff
+    position: relative
+    padding: 155px 0 80px
+    text-align: center
+
+  h1
+    font-size: 5.5rem
+    font-weight: 300
+    margin-bottom: 40px
+    text-transform: uppercase
+
+    strong
+      font-weight: 700
+
+  p
+    color: #fff
+    font-size: 2rem
+    font-weight: 300
+    margin-bottom: 70px
+
+  .doc-btn
+    border-color: #fff
+    color: #fff
+    &:hover
+      background-color: rgba(255, 255, 255, 0.2)
+
+.doc-btn
+  display: block
+  border: 3px solid lightgrey
+  color: #222
+  font-size: 0.9375rem
+  padding: 20px 25px
+  text-transform: uppercase
+  width: 300px
+  margin: 0 auto
+  text-align: center
+
+  &:hover
+    background-color: rgba(0, 0, 0, 0.1)
+
+.doc-version
+  margin-top: 30px
+  display: block
+  cursor: default
+  color: rgba(255, 255, 255, 0.25)
+
+//
+// DOC INFO INTRO
+//
+.doc-info-intro
+  [class*="doc-icon-"]
+    text-align: center
+    width: 100%
+
+    &:before
+      width: 100%
+      padding: 55px 0 0
+      margin-bottom: 80px
+      color: #001e45
+      display: block
+      // background: url(../images/docs/hexa.png) no-repeat center
+      // background-size: contain
+      font-size: 4rem
+      position: relative
+      z-index: 1
+  h2
+    text-transform: uppercase
+    font-weight: 300
+
+.doc-hexa
+  position: relative
+  display: block
+
+  &:hover
+    .hexa, .hexa:before, .hexa:after
+      background: #001e45
+
+    &:before
+      color: #fff
+
+  h2
+    font-size: 1.0625rem
+    font-weight: 600
+    color: #222
+    margin-bottom: 15px
+
+  p
+    font-size: 1rem
+    font-weight: 300
+    color: #777
+
+.hexa
+  width: 146px
+  height: 73px
+  position: absolute
+  top: 50px
+  left: 30%
+  z-index: 0
+  display: inline-block
+
+.hexa, .hexa:before, .hexa:after
+  background: #f2f2f2
+
+.hexa:before, .hexa:after
+  content: ""
+  position: absolute
+  left: 30px
+  width: 86px
+  height: 83px
+  -moz-transform: rotate(145deg) skew(22.5deg)
+  -webkit-transform: rotate(145deg) skew(22.5deg)
+  transform: rotate(145deg) skew(22.5deg)
+
+.hexa:before
+  top: -42px
+
+.hexa:after
+  top: 31px
+
+//
+// DOC PORTFOLIO
+//
+.doc-portfolio-thumb
+  padding: 6px
+  background-color: #fff
+  display: block
+  font-size: .88rem
+  font-weight: 300
+  color: #777
+  text-align: center
+
+  img
+    margin-bottom: 22px
+
+  h3
+    font-size: 1.06rem
+    font-weight: 600
+    color: #222
+    padding: 0 0 7px
+
+  p
+    padding: 0 20px

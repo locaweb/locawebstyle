@@ -1,0 +1,116 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M892.118 188.118l-120.234-120.236c-37.338-37.336-111.084-67.882-163.884-67.882h-448c-52.8 0-96 43.2-96 96v832c0 52.8 43.2 96 96 96h704c52.8 0 96-43.2 96-96v-576c0-52.8-30.546-126.546-67.882-163.882zM640 135.562c2.196 0.804 4.452 1.68 6.758 2.636 18.060 7.482 30.598 16.176 34.616 20.194l120.236 120.238c4.018 4.018 12.712 16.554 20.194 34.614 0.956 2.306 1.832 4.562 2.636 6.756l-184.44 0v-184.438zM832 896h-640v-768h384v256h256v512zM256 512h512v64h-512zM256 640h512v64h-512zM256 768h512v64h-512z"
+				],
+				"tags": [
+					"file",
+					"list",
+					"paper",
+					"page",
+					"document"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 37,
+				"order": 3,
+				"prevSize": 32,
+				"code": 58880,
+				"name": "file",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 37
+		},
+		{
+			"icon": {
+				"paths": [
+					"M384 832h640v128h-640zM384 448h640v128h-640zM384 64h640v128h-640zM192 0v256h-64v-192h-64v-64zM128 526v50h128v64h-192v-146l128-60v-50h-128v-64h192v146zM256 704v320h-192v-64h128v-64h-128v-64h128v-64h-128v-64z"
+				],
+				"tags": [
+					"numbered-list",
+					"list",
+					"items",
+					"nl"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 182,
+				"order": 2,
+				"prevSize": 32,
+				"code": 58881,
+				"name": "numbered-list",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 182
+		},
+		{
+			"icon": {
+				"paths": [
+					"M736 448l-256 256-256-256h160v-384h192v384zM480 704h-480v256h960v-256h-480zM896 832h-128v-64h128v64z"
+				],
+				"tags": [
+					"download",
+					"store",
+					"save"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 191,
+				"order": 4,
+				"prevSize": 32,
+				"code": 58882,
+				"name": "download",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 191
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "icomoon"
+	},
+	"preferences": {
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon"
+			},
+			"showGlyphs": true,
+			"metrics": {
+				"emSize": 512,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"resetPoint": 58880,
+			"showQuickUse": true,
+			"quickUsageToken": false,
+			"showMetrics": true,
+			"showMetadata": false
+		},
+		"imagePref": {
+			"color": 0,
+			"height": 32,
+			"columns": 16,
+			"margin": 16,
+			"png": false,
+			"sprites": true
+		},
+		"historySize": 100,
+		"showCodes": true,
+		"gridSize": 16,
+		"showLiga": false,
+		"showGrid": true,
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"search": ""
+	}
+}
