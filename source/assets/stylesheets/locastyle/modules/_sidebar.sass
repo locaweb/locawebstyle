@@ -1,3 +1,4 @@
+
 .ls-sidebar
   background: #222
   width: $sidebarWidth
@@ -14,10 +15,40 @@
     +translate(0, 0)
     z-index: 1
 
+
+  .ls-screen-xs & .ls-user-account + .ls-ico-user + .ls-menu,
+  .ls-screen-xs & .ls-user-account + .ls-menu
+    margin-top: $heightTopbar
+
+  .ls-user-account
+    position: absolute
+    top: 0
+    left: 0
+    padding: 0
+    display: inline-block
+    width: 100%
+    background-color: #111
+
+    &.ls-active
+      height: 100%
+
+
+    .ls-ico-user
+      padding: 15px
+
+    .ls-user-menu
+      background-color: #111
+      position: static
+
+
   .ls-area-account
     background-color: #111
     border-bottom: 1px solid #292929
     padding: 20px 15px
+    position: absolute
+    bottom: 0
+    width: 100%
+    z-index: 2
 
     &[class*="ls-ico"]:before
       float: left
@@ -126,6 +157,7 @@
 
 
 @media (min-width: $screen-sm)
+
   .ls-sidebar
     +transform(none)
     +translate(0, 0)
@@ -133,3 +165,9 @@
     float: none
     top: $heightTopbar
     height: calc(100% - 60px)
+
+    .ls-area-account
+      position: static
+
+    .ls-user-account
+      display: none
