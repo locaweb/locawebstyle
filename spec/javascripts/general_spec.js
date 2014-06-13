@@ -67,6 +67,10 @@ describe("Locastyle in general: ", function() {
       it("should not bind the same event twice os elements with custom event", function(){
         locastyle.init();
         locastyle.init();
+
+        // clean prevent default events
+        $("a").off("click.lsPreventDefault");
+
         expect($('[data-ls-toggle-fields]')).toHaveBeenBindedOnce("click");
         expect($('.ls-submenu > a')).toHaveBeenBindedOnce("click");
         expect($(".disabled, [disabled='disabled']")).toHaveBeenBindedOnce("click");
