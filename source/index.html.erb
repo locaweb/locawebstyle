@@ -1,31 +1,95 @@
 ---
-title: Início
-layout: base
+title: Home
+layout: introduction
 description: Página inicial
 keywords: documentação, locastyle
 ---
-<div class="row">
-	<div class="col-md-4">
-		<div class="ls-box ls-lg-space ls-ico-book ls-ico-bg">
-			<h1 class="ls-title-1 ls-color-theme">Documentação</h1>
-			<p>Aplique nossos modulos em seu projeto com muito mais facilidade.</p>
-			<%= link_to 'Comece aqui', base_url+'/documentacao', :class => 'ls-btn-primary' %>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="ls-box ls-lg-space ls-ico-download2 ls-ico-bg">
-			<h1 class="ls-title-1 ls-color-theme">Download</h1>
-			<p>Baixe nosso conteúdo e integre nossos modulos em seu projeto.</p>
-			<%= link_to 'Baixe aqui', base_url+'/download', :class => 'ls-btn-primary' %>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="ls-box ls-lg-space ls-ico-pencil2 ls-ico-bg">
-			<h1 class="ls-title-1 ls-color-theme">Blog</h1>
-			<p>Fique de olho nas atualizações, changelog e alguns avanços de FrontEnd.</p>
-			<%= link_to 'veja mais', base_url+'/blog', :class => 'ls-btn-primary' %>
-		</div>
-	</div>
-</div>
-<br>
-<span class="ls-tag">Versão atual: <%= settings.stable %></span>
+
+<section class="doc-highlight">
+  <div class="container">
+
+    <%= partial 'partials/doc-menu'%>
+
+    <h1><strong>Locaweb</strong> Style</h1>
+    <p>Disponibilizamos comportamentos e uma interface usada por milhares de usuários.</p>
+
+    <a href="<%= base_url %>/documentacao" class="doc-btn">Use o Locaweb Style</a>
+
+    <span class="doc-version">Versão <%= settings.stable %></span>
+
+  </div>
+</section>
+
+
+<section class="doc-section doc-info-intro container">
+
+  <h1>Designed for everyone, everywhere</h1>
+  <p>Construa sistemas rapidamente utilizando o Locaweb Style. Disponibilizamos comportamentos e uma interface usada por milhares de usuários.</p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <a href="<%= base_url %>/documentacao/downloads" class="doc-icon-download doc-hexa">
+        <span class="hexa"></span>
+        <h2>Baixe ou use direto do server</h2>
+        <p>Use via CDN ou baixe o ZIP com os assets necessários. Simples e Rápido.</p>
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="<%= base_url %>/documentacao" class="doc-icon-file doc-hexa">
+        <span class="hexa"></span>
+        <h2>Veja a documentação completa</h2>
+        <p><%= lorem.sentence %></p>
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="<%= base_url %>/blog" class="doc-icon-numbered-list doc-hexa">
+        <span class="hexa"></span>
+        <h2>Change log / Blog</h2>
+        <p><%= lorem.sentence %></p>
+      </a>
+    </div>
+  </div>
+  <hr class="doc-hr">
+  <p class="doc-msg-info">Locaweb Style é open source. Ele está hospedado, desenvolvido e mantido no GitHub.</p>
+  <a href="https://github.com/locaweb/locawebstyle" target="_blank" class="doc-btn">Ver projeto no github</a>
+
+</section>
+<section class="doc-section doc-section-gray doc-portfolio">
+<div class="container">
+  <h1>Construído com Locaweb Style</h1>
+  <p>Tem Hover? Tem! Cadê a sidebar? Tá alí!<br>Veja algumas variações de páginas construídas com Locastyle.</p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <a href="#" class="doc-portfolio-thumb">
+        <img src="/assets/images/docs/intro-thumb-email.png" alt="">
+        <h3>Email Marketing Locaweb</h3>
+        <p> There are many variations of passages of orem Ipsum available ipsum dolor</p>
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="#" class="doc-portfolio-thumb">
+        <img src="/assets/images/docs/intro-thumb-cloud.png" alt="">
+        <h3>Cloud Locaweb</h3>
+        <p> There are many variations of passages of orem Ipsum available ipsum dolor</p>
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="#" class="doc-portfolio-thumb">
+        <img src="/assets/images/docs/intro-thumb-hosting.png" alt="">
+        <h3>Hospedagem de Sites Locaweb</h3>
+        <p> There are many variations of passages of orem Ipsum available ipsum dolor</p>
+      </a>
+    </div>
+  </div>
+  <hr class="doc-hr doc-hr-naked">
+  <a href="#" class="doc-btn">Ver projeto no github</a>
+  <p class="doc-msg-info">
+    Você usou o Locaweb Style em seu projeto? <a href="mailto:frontend@locaweb.com.br?subject=Toma ai, fiz com locastyle." "email me">Envie o link para nós.</a>
+  </p>
+  </div>
+</section>
+
+<section class="doc-section doc-social">
+  <img src="/assets/images/docs/shared.png" alt="">
+</section>

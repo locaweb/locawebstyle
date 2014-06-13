@@ -1,89 +1,61 @@
-<% @documentation = sub_pages('documentacao') %>
-<!doctype html>
-<html class="ls-theme-green">
+<!DOCTYPE html>
+<html lang="pt-br" class="ls-theme-green">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <title><%= data.page.title || "Locaweb Style Framework" %></title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title><%= current_page.data.title %></title>
-  <meta name="description" content="<%= current_page.data.description %>" />
-  <meta name="keywords" content="<%= current_page.data.keywords %>" />
-  <%= stylesheet_link_tag "locastyle" %>
+  <meta content="" name="description">
+
   <%= stylesheet_link_tag "docs" %>
+  <link rel="stylesheet" href="http://assets.locaweb.com.br/locastyle/3.0.0-beta1/stylesheets/locastyle.css">
 </head>
 <body class="<%= page_classes %>">
-  <div class="ls-topbar">
-    <span class="ls-show-sidebar ls-ico-menu"></span>
-    <h1 class="ls-brand-name">
-      <a href="/">Documentação do Locastyle</a>
-    </h1>
-  </div>
-  <aside class="ls-sidebar">
-    <form action="" class="ls-form ls-doc-form">
-      <input type="email" id="search" placeholder="Buscar páginas">
-      <div id="results"></div>
-    </form>
-    <nav class="ls-menu">
-      <ul>
-        <li>
-          <a href="<%= base_url %>/documentacao/">Documentação</a>
-        </li>
-        <% @documentation.each do |resource| %>
-          <% if resource.data.type != 'css' && resource.data.type != 'component' && resource.url.split('/')[2] != 'exemplos' && resource.url.split('/')[2].to_s != '' && resource.url.split('.')[1] != 'json' %>
-            <li <% if current_page.url == resource.url%>class="ls-active"<% end %>>
-              <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title%></a>
-            </li>
-          <% end %>
-        <% end %>
 
-        <li class="ls-submenu">
-          <a href="">Estilos</a>
-          <ul>
-            <% @documentation.each do |resource| %>
-              <% if resource.data.type == 'css' %>
-                <li <% if current_page.url == resource.url%>class="ls-active"<% end %>>
-                  <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title %></a>
-                </li>
-              <% end %>
-            <% end %>
-          </ul>
-        </li>
-        <li class="ls-submenu">
-          <a href="">Módulos</a>
-          <ul>
-            <% @documentation.each do |resource| %>
-              <% if resource.data.type == 'component' %>
-                <li <% if current_page.url == resource.url%>class="ls-active"<% end %>>
-                  <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title %></a>
-                </li>
-              <% end %>
-            <% end %>
-          </ul>
-        </li>
-        <li class="ls-submenu">
-          <a href="#">Exemplos</a>
-          <ul>
-            <% sub_pages('documentacao/exemplos/rev').each do |resource| %>
-              <li <% if current_page.url == resource.url%>class="ls-active"<% end %>>
-                <a <% if current_page.url == resource.url%>class="ls-active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title%></a>
-              </li>
-            <% end %>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </aside>
-  <main class="ls-main">
-    <div class="ls-container">
-    <div class="ls-intro">
-      <h1 class="ls-title-intro ico-plus"><%= current_page.data.title %></h1>
-      <p><%= current_page.data.description %></p>
-    </div>
-      <%= yield %>
-    </div>
-  </main>
-  <%= javascript_include_tag  "libs/jquery-2.1.0.min" %>
-  <%= javascript_include_tag  "locastyle" %>
-  <%= javascript_include_tag  "docs" %>
- </body>
+<header class="doc-header container">
+  <%= partial 'partials/doc-menu'%>
+  <h1 class="doc-logo"><strong>Locaweb</strong> Style</h1>
+</header>
+
+<div class="doc-title-intro">
+  <div class="container">
+    <h1>Documentação</h1>
+    <p>Saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
+  </div>
+</div>
+
+<nav class="doc-menu-top">
+  <div class="container">
+    <ul>
+      <li><%= link_to "Introdução", "/" %></li>
+      <li><%= link_to "Práticas e Padrões", base_url+"/" %></li>
+      <li><%= link_to "Layout", "/documentacao/alertas/" %></li>
+      <li><%= link_to "Componentes", "/documentacao/abas/" %></li>
+      <li><%= link_to "Formulários", base_url+"/" %></li>
+      <li><%= link_to "Telas de Exemplo", base_url+"/" %></li>
+      <li><%= link_to "Cartilha de Elementos", base_url+"/documentacao/cartilha-de-elementos" %></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="doc-content container">
+  <div class="row">
+    <%= yield %>
+  </div>
+</div>
+
+<footer class="doc-footer">
+  <div class="container">
+   <ul class="doc-social-link">
+      <li> <a href="" class="doc-social-facebook">facebook</a> </li>
+      <li> <a href="" class="doc-social-twitter">twitter</a> </li>
+    </ul>
+    <a href="" class="doc-logo-footer"><img src="/assets/images/docs/locaweb-logo.png" alt=""></a>
+    <p class="doc-copyright">
+      Copyright © 1997-2014 Locaweb Serviços de Internet S/A. Todo o conteúdo deste site é de uso exclusivo da Locaweb.
+    </p>
+  </div>
+</footer>
+<%= javascript_include_tag "libs/jquery-2.1.0.min", "locastyle", "docs" %>
+</body>
 </html>

@@ -4,7 +4,17 @@ description: Descrição e listagem de informações
 type: css
 ---
 
-<p>As listas são usadas para exibir de forma organizada pequenas informações como status, descrições, nomes e ações. Geralmente essas informações não se encaixariam em listagens simples, por isso criamos um elemento que consegue agrupar todas essas informações.</p>
+<%= partial 'partials/doc-menu-layout'%>
+
+<section class="col-md-9">
+
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
+
+  <p>As listas são usadas para exibir de forma organizada pequenas informações como status, descrições, nomes e ações. Geralmente essas informações não se encaixariam em listagens simples, por isso criamos um elemento que consegue agrupar todas essas informações.</p>
 
 
   <h2 class="ls-title-2">Lista somente com header</h2>
@@ -45,7 +55,7 @@ type: css
       </div>
     </header>
   </div>
-</code>
+  </code>
 
 
 
@@ -56,3 +66,4 @@ type: css
   <code class="language-html ls-well-example">
     <%= partial 'documentacao/shared/lists' %>
   </code>
+</section>

@@ -1,329 +1,350 @@
-.documentacao
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700)
 
-  .ls-main
-    background: #FFF
-
-    .ls-sep
-      padding: 10px 0
-
-  .ls-container
-    margin: 0 auto
-
-  .ls-footer
-    width: 100%
-
-.doc-section
-  margin-bottom: 2rem
-
-.doc-section-title
-  font-size: 1.4rem
-  margin-bottom: 1rem
-
-.doc-example
-  margin: 2rem 0
-  // min-height: 150px
-  background-color: #fff
-  padding: 2rem 1rem 1rem 1rem
-  position: relative
-  border: 1px solid #eee
-  &:before
-    content: "Exemplo funcional"
-    position: absolute
-    top: 0
-    left: 0
-    height: 1rem
-    background-color: #ddd
-    color: #666
-    padding: 0 .5rem
-    font-size: .6rem
-    line-height: 1rem
-
-  .doc-example-menu
-    height: 1.5rem
-    position: absolute
-    top: -1.5rem
-    right: .5rem
-    button
-      height: 1.5rem
-      background: #ddd
-      border: none
-      padding: 0 .3rem
-      cursor: pointer
-      color: #666
-      &.doc-example-menu-active
-        background-color: #fff
-        color: #333
-
-  .doc-example-markup-area
-    background-color: #fff
-    width: 100%
-    height: 100%
-    position: absolute
-    top: 0
-    left: 0
-    display: none
-    overflow: scroll
-    &:before
-      content: "Código do exemplo"
-      position: absolute
-      top: 0
-      left: 0
-      height: 1rem
-      background-color: #ddd
-      color: #666
-      padding: 0 .5rem
-      font-size: .6rem
-      line-height: 1rem
-      z-index: 4
-    code
-      width: 100%
-      height: 100%
-
-code
-  font-size: 12px
-  line-height: 14px
-  margin: 1rem 0
-
-h1
-  font-size: 2rem
-h2
-  font-size: 1.9rem
-  font-weight: bold
-h3
-  font-size: 1.6rem
-h4
-  font-size: 1.4rem
-h5
-  font-size: 1.2rem
-h6
-  font-size: 1rem
-p
-  margin: 0 0 .5rem
-  line-height: 1.7
-
-ul
-  margin: 20px
-
-  li
-    font-size: .8rem
-    color: #000
-    font-size: 0.88rem
-    line-height: 1.3
-    margin-bottom: 5px
-
-.ls-menu ul
+*
   margin: 0
-  li
-    margin-bottom: 0
+  padding: 0
+  box-sizing: border-box
 
-code, pre
-  margin: 0 0 1rem 0
+html
+  font-size: 100%
+  background-color: #fff !important
 
-.doc-block
-  margin-bottom: 2rem
+body
+  font-family: 'Open Sans', sans-serif
+  background-color: #fff !important
 
-p
-  code
-    padding: 4px 6px
-    color: #C7254E
-    white-space: nowrap
-    background-color: #F9F2F4
-    border-radius: 4px
-    font: .875rem Open Sans, Arial, Helvetica, Sans-serif
+h1,h2,h3,h4,h5,h6,p
+  -webkit-font-smoothing: antialiased
+  -ms-font-smoothing: antialiased
+  -moz-font-smoothing: antialiased
+  font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
 
-.list-icons
-  list-style: none
-  margin-bottom: 5rem
-
-  li
-
-    display: inline-block
-    vertical-align: top
-    width: 10%
-    height: 6rem
-    padding: 1.3rem .5rem
-    background: #EEE
-    margin: 0 .25% .4rem 0
-    background: rgba(0,0,0,0.1)
-    text-align: center
-
-    span
-      font-size: .6rem
-
-
-      &:before
-        display: block
-        font-size: 2rem
-
-    &:hover
-      background: rgba(0,0,0,0.5)
-      color: #FFF
-
-.ls-box-demo
-  position: relative
-  background: white
-  padding: 50px 25px 25px
-  margin-bottom: 30px
-  border: 1px solid #ddd
-  border-radius: 5px 5px 0 0
-
-  &:before
-    content: "Exemplo funcional"
-    position: absolute
-    top: 0
-    left: 0
-    height: 1rem
-    background-color: #ddd
-    color: #666
-    padding: 0 .5rem
-    font-size: .6rem
-    line-height: 1rem
+.doc-content
+  padding: 60px 0
 
   &:after
     content: ""
     display: block
     clear: both
 
-.ls-box-demo + .ls-well-example
-  position: relative
-  top: -32px
+//
+// INTRO TOPBAR
+//
+.doc-title-intro
+  padding: 65px 0
+  background: url(/assets/images/docs/bg-highlight.jpg) fixed no-repeat top center
+  background-size: cover
+  color: #fff
 
-.doc-example-grid
-  [class*="col"]
-    background-color: #ddd
-    outline: 1px solid #999
-    font-size: .75rem
-    text-align: center
-    height: 1.5rem
-    line-height: 1.5rem
-  .row
-    overflow: hidden
-    margin-bottom: .3rem
-
-.tips
-  background: #f8c647
-  background: -moz-linear-gradient(left,  #f8c647 0%, #e9962d 40%, #d77b27 100%)
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f8c647), color-stop(40%,#e9962d), color-stop(100%,#d77b27))
-  background: -webkit-linear-gradient(left,  #f8c647 0%,#e9962d 40%,#d77b27 100%)
-  background: -o-linear-gradient(left,  #f8c647 0%,#e9962d 40%,#d77b27 100%)
-  background: -ms-linear-gradient(left,  #f8c647 0%,#e9962d 40%,#d77b27 100%)
-  background: linear-gradient(to right,  #f8c647 0%,#e9962d 40%,#d77b27 100%)
-  box-shadow:  rgba(0,0,0,.3) 2px 2px 3px
-
-  padding: 13px
-  width: 100px
-  border-radius: 5px
-  position: relative
-
-  -webkit-animation: animate 1.5s linear infinite
-  animation: animate 1.5s linear infinite
-  -moz-animation: animate 1.5s linear infinite
-
-  &:before
-    content: ""
-    border-top: 10px solid transparent
-    border-bottom: 10px solid transparent
-    border-right: 10px solid #f8c647
-    position: absolute
-    left: -10px
-    top: 3px
-    width: 0
-    height: 0
-
-.doc-search-ico
-  background-color: #fff
-  margin-bottom: 15px
-  padding: 10px 10px 5px
+  h1
+    font-weight: 700
+    font-size: 2.63rem
+    padding-bottom: 10px
 
   p
-    clear: both
-    font-size: .75rem
-    padding-top: 5px
+    font-weight: 300
+    font-size: 1.5rem
+    color: #fff
 
-///
-/// Formatação de Box dentro de exemplos
-///
-// .ls-box-demo .ls-box
-//   margin: 0
+.doc-menu-top
+  background-color: #f8f8f8
+  border-bottom: 1px solid #e5e5e5
 
-.doc-menu-internal
-  margin: 1rem 0 2rem 0
-  border: 1px solid #ccc
-  padding: .5rem
-  font-size: .8rem
-  display: inline-block
+  li
+    display: inline-block
+    vertical-align: top
+
+  a
+    display: inline-block
+    padding: 15px 20px
+    font-size: .88rem
+    color: #555
+    font-weight: 400
+    text-decoration: none
+    text-transform: uppercase
+
+    &.active,
+    &:hover,
+    &:focus
+      background-color: #fff
+      color: #000
+      position: relative
+
+      &:before,
+      &:after
+        content: ""
+        display: block
+        width: 100%
+        position: absolute
+
+      &:before
+        border-top: 4px solid #bfbfbf
+        top: -4px
+        left: 0
+
+      &:after
+        height: 1px
+        bottom: -1px
+        left: 0
+        background: #fff
+
+//
+// SIDEBAR MENU
+//
+.doc-sidebar-menu
+  border: 1px solid #e5e5e5
+  padding: 15px 0
+
   li
     list-style: none
+
+  a
+    position: relative
+    display: block
+    padding: 10px 0 10px 20px
+    font-size: .94rem
+    color: #555
+    border-left: 5px solid #fff
+
+    &.active,
+    &:hover,
+    &:focus
+      border-left-color: #001e45
+      background-color: #f2f2f2
+      color: #000
+
+      &:after
+        position: absolute
+        right: -17px
+        top: 0
+        content: ""
+        display: inline-block
+        vertical-align: middle
+        margin-right: 10px
+        width: 0
+        height: 0
+
+        border-top: 18px solid transparent
+        border-bottom: 18px solid transparent
+        border-left: 7px solid #f2f2f2
+
+//
+// DOC SECTIONS
+//
+.doc-social
+  text-align: center
+
+.doc-section
+  clear: both
+  padding: 60px 0
+  background-color: #fff
+
+  &:after,
+  .row:after
+    content: ""
+    display: block
+    clear: both
+
+  &.doc-section-gray
+    background-color: #f2f2f2
+
+  h1
+    margin-bottom: 15px
+    text-align: center
+    font-size: 2.5rem
+    font-weight: 700
+
+    & + p
+      margin-bottom: 65px
+      text-align: center
+      font-size: 1.625rem
+      color: #555
+      font-weight: 300
+
+.doc-msg-info
+  text-align: center
+  padding: 55px 0
+  font-size: 1.625rem
+  font-weight: 300
+
+  a
+    color: #001e45
+
+  .doc-section &:last-child
+    padding-bottom: 0
+
+//
+// CONTENT
+//
+.doc-intro-content
+  h1
+    font-size: 2.25rem
+    font-weight: 700
+    padding-bottom: 30px
+
+  p
+    font-size: 1.25rem
+    font-weight: 300
+    color: #555
+    border-bottom: 1px solid #e5e5e5
+    padding-bottom: 20px
+    margin-bottom: 40px
+
+//
+// Header
+//
+.doc-header
+  padding: 10px 0
+
+  .doc-menu
     display: inline-block
-    border-right: 1px solid #ccc
-    &:last-child
-      border-right: none
-    a
-      line-height: 1.3rem
-      padding: .3rem
-      color: #509742
+    vertical-align: middle
+    position: static
 
+  .doc-logo
+    display: inline-block
+    font-weight: 300
+    vertical-align: middle
+    border-left: 1px solid #d9d9d9
+    padding: 10px 15px
+    margin-left: 15px
+    text-transform: uppercase
+    font-size: 1.25rem
 
-      background: #f7f7f7
+.doc-text-center
+  text-align: center
 
-.ls-sidebar .ls-doc-form
-  position: relative
-  padding: 20px
-  border-bottom: 1px solid $gray4
+.doc-hr
+  clear: both
+  display: block
+  border: none
+  margin: 65px auto
+  background-color: #ededed
+  width: 125px
+  height: 7px
 
-  #results
-    width: 100%
+  + .doc-msg-info
+    padding-top: 0
+
+  &.doc-hr-naked
+    background-color: transparent
+    margin: 35px auto
+
+.doc-menu
+  width: 40px
+  height: 40px
+  cursor: pointer
+  background-color: rgba(255, 255, 255, 0.1)
+  border-radius: 3px
+  border: 1px solid rgba(255, 255, 255, 0.2)
+  position: absolute
+  top: 30px
+  left: 0
+
+  .sandwich,
+  .sandwich:before,
+  .sandwich:after
+    content: ""
+    width: 16px
+    height: 3px
+    background-color: white
+    display: block
+    margin: 12px auto 0
+    position: relative
+
+  .sandwich:before,
+  .sandwich:after
+    margin-top: 3px
+    top: 6px
+
+  input
     position: absolute
-    top: 100%
+    top: 0
     left: 0
-    z-index: 9
+    display: block
+    width: inherit
+    height: inherit
+    cursor: pointer
+    opacity: 0
 
-  .ls-search
-    background: #fff
-    padding: 10px
-    margin: 0 20px
-    overflow: auto
-    max-height: 300px
-    overflow: auto
-    border-radius: 6px
+  ul
+    display: none
+    position: relative
+    top: 30px
+    border-radius: 5px
+    min-width: 200px
+    box-shadow: 1px 1px 6px rgba(0,0,0,.2)
+    list-style: none
+    background-color: #fff
+    padding: 10px 0
+    text-align: left
+    font-size: .8rem
 
-    &::-webkit-scrollbar
-      width: 8px
+    a
+      display: block
+      padding: 10px 15px
+      color: #333
+      font-size: .81rem
+      font-weight: 700
+      text-transform: uppercase
+      position: relative
 
-    &::-webkit-scrollbar-track
-      background: rgba(0,0,0,0.8)
-      border-radius: 6px
+      &:hover
+        background: #000
+        color: #fff
 
-    &::-webkit-scrollbar-thumb
-      background: $gray3
-      border-radius: 6px
+  [type="checkbox"]:checked ~ ul
+    display: block
 
-    p
-      width: 210px
-      text-overflow: ellipsis
-      overflow-x: hidden
-      font-size: 10px
+  .doc-header &
+    background-color: #f2f2f2
+    border-color: #ececec
+    position: relative
+    top: 0
+
+    .sandwich,
+    .sandwich:before,
+    .sandwich:after
+      background-color: #222
+
+//
+// FOOTER
+//
+.doc-footer
+  clear: both
+  background: url(/assets/images/docs/bg-highlight.jpg) no-repeat
+  background-size: cover
+  padding: 10px 0
+
+  .doc-logo-footer
+    padding: 10px 15px 10px 0
+    display: inline-block
+    border-right: 1px solid rgba(255,255,255,0.15)
+
+  .doc-copyright
+    display: inline-block
+    font-size: 0.6875rem
+    color: rgba(255,255,255,.6)
+    padding: 10px 15px 0
+    width: 340px
+
+  .doc-social-link
+    list-style: none
+    float: right
+    padding-top: 10px
 
     li
-      border-bottom: 1px solid rgba(223, 223, 222, 0.4)
+      display: inline-block
+      margin-left: 10px
 
-      &:last-child
-        border-bottom: none
+      a
+        text-indent: -9999px
+        overflow: hidden
+        width: 30px
+        height: 30px
+        background: url(/assets/images/docs/social-icons.png) no-repeat
+        display: inline-block
 
-    a
-      padding: 10px
-      color: $gray5
-      display: block
-      font-size: 1rem
-      line-height: 1.3
-
-      &:hover,
-      &:focus
-        color: $gray4
-
-      p
-        margin: 0
-
-.example-info-label
-  float: right
-  font-size: .8rem
+        &.doc-social-twitter
+          background-position: -38px 0

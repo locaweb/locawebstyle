@@ -4,7 +4,17 @@ description: Campos personalizados
 type: component
 ---
 
-<div class="doc-section">
+<%= partial 'partials/doc-menu-components'%>
+
+<section class="col-md-9">
+
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
+
+
 
   <table class="ls-table">
     <thead>
@@ -37,3 +47,4 @@ type: component
     </code>
     <!-- End Select -->
   </div>
+</section>

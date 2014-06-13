@@ -4,111 +4,123 @@ description: Sistema de grids
 type: css
 ---
 
-<p>Nós usamos o sistema de grid do Bootstrap da versão v3.1.1. Não modificamos nada, está exatamente como saiu da caixa. Abaixo, seguem algumas instruções básicas de uso. Aconselhamos que você leia também a <a href="http://getbootstrap.com/css/#grid">documentação de Grids do Bootstrap</a> caso queira mais informações.</p>
+<%= partial 'partials/doc-menu-layout'%>
 
-<div class="doc-example-grid">
-  <div class="ls-box-demo">
-    <% (1..12).each do |num| %>
-      <div class="row">
-          <div class="col-sm-<%= num %>">.col-sm-<%= num %></div>
-          <div class="col-sm-<%= 12-num %>">.col-sm-<%= 12-num %></div>
-      </div>
-    <% end %>
+<section class="col-md-9">
+
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
   </div>
-  <code class="language-html ls-well-example">
-    <% (1..12).each do |num| %>
-      <div class="row">`
-          <div class="col-sm-<%= num %>">.col-sm-<%= num %></div>
-          <div class="col-sm-<%= 12-num %>">.col-sm-<%= 12-num %></div>
-      </div>
-    <% end %>
-  </code>
-</div>
 
-<h2 class="ls-title-2">Tabela de breakpoints</h2>
-<p>Esta tabela mostra os prefixos de classes que são usadas nos breakpoints do Locastyle.</p>
-<table class="ls-table">
-      <thead>
-        <tr>
-          <th></th>
-          <th>
-            Telas bem pequenos
-            <small>Phones (&lt;768px)</small>
-          </th>
-          <th>
-            Telas pequenas
-            <small>Tablets (≥768px)</small>
-          </th>
-          <th>
-            Telas médias
-            <small>Desktops (≥992px)</small>
-          </th>
-          <th>
-            Telas grandes
-            <small>Desktops (≥1200px)</small>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Largura do .container</th>
-          <td>100% (auto)</td>
-          <td>768px</td>
-          <td>970px</td>
-          <td>1170px</td>
-        </tr>
-        <tr>
-          <th>Prefixo de classe</th>
-          <td><code>.col-xs-</code></td>
-          <td><code>.col-sm-</code></td>
-          <td><code>.col-md-</code></td>
-          <td><code>.col-lg-</code></td>
-        </tr>
-        <tr>
-          <th>Número de colunas</th>
-          <td colspan="4">12</td>
-        </tr>
-        <tr>
-          <th>Espaço entre as colunas (gutter)</th>
-          <td colspan="4">30px (15px de cada lado usando padding)</td>
-        </tr>
-        <tr>
-          <th>Largura das colunas</th>
-          <td class="text-muted">Auto</td>
-          <td>60px</td>
-          <td>78px</td>
-          <td>95px</td>
-        </tr>
-      </tbody>
-    </table>
 
-<p>
-  As classes do grid são aplicadas aos dispositivos com telas de largura maior ou igual ao tamanho do breakpoint. Isso quer dizer que se você aplicar em uma coluna a classe <code>.col-md-6</code> a coluna terá essa largura nos dispositivos maiores, até que você use, nesse caso, uma classe <code>col-lg-*</code>.
-</p>
+  <p>Nós usamos o sistema de grid do Bootstrap da versão v3.1.1. Não modificamos nada, está exatamente como saiu da caixa. Abaixo, seguem algumas instruções básicas de uso. Aconselhamos que você leia também a <a href="http://getbootstrap.com/css/#grid">documentação de Grids do Bootstrap</a> caso queira mais informações.</p>
 
-<h2 class="ls-title-2">Regras de montagem das grids</h2>
-<p>Para que o grid funcione perfeitamente, a estrutura abaixo precisa ser respeitada. Existem 3 elementos básicos:</p>
-<ul>
-  <li>O elemento <strong>.container</strong> é onde todos os elementos estarão inseridos. Ele abriga os elementos do grid bem como o elemento .row. Ele é necessário para que o espaçamento das extremidades do Grid funcionem sem erros. </li>
-  <li>O elemento <strong>.row</strong> é o pai das colunas. Ela define um grupo de grids.</li>
-  <li>A <strong>coluna</strong> é qualquer elemento que tenha classes de grid, que são os prefixos como <strong>col-xs-*</strong>, <strong>col-sm-*</strong>, <strong>col-md-*</strong>, <strong>col-lg-*</strong>. O * (asterísco) é o número que define o tamanho da largura da coluna, chegando no máximo até 12.</li>
-</ul>
+  <div class="doc-example-grid">
+    <div class="ls-box-demo">
+      <% (1..12).each do |num| %>
+        <div class="row">
+            <div class="col-sm-<%= num %>">.col-sm-<%= num %></div>
+            <div class="col-sm-<%= 12-num %>">.col-sm-<%= 12-num %></div>
+        </div>
+      <% end %>
+    </div>
+    <code class="language-html ls-well-example">
+      <% (1..12).each do |num| %>
+        <div class="row">`
+            <div class="col-sm-<%= num %>">.col-sm-<%= num %></div>
+            <div class="col-sm-<%= 12-num %>">.col-sm-<%= 12-num %></div>
+        </div>
+      <% end %>
+    </code>
+  </div>
 
-<p>Veja como funciona:</p>
-<ul>
-  <li>Rows sempre devem ser inseridas em um <code>.container</code> ou em um <code>.container-fluid</code>, assim o alinhamento e padding das colunas funcionam perfeitamente. </li>
-  <li>Use as Rows para criar grupos de colunas. Não é sempre, mas é muito provavel que você esteja fazendo algo errado se as colunas não estiverem dentro de uma <code>.row</code>.</li>
-  <li>As colunas (elementos com os prefixos de classes de grid), <strong>devem ser filhos imediatos de <code>.row</code></strong> </li>
-  <li>As colunas criam um espaço com padding que são chamados de <strong>gutters</strong>. Como o elemento <code>.row</code> já tem um padding nas laterais de 15px, a primeira coluna e a última coluna tem uma margem negativa para corrigir o desalinhamento. Mas não se preocupe com isso.</li>
-  <p>12 é o número máximo de colunas. Há muita discussão em volta da quantidade de colunas que um Grid pode ter ou que seria mais fácil de montar layouts. Mas 12 é um número bem flexível para montar um grid escalável e que funciona.</p>
-</ul>
+  <h2 class="ls-title-2">Tabela de breakpoints</h2>
+  <p>Esta tabela mostra os prefixos de classes que são usadas nos breakpoints do Locastyle.</p>
+  <table class="ls-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>
+              Telas bem pequenos
+              <small>Phones (&lt;768px)</small>
+            </th>
+            <th>
+              Telas pequenas
+              <small>Tablets (≥768px)</small>
+            </th>
+            <th>
+              Telas médias
+              <small>Desktops (≥992px)</small>
+            </th>
+            <th>
+              Telas grandes
+              <small>Desktops (≥1200px)</small>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Largura do .container</th>
+            <td>100% (auto)</td>
+            <td>768px</td>
+            <td>970px</td>
+            <td>1170px</td>
+          </tr>
+          <tr>
+            <th>Prefixo de classe</th>
+            <td><code>.col-xs-</code></td>
+            <td><code>.col-sm-</code></td>
+            <td><code>.col-md-</code></td>
+            <td><code>.col-lg-</code></td>
+          </tr>
+          <tr>
+            <th>Número de colunas</th>
+            <td colspan="4">12</td>
+          </tr>
+          <tr>
+            <th>Espaço entre as colunas (gutter)</th>
+            <td colspan="4">30px (15px de cada lado usando padding)</td>
+          </tr>
+          <tr>
+            <th>Largura das colunas</th>
+            <td class="text-muted">Auto</td>
+            <td>60px</td>
+            <td>78px</td>
+            <td>95px</td>
+          </tr>
+        </tbody>
+      </table>
 
-<h2 class="ls-title-2">Breakpoints e variável global</h2>
-<p>Nós temos 3 tamanhos de breakpoints que você pode usar para fazer algo específico em seu layout, são eles: 768px, 992px e 1200.</p>
+  <p>
+    As classes do grid são aplicadas aos dispositivos com telas de largura maior ou igual ao tamanho do breakpoint. Isso quer dizer que se você aplicar em uma coluna a classe <code>.col-md-6</code> a coluna terá essa largura nos dispositivos maiores, até que você use, nesse caso, uma classe <code>col-lg-*</code>.
+  </p>
 
-<p>O Locaweb Style marca com uma classe na tag HTML o breakpoint que o usuário se encontra, mesmo quando ele muda a largura da janela do browser. Essa variável se chama <code>breakpointClass</code>.</p>
+  <h2 class="ls-title-2">Regras de montagem das grids</h2>
+  <p>Para que o grid funcione perfeitamente, a estrutura abaixo precisa ser respeitada. Existem 3 elementos básicos:</p>
+  <ul>
+    <li>O elemento <strong>.container</strong> é onde todos os elementos estarão inseridos. Ele abriga os elementos do grid bem como o elemento .row. Ele é necessário para que o espaçamento das extremidades do Grid funcionem sem erros. </li>
+    <li>O elemento <strong>.row</strong> é o pai das colunas. Ela define um grupo de grids.</li>
+    <li>A <strong>coluna</strong> é qualquer elemento que tenha classes de grid, que são os prefixos como <strong>col-xs-*</strong>, <strong>col-sm-*</strong>, <strong>col-md-*</strong>, <strong>col-lg-*</strong>. O * (asterísco) é o número que define o tamanho da largura da coluna, chegando no máximo até 12.</li>
+  </ul>
 
-<p>Se quiser fazer o teste, abra o console do seu browser agora e digite <strong>locastyle.breakpointClass</strong>. O valor será o breakpoint atual. Tente diminuir o tamanho da tela e execute novamente o comando. Você verá que o valor da variável mudou.</p>
+  <p>Veja como funciona:</p>
+  <ul>
+    <li>Rows sempre devem ser inseridas em um <code>.container</code> ou em um <code>.container-fluid</code>, assim o alinhamento e padding das colunas funcionam perfeitamente. </li>
+    <li>Use as Rows para criar grupos de colunas. Não é sempre, mas é muito provavel que você esteja fazendo algo errado se as colunas não estiverem dentro de uma <code>.row</code>.</li>
+    <li>As colunas (elementos com os prefixos de classes de grid), <strong>devem ser filhos imediatos de <code>.row</code></strong> </li>
+    <li>As colunas criam um espaço com padding que são chamados de <strong>gutters</strong>. Como o elemento <code>.row</code> já tem um padding nas laterais de 15px, a primeira coluna e a última coluna tem uma margem negativa para corrigir o desalinhamento. Mas não se preocupe com isso.</li>
+    <p>12 é o número máximo de colunas. Há muita discussão em volta da quantidade de colunas que um Grid pode ter ou que seria mais fácil de montar layouts. Mas 12 é um número bem flexível para montar um grid escalável e que funciona.</p>
+  </ul>
 
-<p>Quando o usuário redimensiona a janela, há um script que calcula o breakpoint e muda o valor da variável depois de 300ms que o redimensionamento parou. Usamos isso para adaptar elementos de acordo com o tamanho da janela e você pode usar para resolver algo específico do seu projeto.</p>
+  <h2 class="ls-title-2">Breakpoints e variável global</h2>
+  <p>Nós temos 3 tamanhos de breakpoints que você pode usar para fazer algo específico em seu layout, são eles: 768px, 992px e 1200.</p>
 
+  <p>O Locaweb Style marca com uma classe na tag HTML o breakpoint que o usuário se encontra, mesmo quando ele muda a largura da janela do browser. Essa variável se chama <code>breakpointClass</code>.</p>
+
+  <p>Se quiser fazer o teste, abra o console do seu browser agora e digite <strong>locastyle.breakpointClass</strong>. O valor será o breakpoint atual. Tente diminuir o tamanho da tela e execute novamente o comando. Você verá que o valor da variável mudou.</p>
+
+  <p>Quando o usuário redimensiona a janela, há um script que calcula o breakpoint e muda o valor da variável depois de 300ms que o redimensionamento parou. Usamos isso para adaptar elementos de acordo com o tamanho da janela e você pode usar para resolver algo específico do seu projeto.</p>
+
+</section>

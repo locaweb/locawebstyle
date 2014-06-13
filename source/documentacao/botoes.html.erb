@@ -4,7 +4,15 @@ description: Como os botões funcionam no Locaweb Style
 type: css
 ---
 
-<div class="row">
+<%= partial 'partials/doc-menu-layout'%>
+
+<section class="col-md-9">
+
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
 
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/botoes/botoes' %>
@@ -91,6 +99,5 @@ type: css
       <button type="button" class="ls-btn-primary">Botão 2</button>
       <button type="button" class="ls-btn-primary">Botão 3</button>
     </div>
-    </div>
-
-</div>
+  </div>
+</section>
