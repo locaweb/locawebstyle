@@ -1,6 +1,5 @@
 ---
 title: Home
-layout: introduction
 description: Página inicial
 keywords: documentação, locastyle
 ---
@@ -11,8 +10,7 @@ keywords: documentação, locastyle
     <%= partial 'partials/doc-menu'%>
 
     <h1><strong>Locaweb</strong> Style</h1>
-    <p>Disponibilizamos comportamentos e uma interface usada por milhares de usuários.</p>
-
+    <p>Framework front-end com uma interface usada por milhares de usuários.</p>
     <a href="<%= base_url %>/documentacao" class="doc-btn">Use o Locaweb Style</a>
 
     <span class="doc-version">Versão <%= settings.stable %></span>
@@ -23,40 +21,40 @@ keywords: documentação, locastyle
 
 <section class="doc-section doc-info-intro container">
 
-  <h1>Designed for everyone, everywhere</h1>
-  <p>Construa sistemas rapidamente utilizando o Locaweb Style. Disponibilizamos comportamentos e uma interface usada por milhares de usuários.</p>
+  <h1>Conheça o Locaweb Style</h1>
+  <p>Use compilado em seu projeto ou faça um fork do projeto no GitHub. <br>Você escolhe como quer usar.</p>
 
   <div class="row">
     <div class="col-md-4">
       <a href="<%= base_url %>/documentacao/downloads" class="doc-icon-download doc-hexa">
         <span class="hexa"></span>
         <h2>Baixe ou use direto do server</h2>
-        <p>Use via CDN ou baixe o ZIP com os assets necessários. Simples e Rápido.</p>
+        <p>Use direto pelo nosso servidor de alta disponibilidade ou baixe o ZIP com os assets necessários. Simples e Rápido.</p>
       </a>
     </div>
     <div class="col-md-4">
       <a href="<%= base_url %>/documentacao" class="doc-icon-file doc-hexa">
         <span class="hexa"></span>
-        <h2>Veja a documentação completa</h2>
-        <p><%= lorem.sentence %></p>
+        <h2>Documentação completa</h2>
+        <p>Confira todos os elementos e comportamentos que temos no Locaweb Style.</p>
       </a>
     </div>
     <div class="col-md-4">
       <a href="<%= base_url %>/blog" class="doc-icon-numbered-list doc-hexa">
         <span class="hexa"></span>
         <h2>Change log / Blog</h2>
-        <p><%= lorem.sentence %></p>
+        <p>Acompanhe nosso blog para saber das mudanças e novidades, além de outros assuntos sobre desenvolvimento web.</p>
       </a>
     </div>
   </div>
   <hr class="doc-hr">
-  <p class="doc-msg-info">Locaweb Style é open source. Ele está hospedado, desenvolvido e mantido no GitHub.</p>
+  <p class="doc-msg-info">Locaweb Style é open source e está no <a href="http://github.com/locaweb/locawestyle/">GitHub</a> pronto para receber qualquer colaboração.</p>
   <a href="https://github.com/locaweb/locawebstyle" target="_blank" class="doc-btn">Ver projeto no github</a>
 
 </section>
 <section class="doc-section doc-section-gray doc-portfolio">
 <div class="container">
-  <h1>Construído com Locaweb Style</h1>
+  <h1>Telas de exemplo</h1>
   <p>Tem Hover? Tem! Cadê a sidebar? Tá alí!<br>Veja algumas variações de páginas construídas com Locastyle.</p>
 
   <div class="row">
@@ -83,13 +81,26 @@ keywords: documentação, locastyle
     </div>
   </div>
   <hr class="doc-hr doc-hr-naked">
-  <a href="#" class="doc-btn">Ver projeto no github</a>
+  <a href="#" class="doc-btn">Veja mais exemplos</a>
   <p class="doc-msg-info">
-    Você usou o Locaweb Style em seu projeto? <a href="mailto:frontend@locaweb.com.br?subject=Toma ai, fiz com locastyle." "email me">Envie o link para nós.</a>
+    Você usou o Locaweb Style em seu projeto ou quer apenas entrar em contato? <a href="https://docs.google.com/spreadsheet/viewform?formkey=dHhnUXdvVE9udEF3a1EyYVRuYXdZLWc6MA">Fale conosco</a>
   </p>
   </div>
 </section>
 
 <section class="doc-section doc-social">
-  <img src="/assets/images/docs/shared.png" alt="">
+
+  <!-- AddThis Button BEGIN -->
+  <div class="addthis_toolbox addthis_default_style c-both">
+    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_counter addthis_pill_style"></a>
+    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51cdc3552ecf7080"></script>
+
+    <!-- AddThis Button END -->
+    <iframe class="githubbtn" src="http://ghbtns.com/github-btn.html?user=locaweb&amp;repo=locawebstyle&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>
+    <!-- <iframe class="githubbtn" src="http://ghbtns.com/github-btn.html?user=locaweb&repo=locawebstyle&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe> -->
+    <iframe class="githubbtn" src="http://ghbtns.com/github-btn.html?user=locaweb&amp;repo=locawebstyle&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+  </div>
 </section>
