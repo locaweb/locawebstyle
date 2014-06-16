@@ -366,6 +366,38 @@ p + .row
     .sandwich:after
       background-color: #222
 
+
+//
+// EXAMPLES
+//
+
+.doc-examples
+  a
+    color: #777
+    display: block
+    margin-bottom: 50px
+
+    .doc-thumbnail
+      display: block
+      max-height: 300px
+      max-width: 400px
+      overflow: hidden
+      padding: 4px
+      border: 1px solid #ddd
+      border-radius: 4px
+
+      img
+        +transition (all .35s ease)
+
+    &:hover,
+    &:focus
+      img
+        +scale(1.15)
+        +transition (all .35s ease)
+
+    [class*="doc-title"]
+      margin-top: 20px
+
 //
 // FOOTER
 //
