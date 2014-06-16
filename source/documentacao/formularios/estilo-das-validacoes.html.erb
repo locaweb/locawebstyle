@@ -1,0 +1,26 @@
+---
+title: Estilo nas validações
+description: Estilo para as validações
+type: forms
+---
+
+<%= partial 'partials/doc-menu-forms'%>
+
+<section class="col-md-9">
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
+
+  <p>Este é nosso padrão para indicar validação de formulários: basta utilizar as classes <code>.ls-error</code>, <code>.ls-warning</code> ou <code>.ls-success</code> no elemento pai deles, ou seja no <code>.ls-field</code>.</p>
+  <p>A mensagem de ajuda é exibida na classe <code>.ls-help-message</code>, conforme o exemplo abaixo:</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/form/form-vertical-validacao.erb' %>
+  </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/form/form-vertical-validacao.erb' %>
+  </code>
+
+</section>

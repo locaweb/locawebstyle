@@ -1,0 +1,25 @@
+---
+title: Prefixos e sufixos
+description: Mais personalização com adendos
+type: forms
+---
+
+<%= partial 'partials/doc-menu-forms'%>
+
+<section class="col-md-9">
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
+
+  <p>Pra inserir um adendo ao input no início ou no final, envolva o <code>input</code> em um elemento com a classe <code>ls-prefix-group</code>. Depois coloque outro elemento (sugerimos <code>span</code>) com a classe <code>ls-label-prefix</code> antes ou depois do input.</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/form/fields-prefix-sufix.erb' %>
+  </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/form/fields-prefix-sufix.erb' %>
+  </code>
+
+</section>
