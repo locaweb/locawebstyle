@@ -1,0 +1,15 @@
+<% @documentation = sub_pages('documentacao') %>
+
+<aside class="col-md-3">
+  <nav class="doc-sidebar-menu">
+    <ul>
+      <% @documentation.each do |resource| %>
+        <% if resource.data.type == 'pratica' %>
+          <li <% if current_page.url == resource.url%>class="active"<% end %>>
+            <a <% if current_page.url == resource.url%>class="active"<% end %> href="<%= base_url + resource.url %>"><%= resource.data.title %></a>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </nav>
+</aside>
