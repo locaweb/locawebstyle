@@ -71,14 +71,16 @@ var lsdocs = (function() {
   }
 
   function sidebarAffix(){
-    $(window).scroll(function(){
-      var scrollTop = $(this).scrollTop();
-      if(scrollTop >= '435'){
-        $('.doc-sidebar-menu').addClass('doc-affix')
-      }else{
-        $('.doc-sidebar-menu').removeClass('doc-affix')
-      }
-    });
+    if($('html').hasClass('ls-screen-lg') || $('html').hasClass('ls-screen-md')){
+      $(window).scroll(function(){
+        var scrollTop = $(this).scrollTop();
+        if(scrollTop >= '435'){
+          $('.doc-sidebar-menu').addClass('doc-affix')
+        }else{
+          $('.doc-sidebar-menu').removeClass('doc-affix')
+        }
+      });
+    }
   }
 
   return {
