@@ -1,5 +1,5 @@
 ---
-title: Grid
+title: Estrutura de Grid
 description: Sistema de grids
 type: css
 ---
@@ -8,12 +8,7 @@ type: css
 
 <section class="col-md-9">
 
-  <!-- Title page -->
-  <div class="doc-intro-content">
-    <h1><%= current_page.data.title %></h1>
-    <p><%= current_page.data.description %></p>
-  </div>
-
+  <%= partial 'partials/doc-intro-content' %>
 
   <p>Nós usamos o sistema de grid do Bootstrap da versão v3.1.1. Não modificamos nada, está exatamente como saiu da caixa. Abaixo, seguem algumas instruções básicas de uso. Aconselhamos que você leia também a <a href="http://getbootstrap.com/css/#grid">documentação de Grids do Bootstrap</a> caso queira mais informações.</p>
 

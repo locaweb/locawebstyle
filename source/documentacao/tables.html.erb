@@ -1,19 +1,14 @@
 ---
 title: Tables
 description: Padrão de tabelas
-type: css
+type: component
 ---
 
 <%= partial 'partials/doc-menu-layout'%>
 
 <section class="col-md-9">
 
-  <!-- Title page -->
-  <div class="doc-intro-content">
-    <h1><%= current_page.data.title %></h1>
-    <p><%= current_page.data.description %></p>
-  </div>
-
+  <%= partial 'partials/doc-intro-content' %>
 
   <p>A tabela é elemento comum e bastante usado para listagem de conteúdo com muitas informações agregadas.</p>
 
