@@ -1,0 +1,50 @@
+---
+title: Máscaras
+description: Máscaras para campos diversos
+type: forms
+---
+
+<%= partial 'partials/doc-menu-forms'%>
+
+<section class="col-md-9">
+  <!-- Title page -->
+  <div class="doc-intro-content">
+    <h1><%= current_page.data.title %></h1>
+    <p><%= current_page.data.description %></p>
+  </div>
+
+  <p>Para as máscaras utilizamos o plugin <a href="https://github.com/igorescobar/jQuery-Mask-Plugin">jQuery-Mask-Plugin</a> com alguns atalhos definidos</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>classe</th>
+        <th>mascara</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <tr><td>.ls-mask-date</td><td>11/11/1111</td></tr>
+        <tr><td>.ls-mask-time</td><td>00:00:00</td></tr>
+        <tr><td>.ls-mask-date_time</td><td>00/00/0000 00:00:00</td></tr>
+        <tr><td>.ls-mask-cep</td><td>00000-000</td></tr>
+        <tr><td>.ls-mask-phone8</td><td>0000-0000</td></tr>
+        <tr><td>.ls-mask-phone9</td><td>90000-0000</td></tr>
+        <tr><td>.ls-mask-phone8_with_ddd</td><td>(00) 0000-0000</td></tr>
+        <tr><td>.ls-mask-phone9_with_ddd</td><td>(00) 90000-0000</td></tr>
+        <tr><td>.ls-mask-cpf</td><td>000.000.000-00</td></tr>
+        <tr><td>.ls-mask-cnpj</td><td>00.000.000/0000-00</td></tr>
+        <tr><td>.ls-mask-money</td><td>#.##0,00</td></tr>
+        <tr><td>.ls-mask-ip_address</td><td>0ZZ.0ZZ.0ZZ.0ZZ</td></tr>
+        <tr><td>.ls-mask-percent</td><td>##0,00%</td></tr>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/form/fields-masks.erb' %>
+  </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/form/fields-masks.erb' %>
+  </code>
+
+</section>
