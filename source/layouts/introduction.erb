@@ -1,33 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title><%= data.page.title || "Locaweb Style Framework" %></title>
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-  <meta name="description" content="<%= current_page.data.description %>" />
-  <meta name="keywords" content="<%= current_page.data.keywords %>" />
-
-  <%= stylesheet_link_tag "docs" %>
-  <link rel="stylesheet" href="http://assets.locaweb.com.br/locastyle/3.0.0-beta1/stylesheets/locastyle.css">
-
-</head>
-<body class="<%= page_classes %>">
+<%= partial 'partials/doc-header' %>
 
 <%= yield %>
 
-<footer class="doc-footer">
-  <div class="container">
-   <ul class="doc-social-link">
-      <li> <a href="" class="doc-social-facebook">facebook</a> </li>
-      <li> <a href="" class="doc-social-twitter">twitter</a> </li>
-    </ul>
-    <a href="" class="doc-logo-footer"><%= image_tag 'docs/locaweb-logo.png' %></a>
-    <p class="doc-copyright">
-      Copyright © 1997-2014 Locaweb Serviços de Internet S/A. Todo o conteúdo deste site é de uso exclusivo da Locaweb.
-    </p>
-  </div>
-</footer>
-
-</body>
-</html>
+<%= partial 'partials/doc-footer' %>
