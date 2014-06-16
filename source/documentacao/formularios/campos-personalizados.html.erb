@@ -1,10 +1,10 @@
 ---
 title: Campos personalizados
 description: Campos personalizados
-type: component
+type: forms
 ---
 
-<%= partial 'partials/doc-menu-components'%>
+<%= partial 'partials/doc-menu-forms'%>
 
 <section class="col-md-9">
 
@@ -36,15 +36,13 @@ type: component
   </table>
 
   <h2 class="ls-title-1">Exemplos</h2>
-  <div data-ls-module="customFields">
-    <!-- Select -->
-    <div class="ls-box-demo">
-      <p class="ls-title2"> Select customizada </p>
-      <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
-    </div>
-    <code class="language-html ls-well-example">
-      <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
-    </code>
-    <!-- End Select -->
+  <!-- Select -->
+  <div class="ls-box-demo">
+    <p class="ls-title2"> Select customizada </p>
+    <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
   </div>
+  <code class="language-html ls-well-example">
+    <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
+  </code>
+  <!-- End Select -->
 </section>
