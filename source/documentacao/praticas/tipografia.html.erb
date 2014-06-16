@@ -8,12 +8,7 @@ type: css
 
 <section class="col-md-9">
 
-  <!-- Title page -->
-  <div class="doc-intro-content">
-    <h1><%= current_page.data.title %></h1>
-    <p><%= current_page.data.description %></p>
-  </div>
-
+  <%= partial 'partials/doc-intro-content' %>
 
   <p>Você sempre vai escrever títulos usando as tags do HTML h1, h2, h3, h4, h5 e h6. As tags sozinhas não tem estilo algum, por isso você precisa usar as classes <code>.ls-title-1</code>, <code>.ls-title-2</code>, <code>.ls-title-3</code>, <code>.ls-title-4</code>, <code>.ls-title-5</code>, <code>.ls-title-6</code>.</p>
 
