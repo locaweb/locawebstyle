@@ -72,12 +72,13 @@ var lsdocs = (function() {
 
   function sidebarAffix(){
     if($('html').hasClass('ls-screen-lg') || $('html').hasClass('ls-screen-md')){
+      var docSidebarWidth = $('.doc-sidebar-menu').width();
       $(window).scroll(function(){
         var scrollTop = $(this).scrollTop();
         if(scrollTop >= '435'){
-          $('.doc-sidebar-menu').addClass('doc-affix')
+          $('.doc-sidebar-menu').addClass('doc-affix').css('width', docSidebarWidth)
         }else{
-          $('.doc-sidebar-menu').removeClass('doc-affix')
+          $('.doc-sidebar-menu').removeClass('doc-affix').removeAttr('style');
         }
       });
     }
