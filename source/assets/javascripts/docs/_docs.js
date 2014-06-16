@@ -3,6 +3,7 @@ var lsdocs = (function() {
 
   function init() {
     convertCodeExamples();
+    sidebarAffix();
     // copyMarkup();
     // markupExamples();
     Prism.highlightAll();
@@ -67,6 +68,17 @@ var lsdocs = (function() {
       $(this).removeClass('language-html').addClass('language-markup');
     });
     Prism.highlightAll();
+  }
+
+  function sidebarAffix(){
+    $(window).scroll(function(){
+      var scrollTop = $(this).scrollTop();
+      if(scrollTop >= '435'){
+        $('.doc-sidebar-menu').addClass('doc-affix')
+      }else{
+        $('.doc-sidebar-menu').removeClass('doc-affix')
+      }
+    });
   }
 
   return {
