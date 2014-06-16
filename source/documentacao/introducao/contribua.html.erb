@@ -1,0 +1,29 @@
+---
+title: Contribua
+description: O que você precisa saber para iniciar sua contribuição
+type: intro
+---
+<%= partial 'partials/doc-menu-intro'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <p>Para contribuir, fique atento às informações abaixo e siga totalmente as informações que estão escritas em <%= link_to "Práticas e Padrões", base_url+"/documentacao/praticas/" %>. Você pode não querer escrever código, por isso, há espaço para reportar os problemas que você encontrar. Abaixo segue mais instruções de como continuar:</p>
+
+  <h3 class="doc-title-4">Problemas e Sugestões</h3>
+  <p>As issues do GitHub são o lugar certo caso você encontrar qualquer erro ou tiver alguma ideia genial para melhorar o framework. Sempre nos comunicamos por lá com os reporters e também para marcar nossas tarefas públicas.</p>
+  <p><a href="https://github.com/locaweb/locawebstyle/issues">Abra suas issues aqui</a>.</p>
+
+  <h3 class="doc-title-4">Estilo de código</h3>
+  <p>Uma boa prática é que embora um código esteja sendo escrito por várias pessoas, ele deve parecer que foi feito apenas por uma. Por isso o estilo e padrões são tão importantes. Se você quiser contribuir com código, tenha certeza de que está escrito no estilo que descrevemos na área <%= link_to "Práticas e Padrões", base_url+"/documentacao/praticas/" %>. </p>
+
+  <p><%= link_to "Nessa área", base_url+"/documentacao/praticas/" %> você encontra todos os nossos padrões e boas práticas que usamos no projeto.</p>
+
+  <h3 class="doc-title-4">Prefixo de Nomenclatura</h3>
+  <p>Para evitar conflitos com o código alheio, usamos sempre o prefixo <strong>ls-</strong>. Dessa forma conseguimos ter uma série de vantagens ao migrar sistemas, corrigir bugs e conflitos com códigos de plugins ou do próprio projeto.</p>
+
+  <h3 class="doc-title-4">Testes</h3>
+  <p>Nós usamos <a href="http://jasmine.github.io/edge/introduction.html">Jasmine</a> para conduzir os testes em JavaScript. Se você contribuir com código JavaScript, tenha certeza de que fez os testes corretos para sua função. Não aceitamos Pull Requests sem testes. Ah, os códigos dos describes devem estar em inglês.</p>
+
+</section>
