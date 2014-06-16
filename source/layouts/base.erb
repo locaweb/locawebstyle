@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br" class="ls-theme-green">
-<head>
-  <meta charset="UTF-8">
-  <title><%= data.page.title || "Locaweb Style Framework" %></title>
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-  <meta content="" name="description">
-
-  <%= stylesheet_link_tag "docs" %>
-  <link rel="stylesheet" href="http://assets.locaweb.com.br/locastyle/3.0.0-beta1/stylesheets/locastyle.css">
-</head>
-<body class="<%= page_classes %>">
+<%= partial 'partials/_doc-header' %>
 
 <header class="doc-header container">
   <%= partial 'partials/doc-menu'%>
@@ -44,18 +32,4 @@
   </div>
 </div>
 
-<footer class="doc-footer">
-  <div class="container">
-   <ul class="doc-social-link">
-      <li> <a href="" class="doc-social-facebook">facebook</a> </li>
-      <li> <a href="" class="doc-social-twitter">twitter</a> </li>
-    </ul>
-    <a href="" class="doc-logo-footer"><img src="/assets/images/docs/locaweb-logo.png" alt=""></a>
-    <p class="doc-copyright">
-      Copyright © 1997-2014 Locaweb Serviços de Internet S/A. Todo o conteúdo deste site é de uso exclusivo da Locaweb.
-    </p>
-  </div>
-</footer>
-<%= javascript_include_tag "libs/jquery-2.1.0.min", "locastyle", "docs" %>
-</body>
-</html>
+<%= partial 'partials/_doc-footer' %>
