@@ -326,6 +326,13 @@ p + .row
     cursor: pointer
     opacity: 0
 
+    &:focus ~ .sandwich
+      background-color: rgba(255,255,255,.5)
+
+      &:after,
+      &:before,
+        background-color: rgba(255,255,255,.5)
+
   ul
     display: none
     position: relative
