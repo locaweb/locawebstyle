@@ -41,7 +41,7 @@ locastyle.dropdown = (function() {
   }
 
   function setPositionVisible($target){
-    var $main = $('.ls-main');
+    var $main = $('body');
     if($main.get(0).scrollWidth > $main.width()){
       $($target).addClass('ls-pos-right')
     }
