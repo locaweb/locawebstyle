@@ -8,12 +8,13 @@ type: component
 
 <section class="col-md-9">
 
-<%= partial 'partials/doc-intro-content' %>
+  <%= partial 'partials/doc-intro-content' %>
 
   <div class="ls-alert-info">
     Para abrir uma aba automaticamente basta na url passar esse parametro com o target da Aba ou o Href.
     <strong><a href="/documentacao/abas/#!/#laps" target="blank">/#!/#laps</a></strong>
   </div>
+
   <table class="ls-table">
     <thead>
       <tr>
@@ -44,27 +45,22 @@ type: component
       </tr>
     </tbody>
   </table>
-
+  <hr>
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/abas' %>
   </div>
-  <code class="language-html ls-well-example">
+  <code class="language-html">
     <%= partial 'documentacao/shared/abas' %>
   </code>
 
-  <hr>
+  <h2 class="doc-title-3">Navegação de Abas em forma de dropdown</h2>
+  <p>Em dispositivos com telas pequenas, a navegação das abas são apresentadas em forma de dropdown.</p>
 
-  <div class="doc-section">
-    <h2>Navegação de Abas em forma de dropdown</h2>
-    <p>Em dispositivos com telas pequenas, a navegação das abas são apresentadas em forma de dropdown.</p>
-
-    <p>Não é comum, mas caso queira usar a navegação em forma de dropdown também em telas maiores, basta usar o html conforme exemplo abaixo. Perceba que apenas a parte da navegação muda, a parte do conteúdo continua da mesma forma.</p>
-  </div>
-
+  <p>Não é comum, mas caso queira usar a navegação em forma de dropdown também em telas maiores, basta usar o html conforme exemplo abaixo. Perceba que apenas a parte da navegação muda, a parte do conteúdo continua da mesma forma.</p>
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/abas-dropdown-nav' %>
   </div>
-  <code class="language-html ls-well-example">
+  <code class="language-html">
     <%= partial 'documentacao/shared/abas-dropdown-nav' %>
   </code>
 </section>
