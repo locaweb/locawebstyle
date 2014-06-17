@@ -1,7 +1,6 @@
 ---
 title: Campos desabilitados
-description: Desabilitando e habilitando campos
-type: forms
+description: Opções para desabilitar campos ou mostrar em forma de texto
 ---
 
 <%= partial 'partials/doc-menu-forms'%>
@@ -20,7 +19,7 @@ type: forms
   <hr>
 
   <h3 class="ls-title-3">Formulários como texto</h3>
-  <p>Adicione a classe <code>ls-form-text</code> no elemento pai para desabilitar tudo dentro do elemento (uma <code>div</code> ou todo o <code>form</code>) ou insira essa mesma classe no input desejado para desabilitá-lo.</p>
+  <p>Adicione a classe <code>ls-form-text</code> no elemento pai para deixar com aparência de texto todos os campos que estiverem dentro (uma <code>div</code> ou todo o <code>form</code>) ou insira essa mesma classe no input desejado para desabilitá-lo. Pode editar.</p>
 
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/form-as-text.erb' %>
@@ -29,7 +28,7 @@ type: forms
     <%= partial 'documentacao/shared/form/form-as-text.erb' %>
   </code>
 
-  <p>Você pode combinar os comportamentos para ter um formulário como texto e não editável.</p>
+  <p>Você pode combinar os comportamentos para ter um formulário com aparência de texto e desabilitado. Não pode editar.</p>
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/form-as-text-disabled.erb' %>
   </div>
