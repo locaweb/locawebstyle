@@ -28,14 +28,24 @@ h1,h2,h3,h4,h5,h6,p
     display: block
     clear: both
 
-  p
+  p, li
     line-height: 1.6
     font-size: .95rem
+    color: #555
+
+  ul, ol
+    margin: 30px 20px
 
 p + .row
   padding-top: 25px
   padding-bottom: 25px
 
+.doc-example-grid
+  [class*="col-"]
+    padding-top: 10px
+    padding-bottom: 10px
+    background-color: rgba(0,30,69,.15)
+    border: 1px solid rgba(0,30,69,.25)
 
 //
 // INTRO TOPBAR
@@ -133,8 +143,12 @@ p + .row
   border: 1px solid #e5e5e5
   padding: 15px 0
 
+  ul
+    margin: 0
+
   li
     list-style: none
+    line-height: inherit
 
   a
     position: relative

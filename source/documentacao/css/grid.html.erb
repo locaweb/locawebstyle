@@ -14,12 +14,34 @@ type: css
 
   <div class="doc-example-grid">
     <div class="ls-box-demo">
-      <% (1..12).each do |num| %>
-        <div class="row">
-            <div class="col-sm-<%= num %>">.col-sm-<%= num %></div>
-            <div class="col-sm-<%= 12-num %>">.col-sm-<%= 12-num %></div>
-        </div>
-      <% end %>
+      <div class="row">
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">.col-md-8</div>
+        <div class="col-md-4">.col-md-4</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-6">.col-md-6</div>
+      </div>
+
     </div>
     <code class="language-html ls-well-example">
       <% (1..12).each do |num| %>
@@ -31,7 +53,7 @@ type: css
     </code>
   </div>
 
-  <h2 class="ls-title-2">Tabela de breakpoints</h2>
+  <h2 class="doc-title-2">Tabela de breakpoints</h2>
   <p>Esta tabela mostra os prefixos de classes que são usadas nos breakpoints do Locastyle.</p>
   <table class="ls-table">
         <thead>
@@ -92,7 +114,7 @@ type: css
     As classes do grid são aplicadas aos dispositivos com telas de largura maior ou igual ao tamanho do breakpoint. Isso quer dizer que se você aplicar em uma coluna a classe <code>.col-md-6</code> a coluna terá essa largura nos dispositivos maiores, até que você use, nesse caso, uma classe <code>col-lg-*</code>.
   </p>
 
-  <h2 class="ls-title-2">Regras de montagem das grids</h2>
+  <h2 class="doc-title-2">Regras de montagem das grids</h2>
   <p>Para que o grid funcione perfeitamente, a estrutura abaixo precisa ser respeitada. Existem 3 elementos básicos:</p>
   <ul>
     <li>O elemento <strong>.container</strong> é onde todos os elementos estarão inseridos. Ele abriga os elementos do grid bem como o elemento .row. Ele é necessário para que o espaçamento das extremidades do Grid funcionem sem erros. </li>
@@ -106,10 +128,10 @@ type: css
     <li>Use as Rows para criar grupos de colunas. Não é sempre, mas é muito provavel que você esteja fazendo algo errado se as colunas não estiverem dentro de uma <code>.row</code>.</li>
     <li>As colunas (elementos com os prefixos de classes de grid), <strong>devem ser filhos imediatos de <code>.row</code></strong> </li>
     <li>As colunas criam um espaço com padding que são chamados de <strong>gutters</strong>. Como o elemento <code>.row</code> já tem um padding nas laterais de 15px, a primeira coluna e a última coluna tem uma margem negativa para corrigir o desalinhamento. Mas não se preocupe com isso.</li>
-    <p>12 é o número máximo de colunas. Há muita discussão em volta da quantidade de colunas que um Grid pode ter ou que seria mais fácil de montar layouts. Mas 12 é um número bem flexível para montar um grid escalável e que funciona.</p>
   </ul>
+    <p>12 é o número máximo de colunas. Há muita discussão em volta da quantidade de colunas que um Grid pode ter ou que seria mais fácil de montar layouts. Mas 12 é um número bem flexível para montar um grid escalável e que funciona.</p>
 
-  <h2 class="ls-title-2">Breakpoints e variável global</h2>
+  <h2 class="doc-title-2">Breakpoints e variável global</h2>
   <p>Nós temos 3 tamanhos de breakpoints que você pode usar para fazer algo específico em seu layout, são eles: 768px, 992px e 1200.</p>
 
   <p>O Locaweb Style marca com uma classe na tag HTML o breakpoint que o usuário se encontra, mesmo quando ele muda a largura da janela do browser. Essa variável se chama <code>breakpointClass</code>.</p>
