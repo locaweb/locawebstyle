@@ -1,20 +1,14 @@
 ---
 title: Textarea
 description: Particularidades do textarea
-type: forms
 ---
 
 <%= partial 'partials/doc-menu-forms'%>
 
 <section class="col-md-9">
-<%= partial 'partials/doc-intro-content' %>
+  <%= partial 'partials/doc-intro-content' %>
 
-  <div class="ls-box ls-box-gray">
-    <h4>Acessibilidade</h4>
-    <p>Ao usar o atributo <code>placeholder</code> adicionamos a classe <code>ls-hidden-accessible </code> no <code>ls-label</code>, assim escondemos o elemento, porém os leitores de tela conseguem entender. Faça isso e a Acessibilidade agradece =)</p>
-  </div>
-
-  <p>O elemento <code>textarea</code> tem a altura determinada pela propriedade padrão <code>rows="10"</code> com o número de linhas desejadas.</p>
+  <p>O elemento <code>textarea</code> tem a altura determinada pela propriedade padrão, <code>rows="10"</code> com o número de linhas desejadas.</p>
 
   <div class="ls-box-demo">
     <form action="" class="ls-form">
@@ -26,7 +20,7 @@ type: forms
   </code>
   <p>O <code>textarea</code> vem com o <i>resize</i> desabilitado por padrão, mas pode ser ativado usando as classes <code>ls-textarea-resize-both</code>, <code>ls-textarea-resize-horizontal</code>, <code>ls-textarea-resize-vertical</code>.</p>
 
-  <p>Para um <code>textarea</code> com o comportamento de aumentar de acordo com o texto, insira a classe <code>ls-textarea-autoresize</code> no <code>textarea</code></p>
+  <p>Para um <code>textarea</code> com o comportamento de aumentar de acordo com o texto, insira a classe <code>ls-textarea-autoresize</code> no <code>textarea</code>.</p>
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/form-field-textarea-autoresize.erb' %>
   </div>
