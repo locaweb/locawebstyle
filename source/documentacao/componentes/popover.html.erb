@@ -7,14 +7,13 @@ type: component
 
 <section class="col-md-9">
 
-<%= partial 'partials/doc-intro-content' %>
+  <%= partial 'partials/doc-intro-content' %>
 
   <div class="ls-alert-info">
     Quando resolução abaixo de 769px o popover muda seu comportamento e é exibido como uma modal, evitando problemas de usabilidade!
   </div>
-  <div class="doc-block">
-    <h2 class="ls-title-2">Como usar</h2>
-  </div>
+
+  <h2 class="doc-title-3">Como usar</h2>
   <table class="ls-table">
     <thead>
       <tr>
@@ -31,35 +30,30 @@ type: component
         <td>click</td>
         <td>cria o popover baseado na posição do elemento</td>
       </tr>
-
       <tr>
         <td>data-placement</td>
         <td>top / bottom / left / right</td>
         <td>top</td>
         <td>posiciona o popover</td>
       </tr>
-
       <tr>
         <td>data-title</td>
         <td>text</td>
         <td>--</td>
         <td>insere o título no popover</td>
       </tr>
-
       <tr>
         <td>data-container</td>
         <td>classe ou id</td>
         <td>body</td>
         <td>posiciona o popover de acordo com elemento clicado</td>
       </tr>
-
       <tr>
         <td>data-content</td>
         <td>texto e/ou tags HTML</td>
         <td>--</td>
         <td>insere o conteúdo no popover</td>
       </tr>
-
       <tr>
         <td>data-custom-class</td>
         <td>classe</td>
@@ -69,24 +63,15 @@ type: component
     </tbody>
   </table>
 
-  <div class="doc-block">
-    <h2 class="ls-title-2">Exemplos completos</h2>
-  </div>
-
+  <h2 class="doc-title-3">Exemplos completos</h2>
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/popover' %>
   </div>
-  <code class="language-html">
-    <%= partial 'documentacao/shared/popover' %>
-  </code>
+  <code class="language-html"><%= partial 'documentacao/shared/popover' %></code>
 
-  <div class="doc-block">
-    <h2 class="ls-title-2">Exemplo utilizando os parametros default do popover</h2>
-  </div>
+  <h2 class="doc-title-3">Exemplo utilizando os parametros default do popover</h2>
   <div class="ls-box-demo">
     <a href="#" class="ls-btn-primary" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a>
   </div>
-  <code class="language-html">
-    <a href="#" class="ls-btn-primary" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a>
-  </code>
+  <code class="language-html"><a href="#" class="ls-btn-primary" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a></code>
 </section>

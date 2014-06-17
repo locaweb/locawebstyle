@@ -8,29 +8,29 @@ type: component
 
 <section class="col-md-9">
 
-<%= partial 'partials/doc-intro-content' %>
+  <%= partial 'partials/doc-intro-content' %>
 
   <div class="ls-alert-info">
     Para abrir um collapse automaticamente basta na url passar esse parametro com o target do Collapse ou o Href.
     <strong><a href="/documentacao/componentes/collapse/#!/#collapse1">/#!/#collapse1</a></strong>
   </div>
 
-  <h3 class="ls-title-3">Collapse simples</h3>
+  <h2 class="doc-title-3">Collapse simples</h2>
   <p>A aparência e comportamento de um collapse são:</p>
 
   <div class="ls-box-demo">
     <%= partial('documentacao/shared/collapse', :locals => { :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %>
   </div>
-  <code class="language-html ls-well-example"><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => "Título", content: (lorem.words 1)}) %></code>
+  <code class="language-html"><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => "Título", content: (lorem.words 1)}) %></code>
 
   <p>Os títulos, vísiveis quando o <i>collapse</i> está fechado, podem conter qualquer conteúdo, por exemplo:</p>
 
   <div class="ls-box-demo">
     <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.paragraphs 1)  }) %>
   </div>
-  <code class="language-html ls-well-example"><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.words 3)  }) %></code>
+  <code class="language-html"><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.words 3)  }) %></code>
 
-  <h3 class="ls-title-3">Parâmetros adicionais</h3>
+  <h2 class="doc-title-3">Parâmetros adicionais</h2>
 
   <table class="ls-table">
     <thead>
@@ -54,19 +54,19 @@ type: component
     </tbody>
   </table>
 
-  <h2 class="ls-title-2">Exemplos:</h2>
+  <h2 class="doc-title-3">Exemplos:</h2>
 
   <div class="ls-box-demo">
       <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.paragraphs 2), startOpen: false  }) %>
   </div>
-  <code class="language-html ls-well-example"><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.words 2), startOpen: false  }) %></code>
+  <code class="language-html"><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.words 2), startOpen: false  }) %></code>
 
   <div class="ls-box-demo">
     <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.paragraphs 2), startOpen: false, alwaysOpen: true  }) %>
   </div>
-  <code class="language-html ls-well-example"><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.words 2), startOpen: false, alwaysOpen: true  }) %></code>
+  <code class="language-html"><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.words 2), startOpen: false, alwaysOpen: true  }) %></code>
 
-  <h2 class="ls-title-2">Accordeon</h2>
+  <h2 class="doc-title-3">Accordeon</h2>
   <p><i>Accordeon</i> é um conjunto de <i>collapses</i> agrupados, onde apenas um deles pernace aberto</p>
   <p>Um <i>accordeon</i> é um conjunto de <i>collapses</i>, como mostrados acima, com um elemento que os agrupa, com a classe <i>ls-collapse-group</i>.</p>
 
@@ -78,7 +78,7 @@ type: component
 
   <p>Os <i>collapses</i> agrupados em um <i>accordeon</i> aceitam as mesmas configurações que um <i>collapse</i> normal.</p>
 
-  <h3 class="ls-title-3">Abrir com ação externa</h3>
+  <h2 class="doc-title-3">Abrir com ação externa</h2>
   <p>Para usar um botão ou <i>link</i> para controlar um <i>collapse</i> utilize o atributo <i>data-toggle-collapse</i> com o valor do <b>id</b> do collapse.</p>
 
   <div class="ls-box-demo">
@@ -90,7 +90,7 @@ type: component
 
   <p>Para abrir/fechar um <i>collapse</i> usando javascript, use:</p>
 
-  <code class="language-html ls-well-example">locastyle.collapse.toggle('#collapse1')</code>
+  <code class="language-html">locastyle.collapse.toggle('#collapse1')</code>
 
   <p>Exemplo</p>
   <div class="ls-box-demo">

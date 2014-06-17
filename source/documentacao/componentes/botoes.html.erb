@@ -8,11 +8,12 @@ type: component
 
 <section class="col-md-9">
 
-<%= partial 'partials/doc-intro-content' %>
+  <%= partial 'partials/doc-intro-content' %>
 
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/botoes/botoes' %>
   </div>
+  <code class="language-html"><%= partial 'documentacao/shared/botoes/botoes' %></code>
 
   <h2 class="doc-title-3">Criando botões</h2>
   <p>Teoricamente você pode dar o visual de botão para qualquer elemento, mas geralmente os elementos <code>&lt;a&gt;</code>, <code>&lt;button&gt; </code> e <code>&lt;input&gt;</code> serão os mais utilizados e também é o que aconselhamos. </p>
@@ -43,6 +44,7 @@ type: component
   <h2 class="doc-title-3">Botões blocados</h2>
   <p>As vezes usamos botões que precisam ocupar todo o espaço disponível, para fazer isso use a classe <code>.ls-btn-block</code>. Isso aplicará um <code>display: block;</code> ao botão, dando uma largura de 100%.</p>
   <div class="ls-box-demo"><button type="button" class="ls-btn ls-btn-lg ls-btn-block">Botão em forma de bloco</button></div>
+  <code class="language-html"><button type="button" class="ls-btn ls-btn-lg ls-btn-block">Botão em forma de bloco</button></code>
 
   <h2 class="doc-title-3">Botões desativados</h2>
   <p>Para desabilitar um botão, basta inserir o atributo <code>[disabled]</code> que os browsers cuidarão do resto. Também funciona se você inserir a classe <code>.ls-disabled</code></p>
@@ -51,8 +53,6 @@ type: component
     <a href="#" class="ls-btn-primary" disabled="disabled">Link desativado</a>
     <button class="ls-btn-primary ls-disabled">Botão Desativado</button>
   </div>
-  <br>
-  <br>
   <code class="language-html">
   <a href="#" class="ls-btn-primary" disabled="disabled">Link desativado</a>
   <button class="ls-btn-primary ls-disabled">Button Desativado</button>
@@ -67,6 +67,12 @@ type: component
     <button class="ls-btn ls-ico-cog">Configurações</button>
     <button class="ls-btn-danger ls-ico-dashboard">Consumo limite</button>
   </div>
+  <code class="language-html">
+  <a href="#" class="ls-btn-primary ls-ico-user">Adicionar usuário</a>
+  <button class="ls-btn-dark ls-ico-chevron-left">Anterior</button>
+  <button class="ls-btn ls-ico-cog">Configurações</button>
+  <button class="ls-btn-danger ls-ico-dashboard">Consumo limite</button>
+  </code>
 
   <h2 class="doc-title-3">Grupo de botões</h2>
   <p>Os grupos de botões são botões dentro de um elemento <code>.ls-group-btn</code>.</p>
@@ -78,8 +84,6 @@ type: component
       <button type="button" class="ls-btn">Botão 3</button>
     </div>
   </div>
-  <br>
-  <br>
   <code class="language-html">
   <div class="ls-group-btn">
     <button type="button" class="ls-btn">Botão 1</button>
