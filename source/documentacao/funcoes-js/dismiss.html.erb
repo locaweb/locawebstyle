@@ -1,0 +1,76 @@
+---
+title: Dismiss
+description: Insere um elemento para fechar alerts
+type: funcoesjs
+---
+
+<%= partial 'partials/doc-menu-funcoes-js' %>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <p>Basicamente, se você tiver alertas ou qualquer outro tipo de elemento que queira com que o usuário remova da tela, você vai usar essa função.</p>
+  <div class="ls-box ls-box-gray">
+    <h2 class="doc-title-4">Atenção</h2>
+    <p>Nós não tratamos cookies ou qualquer solução back-end que previna o reaparecimento do elemento removido se o usuário der refresh na página. Você vai precisar fazer sua própria solução caso queira que o elemento não reapareça quando a página for atualizada.</p>
+  </div>
+
+    <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Seletor</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>.ls-dismissable</td>
+          <td>É o elemento que será dispensado.</td>
+        </tr>
+        <tr>
+          <td>data-ls-module="dismiss"</td>
+          <td>É o nosso trigger. É ele que ativa o script. Precisa estar no elemento que irá ser clicado para remover o <code>.ls-dismissable</code>, por exemplo um link, botão etc...</td>
+        </tr>
+        <tr>
+          <td>data-target="#target-id"</td>
+          <td>Necessário quando o elemento que será o trigger não for filho direto de <code>.ls-dismissable</code>, que é o elemento que será removido. Ele aceita IDs ou CLASSES.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  <p>Veja primeiro o exemplo abaixo: ao clicar no <strong>X</strong> do lado direito, o alerta é fechado.</p>
+  <div class="ls-box-demo">
+    <div class="ls-alert-warning ls-dismissable">
+      <span class="ls-dismiss" data-ls-module="dismiss">&times;</span>
+      <strong>Olá!</strong> Este é um alerta que pode ser dispensado.
+    </div>
+  </div>
+  <code class="language-html">
+    <div class="ls-alert-warning ls-dismissable">
+      <span data-ls-module="dismiss">&times;</span>
+      <strong>Olá!</strong> Este é um alerta que pode ser dispensado.
+    </div>
+  </code>
+
+  <p>A classe <code>ls-dismissable</code> avisa nosso script que ele será removido pelo elemento com a classe <code>ls-dismiss</code> e com o atributo <code>data-ls-module="dismiss"</code>. Perceba que nesse formato o elemento <code>.ls-dismiss</code> é filho direto do elemento que será removido.</p>
+
+  <p>Suponha agora que o elemento que vai ser clicado nõa seja filho do <code>ls-dismissable</code>, como no exemplo abaixo:</p>
+
+  <div class="ls-box-demo">
+    <div id="alertDismissExample" class="ls-alert-warning ls-dismissable">
+      Esse elemento vai ser removido por um trigger externo.
+    </div>
+    <a href="#" class="ls-btn" data-target="#alertDismissExample" data-ls-module="dismiss">fecha</a>
+  </div>
+
+  <code class="language-html">
+    <div id="alertDismissExample" class="ls-alert-warning ls-dismissable">
+      Esse elemento vai ser removido por um trigger externo.
+    </div>
+    <a href="#" class="ls-btn" data-target="#alertDismissExample" data-ls-module="dismiss">fecha</a>
+  </code>
+
+  <p>Note que o botão tem um atributo <code>data-target</code> cujo valor pode ser um ID ou uma CLASSE.</p>
+
+</section>

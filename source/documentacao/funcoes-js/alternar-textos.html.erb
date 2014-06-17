@@ -1,0 +1,51 @@
+---
+title: Alternando Textos
+description: Alterando textos de elementos
+type: funcoesjs
+---
+
+<%= partial 'partials/doc-menu-funcoes-js' %>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <p>Basicamente essa funcionalidade altera o texto de determiando elemento.</p>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classe / Atributo</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>data-toggle-txt</td>
+        <td>Atributo cujo valor guarda o texto alternativo</td>
+      </tr>
+      <tr>
+        <td>data-target</td>
+        <td>Elementos que terá o texto modificado pelo <code>data-toggle-text</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <div class="ls-box-demo">
+    <button class="ls-btn" data-toggle-text="Clique para voltar ao texto original">Clique para alterar o texto</button>
+  </div>
+
+  <p>Se você quiser alternar o texto de outro elemento, siga o exemplo abaixo:</p>
+
+  <div class="ls-box-demo">
+    <button class="ls-btn-primary" data-toggle-text="Clique para voltar ao texto original" data-target-text="#lsBox">Clique para alterar o texto do botão ao lado</button>
+    <br>
+    <br>
+    <div id="lsBox" class="ls-box ls-box-gray">
+      Uma mensagem bonita para caramba!
+    </div>
+  </div>
+
+
+</section>
