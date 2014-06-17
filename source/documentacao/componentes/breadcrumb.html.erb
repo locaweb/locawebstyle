@@ -5,15 +5,11 @@ keywords: documentação, locastyle, breadcrumb
 type: component
 ---
 
-<%= partial 'partials/doc-menu-layout'%>
+<%= partial 'partials/doc-menu-components'%>
 
 <section class="col-md-9">
 
-  <!-- Title page -->
-  <div class="doc-intro-content">
-    <h1><%= current_page.data.title %></h1>
-    <p><%= current_page.data.description %></p>
-  </div>
+<%= partial 'partials/doc-intro-content' %>
 
   <p>Breadcrumbs são listas ordenadas simples que indicam onde o usuário está juntamente com usa hierarquia de navegação.</p>
   <div class="ls-box-demo">

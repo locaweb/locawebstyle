@@ -8,11 +8,7 @@ type: component
 
 <section class="col-md-9">
 
-  <!-- Title page -->
-  <div class="doc-intro-content">
-    <h1><%= current_page.data.title %></h1>
-    <p><%= current_page.data.description %></p>
-  </div>
+<%= partial 'partials/doc-intro-content' %>
 
   <p>O tooltip exibe conteúdo curto, caso necessite de um conteúdo longo, por favor utilize nosso <a href="../popover/">popover</a>.</p>
   <p>Indicamos utilizar esse elemento em links, para que ele funcione ao receber o foco do teclado.</p>

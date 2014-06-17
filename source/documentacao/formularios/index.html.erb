@@ -7,11 +7,7 @@ type: forms
 
 <section class="col-md-9">
 
-  <!-- Title page -->
-  <div class="doc-intro-content">
-    <h1><%= current_page.data.title %></h1>
-    <p><%= current_page.data.description %></p>
-  </div>
+<%= partial 'partials/doc-intro-content' %>
 
   <h3 class="ls-title-3">Formulários verticais</h3>
   <p>Você não precisa fazer praticamente nada para que o form funcione na vertical. Esse já é o comportamento padrão. Você pode definir a largura das áreas do formulário com as classes do GRID.</p>
