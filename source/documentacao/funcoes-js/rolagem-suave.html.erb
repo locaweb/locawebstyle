@@ -1,0 +1,34 @@
+---
+title: Rolagem suave
+description: Rolagem animada suave
+---
+
+<%= partial 'partials/doc-menu-funcoes-js' %>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <p>Imagine que você esteja numa página muito extensa e quer fazer links de ancora para as diversas seções, simples: basta adicionar a classe <code>ls-link-smooth</code> no link.</p>
+  <code class="language-html">
+    <a class="ls-btn-primary ls-link-smooth" href="#final" >Ir até a seção com <i>id</i> <b>#final</b></a>
+  </code>
+
+  <ul>
+    <li><a class="ls-link-smooth" href="#primeiro">Ir para primeiro título</a></li>
+    <li><a class="ls-link-smooth" href="#segundo">Ir para segundo título</a></li>
+    <li><a class="ls-link-smooth" href="#terceiro">Terceiro título</a></li>
+  </ul>
+
+  <h1 class="doc-title-3" id="primeiro">Um título bacana</h1>
+  <p><%= lorem.paragraphs 10 %></p>
+
+  <h1 class="doc-title-3" id="segundo">Um título bacana</h1>
+  <p><%= lorem.paragraphs 2 %></p>
+  <p><%= lorem.paragraphs 2 %></p>
+
+  <h1 class="doc-title-3" id="terceiro">Um título bacana</h1>
+  <p><%= lorem.paragraphs 3 %></p>
+  <p><%= lorem.paragraphs 2 %></p>
+
+</section>
