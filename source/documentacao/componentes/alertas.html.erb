@@ -4,14 +4,11 @@ description: Os Alertas são usados para enviar um feedback contextual de sucess
 type: component
 ---
 
-<%= partial 'partials/doc-menu-layout'%>
+<%= partial 'partials/doc-menu-components'%>
 
 <section class="col-md-9">
 
-  <div class="doc-intro-content">
-    <h1><%= current_page.data.title %></h1>
-    <p><%= current_page.data.description %></p>
-  </div>
+<%= partial 'partials/doc-intro-content' %>
 
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/alerts/alerts' %>

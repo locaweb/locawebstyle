@@ -7,11 +7,7 @@ type: forms
 <%= partial 'partials/doc-menu-forms'%>
 
 <section class="col-md-9">
-  <!-- Title page -->
-  <div class="doc-intro-content">
-    <h1><%= current_page.data.title %></h1>
-    <p><%= current_page.data.description %></p>
-  </div>
+<%= partial 'partials/doc-intro-content' %>
 
   <div class="ls-box ls-box-gray">
     <h4>Acessibilidade</h4>

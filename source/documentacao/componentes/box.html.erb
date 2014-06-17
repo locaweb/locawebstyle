@@ -4,17 +4,12 @@ description: Um box genérico usado para dividir ou agrupar conteúdos
 type: component
 ---
 
-<%= partial 'partials/doc-menu-layout'%>
+<%= partial 'partials/doc-menu-components'%>
 
 <section class="col-md-9">
 
-  <!-- Title page -->
-  <div class="doc-intro-content">
-    <h1><%= current_page.data.title %></h1>
-    <p><%= current_page.data.description %></p>
-  </div>
+<%= partial 'partials/doc-intro-content' %>
 
-  <div class="doc-section">
     <p>Geralmente precisamos agrupar ou dividir algumas informações em caixas no layout. Essas caixas são simples e bem genéricas que podem conter qualquer outro elemento. </p>
 
     <table class="ls-table">
