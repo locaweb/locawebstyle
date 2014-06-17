@@ -12,7 +12,7 @@ type: component
 
   <p>A tabela é elemento comum e bastante usado para listagem de conteúdo com muitas informações agregadas.</p>
 
-  <h2 class="ls-title-2 ">Classes funcionais</h2>
+  <h2 class="doc-title-3">Classes funcionais</h2>
   <p>Logo abaixo segue as classes que modificam diretamente a tabela. Logo após você pode ver o exemplo de cada uma dessas classes.</p>
 
   <table class="ls-table">
@@ -50,17 +50,15 @@ type: component
     </tbody>
   </table>
 
-  <h2 class="ls-title-2">Tabela básica</h2>
+  <h2 class="doc-title-3">Tabela básica</h2>
   <p>Fizemos uma classe customizada para fazer nosso estilo, essa classe é a <code>ls-table</code>. Basta inserir essa classe em uma tabela para deixá-la com o visual abaixo:</p>
 
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/table' %>
   </div>
-  <code class="language-html">
-  <%= partial 'documentacao/shared/table' %>
-  </code>
+  <code class="language-html"><%= partial 'documentacao/shared/table' %></code>
 
-  <h2 class="ls-title-2 ">Tabela zebrada</h2>
+  <h2 class="doc-title-3">Tabela zebrada</h2>
   <p>Se quiser que as linhas da tabela fiquem com o background colorido alternadamente, basta adicionar a classe <code>.ls-table-striped</code>.</p>
 
   <table class="ls-table ls-table-striped">
@@ -100,7 +98,7 @@ type: component
     </tbody>
   </table>
 
-  <h2 class="ls-title-2 ">Tamanho dos espaçamentos</h2>
+  <h2 class="doc-title-3">Tamanho dos espaçamentos</h2>
   <p>Definimos 2 espaçamentos extra, além do espaçamento padrão. Para mudar o tamanho dos espaçamentos, basta inserir a classe <code>ls-md-space</code> ou <code>ls-sm-space</code>. Veja o resultado abaixo com dois exemplos:</p>
 
   <table class="ls-table ls-sm-space">
@@ -153,11 +151,10 @@ type: component
     </tbody>
   </table>
 
-
-  <h2 class="ls-title-2">Ordenação nas tabelas</h2>
+  <h2 class="doc-title-3">Ordenação nas tabelas</h2>
   <p>Perceba que para deixar os títulos de colunas com marcação de ordenação, basta utilizar as classes <code>.ls-data-descending</code> ou <code>.ls-data-ascending </code>.</p>
   <p>Isso <strong>não adiciona uma funcionalidade de ordenação</strong>, apenas as setinhas de marcação.</p>
-    <table class="ls-table">
+  <table class="ls-table">
     <thead>
       <tr>
         <th>Título</th>
@@ -182,30 +179,30 @@ type: component
     </tbody>
   </table>
 
-  <h2 class="ls-title-2">Cabeçalho colorido</h2>
+  <h2 class="doc-title-3">Cabeçalho colorido</h2>
   <p>Para deixar o cabeçalho da tabela com um background maneiro, basta inserir a classe <code>ls-bg-header</code> na tag <code>table</code>.</p>
-      <table class="ls-table ls-bg-header">
-        <thead>
-          <tr>
-            <th>Título</th>
-            <th class="hidden-xs ls-data-descending"><a href="#">Campanha</a></th>
-            <th class="ls-data-ascending"><a href="#">Status</a></th>
-            <th class="hidden-xs ls-data-ascending"><a href="#">Data de envio</a></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="" title="">Mensagem Teste Locastyle</a></td>
-            <td class="hidden-xs">Campanha</td>
-            <td>Enviada</td>
-            <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-          </tr>
-          <tr>
-            <td><a href="" title="">Mensagem Teste Locastyle</a></td>
-            <td class="hidden-xs">Campanha</td>
-            <td>Enviada</td>
-            <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-          </tr>
-        </tbody>
-      </table>
+  <table class="ls-table ls-bg-header">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th class="hidden-xs ls-data-descending"><a href="#">Campanha</a></th>
+        <th class="ls-data-ascending"><a href="#">Status</a></th>
+        <th class="hidden-xs ls-data-ascending"><a href="#">Data de envio</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="" title="">Mensagem Teste Locastyle</a></td>
+        <td class="hidden-xs">Campanha</td>
+        <td>Enviada</td>
+        <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+      </tr>
+      <tr>
+        <td><a href="" title="">Mensagem Teste Locastyle</a></td>
+        <td class="hidden-xs">Campanha</td>
+        <td>Enviada</td>
+        <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+      </tr>
+    </tbody>
+  </table>
 </section>

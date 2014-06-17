@@ -10,8 +10,7 @@ type: component
 
 <%= partial 'partials/doc-intro-content' %>
 
-
-  <h2>Utilizando a tag <i>progress</i></h2>
+  <h2 class="doc-title-3">Utilizando a tag <i>progress</i></h2>
 
   <table class="ls-table">
     <thead>
@@ -19,44 +18,39 @@ type: component
         <th>tipo</th><th>Classe</th><th>Exemplo</th>
       </tr>
     </thead>
-    <tr>
-      <td>Estática</td>
-      <td>.ls-progress</td>
-      <td><progress class="ls-progress" value="10" max="100"></progress></td>
-    </tr>
-    <tr>
-      <td>Animada</td>
-      <td>.ls-progress .ls-progress-animated</td>
-      <td><progress class="ls-progress ls-progress-animated" value="20" max="100"></progress></td>
-    </tr>
-    <tr>
-      <td>Cinza</td>
-      <td>ls-progress ls-progress-gray</td>
-      <td><progress class="ls-progress ls-progress-gray" value="30" max="100"></progress></td>
-    </tr>
-    <tr>
-      <td>Com percentual</td>
-      <td>.ls-progress .ls-progress-percent</td>
-      <td><progress class="ls-progress ls-progress-percent" value="40" max="100"></progress></td>
-    </tr>
-    <tr>
-      <td>Pie</td>
-      <td>.ls-progress .ls-progress-pie</td>
-      <td><progress class="ls-progress ls-progress-pie" value="40" max="100"></progress></td>
-    </tr>
-    <tr>
-      <td>donut</td>
-      <td>.ls-progress .ls-progress-donut</td>
-      <td><progress class="ls-progress ls-progress-donut" value="40" max="100"></progress></td>
-    </tr>
+    <tbody>
+      <tr>
+        <td>Estática</td>
+        <td>.ls-progress</td>
+        <td><progress class="ls-progress" value="10" max="100"></progress></td>
+      </tr>
+      <tr>
+        <td>Animada</td>
+        <td>.ls-progress .ls-progress-animated</td>
+        <td><progress class="ls-progress ls-progress-animated" value="20" max="100"></progress></td>
+      </tr>
+      <tr>
+        <td>Cinza</td>
+        <td>ls-progress ls-progress-gray</td>
+        <td><progress class="ls-progress ls-progress-gray" value="30" max="100"></progress></td>
+      </tr>
+      <tr>
+        <td>Com percentual</td>
+        <td>.ls-progress .ls-progress-percent</td>
+        <td><progress class="ls-progress ls-progress-percent" value="40" max="100"></progress></td>
+      </tr>
+      <tr>
+        <td>Pie</td>
+        <td>.ls-progress .ls-progress-pie</td>
+        <td><progress class="ls-progress ls-progress-pie" value="40" max="100"></progress></td>
+      </tr>
+    </tbody>
   </table>
 
-  <h3>Código</h3>
+  <h2 class="doc-title-3">Código</h2>
 
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/progress-bar/progress' %>
   </div>
-  <code class="language-html">
-    <%= partial 'documentacao/shared/progress-bar/progress' %>
-  </code>
+  <code class="language-html"><%= partial 'documentacao/shared/progress-bar/progress' %></code>
 </section>
