@@ -196,35 +196,40 @@ p + .row
     list-style: none
     line-height: inherit
 
-  a
-    position: relative
-    display: block
-    padding: 10px 0 10px 20px
-    font-size: .94rem
-    color: #555
-    border-left: 5px solid #fff
+    a
+      position: relative
+      display: block
+      padding: 10px 0 10px 20px
+      font-size: .94rem
+      color: #555
+      border-left: 5px solid #fff
+
 
     &.active,
     &:hover,
     &:focus
-      border-left-color: #001e45
-      background-color: #f2f2f2
-      color: #000
 
-      &:after
-        position: absolute
-        right: -17px
-        top: 0
-        content: ""
-        display: inline-block
-        vertical-align: middle
-        margin-right: 10px
-        width: 0
-        height: 0
+      a,
+      a:hover,
+      a:focus
+        border-left-color: #001e45
+        background-color: #f2f2f2
+        color: #000
 
-        border-top: 18px solid transparent
-        border-bottom: 18px solid transparent
-        border-left: 7px solid #f2f2f2
+        &:after
+          position: absolute
+          right: -17px
+          top: 0
+          content: ""
+          display: inline-block
+          vertical-align: middle
+          margin-right: 10px
+          width: 0
+          height: 0
+
+          border-top: 18px solid transparent
+          border-bottom: 18px solid transparent
+          border-left: 7px solid #f2f2f2
 
 //
 // DOC SECTIONS (ADDTHIS SOCIAL LINKS)
