@@ -37,36 +37,6 @@
     &::-webkit-progress-value, .ls-progress-value
       // opacity: 0
 
-  &.ls-progress-donut
-    width: 4rem
-    height: 4rem
-    border-radius: 3rem
-
-    &::-webkit-progress-bar
-      background-color: #fff
-      width: 2rem
-      height: 2rem
-      border-radius: 3rem
-      position: absolute
-      top: 1rem
-      left: 1rem
-
-    &::-webkit-progress-value
-      display: none
-
-    &::after
-      content: ""
-      background-color: #fff
-      border-radius: 0
-      position: absolute
-      top: 50%
-      left: 50%
-      height: 3rem
-      width: 3rem
-      display: block
-      // -webkit-transform: skew(43deg)
-      -webkit-transform: rotate(1deg)
-
   &.ls-progress-percent
     &:before
       content: attr(value)
