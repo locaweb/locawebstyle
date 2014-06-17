@@ -1,65 +1,58 @@
 ---
-title: Geral
-description: Funções, métodos e configurações gerais do locastyle
+title: Alternando Classes
+description: Como alterar classes de elementos
 type: funcoesjs
 ---
 
-  <%= partial 'partials/doc-menu-funcoes-js' %>
+<%= partial 'partials/doc-menu-funcoes-js' %>
 
 <section class="col-md-9">
 
-<%= partial 'partials/doc-intro-content' %>
+  <%= partial 'partials/doc-intro-content' %>
 
-  <div class="doc-section">
-    <h2>Rolagem suave da tela</h2>
-    <p>Faz um link ou <i>#hash</i> ir suavemente até o elemento que o <i>link</i> aponta.</p>
-    <p>Basta adicionar a classe <i>ls-link-smooth</i> no link.</p>
-    <p>
-      <a class="ls-btn-primary ls-link-smooth" href="#final" >Ir até a seção com <i>id</i> <b>#final</b></a>
-    </p>
+  <p>Basicamente essa funcionalidade faz um <strong>toggleClass</strong> em determiando elemento para que sua classe seja alternada.</p>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classe / Atributo</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>data-toggle-class</td>
+        <td>Atributo cujo valor é a classe que o script irá alternar</td>
+      </tr>
+      <tr>
+        <td>data-target</td>
+        <td>Elementos que terão a classe alternada definida no <code>data-toggle-class</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Veja um exemplo abaixo:</p>
+
+  <div class="ls-box-demo">
+    <button class="ls-btn-dark" data-toggle-class="ls-btn-dark">Troca a adiciona/remove a classe <i>.ls-btn-dark</i> deste botão</button>
+  </div>
+
+  <p>Neste exemplo, o atributo <code>data-toggle-class</code> contém o valor da classe que ele deve alternar.</p>
+
+  <div class="ls-box-demo">
+    <button class="ls-btn-primary" data-toggle-class="ls-background-info" data-target="#lsBox">Alterna a classe <i>.ls-background-info</i> do <code>ls-box</code></button>
+    <br>
+    <br>
+    <div id="lsBox" class="ls-box ls-background-info">
+      Uma mensagem bonita para caramba!
+    </div>
+  </div>
+  <p>É possível modificar vários elementos ao mesmo tempo, referenciando no <code>data-target</code> a classe destes elementos, como abaixo:</p>
+  <div class="ls-box-demo">
+    <button class="ls-btn-primary" data-toggle-class="ls-background-warning" data-target=".exampleBox">Alterna as classes dos elementos abaixo</button><br><br>
+    <div class="exampleBox ls-box ls-background-warning">Uma mensagem bonita para caramba!</div>
+    <div class="exampleBox ls-box ls-background-warning">Uma mensagem bonita para caramba!</div>
   </div>
 
 
-  <div class="doc-section">
-    <h2 class="ls-title-2">Inicializador de módulos</h2>
-    <p>Atualmente o Locastyle está dividido em módulos, temos um inicializador que roda apenas os módulos presentes na tela para evitar ficar instanciando módulos e fazendo "bind" de eventos desnecessários.</p>
-    <p>Para que isto funcione, basta usar os módulos conforme os exemplos, pois o incializador procura por atributos data-ls-module e inicializa os módulos conforme o valor do atributo.</p>
-  </div>
-
-  <div class="doc-section">
-    <h2 class="ls-title-2">Backgrounds Padrões</h2>
-    <p>Backgrounds definidos com as cores padrões de tags e alertas.</p>
-    <table class="ls-table">
-      <thead>
-        <tr>
-          <th>Classe</th>
-          <th>Descrição</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="ls-background-primary">
-          <td><code>.ls-background-primary</code></td>
-          <td>Background primario</td>
-        </tr>
-        <tr class="ls-background-sucess">
-          <td><code>.ls-background-sucess</code></td>
-          <td>Background informando uma ação completada/válida, sucesso</td>
-        </tr>
-        <tr class="ls-background-info">
-          <td><code>.ls-background-info</code></td>
-          <td>Background informativo</td>
-        </tr>
-        <tr class="ls-background-warning">
-          <td><code>.ls-background-warning</code></td>
-          <td>Background informando atenção</td>
-        </tr>
-        <tr class="ls-background-danger">
-          <td><code>.ls-background-danger</code></td>
-          <td>Ferrou tudo!</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div id="final">#final</div>
 </section>
