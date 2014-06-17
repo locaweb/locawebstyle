@@ -7,11 +7,7 @@ type: forms
 <%= partial 'partials/doc-menu-forms'%>
 
 <section class="col-md-9">
-  <!-- Title page -->
-  <div class="doc-intro-content">
-    <h1><%= current_page.data.title %></h1>
-    <p><%= current_page.data.description %></p>
-  </div>
+<%= partial 'partials/doc-intro-content' %>
 
   <p>Adicione a classe <code>ls-form-disable</code> para desabilitar tudo dentro do elemento (uma <code>div</code> ou todo o <code>form</code>) ou <code>ls-field-disable</code> para desabilitar um campo.</p>
   <div class="ls-box-demo">
