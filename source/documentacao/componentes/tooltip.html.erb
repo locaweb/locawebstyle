@@ -8,19 +8,9 @@ type: component
 
 <section class="col-md-9">
 
-<%= partial 'partials/doc-intro-content' %>
+  <%= partial 'partials/doc-intro-content' %>
 
   <p>O tooltip exibe conteúdo curto, caso necessite de um conteúdo longo, por favor utilize nosso <a href="../popover/">popover</a>.</p>
-  <p>Indicamos utilizar esse elemento em links, para que ele funcione ao receber o foco do teclado.</p>
-
-  <p>O conteúdo do tooltip é inserido no atributo <code>aria-label</code>, assim ele funciona perfeitamente nos leitores de tela.</p>
-
-  <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/tooltip' %>
-  </div>
-  <code class="language-html">
-    <%= partial 'documentacao/shared/tooltip' %>
-  </code>
 
   <table class="ls-table ls-no-hover">
     <thead>
@@ -48,4 +38,13 @@ type: component
       </tr>
     </tbody>
   </table>
+  <p>Indicamos utilizar esse elemento em links, para que ele funcione ao receber o foco do teclado.</p>
+
+  <p>O conteúdo do tooltip é inserido no atributo <code>aria-label</code>, assim ele funciona perfeitamente nos leitores de tela.</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/tooltip' %>
+  </div>
+  <code class="language-html"><%= partial 'documentacao/shared/tooltip' %></code>
+
 </section>

@@ -8,11 +8,10 @@ type: component
 
 <section class="col-md-9">
 
-<%= partial 'partials/doc-intro-content' %>
+  <%= partial 'partials/doc-intro-content' %>
 
-  <div class="doc-block">
-    <h2 class="ls-title-2">Como usar</h2>
-  </div>
+  <h2 class="doc-title-3">Como usar</h2>
+
   <div class="ls-alert-info">
     Para abrir a modal automaticamente basta na url passar esse parametro com o target da Modal.
     <strong><a href="/documentacao/modal/#!/#myAwesomeModal" target="blank">/#!/#myAwesomeModal</a></strong>
@@ -27,21 +26,18 @@ type: component
       </tr>
     </thead>
     <tbody>
-
       <tr>
         <td>effect</td>
         <td>fade, crazy</td>
         <td>fade</td>
         <td>Cria uma animação</td>
       </tr>
-
       <tr>
         <td>target</td>
         <td>#myTarget</td>
         <td>--</td>
         <td>Abre a modal com o mesmo nome do target</td>
       </tr>
-
       <tr>
         <td>content</td>
         <td>um texto curto</td>
@@ -51,7 +47,6 @@ type: component
           <p>Só funciona se não houver <strong>data-target</strong></p>
         </td>
       </tr>
-
       <tr>
         <td>title</td>
         <td>um titulo curto</td>
@@ -61,7 +56,6 @@ type: component
           <p>Só funciona se não houver <strong>data-target</strong></p>
         </td>
       </tr>
-
       <tr>
         <td>save</td>
         <td>texto</td>
@@ -71,7 +65,6 @@ type: component
           <p>Só funciona se não houver <strong>data-target</strong></p>
         </td>
       </tr>
-
       <tr>
         <td>close</td>
         <td>texto</td>
@@ -81,7 +74,6 @@ type: component
           <p>Só funciona se não houver <strong>data-target</strong></p>
         </td>
       </tr>
-
       <tr>
         <td>action</td>
         <td>link</td>
@@ -91,7 +83,6 @@ type: component
           <p>Só funciona se não houver <strong>data-target</strong></p>
         </td>
       </tr>
-
       <tr>
         <td>class</td>
         <td>texto</td>
@@ -107,7 +98,5 @@ type: component
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/modal' %>
   </div>
-  <code class="language-html">
-    <%= partial 'documentacao/shared/modal' %>
-  </code>
+  <code class="language-html"><%= partial 'documentacao/shared/modal' %></code>
 </section>

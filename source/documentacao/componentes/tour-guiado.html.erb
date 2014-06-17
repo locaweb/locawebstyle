@@ -3,158 +3,136 @@ title: Tour Guiado
 description: Exibe uma navegação explicativa de elementos pré definidos
 type: component
 ---
+
 <%= partial 'partials/doc-menu-components'%>
 
 <section class="col-md-9">
 
-<%= partial 'partials/doc-intro-content' %>
+  <%= partial 'partials/doc-intro-content' %>
 
-  <div class="doc-section">
-  	<p>Utilizamos o plugin  <a href="http://linkedin.github.io/hopscotch" target="_blank">hopscotch</a> (criado pelo linkedin), e aplicamos a identidade visual do LocawebStyle.</p>
-  </div>
+  <p>Utilizamos o plugin  <a href="http://linkedin.github.io/hopscotch" target="_blank">hopscotch</a> (criado pelo linkedin), e aplicamos a identidade visual do LocawebStyle.</p>
 
-  <div class="doc-section">
-  	<h2 class="ls-title-2">Como funciona:</h2>
-  	<p>Dentro de cada projeto existe um tour.js (específico), que determina onde exibirá o <strong>Tour Guiado</strong>, qual o próximo passo e assim por diante. Em cada passo podemos implementar outras funções de navegação ou mesmo de eventos simulando interações, vale a pena ler a <a href="http://linkedin.github.io/hopscotch" target="_blank">documentação do plugin</a> para entender melhor sobre esses eventos e funções.</p>
-  </div>
+  <h2 class="doc-title-3">Como funciona:</h2>
+  <p>Dentro de cada projeto existe um tour.js (específico), que determina onde exibirá o <strong>Tour Guiado</strong>, qual o próximo passo e assim por diante. Em cada passo podemos implementar outras funções de navegação ou mesmo de eventos simulando interações, vale a pena ler a <a href="http://linkedin.github.io/hopscotch" target="_blank">documentação do plugin</a> para entender melhor sobre esses eventos e funções.</p>
 
-  <div class="doc-section">
-  	<h2 class="ls-title-2">Cookie</h2>
-  	<p>Ao carregar pela primeira vez,  a caixa de informação onde está o botão para iniciar o Tour, é exibida aberta logo após o carregamento da página, nas próximas vezes ela estará sempre fechada, a não ser que o cookie seja excluído.</p>
-  </div>
+  <h2 class="doc-title-3">Cookie</h2>
+  <p>Ao carregar pela primeira vez,  a caixa de informação onde está o botão para iniciar o Tour, é exibida aberta logo após o carregamento da página, nas próximas vezes ela estará sempre fechada, a não ser que o cookie seja excluído.</p>
 
-  <div class="doc-section">
-  	<h2 class="ls-title-2">Acessibilidade</h2>
-  	<p>Implementamos navegação via teclado, utilizando seta pra frente (prosseguir), trás (voltar) e a tecla ESC (fechar). Faça um teste!</p>
-  </div>
-
+  <h2 class="doc-title-3">Acessibilidade</h2>
+  <p>Implementamos navegação via teclado, utilizando seta pra frente (prosseguir), trás (voltar) e a tecla ESC (fechar). Faça um teste!</p>
 
   <table class="ls-table">
-  	<thead>
-  		<tr>
-  			<th>Função</th>
-  			<th>Significado</th>
-  		</tr>
-  	</thead>
-  	<tbody>
-  		<tr>
-  			<td>*locastyle.guidedTour.init(elem)</td>
-  			<td>Inicializa toda a função do Tour (inserir somente na página que essa navegação guiada existir)</td>
-  		</tr><tr>
-  			<td>locastyle.guidedTour.openWelcomeTour()</td>
-  			<td>Exibe a caixa de informação do Header</td>
-  		</tr>
-  		<tr>
-  			<td>locastyle.guidedTour.closeWelcomeTour();</td>
-  			<td>Fecha a caixa de informação do Header</td>
-  		</tr>
-  	</tbody>
+    <thead>
+      <tr>
+        <th>Função</th>
+        <th>Significado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>*locastyle.guidedTour.init(elem)</td>
+        <td>Inicializa toda a função do Tour (inserir somente na página que essa navegação guiada existir)</td>
+      </tr>
+      <tr>
+        <td>locastyle.guidedTour.openWelcomeTour()</td>
+        <td>Exibe a caixa de informação do Header</td>
+      </tr>
+      <tr>
+        <td>locastyle.guidedTour.closeWelcomeTour();</td>
+        <td>Fecha a caixa de informação do Header</td>
+      </tr>
+    </tbody>
   </table>
 
-  <div class="doc-section">
-  	<p>*<b>elem</b> é o nome da variável do tour.js da página específica.</p>
-  	<p>Abaixo segue um exemplo dos códigos necessários para implementar o <strong>Tour Guiado</strong>. </p>
-  </div>
+  <p>*<b>elem</b> é o nome da variável do tour.js da página específica.</p>
+  <p>Abaixo segue um exemplo dos códigos necessários para implementar o <strong>Tour Guiado</strong>. </p>
 
-  <div class="doc-section">
-  	<h2 class="ls-title-2">Chamando a função de navegação dentro do seu projeto, propositalmente com window.load</h2>
-  	<code class="language-javascript">
-  	$(window).load(function() {
-  		//Onde tourDashboard é a variável que recebe os eventos do plugin no exemplo abaixo
-  		locastyle.guidedTour.init(tourDashboard);
-  	});
-  	</code>
-  </div>
+  <h2 class="doc-title-3">Chamando a função de navegação dentro do seu projeto, propositalmente com window.load</h2>
+  <code class="language-javascript">
+  $(window).load(function() {
+    //Onde tourDashboard é a variável que recebe os eventos do plugin no exemplo abaixo
+    locastyle.guidedTour.init(tourDashboard);
+  });
+  </code>
 
   <p>O valor do <strong>target</strong> (dentro do tour.js) server como referência de exibição do Tour Guiado. Na tabela abaixo alguns exemplos</p>
 
   <table class="ls-table">
-  	<thead>
-  		<tr>
-  			<th>Elemento</th>
-  			<th>Tipo</th>
-  			<th>Exemplo</th>
-  		</tr>
-  </thead>
-  <tbody>
-  		<tr>
-  			<td>target</td>
-  			<td>ID</td>
-  			<td>target: 'header'</td>
-  		</tr>
-  		<tr>
-  			<td>target</td>
-  			<td>Classe</td>
-  			<td>target: '.header .btn'</td>
-  		</tr>
-  	</tbody>
+    <thead>
+      <tr>
+        <th>Elemento</th>
+        <th>Tipo</th>
+        <th>Exemplo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>target</td>
+        <td>ID</td>
+        <td>target: 'header'</td>
+      </tr>
+      <tr>
+        <td>target</td>
+        <td>Classe</td>
+        <td>target: '.header .btn'</td>
+      </tr>
+    </tbody>
   </table>
 
-  <div class="doc-section">
-  	<h2 id="passo1" class="ls-title-2" >tour.js </h2>
-  	<code class="language-javascript">
-  	var configTour = {
-  		id: 'tourDemo',
-  		selectors: {
-  			init:  '#demo-init'
-  		},
-  		// Tradução dos botões
-  		i18n: {
-  			nextBtn: "Próximo",
-  			prevBtn: "Anterior",
-  			doneBtn: "Ok",
-  			skipBtn: "Sair",
-  			closeTooltip: "Fechar"
-  		},
-  		bubbleWidth: 250,
-  		showPrevButton: true,
-  		steps: [
-  			{
-  				target: 'passo1',
-  				title: 'Titulo passo 1',
-  				content: 'descrição passo 1',
-  				placement: 'bottom',
-  				arrowOffset: 'center'
-  			},
-  			{
-  				target: 'passo2',
-  				title: 'Título passo 2',
-  				content: 'texto passo 2.',
-  				placement: 'right',
-  				arrowOffset: 'center',
-  				yOffset: 'center'
-  			}
-  		]
-  	};
-  	</code>
-  </div>
+  <h2 id="passo1" class="doc-title-3" >tour.js </h2>
+  <code class="language-html">
+  var configTour = {
+    id: 'tourDemo',
+    selectors: {
+      init:  '#demo-init'
+    },
+    // Tradução dos botões
+    i18n: {
+      nextBtn: "Próximo",
+      prevBtn: "Anterior",
+      doneBtn: "Ok",
+      skipBtn: "Sair",
+      closeTooltip: "Fechar"
+    },
+    bubbleWidth: 250,
+    showPrevButton: true,
+    steps: [{
+      target: 'passo1',
+      title: 'Titulo passo 1',
+      content: 'descrição passo 1',
+      placement: 'bottom',
+      arrowOffset: 'center'
+    },{
+      target: 'passo2',
+      title: 'Título passo 2',
+      content: 'texto passo 2.',
+      placement: 'right',
+      arrowOffset: 'center',
+      yOffset: 'center'
+    }]
+  };
+  </code>
 
-  <div class="doc-section">
-  	<h2 id="passo2" class="ls-title-2">HTML</h2>
-  	<code class="language-html">
-  		<div class="guided-tour">
-  			<a href="#" aria-label="Fechar" class="btn-close close">x</a>
-  			<header class="guided-header">
-  				<p>Bem-vindo</p>
-  				<h2 class="title-guided">Título</h2>
-  			</header>
-  			<a href="#" class="btn btn-primary btn-tour" role="button">Iniciar</a>
-  			<footer class="guided-footer">
-  				<a href="https://www.demo.com" class="ico-arrow-right" target="_blank">Link demo</a>
-  				<a href="#" class="ico-arrow-right" target="_blank">Link</a>
-  			</footer>
-  		</div>
-  	</code>
+  <h2 id="passo2" class="doc-title-3">HTML</h2>
+  <code class="language-html">
+  <div class="guided-tour">
+    <a href="#" aria-label="Fechar" class="btn-close close">x</a>
+    <header class="guided-header">
+      <p>Bem-vindo</p>
+      <h2 class="title-guided">Título</h2>
+    </header>
+    <a href="#" class="btn btn-primary btn-tour" role="button">Iniciar</a>
+    <footer class="guided-footer">
+      <a href="https://www.demo.com" class="ico-arrow-right" target="_blank">Link demo</a>
+      <a href="#" class="ico-arrow-right" target="_blank">Link</a>
+    </footer>
   </div>
+  </code>
 
-  <div class="doc-section">
-  	<h3>Exemplo</h3>
-  	<p>Faça um tour guiado usando as configurações do js de exemplo, acima:</p>
-  	<div class="ls-box-demo">
-  		<button id="demo-init" class="ls-btn-primary btn-tour">Iniciar Tour</button>
-  	</div>
-  	<code class="language-html">
-  		<button id="demo-init-sample" class="ls-btn-primary btn-tour">Iniciar Tour</button>
-  	</code>
+  <h2 class="doc-title-3">Exemplo</h2>
+  <p>Faça um tour guiado usando as configurações do js de exemplo, acima:</p>
+  <div class="ls-box-demo">
+    <button id="demo-init" class="ls-btn-primary btn-tour">Iniciar Tour</button>
   </div>
+  <code class="language-html"><button id="demo-init-sample" class="ls-btn-primary btn-tour">Iniciar Tour</button></code>
 </section>
