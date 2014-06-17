@@ -75,7 +75,7 @@ var lsdocs = (function() {
       var docSidebarWidth = $('.doc-sidebar-menu').width();
       $(window).scroll(function(){
         var scrollTop = $(this).scrollTop();
-        if(scrollTop >= '435'){
+        if(scrollTop >= '391'){
           $('.doc-sidebar-menu').addClass('doc-affix').css('width', docSidebarWidth)
         }else{
           $('.doc-sidebar-menu').removeClass('doc-affix').removeAttr('style');
