@@ -8,41 +8,42 @@ type: component
 
 <section class="col-md-9">
 
-<%= partial 'partials/doc-intro-content' %>
+  <%= partial 'partials/doc-intro-content' %>
 
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/alerts/alerts' %>
   </div>
-  <code class="language-html ls-well-example">
-  <%= partial 'documentacao/shared/alerts/alerts' %>
-  </code>
+  <code class="language-html"><%= partial 'documentacao/shared/alerts/alerts' %></code>
 
-  <h2 class="ls-title-2">Fechando alertas</h2>
-  <p>
-    Para inserir um <strong>X</strong> para que o usuário possa fechar o alerta, basta utilizar a classe <code>ls-dismissable</code> no elemento de alert.
-  </p>
+  <h2 class="doc-title-3">Fechando alertas</h2>
+  <p>Para inserir um <strong>X</strong> para que o usuário possa fechar o alerta, basta utilizar a classe <code>ls-dismissable</code> no elemento de alert.</p>
 
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/alerts/close-alerts' %>
   </div>
 
-  <h2 class="ls-title-2">Tamanhos dos alertas</h2>
+  <h2 class="doc-title-3">Tamanhos dos alertas</h2>
   <p>O Locawebstyle tem algumas classes funcionais para nos ajudar a aumentar o espaçamento dos elementos. Basta usar uma das classes abaixo para aumentar o tamanho dos alertas:</p>
-     <table class="ls-table">
-      <thead>
-        <tr>
-          <th>Nome</th><th>Descrição</th>
-        </tr>
-      </thead>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Nome</th><th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr><td>.ls-xs-space</td><td>Coloca um padding de 5px na caixa</td></tr>
       <tr><td>.ls-sm-space</td><td>Coloca um padding de 10px na caixa</td></tr>
       <tr><td>.ls-md-space</td><td>Coloca um padding de 20px na caixa</td></tr>
       <tr><td>.ls-lg-space</td><td>Coloca um padding de 40px na caixa</td></tr>
-    </table>
+    </tbody>
+  </table>
+  <hr>
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/alerts/width-alerts' %>
   </div>
-  <code class="language-html ls-well-example">
+  <code class="language-html">
     <%= partial 'documentacao/shared/alerts/width-alerts' %>
   </code>
+
 </section>
