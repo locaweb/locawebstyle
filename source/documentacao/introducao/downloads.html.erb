@@ -1,0 +1,84 @@
+---
+title: Downloads
+description: Aqui você pode baixar separadamente os módulos do Locastyle para usar em seu projeto.
+type: intro
+---
+<%= partial 'partials/doc-menu-intro'%>
+<section class="col-md-9">
+  <%= partial 'partials/doc-intro-content' %>
+  <form action="http://162.248.164.209/zipper/" method="post" class="modules-download">
+    <div class="col-md-4 row">
+      <h2 class="doc-title-2">Javascripts</h2>
+      <table class="ls-table ls-table-striped js-modules">
+        <thead>
+          <tr>
+            <th>Módulo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% assets_files('assets/javascripts/locastyle').each do |resource| %>
+            <% resource.match('_?([^\/]+)\.[\w]+$').tap do |path| %>
+              <tr>
+                <td>
+                  <label class="ls-display-block">
+                    <input name="files[]" type="checkbox" data-file="<%= path %>" value="https://raw.githubusercontent.com/locaweb/locawebstyle/reboot/<%= resource %>" data-dependence="">
+                    <%= path %>
+                  </label>
+                </td>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <h2 class="doc-title-2">Stylesheets</h2>
+      <table class="ls-table ls-table-striped css-modules">
+        <thead>
+          <tr>
+            <th>Módulo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% assets_files('assets/stylesheets/locastyle/modules').each do |resource| %>
+            <% resource.match('_?([^\/]+)\.[\w]+$').tap do |path| %>
+              <tr>
+                <td>
+                  <label class="ls-display-block">
+                    <input name="files[]" type="checkbox" data-file="<%= path %>" value="https://raw.githubusercontent.com/locaweb/locawebstyle/reboot/<%= resource %>" data-dependence="">
+                    <%= path %>
+                  </label>
+                </td>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <h2 class="doc-title-2">General</h2>
+      <table class="ls-table ls-table-striped css-modules">
+        <thead>
+          <tr>
+            <th>Módulo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% assets_files('assets/stylesheets/locastyle/base').each do |resource| %>
+            <% resource.match('_?([^\/]+)\.[\w]+$').tap do |path| %>
+              <tr>
+                <td>
+                  <label class="ls-display-block">
+                    <input name="files[]" type="checkbox" data-file="<%= path %>" value="https://raw.githubusercontent.com/locaweb/locawebstyle/reboot/<%= resource %>" data-dependence="">
+                    <%= path %>
+                  </label>
+                </td>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+      <input type="submit" class="ls-btn-primary" value="Fazer download">
+    </div>
+  </form>
+</section>
