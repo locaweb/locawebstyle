@@ -13,7 +13,7 @@ type: forms
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/form-disable.erb' %>
   </div>
-  <code class="language-html ls-well-example">
+  <code class="language-html">
     <%= partial 'documentacao/shared/form/form-disable.erb' %>
   </code>
 
@@ -25,7 +25,7 @@ type: forms
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/form-as-text.erb' %>
   </div>
-  <code class="language-html ls-well-example">
+  <code class="language-html">
     <%= partial 'documentacao/shared/form/form-as-text.erb' %>
   </code>
 
@@ -33,7 +33,7 @@ type: forms
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/form-as-text-disabled.erb' %>
   </div>
-  <code class="language-html ls-well-example">
+  <code class="language-html">
     <%= partial 'documentacao/shared/form/form-as-text-disabled.erb' %>
   </code>
 
@@ -46,14 +46,14 @@ type: forms
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/fields-toggle.erb' %>
   </div>
-  <code class="language-html ls-well-example">
+  <code class="language-html">
     <%= partial 'documentacao/shared/form/fields-toggle.erb' %>
   </code>
 
   <p>Eu tenho um formulário normal, com as classes <code>ls-form-disable</code> no fieldset que envolve os campos que quero desabilitar. Esse fieldset (que poderia ser um DIV), tem um ID para sua identificação. Até aqui tranquilo.</p>
 
   <p>Agora, depois do Fieldset, existem 3 botões, vou explicar um por um: um botão para EDITAR OS CAMPOS, que é onde o usuário vai clicar para que os campos fiquem editáveis. Os outros dois botões, de SALVAR e CANCELAR estão escondidos. Veja o código do botão EDITAR:</p>
-  <code class="language-html ls-well-example">
+  <code class="language-html">
     <button class="ls-btn-primary hidden-elements" data-toggle-class="ls-display-none" data-target=".hidden-elements" data-ls-toggle-fields="#fields-disabled">Editar campos</button>
   </code>
 
@@ -65,7 +65,7 @@ type: forms
 
   <p>Os botões de CANCELAR e SALVAR são simples botões, com as classes que serão manipuladas pelo botão EDITAR do nosso exemplo. Veja o código abaixo:</p>
 
-  <code class="language-html ls-well-example">
+  <code class="language-html">
     <button class="ls-btn-primary ls-display-none hidden-elements" type="submit">Salvar</button>
     <button data-toggle-class="ls-display-none"  data-target=".hidden-elements" data-ls-toggle-fields="#fields-disabled" class="ls-btn-danger ls-display-none hidden-elements" type="submit">Cancelar</button>
   </code>
