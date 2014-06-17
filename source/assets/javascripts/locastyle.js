@@ -26,3 +26,4 @@
 //= require locastyle/_custom-fields
 //= require locastyle/_topbar-curtain
 //= require locastyle/_btn-group
+//= require locastyle/_datepicker
