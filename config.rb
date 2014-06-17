@@ -62,6 +62,9 @@ helpers do
 
 end
 
+require "helpers/custom_helpers"
+helpers CustomHelpers
+
 set :base_url, ""
 
 set :stable, "3.0.0"
