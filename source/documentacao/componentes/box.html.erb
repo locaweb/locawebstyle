@@ -8,42 +8,42 @@ type: component
 
 <section class="col-md-9">
 
-<%= partial 'partials/doc-intro-content' %>
+  <%= partial 'partials/doc-intro-content' %>
 
-    <p>Geralmente precisamos agrupar ou dividir algumas informações em caixas no layout. Essas caixas são simples e bem genéricas que podem conter qualquer outro elemento. </p>
+  <p>Geralmente precisamos agrupar ou dividir algumas informações em caixas no layout. Essas caixas são simples e bem genéricas que podem conter qualquer outro elemento. </p>
 
-    <table class="ls-table">
-      <thead>
-        <tr>
-          <th>Classes</th>
-          <th>Descrição</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Classes de tamanho: ls-xs-space, ls-sm-space, ls-md-space e ls-lg-space</td>
-          <td>Aumenta ou diminui o espaço do box.</td>
-        </tr>
-        <tr>
-          <td>.ls-ico-bg</td>
-          <td>Faz com que o ícone do :before de ls-box seja posicionado à direita, com uma opacidade baixa. Como se fosse um background.</td>
-        </tr>
-        <tr>
-          <td>.ls-box-gray</td>
-          <td>O box tem background cinza.</td>
-        </tr>
-        <tr>
-          <td>.ls-box-filter</td>
-          <td>Faz um box preparado para receber elementos de filtro. Ela herda as classes <strong>.ls-box-gray</strong>, <strong>.ls-sm-space</strong> e <strong>.ls-box</strong></td>
-        </tr>
-        <tr>
-          <td>.ls-box-group</td>
-          <td>
-            Agrupa os boxes genéricos
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classes</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Classes de tamanho: ls-xs-space, ls-sm-space, ls-md-space e ls-lg-space</td>
+        <td>Aumenta ou diminui o espaço do box.</td>
+      </tr>
+      <tr>
+        <td>.ls-ico-bg</td>
+        <td>Faz com que o ícone do :before de ls-box seja posicionado à direita, com uma opacidade baixa. Como se fosse um background.</td>
+      </tr>
+      <tr>
+        <td>.ls-box-gray</td>
+        <td>O box tem background cinza.</td>
+      </tr>
+      <tr>
+        <td>.ls-box-filter</td>
+        <td>Faz um box preparado para receber elementos de filtro. Ela herda as classes <strong>.ls-box-gray</strong>, <strong>.ls-sm-space</strong> e <strong>.ls-box</strong></td>
+      </tr>
+      <tr>
+        <td>.ls-box-group</td>
+        <td>
+          Agrupa os boxes genéricos
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
   <h2 class="ls-title-2">Box genérico</h2>
   <p>Para criar um box genérico, basta adicionar a classe <code>.ls-box</code> em algum elemento, de preferência em um elemento DIV.</p>
@@ -56,7 +56,6 @@ type: component
 
   <h2 class="ls-title-2">Box com a classe .ls-box-gray</h2>
   <p>Por padrão o background do elemento <code>.ls-box</code> é branco, mas você mudar para cinza se usar a classe <code>.ls-box-gray</code>.</p>
-
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/box/box-gray' %>
   </div>
@@ -108,5 +107,4 @@ type: component
   <code class="language-html">
     <%= partial 'documentacao/shared/box/box-filter' %>
   </code>
-  </div>
 </section>
