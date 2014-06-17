@@ -1,5 +1,5 @@
 ---
-title: Vertical e horizontal
+title: Iniciando com formulários
 description: Elementos padrão de formulários e disposição de campos
 type: forms
 ---
@@ -10,7 +10,7 @@ type: forms
 <%= partial 'partials/doc-intro-content' %>
 
   <h3 class="ls-title-3">Formulários verticais</h3>
-  <p>Você não precisa fazer praticamente nada para que o form funcione na vertical. Esse já é o comportamento padrão. Você pode definir a largura das áreas do formulário com as classes do GRID.</p>
+  <p>Este já é o comportamento padrão, você não precisa fazer praticamente nada para que o form funcione na vertical. Você pode definir a largura das áreas do formulário com as classes do GRID.</p>
 
   <div class="ls-box-demo">
    <%= partial 'documentacao/shared/form/form-vertical.erb' %>
@@ -19,8 +19,9 @@ type: forms
     <%= partial 'documentacao/shared/form/form-vertical.erb'  %>
   </code>
 
+  <hr>
   <h3 class="ls-title-3">Formulários horizontais</h3>
-  <p>Para colocar os formulários um ao lado do outro, basta inserir a classe <code>ls-form-horizontal</code> na tag FORM.</p>
+  <p>Para colocar os campos um ao lado do outro, basta inserir a classe <code>ls-form-horizontal</code> na tag FORM.</p>
 
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/form-horizontal.erb' %>
@@ -29,9 +30,10 @@ type: forms
     <%= partial 'documentacao/shared/form/form-horizontal.erb' %>
   </code>
 
-
+  <hr>
   <h3>Etiqueta ao lado do campo</h3>
-  <p>Essa formato deve ser usado com consciência. A largura dos campos são automáticos. Basta adicionar a classe <code>ls-form-inline</code>. Veja exemplos abaixo:</p>
+  <p>Este formato deve ser usado com consciência, pois a largura dos campos é automática.</p>
+  <p>Basta adicionar a classe <code>ls-form-inline</code>. Veja exemplos abaixo:</p>
 
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/form-horizontal-inline.erb' %>
