@@ -14,17 +14,17 @@ type: component
   </div>
 
   <div class="doc-section">
-  	<h2 class="ls-title-2">Como funciona:</h2>
+  	<h2 class="doc-title-2">Como funciona:</h2>
   	<p>Dentro de cada projeto existe um tour.js (específico), que determina onde exibirá o <strong>Tour Guiado</strong>, qual o próximo passo e assim por diante. Em cada passo podemos implementar outras funções de navegação ou mesmo de eventos simulando interações, vale a pena ler a <a href="http://linkedin.github.io/hopscotch" target="_blank">documentação do plugin</a> para entender melhor sobre esses eventos e funções.</p>
   </div>
 
   <div class="doc-section">
-  	<h2 class="ls-title-2">Cookie</h2>
+  	<h2 class="doc-title-2">Cookie</h2>
   	<p>Ao carregar pela primeira vez,  a caixa de informação onde está o botão para iniciar o Tour, é exibida aberta logo após o carregamento da página, nas próximas vezes ela estará sempre fechada, a não ser que o cookie seja excluído.</p>
   </div>
 
   <div class="doc-section">
-  	<h2 class="ls-title-2">Acessibilidade</h2>
+  	<h2 class="doc-title-2">Acessibilidade</h2>
   	<p>Implementamos navegação via teclado, utilizando seta pra frente (prosseguir), trás (voltar) e a tecla ESC (fechar). Faça um teste!</p>
   </div>
 
@@ -57,7 +57,7 @@ type: component
   </div>
 
   <div class="doc-section">
-  	<h2 class="ls-title-2">Chamando a função de navegação dentro do seu projeto, propositalmente com window.load</h2>
+  	<h2 class="doc-title-2">Chamando a função de navegação dentro do seu projeto, propositalmente com window.load</h2>
   	<code class="language-javascript">
   	$(window).load(function() {
   		//Onde tourDashboard é a variável que recebe os eventos do plugin no exemplo abaixo
@@ -91,7 +91,7 @@ type: component
   </table>
 
   <div class="doc-section">
-  	<h2 id="passo1" class="ls-title-2" >tour.js </h2>
+  	<h2 id="passo1" class="doc-title-2" >tour.js </h2>
   	<code class="language-javascript">
   	var configTour = {
   		id: 'tourDemo',
@@ -130,7 +130,7 @@ type: component
   </div>
 
   <div class="doc-section">
-  	<h2 id="passo2" class="ls-title-2">HTML</h2>
+  	<h2 id="passo2" class="doc-title-2">HTML</h2>
   	<code class="language-html">
   		<div class="guided-tour">
   			<a href="#" aria-label="Fechar" class="btn-close close">x</a>
