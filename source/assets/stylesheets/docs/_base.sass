@@ -36,6 +36,10 @@ h1,h2,h3,h4,h5,h6,p
   ul, ol
     margin: 30px 20px
 
+.doc-hr-sep
+  display: block
+  margin: 50px 0
+
 p + .row
   padding-top: 25px
   padding-bottom: 25px
@@ -46,6 +50,47 @@ p + .row
     padding-bottom: 10px
     background-color: rgba(0,30,69,.15)
     border: 1px solid rgba(0,30,69,.25)
+
+  .row
+    margin-bottom: 10px
+    overflow: hidden
+
+//
+// ICONS GRID EXAMPLE
+//
+.list-icons
+
+  li
+    list-style: none
+    display: inline-block
+    vertical-align: top
+    height: 110px
+    width: 110px
+    margin-bottom: 5px
+    padding: 20px 10px
+    line-height: 1
+    font-size: .8rem
+    text-align: center
+    background-color: rgba(0, 0, 0, 0.03)
+    cursor: default
+    color: rgba(0, 0, 0, .5)
+
+    &:hover
+      color: rgba(0, 0, 0, 1)
+      background-color: rgba(0, 0, 0, 0.08)
+      font-weight: bold
+
+      span:before
+        -webkit-transform: perspective( 400px ) rotateY( 180deg )
+        transform: perspective( 400px ) rotateY( 180deg )
+
+    span:before
+      display: block
+      font-size: 30px
+      margin-bottom: 5px
+      -webkit-transform: perspective( 400px ) rotateY( 0 )
+      transform: perspective( 400px ) rotateY( 0 )
+      -webkit-transition: all linear .25s
 
 //
 // INTRO TOPBAR
@@ -92,8 +137,9 @@ p + .row
 .doc-title-6
   font-size: .9rem
 
-
-
+//
+// MENU HORIZONTAL
+//
 .doc-menu-top
   background-color: #f8f8f8
   border-bottom: 1px solid #e5e5e5
@@ -150,35 +196,40 @@ p + .row
     list-style: none
     line-height: inherit
 
-  a
-    position: relative
-    display: block
-    padding: 10px 0 10px 20px
-    font-size: .94rem
-    color: #555
-    border-left: 5px solid #fff
+    a
+      position: relative
+      display: block
+      padding: 10px 0 10px 20px
+      font-size: .94rem
+      color: #555
+      border-left: 5px solid #fff
+
 
     &.active,
     &:hover,
     &:focus
-      border-left-color: #001e45
-      background-color: #f2f2f2
-      color: #000
 
-      &:after
-        position: absolute
-        right: -17px
-        top: 0
-        content: ""
-        display: inline-block
-        vertical-align: middle
-        margin-right: 10px
-        width: 0
-        height: 0
+      a,
+      a:hover,
+      a:focus
+        border-left-color: #001e45
+        background-color: #f2f2f2
+        color: #000
 
-        border-top: 18px solid transparent
-        border-bottom: 18px solid transparent
-        border-left: 7px solid #f2f2f2
+        &:after
+          position: absolute
+          right: -17px
+          top: 0
+          content: ""
+          display: inline-block
+          vertical-align: middle
+          margin-right: 10px
+          width: 0
+          height: 0
+
+          border-top: 18px solid transparent
+          border-bottom: 18px solid transparent
+          border-left: 7px solid #f2f2f2
 
 //
 // DOC SECTIONS (ADDTHIS SOCIAL LINKS)
@@ -303,6 +354,9 @@ p + .row
     background-color: transparent
     margin: 35px auto
 
+//
+// DOC MENU SANDWICH
+//
 .doc-menu
   width: 40px
   height: 40px
@@ -388,11 +442,9 @@ p + .row
     .sandwich:after
       background-color: #222
 
-
 //
 // EXAMPLES
 //
-
 .doc-examples
   a
     color: #777
@@ -482,4 +534,4 @@ p + .row
 
 .doc-affix
   position: fixed
-  top: 0
+  top: 20px
