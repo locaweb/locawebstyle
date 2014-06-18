@@ -1,0 +1,59 @@
+---
+title: Boas práticas de CSS
+description: Entenda como escrever código CSS de forma consciente.
+type: praticas
+---
+<%= partial 'partials/doc-menu-praticas'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <h2 class="doc-title-3">Cores</h2>
+  <p>Sempre que utilizar uma cor hexadecimal que tenha repetição de valores, use sempre o valor de atalho, assim:</p>
+  <code class="language-css">
+/** Recomendado **/
+p {color: #AAA;}
+
+/** Não Recomendado **/
+p {color: #AAAAAA;}
+  </code>
+
+  <h2 class="doc-title-3">Aspas</h2>
+  <p>Utilizamos ASPAS DUPLAS no CSS.</p>
+  <code class="language-css">
+input[type="checkout"] { ... }
+div:after { content: " "; }
+  </code>
+
+  <h2 class="doc-title-3">Comentários</h2>
+  <p>Para uma seção:</p>
+  <code class="language-css">
+/*** HEADER
+**** Header principal do site
+***/
+  </code>
+
+
+  <p>Nunca use comentários na mesma linha da propriedade:</p>
+  <code class="language-css">
+p {color: #FFF;} /** Nunca use comentários assim **/
+p {color: #FFF; /** Nunca use comentários assim **/ }
+  </code>
+
+
+  <p>Assim é melhor:</p>
+  <code class="language-css">
+/** Assim é melhor **/
+p {
+  color: #FFF;
+  background: red;
+  margin: 0;
+
+  /** Assim também é bom **/
+  padding: 0;
+}
+  </code>
+
+
+</section>
