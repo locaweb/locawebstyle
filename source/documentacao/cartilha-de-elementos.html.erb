@@ -1,92 +1,167 @@
 ---
 title: Cartilha de elementos
 description:
+layout: false
 ---
-<div class="doc-content container">
+
+<%= partial 'partials/doc-header' %>
+
+<header class="doc-header container">
+  <%= partial 'partials/doc-menu'%>
+  <h1 class="doc-logo"><a href="/"><strong>Locaweb</strong> Style</a></h1>
+</header>
+
+<div class="doc-title-intro">
+  <div class="container">
+    <h1>Documentação</h1>
+    <p>Saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
+  </div>
+</div>
+
+<%= partial 'partials/doc-menu-top' %>
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Abas</h2>
   <hr>
   <%= partial 'documentacao/shared/abas' %>
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Alertas</h2>
   <hr>
   <%= partial 'documentacao/shared/alerts/alerts' %>
   <%= partial 'documentacao/shared/alerts/close-alerts' %>
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Barra de progresso</h2>
   <hr>
   <%= partial 'documentacao/shared/progress-bar/progress' %>
-  <hr class="ls-no-border">
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Botão Switch</h2>
   <hr>
   <%= partial 'documentacao/shared/switch' %>
-  <hr class="ls-no-border">
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Botões</h2>
   <hr>
   <%= partial 'documentacao/shared/botoes/botoes' %>
-  <hr class="ls-no-border">
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Box</h2>
   <hr>
   <%= partial 'documentacao/shared/box/box' %>
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Breadcrumb</h2>
   <hr>
   <%= partial 'documentacao/shared/breadcrumb/breadcrumb-more' %>
-  <hr class="ls-no-border">
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Campos Personalizados</h2>
   <hr>
   <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
-  <br>
-  <hr>
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Collapses</h2>
   <hr >
   <%= partial('documentacao/shared/collapse', :locals => { :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %>
-  <hr class="ls-no-border">
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Dropdown</h2>
   <hr>
   <%= partial 'documentacao/shared/dropdown' %>
-  <hr class="ls-no-border">
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Footer</h2>
   <hr>
   <%= partial 'documentacao/shared/footer' %>
-  <hr class="ls-no-border">
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Icones</h2>
   <hr>
   <%= partial 'documentacao/shared/icons' %>
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Modal</h2>
   <hr>
   <%= partial 'documentacao/shared/modal' %>
-  <hr class="ls-no-border">
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Filtro de exibição e Paginação</h2>
   <hr>
   <%= partial 'documentacao/shared/pagination/pagination' %>
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Listas</h2>
   <hr>
   <%= partial 'documentacao/shared/lists' %>
-  <hr class="ls-no-border">
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Popover</h2>
   <hr>
   <%= partial 'documentacao/shared/popover' %>
-  <hr class="ls-no-border">
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Tags</h2>
   <hr>
   <%= partial 'documentacao/shared/tags' %>
-  <hr class="ls-no-border">
   <%= partial 'documentacao/shared/tags-links' %>
-  <hr class="ls-no-border">
+</div>
 
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Toltiop</h2>
   <hr>
   <%= partial 'documentacao/shared/tooltip' %>
-
 </div>
+
+<%= partial 'partials/doc-footer' %>

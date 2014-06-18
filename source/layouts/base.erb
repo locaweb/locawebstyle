@@ -12,20 +12,7 @@
   </div>
 </div>
 
-<nav class="doc-menu-top">
-  <div class="container">
-    <ul>
-      <li><%= link_to "Introdução", base_url+"/documentacao/introducao" %></li>
-      <li><%= link_to "Práticas e Padrões", base_url+"/documentacao/praticas/" %></li>
-      <li><%= link_to "CSS", base_url+"/documentacao/css/grid" %></li>
-      <li><%= link_to "Funções JS", base_url+"/documentacao/funcoes-js/" %></li>
-      <li><%= link_to "Componentes", base_url+"/documentacao/componentes/abas/" %></li>
-      <li><%= link_to "Formulários", base_url+"/documentacao/formularios" %></li>
-      <li><%= link_to "Telas de Exemplo", base_url+"/documentacao/exemplos/" %></li>
-      <li><%= link_to "Cartilha de Elementos", base_url+"/documentacao/cartilha-de-elementos" %></li>
-    </ul>
-  </div>
-</nav>
+<%= partial 'partials/doc-menu-top' %>
 
 <div class="doc-content container">
   <div class="row">
