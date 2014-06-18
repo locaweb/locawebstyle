@@ -28,7 +28,9 @@ locastyle.general = (function() {
     if(hash != ''){
       $('[data-target=' + hash + ']').trigger('click');
       $('a[href=' + hash + ']').trigger('click');
-      locastyle.collapse.toggle(hash)
+
+      // A linha abaixo foi comentada pois adiciona uma classe na modal "collapse_opened"
+      // locastyle.collapse.toggle(hash)
     }
   }
 
