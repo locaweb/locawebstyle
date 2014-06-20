@@ -12,6 +12,11 @@ type: component
 
   <p>O tooltip exibe conteúdo curto, caso necessite de um conteúdo longo, por favor utilize nosso <a href="../popover/">popover</a>.</p>
 
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/tooltip' %>
+  </div>
+  <code class="language-html"><%= partial 'documentacao/shared/tooltip' %></code>
+
   <table class="ls-table ls-no-hover">
     <thead>
       <tr>
@@ -21,19 +26,19 @@ type: component
     </thead>
     <tbody>
       <tr>
-        <th>ls-tooltip-top</th>
+        <td>ls-tooltip-top</td>
         <td>Exibe acima do elemento.</td>
       </tr>
       <tr>
-        <th>ls-tooltip-right</th>
+        <td>ls-tooltip-right</td>
         <td>Exibe ao lado direito do elemento.</td>
       </tr>
       <tr>
-        <th>ls-tooltip-bottom</th>
+        <td>ls-tooltip-bottom</td>
         <td>Exibe abaixo do elemento.</td>
       </tr>
       <tr>
-        <th>ls-tooltip-left</th>
+        <td>ls-tooltip-left</td>
         <td>Exibe ao lado esquerdo do elemento.</td>
       </tr>
     </tbody>
@@ -41,10 +46,5 @@ type: component
   <p>Indicamos utilizar esse elemento em links, para que ele funcione ao receber o foco do teclado.</p>
 
   <p>O conteúdo do tooltip é inserido no atributo <code>aria-label</code>, assim ele funciona perfeitamente nos leitores de tela.</p>
-
-  <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/tooltip' %>
-  </div>
-  <code class="language-html"><%= partial 'documentacao/shared/tooltip' %></code>
 
 </section>
