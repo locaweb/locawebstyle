@@ -10,16 +10,16 @@ type: component
 
   <%= partial 'partials/doc-intro-content' %>
 
-  <p>Utilizamos o plugin  <a href="http://linkedin.github.io/hopscotch" target="_blank">hopscotch</a> (criado pelo linkedin), e aplicamos a identidade visual do LocawebStyle.</p>
+  <p>Utilizamos o plugin  <a href="http://linkedin.github.io/hopscotch" target="_blank">hopscotch</a> (criado pelo LinkedIn) e aplicamos a identidade visual do Locaweb Style.</p>
 
-  <h2 class="doc-title-3">Como funciona:</h2>
-  <p>Dentro de cada projeto existe um tour.js (específico), que determina onde exibirá o <strong>Tour Guiado</strong>, qual o próximo passo e assim por diante. Em cada passo podemos implementar outras funções de navegação ou mesmo de eventos simulando interações, vale a pena ler a <a href="http://linkedin.github.io/hopscotch" target="_blank">documentação do plugin</a> para entender melhor sobre esses eventos e funções.</p>
+  <h2 class="doc-title-4">Como funciona:</h2>
+  <p>Dentro de cada projeto existe um <strong>tour.js</strong>, que determina as configurações do <strong>Tour Guiado</strong>. Em cada passo podemos implementar outras funções de navegação ou mesmo de eventos simulando interações, vale a pena ler a <a href="http://linkedin.github.io/hopscotch" target="_blank">documentação do plugin</a> para entender melhor sobre esses eventos e funções.</p>
 
-  <h2 class="doc-title-3">Cookie</h2>
-  <p>Ao carregar pela primeira vez,  a caixa de informação onde está o botão para iniciar o Tour, é exibida aberta logo após o carregamento da página, nas próximas vezes ela estará sempre fechada, a não ser que o cookie seja excluído.</p>
+  <h2 class="doc-title-4">Cookie</h2>
+  <p>Ao carregar pela primeira vez, a caixa de informação onde está o botão para iniciar o Tour é exibida aberta logo após o carregamento da página, nas próximas vezes ela estará sempre fechada, a não ser que o cookie seja excluído.</p>
 
-  <h2 class="doc-title-3">Acessibilidade</h2>
-  <p>Implementamos navegação via teclado, utilizando seta pra frente (prosseguir), trás (voltar) e a tecla ESC (fechar). Faça um teste!</p>
+  <h2 class="doc-title-4">Acessibilidade</h2>
+  <p>Implementamos navegação via teclado, utilizando seta pra frente (prosseguir), trás (voltar) e a tecla ESC (fechar).</p>
 
   <table class="ls-table">
     <thead>
@@ -47,7 +47,7 @@ type: component
   <p>*<b>elem</b> é o nome da variável do tour.js da página específica.</p>
   <p>Abaixo segue um exemplo dos códigos necessários para implementar o <strong>Tour Guiado</strong>. </p>
 
-  <h2 class="doc-title-3">Chamando a função de navegação dentro do seu projeto, propositalmente com window.load</h2>
+  <h2 class="doc-title-4">Chamando a função de navegação dentro do seu projeto, propositalmente com window.load</h2>
   <code class="language-javascript">
   $(window).load(function() {
     //Onde tourDashboard é a variável que recebe os eventos do plugin no exemplo abaixo
@@ -79,7 +79,7 @@ type: component
     </tbody>
   </table>
 
-  <h2 id="passo1" class="doc-title-3" >tour.js </h2>
+  <h2 id="passo1" class="doc-title-4" >tour.js </h2>
   <code class="language-html">
   var configTour = {
     id: 'tourDemo',
@@ -113,7 +113,7 @@ type: component
   };
   </code>
 
-  <h2 id="passo2" class="doc-title-3">HTML</h2>
+  <h2 id="passo2" class="doc-title-4">HTML</h2>
   <code class="language-html">
   <div class="guided-tour">
     <a href="#" aria-label="Fechar" class="btn-close close">x</a>
@@ -129,7 +129,7 @@ type: component
   </div>
   </code>
 
-  <h2 class="doc-title-3">Exemplo</h2>
+  <h2 class="doc-title-4">Exemplo</h2>
   <p>Faça um tour guiado usando as configurações do js de exemplo, acima:</p>
   <div class="ls-box-demo">
     <button id="demo-init" class="ls-btn-primary ls-btn-tour">Iniciar Tour</button>
