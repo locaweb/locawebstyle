@@ -21,19 +21,18 @@
     <label class="ls-field">
       <b class="ls-label">Status</b>
       <div data-ls-module="customFields">
-        <div class="ls-custom-select-one go-to-option"><select class="go-to-option" name="">
+        <select class="go-to-option" name="">
           <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
-          <option value="/resale/clients?state=unblocked">Ativos</option>
-          <option value="/resale/clients?state=disabled">Desativados</option>
-          <option value="/resale/clients?state=blocked">Bloqueados por bounce</option>
-        </select><span class="ls-field-custom-select-one">Todos</span></div>
+          <option value="#">Ativos</option>
+          <option value="#">Desativados</option>
+          <option value="#">Bloqueados por bounce</option>
+        </select>
       </div>
     </label>
   </form>
 
-  <form accept-charset="UTF-8" action="/resale/clients" class="ls-form ls-float-right buffer-inserted" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+  <form class="ls-form ls-float-right buffer-inserted">
     <label class="ls-field" role="search">
-
       <b class="ls-label ls-hidden-accessible">Nome do cliente</b>
       <input type="text" id="q" name="q" aria-label="Faça sua busca por cliente" accesskey="s" placeholder="Nome do cliente" required="">
     </label>
@@ -41,4 +40,5 @@
   </form>
 
 </div>
+
 <br>
