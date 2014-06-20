@@ -1,24 +1,26 @@
-<div class="ls-box-filter row">
-  <form action="#" class="ls-form col-md-4">
-    <label class="row ls-field ls-field-inline">
-        <span class="ls-label col-md-3">Status</span>
-        <div class="col-md-9" data-ls-module="customFields">
-          <div class="ls-custom-select-one "><select name="">
-            <option value="">Todos</option>
-            <option value="">Ativo</option>
-            <option value="">Desativados</option>
-            <option value="">Bloqueados por bounce</option>
-          </select><span class="ls-field-custom-select-one">Todos</span></div>
-        </div>
-      </label>
-  </form>
-  <form action="#" class="ls-form col-md-4  col-md-offset-4">
-      <label class="col-md-8 ls-field ls-field-inline">
-        <span class="ls-label ls-hidden-accessible">Nome do cliente</span>
-        <input type="text" name="nome" placeholder="Nome e sobrenome" required="">
-      </label>
-      <div class="col-md-4 ls-field ls-field-inline">
-        <button type="submit" class="ls-btn">Buscar</button>
+<div class="ls-box-filter">
+
+  <!-- To do this -->
+  <form action="" class="ls-form ls-form-inline ls-float-left">
+    <label class="ls-field">
+      <b class="ls-label">Status</b>
+      <div data-ls-module="customFields">
+        <select class="go-to-option" name="">
+          <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Desativados</option>
+          <option value="#">Bloqueados por bounce</option>
+        </select>
       </div>
+    </label>
   </form>
+
+  <form class="ls-form ls-float-right buffer-inserted">
+    <label class="ls-field" role="search">
+      <b class="ls-label ls-hidden-accessible">Nome do cliente</b>
+      <input type="text" id="q" name="q" aria-label="Faça sua busca por cliente" accesskey="s" placeholder="Nome do cliente" required="">
+    </label>
+    <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
+  </form>
+
 </div>
