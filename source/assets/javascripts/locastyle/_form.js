@@ -86,7 +86,7 @@ locastyle.form = (function() {
   function formDisable() {
     $( config.selectors.disable ).each(function(ic, container){
       $(container).find(':input').each(function(ie, field){
-        $(field).attr('disabled', 'disabled')
+        $(field).attr('disabled', 'disabled');
       });
     });
   }
