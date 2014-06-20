@@ -26,7 +26,8 @@ h1,h2,h3,h4,h5,h6,p
 .documentacao_cartilha-de-elementos [class*="doc-title"]
   margin-top: 0
 
-.documentacao[class*="ls-theme-"] p a:not([class*="ls-btn"])
+.documentacao[class*="ls-theme-"] p a:not([class*="ls-btn"]),
+.index[class*="ls-theme-"] p a:not([class*="ls-btn"])
   color: #001e45
 
 .doc-content
@@ -326,10 +327,6 @@ p code
   font-size: 1.625rem
   font-weight: 300
 
-  a
-    color: #001e45 !important
-
-
   .doc-section &:last-child
     padding-bottom: 0
 
@@ -586,7 +583,7 @@ p code
   position: fixed
   top: 20px
 
-@mediD(max-width: 480px)
+@media(max-width: 480px)
   .doc-highlight
 
     .container
