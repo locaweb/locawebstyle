@@ -21,7 +21,8 @@ layout: false
 <%= partial 'partials/doc-menu-top' %>
 
 <div class="doc-section container">
-  <h2 class="doc-title-2">Abas</h2>
+  <h2 class="doc-title-2">Abas <%= link_to 'ver documentação', 'componentes/abas', :class => 'ls-tag-info ls-float-right' %></h2>
+
   <hr>
   <%= partial 'documentacao/shared/abas' %>
 </div>
@@ -33,6 +34,14 @@ layout: false
   <hr>
   <%= partial 'documentacao/shared/alerts/alerts' %>
   <%= partial 'documentacao/shared/alerts/close-alerts' %>
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Tabelas</h2>
+  <hr>
+  <%= partial 'documentacao/shared/table' %>
 </div>
 
 <hr class="doc-hr">
@@ -65,6 +74,7 @@ layout: false
   <h2 class="doc-title-2">Box</h2>
   <hr>
   <%= partial 'documentacao/shared/box/box' %>
+  <%= partial 'documentacao/shared/box/box-big-small' %>
 </div>
 
 <hr class="doc-hr">
@@ -78,9 +88,13 @@ layout: false
 <hr class="doc-hr">
 
 <div class="doc-section container">
-  <h2 class="doc-title-2">Campos Personalizados</h2>
+  <h2 class="doc-title-2">Select personalizado</h2>
   <hr>
-  <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
+  <div class="row">
+    <div class="col-md-5">
+      <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
+    </div>
+  </div>
 </div>
 
 <hr class="doc-hr">
@@ -97,14 +111,6 @@ layout: false
   <h2 class="doc-title-2">Dropdown</h2>
   <hr>
   <%= partial 'documentacao/shared/dropdown' %>
-</div>
-
-<hr class="doc-hr">
-
-<div class="doc-section container">
-  <h2 class="doc-title-2">Footer</h2>
-  <hr>
-  <%= partial 'documentacao/shared/footer' %>
 </div>
 
 <hr class="doc-hr">
@@ -152,8 +158,10 @@ layout: false
 <div class="doc-section container">
   <h2 class="doc-title-2">Tags</h2>
   <hr>
-  <%= partial 'documentacao/shared/tags' %>
   <%= partial 'documentacao/shared/tags-links' %>
+  <br><br>
+  <br><br>
+  <%= partial 'documentacao/shared/tags' %>
 </div>
 
 <hr class="doc-hr">
