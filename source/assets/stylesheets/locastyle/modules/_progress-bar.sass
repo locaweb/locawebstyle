@@ -1,4 +1,4 @@
-.ls-progress
+.ls-progress[value]
   +appearance(none)
   width: 100%
   height: 1rem
@@ -7,52 +7,70 @@
   display: block
   border: none
   position: relative
+  background-color: #eee !important
 
-  &::-webkit-progress-bar, .ls-progress-bar
-    padding: .1rem
-    border-radius: .2rem
+  &:before
+    content: "asdfasdf"
+
+  &::-webkit-progress-bar
+    background-color: #eee !important
+    padding: 1px
+    border-radius: 2px
     position: relative
     z-index: 0
 
-  &::-webkit-progress-value, .ls-progress-value
-    border-radius: .2rem
+  &::-webkit-progress-value
+    background-color: #777 !important
+
+  &::-moz-progress-bar
+    background-color: #777 !important
+    padding: 1px
+    border-radius: 2px
     position: relative
-    height: 100%
-    display: block
-    z-index: 1
+    z-index: 0
 
-  .ls-progress-value
-    position: absolute
-    top: .1rem
-    left: .1rem
+  // &.ls-progress-percent
+  //   &:before
+  //     content: "teste"
+  //     border: 1px solid red
+  //     width: 100%
+  //     height: 2px
+  //     text-align: center
+  //     display: inline-block
+  //     font-size: .8rem
+  //     color: red
+  //     z-index: 2
 
-  &.ls-progress-gray
-    &::-webkit-progress-bar
-      background: #ccc
+  //   &:after
+  //     content: attr(max)
+  //     display: inline-block
+  //     position: absolute
+  //     top: 0
+  //     right: .5rem
+  //     font-size: .8rem
+  //     color: #fff
 
-    &::-webkit-progress-value
-      background: #999
 
-  &.ls-progress-animated
-    &::-webkit-progress-value, .ls-progress-value
-      // opacity: 0
+  // &::-webkit-progress-value, .ls-progress-value
+  //   border-radius: .2rem
+  //   position: relative
+  //   height: 100%
+  //   display: block
+  //   z-index: 1
 
-  &.ls-progress-percent
-    &:before
-      content: attr(value)
-      display: inline-block
-      position: absolute
-      top: 0
-      left: .5rem
-      font-size: .8rem
-      color: #fff
-      z-index: 2
+  // .ls-progress-value
+  //   position: absolute
+  //   top: .1rem
+  //   left: .1rem
 
-    &:after
-      content: attr(max)
-      display: inline-block
-      position: absolute
-      top: 0
-      right: .5rem
-      font-size: .8rem
-      color: #fff
+  // &.ls-progress-gray
+  //   background: #ccc
+  //   &::-webkit-progress-bar
+  //     background: #ccc !important
+
+  //   &::-webkit-progress-value
+  //     background: #999
+
+  // &.ls-progress-animated
+  //   &::-webkit-progress-value, .ls-progress-value
+  //     // opacity: 0
