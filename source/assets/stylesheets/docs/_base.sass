@@ -49,6 +49,10 @@ h1,h2,h3,h4,h5,h6,p
 p + .row
   padding-top: 25px
   padding-bottom: 25px
+  overflow: hidden
+
+  [class*="doc-title"]
+    margin-top: 0
 
 .doc-example-grid
   [class*="col-"]
@@ -282,7 +286,7 @@ p + .row
   &.doc-section-gray
     background-color: #f2f2f2
 
-  h1
+  .index & h1
     margin-bottom: 15px
     text-align: center
     font-size: 2.5rem
