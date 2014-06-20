@@ -26,6 +26,9 @@ h1,h2,h3,h4,h5,h6,p
 .documentacao_cartilha-de-elementos [class*="doc-title"]
   margin-top: 0
 
+.documentacao[class*="ls-theme-"] p a:not([class*="ls-btn"])
+  color: #001e45
+
 .doc-content
   padding: 60px 0
 
@@ -33,6 +36,15 @@ h1,h2,h3,h4,h5,h6,p
     content: ""
     display: block
     clear: both
+
+  section
+
+    a
+      color: #001e45
+
+      &:hover
+        border-bottom-style: solid
+        border-bottom-width: 1px
 
   p, li
     line-height: 1.6
@@ -315,7 +327,8 @@ p code
   font-weight: 300
 
   a
-    color: #001e45
+    color: #001e45 !important
+
 
   .doc-section &:last-child
     padding-bottom: 0
@@ -573,7 +586,7 @@ p code
   position: fixed
   top: 20px
 
-@media (max-width: 480px)
+@mediD(max-width: 480px)
   .doc-highlight
 
     .container
