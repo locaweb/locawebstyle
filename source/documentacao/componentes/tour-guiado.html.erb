@@ -12,8 +12,10 @@ type: component
 
   <p>Utilizamos o plugin  <a href="http://linkedin.github.io/hopscotch" target="_blank">hopscotch</a> (criado pelo LinkedIn) e aplicamos a identidade visual do Locaweb Style.</p>
 
-  <h2 class="doc-title-4">Como funciona:</h2>
-  <p>Dentro de cada projeto existe um <strong>tour.js</strong>, que determina as configurações do <strong>Tour Guiado</strong>. Em cada passo podemos implementar outras funções de navegação ou mesmo de eventos simulando interações, vale a pena ler a <a href="http://linkedin.github.io/hopscotch" target="_blank">documentação do plugin</a> para entender melhor sobre esses eventos e funções.</p>
+  <h2 class="doc-title-3">Como funciona:</h2>
+  <p>Primeiramente é necessário inserir a classe <code>ls-btn-tour</code> no botão que iniciará o Tour. </p>
+  <p>Dentro de cada projeto existe um tour.js (específico), que determina onde exibirá o <strong>Tour Guiado</strong>, qual o próximo passo e assim por diante. Em cada passo podemos implementar outras funções de navegação ou mesmo de eventos simulando interações, vale a pena ler a <a href="http://linkedin.github.io/hopscotch" target="_blank">documentação do plugin</a> para entender melhor sobre esses eventos e funções.</p>
+
 
   <h2 class="doc-title-4">Cookie</h2>
   <p>Ao carregar pela primeira vez, a caixa de informação onde está o botão para iniciar o Tour é exibida aberta logo após o carregamento da página, nas próximas vezes ela estará sempre fechada, a não ser que o cookie seja excluído.</p>
@@ -134,5 +136,5 @@ type: component
   <div class="ls-box-demo">
     <button id="demo-init" class="ls-btn-primary ls-btn-tour">Iniciar Tour</button>
   </div>
-  <code class="language-html"><button id="demo-init-sample" class="ls-btn-primary btn-tour">Iniciar Tour</button></code>
+  <code class="language-html"><button id="demo-init-sample" class="ls-btn-primary ls-btn-tour">Iniciar Tour</button></code>
 </section>
