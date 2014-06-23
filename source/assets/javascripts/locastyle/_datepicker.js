@@ -8,9 +8,15 @@ locastyle.datepicker = (function() {
         firstDay: 1,
         minDate: new Date('2000-01-01'),
         maxDate: new Date('2020-12-31'),
-        yearRange: [2000,2020]
+        yearRange: [2000,2020],
+        i18n: {
+          previousMonth : 'Anterior',
+          nextMonth     : 'Próximo',
+          months        : ['Janeiro','Fevereiro','Março','Abril','Maio','Junnho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+          weekdays      : ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
+          weekdaysShort : ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb']
+        }
     });
-    // chain a few methods for the first datepicker, jQuery style!
     $datepicker.pikaday('show').pikaday('nextMonth');
   }
 
