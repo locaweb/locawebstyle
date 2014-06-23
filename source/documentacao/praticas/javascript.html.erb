@@ -9,8 +9,8 @@ description: Se quiser contribuir com JavaScript, siga essas práticas
 
   <%= partial 'partials/doc-intro-content' %>
 
-  <p>Aqui mostramos as práticas seguidas no código do Locaweb Style e podem ser mantidas nos projetos que usam este framework.</p>
-
+  <h2 class="doc-title-3">Pattern JavaScript</h2>
+  <p>O pattern utilizado por nós é o <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript">Revealing Module Pattern</a>.</p>
   <p>As principais vantagens de manter este padrão são:</p>
 
   <ol>
@@ -80,6 +80,8 @@ projeto.moduloUm = (function() {
   </code>
 
   <h2 class="doc-title-4">Módulos</h2>
+  <p>Todos os scripts do Locaweb Style são modularizados ao máximo. Só iniciamos um comportamento se ele precisar ser usado. Todos os módulos ou os triggers destes módulos, terão um atributo <code>data-ls-module="#"</code> que avisará o Locaweb Style para iniciar o módulo determinado. Para citar alguns exemplos: <code>data-ls-module="modal"</code>, <code>data-ls-module="collapse"</code> e <code>data-ls-module="tabs"</code></p>
+
   <p>O ideal é ter um módulo por arquivo, e que eles não se iniciem sozinhos.</p>
   <p>Um módulo central que funcione como controlador de quais serão executados é uma boa prática.</p>
 
