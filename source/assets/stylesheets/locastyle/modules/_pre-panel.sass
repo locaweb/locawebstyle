@@ -8,19 +8,28 @@
     border-bottom: none
 
   .ls-topbar
+
+    .ls-brand-name a
+      color: #555
+
     .ls-notification-topbar
 
       .ls-alerts-list a
         color: rgba(85,85,85,.4)
 
+        &.ls-active
+          color: #000
+
         &[data-counter]
           color: rgba(85,85,85,1)
+
+          &.ls-active
+            color: #000
 
           &:after
             color: #fff
 
       .ls-user-account a
-        color: rgba(85,85,85,1)
 
         small
           color: rgba(85,85,85,1)
