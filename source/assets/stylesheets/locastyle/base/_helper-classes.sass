@@ -21,7 +21,8 @@
   display: block
   clear: both
 
-.ls-no-float
+.ls-no-float,
+.ls-float-none
   float: none !important
 
 .ls-float-right
@@ -325,9 +326,6 @@
 .ls-text-underline
   text-decoration: underline !important
 
-.ls-float-right-sm
-  float: none !important
-
 .ls-line-separator
   width: calc(100% -2rem)
   float: none
@@ -339,16 +337,6 @@
   &:before, &:after
     content: " "
     display: table
-
-.ls-txt-right-sm
-  text-align: left !important
-
-.ls-btn-block-sm
-  display: block !important
-  text-align: center !important
-  margin-bottom: 10px
-  width: 100% !important
-
 
 // BACKGROUND COLORS
 .ls-background-primary,
@@ -382,6 +370,12 @@
   .ls-float-right-sm
     float: right !important
 
+  .ls-float-left-sm
+    float: left !important
+
+  .ls-float-none-sm
+    float: none !important
+
   .ls-txt-right-sm
     text-align: right !important
 
@@ -389,6 +383,15 @@
     display: inline-block !important
     width: auto !important
 
+  .ls-txt-right-sm
+    text-align: left !important
+
 @media (max-width: $screen-sm)
   .ls-float-none-xs
     float: none !important
+
+  .ls-btn-block-sm
+    display: block !important
+    text-align: center !important
+    margin-bottom: 10px
+    width: 100% !important
