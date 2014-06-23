@@ -12,14 +12,11 @@
   overflow-scrolling: touch
   background-color: #fff
 
-  // .ls-device-small &
-  //   height: auto
-
-  // .container-fluid
-  //   min-height: 75%
-
   .container-fluid
     min-height: 85%
+
+    > .row [class*="col-"]
+      padding-bottom: 20px
 
   .ls-html-nobg &
     background-color: #f7f7f7
@@ -31,7 +28,7 @@
     +translate(-$sidebarWidth, 0)
 
 .ls-lnk-nav
-  padding: 7px 10px 5px
+  padding: 7px 10px 0
   font-size: 1.25rem
   color: #000
   text-decoration: none
@@ -85,6 +82,9 @@
     height: 100%
     min-height: 100%
     overflow: auto
+
+    .container-fluid > .row [class*="col-"]
+      padding-bottom: 0
 
     &:after
       clear: both
