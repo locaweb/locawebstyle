@@ -7,6 +7,13 @@ var lsdocs = (function() {
     // copyMarkup();
     // markupExamples();
     Prism.highlightAll();
+    toggleMenuActive();
+  }
+
+  function toggleMenuActive() {
+    $('.doc-menu').on('click', function() {
+      $(this).toggleClass('active')
+    })
   }
 
   function copyMarkup(){
@@ -24,8 +31,8 @@ var lsdocs = (function() {
     // `event.target` === the element that was clicked
     event.target.style.display = "none";
     alert("Copied text to clipboard: " + event.data["text/plain"] );
+    } );
   } );
-} );
   }
 
   function markupExamples () {
