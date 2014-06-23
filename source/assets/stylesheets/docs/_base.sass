@@ -27,7 +27,7 @@ h1,h2,h3,h4,h5,h6,p
   margin-top: 0
 
 .documentacao[class*="ls-theme-"] p a:not([class*="ls-btn"]),
-.index[class*="ls-theme-"] p a:not([class*="ls-btn"])
+.index[class*="ls-theme-"] p a:not([class*="ls-btn"]),
   color: #001e45
 
 .doc-content
@@ -38,12 +38,11 @@ h1,h2,h3,h4,h5,h6,p
     display: block
     clear: both
 
-  section
 
-    a:not([class*="ls-btn"])
-      color: #001e45
+  > .col-md-9 > p > a
+    color: #001e45
 
-    [class*="ls-alert"] a
+  section [class*="ls-alert"] a
       color: inherit
 
   p, li
