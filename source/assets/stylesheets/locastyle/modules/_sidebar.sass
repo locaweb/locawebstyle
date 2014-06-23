@@ -1,15 +1,12 @@
-
 .ls-sidebar
+  +single-transition(all, .5s)
+  +translate(-50%, 0)
   background: #222
   width: $sidebarWidth
   position: fixed
   left: 0
   top: 0
   height: 100%
-  overflow: auto
-
-  +single-transition(all, .5s)
-  +translate(-50%, 0)
 
   .ls-sidebar-visible &
     +translate(0, 0)
@@ -40,7 +37,6 @@
       background-color: #111
       position: static
 
-
   .ls-area-account
     background-color: #111
     border-bottom: 1px solid #292929
@@ -49,6 +45,7 @@
     bottom: 0
     width: 100%
     z-index: 2
+    height: 100px
 
     &[class*="ls-ico"]:before
       float: left
@@ -76,6 +73,12 @@
   .ls-menu
     margin: 0
     padding: 0
+    height: calc(100% - 160px)
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+    -moz-overflow-scrolling: touch
+    -ms-overflow-scrolling: touch
+    overflow-scrolling: touch
 
     li
       list-style: none
