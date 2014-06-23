@@ -60,7 +60,7 @@
     &:before
       width: 100%
       padding: 55px 0 0
-      margin-bottom: 80px
+      margin-bottom: 20px
       color: #001e45
       display: block
       // background: url(../images/docs/hexa.png) no-repeat center
@@ -97,9 +97,11 @@
 .hexa
   width: 146px
   height: 73px
-  position: absolute
-  top: 50px
-  left: 30%
+  position: relative
+  // position: absolute
+  // top: 50px
+  // left: 28%
+  top: -80px
   z-index: 0
   display: inline-block
 
@@ -146,8 +148,13 @@
   p
     padding: 0 20px
 
+@media (min-width: 768px)
+  .hexa
+    // left: 30%
+
 @media (max-width: 768px)
 
   .doc-highlight
     .doc-menu
       margin-left: 25px
+
