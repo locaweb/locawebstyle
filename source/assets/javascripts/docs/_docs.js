@@ -7,10 +7,10 @@ var lsdocs = (function() {
     // copyMarkup();
     // markupExamples();
     Prism.highlightAll();
-    toggleActive();
+    toggleMenuActive();
   }
 
-  function toggleActive() {
+  function toggleMenuActive() {
     $('.doc-menu').on('click', function() {
       $(this).toggleClass('active')
     })
