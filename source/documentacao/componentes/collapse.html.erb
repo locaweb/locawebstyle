@@ -10,13 +10,10 @@ type: component
 
   <%= partial 'partials/doc-intro-content' %>
 
-  <div class="ls-alert-info">
+  <!-- <div class="ls-alert-info">
     Para abrir um collapse automaticamente basta na url passar esse parametro com o target do Collapse ou o Href.
     <strong><a href="/documentacao/componentes/collapse/#!/#collapse1">/#!/#collapse1</a></strong>
-  </div>
-
-  <h2 class="doc-title-3">Collapse simples</h2>
-  <p>A aparência e comportamento de um collapse são:</p>
+  </div> -->
 
   <div class="ls-box-demo">
     <%= partial('documentacao/shared/collapse', :locals => { :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %>
