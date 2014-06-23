@@ -8,26 +8,30 @@ html
   font-smoothing: antialiased
   font-weight: 400
   color: $gray4
-  margin-bottom: 5px
+  margin-bottom: 10px
+
+  [class*="ls-btn"]
+    margin-top: 10px
 
 .ls-title-1
   color: #000
-  font-size: 2.25rem
+  font-size: 1.80rem
 
 .ls-title-2
-  font-size: 1.88rem
-
-.ls-title-3
   font-size: 1.5rem
 
+.ls-title-3
+  font-size: 1.2rem
+
 .ls-title-4
-  font-size: 1.25rem
+  font-size: .84rem
 
 .ls-title-5
-  font-size: 1.05rem
+  font-size: .78rem
 
 .ls-title-6
-  font-size: .875rem
+  font-size: .70rem
+  font-weight: bold
 
 p
   color: #555
@@ -92,6 +96,33 @@ p
 @media (min-width: $screen-sm)
   html
     font-size: 100%
+
+  [class*="ls-title"]
+    margin-bottom: 5px
+
+    [class*="ls-btn"]
+      margin-top: 0
+
+  .ls-title-1
+    color: #000
+    font-size: 2.25rem
+
+  .ls-title-2
+    font-size: 1.88rem
+
+  .ls-title-3
+    font-size: 1.5rem
+
+  .ls-title-4
+    font-size: 1.25rem
+
+  .ls-title-5
+    font-size: 1.05rem
+
+  .ls-title-6
+    font-size: .875rem
+    font-weight: normal
+
 
   .ls-title-intro
     font-size: 2.25rem
