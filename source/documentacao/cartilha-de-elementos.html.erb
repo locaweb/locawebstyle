@@ -87,11 +87,39 @@ layout: false
 <hr class="doc-hr">
 
 <div class="doc-section container">
+  <h2 class="doc-title-2">Formulários <%= link_to 'ver documentação', 'formularios/', :class => 'ls-tag-info ls-float-right' %></h2>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="doc-title-5">Formulários na horizontal</h3>
+      <%= partial 'documentacao/shared/form/form-horizontal.erb' %>
+      <br><br>
+      <h3 class="doc-title-5">Formulários na vertical</h3>
+      <%= partial 'documentacao/shared/form/form-vertical.erb' %>
+    </div>
+  </div>
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
   <h2 class="doc-title-2">Select personalizado <%= link_to 'ver documentação', 'formularios/campos-personalizados', :class => 'ls-tag-info ls-float-right' %></h2>
   <hr>
   <div class="row">
     <div class="col-md-5">
       <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
+    </div>
+  </div>
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Prefixos e sufixos de campos de formulário <%= link_to 'ver documentação', 'formularios/prefixos-sufixos', :class => 'ls-tag-info ls-float-right' %></h2>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <%= partial 'documentacao/shared/form/fields-prefix-sufix.erb' %>
     </div>
   </div>
 </div>
