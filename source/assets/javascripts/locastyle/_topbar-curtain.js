@@ -75,10 +75,10 @@ locastyle.topbarCurtain = (function() {
     window.onresize = function() {
       clearTimeout(repositionTarget);
       var repositionTarget = setTimeout(function() {
-      unbind();
-      positionTarget();
-      bindCloseCurtains();
-      bindPreventClosing();
+        unbind();
+        positionTarget();
+        bindCloseCurtains();
+        bindPreventClosing();
       }, 300);
     };
   }
