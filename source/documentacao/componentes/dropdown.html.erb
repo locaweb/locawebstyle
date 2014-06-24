@@ -34,6 +34,32 @@ type: component
   </div>
   <code class="language-html"><%= partial 'documentacao/shared/dropdown' %></code>
 
+  <h2 class="doc-title-3">Desabilitando o  droplist.</h2>
+  <p>Basta inserir a classe <code>.ls-disabled</code>, no botão e assim desativa o dropdown.</p>
+  <hr>
+
+  <div class="ls-box-demo">
+    <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+      <a href="#" class="ls-btn-primary ls-disabled">Users</a>
+      <ul class="ls-dropdown-nav">
+          <li><a href="#">Edit</a></li>
+          <li><a href="#">Config</a></li>
+          <li><a href="#">Save</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <code class="language-html">
+    <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+      <a href="#" class="ls-btn-primary ls-disabled">Users</a>
+      <ul class="ls-dropdown-nav">
+          <li><a href="#">Edit</a></li>
+          <li><a href="#">Config</a></li>
+          <li><a href="#">Save</a></li>
+      </ul>
+    </div>
+  </code>
+
   <h2 class="doc-title-3">Mudando a posição da droplist.</h2>
   <p>Basta inserir a classe <code>.ls-pos-right</code>, que o dropdown abre à direita do elemento</p>
   <hr>
