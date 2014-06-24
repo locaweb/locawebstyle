@@ -8,6 +8,7 @@ locastyle.topbarCurtain = (function() {
     positionTarget();
     bindCloseCurtains();
     bindPreventClosing();
+    repositionOnResize();
   }
 
   function unbind() {
@@ -68,6 +69,18 @@ locastyle.topbarCurtain = (function() {
   function hideCurtains() {
     $("[data-ls-module='topbarCurtain']").removeClass("ls-active");
     $(".ls-notification-list").removeClass("ls-active");
+  }
+
+  function repositionOnResize (argument) {
+    window.onresize = function() {
+      clearTimeout(repositionTarget);
+      var repositionTarget = setTimeout(function() {
+        unbind();
+        positionTarget();
+        bindCloseCurtains();
+        bindPreventClosing();
+      }, 300);
+    };
   }
 
   return {
