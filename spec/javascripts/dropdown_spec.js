@@ -40,6 +40,13 @@ describe("Dropdown: ", function() {
       });
     });
 
+    describe("When dropdown is disabled", function() {
+      it("should have nothing", function() {
+        $("#dropdown-test-5 > .ls-disabled").trigger("click");
+        expect($("#dropdown-test-5").hasClass("ls-active")).toEqual(false);
+      });
+    });
+
   });
 
   describe("Unbind:", function() {
