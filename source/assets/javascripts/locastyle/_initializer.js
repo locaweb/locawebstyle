@@ -7,7 +7,7 @@ var locastyle = (function() {
     locastyle.general.init();
     locastyle.sidebars.init();
     locastyle.btnGroup.init();
-    // locastyle.datepicker.init();
+    locastyle.datepicker.init();
   }
 
   function loadModules() {
