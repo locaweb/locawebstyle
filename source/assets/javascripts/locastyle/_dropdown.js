@@ -32,8 +32,12 @@ locastyle.dropdown = (function() {
   }
 
   function toggleDropdown($target) {
-    $target.toggleClass("ls-active");
-    locastyle.topbarCurtain.hideCurtains();
+    if($target.find('a:eq(0)').hasClass('ls-disabled')){
+      return false
+    } else {
+      $target.toggleClass("ls-active");
+      locastyle.topbarCurtain.hideCurtains();
+    }
   }
 
   function closeDropdown(el) {
