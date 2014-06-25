@@ -8,20 +8,23 @@ type: component
 
 <section class="col-md-9">
 
+
+
   <%= partial 'partials/doc-intro-content' %>
 
 
   <div class="ls-box-demo">
     <%= partial('documentacao/shared/collapse', :locals => { :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %>
   </div>
-  <code class="language-html"><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => "Título", content: (lorem.words 1)}) %></code>
+
+  <% code("html") do %><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => "Título", content: (lorem.words 1)}) %><% end %>
 
   <p>Os títulos, vísiveis quando o <i>collapse</i> está fechado, podem conter qualquer conteúdo, por exemplo:</p>
 
   <div class="ls-box-demo">
     <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.paragraphs 1)  }) %>
   </div>
-  <code class="language-html"><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.words 3)  }) %></code>
+  <% code("html") do %><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.words 3)  }) %><% end %>
 
   <h2 class="doc-title-3">Parâmetros adicionais</h2>
 
@@ -52,12 +55,16 @@ type: component
   <div class="ls-box-demo">
       <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.paragraphs 2), startOpen: false  }) %>
   </div>
-  <code class="language-html"><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.words 2), startOpen: false  }) %></code>
+  <% code("html") do %>
+<%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.words 2), startOpen: false  }) %>
+  <% end %>
 
   <div class="ls-box-demo">
     <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.paragraphs 2), startOpen: false, alwaysOpen: true  }) %>
   </div>
-  <code class="language-html"><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.words 2), startOpen: false, alwaysOpen: true  }) %></code>
+  <% code("html") do %>
+<%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.words 2), startOpen: false, alwaysOpen: true  }) %>
+  <% end %>
 
   <h2 class="doc-title-3">Accordeon</h2>
   <p><i>Accordeon</i> é um conjunto de <i>collapses</i> agrupados, onde apenas um deles pernace aberto</p>
@@ -83,7 +90,7 @@ type: component
 
   <p>Para abrir/fechar um <i>collapse</i> usando javascript, use:</p>
 
-  <code class="language-html">locastyle.collapse.toggle('#collapse1')</code>
+  <% code("javascript") do %>locastyle.collapse.toggle('#collapse1')<% end %>
 
   <p>Exemplo</p>
   <div class="ls-box-demo">
