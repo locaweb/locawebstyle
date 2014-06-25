@@ -16,7 +16,7 @@ type: component
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/table' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/table' %></code>
+  <% code("html") do %><%= partial 'documentacao/shared/table' %><% end %>
 
   <h2 class="doc-title-3">Tabela zebrada</h2>
   <p>Se quiser que as linhas da tabela fiquem com o background colorido alternadamente, basta adicionar a classe <code>.ls-table-striped</code>.</p>
