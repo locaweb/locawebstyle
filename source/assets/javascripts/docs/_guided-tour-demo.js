@@ -20,27 +20,48 @@ tourGuiado = (function() {
     showPrevButton: true,
     steps: [
       {
-        target: 'passo1',
-        title: 'O título do passo 1',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        placement: 'bottom',
-        arrowOffset: 'center'
-      },
-      {
-        target: 'passo2',
-        title: 'Título passo 2',
-        content: 'Este é o texto do passo 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        placement: 'left',
-        arrowOffset: 'center',
-        yOffset: 'center'
-      },
-      {
-        target: 'demo-init',
-        title: 'Título passo 3- Final',
-        content: 'Um textinho do passo 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        target: '.ls-menu',
+        title: 'Menu',
+        content: 'Agora o Locaweb Style possui menu na lateral.',
         placement: 'right',
         arrowOffset: 'center',
-        yOffset: 'center',
+        onNext: function(){
+          $('.ls-submenu > a').click();
+        }
+      },
+      {
+        target: '.ls-ico-cog',
+        title: 'SubMenu',
+        content: 'Agora o Locaweb Style possui menu na lateral.',
+        placement: 'right',
+        arrowOffset: 'center',
+        yOffset: 30,
+        onPrev: function(){
+          $('.ls-submenu > a').click();
+        },
+        onNext: function(){
+          $('.ls-submenu > a').click();
+        }
+      },
+      {
+        target: '.ls-title-intro',
+        title: 'Título Principal',
+        content: 'Este é o título da página que você está.',
+        placement: 'bottom',
+        arrowOffset: 'center',
+        yOffset: -30,
+        xOffset: 10,
+        onPrev: function(){
+          $('.ls-submenu > a').click();
+        },
+      },
+      {
+        target: '.ls-footer',
+        title: 'Footer',
+        content: 'Este é o footer, que tem um título, links de apoio e textos informativos.',
+        placement: 'top',
+        arrowOffset: 'center',
+        yOffset: 30,
         showNextButton: false
       }
 
