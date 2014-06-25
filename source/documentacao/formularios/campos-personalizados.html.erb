@@ -34,8 +34,8 @@ description: Aqueles onde mudamos a aparência ou comportamento padrão do naveg
     <p class="doc-title2"> Select customizada </p>
     <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
   </div>
-  <code class="language-html">
-    <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
-  </code>
+  <% code("html") do %> 
+<%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
+  <% end %>
   <!-- End Select -->
 </section>
