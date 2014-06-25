@@ -602,12 +602,23 @@ p code
     white-space: pre-wrap
 
 @media (max-width: 991px)
-  .doc-content
-    aside
-      margin-bottom: 30px
+  .doc-sidebar-menu
+    margin-bottom: 30px
 
-      a:after
-        border: none !important
+    li
+
+      a
+
+      &.active,
+      &:hover,
+      &:focus
+
+        a,
+        a:hover,
+        a:focus
+
+          &:after
+            border-left-color: transparent
 
 @media (max-width: 480px)
 
