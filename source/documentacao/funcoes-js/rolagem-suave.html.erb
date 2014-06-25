@@ -10,9 +10,9 @@ description: Rolagem animada suave
   <%= partial 'partials/doc-intro-content' %>
 
   <p>Imagine que você esteja numa página muito extensa e quer fazer links de ancora para as diversas seções, simples: basta adicionar a classe <code>ls-link-smooth</code> no link.</p>
-  <code class="language-html">
-    <a class="ls-btn-primary ls-link-smooth" href="#final" >Ir até a seção com <i>id</i> <b>#final</b></a>
-  </code>
+  <% code("html") do %> 
+<a class="ls-btn-primary ls-link-smooth" href="#final" >Ir até a seção com <i>id</i> <b>#final</b></a>
+  <% end %>
 
   <ul>
     <li><a class="ls-link-smooth" href="#primeiro">Ir para primeiro título</a></li>
