@@ -15,17 +15,17 @@ description: Particularidades do textarea
       <%= partial 'documentacao/shared/form/form-field-textarea.erb' %>
     </form>
   </div>
-  <code class="language-html">
-    <%= partial 'documentacao/shared/form/form-field-textarea.erb' %>
-  </code>
+  <% code("html") do %> 
+<%= partial 'documentacao/shared/form/form-field-textarea.erb' %>
+  <% end %>
   <p>O <code>textarea</code> vem com o <i>resize</i> desabilitado por padrão, mas pode ser ativado usando as classes <code>ls-textarea-resize-both</code>, <code>ls-textarea-resize-horizontal</code>, <code>ls-textarea-resize-vertical</code>.</p>
 
   <p>Para um <code>textarea</code> com o comportamento de aumentar de acordo com o texto, insira a classe <code>ls-textarea-autoresize</code> no <code>textarea</code>.</p>
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/form-field-textarea-autoresize.erb' %>
   </div>
-  <code class="language-html">
-    <%= partial 'documentacao/shared/form/form-field-textarea-autoresize.erb' %>
-  </code>
+  <% code("html") do %> 
+<%= partial 'documentacao/shared/form/form-field-textarea-autoresize.erb' %>
+  <% end %>
 
 </section>
