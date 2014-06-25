@@ -13,7 +13,7 @@ type: component
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/alerts/alerts' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/alerts/alerts' %></code>
+  <% code("html") do %><%= partial 'documentacao/shared/alerts/alerts' %><% end %>
 
   <h2 class="doc-title-3">Fechando alertas</h2>
   <p>Para inserir um <strong>X</strong> para que o usuário possa fechar o alerta, basta utilizar a classe <code>ls-dismissable</code> no elemento de alert.</p>
@@ -41,8 +41,8 @@ type: component
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/alerts/width-alerts' %>
   </div>
-  <code class="language-html">
-    <%= partial 'documentacao/shared/alerts/width-alerts' %>
-  </code>
+  <% code("html") do %>
+<%= partial 'documentacao/shared/alerts/width-alerts' %>
+  <% end %>
 
 </section>
