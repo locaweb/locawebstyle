@@ -17,3 +17,4 @@ gem 'oj' # faster JS compiles
 gem "pry"
 
 gem 'middleman-gh-pages'
+gem "middleman-syntax"
