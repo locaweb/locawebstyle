@@ -24,6 +24,51 @@ description: Escreva HTML de maneira organizada, semântica e escalável
 </html>
 </code>
 
+  <h2 class="doc-title-3">Sintaxe do HTML</h2>
+  <ul>
+    <li>Use soft-tabs com dois espaços.</li>
+    <li>Elementos aninhados devem estar identados uma vez (2 espaços).</li>
+    <li>Sempre use aspas duplas, nunca aspas simples.</li>
+    <li>Nunca inclua uma barra invertida nos elementos viúvos (exemplo: <code>&lt;img&gt;</code> ou <code>&lt;hr&gt;</code>).</li>
+  </ul>
+
+  <h2 class="doc-title-3">Encoding de caractéres</h2>
+  <p>Assegure-se rapidamente que a renderizaçnao do seu conteúdo declarando o encoding de caractéres explicitamente.</p>
+
+  <h2 class="doc-title-3">Praticidade em vez de pureza</h2>
+  <p>Esforce-se para manter o padrão e a semântica do HTML, mas não às custas da praticidade. Use o mínimo de código com a menor complexidade possível.</p>
+
+  <p>Como produzimos um framework para ser usado em sistemas administrativos internos, uma vez ou outra a semântica pode ser prejudicada para facilitar a montagem de componentes. Mas entenda que essa é uma exceção.</p>
+
+  <h2 class="doc-title-3">Ordem dos atributos</h2>
+  <p>Não é obrigatório, mas é bom que seja aplicado quando possível: Atributos HTML devem usar esta ordem em particular para facilitar a leitura do código.</p>
+  <ul>
+      <li><code>class</code></li>
+      <li><code>id</code></li>
+      <li><code>data-*</code></li>
+      <li><code>for</code>, <code>type</code>, ou <code>href</code></li>
+      <li><code>src</code>, <code>for</code>, <code>type</code>, <code>href</code></li>
+      <li><code>title</code>, <code>alt</code></li>
+      <li><code>aria-*</code>, <code>role</code></li>
+    </ul>
+
+  <h2 class="doc-title-3">Atributos booleanos</h2>
+  <p>Um atributo boleano é o único que não precisa ter valores declarados. O XHTML precisa que você declare um valor, mas no HTML5 isso não é necessário.</p>
+
+  <p>Para uma leitura adicional, consulte a <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes">seção do WhatWG sobre atributos booleanos</a>:</p>
+
+  <blockquote>
+    <p>A presença de um atributo boleano representa um valor verdadeiro e a ausência do atributo representa um valor falso.</p>
+  </blockquote>
+
+  <p>Se você <em>precisa</em> incluir valores nos atributos, <strong>você não precisa</strong> seguir esta regra do WhatWG:</p>
+
+  <blockquote>
+    <p>Se o atributo está presente, seu valor deve ser uma string vazia ou [...] o nome canônico do atributo, sem espaços em branco.</p>
+  </blockquote>
+
+  <p>Resumindo, não adicione nenhum valor.</p>
+
   <h2 class="doc-title-3">Identação</h2>
   <p>Escolher entre tabs e espaços sempre é uma dúvida terrível, mesmo assim, quando se trata de HTML, o padrão sempre foi TABs.  </p>
   <p>Usamos TABs para HTML.</p>

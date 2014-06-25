@@ -10,6 +10,12 @@ description: Entenda como escrever código CSS de forma consciente.
   <%= partial 'partials/doc-intro-content' %>
 
   <h2 class="doc-title-3">Cores</h2>
+  <p>Nós usamos o prefixo <strong>ls-</strong> para todas as classes do framework. Isso nos ajuda a evitar conflitos com o CSS do produto de terceiros ou com outros frameworks. Qualquer coisa relacionada ao Locaweb Style, coloque o prefixo <strong>ls-</strong> na frente do nome.</p>
+
+  <h2 class="doc-title-3">Aninhamento (nesting) no SASS</h2>
+  <p>Evite aninhar seletores (fazer "nesting"). Só porque você pode fazer isso, não significa que você deve fazê-lo sempre. Considere aninhar se você tem um escopo de estilos para um pai e se há múltiplos elementos para serem aninhados.</p>
+
+  <h2 class="doc-title-3">Cores</h2>
   <p>Sempre que utilizar uma cor hexadecimal que tenha repetição de valores, use sempre o valor de atalho, assim:</p>
   <code class="language-css">
 /** Recomendado **/
@@ -55,5 +61,16 @@ p {
 }
   </code>
 
-
+  <h2 class="doc-title-3">Ordem das declarações</h2>
+  <p>Não é obrigatório, mas se puder fazer é bom. Declarações relacionadas devem ser agrupadas segundo a seguinte ordem:</p>
+<ol>
+      <li>Posicionamento</li>
+      <li>Box model</li>
+      <li>Tipografia</li>
+      <li>Visual</li>
+    </ol>
+<p>Posicionamento vem primeiro por que isto pode remover um elemento do fluxo normal do documento e substituir estilos relacionados. O box model vem depois pois ele dita as dimensões e lugar do componente.</p>
+<p>Tudo o mais que toma lugar <em>dentro</em> do componente ou não impacta as duas seções anteriores, vem por último.</p>
+<p>Para uma lista completa de propridades e suas ordens, por favor veja <a href="http://twitter.github.com/recess">Recess</a>,</p>
+<p>Declarações relacionadas devem ser agrupadas, colocando posicionamento e as propriedades de box-model perto do topo, seguido das propriedades de tipografia e depois propriedades visuais.</p>
 </section>
