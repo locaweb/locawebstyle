@@ -2,9 +2,9 @@ var locastyle = (function() {
   'use strict';
 
   function init() {
+    locastyle.general.init();
     locastyle.breakpoints.init();
     loadModules();
-    locastyle.general.init();
     locastyle.sidebars.init();
     locastyle.btnGroup.init();
     locastyle.datepicker.init();
