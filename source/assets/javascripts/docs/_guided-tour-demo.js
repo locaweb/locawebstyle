@@ -20,6 +20,14 @@ tourGuiado = (function() {
     showPrevButton: true,
     steps: [
       {
+        target: '.ls-brand-name',
+        title: 'Nome do Projeto',
+        content: 'Aqui fica o nome do projeto',
+        placement: 'bottom',
+        arrowOffset: 'center',
+        xOffset: 20
+      },
+      {
         target: '.ls-menu',
         title: 'Menu',
         content: 'Agora o Locaweb Style possui menu na lateral.',
@@ -30,7 +38,7 @@ tourGuiado = (function() {
         }
       },
       {
-        target: '.ls-ico-cog',
+        target: '.ls-menu .ls-ico-cog',
         title: 'SubMenu',
         content: 'Agora o Locaweb Style possui menu na lateral.',
         placement: 'right',
@@ -62,7 +70,37 @@ tourGuiado = (function() {
         placement: 'top',
         arrowOffset: 'center',
         yOffset: 30,
-        showNextButton: false
+        onNext: function(){
+          $('.ls-alerts-list > a:eq(0)').click();
+        }
+      },
+      {
+        target: 'ls-notification-curtain',
+        title: 'Notificação',
+        content: 'Aqui será exibida todas as notificações do Painel',
+        placement: 'left',
+        arrowOffset: 'center',
+        xOffset: 40,
+        showNextButton: false,
+        onPrev: function(){
+          $('.ls-alerts-list > a:eq(0)').click();
+        },
+        onNext: function(){
+          $('.ls-user-account > a:eq(0)').click();
+        }
+      },
+      {
+        target: '.ls-dropdown-nav',
+        title: 'Menu de Apoio',
+        content: 'Este menu contém links referente ao usuário',
+        placement: 'left',
+        arrowOffset: 'center',
+        xOffset: 40,
+        showNextButton: false,
+        onPrev: function(){
+          $('.ls-user-account > a:eq(0)').click();
+          $('.ls-alerts-list > a:eq(0)').click();
+        }
       }
 
     ]
