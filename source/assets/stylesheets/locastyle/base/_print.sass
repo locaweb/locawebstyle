@@ -2,10 +2,37 @@
   body
     font-family: arial
 
+  #lwbar-header,
   .header,
   .nav-content,
   .breadcrumb,
   .footer,
   .sidebar,
-  .actions-toolbar
-    display: none
+  .actions-toolbar,
+  .pagination-filter,
+  .form-inline
+    display: none !important
+
+  .tab-content
+    border: none !important
+
+  .table
+    width: 100% !important
+
+    th
+      border-top: 1px solid #ddd !important
+
+    td
+      background: none !important
+
+    a[href]:after
+      content: ""
+
+  .well
+    padding: 0
+
+    &.arrow-up:after
+      border: none !important
+
+    hr
+      display: none
