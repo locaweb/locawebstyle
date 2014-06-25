@@ -21,9 +21,10 @@ locastyle.form = (function() {
 
   }
 
-  function datepicker (argument) {
-     var $datepicker = $('.datepicker').pikaday({
-      numberOfMonths: 2,
+  function datepicker () {
+    $('.datepicker').pikaday({
+      numberOfMonths: 1,
+      format: 'DD/MM/YYYY',
       i18n: {
         previousMonth : 'Mês anterior',
         nextMonth     : 'Próximo mês',
@@ -32,8 +33,6 @@ locastyle.form = (function() {
         weekdaysShort : ['Dom','Seg','Ter','Qua','Qui','Sex','Sab']
       }
     });
-    // chain a few methods for the first datepicker, jQuery style!
-    $datepicker.pikaday('show').pikaday('nextMonth');
   }
 
   function prefixSufix () {
