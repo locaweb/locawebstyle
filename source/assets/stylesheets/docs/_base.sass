@@ -578,6 +578,27 @@ p code
   position: fixed
   top: 20px
 
+
+//
+// Syntax Highlight
+//
+.highlight
+  background-color: rgba(0, 0, 0, 0.02)
+  line-height: 1.4
+  border: solid 1px #e1e1e8
+
+  .ls-box-demo + &
+    margin-top: -1px
+    border-radius: 0 0 3px 3px
+
+  .gutter
+    border-right: 1px solid rgba(0, 0, 0, 0.1)
+    padding: 10px 15px
+    font-weight: bold
+
+  .code
+    padding: 10px 15px
+
 @media (max-width: 480px)
 
   .doc-menu-top
