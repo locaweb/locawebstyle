@@ -578,7 +578,6 @@ p code
   position: fixed
   top: 20px
 
-
 //
 // Syntax Highlight
 //
@@ -601,6 +600,14 @@ p code
 
   pre
     white-space: pre-wrap
+
+@media (max-width: 991px)
+  .doc-content
+    aside
+      margin-bottom: 30px
+
+      a:after
+        border: none !important
 
 @media (max-width: 480px)
 
