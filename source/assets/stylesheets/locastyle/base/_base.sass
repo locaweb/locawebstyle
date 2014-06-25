@@ -6,10 +6,6 @@
   margin-left: 0
   z-index: 10
   position: relative
-  -webkit-overflow-scrolling: touch
-  -moz-overflow-scrolling: touch
-  -ms-overflow-scrolling: touch
-  overflow-scrolling: touch
   background-color: #fff
 
   .container-fluid
@@ -81,7 +77,10 @@
     margin-left: $sidebarWidth
     height: 100%
     min-height: 100%
-    overflow: auto
+    -webkit-overflow-scrolling: touch
+    -moz-overflow-scrolling: touch
+    -ms-overflow-scrolling: touch
+    overflow-scrolling: touch
 
     .container-fluid > .row [class*="col-"]
       padding-bottom: 0
