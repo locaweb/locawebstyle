@@ -39,23 +39,23 @@ type: component
       </header>
     </div>
   </div>
-  <code class="language-html">
-  <div class="ls-list">
-    <header class="ls-list-header">
-      <div class="ls-list-title col-md-4">
-        <a href="#" >Identificador da conta</a>
-        <small>Fake Product Name I </small>
-      </div>
-      <div class="col-md-3 col-md-offset-5">
-        <a href="#" class="ls-btn-primary ls-float-right-sm">Administrar</a>
-      </div>
-    </header>
-  </div>
-  </code>
+  <% code("html") do %>
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-md-4">
+      <a href="#" >Identificador da conta</a>
+      <small>Fake Product Name I </small>
+    </div>
+    <div class="col-md-3 col-md-offset-5">
+      <a href="#" class="ls-btn-primary ls-float-right-sm">Administrar</a>
+    </div>
+  </header>
+</div>
+  <% end %>
 
   <h2 class="doc-title-3">Lista com header + imagem e grids de informações</h2>
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/lists' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/lists' %></code>
+  <% code("html") do %><%= partial 'documentacao/shared/lists' %><% end %>
 </section>

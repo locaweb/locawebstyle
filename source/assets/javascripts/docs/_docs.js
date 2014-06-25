@@ -4,9 +4,6 @@ var lsdocs = (function() {
   function init() {
     convertCodeExamples();
     sidebarAffix();
-    // copyMarkup();
-    // markupExamples();
-    Prism.highlightAll();
     toggleMenuActive();
   }
 
@@ -14,25 +11,6 @@ var lsdocs = (function() {
     $('.doc-menu').on('click', function() {
       $(this).toggleClass('active')
     })
-  }
-
-  function copyMarkup(){
-
-    ZeroClipboard.config( { moviePath: '/assets/flash/ZeroClipboard.swf' } );
-
-    var client = new ZeroClipboard($(".copy-button")[0]);
-
-
-    client.on( "ready", function( readyEvent ) {
-    console.log( "ZeroClipboard SWF is ready!" );
-
-  client.on( "aftercopy", function( event ) {
-    // `this` === `client`
-    // `event.target` === the element that was clicked
-    event.target.style.display = "none";
-    alert("Copied text to clipboard: " + event.data["text/plain"] );
-    } );
-  } );
   }
 
   function markupExamples () {
@@ -47,7 +25,6 @@ var lsdocs = (function() {
         .append('<div class="doc-example-markup-area"><code class="language-markup"></code></div>');
       var html = $example.html();
       $example.find('.doc-example-markup-area code').text(html);
-      Prism.highlightAll();
       menuExamples($example);
     });
   }
@@ -62,9 +39,6 @@ var lsdocs = (function() {
       }else{
         $example.find('.doc-example-markup-area').hide()
       }
-      // doc-example-menu-code
-      // doc-example-menu-demo
-
     });
   }
 
@@ -74,7 +48,6 @@ var lsdocs = (function() {
       $(this).text(html);
       $(this).removeClass('language-html').addClass('language-markup');
     });
-    Prism.highlightAll();
   }
 
   function sidebarAffix(){

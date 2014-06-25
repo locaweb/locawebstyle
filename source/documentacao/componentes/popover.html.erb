@@ -67,11 +67,11 @@ type: component
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/popover' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/popover' %></code>
+  <% code("html") do %><%= partial 'documentacao/shared/popover' %><% end %>
 
   <h2 class="doc-title-3">Exemplo utilizando os parametros default do popover</h2>
   <div class="ls-box-demo">
     <a href="#" class="ls-btn-primary" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a>
   </div>
-  <code class="language-html"><a href="#" class="ls-btn-primary" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a></code>
+  <% code("html") do %><a href="#" class="ls-btn-primary" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a><% end %>
 </section>
