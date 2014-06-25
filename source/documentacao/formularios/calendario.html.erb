@@ -8,12 +8,12 @@ description: Calendário e para facilitar a selação de datas
 <section class="col-md-9">
   <%= partial 'partials/doc-intro-content' %>
 
-  <p>Para usar calendário no campo desejado, basta usar o seletor <code>#datapicker</code> no campo.</p>
+  <p>Para usar calendário no campo desejado, basta usar o seletor <code>.datapicker</code> no campo.</p>
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/form-calendar.erb' %>
   </div>
-  <code class="language-html ls-well-example">
-    <%= partial 'documentacao/shared/form/form-calendar.erb' %>
-  </code>
+  <% code("html") do %>
+<%= partial 'documentacao/shared/form/form-calendar.erb' %>
+  <% end %>
 
 </section>
