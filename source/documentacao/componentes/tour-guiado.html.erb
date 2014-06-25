@@ -11,12 +11,10 @@ type: component
   <%= partial 'partials/doc-intro-content' %>
 
 
-  <h2 class="doc-title-4">Exemplo</h2>
-  <p>Faça um tour guiado usando as configurações do js de exemplo, acima:</p>
   <div class="ls-box-demo">
     <button id="demo-init" class="ls-btn-primary ls-btn-tour">Iniciar Tour</button>
   </div>
-  <code class="language-html"><button id="demo-init-sample" class="ls-btn-primary ls-btn-tour">Iniciar Tour</button></code>
+  <% code("html") do %><button id="demo-init-sample" class="ls-btn-primary ls-btn-tour">Iniciar Tour</button><% end %>
 
   <p>Utilizamos o plugin  <a href="http://linkedin.github.io/hopscotch" target="_blank">hopscotch</a> (criado pelo LinkedIn) e aplicamos a identidade visual do Locaweb Style.</p>
 
@@ -58,12 +56,12 @@ type: component
   <p>Abaixo segue um exemplo dos códigos necessários para implementar o <strong>Tour Guiado</strong>. </p>
 
   <h2 class="doc-title-4">Chamando a função de navegação dentro do seu projeto, propositalmente com window.load</h2>
-  <code class="language-javascript">
-  $(window).load(function() {
-    //Onde tourDashboard é a variável que recebe os eventos do plugin no exemplo abaixo
-    locastyle.guidedTour.init(tourDashboard);
-  });
-  </code>
+  <% code("javascript") do %>
+$(window).load(function() {
+  //Onde tourDashboard é a variável que recebe os eventos do plugin no exemplo abaixo
+  locastyle.guidedTour.init(tourDashboard);
+});
+  <% end %>
 
   <p>O valor do <strong>target</strong> (dentro do tour.js) server como referência de exibição do Tour Guiado. Na tabela abaixo alguns exemplos</p>
 
@@ -90,53 +88,53 @@ type: component
   </table>
 
   <h2 id="passo1" class="doc-title-4" >tour.js </h2>
-  <code class="language-html">
-  var configTour = {
-    id: 'tourDemo',
-    selectors: {
-      init:  '#demo-init'
-    },
-    // Tradução dos botões
-    i18n: {
-      nextBtn: "Próximo",
-      prevBtn: "Anterior",
-      doneBtn: "Ok",
-      skipBtn: "Sair",
-      closeTooltip: "Fechar"
-    },
-    bubbleWidth: 250,
-    showPrevButton: true,
-    steps: [{
-      target: 'passo1',
-      title: 'Titulo passo 1',
-      content: 'descrição passo 1',
-      placement: 'bottom',
-      arrowOffset: 'center'
-    },{
-      target: 'passo2',
-      title: 'Título passo 2',
-      content: 'texto passo 2.',
-      placement: 'right',
-      arrowOffset: 'center',
-      yOffset: 'center'
-    }]
-  };
-  </code>
+  <% code("javascript") do %> 
+var configTour = {
+  id: 'tourDemo',
+  selectors: {
+    init:  '#demo-init'
+  },
+  // Tradução dos botões
+  i18n: {
+    nextBtn: "Próximo",
+    prevBtn: "Anterior",
+    doneBtn: "Ok",
+    skipBtn: "Sair",
+    closeTooltip: "Fechar"
+  },
+  bubbleWidth: 250,
+  showPrevButton: true,
+  steps: [{
+    target: 'passo1',
+    title: 'Titulo passo 1',
+    content: 'descrição passo 1',
+    placement: 'bottom',
+    arrowOffset: 'center'
+  },{
+    target: 'passo2',
+    title: 'Título passo 2',
+    content: 'texto passo 2.',
+    placement: 'right',
+    arrowOffset: 'center',
+    yOffset: 'center'
+  }]
+};
+  <% end %>
 
   <h2 id="passo2" class="doc-title-4">HTML</h2>
-  <code class="language-html">
-  <div class="guided-tour">
-    <a href="#" aria-label="Fechar" class="btn-close close">x</a>
-    <header class="guided-header">
-      <p>Bem-vindo</p>
-      <h2 class="title-guided">Título</h2>
-    </header>
-    <a href="#" class="btn btn-primary btn-tour" role="button">Iniciar</a>
-    <footer class="guided-footer">
-      <a href="https://www.demo.com" class="ico-arrow-right" target="_blank">Link demo</a>
-      <a href="#" class="ico-arrow-right" target="_blank">Link</a>
-    </footer>
-  </div>
-  </code>
+  <% code("html") do %> 
+<div class="guided-tour">
+  <a href="#" aria-label="Fechar" class="btn-close close">x</a>
+  <header class="guided-header">
+    <p>Bem-vindo</p>
+    <h2 class="title-guided">Título</h2>
+  </header>
+  <a href="#" class="btn btn-primary btn-tour" role="button">Iniciar</a>
+  <footer class="guided-footer">
+    <a href="https://www.demo.com" class="ico-arrow-right" target="_blank">Link demo</a>
+    <a href="#" class="ico-arrow-right" target="_blank">Link</a>
+  </footer>
+</div>
+  <% end %>
 
 </section>
