@@ -39,6 +39,7 @@ locastyle.guidedTour = (function() {
 	}
 
 	function initTour(){
+    $(config.selectors.tour).trigger('click');
 		hopscotch.endTour();
 		hopscotch
 		hopscotch.startTour(jsonTour, 0);
