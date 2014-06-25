@@ -32,7 +32,7 @@ type: component
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/dropdown' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/dropdown' %></code>
+  <% code("html") do %><%= partial 'documentacao/shared/dropdown' %><% end %>
 
   <h2 class="doc-title-3">Desabilitando o  droplist.</h2>
   <p>Basta inserir a classe <code>.ls-disabled</code>, no botão e assim desativa o dropdown.</p>
@@ -49,16 +49,16 @@ type: component
     </div>
 
   </div>
-  <code class="language-html">
-    <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
-      <a href="#" class="ls-btn-primary ls-disabled">Users</a>
-      <ul class="ls-dropdown-nav">
-          <li><a href="#">Edit</a></li>
-          <li><a href="#">Config</a></li>
-          <li><a href="#">Save</a></li>
-      </ul>
-    </div>
-  </code>
+  <% code("html") do %> 
+<div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+  <a href="#" class="ls-btn-primary ls-disabled">Users</a>
+  <ul class="ls-dropdown-nav">
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+  </ul>
+</div>
+  <% end %>
 
   <h2 class="doc-title-3">Mudando a posição da droplist.</h2>
   <p>Basta inserir a classe <code>.ls-pos-right</code>, que o dropdown abre à direita do elemento</p>
@@ -75,16 +75,16 @@ type: component
     </div>
 
   </div>
-  <code class="language-html">
-    <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
-      <a href="#" class="ls-btn-primary">Users</a>
-      <ul class="ls-dropdown-nav">
-          <li><a href="#">Edit</a></li>
-          <li><a href="#">Config</a></li>
-          <li><a href="#">Save</a></li>
-      </ul>
-    </div>
-  </code>
+  <% code("html") do %> 
+<div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+  <a href="#" class="ls-btn-primary">Users</a>
+  <ul class="ls-dropdown-nav">
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+  </ul>
+</div>
+  <% end %>
 
 
   <h2 class="doc-title-3">Dropdown com  último link em destaque.</h2>
@@ -101,17 +101,17 @@ type: component
     </div>
   </div>
 
-  <code class="language-html">
-    <div data-ls-module="dropdown" class="ls-dropdown">
-      <a href="#" class="ls-btn-primary">Users</a>
-      <ul class="ls-dropdown-nav">
-        <li><a href="#">Edit</a></li>
-        <li><a href="#">Config</a></li>
-        <li><a href="#">Save</a></li>
-        <li><a href="#" class="ls-color-danger">Remove</a></li>
-      </ul>
-    </div>
-  </code>
+  <% code("html") do %> 
+<div data-ls-module="dropdown" class="ls-dropdown">
+  <a href="#" class="ls-btn-primary">Users</a>
+  <ul class="ls-dropdown-nav">
+    <li><a href="#">Edit</a></li>
+    <li><a href="#">Config</a></li>
+    <li><a href="#">Save</a></li>
+    <li><a href="#" class="ls-color-danger">Remove</a></li>
+  </ul>
+</div>
+  <% end %>
 
   <h2 class="doc-title-3">Dropdown sem texto.</h2>
   <p>Basta deixar o link sem texto, conforme o exemplo abaixo</p>
@@ -151,39 +151,39 @@ type: component
     </div>
   </div>
 
-  <code class="language-html">
-  <div data-ls-module="dropdown" class="ls-dropdown">
-    <a href="#" class="ls-btn"></a>
-    <ul class="ls-dropdown-nav">
-        <li><a href="#">Edit</a></li>
-        <li><a href="#">Config</a></li>
-        <li><a href="#">Save</a></li>
-    </ul>
-  </div>
-  <div data-ls-module="dropdown" class="ls-dropdown">
-    <a href="#" class="ls-btn-primary"></a>
-    <ul class="ls-dropdown-nav">
-        <li><a href="#">Edit</a></li>
-        <li><a href="#">Config</a></li>
-        <li><a href="#">Save</a></li>
-    </ul>
-  </div>
-  <div data-ls-module="dropdown" class="ls-dropdown">
-    <a href="#" class="ls-btn-dark"></a>
-    <ul class="ls-dropdown-nav">
-        <li><a href="#">Edit</a></li>
-        <li><a href="#">Config</a></li>
-        <li><a href="#">Save</a></li>
-    </ul>
-  </div>
-  <div data-ls-module="dropdown" class="ls-dropdown">
-    <a href="#" class="ls-btn-danger"></a>
-    <ul class="ls-dropdown-nav">
-        <li><a href="#">Edit</a></li>
-        <li><a href="#">Config</a></li>
-        <li><a href="#">Save</a></li>
-    </ul>
-  </div>
-  </code>
+  <% code("html") do %> 
+<div data-ls-module="dropdown" class="ls-dropdown">
+  <a href="#" class="ls-btn"></a>
+  <ul class="ls-dropdown-nav">
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+  </ul>
+</div>
+<div data-ls-module="dropdown" class="ls-dropdown">
+  <a href="#" class="ls-btn-primary"></a>
+  <ul class="ls-dropdown-nav">
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+  </ul>
+</div>
+<div data-ls-module="dropdown" class="ls-dropdown">
+  <a href="#" class="ls-btn-dark"></a>
+  <ul class="ls-dropdown-nav">
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+  </ul>
+</div>
+<div data-ls-module="dropdown" class="ls-dropdown">
+  <a href="#" class="ls-btn-danger"></a>
+  <ul class="ls-dropdown-nav">
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Config</a></li>
+      <li><a href="#">Save</a></li>
+  </ul>
+</div>
+  <% end %>
 
 </section>

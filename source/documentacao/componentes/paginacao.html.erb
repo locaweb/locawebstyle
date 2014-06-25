@@ -16,7 +16,7 @@ type: component
   <div class="ls-box-demo ls-overflow-hidden">
     <%= partial 'documentacao/shared/pagination/pagination' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/pagination/pagination' %></code>
+  <% code("html") do %><%= partial 'documentacao/shared/pagination/pagination' %><% end %>
 
   <h2 class="doc-title-3">Paginação com muitos elementos</h2>
   <p>Quando houver mais de 5 páginas, utilizamos um span com a classe <code>.ls-gap</code> para especificar que há mais páginas.</p>
@@ -24,7 +24,7 @@ type: component
   <div class="ls-box-demo ls-overflow-hidden">
     <%= partial 'documentacao/shared/pagination/pagination-gap' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/pagination/pagination-gap' %></code>
+  <% code("html") do %><%= partial 'documentacao/shared/pagination/pagination-gap' %><% end %>
 
   <h2 class="doc-title-3">Estados Ativado e Desativado</h2>
   <p>Customize os links em diferentes circunstâncias. Utiliza a classe <code>.ls-disabled</code> para links desativados e <code>.ls-active</code> para indicar uma próxima pagina.</p>
@@ -32,7 +32,7 @@ type: component
   <div class="ls-box-demo ls-overflow-hidden">
     <%= partial 'documentacao/shared/pagination/pagination-status' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/pagination/pagination-status' %></code>
+  <% code("html") do %><%= partial 'documentacao/shared/pagination/pagination-status' %><% end %>
 
   <h2 class="doc-title-3">Tamanhos</h2>
   <p>Para alterar o tamanho, utilize as classes <code>.ls-pagination-lg</code> ou <code>.ls-pagination-sm</code>.</p>
@@ -40,7 +40,7 @@ type: component
   <div class="ls-box-demo ls-overflow-hidden">
     <%= partial 'documentacao/shared/pagination/pagination-widths' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/pagination/pagination-widths' %></code>
+  <% code("html") do %><%= partial 'documentacao/shared/pagination/pagination-widths' %><% end %>
 
   <h2 class="doc-title-3">Pager</h2>
   <p>Links rápidos para uma simples implementação de paginação com links de <strong>anterior</strong> e <strong>próximo</strong>.</p>
@@ -48,7 +48,7 @@ type: component
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/pagination/pager' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/pagination/pager' %></code>
+  <% code("html") do %><%= partial 'documentacao/shared/pagination/pager' %><% end %>
 
   <h2 class="doc-title-3">Links Alinhados</h2>
   <p>Você tem a opcão de alinhar um de cada lado</p>
@@ -56,7 +56,7 @@ type: component
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/pagination/pager-align' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/pagination/pager-align' %></code>
+  <% code("html") do %><%= partial 'documentacao/shared/pagination/pager-align' %><% end %>
 
   <h2 class="doc-title-3">Estado desabilitado opcional</h2>
   <p>Esses links também usam a classe <code>.ls-disabled</code> que é uma utilidade da paginação.</p>
@@ -64,5 +64,5 @@ type: component
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/pagination/pager-option-disabled' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/pagination/pager-option-disabled' %></code>
+  <% code("html") do %><%= partial 'documentacao/shared/pagination/pager-option-disabled' %><% end %>
 </section>

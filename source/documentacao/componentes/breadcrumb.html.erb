@@ -14,14 +14,15 @@ type: component
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/breadcrumb/breadcrumb-more' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/breadcrumb/breadcrumb-more' %></code>
+
+  <% code("html") do %><%= partial 'documentacao/shared/breadcrumb/breadcrumb-more' %><% end %>
 
   <p>Quando estiver no primeiro nível, o nível deve aparecer sem link, assim:</p>
+
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/breadcrumb/breadcrumb' %>
   </div>
-  <code class="language-html"><%= partial 'documentacao/shared/breadcrumb/breadcrumb' %></code>
 
-
+  <% code("html") do %><%= partial 'documentacao/shared/breadcrumb/breadcrumb' %><% end %>
 
 </section>

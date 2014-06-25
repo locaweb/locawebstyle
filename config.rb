@@ -35,6 +35,8 @@ page "/documentacao/*", :layout => "base"
 # Helpers
 ###
 
+activate :syntax, :line_numbers => true
+
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
@@ -75,6 +77,7 @@ set :images_dir, 'assets/images'
 
 activate :directory_indexes
 activate :i18n
+
 
 activate :blog do |blog|
   # set options on blog
