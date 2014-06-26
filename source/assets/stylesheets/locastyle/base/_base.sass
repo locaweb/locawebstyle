@@ -59,15 +59,12 @@
     content: "\e60a"
     margin-left: 3px
 
-.ls-screen-sm,
-.ls-screen-xs,
+@media (max-width: $screen-md)
   .ls-board-box
     [class*="col-md"]
       margin-bottom: 10px
 
-
 @media (min-width: $screen-sm)
-
   .ls-main
     +single-transition(none)
     +transform(none)
