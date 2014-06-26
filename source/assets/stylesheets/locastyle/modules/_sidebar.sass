@@ -16,10 +16,6 @@
     -ms-overflow-scrolling: touch
     overflow-scrolling: touch
 
-  .ls-screen-xs & .ls-user-account + .ls-ico-user + .ls-menu,
-  .ls-screen-xs & .ls-user-account + .ls-menu
-    margin-top: $heightTopbar
-
   .ls-user-account
     position: absolute
     top: 0
@@ -162,7 +158,6 @@
 
 
 @media (min-width: $screen-sm)
-
   .ls-sidebar
     +transform(none)
     +translate(0, 0)
@@ -180,3 +175,8 @@
 
     .ls-user-account
       display: none
+
+@media (max-width: $screen-sm)
+  .ls-sidebar .ls-user-account + .ls-ico-user + .ls-menu,
+  .ls-sidebar .ls-user-account + .ls-menu
+    margin-top: $heightTopbar
