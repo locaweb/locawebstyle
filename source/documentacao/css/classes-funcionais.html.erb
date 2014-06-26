@@ -10,24 +10,27 @@ type: css
 
   <%= partial 'partials/doc-intro-content' %>
 
+  <p>Perceba que em algumas classes você poderá incluir os sufixos <strong>-xs</strong>, <strong>-sm</strong>, <strong>-md</strong> e <strong>-lg</strong>. Usando estes sufixos vai fazer com que a classe em questão funcione apenas no breakpoint equivalente ao sufixo. Se tiver dúvidas sobre estes sufixos, <%= link_to "leia a parte de GRIDS", base_url+"/documentacao/css/grid" %>.</p>
+
   <h2 class="doc-title-3">Posicionamento</h2>
   <p>
-    Classes que alteram o posicionamento dos elementos
+    Classes que alteram o posicionamento dos elementos:
   </p>
   <table class="ls-table">
     <thead>
       <tr>
-        <th>Nome</th><th>Descrição</th>
+        <th>Nome</th>
+        <th>Descrição</th>
       </tr>
     </thead>
     <tbody>
       <tr><td>.ls-clearfix</td><td>Corrige problemas quando existir filhos com float</td></tr>
-      <tr><td>.ls-no-float</td><td>Insere float: none</td></tr>
-      <tr><td>.ls-float-right</td><td>Insere float: right</td></tr>
-      <tr><td>.ls-float-left</td><td>Insere float: left</td></tr>
-      <tr><td>.ls-clear-both</td><td>Insere clear: both</td></tr>
-      <tr><td>.ls-clear-right</td><td>Insere clear: right</td></tr>
-      <tr><td>.ls-clear-left</td><td>Insere clear: left</td></tr>
+      <tr><td>.ls-float-none <strong>(-xs, -sm)</strong></td><td>Insere float: none</td></tr>
+      <tr><td>.ls-float-right <strong>(-xs, -sm)</strong></td><td>Insere float: right</td></tr>
+      <tr><td>.ls-float-left <strong>(-xs, -sm)</strong></td><td>Insere float: left</td></tr>
+      <tr><td>.ls-clear-both <strong>(-xs, -sm)</strong></td><td>Insere clear: both</td></tr>
+      <tr><td>.ls-clear-right <strong>(-xs, -sm)</strong></td><td>Insere clear: right</td></tr>
+      <tr><td>.ls-clear-left <strong>(-xs, -sm)</strong></td><td>Insere clear: left</td></tr>
       <tr><td>.ls-overflow-hidden</td><td>Insere overflow: hidden</td></tr>
       <tr><td>.ls-overflow-visible</td><td>Insere overflow: visible</td></tr>
     </tbody>
@@ -35,7 +38,7 @@ type: css
 
   <h2 class="doc-title-3">Bloco e linha</h2>
   <p>
-    Classes que alteram o <i>display</i> de elementos
+    Classes que alteram o <i>display</i> de elementos:
   </p>
   <table class="ls-table">
     <thead>
@@ -53,7 +56,7 @@ type: css
 
   <h2 class="doc-title-3">Tamanho</h2>
   <p>
-    Classes que alteram o <i>tamanho</i> de elementos
+    Classes que alteram o <i>tamanho</i> de elementos:
   </p>
   <table class="ls-table">
     <thead>
@@ -72,7 +75,7 @@ type: css
 
   <h2 class="doc-title-3">Margin e Padding</h2>
   <p>
-    Classes que alteram o <i>tamanho</i> de elementos
+    Classes que alteram o <i>tamanho</i> de elementos:
   </p>
   <table class="ls-table">
     <thead>
@@ -102,7 +105,7 @@ type: css
 
   <h2 class="doc-title-3">Texto e alinhamento</h2>
   <p>
-    Classes que alteram o <i>tamanho</i> de elementos
+    Classes que alteram o <i>tamanho</i> de elementos:
   </p>
   <table class="ls-table">
     <thead>
@@ -111,8 +114,8 @@ type: css
       </tr>
     </thead>
     <tbody>
-      <tr><td>.ls-txt-left</td><td>Alinha à esquerda</td></tr>
-      <tr><td>.ls-txt-right</td><td>Alinha à direita</td></tr>
+      <tr><td>.ls-txt-left <strong>(-xs, -sm)</strong></td><td>Alinha à esquerda</td></tr>
+      <tr><td>.ls-txt-right <strong>(-xs, -sm)</strong></td><td>Alinha à direita</td></tr>
       <tr><td>.ls-txt-justify</td><td>Justifica o texto</td></tr>
       <tr><td>.ls-txt-center</td><td>Alinha ao centro</td></tr>
       <tr><td>.ls-txt-center-all</td><td>Alinha verticalmente e horizontalmente o texto</td></tr>
@@ -136,7 +139,7 @@ type: css
 
   <h2 class="doc-title-3">Fundo, borda e transparência</h2>
   <p>
-    Classes que alteram o fundo e a borda de elementos
+    Classes que alteram o fundo e a borda de elementos:
   </p>
   <table class="ls-table">
     <thead>
@@ -160,7 +163,7 @@ type: css
     </tbody>
     </table>
 
-    <p>Backgrounds definidos com as cores padrões de tags e alertas.</p>
+    <p>Backgrounds definidos com as cores padrões de tags e alertas:</p>
     <table class="ls-table">
       <thead>
         <tr>
@@ -194,7 +197,7 @@ type: css
 
     <h2 class="doc-title-3">Cursor e mouse</h2>
     <p>
-      Classes que alterar o cursor do mouse.
+      Classes que alterar o cursor do mouse:
     </p>
      <table class="ls-table">
       <thead>
@@ -218,7 +221,7 @@ type: css
 
   <h2 class="doc-title-3">Cores</h2>
   <p>
-    Classes que alteram cores de fundo e de texto.
+    Classes que alteram cores de fundo e de texto:
   </p>
   <table class="ls-table">
     <thead>
