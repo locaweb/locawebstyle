@@ -28,6 +28,7 @@ src_files:
     - source/assets/javascripts/locastyle/_topbar-curtain.js
     - source/assets/javascripts/locastyle/_btn-group.js
     - source/assets/javascripts/locastyle/_sidebars.js
+    - source/assets/javascripts/locastyle/_progress-bar.js
 
 # stylesheets
 #
