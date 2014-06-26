@@ -6,5 +6,5 @@
   <% end %>
   <% if @content :%>
   <% end %>
-  <div class="ls-popover-content"> <%= @content %> </div>
+  <div class="ls-popover-content"> <%- @content %> </div>
 </div>
