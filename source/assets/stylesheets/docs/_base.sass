@@ -578,7 +578,6 @@ p code
   position: fixed
   top: 20px
 
-
 //
 // Syntax Highlight
 //
@@ -601,6 +600,25 @@ p code
 
   pre
     white-space: pre-wrap
+
+@media (max-width: 991px)
+  .doc-sidebar-menu
+    margin-bottom: 30px
+
+    li
+
+      a
+
+      &.active,
+      &:hover,
+      &:focus
+
+        a,
+        a:hover,
+        a:focus
+
+          &:after
+            border-left-color: transparent
 
 @media (max-width: 480px)
 
