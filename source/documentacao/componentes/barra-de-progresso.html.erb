@@ -8,50 +8,56 @@ type: component
 
 <section class="col-md-9">
 
-<%= partial 'partials/doc-intro-content' %>
+  <%= partial 'partials/doc-intro-content' %>
 
   <table class="ls-table">
     <thead>
       <tr>
-        <th>tipo</th>
-        <th>Classe</th>
-        <th>Exemplo</th>
+        <th>Classes</th>
+        <th>Descrição</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Estática</td>
-        <td>.ls-progress</td>
-        <td><progress class="ls-progress" value="10" max="100"></progress></td>
-      </tr>
-      <%#
-      <tr>
-        <td>Animada</td>
-        <td>.ls-progress .ls-progress-animated</td>
-        <td><progress class="ls-progress ls-progress-animated" value="20" max="100"></progress></td>
+        <td>data-ls-module="progressBar"</td>
+        <td>Parâmetro utilizado para criar a barra de progresso.</td>
       </tr>
       <tr>
-        <td>Cinza</td>
-        <td>ls-progress ls-progress-gray</td>
-        <td><progress class="ls-progress ls-progress-gray" value="30" max="100"></progress></td>
+        <td>aria-valuenow</td>
+        <td>Parâmetro utilizado para colocar a porcentagem atual da barra.</td>
       </tr>
       <tr>
-        <td>Com percentual</td>
-        <td>.ls-progress .ls-progress-percent</td>
-        <td><progress class="ls-progress ls-progress-percent" value="40" max="100"></progress></td>
+        <td>.ls-right-percentage</td>
+        <td>Alinha o percentual da barra de progresso ao lado direito.</td>
       </tr>
       <tr>
-        <td>Pie</td>
-        <td>.ls-progress .ls-progress-pie</td>
-        <td><progress class="ls-progress ls-progress-pie" value="40" max="100"></progress></td>
-      </tr>%>
+        <td>.ls-left-percentage</td>
+        <td>Alinha o percentual da barra de progresso ao lado esquerdo.</td>
+      </tr>
     </tbody>
   </table>
-
-  <h2 class="doc-title-3">Código</h2>
-  <p>Usamos a tag <code>progress</code> do HTML 5 para customizar as barras de progresso.</p>
+  <h2 class="doc-title-3">Barra de progresso padrão</h2>
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/progress-bar/progress' %>
   </div>
   <% code("html") do %><%= partial 'documentacao/shared/progress-bar/progress' %><% end %>
+
+  <h2 class="doc-title-3">Alinhando o percentual a direita.</h2>
+  <div class="ls-box-demo">
+    <div data-ls-module="progressBar" role="progressbar" aria-valuenow="100" class="ls-right-percentage"></div>
+  </div>
+  <% code("html") do %><div data-ls-module="progressBar" role="progressbar" aria-valuenow="100" class="ls-right-percentage"></div><% end %>
+
+  <h2 class="doc-title-3">Alinhando o percentual a esquerda.</h2>
+  <div class="ls-box-demo">
+    <div data-ls-module="progressBar" role="progressbar" aria-valuenow="100" class="ls-left-percentage"></div>
+  </div>
+  <% code("html") do %><div data-ls-module="progressBar" role="progressbar" aria-valuenow="100" class="ls-left-percentage"></div><% end %>
+
+  <h2 class="doc-title-3">Deixando a barra animada.</h2>
+  <div class="ls-box-demo">
+    <div data-ls-module="progressBar" role="progressbar" aria-valuenow="80" class="ls-animated"></div>
+  </div>
+  <% code("html") do %><div data-ls-module="progressBar" role="progressbar" aria-valuenow="80" class="ls-animated"></div><% end %>
+
 </section>
