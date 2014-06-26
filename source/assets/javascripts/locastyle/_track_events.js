@@ -17,6 +17,7 @@ locastyle.trackEvents = (function() {
     findButtons(dom_scope);
     findForms(dom_scope);
     findSelects(dom_scope);
+    bindGuidedTour(dom_scope);
   }
 
   function findLinks(dom_scope){
@@ -120,6 +121,14 @@ locastyle.trackEvents = (function() {
     $(element).on("submit", function () {
       ga('send', 'event', options.category, options.action, options.label);
     })
+  }
+
+  function bindGuidedTour() {
+    $("body").on("click", ".hopscotch-bubble .hopscotch-nav-button", function() {
+      var category = $("body").data("controller") + "#" + $("body").data("action");
+      var currentStep = $(this).parents(".hopscotch-bubble").find(".hopscotch-bubble-number").text();
+      ga('send', 'event', category, 'go_to_tour_step[' + currentStep + ']', $(this).text());
+    });
   }
 
   return {
