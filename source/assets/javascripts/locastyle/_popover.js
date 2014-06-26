@@ -188,6 +188,15 @@ locastyle.popover = (function() {
 
   function destroyPopover() {
     $(defaults.popoverClass).remove();
+
+    // Fecha o popover se clicar fora dele
+    $('html').on('click.ls', function(event){
+      var element = event.toElement;
+      if(!$(element).parents().hasClass('ls-popover')){
+       $(defaults.popoverClass).remove();
+      }
+    })
+
   }
 
   return {
