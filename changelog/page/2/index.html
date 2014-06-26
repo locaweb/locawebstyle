@@ -44,6 +44,39 @@
 	</ul>
 
 	<article>
+		<h1><a href="/locawebstyle/changelog/2014/02/11/versao_2-0-1">Versão 2.0.1</a></h1>
+		<div class="infoPost">
+			<small>2014/02/11</small>
+		</div>
+		<!-- use article.summary(250) if you have Nokogiri available to show just
+		the first 250 characters -->
+		<p><strong>Adições</strong></p>
+
+<p>- Tabelas complexas, com ações excluir, editar, visualizar</p>
+
+<p>- Função javascript para formulários como texto</p>
+
+<p>- Função javascript para formulários desabilitados</p>
+
+<p>- Templates JST de botões, formulários e modais.</p>
+
+<p>- Testes Jasmine de Tabelas</p>
+
+<p>- Testes Jasmine de Formulários</p>
+
+<p>- Estilo de página de confirmação</p>
+
+<p><strong>Correções</strong></p>
+
+<p>- <a target="_blank" href="https://github.com/locaweb/locawebstyle/pull/628">#628</a>: Ajuste do select customizado no android.</p>
+
+<p>- <a target="_blank" href="https://github.com/locaweb/locawebstyle/pull/629">#629</a>: Ajuste de z-index no mobile.</p>
+
+<p>- <a target="_blank" href="https://github.com/locaweb/locawebstyle/pull/630">#630</a>: Alerta colado no menu em mobile.</p>
+
+	</article>
+	<hr>
+	<article>
 		<h1><a href="/locawebstyle/changelog/2014/02/10/versao_1-2-17">Versão 1.2.17</a></h1>
 		<div class="infoPost">
 			<small>2014/02/10</small>
@@ -460,57 +493,6 @@ Um exemplo clássico é quando você precisa transformar um menu em um selectbox
 
 	</article>
 	<hr>
-	<article>
-		<h1><a href="/locawebstyle/changelog/2013/04/12/versao_1-0-1">Versão 1.0.1</a></h1>
-		<div class="infoPost">
-			<small>2013/04/12</small>
-		</div>
-		<!-- use article.summary(250) if you have Nokogiri available to show just
-		the first 250 characters -->
-		<h2 id="resoluo-de-bugs-da-verso-10">Resolução de Bugs da versão 1.0</h2>
-
-<h5 id="famlia-de-font-de-botes-e-links-btn">Família de font de botões e links (.btn)</h5>
-
-<p>O botões estavam com 3 tipos de fonts diferentes. Fomos perceber isso apenas e agora. Foi arrumado e agora todos eles estão com a font definida no layout, que é Ubuntu.</p>
-
-<h5 id="popover">Popover</h5>
-
-<p>Faltava ativar a função do Popover no Javascript. Já inserimos essa função e agora está tudo ok.</p>
-
-<h5 id="bug-em-collapse">Bug em Collapse</h5>
-
-<p>Acontecia que quando fechávamos um collapse, ele retirava a classe .active de todos os outros, prejudicando o visual e o comportamento dos collapses disponíveis na mesma página.</p>
-
-<p>Coisa básica de escopo de DOM. Foi resolvido e agora cada um dos collapses funciona individualmente como deve ser.</p>
-
-<h5 id="botao-de-confirmar-sumiam-quando-estavam-em-modais">Botao de confirmar sumiam quando estavam em modais</h5>
-
-<p>Esse comportamento fazia parte de uma função de setup de modais que podiam conter slider. Como não vamos mais usar sliders dentro de modais, retiramos esse script.</p>
-
-<h5 id="inserir-cone-de-calendrio-em-elementos-datepicker">Inserir ícone de calendário em elementos datepicker</h5>
-
-<p>Faltava uma chamada de função no Javascript. Era só inserir via JS uma classe icon-calendar nos elementos que tem datepicker.</p>
-
-<h5 id="modal-com-efeito-fade">Modal com efeito fade</h5>
-
-<p>Retiramos do Javascript a função que inseria a classe .fade nas modais para que elas animassem por padrão. Agora, se você quiser que a modal anime quando ela for invocada, a classe .fade deve ser manualmente inserida no HTML.</p>
-
-<h2 id="assets-da-verso">Assets da versão</h2>
-
-<pre class="lang-html linenums prettyprint">&lt;link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/1.0.1/locastyle.css"&gt;
-&lt;script type="text/javascript" src="http://developer.locaweb.com.br/assets/1.0.1/locastyle.js"&gt;&lt;/script&gt;</pre>
-
-<h5 id="edge">Edge</h5>
-
-<pre class="lang-html linenums prettyprint">&lt;link rel="stylesheet" type="text/css" href="http://developer.locaweb.com.br/assets/edge/locastyle.css"&gt;
-&lt;script type="text/javascript" src="http://developer.locaweb.com.br/assets/edge/locastyle.js"&gt;&lt;/script&gt;</pre>
-
-<h5 id="verso-para-download">Versão para download</h5>
-
-<p><a href="http://developer.locaweb.com.br/assets/1.0.1.zip">Baixar ZIP v1.0.1</a></p>
-
-	</article>
-	<hr>
 
 	<ul class="pager">
 		
@@ -524,6 +506,8 @@ Um exemplo clássico é quando você precisa transformar um menu em um selectbox
 	<nav>
 		<h2>Recentes</h2>
 		<ul>
+			
+			<li><a href="/locawebstyle/changelog/2014/06/26/versao-2-0-7/">Versão 2.0.7</a></li>
 			
 			<li><a href="/locawebstyle/changelog/2014/06/09/versao_1-2-22/">Versão 1.2.22</a></li>
 			
@@ -542,8 +526,6 @@ Um exemplo clássico é quando você precisa transformar um menu em um selectbox
 			<li><a href="/locawebstyle/changelog/2014/03/10/versao_2-0-3/">Versão 2.0.3</a></li>
 			
 			<li><a href="/locawebstyle/changelog/2014/02/21/versao-2-0-2/">Versão 2.0.2</a></li>
-			
-			<li><a href="/locawebstyle/changelog/2014/02/11/versao_2-0-1/">Versão 2.0.1</a></li>
 			
 		</ul>
 	</nav>
