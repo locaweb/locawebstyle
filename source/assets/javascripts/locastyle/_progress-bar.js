@@ -1,53 +1,27 @@
 var locastyle = locastyle || {};
 
-locastyle.progress = (function() {
+locastyle.progressBar = (function() {
   'use strict';
 
-  // Default config
-  var config = {
-    classes: {
-      animate: 'ls-progress-animated'
-    }
-  }
-
   function init() {
-    $('.ls-progress').each(function(index, progressbar) {
-      var $progressbar = $(progressbar);
-      animate($progressbar);
-      percent($progressbar);
+    structureProgressBar();
+  }
+
+  function structureProgressBar() {
+    $("[data-ls-module='progressBar']").each(function (index, item){
+      var percentage = $(item).attr("aria-valuenow");
+      $(item).append("<span aria-valuenow='"+percentage+"%'>");
+      var $bar       = $(item).find('span');
+      setProgressBarValue($bar, percentage);
     });
   }
 
-  function animate($progressbar) {
-    if ($progressbar.hasClass(config.classes.animate)) {
-      var originalValue = $progressbar.prop('value');
-      var resetValue = 0;
-      $progressbar.prop('value', resetValue);
-      var animProgress = setInterval(function() {
-        $progressbar.prop('value', resetValue++);
-        if (resetValue >= originalValue) {
-          window.clearInterval(animProgress);
-        }
-      }, 400 / originalValue);
-      reAnimate($progressbar);
-    }
-  }
-
-  function reAnimate($progressbar) {
-    document.addEventListener('visibilitychange', function(event) {
-      animate($progressbar);
-    });
-  }
-
-  function percent($progressbar) {
-    if ($progressbar.hasClass('ls-progress-percent')) {
-      if ($progressbar[0].nodeName == 'PROGRESS') {
-      }
-    }
+  function setProgressBarValue(target, percentage) {
+    $(target).css("width", percentage+"%");
   }
 
   return {
-    init: init,
+    init: init
   }
 
 }());
