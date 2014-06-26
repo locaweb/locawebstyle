@@ -47,7 +47,7 @@ locastyle.form = (function() {
   }
 
   function textareaAutoresize (argument) {
-    $('textarea.ls-textarea-autoresize', '.ls-field').each(function (it, textarea) {
+    $('textarea.ls-textarea-autoresize', '.ls-field').each(function (index, textarea) {
       var $textarea = $(textarea);
       var height = $textarea.height();
       $textarea.keyup(function (e) {
@@ -83,9 +83,9 @@ locastyle.form = (function() {
   }
 
   function formDisable() {
-    $( config.selectors.disable ).each(function(ic, container){
+    $( config.selectors.disable ).each(function(indexContainer, container){
       var $container = $(container);
-      $container.find(':input').each(function(ie, field){
+      $container.find(':input').each(function(indexField, field){
         var $field = $(field);
         $field.attr('disabled', 'disabled');
         $field.data('original-value', $field.val() );
@@ -98,7 +98,7 @@ locastyle.form = (function() {
     var $button = $('[data-ls-toggle-fields]');
     $button.on('click', function (evt) {
       var $container = $($(this).data('ls-toggle-fields'));
-      $container.find(':input').each(function(ie, field){
+      $container.find(':input').each(function(indexField, field){
         var $field = $(field);
         $field.val($field.data('original-value'));
       });
@@ -106,8 +106,8 @@ locastyle.form = (function() {
   }
 
   function formText() {
-    $( config.selectors.text ).each(function(ic, container){
-      $(container).find(':input').each(function(ie, field){
+    $( config.selectors.text ).each(function(indexContainer, container){
+      $(container).find(':input').each(function(indexField, field){
         $(field).addClass('ls-form-text');
       });
     });
