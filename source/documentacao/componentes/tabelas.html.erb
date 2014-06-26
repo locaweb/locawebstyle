@@ -14,49 +14,58 @@ type: component
   <p>Fizemos uma classe customizada para fazer nosso estilo, essa classe é a <code>ls-table</code>. Basta inserir essa classe em uma tabela para deixá-la com o visual abaixo:</p>
 
   <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/table' %>
+    <%= partial 'documentacao/shared/table/table' %>
   </div>
-  <% code("html") do %><%= partial 'documentacao/shared/table' %><% end %>
+  <% code("html") do %><%= partial 'documentacao/shared/table/table' %><% end %>
 
-  <h2 class="doc-title-3">Tabela zebrada</h2>
-  <p>Se quiser que as linhas da tabela fiquem com o background colorido alternadamente, basta adicionar a classe <code>.ls-table-striped</code>.</p>
 
-  <table class="ls-table ls-table-striped">
+
+  <h2 class="doc-title-3">Classes adicionais</h2>
+  <p>Logo abaixo segue as classes que modificam diretamente a tabela. Logo após você pode ver o exemplo de cada uma dessas classes.</p>
+
+  <table class="ls-table">
     <thead>
       <tr>
-        <th>Título</th>
-        <th class="hidden-xs">Campanha</th>
-        <th>Status</th>
-        <th class="hidden-xs">Data de envio</th>
+        <th>Classe</th>
+        <th>Descrição</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a href="" title="">Mensagem Teste Locastyle</a></td>
-        <td class="hidden-xs">Campanha</td>
-        <td>Enviada</td>
-        <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+        <th>ls-table</th>
+        <td>Formatação padrão da classe. Sem essa classe, a tabela fica sem formatação, o que possibilita que você faça seu estilo.</td>
       </tr>
       <tr>
-        <td><a href="" title="">Mensagem Teste Locastyle</a></td>
-        <td class="hidden-xs">Campanha</td>
-        <td>Enviada</td>
-        <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+        <th>ls-xs-space, ls-sm-space, ls-md-space, ls-lg-space</th>
+        <td>Aumenta ou diminui o espaçamento entre linhas e colunas.</td>
       </tr>
       <tr>
-        <td><a href="" title="">Mensagem Teste Locastyle</a></td>
-        <td class="hidden-xs">Campanha</td>
-        <td>Enviada</td>
-        <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+        <th>ls-no-hover</th>
+        <td>Desabilita o hover nas linhas.</td>
       </tr>
       <tr>
-        <td><a href="" title="">Mensagem Teste Locastyle</a></td>
-        <td class="hidden-xs">Campanha</td>
-        <td>Enviada</td>
-        <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+        <th>ls-bg-header</th>
+        <td>Insere um background no header da tabela.</td>
+      </tr>
+      <tr>
+        <th>ls-table-striped</th>
+        <td>Deixa a tabela com visual listrado como zebra.</td>
+      </tr>
+      <tr>
+        <th>ls-table-bordered</th>
+        <td>Coloca uma borda em todos os lados da tabela.</td>
       </tr>
     </tbody>
   </table>
+
+
+  <h2 class="doc-title-3">Tabela zebrada</h2>
+  <p>Se quiser que as linhas da tabela fiquem com o background colorido alternadamente, basta adicionar a classe <code>.ls-table-striped</code>.</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/table/table-striped' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/table/table-striped' %><% end %>
 
   <h2 class="doc-title-3">Tamanho dos espaçamentos</h2>
   <p>Definimos 2 espaçamentos extra, além do espaçamento padrão. Para mudar o tamanho dos espaçamentos, basta inserir a classe <code>ls-md-space</code> ou <code>ls-sm-space</code>. Veja o resultado abaixo com dois exemplos:</p>
@@ -162,45 +171,6 @@ type: component
         <td class="hidden-xs">Campanha</td>
         <td>Enviada</td>
         <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-      </tr>
-    </tbody>
-  </table>
-
-
-  <h2 class="doc-title-3">Classes adicionais</h2>
-  <p>Logo abaixo segue as classes que modificam diretamente a tabela. Logo após você pode ver o exemplo de cada uma dessas classes.</p>
-
-  <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Classe</th>
-        <th>Descrição</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>ls-table</th>
-        <td>Formatação padrão da classe. Sem essa classe, a tabela fica sem formatação, o que possibilita que você faça seu estilo.</td>
-      </tr>
-      <tr>
-        <th>ls-xs-space, ls-sm-space, ls-md-space, ls-lg-space</th>
-        <td>Aumenta ou diminui o espaçamento entre linhas e colunas.</td>
-      </tr>
-      <tr>
-        <th>ls-no-hover</th>
-        <td>Desabilita o hover nas linhas.</td>
-      </tr>
-      <tr>
-        <th>ls-bg-header</th>
-        <td>Insere um background no header da tabela.</td>
-      </tr>
-      <tr>
-        <th>ls-table-striped</th>
-        <td>Deixa a tabela com visual listrado como zebra.</td>
-      </tr>
-      <tr>
-        <th>ls-table-bordered</th>
-        <td>Coloca uma borda em todos os lados da tabela.</td>
       </tr>
     </tbody>
   </table>
