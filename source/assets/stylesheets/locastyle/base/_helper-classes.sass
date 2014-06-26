@@ -365,7 +365,9 @@
   background-color: rgba($colorDanger, .2) !important
 
 
-@media (min-width: $screen-sm)
+@media (max-width: $screen-md)
+  .ls-float-none-sm
+    float: none !important
 
   .ls-float-right-sm
     float: right !important
@@ -373,24 +375,51 @@
   .ls-float-left-sm
     float: left !important
 
-  .ls-float-none-sm
-    float: none !important
+  .ls-clear-both-sm
+    clear: both !important
+
+  .ls-clear-right-sm
+    clear: right !important
+
+  .ls-clear-left-sm
+    clear: left !important
 
   .ls-txt-right-sm
     text-align: right !important
+
+  .ls-txt-left-sm
+    text-align: left !important
 
   .ls-btn-block-sm
     display: inline-block !important
     width: auto !important
 
-  .ls-txt-right-sm
-    text-align: left !important
-
 @media (max-width: $screen-sm)
   .ls-float-none-xs
     float: none !important
 
-  .ls-btn-block-sm
+  .ls-float-right-xs
+    float: right !important
+
+  .ls-float-left-xs
+    float: left !important
+
+  .ls-clear-both-sm
+    clear: both !important
+
+  .ls-clear-right-sm
+    clear: right !important
+
+  .ls-clear-left-sm
+    clear: left !important
+
+  .ls-txt-right-xs
+    text-align: right !important
+
+  .ls-txt-left-xs
+    text-align: left !important
+
+  .ls-btn-block-xs
     display: block !important
     text-align: center !important
     margin-bottom: 10px
