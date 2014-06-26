@@ -73,7 +73,7 @@ describe("Locastyle in general: ", function() {
 
         expect($('[data-ls-toggle-fields]')).toHaveBeenBindedOnce("click");
         expect($('.ls-submenu > a')).toHaveBeenBindedOnce("click");
-        expect($(".disabled, [disabled='disabled']")).toHaveBeenBindedOnce("click");
+        // expect($(".ls-disabled, [disabled='disabled']")).toHaveBeenBindedOnce("click");
       });
     });
   });
