@@ -12,7 +12,7 @@ description: Opções para desabilitar campos ou mostrar em forma de texto
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/form-disable.erb' %>
   </div>
-  <% code("html") do %> 
+  <% code("html") do %>
 <%= partial 'documentacao/shared/form/form-disable.erb' %>
   <% end %>
 
@@ -24,7 +24,7 @@ description: Opções para desabilitar campos ou mostrar em forma de texto
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/form-as-text.erb' %>
   </div>
-  <% code("html") do %> 
+  <% code("html") do %>
 <%= partial 'documentacao/shared/form/form-as-text.erb' %>
   <% end %>
 
@@ -32,7 +32,7 @@ description: Opções para desabilitar campos ou mostrar em forma de texto
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/form-as-text-disabled.erb' %>
   </div>
-  <% code("html") do %> 
+  <% code("html") do %>
 <%= partial 'documentacao/shared/form/form-as-text-disabled.erb' %>
   <% end %>
 
@@ -45,14 +45,14 @@ description: Opções para desabilitar campos ou mostrar em forma de texto
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/form/fields-toggle.erb' %>
   </div>
-  <% code("html") do %> 
+  <% code("html") do %>
 <%= partial 'documentacao/shared/form/fields-toggle.erb' %>
   <% end %>
 
   <p>Eu tenho um formulário normal, com as classes <code>ls-form-disable</code> no fieldset que envolve os campos que quero desabilitar. Esse fieldset (que poderia ser um DIV), tem um ID para sua identificação. Até aqui tranquilo.</p>
 
   <p>Agora, depois do Fieldset, existem 3 botões, vou explicar um por um: um botão para EDITAR OS CAMPOS, que é onde o usuário vai clicar para que os campos fiquem editáveis. Os outros dois botões, de SALVAR e CANCELAR estão escondidos. Veja o código do botão EDITAR:</p>
-  <% code("html") do %> 
+  <% code("html") do %>
     <button class="ls-btn-primary hidden-elements" data-toggle-class="ls-display-none" data-target=".hidden-elements" data-ls-toggle-fields="#fields-disabled">Editar campos</button>
   <% end %>
 
@@ -64,9 +64,9 @@ description: Opções para desabilitar campos ou mostrar em forma de texto
 
   <p>Os botões de CANCELAR e SALVAR são simples botões, com as classes que serão manipuladas pelo botão EDITAR do nosso exemplo. Veja o código abaixo:</p>
 
-  <% code("html") do %> 
+  <% code("html") do %>
     <button class="ls-btn-primary ls-display-none hidden-elements" type="submit">Salvar</button>
-    <button data-toggle-class="ls-display-none"  data-target=".hidden-elements" data-ls-toggle-fields="#fields-disabled" class="ls-btn-danger ls-display-none hidden-elements" type="submit">Cancelar</button>
+    <button data-toggle-class="ls-display-none"  data-target=".hidden-elements" data-ls-toggle-fields="#fields-disabled" class="ls-btn-danger ls-display-none hidden-elements" type="button">Cancelar</button>
   <% end %>
 
 </section>
