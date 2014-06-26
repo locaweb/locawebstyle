@@ -276,5 +276,11 @@
     .hopscotch-actions button.hopscotch-nav-button.next
       background-color: $color3
 
+    //
+    // Barra de progresso
+    //
+    div[data-ls-module="progressBar"] span
+      background-color: $color3
+
 @each $theme-name, $colors in $themes-colors
   @include theme-color($theme-name, $colors)
