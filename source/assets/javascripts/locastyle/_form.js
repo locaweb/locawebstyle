@@ -84,8 +84,23 @@ locastyle.form = (function() {
 
   function formDisable() {
     $( config.selectors.disable ).each(function(ic, container){
-      $(container).find(':input').each(function(ie, field){
-        $(field).attr('disabled', 'disabled');
+      var $container = $(container);
+      $container.find(':input').each(function(ie, field){
+        var $field = $(field);
+        $field.attr('disabled', 'disabled');
+        $field.data('original-value', $field.val() );
+      });
+      setOriginalValue();
+    });
+  }
+
+  function setOriginalValue() {
+    var $button = $('[data-ls-toggle-fields]');
+    $button.on('click', function (evt) {
+      var $container = $($(this).data('ls-toggle-fields'));
+      $container.find(':input').each(function(ie, field){
+        var $field = $(field);
+        $field.val($field.data('original-value'));
       });
     });
   }
