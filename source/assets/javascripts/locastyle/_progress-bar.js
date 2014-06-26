@@ -8,10 +8,10 @@ locastyle.progressBar = (function() {
   }
 
   function structureProgressBar() {
-    $("[data-ls-module='progressBar']").each(function (index, item){
-      var percentage = $(item).attr("aria-valuenow");
-      $(item).append("<span aria-valuenow='"+percentage+"%'>");
-      var $bar       = $(item).find('span');
+    $("[data-ls-module='progressBar']").each(function (index, element){
+      var percentage = $(element).attr("aria-valuenow");
+      $(element).append("<span aria-valuenow='"+percentage+"%'>");
+        var $bar       = $(element).find('span');
       setProgressBarValue($bar, percentage);
     });
   }
