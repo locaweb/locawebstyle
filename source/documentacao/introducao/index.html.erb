@@ -15,19 +15,19 @@ description: Saiba detalhes de como ajudar e como usar o Locaweb Style
     <div class="col-md-4">
       <h4 class="doc-title-5">CSS</h4>
       <p>Nessa parte você aprende mais sobre o GRID, Ícones e nossas Classes Funcionais.</p>
-      <%= link_to 'CSS','css/grid', :class => 'ls-btn-primary' %>
+      <%= link_to 'CSS', base_url+'css/grid', :class => 'ls-btn-primary' %>
     </div>
 
     <div class="col-md-4">
       <h4 class="doc-title-5">Componentes</h4>
       <p>Conheça todos os componentes que fazem parte do Locaweb Style.</p>
-      <%= link_to 'Ir para Componentes','componentes/abas', :class => 'ls-btn-primary' %>
+      <%= link_to 'Ir para Componentes', base_url+'componentes/', :class => 'ls-btn-primary' %>
     </div>
 
     <div class="col-md-4">
       <h4 class="doc-title-5">Formulários</h4>
       <p>Saiba como manipular os campos e grupos de formulários com o Locaweb Style.</p>
-      <%= link_to 'Formulários','formularios/', :class => 'ls-btn-primary' %>
+      <%= link_to 'Formulários', base_url+'formularios/', :class => 'ls-btn-primary' %>
     </div>
 
   </div>
@@ -35,7 +35,7 @@ description: Saiba detalhes de como ajudar e como usar o Locaweb Style
   <h2 class="doc-title-3">Use pelo nosso servidor</h2>
   <p>Nós disponibilizamos as versões do Locaweb Style em nosso servidor de alta disponibilidade para qualquer desenvolvedor. Basta usar os links abaixo em seu projeto. A única de depêndencia é a <strong><a href="http://jquery.com/">jQuery</a></strong>.</p>
 
-  <% code("html") do %> 
+  <% code("html") do %>
 <!-- Coloque o CSS no seu HEAD -->
 <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/<%= settings.stable %>/stylesheets/locastyle.css">
 
@@ -45,7 +45,7 @@ description: Saiba detalhes de como ajudar e como usar o Locaweb Style
 
   <p>Se você quiser usar a versão mais atual que existe, use os assets em <strong>edge</strong>. Veja abaixo um exemplo:</p>
 
-  <% code("html") do %> 
+  <% code("html") do %>
 <!-- Coloque o CSS no seu HEAD -->
 <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/edge/stylesheets/locastyle.css">
 
