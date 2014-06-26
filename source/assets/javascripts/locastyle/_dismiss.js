@@ -15,6 +15,7 @@ locastyle.dismiss = (function() {
   function bindClickOnTriggers() {
     $('[data-ls-module=dismiss]').on('click.ls', function() {
       checkTarget(this);
+      locastyle.topbarCurtain.updateStatusCounter()
     });
   }
 

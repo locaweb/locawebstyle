@@ -13,7 +13,7 @@ describe("Popover: ", function() {
 
     it("Should create a popover on click event", function() {
       // Added as pending because the tests broke while I was testing other functionality
-      $('[data-ls-module="popover"]').trigger("click");
+      $('#popoverclick[data-ls-module="popover"]').trigger("click");
       expect($(".ls-popover")).toBeVisible();
     });
 
