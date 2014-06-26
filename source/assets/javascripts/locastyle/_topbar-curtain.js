@@ -3,22 +3,41 @@ var locastyle = locastyle || {};
 locastyle.topbarCurtain = (function() {
   'use strict';
 
+  var config = {
+    module: '[data-ls-module="topbarCurtain"]'
+  }
+
   function init() {
     unbind();
     positionTarget();
     bindCloseCurtains();
     bindPreventClosing();
     repositionOnResize();
+    updateStatusCounter();
   }
 
   function unbind() {
-    $("[data-ls-module='topbarCurtain']").off("click.ls");
+    $(config.module).off("click.ls");
     $(".ls-notification-list").off("click.ls");
     $("body").off("click.lsTopCurtain");
   }
 
+  function updateStatusCounter(){
+    $(config.module).each(function(index, element){
+      var elem = $(element).data('target');
+      var _counter = $(elem+ ' .ls-dismissable:not(.dismissed)').length;
+      if(_counter !== 0) {
+        $('[data-target="'+elem+'"]').attr('data-counter', _counter)
+      }
+      if(_counter === 0){
+        $('[data-target="'+elem+'"]').removeAttr('data-counter')
+        $(elem+ ' p').removeClass('ls-display-none');
+      }
+    });
+  }
+
   function positionTarget() {
-    $("[data-ls-module='topbarCurtain']").each(function (index, item){
+    $(config.module).each(function (index, item){
       var leftDistance = $(item).position().left;
       var iconWidth = (22/ 2);
       var curtainWidth = $($(item).data("target")).width() / 2;
@@ -86,7 +105,8 @@ locastyle.topbarCurtain = (function() {
   return {
     init: init,
     hideCurtains: hideCurtains,
-    unbind: unbind
+    unbind: unbind,
+    updateStatusCounter: updateStatusCounter
   }
 
 }());
