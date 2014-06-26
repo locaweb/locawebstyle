@@ -1,11 +1,60 @@
 @media print
   body
-    font-family: arial
 
-  .header,
-  .nav-content,
-  .breadcrumb,
-  .footer,
-  .sidebar,
-  .actions-toolbar
-    display: none
+    #lwbar-header,
+    .header,
+    .nav-content,
+    .breadcrumb,
+    .footer,
+    .sidebar,
+      display: none
+
+    .main
+      .container
+
+        .tab-content
+          border: none
+
+          .box-info
+            .box-info-grid.row-fluid
+              .col-md-4
+                width: 33.3%
+                display: inline-block
+
+        table
+          width: 100%
+
+          thead
+            border-top: 1px solid #ddd
+
+            th:first-child
+              border-left: none
+
+          tbody
+
+            tr
+              td
+                background: none !important
+
+          a[href]:after
+            content: ""
+
+        .well
+          padding: 0
+
+          hr
+            display: none
+
+        .pagination-filter
+          padding: 10px
+
+          a[href]:after
+            content: ""
+
+        .form-inline
+          margin: 10px
+
+          .form-group[class*=col-md-offset-]
+            margin: 0
+            width: 60%
+            display: inline-block
