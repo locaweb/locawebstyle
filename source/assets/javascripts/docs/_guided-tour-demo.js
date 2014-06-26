@@ -81,7 +81,6 @@ tourGuiado = (function() {
         placement: 'left',
         arrowOffset: 'center',
         xOffset: 40,
-        showNextButton: false,
         onPrev: function(){
           $('.ls-alerts-list > a:eq(0)').click();
         },
@@ -100,6 +99,9 @@ tourGuiado = (function() {
         onPrev: function(){
           $('.ls-user-account > a:eq(0)').click();
           $('.ls-alerts-list > a:eq(0)').click();
+        },
+        onEnd: function(){
+          $('.ls-user-account > a:eq(0)').click();
         }
       }
 
