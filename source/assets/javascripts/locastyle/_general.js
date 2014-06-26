@@ -100,8 +100,13 @@ locastyle.general = (function() {
   }
 
   function _elementDisabled() {
-    $(".disabled, [disabled='disabled']").on('click.ls', function(evt) {
-      evt.preventDefault();
+    $(".ls-disabled, [disabled='disabled']").on('click', function(evt) {
+      if( $(this).hasClass('ls-disabled') || $(this).attr('disabled') === 'disabled' ){
+        evt.stopImmediatePropagation();
+        evt.preventDefault();
+        evt.stopPropagation();
+        return false
+      }
     });
   }
 
