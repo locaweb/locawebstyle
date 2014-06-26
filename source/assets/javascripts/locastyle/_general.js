@@ -135,7 +135,7 @@ locastyle.general = (function() {
   function unbind () {
     $('[data-ls-toggle-fields]').off('click.ls');
     $('.ls-submenu > a').off('click.ls');
-    $(".disabled, [disabled='disabled']").off('click.ls');
+    $(".ls-disabled, [disabled='disabled']").off('click');
   }
 
   return {
