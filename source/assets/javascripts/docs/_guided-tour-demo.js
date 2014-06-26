@@ -69,42 +69,8 @@ tourGuiado = (function() {
         content: 'Este é o footer, que tem um título, links de apoio e textos informativos.',
         placement: 'top',
         arrowOffset: 'center',
-        yOffset: 30,
-        onNext: function(){
-          $('.ls-alerts-list > a:eq(0)').click();
-        }
-      },
-      {
-        target: 'ls-notification-curtain',
-        title: 'Notificação',
-        content: 'Aqui será exibida todas as notificações do Painel',
-        placement: 'left',
-        arrowOffset: 'center',
-        xOffset: 40,
-        onPrev: function(){
-          $('.ls-alerts-list > a:eq(0)').click();
-        },
-        onNext: function(){
-          $('.ls-user-account > a:eq(0)').click();
-        }
-      },
-      {
-        target: '.ls-dropdown-nav',
-        title: 'Menu de Apoio',
-        content: 'Este menu contém links referente ao usuário',
-        placement: 'left',
-        arrowOffset: 'center',
-        xOffset: 40,
-        showNextButton: false,
-        onPrev: function(){
-          $('.ls-user-account > a:eq(0)').click();
-          $('.ls-alerts-list > a:eq(0)').click();
-        },
-        onEnd: function(){
-          $('.ls-user-account > a:eq(0)').click();
-        }
+        yOffset: 30
       }
-
     ]
   };
 
