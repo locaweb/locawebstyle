@@ -55,12 +55,13 @@ locastyle.breakpoints = (function() {
   //
   // Alterando a classe na tag html quando é redimensionamos a janela.
   //
-  function changeClassBreakpoint () {
+  function changeClassBreakpoint() {
 
     var changeClass;
 
-    window.onresize = function() {
+    $(window).resize(function() {
       clearTimeout(changeClass);
+
       changeClass = setTimeout(function() {
 
         var breakpointActive = $('html').attr('class').replace(/(^|\s)ls-screen-\S+/g, '');
@@ -72,7 +73,8 @@ locastyle.breakpoints = (function() {
         // dispara evento para informar outros modulos que o breakpoint foi atualizado
         $.event.trigger("breakpoint-updated");
       }, 300);
-    };
+
+    });
   }
 
   return {
