@@ -61,6 +61,13 @@
     a[class*="btn"]
       margin: 20px 0
 
+.ls-no-notification-message
+  @extend .ls-txt-center
+  @extend .ls-lg-space
+  @extend .ls-display-none
+
+  &.active
+    @extend .ls-display-block
 
 @media (min-width: $screen-sm)
   .ls-notification
