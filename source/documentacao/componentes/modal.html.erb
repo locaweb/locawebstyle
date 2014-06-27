@@ -13,8 +13,7 @@ type: component
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/modal' %>
   </div>
-  <% code("html") do %> 
-
+  <% code("html") do %>
 <button data-ls-module="modal" data-target="#myAwesomeModal" class="ls-btn-primary">Ative a modal</button>
 
 <div class="ls-modal fade" id="myAwesomeModal">
@@ -37,7 +36,6 @@ type: component
     </div>
   </div>
 </div><!-- /.modal -->
-
   <% end %>
 
   <p>Você pode chamar nossa modal padrão. Nesse caso, o próprio elemento que aciona a modal, irá montar o código automaticamente a partir do nosso template.</p>
@@ -45,7 +43,7 @@ type: component
   <div class="ls-box-demo">
     <button data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="<h2>Título feito dentro do data-content</h2><p>Conteúdo feito dentro do data-content</p>" data-title="Este título é o atributo data-title" data-class="ls-btn-danger" data-save="Salvar" data-close="Fechar" class="ls-btn-primary"> Ative a modal</button>
   </div>
-  <% code("html") do %> 
+  <% code("html") do %>
 <button data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="<h2>Título feito dentro do data-content</h2><p>Conteúdo feito dentro do data-content</p>" data-title="Este título é o atributo data-title" data-class="ls-btn-danger" data-save="Salvar" data-close="Fechar" class="ls-btn-primary"> Modal sem target </button>
   <% end %>
   <table class="ls-table">
