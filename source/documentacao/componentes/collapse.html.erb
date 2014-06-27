@@ -55,16 +55,12 @@ type: component
   <div class="ls-box-demo">
       <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.paragraphs 2), startOpen: false  }) %>
   </div>
-  <% code("html") do %>
-<%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.words 2), startOpen: false  }) %>
-  <% end %>
+  <% code("html") do %><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.words 2), startOpen: false  }) %><% end %>
 
   <div class="ls-box-demo">
     <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.paragraphs 2), startOpen: false, alwaysOpen: true  }) %>
   </div>
-  <% code("html") do %>
-<%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.words 2), startOpen: false, alwaysOpen: true  }) %>
-  <% end %>
+  <% code("html") do %><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.words 2), startOpen: false, alwaysOpen: true  }) %><% end %>
 
   <h2 class="doc-title-3">Accordeon</h2>
   <p><i>Accordeon</i> é um conjunto de <i>collapses</i> agrupados, onde apenas um deles pernace aberto</p>
