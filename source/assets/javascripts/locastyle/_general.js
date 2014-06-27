@@ -100,7 +100,7 @@ locastyle.general = (function() {
   }
 
   function _elementDisabled() {
-    $(".ls-disabled, [disabled='disabled'], a, button").on('click', function(evt) {
+    $(".ls-disabled, [disabled='disabled']").on('click', function(evt) {
       if( $(this).hasClass('ls-disabled') || $(this).attr('disabled') === 'disabled' ){
         evt.stopImmediatePropagation();
         evt.preventDefault();
