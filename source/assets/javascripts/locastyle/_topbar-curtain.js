@@ -27,11 +27,11 @@ locastyle.topbarCurtain = (function() {
       var elem = $(element).data('target');
       var _counter = $(elem+ ' .ls-dismissable:not(.dismissed)').length;
       if(_counter !== 0) {
-        $('[data-target="'+elem+'"]').attr('data-counter', _counter)
+        $('[data-target="'+elem+'"]').attr('data-counter', _counter);
       }
       if(_counter === 0){
-        $('[data-target="'+elem+'"]').removeAttr('data-counter')
-        $(elem+ ' p').removeClass('ls-display-none');
+        $('[data-target="'+elem+'"]').removeAttr('data-counter');
+        $(elem + ' .ls-no-notification-message').addClass('active');
       }
     });
   }
