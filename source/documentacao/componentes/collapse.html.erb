@@ -71,6 +71,7 @@ type: component
       <%= partial('documentacao/shared/collapse', :locals => { :quant => 5, :header => "Título", content: (lorem.paragraphs 1)  }) %>
     </div>
   </div>
+  <% code("html") do %><%= partial('documentacao/shared/collapse', :locals => { :quant => 5, :header => "Título", content: (lorem.paragraphs 1)  }) %><% end %>
 
   <p>Os <i>collapses</i> agrupados em um <i>accordeon</i> aceitam as mesmas configurações que um <i>collapse</i> normal.</p>
 
@@ -87,9 +88,4 @@ type: component
   <p>Para abrir/fechar um <i>collapse</i> usando javascript, use:</p>
 
   <% code("javascript") do %>locastyle.collapse.toggle('#collapse1')<% end %>
-
-  <p>Exemplo</p>
-  <div class="ls-box-demo">
-    <button class="ls-btn-primary" type="button" onclick="javascript:locastyle.collapse.toggle('#collapse1')">Abre/Fecha o <i>collapse</i> <b>#collapse1</b> com <i>javascript</i></button>
-  </div>
 </section>
