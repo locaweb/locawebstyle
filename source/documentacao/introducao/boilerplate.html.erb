@@ -1,0 +1,13 @@
+---
+title: Boilerplate
+description: Comece seu projeto por aqui
+type: intro
+---
+<%= partial 'partials/doc-menu-intro'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+  <a href="<%= base_url+"/documentacao/exemplos/boilerplate" %>" target="_blank" class="ls-btn" >veja o exemplo</a>
+  <% code("html") do %><%= partial 'documentacao/exemplos/boilerplate' %><% end %>
+</section>
