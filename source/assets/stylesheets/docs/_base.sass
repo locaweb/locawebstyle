@@ -14,7 +14,8 @@ body
 html, body
   background-color: #fff !important
   overflow: visible !important
-  height: auto !important
+  height: 100% !important
+  min-height: 100%
 
 body
   overflow: auto !important
@@ -35,6 +36,8 @@ h1,h2,h3,h4,h5,h6,p
 
 .doc-content
   padding: 60px 0
+  min-height: calc(100% - 392px)
+  height: calc(100% - 392px)
 
   &:after
     content: ""
