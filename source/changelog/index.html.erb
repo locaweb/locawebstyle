@@ -1,0 +1,40 @@
+---
+title: Changelog
+description: Acompanhe o changelog
+layout: changelog
+---
+<%= partial 'partials/doc-menu-changelog'%>
+<section class="col-md-9">
+  <%= partial 'partials/doc-intro-content' %>
+  <% if paginate %>
+    <ul class="pager">
+      <p class="page_counter">Página <%= page_number %> de <%= num_pages %></p>
+
+      <% if prev_page %>
+        <li class="previous"><a href="<%= base_url + prev_page.url %>">< Página anterior</a></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <% page_articles.each_with_index do |article, i| %>
+    <article>
+      <h2 class="doc-title-4">
+        <%= article.title %>
+        <%= article.date.strftime('%d/%m/%Y') %>
+      </h2>
+      <%= article.body %>
+      <a href="<%= "#{base_url}/changelog/#{article.date.strftime('%Y/%m/%d')}/#{article.slug}" %>" class="ls-btn">
+        ver mais
+      </a>
+    </article>
+    <hr>
+  <% end %>
+
+  <% if paginate %>
+    <ul class="pager">
+      <% if next_page %>
+        <li class="next"><a href="<%= base_url + next_page.url %>">Próxima página ></a></li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>

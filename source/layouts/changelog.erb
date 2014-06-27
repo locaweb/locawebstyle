@@ -1,0 +1,23 @@
+<%= partial 'partials/doc-header' %>
+
+<header class="doc-header container">
+  <%= partial 'partials/doc-menu'%>
+  <h1 class="doc-logo"><a href="/"><strong>Locaweb</strong> Style</a></h1>
+</header>
+
+<div class="doc-title-intro">
+  <div class="container">
+    <h1>Documentação</h1>
+    <p>Saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
+  </div>
+</div>
+
+<%= partial 'partials/doc-menu-top' %>
+
+<div class="doc-content container">
+  <div class="row">
+    <%= yield %>
+  </div>
+</div>
+
+<%= partial 'partials/_doc-footer' %>
