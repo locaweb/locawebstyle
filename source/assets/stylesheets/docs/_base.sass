@@ -125,6 +125,8 @@ p code
 
       span:before
         -webkit-transform: perspective( 400px ) rotateY( 180deg )
+        -moz-transform: perspective( 400px ) rotateY( 180deg )
+        -ms-transform: perspective( 400px ) rotateY( 180deg )
         transform: perspective( 400px ) rotateY( 180deg )
 
     span:before
@@ -132,8 +134,13 @@ p code
       font-size: 30px
       margin-bottom: 5px
       -webkit-transform: perspective( 400px ) rotateY( 0 )
+      -moz-transform: perspective( 400px ) rotateY( 0 )
+      -ms-transform: perspective( 400px ) rotateY( 0 )
       transform: perspective( 400px ) rotateY( 0 )
       -webkit-transition: all linear .25s
+      -moz-transition: all linear .25s
+      -ms-transition: all linear .25s
+      transition: all linear .25s
 
 //
 // INTRO TOPBAR
