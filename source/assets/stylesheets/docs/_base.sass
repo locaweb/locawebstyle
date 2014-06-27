@@ -14,7 +14,8 @@ body
 html, body
   background-color: #fff !important
   overflow: visible !important
-  height: auto !important
+  height: 100% !important
+  min-height: 100%
 
 body
   overflow: auto !important
@@ -35,6 +36,8 @@ h1,h2,h3,h4,h5,h6,p
 
 .doc-content
   padding: 60px 0
+  min-height: calc(100% - 392px)
+  height: calc(100% - 392px)
 
   &:after
     content: ""
@@ -122,6 +125,8 @@ p code
 
       span:before
         -webkit-transform: perspective( 400px ) rotateY( 180deg )
+        -moz-transform: perspective( 400px ) rotateY( 180deg )
+        -ms-transform: perspective( 400px ) rotateY( 180deg )
         transform: perspective( 400px ) rotateY( 180deg )
 
     span:before
@@ -129,8 +134,13 @@ p code
       font-size: 30px
       margin-bottom: 5px
       -webkit-transform: perspective( 400px ) rotateY( 0 )
+      -moz-transform: perspective( 400px ) rotateY( 0 )
+      -ms-transform: perspective( 400px ) rotateY( 0 )
       transform: perspective( 400px ) rotateY( 0 )
       -webkit-transition: all linear .25s
+      -moz-transition: all linear .25s
+      -ms-transition: all linear .25s
+      transition: all linear .25s
 
 //
 // INTRO TOPBAR
@@ -235,6 +245,7 @@ p code
   border: 1px solid #e5e5e5
   padding: 15px 0
   background: #fff
+  margin-bottom: 20px
 
   ul
     margin: 0
@@ -247,10 +258,10 @@ p code
       position: relative
       display: block
       padding: 10px 0 10px 20px
+      margin-bottom: 1px
       font-size: .94rem
       color: #555
       border-left: 5px solid #fff
-
 
     &.active,
     &:hover,
@@ -501,6 +512,7 @@ p code
       border-radius: 4px
 
       img
+        border-radius: 4px
         +transition (all .35s ease)
 
     &:hover,
