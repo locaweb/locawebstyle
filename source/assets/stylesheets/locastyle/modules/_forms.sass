@@ -107,16 +107,6 @@ textarea
   input
     border-color: $colorDanger
 
-.ls-actions-btn
-  padding: 15px 0
-  margin: 30px 15px
-  border-top: 1px solid rgba(0, 0, 0, .2)
-  white-space: nowrap
-
-  [class*="ls-btn"]
-    margin: 0
-    margin-right: 10px
-
 //
 // Form when is inline
 //
@@ -132,7 +122,28 @@ textarea
     vertical-align: top
     margin-top: 21px
 
-  .ls-actions-btn
+//
+// Container that envolve the buttons in forms
+//
+.ls-actions-btn
+  padding: 15px 0
+  margin: 30px 15px
+  border-top: 1px solid rgba(0, 0, 0, .2)
+  white-space: nowrap
+
+  [class*="ls-btn"]
+    margin: 0
+    margin-right: 10px
+
+  // when in inline forms
+  .ls-form-inline &
+    padding: 0
+    margin: 20px 0 0
+    border: none
+    display: inline-block
+
+  // when in horizontal forms
+  .ls-form-horizontal &
     @extend .ls-clearfix
     padding: 0
     padding-top: 21px
@@ -142,6 +153,8 @@ textarea
 
     [class*="ls-btn"]
       margin-top: 0
+
+
 
 //
 // Label and input side by side
@@ -302,4 +315,8 @@ input + .ls-label-prefix
   .ls-form-inline
 
     .ls-fields
+      margin-bottom: 0
+
+    .ls-actions-btn
+      margin-top: 0
       margin-bottom: 0
