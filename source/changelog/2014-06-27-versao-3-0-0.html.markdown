@@ -1,0 +1,34 @@
+---
+title: Lançamos a versão 3.0.0
+date: 2014-06-27 13:40 UTC
+tags:
+layout: changelog-single
+---
+
+<ul class="ls-no-list-style ls-no-margin-left">
+  <li>
+    <div class="ls-txt-right ls-clear-both col-md-2">
+      <label class="ls-tag-success">NEW</label>
+    </div> &ndash; Novidade
+  </li>
+  <li>
+    <div class="ls-txt-right ls-clear-both col-md-2">
+      <label class="ls-tag-danger">BUG</label>
+    </div> &ndash; <a href="" class="commit-url">156161</a> Bug
+  </li>
+  <li>
+    <div class="ls-txt-right ls-clear-both col-md-2">
+      <label class="ls-tag-info">FIX</label>
+    </div> &ndash; <a href="" class="commit-url">156161</a> Melhorias
+  </li>
+  <li>
+    <div class="ls-txt-right ls-clear-both col-md-2">
+      <label class="ls-tag-warning">DEPRECATED</label>
+    </div> &ndash; Antigo
+  </li>
+  <li>
+    <div class="ls-txt-right ls-clear-both col-md-2">
+      <label class="ls-tag">REMOVED</label>
+    </div> &ndash; Removido
+  </li>
+</ul>

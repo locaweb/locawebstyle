@@ -80,7 +80,12 @@ activate :i18n
 
 
 activate :blog do |blog|
-  # set options on blog
+    blog.prefix = "changelog"
+    blog.permalink = ":year/:month/:day/:title"
+    blog.sources = "/:year-:month-:day-:title.html"
+    blog.paginate = true
+    blog.per_page = 5
+    blog.page_link = "page/:num"
 end
 
 # Build-specific configuration

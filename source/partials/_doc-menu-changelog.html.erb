@@ -1,0 +1,10 @@
+<aside class="col-md-3">
+  <nav class="doc-sidebar-menu">
+    <ul>
+      <li> <%= menu_tag("/changelog/", "Changelog") %> </li>
+      <% blog.articles[0...10].each do |article| %>
+        <li><%= menu_tag("#{article.url}", article.title) %></li>
+      <% end %>
+    </ul>
+  </nav>
+</aside>
