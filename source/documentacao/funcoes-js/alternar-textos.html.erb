@@ -35,6 +35,9 @@ type: funcoesjs
   <div class="ls-box-demo">
     <button class="ls-btn" data-toggle-text="Clique para voltar ao texto original">Clique para alterar o texto</button>
   </div>
+  <% code("html") do %>
+<button class="ls-btn" data-toggle-text="Clique para voltar ao texto original">Clique para alterar o texto</button>
+  <% end %>
 
   <p>Se você quiser alternar o texto de outro elemento, siga o exemplo abaixo:</p>
 
@@ -46,5 +49,11 @@ type: funcoesjs
       Uma mensagem bonita para caramba!
     </div>
   </div>
+  <% code("html") do %>
+<button class="ls-btn-primary" data-toggle-text="Clique para voltar ao texto original" data-target-text="#lsBox">Clique para alterar o texto do botão ao lado</button>
+<div id="lsBox" class="ls-box ls-box-gray">
+  Uma mensagem bonita para caramba!
+</div>
+  <% end %>
 
 </section>
