@@ -90,16 +90,17 @@ locastyle.topbarCurtain = (function() {
     $(".ls-notification-list").removeClass("ls-active");
   }
 
-  function repositionOnResize (argument) {
-    window.onresize = function() {
+  function repositionOnResize() {
+    var repositionTarget;
+    $(window).resize(function() {
       clearTimeout(repositionTarget);
-      var repositionTarget = setTimeout(function() {
+      repositionTarget = setTimeout(function() {
         unbind();
         positionTarget();
         bindCloseCurtains();
         bindPreventClosing();
       }, 300);
-    };
+    });
   }
 
   return {
