@@ -99,7 +99,6 @@ locastyle.topbarCurtain = (function() {
         positionTarget();
         bindCloseCurtains();
         bindPreventClosing();
-        $.event.trigger("breakpoint-updated");
       }, 300);
     });
   }
