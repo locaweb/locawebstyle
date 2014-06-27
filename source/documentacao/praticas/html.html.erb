@@ -11,7 +11,7 @@ description: Escreva HTML de maneira organizada, semântica e escalável
 
   <h2 class="doc-title-3">Estrutura básica para iniciar um HTML</h2>
   <p>Utilize esse código para iniciar seu HTML.</p>
-<code class="language-html">
+  <% code("html") do %>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -22,7 +22,7 @@ description: Escreva HTML de maneira organizada, semântica e escalável
   ...
   </body>
 </html>
-</code>
+  <% end %>
 
   <h2 class="doc-title-3">Sintaxe do HTML</h2>
   <ul>
@@ -78,15 +78,15 @@ description: Escreva HTML de maneira organizada, semântica e escalável
 
   <h2 class="doc-title-3">Aspas</h2>
   <p>Utilizamos ASPAS DUPLAS.</p>
-  <code class="language-html">
+  <% code("html") do %>
 <div class="classe"></div>
 <a href="http://..."></a>
-  </code>
+  <% end %>
 
   <h2 class="doc-title-3">Encoding</h2>
   <p>Eu sei que eu não preciso dizer, mas quem sabe, não é?</p>
   <p>O encoding utilizado é o padrão da web inteira: <code>UTF-8.</code></p>
-  <code class="language-html">
+  <% code("html") do %>
 <meta charset="utf-8">
-  </code>
+  <% end %>
 </section>

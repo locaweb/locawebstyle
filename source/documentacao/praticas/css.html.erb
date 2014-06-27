@@ -17,39 +17,39 @@ description: Entenda como escrever código CSS de forma consciente.
 
   <h2 class="doc-title-3">Cores</h2>
   <p>Sempre que utilizar uma cor hexadecimal que tenha repetição de valores, use sempre o valor de atalho, assim:</p>
-  <code class="language-css">
+  <% code("css") do %>
 /** Recomendado **/
 p {color: #AAA;}
 
 /** Não Recomendado **/
 p {color: #AAAAAA;}
-  </code>
+  <% end %>
 
   <h2 class="doc-title-3">Aspas</h2>
   <p>Utilizamos ASPAS DUPLAS no CSS.</p>
-  <code class="language-css">
+  <% code("css") do %>
 input[type="checkout"] { ... }
 div:after { content: " "; }
-  </code>
+  <% end %>
 
   <h2 class="doc-title-3">Comentários</h2>
   <p>Para uma seção:</p>
-  <code class="language-css">
+  <% code("css") do %>
 /*** HEADER
 **** Header principal do site
 ***/
-  </code>
+  <% end %>
 
 
   <p>Nunca use comentários na mesma linha da propriedade:</p>
-  <code class="language-css">
+  <% code("css") do %>
 p {color: #FFF;} /** Nunca use comentários assim **/
 p {color: #FFF; /** Nunca use comentários assim **/ }
-  </code>
+  <% end %>
 
 
   <p>Assim é melhor:</p>
-  <code class="language-css">
+  <% code("css") do %>
 /** Assim é melhor **/
 p {
   color: #FFF;
@@ -59,7 +59,7 @@ p {
   /** Assim também é bom **/
   padding: 0;
 }
-  </code>
+  <% end %>
 
   <h2 class="doc-title-3">Ordem das declarações</h2>
   <p>Não é obrigatório, mas se puder fazer é bom. Declarações relacionadas devem ser agrupadas segundo a seguinte ordem:</p>
