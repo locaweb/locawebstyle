@@ -79,4 +79,21 @@ describe("Locastyle in general: ", function() {
     });
   });
 
+  describe("Disabled", function(){
+    describe("when element has class .ls-disabled", function(){
+      it("should not make action", function(){
+        $("#myModal").trigger('click');
+        expect($('#myAwesomeModal').hasClass("opened")).toEqual(false);
+      })
+    })
+
+    describe("when element has attribute disabled", function(){
+      it("should not make action", function(){
+        $("#myModal").trigger('click');
+        expect($('#myAwesomeModal').hasClass("opened")).toEqual(false);
+      })
+    })
+
+  })
+
 });
