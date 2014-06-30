@@ -46,7 +46,7 @@ type: funcoesjs
       <strong>Olá!</strong> Este é um alerta que pode ser dispensado.
     </div>
   </div>
-  <% code("html") do %> 
+  <% code("html") do %>
 <div class="ls-alert-warning ls-dismissable">
   <span data-ls-module="dismiss">&times;</span>
   <strong>Olá!</strong> Este é um alerta que pode ser dispensado.
@@ -55,7 +55,7 @@ type: funcoesjs
 
   <p>A classe <code>ls-dismissable</code> avisa nosso script que ele será removido pelo elemento com a classe <code>ls-dismiss</code> e com o atributo <code>data-ls-module="dismiss"</code>. Perceba que nesse formato o elemento <code>.ls-dismiss</code> é filho direto do elemento que será removido.</p>
 
-  <p>Suponha agora que o elemento que vai ser clicado nõa seja filho do <code>ls-dismissable</code>, como no exemplo abaixo:</p>
+  <p>Suponha agora que o elemento que vai ser clicado não seja filho do <code>ls-dismissable</code>, como no exemplo abaixo:</p>
 
   <div class="ls-box-demo">
     <div id="alertDismissExample" class="ls-alert-warning ls-dismissable">
@@ -64,7 +64,7 @@ type: funcoesjs
     <a href="#" class="ls-btn" data-target="#alertDismissExample" data-ls-module="dismiss">fecha</a>
   </div>
 
-  <% code("html") do %> 
+  <% code("html") do %>
 <div id="alertDismissExample" class="ls-alert-warning ls-dismissable">
   Esse elemento vai ser removido por um trigger externo.
 </div>
