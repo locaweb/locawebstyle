@@ -1,20 +1,72 @@
 <form action="" class="ls-form ls-form-horizontal row">
-  <label class="ls-field col-md-4 col-xs-12">
-    <b class="ls-label">Nome</b>
-    <input type="text" name="nome" placeholder="Nome e sobrenome" required >
-  </label>
-  <label class="ls-field col-md-4 col-xs-12">
-    <b class="ls-label">Sobrenome</b>
-    <input type="text" name="nome" placeholder="Nome e sobrenome" required >
-  </label>  <label class="ls-field col-md-4 col-xs-12">
-    <b class="ls-label">Nome</b>
-    <input type="text" name="nome" placeholder="Nome e sobrenome" required >
-  </label>
-  <label class="ls-field col-md-4 col-xs-12">
-    <b class="ls-label">Sobrenome</b>
-    <input type="text" name="nome" placeholder="Nome e sobrenome" required >
-  </label>
-  <div class="ls-actions-btn">
+  <fieldset>
+    <label class="ls-field col-md-4 col-xs-12">
+      <b class="ls-label">Nome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" required >
+    </label>
+    <label class="ls-field col-md-4 col-xs-12">
+      <b class="ls-label">Sobrenome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" required >
+    </label>  <label class="ls-field col-md-4 col-xs-12">
+      <b class="ls-label">Nome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" required >
+    </label>
+    <label class="ls-field col-md-4 col-xs-12">
+      <b class="ls-label">Sobrenome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" required >
+    </label>
+  </fieldset>
+
+    <hr>
+
+  <fieldset>
+    <!-- Exemplo com Checkbox -->
+    <div class="ls-field col-md-12">
+      <p>Selecione quais plataformas você tem:</p>
+      <label class="ls-label">
+        <input type="checkbox" name="dynacom">
+        Dynacom
+      </label>
+      <label class="ls-label">
+        <input type="checkbox" name="masterSystem">
+        MasterSystem sem fio
+      </label>
+      <label class="ls-label">
+        <input type="checkbox" name="nintendinho">
+        Nintendinho
+      </label>
+      <label class="ls-label">
+        <input type="checkbox" name="superNintendo">
+        Super Nintendo
+      </label>
+    </div>
+  </fieldset>
+
+    <hr>
+  <fieldset>
+    <!-- Exemplo com Radio button -->
+    <div class="ls-field col-md-12">
+      <p>Escolha uma das plataformas:</p>
+      <label class="ls-label">
+        <input type="radio" name="plataforms">
+        Dynacom
+      </label>
+      <label class="ls-label">
+        <input type="radio" name="plataforms">
+        MasterSystem sem fio
+      </label>
+      <label class="ls-label">
+        <input type="radio" name="plataforms">
+        Nintendinho
+      </label>
+      <label class="ls-label">
+        <input type="radio" name="plataforms">
+        Super Nintendo
+      </label>
+    </div>
+  </fieldset>
+
+  <div class="ls-actions-btn col-md-12">
     <button class="ls-btn">Salvar</button>
     <button class="ls-btn-danger">Cancelar</button>
   </div>
