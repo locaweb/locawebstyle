@@ -1,6 +1,7 @@
 //= require libs/_hopscotch
 //= require libs/_jquery.cookie
 //= require libs/jquery.mask
+//= require libs/moment.min
 //= require libs/pikaday
 //= require libs/pikaday.jquery
 
