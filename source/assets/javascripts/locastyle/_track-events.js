@@ -21,8 +21,8 @@ locastyle.trackEvents = (function() {
     $(links).each(function (index, item) {
       var options = {}
       options.category = $("body").data("ls-te-category");
-      options.action = 'open_link_#' + $(item).attr("href");
-      options.label = $(item).text();
+      options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'open_link_#' + $(item).attr("href");
+      options.label = $(item).data("ls-te-label") ? $(item).data("ls-te-label") : $(item).text();
       bindClickEvents(item, options);
     });
   }
