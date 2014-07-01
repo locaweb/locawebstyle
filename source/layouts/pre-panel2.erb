@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="ls-theme-green ls-pre-panel <%= current_page.data.html_class %>">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title><%= current_page.data.title %></title>
+  <meta name="description" content="<%= current_page.data.description %>" />
+  <meta name="keywords" content="<%= current_page.data.keywords %>" />
+  <%= stylesheet_link_tag "locastyle" %>
+</head>
+<body class="<%= page_classes %>">
+
+  <%= partial "documentacao/shared/topbar" %>
+
+  <main class="ls-main <%= current_page.data.body_class %>">
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+
+    <%= partial 'documentacao/shared/footer' %>
+  </main>
+
+  <aside class="ls-sidebar">
+    <h1 class="ls-brand-name ls-ico-earth"><%= link_to 'Fake Product Name', 'home' %></h1>
+
+  </aside>
+
+  <aside class="ls-notification">
+    <nav class="ls-notification-list" id="ls-notification-curtain">
+      <h3 class="ls-title-2">Notificações</h3>
+      <ul>
+        <%- 5.times do %>
+          <li class="ls-dismissable">
+            <a href="#"><%= lorem.sentence%></a>
+            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+          </li>
+        <% end %>
+      </ul>
+      <p class="ls-no-notification-message">Não há notificações.</p>
+    </nav>
+    <nav class="ls-notification-list" id="ls-help-curtain">
+      <h3 class="ls-title-2">Feedback</h3>
+      <ul>
+        <%- 2.times do %>
+          <li><a href="#">> <%= lorem.words 6 %></a></li>
+        <% end %>
+      </ul>
+    </nav>
+    <nav class="ls-notification-list" id="ls-feedback-curtain">
+      <h3 class="ls-title-2">Ajuda</h3>
+      <ul>
+        <li class="ls-txt-center hidden-xs">
+          <a href="#" class="ls-btn-dark ls-btn-tour">Fazer um Tour</a>
+        </li>
+        <li><a href="#">> Guia</a></li>
+        <li><a href="#">> Wiki</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+
+  <%= javascript_include_tag  "libs/jquery-2.1.0.min" %>
+  <%= javascript_include_tag  "locastyle" %>
+
+</body>
+</html>
