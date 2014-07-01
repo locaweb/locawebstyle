@@ -14,7 +14,7 @@ locastyle.trackEvents = (function() {
   }
 
   function setCategory(module){
-    module.eventCategory = $("body").data("ls-te-category");
+    module.eventCategory = $("body").attr("data-ls-te-category") || window.location.pathname;
   }
 
   function findTriggers(){
