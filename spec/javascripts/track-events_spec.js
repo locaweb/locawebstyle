@@ -71,6 +71,21 @@ describe("Track Events: ", function() {
       });
     });
 
+    describe("On page links", function () {
+      describe("When click on #on_page_link_to_nowhere which has the # as href attribute", function () {
+        it("should call ga with expected iptions as arguments", function () {
+          var expectedOptions = {
+            category: "locastyle#track-events-test",
+            action: "on_page_link",
+            label: "On page link sample"
+          }
+          spyOn(window, "ga");
+          $("#on_page_links #on_page_link_to_nowhere").trigger("click");
+          expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+        });
+      });
+    });
+
   });
 
 });
