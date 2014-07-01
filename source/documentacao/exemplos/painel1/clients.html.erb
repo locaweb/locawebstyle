@@ -1,11 +1,11 @@
 ---
 title: Lista de clientes
-layout: examples
+layout: panel1
 ---
 
 <h1 class="ls-title-intro ls-ico-users">Clientes</h1>
 
-<a href="<%= base_url %>/documentacao/exemplos/rev/new-client" class="ls-btn-primary">Cadastrar novo</a>
+<a href="<%= base_url %>/documentacao/exemplos/painel1/new-client" class="ls-btn-primary">Cadastrar novo</a>
 
 <div class="ls-box-filter">
   <form action="#" class="ls-form ls-form-inline ls-float-left">
@@ -43,7 +43,7 @@ layout: examples
     <%- 5.times do |num| %>
       <tr>
         <td>
-          <a href="<%= base_url %>/documentacao/exemplos/rev/client"><%= lorem.name %></a>
+          <a href="<%= base_url %>/documentacao/exemplos/painel1/client"><%= lorem.name %></a>
           <% if num%2 == 0 %>
             <span class='ls-tag hidden-xs'>Não recorrente</span>
           <% end %>
@@ -54,7 +54,7 @@ layout: examples
           <small class="ls-display-block">até 01/01/2014</small>
         </td>
         <td class="ls-txt-right ls-regroup">
-          <a href="<%= base_url %>/documentacao/exemplos/rev/client" class="ls-btn ls-btn-sm">Administrar</a>
+          <a href="<%= base_url %>/documentacao/exemplos/painel1/client" class="ls-btn ls-btn-sm">Administrar</a>
           <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
             <a href="#" class="ls-btn ls-btn-sm"></a>
             <ul class="ls-dropdown-nav">
