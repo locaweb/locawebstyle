@@ -1,7 +1,7 @@
 describe("Track Events: ", function() {
   beforeEach(function() {
     loadFixtures('track-events_fixture.html');
-    $("body").data("ls-te-category", "locastyle#track-events-test");
+    $("body").attr("data-ls-te-category", "locastyle#track-events-test");
     locastyle.trackEvents.init();
   });
 
@@ -47,6 +47,21 @@ describe("Track Events: ", function() {
       it("should call ga with expected options as arguments", function () {
         var expectedOptions = {
           category: "locastyle#track-events-test",
+          action: "my_custom_action",
+          label: "my_custom_label"
+        }
+        spyOn(window, "ga");
+        $("#open_links #link_with_options").trigger("click.ls");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
+    describe('Without data-ls-te-category on body: When click on #link_with_options', function () {
+      it('should create attribute automatic on body', function () {
+        $("body").removeAttr("data-ls-te-category");
+        locastyle.trackEvents.init();
+        var expectedOptions = {
+          category: window.location.pathname,
           action: "my_custom_action",
           label: "my_custom_label"
         }
