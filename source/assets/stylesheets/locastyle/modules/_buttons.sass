@@ -128,3 +128,32 @@
     &:focus
       +single-transition(none)
       outline: none
+
+//
+// Container that envolve the buttons in forms
+//
+.ls-actions-btn
+  padding: 15px 0
+  margin: 30px 0
+  border-top: 1px solid rgba(0, 0, 0, .2)
+  white-space: nowrap
+
+
+  // when in inline forms
+  .ls-form-inline &
+    padding: 0
+    margin: 20px 0 0
+    border: none
+    display: inline-block
+
+  // when in horizontal forms
+  .ls-form-horizontal &
+    @extend .ls-clearfix
+    padding: 0
+    padding-top: 21px
+    margin: 0
+    border: none
+    display: inline-block
+
+    [class*="ls-btn"]
+      margin-top: 0
