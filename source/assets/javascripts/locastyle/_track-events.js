@@ -6,10 +6,15 @@ locastyle.trackEvents = (function() {
   function init(){
     if(window.ga){
       this.gaPresent = true;
+      setCategory(this);
       findTriggers();
     } else {
       this.gaPresent = false;
     }
+  }
+
+  function setCategory(module){
+    module.eventCategory = $("body").data("ls-te-category");
   }
 
   function findTriggers(){
@@ -20,7 +25,6 @@ locastyle.trackEvents = (function() {
     var links = $("a");
     $(links).each(function (index, item) {
       var options = {}
-      options.category = $("body").data("ls-te-category");
       options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'open_link_#' + $(item).attr("href");
       options.label = $(item).data("ls-te-label") ? $(item).data("ls-te-label") : $(item).text();
       bindClickEvents(item, options);
@@ -30,7 +34,7 @@ locastyle.trackEvents = (function() {
   function bindClickEvents(element, options){
     $(element).off("click.ls");
     $(element).on("click.ls", function () {
-      ga('send', 'event', options.category, options.action, options.label);
+      ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
     });
   }
 
