@@ -27,6 +27,9 @@ locastyle.trackEvents = (function() {
       var options = {}
       options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'open_link_#' + $(item).attr("href");
       options.label = $(item).data("ls-te-label") ? $(item).data("ls-te-label") : $(item).text();
+      if($(item).attr("href") === "#") {
+        options.action = 'on_page_link';
+      }
       bindClickEvents(item, options);
     });
   }
