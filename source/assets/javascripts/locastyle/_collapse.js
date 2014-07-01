@@ -41,11 +41,29 @@ locastyle.collapse = (function() {
 
   function bindHeader($collapse) {
     if (!$collapse.hasClass(config.classes.alwaysOpen)) {
-      $(config.selectors.trigger, $collapse).off('click.ls'); // <- unbind
-      $(config.selectors.trigger, $collapse).on('click.ls', function(evt) {
-        evt.preventDefault();
-        toggle($collapse);
-      });
+      // has input
+      var $input = $(config.selectors.trigger, $collapse).find('input[type="radio"], input[type="checkbox"]');
+      if($input[0]){
+        $input.on('change.ls', function (evt) {
+          var name = $(this).attr('name')
+          $('[name="' + name + '"]').each(function (index, input) {
+            var $input = $(input);
+            var $collapse = $input.parents(config.selectors.container)
+            $collapse.toggleClass(config.classes.open, $input.is(':checked'));
+            // $(config.selectors.trigger, $collapse).on('click.ls', function(evt) {
+            //   // evt.stopPropagation()
+            //   // evt.preventDefault();
+            //   // $(this).find(':input').trigger('change')
+            // });
+          });
+        }).trigger('change.ls');
+      } else {
+        $(config.selectors.trigger, $collapse).off('click.ls'); // <- unbind
+        $(config.selectors.trigger, $collapse).on('click.ls', function(evt) {
+          evt.preventDefault();
+          toggle($collapse);
+        });
+      }
     }
   }
 
