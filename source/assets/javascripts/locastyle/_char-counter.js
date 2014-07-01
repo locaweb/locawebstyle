@@ -9,16 +9,23 @@ locastyle.charCounter = (function() {
 
   function countText(){
     $('[data-ls-module="charCounter"]').each(function(index, field){
+      var fieldText = $(field).val().length;
       var limit = $(field).attr('maxlength');
-      $(field).after('<small>Máximo de '+limit+' caracteres <strong class="counter_'+index+'"></strong></small>');
+      $(field).after('<p class="ls-help-inline"><small><strong class="ls-char-count ls-number-counter-'+index+'">'+limit+'</strong> caracteres restantes</small></p>');
+
+      var calc = limit-fieldText;
+      updateCounter(index, calc);
 
       $(field).keyup(function(event){
-        var count = $(this).val().length;
-        $('.counter_'+index).text(count)
+        var count = limit - $(this).val().length;
+        updateCounter(index, count);
       });
     })
   }
 
+  function updateCounter(index, count){
+    $('.ls-number-counter-'+index).text(count);
+  }
 
   return {
     init: init

@@ -29,6 +29,7 @@ src_files:
     - source/assets/javascripts/locastyle/_btn-group.js
     - source/assets/javascripts/locastyle/_sidebars.js
     - source/assets/javascripts/locastyle/_progress-bar.js
+    - source/assets/javascripts/locastyle/_char-counter.js
 
 # stylesheets
 #
