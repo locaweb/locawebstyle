@@ -32,6 +32,17 @@ describe("Track Events: ", function() {
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });
+
+    describe('Unbind: When trackEvents is initialized multiple times', function () {
+      it('the ga should not be called multiple times', function () {
+        spyOn(window, "ga");
+        locastyle.trackEvents.init();
+        locastyle.trackEvents.init();
+        $("#open_links #home_menu_sample").trigger("click.ls");
+        expect(window.ga.calls.count()).toEqual(1);
+      });
+    });
+
   });
 
 });
