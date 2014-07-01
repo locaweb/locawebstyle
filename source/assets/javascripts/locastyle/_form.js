@@ -92,7 +92,7 @@ locastyle.form = (function() {
   }
 
   function setOriginalValue() {
-    var $button = $('[data-ls-toggle-fields]');
+    var $button = $('[data-ls-fields-enable]');
     $button.on('click', function (evt) {
       var $container = $($(this).data('ls-toggle-fields'));
       $container.find(':input').each(function(indexField, field){
