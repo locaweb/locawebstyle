@@ -1,0 +1,31 @@
+---
+title: Contador e limite de caracteres
+description: Conta e limita os caracteres.
+type: forms
+---
+<%= partial 'partials/doc-menu-forms'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+<form action="" class="ls-form ls-form-horizontal row">
+  <fieldset>
+    <label class="ls-field col-md-4 col-xs-12">
+      <b class="ls-label">Nome</b>
+      <input type="text" data-ls-module="charCounter" maxlength="20" name="nome" placeholder="Nome e sobrenome" required >
+    </label>
+    <label class="ls-field col-md-4 col-xs-12">
+      <b class="ls-label">Email</b>
+      <input type="text" data-ls-module="charCounter" maxlength="30" name="email" placeholder="Email" required >
+    </label>
+    <label class="ls-field col-md-8 col-xs-12">
+      <b class="ls-label">Mensagem</b>
+      <textarea data-ls-module="charCounter" maxlength="100"></textarea>
+    </label>
+
+  </fieldset>
+
+</form>
+
+</section>
