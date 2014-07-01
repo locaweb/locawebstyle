@@ -43,6 +43,19 @@ describe("Track Events: ", function() {
       });
     });
 
+    describe("Optional action and label: When click on link on #link_with_options", function () {
+      it("should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "my_custom_action",
+          label: "my_custom_label"
+        }
+        spyOn(window, "ga");
+        $("#open_links #link_with_options").trigger("click.ls");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
   });
 
 });
