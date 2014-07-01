@@ -64,17 +64,14 @@ locastyle.form = (function() {
   }
 
   function masks() {
-    var celphoneMaskDDD = function(phone, e, currentField, options){
-      return phone.match(/^(\(?11\)? ?9(5[0-9]|6[0-9]|7[01234569]|8[0-9]|9[0-9])[0-9]{1})/g) ? '(00) 00000-0000' : '(00) 0000-0000';
-    };
     $('.ls-mask-date').mask('11/11/1111');
     $('.ls-mask-time').mask('00:00:00');
     $('.ls-mask-date_time').mask('00/00/0000 00:00:00');
     $('.ls-mask-cep').mask('00000-000');
     $('.ls-mask-phone8').mask('0000-0000');
-    $('.ls-mask-phone9').mask('90000-0000');
+    $('.ls-mask-phone9').mask('00009-0000');
     $('.ls-mask-phone8_with_ddd').mask('(00) 0000-0000');
-    $('.ls-mask-phone9_with_ddd').mask('(00) 90000-0000');
+    $('.ls-mask-phone9_with_ddd').mask('(00) 00009-0000');
     $('.ls-mask-cpf').mask('000.000.000-00', {reverse: true});
     $('.ls-mask-cnpj').mask('00.000.000/0000-00', {reverse: true});
     $('.ls-mask-money').mask("#.##0,00", {reverse: true, maxlength: false});
