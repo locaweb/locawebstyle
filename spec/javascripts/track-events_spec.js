@@ -76,11 +76,24 @@ describe("Track Events: ", function() {
         it("should call ga with expected iptions as arguments", function () {
           var expectedOptions = {
             category: "locastyle#track-events-test",
-            action: "on_page_link",
+            action: "on_page_link_#",
             label: "On page link sample"
           }
           spyOn(window, "ga");
           $("#on_page_links #on_page_link_to_nowhere").trigger("click");
+          expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+        });
+      });
+
+      describe("When click on #on_page_link_with_anchor which has the #nice-target as href attribute", function () {
+        it("should call ga with expected iptions as arguments", function () {
+          var expectedOptions = {
+            category: "locastyle#track-events-test",
+            action: "on_page_link_#nice-target",
+            label: "On page link sample"
+          }
+          spyOn(window, "ga");
+          $("#on_page_links #on_page_link_with_anchor").trigger("click");
           expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
         });
       });
