@@ -28,6 +28,7 @@ locastyle.trackEvents = (function() {
   }
 
   function bindClickEvents(element, options){
+    $(element).off("click.ls");
     $(element).on("click.ls", function () {
       ga('send', 'event', options.category, options.action, options.label);
     });
