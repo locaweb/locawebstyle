@@ -1,0 +1,131 @@
+---
+title: Relatórios
+layout: panel2
+---
+
+<h1 class="ls-title-intro ls-ico-stats">Relatórios</h1>
+<div class="ls-group-btn ls-group-active ls-float-right">
+  <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn ls-active ls-ico-chart-bar-up"></button>
+  <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
+</div>
+<ul class="ls-tabs-nav" id="awesome-tab">
+  <li class="ls-active"><a data-ls-module="tabs" href="#tab1">Geral</a></li>
+  <li><a data-ls-module="tabs" href="#tab2">Erros</a></li>
+</ul>
+<div class="ls-tabs-container" id="awesome-tab-content">
+  <div id="tab1" class="ls-tab-content ls-active">
+
+    <div class="ls-tab-content child1 ls-active">
+
+      <div id="sending-stats" class="row ls-board-box">
+        <div class="col-sm-4">
+          <div class="ls-box">
+            <h6 class="ls-title-4">Enviados</h6>
+            <span class="ls-board-data">
+              <strong>33</strong>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-sm-4 ls-board-box">
+          <div class="ls-box">
+            <h6 class="ls-title-4">Entregues</h6>
+            <span class="ls-board-data">
+              <strong>27</strong>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-sm-4 ls-board-box">
+          <div class="ls-box">
+            <h6 class="ls-title-4">Erros</h6>
+            <span class="ls-board-data">
+              <strong>16</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <img src="<%= base_url %>/<%= images_dir %>/graph-example-2.jpg">
+
+    </div>
+
+    <div class="ls-tab-content child2">
+
+      <div id="sending-stats" class="row ls-board-box">
+        <div class="col-sm-4">
+          <div class="ls-box">
+            <h6 class="ls-title-4">Enviados</h6>
+            <span class="ls-board-data">
+              <strong>33</strong>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-sm-4 ls-board-box">
+          <div class="ls-box">
+            <h6 class="ls-title-4">Entregues</h6>
+            <span class="ls-board-data">
+              <strong>27</strong>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-sm-4 ls-board-box">
+          <div class="ls-box">
+            <h6 class="ls-title-4">Erros</h6>
+            <span class="ls-board-data">
+              <strong>16</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th class="ls-txt-center">Hora</th>
+            <th class="ls-txt-center">Enviados</th>
+            <th class="ls-txt-center hidden-xs">Bounces</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%- 5.times do |num| %>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+              <td class="ls-txt-center hidden-xs">0</td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="tab2" class="ls-tab-content">
+
+    <div class="ls-tab-content child1 ls-active">
+      <p>Erros de recebimento para 6 destinatários</p>
+      <img src="<%= base_url %>/<%= images_dir %>/graph-example-2.jpg">
+    </div>
+
+    <div class="ls-tab-content child2">
+      <p>Erros de recebimento para 6 destinatários</p>
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th class="ls-txt-center">Tipo de erro</th>
+            <th class="ls-txt-center" colspan="2">Quantidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ls-txt-center">Servidor de destino não existe ou é incapaz de receber emails</td>
+            <td class="ls-txt-center">3</td>
+            <td class="ls-txt-center">50%</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
