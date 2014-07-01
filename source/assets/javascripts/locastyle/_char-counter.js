@@ -14,17 +14,11 @@ locastyle.charCounter = (function() {
 
       $(field).keyup(function(event){
         var count = $(this).val().length;
-        if(count > limit){
-          return false
-        }
-        showCount(index, count);
+        $('.counter_'+index).text(count)
       });
     })
   }
 
-  function showCount(index, count){
-    $('.counter_'+index).text(count)
-  }
 
   return {
     init: init
