@@ -8,13 +8,6 @@ locastyle.tabs = (function() {
     bindClickOnTriggers();
     bindBreakpointUpdateOnChecker();
     checkBreakpoint();
-    hashTabs();
-  }
-
-  function hashTabs() {
-    $(window).load(function() {
-      $('[data-ls-module="tabs"][href="' + window.location.hash + '"]').trigger('click');
-    });
   }
 
   // adiciona o bind de click no modulo e chama os métodos necessários
