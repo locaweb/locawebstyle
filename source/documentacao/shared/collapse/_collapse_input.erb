@@ -1,0 +1,15 @@
+<% quant.times do |num| %>
+<div data-ls-module="collapse" <% if defined?(id) %>id="<%= id %>" <% end %>class="ls-collapse<% if defined?(startOpen) %> ls-collapse-open<% end %><% if defined?(alwaysOpen) %> ls-collapse-open-always<% end %>">
+  <label class="ls-collapse-header">
+    <h3 class="ls-collapse-title">
+      <input type="<%= type %>" name="input<%= type.capitalize %>" value="<%= num+1 %>">
+      <%= header %> <%= num+1 %>
+    </h3>
+  </label>
+  <div class="ls-collapse-body">
+    <p>
+      <%= content %>
+    </p>
+  </div>
+</div>
+<% end %>
