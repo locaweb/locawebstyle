@@ -71,7 +71,7 @@ describe("Locastyle in general: ", function() {
         // clean prevent default events
         $("a").off("click.lsPreventDefault");
 
-        expect($('[data-ls-toggle-fields]')).toHaveBeenBindedOnce("click");
+        expect($('[data-ls-fields-enable]')).toHaveBeenBindedOnce("click");
         expect($('.ls-submenu > a')).toHaveBeenBindedOnce("click");
         expect($(".ls-disabled, [disabled='disabled']")).toHaveBeenBindedOnce("click");
 

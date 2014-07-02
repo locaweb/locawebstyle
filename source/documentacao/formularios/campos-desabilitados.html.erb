@@ -45,20 +45,20 @@ description: Opções para desabilitar campos ou mostrar em forma de texto
 
   <p>Agora, depois do Fieldset, existem 3 botões, vou explicar um por um: um botão para EDITAR OS CAMPOS, que é onde o usuário vai clicar para que os campos fiquem editáveis. Os outros dois botões, de SALVAR e CANCELAR estão escondidos. Veja o código do botão EDITAR:</p>
   <% code("html") do %>
-<button class="ls-btn-primary hidden-elements" data-toggle-class="ls-display-none" data-target=".hidden-elements" data-ls-toggle-fields="#fields-disabled">Editar campos</button>
+<button class="ls-btn-primary hidden-elements" data-toggle-class="ls-display-none" data-target=".hidden-elements" data-ls-fields-enable="#fields-disabled">Editar campos</button>
   <% end %>
 
-  <p>O valor do atributo <code>data-ls-toggle-fields</code> deve ser o ID ou a CLASSE do elemento PAI que envolve os campos que você quer habilitar/desabilitar. Nesse caso nossa Fieldset.</p>
+  <p>O valor do atributo <code>data-ls-fields-enable</code> deve ser o ID ou a CLASSE do elemento PAI que envolve os campos que você quer habilitar/desabilitar.</p>
 
-  <p>O atributo <code>data-toggle-class</code> e o <code>data-target</code> trabalham juntos: o data-target indica qual o elemento (no nosso caso qualquer elemento com a classe <code>.hidden-elements</code>) vai ter a classe que está no <code>data-toggle-class</code> alternada (no nosso caso a classe <code>ls-display-none</code>, que faz os botões CANCELAR e SALVAR ficarem escondidos).</p>
+  <p>O atributo <code>data-toggle-class</code> e o <code>data-target</code> trabalham juntos: o data-target indica qual o elemento (no nosso caso qualquer elemento com a classe <code>.hidden-elements</code>) vai ter a classe que está no <code>data-toggle-class</code> alternada (no nosso caso a classe <code>.ls-display-none</code>, que faz os botões CANCELAR e SALVAR ficarem escondidos).</p>
 
-  <p>Quando o botão editar é clicado, ele retira a classe <code>ls-display-none</code> dos elementos com a classe <code>.hidden-elements</code>.</p>
+  <p>Quando o botão editar é clicado, ele retira a classe <code>.ls-display-none</code> dos elementos com a classe <code>.hidden-elements</code>.</p>
 
-  <p>Os botões de CANCELAR e SALVAR são simples botões, com as classes que serão manipuladas pelo botão EDITAR do nosso exemplo. Veja o código abaixo:</p>
+  <p>Os botões de CANCELAR e SALVAR, são simples botões, com as classes que serão manipuladas pelo botão EDITAR do nosso exemplo. Veja o código abaixo:</p>
 
   <% code("html") do %>
 <button class="ls-btn-primary ls-display-none hidden-elements" type="submit">Salvar</button>
-<button data-toggle-class="ls-display-none"  data-target=".hidden-elements" data-ls-toggle-fields="#fields-disabled" class="ls-btn-danger ls-display-none hidden-elements" type="button">Cancelar</button>
+<button data-toggle-class="ls-display-none"  data-target=".hidden-elements" data-ls-fields-enable="#fields-disabled" class="ls-btn-danger ls-display-none hidden-elements" type="button">Cancelar</button>
   <% end %>
 
 </section>

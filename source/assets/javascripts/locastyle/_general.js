@@ -35,16 +35,18 @@ locastyle.general = (function() {
   }
 
   function toggleFields(){
-    $('[data-ls-toggle-fields]').on('click.ls', function(evt) {
+    $('[data-ls-fields-enable]').on('click.ls', function(evt) {
       evt.preventDefault();
+
       var $this = $(this);
-      var $container = $($this.data('ls-toggle-fields'));
+      var $container = $($this.data('ls-fields-enable'));
+
       $container
-        .toggleClass('ls-form-disable')
-        .toggleClass('ls-form-text');
+        .toggleClass('ls-form-disable ls-active');
+
       $container
-        .find(':input').toggleClass('ls-form-text')
-        .toggleAttr('disabled');
+        .find(':input')
+          .toggleAttr('disabled');
     });
   }
 
@@ -133,7 +135,7 @@ locastyle.general = (function() {
   };
 
   function unbind () {
-    $('[data-ls-toggle-fields]').off('click.ls');
+    $('[data-ls-fields-enable]').off('click.ls');
     $('.ls-submenu > a').off('click.ls');
     $(".ls-disabled, [disabled='disabled']").off('click');
   }
