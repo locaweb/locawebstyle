@@ -21,20 +21,22 @@ layout: panel2
       <tr>
         <th>E-mail adicionado</th>
         <th></th>
-        <th></th>
       </tr>
     </thead>
     <tbody>
-      <%- 5.times do |num| %>
+      <%- 3.times do |num| %>
         <tr>
-          <td>qa@teste.com</td>
-          <td class="ls-txt-right"><span class="ls-tag-success">Confirmado</span></td>
+          <td>fulano@dominio.com
+            <span class="ls-tag-success">Confirmado</span>
+          </td>
           <td class="ls-txt-right"> <button data-action="<%= base_url() %>" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<div class='ls-txt-center'><h3 class='ls-title-3'>Você tem certeza que deseja excluir esse email?</h2><p>A exclusão do e-mail afetará os próximos envios com este remetente.</p></div>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-btn-danger">Excluir</button>  </td>
         </tr>
       <% end %>
         <tr>
-          <td>qa@teste.com</td>
-          <td class="ls-txt-right"><span class="ls-tag-success">Confirmado</span></td>
+          <td>
+            fulano@dominio.com
+            <span class="ls-tag-warning">Não confirmado</span>
+          </td>
           <td class="ls-txt-right">
             <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
               <a href="#" class="ls-btn">Ações</a>
