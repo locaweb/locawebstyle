@@ -31,7 +31,7 @@ layout: panel2
         <tr>
           <td>qa@teste.com</td>
           <td class="ls-txt-right"><span class="ls-tag-success">Confirmado</span></td>
-          <td class="ls-txt-right"> <button class="ls-btn-danger ls-btn-sm">Excluir</button>  </td>
+          <td class="ls-txt-right"> <button data-action="<%= base_url() %>" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<h3 class='ls-title-2'>Você tem certeza que deseja excluir esse email?</h2><p>Many desktop publishing packages and web page editors now use Lorem Ipsum.</p>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-btn-danger ls-btn-sm">Excluir</button>  </td>
         </tr>
       <% end %>
     </tbody>
