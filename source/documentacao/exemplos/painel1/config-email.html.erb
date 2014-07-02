@@ -3,8 +3,9 @@ title: Configurações de E-mail Remetente
 layout: panel1
 ---
 
-  <h1 class="ls-title-intro ls-ico-cog">E-mail de remetente</h1>
-  <p>Configure um domínio padrão para os links das mensagens e de acesso ao painel.</p>
+<h1 class="ls-title-intro ls-ico-cog">E-mail de remetente</h1>
+<p>Configure um domínio padrão para os links das mensagens e de acesso ao painel.</p>
+
 <div class="row">
   <div class="col-md-12">
     <div class="ls-box">
@@ -12,18 +13,18 @@ layout: panel1
       <hr>
 
       <form action="#" class="ls-form" data-ls-module="form">
-        <div class="row ls-form-disable ls-form-text" id="email-form">
+        <div class="row ls-form-disable" id="email-form">
           <label class="ls-field col-md-5">
             <span class="ls-label ls-hidden-accessible">email</span>
-            <input class="ls-form-text" name="email" placeholder="email" required="" type="text" value="fulano@dominio.com">
-            <small class="email-actions">Status do e-mail: Aprovado</small>
+            <input name="email" placeholder="email" required="" type="text" value="fulano@dominio.com">
+            <small>Status do e-mail: Aprovado</small>
           </label>
         </div>
         <div id="email_actions" class="email-actions ls-display-none">
           <button type="submit" class="ls-btn-primary">Salvar</button>
-          <button class="ls-btn" data-ls-toggle-fields="#email-form" data-toggle-class="ls-display-none" data-target=".email-actions" >Cancelar</button>
+          <button class="ls-btn" data-ls-fields-enable="#email-form" data-toggle-class="ls-display-none" data-target=".email-actions" >Cancelar</button>
         </div>
-        <button data-ls-toggle-fields="#email-form" data-toggle-class="ls-display-none" data-target=".email-actions" class="ls-btn-primary email-actions">Editar</button>
+        <button data-ls-fields-enable="#email-form" data-toggle-class="ls-display-none" data-target=".email-actions" class="ls-btn-primary email-actions">Editar</button>
       </form>
     </div>
   </div>

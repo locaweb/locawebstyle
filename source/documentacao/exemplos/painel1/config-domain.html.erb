@@ -17,18 +17,18 @@ layout: panel1
       <hr>
 
       <form action="#" class="ls-form" data-ls-module="form">
-        <div id="domain-form" class="row ls-form-text ls-form-disable">
+        <div id="domain-form" class="row ls-form-disable">
           <label class="ls-field col-md-8">
             <span class="ls-label ls-hidden-accessible">dominio</span>
             <input name="dominio" placeholder="dominio" required type="text" value="opa.entregaemails.com">
-            <small class="domain-actions">Status do DNS: Configurado corretamente</small>
+            <small>Status do DNS: Configurado corretamente</small>
           </label>
         </div>
         <div class="domain-actions ls-display-none">
           <button type="submit" class="ls-btn-primary">Salvar</button>
-          <button class="ls-btn" data-ls-toggle-fields="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" >Cancelar</button>
+          <button class="ls-btn" data-ls-fields-enable="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" >Cancelar</button>
         </div>
-        <button data-ls-toggle-fields="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" class="ls-btn-primary domain-actions">Editar</button>
+        <button data-ls-fields-enable="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" class="ls-btn-primary domain-actions">Editar</button>
       </form>
 
     </div>
@@ -40,18 +40,18 @@ layout: panel1
       <p><a href="">Como configurar o seu domínio para ser o novo endereço de acesso.</a></p>
       <hr>
       <form action="" class="ls-form" data-ls-module="form">
-        <div id="access-domain-form" class="row ls-form-text ls-form-disable">
+        <div id="access-domain-form" class="row ls-form-disable">
           <label for="" class="ls-field col-md-8">
             <span class="ls-label ls-hidden-accessible">Domínio de acesso</span>
             <input type="text" placeholder="opa.entregaemails.com">
-            <small class="access-domain-actions">Status do DNS: Configurado corretamente</small>
+            <small>Status do DNS: Configurado corretamente</small>
           </label>
         </div>
         <div class="access-domain-actions ls-display-none">
           <button type="submit" class="ls-btn-primary">Salvar</button>
-          <button class="ls-btn" data-ls-toggle-fields="#access-domain-form" data-toggle-class="ls-display-none" data-target=".access-domain-actions" >Cancelar</button>
+          <button class="ls-btn" data-ls-fields-enable="#access-domain-form" data-toggle-class="ls-display-none" data-target=".access-domain-actions" >Cancelar</button>
         </div>
-        <button data-ls-toggle-fields="#access-domain-form" data-toggle-class="ls-display-none" data-target=".access-domain-actions" class="ls-btn-primary access-domain-actions">Editar</button>
+        <button data-ls-fields-enable="#access-domain-form" data-toggle-class="ls-display-none" data-target=".access-domain-actions" class="ls-btn-primary access-domain-actions">Editar</button>
       </form>
     </div>
   </div>

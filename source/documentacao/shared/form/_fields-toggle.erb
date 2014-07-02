@@ -1,13 +1,15 @@
 <form action="" class="ls-form ls-form-horizontal" data-ls-module="form">
-  <fieldset id="fields-disabled" class="ls-form-disable ls-form-text">
+  <fieldset id="fields-disabled" class="row ls-form-disable">
     <% 3.times do |num| %>
-    <label class="ls-field col-md-3">
+    <label class="ls-field col-md-2">
       <b class="ls-label">Nome</b>
       <input type="text" name="nome" value="<%= lorem.words 2 %>" placeholder="Nome e sobrenome" required >
     </label>
   <% end %>
   </fieldset>
-  <button class="ls-btn-primary hidden-elements" data-toggle-class="ls-display-none"  data-target=".hidden-elements" data-ls-toggle-fields="#fields-disabled">Editar campos</button>
-  <button class="ls-btn-primary ls-display-none hidden-elements" type="submit">Salvar</button>
-  <button data-toggle-class="ls-display-none"  data-target=".hidden-elements" data-ls-toggle-fields="#fields-disabled" class="ls-btn-danger ls-display-none hidden-elements" type="submit">Cancelar</button>
+  <div class="ls-actions-btn">
+    <button class="ls-btn-primary hidden-elements" data-toggle-class="ls-display-none"  data-target=".hidden-elements" data-ls-fields-enable="#fields-disabled">Editar campos</button>
+    <button class="ls-btn-primary ls-display-none hidden-elements" type="submit">Salvar</button>
+    <button data-toggle-class="ls-display-none"  data-target=".hidden-elements" data-ls-fields-enable="#fields-disabled" class="ls-btn-danger ls-display-none hidden-elements" type="submit">Cancelar</button>
+  </div>
 </form>

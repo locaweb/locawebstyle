@@ -14,15 +14,15 @@ layout: panel1
       </div>
       <hr>
       <form action="#" class="ls-form row" data-ls-module="form">
-          <label id="phone-form" class="ls-field col-md-5 ls-form-text ls-form-disable">
+          <label id="phone-form" class="ls-field col-md-5 ls-form-disable">
             <b class="ls-label">Telefone</b>
-            <input class="ls-form-text ls-mask-phone_with_ddd" name="telefone" placeholder="Número do telefone" required="" type="text" value="(11) 99999-9999">
+            <input class="ls-mask-phone_with_ddd" name="telefone" placeholder="Número do telefone" required="" type="text" value="(11) 99999-9999">
           </label>
           <div class="phone-actions ls-display-none">
             <button type="submit" class="ls-btn-primary">Salvar</button>
-            <button class="ls-btn" data-ls-toggle-fields="#phone-form" data-toggle-class="ls-display-none" data-target=".phone-actions" >Cancelar</button>
+            <button class="ls-btn" data-ls-fields-enable="#phone-form" data-toggle-class="ls-display-none" data-target=".phone-actions" >Cancelar</button>
           </div>
-          <button data-ls-toggle-fields="#phone-form" data-toggle-class="ls-display-none" data-target=".phone-actions" class="ls-btn-primary phone-actions">Editar</button>
+          <button data-ls-fields-enable="#phone-form" data-toggle-class="ls-display-none" data-target=".phone-actions" class="ls-btn-primary phone-actions">Editar</button>
       </form>
     </div>
   </div>
@@ -34,8 +34,8 @@ layout: panel1
       </div>
       <hr>
       <form action="#" class="ls-form" data-ls-module="form">
-        <div id="webdesk-form" class="ls-form-text ls-form-disable">
-          <label class="ls-field col-md-12">
+        <div id="webdesk-form" class="ls-form-disable">
+          <label class="ls-field">
             <div class="ls-prefix-group">
               <span class="ls-label-prefix">https://</span>
               <input type="text" placeholder="entregaemails">
@@ -46,9 +46,9 @@ layout: panel1
 
         <div class="webdesk-actions ls-display-none">
           <button type="submit" class="ls-btn-primary">Salvar</button>
-          <button class="ls-btn" data-ls-toggle-fields="#webdesk-form" data-toggle-class="ls-display-none" data-target=".webdesk-actions">Cancelar</button>
+          <button class="ls-btn" data-ls-fields-enable="#webdesk-form" data-toggle-class="ls-display-none" data-target=".webdesk-actions">Cancelar</button>
         </div>
-        <button data-ls-toggle-fields="#webdesk-form" data-toggle-class="ls-display-none" data-target=".webdesk-actions" class="ls-btn-primary webdesk-actions">Editar</button>
+        <button data-ls-fields-enable="#webdesk-form" data-toggle-class="ls-display-none" data-target=".webdesk-actions" class="ls-btn-primary webdesk-actions">Editar</button>
       </form>
     </div>
   </div>
