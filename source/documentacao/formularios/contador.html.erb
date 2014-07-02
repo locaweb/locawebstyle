@@ -9,23 +9,16 @@ type: forms
 
   <%= partial 'partials/doc-intro-content' %>
 
-<form action="" class="ls-form ls-form-horizontal row">
-  <fieldset>
-    <label class="ls-field col-md-4 col-xs-12">
-      <b class="ls-label">Nome</b>
-      <input type="text" data-ls-module="charCounter" maxlength="20" name="nome" placeholder="Nome e sobrenome" required >
-    </label>
-    <label class="ls-field col-md-4 col-xs-12">
-      <b class="ls-label">Email</b>
-      <input type="text" data-ls-module="charCounter" maxlength="30" name="email" placeholder="Email" required >
-    </label>
-    <label class="ls-field col-md-8 col-xs-12">
-      <b class="ls-label">Mensagem</b>
-      <textarea data-ls-module="charCounter" maxlength="100"></textarea>
-    </label>
+  <p>Para mostrar um indicador de caractéres em um <strong>input</strong>, basta adicionar as seguintes propriedades no input: <code>data-ls-module="charCounter"</code> e <code>maxlength</code> com o valor de limite.</p>
 
-  </fieldset>
+  <p>A propriedade <code>data-ls-module="charCounter"</code> inicia a função, que adiciona um texto logo abaixo do input com a indicação de limite dos caractéres. O atributo <code>maxlength</code> é do próprio HTML5 e é ele que limita a quantiade de caratéres no input.</p>
 
-</form>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/contador.erb' %>
+  </div>
+  <% code("html") do %>
+  <%= partial 'documentacao/shared/contador.erb' %>
+  <% end %>
 
 </section>
