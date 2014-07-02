@@ -165,11 +165,49 @@ layout: panel2
       <h4 class="ls-modal-title">Exportar CSV</h4>
     </div>
     <div class="ls-modal-body">
-
+      <form class="ls-form row">
+        <fieldset>
+          <label class="ls-field col-md-5">
+            <b class="ls-label">Período</b>
+            <div data-ls-module="customFields">
+              <select name="">
+                <option value="">Dia atual</option>
+                <option value="">Última semana</option>
+                <option value="">Últimos 30 dias</option>
+                <option value="">Últimos 6 meses</option>
+                <option value="">Últimos 12 meses</option>
+                <option value="">Personalizado</option>
+              </select>
+            </div>
+          </label>
+          <div class="ls-field col-md-11">
+            <h5 class="ls-title-6">Status de Envio</h5>
+            <label class="ls-label">
+              <input type="radio" name="export[filter_status]">
+              Todos enviados (Entregues e Erros)
+            </label>
+            <label class="ls-label">
+              <input type="radio" name="export[filter_status]">
+              Apenas Entregues
+            </label>
+            <label class="ls-label">
+              <input type="radio" name="export[filter_status]">
+              Apenas Erros
+            </label>
+            <label class="ls-label">
+              <input type="checkbox" name="export[send_notification]">
+              Receber notificação por e-mail quando o arquivo estiver disponível
+            </label>
+          </div>
+          <div class="ls-field col-md-12">
+            <input id="export_email" name="export[email]" placeholder="Preencha com o seu e-mail" type="text" value="testeqa@teste.com.br">
+          </div>
+        </fieldset>
+      </form>
     </div>
     <div class="ls-modal-footer">
-      <a class="ls-btn float-right ls-float-right" data-dismiss="modal">Close</a>
-      <a class="ls-btn-primary">Save changes</a>
+      <a class="ls-btn float-right ls-float-right" data-dismiss="modal">Cancelar</a>
+      <a class="ls-btn-primary">Exportar</a>
     </div>
   </div>
 </div>
