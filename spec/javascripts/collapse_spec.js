@@ -2,12 +2,9 @@ describe('Collapse:', function() {
   beforeEach(function() {
     loadFixtures('collapse_fixture.html');
     locastyle.collapse.init();
-    // jasmine.clock().install();
   });
 
   afterEach(function() {
-    // jasmine.clock().uninstall();
-    // done();
   });
 
 
