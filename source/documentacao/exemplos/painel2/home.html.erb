@@ -6,15 +6,39 @@ layout: panel2
 
 <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
 
+<div class="ls-box ls-dismissable">
+  <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
+  <h2 class="ls-title-3">Configuração do serviço</h2>
+  <p>Utilize os seguintes dados para autenticação no serviço.</p>
+  <h3 class="ls-title-5">Dados do servidor SMTP</h3>
+  <table class="ls-table ls-table-striped">
+    <tbody>
+      <tr>
+        <td><strong>Usuário: </strong> qateste</td>
+      </tr>
+      <tr>
+        <td><strong>Senha: </strong></td>
+      </tr>
+      <tr>
+        <td><strong>Endereço de SMTP: </strong>smtp.teste-smtp.teste.com</td>
+      </tr>
+      <tr>
+        <td><strong>Porta:</strong> 587| <strong>SSL/TLS:</strong> 465</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 class="ls-title-5">Documentação</h3>
+  <p>Veja <a href="" title="">exemplos de código de implementação</a> em PHP, .NET, RUBY, Java entre outras linguagens.</p>
+  <p>Saiba como <a href="" title="">configurar o SMTP no Outlook</a>.</p>
+</div>
 
-<div class="ls-box">
-  <header class="ls-info-header row">
-    <div class="col-md-9">
-      <h2 class="ls-title-3 ls-ico-stats">Relatório diário</h2>
-    </div>
+<div class="ls-box ls-board-box">
+  <header class="ls-info-header">
+    <p class="ls-float-right ls-float-none-xs ls-small-info">Valido até <strong>01.05.2014</strong></p>
+    <h2 class="ls-title-3 ls-ico-stats">Relatório diário</h2>
   </header>
 
-  <div id="sending-stats" class="row ls-board-box">
+  <div id="sending-stats" class="row">
     <div class="col-sm-4">
       <div class="ls-box">
         <h6 class="ls-title-4">Enviados</h6>
@@ -24,7 +48,7 @@ layout: panel2
       </div>
     </div>
 
-    <div class="col-sm-4 ls-board-box">
+    <div class="col-sm-4">
       <div class="ls-box">
         <h6 class="ls-title-4">Entregues</h6>
         <span class="ls-board-data">
@@ -33,7 +57,7 @@ layout: panel2
       </div>
     </div>
 
-    <div class="col-sm-4 ls-board-box">
+    <div class="col-sm-4">
       <div class="ls-box">
         <h6 class="ls-title-4">Erros</h6>
         <span class="ls-board-data">
@@ -42,7 +66,7 @@ layout: panel2
       </div>
     </div>
   </div>
-  <img src="<%= base_url %>/<%= images_dir %>/graph-example-2.jpg">
+  <img style="width: 100% " src="<%= base_url %>/<%= images_dir %>/graph-example-2.jpg">
 </div>
 
 <div class="ls-box ls-board-box">
@@ -75,7 +99,7 @@ layout: panel2
       <div class="ls-box">
         <h6 class="ls-title-4">Total utilizados</h6>
         <span class="ls-board-data">
-          <strong>689</strong>
+          <strong>10.743</strong>
         </span>
       </div>
     </div>

@@ -34,7 +34,10 @@
 
 .ls-board-data
   display: block
-  margin-bottom: 15px
+
+  & + [class*="ls-btn"]
+    margin-bottom: 15px
+
 
 .ls-info-header
   @extend .ls-clearfix
@@ -66,16 +69,20 @@
     margin: 20px 0 0
 
 //
-// Até Tablet
+// Do Tablet para frente
 //
 @media (min-width: $screen-sm)
   .ls-board-box
     margin-bottom: 0
     min-height: 170px
 
-    .ls-box
+    .row > [class*="col-"]
+      display: table
       min-height: 160px
 
+      .ls-box
+        display: table-cell
+        vertical-align: middle
 
   .ls-info-header
 
