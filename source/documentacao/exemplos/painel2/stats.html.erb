@@ -1,0 +1,221 @@
+---
+title: Relatórios
+layout: panel2
+---
+
+<h1 class="ls-title-intro ls-ico-stats">Relatórios</h1>
+
+<div class="ls-box-filter">
+  <form action="#" class="ls-form ls-form-inline ls-float-left">
+    <label class="ls-field">
+      <div data-ls-module="customFields">
+        <select name="">
+          <option value="">Dia atual</option>
+          <option value="">Última semana</option>
+          <option value="">Últimos 30 dias</option>
+          <option value="">Últimos 6 meses</option>
+          <option value="">Últimos 12 meses </option>
+        </select>
+      </div>
+    </label>
+    <div data-ls-module="dropdown" class="ls-dropdown">
+      <a href="#" class="ls-btn">Exportar</a>
+      <ul class="ls-dropdown-nav">
+        <li><a href="#" data-ls-module="modal" data-target="#modal_export">CSV</a></li>
+        <li><a href="#" data-ls-module="modal" data-target="#modal_export">XLS</a></li>
+        <li><a href="#" data-ls-module="modal" data-target="#modal_exported_reports">Relatórios exportados</a></li>
+      </ul>
+    </div>
+  </form>
+  <div class="ls-group-btn ls-group-active ls-float-right">
+    <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn ls-active ls-ico-chart-bar-up"></button>
+    <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
+  </div>
+</div>
+
+
+<ul class="ls-tabs-nav" id="awesome-tab">
+  <li class="ls-active"><a data-ls-module="tabs" href="#tab1">Geral</a></li>
+  <li><a data-ls-module="tabs" href="#tab2">Erros</a></li>
+</ul>
+<div class="ls-tabs-container" id="awesome-tab-content">
+  <div id="tab1" class="ls-tab-content ls-active">
+
+    <div class="ls-tab-content child1 ls-active">
+
+      <div id="sending-stats" class="row ls-board-box">
+        <div class="col-sm-4">
+          <div class="ls-box">
+            <h6 class="ls-title-4">Enviados</h6>
+            <span class="ls-board-data">
+              <strong>33</strong>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-sm-4 ls-board-box">
+          <div class="ls-box">
+            <h6 class="ls-title-4">Entregues</h6>
+            <span class="ls-board-data">
+              <strong>27</strong>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-sm-4 ls-board-box">
+          <div class="ls-box">
+            <h6 class="ls-title-4">Erros</h6>
+            <span class="ls-board-data">
+              <strong>16</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <img src="<%= base_url %>/<%= images_dir %>/graph-example-2.jpg">
+
+    </div>
+
+    <div class="ls-tab-content child2">
+
+      <div id="sending-stats" class="row ls-board-box">
+        <div class="col-sm-4">
+          <div class="ls-box">
+            <h6 class="ls-title-4">Enviados</h6>
+            <span class="ls-board-data">
+              <strong>33</strong>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-sm-4 ls-board-box">
+          <div class="ls-box">
+            <h6 class="ls-title-4">Entregues</h6>
+            <span class="ls-board-data">
+              <strong>27</strong>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-sm-4 ls-board-box">
+          <div class="ls-box">
+            <h6 class="ls-title-4">Erros</h6>
+            <span class="ls-board-data">
+              <strong>16</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th class="ls-txt-center">Hora</th>
+            <th class="ls-txt-center">Enviados</th>
+            <th class="ls-txt-center hidden-xs">Bounces</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%- 5.times do |num| %>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+              <td class="ls-txt-center hidden-xs">0</td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="tab2" class="ls-tab-content">
+
+    <div class="ls-tab-content child1 ls-active">
+      <p>Erros de recebimento para 6 destinatários</p>
+      <img src="<%= base_url %>/<%= images_dir %>/graph-example-2.jpg">
+    </div>
+
+    <div class="ls-tab-content child2">
+      <p>Erros de recebimento para 6 destinatários</p>
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th class="ls-txt-center">Tipo de erro</th>
+            <th class="ls-txt-center" colspan="2">Quantidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ls-txt-center">Servidor de destino não existe ou é incapaz de receber emails</td>
+            <td class="ls-txt-center">3</td>
+            <td class="ls-txt-center">50%</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal de exportação -->
+<div class="ls-modal fade" id="modal_export">
+  <div class="ls-modal-box">
+    <div class="ls-modal-header">
+      <button data-dismiss="modal">&times;</button>
+      <h4 class="ls-modal-title">Exportar CSV</h4>
+    </div>
+    <div class="ls-modal-body">
+
+    </div>
+    <div class="ls-modal-footer">
+      <a class="ls-btn float-right ls-float-right" data-dismiss="modal">Close</a>
+      <a class="ls-btn-primary">Save changes</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de exportação realizadas -->
+<div class="ls-modal fade" id="modal_exported_reports">
+  <div class="ls-modal-box">
+    <div class="ls-modal-header">
+      <button data-dismiss="modal">&times;</button>
+      <h4 class="ls-modal-title">Relatórios Exportados</h4>
+    </div>
+    <div class="ls-modal-body">
+      <p>Os arquivos ficarão disponíveis por 7 dias após a data de criação.</p>
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th>Nome do arquivo</th>
+            <th>Data da criação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%- 5.times do |num| %>
+            <tr>
+              <td>Relatorios_Enviados_02-07-2013_01-07-2014.csv</td>
+              <td>
+                <p>01/07/2014 - 10:03</p>
+                <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+                  <a href="#" class="ls-btn-sm">Ações </a>
+                  <ul class="ls-dropdown-nav">
+                    <li><a href="#" >Baixar arquivo</a></li>
+                    <li><a href="#" class="ls-color-danger">Excluir</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+          <tr>
+            <td>Relatorios_Enviados_02-07-2013_01-07-2014.csv <span class="ls-tag-danger">Falha...</span></td>
+            <td>
+              <p>20/06/2014 - 0:00</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+

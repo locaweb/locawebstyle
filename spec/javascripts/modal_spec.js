@@ -5,6 +5,10 @@ describe("Modal: ", function() {
     locastyle.modal.init();
   });
 
+  afterEach(function() {
+    locastyle.modal.close();
+  });
+
   describe('When click on element with data-ls-module="modal"', function() {
     it('should add class opened on .ls-modal', function() {
       $('[data-ls-module="modal"]').trigger("click");

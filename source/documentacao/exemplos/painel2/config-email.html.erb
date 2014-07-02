@@ -1,0 +1,38 @@
+---
+title: Dados do Servidor SMTP
+layout: panel2
+---
+
+  <h1 class="ls-title-intro ls-ico-cog">E-mail de remetente</h1>
+  <p>Adicione e gerencie o e-mail de remetente que será exibido em seus envios.</p>
+  <div class="ls-box ls-box-gray">
+    <form action="" class="ls-form ls-form-horizontal row">
+      <fieldset>
+        <label class="ls-field col-md-4 col-xs-12">
+          <b class="ls-label">E-mail</b>
+          <input type="email" autofocus name="nome" required >
+        </label>
+        <div class="ls-field col-md-4 col-xs-12">
+          <button type="submit" class="ls-btn-primary">Adicionar</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>E-mail adicionado</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%- 5.times do |num| %>
+        <tr>
+          <td>qa@teste.com</td>
+          <td class="ls-txt-right"><span class="ls-tag-success">Confirmado</span></td>
+          <td class="ls-txt-right"> <button data-action="<%= base_url() %>" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<h3 class='ls-title-2'>Você tem certeza que deseja excluir esse email?</h2><p>Many desktop publishing packages and web page editors now use Lorem Ipsum.</p>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-btn-danger ls-btn-sm">Excluir</button>  </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

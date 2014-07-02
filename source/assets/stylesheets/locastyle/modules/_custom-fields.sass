@@ -12,6 +12,10 @@
     &:focus ~ .ls-field-custom-select-one
       box-shadow: 0 0 2px 3px rgba(131,173,211,1)
 
+    &:focus ~ .ls-field-custom-select-one,
+    &:hover ~ .ls-field-custom-select-one
+      background-color: #dfdfde
+
   .ls-field-custom-checkbox,
   .ls-field-custom-radio
     width: 30px
@@ -34,23 +38,25 @@
     height: $inputHeight
     width: 100%
     display: inline-block
-    padding: 0 10px
+    padding: 0 10px 0 15px
     border: 1px solid $gray2
-    border-radius: 3px
+    border-radius: 4px
     background-color: #fff
     color: $gray4
     line-height: $inputHeight
-    font-size: .8rem
+    overflow: hidden
+    font-size: .875rem
 
     &:before
-      +arrow-down($gray4, $inputHeight/6)
+      +arrow-down($gray4, 5px)
       position: absolute
-      top: calc( (#{$inputHeight}/2) - (#{$inputHeight}/8))
-      right: $inputHeight/4
+      top: 50%
+      margin-top: -2px
+      right: 15px
       z-index: 0
 
 [data-ls-module="customFields"]
-  height: 37px
+  height: $inputHeight
 
   select
     // +appearance(none)
