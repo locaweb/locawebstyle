@@ -50,11 +50,6 @@ locastyle.collapse = (function() {
             var $input = $(input);
             var $collapse = $input.parents(config.selectors.container)
             $collapse.toggleClass(config.classes.open, $input.is(':checked'));
-            // $(config.selectors.trigger, $collapse).on('click.ls', function(evt) {
-            //   // evt.stopPropagation()
-            //   // evt.preventDefault();
-            //   // $(this).find(':input').trigger('change')
-            // });
           });
         }).trigger('change.ls');
       } else {
