@@ -78,7 +78,7 @@ set :images_dir, 'assets/images'
 activate :directory_indexes
 activate :i18n
 
-require 'active_support/core_ext'
+require 'active_support'
 activate :blog do |blog|
     blog.prefix = "changelog"
     blog.permalink = ":year/:month/:day/:title"

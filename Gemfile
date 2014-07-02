@@ -18,3 +18,5 @@ gem "pry"
 
 gem 'middleman-gh-pages'
 gem "middleman-syntax"
+
+gem 'activesupport', '~> 4.1.2'
