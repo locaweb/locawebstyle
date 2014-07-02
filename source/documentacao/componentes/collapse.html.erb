@@ -26,6 +26,11 @@ type: component
   </div>
   <% code("html") do %><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.words 3)  }) %><% end %>
 
+  <div class="ls-box ls-background-info">
+    <h5 class="ls-title-4">Atenção</h5>
+    <p>Nos exemplos usamos o elemento <code>A</code> com a classe <code>.ls-collapse-header</code>, mas qualquer elemento, como um DIV por exemplo, pode receber essa classe.</p>
+  </div>
+
   <h2 class="doc-title-3">Parâmetros adicionais</h2>
 
   <table class="ls-table">
@@ -88,4 +93,94 @@ type: component
   <p>Para abrir/fechar um <i>collapse</i> usando javascript, use:</p>
 
   <% code("javascript") do %>locastyle.collapse.toggle('#collapse1')<% end %>
+
+
+  <h2 class="doc-title-3">Accordeon com <code>input[radio]</code> ou <code>input[checkbox]</code></h2>
+
+  <p>Para vincular um collapse ou accordeon a um <i>input</i>, o elemento <code>.ls-collapse-header</code> precisar ser necessariamente um <code>label</code>. A estrutura do collapse ainda continua normal.
+
+  <p>Accordeon com <i>radio</i>:</p>
+
+  <div class="ls-box-demo">
+
+    <div data-ls-module="collapse" class="ls-collapse">
+      <label class="ls-collapse-header">
+        <h3 class="ls-collapse-title">
+          <input type="radio" name="inputRadio" value="1">
+          Título 1
+        </h3>
+      </label>
+      <div class="ls-collapse-body">
+        <p>
+          <%= lorem.paragraphs 1 %>
+        </p>
+      </div>
+    </div>
+    <div data-ls-module="collapse" class="ls-collapse">
+      <label class="ls-collapse-header">
+        <h3 class="ls-collapse-title">
+          <input type="radio" name="inputRadio" value="2">
+          Título 2
+        </h3>
+      </label>
+      <div class="ls-collapse-body">
+        <p>
+          <%= lorem.paragraphs 1 %>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <p>Accordeon com <i>checkbox</i>:</p>
+
+  <div class="ls-box-demo">
+
+    <div data-ls-module="collapse" class="ls-collapse">
+      <label class="ls-collapse-header">
+        <h3 class="ls-collapse-title">
+          <input type="checkbox" name="inputcheckbox1" value="1">
+          Título 1
+        </h3>
+      </label>
+      <div class="ls-collapse-body">
+        <p>
+          <%= lorem.paragraphs 1 %>
+        </p>
+      </div>
+    </div>
+    <div data-ls-module="collapse" class="ls-collapse">
+      <label class="ls-collapse-header">
+        <h3 class="ls-collapse-title">
+          <input type="checkbox" name="inputcheckbox2" value="2" checked>
+          Título 2
+        </h3>
+      </label>
+      <div class="ls-collapse-body">
+        <p>
+          <%= lorem.paragraphs 1 %>
+        </p>
+      </div>
+    </div>
+    <div data-ls-module="collapse" class="ls-collapse">
+      <label class="ls-collapse-header">
+        <h3 class="ls-collapse-title">
+          <input type="checkbox" name="inputcheckbox3" value="3">
+          Título 3
+        </h3>
+      </label>
+      <div class="ls-collapse-body">
+        <p>
+          <%= lorem.paragraphs 1 %>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
 </section>
