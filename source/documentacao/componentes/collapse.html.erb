@@ -26,6 +26,11 @@ type: component
   </div>
   <% code("html") do %><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.words 3)  }) %><% end %>
 
+  <div class="ls-box ls-background-info">
+    <h5 class="ls-title-4">Atenção</h5>
+    <p>Nos exemplos usamos o elemento <code>A</code> com a classe <code>.ls-collapse-header</code>, mas qualquer elemento, como um DIV por exemplo, pode receber essa classe.</p>
+  </div>
+
   <h2 class="doc-title-3">Parâmetros adicionais</h2>
 
   <table class="ls-table">
@@ -92,7 +97,7 @@ type: component
 
   <h2 class="doc-title-3">Accordeon com <code>input[radio]</code> ou <code>input[checkbox]</code></h2>
 
-  <p>Para vincular um collapse ou accordeon a um <i>input</i>, substitua a tag <code>a</code> por um <code>label</code>, com o <i>input</i> dentro, ma mesma estrutura do <i>collapse</i> normal.</p>
+  <p>Para vincular um collapse ou accordeon a um <i>input</i>, o elemento <code>.ls-collapse-header</code> precisar ser necessariamente um <code>label</code>. A estrutura do collapse ainda continua normal.
 
   <p>Accordeon com <i>radio</i>:</p>
 
