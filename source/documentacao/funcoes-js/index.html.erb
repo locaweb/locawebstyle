@@ -69,4 +69,35 @@ type: funcoesjs
 <div class="exampleBox ls-box ls-background-warning">Uma mensagem bonita para caramba!</div>
   <% end %>
 
+  <p>Também é possível usar o comportamento em <code>inputs</code> do tipo <code>radio</code> e <code>checkbox</code>, sendo, quando marcados, inserem a classe, quando <b>desmarcados</b> removem a classe do elemento desejado. Exemplos:</p>
+
+  <div class="ls-box-demo">
+
+    <p>Checkbox</p>
+
+    <label><input type="checkbox" name="teste" value ="1" data-toggle-class="ls-display-none" data-target="#configs"> Configurações personalizadas</label>
+    <br><br>
+    <div id="configs" class="ls-box ls-display-none">
+      <%= lorem.words 3 %>
+    </div>
+
+    <hr>
+
+    <p>Radiogroup</p>
+
+    <label><input type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt1"> Opção 1</label>
+    <div id="opt1" class="ls-box ls-display-none"> <%= lorem.words 3 %> </div>
+    <br>
+    <label><input type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt2"> Opção 2</label>
+    <div id="opt2" class="ls-box ls-display-none"> <%= lorem.words 3 %> </div>
+    <br>
+    <label><input type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt3"> Opção 3</label>
+    <div id="opt3" class="ls-box ls-display-none"> <%= lorem.words 3 %> </div>
+    <br>
+
+  </div>
+  <br>
+  <br>
+  <br>
+
 </section>
