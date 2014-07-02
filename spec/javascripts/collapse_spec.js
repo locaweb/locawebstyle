@@ -2,11 +2,12 @@ describe('Collapse:', function() {
   beforeEach(function() {
     loadFixtures('collapse_fixture.html');
     locastyle.collapse.init();
-    jasmine.clock().install();
+    // jasmine.clock().install();
   });
 
   afterEach(function() {
-    jasmine.clock().uninstall();
+    // jasmine.clock().uninstall();
+    // done();
   });
 
 
@@ -26,6 +27,52 @@ describe('Collapse:', function() {
       var $collapseTitle = $collapse.find('.ls-collapse-header');
       $collapseTitle.trigger("click");
       expect($collapse.hasClass('ls-collapse-open')).toBe(false);
+    });
+
+  });
+
+  describe('With input checkbox', function () {
+
+    it('checked on load, collapse starts open', function () {
+      var $collapse = $('#collapse9');
+      $collapse.find('input').trigger('change');
+      expect($collapse.hasClass('ls-collapse-open')).toBe(true);
+    });
+
+    it('when check, open ', function () {
+      var $collapse = $('#collapse8');
+      $collapse.find('input').prop('checked', true).trigger('change');
+      expect($collapse.hasClass('ls-collapse-open')).toBe(true);
+    });
+
+    it('when check, later uncheck close ', function () {
+      var $collapse = $('#collapse8');
+      $collapse.find('input').prop('checked', true).trigger('change');
+      expect($collapse.hasClass('ls-collapse-open')).toBe(true);
+      $collapse.find('input').prop('checked', false).trigger('change');
+      expect($collapse.hasClass('ls-collapse-open')).toBe(false);
+    });
+
+  });
+
+
+  describe('With input radio', function () {
+
+    it('checked on load, collapse starts open', function () {
+      var $collapse = $('#collapse10');
+      $collapse.find('input').trigger('change');
+      expect($collapse.hasClass('ls-collapse-open')).toBe(true);
+    });
+
+    it('check a item of group, open it, close the others', function () {
+      var $collapse1 = $('#collapse11');
+      var $collapse2 = $('#collapse10');
+      $collapse1.find('input').prop('checked', true).trigger('change');
+      expect($collapse1.hasClass('ls-collapse-open')).toBe(true);
+      expect($collapse2.hasClass('ls-collapse-open')).toBe(false);
+      $collapse2.find('input').prop('checked', true).trigger('change');
+      expect($collapse1.hasClass('ls-collapse-open')).toBe(false);
+      expect($collapse2.hasClass('ls-collapse-open')).toBe(true);
     });
 
   });
