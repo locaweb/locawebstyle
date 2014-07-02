@@ -94,6 +94,22 @@ describe("Locastyle in general: ", function() {
       })
     })
 
-  })
+  });
+
+  describe('Toggle', function() {
+
+    describe('Class', function() {
+
+      it('Remove class if checkbox is checked', function () {
+        var $checkbox = $('#toggleClassCheckbox');
+        $checkbox.prop('checked', true).trigger('click');
+        expect($('#configs').hasClass('ls-display-none')).toBe(true);
+      });
+
+
+    });
+
+
+  });
 
 });
