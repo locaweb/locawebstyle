@@ -14,17 +14,17 @@ type: component
 
 
   <div class="ls-box-demo">
-    <%= partial('documentacao/shared/collapse', :locals => { :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %>
+    <%= partial('documentacao/shared/collapse/collapse', :locals => { :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %>
   </div>
 
-  <% code("html") do %><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => "Título", content: (lorem.words 1)}) %><% end %>
+  <% code("html") do %><%= partial('documentacao/shared/collapse/collapse', :locals => { :quant => 1, :header => "Título", content: (lorem.words 1)}) %><% end %>
 
   <p>Os títulos, vísiveis quando o <i>collapse</i> está fechado, podem conter qualquer conteúdo, por exemplo:</p>
 
   <div class="ls-box-demo">
-    <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.paragraphs 1)  }) %>
+    <%= partial('documentacao/shared/collapse/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.paragraphs 1)  }) %>
   </div>
-  <% code("html") do %><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.words 3)  }) %><% end %>
+  <% code("html") do %><%= partial('documentacao/shared/collapse/collapse', :locals => { :quant => 1, :header => { title: 'Titulo', desc: "Descrição para este collapse" }, content: (lorem.words 3)  }) %><% end %>
 
   <div class="ls-box ls-background-info">
     <h5 class="ls-title-4">Atenção</h5>
@@ -58,14 +58,14 @@ type: component
   <h2 class="doc-title-3">Exemplos:</h2>
 
   <div class="ls-box-demo">
-      <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.paragraphs 2), startOpen: false  }) %>
+      <%= partial('documentacao/shared/collapse/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.paragraphs 2), startOpen: false  }) %>
   </div>
-  <% code("html") do %><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.words 2), startOpen: false  }) %><% end %>
+  <% code("html") do %><%= partial('documentacao/shared/collapse/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto com a classe .ls-collapse-open', content: (lorem.words 2), startOpen: false  }) %><% end %>
 
   <div class="ls-box-demo">
-    <%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.paragraphs 2), startOpen: false, alwaysOpen: true  }) %>
+    <%= partial('documentacao/shared/collapse/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.paragraphs 2), startOpen: false, alwaysOpen: true  }) %>
   </div>
-  <% code("html") do %><%= partial('documentacao/shared/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.words 2), startOpen: false, alwaysOpen: true  }) %><% end %>
+  <% code("html") do %><%= partial('documentacao/shared/collapse/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.words 2), startOpen: false, alwaysOpen: true  }) %><% end %>
 
   <h2 class="doc-title-3">Accordeon</h2>
   <p><i>Accordeon</i> é um conjunto de <i>collapses</i> agrupados, onde apenas um deles pernace aberto</p>
@@ -73,10 +73,10 @@ type: component
 
   <div class="ls-box-demo">
     <div class="ls-collapse-group">
-      <%= partial('documentacao/shared/collapse', :locals => { :quant => 5, :header => "Título", content: (lorem.paragraphs 1)  }) %>
+      <%= partial('documentacao/shared/collapse/collapse', :locals => { :quant => 5, :header => "Título", content: (lorem.paragraphs 1)  }) %>
     </div>
   </div>
-  <% code("html") do %><%= partial('documentacao/shared/collapse', :locals => { :quant => 5, :header => "Título", content: (lorem.paragraphs 1)  }) %><% end %>
+  <% code("html") do %><%= partial('documentacao/shared/collapse/collapse', :locals => { :quant => 5, :header => "Título", content: (lorem.paragraphs 1)  }) %><% end %>
 
   <p>Os <i>collapses</i> agrupados em um <i>accordeon</i> aceitam as mesmas configurações que um <i>collapse</i> normal.</p>
 
@@ -87,7 +87,7 @@ type: component
     <button type="button" class="ls-btn-primary" data-toggle-collapse="#collapse1">Abre/Fecha o <i>collapse</i> <b>#collapse1</b></button>
     <br>
     <br>
-    <%= partial('documentacao/shared/collapse', :locals => { id: "collapse1",:quant => 1, :header => "Título", content: (lorem.paragraphs 1)  }) %>
+    <%= partial('documentacao/shared/collapse/collapse', :locals => { id: "collapse1",:quant => 1, :header => "Título", content: (lorem.paragraphs 1)  }) %>
   </div>
 
   <p>Para abrir/fechar um <i>collapse</i> usando javascript, use:</p>
@@ -102,85 +102,14 @@ type: component
   <p>Accordeon com <i>radio</i>:</p>
 
   <div class="ls-box-demo">
-
-    <div data-ls-module="collapse" class="ls-collapse">
-      <label class="ls-collapse-header">
-        <h3 class="ls-collapse-title">
-          <input type="radio" name="inputRadio" value="1">
-          Título 1
-        </h3>
-      </label>
-      <div class="ls-collapse-body">
-        <p>
-          <%= lorem.paragraphs 1 %>
-        </p>
-      </div>
-    </div>
-    <div data-ls-module="collapse" class="ls-collapse">
-      <label class="ls-collapse-header">
-        <h3 class="ls-collapse-title">
-          <input type="radio" name="inputRadio" value="2">
-          Título 2
-        </h3>
-      </label>
-      <div class="ls-collapse-body">
-        <p>
-          <%= lorem.paragraphs 1 %>
-        </p>
-      </div>
-    </div>
-
+    <%= partial('documentacao/shared/collapse/collapse_input', :locals => { :quant => 2, :header => "Título", content: (lorem.paragraphs 1), type: "radio" }) %>
   </div>
+  <% code("html") do %><%= partial('documentacao/shared/collapse/collapse_input', :locals => { :quant => 1, :header => "Título", content: (lorem.paragraphs 1), type: "radio" }) %><% end %>
 
   <p>Accordeon com <i>checkbox</i>:</p>
 
   <div class="ls-box-demo">
-
-    <div data-ls-module="collapse" class="ls-collapse">
-      <label class="ls-collapse-header">
-        <h3 class="ls-collapse-title">
-          <input type="checkbox" name="inputcheckbox1" value="1">
-          Título 1
-        </h3>
-      </label>
-      <div class="ls-collapse-body">
-        <p>
-          <%= lorem.paragraphs 1 %>
-        </p>
-      </div>
-    </div>
-    <div data-ls-module="collapse" class="ls-collapse">
-      <label class="ls-collapse-header">
-        <h3 class="ls-collapse-title">
-          <input type="checkbox" name="inputcheckbox2" value="2" checked>
-          Título 2
-        </h3>
-      </label>
-      <div class="ls-collapse-body">
-        <p>
-          <%= lorem.paragraphs 1 %>
-        </p>
-      </div>
-    </div>
-    <div data-ls-module="collapse" class="ls-collapse">
-      <label class="ls-collapse-header">
-        <h3 class="ls-collapse-title">
-          <input type="checkbox" name="inputcheckbox3" value="3">
-          Título 3
-        </h3>
-      </label>
-      <div class="ls-collapse-body">
-        <p>
-          <%= lorem.paragraphs 1 %>
-        </p>
-      </div>
-    </div>
-
+    <%= partial('documentacao/shared/collapse/collapse_input', :locals => { :quant => 3, :header => "Título", content: (lorem.paragraphs 1), type: "checkbox" }) %>
   </div>
-
-
-
-
-
-
+  <% code("html") do %><%= partial('documentacao/shared/collapse/collapse_input', :locals => { :quant => 1, :header => "Título", content: (lorem.paragraphs 1), type: "checkbox" }) %><% end %>
 </section>
