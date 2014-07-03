@@ -20,36 +20,6 @@ locastyle.general = (function() {
     toggleFields();
   }
 
-  // Quando tem uma hash na url que seja igual a algum target no html
-  // esse método faz um trigger click no elemento
-  function _autoTrigger(){
-    // Esse ponto de exclamação é para funcionar no IE
-    var hash = window.location.hash.replace("!/#", "");
-    if(hash != ''){
-      $('[data-target=' + hash + ']').trigger('click');
-      $('a[href=' + hash + ']').trigger('click');
-
-      // A linha abaixo foi comentada pois adiciona uma classe na modal "collapse_opened"
-      // locastyle.collapse.toggle(hash)
-    }
-  }
-
-  function toggleFields(){
-    $('[data-ls-fields-enable]').on('click.ls', function(evt) {
-      evt.preventDefault();
-
-      var $this = $(this);
-      var $container = $($this.data('ls-fields-enable'));
-
-      $container
-        .toggleClass('ls-form-disable ls-active');
-
-      $container
-        .find(':input')
-          .toggleAttr('disabled');
-    });
-  }
-
   function _loadEvents() {
     $.each(events, function(eventDesc, fn) {
       var selectorEvent = eventDesc.split('|');
@@ -58,6 +28,24 @@ locastyle.general = (function() {
         var $this = $(this);
         fn(evt, $this);
       });
+    });
+  }
+
+  function _autoTrigger(){
+    var hash = window.location.hash.replace("!/#", "");
+    if(hash != ''){
+      $('[data-target=' + hash + ']').trigger('click');
+      $('a[href=' + hash + ']').trigger('click');
+    }
+  }
+
+  function toggleFields(){
+    $('[data-ls-fields-enable]').on('click.ls', function(evt) {
+      evt.preventDefault();
+      var $this = $(this);
+      var $container = $($this.data('ls-fields-enable'));
+      $container.toggleClass('ls-form-disable ls-active');
+      $container.find(':input').toggleAttr('disabled');
     });
   }
 
