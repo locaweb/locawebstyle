@@ -66,10 +66,20 @@ locastyle.general = (function() {
   }
 
   function _toggleClass(evt, $this) {
-    evt.preventDefault();
     var $target = $this.data('target') ? $($this.data('target')) : $this,
-      cssClass = $this.data('toggle-class');
-    $target.toggleClass(cssClass);
+        cssClass = $this.data('toggle-class');
+    if( /(radio)|(checkbox)/.test($this.attr('type'))  ){
+      $target.toggleClass(cssClass, !$this.prop('checked'));
+      $('[name="' + $this.attr('name') + '"]').not($this).each(function (evt) {
+        var $that = $(this);
+        var $target2 = $that.data('target') ? $($that.data('target')) : $that,
+        cssClass2 = $that.data('toggle-class');
+        $target2.toggleClass(cssClass2, $this.prop('checked'));
+      });
+    } else {
+      evt.preventDefault();
+      $target.toggleClass(cssClass);
+    }
   }
 
   function _toggleText(evt, $this) {
