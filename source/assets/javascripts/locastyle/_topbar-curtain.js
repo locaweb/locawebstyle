@@ -69,7 +69,7 @@ locastyle.topbarCurtain = (function() {
   }
 
   function bindTopCurtainTrigger(trigger) {
-    $(trigger).on("click.ls", function(evt){
+    $(trigger).on("click.ls, ls.toggle", function(evt){
       evt.stopPropagation();
       var targetState = $($(trigger).data("target")).hasClass("ls-active");
       hideCurtains();
