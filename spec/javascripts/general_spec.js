@@ -94,6 +94,75 @@ describe("Locastyle in general: ", function() {
       })
     })
 
-  })
+  });
+
+  describe('Toggle', function() {
+
+    describe('Class: ', function() {
+
+      describe('any element', function () {
+
+        it('without target togle class of himself', function () {
+          var $elem = $('#toggleTextWithoutTarget');
+          $elem.trigger('click');
+          expect($elem.hasClass('any-class')).toBe(false);
+          $elem.trigger('click');
+          expect($elem.hasClass('any-class')).toBe(true);
+        });
+
+        it('with [data-toggle-class] toggle class of target', function () {
+          var $elem = $('#toggleTextWithTarget');
+          var $target = $('#target1');
+          $elem.trigger('click');
+          expect($target.hasClass('ls-display-none')).toBe(false);
+          $elem.trigger('click');
+          expect($target.hasClass('ls-display-none')).toBe(true);
+        });
+
+      });
+
+      describe('Checkbox', function () {
+
+        it('Remove class when checkbox is checked', function () {
+          var $checkbox = $('#toggleClassCheckbox');
+          $checkbox.trigger('click');
+          expect($('#configs').hasClass('ls-display-none')).toBe(false);
+        });
+
+        it('Add class when checkbox not checked', function () {
+          var $checkbox = $('#toggleClassCheckbox');
+          $checkbox.prop('checked', true);
+          $checkbox.trigger('click')
+          expect($('#configs').hasClass('ls-display-none')).toBe(true);
+        });
+
+      });
+
+      describe('Radio group - ', function () {
+
+        it('on radio check, remove class of target', function () {
+          var $radio = $('#radio1');
+          $radio.prop('checked', true).trigger('click');
+          expect($('#opt1').hasClass('ls-display-none')).toBe(false);
+        });
+
+        it('on check another radio, remove class from his target, add class in target of old checked radio', function () {
+          var $radio1 = $('#radio1');
+          var $radio2 = $('#radio2');
+          var $target1 = $('#opt1');
+          var $target2 = $('#opt2');
+          $radio1.prop('checked', true).trigger('click');
+          expect($target1.hasClass('ls-display-none')).toBe(false);
+          $radio2.prop('checked', true).trigger('click');
+          expect($target1.hasClass('ls-display-none')).toBe(true);
+          expect($target2.hasClass('ls-display-none')).toBe(false);
+        });
+
+      });
+
+    });
+
+
+  });
 
 });

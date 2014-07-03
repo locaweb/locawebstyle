@@ -43,3 +43,24 @@
 <input data-ls-fields-enable>
 
 <input class="ls-disabled">
+
+
+<a href="#" data-toggle-class="ls-display-none" data-target="#target1" id="toggleTextWithTarget">teste</a>
+<div id="target1" class="ls-display-none">teste</div>
+
+<a href="#" data-toggle-class="any-class" class="any-class" id="toggleTextWithoutTarget">teste</a>
+
+<label><input id="toggleClassCheckbox" type="checkbox" name="teste" value ="1" data-toggle-class="ls-display-none" data-target="#configs"> Configurações personalizadas</label>
+<div id="configs" class="ls-box ls-display-none">
+  teste
+</div>
+
+<label><input id="radio1" type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt1"> Opção 1</label>
+<div id="opt1" class="ls-box ls-display-none"> <%= lorem.words 3 %> </div>
+<br>
+<label><input id="radio2" type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt2"> Opção 2</label>
+<div id="opt2" class="ls-box ls-display-none"> <%= lorem.words 3 %> </div>
+<br>
+<label><input id="radio3" type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt3"> Opção 3</label>
+<div id="opt3" class="ls-box ls-display-none"> <%= lorem.words 3 %> </div>
+<br>
