@@ -34,7 +34,7 @@ tourGuiado = (function() {
         placement: 'right',
         arrowOffset: 'center',
         onNext: function(){
-          $('.ls-submenu > a').click();
+          $('.ls-submenu:not(".ls-active") > a').click();
         }
       },
       {
@@ -43,13 +43,7 @@ tourGuiado = (function() {
         content: 'Agora o Locaweb Style possui menu na lateral.',
         placement: 'right',
         arrowOffset: 'center',
-        yOffset: 30,
-        onPrev: function(){
-          $('.ls-submenu > a').click();
-        },
-        onNext: function(){
-          $('.ls-submenu > a').click();
-        }
+        yOffset: 30
       },
       {
         target: '.ls-title-intro',
@@ -58,10 +52,8 @@ tourGuiado = (function() {
         placement: 'bottom',
         arrowOffset: 'center',
         yOffset: -30,
-        xOffset: 10,
-        onPrev: function(){
-          $('.ls-submenu > a').click();
-        },
+        xOffset: 10
+
       },
       {
         target: '.ls-footer',
@@ -69,8 +61,38 @@ tourGuiado = (function() {
         content: 'Este é o footer, que tem um título, links de apoio e textos informativos.',
         placement: 'top',
         arrowOffset: 'center',
-        yOffset: 30
-      }
+        yOffset: 30,
+        onNext: function(){
+          $('.ls-alerts-list .ls-ico-bell-o').trigger('click');
+        }
+      },
+      {
+        target: 'ls-notification-curtain',
+        title: 'Notificações',
+        content: 'Esta é a area para Notificações do Painel',
+        placement: 'left',
+        arrowOffset: 'center',
+        xOffset: 30,
+        onPrev: function(){
+          $('.ls-alerts-list .ls-ico-bell-o').trigger('click');
+        },
+        onNext: function(){
+          $('.ls-alerts-list .ls-ico-bell-o').trigger('click');
+          $('.ls-user-account a:eq(0)').trigger('click');
+        }
+      },
+      {
+        target: '.ls-user-account .ls-dropdown-nav',
+        title: 'Dados da conta',
+        content: 'Este é o menu para dados da conta do usuário',
+        placement: 'left',
+        arrowOffset: 'center',
+        xOffset: 30,
+        onPrev: function(){
+          $('.ls-ico-bell-o').trigger('click');
+        },
+      },
+
     ]
   };
 
