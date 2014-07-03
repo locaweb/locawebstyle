@@ -149,6 +149,10 @@
         a
           background-color: rgba($gray4,.5)
 
+          &:hover,
+          &:focus
+            padding-left: 65px
+
         &:after
           +rotate(180deg)
           +single-transition(all, .2s)
@@ -166,7 +170,6 @@
             border-bottom: none
 
           a
-            +single-transition(none)
             padding: 15px 15px 15px 55px
             font-weight: 400
 
