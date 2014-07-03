@@ -17,7 +17,7 @@ locastyle.topbarCurtain = (function() {
   }
 
   function unbind() {
-    $(config.module).off("click.ls");
+    $(config.module).off("click.ls, ls.toggleTopCurtain");
     $(".ls-notification-list").off("click.ls");
     $("body").off("click.lsTopCurtain");
   }
@@ -69,7 +69,7 @@ locastyle.topbarCurtain = (function() {
   }
 
   function bindTopCurtainTrigger(trigger) {
-    $(trigger).on("click.ls, ls.toggle", function(evt){
+    $(trigger).on("click.ls, ls.toggleTopCurtain", function(evt){
       evt.stopPropagation();
       var targetState = $($(trigger).data("target")).hasClass("ls-active");
       hideCurtains();
