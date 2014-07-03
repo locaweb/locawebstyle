@@ -75,6 +75,7 @@ locastyle.form = (function() {
     $('.ls-mask-cpf').mask('000.000.000-00', {reverse: true});
     $('.ls-mask-cnpj').mask('00.000.000/0000-00', {reverse: true});
     $('.ls-mask-money').mask("#.##0,00", {reverse: true, maxlength: false});
+    $('.ls-mask-number').mask("#.##0", {reverse: true, maxlength: false});
     $('.ls-mask-ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {translation: {'Z': {pattern: /[0-9]/, optional: true}}});
     $('.ls-mask-percent').mask('##0,00%', {reverse: true});
   }
