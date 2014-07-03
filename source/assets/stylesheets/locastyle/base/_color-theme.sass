@@ -42,16 +42,13 @@
         &[class*="ls-ico"]:before
           color: $color3
 
-      .ls-title-2
-        color: $color3
-
       .ls-menu
         a
           &:hover,
           &:focus
-            background-color: $gray4
+            background-color: rgba($gray4,.5)
 
-        li.ls-active > a
+        li.ls-active:not(.ls-submenu) > a
           background-color: $gray4
           border-left-color: $color3
 
