@@ -1,0 +1,19 @@
+---
+title: Exibir senha
+description: Exibe e esconde a senha nos campos password
+type: forms
+---
+<%= partial 'partials/doc-menu-forms'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <p>Para altera um campo <code>type password</code> para um <code>text</code> você precisa passar no elemento que vai fazer esse bind, o <code>data-target</code> que é o mesmo id do campo que deseja mudar e a classe <code>ls-toggle-pass</code>, e se quiser fazer um toggle de classes, no mesmo bind, você precisa colocar o <code>data-toggle-class</code> e passar somente <code>2</code> classes separadas por virgula, assim <code>ls-ico-eye, ls-ico-eye-blocked</code>.</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/password' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/password' %><% end %>
+
+</section>
