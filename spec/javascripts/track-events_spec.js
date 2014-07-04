@@ -114,6 +114,19 @@ describe("Track Events: ", function() {
       });
     });
 
+    describe("When click on link on #on_page_button_with_cutom_args", function () {
+      it("should overwrite the action and label, and call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "my_custom_action",
+          label: "my_custom_label"
+        }
+        spyOn(window, "ga");
+        $("#on_page_buttons #on_page_button_with_cutom_args").trigger("click.ls");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
     describe("When click on link on #common_on_page_button", function () {
       it("should call ga with expected options as arguments", function () {
         var expectedOptions = {
