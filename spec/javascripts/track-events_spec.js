@@ -167,6 +167,17 @@ describe("Track Events: ", function() {
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });
+
+    describe('Unbind: When trackEvents is initialized multiple times', function () {
+      it('should not call ga multiple times when changing a select', function () {
+        spyOn(window, "ga");
+        locastyle.trackEvents.init();
+        locastyle.trackEvents.init();
+        $("#select_sample_tobe_tracked_once").val("last_week");
+        $("#select_sample_tobe_tracked_once").trigger("change");
+        expect(window.ga.calls.count()).toEqual(1);
+      });
+    });
   });
 
 });
