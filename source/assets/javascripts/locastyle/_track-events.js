@@ -82,7 +82,8 @@ locastyle.trackEvents = (function() {
   }
 
   function bindSelects(element, options) {
-    $(element).on("change", function () {
+    $(element).off("change.ls");
+    $(element).on("change.ls", function () {
       options.label = $(this).val();
       ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
     });
