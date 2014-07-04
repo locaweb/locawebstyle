@@ -120,11 +120,8 @@ locastyle.form = (function() {
   function togglePasswordField(){
     $('.ls-toggle-pass').on("click", function(e){
       e.preventDefault();
-
       var target = $(this).data('target');
-
       dataToggleClass($(this))
-
       if ($(target).attr('type') == 'password'){
         $(target).removeAttr('attr').prop('type','text');
       } else {
