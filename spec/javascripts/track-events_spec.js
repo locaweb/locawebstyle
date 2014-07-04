@@ -100,4 +100,19 @@ describe("Track Events: ", function() {
     });
   });
 
+  describe("Buttons", function () {
+    describe("When click on link on #common_on_page_button", function () {
+      it("should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "on_page_button_#",
+          label: "On page button"
+        }
+        spyOn(window, "ga");
+        $("#on_page_buttons #common_on_page_button").trigger("click.ls");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+  });
+
 });

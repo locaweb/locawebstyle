@@ -19,6 +19,7 @@ locastyle.trackEvents = (function() {
 
   function findTriggers(){
     findLinks();
+    findButtons();
   }
 
   function findLinks(){
@@ -30,6 +31,16 @@ locastyle.trackEvents = (function() {
       if($(item).attr("href").indexOf("#") === 0) {
         options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'on_page_link_' + $(item).attr("href");
       }
+      bindClickEvents(item, options);
+    });
+  }
+
+  function findButtons(){
+    var buttons = $("button");
+    $(buttons).each(function (index, item) {
+      var options = {}
+      options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'on_page_button_#';
+      options.label = $(item).data("ls-te-label") ? $(item).data("ls-te-label") : $(item).text();
       bindClickEvents(item, options);
     });
   }
