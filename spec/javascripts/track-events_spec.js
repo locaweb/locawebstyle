@@ -153,4 +153,20 @@ describe("Track Events: ", function() {
     });
   });
 
+  describe("Selects", function () {
+    describe("When change teh select #select_sample", function () {
+      it("should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "select_change_#select_sample",
+          label: "last_week"
+        }
+        spyOn(window, "ga");
+        $("#select_sample").val("last_week");
+        $("#select_sample").trigger("change");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+  });
+
 });

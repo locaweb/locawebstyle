@@ -21,6 +21,7 @@ locastyle.trackEvents = (function() {
     findLinks();
     findButtons();
     findForms();
+    findSelects();
   }
 
   function findLinks(){
@@ -56,6 +57,16 @@ locastyle.trackEvents = (function() {
     });
   }
 
+  function findSelects() {
+    var selects = $("select");
+    $(selects).each(function (index, item) {
+      var options = {}
+      options.action = "select_change_#" + ($(item).attr("id") || $(item).attr("name"));
+      options.label = "option";
+      bindSelects(item, options);
+    });
+  }
+
   function bindClickEvents(element, options){
     $(element).off("click.ls");
     $(element).on("click.ls", function () {
@@ -68,6 +79,13 @@ locastyle.trackEvents = (function() {
     $(element).on("submit.ls", function () {
       ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
     })
+  }
+
+  function bindSelects(element, options) {
+    $(element).on("change", function () {
+      options.label = $(this).val();
+      ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
+    });
   }
 
   return {
