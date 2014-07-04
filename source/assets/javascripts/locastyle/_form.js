@@ -110,16 +110,25 @@ locastyle.form = (function() {
     });
   }
 
+  function dataToggleClass($element){
+    if($($element).data('toggle-class') != undefined){
+      var getClass = $($element).data('toggle-class').split(',')
+      $($element).toggleClass(getClass[0]).toggleClass(getClass[1]);
+    }
+  }
+
   function togglePasswordField(){
     $('.ls-toggle-pass').on("click", function(e){
       e.preventDefault();
+
       var target = $(this).data('target');
+
+      dataToggleClass($(this))
+
       if ($(target).attr('type') == 'password'){
         $(target).removeAttr('attr').prop('type','text');
-        $(this).addClass('ls-ico-eye-blocked')
       } else {
         $(target).removeAttr('attr').prop('type','password');
-        $(this).removeClass('ls-ico-eye-blocked')
       }
     });
   }
