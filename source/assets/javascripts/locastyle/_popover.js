@@ -7,9 +7,7 @@ locastyle.popover = (function() {
   var defaults = {
     trigger      : 'click.ls',
     popoverClass : '.ls-popover',
-    module       : '[data-ls-module="popover"]',
-    openClass         : 'ls-popover-open',
-    openEvent         : 'ls.popoverOpen'
+    module       : '[data-ls-module="popover"]'
   }
 
   function init() {
@@ -19,12 +17,10 @@ locastyle.popover = (function() {
 
     $(defaults.module).each(function(index, element) {
       var dataTrigger = $(element).data("trigger");
-      var eventType = [ (dataTrigger == 'hover' ? 'mouseenter.ls' : defaults.trigger), defaults.openEvent].join(' ');
       bindAction({
         'element'  : element,
-        'eventType': eventType
+        'eventType': dataTrigger == 'hover' ? 'mouseenter.ls' : defaults.trigger
       });
-      $(this).hasClass(defaults.openClass) && $(this).trigger(defaults.openEvent);
     });
   }
 
@@ -49,7 +45,7 @@ locastyle.popover = (function() {
     var eventType = elementActions.eventType;
 
     //unbind before binding an event
-    $(element).off( eventType );
+    $(element).off(eventType);
 
     $(element).on(eventType, function(evt) {
       destroyPopover();
