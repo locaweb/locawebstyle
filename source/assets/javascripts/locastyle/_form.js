@@ -11,14 +11,13 @@ locastyle.form = (function() {
   }
 
   function init() {
-
     formDisable();
     formText();
     masks();
     textareaAutoresize();
     prefixSufix();
     datepicker();
-
+    togglePasswordField();
   }
 
   function datepicker () {
@@ -111,8 +110,32 @@ locastyle.form = (function() {
     });
   }
 
+  function dataToggleClass($element){
+    if($($element).data('toggle-class') != undefined){
+      var getClass = $($element).data('toggle-class').split(',')
+      $($element).toggleClass(getClass[0]).toggleClass(getClass[1]);
+    }
+  }
+
+  function togglePasswordField(){
+    $('.ls-toggle-pass').on("click", function(e){
+      e.preventDefault();
+
+      var target = $(this).data('target');
+
+      dataToggleClass($(this))
+
+      if ($(target).attr('type') == 'password'){
+        $(target).removeAttr('attr').prop('type','text');
+      } else {
+        $(target).removeAttr('attr').prop('type','password');
+      }
+    });
+  }
+
   return {
     init: init,
+    togglePasswordField: togglePasswordField
   }
 
 }());
