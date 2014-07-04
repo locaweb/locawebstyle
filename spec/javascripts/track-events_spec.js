@@ -21,7 +21,7 @@ describe("Track Events: ", function() {
 
   describe("Common links", function () {
     describe("When click on link on #home_menu_sample", function () {
-      it("should call ga with ('send', 'event', 'locastyle#track-events-test', 'open_link_#/home', 'Open link sample') arguments", function () {
+      it("should call ga with expected options as arguments", function () {
         var expectedOptions = {
           category: "locastyle#track-events-test",
           action: "open_link_#/home",
@@ -57,7 +57,7 @@ describe("Track Events: ", function() {
     });
 
     describe('Without data-ls-te-category on body: When click on #link_with_options', function () {
-      it('should create attribute automatic on body', function () {
+      it('should call ga with expected options as arguments', function () {
         $("body").removeAttr("data-ls-te-category");
         locastyle.trackEvents.init();
         var expectedOptions = {
@@ -98,7 +98,99 @@ describe("Track Events: ", function() {
         });
       });
     });
+  });
 
+  describe("Buttons", function () {
+    describe("When click on link on #common_on_page_button", function () {
+      it("should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "on_page_button_#",
+          label: "On page button"
+        }
+        spyOn(window, "ga");
+        $("#on_page_buttons #common_on_page_button").trigger("click.ls");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
+    describe("When click on link on #on_page_button_with_cutom_args", function () {
+      it("should overwrite the action and label, and call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "my_custom_action",
+          label: "my_custom_label"
+        }
+        spyOn(window, "ga");
+        $("#on_page_buttons #on_page_button_with_cutom_args").trigger("click.ls");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
+    describe("When click on link on #common_on_page_button", function () {
+      it("should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "on_page_button_#",
+          label: "On page button"
+        }
+        spyOn(window, "ga");
+        $("#on_page_buttons #common_on_page_button").trigger("click.ls");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+  });
+
+  describe("Forms", function () {
+    describe("When submit the #my_sample_form", function () {
+      it("should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "submit_form_#my_sample_form",
+          label: "Submit"
+        }
+        spyOn(window, "ga");
+        $("#my_sample_form").trigger("submit");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
+    describe('Unbind: When trackEvents is initialized multiple times', function () {
+      it('should not call ga multiple times when sending a form', function () {
+        spyOn(window, "ga");
+        locastyle.trackEvents.init();
+        locastyle.trackEvents.init();
+        $("#my_sample_form_to_tracked_once").trigger("submit");
+        expect(window.ga.calls.count()).toEqual(1);
+      });
+    });
+  });
+
+  describe("Selects", function () {
+    describe("When change teh select #select_sample", function () {
+      it("should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "select_change_#select_sample",
+          label: "last_week"
+        }
+        spyOn(window, "ga");
+        $("#select_sample").val("last_week");
+        $("#select_sample").trigger("change");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
+    describe('Unbind: When trackEvents is initialized multiple times', function () {
+      it('should not call ga multiple times when changing a select', function () {
+        spyOn(window, "ga");
+        locastyle.trackEvents.init();
+        locastyle.trackEvents.init();
+        $("#select_sample_tobe_tracked_once").val("last_week");
+        $("#select_sample_tobe_tracked_once").trigger("change");
+        expect(window.ga.calls.count()).toEqual(1);
+      });
+    });
   });
 
 });
