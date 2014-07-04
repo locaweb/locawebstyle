@@ -57,7 +57,7 @@ describe("Track Events: ", function() {
     });
 
     describe('Without data-ls-te-category on body: When click on #link_with_options', function () {
-      it('should create attribute automatic on body', function () {
+      it('should call ga with expected options as arguments', function () {
         $("body").removeAttr("data-ls-te-category");
         locastyle.trackEvents.init();
         var expectedOptions = {
@@ -143,7 +143,7 @@ describe("Track Events: ", function() {
     });
 
     describe('Unbind: When trackEvents is initialized multiple times', function () {
-      it('should not be called multiple times when sending a form', function () {
+      it('should not call ga multiple times when sending a form', function () {
         spyOn(window, "ga");
         locastyle.trackEvents.init();
         locastyle.trackEvents.init();
