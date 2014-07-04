@@ -42,8 +42,7 @@ layout: panel2
 <div class="ls-tabs-container" id="awesome-tab-content">
   <div id="tab1" class="ls-tab-content ls-active">
 
-    <div class="ls-tab-content child1 ls-active">
-      <div class="ls-board-box">
+    <div class="ls-board-box">
         <div id="sending-stats" class="row">
           <div class="col-sm-4">
             <div class="ls-box">
@@ -73,42 +72,14 @@ layout: panel2
           </div>
         </div>
       </div>
+    <div class="ls-tab-content child1 ls-active">
 
       <img style="width: 100%;" src="<%= base_url %>/<%= images_dir %>/graph-example-2.jpg">
 
     </div>
 
     <div class="ls-tab-content child2">
-      <div class="ls-board-box">
-        <div id="sending-stats" class="row">
-          <div class="col-sm-4">
-            <div class="ls-box">
-              <h6 class="ls-title-4">Enviados</h6>
-              <span class="ls-board-data">
-                <strong>33</strong>
-              </span>
-            </div>
-          </div>
 
-          <div class="col-sm-4">
-            <div class="ls-box">
-              <h6 class="ls-title-4">Entregues</h6>
-              <span class="ls-board-data">
-                <strong>27</strong>
-              </span>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div class="ls-box">
-              <h6 class="ls-title-4">Erros</h6>
-              <span class="ls-board-data">
-                <strong>16</strong>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <table class="ls-table">
         <thead>
@@ -129,6 +100,34 @@ layout: panel2
         </tbody>
       </table>
     </div>
+
+    <p><a href="#" data-toggle-class="ls-display-none" data-target="#infoAll">Exibir detalhes por destinatário</a></p>
+
+    <div id="infoAll" class="ls-display-none">
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Remetente</th>
+            <th>Destinatário</th>
+            <th>Status do envio</th>
+            <th>Assunto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%- 5.times do |num| %>
+            <tr>
+              <td>07/07/2014 - 15h59</td>
+              <td>fulano@dominio.com</td>
+              <td>beltrano@dominio.com</td>
+              <td>Entregue</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
   </div>
   <div id="tab2" class="ls-tab-content">
 
@@ -156,6 +155,35 @@ layout: panel2
         </tbody>
       </table>
     </div>
+
+
+    <p><a href="#" data-toggle-class="ls-display-none" data-target="#infoError">Exibir detalhes por destinatário</a></p>
+
+    <div id="infoError" class="ls-display-none">
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Remetente</th>
+            <th>Destinatário</th>
+            <th>Motivo do erro</th>
+            <th>Assunto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%- 5.times do |num| %>
+            <tr>
+              <td>07/07/2014 - 15h59</td>
+              <td>fulano@dominio.com</td>
+              <td>beltrano@dominio.com</td>
+              <td>Entregue</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 </div>
 
@@ -198,11 +226,11 @@ layout: panel2
               Apenas Erros
             </label>
             <label class="ls-label">
-              <input type="checkbox" name="export[send_notification]">
+              <input type="checkbox" name="export[send_notification]" data-toggle-class="ls-display-none" data-target="#notification">
               Receber notificação por e-mail quando o arquivo estiver disponível
             </label>
           </div>
-          <div class="ls-field col-md-12">
+          <div id="notification" class="ls-display-none ls-field col-md-12">
             <input id="export_email" name="export[email]" placeholder="Preencha com o seu e-mail" type="text" value="testeqa@teste.com.br">
           </div>
         </fieldset>
