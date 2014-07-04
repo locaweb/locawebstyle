@@ -21,7 +21,7 @@ describe("Track Events: ", function() {
 
   describe("Common links", function () {
     describe("When click on link on #home_menu_sample", function () {
-      it("should call ga with ('send', 'event', 'locastyle#track-events-test', 'open_link_#/home', 'Open link sample') arguments", function () {
+      it("should call ga with expected options as arguments", function () {
         var expectedOptions = {
           category: "locastyle#track-events-test",
           action: "open_link_#/home",
@@ -98,7 +98,6 @@ describe("Track Events: ", function() {
         });
       });
     });
-
   });
 
 });
