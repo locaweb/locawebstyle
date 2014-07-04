@@ -141,6 +141,16 @@ describe("Track Events: ", function() {
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });
+
+    describe('Unbind: When trackEvents is initialized multiple times', function () {
+      it('should not be called multiple times when sending a form', function () {
+        spyOn(window, "ga");
+        locastyle.trackEvents.init();
+        locastyle.trackEvents.init();
+        $("#my_sample_form_to_tracked_once").trigger("submit");
+        expect(window.ga.calls.count()).toEqual(1);
+      });
+    });
   });
 
 });

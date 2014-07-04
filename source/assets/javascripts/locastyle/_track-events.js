@@ -64,7 +64,8 @@ locastyle.trackEvents = (function() {
   }
 
   function bindFormEvents(element, options) {
-    $(element).on("submit", function () {
+    $(element).off("submit.ls");
+    $(element).on("submit.ls", function () {
       ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
     })
   }
