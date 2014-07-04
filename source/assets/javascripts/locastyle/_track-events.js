@@ -19,6 +19,9 @@ locastyle.trackEvents = (function() {
 
   function findTriggers(){
     findLinks();
+    findButtons();
+    findForms();
+    findSelects();
   }
 
   function findLinks(){
@@ -34,9 +37,54 @@ locastyle.trackEvents = (function() {
     });
   }
 
+  function findButtons(){
+    var buttons = $("button");
+    $(buttons).each(function (index, item) {
+      var options = {}
+      options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'on_page_button_#';
+      options.label = $(item).data("ls-te-label") ? $(item).data("ls-te-label") : $(item).text();
+      bindClickEvents(item, options);
+    });
+  }
+
+  function findForms(){
+    var forms = $("form");
+    $(forms).each(function (index, item) {
+      var options = {}
+      options.action = "submit_form_#" + ($(item).data("action") || $(item).attr("id") || $(item).attr("action"));
+      options.label = $(item).find(":submit[type=submit]").val();
+      bindFormEvents(item, options);
+    });
+  }
+
+  function findSelects() {
+    var selects = $("select");
+    $(selects).each(function (index, item) {
+      var options = {}
+      options.action = "select_change_#" + ($(item).attr("id") || $(item).attr("name"));
+      options.label = "option";
+      bindSelects(item, options);
+    });
+  }
+
   function bindClickEvents(element, options){
     $(element).off("click.ls");
     $(element).on("click.ls", function () {
+      ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
+    });
+  }
+
+  function bindFormEvents(element, options) {
+    $(element).off("submit.ls");
+    $(element).on("submit.ls", function () {
+      ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
+    })
+  }
+
+  function bindSelects(element, options) {
+    $(element).off("change.ls");
+    $(element).on("change.ls", function () {
+      options.label = $(this).val();
       ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
     });
   }
