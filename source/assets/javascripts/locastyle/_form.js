@@ -126,7 +126,7 @@ locastyle.form = (function() {
 
   return {
     init: init,
-    togglePasswordField: togglePasswordField,
+    togglePasswordField: togglePasswordField
   }
 
 }());
