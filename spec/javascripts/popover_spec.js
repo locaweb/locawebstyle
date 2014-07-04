@@ -37,7 +37,7 @@ describe("Popover: ", function() {
       expect($("#mypopovervisible .ls-popover")).not.toExist();
     });
 
-    it("should oepn popover when event ls.popoverOpen is triggered", function() {
+    it("should open popover when event ls.popoverOpen is triggered", function() {
       $('[data-ls-module="popover"]').trigger("ls.popoverOpen");
       expect($(".ls-popover")).toBeVisible();
     });
