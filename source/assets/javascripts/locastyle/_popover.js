@@ -49,7 +49,9 @@ locastyle.popover = (function() {
     var eventType = elementActions.eventType;
 
     //unbind before binding an event
-    $(element).off( eventType );
+    eventType.split(' ').map(function(eventItem){
+      $(element).off( eventItem );
+    });
 
     $(element).on(eventType, function(evt) {
       destroyPopover();
