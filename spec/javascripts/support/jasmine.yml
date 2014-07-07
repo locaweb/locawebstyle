@@ -22,6 +22,7 @@ src_files:
     - source/assets/javascripts/locastyle/_dropdown.js
     - source/assets/javascripts/locastyle/_general.js
     - source/assets/javascripts/locastyle/_modal.js
+    - source/assets/javascripts/locastyle/_form.js
     - source/assets/javascripts/locastyle/_dismiss.js
     - source/assets/javascripts/locastyle/_custom-fields.js
     - source/assets/javascripts/locastyle/_breakpoint-check.js
