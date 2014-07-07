@@ -8,8 +8,7 @@ locastyle.popover = (function() {
     trigger      : 'click.ls',
     popoverClass : '.ls-popover',
     module       : '[data-ls-module="popover"]',
-    openAttr         : '[data-ls-popover="open"]',
-    openEvent         : 'ls.popoverOpen'
+    openAttr         : '[data-ls-popover="open"]'
   }
 
   function init() {
@@ -19,12 +18,12 @@ locastyle.popover = (function() {
 
     $(defaults.module).each(function(index, element) {
       var dataTrigger = $(element).data("trigger");
-      var eventType = [ (dataTrigger == 'hover' ? 'mouseenter.ls' : defaults.trigger), defaults.openEvent].join(' ');
+      var eventType = (dataTrigger == 'hover' ? 'mouseenter.ls' : defaults.trigger);
       bindAction({
         'element'  : element,
         'eventType': eventType
       });
-      $(this).data('lsPopover') && $(this).trigger(defaults.openEvent);
+      $(this).data('lsPopover') && $(this).trigger(defaults.trigger);
     });
   }
 
@@ -63,7 +62,6 @@ locastyle.popover = (function() {
       elementData.element   = element;
       build(elementData, element);
     });
-
     if (eventType === 'mouseenter.ls') {
       //unbind before binding an event
       $(element).off('mouseleave.ls');
