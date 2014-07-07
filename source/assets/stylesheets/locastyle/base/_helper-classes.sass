@@ -77,6 +77,10 @@
 .ls-height-auto
   height: auto !important
 
+@for $width from 1 through 10
+  .ls-width-#{$width * 50 }
+    width: $width * 50px
+
 // MARGIN E PADDING
 .ls-no-margin
   margin: 0 !important

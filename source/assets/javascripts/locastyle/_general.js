@@ -9,16 +9,23 @@ locastyle.general = (function() {
   }
 
   function init() {
-    unbind();
+    _unbind();
     _autoTrigger();
     _loadEvents();
-    subMenu();
     _elementDisabled();
     _linkPreventDefault();
     _btnGroupActivationToogle();
-    menuAnchor();
-    toggleFields();
+    _menuAnchor();
+    _toggleFields();
+    subMenu();
   }
+
+  jQuery.fn.toggleAttr = function(attr) {
+    return this.each(function() {
+      var $this = $(this);
+      $this.attr(attr) ? $this.removeAttr(attr) : $this.attr(attr, attr);
+    });
+  };
 
   function _loadEvents() {
     $.each(events, function(eventDesc, fn) {
@@ -34,12 +41,11 @@ locastyle.general = (function() {
   function _autoTrigger(){
     var hash = window.location.hash.replace("!/#", "");
     if(hash != ''){
-      $('[data-target=' + hash + ']').trigger('click');
-      $('a[href=' + hash + ']').trigger('click');
+      $('[data-target=' + hash + '], a[href=' + hash + ']').trigger('click');
     }
   }
 
-  function toggleFields(){
+  function _toggleFields(){
     $('[data-ls-fields-enable]').on('click.ls', function(evt) {
       evt.preventDefault();
       var $this = $(this);
@@ -49,7 +55,7 @@ locastyle.general = (function() {
     });
   }
 
-  function menuAnchor() {
+  function _menuAnchor() {
     $(".ls-menu .ls-active > a").focus().css('outline', 'none')
   }
 
@@ -72,9 +78,9 @@ locastyle.general = (function() {
 
   function _toggleText(evt, $this) {
     evt.preventDefault();
-    var $target = $this.data('target-text') ? $($this.data('target-text')) : $this,
-      textChange = $this.data('toggle-text'),
-      textOriginal = $target.text();
+    var $target      = $this.data('target-text') ? $($this.data('target-text')) : $this,
+        textChange   = $this.data('toggle-text'),
+        textOriginal = $target.text();
     $this.data('toggle-text', textOriginal);
     $target.text(textChange);
   }
@@ -125,14 +131,7 @@ locastyle.general = (function() {
     });
   }
 
-  jQuery.fn.toggleAttr = function(attr) {
-    return this.each(function() {
-      var $this = $(this);
-      $this.attr(attr) ? $this.removeAttr(attr) : $this.attr(attr, attr);
-    });
-  };
-
-  function unbind () {
+  function _unbind () {
     $('[data-ls-fields-enable]').off('click.ls');
     $('.ls-submenu > a').off('click.ls');
     $(".ls-disabled, [disabled='disabled']").off('click');
