@@ -53,13 +53,13 @@ textarea
   +transition(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s)
   font-family: Open Sans, Arial, Helvetica, Sans-serif
   padding: 8px
-  padding-bottom: 7px
   vertical-align: middle
   background-color: #fff
   background-image: none
   border: 1px solid $gray2
   border-radius: 4px
   font-size: .875rem
+  line-height: 1.42857143
 
   .ls-field &
     width: 100%
@@ -70,6 +70,30 @@ textarea
   &[disabled]
     border-color: $gray1
     background-color: #f9f9f9
+
+  &.ls-field-lg
+    font-size: 1.125rem
+    padding: 10px 16px 9px
+    line-height: 1.33
+    border-radius: 6px
+
+  &.ls-field-md
+    padding: 8px
+    font-size: .875rem
+
+  &.ls-field-sm
+    font-size: .75rem
+    padding: 4px 10px
+
+  &.ls-field-xs
+    font-size: .5rem
+    padding: 2px 10px
+
+  &.ls-field-sm,
+  &.ls-field-xs
+    border-radius: 3px
+    line-height: 1.5
+
 
 textarea
   resize: none
