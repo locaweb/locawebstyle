@@ -38,7 +38,7 @@ describe("Popover: ", function() {
     });
 
     it("should open popover when event ls.popoverOpen is triggered", function() {
-      $('[data-ls-module="popover"]').trigger("ls.popoverOpen");
+      $('#popoverclick[data-ls-module="popover"]').trigger("click");
       expect($(".ls-popover")).toBeVisible();
     });
 
