@@ -193,4 +193,19 @@ describe("Track Events: ", function() {
     });
   });
 
+  describe("Tabs", function () {
+    describe("When click on #sample_tab_trigger which is a trigger to navigate on tabs", function () {
+      it("should call ga with expectedOptions as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "tab_navigation",
+          label: "Sample tab 2"
+        }
+        spyOn(window, "ga");
+        $("#tabs_sample #sample_tab_trigger").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+  });
+
 });
