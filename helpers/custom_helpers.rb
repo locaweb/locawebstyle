@@ -1,7 +1,7 @@
 module CustomHelpers
   def menu_tag(url, label)
     "<li class='#{active_css(url)}'>" +
-      "<a href='#{base_url + url}'>#{label}</a>" +
+      "<a class='#{active_css(url)}' href='#{base_url + url}'>#{label}</a>" +
     "</li>"
   end
 
