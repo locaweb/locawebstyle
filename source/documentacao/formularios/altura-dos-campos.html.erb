@@ -1,0 +1,25 @@
+---
+title: Altura dos campos
+description: "Para alterar a altura dos campos, basta incluir as classes abaixo:"
+---
+
+<%= partial 'partials/doc-menu-forms'%>
+
+<section class="col-md-9">
+  <%= partial 'partials/doc-intro-content' %>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>ls-field-lg</td><td><input type="text" class="ls-field-lg" placeholder="Grande">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-lg" value="Botão"></td></tr>
+      <tr><td>ls-field-md (<i>tamanho default</i>)</td><td><input type="text" class="ls-field-md" placeholder="Normal">&nbsp;&nbsp;<input type="submit" class="ls-btn" value="Botão"></td></tr>
+      <tr><td>ls-field-sm</td><td><input type="text" class="ls-field-sm" placeholder="Pequeno">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-sm" value="Botão"></td></tr>
+      <tr><td>ls-field-xs</td><td><input type="text" class="ls-field-xs" placeholder="Bem pequeno">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-xs" value="Botão"></td></tr>
+    </tbody>
+  </table>
+</section>
