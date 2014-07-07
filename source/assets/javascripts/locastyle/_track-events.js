@@ -33,8 +33,11 @@ locastyle.trackEvents = (function() {
       if($(item).attr("href").indexOf("#") === 0) {
         options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'on_page_link_' + $(item).attr("href");
       }
-      if($(this).attr("data-ls-module") === "tabs"){
+      if($(item).attr("data-ls-module") === "tabs"){
         options.action = 'tab_navigation';
+      }
+      if($(item).parent().attr("data-ls-module") === "dropdown"){
+        options.action = 'dropdown_toggle';
       }
       bindClickEvents(item, options);
     });
