@@ -8,7 +8,7 @@ locastyle.popover = (function() {
     trigger      : 'click.ls',
     popoverClass : '.ls-popover',
     module       : '[data-ls-module="popover"]',
-    openClass         : 'ls-popover-open',
+    openAttr         : '[data-ls-popover="open"]',
     openEvent         : 'ls.popoverOpen'
   }
 
@@ -24,7 +24,7 @@ locastyle.popover = (function() {
         'element'  : element,
         'eventType': eventType
       });
-      $(this).hasClass(defaults.openClass) && $(this).trigger(defaults.openEvent);
+      $(this).data('lsPopover') && $(this).trigger(defaults.openEvent);
     });
   }
 
