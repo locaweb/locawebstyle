@@ -7,16 +7,20 @@
   border: 1px solid #ccc
   border-bottom-color: #bbb
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+
   &:before
     content: " "
     display: table
+
   &:after
     content: " "
     display: table
     clear: both
-  *zoom: 1
+    *zoom: 1
+
   &.is-hidden
     display: none
+
   &.is-bound
     position: absolute
     box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5)
@@ -99,9 +103,11 @@
   border-collapse: collapse
   border-spacing: 0
   border: 0
+
   th, td
     width: 14.285714285714286%
     padding: 0
+
   th
     color: #999
     font-size: 12px
