@@ -9,20 +9,42 @@ description: Entenda como escrever código CSS de forma consciente.
 
   <%= partial 'partials/doc-intro-content' %>
 
-  <h2 class="doc-title-3">Cores</h2>
+  <h2 class="doc-title-3">Prefixos de Nomenclatura</h2>
   <p>Nós usamos o prefixo <strong>ls-</strong> para todas as classes do framework. Isso nos ajuda a evitar conflitos com o CSS do produto de terceiros ou com outros frameworks. Qualquer coisa relacionada ao Locaweb Style, coloque o prefixo <strong>ls-</strong> na frente do nome.</p>
 
   <h2 class="doc-title-3">Aninhamento (nesting) no SASS</h2>
   <p>Evite aninhar seletores (fazer "nesting"). Só porque você pode fazer isso, não significa que você deve fazê-lo sempre. Considere aninhar se você tem um escopo de estilos para um pai e se há múltiplos elementos para serem aninhados.</p>
+  <p>Tenha em mente de manter um limite de no máximo três aninhamentos. Isso facilita a leitura e entendimento do código futuramente. Ah, nós usamos SASS no formato original e não SCSS.</p>
+
+    <% code("sass") do %>
+/** Assim é melhor **/
+div p a
+  text-decoration: none
+
+/** É permitido, mas use só quando necessário **/
+div
+  background-color: gray
+
+  p
+    color: #FFF
+    background-color: red
+    margin-top: 0
+    padding-bottom: 0
+
+    a
+      text-decoration: none
+
+  <% end %>
 
   <h2 class="doc-title-3">Cores</h2>
-  <p>Sempre que utilizar uma cor hexadecimal que tenha repetição de valores, use sempre o valor de atalho, assim:</p>
+  <p>Não use nome de cor por extenso e sempre que utilizar uma cor hexadecimal que tenha repetição de valores, use sempre o valor de atalho e sempre com letras minúsculas, assim:</p>
   <% code("css") do %>
 /** Recomendado **/
-p {color: #AAA;}
+p {color: #aaa;}
 
 /** Não Recomendado **/
-p {color: #AAAAAA;}
+p {color: #aaaaaa;}
+a {color: #AAAAAA;}
   <% end %>
 
   <h2 class="doc-title-3">Aspas</h2>
@@ -43,8 +65,8 @@ div:after { content: " "; }
 
   <p>Nunca use comentários na mesma linha da propriedade:</p>
   <% code("css") do %>
-p {color: #FFF;} /** Nunca use comentários assim **/
-p {color: #FFF; /** Nunca use comentários assim **/ }
+p {color: #fff;} /** Nunca use comentários assim **/
+p {color: #fff; /** Nunca use comentários assim **/ }
   <% end %>
 
 
@@ -52,7 +74,7 @@ p {color: #FFF; /** Nunca use comentários assim **/ }
   <% code("css") do %>
 /** Assim é melhor **/
 p {
-  color: #FFF;
+  color: #fff;
   background: red;
   margin: 0;
 

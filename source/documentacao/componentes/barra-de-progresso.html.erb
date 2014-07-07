@@ -10,10 +10,18 @@ type: component
 
   <%= partial 'partials/doc-intro-content' %>
 
+  <p>Você não precisa fazer muita coisa para barra de progresso funcionar. Basta inserir um div com os respectivos atributos pra ela funcionar automaticamente. A variação do progresso pode ser feito via Back-end ou JavaScript, sempre manipulando os valores dos atributos.</p>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/progress-bar/progress' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/progress-bar/progress' %><% end %>
+
+  <p>O atributo <code>data-ls-module="progressBar"</code> carregao o módulo da barra de progresso, fazendo com que nosso script leia o valor no atributo <code>aria-valuenow</code>, inserindo uma indicação de procentagem dentro da barra. O atributo <code>role="progressbar"</code> é necessário para WAI-ARIA.</p>
+
   <table class="ls-table">
     <thead>
       <tr>
-        <th>Classes</th>
+        <th>Atributos e Classes</th>
         <th>Descrição</th>
       </tr>
     </thead>
@@ -36,11 +44,6 @@ type: component
       </tr>
     </tbody>
   </table>
-  <h2 class="doc-title-3">Barra de progresso padrão</h2>
-  <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/progress-bar/progress' %>
-  </div>
-  <% code("html") do %><%= partial 'documentacao/shared/progress-bar/progress' %><% end %>
 
   <h2 class="doc-title-3">Alinhando o percentual a direita.</h2>
   <div class="ls-box-demo">
