@@ -356,7 +356,167 @@ tourGuiado = (function() {
     ]
   };
 
+  var tourConfigDomain = {
+    id: 'tourDemo',
+    selectors: {
+      init:  '#demo-init'
+    },
+    i18n: {
+      nextBtn: "Próximo",
+      prevBtn: "Anterior",
+      doneBtn: "Ok",
+      skipBtn: "Sair",
+      closeTooltip: "Fechar"
+    },
+    bubbleWidth: 250,
+    showPrevButton: true,
+    steps: [
+      {
+        target: '.col-md-6:nth-child(2) .ls-title-2',
+        title: 'Domínio de acesso',
+        content: 'Personalize o domínio que seu cliente acessa o painel da sua revenda.',
+        placement: 'top',
+        arrowOffset: 'center',
+      },
+      {
+        target: '.col-md-6:nth-child(1) .ls-title-2',
+        title: 'Domínio dos links',
+        content: 'Personalize o padrão do domínio dos links das mensagens que seus clientes enviam.',
+        placement: 'top',
+        arrowOffset: 'center',
+      }
+    ]
+  };
 
+
+  var tourConfigEmail = {
+    id: 'tourDemo',
+    selectors: {
+      init:  '#demo-init'
+    },
+    i18n: {
+      nextBtn: "Próximo",
+      prevBtn: "Anterior",
+      doneBtn: "Ok",
+      skipBtn: "Sair",
+      closeTooltip: "Fechar"
+    },
+    bubbleWidth: 250,
+    showPrevButton: true,
+    steps: [
+      {
+        target: '.ls-form',
+        title: 'E-mail de remetente da sua revenda',
+        content: 'Configure o e-mail que seus clientes receberão.',
+        placement: 'top',
+        arrowOffset: 'center',
+      }
+    ]
+  };
+
+
+  var tourConfigAspect = {
+    id: 'tourDemo',
+    selectors: {
+      init:  '#demo-init'
+    },
+    i18n: {
+      nextBtn: "Próximo",
+      prevBtn: "Anterior",
+      doneBtn: "Ok",
+      skipBtn: "Sair",
+      closeTooltip: "Fechar"
+    },
+    bubbleWidth: 250,
+    showPrevButton: true,
+    steps: [
+      {
+        target: '.ls-main img',
+        title: 'Exemplo do painel de seus clientes',
+        content: 'Veja como fica o painel da sua revenda para seus clientes.',
+        placement: 'top',
+        arrowOffset: 'center',
+      },
+      {
+        target: '.ls-main .ls-field:nth-child(1)',
+        title: 'Personalize o nome da revenda ',
+        content: 'Deixe o nome da revenda com o nome da sua empresa.',
+        placement: 'top',
+        arrowOffset: 'center',
+      },
+      {
+        target: '.ls-main .ls-box:nth-child(2)',
+        title: 'Identificação da sua marca',
+        content: 'Defina como será exibido o cabeçalho do painel e dos e-mails que seus clientes recebem da sua revenda.',
+        placement: 'top',
+        arrowOffset: 'center',
+      },
+      {
+        target: '.ls-main .col-md-9 > .ls-box:nth-child(3)',
+        title: 'Personalize a cor',
+        content: 'Escolha a cor do painel que combine com sua empresa.',
+        placement: 'top',
+        arrowOffset: 'center',
+      }
+    ]
+  };
+
+  var tourConfigAnswer = {
+    id: 'tourDemo',
+    selectors: {
+      init:  '#demo-init'
+    },
+    i18n: {
+      nextBtn: "Próximo",
+      prevBtn: "Anterior",
+      doneBtn: "Ok",
+      skipBtn: "Sair",
+      closeTooltip: "Fechar"
+    },
+    bubbleWidth: 250,
+    showPrevButton: true,
+    steps: [
+      {
+        target: '.ls-main .col-md-6:nth-child(1) .ls-form',
+        title: 'Ofereça suporte por telefone',
+        content: 'Preencha o número que será exibido no rodapé do painel do seu cliente.',
+        placement: 'top',
+        arrowOffset: 'center',
+      },
+      {
+        target: '.ls-main .col-md-6:nth-child(2) .ls-form',
+        title: 'Ofereça suporte por um sistema de chamados',
+        content: 'Preencha o endereço da sua conta Webdesk. O link será exibido no rodapé do painel do seu cliente.',
+        placement: 'top',
+        arrowOffset: 'center',
+      }
+    ]
+  };
+
+  var tourConfigApi = {
+    id: 'tourDemo',
+    selectors: {
+      init:  '#demo-init'
+    },
+    i18n: {
+      nextBtn: "Próximo",
+      prevBtn: "Anterior",
+      doneBtn: "Ok",
+      skipBtn: "Sair",
+      closeTooltip: "Fechar"
+    },
+    bubbleWidth: 250,
+    showPrevButton: true,
+    steps: [
+      {
+        target: '.ls-box',
+        title: 'Integre com outros sistemas',
+        content: 'Utilize os dados para autenticar suas chamadas na API.',
+        placement: 'top',
+        arrowOffset: 'center',
+      }
+    ]
+  };
 
   function firstTour() {
     locastyle.guidedTour.init(tourFirstStep);
@@ -382,6 +542,25 @@ tourGuiado = (function() {
     locastyle.guidedTour.init(tourStats);
   }
 
+  function configDomainTour() {
+    locastyle.guidedTour.init(tourConfigDomain);
+  }
+
+  function configEmailTour() {
+    locastyle.guidedTour.init(tourConfigEmail);
+  }
+
+  function configAspectTour() {
+    locastyle.guidedTour.init(tourConfigAspect);
+  }
+
+  function configAnswerTour() {
+    locastyle.guidedTour.init(tourConfigAnswer);
+  }
+
+  function configApiTour() {
+    locastyle.guidedTour.init(tourConfigApi);
+  }
 
 
   return {
@@ -390,7 +569,12 @@ tourGuiado = (function() {
     clientTour: clientTour,
     registerClientTour: registerClientTour,
     adminClientTour: adminClientTour,
-    statsTour: statsTour
+    statsTour: statsTour,
+    configDomainTour: configDomainTour,
+    configEmailTour: configEmailTour,
+    configAspectTour: configAspectTour,
+    configAnswerTour: configAnswerTour,
+    configApiTour: configApiTour
   };
 
 }());
@@ -422,8 +606,24 @@ window.setTimeout(function(){
    tourGuiado.statsTour();
   }
 
+  if ($body.hasClass('documentacao_exemplos_painel1_config-domain')){
+   tourGuiado.configDomainTour();
+  }
 
+  if ($body.hasClass('documentacao_exemplos_painel1_config-email')){
+   tourGuiado.configEmailTour();
+  }
 
+  if ($body.hasClass('documentacao_exemplos_painel1_config-aspect')){
+   tourGuiado.configAspectTour();
+  }
 
+  if ($body.hasClass('documentacao_exemplos_painel1_config-answer')){
+   tourGuiado.configAnswerTour();
+  }
+
+  if ($body.hasClass('documentacao_exemplos_painel1_config-api')){
+   tourGuiado.configApiTour();
+  }
 
 }, 1000)
