@@ -8,7 +8,7 @@
       <p><%- @content %></p>
     </div>
     <div class="ls-modal-footer">
-      <button type="button" class="ls-btn float-right ls-float-right" data-dismiss="modal"><%= @close %></button>
+      <button type="button" <%= @customAttrs %> class="ls-btn float-right ls-float-right" data-dismiss="modal"><%= @close %></button>
       <a href="<%= @action %>" class=" ls-btn <%= @class %>"><%= @save %></a>
     </div>
   </div>
