@@ -24,6 +24,13 @@ describe("Modal: ", function() {
     })
   })
 
+  describe('When click on data-ls-module="modal" with data-custom-attrs', function() {
+    it('should add attr on .ls-modal button', function() {
+      $('[data-ls-module="modal"]').trigger("click");
+      expect($("#myAwesomeModalCustomAttr button").data('method')).toEqual('delete');
+    })
+  })
+
   describe("Unbind:", function() {
     describe("when unbind is called in module init", function() {
       it("should prevent open modal from being called twice or more times", function() {
@@ -52,7 +59,7 @@ describe("Modal: ", function() {
 
         var spy = spyOn(locastyle.modal, "close");
         $('[data-target="#myAwesomeModal"]').trigger("click");
-        var timesToBeCalled = $(config.close.classes + ", " + config.close.trigger).length - 1
+        var timesToBeCalled = $(config.close.classes + ", " + config.close.trigger).length - 2
         $('#myAwesomeModal [data-dismiss="modal"]').trigger("click");
         expect(locastyle.modal.close.calls.count()).toEqual(timesToBeCalled);
       });
