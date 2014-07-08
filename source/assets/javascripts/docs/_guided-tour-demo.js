@@ -223,7 +223,44 @@ tourGuiado = (function() {
   };
 
 
-
+  var tourRegisterClient = {
+    id: 'tourDemo',
+    selectors: {
+      init:  '#demo-init'
+    },
+    i18n: {
+      nextBtn: "Próximo",
+      prevBtn: "Anterior",
+      doneBtn: "Ok",
+      skipBtn: "Sair",
+      closeTooltip: "Fechar"
+    },
+    bubbleWidth: 250,
+    showPrevButton: true,
+    steps: [
+      {
+        target: '.ls-form legend:nth-child(1)',
+        title: 'Informações do seu cliente',
+        content: 'Preencha os dados do seu cliente e defina uma senha para ele acessar o painel.',
+        placement: 'top',
+        arrowOffset: 'center'
+      },
+      {
+        target: '.ls-box-gray .ls-field:nth-child(2)',
+        title: 'Quantidade de envios',
+        content: 'Defina a quantidade de envios que seu cliente poderá utilizar.',
+        placement: 'top',
+        arrowOffset: 'center'
+      },
+      {
+        target: '.ls-box-gray .ls-field:nth-child(3)',
+        title: 'Recorrência',
+        content: 'Marque se ele vai receber esta mesma quantidade todo mês.',
+        placement: 'top',
+        arrowOffset: 'center'
+      }
+    ]
+  };
 
   function firstTour() {
     locastyle.guidedTour.init(tourFirstStep);
@@ -237,12 +274,15 @@ tourGuiado = (function() {
     locastyle.guidedTour.init(tourClient);
   }
 
-
+  function registerClientTour() {
+    locastyle.guidedTour.init(tourRegisterClient);
+  }
 
   return {
     firstTour: firstTour,
     homeTour: homeTour,
-    clientTour: clientTour
+    clientTour: clientTour,
+    registerClientTour: registerClientTour
   };
 
 }());
@@ -260,6 +300,10 @@ window.setTimeout(function(){
 
   if ($body.hasClass('documentacao_exemplos_painel1_clients')){
    tourGuiado.clientTour();
+  }
+
+  if ($body.hasClass('documentacao_exemplos_painel1_new-client')){
+   tourGuiado.registerClientTour();
   }
 
 
