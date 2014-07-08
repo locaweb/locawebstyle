@@ -1,16 +1,20 @@
 <div class="ls-modal fade opened ls-modal-template <%= this.lsModule %> ">
-  <div class="ls-modal-box">
-    <div class="ls-modal-header">
-      <button type="button" data-dismiss="modal" class="close">&times;</button>
-      <h4 class="ls-modal-title"><%= @title %></h4>
+  <form action="<%= @action %>" method="post">
+    <div class="ls-modal-box">
+      <div class="ls-modal-header">
+        <button type="button" data-dismiss="modal" class="close">&times;</button>
+        <h4 class="ls-modal-title"><%= @title %></h4>
+      </div>
+      <div class="ls-modal-body">
+        <p><%- @content %></p>
+      </div>
+      <div class="ls-modal-footer">
+        <button <%= @customAttrs %> class="ls-btn float-right ls-float-right" data-dismiss="modal">
+          <%= @close %>
+        </button>
+        <button type="submit" class=" ls-btn <%= @class %>"><%= @save %></button>
+      </div>
     </div>
-    <div class="ls-modal-body">
-      <p><%- @content %></p>
-    </div>
-    <div class="ls-modal-footer">
-      <button type="button" <%= @customAttrs %> class="ls-btn float-right ls-float-right" data-dismiss="modal"><%= @close %></button>
-      <a href="<%= @action %>" class=" ls-btn <%= @class %>"><%= @save %></a>
-    </div>
-  </div>
+  </form>
   <div class="ls-modal-overlay"></div>
 </div>
