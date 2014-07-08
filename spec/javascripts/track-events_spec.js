@@ -250,6 +250,29 @@ describe("Track Events: ", function() {
       });
     });
 
+    describe("When closing modal", function () {
+      it("by [x], it should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "close_modal_#opened_modal_sample",
+          label: "x"
+        }
+        spyOn(window, "ga");
+        $("#opened_modal_test #close_modal_sample_by_x").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+
+      it("by cancel button, it should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "close_modal_#opened_modal_sample",
+          label: "Close"
+        }
+        spyOn(window, "ga");
+        $("#opened_modal_test #close_modal_sample_by_button").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
   });
 
 });
