@@ -28,7 +28,7 @@ type: component
 
   <div class="ls-box ls-background-info">
     <h5 class="ls-title-4">Atenção</h5>
-    <p>Nos exemplos usamos o elemento <code>A</code> com a classe <code>.ls-collapse-header</code>, mas qualquer elemento, como um DIV por exemplo, pode receber essa classe.</p>
+    <p>Nos exemplos usamos o elemento <code>a</code> com a classe <code>.ls-collapse-header</code>, mas qualquer elemento, como um DIV por exemplo, pode receber essa classe.</p>
   </div>
 
   <h2 class="doc-title-3">Parâmetros adicionais</h2>
@@ -68,8 +68,8 @@ type: component
   <% code("html") do %><%= partial('documentacao/shared/collapse/collapse', :locals => { :quant => 1, :header => 'Collapse inicia aberto e não fecha com a classe .ls-collapse-open-always', content: (lorem.words 2), startOpen: false, alwaysOpen: true  }) %><% end %>
 
   <h2 class="doc-title-3">Accordeon</h2>
-  <p><i>Accordeon</i> é um conjunto de <i>collapses</i> agrupados, onde apenas um deles pernace aberto</p>
-  <p>Um <i>accordeon</i> é um conjunto de <i>collapses</i>, como mostrados acima, com um elemento que os agrupa, com a classe <i>ls-collapse-group</i>.</p>
+  <p><i>Accordeon</i> é um conjunto de <i>collapses</i> agrupados, onde apenas um deles permanece aberto.</p>
+  <p>Um <i>accordeon</i> é um conjunto de <i>collapses</i>, como mostrados acima, com um elemento que os agrupa, com a classe <code>.ls-collapse-group</code>.</p>
 
   <div class="ls-box-demo">
     <div class="ls-collapse-group">
@@ -81,7 +81,7 @@ type: component
   <p>Os <i>collapses</i> agrupados em um <i>accordeon</i> aceitam as mesmas configurações que um <i>collapse</i> normal.</p>
 
   <h2 class="doc-title-3">Abrir com ação externa</h2>
-  <p>Para usar um botão ou <i>link</i> para controlar um <i>collapse</i> utilize o atributo <i>data-toggle-collapse</i> com o valor do <b>id</b> do collapse.</p>
+  <p>Para usar um botão ou <i>link</i> para controlar um <i>collapse</i> utilize o atributo <code>data-toggle-collapse</code> com o valor do <b>id</b> do collapse.</p>
 
   <div class="ls-box-demo">
     <button type="button" class="ls-btn-primary" data-toggle-collapse="#collapse1">Abre/Fecha o <i>collapse</i> <b>#collapse1</b></button>
