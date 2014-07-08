@@ -1,9 +1,9 @@
 <form action="" class="ls-form ls-form-horizontal" data-ls-module="form">
   <fieldset id="fields-disabled" class="row ls-form-disable">
     <% 3.times do |num| %>
-    <label class="ls-field col-md-2">
-      <b class="ls-label">Nome</b>
-      <input type="text" name="nome" value="<%= lorem.words 2 %>" placeholder="Nome e sobrenome" required >
+    <label class="ls-label col-md-2">
+      <b class="ls-label-text">Nome</b>
+      <input type="text" name="nome" value="<%= lorem.words 2 %>" placeholder="Nome e sobrenome" class="ls-field" required>
     </label>
   <% end %>
   </fieldset>

@@ -7,8 +7,8 @@ layout: panel2
 
 <div class="ls-box-filter">
   <form action="#" class="ls-form ls-form-inline ls-float-left">
-    <label class="ls-field">
-      <b class="ls-label">Período</b>
+    <label class="ls-label">
+      <b class="ls-label-text">Período</b>
       <div data-ls-module="customFields">
         <select name="">
           <option value="">Dia atual</option>
@@ -198,8 +198,8 @@ layout: panel2
     <div class="ls-modal-body">
       <form class="ls-form row">
         <fieldset>
-          <label class="ls-field col-md-5">
-            <b class="ls-label">Período</b>
+          <label class="ls-label col-md-5">
+            <b class="ls-label-text">Período</b>
             <div data-ls-module="customFields">
               <select name="">
                 <option value="">Dia atual</option>
@@ -211,26 +211,26 @@ layout: panel2
               </select>
             </div>
           </label>
-          <div class="ls-field col-md-11">
+          <div class="ls-label col-md-11">
             <h5 class="ls-title-6">Status de Envio</h5>
-            <label class="ls-label">
+            <label class="ls-label-text">
               <input type="radio" name="export[filter_status]">
               Todos enviados (Entregues e Erros)
             </label>
-            <label class="ls-label">
+            <label class="ls-label-text">
               <input type="radio" name="export[filter_status]">
               Apenas Entregues
             </label>
-            <label class="ls-label">
+            <label class="ls-label-text">
               <input type="radio" name="export[filter_status]">
               Apenas Erros
             </label>
-            <label class="ls-label">
+            <label class="ls-label-text">
               <input type="checkbox" name="export[send_notification]" data-toggle-class="ls-display-none" data-target="#notification">
               Receber notificação por e-mail quando o arquivo estiver disponível
             </label>
           </div>
-          <div id="notification" class="ls-display-none ls-field col-md-12">
+          <div id="notification" class="ls-display-none ls-label col-md-12">
             <input id="export_email" name="export[email]" placeholder="Preencha com o seu e-mail" type="text" value="testeqa@teste.com.br">
           </div>
         </fieldset>
