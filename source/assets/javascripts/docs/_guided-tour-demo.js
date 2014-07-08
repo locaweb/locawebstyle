@@ -262,6 +262,102 @@ tourGuiado = (function() {
     ]
   };
 
+
+  var tourAdminClient = {
+    id: 'tourDemo',
+    selectors: {
+      init:  '#demo-init'
+    },
+    i18n: {
+      nextBtn: "Próximo",
+      prevBtn: "Anterior",
+      doneBtn: "Ok",
+      skipBtn: "Sair",
+      closeTooltip: "Fechar"
+    },
+    bubbleWidth: 250,
+    showPrevButton: true,
+    steps: [
+      {
+        target: '.ls-regroup .ls-btn-primary',
+        title: 'Acesso ao painel do seu cliente',
+        content: 'Tenha acesso ao painel do cliente. Você poderá visualizar mensagens enviadas, relatórios e as configurações feita pelo seu cliente.',
+        placement: 'left',
+        arrowOffset: 'center',
+        yOffset: -70,
+        xOffset: 35,
+        onNext: function(){
+          $('.ls-main .ls-dropdown .ls-btn').click();
+        },
+      },
+      {
+        target: '.ls-dropdown .ls-btn',
+        title: 'Gerencie seu cliente',
+        content: 'Edite os dados, altere a senha ou desative o cliente.',
+        placement: 'left',
+        arrowOffset: 'center',
+        xOffset: -90,
+        yOffset: 20,
+        onNext: function(){
+          $('.ls-main .ls-dropdown .ls-btn').click();
+        },
+        onPrev: function(){
+          $('.ls-main .ls-dropdown .ls-btn').click();
+        },
+      },
+      {
+        target: '.ls-ico-calendar-check',
+        title: 'Envios disponíveis dos períodos',
+        content: 'Altere a quantidade de envios disponíveis no período atual ou no próximo período.',
+        placement: 'top',
+        arrowOffset: 'center'
+      },
+      {
+        target: '.ls-main h3.ls-title-3',
+        title: 'Relatórios',
+        content: 'Acompanhe o relatório de contratação e uso dos envios.',
+        placement: 'top',
+        arrowOffset: 'center',
+        xOffset: -75,
+      },
+      {
+        target: '.container-fluid > .ls-title-3',
+        title: 'Histórico',
+        content: 'Acompanhe o histórico de distribuição de envios.',
+        placement: 'top',
+        arrowOffset: 'center'
+      }
+    ]
+  };
+
+  var tourStats = {
+    id: 'tourDemo',
+    selectors: {
+      init:  '#demo-init'
+    },
+    i18n: {
+      nextBtn: "Próximo",
+      prevBtn: "Anterior",
+      doneBtn: "Ok",
+      skipBtn: "Sair",
+      closeTooltip: "Fechar"
+    },
+    bubbleWidth: 250,
+    showPrevButton: true,
+    steps: [
+      {
+        target: '.ls-tabs-nav',
+        title: 'Relatórios da sua revenda',
+        content: 'Acompanhe a distribuição de envios e dos status de seus clientes.',
+        placement: 'top',
+        arrowOffset: 'center',
+      }
+
+    ]
+  };
+
+
+
   function firstTour() {
     locastyle.guidedTour.init(tourFirstStep);
   }
@@ -278,11 +374,23 @@ tourGuiado = (function() {
     locastyle.guidedTour.init(tourRegisterClient);
   }
 
+  function adminClientTour() {
+    locastyle.guidedTour.init(tourAdminClient);
+  }
+
+  function statsTour() {
+    locastyle.guidedTour.init(tourStats);
+  }
+
+
+
   return {
     firstTour: firstTour,
     homeTour: homeTour,
     clientTour: clientTour,
-    registerClientTour: registerClientTour
+    registerClientTour: registerClientTour,
+    adminClientTour: adminClientTour,
+    statsTour: statsTour
   };
 
 }());
@@ -305,6 +413,16 @@ window.setTimeout(function(){
   if ($body.hasClass('documentacao_exemplos_painel1_new-client')){
    tourGuiado.registerClientTour();
   }
+
+  if ($body.hasClass('documentacao_exemplos_painel1_client')){
+   tourGuiado.adminClientTour();
+  }
+
+  if ($body.hasClass('documentacao_exemplos_painel1_stats')){
+   tourGuiado.statsTour();
+  }
+
+
 
 
 
