@@ -9,7 +9,7 @@
         <p><%- @content %></p>
       </div>
       <div class="ls-modal-footer">
-        <button <%= @customAttrs %> class="ls-btn float-right ls-float-right" data-dismiss="modal">
+        <button <%= @customAttrs %> class="ls-btn ls-float-right" data-dismiss="modal">
           <%= @close %>
         </button>
         <button type="submit" class=" ls-btn <%= @class %>"><%= @save %></button>
