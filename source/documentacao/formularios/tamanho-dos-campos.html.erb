@@ -1,18 +1,18 @@
 ---
-title: Altura dos campos
-description: "Gostaria de deixar o input de texto seguindo a altura dos botões? Veja nossas opções:"
+title: Tamanho dos campos
+description: "Gostaria de deixar o input de texto seguindo o tamanho dos botões? Veja nossas opções:"
 ---
 
 <%= partial 'partials/doc-menu-forms'%>
 
 <section class="col-md-9">
   <%= partial 'partials/doc-intro-content' %>
-  <p>Adicionando a classe <code>.ls-field-lg</code> o input recebe a altura padrão de botão grande.</p>
+  <p>Adicionando a classe <code>.ls-field-lg</code> o input recebe os padrões de altura, texto e espaçamento de um botão grande.</p>
   <div class="ls-box-demo">
     <input type="text" class="ls-field-lg" placeholder="Placeholder">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-lg" value="Botão">
   </div>
   <% code("html") do %><input type="text" class="ls-field-lg" placeholder="Placeholder">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-lg" value="Botão"><% end %>
-  <p>Para alterar a altura dos campos, basta incluir as classes abaixo:</p>
+  <p>Para alterar o tamanho dos campos, basta incluir as classes abaixo:</p>
   <table class="ls-table">
     <thead>
       <tr>
@@ -30,8 +30,8 @@ description: "Gostaria de deixar o input de texto seguindo a altura dos botões?
 
   <hr class="doc-hr">
 
-  <h2 class="doc-title-3">Alterando altura dos selects</h2>
-  <p>Para alterar a altura dos selects customizados, basta adicionar as classes abaixo no elemento pai que recebe o atributo <code>data-ls-module="customFields"</code>.</p>
+  <h2 class="doc-title-3">Alterando o tamanho dos selects</h2>
+  <p>Em selects customizados, basta adicionar as classes abaixo no elemento pai que recebe o atributo <code>data-ls-module="customFields"</code>.</p>
   <div class="ls-box-demo">
     <div data-ls-module="customFields" class="ls-field-sm">
       <select>
