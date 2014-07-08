@@ -1,27 +1,18 @@
 ---
 title: Tamanho dos campos
-description: "Gostaria de deixar o input de texto seguindo o tamanho dos botões? Veja nossas opções:"
+description: Aumente ou diminua o tamanho dos campos de formulários
 ---
 
 <%= partial 'partials/doc-menu-forms'%>
 
 <section class="col-md-9">
   <%= partial 'partials/doc-intro-content' %>
-<<<<<<< HEAD:source/documentacao/formularios/tamanho-dos-campos.html.erb
-  <p>Adicionando a classe <code>.ls-field-lg</code> o input recebe os padrões de altura, texto e espaçamento de um botão grande.</p>
-=======
-  <p>Adicionando a classe <code>.ls-label-lg</code> o input recebe a altura padrão de botão grande.</p>
->>>>>>> Changing the name of forms classes:source/documentacao/formularios/altura-dos-campos.html.erb
+  <p>Adicionando a classe <code>.ls-field-lg</code> o input recebe a altura padrão de botão grande.</p>
   <div class="ls-box-demo">
-    <input type="text" class="ls-label-lg" placeholder="Placeholder">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-lg" value="Botão">
+    <input type="text" class="ls-field-lg" placeholder="Placeholder">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-lg" value="Botão">
   </div>
-<<<<<<< HEAD:source/documentacao/formularios/tamanho-dos-campos.html.erb
   <% code("html") do %><input type="text" class="ls-field-lg" placeholder="Placeholder">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-lg" value="Botão"><% end %>
-  <p>Para alterar o tamanho dos campos, basta incluir as classes abaixo:</p>
-=======
-  <% code("html") do %><input type="text" class="ls-label-lg" placeholder="Placeholder">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-lg" value="Botão"><% end %>
   <p>Para alterar a altura dos campos, basta incluir as classes abaixo:</p>
->>>>>>> Changing the name of forms classes:source/documentacao/formularios/altura-dos-campos.html.erb
   <table class="ls-table">
     <thead>
       <tr>
@@ -30,19 +21,19 @@ description: "Gostaria de deixar o input de texto seguindo o tamanho dos botões
       </tr>
     </thead>
     <tbody>
-      <tr><td>ls-label-lg</td><td><input type="text" class="ls-label-lg" placeholder="Grande">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-lg" value="Botão"></td></tr>
-      <tr><td>ls-label-md (<i>tamanho default</i>)</td><td><input type="text" class="ls-label-md" placeholder="Normal">&nbsp;&nbsp;<input type="submit" class="ls-btn" value="Botão"></td></tr>
-      <tr><td>ls-label-sm</td><td><input type="text" class="ls-label-sm" placeholder="Pequeno">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-sm" value="Botão"></td></tr>
-      <tr><td>ls-label-xs</td><td><input type="text" class="ls-label-xs" placeholder="Bem pequeno">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-xs" value="Botão"></td></tr>
+      <tr><td>ls-field-lg</td><td><input type="text" class="ls-field-lg" placeholder="Grande">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-lg" value="Botão"></td></tr>
+      <tr><td>ls-field-md (<i>tamanho default</i>)</td><td><input type="text" class="ls-field-md" placeholder="Normal">&nbsp;&nbsp;<input type="submit" class="ls-btn" value="Botão"></td></tr>
+      <tr><td>ls-field-sm</td><td><input type="text" class="ls-field-sm" placeholder="Pequeno">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-sm" value="Botão"></td></tr>
+      <tr><td>ls-field-xs</td><td><input type="text" class="ls-field-xs" placeholder="Bem pequeno">&nbsp;&nbsp;<input type="submit" class="ls-btn ls-btn-xs" value="Botão"></td></tr>
     </tbody>
   </table>
 
   <hr class="doc-hr">
 
-  <h2 class="doc-title-3">Alterando o tamanho dos selects</h2>
-  <p>Em selects customizados, basta adicionar as classes abaixo no elemento pai que recebe o atributo <code>data-ls-module="customFields"</code>.</p>
+  <h2 class="doc-title-3">Alterando altura dos selects</h2>
+  <p>Para alterar a altura dos selects customizados, basta adicionar as classes abaixo no elemento pai que recebe o atributo <code>data-ls-module="customFields"</code>.</p>
   <div class="ls-box-demo">
-    <div data-ls-module="customFields" class="ls-label-sm">
+    <div data-ls-module="customFields" class="ls-field-sm">
       <select>
         <option value="">Pequeno</option>
         <%- 2.times do |i| %>
@@ -52,7 +43,7 @@ description: "Gostaria de deixar o input de texto seguindo o tamanho dos botões
     </div>
   </div>
   <% code("html") do %>
-<div data-ls-module="customFields" class="ls-label-sm">
+<div data-ls-module="customFields" class="ls-field-sm">
   <select>
     <option value="">Pequeno</option>
     <%- 2.times do |i| %>
@@ -72,9 +63,9 @@ description: "Gostaria de deixar o input de texto seguindo o tamanho dos botões
     </thead>
     <tbody>
       <tr>
-        <td>ls-label-lg</td>
+        <td>ls-field-lg</td>
         <td>
-          <div data-ls-module="customFields" class="ls-label-lg col-md-9">
+          <div data-ls-module="customFields" class="ls-field-lg col-md-9">
             <select>
               <option value="">Grande</option>
               <%- 2.times do |i| %>
@@ -86,9 +77,9 @@ description: "Gostaria de deixar o input de texto seguindo o tamanho dos botões
         </td>
       </tr>
       <tr>
-        <td>ls-label-md (<i>tamanho default</i>)</td>
+        <td>ls-field-md (<i>tamanho default</i>)</td>
         <td>
-          <div data-ls-module="customFields" class="ls-label-md col-md-9">
+          <div data-ls-module="customFields" class="ls-field-md col-md-9">
             <select>
               <option value="">Normal</option>
               <%- 2.times do |i| %>
@@ -100,9 +91,9 @@ description: "Gostaria de deixar o input de texto seguindo o tamanho dos botões
         </td>
       </tr>
       <tr>
-        <td>ls-label-sm</td>
+        <td>ls-field-sm</td>
         <td>
-          <div data-ls-module="customFields" class="ls-label-sm col-md-9">
+          <div data-ls-module="customFields" class="ls-field-sm col-md-9">
             <select>
               <option value="">Pequeno</option>
               <%- 2.times do |i| %>
@@ -114,9 +105,9 @@ description: "Gostaria de deixar o input de texto seguindo o tamanho dos botões
         </td>
       </tr>
       <tr>
-        <td>ls-label-xs</td>
+        <td>ls-field-xs</td>
         <td>
-          <div data-ls-module="customFields" class="ls-label-xs col-md-9">
+          <div data-ls-module="customFields" class="ls-field-xs col-md-9">
             <select>
               <option value="">Bem pequeno</option>
               <%- 2.times do |i| %>
