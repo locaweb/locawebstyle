@@ -47,23 +47,16 @@ tourGuiado = (function() {
         placement: 'top',
         arrowOffset: 'center',
         xOffset: -75,
-        onNext: function(){
-          $('.ls-user-account').addClass('ls-active');
-        }
+
       },
       {
-        target: '.ls-user-account .ls-dropdown-nav',
+        target: '.ls-user-account',
         title: 'Sua conta',
         content: 'Detalhes de seu login Locaweb.',
-        placement: 'left',
+        placement: 'bottom',
         arrowOffset: 'center',
-        xOffset: 30,
-        onNext: function(){
-          $('.ls-user-account').removeClass('ls-active');
-        },
-        onPrev: function(){
-          $('.ls-user-account').removeClass('ls-active');
-        }
+        xOffset: -50,
+
       },
       {
         target: '.ls-alerts-list',
@@ -72,9 +65,7 @@ tourGuiado = (function() {
         placement: 'bottom',
         arrowOffset: 'center',
         xOffset: -90,
-        onPrev: function(){
-          $('.ls-user-account').addClass('ls-active');
-        }
+
       }
 
     ]
@@ -138,23 +129,14 @@ tourGuiado = (function() {
         placement: 'bottom',
         arrowOffset: 'center',
         xOffset: -50,
-        onNext: function(){
-          $('.ls-user-account').addClass('ls-active');
-        },
       },
       {
-        target: '.ls-user-account .ls-dropdown-nav',
+        target: '.ls-user-account',
         title: 'Sua conta',
         content: 'Detalhes de seu login Locaweb.',
-        placement: 'left',
+        placement: 'bottom',
         arrowOffset: 'center',
-        xOffset: 30,
-        onNext: function(){
-          $('.ls-user-account').removeClass('ls-active');
-        },
-        onPrev: function(){
-          $('.ls-user-account').removeClass('ls-active');
-        }
+        xOffset: -50,
       },
       {
         target: '.ls-alerts-list',
@@ -163,9 +145,6 @@ tourGuiado = (function() {
         placement: 'bottom',
         arrowOffset: 'center',
         xOffset: -90,
-        onPrev: function(){
-          $('.ls-user-account').addClass('ls-active');
-        }
       }
     ]
   };
