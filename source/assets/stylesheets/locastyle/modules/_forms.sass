@@ -12,7 +12,7 @@
   margin-left: 0
 
 // Element that envolve the label and the input field. This class can be inserted on tag label or anyother
-.ls-field
+.ls-label
   display: block
   float: none
   vertical-align: top
@@ -61,7 +61,7 @@ textarea
   font-size: .875rem
   line-height: 1.42857143
 
-  .ls-field &
+  .ls-label &
     width: 100%
 
     .ls-form-inline &
@@ -71,26 +71,26 @@ textarea
     border-color: $gray1
     background-color: #f9f9f9
 
-  &.ls-field-lg
+  &.ls-label-lg
     font-size: 1.125rem
     padding: 10px 16px 9px
     line-height: 1.33
     border-radius: 6px
 
-  &.ls-field-md
+  &.ls-label-md
     font-size: .875rem
     padding: 8px
 
-  &.ls-field-sm
+  &.ls-label-sm
     font-size: .75rem
     padding: 4px 10px
 
-  &.ls-field-xs
+  &.ls-label-xs
     font-size: .5rem
     padding: 2px 10px
 
-  &.ls-field-sm,
-  &.ls-field-xs
+  &.ls-label-sm,
+  &.ls-label-xs
     border-radius: 3px
     line-height: 1.5
 
@@ -113,7 +113,7 @@ textarea
   font-size: .815rem
 
 .ls-warning
-  .ls-label,
+  .ls-label-text,
   .ls-help-message
     color: $colorWarning
 
@@ -121,7 +121,7 @@ textarea
     border-color: $colorWarning
 
 .ls-success
-  .ls-label,
+  .ls-label-text,
   .ls-help-message
     color: $colorSuccess
 
@@ -129,7 +129,7 @@ textarea
     border-color: $colorSuccess
 
 .ls-error
-  .ls-label,
+  .ls-label-text,
   .ls-help-message
     color: $colorDanger
 
@@ -141,13 +141,13 @@ textarea
 //
 .ls-form-horizontal
 
-  .ls-field
+  .ls-label
 
     &[class*="col-"]
       float: none
       display: inline-block
 
-    .ls-label
+    .ls-label-text
       display: inline-block
       margin-right: 10px
 
@@ -172,7 +172,7 @@ textarea
     select
       width: calc(100% + 50px)
 
-  .ls-field
+  .ls-label
     display: inline-block
     margin-right: 15px
     margin-bottom: 0
@@ -180,7 +180,7 @@ textarea
     & + [class*="ls-btn"]
       margin-left: 0
 
-    .ls-label
+    .ls-label-text
       display: inline-block
       margin-right: 5px
 
@@ -189,7 +189,7 @@ textarea
     min-width: 230px
     text-align: right
 
-    .ls-field
+    .ls-label
       width: 65% !important
       display: inline-block
       margin-bottom: 0
@@ -238,7 +238,7 @@ input.ls-form-text,
     vertical-align: middle
     height: 38px
 
-    input + .ls-label-prefix
+    input + .ls-label-text-prefix
       height: inherit
 
     input
@@ -253,7 +253,7 @@ input.ls-form-text,
     margin-bottom: 0
     display:table-cell
 
-.ls-label-prefix
+.ls-label-text-prefix
   width: 1%
   display: table-cell
   padding: 6px 12px
@@ -268,12 +268,12 @@ input.ls-form-text,
   border: 1px solid $gray2
   border-radius: 4px 0 0 4px
 
-.ls-label-prefix + input
+.ls-label-text-prefix + input
   border-left: none
   border-bottom-left-radius: 0
   border-top-left-radius: 0
 
-input + .ls-label-prefix
+input + .ls-label-text-prefix
   border: 1px solid $gray2
   border-radius: 0 4px 4px 0
   position: relative
@@ -288,10 +288,10 @@ input + .ls-label-prefix
 
   .ls-form-inline
 
-    .ls-field
+    .ls-label
       margin-bottom: 15px
 
-      .ls-label
+      .ls-label-text
         display: block
 
     [class*="ls-btn"]
@@ -308,7 +308,7 @@ input + .ls-label-prefix
       text-align: left
       float: none !important
 
-      .ls-field
+      .ls-label
         display: block
         width: 64% !important
 
@@ -318,7 +318,7 @@ input + .ls-label-prefix
 @media (min-width: $screen-sm)
   .ls-form-inline
 
-    .ls-fields
+    .ls-labels
       margin-bottom: 0
 
     .ls-actions-btn

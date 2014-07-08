@@ -36,17 +36,17 @@ locastyle.form = (function() {
 
   function prefixSufix () {
     if(locastyle.breakpointClass == 'ls-screen-xs'){
-      $('.ls-label-sufix').parents('.ls-field').addClass('ls-label-has-sufix');
-      $('.ls-label-prefix').parents('.ls-field').addClass('ls-label-has-prefix');
+      $('.ls-label-text-sufix').parents('.ls-label').addClass('ls-label-text-has-sufix');
+      $('.ls-label-text-prefix').parents('.ls-label').addClass('ls-label-text-has-prefix');
     } else{
-      $('.ls-label-sufix').prev('[class*="col-"]')
+      $('.ls-label-text-sufix').prev('[class*="col-"]')
         .addClass('ls-no-padding-right')
         .find(':input').addClass('ls-no-right-radius ls-border');
     }
   }
 
   function textareaAutoresize (argument) {
-    $('textarea.ls-textarea-autoresize', '.ls-field').each(function (index, textarea) {
+    $('textarea.ls-textarea-autoresize', '.ls-label').each(function (index, textarea) {
       var $textarea = $(textarea);
       var height = $textarea.height();
       $textarea.keyup(function (e) {
