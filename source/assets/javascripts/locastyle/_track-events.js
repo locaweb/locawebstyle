@@ -57,6 +57,10 @@ locastyle.trackEvents = (function() {
         var modal = $(item).data("target") ? $(item).data("target") : $(item).attr("href");
         options.action = 'open_modal_' + modal;
       }
+      if($(item).attr("data-dismiss") === "modal"){
+        var modal = $($(item).parents(".ls-modal")).attr("id");
+        options.action = 'close_modal_#' + modal;
+      }
       bindClickEvents(item, options);
     });
   }
