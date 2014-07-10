@@ -130,7 +130,8 @@ locastyle.trackEvents = (function() {
   }
 
   function bindGuidedTour() {
-    $("body").on("click", ".hopscotch-bubble .hopscotch-nav-button", function(e) {
+    $("body").off("click.lsTrackEvents");
+    $("body").on("click.lsTrackEvents", ".hopscotch-bubble .hopscotch-nav-button", function(e) {
       var currentStep = $(this).parents(".hopscotch-bubble").find(".hopscotch-bubble-number").text();
       ga('send', 'event', locastyle.trackEvents.eventCategory, 'go_to_tour_step[' + currentStep + ']', $(this).text());
     });
