@@ -39,6 +39,10 @@ locastyle.trackEvents = (function() {
       if($(item).parent().attr("data-ls-module") === "dropdown"){
         options.action = 'dropdown_toggle';
       }
+      if($(item).attr("data-ls-module") === "modal"){
+        var modal = $(item).data("target") ? $(item).data("target") : $(item).attr("href");
+        options.action = 'open_modal_' + modal;
+      }
       bindClickEvents(item, options);
     });
   }
@@ -49,6 +53,14 @@ locastyle.trackEvents = (function() {
       var options = {}
       options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'on_page_button_#';
       options.label = $(item).data("ls-te-label") ? $(item).data("ls-te-label") : $(item).text();
+      if($(item).attr("data-ls-module") === "modal"){
+        var modal = $(item).data("target") ? $(item).data("target") : $(item).attr("href");
+        options.action = 'open_modal_' + modal;
+      }
+      if($(item).attr("data-dismiss") === "modal"){
+        var modal = $($(item).parents(".ls-modal")).attr("id");
+        options.action = 'close_modal_#' + modal;
+      }
       bindClickEvents(item, options);
     });
   }
