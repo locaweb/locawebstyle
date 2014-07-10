@@ -303,4 +303,39 @@ describe("Track Events: ", function() {
     });
   });
 
+  describe("Guided Tour", function () {
+    describe("When click on #hopscotch-next which is a navigation on guided tour", function () {
+      it("should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "go_to_tour_step[1]",
+          label: "Próximo"
+        }
+        $("#guidedtour_sample_wrapper").html('<div id="guidedtour_sample" class="hopscotch-bubble animated" style="position: absolute; top: 1984px; left: 533.5px;">' +
+            '<div class="hopscotch-bubble-container" style="width: 250px; padding: 15px;">' +
+              '<span class="hopscotch-bubble-number">1</span>' +
+              '<div class="hopscotch-bubble-content">' +
+                '<h3 class="hopscotch-title">O título do passo 1</h3>' +
+                '<div class="hopscotch-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>' +
+              '</div>' +
+              '<div class="hopscotch-actions">' +
+                '<button id="hopscotch-prev" class="hopscotch-nav-button prev hide">Anterior</button>' +
+                '<button id="hopscotch-cta" class="hopscotch-nav-button next hide"></button>' +
+                '<button id="hopscotch-next" class="hopscotch-nav-button next">Próximo</button>' +
+                '<button id="hopscotch-done" class="hopscotch-nav-button next hide">Ok</button>' +
+              '</div>' +
+              '<a class="hopscotch-bubble-close" href="#" title="Close">Close</a>' +
+            '</div>' +
+            '<div class="hopscotch-bubble-arrow-container up" style="left: 129px;">' +
+              '<div class="hopscotch-bubble-arrow-border"></div>' +
+              '<div class="hopscotch-bubble-arrow"></div>' +
+            '</div>' +
+          '</div>');
+        spyOn(window, "ga");
+        $("#hopscotch-next").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+  });
+
 });
