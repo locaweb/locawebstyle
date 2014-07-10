@@ -368,6 +368,11 @@
   color: $colorDanger !important
   background-color: rgba($colorDanger, .2) !important
 
+.ls-hidden-sm, .ls-hidden-md, .ls-hidden-lg
+  display: block
+
+.ls-visible-sm, .ls-visible-md, .ls-visible-lg
+  display: none
 
 @media (max-width: $screen-md)
   .ls-float-none-sm
@@ -397,6 +402,12 @@
   .ls-btn-block-sm
     display: inline-block !important
     width: auto !important
+
+  .ls-hidden-md
+    display: none
+
+  .ls-visible-md
+    display: block
 
 @media (max-width: $screen-sm)
   .ls-float-none-xs
@@ -428,3 +439,16 @@
     text-align: center !important
     margin-bottom: 10px
     width: 100% !important
+
+  .ls-hidden-sm
+    display: none
+
+  .ls-visible-sm
+    display: block
+
+@media (max-width: $screen-lg)
+  .ls-hidden-lg
+    display: none
+
+  .ls-visible-lg
+    display: block
