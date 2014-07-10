@@ -377,6 +377,19 @@ describe("Track Events: ", function() {
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });
+
+    describe("When click on #user_dropdawn > a", function () {
+      it("should call ga with expectedOptions as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "top_bar_action",
+          label: "Toggle user dropdown"
+        }
+        spyOn(window, "ga");
+        $("#user_dropdawn > a").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
   });
 
 });

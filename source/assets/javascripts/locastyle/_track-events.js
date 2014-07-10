@@ -38,7 +38,12 @@ locastyle.trackEvents = (function() {
         options.action = 'tab_navigation';
       }
       if($(item).parent().attr("data-ls-module") === "dropdown"){
-        options.action = 'dropdown_toggle';
+        if($(item).parents(".ls-topbar").length > 0){
+          options.action = 'top_bar_action';
+          options.label = 'Toggle user dropdown';
+        } else {
+          options.action = 'dropdown_toggle';
+        }
       }
       if($(item).attr("data-ls-module") === "modal"){
         var modal = $(item).data("target") ? $(item).data("target") : $(item).attr("href");
