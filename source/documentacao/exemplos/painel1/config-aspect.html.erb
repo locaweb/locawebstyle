@@ -1,10 +1,12 @@
 ---
 title: Configurações de Aparência
-layout: panel1
+layout: panel
+theme_name: ls-theme-gold
+title_product: Revenda do Email Marketing
 ---
 
-  <h1 class="ls-title-intro ls-ico-cog">Aparência</h1>
-  <p>Personalize e deixe o e-mail marketing com a cara da sua empresa.</p>
+<h1 class="ls-title-intro ls-ico-cog">Aparência</h1>
+<p>Personalize e deixe o e-mail marketing com a cara da sua empresa.</p>
 <form action="" class="ls-form">
   <div class="row">
     <div class="col-md-9">
@@ -80,3 +82,7 @@ layout: panel1
 
   </div>
 </form>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel1/sidebar' %>
+<% end %>
