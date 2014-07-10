@@ -5,32 +5,31 @@
   margin: 0
 
   li
+    position: relative
+    top: -1px
     list-style: none
     display: inline-block
-    border: 1px solid $gray1
+    border: 1px solid transparent
     border-bottom: none
     border-radius: $radiusDefault $radiusDefault 0 0
-    position: relative
-    top: 2px
-    margin: 0 -3px 0 0
     line-height: 1
     font-size: .875rem
+    margin-right: -3px
 
     a
       color: #fff
       display: inline-block
-      padding: 14px 16px
+      padding: 12px 11px 12px
 
     &.ls-active
-      border: 1px solid $gray1
-      border-bottom: none
-      background-color: #fff
-      top: 0
+      border-color: $gray1
+      top: 0px
 
       a
-        padding-top: 17px
-        padding-bottom: 17px
+        margin-top: 0px
         color: #333
+        padding: 16px 16px 12px
+
 
 .ls-tabs-container
   clear: both
