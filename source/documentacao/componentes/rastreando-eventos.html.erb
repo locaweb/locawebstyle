@@ -1,0 +1,35 @@
+---
+title: Rastreando eventos
+description: Rastreio de eventos automáticos para quem usa o "Analytics" do Google
+type: component
+---
+
+<%= partial 'partials/doc-menu-components'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <h2 class="doc-title-3">O que é?</h2>
+  <p>É uma forma de registrar os eventos comuns em projetos que usam o Locastyle. Por exemplo, registramos se a ação está abrindo ou fechando um collapse, se é um link externo ou na página, se está abrindo um modal e etc.</p>
+
+  <h2 class="doc-title-3">Como usar?</h2>
+  <p>Para que este componente comece a fazer o "tracking" dos eventos, duas coisas são necessárias</p>
+  <ol>
+    <li>Ter o código <code>ga</code> configurado</li>
+    <li>Inicializar o "tracking"</li>
+  </ol>
+
+  <h2 class="doc-title-3">Inicializando o tracking manualmente</h2>
+  <p>Este componente precisa ser inicializado manualmente, caso contrário, ele não faz nada.</p>
+  <% code("js") do %>
+    locastyle.trackEvents.init();
+  <% end %>
+  <p>Isto precisa rodar depois que o Locsatyle já foi carregado na página.</p>
+
+  <h2 class="doc-title-3">Requisitos</h2>
+  <p>Este componente funciona apenas na versão 3 do Locastyle e suporta apenas o novo analytics, ou "<a href="https://support.google.com/analytics/answer/2790010?hl=pt-BR" target="_blank">Universal Analytics</a>".</p>
+  <p>Se você ainda usa o antigo, procure atualizar, existem <a href="http://analytics.blogspot.com.br/2013/10/an-easy-way-to-upgrade-to-universal_23.html" target="_blank">documentações de como fazer este upgrade.</a></p>
+
+</section>
+
