@@ -57,7 +57,7 @@ textarea
   background-color: #fff
   background-image: none
   border: 1px solid $gray2
-  border-radius: 4px
+  border-radius: $radiusDefault
   font-size: .875rem
   line-height: 1.42857143
 
@@ -75,7 +75,6 @@ textarea
     font-size: 1.125rem
     padding: 10px 16px 9px
     line-height: 1.33
-    border-radius: 6px
 
   &.ls-field-md
     font-size: .875rem
@@ -91,7 +90,6 @@ textarea
 
   &.ls-field-sm,
   &.ls-field-xs
-    border-radius: 3px
     line-height: 1.5
 
 
@@ -266,7 +264,7 @@ input.ls-form-text,
   text-align: center
   background-color: lighten($gray3, 45%)
   border: 1px solid $gray2
-  border-radius: 4px 0 0 4px
+  border-radius: $radiusDefault 0 0 $radiusDefault
 
 .ls-label-text-prefix + input
   border-left: none
@@ -275,7 +273,7 @@ input.ls-form-text,
 
 input + .ls-label-text-prefix
   border: 1px solid $gray2
-  border-radius: 0 4px 4px 0
+  border-radius: 0 $radiusDefault $radiusDefault 0
   position: relative
   left: -4px
   z-index: 2
