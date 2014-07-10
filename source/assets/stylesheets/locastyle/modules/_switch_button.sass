@@ -10,7 +10,7 @@
     width: 50px
     position: relative
     margin-right: 10px
-    border-radius: 3px
+    border-radius: $radiusDefault
     display: inline-block
     cursor: pointer
 
@@ -24,7 +24,7 @@
       height: 20px
       border: 1px solid rgba($gray5, .15)
       background: #fff url(../images/ico-switch.png) center no-repeat
-      border-radius: 2px 0 0 2px
+      border-radius: $radiusDefault 0 0 $radiusDefault
 
     &:hover,
     &:focus
@@ -54,7 +54,7 @@
       top: 2px
       left: auto
       right: 2px
-      border-radius: 0 2px 2px 0
+      border-radius: 0 $radiusDefault $radiusDefault 0
 
   input:focus + label
     outline: 5px auto -webkit-focus-ring-color

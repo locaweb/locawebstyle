@@ -7,9 +7,9 @@
   li
     list-style: none
     display: inline-block
-    border: 1px solid $gray2
+    border: 1px solid $gray1
     border-bottom: none
-    border-radius: 7px 7px 0 0
+    border-radius: $radiusDefault $radiusDefault 0 0
     position: relative
     top: 2px
     margin: 0
@@ -34,11 +34,11 @@
   top: -1px
 
   .ls-tab-content
-    +border-radius(0 4px 4px 4px)
+    +border-radius(0 $radiusDefault $radiusDefault $radiusDefault)
     display: none
     padding: 20px
     margin-bottom: 20px
-    border: 1px solid $gray2
+    border: 1px solid $gray1
     background-color: #fff
 
     &.ls-active
