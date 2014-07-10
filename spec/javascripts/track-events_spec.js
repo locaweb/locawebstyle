@@ -338,4 +338,45 @@ describe("Track Events: ", function() {
     });
   });
 
+  describe("Top bar actions", function () {
+    describe("When click on #open_notification_trigger", function () {
+      it("should call ga with expectedOptions as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "top_bar_action",
+          label: "Notificações"
+        }
+        spyOn(window, "ga");
+        $("#open_notification_trigger").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
+    describe("When click on #open_help_trigger", function () {
+      it("should call ga with expectedOptions as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "top_bar_action",
+          label: "Ajuda"
+        }
+        spyOn(window, "ga");
+        $("#open_help_trigger").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
+    describe("When click on #open_feedback_trigger", function () {
+      it("should call ga with expectedOptions as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "top_bar_action",
+          label: "Sugestões"
+        }
+        spyOn(window, "ga");
+        $("#open_feedback_trigger").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+  });
+
 });
