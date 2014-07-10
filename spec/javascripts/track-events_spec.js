@@ -336,6 +336,38 @@ describe("Track Events: ", function() {
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });
+
+    describe('Unbind: When trackEvents is initialized multiple times', function () {
+      it('should not call ga multiple times when clicking inside the tour', function () {
+      $("#guidedtour_sample_wrapper").html('<div id="guidedtour_sample" class="hopscotch-bubble animated" style="position: absolute; top: 1984px; left: 533.5px;">' +
+          '<div class="hopscotch-bubble-container" style="width: 250px; padding: 15px;">' +
+            '<span class="hopscotch-bubble-number">1</span>' +
+            '<div class="hopscotch-bubble-content">' +
+              '<h3 class="hopscotch-title">O título do passo 1</h3>' +
+              '<div class="hopscotch-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>' +
+            '</div>' +
+            '<div class="hopscotch-actions">' +
+              '<button id="hopscotch-prev" class="hopscotch-nav-button prev hide">Anterior</button>' +
+              '<button id="hopscotch-cta" class="hopscotch-nav-button next hide"></button>' +
+              '<button id="hopscotch-next-2" class="hopscotch-nav-button next">Próximo</button>' +
+              '<button id="hopscotch-done" class="hopscotch-nav-button next hide">Ok</button>' +
+            '</div>' +
+            '<a class="hopscotch-bubble-close" href="#" title="Close">Close</a>' +
+          '</div>' +
+          '<div class="hopscotch-bubble-arrow-container up" style="left: 129px;">' +
+            '<div class="hopscotch-bubble-arrow-border"></div>' +
+            '<div class="hopscotch-bubble-arrow"></div>' +
+          '</div>' +
+        '</div>');
+        spyOn(window, "ga");
+        locastyle.trackEvents.init();
+        locastyle.trackEvents.init();
+        locastyle.trackEvents.init();
+        locastyle.trackEvents.init();
+        $("#hopscotch-next-2").trigger("click.lsTrackEvents");
+        expect(window.ga.calls.count()).toEqual(1);
+      });
+    });
   });
 
   describe("Top bar actions", function () {
