@@ -1,7 +1,10 @@
 ---
 title: Pré Painel
-layout: pre-panel1
-show_topbar_title: false
+layout: panel
+show_topbar_title: true
+pre_panel: true
+theme_name: ls-theme-gold
+title_product: Revenda do Email Marketing
 ---
 
 <h1 class="ls-title-intro ls-ico-list2">Contas</h1>
@@ -30,3 +33,7 @@ show_topbar_title: false
     </div>
   </header>
 </div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel1/sidebar' %>
+<% end %>

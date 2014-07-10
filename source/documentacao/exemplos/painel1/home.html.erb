@@ -1,7 +1,9 @@
 ---
 title: Página Inicial
 html_class: ls-html-nobg
-layout: panel1
+layout: panel
+theme_name: ls-theme-gold
+title_product: Revenda do Email Marketing
 ---
 
 <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
@@ -118,6 +120,8 @@ layout: panel1
       <a href="#" class="ls-lnk-nav ls-ico-chevron-right">Política de bounce</a>
     </div>
   </div>
-
-
 </div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel1/sidebar' %>
+<% end %>
