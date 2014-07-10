@@ -275,4 +275,32 @@ describe("Track Events: ", function() {
     });
   });
 
+  describe("Collapses", function () {
+    describe("When click on #closed_collapse_sample > a which is a trigger to open a collapse", function () {
+      it("should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "open_collapse_#closed_collapse_sample",
+          label: "Open collapse"
+        }
+        spyOn(window, "ga");
+        $("#closed_collapse_sample > a").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
+    describe("When click on #opened_collapse_sample > a which is a trigger to close a collapse", function () {
+      it("should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "close_collapse_#opened_collapse_sample",
+          label: "Close collapse"
+        }
+        spyOn(window, "ga");
+        $("#opened_collapse_sample > a").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+  });
+
 });
