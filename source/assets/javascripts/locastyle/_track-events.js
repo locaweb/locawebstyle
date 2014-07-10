@@ -43,6 +43,9 @@ locastyle.trackEvents = (function() {
         var modal = $(item).data("target") ? $(item).data("target") : $(item).attr("href");
         options.action = 'open_modal_' + modal;
       }
+      if($(item).parent().attr("data-ls-module") === "collapse"){
+        options.type = "collapse";
+      }
       bindClickEvents(item, options);
     });
   }
@@ -88,6 +91,16 @@ locastyle.trackEvents = (function() {
   function bindClickEvents(element, options){
     $(element).off("click.ls");
     $(element).on("click.ls", function () {
+      if(options.type === "collapse"){
+        var targetCollapse = $(element).parent().attr("id");
+        if($("#" + targetCollapse).hasClass("ls-collapse-open")){
+          options.action = 'close_collapse_#' + targetCollapse;
+          options.label = "Close collapse"
+        } else {
+          options.action = 'open_collapse_#' + targetCollapse;
+          options.label = "Open collapse"
+        }
+      }
       ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
     });
   }
