@@ -1,3 +1,4 @@
+@import "compass/css3"
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,600,300,700)
 
 *
@@ -151,8 +152,7 @@ p code
 .doc-title-intro
   padding: 65px 0
   margin: 0 !important
-  background: url(/assets/images/docs/bg-highlight.jpg) fixed no-repeat top center
-  background-size: cover
+  background: url(/assets/images/docs/bg-highlight2.jpg) fixed
   color: #fff
 
   h1
@@ -207,39 +207,39 @@ p code
     display: inline-block
     vertical-align: top
 
-    a
-      display: inline-block
-      padding: 15px
-      font-size: .88rem
-      color: #555
-      font-weight: 400
-      text-decoration: none
-      text-transform: uppercase
+  a
+    display: inline-block
+    padding: 15px
+    font-size: .88rem
+    color: #555
+    font-weight: 400
+    text-decoration: none
+    text-transform: uppercase
 
-      &.active,
-      &:hover,
-      &:focus
-        background-color: #fff
-        color: #000
-        position: relative
+    &.active,
+    &:hover,
+    &:focus
+      background-color: #fff
+      color: #000
+      position: relative
 
-        &:before,
-        &:after
-          content: ""
-          display: block
-          width: 100%
-          position: absolute
+      &:before,
+      &:after
+        content: ""
+        display: block
+        width: 100%
+        position: absolute
 
-        &:before
-          border-top: 4px solid #bfbfbf
-          top: -4px
-          left: 0
+      &:before
+        border-top: 4px solid #bfbfbf
+        top: -4px
+        left: 0
 
-        &:after
-          height: 1px
-          bottom: -1px
-          left: 0
-          background: #fff
+      &:after
+        height: 1px
+        bottom: -1px
+        left: 0
+        background: #fff
 
 //
 // SIDEBAR MENU
@@ -431,25 +431,29 @@ p code
   &.active
     background-color: #fff
 
+    .sandwich,
+    .sandwich:before,
+    .sandwich:after
+      background: #000
+
     ul
       display: block
 
-    .sandwich
+  .sandwich,
+  .sandwich:before,
+  .sandwich:after
+    content: ""
+    width: 16px
+    height: 3px
+    background-color: white
+    display: block
+    margin: 12px auto 0
+    position: relative
 
-      &:after
-        background-color: #000
-        box-shadow: 0 6px 0 #000, 0 12px 0 #000
-
-  .sandwich
-
-    &:after
-      content: ""
-      width: 16px
-      height: 3px
-      background-color: #fff
-      display: block
-      margin: 12px auto 0
-      box-shadow: 0 6px 0 #fff, 0 12px 0 #fff
+  .sandwich:before,
+  .sandwich:after
+    margin-top: 3px
+    top: 6px
 
   ul
     display: none
@@ -478,17 +482,19 @@ p code
         background: #000
         color: #fff
 
+  [type="checkbox"]:checked ~ ul
+    display: block
+
   .doc-header &
     background-color: #f2f2f2
     border-color: #ececec
     position: relative
     top: 0
 
-    .sandwich
-
-      &:after
-        background-color: #000
-        box-shadow: 0 6px 0 #000, 0 12px 0 #000
+    .sandwich,
+    .sandwich:before,
+    .sandwich:after
+      background-color: #222
 
 //
 // EXAMPLES
@@ -556,8 +562,7 @@ p code
 //
 .doc-footer
   clear: both
-  background: url(/assets/images/docs/bg-highlight.jpg) no-repeat
-  background-size: cover
+  background-image: url(/assets/images/docs/bg-highlight2.jpg)
   padding: 10px 0
 
   .doc-logo-footer
