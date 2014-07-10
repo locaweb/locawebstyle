@@ -22,6 +22,7 @@ locastyle.trackEvents = (function() {
     findButtons();
     findForms();
     findSelects();
+    bindGuidedTour();
   }
 
   function findLinks(){
@@ -53,7 +54,7 @@ locastyle.trackEvents = (function() {
   function findButtons(){
     var buttons = $("button");
     $(buttons).each(function (index, item) {
-      var options = {}
+      var options = {};
       options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'on_page_button_#';
       options.label = $(item).data("ls-te-label") ? $(item).data("ls-te-label") : $(item).text();
       if($(item).attr("data-ls-module") === "modal"){
@@ -71,7 +72,7 @@ locastyle.trackEvents = (function() {
   function findForms(){
     var forms = $("form");
     $(forms).each(function (index, item) {
-      var options = {}
+      var options = {};
       options.action = "submit_form_#" + ($(item).data("action") || $(item).attr("id") || $(item).attr("action"));
       options.label = $(item).find(":submit[type=submit]").val();
       bindFormEvents(item, options);
@@ -117,6 +118,13 @@ locastyle.trackEvents = (function() {
     $(element).on("change.ls", function () {
       options.label = $(this).val();
       ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
+    });
+  }
+
+  function bindGuidedTour() {
+    $("body").on("click", ".hopscotch-bubble .hopscotch-nav-button", function(e) {
+      var currentStep = $(this).parents(".hopscotch-bubble").find(".hopscotch-bubble-number").text();
+      ga('send', 'event', locastyle.trackEvents.eventCategory, 'go_to_tour_step[' + currentStep + ']', $(this).text());
     });
   }
 
