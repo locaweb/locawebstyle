@@ -47,6 +47,9 @@ locastyle.trackEvents = (function() {
       if($(item).parent().attr("data-ls-module") === "collapse"){
         options.type = "collapse";
       }
+      if($(item).attr("data-ls-module") === "topbarCurtain"){
+        options.action = "top_bar_action";
+      }
       bindClickEvents(item, options);
     });
   }
