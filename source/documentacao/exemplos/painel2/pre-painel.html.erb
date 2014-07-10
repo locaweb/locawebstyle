@@ -1,7 +1,10 @@
 ---
 title: Pré Painel
-layout: pre-panel2
-show_topbar_title: false
+layout: panel
+show_topbar_title: true
+pre_panel: true
+theme_name: ls-theme-light-green
+title_product: SMTP Locaweb
 ---
 
 <h1 class="ls-title-intro ls-ico-list2">Contas</h1>
@@ -17,4 +20,8 @@ show_topbar_title: false
       </div>
     </header>
   </div>
+<% end %>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel2/sidebar' %>
 <% end %>

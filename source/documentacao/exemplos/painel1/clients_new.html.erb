@@ -1,6 +1,8 @@
 ---
 title: Dashboard do cliente
-layout: panel1
+layout: panel
+theme_name: ls-theme-gold
+title_product: Revenda do Email Marketing
 ---
 
 <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
@@ -134,3 +136,7 @@ layout: panel1
   </div>
 
 </div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel1/sidebar' %>
+<% end %>
