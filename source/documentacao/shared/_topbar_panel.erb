@@ -13,8 +13,8 @@
     <!-- Dropdown com detalhes da conta de usuário -->
     <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
       <a href="#" class="ls-ico-user">
-        Franco
-        <small>(fmolina)</small>
+        <%= lorem.first_name %>
+        <small>(<%= lorem.last_name %>)</small>
       </a>
       <nav class="ls-dropdown-nav ls-user-menu">
         <ul>
@@ -32,6 +32,6 @@
 
   <!-- Nome do produto/marca -->
   <%- unless current_page.data.show_topbar_title %>
-    <h1 class="ls-brand-name"><%= link_to 'Revenda Email Marketing', 'base', :class => 'ls-ico-earth' %></h1>
+    <h1 class="ls-brand-name"><%= link_to current_page.data.title_product, 'home', :class => 'ls-ico-earth' %></h1>
   <% end %>
 </div>

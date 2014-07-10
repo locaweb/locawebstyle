@@ -1,10 +1,12 @@
 ---
 title: Configurações de Domínios
-layout: panel1
+layout: panel
+theme_name: ls-theme-gold
+title_product: Revenda do Email Marketing
 ---
 
-  <h1 class="ls-title-intro ls-ico-cog">Domínio da revenda</h1>
-  <p>Configure um domínio padrão para os links das mensagens e de acesso ao painel.</p>
+<h1 class="ls-title-intro ls-ico-cog">Domínio da revenda</h1>
+<p>Configure um domínio padrão para os links das mensagens e de acesso ao painel.</p>
 
 <div class="row">
   <div class="col-md-6">
@@ -56,3 +58,7 @@ layout: panel1
     </div>
   </div>
 </div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel1/sidebar' %>
+<% end %>

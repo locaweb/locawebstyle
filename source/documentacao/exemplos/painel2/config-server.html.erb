@@ -1,27 +1,33 @@
 ---
 title: Dados do Servidor SMTP
-layout: panel2
+layout: panel
+theme_name: ls-theme-light-green
+title_product: SMTP Locaweb
 ---
 
-  <h1 class="ls-title-intro ls-ico-cog">Dados do Servidor SMTP</h1>
-  <p>Utilize e gerencie as informações de autenticação do servidor SMTP.</p>
-  <table class="ls-table ls-table-striped">
-    <tbody>
-      <tr>
-        <td><strong>Usuário: </strong> fulano</td>
-      </tr>
-      <tr>
-        <td>
-          <strong>Senha: </strong>
-          <input type="password" maxlength="20" id="password_field2" name="password" class="ls-no-style-input" value="testandosenha" >
-          <a class="ls-toggle-pass" data-target="#password_field2" href="#" data-toggle-text="Ocultar">Exibir</a>
-        </td>
-      </tr>
-      <tr>
-        <td><strong>Endereço de SMTP: </strong>smtp.teste-smtp.teste.com</td>
-      </tr>
-      <tr>
-        <td><strong>Porta:</strong> 587| <strong>SSL/TLS:</strong> 465</td>
-      </tr>
-    </tbody>
-  </table>
+<h1 class="ls-title-intro ls-ico-cog">Dados do Servidor SMTP</h1>
+<p>Utilize e gerencie as informações de autenticação do servidor SMTP.</p>
+<table class="ls-table ls-table-striped">
+  <tbody>
+    <tr>
+      <td><strong>Usuário: </strong> fulano</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Senha: </strong>
+        <input type="password" maxlength="20" id="password_field2" name="password" class="ls-no-style-input" value="testandosenha" >
+        <a class="ls-toggle-pass" data-target="#password_field2" href="#" data-toggle-text="Ocultar">Exibir</a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Endereço de SMTP: </strong>smtp.teste-smtp.teste.com</td>
+    </tr>
+    <tr>
+      <td><strong>Porta:</strong> 587| <strong>SSL/TLS:</strong> 465</td>
+    </tr>
+  </tbody>
+</table>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel2/sidebar' %>
+<% end %>

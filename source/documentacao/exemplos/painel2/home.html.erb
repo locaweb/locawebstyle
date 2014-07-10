@@ -1,7 +1,9 @@
 ---
 title: Página Inicial
 html_class: ls-html-nobg
-layout: panel2
+layout: panel
+theme_name: ls-theme-light-green
+title_product: SMTP Locaweb
 ---
 
 <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
@@ -120,3 +122,7 @@ layout: panel2
   </div>
 
 </div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel2/sidebar' %>
+<% end %>

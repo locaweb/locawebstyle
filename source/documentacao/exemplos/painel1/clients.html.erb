@@ -1,6 +1,8 @@
 ---
 title: Lista de clientes
-layout: panel1
+layout: panel
+theme_name: ls-theme-gold
+title_product: Revenda do Email Marketing
 ---
 
 <h1 class="ls-title-intro ls-ico-users">Clientes</h1>
@@ -96,3 +98,7 @@ layout: panel1
     </label>
   </div>
 </div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel1/sidebar' %>
+<% end %>

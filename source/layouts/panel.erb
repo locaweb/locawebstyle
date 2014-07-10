@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="ls-theme-light-green <%= current_page.data.html_class %>">
+<html class="<%= current_page.data.theme_name %> <%= current_page.data.html_class %> <%= "ls-pre-panel" if current_page.data.pre_panel %>">
 <head>
   <meta charset="utf-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -11,7 +11,7 @@
 </head>
 <body class="<%= page_classes %>">
 
-  <%= partial "documentacao/shared/topbar" %>
+  <%= partial "documentacao/shared/topbar_panel" %>
 
   <main class="ls-main <%= current_page.data.body_class %>">
     <div class="container-fluid">
@@ -22,41 +22,7 @@
   </main>
 
   <aside class="ls-sidebar">
-    <!-- Dropdown com detalhes da conta de usuário -->
-    <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
-      <a href="#" class="ls-ico-user">
-        <%= lorem.first_name %>
-        <small>(<%= lorem.last_name %>)</small>
-      </a>
-      <nav class="ls-dropdown-nav ls-user-menu">
-        <ul>
-          <li><a href="#">Meus dados</a></li>
-          <li><a href="#">Faturas</a></li>
-          <li><a href="#">Planos</a></li>
-          <li><a href="#">Sair</a></li>
-         </ul>
-      </nav>
-    </div>
-
-    <div class="ls-area-account ls-ico-user">
-      <h2 class="ls-title-2">Administrando</h2>
-      <h3 class="ls-title-3">revenda.fmolina</h3>
-      <a href="<%= base_url %>/documentacao/exemplos/painel2/pre-painel" class="ls-btn-xs ls-btn-dark">VER TODOS</a>
-    </div>
-    <nav class="ls-menu">
-      <ul>
-       <li><a href="<%= base_url %>/documentacao/exemplos/painel2/home" class="ls-ico-home">Página inicial</a></li>
-       <li><a href="<%= base_url %>/documentacao/exemplos/painel2/stats" class="ls-ico-stats">Relatórios</a></li>
-       <li class="ls-submenu">
-        <a href="#" class="ls-ico-cog">Configurações</a>
-        <ul>
-          <li><a class="ls-submenu-item" href="<%= base_url %>/documentacao/exemplos/painel2/config-server">Dados do Servidor SMTP</a></li>
-          <li><a class="ls-submenu-item" href="<%= base_url %>/documentacao/exemplos/painel2/config-email">E-mail de remetente</a></li>
-          <li><a class="ls-submenu-item" href="<%= base_url %>/documentacao/exemplos/painel2/config-excess">Envios excedentes</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+    <%= yield_content :sidebar_panel %>
   </aside>
 
   <aside class="ls-notification">
