@@ -223,4 +223,56 @@ describe("Track Events: ", function() {
     });
   });
 
+  describe("Modal", function () {
+    describe("When click on #closed_modal_sample_trigger which is a trigger to open modal", function () {
+      it("should call ga with expedtedOptions as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "open_modal_#closed_modal_sample",
+          label: "Open modal"
+        }
+        spyOn(window, "ga");
+        $("#closed_modal_test #closed_modal_sample_trigger").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
+    describe("When click on #closed_modal_sample_trigger2 which is a trigger to open modal", function () {
+      it("should call ga with expedtedOptions as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "open_modal_#closed_modal_sample2",
+          label: "Open modal by link"
+        }
+        spyOn(window, "ga");
+        $("#closed_modal_test #closed_modal_sample_trigger2").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
+    describe("When closing modal", function () {
+      it("by [x], it should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "close_modal_#opened_modal_sample",
+          label: "x"
+        }
+        spyOn(window, "ga");
+        $("#opened_modal_test #close_modal_sample_by_x").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+
+      it("by cancel button, it should call ga with expected options as arguments", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "close_modal_#opened_modal_sample",
+          label: "Close"
+        }
+        spyOn(window, "ga");
+        $("#opened_modal_test #close_modal_sample_by_button").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+  });
+
 });

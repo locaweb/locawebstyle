@@ -68,6 +68,37 @@
   </div>
 </div>
 
+<div id="closed_modal_test">
+  <button id="closed_modal_sample_trigger" data-ls-module="modal" data-target="#closed_modal_sample" class="ls-btn-primary">Open modal</button>
+
+  <div class="ls-modal fade" id="closed_modal_sample">
+    <div class="ls-modal-box">
+    </div>
+  </div>
+
+  <a id="closed_modal_sample_trigger2" data-ls-module="modal" href="#closed_modal_sample2" class="ls-btn-primary">Open modal by link</a>
+
+  <div class="ls-modal fade" id="closed_modal_sample2">
+    <div class="ls-modal-box">
+    </div>
+  </div>
+</div>
+
+<div id="opened_modal_test" class="modal fade in" role="dialog" tabindex="-1" aria-labelledby="title_change_pass" aria-hidden="false" style="display: block;">
+
+  <div class="ls-modal fade" id="opened_modal_sample">
+    <div class="ls-modal-box">
+      <div class="ls-modal-header">
+        <button id="close_modal_sample_by_x" data-dismiss="modal">x</button>
+      </div>
+      <div class="ls-modal-footer">
+        <button id="close_modal_sample_by_button" class="ls-btn float-right ls-float-right" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
