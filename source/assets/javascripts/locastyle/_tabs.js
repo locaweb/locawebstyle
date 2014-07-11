@@ -49,13 +49,13 @@ locastyle.tabs = (function() {
   // atualiza o link do dropdowna com valor da aba ativa
   function updateTriggerLink(tabNav) {
     //limpa trigger o atual
-    $(tabNav).parents(".ls-dropdown").find("> a").remove();
+    $(tabNav).parents(".ls-dropdown-tabs").find("> a").remove();
 
     //atualiza com o novo trigger
-    $(tabNav).parents(".ls-dropdown").prepend($(tabNav).find("li.ls-active").html());
+    $(tabNav).parents(".ls-dropdown-tabs").prepend($(tabNav).find("li.ls-active").html());
 
     // adiciona classe de estilo no trigger
-    $(tabNav).parents(".ls-dropdown").find("> a").addClass("ls-btn");
+    $(tabNav).parents(".ls-dropdown-tabs").find("> a").addClass("ls-btn");
 
     // reinicializa o módulo de dropdown para pegar o novo trigger
     locastyle.dropdown.init();
@@ -64,7 +64,7 @@ locastyle.tabs = (function() {
   // altera a tab para o modo dropdown
   function dropdownShape(tabNav) {
     // coloca a div de dropdown em volta da navegação de abas
-    $(tabNav).wrap('<div data-ls-module="dropdown" class="ls-dropdown">');
+    $(tabNav).wrap('<div data-ls-module="dropdown" class="ls-dropdown-tabs">');
 
     // coloca a aba ativa como link do dropdown
     updateTriggerLink(tabNav);
