@@ -1,2 +1,0 @@
-// Copyright (C) 2013 Nikhil Dabas
-PR.registerLangHandler(PR.createSimpleLexer([[PR.PR_PLAIN,/^[\t\n\r \xA0]+/,null,"	\n\r  "],[PR.PR_STRING,/^!?\"(?:[^\"\\]|\\[\s\S])*(?:\"|$)/,null,'"'],[PR.PR_COMMENT,/^;[^\r\n]*/,null,";"]],[[PR.PR_PLAIN,/^[%@!](?:[-a-zA-Z$._][-a-zA-Z$._0-9]*|\d+)/],[PR.PR_KEYWORD,/^[A-Za-z_][0-9A-Za-z_]*/,null],[PR.PR_LITERAL,/^\d+\.\d+/],[PR.PR_LITERAL,/^(?:\d+|0[xX][a-fA-F0-9]+)/],[PR.PR_PUNCTUATION,/^[()\[\]{},=*<>:]|\.\.\.$/]]),["llvm","ll"]);

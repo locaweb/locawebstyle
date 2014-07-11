@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="ls-theme-green documentacao documentacao_funcoes-js documentacao_funcoes-js_index">
+<head>
+  <meta charset="UTF-8">
+  <title>Alternando Classes</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Como alterar classes de elementos" />
+  <meta name="keywords" content="" />
+
+  <link href="../../assets/stylesheets/docs.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/revenda/assets/stylesheets/locastyle.css">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41233562-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+
+
+<header class="doc-header container">
+  <nav class="doc-menu">
+  <span class="sandwich"></span>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/revenda/documentacao/introducao/">Use agora</a></li>
+    <li><a href="/revenda/documentacao/praticas/">Documentação</a></li>
+    <li><a href="/revenda/changelog">Changelog</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v1/">Documentação V1</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v2/">Documentação V2</a></li>
+  </ul>
+</nav>
+
+  <h1 class="doc-logo"><a href="/"><strong>Locaweb</strong> Style</a></h1>
+</header>
+
+<div class="doc-title-intro">
+  <div class="container">
+    <h1>Documentação</h1>
+    <p>Saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
+  </div>
+</div>
+
+<nav class="doc-menu-top">
+  <div class="container">
+    <ul>
+      <li class=''><a class='' href='/revenda/documentacao/introducao/'>Introdução</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/css/grid/'>CSS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/'>Funções JS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/componentes/'>Componentes</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/'>Formulários</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/exemplos/'>Telas de Exemplo</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="doc-content container">
+  <div class="row">
+    <aside class="col-md-3">
+  <nav class="doc-sidebar-menu">
+    <ul>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/'>Alternar Classes</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/alternar-textos/'>Alternar textos</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/dismiss/'>Dismiss</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/auto-trigger/'>Clique automático</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
+<section class="col-md-9">
+
+  <div class="doc-intro-content">
+  <h1>Alternando Classes</h1>
+  <p>Como alterar classes de elementos</p>
+</div>
+
+
+  <p>Basicamente essa funcionalidade faz um <strong>toggleClass</strong> em determiando elemento para que sua classe seja alternada.</p>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classe / Atributo</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>data-toggle-class</td>
+        <td>Atributo cujo valor é a classe que o script irá alternar</td>
+      </tr>
+      <tr>
+        <td>data-target</td>
+        <td>Elementos que terão a classe alternada definida no <code>data-toggle-class</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Veja um exemplo abaixo:</p>
+
+  <div class="ls-box-demo">
+    <button class="ls-btn-dark" data-toggle-class="ls-btn-dark">Troca a adiciona/remove a classe <i>.ls-btn-dark</i> deste botão</button>
+  </div>
+<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-dark"</span> <span class="na">data-toggle-class=</span><span class="s">"ls-btn-dark"</span><span class="nt">&gt;</span>Troca a adiciona/remove a classe <span class="nt">&lt;i&gt;</span>.ls-btn-dark<span class="nt">&lt;/i&gt;</span> deste botão<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <p>Neste exemplo, o atributo <code>data-toggle-class</code> contém o valor da classe que ele deve alternar.</p>
+
+  <div class="ls-box-demo">
+    <button class="ls-btn-primary" data-toggle-class="ls-background-info" data-target="#lsBox">Alterna a classe <strong>.ls-background-info</strong> do <strong>ls-box</strong></button>
+    <br>
+    <br>
+    <div id="lsBox" class="ls-box ls-background-info">
+      Uma mensagem bonita para caramba!
+    </div>
+  </div>
+<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span> <span class="na">data-toggle-class=</span><span class="s">"ls-background-info"</span> <span class="na">data-target=</span><span class="s">"#lsBox"</span><span class="nt">&gt;</span>Alterna a classe <span class="nt">&lt;strong&gt;</span>.ls-background-info<span class="nt">&lt;/strong&gt;</span> do <span class="nt">&lt;strong&gt;</span>ls-box<span class="nt">&lt;/strong&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"lsBox"</span> <span class="na">class=</span><span class="s">"ls-box ls-background-info"</span><span class="nt">&gt;</span>
+  Uma mensagem bonita para caramba!
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <p>É possível modificar vários elementos ao mesmo tempo, referenciando no <code>data-target</code> a classe destes elementos, como abaixo:</p>
+  <div class="ls-box-demo">
+    <button class="ls-btn-primary" data-toggle-class="ls-background-warning" data-target=".exampleBox">Alterna as classes dos elementos abaixo</button><br><br>
+    <div class="exampleBox ls-box ls-background-warning">Uma mensagem bonita para caramba!</div>
+    <div class="exampleBox ls-box ls-background-warning">Uma mensagem bonita para caramba!</div>
+  </div>
+<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span> <span class="na">data-toggle-class=</span><span class="s">"ls-background-warning"</span> <span class="na">data-target=</span><span class="s">".exampleBox"</span><span class="nt">&gt;</span>Alterna as classes dos elementos abaixo<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"exampleBox ls-box ls-background-warning"</span><span class="nt">&gt;</span>Uma mensagem bonita para caramba!<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"exampleBox ls-box ls-background-warning"</span><span class="nt">&gt;</span>Uma mensagem bonita para caramba!<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <p>Também é possível usar o comportamento em <code>inputs</code> do tipo <code>radio</code> e <code>checkbox</code>, sendo, quando marcados, inserem a classe, quando <b>desmarcados</b> removem a classe do elemento desejado. Exemplos:</p>
+
+  <div class="ls-box-demo">
+
+    <p>Checkbox</p>
+
+    <label><input type="checkbox" name="teste" value ="1" data-toggle-class="ls-display-none" data-target="#configs"> Configurações personalizadas</label>
+    <br><br>
+    <div id="configs" class="ls-box ls-display-none">
+      cum perspiciatis perspiciatis
+    </div>
+
+    <hr>
+
+    <p>Radiogroup</p>
+
+    <label><input type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt1"> Opção 1</label>
+    <div id="opt1" class="ls-box ls-display-none"> consequatur velit ut </div>
+    <br>
+    <label><input type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt2"> Opção 2</label>
+    <div id="opt2" class="ls-box ls-display-none"> ut recusandae non </div>
+    <br>
+    <label><input type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt3"> Opção 3</label>
+    <div id="opt3" class="ls-box ls-display-none"> culpa earum et </div>
+    <br>
+
+  </div>
+  <br>
+  <br>
+  <br>
+
+</section>
+
+  </div>
+</div>
+
+<footer class="doc-footer">
+  <div class="container">
+   <ul class="doc-social-link">
+      <!-- <li> <a href="" class="doc-social-facebook">facebook</a> </li> -->
+      <li> <a target="_blank" class="doc-social-twitter" href="http://twitter.com/locawebdevnet">twitter</a> </li>
+    </ul>
+    <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/revenda/assets/images/docs/locaweb-logo.png" alt=""></a>
+    <p class="doc-copyright">
+      Copyright © 1997-2014 Serviços de Internet S/A.
+    </p>
+  </div>
+</footer>
+
+<script src="../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script><script src="../../assets/javascripts/locastyle.js" type="text/javascript"></script><script src="../../assets/javascripts/docs.js" type="text/javascript"></script>
+
+</body>
+</html>
+

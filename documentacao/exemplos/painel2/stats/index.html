@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html class="ls-theme-light-green  ">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Relatórios</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link href="../../../../assets/stylesheets/locastyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="documentacao documentacao_exemplos documentacao_exemplos_painel2 documentacao_exemplos_painel2_stats documentacao_exemplos_painel2_stats_index">
+
+  <div class="ls-topbar">
+
+  <!-- Barra de Notificações -->
+  <div class="ls-notification-topbar">
+
+    <!-- Links de apoio -->
+    <div class="ls-alerts-list">
+      <a href="#" class="ls-ico-bell-o" data-counter="8" data-ls-module="topbarCurtain" data-target="#ls-notification-curtain"><span>Notificações</span></a>
+      <a href="#" class="ls-ico-bullhorn" data-ls-module="topbarCurtain" data-target="#ls-help-curtain"><span>Ajuda</span></a>
+      <a href="#" class="ls-ico-question" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain"><span>Sugestões</span></a>
+    </div>
+
+    <!-- Dropdown com detalhes da conta de usuário -->
+    <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+      <a href="#" class="ls-ico-user">
+        Giselle
+        <small>(Joseph)</small>
+      </a>
+      <nav class="ls-dropdown-nav ls-user-menu">
+        <ul>
+          <li><a href="#">Meus dados</a></li>
+          <li><a href="#">Faturas</a></li>
+          <li><a href="#">Planos</a></li>
+          <li><a href="#">Sair</a></li>
+         </ul>
+      </nav>
+    </div>
+  </div>
+
+  <span class="ls-show-sidebar ls-ico-menu"></span>
+  <span class="ls-show-notifications ls-ico-question"></span>
+
+  <!-- Nome do produto/marca -->
+    <h1 class="ls-brand-name"><a class="ls-ico-earth" href="home">SMTP Locaweb</a></h1>
+</div>
+
+
+  <main class="ls-main ">
+    <div class="container-fluid">
+      <h1 class="ls-title-intro ls-ico-stats">Relatórios</h1>
+
+<div class="ls-box-filter">
+  <form action="#" class="ls-form ls-form-inline ls-float-left">
+    <label class="ls-label">
+      <b class="ls-label-text">Período</b>
+      <div data-ls-module="customFields">
+        <select name="">
+          <option value="">Dia atual</option>
+          <option value="">Última semana</option>
+          <option value="">Últimos 30 dias</option>
+          <option value="">Últimos 6 meses</option>
+          <option value="">Últimos 12 meses </option>
+        </select>
+      </div>
+    </label>
+    <div data-ls-module="dropdown" class="ls-dropdown">
+      <a href="#" class="ls-btn">Exportar</a>
+      <ul class="ls-dropdown-nav">
+        <li><a href="#" data-ls-module="modal" data-target="#modal_export">CSV</a></li>
+        <li><a href="#" data-ls-module="modal" data-target="#modal_export">XLS</a></li>
+        <li><a href="#" data-ls-module="modal" data-target="#modal_exported_reports">Relatórios exportados</a></li>
+      </ul>
+    </div>
+  </form>
+  <div class="ls-group-btn ls-group-active ls-float-right">
+    <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn ls-active ls-ico-chart-bar-up"></button>
+    <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
+  </div>
+</div>
+
+
+<ul class="ls-tabs-nav" id="awesome-tab">
+  <li class="ls-active"><a data-ls-module="tabs" href="#tab1">Geral</a></li>
+  <li><a data-ls-module="tabs" href="#tab2">Erros</a></li>
+</ul>
+<div class="ls-tabs-container" id="awesome-tab-content">
+  <div id="tab1" class="ls-tab-content ls-active">
+
+    <div class="ls-board-box">
+        <div id="sending-stats" class="row">
+          <div class="col-sm-4">
+            <div class="ls-box">
+              <h6 class="ls-title-4">Enviados</h6>
+              <span class="ls-board-data">
+                <strong>33</strong>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="ls-box">
+              <h6 class="ls-title-4">Entregues</h6>
+              <span class="ls-board-data">
+                <strong>27</strong>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="ls-box">
+              <h6 class="ls-title-4">Erros</h6>
+              <span class="ls-board-data">
+                <strong>16</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="ls-tab-content child1 ls-active">
+
+      <img style="width: 100%;" src="/revenda/assets/images/graph-example-2.jpg">
+
+    </div>
+
+    <div class="ls-tab-content child2">
+
+
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th class="ls-txt-center">Hora</th>
+            <th class="ls-txt-center">Enviados</th>
+            <th class="ls-txt-center hidden-xs">Bounces</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+              <td class="ls-txt-center hidden-xs">0</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+              <td class="ls-txt-center hidden-xs">0</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+              <td class="ls-txt-center hidden-xs">0</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+              <td class="ls-txt-center hidden-xs">0</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+              <td class="ls-txt-center hidden-xs">0</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><a href="#" data-toggle-class="ls-display-none" data-target="#infoAll">Exibir detalhes por destinatário</a></p>
+
+    <div id="infoAll" class="ls-display-none">
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Remetente</th>
+            <th>Destinatário</th>
+            <th>Status do envio</th>
+            <th>Assunto</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td>07/07/2014 - 15h59</td>
+              <td>fulano@dominio.com</td>
+              <td>beltrano@dominio.com</td>
+              <td>Entregue</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+              <td>07/07/2014 - 15h59</td>
+              <td>fulano@dominio.com</td>
+              <td>beltrano@dominio.com</td>
+              <td>Entregue</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+              <td>07/07/2014 - 15h59</td>
+              <td>fulano@dominio.com</td>
+              <td>beltrano@dominio.com</td>
+              <td>Entregue</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+              <td>07/07/2014 - 15h59</td>
+              <td>fulano@dominio.com</td>
+              <td>beltrano@dominio.com</td>
+              <td>Entregue</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+              <td>07/07/2014 - 15h59</td>
+              <td>fulano@dominio.com</td>
+              <td>beltrano@dominio.com</td>
+              <td>Entregue</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  <div id="tab2" class="ls-tab-content">
+
+    <div class="ls-tab-content child1 ls-active">
+      <p>Erros de recebimento para 6 destinatários</p>
+      <img style="width: 100%;" src="/revenda/assets/images/graph-example-2.jpg">
+    </div>
+
+    <div class="ls-tab-content child2">
+      <p>Erros de recebimento para 6 destinatários</p>
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th class="ls-txt-center">Tipo de erro</th>
+            <th class="ls-txt-center" colspan="2">Quantidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ls-txt-center">Servidor de destino não existe ou é incapaz de receber emails</td>
+            <td class="ls-txt-center">3</td>
+            <td class="ls-txt-center">50%</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+    <p><a href="#" data-toggle-class="ls-display-none" data-target="#infoError">Exibir detalhes por destinatário</a></p>
+
+    <div id="infoError" class="ls-display-none">
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Remetente</th>
+            <th>Destinatário</th>
+            <th>Motivo do erro</th>
+            <th>Assunto</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td>07/07/2014 - 15h59</td>
+              <td>fulano@dominio.com</td>
+              <td>beltrano@dominio.com</td>
+              <td>Entregue</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+              <td>07/07/2014 - 15h59</td>
+              <td>fulano@dominio.com</td>
+              <td>beltrano@dominio.com</td>
+              <td>Entregue</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+              <td>07/07/2014 - 15h59</td>
+              <td>fulano@dominio.com</td>
+              <td>beltrano@dominio.com</td>
+              <td>Entregue</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+              <td>07/07/2014 - 15h59</td>
+              <td>fulano@dominio.com</td>
+              <td>beltrano@dominio.com</td>
+              <td>Entregue</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+              <td>07/07/2014 - 15h59</td>
+              <td>fulano@dominio.com</td>
+              <td>beltrano@dominio.com</td>
+              <td>Entregue</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Modal de exportação -->
+<div class="ls-modal fade" id="modal_export">
+  <div class="ls-modal-box">
+    <div class="ls-modal-header">
+      <button data-dismiss="modal">&times;</button>
+      <h4 class="ls-modal-title">Exportar CSV</h4>
+    </div>
+    <div class="ls-modal-body">
+      <form class="ls-form row">
+        <fieldset>
+          <label class="ls-label col-md-5">
+            <b class="ls-label-text">Período</b>
+            <div data-ls-module="customFields">
+              <select name="">
+                <option value="">Dia atual</option>
+                <option value="">Última semana</option>
+                <option value="">Últimos 30 dias</option>
+                <option value="">Últimos 6 meses</option>
+                <option value="">Últimos 12 meses</option>
+                <option value="">Personalizado</option>
+              </select>
+            </div>
+          </label>
+          <div class="ls-label col-md-11">
+            <h5 class="ls-title-6">Status de Envio</h5>
+            <label class="ls-label-text">
+              <input type="radio" name="export[filter_status]">
+              Todos enviados (Entregues e Erros)
+            </label>
+            <label class="ls-label-text">
+              <input type="radio" name="export[filter_status]">
+              Apenas Entregues
+            </label>
+            <label class="ls-label-text">
+              <input type="radio" name="export[filter_status]">
+              Apenas Erros
+            </label>
+            <label class="ls-label-text">
+              <input type="checkbox" name="export[send_notification]" data-toggle-class="ls-display-none" data-target="#notification">
+              Receber notificação por e-mail quando o arquivo estiver disponível
+            </label>
+          </div>
+          <div id="notification" class="ls-display-none ls-label col-md-12">
+            <input id="export_email" name="export[email]" placeholder="Preencha com o seu e-mail" type="text" value="testeqa@teste.com.br">
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="ls-modal-footer">
+      <a class="ls-btn float-right ls-float-right" data-dismiss="modal">Cancelar</a>
+      <a class="ls-btn-primary">Exportar</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de exportação realizadas -->
+<div class="ls-modal fade" id="modal_exported_reports">
+  <div class="ls-modal-box">
+    <div class="ls-modal-header">
+      <button data-dismiss="modal">&times;</button>
+      <h4 class="ls-modal-title">Relatórios Exportados</h4>
+    </div>
+    <div class="ls-modal-body">
+      <p>Os arquivos ficarão disponíveis por 7 dias após a data de criação.</p>
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th>Nome do arquivo</th>
+            <th>Data da criação</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td>Relatorios_Enviados_02-07-2013_01-07-2014.csv</td>
+              <td>
+                <p>01/07/2014 - 10:03</p>
+                <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+                  <a href="#" class="ls-btn-sm">Ações </a>
+                  <ul class="ls-dropdown-nav">
+                    <li><a href="#" >Baixar arquivo</a></li>
+                    <li><a href="#" class="ls-color-danger">Excluir</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Relatorios_Enviados_02-07-2013_01-07-2014.csv</td>
+              <td>
+                <p>01/07/2014 - 10:03</p>
+                <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+                  <a href="#" class="ls-btn-sm">Ações </a>
+                  <ul class="ls-dropdown-nav">
+                    <li><a href="#" >Baixar arquivo</a></li>
+                    <li><a href="#" class="ls-color-danger">Excluir</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Relatorios_Enviados_02-07-2013_01-07-2014.csv</td>
+              <td>
+                <p>01/07/2014 - 10:03</p>
+                <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+                  <a href="#" class="ls-btn-sm">Ações </a>
+                  <ul class="ls-dropdown-nav">
+                    <li><a href="#" >Baixar arquivo</a></li>
+                    <li><a href="#" class="ls-color-danger">Excluir</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Relatorios_Enviados_02-07-2013_01-07-2014.csv</td>
+              <td>
+                <p>01/07/2014 - 10:03</p>
+                <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+                  <a href="#" class="ls-btn-sm">Ações </a>
+                  <ul class="ls-dropdown-nav">
+                    <li><a href="#" >Baixar arquivo</a></li>
+                    <li><a href="#" class="ls-color-danger">Excluir</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Relatorios_Enviados_02-07-2013_01-07-2014.csv</td>
+              <td>
+                <p>01/07/2014 - 10:03</p>
+                <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+                  <a href="#" class="ls-btn-sm">Ações </a>
+                  <ul class="ls-dropdown-nav">
+                    <li><a href="#" >Baixar arquivo</a></li>
+                    <li><a href="#" class="ls-color-danger">Excluir</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          <tr>
+            <td>Relatorios_Enviados_02-07-2013_01-07-2014.csv <span class="ls-tag-danger">Falha...</span></td>
+            <td>
+              <p>20/06/2014 - 0:00</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+    <footer class="ls-footer" role="contentinfo">
+  <nav class="ls-footer-menu">
+      <h2 class="ls-title-footer">suporte e ajuda</h2>
+      <ul>
+        <li>
+          <a href="#" target="_blank" class="bg-customer-support">
+            <span class="visible-lg">Atendimento</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="bg-my-tickets">
+            <span class="visible-lg">Meus Chamados</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="bg-help-desk">
+            <span class="visible-lg">Central de Ajuda (Wiki)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="bg-statusblog">
+            <span class="visible-lg">Statusblog</span>
+          </a>
+        </li>
+      </ul>
+  </nav>
+  <div class="ls-footer-info">
+    <span class="last-access ls-ico-screen"><strong>Último acesso: </strong>99/99/9999 99:99:99</span>
+    <div class="set-ip"><span class="set-ip"><strong>IP:</strong> 000.00.00.000</span></div>
+    <p class="ls-copy-right">Copyright © 1997-2014 Serviços de Internet S/A.</p>
+  </div>
+</footer>
+
+  </main>
+
+  <aside class="ls-sidebar">
+        <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+    <a href="#" class="ls-ico-user">
+      Daryl
+      <small>(Hodge)</small>
+    </a>
+    <nav class="ls-dropdown-nav ls-user-menu">
+      <ul>
+        <li><a href="#">Meus dados</a></li>
+        <li><a href="#">Faturas</a></li>
+        <li><a href="#">Planos</a></li>
+        <li><a href="#">Sair</a></li>
+       </ul>
+    </nav>
+  </div>
+  <!-- Dropdown com detalhes da conta de usuário -->
+  <div class="ls-area-account ls-ico-user">
+    <h2 class="ls-title-2">Administrando</h2>
+    <h3 class="ls-title-3">Skyler.Atkins</h3>
+    <a href="/revenda/documentacao/exemplos/painel2/pre-painel" class="ls-btn-xs ls-btn-dark">VER TODOS</a>
+  </div>
+  <nav class="ls-menu">
+    <ul>
+      <li><a href="/revenda/documentacao/exemplos/painel2/home" class="ls-ico-home">Página inicial</a></li>
+      <li><a href="/revenda/documentacao/exemplos/painel2/stats" class="ls-ico-stats">Relatórios</a></li>
+      <li class="ls-submenu">
+        <a href="#" class="ls-ico-cog">Configurações</a>
+        <ul>
+          <li><a class="ls-submenu-item" href="/revenda/documentacao/exemplos/painel2/config-server">Dados do Servidor SMTP</a></li>
+          <li><a class="ls-submenu-item" href="/revenda/documentacao/exemplos/painel2/config-email">E-mail de remetente</a></li>
+          <li><a class="ls-submenu-item" href="/revenda/documentacao/exemplos/painel2/config-excess">Envios excedentes</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+
+  </aside>
+
+  <aside class="ls-notification">
+    <nav class="ls-notification-list" id="ls-notification-curtain">
+      <h3 class="ls-title-2">Notificações</h3>
+      <ul>
+          <li class="ls-dismissable">
+            <a href="#">Ea ea fuga assumenda accusamus impedit incidunt minima</a>
+            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+          </li>
+          <li class="ls-dismissable">
+            <a href="#">Sint explicabo laborum sed beatae illo vero optio non</a>
+            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+          </li>
+          <li class="ls-dismissable">
+            <a href="#">Sunt omnis excepturi magnam saepe aliquam in quia sed amet quo eveniet magnam distinctio fugiat</a>
+            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+          </li>
+          <li class="ls-dismissable">
+            <a href="#">Dolor adipisci sed sed a est necessitatibus blanditiis sint placeat quos</a>
+            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+          </li>
+          <li class="ls-dismissable">
+            <a href="#">Harum rerum sint consequatur ut consequuntur repellendus unde qui doloribus</a>
+            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+          </li>
+      </ul>
+      <p class="ls-no-notification-message">Não há notificações.</p>
+    </nav>
+    <nav class="ls-notification-list" id="ls-help-curtain">
+      <h3 class="ls-title-2">Feedback</h3>
+      <ul>
+          <li><a href="#">> vero qui provident est non nihil</a></li>
+          <li><a href="#">> quidem perferendis voluptate laboriosam nulla tempore</a></li>
+      </ul>
+    </nav>
+    <nav class="ls-notification-list" id="ls-feedback-curtain">
+      <h3 class="ls-title-2">Ajuda</h3>
+      <ul>
+        <li class="ls-txt-center hidden-xs">
+          <a href="#" class="ls-btn-dark ls-btn-tour">Fazer um Tour</a>
+        </li>
+        <li><a href="#">> Guia</a></li>
+        <li><a href="#">> Wiki</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <script src="../../../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script>
+  <script src="../../../../assets/javascripts/locastyle.js" type="text/javascript"></script>
+  <script src="../../../../assets/javascripts/example.js" type="text/javascript"></script>
+
+</body>
+</html>

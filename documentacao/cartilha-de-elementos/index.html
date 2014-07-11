@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="ls-theme-green documentacao documentacao_cartilha-de-elementos documentacao_cartilha-de-elementos_index">
+<head>
+  <meta charset="UTF-8">
+  <title>Cartilha de elementos</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <link href="../../assets/stylesheets/docs.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/revenda/assets/stylesheets/locastyle.css">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41233562-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+
+
+<header class="doc-header container">
+  <nav class="doc-menu">
+  <span class="sandwich"></span>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/revenda/documentacao/introducao/">Use agora</a></li>
+    <li><a href="/revenda/documentacao/praticas/">Documentação</a></li>
+    <li><a href="/revenda/changelog">Changelog</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v1/">Documentação V1</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v2/">Documentação V2</a></li>
+  </ul>
+</nav>
+
+  <h1 class="doc-logo"><a href="/"><strong>Locaweb</strong> Style</a></h1>
+</header>
+
+<div class="doc-title-intro">
+  <div class="container">
+    <h1>Documentação</h1>
+    <p>Saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
+  </div>
+</div>
+
+<nav class="doc-menu-top">
+  <div class="container">
+    <ul>
+      <li class=''><a class='' href='/revenda/documentacao/introducao/'>Introdução</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/css/grid/'>CSS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/'>Funções JS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/componentes/'>Componentes</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/'>Formulários</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/exemplos/'>Telas de Exemplo</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Abas <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes">ver documentação</a></h2>
+
+  <hr>
+  <ul class="ls-tabs-nav" id="awesome-tab">
+  <li class="ls-active"><a data-ls-module="tabs" href="#track">Aba 1</a></li>
+  <li><a data-ls-module="tabs" href="#laps">Aba 2</a></li>
+</ul>
+<div class="ls-tabs-container" id="awesome-tab-content">
+  <div id="track" class="ls-tab-content ls-active">
+    <p>ut odit</p>
+  </div>
+  <div id="laps" class="ls-tab-content">
+    <p>aut consequatur</p>
+  </div>
+</div>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Alertas <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/alertas">ver documentação</a></h2>
+  <hr>
+  <div class="ls-alert-success"><strong>Sucesso!</strong> Você conseguiu, parabéns!</div>
+<div class="ls-alert-info"><strong>Atenção:</strong> Você tem informações importantes para ler.</div>
+<div class="ls-alert-warning"><strong>Cuidado:</strong> Cheque duas vezes. Você pode ter esquecido alguma informação.</div>
+<div class="ls-alert-danger"><strong>Vish!</strong> Algo muito ruim aconteceu e você vai precisar refazer tudo.</div>
+
+  <div class="ls-alert-warning ls-dismissable" >
+  <span class="ls-dismiss" data-ls-module="dismiss">&times;</span>
+  <strong>Opa!</strong> Atenção neste ponto.
+</div>
+
+<div class="ls-alert-danger ls-dismissable" >
+  <span class="ls-dismiss" data-ls-module="dismiss">&times;</span>
+  <strong>Vish!</strong> Muita atenção neste ponto.
+</div>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Tabelas <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/tabelas">ver documentação</a></h2>
+  <hr>
+  <table class="ls-table">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th class="hidden-xs">Campanha</th>
+      <th>Status</th>
+      <th class="hidden-xs">Data de envio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="" title="">Mensagem Teste Locastyle</a></td>
+      <td class="hidden-xs">Campanha</td>
+      <td>Enviada</td>
+      <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+    </tr>
+    <tr>
+      <td><a href="" title="">Mensagem Teste Locastyle</a></td>
+      <td class="hidden-xs">Campanha</td>
+      <td>Enviada</td>
+      <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Barra de progresso <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/barra-de-progresso">ver documentação</a></h2>
+  <hr>
+  <div data-ls-module="progressBar" role="progressbar" aria-valuenow="60"></div>
+
+  <br>
+  <div data-ls-module="progressBar" role="progressbar" aria-valuenow="100" class="ls-left-percentage"></div>
+  <br>
+  <div data-ls-module="progressBar" role="progressbar" aria-valuenow="80" class="ls-animated"></div>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Botão Switch <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/botao-switch">ver documentação</a></h2>
+  <hr>
+  <div class="ls-switch-btn">
+  <input type="checkbox" id="teste">
+  <label for="teste" name="label-teste">label</label>
+</div>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Botões <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/botoes">ver documentação</a></h2>
+  <hr>
+  <a href="#1" class="ls-btn-primary">Primary</a>
+<a href="#2" class="ls-btn">Default</a>
+<a href="#3" class="ls-btn-dark">Dark</a>
+<a href="#4" class="ls-btn-danger">Danger</a>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Box <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/box">ver documentação</a></h2>
+  <hr>
+  <div class="ls-box ls-lg-space">
+  <h5 class="ls-title-3">Box grande .ls-lg-space</h5>
+  <p>Ut dolorem iure ad corrupti vitae cupiditate rerum reiciendis velit odio est animi. autem laudantium ut nam dicta sit aperiam necessitatibus eligendi est est ut explicabo ea dolorem. nisi unde vitae occaecati sunt minima culpa amet quos voluptatem ut nobis culpa. ut fugit eius laudantium eos enim molestiae iure id possimus. molestiae impedit illo occaecati debitis a molestias fugiat. tempora recusandae labore asperiores qui perferendis et. blanditiis dolorum culpa molestiae recusandae ea nostrum quis</p>
+</div>
+
+<div class="ls-box ls-md-space">
+  <h5 class="ls-title-3">Box médio .ls-md-space</h5>
+  <p>Sed molestiae quos sunt ea ipsam voluptas iure et voluptates et omnis molestias. qui velit dolores molestiae sed ad unde neque velit maxime quia vel molestias. et et et blanditiis fugit omnis ut repellat fugit dolor corporis. temporibus iste omnis earum cum officia porro veniam. et aut ut exercitationem voluptates consequatur ut eveniet accusamus a quis</p>
+</div>
+
+<div class="ls-box">
+  <h5 class="ls-title-3">Box default (sem classe de tamanho)</h5>
+  <p>Possimus est repellendus amet et velit quisquam sequi rerum magni libero natus. ea omnis eveniet praesentium voluptates. eos quia nam consectetur eveniet voluptates in voluptatem sit eius. dignissimos consequatur qui doloremque cum sed unde recusandae</p>
+</div>
+
+<div class="ls-box ls-sm-space">
+  <h5 class="ls-title-5">Box pequeno .ls-sm-space</h5>
+  <p>Facilis soluta iure ab quis quaerat nihil recusandae qui et et doloribus aut omnis. et odio tempora nam veritatis quo est totam dolores. assumenda id eos quia. dolore illo adipisci nisi non quos dolorem voluptatem provident eveniet nemo id amet illo deserunt. id rerum est natus recusandae libero. vitae vitae quis quia nulla ex perspiciatis. pariatur omnis saepe omnis atque et consequatur quis velit velit quasi facilis natus incidunt aut</p>
+</div>
+
+<div class="ls-box ls-xs-space">
+  <h5 class="ls-title-5">Box super pequeno .ls-xs-space</h5>
+  <p>Nisi facere nihil libero. magnam pariatur ea iusto sed dolores ipsa beatae. vero tempore et id nostrum </p>
+</div>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Breadcrumb <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/breadcrumb">ver documentação</a></h2>
+  <hr>
+  <ol class="ls-breadcrumb">
+  <li><a href="#">Início</a></li>
+  <li><a href="#">Mensagens</a></li>
+  <li>Contato</li>
+</ol>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Formulários <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/formularios/">ver documentação</a></h2>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="doc-title-5">Formulários na horizontal</h3>
+      <form action="" class="ls-form ls-form-horizontal row">
+  <fieldset>
+    <label class="ls-label col-md-4 col-xs-12">
+      <b class="ls-label-text">Nome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" class="ls-field" required>
+    </label>
+    <label class="ls-label col-md-4 col-xs-12">
+      <b class="ls-label-text">Sobrenome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" class="ls-field" required>
+    </label>  <label class="ls-label col-md-4 col-xs-12">
+      <b class="ls-label-text">Nome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" class="ls-field" required>
+    </label>
+    <label class="ls-label col-md-4 col-xs-12">
+      <b class="ls-label-text">Sobrenome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" class="ls-field" required>
+    </label>
+  </fieldset>
+
+    <hr>
+
+  <fieldset>
+    <!-- Exemplo com Checkbox -->
+    <div class="ls-label col-md-12">
+      <p>Selecione quais plataformas você tem:</p>
+      <label class="ls-label-text">
+        <input type="checkbox" name="dynacom" class="ls-field-checkbox">
+        Dynacom
+      </label>
+      <label class="ls-label-text">
+        <input type="checkbox" name="masterSystem" class="ls-field-checkbox">
+        MasterSystem sem fio
+      </label>
+      <label class="ls-label-text">
+        <input type="checkbox" name="nintendinho" class="ls-field-checkbox">
+        Nintendinho
+      </label>
+      <label class="ls-label-text">
+        <input type="checkbox" name="superNintendo" class="ls-field-checkbox">
+        Super Nintendo
+      </label>
+    </div>
+  </fieldset>
+
+    <hr>
+  <fieldset>
+    <!-- Exemplo com Radio button -->
+    <div class="ls-label col-md-12">
+      <p>Escolha uma das plataformas:</p>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms" class="ls-field-radio">
+        Dynacom
+      </label>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms" class="ls-field-radio">
+        MasterSystem sem fio
+      </label>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms" class="ls-field-radio">
+        Nintendinho
+      </label>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms" class="ls-field-radio">
+        Super Nintendo
+      </label>
+    </div>
+  </fieldset>
+
+  <div class="ls-actions-btn">
+    <button class="ls-btn">Salvar</button>
+    <button class="ls-btn-danger">Cancelar</button>
+  </div>
+</form>
+
+      <br><br>
+      <h3 class="doc-title-5">Formulários na vertical</h3>
+      <form action="" class="ls-form row">
+  <fieldset>
+    <label class="ls-label col-md-3">
+      <b class="ls-label-text">Nome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" required >
+    </label>
+    <label class="ls-label col-md-4">
+      <b class="ls-label-text">E-mail</b>
+      <input type="text" name="email" placeholder="Escreva seu email" required >
+    </label>
+    <label class="ls-label col-md-5">
+      <b class="ls-label-text">Rua</b>
+      <input type="text" name="rua" placeholder="O nome da sua rua" required >
+    </label>
+  </fieldset>
+
+  <hr>
+
+  <fieldset>
+    <!-- Exemplo com Checkbox -->
+    <div class="ls-label col-md-5">
+      <p>Selecione quais plataformas você tem:</p>
+      <label class="ls-label-text">
+        <input type="checkbox" name="dynacom">
+        Dynacom
+      </label>
+      <label class="ls-label-text">
+        <input type="checkbox" name="masterSystem">
+        MasterSystem sem fio
+      </label>
+      <label class="ls-label-text">
+        <input type="checkbox" name="nintendinho">
+        Nintendinho
+      </label>
+      <label class="ls-label-text">
+        <input type="checkbox" name="superNintendo">
+        Super Nintendo
+      </label>
+    </div>
+  </fieldset>
+
+  <hr>
+
+  <fieldset>
+    <!-- Exemplo com Radio button -->
+    <div class="ls-label col-md-5">
+      <p>Escolha uma das plataformas:</p>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms">
+        Dynacom
+      </label>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms">
+        MasterSystem sem fio
+      </label>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms">
+        Nintendinho
+      </label>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms">
+        Super Nintendo
+      </label>
+    </div>
+  </fieldset>
+  <div class="ls-actions-btn">
+    <button class="ls-btn">Salvar</button>
+    <button class="ls-btn-danger">Excluir</button>
+  </div>
+</form>
+
+      <br><br>
+      <h3 class="doc-title-5">Formulários inline</h3>
+      <form action="" class="ls-form ls-form-inline">
+  <label class="ls-label">
+    <b class="ls-label-text">Nome</b>
+    <input type="text" name="nome" placeholder="Nome e sobrenome" required >
+  </label>
+  <label class="ls-label">
+    <b class="ls-label-text">E-mail</b>
+    <input type="text" name="email" placeholder="Escreva seu email" required >
+  </label>
+  <div class="ls-actions-btn">
+    <button class="ls-btn">Salvar</button>
+    <button class="ls-btn-danger">Cancelar</button>
+  </div>
+</form>
+
+<br>
+<p>Com caixa de filtro:</p>
+
+<div class="ls-box-filter">
+  <!-- To do this -->
+  <form action="" class="ls-form ls-form-inline ls-float-left">
+    <label class="ls-label">
+      <b class="ls-label-text">Status</b>
+      <div data-ls-module="customFields">
+        <select class="go-to-option" name="">
+          <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Desativados</option>
+          <option value="#">Bloqueados por bounce</option>
+        </select>
+      </div>
+    </label>
+  </form>
+
+  <form class="ls-form ls-form-inline ls-float-right">
+    <label class="ls-label" role="search">
+      <b class="ls-label-text ls-hidden-accessible">Nome do cliente</b>
+      <input type="text" id="q" name="q" aria-label="Faça sua busca por cliente" accesskey="s" placeholder="Nome do cliente" required="">
+    </label>
+    <div class="ls-actions-btn">
+      <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
+    </div>
+  </form>
+</div>
+
+    </div>
+  </div>
+</div>
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Contador de Caractéres <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/formularios/contador">ver documentação</a></h2>
+  <hr>
+  <form action="" class="ls-form ls-form-horizontal row">
+  <fieldset>
+    <label class="ls-label col-md-4">
+      <b class="ls-label-text">Nome</b>
+      <input type="text" data-ls-module="charCounter" maxlength="20" name="nome" placeholder="Digite seu nome completo" required>
+    </label>
+    <label class="ls-label col-md-8">
+      <b class="ls-label-text">Mensagem</b>
+      <textarea data-ls-module="charCounter" maxlength="100"></textarea>
+    </label>
+  </fieldset>
+</form>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Select personalizado <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/formularios/campos-personalizados">ver documentação</a></h2>
+  <hr>
+  <div class="row">
+    <div class="col-md-5">
+      <div data-ls-module="customFields">
+    <select>
+        <option value="1"> Opção 1 </option>
+        <option value="2"> Opção 2 </option>
+        <option value="3"> Opção 3 </option>
+        <option value="4"> Opção 4 </option>
+    </select>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Prefixos e sufixos de campos de formulário <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/formularios/prefixos-sufixos">ver documentação</a></h2>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <form action="" class="ls-form">
+
+  <label class="ls-label col-md-8">
+    <b class="ls-label-text">Escreva o endereço do seu site</b>
+
+    <div class="ls-prefix-group">
+      <span class="ls-label-text-prefix">URL</span>
+      <input type="text" name="nome" required >
+    </div>
+  </label>
+  <label class="ls-label col-md-8">
+    <b class="ls-label-text">Escreva o endereço do seu site</b>
+
+    <div class="ls-prefix-group">
+      <span class="ls-label-text-prefix">http://</span>
+      <input type="text" name="nome" required >
+      <span class="ls-label-text-prefix">.subdominio.com.br</span>
+    </div>
+  </label>
+
+  <label class="ls-label col-md-6">
+    <div class="ls-prefix-group">
+      <span class="ls-label-text-prefix">Seu nome:</span>
+      <input type="text" name="nome" placeholder="Completo, por favor..." required >
+    </div>
+  </label>
+</form>
+
+    </div>
+  </div>
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Collapses <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/collapse">ver documentação</a></h2>
+  <hr >
+  <div data-ls-module="collapse" class="ls-collapse">
+  <a href="#" class="ls-collapse-header">
+    <h3 class="ls-collapse-title">Título 1</h3>
+  </a>
+  <div class="ls-collapse-body">
+    <p>
+      Aut consequatur et quis quia tempore doloribus dolorem enim consequuntur. rem eos sed in quaerat blanditiis ullam. aut iure necessitatibus libero molestias tempora velit qui explicabo et quis fuga commodi alias in. laudantium non cumque eum consequuntur repellat debitis magnam aperiam et dolorem ipsa praesentium sit quasi
+    </p>
+  </div>
+</div>
+<div data-ls-module="collapse" class="ls-collapse">
+  <a href="#" class="ls-collapse-header">
+    <h3 class="ls-collapse-title">Título 2</h3>
+  </a>
+  <div class="ls-collapse-body">
+    <p>
+      Aut consequatur et quis quia tempore doloribus dolorem enim consequuntur. rem eos sed in quaerat blanditiis ullam. aut iure necessitatibus libero molestias tempora velit qui explicabo et quis fuga commodi alias in. laudantium non cumque eum consequuntur repellat debitis magnam aperiam et dolorem ipsa praesentium sit quasi
+    </p>
+  </div>
+</div>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Dropdown <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/dropdown">ver documentação</a></h2>
+  <hr>
+  <div data-ls-module="dropdown" class="ls-dropdown">
+  <a href="#" class="ls-btn-primary">Users</a>
+
+  <ul class="ls-dropdown-nav">
+      <li><a href="#">Allen Pearson</a></li>
+      <li><a href="#">Isabel Singer</a></li>
+      <li><a href="#">Dulce Rowe</a></li>
+      <li><a href="#">Carla Neal</a></li>
+      <li><a href="#">Jackie Joyce</a></li>
+  </ul>
+</div>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Filtro de exibição e Paginação <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/paginacao">ver documentação</a></h2>
+  <hr>
+  <div class="ls-pagination-filter">
+  <ul class="ls-pagination">
+    <li><a href="#">&laquo; Anterior</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Próximo &raquo;</a></li>
+  </ul>
+
+  <div class="ls-filter-view">
+    <label for="">
+      Exibir
+      <select name="" id="">
+        <option value=""></option>
+        <option value="10">10</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+      ítens por página
+    </label>
+  </div>
+</div>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Footer</h2>
+  <hr>
+  <footer class="ls-footer" role="contentinfo">
+  <nav class="ls-footer-menu">
+      <h2 class="ls-title-footer">suporte e ajuda</h2>
+      <ul>
+        <li>
+          <a href="#" target="_blank" class="bg-customer-support">
+            <span class="visible-lg">Atendimento</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="bg-my-tickets">
+            <span class="visible-lg">Meus Chamados</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="bg-help-desk">
+            <span class="visible-lg">Central de Ajuda (Wiki)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="bg-statusblog">
+            <span class="visible-lg">Statusblog</span>
+          </a>
+        </li>
+      </ul>
+  </nav>
+  <div class="ls-footer-info">
+    <span class="last-access ls-ico-screen"><strong>Último acesso: </strong>99/99/9999 99:99:99</span>
+    <div class="set-ip"><span class="set-ip"><strong>IP:</strong> 000.00.00.000</span></div>
+    <p class="ls-copy-right">Copyright © 1997-2014 Serviços de Internet S/A.</p>
+  </div>
+</footer>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Icones <a class="ls-tag-info ls-float-right" href="css/icones">ver documentação</a></h2>
+  <hr>
+  <ul class="list-icons">
+  <li>
+    <span class="ls-ico-bullhorn">ls-ico-bullhorn</span>
+  </li>
+  <li>
+    <span class="ls-ico-dashboard">ls-ico-dashboard</span>
+  </li>
+  <li>
+    <span class="ls-ico-bell-o">ls-ico-bell-o</span>
+  </li>
+  <li>
+    <span class="ls-ico-home">ls-ico-home</span>
+  </li>
+  <li>
+    <span class="ls-ico-users">ls-ico-users</span>
+  </li>
+  <li>
+    <span class="ls-ico-stats">ls-ico-stats</span>
+  </li>
+  <li>
+    <span class="ls-ico-envelope">ls-ico-envelope</span>
+  </li>
+  <li>
+    <span class="ls-ico-cog">ls-ico-cog</span>
+  </li>
+  <li>
+    <span class="ls-ico-user">ls-ico-user</span>
+  </li>
+  <li>
+    <span class="ls-ico-question">ls-ico-question</span>
+  </li>
+  <li>
+    <span class="ls-ico-chevron-up">ls-ico-chevron-up</span>
+  </li>
+  <li>
+    <span class="ls-ico-chevron-right">ls-ico-chevron-right</span>
+  </li>
+  <li>
+    <span class="ls-ico-chevron-down">ls-ico-chevron-down</span>
+  </li>
+  <li>
+    <span class="ls-ico-chevron-left">ls-ico-chevron-left</span>
+  </li>
+  <li>
+    <span class="ls-ico-menu">ls-ico-menu</span>
+  </li>
+  <li>
+    <span class="ls-ico-pencil">ls-ico-pencil</span>
+  </li>
+  <li>
+    <span class="ls-ico-pencil2">ls-ico-pencil2</span>
+  </li>
+  <li>
+    <span class="ls-ico-paint-format">ls-ico-paint-format</span>
+  </li>
+  <li>
+    <span class="ls-ico-image">ls-ico-image</span>
+  </li>
+  <li>
+    <span class="ls-ico-images">ls-ico-images</span>
+  </li>
+  <li>
+    <span class="ls-ico-qrcode">ls-ico-qrcode</span>
+  </li>
+  <li>
+    <span class="ls-ico-list">ls-ico-list</span>
+  </li>
+  <li>
+    <span class="ls-ico-list2">ls-ico-list2</span>
+  </li>
+  <li>
+    <span class="ls-ico-numbered-list">ls-ico-numbered-list</span>
+  </li>
+  <li>
+    <span class="ls-ico-menu2">ls-ico-menu2</span>
+  </li>
+  <li>
+    <span class="ls-ico-insert-template">ls-ico-insert-template</span>
+  </li>
+  <li>
+    <span class="ls-ico-windows">ls-ico-windows</span>
+  </li>
+
+
+
+  <li>
+    <span class="ls-ico-code">ls-ico-code</span>
+  </li>
+  <li>
+    <span class="ls-ico-screen">ls-ico-screen</span>
+  </li>
+  <li>
+    <span class="ls-ico-camera">ls-ico-camera</span>
+  </li>
+  <li>
+    <span class="ls-ico-folder">ls-ico-folder</span>
+  </li>
+  <li>
+    <span class="ls-ico-folder-open">ls-ico-folder-open</span>
+  </li>
+  <li>
+    <span class="ls-ico-download">ls-ico-download</span>
+  </li>
+  <li>
+    <span class="ls-ico-upload">ls-ico-upload</span>
+  </li>
+  <li>
+    <span class="ls-ico-spinner">ls-ico-spinner</span>
+  </li>
+  <li>
+    <span class="ls-ico-search">ls-ico-search</span>
+  </li>
+  <li>
+    <span class="ls-ico-zoomin">ls-ico-zoomin</span>
+  </li>
+  <li>
+    <span class="ls-ico-zoomout">ls-ico-zoomout</span>
+  </li>
+  <li>
+    <span class="ls-ico-stats">ls-ico-stats</span>
+  </li>
+  <li>
+    <span class="ls-ico-bars">ls-ico-bars</span>
+  </li>
+  <li>
+    <span class="ls-ico-remove">ls-ico-remove</span>
+  </li>
+  <li>
+    <span class="ls-ico-accessibility">ls-ico-accessibility</span>
+  </li>
+  <li>
+    <span class="ls-ico-tree">ls-ico-tree</span>
+  </li>
+  <li>
+    <span class="ls-ico-cloud">ls-ico-cloud</span>
+  </li>
+  <li>
+    <span class="ls-ico-cloud-download">ls-ico-cloud-download</span>
+  </li>
+  <li>
+    <span class="ls-ico-cloud-upload">ls-ico-cloud-upload</span>
+  </li>
+  <li>
+    <span class="ls-ico-download2">ls-ico-download2</span>
+  </li>
+  <li>
+    <span class="ls-ico-upload2">ls-ico-upload2</span>
+  </li>
+  <li>
+    <span class="ls-ico-globe">ls-ico-globe</span>
+  </li>
+  <li>
+    <span class="ls-ico-earth">ls-ico-earth</span>
+  </li>
+  <li>
+    <span class="ls-ico-link">ls-ico-link</span>
+  </li>
+  <li>
+    <span class="ls-ico-flag">ls-ico-flag</span>
+  </li>
+  <li>
+    <span class="ls-ico-attachment">ls-ico-attachment</span>
+  </li>
+  <li>
+    <span class="ls-ico-eye">ls-ico-eye</span>
+  </li>
+  <li>
+    <span class="ls-ico-eye-blocked">ls-ico-eye-blocked</span>
+  </li>
+  <li>
+    <span class="ls-ico-star">ls-ico-star</span>
+  </li>
+  <li>
+    <span class="ls-ico-star2">ls-ico-star2</span>
+  </li>
+  <li>
+    <span class="ls-ico-star3">ls-ico-star3</span>
+  </li>
+  <li>
+    <span class="ls-ico-thumbs-up">ls-ico-thumbs-up</span>
+  </li>
+  <li>
+    <span class="ls-ico-thumbs-up2">ls-ico-thumbs-up2</span>
+  </li>
+  <li>
+    <span class="ls-ico-info">ls-ico-info</span>
+  </li>
+  <li>
+    <span class="ls-ico-cancel-circle">ls-ico-cancel-circle</span>
+  </li>
+  <li>
+    <span class="ls-ico-checkmark-circle">ls-ico-checkmark-circle</span>
+  </li>
+  <li>
+    <span class="ls-ico-close">ls-ico-close</span>
+  </li>
+  <li>
+    <span class="ls-ico-checkmark">ls-ico-checkmark</span>
+  </li>
+  <li>
+    <span class="ls-ico-minus">ls-ico-minus</span>
+  </li>
+  <li>
+    <span class="ls-ico-plus">ls-ico-plus</span>
+  </li>
+  <li>
+    <span class="ls-ico-checkbox-checked">ls-ico-checkbox-checked</span>
+  </li>
+  <li>
+    <span class="ls-ico-checkbox-unchecked">ls-ico-checkbox-unchecked</span>
+  </li>
+  <li>
+    <span class="ls-ico-checkbox-partial">ls-ico-checkbox-partial</span>
+  </li>
+  <li>
+    <span class="ls-ico-radio-checked">ls-ico-radio-checked</span>
+  </li>
+  <li>
+    <span class="ls-ico-radio-unchecked">ls-ico-radio-unchecked</span>
+  </li>
+
+
+  <li>
+    <span class="ls-ico-calendar">ls-ico-calendar</span>
+  </li>
+  <li>
+    <span class="ls-ico-calendar-more">ls-ico-calendar-more</span>
+  </li>
+  <li>
+    <span class="ls-ico-calendar-check">ls-ico-calendar-check</span>
+  </li>
+  <li>
+    <span class="ls-ico-chart-bar-up">ls-ico-chart-bar-up</span>
+  </li>
+  <li>
+    <span class="ls-ico-lamp">ls-ico-lamp</span>
+  </li>
+  <li>
+    <span class="ls-ico-arrow-down">ls-ico-arrow-down</span>
+  </li>
+  <li>
+    <span class="ls-ico-arrow-left">ls-ico-arrow-left</span>
+  </li>
+  <li>
+    <span class="ls-ico-arrow-up">ls-ico-arrow-up</span>
+  </li>
+  <li>
+    <span class="ls-ico-arrow-right">ls-ico-arrow-right</span>
+  </li>
+  <li>
+    <span class="ls-ico-export">ls-ico-export</span>
+  </li>
+  <li>
+    <span class="ls-ico-table-alt">ls-ico-table-alt</span>
+  </li>
+
+
+<li>
+  <span class="ls-ico-mobile">ls-ico-mobile</span>
+</li>
+<li>
+  <span class="ls-ico-user-add">ls-ico-user-add</span>
+</li>
+<li>
+  <span class="ls-ico-list3">ls-ico-list3</span>
+</li>
+<li>
+  <span class="ls-ico-text">ls-ico-text</span>
+</li>
+<li>
+  <span class="ls-ico-text2">ls-ico-text2</span>
+</li>
+<li>
+  <span class="ls-ico-document">ls-ico-document</span>
+</li>
+<li>
+  <span class="ls-ico-docs">ls-ico-docs</span>
+</li>
+<li>
+  <span class="ls-ico-book">ls-ico-book</span>
+</li>
+
+
+</ul>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Listas <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/listas">ver documentação</a></h2>
+  <hr>
+  <div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-md-4">
+      <a href="#" >Identificador da conta</a>
+      <small>Fake Product Name I </small>
+    </div>
+    <div class="col-md-3 col-md-offset-5 ls-txt-right">
+      <a href="<#" class="ls-btn-primary">Administrar</a>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Status</strong>
+      Publicado
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Status</strong>
+      Publicado
+    </div>
+  </div>
+</div>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Modal <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/modal">ver documentação</a></h2>
+  <hr>
+  <button data-ls-module="modal" data-target="#myAwesomeModal" class="ls-btn-primary">Ative a modal</button>
+
+<div class="ls-modal fade" id="myAwesomeModal">
+  <div class="ls-modal-box">
+    <div class="ls-modal-header">
+      <button data-dismiss="modal">&times;</button>
+      <h4 class="ls-modal-title">Modal title</h4>
+    </div>
+    <div class="ls-modal-body">
+      <p>
+        <a href="#" class="ls-btn-primary" data-ls-module="popover" data-title="Popover na modal" data-content="É um popover na modal" data-placement="top">
+          Popover
+        </a>
+      </p>
+      <p>Omnis omnis ad aut. Nemo deserunt non iste eos sit est at magni molestiae dolorum fugit excepturi. Sit repellendus quis nemo quod natus. Qui quis ducimus cumque ad officiis enim aut ad est fugiat aut voluptatem blanditiis sint. Dolor eligendi ut autem et consectetur consequatur aut rerum rerum iste et molestiae ad. Tempore ea corporis tempore architecto ea ipsum et. Perferendis placeat quia et reprehenderit dolorem et harum facilis numquam qui pariatur. Sunt sequi quam qui tempore facilis aut vel aliquid pariatur eaque dolores commodi debitis ratione. Quia modi adipisci ut molestiae delectus. Sint sed saepe quidem sit. Eum pariatur perferendis et similique ipsa quibusdam odio sed nihil qui qui est. Rerum fugit similique molestias nobis neque tempora nihil animi possimus aut illum vitae. Impedit blanditiis aut ea officia reprehenderit hic ea ex facere enim est. Illum repellat quod possimus quia corporis dolorem ut voluptas odit tenetur voluptatem ad. Laboriosam asperiores velit quia nam est culpa placeat voluptatum</p>
+    </div>
+    <div class="ls-modal-footer">
+      <button class="ls-btn ls-float-right" data-dismiss="modal">Close</button>
+      <button type="submit" class="ls-btn-primary">Save changes</button>
+    </div>
+  </div>
+</div><!-- /.modal -->
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Popover <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/popover">ver documentação</a></h2>
+  <hr>
+  <a href="#" class="ls-btn-primary" data-custom-class="ls-color-danger" data-ls-module="popover" data-title="Titulo do popover 4" data-content="<p>Conteúdo do popover 4</p>" data-placement="right">
+  Popover (right)
+</a>
+<a href="#" class="ls-btn-primary" data-ls-module="popover" data-title="Titulo do popover 2" data-content="<ul class='ls-no-list-style'>
+  <li>Lista 1</li>
+  <li>Lista 2</li>
+  <li>Lista 3</li>
+</ul>" data-placement="top">
+  Popover (top)
+</a>
+<a href="#" class="ls-btn-primary" data-ls-module="popover" data-title="Titulo do popover 1" data-content="<p>Conteúdo do popover 1 Conteúdo do popover 1 Conteúdo do popover 1 Conteúdo do popover 1 Conteúdo do popover 1 </p>" data-placement="bottom">
+  Popover (bottom)
+</a>
+<a href="#" class="ls-btn-primary" data-ls-module="popover" data-trigger="hover" data-title="Titulo do popover 3" data-content="<p>Conteúdo do popover 3</p>" data-placement="left">
+  Popover (left)
+</a>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Tags <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/tags">ver documentação</a></h2>
+  <hr>
+  <a href="#" class="ls-tag">Default</a>
+<a href="#" class="ls-tag-primary">Primary</a>
+<a href="#" class="ls-tag-success">Succes</a>
+<a href="#" class="ls-tag-info">Info</a>
+<a href="#" class="ls-tag-warning">Warning</a>
+<a href="#" class="ls-tag-danger">Danger</a>
+
+  <br><br>
+  <br><br>
+  <h1 class="ls-title-1">Exemplo de Título <span class="ls-tag">Novo</span></h1>
+<hr>
+<h2 class="ls-title-2">Exemplo de Título <span class="ls-tag">Novo</span></h2>
+<hr>
+<h3 class="ls-title-3">Exemplo de Título <span class="ls-tag">Novo</span></h3>
+<hr>
+<h4 class="ls-title-4">Exemplo de Título <span class="ls-tag">Novo</span></h4>
+<hr>
+<h5 class="ls-title-5">Exemplo de Título <span class="ls-tag">Novo</span></h5>
+<hr>
+<h6 class="ls-title-6">Exemplo de Título <span class="ls-tag">Novo</span></h6>
+
+</div>
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Tooltip <a class="ls-tag-info ls-float-right" href="/revenda/documentacao/componentes/tooltip">ver documentação</a></h2>
+  <hr>
+  <a href="#" class="ls-tooltip-top ls-btn" aria-label="Conteúdo exibido acima">Cima</a>
+<a href="#" class="ls-tooltip-right ls-btn" aria-label="Conteúdo exibido no lado direito">Direita</a>
+<a href="#" class="ls-tooltip-bottom ls-btn" aria-label="Conteúdo exibido abaixo">Baixo</a>
+<a href="#" class="ls-tooltip-left ls-btn" aria-label="Conteúdo exibido no lado esquerdo">Esquerda</a>
+
+</div>
+
+<footer class="doc-footer">
+  <div class="container">
+   <ul class="doc-social-link">
+      <!-- <li> <a href="" class="doc-social-facebook">facebook</a> </li> -->
+      <li> <a target="_blank" class="doc-social-twitter" href="http://twitter.com/locawebdevnet">twitter</a> </li>
+    </ul>
+    <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/revenda/assets/images/docs/locaweb-logo.png" alt=""></a>
+    <p class="doc-copyright">
+      Copyright © 1997-2014 Serviços de Internet S/A.
+    </p>
+  </div>
+</footer>
+
+<script src="../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script><script src="../../assets/javascripts/locastyle.js" type="text/javascript"></script><script src="../../assets/javascripts/docs.js" type="text/javascript"></script>
+
+</body>
+</html>
+

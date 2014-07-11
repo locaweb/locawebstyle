@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="ls-theme-light-green  ">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Dados do Servidor SMTP</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link href="../../../../assets/stylesheets/locastyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="documentacao documentacao_exemplos documentacao_exemplos_painel2 documentacao_exemplos_painel2_config-email documentacao_exemplos_painel2_config-email_index">
+
+  <div class="ls-topbar">
+
+  <!-- Barra de Notificações -->
+  <div class="ls-notification-topbar">
+
+    <!-- Links de apoio -->
+    <div class="ls-alerts-list">
+      <a href="#" class="ls-ico-bell-o" data-counter="8" data-ls-module="topbarCurtain" data-target="#ls-notification-curtain"><span>Notificações</span></a>
+      <a href="#" class="ls-ico-bullhorn" data-ls-module="topbarCurtain" data-target="#ls-help-curtain"><span>Ajuda</span></a>
+      <a href="#" class="ls-ico-question" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain"><span>Sugestões</span></a>
+    </div>
+
+    <!-- Dropdown com detalhes da conta de usuário -->
+    <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+      <a href="#" class="ls-ico-user">
+        Sonja
+        <small>(Carver)</small>
+      </a>
+      <nav class="ls-dropdown-nav ls-user-menu">
+        <ul>
+          <li><a href="#">Meus dados</a></li>
+          <li><a href="#">Faturas</a></li>
+          <li><a href="#">Planos</a></li>
+          <li><a href="#">Sair</a></li>
+         </ul>
+      </nav>
+    </div>
+  </div>
+
+  <span class="ls-show-sidebar ls-ico-menu"></span>
+  <span class="ls-show-notifications ls-ico-question"></span>
+
+  <!-- Nome do produto/marca -->
+    <h1 class="ls-brand-name"><a class="ls-ico-earth" href="home">SMTP Locaweb</a></h1>
+</div>
+
+
+  <main class="ls-main ">
+    <div class="container-fluid">
+        <h1 class="ls-title-intro ls-ico-cog">E-mail de remetente</h1>
+  <p>Adicione e gerencie o e-mail de remetente que será exibido em seus envios.</p>
+  <div class="ls-box ls-box-gray">
+    <form class="ls-form ls-form-inline">
+      <label class="ls-label" role="search">
+        <b class="ls-label-text ls-hidden-accessible">E-mail</b>
+        <input type="text" id="q" name="q" aria-label="Digite um e-mail" accesskey="s" placeholder="E-mail" required="">
+      </label>
+      <div class="ls-actions-btn">
+        <button type="submit" class="ls-btn-primary">Adicionar</button>
+      </div>
+    </form>
+  </div>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>E-mail adicionado</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>fulano@dominio.com
+            <span class="ls-tag-success">Confirmado</span>
+          </td>
+          <td class="ls-txt-right"> <button data-action="/revenda" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<div class='ls-txt-center'><h3 class='ls-title-3'>Você tem certeza que deseja excluir esse email?</h2><p>A exclusão do e-mail afetará os próximos envios com este remetente.</p></div>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-btn-danger">Excluir</button>  </td>
+        </tr>
+        <tr>
+          <td>fulano@dominio.com
+            <span class="ls-tag-success">Confirmado</span>
+          </td>
+          <td class="ls-txt-right"> <button data-action="/revenda" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<div class='ls-txt-center'><h3 class='ls-title-3'>Você tem certeza que deseja excluir esse email?</h2><p>A exclusão do e-mail afetará os próximos envios com este remetente.</p></div>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-btn-danger">Excluir</button>  </td>
+        </tr>
+        <tr>
+          <td>fulano@dominio.com
+            <span class="ls-tag-success">Confirmado</span>
+          </td>
+          <td class="ls-txt-right"> <button data-action="/revenda" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<div class='ls-txt-center'><h3 class='ls-title-3'>Você tem certeza que deseja excluir esse email?</h2><p>A exclusão do e-mail afetará os próximos envios com este remetente.</p></div>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-btn-danger">Excluir</button>  </td>
+        </tr>
+        <tr>
+          <td>
+            fulano@dominio.com
+            <span class="ls-tag-warning">Não confirmado</span>
+          </td>
+          <td class="ls-txt-right">
+            <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+              <a href="#" class="ls-btn">Ações</a>
+              <ul class="ls-dropdown-nav">
+                <li><a href="#">Reenviar e-mail</a></li>
+                <li><a href="#" data-action="/revenda" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<div class='ls-txt-center'> <h3 class='ls-title-3'>Você tem certeza que deseja excluir esse email?</h2><p>A exclusão do e-mail afetará os próximos envios com este remetente.</p></div>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-color-danger">Excluir</a></li>
+              </ul>
+            </div>
+            <!-- <button data-action="/revenda" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<h3 class='ls-title-2'>Você tem certeza que deseja excluir esse email?</h2><p>A exclusão do e-mail afetará os próximos envios com este remetente.</p>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-btn-danger ls-btn-sm">Excluir</button> -->
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+
+    <footer class="ls-footer" role="contentinfo">
+  <nav class="ls-footer-menu">
+      <h2 class="ls-title-footer">suporte e ajuda</h2>
+      <ul>
+        <li>
+          <a href="#" target="_blank" class="bg-customer-support">
+            <span class="visible-lg">Atendimento</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="bg-my-tickets">
+            <span class="visible-lg">Meus Chamados</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="bg-help-desk">
+            <span class="visible-lg">Central de Ajuda (Wiki)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="bg-statusblog">
+            <span class="visible-lg">Statusblog</span>
+          </a>
+        </li>
+      </ul>
+  </nav>
+  <div class="ls-footer-info">
+    <span class="last-access ls-ico-screen"><strong>Último acesso: </strong>99/99/9999 99:99:99</span>
+    <div class="set-ip"><span class="set-ip"><strong>IP:</strong> 000.00.00.000</span></div>
+    <p class="ls-copy-right">Copyright © 1997-2014 Serviços de Internet S/A.</p>
+  </div>
+</footer>
+
+  </main>
+
+  <aside class="ls-sidebar">
+        <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+    <a href="#" class="ls-ico-user">
+      Tracy
+      <small>(Perkins)</small>
+    </a>
+    <nav class="ls-dropdown-nav ls-user-menu">
+      <ul>
+        <li><a href="#">Meus dados</a></li>
+        <li><a href="#">Faturas</a></li>
+        <li><a href="#">Planos</a></li>
+        <li><a href="#">Sair</a></li>
+       </ul>
+    </nav>
+  </div>
+  <!-- Dropdown com detalhes da conta de usuário -->
+  <div class="ls-area-account ls-ico-user">
+    <h2 class="ls-title-2">Administrando</h2>
+    <h3 class="ls-title-3">Lorie.Choi</h3>
+    <a href="/revenda/documentacao/exemplos/painel2/pre-painel" class="ls-btn-xs ls-btn-dark">VER TODOS</a>
+  </div>
+  <nav class="ls-menu">
+    <ul>
+      <li><a href="/revenda/documentacao/exemplos/painel2/home" class="ls-ico-home">Página inicial</a></li>
+      <li><a href="/revenda/documentacao/exemplos/painel2/stats" class="ls-ico-stats">Relatórios</a></li>
+      <li class="ls-submenu">
+        <a href="#" class="ls-ico-cog">Configurações</a>
+        <ul>
+          <li><a class="ls-submenu-item" href="/revenda/documentacao/exemplos/painel2/config-server">Dados do Servidor SMTP</a></li>
+          <li><a class="ls-submenu-item" href="/revenda/documentacao/exemplos/painel2/config-email">E-mail de remetente</a></li>
+          <li><a class="ls-submenu-item" href="/revenda/documentacao/exemplos/painel2/config-excess">Envios excedentes</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+
+  </aside>
+
+  <aside class="ls-notification">
+    <nav class="ls-notification-list" id="ls-notification-curtain">
+      <h3 class="ls-title-2">Notificações</h3>
+      <ul>
+          <li class="ls-dismissable">
+            <a href="#">Aut tempore et deleniti</a>
+            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+          </li>
+          <li class="ls-dismissable">
+            <a href="#">Voluptatum ea officiis dolore voluptatem</a>
+            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+          </li>
+          <li class="ls-dismissable">
+            <a href="#">Nisi repellat corporis rerum nulla quia perferendis qui</a>
+            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+          </li>
+          <li class="ls-dismissable">
+            <a href="#">Sit ratione et atque nemo</a>
+            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+          </li>
+          <li class="ls-dismissable">
+            <a href="#">Autem dolorum et repudiandae voluptatem perspiciatis libero dolorem sint voluptas</a>
+            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+          </li>
+      </ul>
+      <p class="ls-no-notification-message">Não há notificações.</p>
+    </nav>
+    <nav class="ls-notification-list" id="ls-help-curtain">
+      <h3 class="ls-title-2">Feedback</h3>
+      <ul>
+          <li><a href="#">> consectetur amet perspiciatis quia modi impedit</a></li>
+          <li><a href="#">> cum exercitationem quis aliquam ipsa eos</a></li>
+      </ul>
+    </nav>
+    <nav class="ls-notification-list" id="ls-feedback-curtain">
+      <h3 class="ls-title-2">Ajuda</h3>
+      <ul>
+        <li class="ls-txt-center hidden-xs">
+          <a href="#" class="ls-btn-dark ls-btn-tour">Fazer um Tour</a>
+        </li>
+        <li><a href="#">> Guia</a></li>
+        <li><a href="#">> Wiki</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <script src="../../../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script>
+  <script src="../../../../assets/javascripts/locastyle.js" type="text/javascript"></script>
+  <script src="../../../../assets/javascripts/example.js" type="text/javascript"></script>
+
+</body>
+</html>

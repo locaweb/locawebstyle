@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="ls-theme-green documentacao documentacao_funcoes-js documentacao_funcoes-js_alternar-textos documentacao_funcoes-js_alternar-textos_index">
+<head>
+  <meta charset="UTF-8">
+  <title>Alternando Textos</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Alterando textos de elementos" />
+  <meta name="keywords" content="" />
+
+  <link href="../../../assets/stylesheets/docs.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/revenda/assets/stylesheets/locastyle.css">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41233562-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+
+
+<header class="doc-header container">
+  <nav class="doc-menu">
+  <span class="sandwich"></span>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/revenda/documentacao/introducao/">Use agora</a></li>
+    <li><a href="/revenda/documentacao/praticas/">Documentação</a></li>
+    <li><a href="/revenda/changelog">Changelog</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v1/">Documentação V1</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v2/">Documentação V2</a></li>
+  </ul>
+</nav>
+
+  <h1 class="doc-logo"><a href="/"><strong>Locaweb</strong> Style</a></h1>
+</header>
+
+<div class="doc-title-intro">
+  <div class="container">
+    <h1>Documentação</h1>
+    <p>Saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
+  </div>
+</div>
+
+<nav class="doc-menu-top">
+  <div class="container">
+    <ul>
+      <li class=''><a class='' href='/revenda/documentacao/introducao/'>Introdução</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/css/grid/'>CSS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/'>Funções JS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/componentes/'>Componentes</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/'>Formulários</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/exemplos/'>Telas de Exemplo</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="doc-content container">
+  <div class="row">
+    <aside class="col-md-3">
+  <nav class="doc-sidebar-menu">
+    <ul>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/'>Alternar Classes</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/alternar-textos/'>Alternar textos</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/dismiss/'>Dismiss</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/auto-trigger/'>Clique automático</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
+<section class="col-md-9">
+
+  <div class="doc-intro-content">
+  <h1>Alternando Textos</h1>
+  <p>Alterando textos de elementos</p>
+</div>
+
+
+  <p>Basicamente essa funcionalidade altera o texto de determiando elemento.</p>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classe / Atributo</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>data-toggle-txt</td>
+        <td>Atributo cujo valor guarda o texto alternativo</td>
+      </tr>
+      <tr>
+        <td>data-target</td>
+        <td>Elementos que terá o texto modificado pelo <code>data-toggle-text</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <div class="ls-box-demo">
+    <button class="ls-btn" data-toggle-text="Clique para voltar ao texto original">Clique para alterar o texto</button>
+  </div>
+<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn"</span> <span class="na">data-toggle-text=</span><span class="s">"Clique para voltar ao texto original"</span><span class="nt">&gt;</span>Clique para alterar o texto<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <p>Se você quiser alternar o texto de outro elemento, siga o exemplo abaixo:</p>
+
+  <div class="ls-box-demo">
+    <button class="ls-btn-primary" data-toggle-text="Clique para voltar ao texto original" data-target-text="#lsBox">Clique para alterar o texto do botão ao lado</button>
+    <br>
+    <br>
+    <div id="lsBox" class="ls-box ls-box-gray">
+      Uma mensagem bonita para caramba!
+    </div>
+  </div>
+<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span> <span class="na">data-toggle-text=</span><span class="s">"Clique para voltar ao texto original"</span> <span class="na">data-target-text=</span><span class="s">"#lsBox"</span><span class="nt">&gt;</span>Clique para alterar o texto do botão ao lado<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"lsBox"</span> <span class="na">class=</span><span class="s">"ls-box ls-box-gray"</span><span class="nt">&gt;</span>
+  Uma mensagem bonita para caramba!
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+</section>
+
+  </div>
+</div>
+
+<footer class="doc-footer">
+  <div class="container">
+   <ul class="doc-social-link">
+      <!-- <li> <a href="" class="doc-social-facebook">facebook</a> </li> -->
+      <li> <a target="_blank" class="doc-social-twitter" href="http://twitter.com/locawebdevnet">twitter</a> </li>
+    </ul>
+    <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/revenda/assets/images/docs/locaweb-logo.png" alt=""></a>
+    <p class="doc-copyright">
+      Copyright © 1997-2014 Serviços de Internet S/A.
+    </p>
+  </div>
+</footer>
+
+<script src="../../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script><script src="../../../assets/javascripts/locastyle.js" type="text/javascript"></script><script src="../../../assets/javascripts/docs.js" type="text/javascript"></script>
+
+</body>
+</html>
+

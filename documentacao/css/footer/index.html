@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="ls-theme-green documentacao documentacao_css documentacao_css_footer documentacao_css_footer_index">
+<head>
+  <meta charset="UTF-8">
+  <title>Footer</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Exemplo de footer padrão do Locaweb Style" />
+  <meta name="keywords" content="" />
+
+  <link href="../../../assets/stylesheets/docs.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/revenda/assets/stylesheets/locastyle.css">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41233562-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+
+
+<header class="doc-header container">
+  <nav class="doc-menu">
+  <span class="sandwich"></span>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/revenda/documentacao/introducao/">Use agora</a></li>
+    <li><a href="/revenda/documentacao/praticas/">Documentação</a></li>
+    <li><a href="/revenda/changelog">Changelog</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v1/">Documentação V1</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v2/">Documentação V2</a></li>
+  </ul>
+</nav>
+
+  <h1 class="doc-logo"><a href="/"><strong>Locaweb</strong> Style</a></h1>
+</header>
+
+<div class="doc-title-intro">
+  <div class="container">
+    <h1>Documentação</h1>
+    <p>Saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
+  </div>
+</div>
+
+<nav class="doc-menu-top">
+  <div class="container">
+    <ul>
+      <li class=''><a class='' href='/revenda/documentacao/introducao/'>Introdução</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/css/grid/'>CSS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/'>Funções JS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/componentes/'>Componentes</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/'>Formulários</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/exemplos/'>Telas de Exemplo</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="doc-content container">
+  <div class="row">
+    <aside class="col-md-3">
+  <nav class="doc-sidebar-menu">
+    <ul>
+      <li class=''><a class='' href='/revenda/documentacao/css/grid/'>Estrutura de Grid</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/css/classes-funcionais/'>Classes funcionais</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/css/icones/'>Ícones</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
+<section class="col-md-9">
+
+<div class="doc-intro-content">
+  <h1>Footer</h1>
+  <p>Exemplo de footer padrão do Locaweb Style</p>
+</div>
+
+
+
+  <p>
+    O footer do Locaweb Style é todo responsivo, se adapta a sua tela (desktop, tablet ou mobile). Basta inserí-lo dentro e no final do <code>.ls-main</code>.
+  </p>
+  <footer class="ls-footer" role="contentinfo">
+  <nav class="ls-footer-menu">
+      <h2 class="ls-title-footer">suporte e ajuda</h2>
+      <ul>
+        <li>
+          <a href="#" target="_blank" class="bg-customer-support">
+            <span class="visible-lg">Atendimento</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="bg-my-tickets">
+            <span class="visible-lg">Meus Chamados</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="bg-help-desk">
+            <span class="visible-lg">Central de Ajuda (Wiki)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="bg-statusblog">
+            <span class="visible-lg">Statusblog</span>
+          </a>
+        </li>
+      </ul>
+  </nav>
+  <div class="ls-footer-info">
+    <span class="last-access ls-ico-screen"><strong>Último acesso: </strong>99/99/9999 99:99:99</span>
+    <div class="set-ip"><span class="set-ip"><strong>IP:</strong> 000.00.00.000</span></div>
+    <p class="ls-copy-right">Copyright © 1997-2014 Serviços de Internet S/A.</p>
+  </div>
+</footer>
+
+<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre></td><td class="code"><pre><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"ls-footer"</span> <span class="na">role=</span><span class="s">"contentinfo"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"ls-footer-menu"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"ls-title-footer"</span><span class="nt">&gt;</span>suporte e ajuda<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">class=</span><span class="s">"bg-customer-support"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visible-lg"</span><span class="nt">&gt;</span>Atendimento<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">class=</span><span class="s">"bg-my-tickets"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visible-lg"</span><span class="nt">&gt;</span>Meus Chamados<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">class=</span><span class="s">"bg-help-desk"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visible-lg"</span><span class="nt">&gt;</span>Central de Ajuda (Wiki)<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">class=</span><span class="s">"bg-statusblog"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visible-lg"</span><span class="nt">&gt;</span>Statusblog<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-footer-info"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"last-access ls-ico-screen"</span><span class="nt">&gt;&lt;strong&gt;</span>Último acesso: <span class="nt">&lt;/strong&gt;</span>99/99/9999 99:99:99<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"set-ip"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"set-ip"</span><span class="nt">&gt;&lt;strong&gt;</span>IP:<span class="nt">&lt;/strong&gt;</span> 000.00.00.000<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"ls-copy-right"</span><span class="nt">&gt;</span>Copyright © 1997-2014 Serviços de Internet S/A.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/footer&gt;</span>
+
+</pre></td></tr></tbody></table>
+</div>
+</section>
+
+  </div>
+</div>
+
+<footer class="doc-footer">
+  <div class="container">
+   <ul class="doc-social-link">
+      <!-- <li> <a href="" class="doc-social-facebook">facebook</a> </li> -->
+      <li> <a target="_blank" class="doc-social-twitter" href="http://twitter.com/locawebdevnet">twitter</a> </li>
+    </ul>
+    <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/revenda/assets/images/docs/locaweb-logo.png" alt=""></a>
+    <p class="doc-copyright">
+      Copyright © 1997-2014 Serviços de Internet S/A.
+    </p>
+  </div>
+</footer>
+
+<script src="../../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script><script src="../../../assets/javascripts/locastyle.js" type="text/javascript"></script><script src="../../../assets/javascripts/docs.js" type="text/javascript"></script>
+
+</body>
+</html>
+

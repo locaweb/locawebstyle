@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="ls-theme-green documentacao documentacao_formularios documentacao_formularios_campos-desabilitados documentacao_formularios_campos-desabilitados_index">
+<head>
+  <meta charset="UTF-8">
+  <title>Campos desabilitados</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Opções para desabilitar campos ou mostrar em forma de texto" />
+  <meta name="keywords" content="" />
+
+  <link href="../../../assets/stylesheets/docs.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/revenda/assets/stylesheets/locastyle.css">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41233562-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+
+
+<header class="doc-header container">
+  <nav class="doc-menu">
+  <span class="sandwich"></span>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/revenda/documentacao/introducao/">Use agora</a></li>
+    <li><a href="/revenda/documentacao/praticas/">Documentação</a></li>
+    <li><a href="/revenda/changelog">Changelog</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v1/">Documentação V1</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v2/">Documentação V2</a></li>
+  </ul>
+</nav>
+
+  <h1 class="doc-logo"><a href="/"><strong>Locaweb</strong> Style</a></h1>
+</header>
+
+<div class="doc-title-intro">
+  <div class="container">
+    <h1>Documentação</h1>
+    <p>Saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
+  </div>
+</div>
+
+<nav class="doc-menu-top">
+  <div class="container">
+    <ul>
+      <li class=''><a class='' href='/revenda/documentacao/introducao/'>Introdução</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/css/grid/'>CSS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/'>Funções JS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/componentes/'>Componentes</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/'>Formulários</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/exemplos/'>Telas de Exemplo</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="doc-content container">
+  <div class="row">
+    <aside class="col-md-3">
+  <nav class="doc-sidebar-menu">
+    <ul>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/'>Básico</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/contador/'>Limite e Contador de caracteres</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/exibir-senha/'>Exibir e esconder a senha</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/campos-desabilitados/'>Campos desabilitados</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/campos-personalizados/'>Campos personalizados</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/tamanho-dos-campos/'>Tamanho dos campos</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/estilo-das-validacoes/'>Estilo das validações</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/mascaras/'>Máscaras</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/prefixos-sufixos/'>Prefixos e sufixos</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/textarea/'>Textarea</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/calendario/'>Calendário</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
+<section class="col-md-9">
+  <div class="doc-intro-content">
+  <h1>Campos desabilitados</h1>
+  <p>Opções para desabilitar campos ou mostrar em forma de texto</p>
+</div>
+
+
+  <p>Adicione a classe <code>ls-form-disable</code> para desabilitar tudo dentro do elemento (uma <code>div</code> ou todo o <code>form</code>) ou <code>ls-label-disable</code> para desabilitar um campo.</p>
+  <div class="ls-box-demo">
+    <form action="" class="ls-form ls-form-horizontal ls-form-disable" data-ls-module="form">
+  <label class="ls-label col-md-3">
+    <b class="ls-label-text">Nome</b>
+    <input type="text" name="nome" placeholder="Nome e sobrenome" class="ls-field" required>
+  </label>
+  <label class="ls-label col-md-3">
+    <b class="ls-label-text">Nome</b>
+    <input type="text" name="nome" placeholder="Nome e sobrenome" class="ls-field" required>
+  </label>
+  <label class="ls-label col-md-3">
+    <b class="ls-label-text">Nome</b>
+    <input type="text" name="nome" placeholder="Nome e sobrenome" class="ls-field" required>
+  </label>
+</form>
+
+  </div>
+  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-horizontal ls-form-disable"</span> <span class="na">data-ls-module=</span><span class="s">"form"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">class=</span><span class="s">"ls-field"</span> <span class="na">required</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">class=</span><span class="s">"ls-field"</span> <span class="na">required</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">class=</span><span class="s">"ls-field"</span> <span class="na">required</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+
+  <hr>
+
+  <h3 class="doc-title-3">Formulários como texto</h3>
+  <p>Adicione a classe <code>ls-form-text</code> no elemento pai para deixar com aparência de texto todos os campos que estiverem dentro (uma <code>div</code> ou todo o <code>form</code>) ou insira essa mesma classe no input desejado para desabilitá-lo. Pode editar.</p>
+
+  <div class="ls-box-demo">
+    <form action="" class="ls-form ls-form-horizontal ls-form-text" data-ls-module="form">
+  <label class="ls-label col-md-3">
+    <b class="ls-label-text">Nome</b>
+    <input type="text" name="nome" placeholder="Nome e sobrenome" class="ls-field" required>
+  </label>
+  <label class="ls-label col-md-3">
+    <b class="ls-label-text">Senha</b>
+    <input type="password" name="senha" placeholder="Campo de senha" class="ls-field" required>
+  </label>
+  <label class="ls-label col-md-3">
+    <b class="ls-label-text">E-mail</b>
+    <input type="email" name="email" placeholder="Campo de E-mail" class="ls-field" required>
+  </label>
+</form>
+
+  </div>
+  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-horizontal ls-form-text"</span> <span class="na">data-ls-module=</span><span class="s">"form"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">class=</span><span class="s">"ls-field"</span> <span class="na">required</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Senha<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"senha"</span> <span class="na">placeholder=</span><span class="s">"Campo de senha"</span> <span class="na">class=</span><span class="s">"ls-field"</span> <span class="na">required</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>E-mail<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Campo de E-mail"</span> <span class="na">class=</span><span class="s">"ls-field"</span> <span class="na">required</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+
+  <p>Você pode combinar os comportamentos para ter um formulário com aparência de texto e desabilitado. Não pode editar.</p>
+  <div class="ls-box-demo">
+    <form action="" class="ls-form ls-form-text ls-form-horizontal ls-form-disable" data-ls-module="form">
+  <label class="ls-label col-md-3">
+    <b class="ls-label-text">Nome</b>
+    <input type="text" name="nome" placeholder="Nome e sobrenome" value="Diego Maradona" required >
+  </label>
+  <label class="ls-label col-md-3">
+    <b class="ls-label-text">Senha</b>
+    <input type="password" name="senha" placeholder="Campo de senha" value="rei_pele" required >
+  </label>
+  <label class="ls-label col-md-3">
+    <b class="ls-label-text">E-mail</b>
+    <input type="email" name="email" placeholder="Campo de E-mail" value="diego@maradona.com" required >
+  </label>
+</form>
+
+  </div>
+  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-text ls-form-horizontal ls-form-disable"</span> <span class="na">data-ls-module=</span><span class="s">"form"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">value=</span><span class="s">"Diego Maradona"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Senha<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"senha"</span> <span class="na">placeholder=</span><span class="s">"Campo de senha"</span> <span class="na">value=</span><span class="s">"rei_pele"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>E-mail<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Campo de E-mail"</span> <span class="na">value=</span><span class="s">"diego@maradona.com"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+
+  <hr>
+
+  <h3 class="doc-title-3">Habilitando e desabilitando campos</h3>
+
+  <p>Essa funcionalidade é muito, muito legal. Combinando as propriedades que vimos anteriormente de desabilitar um botão e mostrá-lo como texto, você pode fazer um botão que habilita e desabilita os campos. Veja como funciona:</p>
+
+  <div class="ls-box-demo">
+    <form action="" class="ls-form ls-form-horizontal" data-ls-module="form">
+  <fieldset id="fields-disabled" class="row ls-form-disable">
+    <label class="ls-label col-md-2">
+      <b class="ls-label-text">Nome</b>
+      <input type="text" name="nome" value="aut molestias" placeholder="Nome e sobrenome" class="ls-field" required>
+    </label>
+    <label class="ls-label col-md-2">
+      <b class="ls-label-text">Nome</b>
+      <input type="text" name="nome" value="adipisci natus" placeholder="Nome e sobrenome" class="ls-field" required>
+    </label>
+    <label class="ls-label col-md-2">
+      <b class="ls-label-text">Nome</b>
+      <input type="text" name="nome" value="beatae non" placeholder="Nome e sobrenome" class="ls-field" required>
+    </label>
+  </fieldset>
+  <div class="ls-actions-btn">
+    <button class="ls-btn-primary hidden-elements" data-toggle-class="ls-display-none"  data-target=".hidden-elements" data-ls-fields-enable="#fields-disabled">Editar campos</button>
+    <button class="ls-btn-primary ls-display-none hidden-elements" type="submit">Salvar</button>
+    <button data-toggle-class="ls-display-none"  data-target=".hidden-elements" data-ls-fields-enable="#fields-disabled" class="ls-btn-danger ls-display-none hidden-elements" type="submit">Cancelar</button>
+  </div>
+</form>
+
+  </div>
+  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-horizontal"</span> <span class="na">data-ls-module=</span><span class="s">"form"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;fieldset</span> <span class="na">id=</span><span class="s">"fields-disabled"</span> <span class="na">class=</span><span class="s">"row ls-form-disable"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">value=</span><span class="s">"voluptate non"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">class=</span><span class="s">"ls-field"</span> <span class="na">required</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">value=</span><span class="s">"suscipit minus"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">class=</span><span class="s">"ls-field"</span> <span class="na">required</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">value=</span><span class="s">"aliquid omnis"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">class=</span><span class="s">"ls-field"</span> <span class="na">required</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-primary hidden-elements"</span> <span class="na">data-toggle-class=</span><span class="s">"ls-display-none"</span>  <span class="na">data-target=</span><span class="s">".hidden-elements"</span> <span class="na">data-ls-fields-enable=</span><span class="s">"#fields-disabled"</span><span class="nt">&gt;</span>Editar campos<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-primary ls-display-none hidden-elements"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Salvar<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">data-toggle-class=</span><span class="s">"ls-display-none"</span>  <span class="na">data-target=</span><span class="s">".hidden-elements"</span> <span class="na">data-ls-fields-enable=</span><span class="s">"#fields-disabled"</span> <span class="na">class=</span><span class="s">"ls-btn-danger ls-display-none hidden-elements"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Cancelar<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+
+  <p>Eu tenho um formulário normal, com as classes <code>ls-form-disable</code> no fieldset que envolve os campos que quero desabilitar. Esse fieldset (que poderia ser um DIV), tem um ID para sua identificação. Até aqui tranquilo.</p>
+
+  <p>Agora, depois do Fieldset, existem 3 botões, vou explicar um por um: um botão para EDITAR OS CAMPOS, que é onde o usuário vai clicar para que os campos fiquem editáveis. Os outros dois botões, de SALVAR e CANCELAR estão escondidos. Veja o código do botão EDITAR:</p>
+<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-primary hidden-elements"</span> <span class="na">data-toggle-class=</span><span class="s">"ls-display-none"</span> <span class="na">data-target=</span><span class="s">".hidden-elements"</span> <span class="na">data-ls-fields-enable=</span><span class="s">"#fields-disabled"</span><span class="nt">&gt;</span>Editar campos<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <p>O valor do atributo <code>data-ls-fields-enable</code> deve ser o ID ou a CLASSE do elemento PAI que envolve os campos que você quer habilitar/desabilitar.</p>
+
+  <p>O atributo <code>data-toggle-class</code> e o <code>data-target</code> trabalham juntos: o data-target indica qual o elemento (no nosso caso qualquer elemento com a classe <code>.hidden-elements</code>) vai ter a classe que está no <code>data-toggle-class</code> alternada (no nosso caso a classe <code>.ls-display-none</code>, que faz os botões CANCELAR e SALVAR ficarem escondidos).</p>
+
+  <p>Quando o botão editar é clicado, ele retira a classe <code>.ls-display-none</code> dos elementos com a classe <code>.hidden-elements</code>.</p>
+
+  <p>Os botões de CANCELAR e SALVAR, são simples botões, com as classes que serão manipuladas pelo botão EDITAR do nosso exemplo. Veja o código abaixo:</p>
+
+<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-primary ls-display-none hidden-elements"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Salvar<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">data-toggle-class=</span><span class="s">"ls-display-none"</span>  <span class="na">data-target=</span><span class="s">".hidden-elements"</span> <span class="na">data-ls-fields-enable=</span><span class="s">"#fields-disabled"</span> <span class="na">class=</span><span class="s">"ls-btn-danger ls-display-none hidden-elements"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Cancelar<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+</section>
+
+  </div>
+</div>
+
+<footer class="doc-footer">
+  <div class="container">
+   <ul class="doc-social-link">
+      <!-- <li> <a href="" class="doc-social-facebook">facebook</a> </li> -->
+      <li> <a target="_blank" class="doc-social-twitter" href="http://twitter.com/locawebdevnet">twitter</a> </li>
+    </ul>
+    <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/revenda/assets/images/docs/locaweb-logo.png" alt=""></a>
+    <p class="doc-copyright">
+      Copyright © 1997-2014 Serviços de Internet S/A.
+    </p>
+  </div>
+</footer>
+
+<script src="../../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script><script src="../../../assets/javascripts/locastyle.js" type="text/javascript"></script><script src="../../../assets/javascripts/docs.js" type="text/javascript"></script>
+
+</body>
+</html>
+

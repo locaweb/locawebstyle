@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="ls-theme-green documentacao documentacao_formularios documentacao_formularios_index">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciando com formulários</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Elementos padrão de formulários e disposição de campos" />
+  <meta name="keywords" content="" />
+
+  <link href="../../assets/stylesheets/docs.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/revenda/assets/stylesheets/locastyle.css">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41233562-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+
+
+<header class="doc-header container">
+  <nav class="doc-menu">
+  <span class="sandwich"></span>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/revenda/documentacao/introducao/">Use agora</a></li>
+    <li><a href="/revenda/documentacao/praticas/">Documentação</a></li>
+    <li><a href="/revenda/changelog">Changelog</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v1/">Documentação V1</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v2/">Documentação V2</a></li>
+  </ul>
+</nav>
+
+  <h1 class="doc-logo"><a href="/"><strong>Locaweb</strong> Style</a></h1>
+</header>
+
+<div class="doc-title-intro">
+  <div class="container">
+    <h1>Documentação</h1>
+    <p>Saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
+  </div>
+</div>
+
+<nav class="doc-menu-top">
+  <div class="container">
+    <ul>
+      <li class=''><a class='' href='/revenda/documentacao/introducao/'>Introdução</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/css/grid/'>CSS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/'>Funções JS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/componentes/'>Componentes</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/'>Formulários</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/exemplos/'>Telas de Exemplo</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="doc-content container">
+  <div class="row">
+    <aside class="col-md-3">
+  <nav class="doc-sidebar-menu">
+    <ul>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/'>Básico</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/contador/'>Limite e Contador de caracteres</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/exibir-senha/'>Exibir e esconder a senha</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/campos-desabilitados/'>Campos desabilitados</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/campos-personalizados/'>Campos personalizados</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/tamanho-dos-campos/'>Tamanho dos campos</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/estilo-das-validacoes/'>Estilo das validações</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/mascaras/'>Máscaras</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/prefixos-sufixos/'>Prefixos e sufixos</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/textarea/'>Textarea</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/calendario/'>Calendário</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
+<section class="col-md-9">
+
+  <div class="doc-intro-content">
+  <h1>Iniciando com formulários</h1>
+  <p>Elementos padrão de formulários e disposição de campos</p>
+</div>
+
+
+  <h3 class="doc-title-3">Formulários verticais</h3>
+  <p>Este já é o comportamento padrão, você não precisa fazer praticamente nada para que o form funcione na vertical. Você pode definir a largura das áreas do formulário com as classes do GRID.</p>
+
+  <div class="ls-box-demo">
+   <form action="" class="ls-form row">
+  <fieldset>
+    <label class="ls-label col-md-3">
+      <b class="ls-label-text">Nome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" required >
+    </label>
+    <label class="ls-label col-md-4">
+      <b class="ls-label-text">E-mail</b>
+      <input type="text" name="email" placeholder="Escreva seu email" required >
+    </label>
+    <label class="ls-label col-md-5">
+      <b class="ls-label-text">Rua</b>
+      <input type="text" name="rua" placeholder="O nome da sua rua" required >
+    </label>
+  </fieldset>
+
+  <hr>
+
+  <fieldset>
+    <!-- Exemplo com Checkbox -->
+    <div class="ls-label col-md-5">
+      <p>Selecione quais plataformas você tem:</p>
+      <label class="ls-label-text">
+        <input type="checkbox" name="dynacom">
+        Dynacom
+      </label>
+      <label class="ls-label-text">
+        <input type="checkbox" name="masterSystem">
+        MasterSystem sem fio
+      </label>
+      <label class="ls-label-text">
+        <input type="checkbox" name="nintendinho">
+        Nintendinho
+      </label>
+      <label class="ls-label-text">
+        <input type="checkbox" name="superNintendo">
+        Super Nintendo
+      </label>
+    </div>
+  </fieldset>
+
+  <hr>
+
+  <fieldset>
+    <!-- Exemplo com Radio button -->
+    <div class="ls-label col-md-5">
+      <p>Escolha uma das plataformas:</p>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms">
+        Dynacom
+      </label>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms">
+        MasterSystem sem fio
+      </label>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms">
+        Nintendinho
+      </label>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms">
+        Super Nintendo
+      </label>
+    </div>
+  </fieldset>
+  <div class="ls-actions-btn">
+    <button class="ls-btn">Salvar</button>
+    <button class="ls-btn-danger">Excluir</button>
+  </div>
+</form>
+
+  </div>
+  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-4"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>E-mail<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Escreva seu email"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-5"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Rua<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"rua"</span> <span class="na">placeholder=</span><span class="s">"O nome da sua rua"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+
+  <span class="nt">&lt;hr&gt;</span>
+
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="c">&lt;!-- Exemplo com Checkbox --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-label col-md-5"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Selecione quais plataformas você tem:<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"dynacom"</span><span class="nt">&gt;</span>
+        Dynacom
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"masterSystem"</span><span class="nt">&gt;</span>
+        MasterSystem sem fio
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"nintendinho"</span><span class="nt">&gt;</span>
+        Nintendinho
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"superNintendo"</span><span class="nt">&gt;</span>
+        Super Nintendo
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+
+  <span class="nt">&lt;hr&gt;</span>
+
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="c">&lt;!-- Exemplo com Radio button --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-label col-md-5"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Escolha uma das plataformas:<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"plataforms"</span><span class="nt">&gt;</span>
+        Dynacom
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"plataforms"</span><span class="nt">&gt;</span>
+        MasterSystem sem fio
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"plataforms"</span><span class="nt">&gt;</span>
+        Nintendinho
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"plataforms"</span><span class="nt">&gt;</span>
+        Super Nintendo
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn"</span><span class="nt">&gt;</span>Salvar<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-danger"</span><span class="nt">&gt;</span>Excluir<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+
+  <hr>
+  <h3 class="doc-title-3">Formulários horizontais</h3>
+  <p>Para colocar os campos um ao lado do outro, basta inserir a classe <code>ls-form-horizontal</code> na tag FORM.</p>
+
+  <div class="ls-box-demo">
+    <form action="" class="ls-form ls-form-horizontal row">
+  <fieldset>
+    <label class="ls-label col-md-4 col-xs-12">
+      <b class="ls-label-text">Nome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" class="ls-field" required>
+    </label>
+    <label class="ls-label col-md-4 col-xs-12">
+      <b class="ls-label-text">Sobrenome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" class="ls-field" required>
+    </label>  <label class="ls-label col-md-4 col-xs-12">
+      <b class="ls-label-text">Nome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" class="ls-field" required>
+    </label>
+    <label class="ls-label col-md-4 col-xs-12">
+      <b class="ls-label-text">Sobrenome</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" class="ls-field" required>
+    </label>
+  </fieldset>
+
+    <hr>
+
+  <fieldset>
+    <!-- Exemplo com Checkbox -->
+    <div class="ls-label col-md-12">
+      <p>Selecione quais plataformas você tem:</p>
+      <label class="ls-label-text">
+        <input type="checkbox" name="dynacom" class="ls-field-checkbox">
+        Dynacom
+      </label>
+      <label class="ls-label-text">
+        <input type="checkbox" name="masterSystem" class="ls-field-checkbox">
+        MasterSystem sem fio
+      </label>
+      <label class="ls-label-text">
+        <input type="checkbox" name="nintendinho" class="ls-field-checkbox">
+        Nintendinho
+      </label>
+      <label class="ls-label-text">
+        <input type="checkbox" name="superNintendo" class="ls-field-checkbox">
+        Super Nintendo
+      </label>
+    </div>
+  </fieldset>
+
+    <hr>
+  <fieldset>
+    <!-- Exemplo com Radio button -->
+    <div class="ls-label col-md-12">
+      <p>Escolha uma das plataformas:</p>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms" class="ls-field-radio">
+        Dynacom
+      </label>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms" class="ls-field-radio">
+        MasterSystem sem fio
+      </label>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms" class="ls-field-radio">
+        Nintendinho
+      </label>
+      <label class="ls-label-text">
+        <input type="radio" name="plataforms" class="ls-field-radio">
+        Super Nintendo
+      </label>
+    </div>
+  </fieldset>
+
+  <div class="ls-actions-btn">
+    <button class="ls-btn">Salvar</button>
+    <button class="ls-btn-danger">Cancelar</button>
+  </div>
+</form>
+
+  </div>
+  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-horizontal row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-4 col-xs-12"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">class=</span><span class="s">"ls-field"</span> <span class="na">required</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-4 col-xs-12"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Sobrenome<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">class=</span><span class="s">"ls-field"</span> <span class="na">required</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-4 col-xs-12"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">class=</span><span class="s">"ls-field"</span> <span class="na">required</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-4 col-xs-12"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Sobrenome<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">class=</span><span class="s">"ls-field"</span> <span class="na">required</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+
+    <span class="nt">&lt;hr&gt;</span>
+
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="c">&lt;!-- Exemplo com Checkbox --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-label col-md-12"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Selecione quais plataformas você tem:<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"dynacom"</span> <span class="na">class=</span><span class="s">"ls-field-checkbox"</span><span class="nt">&gt;</span>
+        Dynacom
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"masterSystem"</span> <span class="na">class=</span><span class="s">"ls-field-checkbox"</span><span class="nt">&gt;</span>
+        MasterSystem sem fio
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"nintendinho"</span> <span class="na">class=</span><span class="s">"ls-field-checkbox"</span><span class="nt">&gt;</span>
+        Nintendinho
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"superNintendo"</span> <span class="na">class=</span><span class="s">"ls-field-checkbox"</span><span class="nt">&gt;</span>
+        Super Nintendo
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+
+    <span class="nt">&lt;hr&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="c">&lt;!-- Exemplo com Radio button --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-label col-md-12"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Escolha uma das plataformas:<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"plataforms"</span> <span class="na">class=</span><span class="s">"ls-field-radio"</span><span class="nt">&gt;</span>
+        Dynacom
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"plataforms"</span> <span class="na">class=</span><span class="s">"ls-field-radio"</span><span class="nt">&gt;</span>
+        MasterSystem sem fio
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"plataforms"</span> <span class="na">class=</span><span class="s">"ls-field-radio"</span><span class="nt">&gt;</span>
+        Nintendinho
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"plataforms"</span> <span class="na">class=</span><span class="s">"ls-field-radio"</span><span class="nt">&gt;</span>
+        Super Nintendo
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn"</span><span class="nt">&gt;</span>Salvar<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-danger"</span><span class="nt">&gt;</span>Cancelar<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+
+  <hr>
+  <h3>Etiqueta ao lado do campo</h3>
+  <p>Este formato deve ser usado com consciência, pois a largura dos campos é automática.</p>
+  <p>Basta adicionar a classe <code>ls-form-inline</code>. Veja exemplos abaixo:</p>
+
+  <div class="ls-box-demo">
+    <form action="" class="ls-form ls-form-inline">
+  <label class="ls-label">
+    <b class="ls-label-text">Nome</b>
+    <input type="text" name="nome" placeholder="Nome e sobrenome" required >
+  </label>
+  <label class="ls-label">
+    <b class="ls-label-text">E-mail</b>
+    <input type="text" name="email" placeholder="Escreva seu email" required >
+  </label>
+  <div class="ls-actions-btn">
+    <button class="ls-btn">Salvar</button>
+    <button class="ls-btn-danger">Cancelar</button>
+  </div>
+</form>
+
+<br>
+<p>Com caixa de filtro:</p>
+
+<div class="ls-box-filter">
+  <!-- To do this -->
+  <form action="" class="ls-form ls-form-inline ls-float-left">
+    <label class="ls-label">
+      <b class="ls-label-text">Status</b>
+      <div data-ls-module="customFields">
+        <select class="go-to-option" name="">
+          <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Desativados</option>
+          <option value="#">Bloqueados por bounce</option>
+        </select>
+      </div>
+    </label>
+  </form>
+
+  <form class="ls-form ls-form-inline ls-float-right">
+    <label class="ls-label" role="search">
+      <b class="ls-label-text ls-hidden-accessible">Nome do cliente</b>
+      <input type="text" id="q" name="q" aria-label="Faça sua busca por cliente" accesskey="s" placeholder="Nome do cliente" required="">
+    </label>
+    <div class="ls-actions-btn">
+      <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
+    </div>
+  </form>
+</div>
+
+  </div>
+  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>E-mail<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Escreva seu email"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn"</span><span class="nt">&gt;</span>Salvar<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-danger"</span><span class="nt">&gt;</span>Cancelar<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;p&gt;</span>Com caixa de filtro:<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-box-filter"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- To do this --&gt;</span>
+  <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline ls-float-left"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"customFields"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"go-to-option"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"&amp;quot;selected&amp;quot;"</span> <span class="na">value=</span><span class="s">"/resale/clients"</span><span class="nt">&gt;</span>Todos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ativos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Desativados<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Bloqueados por bounce<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
+
+  <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline ls-float-right"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label"</span> <span class="na">role=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text ls-hidden-accessible"</span><span class="nt">&gt;</span>Nome do cliente<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"q"</span> <span class="na">name=</span><span class="s">"q"</span> <span class="na">aria-label=</span><span class="s">"Faça sua busca por cliente"</span> <span class="na">accesskey=</span><span class="s">"s"</span> <span class="na">placeholder=</span><span class="s">"Nome do cliente"</span> <span class="na">required=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Buscar"</span> <span class="na">class=</span><span class="s">"ls-btn"</span> <span class="na">title=</span><span class="s">"Buscar"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+
+  <div class="ls-box ls-box-gray">
+    <h4>Acessibilidade</h4>
+    <p>
+      Ao usar o atributo <code>placeholder</code> adicionamos a classe <code>ls-hidden-accessible </code> no <code>ls-label-text</code>, assim escondemos o elemento, porém os leitores de tela conseguem entender.
+      <br>
+      Faça isso e a Acessibilidade agradece =)
+    </p>
+  </div>
+
+
+  <p>É possível fazer um formulário usando elementos verticais e horizontais, usando o <i>grid</i> padrão e a classe para <i>form inline</i>.</p>
+
+</section>
+
+  </div>
+</div>
+
+<footer class="doc-footer">
+  <div class="container">
+   <ul class="doc-social-link">
+      <!-- <li> <a href="" class="doc-social-facebook">facebook</a> </li> -->
+      <li> <a target="_blank" class="doc-social-twitter" href="http://twitter.com/locawebdevnet">twitter</a> </li>
+    </ul>
+    <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/revenda/assets/images/docs/locaweb-logo.png" alt=""></a>
+    <p class="doc-copyright">
+      Copyright © 1997-2014 Serviços de Internet S/A.
+    </p>
+  </div>
+</footer>
+
+<script src="../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script><script src="../../assets/javascripts/locastyle.js" type="text/javascript"></script><script src="../../assets/javascripts/docs.js" type="text/javascript"></script>
+
+</body>
+</html>
+

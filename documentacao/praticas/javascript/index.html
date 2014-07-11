@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="ls-theme-green documentacao documentacao_praticas documentacao_praticas_javascript documentacao_praticas_javascript_index">
+<head>
+  <meta charset="UTF-8">
+  <title>Práticas de JavaScript</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Se quiser contribuir com JavaScript, siga essas práticas" />
+  <meta name="keywords" content="" />
+
+  <link href="../../../assets/stylesheets/docs.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/revenda/assets/stylesheets/locastyle.css">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41233562-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+
+
+<header class="doc-header container">
+  <nav class="doc-menu">
+  <span class="sandwich"></span>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/revenda/documentacao/introducao/">Use agora</a></li>
+    <li><a href="/revenda/documentacao/praticas/">Documentação</a></li>
+    <li><a href="/revenda/changelog">Changelog</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v1/">Documentação V1</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v2/">Documentação V2</a></li>
+  </ul>
+</nav>
+
+  <h1 class="doc-logo"><a href="/"><strong>Locaweb</strong> Style</a></h1>
+</header>
+
+<div class="doc-title-intro">
+  <div class="container">
+    <h1>Documentação</h1>
+    <p>Saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
+  </div>
+</div>
+
+<nav class="doc-menu-top">
+  <div class="container">
+    <ul>
+      <li class=''><a class='' href='/revenda/documentacao/introducao/'>Introdução</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/css/grid/'>CSS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/funcoes-js/'>Funções JS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/componentes/'>Componentes</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/formularios/'>Formulários</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/exemplos/'>Telas de Exemplo</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="doc-content container">
+  <div class="row">
+    <aside class="col-md-3">
+  <nav class="doc-sidebar-menu">
+    <ul>
+      <li class=''><a class='' href='/revenda/documentacao/introducao/'>Informações iniciais</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/introducao/boilerplate/'>Boilerplate</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/introducao/contribua/'>Contribua</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/introducao/chrome/'>Extensão para Chrome</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/praticas/css/'>CSS</a></li>
+      <li class=''><a class='' href='/revenda/documentacao/praticas/javascript/'>Javascript</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
+<section class="col-md-9">
+
+  <div class="doc-intro-content">
+  <h1>Práticas de JavaScript</h1>
+  <p>Se quiser contribuir com JavaScript, siga essas práticas</p>
+</div>
+
+
+  <h2 class="doc-title-3">Pattern JavaScript</h2>
+  <p>O pattern utilizado por nós é o <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript">Revealing Module Pattern</a>.</p>
+  <p>As principais vantagens de manter este padrão são:</p>
+
+  <ol>
+    <li>Consistência de código;</li>
+    <li>Melhores práticas;</li>
+    <li>Escalabilidade;</li>
+    <li>Fácil manutenção;</li>
+    <li>Uniformidade entre projetos.</li>
+  </ol>
+
+  <p>A ideia é que o código mantenha unidade, seja ele escrito por uma ou várias pessoas, dentro de um projeto e entre projetos diferentes, diminuindo o tempo de aprendizado.</p>
+
+  <p>As regras a seguir propoem um padrão mínimo para desenvolvimento. O mais importante é manter a consistência de estilo de código. O que for escolhido como estilo para o seu projeto deverá ser seguido em todos os arquivos.</p>
+
+  <h2 class="doc-title-4">Padrões de escrita</h2>
+  <p><strong>Identação:</strong> utilizamos 2 espaços, mas o mais importante é seguir um estilo único. Nunca misture espaços e tabs em único arquivo. Para facilitar incluímos no projeto um arquivo de configuraçao de editores, o ".editorconfig", saiba mais sobre ele em <a href="http://editorconfig.org/" target="_blank">editorconfig.org</a> </p>
+  <p>Existem plugins para vários editores, no nosso time usamos:</p>
+  <ul>
+    <li><a href="https://github.com/sindresorhus/editorconfig-sublime#readme" target="_blank">Plugin para Sublime Text</a></li>
+    <li><a href="https://github.com/editorconfig/editorconfig-vim#readme" target="_blank">Plugin para Vim</a></li>
+  </ul>
+
+  <p><strong>Sintaxe:</strong> para separaçao dos blocos de código, utilizamos o estilo1TBS, por exemplo:</p>
+
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="k">if</span> <span class="p">(</span> <span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">x</span> <span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">y</span> <span class="p">)</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+  <p>Observe os alinhamentos, quebras de linhas, posição das chaves e espaços entre variáveis e operadores.</p>
+
+  <h2 class="doc-title-4">Revealing Module Pattern</h2>
+  <p>Para melhorar a organização dos arquivos, funções, performance e diminuir a chance de erros e conflitos, adotamos o <em>Revealing Module Pattern</em> do <a target="_blank" href="http://christianheilmann.com/">Christian Heilmann</a> .</p>
+  <p><strong>As vantagens desse pattern são:</strong> organização, clareza, performance, expõe publicamente apenas as funções e variáveis que se deseja e namespace único evitando sobrescrever métodos facilmente.</p>
+  <p>Leia mais sobre ele no livro do <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript" target="_blank">Addy Osmani</a>.</p>
+  <p>Um exemplo:</p>
+
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></td><td class="code"><pre><span class="c1">// Define o objeto global do projeto, igual a um já existente ou cria um novo objeto.
+</span><span class="kd">var</span> <span class="nx">projeto</span> <span class="o">=</span> <span class="nx">projeto</span> <span class="o">||</span> <span class="p">{};</span>
+
+<span class="c1">// Define o módulo no objeto global.
+</span><span class="nx">projeto</span><span class="p">.</span><span class="nx">moduloUm</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="s1">'use strict'</span><span class="p">;</span>
+
+  <span class="kd">function</span> <span class="nx">iniciar</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">interno</span><span class="p">();</span>
+    <span class="c1">// ...
+</span>  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">atualizar</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// ...
+</span>  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">interno</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// ...
+</span>  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">iniciar</span><span class="p">:</span><span class="nx">iniciar</span><span class="p">,</span>
+    <span class="na">atualizar</span><span class="p">:</span> <span class="nx">atualizar</span>
+  <span class="p">};</span>
+
+<span class="p">}());</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <h2 class="doc-title-4">Módulos</h2>
+  <p>Todos os scripts do Locaweb Style são modularizados ao máximo. Só iniciamos um comportamento se ele precisar ser usado. Todos os módulos ou os triggers destes módulos, terão um atributo <code>data-ls-module="#"</code> que avisará o Locaweb Style para iniciar o módulo determinado. Para citar alguns exemplos: <code>data-ls-module="modal"</code>, <code>data-ls-module="collapse"</code> e <code>data-ls-module="tabs"</code></p>
+
+  <p>O ideal é ter um módulo por arquivo, e que eles não se iniciem sozinhos.</p>
+  <p>Um módulo central que funcione como controlador de quais serão executados é uma boa prática.</p>
+  <p>Abaixo, colocamos três exemplos de módulos e como eles são carregados:</p>
+
+  <h3 class="doc-title-6">Módulo de gráficos no arquivo charts.js</h3>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">projeto</span> <span class="o">=</span> <span class="nx">projeto</span> <span class="o">||</span> <span class="p">{};</span>
+<span class="nx">project</span><span class="p">.</span><span class="nx">Grafico</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="s1">'use strict'</span><span class="p">;</span>
+
+  <span class="kd">function</span> <span class="nx">iniciar</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">inserirGrafico</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">inserirGrafico</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// ...
+</span>  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">iniciar</span><span class="p">:</span><span class="nx">iniciar</span>
+  <span class="p">};</span>
+
+<span class="p">}());</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <h3 class="doc-title-6">Módulo servidores no arquivo servers.js</h3>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">projeto</span> <span class="o">=</span> <span class="nx">projeto</span> <span class="o">||</span> <span class="p">{};</span>
+<span class="nx">projeto</span><span class="p">.</span><span class="nx">Servidores</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="s1">'use strict'</span><span class="p">;</span>
+
+  <span class="kd">function</span> <span class="nx">iniciar</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">buscaServidores</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">buscaServidores</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">insereListaServidores</span><span class="p">()</span>
+    <span class="c1">// ...
+</span>  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">iniciar</span><span class="p">:</span><span class="nx">iniciar</span>
+  <span class="p">};</span>
+
+<span class="p">}());</span>
+</pre></td></tr></tbody></table>
+</div>
+
+
+  <h3 class="doc-title-6">carregaModulos.js</h3>
+  <p>Finalmente o arquivo que controla quando cada módulo será executado, da maneira que preferir</p>
+
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">projeto</span> <span class="o">=</span> <span class="nx">projeto</span> <span class="o">||</span> <span class="p">{};</span>
+<span class="nx">projeto</span><span class="p">.</span><span class="nx">carregaModulos</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+  <span class="s1">'use strict'</span><span class="p">;</span>
+
+  <span class="kd">function</span> <span class="nx">inicio</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'.grafico'</span><span class="p">).</span><span class="nx">size</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">projeto</span><span class="p">.</span><span class="nx">graficos</span><span class="p">.</span><span class="nx">inicio</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span> <span class="o">===</span> <span class="s1">'/servidores'</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">projeto</span><span class="p">.</span><span class="nx">servidores</span><span class="p">.</span><span class="nx">inicio</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">inicio</span><span class="p">:</span><span class="nx">inicio</span>
+  <span class="p">};</span>
+
+<span class="p">}(</span><span class="nx">jQuery</span><span class="p">));</span>
+
+<span class="nx">projeto</span><span class="p">.</span><span class="nx">carregaModulos</span><span class="p">.</span><span class="nx">inicio</span><span class="p">();</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <h2 class="doc-title-4">Código em apenas um idioma</h2>
+  <p>Para facilitar a manutençao e a legibilidade do código, procure usar apenas um idioma, em nomes de funções, variáveis e comentários.</p>
+
+  <p>O mais importante é seguir um padrão, mantendo ele do início ao fim do projeto. Exceções, claro, são libraries e plugins que utilizados.</p>
+
+  <p>Seja qual for a língua utilizada é importante ser claro, utilizando nomes descritivos, evitando ser prolixo nos nomes, funções e comentários, como abordado no tópico Seja compreensível abaixo.</p>
+
+
+  <h2 class="doc-title-4">'use strict';</h2>
+  <p>Ao utilizar "use strict"; no início de códigos ou funções, declara-se uma mudança na sintaxe do Javascript, que lança mais exceções mostrando problemas no código. Os erros mais comuns são uso de palavras reservadas do javascript (ECMAScript 5 e 6), uso de variáveis não declaradas e uso de funções descontinuadas.</p>
+
+  <p>Para utilizar, basta inserir a string 'use strict'; antes do bloco de código a ser avaliado ou função. Exemplos:</p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7</pre></td><td class="code"><pre><span class="s2">"use strict"</span><span class="p">;</span>
+<span class="nx">idade</span> <span class="o">=</span> <span class="mi">17</span><span class="p">;</span> <span class="c1">// lança um erro de referência
+</span>
+<span class="kd">function</span> <span class="nx">soma</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">c</span><span class="p">){</span> <span class="c1">// erro de sintaxe
+</span>  <span class="s2">"use strict"</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span> <span class="o">+</span> <span class="nx">c</span><span class="p">;</span> <span class="c1">// exibe o erro se a função é chamada
+</span><span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <p>Leia mais em <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" target="_blank">MDN - Strict mode</a></p>
+
+  <h2 class="doc-title-4">Nomenclatura de pastas, arquivos, módulos e plugins</h2>
+  <p>Um projeto pode ter muitos arquivos javascript, então é importante que estejam bem organizados desde o início, separados e bem nomeados.</p>
+
+  <p>A estrutura pode variar muito de projeto para projeto, mas as recomendações mínimas são:</p>
+
+  <ul>
+    <li>Nomes dos arquivos na mesma língua em que são escritos;</li>
+    <li>Nomes sem camelCase;</li>
+    <li>Pastas separadas por tipos (bibliotecas/frameworks/plugins);</li>
+    <li>Plugins identificados por versão.</li>
+  </ul>
+
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17</pre></td><td class="code"><pre><span class="err">──</span> <span class="nx">javascripts</span>
+     <span class="err">├──</span> <span class="nx">libs</span>
+     <span class="err">│</span>   <span class="err">├──</span> <span class="nx">jquery</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">js</span>
+     <span class="err">│</span>   <span class="err">└──</span> <span class="nx">underscore</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">js</span>
+     <span class="err">│</span>   <span class="err">└──</span> <span class="nx">highcharts</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">js</span>
+     <span class="err">├──</span> <span class="nx">plugins</span>
+     <span class="err">│</span>   <span class="err">├──</span> <span class="nx">jquery</span><span class="p">.</span><span class="nx">validate</span><span class="o">-</span><span class="mf">1.2</span><span class="p">.</span><span class="nx">js</span>
+     <span class="err">│</span>   <span class="err">├──</span> <span class="nx">jquery</span><span class="p">.</span><span class="nx">slider</span><span class="o">-</span><span class="mf">3.1</span><span class="p">.</span><span class="nx">js</span>
+     <span class="err">│</span>   <span class="err">└──</span> <span class="nx">jquery</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">addicional</span><span class="o">-</span><span class="nx">methods</span><span class="o">-</span><span class="mf">0.8</span><span class="p">.</span><span class="nx">js</span>
+     <span class="err">├──</span> <span class="nx">modules</span>
+     <span class="err">│</span>   <span class="err">├──</span> <span class="nx">charts</span>
+     <span class="err">│</span>   <span class="o">|</span>   <span class="err">├──</span> <span class="nx">servers</span><span class="p">.</span><span class="nx">js</span>
+     <span class="err">│</span>   <span class="o">|</span>   <span class="err">└──</span> <span class="nx">transfer</span><span class="p">.</span><span class="nx">js</span>
+     <span class="err">│</span>   <span class="err">├──</span> <span class="nx">servers</span><span class="p">.</span><span class="nx">js</span>
+     <span class="err">│</span>   <span class="err">└──</span> <span class="nx">servers</span><span class="p">.</span><span class="nx">forms</span><span class="p">.</span><span class="nx">js</span>
+     <span class="err">├──</span> <span class="nx">utils</span><span class="p">.</span><span class="nx">js</span>
+     <span class="err">└──</span> <span class="nx">main</span><span class="p">.</span><span class="nx">js</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <h2 class="doc-title-4">Seja compreensível</h2>
+  <p>Use nomes de variáveis e funções auto explicativos e simples. Crie algum padrão e mantenha em todo o projeto.</p>
+  <p>No Locastyle utilizamos variáveis e funções camelCase, pela facilidade de leitura, escrita e praticidade ao se trabalhar.</p>
+  <p>Exemplos:</p>
+  <h3 class="doc-title-6">Variáveis com nomes ruins:</h3>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="code"><pre><span class="c1">// Curtos, posicionamento no código e abreviações
+</span><span class="kd">var</span> <span class="nx">x1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">campo1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">latXY</span><span class="p">;</span>
+
+<span class="c1">// Longos demais
+</span><span class="kd">var</span> <span class="nx">valorEixoXGraficoConsumo</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">campoTextoPrimeiroNome</span><span class="p">;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <h3 class="doc-title-6">Funções com nomes ruins:</h3>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="code"><pre><span class="c1">// Nomes que descrevem o código, nao o objetivo da função
+</span><span class="kd">function</span> <span class="nx">maiorDeDezoitoAnos</span><span class="p">(</span><span class="nx">idade</span><span class="p">){</span>
+  <span class="k">return</span> <span class="nx">idade</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// É melhor descrever o objetivo
+</span><span class="kd">function</span> <span class="nx">possuiMaioridade</span><span class="p">(</span><span class="nx">idade</span><span class="p">){</span>
+  <span class="k">return</span> <span class="nx">idade</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <h3 class="doc-title-6">É uma boa ideia criar um padrão para suas variáveis e funções, como por exemplo:</h3>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</pre></td><td class="code"><pre><span class="c1">// Variáveis com $ no início são elementos/objetos jQuery
+</span><span class="kd">var</span> <span class="nx">$header</span>    <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#header'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">$menuItens</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#menu a'</span><span class="p">);</span>
+
+<span class="c1">// Maiúsculas para constantes
+</span><span class="kd">var</span> <span class="nx">PASTA_IMAGENS</span> <span class="o">=</span> <span class="s1">'/assets/images/'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">NOME_CLIENTE</span> <span class="o">=</span> <span class="s1">'Fulano de Tal'</span><span class="p">;</span>
+
+<span class="c1">// _ no início para variáveis e funções privadas
+</span><span class="kd">var</span> <span class="nx">_contador</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></td></tr></tbody></table>
+</div>
+  <p>Confira o padrão de nomenclatura do <a href="http://javascript.crockford.com/code.html#names" target="_blank"></a> Douglas Crockford</p>
+
+  <h3 class="doc-title-5">Evite globais</h3>
+  <p>No geral é uma péssima idéia, porque aumenta a chance de ter algo sobrescrito. Uma opção é utilizar <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures" target="_blank"></a> closures e <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript" target="_blank"></a> module pattern.</p>
+
+
+  <h3 class="doc-title-5">Seja consistente no estilo de código</h3>
+  <p>É possível escrever seu código de muitas maneiras, mas procure manter o mesmo estilo em todo seu projeto. Mantendo um padrão nos nomes, identacões, patterns, etc.</p>
+  <p>Uma dica, utilize o <a href="http://www.jslint.com/" target="_blank">jslint</a> para validar seu código.</p>
+
+  <h3 class="doc-title-5">Escreva os comentários necessários</h3>
+  <p>É comum ouvir "Um bom código não precisa de explicação", mas na prática em projetos maiores, procure explicar a finalidade do seu código. Muitas pessoas, de diferentes níveis, podem ter que trabalhar no seu código e nem sempre elas tem experiência, tempo ou conhecimento do negócio para entender tudo. Facilite o desenvolvimento e manutenção comentando, mas não explicando o que ele faz, mas qual a regra de negócio.</p>
+  <p>Exemplo:</p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre><span class="c1">// Ruim: verifica se é maior de 18
+// Bom: menores de idade são redirecionados
+</span><span class="k">if</span><span class="p">(</span> <span class="nx">idade</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="p">){</span> <span class="p">...</span> <span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+  <p>Lembrando que comentários devem existir apenas na versão de desenvolvimento, devendo ser removidos no arquivo minificado que é entregue em produção.</p>
+
+  <h3 class="doc-title-5">Use testes automatizados</h3>
+  <p>Utilizamos <a href="http://pivotal.github.io/jasmine/" target="_blank">Jasmine</a> para testar o Locaweb Style, assim como os comentários, é uma ótima forma de explicar o que seu código faz ou deveria fazer. Além de ter o dispositivo de alerta quando algum teste quebra, dá mais segurança para manutenções e inclusão de novas funcionalidades.</p>
+
+
+  <h3 class="doc-title-5">Evite misturar tecnologias</h3>
+  <p>Na prática do dia a dia, algo bem simples: Estilize seu HTML com CSS, Não com JS.</p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7</pre></td><td class="code"><pre><span class="c1">// Errado
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#nome-usuario'</span><span class="p">).</span><span class="nx">css</span><span class="p">({</span>
+  <span class="s1">'border'</span><span class="err">:</span> <span class="s1">'1px solid red'</span><span class="p">,</span>
+  <span class="s1">'color'</span><span class="err">:</span> <span class="s1">'red'</span>
+<span class="p">});</span>
+<span class="c1">// Certo
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#nome-usuario'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'erro'</span><span class="p">);</span>
+</pre></td></tr></tbody></table>
+</div>
+  <p>Crie os estilos que precisar (e animações, quando possível) no CSS, e no javascript controle quando os estilos são aplicados, em vez de aplicar propriedades.</p>
+
+  <h3 class="doc-title-5">Use sintaxe abreviada</h3>
+  <p>Conheça as notações de variáveis e funções abreviadas e procure usá-las.</p>
+  <p>Exemplo:</p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></td><td class="code"><pre><span class="c1">// Use
+</span><span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'rosa'</span><span class="p">,</span> <span class="s1">'azul'</span><span class="p">,</span> <span class="s1">'verde'</span><span class="p">];</span>
+<span class="c1">// Em vez de
+</span><span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+<span class="nx">cores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s1">'rosa'</span><span class="p">;</span>
+<span class="nx">cores</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s1">'azul'</span><span class="p">;</span>
+<span class="nx">cores</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="s1">'verde'</span><span class="p">;</span>
+
+<span class="c1">// Use
+</span><span class="kd">var</span> <span class="nx">margem</span> <span class="o">=</span> <span class="nx">altura</span> <span class="o">||</span> <span class="mi">10</span><span class="p">;</span>
+<span class="c1">// Em vez de
+</span><span class="k">if</span><span class="p">(</span><span class="nx">altura</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">margem</span> <span class="o">=</span> <span class="nx">altura</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">margem</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Use
+</span><span class="kd">var</span> <span class="nx">direcao</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="c1">// Em vez de
+</span><span class="kd">var</span> <span class="nx">direcao</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">){</span>
+  <span class="nx">direcao</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">direcao</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+
+
+  <h3 class="doc-title-5">Modularize seu código</h3>
+  <p>Evite escrever funções, trechos de código muito longos, ou aninhados. Procure separar regras e evite códigos repetidos.</p>
+  <p>Exemplo:</p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41</pre></td><td class="code"><pre><span class="c1">// Em vez de
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#botao1'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'#resultado'</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="s1">'ajax/lista-pessoas.html'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">()</span>
+  <span class="p">});</span>
+<span class="p">})</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#botao2'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'#resultado'</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="s1">'ajax/lista-empresas.html'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">()</span>
+  <span class="p">});</span>
+<span class="p">})</span>
+<span class="c1">//...
+</span>
+<span class="c1">// Faça
+</span><span class="kd">function</span> <span class="nx">ocultaFormulario</span><span class="p">(){</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#botao1'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'#resultado'</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="s1">'ajax/lista-pessoas.html'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">ocultaFormulario</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">})</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#botao2'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'#resultado'</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="s1">'ajax/lista-empresas.html'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">ocultaFormulario</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">})</span>
+
+<span class="c1">// Ou melhor
+</span><span class="kd">function</span> <span class="nx">ocultaFormulario</span><span class="p">(){</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">carregaDados</span><span class="p">(</span> <span class="nx">elemento</span><span class="p">,</span> <span class="nx">url</span><span class="p">){</span>
+  <span class="nx">$</span><span class="p">(</span><span class="nx">elemento</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#resultado'</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">ocultaFormulario</span><span class="p">();</span>
+    <span class="p">});</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+<span class="nx">carregaDados</span><span class="p">(</span><span class="s1">'#botao1'</span><span class="p">,</span> <span class="s1">'ajax/lista-pessoas.html'</span><span class="p">);</span>
+<span class="nx">carregaDados</span><span class="p">(</span><span class="s1">'#botao2'</span><span class="p">,</span> <span class="s1">'ajax/lista-empresas.html'</span><span class="p">);</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <h3 class="doc-title-5">Configurações e internacionalização</h3>
+  <p>Quando estiver criando a aplicação, pense em cada valor, texto, variável, se é o caso de deixá-la separada, permitindo alterá-la depois.</p>
+  <p>Exemplo:</p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre></td><td class="code"><pre><span class="c1">// Em vez de
+</span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+  <span class="na">type</span>   <span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
+  <span class="na">url</span>    <span class="p">:</span> <span class="s2">"api/usuarios"</span><span class="p">,</span>
+  <span class="na">data</span>   <span class="p">:</span> <span class="p">{</span> <span class="na">limite</span><span class="p">:</span> <span class="mi">10</span> <span class="p">},</span>
+  <span class="na">success</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span> <span class="s1">'Busca efetuada com sucesso'</span> <span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#lista'</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span><span class="s1">'fast'</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="na">error</span>  <span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span> <span class="s1">'Erro na busca'</span> <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// Faça
+</span><span class="kd">var</span> <span class="nx">configuracoes</span><span class="err">:</span> <span class="p">{</span>
+  <span class="nx">mensagens</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">successo</span> <span class="p">:</span> <span class="s1">'Busca efetuada com sucesso'</span><span class="p">,</span>
+    <span class="na">erro</span>     <span class="p">:</span> <span class="s1">'Erro na busca'</span>
+  <span class="p">},</span>
+  <span class="nl">api</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">usuarios</span><span class="p">:</span> <span class="s2">"api/usuarios"</span>
+  <span class="p">},</span>
+  <span class="nl">animacao</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">velocidade</span><span class="p">:</span> <span class="s2">"fast"</span>
+  <span class="p">},</span>
+  <span class="nl">lista</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">porPagina</span><span class="p">:</span> <span class="mi">10</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">//...
+</span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+  <span class="na">type</span>   <span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
+  <span class="na">url</span>    <span class="p">:</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">usuarios</span><span class="p">,</span>
+  <span class="na">data</span>   <span class="p">:</span> <span class="p">{</span> <span class="na">limite</span><span class="p">:</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">lista</span><span class="p">.</span><span class="nx">porPagina</span><span class="p">}</span> <span class="p">,</span>
+  <span class="na">success</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">mensagens</span><span class="p">.</span><span class="nx">successo</span> <span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#lista'</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">animacao</span><span class="p">.</span><span class="nx">velocity</span> <span class="p">);</span>
+  <span class="p">},</span>
+  <span class="na">error</span>  <span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">mensagens</span><span class="p">.</span><span class="nx">erro</span> <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table>
+</div>
+
+
+  <h3 class="doc-title-5">Utilização correta de Eventos</h3>
+  <p>Ao escrever seu código e registrar comportamentos e eventos na interação do usuário é importante ter cuidado na escolha correta dos eventos.</p>
+  <p>Um caso comum de erro é vincular uma função no clique do botão enviar de um formulário, em vez de chamar a ação no submit do formulário:</p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre></td><td class="code"><pre><span class="c1">// Errado
+// se o usuário submeter o form teclando ENTER a função não é executada
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">'#enviar'</span><span class="p">,</span> <span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+  <span class="k">if</span><span class="p">(</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">isValid</span><span class="p">()</span> <span class="p">){</span>
+    <span class="c1">// ... ação
+</span>  <span class="p">}</span>
+<span class="p">});</span>
+<span class="c1">// correto
+// a ação é executada no clique ou no ENTER
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'submit'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+  <span class="k">if</span><span class="p">(</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">isValid</span><span class="p">()</span> <span class="p">){</span>
+    <span class="c1">// ... ação
+</span>  <span class="p">}</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <p>Também é preciso saber o uso correto e diferenças entre os métodos, no caso do jQuery, sabendo os corretos para cada situação e os que estão em desuso.</p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</pre></td><td class="code"><pre><span class="c1">// Os seguintes foram descontinuados
+</span><span class="p">.</span><span class="nx">die</span><span class="p">()</span>   <span class="p">.</span><span class="nx">load</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">error</span><span class="p">()</span> <span class="p">.</span><span class="nx">unload</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">live</span><span class="p">()</span>  <span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
+<span class="c1">// os seguintes métodos podem ser evitados
+</span><span class="p">.</span><span class="nx">mousedown</span><span class="p">()</span>   <span class="p">.</span><span class="nx">blur</span><span class="p">()</span>     <span class="p">.</span><span class="nx">rezise</span><span class="p">()</span>   <span class="p">.</span><span class="nx">keyup</span><span class="p">()</span>     <span class="p">.</span><span class="nx">keypress</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">mousenter</span><span class="p">()</span>   <span class="p">.</span><span class="nx">change</span><span class="p">()</span>   <span class="p">.</span><span class="nx">hover</span><span class="p">()</span>    <span class="p">.</span><span class="nx">ready</span><span class="p">()</span>     <span class="p">.</span><span class="nx">focusin</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">mouseleave</span><span class="p">()</span>  <span class="p">.</span><span class="nx">click</span><span class="p">()</span>    <span class="p">.</span><span class="nx">scroll</span><span class="p">()</span>   <span class="p">.</span><span class="nx">submit</span><span class="p">()</span>    <span class="p">.</span><span class="nx">mouseup</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">mouseout</span><span class="p">()</span>    <span class="p">.</span><span class="nx">dblclick</span><span class="p">()</span> <span class="p">.</span><span class="nx">keydown</span><span class="p">()</span>  <span class="p">.</span><span class="nx">focusout</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">mouseover</span><span class="p">()</span>   <span class="p">.</span><span class="nx">focus</span><span class="p">()</span>    <span class="p">.</span><span class="nx">select</span><span class="p">()</span>
+<span class="c1">// e devem ser substitídos por
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#elemento'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'blur'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="p">...</span> <span class="p">})</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#elementoPai'</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">'#elemento'</span><span class="p">,</span> <span class="s1">'blur'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="p">...});</span>
+<span class="c1">// de prefrência o .delegate() que tem melhor performance
+// por fazer a seleção dentro de um escopo ( '#elementoPai' )
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#escopo'</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">'#elemento'</span><span class="p">,</span> <span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="p">...});</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <h3 class="doc-title-5">Evite muitos aninhamentos</h3>
+  <p>Facilite o entendimento e manutençao dos seus códigos. Utilize as práticas anteriores e evite um código do tipo:</p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></td><td class="code"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#botao'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+    <span class="na">type</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
+    <span class="na">url</span><span class="p">:</span> <span class="s1">'usuarios'</span><span class="p">,</span>
+    <span class="na">success</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s1">'resultado'</span><span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span><span class="s1">'fast'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span>
+          <span class="na">heigth</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="na">opacity</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span> <span class="mi">300</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span>
+              <span class="na">heigth</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+              <span class="na">opacity</span><span class="p">:</span> <span class="mi">1</span>
+            <span class="p">},</span> <span class="mi">300</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+              <span class="c1">// ...
+</span>            <span class="p">})</span>
+          <span class="p">}</span>
+        <span class="p">)</span>
+      <span class="p">})</span>
+    <span class="p">},</span>
+    <span class="na">error</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">mensageErro</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table>
+</div>
+
+
+  <h3 class="doc-title-5">Otimize loops</h3>
+  <p>Existem várias maneiras de fazer loops, uma melhores que outras. Hoje, comum encontrar códigos usando loops do jquery ($.each) onde loops nativos poderiam resolver. Uma técnica simples para melhorar ainda mais os loops for() nativos é fazer cache de variáveis de comparação, evitando executar o .length a cada iteração.</p>
+  <p>Exemplo:</p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td><td class="code"><pre><span class="c1">// Use
+</span><span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Azul'</span><span class="p">,</span> <span class="s1">'verde'</span><span class="p">,</span> <span class="s1">'rosa'</span><span class="p">,</span> <span class="s1">'vermelho'</span><span class="p">];</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nx">quantCores</span><span class="o">=</span><span class="nx">cores</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">count</span> <span class="o">&lt;</span> <span class="nx">quantCores</span><span class="p">;</span> <span class="nx">count</span><span class="o">++</span><span class="p">){</span> <span class="c1">//
+</span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">cores</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// em vez de
+</span><span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Azul'</span><span class="p">,</span> <span class="s1">'verde'</span><span class="p">,</span> <span class="s1">'rosa'</span><span class="p">,</span> <span class="s1">'vermelho'</span><span class="p">];</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">cores</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">count</span><span class="o">++</span><span class="p">){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">cores</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+  <p>Para comparação, um teste de performance no <a href="http://jsperf.com/loops/111" target="_blank">jsperf</a> analisando diversos tipos de loop. O loop otimizado, como acima, executou 159k vezes, contra 113k vezes do tradicional.</p>
+
+  <h3 class="doc-title-5">Minimize acessos ao DOM</h3>
+  <p>Evite ao máximo acessar o DOM para buscar ou inserir informações. É lento e não se pode confiar no que está no DOM. Coisas simples podem minimizar o acesso, por exemplo, se alguma função precisa atualizar uma tabela no seu HTML, em vez de percorrer <td> por <td> alterando os valores, pode ser mais eficiente criar uma função que reescreva toda a tabela, e depois simplesmente troque a antiga pela nova. Outra simples é fazer cache de objetos jQuery, por exemplo:</p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></td><td class="code"><pre><span class="c1">// Em vez de
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#botaoEnviar'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span> <span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span> <span class="s1">'disabled'</span><span class="p">,</span> <span class="kc">true</span> <span class="p">);</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'$formulario'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span> <span class="s1">'enviando'</span> <span class="p">);</span>
+  <span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span> <span class="s1">'ajax/contato'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'$formulario'</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span> <span class="s1">'enviando'</span> <span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#botaoEnviar'</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span> <span class="s1">'disabled'</span><span class="p">,</span> <span class="kc">false</span> <span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="c1">// Faça
+</span><span class="kd">var</span> <span class="nx">$botaoEnviar</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#botaoEnviar'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">$formulario</span>  <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">$mensagem</span>    <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">);</span>
+
+<span class="nx">$botaoEnviar</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">$botaoEnviar</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span> <span class="s1">'disabled'</span><span class="p">,</span> <span class="kc">true</span> <span class="p">);</span>
+  <span class="nx">$formulario</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span> <span class="s1">'enviando'</span> <span class="p">);</span>
+  <span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'ajax/contato'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$mensagem</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">);</span>
+    <span class="nx">$formulario</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span> <span class="s1">'enviando'</span> <span class="p">);</span>
+    <span class="nx">$botaoEnviar</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span> <span class="s1">'disabled'</span><span class="p">,</span> <span class="kc">false</span> <span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table>
+</div>
+
+
+  <h3 class="doc-title-5">Adicione funcionalidades com javascript, não conteúdo</h3>
+  <p>Se sua aplicação precisa criar e inserir muito HTML, códigos estão cheios de 'divs', 'tds', etc, analise e repense sua aplicação, veja se não é o caso de usar algum sistema de templates ( handlebars... ). São códigos dificeis de manter, que podem ter problemas de desempenho. Caso precise, use templates separados do JS, ou carregue HTML do back-end com AJAX.</p>
+
+  <h3 class="doc-title-5">Não reinvente a roda</h3>
+  <p>Use bibliotecas e frameworks estáveis, que possuem estrutura conhecida.</p>
+  <p>Antes de inserir libraries e plugins, verifique a real necessidade, o suporte e compatibilidade.</p>
+
+  <h3 class="doc-title-5">Código de desenvolvimento não é código de produção</h3>
+  <p>Compacte, remova comentários, concatene os javascripts antes de mandar para produção. Existem diversas ferramentas para isso, inclusive online. Tenha uma versão de desenvolvimento, normal, comentada e uma para o site em produção.</p>
+
+</section>
+
+  </div>
+</div>
+
+<footer class="doc-footer">
+  <div class="container">
+   <ul class="doc-social-link">
+      <!-- <li> <a href="" class="doc-social-facebook">facebook</a> </li> -->
+      <li> <a target="_blank" class="doc-social-twitter" href="http://twitter.com/locawebdevnet">twitter</a> </li>
+    </ul>
+    <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/revenda/assets/images/docs/locaweb-logo.png" alt=""></a>
+    <p class="doc-copyright">
+      Copyright © 1997-2014 Serviços de Internet S/A.
+    </p>
+  </div>
+</footer>
+
+<script src="../../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script><script src="../../../assets/javascripts/locastyle.js" type="text/javascript"></script><script src="../../../assets/javascripts/docs.js" type="text/javascript"></script>
+
+</body>
+</html>
+
