@@ -18,9 +18,9 @@
     background: #fff
 
     a
-      padding: 10px 15px
+      padding: 8px 20px
       display: block
-      color: $gray4
+      color: $gray5
       line-height: 1
       text-align: left
       white-space: nowrap
@@ -29,23 +29,13 @@
       &:focus
         background: $gray1
 
-      &.ls-color-danger
+      &.ls-divider
         border-top: 1px solid $gray2
         padding-top: 10px
 
         &:hover,
         &:focus
           color: #fff !important
-
-  & + .ls-tabs-container
-    top: 0
-    margin-top: 5px
-
-
-    &:hover,
-    &:focus
-      background-color: #fff
-
 
   &.ls-active .ls-dropdown-nav
     display: block
@@ -88,6 +78,28 @@
   &.ls-pos-right ul
     left: auto
     right: 0
+
+  &.ls-dropdown-tabs
+    z-index: 2
+
+    [class*="ls-btn"]
+      border-radius: $radiusDefault $radiusDefault 0 0
+      border-bottom: 1px solid #fff
+      padding: 15px 12px 12px
+      line-height: 1
+      font-size: .875rem
+
+      &:hover,
+      &:focus
+        background-color: rgba($gray1,.2)
+
+      &:after
+        margin-left: 6px
+
+    .ls-dropdown-nav
+      border-radius: 0 0 $radiusDefault $radiusDefault
+      border-color: $gray2
+      margin-top: -1px
 
 // Tratando diferença na setinha dos botões dropdown
 [class*="ls-btn-"]
