@@ -85,8 +85,6 @@
       &.ls-disabled:focus
         background-color: $color3
 
-
-
     //
     // Collpase
     //
@@ -191,15 +189,10 @@
     //
     .ls-tabs-nav:not(.in-dropdown)
       li
-        background-color: $color3
+        background-color: rgba($color4,0.7)
 
         &:hover
           background-color: $color4
-
-        &.ls-active
-
-          a
-            color: $color3
 
         &.ls-active
           background-color: #fff
@@ -230,11 +223,11 @@
     //
     // Dropdown
     //
-    .ls-dropdown ul a
+    [class*="ls-dropdown"] ul a
 
       &:hover,
       &:focus
-        background-color: $color3
+        background-color: $color4
         color: #fff
 
     //
