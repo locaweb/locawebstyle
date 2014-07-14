@@ -213,3 +213,50 @@
   .ls-sidebar .ls-user-account + .ls-ico-user + .ls-menu,
   .ls-sidebar .ls-user-account + .ls-menu
     margin-top: $heightTopbar
+
+
+@media (max-width: 1024px) and (min-width: $screen-sm)
+  .ls-sidebar
+    width: 60px
+    z-index: 12
+    overflow: hidden
+    +single-transition(width, .2s, ease-in-out)
+
+    .ls-menu
+      width: $sidebarWidth
+
+    .ls-menu ul ul,
+    .ls-menu .ls-submenu.ls-active ul
+      opacity: 0
+      height: 0
+      overflow: hidden
+      +single-transition(opacity, .2s, ease-in-out)
+      border: none
+
+    .ls-menu .ls-submenu.ls-active
+
+      a
+        background-color: rgba($gray4,.5)
+
+        &:hover,
+        &:focus
+          padding-left: 65px
+
+
+    .ls-area-account
+      overflow: hidden
+      width: $sidebarWidth
+      height: 70px
+      +single-transition(height, .4s)
+
+    &:hover
+      width: $sidebarWidth
+
+      .ls-menu ul ul,
+      .ls-menu .ls-submenu.ls-active ul,
+        opacity: 1
+        height: auto
+        border-top: 1px solid $gray4
+
+      .ls-area-account
+        height: auto
