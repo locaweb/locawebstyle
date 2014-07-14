@@ -1,5 +1,7 @@
 <div class="ls-modal fade opened ls-modal-template <%= this.lsModule %> ">
-  <form action="<%= @action %>" method="post">
+  <% if @actionType != 'link': %>
+    <form action="<%= @action %>" method="post">
+  <% end %>
     <div class="ls-modal-box">
       <div class="ls-modal-header">
         <button type="button" data-dismiss="modal" class="close">&times;</button>
@@ -12,9 +14,16 @@
         <button class="ls-btn ls-float-right" data-dismiss="modal">
           <%= @close %>
         </button>
-        <button <%= @customAttrs %> type="submit" class=" ls-btn <%= @class %>"><%= @save %></button>
+        <% if @actionType != 'link': %>
+          <button <%= @customAttrs %> type="submit" class=" ls-btn <%= @class %>"><%= @save %></button>
+        <% else: %>
+          <a href="<%= @action %>" <%= @customAttrs %> class=" ls-btn <%= @class %>"><%= @save %></a>
+        <% end %>
       </div>
     </div>
   </form>
+  <% if @actionType != 'link': %>
+    <form action="<%= @action %>" method="post">
+  <% end %>
   <div class="ls-modal-overlay"></div>
 </div>
