@@ -7,8 +7,10 @@ type: component
 <%= partial 'partials/doc-menu-components'%>
 
 <section class="col-md-9">
-
   <%= partial 'partials/doc-intro-content' %>
+
+  <h3 class="ls-title-4">Criando modal</h3>
+  <p>Você precisa passar no <code>data-target</code> o ID da modal.</p>
   <table class="ls-table">
     <thead>
       <tr>
@@ -23,15 +25,31 @@ type: component
         <td>target</td>
         <td>#myTarget</td>
         <td>--</td>
-        <td>Abre a modal com o mesmo nome do target</td>
+        <td>
+          <p>Abre a modal com o mesmo nome do target</p>
+        </td>
       </tr>
+    </tbody>
+  </table>
+
+  <h3 class="ls-title-4">Criando modal via template</h3>
+  <p>Para criar uma modal via template, você não precisa passar o <code>data-target</code>, somente os atributos abaixo.</p>
+  <table class="ls-table ls-table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Padrão</th>
+        <th class="ls-width-500">Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>content</td>
         <td>um texto curto</td>
         <td>--</td>
         <td>
-          Abre a modal com o texto inserido
-          <p>Só funciona se não houver <strong>data-target</strong></p>
+          <p>Abre a modal com o texto inserido</p>
         </td>
       </tr>
       <tr>
@@ -39,8 +57,7 @@ type: component
         <td>um titulo curto</td>
         <td>--</td>
         <td>
-          Abre a modal com o titulo inserido
-          <p>Só funciona se não houver <strong>data-target</strong></p>
+          <p>Abre a modal com o titulo inserido</p>
         </td>
       </tr>
       <tr>
@@ -48,8 +65,7 @@ type: component
         <td>texto</td>
         <td>--</td>
         <td>
-          Coloca um texto no botão de salvar
-          <p>Só funciona se não houver <strong>data-target</strong></p>
+          <p>Coloca um texto no botão de salvar</p>
         </td>
       </tr>
       <tr>
@@ -57,8 +73,7 @@ type: component
         <td>texto</td>
         <td>--</td>
         <td>
-          Coloca um texto no botão de fechar
-          <p>Só funciona se não houver <strong>data-target</strong></p>
+          <p>Coloca um texto no botão de fechar</p>
         </td>
       </tr>
       <tr>
@@ -66,8 +81,7 @@ type: component
         <td>link</td>
         <td>--</td>
         <td>
-          Coloca um link no botão de salvar
-          <p>Só funciona se não houver <strong>data-target</strong></p>
+          <p>Coloca um link no botão de salvar</p>
         </td>
       </tr>
       <tr>
@@ -75,8 +89,7 @@ type: component
         <td>texto</td>
         <td>--</td>
         <td>
-          Coloca uma classe no botão de salvar
-          <p>Só funciona se não houver <strong>data-target</strong></p>
+          <p>Coloca uma classe no botão de salvar</p>
         </td>
       </tr>
       <tr>
@@ -84,8 +97,16 @@ type: component
         <td>texto</td>
         <td>--</td>
         <td>
-          Adiciona qualquer novo atributo no botão(type='button')
-          <p>Só funciona se não houver <strong>data-target</strong></p>
+          <p>Adiciona qualquer novo atributo no <code>botão(type='button')</code> ou no <code>link</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td>data-action-type</td>
+        <td>link/form</td>
+        <td>--</td>
+        <td>
+          <p>Se for <code>link</code> não é adicionado form nem button de submit, caso contrário
+          terá um <code>form</code> e o submit será um button.</p>
         </td>
       </tr>
     </tbody>
