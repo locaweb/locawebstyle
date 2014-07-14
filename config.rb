@@ -108,5 +108,5 @@ configure :build do
   #set :base_url, "/locastyle/build"
 
   # base url for gh-pages
-  set :base_url, "/locawebstyle"
+  set :base_url, "/locawebstyle/"
 end
