@@ -67,7 +67,7 @@ end
 require "helpers/custom_helpers"
 helpers CustomHelpers
 
-set :base_url, ""
+set :base_url, "/"
 
 set :stable, "3.0.0"
 
@@ -108,5 +108,5 @@ configure :build do
   #set :base_url, "/locastyle/build"
 
   # base url for gh-pages
-  set :base_url, "/locawebstyle"
+  set :base_url, "/locawebstyle/"
 end

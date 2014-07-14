@@ -23,7 +23,7 @@ layout: changelog
         <%= article.date.strftime('%d/%m/%Y') %>
       </h2>
       <%= article.body %>
-      <a href="<%= "#{base_url}/changelog/#{article.date.strftime('%Y/%m/%d')}/#{article.slug}" %>" class="ls-btn">
+      <a href="<%= "#{base_url}changelog/#{article.date.strftime('%Y/%m/%d')}/#{article.slug}" %>" class="ls-btn">
         ver mais
       </a>
     </article>
