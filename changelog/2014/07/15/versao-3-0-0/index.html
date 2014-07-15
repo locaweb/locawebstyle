@@ -84,7 +84,7 @@
 
 <h3 class="doc-title-3">Bye bye Bootstrap</h3>
 <p>Retiramos o <a href="http://getbootstrap.com">Bootstrap</a> nessa nova versão. Isso garantiu a perda do peso do Locaweb Style, ficando mais leve e muito mais controlável. Agora desenvolvemos apenas o que iremos precisar, prevenindo a criação de código legado e não usado.</p>
-<p>Mas não fique triste. Nós amamos o Bootstrap. Nós escolhemos ele como a base das nossas primeiras versões porque ele era o mais completo. Mas tínhamos um problema sério: o design do Bootstrap não era o mesmo design que usamos em nossos painéis. Isso causava a necessidade de reconstruir a interface da maioria dos elementos do Bootstrap, reescrevendo CSS e algumas vezes estendendo funções JavaScript. O pensamento que tivemos foi: já que estamos praticamente recriando cada elemento, por que não fazermos do zero?</p>
+<p>Mas não fique triste. Nós amamos o Bootstrap. Nós escolhemos ele como a base das nossas primeiras versões porque ele era o mais completo. Marketings tínhamos um problema sério: o design do Bootstrap não era o mesmo design que usamos em nossos painéis. Isso causava a necessidade de reconstruir a interface da maioria dos elementos do Bootstrap, reescrevendo CSS e algumas vezes estendendo funções JavaScript. O pensamento que tivemos foi: já que estamos praticamente recriando cada elemento, por que não fazermos do zero?</p>
 <p>Foi aí que a decisão de retirar o Bootstrap fez sentido. Com essa decisão, também nos livramos da dependência das atualizações do Bootstrap. Já tivemos problemas com a mudança do markup em novas verões do Bootstrap. Essa dependência nunca foi boa e para nós é muito custoso.</p>
 <p>A única coisa que mantivemos do Bootstrap foi o Grid. Não valia a pena fazermos um novo Grid (acredite, houveram muitas discussões na equipe pra que isso acontecesse) para ter as mesmas características e possibilidades do Grid do Booststrap, por isso, ele ainda está no core do Locaweb Style.</p>
 
@@ -105,7 +105,7 @@
 <h3 class="doc-title-3">Poucas dependências</h3>
 <p>A única dependência do Locaweb Style é a utilização da jQuery.</p>
 <p>Retiramos a dependência do Bootstrap para ganharmos mais liberdade de criação e desenvolvimento. Retiramos o Modernizr porque não estávamos usando para absolutamente nada. Retiramos o jQuery Validator.</p>
-<p>Agora você usa o Modernizr se precisar. Usa o plugin de validação de formulários que quiser. Não há mais a necessidade de se preocupar com as dependências. Apenas a jQuery, que você baixa a versão que achar melhor.</p>
+<p>Agora você usa o Modernizr se precisar. Usa o plugin de validação de formulários que quiser. Não há mais a necessidade de se preocupar com as dependências. Apenas a jQuery, que recomendamos o uso da versão <strong>1.10</strong>.</p>
 
 <h3 class="doc-title-3">Prefixos em IDs e classes</h3>
 <p>Notamos que ao integrar o Locaweb Style em projetos que já continham algum código CSS, acontecia de haver conflitos com nomes de classes e estilos. Por isso adotamos a boa prática de inserir um prefixo em todos os nomes usados no Locaweb Style. O nosso prefixo agora é o <strong>ls-</strong>. Por isso, se você ver qualquer classe, ID, atributos data que tem um <strong>ls-</strong> saiba que é do Locaweb Style. Assim você fica livre para criar suas próprias classes e a integração do nosso framework em seu projeto será bastante tranquila.</p>
@@ -124,7 +124,7 @@
 <p>Claro, isso tudo não seria valioso se o usuário não tivesse vantagens. Aqui vão algumas dessas vantagens:</p>
 
 <h4 class="doc-title-5">Consistência entre os dispositivos</h4>
-<p>Desde a primeira versão não tinha nenhum princípio adaptivos nenhum, dificultado o uso em qualquer outro dispositivo que não fosse um desktop.</p>
+<p>Nenhuma das versões antigas do Locaweb Style era totalmente responsiva, dificultando o uso em qualquer outro dispositivo que não fosse um desktop.</p>
 <p>Na versão <strong>Barbecue</strong> todas as interações, fluxos de navegação (tanto na tela quanto entre as páginas) e os comportamentos da interface, são similares em todos os dispositivos acessados. A interface e seus módulos são adaptativos, melhorando as experiências para cada dispositivo quando necessário.</p>
 
 <h4 class="doc-title-5">Maior priorização de conteúdo</h4>
