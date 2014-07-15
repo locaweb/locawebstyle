@@ -4,31 +4,51 @@ date: 2014-06-27 13:40 UTC
 tags:
 layout: changelog-single
 ---
-
-<ul class="ls-no-list-style ls-no-margin-left">
-  <li>
-    <div class="ls-txt-right ls-clear-both col-md-2">
-      <label class="ls-tag-success">NEW</label>
-    </div> &ndash; Novidade
-  </li>
-  <li>
-    <div class="ls-txt-right ls-clear-both col-md-2">
-      <label class="ls-tag-danger">BUG</label>
-    </div> &ndash; <a href="" class="commit-url">156161</a> Bug
-  </li>
-  <li>
-    <div class="ls-txt-right ls-clear-both col-md-2">
-      <label class="ls-tag-info">FIX</label>
-    </div> &ndash; <a href="" class="commit-url">156161</a> Melhorias
-  </li>
-  <li>
-    <div class="ls-txt-right ls-clear-both col-md-2">
-      <label class="ls-tag-warning">DEPRECATED</label>
-    </div> &ndash; Antigo
-  </li>
-  <li>
-    <div class="ls-txt-right ls-clear-both col-md-2">
-      <label class="ls-tag">REMOVED</label>
-    </div> &ndash; Removido
-  </li>
-</ul>
+<p>Hoje nós lançamos a versão 3.0.0 do Locaweb Style. É um release gigante, com uma série de modificações e 3 meses de trabalho. É a maior mudança do framework até agora e temos muitas novidades. Foram mais de 2170 commits na versão que apelidamos carinhosamente de <strong>Barbecue</strong>.</p>
+<h3 class="doc-title-3">Bye bye Bootstrap</h3>
+<p>Retiramos o <a href="http://getbootstrap.com">Bootstrap</a> nessa nova versão. Isso garantiu a perda do peso do Locaweb Style, ficando mais leve e muito mais controlável. Agora desenvolvemos apenas o que iremos precisar, prevenindo a criação de código legado e não usado.</p>
+<p>Mas não fique triste. Nós amamos o Bootstrap. Nós escolhemos ele como a base das nossas primeiras versões porque o amamos de paixão. Mas tínhamos um problema sério: o design do Bootstrap não era o mesmo design que usamos em nossos painéis. Isso causava a necessidade de reconstruir a interface da maioria dos elementos do Bootstrap, reescrevendo CSS e algumas vezes estendendo funções JavaScript. O pensamento que tivemos foi: já que estamos praticamente recriando cada elemento, por que não fazermos do zero?</p>
+<p>Foi aí que a decisão de retirar o Bootstrap fez sentido. Com essa decisão, também nos livramos da dependência das atualizações do Bootstrap. Já tivemos problemas com a mudança do markup em novas verões do Bootstrap. Essa dependência nunca foi boa e para nós é muito custoso.</p>
+<p>A única coisa que mantivemos do Bootstrap foi o Grid. Não valia a pena fazermos um novo Grid (acredite, houve discussões acaloradas na equipe pra que isso acontecesse) para ter as mesmas características e possibilidades do Grid do Booststrap, por isso, ele ainda está no core do Locaweb Style.</p>
+<h3 class="doc-title-3">JavaScript mais modular</h3>
+<p>Todo o JavaScript e o CSS agora são realmente modulares. Isto é, cada componente criado é um componente independente e seu comportamento pode ser iniciado isoladamente. Isso facilita a manutenção e a detecção de problemas.</p>
+<p>Outra vantagem é que dessa forma nossas funções ficaram mais performáticas. Funciona assim: o nosso inicializador detecta os módulos na tela e inicializa apenas os módulos usados ali. Simple like that.</p>
+<h3 class="doc-title-3">Mobile First</h3>
+<p>Todos os componentes e comportamentos do Locaweb Style são planejados primeiro em telas menores para as maiores, priorizando as ações e os conteúdos importantes e a partir daí adaptando para as telas maiores.</p>
+<p>A ideia do Mobile First é atraente. O que ninguém fala é que o processo de criação e de produção muda totalmente. Foi uma quebra de paradigma para a equipe de UX e Front-End que trabalharam no Locaweb Style.</p>
+<p>É claro que há momentos que precisamos ceder. Existem sistemas complexos, como o nosso produto de Email Marketing, onde o usuário pode criar e customizar templates de email. Essa tarefa é melhor executada a partir de um desktop, com um monitor que tenha espaço suficiente para trabalhar. Por isso, não vamos disponibilizar tarefas complexas, que talvez frustaria o usuário em vez de ajudá-lo.</p>
+<p>A ideia é que o usuário não tenha que aprender a usar a interface dependendo do dispositivo ou da tela que ele está utilizando. Um dos princípios que usamos é que o usuário precisa executar todas as tarefas ou pelo menos 99% em qualquer dispositivo. Para isso, precisamos adaptar todos os componentes para que a experiência do usuário seja o mais uniforme possível entre as plataformas. Foi isso que fizemos e estamos fazendo com o Locaweb Style Barbecue.</p>
+<h3 class="doc-title-3">Elementos Adaptativos</h3>
+<p>Alguns módulos de interface podem se adaptar dependendo do dispositivo e do tamanho da tela. Comportamentos também são padronizados para garantir maior uniformidade entre dispositivos.</p>
+<p>Adaptar interfaces é algo muito difícil de fazer. O Responsive Web Design faz um bom trabalho quando se trata de adaptar a estrutura do layout para os vários tamanhos de tela. Mas o Responsive é pouco eficaz quando se trata de adaptação de componentes. Alguns componentes precisam ser "transformados" dependendo do contexto. Fizemos isso com alguns elementos de forma automática, sem prejudicar a performance da página e sempre mirando na boa experiência do usuário. Logo, o usuário terá todos os botões, todo o conteúdo, toda experiência do produto em qualquer dispositivo que usar.</p>
+<h3 class="doc-title-3">Poucas dependências</h3>
+<p>A única dependência do Locaweb Style é a utilização da jQuery.</p>
+<p>Retiramos a dependência do Bootstrap para ganharmos mais liberdade de criação e desenvolvimento. Retiramos o Modernizr porque não estávamos usando para absolutamente nada. Retiramos o jQuery Validator.</p>
+<p>Agora você usa o Modernizr se precisar. Usa o plugin de validação de formulários que quiser. Não há mais a necessidade de se preocupar com as dependências. Apenas a jQuery, que você baixa a versão que achar melhor.</p>
+<h3 class="doc-title-3">Prefixos em IDs e classes</h3>
+<p>Notamos que ao integrar o Locaweb Style em projetos que já continham algum código CSS, acontecia de haver conflitos com nomes de classes e estilos. Por isso adotamos a boa prática de inserir um prefixo em todos os nomes usados no Locaweb Style. O nosso prefixo agora é o <strong>ls-</strong>. Por isso, se você ver qualquer classe, ID, atributos data que tem um <strong>ls-</strong> saiba que é do Locaweb Style. Assim você fica livre para criar suas próprias classes e a integração do nosso framework em seu projeto será bastante tranquila.</p>
+<h3 class="doc-title-3">Atomic Design</h3>
+<p>Além do Mobile First, a interface inteira do Locaweb Style é produzida tendo em mente a ideia do Design Atômico, onde cada componente é um <strong>átomo</strong>, que quando integrados formam <strong>moléculas</strong>, depois <strong>organismos</strong> que formam <strong>templates</strong> e por fim as <strong>páginas</strong>. A vantagem disso é que cada átomo pode ser atualizado de forma independente, assim qualquer outro componente não é afetado diretamente.</p>
+<h3 class="doc-title-3">Frequencia de atualizações</h3>
+<p>Semanalmente atualizamos o Locaweb Style, com pequenas atualizações de features e resolução de bugs. A ideia é sempre facilitar o uso por designers e desenvolvedores back-end. Se você quiser atualizar toda semana, fique à vontade, é o nosso recomendado.</p>
+<p>Nós adotamos o versionamento no padrão do <a href="http://semver.org">SemVer</a>, logo você consegue prever quando há uma atualização pequena ou grande.</p>
+<h3 class="doc-title-3">Download via BOWER</h3>
+<p>Inserimos o Locaweb Style no <a href="http://bower.io">Bower</a>, que é um gerenciador de dependências front-end criado pelo Twitter e que é usado no mundo todo.</p>
+<h2 class="doc-title-2">Vantagens para o usuário</h2>
+<p>Claro, isso tudo não seria valioso se o usuário não tivesse vantagens. Aqui vão algumas dessas vantagens:</p>
+<h3 class="doc-title-3">Consistência entre os dispositivos</h3>
+<p>Desde a primeira versão não tinha nenhum princípio adaptivos nenhum, dificultado o uso em qualquer outro dispositivo que não fosse um desktop.</p>
+<p>Na versão <strong>Barbecue</strong> todas as interações, fluxos de navegação (tanto na tela quanto entre as páginas) e os comportamentos da interface, são similares em todos os dispositivos acessados. A interface e seus módulos são adaptativos, melhorando as experiências para cada dispositivo quando necessário.</p>
+<h4>Maior priorização de conteúdo</h4>
+<p>Por causa da mudança total do design, adequando toda a interface para um layout mais moderno e agradável, o usuário ganhou uma área muito maior para interagir com o painel do produto. O conteúdo abrange toda a tela do usuário, mantendo a experiência de uso muito mais confortável.</p>
+<p>O problema da versão antiga do Locaweb Style era a limitação de espaço, tanto na horizontal quanto na vertical. Já estávamos sofrendo aqui na Locaweb, em alguns painéis, por não termos espaço para incluir mais uma opção no menu.</p>
+<p>Por causa da limitação de largura, nós empilhávamos muitos elementos, sofrendo com a diagramação da página.</p>
+<h4>Conteúdo bem pensado</h4>
+<p>O conteúdo foi planejado para ter uma linguagem clara e direta, facilitando o entendimento do usuário independente do dispositivo usado.</p>
+<p>Não há textos gigantes, nem instruções infinitas. Todo o conteúdo é pensado para que seja lido facilmente em qualquer dispositivo.</p>
+<h4>Navegação clara e concisa</h4>
+<p>Com essa remodelação de design e princípios de uso, os painéis foram modificados para que o fluxo de uso seja mais linear. Anteriormente as páginas guardavam muitas informações agrupadas e empilhadas em elementos como collapses e listagens. Agora, com a barra lateral, é possível linkar páginas diretamente, sem a necessidade de páginas pedágio ou empilhamento de informações.</p>
+<h4>Maior flexibilidade para evolução dos produtos</h4>
+<p>Com a versão anterior do Locaweb Style, o menu tinha uma limitação de espaço por ser um menu horizontal. Em alguns produtos não havia a possibilidade de adicionar mais opções no menu por causa dessa limitação. Havia também outro problema com a exibição das informações. Com a largura da área do produto limitada, havia o problema de empilhar informações e agrupá-los para que a página não ficasse muito longa.</p>
+<h3 class="doc-title-3">Performance</h3>
+<p>80% da performance de um produto ou website é de responsabilidade do front-end. Toda a interface do Locaweb Style foi feita para uma melhora de performance contínua nos navegadores para desktop ou de outros dispositivos.</p>
