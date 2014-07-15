@@ -74,5 +74,6 @@ $(window).load(function() {
   lsdocs.init();
   cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
     $('html').addClass('ls-show-barbecue');
+    $('.doc-highlight').prepend('<video autoplay loop id="bgvid"><source src="http://tableless.com.br/coisas/porkbbq3.mp4" type="video/mp4"></video>');
   });
 });
