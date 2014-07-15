@@ -7,7 +7,7 @@ Você pode usar o Locaweb Style de várias formas: direto pelo nosso servidor, v
 ### Documentação completa
 Matemos a [documentação completa dos componentes e como eles funcionam aqui](http://locaweb.github.io/locawebstyle/documentacao/introducao/). Se você usar o Chrome, [baixe nossa extensão](http://locaweb.github.io/locawebstyle/documentacao/introducao/chrome/) para facilitar o acesso à documentação.
 
-### Quer contribuir
+### Quer contribuir?
 Para contribuir é bico. Faça um fork do projeto aqui mesmo no GitHub e comece a codar! ;-)
 Existem algumas instruções para mantermos o código legível e organizado. [Leia essas instruções aqui](http://locaweb.github.io/locawebstyle/documentacao/introducao/contribua/).
 
