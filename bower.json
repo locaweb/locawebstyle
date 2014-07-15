@@ -1,0 +1,41 @@
+{
+  "name": "locawebstyle",
+  "version": "3.0.0",
+  "homepage": "http://locaweb.github.io/locawebstyle/",
+  "authors": [
+    "Locaweb <frontend@locaweb.com.br>"
+  ],
+  "description": "Front-end framework used by Locaweb",
+  "main": [
+     "dist/stylesheets/locastyle.css",
+     "dist/stylesheets/fonts/locastyle.eot",
+     "dist/stylesheets/fonts/locastyle.svg",
+     "dist/stylesheets/fonts/locastyle.ttf",
+     "dist/stylesheets/fonts/locastyle.woff",
+     "dist/javascripts/locastyle.js"
+  ],
+  "keywords": [
+    "framework",
+    "components",
+    "css",
+    "responsive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "/build",
+    "/helpers",
+    "/locales",
+    "/scripts",
+    "/source",
+    "/spec",
+    "config.rb",
+    "Gemfile",
+    "Gemfile.lock",
+    "Rakefile",
+    "readme.md"
+  ],
+  "dependencies": {
+    "jquery": ">= 2.1.0"
+  }
+}
