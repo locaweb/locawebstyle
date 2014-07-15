@@ -298,22 +298,38 @@ p code
 .doc-social
   text-align: center
 
+.githubbtn
+  display: inline-block
+  vertical-align: middle
+
 .addthis_toolbox
   display: inline-block
   text-align: center
 
-  a, iframe
-    vertical-align: middle
-    float: none !important
-    padding: 0
+  // a, iframe
+  //   vertical-align: middle
+  //   float: none !important
+  //   padding: 0
+  //   display: inline-block !important
+  //   margin-bottom: 15px
+
+  //   &.addthis_button_tweet
+  //     margin-bottom: 0
+
+  // a.addthis_button_tweet.at300b
+  //   width: 90px
+
+.addthis_native_toolbox
+  display: inline-block
+  vertical-align: middle
+  padding-right: 10px
+
+  iframe
+    width: 95px !important
+
+  a
     display: inline-block !important
-    margin-bottom: 15px
-
-    &.addthis_button_tweet
-      margin-bottom: 0
-
-  a.addthis_button_tweet.at300b
-    width: 90px
+    padding-right: 15px !important
 
 //
 // SECTIONS OF HOME
@@ -695,3 +711,4 @@ p code
   .doc-highlight
     position: relative
     overflow: hidden
+
