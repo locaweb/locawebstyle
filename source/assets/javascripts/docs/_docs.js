@@ -72,4 +72,7 @@ var lsdocs = (function() {
 
 $(window).load(function() {
   lsdocs.init();
+  cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
+    $('html').addClass('ls-show-barbecue');
+  });
 });
