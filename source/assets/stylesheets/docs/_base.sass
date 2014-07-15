@@ -432,29 +432,25 @@ p code
     background-color: #fff
     box-shadow: inset 0px 2px 16px #ccc
 
-    .sandwich,
-    .sandwich:before,
-    .sandwich:after
-      background: #000
+    .sandwich
+
+      &:after
+        background-color: #000
+        box-shadow: 0 6px 0 #000, 0 12px 0 #000
 
     ul
       display: block
 
-  .sandwich,
-  .sandwich:before,
-  .sandwich:after
-    content: ""
-    width: 16px
-    height: 3px
-    background-color: white
-    display: block
-    margin: 12px auto 0
-    position: relative
+  .sandwich
 
-  .sandwich:before,
-  .sandwich:after
-    margin-top: 3px
-    top: 6px
+    &:after
+      content: ""
+      width: 16px
+      height: 3px
+      background-color: #fff
+      display: block
+      margin: 12px auto 0
+      box-shadow: 0 6px 0 #fff, 0 12px 0 #fff
 
   ul
     display: none
@@ -492,10 +488,11 @@ p code
     position: relative
     top: 0
 
-    .sandwich,
-    .sandwich:before,
-    .sandwich:after
-      background-color: #222
+    .sandwich
+
+      &:after
+        background-color: #000
+        box-shadow: 0 6px 0 #000, 0 12px 0 #000
 
 //
 // EXAMPLES
