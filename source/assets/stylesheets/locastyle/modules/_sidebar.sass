@@ -1,5 +1,5 @@
 .ls-sidebar
-  +single-transition(all, .5s)
+  +single-transition(transform, .5s)
   +translate(-50%, 0)
   background: #222
   width: $sidebarWidth
@@ -189,7 +189,6 @@
       color: #fff
       font-size: 4.5rem
 
-
 @media (min-width: $screen-sm)
   .ls-sidebar
     +transform(none)
@@ -213,3 +212,75 @@
   .ls-sidebar .ls-user-account + .ls-ico-user + .ls-menu,
   .ls-sidebar .ls-user-account + .ls-menu
     margin-top: $heightTopbar
+
+// Micro menu in middle screen, tablets and 1024 resolution
+@media (min-width: $screen-sm) and (max-width: $screen-lg)
+  .ls-sidebar
+    width: 60px
+    overflow: hidden
+    +single-transition(width, .2s, ease-in-out)
+    z-index: 12
+
+    .ls-brand-name
+      width: $sidebarWidth
+      padding: 16px
+      text-align: left
+      +single-transition(padding, .2s)
+
+      a
+        display: none
+
+      &:before
+        font-size: inherit
+
+    .ls-menu
+      width: $sidebarWidth
+
+      ul ul,
+      .ls-submenu.ls-active ul
+        opacity: 0
+        height: 0
+        overflow: hidden
+        +single-transition(opacity, .2s, ease-in-out)
+        border: none
+
+      li.ls-active:not(.ls-submenu)
+
+        > a
+          border-left-color: transparent
+
+      .ls-submenu.ls-active a
+        background: none
+
+    .ls-area-account
+      overflow: hidden
+      width: $sidebarWidth
+      height: 70px
+      +single-transition(height, .4s)
+
+    &:hover
+      width: $sidebarWidth
+
+      .ls-brand-name
+        text-align: center
+        padding: 40px 20px
+
+        &:before
+          font-size: 4.5rem
+
+        a
+          display: block
+
+      .ls-menu
+
+        ul ul,
+        .ls-submenu.ls-active ul,
+          opacity: 1
+          height: auto
+          border-top: 1px solid $gray4
+
+        .ls-submenu.ls-active a
+          background-color: rgba($gray4,.5)
+
+      .ls-area-account
+        height: 100px
