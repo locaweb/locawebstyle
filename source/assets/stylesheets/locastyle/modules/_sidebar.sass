@@ -1,5 +1,5 @@
 .ls-sidebar
-  +single-transition(all, .5s)
+  +single-transition(transform, .5s)
   +translate(-50%, 0)
   background: #222
   width: $sidebarWidth
@@ -189,7 +189,6 @@
       color: #fff
       font-size: 4.5rem
 
-
 @media (min-width: $screen-sm)
   .ls-sidebar
     +transform(none)
@@ -214,19 +213,19 @@
   .ls-sidebar .ls-user-account + .ls-menu
     margin-top: $heightTopbar
 
-
+// Micro menu in middle screen, tablets and 1024 resolution
 @media (min-width: $screen-sm) and (max-width: $screen-lg)
   .ls-sidebar
     width: 60px
-    z-index: 12
     overflow: hidden
     +single-transition(width, .2s, ease-in-out)
+    z-index: 12
 
     .ls-brand-name
       width: $sidebarWidth
       padding: 16px
       text-align: left
-      +single-transition(padding, .3s)
+      +single-transition(padding, .2s)
 
       a
         display: none
@@ -253,8 +252,6 @@
       .ls-submenu.ls-active a
         background: none
 
-
-
     .ls-area-account
       overflow: hidden
       width: $sidebarWidth
@@ -275,6 +272,7 @@
           display: block
 
       .ls-menu
+
         ul ul,
         .ls-submenu.ls-active ul,
           opacity: 1
@@ -284,7 +282,5 @@
         .ls-submenu.ls-active a
           background-color: rgba($gray4,.5)
 
-
       .ls-area-account
         height: 100px
-        // min-height: 100px
