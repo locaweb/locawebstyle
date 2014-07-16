@@ -6,6 +6,6 @@ module CustomHelpers
   end
 
   def active_css(url)
-    'active' if current_page.url == (base_url + url)
+    'active' if (base_url + current_page.url) == (base_url + url)
   end
 end
