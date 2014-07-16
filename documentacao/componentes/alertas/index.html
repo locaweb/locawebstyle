@@ -30,8 +30,7 @@
   <span class="sandwich"></span>
   <ul>
     <li><a href="/locawebstyle">Home</a></li>
-    <li><a href="/locawebstyle/documentacao/introducao/">Use agora</a></li>
-    <li><a href="/locawebstyle/documentacao/praticas/">Documentação</a></li>
+    <li><a href="/locawebstyle/documentacao/introducao/">Documentação</a></li>
     <li><a href="/locawebstyle/changelog">Changelog</a></li>
     <li><a href="http://locaweb.github.io/locawebstyle-v1/">Documentação V1</a></li>
     <li><a href="http://locaweb.github.io/locawebstyle-v2/">Documentação V2</a></li>
@@ -69,7 +68,7 @@
   <nav class="doc-sidebar-menu">
     <ul>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/'>Abas</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/alertas/'>Alertas</a></li>
+      <li class='active'><a class='active' href='/locawebstyle/documentacao/componentes/alertas/'>Alertas</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/barra-de-progresso/'>Barra de Progresso</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/botao-switch/'>Botão Switch</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/botoes/'>Botões</a></li>
@@ -120,33 +119,34 @@
   <h2 class="doc-title-3">Fechando alertas</h2>
 
   <p>Basicamente, se você tiver alertas ou qualquer outro tipo de elemento que queira com que o usuário remova da tela, você vai usar essa função.</p>
+
   <div class="ls-box ls-box-gray">
     <h2 class="doc-title-4">Atenção</h2>
     <p>Nós não tratamos cookies ou qualquer solução back-end que previna o reaparecimento do elemento removido se o usuário der refresh na página. Você vai precisar fazer sua própria solução caso queira que o elemento não reapareça quando a página for atualizada.</p>
   </div>
 
-    <table class="ls-table">
-      <thead>
-        <tr>
-          <th>Seletor</th>
-          <th>Descrição</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>.ls-dismissable</td>
-          <td>É o elemento que será dispensado.</td>
-        </tr>
-        <tr>
-          <td>data-ls-module="dismiss"</td>
-          <td>É o nosso trigger. É ele que ativa o script. Precisa estar no elemento que irá ser clicado para remover o <code>.ls-dismissable</code>, por exemplo um link, botão etc...</td>
-        </tr>
-        <tr>
-          <td>data-target="#target-id"</td>
-          <td>Necessário quando o elemento que será o trigger não for filho direto de <code>.ls-dismissable</code>, que é o elemento que será removido. Ele aceita IDs ou CLASSES.</td>
-        </tr>
-      </tbody>
-    </table>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Seletor</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>.ls-dismissable</td>
+        <td>É o elemento que será dispensado.</td>
+      </tr>
+      <tr>
+        <td>data-ls-module="dismiss"</td>
+        <td>É o nosso trigger. É ele que ativa o script. Precisa estar no elemento que irá ser clicado para remover o <code>.ls-dismissable</code>, por exemplo um link, botão etc...</td>
+      </tr>
+      <tr>
+        <td>data-target="#target-id"</td>
+        <td>Necessário quando o elemento que será o trigger não for filho direto de <code>.ls-dismissable</code>, que é o elemento que será removido. Ele aceita IDs ou CLASSES.</td>
+      </tr>
+    </tbody>
+  </table>
 
   <p>Veja primeiro o exemplo abaixo: ao clicar no <strong>X</strong> do lado direito, o alerta é fechado.</p>
   <div class="ls-box-demo">
@@ -183,12 +183,13 @@
       <tr><td>.ls-lg-space</td><td>Coloca um padding de 40px na caixa</td></tr>
     </tbody>
   </table>
+
   <div class="ls-box-demo">
     <div class="ls-alert-success ls-md-space"><strong>Sucesso!</strong> Você conseguiu, parabéns! <strong><a href="#">Entre aqui</a></strong>.</div>
 <div class="ls-alert-info ls-sm-space"><strong>Atenção:</strong> Você tem informações importantes para ler.</div>
   </div>
 <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-alert-success ls-md-space"</span><span class="nt">&gt;&lt;strong&gt;</span>Sucesso!<span class="nt">&lt;/strong&gt;</span> Você conseguiu, parabéns! <span class="nt">&lt;strong&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Entre aqui<span class="nt">&lt;/a&gt;&lt;/strong&gt;</span>.<span class="nt">&lt;/div&gt;</span>
+2</pre></td><td class="code"><pre>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-alert-success ls-md-space"</span><span class="nt">&gt;&lt;strong&gt;</span>Sucesso!<span class="nt">&lt;/strong&gt;</span> Você conseguiu, parabéns! <span class="nt">&lt;strong&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Entre aqui<span class="nt">&lt;/a&gt;&lt;/strong&gt;</span>.<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-alert-info ls-sm-space"</span><span class="nt">&gt;&lt;strong&gt;</span>Atenção:<span class="nt">&lt;/strong&gt;</span> Você tem informações importantes para ler.<span class="nt">&lt;/div&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
