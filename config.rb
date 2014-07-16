@@ -2,6 +2,15 @@
 # Compass
 ###
 
+activate :blog do |blog|
+    blog.prefix = "changelog"
+    blog.permalink = ":year/:month/:day/:title"
+    blog.sources = "/:year-:month-:day-:title.html"
+    blog.paginate = true
+    blog.per_page = 5
+    blog.page_link = "page/:num"
+end
+
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
@@ -77,15 +86,6 @@ set :images_dir, 'assets/images'
 
 activate :directory_indexes
 activate :i18n
-
-activate :blog do |blog|
-    blog.prefix = "changelog"
-    blog.permalink = ":year/:month/:day/:title"
-    blog.sources = "/:year-:month-:day-:title.html"
-    blog.paginate = true
-    blog.per_page = 5
-    blog.page_link = "page/:num"
-end
 
 # Build-specific configuration
 configure :build do
