@@ -237,20 +237,22 @@
     .ls-menu
       width: $sidebarWidth
 
-    .ls-menu ul ul,
-    .ls-menu .ls-submenu.ls-active ul
-      opacity: 0
-      height: 0
-      overflow: hidden
-      +single-transition(opacity, .2s, ease-in-out)
-      border: none
+      ul ul,
+      .ls-submenu.ls-active ul
+        opacity: 0
+        height: 0
+        overflow: hidden
+        +single-transition(opacity, .2s, ease-in-out)
+        border: none
 
-    .ls-menu li.ls-active:not(.ls-submenu)
+      li.ls-active:not(.ls-submenu)
 
-      > a
-        border-left-color: transparent
+        > a
+          border-left-color: transparent
 
-      &.ls-submenu
+      .ls-submenu.ls-active a
+        background: none
+
 
 
     .ls-area-account
@@ -272,11 +274,16 @@
         a
           display: block
 
-      .ls-menu ul ul,
-      .ls-menu .ls-submenu.ls-active ul,
-        opacity: 1
-        height: auto
-        border-top: 1px solid $gray4
+      .ls-menu
+        ul ul,
+        .ls-submenu.ls-active ul,
+          opacity: 1
+          height: auto
+          border-top: 1px solid $gray4
+
+        .ls-submenu.ls-active a
+          background-color: rgba($gray4,.5)
+
 
       .ls-area-account
         height: 100px
