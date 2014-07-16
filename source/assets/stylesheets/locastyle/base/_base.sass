@@ -2,7 +2,7 @@
   display: none
 
 .ls-main
-  +single-transition(all, .5s)
+  +single-transition(transform, .5s)
   +translate(0, 0)
   min-height: 100%
   padding-top: $heightTopbar
@@ -98,3 +98,7 @@
   .ls-main > .container
     padding: 0 30px
 
+@media (min-width: $screen-sm) and (max-width: $screen-lg)
+  .ls-main
+    // +single-transition(margin-left, .3s)
+    margin-left: 60px
