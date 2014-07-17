@@ -90,10 +90,10 @@ describe("Tabs: ", function() {
 
     });
 
-    describe("when breakpoint-updated event is fired", function () {
+    describe("when breakpointUpdated event is fired", function () {
       it("should run the breakpoint checker", function () {
         var spy = spyOn(locastyle.tabs, "checkBreakpoint");
-        $(document).trigger('breakpoint-updated');
+        $(document).trigger('breakpointUpdated');
         expect(locastyle.tabs.checkBreakpoint).toHaveBeenCalled();
       });
 

@@ -13,10 +13,10 @@ describe("Buttons group: ", function(){
   });
 
   describe("Unbind", function() {
-    it("should bind breakpoint-updated only one time on the $(document)", function() {
+    it("should bind breakpointUpdated only one time on the $(document)", function() {
       locastyle.btnGroup.init();
       locastyle.btnGroup.init();
-      expect($(document)).toHaveBeenBindedOnce('breakpoint-updated');
+      expect($(document)).toHaveBeenBindedOnce('breakpointUpdated');
     });
 
   });

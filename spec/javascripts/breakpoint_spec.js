@@ -5,9 +5,9 @@ describe("Breakpoint: ", function() {
 
   describe("Events:", function() {
     describe('when breakpoint changes', function() {
-      it("should fire the event 'breakpoint-updated' event to tell it has changed", function() {
+      it("should fire the event 'breakpointUpdated' event to tell it has changed", function() {
         jasmine.clock().install();
-        var spyEvent = spyOnEvent(document, 'breakpoint-updated');
+        var spyEvent = spyOnEvent(document, 'breakpointUpdated');
         $(window).trigger('resize');
         jasmine.clock().tick(305);
         expect(spyEvent).toHaveBeenTriggered()

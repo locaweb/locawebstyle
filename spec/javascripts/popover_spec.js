@@ -67,7 +67,7 @@ describe("Popover: ", function() {
       locastyle.init();
       locastyle.popover.init();
       locastyle.popover.init();
-      expect($(document)).toHaveBeenBindedOnce("breakpoint-updated");
+      expect($(document)).toHaveBeenBindedOnce("breakpointUpdated");
     });
   });
 
