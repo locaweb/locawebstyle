@@ -8,14 +8,14 @@ locastyle.btnGroup = (function() {
   }
 
   function unbind () {
-    $(document).off("breakpoint-updated");
+    $(document).off("breakpointUpdated");
   }
 
-  // adiciona o bind de breakpoint-updated e chama o checker quando o evento ocorre
+  // adiciona o bind de breakpointUpdated e chama o checker quando o evento ocorre
   function bindBreakpointUpdateOnChecker() {
     unbind();
 
-    $(document).on("breakpoint-updated", function () {
+    $(document).on("breakpointUpdated", function () {
       checkBreakpoint();
     })
   }

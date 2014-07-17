@@ -27,10 +27,10 @@ locastyle.popover = (function() {
     });
   }
 
-  // Adiciona o bind de breakpoint-updated
+  // Adiciona o bind de breakpointUpdated
   function bindBreakpointUpdate() {
-    $(document).off("breakpoint-updated");
-    $(document).on("breakpoint-updated", function () {
+    $(document).off("breakpointUpdated");
+    $(document).on("breakpointUpdated", function () {
       changeModuleName();
     })
   }
