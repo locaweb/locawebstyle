@@ -25,7 +25,7 @@ locastyle.tabs = (function() {
 
   // adiciona o bind de breakpoint-updated e chama o checker quando o evento ocorre
   function bindBreakpointUpdateOnChecker() {
-    $(document).on("breakpoint-updated", function () {
+    $(window).on("breakpoint-updated", function () {
       locastyle.tabs.checkBreakpoint();
     })
   }
