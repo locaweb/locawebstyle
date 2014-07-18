@@ -1,6 +1,6 @@
 ---
 title: Informações iniciais
-description: Saiba detalhes de como ajudar e como usar o Locaweb Style
+description: Iniciando seu desenvolvimento com Locaweb Style
 ---
 <%= partial 'partials/doc-menu-intro'%>
 
@@ -8,31 +8,16 @@ description: Saiba detalhes de como ajudar e como usar o Locaweb Style
 
   <%= partial 'partials/doc-intro-content' %>
 
-  <h2 class="doc-title-3">A documentação começa aqui</h2>
-  <p>Nossa documentação vai ser o seu guia para aprender como funciona o Locaweb Style. Nós sempre nos esforçamos para que toda a implementação e o uso dos elementos seja tão fácil quanto um <strong>copy and paste</strong>. </p>
+  <h2 class="doc-title-4">Começando do zero? Comece por aqui</h2>
+  <p>Se você quiser um começo ligeiro, copie o código do nosso boilerplate e cole em um arquivo HTML vazio. Com ele você já terá a estrutura inicial com tudo o que precisa para usar o Locaweb Style. Se quiser começar do zero, siga lendo o resto da página.</p>
 
-  <div class="row">
-    <div class="col-md-4">
-      <h4 class="doc-title-5">CSS</h4>
-      <p>Aprenda sobre o GRID, Ícones e nossas Classes Funcionais.</p>
-      <%= link_to 'CSS', "#{base_url}/documentacao/css/grid", :class => 'ls-btn-primary' %>
-    </div>
+  <a href="<%= base_url %>/documentacao/introducao/boilerplate" target="_blank" class="ls-btn-primary">Veja o código de Inicial</a>
 
-    <div class="col-md-4">
-      <h4 class="doc-title-5">Componentes</h4>
-      <p>Conheça todos os componentes que fazem parte do Locaweb Style.</p>
-      <%= link_to 'Ir para Componentes', "#{base_url}/documentacao/componentes/", :class => 'ls-btn-primary' %>
-    </div>
+  <br>
+  <br>
+  <hr>
 
-    <div class="col-md-4">
-      <h4 class="doc-title-5">Formulários</h4>
-      <p>Saiba como manipular os campos e grupos de formulários com o Locaweb Style.</p>
-      <%= link_to 'Formulários', "#{base_url}/documentacao/formularios/", :class => 'ls-btn-primary' %>
-    </div>
-
-  </div>
-
-  <h2 class="doc-title-3">Use pelo nosso servidor</h2>
+  <h2 class="doc-title-5">Use pelo nosso servidor</h2>
   <p>Nós disponibilizamos as versões do Locaweb Style em nosso servidor de alta disponibilidade para qualquer desenvolvedor. Basta usar os links abaixo em seu projeto. A única de depêndencia é a <strong><a href="http://jquery.com/">jQuery</a></strong>.</p>
 
   <% code("html") do %>
@@ -55,12 +40,12 @@ description: Saiba detalhes de como ajudar e como usar o Locaweb Style
 
   <p>Sempre que há uma atualização, esses assets são atualizados automaticamente.</p>
 
-  <h2 class="doc-title-3">Download da versão mais atual</h2>
+  <h2 class="doc-title-5">Download da versão mais atual</h2>
   <p>Se você quiser baixar os assets para usar localmente ou em projetos offline, basta clicar no botão abaixo e baixe a versão estável mais atual publicada.<br><br>
   <a href="http://assets.locaweb.com.br/locastyle/<%= settings.stable %>.zip" class="ls-btn-primary ls-btn-large">Baixar versão atual</a>
   </p>
 
-  <h2 class="doc-title-3">Pelo GitHub</h2>
+  <h2 class="doc-title-5">Pelo GitHub</h2>
   <p>Se você quiser fuçar no código ou contribuir esse é o melhor caminho. Nosso código está totalmente disponível no <a href="http://github.com/">GitHub</a> e você pode fazer o download desse código pelos meios abaixo:</p>
   <div class="row">
     <div class="col-md-6">
@@ -73,6 +58,30 @@ description: Saiba detalhes de como ajudar e como usar o Locaweb Style
       <p>Baixe branch master direto do GitHub.</p>
       <a href="https://github.com/locaweb/locawebstyle/archive/master.zip" class="ls-btn">Baixar</a>
     </div>
+  </div>
+
+  <h2 class="doc-title-3">A documentação</h2>
+  <p>Nossa documentação vai ser o seu guia para aprender como funciona o Locaweb Style. Nós sempre nos esforçamos para que toda a implementação e o uso dos elementos seja tão fácil quanto um <strong>copy and paste</strong>. </p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h4 class="doc-title-5">CSS</h4>
+      <p>Aprenda sobre o GRID, Ícones e nossas Classes Funcionais.</p>
+      <%= link_to 'CSS', "#{base_url}/documentacao/css/grid", :class => 'ls-btn-primary' %>
+    </div>
+
+    <div class="col-md-4">
+      <h4 class="doc-title-5">Componentes</h4>
+      <p>Conheça todos os componentes que fazem parte do Locaweb Style.</p>
+      <%= link_to 'Ir para Componentes', "#{base_url}/documentacao/componentes/", :class => 'ls-btn-primary' %>
+    </div>
+
+    <div class="col-md-4">
+      <h4 class="doc-title-5">Formulários</h4>
+      <p>Saiba como manipular os campos e grupos de formulários com o Locaweb Style.</p>
+      <%= link_to 'Formulários', "#{base_url}/documentacao/formularios/", :class => 'ls-btn-primary' %>
+    </div>
+
   </div>
 
 </section>
