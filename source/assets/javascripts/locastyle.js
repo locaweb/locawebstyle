@@ -29,4 +29,5 @@
 //= require locastyle/_btn-group
 //= require locastyle/_datepicker
 //= require locastyle/_char-counter
+//= require locastyle/_autocomplete
 //= require locastyle/_track-events
