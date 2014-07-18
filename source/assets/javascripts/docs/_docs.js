@@ -5,6 +5,18 @@ var lsdocs = (function() {
     convertCodeExamples();
     sidebarAffix();
     toggleMenuActive();
+    toggleThemes();
+  }
+
+  function toggleThemes (argument) {
+    $('.doc-test-themes').find('a').on('click', function () {
+      var classeAdd = $(this).data('toggle-class');
+      $('html')
+        .attr('class', $('html').attr('class').split(' ').map(function(classe){
+          return /ls-theme/.test(classe) ? '': classe
+        }).join(' ').replace(/  /g, '') )
+        .addClass(classeAdd);
+    });
   }
 
   function toggleMenuActive() {
