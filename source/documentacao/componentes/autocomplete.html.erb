@@ -1,0 +1,37 @@
+---
+title: Autocomplete
+description: Exibe uma lista de sugestões em um input, a partir de uma lista no html ou de um json remoto
+type: component
+---
+
+<%= partial 'partials/doc-menu-components'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <div class="ls-box-demo">
+    
+    <p>Autocomplete com a <i>tag</i> nativa <code>datalist</code> (IE9+)</p>
+
+    <input type="text" data-ls-module="autocomplete" name="city" list="cidades" placeholder="Cidades">
+    <datalist id="cidades">
+      <option>Brasília</option>
+      <option>São Paulo</option>
+      <option>Belo Horizonte</option>
+      <option>Rio de Janeiro</option>
+    </datalist>
+
+    <p>Autocomplete com os dados carregados via <i>Ajax</i></p>
+    <input type="text" data-ls-module="autocomplete" name="city" data-ls-remote-list="/assets/javascripts/example-json-datalist.json" placeholder="Digite o nome de uma cor">
+    <br>
+    <input type="text" data-ls-module="autocomplete" name="city" data-ls-remote-list="/assets/javascripts/example-json-datalist.json" placeholder="Digite o nome de uma cor">
+    
+
+  </div>
+  <% code("html") do %>
+  a
+  <% end %>
+
+
+</section>
