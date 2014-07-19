@@ -18,3 +18,5 @@ gem "pry"
 
 gem 'middleman-gh-pages'
 gem "middleman-syntax"
+
+gem 'rack-cors', require: false
