@@ -11,7 +11,29 @@ locastyle.autocomplete = (function() {
     $('[data-ls-module="autocomplete"]').each(function () {
       var $this = $(this);
       remoteList($this);
+      if (!'options' in document.createElement('datalist')) {
+        polyfill($this);
+      }
     });
+  }
+
+  function polyfill ($elem) {
+    var $list = $('#' + $elem.attr('list'));
+    if( $list[0] ){
+      $elem.after('<select class="ls-polyfill-datalist">' + $list.html() + '</select>');
+      var $select = $elem.next('select');
+      $select.css($elem.position()).css({width: $elem.outerWidth()});
+      $elem.on('keyup change', function (evt){
+        var typed = $(this).val();
+        $select.find('option').prop('disabled', true);
+        var $options = $select.find('option:contains(' + typed + ')').prop('disabled', false);
+        $options[0] && typed ? $select.show() : $select.hide();
+      });
+      $select.on('change', function (argument) {
+        $elem.val($select.val());
+        $select.hide();
+      });
+    }    
   }
 
   function remoteList ($elem) {
@@ -22,11 +44,10 @@ locastyle.autocomplete = (function() {
           return '<option>{$item}</option>'.replace('{$item}', item);
         } ).join('') + '</datalist>');
         $elem[0].hasAttribute('list') || $elem.attr('list', 'datalist-' + dataModule.uniqueId++ );
+        polyfill($elem)
       });
     }
   }
-
-  //http://playground.onereason.eu/2013/04/ie10s-lousy-support-for-datalists/
 
   return {
     init: init
