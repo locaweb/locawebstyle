@@ -17,7 +17,6 @@
 //= require locastyle/_dismiss
 //= require locastyle/_popover
 //= require locastyle/_dropdown
-//= require locastyle/_tooltip
 //= require locastyle/_tabs
 //= require locastyle/_templates
 //= require locastyle/_general
