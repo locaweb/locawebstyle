@@ -46,8 +46,7 @@ tourGuiado = (function() {
         content: 'Siga os passos abaixo para personalizar sua revenda.',
         placement: 'top',
         arrowOffset: 'center',
-        xOffset: -75,
-
+        xOffset: -30,
       },
       {
         target: '.ls-user-account',
@@ -60,17 +59,22 @@ tourGuiado = (function() {
       },
       {
         target: '.ls-alerts-list',
+        title: 'Ficou com dúvidas?',
+        content: 'Acesse nossos canais de ajuda.',
+        placement: 'bottom',
+        arrowOffset: 'center',
+        xOffset: -50,
+      },
+      {
+        target: '.ls-alerts-list',
         title: 'Ajude a melhorar o painel',
         content: 'Fique à vontade para enviar sugestões e comentários.',
         placement: 'bottom',
         arrowOffset: 'center',
         xOffset: -90,
-
       }
-
     ]
   };
-
 
   var tourDashboard = {
     id: 'tourDemo',
@@ -123,17 +127,17 @@ tourGuiado = (function() {
         arrowOffset: 'center'
       },
       {
-        target: '.ls-alerts-list',
-        title: 'Ficou com dúvidas?',
-        content: 'Acesse nossos canais de ajuda.',
+        target: '.ls-user-account',
+        title: 'Sua conta',
+        content: 'Detalhes de seu login Locaweb.1',
         placement: 'bottom',
         arrowOffset: 'center',
         xOffset: -50,
       },
       {
-        target: '.ls-user-account',
-        title: 'Sua conta',
-        content: 'Detalhes de seu login Locaweb.',
+        target: '.ls-alerts-list',
+        title: 'Ficou com dúvidas?',
+        content: 'Acesse nossos canais de ajuda.',
         placement: 'bottom',
         arrowOffset: 'center',
         xOffset: -50,
@@ -148,7 +152,6 @@ tourGuiado = (function() {
       }
     ]
   };
-
 
   var tourClient = {
     id: 'tourDemo',
@@ -201,7 +204,6 @@ tourGuiado = (function() {
     ]
   };
 
-
   var tourRegisterClient = {
     id: 'tourDemo',
     selectors: {
@@ -218,14 +220,14 @@ tourGuiado = (function() {
     showPrevButton: true,
     steps: [
       {
-        target: '.ls-form legend:nth-child(1)',
+        target: '.ls-form legend',
         title: 'Informações do seu cliente',
         content: 'Preencha os dados do seu cliente e defina uma senha para ele acessar o painel.',
         placement: 'top',
         arrowOffset: 'center'
       },
       {
-        target: '.ls-box-gray .ls-field:nth-child(2)',
+        target: '.ls-box-gray .ls-field',
         title: 'Quantidade de envios',
         content: 'Defina a quantidade de envios que seu cliente poderá utilizar.',
         placement: 'top',
@@ -240,7 +242,6 @@ tourGuiado = (function() {
       }
     ]
   };
-
 
   var tourAdminClient = {
     id: 'tourDemo',
@@ -260,10 +261,10 @@ tourGuiado = (function() {
       {
         target: '.ls-regroup .ls-btn-primary',
         title: 'Acesso ao painel do seu cliente',
-        content: 'Tenha acesso ao painel do cliente. Você poderá visualizar mensagens enviadas, relatórios e as configurações feita pelo seu cliente.',
+        content: 'Tenha acesso ao painel do cliente.',
         placement: 'left',
         arrowOffset: 'center',
-        yOffset: -70,
+        yOffset: -80,
         xOffset: 35,
         onNext: function(){
           $('.ls-main .ls-dropdown .ls-btn').click();
@@ -275,8 +276,8 @@ tourGuiado = (function() {
         content: 'Edite os dados, altere a senha ou desative o cliente.',
         placement: 'left',
         arrowOffset: 'center',
-        xOffset: -90,
-        yOffset: 20,
+        xOffset: 40,
+        yOffset: -60,
         onNext: function(){
           $('.ls-main .ls-dropdown .ls-btn').click();
         },
@@ -295,9 +296,10 @@ tourGuiado = (function() {
         target: '.ls-main h3.ls-title-3',
         title: 'Relatórios',
         content: 'Acompanhe o relatório de contratação e uso dos envios.',
-        placement: 'top',
+        placement: 'right',
         arrowOffset: 'center',
-        xOffset: -75,
+        xOffset: -500,
+        yOffset: -60
       },
       {
         target: '.container-fluid > .ls-title-3',
@@ -351,16 +353,16 @@ tourGuiado = (function() {
     showPrevButton: true,
     steps: [
       {
-        target: '.col-md-6:nth-child(2) .ls-title-2',
-        title: 'Domínio de acesso',
-        content: 'Personalize o domínio que seu cliente acessa o painel da sua revenda.',
+        target: '.col-md-6:nth-child(1) .ls-title-2',
+        title: 'Domínio dos links',
+        content: 'Personalize o padrão do domínio dos links das mensagens que seus clientes enviam.',
         placement: 'top',
         arrowOffset: 'center',
       },
       {
-        target: '.col-md-6:nth-child(1) .ls-title-2',
-        title: 'Domínio dos links',
-        content: 'Personalize o padrão do domínio dos links das mensagens que seus clientes enviam.',
+        target: '.col-md-6:nth-child(2) .ls-title-2',
+        title: 'Domínio de acesso',
+        content: 'Personalize o domínio que seu cliente acessa o painel da sua revenda.',
         placement: 'top',
         arrowOffset: 'center',
       }
@@ -415,9 +417,10 @@ tourGuiado = (function() {
         content: 'Veja como fica o painel da sua revenda para seus clientes.',
         placement: 'top',
         arrowOffset: 'center',
+        xOffset: -50
       },
       {
-        target: '.ls-main .ls-field:nth-child(1)',
+        target: '.ls-main .ls-box .ls-label',
         title: 'Personalize o nome da revenda ',
         content: 'Deixe o nome da revenda com o nome da sua empresa.',
         placement: 'top',
