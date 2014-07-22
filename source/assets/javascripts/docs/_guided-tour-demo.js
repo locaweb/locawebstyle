@@ -177,9 +177,16 @@ tourGuiado = (function() {
         xOffset: -75,
       },
       {
+        target: '.ls-custom-select-one:nth-child(1)',
+        title: 'Filtro por status',
+        content: 'Busque um cliente por status.',
+        placement: 'top',
+        arrowOffset: 'center'
+      },
+      {
         target: '.ls-box-filter form:nth-child(2) input',
-        title: 'Busca de cliente',
-        content: 'Procure um cliente por status ou por nome.',
+        title: 'Busca por nome',
+        content: 'Procure um cliente por nome.',
         placement: 'left',
         arrowOffset: 'center',
         yOffset: -55,
@@ -227,14 +234,14 @@ tourGuiado = (function() {
         arrowOffset: 'center'
       },
       {
-        target: '.ls-box-gray .ls-field',
+        target: '.ls-box-gray .row .ls-label:nth-child(2)',
         title: 'Quantidade de envios',
         content: 'Defina a quantidade de envios que seu cliente poderá utilizar.',
         placement: 'top',
         arrowOffset: 'center'
       },
       {
-        target: '.ls-box-gray .ls-field:nth-child(3)',
+        target: '.ls-box-gray .ls-label:nth-child(3)',
         title: 'Recorrência',
         content: 'Marque se ele vai receber esta mesma quantidade todo mês.',
         placement: 'top',
