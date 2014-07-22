@@ -31,16 +31,6 @@
   &.ls-table-bordered
     border: 1px solid $gray1
 
-  &.ls-bg-header thead th
-
-    &.ls-data-descending a:after
-      +arrow-down(#fff,6px)
-      position: relative
-      top: 5px
-
-    &.ls-data-ascending a:after
-      +arrow-up(#fff,6px)
-
   td, th
     padding: 13px
     text-align: left
@@ -53,20 +43,25 @@
   thead th
     border-bottom-width: 2px
 
-    a
-      padding-right: 5px
+    &.ls-data-descending,
+    &.ls-data-ascending
 
-      &:after
-        margin-left: 0
+      a
+        position: relative
+        display: inline-block
 
-    &.ls-data-descending a:after
-      +arrow-down(#000,6px)
-      position: relative
-      top: 5px
+        &:after
+          +arrow-down(#000, 5px)
+          content: ""
+          position: absolute
+          top: 50%
+          right: -15px
+          margin-top: -2px
 
     &.ls-data-ascending a:after
-      +arrow-up(#000,6px)
-
+      border-color: transparent
+      border-bottom-color: #000
+      margin-top: -7px
 
   tbody tr:last-child td,
   tbody tr:last-child th
