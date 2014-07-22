@@ -4,8 +4,6 @@ $colorBorderPop: rgba(0, 0, 0, 0.2)
 
 .ls-popover
   position: absolute
-  top: 0
-  left: 0
   z-index: 17
   max-width: 376px
   background-color: #fff
@@ -13,18 +11,19 @@ $colorBorderPop: rgba(0, 0, 0, 0.2)
   border-radius: $radiusDefault
   box-shadow: 0 5px 10px $colorBorderPop
   background-clip: padding-box
+  display: none
 
   &.ls-popover-top
-    margin-top: -12px
+    +transform( translateX(-50%) translateY(calc(-100% - 12px)) )
 
   &.ls-popover-right
-    margin-left: 12px
+    +transform( translateX(12px) translateY( calc(-75% + 12px) ) )
 
   &.ls-popover-bottom
-    margin-top: 12px
+    +transform( translateX(-30%) translateY(12px) )
 
   &.ls-popover-left
-    margin-left: -12px
+    +transform( translateX( calc(-100% - 12px) ) translateY(calc(-25% - 12px)) )
 
   &:after,
   &:before
