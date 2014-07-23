@@ -9,17 +9,90 @@ description: Insira cores no seu projeto.
 
   <%= partial 'partials/doc-intro-content' %>
 
-  <p>Você pode querer mudar a cor principal do seu sistema. Preparamos algumas classes que mudam as cores principais do Locaweb Style e de seus elementos. Essas cores serão atualizadas de acordo com os projetos que existem na Locaweb.</p>
+  <p>Existem uma série de temas de cores base usados no Locaweb Style. Essas cores são adicionadas conforme vamos implementando novos produtos na Locaweb. O tema de cor é aplicado via classe no elemento <code>html</code>.</p>
 
-  <p>Caso mudar as cores de todo o sistema, basta inserir a classe desejada na tag HTML.</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classe da cor</th>
+        <th>Cor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ls-theme-green</td>
+        <td>Tema verde</td>
+      </tr>
+      <tr>
+        <td>ls-theme-light-green</td>
+        <td>Tema verde claro</td>
+      </tr>
+      <tr>
+        <td>ls-theme-blue</td>
+        <td>Tema Azul</td>
+      </tr>
+      <tr>
+        <td>ls-theme-gold</td>
+        <td>Tema dourada</td>
+      </tr>
+      <tr>
+        <td>ls-theme-gray</td>
+        <td>Tema cinza</td>
+      </tr>
+    </tbody>
+  </table>
 
-  <p>Abaixo estão as classes de cores existente, se preferir clique nelas pra ver a interação das cores no elemento de exemplo:</p>
+  <p>Clique nos links abaixo para ter uma ideia de como o layout poderá ficar:</p>
 
   <div class="doc-test-themes ls-group-btn ls-group-active">
-    <a href="#" class="ls-btn-primary ls-active" data-toggle-class="ls-theme-green " data-target="html">ls-theme-green</a>
+    <a href="#" class="ls-btn-primary ls-active" data-toggle-class="ls-theme-green" data-target="html">ls-theme-green</a>
     <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-light-green" data-target="html">ls-theme-light-green</a>
     <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-blue" data-target="html">ls-theme-blue</a>
     <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-gold" data-target="html">ls-theme-gold</a>
     <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-gray" data-target="html">ls-theme-gray</a>
   </div>
+  <br>
+  <br>
+<div data-ls-module="dropdown" class="ls-dropdown">
+  <a href="#" class="ls-btn-primary">Users</a>
+
+  <ul class="ls-dropdown-nav">
+    <%- 5.times do%>
+      <li><a href="#"><%= lorem.name %></a></li>
+    <% end %>
+  </ul>
+</div>
+  <br>
+  <br>
+<div class="ls-topbar ls-no-position" style="position: static !important;">
+
+      <!-- Notification bar -->
+      <div class="ls-notification-topbar">
+        <!-- Link of support/help -->
+        <div class="ls-alerts-list">
+          <a href="#" class="ls-ico-bell-o" data-counter="5" data-ls-module="topbarCurtain" data-target="#ls-notification-curtain"><span>Notificações</span></a>
+          <a href="#" class="ls-ico-bullhorn" data-ls-module="topbarCurtain" data-target="#ls-help-curtain"><span>Ajuda</span></a>
+          <a href="#" class="ls-ico-question" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain"><span>Sugestões</span></a>
+        </div>
+
+        <!-- User details -->
+        <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+          <a href="#" class="ls-ico-user">
+            Phil Pearson
+            <small>(lstyle)</small>
+          </a>
+          <nav class="ls-dropdown-nav ls-user-menu">
+            <ul>
+              <li><a href="#">Conta</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <span class="ls-show-sidebar ls-ico-menu"></span>
+      <span class="ls-show-notifications ls-ico-question"></span>
+
+      <!-- Nome do produto/marca -->
+      <h1 class="ls-brand-name"><a class="ls-ico-earth" href="/documentacao/exemplos/boilerplate">Boilerplate</a></h1>
+    </div>
 </section>
