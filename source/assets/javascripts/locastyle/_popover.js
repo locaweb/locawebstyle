@@ -15,6 +15,7 @@ locastyle.popover = (function() {
   }
 
   function init() {
+    destroy();
     if(/sm|xs/.test(locastyle.breakpointClass)){
       $(config.module).attr('data-ls-module', 'modal').removeAttr('data-trigger');
       locastyle.modal.init();
@@ -55,17 +56,17 @@ locastyle.popover = (function() {
   }
 
   function bindActions ($elem, elementData) {
-    var trigger = elementData.trigger ? config.hoverEvent : config.trigger,
+    var trigger = elementData.trigger == 'hover' ? config.hoverEvent : config.trigger,
         $popover = $(config.idPopover + elementData.uniqueId);
     if(trigger === config.hoverEvent){
       $elem.on({
         mouseenter: function (event) {
           event.preventDefault();
-          $popover.stop().fadeIn();
+          $popover.stop().show();
         },
         mouseleave: function (event) {
           event.preventDefault();
-          $popover.stop().fadeOut();
+          $popover.stop().hide();
         }
       });
     } else {
@@ -73,13 +74,13 @@ locastyle.popover = (function() {
         click: function (event) {
           event.preventDefault();
           event.stopPropagation();
-          $popover.stop().fadeToggle();
+          $popover.stop().toggle();
         }
       });
       $(document).on('click', function (event) {
         var element = event.toElement;
         if(!$(element).parents().hasClass( config.popoverClass )){
-         $('.' + config.popoverClass).fadeOut();
+         $('.' + config.popoverClass).hide();
         }
       })
     }    
