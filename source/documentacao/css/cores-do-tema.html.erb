@@ -44,27 +44,29 @@ description: Insira cores no seu projeto.
 
   <p>Clique nos links abaixo para ter uma ideia de como o layout poderá ficar:</p>
 
-  <div class="doc-test-themes ls-group-btn ls-group-active">
-    <a href="#" class="ls-btn-primary ls-active" data-toggle-class="ls-theme-green" data-target="html">ls-theme-green</a>
-    <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-light-green" data-target="html">ls-theme-light-green</a>
-    <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-blue" data-target="html">ls-theme-blue</a>
-    <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-gold" data-target="html">ls-theme-gold</a>
-    <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-gray" data-target="html">ls-theme-gray</a>
-  </div>
-  <br>
-  <br>
-<div data-ls-module="dropdown" class="ls-dropdown">
-  <a href="#" class="ls-btn-primary">Users</a>
+  <div class="ls-box-demo">
+    <div class="doc-test-themes ls-group-btn ls-group-active">
+      <a href="#" class="ls-btn-primary ls-active" data-toggle-class="ls-theme-green" data-target="html">ls-theme-green</a>
+      <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-light-green" data-target="html">ls-theme-light-green</a>
+      <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-blue" data-target="html">ls-theme-blue</a>
+      <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-gold" data-target="html">ls-theme-gold</a>
+      <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-gray" data-target="html">ls-theme-gray</a>
+    </div>
+    <br>
+    <br>
+    <div data-ls-module="dropdown" class="ls-dropdown">
+      <a href="#" class="ls-btn-primary">Users</a>
 
-  <ul class="ls-dropdown-nav">
-    <%- 5.times do%>
-      <li><a href="#"><%= lorem.name %></a></li>
-    <% end %>
-  </ul>
-</div>
-  <br>
-  <br>
-<div class="ls-topbar ls-no-position" style="position: static !important;">
+      <ul class="ls-dropdown-nav">
+        <%- 5.times do%>
+        <li><a href="#"><%= lorem.name %></a></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="ls-topbar ls-no-position" style="position: static !important;">
 
       <!-- Notification bar -->
       <div class="ls-notification-topbar">
@@ -78,8 +80,8 @@ description: Insira cores no seu projeto.
         <!-- User details -->
         <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
           <a href="#" class="ls-ico-user">
-            Phil Pearson
-            <small>(lstyle)</small>
+            Fernando
+            <small>(fmolina)</small>
           </a>
           <nav class="ls-dropdown-nav ls-user-menu">
             <ul>
@@ -89,10 +91,13 @@ description: Insira cores no seu projeto.
         </div>
       </div>
 
-      <span class="ls-show-sidebar ls-ico-menu"></span>
-      <span class="ls-show-notifications ls-ico-question"></span>
+      <span class="ls-ico-menu"></span>
 
       <!-- Nome do produto/marca -->
       <h1 class="ls-brand-name"><a class="ls-ico-earth" href="/documentacao/exemplos/boilerplate">Boilerplate</a></h1>
     </div>
+  </div>
+
+<p><strong>*</strong>Exemplo de topbar não funcional, apenas para mostrar a mudança de tema.</p>
 </section>
+
