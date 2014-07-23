@@ -23,6 +23,14 @@
   	});
   });
 
+  describe("Verificate user area", function() {
+    describe("when .ls-sidebar has .ls-area-account", function() {
+      it("should add the .ls-area-account-active css class on .ls-sidebar element", function() {
+        expect($('.ls-sidebar').hasClass('ls-area-account-active')).toEqual(true);
+      });
+    });
+  });
+
   describe("Unbind:", function() {
     describe("when unbind is called in module", function() {
       it("should unbind events handled by sidebar module", function() {

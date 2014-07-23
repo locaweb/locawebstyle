@@ -7,6 +7,7 @@ locastyle.sidebars = (function() {
     unbind();
     bindShowSidebar();
     bindShowNotifications();
+    sidebarUserAcountVerify();
   }
 
   // adiciona o bind de click no modulo e chama os métodos necessários
@@ -31,6 +32,13 @@ locastyle.sidebars = (function() {
 
   function notificationAddClass() {
     $('html').toggleClass('ls-notifications-visible');
+  }
+
+  function sidebarUserAcountVerify() {
+    var sidebar = $('.ls-sidebar .ls-area-account').length
+    if(sidebar === 1){
+      $('.ls-sidebar').addClass('ls-area-account-active')
+    }
   }
 
   // remove os binds que o próprio modulo adiciona
