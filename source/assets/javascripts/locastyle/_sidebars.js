@@ -16,6 +16,7 @@ locastyle.sidebars = (function() {
       sidebarAddClass();
     });
   }
+
   // adiciona o bind de click no modulo e chama os métodos necessários
   function bindShowNotifications() {
     $('.ls-show-notifications').on('touchstart.ls click.ls', function(evt) {
