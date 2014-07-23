@@ -24,41 +24,40 @@ describe('Popover: ', function() {
 
     it('Should show a popover on click event', function() {
       var $popoverTrigger = $('#popoverclick');
-      var $popover = $('#ls-popover-' + $popoverTrigger.data('uniqueId'));
+      var $popover = $('.ls-popover');
       $popover.hide();
       $popoverTrigger.trigger('click');
-      expect( $popover ).toBeVisible();
+      var display = document.getElementsByClassName('ls-popover')[0].style.display
+      expect( display  ).toEqual('block')
     });
 
     it('Should show and close a popover on repeated click events', function() {
       var $popoverTrigger = $('#popoverclick');
-      var $popover = $('#ls-popover-' + $popoverTrigger.data('uniqueId'));
+      var $popover = $('.ls-popover');
       $popover.hide();
       $popoverTrigger.trigger('click');
       $popoverTrigger.trigger('click');
-      expect( $popover ).not.toBeVisible();
+      expect( $popover.eq(0).css('display')  ).toEqual('none')
     });
 
     it('Should show a popover on hover event', function() {
       var $popoverTrigger = $('#popoverhover');
-      var $popover = $('#ls-popover-' + $popoverTrigger.data('uniqueId'));
+      var $popover = $('.ls-popover');
       $popover.hide();
       $popoverTrigger.trigger('mouseenter');
-      expect( $popover ).toBeVisible();
+      expect( $popover.eq(2).css('display')  ).toEqual('block')
     });
 
     it('Should show and close a popover on repeated hover events', function() {
       var $popoverTrigger = $('#popoverhover');
-      var $popover = $('#ls-popover-' + $popoverTrigger.data('uniqueId'));
+      var $popover = $('.ls-popover');
       $popover.hide();
       $popoverTrigger.trigger('mouseenter');
       $popoverTrigger.trigger('mouseleave');
-      expect( $popover ).not.toBeVisible();
+      expect( $popover.eq(2).css('display')  ).toEqual('none')
     });
 
-
   });
-
 
   describe('[unbind] When init is called multiple times', function () {
 
