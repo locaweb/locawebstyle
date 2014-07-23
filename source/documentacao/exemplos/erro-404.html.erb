@@ -1,0 +1,101 @@
+---
+layout: false
+title_product: Fake Product Name
+---
+<!DOCTYPE html>
+<html lang="pt-br" class="ls-theme-green ls-html-nobg ls-no-sidebar">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title><%= current_page.data.title_product %></title>
+  <meta name="description" content="<%= current_page.data.description %>" />
+  <meta name="keywords" content="<%= current_page.data.keywords %>" />
+  <%= stylesheet_link_tag "locastyle" %>
+</head>
+<body>
+  <div class="ls-topbar">
+
+  <!-- Barra de Notificações -->
+  <div class="ls-notification-topbar">
+
+    <!-- Dropdown com detalhes da conta de usuário -->
+    <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+      <a href="#" class="ls-ico-user">
+        João
+      <small>(fmolina)</small>
+      </a>
+      <nav class="ls-dropdown-nav ls-user-menu">
+        <ul>
+          <li><a href="#">Meus dados</a></li>
+          <li><a href="#">Faturas</a></li>
+          <li><a href="#">Planos</a></li>
+          <li><a href="#">Sair</a></li>
+         </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Nome do produto/marca -->
+  <%- unless current_page.data.show_topbar_title %>
+    <h1 class="ls-brand-name"><%= link_to current_page.data.title_product, '../home', :class => 'ls-ico-earth' %></h1>
+  <% end %>
+</div>
+
+  <main class="ls-main">
+    <div class="container-fluid">
+      <h1 class="ls-title-intro ls-ico-close">Página não encontrada</h1>
+      <div class="ls-box ls-no-bg ls-message-error">
+        <p>O conteúdo pode ter sido removido ou não estar mais disponível.</p>
+
+        <p><strong>Você pode:</strong></p>
+        <ol>
+          <li><p>Verificar se digitou corretamente o endereço desejado.</p></li>
+          <li><p>Retornar à <a href="#">página inicial.</a></p></li>
+        </ol>
+        <p>Se o problema persistir, entre em contato através de um dos <a href="#">canais de atendimento</a>.</p>
+      </div>
+
+    </div>
+    <%= partial 'documentacao/shared/footer' %>
+  </main>
+
+  <aside class="ls-notification">
+    <nav class="ls-notification-list" id="ls-notification-curtain">
+      <h3 class="ls-title-2">Notificações</h3>
+      <ul>
+        <%- 5.times do %>
+          <li class="ls-dismissable">
+            <a href="#"><%= lorem.sentence %></a>
+            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+          </li>
+        <% end %>
+      </ul>
+      <p class="ls-no-notification-message">Não há notificações.</p>
+    </nav>
+    <nav class="ls-notification-list" id="ls-help-curtain">
+      <h3 class="ls-title-2">Feedback</h3>
+      <ul>
+        <%- 2.times do %>
+          <li><a href="#">> <%= lorem.words 6 %></a></li>
+        <% end %>
+      </ul>
+    </nav>
+    <nav class="ls-notification-list" id="ls-feedback-curtain">
+      <h3 class="ls-title-2">Ajuda</h3>
+      <ul>
+        <li class="ls-txt-center hidden-xs">
+          <a href="#" class="ls-btn-dark ls-btn-tour">Fazer um Tour</a>
+        </li>
+        <li><a href="#">> Guia</a></li>
+        <li><a href="#">> Wiki</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <%= javascript_include_tag  "libs/jquery-2.1.0.min" %>
+  <%= javascript_include_tag  "locastyle" %>
+  <%= javascript_include_tag  "example" %>
+</body>
+</html>
