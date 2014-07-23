@@ -21,6 +21,7 @@ describe('Popover: ', function() {
   });
 
   describe('Popover behavior', function() {
+    pending();
 
     it('Should show a popover on click event', function() {
       var $popoverTrigger = $('#popoverclick');
