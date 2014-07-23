@@ -2,10 +2,10 @@
 <html lang="pt-br" class="ls-theme-green documentacao documentacao_introducao documentacao_introducao_boilerplate documentacao_introducao_boilerplate_index">
 <head>
   <meta charset="UTF-8">
-  <title>Boilerplate</title>
+  <title>Comece por aqui</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Comece seu projeto por aqui" />
+  <meta name="description" content="Copie nosso boilerplate com a estrutura inicial" />
   <meta name="keywords" content="" />
 
   <link href="../../../assets/stylesheets/docs.css" rel="stylesheet" type="text/css" />
@@ -31,6 +31,7 @@
   <ul>
     <li><a href="/locawebstyle">Home</a></li>
     <li><a href="/locawebstyle/documentacao/introducao/">Documentação</a></li>
+    <li><a href="/locawebstyle/documentacao/introducao/boilerplate/">Comece por aqui</a></li>
     <li><a href="/locawebstyle/changelog">Changelog</a></li>
     <li><a href="http://locaweb.github.io/locawebstyle-v1/">Documentação V1</a></li>
     <li><a href="http://locaweb.github.io/locawebstyle-v2/">Documentação V2</a></li>
@@ -68,11 +69,11 @@
   <nav class="doc-sidebar-menu">
     <ul>
       <li class=''><a class='' href='/locawebstyle/documentacao/introducao/'>Informações iniciais</a></li>
-      <li class='active'><a class='active' href='/locawebstyle/documentacao/introducao/boilerplate/'>Boilerplate</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/contribua/'>Contribua</a></li>
+      <li class='active'><a class='active' href='/locawebstyle/documentacao/introducao/boilerplate/'>Comece por aqui</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/praticas/css/'>Padrões de CSS</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/praticas/javascript/'>Padrões de Javascript</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/introducao/chrome/'>Extensão para Chrome</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/praticas/css/'>CSS</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/praticas/javascript/'>Javascript</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/contribua/'>Contribua</a></li>
     </ul>
   </nav>
 </aside>
@@ -81,11 +82,23 @@
 <section class="col-md-9">
 
   <div class="doc-intro-content">
-  <h1>Boilerplate</h1>
-  <p>Comece seu projeto por aqui</p>
+  <h1>Comece por aqui</h1>
+  <p>Copie nosso boilerplate com a estrutura inicial</p>
 </div>
 
-  <a href="/locawebstyle/documentacao/exemplos/boilerplate" target="_blank" class="ls-btn" >veja o exemplo</a>
+
+  <p>
+    Para iniciar é simples: o código abaixo representa nosso Boilerplate. É por ele que você começa a montar a estrutura inicial do seu projeto. Ele já tem tudo o que você precisa para rodar o Locaweb Style.
+  </p>
+
+  <ol>
+    <li>Copie o código abaixo.</li>
+    <li>Cole em um arquivo HTML vazio.</li>
+    <li>Abra este arquivo no Browser.</li>
+    <li>Tá feito! Locastyle is flying...</li>
+  </ol>
+
+  <a href="/locawebstyle/documentacao/exemplos/boilerplate" target="_blank" class="ls-btn">veja o exemplo online</a>
   <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
@@ -211,38 +224,47 @@
 123
 124
 125
-126</pre></td><td class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+126
+127
+128
+129
+130
+131
+132
+133</pre></td><td class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">class=</span><span class="s">"ls-theme-green"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Página com a estrutura inicial<span class="nt">&lt;/title&gt;</span>
+
     <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">content=</span><span class="s">"IE=edge,chrome=1"</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, user-scalable=no"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Lista de clientes<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">content=</span><span class="s">""</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"keywords"</span> <span class="na">content=</span><span class="s">""</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/locawebstyle/assets/stylesheets/locastyle.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">content=</span><span class="s">"Insira aqui a descrição da página."</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://assets.locaweb.com.br/locastyle/3.0.0/stylesheets/locastyle.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+
   <span class="nt">&lt;/head&gt;</span>
   <span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-topbar"</span><span class="nt">&gt;</span>
 
-      <span class="c">&lt;!-- Barra de Notificações --&gt;</span>
+      <span class="c">&lt;!-- Notification bar --&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-notification-topbar"</span><span class="nt">&gt;</span>
-        <span class="c">&lt;!-- Links de apoio --&gt;</span>
+        <span class="c">&lt;!-- Link of support/help --&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-alerts-list"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-bell-o"</span> <span class="na">data-counter=</span><span class="s">"5"</span> <span class="na">data-ls-module=</span><span class="s">"topbarCurtain"</span> <span class="na">data-target=</span><span class="s">"#ls-notification-curtain"</span><span class="nt">&gt;&lt;span&gt;</span>Notificações<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-bullhorn"</span> <span class="na">data-ls-module=</span><span class="s">"topbarCurtain"</span> <span class="na">data-target=</span><span class="s">"#ls-help-curtain"</span><span class="nt">&gt;&lt;span&gt;</span>Ajuda<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-question"</span> <span class="na">data-ls-module=</span><span class="s">"topbarCurtain"</span> <span class="na">data-target=</span><span class="s">"#ls-feedback-curtain"</span><span class="nt">&gt;&lt;span&gt;</span>Sugestões<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
 
-        <span class="c">&lt;!-- Dropdown com detalhes da conta de usuário --&gt;</span>
+        <span class="c">&lt;!-- User details --&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"dropdown"</span> <span class="na">class=</span><span class="s">"ls-dropdown ls-user-account"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-user"</span><span class="nt">&gt;</span>
-            Boilerplate
+            Adrianna Chan
             <span class="nt">&lt;small&gt;</span>(lstyle)<span class="nt">&lt;/small&gt;</span>
           <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"ls-dropdown-nav ls-user-menu"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;ul&gt;</span>
-              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>submenu<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Conta<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Logout<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
             <span class="nt">&lt;/ul&gt;</span>
           <span class="nt">&lt;/nav&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
@@ -252,23 +274,28 @@
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ls-show-notifications ls-ico-question"</span><span class="nt">&gt;&lt;/span&gt;</span>
 
       <span class="c">&lt;!-- Nome do produto/marca --&gt;</span>
-      <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"ls-brand-name"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"ls-ico-earth"</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Boilerplate<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
+      <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"ls-brand-name"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"ls-ico-earth"</span> <span class="na">href=</span><span class="s">"/locawebstyle/documentacao/exemplos/boilerplate"</span><span class="nt">&gt;</span>Boilerplate<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 
     <span class="nt">&lt;main</span> <span class="na">class=</span><span class="s">"ls-main "</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"ls-title-intro ls-ico-users"</span><span class="nt">&gt;</span>Boilerplate<span class="nt">&lt;/h1&gt;</span>
-        <span class="nt">&lt;p&gt;</span> Comece por aqui <span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"ls-title-3"</span><span class="nt">&gt;</span> Observação: <span class="nt">&lt;/h2&gt;</span>
-        <span class="nt">&lt;p&gt;</span>Para deixar o fundo cinza, insira essa classe na sua tag HTML .ls-html-nobg <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"ls-title-intro ls-ico-home"</span><span class="nt">&gt;</span>Página inicial<span class="nt">&lt;/h1&gt;</span>
+
+        <span class="nt">&lt;p&gt;</span>Este é nosso boilerplate com a estrutura inicial de um projeto. Você pode <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://locaweb.github.io/locawebstyle/documentacao/exemplos/"</span><span class="nt">&gt;</span>ver exemplos completos neste link<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Confira nossa <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://locaweb.github.io/locawebstyle/documentacao/componentes/"</span><span class="nt">&gt;</span>documentação com os componentes<span class="nt">&lt;/a&gt;</span> que você usar aqui.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;hr&gt;</span>
+        <span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"ls-title-5"</span><span class="nt">&gt;</span>English disclaimer<span class="nt">&lt;/h6&gt;</span>
+        <span class="nt">&lt;p&gt;</span>This is your boilerplate with start structure. You can see <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://locaweb.github.io/locawebstyle/documentacao/exemplos/"</span><span class="nt">&gt;</span>completed examples here<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Check out the docs to <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://locaweb.github.io/locawebstyle/documentacao/componentes/"</span><span class="nt">&gt;</span>see the components that you can use<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/main&gt;</span>
 
     <span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"ls-sidebar"</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- Dropdown com detalhes da conta de usuário --&gt;</span>
+      <span class="c">&lt;!-- Defails of user account --&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"dropdown"</span> <span class="na">class=</span><span class="s">"ls-dropdown ls-user-account"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-user"</span><span class="nt">&gt;</span>
-          Boilerplate
+          Denis Hall
           <span class="nt">&lt;small&gt;</span>(lstyle)<span class="nt">&lt;/small&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"ls-dropdown-nav ls-user-menu"</span><span class="nt">&gt;</span>
@@ -280,7 +307,7 @@
 
       <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"ls-menu"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;ul&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-ico-home"</span><span class="nt">&gt;</span>Página inicial<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-home"</span><span class="nt">&gt;</span>Página inicial<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;/ul&gt;</span>
       <span class="nt">&lt;/nav&gt;</span>
     <span class="nt">&lt;/aside&gt;</span>
@@ -310,7 +337,6 @@
             <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">data-ls-module=</span><span class="s">"dismiss"</span> <span class="na">class=</span><span class="s">"ls-ico-close ls-close-notification"</span><span class="nt">&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;/ul&gt;</span>
-        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"ls-no-notification-message"</span><span class="nt">&gt;</span>Não há notificações.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/nav&gt;</span>
 
       <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"ls-notification-list"</span> <span class="na">id=</span><span class="s">"ls-help-curtain"</span> <span class="na">style=</span><span class="s">"left: 1756px;"</span><span class="nt">&gt;</span>
@@ -333,8 +359,9 @@
       <span class="nt">&lt;/nav&gt;</span>
     <span class="nt">&lt;/aside&gt;</span>
 
+    <span class="c">&lt;!-- We recommended use jQuery 1.10 or up --&gt;</span>
     <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://code.jquery.com/jquery-2.0.3.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/locawebstyle/assets/javascripts/locastyle.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://assets.locaweb.com.br/locastyle/3.0.0/javascripts/locastyle.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 </pre></td></tr></tbody></table>

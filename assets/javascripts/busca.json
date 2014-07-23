@@ -139,6 +139,12 @@
       "path": "documentacao/css/classes-funcionais"
   },
   
+  "documentacao/css/cores-do-tema" :   {
+      "title": "Cores do Tema",
+      "description": "Insira cores no seu projeto.",
+      "path": "documentacao/css/cores-do-tema"
+  },
+  
   "documentacao/css/footer" :   {
       "title": "Footer",
       "description": "Exemplo de footer padrão do Locaweb Style",
@@ -169,10 +175,28 @@
       "path": "documentacao/exemplos/boilerplate"
   },
   
+  "documentacao/exemplos/erro-404" :   {
+      "title": "",
+      "description": "",
+      "path": "documentacao/exemplos/erro-404"
+  },
+  
+  "documentacao/exemplos/erro-500" :   {
+      "title": "",
+      "description": "",
+      "path": "documentacao/exemplos/erro-500"
+  },
+  
   "documentacao/exemplos" :   {
       "title": "Exemplos e modelos",
       "description": "Estas telas são modelos de protótipos com códigos funcionais de telas usando o Locaweb Style.",
       "path": "documentacao/exemplos"
+  },
+  
+  "documentacao/exemplos/login-screen" :   {
+      "title": "Tela de Login",
+      "description": "",
+      "path": "documentacao/exemplos/login-screen"
   },
   
   "documentacao/exemplos/painel1/base" :   {
@@ -301,6 +325,12 @@
       "path": "documentacao/exemplos/painel2/stats"
   },
   
+  "documentacao/exemplos/product-not-hired" :   {
+      "title": "",
+      "description": "",
+      "path": "documentacao/exemplos/product-not-hired"
+  },
+  
   "documentacao/formularios/calendario" :   {
       "title": "Calendário",
       "description": "Calendário e para facilitar a selação de datas",
@@ -404,8 +434,8 @@
   },
   
   "documentacao/introducao/boilerplate" :   {
-      "title": "Boilerplate",
-      "description": "Comece seu projeto por aqui",
+      "title": "Comece por aqui",
+      "description": "Copie nosso boilerplate com a estrutura inicial",
       "path": "documentacao/introducao/boilerplate"
   },
   
@@ -423,7 +453,7 @@
   
   "documentacao/introducao" :   {
       "title": "Informações iniciais",
-      "description": "Saiba detalhes de como ajudar e como usar o Locaweb Style",
+      "description": "Iniciando seu desenvolvimento com Locaweb Style",
       "path": "documentacao/introducao"
   },
   

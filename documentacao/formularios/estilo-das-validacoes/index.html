@@ -31,6 +31,7 @@
   <ul>
     <li><a href="/locawebstyle">Home</a></li>
     <li><a href="/locawebstyle/documentacao/introducao/">Documentação</a></li>
+    <li><a href="/locawebstyle/documentacao/introducao/boilerplate/">Comece por aqui</a></li>
     <li><a href="/locawebstyle/changelog">Changelog</a></li>
     <li><a href="http://locaweb.github.io/locawebstyle-v1/">Documentação V1</a></li>
     <li><a href="http://locaweb.github.io/locawebstyle-v2/">Documentação V2</a></li>
@@ -111,6 +112,21 @@
     <input type="password" name="nome" placeholder="Sua senha" class="ls-field">
     <small class="ls-help-message">Sua senha está errada, mano.</small>
   </label>
+  <label class="ls-label col-md-3 ls-success">
+    <b class="ls-label-text">Comentário</b>
+    <textarea name="" id="" cols="30" rows="5"></textarea>
+    <small class="ls-help-message">Mensagem correta.</small>
+  </label>
+  <label class="ls-label col-md-3 ls-warning">
+    <b class="ls-label-text">Comentário</b>
+    <textarea name="" id="" cols="30" rows="5"></textarea>
+    <small class="ls-help-message">Mensagem de alerta.</small>
+  </label>
+  <label class="ls-label col-md-3 ls-error">
+    <b class="ls-label-text">Comentário</b>
+    <textarea name="" id="" cols="30" rows="5"></textarea>
+    <small class="ls-help-message">Mensage de erro.</small>
+  </label>
 </form>
 
   </div>
@@ -130,7 +146,22 @@
 14
 15
 16
-17</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-horizontal"</span><span class="nt">&gt;</span>
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-horizontal"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3 ls-success"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">class=</span><span class="s">"ls-field"</span><span class="nt">&gt;</span>
@@ -145,6 +176,21 @@
     <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/b&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Sua senha"</span> <span class="na">class=</span><span class="s">"ls-field"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"ls-help-message"</span><span class="nt">&gt;</span>Sua senha está errada, mano.<span class="nt">&lt;/small&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3 ls-success"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Comentário<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">""</span> <span class="na">id=</span><span class="s">""</span> <span class="na">cols=</span><span class="s">"30"</span> <span class="na">rows=</span><span class="s">"5"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"ls-help-message"</span><span class="nt">&gt;</span>Mensagem correta.<span class="nt">&lt;/small&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3 ls-warning"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Comentário<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">""</span> <span class="na">id=</span><span class="s">""</span> <span class="na">cols=</span><span class="s">"30"</span> <span class="na">rows=</span><span class="s">"5"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"ls-help-message"</span><span class="nt">&gt;</span>Mensagem de alerta.<span class="nt">&lt;/small&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3 ls-error"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Comentário<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">""</span> <span class="na">id=</span><span class="s">""</span> <span class="na">cols=</span><span class="s">"30"</span> <span class="na">rows=</span><span class="s">"5"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"ls-help-message"</span><span class="nt">&gt;</span>Mensage de erro.<span class="nt">&lt;/small&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/form&gt;</span>
 </pre></td></tr></tbody></table>
