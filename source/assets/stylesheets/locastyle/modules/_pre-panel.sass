@@ -15,13 +15,13 @@
     .ls-notification-topbar
 
       .ls-alerts-list a
-        color: rgba(85,85,85,.4)
+        +rgba(color, #555,.4)
 
         &.ls-active
           color: #000
 
         &[data-counter]
-          color: rgba(85,85,85,1)
+          +rgba(color, #555,1)
 
           &.ls-active
             color: #000
@@ -35,25 +35,25 @@
           color: #555
 
           small
-            color: rgba(85,85,85,1)
+            +rgba(color, #555,1)
 
           &:before
-            color: rgba(85,85,85,.5)
-            box-shadow: inset 0 0 0 2px rgba(85,85,85,.3)
+            +rgba(color, #555,.5)
+            box-shadow: inset 0 0 0 2px rgba(#555,.3)
 
           &:after
-            border-top-color: rgba(85,85,85,1)
+            +rgba(border-bottom-color, #555,1)
 
         &.ls-active > a:after
           border: 4px solid transparent
-          border-bottom-color: rgba(85,85,85,1)
+          +rgba(border-bottom-color, #555,1)
 
       .ls-user-account
         background-color: #dedede
 
     .ls-ico-menu:before,
     .ls-show-notifications.ls-ico-question:before
-      color: rgba(85,85,85,1)
+      +rgba(color, #555,1)
 
 
 @media (min-width: $screen-sm)

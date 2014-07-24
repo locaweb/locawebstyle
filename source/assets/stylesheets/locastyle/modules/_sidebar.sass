@@ -57,7 +57,7 @@
         display: inline-block
 
     .ls-title-2
-      color: rgba($gray1,.7)
+      +rgba(color, $gray1,.7)
       font-size: .6875rem
       font-weight: normal
       text-transform: uppercase
@@ -74,7 +74,7 @@
     [class*="ls-btn"]
       margin-left: 45px
       background-color: $gray5
-      color: rgba($gray1,.7)
+      +rgba(color, $gray1,.7)
       font-size: .5rem
 
   .ls-area-account + .ls-menu
@@ -92,7 +92,8 @@
 
     li
       list-style: none
-      border-bottom: 1px solid rgba($gray4,.5)
+      border-bottom: 1px solid
+      +rgba(border-bottom-color,$gray4,.5)
 
       &.ls-active > a
         color: #fff
@@ -151,7 +152,7 @@
       &.ls-active
 
         a
-          background-color: rgba($gray4,.5)
+          +rgba(background-color, $gray4,.5)
 
           &:hover,
           &:focus
@@ -283,7 +284,7 @@
           border-top: 1px solid $gray4
 
         .ls-submenu.ls-active a
-          background-color: rgba($gray4,.5)
+          +rgba(background-color, $gray4,.5)
 
       .ls-area-account
         height: 100px
