@@ -31,6 +31,14 @@
     });
   });
 
+  describe("Verificate when notifications exists", function() {
+    describe("when .ls-notifications has exist", function() {
+      it("should add span on .ls-topbar", function() {
+        expect($('.ls-topbar .ls-show-notifications').length).toEqual(1);
+      });
+    });
+  });
+
   describe("Unbind:", function() {
     describe("when unbind is called in module", function() {
       it("should unbind events handled by sidebar module", function() {
