@@ -80,6 +80,7 @@ describe('Popover: ', function() {
     
     it('should not create a popover in small screens', function () {
       locastyle.breakpointClass = 'ls-screen-sm';
+      locastyle.popover.destroyPopover();
       locastyle.popover.init();
       var $popoverTrigger = $('#popoverclick');
       var $popover = $('#ls-popover-' + $popoverTrigger.data('uniqueId'));
