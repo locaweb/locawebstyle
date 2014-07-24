@@ -19,15 +19,16 @@
     .ls-tag-primary
       background-color: $color3
 
-    .ls-background-primary td
-      color: $color3 !important
-      background-color: rgba($color3, .3) !important
+    .ls-background-primary,
+    .ls-table .ls-background-primary td
+      background-color: lighten($color3, 40%)
+      color: $color3
 
     //
     // Topbar
     //
     .ls-topbar
-      background-color: rgba($color3, .95)
+      +rgba(background-color, $color3, .95)
 
     .ls-user-account
       input[type='checkbox']
@@ -47,7 +48,7 @@
         a
           &:hover,
           &:focus
-            background-color: rgba($gray4,.5)
+            +rgba(background-color, $gray4,.5)
 
         li.ls-active:not(.ls-submenu) > a
           background-color: $gray4
@@ -188,12 +189,12 @@
 
       tbody
         tr:hover
-          background-color: rgba($color4, .02)
+          +rgba(background-color, $color4, .02)
         a:not([class*="ls-btn"]),
           color: $color3
 
       &.ls-table-striped tbody tr:hover td
-        background-color: rgba($color4, .02)
+        +rgba(background-color, $color4, .02)
 
 
     //
@@ -201,7 +202,7 @@
     //
     .ls-tabs-nav:not(.in-dropdown)
       li
-        background-color: rgba($color4,0.7)
+        +rgba(background-color, $color4,0.7)
 
         &:hover
           background-color: $color4
