@@ -715,3 +715,28 @@ p code
     position: relative
     overflow: hidden
 
+html body .doc-add-cross-guide
+  position: relative
+  white-space: nowrap
+  margin: 100px 400px 100px 100px !important
+  display: inline-block
+  &:before
+    content: ""
+    border-top: 1px solid red
+    width: 200%
+    height: 0
+    display: block
+    position: absolute
+    top: 50%
+    left: -50%
+  &:after
+    content: ""
+    border-right: 1px solid red
+    width: 0
+    height: 200%
+    display: block
+    position: absolute
+    top: -50%
+    left: 50%
+
+
