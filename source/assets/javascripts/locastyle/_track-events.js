@@ -98,8 +98,8 @@ locastyle.trackEvents = (function() {
   }
 
   function bindClickEvents(element, options){
-    $(element).off("click.ls");
-    $(element).on("click.ls", function () {
+    $(element).off("click.lsTrackEvent");
+    $(element).on("click.lsTrackEvent", function () {
       if(options.type === "collapse"){
         var targetCollapse = $(element).parent().attr("id");
         if($("#" + targetCollapse).hasClass("ls-collapse-open")){
