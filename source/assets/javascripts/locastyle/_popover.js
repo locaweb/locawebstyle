@@ -43,14 +43,25 @@ locastyle.popover = (function() {
     elementData.placement = elementData.placement || config.placement;
     switch (elementData.placement) {
       case 'top':
-        elementData.position.top -=  height;
+        elementData.position.top -=  12;
+        elementData.position.left +=  (width/2 + 4);
+        break;
       case 'right':
-        elementData.position.left += width;
+        elementData.position.top +=  (height/2 -2);
+        elementData.position.left += (width + 12);
+        break;
       case 'bottom':
-        elementData.position.top += height;
+        elementData.position.top += (height + 12);
+        elementData.position.left +=  (width/2 + 4);
+        break;
+      case 'left':
+        elementData.position.top +=  (height/2 -2 );
+        elementData.position.left -= 12;
     }
     elementData.uniqueId = config.uniqueId++;
     $(elementData.container).append(locastyle.templates.popover(elementData));
+    var aa = $('#ls-popover-' + elementData.uniqueId );
+    console.log( aa.css('width') )
     bindActions($elem, elementData);
   }
 
