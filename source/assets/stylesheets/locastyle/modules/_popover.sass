@@ -14,16 +14,16 @@ $colorBorderPop: rgba(0, 0, 0, 0.2)
   display: none
 
   &.ls-popover-top
-    +transform( translateX(-75%) translateY(calc(-100% - 12px)) )
+    +transform( translateX( -50% ) translateY(-100%) )
+  
+  &.ls-popover-bottom
+    +transform( translateX( -50% ) )
 
   &.ls-popover-right
-    +transform( translateX(12px) translateY( calc(-75% + 10px) ) )
-
-  &.ls-popover-bottom
-    +transform( translateX( calc(-30% - 6px) ) translateY(12px) )
+    +transform( translateY( -50% ) )
 
   &.ls-popover-left
-    +transform( translateX( calc(-100% - 12px) ) translateY(calc(-25% - 12px)) )
+    +transform( translateX( -100% ) translateY( -50% ) )
 
   &:after,
   &:before
