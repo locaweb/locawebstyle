@@ -15,7 +15,6 @@ locastyle.popover = (function() {
   }
 
   function init() {
-    destroy();
     if(/sm|xs/.test(locastyle.breakpointClass)){
       $(config.module).attr('data-ls-module', 'modal').removeAttr('data-trigger');
       locastyle.modal.init();
@@ -38,6 +37,7 @@ locastyle.popover = (function() {
     var elementData = $elem.data(),
         width  = $elem.outerWidth(),
         height = $elem.outerHeight();
+    console.log(elementData)
     $elem.data('uniqueId', config.uniqueId);
     elementData.position  = elementData.container ? $elem.position() : $elem.offset() ;
     elementData.container = elementData.container || config.container;
