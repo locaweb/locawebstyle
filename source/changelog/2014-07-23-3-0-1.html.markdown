@@ -20,6 +20,11 @@ layout: changelog-single
   </li>
 
   <li>
+    <label class="ls-tag-success">NEW</label>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/929" target="blank" class="commit-url">#929</a> Exemplo de telas de Erros <a href="http://locaweb.github.io/locawebstyle/documentacao/exemplos/erro-404/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+
+  <li>
     <label class="ls-tag-info">FIX</label>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/970" target="blank" class="commit-url">#970</a> Permitir dois popovers abertos
   </li>
