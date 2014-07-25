@@ -10,47 +10,47 @@ layout: changelog-single
 <ul class="ls-no-list-style ls-no-margin-left">
 
   <li>
-    <label class="ls-tag-success">NEW</label>
+    <span class="ls-tag-success">NEW</span>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/962" target="blank" class="commit-url">#962</a> Adicionado GEM rack-cros
   </li>
 
   <li>
-    <label class="ls-tag-success">NEW</label>
-    &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/933" target="blank" class="commit-url">#933</a> Tela de Login <a href="http://locaweb.github.io/locawebstyle-v2/manual/exemplos/login/" class="ls-btn ls-btn-xs">Exemplo</a>
+    <span class="ls-tag-success">NEW</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/933" target="blank" class="commit-url">#933</a> Tela de Login <a href="http://locaweb.github.io/locawebstyle/documentacao/exemplos/login-screen/" class="ls-btn ls-btn-xs">Exemplo</a>
   </li>
 
   <li>
-    <label class="ls-tag-success">NEW</label>
+    <span class="ls-tag-success">NEW</span>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/929" target="blank" class="commit-url">#929</a> Exemplo de telas de Erros <a href="http://locaweb.github.io/locawebstyle/documentacao/exemplos/erro-404/" class="ls-btn ls-btn-xs">Exemplo</a>
   </li>
 
   <li>
-    <label class="ls-tag-info">FIX</label>
+    <span class="ls-tag-info">FIX</span>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/970" target="blank" class="commit-url">#970</a> Permitir dois popovers abertos
   </li>
 
   <li>
-    <label class="ls-tag-danger">BUG</label>
+    <span class="ls-tag-danger">BUG</span>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/824" target="blank" class="commit-url">#824</a> Página com scroll mesmo quando não tem conteúdo
   </li>
 
   <li>
-    <label class="ls-tag-danger">BUG</label>
+    <span class="ls-tag-danger">BUG</span>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/696" target="blank" class="commit-url">#696</a> Bug no ícone de ordenação
   </li>
 
   <li>
-    <label class="ls-tag-danger">BUG</label>
+    <span class="ls-tag-danger">BUG</span>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/931" target="blank" class="commit-url">#931</a> Erro com as cores do menu quando a página carrega
   </li>
 
   <li>
-    <label class="ls-tag-danger">BUG</label>
+    <span class="ls-tag-danger">BUG</span>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/935" target="blank" class="commit-url">#935</a> Erro dos .ls-board no exemplo de revenda.
   </li>
 
   <li>
-    <label class="ls-tag">REMOVED</label>
+    <span class="ls-tag">REMOVED</span>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/961" target="blank" class="commit-url">#961</a> Disabled profile
   </li>
 
