@@ -60,8 +60,6 @@ locastyle.popover = (function() {
     }
     elementData.uniqueId = config.uniqueId++;
     $(elementData.container).append(locastyle.templates.popover(elementData));
-    var aa = $('#ls-popover-' + elementData.uniqueId );
-    console.log( aa.css('width') )
     bindActions($elem, elementData);
   }
 
