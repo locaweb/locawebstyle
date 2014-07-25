@@ -27,7 +27,7 @@
     @extend .ls-sm-space
 
   .ls-small-info
-    font-size: .75rem
+    font-size: remtopx(.75)
     color: $gray3
     margin: 0
     padding: 0
@@ -39,7 +39,7 @@
     &:before
       float: left
       vertical-align: top
-      font-size: 6rem
+      font-size: remtopx(6)
       margin: 0 20px
 
 [class*="ls-title"] + .ls-box
@@ -61,7 +61,7 @@
 
   p
     padding: 0 0 20px
-    font-size: 1rem
+    font-size: remtopx(1)
 
 .ls-ico-bg:before
   @extend .ls-color-theme
@@ -69,7 +69,7 @@
   position: absolute
   top: -25%
   right: 30px
-  font-size: 17rem !important
+  font-size: remtopx(17) !important
 
 .ls-box-error
   border: none
