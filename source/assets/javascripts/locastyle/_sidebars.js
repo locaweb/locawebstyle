@@ -37,16 +37,13 @@ locastyle.sidebars = (function() {
   }
 
   function userAccountVerification() {
-    var userAccount = $('.ls-sidebar .ls-area-account').length
-    if(userAccount === 1){
+    if($('.ls-sidebar .ls-area-account').length === 1){
       $('.ls-sidebar').addClass('ls-area-account-active')
     }
   }
 
   function notificationVerification() {
-    var notificationBar = $('.ls-notification');
-
-    if(notificationBar.length === 1){
+    if($('.ls-notification').length === 1){
       $('.ls-topbar').append('<span class="ls-show-notifications ls-ico-question"/>')
     }
   }
