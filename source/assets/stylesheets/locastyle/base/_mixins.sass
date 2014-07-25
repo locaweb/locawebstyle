@@ -1,5 +1,11 @@
 //
-// Keyframe
+// Convert REM to PX. Just because IE8-
+//
+@function remtopx($size)
+  @return ($size * 16) + px
+
+//
+// Keyframes
 //
 =keyframes($animation-name)
   @-webkit-keyframes #{$animation-name}
