@@ -193,7 +193,7 @@
       color: #fff
       font-size: remtopx(4.5)
 
-@media (min-width: $screen-sm)
+@media screen and (min-width: $screen-sm)
   .ls-sidebar
     +transform(none)
     +translate(0, 0)
@@ -212,13 +212,13 @@
     .ls-user-account
       display: none
 
-@media (max-width: $screen-sm)
+@media screen and (max-width: $screen-sm)
   .ls-sidebar .ls-user-account + .ls-ico-user + .ls-menu,
   .ls-sidebar .ls-user-account + .ls-menu
     margin-top: $heightTopbar
 
 // Micro menu in middle screen, tablets and 1024 resolution
-@media (min-width: $screen-sm) and (max-width: $screen-lg)
+@media screen and (min-width: $screen-sm) and (max-width: $screen-lg)
   .ls-sidebar
     width: 60px
     overflow: hidden
