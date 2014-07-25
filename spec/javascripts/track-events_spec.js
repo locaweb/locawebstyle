@@ -28,7 +28,7 @@ describe("Track Events: ", function() {
           label: "Open link sample"
         }
         spyOn(window, "ga");
-        $("#open_links #home_menu_sample").trigger("click.ls");
+        $("#open_links #home_menu_sample").trigger("click.lsTrackEvent");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });
@@ -38,7 +38,7 @@ describe("Track Events: ", function() {
         spyOn(window, "ga");
         locastyle.trackEvents.init();
         locastyle.trackEvents.init();
-        $("#open_links #home_menu_sample").trigger("click.ls");
+        $("#open_links #home_menu_sample").trigger("click.lsTrackEvent");
         expect(window.ga.calls.count()).toEqual(1);
       });
     });
@@ -51,7 +51,7 @@ describe("Track Events: ", function() {
           label: "my_custom_label"
         }
         spyOn(window, "ga");
-        $("#open_links #link_with_options").trigger("click.ls");
+        $("#open_links #link_with_options").trigger("click.lsTrackEvent");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });
@@ -66,7 +66,7 @@ describe("Track Events: ", function() {
           label: "my_custom_label"
         }
         spyOn(window, "ga");
-        $("#open_links #link_with_options").trigger("click.ls");
+        $("#open_links #link_with_options").trigger("click.lsTrackEvent");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });
@@ -109,7 +109,7 @@ describe("Track Events: ", function() {
           label: "On page button"
         }
         spyOn(window, "ga");
-        $("#on_page_buttons #common_on_page_button").trigger("click.ls");
+        $("#on_page_buttons #common_on_page_button").trigger("click.lsTrackEvent");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });
@@ -122,7 +122,7 @@ describe("Track Events: ", function() {
           label: "my_custom_label"
         }
         spyOn(window, "ga");
-        $("#on_page_buttons #on_page_button_with_cutom_args").trigger("click.ls");
+        $("#on_page_buttons #on_page_button_with_cutom_args").trigger("click.lsTrackEvent");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });
@@ -135,7 +135,7 @@ describe("Track Events: ", function() {
           label: "On page button"
         }
         spyOn(window, "ga");
-        $("#on_page_buttons #common_on_page_button").trigger("click.ls");
+        $("#on_page_buttons #common_on_page_button").trigger("click.lsTrackEvent");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });
@@ -270,6 +270,19 @@ describe("Track Events: ", function() {
         }
         spyOn(window, "ga");
         $("#opened_modal_test #close_modal_sample_by_button").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
+    describe("When sending a form inside a modal", function () {
+      it("should call ga with expected options as params", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "submit_form_#modalSample#inside_modal#myAwesomeModal",
+          label: "Save changes"
+        }
+        spyOn(window, "ga");
+        $("#modalSample #submitModalSample").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });

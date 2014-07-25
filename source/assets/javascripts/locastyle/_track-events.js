@@ -31,8 +31,10 @@ locastyle.trackEvents = (function() {
       var options = {}
       options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'open_link_#' + $(item).attr("href");
       options.label = $(item).data("ls-te-label") ? $(item).data("ls-te-label") : $(item).text();
-      if($(item).attr("href").indexOf("#") === 0) {
-        options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'on_page_link_' + $(item).attr("href");
+      if($(item).attr("href")) {
+        if($(item).attr("href").indexOf("#") === 0) {
+          options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'on_page_link_' + $(item).attr("href");
+        }
       }
       if($(item).attr("data-ls-module") === "tabs"){
         options.action = 'tab_navigation';
@@ -81,8 +83,12 @@ locastyle.trackEvents = (function() {
     var forms = $("form");
     $(forms).each(function (index, item) {
       var options = {};
-      options.action = "submit_form_#" + ($(item).data("action") || $(item).attr("id") || $(item).attr("action"));
-      options.label = $(item).find(":submit[type=submit]").val();
+      if($(item).parents('.ls-modal').length) {
+        options.action = "submit_form_#" + ($(item).data("action") || $(item).attr("id") || $(item).attr("action")) + "#inside_modal#" + $(item).parents('.ls-modal').attr("id");
+      } else {
+        options.action = "submit_form_#" + ($(item).data("action") || $(item).attr("id") || $(item).attr("action"));
+      }
+      options.label = $(item).find(":submit[type=submit]").val() || $(item).find(":submit[type=submit]").text();
       bindFormEvents(item, options);
     });
   }
@@ -98,8 +104,8 @@ locastyle.trackEvents = (function() {
   }
 
   function bindClickEvents(element, options){
-    $(element).off("click.ls");
-    $(element).on("click.ls", function () {
+    $(element).off("click.lsTrackEvent");
+    $(element).on("click.lsTrackEvent", function () {
       if(options.type === "collapse"){
         var targetCollapse = $(element).parent().attr("id");
         if($("#" + targetCollapse).hasClass("ls-collapse-open")){
@@ -107,7 +113,7 @@ locastyle.trackEvents = (function() {
           options.label = "Close collapse"
         } else {
           options.action = 'open_collapse_#' + targetCollapse;
-          options.label = "Open collapse"
+          options.label = "Open collapse";
         }
       }
       ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
@@ -115,6 +121,7 @@ locastyle.trackEvents = (function() {
   }
 
   function bindFormEvents(element, options) {
+    $(element).find(":submit[type=submit]").off("click.lsTrackEvent");
     $(element).off("submit.ls");
     $(element).on("submit.ls", function () {
       ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
