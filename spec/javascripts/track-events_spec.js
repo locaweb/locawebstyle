@@ -273,6 +273,19 @@ describe("Track Events: ", function() {
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
       });
     });
+
+    describe("When sending a form inside a modal", function () {
+      it("should call ga with expected options as params", function () {
+        var expectedOptions = {
+          category: "locastyle#track-events-test",
+          action: "submit_form_#modalSample#inside_modal#myAwesomeModal",
+          label: "Save changes"
+        }
+        spyOn(window, "ga");
+        $("#modalSample #submitModalSample").trigger("click");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
   });
 
   describe("Collapses", function () {

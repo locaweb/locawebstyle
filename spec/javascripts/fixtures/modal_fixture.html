@@ -4,19 +4,21 @@
 
 <div id="myModalClosed">
   <div class="ls-modal fade" id="myAwesomeModal">
-    <div class="ls-modal-box">
-      <div class="ls-modal-header">
-        <button type="button" data-dismiss="modal" class="close">&times;</button>
-        <h4 class="ls-modal-title">Modal title</h4>
+    <form action="#no-action" class="ls-form" id="modalSample">
+      <div class="ls-modal-box">
+        <div class="ls-modal-header">
+          <button type="button" data-dismiss="modal" class="close">&times;</button>
+          <h4 class="ls-modal-title">Modal title</h4>
+        </div>
+        <div class="ls-modal-body">
+          <p>Body</p>
+        </div>
+        <div class="ls-modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button id="submitModalSample" type="submit" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
-      <div class="ls-modal-body">
-        <p>Body</p>
-      </div>
-      <div class="ls-modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
+    </form>
   </div><!-- /.modal -->
 </div>
 

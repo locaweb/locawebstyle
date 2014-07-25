@@ -83,8 +83,12 @@ locastyle.trackEvents = (function() {
     var forms = $("form");
     $(forms).each(function (index, item) {
       var options = {};
-      options.action = "submit_form_#" + ($(item).data("action") || $(item).attr("id") || $(item).attr("action"));
-      options.label = $(item).find(":submit[type=submit]").val();
+      if($(item).parents('.ls-modal').length) {
+        options.action = "submit_form_#" + ($(item).data("action") || $(item).attr("id") || $(item).attr("action")) + "#inside_modal#" + $(item).parents('.ls-modal').attr("id");
+      } else {
+        options.action = "submit_form_#" + ($(item).data("action") || $(item).attr("id") || $(item).attr("action"));
+      }
+      options.label = $(item).find(":submit[type=submit]").val() || $(item).find(":submit[type=submit]").text();
       bindFormEvents(item, options);
     });
   }
@@ -109,7 +113,7 @@ locastyle.trackEvents = (function() {
           options.label = "Close collapse"
         } else {
           options.action = 'open_collapse_#' + targetCollapse;
-          options.label = "Open collapse"
+          options.label = "Open collapse";
         }
       }
       ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
@@ -117,6 +121,7 @@ locastyle.trackEvents = (function() {
   }
 
   function bindFormEvents(element, options) {
+    $(element).find(":submit[type=submit]").off("click.lsTrackEvent");
     $(element).off("submit.ls");
     $(element).on("submit.ls", function () {
       ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
