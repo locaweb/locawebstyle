@@ -44,7 +44,9 @@ locastyle.sidebars = (function() {
 
   function notificationVerification() {
     if($('.ls-notification').length === 1){
-      $('.ls-topbar').append('<span class="ls-show-notifications ls-ico-question"/>')
+      if($('.ls-show-notifications').length === 0){
+        $('.ls-topbar').append('<span class="ls-show-notifications ls-ico-question"/>')
+      }
     }
   }
 
