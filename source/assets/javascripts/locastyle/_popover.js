@@ -3,209 +3,112 @@ var locastyle = locastyle || {};
 locastyle.popover = (function() {
   'use strict';
 
-  // Defaults
-  var defaults = {
-    trigger      : 'click.ls',
-    popoverClass : '.ls-popover',
+  var config = {
+    container    : 'body',
+    hoverEvent   : 'mouseenter.ls.popover',
+    idPopover    : '#ls-popover-',
     module       : '[data-ls-module="popover"]',
-    openAttr         : '[data-ls-popover="open"]'
+    placement    : 'top',
+    trigger      : 'click.ls.popover',
+    popoverClass : 'ls-popover',
+    uniqueId     : 0
   }
 
   function init() {
-    destroyPopover();
-    bindBreakpointUpdate();
-    changeModuleName();
-
-    $(defaults.module).each(function(index, element) {
-      var dataTrigger = $(element).data("trigger");
-      var eventType = (dataTrigger == 'hover' ? 'mouseenter.ls' : defaults.trigger);
-      bindAction({
-        'element'  : element,
-        'eventType': eventType
-      });
-      $(this).data('lsPopover') && $(this).trigger(defaults.trigger);
-    });
-  }
-
-  // Adiciona o bind de breakpoint-updated
-  function bindBreakpointUpdate() {
-    $(document).off("breakpoint-updated");
-    $(document).on("breakpoint-updated", function () {
-      changeModuleName();
-    })
-  }
-
-  // Esse método é usado quando existir um popover em dispositivos móveis.
-  function changeModuleName(){
-    if(locastyle.breakpointClass == "ls-screen-sm" || locastyle.breakpointClass == "ls-screen-xs"){
-      $(defaults.module).attr('data-ls-module', 'modal').removeAttr('data-trigger');
+    if(/sm|xs/.test(locastyle.breakpointClass)){
+      $(config.module).attr('data-ls-module', 'modal').removeAttr('data-trigger');
       locastyle.modal.init();
+    } else{
+      $(config.module).each(function  (index, elem) {
+        createPopover($(elem));
+      });
     }
+    updateBreakpoint();
   }
 
-  function bindAction(elementActions) {
-    var element   = elementActions.element;
-    var eventType = elementActions.eventType;
-
-    //unbind before binding an event
-    eventType.split(' ').map(function(eventItem){
-      $(element).off( eventItem );
+  function updateBreakpoint (argument) {
+    $(window).on("breakpoint-updated", function () {
+      destroy();
+      init();
     });
-
-    $(element).on(eventType, function(evt) {
-      destroyPopover();
-      evt.preventDefault();
-      evt.stopPropagation();
-      var elementData = $(element).data();
-      elementData.container = elementData.container || 'body';
-      elementData.placement = elementData.placement || 'top';
-      elementData.element   = element;
-      build(elementData, element);
-    });
-    if (eventType === 'mouseenter.ls') {
-      //unbind before binding an event
-      $(element).off('mouseleave.ls');
-
-      $(element).on('mouseleave.ls', function() {
-        destroyPopover();
-      })
-    }
   }
 
-  // Create a popover
-  function build(elementData, element) {
-    // Return template popover
+  function createPopover ($elem) {
+    var elementData = $elem.data(),
+        width  = $elem.outerWidth(),
+        height = $elem.outerHeight();
+    $elem.data('uniqueId', config.uniqueId);
+    elementData.position  = elementData.container ? $elem.position() : $elem.offset() ;
+    elementData.container = elementData.container || config.container;
+    elementData.placement = elementData.placement || config.placement;
+    switch (elementData.placement) {
+      case 'top':
+        elementData.position.top -=  12;
+        elementData.position.left +=  (width/2 + 4);
+        break;
+      case 'right':
+        elementData.position.top +=  (height/2 -2);
+        elementData.position.left += (width + 12);
+        break;
+      case 'bottom':
+        elementData.position.top += (height + 12);
+        elementData.position.left +=  (width/2 + 4);
+        break;
+      case 'left':
+        elementData.position.top +=  (height/2 -2 );
+        elementData.position.left -= 12;
+    }
+    elementData.uniqueId = config.uniqueId++;
     $(elementData.container).append(locastyle.templates.popover(elementData));
-
-    unbindPopoverTrigger(element);
-    getTriggerPosition(elementData);
+    var aa = $('#ls-popover-' + elementData.uniqueId );
+    console.log( aa.css('width') )
+    bindActions($elem, elementData);
   }
 
-  function getTriggerPosition(elementData) {
-    var left, top, leftPlacement, setSide, setTop, topPlacement;
-    var element         = elementData.element;
-    var placement       = elementData.placement;
-    var container       = elementData.container;
-    var elementWidth    = $(element).outerWidth();
-    var elementHeight   = $(element).outerHeight();
-    var elementOffset   = $(element).offset();
-    var elementPosition = $(element).position();
-
-    if (container == 'body') {
-      top  = elementOffset.top;
-      left = elementOffset.left;
+  function bindActions ($elem, elementData) {
+    var trigger = elementData.trigger == 'hover' ? config.hoverEvent : config.trigger,
+        $popover = $(config.idPopover + elementData.uniqueId);
+    if(trigger === config.hoverEvent){
+      $elem.on({
+        mouseenter: function (event) {
+          event.preventDefault();
+          $popover.stop().show();
+        },
+        mouseleave: function (event) {
+          event.preventDefault();
+          $popover.stop().hide();
+        }
+      });
     } else {
-      top  = elementPosition.top;
-      left = elementPosition.left;
-    }
-
-    var setSide = left;
-    var setTop  = top;
-
-    if(placement == 'top'){
-      topPlacement = true;
-      setTop       = top;
-    }
-
-    if (placement == 'bottom') {
-      setTop = (top + elementHeight);
-    }
-
-    if (placement == 'left') {
-      leftPlacement = true;
-      setSide       = left;
-    }
-
-    if (placement == 'right') {
-      setSide = (left + elementWidth);
-    }
-
-    setPopoverPosition({
-      'setTop'       : setTop,
-      'placement'    : placement,
-      'setSide'      : setSide,
-      'leftPlacement': leftPlacement,
-      'topPlacement' : topPlacement,
-      'elementWidth' : elementWidth,
-      'elementHeight': elementHeight
-    });
-  }
-
-  function setPopoverPosition(popoverPosition) {
-
-    var positionWithTop  = (popoverPosition.setTop - $(defaults.popoverClass).height() / 2 + popoverPosition.elementHeight / 2);
-    var positionWithLeft = (parseInt(popoverPosition.setSide) - $(defaults.popoverClass).width() / 2 + popoverPosition.elementWidth / 2 + 10);
-
-    var _default = {
-      top: {
-        css: 'top',
-        value: positionWithTop,
-        adjust: {
-          'left': positionWithLeft
-        },
-        add: {
-          'top':( popoverPosition.setTop - $(defaults.popoverClass).height())
+      $elem.on({
+        click: function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+          $popover.stop().toggle();
         }
-      },
-      right: {
-        css: 'left',
-        value:( popoverPosition.setSide),
-        adjust: {
-          'top': positionWithTop
+      });
+      $(document).on('click', function (event) {
+        var element = event.toElement;
+        if(!$(element).parents().hasClass( config.popoverClass )){
+         $('.' + config.popoverClass).hide();
         }
-      },
-      bottom: {
-        css: 'top',
-        value:( popoverPosition.setTop),
-        adjust: {
-          'left': positionWithLeft
-        }
-      },
-      left: {
-        css: 'left',
-        value:( popoverPosition.setSide - $(defaults.popoverClass).width()),
-        adjust: {
-          'top': positionWithTop
-        },
-        add: {
-          'left':( popoverPosition.setSide - $(defaults.popoverClass).width()),
-          'top': positionWithTop
-        }
-      }
-    }
-
-    $(defaults.popoverClass)
-      .css(_default[popoverPosition.placement].css, _default[popoverPosition.placement].value)
-      .css(_default[popoverPosition.placement].adjust);
-    if (_default[popoverPosition.placement].add) {
-      $(defaults.popoverClass).css(_default[popoverPosition.placement].add);
-    }
-  }
-
-  function unbindPopoverTrigger(element) {
-    if ($(defaults.popoverClass).is(":visible")) {
-      $(element).on('click.ls', function() {
-        init();
       })
-    }
+    }    
   }
 
-  function destroyPopover() {
-    $(defaults.popoverClass).remove();
-
-    // Fecha o popover se clicar fora dele
-    $('html').on('click.ls', function(event){
-      var element = event.toElement;
-      if(!$(element).parents().hasClass('ls-popover')){
-       $(defaults.popoverClass).remove();
-      }
-    })
-
+  function destroy() {
+    $('.' + config.popoverClass).remove();
+    $(config.module).each(function  (index, elem) {
+      $(elem)
+        .removeData('uniqueId')
+        .off(config.hoverEvent)
+        .off(config.trigger);
+    });
   }
 
   return {
     init: init,
-    destroyPopover: destroyPopover
+    destroyPopover: destroy
   }
 
 }());
