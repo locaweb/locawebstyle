@@ -1,0 +1,33 @@
+---
+title: Classes de breakpoints
+description: Classes que representam o breakpoint atual
+type: css
+---
+
+<%= partial 'partials/doc-menu-css'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <p>Após a iniciação do Locastyle, uma função adiciona classes na tag <code>html</code> referentes a largura do viewport.</p>
+
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>.ls-screen-xs</td><td>Se for menor que 768px</td></tr>
+      <tr><td>.ls-screen-sm</td><td>Se for maior ou igual a 768px e menor que 992px</td></tr>
+      <tr><td>.ls-screen-md</td><td>Se for maior ou igual a 992px e menor que 1200px</td></tr>
+      <tr><td>.ls-screen-lg</td><td>Se for maior ou igual a 1200px</td></tr>
+    </tbody>
+  </table>
+
+  <p>Note que você também pode resgatar a classe através da seguinte função de javascript:</p>
+  <% code("js") do %> locastyle.breakpointClass<% end %>
+</section>
