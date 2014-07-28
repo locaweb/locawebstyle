@@ -1,79 +1,101 @@
-describe("Popover: ", function() {
+describe('Popover: ', function() {
+    
   beforeEach(function() {
-    loadFixtures('popover_fixture.html');
-    locastyle.popover.init();
+      loadFixtures('popover_fixture.html');
+      locastyle.popover.init();
   });
-
+  
   afterEach(function() {
-    locastyle.popover.destroyPopover();
+      locastyle.popover.destroyPopover();
   });
+    
+    
+  describe('Popover creation', function() {
 
-
-  describe("Popover creation", function() {
-
-    it("Should create a popover on click event", function() {
-      pending();
-      // Added as pending because the tests broke while I was testing other functionality
-      $('#popoverclick[data-ls-module="popover"]').trigger("click");
-      expect($(".ls-popover")).toBeVisible();
-    });
-
-    it("Should create a popover on hover event", function() {
-      pending();
-      // Added as pending because the tests broke while I was testing other functionality
-      $('[data-ls-module="popover"]').trigger("mouseenter");
-      expect($(".ls-popover")).toBeVisible();
+    it('Should create one popover for each trigger', function() {
+      var elems     = document.querySelectorAll('[data-ls-module="popover"]').length;
+      var popovers = document.querySelectorAll('.ls-popover').length;
+      expect(elems).toEqual(popovers)
     });
 
   });
 
-  describe("After popover created", function() {
+  describe('Popover behavior', function() {
+    pending();
 
-    it("Should remove popover on click event", function() {
-      $('[data-ls-module="popover"]').trigger("click");
-      expect($("#mypopovervisible .ls-popover")).not.toExist();
+    it('Should show a popover on click event', function() {
+      var $popoverTrigger = $('#popoverclick');
+      var $popover = $('.ls-popover');
+      $popover.hide();
+      $popoverTrigger.trigger('click');
+      var display = document.getElementsByClassName('ls-popover')[0].style.display
+      expect( display  ).toEqual('block')
     });
 
-    it("Should remove popover on mouseleave of element", function() {
-      $('[data-ls-module="popover"]').trigger("mouseleave");
-      expect($("#mypopovervisible .ls-popover")).not.toExist();
+    it('Should show and close a popover on repeated click events', function() {
+      var $popoverTrigger = $('#popoverclick');
+      var $popover = $('.ls-popover');
+      $popover.hide();
+      $popoverTrigger.trigger('click');
+      $popoverTrigger.trigger('click');
+      expect( $popover.eq(0).css('display')  ).toEqual('none')
     });
 
-    it("should open popover when event ls.popoverOpen is triggered", function() {
-      pending();
-      $('#popoverclick[data-ls-module="popover"]').trigger("click");
-      expect($(".ls-popover")).toBeVisible();
+    it('Should show a popover on hover event', function() {
+      var $popoverTrigger = $('#popoverhover');
+      var $popover = $('.ls-popover');
+      $popover.hide();
+      $popoverTrigger.trigger('mouseenter');
+      expect( $popover.eq(2).css('display')  ).toEqual('block')
+    });
+
+    it('Should show and close a popover on repeated hover events', function() {
+      var $popoverTrigger = $('#popoverhover');
+      var $popover = $('.ls-popover');
+      $popover.hide();
+      $popoverTrigger.trigger('mouseenter');
+      $popoverTrigger.trigger('mouseleave');
+      expect( $popover.eq(2).css('display')  ).toEqual('none')
     });
 
   });
 
-  describe("[unbind] When init is called multiple times", function () {
-    it("should bind events on popover elements only one time", function () {
-      pending();
-      locastyle.init();
-      locastyle.init();
-      locastyle.init();
+  describe('[unbind] When init is called multiple times', function () {
 
-      // clean prevent default events
-      $("a").off("click.lsPreventDefault");
-
-      expect($("[data-ls-module='popover']")).toHaveBeenBindedOnce("click");
+    it('should bind events on popover elements only one time', function () {
+      locastyle.init();
+      locastyle.init();
+      locastyle.init();
+      var $popoverTrigger = $('#popoverclick');
+      var $popover = $('#ls-popover-' + $popoverTrigger.data('uniqueId'));
+      $popover.hide();
+      $popoverTrigger.trigger('click');
+      $popoverTrigger.trigger('click');
+      expect( $popover ).not.toBeVisible();
     });
 
-    it("should bind events on popover elements only one time", function () {
-      pending();
-      locastyle.init();
+  });
+
+  describe('change component on small screens', function () {
+    
+    it('should not create a popover in small screens', function () {
+      locastyle.breakpointClass = 'ls-screen-sm';
+      locastyle.popover.destroyPopover();
       locastyle.popover.init();
-      locastyle.popover.init();
-      expect($("#mouseenterbinded")).toHaveBeenBindedOnce("mouseout");
+      var $popoverTrigger = $('#popoverclick');
+      var $popover = $('#ls-popover-' + $popoverTrigger.data('uniqueId'));
+      expect( $popover[0] ).toBeUndefined();
     });
 
-    it("should bind events for breakpoint only one time", function () {
-      locastyle.init();
+    it('should open popover as modal in small screens', function () {
+      locastyle.breakpointClass = 'ls-screen-sm';
       locastyle.popover.init();
-      locastyle.popover.init();
-      expect($(document)).toHaveBeenBindedOnce("breakpoint-updated");
+      var $popoverTrigger = $('#popoverclick');
+      
+      
+      expect( $('.ls-modal')[0] ).not.toBeUndefined();
     });
+
   });
 
 });

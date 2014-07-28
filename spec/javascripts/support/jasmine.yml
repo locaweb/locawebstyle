@@ -45,7 +45,6 @@ src_files:
 #   - stylesheets/*.css
 #
 stylesheets:
-  - source/assets/stylesheets/locastyle.css
 
 # helpers
 #

@@ -39,6 +39,6 @@ var locastyle = (function() {
 
 var ls = locastyle;
 
-$(document).ready(function() {
+$(window).load(function() {
   locastyle.init();
 });
