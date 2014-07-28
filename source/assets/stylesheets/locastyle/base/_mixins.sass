@@ -29,13 +29,13 @@
   -ms-animation: #{$str}
   animation: #{$str}
 
-
 //
 // RGBA in properties
 //
-=rgba($property, $color, $alpha)
-  #{$property}: $color
-  #{$property}: rgba($color, $alpha )
+=rgba($property, $color, $alpha: 1)
+  #{$property}: rgb(red($color), green($color), blue($color))
+  @if $alpha < 1
+    #{$property}: rgba($color, $alpha )
 
 //
 // Adiciona bordas arredondadas em ícones.
