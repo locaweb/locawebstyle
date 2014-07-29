@@ -120,7 +120,6 @@ locastyle.popover = (function() {
     if($popover){
       var $remPopover = $popover;
     }else{
-      console.log('b')
       var $remPopover = $('.' + config.popoverClass);
     }
     $remPopover.remove();
