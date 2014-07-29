@@ -14,4 +14,12 @@ description: Calendário e para facilitar a selação de datas
   </div>
   <% code("html") do %><%= partial 'documentacao/shared/form/form-calendar.erb' %><% end %>
 
+  <p>Utilizamos o plugin <a href="https://github.com/dbushell/Pikaday" target="_blank">Pikaday</a> para o calendário, configurado para <b>pt-BR</b>.</p>
+
+  <p>Todos os métodos do plugin podem ser utilizados normalmente, conforme sua documentação, e adicionamos dois métodos/atalhos para iniciar o calendário com as configurações que utilizamos no <i>LocawebStyle</i>:</p>
+  <p>Inicia o calendário no padrão <i>Locawebstyle</i></p>
+  <% code("javascript") do %>$('#elemento').lsDatepicker()<% end %>
+  <p>Remove o calendário:</p>
+  <% code("javascript") do %>$('#elemento').lsDatepicker('destroy')<% end %>
+
 </section>
