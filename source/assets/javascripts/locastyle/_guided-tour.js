@@ -29,7 +29,7 @@ locastyle.guidedTour = (function() {
 
 	function setTour(tour){
 		jsonTour = tour;
-		$(config.selectors.init).on({click: initTour});
+		$(config.selectors.init).on({click: initTour})
 	}
 
 	function openWelcomeTour(event){
