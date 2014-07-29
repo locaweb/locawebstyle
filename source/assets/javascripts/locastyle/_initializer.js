@@ -16,7 +16,7 @@ var locastyle = (function() {
     for (var i in modules) {
       locastyle[modules[i]].init();
       // I know it is a console.log, let it to be here for a while
-      console.log("Locastyle: module [" + modules[i] + "] successfully initialized.")
+      console.log("Locastyle: module [" + modules[i] + "] successfully initialized.");
     }
   }
 
@@ -27,7 +27,7 @@ var locastyle = (function() {
       if ( !( modules.indexOf(module) > -1 ) ) {
         modules.push(module);
       }
-    })
+    });
     return modules;
   }
 
