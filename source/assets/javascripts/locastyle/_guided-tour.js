@@ -62,7 +62,7 @@ locastyle.guidedTour = (function() {
 	}
 
 	function setCookie(){
-		if($.cookie("cookie_tour") != "true"){
+		if($.cookie("cookie_tour") !== "true"){
 			$(config.selectors.tour).trigger('click');
       $(config.selectors.init).focus().attr('tabindex', '-1');
 			$.cookie('cookie_tour', "true");

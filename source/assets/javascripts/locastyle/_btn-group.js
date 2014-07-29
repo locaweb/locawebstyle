@@ -22,7 +22,7 @@ locastyle.btnGroup = (function() {
 
   // verifica se o breakpoint é para mobile, se for faz a ação para agrupar
   function checkBreakpoint() {
-    if(locastyle.breakpointClass == "ls-screen-sm" || locastyle.breakpointClass == "ls-screen-xs"){
+    if(locastyle.breakpointClass === "ls-screen-sm" || locastyle.breakpointClass === "ls-screen-xs"){
       $(".ls-regroup").each(function (index, $element) {
         group($($element).find('a, button'));
       });
