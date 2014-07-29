@@ -21,6 +21,7 @@ locastyle.collapse = (function() {
   };
 
   function init() {
+    plugin();
     $(config.selectors.container).each(function(i, collapse) {
       var $collapse = $(this);
       bindHeader($collapse);
@@ -28,10 +29,34 @@ locastyle.collapse = (function() {
     bindButton();
   }
 
+  function plugin(){
+    $.fn.lsCollapse = function(action) {
+      if(action === 'toggle'){
+        toggle(this);
+      }
+      if(action === 'open'){
+        toggle(this, true);
+      }
+      if(action === 'close'){
+        toggle(this, false);
+      }
+      if(action === 'destroy'){
+        destroy(this);
+      }
+    };
+  }
+
+  function destroy($collapse){
+    var $input = $(config.selectors.trigger, $collapse).find('input[type="radio"], input[type="checkbox"]');
+    if($input[0]){
+      $input.off('change.ls');
+    }else{
+      $(config.selectors.trigger, $collapse).off('click.ls');
+    }
+  }
+
   function bindButton() {
-    // unbind
-    $('[data-toggle-collapse]').off('click.ls'); // <- unbind
-    $('[data-toggle-collapse]').on('click.ls', function(evt) {
+    $('[data-toggle-collapse]').off('click.ls').on('click.ls', function(evt) {
       evt.preventDefault();
       evt.stopPropagation();
       var id = $(this).data('toggle-collapse');
@@ -53,8 +78,7 @@ locastyle.collapse = (function() {
           });
         }).trigger('change.ls');
       } else {
-        $(config.selectors.trigger, $collapse).off('click.ls'); // <- unbind
-        $(config.selectors.trigger, $collapse).on('click.ls', function(evt) {
+        $(config.selectors.trigger, $collapse).off('click.ls').on('click.ls', function(evt) {
           evt.preventDefault();
           toggle($collapse);
         });
@@ -62,16 +86,17 @@ locastyle.collapse = (function() {
     }
   }
 
-  function toggle($collapse) {
+  function toggle($collapse, open) {
     $collapse = $collapse instanceof $ ? $collapse : $($collapse);
     var $group = $collapse.parents(config.selectors.groupContainer);
     if ($group[0]) {
       $group.find(config.selectors.container).not($collapse).removeClass(config.classes.open).find(config.selectors.content).slideUp();
     }
-    $collapse.toggleClass(config.classes.open);
-    // $collapse.find(config.selectors.content).slideToggle(300, 'linear', function(){
-    //   $collapse.toggleClass(config.classes.open);
-    // });
+    if(open !== undefined){
+      $collapse.toggleClass(config.classes.open, open);
+    } else{
+      $collapse.toggleClass(config.classes.open);
+    }
     return $collapse;
   }
 
