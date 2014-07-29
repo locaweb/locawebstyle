@@ -24,6 +24,28 @@ locastyle.popover = (function() {
       });
     }
     updateBreakpoint();
+    plugin();
+  }
+
+  function plugin () {
+    $.fn.lsPopover = function(action){
+      if(action === undefined){
+        createPopover(this);
+      }
+      else{
+        var elementData = this.data(),
+        $popover = $(config.idPopover + elementData.uniqueId);
+        if(action === 'show'){
+          $popover.show();
+        }
+        if(action === 'hide'){
+          $popover.hide();
+        }
+        if(action === 'destroy'){
+          destroy(this, $popover)
+        }
+      }
+    }
   }
 
   function updateBreakpoint (argument) {
@@ -94,9 +116,20 @@ locastyle.popover = (function() {
     }    
   }
 
-  function destroy() {
-    $('.' + config.popoverClass).remove();
-    $(config.module).each(function  (index, elem) {
+  function destroy($elem, $popover) {
+    if($popover){
+      var $remPopover = $popover;
+    }else{
+      console.log('b')
+      var $remPopover = $('.' + config.popoverClass);
+    }
+    $remPopover.remove();
+    if($elem){
+      var $triggers = $elem;
+    } else{
+      var $triggers = $(config.module);
+    }
+    $triggers.each(function  (index, elem) {
       $(elem)
         .removeData('uniqueId')
         .off(config.hoverEvent)
