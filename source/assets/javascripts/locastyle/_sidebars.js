@@ -36,9 +36,9 @@ locastyle.sidebars = (function() {
   }
 
   function sidebarUserAcountVerify() {
-    var sidebar = $('.ls-sidebar .ls-area-account').length;
+    var sidebar = $('.ls-sidebar .ls-area-account').length
     if(sidebar === 1){
-      $('.ls-sidebar').addClass('ls-area-account-active');
+      $('.ls-sidebar').addClass('ls-area-account-active')
     }
   }
 
@@ -51,6 +51,6 @@ locastyle.sidebars = (function() {
   return {
     init: init,
     unbind: unbind
-  };
+  }
 
 }());
