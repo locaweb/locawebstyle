@@ -79,4 +79,14 @@ type: component
     <p>Para que o popover inicie aberto, adicione o atributo <code>data-ls-popover="open"</code>.</p>
   </div>
 
+  <h2>Manilupando o popover com javascript</h2>
+  <p>Para ativar, exibir, ocultar ou destruit o popover, use os métodos abaixo:</p>
+
+  <% code("javascript") do %>
+    $('#elemento').lsPopover(); // cria o popover em um elemento sem o módulo ativo
+    $('#elemento').lsPopover('show');
+    $('#elemento').lsPopover('hide');
+    $('#elemento').lsPopover('destroy');
+  <% end %>
+
 </section>
