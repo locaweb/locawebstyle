@@ -3,8 +3,19 @@ var locastyle = locastyle || {};
 locastyle.datepicker = (function() {
   'use strict';
 
+  var config = {
+    selector: '.datepicker'
+  }
+
   function init() {
-    var $datepicker = $('#datepicker').pikaday({
+    $(config.selector).each(function(index, elem){
+      datepicker( $(elem) )
+    });
+    plugin();
+  }
+
+  function datepicker($elem){
+    var $datepicker = $elem.pikaday({
         firstDay: 1,
         minDate: new Date('2000-01-01'),
         maxDate: new Date('2020-12-31'),
@@ -17,7 +28,19 @@ locastyle.datepicker = (function() {
           weekdaysShort : ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb']
         }
     });
-    $datepicker.pikaday('show').pikaday('nextMonth');
+  }
+
+  function plugin(){
+    $.fn.lsDatepicker = function(action) {
+      if(action === undefined){
+        datepicker(this);
+      } else{
+        var picker = new Pikaday({ field: this[0] });
+        if(action === 'destroy'){
+          picker.destroy()
+        }
+      }
+    };
   }
 
   return {
