@@ -37,4 +37,3 @@ Vagrantfile
 deploy
 
 Gemfile.lock
-npm-debug.log

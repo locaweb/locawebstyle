@@ -22,6 +22,6 @@ locastyle.datepicker = (function() {
 
   return {
     init: init
-  };
+  }
 
 }());

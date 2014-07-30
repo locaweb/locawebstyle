@@ -10,7 +10,7 @@ locastyle.guidedTour = (function() {
 			init:  '.ls-btn-tour',
 			tour:  '.ls-alerts-list .ls-ico-question'
 		}
-	};
+	}
 
 	function init(jsonSteps){
 		checkTour(jsonSteps);
@@ -32,16 +32,16 @@ locastyle.guidedTour = (function() {
 		$(config.selectors.init).on({click: initTour});
 	}
 
-	function openWelcomeTour(event){
+	function openWelcomeTour(e){
     $(config.selectors.tour).trigger('click');
     $(config.selectors.init).focus().attr('tabindex', '-1');
-		return event ? event.preventDefault() : null;
+		e ? e.preventDefault() : null;
 	}
 
 	function initTour(){
-    	locastyle.topbarCurtain.hideCurtains();
+    locastyle.topbarCurtain.hideCurtains();
 		hopscotch.endTour();
-		hopscotch();
+		hopscotch
 		hopscotch.startTour(jsonTour, 0);
 		keyCode();
 	}
@@ -52,7 +52,7 @@ locastyle.guidedTour = (function() {
 		var esc = 27;
 		var stepsSize = hopscotch.getCurrTour().steps.length;
 		$('body').off('keyup').on('keyup', function(e){
-			var key = e.keyCode;
+			var key = e.keyCode
 			if( hopscotch.getCurrStepNum() < stepsSize && hopscotch.getState() ){
 				if( key === 39){ hopscotch.nextStep(); }
 				if( key === 37){ hopscotch.prevStep(); }
@@ -62,7 +62,7 @@ locastyle.guidedTour = (function() {
 	}
 
 	function setCookie(){
-		if($.cookie("cookie_tour") !== "true"){
+		if($.cookie("cookie_tour") != "true"){
 			$(config.selectors.tour).trigger('click');
       $(config.selectors.init).focus().attr('tabindex', '-1');
 			$.cookie('cookie_tour', "true");

@@ -45,10 +45,10 @@ locastyle.collapse = (function() {
       var $input = $(config.selectors.trigger, $collapse).find('input[type="radio"], input[type="checkbox"]');
       if($input[0]){
         $input.on('change.ls', function (evt) {
-          var name = $(this).attr('name');
+          var name = $(this).attr('name')
           $('[name="' + name + '"]').each(function (index, input) {
             var $input = $(input);
-            var $collapse = $input.parents(config.selectors.container);
+            var $collapse = $input.parents(config.selectors.container)
             $collapse.toggleClass(config.classes.open, $input.is(':checked'));
           });
         }).trigger('change.ls');
