@@ -27,7 +27,7 @@ locastyle.tabs = (function() {
   function bindBreakpointUpdateOnChecker() {
     $(window).on("breakpoint-updated", function () {
       locastyle.tabs.checkBreakpoint();
-    })
+    });
   }
 
   // checa se a tab está em modo dropdown
@@ -37,11 +37,11 @@ locastyle.tabs = (function() {
 
   // verifica o breakpoint e se a tab já está em modo droppdown
   function checkBreakpoint() {
-    if(locastyle.breakpointClass == "ls-screen-sm" || locastyle.breakpointClass == "ls-screen-xs"){
+    if(locastyle.breakpointClass === "ls-screen-sm" || locastyle.breakpointClass === "ls-screen-xs"){
       $(".ls-tabs-nav").each(function (index, value) {
         if(!isDropdownMode(value)){
           dropdownShape(value);
-        };
+        }
       });
     }
   }
@@ -97,6 +97,6 @@ locastyle.tabs = (function() {
     init: init,
     unbind: unbind,
     checkBreakpoint: checkBreakpoint
-  }
+  };
 
 }());

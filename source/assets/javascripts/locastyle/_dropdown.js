@@ -33,7 +33,7 @@ locastyle.dropdown = (function() {
 
   function toggleDropdown($target) {
     if($target.find('a:eq(0)').hasClass('ls-disabled')){
-      return false
+      return false;
     } else {
       $target.toggleClass("ls-active");
       locastyle.topbarCurtain.hideCurtains();
@@ -47,7 +47,7 @@ locastyle.dropdown = (function() {
   function setPositionVisible($target){
     var $main = $('body');
     if($main.get(0).scrollWidth > $main.width()){
-      $($target).addClass('ls-pos-right')
+      $($target).addClass('ls-pos-right');
     }
   }
 
@@ -56,6 +56,6 @@ locastyle.dropdown = (function() {
     unbind: unbind,
     toggleDropdown: toggleDropdown,
     closeDropdown: closeDropdown
-  }
+  };
 
 }());
