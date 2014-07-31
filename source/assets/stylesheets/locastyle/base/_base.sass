@@ -1,7 +1,18 @@
-.ls-main-full
+.ls-browser-unsupported
+
+  body
+    .ls-topbar,
+    .ls-sidebar
+      top: 45px
+
+    .ls-sidebar.ls-area-account-active
+      top: 100px
 
   .ls-main
-    margin-left: 0
+    margin-top: 100px
+
+.ls-main-full .ls-main
+  margin-left: 0
 
 .ls-main
   +single-transition(transform, .5s)
