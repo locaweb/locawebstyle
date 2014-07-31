@@ -1,0 +1,45 @@
+---
+title: Versão 3.1.0
+date: 2014-07-31 18:33 UTC
+tags:
+published: false
+layout: changelog-single
+---
+<ul class="ls-no-list-style ls-no-margin-left">
+  <li>
+    <span class="ls-tag-success">NEW</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/994" target="blank" class="commit-url">#994</a>  Criado o Mixin que transforma REM em PX para que seja compatível com browsers antigos.
+  </li>
+  <li>
+    <span class="ls-tag-success">NEW</span>
+    &ndash; Criado a documentação sobre classes de breakpoint. <a href="http://locaweb.github.io/locawebstyle/documentacao/css/classes-de-breakpoints/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+  <li>
+    <span class="ls-tag-success">NEW</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1000" target="blank" class="commit-url">#1000</a>  Criado classes funcionais para modificar tamanho do texto  <a href="http://locaweb.github.io/locawebstyle/documentacao/css/classes-funcionais/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+  <li>
+    <span class="ls-tag-success">NEW</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1001" target="blank" class="commit-url">#1001</a>  Criado documentação de suporte dos browser suportados. <a href="http://locaweb.github.io/locawebstyle/documentacao/introducao/suporte-browsers/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+  <li>
+    <span class="ls-tag-info">FIX</span>
+    &ndash; Movido documentação de TrackEvents para Funções JS. <a href="http://locaweb.github.io/locawebstyle/documentacao/funcoes-js/rastreando-eventos/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+
+  <li>
+    <span class="ls-tag-danger">BUG</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/988" target="blank" class="commit-url">#988</a>  Botões de formulário desalinhados.
+  </li>
+
+  <li>
+    <span class="ls-tag-danger">BUG</span>
+    &ndash;  <a href="https://github.com/locaweb/locawebstyle/pull/1002" target="blank" class="commit-url">#1002</a>  Resolvido problema de Mixin de RGBA que duplicava o hexadecimal.
+  </li>
+
+  <li>
+    <span class="ls-tag-danger">BUG</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/988" target="blank" class="commit-url">#988</a>  Corrigido a seta do ls-user-account quebrada na página exemplo do pré painel  <a href="http://locaweb.github.io/locawebstyle/documentacao/exemplos/painel1/pre-painel/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+
+</ul>
