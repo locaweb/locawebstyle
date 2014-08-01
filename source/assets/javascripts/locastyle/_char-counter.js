@@ -20,7 +20,7 @@ locastyle.charCounter = (function() {
         var count = limit - $(this).val().length;
         updateCounter(index, count);
       });
-    })
+    });
   }
 
   function updateCounter(index, count){
@@ -29,6 +29,6 @@ locastyle.charCounter = (function() {
 
   return {
     init: init
-  }
+  };
 
 }());
