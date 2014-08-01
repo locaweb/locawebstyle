@@ -40,6 +40,34 @@ description: Iniciando seu desenvolvimento com Locaweb Style
 
   <p>Sempre que há uma atualização, esses assets são atualizados automaticamente.</p>
 
+  <h2 class="doc-title-5">Instale usando Bower</h2>
+
+  <p>Para instalar o locawebstyle utilizando o <%= link_to "Bower", "http://bower.io/", target: "_blank" %> é bem simples:</p>
+
+  <% code("shell") do %>bower install locawebstyle<% end %>
+
+  <p>Após a instalação, basta chamar os arquivos baixados no diretório <code>bower_components</code>:</p>
+
+  <% code("html") do %>
+  <link href="bower_components/locawebstyle/dist/stylesheets/locastyle.css" rel="stylesheet" type="text/css">
+  <script src="bower_components/locawebstyle/dist/javascripts/locastyle.js" />
+  <% end %>
+
+  <p>Caso queira alterar o diretório que o bower vai instalar o framework e suas dependências, crie um arquivo <code>.bowerrc</code> e coloque o conteúdo abaixo:</p>
+
+  <% code("shell") do %>
+{
+  "directory": "assets/components"
+}
+  <% end %>
+
+  <p>E depois basta chamar os arquivos:</p>
+
+  <% code("html") do %>
+  <link href="assets/components/locawebstyle/dist/stylesheets/locastyle.css" rel="stylesheet" type="text/css">
+  <script src="assets/components/locawebstyle/dist/javascripts/locastyle.js" />
+  <% end %>
+
   <h2 class="doc-title-5">Download da versão mais atual</h2>
   <p>Se você quiser baixar os assets para usar localmente ou em projetos offline, basta clicar no botão abaixo e baixe a versão estável mais atual publicada.<br><br>
   <a href="http://assets.locaweb.com.br/locastyle/<%= settings.stable %>.zip" class="ls-btn-primary ls-btn-large">Baixar versão atual</a>
