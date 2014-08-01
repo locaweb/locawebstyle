@@ -12,7 +12,7 @@ locastyle.popover = (function() {
     trigger      : 'click.ls.popover',
     popoverClass : 'ls-popover',
     uniqueId     : 0
-  };
+  }
 
   function init() {
     if(/sm|xs/.test(locastyle.breakpointClass)){
@@ -64,7 +64,7 @@ locastyle.popover = (function() {
   }
 
   function bindActions ($elem, elementData) {
-    var trigger = elementData.trigger === 'hover' ? config.hoverEvent : config.trigger,
+    var trigger = elementData.trigger == 'hover' ? config.hoverEvent : config.trigger,
         $popover = $(config.idPopover + elementData.uniqueId);
     if(trigger === config.hoverEvent){
       $elem.on({
@@ -90,7 +90,7 @@ locastyle.popover = (function() {
         if(!$(element).parents().hasClass( config.popoverClass )){
          $('.' + config.popoverClass).hide();
         }
-      });
+      })
     }    
   }
 
@@ -107,6 +107,6 @@ locastyle.popover = (function() {
   return {
     init: init,
     destroyPopover: destroy
-  };
+  }
 
 }());

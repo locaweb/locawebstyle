@@ -22,6 +22,6 @@ locastyle.progressBar = (function() {
 
   return {
     init: init
-  };
+  }
 
 }());

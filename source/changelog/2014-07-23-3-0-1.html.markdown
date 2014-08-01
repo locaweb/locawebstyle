@@ -1,12 +1,11 @@
 ---
 title: Versão 3.0.1
 date: 2014-07-23 14:19 UTC
-tags:
-published: false
+tags: changelog locawestyle
 layout: changelog-single
 ---
 
-<p>Nessa versão 3.0.1 tivemos alguns ajustes, novas features e correção de bugs.</p>
+<p>Nessa versão 3.0.1 tivemos alguns ajustes, novas features e correção de bugs. Abaixo segue a listagem principal:</p>
 <ul class="ls-no-list-style ls-no-margin-left">
 
   <li>
