@@ -13,6 +13,12 @@
       "path": "changelog/2014/07/15/versao-3-0-0"
   },
   
+  "changelog/2014/07/23/3-0-1" :   {
+      "title": "Versão 3.0.1",
+      "description": "",
+      "path": "changelog/2014/07/23/3-0-1"
+  },
+  
   "changelog" :   {
       "title": "Changelog",
       "description": "Acompanhe o changelog",
