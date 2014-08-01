@@ -49,8 +49,9 @@ locastyle.browserUnsupportedBar = (function() {
     };
   }
 
-  function structureAlertMessage() {
-    $("body").prepend("<div class='ls-alert-warning ls-alert-blocker ls-dismissable'><span class='ls-dismiss' data-ls-module='dismiss'>&times</span>A versão do seu navegador web não suporta o Locastyle. Por favor, atualize o seu navegador. :)</div>")
+  function openUsupportedBrowserAlert() {
+    $("html").addClass("ls-browser-unsupported");
+    $("body").prepend('<div class="ls-alert-warning ls-alert-blocker ls-dismissable"><span class="ls-dismiss" data-ls-module="dismiss">&times</span>Atualize seu navegador para visualizar corretamente este painel! Baixe a versão mais recente: Firefox, Chrome, Internet Explorer ou Safari</div>');
   }
 
   function closeBrowserUnsupportedAlert() {
