@@ -47,6 +47,12 @@
     padding-right: 0
     padding-left: 0
 
+    &:first-child
+      margin-top: 0
+
+    & + .ls-btn-block
+      margin-top: 15px
+
 .ls-btn
   color: #000
   background-color: #fff
@@ -155,7 +161,6 @@
     padding-top: 21px
     margin: 0
     border: none
-    display: inline-block
 
-    [class*="ls-btn"]
+    [class*="ls-btn"]:not(.ls-btn-block)
       margin-top: 0
