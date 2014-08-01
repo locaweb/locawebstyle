@@ -5,7 +5,7 @@ locastyle.topbarCurtain = (function() {
 
   var config = {
     module: '[data-ls-module="topbarCurtain"]'
-  }
+  };
 
   function init() {
     unbind();
@@ -59,7 +59,7 @@ locastyle.topbarCurtain = (function() {
   function bindPreventClosing() {
     $(".ls-notification-list").on("click.ls", function(evt) {
       evt.stopPropagation();
-    })
+    });
   }
 
   function bindCloseCurtains() {
@@ -108,6 +108,6 @@ locastyle.topbarCurtain = (function() {
     hideCurtains: hideCurtains,
     unbind: unbind,
     updateStatusCounter: updateStatusCounter
-  }
+  };
 
 }());
