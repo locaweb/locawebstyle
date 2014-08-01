@@ -5,27 +5,48 @@ locastyle.browserUnsupportedBar = (function() {
 
   function init() {
     browserDetect();
-    closeBrowserUnsupportedAlert();
-    console.log(navigator.appVersion);
+    hideBrowserUnsupportedAlert();
   }
 
   function browserDetect() {
-    if (navigator.appVersion.indexOf("MSIE 8.")!=-1 || navigator.appVersion.indexOf("MSIE 7.")!=-1 || navigator.appVersion.indexOf("MSIE 6.")!=-1) {
-      $("html").addClass("ls-browser-unsupported");
-      structureAlertMessage();
-    } else if (navigator.appVersion.indexOf("Chrome/34")!=-1 || navigator.appVersion.indexOf("Chrome/33")!=-1) {
-      $("html").addClass("ls-browser-unsupported");
-      structureAlertMessage();
-    } else if (navigator.appVersion.indexOf("Version/6")!=-1 || navigator.appVersion.indexOf("Version/4")!=-1) {
-      $("html").addClass("ls-browser-unsupported");
-      structureAlertMessage();
-    } else if (navigator.appVersion.indexOf("OPR/21")!=-1 || navigator.appVersion.indexOf("OPR/20")!=-1) {
-      $("html").addClass("ls-browser-unsupported");
-      structureAlertMessage();
-    } else if (navigator.userAgent.indexOf("Firefox/29")!=-1 || navigator.userAgent.indexOf("Firefox/29")!=-1) {
-      $("html").addClass("ls-browser-unsupported");
-      structureAlertMessage();
+    var userAgent = navigator.userAgent.toLowerCase();
+
+    var browserName = function() {
+      var name = (userAgent.match(/(firefox|msie|chrome|version)/))[1];
+      return name;
     }
+
+    var browserVersion = function() {
+      var version = (userAgent.match(/.+(?:firefox|msie|chrome|version|opr)[\/: ]([\d.]+)/) || [0, 0])[1];
+      if(version === 0) {
+        // IE
+        version = (userAgent.match(/.+rv:([\d.]+)/) || 0)[1];
+      }
+      return version;
+    };
+
+    if (!$.cookie("hideBrowserUnsupportedAlert")) {
+      // Expect browser should be chrome and version minor 34
+      if (browserName() === 'chrome' && browserVersion() < '34'){
+        openUsupportedBrowserAlert();
+      };
+
+      // Expect browser should be firefox and version minor 29
+      if (browserName() === 'firefox' && browserVersion() < '29') {
+        openUsupportedBrowserAlert();
+      };
+
+      // Expect browser should be safari and version minor 5
+      if (browserName() === 'version' && browserVersion() < '5') {
+        openUsupportedBrowserAlert();
+      };
+
+      // Expect browser should be Internet Explorer and version minor 5
+      if (browserName() === 'msie' && browserVersion() < '9') {
+        openUsupportedBrowserAlert();
+      };
+
+    };
   }
 
   function structureAlertMessage() {
