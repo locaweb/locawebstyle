@@ -17,7 +17,7 @@ locastyle.browserUnsupportedBar = (function() {
     }
 
     var browserVersion = function() {
-      var version = (userAgent.match(/.+(?:firefox|msie|chrome|version|opr)[\/: ]([\d.]+)/) || [0, 0])[1];
+      var version = (userAgent.match(/.+(?:firefox|msie|chrome|version)[\/: ]([\d.]+)/) || [0, 0])[1];
       if(version === 0) {
         // IE
         version = (userAgent.match(/.+rv:([\d.]+)/) || 0)[1];
