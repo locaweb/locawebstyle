@@ -54,9 +54,10 @@ locastyle.browserUnsupportedBar = (function() {
     $("body").prepend('<div class="ls-alert-warning ls-alert-blocker ls-dismissable"><span class="ls-dismiss" data-ls-module="dismiss">&times</span>Atualize seu navegador para visualizar corretamente este painel! Baixe a versão mais recente: Firefox, Chrome, Internet Explorer ou Safari</div>');
   }
 
-  function closeBrowserUnsupportedAlert() {
+  function hideBrowserUnsupportedAlert() {
     $(".ls-dismiss[data-ls-module=dismiss]").on("click", function() {
       $("html").removeClass("ls-browser-unsupported");
+      $.cookie("hideBrowserUnsupportedAlert", true, { expires: 1 });
     });
   }
 
