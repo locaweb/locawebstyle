@@ -8,7 +8,7 @@ locastyle.form = (function() {
       disable: '.ls-form-disable',
       text: '.ls-form-text'
     }
-  }
+  };
 
   function init() {
     formDisable();
@@ -51,12 +51,13 @@ locastyle.form = (function() {
       var height = $textarea.height();
       $textarea.keyup(function (e) {
         if (!$textarea.prop('scrollTop')) {
+          var scrollHeight, textareaHeight;
           do {
-            var b = $textarea.prop('scrollHeight');
-            var h = $textarea.height();
-            $textarea.height(h - 5);
-          } while (b && (b != $textarea.prop('scrollHeight')));
-        };
+            scrollHeight = $textarea.prop('scrollHeight');
+            textareaHeight= $textarea.height();
+            $textarea.height(textareaHeight- 5);
+          } while (scrollHeight && (scrollHeight != $textarea.prop('scrollHeight')));
+        }
         $textarea.height($textarea.prop('scrollHeight') );
       });
     });
@@ -111,8 +112,8 @@ locastyle.form = (function() {
   }
 
   function dataToggleClass($element){
-    if($($element).data('toggle-class') != undefined){
-      var getClass = $($element).data('toggle-class').split(',')
+    if($($element).data('toggle-class') !== undefined){
+      var getClass = $($element).data('toggle-class').split(',');
       $($element).toggleClass(getClass[0]).toggleClass(getClass[1]);
     }
   }
@@ -121,7 +122,7 @@ locastyle.form = (function() {
     $('.ls-toggle-pass').on("click", function(e){
       e.preventDefault();
       var target = $(this).data('target');
-      dataToggleClass($(this))
+      dataToggleClass($(this));
       if ($(target).attr('type') == 'password'){
         $(target).removeAttr('attr').prop('type','text');
       } else {
@@ -133,6 +134,6 @@ locastyle.form = (function() {
   return {
     init: init,
     togglePasswordField: togglePasswordField
-  }
+  };
 
 }());
