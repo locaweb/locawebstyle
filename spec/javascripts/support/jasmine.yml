@@ -32,6 +32,7 @@ src_files:
     - source/assets/javascripts/locastyle/_progress-bar.js
     - source/assets/javascripts/locastyle/_char-counter.js
     - source/assets/javascripts/locastyle/_track-events.js
+    - source/assets/javascripts/locastyle/_browser-unsupported-bar.js
 
 # stylesheets
 #
