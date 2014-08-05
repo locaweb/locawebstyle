@@ -1,0 +1,57 @@
+---
+title: Servidores de DNS
+layout: panel
+theme_name: ls-theme-orange
+title_product: Registro de Domínio
+---
+
+<h1 class="ls-title-intro ls-ico-globe">Servidores de DNS</h1>
+<p>Os servidores de DNS são responsáveis por responder as requisições de acesso ao seu domínio.</p>
+
+<div class="ls-box">
+  <div class="ls-box ls-box-gray">
+    <h3 class="ls-title-5">Servidores de DNS que respondem para a Locaweb:</h3>
+    <table class="ls-table ls-table-striped">
+      <tbody>
+        <tr>
+          <td>ns1.systemintegration.locaweb.com</td>
+        </tr>
+        <tr>
+          <td>ns2.systemintegration.locaweb.com</td>
+        </tr>
+      </tbody>
+    </table>
+    <%= link_to "Utilizar esses servidores no campo abaixo", "#copy_default_nameservers", class: "ls-btn-primary ls-btn-sm" %>
+  </div>
+  <hr>
+  <form action="" class="ls-form row">
+    <fieldset>
+      <label class="ls-label col-md-4">
+        <b class="ls-label-text">Primário (Master)</b>
+        <input type="text" name="nome" required>
+      </label>
+      <label class="ls-label col-md-4">
+        <b class="ls-label-text">Secundário (Slave 1)</b>
+        <input type="text" name="email" required>
+      </label>
+      <label class="ls-label col-md-4">
+        <b class="ls-label-text">Terciário (Slave 2)</b>
+        <input type="text" name="rua" placeholder="Opcional" required>
+      </label>
+      <p class="col-md-12">Há um <strong>prazo de 4 horas</strong> para que este domínio seja propagado na internet.<br>Para mais informações sobre a propagação de domínio, consulte <%= link_to "Propagação de DNS", "http://wiki.locaweb.com.br/pt-br/Propaga%C3%A7%C3%A3o_de_DNS" %></p>
+    </fieldset>
+    <div class="ls-actions-btn ls-no-border ls-no-margin">
+      <button class="ls-btn">Salvar</button>
+      <button class="ls-btn-danger">Excluir</button>
+    </div>
+  </form>
+</div>
+<div class="ls-box">
+  <h2 class="ls-title-3">Zona de DNS</h2>
+  <p>Zona de DNS é a área onde você cria e edita entradas de DNS para configurar servidores de e-mail, endereços de apontamento, etc.</p>
+  <%= link_to "Consulte e altere zona de DNS", "http://painel-dns.registro.devintegration.locaweb.com.br/dns_zones/teste-contato-dominio-01.com/dns_entries", class: "ls-btn-primary ls-btn-xs" %>
+</div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel3/sidebar' %>
+<% end %>

@@ -1,0 +1,35 @@
+---
+title: Servidores de DNS
+layout: panel
+theme_name: ls-theme-orange
+title_product: Registro de Domínio
+---
+
+<h1 class="ls-title-intro ls-ico-globe">Servidores de DNS</h1>
+<p>Os servidores de DNS são responsáveis por responder as requisições de acesso ao seu domínio.</p>
+
+<div class="ls-box">
+  <table class="ls-table ls-table-striped">
+    <tbody>
+      <tr>
+        <td><strong>Primário (Master): </strong>ns1.systemintegration.locaweb.com</td>
+      </tr>
+      <tr>
+        <td><strong>Secundário (Slave 1): </strong>ns2.systemintegration.locaweb.com</td>
+      </tr>
+      <tr>
+        <td><strong>Terciário (Slave 2): </strong><em>Opcional</em></td>
+      </tr>
+    </tbody>
+  </table>
+  <%= link_to "Alterar servidores", "#{base_url}/documentacao/exemplos/painel3/nameservers/edit", class: "ls-btn-primary ls-btn-sm" %>
+</div>
+<div class="ls-box">
+  <h2 class="ls-title-3">Zona de DNS</h2>
+  <p>Zona de DNS é a área onde você cria e edita entradas de DNS para configurar servidores de e-mail, endereços de apontamento, etc.</p>
+  <%= link_to "Consulte e altere zona de DNS", "http://painel-dns.registro.devintegration.locaweb.com.br/dns_zones/teste-contato-dominio-01.com/dns_entries", class: "ls-btn-primary ls-btn-sm" %>
+</div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel3/sidebar' %>
+<% end %>
