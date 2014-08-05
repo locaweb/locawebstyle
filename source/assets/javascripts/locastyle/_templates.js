@@ -20,11 +20,16 @@ locastyle.templates = (function() {
     return JST[templatesPath + 'dropdown']({elements: elements})
   }
 
+  function browserUnsupportedBar() {
+    return JST[templatesPath + 'browser-unsupported-bar']()
+  }
+
   return {
     init: init,
     popover: popover,
     modal: modal,
-    dropdown: dropdown
+    dropdown: dropdown,
+    browserUnsupportedBar: browserUnsupportedBar
   }
 
 }());
