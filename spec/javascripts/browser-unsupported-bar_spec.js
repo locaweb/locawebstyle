@@ -5,6 +5,8 @@ describe("Alert unsupported browser: ", function() {
 
   describe("When userAgent is MSIE", function() {
     it("should add .ls-browser-unsupported class on <html>", function() {
+      spyOn(locastyle.templates, "browserUnsupportedBar").and.returnValue('<div class="ls-alert-warning ls-alert-blocker ls-dismissable"><span class="ls-dismiss" data-ls-module="dismiss">&times</span></div>');
+
       $.cookie = function (arg) {
         return false;
       };
