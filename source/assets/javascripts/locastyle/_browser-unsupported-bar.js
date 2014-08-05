@@ -17,7 +17,7 @@ locastyle.browserUnsupportedBar = (function() {
       'chrome' : 34,
       'firefox': 29,
       'version':  5, // Safari
-      'msie'   :  8, // Internet Explorer
+      'msie'   :  8 // Internet Explorer
       // 'rv'  : 11  // Internet Explorer 11+
     };
 
