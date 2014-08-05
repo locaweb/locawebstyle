@@ -5,7 +5,7 @@ describe("Alert unsupported browser: ", function() {
 
   describe("When userAgent is MSIE", function() {
     it("should add .ls-browser-unsupported class on <html>", function() {
-      spyOn(locastyle.templates, "browserUnsupportedBar").and.returnValue('<div class="ls-alert-warning ls-alert-blocker ls-dismissable"><span class="ls-dismiss" data-ls-module="dismiss">&times</span></div>');
+      spyOn(locastyle.templates, "browserUnsupportedBar").and.returnValue('<div class="ls-alert-blocker ls-dismissable"><span class="ls-dismiss" data-ls-module="dismiss">&times</span></div>');
 
       $.cookie = function (arg) {
         return false;
@@ -26,7 +26,7 @@ describe("Alert unsupported browser: ", function() {
 
   describe("When click to close", function() {
     it("should remove .ls-browser-unsupported class on <html>", function() {
-      $('body').prepend('<div class="ls-alert-warning ls-alert-blocker ls-dismissable"><span class="ls-dismiss" data-ls-module="dismiss">&times</span>Atualize seu navegador para visualizar corretamente este painel! Baixe a versão mais recente: <a href="//www.mozilla.org/en-US/firefox" target="_blank">Firefox</a>, <a href="//www.google.com/intl/en-BR/chrome/browser/" target="_blank">Chrome</a>, <a href="//windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Internet Explorer</a> ou <a href="//www.apple.com/safari/" target="_blank">Safari</a></div>');
+      $('body').prepend('<div class="ls-alert-blocker ls-dismissable"><span class="ls-dismiss" data-ls-module="dismiss">&times</span>Atualize seu navegador para visualizar corretamente este painel! Baixe a versão mais recente: <a href="//www.mozilla.org/en-US/firefox" target="_blank">Firefox</a>, <a href="//www.google.com/intl/en-BR/chrome/browser/" target="_blank">Chrome</a>, <a href="//windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Internet Explorer</a> ou <a href="//www.apple.com/safari/" target="_blank">Safari</a></div>');
 
       locastyle.browserUnsupportedBar.init();
       $('.ls-alert-blocker .ls-dismiss[data-ls-module=dismiss]').trigger('click');
