@@ -31,7 +31,7 @@ locastyle.browserUnsupportedBar = (function() {
 
   function openUsupportedBrowserAlert() {
     $('html').addClass('ls-browser-unsupported');
-    $('body').prepend('<div class="ls-alert-warning ls-alert-blocker ls-dismissable"><span class="ls-dismiss" data-ls-module="dismiss">&times</span>Atualize seu navegador para visualizar corretamente este painel! Baixe a versão mais recente: <a href="//www.mozilla.org/en-US/firefox" target="_blank">Firefox</a>, <a href="//www.google.com/intl/en-BR/chrome/browser/" target="_blank">Chrome</a>, <a href="//windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Internet Explorer</a> ou <a href="//www.apple.com/safari/" target="_blank">Safari</a></div>');
+    $('body').prepend(locastyle.templates.browserUnsupportedBar());
   }
 
   function hideBrowserUnsupportedAlert() {
