@@ -12,7 +12,7 @@ locastyle.popover = (function() {
     trigger      : 'click.ls.popover',
     popoverClass : 'ls-popover',
     uniqueId     : 0
-  }
+  };
 
   function init() {
     if(/sm|xs/.test(locastyle.breakpointClass)){
@@ -90,7 +90,7 @@ locastyle.popover = (function() {
         if(!$(element).parents().hasClass( config.popoverClass )){
          $('.' + config.popoverClass).hide();
         }
-      })
+      });
     }    
   }
 
@@ -107,6 +107,6 @@ locastyle.popover = (function() {
   return {
     init: init,
     destroyPopover: destroy
-  }
+  };
 
 }());
