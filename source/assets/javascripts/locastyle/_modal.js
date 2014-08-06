@@ -10,7 +10,7 @@ locastyle.modal = (function() {
       classes: '.ls-modal-overlay',
       trigger: '[data-dismiss="modal"]'
     }
-  }
+  };
 
   function init() {
     unbind();
@@ -32,7 +32,7 @@ locastyle.modal = (function() {
   function bindKeypress(){
     $(document).keyup(function(e) {
       if(e.keyCode == 27){
-        locastyle.modal.close()
+        locastyle.modal.close();
       }
     });
   }
