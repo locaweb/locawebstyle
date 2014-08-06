@@ -9,19 +9,19 @@ locastyle.templates = (function() {
   }
 
   function popover(elementData) {
-    return JST[templatesPath + 'popover'](elementData)
+    return JST[templatesPath + 'popover'](elementData);
   }
 
   function modal(elementData) {
-    return JST[templatesPath + 'modal'](elementData)
+    return JST[templatesPath + 'modal'](elementData);
   }
 
   function dropdown(elements) {
-    return JST[templatesPath + 'dropdown']({elements: elements})
+    return JST[templatesPath + 'dropdown']({elements: elements});
   }
 
   function browserUnsupportedBar() {
-    return JST[templatesPath + 'browser-unsupported-bar']()
+    return JST[templatesPath + 'browser-unsupported-bar']();
   }
 
   return {
@@ -30,6 +30,6 @@ locastyle.templates = (function() {
     modal: modal,
     dropdown: dropdown,
     browserUnsupportedBar: browserUnsupportedBar
-  }
+  };
 
 }());
