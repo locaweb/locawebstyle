@@ -14,4 +14,11 @@ description: Calendário e para facilitar a selação de datas
   </div>
   <% code("html") do %><%= partial 'documentacao/shared/form/form-calendar.erb' %><% end %>
 
+  <p>Utilizamos o plugin <a href="https://github.com/dbushell/Pikaday">Pikaday</a> para o calendário do Locawebstyle, preé-configurado para <b>pt-br</b>.</p>
+  <p>Para iniciar um novo datepicher com javascript, utilizando as mesmas configurações, use, no javascript:</p>
+
+  <% code("javascript") do %>locastyle.datepicker.newDatepicker('#id ou .classe do elemento');<% end %>
+
+  <p>Todas as demais configurações e métodos do plugin Pikaday podem ser utilizadas, conforme descrito na sua documentação.</p>
+
 </section>
