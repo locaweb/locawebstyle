@@ -62,5 +62,11 @@
   <%= javascript_include_tag  "locastyle" %>
   <%= javascript_include_tag  "example" %>
 
+  <script type="text/javascript">
+    $(window).load(function() {
+      locastyle.browserUnsupportedBar.init();
+    });
+</script>
+
 </body>
 </html>

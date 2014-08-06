@@ -1,15 +1,14 @@
 describe('Popover: ', function() {
-    
+
   beforeEach(function() {
       loadFixtures('popover_fixture.html');
       locastyle.popover.init();
   });
-  
+
   afterEach(function() {
       locastyle.popover.destroyPopover();
   });
-    
-    
+
   describe('Popover creation', function() {
 
     it('Should create one popover for each trigger', function() {
@@ -77,7 +76,7 @@ describe('Popover: ', function() {
   });
 
   describe('change component on small screens', function () {
-    
+
     it('should not create a popover in small screens', function () {
       locastyle.breakpointClass = 'ls-screen-sm';
       locastyle.popover.destroyPopover();
@@ -91,8 +90,8 @@ describe('Popover: ', function() {
       locastyle.breakpointClass = 'ls-screen-sm';
       locastyle.popover.init();
       var $popoverTrigger = $('#popoverclick');
-      
-      
+
+
       expect( $('.ls-modal')[0] ).not.toBeUndefined();
     });
 

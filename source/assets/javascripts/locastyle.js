@@ -8,6 +8,7 @@
 //= require locastyle/templates/_popover
 //= require locastyle/templates/_modal
 //= require locastyle/templates/_dropdown
+//= require locastyle/templates/_browser-unsupported-bar
 
 //= require locastyle/_initializer
 //= require locastyle/_breakpoint-check
@@ -28,4 +29,5 @@
 //= require locastyle/_btn-group
 //= require locastyle/_datepicker
 //= require locastyle/_char-counter
+//= require locastyle/_browser-unsupported-bar
 //= require locastyle/_track-events

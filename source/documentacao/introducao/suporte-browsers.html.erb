@@ -26,4 +26,16 @@ description: Entenda como melhorar o suporte a browsers antigos, como o IE8
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
 <![endif]-->
   <% end %>
+
+  <h2 class="doc-title-2">Adicionando uma barra de aviso</h2>
+  <p>Você pode inserir uma barra de aviso sobre os browsers que não são suportados. Por padrão, o Locaweb Style não insere essa barra, por isso você precisa iniciar a função manualmente. Para tanto, basta chamar a função <code>locastyle.browserUnsupportedBar</code>:</p>
+
+  <% code("javascript") do %>
+$(window).load(function() {
+  locastyle.browserUnsupportedBar.init();
+});
+  <% end %>
+
+  <p>Geralmente nós mantemos o suporte para browsers com duas versões anteriores. Por exemplo: a versão mais atual do IE é a 11, por isso damos suporte para o IE 9, 10 e 11. A barra, nesse caso iria aparecer para o IE8 ou inferior.</p>
+
 </section>

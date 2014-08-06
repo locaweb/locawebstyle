@@ -58,3 +58,41 @@
 
   &:hover
     opacity: .5
+
+
+//
+// When the unsupported bar is visible
+//
+
+.ls-alert-blocker
+
+  & ~ .ls-topbar,
+  & ~ .ls-sidebar,
+  .ls-pre-panel & ~ .ls-sidebar
+    top: 44px
+
+  & ~ .ls-sidebar.ls-area-account-active
+    top: 104px
+
+  & ~ .ls-main
+    margin-top: 60px
+
+
+.ls-alert-fixed-top
+  top: 0
+
+.ls-alert-fixed-bottom
+  bottom: 0
+
+.ls-alert-fixed-top,
+.ls-alert-fixed-bottom
+  position: fixed
+  z-index: 12
+
+.ls-alert-blocker,
+.ls-alert-fixed-top,
+.ls-alert-fixed-bottom
+  border-radius: 0
+  border: none
+  width: 100%
+  margin-bottom: 0
