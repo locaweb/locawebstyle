@@ -16,22 +16,7 @@ locastyle.form = (function() {
     masks();
     textareaAutoresize();
     prefixSufix();
-    datepicker();
     togglePasswordField();
-  }
-
-  function datepicker () {
-    $('.datepicker').pikaday({
-      numberOfMonths: 1,
-      format: 'DD/MM/YYYY',
-      i18n: {
-        previousMonth : 'Mês anterior',
-        nextMonth     : 'Próximo mês',
-        months        : ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-        weekdays      : ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
-        weekdaysShort : ['Dom','Seg','Ter','Qua','Qui','Sex','Sab']
-      }
-    });
   }
 
   function prefixSufix () {
