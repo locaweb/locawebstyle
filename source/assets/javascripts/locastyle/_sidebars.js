@@ -38,14 +38,14 @@ locastyle.sidebars = (function() {
 
   function userAccountVerification() {
     if($('.ls-sidebar .ls-area-account').length === 1){
-      $('.ls-sidebar').addClass('ls-area-account-active')
+      $('.ls-sidebar').addClass('ls-area-account-active');
     }
   }
 
   function notificationVerification() {
     if($('.ls-notification').length === 1){
       if($('.ls-show-notifications').length === 0){
-        $('.ls-topbar').append('<span class="ls-show-notifications ls-ico-question"/>')
+        $('.ls-topbar').append('<span class="ls-show-notifications ls-ico-question"/>');
       }
     }
   }
@@ -59,6 +59,6 @@ locastyle.sidebars = (function() {
   return {
     init: init,
     unbind: unbind
-  }
+  };
 
 }());

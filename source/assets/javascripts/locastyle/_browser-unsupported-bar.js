@@ -45,6 +45,6 @@ locastyle.browserUnsupportedBar = (function() {
 
   return {
     init: init
-  }
+  };
 
 }());

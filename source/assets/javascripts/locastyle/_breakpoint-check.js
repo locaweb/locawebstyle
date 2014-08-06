@@ -10,7 +10,7 @@ locastyle.breakpoints = (function() {
     screenSm: '768',
     screenMd: '992',
     screenLg: '1200'
-  }
+  };
 
   function init(userConfig) {
     breakpointWindowWidth(userConfig);
@@ -21,10 +21,11 @@ locastyle.breakpoints = (function() {
   // Coloca classe na tag html de acordo com o tamanho do breakpoint
   //
   function breakpointWindowWidth(userConfig) {
+    var documentWidth;
     if (userConfig){
-      var documentWidth = userConfig.documentWidth;
+      documentWidth = userConfig.documentWidth;
     } else {
-      var documentWidth = $(document).width();
+      documentWidth = $(document).width();
     }
 
     // Se for menor que 768 - xs
@@ -49,7 +50,7 @@ locastyle.breakpoints = (function() {
     else {
       $('html').addClass('ls-screen-lg').removeClass('ls-sidebar-visible ls-notifications-visible ');
       locastyle.breakpointClass = "ls-screen-lg";
-    };
+    }
   }
 
   //
@@ -79,6 +80,6 @@ locastyle.breakpoints = (function() {
 
   return {
     init: init
-  }
+  };
 
 }());
