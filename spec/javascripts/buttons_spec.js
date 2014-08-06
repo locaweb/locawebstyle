@@ -9,7 +9,7 @@ describe("Buttons group: ", function(){
       locastyle.breakpointClass = "ls-screen-xs";
       locastyle.btnGroup.init();
       expect($("#myButtonInDropdown").closest(".ls-dropdown").hasClass("ls-dropdown")).toBe(true);
-    })
+    });
   });
 
   describe("Unbind", function() {

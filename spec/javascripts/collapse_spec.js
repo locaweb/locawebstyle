@@ -11,7 +11,7 @@ describe('Collapse:', function() {
   describe('Single', function() {
 
     it('should open and close after two clicks', function() {
-      var $collapse = $('#collapse1')
+      var $collapse = $('#collapse1');
       var $collapseTitle = $collapse.find('.ls-collapse-header');
       $collapseTitle.trigger("click");
       expect($collapse.hasClass('ls-collapse-open')).toBe(true);
@@ -20,7 +20,7 @@ describe('Collapse:', function() {
     });
 
     it('with class .ls-collapse-open-always dont close on click', function() {
-      var $collapse = $('#collapse3')
+      var $collapse = $('#collapse3');
       var $collapseTitle = $collapse.find('.ls-collapse-header');
       $collapseTitle.trigger("click");
       expect($collapse.hasClass('ls-collapse-open')).toBe(false);
@@ -109,9 +109,9 @@ describe('Collapse:', function() {
 
     it('locastyle.collapse.toggle(#id) open/close collapse', function() {
       var $collapse = $('#collapse7');
-      locastyle.collapse.toggle('#collapse7')
+      locastyle.collapse.toggle('#collapse7');
       expect($collapse.hasClass('ls-collapse-open')).toBe(true);
-      locastyle.collapse.toggle('#collapse7')
+      locastyle.collapse.toggle('#collapse7');
       expect($collapse.hasClass('ls-collapse-open')).toBe(false);
 
     });

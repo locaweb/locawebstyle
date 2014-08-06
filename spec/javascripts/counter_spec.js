@@ -11,13 +11,13 @@ describe("Counter char: ", function(){
 
     it("should when keypress, decrease number of limit", function(){
       var event = $.Event("keyup");
-      var $inputMaxlength = $("#myCounterTrigger input")
+      var $inputMaxlength = $("#myCounterTrigger input");
       event.which = 65;
       $inputMaxlength.trigger(event);
       expect($("#myCounterTrigger").find('.ls-char-count').text()).toEqual('6');
-    })
+    });
 
-  })
+  });
 
 
 });

@@ -84,15 +84,15 @@ describe("Locastyle in general: ", function() {
       it("should not make action", function(){
         $("#myModal").trigger('click');
         expect($('#myAwesomeModal').hasClass("opened")).toEqual(false);
-      })
-    })
+      });
+    });
 
     describe("when element has attribute disabled", function(){
       it("should not make action", function(){
         $("#myModal").trigger('click');
         expect($('#myAwesomeModal').hasClass("opened")).toEqual(false);
-      })
-    })
+      });
+    });
 
   });
 
@@ -132,7 +132,7 @@ describe("Locastyle in general: ", function() {
         it('Add class when checkbox not checked', function () {
           var $checkbox = $('#toggleClassCheckbox');
           $checkbox.prop('checked', true);
-          $checkbox.trigger('click')
+          $checkbox.trigger('click');
           expect($('#configs').hasClass('ls-display-none')).toBe(true);
         });
 
