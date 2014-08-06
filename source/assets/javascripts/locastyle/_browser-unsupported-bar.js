@@ -37,7 +37,9 @@ locastyle.browserUnsupportedBar = (function() {
   function hideBrowserUnsupportedAlert() {
     $('.ls-dismiss[data-ls-module=dismiss]').on('click', function() {
       $('html').removeClass('ls-browser-unsupported');
+      $('html .ls-unsupported-bar').remove();
       $.cookie('hideBrowserUnsupportedAlert', true, { expires: 1 });
+
     });
   }
 
