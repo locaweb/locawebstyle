@@ -27,7 +27,7 @@ locastyle.tabs = (function() {
   function bindBreakpointUpdateOnChecker() {
     $(window).on("breakpoint-updated", function () {
       locastyle.tabs.checkBreakpoint();
-    })
+    });
   }
 
   // checa se a tab está em modo dropdown
@@ -41,7 +41,7 @@ locastyle.tabs = (function() {
       $(".ls-tabs-nav").each(function (index, value) {
         if(!isDropdownMode(value)){
           dropdownShape(value);
-        };
+        }
       });
     }
   }
@@ -97,6 +97,6 @@ locastyle.tabs = (function() {
     init: init,
     unbind: unbind,
     checkBreakpoint: checkBreakpoint
-  }
+  };
 
 }());
