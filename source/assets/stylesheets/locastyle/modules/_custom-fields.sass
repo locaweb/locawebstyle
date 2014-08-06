@@ -31,6 +31,7 @@
   height: 100%
 
   .ls-field-custom-select-one
+    +box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075))
     position: absolute
     top: 0
     left: 0
@@ -99,3 +100,6 @@
     position: relative
     z-index: 1
 
+    &[disabled="disabled"] + .ls-field-custom-select-one
+      border-color: $gray1
+      background-color: #f9f9f9
