@@ -9,15 +9,15 @@ locastyle.templates = (function() {
   }
 
   function popover(elementData) {
-    return JST[templatesPath + 'popover'](elementData)
+    return JST[templatesPath + 'popover'](elementData);
   }
 
   function modal(elementData) {
-    return JST[templatesPath + 'modal'](elementData)
+    return JST[templatesPath + 'modal'](elementData);
   }
 
   function dropdown(elements) {
-    return JST[templatesPath + 'dropdown']({elements: elements})
+    return JST[templatesPath + 'dropdown']({elements: elements});
   }
 
   return {
@@ -25,6 +25,6 @@ locastyle.templates = (function() {
     popover: popover,
     modal: modal,
     dropdown: dropdown
-  }
+  };
 
 }());
