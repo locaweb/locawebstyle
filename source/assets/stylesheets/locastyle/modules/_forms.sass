@@ -147,8 +147,7 @@ textarea
   .ls-label
 
     &[class*="col-"]
-      float: none
-      display: inline-block
+      float: left
 
     .ls-label-text
       display: inline-block
@@ -157,6 +156,10 @@ textarea
   [class*="ls-btn"]
     vertical-align: top
     margin-top: 21px
+
+  .row:after
+    @extend .ls-clearfix
+
 
 //
 // Label and input side by side
@@ -321,7 +324,7 @@ input + .ls-label-text-prefix
 @media screen and (min-width: $screen-sm)
   .ls-form-inline
 
-    .ls-labels
+    .ls-label
       margin-bottom: 0
 
     .ls-actions-btn

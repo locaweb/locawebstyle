@@ -26,7 +26,14 @@ layout: changelog-single
     <span class="ls-tag-info">FIX</span>
     &ndash; Movido documentação de TrackEvents para Funções JS. <a href="http://locaweb.github.io/locawebstyle/documentacao/funcoes-js/rastreando-eventos/" class="ls-btn ls-btn-xs">Exemplo</a>
   </li>
-
+  <li>
+    <span class="ls-tag-info">FIX</span>
+    &ndash; Aplicando estilo de select customizada quando está desativada.
+  </li>
+  <li>
+    <span class="ls-tag-info">FIX</span>
+    &ndash; Formulários com a classe ls-form-horizontal, agora suportam corretamente as classes de grid.
+  </li>
   <li>
     <span class="ls-tag-danger">BUG</span>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/988" target="blank" class="commit-url">#988</a>  Botões de formulário desalinhados.
