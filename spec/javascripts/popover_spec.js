@@ -14,7 +14,7 @@ describe('Popover: ', function() {
     it('Should create one popover for each trigger', function() {
       var elems     = document.querySelectorAll('[data-ls-module="popover"]').length;
       var popovers = document.querySelectorAll('.ls-popover').length;
-      expect(elems).toEqual(popovers)
+      expect(elems).toEqual(popovers);
     });
 
   });
@@ -27,8 +27,8 @@ describe('Popover: ', function() {
       var $popover = $('.ls-popover');
       $popover.hide();
       $popoverTrigger.trigger('click');
-      var display = document.getElementsByClassName('ls-popover')[0].style.display
-      expect( display  ).toEqual('block')
+      var display = document.getElementsByClassName('ls-popover')[0].style.display;
+      expect( display  ).toEqual('block');
     });
 
     it('Should show and close a popover on repeated click events', function() {
@@ -37,7 +37,7 @@ describe('Popover: ', function() {
       $popover.hide();
       $popoverTrigger.trigger('click');
       $popoverTrigger.trigger('click');
-      expect( $popover.eq(0).css('display')  ).toEqual('none')
+      expect( $popover.eq(0).css('display')  ).toEqual('none');
     });
 
     it('Should show a popover on hover event', function() {
@@ -45,7 +45,7 @@ describe('Popover: ', function() {
       var $popover = $('.ls-popover');
       $popover.hide();
       $popoverTrigger.trigger('mouseenter');
-      expect( $popover.eq(2).css('display')  ).toEqual('block')
+      expect( $popover.eq(2).css('display')  ).toEqual('block');
     });
 
     it('Should show and close a popover on repeated hover events', function() {
@@ -54,7 +54,7 @@ describe('Popover: ', function() {
       $popover.hide();
       $popoverTrigger.trigger('mouseenter');
       $popoverTrigger.trigger('mouseleave');
-      expect( $popover.eq(2).css('display')  ).toEqual('none')
+      expect( $popover.eq(2).css('display')  ).toEqual('none');
     });
 
   });

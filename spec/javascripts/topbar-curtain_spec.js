@@ -51,20 +51,20 @@ describe("Topbar Curtain:", function() {
       locastyle.topbarCurtain.init();
       $("#outside_element").click();
       expect($("#awesome-curtain").hasClass('ls-active')).toEqual(false);
-    })
+    });
 
     it("should remove 'ls-active' css class of the links already clicked", function() {
       locastyle.topbarCurtain.init();
       $("#outside_element").click();
       expect($("#item-2").hasClass('ls-active')).toEqual(false);
-    })
-  })
+    });
+  });
 
   describe("When click on .ls-notification-list", function() {
     it("should not close the curtain", function() {
       locastyle.topbarCurtain.init();
       $(".ls-notification-list").trigger("click");
       expect($("#awesome-curtain").hasClass('ls-active')).toEqual(true);
-    })
-  })
+    });
+  });
 });

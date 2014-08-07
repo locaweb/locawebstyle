@@ -37,5 +37,5 @@ describe("Alert unsupported browser: ", function() {
       String.prototype.toLowerCase = __originalLowerCase;
       $(".ls-alert-blocker").remove();
     });
-  })
+  });
 });

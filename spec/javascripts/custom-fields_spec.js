@@ -7,7 +7,7 @@ describe('Custom Fields:', function(){
   describe('When have data-ls-module="customFields"', function(){
     it('all selects should have before element with .ls-field-custom-select-one', function(){
       expect($('#myAwesomeSelect select').parent().find('.ls-field-custom-select-one')).toBeTruthy();
-    })
+    });
   });
 
   describe("Unbind", function() {
