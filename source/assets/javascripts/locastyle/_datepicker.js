@@ -18,6 +18,7 @@ locastyle.datepicker = (function() {
       firstDay: 1,
       minDate: new Date('2000-01-01'),
       maxDate: new Date('2020-12-31'),
+      format: 'DD/MM/YYYY',
       yearRange: [2000,2020],
       i18n: {
         previousMonth : 'Anterior',
@@ -30,7 +31,7 @@ locastyle.datepicker = (function() {
   }
 
   function newDatepicker(selector){
-   create($(selector)); 
+   create($(selector));
   }
 
   return {
