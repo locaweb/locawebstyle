@@ -50,13 +50,14 @@ locastyle.general = (function() {
       evt.preventDefault();
       var $this = $(this);
       var $container = $($this.data('ls-fields-enable'));
+      var isFormText = $container.data('form-text') ? 'ls-form-text' : '';
       $container
-        .toggleClass('ls-form-disable ls-active ls-form-text')
+        .toggleClass('ls-form-disable ls-active ' + isFormText)
         .find(':input').each(function(indexField, field){
           var $field = $(field);
           $field
             .toggleAttr('disabled')
-            .toggleClass('ls-form-text')
+            .toggleClass(isFormText)
             .val($field.data('original-value'));
         });
     });

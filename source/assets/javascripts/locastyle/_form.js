@@ -82,6 +82,7 @@ locastyle.form = (function() {
       $(container).find(':input').each(function(indexField, field){
         $(field).addClass('ls-form-text');
       });
+      $(container).data('form-text', true);
     });
   }
 
