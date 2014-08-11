@@ -5,7 +5,6 @@
 
 $default-color-mix: #000;
 $second-color-percentage: 15%;
-$third-color-percentage: 80%;
 
 $blue-color:        #254fa2;
 $gold-color:        #b59d1a;
@@ -15,12 +14,12 @@ $green-color:       #509742;
 $orange-color:      #fca400;
 
 $themes-colors: (
-  blue        : (color1: $blue-color, color2: mix($default-color-mix, $blue-color, $second-color-percentage), color3: mix($default-color-mix, $blue-color, $third-color-percentage)),
-  gold        : (color1: $gold-color, color2: mix($default-color-mix, $gold-color, $second-color-percentage), color3: mix($default-color-mix, $gold-color, $third-color-percentage)),
-  gray        : (color1: $gray-color, color2: mix($default-color-mix, $gray-color, $second-color-percentage), color3: mix($default-color-mix, $gray-color, $third-color-percentage)),
-  light-green : (color1: $light-green-color, color2: mix($default-color-mix, $light-green-color, $second-color-percentage), color3: mix($default-color-mix, $light-green-color, $third-color-percentage)),
-  green       : (color1: $green-color, color2: mix($default-color-mix, $green-color, $second-color-percentage), color3: mix($default-color-mix, $green-color, $third-color-percentage)),
-  orange      : (color1: $orange-color, color2: mix($default-color-mix, $orange-color, $second-color-percentage), color3: mix($default-color-mix, $orange-color, $third-color-percentage))
+  blue        : (color1: $blue-color, color2: mix($default-color-mix, $blue-color, $second-color-percentage)),
+  gold        : (color1: $gold-color, color2: mix($default-color-mix, $gold-color, $second-color-percentage)),
+  gray        : (color1: $gray-color, color2: mix($default-color-mix, $gray-color, $second-color-percentage)),
+  light-green : (color1: $light-green-color, color2: mix($default-color-mix, $light-green-color, $second-color-percentage)),
+  green       : (color1: $green-color, color2: mix($default-color-mix, $green-color, $second-color-percentage)),
+  orange      : (color1: $orange-color, color2: mix($default-color-mix, $orange-color, $second-color-percentage))
 );
 
 $gray1: #dfdfde;
