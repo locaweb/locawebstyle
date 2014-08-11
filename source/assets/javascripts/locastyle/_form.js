@@ -73,19 +73,8 @@ locastyle.form = (function() {
         $field.attr('disabled', 'disabled');
         $field.data('original-value', $field.val() );
       });
-      setOriginalValue();
     });
-  }
-
-  function setOriginalValue() {
-    var $button = $('[data-ls-fields-enable]');
-    $button.on('click', function (evt) {
-      var $container = $($(this).data('ls-toggle-fields'));
-      $container.find(':input').each(function(indexField, field){
-        var $field = $(field);
-        $field.val($field.data('original-value'));
-      });
-    });
+    
   }
 
   function formText() {
@@ -93,6 +82,7 @@ locastyle.form = (function() {
       $(container).find(':input').each(function(indexField, field){
         $(field).addClass('ls-form-text');
       });
+      $(container).data('form-text', true);
     });
   }
 
