@@ -1,8 +1,6 @@
 =theme-color($theme-name, $colors)
   $color1: map-fetch($colors, color1)
   $color2: map-fetch($colors, color2)
-  $color3: map-fetch($colors, color3)
-  $color4: map-fetch($colors, color4)
 
   .ls-bg-theme-#{$theme-name}
     background-color: $color1
@@ -33,7 +31,11 @@
       +rgba(background-color, $color1, .95)
 
       .ls-alerts-list a[class*="ls-ico"]
-        color: mix($default-color-mix, $color1, 50%)
+        @if (lightness($color1) < 30)
+          color: mix($default-color-mix, $color1, 40%)
+        @else
+          color: mix($default-color-mix, $color1, 25%)
+
 
       .ls-user-account
         background-color: darken($color3, 5%)
@@ -223,7 +225,6 @@
     .ls-switch-btn input:checked + label
       background-color: $color1
 
-
     //
     // Listas
     //
@@ -245,7 +246,6 @@
     .pika-button:hover
       color: white !important
       background: $color1 !important
-
 
     //
     // Tour
