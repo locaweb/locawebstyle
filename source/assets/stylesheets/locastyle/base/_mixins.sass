@@ -1,5 +1,11 @@
 //
-// Keyframe
+// Convert REM to PX. Just because IE8-
+//
+@function remtopx($size)
+  @return ($size * 16) + px
+
+//
+// Keyframes
 //
 =keyframes($animation-name)
   @-webkit-keyframes #{$animation-name}
@@ -23,6 +29,13 @@
   -ms-animation: #{$str}
   animation: #{$str}
 
+//
+// RGBA in properties
+//
+=rgba($property, $color, $alpha: 1)
+  #{$property}: rgb(red($color), green($color), blue($color))
+  @if $alpha < 1
+    #{$property}: rgba($color, $alpha )
 
 //
 // RGBA in properties

@@ -12,7 +12,12 @@
 #
 src_files:
     - spec/javascripts/libs/*.js
-    - source/assets/javascripts/libs/*.js
+    - source/assets/javascripts/libs/_hopscotch.js
+    - source/assets/javascripts/libs/_jquery.cookie.js
+    - source/assets/javascripts/libs/jquery.mask.js
+    - source/assets/javascripts/libs/moment.min.js
+    - source/assets/javascripts/libs/pikaday.js
+    - source/assets/javascripts/libs/pikaday.jquery.js
     - source/assets/javascripts/locastyle/_initializer.js
     - source/assets/javascripts/locastyle/_datepicker.js
     - source/assets/javascripts/locastyle/_popover.js
@@ -32,6 +37,7 @@ src_files:
     - source/assets/javascripts/locastyle/_progress-bar.js
     - source/assets/javascripts/locastyle/_char-counter.js
     - source/assets/javascripts/locastyle/_track-events.js
+    - source/assets/javascripts/locastyle/_browser-unsupported-bar.js
 
 # stylesheets
 #

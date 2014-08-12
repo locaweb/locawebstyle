@@ -11,7 +11,7 @@
         <p><%- @content %></p>
       </div>
       <div class="ls-modal-footer">
-        <button class="ls-btn ls-float-right" data-dismiss="modal">
+        <button type="button" class="ls-btn ls-float-right" data-dismiss="modal">
           <%= @close %>
         </button>
         <% if @actionType != 'link': %>

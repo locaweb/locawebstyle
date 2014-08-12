@@ -8,7 +8,7 @@ locastyle.form = (function() {
       disable: '.ls-form-disable',
       text: '.ls-form-text'
     }
-  }
+  };
 
   function init() {
     formDisable();
@@ -16,22 +16,8 @@ locastyle.form = (function() {
     masks();
     textareaAutoresize();
     prefixSufix();
-    datepicker();
     togglePasswordField();
-  }
-
-  function datepicker () {
-    $('.datepicker').pikaday({
-      numberOfMonths: 1,
-      format: 'DD/MM/YYYY',
-      i18n: {
-        previousMonth : 'Mês anterior',
-        nextMonth     : 'Próximo mês',
-        months        : ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-        weekdays      : ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
-        weekdaysShort : ['Dom','Seg','Ter','Qua','Qui','Sex','Sab']
-      }
-    });
+    textareaHeight();
   }
 
   function prefixSufix () {
@@ -51,14 +37,25 @@ locastyle.form = (function() {
       var height = $textarea.height();
       $textarea.keyup(function (e) {
         if (!$textarea.prop('scrollTop')) {
+          var scrollHeight;
           do {
-            var b = $textarea.prop('scrollHeight');
-            var h = $textarea.height();
-            $textarea.height(h - 5);
-          } while (b && (b != $textarea.prop('scrollHeight')));
-        };
+            scrollHeight = $textarea.prop('scrollHeight');
+            var height = $textarea.height();
+            $textarea.height(height - 5);
+          } while (scrollHeight && (scrollHeight != $textarea.prop('scrollHeight')));
+        }
         $textarea.height($textarea.prop('scrollHeight') );
       });
+    });
+  }
+
+  function textareaHeight (){
+    $('textarea').each(function (index, textarea) {
+      var text = $(textarea).val();
+      var lines = text.split(/\r|\r\n|\n/);
+      var count = lines.length;
+      var total = count * 18;
+      $(textarea).height(total + 'px');
     });
   }
 
@@ -87,19 +84,8 @@ locastyle.form = (function() {
         $field.attr('disabled', 'disabled');
         $field.data('original-value', $field.val() );
       });
-      setOriginalValue();
     });
-  }
 
-  function setOriginalValue() {
-    var $button = $('[data-ls-fields-enable]');
-    $button.on('click', function (evt) {
-      var $container = $($(this).data('ls-toggle-fields'));
-      $container.find(':input').each(function(indexField, field){
-        var $field = $(field);
-        $field.val($field.data('original-value'));
-      });
-    });
   }
 
   function formText() {
@@ -107,12 +93,13 @@ locastyle.form = (function() {
       $(container).find(':input').each(function(indexField, field){
         $(field).addClass('ls-form-text');
       });
+      $(container).data('form-text', true);
     });
   }
 
   function dataToggleClass($element){
-    if($($element).data('toggle-class') != undefined){
-      var getClass = $($element).data('toggle-class').split(',')
+    if($($element).data('toggle-class') !== undefined){
+      var getClass = $($element).data('toggle-class').split(',');
       $($element).toggleClass(getClass[0]).toggleClass(getClass[1]);
     }
   }
@@ -121,7 +108,7 @@ locastyle.form = (function() {
     $('.ls-toggle-pass').on("click", function(e){
       e.preventDefault();
       var target = $(this).data('target');
-      dataToggleClass($(this))
+      dataToggleClass($(this));
       if ($(target).attr('type') == 'password'){
         $(target).removeAttr('attr').prop('type','text');
       } else {
@@ -133,6 +120,6 @@ locastyle.form = (function() {
   return {
     init: init,
     togglePasswordField: togglePasswordField
-  }
+  };
 
 }());

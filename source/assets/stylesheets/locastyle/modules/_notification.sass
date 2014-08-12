@@ -40,7 +40,7 @@
       transition: all 0.2s
       color: $gray3
       display: block
-      font-size: .875rem
+      font-size: remtopx(.875)
       text-decoration: none
       padding: 20px
       padding-right: 30px
@@ -52,7 +52,7 @@
         position: absolute
         top: 10px
         right: 5px
-        font-size: .625rem
+        font-size: remtopx(.625)
         color: #fff
 
       &:hover,
@@ -73,7 +73,7 @@
     @extend .ls-display-block
 
 
-@media (min-width: $screen-sm)
+@media screen and (min-width: $screen-sm)
   .ls-notification
     +transform(none)
     +translate(-100%, 0)

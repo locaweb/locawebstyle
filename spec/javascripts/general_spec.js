@@ -53,6 +53,55 @@ describe("Locastyle in general: ", function() {
     });
   });
 
+  describe('Toggle form text/editable', function() {
+
+    it('remove class .ls-form-disable .ls-form-text', function() {
+      var $form = $('#domain-form');
+      var $editForm = $('#editForm');
+      $editForm.trigger('click');
+      expect( $form.is('.ls-form-text') && $form.is('.ls-form-disable') ).toBe(false);
+    });
+
+    it('remove class .ls-form-disable .ls-form-text and add again', function() {
+      var $form = $('#domain-form');
+      var $editForm = $('#editForm');
+      $editForm.trigger('click');
+      $editForm.trigger('click');
+      expect( $form.is('.ls-form-text') && $form.is('.ls-form-disable') ).toBe(true);
+    });
+
+    it('remove class .ls-form-disable', function() {
+      var $form = $('#domain-form2');
+      var $editForm = $('#editForm');
+      $editForm.trigger('click');
+      expect( $form.is('.ls-form-text') && $form.is('.ls-form-disable') ).toBe(false);
+    });
+
+    it('remove class .ls-form-disable and add again only the original', function() {
+      var $form = $('#domain-form2');
+      var $editForm = $('#editForm');
+      $editForm.trigger('click');
+      $editForm.trigger('click');
+      expect( !$form.is('.ls-form-text') && $form.is('.ls-form-disable') ).toBe(true);
+    });
+
+    it('remove class .ls-form-text', function() {
+      var $form = $('#domain-form3');
+      var $editForm = $('#editForm');
+      $editForm.trigger('click');
+      expect( $form.is('.ls-form-text') && $form.is('.ls-form-disable') ).toBe(false);
+    });
+
+    it('remove class .ls-form-text and add again only the original', function() {
+      var $form = $('#domain-form3');
+      var $editForm = $('#editForm');
+      $editForm.trigger('click');
+      $editForm.trigger('click');
+      expect( $form.is('.ls-form-text') && !$form.is('.ls-form-disable') ).toBe(true);
+    });
+    
+  });
+
 
   describe("Unbind:", function() {
     describe("Auto events", function () {
@@ -84,15 +133,15 @@ describe("Locastyle in general: ", function() {
       it("should not make action", function(){
         $("#myModal").trigger('click');
         expect($('#myAwesomeModal').hasClass("opened")).toEqual(false);
-      })
-    })
+      });
+    });
 
     describe("when element has attribute disabled", function(){
       it("should not make action", function(){
         $("#myModal").trigger('click');
         expect($('#myAwesomeModal').hasClass("opened")).toEqual(false);
-      })
-    })
+      });
+    });
 
   });
 
@@ -132,7 +181,7 @@ describe("Locastyle in general: ", function() {
         it('Add class when checkbox not checked', function () {
           var $checkbox = $('#toggleClassCheckbox');
           $checkbox.prop('checked', true);
-          $checkbox.trigger('click')
+          $checkbox.trigger('click');
           expect($('#configs').hasClass('ls-display-none')).toBe(true);
         });
 

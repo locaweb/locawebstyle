@@ -33,7 +33,7 @@ describe('Dismiss:', function() {
         var spy = spyOn(window.test, "method");
         $('#dismiss-test-2').on("click", function () {
           window.test.method();
-        })
+        });
         locastyle.dismiss.unbind();
         $('#dismiss-test-2').trigger("click");
         expect(window.test.method).toHaveBeenCalled();

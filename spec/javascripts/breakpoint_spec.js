@@ -10,7 +10,7 @@ describe("Breakpoint: ", function() {
         var spyEvent = spyOnEvent(document, 'breakpoint-updated');
         $(window).trigger('resize');
         jasmine.clock().tick(305);
-        expect(spyEvent).toHaveBeenTriggered()
+        expect(spyEvent).toHaveBeenTriggered();
         jasmine.clock().uninstall();
       });
     });

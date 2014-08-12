@@ -1,0 +1,74 @@
+---
+title: Versão 3.1.0
+date: 2014-07-31 18:33 UTC
+tags:
+published: false
+layout: changelog-single
+---
+<ul class="ls-no-list-style ls-no-margin-left">
+  <li>
+    <span class="ls-tag-success">NEW</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/994" target="blank" class="commit-url">#994</a>  Criado o Mixin que transforma REM em PX para que seja compatível com browsers antigos.
+  </li>
+  <li>
+    <span class="ls-tag-success">NEW</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/995" target="blank" class="commit-url">#995</a>  Inserido na documentação a instalação via Bower. <a href="http://locaweb.github.io/locawebstyle/documentacao/introducao/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+  <li>
+    <span class="ls-tag-success">NEW</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1000" target="blank" class="commit-url">#1000</a>  Criado classes funcionais para modificar tamanho do texto. <a href="http://locaweb.github.io/locawebstyle/documentacao/css/classes-funcionais/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+  <li>
+    <span class="ls-tag-success">NEW</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1001" target="blank" class="commit-url">#1001</a>  Criado documentação de suporte dos browser suportados. <a href="http://locaweb.github.io/locawebstyle/documentacao/introducao/suporte-browsers/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+  <li>
+    <span class="ls-tag-success">NEW</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1035" target="blank" class="commit-url">#1035</a> Criado a cor laranja na palheta, utilizando a classe ls-theme-orange.
+  </li>
+   <li>
+    <span class="ls-tag-success">NEW</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1036" target="blank" class="commit-url">#1036</a> Criado a mensagem de atualização para navegadores antigos.
+  </li>
+  <li>
+    <span class="ls-tag-success">NEW</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/1009" target="blank" class="commit-url">#1009</a> Criado a documentação sobre classes de breakpoint. <a href="http://locaweb.github.io/locawebstyle/documentacao/css/classes-de-breakpoints/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+  <li>
+    <span class="ls-tag-info">FIX</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1010" target="blank" class="commit-url">#1010</a> Movido documentação de TrackEvents para Funções JS. <a href="http://locaweb.github.io/locawebstyle/documentacao/funcoes-js/rastreando-eventos/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+  <li>
+    <span class="ls-tag-info">FIX</span>
+    &ndash; Mensagem de alerta pode ser fixa no topo ou fim da página inserindo classes específicas. <a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/alertas/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+  <li>
+    <span class="ls-tag-info">FIX</span>
+    &ndash; <a href="https://github.com/deividmarques/locawebstyle/commit/b41438f0c08ccaf256631769a052c13d99fc0930" target="blank" class="commit-url">#1041</a> Aplicando estilo de select customizada quando está desativada.
+  </li>
+  <li>
+    <span class="ls-tag-danger">BUG</span>
+    &ndash; <a href="https://github.com/deividmarques/locawebstyle/commit/7076c4b1aaee1355182dbd52a195d0a4e482a289" target="blank" class="commit-url">#1041</a> Formulários com a classe ls-form-horizontal, suportam corretamente o grid.
+  </li>
+  <li>
+    <span class="ls-tag-danger">BUG</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/988" target="blank" class="commit-url">#988</a>  Botões de formulário desalinhados.
+  </li>
+  <li>
+    <span class="ls-tag-danger">BUG</span>
+    &ndash;  <a href="https://github.com/locaweb/locawebstyle/pull/1002" target="blank" class="commit-url">#1002</a>  Resolvido problema de Mixin de RGBA que duplicava o hexadecimal.
+  </li>
+  <li>
+    <span class="ls-tag-danger">BUG</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1014" target="blank" class="commit-url">#1014</a>  Corrigido a seta do ls-user-account quebrada na página exemplo do pré painel.  <a href="http://locaweb.github.io/locawebstyle/documentacao/exemplos/painel1/pre-painel/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+  <li>
+    <span class="ls-tag-danger">BUG</span>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1029" target="blank" class="commit-url">#1029</a>  Corrigido o botão com a classe ls-block dentro de formulários. <a href="http://locaweb.github.io/locawebstyle/documentacao/formularios/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+  <li>
+    <span class="ls-tag-danger">BUG</span>
+    &ndash;  <a href="https://github.com/locaweb/locawebstyle/pull/1039" target="blank" class="commit-url">#1039</a> Corrigido o botão de fechar no template do modal.
+  </li>
+
+</ul>

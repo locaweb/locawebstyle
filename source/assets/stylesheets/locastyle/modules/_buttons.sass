@@ -7,7 +7,7 @@
   background-color: transparent
   cursor: pointer
   display: inline-block
-  font-size: .8125rem
+  font-size: remtopx(.8125)
   line-height: 1.42857143
   text-decoration: none
   text-align: center
@@ -47,6 +47,12 @@
     padding-right: 0
     padding-left: 0
 
+    &:first-child
+      margin-top: 0
+
+    & + .ls-btn-block
+      margin-top: 15px
+
 .ls-btn
   color: #000
   background-color: #fff
@@ -77,15 +83,15 @@
 // Sizes of BTN
 //
 .ls-btn-lg
-  font-size: 1rem
+  font-size: remtopx(1)
   padding: 11px
 
 .ls-btn-sm
-  font-size: .75rem
+  font-size: remtopx(.75)
   padding: 5px 11px
 
 .ls-btn-xs
-  font-size: .75rem
+  font-size: remtopx(.75)
   padding: 2px 11px
 
 .ls-btn-sm,
@@ -144,7 +150,7 @@
   // when in inline forms
   .ls-form-inline &
     padding: 0
-    margin: 20px 0 0
+    margin: 17px 0 0
     border: none
     display: inline-block
 
@@ -155,7 +161,6 @@
     padding-top: 21px
     margin: 0
     border: none
-    display: inline-block
 
-    [class*="ls-btn"]
+    [class*="ls-btn"]:not(.ls-btn-block)
       margin-top: 0

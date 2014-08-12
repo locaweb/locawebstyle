@@ -90,8 +90,8 @@ locastyle.popover = (function() {
         if(!$(element).parents().hasClass( config.popoverClass )){
          $('.' + config.popoverClass).hide();
         }
-      })
-    }    
+      });
+    }
   }
 
   function destroy() {

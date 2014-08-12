@@ -1,14 +1,14 @@
 
 /* Small devices (tablets, 768px and up) */
-// @media (min-width: @screen-sm-min) { ... }
+// @media screen and (min-width: @screen-sm-min) { ... }
 $screen-sm: 768px;
 
 /* Medium devices (desktops, 992px and up) */
-// @media (min-width: @screen-md-min) { ... }
+// @media screen and (min-width: @screen-md-min) { ... }
 $screen-md: 992px;
 
 /* Large devices (large desktops, 1200px and up) */
-// @media (min-width: @screen-lg-min) { ... }
+// @media screen and (min-width: @screen-lg-min) { ... }
 $screen-lg: 1200px;
 
 $heightTopbar: 60px;
@@ -24,7 +24,8 @@ $themes-colors: (
   gold        : (color1: #eeead2, color2: #bcae5d, color3: #b39d31, color4: #8d7c2f, color5: #242111 ),
   gray        : (color1: #dfdfde, color2: #cccccb, color3: #878787, color4: #323232, color5: #212121 ),
   light-green : (color1: #e9f5f3, color2: #9aca3b, color3: #25b89a, color4: #0f715e, color5: #07261f ),
-  green       : (color1: #f8faf0, color2: #8ec73e, color3: #509742, color4: #00a272, color5: #203418 )
+  green       : (color1: #f8faf0, color2: #8ec73e, color3: #509742, color4: #00a272, color5: #203418 ),
+  orange      : (color1: #f8faf0, color2: #8ec73e, color3: #fca400, color4: mix(#000, #fca400, 30%), color5: mix(#000, #fca400, 80%) )
 );
 
 $gray1: #dfdfde;

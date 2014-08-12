@@ -23,11 +23,15 @@
   	});
   });
 
-  describe("Verificate user area", function() {
-    describe("when .ls-sidebar has .ls-area-account", function() {
-      it("should add the .ls-area-account-active css class on .ls-sidebar element", function() {
-        expect($('.ls-sidebar').hasClass('ls-area-account-active')).toEqual(true);
-      });
+  describe("When .ls-sidebar has .ls-area-account", function() {
+    it("should add the .ls-area-account-active css class on .ls-sidebar element", function() {
+      expect($('.ls-sidebar').hasClass('ls-area-account-active')).toEqual(true);
+    });
+  });
+
+  describe("When .ls-notifications has exist", function() {
+    it("should add span on .ls-topbar", function() {
+      expect($('.ls-topbar .ls-show-notifications').length).toEqual(1);
     });
   });
 

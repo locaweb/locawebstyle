@@ -6,11 +6,11 @@
 
 .ls-sm-space
   padding: 10px !important
-  font-size: .78rem !important
+  font-size: remtopx(.78) !important
 
 .ls-md-space
   padding: 20px !important
-  font-size: .90rem !important
+  font-size: remtopx(.90) !important
 
 .ls-lg-space
   padding: 40px !important
@@ -319,7 +319,22 @@
 // TAMANHO DE TEXTO
 .ls-text-default
   color: #555
-  font-size: .88rem
+  font-size: remtopx(.88)
+
+.ls-text-xs
+  font-size: remtopx(.6875)
+
+.ls-text-sm
+  font-size: remtopx(.75)
+
+.ls-text-md
+  font-size: remtopx(.88)
+
+.ls-text-lg
+  font-size: remtopx(1.125)
+
+.ls-text-xl
+  font-size: remtopx(1.25)
 
 // TRANSFORMAÇÃO DE TEXTO
 .ls-text-uppercase
@@ -370,7 +385,7 @@
   background-color: lighten($colorDanger, 40%)
 
 
-@media (max-width: $screen-md)
+@media screen and (max-width: $screen-md)
   .ls-float-none-sm
     float: none !important
 
@@ -399,7 +414,7 @@
     display: inline-block !important
     width: auto !important
 
-@media (max-width: $screen-sm)
+@media screen and (max-width: $screen-sm)
   .ls-float-none-xs
     float: none !important
 

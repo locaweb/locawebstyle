@@ -77,7 +77,7 @@ describe("Dropdown: ", function() {
         var spy = spyOn(window.test, "method");
         $("#dropdown-test > a:first-child").on("click", function () {
           window.test.method();
-        })
+        });
         locastyle.dropdown.unbind();
         $("#dropdown-test > a:first-child").trigger("click");
         expect(window.test.method).toHaveBeenCalled();

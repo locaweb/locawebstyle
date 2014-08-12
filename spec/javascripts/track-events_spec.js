@@ -26,7 +26,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "open_link_#/home",
           label: "Open link sample"
-        }
+        };
         spyOn(window, "ga");
         $("#open_links #home_menu_sample").trigger("click.lsTrackEvent");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -49,7 +49,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "my_custom_action",
           label: "my_custom_label"
-        }
+        };
         spyOn(window, "ga");
         $("#open_links #link_with_options").trigger("click.lsTrackEvent");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -64,7 +64,7 @@ describe("Track Events: ", function() {
           category: window.location.pathname,
           action: "my_custom_action",
           label: "my_custom_label"
-        }
+        };
         spyOn(window, "ga");
         $("#open_links #link_with_options").trigger("click.lsTrackEvent");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -78,7 +78,7 @@ describe("Track Events: ", function() {
             category: "locastyle#track-events-test",
             action: "on_page_link_#",
             label: "On page link sample"
-          }
+          };
           spyOn(window, "ga");
           $("#on_page_links #on_page_link_to_nowhere").trigger("click");
           expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -91,7 +91,7 @@ describe("Track Events: ", function() {
             category: "locastyle#track-events-test",
             action: "on_page_link_#nice-target",
             label: "On page link sample"
-          }
+          };
           spyOn(window, "ga");
           $("#on_page_links #on_page_link_with_anchor").trigger("click");
           expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -107,7 +107,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "on_page_button_#",
           label: "On page button"
-        }
+        };
         spyOn(window, "ga");
         $("#on_page_buttons #common_on_page_button").trigger("click.lsTrackEvent");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -120,7 +120,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "my_custom_action",
           label: "my_custom_label"
-        }
+        };
         spyOn(window, "ga");
         $("#on_page_buttons #on_page_button_with_cutom_args").trigger("click.lsTrackEvent");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -133,7 +133,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "on_page_button_#",
           label: "On page button"
-        }
+        };
         spyOn(window, "ga");
         $("#on_page_buttons #common_on_page_button").trigger("click.lsTrackEvent");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -148,7 +148,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "submit_form_#my_sample_form",
           label: "Submit"
-        }
+        };
         spyOn(window, "ga");
         $("#my_sample_form").trigger("submit");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -173,7 +173,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "select_change_#select_sample",
           label: "last_week"
-        }
+        };
         spyOn(window, "ga");
         $("#select_sample").val("last_week");
         $("#select_sample").trigger("change");
@@ -200,7 +200,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "tab_navigation",
           label: "Sample tab 2"
-        }
+        };
         spyOn(window, "ga");
         $("#tabs_sample #sample_tab_trigger").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -215,7 +215,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "dropdown_toggle",
           label: "Open dropdown sample"
-        }
+        };
         spyOn(window, "ga");
         $("#dropdown_sample_box #dropdown_trigger").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -230,7 +230,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "open_modal_#closed_modal_sample",
           label: "Open modal"
-        }
+        };
         spyOn(window, "ga");
         $("#closed_modal_test #closed_modal_sample_trigger").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -243,7 +243,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "open_modal_#closed_modal_sample2",
           label: "Open modal by link"
-        }
+        };
         spyOn(window, "ga");
         $("#closed_modal_test #closed_modal_sample_trigger2").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -256,7 +256,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "close_modal_#opened_modal_sample",
           label: "x"
-        }
+        };
         spyOn(window, "ga");
         $("#opened_modal_test #close_modal_sample_by_x").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -267,7 +267,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "close_modal_#opened_modal_sample",
           label: "Close"
-        }
+        };
         spyOn(window, "ga");
         $("#opened_modal_test #close_modal_sample_by_button").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -295,7 +295,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "open_collapse_#closed_collapse_sample",
           label: "Open collapse"
-        }
+        };
         spyOn(window, "ga");
         $("#closed_collapse_sample > a").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -308,7 +308,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "close_collapse_#opened_collapse_sample",
           label: "Close collapse"
-        }
+        };
         spyOn(window, "ga");
         $("#opened_collapse_sample > a").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -323,7 +323,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "go_to_tour_step[1]",
           label: "Próximo"
-        }
+        };
         $("#guidedtour_sample_wrapper").html('<div id="guidedtour_sample" class="hopscotch-bubble animated" style="position: absolute; top: 1984px; left: 533.5px;">' +
             '<div class="hopscotch-bubble-container" style="width: 250px; padding: 15px;">' +
               '<span class="hopscotch-bubble-number">1</span>' +
@@ -390,7 +390,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "top_bar_action",
           label: "Notificações"
-        }
+        };
         spyOn(window, "ga");
         $("#open_notification_trigger").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -403,7 +403,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "top_bar_action",
           label: "Ajuda"
-        }
+        };
         spyOn(window, "ga");
         $("#open_help_trigger").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -416,7 +416,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "top_bar_action",
           label: "Sugestões"
-        }
+        };
         spyOn(window, "ga");
         $("#open_feedback_trigger").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
@@ -429,7 +429,7 @@ describe("Track Events: ", function() {
           category: "locastyle#track-events-test",
           action: "top_bar_action",
           label: "Toggle user dropdown"
-        }
+        };
         spyOn(window, "ga");
         $("#user_dropdawn > a").trigger("click");
         expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);

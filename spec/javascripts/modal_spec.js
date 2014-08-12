@@ -13,23 +13,23 @@ describe("Modal: ", function() {
     it('should add class opened on .ls-modal', function() {
       $('[data-ls-module="modal"]').trigger("click");
       expect($("body .ls-modal")).toHaveClass('opened');
-    })
-  })
+    });
+  });
 
   describe('When click on data-dismiss on modal', function() {
     it('should remove class opened on .ls-modal', function() {
       locastyle.modal.close();
       $('[data-dismiss="modal"]').trigger("click");
       expect($("#myModalOpened .ls-modal").hasClass('opened')).toBeFalsy();
-    })
-  })
+    });
+  });
 
   describe('When click on data-ls-module="modal" with data-custom-attrs', function() {
     it('should add attr on .ls-modal button', function() {
       $('[data-ls-module="modal"]').trigger("click");
       expect($("#myAwesomeModalCustomAttr button").data('method')).toEqual('delete');
-    })
-  })
+    });
+  });
 
   describe("Unbind:", function() {
     describe("when unbind is called in module init", function() {
@@ -55,11 +55,11 @@ describe("Modal: ", function() {
           template: {
             classes: '.ls-modal-template'
           }
-        }
+        };
 
         var spy = spyOn(locastyle.modal, "close");
         $('[data-target="#myAwesomeModal"]').trigger("click");
-        var timesToBeCalled = $(config.close.classes + ", " + config.close.trigger).length - 2
+        var timesToBeCalled = $(config.close.classes + ", " + config.close.trigger).length - 2;
         $('#myAwesomeModal [data-dismiss="modal"]').trigger("click");
         expect(locastyle.modal.close.calls.count()).toEqual(timesToBeCalled);
       });
@@ -73,7 +73,7 @@ describe("Modal: ", function() {
         var spy = spyOn(window.test, "method");
         $('[data-ls-module="modal"]').on("click", function () {
           window.test.method();
-        })
+        });
         locastyle.modal.unbind();
         $('[data-ls-module="modal"]').trigger("click");
         expect(window.test.method).toHaveBeenCalled();

@@ -16,21 +16,21 @@
     small
       margin-bottom: 10px
       display: block
-      font-size: .75rem
+      font-size: remtopx(.75)
 
     strong
       display: block
-      font-size: 2.5rem
+      font-size: remtopx(2.5)
       margin-bottom: 10px
 
       small
-        font-size: .88rem
+        font-size: remtopx(.88)
 
   .ls-title-4
     text-transform: uppercase
     color: $gray3
     font-weight: 400
-    font-size: .88rem
+    font-size: remtopx(.88)
     margin-bottom: 8px
 
 .ls-board-data
@@ -52,7 +52,7 @@
     small
       display: block
       color: $gray3
-      font-size: .875rem
+      font-size: remtopx(.875)
       margin-top: 3px
 
     &:before
@@ -75,7 +75,7 @@
 //
 // Do Tablet para frente
 //
-@media (min-width: $screen-sm)
+@media screen and (min-width: $screen-sm)
   .ls-board-box
     margin-bottom: 0
     min-height: 170px
@@ -104,8 +104,8 @@
 //
 // DESKTOP
 //
-@media (max-width: $screen-lg)
+@media screen and (max-width: $screen-lg)
   .ls-board-box .ls-box strong
     display: block
-    font-size: 2rem
+    font-size: remtopx(2)
 

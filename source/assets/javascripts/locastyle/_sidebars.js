@@ -5,9 +5,10 @@ locastyle.sidebars = (function() {
 
   function init() {
     unbind();
+    notificationVerification();
     bindShowSidebar();
     bindShowNotifications();
-    sidebarUserAcountVerify();
+    userAccountVerification();
   }
 
   // adiciona o bind de click no modulo e chama os métodos necessários
@@ -35,10 +36,17 @@ locastyle.sidebars = (function() {
     $('html').toggleClass('ls-notifications-visible');
   }
 
-  function sidebarUserAcountVerify() {
-    var sidebar = $('.ls-sidebar .ls-area-account').length
-    if(sidebar === 1){
-      $('.ls-sidebar').addClass('ls-area-account-active')
+  function userAccountVerification() {
+    if($('.ls-sidebar .ls-area-account').length === 1){
+      $('.ls-sidebar').addClass('ls-area-account-active');
+    }
+  }
+
+  function notificationVerification() {
+    if($('.ls-notification').length === 1){
+      if($('.ls-show-notifications').length === 0){
+        $('.ls-topbar').append('<span class="ls-show-notifications ls-ico-question"/>');
+      }
     }
   }
 
@@ -51,6 +59,6 @@ locastyle.sidebars = (function() {
   return {
     init: init,
     unbind: unbind
-  }
+  };
 
 }());

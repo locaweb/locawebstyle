@@ -6,7 +6,7 @@ locastyle.general = (function() {
     '[data-toggle-class]|click': _toggleClass,
     '[data-toggle-text]|click': _toggleText,
     '.ls-link-smooth|click': _smoothScroll
-  }
+  };
 
   function init() {
     _unbind();
@@ -23,7 +23,7 @@ locastyle.general = (function() {
   jQuery.fn.toggleAttr = function(attr) {
     return this.each(function() {
       var $this = $(this);
-      $this.attr(attr) ? $this.removeAttr(attr) : $this.attr(attr, attr);
+      return $this.attr(attr) ? $this.removeAttr(attr) : $this.attr(attr, attr);
     });
   };
 
@@ -40,7 +40,7 @@ locastyle.general = (function() {
 
   function _autoTrigger(){
     var hash = window.location.hash.replace("!/#", "");
-    if(hash != ''){
+    if(hash !== ''){
       $('[data-target=' + hash + '], a[href=' + hash + ']').trigger('click');
     }
   }
@@ -50,13 +50,21 @@ locastyle.general = (function() {
       evt.preventDefault();
       var $this = $(this);
       var $container = $($this.data('ls-fields-enable'));
-      $container.toggleClass('ls-form-disable ls-active');
-      $container.find(':input').toggleAttr('disabled');
+      var isFormText = $container.data('form-text') ? 'ls-form-text' : '';
+      $container
+        .toggleClass('ls-form-disable ls-active ' + isFormText)
+        .find(':input').each(function(indexField, field){
+          var $field = $(field);
+          $field
+            .toggleAttr('disabled')
+            .toggleClass(isFormText)
+            .val($field.data('original-value'));
+        });
     });
   }
 
   function _menuAnchor() {
-    $(".ls-menu .ls-active > a").focus().css('outline', 'none')
+    $(".ls-menu .ls-active > a").focus().css('outline', 'none');
   }
 
   function _toggleClass(evt, $this) {
@@ -99,9 +107,9 @@ locastyle.general = (function() {
     $('.ls-submenu > a').on('click.ls', function(evt) {
       evt.preventDefault();
       $(this).parent().toggleClass('ls-active');
-    })
+    });
     if($('.ls-submenu').find('li').hasClass('ls-active')){
-      $('.ls-submenu li.ls-active').parents('.ls-submenu').addClass('ls-active')
+      $('.ls-submenu li.ls-active').parents('.ls-submenu').addClass('ls-active');
     }
   }
 
@@ -111,7 +119,7 @@ locastyle.general = (function() {
         evt.stopImmediatePropagation();
         evt.preventDefault();
         evt.stopPropagation();
-        return false
+        return false;
       }
     });
   }
