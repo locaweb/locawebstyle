@@ -17,6 +17,7 @@ locastyle.form = (function() {
     textareaAutoresize();
     prefixSufix();
     togglePasswordField();
+    textareaHeight();
   }
 
   function prefixSufix () {
@@ -48,6 +49,16 @@ locastyle.form = (function() {
     });
   }
 
+  function textareaHeight (){
+    $('textarea').each(function (index, textarea) {
+      var text = $(textarea).val();
+      var lines = text.split(/\r|\r\n|\n/);
+      var count = lines.length;
+      var total = count * 18;
+      $(textarea).height(total + 'px');
+    });
+  }
+
   function masks() {
     $('.ls-mask-date').mask('11/11/1111');
     $('.ls-mask-time').mask('00:00:00');
@@ -74,7 +85,7 @@ locastyle.form = (function() {
         $field.data('original-value', $field.val() );
       });
     });
-    
+
   }
 
   function formText() {
