@@ -1,0 +1,35 @@
+
+//
+// Default colors of themes and other elements.
+//
+
+$default-color-mix: #000;
+$second-color-percentage: 15%;
+
+$blue-color:        #254fa2;
+$gold-color:        #b59d1a;
+$gray-color:        #878787;
+$light-green-color: #25b89a;
+$green-color:       #509742;
+$orange-color:      #fca400;
+
+$themes-colors: (
+  blue        : (color1: $blue-color, color2: mix($default-color-mix, $blue-color, $second-color-percentage)),
+  gold        : (color1: $gold-color, color2: mix($default-color-mix, $gold-color, $second-color-percentage)),
+  gray        : (color1: $gray-color, color2: mix($default-color-mix, $gray-color, $second-color-percentage)),
+  light-green : (color1: $light-green-color, color2: mix($default-color-mix, $light-green-color, $second-color-percentage)),
+  green       : (color1: $green-color, color2: mix($default-color-mix, $green-color, $second-color-percentage)),
+  orange      : (color1: $orange-color, color2: mix($default-color-mix, $orange-color, $second-color-percentage))
+);
+
+$gray1: #dfdfde;
+$gray2: #cccccb;
+$gray3: #878787;
+$gray4: #323232;
+$gray5: #212121;
+
+$colorPrimary: #878787;
+$colorSuccess: #388f39;
+$colorInfo: #2881ac;
+$colorWarning: #b9a016;
+$colorDanger: #a94442;
