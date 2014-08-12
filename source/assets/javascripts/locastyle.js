@@ -15,6 +15,7 @@
 //= require locastyle/_sidebars
 //= require locastyle/_collapse
 //= require locastyle/_modal
+//= require locastyle/_alert
 //= require locastyle/_dismiss
 //= require locastyle/_popover
 //= require locastyle/_dropdown

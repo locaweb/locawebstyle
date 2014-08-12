@@ -7,6 +7,7 @@ var locastyle = (function() {
     locastyle.general.init();
     locastyle.sidebars.init();
     locastyle.btnGroup.init();
+    locastyle.alert.init();
     locastyle.datepicker.init();
     locastyle.form.togglePasswordField();
   }
