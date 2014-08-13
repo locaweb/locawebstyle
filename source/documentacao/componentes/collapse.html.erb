@@ -31,6 +31,42 @@ type: component
     <p>Nos exemplos usamos o elemento <code>a</code> com a classe <code>.ls-collapse-header</code>, mas qualquer elemento, como um DIV por exemplo, pode receber essa classe.</p>
   </div>
 
+  <div class="ls-box ls-box-gray">
+    <h2 class="doc-title-4">Acessibilidade</h2>
+    <p>Via javascript é adicionada as ARIAs abaixo:</p>
+    <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Estado do Collapse</th>
+          <th>Elemento</th>
+          <th>Wai-aria</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fechado</td>
+          <td>ls-collapse-header</td>
+          <td>aria-expanded="false"</td>
+        </tr>
+        <tr>
+          <td>Fechado</td>
+          <td>ls-collapse-body</td>
+          <td>aria-hidden="true"</td>
+        </tr>
+        <tr>
+          <td>Aberto</td>
+          <td>ls-collapse-header</td>
+          <td>aria-expanded="true"</td>
+        </tr>
+        <tr>
+          <td>Aberto</td>
+          <td>ls-collapse-body</td>
+          <td>aria-hidden="false"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <h2 class="doc-title-3">Parâmetros adicionais</h2>
 
   <table class="ls-table">
