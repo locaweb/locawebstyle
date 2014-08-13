@@ -16,7 +16,6 @@ locastyle.modal = (function() {
   function init() {
     unbind();
     bindOpen();
-    ariaModalTemplate();
   }
 
   function unbind() {
