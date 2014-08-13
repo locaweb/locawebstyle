@@ -112,6 +112,42 @@ type: component
     </tbody>
   </table>
 
+  <div class="ls-box ls-box-gray">
+    <h2 class="doc-title-4">Acessibilidade</h2>
+    <p>Via javascript, o modal recebe <code>focus()</code> e o atributo <code>tabindex="-1"</code> além de ser adicionada as ARIAs abaixo:</p>
+    <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Estado do modal</th>
+          <th>Elemento</th>
+          <th>Wai-aria</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Escondido</td>
+          <td>.ls-modal</td>
+          <td>aria-hidden="true"</td>
+        </tr>
+        <tr>
+          <td>Exibindo</td>
+          <td>.ls-modal</td>
+          <td>aria-hidden="false"</td>
+        </tr>
+        <tr>
+          <td>Aberto/Fechado</td>
+          <td>.ls-modal</td>
+          <td>role="dialog"</td>
+        </tr>
+        <tr>
+          <td>Aberto/Fechado</td>
+          <td>.ls-modal</td>
+          <td>aria-labelledby="ID_DO_TITULO"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <h3 class="doc-title-3">Abrindo a modal via URL</h3>
     <p>Para abrir a modal automaticamente assim que a página for carregada, basta passar na URL o nome da modal. Tente aqui mesmo, no final da URL desta página, adicione <code>#myAwesomeModal</code> e aperte ENTER.</p>
 
