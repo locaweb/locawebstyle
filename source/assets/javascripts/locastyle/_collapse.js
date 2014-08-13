@@ -24,6 +24,7 @@ locastyle.collapse = (function() {
     $(config.selectors.container).each(function(i, collapse) {
       var $collapse = $(this);
       bindHeader($collapse);
+      ariaCollapse($collapse);
     });
     bindButton();
   }
@@ -72,7 +73,19 @@ locastyle.collapse = (function() {
     // $collapse.find(config.selectors.content).slideToggle(300, 'linear', function(){
     //   $collapse.toggleClass(config.classes.open);
     // });
+    ariaCollapse($collapse);
     return $collapse;
+  }
+
+  function ariaCollapse(elem) {
+    if($(elem).hasClass('ls-collapse-open')){
+      $(config.selectors.trigger).attr({ 'aria-expanded' : true });
+      $(config.selectors.content).attr({ 'aria-hidden' : false });
+    }
+    else{
+      $(config.selectors.trigger).attr({ 'aria-expanded' : false });
+      $(config.selectors.content).attr({ 'aria-hidden' : true });
+    }
   }
 
   return {
