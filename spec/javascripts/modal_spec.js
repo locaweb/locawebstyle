@@ -80,4 +80,29 @@ describe("Modal: ", function() {
       });
     });
   });
+
+  describe("Modal with wai-aria:", function() {
+
+    it("should has attribute aria-hidden equal true", function() {
+      expect($('.ls-modal').attr('aria-hidden')).toEqual('true');
+    });
+
+    it("When modal opened should has attribute aria-hidden equal false", function() {
+      $('#myModal').trigger('click');
+      expect($('.ls-modal').attr('aria-hidden')).toEqual('false');
+    });
+
+    it("should has attribute role equal dialog", function() {
+      $('#myModal').trigger('click');
+      expect($('.ls-modal').attr('role')).toEqual('dialog');
+    });
+
+    it("should has attribute aria-labelledby equal value ID of title modal", function() {
+      $('#myModal').trigger('click');
+      var titleID = $('.ls-modal-title').attr('id')
+      expect($('.ls-modal').attr('aria-labelledby')).toEqual(titleID);
+    });
+
+  });
+
 });
