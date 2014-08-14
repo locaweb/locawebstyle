@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="ls-theme-green documentacao documentacao_introducao documentacao_introducao_suporte-browsers documentacao_introducao_suporte-browsers_index">
+<head>
+  <meta charset="UTF-8">
+  <title>Suporte para browsers antigos</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Entenda como melhorar o suporte a browsers antigos, como o IE8" />
+  <meta name="keywords" content="" />
+
+  <link href="../../../assets/stylesheets/docs.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/locawebstyle/assets/stylesheets/locastyle.css">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41233562-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+
+
+<header class="doc-header container">
+  <nav class="doc-menu">
+  <span class="sandwich"></span>
+  <ul>
+    <li><a href="/locawebstyle">Home</a></li>
+    <li><a href="/locawebstyle/documentacao/introducao/">Documentação</a></li>
+    <li><a href="/locawebstyle/documentacao/introducao/boilerplate/">Comece por aqui</a></li>
+    <li><a href="/locawebstyle/changelog">Changelog</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v1/">Documentação V1</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v2/">Documentação V2</a></li>
+  </ul>
+</nav>
+
+  <h1 class="doc-logo"><a href="/locawebstyle/"><strong>Locaweb</strong> Style</a></h1>
+</header>
+
+<div class="doc-title-intro">
+  <div class="container">
+    <h1>Documentação</h1>
+    <p>Saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
+  </div>
+</div>
+
+<nav class="doc-menu-top">
+  <div class="container">
+    <ul>
+      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/'>Introdução</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/css/grid/'>CSS</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/'>Funções JS</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/'>Componentes</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/formularios/'>Formulários</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/exemplos/'>Telas de Exemplo</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="doc-content container">
+  <div class="row">
+    <aside class="col-md-3">
+  <nav class="doc-sidebar-menu">
+    <ul>
+      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/'>Informações iniciais</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/boilerplate/'>Comece por aqui</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/praticas/css/'>Padrões de CSS</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/praticas/javascript/'>Padrões de Javascript</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/chrome/'>Extensão para Chrome</a></li>
+      <li class='active'><a class='active' href='/locawebstyle/documentacao/introducao/suporte-browsers/'>Suporte para Browsers Antigos</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/contribua/'>Contribua</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
+<section class="col-md-9">
+  <div class="doc-intro-content">
+  <h1>Suporte para browsers antigos</h1>
+  <p>Entenda como melhorar o suporte a browsers antigos, como o IE8</p>
+</div>
+
+  <p>O Locawebstyle dá suporte a todos os navegadores atuais, já nos antigos esse suporte está no formato Progressive Enhancement, sendo que os componentes e o layout funcionam na experiência máxima que o browser suporta.</p>
+  <p>Para dar suporte ao Internet Explorer 8, é necessário implementar algumas modificações:</p>
+  <ol>
+    <li><a href="http://jquery.com/download/" target="_blank">jQuery</a> com suporte a navegadores antigos. Nesse caso, você precisa usar a jQuery na versão 1.11 ou menor. As versões mais novas, da 2.0 ou superior, não suportam browsers antigos.</li>
+    <li><a href="https://code.google.com/p/html5shim/" target="_blank">html5shiv</a>. Esse plugin JavaScript faz os browsers antigos conhecerem as tags do HTML5.</li>
+    <li><a href="https://code.google.com/p/css3-mediaqueries-js/" target="_blank">mediaqueries</a>. Faz browsers antigos suportarem as mediaqueries do CSS.</li>
+    <li><a href="http://selectivizr.com/" target="_blank">Selectivizr</a> para os browsers entenderem os novos seletores do CSS3.</li>
+  </ol>
+
+  <p>Abaixo um exemplo usando as tags condicionais da Microsoft. Nós tentamos sempre usar os princícios do Progressive Enhancement para que os browsers antigos tenham a melhor experiência possível.</p>
+
+<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre>
+<span class="c">&lt;!--[if lt IE 9]&gt;
+  &lt;script type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+  &lt;script type="text/javascript" src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"&gt;&lt;/script&gt;
+  &lt;script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <h2 class="doc-title-2">Adicionando uma barra de aviso</h2>
+  <p>Você pode inserir uma barra de aviso sobre os browsers que não são suportados. Por padrão, o Locaweb Style não insere essa barra, por isso você precisa iniciar a função manualmente. Para tanto, basta chamar a função <code>locastyle.browserUnsupportedBar</code>:</p>
+
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">locastyle</span><span class="p">.</span><span class="nx">browserUnsupportedBar</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <p>Geralmente nós mantemos o suporte para browsers com duas versões anteriores. Por exemplo: a versão mais atual do IE é a 11, por isso damos suporte para o IE 9, 10 e 11. A barra, nesse caso iria aparecer para o IE8 ou inferior.</p>
+
+</section>
+
+  </div>
+</div>
+
+<footer class="doc-footer">
+  <div class="container">
+   <ul class="doc-social-link">
+      <!-- <li> <a href="" class="doc-social-facebook">facebook</a> </li> -->
+      <li> <a target="_blank" class="doc-social-twitter" href="http://twitter.com/locawebdevnet">twitter</a> </li>
+    </ul>
+    <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/locawebstyle/assets/images/docs/locaweb-logo.png" alt=""></a>
+    <p class="doc-copyright">
+      Copyright © 1997-2014 Serviços de Internet S/A.
+    </p>
+  </div>
+</footer>
+
+<script src="../../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script><script src="../../../assets/javascripts/locastyle.js" type="text/javascript"></script><script src="../../../assets/javascripts/docs.js" type="text/javascript"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51cdc3552ecf7080"></script>
+</body>
+</html>
+

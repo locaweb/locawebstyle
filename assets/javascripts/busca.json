@@ -109,12 +109,6 @@
       "path": "documentacao/componentes/popover"
   },
   
-  "documentacao/componentes/rastreando-eventos" :   {
-      "title": "Rastreando eventos",
-      "description": "Rastreio de eventos automáticos para quem usa o "Analytics" do Google",
-      "path": "documentacao/componentes/rastreando-eventos"
-  },
-  
   "documentacao/componentes/tabelas" :   {
       "title": "Tabelas",
       "description": "Padrão de tabelas",
@@ -137,6 +131,12 @@
       "title": "Tour Guiado",
       "description": "Exibe uma navegação explicativa de elementos pré definidos",
       "path": "documentacao/componentes/tour-guiado"
+  },
+  
+  "documentacao/css/classes-de-breakpoints" :   {
+      "title": "Classes de breakpoints",
+      "description": "Classes que representam o breakpoint atual",
+      "path": "documentacao/css/classes-de-breakpoints"
   },
   
   "documentacao/css/classes-funcionais" :   {
@@ -331,6 +331,30 @@
       "path": "documentacao/exemplos/painel2/stats"
   },
   
+  "documentacao/exemplos/painel3/contacts" :   {
+      "title": "Contatos",
+      "description": "",
+      "path": "documentacao/exemplos/painel3/contacts"
+  },
+  
+  "documentacao/exemplos/painel3/nameservers/edit" :   {
+      "title": "Servidores de DNS",
+      "description": "",
+      "path": "documentacao/exemplos/painel3/nameservers/edit"
+  },
+  
+  "documentacao/exemplos/painel3/nameservers" :   {
+      "title": "Servidores de DNS",
+      "description": "",
+      "path": "documentacao/exemplos/painel3/nameservers"
+  },
+  
+  "documentacao/exemplos/painel3/pre-painel" :   {
+      "title": "Pré Painel",
+      "description": "",
+      "path": "documentacao/exemplos/painel3/pre-painel"
+  },
+  
   "documentacao/exemplos/product-not-hired" :   {
       "title": "",
       "description": "",
@@ -427,6 +451,12 @@
       "path": "documentacao/funcoes-js"
   },
   
+  "documentacao/funcoes-js/rastreando-eventos" :   {
+      "title": "Rastreando eventos",
+      "description": "Rastreio de eventos automáticos para quem usa o "Analytics" do Google",
+      "path": "documentacao/funcoes-js/rastreando-eventos"
+  },
+  
   "documentacao/funcoes-js/rolagem-suave" :   {
       "title": "Rolagem suave",
       "description": "Rolagem animada suave",
@@ -461,6 +491,12 @@
       "title": "Informações iniciais",
       "description": "Iniciando seu desenvolvimento com Locaweb Style",
       "path": "documentacao/introducao"
+  },
+  
+  "documentacao/introducao/suporte-browsers" :   {
+      "title": "Suporte para browsers antigos",
+      "description": "Entenda como melhorar o suporte a browsers antigos, como o IE8",
+      "path": "documentacao/introducao/suporte-browsers"
   },
   
   "documentacao/praticas/css" :   {

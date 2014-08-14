@@ -41,7 +41,6 @@
   </div>
 
   <span class="ls-show-sidebar ls-ico-menu"></span>
-  <span class="ls-show-notifications ls-ico-question"></span>
 
   <!-- Nome do produto/marca -->
     <h1 class="ls-brand-name"><a class="ls-ico-earth" href="../home">Revenda do Email Marketing</a></h1>
@@ -64,10 +63,13 @@
       <hr>
 
       <form action="#" class="ls-form" data-ls-module="form">
-        <div id="domain-form" class="row ls-form-disable">
+        <div id="domain-form" class="row ls-form-disable ls-form-text">
           <label class="ls-label col-md-8">
-            <span class="ls-label-text ls-hidden-accessible">dominio</span>
-            <input name="dominio" placeholder="dominio" required type="text" value="opa.entregaemails.com">
+            <span class="ls-label-text ls-hidden-accessible">Domínio</span>
+            <div class="ls-prefix-group">
+              <span class="ls-label-text-prefix">http://</span>
+              <input name="dominio" placeholder="dominio" required type="text" value="opa.entregaemails.com">
+            </div>
             <p><small>Status do DNS: Configurado corretamente</small></p>
           </label>
         </div>
@@ -87,10 +89,13 @@
       <p><a href="">Como configurar o seu domínio para ser o novo endereço de acesso.</a></p>
       <hr>
       <form action="" class="ls-form" data-ls-module="form">
-        <div id="access-domain-form" class="row ls-form-disable">
+        <div id="access-domain-form" class="row ls-form-disable ls-form-text">
           <label for="" class="ls-label col-md-8">
             <span class="ls-label-text ls-hidden-accessible">Domínio de acesso</span>
-            <input type="text" placeholder="opa.entregaemails.com">
+            <div class="ls-prefix-group">
+              <span class="ls-label-text-prefix">http://</span>
+              <input type="text" placeholder="opa.entregaemails.com">
+            </div>
             <p><small>Status do DNS: Configurado corretamente</small></p>
           </label>
         </div>
@@ -190,23 +195,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Voluptas error ex doloremque</a>
+            <a href="#">Quia dolorem repellendus reprehenderit assumenda voluptatibus sint ex beatae dolor dolore animi rem</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Quae magnam earum ratione molestiae</a>
+            <a href="#">Repellendus molestiae distinctio facere maiores sunt eius nostrum et dolor perferendis laudantium autem atque</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Quia minima quos ut sunt explicabo consequatur ut est et cumque</a>
+            <a href="#">Omnis est aut doloribus soluta</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Vero veniam eveniet voluptas</a>
+            <a href="#">Dolor eum cumque nihil inventore harum provident enim porro fugit rerum esse et</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Voluptatibus modi et qui labore dolor ut illo ipsam</a>
+            <a href="#">Iusto voluptatem doloribus cupiditate excepturi aut</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -215,8 +220,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> reprehenderit enim expedita deleniti dolorum et</a></li>
-          <li><a href="#">> qui quidem corrupti quis nemo accusamus</a></li>
+          <li><a href="#">> vitae quo et qui sit non</a></li>
+          <li><a href="#">> sit velit enim beatae quam voluptatum</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">
@@ -234,6 +239,12 @@
   <script src="../../../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script>
   <script src="../../../../assets/javascripts/locastyle.js" type="text/javascript"></script>
   <script src="../../../../assets/javascripts/example.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    $(window).load(function() {
+      locastyle.browserUnsupportedBar.init();
+    });
+</script>
 
 </body>
 </html>
