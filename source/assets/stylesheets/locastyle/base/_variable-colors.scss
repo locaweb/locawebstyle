@@ -1,4 +1,3 @@
-
 //
 // Default colors of themes and other elements.
 //
@@ -7,7 +6,7 @@ $default-color-mix: #000;
 $second-color-percentage: 15%;
 
 $blue-color:        #254fa2;
-$gold-color:        #b59d1a;
+$gold-color:        #a38e17;
 $gray-color:        #878787;
 $light-green-color: #25b89a;
 $green-color:       #509742;
@@ -22,11 +21,12 @@ $themes-colors: (
   orange      : (color1: $orange-color, color2: mix($default-color-mix, $orange-color, $second-color-percentage))
 );
 
-$gray1: #dfdfde;
-$gray2: #cccccb;
-$gray3: #878787;
-$gray4: #323232;
-$gray5: #212121;
+$gray0: #f7f7f7; // for backgrounds
+$gray1: #eeeeee; // for border in lx-boxes
+$gray2: #dddddd; // for lines on tables
+$gray3: #888888; // for titles in ls-box intro .ls-box-gray
+$gray4: #555555; // for all fonts
+$gray5: #222222; // for titles
 
 $colorPrimary: #878787;
 $colorSuccess: #388f39;
