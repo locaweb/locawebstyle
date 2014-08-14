@@ -1,11 +1,11 @@
-<div class="ls-modal fade opened ls-modal-template <%= this.lsModule %> ">
+<div class="ls-modal fade opened ls-modal-template <%= this.lsModule %> " tabindex="-1" aria-labelledby="lsModal" role="dialog">
   <% if @actionType != 'link': %>
     <form action="<%= @action %>" method="post">
   <% end %>
     <div class="ls-modal-box">
       <div class="ls-modal-header">
         <button type="button" data-dismiss="modal" class="close">&times;</button>
-        <h4 class="ls-modal-title"><%= @title %></h4>
+        <h4 class="ls-modal-title" id="lsModal"><%= @title %></h4>
       </div>
       <div class="ls-modal-body">
         <p><%- @content %></p>
