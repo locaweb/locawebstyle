@@ -5,7 +5,7 @@ Um framework front-end de comportamento e estilo para projetos web, com uma inte
 Você pode usar o Locaweb Style de várias formas: direto pelo nosso servidor, via Bower ou baixando os assets para usar offline. Veja [nesse link todas as opções](http://locaweb.github.io/locawebstyle/documentacao/introducao/downloads/) e instruções de como começar a usar.
 
 ### Documentação completa
-Matemos a [documentação completa dos componentes e como eles funcionam aqui](http://locaweb.github.io/locawebstyle/documentacao/introducao/). Se você usar o Chrome, [baixe nossa extensão](http://locaweb.github.io/locawebstyle/documentacao/introducao/chrome/) para facilitar o acesso à documentação.
+Mantemos a [documentação completa dos componentes e como eles funcionam aqui](http://locaweb.github.io/locawebstyle/documentacao/introducao/). Se você usar o Chrome, [baixe nossa extensão](http://locaweb.github.io/locawebstyle/documentacao/introducao/chrome/) para facilitar o acesso à documentação.
 
 ### Quer contribuir?
 Para contribuir é bico. Faça um fork do projeto aqui mesmo no GitHub e comece a codar! ;-)
