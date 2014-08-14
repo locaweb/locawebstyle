@@ -1,7 +1,7 @@
 .ls-sidebar
   +single-transition(transform, .5s)
   +translate(-50%, 0)
-  background: #222
+  background-color: mix($default-color-mix, $default-menu-color-mix, 88%)
   width: $sidebarWidth
   position: fixed
   left: 0
@@ -36,7 +36,7 @@
       position: static
 
   .ls-area-account
-    background-color: #111
+    background-color: mix($default-color-mix, $default-menu-color-mix, 92%)
     border-bottom: 1px solid #292929
     padding: 20px 15px
     position: absolute
@@ -95,15 +95,12 @@
     li
       list-style: none
       border-bottom: 1px solid
-      +rgba(border-bottom-color,$gray4,.5)
 
       &.ls-active > a
         color: #fff
 
     a
       +single-transition(padding, .2s)
-      color: $gray3
-      border-left: 5px solid transparent
       display: block
       font-size: remtopx(.875)
       font-weight: 600
@@ -122,9 +119,8 @@
         margin-top: -10px
         left: 15px
 
-      &:hover,
-      &:focus
-        color: #fff
+      &:focus,
+      &:hover
         padding-left: 65px
 
         &:before
@@ -143,7 +139,6 @@
       &:after
         +single-transition(all, .2s)
         content: "\e60b"
-        color: $gray3
         font-family: 'locastyle'
         font-size: remtopx(.6875)
         position: absolute
@@ -154,8 +149,6 @@
       &.ls-active
 
         a
-          +rgba(background-color, $gray4,.5)
-
           &:hover,
           &:focus
             padding-left: 65px
@@ -166,12 +159,9 @@
 
         ul
           +single-transition(opacity, .3s)
-          border-top: 1px solid $gray4
           height: auto
           display: block
-
-          li
-            border-bottom: 1px solid $gray4
+          border-top: 1px solid
 
           li:last-child
             border-bottom: none

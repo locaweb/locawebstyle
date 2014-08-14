@@ -47,14 +47,32 @@
           color: $color1
 
       .ls-menu
-        a
-          &:hover,
-          &:focus
-            +rgba(background-color, $gray4,.5)
+        li
+          border-bottom-color: mix($default-color-mix, $default-menu-color-mix, 84%)
 
-        li.ls-active:not(.ls-submenu) > a
-          background-color: $gray4
-          border-left-color: $color1
+          a
+            color: mix($default-color-mix, $default-menu-color-mix, 45%)
+
+            &:hover,
+            &:focus
+              background-color: mix($default-color-mix, $default-menu-color-mix, 80%)
+
+          &.ls-active:not(.ls-submenu) > a
+            background-color: mix($default-color-mix, $default-menu-color-mix, 76%)
+
+        .ls-submenu
+
+          &:after
+            color: mix($default-color-mix, $default-menu-color-mix, 45%)
+
+          li
+            border-bottom-color: mix($default-color-mix, $default-menu-color-mix, 80%)
+
+          &.ls-active
+            background-color: mix($default-color-mix, $default-menu-color-mix, 84%)
+
+            ul
+              border-top-color: mix($default-color-mix, $default-menu-color-mix, 80%)
 
       .ls-brand-name
         background-color: $color1
