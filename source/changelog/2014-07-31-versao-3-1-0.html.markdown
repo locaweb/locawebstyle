@@ -2,7 +2,6 @@
 title: Versão 3.1.0
 date: 2014-07-31 18:33 UTC
 tags:
-published: false
 layout: changelog-single
 ---
 <ul class="ls-no-list-style ls-no-margin-left">
