@@ -57,7 +57,7 @@
         display: inline-block
 
     .ls-title-2
-      +rgba(color, $gray1,.7)
+      color: mix($default-color-mix, $default-menu-color-mix, 50%)
       font-size: remtopx(.6875)
       font-weight: normal
       text-transform: uppercase
@@ -73,8 +73,8 @@
 
     [class*="ls-btn"]
       margin-left: 45px
-      background-color: $gray5
-      +rgba(color, $gray1,.7)
+      background-color: mix($default-color-mix, $default-menu-color-mix, 85%)
+      color: mix($default-color-mix, $default-menu-color-mix, 40%)
       font-size: remtopx(.5)
 
   &.ls-area-account-active .ls-menu
