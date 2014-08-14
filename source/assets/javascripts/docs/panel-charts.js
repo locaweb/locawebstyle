@@ -20,13 +20,7 @@ $(function () {
         text: 'Envios'
       }
     },
-    colors: [{
-      linearGradient: [0, 300, 0, 0],
-      stops: [
-        [0, "rgb(189, 170, 56)"],
-        [1, "rgb(155, 131, 23)"]
-      ]
-    }],
+    colors: ["#bdaa38", "#aa4643 ","#89a54e"],
     series: [{
       name: 'Total de envios contratados',
       data: [25, 50, 20, 3]
@@ -44,10 +38,10 @@ $(function () {
     },
     xAxis: {
       categories: [
-        'Joana',
-        'Marcela',
-        'Patricia',
-        'Diego'
+        '29/04 a 28/05',
+        '29/06 a 28/07',
+        '29/08 a 28/09',
+        '29/10 a 28/11'
       ]
     },
     yAxis: {
@@ -56,16 +50,18 @@ $(function () {
         text: 'Envios'
       }
     },
-    colors: [{
-      linearGradient: [0, 300, 0, 0],
-      stops: [
-        [0, "rgb(189, 170, 56)"],
-        [1, "rgb(155, 131, 23)"]
-      ]
-    }],
+    colors: ["#bdaa38", "#aa4643 ","#89a54e"],
     series: [{
-      name: 'Total de envios contratados',
-      data: [250, 5, 200, 30]
+      name: 'Mensagens enviadas',
+      data: [30, 15, 30, 30],
+    },
+    {
+      name: 'Erros de recebimento',
+      data: [20, 12, 14, 22]
+    },
+    {
+      name: 'Descadastramentos',
+      data: [5, 1, 5, 10]
     }]
   });
 });
