@@ -6,6 +6,7 @@ var lsdocs = (function() {
     sidebarAffix();
     toggleMenuActive();
     toggleThemes();
+    addUxLink();
   }
 
   function toggleThemes (argument) {
@@ -79,6 +80,13 @@ var lsdocs = (function() {
           }
         });
       }
+    }
+  }
+
+  // add a link to how the UX works.
+  function addUxLink(){
+    if ($('#doc-ux').length) {
+      $('.doc-intro-content').append('<a href="#doc-ux" class="ls-tag doc-tag-ux">Informações de utilização</a>')
     }
   }
 
