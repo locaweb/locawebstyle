@@ -28,6 +28,11 @@ h1,h2,h3,h4,h5,h6
   font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+.clearfix:after
+  content: ""
+  display: block
+  clear: both
+
 .documentacao_cartilha-de-elementos [class*="doc-title"]
   margin-top: 0
 
@@ -548,12 +553,12 @@ p code
       margin-top: 20px
 
 .ls-box-demo
+  @extend .clearfix
   border: solid 1px #e1e1e8
   border-radius: 3px 3px 0 0
   padding: 40px 20px 20px
   margin-top: 25px
   position: relative
-  overflow: hidden
 
   &:before
     position: absolute
