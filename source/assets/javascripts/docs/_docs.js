@@ -21,7 +21,7 @@ var lsdocs = (function() {
 
   function toggleMenuActive() {
     $('.doc-menu').on('click', function() {
-      $(this).toggleClass('active')
+      $(this).toggleClass('active');
     })
   }
 
@@ -64,19 +64,21 @@ var lsdocs = (function() {
 
   function sidebarAffix(){
     if($('html').hasClass('ls-screen-lg') || $('html').hasClass('ls-screen-md')){
-      var docSidebarWidth = $('.doc-sidebar-menu').width();
-      $(window).scroll(function(){
-        var scrollTop = $(this).scrollTop();
-        if(scrollTop + $(window).height() + 40 == $(document).height() + 40) {
-          $('.doc-sidebar-menu').css('margin-top', '-30px')
-        }
+      var docSidebarWidth = $('.doc-sidebar-inner').width();
+      if ( $('.doc-sidebar-inner').height() < $(window).height() ){
+        $(window).scroll(function(){
+          var scrollTop = $(this).scrollTop();
+          if(scrollTop + $(window).height() + 40 == $(document).height() + 40) {
+            $('.doc-sidebar-inner').css('margin-top', '0px')
+          }
 
-        if(scrollTop >= '391'){
-          $('.doc-sidebar-menu').addClass('doc-affix').css('width', docSidebarWidth)
-        }else{
-          $('.doc-sidebar-menu').removeClass('doc-affix').removeAttr('style');
-        }
-      });
+          if(scrollTop >= '391'){
+            $('.doc-sidebar-inner').addClass('doc-affix').css('width', docSidebarWidth)
+          }else{
+            $('.doc-sidebar-inner').removeClass('doc-affix').removeAttr('style');
+          }
+        });
+      }
     }
   }
 
