@@ -3,11 +3,19 @@ var locastyle = locastyle || {};
 locastyle.tabs = (function() {
   'use strict';
 
+  var config = {
+    tab : '.ls-tabs-nav',
+    tabLink: '.ls-tabs-nav a',
+    tabListActive: '.ls-tabs-nav li.ls-active a',
+    tabContent: '.ls-tab-content'
+  }
+
   function init() {
     unbind();
     bindClickOnTriggers();
     bindBreakpointUpdateOnChecker();
     checkBreakpoint();
+    ariaTabs();
   }
 
   // adiciona o bind de click no modulo e chama os métodos necessários
@@ -80,17 +88,26 @@ locastyle.tabs = (function() {
   function activateTab(el, $target) {
     $(el).parents("li").addClass("ls-active");
     $target.addClass("ls-active");
+    $(el).attr('aria-selected' , true);
   }
 
   // desativa a aba de acordo com os argumentos recebidos
   function deactivateTab(el, $target) {
     $(el).parents("li").siblings().removeClass("ls-active");
     $target.siblings().removeClass("ls-active");
+    $(el).parents("li").siblings().find('a').attr('aria-selected' , false);
   }
 
   // remove os binds que o próprio modulo adiciona
   function unbind() {
     $("[data-ls-module=tabs]").off("click.ls");
+  }
+
+  function ariaTabs() {
+    $(config.tab).attr('role' , 'tablist');
+    $(config.tabLink).attr('role' , 'tab');
+    $(config.tabListActive).attr('aria-selected' , 'true');
+    $(config.tabContent).attr('role' , 'tabpanel');
   }
 
   return {

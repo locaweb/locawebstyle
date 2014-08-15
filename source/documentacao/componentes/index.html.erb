@@ -45,6 +45,47 @@ type: component
   </div>
   <% code("html") do %><%= partial 'documentacao/shared/abas' %><% end %>
 
+  <div class="ls-box ls-box-gray">
+    <h2 class="doc-title-4">Acessibilidade</h2>
+    <p>Via javascript é adicionada as ARIAs abaixo:</p>
+    <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Estado da Aba</th>
+          <th>Elemento</th>
+          <th>Wai-aria</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fixa</td>
+          <td>ls-tabs-nav</td>
+          <td>role="tablist"</td>
+        </tr>
+        <tr>
+          <td>Fixa</td>
+          <td>.ls-tabs-nav a</td>
+          <td>role="tab"</td>
+        </tr>
+        <tr>
+          <td>Fixa</td>
+          <td>ls-tab-content</td>
+          <td>role="tabpanel"</td>
+        </tr>
+        <tr>
+          <td>Ativa</td>
+          <td>.ls-tabs-nav .ls-active a</td>
+          <td>aria-hidden="false"</td>
+        </tr>
+        <tr>
+          <td>Desativada</td>
+          <td>.ls-tabs-nav .ls-active a</td>
+          <td>aria-hidden="true"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <h2 class="doc-title-3">Navegação de Abas em forma de dropdown</h2>
   <p>Em dispositivos com telas pequenas, a navegação das abas são apresentadas em forma de dropdown.</p>
 
