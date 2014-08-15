@@ -9,8 +9,15 @@ type: component
 
   <%= partial 'partials/doc-intro-content' %>
 
+  <h2 class="doc-title-3">Componente</h2>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/popover' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/popover' %><% end %>
+
   <div class="ls-alert-info">
-    Quando resolução abaixo de 769px o popover muda seu comportamento e é exibido como uma modal, evitando problemas de usabilidade!
+    <h4 class="doc-title-5">No mobile, vira modal</h4>
+    <p>Quando resolução abaixo de 769px o popover muda seu comportamento e é exibido como uma modal, evitando problemas de usabilidade!</p>
   </div>
 
   <h2 class="doc-title-3">Como usar</h2>
@@ -62,12 +69,6 @@ type: component
       </tr>
     </tbody>
   </table>
-
-  <h2 class="doc-title-3">Exemplos completos</h2>
-  <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/popover' %>
-  </div>
-  <% code("html") do %><%= partial 'documentacao/shared/popover' %><% end %>
 
   <h2 class="doc-title-3">Exemplo utilizando os parametros default do popover</h2>
   <div class="ls-box-demo">

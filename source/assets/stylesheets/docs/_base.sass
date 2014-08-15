@@ -164,6 +164,13 @@ p code
     font-size: remtopx(1.5)
     color: #fff
 
+[class*="ls-alert"]
+  p
+    margin-bottom: 0
+  [class*="doc-title"]
+    margin-top: 0
+
+
 //
 // TITLES
 //
@@ -173,6 +180,9 @@ p code
 [class*="doc-title"]
   margin-top: 35px
   margin-bottom: 5px
+
+  [class*="ls-alert"] &
+    margin-top: 0
 
   a
     color: #000
