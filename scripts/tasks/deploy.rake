@@ -28,7 +28,6 @@ namespace :deploy do
 				cd deploy &&
 				rm -f .DS_Store &&
 				rm -rf flash
-				rm images/graph-example.jpg
         rm javascripts/busca.json
         rm javascripts/docs.js
         rm -rf javascripts/libs
