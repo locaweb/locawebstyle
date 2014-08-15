@@ -25,16 +25,16 @@
     // Topbar
     //
     .ls-user-account
-      background: mix($default-color-mix, $color1, 15%)
+      background: mix($theme-color-mix, $color1, 15%)
 
     .ls-topbar
-      +rgba(background-color, $color1, .95)
+      background-color: $color1
 
       .ls-alerts-list a[class*="ls-ico"]
         @if (lightness($color1) < 30)
-          color: mix($default-color-mix, $color1, 40%)
+          color: mix($theme-color-mix, $color1, 40%)
         @else
-          color: mix($default-color-mix, $color1, 25%)
+          color: mix($theme-color-mix, $color1, 25%)
 
     //
     // SIDEBAR
@@ -48,31 +48,31 @@
 
       .ls-menu
         li
-          border-bottom-color: mix($default-color-mix, $default-menu-color-mix, 84%)
+          border-bottom-color: mix($menu-color-mix, $menu-bg-color, 84%)
 
           a
-            color: mix($default-color-mix, $default-menu-color-mix, 45%)
+            color: mix($menu-color-mix, $menu-text-color, 45%)
 
             &:hover,
             &:focus
-              background-color: mix($default-color-mix, $default-menu-color-mix, 80%)
+              background-color: mix($menu-color-mix, $menu-bg-color, 80%)
 
           &.ls-active:not(.ls-submenu) > a
-            background-color: mix($default-color-mix, $default-menu-color-mix, 76%)
+            background-color: mix($menu-color-mix, $menu-bg-color, 76%)
 
         .ls-submenu
 
           &:after
-            color: mix($default-color-mix, $default-menu-color-mix, 45%)
+            color: mix($menu-color-mix, $menu-text-color, 45%)
 
           li
-            border-bottom-color: mix($default-color-mix, $default-menu-color-mix, 80%)
+            border-bottom-color: mix($menu-color-mix, $menu-bg-color, 80%)
 
           &.ls-active
-            background-color: mix($default-color-mix, $default-menu-color-mix, 84%)
+            background-color: mix($menu-color-mix, $menu-bg-color, 84%)
 
             ul
-              border-top-color: mix($default-color-mix, $default-menu-color-mix, 80%)
+              border-top-color: mix($menu-color-mix, $menu-bg-color, 80%)
 
       .ls-brand-name
         background-color: $color1
@@ -100,7 +100,7 @@
       border-color: $color2
 
       &:hover:not([disabled="disabled"])
-        background: mix($default-color-mix, $color1, 20%)
+        background: mix($theme-color-mix, $color1, 20%)
 
       &.ls-disabled:hover,
       &.ls-disabled:focus
