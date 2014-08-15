@@ -553,7 +553,11 @@ p code
   padding: 40px 20px 20px
   margin-top: 25px
   position: relative
-  overflow: hidden
+
+  &:after
+    content: ""
+    display: both
+    clear: both
 
   &:before
     position: absolute
