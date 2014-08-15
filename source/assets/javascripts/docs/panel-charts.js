@@ -101,4 +101,44 @@ $(function () {
       data: [5, 5, 2, 3]
     }]
   });
+
+  // Panel 2 Pie chart
+  $('#panel-chart-pie').highcharts({
+    chart: {
+      width: $('#panel-charts-2').width(),
+      plotBackgroundColor: null,
+      plotBorderWidth: 1,
+      plotShadow: false
+    },
+    title: {
+      text: ''
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    colors: ['#25b89a', '#aa4643 ','#89a54e'],
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+          style: {
+            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+          }
+        }
+      }
+    },
+    series: [{
+      type: 'pie',
+      name: 'Browser share',
+      data: [
+        ['Erro 1', 15.0],
+        ['Erro 2', 35.0],
+        ['Erro 3', 40.0]
+      ]
+    }]
+  });
+
 });
