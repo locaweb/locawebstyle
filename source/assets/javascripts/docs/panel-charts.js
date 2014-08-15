@@ -72,16 +72,43 @@ $(function () {
       min: 0,
       title: {
         text: 'Quantidade'
+      },
+      stackLabels: {
+        enabled: true,
+        style: {
+          fontWeight: 'bold',
+          color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+        }
+      }
+    },
+    legend: {
+      align: 'right',
+      x: 0,
+      verticalAlign: 'top',
+      y: 0,
+      floating: true,
+      backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+      borderColor: '#ccc',
+      borderWidth: 1,
+      shadow: false
+    },
+    plotOptions: {
+      column: {
+        stacking: 'normal',
+        dataLabels: {
+          enabled: false,
+          color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+        }
       }
     },
     colors: ['#25b89a', '#aa4643 ','#89a54e'],
     series: [{
       name: 'envios',
-      data: [55, 50, 20, 3]
+      data: [55, 50, 40, 25, 13]
     },
     {
       name: 'erros',
-      data: [5, 5, 2, 3]
+      data: [5, 5, 2, 10, 3]
     }]
   });
 
