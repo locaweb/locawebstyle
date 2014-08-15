@@ -86,12 +86,6 @@ $(function () {
         text: 'Quantidade'
       }
     },
-    colors: ["#25b89a", "#aa4643 ","#89a54e"],
-    plotOptions: {
-      column: {
-        stacking: 'percent'
-      }
-    },
     series: [{
       name: 'envios',
       data: [55, 50, 20, 3]
