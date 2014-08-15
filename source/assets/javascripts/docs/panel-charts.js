@@ -17,6 +17,13 @@ $(function () {
         text: 'Envios'
       }
     },
+    credits: {
+      text: 'Locaweb',
+      href: 'http://www.locaweb.com.br',
+      style: {
+        display: 'none'
+      }
+    },
     colors: ['#bdaa38', '#aa4643 ','#89a54e'],
     series: [{
       name: 'Total de envios contratados',
@@ -40,6 +47,13 @@ $(function () {
       min: 0,
       title: {
         text: 'Envios'
+      }
+    },
+    credits: {
+      text: 'Locaweb',
+      href: 'http://www.locaweb.com.br',
+      style: {
+        display: 'none'
       }
     },
     colors: ['#bdaa38', '#aa4643 ','#89a54e'],
@@ -101,6 +115,13 @@ $(function () {
         }
       }
     },
+    credits: {
+      text: 'Locaweb',
+      href: 'http://www.locaweb.com.br',
+      style: {
+        display: 'none'
+      }
+    },
     colors: ['#25b89a', '#aa4643 ','#89a54e'],
     series: [{
       name: 'envios',
@@ -138,6 +159,13 @@ $(function () {
             color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
           }
         }
+      }
+    },
+    credits: {
+      text: 'Locaweb',
+      href: 'http://www.locaweb.com.br',
+      style: {
+        display: 'none'
       }
     },
     series: [{
