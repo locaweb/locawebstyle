@@ -11,7 +11,12 @@
     .ls-color-theme,
     .ls-breadcrumb a,
     .hopscotch-bubble a
-      color: $color1
+      color: mix($color-mix, $color1, 20%)
+
+      &:hover,
+      &:focus,
+      &.ls-active
+        color: mix($color-mix, $color1, 40%)
 
     .ls-tag-primary
       background-color: $color1
