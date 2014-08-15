@@ -9,7 +9,12 @@ type: component
 
   <%= partial 'partials/doc-intro-content' %>
 
-  <h2 class="doc-title-3">Utilizando o dropdown.</h2>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/dropdown' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/dropdown' %><% end %>
+
+  <p>Estas são as classes funcionais usadas no dropbox.</p>
   <table class="ls-table">
     <thead>
       <tr>
@@ -28,11 +33,6 @@ type: component
       </tr>
     </tbody>
   </table>
-
-  <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/dropdown' %>
-  </div>
-  <% code("html") do %><%= partial 'documentacao/shared/dropdown' %><% end %>
 
   <h2 class="doc-title-3">Desabilitando o  droplist.</h2>
   <p>Basta inserir a classe <code>.ls-disabled</code>, no botão e assim desativa o dropdown.</p>
