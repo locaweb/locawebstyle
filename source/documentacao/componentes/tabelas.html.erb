@@ -173,4 +173,61 @@ type: component
     </tbody>
   </table>
 
+  <hr class="doc-hr" id="doc-ux">
+
+  <h2 class="doc-title-2">Especificação de comportamento</h2>
+  <p>Estas são informações que explicam como o Locaweb Style trata a tabela e seus componentes. Todos estes comportamentos já estão previstos no framework.</p>
+
+  <h4 class="doc-title-5">Definição</h4>
+  <p>A tabela é utilizada para consultar e comparar dados. Pode ser acompanhada por outros componentes como: filtro, ações em massa, paginação e outros.</p>
+  <%= image_tag "ux/tabelas/image07.png" %>
+
+  <h4 class="doc-title-5">Mobile</h4>
+  <p>Para visualizar as colunas "ocultas", deverá ter interação na linha, ou na opção "Visualizar", dentro do botão de ação múltiplo.</p>
+  <%= image_tag "ux/tabelas/image05.png" %>
+
+  <h5 class="doc-title-5">Quando usar?</h5>
+  <ul>
+    <li>Há necessidade de comparação ou consulta de vários dados em uma mesma página.</li>
+    <li>Há necessidade de uma ação ou mais referente a linha específica.</li>
+    <li>Há necessidade de ações em massa para os itens selecionados da mesma tabela.</li>
+    <li>Há necessidade de ordenação de colunas</li>
+    <li>Se inclusão da informação seja direta na tabela sem necessidade de uma outra página/modal para inclusão.</li>
+  </ul>
+  <h5 class="doc-title-5">Quando não usar?</h5>
+  <ul>
+    <li>Os dados apresentados não sejam comparáveis.</li>
+    <li>Não há necessidade de ordenação de colunas.</li>
+  </ul>
+
+  <h4 class="doc-title-4">Opções e variações do elemento</h4>
+
+  <h5 class="doc-title-5">Botão de ação - Linha</h5>
+  <p>Botão com uma ação principal e botão múltiplo de ações secundárias- Quando houver mais de uma ação, deverá exibir botão da ação principal e botão múltiplo com ações secundárias. Botão simples - Quando houver apenas uma ação deverá exibir a label específica. Ex: "Excluir"; "Renomear".</p>
+
+  <p>Obs: A cor da label da ação "Excluir" deverá ser vermelha.</p>
+  <%= image_tag "ux/tabelas/image01.png" %>
+
+  <h4 class="doc-title-4">Botão no Mobile</h4>
+  <p>O botão de ação para mobile não tem variação conforme a especificação acima. Deverá sempre exibir o botão múltiplo sem label quando houver uma ou mais ações.</p>
+  <%= image_tag "ux/tabelas/image06.png" %>
+
+  <h4 class="doc-title-4">Barra de ações em massa</h4>
+  <p>Será visível após uma seleção no componente de selectbox, e ficará fixa no topo da página.
+  <%= image_tag "ux/tabelas/image04.png" %>
+
+  <p>Na versão mobile será exibido o botão "Ações" com todas as opções.</p>
+  <%= image_tag "ux/tabelas/image03.png" %>
+
+  <h4 class="doc-title-4">Edição</h4>
+  <p>A edição de uma linha específica deverá abrir no modal em ambas versões.</p>
+  <%= image_tag "ux/tabelas/image02.png" %>
+
+  <h4 class="doc-title-4">Tag</h4>
+  <p>A tag pode ser utilizada na frente do identificador.</p>
+  <%= image_tag "ux/tabelas/image00.png" %>
+
+  <h4 class="doc-title-4">Acessibilidade</h4>
+  <p>Levantar com Deivid que informações referentes a acessibilidade são relevantes para o elemento.</p>
+
 </section>
