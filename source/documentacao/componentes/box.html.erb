@@ -12,6 +12,15 @@ type: component
 
   <p>Geralmente precisamos agrupar ou dividir algumas informações em caixas no layout. Essas caixas são simples e bem genéricas que podem conter qualquer outro elemento. </p>
 
+  <p>Para criar um box genérico, basta adicionar a classe <code>.ls-box</code> em algum elemento, de preferência em um elemento DIV.</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/box/box' %>
+  </div>
+
+  <% code("html") do %><%= partial 'documentacao/shared/box/box' %><% end %>
+
+  <p>Estas são as classes que você pode usar para modificar o <code>.ls-box</code>.</p>
   <table class="ls-table">
     <thead>
       <tr>
@@ -44,16 +53,6 @@ type: component
       </tr>
     </tbody>
   </table>
-
-  <h2 class="doc-title-3">Box genérico</h2>
-
-  <p>Para criar um box genérico, basta adicionar a classe <code>.ls-box</code> em algum elemento, de preferência em um elemento DIV.</p>
-
-  <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/box/box' %>
-  </div>
-
-  <% code("html") do %><%= partial 'documentacao/shared/box/box' %><% end %>
 
   <h2 class="doc-title-3">Box com a classe .ls-box-gray</h2>
 
