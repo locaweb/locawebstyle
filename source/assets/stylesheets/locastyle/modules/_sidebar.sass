@@ -1,7 +1,7 @@
 .ls-sidebar
   +single-transition(transform, .5s)
   +translate(-50%, 0)
-  background-color: mix($default-color-mix, $default-menu-color-mix, 88%)
+  background-color: mix($menu-color-mix, $menu-bg-color, 88%)
   width: $sidebarWidth
   position: fixed
   left: 0
@@ -36,8 +36,12 @@
       position: static
 
   .ls-area-account
-    background-color: mix($default-color-mix, $default-menu-color-mix, 92%)
-    border-bottom: 1px solid #292929
+    @if (lightness($menu-color-mix) < 30)
+      background-color: mix($menu-color-mix, $menu-bg-color, 92%)
+    @else
+      background-color: mix($menu-color-mix, $menu-bg-color, 60%)
+
+    border-bottom-color: mix($menu-color-mix, $menu-bg-color, 84%)
     padding: 20px 15px
     position: absolute
     bottom: 0
@@ -57,13 +61,16 @@
         display: inline-block
 
     .ls-title-2
-      color: mix($default-color-mix, $default-menu-color-mix, 50%)
+      @if (lightness($menu-color-mix) < 30)
+        color: mix($menu-color-mix, $menu-bg-color, 50%)
+      @else
+        color: $menu-bg-color
       font-size: remtopx(.6875)
       font-weight: normal
       text-transform: uppercase
 
     .ls-title-3
-      color: #f9f9f9
+      color: $menu-text-color
       font-size: remtopx(.875)
       font-weight: normal
       margin: 3px 0 15px
@@ -73,9 +80,10 @@
 
     [class*="ls-btn"]
       margin-left: 45px
-      background-color: mix($default-color-mix, $default-menu-color-mix, 85%)
-      color: mix($default-color-mix, $default-menu-color-mix, 40%)
+      background-color: mix($menu-color-mix, $menu-bg-color, 85%)
+      color: mix($menu-color-mix, $menu-bg-color, 40%)
       font-size: remtopx(.5)
+      border-color: mix($menu-color-mix, $menu-bg-color, 65%)
 
   &.ls-area-account-active .ls-menu
     height: calc(100% - 160px)
@@ -97,7 +105,7 @@
       border-bottom: 1px solid
 
       &.ls-active > a
-        color: #fff
+        color: $menu-text-color
 
     a
       +single-transition(padding, .2s)
@@ -241,11 +249,6 @@
         +single-transition(opacity, .2s, ease-in-out)
         border: none
 
-      li.ls-active:not(.ls-submenu)
-
-        > a
-          border-left-color: transparent
-
       .ls-submenu.ls-active a
         background: none
 
@@ -274,10 +277,8 @@
         .ls-submenu.ls-active ul,
           opacity: 1
           height: auto
-          border-top: 1px solid $gray4
+          border-top: 1px solid mix($theme-color-mix, $menu-bg-color, 80%)
 
-        .ls-submenu.ls-active a
-          +rgba(background-color, $gray4,.5)
 
       .ls-area-account
         height: 100px
