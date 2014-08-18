@@ -7,7 +7,7 @@ locastyle.dropdown = (function() {
     unbind();
     bindClickOnTriggers();
     bindClickOutsideTriggers();
-    ariaDropdown();
+    ariaDropdown('.ls-dropdown');
   }
 
   function unbind() {
