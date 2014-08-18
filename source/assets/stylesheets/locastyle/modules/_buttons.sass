@@ -21,16 +21,14 @@
 
   &:hover,
   &:focus,
+  &:active,
   &.ls-active
     border-color: mix($color-mix, #fff, 20%)
     background: mix($color-mix, #fff, 10%)
+    +box-shadow(inset 0 3px 5px rgba(0, 0, 0, 0.05))
 
   p + &
     margin-top: 7px
-
-  &.ls-active,
-  &:active
-    +box-shadow(inset 0 3px 5px rgba(0, 0, 0, 0.05))
 
   // Botões com disabled
   &.ls-disabled,
