@@ -1,10 +1,10 @@
 // Style base button
 [class*="ls-btn"]
   +single-transition(all, .2s)
-  border: 1px solid $gray2
+  border: 1px solid mix($color-mix, #fff, 30%)
   padding: 6px 11px 7px
   border-radius: $radiusDefault
-  background-color: transparent
+  background-color: #fff
   cursor: pointer
   display: inline-block
   font-size: remtopx(.8125)
@@ -13,12 +13,17 @@
   text-align: center
   white-space: normal
   color: #000
-  background-color: #fff
   vertical-align: top
   font-weight: normal
   -moz-appearance: none
   -webkit-appearance: none
   appearance: none
+
+  &:hover,
+  &:focus,
+  &.ls-active
+    border-color: mix($color-mix, #fff, 20%)
+    background: mix($color-mix, #fff, 10%)
 
   p + &
     margin-top: 7px
@@ -54,15 +59,6 @@
 
     & + .ls-btn-block
       margin-top: 15px
-
-.ls-btn
-  color: #000
-  background-color: #fff
-
-  &:hover,
-  &:focus,
-  &.ls-active
-    background-color: $gray1
 
 // Primary button
 .ls-btn-primary
@@ -102,12 +98,13 @@
 
 // Danger Button
 .ls-btn-danger
-  color: #F74B57
-  border-color: #F74357
+  color: $color-danger
 
   &:hover,
-  &:focus
-    background-color: #F74B57
+  &:focus,
+  &.ls-active
+    background: #d75553
+    border-color: mix($color-mix, $color-danger, 10%)
     color: #fff
 
 // BTN Groups

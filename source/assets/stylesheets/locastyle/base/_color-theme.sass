@@ -11,7 +11,12 @@
     .ls-color-theme,
     .ls-breadcrumb a,
     .hopscotch-bubble a
-      color: $color1
+      color: mix($color-mix, $color1, 20%)
+
+      &:hover,
+      &:focus,
+      &.ls-active
+        color: mix($color-mix, $color1, 40%)
 
     .ls-tag-primary
       background-color: $color1
@@ -25,16 +30,23 @@
     // Topbar
     //
     .ls-user-account
-      background: mix($default-color-mix, $color1, 15%)
+      background: mix($color-mix, $color1, 15%)
 
     .ls-topbar
-      +rgba(background-color, $color1, .95)
+      background-color: $color1
 
       .ls-alerts-list a[class*="ls-ico"]
         @if (lightness($color1) < 30)
-          color: mix($default-color-mix, $color1, 40%)
+          color: mix($color-mix, $color1, 40%)
         @else
-          color: mix($default-color-mix, $color1, 25%)
+          color: mix($color-mix, $color1, 25%)
+
+        &:hover:not([data-counter]):not(.ls-active)
+          @if (lightness($color1) < 30)
+            color: mix($color-mix, $color1, 65%)
+          @else
+            color: mix($color-mix, $color1, 40%)
+
 
     //
     // SIDEBAR
@@ -44,17 +56,39 @@
       .ls-area-account
 
         &[class*="ls-ico"]:before
-          color: $color1
+          @if (lightness($color1) < 30)
+            color: mix(#fff, $color1, 25%)
+          @else
+            color: $color1
 
       .ls-menu
-        a
-          &:hover,
-          &:focus
-            +rgba(background-color, $gray4,.5)
+        li
+          border-bottom-color: mix($color-menu-mix, $color-menu-bg, 84%)
 
-        li.ls-active:not(.ls-submenu) > a
-          background-color: $gray4
-          border-left-color: $color1
+          a
+            color: mix($color-menu-mix, $color-menu-text, 45%)
+
+            &:hover,
+            &:focus
+              color: $color-menu-text
+              background-color: mix($color-menu-mix, $color-menu-bg, 80%)
+
+          &.ls-active:not(.ls-submenu) > a
+            background-color: mix($color-menu-mix, $color-menu-bg, 76%)
+
+        .ls-submenu
+
+          &:after
+            color: mix($color-menu-mix, $color-menu-text, 45%)
+
+          li
+            border-bottom-color: mix($color-menu-mix, $color-menu-bg, 80%)
+
+          &.ls-active
+            background-color: mix($color-menu-mix, $color-menu-bg, 84%)
+
+            ul
+              border-top-color: mix($color-menu-mix, $color-menu-bg, 80%)
 
       .ls-brand-name
         background-color: $color1
@@ -78,11 +112,12 @@
 
     .ls-btn-primary
 
-      background-color: $color2
-      border-color: $color2
+      background-color: mix($color-mix, $color1, 20%)
+      border-color: mix($color-mix, $color1, 30%)
 
       &:hover:not([disabled="disabled"])
-        background: mix($default-color-mix, $color1, 20%)
+        background: mix($color-mix, $color1, 40%)
+        border-color: mix($color-mix, $color1, 50%)
 
       &.ls-disabled:hover,
       &.ls-disabled:focus
@@ -105,8 +140,8 @@
       li
 
         &.ls-active a
-          background-color: $color1
-          border-color: $color1
+          background-color: mix($color-mix, $color1, 20%)
+          border-color: mix($color-mix, $color1, 20%)
 
     .pager
 
@@ -226,7 +261,7 @@
 
     &.ls-pre-panel
       .ls-topbar
-        background-color: #f7f7f7
+        background-color: $gray0
 
     //
     // Datepicker

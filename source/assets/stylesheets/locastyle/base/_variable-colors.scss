@@ -1,35 +1,59 @@
-
 //
 // Default colors of themes and other elements.
 //
 
-$default-color-mix: #000;
-$second-color-percentage: 15%;
+// Base theme colors. Primary colors used in themes.
+$color-blue:        #254fa2;
+$color-gold:        #a38e17;
+$color-gray:        #878787;
+$color-light-green: #25b89a;
+$color-green:       #1ab551;
+$color-orange:      #fca400;
 
-$blue-color:        #254fa2;
-$gold-color:        #b59d1a;
-$gray-color:        #878787;
-$light-green-color: #25b89a;
-$green-color:       #509742;
-$orange-color:      #fca400;
+// Color that will be mixed with the main color of each theme.
+$color-mix: #000;
 
+// Percentage of adding color above in the main theme color.
+$color-mix-percent: 20%;
+
+// Below is the mixture of the colors of the themes.
 $themes-colors: (
-  blue        : (color1: $blue-color, color2: mix($default-color-mix, $blue-color, $second-color-percentage)),
-  gold        : (color1: $gold-color, color2: mix($default-color-mix, $gold-color, $second-color-percentage)),
-  gray        : (color1: $gray-color, color2: mix($default-color-mix, $gray-color, $second-color-percentage)),
-  light-green : (color1: $light-green-color, color2: mix($default-color-mix, $light-green-color, $second-color-percentage)),
-  green       : (color1: $green-color, color2: mix($default-color-mix, $green-color, $second-color-percentage)),
-  orange      : (color1: $orange-color, color2: mix($default-color-mix, $orange-color, $second-color-percentage))
+  blue        : (color1: $color-blue, color2: mix($color-mix, $color-blue, $color-mix-percent)),
+  gold        : (color1: $color-gold, color2: mix($color-mix, $color-gold, $color-mix-percent)),
+  gray        : (color1: $color-gray, color2: mix($color-mix, $color-gray, $color-mix-percent)),
+  light-green : (color1: $color-light-green, color2: mix($color-mix, $color-light-green, $color-mix-percent)),
+  green       : (color1: $color-green, color2: mix($color-mix, $color-green, $color-mix-percent)),
+  orange      : (color1: $color-orange, color2: mix($color-mix, $color-orange, $color-mix-percent))
 );
 
-$gray1: #dfdfde;
-$gray2: #cccccb;
-$gray3: #878787;
-$gray4: #323232;
-$gray5: #212121;
+//
+// Default colors of menu.
+//
 
-$colorPrimary: #878787;
-$colorSuccess: #388f39;
-$colorInfo: #2881ac;
-$colorWarning: #b9a016;
-$colorDanger: #a94442;
+// Color of the menu texts that will adding color "menu-color-mix".
+$color-menu-text: #fff;
+
+// Color of the menu backgrounds that will adding color "menu-color-mix".
+$color-menu-bg: #fff;
+
+// Color will be mixed with the menu's main color.
+$color-menu-mix: #000;
+
+//
+// Fifty shades of gray
+//
+$gray0: #f7f7f7; // for backgrounds
+$gray1: #eee;    // for border in lx-boxes
+$gray2: #ddd;    // for lines on tables
+$gray3: #888;    // for all fonts (with some exceptions)
+$gray4: #555;    // for all fonts
+$gray5: #222;    // for titles
+
+//
+// Color patterns
+//
+$color-primary: #878787;
+$color-success: #388f39;
+$color-info:    #2881ac;
+$color-warning: #b9a016;
+$color-danger:  #d75553;
