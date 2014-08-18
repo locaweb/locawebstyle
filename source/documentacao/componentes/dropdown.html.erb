@@ -186,4 +186,50 @@ type: component
 </div>
   <% end %>
 
+<div class="ls-box ls-box-gray">
+    <h2 class="doc-title-4">Acessibilidade</h2>
+    <p>Via javascript é adicionada as ARIAs abaixo:</p>
+    <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Estado do dropdown</th>
+          <th>Elemento</th>
+          <th>Wai-aria</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aberto/Fechado</td>
+          <td>ls-dropdown-nav li a</td>
+          <td>role="option"</td>
+        </tr>
+        <tr>
+          <td>Aberto/Fechado</td>
+          <td>ls-dropdown [class*="ls-btn"]</td>
+          <td>role="combobox"</td>
+        </tr>
+        <tr>
+          <td>Aberto</td>
+          <td>ls-dropdown [class*="ls-btn"]</td>
+          <td>aria-expanded="true"</td>
+        </tr>
+        <tr>
+          <td>Fechado</td>
+          <td>ls-dropdown [class*="ls-btn"]</td>
+          <td>aria-expanded="false"</td>
+        </tr>
+        <tr>
+          <td>Aberto</td>
+          <td>ls-dropdown-nav</td>
+          <td>aria-hidden="false"</td>
+        </tr>
+        <tr>
+          <td>Fechado</td>
+          <td>ls-dropdown-nav</td>
+          <td>aria-hidden="true"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 </section>
