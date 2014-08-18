@@ -10,17 +10,61 @@ describe("Locastyle in general: ", function() {
 
     describe("When click on any link element of ls-submenu", function() {
       it("should add .ls-active class on self", function() {
-        $(".ls-submenu > a").trigger("click");
-        expect($(".ls-submenu").hasClass("ls-active")).toEqual(true);
+        $("#submenu_test1 .ls-submenu > a").trigger("click");
+        expect($("#submenu_test1 .ls-submenu").hasClass("ls-active")).toEqual(true);
       });
 
       it("should remove .ls-active class on self", function() {
-        $(".ls-submenu.ls-active > a").trigger("click");
-        expect($(".ls-submenu").hasClass("ls-active")).toEqual(false);
+        $("#submenu_test1 .ls-submenu.ls-active > a").trigger("click");
+        expect($("#submenu_test1 .ls-submenu").hasClass("ls-active")).toEqual(false);
       });
-
     });
+
   });
+
+  describe("Submenu with wai-aria", function() {
+
+    it("should has attribute aria-expanded equal false", function() {
+      expect($(".ls-submenu").attr('aria-expanded')).toEqual('false');
+    });
+
+    it("When submenu opened should has attribute aria-expanded equal true", function() {
+      expect($(".ls-submenu.ls-active").attr('aria-expanded')).toEqual('true');
+    });
+
+    it("When submenu is clicked should has attribute aria-expanded equal true", function() {
+      $(".ls-submenu > a").trigger("click");
+      expect($(".ls-submenu").attr('aria-expanded')).toEqual('true');
+    });
+
+    it("should has attribute aria-hidden equal true", function() {
+      expect($(".ls-submenu").attr('aria-hidden')).toEqual('true');
+    });
+
+    it("When submenu opened should has attribute aria-hidden equal false", function() {
+      expect($(".ls-submenu.ls-active").attr('aria-hidden')).toEqual('false');
+    });
+
+    it("When submenu is clicked should has attribute aria-hidden equal false", function() {
+      $(".ls-submenu > a").trigger("click");
+      expect($(".ls-submenu").attr('aria-hidden')).toEqual('false');
+    });
+
+  });
+
+  describe("Menu with wai-aria", function() {
+    it("should has attribute role equal navigation", function() {
+      expect($('.ls-menu').attr('role')).toEqual('navigation');
+    });
+
+    it("UL should has attribute role equal menu", function() {
+      expect($('.ls-menu ul').attr('role')).toEqual('menu');
+    });
+
+    it("Links should has attribute role equal menuitem", function() {
+      expect($('.ls-menu a').attr('role')).toEqual('menuitem');
+    });
+  })
 
   describe("Activation Group button toggle", function() {
     describe("When click on any .btn element inside an .ls-group-active", function() {
@@ -99,7 +143,7 @@ describe("Locastyle in general: ", function() {
       $editForm.trigger('click');
       expect( $form.is('.ls-form-text') && !$form.is('.ls-form-disable') ).toBe(true);
     });
-    
+
   });
 
 
