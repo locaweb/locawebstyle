@@ -240,12 +240,13 @@
     //
     // Dropdown
     //
-    [class*="ls-dropdown"] ul a
+    .ls-dropdown ul a
 
+      &:focus,
       &:hover,
-      &:focus
+      &.ls-color-danger:hover
         background-color: $color2
-        color: #fff
+        color: #fff !important
 
     //
     // Switch button
