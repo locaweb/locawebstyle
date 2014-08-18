@@ -44,7 +44,6 @@ locastyle.dropdown = (function() {
 
   function closeDropdown(el) {
     $("[data-ls-module=dropdown]").not(el).removeClass("ls-active");
-    console.log(el)
   }
 
   function setPositionVisible($target){
@@ -54,17 +53,17 @@ locastyle.dropdown = (function() {
     }
   }
 
-  function ariaDropdown(elem) {
-    $('.ls-dropdown-nav', elem).find('a').attr({ role : 'option' });
-    $('[class*="ls-btn"]', elem).attr({ role : 'combobox' });
+  function ariaDropdown(el) {
+    $('.ls-dropdown-nav', el).find('a').attr({ role : 'option' });
+    $('[class*="ls-btn"]', el).attr({ role : 'combobox' });
 
-    if($(elem).hasClass('ls-active')){
-      $('[class*="ls-btn"]',elem).attr({ 'aria-expanded' : 'true' });
+    if($(el).hasClass('ls-active')){
+      $('[class*="ls-btn"]',el).attr({ 'aria-expanded' : 'true' });
       $('.ls-dropdown-nav').attr({ 'aria-hidden' : 'false' })
     }
     else{
-      $('[class*="ls-btn"]',elem).attr({ 'aria-expanded' : 'false' });
-      $('.ls-dropdown-nav', elem).attr({ 'aria-hidden' : 'true' })
+      $('[class*="ls-btn"]',el).attr({ 'aria-expanded' : 'false' });
+      $('.ls-dropdown-nav', el).attr({ 'aria-hidden' : 'true' })
     }
   }
 
