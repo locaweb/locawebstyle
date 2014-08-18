@@ -115,7 +115,10 @@
       background-color: mix($color-mix, $color1, 20%)
       border-color: mix($color-mix, $color1, 30%)
 
-      &:hover:not([disabled="disabled"])
+      &:hover:not([disabled="disabled"]),
+      &:focus:not([disabled="disabled"]),
+      &:active:not([disabled="disabled"]),
+      &.ls-active:not([disabled="disabled"])
         background: mix($color-mix, $color1, 40%)
         border-color: mix($color-mix, $color1, 50%)
 
