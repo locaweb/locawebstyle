@@ -13,6 +13,10 @@
 
   <%= partial "documentacao/shared/topbar_panel" %>
 
+  <aside class="ls-sidebar">
+    <%= yield_content :sidebar_panel %>
+  </aside>
+
   <main class="ls-main <%= current_page.data.body_class %>">
     <div class="container-fluid">
       <%= yield %>
@@ -21,9 +25,6 @@
     <%= partial 'documentacao/shared/footer' %>
   </main>
 
-  <aside class="ls-sidebar">
-    <%= yield_content :sidebar_panel %>
-  </aside>
 
   <aside class="ls-notification">
     <nav class="ls-notification-list" id="ls-notification-curtain">
@@ -58,7 +59,7 @@
     </nav>
   </aside>
 
-  <%= javascript_include_tag  "libs/jquery-2.1.0.min", "locastyle", "example",  "//code.highcharts.com/highcharts.js", "docs/panel-charts" %>
+  <%= javascript_include_tag  "libs/jquery-2.1.0.min", "example", "locastyle",  "//code.highcharts.com/highcharts.js", "docs/panel-charts" %>
 
   <script type="text/javascript">
     $(window).load(function() {
