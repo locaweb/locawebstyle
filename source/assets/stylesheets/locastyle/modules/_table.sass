@@ -3,7 +3,7 @@
   border-collapse: collapse
   background-color: #fff
   margin: 20px 0
-  border-bottom: 1px solid $gray1
+  border-bottom: 1px solid $gray2
   table-layout: fixed
 
   .ls-box-gray &
@@ -20,25 +20,24 @@
   &.ls-table-striped
 
     tbody tr:nth-child(odd) td
-      background-color: lighten($gray1, 10%)
+      background-color: $gray0
 
     &.ls-bg-header tbody tr:nth-child(even) td
-      background-color: lighten($gray1, 10%)
+      background-color: $gray0
 
     &.ls-bg-header tbody tr:nth-child(odd) td
       background-color: #fff
 
   &.ls-table-bordered
-    border: 1px solid $gray1
+    border: 1px solid $gray2
 
   td, th
     padding: 13px
     text-align: left
     font-size: remtopx(.88)
-    color: $gray4
 
   tr, th
-    border-bottom: 1px solid $gray1
+    border-bottom: 1px solid $gray2
 
   thead th
     border-bottom-width: 2px
