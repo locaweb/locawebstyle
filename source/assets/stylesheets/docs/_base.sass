@@ -6,20 +6,18 @@
   padding: 0
   box-sizing: border-box
 
-html
-  font-size: 100%
-
-body
-  font-family: 'Open Sans', sans-serif
-
 html, body
   background-color: #fff !important
   overflow: visible !important
   height: 100% !important
   min-height: 100%
 
+html
+  font-size: 100%
+
 body
   overflow: auto !important
+  font-family: 'Open Sans', sans-serif
 
 h1,h2,h3,h4,h5,h6
   -webkit-font-smoothing: antialiased
@@ -163,6 +161,7 @@ p code
     font-weight: 700
     font-size: remtopx(2.63)
     padding-bottom: 10px
+    color: #fff
 
   p
     font-weight: 300
@@ -654,6 +653,13 @@ p code
   .code
     padding: 10px 15px
 
+//
+// Adjust color documentation
+//
+
+.doc-content .ls-box-demo .ls-topbar:after
+  content: none
+
 @media screen and (max-width: 991px)
   .doc-content
     min-height: auto
@@ -723,4 +729,3 @@ p code
   .doc-highlight
     position: relative
     overflow: hidden
-
