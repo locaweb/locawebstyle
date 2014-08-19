@@ -31,5 +31,32 @@ type: component
   <p>Este componente funciona apenas na versão 3 do Locastyle e suporta apenas o novo analytics, ou "<a href="https://support.google.com/analytics/answer/2790010?hl=pt-BR" target="_blank">Universal Analytics</a>".</p>
   <p>Se você ainda usa o antigo, procure atualizar, existem <a href="http://analytics.blogspot.com.br/2013/10/an-easy-way-to-upgrade-to-universal_23.html" target="_blank">documentações de como fazer este upgrade.</a></p>
 
+
+  <h2 class="doc-title-3">Opções</h2>
+  <p>Por padrão, o Locastyle vai nomear os atributos de cada evento, são eles: categoria, ação e label.</p>
+  <p>É possível alterar cada um deles com atributos <code>data-ls-te-[atributo]</code>, assim o seu analytics pode ficar organizado da maneira que preferir.</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classe / Atributo</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>data-ls-te-category</td>
+        <td>Atributo referente a categoria do evento, deve ir na tag <code>body</code>.</td>
+      </tr>
+      <tr>
+        <td>data-ls-te-action</td>
+        <td>Atributo referente a ação do evento, deve ir na tag do elemento que dispara o evento, normalmente, um link ou um botão.</td>
+      </tr>
+      <tr>
+        <td>data-ls-te-label</td>
+        <td>Atributo referente a label do evento, igual ao atributo da ação, deve ir na tag do elemento que dispara o evento, normalmente, um link ou um botão.</td>
+      </tr>
+    </tbody>
+  </table>
+
 </section>
 
