@@ -1,0 +1,47 @@
+---
+title: Pré Painel - Criador de Sites 2.0
+layout: panel
+show_topbar_title: true
+pre_panel: true
+theme_name: ls-theme-cyanogen
+title_product: Criador de Sites 2.0
+---
+
+<h1 class="ls-title-intro ls-ico-list2">Contas</h1>
+
+<%- 5.times do |num| %>
+  <div class="ls-list">
+    <header class="ls-list-header">
+      <div class="col-sm-9">
+        <div class="ls-list-title">
+          <a href="#">site<%= num %>.com.br</a>
+        </div>
+        <div class="ls-list-description">
+          <p>Crie versões deste site em outros idiomas. <a href="#">Contrate o plugin Multi-idiomas</a> agora mesmo.</p>
+          <ul>
+            <li>site 1 EN</li>
+            <li>site 1 PT</li>
+            <li>site 1 AM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-3 ls-txt-right">
+        <a href="<%= base_url %>/documentacao/exemplos/painel3/nameservers" class="ls-btn-primary">Administrar</a>
+      </div>
+    </header>
+    <div class="ls-list-content ">
+      <div class="col-xs-12 col-md-6">
+        <strong class="ls-list-label">Status</strong>
+        Não Publicado
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <strong class="ls-list-label">Plano:</strong>
+        Criador de Sites 2.0 Start
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel4/sidebar' %>
+<% end %>
