@@ -80,7 +80,7 @@ $(function () {
       text: 'Relatório'
     },
     xAxis: {
-      categories: ['00h', '01h', '02h', '03h']
+      categories: ['00h', '01h', '02h', '03h', '04h']
     },
     yAxis: {
       min: 0,
