@@ -7,7 +7,6 @@ type: component
 <%= partial 'partials/doc-menu-funcoes-js'%>
 
 <section class="col-md-9">
-
   <%= partial 'partials/doc-intro-content' %>
 
   <h2 class="doc-title-3">O que é?</h2>
@@ -20,12 +19,42 @@ type: component
     <li>Inicializar o "tracking"</li>
   </ol>
 
-  <h2 class="doc-title-3">Inicializando o tracking manualmente</h2>
-  <p>Este componente precisa ser inicializado manualmente, caso contrário, ele não faz nada.</p>
+  <h2 class="doc-title-3">Inicializando o tracking</h2>
+  <p>Este componente precisa ser inicializado a parte, caso contrário, ele não faz nada.</p>
+  <p>Há duas maneiras de fazer isto:</p>
+
+  <h3 class="doc-title-5">Manualmente pelo JS</h3>
   <% code("js") do %>
     locastyle.trackEvents.init();
   <% end %>
   <p>Isto precisa rodar depois que o Locsatyle já foi carregado na página.</p>
+
+  <h3 class="doc-title-5">Adicionando uma classe CSS na tag <code>html</code></h3>
+  <% code("html") do %>
+    <html class="ls-trackevent-on">
+  <% end %>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classe / Método</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>locastyle.trackEvents.init()</td>
+        <td>Método a ser chamado no JS para inicializar o tracking de eventos.</td>
+      </tr>
+      <tr>
+        <td>ls-trackevent-on</td>
+        <td>Classe CSS que deve ir na tag <code>HTML</code> para inicializar o tracking de eventos.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>ATENÇÃO: Não use as duas maneiras, use apenas uma.</p>
+
 
   <h2 class="doc-title-3">Requisitos</h2>
   <p>Este componente funciona apenas na versão 3 do Locastyle e suporta apenas o novo analytics, ou "<a href="https://support.google.com/analytics/answer/2790010?hl=pt-BR" target="_blank">Universal Analytics</a>".</p>

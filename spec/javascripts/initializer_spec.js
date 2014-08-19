@@ -21,6 +21,16 @@ describe("Initializer: ", function() {
       locastyle.init();
       expect(locastyle.collapse.init).not.toHaveBeenCalled();
     });
+
+    describe("When the .ls-trackevent-on css class is present on <html> tag", function () {
+      it('should init the trackEvents module', function() {
+        spyOn(locastyle.trackEvents, 'init');
+        $("html").addClass("ls-trackevent-on");
+        locastyle.init();
+        expect(locastyle.trackEvents.init).toHaveBeenCalled();
+      });
+
+    });
   });
 
 });
