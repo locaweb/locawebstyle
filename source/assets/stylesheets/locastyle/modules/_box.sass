@@ -32,7 +32,7 @@
     margin: 0
     padding: 0
 
-  &[class*="ls-ico-"]
+  &[class^="ls-ico-"]
     overflow: hidden
     position: relative
 
@@ -42,7 +42,7 @@
       font-size: remtopx(6)
       margin: 0 20px
 
-[class*="ls-title"] + .ls-box
+[class^="ls-title"] + .ls-box
   margin-top: 10px
   clear: both
 
@@ -85,8 +85,17 @@
       padding-bottom: 5px
 
 @media screen and (max-width: $screen-sm)
+
   .ls-ico-bg:before
     display: none
 
-  .ls-small-info + [class*="ls-title-"]
+  .ls-small-info + [class^="ls-title-"]
     padding-top: 10px
+
+@media screen and (min-width: $screen-sm) and (max-width: $screen-md)
+  .ls-box:last-child
+    margin-bottom: 30px
+
+  [class^="col-"]:last-child
+    .ls-box:last-child
+      margin-bottom: 0
