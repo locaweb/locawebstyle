@@ -7,8 +7,10 @@ var locastyle = (function() {
     locastyle.general.init();
     locastyle.sidebars.init();
     locastyle.btnGroup.init();
+    locastyle.alert.init();
     locastyle.datepicker.init();
     locastyle.form.togglePasswordField();
+    checkClassForTrack();
   }
 
   function loadModules() {
@@ -17,6 +19,12 @@ var locastyle = (function() {
       locastyle[modules[i]].init();
       // I know it is a console.log, let it to be here for a while
       console.log("Locastyle: module [" + modules[i] + "] successfully initialized.");
+    }
+  }
+
+  function checkClassForTrack() {
+    if($("html").hasClass("ls-trackevent-on")){
+      locastyle.trackEvents.init();
     }
   }
 

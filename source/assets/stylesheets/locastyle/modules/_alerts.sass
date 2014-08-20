@@ -8,10 +8,10 @@
 
   p
     color: inherit
+    margin-bottom: 0
 
   a:not([class*="ls-btn"])
     color: inherit
-    text-decoration: underline
 
     &:hover,
     &:focus
@@ -24,24 +24,24 @@
     @extend .ls-sm-space
 
 .ls-alert-success
-  color: $colorSuccess
-  border-color: lighten($colorSuccess, 35%)
-  background-color: lighten($colorSuccess, 50%)
+  color: $color-success
+  border-color: mix(#fff, $color-success, 35%)
+  background-color: mix(#fff, $color-success, 80%)
 
 .ls-alert-info
-  color: $colorInfo
-  border-color: lighten($colorInfo, 35%)
-  background-color: lighten($colorInfo, 50%)
+  color: $color-info
+  border-color: mix(#fff, $color-info, 35%)
+  background-color: mix(#fff, $color-info, 80%)
 
 .ls-alert-warning
-  color: $colorWarning
-  border-color: lighten($colorWarning, 35%)
-  background-color: lighten($colorWarning, 50%)
+  color: $color-warning
+  border-color: mix(#fff, $color-warning, 35%)
+  background-color: mix(#fff, $color-warning, 80%)
 
 .ls-alert-danger
-  color: $colorDanger
-  border-color: lighten($colorDanger, 35%)
-  background-color: lighten($colorDanger, 50%)
+  color: $color-danger
+  border-color: mix(#fff, $color-danger, 35%)
+  background-color: mix(#fff, $color-danger, 80%)
 
 .ls-dismiss
   float: right

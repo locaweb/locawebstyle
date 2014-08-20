@@ -1,12 +1,9 @@
 =theme-color($theme-name, $colors)
   $color1: map-fetch($colors, color1)
   $color2: map-fetch($colors, color2)
-  $color3: map-fetch($colors, color3)
-  $color4: map-fetch($colors, color4)
-  $color5: map-fetch($colors, color5)
 
   .ls-bg-theme-#{$theme-name}
-    background-color: $color3
+    background-color: $color1
 
   .ls-theme-#{$theme-name}
 
@@ -14,27 +11,42 @@
     .ls-color-theme,
     .ls-breadcrumb a,
     .hopscotch-bubble a
-      color: $color3
+      color: mix($color-mix, $color1, 20%)
+
+      &:hover,
+      &:focus,
+      &.ls-active
+        color: mix($color-mix, $color1, 40%)
 
     .ls-tag-primary
-      background-color: $color3
+      background-color: $color1
 
     .ls-background-primary,
     .ls-table .ls-background-primary td
-      background-color: lighten($color3, 40%)
-      color: $color3
+      background-color: lighten($color1, 40%)
+      color: $color1
 
     //
     // Topbar
     //
-    .ls-topbar
-      +rgba(background-color, $color3, .95)
-
     .ls-user-account
-      background-color: darken($color3, 5%)
+      background: mix($color-mix, $color1, 15%)
 
-      input[type='checkbox']
-        background: $color1
+    .ls-topbar
+      background-color: $color1
+
+      .ls-alerts-list a[class*="ls-ico"]
+        @if (lightness($color1) < 30)
+          color: mix($color-mix, $color1, 40%)
+        @else
+          color: mix($color-mix, $color1, 25%)
+
+        &:hover:not([data-counter]):not(.ls-active)
+          @if (lightness($color1) < 30)
+            color: mix($color-mix, $color1, 65%)
+          @else
+            color: mix($color-mix, $color1, 40%)
+
 
     //
     // SIDEBAR
@@ -44,49 +56,75 @@
       .ls-area-account
 
         &[class*="ls-ico"]:before
-          color: $color3
+          @if (lightness($color1) < 30)
+            color: mix(#fff, $color1, 25%)
+          @else
+            color: $color1
 
       .ls-menu
-        a
-          &:hover,
-          &:focus
-            +rgba(background-color, $gray4,.5)
+        li
+          border-bottom-color: mix($color-menu-mix, $color-menu-bg, 84%)
 
-        li.ls-active:not(.ls-submenu) > a
-          background-color: $gray4
-          border-left-color: $color3
+          a
+            color: mix($color-menu-mix, $color-menu-text, 45%)
+
+            &:hover,
+            &:focus
+              color: $color-menu-text
+              background-color: mix($color-menu-mix, $color-menu-bg, 80%)
+
+          &.ls-active:not(.ls-submenu) > a
+            background-color: mix($color-menu-mix, $color-menu-bg, 76%)
+
+        .ls-submenu
+
+          &:after
+            color: mix($color-menu-mix, $color-menu-text, 45%)
+
+          li
+            border-bottom-color: mix($color-menu-mix, $color-menu-bg, 80%)
+
+          &.ls-active
+            background-color: mix($color-menu-mix, $color-menu-bg, 84%)
+
+            ul
+              border-top-color: mix($color-menu-mix, $color-menu-bg, 80%)
 
       .ls-brand-name
-        background-color: $color3
+        background-color: $color1
 
 
     //
     // Dashboard Info
     //
     .ls-box .ls-info-header [class*="ls-title"]
-      color: $color3
+      color: $color1
 
     //
     // Buttons
     //
     [class*="ls-btn"]
       &[data-ls-module]:after
-        border-top-color: $color5
+        border-top-color: $color2
 
       &.ls-active:not([data-ls-module="tabs"])
-        background-color: darken($color3, 10%)
+        background-color: darken($color1, 10%)
 
     .ls-btn-primary
-      background-color: $color3
-      border-color: $color4
-      color: #fff
 
-      &:hover:not([disabled="disabled"])
-        background-color: $color4
+      background-color: mix($color-mix, $color1, 20%)
+      border-color: mix($color-mix, $color1, 30%)
+
+      &:hover:not([disabled="disabled"]),
+      &:focus:not([disabled="disabled"]),
+      &:active:not([disabled="disabled"]),
+      &.ls-active:not([disabled="disabled"])
+        background: mix($color-mix, $color1, 40%)
+        border-color: mix($color-mix, $color1, 50%)
 
       &.ls-disabled:hover,
       &.ls-disabled:focus
-        background-color: $color3
+        background-color: $color1
 
     //
     // Collpase
@@ -94,31 +132,8 @@
     .ls-collapse
       .ls-collapse-header
         &:before
-          color: $color3
-          border: 3px solid $color3
-
-    //
-    // FORM
-    //
-    // .ls-form
-
-    //   input[type="color"],
-    //   input[type="date"],
-    //   input[type="datetime"],
-    //   input[type="datetime-local"],
-    //   input[type="email"],
-    //   input[type="month"],
-    //   input[type="number"],
-    //   input[type="password"],
-    //   input[type="range"],
-    //   input[type="search"],
-    //   input[type="tel"],
-    //   input[type="text"],
-    //   input[type="time"],
-    //   input[type="url"],
-    //   input[type="week"],
-    //   input[type="text"]
-    //     border: 1px solid $color1
+          color: $color1
+          border: 3px solid $color1
 
     //
     // Pagination
@@ -128,8 +143,8 @@
       li
 
         &.ls-active a
-          background-color: $color3
-          border-color: $color3
+          background-color: mix($color-mix, $color1, 20%)
+          border-color: mix($color-mix, $color1, 20%)
 
     .pager
 
@@ -152,24 +167,14 @@
               background: none
 
     //
-    // Progress Bar
-    //
-    .ls-progress
-      &::-webkit-progress-bar, .ls-progress-bar
-        background: $color2
-
-      &::-webkit-progress-value, .ls-progress-value
-        background: $color3
-
-    //
     // Tables
     //
     .ls-table
       &.ls-bg-header thead
-        background-color: $color3
+        background-color: $color1
 
         th
-          color: $color1
+          color: #fff
 
           a
             color: #fff
@@ -191,12 +196,12 @@
 
       tbody
         tr:hover
-          +rgba(background-color, $color4, .02)
+          +rgba(background-color, $color2, .02)
         a:not([class*="ls-btn"]),
-          color: $color3
+          color: $color1
 
       &.ls-table-striped tbody tr:hover td
-        +rgba(background-color, $color4, .02)
+        +rgba(background-color, $color2, .02)
 
 
     //
@@ -204,10 +209,10 @@
     //
     .ls-tabs-nav:not(.in-dropdown)
       li
-        +rgba(background-color, $color4,0.7)
+        +rgba(background-color, $color2,0.7)
 
         &:hover
-          background-color: $color4
+          background-color: $color2
 
         &.ls-active
           background-color: #fff
@@ -217,7 +222,7 @@
     //
     .shortcuts
       [class*="ls-ico-"]:before
-        background: $color3
+        background: $color1
 
     //
     // Links de Referência
@@ -225,68 +230,69 @@
     .ls-lnk-nav
 
       &:hover
-        color: $color4
+        color: $color2
 
         &[class*="ls-ico"]:before
-          color: $color4
-          border-color: $color4
+          color: $color2
+          border-color: $color2
 
       &[class*="ls-ico"]:before
-        color: $color3
-        border: 4px solid $color3
+        color: $color1
+        border: 4px solid $color1
 
     //
     // Dropdown
     //
-    [class*="ls-dropdown"] ul a
+    .ls-dropdown ul a
 
-      &:hover,
-      &:focus
-        background-color: $color4
+      &:focus,
+      &:hover
+        background-color: $color2
         color: #fff
+
+      &.ls-color-danger:hover
+        color: #fff !important
 
     //
     // Switch button
     //
     .ls-switch-btn input:checked + label
-      background-color: $color3
-
+      background-color: $color1
 
     //
     // Listas
     //
     .ls-list .ls-list-title a
-      color: $color3
+      color: $color1
 
     &.ls-pre-panel
       .ls-topbar
-        background-color: #f7f7f7
+        background-color: $gray0
 
     //
     // Datepicker
     //
     .is-selected .pika-button
-      color: white
-      background: $color3
+      color: #fff
+      background: $color2
       box-shadow: none
 
     .pika-button:hover
-      color: white !important
-      background: $color2 !important
-
+      color: #fff !important
+      background: $color1 !important
 
     //
     // Tour
     //
     // .div.hopscotch-bubble .hopscotch-actions button.hopscotch-nav-button.next
     .hopscotch-actions button.hopscotch-nav-button.next
-      background-color: $color3
+      background-color: $color1
 
     //
     // Barra de progresso
     //
     div[data-ls-module="progressBar"] span
-      background-color: $color3
+      background-color: $color1
 
 @each $theme-name, $colors in $themes-colors
   @include theme-color($theme-name, $colors)

@@ -131,4 +131,28 @@ describe("Tabs: ", function() {
     });
   });
 
+  describe("Tabs with wai-aria", function() {
+    it(".ls-tabs-nav should has attribute role with value tablist ",function(){
+      expect($('.ls-tabs-nav').attr('role')).toEqual('tablist');
+    });
+
+    it("Link tabs should has attribute role with value tab ",function(){
+      expect($('.ls-tabs-nav a').attr('role')).toEqual('tab');
+    });
+
+    it("Active link tabs should has attribute aria-selected is value true ",function(){
+      expect($('.ls-tabs-nav li.ls-active a').attr('aria-selected')).toEqual('true');
+    });
+
+    it(".ls-tab-content has attribute role with value tabpanel ",function(){
+      expect($('.ls-tab-content').attr('role')).toEqual('tabpanel');
+    });
+
+    it("When click tab should has attribute aria-selected with value true ",function(){
+      $('.ls-tabs-nav a').trigger('click');
+      expect($('.ls-tabs-nav li.ls-active a').attr('aria-selected')).toEqual('true');
+    });
+
+  });
+
 });

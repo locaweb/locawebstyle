@@ -1,51 +1,28 @@
-[class*="ls-custom-"]
+//
+// Select Custom
+//
+
+[data-ls-module="customFields"],
+.ls-custom-select
+  height: $inputHeight
   position: relative
   display: inline-block
 
-  select, input[type="radio"], input[type="checkbox"]
-    opacity: 0
-
-  select
-    left: 0
-
-    &:focus ~ .ls-field-custom-select-one
-      box-shadow: 0 0 2px 3px rgba(131,173,211,1)
-
-    &:focus ~ .ls-field-custom-select-one,
-    &:hover ~ .ls-field-custom-select-one
-      background-color: #dfdfde
-
-  .ls-field-custom-checkbox,
-  .ls-field-custom-radio
-    width: 30px
-    height: 30px
-    outline: 1px solid red
-    display: inline-block
-    margin: 1px
-
-// input:checked ~ [class*="ls-field-custom"]
-
-.ls-custom-select-one
-  position: relative
-  width: 100%
-  height: 100%
-
-  .ls-field-custom-select-one
+  .ls-custom-select-one
+    position: relative
     +box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075))
-    position: absolute
     top: 0
     left: 0
     height: $inputHeight
     width: 100%
     display: inline-block
-    padding: 0 11px 0 15px
     border: 1px solid $gray2
     border-radius: $radiusDefault
     background-color: #fff
     color: $gray4
     line-height: $inputHeight
-    overflow: hidden
     font-size: remtopx(.875)
+    padding-right: 30px
 
     &:before
       +arrow-down($gray4, 5px)
@@ -54,6 +31,27 @@
       margin-top: -2px
       right: 15px
       z-index: 0
+
+    .ls-field-custom-select-one
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      padding-left: 15px
+
+  select
+    opacity: 0
+    display: block
+    height: 105%
+    width: 120%
+    line-height: $inputHeight
+    border: none
+    position: relative
+    z-index: 1
+
+    &[disabled="disabled"] + .ls-field-custom-select-one
+      border-color: $gray1
+      background-color: #f9f9f9
 
 .ls-field-lg[data-ls-module="customFields"],
 .ls-field-lg .ls-field-custom-select-one
@@ -87,19 +85,3 @@
   line-height: $xsInputHeight
   font-size: remtopx(.75)
 
-[data-ls-module="customFields"]
-  height: $inputHeight
-
-  select
-    +appearance(none)
-    display: block
-    height: 100%
-    width: 100%
-    line-height: $inputHeight
-    border: none
-    position: relative
-    z-index: 1
-
-    &[disabled="disabled"] + .ls-field-custom-select-one
-      border-color: $gray1
-      background-color: #f9f9f9

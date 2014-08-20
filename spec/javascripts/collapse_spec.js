@@ -131,4 +131,25 @@ describe('Collapse:', function() {
     });
   });
 
+  describe('Collapse with waia-ria', function() {
+    it("Link should has attribute aria-expanded", function() {
+      expect($('.ls-collapse-header').attr('aria-expanded')).toEqual('false');
+    });
+
+    it("Content should has attribute aria-hidden", function() {
+      expect($('.ls-collapse-body').attr('aria-hidden')).toEqual('true');
+    });
+
+    it("When bind click the link should has attribute aria-expanded", function() {
+      $('.ls-collapse-header').trigger("click");
+      expect($('.ls-collapse-header').attr('aria-expanded')).toEqual('true');
+    });
+
+    it("When bind click the content should has attribute aria-hidden", function() {
+      $('.ls-collapse-header').trigger("click");
+      expect($('.ls-collapse-body').attr('aria-hidden')).toEqual('false');
+    });
+
+  });
+
 });

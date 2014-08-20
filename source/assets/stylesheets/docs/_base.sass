@@ -6,20 +6,18 @@
   padding: 0
   box-sizing: border-box
 
-html
-  font-size: 100%
-
-body
-  font-family: 'Open Sans', sans-serif
-
 html, body
   background-color: #fff !important
   overflow: visible !important
   height: 100% !important
   min-height: 100%
 
+html
+  font-size: 100%
+
 body
   overflow: auto !important
+  font-family: 'Open Sans', sans-serif
 
 h1,h2,h3,h4,h5,h6
   -webkit-font-smoothing: antialiased
@@ -27,6 +25,11 @@ h1,h2,h3,h4,h5,h6
   -moz-font-smoothing: antialiased
   font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+
+.clearfix:after
+  content: ""
+  display: block
+  clear: both
 
 .documentacao_cartilha-de-elementos [class*="doc-title"]
   margin-top: 0
@@ -158,6 +161,7 @@ p code
     font-weight: 700
     font-size: remtopx(2.63)
     padding-bottom: 10px
+    color: #fff
 
   p
     font-weight: 300
@@ -180,6 +184,7 @@ p code
 [class*="doc-title"]
   margin-top: 35px
   margin-bottom: 5px
+  color: #222
 
   [class*="ls-alert"] &
     margin-top: 0
@@ -371,6 +376,7 @@ p code
     text-align: center
     font-size: remtopx(2.5)
     font-weight: 700
+    color: #222
 
     & + p
       margin-bottom: 65px
@@ -400,6 +406,7 @@ p code
     font-size: remtopx(2.25)
     font-weight: 700
     padding-bottom: 30px
+    color: #222
 
   p
     font-size: remtopx(1.25)
@@ -558,6 +565,7 @@ p code
       margin-top: 20px
 
 .ls-box-demo
+  @extend .clearfix
   border: solid 1px #e1e1e8
   border-radius: 3px 3px 0 0
   padding: 40px 20px 20px
@@ -660,6 +668,13 @@ p code
   .code
     padding: 10px 15px
 
+//
+// Adjust color documentation
+//
+
+.doc-content .ls-box-demo .ls-topbar:after
+  content: none
+
 @media screen and (max-width: 991px)
   .doc-content
     min-height: auto
@@ -729,4 +744,3 @@ p code
   .doc-highlight
     position: relative
     overflow: hidden
-

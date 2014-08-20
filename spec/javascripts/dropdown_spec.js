@@ -85,4 +85,32 @@ describe("Dropdown: ", function() {
     });
   });
 
+  describe("Dropdown with waia-ria", function() {
+    it("Button should has attr role with value combobox", function() {
+      expect($('#dropdown-test-6 > .ls-btn-primary').attr('role')).toEqual('combobox');
+    });
+
+    it("Links should has attr role with value option", function() {
+      expect($('#dropdown-test-6 > .ls-dropdown-nav').find('a').attr('role')).toEqual('option');
+    });
+
+    it("Button should has attr aria-expanded with value false", function() {
+      expect($('#dropdown-test-6 > .ls-btn-primary').attr('aria-expanded')).toEqual('false');
+    });
+
+    it("Nav links should has attr aria-hidden with value true", function() {
+      expect($('.ls-dropdown-nav').attr('aria-hidden')).toEqual('true');
+    });
+
+    it("When click the button should has attr aria-expanded with value true", function() {
+      $('.ls-dropdown').find('.ls-btn-primary').trigger('click');
+      expect($('#dropdown-test-6 > .ls-btn-primary').attr('aria-expanded')).toEqual('true');
+    });
+
+    it("When click the nav links should has attr aria-hidden with value false", function() {
+      $('.ls-dropdown').find('.ls-btn-primary').trigger('click');
+      expect($('#dropdown-test-6 > .ls-dropdown-nav').attr('aria-hidden')).toEqual('false');
+    });
+  });
+
 });
