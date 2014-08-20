@@ -11,17 +11,16 @@
 
 [class*="ls-pagination"]
   display: inline-block
+  list-style: none
 
   li
-    display: inline-block
-    margin-left: -4px
+    float: left
+    margin-left: -1px
 
     &:first-child a
       border-top-left-radius: $radiusDefault
       border-bottom-left-radius: $radiusDefault
 
-    &:last-child
-      margin-left: -2px
       a
         border-top-right-radius: $radiusDefault
         border-bottom-right-radius: $radiusDefault
@@ -116,11 +115,8 @@
   .ls-pagination-filter
     text-align: left
 
-  .ls-pagination
+  [class*="ls-pagination"]
     float: right
-
-    li:last-child
-      margin-left: -4px
 
   .ls-filter-view
     margin-top: 0
