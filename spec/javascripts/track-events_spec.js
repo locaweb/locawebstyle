@@ -71,6 +71,21 @@ describe("Track Events: ", function() {
       });
     });
 
+    describe('With data-ls-te-category on trigger: When click on #link_with_category_option', function () {
+      it('should call ga with expected options as arguments', function () {
+        $("body").removeAttr("data-ls-te-category");
+        locastyle.trackEvents.init();
+        var expectedOptions = {
+          category: "my_custom_category",
+          action: "my_custom_action",
+          label: "my_custom_label"
+        };
+        spyOn(window, "ga");
+        $("#testing_category_option #link_with_category_option").trigger("click.lsTrackEvent");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
     describe("On page links", function () {
       describe("When click on #on_page_link_to_nowhere which has the # as href attribute", function () {
         it("should call ga with expected iptions as arguments", function () {
@@ -191,6 +206,22 @@ describe("Track Events: ", function() {
         expect(window.ga.calls.count()).toEqual(1);
       });
     });
+
+    describe("When change teh select #select_sample_with_category_option", function () {
+      it("should call ga with expected options as arguments", function () {
+        $("body").removeAttr("data-ls-te-category");
+        var expectedOptions = {
+          category: "my_custom_category",
+          action: "select_change_#select_sample_with_category_option",
+          label: "the_value_with_category"
+        };
+        spyOn(window, "ga");
+        $("#select_sample_with_category_option").val("the_value_with_category");
+        $("#select_sample_with_category_option").trigger("change");
+        expect(window.ga).toHaveBeenCalledWith('send', 'event', expectedOptions.category, expectedOptions.action, expectedOptions.label);
+      });
+    });
+
   });
 
   describe("Tabs", function () {
