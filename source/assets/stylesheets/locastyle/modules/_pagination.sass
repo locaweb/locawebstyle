@@ -3,24 +3,28 @@
   padding: 10px 0
   font-size: remtopx(.81)
   color: $gray3
+  text-align: center
 
 .ls-filter-view
   padding: 9px 0
+  margin-top: 10px
 
 [class*="ls-pagination"]
-  float: right
-  margin: 0 !important
+  display: inline-block
 
   li
-    display: inline
+    display: inline-block
+    margin-left: -4px
 
     &:first-child a
       border-top-left-radius: $radiusDefault
       border-bottom-left-radius: $radiusDefault
 
-    &:last-child a
-      border-top-right-radius: $radiusDefault
-      border-bottom-right-radius: $radiusDefault
+    &:last-child
+      margin-left: -2px
+      a
+        border-top-right-radius: $radiusDefault
+        border-bottom-right-radius: $radiusDefault
 
     &.ls-disabled a
       color: $gray1
@@ -34,14 +38,13 @@
     &.ls-active a,
     &.ls-active a:hover,
     &.ls-active .ls-gap
-      color: #fff !important
+      color: #fff
 
     .ls-gap,
     a
       padding: 10px 12px
       position: relative
       float: left
-      margin-left: -1px
       text-decoration: none
       border: 1px solid $gray1
       color: $gray4
@@ -70,7 +73,6 @@
 //
 // Botões de Próximo e Anterior
 //
-
 .ls-pager
   text-align: center
   margin: 10px 0
@@ -110,13 +112,15 @@
       &:focus
         +rgba(background-color, $gray1,.2)
 
-@media screen and (max-width: 480px)
+@media screen and (min-width: $screen-sm)
   .ls-pagination-filter
-    text-align: center !important
+    text-align: left
 
-    .ls-pagination
-      display: inline-block
-      float: none
+  .ls-pagination
+    float: right
 
-    .ls-filter-view
-      margin-top: 10px
+    li:last-child
+      margin-left: -4px
+
+  .ls-filter-view
+    margin-top: 0
