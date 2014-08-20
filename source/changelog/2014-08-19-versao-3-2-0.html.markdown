@@ -1,0 +1,77 @@
+---
+title: Versão 3.2.0
+date: 2014-08-19 18:30 UTC
+tags:
+published: false
+layout: changelog-single
+---
+<ul class="ls-no-list-style ls-no-margin-left">
+  <li>
+    <strong class="ls-tag-success">NEW</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1082" target="blank" class="commit-url">#1082</a> Inserindo  wai-aria no menu e submenu.
+  </li>
+  <li>
+    <strong class="ls-tag-success">NEW</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1056" target="blank" class="commit-url">#1056</a> Inserindo wai-aria no elemento dropdown.
+  </li>
+  <li>
+    <strong class="ls-tag-success">NEW</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1055" target="blank" class="commit-url">#1055</a> Inserindo wai-aria no elemento modal.
+  </li>
+  <li>
+    <strong class="ls-tag-success">NEW</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1054" target="blank" class="commit-url">#1054</a> Inserindo wai-aria no elemento collapse.
+  </li>
+  <li>
+    <strong class="ls-tag-success">NEW</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1053" target="blank" class="commit-url">#1053</a> Inserindo wai-aria no elemento alerta.
+  </li>
+  <li>
+    <strong class="ls-tag-success">NEW</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1052" target="blank" class="commit-url">#1052</a> Inserindo wai-aria no elemento Abas.
+  </li>
+  <li>
+    <strong class="ls-tag-success">NEW</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/980" target="blank" class="commit-url">#980</a> Página de Login Esqueci minha senha. <a href="http://locaweb.github.io/locawebstyle/documentacao/exemplos/forgot-password/" class="ls-btn ls-btn-xs">Exemplo</a>
+  </li>
+  <li>
+    <strong class="ls-tag-info">FIX</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/1057" target="blank" class="commit-url">#1057</a> Iniciar o Track Events quando houver uma classe no html.
+  </li>
+  <li>
+    <strong class="ls-tag-info">FIX</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/1050" target="blank" class="commit-url">#1050</a> Removendo estilo da tag span dentro do select customizado.
+  </li>
+  <li>
+    <strong class="ls-tag-info">FIX</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/1047" target="blank" class="commit-url">#1047</a> Melhoria na forma de criar palhetas de cores do Locaweb Style.
+  </li>
+  <li>
+    <strong class="ls-tag-info">FIX</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/976" target="blank" class="commit-url">#976</a> Subtituição  de imagem do gráfico real dentro do Painel de exemplos.
+  </li>
+  <li>
+    <strong class="ls-tag-danger">BUG</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1077" target="blank" class="commit-url">#1077</a> Aparência dos botões em dispositivos móveis.
+  </li>
+  <li>
+    <strong class="ls-tag-danger">BUG</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1067" target="blank" class="commit-url">#1067</a> Removendo margin-bottom do parágrafo dentro do elemento alerta.
+  </li>
+  <li>
+    <strong class="ls-tag-danger">BUG</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1065" target="blank" class="commit-url">#1065</a> Removendo underline duplicado nos links dentro do elemento alerta.
+  </li>
+  <li>
+    <strong class="ls-tag-danger">BUG</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1064" target="blank" class="commit-url">#1064</a> Correção na largura da select customizada.
+  </li>
+  <li>
+    <strong class="ls-tag-danger">BUG</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1034" target="blank" class="commit-url">#1034</a> Problema de hover no link de excluir dentro do Dropdown.
+  </li>
+  <li>
+    <strong class="ls-tag-danger">BUG</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/973" target="blank" class="commit-url">#973</a> Box ficam colados quando estão um acima do outro.
+  </li>
+</ul>
