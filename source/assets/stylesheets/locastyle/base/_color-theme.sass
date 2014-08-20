@@ -35,7 +35,7 @@
     .ls-topbar
       background-color: $color1
 
-      .ls-alerts-list a[class*="ls-ico"]
+      .ls-alerts-list [class^="ls-ico"]
         @if (lightness($color1) < 30)
           color: mix($color-mix, $color1, 40%)
         @else
