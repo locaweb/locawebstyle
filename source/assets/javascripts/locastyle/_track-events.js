@@ -29,6 +29,7 @@ locastyle.trackEvents = (function() {
     var links = $("a");
     $(links).each(function (index, item) {
       var options = {};
+      options.category = $(item).data("ls-te-category") ? $(item).data("ls-te-category") : null;
       options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'open_link_#' + $(item).attr("href");
       options.label = $(item).data("ls-te-label") ? $(item).data("ls-te-label") : $(item).text();
       if($(item).attr("href")) {
@@ -65,6 +66,7 @@ locastyle.trackEvents = (function() {
     var buttons = $("button");
     $(buttons).each(function (index, item) {
       var options = {};
+      options.category = $(item).data("ls-te-category") ? $(item).data("ls-te-category") : null;
       options.action = $(item).data("ls-te-action") ? $(item).data("ls-te-action") : 'on_page_button_#';
       options.label = $(item).data("ls-te-label") ? $(item).data("ls-te-label") : $(item).text();
       var modal;
@@ -98,6 +100,7 @@ locastyle.trackEvents = (function() {
     var selects = $("select");
     $(selects).each(function (index, item) {
       var options = {};
+      options.category = $(item).data("ls-te-category") ? $(item).data("ls-te-category") : null;
       options.action = "select_change_#" + ($(item).attr("id") || $(item).attr("name"));
       options.label = "option";
       bindSelects(item, options);
@@ -117,7 +120,7 @@ locastyle.trackEvents = (function() {
           options.label = "Open collapse";
         }
       }
-      ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
+      ga('send', 'event', options.category || locastyle.trackEvents.eventCategory, options.action, options.label);
     });
   }
 
@@ -133,7 +136,7 @@ locastyle.trackEvents = (function() {
     $(element).off("change.ls");
     $(element).on("change.ls", function () {
       options.label = $(this).val();
-      ga('send', 'event', locastyle.trackEvents.eventCategory, options.action, options.label);
+      ga('send', 'event', options.category || locastyle.trackEvents.eventCategory, options.action, options.label);
     });
   }
 
