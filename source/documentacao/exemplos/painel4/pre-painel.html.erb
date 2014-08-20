@@ -7,40 +7,145 @@ theme_name: ls-theme-cyanogen
 title_product: Criador de Sites 2.0
 ---
 
-<h1 class="ls-title-intro ls-ico-list2">Contas</h1>
+<h1 class="ls-title-intro ls-ico-list2">Meus sites</h1>
+<p>Selecione o que deseja administrar</p>
 
-<%- 5.times do |num| %>
-  <div class="ls-list">
-    <header class="ls-list-header">
-      <div class="col-sm-9">
-        <div class="ls-list-title">
-          <a href="#">site<%= num %>.com.br</a>
-        </div>
-        <div class="ls-list-description">
-          <p>Crie versões deste site em outros idiomas. <a href="#">Contrate o plugin Multi-idiomas</a> agora mesmo.</p>
-          <ul>
-            <li>site 1 EN</li>
-            <li>site 1 PT</li>
-            <li>site 1 AM</li>
-          </ul>
-        </div>
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="col-sm-10">
+      <div class="ls-list-title">
+        <a href="#">site1.com.br</a>
       </div>
-      <div class="col-sm-3 ls-txt-right">
-        <a href="<%= base_url %>/documentacao/exemplos/painel3/nameservers" class="ls-btn-primary">Administrar</a>
-      </div>
-    </header>
-    <div class="ls-list-content ">
-      <div class="col-xs-12 col-md-6">
-        <strong class="ls-list-label">Status</strong>
-        Não Publicado
-      </div>
-      <div class="col-xs-12 col-md-6">
-        <strong class="ls-list-label">Plano:</strong>
-        Criador de Sites 2.0 Start
+      <div class="ls-list-description">
+        <p>Crie versões deste site em outros idiomas. <a href="#">Contrate o plugin Multi-idiomas</a> agora mesmo.</p>
       </div>
     </div>
+    <div class="col-sm-2 ls-txt-right">
+      <a href="<%= base_url %>/documentacao/exemplos/painel4/home" class="ls-btn-primary">Administrar</a>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Status</strong>
+      Publicado
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Plano:</strong>
+      Criador de Sites 2.0 Start
+    </div>
   </div>
-<% end %>
+</div>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="col-sm-10">
+      <div class="ls-list-title">
+        <a href="#">site2.com.br</a>
+         <span class="ls-tag-primary">Multi-idioma</span>
+      </div>
+      <div class="ls-list-description">
+        <ul>
+          <li>saasdev32.lvh.me/en_US | Não publicado</li>
+          <li>saasdev32.lvh.me/es_ES | Não publicado</li>
+          <li>saasdev32.lvh.me/pt_BR | Não publicado</li>
+        </ul>
+        <p><a href="#" title="">Crie mais uma versão</a></p>
+      </div>
+    </div>
+    <div class="col-sm-2 ls-txt-right">
+      <a href="<%= base_url %>/documentacao/exemplos/painel4/home" class="ls-btn-primary">Administrar</a>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Status</strong>
+      Não Publicado
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Plano:</strong>
+      Criador de Sites 2.0 Start
+    </div>
+  </div>
+</div>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="col-sm-10">
+      <div class="ls-list-title">
+        <a href="#">site3.com.br</a>
+      </div>
+      <div class="ls-list-description">
+        <p><a href="#" title="">Ativar Multi-idioma neste site</a></p>
+      </div>
+    </div>
+    <div class="col-sm-2 ls-txt-right">
+      <a href="<%= base_url %>/documentacao/exemplos/painel4/home" class="ls-btn-primary">Administrar</a>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Status</strong>
+      Não Publicado
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Plano:</strong>
+      Criador de Sites 2.0 Start
+    </div>
+  </div>
+</div>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="col-sm-10">
+      <div class="ls-list-title">
+        <a href="#">site4.com.br</a>
+      </div>
+      <div class="ls-list-description">
+        <p>Ainda não há versões deste site em outros idiomas. <a href="#" title="">Crie agora mesmo.</a></p>
+      </div>
+    </div>
+    <div class="col-sm-2 ls-txt-right">
+      <a href="<%= base_url %>/documentacao/exemplos/painel4/home" class="ls-btn-primary">Administrar</a>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Status</strong>
+      Não Publicado
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Plano:</strong>
+      Criador de Sites 2.0 Start
+    </div>
+  </div>
+</div>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="col-sm-10">
+      <div class="ls-list-title">
+        <a href="#">site5.com.br</a>
+      </div>
+      <div class="ls-list-description">
+        <p>Crie versões deste site em outros idiomas. Para contratar, entre em contato com um dos nossos <a href="#" title="">canais de atendimento.</a></p>
+      </div>
+    </div>
+    <div class="col-sm-2 ls-txt-right">
+      <a href="<%= base_url %>/documentacao/exemplos/painel4/home" class="ls-btn-primary">Administrar</a>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Status</strong>
+      Não Publicado
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Plano:</strong>
+      Criador de Sites 2.0 Start
+    </div>
+  </div>
+</div>
+
 
 <% content_for :sidebar_panel do %>
   <%= partial 'documentacao/exemplos/painel4/sidebar' %>
