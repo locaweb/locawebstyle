@@ -29,48 +29,65 @@ title_product: Criador de Sites 2.0
     </div>
   </form>
 
-  <hr>
+</div>
 
-  <div class="ls-list">
-    <header class="ls-list-header">
-      <div class="ls-list-title col-md-4">
-        <a href="#">João da Silva</a>
-        <small>joaodasilva@locaweb.com.br</small>
-      </div>
-      <div class="col-md-3 col-md-offset-5 ls-txt-right">
-        <a href="#" class="ls-tag-warning ls-text-uppercase">expirado</a>
-      </div>
-    </header>
-    <div class="ls-list-content">
-      <div class="col-xs-12 col-md-3 ls-no-padding-bottom">
-        <p><a href="#" class="ls-ico-export ls-no-border-bottom">Enviar novamente</a></p>
-      </div>
-      <div class="col-xs-12 col-md-9 ls-no-padding-bottom">
-        <p><a href="#" class="ls-ico-remove ls-color-danger ls-no-border-bottom">Excluir</a></p>
-      </div>
-    </div>
+<table class="ls-table ls-no-bg">
+  <thead>
+    <tr>
+      <th>Nome do cliente</th>
+      <th class="ls-txt-center hidden-xs">Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- 5.times do |num| %>
+      <tr>
+        <td>
+          <a href="<%= base_url %>/documentacao/exemplos/painel1/client">João da Silva</a>
+          <% if num%2 == 0 %>
+            <span class='ls-tag-warning hidden-xs'>Expirado</span>
+          <% end %>
+        </td>
+        <td class="ls-txt-center hidden-xs">joaodasilva@locaweb.com.br</td>
+        <td class="ls-txt-right ls-regroup">
+          <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+            <a href="#" class="ls-btn ls-btn-sm"></a>
+            <ul class="ls-dropdown-nav">
+              <li><a href="#">Enviar novamente</a></li>
+              <li><a href="#" class="ls-color-danger">Excluir</a></li>
+            </ul>
+          </div>
+
+        </td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+<div class="ls-pagination-filter">
+  <ul class="ls-pagination">
+    <li><a href="#">« Anterior</a></li>
+    <li class="ls-active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#" class="hidden-xs">4</a></li>
+    <li><a href="#" class="hidden-xs">5</a></li>
+    <li><a href="#">Próximo »</a></li>
+  </ul>
+
+  <div class="ls-filter-view">
+    <label>
+      Exibir
+      <select>
+        <option value="10">10</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+      ítens por página
+    </label>
   </div>
-
-  <div class="ls-list">
-    <header class="ls-list-header">
-      <div class="ls-list-title col-md-4">
-        <a href="#">Pedro Luis Ribeiro</a>
-        <small>pedro_luis@locaweb.com.br</small>
-      </div>
-      <div class="col-md-3 col-md-offset-5 ls-txt-right">
-        <a href="#" class="ls-tag-warning ls-text-uppercase">expirado</a>
-      </div>
-    </header>
-    <div class="ls-list-content">
-      <div class="col-xs-12 col-md-3 ls-no-padding-bottom">
-        <p><a href="#" class="ls-ico-export ls-no-border-bottom">Enviar novamente</a></p>
-      </div>
-      <div class="col-xs-12 col-md-9 ls-no-padding-bottom">
-        <p><a href="#" class="ls-ico-remove ls-color-danger ls-no-border-bottom">Excluir</a></p>
-      </div>
-    </div>
-  </div>
-
 </div>
 
 <% content_for :sidebar_panel do %>
