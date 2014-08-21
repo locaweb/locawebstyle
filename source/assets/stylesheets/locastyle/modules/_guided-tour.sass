@@ -1,154 +1,154 @@
 .hopscotch-bubble
-	z-index: 11
-	background-clip: padding-box
-	background-color: #fff
-	border-radius: $radiusDefault
-	border: 1px solid $gray2
-	border: 1px solid rgba(0, 0, 0, 0.2)
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
-	max-width: 276px
-	padding: 1px
-	position: absolute
-	text-align: left
-	white-space: normal
+  z-index: 11
+  background-clip: padding-box
+  background-color: #fff
+  border-radius: $default-radius
+  border: 1px solid $gray2
+  border: 1px solid rgba(0, 0, 0, 0.2)
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+  max-width: 276px
+  padding: 1px
+  position: absolute
+  text-align: left
+  white-space: normal
 
-	&.invisible
-		opacity: 0
+  &.invisible
+    opacity: 0
 
-	&.hide
-		display: none
+  &.hide
+    display: none
 
-	.hide, .hide-all
-		display: none !important
+  .hide, .hide-all
+    display: none !important
 
-	.hopscotch-bubble-container
-		padding: 0 !important
+  .hopscotch-bubble-container
+    padding: 0 !important
 
-	.hopscotch-bubble-arrow-container
-		position: absolute
-		width: 22px
-		height: 22px
+  .hopscotch-bubble-arrow-container
+    position: absolute
+    width: 22px
+    height: 22px
 
-		.hopscotch-bubble-arrow, .hopscotch-bubble-arrow-border
-			border: 11px solid transparent
-			position: absolute
-			width: 0
-			height: 0
-			top: 0
-			left: 0
-			border: 11px solid transparent
+    .hopscotch-bubble-arrow, .hopscotch-bubble-arrow-border
+      border: 11px solid transparent
+      position: absolute
+      width: 0
+      height: 0
+      top: 0
+      left: 0
+      border: 11px solid transparent
 
-		&.up
-			top: -21px
+    &.up
+      top: -21px
 
-			.hopscotch-bubble-arrow
-				border-color: transparent transparent #f7f7f7 transparent
+      .hopscotch-bubble-arrow
+        border-color: transparent transparent #f7f7f7 transparent
 
-			.hopscotch-bubble-arrow-border
-				border-color: transparent transparent rgba(0, 0, 0, 0.2) transparent
-				top: -2px
+      .hopscotch-bubble-arrow-border
+        border-color: transparent transparent rgba(0, 0, 0, 0.2) transparent
+        top: -2px
 
-		&.down
-			bottom: -21px
+    &.down
+      bottom: -21px
 
-			.hopscotch-bubble-arrow
-				border-color: #f7f7f7 transparent transparent transparent
+      .hopscotch-bubble-arrow
+        border-color: #f7f7f7 transparent transparent transparent
 
-			.hopscotch-bubble-arrow-border
-				border-color: #000 transparent transparent transparent
-				bottom: -2px
+      .hopscotch-bubble-arrow-border
+        border-color: #000 transparent transparent transparent
+        bottom: -2px
 
-		&.left
-			left: -19px
+    &.left
+      left: -19px
 
-			.hopscotch-bubble-arrow
-				border-color: transparent #fff transparent transparent
+      .hopscotch-bubble-arrow
+        border-color: transparent #fff transparent transparent
 
-			.hopscotch-bubble-arrow-border
-				border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent
-				left: -2px
+      .hopscotch-bubble-arrow-border
+        border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent
+        left: -2px
 
-		&.right
-			right: -22px
+    &.right
+      right: -22px
 
-			.hopscotch-bubble-arrow
-				border-color: transparent transparent transparent #fff
+      .hopscotch-bubble-arrow
+        border-color: transparent transparent transparent #fff
 
-			.hopscotch-bubble-arrow-border
-				border-color: transparent transparent transparent #000
-				right: -2px
+      .hopscotch-bubble-arrow-border
+        border-color: transparent transparent transparent #000
+        right: -2px
 
-	.hopscotch-bubble-number
-		display: none
+  .hopscotch-bubble-number
+    display: none
 
-	.hopscotch-title
-		background-color: #f7f7f7
-		border-bottom: 1px solid #ebebeb
-		border-radius: $radiusDefault $radiusDefault 0 0
-		font-size: 14px
-		font-weight: normal
-		line-height: 18px
-		margin: 0
-		padding: 6px 14px
+  .hopscotch-title
+    background-color: #f7f7f7
+    border-bottom: 1px solid #ebebeb
+    border-radius: $default-radius $default-radius 0 0
+    font-size: 14px
+    font-weight: normal
+    line-height: 18px
+    margin: 0
+    padding: 6px 14px
 
-	.hopscotch-content
-		color: #555
-		font-size: remtopx(.875)
-		padding: 9px 14px
-		text-align: left
-		white-space: normal
+  .hopscotch-content
+    color: #555
+    font-size: remtopx(.875)
+    padding: 9px 14px
+    text-align: left
+    white-space: normal
 
-	.hopscotch-actions
-		background: #f7f7f7
-		border-top: 1px solid #ebebeb
-		border-radius: 0 0 $radiusDefault $radiusDefault
-		margin-top: 0
-		padding: 6px 15px
-		overflow: hidden
+  .hopscotch-actions
+    background: #f7f7f7
+    border-top: 1px solid #ebebeb
+    border-radius: 0 0 $default-radius $default-radius
+    margin-top: 0
+    padding: 6px 15px
+    overflow: hidden
 
-		button
-			display: inline-block
-			padding: 4px 10px
-			margin-bottom: 0
-			font-size: remtopx(.75)
-			font-weight: normal
-			line-height: 1.428571429
-			text-align: center
-			vertical-align: middle
-			cursor: pointer
-			border: none
-			border-radius: $radiusDefault
-			white-space: nowrap
-			-webkit-user-select: none
-			-moz-user-select: none
-			-ms-user-select: none
-			-o-user-select: none
-			user-select: none
-			color: #fff
-			background-color: $gray3
-			margin-right: remtopx(1)
+    button
+      display: inline-block
+      padding: 4px 10px
+      margin-bottom: 0
+      font-size: remtopx(.75)
+      font-weight: normal
+      line-height: 1.428571429
+      text-align: center
+      vertical-align: middle
+      cursor: pointer
+      border: none
+      border-radius: $default-radius
+      white-space: nowrap
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      -o-user-select: none
+      user-select: none
+      color: #fff
+      background-color: $gray3
+      margin-right: remtopx(1)
 
-			&.hopscotch-nav-button.next
-				float: right
-				margin: 0
+      &.hopscotch-nav-button.next
+        float: right
+        margin: 0
 
-	.hopscotch-bubble-close
-		cursor: pointer
-		font-size: remtopx(.7)
-		height: 12px
-		overflow: hidden
-		position: absolute
-		right: 11px
-		text-align: center
-		top: 10px
-		width: 10px
+  .hopscotch-bubble-close
+    cursor: pointer
+    font-size: remtopx(.7)
+    height: 12px
+    overflow: hidden
+    position: absolute
+    right: 11px
+    text-align: center
+    top: 10px
+    width: 10px
 
-		&:before
-			content: "\e63c"
-			color: $gray2
-			font-family: 'locastyle'
-			font-size: remtopx(.55)
-			margin-right: 10px
+    &:before
+      content: "\e63c"
+      color: $gray2
+      font-family: 'locastyle'
+      font-size: remtopx(.55)
+      margin-right: 10px
 
-		&:hover
-			opacity: .7
+    &:hover
+      opacity: .7

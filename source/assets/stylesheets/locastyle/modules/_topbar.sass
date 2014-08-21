@@ -4,7 +4,7 @@
 .ls-topbar
   +single-transition(all, .5s)
   +translate(0, 0)
-  height: $heightTopbar
+  height: $topbar-height
   position: fixed
   width: 100%
   top: 0
@@ -21,10 +21,10 @@
     left: 0
 
   .ls-sidebar-visible &
-    +translate($sidebarWidth, 0)
+    +translate($sidebar-width, 0)
 
   .ls-notifications-visible &
-    +translate(-$sidebarWidth, 0)
+    +translate(-$sidebar-width, 0)
 
   //
   // Nome do produto/marca
@@ -34,7 +34,7 @@
     font-weight: 300
     color: #fff
     padding: 15px 0
-    height: $heightTopbar
+    height: $topbar-height
     text-align: center
     width: 67%
     margin: 0 auto
@@ -105,7 +105,7 @@
     &:before
       position: fixed
       padding: 15px 15px 0
-      height: $heightTopbar
+      height: $topbar-height
       display: inline-block
       color: #FFF
       font-size: remtopx(2)
@@ -137,7 +137,7 @@
     +single-transition(none)
 
     &:after
-      left: $sidebarWidth
+      left: $sidebar-width
 
     .ls-sidebar-visible &
       +translate(0, 0)

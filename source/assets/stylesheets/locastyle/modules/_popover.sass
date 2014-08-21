@@ -8,14 +8,14 @@ $colorBorderPop: rgba(0, 0, 0, 0.2)
   max-width: 376px
   background-color: #fff
   border: 1px solid $colorBorderPop
-  border-radius: $radiusDefault
+  border-radius: $default-radius
   box-shadow: 0 5px 10px $colorBorderPop
   background-clip: padding-box
   display: none
 
   &.ls-popover-top
     +transform( translateX( -50% ) translateY(-100%) )
-  
+
   &.ls-popover-bottom
     +transform( translateX( -50% ) )
 
@@ -97,7 +97,7 @@ $colorBorderPop: rgba(0, 0, 0, 0.2)
     font-size: remtopx(1)
     background-color: #f7f7f7
     border-bottom: 1px solid #ebebeb
-    border-radius: $radiusDefault $radiusDefault 0 0
+    border-radius: $default-radius $default-radius 0 0
 
   .ls-popover-content
     color: #555

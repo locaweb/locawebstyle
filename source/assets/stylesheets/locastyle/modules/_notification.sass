@@ -2,7 +2,7 @@
   +single-transition(transform, .5s)
   +translate(50%, 0)
   background: #222
-  width: $sidebarWidth
+  width: $sidebar-width
   position: fixed
   right: 0
   top: 0
@@ -79,7 +79,7 @@
     +translate(-100%, 0)
     +single-transition(none)
     float: none
-    top: $heightTopbar
+    top: $topbar-height
     height: calc(100% - 60px)
     height: 93%\9
     z-index: 11
@@ -101,10 +101,10 @@
     opacity: 0
     height: 0
     overflow: hidden
-    border-radius: $radiusDefault
+    border-radius: $default-radius
 
     h3
-      border-radius: $radiusDefault $radiusDefault 0 0
+      border-radius: $default-radius $default-radius 0 0
 
     ul
       max-height: 300px
@@ -116,11 +116,11 @@
 
       &::-webkit-scrollbar-track
         background: rgba(0,0,0,0.8)
-        border-radius: $radiusDefault
+        border-radius: $default-radius
 
       &::-webkit-scrollbar-thumb
         background: $gray3
-        border-radius: $radiusDefault
+        border-radius: $default-radius
 
     &.ls-active
       top: 0
