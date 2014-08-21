@@ -1,0 +1,79 @@
+---
+title: Usuários do Site
+html_class: ls-html-nobg
+layout: panel
+theme_name: ls-theme-cyanogen
+title_product: Criador de Sites 2.0
+---
+<h1 class="ls-title-intro ls-ico-plus">Usuários do Site</h1>
+<p>Dê permissões para outras pessoas acessarem o painel de administração deste site com uma senha própria.</p>
+
+<div class="ls-box">
+  <h2 class="ls-title3">Novo Usuário</h2>
+  <p>Informe os dados da pessoa que deseja convidar para ter acesso ao seu painel do Criador 2.0</p>
+  <hr>
+
+  <form action="#" class="ls-form ls-form-horizontal row">
+    <fieldset>
+      <label class="ls-label col-md-4 col-xs-12">
+        <b class="ls-label-text">Nome *</b>
+        <input type="text" name="nome" placeholder="Nome" class="ls-field" required>
+      </label>
+      <label class="ls-label col-md-4 col-xs-12">
+        <b class="ls-label-text">Email *</b>
+        <input type="text" name="nome" placeholder="Email" class="ls-field" required>
+      </label>
+    </fieldset>
+    <div class="ls-actions-btn ls-no-padding-top">
+      <a href="#" class="ls-btn">Enviar convite</a>
+    </div>
+  </form>
+
+  <hr>
+
+  <div class="ls-list">
+    <header class="ls-list-header">
+      <div class="ls-list-title col-md-4">
+        <a href="#">João da Silva</a>
+        <small>joaodasilva@locaweb.com.br</small>
+      </div>
+      <div class="col-md-3 col-md-offset-5 ls-txt-right">
+        <a href="#" class="ls-tag-warning ls-text-uppercase">expirado</a>
+      </div>
+    </header>
+    <div class="ls-list-content">
+      <div class="col-xs-12 col-md-3 ls-no-padding-bottom">
+        <p><a href="#" class="ls-ico-export ls-no-border-bottom">Enviar novamente</a></p>
+      </div>
+      <div class="col-xs-12 col-md-9 ls-no-padding-bottom">
+        <p><a href="#" class="ls-ico-remove ls-color-danger ls-no-border-bottom">Excluir</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ls-list">
+    <header class="ls-list-header">
+      <div class="ls-list-title col-md-4">
+        <a href="#">Pedro Luis Ribeiro</a>
+        <small>pedro_luis@locaweb.com.br</small>
+      </div>
+      <div class="col-md-3 col-md-offset-5 ls-txt-right">
+        <a href="#" class="ls-tag-warning ls-text-uppercase">expirado</a>
+      </div>
+    </header>
+    <div class="ls-list-content">
+      <div class="col-xs-12 col-md-3 ls-no-padding-bottom">
+        <p><a href="#" class="ls-ico-export ls-no-border-bottom">Enviar novamente</a></p>
+      </div>
+      <div class="col-xs-12 col-md-9 ls-no-padding-bottom">
+        <p><a href="#" class="ls-ico-remove ls-color-danger ls-no-border-bottom">Excluir</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel4/sidebar' %>
+<% end %>
+
