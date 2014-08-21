@@ -1,0 +1,49 @@
+---
+title: Idiomas
+html_class: ls-html-nobg
+layout: panel
+theme_name: ls-theme-cyanogen
+title_product: Criador de Sites 2.0
+---
+<h1 class="ls-title-intro ls-ico-plus">Idiomas</h1>
+<p>É importante escolher o idioma em que o conteúdo do seu site será escrito. O Google Brasil (.com.br) dá prioridade para sites que estejam em português do Brasil (pt-BR). Da mesma maneira, o Google de outros países dá prioridade para sites na língua nativa.</p>
+
+<div class="ls-box">
+  <p>Defina o idioma do site e seja encontrado facilmente nos buscadores.</p>
+  <hr>
+
+  <div class="ls-list">
+    <div class="ls-list-content">
+      <div class="ls-list-title col-md-6">
+        <h2 class="ls-title-4">seusite.com.br</h2>
+        <small>Principal</small>
+      </div>
+      <div class="col-md-5 col-md-offset-1">
+        <form action="#" class="ls-form">
+          <label class="ls-label">
+              <b class="ls-label-text">Idioma</b>
+              <div data-ls-module="customFields" class="ls-field-sm">
+                <select name="">
+                  <option value="">Português do Brasil</option>
+                  <option value="">Inglês (US)</option>
+                  <option value="">Espanhol</option>
+                  <option value="">Francês</option>
+                </select>
+              </div>
+            </label>
+          </form>
+      </div>
+    </div>
+    <div class="ls-list-content">
+      <div class="col-md-12 ls-no-padding-bottom">
+        <p><a href="#" class="ls-ico-pencil ls-no-border-bottom">Editar o site</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel4/sidebar' %>
+<% end %>
+
