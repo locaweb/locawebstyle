@@ -2,7 +2,7 @@
   +single-transition(transform, .5s)
   +translate(-50%, 0)
   background-color: mix($color-menu-mix, $color-menu-bg, 88%)
-  width: $sidebarWidth
+  width: $sidebar-width
   position: fixed
   left: 0
   top: 0
@@ -202,7 +202,7 @@
     +translate(0, 0)
     +single-transition(none)
     float: none
-    top: $heightTopbar
+    top: $topbar-height
     height: calc(100% - 60px)
     height: 93%\9
 
@@ -219,7 +219,7 @@
 @media screen and (max-width: $screen-sm)
   .ls-sidebar .ls-user-account + .ls-ico-user + .ls-menu,
   .ls-sidebar .ls-user-account + .ls-menu
-    margin-top: $heightTopbar
+    margin-top: $topbar-height
 
 // Micro menu in middle screen, tablets and 1024 resolution
 @media screen and (min-width: $screen-sm) and (max-width: $screen-lg)
@@ -230,7 +230,7 @@
     z-index: 12
 
     .ls-brand-name
-      width: $sidebarWidth
+      width: $sidebar-width
       padding: 16px
       text-align: left
       +single-transition(padding, .2s)
@@ -242,7 +242,7 @@
         font-size: inherit
 
     .ls-menu
-      width: $sidebarWidth
+      width: $sidebar-width
 
       ul ul,
       .ls-submenu.ls-active ul
@@ -257,12 +257,12 @@
 
     .ls-area-account
       overflow: hidden
-      width: $sidebarWidth
+      width: $sidebar-width
       height: 70px
       +single-transition(height, .4s)
 
     &:hover
-      width: $sidebarWidth
+      width: $sidebar-width
 
       .ls-brand-name
         text-align: center
