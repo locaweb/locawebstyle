@@ -47,6 +47,49 @@
 </div>
 
 
+  <aside class="ls-sidebar">
+        <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+    <a href="#" class="ls-ico-user">
+      João
+      <small>(fmolina)</small>
+    </a>
+    <nav class="ls-dropdown-nav ls-user-menu">
+      <ul>
+        <li><a href="#">Meus dados</a></li>
+        <li><a href="#">Faturas</a></li>
+        <li><a href="#">Planos</a></li>
+        <li><a href="#">Sair</a></li>
+       </ul>
+    </nav>
+  </div>
+  <!-- Dropdown com detalhes da conta de usuário -->
+  <div class="ls-area-account ls-ico-user">
+    <h2 class="ls-title-2">Administrando</h2>
+    <h3 class="ls-title-3">João da Silva</h3>
+    <a href="/locawebstyle/documentacao/exemplos/painel1/pre-painel" class="ls-btn-xs ls-btn-dark">VER TODOS</a>
+  </div>
+  <nav class="ls-menu">
+    <ul>
+       <li><a href="/locawebstyle/documentacao/exemplos/painel1/home" class="ls-ico-home">Página inicial</a></li>
+       <!-- <li><a href="/locawebstyle/documentacao/exemplos/painel1/base" class="ls-ico-home">Primeiros passos</a></li> -->
+       <li><a href="/locawebstyle/documentacao/exemplos/painel1/clients" class="ls-ico-users">Clientes</a></li>
+       <li><a href="/locawebstyle/documentacao/exemplos/painel1/stats" class="ls-ico-stats">Relatórios da revenda</a></li>
+       <li class="ls-submenu">
+        <a href="#" class="ls-ico-cog">Configurações</a>
+        <ul>
+          <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel1/config-domain">Domínios da Revenda</a></li>
+          <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel1/config-email">E-mail de Remetente</a></li>
+          <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel1/config-aspect">Aparência</a></li>
+          <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel1/config-answer">Atendimento</a></li>
+          <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel1/config-api">Chave de acesso para API</a></li>
+        </ul>
+      </li>
+     </ul>
+  </nav>
+
+
+  </aside>
+
   <main class="ls-main ">
     <div class="container-fluid">
       <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
@@ -96,7 +139,7 @@
 <a href="#" class="ls-btn ls-float-right">Ver mais relatórios</a>
 <h2 class="ls-title-2">Clientes que mais contrataram envios</h2>
 <div class="ls-box">
-  <img src="/locawebstyle/assets/images/graph-example.jpg">
+  <div id="panel-charts"></div>
 </div>
 
 <div class="row">
@@ -190,71 +233,29 @@
 
   </main>
 
-  <aside class="ls-sidebar">
-        <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
-    <a href="#" class="ls-ico-user">
-      João
-      <small>(fmolina)</small>
-    </a>
-    <nav class="ls-dropdown-nav ls-user-menu">
-      <ul>
-        <li><a href="#">Meus dados</a></li>
-        <li><a href="#">Faturas</a></li>
-        <li><a href="#">Planos</a></li>
-        <li><a href="#">Sair</a></li>
-       </ul>
-    </nav>
-  </div>
-  <!-- Dropdown com detalhes da conta de usuário -->
-  <div class="ls-area-account ls-ico-user">
-    <h2 class="ls-title-2">Administrando</h2>
-    <h3 class="ls-title-3">João da Silva</h3>
-    <a href="/locawebstyle/documentacao/exemplos/painel1/pre-painel" class="ls-btn-xs ls-btn-dark">VER TODOS</a>
-  </div>
-  <nav class="ls-menu">
-    <ul>
-       <li><a href="/locawebstyle/documentacao/exemplos/painel1/home" class="ls-ico-home">Página inicial</a></li>
-       <!-- <li><a href="/locawebstyle/documentacao/exemplos/painel1/base" class="ls-ico-home">Primeiros passos</a></li> -->
-       <li><a href="/locawebstyle/documentacao/exemplos/painel1/clients" class="ls-ico-users">Clientes</a></li>
-       <li><a href="/locawebstyle/documentacao/exemplos/painel1/stats" class="ls-ico-stats">Relatórios da revenda</a></li>
-       <li class="ls-submenu">
-        <a href="#" class="ls-ico-cog">Configurações</a>
-        <ul>
-          <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel1/config-domain">Domínios da Revenda</a></li>
-          <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel1/config-email">E-mail de Remetente</a></li>
-          <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel1/config-aspect">Aparência</a></li>
-          <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel1/config-answer">Atendimento</a></li>
-          <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel1/config-api">Chave de acesso para API</a></li>
-        </ul>
-      </li>
-     </ul>
-  </nav>
-
-
-  </aside>
 
   <aside class="ls-notification">
     <nav class="ls-notification-list" id="ls-notification-curtain">
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Quam aspernatur magni ea vero</a>
+            <a href="#">Dolorem id soluta tempora consequatur vitae at corrupti consequatur qui perspiciatis porro incidunt</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Quis ut aspernatur repudiandae sed et natus sed odit nulla recusandae sed vel quidem sunt</a>
+            <a href="#">Nihil dolorem voluptas repellendus fugit laudantium ut</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Repellendus velit ut consequatur ipsum</a>
+            <a href="#">Provident similique eos quod voluptas qui beatae quia et asperiores saepe animi alias libero et</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Culpa deserunt rem officia aut</a>
+            <a href="#">Sequi reprehenderit molestias culpa veniam perferendis quaerat sit id sed quia</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Fugiat tenetur sunt veritatis magnam ullam sequi quia error ullam</a>
+            <a href="#">Molestias assumenda odit nulla ipsam</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -263,8 +264,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> illum quis commodi distinctio aut corporis</a></li>
-          <li><a href="#">> pariatur aliquam dolor qui soluta quo</a></li>
+          <li><a href="#">> atque maiores non necessitatibus ullam enim</a></li>
+          <li><a href="#">> sunt perspiciatis iste molestias veritatis nam</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">
@@ -279,15 +280,13 @@
     </nav>
   </aside>
 
-  <script src="../../../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script>
-  <script src="../../../../assets/javascripts/locastyle.js" type="text/javascript"></script>
-  <script src="../../../../assets/javascripts/example.js" type="text/javascript"></script>
+  <script src="../../../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script><script src="../../../../assets/javascripts/example.js" type="text/javascript"></script><script src="../../../../assets/javascripts/locastyle.js" type="text/javascript"></script><script src="//code.highcharts.com/highcharts.js" type="text/javascript"></script><script src="../../../../assets/javascripts/docs/panel-charts.js" type="text/javascript"></script>
 
   <script type="text/javascript">
     $(window).load(function() {
       locastyle.browserUnsupportedBar.init();
     });
-</script>
+  </script>
 
 </body>
 </html>

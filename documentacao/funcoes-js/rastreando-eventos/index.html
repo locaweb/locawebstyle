@@ -79,7 +79,6 @@
 
 
 <section class="col-md-9">
-
   <div class="doc-intro-content">
   <h1>Rastreando eventos</h1>
   <p>Rastreio de eventos automáticos para quem usa o "Analytics" do Google</p>
@@ -96,16 +95,73 @@
     <li>Inicializar o "tracking"</li>
   </ol>
 
-  <h2 class="doc-title-3">Inicializando o tracking manualmente</h2>
-  <p>Este componente precisa ser inicializado manualmente, caso contrário, ele não faz nada.</p>
+  <h2 class="doc-title-3">Inicializando o tracking</h2>
+  <p>Este componente precisa ser inicializado a parte, caso contrário, ele não faz nada.</p>
+  <p>Há duas maneiras de fazer isto:</p>
+
+  <h3 class="doc-title-5">Manualmente pelo JS</h3>
 <div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>    <span class="nx">locastyle</span><span class="p">.</span><span class="nx">trackEvents</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
 </pre></td></tr></tbody></table>
 </div>
   <p>Isto precisa rodar depois que o Locsatyle já foi carregado na página.</p>
 
+  <h3 class="doc-title-5">Adicionando uma classe CSS na tag <code>html</code></h3>
+<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>    <span class="nt">&lt;html</span> <span class="na">class=</span><span class="s">"ls-trackevent-on"</span><span class="nt">&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classe / Método</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>locastyle.trackEvents.init()</td>
+        <td>Método a ser chamado no JS para inicializar o tracking de eventos.</td>
+      </tr>
+      <tr>
+        <td>ls-trackevent-on</td>
+        <td>Classe CSS que deve ir na tag <code>HTML</code> para inicializar o tracking de eventos.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>ATENÇÃO: Não use as duas maneiras, use apenas uma.</p>
+
+
   <h2 class="doc-title-3">Requisitos</h2>
   <p>Este componente funciona apenas na versão 3 do Locastyle e suporta apenas o novo analytics, ou "<a href="https://support.google.com/analytics/answer/2790010?hl=pt-BR" target="_blank">Universal Analytics</a>".</p>
   <p>Se você ainda usa o antigo, procure atualizar, existem <a href="http://analytics.blogspot.com.br/2013/10/an-easy-way-to-upgrade-to-universal_23.html" target="_blank">documentações de como fazer este upgrade.</a></p>
+
+
+  <h2 class="doc-title-3">Opções</h2>
+  <p>Por padrão, o Locastyle vai nomear os atributos de cada evento, são eles: categoria, ação e label.</p>
+  <p>É possível alterar cada um deles com atributos <code>data-ls-te-[atributo]</code>, assim o seu analytics pode ficar organizado da maneira que preferir.</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classe / Atributo</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>data-ls-te-category</td>
+        <td>Atributo referente a categoria do evento, pode ir na tag <code>body</code> para ficar genérico da página ou em cada elemento para ficar específico. Caso tenha nos dois, o do elemento terá prioridade.</td>
+      </tr>
+      <tr>
+        <td>data-ls-te-action</td>
+        <td>Atributo referente a ação do evento, deve ir na tag do elemento que dispara o evento, normalmente, um link ou um botão.</td>
+      </tr>
+      <tr>
+        <td>data-ls-te-label</td>
+        <td>Atributo referente a label do evento, igual ao atributo da ação, deve ir na tag do elemento que dispara o evento, normalmente, um link ou um botão.</td>
+      </tr>
+    </tbody>
+  </table>
 
 </section>
 

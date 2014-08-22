@@ -199,6 +199,12 @@
       "path": "documentacao/exemplos/erro-500"
   },
   
+  "documentacao/exemplos/forgot-password" :   {
+      "title": "Esqueci a minha senha",
+      "description": "",
+      "path": "documentacao/exemplos/forgot-password"
+  },
+  
   "documentacao/exemplos" :   {
       "title": "Exemplos e modelos",
       "description": "Estas telas são modelos de protótipos com códigos funcionais de telas usando o Locaweb Style.",
