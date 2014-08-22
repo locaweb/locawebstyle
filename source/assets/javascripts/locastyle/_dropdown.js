@@ -6,10 +6,10 @@ locastyle.dropdown = (function() {
   var config = {
     area: 'body',
     dropdown: '.ls-dropdown',
-    dropdownModule: '[data-ls-module=dropdown]',
-    dropdownButton: '[class*="ls-btn"]',
-    dropdownFirstLink: '[data-ls-module=dropdown] > a:first-child',
-    dropdownNav: '.ls-dropdown-nav'
+    module: '[data-ls-module=dropdown]',
+    button: '[class*="ls-btn"]',
+    firstLink: '[data-ls-module=dropdown] > a:first-child',
+    nav: '.ls-dropdown-nav'
   }
 
   function init() {
@@ -20,14 +20,14 @@ locastyle.dropdown = (function() {
   }
 
   function unbind() {
-    $(config.dropdownFirstLink).off("click.ls");
+    $(config.firstLink).off("click.ls");
     $(config.area).off("click.ls");
   }
 
   function bindClickOnTriggers() {
-    $(config.dropdownFirstLink).on("click.ls", function(evt) {
+    $(config.firstLink).on("click.ls", function(evt) {
       evt.preventDefault();
-      var $target = $($(this).parents(config.dropdownModule));
+      var $target = $($(this).parents(config.module));
       locastyle.dropdown.toggleDropdown($target);
       ariaDropdown($target);
       locastyle.dropdown.closeDropdown($target);
@@ -47,34 +47,34 @@ locastyle.dropdown = (function() {
       return false;
     } else {
       $target.toggleClass("ls-active");
-      $(config.dropdownButton).attr({ 'aria-expanded' : 'false' });
-      $(config.dropdownNav).attr({ 'aria-hidden' : 'true' });
+      $(config.button).attr({ 'aria-expanded' : 'false' });
+      $(config.nav).attr({ 'aria-hidden' : 'true' });
       locastyle.topbarCurtain.hideCurtains();
     }
   }
 
   function closeDropdown(el) {
-    $(config.dropdownModule).not(el).removeClass("ls-active");
+    $(config.module).not(el).removeClass("ls-active");
   }
 
   function setPositionVisible($target){
-    var $main = $('body');
+    var $main = $(config.area);
     if($main.get(0).scrollWidth > $main.width()){
       $($target).addClass('ls-pos-right');
     }
   }
 
   function ariaDropdown(el) {
-    $(config.dropdownNav, el).find('a').attr({ role : 'option' });
-    $(config.dropdownButton, el).attr({ role : 'combobox' });
+    $(config.nav, el).find('a').attr({ role : 'option' });
+    $(config.button, el).attr({ role : 'combobox' });
 
     if($(el).hasClass('ls-active')){
-      $(config.dropdownButton, el).attr({ 'aria-expanded' : 'true' });
-      $(config.dropdownNav).attr({ 'aria-hidden' : 'false' });
+      $(config.button, el).attr({ 'aria-expanded' : 'true' });
+      $(config.nav).attr({ 'aria-hidden' : 'false' });
     }
     else{
-      $(config.dropdownButton, el).attr({ 'aria-expanded' : 'false' });
-      $(config.dropdownNav, el).attr({ 'aria-hidden' : 'true' });
+      $(config.button, el).attr({ 'aria-expanded' : 'false' });
+      $(config.nav, el).attr({ 'aria-hidden' : 'true' });
     }
   }
 
