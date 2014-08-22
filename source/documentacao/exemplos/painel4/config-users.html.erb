@@ -1,0 +1,95 @@
+---
+title: Usuários do Site
+layout: panel
+theme_name: ls-theme-cyanogen
+title_product: Criador de Sites 2.0
+---
+<h1 class="ls-title-intro ls-ico-cog">Usuários do Site</h1>
+<p>Dê permissões para outras pessoas acessarem o painel de administração deste site com uma senha própria.</p>
+
+<div class="ls-box">
+  <h2 class="ls-title3">Novo Usuário</h2>
+  <p>Informe os dados da pessoa que deseja convidar para ter acesso ao seu painel do Criador 2.0</p>
+  <hr>
+
+  <form action="#" class="ls-form ls-form-horizontal row">
+    <fieldset>
+      <label class="ls-label col-md-4 col-xs-12">
+        <b class="ls-label-text">Nome *</b>
+        <input type="text" name="nome" placeholder="Nome" class="ls-field" required>
+      </label>
+      <label class="ls-label col-md-4 col-xs-12">
+        <b class="ls-label-text">Email *</b>
+        <input type="text" name="nome" placeholder="Email" class="ls-field" required>
+      </label>
+    </fieldset>
+    <div class="ls-actions-btn ls-no-padding-top">
+      <a href="#" class="ls-btn">Enviar convite</a>
+    </div>
+  </form>
+
+</div>
+
+<table class="ls-table ls-no-bg">
+  <thead>
+    <tr>
+      <th>Nome do cliente</th>
+      <th class="ls-txt-center hidden-xs">Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- 5.times do |num| %>
+      <tr>
+        <td>
+          <a href="<%= base_url %>/documentacao/exemplos/painel1/client">João da Silva</a>
+          <% if num%2 == 0 %>
+            <span class='ls-tag-warning hidden-xs'>Expirado</span>
+          <% end %>
+        </td>
+        <td class="ls-txt-center hidden-xs">joaodasilva@locaweb.com.br</td>
+        <td class="ls-txt-right ls-regroup">
+          <a href="#" class="ls-btn ls-btn-sm">Enviar novamente</a>
+          <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+            <a href="#" class="ls-btn ls-btn-sm"></a>
+            <ul class="ls-dropdown-nav">
+              <li><a href="#" class="ls-color-danger">Excluir</a></li>
+            </ul>
+          </div>
+
+        </td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+<div class="ls-pagination-filter">
+  <ul class="ls-pagination">
+    <li><a href="#">« Anterior</a></li>
+    <li class="ls-active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#" class="hidden-xs">4</a></li>
+    <li><a href="#" class="hidden-xs">5</a></li>
+    <li><a href="#">Próximo »</a></li>
+  </ul>
+
+  <div class="ls-filter-view">
+    <label>
+      Exibir
+      <select>
+        <option value="10">10</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+      ítens por página
+    </label>
+  </div>
+</div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel4/sidebar' %>
+<% end %>
+
