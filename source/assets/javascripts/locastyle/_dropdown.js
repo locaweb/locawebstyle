@@ -3,32 +3,41 @@ var locastyle = locastyle || {};
 locastyle.dropdown = (function() {
   'use strict';
 
+  var config = {
+    area: 'body',
+    dropdown: '.ls-dropdown',
+    dropdownModule: '[data-ls-module=dropdown]',
+    dropdownButton: '[class*="ls-btn"]',
+    dropdownFirstLink: '[data-ls-module=dropdown] > a:first-child',
+    dropdownNav: '.ls-dropdown-nav'
+  }
+
   function init() {
     unbind();
     bindClickOnTriggers();
     bindClickOutsideTriggers();
-    ariaDropdown('.ls-dropdown');
+    ariaDropdown(config.dropdown);
   }
 
   function unbind() {
-    $("[data-ls-module=dropdown] > a:first-child").off("click.ls");
-    $("body").off("click.ls");
+    $(config.dropdownFirstLink).off("click.ls");
+    $(config.area).off("click.ls");
   }
 
   function bindClickOnTriggers() {
-    $("[data-ls-module=dropdown] > a:first-child").on("click.ls", function(evt) {
+    $(config.dropdownFirstLink).on("click.ls", function(evt) {
       evt.preventDefault();
-      var $target = $($(this).parents("[data-ls-module=dropdown]"));
+      var $target = $($(this).parents(config.dropdownModule));
       locastyle.dropdown.toggleDropdown($target);
+      ariaDropdown($target);
       locastyle.dropdown.closeDropdown($target);
-      ariaDropdown($target)
       setPositionVisible($target);
       evt.stopPropagation();
     });
   }
 
   function bindClickOutsideTriggers() {
-    $("body").on("click.ls", function(){
+    $(config.area).on("click.ls", function(){
       locastyle.dropdown.closeDropdown();
     });
   }
@@ -38,12 +47,14 @@ locastyle.dropdown = (function() {
       return false;
     } else {
       $target.toggleClass("ls-active");
+      $(config.dropdownButton).attr({ 'aria-expanded' : 'false' });
+      $(config.dropdownNav).attr({ 'aria-hidden' : 'true' });
       locastyle.topbarCurtain.hideCurtains();
     }
   }
 
   function closeDropdown(el) {
-    $("[data-ls-module=dropdown]").not(el).removeClass("ls-active");
+    $(config.dropdownModule).not(el).removeClass("ls-active");
   }
 
   function setPositionVisible($target){
@@ -54,16 +65,16 @@ locastyle.dropdown = (function() {
   }
 
   function ariaDropdown(el) {
-    $('.ls-dropdown-nav', el).find('a').attr({ role : 'option' });
-    $('[class*="ls-btn"]', el).attr({ role : 'combobox' });
+    $(config.dropdownNav, el).find('a').attr({ role : 'option' });
+    $(config.dropdownButton, el).attr({ role : 'combobox' });
 
     if($(el).hasClass('ls-active')){
-      $('[class*="ls-btn"]',el).attr({ 'aria-expanded' : 'true' });
-      $('.ls-dropdown-nav').attr({ 'aria-hidden' : 'false' })
+      $(config.dropdownButton, el).attr({ 'aria-expanded' : 'true' });
+      $(config.dropdownNav).attr({ 'aria-hidden' : 'false' });
     }
     else{
-      $('[class*="ls-btn"]',el).attr({ 'aria-expanded' : 'false' });
-      $('.ls-dropdown-nav', el).attr({ 'aria-hidden' : 'true' })
+      $(config.dropdownButton, el).attr({ 'aria-expanded' : 'false' });
+      $(config.dropdownNav, el).attr({ 'aria-hidden' : 'true' });
     }
   }
 
