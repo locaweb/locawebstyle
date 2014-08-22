@@ -25,6 +25,24 @@
       "path": "changelog/2014/07/31/versao-3-1-0"
   },
   
+  "changelog/2014/08/19/versao-3-2-0" :   {
+      "title": "Versão 3.2.0",
+      "description": "",
+      "path": "changelog/2014/08/19/versao-3-2-0"
+  },
+  
+  "changelog/2014/08/20/versao-3-2-1" :   {
+      "title": "Versão 3.2.1",
+      "description": "",
+      "path": "changelog/2014/08/20/versao-3-2-1"
+  },
+  
+  "changelog/2014/08/20/versao-3-2-2" :   {
+      "title": "Versão 3.2.2",
+      "description": "",
+      "path": "changelog/2014/08/20/versao-3-2-2"
+  },
+  
   "changelog" :   {
       "title": "Changelog",
       "description": "Acompanhe o changelog",
