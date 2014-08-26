@@ -21,11 +21,42 @@ title_product: Criador de Sites 2.0
       <h2 class="ls-title-3">Apagar o site</h2>
       <p>Ao fazer isto, a aparência e todo o conteúdo de seu site serão apagados. Esta ação é irreversível.</p>
       <hr>
-      <a href="#" class="ls-btn-danger">Apagar o site</a>
+      <button data-target="#deleteSite" class="ls-btn-danger" data-ls-module="modal">Apagar o site</button>
+    </div>
+  </div>
+</div>
+
+<div class="ls-modal fade" id="deleteSite">
+  <div class="ls-modal-box">
+    <div class="ls-modal-header">
+      <button data-dismiss="modal">&times;</button>
+      <h4 class="ls-modal-title">Apagar o Site</h4>
+    </div>
+    <div class="ls-modal-body" id="myModalBody">
+      <p>Esta ação é irreversível. Ao confirmar, todos os ajustes feitos na aparência do site serão perdidos, assim como todas as páginas e conteúdos criados. Os endereços e dados inseridos em Configurações serão mantidos.</p>
+      <form action="#" class="ls-form">
+        <fieldset>
+          <label class="ls-label">
+            <b class="ls-label-text">Escolha o site que deseja apagar:</b>
+            <div data-ls-module="customFields">
+              <select>
+                <option value="1">site1.com.br</option>
+                <option value="2">site2.com.br</option>
+                <option value="3">site3.com.br</option>
+              </select>
+            </div>
+            <p><small><strong>Atenção:</strong> ao apagar o site principal, todas as outras versões também serão apagadas.</small></p>
+          </label>
+        </fieldset>
+      </form>
+    </div>
+    <div class="ls-modal-footer">
+    <p>Você tem certeza que deseja apagar este site?</p>
+      <button class="ls-btn ls-float-right" data-dismiss="modal">Cancelar</button>
+      <button type="submit" class="ls-btn-danger" data-dismiss="modal">Apagar o site</button>
     </div>
   </div>
 </div>
 <% content_for :sidebar_panel do %>
   <%= partial 'documentacao/exemplos/painel4/sidebar' %>
 <% end %>
-
