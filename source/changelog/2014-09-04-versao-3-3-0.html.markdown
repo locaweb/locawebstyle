@@ -1,0 +1,37 @@
+---
+title: Versão 3.3.0
+date: 2014-09-04 22:57 UTC
+tags:
+layout: changelog-single
+---
+
+<ul class="ls-no-list-style ls-no-margin-left">
+  <li>
+    <strong class="ls-tag-danger">BUG</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1127" target="blank" class="commit-url">#1127</a> Correção no footer que ficava cortado no Firefox.
+  </li>
+  <li>
+    <strong class="ls-tag-danger">BUG</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1122" target="blank" class="commit-url">#1122</a> Aplicando protocolo relativo na url da imagem ls-smile-gif.
+  </li>
+  <li>
+    <strong class="ls-tag-info">FIX</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1083" target="blank" class="commit-url">#1083</a> Revisão do elemento Tags.
+  </li>
+  <li>
+    <strong class="ls-tag-info">FIX</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1086" target="blank" class="commit-url">#1086</a> Removendo classe ativa dos links e inserindo na LI da paginação.
+  </li>
+  <li>
+    <strong class="ls-tag-info">FIX</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1114" target="blank" class="commit-url">#1114</a> Alterado nomenclatura das variáveis de Sass de camelCase para traço.
+  </li>
+  <li>
+    <strong class="ls-tag-info">FIX</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1124" target="blank" class="commit-url">#1124</a> Alterado a estrutura da listagem.
+  </li>
+  <li>
+    <strong class="ls-tag-info">FIX</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1151" target="blank" class="commit-url">#1151</a> Criado classe para formatar fontes dentro de UL e OL.
+  </li>
+</ul>
