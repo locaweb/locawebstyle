@@ -11,15 +11,15 @@ $screen-md: 992px;
 // @media screen and (min-width: @screen-lg-min) { ... }
 $screen-lg: 1200px;
 
-$heightTopbar: 60px;
-$sidebarWidth: 280px;
+$topbar-height: 60px;
+$sidebar-width: 280px;
 
-$radiusDefault: 4px;
+$default-radius: 4px;
 
 // FORM FIELDS
 // Size and other measurements of forms and fields
 //
-$inputHeight: 2.0625rem;
-$lgInputHeight: 2.875rem;
-$smInputHeight: 1.875rem;
-$xsInputHeight: 1.5rem;
+$input-height:    2.0625rem;
+$input-lg-height: 2.875rem;
+$input-sm-height: 1.875rem;
+$input-xs-height: 1.5rem;

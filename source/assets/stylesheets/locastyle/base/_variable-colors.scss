@@ -9,6 +9,7 @@ $color-gray:        #878787;
 $color-light-green: #25b89a;
 $color-green:       #1ab551;
 $color-orange:      #fca400;
+$color-cyanogen:    #00c9f5;
 
 // Color that will be mixed with the main color of each theme.
 $color-mix: #000;
@@ -23,7 +24,8 @@ $themes-colors: (
   gray        : (color1: $color-gray, color2: mix($color-mix, $color-gray, $color-mix-percent)),
   light-green : (color1: $color-light-green, color2: mix($color-mix, $color-light-green, $color-mix-percent)),
   green       : (color1: $color-green, color2: mix($color-mix, $color-green, $color-mix-percent)),
-  orange      : (color1: $color-orange, color2: mix($color-mix, $color-orange, $color-mix-percent))
+  orange      : (color1: $color-orange, color2: mix($color-mix, $color-orange, $color-mix-percent)),
+  cyanogen    : (color1: $color-cyanogen, color2: mix($color-mix, $color-cyanogen, $color-mix-percent))
 );
 
 //
@@ -52,7 +54,6 @@ $gray5: #222;    // for titles
 //
 // Color patterns
 //
-$color-primary: #878787;
 $color-success: #388f39;
 $color-info:    #2881ac;
 $color-warning: #b9a016;

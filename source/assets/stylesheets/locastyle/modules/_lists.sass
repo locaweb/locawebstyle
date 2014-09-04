@@ -1,7 +1,7 @@
 .ls-list
   border: 1px solid $gray1
   border-left-width: 4px
-  border-radius: $radiusDefault
+  border-radius: $default-radius
   margin-bottom: 15px
 
   header.ls-list-header
@@ -22,9 +22,24 @@
         font-weight: bold
 
       small
-        color: $gray3
         display: block
         font-size: remtopx(.82)
+
+    .ls-list-description
+
+      p
+        display: block
+        font-size: remtopx(.82)
+
+      ul
+        margin-left: 20px
+        margin-bottom: 10px
+        li
+          font-size: remtopx(.82)
+          line-height: 1.4
+          color: $gray3
+
+
 
     .dropdown-toggle:after,
     .btn-default.dropdown-toggle:after

@@ -65,6 +65,9 @@ h1,h2,h3,h4,h5,h6
   ul, ol
     margin: 30px 20px
 
+    &.ls-pagination
+      margin: 0
+
   .commit-url
     color: #4183c4
     font-size: remtopx(0.8)
@@ -273,6 +276,14 @@ p code
   background: #fff
   margin-bottom: 20px
 
+  .doc-title-menu
+    font-size: .94rem
+    margin-top: 15px
+    padding: 10px 0 10px 25px
+
+    &:first-of-type
+      margin-top: 0
+
   ul
     margin: 0
 
@@ -401,6 +412,13 @@ p code
   border-bottom: 1px solid #e5e5e5
   padding-bottom: 10px
   margin-bottom: 40px
+  position: relative
+
+  .doc-tag-ux
+    position: absolute
+    right: 0
+    bottom: -23px
+    border-radius: 0
 
   h1
     font-size: remtopx(2.25)
@@ -643,6 +661,7 @@ p code
 .doc-affix
   position: fixed
   top: 20px
+  max-width: 261px !important
 
 //
 // Syntax Highlight

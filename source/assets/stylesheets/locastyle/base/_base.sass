@@ -5,7 +5,7 @@
   +single-transition(transform, .5s)
   +translate(0, 0)
   min-height: 100%
-  padding-top: $heightTopbar
+  padding-top: $topbar-height
   margin-left: 0
   z-index: 10
   position: relative
@@ -26,10 +26,10 @@
     background-color: #f7f7f7
 
   .ls-sidebar-visible &
-    +translate($sidebarWidth, 0)
+    +translate($sidebar-width, 0)
 
   .ls-notifications-visible &
-    +translate(-$sidebarWidth, 0)
+    +translate(-$sidebar-width, 0)
 
 .ls-lnk-nav
   padding: 7px 10px 0
@@ -76,10 +76,7 @@
   .ls-main
     +single-transition(none)
     +transform(none)
-    padding-top: 0
-    padding-bottom: 60px
-    margin-top: $heightTopbar
-    margin-left: $sidebarWidth
+    margin-left: $sidebar-width
     height: 100%
     min-height: 100%
     -webkit-overflow-scrolling: touch
@@ -109,7 +106,7 @@
     margin-left: 60px
 
 html:after
-  content: url("http://assets.locaweb.com.br/locastyle/edge/images/ls-smile.gif")
+  content: url("//assets.locaweb.com.br/locastyle/edge/images/ls-smile.gif")
   opacity: 0
   position: absolute
   top: 0

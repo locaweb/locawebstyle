@@ -1,0 +1,44 @@
+<% if current_page.data.pre_panel %>
+  <h1 class="ls-brand-name ls-ico-earth"><%= link_to current_page.data.title_product, '../home' %></h1>
+<% else %>
+  <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+    <a href="#" class="ls-ico-user">
+      João
+      <small>(fmolina)</small>
+    </a>
+    <nav class="ls-dropdown-nav ls-user-menu">
+      <ul>
+        <li><a href="#">Meus dados</a></li>
+        <li><a href="#">Faturas</a></li>
+        <li><a href="#">Planos</a></li>
+        <li><a href="#">Sair</a></li>
+       </ul>
+    </nav>
+  </div>
+  <!-- Dropdown com detalhes da conta de usuário -->
+  <div class="ls-area-account ls-ico-user">
+    <h2 class="ls-title-2">Administrando</h2>
+    <h3 class="ls-title-3">João da Silva</h3>
+    <a href="<%= base_url %>/documentacao/exemplos/painel4/pre-painel" class="ls-btn-xs ls-btn-dark">VER TODOS</a>
+  </div>
+  <nav class="ls-menu">
+    <ul>
+      <li><a href="<%= base_url %>/documentacao/exemplos/painel4/home" class="ls-ico-home">Página inicial</a></li>
+      <!-- <li><a href="<%= base_url %>/documentacao/exemplos/painel4/base" class="ls-ico-home">Primeiros passos</a></li> -->
+      <li><a href="#" class="ls-ico-screen">Meu Site</a></li>
+      <li><a href="<%= base_url %>/documentacao/exemplos/painel4/domains" class="ls-ico-link">Endereço do Site</a></li>
+      <li><a href="<%= base_url %>/documentacao/exemplos/painel4/plugins" class="ls-ico-attachment">Plugins</a></li>
+      <li class="ls-submenu">
+        <a href="#" class="ls-ico-cog">Configurações</a>
+        <ul>
+          <li><a class="ls-submenu-item" href="<%= base_url %>/documentacao/exemplos/painel4/config-language">Idiomas</a></li>
+          <li><a class="ls-submenu-item" href="<%= base_url %>/documentacao/exemplos/painel4/config-favicon">Favicon</a></li>
+          <li><a class="ls-submenu-item" href="<%= base_url %>/documentacao/exemplos/painel4/config-ga">Google Analytics</a></li>
+          <li><a class="ls-submenu-item" href="<%= base_url %>/documentacao/exemplos/painel4/config-mobile">Site mobile</a></li>
+          <li><a class="ls-submenu-item" href="<%= base_url %>/documentacao/exemplos/painel4/config-users">Usuários do site</a></li>
+          <li><a class="ls-submenu-item" href="<%= base_url %>/documentacao/exemplos/painel4/config-publish">Publicar o site</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+<% end %>

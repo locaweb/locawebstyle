@@ -1,0 +1,30 @@
+---
+title: Favicon
+layout: panel
+theme_name: ls-theme-cyanogen
+title_product: Criador de Sites 2.0
+---
+<h1 class="ls-title-intro ls-ico-cog">Favicon</h1>
+<p>Favicon é o nome dado ao ícone que é exibido no navegador quando o seu site é acessado.</p>
+
+<div class="ls-box">
+  <p>Envie um ícone com tamanho 32x32 pixels, em .PNG ou .ICO. Ele será exibido na barra do navegador quando seu site for acessado.</p>
+  <hr>
+  <form action="" class="ls-form">
+    <div class="row">
+      <fieldset>
+        <label class="ls-label col-md-5">
+          <b class="ls-label-text ls-hidden-accessible">Selecione a imagem</b>
+          <input type="file" name="file">
+        </label>
+      </fieldset>
+    </div>
+    <div class="ls-actions-btn ls-no-margin">
+      <a href="#" class="ls-btn">Salvar</a>
+    </div>
+  </form>
+</div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel4/sidebar' %>
+<% end %>

@@ -1,0 +1,33 @@
+---
+title: Site feito com o Criador de Sites Mobile
+layout: panel
+theme_name: ls-theme-cyanogen
+title_product: Criador de Sites 2.0
+---
+<h1 class="ls-title-intro ls-ico-cog">Site feito com o Criador de Sites Mobile</h1>
+<p>Caso você tenha criado um site com o Criador de Sites Mobile da Locaweb, informe neste campo. Quando alguém acessar seu site de um celular será direcionado para o endereço informado.</p>
+<p>Não se preocupe. Seu site se ajusta automaticamente a telas pequenas. Isso significa que mesmo em um celular o conteúdo continuará legível.</p>
+
+<div class="ls-box">
+  <p>Se você criou um site com o Criador de Sites Mobile da Locaweb, informe o endereço.</p>
+  <hr>
+  <form action="#" class="ls-form" data-ls-module="form">
+    <div class="row ls-form-disable" id="csmobile-form">
+      <label class="ls-label col-md-5">
+        <span class="ls-label-text ls-hidden-accessible">Informe o endereço</span>
+        <input name="email" placeholder="informe o endereço. Ex.: site.mobilelw.com.br" required type="text" value="site.mobilelw.com.br">
+      </label>
+    </div>
+    <div id="csmobile_actions" class="csmobile-actions ls-display-none">
+      <input type="submit" class="ls-btn-primary" value="Salvar">
+      <button class="ls-btn" data-ls-fields-enable="#csmobile-form" data-toggle-class="ls-display-none" data-target=".csmobile-actions">Cancelar</button>
+    </div>
+    <button data-ls-fields-enable="#csmobile-form" data-toggle-class="ls-display-none" data-target=".csmobile-actions" class="ls-btn-primary csmobile-actions">Editar</button>
+  </form>
+
+</div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel4/sidebar' %>
+<% end %>
+
