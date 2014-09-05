@@ -43,6 +43,12 @@
       "path": "changelog/2014/08/20/versao-3-2-2"
   },
   
+  "changelog/2014/09/04/versao-3-3-0" :   {
+      "title": "Versão 3.3.0",
+      "description": "",
+      "path": "changelog/2014/09/04/versao-3-3-0"
+  },
+  
   "changelog" :   {
       "title": "Changelog",
       "description": "Acompanhe o changelog",
@@ -383,6 +389,66 @@
       "title": "Pré Painel",
       "description": "",
       "path": "documentacao/exemplos/painel3/pre-painel"
+  },
+  
+  "documentacao/exemplos/painel4/config-favicon" :   {
+      "title": "Favicon",
+      "description": "",
+      "path": "documentacao/exemplos/painel4/config-favicon"
+  },
+  
+  "documentacao/exemplos/painel4/config-ga" :   {
+      "title": "Google analytics",
+      "description": "",
+      "path": "documentacao/exemplos/painel4/config-ga"
+  },
+  
+  "documentacao/exemplos/painel4/config-language" :   {
+      "title": "Idiomas",
+      "description": "",
+      "path": "documentacao/exemplos/painel4/config-language"
+  },
+  
+  "documentacao/exemplos/painel4/config-mobile" :   {
+      "title": "Site feito com o Criador de Sites Mobile",
+      "description": "",
+      "path": "documentacao/exemplos/painel4/config-mobile"
+  },
+  
+  "documentacao/exemplos/painel4/config-publish" :   {
+      "title": "Publicar o site",
+      "description": "",
+      "path": "documentacao/exemplos/painel4/config-publish"
+  },
+  
+  "documentacao/exemplos/painel4/config-users" :   {
+      "title": "Usuários do Site",
+      "description": "",
+      "path": "documentacao/exemplos/painel4/config-users"
+  },
+  
+  "documentacao/exemplos/painel4/home-first-access" :   {
+      "title": "Página Inicial",
+      "description": "",
+      "path": "documentacao/exemplos/painel4/home-first-access"
+  },
+  
+  "documentacao/exemplos/painel4/home" :   {
+      "title": "Página Inicial",
+      "description": "",
+      "path": "documentacao/exemplos/painel4/home"
+  },
+  
+  "documentacao/exemplos/painel4/plugins" :   {
+      "title": "Plugins",
+      "description": "",
+      "path": "documentacao/exemplos/painel4/plugins"
+  },
+  
+  "documentacao/exemplos/painel4/pre-painel" :   {
+      "title": "Pré Painel - Criador de Sites 2.0",
+      "description": "",
+      "path": "documentacao/exemplos/painel4/pre-painel"
   },
   
   "documentacao/exemplos/product-not-hired" :   {

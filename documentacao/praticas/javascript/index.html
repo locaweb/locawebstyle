@@ -65,7 +65,8 @@
 
 <div class="doc-content container">
   <div class="row">
-    <aside class="col-md-3">
+    <aside class="doc-sidebar col-md-3">
+<div class="doc-sidebar-inner">
   <nav class="doc-sidebar-menu">
     <ul>
       <li class=''><a class='' href='/locawebstyle/documentacao/introducao/'>Informações iniciais</a></li>
@@ -77,6 +78,7 @@
       <li class=''><a class='' href='/locawebstyle/documentacao/introducao/contribua/'>Contribua</a></li>
     </ul>
   </nav>
+</div>
 </aside>
 
 
@@ -158,25 +160,25 @@
 23
 24
 25
-26</pre></td><td class="code"><pre><span class="c1">// Define o objeto global do projeto, igual a um já existente ou cria um novo objeto.</span>
-<span class="kd">var</span> <span class="nx">projeto</span> <span class="o">=</span> <span class="nx">projeto</span> <span class="o">||</span> <span class="p">{};</span>
+26</pre></td><td class="code"><pre><span class="c1">// Define o objeto global do projeto, igual a um já existente ou cria um novo objeto.
+</span><span class="kd">var</span> <span class="nx">projeto</span> <span class="o">=</span> <span class="nx">projeto</span> <span class="o">||</span> <span class="p">{};</span>
 
-<span class="c1">// Define o módulo no objeto global.</span>
-<span class="nx">projeto</span><span class="p">.</span><span class="nx">moduloUm</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="c1">// Define o módulo no objeto global.
+</span><span class="nx">projeto</span><span class="p">.</span><span class="nx">moduloUm</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="s1">'use strict'</span><span class="p">;</span>
 
   <span class="kd">function</span> <span class="nx">iniciar</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">interno</span><span class="p">();</span>
-    <span class="c1">// ...</span>
-  <span class="p">}</span>
+    <span class="c1">// ...
+</span>  <span class="p">}</span>
 
   <span class="kd">function</span> <span class="nx">atualizar</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// ...</span>
-  <span class="p">}</span>
+    <span class="c1">// ...
+</span>  <span class="p">}</span>
 
   <span class="kd">function</span> <span class="nx">interno</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// ...</span>
-  <span class="p">}</span>
+    <span class="c1">// ...
+</span>  <span class="p">}</span>
 
   <span class="k">return</span> <span class="p">{</span>
     <span class="na">iniciar</span><span class="p">:</span><span class="nx">iniciar</span><span class="p">,</span>
@@ -220,8 +222,8 @@
   <span class="p">}</span>
 
   <span class="kd">function</span> <span class="nx">inserirGrafico</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// ...</span>
-  <span class="p">}</span>
+    <span class="c1">// ...
+</span>  <span class="p">}</span>
 
   <span class="k">return</span> <span class="p">{</span>
     <span class="na">iniciar</span><span class="p">:</span><span class="nx">iniciar</span>
@@ -259,8 +261,8 @@
 
   <span class="kd">function</span> <span class="nx">buscaServidores</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">insereListaServidores</span><span class="p">()</span>
-    <span class="c1">// ...</span>
-  <span class="p">}</span>
+    <span class="c1">// ...
+</span>  <span class="p">}</span>
 
   <span class="k">return</span> <span class="p">{</span>
     <span class="na">iniciar</span><span class="p">:</span><span class="nx">iniciar</span>
@@ -337,12 +339,12 @@
 5
 6
 7</pre></td><td class="code"><pre><span class="s2">"use strict"</span><span class="p">;</span>
-<span class="nx">idade</span> <span class="o">=</span> <span class="mi">17</span><span class="p">;</span> <span class="c1">// lança um erro de referência</span>
-
-<span class="kd">function</span> <span class="nx">soma</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">c</span><span class="p">){</span> <span class="c1">// erro de sintaxe</span>
-  <span class="s2">"use strict"</span><span class="p">;</span>
-  <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span> <span class="o">+</span> <span class="nx">c</span><span class="p">;</span> <span class="c1">// exibe o erro se a função é chamada</span>
-<span class="p">}</span>
+<span class="nx">idade</span> <span class="o">=</span> <span class="mi">17</span><span class="p">;</span> <span class="c1">// lança um erro de referência
+</span>
+<span class="kd">function</span> <span class="nx">soma</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">c</span><span class="p">){</span> <span class="c1">// erro de sintaxe
+</span>  <span class="s2">"use strict"</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span> <span class="o">+</span> <span class="nx">c</span><span class="p">;</span> <span class="c1">// exibe o erro se a função é chamada
+</span><span class="p">}</span>
 </pre></td></tr></tbody></table>
 </div>
 
@@ -408,13 +410,13 @@
 5
 6
 7
-8</pre></td><td class="code"><pre><span class="c1">// Curtos, posicionamento no código e abreviações</span>
-<span class="kd">var</span> <span class="nx">x1</span><span class="p">;</span>
+8</pre></td><td class="code"><pre><span class="c1">// Curtos, posicionamento no código e abreviações
+</span><span class="kd">var</span> <span class="nx">x1</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">campo1</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">latXY</span><span class="p">;</span>
 
-<span class="c1">// Longos demais</span>
-<span class="kd">var</span> <span class="nx">valorEixoXGraficoConsumo</span><span class="p">;</span>
+<span class="c1">// Longos demais
+</span><span class="kd">var</span> <span class="nx">valorEixoXGraficoConsumo</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">campoTextoPrimeiroNome</span><span class="p">;</span>
 </pre></td></tr></tbody></table>
 </div>
@@ -427,12 +429,12 @@
 5
 6
 7
-8</pre></td><td class="code"><pre><span class="c1">// Nomes que descrevem o código, nao o objetivo da função</span>
-<span class="kd">function</span> <span class="nx">maiorDeDezoitoAnos</span><span class="p">(</span><span class="nx">idade</span><span class="p">){</span>
+8</pre></td><td class="code"><pre><span class="c1">// Nomes que descrevem o código, nao o objetivo da função
+</span><span class="kd">function</span> <span class="nx">maiorDeDezoitoAnos</span><span class="p">(</span><span class="nx">idade</span><span class="p">){</span>
   <span class="k">return</span> <span class="nx">idade</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="c1">// É melhor descrever o objetivo</span>
-<span class="kd">function</span> <span class="nx">possuiMaioridade</span><span class="p">(</span><span class="nx">idade</span><span class="p">){</span>
+<span class="c1">// É melhor descrever o objetivo
+</span><span class="kd">function</span> <span class="nx">possuiMaioridade</span><span class="p">(</span><span class="nx">idade</span><span class="p">){</span>
   <span class="k">return</span> <span class="nx">idade</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></td></tr></tbody></table>
@@ -448,16 +450,16 @@
 7
 8
 9
-10</pre></td><td class="code"><pre><span class="c1">// Variáveis com $ no início são elementos/objetos jQuery</span>
-<span class="kd">var</span> <span class="nx">$header</span>    <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#header'</span><span class="p">);</span>
+10</pre></td><td class="code"><pre><span class="c1">// Variáveis com $ no início são elementos/objetos jQuery
+</span><span class="kd">var</span> <span class="nx">$header</span>    <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#header'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">$menuItens</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#menu a'</span><span class="p">);</span>
 
-<span class="c1">// Maiúsculas para constantes</span>
-<span class="kd">var</span> <span class="nx">PASTA_IMAGENS</span> <span class="o">=</span> <span class="s1">'/assets/images/'</span><span class="p">;</span>
+<span class="c1">// Maiúsculas para constantes
+</span><span class="kd">var</span> <span class="nx">PASTA_IMAGENS</span> <span class="o">=</span> <span class="s1">'/assets/images/'</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">NOME_CLIENTE</span> <span class="o">=</span> <span class="s1">'Fulano de Tal'</span><span class="p">;</span>
 
-<span class="c1">// _ no início para variáveis e funções privadas</span>
-<span class="kd">var</span> <span class="nx">_contador</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="c1">// _ no início para variáveis e funções privadas
+</span><span class="kd">var</span> <span class="nx">_contador</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </pre></td></tr></tbody></table>
 </div>
   <p>Confira o padrão de nomenclatura do <a href="http://javascript.crockford.com/code.html#names" target="_blank"></a> Douglas Crockford</p>
@@ -475,9 +477,9 @@
   <p>Exemplo:</p>
 <div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
-3</pre></td><td class="code"><pre><span class="c1">// Ruim: verifica se é maior de 18</span>
-<span class="c1">// Bom: menores de idade são redirecionados</span>
-<span class="k">if</span><span class="p">(</span> <span class="nx">idade</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="p">){</span> <span class="p">...</span> <span class="p">}</span>
+3</pre></td><td class="code"><pre><span class="c1">// Ruim: verifica se é maior de 18
+// Bom: menores de idade são redirecionados
+</span><span class="k">if</span><span class="p">(</span> <span class="nx">idade</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="p">){</span> <span class="p">...</span> <span class="p">}</span>
 </pre></td></tr></tbody></table>
 </div>
   <p>Lembrando que comentários devem existir apenas na versão de desenvolvimento, devendo ser removidos no arquivo minificado que é entregue em produção.</p>
@@ -494,13 +496,13 @@
 4
 5
 6
-7</pre></td><td class="code"><pre><span class="c1">// Errado</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#nome-usuario'</span><span class="p">).</span><span class="nx">css</span><span class="p">({</span>
-  <span class="s1">'border'</span><span class="p">:</span> <span class="s1">'1px solid red'</span><span class="p">,</span>
-  <span class="s1">'color'</span><span class="p">:</span> <span class="s1">'red'</span>
+7</pre></td><td class="code"><pre><span class="c1">// Errado
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#nome-usuario'</span><span class="p">).</span><span class="nx">css</span><span class="p">({</span>
+  <span class="s1">'border'</span><span class="err">:</span> <span class="s1">'1px solid red'</span><span class="p">,</span>
+  <span class="s1">'color'</span><span class="err">:</span> <span class="s1">'red'</span>
 <span class="p">});</span>
-<span class="c1">// Certo</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#nome-usuario'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'erro'</span><span class="p">);</span>
+<span class="c1">// Certo
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#nome-usuario'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'erro'</span><span class="p">);</span>
 </pre></td></tr></tbody></table>
 </div>
   <p>Crie os estilos que precisar (e animações, quando possível) no CSS, e no javascript controle quando os estilos são aplicados, em vez de aplicar propriedades.</p>
@@ -533,27 +535,27 @@
 23
 24
 25
-26</pre></td><td class="code"><pre><span class="c1">// Use</span>
-<span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'rosa'</span><span class="p">,</span> <span class="s1">'azul'</span><span class="p">,</span> <span class="s1">'verde'</span><span class="p">];</span>
-<span class="c1">// Em vez de</span>
-<span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+26</pre></td><td class="code"><pre><span class="c1">// Use
+</span><span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'rosa'</span><span class="p">,</span> <span class="s1">'azul'</span><span class="p">,</span> <span class="s1">'verde'</span><span class="p">];</span>
+<span class="c1">// Em vez de
+</span><span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
 <span class="nx">cores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s1">'rosa'</span><span class="p">;</span>
 <span class="nx">cores</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s1">'azul'</span><span class="p">;</span>
 <span class="nx">cores</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="s1">'verde'</span><span class="p">;</span>
 
-<span class="c1">// Use</span>
-<span class="kd">var</span> <span class="nx">margem</span> <span class="o">=</span> <span class="nx">altura</span> <span class="o">||</span> <span class="mi">10</span><span class="p">;</span>
-<span class="c1">// Em vez de</span>
-<span class="k">if</span><span class="p">(</span><span class="nx">altura</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">){</span>
+<span class="c1">// Use
+</span><span class="kd">var</span> <span class="nx">margem</span> <span class="o">=</span> <span class="nx">altura</span> <span class="o">||</span> <span class="mi">10</span><span class="p">;</span>
+<span class="c1">// Em vez de
+</span><span class="k">if</span><span class="p">(</span><span class="nx">altura</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">){</span>
   <span class="kd">var</span> <span class="nx">margem</span> <span class="o">=</span> <span class="nx">altura</span><span class="p">;</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">margem</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">// Use</span>
-<span class="kd">var</span> <span class="nx">direcao</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<span class="c1">// Em vez de</span>
-<span class="kd">var</span> <span class="nx">direcao</span><span class="p">;</span>
+<span class="c1">// Use
+</span><span class="kd">var</span> <span class="nx">direcao</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="c1">// Em vez de
+</span><span class="kd">var</span> <span class="nx">direcao</span><span class="p">;</span>
 <span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">){</span>
   <span class="nx">direcao</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -606,8 +608,8 @@
 38
 39
 40
-41</pre></td><td class="code"><pre><span class="c1">// Em vez de</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#botao1'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+41</pre></td><td class="code"><pre><span class="c1">// Em vez de
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#botao1'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
   <span class="nx">$</span><span class="p">(</span><span class="s1">'#resultado'</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="s1">'ajax/lista-pessoas.html'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">()</span>
   <span class="p">});</span>
@@ -617,10 +619,10 @@
     <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">()</span>
   <span class="p">});</span>
 <span class="p">})</span>
-<span class="c1">//...</span>
-
-<span class="c1">// Faça</span>
-<span class="kd">function</span> <span class="nx">ocultaFormulario</span><span class="p">(){</span>
+<span class="c1">//...
+</span>
+<span class="c1">// Faça
+</span><span class="kd">function</span> <span class="nx">ocultaFormulario</span><span class="p">(){</span>
   <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">();</span>
 <span class="p">}</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">'#botao1'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
@@ -634,8 +636,8 @@
   <span class="p">});</span>
 <span class="p">})</span>
 
-<span class="c1">// Ou melhor</span>
-<span class="kd">function</span> <span class="nx">ocultaFormulario</span><span class="p">(){</span>
+<span class="c1">// Ou melhor
+</span><span class="kd">function</span> <span class="nx">ocultaFormulario</span><span class="p">(){</span>
   <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">();</span>
 <span class="p">}</span>
 <span class="kd">function</span> <span class="nx">carregaDados</span><span class="p">(</span> <span class="nx">elemento</span><span class="p">,</span> <span class="nx">url</span><span class="p">){</span>
@@ -697,8 +699,8 @@
 42
 43
 44
-45</pre></td><td class="code"><pre><span class="c1">// Em vez de</span>
-<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+45</pre></td><td class="code"><pre><span class="c1">// Em vez de
+</span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
   <span class="na">type</span>   <span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
   <span class="na">url</span>    <span class="p">:</span> <span class="s2">"api/usuarios"</span><span class="p">,</span>
   <span class="na">data</span>   <span class="p">:</span> <span class="p">{</span> <span class="na">limite</span><span class="p">:</span> <span class="mi">10</span> <span class="p">},</span>
@@ -707,29 +709,29 @@
     <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span> <span class="s1">'Busca efetuada com sucesso'</span> <span class="p">);</span>
     <span class="nx">$</span><span class="p">(</span><span class="s1">'#lista'</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span><span class="s1">'fast'</span><span class="p">);</span>
   <span class="p">},</span>
-  <span class="nx">error</span>  <span class="err">:</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="na">error</span>  <span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
     <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span> <span class="s1">'Erro na busca'</span> <span class="p">);</span>
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="c1">// Faça</span>
-<span class="kd">var</span> <span class="nx">configuracoes</span><span class="err">:</span> <span class="p">{</span>
+<span class="c1">// Faça
+</span><span class="kd">var</span> <span class="nx">configuracoes</span><span class="err">:</span> <span class="p">{</span>
   <span class="nx">mensagens</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">successo</span> <span class="p">:</span> <span class="s1">'Busca efetuada com sucesso'</span><span class="p">,</span>
     <span class="na">erro</span>     <span class="p">:</span> <span class="s1">'Erro na busca'</span>
   <span class="p">},</span>
-  <span class="nx">api</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nl">usuarios</span><span class="p">:</span> <span class="s2">"api/usuarios"</span>
+  <span class="nl">api</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">usuarios</span><span class="p">:</span> <span class="s2">"api/usuarios"</span>
   <span class="p">},</span>
-  <span class="nx">animacao</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nl">velocidade</span><span class="p">:</span> <span class="s2">"fast"</span>
+  <span class="nl">animacao</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">velocidade</span><span class="p">:</span> <span class="s2">"fast"</span>
   <span class="p">},</span>
-  <span class="nx">lista</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nl">porPagina</span><span class="p">:</span> <span class="mi">10</span>
+  <span class="nl">lista</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">porPagina</span><span class="p">:</span> <span class="mi">10</span>
   <span class="p">}</span>
 <span class="p">}</span>
-<span class="c1">//...</span>
-<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+<span class="c1">//...
+</span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
   <span class="na">type</span>   <span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
   <span class="na">url</span>    <span class="p">:</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">usuarios</span><span class="p">,</span>
   <span class="na">data</span>   <span class="p">:</span> <span class="p">{</span> <span class="na">limite</span><span class="p">:</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">lista</span><span class="p">.</span><span class="nx">porPagina</span><span class="p">}</span> <span class="p">,</span>
@@ -738,7 +740,7 @@
     <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">mensagens</span><span class="p">.</span><span class="nx">successo</span> <span class="p">);</span>
     <span class="nx">$</span><span class="p">(</span><span class="s1">'#lista'</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">animacao</span><span class="p">.</span><span class="nx">velocity</span> <span class="p">);</span>
   <span class="p">},</span>
-  <span class="nx">error</span>  <span class="err">:</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="na">error</span>  <span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
     <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">mensagens</span><span class="p">.</span><span class="nx">erro</span> <span class="p">);</span>
   <span class="p">}</span>
 <span class="p">});</span>
@@ -762,19 +764,19 @@
 11
 12
 13
-14</pre></td><td class="code"><pre><span class="c1">// Errado</span>
-<span class="c1">// se o usuário submeter o form teclando ENTER a função não é executada</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">'#enviar'</span><span class="p">,</span> <span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+14</pre></td><td class="code"><pre><span class="c1">// Errado
+// se o usuário submeter o form teclando ENTER a função não é executada
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">'#enviar'</span><span class="p">,</span> <span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
   <span class="k">if</span><span class="p">(</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">isValid</span><span class="p">()</span> <span class="p">){</span>
-    <span class="c1">// ... ação</span>
-  <span class="p">}</span>
+    <span class="c1">// ... ação
+</span>  <span class="p">}</span>
 <span class="p">});</span>
-<span class="c1">// correto</span>
-<span class="c1">// a ação é executada no clique ou no ENTER</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'submit'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+<span class="c1">// correto
+// a ação é executada no clique ou no ENTER
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'submit'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
   <span class="k">if</span><span class="p">(</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">isValid</span><span class="p">()</span> <span class="p">){</span>
-    <span class="c1">// ... ação</span>
-  <span class="p">}</span>
+    <span class="c1">// ... ação
+</span>  <span class="p">}</span>
 <span class="p">});</span>
 </pre></td></tr></tbody></table>
 </div>
@@ -795,22 +797,22 @@
 13
 14
 15
-16</pre></td><td class="code"><pre><span class="c1">// Os seguintes foram descontinuados</span>
-<span class="p">.</span><span class="nx">die</span><span class="p">()</span>   <span class="p">.</span><span class="nx">load</span><span class="p">()</span>
+16</pre></td><td class="code"><pre><span class="c1">// Os seguintes foram descontinuados
+</span><span class="p">.</span><span class="nx">die</span><span class="p">()</span>   <span class="p">.</span><span class="nx">load</span><span class="p">()</span>
 <span class="p">.</span><span class="nx">error</span><span class="p">()</span> <span class="p">.</span><span class="nx">unload</span><span class="p">()</span>
 <span class="p">.</span><span class="nx">live</span><span class="p">()</span>  <span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
-<span class="c1">// os seguintes métodos podem ser evitados</span>
-<span class="p">.</span><span class="nx">mousedown</span><span class="p">()</span>   <span class="p">.</span><span class="nx">blur</span><span class="p">()</span>     <span class="p">.</span><span class="nx">rezise</span><span class="p">()</span>   <span class="p">.</span><span class="nx">keyup</span><span class="p">()</span>     <span class="p">.</span><span class="nx">keypress</span><span class="p">()</span>
+<span class="c1">// os seguintes métodos podem ser evitados
+</span><span class="p">.</span><span class="nx">mousedown</span><span class="p">()</span>   <span class="p">.</span><span class="nx">blur</span><span class="p">()</span>     <span class="p">.</span><span class="nx">rezise</span><span class="p">()</span>   <span class="p">.</span><span class="nx">keyup</span><span class="p">()</span>     <span class="p">.</span><span class="nx">keypress</span><span class="p">()</span>
 <span class="p">.</span><span class="nx">mousenter</span><span class="p">()</span>   <span class="p">.</span><span class="nx">change</span><span class="p">()</span>   <span class="p">.</span><span class="nx">hover</span><span class="p">()</span>    <span class="p">.</span><span class="nx">ready</span><span class="p">()</span>     <span class="p">.</span><span class="nx">focusin</span><span class="p">()</span>
 <span class="p">.</span><span class="nx">mouseleave</span><span class="p">()</span>  <span class="p">.</span><span class="nx">click</span><span class="p">()</span>    <span class="p">.</span><span class="nx">scroll</span><span class="p">()</span>   <span class="p">.</span><span class="nx">submit</span><span class="p">()</span>    <span class="p">.</span><span class="nx">mouseup</span><span class="p">()</span>
 <span class="p">.</span><span class="nx">mouseout</span><span class="p">()</span>    <span class="p">.</span><span class="nx">dblclick</span><span class="p">()</span> <span class="p">.</span><span class="nx">keydown</span><span class="p">()</span>  <span class="p">.</span><span class="nx">focusout</span><span class="p">()</span>
 <span class="p">.</span><span class="nx">mouseover</span><span class="p">()</span>   <span class="p">.</span><span class="nx">focus</span><span class="p">()</span>    <span class="p">.</span><span class="nx">select</span><span class="p">()</span>
-<span class="c1">// e devem ser substitídos por</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#elemento'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'blur'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="p">...</span> <span class="p">})</span>
+<span class="c1">// e devem ser substitídos por
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#elemento'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'blur'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="p">...</span> <span class="p">})</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">'#elementoPai'</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">'#elemento'</span><span class="p">,</span> <span class="s1">'blur'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="p">...});</span>
-<span class="c1">// de prefrência o .delegate() que tem melhor performance</span>
-<span class="c1">// por fazer a seleção dentro de um escopo ( '#elementoPai' )</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#escopo'</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">'#elemento'</span><span class="p">,</span> <span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="p">...});</span>
+<span class="c1">// de prefrência o .delegate() que tem melhor performance
+// por fazer a seleção dentro de um escopo ( '#elementoPai' )
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#escopo'</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">'#elemento'</span><span class="p">,</span> <span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="p">...});</span>
 </pre></td></tr></tbody></table>
 </div>
 
@@ -854,13 +856,13 @@
               <span class="na">heigth</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
               <span class="na">opacity</span><span class="p">:</span> <span class="mi">1</span>
             <span class="p">},</span> <span class="mi">300</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
-              <span class="c1">// ...</span>
-            <span class="p">})</span>
+              <span class="c1">// ...
+</span>            <span class="p">})</span>
           <span class="p">}</span>
         <span class="p">)</span>
       <span class="p">})</span>
     <span class="p">},</span>
-    <span class="nx">error</span><span class="err">:</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="na">error</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
       <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">mensageErro</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">});</span>
@@ -882,14 +884,14 @@
 8
 9
 10
-11</pre></td><td class="code"><pre><span class="c1">// Use</span>
-<span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Azul'</span><span class="p">,</span> <span class="s1">'verde'</span><span class="p">,</span> <span class="s1">'rosa'</span><span class="p">,</span> <span class="s1">'vermelho'</span><span class="p">];</span>
-<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nx">quantCores</span><span class="o">=</span><span class="nx">cores</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">count</span> <span class="o">&lt;</span> <span class="nx">quantCores</span><span class="p">;</span> <span class="nx">count</span><span class="o">++</span><span class="p">){</span> <span class="c1">//</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">cores</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">);</span>
+11</pre></td><td class="code"><pre><span class="c1">// Use
+</span><span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Azul'</span><span class="p">,</span> <span class="s1">'verde'</span><span class="p">,</span> <span class="s1">'rosa'</span><span class="p">,</span> <span class="s1">'vermelho'</span><span class="p">];</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nx">quantCores</span><span class="o">=</span><span class="nx">cores</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">count</span> <span class="o">&lt;</span> <span class="nx">quantCores</span><span class="p">;</span> <span class="nx">count</span><span class="o">++</span><span class="p">){</span> <span class="c1">//
+</span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">cores</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">);</span>
 <span class="p">}</span>
 
-<span class="c1">// em vez de</span>
-<span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Azul'</span><span class="p">,</span> <span class="s1">'verde'</span><span class="p">,</span> <span class="s1">'rosa'</span><span class="p">,</span> <span class="s1">'vermelho'</span><span class="p">];</span>
+<span class="c1">// em vez de
+</span><span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Azul'</span><span class="p">,</span> <span class="s1">'verde'</span><span class="p">,</span> <span class="s1">'rosa'</span><span class="p">,</span> <span class="s1">'vermelho'</span><span class="p">];</span>
 <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">cores</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">count</span><span class="o">++</span><span class="p">){</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">cores</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">;</span>
 <span class="p">}</span>
@@ -923,8 +925,8 @@
 22
 23
 24
-25</pre></td><td class="code"><pre><span class="c1">// Em vez de</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#botaoEnviar'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span> <span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+25</pre></td><td class="code"><pre><span class="c1">// Em vez de
+</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#botaoEnviar'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span> <span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
   <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span> <span class="s1">'disabled'</span><span class="p">,</span> <span class="kc">true</span> <span class="p">);</span>
   <span class="nx">$</span><span class="p">(</span><span class="s1">'$formulario'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span> <span class="s1">'enviando'</span> <span class="p">);</span>
   <span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span> <span class="s1">'ajax/contato'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">)</span> <span class="p">{</span>
@@ -934,8 +936,8 @@
   <span class="p">});</span>
 <span class="p">});</span>
 
-<span class="c1">// Faça</span>
-<span class="kd">var</span> <span class="nx">$botaoEnviar</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#botaoEnviar'</span><span class="p">);</span>
+<span class="c1">// Faça
+</span><span class="kd">var</span> <span class="nx">$botaoEnviar</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#botaoEnviar'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">$formulario</span>  <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">$mensagem</span>    <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">);</span>
 
