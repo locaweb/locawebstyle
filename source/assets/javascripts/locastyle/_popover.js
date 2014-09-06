@@ -41,6 +41,13 @@ locastyle.popover = (function() {
     elementData.position  = elementData.container ? $elem.position() : $elem.offset() ;
     elementData.container = elementData.container || config.container;
     elementData.placement = elementData.placement || config.placement;
+    setPositionData(elementData, width, height);
+    elementData.uniqueId = config.uniqueId++;
+    $(elementData.container).append(locastyle.templates.popover(elementData));
+    bindActions($elem, elementData, width, height);
+  }
+
+  function setPositionData(elementData, width, height) {
     switch (elementData.placement) {
       case 'top':
         elementData.position.top -=  12;
@@ -58,18 +65,22 @@ locastyle.popover = (function() {
         elementData.position.top +=  (height/2 -2 );
         elementData.position.left -= 12;
     }
-    elementData.uniqueId = config.uniqueId++;
-    $(elementData.container).append(locastyle.templates.popover(elementData));
-    bindActions($elem, elementData);
   }
 
-  function bindActions ($elem, elementData) {
+  function updateElementPosition($popover, elementData) {
+    $popover.css("top", elementData.position.top).css("left", elementData.position.left);
+  }
+
+  function bindActions ($elem, elementData, width, height) {
     var trigger = elementData.trigger == 'hover' ? config.hoverEvent : config.trigger,
         $popover = $(config.idPopover + elementData.uniqueId);
     if(trigger === config.hoverEvent){
       $elem.on({
         mouseenter: function (event) {
           event.preventDefault();
+          elementData.position = $(this).offset() ;
+          setPositionData(elementData, width, height);
+          updateElementPosition($popover, elementData);
           $popover.stop().show();
         },
         mouseleave: function (event) {
@@ -82,6 +93,9 @@ locastyle.popover = (function() {
         click: function (event) {
           event.preventDefault();
           event.stopPropagation();
+          elementData.position = $(this).offset() ;
+          setPositionData(elementData, width, height);
+          updateElementPosition($popover, elementData);
           $popover.stop().toggle();
         }
       });
