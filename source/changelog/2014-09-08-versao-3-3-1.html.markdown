@@ -1,0 +1,13 @@
+---
+title: Versão 3.3.1
+date: 2014-09-08 16:06 UTC
+tags:
+layout: changelog-single
+---
+
+<ul class="ls-no-list-style ls-no-margin-left">
+  <li>
+    <strong class="ls-tag-danger">BUG</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1129" target="blank" class="commit-url">#1127</a> Ajuste no popover que abria na posição errada.
+  </li>
+</ul>
