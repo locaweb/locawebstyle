@@ -10,6 +10,7 @@ $color-light-green: #25b89a;
 $color-green:       #1ab551;
 $color-orange:      #fca400;
 $color-cyanogen:    #00c9f5;
+$color-eventials:   #ef1e37;
 
 // Color that will be mixed with the main color of each theme.
 $color-mix: #000;
@@ -25,7 +26,8 @@ $themes-colors: (
   light-green : (color1: $color-light-green, color2: mix($color-mix, $color-light-green, $color-mix-percent)),
   green       : (color1: $color-green, color2: mix($color-mix, $color-green, $color-mix-percent)),
   orange      : (color1: $color-orange, color2: mix($color-mix, $color-orange, $color-mix-percent)),
-  cyanogen    : (color1: $color-cyanogen, color2: mix($color-mix, $color-cyanogen, $color-mix-percent))
+  cyanogen    : (color1: $color-cyanogen, color2: mix($color-mix, $color-cyanogen, $color-mix-percent)),
+  eventials   : (color1: $color-eventials, color2: mix($color-mix, $color-eventials, $color-mix-percent))
 );
 
 //
