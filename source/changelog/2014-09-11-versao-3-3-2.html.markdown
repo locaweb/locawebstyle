@@ -7,6 +7,10 @@ layout: changelog-single
 
 <ul class="ls-no-list-style ls-no-margin-left">
   <li>
+    <strong class="ls-tag-success">NEW</strong>
+    &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1134" target="blank" class="commit-url">#1134</a> Criação da cor vermelha clara na palheta de temas. <a href="http://locaweb.github.io/locawebstyle/documentacao/css/cores-do-tema/" class="ls-btn ls-btn-xs">Documentação</a>
+  </li>
+  <li>
     <strong class="ls-tag-info">FIX</strong>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1132" target="blank" class="commit-url">#1132</a> Ajuste para o .ls-ico-header aceitar outros elementos com ícone além do padrão do título.
   </li>
