@@ -1,0 +1,13 @@
+---
+title: Versão 3.3.3
+date: 2014-09-17 17:35 UTC
+tags:
+layout: changelog-single
+---
+
+<ul class="ls-no-list-style ls-no-margin-left">
+  <li>
+    <strong class="ls-tag-success">NEW</strong>
+    – <a href="https://github.com/locaweb/locawebstyle/pull/1137" class="commit-url">#1137</a> Criamos um atributo <code class="commit-url">data-modal-blocked</code> para que a modal não seja fechada. <a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/modal/" class="ls-btn ls-btn-xs">Documentação</a>
+  </li>
+</ul>
