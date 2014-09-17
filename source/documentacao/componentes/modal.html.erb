@@ -11,6 +11,7 @@ type: component
 
   <h3 class="ls-title-4">Criando modal</h3>
   <p>Você precisa passar no <code>data-target</code> o ID da modal.</p>
+
   <table class="ls-table">
     <thead>
       <tr>
@@ -182,4 +183,10 @@ type: component
   <% code("html") do %>
 <button data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="<h2>Título feito dentro do data-content</h2><p>Conteúdo feito dentro do data-content</p>" data-title="Este título é o atributo data-title" data-class="ls-btn-danger" data-save="Salvar" data-close="Fechar" class="ls-btn-primary"> Modal sem target </button>
   <% end %>
+  <hr>
+  <h3 class="ls-title-4">Modal sempre aberta</h3>
+  <p>Se você quer manter uma modal sempre aberta, basta inserir esse código <code>data-modal-blocked</code> na sua modal, no mesmo lugar onde fica a <code>.ls-modal</code>.</p>
+  <p class="ls-alert-warning"><strong>Atenção:</strong> Se você for fechar sua modal depois de uma determinada ação, você precisa chamar <code>locastyle.modal.close()</code></p>
+
+
 </section>
