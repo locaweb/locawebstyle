@@ -1,0 +1,13 @@
+---
+title: Versão 3.3.3
+date: 2014-09-17 17:35 UTC
+tags:
+layout: changelog-single
+---
+
+<ul class="ls-no-list-style ls-no-margin-left">
+  <li>
+    <strong class="ls-tag-success">NEW</strong>
+    Criamos um atributo <code class="commit-url">data-modal-blocked</code> para que a modal não seja fechada.
+  </li>
+</ul>
