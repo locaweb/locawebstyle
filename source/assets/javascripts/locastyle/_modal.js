@@ -26,22 +26,22 @@ locastyle.modal = (function() {
   function bindOpen() {
     $(config.open.trigger).on('click.ls', function() {
       locastyle.modal.open($(this).data());
-      bindKeypress();
-    });
-  }
-
-  function bindKeypress(){
-    $(document).keyup(function(e) {
-      if(e.keyCode == 27){
-        locastyle.modal.close();
-      }
     });
   }
 
   function bindClose(){
-    $(config.close.classes + ", " + config.close.trigger).on('click.ls', function() {
-      locastyle.modal.close();
-    });
+    if($('.ls-modal').attr('data-modal-blocked') === undefined){
+      $(document).keyup(function(e) {
+        if(e.keyCode == 27){
+          locastyle.modal.close();
+        }
+      });
+      $(config.close.classes + ", " + config.close.trigger).on('click.ls', function() {
+        locastyle.modal.close();
+      });
+    }else{
+      $('[data-dismiss="modal"]').remove()
+    }
   }
 
   function open($element) {
