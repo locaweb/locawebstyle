@@ -30,24 +30,21 @@ locastyle.modal = (function() {
   }
 
   function bindClose(){
-    if($('.ls-modal').attr('data-modal-blocked') === undefined){
-      $(document).keyup(function(e) {
-        if(e.keyCode == 27){
-          locastyle.modal.close();
-        }
-      });
-      $(config.close.classes + ", " + config.close.trigger).on('click.ls', function() {
+    $(document).keyup(function(e) {
+      if(e.keyCode == 27){
         locastyle.modal.close();
-      });
-    }else{
-      $('[data-dismiss="modal"]').remove()
-    }
+      }
+    });
+    $(config.close.classes + ", " + config.close.trigger).on('click.ls', function() {
+      locastyle.modal.close();
+    });
   }
 
   function open($element) {
     if (!$element.target) {
       $('body').addClass('modal-opened').append(locastyle.templates.modal($element));
       $('.ls-modal-template').focus();
+      bindClose();
     } else {
       $($element.target)
         .show()
@@ -57,7 +54,13 @@ locastyle.modal = (function() {
         $('body').addClass('modal-opened');
     }
     ariaModal($($element.target),'false');
-    bindClose();
+    $($element.target).each(function(i,e){
+      if($(e).data('modal-blocked') !== undefined){
+        $('[data-dismiss="modal"]').remove()
+      }else{
+        bindClose();
+      }
+    })
   }
 
   function close() {
