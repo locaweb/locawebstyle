@@ -26,10 +26,17 @@ describe("Modal: ", function() {
 
   describe('When click on data-ls-module="modal" with data-custom-attrs', function() {
     it('should add attr on .ls-modal button', function() {
-      $('[data-ls-module="modal"]').trigger("click");
+      $('#myModalCustomAttr [data-ls-module="modal"]').trigger("click");
       expect($("#myAwesomeModalCustomAttr button").data('method')).toEqual('delete');
     });
   });
+
+  describe("When attribute data-modal-blocked is true", function(){
+    it('should remove data-dismiss and not allowed to close modal', function() {
+      $('#myModalOpenedNotAllowedToClose #triggerMyAwesomeModalNotAllowdClose').trigger("click");
+      expect($('#myAwesomeModalNotAllowdClose button').data('dismiss')).toBeFalsy();
+    });
+  })
 
   describe("Unbind:", function() {
     describe("when unbind is called in module init", function() {
@@ -38,7 +45,7 @@ describe("Modal: ", function() {
         locastyle.modal.init();
         locastyle.modal.init();
         $('[data-ls-module="modal"]').trigger("click");
-        expect(locastyle.modal.open.calls.count()).toEqual(1);
+        expect(locastyle.modal.open.calls.count()).toEqual(2);
       });
 
       it("should prevent close modal from being called more times than needed", function() {
@@ -59,7 +66,7 @@ describe("Modal: ", function() {
 
         var spy = spyOn(locastyle.modal, "close");
         $('[data-target="#myAwesomeModal"]').trigger("click");
-        var timesToBeCalled = $(config.close.classes + ", " + config.close.trigger).length - 2;
+        var timesToBeCalled = $(config.close.classes + ", " + config.close.trigger).length - 4;
         $('#myAwesomeModal [data-dismiss="modal"]').trigger("click");
         expect(locastyle.modal.close.calls.count()).toEqual(timesToBeCalled);
       });
@@ -89,7 +96,7 @@ describe("Modal: ", function() {
 
     it("When modal opened should has attribute aria-hidden equal false", function() {
       $('#myModal').trigger('click');
-      expect($('.ls-modal').attr('aria-hidden')).toEqual('false');
+      expect($('#myModalClosed .ls-modal').attr('aria-hidden')).toEqual('false');
     });
 
     it("should has attribute role equal dialog", function() {
