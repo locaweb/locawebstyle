@@ -18,12 +18,24 @@
     margin-left: -1px
 
     &:first-child a
-      border-top-left-radius: $default-radius
-      border-bottom-left-radius: $default-radius
+      border-top-left-radius: 3px
+      border-bottom-left-radius: 3px
 
       a
         border-top-right-radius: $default-radius
         border-bottom-right-radius: $default-radius
+
+    &:first-child.ls-active
+      border-top-left-radius: $default-radius
+      border-bottom-left-radius: $default-radius
+
+    &:last-child a
+      border-top-right-radius: 3px
+      border-bottom-right-radius: 3px
+
+    &:last-child.ls-active
+      border-top-right-radius: $default-radius
+      border-bottom-right-radius: $default-radius
 
     &.ls-disabled a
       color: $gray1
