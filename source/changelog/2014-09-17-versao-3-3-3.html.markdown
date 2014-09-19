@@ -10,4 +10,8 @@ layout: changelog-single
     <strong class="ls-tag-success">NEW</strong>
     – <a href="https://github.com/locaweb/locawebstyle/pull/1137" class="commit-url">#1137</a> Criamos um atributo <code class="commit-url">data-modal-blocked</code> para que a modal não seja fechada. <a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/modal/" class="ls-btn ls-btn-xs">Documentação</a>
   </li>
+  <li>
+    <strong class="ls-tag-info">FIX</strong>
+    – <a href="https://github.com/locaweb/locawebstyle/pull/1140" class="commit-url">#1140</a> Havia um bug que quebrava o exemplo de gráfico no Firefox. Isso acontecia nos produtos também. Foi arrumado nessa versão simplesmente inserindo a classe <code>ls-clear-both</code> no container do gráfico.</a>
+  </li>
 </ul>
