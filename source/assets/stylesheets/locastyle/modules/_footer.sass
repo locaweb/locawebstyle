@@ -8,123 +8,131 @@
   width: 96.5%\9
   border-top: 30px solid transparent
 
-  .ls-footer-menu
-    background-color: #131313
-    border-radius: $default-radius
-    overflow: hidden
+.ls-title-footer,
+.bg-customer-support,
+.bg-my-tickets,
+.bg-help-desk,
+.bg-statusblog
+  background-image: url(../images/footer/sprite.png)
+  background-repeat: no-repeat
 
-    .ls-title-footer
-      position: relative
-      text-transform: uppercase
-      text-align: center
-      padding: 15px 0
-      margin: 0 auto
-      color: #fff
-      font-weight: bolder
-      font-size: remtopx(.875)
-      background: url(../images/footer/arrow-down.png) no-repeat center bottom
+.ls-footer-menu
+  background-color: #131313
+  border-radius: $default-radius
+  overflow: hidden
 
-    a
-      color: #fff
+.ls-title-footer
+  position: relative
+  text-transform: uppercase
+  text-align: center
+  padding: 15px 0
+  margin: 0 auto
+  color: #fff
+  font-weight: bolder
+  font-size: remtopx(.875)
+  background-position: center 37px
 
-    > ul
-      margin: 0
-      text-align: center
-      position: relative
-      display: block
-      padding: 10px 0 20px
 
-      > li
-        display: inline-block
-        padding: 0
-        margin: 0 10px
+.ls-footer-list
+  margin: 0
+  text-align: center
+  position: relative
+  display: block
+  padding: 10px 0 20px
 
-        > a
-          padding: 18px 10px 18px 35px
+  li
+    display: inline-block
+    padding: 0
+    margin: 0 10px
 
-          &.bg-customer-support
-            background: url(../images/footer/customer-support.png) no-repeat left
+  a
+    padding: 18px 10px 18px 35px
+    color: #fff
 
-          &.bg-my-tickets
-            background: url(../images/footer/my-tickets.png) no-repeat left
+    &:hover,
+    &:focus
+      text-decoration: none
 
-          &.bg-help-desk
-            background: url(../images/footer/help-desk.png) no-repeat left
+  .bg-customer-support
+    background-position: -5px -67px
 
-          &.bg-statusblog
-            background: url(../images/footer/statusblog.png) no-repeat left
+  .bg-my-tickets
+    background-position: -5px -187px
 
-          &:hover,
-          &:focus
-            text-decoration: none
+  .bg-help-desk
+    background-position: -5px -127px
 
-  .ls-footer-info
+  .bg-statusblog
+    background-position: -5px -247px
+
+.ls-footer-info
+  font-size: remtopx(.687)
+  text-align: center
+  padding: 5px 0 0
+
+  .set-ip
+    margin-top: 5px
+
+  p
+    border-top: solid 1px #d9d9d9
+    margin-top: 5px
+    padding-top: 5px
     font-size: remtopx(.687)
-    text-align: center
-    padding: 5px 0 0
-
-    .set-ip
-      margin-top: 5px
-
-    p
-      border-top: solid 1px #d9d9d9
-      margin-top: 5px
-      padding-top: 5px
-      font-size: remtopx(.687)
 
 @media screen and (min-width: $screen-lg)
 
   .ls-footer
     display: block
 
-    .ls-footer-menu
-      position: relative
+  .ls-footer-menu
+    position: relative
 
-      .ls-title-footer
-        display: inline-block
-        vertical-align: middle
-        line-height: 25px
-        padding: 15px 35px 15px 15px
-        background: url(../images/footer/arrow-left.png) no-repeat right
+  .ls-title-footer
+    display: inline-block
+    vertical-align: middle
+    line-height: 25px
+    padding: 15px 35px 15px 15px
+    background-position: right -20px
 
-      ul
-        margin: 0
-        display: inline-block
-        width: calc(100% - 185px)
-        width: 79.5%\9
-        position: relative
-        top: 5px
+  .ls-footer-list
+    margin: 0
+    display: inline-block
+    width: calc(100% - 185px)
+    width: 79.5%\9
+    position: relative
+    top: 5px
 
-        li
-          margin-left: 0
-          margin-right: 0
-          font-size: remtopx(.812)
-          display: inline-block
-          vertical-align: top
-          width: 24%
+    li
+      margin-left: 0
+      margin-right: 0
+      font-size: remtopx(.812)
+      display: inline-block
+      vertical-align: top
+      width: 24%
 
-          a
-            .visible-lg
-              display: inline-block !important
-              opacity: 1
+    a
+      .visible-lg
+        display: inline-block !important
+        opacity: 1
 
-          &:hover,
-          &:focus,
-          &:active
-            opacity: .8
+    &:hover,
+    &:focus,
+    &:active
+      opacity: .8
 
-    .ls-footer-info
-      padding-bottom: 10px
+  .ls-footer-info
+    padding-bottom: 10px
 
-      .set-ip
-        margin-top: 0
+    .set-ip
+      margin-top: 0
 
-      span
-        float: left
-        margin-right: 10px
+    .set-ip,
+    .last-access
+      float: left
+      margin-right: 10px
 
-      .ls-copy-right
-        float: right
-        border: none
-        margin: 0
-        padding: 0
+    .ls-copy-right
+      float: right
+      border: none
+      margin: 0
+      padding: 0
