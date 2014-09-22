@@ -48,18 +48,10 @@
             color: mix($color-mix, $color1, 40%)
 
 
-    //
+    ////
     // SIDEBAR
-    //
+    ////
     .ls-sidebar
-
-      .ls-area-account
-
-        &[class*="ls-ico"]:before
-          @if (lightness($color1) < 30)
-            color: mix(#fff, $color1, 25%)
-          @else
-            color: $color1
 
       .ls-menu
         li
@@ -93,6 +85,11 @@
       .ls-brand-name
         background-color: $color1
 
+    .ls-area-account[class*="ls-ico"]:before
+      @if (lightness($color1) < 30)
+        color: mix(#fff, $color1, 25%)
+      @else
+        color: $color1
 
     //
     // Dashboard Info

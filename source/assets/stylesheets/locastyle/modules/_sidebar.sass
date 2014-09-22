@@ -35,59 +35,6 @@
       background-color: #111
       position: static
 
-  .ls-area-account
-    @if (lightness($color-menu-mix) < 30)
-      background-color: mix($color-menu-mix, $color-menu-bg, 92%)
-    @else
-      background-color: mix($color-menu-mix, $color-menu-bg, 60%)
-
-    border-bottom-color: mix($color-menu-mix, $color-menu-bg, 84%)
-    padding: 20px 15px
-    position: absolute
-    bottom: 0
-    width: 100%
-    z-index: 2
-
-    &[class*="ls-ico"]:before
-      float: left
-      font-size: 1.875em
-      margin-right: 15px
-
-    [class*="ls-title"]
-      margin-bottom: 0
-      padding-top: 0
-
-      &:after
-        display: inline-block
-
-    .ls-title-2
-      @if (lightness($color-menu-mix) < 30)
-        color: mix($color-menu-mix, $color-menu-bg, 50%)
-      @else
-        color: $color-menu-bg
-      font-size: remtopx(.6875)
-      font-weight: normal
-      text-transform: uppercase
-
-    .ls-title-3
-      color: $color-menu-text
-      font-size: remtopx(.875)
-      font-weight: normal
-      margin: 3px 0 15px
-      overflow: hidden
-      text-overflow: ellipsis
-      white-space: nowrap
-
-    [class*="ls-btn"]
-      margin-left: 45px
-      background-color: mix($color-menu-mix, $color-menu-bg, 85%)
-      color: mix($color-menu-mix, $color-menu-bg, 40%)
-      font-size: remtopx(.5)
-      border-color: mix($color-menu-mix, $color-menu-bg, 65%)
-
-      &:hover
-        background-color: mix($color-menu-mix, $color-menu-bg, 75%)
-
   &.ls-area-account-active .ls-menu
     height: calc(100% - 160px)
     height: 100%\9
@@ -195,6 +142,59 @@
       display: block
       color: #fff
       font-size: remtopx(4.5)
+
+.ls-area-account
+  @if (lightness($color-menu-mix) < 30)
+    background-color: mix($color-menu-mix, $color-menu-bg, 92%)
+  @else
+    background-color: mix($color-menu-mix, $color-menu-bg, 60%)
+
+  border-bottom-color: mix($color-menu-mix, $color-menu-bg, 84%)
+  padding: 20px 15px
+  position: absolute
+  bottom: 0
+  width: 100%
+  z-index: 2
+
+  &[class*="ls-ico"]:before
+    float: left
+    font-size: 1.875em
+    margin-right: 15px
+
+  [class*="ls-title"]
+    margin-bottom: 0
+    padding-top: 0
+
+    &:after
+      display: inline-block
+
+  .ls-title-2
+    @if (lightness($color-menu-mix) < 30)
+      color: mix($color-menu-mix, $color-menu-bg, 50%)
+    @else
+      color: $color-menu-bg
+    font-size: remtopx(.6875)
+    font-weight: normal
+    text-transform: uppercase
+
+  .ls-title-3
+    color: $color-menu-text
+    font-size: remtopx(.875)
+    font-weight: normal
+    margin: 3px 0 15px
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+  [class*="ls-btn"]
+    margin-left: 45px
+    background-color: mix($color-menu-mix, $color-menu-bg, 85%)
+    color: mix($color-menu-mix, $color-menu-bg, 40%)
+    font-size: remtopx(.5)
+    border-color: mix($color-menu-mix, $color-menu-bg, 65%)
+
+    &:hover
+      background-color: mix($color-menu-mix, $color-menu-bg, 75%)
 
 @media screen and (min-width: $screen-sm)
   .ls-sidebar
