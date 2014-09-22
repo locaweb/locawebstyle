@@ -7,53 +7,48 @@
     background-color: transparent
     border-bottom: none
 
-  .ls-topbar
+  .ls-topbar .ls-notification-topbar
 
-    .ls-brand-name a
-      color: #555
+    .ls-alerts-list a
+      +rgba(color, #555,.4)
 
-    .ls-notification-topbar
+      &.ls-active
+        color: #000
 
-      .ls-alerts-list a
-        +rgba(color, #555,.4)
+      &[data-counter]
+        +rgba(color, #555,1)
 
         &.ls-active
           color: #000
 
-        &[data-counter]
-          +rgba(color, #555,1)
+        &:after
+          color: #fff
 
-          &.ls-active
-            color: #000
+  .ls-user-account
 
-          &:after
-            color: #fff
-
-      .ls-user-account
-
-        > a
-          color: #555
-
-          small
-            +rgba(color, #555,1)
-
-          &:before
-            +rgba(color, #555,.5)
-            box-shadow: inset 0 0 0 2px rgba(#555,.3)
-
-          &:after
-            border-top-color: #555
-
-        &.ls-active > a:after
-          border: 4px solid transparent
-          border-bottom-color: #555
-
-      .ls-user-account
-        background-color: #dedede
-
-    .ls-ico-menu:before,
-    .ls-show-notifications.ls-ico-question:before
+    > a
       color: #555
+
+      small
+        +rgba(color, #555,1)
+
+      &:before
+        +rgba(color, #555,.5)
+        box-shadow: inset 0 0 0 2px rgba(#555,.3)
+
+      &:after
+        border-top-color: #555
+
+    &.ls-active > a:after
+      border: 4px solid transparent
+      border-bottom-color: #555
+
+  .ls-user-account
+    background-color: #dedede
+
+  .ls-ico-menu:before,
+  .ls-show-notifications.ls-ico-question:before
+    color: #555
 
 @media screen and (min-width: $screen-sm)
 

@@ -14,7 +14,7 @@
   list-style: none
 
   li
-    float: left
+    @extend .ls-float-left
     margin-left: -1px
 
     &:first-child a
@@ -53,9 +53,9 @@
 
     .ls-gap,
     a
+      @extend .ls-float-left
       padding: 10px 12px
       position: relative
-      float: left
       text-decoration: none
       border: 1px solid $gray1
       color: $gray4
@@ -95,10 +95,10 @@
     display: inline
 
     &.ls-previous a
-      float: left
+      @extend .ls-float-left
 
     &.ls-next a
-      float: right
+      @extend .ls-float-right
 
     &.ls-disabled a
       color: $gray1

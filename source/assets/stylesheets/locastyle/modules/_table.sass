@@ -1,13 +1,13 @@
 .ls-table
   width: 100%
   border-collapse: collapse
-  background-color: #fff
+  background: #fff
   margin: 20px 0
   border-bottom: 1px solid $gray2
   table-layout: fixed
 
   .ls-box-gray &
-    background-color: transparent
+    background: transparent
 
   .ls-well &:first-child
     margin-top: 0
@@ -15,18 +15,7 @@
 
   &.ls-no-hover
     tbody tr:hover
-      background-color: inherit
-
-  &.ls-table-striped
-
-    tbody tr:nth-child(odd) td
-      background-color: $gray0
-
-    &.ls-bg-header tbody tr:nth-child(even) td
-      background-color: $gray0
-
-    &.ls-bg-header tbody tr:nth-child(odd) td
-      background-color: #fff
+      background: inherit
 
   &.ls-table-bordered
     border: 1px solid $gray2
@@ -42,25 +31,25 @@
   thead th
     border-bottom-width: 2px
 
-    &.ls-data-descending,
-    &.ls-data-ascending
+  .ls-data-descending,
+  .ls-data-ascending
 
-      a
-        position: relative
-        display: inline-block
+    a
+      position: relative
+      display: inline-block
 
-        &:after
-          +arrow-down(#000, 5px)
-          content: ""
-          position: absolute
-          top: 50%
-          right: -15px
-          margin-top: -2px
+      &:after
+        +arrow-down(#000, 5px)
+        content: ""
+        position: absolute
+        top: 50%
+        right: -15px
+        margin-top: -2px
 
-    &.ls-data-ascending a:after
-      border-color: transparent
-      border-bottom-color: #000
-      margin-top: -7px
+  .ls-data-ascending a:after
+    border-color: transparent
+    border-bottom-color: #000
+    margin-top: -7px
 
   tbody tr:last-child td,
   tbody tr:last-child th
@@ -88,3 +77,12 @@
   &.ls-sm-space
     td, th
       @extend .ls-sm-space
+
+.ls-table-striped
+
+  tbody tr:nth-child(odd) td,
+  &.ls-bg-header tr:nth-child(even) td
+    background: $gray0
+
+  &.ls-bg-header tr:nth-child(odd) td
+    background: #fff

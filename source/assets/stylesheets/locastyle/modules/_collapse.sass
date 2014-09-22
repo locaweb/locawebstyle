@@ -9,7 +9,6 @@
       +border-bottom-radius($default-radius)
       border: 1px solid $gray1
 
-
 .ls-collapse
   border: 1px solid $gray1
   border-radius: $default-radius
@@ -17,46 +16,47 @@
   font-size: remtopx(.875)
   margin-bottom: 10px
 
-  .ls-collapse-header
-    display: block
-    padding: 10px
-    cursor: pointer
-    position: relative
+.ls-collapse-open,
+.ls-collapse-open-always
 
-    &:before
-      +rotate(0deg)
-      +transition (all .35s ease)
-      border-radius: 100%
-      content: "\e60b"
-      font-family: 'locastyle'
-      font-size: remtopx(.8)
-      position: absolute
-      top: 50%
-      margin-top: -12px
-      right: 10px
-      height: 24px
-      width: 24px
-      line-height: 1.4
-      text-align: center
-
-    .ls-collapse-title
-      color: $gray4
-      font-size: remtopx(1)
-      margin-bottom: 0
-
-    p
-      margin-bottom: 0
-      color: $gray3
+  .ls-collapse-header:before
+    +rotate(180deg)
 
   .ls-collapse-body
-    border: 0px solid transparent
-    display: none
+    display: block
+    padding: 10px
 
-  &.ls-collapse-open, &.ls-collapse-open-always
+.ls-collapse-header
+  display: block
+  padding: 10px
+  cursor: pointer
+  position: relative
 
-    .ls-collapse-header:before
-      +rotate(180deg)
+  &:before
+    +rotate(0deg)
+    +transition (all .35s ease)
+    border-radius: 100%
+    content: "\e60b"
+    font-family: 'locastyle'
+    font-size: remtopx(.8)
+    position: absolute
+    top: 50%
+    margin-top: -12px
+    right: 10px
+    height: 24px
+    width: 24px
+    line-height: 1.4
+    text-align: center
 
-    .ls-collapse-body
-      display: block
-      padding: 10px
+  p
+    margin-bottom: 0
+    color: $gray3
+
+.ls-collapse-title
+  color: $gray4
+  font-size: remtopx(1)
+  margin-bottom: 0
+
+.ls-collapse-body
+  border: 0px solid transparent
+  display: none

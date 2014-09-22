@@ -26,9 +26,9 @@
       background-color: lighten($color1, 40%)
       color: $color1
 
-    //
+    ////
     // Topbar
-    //
+    ////
     .ls-user-account
       background: mix($color-mix, $color1, 15%)
 
@@ -48,18 +48,10 @@
             color: mix($color-mix, $color1, 40%)
 
 
-    //
+    ////
     // SIDEBAR
-    //
+    ////
     .ls-sidebar
-
-      .ls-area-account
-
-        &[class*="ls-ico"]:before
-          @if (lightness($color1) < 30)
-            color: mix(#fff, $color1, 25%)
-          @else
-            color: $color1
 
       .ls-menu
         li
@@ -76,33 +68,39 @@
           &.ls-active:not(.ls-submenu) > a
             background-color: mix($color-menu-mix, $color-menu-bg, 76%)
 
-        .ls-submenu
+      // Submenu
+      .ls-submenu
 
-          &:after
-            color: mix($color-menu-mix, $color-menu-text, 45%)
+        &:after
+          color: mix($color-menu-mix, $color-menu-text, 45%)
 
-          li
-            border-bottom-color: mix($color-menu-mix, $color-menu-bg, 80%)
+        li
+          border-bottom-color: mix($color-menu-mix, $color-menu-bg, 80%)
 
-          &.ls-active
-            background-color: mix($color-menu-mix, $color-menu-bg, 84%)
+        &.ls-active
+          background-color: mix($color-menu-mix, $color-menu-bg, 84%)
 
-            ul
-              border-top-color: mix($color-menu-mix, $color-menu-bg, 80%)
+          ul
+            border-top-color: mix($color-menu-mix, $color-menu-bg, 80%)
 
-      .ls-brand-name
-        background-color: $color1
+    .ls-brand-name
+      background-color: $color1
 
+    .ls-area-account[class*="ls-ico"]:before
+      @if (lightness($color1) < 30)
+        color: mix(#fff, $color1, 25%)
+      @else
+        color: $color1
 
-    //
+    ////
     // Dashboard Info
-    //
+    ////
     .ls-box .ls-info-header [class*="ls-title"]
       color: $color1
 
-    //
+    ////
     // Buttons
-    //
+    ////
     [class*="ls-btn"]
       &[data-ls-module]:after
         border-top-color: $color2
@@ -126,18 +124,18 @@
       &.ls-disabled:focus
         background-color: $color1
 
-    //
+    ////
     // Collpase
-    //
+    ////
     .ls-collapse
       .ls-collapse-header
         &:before
           color: $color1
           border: 3px solid $color1
 
-    //
+    ////
     // Pagination
-    //
+    ////
     [class*="ls-pagination"]
 
       li
@@ -166,9 +164,9 @@
             &:focus
               background: none
 
-    //
+    ////
     // Tables
-    //
+    ////
     .ls-table
       &.ls-bg-header thead
         background-color: $color1
@@ -204,9 +202,9 @@
         +rgba(background-color, $color2, .02)
 
 
-    //
+    ////
     // Tabs
-    //
+    ////
     .ls-tabs-nav:not(.in-dropdown)
       li
         +rgba(background-color, $color2,0.7)
@@ -217,16 +215,16 @@
         &.ls-active
           background-color: #fff
 
-    //
+    ////
     // Shortcuts
-    //
+    ////
     .shortcuts
       [class*="ls-ico-"]:before
         background: $color1
 
-    //
+    ////
     // Links de Referência
-    //
+    ////
     .ls-lnk-nav
 
       &:hover
@@ -240,9 +238,9 @@
         color: $color1
         border: 4px solid $color1
 
-    //
+    ////
     // Dropdown
-    //
+    ////
     .ls-dropdown ul a
 
       &:focus,
@@ -253,15 +251,15 @@
       &.ls-color-danger:hover
         color: #fff !important
 
-    //
+    ////
     // Switch button
-    //
+    ////
     .ls-switch-btn input:checked + label
       background-color: $color1
 
-    //
+    ////
     // Listas
-    //
+    ////
     .ls-list .ls-list-title a
       color: $color1
 
@@ -269,9 +267,9 @@
       .ls-topbar
         background-color: $gray0
 
-    //
+    ////
     // Datepicker
-    //
+    ////
     .is-selected .pika-button
       color: #fff
       background: $color2
@@ -281,16 +279,16 @@
       color: #fff !important
       background: $color1 !important
 
-    //
+    ////
     // Tour
-    //
-    // .div.hopscotch-bubble .hopscotch-actions button.hopscotch-nav-button.next
+    //.div.hopscotch-bubble .hopscotch-actions button.hopscotch-nav-button.next
+    ////
     .hopscotch-actions button.hopscotch-nav-button.next
       background-color: $color1
 
-    //
+    ////
     // Barra de progresso
-    //
+    ////
     div[data-ls-module="progressBar"] span
       background-color: $color1
 

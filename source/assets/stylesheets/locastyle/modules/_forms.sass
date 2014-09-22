@@ -148,7 +148,7 @@ textarea
   .ls-label
 
     &[class*="col-"]
-      float: left
+      @extend .ls-float-left
 
     .ls-label-text
       display: inline-block
@@ -249,9 +249,9 @@ input.ls-form-text,
       width: 78%
 
   input
+    @extend .ls-float-left
     position: relative
     z-index: 2
-    float: left
     width: 100%
     height: inherit
     margin-bottom: 0

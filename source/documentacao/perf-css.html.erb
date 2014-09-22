@@ -30,7 +30,7 @@ layout: false
 <button id="btnRun" class="ls-btn-primary">Start</button>
 
 <!-- Insira aqui o html a ser testado -->
-<%= partial 'documentacao/shared/footer' %>
+  <%= partial('documentacao/shared/collapse/collapse', :locals => { :quant => 1, :header => "Título", content: (lorem.paragraphs 1)  }) %>
 
 <%= javascript_include_tag "libs/jquery-2.1.0.min", "locastyle", "docs/test" %>
 
