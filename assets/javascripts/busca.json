@@ -61,6 +61,12 @@
       "path": "changelog/2014/09/11/versao-3-3-2"
   },
   
+  "changelog/2014/09/17/versao-3-3-3" :   {
+      "title": "Versão 3.3.3",
+      "description": "",
+      "path": "changelog/2014/09/17/versao-3-3-3"
+  },
+  
   "changelog" :   {
       "title": "Changelog",
       "description": "Acompanhe o changelog",
