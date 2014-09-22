@@ -84,49 +84,49 @@
         &:before
           left: 25px
 
-    .ls-submenu
-      position: relative
+  .ls-submenu
+    position: relative
 
-      > a
-        padding-right: 35px
+    > a
+      padding-right: 35px
 
-      ul
-        height: 0
-        display: none
+    ul
+      height: 0
+      display: none
+
+    &:after
+      +single-transition(all, .2s)
+      content: "\e60b"
+      font-family: 'locastyle'
+      font-size: remtopx(.6875)
+      position: absolute
+      top: 24px
+      right: 20px
+      pointer-events: none
+
+    &.ls-active
+
+      a
+        &:hover,
+        &:focus
+          padding-left: 65px
 
       &:after
+        +rotate(180deg)
         +single-transition(all, .2s)
-        content: "\e60b"
-        font-family: 'locastyle'
-        font-size: remtopx(.6875)
-        position: absolute
-        top: 24px
-        right: 20px
-        pointer-events: none
 
-      &.ls-active
+      ul
+        +single-transition(opacity, .3s)
+        height: auto
+        display: block
+        border-top: 1px solid
+
+        li:last-child
+          border-bottom: none
 
         a
-          &:hover,
-          &:focus
-            padding-left: 65px
-
-        &:after
-          +rotate(180deg)
-          +single-transition(all, .2s)
-
-        ul
-          +single-transition(opacity, .3s)
-          height: auto
-          display: block
-          border-top: 1px solid
-
-          li:last-child
-            border-bottom: none
-
-          a
-            padding: 15px 15px 15px 55px
-            font-weight: 400
+          padding: 15px 15px 15px 55px
+          font-weight: 400
 
   .ls-brand-name
     padding: 40px 20px

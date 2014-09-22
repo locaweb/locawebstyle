@@ -68,22 +68,23 @@
           &.ls-active:not(.ls-submenu) > a
             background-color: mix($color-menu-mix, $color-menu-bg, 76%)
 
-        .ls-submenu
+      // Submenu
+      .ls-submenu
 
-          &:after
-            color: mix($color-menu-mix, $color-menu-text, 45%)
+        &:after
+          color: mix($color-menu-mix, $color-menu-text, 45%)
 
-          li
-            border-bottom-color: mix($color-menu-mix, $color-menu-bg, 80%)
+        li
+          border-bottom-color: mix($color-menu-mix, $color-menu-bg, 80%)
 
-          &.ls-active
-            background-color: mix($color-menu-mix, $color-menu-bg, 84%)
+        &.ls-active
+          background-color: mix($color-menu-mix, $color-menu-bg, 84%)
 
-            ul
-              border-top-color: mix($color-menu-mix, $color-menu-bg, 80%)
+          ul
+            border-top-color: mix($color-menu-mix, $color-menu-bg, 80%)
 
-      .ls-brand-name
-        background-color: $color1
+    .ls-brand-name
+      background-color: $color1
 
     .ls-area-account[class*="ls-ico"]:before
       @if (lightness($color1) < 30)
