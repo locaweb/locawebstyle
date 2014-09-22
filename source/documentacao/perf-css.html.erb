@@ -1,0 +1,52 @@
+---
+layout: false
+---
+<!DOCTYPE html>
+<html lang="pt-br" class="ls-theme-green">
+<head>
+  <meta charset="UTF-8">
+  <title><%= data.page.title || "Locaweb Style Framework" %></title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="description" content="<%= current_page.data.description %>" />
+  <meta name="keywords" content="<%= current_page.data.keywords %>" />
+
+  <%= stylesheet_link_tag "perf" %>
+
+  <link rel="stylesheet" href="<%= base_url %>/assets/stylesheets/locastyle.css">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41233562-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+<button id="btnRun" class="ls-btn-primary">Start</button>
+
+<!-- Insira aqui o html a ser testado -->
+<%= partial 'documentacao/shared/footer' %>
+
+<%= javascript_include_tag "libs/jquery-2.1.0.min", "locastyle", "docs/test" %>
+
+<script type="text/javascript">
+  $('#btnRun').click(function(){
+    stressTest.bookmarklet();
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
