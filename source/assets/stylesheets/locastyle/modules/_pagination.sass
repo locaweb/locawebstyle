@@ -2,12 +2,13 @@
   width: 100%
   padding: 10px 0
   font-size: remtopx(.8125)
-  color: $gray3
+  color: $gray4
   text-align: center
 
 .ls-filter-view
-  padding: 9px 0
-  margin-top: 10px
+
+  [class^="ls-custom-select"]
+    width: 90px
 
 [class*="ls-pagination"]
   display: inline-block
@@ -38,13 +39,13 @@
       border-bottom-right-radius: $default-radius
 
     &.ls-disabled a
-      color: $gray1
-      border-color: $gray1
+      color: $gray2
       cursor: not-allowed
 
       &:hover,
       &:focus
         background: none
+        color: $gray2
 
     &.ls-active a,
     &.ls-active a:hover,
@@ -54,12 +55,13 @@
     .ls-gap,
     a
       @extend .ls-float-left
-      padding: 10px 12px
+      padding: 9px 12px
       position: relative
       text-decoration: none
       border: 1px solid $gray1
       color: $gray4
       line-height: 1
+      font-size: remtopx(.8125)
 
       &:hover,
       &:focus
@@ -75,8 +77,8 @@
   &.ls-pagination-lg
     .ls-gap,
     a
-      padding: 10px 16px
-      font-size: remtopx(1.125)
+      padding: 14px 16px
+      font-size: remtopx(1)
 
 .ls-gap
   cursor: pointer
