@@ -4,80 +4,73 @@
   border-radius: $default-radius
   margin-bottom: 15px
 
-  header.ls-list-header
+  .ls-list-header
     padding: 15px 0
     display: table
     width: 100%
 
-    .ls-list-image
-      display: inline-block
-      margin-right: 10px
-      vertical-align: top
+  .ls-list-image
+    display: inline-block
+    margin-right: 10px
+    vertical-align: top
 
-    .ls-list-title
-      margin-bottom: 5px
+  .ls-list-title
+    margin-bottom: 5px
 
-      a
-        font-size: remtopx(1)
-        font-weight: bold
+    a
+      font-size: remtopx(1)
+      font-weight: bold
 
-      small
-        display: block
-        font-size: remtopx(.82)
+    small
+      display: block
+      font-size: remtopx(.8125)
 
-    .ls-list-description
+.ls-list-description
 
-      p
-        display: block
-        font-size: remtopx(.82)
+  p
+    display: block
+    font-size: remtopx(.8125)
 
-      ul
-        margin-left: 20px
-        margin-bottom: 10px
-        li
-          font-size: remtopx(.82)
-          line-height: 1.4
-          color: $gray3
+  ul
+    margin-left: 20px
+    margin-bottom: 10px
 
+  li
+    font-size: remtopx(.8125)
+    line-height: 1.4
+    color: $gray3
 
+  [class*="ls-btn"] + [class*="ls-btn"]
+    margin-right: 5px
 
-    .dropdown-toggle:after,
-    .btn-default.dropdown-toggle:after
-      margin-left: 0
+.ls-list-content
+  border-top: 1px solid $gray1
+  font-size: remtopx(.875)
+  overflow: hidden
 
-    [class*="ls-btn"] + [class*="ls-btn"]
-      margin-right: 5px
+  [class*="col-"]
+    border-left: 1px solid $gray1
+    padding-bottom: 12px
+    padding-top: 12px
 
-  .ls-list-content
+    &:first-child
+      border-color: transparent
+
+    .ls-list-label
+      display: block
+
+  [class*="col-xs-12"]
+    border-left: none
     border-top: 1px solid $gray1
-    font-size: remtopx(.82)
-    overflow: hidden
+    text-align: center
 
-    [class*="col-"]
-      border-left: 1px solid $gray1
-      padding-bottom: 12px
-      padding-top: 12px
-
-      &:first-child
-        border-color: transparent
-
-      .ls-list-label
-        display: block
-
-    [class*="col-xs-12"]
-      border-left: none
-      border-top: 1px solid $gray1
-      text-align: center
-
-      &:first-child
-        border-top: none
-
-
+    &:first-child
+      border-top: none
 
 
 @media screen and (min-width: 768px)
 
-  .ls-list .ls-list-content
+  .ls-list-content
 
     [class*="col-xs-12"]
       border-left: 1px solid $gray1
