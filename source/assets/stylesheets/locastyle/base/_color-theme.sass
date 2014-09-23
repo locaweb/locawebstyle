@@ -51,37 +51,37 @@
     ////
     // SIDEBAR
     ////
-    .ls-sidebar
 
-      .ls-menu
-        li
-          border-bottom-color: mix($color-menu-mix, $color-menu-bg, 84%)
+    .ls-menu
+      li
+        border-bottom-color: mix($color-menu-mix, $color-menu-bg, 84%)
 
-          a
-            color: mix($color-menu-mix, $color-menu-text, 45%)
+        &.ls-active:not(.ls-submenu) > a
+          background-color: mix($color-menu-mix, $color-menu-bg, 76%)
 
-            &:hover,
-            &:focus
-              color: $color-menu-text
-              background-color: mix($color-menu-mix, $color-menu-bg, 80%)
+      a
+        color: mix($color-menu-mix, $color-menu-text, 45%)
 
-          &.ls-active:not(.ls-submenu) > a
-            background-color: mix($color-menu-mix, $color-menu-bg, 76%)
+        &:hover,
+        &:focus
+          color: $color-menu-text
+          background-color: mix($color-menu-mix, $color-menu-bg, 80%)
 
-      // Submenu
-      .ls-submenu
 
-        &:after
-          color: mix($color-menu-mix, $color-menu-text, 45%)
+    // Submenu
+    .ls-submenu
 
-        li
-          border-bottom-color: mix($color-menu-mix, $color-menu-bg, 80%)
+      &:after
+        color: mix($color-menu-mix, $color-menu-text, 45%)
 
-        &.ls-active
-          background-color: mix($color-menu-mix, $color-menu-bg, 84%)
+      li
+        border-bottom-color: mix($color-menu-mix, $color-menu-bg, 80%)
 
-          ul
-            border-top-color: mix($color-menu-mix, $color-menu-bg, 80%)
+      &.ls-active
+        background-color: mix($color-menu-mix, $color-menu-bg, 84%)
+
+        ul
+          border-top-color: mix($color-menu-mix, $color-menu-bg, 80%)
 
     .ls-brand-name
       background-color: $color1

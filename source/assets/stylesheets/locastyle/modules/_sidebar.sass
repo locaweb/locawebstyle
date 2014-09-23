@@ -40,94 +40,6 @@
     height: 100%\9
     padding-bottom: 160px\9
 
-  .ls-menu
-    margin: 0
-    padding: 0
-    height: 100%
-    overflow: auto
-    -webkit-overflow-scrolling: touch
-    -moz-overflow-scrolling: touch
-    -ms-overflow-scrolling: touch
-    overflow-scrolling: touch
-
-    li
-      list-style: none
-      border-bottom: 1px solid
-
-      &.ls-active > a
-        color: $color-menu-text
-
-    a
-      +single-transition(padding, .2s)
-      display: block
-      font-size: remtopx(.875)
-      font-weight: 600
-      line-height: 1.3
-      text-decoration: none
-      padding: 20px 20px 20px 59px
-      position: relative
-      -webkit-font-smoothing: antialiased
-      -moz-osx-font-smoothing: grayscale
-
-      &:before
-        +single-transition(all, .2s)
-        font-size: remtopx(1.25)
-        position: absolute
-        top: 50%
-        margin-top: -10px
-        left: 19px
-
-      &:focus,
-      &:hover
-        padding-left: 65px
-
-        &:before
-          left: 25px
-
-  .ls-submenu
-    position: relative
-
-    > a
-      padding-right: 35px
-
-    ul
-      height: 0
-      display: none
-
-    &:after
-      +single-transition(all, .2s)
-      content: "\e60b"
-      font-family: 'locastyle'
-      font-size: remtopx(.6875)
-      position: absolute
-      top: 24px
-      right: 20px
-      pointer-events: none
-
-    &.ls-active
-
-      a
-        &:hover,
-        &:focus
-          padding-left: 65px
-
-      &:after
-        +rotate(180deg)
-        +single-transition(all, .2s)
-
-      ul
-        +single-transition(opacity, .3s)
-        height: auto
-        display: block
-        border-top: 1px solid
-
-        li:last-child
-          border-bottom: none
-
-        a
-          padding: 15px 15px 15px 55px
-          font-weight: 400
-
   .ls-brand-name
     padding: 40px 20px
     text-align: center
@@ -142,6 +54,93 @@
       display: block
       color: #fff
       font-size: remtopx(4.5)
+
+.ls-menu
+  margin: 0
+  padding: 0
+  height: 100%
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+  -moz-overflow-scrolling: touch
+  -ms-overflow-scrolling: touch
+  overflow-scrolling: touch
+
+  li
+    list-style: none
+    border-bottom: 1px solid
+
+    &.ls-active > a
+      color: $color-menu-text
+
+  a
+    +single-transition(padding, .2s)
+    display: block
+    font-size: remtopx(.875)
+    font-weight: 600
+    line-height: 1.3
+    text-decoration: none
+    padding: 20px 20px 20px 59px
+    position: relative
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+    &:before
+      +single-transition(all, .2s)
+      font-size: remtopx(1.25)
+      position: absolute
+      top: 50%
+      margin-top: -10px
+      left: 19px
+
+    &:focus,
+    &:hover
+      padding-left: 65px
+
+      &:before
+        left: 25px
+
+.ls-submenu
+  position: relative
+
+  > a
+    padding-right: 35px
+
+  ul
+    height: 0
+    display: none
+
+  &:after
+    +single-transition(all, .2s)
+    content: "\e60b"
+    font-family: 'locastyle'
+    font-size: remtopx(.6875)
+    position: absolute
+    top: 24px
+    right: 20px
+    pointer-events: none
+
+  &.ls-active
+
+    a
+      &:hover,
+      &:focus
+        padding-left: 65px
+
+    &:after
+      +rotate(180deg)
+      +single-transition(all, .2s)
+
+    ul
+      +single-transition(opacity, .3s)
+      height: auto
+      display: block
+      border-top: 1px solid
+
+      li:last-child
+        border-bottom: none
+
+    a
+      font-weight: 400
 
 .ls-area-account
   @if (lightness($color-menu-mix) < 30)
@@ -241,26 +240,6 @@
       &:before
         font-size: inherit
 
-    .ls-menu
-      width: $sidebar-width
-
-      ul ul,
-      .ls-submenu.ls-active ul
-        opacity: 0
-        height: 0
-        overflow: hidden
-        +single-transition(opacity, .2s, ease-in-out)
-        border: none
-
-      .ls-submenu.ls-active a
-        background: none
-
-    .ls-area-account
-      overflow: hidden
-      width: $sidebar-width
-      height: 70px
-      +single-transition(height, .4s)
-
     &:hover
       width: $sidebar-width
 
@@ -277,7 +256,7 @@
       .ls-menu
 
         ul ul,
-        .ls-submenu.ls-active ul,
+        .ls-active ul,
           opacity: 1
           height: auto
           border-top: 1px solid mix($color-mix, $color-menu-bg, 80%)
@@ -285,3 +264,25 @@
 
       .ls-area-account
         height: 100px
+
+  .ls-menu
+    width: $sidebar-width
+
+    ul ul,
+    .ls-active ul
+      opacity: 0
+      height: 0
+      overflow: hidden
+      +single-transition(opacity, .2s, ease-in-out)
+      border: none
+
+    .ls-active a
+      background: none
+
+  .ls-area-account
+    overflow: hidden
+    width: $sidebar-width
+    height: 70px
+    +single-transition(height, .4s)
+
+
