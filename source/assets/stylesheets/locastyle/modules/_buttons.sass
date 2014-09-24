@@ -1,11 +1,11 @@
 // Style base button
 [class*="ls-btn"]
   +single-transition(all, .2s)
+  @extend .ls-cursor-pointer
   border: 1px solid mix($color-mix, #fff, 30%)
   padding: 6px 11px 7px
   border-radius: $default-radius
   background-color: #fff
-  cursor: pointer
   display: inline-block
   font-size: remtopx(.8125)
   line-height: 1.42857143
@@ -38,22 +38,22 @@
     pointer-events: none
 
   &:empty:after
-    margin-left: 0
+    @extend .ls-no-margin-left
 
   + .ls-dropdown,
   + [class*="ls-btn"]
     margin-left: 5px
 
   &.ls-btn-block
+    @extend .ls-no-margin-left
+    @extend .ls-no-margin-right
+    @extend .ls-no-padding-right
+    @extend .ls-no-padding-left
     display: block
-    margin-left: 0
-    margin-right: 0
     width: 100%
-    padding-right: 0
-    padding-left: 0
 
     &:first-child
-      margin-top: 0
+      @extend .ls-no-margin-top
 
     & + .ls-btn-block
       margin-top: 15px
@@ -120,7 +120,7 @@
       border-bottom-right-radius: 0
 
     &:not(:first-child):not(:last-child)
-      border-radius: 0
+      @extend .ls-no-radius
 
     &:last-child:not(:first-child),
       border-bottom-left-radius: 0
@@ -143,10 +143,9 @@
   border-top: 1px solid rgba(0, 0, 0, .2)
   white-space: nowrap
 
-
   // when in inline forms
   .ls-form-inline &
-    padding: 0
+    @extend .ls-no-padding
     margin: 17px 0 0
     border: none
     display: inline-block
@@ -154,10 +153,10 @@
   // when in horizontal forms
   .ls-form-horizontal &
     @extend .ls-clearfix
-    padding: 0
+    @extend .ls-no-padding
+    @extend .ls-no-margin
     padding-top: 21px
-    margin: 0
     border: none
 
     [class*="ls-btn"]:not(.ls-btn-block)
-      margin-top: 0
+      @extend .ls-no-margin-top
