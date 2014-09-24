@@ -1,20 +1,10 @@
 .ls-sidebar
-  +single-transition(transform, .5s)
-  +translate(-50%, 0)
   background-color: mix($color-menu-mix, $color-menu-bg, 88%)
   width: $sidebar-width
   position: fixed
   left: 0
   top: 0
   height: 100%
-
-  .ls-sidebar-visible &
-    z-index: 1
-    +translate(0, 0)
-    -webkit-overflow-scrolling: touch
-    -moz-overflow-scrolling: touch
-    -ms-overflow-scrolling: touch
-    overflow-scrolling: touch
 
   .ls-user-account
     position: absolute
