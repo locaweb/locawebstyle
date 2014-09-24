@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="ls-theme-green doc-size-mobile">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title><%= current_page.data.title %></title>
+  <meta name="description" content="<%= current_page.data.description %>" />
+  <meta name="keywords" content="<%= current_page.data.keywords %>" />
+  <%= stylesheet_link_tag "locastyle" %>
+</head>
+<body class="<%= page_classes %>">
+
+
+<%= yield %>
+
+
+<%= javascript_include_tag  "libs/jquery-2.1.0.min", "example", "locastyle",  "//code.highcharts.com/highcharts.js", "docs/panel-charts" %>
+
+
+</body>
+</html>
