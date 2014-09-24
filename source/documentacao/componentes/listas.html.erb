@@ -8,57 +8,69 @@ type: component
 
 <section class="col-md-9">
 
+
   <%= partial 'partials/doc-intro-content' %>
 
-  <p>As listas são usadas para exibir de forma organizada pequenas informações como status, descrições, nomes e ações. Geralmente essas informações não se encaixariam em listagens simples, por isso criamos um elemento que consegue agrupar todas essas informações.</p>
+
+    <p>
+      Informações de utilização <br>
+      A lista é utilizada para localizar um dado específico a ser gerenciado. O destino pode ser uma página interna ou outro painel.
+    </p>
+
+  <div class="row">
+    <div class="col-md-7">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>usar?</strong></h2>
+        <p>- Há necessidade de acesso a outro painel ou página interna.</p>
+        <p>- Há necessidade de exibir um resumo das informações sem colunas.</p>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>não</strong> usar?</h2>
+        <p>- Os dados apresentados sejam comparáveis.</p>
+        <p>- Há necessidade de ordenação de colunas.</p>
+      </div>
+    </div>
+  </div>
 
 
-  <h2 class="doc-title-3">Lista somente com header</h2>
-  <p>Listagem com elementos simples:</p>
+  <h2 class="doc-title-3">Lista com identificador simples</h2>
+  <p>O identificador deve ter a mesma ação do botão principal.</p>
   <div class="ls-box-demo">
-    <div class="ls-list">
-      <header class="ls-list-header">
-        <div class="ls-list-title col-md-9">
-          <a href="#" >Identificador da conta</a>
-          <small>Fake Product Name I </small>
-        </div>
-        <div class="col-md-3 ls-txt-right">
-          <a href="#" class="ls-btn-primary">Administrar</a>
-        </div>
-      </header>
-    </div>
-    <div class="ls-list">
-      <header class="ls-list-header">
-        <div class="ls-list-title col-md-9">
-          <a href="#" >Identificador da conta</a>
-          <small>Fake Product Name I </small>
-        </div>
-        <div class="col-md-3 ls-txt-right">
-          <a href="#" class="ls-btn-primary">Administrar</a>
-        </div>
-      </header>
-    </div>
+
+    <h3 class="doc-title-6">Desktop</h3>
+    <%= partial 'documentacao/shared/lists/lists-simple' %>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="320" src="<%= base_url %>/documentacao/shared/lists/lists-simple-mobile" frameborder="0"></iframe>
+
+
   </div>
   <% code("html") do %>
-<div class="ls-list">
-  <header class="ls-list-header">
-    <div class="ls-list-title col-md-9">
-      <a href="#" >Identificador da conta</a>
-      <small>Fake Product Name I </small>
-    </div>
-    <div class="col-md-3 ls-txt-right">
-      <a href="#" class="ls-btn-primary">Administrar</a>
-    </div>
-  </header>
-</div>
+<%= partial 'documentacao/shared/lists/lists-simple' %>
   <% end %>
 
-  <h2 class="doc-title-3">Lista com header + imagem e grids de informações</h2>
+  <h2 class="doc-title-3">Lista com informações secundárias e ação principal</h2>
+  <p>O identificador deve ter a mesma ação do botão principal.</p>
   <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/lists' %>
+    <h3 class="doc-title-6">Desktop</h3>
+    <%= partial 'documentacao/shared/lists/lists' %>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="320" height="1000" src="<%= base_url %>/documentacao/shared/lists/lists-mobile" frameborder="0"></iframe>
   </div>
-  <% code("html") do %><%= partial 'documentacao/shared/lists' %><% end %>
+  <% code("html") do %><%= partial 'documentacao/shared/lists/lists' %><% end %>
 
+
+
+  <h2 class="doc-title-3">Lista com botão múltiplo</h2>
+  <p>O identificador não deve ter link.</p>
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+    <%= partial 'documentacao/shared/lists/lists-actions' %>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="320" height="900" src="<%= base_url %>/documentacao/shared/lists/lists-actions-mobile" frameborder="0"></iframe>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/lists/lists-actions' %><% end %>
 
 
   <hr class="doc-hr" id="doc-ux">
