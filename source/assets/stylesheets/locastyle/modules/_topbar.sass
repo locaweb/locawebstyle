@@ -2,13 +2,11 @@
 // Toda customização da topbar estará abaixo
 //
 .ls-topbar
-  +single-transition(all, .5s)
-  +translate(0, 0)
   height: $topbar-height
   position: fixed
-  width: 100%
   top: 0
   left: 0
+  width: 100%
   z-index: 11
 
   &:after
@@ -19,12 +17,6 @@
     position: absolute
     bottom: 0
     left: 0
-
-  .ls-sidebar-visible &
-    +translate($sidebar-width, 0)
-
-  .ls-notifications-visible &
-    +translate(-$sidebar-width, 0)
 
   //
   // Nome do produto/marca
