@@ -9,9 +9,11 @@ title_product: SMTP Locaweb
 <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
 
 <div class="ls-box ls-dismissable">
-  <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
-  <h2 class="ls-title-3">Configuração do serviço</h2>
-  <p>Utilize os seguintes dados para autenticação no serviço.</p>
+  <header class="ls-box-header">
+    <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
+    <h2 class="ls-title-3">Configuração do serviço</h2>
+    <p>Utilize os seguintes dados para autenticação no serviço.</p>
+  </header><!-- /header -->
   <h3 class="ls-title-5">Dados do servidor SMTP</h3>
   <table class="ls-table ls-table-striped">
     <tbody>
@@ -39,7 +41,7 @@ title_product: SMTP Locaweb
 </div>
 
 <div class="ls-box ls-board-box">
-  <header class="ls-info-header">
+  <header class="ls-info-header ls-box-header">
     <p class="ls-float-right ls-float-none-xs ls-small-info">Valido até <strong>01.05.2014</strong></p>
     <h2 class="ls-title-3 ls-ico-stats">Relatório diário</h2>
   </header>
@@ -76,18 +78,12 @@ title_product: SMTP Locaweb
 </div>
 
 <div class="ls-box ls-board-box">
-  <header class="ls-info-header">
-      <p class="ls-float-right ls-float-none-xs ls-small-info">Valido até <strong>01.05.2014</strong></p>
-      <h2 class="ls-title-3 ls-ico-dashboard">
-        Consumo de envios
-        <small>
-          Status anti-fraude: <strong>Em análise</strong>
-          <span style="clear: both;" class="ls-ico-help anti-fraud-pop" data-trigger="hover" data-ls-module='popover' data-placement='right' data-title="Título do poover" data-content="Conteúdo do popover"></span>
-        </small>
-      </h2>
+  <header class="ls-info-header ls-box-header">
+    <p class="ls-float-right ls-float-none-xs ls-small-info">Valido até <strong>01.05.2014</strong></p>
+    <h2 class="ls-title-3 ls-ico-dashboard">Consumo de envios</h2>
   </header>
 
-  <div id="sending-stats" class="row">
+  <div id="sending-stats" class="row ls-clearfix">
     <div class="col-sm-6 col-md-3">
       <div class="ls-box">
         <h6 class="ls-title-4">Contratado</h6>
@@ -126,7 +122,8 @@ title_product: SMTP Locaweb
       </div>
     </div>
   </div>
-
+  <br>
+  <p class="ls-txt-right">Status anti-fraude: <strong>Aprovado</strong> <span style="clear: both;" class="ls-ico-help anti-fraud-pop" data-trigger="hover" data-ls-module='popover' data-placement='left' data-title="Título do poover" data-content="Conteúdo do popover"></span></p>
 </div>
 
 <% content_for :sidebar_panel do %>
