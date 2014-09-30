@@ -5,6 +5,26 @@ describe("Locastyle in general: ", function() {
     locastyle.general.init();
   });
 
+  describe("Switch button", function() {
+    it("when switch button checked should have text 'Ativo'", function() {
+      expect($('#switchBtn1 .ls-switch-label').text()).toEqual('Ativo');
+    });
+    it("when switch button checked should have text 'Desativado'", function() {
+      expect($('#switchBtn2 .ls-switch-label').text()).toEqual('Desativado');
+    });
+
+    it("when switch button click should have text 'Desativado'", function() {
+      $("#switchBtn1 input").trigger("click");
+      expect($("#switchBtn1 .ls-switch-label").text()).toEqual('Desativado');
+    });
+
+    it("when switch button click should have text 'Ativo'", function() {
+      $("#switchBtn2 input").trigger("click");
+      expect($("#switchBtn2 .ls-switch-label").text()).toEqual('Ativo');
+    });
+
+  });
+
 
   describe("Submenu Toggle ", function() {
 
@@ -254,7 +274,6 @@ describe("Locastyle in general: ", function() {
       });
 
     });
-
 
   });
 
