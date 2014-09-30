@@ -19,6 +19,8 @@ locastyle.general = (function() {
     _toggleFields();
     subMenu();
     _ariaMenu();
+    loadSwitch();
+    toggleSwitch();
   }
 
   jQuery.fn.toggleAttr = function(attr) {
@@ -171,6 +173,26 @@ locastyle.general = (function() {
         'aria-hidden' : 'true'
       });
     }
+  }
+
+  function checkedSwitch(el) {
+    if ($('input', el).is(':checked') === true) {
+      $('.ls-switch-label', el).text('Ativo');
+    } else {
+      $('.ls-switch-label', el).text('Desativado');
+    };
+  }
+
+  function loadSwitch() {
+    $('.ls-switch-btn').each(function() {
+      checkedSwitch($(this));
+    });
+  }
+
+  function toggleSwitch() {
+    $('.ls-switch-btn').on('click', function() {
+      checkedSwitch($(this));
+    });
   }
 
   return {
