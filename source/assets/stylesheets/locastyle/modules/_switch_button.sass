@@ -2,9 +2,8 @@
 .ls-switch-btn
   position: relative
 
-  label
+  .ls-switch-label
     +user-select(none)
-    text-indent: -9999px
     background: $gray3 url(../images/ico-switch-on-off.png) -159px center no-repeat
     height: 24px
     width: 50px
@@ -46,7 +45,12 @@
     height: 20px
     opacity: 0
 
-  input:checked + label
+    ~ .ls-switch-text:after
+      content: attr(ls-switch-off)
+      display: none
+      vertical-align: super
+
+  input:checked + .ls-switch-label
     box-shadow: none
     background-position: 7px center
 
@@ -56,17 +60,13 @@
       right: 2px
       border-radius: 0 $default-radius $default-radius 0
 
-  input:focus + label
+  input:checked ~ .ls-switch-text:after
+    content: attr(ls-switch-on)
+
+  input:focus + .ls-switch-label
     outline: 5px auto -webkit-focus-ring-color
     outline-offset: -2px
 
-  .ls-switch-label
-    display: none
-
-@media screen and (min-width: $screen-md)
-  .ls-switch-btn .ls-switch-label
+@media screen and (min-width: $screen-sm)
+  .ls-switch-btn input ~ .ls-switch-text:after
     display: inline-block
-    vertical-align: middle
-    position: relative
-    top: 1px
-
