@@ -61,7 +61,12 @@
     outline-offset: -2px
 
   .ls-switch-label
+    display: none
+
+@media screen and (min-width: $screen-md)
+  .ls-switch-btn .ls-switch-label
+    display: inline-block
     vertical-align: middle
     position: relative
     top: 1px
-    font-weight: 600
+
