@@ -227,11 +227,14 @@
 .ls-color-black
   color: #000 !important
 
+.ls-color-white
+  color: #fff
+
 .ls-color-danger
   color: #bd4b4b !important
 
 .ls-dropdown-menu
-  color: #fff !important
+  @extend .ls-color-white
 
 // INPUTS
 .ls-no-spin::-webkit-inner-spin-button
@@ -244,7 +247,7 @@
   white-space: nowrap
   display: inline-block !important
 
-.ls-ls-nowrap
+.ls-nowrap
   white-space: nowrap
 
 .ls-no-bold
@@ -349,6 +352,9 @@
 // LINK
 .ls-text-underline
   text-decoration: underline !important
+
+.ls-text-decoration-none
+  text-decoration: none
 
 .ls-line-separator
   width: calc(100% -2rem)
