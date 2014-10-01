@@ -84,6 +84,19 @@
     li
       padding-bottom: 5px
 
+.ls-info-header
+  background: #fff
+  padding: 15px 15px 5px
+  margin-bottom: 20px
+  +border-radius(4px 4px 0 0)
+  width: calc(32px + 100%)
+  margin-left: -16px
+  margin-top: -16px
+  border: 1px solid $gray1
+
+  [class*="ls-ico-"]:before
+    font-size: remtopx(1.75)
+
 @media screen and (max-width: $screen-sm)
 
   .ls-ico-bg:before

@@ -1,0 +1,78 @@
+---
+title: Box de notificação
+description: Boxes de notificações usado para dividir ou agrupar notificações.
+type: component
+---
+
+<%= partial 'partials/doc-menu-components'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/alert-box/box' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/alert-box/box' %><% end %>
+  <h2 class="doc-title-3">Fechando os boxes de notificações</h2>
+
+  <p>Basicamente, se você tiver boxes de notificações, alertas ou qualquer outro tipo de elemento e gostaria de dar a opção do usuário remover da tela, você vai usar essa função.</p>
+
+  <div class="ls-box ls-box-gray">
+    <h2 class="doc-title-4">Atenção</h2>
+    <p>Nós não tratamos cookies ou qualquer solução back-end que previna o reaparecimento do elemento removido se o usuário der refresh na página. Você vai precisar fazer sua própria solução caso queira que o elemento não reapareça quando a página for atualizada.</p>
+  </div>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Seletor</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>.ls-dismissable</td>
+        <td>É o elemento que será dispensado.</td>
+      </tr>
+      <tr>
+        <td>data-ls-module="dismiss"</td>
+        <td>É o nosso trigger. É ele que ativa o script. Precisa estar no elemento que irá ser clicado para remover o <code>.ls-dismissable</code>, por exemplo um link, botão etc...</td>
+      </tr>
+      <tr>
+        <td>data-target="#target-id"</td>
+        <td>Necessário quando o elemento que será o trigger não for filho direto de <code>.ls-dismissable</code>, que é o elemento que será removido. Ele aceita IDs ou CLASSES.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="doc-title-3">Alterando o status e cores do box de notificações</h2>
+  <p>Para alterar as cores dos boxes de notificações, basta seguir a tabela abaixo:</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Seletor</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>.ls-alert-box-success</td>
+        <td>O elemento é representado com status/cor de sucesso.</td>
+      </tr>
+      <tr>
+        <td>.ls-alert-box-info</td>
+        <td>O elemento é representado com status/cor de informações.</td>
+      </tr>
+      <tr>
+        <td>.ls-alert-box-warning</td>
+        <td>O elemento é representado com status/cor de atenção.</td>
+      </tr>
+      <tr>
+        <td>.ls-alert-box-danger</td>
+        <td>O elemento é representado com status/cor de perigo.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
