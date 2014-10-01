@@ -1,7 +1,7 @@
 .ls-collapse-group
   .ls-collapse
     @extend .ls-no-radius
-    margin-bottom: 0
+    @extend .ls-no-margin-bottom
     border-bottom: 0
     &:first-child
       +border-top-radius($default-radius)
@@ -49,13 +49,13 @@
     text-align: center
 
   p
-    margin-bottom: 0
+    @extend .ls-no-margin-bottom
     color: $gray3
 
 .ls-collapse-title
+  @extend .ls-no-margin-bottom
   color: $gray4
   font-size: remtopx(1)
-  margin-bottom: 0
 
 .ls-collapse-body
   border: 0px solid transparent
