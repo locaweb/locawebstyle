@@ -16,7 +16,8 @@ title_product: SMTP Locaweb
       <td>
         <strong>Senha: </strong>
         <input type="password" maxlength="20" id="password_field2" name="password" class="ls-no-style-input" value="testandosenha" >
-        <a class="ls-toggle-pass" data-target="#password_field2" href="#" data-toggle-text="Ocultar">Exibir</a>
+        <a class="ls-toggle-pass" data-target="#password_field2" href="#" data-toggle-text="Ocultar">Exibir</a> |
+        <a href="#" data-ls-module="modal" data-target="#changePassword">Alterar</a>
       </td>
     </tr>
     <tr>
@@ -27,6 +28,11 @@ title_product: SMTP Locaweb
     </tr>
   </tbody>
 </table>
+<h3 class="ls-title-5">Documentação</h3>
+<p>Veja <a href="#">exemplos de código de implementação</a> em PHP, .NET, RUBY, Java entre outras linguagens.</p>
+<p>Saiba como <a href="#">configurar o SMTP no Outlook</a>.</p>
+
+<%= partial 'documentacao/exemplos/painel2/change-password' %>
 
 <% content_for :sidebar_panel do %>
   <%= partial 'documentacao/exemplos/painel2/sidebar' %>

@@ -9,15 +9,16 @@ title_product: SMTP Locaweb
 <p>Mantenha o uso de envios excedentes ativado para que seus envios não sejam interrompidos.</p>
 
 <div class="ls-box">
-  <div class="ls-switch-btn ls-display-inline-block">
-    <input type="checkbox" id="teste">
-    <label for="teste" name="label-teste">label</label>
-  </div>
-  <p class="ls-display-inline-block">
-    Uso de envios excedentes
-    <span class="ls-ico-help" data-ls-module="popover" data-title="Envios excedentes" data-content="<p>Ao ativar o uso de envios excedentes, seus envios não serão interrompidos após atingir o limite do plano contratado.</p><p><strong>Valor de envio excedente:
-      R$ 0,0045</strong></p><p>Mais informações, consulte o <a href='#'>contrato</a> </p>" data-placement="top"></span>
-  </p>
+  <div class="ls-display-inline-block col-md-12 row">
+    <h3 class="ls-title-3 ls-display-inline-block">Uso de envios excedentes</h3>
+    <div class="ls-switch-btn ls-float-right">
+      <input type="checkbox" id="teste">
+      <label class="ls-switch-label" for="teste" name="label-teste" ls-switch-off="Desativado" ls-switch-on="Ativado"><span></span></label>
+    </div>
+  <hr>
+  <p class="ls-display-inline-block">Ao ativar o uso de envios excedentes, seus envios não serão interrompidos após atingir o limite do plano contratado. A cobrança é por envio utilizado e será apresentada na fatura do próximo mês. </p>
+  <p>Valor de envio excedente: R$ 0,0045 </p>
+  <p class="ls-display-inline-block">Mais informações, consulte o <a href="http://assets.locaweb.com.br/site/contratos/contrato-smtp.pdf" target="_blank">contrato</a></p>
 </div>
 
 <% content_for :sidebar_panel do %>

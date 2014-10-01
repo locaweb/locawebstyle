@@ -24,7 +24,8 @@ title_product: SMTP Locaweb
         <td>
           <strong>Senha: </strong>
           <input type="password" maxlength="20" id="password_field2" name="password" class="ls-no-style-input" value="testandosenha" >
-          <a class="ls-toggle-pass" data-target="#password_field2" href="#" data-toggle-text="Ocultar">Exibir</a>
+          <a class="ls-toggle-pass" data-target="#password_field2" href="#" data-toggle-text="Ocultar">Exibir</a> |
+          <a href="#" data-ls-module="modal" data-target="#changePassword">Alterar</a>
         </td>
       </tr>
       <tr>
@@ -125,6 +126,8 @@ title_product: SMTP Locaweb
   <br>
   <p class="ls-txt-right">Status anti-fraude: <strong>Aprovado</strong> <span style="clear: both;" class="ls-ico-help anti-fraud-pop" data-trigger="hover" data-ls-module='popover' data-placement='left' data-title="Título do poover" data-content="Conteúdo do popover"></span></p>
 </div>
+
+<%= partial 'documentacao/exemplos/painel2/change-password' %>
 
 <% content_for :sidebar_panel do %>
   <%= partial 'documentacao/exemplos/painel2/sidebar' %>

@@ -1,61 +1,86 @@
 // Criando Botão de Switch
 .ls-switch-btn
   position: relative
+  display: inline-block
+  user-select: none
 
-  label
-    +user-select(none)
-    text-indent: -9999px
-    background: $gray3 url(../images/ico-switch-on-off.png) -159px center no-repeat
-    height: 24px
-    width: 50px
-    position: relative
-    margin-right: 10px
-    border-radius: $default-radius
+  .ls-switch-label
     display: inline-block
-    cursor: pointer
 
-    &:before
-      content: ""
-      position: absolute
-      top: 2px
-      left: 2px
-      display: block
-      width: 23px
-      height: 20px
-      border: 1px solid rgba($gray5, .15)
-      background: #fff url(../images/ico-switch.png) center no-repeat
-      border-radius: $default-radius 0 0 $default-radius
+    span
+      display: inline-block
+      vertical-align: middle
 
-    &:hover,
-    &:focus
+      &:after
+        content: ""
+        +user-select(none)
+        background: $gray3 url(../images/ico-switch-on-off.png) -159px center no-repeat
+        height: 24px
+        width: 50px
+        position: relative
+        z-index: 0
+        margin-right: 10px
+        border-radius: $default-radius
+        display: inline-block
+        cursor: pointer
 
       &:before
-        background-color: #ebebeb
+        content: ""
+        position: absolute
+        top: 2px
+        left: 2px
+        z-index: 1
+        display: block
+        width: 23px
+        height: 20px
+        border: 1px solid rgba($gray5, .15)
+        background: #fff url(../images/ico-switch.png) center no-repeat
+        border-radius: $default-radius 0 0 $default-radius
+        cursor: pointer
 
-    &:focus
-      outline: 5px auto -webkit-focus-ring-color
-      outline-offset: -2px
+      &:hover,
+      &:focus
+
+        &:before
+          background-color: #ebebeb
+
+      &:focus
+        outline: 5px auto -webkit-focus-ring-color
+        outline-offset: -2px
 
   input
+    display: block
     cursor: pointer
     position: absolute
     top: 0
     left: 0
     z-index: 2
-    width: 23px
-    height: 20px
+    width: 100%
+    height: 24px
     opacity: 0
 
-  input:checked + label
-    box-shadow: none
-    background-position: 7px center
+    // Quando checked
+    &:checked + .ls-switch-label span
+      display: inline-block
 
-    &:before
-      top: 2px
-      left: auto
-      right: 2px
-      border-radius: 0 $default-radius $default-radius 0
+      &:after
+        box-shadow: none
+        background-position: 7px center
 
-  input:focus + label
-    outline: 5px auto -webkit-focus-ring-color
-    outline-offset: -2px
+      &:before
+        top: 2px
+        left: 25px
+        border-radius: 0 $default-radius $default-radius 0
+
+@media screen and (min-width: $screen-sm)
+
+  .ls-switch-btn input
+
+    + .ls-switch-label:after
+      display: inline-block
+      vertical-align: middle
+      content: attr(ls-switch-off)
+
+    &:checked + .ls-switch-label:after
+      content: attr(ls-switch-on)
+

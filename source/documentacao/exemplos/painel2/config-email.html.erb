@@ -28,9 +28,7 @@ title_product: SMTP Locaweb
     <tbody>
       <%- 3.times do |num| %>
         <tr>
-          <td><%= lorem.email %>
-            <span class="ls-tag-success">Confirmado</span>
-          </td>
+          <td><%= lorem.email %></td>
           <td class="ls-txt-right"> <button data-action="<%= base_url %>" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<div class='ls-txt-center'><h3 class='ls-title-3'>Você tem certeza que deseja excluir esse email?</h2><p>A exclusão do e-mail afetará os próximos envios com este remetente.</p></div>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-btn-danger">Excluir</button>  </td>
         </tr>
       <% end %>

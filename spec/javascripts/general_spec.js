@@ -5,7 +5,6 @@ describe("Locastyle in general: ", function() {
     locastyle.general.init();
   });
 
-
   describe("Submenu Toggle ", function() {
 
     describe("When click on any link element of ls-submenu", function() {
@@ -254,7 +253,6 @@ describe("Locastyle in general: ", function() {
       });
 
     });
-
 
   });
 
