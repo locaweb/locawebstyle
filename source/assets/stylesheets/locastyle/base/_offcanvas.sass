@@ -1,14 +1,24 @@
-.ls-sidebar
+.ls-sidebar,
+.ls-notification,
+.ls-topbar,
+.ls-main
   +single-transition(transform, .5s)
+
+.ls-sidebar,
+.ls-notification
+  -webkit-overflow-scrolling: touch
+  -moz-overflow-scrolling: touch
+  -ms-overflow-scrolling: touch
+  overflow-scrolling: touch
+
+.ls-sidebar
   +translate(-50%, 0)
 
 .ls-notification
-  +single-transition(transform, .5s)
   +translate(50%, 0)
 
 .ls-topbar,
 .ls-main
-  +single-transition(transform, .5s)
   +translate(0, 0)
 
 //
@@ -25,10 +35,6 @@
 
   .ls-sidebar
     +translate(0, 0)
-    -webkit-overflow-scrolling: touch
-    -moz-overflow-scrolling: touch
-    -ms-overflow-scrolling: touch
-    overflow-scrolling: touch
 
 .ls-notifications-visible
 
@@ -39,20 +45,6 @@
   .ls-notification
     +translate(0, 0)
     overflow: auto
-    -webkit-overflow-scrolling: touch
-    -moz-overflow-scrolling: touch
-    -ms-overflow-scrolling: touch
-    overflow-scrolling: touch
 
   .ls-sidebar
     +translate(-100%, 0)
-
-//   .ls-main,
-//   .ls-topbar
-//     +translate($sidebar-width, 0)
-
-// .ls-notifications-visible
-
-//   .ls-main,
-//   .ls-topbar
-//     +translate(-$sidebar-width, 0)
