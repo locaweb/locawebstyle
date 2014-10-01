@@ -5,10 +5,6 @@
   border-radius: $default-radius
   border: 1px solid $gray1
 
-  &.ls-dismissable
-    border-color: $gray2
-    border-bottom-width: 3px
-
   &:last-child
     margin-bottom: 0
 
@@ -88,7 +84,7 @@
     li
       padding-bottom: 5px
 
-.ls-box-header
+.ls-info-header
   background: #fff
   padding: 15px 15px 5px
   margin-bottom: 20px
@@ -100,13 +96,6 @@
 
   [class*="ls-ico-"]:before
     font-size: remtopx(1.75)
-
-
-  .ls-dismissable &
-    background: mix(#fff, $gray2, 20%)
-    border-color: $gray2
-    border-bottom-color: mix(#fff, $gray2, 20%)
-    margin-bottom: 30px
 
 @media screen and (max-width: $screen-sm)
 
