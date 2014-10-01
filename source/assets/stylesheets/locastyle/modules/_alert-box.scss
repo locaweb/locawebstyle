@@ -44,6 +44,10 @@ $types: (
       [class^="ls-title-"] {
         color: $status-color;
       }
+
+      .ls-dismiss {
+        color: $status-color;
+      }
     }
   }
 }
