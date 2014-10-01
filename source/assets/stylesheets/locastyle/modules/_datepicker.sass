@@ -35,12 +35,12 @@
   text-align: center
 
 .pika-label
+  @extend .ls-no-margin
   display: inline-block
   *display: inline
   position: relative
   z-index: 9999
   overflow: hidden
-  margin: 0
   padding: 5px 3px
   font-size: 14px
   line-height: 20px
@@ -48,10 +48,10 @@
   background-color: #fff
 
 .pika-title select
+  @extend .ls-no-margin
   cursor: pointer
   position: absolute
   z-index: 9998
-  margin: 0
   left: 0
   top: 5px
   filter: alpha(opacity = 0)
@@ -116,11 +116,11 @@
     text-align: center
 
 .pika-button
+  @extend .ls-no-margin
   cursor: pointer
   display: block
   outline: none
   border: 0
-  margin: 0
   width: 100%
   padding: 5px
   color: #666

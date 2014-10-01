@@ -82,13 +82,13 @@
     display: none
 
   .hopscotch-title
+    @extend .ls-no-margin
     background-color: #f7f7f7
     border-bottom: 1px solid #ebebeb
     border-radius: $default-radius $default-radius 0 0
     font-size: 14px
     font-weight: normal
     line-height: 18px
-    margin: 0
     padding: 6px 14px
 
   .hopscotch-content
@@ -128,8 +128,8 @@
       margin-right: remtopx(1)
 
       &.hopscotch-nav-button.next
+        @extend .ls-no-margin
         float: right
-        margin: 0
 
   .hopscotch-bubble-close
     cursor: pointer
