@@ -90,8 +90,8 @@ $paddingDefault: 20px
 
   .ls-modal-title
     @extend .ls-no-margin
+    @extend .ls-no-padding
     font-size: remtopx(1)
-    padding: 0
 
 .ls-modal-body
   padding: $paddingDefault
@@ -128,7 +128,7 @@ $paddingDefault: 20px
     height: 600px
 
     .ls-modal-header
-      padding: 0
+      @extend .ls-no-padding
       border: none
 
       [data-dismiss]
