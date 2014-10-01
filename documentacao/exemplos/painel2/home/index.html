@@ -58,12 +58,12 @@
         <li><a href="#">Meus dados</a></li>
         <li><a href="#">Faturas</a></li>
         <li><a href="#">Planos</a></li>
-        <li><a href="#">Sair</a></li>
        </ul>
+       <a href="#" class="ls-btn-logout">Sair</a>
     </nav>
   </div>
   <!-- Dropdown com detalhes da conta de usuário -->
-  <div class="ls-area-account ls-ico-user">
+  <div class="ls-area-account ls-ico-list2">
     <h2 class="ls-title-2">Administrando</h2>
     <h3 class="ls-title-3">João da Silva</h3>
     <a href="/locawebstyle/documentacao/exemplos/painel2/pre-painel" class="ls-btn-xs ls-btn-dark">VER TODOS</a>
@@ -91,21 +91,24 @@
     <div class="container-fluid">
       <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
 
-<div class="ls-box ls-dismissable">
-  <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
-  <h2 class="ls-title-3">Configuração do serviço</h2>
-  <p>Utilize os seguintes dados para autenticação no serviço.</p>
+<div class="ls-alert-box ls-dismissable">
+  <header class="ls-info-header">
+    <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
+    <h2 class="ls-title-3">Configuração do serviço</h2>
+    <p>Utilize os seguintes dados para autenticação no serviço.</p>
+  </header><!-- /header -->
   <h3 class="ls-title-5">Dados do servidor SMTP</h3>
   <table class="ls-table ls-table-striped">
     <tbody>
       <tr>
-        <td><strong>Usuário: </strong> Lori</td>
+        <td><strong>Usuário: </strong> Lucinda</td>
       </tr>
       <tr>
         <td>
           <strong>Senha: </strong>
           <input type="password" maxlength="20" id="password_field2" name="password" class="ls-no-style-input" value="testandosenha" >
-          <a class="ls-toggle-pass" data-target="#password_field2" href="#" data-toggle-text="Ocultar">Exibir</a>
+          <a class="ls-toggle-pass" data-target="#password_field2" href="#" data-toggle-text="Ocultar">Exibir</a> |
+          <a href="#" data-ls-module="modal" data-target="#changePassword">Alterar</a>
         </td>
       </tr>
       <tr>
@@ -160,17 +163,11 @@
 
 <div class="ls-box ls-board-box">
   <header class="ls-info-header">
-      <p class="ls-float-right ls-float-none-xs ls-small-info">Valido até <strong>01.05.2014</strong></p>
-      <h2 class="ls-title-3 ls-ico-dashboard">
-        Consumo de envios
-        <small>
-          Status anti-fraude: <strong>Em análise</strong>
-          <span style="clear: both;" class="ls-ico-help anti-fraud-pop" data-trigger="hover" data-ls-module='popover' data-placement='right' data-title="Título do poover" data-content="Conteúdo do popover"></span>
-        </small>
-      </h2>
+    <p class="ls-float-right ls-float-none-xs ls-small-info">Valido até <strong>01.05.2014</strong></p>
+    <h2 class="ls-title-3 ls-ico-dashboard">Consumo de envios</h2>
   </header>
 
-  <div id="sending-stats" class="row">
+  <div id="sending-stats" class="row ls-clearfix">
     <div class="col-sm-6 col-md-3">
       <div class="ls-box">
         <h6 class="ls-title-4">Contratado</h6>
@@ -209,8 +206,37 @@
       </div>
     </div>
   </div>
-
+  <br>
+  <p class="ls-txt-right">Status anti-fraude: <strong>Aprovado</strong> <span style="clear: both;" class="ls-ico-help anti-fraud-pop" data-trigger="hover" data-ls-module='popover' data-placement='left' data-title="Título do poover" data-content="Conteúdo do popover"></span></p>
 </div>
+
+<div id="changePassword" class="ls-modal fade">
+  <div class="ls-modal-box">
+    <div class="ls-modal-content">
+      <div class="ls-modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="title_change_pass">Alteração de senha</h3>
+      </div>
+      <form action="#" class="ls-form ls-form-inline validate" >
+        <div class="ls-modal-body">
+          <div class="ls-alert ls-alert-warning" role="alert">
+            <p>Ao alterar a senha, <strong>lembre-se que todas as aplicações</strong> que utilizam a autenticação deste SMTP deverão ser alteradas, caso contrário os envios serão interrompidos.</p>
+          </div>
+          <label class="ls-label">
+            <b class="ls-label-text">Nova senha</b>
+            <input class="password auto-focus required" type="password">
+            <p>Senha entre 8 a 14 caracteres, contendo letras e números</p>
+          </label>
+        </div>
+        <div class="ls-modal-footer">
+          <button class="ls-btn-default ls-float-right" type="button" data-dismiss="modal">Cancelar</button>
+          <input class="ls-btn-primary" name="commit" type="submit" value="Confirmar">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 
 
     </div>
@@ -218,7 +244,7 @@
     <footer class="ls-footer" role="contentinfo">
   <nav class="ls-footer-menu">
       <h2 class="ls-title-footer">suporte e ajuda</h2>
-      <ul>
+      <ul class="ls-footer-list">
         <li>
           <a href="#" target="_blank" class="bg-customer-support">
             <span class="visible-lg">Atendimento</span>
@@ -243,7 +269,7 @@
   </nav>
   <div class="ls-footer-info">
     <span class="last-access ls-ico-screen"><strong>Último acesso: </strong>99/99/9999 99:99:99</span>
-    <div class="set-ip"><span class="set-ip"><strong>IP:</strong> 000.00.00.000</span></div>
+    <div class="set-ip"><strong>IP:</strong> 000.00.00.000</div>
     <p class="ls-copy-right">Copyright © 1997-2014 Serviços de Internet S/A.</p>
   </div>
 </footer>
@@ -256,23 +282,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Doloribus reprehenderit consequatur cupiditate ad molestias alias maxime architecto</a>
+            <a href="#">Asperiores temporibus quibusdam quia et velit fugit quas</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Ut quos non eum beatae nemo dolores asperiores saepe aliquam</a>
+            <a href="#">Iure aliquid velit quo voluptates culpa modi aperiam facere mollitia nisi maxime asperiores</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">In voluptatem quod laudantium repellat ea</a>
+            <a href="#">Nisi laboriosam quae laboriosam dolore deleniti quis nulla culpa iure expedita</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Nesciunt rem dolorum aliquam sit voluptatem cupiditate odit aut repellat consequatur id modi nihil</a>
+            <a href="#">Odio libero et vel est iste labore inventore commodi</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Aut vel nulla dolorem incidunt</a>
+            <a href="#">Quia cupiditate corporis non nostrum et qui consectetur necessitatibus est beatae</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -281,8 +307,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> sunt iusto quis quisquam et rerum</a></li>
-          <li><a href="#">> enim illo eum illum ad iusto</a></li>
+          <li><a href="#">> in hic et officia vel cumque</a></li>
+          <li><a href="#">> ut voluptatem odit fugit ut minima</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">

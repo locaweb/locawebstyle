@@ -58,12 +58,12 @@
         <li><a href="#">Meus dados</a></li>
         <li><a href="#">Faturas</a></li>
         <li><a href="#">Planos</a></li>
-        <li><a href="#">Sair</a></li>
        </ul>
+       <a href="#" class="ls-btn-logout">Sair</a>
     </nav>
   </div>
   <!-- Dropdown com detalhes da conta de usuário -->
-  <div class="ls-area-account ls-ico-user">
+  <div class="ls-area-account ls-ico-list2">
     <h2 class="ls-title-2">Administrando</h2>
     <h3 class="ls-title-3">João da Silva</h3>
     <a href="/locawebstyle/documentacao/exemplos/painel2/pre-painel" class="ls-btn-xs ls-btn-dark">VER TODOS</a>
@@ -93,15 +93,16 @@
 <p>Mantenha o uso de envios excedentes ativado para que seus envios não sejam interrompidos.</p>
 
 <div class="ls-box">
-  <div class="ls-switch-btn ls-display-inline-block">
-    <input type="checkbox" id="teste">
-    <label for="teste" name="label-teste">label</label>
-  </div>
-  <p class="ls-display-inline-block">
-    Uso de envios excedentes
-    <span class="ls-ico-help" data-ls-module="popover" data-title="Envios excedentes" data-content="<p>Ao ativar o uso de envios excedentes, seus envios não serão interrompidos após atingir o limite do plano contratado.</p><p><strong>Valor de envio excedente:
-      R$ 0,0045</strong></p><p>Mais informações, consulte o <a href='#'>contrato</a> </p>" data-placement="top"></span>
-  </p>
+  <div class="ls-display-inline-block col-md-12 row">
+    <h3 class="ls-title-3 ls-display-inline-block">Uso de envios excedentes</h3>
+    <div class="ls-switch-btn ls-float-right">
+      <input type="checkbox" id="teste">
+      <label class="ls-switch-label" for="teste" name="label-teste" ls-switch-off="Desativado" ls-switch-on="Ativado"><span></span></label>
+    </div>
+  <hr>
+  <p class="ls-display-inline-block">Ao ativar o uso de envios excedentes, seus envios não serão interrompidos após atingir o limite do plano contratado. A cobrança é por envio utilizado e será apresentada na fatura do próximo mês. </p>
+  <p>Valor de envio excedente: R$ 0,0045 </p>
+  <p class="ls-display-inline-block">Mais informações, consulte o <a href="http://assets.locaweb.com.br/site/contratos/contrato-smtp.pdf" target="_blank">contrato</a></p>
 </div>
 
 
@@ -110,7 +111,7 @@
     <footer class="ls-footer" role="contentinfo">
   <nav class="ls-footer-menu">
       <h2 class="ls-title-footer">suporte e ajuda</h2>
-      <ul>
+      <ul class="ls-footer-list">
         <li>
           <a href="#" target="_blank" class="bg-customer-support">
             <span class="visible-lg">Atendimento</span>
@@ -135,7 +136,7 @@
   </nav>
   <div class="ls-footer-info">
     <span class="last-access ls-ico-screen"><strong>Último acesso: </strong>99/99/9999 99:99:99</span>
-    <div class="set-ip"><span class="set-ip"><strong>IP:</strong> 000.00.00.000</span></div>
+    <div class="set-ip"><strong>IP:</strong> 000.00.00.000</div>
     <p class="ls-copy-right">Copyright © 1997-2014 Serviços de Internet S/A.</p>
   </div>
 </footer>
@@ -148,23 +149,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Voluptate dolore aliquam non quasi quia et doloribus</a>
+            <a href="#">Non molestias facilis temporibus reiciendis aspernatur laboriosam nulla voluptatem accusamus nostrum</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Saepe amet in alias deserunt asperiores modi quaerat magnam rerum enim blanditiis</a>
+            <a href="#">Voluptates eum ipsam sit fuga est provident unde incidunt est sint aut aut eum</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Aut ipsam itaque tempora aliquid quaerat ut accusantium</a>
+            <a href="#">Neque a corrupti veniam incidunt odit quasi nostrum voluptas vero dolorum</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Odio et repellat inventore placeat sed a ut blanditiis qui totam exercitationem</a>
+            <a href="#">Voluptas aspernatur velit aut at et qui rerum id</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Et maxime fugiat placeat reiciendis sit sit sit iste aspernatur qui</a>
+            <a href="#">Quisquam architecto eos qui fugiat aperiam labore dolorem architecto</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -173,8 +174,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> corporis sed fuga et impedit facere</a></li>
-          <li><a href="#">> ducimus odit earum nemo quis qui</a></li>
+          <li><a href="#">> ut tempore omnis aliquid eum facere</a></li>
+          <li><a href="#">> ipsum natus dolorum maxime ab voluptates</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">

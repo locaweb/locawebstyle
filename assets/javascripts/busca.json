@@ -79,6 +79,12 @@
       "path": "documentacao/cartilha-de-elementos"
   },
   
+  "documentacao/componentes/alert-box" :   {
+      "title": "Box de notificação",
+      "description": "Boxes de notificações usado para dividir ou agrupar notificações.",
+      "path": "documentacao/componentes/alert-box"
+  },
+  
   "documentacao/componentes/alertas" :   {
       "title": "Alertas",
       "description": "Os Alertas são usados para enviar um feedback contextual de sucesso, erro, warning ou apenas uma notificação de novas features no sistema.",
@@ -611,6 +617,12 @@
       "title": "Suporte para browsers antigos",
       "description": "Entenda como melhorar o suporte a browsers antigos, como o IE8",
       "path": "documentacao/introducao/suporte-browsers"
+  },
+  
+  "documentacao/perf-css" :   {
+      "title": "",
+      "description": "",
+      "path": "documentacao/perf-css"
   },
   
   "documentacao/praticas/css" :   {

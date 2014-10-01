@@ -58,12 +58,12 @@
         <li><a href="#">Meus dados</a></li>
         <li><a href="#">Faturas</a></li>
         <li><a href="#">Planos</a></li>
-        <li><a href="#">Sair</a></li>
        </ul>
+       <a href="#" class="ls-btn-logout">Sair</a>
     </nav>
   </div>
   <!-- Dropdown com detalhes da conta de usuário -->
-  <div class="ls-area-account ls-ico-user">
+  <div class="ls-area-account ls-ico-list2">
     <h2 class="ls-title-2">Administrando</h2>
     <h3 class="ls-title-3">João da Silva</h3>
     <a href="/locawebstyle/documentacao/exemplos/painel2/pre-painel" class="ls-btn-xs ls-btn-dark">VER TODOS</a>
@@ -94,13 +94,14 @@
 <table class="ls-table ls-table-striped">
   <tbody>
     <tr>
-      <td><strong>Usuário: </strong> Courtney</td>
+      <td><strong>Usuário: </strong> Lorie</td>
     </tr>
     <tr>
       <td>
         <strong>Senha: </strong>
         <input type="password" maxlength="20" id="password_field2" name="password" class="ls-no-style-input" value="testandosenha" >
-        <a class="ls-toggle-pass" data-target="#password_field2" href="#" data-toggle-text="Ocultar">Exibir</a>
+        <a class="ls-toggle-pass" data-target="#password_field2" href="#" data-toggle-text="Ocultar">Exibir</a> |
+        <a href="#" data-ls-module="modal" data-target="#changePassword">Alterar</a>
       </td>
     </tr>
     <tr>
@@ -111,6 +112,37 @@
     </tr>
   </tbody>
 </table>
+<h3 class="ls-title-5">Documentação</h3>
+<p>Veja <a href="#">exemplos de código de implementação</a> em PHP, .NET, RUBY, Java entre outras linguagens.</p>
+<p>Saiba como <a href="#">configurar o SMTP no Outlook</a>.</p>
+
+<div id="changePassword" class="ls-modal fade">
+  <div class="ls-modal-box">
+    <div class="ls-modal-content">
+      <div class="ls-modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="title_change_pass">Alteração de senha</h3>
+      </div>
+      <form action="#" class="ls-form ls-form-inline validate" >
+        <div class="ls-modal-body">
+          <div class="ls-alert ls-alert-warning" role="alert">
+            <p>Ao alterar a senha, <strong>lembre-se que todas as aplicações</strong> que utilizam a autenticação deste SMTP deverão ser alteradas, caso contrário os envios serão interrompidos.</p>
+          </div>
+          <label class="ls-label">
+            <b class="ls-label-text">Nova senha</b>
+            <input class="password auto-focus required" type="password">
+            <p>Senha entre 8 a 14 caracteres, contendo letras e números</p>
+          </label>
+        </div>
+        <div class="ls-modal-footer">
+          <button class="ls-btn-default ls-float-right" type="button" data-dismiss="modal">Cancelar</button>
+          <input class="ls-btn-primary" name="commit" type="submit" value="Confirmar">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 
 
     </div>
@@ -118,7 +150,7 @@
     <footer class="ls-footer" role="contentinfo">
   <nav class="ls-footer-menu">
       <h2 class="ls-title-footer">suporte e ajuda</h2>
-      <ul>
+      <ul class="ls-footer-list">
         <li>
           <a href="#" target="_blank" class="bg-customer-support">
             <span class="visible-lg">Atendimento</span>
@@ -143,7 +175,7 @@
   </nav>
   <div class="ls-footer-info">
     <span class="last-access ls-ico-screen"><strong>Último acesso: </strong>99/99/9999 99:99:99</span>
-    <div class="set-ip"><span class="set-ip"><strong>IP:</strong> 000.00.00.000</span></div>
+    <div class="set-ip"><strong>IP:</strong> 000.00.00.000</div>
     <p class="ls-copy-right">Copyright © 1997-2014 Serviços de Internet S/A.</p>
   </div>
 </footer>
@@ -156,23 +188,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Possimus et aut asperiores consequuntur fugiat ducimus nobis blanditiis optio rem</a>
+            <a href="#">Aliquid quo laborum soluta hic deserunt neque animi quis enim dolor commodi</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Quia aut ut itaque corrupti</a>
+            <a href="#">Qui aut numquam vero id consequatur odit qui recusandae ea quasi recusandae</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Eligendi voluptas enim nulla ea qui earum</a>
+            <a href="#">Quae sunt aut velit harum aliquid ea quaerat aliquam quia et iste</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Dolore architecto aut nulla rerum cupiditate doloribus exercitationem exercitationem laudantium</a>
+            <a href="#">Quia corporis dicta minima cum provident officiis beatae praesentium ratione sunt omnis</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Deserunt rerum nemo est atque aspernatur dicta</a>
+            <a href="#">Est qui voluptatem aut nesciunt necessitatibus et perspiciatis occaecati perferendis nobis</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -181,8 +213,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> et suscipit dolor sit qui et</a></li>
-          <li><a href="#">> enim ad illum sit eos ipsam</a></li>
+          <li><a href="#">> dolor rem in quidem sit est</a></li>
+          <li><a href="#">> necessitatibus occaecati omnis maiores ea nihil</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">

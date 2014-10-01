@@ -75,6 +75,7 @@
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/botao-switch/'>Botão Switch</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/botoes/'>Botões</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/box/'>Box genérico</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/alert-box/'>Box de notificações</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/breadcrumb/'>Breadcrumb</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/collapse/'>Collapse &amp; Accordeon</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/dropdown/'>Dropdown</a></li>
@@ -94,40 +95,58 @@
 
 <section class="col-md-9">
 
+
   <div class="doc-intro-content">
   <h1>Listas</h1>
   <p>Descrição e listagem de informações</p>
 </div>
 
 
-  <p>As listas são usadas para exibir de forma organizada pequenas informações como status, descrições, nomes e ações. Geralmente essas informações não se encaixariam em listagens simples, por isso criamos um elemento que consegue agrupar todas essas informações.</p>
+
+    <p>
+      Informações de utilização <br>
+      A lista é utilizada para localizar um dado específico a ser gerenciado. O destino pode ser uma página interna ou outro painel.
+    </p>
+
+  <div class="row">
+    <div class="col-md-7">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>usar?</strong></h2>
+        <p>- Há necessidade de acesso a outro painel ou página interna.</p>
+        <p>- Há necessidade de exibir um resumo das informações sem colunas.</p>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>não</strong> usar?</h2>
+        <p>- Os dados apresentados sejam comparáveis.</p>
+        <p>- Há necessidade de ordenação de colunas.</p>
+      </div>
+    </div>
+  </div>
 
 
-  <h2 class="doc-title-3">Lista somente com header</h2>
-  <p>Listagem com elementos simples:</p>
+  <h2 class="doc-title-3">Lista com identificador simples</h2>
+  <p>O identificador deve ter a mesma ação do botão principal.</p>
   <div class="ls-box-demo">
+
+    <h3 class="doc-title-6">Desktop</h3>
     <div class="ls-list">
-      <header class="ls-list-header">
-        <div class="ls-list-title col-md-9">
-          <a href="#" >Identificador da conta</a>
-          <small>Fake Product Name I </small>
-        </div>
-        <div class="col-md-3 ls-txt-right">
-          <a href="#" class="ls-btn-primary">Administrar</a>
-        </div>
-      </header>
+  <header class="ls-list-header">
+    <div class="ls-list-title col-md-9">
+      <a href="#" >Identificador da conta</a>
+      <small>Fake Product Name  </small>
     </div>
-    <div class="ls-list">
-      <header class="ls-list-header">
-        <div class="ls-list-title col-md-9">
-          <a href="#" >Identificador da conta</a>
-          <small>Fake Product Name I </small>
-        </div>
-        <div class="col-md-3 ls-txt-right">
-          <a href="#" class="ls-btn-primary">Administrar</a>
-        </div>
-      </header>
+    <div class="col-md-3 ls-txt-right">
+      <a href="#" class="ls-btn-primary">Administrar</a>
     </div>
+  </header>
+</div>
+
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="320" src="/locawebstyle/documentacao/shared/lists/lists-simple-mobile" frameborder="0"></iframe>
+
+
   </div>
 <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -139,22 +158,26 @@
 8
 9
 10
-11</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-list"</span><span class="nt">&gt;</span>
+11
+12</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-list"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"ls-list-header"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-list-title col-md-9"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="nt">&gt;</span>Identificador da conta<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;small&gt;</span>Fake Product Name I <span class="nt">&lt;/small&gt;</span>
+      <span class="nt">&lt;small&gt;</span>Fake Product Name  <span class="nt">&lt;/small&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 ls-txt-right"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span><span class="nt">&gt;</span>Administrar<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/header&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
+
 </pre></td></tr></tbody></table>
 </div>
 
-  <h2 class="doc-title-3">Lista com header + imagem e grids de informações</h2>
+  <h2 class="doc-title-3">Lista com informações secundárias e ação principal</h2>
+  <p>O identificador deve ter a mesma ação do botão principal.</p>
   <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
     <div class="ls-list">
   <header class="ls-list-header">
     <div class="ls-list-title col-md-9">
@@ -205,7 +228,7 @@
         <a href="#" >Identificador da conta</a>
       </div>
       <div class="ls-list-description">
-        <p>Voluptates qui dicta tenetur ipsa magnam voluptas id nobis ut eum. repellendus odit maiores rerum non maxime iure dolore facere provident. a quas totam similique eligendi pariatur odio optio impedit. nobis fugiat eum perferendis labore ab sequi. asperiores voluptatem corporis consequuntur aut inventore veritatis perspiciatis impedit sunt consequuntur nobis. omnis nesciunt voluptatibus totam sit libero assumenda qui. est est ad animi aut sapiente repellat sint illum quam incidunt adipisci</p>
+        <p>Quod est incidunt similique minima placeat sunt voluptas nihil maiores ab. necessitatibus molestiae dolor debitis ea dignissimos. nobis porro recusandae incidunt accusantium asperiores voluptatem sunt sit</p>
         <ul>
             <li>Item 0</li>
             <li>Item 1</li>
@@ -231,6 +254,8 @@
   </div>
 </div>
 
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="320" height="910" src="/locawebstyle/documentacao/shared/lists/lists-mobile" frameborder="0"></iframe>
   </div>
   <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -356,7 +381,7 @@
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="nt">&gt;</span>Identificador da conta<span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-list-description"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p&gt;</span>Quod quo enim illum molestiae adipisci dolore quo sed suscipit vitae assumenda et temporibus sunt. quasi ea est debitis nihil corrupti ullam corporis. laborum vero et totam quia. inventore vero at vel esse error est qui eos. omnis tempora maiores asperiores et cum ad voluptas autem<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Odio corrupti tenetur sed est sequi quaerat laboriosam. ad nam aut molestias enim dolor. dolor perferendis est ea nihil et voluptas sit provident delectus aut libero quia. et placeat harum nisi est ex nostrum et sit aut quas consequatur nemo. molestiae minus corrupti voluptas enim itaque sit ut soluta accusamus dolore iste et<span class="nt">&lt;/p&gt;</span>
         <span class="nt">&lt;ul&gt;</span>
             <span class="nt">&lt;li&gt;</span>Item 0<span class="nt">&lt;/li&gt;</span>
             <span class="nt">&lt;li&gt;</span>Item 1<span class="nt">&lt;/li&gt;</span>
@@ -387,46 +412,295 @@
 
 
 
-  <hr class="doc-hr" id="doc-ux">
+  <h2 class="doc-title-3">Lista com botão múltiplo</h2>
+  <p>O identificador não deve ter link.</p>
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+    <div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-md-9">
+      <strong>Identificador da conta</strong>
+      <small>Fake Product Name I </small>
+    </div>
+    <div class="col-md-3 ls-txt-right">
+      <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+        <a href="#" class="ls-btn-primary">Administrar</a>
+        <ul class="ls-dropdown-nav">
+            <li><a href="#">Site</a></li>
+            <li><a href="#">E-mail</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Status</strong>
+      Publicado
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Status</strong>
+      Publicado
+    </div>
+  </div>
+</div>
 
-  <h2 class="doc-title-2">Especificação de comportamento</h2>
-  <p>Estas são informações que explicam como o Locaweb Style trata a listas e seus componentes. Todos estes comportamentos já estão previstos no framework.</p>
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="col-md-9">
+      <img class="ls-list-image" src="../../../assets/images/locastyle/logo-locaweb.jpg" />
+    </div>
+    <div class="col-md-3 ls-txt-right">
+      <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+        <a href="#" class="ls-btn-primary">Administrar</a>
+        <ul class="ls-dropdown-nav">
+            <li><a href="#">Site</a></li>
+            <li><a href="#">E-mail</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Status</strong>
+      Publicado
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Status</strong>
+      Publicado
+    </div>
+  </div>
+</div>
 
-  <h4 class="doc-title-4">Definição</h4>
-  <p>A lista é utilizada para localizar um dado específico para ser gerenciado. O destino pode ser um outro painel/produto ou página interna.</p>
-  <img src="../../../assets/images/ux/listas/image00.png" />
-  <p>E no mobile fica assim:</p>
-  <img src="../../../assets/images/ux/listas/image01.png" />
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="col-md-9">
+      <div class="ls-list-title ">
+        <strong>Identificador da conta</strong>
+      </div>
+      <div class="ls-list-description">
+        <p>Impedit sed consequatur ut et quos aut. repellat aut rerum voluptatibus cum odio ex corrupti illum est facere illo quidem inventore. eaque est incidunt nostrum ut assumenda corporis quo et dicta minima perferendis. aspernatur est eum a. autem est dolor fugiat itaque ea nostrum maiores</p>
+        <ul>
+            <li>Item 0</li>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-3 ls-txt-right">
+      <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+        <a href="#" class="ls-btn-primary">Administrar</a>
+        <ul class="ls-dropdown-nav">
+            <li><a href="#">Site</a></li>
+            <li><a href="#">E-mail</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Status</strong>
+      Publicado
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <strong class="ls-list-label">Status</strong>
+      Publicado
+    </div>
+  </div>
+</div>
 
-  <h4 class="doc-title-5">Quando usar?</h4>
-  <ul>
-    <li>Há necessidade de acesso a outro painel ou página interna do produto.</li>
-    <li>Há necessidade de exibir um resumo das informações sem colunas.</li>
-  </ul>
-  <h4 class="doc-title-5">Quando não usar?</h4>
-  <ul>
-    <li>Os dados apresentados sejam comparáveis.</li>
-    <li>Há necessidade de ordenação de colunas.</li>
-  </ul>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="320" height="910" src="/locawebstyle/documentacao/shared/lists/lists-actions-mobile" frameborder="0"></iframe>
+  </div>
+  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-list"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"ls-list-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-list-title col-md-9"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;strong&gt;</span>Identificador da conta<span class="nt">&lt;/strong&gt;</span>
+      <span class="nt">&lt;small&gt;</span>Fake Product Name I <span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 ls-txt-right"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"dropdown"</span> <span class="na">class=</span><span class="s">"ls-dropdown ls-pos-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span><span class="nt">&gt;</span>Administrar<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"ls-dropdown-nav"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Site<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>E-mail<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-list-content "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"ls-list-label"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/strong&gt;</span>
+      Publicado
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"ls-list-label"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/strong&gt;</span>
+      Publicado
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-  <h4 class="doc-title-4">Opções e variações</h4>
-  <h5 class="doc-title-5">Exibição de informações secundárias e ação principal</h5>
-  <img src="../../../assets/images/ux/listas/image02.png" />
-  <img src="../../../assets/images/ux/listas/image03.png" />
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-list"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"ls-list-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-9"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ls-list-image"</span> <span class="na">src=</span><span class="s">"../../../assets/images/locastyle/logo-locaweb.jpg"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 ls-txt-right"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"dropdown"</span> <span class="na">class=</span><span class="s">"ls-dropdown ls-pos-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span><span class="nt">&gt;</span>Administrar<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"ls-dropdown-nav"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Site<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>E-mail<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-list-content "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"ls-list-label"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/strong&gt;</span>
+      Publicado
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"ls-list-label"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/strong&gt;</span>
+      Publicado
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-  <ul>
-    <li><strong>Ação principal</strong> - É exibida em um botão separado das ações secundárias.</li>
-    <li><strong>Identificador</strong> -  Sempre deve ter um link para um destino que o UX do produto definir.</li>
-    <li><strong>Informações secundários</strong> - Podem ser exibidas com label ou não de acordo com a necessidade do produto.</li>
-  </ul>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-list"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"ls-list-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-9"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-list-title "</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;strong&gt;</span>Identificador da conta<span class="nt">&lt;/strong&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-list-description"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Laudantium ea delectus et. vel recusandae blanditiis rem natus non quaerat perspiciatis. autem adipisci culpa omnis fugit. nobis qui consectetur dolor error sequi ut et et<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Item 0<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Item 1<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Item 2<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Item 4<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 ls-txt-right"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"dropdown"</span> <span class="na">class=</span><span class="s">"ls-dropdown ls-pos-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span><span class="nt">&gt;</span>Administrar<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"ls-dropdown-nav"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Site<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>E-mail<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-list-content "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"ls-list-label"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/strong&gt;</span>
+      Publicado
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"ls-list-label"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/strong&gt;</span>
+      Publicado
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
 
-  <p>No mobile:</p>
-  <img src="../../../assets/images/ux/listas/image05.png" />
-  <p>Ação principal é sempre exibida no botão múltiplo.</p>
-
-  <h4 class="doc-title-4">Lista com botão múltiplo</h4>
-  <p>Opção quando não houver uma ação principal específica.</p>
-  <img src="../../../assets/images/ux/listas/image04.png" />
 
 
 </section>

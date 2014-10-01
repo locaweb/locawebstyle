@@ -75,6 +75,7 @@
       <li class='active'><a class='active' href='/locawebstyle/documentacao/componentes/botao-switch/'>Botão Switch</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/botoes/'>Botões</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/box/'>Box genérico</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/alert-box/'>Box de notificações</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/breadcrumb/'>Breadcrumb</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/collapse/'>Collapse &amp; Accordeon</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/dropdown/'>Dropdown</a></li>
@@ -103,7 +104,7 @@
   <div class="ls-box-demo">
     <div class="ls-switch-btn">
   <input type="checkbox" id="teste">
-  <label for="teste" name="label-teste">label</label>
+  <label class="ls-switch-label" for="teste" name="label-teste" ls-switch-off="Desativado" ls-switch-on="Ativado"><span></span></label>
 </div>
 
   </div>
@@ -112,11 +113,13 @@
 3
 4</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-switch-btn"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"teste"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"teste"</span> <span class="na">name=</span><span class="s">"label-teste"</span><span class="nt">&gt;</span>label<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-switch-label"</span> <span class="na">for=</span><span class="s">"teste"</span> <span class="na">name=</span><span class="s">"label-teste"</span> <span class="na">ls-switch-off=</span><span class="s">"Desativado"</span> <span class="na">ls-switch-on=</span><span class="s">"Ativado"</span><span class="nt">&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 
+
+  <p>Você pode definir que será escrito na label utilizando os atributos <code>ls-switch-on</code> quando estiver checado e <code>ls-switch-off</code> quando não estiver checado.</p>
 </section>
 
   </div>
