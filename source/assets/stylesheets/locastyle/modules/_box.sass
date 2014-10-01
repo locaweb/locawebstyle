@@ -6,7 +6,7 @@
   border: 1px solid $gray1
 
   &:last-child
-    margin-bottom: 0
+    @extend .ls-no-margin-bottom
 
   p
     margin: 5px 0 10px
@@ -27,10 +27,10 @@
     @extend .ls-sm-space
 
   .ls-small-info
+    @extend .ls-no-margin
+    @extend .ls-no-padding
     font-size: remtopx(.75)
     color: $gray4
-    margin: 0
-    padding: 0
 
   &[class*="ls-ico-"]
     overflow: hidden

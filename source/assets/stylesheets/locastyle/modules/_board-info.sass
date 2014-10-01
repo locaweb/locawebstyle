@@ -45,7 +45,7 @@
   margin-bottom: 10px
 
   > [class*="col-md"]:first-child
-    padding-left: 0
+    @extend .ls-no-padding-left
 
   > [class*="ls-ico"]
 
@@ -68,8 +68,8 @@
       margin-right: 0
 
   .ls-actions-btn
+    @extend .ls-no-padding
     border-top: none
-    padding: 0
     margin: 20px 0 0
 
 //
@@ -108,4 +108,3 @@
   .ls-board-box .ls-box strong
     display: block
     font-size: remtopx(2)
-

@@ -8,7 +8,7 @@
 
   p
     color: inherit
-    margin-bottom: 0
+    @extend .ls-no-margin-bottom
 
   a:not([class*="ls-btn"])
     color: inherit
@@ -91,7 +91,7 @@
 .ls-alert-blocker,
 .ls-alert-fixed-top,
 .ls-alert-fixed-bottom
-  border-radius: 0
+  @extend .ls-no-radius
+  @extend .ls-no-margin-bottom
   border: none
   width: 100%
-  margin-bottom: 0

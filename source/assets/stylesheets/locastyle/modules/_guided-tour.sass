@@ -22,7 +22,7 @@
     display: none !important
 
   .hopscotch-bubble-container
-    padding: 0 !important
+    @extend .ls-no-padding
 
   .hopscotch-bubble-arrow-container
     position: absolute
@@ -82,13 +82,13 @@
     display: none
 
   .hopscotch-title
+    @extend .ls-no-margin
     background-color: #f7f7f7
     border-bottom: 1px solid #ebebeb
     border-radius: $default-radius $default-radius 0 0
     font-size: 14px
     font-weight: normal
     line-height: 18px
-    margin: 0
     padding: 6px 14px
 
   .hopscotch-content
@@ -99,17 +99,17 @@
     white-space: normal
 
   .hopscotch-actions
+    @extend .ls-no-margin-top
     background: #f7f7f7
     border-top: 1px solid #ebebeb
     border-radius: 0 0 $default-radius $default-radius
-    margin-top: 0
     padding: 6px 15px
     overflow: hidden
 
     button
+      @extend .ls-no-margin-bottom
       display: inline-block
       padding: 4px 10px
-      margin-bottom: 0
       font-size: remtopx(.75)
       font-weight: normal
       line-height: 1.428571429
@@ -128,8 +128,8 @@
       margin-right: remtopx(1)
 
       &.hopscotch-nav-button.next
+        @extend .ls-no-margin
         float: right
-        margin: 0
 
   .hopscotch-bubble-close
     cursor: pointer

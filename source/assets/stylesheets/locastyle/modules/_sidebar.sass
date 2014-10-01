@@ -7,10 +7,10 @@
   height: 100%
 
   .ls-user-account
+    @extend .ls-no-padding
     position: absolute
     top: 0
     left: 0
-    padding: 0
     display: inline-block
     width: 100%
     background-color: #111
@@ -46,8 +46,8 @@
       font-size: remtopx(4.5)
 
 .ls-menu
-  margin: 0
-  padding: 0
+  @extend .ls-no-margin
+  @extend .ls-no-padding
   height: 100%
   overflow: auto
   -webkit-overflow-scrolling: touch
@@ -151,8 +151,8 @@
     margin-right: 15px
 
   [class*="ls-title"]
-    margin-bottom: 0
-    padding-top: 0
+    @extend .ls-no-padding-top
+    @extend .ls-no-margin-bottom
 
     &:after
       display: inline-block

@@ -177,9 +177,9 @@ textarea
       width: 132%\9
 
   .ls-label
+    @extend .ls-no-margin-bottom
     display: inline-block
     margin-right: 15px
-    margin-bottom: 0
 
     & + [class*="ls-btn"]
       margin-left: 0
@@ -194,9 +194,9 @@ textarea
     text-align: right
 
     .ls-label
+      @extend .ls-no-margin-bottom
       width: 65% !important
       display: inline-block
-      margin-bottom: 0
 
       input
         width: 100%
@@ -208,10 +208,10 @@ textarea
 input.ls-form-text,
 .ls-form-text[disabled]
   +box-shadow(none)
+  @extend .ls-no-padding-left
+  @extend .ls-no-padding-right
   border-color: transparent !important
   background-color: transparent !important
-  padding-right: 0 !important
-  padding-left: 0 !important
 
 .ls-prefix-group
   .ls-form-text input,
@@ -250,11 +250,11 @@ input.ls-form-text,
 
   input
     @extend .ls-float-left
+    @extend .ls-no-margin-bottom
     position: relative
     z-index: 2
     width: 100%
     height: inherit
-    margin-bottom: 0
     display: table-cell
 
 .ls-label-text-prefix
