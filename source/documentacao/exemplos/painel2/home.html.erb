@@ -43,12 +43,12 @@ title_product: SMTP Locaweb
 
 <div class="ls-box ls-board-box">
   <header class="ls-info-header">
-    <p class="ls-float-right ls-float-none-xs ls-small-info">Valido até <strong>01.05.2014</strong></p>
+    <a href="<%= base_url %>/documentacao/exemplos/painel2/stats" class="ls-btn ls-float-right ls-btn-sm">Ver relatórios</a>
     <h2 class="ls-title-3 ls-ico-stats">Relatório diário</h2>
   </header>
 
   <div id="sending-stats" class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <div class="ls-box">
         <h6 class="ls-title-4">Enviados</h6>
         <span class="ls-board-data">
@@ -57,7 +57,7 @@ title_product: SMTP Locaweb
       </div>
     </div>
 
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <div class="ls-box">
         <h6 class="ls-title-4">Entregues</h6>
         <span class="ls-board-data">
@@ -66,7 +66,7 @@ title_product: SMTP Locaweb
       </div>
     </div>
 
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <div class="ls-box">
         <h6 class="ls-title-4">Erros</h6>
         <span class="ls-board-data">
@@ -74,7 +74,18 @@ title_product: SMTP Locaweb
         </span>
       </div>
     </div>
+
+    <div class="col-sm-3">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Denúncias <a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="left" data-custom-classes="ls-width-300" data-content="<p>Este número corresponde ao número de vezes que seus destinatários marcaram suas mensagens como spam. Essas denúncias podem comprometer a entregabilidade das suas próximas mensagens.</p>"></a></h6>
+        <span class="ls-board-data">
+          <strong>1</strong>
+        </span>
+      </div>
+    </div>
+
   </div>
+  <hr class="ls-no-border">
   <div id="panel-charts-2" class="ls-clear-both"></div>
 </div>
 
@@ -97,28 +108,27 @@ title_product: SMTP Locaweb
 
     <div class="col-sm-6 col-md-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Envios excedentes</h6>
+        <h6 class="ls-title-4">Envios do plano</h6>
         <span class="ls-board-data">
-          <strong>0</strong>
+          <strong>0 <small>de 1 milhão</small></strong>
         </span>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Total utilizados</h6>
+        <h6 class="ls-title-4">Envios Excedentes <a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="left" data-content="Isso permite que os envios não sejam interrompidos após atingir o limite do plano contratado." data-title="O uso de envios excedentes está ativado!"></a></h6>
         <span class="ls-board-data">
-          <strong>10.743</strong>
+          <strong>10.743 <small>de 1 milhão</small></strong>
         </span>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
       <div class="ls-box">
-        <h6 class="ls-title-4 color-default">Disponível <%= link_to '', '#', class: "ls-ico-help", data: { ls_module: 'popover', placement: 'left', content: "Explicação sobre o conteúdo disponível", title: "Entenda os envios disponíveis"  } %></h6>
+        <h6 class="ls-title-4 color-default">Total de envios utilizados</h6>
         <span class="ls-board-data">
           <strong class="ls-color-theme">81%</strong>
-          <small>989.257</small>
         </span>
       </div>
     </div>

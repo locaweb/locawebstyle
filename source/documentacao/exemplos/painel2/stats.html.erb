@@ -30,56 +30,67 @@ title_product: SMTP Locaweb
       </ul>
     </div>
   </form>
-  <div class="ls-group-btn ls-group-active ls-float-right">
-    <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn ls-active ls-ico-chart-bar-up"></button>
-    <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
+</div>
+
+<div class="ls-box ls-board-box">
+  <div id="sending-stats" class="row">
+    <div class="col-sm-3">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Enviados</h6>
+        <span class="ls-board-data">
+          <strong>33</strong>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Entregues</h6>
+        <span class="ls-board-data">
+          <strong>27</strong>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Erros</h6>
+        <span class="ls-board-data">
+          <strong>16</strong>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Denúncias <a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="left" data-custom-classes="ls-width-300" data-content="<p>Este número corresponde ao número de vezes que seus destinatários marcaram suas mensagens como spam. Essas denúncias podem comprometer a entregabilidade das suas próximas mensagens.</p>"></a></h6>
+        <span class="ls-board-data">
+          <strong>1</strong>
+        </span>
+      </div>
+    </div>
   </div>
 </div>
 
+<div class="ls-group-btn ls-group-active ls-float-right">
+  <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn ls-active ls-ico-chart-bar-up"></button>
+  <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
+</div>
 
-<ul class="ls-tabs-nav" id="awesome-tab">
+<ul class="ls-tabs-nav ls-display-inline" id="awesome-tab">
   <li class="ls-active"><a data-ls-module="tabs" href="#tab1">Geral</a></li>
   <li><a data-ls-module="tabs" href="#tab2">Erros</a></li>
+  <li><a data-ls-module="tabs" href="#tab3">Denúncias</a></li>
 </ul>
+
 <div class="ls-tabs-container" id="awesome-tab-content">
   <div id="tab1" class="ls-tab-content ls-active">
 
-    <div class="ls-board-box">
-        <div id="sending-stats" class="row">
-          <div class="col-sm-4">
-            <div class="ls-box">
-              <h6 class="ls-title-4">Enviados</h6>
-              <span class="ls-board-data">
-                <strong>33</strong>
-              </span>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div class="ls-box">
-              <h6 class="ls-title-4">Entregues</h6>
-              <span class="ls-board-data">
-                <strong>27</strong>
-              </span>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div class="ls-box">
-              <h6 class="ls-title-4">Erros</h6>
-              <span class="ls-board-data">
-                <strong>16</strong>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
     <div class="ls-tab-content child1 ls-active">
       <div id="panel-charts-2"></div>
     </div>
 
     <div class="ls-tab-content child2">
-
 
       <table class="ls-table">
         <thead>
@@ -100,6 +111,8 @@ title_product: SMTP Locaweb
         </tbody>
       </table>
     </div>
+
+    <hr>
 
     <p><a href="#" data-toggle-class="ls-display-none" data-target="#infoAll">Exibir detalhes por destinatário</a></p>
 
@@ -133,7 +146,7 @@ title_product: SMTP Locaweb
 
     <div class="ls-tab-content child1 ls-active">
       <p>Erros de recebimento para 6 destinatários</p>
-      <div id="panel-chart-pie"></div>
+      <div id="panel-chart-pie-errors"></div>
     </div>
 
     <div class="ls-tab-content child2">
@@ -185,8 +198,11 @@ title_product: SMTP Locaweb
     </div>
 
   </div>
-</div>
 
+  <div id="tab3" class="ls-tab-content">
+    <div id="panel-chart-pie-complaints"></div>
+  </div>
+</div>
 
 <!-- Modal de exportação -->
 <div class="ls-modal fade" id="modal_export">

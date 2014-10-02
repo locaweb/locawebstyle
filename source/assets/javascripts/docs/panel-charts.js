@@ -134,7 +134,7 @@ $(function () {
   });
 
   // Panel 2 Pie chart
-  $('#panel-chart-pie').highcharts({
+  $('#panel-chart-pie-errors').highcharts({
     chart: {
       width: $('#panel-charts-2').width(),
       plotBackgroundColor: null,
@@ -175,6 +175,50 @@ $(function () {
         ['Erro 1', 15.0],
         ['Erro 2', 35.0],
         ['Erro 3', 40.0]
+      ]
+    }]
+  });
+
+  $('#panel-chart-pie-complaints').highcharts({
+    chart: {
+      width: $('#panel-charts-2').width(),
+      plotBackgroundColor: null,
+      plotBorderWidth: 1,
+      plotShadow: false
+    },
+    title: {
+      text: ''
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    colors: ['#25b89a', '#aa4643 ','#89a54e'],
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+          style: {
+            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+          }
+        }
+      }
+    },
+    credits: {
+      text: 'Locaweb',
+      href: 'http://www.locaweb.com.br',
+      style: {
+        display: 'none'
+      }
+    },
+    series: [{
+      type: 'pie',
+      name: 'Browser share',
+      data: [
+        ['Denúncias', 1],
+        ['Nenhuma denúncia', 99],
       ]
     }]
   });
