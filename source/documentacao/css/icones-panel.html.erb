@@ -1,0 +1,34 @@
+---
+title: Ícones de painel
+description: Coleção de font icons ativadas por classe
+type: css
+---
+
+<%= partial 'partials/doc-menu-css'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <div class="doc-block">
+    <h2 class="doc-title-3">Funcionamento</h2>
+    <p>Para adicionar seu ícone, insira uma das classes da nossa coleção de ícones no elemento escolhido. Se quiser ter mais flexibilidade de posicionamento ou qualquer outra necessidade, utilize as classes em um elemento span. Mas não recomendamos muito, já que você vai precisar criar um elemento vazio só para inserir um ícone.</p>
+    <p>Vale lembrar que os ícones são inseridos no <code>:after</code> e <code>:before</code> do elemento.</p>
+  </div>
+
+  <div class="doc-block">
+    <h2 class="doc-title-3">Ícones a direita do texto</h2>
+    <p>Por padrão os ícones ficam posicionados à esquerda. Para posicioná-los à direita, basta colocar a classe <code>.ls-ico-right</code>. </p>
+
+    <div class="ls-box-demo">
+      <span class="ls-ico-panel-streaming ls-ico-right">ls-ico-panel-streaming</span><br>
+      <span class="ls-ico-panel-hospedagem ls-ico-right">ls-ico-panel-hospedagem</span>
+    </div>
+    <% code("html") do %>
+      <span class="ls-ico-panel-streaming ls-ico-right">ls-ico-panel-streaming</span><br>
+      <span class="ls-ico-panel-hospedagem ls-ico-right">ls-ico-panel-hospedagem</span>
+    <% end %>
+  </div>
+  <hr class="doc-hr">
+  <%= partial 'documentacao/shared/locastyle-panel-icons' %>
+</section>

@@ -10,8 +10,17 @@
   font-weight: normal
   font-style: normal
 
+@font-face
+  font-family: 'locastyle-panel-icons'
+  src: url('fonts/locastyle-panel-icons.eot?-luxi4q')
+  src: url('fonts/locastyle-panel-icons.eot?#iefix-luxi4q') format('embedded-opentype'), url('fonts/locastyle-panel-icons.woff?-luxi4q') format('woff'),    url('fonts/locastyle-panel-icons.ttf?-luxi4q') format('truetype'),    url('fonts/locastyle-panel-icons.svg?-luxi4q#locastyle-panel-icons') format('svg')
+  font-weight: normal
+  font-style: normal
+
 [class*="ls-ico"]:before,
-[class*="ls-ico"]:after
+[class*="ls-ico"]:after,
+[class*="ls-ico-panel"]:before,
+[class*="ls-ico-panel"]:after
   font-family: 'locastyle'
   speak: none
   font-style: normal
@@ -20,24 +29,25 @@
   text-transform: none
   line-height: 1
   margin-right: 3px
-
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+[class*="ls-ico-panel"]:before,
+[class*="ls-ico-panel"]:after
+  font-family: 'locastyle-panel-icons'
+
 [class*="ls-ico-"]:after,
-.ls-ico-right:before
+[class*="ls-ico-panel"]:after,
+.ls-ico-right:before,
+.ls-ico-panel-right:before
   display: none
 
-.ls-ico-right:after
+.ls-ico-right:after,
+.ls-ico-panel-right:after
   display: inline-block
   margin-left: 5px
   padding: 0
   width: 5px
-
-=ico($name, $content)
-  .ls-ico-#{$name}:before,
-  .ls-ico-#{$name}:after
-    content: "#{$content}"
 
 .ls-ico-alone
   @extend .ls-color-theme
@@ -45,13 +55,21 @@
   font-size: remtopx(4)
   border-bottom-color: transparent
 
+//
+// Locastyle Icons
+//
+=ico($name, $content)
+  .ls-ico-#{$name}:before,
+  .ls-ico-#{$name}:after
+    content: "#{$content}"
+
 +ico(bullhorn,\f0a1)
 +ico(dashboard,\f0e4)
 +ico(bell-o,\f0f3)
 +ico(home,\e600)
 +ico(users,\e601)
 +ico(stats,\e609)
-+ico(envelope,\e604)
++ico(envelop,\e604)
 +ico(cog,\e608)
 +ico(user,\e605)
 +ico(question,\e60a)
@@ -118,7 +136,6 @@
 +ico(radio-checked,\e643)
 +ico(radio-unchecked,\e644)
 
-
 +ico(calendar,\e0e8)
 +ico(calendar-more,\e0f3)
 +ico(calendar-check,\e0f2)
@@ -139,3 +156,17 @@
 +ico(document, \e64d)
 +ico(docs, \e64e)
 +ico(book, \e64f)
+
+//
+// Panel Icons
+//
+=panel-ico($name, $content)
+  .ls-ico-panel-#{$name}:before,
+  .ls-ico-panel-#{$name}:after
+    content: "#{$content}"
+
++panel-ico(streaming, \e600)
++panel-ico(hospedagem, \e601)
++panel-ico(emkt, \e602)
++panel-ico(cloud, \e603)
++panel-ico(smtp, \e604)
