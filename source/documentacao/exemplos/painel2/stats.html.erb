@@ -98,6 +98,7 @@ title_product: SMTP Locaweb
             <th class="ls-txt-center">Hora</th>
             <th class="ls-txt-center">Enviados</th>
             <th class="ls-txt-center hidden-xs">Bounces</th>
+            <th class="ls-txt-center hidden-xs">Denúncias</th>
           </tr>
         </thead>
         <tbody>
@@ -105,6 +106,7 @@ title_product: SMTP Locaweb
             <tr>
               <td class="ls-txt-center">00h</td>
               <td class="ls-txt-center">0</td>
+              <td class="ls-txt-center hidden-xs">0</td>
               <td class="ls-txt-center hidden-xs">0</td>
             </tr>
           <% end %>
@@ -200,7 +202,28 @@ title_product: SMTP Locaweb
   </div>
 
   <div id="tab3" class="ls-tab-content">
-    <div id="panel-chart-pie-complaints"></div>
+    <div class="child1 ls-tab-content ls-active">
+      <div id="panel-chart-pie-complaints"></div>
+    </div>
+
+    <div class="ls-tab-content child2">
+
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th class="ls-txt-center">Hora</th>
+            <th class="ls-txt-center hidden-xs">Denúncias</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%- 5.times do |num| %>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
   </div>
 </div>
 
