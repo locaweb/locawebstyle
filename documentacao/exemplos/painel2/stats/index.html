@@ -114,56 +114,67 @@
       </ul>
     </div>
   </form>
-  <div class="ls-group-btn ls-group-active ls-float-right">
-    <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn ls-active ls-ico-chart-bar-up"></button>
-    <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
+</div>
+
+<div class="ls-box ls-board-box">
+  <div id="sending-stats" class="row">
+    <div class="col-sm-3">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Enviados</h6>
+        <span class="ls-board-data">
+          <strong>33</strong>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Entregues</h6>
+        <span class="ls-board-data">
+          <strong>27</strong>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Erros</h6>
+        <span class="ls-board-data">
+          <strong>16</strong>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Denúncias <a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="left" data-custom-classes="ls-width-300" data-content="<p>Este número corresponde ao número de vezes que seus destinatários marcaram suas mensagens como spam. Essas denúncias podem comprometer a entregabilidade das suas próximas mensagens.</p>"></a></h6>
+        <span class="ls-board-data">
+          <strong>1</strong>
+        </span>
+      </div>
+    </div>
   </div>
 </div>
 
+<div class="ls-group-btn ls-group-active ls-float-right">
+  <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn ls-active ls-ico-chart-bar-up"></button>
+  <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
+</div>
 
-<ul class="ls-tabs-nav" id="awesome-tab">
+<ul class="ls-tabs-nav ls-display-inline" id="awesome-tab">
   <li class="ls-active"><a data-ls-module="tabs" href="#tab1">Geral</a></li>
   <li><a data-ls-module="tabs" href="#tab2">Erros</a></li>
+  <li><a data-ls-module="tabs" href="#tab3">Denúncias</a></li>
 </ul>
+
 <div class="ls-tabs-container" id="awesome-tab-content">
   <div id="tab1" class="ls-tab-content ls-active">
 
-    <div class="ls-board-box">
-        <div id="sending-stats" class="row">
-          <div class="col-sm-4">
-            <div class="ls-box">
-              <h6 class="ls-title-4">Enviados</h6>
-              <span class="ls-board-data">
-                <strong>33</strong>
-              </span>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div class="ls-box">
-              <h6 class="ls-title-4">Entregues</h6>
-              <span class="ls-board-data">
-                <strong>27</strong>
-              </span>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div class="ls-box">
-              <h6 class="ls-title-4">Erros</h6>
-              <span class="ls-board-data">
-                <strong>16</strong>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
     <div class="ls-tab-content child1 ls-active">
       <div id="panel-charts-2"></div>
     </div>
 
     <div class="ls-tab-content child2">
-
 
       <table class="ls-table">
         <thead>
@@ -171,6 +182,7 @@
             <th class="ls-txt-center">Hora</th>
             <th class="ls-txt-center">Enviados</th>
             <th class="ls-txt-center hidden-xs">Bounces</th>
+            <th class="ls-txt-center hidden-xs">Denúncias</th>
           </tr>
         </thead>
         <tbody>
@@ -178,30 +190,37 @@
               <td class="ls-txt-center">00h</td>
               <td class="ls-txt-center">0</td>
               <td class="ls-txt-center hidden-xs">0</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center">00h</td>
-              <td class="ls-txt-center">0</td>
               <td class="ls-txt-center hidden-xs">0</td>
             </tr>
             <tr>
               <td class="ls-txt-center">00h</td>
               <td class="ls-txt-center">0</td>
               <td class="ls-txt-center hidden-xs">0</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center">00h</td>
-              <td class="ls-txt-center">0</td>
               <td class="ls-txt-center hidden-xs">0</td>
             </tr>
             <tr>
               <td class="ls-txt-center">00h</td>
               <td class="ls-txt-center">0</td>
+              <td class="ls-txt-center hidden-xs">0</td>
+              <td class="ls-txt-center hidden-xs">0</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+              <td class="ls-txt-center hidden-xs">0</td>
+              <td class="ls-txt-center hidden-xs">0</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+              <td class="ls-txt-center hidden-xs">0</td>
               <td class="ls-txt-center hidden-xs">0</td>
             </tr>
         </tbody>
       </table>
     </div>
+
+    <hr>
 
     <p><a href="#" data-toggle-class="ls-display-none" data-target="#infoAll">Exibir detalhes por destinatário</a></p>
 
@@ -218,39 +237,39 @@
         </thead>
         <tbody>
             <tr>
-              <td>Sun Feb 22, 2009</td>
-              <td>fatima_watts@me.com</td>
-              <td>katiesong@hotmail.com</td>
+              <td>Sun Mar 25, 1990</td>
+              <td>vanessa-whitehead@hotmail.com</td>
+              <td>patrickcoleman@live.com</td>
               <td>Entregue</td>
-              <td>Voluptas numquam est quis</td>
+              <td>Eos adipisci ex est</td>
             </tr>
             <tr>
-              <td>Thu Mar 04, 1993</td>
-              <td>vanessamacdonald@mail.com</td>
-              <td>ty-harvey@email.com</td>
+              <td>Sat Mar 14, 1998</td>
+              <td>ashton_wagner@yahoo.com</td>
+              <td>ewan-joseph@fastmail.com</td>
               <td>Entregue</td>
-              <td>Sit minus voluptates consequatur sit</td>
+              <td>Tempore nihil et quia aliquid et</td>
             </tr>
             <tr>
-              <td>Thu Jan 31, 1991</td>
-              <td>deana_beasley@gmail.com</td>
-              <td>paola_love@email.com</td>
+              <td>Thu Dec 09, 1993</td>
+              <td>lorenzo_watson@hotmail.com</td>
+              <td>giselle_jones@live.com</td>
               <td>Entregue</td>
-              <td>Neque rerum nam autem eos</td>
+              <td>Voluptatem ipsam officia quidem corrupti porro rerum magni placeat omnis rerum</td>
             </tr>
             <tr>
-              <td>Sun Jan 04, 2009</td>
-              <td>yvonneheath@live.com</td>
-              <td>kadendougherty@me.com</td>
+              <td>Thu May 17, 2007</td>
+              <td>tammiesteele@email.com</td>
+              <td>hudsonmorgan@live.com</td>
               <td>Entregue</td>
-              <td>Distinctio recusandae eos quia illum aut fuga et hic facilis</td>
+              <td>Quo voluptatum sunt numquam non quia dignissimos dolorum eos ipsa deserunt at laborum</td>
             </tr>
             <tr>
-              <td>Mon Dec 18, 2000</td>
-              <td>grady-locklear@fastmail.com</td>
-              <td>petehouston@me.com</td>
+              <td>Mon Aug 28, 2000</td>
+              <td>alma-middleton@mail.com</td>
+              <td>zoe-may@live.com</td>
               <td>Entregue</td>
-              <td>Delectus et quo cumque quasi officiis molestias incidunt perferendis est quia sapiente quaerat laborum pariatur</td>
+              <td>Sed quia voluptas excepturi quos sed incidunt aperiam rem recusandae voluptatem impedit minus labore porro</td>
             </tr>
         </tbody>
       </table>
@@ -261,7 +280,7 @@
 
     <div class="ls-tab-content child1 ls-active">
       <p>Erros de recebimento para 6 destinatários</p>
-      <div id="panel-chart-pie"></div>
+      <div id="panel-chart-pie-errors"></div>
     </div>
 
     <div class="ls-tab-content child2">
@@ -300,47 +319,85 @@
         </thead>
         <tbody>
             <tr>
-              <td>Tue Nov 28, 2006</td>
-              <td>rylee_griffin@gmail.com</td>
-              <td>ericthornton@fastmail.com</td>
+              <td>Thu Jul 10, 2003</td>
+              <td>jamieshaffer@yahoo.com</td>
+              <td>zachariah-graham@fastmail.com</td>
               <td>Entregue</td>
-              <td>Impedit ratione repellendus quasi accusantium</td>
+              <td>Sint non eum magnam</td>
             </tr>
             <tr>
-              <td>Sun Oct 15, 2006</td>
-              <td>cathleen-neal@fastmail.com</td>
-              <td>teddy_willis@mail.com</td>
+              <td>Thu Mar 26, 1992</td>
+              <td>ruben_bowman@live.com</td>
+              <td>zachariah-barr@mail.com</td>
               <td>Entregue</td>
-              <td>Harum cupiditate et vel quisquam non facilis quia excepturi aliquid totam</td>
+              <td>Enim delectus est non veniam voluptas</td>
             </tr>
             <tr>
-              <td>Tue Oct 15, 1996</td>
-              <td>francesca-hall@fastmail.com</td>
-              <td>rafael-ross@live.com</td>
+              <td>Mon Oct 27, 2008</td>
+              <td>sadieabrams@aol.com</td>
+              <td>bart_puckett@mail.com</td>
               <td>Entregue</td>
-              <td>Saepe cupiditate quos omnis pariatur eaque voluptatem beatae</td>
+              <td>Voluptatem reprehenderit dolorum ducimus magnam molestiae et ut incidunt</td>
             </tr>
             <tr>
-              <td>Sat Dec 06, 1997</td>
-              <td>maisieholloway@hotmail.com</td>
-              <td>darius-conner@email.com</td>
+              <td>Tue May 07, 1996</td>
+              <td>kendrickraynor@hotmail.com</td>
+              <td>orlaith_conner@live.com</td>
               <td>Entregue</td>
-              <td>Possimus ut eos mollitia dolores explicabo odio est voluptas culpa cum qui ratione consectetur</td>
+              <td>Aut et et fugit aut eaque aperiam cum rem fugit atque voluptate</td>
             </tr>
             <tr>
-              <td>Sat Oct 02, 1993</td>
-              <td>allyson_bender@me.com</td>
-              <td>patrick-finch@aol.com</td>
+              <td>Tue Jul 05, 2005</td>
+              <td>mariannekennedy@me.com</td>
+              <td>tricia-kinney@hotmail.com</td>
               <td>Entregue</td>
-              <td>Voluptatibus aut sed provident eligendi dolor aut mollitia</td>
+              <td>A velit sint alias fugiat et quae</td>
             </tr>
         </tbody>
       </table>
     </div>
 
   </div>
-</div>
 
+  <div id="tab3" class="ls-tab-content">
+    <div class="child1 ls-tab-content ls-active">
+      <div id="panel-chart-pie-complaints"></div>
+    </div>
+
+    <div class="ls-tab-content child2">
+
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th class="ls-txt-center">Hora</th>
+            <th class="ls-txt-center hidden-xs">Denúncias</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+            </tr>
+            <tr>
+              <td class="ls-txt-center">00h</td>
+              <td class="ls-txt-center">0</td>
+            </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
 
 <!-- Modal de exportação -->
 <div class="ls-modal fade" id="modal_export">
@@ -535,23 +592,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Corporis voluptatem dignissimos vitae odit et occaecati debitis consectetur atque quia temporibus sint</a>
+            <a href="#">Aspernatur doloribus minima officiis est eligendi</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Distinctio magnam laudantium et autem expedita odio asperiores ut</a>
+            <a href="#">Nulla quod autem reprehenderit repellendus inventore enim libero hic odit</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Ipsa assumenda sit id et</a>
+            <a href="#">Reprehenderit libero nihil quam sunt</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Repudiandae perferendis nihil itaque qui</a>
+            <a href="#">Et ab fuga ut dolorum cum adipisci expedita necessitatibus consequatur</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Qui sit voluptatum voluptas quaerat aliquam aliquam possimus</a>
+            <a href="#">Saepe et reprehenderit voluptate tempore tempore architecto dolores ab</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -560,8 +617,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> voluptas ut eum sit saepe ut</a></li>
-          <li><a href="#">> sed hic tenetur nesciunt rerum iusto</a></li>
+          <li><a href="#">> vel dolores aperiam temporibus corrupti a</a></li>
+          <li><a href="#">> sunt harum architecto voluptate quia modi</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">
