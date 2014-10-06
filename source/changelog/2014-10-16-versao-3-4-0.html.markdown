@@ -15,22 +15,6 @@ layout: changelog-single
     – <a href="https://github.com/locaweb/locawebstyle/issues/1085" class="commit-url">#1085</a> Revisão de filtro e paginação
   </li>
   <li>
-    <strong class="ls-tag-success">New</strong>
-    – <a href="https://github.com/locaweb/locawebstyle/issues/1088" class="commit-url">#1088</a> Estilizar botão de SAIR no mobile
-  </li>
-  <li>
-    <strong class="ls-tag-success">Improvement</strong>
-    – <a href="https://github.com/locaweb/locawebstyle/issues/1144" class="commit-url">#1144</a> Revisão e Limpeza do CSS
-  </li>
-  <li>
-    <strong class="ls-tag-success">Bug</strong>
-    – <a href="https://github.com/locaweb/locawebstyle/issues/1148" class="commit-url">#1148</a> Rolagem horizontal mobile
-  </li>
-  <li>
-    <strong class="ls-tag-success">Bug</strong>
-    – <a href="https://github.com/locaweb/locawebstyle/issues/1149" class="commit-url">#1149</a> Problema com Sidebar ao redimensionar janela
-  </li>
-  <li>
     <strong class="ls-tag-success">Improvement</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1152" class="commit-url">#1152</a> Revisão de seletores aninhados do SASS
   </li>
@@ -53,5 +37,21 @@ layout: changelog-single
   <li>
     <strong class="ls-tag-success">Improvement</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1193" class="commit-url">#1193</a> Ícones de fonts com os logos dos produtos
+  </li>
+  <li>
+    <strong class="ls-tag-success">Improvement</strong>
+    – <a href="https://github.com/locaweb/locawebstyle/issues/1144" class="commit-url">#1144</a> Revisão e Limpeza do CSS
+  </li>
+  <li>
+    <strong class="ls-tag-success">New</strong>
+    – <a href="https://github.com/locaweb/locawebstyle/issues/1088" class="commit-url">#1088</a> Estilizar botão de SAIR no mobile
+  </li>
+  <li>
+    <strong class="ls-tag-success">Bug</strong>
+    – <a href="https://github.com/locaweb/locawebstyle/issues/1148" class="commit-url">#1148</a> Rolagem horizontal mobile
+  </li>
+  <li>
+    <strong class="ls-tag-success">Bug</strong>
+    – <a href="https://github.com/locaweb/locawebstyle/issues/1149" class="commit-url">#1149</a> Problema com Sidebar ao redimensionar janela
   </li>
 </ul>
