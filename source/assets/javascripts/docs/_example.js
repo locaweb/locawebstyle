@@ -6,9 +6,17 @@ var lsexample = (function() {
   }
 
   function activeMenu() {
-    var $itemActive = $( '[href="' + window.location.pathname + '"]', '.ls-menu' );
-    $itemActive.parents('.ls-submenu').children('a').trigger('click');
-    $itemActive.parent('li').addClass('ls-active');
+    var path = window.location.pathname;
+    path = path.replace(/\/$/, "");
+    path = decodeURIComponent(path);
+
+    $(".ls-menu a").each(function () {
+        var href = $(this).attr('href');
+        if (path.substring(0, href.length) === href) {
+            $(this).closest('li').addClass('ls-active');
+            $(this).parents('.ls-submenu').find('a').trigger('click');
+        }
+    });
   }
 
   return {
