@@ -1,6 +1,6 @@
 ---
 title: Botão Switch
-description: É um elemento que simula um liga/desliga, que verifica se o checkbox está checado, alternando visualmente o seu estado.
+description: O botão Switch permite a escolha de apenas uma entre duas opções (Ativado ou Desativado).
 type: component
 ---
 
@@ -10,16 +10,44 @@ type: component
 
 	<%= partial 'partials/doc-intro-content' %>
 
-  <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/switch' %>
+  <div class="row">
+    <div class="col-md-7">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>usar?</strong></h2>
+        <p>- Há duas opções de escolha que possam ser revertidas facilmente.</p>
+        <p>- Há necessidade de seleção rápida.</p>
+        <p>- Substituição de elemento padrão de checkbox acompanhado de um botão "Salvar".</p>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>não</strong> usar?</h2>
+        <p>- Acompanhado um modal de confirmação, por exemplo uma exclusão, ou de não ter possibilidade de reverter a ação.</p>
+        <p>- Dentro de um formulário.</p>
+      </div>
+    </div>
   </div>
-  <% code("html") do %><%= partial 'documentacao/shared/switch' %><% end %>
+  <br>
+
   <p>Você pode definir que será escrito na label utilizando os atributos <code>ls-switch-on</code> quando estiver checado e <code>ls-switch-off</code> quando não estiver checado.</p>
 
-  <h2 class="doc-title-3">Botão switch com link</h2>
   <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/switch-with-link' %>
+    <h3 class="doc-title-6">Desktop</h3>
+    <%= partial 'documentacao/shared/switch/switch' %>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="340" height="100" src="<%= base_url %>/documentacao/shared/switch/switch-mobile" frameborder="0"></iframe>
   </div>
-  <% code("html") do %><%= partial 'documentacao/shared/switch-with-link' %><% end %>
+  <% code("html") do %><%= partial 'documentacao/shared/switch/switch' %><% end %>
+
+
+  <h2 class="doc-title-3">Botão switch com link</h2>
+  <p>Pra deixá-lo com visual ativado é necessário que o checkbox esteja checado.</p>
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+    <%= partial 'documentacao/shared/switch/switch-with-link' %>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="340" height="180" src="<%= base_url %>/documentacao/shared/switch/switch-link-mobile" frameborder="0"></iframe>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/switch/switch-with-link' %><% end %>
 
 </section>

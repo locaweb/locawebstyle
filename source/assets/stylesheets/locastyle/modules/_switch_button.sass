@@ -29,6 +29,7 @@
 
       &:before
         content: ""
+        +single-transition(all, .25s, linear)
         position: absolute
         top: 2px
         left: 2px
@@ -71,6 +72,7 @@
         background-position: 7px center
 
       &:before
+        +single-transition(all, .25s, linear)
         top: 2px
         left: 25px
         border-radius: 0 $default-radius $default-radius 0
@@ -84,6 +86,12 @@
       vertical-align: middle
       content: attr(ls-switch-off)
 
+    + .ls-switch-label span:before
+      +single-transition(none)
+
     &:checked + .ls-switch-label:after
       content: attr(ls-switch-on)
+
+    &:checked + .ls-switch-label span:before
+      +single-transition(none)
 
