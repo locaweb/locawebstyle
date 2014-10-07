@@ -3,11 +3,19 @@
   border-left-width: 4px
   border-radius: $default-radius
   margin-bottom: 15px
+  font-size: remtopx(.875)
 
   .ls-list-header
-    padding: 15px 0
     display: table
     width: 100%
+
+    div
+      padding: 15px
+      height: inherit
+
+  .ls-list-label
+    display: block
+    padding-bottom: 2px
 
   .ls-list-image
     display: inline-block
@@ -45,7 +53,6 @@
 
 .ls-list-content
   border-top: 1px solid $gray1
-  font-size: remtopx(.875)
   overflow: hidden
 
   [class*="col-"]
@@ -55,9 +62,6 @@
 
     &:first-child
       border-color: transparent
-
-    .ls-list-label
-      display: block
 
   [class*="col-xs-12"]
     border-left: none
