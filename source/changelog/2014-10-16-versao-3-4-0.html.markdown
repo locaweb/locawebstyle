@@ -1,6 +1,6 @@
 ---
-title: Versão 3.3.3
-date: 2014-09-17 17:35 UTC
+title: Versão 3.4.0
+date: 2014-10-16 17:35 UTC
 tags:
 layout: changelog-single
 ---
