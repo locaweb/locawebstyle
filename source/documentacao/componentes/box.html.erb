@@ -74,6 +74,14 @@ type: component
 
   <% code("html") do %><%= partial 'documentacao/shared/box/_box-grid' %><% end %>
 
+  <p>Casa você deseje exibir o box sem dados:</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/box/_box-grid-no-data' %>
+  </div>
+
+  <% code("html") do %><%= partial 'documentacao/shared/box/_box-grid-no-data' %><% end %>
+
   <div class="ls-box ls-box-gray">
     <h2 class="ls-title-4">Box de dashboard</h2>
     <p>Perceba que para deixar o estilo dos boxes acima, há uma classe chamada <code>.ls-board-box</code> do pai. Esse estilo é bastante usado para as caixas de Dashboard da home do produto. <%= link_to 'Veja um exemplo aqui', base_url + '/documentacao/exemplos/painel1/home' %>.</p>
