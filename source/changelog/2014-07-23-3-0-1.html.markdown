@@ -24,7 +24,7 @@ layout: changelog-single
   </li>
 
   <li>
-    <span class="ls-tag-info">FIX</span>
+    <span class="ls-tag-danger">BUG</span>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/970" target="blank" class="commit-url">#970</a> Permitir dois popovers abertos
   </li>
 
