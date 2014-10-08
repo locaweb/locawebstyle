@@ -86,6 +86,17 @@ describe("Modal: ", function() {
         expect(window.test.method).toHaveBeenCalled();
       });
     });
+
+    describe("when ESC keyup", function() {
+
+      it("should unbind $document keyup event", function() {
+        var spy = spyOn(locastyle.modal, "open");
+        locastyle.modal.init();
+        $('[data-ls-module="modal"]').trigger("click");
+        expect($._data($(document)[0], "events").keyup.length).toEqual(2);
+      });
+
+    });
   });
 
   describe("Modal with wai-aria:", function() {
