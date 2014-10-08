@@ -7,51 +7,51 @@ layout: changelog-single
 
 <ul class="ls-no-list-style ls-no-margin-left">
   <li>
-    <strong class="ls-tag-success">Improvement</strong>
+    <strong class="ls-tag-info">IMPROVEMENT</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1195" class="commit-url">#1195</a> Reestilização de caixas
   </li>
   <li>
-    <strong class="ls-tag-success">Improvement</strong>
+    <strong class="ls-tag-info">IMPROVEMENT</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1085" class="commit-url">#1085</a> Revisão de filtro e paginação
   </li>
   <li>
-    <strong class="ls-tag-success">Improvement</strong>
+    <strong class="ls-tag-info">IMPROVEMENT</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1152" class="commit-url">#1152</a> Revisão de seletores aninhados do SASS
   </li>
   <li>
-    <strong class="ls-tag-success">Improvement</strong>
+    <strong class="ls-tag-info">IMPROVEMENT</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1158" class="commit-url">#1158</a> Corrigir valores rem/px pra que na conversao seja valor inteiro
   </li>
   <li>
-    <strong class="ls-tag-success">Improvement</strong>
+    <strong class="ls-tag-info">IMPROVEMENT</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1163" class="commit-url">#1163</a> Ajustando distância entre identificador e título
   </li>
   <li>
-    <strong class="ls-tag-success">Improvement</strong>
+    <strong class="ls-tag-info">IMPROVEMENT</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1164" class="commit-url">#1164</a> Usar @extend das classes funcionais quando necessário
   </li>
   <li>
-    <strong class="ls-tag-success">Improvement</strong>
+    <strong class="ls-tag-info">IMPROVEMENT</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1183" class="commit-url">#1183</a> Ajustar tamanho do .ls-ico-help
   </li>
   <li>
-    <strong class="ls-tag-success">Improvement</strong>
+    <strong class="ls-tag-info">IMPROVEMENT</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1193" class="commit-url">#1193</a> Ícones de fonts com os logos dos produtos
   </li>
   <li>
-    <strong class="ls-tag-success">Improvement</strong>
+    <strong class="ls-tag-info">IMPROVEMENT</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1144" class="commit-url">#1144</a> Revisão e Limpeza do CSS
   </li>
   <li>
-    <strong class="ls-tag-success">New</strong>
+    <strong class="ls-tag-success">NEW</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1088" class="commit-url">#1088</a> Estilizar botão de SAIR no mobile
   </li>
   <li>
-    <strong class="ls-tag-success">Bug</strong>
+    <strong class="ls-tag-danger">BUG</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1148" class="commit-url">#1148</a> Rolagem horizontal mobile
   </li>
   <li>
-    <strong class="ls-tag-success">Bug</strong>
+    <strong class="ls-tag-danger">BUG</strong>
     – <a href="https://github.com/locaweb/locawebstyle/issues/1149" class="commit-url">#1149</a> Problema com Sidebar ao redimensionar janela
   </li>
 </ul>

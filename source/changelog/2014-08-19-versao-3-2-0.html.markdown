@@ -34,19 +34,19 @@ layout: changelog-single
     &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/980" target="blank" class="commit-url">#980</a> Página de Login Esqueci minha senha. <a href="http://locaweb.github.io/locawebstyle/documentacao/exemplos/forgot-password/" class="ls-btn ls-btn-xs">Exemplo</a>
   </li>
   <li>
-    <strong class="ls-tag-info">FIX</strong>
+    <strong class="ls-tag-danger">BUG</strong>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/1057" target="blank" class="commit-url">#1057</a> Iniciar o Track Events quando houver uma classe no html.
   </li>
   <li>
-    <strong class="ls-tag-info">FIX</strong>
+    <strong class="ls-tag-danger">BUG</strong>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/1050" target="blank" class="commit-url">#1050</a> Removendo estilo da tag span dentro do select customizado.
   </li>
   <li>
-    <strong class="ls-tag-info">FIX</strong>
+    <strong class="ls-tag-danger">BUG</strong>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/1047" target="blank" class="commit-url">#1047</a> Melhoria na forma de criar palhetas de cores do Locaweb Style.
   </li>
   <li>
-    <strong class="ls-tag-info">FIX</strong>
+    <strong class="ls-tag-danger">BUG</strong>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/976" target="blank" class="commit-url">#976</a> Subtituição  de imagem do gráfico real dentro do Painel de exemplos.
   </li>
   <li>

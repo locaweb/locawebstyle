@@ -34,15 +34,15 @@ layout: changelog-single
     &ndash; <a href="https://github.com/locaweb/locawebstyle/issues/1009" target="blank" class="commit-url">#1009</a> Criado a documentação sobre classes de breakpoint. <a href="http://locaweb.github.io/locawebstyle/documentacao/css/classes-de-breakpoints/" class="ls-btn ls-btn-xs">Exemplo</a>
   </li>
   <li>
-    <strong class="ls-tag-info">FIX</strong>
+    <strong class="ls-tag-danger">BUG</strong>
     &ndash; <a href="https://github.com/locaweb/locawebstyle/pull/1010" target="blank" class="commit-url">#1010</a> Movido documentação de TrackEvents para Funções JS. <a href="http://locaweb.github.io/locawebstyle/documentacao/funcoes-js/rastreando-eventos/" class="ls-btn ls-btn-xs">Exemplo</a>
   </li>
   <li>
-    <strong class="ls-tag-info">FIX</strong>
+    <strong class="ls-tag-danger">BUG</strong>
     &ndash; Mensagem de alerta pode ser fixa no topo ou fim da página inserindo classes específicas. <a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/alertas/" class="ls-btn ls-btn-xs">Exemplo</a>
   </li>
   <li>
-    <strong class="ls-tag-info">FIX</strong>
+    <strong class="ls-tag-danger">BUG</strong>
     &ndash; <a href="https://github.com/deividmarques/locawebstyle/commit/b41438f0c08ccaf256631769a052c13d99fc0930" target="blank" class="commit-url">#1041</a> Aplicando estilo de select customizada quando está desativada.
   </li>
   <li>
