@@ -1,0 +1,125 @@
+---
+title: Entradas de DNS
+layout: panel
+theme_name: ls-theme-wine
+title_product: Painel de DNS
+---
+
+<h1 class="ls-title-intro ls-ico-pencil2">Entradas de DNS</h1>
+<div class="ls-box ls-board-box">
+  <header class="ls-info-header">
+    <h2 class="ls-title-3">adidas.com.br</h2>
+  </header>
+
+  <div id="sending-stats" class="row ls-clearfix">
+    <div class="col-sm-6 col-md-4">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Domínio</h6>
+        <span class="ls-board-data">
+          <strong>
+            REGISTRADO
+            <small>NA LOCAWEB</small>
+          </strong>
+
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-4">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Servidores Dns</h6>
+        <p class="ls-board-data">
+          Primário (master): <b>ns1.locaweb.com.br</b><br>
+          Secundário (slave1): <b>ns2.locaweb.com.br</b><br>
+          Terciário (slave2): <b>ns3.locaweb.com.br</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+      <div class="ls-box">
+        <h6 class="ls-title-4 color-default">Zona de Dns</h6>
+        <span class="ls-board-data">
+          <strong class="ls-color-theme">COM AUTORIDADE<small>NA LOCAWEB</small></strong>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ls-box">
+  <header class="ls-info-header">
+    <h2 class="ls-title-3">Adicionar novas entradas</h2>
+  </header><!-- /header -->
+  <form action="" class="ls-form ls-form-horizontal">
+    <fieldset class="row">
+      <label class="ls-label col-md-3 col-xs-12">
+        <b class="ls-label-text">Entrada</b>
+        <input type="text" name="entry" class="ls-field" required>
+      </label>
+      <label class="ls-label col-md-2 col-xs-12">
+        <b class="ls-label-text">Tipo</b>
+        <input type="text" name="type" class="ls-field" required>
+      </label>  <label class="ls-label col-md-2 col-xs-12">
+        <b class="ls-label-text">Prioridade</b>
+        <input type="text" name="priority" class="ls-field" required>
+      </label>
+      <label class="ls-label col-md-4 col-xs-12">
+        <b class="ls-label-text">Conteúdo</b>
+        <input type="text" name="content" class="ls-field" required>
+      </label>
+      <div class="col-md-1 col-xs-12"><button class="ls-btn">+</button></div>
+    </fieldset>
+    <fieldset class="row">
+      <label class="ls-label col-md-3 col-xs-12">
+        <b class="ls-label-text">Entrada</b>
+        <input type="text" name="entry" class="ls-field" required>
+      </label>
+      <label class="ls-label col-md-2 col-xs-12">
+        <b class="ls-label-text">Tipo</b>
+        <input type="text" name="type" class="ls-field" required>
+      </label>  <label class="ls-label col-md-2 col-xs-12">
+        <b class="ls-label-text">Prioridade</b>
+        <input type="text" name="priority" class="ls-field" required>
+      </label>
+      <label class="ls-label col-md-4 col-xs-12">
+        <b class="ls-label-text">Conteúdo</b>
+        <input type="text" name="content" class="ls-field" required>
+      </label>
+      <div class="col-md-1 col-xs-12"><button class="ls-btn">+</button></div>
+    </fieldset>
+    <p class="ls-help-message">Todas as entradas adicionadas possuirão o mesmo valor de TTL 3600.</p>
+    <hr>
+    <div class="ls-actions-btn">
+      <button class="ls-btn ls-btn-primary">Salvar</button>
+      <button class="ls-btn-danger">Cancelar</button>
+    </div>
+  </form>
+</div>
+<div class="ls-box">
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th class="ls-data-descending"><a href="#">Entrada</a></th>
+        <th class="hidden-xs">Tipo</th>
+        <th>Prioridade</th>
+        <th class="hidden-xs">Conteúdo</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%- 10.times do %>
+        <tr>
+          <td>www</td>
+          <td class="hidden-xs">CNAME</td>
+          <td>0</td>
+          <td class="hidden-xs">adidas.com.br</td>
+          <td class="ls-txt-right">
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-primary">Editar</a>
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger">Excluir</a>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
