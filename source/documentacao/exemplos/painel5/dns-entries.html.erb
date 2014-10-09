@@ -3,6 +3,7 @@ title: Entradas de DNS
 layout: panel
 theme_name: ls-theme-wine
 title_product: Painel de DNS
+html_class: ls-html-nobg ls-main-full
 ---
 
 <h1 class="ls-title-intro ls-ico-pencil2">Entradas de DNS</h1>
@@ -51,45 +52,30 @@ title_product: Painel de DNS
   <header class="ls-info-header">
     <h2 class="ls-title-3">Adicionar novas entradas</h2>
   </header><!-- /header -->
-  <form action="" class="ls-form ls-form-horizontal">
+  <form action="" class="ls-form ls-form-horizontal ls-box ls-box-gray">
 
-    <%- 5.times do |index| %>
-      <fieldset class="row">
-        <label class="ls-label col-md-3 col-xs-12">
-          <b class="ls-label-text">Entrada</b>
-          <input type="text" name="entry" class="ls-field" required>
-        </label>
-        <label class="ls-label col-md-2 col-xs-12">
-          <b class="ls-label-text">Tipo</b>
-          <input type="text" name="type" class="ls-field" required>
-        </label>  <label class="ls-label col-md-2 col-xs-12">
-          <b class="ls-label-text">Prioridade</b>
-          <input type="text" name="priority" class="ls-field" required>
-        </label>
-        <label class="ls-label col-md-3 col-xs-12">
-          <b class="ls-label-text">Conteúdo</b>
-          <input type="text" name="content" class="ls-field" required>
-        </label>
-        <% if index === 4 %>
-          <div class="col-md-2 col-xs-12 ls-txt-left">
-            <button class="ls-btn ls-btn-sm ls-btn-danger">-</button>
-            <button class="ls-btn ls-btn-sm ls-btn-primary">+</button>
-          </div>
-        <% else %>
-          <div class="col-md-2 col-xs-12 ls-txt-left"><button class="ls-btn ls-btn-sm ls-btn-danger">-</button></div>
-        <% end %>
+    <fieldset class="row">
+      <label class="ls-label col-md-3 col-xs-12">
+        <b class="ls-label-text">Entrada</b>
+        <input type="text" name="entry" class="ls-field" required>
+      </label>
+      <label class="ls-label col-md-2 col-xs-12">
+        <b class="ls-label-text">Tipo</b>
+        <input type="text" name="type" class="ls-field" required>
+      </label>  <label class="ls-label col-md-2 col-xs-12">
+        <b class="ls-label-text">Prioridade</b>
+        <input type="text" name="priority" class="ls-field" required>
+      </label>
+      <label class="ls-label col-md-3 col-xs-12">
+        <b class="ls-label-text">Conteúdo</b>
+        <input type="text" name="content" class="ls-field" required>
+      </label>
+      <div class="col-md-2 col-xs-12 ls-txt-left"><button class="ls-btn ls-btn-primary ls-btn-sm">Adicionar entradas</button></div>
 
-      </fieldset>
-    <% end %>
-
+    </fieldset>
     <p class="ls-help-message">Todas as entradas adicionadas possuirão o mesmo valor de TTL 3600.</p>
-    <hr>
-    <div class="ls-actions-btn">
-      <button class="ls-btn ls-btn-primary">Adicionar entradas</button>
-    </div>
+
   </form>
-</div>
-<div class="ls-box">
   <table class="ls-table">
     <thead>
       <tr>
