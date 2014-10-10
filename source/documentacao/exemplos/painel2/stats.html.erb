@@ -122,21 +122,21 @@ title_product: SMTP Locaweb
       <table class="ls-table">
         <thead>
           <tr>
-            <th>Data</th>
+            <th class="hidden-xs">Data</th>
             <th>Remetente</th>
             <th>Destinatário</th>
             <th>Status do envio</th>
-            <th>Assunto</th>
+            <th class="hidden-xs">Assunto</th>
           </tr>
         </thead>
         <tbody>
           <%- 5.times do |num| %>
             <tr>
-              <td><%= lorem.date %></td>
+              <td class="hidden-xs"><%= lorem.date %></td>
               <td><%= lorem.email %></td>
               <td><%= lorem.email %></td>
               <td>Entregue</td>
-              <td><%= lorem.sentence %></td>
+              <td class="hidden-xs"><%= lorem.sentence %></td>
             </tr>
           <% end %>
         </tbody>
