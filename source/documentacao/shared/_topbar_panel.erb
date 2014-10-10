@@ -29,8 +29,10 @@
 
   <span class="ls-show-sidebar ls-ico-menu"></span>
 
+  <a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/pre-painel"  class="ls-go-next"><span class="ls-text">Voltar à lista de serviços</span></a>
+
   <!-- Nome do produto/marca -->
   <%- unless current_page.data.show_topbar_title %>
-    <h1 class="ls-brand-name"><%= link_to current_page.data.title_product, '../home', :class => 'ls-ico-earth' %></h1>
+    <h1 class="ls-brand-name"><%= link_to current_page.data.title_product, 'home', :class => 'ls-ico-earth' %></h1>
   <% end %>
 </div>
