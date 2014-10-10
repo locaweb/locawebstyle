@@ -25,25 +25,6 @@
           color: #fff
 
   .ls-user-account
-
-    > a
-      color: #555
-
-      small
-        +rgba(color, #555,1)
-
-      &:before
-        +rgba(color, #555,.5)
-        box-shadow: inset 0 0 0 2px rgba(#555,.3)
-
-      &:after
-        border-top-color: #555
-
-    &.ls-active > a:after
-      border: 4px solid transparent
-      border-bottom-color: #555
-
-  .ls-user-account
     background-color: #dedede
 
   .ls-topbar
@@ -57,3 +38,15 @@
   .ls-pre-panel
     .ls-sidebar
       z-index: 12
+
+    .ls-user-account
+
+      > a
+        color: #555
+
+        small
+          +rgba(color, #555,1)
+
+        &:before
+          +rgba(color, #555,.5)
+          box-shadow: inset 0 0 0 2px rgba(#555,.3)
