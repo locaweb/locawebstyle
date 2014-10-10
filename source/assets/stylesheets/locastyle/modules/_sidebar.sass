@@ -8,12 +8,15 @@
 
   .ls-user-account
     position: absolute
-    top: 0
+    bottom: 0
     left: 0
     padding: 0
     display: inline-block
     width: 100%
     background-color: #111
+
+    > a:after
+      content: "\e60f"
 
     &.ls-active
       height: 100%
@@ -203,6 +206,9 @@
       position: static
 
     .ls-user-account
+      display: none
+
+    .ls-sidebar-top
       display: none
 
 @media screen and (max-width: $screen-sm)
