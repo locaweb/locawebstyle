@@ -15,6 +15,10 @@
     width: 100%
     background-color: #111
 
+    ~ .ls-sidebar-top
+      overflow: auto
+      height: calc(100% - 60px)
+
     > a:after
       content: "\e60f"
 
@@ -52,7 +56,6 @@
   margin: 0
   padding: 0
   height: 100%
-  overflow: auto
   -webkit-overflow-scrolling: touch
   -moz-overflow-scrolling: touch
   -ms-overflow-scrolling: touch
@@ -200,6 +203,7 @@
 
     .ls-menu
       height: 100%
+      overflow: auto
       margin-top: 0
 
     .ls-area-account
@@ -208,8 +212,9 @@
     .ls-user-account
       display: none
 
-    .ls-sidebar-top
-      display: none
+      ~ .ls-sidebar-top
+        overflow: initial
+        height: 100%
 
 @media screen and (max-width: $screen-sm)
   .ls-sidebar .ls-user-account + .ls-ico-user + .ls-menu,
