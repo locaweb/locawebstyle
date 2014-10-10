@@ -1,0 +1,82 @@
+[class*="ls-go"]
+  position: relative
+
+  &:before
+    @extend .ls-ico-chevron-left
+    font-family: 'locastyle'
+    border-right: 1px solid rgba(0,0,0,0.2)
+    color: #fff
+    display: inline-block
+    vertical-align: top
+    height: 60px
+    line-height: 65px
+    text-align: center
+    font-size: 20px
+    position: relative
+    width: 60px
+
+  .ls-text
+    display: none
+    top: 0
+    left: 0
+    position: absolute
+    width: auto
+
+  .ls-sidebar &
+    display: table
+    width: 100%
+
+    .ls-text
+      display: table-cell
+      color: #fff
+      vertical-align: middle
+      position: static
+
+  .ls-topbar &
+    display: none
+
+@media screen and (min-width: $screen-sm)
+
+  [class*="ls-go"]
+
+    .ls-sidebar &
+      display: none
+
+    .ls-topbar &
+      display: inline-block
+      vertical-align: top
+
+    .ls-text
+      display: none
+      top: 18px
+      left: 70px
+      position: absolute
+      height: 25px
+      line-height: 25px
+      padding: 0 10px
+      font-size: 12px
+      text-align: center
+      color: #fff
+      background: #222
+      border-radius: $default-radius
+      text-shadow: 0 0 5px #000
+      white-space: nowrap
+
+      &:before
+        position: absolute
+        left: -12px
+        top: 6px
+        z-index: 10
+
+      &:before
+        content: ""
+        width: 0
+        height: 0
+        border-width: 6px
+        border-style: solid
+        border-color: transparent #222 transparent transparent
+
+    &:hover,
+    &:focus
+      .ls-text
+        display: block

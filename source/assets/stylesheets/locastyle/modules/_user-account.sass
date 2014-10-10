@@ -30,16 +30,15 @@
       display: inline-block
 
     &:after
-      content: ""
-      border: 4px solid transparent
-      border-top-color: #fff
+      content: "\e60b"
+      font-size: remtopx(.75)
       display: inline-block
       margin-left: 10px
-      +single-transition( border, .2s, ease-in-out)
+      +single-transition(all, .2s)
 
   &.ls-active > a:after
-    border: 4px solid transparent
-    border-bottom-color: #fff
+    +rotate(180deg)
+    +single-transition(all, .2s)
 
   input[type='checkbox']
     height: 60px

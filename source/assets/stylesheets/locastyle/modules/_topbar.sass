@@ -98,7 +98,7 @@
     cursor: pointer
 
     &:before
-      position: fixed
+      position: absolute
       padding: 15px 15px 0
       height: $topbar-height
       display: inline-block
@@ -108,13 +108,15 @@
       cursor: pointer
 
     &:after
+      background: #fff
       content: ""
-      position: fixed
+      position: absolute
       top: 0
       left: 0
       width: 100%
       height: 2424px
       display: none
+      opacity: .8
 
   .ls-show-notifications:before
     right: 0
