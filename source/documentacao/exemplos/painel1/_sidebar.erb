@@ -1,5 +1,20 @@
-<% if current_page.data.pre_panel %>
-  <div class="ls-sidebar-inner">
+<div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+  <a href="#" class="ls-ico-user">
+    João
+    <small>(fmolina)</small>
+  </a>
+  <nav class="ls-dropdown-nav ls-user-menu">
+    <ul>
+      <li><a href="#">Meus dados</a></li>
+      <li><a href="#">Faturas</a></li>
+      <li><a href="#">Planos</a></li>
+     </ul>
+     <a href="#" class="ls-btn-logout">Sair</a>
+  </nav>
+</div>
+
+<div class="ls-sidebar-inner">
+  <% if current_page.data.pre_panel %>
     <h1 class="ls-brand-name ls-ico-earth"><%= link_to current_page.data.title_product, '../home' %></h1>
     <nav class="ls-menu">
       <ul>
@@ -8,23 +23,7 @@
          <li><a href="<%= base_url %>/documentacao/exemplos/painel1/home" class="ls-ico-stats" >Serviço A</a></li>
        </ul>
     </nav>
-  </div>
-<% else %>
-  <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
-    <a href="#" class="ls-ico-user">
-      João
-      <small>(fmolina)</small>
-    </a>
-    <nav class="ls-dropdown-nav ls-user-menu">
-      <ul>
-        <li><a href="#">Meus dados</a></li>
-        <li><a href="#">Faturas</a></li>
-        <li><a href="#">Planos</a></li>
-       </ul>
-       <a href="#" class="ls-btn-logout">Sair</a>
-    </nav>
-  </div>
-  <div class="ls-sidebar-inner">
+  <% else %>
     <a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/pre-painel"  class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
 
     <nav class="ls-menu">
@@ -45,6 +44,6 @@
         </li>
       </ul>
     </nav>
-  </div>
 
-<% end %>
+  <% end %>
+</div>
