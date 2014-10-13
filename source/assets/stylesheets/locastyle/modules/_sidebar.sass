@@ -6,6 +6,10 @@
   top: 0
   height: 100%
 
+  .ls-sidebar-inner
+    overflow: auto
+    height: inherit
+
   .ls-user-account
     position: absolute
     bottom: 0
@@ -15,8 +19,7 @@
     width: 100%
     background-color: #111
 
-    ~ .ls-sidebar-top
-      overflow: auto
+    ~ .ls-sidebar-inner
       height: calc(100% - 60px)
 
     > a:after
@@ -212,7 +215,7 @@
     .ls-user-account
       display: none
 
-      ~ .ls-sidebar-top
+      ~ .ls-sidebar-inner
         overflow: initial
         height: 100%
 
