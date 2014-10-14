@@ -1,0 +1,103 @@
+---
+title: Alternando Classes
+description: Como alterar classes de elementos
+type: funcoesjs
+---
+
+<%= partial 'partials/doc-menu-funcoes-js' %>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <p>Basicamente essa funcionalidade faz um <strong>toggleClass</strong> em determinado elemento para que sua classe seja alternada.</p>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classe / Atributo</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>data-toggle-class</td>
+        <td>Atributo cujo valor é a classe que o script irá alternar</td>
+      </tr>
+      <tr>
+        <td>data-target</td>
+        <td>Elementos que terão a classe alternada definida no <code>data-toggle-class</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Veja um exemplo abaixo:</p>
+
+  <div class="ls-box-demo">
+    <button class="ls-btn-dark" data-toggle-class="ls-btn-dark">Troca a adiciona/remove a classe <i>.ls-btn-dark</i> deste botão</button>
+  </div>
+  <% code("html") do %>
+<button class="ls-btn-dark" data-toggle-class="ls-btn-dark">Troca a adiciona/remove a classe <i>.ls-btn-dark</i> deste botão</button>
+  <% end %>
+
+  <p>Neste exemplo, o atributo <code>data-toggle-class</code> contém o valor da classe que ele deve alternar.</p>
+
+  <div class="ls-box-demo">
+    <button class="ls-btn-primary" data-toggle-class="ls-background-info" data-target="#lsBox">Alterna a classe <strong>.ls-background-info</strong> do <strong>ls-box</strong></button>
+    <br>
+    <br>
+    <div id="lsBox" class="ls-box ls-background-info">
+      Uma mensagem bonita para caramba!
+    </div>
+  </div>
+  <% code("html") do %>
+<button class="ls-btn-primary" data-toggle-class="ls-background-info" data-target="#lsBox">Alterna a classe <strong>.ls-background-info</strong> do <strong>ls-box</strong></button>
+<div id="lsBox" class="ls-box ls-background-info">
+  Uma mensagem bonita para caramba!
+</div>
+  <% end %>
+
+  <p>É possível modificar vários elementos ao mesmo tempo, referenciando no <code>data-target</code> a classe destes elementos, como abaixo:</p>
+  <div class="ls-box-demo">
+    <button class="ls-btn-primary" data-toggle-class="ls-background-warning" data-target=".exampleBox">Alterna as classes dos elementos abaixo</button><br><br>
+    <div class="exampleBox ls-box ls-background-warning">Uma mensagem bonita para caramba!</div>
+    <div class="exampleBox ls-box ls-background-warning">Uma mensagem bonita para caramba!</div>
+  </div>
+  <% code("html") do %>
+<button class="ls-btn-primary" data-toggle-class="ls-background-warning" data-target=".exampleBox">Alterna as classes dos elementos abaixo</button>
+<div class="exampleBox ls-box ls-background-warning">Uma mensagem bonita para caramba!</div>
+<div class="exampleBox ls-box ls-background-warning">Uma mensagem bonita para caramba!</div>
+  <% end %>
+
+  <p>Também é possível usar o comportamento em <code>inputs</code> do tipo <code>radio</code> e <code>checkbox</code>, sendo, quando marcados, inserem a classe, quando <b>desmarcados</b> removem a classe do elemento desejado. Exemplos:</p>
+
+  <div class="ls-box-demo">
+
+    <p>Checkbox</p>
+
+    <label><input type="checkbox" name="teste" value ="1" data-toggle-class="ls-display-none" data-target="#configs"> Configurações personalizadas</label>
+    <br><br>
+    <div id="configs" class="ls-box ls-display-none">
+      <%= lorem.words 3 %>
+    </div>
+
+    <hr>
+
+    <p>Radiogroup</p>
+
+    <label><input type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt1"> Opção 1</label>
+    <div id="opt1" class="ls-box ls-display-none"> <%= lorem.words 3 %> </div>
+    <br>
+    <label><input type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt2"> Opção 2</label>
+    <div id="opt2" class="ls-box ls-display-none"> <%= lorem.words 3 %> </div>
+    <br>
+    <label><input type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt3"> Opção 3</label>
+    <div id="opt3" class="ls-box ls-display-none"> <%= lorem.words 3 %> </div>
+    <br>
+
+  </div>
+  <br>
+  <br>
+  <br>
+
+</section>

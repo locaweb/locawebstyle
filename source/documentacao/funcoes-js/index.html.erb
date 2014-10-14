@@ -1,6 +1,6 @@
 ---
-title: Alternando Classes
-description: Como alterar classes de elementos
+title: Iniciando as funções JS
+description: Inicie as funções JS do Locaweb Style quando necessário
 type: funcoesjs
 ---
 
@@ -10,94 +10,75 @@ type: funcoesjs
 
   <%= partial 'partials/doc-intro-content' %>
 
-  <p>Basicamente essa funcionalidade faz um <strong>toggleClass</strong> em determinado elemento para que sua classe seja alternada.</p>
+  <p>Cada módulo JavaScript do Locaweb Style é iniciado individualmente caso nosso script detecte a presença do componente na página. Essa inicialização é feita automaticamente e você não precisa se preocupar com isso em ambientes normais.<br>
+  Mas há momentos que você precisa reiniciar esse os módulos em ocasiões quando o DOM é modificado ou você está fazendo uma requisição AJAX e precisa que o componente seja executado novamente. Para tanto, você poderá inicar os módulos manualmente quando necessário.</p>
 
+  <h2 class="doc-title-3">Iniciando os módulos</h2>
+  <p>Funciona assim: para iniciar um módulo use a seguinte chamada: <code>locastyle.nome_do_modulo.init()</code>.<br>
+  O exemplo abaixo inicia a nossa função de modal:</p>
+
+  <% code("javascript") do %>
+  (function() {
+    // Inicia a função de Modal manualmente
+    locastyle.modal.init();
+  })();
+  <% end %>
+
+  <p>Se você quiser iniciar todos os componentes do Locastyle, basta chamar a função: <code>locastyle.init();</code>. <br>
+  Isso vai iniciar todos os módulos que estão sendo utilizados na página em que foi executada.</p>
+
+  <p>Abaixo segue a listagem dos nomes dos nossos componentes. Você pode ver isso também <a href="https://github.com/locaweb/locawebstyle/tree/master/source/assets/javascripts/locastyle">em cada um dos arquivos JS listados aqui</a>.</p>
   <table class="ls-table">
     <thead>
       <tr>
-        <th>Classe / Atributo</th>
-        <th>Descrição</th>
+        <th>Nome do Módulo</th>
+        <th>Função</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>data-toggle-class</td>
-        <td>Atributo cujo valor é a classe que o script irá alternar</td>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/alertas/">Alerts</a></td>
+        <td>locastyle.alert.init()</td>
       </tr>
       <tr>
-        <td>data-target</td>
-        <td>Elementos que terão a classe alternada definida no <code>data-toggle-class</code></td>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/">Abas</a></td>
+        <td>locastyle.tabs.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/barra-de-progresso/">Barra de Progresso</a></td>
+        <td>locastyle.progressBar.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/collapse/">Collapse e Accordeon</a></td>
+        <td>locastyle.collapse.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/dropdown/">Dropdown</a></td>
+        <td>locastyle.dropdown.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/modal/">Modal</a></td>
+        <td>locastyle.modal.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/popover/">Popover</a></td>
+        <td>locastyle.popover.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/formularios/contador/">Contador de Caractéres</a></td>
+        <td>locastyle.charCounter.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/tour-guiado/">Tour Guiado</a></td>
+        <td>locastyle.guidedTour.init()</td>
+      </tr>
+      <tr>
+        <td><a href="http://localhost:4567/documentacao/funcoes-js/dismiss/">Dismiss</a></td>
+        <td>locastyle.dismiss.init()</td>
       </tr>
     </tbody>
   </table>
 
-  <p>Veja um exemplo abaixo:</p>
 
-  <div class="ls-box-demo">
-    <button class="ls-btn-dark" data-toggle-class="ls-btn-dark">Troca a adiciona/remove a classe <i>.ls-btn-dark</i> deste botão</button>
-  </div>
-  <% code("html") do %>
-<button class="ls-btn-dark" data-toggle-class="ls-btn-dark">Troca a adiciona/remove a classe <i>.ls-btn-dark</i> deste botão</button>
-  <% end %>
-
-  <p>Neste exemplo, o atributo <code>data-toggle-class</code> contém o valor da classe que ele deve alternar.</p>
-
-  <div class="ls-box-demo">
-    <button class="ls-btn-primary" data-toggle-class="ls-background-info" data-target="#lsBox">Alterna a classe <strong>.ls-background-info</strong> do <strong>ls-box</strong></button>
-    <br>
-    <br>
-    <div id="lsBox" class="ls-box ls-background-info">
-      Uma mensagem bonita para caramba!
-    </div>
-  </div>
-  <% code("html") do %>
-<button class="ls-btn-primary" data-toggle-class="ls-background-info" data-target="#lsBox">Alterna a classe <strong>.ls-background-info</strong> do <strong>ls-box</strong></button>
-<div id="lsBox" class="ls-box ls-background-info">
-  Uma mensagem bonita para caramba!
-</div>
-  <% end %>
-
-  <p>É possível modificar vários elementos ao mesmo tempo, referenciando no <code>data-target</code> a classe destes elementos, como abaixo:</p>
-  <div class="ls-box-demo">
-    <button class="ls-btn-primary" data-toggle-class="ls-background-warning" data-target=".exampleBox">Alterna as classes dos elementos abaixo</button><br><br>
-    <div class="exampleBox ls-box ls-background-warning">Uma mensagem bonita para caramba!</div>
-    <div class="exampleBox ls-box ls-background-warning">Uma mensagem bonita para caramba!</div>
-  </div>
-  <% code("html") do %>
-<button class="ls-btn-primary" data-toggle-class="ls-background-warning" data-target=".exampleBox">Alterna as classes dos elementos abaixo</button>
-<div class="exampleBox ls-box ls-background-warning">Uma mensagem bonita para caramba!</div>
-<div class="exampleBox ls-box ls-background-warning">Uma mensagem bonita para caramba!</div>
-  <% end %>
-
-  <p>Também é possível usar o comportamento em <code>inputs</code> do tipo <code>radio</code> e <code>checkbox</code>, sendo, quando marcados, inserem a classe, quando <b>desmarcados</b> removem a classe do elemento desejado. Exemplos:</p>
-
-  <div class="ls-box-demo">
-
-    <p>Checkbox</p>
-
-    <label><input type="checkbox" name="teste" value ="1" data-toggle-class="ls-display-none" data-target="#configs"> Configurações personalizadas</label>
-    <br><br>
-    <div id="configs" class="ls-box ls-display-none">
-      <%= lorem.words 3 %>
-    </div>
-
-    <hr>
-
-    <p>Radiogroup</p>
-
-    <label><input type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt1"> Opção 1</label>
-    <div id="opt1" class="ls-box ls-display-none"> <%= lorem.words 3 %> </div>
-    <br>
-    <label><input type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt2"> Opção 2</label>
-    <div id="opt2" class="ls-box ls-display-none"> <%= lorem.words 3 %> </div>
-    <br>
-    <label><input type="radio" name="teste2" value ="0" data-toggle-class="ls-display-none" data-target="#opt3"> Opção 3</label>
-    <div id="opt3" class="ls-box ls-display-none"> <%= lorem.words 3 %> </div>
-    <br>
-
-  </div>
-  <br>
-  <br>
-  <br>
 
 </section>
