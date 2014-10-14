@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html class="<%= current_page.data.theme_name %> <%= current_page.data.html_class %> <%= "ls-pre-panel" if current_page.data.pre_panel %>">
 <head>
+  <title><%= current_page.data.title %></title>
+
   <meta charset="utf-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title><%= current_page.data.title %></title>
-  <meta name="description" content="<%= current_page.data.description %>" />
-  <meta name="keywords" content="<%= current_page.data.keywords %>" />
+  <meta name="description" content="<%= current_page.data.description %>">
+  <meta name="keywords" content="<%= current_page.data.keywords %>">
+
+  <% if page_classes.split(" ")[2] === 'documentacao_exemplos_painel1' %>
+    <link rel="icon" sizes="192x192" href="<%= base_url %>/assets/images/ico-painel1.png">
+    <link rel="apple-touch-icon" href="<%= base_url %>/assets/images/ico-painel1.png">
+  <% else %>
+    <link rel="icon" sizes="192x192" href="<%= base_url %>/assets/images/ico-painel2.png">
+    <link rel="apple-touch-icon" href="<%= base_url %>/assets/images/ico-painel2.png">
+  <% end %>
+
   <%= stylesheet_link_tag "locastyle" %>
 </head>
 <body class="<%= page_classes %>">
