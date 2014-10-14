@@ -99,7 +99,7 @@
   
   "documentacao/componentes/botao-switch" :   {
       "title": "Botão Switch",
-      "description": "É um elemento que simula um liga/desliga, que verifica se o checkbox está checado, alternando visualmente o seu estado.",
+      "description": "O botão Switch permite a escolha de apenas uma entre duas opções (Ativado ou Desativado).",
       "path": "documentacao/componentes/botao-switch"
   },
   
@@ -215,6 +215,12 @@
       "title": "Estrutura de Grid",
       "description": "Estruturando seus layouts com o nosso sistema de grid",
       "path": "documentacao/css/grid"
+  },
+  
+  "documentacao/css/icones-panel" :   {
+      "title": "Ícones de painel",
+      "description": "Coleção de font icons ativadas por classe",
+      "path": "documentacao/css/icones-panel"
   },
   
   "documentacao/css/icones" :   {
@@ -475,6 +481,18 @@
       "path": "documentacao/exemplos/painel4/pre-painel"
   },
   
+  "documentacao/exemplos/painel5/dns-entries" :   {
+      "title": "Entradas de DNS",
+      "description": "",
+      "path": "documentacao/exemplos/painel5/dns-entries"
+  },
+  
+  "documentacao/exemplos/painel5/home" :   {
+      "title": "Página Inicial",
+      "description": "",
+      "path": "documentacao/exemplos/painel5/home"
+  },
+  
   "documentacao/exemplos/product-not-hired" :   {
       "title": "",
       "description": "",
@@ -617,12 +635,6 @@
       "title": "Suporte para browsers antigos",
       "description": "Entenda como melhorar o suporte a browsers antigos, como o IE8",
       "path": "documentacao/introducao/suporte-browsers"
-  },
-  
-  "documentacao/perf-css" :   {
-      "title": "",
-      "description": "",
-      "path": "documentacao/perf-css"
   },
   
   "documentacao/praticas/css" :   {
