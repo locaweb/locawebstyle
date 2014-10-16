@@ -14,9 +14,11 @@
   <% if page_classes.split(" ")[2] === 'documentacao_exemplos_painel1' %>
     <link rel="icon" sizes="192x192" href="<%= base_url %>/assets/images/ico-painel1.png">
     <link rel="apple-touch-icon" href="<%= base_url %>/assets/images/ico-painel1.png">
+    <meta name="apple-mobile-web-app-title" content="Painel 1">
   <% else %>
     <link rel="icon" sizes="192x192" href="<%= base_url %>/assets/images/ico-painel2.png">
     <link rel="apple-touch-icon" href="<%= base_url %>/assets/images/ico-painel2.png">
+    <meta name="apple-mobile-web-app-title" content="Painel 2">
   <% end %>
 
   <%= stylesheet_link_tag "locastyle" %>
