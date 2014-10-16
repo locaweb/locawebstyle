@@ -1,129 +1,104 @@
 ---
-title: Página Inicial
+title: Entradas de DNS
 layout: panel
-show_topbar_title: true
-pre_panel: true
 theme_name: ls-theme-wine
 title_product: Painel de DNS
+html_class: ls-html-nobg ls-main-full
 ---
 
-<h1 class="ls-title-intro ls-ico-list2">Domínios</h1>
-
-<div class="ls-box-filter">
-  <!-- To do this -->
-  <form action="" class="ls-form ls-form-inline ls-float-left">
-    <label class="ls-label">
-      <b class="ls-label-text">Status</b>
-      <div data-ls-module="customFields">
-        <select class="go-to-option" name="">
-          <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
-          <option value="#">Registrados</option>
-          <option value="#">Não registrados</option>
-          <option value="#">Bloqueados</option>
-        </select>
-      </div>
-    </label>
-  </form>
-
-  <form class="ls-form ls-float-right buffer-inserted">
-    <label class="ls-label" role="search">
-      <b class="ls-label-text ls-hidden-accessible">Pesquisa</b>
-      <input type="text" id="q" name="q" aria-label="Faça sua busca por domínio" accesskey="s" placeholder="Busca por domínio" required="">
-    </label>
-    <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
-  </form>
-</div>
-
-<div class="ls-list">
-  <header class="ls-list-header">
-    <div class="ls-list-title col-md-8">
-      <a href="#" >adidas.com.br</a>
-      <small>Hospedagem 2</small>
-    </div>
-        <div class="col-xs-6 col-md-2">
-            <strong class="ls-list-label">Domínio</strong>
-            Publicado
-        </div>
-    <div class="col-xs-6 col-md-2 ls-txt-right">
-      <a href="<#" class="ls-btn-primary">Administrar</a>
-    </div>
+<h1 class="ls-title-intro ls-ico-pencil2">Entradas de DNS</h1>
+<div class="ls-box ls-board-box">
+  <header class="ls-info-header">
+    <h2 class="ls-title-3">adidas.com.br</h2>
   </header>
-</div>
 
-<div class="ls-list">
-    <header class="ls-list-header">
-        <div class="ls-list-title col-md-8">
-            <a href="#" >diadora.com</a> <a href="#" class="ls-tag-warning">Desenvolvedor</a>
-            <small>Email Locaweb II</small>
-        </div>
-        <div class="col-xs-6 col-md-2">
-            <strong class="ls-list-label">Domínio</strong>
-            Não registrado <a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="left" data-custom-classes="ls-width-300" data-content="<p>Este domínio parece não estar registrado.</p>"></a>
-        </div>
-        <div class="col-xs-6 col-md-2 ls-txt-right">
-            <a href="<#" class="ls-btn-primary">Administrar</a>
-        </div>
-    </header>
-</div>
+  <div id="sending-stats" class="row ls-clearfix">
+    <div class="col-sm-6 col-md-4">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Domínio</h6>
+        <span class="ls-board-data">
+          <strong>
+            REGISTRADO
+            <small>NA LOCAWEB</small>
+          </strong>
 
-<div class="ls-list">
-    <header class="ls-list-header">
-        <div class="ls-list-title col-md-8">
-            <a href="#">puma.com</a> <a href="#" class="ls-tag-warning">Desenvolvedor</a>
-            <small>Email Locaweb II</small>
-        </div>
-        <div class="col-xs-6 col-md-2">
-            <strong class="ls-list-label">Domínio</strong>
-            Não registrado <a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="left" data-custom-classes="ls-width-300" data-content="<p>Este domínio parece não estar registrado.</p>"></a>
-        </div>
-        <div class="col-xs-6 col-md-2 ls-txt-right">
-            <a href="<#" class="ls-btn-primary">Administrar</a>
-        </div>
-    </header>
-</div>
+        </span>
+      </div>
+    </div>
 
-<div class="ls-list">
-    <header class="ls-list-header">
-        <div class="ls-list-title col-md-8">
-            <a href="#" >mizuno.com.br</a>
-            <small>Hospedagem 2</small>
-        </div>
-        <div class="col-xs-12 col-md-2">
-            <strong class="ls-list-label">Domínio</strong>
-            Publicado
-        </div>
-        <div class="col-xs-6 col-md-2 ls-txt-right">
-            <a href="<#" class="ls-btn-primary">Administrar</a>
-        </div>
-    </header>
-</div>
+    <div class="col-sm-12 col-md-4">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Servidores Dns</h6>
+        <p class="ls-board-data">
+          Primário (master): <b>ns1.locaweb.com.br</b><br>
+          Secundário (slave1): <b>ns2.locaweb.com.br</b><br>
+          Terciário (slave2): <b>ns3.locaweb.com.br</b>
+        </p>
+      </div>
+    </div>
 
-<div class="ls-pagination-filter">
-  <ul class="ls-pagination">
-    <li><a href="#">&laquo; Anterior</a></li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li><a href="#">Próximo &raquo;</a></li>
-  </ul>
-
-  <div class="ls-filter-view">
-    <label for="" data-ls-module="customFields">
-      Exibir
-      <select name="" id="">
-        <option value=""></option>
-        <option value="10">10</option>
-        <option value="30">30</option>
-        <option value="50">50</option>
-        <option value="100">100</option>
-      </select>
-      ítens por página
-    </label>
+    <div class="col-sm-6 col-md-4">
+      <div class="ls-box">
+        <h6 class="ls-title-4 color-default">Zona de Dns</h6>
+        <span class="ls-board-data">
+          <strong class="ls-color-theme">COM AUTORIDADE<small>NA LOCAWEB</small></strong>
+        </span>
+      </div>
+    </div>
   </div>
 </div>
 
-<% content_for :sidebar_panel do %>
-    <%= partial 'documentacao/exemplos/painel5/sidebar' %>
-<% end %>
+<div class="ls-box">
+  <header class="ls-info-header">
+    <h2 class="ls-title-3">Adicionar novas entradas</h2>
+  </header><!-- /header -->
+  <form action="" class="ls-form ls-form-horizontal ls-box ls-box-gray">
+
+    <fieldset class="row">
+      <label class="ls-label col-md-3 col-xs-12">
+        <b class="ls-label-text">Entrada</b>
+        <input type="text" name="entry" class="ls-field" required>
+      </label>
+      <label class="ls-label col-md-2 col-xs-12">
+        <b class="ls-label-text">Tipo</b>
+        <input type="text" name="type" class="ls-field" required>
+      </label>  <label class="ls-label col-md-2 col-xs-12">
+        <b class="ls-label-text">Prioridade</b>
+        <input type="text" name="priority" class="ls-field" required>
+      </label>
+      <label class="ls-label col-md-3 col-xs-12">
+        <b class="ls-label-text">Conteúdo</b>
+        <input type="text" name="content" class="ls-field" required>
+      </label>
+      <div class="col-md-2 col-xs-12 ls-txt-left"><button class="ls-btn ls-btn-primary ls-btn-sm">Adicionar entradas</button></div>
+
+    </fieldset>
+    <p class="ls-help-message">Todas as entradas adicionadas possuirão o mesmo valor de TTL 3600.</p>
+
+  </form>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th class="ls-data-descending"><a href="#">Entrada</a></th>
+        <th class="hidden-xs">Tipo</th>
+        <th>Prioridade</th>
+        <th class="hidden-xs">Conteúdo</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%- 10.times do %>
+        <tr>
+          <td>www</td>
+          <td class="hidden-xs">CNAME</td>
+          <td>0</td>
+          <td class="hidden-xs">adidas.com.br</td>
+          <td class="ls-txt-right">
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-primary">Editar</a>
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger">Excluir</a>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
