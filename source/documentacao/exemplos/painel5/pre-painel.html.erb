@@ -1,0 +1,104 @@
+---
+title: Página Inicial
+layout: panel
+show_topbar_title: true
+pre_panel: true
+theme_name: ls-theme-wine
+title_product: Painel de DNS
+panel: painel5
+---
+
+<h1 class="ls-title-intro ls-ico-list2">Domínios</h1>
+
+<div class="ls-box-filter">
+  <!-- To do this -->
+  <form action="" class="ls-form ls-form-inline ls-float-left">
+    <label class="ls-label">
+      <b class="ls-label-text">Status</b>
+      <div data-ls-module="customFields">
+        <select class="go-to-option" name="">
+          <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
+          <option value="#">Registrados</option>
+          <option value="#">Não registrados</option>
+          <option value="#">Bloqueados</option>
+        </select>
+      </div>
+    </label>
+  </form>
+
+  <form class="ls-form ls-form-inline ls-float-right">
+    <label class="ls-label" role="search">
+      <b class="ls-label-text ls-hidden-accessible">Nome do cliente</b>
+      <input type="text" id="q" name="q" aria-label="Faça sua busca por cliente" accesskey="s" placeholder="Nome do cliente" required="">
+    </label>
+    <div class="ls-actions-btn">
+      <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
+    </div>
+  </form>
+</div>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-md-9">
+      <a href="#" >adidas.com.br</a>
+      <small>Hospedagem 2</small>
+    </div>
+    <div class="col-md-3 ls-txt-right">
+      <a href="home" class="ls-btn-primary">Administrar</a>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-md-12">
+      <strong class="ls-list-label">Domínio</strong>
+      Publicado
+    </div>
+  </div>
+</div>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-md-9">
+      <a href="#" >diadora.com</a> <a href="#" class="ls-tag-warning">Desenvolvedor</a>
+      <small>Hospedagem 2</small>
+    </div>
+    <div class="col-md-3 ls-txt-right">
+      <a href="home" class="ls-btn-primary">Administrar</a>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-md-12">
+      <strong class="ls-list-label">Domínio</strong>
+      Não registrado <a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="right" data-custom-classes="ls-width-300" data-content="<p>Este domínio parece não estar registrado.</p>"></a>
+    </div>
+  </div>
+</div>
+
+<div class="ls-pagination-filter">
+  <ul class="ls-pagination">
+    <li><a href="#">&laquo; Anterior</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Próximo &raquo;</a></li>
+  </ul>
+
+  <div class="ls-filter-view">
+    <label for="" data-ls-module="customFields">
+      Exibir
+      <select name="" id="">
+        <option value=""></option>
+        <option value="10">10</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+      ítens por página
+    </label>
+  </div>
+</div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel5/sidebar' %>
+<% end %>
