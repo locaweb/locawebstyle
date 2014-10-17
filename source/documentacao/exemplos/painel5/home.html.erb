@@ -76,31 +76,38 @@ html_class: ls-html-nobg ls-main-full
     <p class="ls-help-message">Todas as entradas adicionadas possuirão o mesmo valor de TTL 3600.</p>
 
   </form>
-  <table class="ls-table">
-    <thead>
-      <tr>
-        <th class="ls-data-descending"><a href="#">Entrada</a></th>
-        <th class="hidden-xs">Tipo</th>
-        <th>Prioridade</th>
-        <th class="hidden-xs">Conteúdo</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <%- 10.times do %>
+
+  <form action="" class="ls-form" data-ls-module="form">
+    <table class="ls-table">
+      <thead>
         <tr>
-          <td>www</td>
-          <td class="hidden-xs">CNAME</td>
-          <td>0</td>
-          <td class="hidden-xs">adidas.com.br</td>
-          <td class="ls-txt-right">
-            <a href="#" class="ls-btn ls-btn-sm ls-btn-primary">Editar</a>
-            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger">Excluir</a>
-          </td>
+          <th class="ls-data-descending"><a href="#">Entrada</a></th>
+          <th class="hidden-xs">Tipo</th>
+          <th>Prioridade</th>
+          <th class="hidden-xs">Conteúdo</th>
+          <th></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <%- 10.times do |i| %>
+          <tr>
+            <td class="hidden-xs">www</td>
+            <td>CNAME</td>
+            <td class="hidden-xs">0</td>
+            <td class="ls-form-disable ls-form-text" id="fields-disabled-<%= i %>">
+              <input type="text" name="nome" value="dominio.com.br" class="ls-field" required>
+            </td>
+            <td class="ls-txt-right">
+              <button class="ls-btn-primary hidden-elements-<%= i %> ls-btn-sm" data-toggle-class="ls-display-none" data-target=".hidden-elements-<%= i %>" data-ls-fields-enable="#fields-disabled-<%= i %>">Editar</button>
+              <a href="#" class="ls-btn ls-btn-sm ls-btn-danger hidden-elements-<%= i %>" data-toggle-class="ls-display-none">Excluir</a>
+              <button class="ls-btn-primary ls-display-none hidden-elements-<%= i %> ls-btn-sm" type="submit">Salvar</button>
+              <button class="ls-btn-danger ls-display-none hidden-elements-<%= i %> ls-btn-sm" type="submit" data-toggle-class="ls-display-none" data-target=".hidden-elements-<%= i %>" data-ls-fields-enable="#fields-disabled-<%= i %>">Cancelar</button>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </form>
 </div>
 <% content_for :sidebar_panel do %>
   <%= partial 'documentacao/exemplos/painel5/sidebar' %>
