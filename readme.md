@@ -13,7 +13,7 @@ You can [use the Locaweb Style in many ways](http://localhost:4567/documentacao/
 ```html
 <head>
 ...
-  <!-- Coloque o CSS no seu HEAD -->
+  <!-- Insert the CSS in HEAD -->
   <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.3.3/stylesheets/locastyle.css">
 ...
 </head>
