@@ -99,6 +99,7 @@
 
   [class*="ls-title"]
     font-weight: normal
+    display: block
 
 @media screen and (max-width: $screen-sm)
 
@@ -115,3 +116,12 @@
   [class^="col-"]:last-child
     .ls-box:last-child
       margin-bottom: 0
+
+@media screen and (min-width: $screen-md)
+
+  .ls-info-header
+    [class^="ls-title-"]
+      display: inline-block
+
+    .ls-btn
+      float: right
