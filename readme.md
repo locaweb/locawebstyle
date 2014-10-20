@@ -8,7 +8,7 @@ This is a front-end framework with patterns of behaviors and styles to web proje
 You can see [all examples in this link](http://locaweb.github.io/locawebstyle/documentacao/exemplos/).
 
 ### How to use:
-You can [use the Locaweb Style in many ways](http://localhost:4567/documentacao/introducao/), but we suggest use direct of our server just adding this address in your project:
+You can [use the Locaweb Style in many ways](http://locaweb.github.io/locawebstyle/documentacao/introducao/), but we suggest use direct of our server just adding this address in your project:
 
 ```html
 <head>
@@ -22,7 +22,7 @@ You can [use the Locaweb Style in many ways](http://localhost:4567/documentacao/
 
   <!-- Jquery is a dependency -->
   <script src="jquery.js">
-  
+
   <!-- Put the JS in your footer, after jQuery (dependency) link -->
   <script src="//assets.locaweb.com.br/locastyle/3.3.3/javascripts/locastyle.js"></script>
 </body>
