@@ -10,13 +10,20 @@
   overflow: hidden
   vertical-align: middle
 
+  .ls-form-horizontal .ls-label &
+    display: block
+
+  &[disabled],
+  .ls-form-disable &
+    border-color: $gray1
+
   .ls-select
     position: relative
     +box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075))
     -webkit-appearance: none
     -moz-appearance: none
     appearance: none
-    height: $input-height
+    height: 31px
     padding: 5px 35px 5px 10px
     display: inline-block
     border: none
@@ -25,6 +32,10 @@
     color: $gray4
     width: 130%
     z-index: 1
+
+    &[disabled],
+    .ls-form-disable &
+      background: $gray1
 
   &:before
     content: ""
