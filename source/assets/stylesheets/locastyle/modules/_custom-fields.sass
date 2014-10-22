@@ -2,86 +2,83 @@
 // Select Custom
 //
 
-[data-ls-module="customFields"],
 .ls-custom-select
-  height: $input-height
-  position: relative
   display: inline-block
+  position: relative
+  border: 1px solid $gray2
+  border-radius: $default-radius
+  overflow: hidden
+  vertical-align: middle
 
-  .ls-custom-select-one
+  .ls-form-horizontal .ls-label &
+    display: block
+
+  &[disabled],
+  .ls-form-disable &
+    border-color: $gray1
+
+  .ls-select
     position: relative
     +box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075))
-    top: 0
-    left: 0
-    height: $input-height
-    width: 100%
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    height: 31px
+    padding: 5px 35px 5px 10px
     display: inline-block
-    border: 1px solid $gray2
-    border-radius: $default-radius
-    background-color: #fff
-    color: $gray4
-    line-height: $input-height
-    font-size: remtopx(.875)
-    padding-right: 30px
-
-    &:before
-      +arrow-down($gray4, 5px)
-      position: absolute
-      top: 50%
-      margin-top: -2px
-      right: 15px
-      z-index: 0
-
-    .ls-field-custom-select-one
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      padding-left: 15px
-
-  select
-    opacity: 0
-    display: block
-    height: 105%
-    width: 120%
-    line-height: $input-height
     border: none
-    position: relative
+    background: #fff
+    font-size: remtopx(.875)
+    color: $gray4
+    width: 145%
     z-index: 1
 
-    &[disabled="disabled"] + .ls-field-custom-select-one
-      border-color: $gray1
-      background-color: #f9f9f9
+    option
+      padding: 5px 10px
 
-.ls-field-lg[data-ls-module="customFields"],
-.ls-field-lg[data-ls-module="customFields"] .ls-custom-select-one
-  height: $input-lg-height
+    &[disabled],
+    .ls-form-disable &
+      background: $gray1
 
-.ls-field-lg .ls-field-custom-select-one
-  line-height: $input-lg-height
-  font-size: remtopx(1)
+  &:before
+    content: ""
+    width: 0
+    height: 0
+    margin-left: 5px
+    border-style: solid
+    border-width: 5px
+    border-color: #555555 transparent transparent transparent
+    position: absolute
+    top: 50%
+    margin-top: -2px
+    right: 15px
+    z-index: 2
+    pointer-events: none
 
-.ls-field-md[data-ls-module="customFields"],
-.ls-field-md[data-ls-module="customFields"] .ls-custom-select-one
-  height: $input-height
+  &.ls-field-lg
+    height: $input-lg-height
 
-.ls-field-md .ls-field-custom-select-one
-  line-height: $input-height
-  font-size: remtopx(.8125)
+    .ls-select
+      height: $input-lg-height
+      font-size: remtopx(1)
 
-.ls-field-sm[data-ls-module="customFields"],
-.ls-field-sm[data-ls-module="customFields"] .ls-custom-select-one
-  height: $input-sm-height
+  &.ls-field-md
+    height: $input-height
 
-.ls-field-sm .ls-field-custom-select-one
-  line-height: $input-sm-height
-  font-size: remtopx(.75)
+    .ls-select
+      height: $input-height
+      font-size: remtopx(.8125)
 
-.ls-field-xs[data-ls-module="customFields"],
-.ls-field-xs[data-ls-module="customFields"] .ls-custom-select-one
-  height: $input-xs-height
+  &.ls-field-sm
+    height: $input-sm-height
 
-.ls-field-xs .ls-field-custom-select-one
-  line-height: $input-xs-height
-  font-size: remtopx(.75)
+    .ls-select
+      height: $input-sm-height
+      font-size: remtopx(.75)
 
+  &.ls-field-xs
+    height: $input-xs-height
+
+    .ls-select
+      height: $input-xs-height
+      font-size: remtopx(.75)
