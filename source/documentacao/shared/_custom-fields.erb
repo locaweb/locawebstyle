@@ -1,9 +1,7 @@
-<div data-ls-module="customFields">
-  <% if field == 'select' %>
-    <select>
-      <% (1..4).each do |i| %>
-        <option value="<%= i %>"> Opção <%= i %> </option>
-      <% end %>
-    </select>
-  <% end %>
-</div>
+<% if field == 'select' %>
+  <select class="ls-custom-select">
+    <% (1..4).each do |i| %>
+      <option value="<%= i %>"> Opção <%= i %> </option>
+    <% end %>
+  </select>
+<% end %>

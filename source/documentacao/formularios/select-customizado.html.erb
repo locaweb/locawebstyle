@@ -1,0 +1,18 @@
+---
+title: Select customizado
+description: Mudamos a aparência da select sem alterar o comportamento padrão do navegador
+---
+
+<%= partial 'partials/doc-menu-forms'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <p>Para estilizar uma select, é bem simples, basta adicionar a classe <code>ls-custom-select</code>e a mágica acontece.</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %><% end %>
+</section>

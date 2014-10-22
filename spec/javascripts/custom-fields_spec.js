@@ -4,17 +4,16 @@ describe('Custom Fields:', function(){
     locastyle.customFields.init();
   });
 
-  describe('When have data-ls-module="customFields"', function(){
-    it('all selects should have before element with .ls-field-custom-select-one', function(){
-      expect($('#myAwesomeSelect select').parent().find('.ls-field-custom-select-one')).toBeTruthy();
+  describe('When have class="ls-custom-select"', function(){
+    it('selects all should have wrap with class ls-custom-select', function(){
+      expect($('#select1').parent().hasClass('ls-custom-select')).toEqual(true);
     });
   });
 
-  describe("Unbind", function() {
-    it("should bind change only one time on the element", function() {
-      locastyle.customFields.init();
-      locastyle.customFields.init();
-      expect($('#trueId')).toHaveBeenBindedOnce('change');
+  describe('When select have class="ls-select"', function(){
+    it('selects all should have the class ls-select', function(){
+      expect($('#select1').hasClass('ls-select')).toEqual(true);
     });
   });
+
 });
