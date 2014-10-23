@@ -28,7 +28,7 @@ describe("Alert unsupported browser: ", function() {
       String.prototype.toLowerCase = function() {
         return "mozilla/4.0 (compatible; msie 8.0; windows nt 6.0; trident/4.0)";
       };
-      $('body').prepend('<div class="ls-alert-blocker ls-dismissable"><span class="ls-dismiss" data-ls-module="dismiss">&times</span>Atualize seu navegador para visualizar corretamente este painel! Baixe a versão mais recente: <a href="//www.mozilla.org/en-US/firefox" target="_blank">Firefox</a>, <a href="//www.google.com/intl/en-BR/chrome/browser/" target="_blank">Chrome</a>, <a href="//windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Internet Explorer</a> ou <a href="//www.apple.com/safari/" target="_blank">Safari</a></div>');
+      $('body').prepend('<div class="ls-alert-blocker ls-dismissable"><span class="ls-dismiss" data-ls-module="dismiss">&times</span>Atualize seu navegador! Baixe a versão mais recente: <a href="//www.mozilla.org/en-US/firefox" target="_blank">Firefox</a>, <a href="//www.google.com/intl/en-BR/chrome/browser/" target="_blank">Chrome</a>, <a href="//windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Internet Explorer</a> ou <a href="//www.apple.com/safari/" target="_blank">Safari</a></div>');
 
       locastyle.browserUnsupportedBar.init();
       $('.ls-alert-blocker .ls-dismiss[data-ls-module=dismiss]').trigger('click');

@@ -62,20 +62,25 @@
 //
 // When the unsupported bar is visible
 //
+.ls-alert-blocker
+
+  & ~ .ls-sidebar
+    height: calc(100% - 90px)
+
+  & ~ .ls-sidebar,
+  & ~ .ls-sidebar.ls-area-account-active,
+  & ~ .ls-notification
+    top: 90px
+
+  & ~ .ls-topbar,
+  .ls-pre-panel & ~ .ls-sidebar
+    top: 90px
+
+  & ~ .ls-main .ls-title-intro
+    margin-top: 90px
 
 .ls-alert-blocker
   text-align: center
-
-  & ~ .ls-topbar,
-  & ~ .ls-sidebar,
-  .ls-pre-panel & ~ .ls-sidebar
-    top: 44px
-
-  & ~ .ls-sidebar.ls-area-account-active
-    top: 104px
-
-  & ~ .ls-main
-    margin-top: 60px
 
 .ls-alert-fixed-top
   top: 0
@@ -95,3 +100,14 @@
   border: none
   width: 100%
   margin-bottom: 0
+  line-height: 20px
+
+@media screen and (min-width: $screen-sm)
+  .ls-alert-blocker
+    & ~ .ls-sidebar
+      height: 100%
+
+    & ~ .ls-sidebar,
+    & ~ .ls-sidebar.ls-area-account-active,
+    & ~ .ls-notification
+      top: 150px
