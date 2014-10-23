@@ -10,7 +10,13 @@ locastyle.browserUnsupportedBar = (function() {
 
   function browserDetect() {
     var userAgent = navigator.userAgent.toLowerCase();
-    var name = (userAgent.match(/(firefox|msie|chrome|version|rv)/))[1];
+
+    if (userAgent.match(/(firefox)/)) {
+      var name = userAgent.match(/(firefox)/)[1];
+    } else {
+      var name = (userAgent.match(/(msie|chrome|version|rv)/))[1];
+    };
+
     var version = parseInt((userAgent.match(/.+(?:firefox|msie|chrome|version|rv)[\/: ]([\d.]+)/) || [0, 0])[1].split('.')[0] );
 
     var minBrowserVersions = {
