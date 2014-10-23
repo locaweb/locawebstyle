@@ -23,9 +23,9 @@
   //
   .ls-brand-name
     font-size: remtopx(1.5)
-    font-weight: 300
+    font-weight: 400
     color: #fff
-    padding: 15px 0
+    padding: 12px 0 15px
     height: $topbar-height
     text-align: center
     width: 67%
@@ -37,10 +37,18 @@
     a
       text-decoration: none
       color: #fff
-      vertical-align: middle
+      vertical-align: sub
 
       &:before
         display: none
+
+      small, span
+        @extend .ls-text-uppercase
+        display: block
+        font-weight: 300
+        font-size: remtopx(.6875)
+        letter-spacing: .5px
+        opacity: .75
 
   //
   // Ítens clicáveis incluindo notificações e possível dropdown com informações de usuário.
@@ -143,17 +151,28 @@
       +translate(0, 0)
 
     .ls-brand-name
-      font-size: remtopx(1.5)
+      font-size: remtopx(1.625)
       text-align: left
       width: auto
       display: inline-block
       padding-left: 15px
+      position: relative
+      z-index: 1
 
-      a:before
-        display: inline-block
-        vertical-align: top
-        margin-right: 12px
-        font-size: remtopx(2)
+      a
+
+        &:before
+          display: block
+          position: absolute
+          top: 12px
+          left: 15px
+          font-size: remtopx(2.25)
+
+        &[class*="ls-ico"]
+          display: inline-block
+          // vertical-align: middle
+          padding-left: 45px
+
 
     .ls-ico-menu:before,
     .ls-show-notifications:before
