@@ -46,7 +46,14 @@ Um framework front-end de comportamento e estilo para projetos web, com uma inte
 Você pode ver [exemplos de painéis neste link](http://locaweb.github.io/locawebstyle/documentacao/exemplos/).
 
 ### Use o Locaweb Style
-Você pode usar o Locaweb Style de várias formas: direto pelo nosso servidor, via Bower ou baixando os assets para usar offline.
+Você pode usar o Locaweb Style de várias formas: [direto pelo nosso servidor](//assets.locaweb.com.br/locastyle/3.4.0/javascripts/locastyle.js), via Bower ou baixando os assets para usar offline.
+
+#### Utilizando pelo nosso servidor
+
+```html
+<!-- Coloque o JS no seu FOOTER, logo depois da jQuery -->
+<script src="//assets.locaweb.com.br/locastyle/3.4.0/javascripts/locastyle.js"></script>
+```
 
 ### Documentação completa
 Mantemos a [documentação completa dos componentes e como eles funcionam aqui](http://locaweb.github.io/locawebstyle/documentacao/introducao/). Se você usar o Chrome, [baixe nossa extensão](http://locaweb.github.io/locawebstyle/documentacao/introducao/chrome/) para facilitar o acesso à documentação.
