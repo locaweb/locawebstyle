@@ -55,6 +55,14 @@ Você pode usar o Locaweb Style de várias formas: [direto pelo nosso servidor](
 <script src="//assets.locaweb.com.br/locastyle/3.4.0/javascripts/locastyle.js"></script>
 ```
 
+#### Instalação via [bower](http://bower.io)
+
+Para instalar o locawebstyle utilizando o Bower é bem simples:
+
+```sh
+$ bower install locawebstyle
+```
+
 ### Documentação completa
 Mantemos a [documentação completa dos componentes e como eles funcionam aqui](http://locaweb.github.io/locawebstyle/documentacao/introducao/). Se você usar o Chrome, [baixe nossa extensão](http://locaweb.github.io/locawebstyle/documentacao/introducao/chrome/) para facilitar o acesso à documentação.
 
