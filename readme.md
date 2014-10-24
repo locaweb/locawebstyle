@@ -43,7 +43,7 @@ We have some instructions to code and maintain the code more legible and organiz
 # Locastyle 3.0 (Barbecue)
 Um framework front-end de comportamento e estilo para projetos web, com uma interface usada por milhares de usuários. Mantido pelos desenvolvedores front-end da [Locaweb](http://locaweb.com.br/).
 
-Você pode [exemplos de painéis neste link](http://locaweb.github.io/locawebstyle/documentacao/exemplos/).
+Você pode ver [exemplos de painéis neste link](http://locaweb.github.io/locawebstyle/documentacao/exemplos/).
 
 ### Use o Locaweb Style
 Você pode usar o Locaweb Style de várias formas: direto pelo nosso servidor, via Bower ou baixando os assets para usar offline.
