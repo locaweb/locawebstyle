@@ -33,7 +33,7 @@ We maintain the [documentation of components and how they works here](http://loc
 
 ### Do you want contribute?
 Contribute is easy: make a fork and start to code. :-)
-We have some instructions to code and maintain the code more legible and organized. Sorry, this article still in português and you can [read here these instructions.](http://locaweb.github.io/locawebstyle/documentacao/introducao/contribua/).
+We have some instructions to code and maintain the code more legible and organized. Sorry, this article still in portuguese and you can [read here these instructions.](http://locaweb.github.io/locawebstyle/documentacao/introducao/contribua/).
 
 [Read here the code guide of CSS](http://locaweb.github.io/locawebstyle/documentacao/praticas/css/) and [JavaScript](http://locaweb.github.io/locawebstyle/documentacao/praticas/javascript/) to maintain a good practices of this project.
 
@@ -43,10 +43,25 @@ We have some instructions to code and maintain the code more legible and organiz
 # Locastyle 3.0 (Barbecue)
 Um framework front-end de comportamento e estilo para projetos web, com uma interface usada por milhares de usuários. Mantido pelos desenvolvedores front-end da [Locaweb](http://locaweb.com.br/).
 
-Você pode [exemplos de painéis neste link](http://locaweb.github.io/locawebstyle/documentacao/exemplos/).
+Você pode ver [exemplos de painéis neste link](http://locaweb.github.io/locawebstyle/documentacao/exemplos/).
 
 ### Use o Locaweb Style
-Você pode usar o Locaweb Style de várias formas: direto pelo nosso servidor, via Bower ou baixando os assets para usar offline.
+Você pode usar o Locaweb Style de várias formas: [direto pelo nosso servidor](//assets.locaweb.com.br/locastyle/3.4.0/javascripts/locastyle.js), via Bower ou baixando os assets para usar offline.
+
+#### Utilizando pelo nosso servidor
+
+```html
+<!-- Coloque o JS no seu FOOTER, logo depois da jQuery -->
+<script src="//assets.locaweb.com.br/locastyle/3.4.0/javascripts/locastyle.js"></script>
+```
+
+#### Instalação via [bower](http://bower.io)
+
+Para instalar o locawebstyle utilizando o Bower é bem simples:
+
+```sh
+$ bower install locawebstyle
+```
 
 ### Documentação completa
 Mantemos a [documentação completa dos componentes e como eles funcionam aqui](http://locaweb.github.io/locawebstyle/documentacao/introducao/). Se você usar o Chrome, [baixe nossa extensão](http://locaweb.github.io/locawebstyle/documentacao/introducao/chrome/) para facilitar o acesso à documentação.
