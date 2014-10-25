@@ -33,7 +33,7 @@ We maintain the [documentation of components and how they works here](http://loc
 
 ### Do you want contribute?
 Contribute is easy: make a fork and start to code. :-)
-We have some instructions to code and maintain the code more legible and organized. Sorry, this article still in português and you can [read here these instructions.](http://locaweb.github.io/locawebstyle/documentacao/introducao/contribua/).
+We have some instructions to code and maintain the code more legible and organized. Sorry, this article still in portuguese and you can [read here these instructions.](http://locaweb.github.io/locawebstyle/documentacao/introducao/contribua/).
 
 [Read here the code guide of CSS](http://locaweb.github.io/locawebstyle/documentacao/praticas/css/) and [JavaScript](http://locaweb.github.io/locawebstyle/documentacao/praticas/javascript/) to maintain a good practices of this project.
 
