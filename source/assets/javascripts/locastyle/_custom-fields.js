@@ -8,7 +8,7 @@ locastyle.customFields = (function() {
   };
 
   function customSelect(){
-    $('.ls-custom-select').wrap(function(){
+    $('select.ls-custom-select').wrap(function(){
       var selectClasses = $(this).attr('class');
       $(this).removeAttr('class').addClass('ls-select');
       return '<div class="'+selectClasses+'"></div>';
