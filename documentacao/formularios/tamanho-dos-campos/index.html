@@ -73,7 +73,7 @@
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/contador/'>Limite e Contador de caracteres</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/exibir-senha/'>Exibir e esconder a senha</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/campos-desabilitados/'>Campos desabilitados</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/formularios/campos-personalizados/'>Campos personalizados</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/formularios/select-customizado/'>Select customizado</a></li>
       <li class='active'><a class='active' href='/locawebstyle/documentacao/formularios/tamanho-dos-campos/'>Tamanho dos campos</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/estilo-das-validacoes/'>Estilo das validações</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/mascaras/'>Máscaras</a></li>
@@ -119,15 +119,13 @@
   <hr class="doc-hr">
 
   <h2 class="doc-title-3">Alterando altura dos selects</h2>
-  <p>Para alterar a altura dos selects customizados, basta adicionar as classes abaixo no elemento pai que recebe o atributo <code>data-ls-module="customFields"</code>.</p>
+  <p>Para alterar a altura dos selects customizados, basta adicionar as classes abaixo na <code>select</code>.</p>
   <div class="ls-box-demo">
-    <div data-ls-module="customFields" class="ls-field-sm">
-      <select>
-        <option value="">Pequeno</option>
-          <option value="0"> consequatur ut et </option>
-          <option value="1"> enim esse reprehenderit </option>
-      </select>
-    </div>
+    <select class="ls-custom-select ls-field-sm">
+      <option value="">Pequeno</option>
+        <option value="0"> ipsam itaque eveniet </option>
+        <option value="1"> vel nihil fuga </option>
+    </select>
   </div>
 <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -136,13 +134,13 @@
 5
 6
 7
-8</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"customFields"</span> <span class="na">class=</span><span class="s">"ls-field-sm"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;select&gt;</span>
+8</pre></td><td class="code"><pre>
+  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-custom-select ls-field-sm"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>Pequeno<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"0"</span><span class="nt">&gt;</span> sed molestiae non <span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span> animi doloribus temporibus <span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"0"</span><span class="nt">&gt;</span> assumenda similique praesentium <span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span> nam vitae deserunt <span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;/select&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"ls-btn ls-btn-sm"</span> <span class="na">value=</span><span class="s">"Botão"</span><span class="nt">&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
@@ -152,58 +150,58 @@
       <tr>
         <th>Nome</th>
         <th>Resultado</th>
+        <th>Botão</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>ls-field-lg</td>
         <td>
-          <div data-ls-module="customFields" class="ls-field-lg col-md-9">
-            <select>
-              <option value="">Grande</option>
-                <option value="0"> possimus omnis tempora </option>
-                <option value="1"> in neque aut </option>
-            </select>
-          </div>
-          <input type="submit" class="ls-btn ls-btn-lg" value="Botão">
+          <select class="ls-custom-select ls-field-lg">
+            <option value="">Grande</option>
+              <option value="0"> explicabo ipsa non </option>
+              <option value="1"> et aut qui </option>
+          </select>
+
         </td>
+        <td><input type="submit" class="ls-btn ls-btn-lg" value="Botão"></td>
       </tr>
       <tr>
         <td>ls-field-md (<i>tamanho default</i>)</td>
         <td>
-          <div data-ls-module="customFields" class="ls-field-md col-md-9">
-            <select>
-              <option value="">Normal</option>
-                <option value="0"> temporibus quaerat et </option>
-                <option value="1"> debitis eum impedit </option>
-            </select>
-          </div>
+          <select class="ls-custom-select ls-field-md">
+            <option value="">Normal</option>
+              <option value="0"> id et aut </option>
+              <option value="1"> voluptatem magni deleniti </option>
+          </select>
+        </td>
+        <td>
           <input type="submit" class="ls-btn ls-btn-md" value="Botão">
         </td>
       </tr>
       <tr>
         <td>ls-field-sm</td>
         <td>
-          <div data-ls-module="customFields" class="ls-field-sm col-md-9">
-            <select>
-              <option value="">Pequeno</option>
-                <option value="0"> porro quibusdam explicabo </option>
-                <option value="1"> eius temporibus est </option>
-            </select>
-          </div>
+          <select class="ls-custom-select ls-field-sm">
+            <option value="">Pequeno</option>
+              <option value="0"> et optio omnis </option>
+              <option value="1"> beatae et architecto </option>
+          </select>
+        </td>
+        <td>
           <input type="submit" class="ls-btn ls-btn-sm" value="Botão">
         </td>
       </tr>
       <tr>
         <td>ls-field-xs</td>
         <td>
-          <div data-ls-module="customFields" class="ls-field-xs col-md-9">
-            <select>
-              <option value="">Bem pequeno</option>
-                <option value="0"> molestias ut perferendis </option>
-                <option value="1"> vel praesentium aliquam </option>
-            </select>
-          </div>
+          <select class="ls-custom-select ls-field-xs">
+            <option value="">Bem pequeno</option>
+              <option value="0"> aut quo blanditiis </option>
+              <option value="1"> modi quidem natus </option>
+          </select>
+        </td>
+        <td>
           <input type="submit" class="ls-btn ls-btn-xs" value="Botão">
         </td>
       </tr>

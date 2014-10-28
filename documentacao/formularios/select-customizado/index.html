@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="ls-theme-green documentacao documentacao_formularios documentacao_formularios_campos-personalizados documentacao_formularios_campos-personalizados_index">
+<html lang="pt-br" class="ls-theme-green documentacao documentacao_formularios documentacao_formularios_select-customizado documentacao_formularios_select-customizado_index">
 <head>
   <meta charset="UTF-8">
-  <title>Campos personalizados</title>
+  <title>Select customizado</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Aqueles onde mudamos a aparência ou comportamento padrão do navegador" />
+  <meta name="description" content="Mudamos a aparência da select sem alterar o comportamento padrão do navegador" />
   <meta name="keywords" content="" />
 
   <link href="../../../assets/stylesheets/docs.css" rel="stylesheet" type="text/css" />
@@ -73,7 +73,7 @@
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/contador/'>Limite e Contador de caracteres</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/exibir-senha/'>Exibir e esconder a senha</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/campos-desabilitados/'>Campos desabilitados</a></li>
-      <li class='active'><a class='active' href='/locawebstyle/documentacao/formularios/campos-personalizados/'>Campos personalizados</a></li>
+      <li class='active'><a class='active' href='/locawebstyle/documentacao/formularios/select-customizado/'>Select customizado</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/tamanho-dos-campos/'>Tamanho dos campos</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/estilo-das-validacoes/'>Estilo das validações</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/mascaras/'>Máscaras</a></li>
@@ -89,42 +89,20 @@
 <section class="col-md-9">
 
   <div class="doc-intro-content">
-  <h1>Campos personalizados</h1>
-  <p>Aqueles onde mudamos a aparência ou comportamento padrão do navegador</p>
+  <h1>Select customizado</h1>
+  <p>Mudamos a aparência da select sem alterar o comportamento padrão do navegador</p>
 </div>
 
 
-  <!-- Select -->
-  <h3 class="doc-title-3">Select</h3>
-  <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Classes</th>
-        <th>Descrição</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>.ls-form</td>
-        <td>Customiza todos os selects.</td>
-      </tr>
-      <tr>
-        <td>.ls-input-original</td>
-        <td>Mantém a aparência original do input.</td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Para estilizar uma select, é bem simples, basta adicionar a classe <code>ls-custom-select</code>e a mágica acontece.</p>
 
   <div class="ls-box-demo">
-    <p class="doc-title2"> Select customizada </p>
-    <div data-ls-module="customFields">
-    <select>
-        <option value="1"> Opção 1 </option>
-        <option value="2"> Opção 2 </option>
-        <option value="3"> Opção 3 </option>
-        <option value="4"> Opção 4 </option>
-    </select>
-</div>
+      <select class="ls-custom-select">
+      <option value="1"> Opção 1 </option>
+      <option value="2"> Opção 2 </option>
+      <option value="3"> Opção 3 </option>
+      <option value="4"> Opção 4 </option>
+  </select>
 
   </div>
   <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
@@ -132,20 +110,15 @@
 3
 4
 5
-6
-7
-8</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"customFields"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select&gt;</span>
-        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span> Opção 1 <span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span> Opção 2 <span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span> Opção 3 <span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span> Opção 4 <span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+6</pre></td><td class="code"><pre>  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-custom-select"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span> Opção 1 <span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span> Opção 2 <span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span> Opção 3 <span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span> Opção 4 <span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 
-  <!-- End Select -->
 </section>
 
   </div>

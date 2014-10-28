@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html class="ls-theme-gold  ">
 <head>
+  <title>Lista de clientes</title>
+
   <meta charset="utf-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>Lista de clientes</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="icon" sizes="192x192" href="/locawebstyle/assets/images/ico-painel1.png">
+    <link rel="apple-touch-icon" href="/locawebstyle/assets/images/ico-painel1.png">
+    <meta name="apple-mobile-web-app-title" content="Painel 1">
+
   <link href="../../../../assets/stylesheets/locastyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="documentacao documentacao_exemplos documentacao_exemplos_painel1 documentacao_exemplos_painel1_clients documentacao_exemplos_painel1_clients_index">
@@ -45,7 +53,12 @@
   <a href="/locawebstyle/documentacao/exemplos/painel1/pre-painel"  class="ls-go-next"><span class="ls-text">Voltar à lista de serviços</span></a>
 
   <!-- Nome do produto/marca -->
-    <h1 class="ls-brand-name"><a class="ls-ico-earth" href="home">fmolina</a></h1>
+    <h1 class="ls-brand-name">
+      <a href="home" class="ls-ico-earth">
+        <small>Revenda do Email Marketing</small>
+        fmolina
+      </a>
+    </h1>
 </div>
 
 
@@ -102,14 +115,12 @@
   <form action="#" class="ls-form ls-form-inline ls-float-left">
     <label class="ls-label">
         <b class="ls-label-text">Status</b>
-        <div data-ls-module="customFields" class="ls-field-sm">
-          <select name="">
-            <option value="">Todos</option>
-            <option value="">Ativo</option>
-            <option value="">Desativados</option>
-            <option value="">Bloqueados por bounce</option>
-          </select>
-        </div>
+        <select name="" class="ls-custom-select ls-field-sm">
+          <option value="">Todos</option>
+          <option value="">Ativo</option>
+          <option value="">Desativados</option>
+          <option value="">Bloqueados por bounce</option>
+        </select>
       </label>
   </form>
   <form action="#" class="ls-form ls-form-inline ls-float-right">
@@ -259,7 +270,7 @@
   <div class="ls-filter-view">
     <label for="">
       Exibir
-      <select name="" id="">
+      <select name="" id="" class="ls-custom-select ls-field-sm">
         <option value="10">10</option>
         <option value="30">30</option>
         <option value="50">50</option>
@@ -314,23 +325,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">At voluptas esse modi iusto rerum sed voluptatem nobis</a>
+            <a href="#">Dolor accusamus inventore qui error voluptatibus velit accusantium incidunt</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Et in mollitia optio dolores distinctio doloribus iste distinctio sed eos rerum soluta nihil nostrum</a>
+            <a href="#">Velit explicabo sit placeat aut nihil hic qui aperiam asperiores cumque rerum</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Minus reiciendis commodi nemo dolorem ea ducimus rerum iusto molestiae</a>
+            <a href="#">Eum neque non cumque nemo quasi magnam qui voluptatum rerum ad quod autem officiis minima</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Aut perferendis error voluptatem quia et est ex voluptate autem possimus ut ut ut</a>
+            <a href="#">Itaque quibusdam dolorem commodi animi sed ad ea velit eos et quod a sed</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Dolorem ut sit magnam ipsam repellat sed iusto repudiandae fuga quae</a>
+            <a href="#">Doloremque pariatur aliquid aliquam hic vitae</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -339,8 +350,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> est cum dolores laboriosam harum perspiciatis</a></li>
-          <li><a href="#">> doloremque rerum quis perspiciatis et quia</a></li>
+          <li><a href="#">> illum ex autem voluptatem totam ratione</a></li>
+          <li><a href="#">> omnis nostrum ut perspiciatis amet ex</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">

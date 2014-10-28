@@ -73,7 +73,7 @@
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/contador/'>Limite e Contador de caracteres</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/exibir-senha/'>Exibir e esconder a senha</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/campos-desabilitados/'>Campos desabilitados</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/formularios/campos-personalizados/'>Campos personalizados</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/formularios/select-customizado/'>Select customizado</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/tamanho-dos-campos/'>Tamanho dos campos</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/estilo-das-validacoes/'>Estilo das validações</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/mascaras/'>Máscaras</a></li>
@@ -571,14 +571,14 @@
   <form action="" class="ls-form ls-form-inline ls-float-left">
     <label class="ls-label">
       <b class="ls-label-text">Status</b>
-      <div data-ls-module="customFields">
-        <select class="go-to-option" name="">
-          <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
-          <option value="#">Ativos</option>
-          <option value="#">Desativados</option>
-          <option value="#">Bloqueados por bounce</option>
-        </select>
-      </div>
+
+      <select class="ls-custom-select" name="">
+        <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
+        <option value="#">Ativos</option>
+        <option value="#">Desativados</option>
+        <option value="#">Bloqueados por bounce</option>
+      </select>
+
     </label>
   </form>
 
@@ -660,14 +660,14 @@
   <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline ls-float-left"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/b&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"customFields"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"go-to-option"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"&amp;quot;selected&amp;quot;"</span> <span class="na">value=</span><span class="s">"/resale/clients"</span><span class="nt">&gt;</span>Todos<span class="nt">&lt;/option&gt;</span>
-          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ativos<span class="nt">&lt;/option&gt;</span>
-          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Desativados<span class="nt">&lt;/option&gt;</span>
-          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Bloqueados por bounce<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;/select&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
+
+      <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-custom-select"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"&amp;quot;selected&amp;quot;"</span> <span class="na">value=</span><span class="s">"/resale/clients"</span><span class="nt">&gt;</span>Todos<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ativos<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Desativados<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Bloqueados por bounce<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;/select&gt;</span>
+
     <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/form&gt;</span>
 
