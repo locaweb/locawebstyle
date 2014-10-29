@@ -1,3 +1,6 @@
+/* Extreme small devices (smartphones, 480px and up) */
+// @media screen and (min-width: @screen-xs) { ... }
+$screen-xs: 480px;
 
 /* Small devices (tablets, 768px and up) */
 // @media screen and (min-width: @screen-sm-min) { ... }
