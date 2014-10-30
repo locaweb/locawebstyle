@@ -5,7 +5,6 @@
   &:before
     @extend .ls-ico-chevron-left
     font-family: 'locastyle'
-    border-right: 1px solid rgba(0,0,0,0.2)
     color: #fff
     display: inline-block
     vertical-align: top
@@ -13,8 +12,8 @@
     line-height: 65px
     text-align: center
     font-size: 20px
+    padding: 0 25px
     position: relative
-    width: 60px
 
   .ls-text
     display: none
@@ -32,6 +31,10 @@
       color: #fff
       vertical-align: middle
       position: static
+      line-height: 1.4
+      padding-right: 10px
+      position: relative
+      left: -5px
 
   .ls-topbar &
     display: none
@@ -39,6 +42,11 @@
 @media screen and (min-width: $screen-sm)
 
   [class*="ls-go"]
+
+    &:before
+      border-right: 1px solid rgba(0,0,0,0.2)
+      padding: 0
+      width: 60px
 
     .ls-sidebar &
       display: none
