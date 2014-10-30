@@ -68,6 +68,9 @@
     ul
       list-style: none
 
+      .ls-sidebar &
+        border-top: 1px solid $gray5
+
       a
         color: $gray3
         padding: 15px 20px
@@ -80,18 +83,31 @@
         font-weight: 300
         font-size: remtopx(.875)
 
+        .ls-sidebar &
+          color: rgba($color-menu-text,.75)
+          font-weight: 400
+          padding: 20px 20px 20px 60px
+
+          &:hover,
+          &:focus
+            padding-left: 50px
+
         &:hover,
         &:focus
-          color: #fff
+          color: $color-menu-text
           padding-left: 25px
 
       li:last-child a
         border-bottom: none
 
+        .ls-sidebar &
+          border-bottom: 1px solid $gray5
+
     .ls-btn-logout
       padding: 11px
       text-align: center
-      color: rgba(255,255,255,.6)
+      color: rgba($color-menu-text,.6)
+      font-size: remtopx(.8125)
       background-color: $gray5
       border-color: #343434
       margin: 0 55px
