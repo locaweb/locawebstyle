@@ -18,15 +18,26 @@
     display: inline-block
     width: 100%
     background-color: #111
+    z-index: 3
 
     ~ .ls-sidebar-inner
       height: calc(100% - 60px)
 
     > a:after
+      +single-transition(none)
       content: "\e60f"
+      position: absolute
+      top: 50%
+      margin-top: -4px
+      right: 15px
 
     &.ls-active
       height: 100%
+
+      > a:after
+        +rotate(0)
+        +single-transition(none)
+        content: "\e63c"
 
     .ls-ico-user
       padding: 15px
