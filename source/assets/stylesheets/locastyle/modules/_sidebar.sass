@@ -23,16 +23,30 @@
     ~ .ls-sidebar-inner
       height: calc(100% - 60px)
 
-    > a:after
-      +single-transition(none)
-      content: "\e60f"
-      position: absolute
-      top: 50%
-      margin-top: -4px
-      right: 15px
+    > a[class*="ls-ico"]
+      font-weight: 300
+      height: 70px
+      padding-left: 60px
+      padding-top: 20px
 
-    > a:before
-      background: $gray5
+      &:after
+        +single-transition(none)
+        content: "\e60f"
+        position: absolute
+        top: 25px
+        right: 15px
+
+      &:before
+        background: $gray5
+        position: absolute
+        left: 15px
+        top: 15px
+
+      .ls-name
+        font-weight: 600
+        top: -5px
+        position: relative
+
 
     &.ls-active
       height: 100%
@@ -42,7 +56,7 @@
         +single-transition(none)
         content: "\e63c"
 
-    .ls-ico-user
+    [class*="ls-ico"]
       padding: 15px
 
     .ls-user-menu
@@ -234,7 +248,7 @@
         height: 100%
 
 @media screen and (max-width: $screen-sm)
-  .ls-sidebar .ls-user-account + .ls-ico-user + .ls-menu,
+  .ls-sidebar .ls-user-account + [class*="ls-ico"] + .ls-menu,
   .ls-sidebar .ls-user-account + .ls-menu
     margin-top: $topbar-height
 
