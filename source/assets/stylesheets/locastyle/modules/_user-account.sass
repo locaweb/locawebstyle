@@ -16,6 +16,11 @@
     display: inline-block
     width: 100%
     padding: 14px 3px
+    position: relative
+
+    .ls-name
+      @extend .ls-ellipsis
+      max-width: 160px
 
     small
       color: #fff
@@ -67,6 +72,9 @@
     ul
       list-style: none
 
+      .ls-sidebar &
+        border-top: 1px solid $gray5
+
       a
         color: $gray3
         padding: 15px 20px
@@ -79,25 +87,42 @@
         font-weight: 300
         font-size: remtopx(.875)
 
+        .ls-sidebar &
+          color: rgba($color-menu-text,.75)
+          font-weight: 400
+          padding: 20px 20px 20px 60px
+
+          &:hover,
+          &:focus
+            padding-left: 50px
+
         &:hover,
         &:focus
-          color: #fff
+          color: $color-menu-text
           padding-left: 25px
 
       li:last-child a
         border-bottom: none
 
+        .ls-sidebar &
+          border-bottom: 1px solid $gray5
+
     .ls-btn-logout
       padding: 11px
-      margin: 100px 60px 0
       text-align: center
-      color: $gray3
-      background-color: transparent
+      color: rgba($color-menu-text,.6)
+      font-size: remtopx(.8125)
+      background-color: $gray5
+      border-color: #343434
+      margin: 0 55px
+      position: absolute
+      bottom: 30px
+      left: 0
+      right: 0
 
       &:hover,
       &:focus
-        background-color: transparent
-        border-color: $gray1
+        background-color: rgba($gray5,.8)
 
       &:after
         display: none
