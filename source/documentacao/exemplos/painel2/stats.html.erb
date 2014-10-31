@@ -25,7 +25,7 @@ title_product: SMTP Locaweb
       <ul class="ls-dropdown-nav">
         <li><a href="#" data-ls-module="modal" data-target="#modal_export">CSV</a></li>
         <li><a href="#" data-ls-module="modal" data-target="#modal_export">XLS</a></li>
-        <li><a href="#" data-ls-module="modal" data-target="#modal_exported_reports">Relatórios exportados</a></li>
+        <li><a href="#" class="ls-divider" data-ls-module="modal" data-target="#modal_exported_reports">Relatórios exportados</a></li>
       </ul>
     </div>
   </form>
@@ -292,17 +292,19 @@ title_product: SMTP Locaweb
         <thead>
           <tr>
             <th>Nome do arquivo</th>
-            <th>Data da criação</th>
+            <th class="ls-width-100"></th>
           </tr>
         </thead>
         <tbody>
           <%- 5.times do |num| %>
             <tr>
-              <td>Relatorios_Enviados_02-07-2013_01-07-2014.csv</td>
               <td>
-                <p>01/07/2014 - 10:03</p>
-                <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
-                  <a href="#" class="ls-btn-sm">Ações </a>
+                <a href="#">Relatorios_Enviados_02-07-2013_01-07-2014.csv</a>
+                <p><strong>Data de criação: </strong>02/07/2013 - 14:30</p>
+              </td>
+              <td>
+                <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right ls-float-right">
+                  <a href="#" class="ls-btn-sm"></a>
                   <ul class="ls-dropdown-nav">
                     <li><a href="#" >Baixar arquivo</a></li>
                     <li><a href="#" class="ls-color-danger">Excluir</a></li>
@@ -311,12 +313,6 @@ title_product: SMTP Locaweb
               </td>
             </tr>
           <% end %>
-          <tr>
-            <td>Relatorios_Enviados_02-07-2013_01-07-2014.csv <span class="ls-tag-danger">Falha...</span></td>
-            <td>
-              <p>20/06/2014 - 0:00</p>
-            </td>
-          </tr>
         </tbody>
       </table>
     </div>
