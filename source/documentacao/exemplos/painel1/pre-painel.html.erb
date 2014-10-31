@@ -10,30 +10,19 @@ title_product: Revenda do Email Marketing
 
 <h1 class="ls-title-intro ls-ico-list2">Contas</h1>
 
-<div class="ls-list">
-  <header class="ls-list-header">
-    <div class="ls-list-title col-md-4">
-      <a href="<%= base_url %>/documentacao/exemplos/painel1/home" >Identificador da conta</a>
-      <small>Revenda Email Marketing </small>
-    </div>
-    <div class="col-md-3 col-md-offset-5 ls-txt-right">
-      <a href="<%= base_url %>/documentacao/exemplos/painel1/home" class="ls-btn-primary ls-btn-sm">Administrar</a>
-    </div>
-  </header>
-</div>
-
-
-<div class="ls-list">
-  <header class="ls-list-header">
-    <div class="ls-list-title col-md-4">
-      <a href="<%= base_url %>/documentacao/exemplos/painel1/home" >Identificador da conta</a>
-      <small>Revenda Email Marketing </small>
-    </div>
-    <div class="col-md-3 col-md-offset-5 ls-txt-right">
-      <a href="<%= base_url %>/documentacao/exemplos/painel1/home" class="ls-btn-primary ls-btn-sm">Administrar</a>
-    </div>
-  </header>
-</div>
+<%- 2.times do |num| %>
+  <div class="ls-list">
+    <header class="ls-list-header">
+      <div class="ls-list-title col-md-4">
+        <a href="<%= base_url %>/documentacao/exemplos/painel1/home" >Identificador da conta</a>
+        <small>Revenda Email Marketing </small>
+      </div>
+      <div class="col-md-3 col-md-offset-5 ls-txt-right">
+        <a href="<%= base_url %>/documentacao/exemplos/painel1/home" class="ls-btn-primary ls-btn-sm">Administrar</a>
+      </div>
+    </header>
+  </div>
+<% end %>
 
 <% content_for :sidebar_panel do %>
   <%= partial 'documentacao/exemplos/painel1/sidebar' %>
