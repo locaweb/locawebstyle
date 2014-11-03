@@ -5,112 +5,111 @@ theme_name: ls-theme-light-green
 panel: painel2
 title_product: SMTP Locaweb
 ---
+<h1 class="ls-title-intro ls-ico-cog">E-mail de remetente</h1>
+<p>Adicione e gerencie os endereços de remetente que poderão fazer envios. Existem dois métodos de inclusão: Por domínio ou por e-mail.</p>
+<br>
+<h2 class="ls-title-2">Domínios</h2>
+<p>Utilizar um domínio como remetente permite que qualquer endereço de e-mail vinculado a ele possa fazer envios. Após adicionar um domínio, é necessário criar uma entrada txt no seu gerenciador de DNS.</p>
 
-  <h1 class="ls-title-intro ls-ico-cog">E-mail de remetente</h1>
-  <p>Adicione e gerencie os endereços de remetente que poderão fazer envios. Existem dois métodos de inclusão: Por domínio ou por e-mail.</p>
-  <br>
-  <h2 class="ls-title-2">Domínios</h2>
-  <p>Utilizar um domínio como remetente permite que qualquer endereço de e-mail vinculado a ele possa fazer envios. Após adicionar um domínio, é necessário criar uma entrada txt no seu gerenciador de DNS.</p>
+<div class="ls-box-filter">
+  <form class="ls-form ls-form-inline">
+    <label class="ls-label" role="search">
+      <b class="ls-label-text">Preencha um domínio:</b>
+      <input type="text" id="q" name="q" aria-label="Digite um Domínio" accesskey="s" placeholder="seudominio.com.br" required="">
+    </label>
+    <div class="ls-actions-btn">
+      <button type="submit" class="ls-btn-primary">Adicionar</button>
+    </div>
+  </form>
+</div>
 
-  <div class="ls-box-filter">
-    <form class="ls-form ls-form-inline">
-      <label class="ls-label" role="search">
-        <b class="ls-label-text">Preencha um domínio:</b>
-        <input type="text" id="q" name="q" aria-label="Digite um Domínio" accesskey="s" placeholder="seudominio.com.br" required="">
-      </label>
-      <div class="ls-actions-btn">
-        <button type="submit" class="ls-btn-primary">Adicionar</button>
-      </div>
-    </form>
-  </div>
-
-  <table class="ls-table">
-    <thead>
+<table class="ls-table">
+  <thead>
+    <tr>
+      <th>Domínio adicionado</th>
+      <th colspan="2">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- 2.times do %>
       <tr>
-        <th>Domínio adicionado</th>
-        <th colspan="2">Status</th>
+        <td>seudominio1.com.br</td>
+        <td>Configurado</td>
+        <td class="ls-txt-right ls-regroup">
+          <a href="#" class="ls-btn ls-btn-xs">Configurações do DNS</a>
+          <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+            <a href="#" class="ls-btn ls-btn-xs" role="combobox" aria-expanded="false"></a>
+            <ul class="ls-dropdown-nav" aria-hidden="true">
+              <li><a href="#" class="ls-color-danger" role="option">Excluir</a></li>
+            </ul>
+          </div>
+        </td>
       </tr>
-    </thead>
-    <tbody>
-      <%- 2.times do %>
-        <tr>
-          <td>seudominio1.com.br</td>
-          <td>Configurado</td>
-          <td class="ls-txt-right ls-regroup">
-            <a href="#" class="ls-btn ls-btn-xs">Configurações do DNS</a>
-            <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
-              <a href="#" class="ls-btn ls-btn-xs" role="combobox" aria-expanded="false"></a>
-              <ul class="ls-dropdown-nav" aria-hidden="true">
-                <li><a href="#" class="ls-color-danger" role="option">Excluir</a></li>
-              </ul>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>seudominio2.com.br</td>
-          <td><span class="ls-word-dotted" data-ls-module="popover" data-title="Não Configurado" data-content="A configuração tem um tempo de até 24 horas para propagar após a inserção da entrada em seu gerenciador de DNS." data-placement="right" data-trigger="hover" data-custom-classes="ls-width-250">Não Configurado</span></td>
-          <td class="ls-txt-right ls-regroup">
-            <a href="#" class="ls-btn ls-btn-xs">Configurações do DNS</a>
-            <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
-              <a href="#" class="ls-btn ls-btn-xs" role="combobox" aria-expanded="false"></a>
-              <ul class="ls-dropdown-nav" aria-hidden="true">
-                <li><a href="#" class="ls-color-danger" role="option">Excluir</a></li>
-              </ul>
-            </div>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-
-  <h2 class="ls-title-2">E-mails</h2>
-  <p>Utilizar um e-mail como remetente permite que apenas o e-mail confirmado possa fazer envios. Após adicionar um e-mail, é necessário abrir a mensagem recebida e confirmar o remetente.</p>
-
-  <div class="ls-box-filter">
-    <form class="ls-form ls-form-inline">
-      <label class="ls-label" role="search">
-        <b class="ls-label-text">Preencha um e-mail:</b>
-        <input type="text" id="q" name="q" aria-label="Digite um e-mail" accesskey="s" placeholder="seuemail@dominio.com.br" required="">
-      </label>
-      <div class="ls-actions-btn">
-        <button type="submit" class="ls-btn-primary">Adicionar</button>
-      </div>
-    </form>
-  </div>
-
-  <table class="ls-table">
-    <thead>
       <tr>
-        <th>Domínio adicionado</th>
-        <th colspan="2">Status</th>
+        <td>seudominio2.com.br</td>
+        <td><span class="ls-word-dotted" data-ls-module="popover" data-title="Não Configurado" data-content="A configuração tem um tempo de até 24 horas para propagar após a inserção da entrada em seu gerenciador de DNS." data-placement="right" data-trigger="hover" data-custom-classes="ls-width-250">Não Configurado</span></td>
+        <td class="ls-txt-right ls-regroup">
+          <a href="#" class="ls-btn ls-btn-xs">Configurações do DNS</a>
+          <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+            <a href="#" class="ls-btn ls-btn-xs" role="combobox" aria-expanded="false"></a>
+            <ul class="ls-dropdown-nav" aria-hidden="true">
+              <li><a href="#" class="ls-color-danger" role="option">Excluir</a></li>
+            </ul>
+          </div>
+        </td>
       </tr>
-    </thead>
-    <tbody>
-      <%- 2.times do %>
-        <tr>
-          <td><%= lorem.email %></td>
-          <td>Configurado</td>
-          <td class="ls-txt-right ls-regroup">
-            <a href="#" class="ls-btn-danger ls-btn-xs">Excluir</a>
-          </td>
-        </tr>
-        <tr>
-          <td><%= lorem.email %></td>
-          <td><span>Não Configurado</span></td>
-          <td class="ls-txt-right ls-regroup">
-            <a href="#" class="ls-btn ls-btn-xs">Reenviar e-mail</a>
-            <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
-              <a href="#" class="ls-btn ls-btn-xs" role="combobox" aria-expanded="false"></a>
-              <ul class="ls-dropdown-nav" aria-hidden="true">
-                <li><a href="#" class="ls-color-danger" role="option">Excluir</a></li>
-              </ul>
-            </div>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+    <% end %>
+  </tbody>
+</table>
+
+
+<h2 class="ls-title-2">E-mails</h2>
+<p>Utilizar um e-mail como remetente permite que apenas o e-mail confirmado possa fazer envios. Após adicionar um e-mail, é necessário abrir a mensagem recebida e confirmar o remetente.</p>
+
+<div class="ls-box-filter">
+  <form class="ls-form ls-form-inline">
+    <label class="ls-label" role="search">
+      <b class="ls-label-text">Preencha um e-mail:</b>
+      <input type="text" id="q" name="q" aria-label="Digite um e-mail" accesskey="s" placeholder="seuemail@dominio.com.br" required="">
+    </label>
+    <div class="ls-actions-btn">
+      <button type="submit" class="ls-btn-primary">Adicionar</button>
+    </div>
+  </form>
+</div>
+
+<table class="ls-table">
+  <thead>
+    <tr>
+      <th>Domínio adicionado</th>
+      <th colspan="2">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- 2.times do %>
+      <tr>
+        <td><%= lorem.email %></td>
+        <td>Configurado</td>
+        <td class="ls-txt-right ls-regroup">
+          <a href="#" class="ls-btn-danger ls-btn-xs">Excluir</a>
+        </td>
+      </tr>
+      <tr>
+        <td><%= lorem.email %></td>
+        <td><span>Não Configurado</span></td>
+        <td class="ls-txt-right ls-regroup">
+          <a href="#" class="ls-btn ls-btn-xs">Reenviar e-mail</a>
+          <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+            <a href="#" class="ls-btn ls-btn-xs" role="combobox" aria-expanded="false"></a>
+            <ul class="ls-dropdown-nav" aria-hidden="true">
+              <li><a href="#" class="ls-color-danger" role="option">Excluir</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <% content_for :sidebar_panel do %>
   <%= partial 'documentacao/exemplos/painel2/sidebar' %>
