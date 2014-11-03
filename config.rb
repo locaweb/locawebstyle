@@ -6,7 +6,6 @@ use Rack::Cors do
   end
 end
 
-
 ###
 # Compass
 ###
