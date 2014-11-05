@@ -8,12 +8,24 @@
     vertical-align: middle
     display: table-cell
 
+  .ls-login-container
+    text-align: center
+
+  .ls-login-adv
+    display: block
+    margin-top: 30px
+
   .ls-login-box
     width: 300px
-    margin: 0 auto
+    display: inline-block
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
     background-color: #fff
     padding: 20px
+    text-align: left
+
+    .ls-form-actions
+      [class*="ls-btn"]
+        margin-bottom: 0
 
   .ls-login-logo
     color: $gray3
@@ -52,4 +64,12 @@
   [class*="ls-btn"]
     margin-top: 20px
     margin-bottom: 30px
-    background-color: $gray3
+
+@media screen and (min-width: $screen-sm)
+
+  .ls-login-parent
+
+    .ls-login-adv
+      display: inline-block
+      margin-left: 30px
+      margin-top: 0
