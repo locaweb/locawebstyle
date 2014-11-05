@@ -1,4 +1,9 @@
 
+
+![Travis:Master](https://travis-ci.org/locaweb/locawebstyle.svg?branch=master "Travis Master")
+
+-
+
 ![Locaweb Style with Gold color](http://i.imgur.com/3mBJPr4.png "Locaweb Style")
 
 
