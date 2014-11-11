@@ -30,9 +30,6 @@
     text-align: center
     width: 67%
     margin: 0 auto
-    white-space: nowrap
-    overflow: hidden
-    text-overflow: ellipsis
 
     a
       text-decoration: none
@@ -49,6 +46,19 @@
         font-size: remtopx(.6875)
         letter-spacing: .5px
         opacity: .75
+
+      &[class*="ls-ico"]
+        display: inline-block
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        max-width: 200px
+
+        small,
+        span
+          overflow: hidden
+          text-overflow: ellipsis
+          white-space: nowrap
 
   //
   // Ítens clicáveis incluindo notificações e possível dropdown com informações de usuário.
@@ -171,6 +181,7 @@
         &[class*="ls-ico"]
           display: inline-block
           padding-left: 45px
+          // max-width: 400px
 
         &[class*="ls-ico-panel"]
           padding-left: 52px
@@ -179,9 +190,6 @@
             font-size: remtopx(3.375)
             top: 4px
             left: 7px
-
-
-
 
     .ls-ico-menu:before,
     .ls-show-notifications:before
@@ -200,3 +208,12 @@
 
       .ls-user-account
         display: inline-block
+
+@media screen and (min-width: $screen-md)
+
+  .ls-topbar .ls-brand-name a[class*="ls-ico"]
+    max-width: 520px
+
+@media screen and (min-width: 480px) and (max-width: $screen-md)
+  .ls-topbar .ls-brand-name a[class*="ls-ico"]
+    max-width: 360px

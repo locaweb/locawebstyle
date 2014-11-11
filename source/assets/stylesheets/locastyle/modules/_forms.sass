@@ -21,7 +21,6 @@
   float: none
   vertical-align: top
   margin-bottom: 15px
-
   @extend .ls-clearfix
 
   b,
@@ -71,6 +70,11 @@ textarea
     .ls-form-inline &
       width: auto
 
+  .ls-label[class*="col-"] &
+
+    .ls-form-inline &
+      width: 100%
+
   &[disabled]
     border-color: $gray1
     background-color: $gray0
@@ -118,6 +122,11 @@ textarea
   .ls-help-message
     color: $color-warning
 
+  .ls-prefix-group
+    a, .ls-label-text-prefix
+      color: $color-warning
+      border-color: $color-warning
+
   input,
   textarea
     border-color: $color-warning
@@ -127,6 +136,11 @@ textarea
   .ls-help-message
     color: $color-success
 
+  .ls-prefix-group
+    a, .ls-label-text-prefix
+      color: $color-success
+      border-color: $color-success
+
   input,
   textarea
     border-color: $color-success
@@ -135,6 +149,11 @@ textarea
   .ls-label-text,
   .ls-help-message
     color: $color-danger
+
+  .ls-prefix-group
+    a, .ls-label-text-prefix
+      color: $color-danger
+      border-color: $color-danger
 
   input,
   textarea
@@ -161,25 +180,23 @@ textarea
   .row:after
     @extend .ls-clearfix
 
+  .ls-actions-btn
+    clear: both
+
 //
 // Label and input side by side
 //
 .ls-form-inline
   @extend .ls-clearfix
+  margin-right: 0
 
-  [data-ls-module="customFields"],
-  .ls-custom-select-one
-    display: inline-block
-    vertical-align: middle
-
-    select
-      width: calc(100% + 50px)
-      width: 132%\9
+  &.row
+    margin-right: 0
 
   .ls-label
     display: inline-block
     margin-right: 15px
-    margin-bottom: 0
+    margin-bottom: 15px
 
     & + [class*="ls-btn"]
       margin-left: 0
@@ -188,15 +205,34 @@ textarea
       display: inline-block
       margin-right: 5px
 
+    &[class*="col-"]
+      float: left // is necessary
+      display: inline-table // is necessary
+      margin-right: 0
+
+      .ls-label-text
+        display: table-cell
+        padding-right: 10px
+        vertical-align: middle
+        white-space: nowrap
+        width: 1%
+
+  .ls-actions-btn
+    display: inline-table
+
+    [class*="ls-btn"] + [class*="ls-btn"]
+      margin-left: 25px
+
 .ls-box-filter
   form.ls-float-right
     min-width: 230px
     text-align: right
 
     .ls-label
-      width: 65% !important
       display: inline-block
-      margin-bottom: 0
+
+      &[class*="col-"]
+        padding-right: 15px
 
       input
         width: 100%
@@ -293,10 +329,12 @@ input + .ls-label-text-prefix
   .ls-form-inline
 
     .ls-label
-      margin-bottom: 15px
 
       .ls-label-text
         display: block
+
+    .ls-actions-btn
+      display: block
 
     [class*="ls-btn"]
       margin-left: 0
@@ -314,7 +352,6 @@ input + .ls-label-text-prefix
 
       .ls-label
         display: block
-        width: 64% !important
 
       [class*="ls-btn"]
         margin-left: 0
@@ -323,7 +360,9 @@ input + .ls-label-text-prefix
   .ls-form-inline
 
     .ls-label
-      margin-bottom: 0
+
+      .ls-box-filter &
+        margin-bottom: 0
 
     .ls-actions-btn
       margin-top: 0

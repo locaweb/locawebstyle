@@ -2,21 +2,22 @@
 title: Entradas de DNS
 layout: panel
 theme_name: ls-theme-wine
-title_product: Painel de DNS
+title_product: Zona de DNS
 html_class: ls-html-nobg ls-main-full
 panel: painel5
 ---
 
-<h1 class="ls-title-intro ls-ico-pencil2">Entradas de DNS</h1>
+<h1 class="ls-title-intro ls-ico-pencil2">Zona de DNS</h1>
 <div class="ls-box ls-board-box">
   <header class="ls-info-header">
-    <h2 class="ls-title-3">adidas.com.br</h2>
+    <h2 class="ls-title-3">Informações gerais</h2>
   </header>
 
   <div id="sending-stats" class="row ls-clearfix">
     <div class="col-sm-6 col-md-4">
       <div class="ls-box">
         <h6 class="ls-title-4">Domínio</h6>
+        <span class="ls-board-data">
         <span class="ls-board-data">
           <strong>
             REGISTRADO
@@ -51,64 +52,41 @@ panel: painel5
 
 <div class="ls-box">
   <header class="ls-info-header">
-    <h2 class="ls-title-3">Adicionar novas entradas</h2>
+    <h2 class="ls-title-3">Adicionando entradas de DNS</h2>
   </header><!-- /header -->
-  <form action="" class="ls-form ls-form-horizontal ls-box ls-box-gray">
-
-    <fieldset class="row">
-      <label class="ls-label col-md-3 col-xs-12">
-        <b class="ls-label-text">Entrada</b>
-        <input type="text" name="entry" class="ls-field" required>
-      </label>
-      <label class="ls-label col-md-2 col-xs-12">
-        <b class="ls-label-text">Tipo</b>
-        <input type="text" name="type" class="ls-field" required>
-      </label>  <label class="ls-label col-md-2 col-xs-12">
-        <b class="ls-label-text">Prioridade</b>
-        <input type="text" name="priority" class="ls-field" required>
-      </label>
-      <label class="ls-label col-md-3 col-xs-12">
-        <b class="ls-label-text">Conteúdo</b>
-        <input type="text" name="content" class="ls-field" required>
-      </label>
-      <div class="col-md-2 col-xs-12 ls-txt-left"><button class="ls-btn ls-btn-primary ls-btn-sm">Adicionar entradas</button></div>
-
-    </fieldset>
-    <p class="ls-help-message">Todas as entradas adicionadas possuirão o mesmo valor de TTL 3600.</p>
-
-  </form>
-
-  <form action="" class="ls-form" data-ls-module="form">
-    <table class="ls-table">
-      <thead>
+  form
+</div>
+<div class="ls-box">
+  <header class="ls-info-header">
+    <h2 class="ls-title-3">Entradas de DNS</h2>
+  </header><!-- /header -->
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th class="ls-data-descending"><a href="#">Entrada</a></th>
+        <th class="hidden-xs">Tipo</th>
+        <th class="hidden-xs">Prioridade</th>
+        <th>Conteúdo</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%- 10.times do |i| %>
         <tr>
-          <th class="ls-data-descending"><a href="#">Entrada</a></th>
-          <th class="hidden-xs">Tipo</th>
-          <th>Prioridade</th>
-          <th class="hidden-xs">Conteúdo</th>
-          <th></th>
+          <td>www</td>
+          <td class="hidden-xs">CNAME</td>
+          <td class="hidden-xs">0</td>
+          <td>
+            dominio.com.br
+          </td>
+          <td class="ls-txt-right ls-regroup">
+            <a href="#" class="ls-btn-primary ls-btn-sm" data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="" data-title="Editar entrada de DNS" data-class="ls-btn-primary" data-save="Salvar" data-close="Fechar">Editar</a>
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger" >Excluir</a>
+          </td>
         </tr>
-      </thead>
-      <tbody>
-        <%- 10.times do |i| %>
-          <tr>
-            <td class="hidden-xs">www</td>
-            <td>CNAME</td>
-            <td class="hidden-xs">0</td>
-            <td class="ls-form-disable ls-form-text" id="fields-disabled-<%= i %>">
-              <input type="text" name="nome" value="dominio.com.br" class="ls-field" required>
-            </td>
-            <td class="ls-txt-right">
-              <button class="ls-btn-primary hidden-elements-<%= i %> ls-btn-sm" data-toggle-class="ls-display-none" data-target=".hidden-elements-<%= i %>" data-ls-fields-enable="#fields-disabled-<%= i %>">Editar</button>
-              <a href="#" class="ls-btn ls-btn-sm ls-btn-danger hidden-elements-<%= i %>" data-toggle-class="ls-display-none">Excluir</a>
-              <button class="ls-btn-primary ls-display-none hidden-elements-<%= i %> ls-btn-sm" type="submit">Salvar</button>
-              <button class="ls-btn-danger ls-display-none hidden-elements-<%= i %> ls-btn-sm" type="submit" data-toggle-class="ls-display-none" data-target=".hidden-elements-<%= i %>" data-ls-fields-enable="#fields-disabled-<%= i %>">Cancelar</button>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </form>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 <% content_for :sidebar_panel do %>
   <%= partial 'documentacao/exemplos/painel5/sidebar' %>
