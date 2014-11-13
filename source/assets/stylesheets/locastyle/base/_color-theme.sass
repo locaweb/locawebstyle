@@ -7,8 +7,10 @@
 
   .ls-theme-#{$theme-name}
 
+    .ls-color-theme
+      color: mix($color-mix, $color1, 20%)!important
+
     p a:not([class*="ls-btn"]),
-    .ls-color-theme,
     .ls-breadcrumb a,
     .hopscotch-bubble a
       color: mix($color-mix, $color1, 20%)
