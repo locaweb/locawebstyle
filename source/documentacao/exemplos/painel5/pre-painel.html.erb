@@ -15,12 +15,14 @@ panel: painel5
   <form action="" class="ls-form ls-form-inline ls-float-left">
     <label class="ls-label">
       <b class="ls-label-text">Status</b>
-      <select class="ls-custom-select">
-        <option selected="&quot;selected&quot;" value="/resale/clients">Todos os domínios &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
-        <option value="#">Registrados</option>
-        <option value="#">Não registrados</option>
-        <option value="#">Bloqueados</option>
-      </select>
+      <div class="ls-custom-select">
+        <select>
+          <option selected="&quot;selected&quot;" value="/resale/clients">Todos os domínios &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="#">Registrados</option>
+          <option value="#">Não registrados</option>
+          <option value="#">Bloqueados</option>
+        </select>
+      </div>
     </label>
   </form>
 
@@ -84,12 +86,14 @@ panel: painel5
   <div class="ls-filter-view">
     <label for="">
       Exibir
-      <select class="ls-custom-select">
-        <option value="10">10</option>
-        <option value="30">30</option>
-        <option value="50">50</option>
-        <option value="100">100</option>
-      </select>
+      <div class="ls-custom-select">
+        <select>
+          <option value="10">10</option>
+          <option value="30">30</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
       ítens por página
     </label>
   </div>
