@@ -34,8 +34,8 @@
     <!-- Dropdown com detalhes da conta de usuário -->
     <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
       <a href="#" class="ls-ico-user">
-        João
-      <small>(fmolina)</small>
+        <span class="ls-name">João</span>
+        (fmolina)
       </a>
       <nav class="ls-dropdown-nav ls-user-menu">
         <ul>
@@ -55,7 +55,7 @@
   <!-- Nome do produto/marca -->
     <h1 class="ls-brand-name">
       <a href="home" class="ls-ico-earth">
-        <small>Painel de DNS</small>
+        <small>Zona de DNS</small>
         fmolina
       </a>
     </h1>
@@ -86,16 +86,17 @@
 
   <main class="ls-main ">
     <div class="container-fluid">
-      <h1 class="ls-title-intro ls-ico-pencil2">Entradas de DNS</h1>
+      <h1 class="ls-title-intro ls-ico-pencil2">Zona de DNS</h1>
 <div class="ls-box ls-board-box">
   <header class="ls-info-header">
-    <h2 class="ls-title-3">adidas.com.br</h2>
+    <h2 class="ls-title-3">Informações gerais</h2>
   </header>
 
   <div id="sending-stats" class="row ls-clearfix">
     <div class="col-sm-6 col-md-4">
       <div class="ls-box">
         <h6 class="ls-title-4">Domínio</h6>
+        <span class="ls-board-data">
         <span class="ls-board-data">
           <strong>
             REGISTRADO
@@ -130,188 +131,147 @@
 
 <div class="ls-box">
   <header class="ls-info-header">
-    <h2 class="ls-title-3">Adicionar novas entradas</h2>
+    <h2 class="ls-title-3">Adicionando entradas de DNS</h2>
   </header><!-- /header -->
-  <form action="" class="ls-form ls-form-horizontal ls-box ls-box-gray">
-
-    <fieldset class="row">
-      <label class="ls-label col-md-3 col-xs-12">
-        <b class="ls-label-text">Entrada</b>
-        <input type="text" name="entry" class="ls-field" required>
-      </label>
-      <label class="ls-label col-md-2 col-xs-12">
-        <b class="ls-label-text">Tipo</b>
-        <input type="text" name="type" class="ls-field" required>
-      </label>  <label class="ls-label col-md-2 col-xs-12">
-        <b class="ls-label-text">Prioridade</b>
-        <input type="text" name="priority" class="ls-field" required>
-      </label>
-      <label class="ls-label col-md-3 col-xs-12">
-        <b class="ls-label-text">Conteúdo</b>
-        <input type="text" name="content" class="ls-field" required>
-      </label>
-      <div class="col-md-2 col-xs-12 ls-txt-left"><button class="ls-btn ls-btn-primary ls-btn-sm">Adicionar entradas</button></div>
-
-    </fieldset>
-    <p class="ls-help-message">Todas as entradas adicionadas possuirão o mesmo valor de TTL 3600.</p>
-
-  </form>
-
-  <form action="" class="ls-form" data-ls-module="form">
-    <table class="ls-table">
-      <thead>
+  form
+</div>
+<div class="ls-box">
+  <header class="ls-info-header">
+    <h2 class="ls-title-3">Entradas de DNS</h2>
+  </header><!-- /header -->
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th class="ls-data-descending"><a href="#">Entrada</a></th>
+        <th class="hidden-xs">Tipo</th>
+        <th class="hidden-xs">Prioridade</th>
+        <th>Conteúdo</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
         <tr>
-          <th class="ls-data-descending"><a href="#">Entrada</a></th>
-          <th class="hidden-xs">Tipo</th>
-          <th>Prioridade</th>
-          <th class="hidden-xs">Conteúdo</th>
-          <th></th>
+          <td>www</td>
+          <td class="hidden-xs">CNAME</td>
+          <td class="hidden-xs">0</td>
+          <td>
+            dominio.com.br
+          </td>
+          <td class="ls-txt-right ls-regroup">
+            <a href="#" class="ls-btn-primary ls-btn-sm" data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="" data-title="Editar entrada de DNS" data-class="ls-btn-primary" data-save="Salvar" data-close="Fechar">Editar</a>
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger" >Excluir</a>
+          </td>
         </tr>
-      </thead>
-      <tbody>
-          <tr>
-            <td class="hidden-xs">www</td>
-            <td>CNAME</td>
-            <td class="hidden-xs">0</td>
-            <td class="ls-form-disable ls-form-text" id="fields-disabled-0">
-              <input type="text" name="nome" value="dominio.com.br" class="ls-field" required>
-            </td>
-            <td class="ls-txt-right">
-              <button class="ls-btn-primary hidden-elements-0 ls-btn-sm" data-toggle-class="ls-display-none" data-target=".hidden-elements-0" data-ls-fields-enable="#fields-disabled-0">Editar</button>
-              <a href="#" class="ls-btn ls-btn-sm ls-btn-danger hidden-elements-0" data-toggle-class="ls-display-none">Excluir</a>
-              <button class="ls-btn-primary ls-display-none hidden-elements-0 ls-btn-sm" type="submit">Salvar</button>
-              <button class="ls-btn-danger ls-display-none hidden-elements-0 ls-btn-sm" type="submit" data-toggle-class="ls-display-none" data-target=".hidden-elements-0" data-ls-fields-enable="#fields-disabled-0">Cancelar</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="hidden-xs">www</td>
-            <td>CNAME</td>
-            <td class="hidden-xs">0</td>
-            <td class="ls-form-disable ls-form-text" id="fields-disabled-1">
-              <input type="text" name="nome" value="dominio.com.br" class="ls-field" required>
-            </td>
-            <td class="ls-txt-right">
-              <button class="ls-btn-primary hidden-elements-1 ls-btn-sm" data-toggle-class="ls-display-none" data-target=".hidden-elements-1" data-ls-fields-enable="#fields-disabled-1">Editar</button>
-              <a href="#" class="ls-btn ls-btn-sm ls-btn-danger hidden-elements-1" data-toggle-class="ls-display-none">Excluir</a>
-              <button class="ls-btn-primary ls-display-none hidden-elements-1 ls-btn-sm" type="submit">Salvar</button>
-              <button class="ls-btn-danger ls-display-none hidden-elements-1 ls-btn-sm" type="submit" data-toggle-class="ls-display-none" data-target=".hidden-elements-1" data-ls-fields-enable="#fields-disabled-1">Cancelar</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="hidden-xs">www</td>
-            <td>CNAME</td>
-            <td class="hidden-xs">0</td>
-            <td class="ls-form-disable ls-form-text" id="fields-disabled-2">
-              <input type="text" name="nome" value="dominio.com.br" class="ls-field" required>
-            </td>
-            <td class="ls-txt-right">
-              <button class="ls-btn-primary hidden-elements-2 ls-btn-sm" data-toggle-class="ls-display-none" data-target=".hidden-elements-2" data-ls-fields-enable="#fields-disabled-2">Editar</button>
-              <a href="#" class="ls-btn ls-btn-sm ls-btn-danger hidden-elements-2" data-toggle-class="ls-display-none">Excluir</a>
-              <button class="ls-btn-primary ls-display-none hidden-elements-2 ls-btn-sm" type="submit">Salvar</button>
-              <button class="ls-btn-danger ls-display-none hidden-elements-2 ls-btn-sm" type="submit" data-toggle-class="ls-display-none" data-target=".hidden-elements-2" data-ls-fields-enable="#fields-disabled-2">Cancelar</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="hidden-xs">www</td>
-            <td>CNAME</td>
-            <td class="hidden-xs">0</td>
-            <td class="ls-form-disable ls-form-text" id="fields-disabled-3">
-              <input type="text" name="nome" value="dominio.com.br" class="ls-field" required>
-            </td>
-            <td class="ls-txt-right">
-              <button class="ls-btn-primary hidden-elements-3 ls-btn-sm" data-toggle-class="ls-display-none" data-target=".hidden-elements-3" data-ls-fields-enable="#fields-disabled-3">Editar</button>
-              <a href="#" class="ls-btn ls-btn-sm ls-btn-danger hidden-elements-3" data-toggle-class="ls-display-none">Excluir</a>
-              <button class="ls-btn-primary ls-display-none hidden-elements-3 ls-btn-sm" type="submit">Salvar</button>
-              <button class="ls-btn-danger ls-display-none hidden-elements-3 ls-btn-sm" type="submit" data-toggle-class="ls-display-none" data-target=".hidden-elements-3" data-ls-fields-enable="#fields-disabled-3">Cancelar</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="hidden-xs">www</td>
-            <td>CNAME</td>
-            <td class="hidden-xs">0</td>
-            <td class="ls-form-disable ls-form-text" id="fields-disabled-4">
-              <input type="text" name="nome" value="dominio.com.br" class="ls-field" required>
-            </td>
-            <td class="ls-txt-right">
-              <button class="ls-btn-primary hidden-elements-4 ls-btn-sm" data-toggle-class="ls-display-none" data-target=".hidden-elements-4" data-ls-fields-enable="#fields-disabled-4">Editar</button>
-              <a href="#" class="ls-btn ls-btn-sm ls-btn-danger hidden-elements-4" data-toggle-class="ls-display-none">Excluir</a>
-              <button class="ls-btn-primary ls-display-none hidden-elements-4 ls-btn-sm" type="submit">Salvar</button>
-              <button class="ls-btn-danger ls-display-none hidden-elements-4 ls-btn-sm" type="submit" data-toggle-class="ls-display-none" data-target=".hidden-elements-4" data-ls-fields-enable="#fields-disabled-4">Cancelar</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="hidden-xs">www</td>
-            <td>CNAME</td>
-            <td class="hidden-xs">0</td>
-            <td class="ls-form-disable ls-form-text" id="fields-disabled-5">
-              <input type="text" name="nome" value="dominio.com.br" class="ls-field" required>
-            </td>
-            <td class="ls-txt-right">
-              <button class="ls-btn-primary hidden-elements-5 ls-btn-sm" data-toggle-class="ls-display-none" data-target=".hidden-elements-5" data-ls-fields-enable="#fields-disabled-5">Editar</button>
-              <a href="#" class="ls-btn ls-btn-sm ls-btn-danger hidden-elements-5" data-toggle-class="ls-display-none">Excluir</a>
-              <button class="ls-btn-primary ls-display-none hidden-elements-5 ls-btn-sm" type="submit">Salvar</button>
-              <button class="ls-btn-danger ls-display-none hidden-elements-5 ls-btn-sm" type="submit" data-toggle-class="ls-display-none" data-target=".hidden-elements-5" data-ls-fields-enable="#fields-disabled-5">Cancelar</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="hidden-xs">www</td>
-            <td>CNAME</td>
-            <td class="hidden-xs">0</td>
-            <td class="ls-form-disable ls-form-text" id="fields-disabled-6">
-              <input type="text" name="nome" value="dominio.com.br" class="ls-field" required>
-            </td>
-            <td class="ls-txt-right">
-              <button class="ls-btn-primary hidden-elements-6 ls-btn-sm" data-toggle-class="ls-display-none" data-target=".hidden-elements-6" data-ls-fields-enable="#fields-disabled-6">Editar</button>
-              <a href="#" class="ls-btn ls-btn-sm ls-btn-danger hidden-elements-6" data-toggle-class="ls-display-none">Excluir</a>
-              <button class="ls-btn-primary ls-display-none hidden-elements-6 ls-btn-sm" type="submit">Salvar</button>
-              <button class="ls-btn-danger ls-display-none hidden-elements-6 ls-btn-sm" type="submit" data-toggle-class="ls-display-none" data-target=".hidden-elements-6" data-ls-fields-enable="#fields-disabled-6">Cancelar</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="hidden-xs">www</td>
-            <td>CNAME</td>
-            <td class="hidden-xs">0</td>
-            <td class="ls-form-disable ls-form-text" id="fields-disabled-7">
-              <input type="text" name="nome" value="dominio.com.br" class="ls-field" required>
-            </td>
-            <td class="ls-txt-right">
-              <button class="ls-btn-primary hidden-elements-7 ls-btn-sm" data-toggle-class="ls-display-none" data-target=".hidden-elements-7" data-ls-fields-enable="#fields-disabled-7">Editar</button>
-              <a href="#" class="ls-btn ls-btn-sm ls-btn-danger hidden-elements-7" data-toggle-class="ls-display-none">Excluir</a>
-              <button class="ls-btn-primary ls-display-none hidden-elements-7 ls-btn-sm" type="submit">Salvar</button>
-              <button class="ls-btn-danger ls-display-none hidden-elements-7 ls-btn-sm" type="submit" data-toggle-class="ls-display-none" data-target=".hidden-elements-7" data-ls-fields-enable="#fields-disabled-7">Cancelar</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="hidden-xs">www</td>
-            <td>CNAME</td>
-            <td class="hidden-xs">0</td>
-            <td class="ls-form-disable ls-form-text" id="fields-disabled-8">
-              <input type="text" name="nome" value="dominio.com.br" class="ls-field" required>
-            </td>
-            <td class="ls-txt-right">
-              <button class="ls-btn-primary hidden-elements-8 ls-btn-sm" data-toggle-class="ls-display-none" data-target=".hidden-elements-8" data-ls-fields-enable="#fields-disabled-8">Editar</button>
-              <a href="#" class="ls-btn ls-btn-sm ls-btn-danger hidden-elements-8" data-toggle-class="ls-display-none">Excluir</a>
-              <button class="ls-btn-primary ls-display-none hidden-elements-8 ls-btn-sm" type="submit">Salvar</button>
-              <button class="ls-btn-danger ls-display-none hidden-elements-8 ls-btn-sm" type="submit" data-toggle-class="ls-display-none" data-target=".hidden-elements-8" data-ls-fields-enable="#fields-disabled-8">Cancelar</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="hidden-xs">www</td>
-            <td>CNAME</td>
-            <td class="hidden-xs">0</td>
-            <td class="ls-form-disable ls-form-text" id="fields-disabled-9">
-              <input type="text" name="nome" value="dominio.com.br" class="ls-field" required>
-            </td>
-            <td class="ls-txt-right">
-              <button class="ls-btn-primary hidden-elements-9 ls-btn-sm" data-toggle-class="ls-display-none" data-target=".hidden-elements-9" data-ls-fields-enable="#fields-disabled-9">Editar</button>
-              <a href="#" class="ls-btn ls-btn-sm ls-btn-danger hidden-elements-9" data-toggle-class="ls-display-none">Excluir</a>
-              <button class="ls-btn-primary ls-display-none hidden-elements-9 ls-btn-sm" type="submit">Salvar</button>
-              <button class="ls-btn-danger ls-display-none hidden-elements-9 ls-btn-sm" type="submit" data-toggle-class="ls-display-none" data-target=".hidden-elements-9" data-ls-fields-enable="#fields-disabled-9">Cancelar</button>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-  </form>
+        <tr>
+          <td>www</td>
+          <td class="hidden-xs">CNAME</td>
+          <td class="hidden-xs">0</td>
+          <td>
+            dominio.com.br
+          </td>
+          <td class="ls-txt-right ls-regroup">
+            <a href="#" class="ls-btn-primary ls-btn-sm" data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="" data-title="Editar entrada de DNS" data-class="ls-btn-primary" data-save="Salvar" data-close="Fechar">Editar</a>
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger" >Excluir</a>
+          </td>
+        </tr>
+        <tr>
+          <td>www</td>
+          <td class="hidden-xs">CNAME</td>
+          <td class="hidden-xs">0</td>
+          <td>
+            dominio.com.br
+          </td>
+          <td class="ls-txt-right ls-regroup">
+            <a href="#" class="ls-btn-primary ls-btn-sm" data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="" data-title="Editar entrada de DNS" data-class="ls-btn-primary" data-save="Salvar" data-close="Fechar">Editar</a>
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger" >Excluir</a>
+          </td>
+        </tr>
+        <tr>
+          <td>www</td>
+          <td class="hidden-xs">CNAME</td>
+          <td class="hidden-xs">0</td>
+          <td>
+            dominio.com.br
+          </td>
+          <td class="ls-txt-right ls-regroup">
+            <a href="#" class="ls-btn-primary ls-btn-sm" data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="" data-title="Editar entrada de DNS" data-class="ls-btn-primary" data-save="Salvar" data-close="Fechar">Editar</a>
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger" >Excluir</a>
+          </td>
+        </tr>
+        <tr>
+          <td>www</td>
+          <td class="hidden-xs">CNAME</td>
+          <td class="hidden-xs">0</td>
+          <td>
+            dominio.com.br
+          </td>
+          <td class="ls-txt-right ls-regroup">
+            <a href="#" class="ls-btn-primary ls-btn-sm" data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="" data-title="Editar entrada de DNS" data-class="ls-btn-primary" data-save="Salvar" data-close="Fechar">Editar</a>
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger" >Excluir</a>
+          </td>
+        </tr>
+        <tr>
+          <td>www</td>
+          <td class="hidden-xs">CNAME</td>
+          <td class="hidden-xs">0</td>
+          <td>
+            dominio.com.br
+          </td>
+          <td class="ls-txt-right ls-regroup">
+            <a href="#" class="ls-btn-primary ls-btn-sm" data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="" data-title="Editar entrada de DNS" data-class="ls-btn-primary" data-save="Salvar" data-close="Fechar">Editar</a>
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger" >Excluir</a>
+          </td>
+        </tr>
+        <tr>
+          <td>www</td>
+          <td class="hidden-xs">CNAME</td>
+          <td class="hidden-xs">0</td>
+          <td>
+            dominio.com.br
+          </td>
+          <td class="ls-txt-right ls-regroup">
+            <a href="#" class="ls-btn-primary ls-btn-sm" data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="" data-title="Editar entrada de DNS" data-class="ls-btn-primary" data-save="Salvar" data-close="Fechar">Editar</a>
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger" >Excluir</a>
+          </td>
+        </tr>
+        <tr>
+          <td>www</td>
+          <td class="hidden-xs">CNAME</td>
+          <td class="hidden-xs">0</td>
+          <td>
+            dominio.com.br
+          </td>
+          <td class="ls-txt-right ls-regroup">
+            <a href="#" class="ls-btn-primary ls-btn-sm" data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="" data-title="Editar entrada de DNS" data-class="ls-btn-primary" data-save="Salvar" data-close="Fechar">Editar</a>
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger" >Excluir</a>
+          </td>
+        </tr>
+        <tr>
+          <td>www</td>
+          <td class="hidden-xs">CNAME</td>
+          <td class="hidden-xs">0</td>
+          <td>
+            dominio.com.br
+          </td>
+          <td class="ls-txt-right ls-regroup">
+            <a href="#" class="ls-btn-primary ls-btn-sm" data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="" data-title="Editar entrada de DNS" data-class="ls-btn-primary" data-save="Salvar" data-close="Fechar">Editar</a>
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger" >Excluir</a>
+          </td>
+        </tr>
+        <tr>
+          <td>www</td>
+          <td class="hidden-xs">CNAME</td>
+          <td class="hidden-xs">0</td>
+          <td>
+            dominio.com.br
+          </td>
+          <td class="ls-txt-right ls-regroup">
+            <a href="#" class="ls-btn-primary ls-btn-sm" data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="" data-title="Editar entrada de DNS" data-class="ls-btn-primary" data-save="Salvar" data-close="Fechar">Editar</a>
+            <a href="#" class="ls-btn ls-btn-sm ls-btn-danger" >Excluir</a>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 </div>
 
     </div>
@@ -357,23 +317,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Est doloremque quaerat veniam magnam praesentium consequuntur nisi eum dolores</a>
+            <a href="#">Quo quibusdam vel ut</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Dolore aut in occaecati maxime quae voluptatem recusandae distinctio iusto ut</a>
+            <a href="#">Voluptatem facilis sed esse maxime perspiciatis ut</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Neque non libero consectetur accusamus voluptatibus sed vel non voluptates velit optio</a>
+            <a href="#">Nihil nam similique consequatur facilis eos ut cum at reiciendis qui consequatur doloremque et consequatur</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Facilis ducimus repudiandae quo</a>
+            <a href="#">Tempore iusto non ullam alias alias</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Quo dicta corrupti quo est quo adipisci deserunt</a>
+            <a href="#">Ipsum corporis non sint rerum perspiciatis et temporibus veniam et cupiditate et</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -382,8 +342,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> quia laborum sit aliquid debitis reprehenderit</a></li>
-          <li><a href="#">> sunt sed aliquam ex fugit ut</a></li>
+          <li><a href="#">> qui et sint aliquid natus ut</a></li>
+          <li><a href="#">> asperiores et et accusamus non magnam</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">

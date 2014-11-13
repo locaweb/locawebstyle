@@ -34,8 +34,8 @@
     <!-- Dropdown com detalhes da conta de usuário -->
     <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
       <a href="#" class="ls-ico-user">
-        João
-      <small>(fmolina)</small>
+        <span class="ls-name">João</span>
+        (fmolina)
       </a>
       <nav class="ls-dropdown-nav ls-user-menu">
         <ul>
@@ -81,7 +81,7 @@
     <a href="/locawebstyle/documentacao/exemplos/painel2/pre-painel"  class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
     <nav class="ls-menu">
       <ul>
-        <li><a href="/locawebstyle/documentacao/exemplos/painel2/home" class="ls-ico-home">Página inicial</a></li>
+        <li><a href="/locawebstyle/documentacao/exemplos/painel2/home" class="ls-ico-dashboard">Dashboard</a></li>
         <li><a href="/locawebstyle/documentacao/exemplos/painel2/stats" class="ls-ico-stats">Relatórios</a></li>
         <li class="ls-submenu">
           <a href="#" class="ls-ico-cog">Configurações</a>
@@ -101,57 +101,153 @@
 
   <main class="ls-main ">
     <div class="container-fluid">
-        <h1 class="ls-title-intro ls-ico-cog">E-mail de remetente</h1>
-  <p>Adicione e gerencie o e-mail de remetente que será exibido em seus envios.</p>
-  <div class="ls-box ls-box-gray">
-    <form class="ls-form ls-form-inline">
-      <label class="ls-label" role="search">
-        <b class="ls-label-text ls-hidden-accessible">E-mail</b>
-        <input type="text" id="q" name="q" aria-label="Digite um e-mail" accesskey="s" placeholder="E-mail" required="">
-      </label>
-      <div class="ls-actions-btn">
-        <button type="submit" class="ls-btn-primary">Adicionar</button>
-      </div>
-    </form>
-  </div>
-  <table class="ls-table">
-    <thead>
+      <h1 class="ls-title-intro ls-ico-cog">E-mail de remetente</h1>
+<p>Adicione e gerencie os endereços de remetente que poderão fazer envios. Existem dois métodos de inclusão: Por domínio ou por e-mail.</p>
+<br>
+<h2 class="ls-title-2">Domínios</h2>
+<p>Utilizar um domínio como remetente permite que qualquer endereço de e-mail vinculado a ele possa fazer envios. Após adicionar um domínio, é necessário criar uma entrada txt no seu gerenciador de DNS.</p>
+
+<div class="ls-box-filter">
+  <form class="ls-form ls-form-inline">
+    <label class="ls-label" role="search">
+      <b class="ls-label-text">Preencha um domínio:</b>
+      <input type="text" id="q" name="q" aria-label="Digite um Domínio" accesskey="s" placeholder="seudominio.com.br" required="">
+    </label>
+    <div class="ls-actions-btn">
+      <button type="submit" class="ls-btn-primary">Adicionar</button>
+    </div>
+  </form>
+</div>
+
+<table class="ls-table">
+  <thead>
+    <tr>
+      <th>Domínio adicionado</th>
+      <th colspan="2">Status</th>
+    </tr>
+  </thead>
+  <tbody>
       <tr>
-        <th>E-mail adicionado</th>
-        <th></th>
+        <td>seudominio1.com.br</td>
+        <td>Configurado</td>
+        <td class="ls-txt-right ls-regroup">
+          <a href="#" class="ls-btn ls-btn-xs">Configurações do DNS</a>
+          <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+            <a href="#" class="ls-btn ls-btn-xs" role="combobox" aria-expanded="false"></a>
+            <ul class="ls-dropdown-nav" aria-hidden="true">
+              <li><a href="#" class="ls-color-danger" role="option">Excluir</a></li>
+            </ul>
+          </div>
+        </td>
       </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>ruby_raynor@mail.com</td>
-          <td class="ls-txt-right"> <button data-action="/locawebstyle" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<div class='ls-txt-center'><h3 class='ls-title-3'>Você tem certeza que deseja excluir esse email?</h2><p>A exclusão do e-mail afetará os próximos envios com este remetente.</p></div>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-btn-danger">Excluir</button>  </td>
-        </tr>
-        <tr>
-          <td>quinn-kaplan@me.com</td>
-          <td class="ls-txt-right"> <button data-action="/locawebstyle" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<div class='ls-txt-center'><h3 class='ls-title-3'>Você tem certeza que deseja excluir esse email?</h2><p>A exclusão do e-mail afetará os próximos envios com este remetente.</p></div>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-btn-danger">Excluir</button>  </td>
-        </tr>
-        <tr>
-          <td>sonja-chandler@email.com</td>
-          <td class="ls-txt-right"> <button data-action="/locawebstyle" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<div class='ls-txt-center'><h3 class='ls-title-3'>Você tem certeza que deseja excluir esse email?</h2><p>A exclusão do e-mail afetará os próximos envios com este remetente.</p></div>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-btn-danger">Excluir</button>  </td>
-        </tr>
-        <tr>
-          <td>
-            melinda_love@yahoo.com
-            <span class="ls-tag-warning">Não confirmado</span>
-          </td>
-          <td class="ls-txt-right">
-            <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
-              <a href="#" class="ls-btn">Ações</a>
-              <ul class="ls-dropdown-nav">
-                <li><a href="#">Reenviar e-mail</a></li>
-                <li><a href="#" data-action="/locawebstyle" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<div class='ls-txt-center'> <h3 class='ls-title-3'>Você tem certeza que deseja excluir esse email?</h2><p>A exclusão do e-mail afetará os próximos envios com este remetente.</p></div>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-color-danger">Excluir</a></li>
-              </ul>
-            </div>
-            <!-- <button data-action="/locawebstyle" data-class="ls-btn-danger" data-close="Não tenho certeza" data-content="<h3 class='ls-title-2'>Você tem certeza que deseja excluir esse email?</h2><p>A exclusão do e-mail afetará os próximos envios com este remetente.</p>" data-ls-module="modal" data-save="Sim, desativar" data-title="Desativar email" class="ls-btn-danger ls-btn-sm">Excluir</button> -->
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      <tr>
+        <td>seudominio2.com.br</td>
+        <td><span class="ls-word-dotted" data-ls-module="popover" data-title="Não Configurado" data-content="A configuração tem um tempo de até 24 horas para propagar após a inserção da entrada em seu gerenciador de DNS." data-placement="right" data-trigger="hover" data-custom-classes="ls-width-250">Não Configurado</span></td>
+        <td class="ls-txt-right ls-regroup">
+          <a href="#" class="ls-btn ls-btn-xs">Configurações do DNS</a>
+          <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+            <a href="#" class="ls-btn ls-btn-xs" role="combobox" aria-expanded="false"></a>
+            <ul class="ls-dropdown-nav" aria-hidden="true">
+              <li><a href="#" class="ls-color-danger" role="option">Excluir</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>seudominio1.com.br</td>
+        <td>Configurado</td>
+        <td class="ls-txt-right ls-regroup">
+          <a href="#" class="ls-btn ls-btn-xs">Configurações do DNS</a>
+          <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+            <a href="#" class="ls-btn ls-btn-xs" role="combobox" aria-expanded="false"></a>
+            <ul class="ls-dropdown-nav" aria-hidden="true">
+              <li><a href="#" class="ls-color-danger" role="option">Excluir</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>seudominio2.com.br</td>
+        <td><span class="ls-word-dotted" data-ls-module="popover" data-title="Não Configurado" data-content="A configuração tem um tempo de até 24 horas para propagar após a inserção da entrada em seu gerenciador de DNS." data-placement="right" data-trigger="hover" data-custom-classes="ls-width-250">Não Configurado</span></td>
+        <td class="ls-txt-right ls-regroup">
+          <a href="#" class="ls-btn ls-btn-xs">Configurações do DNS</a>
+          <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+            <a href="#" class="ls-btn ls-btn-xs" role="combobox" aria-expanded="false"></a>
+            <ul class="ls-dropdown-nav" aria-hidden="true">
+              <li><a href="#" class="ls-color-danger" role="option">Excluir</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+
+
+<h2 class="ls-title-2">E-mails</h2>
+<p>Utilizar um e-mail como remetente permite que apenas o e-mail confirmado possa fazer envios. Após adicionar um e-mail, é necessário abrir a mensagem recebida e confirmar o remetente.</p>
+
+<div class="ls-box-filter">
+  <form class="ls-form ls-form-inline">
+    <label class="ls-label" role="search">
+      <b class="ls-label-text">Preencha um e-mail:</b>
+      <input type="text" id="q" name="q" aria-label="Digite um e-mail" accesskey="s" placeholder="seuemail@dominio.com.br" required="">
+    </label>
+    <div class="ls-actions-btn">
+      <button type="submit" class="ls-btn-primary">Adicionar</button>
+    </div>
+  </form>
+</div>
+
+<table class="ls-table">
+  <thead>
+    <tr>
+      <th>Domínio adicionado</th>
+      <th colspan="2">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>byron-brady@live.com</td>
+        <td>Configurado</td>
+        <td class="ls-txt-right ls-regroup">
+          <a href="#" class="ls-btn-danger ls-btn-xs">Excluir</a>
+        </td>
+      </tr>
+      <tr>
+        <td>caramclean@hotmail.com</td>
+        <td><span>Não Configurado</span></td>
+        <td class="ls-txt-right ls-regroup">
+          <a href="#" class="ls-btn ls-btn-xs">Reenviar e-mail</a>
+          <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+            <a href="#" class="ls-btn ls-btn-xs" role="combobox" aria-expanded="false"></a>
+            <ul class="ls-dropdown-nav" aria-hidden="true">
+              <li><a href="#" class="ls-color-danger" role="option">Excluir</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>randaladkins@fastmail.com</td>
+        <td>Configurado</td>
+        <td class="ls-txt-right ls-regroup">
+          <a href="#" class="ls-btn-danger ls-btn-xs">Excluir</a>
+        </td>
+      </tr>
+      <tr>
+        <td>lynette_mckenna@fastmail.com</td>
+        <td><span>Não Configurado</span></td>
+        <td class="ls-txt-right ls-regroup">
+          <a href="#" class="ls-btn ls-btn-xs">Reenviar e-mail</a>
+          <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+            <a href="#" class="ls-btn ls-btn-xs" role="combobox" aria-expanded="false"></a>
+            <ul class="ls-dropdown-nav" aria-hidden="true">
+              <li><a href="#" class="ls-color-danger" role="option">Excluir</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+  </tbody>
+</table>
 
 
     </div>
@@ -197,23 +293,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Incidunt et quos cumque sequi ut consequatur autem sed autem sed vel possimus accusamus</a>
+            <a href="#">Accusamus eos esse nulla tenetur</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Laborum quo aut provident reiciendis laboriosam voluptas eius sit</a>
+            <a href="#">A dolor et voluptas rerum placeat iste</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Eos iste suscipit occaecati molestiae et nihil libero eum omnis</a>
+            <a href="#">Aut ea eaque qui nobis unde inventore et molestiae molestiae inventore</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Commodi quo est reiciendis</a>
+            <a href="#">Facere minima inventore aut qui saepe rerum ea eum perspiciatis inventore temporibus veritatis dolor</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Sint accusamus adipisci qui eius aspernatur voluptatum facere dolor non ducimus illum sed omnis</a>
+            <a href="#">Est natus libero dolorum rerum id</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -222,8 +318,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> illo placeat laboriosam voluptates fugiat sed</a></li>
-          <li><a href="#">> qui ipsa cum velit et error</a></li>
+          <li><a href="#">> enim aliquam sit rerum dolores quas</a></li>
+          <li><a href="#">> qui labore et velit recusandae consequuntur</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">

@@ -247,6 +247,12 @@
       "path": "documentacao/exemplos/boilerplate"
   },
   
+  "documentacao/exemplos/create-new-password" :   {
+      "title": "Crie uma nova senha",
+      "description": "",
+      "path": "documentacao/exemplos/create-new-password"
+  },
+  
   "documentacao/exemplos/erro-404" :   {
       "title": "",
       "description": "",
@@ -338,7 +344,7 @@
   },
   
   "documentacao/exemplos/painel1/home" :   {
-      "title": "Página Inicial",
+      "title": "Dashboard",
       "description": "",
       "path": "documentacao/exemplos/painel1/home"
   },
