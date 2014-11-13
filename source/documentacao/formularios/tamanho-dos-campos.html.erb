@@ -33,21 +33,25 @@ description: Aumente ou diminua o tamanho dos campos de formulários
   <h2 class="doc-title-3">Alterando altura dos selects</h2>
   <p>Para alterar a altura dos selects customizados, basta adicionar as classes abaixo na <code>select</code>.</p>
   <div class="ls-box-demo">
-    <select class="ls-custom-select ls-field-sm">
-      <option value="">Pequeno</option>
-      <%- 2.times do |i| %>
-        <option value="<%= i %>"> <%= lorem.words 3 %> </option>
-      <% end %>
-    </select>
+    <div class="ls-custom-select ls-field-sm">
+      <select>
+        <option value="">Pequeno</option>
+        <%- 2.times do |i| %>
+          <option value="<%= i %>"> <%= lorem.words 3 %> </option>
+        <% end %>
+      </select>
+    </div>[]
   </div>
   <% code("html") do %>
 
-  <select class="ls-custom-select ls-field-sm">
-    <option value="">Pequeno</option>
-    <%- 2.times do |i| %>
-    <option value="<%= i %>"> <%= lorem.words 3 %> </option>
-    <% end %>
-  </select>
+  <div class="ls-custom-select ls-field-sm">
+    <select>
+      <option value="">Pequeno</option>
+      <%- 2.times do |i| %>
+      <option value="<%= i %>"> <%= lorem.words 3 %> </option>
+      <% end %>
+    </select>
+  </div>
 
 <input type="submit" class="ls-btn ls-btn-sm" value="Botão">
   <% end %>
@@ -64,12 +68,14 @@ description: Aumente ou diminua o tamanho dos campos de formulários
       <tr>
         <td>ls-field-lg</td>
         <td>
-          <select class="ls-custom-select ls-field-lg">
-            <option value="">Grande</option>
-            <%- 2.times do |i| %>
-              <option value="<%= i %>"> <%= lorem.words 3 %> </option>
-            <% end %>
-          </select>
+          <div class="ls-custom-select ls-field-lg">
+            <select>
+              <option value="">Grande</option>
+              <%- 2.times do |i| %>
+                <option value="<%= i %>"> <%= lorem.words 3 %> </option>
+              <% end %>
+            </select>
+          </div>
 
         </td>
         <td><input type="submit" class="ls-btn ls-btn-lg" value="Botão"></td>
@@ -77,12 +83,14 @@ description: Aumente ou diminua o tamanho dos campos de formulários
       <tr>
         <td>ls-field-md (<i>tamanho default</i>)</td>
         <td>
-          <select class="ls-custom-select ls-field-md">
-            <option value="">Normal</option>
-            <%- 2.times do |i| %>
-              <option value="<%= i %>"> <%= lorem.words 3 %> </option>
-            <% end %>
-          </select>
+          <div class="ls-custom-select ls-field-md">
+            <select>
+              <option value="">Normal</option>
+              <%- 2.times do |i| %>
+                <option value="<%= i %>"> <%= lorem.words 3 %> </option>
+              <% end %>
+            </select>
+          </div>
         </td>
         <td>
           <input type="submit" class="ls-btn ls-btn-md" value="Botão">
@@ -91,12 +99,14 @@ description: Aumente ou diminua o tamanho dos campos de formulários
       <tr>
         <td>ls-field-sm</td>
         <td>
-          <select class="ls-custom-select ls-field-sm">
-            <option value="">Pequeno</option>
-            <%- 2.times do |i| %>
-              <option value="<%= i %>"> <%= lorem.words 3 %> </option>
-            <% end %>
-          </select>
+          <div class="ls-custom-select ls-field-sm">
+            <select>
+              <option value="">Pequeno</option>
+              <%- 2.times do |i| %>
+                <option value="<%= i %>"> <%= lorem.words 3 %> </option>
+              <% end %>
+            </select>
+          </div>
         </td>
         <td>
           <input type="submit" class="ls-btn ls-btn-sm" value="Botão">
@@ -105,12 +115,14 @@ description: Aumente ou diminua o tamanho dos campos de formulários
       <tr>
         <td>ls-field-xs</td>
         <td>
-          <select class="ls-custom-select ls-field-xs">
-            <option value="">Bem pequeno</option>
-            <%- 2.times do |i| %>
-              <option value="<%= i %>"> <%= lorem.words 3 %> </option>
-            <% end %>
-          </select>
+          <div class="ls-custom-select ls-field-xs">
+            <select>
+              <option value="">Bem pequeno</option>
+              <%- 2.times do |i| %>
+                <option value="<%= i %>"> <%= lorem.words 3 %> </option>
+              <% end %>
+            </select>
+          </div>
         </td>
         <td>
           <input type="submit" class="ls-btn ls-btn-xs" value="Botão">
