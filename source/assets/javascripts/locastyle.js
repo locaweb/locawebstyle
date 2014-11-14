@@ -25,7 +25,6 @@
 //= require locastyle/_progress-bar
 //= require locastyle/_form
 //= require locastyle/_guided-tour
-//= require locastyle/_custom-fields
 //= require locastyle/_topbar-curtain
 //= require locastyle/_btn-group
 //= require locastyle/_datepicker

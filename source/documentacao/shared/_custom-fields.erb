@@ -1,7 +1,9 @@
-<% if field == 'select' %>
-  <select class="ls-custom-select">
-    <% (1..4).each do |i| %>
-      <option value="<%= i %>"> Opção <%= i %> </option>
-    <% end %>
-  </select>
-<% end %>
+<div class="ls-custom-select">
+  <% if field == 'select' %>
+    <select class="ls-select">
+      <% (1..4).each do |i| %>
+        <option value="<%= i %>"> Opção <%= i %> </option>
+      <% end %>
+    </select>
+  <% end %>
+</div>
