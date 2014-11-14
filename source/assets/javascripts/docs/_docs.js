@@ -22,7 +22,7 @@ var lsdocs = (function() {
   function toggleMenuActive() {
     $('.doc-menu').on('click', function() {
       $(this).toggleClass('active');
-    })
+    });
   }
 
   function markupExamples () {
