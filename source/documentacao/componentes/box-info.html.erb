@@ -1,0 +1,76 @@
+---
+title: Box Informativo
+description: Elemento que pode ser utilizado no dashboard de um painel para exibir informações resumidas, principalmente dados numéricos.
+type: component
+---
+
+<%= partial 'partials/doc-menu-components'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <div class="row ls-overflow-hidden">
+    <div class="col-md-5">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>usar?</strong></h2>
+        <p>- Há necessidade de exibir dados numéricos (valores, quantidades, etc.) sobre um o serviço contratado.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>não</strong> usar?</h2>
+        <p>- A informação tenha foco em ajuda ou dica.</p>
+        <p>- A informação seja um identificador, endereço ou nome de servidor.</p>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+    <%= partial 'documentacao/shared/box-info/_box-info' %>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="320" height="680" src="<%= base_url %>/documentacao/shared/box-info/box-info-mobile" frameborder="0"></iframe>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/box-info/_box-info' %><% end %>
+
+
+  <p>Casa você deseje exibir o box sem dados, basta inserir no conteúdo, um parágrafo a classe <code>.ls-no-data</code>:</p>
+
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+    <%= partial 'documentacao/shared/box-info/_box-info-no-data' %>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="320" height="320" src="<%= base_url %>/documentacao/shared/box-info/box-info-no-data-mobile" frameborder="0"></iframe>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/box-info/_box-info-no-data' %><% end %>
+
+
+  <h2 class="doc-title-5">Opções e variações da estrutura</h2>
+  <p>
+    <strong>Label</strong><br>
+    Os títulos podem variar de acordo com o contexto, por exemplo: Informações do plano, Quantidade de sites, etc.
+  </p>
+  <p>
+    <strong>Escala</strong><br>
+    Os números exibidos podem ser simples com até 6 dígitos (100.000) ou informativos, como 10 milhões, 100 GB, 1.000 sites, etc.
+  </p>
+  <p>
+    <strong>Status</strong><br>
+    Pode ficar oculto ou ser exibido no canto direito.
+  </p>
+  <p>
+    <strong>Ação principal</strong><br>
+    No lugar do status, é possível exibir um botão de ação.
+  </p>
+
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+    <%= partial 'documentacao/shared/box-info/_box-info-demo' %>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="320" height="580" src="<%= base_url %>/documentacao/shared/box-info/box-info-demo-mobile" frameborder="0"></iframe>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/box-info/_box-info-demo' %><% end %>
+
+</section>
