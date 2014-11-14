@@ -1,6 +1,6 @@
 =theme-color($theme-name, $colors)
-  $color1: map-fetch($colors, color1)
-  $color2: map-fetch($colors, color2)
+  $color1: map-get($colors, color1)
+  $color2: map-get($colors, color2)
 
   .ls-bg-theme-#{$theme-name}
     background-color: $color1
