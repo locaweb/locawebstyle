@@ -137,3 +137,32 @@
   &:hover:before,
   &:focus:before
     top: 7px
+
+/* Top-left */
+
+.ls-tooltip-top-left
+  &:after,
+  &:before
+    +single-transition(bottom, 0.25s, ease-in-out)
+    +single-transition(opacity, 0.25s, ease-in-out)
+    bottom: 90%
+    left: -9999px
+    margin-bottom: 12px
+
+  &:before
+    border-color: #222 transparent transparent transparent
+    margin-bottom: 0
+
+  &:hover:after,
+  &:focus:after,
+  &:focus:after,
+  &:hover:before,
+  &:focus:before,
+  &:focus:before
+    bottom: 80%
+    left: auto
+    right: 0
+
+  &:hover:before,
+  &:focus:before
+    right: 15px
