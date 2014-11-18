@@ -22,15 +22,12 @@ var lsdocs = (function() {
   function toggleMenuActive() {
     $('.doc-menu').on('click', function() {
       $(this).toggleClass('active');
-    })
+    });
   }
 
   function markupExamples () {
     $('.doc-example-markup').each(function (i, example) {
       var $example = $(example);
-
-      // $(this).text(html);
-      // $(this).removeClass('language-html').addClass('language-markup');
 
       $example
         .append('<menu class="doc-example-menu"> <button class="doc-example-menu-demo doc-example-menu-active"> <i class="ls-ico-cog"></i> </button> <button class="doc-example-menu-code"> <i class="ls-ico-chevron-left"></i> <i class="ls-ico-chevron-right"></i> </button> </menu>')
