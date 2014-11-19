@@ -24,8 +24,8 @@ describe("Buttons group: ", function(){
   describe("Regroup mobile", function(){
     it("Dropdown should have the same amount of links while on desktop", function(){
       $('.ls-regroup').each(function(){
-        var $this = $(this)
-        var linkLength = $this.find('a, button').length -1
+        var $this = $(this);
+        var linkLength = $this.find('a, button').length -1;
         locastyle.breakpointClass = "ls-screen-xs";
         locastyle.btnGroup.init();
         expect(($this).find('.ls-dropdown-nav').find('a,button')).toHaveLength(linkLength);
