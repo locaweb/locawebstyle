@@ -22,14 +22,25 @@ describe("Buttons group: ", function(){
   });
 
   describe("Regroup mobile", function(){
-    it("Dropdown should have the same amount of links while on desktop", function(){
+    it("should count and comparable existing links ", function(){
       $('.ls-regroup').each(function(){
         var $this = $(this);
         var linkLength = $this.find('a, button').length -1;
         locastyle.breakpointClass = "ls-screen-xs";
         locastyle.btnGroup.init();
-        expect(($this).find('.ls-dropdown-nav').find('a,button')).toHaveLength(linkLength);
+        expect(($this).find('.ls-dropdown-nav').find('a')).toHaveLength(linkLength);
       });
+    });
+  });
+
+  describe("Regroup mobile", function(){
+    it("should check and compare the texts of existing links and buttons", function(){
+      var text1 = $('#myButtonInDropdown').text();
+      var text2 = $('#myButtonInDropdown2').text();
+      locastyle.breakpointClass = "ls-screen-xs";
+      locastyle.btnGroup.init();
+      expect($('#myGroupButtons').find('.ls-dropdown-nav').find('a:first')).toHaveText(text1);
+      expect($('#myGroupButtons2').find('.ls-dropdown-nav').find('a:first')).toHaveText(text2);
     });
   });
 
