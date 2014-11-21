@@ -28,12 +28,10 @@ describe("Buttons group: ", function(){
         var linkLength = $this.find('a, button').length -1;
         locastyle.breakpointClass = "ls-screen-xs";
         locastyle.btnGroup.init();
-        expect(($this).find('.ls-dropdown-nav').find('a')).toHaveLength(linkLength);
+        expect(($this).find('.ls-dropdown-nav').find('a, button')).toHaveLength(linkLength);
       });
     });
-  });
 
-  describe("Regroup mobile", function(){
     it("should check and compare the texts of existing links and buttons", function(){
       var text1 = $('#myButtonInDropdown').text();
       var text2 = $('#myButtonInDropdown2').text();
