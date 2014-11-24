@@ -9,7 +9,6 @@ var locastyle = (function() {
     locastyle.btnGroup.init();
     locastyle.alert.init();
     locastyle.datepicker.init();
-    locastyle.customFields.init();
     locastyle.form.togglePasswordField();
     checkClassForTrack();
   }

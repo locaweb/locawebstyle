@@ -9,10 +9,15 @@ description: Mudamos a aparência da select sem alterar o comportamento padrão 
 
   <%= partial 'partials/doc-intro-content' %>
 
-  <p>Para estilizar uma select, é bem simples, basta adicionar a classe <code>ls-custom-select</code>e a mágica acontece.</p>
+  <p>Para estilizar uma <code>&lt;select&gt;</code>, é bem simples, basta envolvê-la em uma  <code>&lt;div&gt;</code>com a classe <code>ls-custom-select</code>e a mágica acontece.</p>
+
 
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %>
   </div>
   <% code("html") do %><%= partial 'documentacao/shared/custom-fields', locals: {field: 'select'} %><% end %>
+
+  <div class="ls-alert ls-alert-info">
+    <p>Foi usado apenas CSS, com suporte aos navegadores mais atuais, inclusive IE-8 ou superior.</p>
+  </div>
 </section>

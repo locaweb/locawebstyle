@@ -1,0 +1,34 @@
+---
+title: Header de Painel Interno
+description: Você pode inserir um título, um logo, informações adicionais com menor destaque. Do lado direito, uma área para acesso ao perfil e atalhos para outras funcionalidades.
+type: component
+layout: mobile
+---
+
+<%= partial 'documentacao/shared/structure/header-internal' %>
+<aside class="ls-sidebar">
+  <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+    <a href="#" class="ls-ico-user">
+      <span class="ls-name">Franco Molina dos Santos Silva</span>
+      (fmolina)
+    </a>
+    <nav class="ls-dropdown-nav ls-user-menu" aria-hidden="true">
+      <ul>
+        <li><a href="#" role="option">Meus dados</a></li>
+        <li><a href="#" role="option">Faturas</a></li>
+        <li><a href="#" role="option">Planos</a></li>
+       </ul>
+       <a href="#" class="ls-btn-logout" role="combobox" aria-expanded="false">Sair</a>
+    </nav>
+  </div>
+  <div class="ls-sidebar-inner">
+    <a href="#" class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
+    <nav class="ls-menu">
+      <ul>
+        <li class="ls-active"><a href="#" class="ls-ico-dashboard">Dashboard</a></li>
+        <li><a href="#" class="ls-ico-stats">Item de menu</a></li>
+        <li><a href="#" class="ls-ico-image">Item de menu</a></li>
+      </ul>
+    </nav>
+  </div>
+</aside>
