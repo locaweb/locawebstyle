@@ -1,0 +1,109 @@
+<div class="ls-topbar">
+
+  <!-- Barra de Notificações -->
+  <div class="ls-notification-topbar">
+
+    <!-- Links de apoio -->
+    <div class="ls-alerts-list">
+      <a href="#" class="ls-ico-bell-o" data-counter="8" data-ls-module="topbarCurtain" data-target="#ls-notification-curtain3"><span>Notificações</span></a>
+      <a href="#" class="ls-ico-bullhorn" data-ls-module="topbarCurtain" data-target="#ls-help-curtain3"><span>Ajuda</span></a>
+      <a href="#" class="ls-ico-question" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain3"><span>Sugestões</span></a>
+    </div>
+
+    <!-- Dropdown com detalhes da conta de usuário -->
+    <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+      <a href="#" class="ls-ico-user">
+        <span class="ls-name">João</span>
+        (fmolina)
+      </a>
+      <nav class="ls-dropdown-nav ls-user-menu">
+        <ul>
+          <li><a href="#">Meus dados</a></li>
+          <li><a href="#">Faturas</a></li>
+          <li><a href="#">Planos</a></li>
+          <li><a href="#">Sair</a></li>
+         </ul>
+      </nav>
+    </div>
+  </div>
+
+  <span class="ls-show-sidebar ls-ico-menu"></span>
+
+  <a href="#" class="ls-go-next"><span class="ls-text">Voltar à lista de serviços</span></a>
+
+  <h1 class="ls-brand-name">
+    <a href="#" class="ls-ico-earth">
+      <small>Nome do produto</small>
+      identificador da unidade
+    </a>
+  </h1>
+
+</div>
+
+<main class="ls-main"></main>
+
+<aside class="ls-sidebar">
+  <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+    <a href="#" class="ls-ico-user">
+      <span class="ls-name">Franco Molina dos Santos Silva</span>
+      (fmolina)
+    </a>
+    <nav class="ls-dropdown-nav ls-user-menu" aria-hidden="true">
+      <ul>
+        <li><a href="#" role="option">Meus dados</a></li>
+        <li><a href="#" role="option">Faturas</a></li>
+        <li><a href="#" role="option">Planos</a></li>
+       </ul>
+       <a href="#" class="ls-btn-logout" role="combobox" aria-expanded="false">Sair</a>
+    </nav>
+  </div>
+  <div class="ls-sidebar-inner">
+    <a href="#" class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
+    <nav class="ls-menu">
+      <ul>
+        <li class="ls-active"><a href="#" class="ls-ico-dashboard">Dashboard</a></li>
+        <li><a href="#" class="ls-ico-stats">Item de menu</a></li>
+        <li><a href="#" class="ls-ico-image">Item de menu</a></li>
+        <li class="ls-submenu">
+          <a href="#" class="ls-ico-cog">Item de menu pai</a>
+          <ul role="menu">
+            <li><a class="ls-submenu-item" href="#">Item de submenu</a></li>
+            <li><a class="ls-submenu-item" href="#">Item de submenu</a></li>
+            <li><a class="ls-submenu-item" href="#">Item de submenu</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+
+<aside class="ls-notification">
+  <nav class="ls-notification-list" id="ls-notification-curtain3">
+    <h3 class="ls-title-2">Notificações</h3>
+    <ul>
+      <%- 5.times do %>
+        <li class="ls-dismissable">
+          <a href="#"><%= lorem.sentence %></a>
+          <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+        </li>
+      <% end %>
+    </ul>
+    <p class="ls-no-notification-message">Não há notificações.</p>
+  </nav>
+  <nav class="ls-notification-list" id="ls-help-curtain3">
+    <h3 class="ls-title-2">Feedback</h3>
+    <ul>
+      <%- 2.times do %>
+        <li><a href="#">> <%= lorem.words 6 %></a></li>
+      <% end %>
+    </ul>
+  </nav>
+  <nav class="ls-notification-list" id="ls-feedback-curtain3">
+    <h3 class="ls-title-2">Ajuda</h3>
+    <ul>
+      <li><a href="#">> Guia</a></li>
+      <li><a href="#">> Wiki</a></li>
+    </ul>
+  </nav>
+</aside>
