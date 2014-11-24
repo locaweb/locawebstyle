@@ -1,0 +1,67 @@
+---
+title: Estrutura principal
+description: É daqui que você vai começar. Nosso Boilerplate responsivo tem header, menu lateral e uma estrutura de conteúdo principal que é fluida, ou seja, sem largura limitada.
+type: component
+---
+
+<%= partial 'partials/doc-menu-components'%>
+
+<section class="col-md-9">
+
+	<%= partial 'partials/doc-intro-content' %>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>usar?</strong></h2>
+        <p>- Sempre que quiser fazer um painel de administração ou um sistema completo, responsivo e bonitão.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>não</strong> usar?</h2>
+        <p>- Se você está pensando em fazer um site. Essa estrutura foi planejada especialmente para painéis de administração e não é recomendada para sites.</p>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <h2 class="doc-title-4">Header de painel principal</h2>
+  <p>Você pode inserir um título, um logo, informações adicionais com menor destaque. Do lado direito, uma área para acesso ao perfil e atalhos para outras funcionalidades.</p>
+
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+    <%= partial 'documentacao/shared/structure/header-main' %>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe class="doc-border-silver" width="340" height="400" src="<%= base_url %>/documentacao/shared/structure/header-main-mobile" frameborder="0"></iframe>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/structure/header-main-mobile' %><% end %>
+
+
+  <h2 class="doc-title-4">Header de painel interno</h2>
+  <p>Muito semelhante ao header principal, com a inclusão de um botão voltar na lateral superior esquerda. Esta versão deve ser utilizada quando o painel é acessado a partir de uma listagem. O botão voltar substitui a navegação pelo browser e também ajuda o usuário a se localizar, indicando que ele está um nível abaixo.</p>
+
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+    <%= partial 'documentacao/shared/structure/header-internal' %>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe class="doc-border-silver" width="340" height="400" src="<%= base_url %>/documentacao/shared/structure/header-internal-mobile" frameborder="0"></iframe>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/structure/header-internal-mobile' %><% end %>
+
+
+  <h2 class="doc-title-4">Menu, submenu e seções internas</h2>
+  <p>Do mais simples ao mais complexo, com o Locastyle é possível criar painéis para todos os tipos de demanda. O menu pode receber até itens de 2º nívele as páginas internas podem ser divididas em seções.</p>
+
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+    <div id="doc-header-full" class="doc-border-silver">
+      <%= partial 'documentacao/shared/structure/header-full' %>
+    </div>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe class="doc-border-silver" width="340" height="400" src="<%= base_url %>/documentacao/shared/structure/header-full-mobile" frameborder="0"></iframe>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/structure/header-full' %><% end %>
+
+
+</section>

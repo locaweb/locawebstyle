@@ -688,8 +688,46 @@ p code
 // Adjust color documentation
 //
 
-.doc-content .ls-box-demo .ls-topbar:after
-  content: none
+.doc-content
+  .ls-box-demo
+    overflow: hidden
+
+    .ls-topbar:after
+    content: none
+
+
+  .ls-topbar
+    position: relative
+
+    ul
+      margin: 0
+
+  .ls-notification,
+  .ls-sidebar
+    position: absolute
+
+    ul
+      margin: 0
+
+    .ls-notification-list
+      top: 94px
+      margin-left: 20px
+
+  .doc-border-silver
+    border: 1px solid #ccc
+
+.doc-sidebar-componentes ul li:first-of-type
+  border-bottom: 1px dotted #ccc
+  padding-bottom: 7px
+
+#doc-header-full
+  height: 555px
+  margin-bottom: 50px
+  overflow: hidden
+  position: relative
+
+  .ls-main
+    height: 450px
 
 @media screen and (max-width: 991px)
   .doc-content

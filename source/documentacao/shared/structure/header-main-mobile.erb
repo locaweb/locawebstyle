@@ -1,0 +1,25 @@
+---
+title: Header de Painel Principal
+description: Você pode inserir um título, um logo, informações adicionais com menor destaque. Do lado direito, uma área para acesso ao perfil e atalhos para outras funcionalidades.
+type: component
+layout: mobile
+---
+
+<%= partial 'documentacao/shared/structure/header-main' %>
+<aside class="ls-sidebar">
+  <div data-ls-module="dropdown" class="ls-dropdown ls-user-account ls-active">
+    <a href="#" class="ls-ico-user">
+      <span class="ls-name">Franco Molina dos Santos Silva</span>
+      (fmolina)
+    </a>
+    <nav class="ls-dropdown-nav ls-user-menu" aria-hidden="true">
+      <ul>
+        <li><a href="#" role="option">Meus dados</a></li>
+        <li><a href="#" role="option">Faturas</a></li>
+        <li><a href="#" role="option">Planos</a></li>
+       </ul>
+       <a href="#" class="ls-btn-logout" role="combobox" aria-expanded="false">Sair</a>
+    </nav>
+  </div>
+  <h1 class="ls-brand-name ls-ico-earth"><a href="home">Nome do produto</a></h1>
+</aside>
