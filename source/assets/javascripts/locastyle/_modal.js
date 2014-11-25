@@ -68,6 +68,7 @@ locastyle.modal = (function() {
     $(".ls-modal-overlay, .ls-modal-template").remove();
     $('body').removeClass('modal-opened');
     locastyle.popover.destroyPopover();
+    locastyle.popover.init();
   }
 
   function ariaModal($modal) {
