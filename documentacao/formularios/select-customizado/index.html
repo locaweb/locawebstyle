@@ -94,15 +94,18 @@
 </div>
 
 
-  <p>Para estilizar uma select, é bem simples, basta adicionar a classe <code>ls-custom-select</code>e a mágica acontece.</p>
+  <p>Para estilizar uma <code>&lt;select&gt;</code>, é bem simples, basta envolvê-la em uma  <code>&lt;div&gt;</code>com a classe <code>ls-custom-select</code>e a mágica acontece.</p>
+
 
   <div class="ls-box-demo">
-      <select class="ls-custom-select">
-      <option value="1"> Opção 1 </option>
-      <option value="2"> Opção 2 </option>
-      <option value="3"> Opção 3 </option>
-      <option value="4"> Opção 4 </option>
-  </select>
+    <div class="ls-custom-select">
+    <select class="ls-select">
+        <option value="1"> Opção 1 </option>
+        <option value="2"> Opção 2 </option>
+        <option value="3"> Opção 3 </option>
+        <option value="4"> Opção 4 </option>
+    </select>
+</div>
 
   </div>
   <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
@@ -110,15 +113,23 @@
 3
 4
 5
-6</pre></td><td class="code"><pre>  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-custom-select"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span> Opção 1 <span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span> Opção 2 <span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span> Opção 3 <span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span> Opção 4 <span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;/select&gt;</span>
+6
+7
+8</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-custom-select"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-select"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span> Opção 1 <span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span> Opção 2 <span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span> Opção 3 <span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span> Opção 4 <span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 
+
+  <div class="ls-alert ls-alert-info">
+    <p>Foi usado apenas CSS, com suporte aos navegadores mais atuais, inclusive IE-8 ou superior.</p>
+  </div>
 </section>
 
   </div>

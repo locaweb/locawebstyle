@@ -115,10 +115,10 @@
       "path": "documentacao/componentes/botoes"
   },
   
-  "documentacao/componentes/box" :   {
-      "title": "Box genérico",
-      "description": "Um box genérico usado para dividir ou agrupar conteúdos",
-      "path": "documentacao/componentes/box"
+  "documentacao/componentes/box-info" :   {
+      "title": "Box Informativo",
+      "description": "Elemento que pode ser utilizado no dashboard de um painel para exibir informações resumidas, principalmente dados numéricos.",
+      "path": "documentacao/componentes/box-info"
   },
   
   "documentacao/componentes/breadcrumb" :   {
@@ -137,6 +137,18 @@
       "title": "Dropdown",
       "description": "Componente para agrupar listas de links.",
       "path": "documentacao/componentes/dropdown"
+  },
+  
+  "documentacao/componentes/estrutura-principal" :   {
+      "title": "Estrutura principal",
+      "description": "É daqui que você vai começar. Nosso Boilerplate responsivo tem header, menu lateral e uma estrutura de conteúdo principal que é fluida, ou seja, sem largura limitada.",
+      "path": "documentacao/componentes/estrutura-principal"
+  },
+  
+  "documentacao/componentes/generic-box" :   {
+      "title": "Box genérico",
+      "description": "Um box genérico usado para dividir ou agrupar conteúdos",
+      "path": "documentacao/componentes/generic-box"
   },
   
   "documentacao/componentes" :   {
