@@ -11,8 +11,6 @@ locastyle.browserUnsupportedBar = (function() {
   function browserDetect() {
     var version            = locastyle.browserDetect.browserVersion();
     var name               = locastyle.browserDetect.browserName();
-
-    console.log(version, name)
     var minBrowserVersions = {
       'chrome' : 34,
       'firefox': 29,
@@ -23,7 +21,6 @@ locastyle.browserUnsupportedBar = (function() {
 
     if (!$.cookie('hideBrowserUnsupportedAlert')) {
       if (version <=  minBrowserVersions[name]) {
-        console.log("teste")
         openUsupportedBrowserAlert();
       }
     }
