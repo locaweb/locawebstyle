@@ -4,7 +4,6 @@ locastyle.browserDetect = (function() {
   'use strict';
 
   var userAgent = navigator.userAgent.toLowerCase();
-
   function init() {
     browserClass();
   }
@@ -13,13 +12,13 @@ locastyle.browserDetect = (function() {
     if (userAgent.match(/(firefox)/)) {
       var name = userAgent.match(/(firefox)/)[1];
     } else {
-      var name = (userAgent.match(/(msie|chrome|version|rv)/))[1];
+      var name = (userAgent.match(/(msie|phantomjs|chrome|version|rv)/))[1];
     };
     return name;
   }
 
   function browserVersion() {
-    return parseInt((userAgent.match(/.+(?:firefox|msie|chrome|version|rv)[\/: ]([\d.]+)/) || [0, 0])[1].split('.')[0] );
+    return parseInt((userAgent.match(/.+(?:firefox|phantomjs|msie|chrome|version|rv)[\/: ]([\d.]+)/) || [0, 0])[1].split('.')[0] );
   }
 
   function browserClass (argument) {
