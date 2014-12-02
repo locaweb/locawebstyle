@@ -9,16 +9,10 @@ locastyle.browserUnsupportedBar = (function() {
   }
 
   function browserDetect() {
-    var userAgent = navigator.userAgent.toLowerCase();
+    var version            = locastyle.browserDetect.browserVersion();
+    var name               = locastyle.browserDetect.browserName();
 
-    if (userAgent.match(/(firefox)/)) {
-      var name = userAgent.match(/(firefox)/)[1];
-    } else {
-      var name = (userAgent.match(/(msie|chrome|version|rv)/))[1];
-    };
-
-    var version = parseInt((userAgent.match(/.+(?:firefox|msie|chrome|version|rv)[\/: ]([\d.]+)/) || [0, 0])[1].split('.')[0] );
-
+    console.log(version, name)
     var minBrowserVersions = {
       'chrome' : 34,
       'firefox': 29,
@@ -29,6 +23,7 @@ locastyle.browserUnsupportedBar = (function() {
 
     if (!$.cookie('hideBrowserUnsupportedAlert')) {
       if (version <=  minBrowserVersions[name]) {
+        console.log("teste")
         openUsupportedBrowserAlert();
       }
     }
