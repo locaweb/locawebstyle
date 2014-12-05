@@ -1,0 +1,80 @@
+.ls-steps
+  @extend .ls-clearfix
+  position: relative
+  margin-left: -15px
+
+.ls-steps-list
+  list-style: none
+  margin: 0
+  counter-reset: steps
+  overflow: hidden
+  position: absolute
+  top: 0
+  left: 15px
+  z-index: 11
+
+  li
+    counter-increment: steps
+    margin-bottom: 15px
+
+.ls-steps-btn
+  background: none
+  border: none
+  cursor: pointer
+  display: inline-block
+  font-size: remtopx(.875)
+  color: $gray2
+
+  .ls-active &,
+  .ls-actived &
+
+    &:before
+      background: $gray3
+      border: 1px solid $gray3
+      color: #fff
+
+    &:after
+      color: $gray3
+
+  &:hover,
+  &:focus,
+  &:active
+
+    &:before,
+    &:after
+      opacity: .7
+
+  &:before
+    content: counters(steps, "") " "
+    font-size: remtopx(.875)
+    border: 1px solid $gray2
+    border-radius: 50%
+    display: inline-block
+    height: 30px
+    line-height: 30px
+    vertical-align: middle
+    text-align: center
+    width: 30px
+
+  &:after
+    content: attr(aria-label)
+    position: absolute
+    top: -999999px
+
+.ls-steps-main
+  border-left: 1px solid $gray2
+
+.steps-content
+  display: none
+
+  &.ls-active
+    display: block
+
+@media screen and (min-width: $screen-sm)
+
+  .ls-steps-btn
+
+    &:after
+      position: relative
+      top: 0
+      margin-left: 10px
