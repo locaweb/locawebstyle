@@ -13,6 +13,7 @@
 //= require locastyle/_initializer
 //= require locastyle/_breakpoint-check
 //= require locastyle/_sidebars
+//= require locastyle/_sidebar-toggle
 //= require locastyle/_collapse
 //= require locastyle/_modal
 //= require locastyle/_alert

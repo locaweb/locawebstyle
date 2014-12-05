@@ -6,6 +6,7 @@ var locastyle = (function() {
     loadModules();
     locastyle.general.init();
     locastyle.sidebars.init();
+    locastyle.sidebarToggle.init();
     locastyle.btnGroup.init();
     locastyle.alert.init();
     locastyle.datepicker.init();
