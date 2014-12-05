@@ -1,0 +1,40 @@
+---
+title: Passo a passo
+description: Elemento para ser utilizado quando há necessidade de fragmentar uma tarefa em etapas.
+keywords: documentação, locastyle, passo a passo, steps
+type: component
+---
+
+<%= partial 'partials/doc-menu-components'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+  <div class="row">
+    <div class="col-md-7">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>usar?</strong></h2>
+        <p>- Há necessidade de dividir uma tarefa extensa em passos.</p>
+        <p>- Há necessidade de mostrar para o usuário quantas etapas faltam para concluir a tarefa.</p>
+        <p>- Existe a possibilidade do usuário escolher um passo anterior para editar as informações inseridas.</p>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>não</strong> usar?</h2>
+        <p>- A tarefa puder ser resolvida em apenas um passo.</p>
+        <p>- O usuário não tiver possibilidade de editar as informações inseridas em passos anteriores.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+    <%= partial 'documentacao/shared/passo-a-passo/passo' %>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="320" height="300" src="<%= base_url %>/documentacao/shared/passo-a-passo/passo-mobile" frameborder="0"></iframe>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/passo-a-passo/passo' %><% end %>
+
+</section>
