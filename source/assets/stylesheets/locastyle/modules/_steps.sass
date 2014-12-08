@@ -2,15 +2,16 @@
   @extend .ls-clearfix
   position: relative
   margin-left: -15px
+  padding-top: 15px
 
-.ls-steps-list
+.ls-steps-nav
   list-style: none
   margin: 0
   counter-reset: steps
   overflow: hidden
   position: absolute
   top: 0
-  left: 15px
+  left: 30px
   z-index: 11
 
   li
@@ -20,13 +21,17 @@
 .ls-steps-btn
   background: none
   border: none
-  cursor: pointer
+  cursor: none
   display: inline-block
   font-size: remtopx(.875)
   color: $gray2
+  pointer-events: none
 
   .ls-active &,
   .ls-actived &
+
+    cursor: pointer
+    pointer-events: initial
 
     &:before
       background: $gray3
@@ -35,6 +40,12 @@
 
     &:after
       color: $gray3
+
+  .ls-active &
+
+    &:before
+      background: $gray5
+
 
   &:hover,
   &:focus,
@@ -71,6 +82,9 @@
     display: block
 
 @media screen and (min-width: $screen-sm)
+
+  .ls-steps-nav
+    left: 15px
 
   .ls-steps-btn
 
