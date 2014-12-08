@@ -51,7 +51,6 @@
   &:focus,
   &:active
 
-    &:before,
     &:after
       opacity: .7
 
@@ -74,12 +73,22 @@
 
 .ls-steps-main
   border-left: 1px solid $gray2
+  overflow: hidden
 
 .steps-content
-  display: none
+  +single-transition(height, .25s)
+  +single-transition(opacity, .25s)
+  height: 0
+  position: relative
+  opacity: 0
+  z-index: -1
 
   &.ls-active
-    display: block
+    +single-transition(height, .7s)
+    +single-transition(opacity, .3s)
+    opacity: 1
+    height: auto
+    z-index: 99
 
 @media screen and (min-width: $screen-sm)
 
