@@ -27,11 +27,11 @@ locastyle.sidebarToggle = (function() {
 
   // When click in the arrrow, open ou close sidebar
   function sidebarToggling() {
-    $('.ls-sidebar-toggle').on('click', function(){
+    $('.ls-sidebar-toggle').on('click.ls', function(){
       if($('html').hasClass('ls-sidebar-toggled')) {
-        maximizeSidebar()
+        maximizeSidebar();
       } else {
-        minimizeSidebar()
+        minimizeSidebar();
       }
     });
   }
