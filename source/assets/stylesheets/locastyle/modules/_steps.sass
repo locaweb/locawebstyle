@@ -25,6 +25,7 @@
   display: inline-block
   font-size: remtopx(.875)
   color: $gray2
+  padding-right: 5px
   pointer-events: none
 
   .ls-active &,
@@ -51,7 +52,7 @@
   &:focus,
   &:active
 
-    &:after
+    &:before
       opacity: .7
 
   &:before
@@ -62,20 +63,17 @@
     display: inline-block
     height: 30px
     line-height: 30px
+    margin-right: 5px
     vertical-align: middle
     text-align: center
     width: 30px
 
-  &:after
-    content: attr(aria-label)
-    position: absolute
-    top: -999999px
 
 .ls-steps-main
   border-left: 1px solid $gray2
   overflow: hidden
 
-.steps-content
+.ls-steps-content
   +single-transition(height, .25s)
   +single-transition(opacity, .25s)
   height: 0
