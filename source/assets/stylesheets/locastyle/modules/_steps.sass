@@ -52,7 +52,7 @@
   &:focus,
   &:active
 
-    &:before
+    &:after
       opacity: .7
 
   &:before
@@ -63,11 +63,14 @@
     display: inline-block
     height: 30px
     line-height: 30px
-    margin-right: 5px
     vertical-align: middle
     text-align: center
     width: 30px
 
+  &:after
+    content: attr(aria-label)
+    position: absolute
+    top: -999999px
 
 .ls-steps-main
   border-left: 1px solid $gray2

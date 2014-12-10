@@ -4,6 +4,13 @@ describe("Steps: ", function(){
     locastyle.steps.init();
   });
 
+  describe("when loading the page", function(){
+    it("The text of the button is inserted into aria-label attribute", function(){
+      var label = $('#list1 .ls-steps-btn').attr('aria-label');
+      expect($('.ls-steps-btn').attr('aria-label')).toBe(label);
+    });
+  });
+
   describe("when click in steps is actived", function(){
     it("activates the content related to the step", function(){
       var $button = $('#list1 .ls-steps-btn');
@@ -30,7 +37,6 @@ describe("Steps: ", function(){
     it("should add the class ls-active in content related to order", function(){
       var index = $('.ls-steps-nav .ls-active').index();
       var $el = $('.ls-steps-content').eq(index);
-      console.log($el)
        expect($el.hasClass('ls-active')).toBe(true);
     });
 

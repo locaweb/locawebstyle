@@ -11,6 +11,7 @@ locastyle.steps = (function() {
     nextStep();
     prevStep();
     ariaSteps();
+    addAriaLabel();
   }
 
   function stepsAffix() {
@@ -39,6 +40,14 @@ locastyle.steps = (function() {
 
   function addActiveContent(index) {
     $('.ls-steps-content').eq(index).addClass('ls-active');
+  }
+
+  function addAriaLabel() {
+    $('.ls-steps-btn').each(function(i, e){
+      var text = $(e).text();
+      $(e).attr({ 'aria-label' : text });
+      $(e).html('');
+    });
   }
 
   function bindClickOnTriggers() {
