@@ -28,6 +28,36 @@ type: component
     </div>
   </div>
 
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Seletor</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>.ls-steps-nav <b>.ls-active</b></td>
+        <td>Basta adicionar a classe na <b>&lt;li&gt;</b> de navegacão, pra ativar o botão e seu conteúdo respectivo ao carregar a página.</td>
+      </tr>
+      <tr>
+        <td>.ls-steps-nav <b>.ls-actived</b></td>
+        <td>É adicionado via javascript sempre que um passo for habilitado, liberando a navegação das etapas anteriores.</td>
+      </tr>
+      <tr>
+        <td>ls-steps-content <b>.ls-active</b></td>
+        <td>Classe adicionada via javascript que mostra o conteúdo respectivo da navegacão que está ativa.</td>
+      </tr>
+      <tr>
+        <td>[data-action="next"]</td>
+        <td>Atributo inserido no botão que segue o próximo fluxo do passo a passo.</td>
+      </tr>
+      <tr>
+        <td>[data-action="prev"]</td>
+        <td>Atributo inserido no botão que volta o fluxo anterior do passo a passo.</td>
+      </tr>
+    </tbody>
+  </table>
 
   <div class="ls-box-demo">
     <h3 class="doc-title-6">Desktop</h3>
@@ -40,5 +70,56 @@ type: component
     <iframe class="doc-border-silver" width="320" height="300" src="<%= base_url %>/documentacao/shared/passo-a-passo/passo-mobile" frameborder="0"></iframe>
   </div>
   <% code("html") do %><%= partial 'documentacao/shared/passo-a-passo/passo' %><% end %>
+
+  <div class="ls-box ls-box-gray">
+    <h2 class="doc-title-4">Acessibilidade</h2>
+    <p>Via javascript é adicionada as ARIAs abaixo:</p>
+    <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Estado do passo a passo</th>
+          <th>Elemento</th>
+          <th>Wai-aria</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Default</td>
+          <td>ls-steps-nav</td>
+          <td>role="tablist"</td>
+        </tr>
+        <tr>
+          <td>Default</td>
+          <td>.ls-steps-nav a</td>
+          <td>role="tab"</td>
+        </tr>
+        <tr>
+          <td>Default</td>
+          <td>ls-steps-content</td>
+          <td>role="tabpanel"</td>
+        </tr>
+        <tr>
+          <td>Navegação ativada</td>
+          <td>.ls-steps-nav .ls-active .ls-steps-btn</td>
+          <td>aria-selected="true"</td>
+        </tr>
+        <tr>
+          <td>Navegação desativada</td>
+          <td>.ls-steps-nav .ls-steps-btn</td>
+          <td>aria-selected="false"</td>
+        </tr>
+        <tr>
+          <td>Conteúdo ativo</td>
+          <td>.ls-steps-content .ls-active </td>
+          <td>aria-hidden="false"</td>
+        </tr>
+        <tr>
+          <td>Conteúdo</td>
+          <td>.ls-steps-content</td>
+          <td>aria-hidden="true"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 </section>
