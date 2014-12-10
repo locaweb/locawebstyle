@@ -63,12 +63,13 @@ locastyle.steps = (function() {
   }
 
   function addAriaLabel() {
-    $(config.selectors.button).each(function(i, e){
-      var text = $(e).text();
-      $(e).attr({ 'aria-label' : text });
-      $(e).html('');
-    });
-  }
+    var $elem = $(config.selectors.button);
+    var elemLength = $elem.length;
+    for (var i=0; i < elemLength; i++) {
+      var text = $($elem[i]).text();
+      $($elem[i]).attr({ 'aria-label' : text }).html('');
+      }
+    }
 
   function bindClickOnTriggers() {
     $(config.selectors.nav).on("click.steps", config.selectors.moduleActive, function(evt) {
