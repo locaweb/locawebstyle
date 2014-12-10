@@ -3,6 +3,26 @@ var locastyle = locastyle || {};
 locastyle.steps = (function() {
   'use strict';
 
+  var config = {
+    selectors: {
+      moduleActive: '.ls-actived [data-ls-module=steps]',
+      nav: '.ls-steps-nav',
+      button: '.ls-steps-btn',
+      container: '.ls-steps-content'
+    },
+    status: {
+      active: 'ls-active',
+      actived: 'ls-actived'
+    },
+    classes: {
+      active: '.ls-active'
+    },
+    actions:{
+      next: '.ls-steps-content [data-action="next"]',
+      prev: '.ls-steps-content [data-action="prev"]'
+    }
+  };
+
   function init() {
     unbind();
     stepsAffix();
@@ -15,7 +35,7 @@ locastyle.steps = (function() {
   }
 
   function stepsAffix() {
-    var $steps   = $(".ls-steps-nav");
+    var $steps   = $(config.selectors.nav);
     var offset    = $steps.offset();
     var marginTop = 20;
     $(window).scroll(function() {
@@ -32,18 +52,18 @@ locastyle.steps = (function() {
   }
 
   function addActivedNav() {
-    var index = $('.ls-steps-nav .ls-active').index();
+    var index = $(config.selectors.nav).find(config.classes.active).index();
     addActiveContent(index);
     index = parseInt(index + 1);
-    $('.ls-steps-nav li:lt(' + index + ')').addClass('ls-actived');
+    $(config.selectors.nav).find('li:lt(' + index + ')').addClass(config.status.actived);
   }
 
   function addActiveContent(index) {
-    $('.ls-steps-content').eq(index).addClass('ls-active');
+    $(config.selectors.container).eq(index).addClass(config.status.active);
   }
 
   function addAriaLabel() {
-    $('.ls-steps-btn').each(function(i, e){
+    $(config.selectors.button).each(function(i, e){
       var text = $(e).text();
       $(e).attr({ 'aria-label' : text });
       $(e).html('');
@@ -51,7 +71,7 @@ locastyle.steps = (function() {
   }
 
   function bindClickOnTriggers() {
-    $(".ls-steps-nav").on("click.steps", ".ls-actived [data-ls-module=steps]", function(evt) {
+    $(config.selectors.nav).on("click.steps", config.selectors.moduleActive, function(evt) {
       evt.preventDefault();
       var $target = $($(this).attr("href") || $(this).data("target"));
       activateStep(this,$target);
@@ -60,21 +80,21 @@ locastyle.steps = (function() {
   }
 
   function activateStep(el, $target) {
-    $(el).parents("li").addClass("ls-active ls-actived");
-    $target.addClass("ls-active").attr({ 'aria-hidden' : false });
+    $(el).parents("li").addClass(config.status.active).addClass(config.status.actived);
+    $target.addClass(config.status.active).attr({ 'aria-hidden' : false });
     $(el).attr('aria-selected' , true);
   }
 
   function deactivateStep(el, $target) {
-    $(el).parents("li").siblings().removeClass("ls-active");
-    $target.siblings().removeClass("ls-active").attr({ 'aria-hidden' : true });
-    $(el).parents("li").siblings().find('.ls-steps-btn').attr('aria-selected' , false);
+    $(el).parents("li").siblings().removeClass(config.status.active);
+    $target.siblings().removeClass(config.status.active).attr({ 'aria-hidden' : true });
+    $(el).parents("li").siblings().find(config.selectors.button).attr('aria-selected' , false);
   }
 
   function nextStep() {
-    $('.ls-steps-content [data-action="next"]').on("click.steps", function(evt) {
+    $(config.actions.next).on("click.steps", function(evt) {
       evt.preventDefault();
-      var $el = $('.ls-steps-nav .ls-active').next('li').addClass('ls-actived ls-active').find('.ls-steps-btn');
+      var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).addClass(config.status.actived).find(config.selectors.button);
       var $target = $($el.attr("href") || $el.data("target"));
       activateStep($el, $target);
       deactivateStep($el, $target);
@@ -82,9 +102,9 @@ locastyle.steps = (function() {
   }
 
   function prevStep() {
-    $('.ls-steps-content [data-action="prev"]').on("click.steps", function(evt) {
+    $(config.actions.prev).on("click.steps", function(evt) {
       evt.preventDefault();
-      var $el = $('.ls-steps-nav .ls-active').prev('li').find('.ls-steps-btn');
+      var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
       var $target = $($el.attr("href") || $el.data("target"));
       activateStep($el, $target);
       deactivateStep($el, $target);
@@ -93,18 +113,17 @@ locastyle.steps = (function() {
 
   // remove os binds que o próprio modulo adiciona
   function unbind() {
-    $('.ls-steps-nav').off('click.steps');
-    $('.ls-steps-content [data-action="next"]').off('click.steps');
-    $('.ls-steps-content [data-action="prev"]').off('click.steps');
+    $(config.selectors.nav).off('click.steps');
+    $(config.actions.next).off('click.steps');
+    $(config.actions.prev).off('click.steps');
   }
 
   function ariaSteps() {
-    $('.ls-steps-nav').attr('role' , 'tablist');
-    $('.ls-steps-btn').attr('role' , 'tab');
-    $('.ls-steps-nav .ls-steps-btn').attr('aria-selected' , 'false');
-    $('.ls-steps-nav .ls-active .ls-steps-btn').attr('aria-selected' , 'true');
-    $('.ls-steps-content').attr({ 'aria-hidden' : true, 'role' : 'tabpanel' });;
-
+    $(config.selectors.nav).attr('role' , 'tablist');
+    $(config.selectors.nav).find(config.selectors.button).attr('aria-selected' , 'false');
+    $(config.selectors.nav).find('.ls-active .ls-steps-btn').attr('aria-selected' , 'true');
+    $(config.selectors.button).attr('role' , 'tab');
+    $(config.selectors.container).attr({ 'aria-hidden' : true, 'role' : 'tabpanel' });;
   }
 
   return {
