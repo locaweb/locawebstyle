@@ -61,13 +61,13 @@ locastyle.steps = (function() {
 
   function activateStep(el, $target) {
     $(el).parents("li").addClass("ls-active ls-actived");
-    $target.addClass("ls-active");
+    $target.addClass("ls-active").attr({ 'aria-hidden' : false });
     $(el).attr('aria-selected' , true);
   }
 
   function deactivateStep(el, $target) {
     $(el).parents("li").siblings().removeClass("ls-active");
-    $target.siblings().removeClass("ls-active");
+    $target.siblings().removeClass("ls-active").attr({ 'aria-hidden' : true });
     $(el).parents("li").siblings().find('.ls-steps-btn').attr('aria-selected' , false);
   }
 
@@ -103,7 +103,8 @@ locastyle.steps = (function() {
     $('.ls-steps-btn').attr('role' , 'tab');
     $('.ls-steps-nav .ls-steps-btn').attr('aria-selected' , 'false');
     $('.ls-steps-nav .ls-active .ls-steps-btn').attr('aria-selected' , 'true');
-    $('.ls-steps-content').attr('role' , 'tabpanel');
+    $('.ls-steps-content').attr({ 'aria-hidden' : true, 'role' : 'tabpanel' });;
+
   }
 
   return {

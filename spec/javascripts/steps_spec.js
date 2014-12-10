@@ -90,6 +90,15 @@ describe("Steps: ", function(){
       expect($('.ls-steps-nav li.ls-active .ls-steps-btn').attr('aria-selected')).toEqual('true');
     });
 
+    it(".ls-steps-content has attribute aria-hidden has value true ",function(){
+      expect($('.ls-steps-content').attr('aria-hidden')).toEqual('true');
+    });
+
+    it("When click tab should has attribute aria-selected with value true ",function(){
+      $('.ls-steps-nav .ls-steps-btn').trigger('click');
+      expect($('.ls-steps-content.ls-active').attr('aria-hidden')).toEqual('false');
+    });
+
   });
 
   describe("Unbind:", function() {
