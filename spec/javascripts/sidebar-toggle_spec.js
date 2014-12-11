@@ -19,16 +19,14 @@
 
   describe("When Minimize Sidebar", function() {
     beforeEach(function(){
-      $('html').removeClass('ls-sidebar-toggled')
-      $('.ls-sidebar-toggle').removeClass('ls-active')
+      $('html').removeClass('ls-sidebar-toggled');
+      $('.ls-sidebar-toggle').removeClass('ls-active');
       $('.ls-sidebar-toggle').trigger('click');
     });
     it("should add a .ls-sidebar-toggled in <html> element", function() {
-      console.log($('html'))
       expect($('html').hasClass('ls-sidebar-toggled')).toBe(true);
     });
     it("should add a .ls-active in .ls-sidebar-toggle element", function() {
-      console.log($('.ls-sidebar-toggle'))
       expect($('.ls-sidebar-toggle').hasClass('ls-active')).toEqual(true);
     });
   });
