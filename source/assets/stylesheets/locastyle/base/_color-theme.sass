@@ -65,7 +65,6 @@
     ////
     // SIDEBAR
     ////
-
     .ls-menu
       li
         border-bottom-color: mix($color-menu-mix, $color-menu-bg, 84%)
@@ -84,12 +83,14 @@
     .ls-sidebar [class*="ls-go"]
       background: $color1
 
-
     // Submenu
     .ls-submenu
 
       &:after
         color: mix($color-menu-mix, $color-menu-text, 45%)
+
+      &:hover:after
+        color: $color-menu-text
 
       li
         border-bottom-color: mix($color-menu-mix, $color-menu-bg, 80%)

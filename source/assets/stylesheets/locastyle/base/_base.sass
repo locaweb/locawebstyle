@@ -9,7 +9,6 @@
   position: relative
   background-color: #fff
 
-
   .container-fluid
     min-height: 85%
 
@@ -79,6 +78,10 @@ a.ls-word-dotted
     -ms-overflow-scrolling: touch
     overflow-scrolling: touch
 
+    .ls-sidebar-toggled &
+      margin-left: 60px
+      +single-transition(margin, .2s, ease-in-out)
+
     .container-fluid > .row [class*="col-"]
       padding-bottom: 0
 
@@ -94,10 +97,6 @@ a.ls-word-dotted
   .ls-main > .container-fluid,
   .ls-main > .container
     padding: 0 30px
-
-@media screen and (min-width: $screen-sm) and (max-width: $screen-lg)
-  .ls-main
-    margin-left: 60px
 
 html:after
   content: url("//assets.locaweb.com.br/locastyle/edge/images/ls-smile.gif")
