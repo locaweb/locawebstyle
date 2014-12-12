@@ -162,3 +162,55 @@
 
     [class*="ls-btn"]:not(.ls-btn-block)
       @extend .ls-no-margin-top
+
+//
+// Buttons with data-ls-module="button"
+//
+.ls-tabs-btn
+
+  [class*="ls-btn"]
+    border-color: mix($color-mix, #fff, 20%)
+    display: inline-block
+    font-weight: bold
+    padding: 20px 15px
+    margin-bottom: 10px
+    position: relative
+    overflow: hidden
+    width: 100%
+
+    + [class*="ls-btn"]
+      margin-left: 0
+
+    &:hover,
+    &:focus,
+    &:active
+      background-color: $gray2
+      border-color: mix($color-mix, #fff, 15%)
+
+    input
+      position: absolute
+      left: -12px
+      top: -10px
+
+  // with icons
+  [class*="ls-ico"]
+    font-size: remtopx(1)
+
+    &:before,
+    &:after
+      font-size: remtopx(1.5)
+      vertical-align: sub
+
+  .ls-tabs-btn-nav
+    list-style: none
+    margin-right: 0
+    margin-left: -5px
+
+    [class*="col-"]
+      padding: 0 5px
+
+  .ls-tabs-container .ls-tab-content
+    padding: 0
+    border: none
+    margin-bottom: 0
+
