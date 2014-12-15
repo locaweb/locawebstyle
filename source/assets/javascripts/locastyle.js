@@ -13,6 +13,7 @@
 //= require locastyle/_initializer
 //= require locastyle/_breakpoint-check
 //= require locastyle/_sidebars
+//= require locastyle/_sidebar-toggle
 //= require locastyle/_collapse
 //= require locastyle/_modal
 //= require locastyle/_alert
@@ -29,5 +30,6 @@
 //= require locastyle/_btn-group
 //= require locastyle/_datepicker
 //= require locastyle/_char-counter
+//= require locastyle/_browser-detect
 //= require locastyle/_browser-unsupported-bar
 //= require locastyle/_track-events

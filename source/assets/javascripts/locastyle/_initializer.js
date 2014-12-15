@@ -6,19 +6,20 @@ var locastyle = (function() {
     loadModules();
     locastyle.general.init();
     locastyle.sidebars.init();
+    locastyle.sidebarToggle.init();
     locastyle.btnGroup.init();
     locastyle.alert.init();
     locastyle.datepicker.init();
     locastyle.form.togglePasswordField();
     checkClassForTrack();
+    locastyle.browserDetect.init();
   }
 
   function loadModules() {
     var modules = getModules();
     for (var i in modules) {
       locastyle[modules[i]].init();
-      // I know it is a console.log, let it to be here for a while
-      console.log("Locastyle: module [" + modules[i] + "] successfully initialized.");
+      console.info("Locastyle: module [" + modules[i] + "] successfully initialized.");
     }
   }
 

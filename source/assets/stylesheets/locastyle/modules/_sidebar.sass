@@ -6,6 +6,9 @@
   top: 0
   height: 100%
 
+  .ls-sidebar-toggle
+    display: none
+
   .ls-sidebar-inner
     overflow: auto
     height: inherit
@@ -47,7 +50,6 @@
         font-weight: 600
         top: -5px
         position: relative
-
 
     &.ls-active
       height: 100%
@@ -233,6 +235,7 @@
     height: calc(100% - 60px)
     height: 93%\9
 
+    // Sidebar menu
     .ls-menu
       height: 100%
       overflow: auto
@@ -248,43 +251,53 @@
         overflow: initial
         height: 100%
 
-@media screen and (max-width: $screen-sm)
-  .ls-sidebar .ls-user-account + [class*="ls-ico"] + .ls-menu,
-  .ls-sidebar .ls-user-account + .ls-menu
-    margin-top: $topbar-height
+    // Arrow to toggle Sidebar
+    .ls-sidebar-toggle
+      display: block
+      position: absolute
+      bottom: 0
+      right: 0
+      cursor: pointer
+      width: 100%
+      padding: 20px
+      text-align: right
 
-// Micro menu in middle screen, tablets and 1024 resolution
-@media screen and (min-width: $screen-sm) and (max-width: $screen-lg)
+      &:hover
+        color: $color-menu-text
+        background-color: mix($color-menu-mix, $color-menu-bg, 80%)
+
+        &:before
+          color: #fff
+
+      &:before
+        display: inline-block
+        font-size: 12px
+
+////
+// When the menu is Toggled
+////
+.ls-sidebar-toggled
+  .ls-sidebar-toggle:before
+    +rotate(-180deg)
+    +single-transition(transform, .2s, ease-in-out)
+
   .ls-sidebar
+    +single-transition(width, .2s, ease-in-out)
     width: 60px
     overflow: hidden
-    +single-transition(width, .2s, ease-in-out)
     z-index: 12
 
     .ls-brand-name
+      +single-transition(padding, .2s)
       width: $sidebar-width
       padding: 16px
       text-align: left
-      +single-transition(padding, .2s)
 
       a
         display: none
 
       &:before
         font-size: inherit
-
-    &:hover
-      width: $sidebar-width
-
-      .ls-brand-name
-        text-align: center
-        padding: 40px 20px
-
-        &:before
-          font-size: remtopx(4.5)
-
-        a
-          display: block
 
       .ls-menu
 
@@ -294,7 +307,6 @@
           height: auto
           border-top: 1px solid mix($color-mix, $color-menu-bg, 80%)
 
-
       .ls-area-account
         height: 100px
 
@@ -303,17 +315,23 @@
 
     ul ul,
     .ls-active ul
+      +single-transition(opacity, .2s, ease-in-out)
       opacity: 0
       height: 0
       overflow: hidden
-      +single-transition(opacity, .2s, ease-in-out)
       border: none
 
     .ls-active a
       background: none
 
   .ls-area-account
+    +single-transition(height, .4s)
     overflow: hidden
     width: $sidebar-width
     height: 70px
-    +single-transition(height, .4s)
+
+
+@media screen and (max-width: $screen-sm)
+  .ls-sidebar .ls-user-account + [class*="ls-ico"] + .ls-menu,
+  .ls-sidebar .ls-user-account + .ls-menu
+    margin-top: $topbar-height

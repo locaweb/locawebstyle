@@ -42,7 +42,7 @@ locastyle.general = (function() {
   function _autoTrigger(){
     var hash = window.location.hash.replace("!/#", "");
     if(hash !== ''){
-      $('[data-target=' + hash + '], a[href=' + hash + ']').trigger('click');
+      $('[data-target="' + hash + '"], a[href="' + hash + '"]').trigger('click');
     }
   }
 
