@@ -38,16 +38,16 @@
       background-color: $color1
 
       .ls-alerts-list [class^="ls-ico"]
-        @if (lightness($color1) < 30)
+        @if (lightness($color1) < 35)
           color: mix(#fff, $color1, 30%)
         @else
-          color: mix($color-mix, $color1, 25%)
+          color: mix($color-mix, $color1, 35%)
 
         &:hover:not([data-counter]):not(.ls-active)
-          @if (lightness($color1) < 30)
+          @if (lightness($color1) < 35)
             color: mix(#fff, $color1, 75%)
           @else
-            color: mix($color-mix, $color1, 40%)
+            color: mix($color-mix, $color1, 60%)
 
     ////
     // Link back to pre panel
