@@ -86,7 +86,7 @@ helpers CustomHelpers
 
 set :base_url, ""
 
-set :stable, "3.6.1"
+set :stable, "3.6.2"
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
