@@ -1,33 +1,82 @@
 ---
-title: Servidores de DNS
+title: Gerenciamento DNS
 layout: panel
+html_class: ls-html-nobg
 theme_name: ls-theme-orange
+panel: painel3
 title_product: Registro de Domínio
 ---
 
-<h1 class="ls-title-intro ls-ico-globe">Servidores de DNS</h1>
-<p>Os servidores de DNS são responsáveis por responder as requisições de acesso ao seu domínio.</p>
+<h1 class="ls-title-intro ls-ico-globe"><%= data.page.title %></h1>
 
 <div class="ls-box">
-  <table class="ls-table ls-table-striped">
-    <tbody>
-      <tr>
-        <td><strong>Primário (Master): </strong>ns1.systemintegration.locaweb.com</td>
-      </tr>
-      <tr>
-        <td><strong>Secundário (Slave 1): </strong>ns2.systemintegration.locaweb.com</td>
-      </tr>
-      <tr>
-        <td><strong>Terciário (Slave 2): </strong><em>Opcional</em></td>
-      </tr>
-    </tbody>
-  </table>
-  <%= link_to "Alterar servidores", "#{base_url}/documentacao/exemplos/painel3/nameservers/edit", class: "ls-btn-primary ls-btn-sm" %>
+  <h2 class="ls-title-5">Servidores DNS</h2>
+  <a href="<%= base_url %>/documentacao/exemplos/painel3/contacts/results" data-ls-fields-enable="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" class="domain-actions ls-btn ls-float-right">Alterar DNS</a>
+  <p>Os servidores de DNS são responsáveis por responder as requisições de acesso ao domínio.<br>
+Para mais informações sobre DNS, consulte a <a href="" target="_blank">Wiki Locaweb</a> .</p>
+  <form action="" class="ls-form" data-ls-module="form">
+    <fieldset id="domain-form" class="ls-form-disable row ls-form-text">
+      <label class="ls-label col-md-6 col-lg-6">
+        <b class="ls-label-text">Primário (Master)</b>
+        <input type="text" value="ns1.locaweb.com.br" class="ls-text-lg" required>
+      </label>
+      <label class="ls-label col-md-6 col-lg-6 form-popover" data-placement="right" data-title="Servidores de DNS da Locaweb" class="ls-word-dotted" data-ls-module="popover" title="Titulo" data-content="<h2 class='ls-title-6'>Primário (Master)</h2><h2 class='ls-title-5'>ns1.locaweb.com.br</h2><br><h2 class='ls-title-6'>Secundário (Slave1)</h2><h2 class='ls-title-5'>ns2.locaweb.com.br</h2><br><h2 class='ls-title-6'>Terciário (Slave2)</h2><h2 class='ls-title-5'>ns3.locaweb.com.br</h2>">
+        <b class="ls-label-text">Secundário (Slave1)</b>
+        <input type="text" value="ns2.locaweb.com.br" class="ls-text-lg" required>
+      </label>
+      <label class="ls-label col-md-6 col-lg-6">
+        <b class="ls-label-text">Terciário (Slave2)</b>
+        <input type="text" value="ns3.locaweb.com.br" class="ls-text-lg" required>
+      </label>
+    </fieldset>
+    <p class="domain-actions ls-display-none">A propagação dos DNS é o processo de atualização do DNS do domínio, que pode levar de 2 até 48 horas. Para mais informações, consulte a <a href="" target="_blank">Wiki Locaweb</a>.</p>
+      <p class="domain-actions ls-display-none">Deseja alterar os sevidores de DNS?</p>
+    <div class="domain-actions ls-display-none">
+      <button type="submit" class="ls-btn-primary">Salvar</button>
+      <button class="ls-btn" data-ls-fields-enable="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" >Cancelar</button>
+    </div>
+  </form>
 </div>
+
 <div class="ls-box">
-  <h2 class="ls-title-3">Zona de DNS</h2>
-  <p>Zona de DNS é a área onde você cria e edita entradas de DNS para configurar servidores de e-mail, endereços de apontamento, etc.</p>
-  <%= link_to "Consulte e altere zona de DNS", "http://painel-dns.registro.devintegration.locaweb.com.br/dns_zones/teste-contato-dominio-01.com/dns_entries", class: "ls-btn-primary ls-btn-sm" %>
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="ls-title-5">Zona de DNS</h2>
+      <p class="ls-no-margin">Acesse a Zona de DNS e gerencie as entradas, endereços, apontamentos e redirecionamentos do domínio.</p>
+    </div>
+    <div class="col-md-4">
+      <%= link_to "Gerenciar entradas", "http://painel-dns.registro.devintegration.locaweb.com.br/dns_zones/teste-contato-dominio-01.com/dns_entries", class: "ls-btn-primary ls-float-right" %>
+    </div>
+  </div>
+</div>
+
+<div class="ls-box ls-board-box">
+  <header class="ls-info-header">
+    <h2 class="ls-title-5">
+      Informações Gerais
+    </h2>
+  </header>
+  <div class="row">
+    <div class="col-md-4 col-sm-4">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Período de Renovação</h6>
+        <strong class="ls-board-info ls-color-theme">1 ano</strong>
+        <a href="#" class="ls-btn-sm ls-btn">Estender período</a>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Data de expiração</h6>
+        <strong class="ls-board-info ls-color-theme">20.09.2015</strong>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Status</h6>
+        <strong class="ls-board-info ls-color-theme">Ativo</strong>
+      </div>
+    </div>
+  </div>
 </div>
 
 <% content_for :sidebar_panel do %>
