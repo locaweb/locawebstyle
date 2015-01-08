@@ -68,8 +68,8 @@ a.ls-word-dotted
     display: none
 
   .ls-main
-    +single-transition(none)
     +transform(none)
+    +single-transition(margin, .25s, ease-in-out)
     margin-left: $sidebar-width
     height: 100%
     min-height: 100%
@@ -80,7 +80,6 @@ a.ls-word-dotted
 
     .ls-sidebar-toggled &
       margin-left: 60px
-      +single-transition(margin, .2s, ease-in-out)
 
     .container-fluid > .row [class*="col-"]
       padding-bottom: 0
