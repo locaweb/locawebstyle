@@ -1,0 +1,24 @@
+---
+title: Transferência de Domínio para a Locaweb
+layout: panel
+theme_name: ls-theme-orange
+panel: painel3
+title_product: Registro de Domínio
+---
+
+<h1 class="ls-title-intro ls-ico-users"><%= data.page.title %></h1>
+<p>Acompanhe o andamento do processo de transferência do domínio nike.com para a Locaweb:</p>
+
+<div class="ls-box">
+  <p class="ls-float-right"><strong>Desabilitada</strong></p>
+  <h2 class="ls-title-5 ls-display-inline-block">Trava de transferência</h2>
+  <hr>
+  <p class="ls-float-right"><strong>Confirmada</strong></p>
+  <h2 class="ls-title-5 ls-display-inline-block">Senha de transferência (Authorization Code / AuthCode)</h2>
+</div>
+
+<p><strong>Importante: </strong>Caso existam outros domínios vinculados ao [ID_USUARIO] eles também serão transferidos. Para mais informações acesse a <a href="https://registro.br/ajuda.html?secao=ProcedimentosAdministrativos" target="_blank">FAQ do Registro.br</a></p>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel3/sidebar' %>
+<% end %>
