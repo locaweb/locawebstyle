@@ -1,0 +1,24 @@
+---
+title: Transferência
+layout: panel
+theme_name: ls-theme-orange
+panel: painel3
+title_product: Registro de Domínio
+---
+
+<h1 class="ls-title-intro ls-ico-users"><%= data.page.title %></h1>
+<p>Para iniciar o processo de transferência do domínio <strong>adidas.com.br</strong> para outro provedor, siga as instruções abaixo:</p>
+
+<div class="ls-box">
+  <p><strong>Acesse o painel da Registro.br</strong></p>
+  <p>Acesse a área de administração do ID [ID_USUARIO] na Registro.br. Caso não tenha uma senha de acesso, veja este processo na <a href="http://wiki.locaweb.com.br/pt-br/Definindo_senha_de_ID" target="_blank">Wiki Locaweb</a>.</p>
+  <hr>
+  <p><strong>Altere o provedor do registro</strong></p>
+  <p>Depois de ter feito o login, clique na entidade (CPF ou CNPJ) e depois clique em "Selecionar outro provedor". Escolha a empresa que irá administrar os seus domínios ou selecione a opção Nenhum; dessa forma, seus domínios serão administrados pela Registro.br. Veja este processo na <a href="http://wiki.locaweb.com.br/pt-br/Transfer%C3%AAncia_de_Dom%C3%ADnio" target="_blank">Wiki Locaweb</a>.</p>
+</div>
+
+<p><strong>Importante: </strong>Caso existam outros domínios vinculados ao [ID_USUARIO] eles também serão transferidos. Para mais informações acesse a <a href="https://registro.br/ajuda.html?secao=ProcedimentosAdministrativos" target="_blank">FAQ do Registro.br</a></p>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel3/sidebar' %>
+<% end %>

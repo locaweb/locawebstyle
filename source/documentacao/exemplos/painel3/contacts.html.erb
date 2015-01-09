@@ -6,8 +6,317 @@ panel: painel3
 title_product: Registro de Domínio
 ---
 
-<h1 class="ls-title-intro ls-ico-users">Contatos</h1>
-<p>Informações dos contatos de Registrante, Administrativo e Técnico.</p>
+<h1 class="ls-title-intro ls-ico-users"><%= data.page.title %></h1>
+<p>Informações dos contatos de Registrante, Administrativo, Técnico e Cobrança.</p>
+
+<ul class="ls-tabs-nav" id="tab">
+  <li class="ls-active"><a data-ls-module="tabs" href="#step1">Registrante</a></li>
+  <li><a data-ls-module="tabs" href="#step2">Administrativo</a></li>
+  <li><a data-ls-module="tabs" href="#step3">Técnico</a></li>
+  <li><a data-ls-module="tabs" href="#step4">Cobrança</a></li>
+</ul>
+<div class="ls-tabs-container" id="awesome-tab-content">
+  <div id="step1" class="ls-tab-content ls-active ls-form-inline">
+    <p>Responsável por novas contratações, pela alteração das informações dos servidores DNS e pela modificação dos contato administrativo, técnico e de cobrança.</p>
+    <table id="form-admin" class="ls-sm-space ls-table ls-table-striped ls-form-disable ls-form-text">
+        <tbody>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Nome:</b>
+                <input type="text" name="nome" value="José da Silva">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">E-mail:</b>
+                <input type="email" name="email" value="jose@dasilva.com.br">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Empresa:</b>
+                <input type="text" name="empresa" value="Locaweb">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">CEP:</b>
+                <input type="text" name="cep" value="04776-100">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Endereço:</b>
+                <input type="text" name="endereco" value="Av. Vinte e Três de Maio, 230 - Paraíso - São Paulo">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Cidade:</b>
+                <input type="text" name="cidade" value="São Paulo">
+              </label>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Estado:</b>
+                <input type="text" name="estado" value="SP">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Telefone:</b>
+                <input type="text" name="telefone" value="(11) 5678-9012">
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  <div id="step2" class="ls-tab-content">
+    <p>Responsável pela alteração das informações dos servidores DNS e pela modificação do contato técnico e de cobrança.</p>
+    <form action="" class="ls-form-inline" data-ls-module="form">
+      <table id="form-admin" class="ls-sm-space ls-table ls-table-striped ls-form-disable ls-form-text">
+        <tbody>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Nome:</b>
+                <input type="text" name="nome" value="José da Silva">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">E-mail:</b>
+                <input type="email" name="email" value="jose@dasilva.com.br">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Empresa:</b>
+                <input type="text" name="empresa" value="Locaweb">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">CEP:</b>
+                <input type="text" name="cep" value="04776-100">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Endereço:</b>
+                <input type="text" name="endereco" value="Av. Vinte e Três de Maio, 230 - Paraíso - São Paulo">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Cidade:</b>
+                <input type="text" name="cidade" value="São Paulo">
+              </label>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Estado:</b>
+                <input type="text" name="estado" value="SP">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Telefone:</b>
+                <input type="text" name="telefone" value="(11) 5678-9012">
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="" data-ls-fields-enable="#form-admin" data-toggle-class="ls-display-none" data-target=".domain-actions" class="domain-actions ls-btn">Alterar dados</a>
+      <div class="domain-actions ls-display-none">
+        <button type="submit" class="ls-btn-primary">Salvar</button>
+        <button class="ls-btn" data-ls-fields-enable="#form-admin" data-toggle-class="ls-display-none" data-target=".domain-actions" >Cancelar</button>
+      </div>
+    </form>
+  </div>
+  <div id="step3" class="ls-tab-content">
+    <p>Responsável pela alteração das informações dos servidores DNS.</p>
+    <form action="" class="ls-form-inline" data-ls-module="form">
+      <table id="form-tecnic" class="ls-sm-space ls-table ls-table-striped ls-form-disable ls-form-text">
+        <tbody>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Nome:</b>
+                <input type="text" name="nome" value="José da Silva">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">E-mail:</b>
+                <input type="email" name="email" value="jose@dasilva.com.br">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Empresa:</b>
+                <input type="text" name="empresa" value="Locaweb">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">CEP:</b>
+                <input type="text" name="cep" value="04776-100">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Endereço:</b>
+                <input type="text" name="endereco" value="Av. Vinte e Três de Maio, 230 - Paraíso - São Paulo">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Cidade:</b>
+                <input type="text" name="cidade" value="São Paulo">
+              </label>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Estado:</b>
+                <input type="text" name="estado" value="SP">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Telefone:</b>
+                <input type="text" name="telefone" value="(11) 5678-9012">
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="" data-ls-fields-enable="#form-tecnic" data-toggle-class="ls-display-none" data-target=".domain-actions" class="domain-actions ls-btn">Alterar dados</a>
+      <div class="domain-actions ls-display-none">
+        <button type="submit" class="ls-btn-primary">Salvar</button>
+        <button class="ls-btn" data-ls-fields-enable="#form-tecnic" data-toggle-class="ls-display-none" data-target=".domain-actions" >Cancelar</button>
+      </div>
+    </form>
+  </div>
+  <div id="step4" class="ls-tab-content">
+    <p>Responsável pelo fornecimento e atualização do endereço eletrônico para recebimento dos comunicados de cobrança da manutenção.</p>
+        <form action="" class="ls-form-inline" data-ls-module="form">
+      <table id="form-charging" class="ls-sm-space ls-table ls-table-striped ls-form-disable ls-form-text">
+        <tbody>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Nome:</b>
+                <input type="text" name="nome" value="José da Silva">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">E-mail:</b>
+                <input type="email" name="email" value="jose@dasilva.com.br">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Empresa:</b>
+                <input type="text" name="empresa" value="Locaweb">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">CEP:</b>
+                <input type="text" name="cep" value="04776-100">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Endereço:</b>
+                <input type="text" name="endereco" value="Av. Vinte e Três de Maio, 230 - Paraíso - São Paulo">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Cidade:</b>
+                <input type="text" name="cidade" value="São Paulo">
+              </label>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Estado:</b>
+                <input type="text" name="estado" value="SP">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Telefone:</b>
+                <input type="text" name="telefone" value="(11) 5678-9012">
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="" data-ls-fields-enable="#form-charging" data-toggle-class="ls-display-none" data-target=".domain-actions" class="domain-actions ls-btn">Alterar dados</a>
+      <div class="domain-actions ls-display-none">
+        <button type="submit" class="ls-btn-primary">Salvar</button>
+        <button class="ls-btn" data-ls-fields-enable="#form-charging" data-toggle-class="ls-display-none" data-target=".domain-actions" >Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--
 
 <div class="ls-box ls-md-space">
   <h2 class="ls-title-3">Contato registrante</h2>
@@ -119,10 +428,10 @@ title_product: Registro de Domínio
       <button data-ls-fields-enable="#access-form" data-toggle-class="ls-display-none" data-target=".area-actions" class="ls-btn-primary area-actions">Editar</button>
     </div>
   </form>
-</div>
+</div> -->
 
 
-
+<!--
 <div class="ls-box ls-md-space">
   <h2 class="ls-title-3">Contato administrativo</h2>
   <form action=""  class="ls-form ls-form-horizontal" data-ls-module="form">
@@ -233,9 +542,9 @@ title_product: Registro de Domínio
     </div>
   </form>
 </div>
+ -->
 
-
-<div class="ls-box ls-md-space">
+<!-- <div class="ls-box ls-md-space">
   <h2 class="ls-title-3">Contato registrante</h2>
   <p>Responsável pelo registro de novos domínios e edição dos contatos administrativo e técnico, além da atualização dos dados de contato do registrante.</p>
   <form action=""  class="ls-form ls-form-horizontal" data-ls-module="form">
@@ -345,7 +654,7 @@ title_product: Registro de Domínio
       <button data-ls-fields-enable="#access-form-tecnic" data-toggle-class="ls-display-none" data-target=".area-actions-3" class="ls-btn-primary area-actions-3">Editar</button>
     </div>
   </form>
-</div>
+</div> -->
 
 
 <% content_for :sidebar_panel do %>

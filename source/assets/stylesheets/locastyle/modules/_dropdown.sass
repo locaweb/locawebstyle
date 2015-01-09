@@ -65,15 +65,18 @@
     &.ls-btn-lg:after
       +arrow-down($gray4, 7px)
 
-  [class*="ls-btn-"]:after
-    +arrow-down(#fff, 5px)
-    top: 3px
+  [class*="ls-btn-"],
+  [class*="ls-btn-"][class*="ls-btn-"]
+    &:after
+      +arrow-down(#fff, 5px)
+      top: 3px
 
-  [class*="ls-btn-danger"]:after
-    border-color: #f74b57 transparent transparent transparent
+  &.ls-dropdown
+    [class*="ls-btn-danger"]:after
+      border-color: #d75553 transparent transparent transparent
 
-  [class*="ls-btn-danger"]:hover:after
-    border-color: #fff transparent transparent transparent
+    [class*="ls-btn-danger"]:hover:after
+      border-color: #fff transparent transparent transparent
 
   &.ls-pos-right ul
     left: auto
