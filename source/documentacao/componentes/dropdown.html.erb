@@ -14,6 +14,7 @@ type: component
   </div>
   <% code("html") do %><%= partial 'documentacao/shared/dropdown' %><% end %>
 
+  <p>O botão de dropdown pode ser um <code>&lt;a&gt;</code> ou um <code>&lt;button&gt;</code>. </p>
   <p>Estas são as classes funcionais usadas no dropbox.</p>
   <table class="ls-table">
     <thead>
@@ -188,7 +189,7 @@ type: component
 
   <div class="ls-box-demo">
     <div data-ls-module="dropdown" class="ls-dropdown">
-      <a href="#" class="ls-btn"></a>
+      <button  class="ls-btn"></button>
       <ul class="ls-dropdown-nav">
         <li><a href="#">Edit</a></li>
         <li><a href="#">Config</a></li>
@@ -223,7 +224,7 @@ type: component
 
   <% code("html") do %>
 <div data-ls-module="dropdown" class="ls-dropdown">
-  <a href="#" class="ls-btn"></a>
+  <button  class="ls-btn"></button>
   <ul class="ls-dropdown-nav">
       <li><a href="#">Edit</a></li>
       <li><a href="#">Config</a></li>
