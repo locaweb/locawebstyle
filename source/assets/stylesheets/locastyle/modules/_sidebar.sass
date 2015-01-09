@@ -229,7 +229,7 @@
   .ls-sidebar
     +transform(none)
     +translate(0, 0)
-    +single-transition(none)
+    +single-transition(width, .25s, linear)
     float: none
     top: $topbar-height
     height: calc(100% - 60px)
@@ -271,7 +271,9 @@
 
       &:before
         display: inline-block
-        font-size: 12px
+        font-size: remtopx(1.58)
+        color: #bebebe
+        width: 22px
 
 ////
 // When the menu is Toggled
@@ -279,16 +281,15 @@
 .ls-sidebar-toggled
   .ls-sidebar-toggle:before
     +rotate(-180deg)
-    +single-transition(transform, .2s, ease-in-out)
+    +single-transition(transform, .25s, linear)
 
   .ls-sidebar
-    +single-transition(width, .2s, ease-in-out)
     width: 60px
     overflow: hidden
     z-index: 12
 
     .ls-brand-name
-      +single-transition(padding, .2s)
+      +single-transition(padding, .25s)
       width: $sidebar-width
       padding: 16px
       text-align: left
