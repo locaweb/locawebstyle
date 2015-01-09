@@ -1,0 +1,29 @@
+---
+title: Transferência
+layout: panel
+theme_name: ls-theme-orange
+panel: painel3
+title_product: Registro de Domínio
+---
+
+<h1 class="ls-title-intro ls-ico-users"><%= data.page.title %></h1>
+<p>Para iniciar o processo de transferência do domínio <strong>adidas.com</strong> para outro provedor, siga as instruções abaixo:</p>
+
+<div class="ls-box">
+  <h2 class="ls-title-5 ls-display-inline-block">Desabilite a trava de transferência</h2>
+  <div class="ls-switch-btn ls-float-right">
+    <input type="checkbox" id="test1">
+    <label class="ls-switch-label" for="test1" name="label-test1" ls-switch-off="Desabilitada" ls-switch-on="Habilitada"><span></span></label>
+  </div>
+  <p>A trava garante que o domínio internacional não seja transferido para outro provedor. Caso queira iniciar um processo de transferência, desabilite a trava.</p>
+  <hr>
+  <h2 class="ls-title-5 ls-display-inline-block">Gere uma senha de transferência (Authorization Code / AuthCode)</h2>
+  <a href="#" class="ls-btn ls-float-right">Gerar senha</a>
+  <p>Uma cópia da senha gerada será enviada para o e-mail email@dominio.com.br e deverá ser informada ao novo provedor.</p>
+</div>
+
+<p><strong>Importante: </strong>Caso existam outros domínios vinculados ao [ID_USUARIO] eles também serão transferidos. Para mais informações acesse a <a href="https://registro.br/ajuda.html?secao=ProcedimentosAdministrativos" target="_blank">FAQ do Registro.br</a></p>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel3/sidebar' %>
+<% end %>

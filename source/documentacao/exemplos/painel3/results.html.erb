@@ -1,0 +1,137 @@
+---
+title: Results
+layout: panel
+show_topbar_title: true
+pre_panel: true
+panel: painel3
+theme_name: ls-theme-orange
+title_product: Registro de Domínio
+---
+
+<h1 class="ls-title-intro ls-ico-list2">Registros</h1>
+
+
+<a class="ls-btn-primary">Registrar ou transferir</a>
+
+<div class="ls-box-filter">
+  <form action="" class="ls-form ls-form-inline ls-float-left">
+    <label class="ls-label">
+      <b class="ls-label-text">Status</b>
+      <div class="ls-custom-select">
+        <select class="ls-select" name="">
+          <option selected="selected">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Expirado</option>
+          <option value="#">Aguardando transferência</option>
+        </select>
+      </div>
+    </label>
+  </form>
+
+  <form action="<%= base_url %>/documentacao/exemplos/painel3/results" method="post" class="ls-form ls-form-inline ls-float-right">
+    <label class="ls-label" role="search">
+      <b class="ls-label-text ls-hidden-accessible">Buscar por domínio</b>
+      <input type="text" id="q" name="q" aria-label="Buscar por domínio" accesskey="s" placeholder="Buscar por domínio">
+    </label>
+    <div class="ls-actions-btn">
+      <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
+    </div>
+  </form>
+</div>
+
+<p>A busca por <strong>"adidas"</strong> retornou <strong>2 resultados</strong>. - <a href="" title="">Listar todos os domínios</a></p>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-sm-9">
+      <a href="#">locatransfertest0111.com</a>
+      <small>Registro de Domínio Internacional</small>
+    </div>
+    <div class="col-sm-3 ls-txt-right">
+      <div data-ls-module="dropdown" class="ls-dropdown">
+        <a href="#" class="ls-btn-primary">Administrar</a>
+        <ul class="ls-dropdown-nav">
+            <li><a href="<%= base_url %>/documentacao/exemplos/painel3/nameservers">Servidores DNS</a></li>
+            <li><a href="#">Zona de DNS</a></li>
+            <li><a href="<%= base_url %>/documentacao/exemplos/painel3/contacts">Contatos</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-4">
+      <strong class="ls-list-label">Período de renovação</strong>
+      1 ano
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <strong class="ls-list-label">Data de expiração</strong>
+      01/09/2015
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <strong class="ls-list-label">Status</strong>
+      Ativo
+    </div>
+  </div>
+</div>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-sm-9">
+      <a href="#" >locatransfertest444.com.br</a>
+      <small>Registro de Domínio Nacional</small>
+    </div>
+    <div class="col-sm-3 ls-txt-right">
+      <div data-ls-module="dropdown" class="ls-dropdown">
+        <a href="#" class="ls-btn-primary">Administrar</a>
+        <ul class="ls-dropdown-nav">
+            <li><a href="<%= base_url %>/documentacao/exemplos/painel3/nameservers">Servidores DNS</a></li>
+            <li><a href="#">Zona de DNS</a></li>
+            <li><a href="<%= base_url %>/documentacao/exemplos/painel3/contacts">Contatos</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-4">
+      <strong class="ls-list-label">Período de renovação</strong>
+      1 ano
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <strong class="ls-list-label">Data de expiração</strong>
+      30/12/2014 | <a href="" class="ls-color-theme">Renovar domínio</a>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <strong class="ls-list-label">Status</strong>
+      Ativo
+    </div>
+  </div>
+</div>
+
+<div class="ls-pagination-filter">
+  <ul class="ls-pagination">
+    <li><a href="#">&laquo; Anterior</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Próximo &raquo;</a></li>
+  </ul>
+
+  <div class="ls-filter-view">
+      Exibir
+      <div class="ls-custom-select">
+        <select name="" id="" class="ls-select">
+          <option value="10">10</option>
+          <option value="30">30</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+      ítens por página
+  </div>
+</div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel3/sidebar' %>
+<% end %>
