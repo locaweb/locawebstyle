@@ -85,10 +85,10 @@
     <a href="/locawebstyle/documentacao/exemplos/painel3/pre-painel"  class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
     <nav class="ls-menu">
       <ul>
-      <li><a href="/locawebstyle/documentacao/exemplos/painel3/nameservers" class="ls-ico-globe">Servidores de DNS</a></li>
-        <!-- <li><a href="/locawebstyle/documentacao/exemplos/painel3/base" class="ls-ico-home">Primeiros passos</a></li> -->
+      <li><a href="/locawebstyle/documentacao/exemplos/painel3/nameservers" class="ls-ico-globe">Gerenciamento DNS</a></li>
         <li><a href="/locawebstyle/documentacao/exemplos/painel3/contacts" class="ls-ico-users">Contatos</a></li>
-        <li><a href="/locawebstyle/documentacao/exemplos/painel3/stats" class="ls-ico-cog">Transferência de domínio</a></li>
+        <li><a href="/locawebstyle/documentacao/exemplos/painel3/transferout" class="ls-ico-cog">Transferência</a></li>
+        <li><a href="/locawebstyle/documentacao/exemplos/painel3/transfer-international" class="ls-ico-cog">Transferência Internacional</a></li>
       </ul>
     </nav>
   </div>
@@ -99,7 +99,316 @@
   <main class="ls-main ">
     <div class="container-fluid">
       <h1 class="ls-title-intro ls-ico-users">Contatos</h1>
-<p>Informações dos contatos de Registrante, Administrativo e Técnico.</p>
+<p>Informações dos contatos de Registrante, Administrativo, Técnico e Cobrança.</p>
+
+<ul class="ls-tabs-nav" id="tab">
+  <li class="ls-active"><a data-ls-module="tabs" href="#step1">Registrante</a></li>
+  <li><a data-ls-module="tabs" href="#step2">Administrativo</a></li>
+  <li><a data-ls-module="tabs" href="#step3">Técnico</a></li>
+  <li><a data-ls-module="tabs" href="#step4">Cobrança</a></li>
+</ul>
+<div class="ls-tabs-container" id="awesome-tab-content">
+  <div id="step1" class="ls-tab-content ls-active ls-form-inline">
+    <p>Responsável por novas contratações, pela alteração das informações dos servidores DNS e pela modificação dos contato administrativo, técnico e de cobrança.</p>
+    <table id="form-admin" class="ls-sm-space ls-table ls-table-striped ls-form-disable ls-form-text">
+        <tbody>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Nome:</b>
+                <input type="text" name="nome" value="José da Silva">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">E-mail:</b>
+                <input type="email" name="email" value="jose@dasilva.com.br">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Empresa:</b>
+                <input type="text" name="empresa" value="Locaweb">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">CEP:</b>
+                <input type="text" name="cep" value="04776-100">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Endereço:</b>
+                <input type="text" name="endereco" value="Av. Vinte e Três de Maio, 230 - Paraíso - São Paulo">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Cidade:</b>
+                <input type="text" name="cidade" value="São Paulo">
+              </label>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Estado:</b>
+                <input type="text" name="estado" value="SP">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Telefone:</b>
+                <input type="text" name="telefone" value="(11) 5678-9012">
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  <div id="step2" class="ls-tab-content">
+    <p>Responsável pela alteração das informações dos servidores DNS e pela modificação do contato técnico e de cobrança.</p>
+    <form action="" class="ls-form-inline" data-ls-module="form">
+      <table id="form-admin" class="ls-sm-space ls-table ls-table-striped ls-form-disable ls-form-text">
+        <tbody>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Nome:</b>
+                <input type="text" name="nome" value="José da Silva">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">E-mail:</b>
+                <input type="email" name="email" value="jose@dasilva.com.br">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Empresa:</b>
+                <input type="text" name="empresa" value="Locaweb">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">CEP:</b>
+                <input type="text" name="cep" value="04776-100">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Endereço:</b>
+                <input type="text" name="endereco" value="Av. Vinte e Três de Maio, 230 - Paraíso - São Paulo">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Cidade:</b>
+                <input type="text" name="cidade" value="São Paulo">
+              </label>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Estado:</b>
+                <input type="text" name="estado" value="SP">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Telefone:</b>
+                <input type="text" name="telefone" value="(11) 5678-9012">
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="" data-ls-fields-enable="#form-admin" data-toggle-class="ls-display-none" data-target=".domain-actions" class="domain-actions ls-btn">Alterar dados</a>
+      <div class="domain-actions ls-display-none">
+        <button type="submit" class="ls-btn-primary">Salvar</button>
+        <button class="ls-btn" data-ls-fields-enable="#form-admin" data-toggle-class="ls-display-none" data-target=".domain-actions" >Cancelar</button>
+      </div>
+    </form>
+  </div>
+  <div id="step3" class="ls-tab-content">
+    <p>Responsável pela alteração das informações dos servidores DNS.</p>
+    <form action="" class="ls-form-inline" data-ls-module="form">
+      <table id="form-tecnic" class="ls-sm-space ls-table ls-table-striped ls-form-disable ls-form-text">
+        <tbody>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Nome:</b>
+                <input type="text" name="nome" value="José da Silva">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">E-mail:</b>
+                <input type="email" name="email" value="jose@dasilva.com.br">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Empresa:</b>
+                <input type="text" name="empresa" value="Locaweb">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">CEP:</b>
+                <input type="text" name="cep" value="04776-100">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Endereço:</b>
+                <input type="text" name="endereco" value="Av. Vinte e Três de Maio, 230 - Paraíso - São Paulo">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Cidade:</b>
+                <input type="text" name="cidade" value="São Paulo">
+              </label>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Estado:</b>
+                <input type="text" name="estado" value="SP">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Telefone:</b>
+                <input type="text" name="telefone" value="(11) 5678-9012">
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="" data-ls-fields-enable="#form-tecnic" data-toggle-class="ls-display-none" data-target=".domain-actions" class="domain-actions ls-btn">Alterar dados</a>
+      <div class="domain-actions ls-display-none">
+        <button type="submit" class="ls-btn-primary">Salvar</button>
+        <button class="ls-btn" data-ls-fields-enable="#form-tecnic" data-toggle-class="ls-display-none" data-target=".domain-actions" >Cancelar</button>
+      </div>
+    </form>
+  </div>
+  <div id="step4" class="ls-tab-content">
+    <p>Responsável pelo fornecimento e atualização do endereço eletrônico para recebimento dos comunicados de cobrança da manutenção.</p>
+        <form action="" class="ls-form-inline" data-ls-module="form">
+      <table id="form-charging" class="ls-sm-space ls-table ls-table-striped ls-form-disable ls-form-text">
+        <tbody>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Nome:</b>
+                <input type="text" name="nome" value="José da Silva">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">E-mail:</b>
+                <input type="email" name="email" value="jose@dasilva.com.br">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Empresa:</b>
+                <input type="text" name="empresa" value="Locaweb">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">CEP:</b>
+                <input type="text" name="cep" value="04776-100">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Endereço:</b>
+                <input type="text" name="endereco" value="Av. Vinte e Três de Maio, 230 - Paraíso - São Paulo">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Cidade:</b>
+                <input type="text" name="cidade" value="São Paulo">
+              </label>
+              <label class="ls-label col-md-3 ls-no-margin">
+                <b class="ls-label-text">Estado:</b>
+                <input type="text" name="estado" value="SP">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="ls-label col-md-5 ls-no-margin">
+                <b class="ls-label-text">Telefone:</b>
+                <input type="text" name="telefone" value="(11) 5678-9012">
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="" data-ls-fields-enable="#form-charging" data-toggle-class="ls-display-none" data-target=".domain-actions" class="domain-actions ls-btn">Alterar dados</a>
+      <div class="domain-actions ls-display-none">
+        <button type="submit" class="ls-btn-primary">Salvar</button>
+        <button class="ls-btn" data-ls-fields-enable="#form-charging" data-toggle-class="ls-display-none" data-target=".domain-actions" >Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--
 
 <div class="ls-box ls-md-space">
   <h2 class="ls-title-3">Contato registrante</h2>
@@ -211,10 +520,10 @@
       <button data-ls-fields-enable="#access-form" data-toggle-class="ls-display-none" data-target=".area-actions" class="ls-btn-primary area-actions">Editar</button>
     </div>
   </form>
-</div>
+</div> -->
 
 
-
+<!--
 <div class="ls-box ls-md-space">
   <h2 class="ls-title-3">Contato administrativo</h2>
   <form action=""  class="ls-form ls-form-horizontal" data-ls-module="form">
@@ -325,9 +634,9 @@
     </div>
   </form>
 </div>
+ -->
 
-
-<div class="ls-box ls-md-space">
+<!-- <div class="ls-box ls-md-space">
   <h2 class="ls-title-3">Contato registrante</h2>
   <p>Responsável pelo registro de novos domínios e edição dos contatos administrativo e técnico, além da atualização dos dados de contato do registrante.</p>
   <form action=""  class="ls-form ls-form-horizontal" data-ls-module="form">
@@ -437,7 +746,7 @@
       <button data-ls-fields-enable="#access-form-tecnic" data-toggle-class="ls-display-none" data-target=".area-actions-3" class="ls-btn-primary area-actions-3">Editar</button>
     </div>
   </form>
-</div>
+</div> -->
 
 
 
@@ -484,23 +793,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Sunt a accusantium ea asperiores recusandae in nihil enim est possimus sapiente laudantium</a>
+            <a href="#">Qui quas et non consequuntur architecto architecto ut voluptas</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Ducimus ullam id quas</a>
+            <a href="#">Sit occaecati iure possimus eius esse</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Id quam voluptatum facere aperiam distinctio vero odit explicabo ut deserunt expedita nulla autem itaque</a>
+            <a href="#">Numquam voluptatem nam quae sunt</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">In et animi reiciendis dolores recusandae ut</a>
+            <a href="#">Et voluptatem cumque nulla odio sed pariatur nisi ullam corrupti consequatur temporibus nihil aspernatur</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Est quasi consectetur sit eaque maiores nobis nisi sapiente et</a>
+            <a href="#">Error deserunt maiores alias et nam repudiandae beatae ut</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -509,8 +818,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> iste ut amet corrupti aut dolor</a></li>
-          <li><a href="#">> et eos perspiciatis et rerum modi</a></li>
+          <li><a href="#">> magni odio culpa quaerat voluptas rerum</a></li>
+          <li><a href="#">> ut quo aut ea dicta quaerat</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">

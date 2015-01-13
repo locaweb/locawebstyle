@@ -434,7 +434,7 @@
   },
   
   "documentacao/exemplos/painel3/nameservers" :   {
-      "title": "Servidores de DNS",
+      "title": "Gerenciamento DNS",
       "description": "",
       "path": "documentacao/exemplos/painel3/nameservers"
   },
@@ -443,6 +443,30 @@
       "title": "Pré Painel",
       "description": "",
       "path": "documentacao/exemplos/painel3/pre-painel"
+  },
+  
+  "documentacao/exemplos/painel3/results" :   {
+      "title": "Results",
+      "description": "",
+      "path": "documentacao/exemplos/painel3/results"
+  },
+  
+  "documentacao/exemplos/painel3/transfer-international" :   {
+      "title": "Transferência",
+      "description": "",
+      "path": "documentacao/exemplos/painel3/transfer-international"
+  },
+  
+  "documentacao/exemplos/painel3/transferin" :   {
+      "title": "Transferência de Domínio para a Locaweb",
+      "description": "",
+      "path": "documentacao/exemplos/painel3/transferin"
+  },
+  
+  "documentacao/exemplos/painel3/transferout" :   {
+      "title": "Transferência",
+      "description": "",
+      "path": "documentacao/exemplos/painel3/transferout"
   },
   
   "documentacao/exemplos/painel4/config-favicon" :   {

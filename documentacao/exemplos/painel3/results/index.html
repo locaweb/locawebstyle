@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="ls-theme-cyanogen ls-html-nobg ">
+<html class="ls-theme-orange  ls-pre-panel">
 <head>
-  <title>Página Inicial</title>
+  <title>Results</title>
 
   <meta charset="utf-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -17,7 +17,7 @@
 
   <link href="../../../../assets/stylesheets/locastyle.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="documentacao documentacao_exemplos documentacao_exemplos_painel4 documentacao_exemplos_painel4_home documentacao_exemplos_painel4_home_index">
+<body class="documentacao documentacao_exemplos documentacao_exemplos_painel3 documentacao_exemplos_painel3_results documentacao_exemplos_painel3_results_index">
 
   <div class="ls-topbar">
 
@@ -50,15 +50,9 @@
 
   <span class="ls-show-sidebar ls-ico-menu"></span>
 
-  <a href="/locawebstyle/documentacao/exemplos/painel4/pre-painel"  class="ls-go-next"><span class="ls-text">Voltar à lista de serviços</span></a>
+  <a href="/locawebstyle/documentacao/exemplos/painel3/pre-painel"  class="ls-go-next"><span class="ls-text">Voltar à lista de serviços</span></a>
 
   <!-- Nome do produto/marca -->
-    <h1 class="ls-brand-name">
-      <a href="home" class="ls-ico-earth">
-        <small>Criador de Sites 2.0</small>
-        fmolina
-      </a>
-    </h1>
 </div>
 
 
@@ -69,49 +63,139 @@
     (fmolina)</small>
   </a>
   <nav class="ls-dropdown-nav ls-user-menu">
-    <ul>
-      <li><a href="#">Meus dados</a></li>
-      <li><a href="#">Faturas</a></li>
-      <li><a href="#">Planos</a></li>
-      <li><a href="#">Sair</a></li>
-     </ul>
+    <a href="#" class="ls-btn-logout">Sair</a>
   </nav>
 </div>
-  <div class="ls-sidebar-inner">
-    <a href="/locawebstyle/documentacao/exemplos/painel4/pre-painel"  class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
-    <nav class="ls-menu">
-      <ul>
-        <li><a href="/locawebstyle/documentacao/exemplos/painel4/home" class="ls-ico-home">Página inicial</a></li>
-        <!-- <li><a href="/locawebstyle/documentacao/exemplos/painel4/base" class="ls-ico-home">Primeiros passos</a></li> -->
-        <li><a href="#" class="ls-ico-screen">Meu Site</a></li>
-        <li><a href="/locawebstyle/documentacao/exemplos/painel4/domains" class="ls-ico-link">Endereço do Site</a></li>
-        <li><a href="/locawebstyle/documentacao/exemplos/painel4/plugins" class="ls-ico-attachment">Plugins</a></li>
-        <li class="ls-submenu">
-          <a href="#" class="ls-ico-cog">Configurações</a>
-          <ul>
-            <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel4/config-language">Idiomas</a></li>
-            <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel4/config-favicon">Favicon</a></li>
-            <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel4/config-ga">Google Analytics</a></li>
-            <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel4/config-mobile">Site mobile</a></li>
-            <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel4/config-users">Usuários do site</a></li>
-            <li><a class="ls-submenu-item" href="/locawebstyle/documentacao/exemplos/painel4/config-publish">Publicar o site</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <h1 class="ls-brand-name ls-ico-earth"><a href="../home">Registro de Domínio</a></h1>
 
 
   </aside>
 
   <main class="ls-main ">
     <div class="container-fluid">
-      <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
+      <h1 class="ls-title-intro ls-ico-list2">Registros</h1>
 
-<div class="ls-box">Box 1</div>
-<div class="ls-box">Box 2</div>
-<div class="ls-box">Box 3</div>
-<div class="ls-box">Box 4</div>
+
+<a class="ls-btn-primary">Registrar ou transferir</a>
+
+<div class="ls-box-filter">
+  <form action="" class="ls-form ls-form-inline ls-float-left">
+    <label class="ls-label">
+      <b class="ls-label-text">Status</b>
+      <div class="ls-custom-select">
+        <select class="ls-select" name="">
+          <option selected="selected">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Expirado</option>
+          <option value="#">Aguardando transferência</option>
+        </select>
+      </div>
+    </label>
+  </form>
+
+  <form action="/locawebstyle/documentacao/exemplos/painel3/results" method="post" class="ls-form ls-form-inline ls-float-right">
+    <label class="ls-label" role="search">
+      <b class="ls-label-text ls-hidden-accessible">Buscar por domínio</b>
+      <input type="text" id="q" name="q" aria-label="Buscar por domínio" accesskey="s" placeholder="Buscar por domínio">
+    </label>
+    <div class="ls-actions-btn">
+      <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
+    </div>
+  </form>
+</div>
+
+<p>A busca por <strong>"adidas"</strong> retornou <strong>2 resultados</strong>. - <a href="" title="">Listar todos os domínios</a></p>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-sm-9">
+      <a href="#">locatransfertest0111.com</a>
+      <small>Registro de Domínio Internacional</small>
+    </div>
+    <div class="col-sm-3 ls-txt-right">
+      <div data-ls-module="dropdown" class="ls-dropdown">
+        <a href="#" class="ls-btn-primary">Administrar</a>
+        <ul class="ls-dropdown-nav">
+            <li><a href="/locawebstyle/documentacao/exemplos/painel3/nameservers">Servidores DNS</a></li>
+            <li><a href="#">Zona de DNS</a></li>
+            <li><a href="/locawebstyle/documentacao/exemplos/painel3/contacts">Contatos</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-4">
+      <strong class="ls-list-label">Período de renovação</strong>
+      1 ano
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <strong class="ls-list-label">Data de expiração</strong>
+      01/09/2015
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <strong class="ls-list-label">Status</strong>
+      Ativo
+    </div>
+  </div>
+</div>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-sm-9">
+      <a href="#" >locatransfertest444.com.br</a>
+      <small>Registro de Domínio Nacional</small>
+    </div>
+    <div class="col-sm-3 ls-txt-right">
+      <div data-ls-module="dropdown" class="ls-dropdown">
+        <a href="#" class="ls-btn-primary">Administrar</a>
+        <ul class="ls-dropdown-nav">
+            <li><a href="/locawebstyle/documentacao/exemplos/painel3/nameservers">Servidores DNS</a></li>
+            <li><a href="#">Zona de DNS</a></li>
+            <li><a href="/locawebstyle/documentacao/exemplos/painel3/contacts">Contatos</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-4">
+      <strong class="ls-list-label">Período de renovação</strong>
+      1 ano
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <strong class="ls-list-label">Data de expiração</strong>
+      30/12/2014 | <a href="" class="ls-color-theme">Renovar domínio</a>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <strong class="ls-list-label">Status</strong>
+      Ativo
+    </div>
+  </div>
+</div>
+
+<div class="ls-pagination-filter">
+  <ul class="ls-pagination">
+    <li><a href="#">&laquo; Anterior</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Próximo &raquo;</a></li>
+  </ul>
+
+  <div class="ls-filter-view">
+      Exibir
+      <div class="ls-custom-select">
+        <select name="" id="" class="ls-select">
+          <option value="10">10</option>
+          <option value="30">30</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+      ítens por página
+  </div>
+</div>
 
 
     </div>
@@ -157,23 +241,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Rerum fugit delectus consectetur dolores porro quod ea impedit mollitia sit sunt accusantium</a>
+            <a href="#">Est ducimus sit aut animi non cumque laboriosam consequatur est</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Optio dolor officia id aut vel odio ut est perspiciatis qui et et nulla a</a>
+            <a href="#">Accusantium fugiat molestiae quia suscipit aut quia voluptatibus quo sunt ut in</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Minus rerum sed ipsa velit fuga nihil expedita quod at eaque vero aliquid quia non</a>
+            <a href="#">Animi autem ullam quo quos voluptas eligendi dignissimos natus deleniti aspernatur ex</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Laborum aut facilis unde</a>
+            <a href="#">Eos occaecati labore sit illo tempore voluptates illum aut excepturi</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Fuga amet similique atque porro qui voluptas est sed facere quia</a>
+            <a href="#">Sed quia ea repudiandae est fugit distinctio quibusdam</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -182,8 +266,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> inventore cupiditate ea minima est omnis</a></li>
-          <li><a href="#">> praesentium repudiandae nihil ipsum nihil corporis</a></li>
+          <li><a href="#">> debitis occaecati dolores qui in iusto</a></li>
+          <li><a href="#">> aut sunt quam blanditiis odit labore</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">
