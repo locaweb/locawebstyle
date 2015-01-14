@@ -99,7 +99,49 @@
 
 .ls-steps-main
   border-left: 1px solid $gray2
-  overflow: hidden
+  position: relative
+  padding-left: 30px
+
+  .ls-steps-arrow
+
+    border-left: 12px solid $gray2
+    border-top: 12px solid transparent
+    border-bottom: 12px solid transparent
+    height: 0
+    width: 0
+    position: absolute
+    top: 0
+    left: -1px
+
+
+    &:before,
+    &:after
+      content: ""
+      display: block
+      left: -1px
+      position: absolute
+
+
+    &:before
+      background: green
+      border-radius: 50%
+      position: absolute
+      left: -13px
+      top: -12px
+      margin-top: 10px
+      height: 4px
+      width: 4px
+      z-index: 2
+
+    &:after
+      border-left: 10px solid #fff
+      border-top: 10px solid transparent
+      border-bottom: 10px solid transparent
+      top: -10px
+      left: -12px
+      height: 0
+      width: 0
+      z-index: 1
 
 .ls-steps-content
   +single-transition(height, .25s)

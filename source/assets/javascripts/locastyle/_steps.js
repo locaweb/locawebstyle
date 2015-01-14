@@ -25,6 +25,7 @@ locastyle.steps = (function() {
 
   function init() {
     unbind();
+    createArrow();
     stepsAffix();
     addActivedNav();
     bindClickOnTriggers();
@@ -126,6 +127,10 @@ locastyle.steps = (function() {
     $(config.selectors.nav).find('.ls-active .ls-steps-btn').attr('aria-selected' , 'true');
     $(config.selectors.button).attr('role' , 'tab');
     $(config.selectors.container).attr({ 'aria-hidden' : true, 'role' : 'tabpanel' });;
+  }
+
+  function createArrow(){
+    $('.ls-steps-main').prepend('<span class="ls-steps-arrow" />');
   }
 
   return {
