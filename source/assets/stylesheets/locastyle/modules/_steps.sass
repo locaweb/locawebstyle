@@ -16,6 +16,15 @@ $with-steps: 25%
   z-index: 11
   width: $with-steps
 
+  &:before
+    content: ""
+    border-right: 1px solid $gray2
+    position: absolute
+    height: 100%
+    right: 29px
+    top: 0
+
+
   li
     counter-increment: steps
     padding-bottom: 20px
