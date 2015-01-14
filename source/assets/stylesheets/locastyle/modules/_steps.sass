@@ -16,24 +16,39 @@
 
   li
     counter-increment: steps
-    margin-bottom: 15px
+    padding-bottom: 20px
+    position: relative
 
     &:first-child .ls-steps-btn:before
       line-height: 26px
 
+    &:last-child
+      padding-bottom: 0
+
+    &:before
+      content: ""
+      border-left: 3px dotted $gray2
+      height: 100%
+      left: 14px
+      position: absolute
+      top: 22px
+      z-index: 1
+
 .ls-steps-btn
-  background: none
+  background: #fff
   border: none
   cursor: none
   display: inline-block
   font-size: remtopx(.875)
   color: $gray2
   padding-right: 5px
+  padding-bottom: 3px
   pointer-events: none
+  position: relative
+  z-index: 2
 
   .ls-active &,
   .ls-actived &
-
     cursor: pointer
     pointer-events: initial
 
@@ -50,6 +65,13 @@
     &:before
       color: $gray3
 
+  .ls-actived &
+    // counter-increment: none
+
+    &:before
+      content: "\e63d"
+      font-family: 'locastyle'
+
 
   &:hover,
   &:focus,
@@ -62,6 +84,7 @@
     content: counters(steps, "") " "
     font-size: remtopx(.875)
     border: 1px solid $gray2
+    background: #fff
     border-radius: 50%
     display: inline-block
     height: 30px

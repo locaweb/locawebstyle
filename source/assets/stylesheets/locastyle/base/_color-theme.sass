@@ -315,9 +315,29 @@
     ////
     .ls-steps-nav
 
-      .ls-active
+      .ls-actived
+
+        &:before
+          border-color: $color1
+
         .ls-steps-btn
           color: $color1
+
+          &:before
+            border-color: $color1
+            background: $color1
+            color: #fff
+
+          &:after
+            color: $color1
+
+        &.ls-active
+          .ls-steps-btn:before
+            background: #fff
+            color: $color1
+
+      .ls-active
+        .ls-steps-btn
 
           &:before
             border-color: $color1
@@ -326,8 +346,6 @@
           &:after
             color: $color1
 
-      .ls-actived
-        .ls-steps-btn:before
 
 @each $theme-name, $colors in $themes-colors
   @include theme-color($theme-name, $colors)
