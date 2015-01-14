@@ -18,6 +18,9 @@
     counter-increment: steps
     margin-bottom: 15px
 
+    &:first-child .ls-steps-btn:before
+      line-height: 26px
+
 .ls-steps-btn
   background: none
   border: none
@@ -35,9 +38,9 @@
     pointer-events: initial
 
     &:before
-      background: $gray3
-      border: 1px solid $gray3
+      border: 2px solid $gray3
       color: #fff
+      font-family: Open Sans, Arial, Helvetica, Sans-serif
 
     &:after
       color: $gray3
@@ -45,7 +48,7 @@
   .ls-active &
 
     &:before
-      background: $gray5
+      color: $gray3
 
 
   &:hover,
