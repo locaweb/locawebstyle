@@ -310,5 +310,24 @@
     .ls-word-dotted
       border-color: $color2
 
+    ////
+    // Steps
+    ////
+    .ls-steps-nav
+
+      .ls-active
+        .ls-steps-btn
+          color: $color1
+
+          &:before
+            border-color: $color1
+
+          &:before,
+          &:after
+            color: $color1
+
+      .ls-actived
+        .ls-steps-btn:before
+
 @each $theme-name, $colors in $themes-colors
   @include theme-color($theme-name, $colors)
