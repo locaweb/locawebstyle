@@ -129,8 +129,8 @@ locastyle.steps = (function() {
     $(config.selectors.container).attr({ 'aria-hidden' : true, 'role' : 'tabpanel' });;
   }
 
-  function createArrow(){
-    $('.ls-steps-main').prepend('<span class="ls-steps-arrow" />');
+  function createArrow() {
+    $('.ls-steps-nav li').prepend('<span class="ls-steps-arrow" />');
   }
 
   return {
