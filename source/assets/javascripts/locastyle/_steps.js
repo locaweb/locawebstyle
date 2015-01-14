@@ -55,7 +55,7 @@ locastyle.steps = (function() {
     var index = $(config.selectors.nav).find(config.classes.active).index();
     addActiveContent(index);
     index = parseInt(index + 1);
-    $(config.selectors.nav).find('li:lt(' + index + ')');
+    $(config.selectors.nav).find('li:lt(' + index + ')').addClass(config.status.actived);
   }
 
   function addActiveContent(index) {
