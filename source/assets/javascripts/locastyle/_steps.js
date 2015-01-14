@@ -55,7 +55,7 @@ locastyle.steps = (function() {
     var index = $(config.selectors.nav).find(config.classes.active).index();
     addActiveContent(index);
     index = parseInt(index + 1);
-    $(config.selectors.nav).find('li:lt(' + index + ')').addClass(config.status.actived);
+    $(config.selectors.nav).find('li:lt(' + index + ')');
   }
 
   function addActiveContent(index) {
@@ -81,7 +81,8 @@ locastyle.steps = (function() {
   }
 
   function activateStep(el, $target) {
-    $(el).parents("li").addClass(config.status.active).addClass(config.status.actived);
+    $(el).parents("li").addClass(config.status.active);
+    $(el).parents("li").prev('li').addClass(config.status.actived);
     $target.addClass(config.status.active).attr({ 'aria-hidden' : false });
     $(el).attr('aria-selected' , true);
   }
@@ -95,7 +96,7 @@ locastyle.steps = (function() {
   function nextStep() {
     $(config.actions.next).on("click.steps", function(evt) {
       evt.preventDefault();
-      var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).addClass(config.status.actived).find(config.selectors.button);
+      var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
       var $target = $($el.attr("href") || $el.data("target"));
       activateStep($el, $target);
       deactivateStep($el, $target);
