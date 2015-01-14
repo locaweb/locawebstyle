@@ -19,9 +19,6 @@
     padding-bottom: 20px
     position: relative
 
-    &:first-child .ls-steps-btn:before
-      line-height: 26px
-
     &:last-child
       padding-bottom: 0
 
@@ -29,7 +26,7 @@
       content: ""
       border-left: 3px dotted $gray2
       height: 100%
-      left: 14px
+      left: 16px
       position: absolute
       top: 22px
       z-index: 1
@@ -47,6 +44,10 @@
   position: relative
   z-index: 2
 
+  &:before
+    font-family: Open Sans, Arial, Helvetica, Sans-serif
+    font-size: remtopx(1.125)
+
   .ls-active &,
   .ls-actived &
     cursor: pointer
@@ -55,7 +56,6 @@
     &:before
       border: 2px solid $gray3
       color: #fff
-      font-family: Open Sans, Arial, Helvetica, Sans-serif
 
     &:after
       color: $gray3
@@ -83,15 +83,15 @@
   &:before
     content: counters(steps, "") " "
     font-size: remtopx(.875)
-    border: 1px solid $gray2
+    border: 2px solid $gray2
     background: #fff
     border-radius: 50%
     display: inline-block
-    height: 30px
-    line-height: 30px
+    height: 35px
+    line-height: 31px
     vertical-align: middle
     text-align: center
-    width: 30px
+    width: 35px
 
   &:after
     content: attr(aria-label)
