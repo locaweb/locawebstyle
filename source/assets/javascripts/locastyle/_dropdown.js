@@ -43,9 +43,7 @@ locastyle.dropdown = (function() {
   }
 
   function toggleDropdown($target) {
-    if($target.find('config.button:eq(0)').hasClass('ls-disabled')){
-      return false;
-    } else {
+    if(!$target.find('config.button:eq(0)').hasClass('ls-disabled')){
       $target.toggleClass("ls-active");
       $(config.button).attr({ 'aria-expanded' : 'false' });
       $(config.nav).attr({ 'aria-hidden' : 'true' });
