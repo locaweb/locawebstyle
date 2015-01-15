@@ -35,6 +35,7 @@ locastyle.steps = (function() {
     addAriaLabel();
   }
 
+  // Always visible navigation when the page scrolls
   function stepsAffix() {
     var $steps   = $(config.selectors.nav);
     var offset    = $steps.offset();
@@ -52,6 +53,7 @@ locastyle.steps = (function() {
     });
   }
 
+  // Displays the contents related to the active button
   function addActivedNav() {
     var index = $(config.selectors.nav).find(config.classes.active).index();
     addActiveContent(index);
@@ -59,10 +61,12 @@ locastyle.steps = (function() {
     $(config.selectors.nav).find('li:lt(' + index + ')').addClass(config.status.actived);
   }
 
+  // Check what the order of the activated button
   function addActiveContent(index) {
     $(config.selectors.container).eq(index).addClass(config.status.active);
   }
 
+  //Add aria-label in the navigation
   function addAriaLabel() {
     var $elem = $(config.selectors.button);
     var elemLength = $elem.length;
@@ -72,6 +76,7 @@ locastyle.steps = (function() {
       }
     }
 
+  //Create the step by activated navigation buttons
   function bindClickOnTriggers() {
     $(config.selectors.nav).on("click.steps", config.selectors.moduleActive, function(evt) {
       evt.preventDefault();
@@ -81,6 +86,7 @@ locastyle.steps = (function() {
     });
   }
 
+  //Active step
   function activateStep(el, $target) {
     $(el).parents("li").addClass(config.status.active);
     $(el).parents("li").prev('li').addClass(config.status.actived);
@@ -88,12 +94,14 @@ locastyle.steps = (function() {
     $(el).attr('aria-selected' , true);
   }
 
+  //Desactive step
   function deactivateStep(el, $target) {
     $(el).parents("li").siblings().removeClass(config.status.active);
     $target.siblings().removeClass(config.status.active).attr({ 'aria-hidden' : true });
     $(el).parents("li").siblings().find(config.selectors.button).attr('aria-selected' , false);
   }
 
+  // Advances to the next step
   function nextStep() {
     $(config.actions.next).on("click.steps", function(evt) {
       evt.preventDefault();
@@ -104,6 +112,7 @@ locastyle.steps = (function() {
     });
   }
 
+  // Back to the previous step
   function prevStep() {
     $(config.actions.prev).on("click.steps", function(evt) {
       evt.preventDefault();
@@ -114,13 +123,14 @@ locastyle.steps = (function() {
     });
   }
 
-  // remove os binds que o próprio modulo adiciona
+  // Remove the binds that own module adds
   function unbind() {
     $(config.selectors.nav).off('click.steps');
     $(config.actions.next).off('click.steps');
     $(config.actions.prev).off('click.steps');
   }
 
+  // Add the arias
   function ariaSteps() {
     $(config.selectors.nav).attr('role' , 'tablist');
     $(config.selectors.nav).find(config.selectors.button).attr('aria-selected' , 'false');
@@ -129,6 +139,7 @@ locastyle.steps = (function() {
     $(config.selectors.container).attr({ 'aria-hidden' : true, 'role' : 'tabpanel' });
   }
 
+  // Create arrow
   function createArrow() {
     $('.ls-steps-nav li').prepend('<span class="ls-steps-arrow" />');
   }
