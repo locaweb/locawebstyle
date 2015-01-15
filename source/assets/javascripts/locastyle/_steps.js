@@ -5,7 +5,7 @@ locastyle.steps = (function() {
 
   var config = {
     selectors: {
-      moduleActive: '.ls-actived [data-ls-module=steps]',
+      moduleActive: '.ls-actived [data-ls-module="steps"]',
       nav: '.ls-steps-nav',
       button: '.ls-steps-btn',
       container: '.ls-steps-content'
