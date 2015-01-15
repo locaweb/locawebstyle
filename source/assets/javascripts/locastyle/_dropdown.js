@@ -65,7 +65,7 @@ locastyle.dropdown = (function() {
   }
 
   function ariaDropdown(el) {
-    $(config.nav, el).find(config.button).attr({ role : 'option' });
+    $(config.nav, el).find('a').attr({ role : 'option' });
     $(config.button, el).attr({ role : 'combobox' });
 
     if($(el).hasClass('ls-active')){
