@@ -175,7 +175,6 @@
     padding: 20px 15px
     margin-bottom: 10px
     position: relative
-    overflow: hidden
     width: 100%
 
     + [class*="ls-btn"]
@@ -189,8 +188,36 @@
 
     input
       position: absolute
-      left: -12px
-      top: -10px
+      left: -20px
+      top: -20px
+
+  .ls-active
+
+    [class*="ls-btn"]
+      position: relative
+
+      &:before,
+      &:after
+        left: 50%
+        display: none!important
+
+      &:before
+        +arrow-down(mix($color-mix, #fff, 15%),8px)
+        bottom: -16px
+        position: absolute
+        top: auto
+        margin-left: -8px
+        z-index: 1
+
+
+      &:after
+        +arrow-down($gray2,6px)
+        bottom: -12px
+        position: absolute
+        top: auto
+        margin-left: -6px
+        z-index: 2
+
 
   // with icons
   [class*="ls-ico"]
@@ -201,6 +228,12 @@
       font-size: remtopx(1.5)
       vertical-align: sub
 
+    &:before
+      margin-right: 5px
+
+    &:after
+      margin-left: 5px
+
   .ls-tabs-btn-nav
     list-style: none
     margin-right: 0
@@ -208,9 +241,21 @@
 
     [class*="col-"]
       padding: 0 5px
+      overflow: hidden
 
-  .ls-tabs-container .ls-tab-content
-    padding: 0
-    border: none
-    margin-bottom: 0
+  .ls-tabs-container
+    top: 10px
 
+    .ls-tab-content
+      padding: 0
+      border: none
+      margin-bottom: 0
+
+@media screen and (min-width: $screen-sm)
+  .ls-tabs-btn .ls-active
+
+    [class*="ls-btn"]
+
+      &:before,
+      &:after
+        display: block!important
