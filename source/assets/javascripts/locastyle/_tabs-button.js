@@ -6,6 +6,7 @@ locastyle.button = (function() {
   function init() {
     unbind();
     bindClickOnTriggers();
+    ariaTabs();
   }
 
   function unbind() {
@@ -36,6 +37,13 @@ locastyle.button = (function() {
     $(el).parents("li").siblings().removeClass("ls-active");
     $target.siblings().removeClass("ls-active");
     $(el).parents("li").siblings().find($buttons).attr('aria-selected' , false);
+  }
+
+  function ariaTabs() {
+    $('.ls-tabs-btn-nav').attr('role' , 'tablist');
+    $('.ls-tabs-btn-nav .ls-btn').attr('role' , 'tab');
+    $('.ls-tabs-btn-nav .ls-active .ls-btn').attr('aria-selected' , 'true');
+    $('.ls-tabs-btn .ls-tab-content').attr('role' , 'tabpanel');
   }
 
   return {
