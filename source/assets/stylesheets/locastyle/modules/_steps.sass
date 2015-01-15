@@ -1,4 +1,4 @@
-$with-steps: 25%
+$with-steps: 85px
 
 .ls-steps
   @extend .ls-clearfix
@@ -176,7 +176,13 @@ $with-steps: 25%
 
 @media screen and (min-width: $screen-sm)
 
+  $with-steps: 250px
+
+  .ls-steps-nav
+    width: $with-steps
+
   .ls-steps-main
+    margin-left: $with-steps
     padding-left: 25px
 
   .ls-steps-arrow
