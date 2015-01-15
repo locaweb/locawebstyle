@@ -56,9 +56,20 @@ locastyle.steps = (function() {
   // Displays the contents related to the active button
   function addActivedNav() {
     var index = $(config.selectors.nav).find(config.classes.active).index();
-    addActiveContent(index);
-    index = parseInt(index + 1);
-    $(config.selectors.nav).find('li:lt(' + index + ')').addClass(config.status.actived);
+
+    // Checks if there are any enabled button to load the page
+    if(index ===  -1){
+      $(config.selectors.nav).each(function(){
+        var $el = $(this).find('li:first').find(config.selectors.button);
+        var $target = $el.data('target');
+        activateStep($el, $($target));
+      });
+
+    } else{
+      addActiveContent(index);
+      index = parseInt(index + 1);
+      $(config.selectors.nav).find('li:lt(' + index + ')').addClass(config.status.actived);
+    }
   }
 
   // Check what the order of the activated button
