@@ -11,6 +11,22 @@ describe("Steps: ", function(){
     });
   });
 
+  describe("when loading page", function(){
+    it("Don't have class ls-active on the navigation", function(){
+      setTimeout(function(){
+        expect($('#step1a').hasClass('ls-active')).toBe(true);
+      }, 1000);
+    });
+  });
+
+  describe("Don't have class ls-active on the navigation", function(){
+    it("first li navigation hasClass ls-active", function(){
+      setTimeout(function(){
+        expect($('#stepNav1').hasClass('ls-active')).toBe(true);
+      }, 1000);
+    });
+  });
+
   describe("when click in steps is actived", function(){
     it("activates the content related to the step", function(){
       var $button = $('#list1 .ls-steps-btn');
