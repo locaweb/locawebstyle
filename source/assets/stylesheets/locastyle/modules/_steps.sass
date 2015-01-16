@@ -4,15 +4,16 @@ $with-steps: 85px
   @extend .ls-clearfix
   position: relative
   margin-left: -15px
+  overflow: hidden
   padding-top: 15px
 
 .ls-steps-nav
   list-style: none
   margin: 0
   counter-reset: steps
-  position: absolute
+  position: fixed
   top: 10px
-  left: 30px
+  left: 15px
   z-index: 11
   width: $with-steps
 
@@ -179,7 +180,7 @@ $with-steps: 85px
 
 @media screen and (min-width: $screen-sm)
 
-  $with-steps: 250px
+  $with-steps: 235px
 
   .ls-steps-nav
     width: $with-steps

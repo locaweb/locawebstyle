@@ -8,7 +8,8 @@ locastyle.steps = (function() {
       moduleActive: '.ls-actived [data-ls-module="steps"]',
       nav: '.ls-steps-nav',
       button: '.ls-steps-btn',
-      container: '.ls-steps-content'
+      container: '.ls-steps-content',
+      parent: '.ls-steps'
     },
     status: {
       active: 'ls-active',
@@ -26,30 +27,33 @@ locastyle.steps = (function() {
   function init() {
     unbind();
     createArrow();
-    stepsAffix();
+    ariaSteps();
+    addAriaLabel();
     addActivedNav();
+    scrollStep();
+    stepFloating();
     bindClickOnTriggers();
     nextStep();
     prevStep();
-    ariaSteps();
-    addAriaLabel();
   }
 
   // Always visible navigation when the page scrolls
-  function stepsAffix() {
-    var $steps   = $(config.selectors.nav);
-    var offset    = $steps.offset();
-    var marginTop = 20;
+  function stepFloating() {
+    var $heightStep = $(config.selectors.parent).height();
+    var $heightNav  = $(config.selectors.nav).height();
+    var $scroll = $(window).scrollTop()
+
+    if ($scroll < parseInt($heightStep - $heightNav)) {
+      $(config.selectors.nav).removeClass('ls-position-absolute');
+    } else {
+      $(config.selectors.nav).addClass('ls-position-absolute');
+    }
+  }
+
+  // When scroll steps
+  function scrollStep(){
     $(window).scroll(function() {
-     if ($(window).scrollTop() > offset.top) {
-       $steps.stop().animate({
-         marginTop: $(window).scrollTop() - offset.top + marginTop
-       });
-     } else {
-       $steps.stop().animate({
-         marginTop: 0
-       });
-     };
+      stepFloating();
     });
   }
 
@@ -94,6 +98,7 @@ locastyle.steps = (function() {
       var $target = $($(this).attr("href") || $(this).data("target"));
       activateStep(this,$target);
       deactivateStep(this,$target);
+      anchorSteps();
     });
   }
 
@@ -120,6 +125,7 @@ locastyle.steps = (function() {
       var $target = $($el.attr("href") || $el.data("target"));
       activateStep($el, $target);
       deactivateStep($el, $target);
+      anchorSteps();
     });
   }
 
@@ -131,6 +137,7 @@ locastyle.steps = (function() {
       var $target = $($el.attr("href") || $el.data("target"));
       activateStep($el, $target);
       deactivateStep($el, $target);
+      anchorSteps();
     });
   }
 
@@ -150,9 +157,15 @@ locastyle.steps = (function() {
     $(config.selectors.container).attr({ 'aria-hidden' : true, 'role' : 'tabpanel' });
   }
 
-  // Create arrow
+  // Create arrow on the navigation
   function createArrow() {
     $('.ls-steps-nav li').prepend('<span class="ls-steps-arrow" />');
+  }
+
+  // Create scrollTop when to click
+  function anchorSteps() {
+    $('html, body').stop().animate({scrollTop: $('.ls-steps').offset().top}, 300);
+    scrollStep();
   }
 
   return {
