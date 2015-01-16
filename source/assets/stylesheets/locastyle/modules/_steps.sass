@@ -171,8 +171,11 @@ $with-steps: 85px
   .ls-actions-btn
     overflow: hidden
 
-    [class*="ls-btn-"]
-      float: right
+    [class*="ls-btn"]
+      float: left
+
+      &[data-action="next"]
+        float: right
 
 @media screen and (min-width: $screen-sm)
 
