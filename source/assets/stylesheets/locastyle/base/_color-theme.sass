@@ -314,6 +314,44 @@
     .ls-word-dotted
       border-color: $color2
 
+    ////
+    // Steps
+    ////
+    .ls-steps-nav
+
+      .ls-actived
+
+        &:before
+          border-color: $color1
+
+        .ls-steps-btn
+          color: $color1
+
+          &:before
+            border-color: $color1
+            background: $color1
+            color: #fff
+
+          &:after
+            color: mix(#fff, $color1, 50%)
+
+        &.ls-active
+          .ls-steps-btn:before
+            background: #fff
+            color: $color1
+
+      .ls-active
+        .ls-steps-btn
+
+          &:before
+            border-color: $color1
+
+          &:before,
+          &:after
+            color: $color1
+
+    .ls-steps-arrow:before
+      background: $color1
 
     ////
     // Tabs Button
