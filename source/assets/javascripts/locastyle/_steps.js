@@ -32,6 +32,7 @@ locastyle.steps = (function() {
     addActivedNav();
     scrollStep();
     stepFloating();
+    stepsAffix();
     bindClickOnTriggers();
     nextStep();
     prevStep();
@@ -41,12 +42,19 @@ locastyle.steps = (function() {
   function stepFloating() {
     var $heightStep = $(config.selectors.parent).height();
     var $heightNav  = $(config.selectors.nav).height();
-    var $scroll = $(window).scrollTop()
+    var $scroll = parseInt($(window).scrollTop() - $heightNav)
 
-    if ($scroll < parseInt($heightStep - $heightNav)) {
-      $(config.selectors.nav).removeClass('ls-position-absolute');
+    var $areaStep = parseInt($heightStep + ($heightNav * 2));
+    console.log($scroll);
+    console.log($areaStep);
+    // console.log($scroll - $heightNav)
+    // console.log(parseInt($heightStep + ($heightNav * 2)))
+
+    if ($scroll => $areaStep)) {
+      // $(config.selectors.nav).removeClass('ls-position-absolute');
+
     } else {
-      $(config.selectors.nav).addClass('ls-position-absolute');
+      // $(config.selectors.nav).addClass('ls-position-absolute');
     }
   }
 
@@ -54,6 +62,25 @@ locastyle.steps = (function() {
   function scrollStep(){
     $(window).scroll(function() {
       stepFloating();
+    });
+  }
+
+
+
+  function stepsAffix() {
+    var $steps   = $(config.selectors.nav);
+    var offset    = $steps.offset();
+    var marginTop = 20;
+    $(window).scroll(function() {
+     if ($(window).scrollTop() > offset.top) {
+       $steps.stop().animate({
+         marginTop: $(window).scrollTop() - offset.top + marginTop
+       });
+     } else {
+       $steps.stop().animate({
+         marginTop: 0
+       });
+     };
     });
   }
 

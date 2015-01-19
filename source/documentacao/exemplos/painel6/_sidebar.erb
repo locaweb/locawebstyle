@@ -1,0 +1,37 @@
+<div data-ls-module="dropdown" class="ls-dropdown ls-user-account ls-active">
+  <a href="#" class="ls-ico-user">
+    <span class="ls-name">João</span>
+    (fmolina)</small>
+  </a>
+  <nav class="ls-dropdown-nav ls-user-menu">
+    <ul>
+      <li><a href="#">Meus dados</a></li>
+      <li><a href="#">Faturas</a></li>
+      <li><a href="#">Planos</a></li>
+     </ul>
+     <a href="#" class="ls-btn-logout">Sair</a>
+  </nav>
+</div>
+
+<div class="ls-sidebar-inner">
+  <% if current_page.data.pre_panel %>
+    <h1 class="ls-brand-name ls-ico-earth"><%= link_to current_page.data.title_product, '../home' %></h1>
+    <nav class="ls-menu">
+      <ul>
+         <li><a href="<%= base_url %>/documentacao/exemplos/painel6/pre-painel" class="ls-ico-earth">Sites</a></li>
+         <li><a href="<%= base_url %>/documentacao/exemplos/painel6/clients" class="ls-ico-users">Consumo</a></li>
+         <li><a href="<%= base_url %>/documentacao/exemplos/painel6/stats" class="ls-ico-stats">Histórico</a></li>
+      </ul>
+    </nav>
+  <% else %>
+    <a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/pre-painel"  class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
+
+    <nav class="ls-menu">
+      <ul>
+         <li><a href="<%= base_url %>/documentacao/exemplos/painel6/home" class="ls-ico-dashboard">Dashboard</a></li>
+      </ul>
+    </nav>
+
+  <% end %>
+
+</div>

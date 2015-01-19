@@ -11,7 +11,7 @@ $with-steps: 85px
   list-style: none
   margin: 0
   counter-reset: steps
-  position: fixed
+  position: absolute
   top: 10px
   left: 15px
   z-index: 11
@@ -183,13 +183,13 @@ $with-steps: 85px
 
 @media screen and (min-width: $screen-sm)
 
-  $with-steps: 235px
+  $with-steps: 250px
 
   .ls-steps-nav
     width: $with-steps
 
   .ls-steps-main
-    margin-left: $with-steps
+    margin-left: 235px
     padding-left: 25px
 
   .ls-steps-arrow
