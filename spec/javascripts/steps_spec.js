@@ -9,9 +9,8 @@ describe("Steps: ", function(){
       var label = $('#list1 .ls-steps-btn').attr('aria-label');
       expect($('.ls-steps-btn').attr('aria-label')).toBe(label);
     });
-  });
 
-  describe("when loading page", function(){
+
     it("Don't have class ls-active on the navigation", function(){
       setTimeout(function(){
         expect($('#step1a').hasClass('ls-active')).toBe(true);
