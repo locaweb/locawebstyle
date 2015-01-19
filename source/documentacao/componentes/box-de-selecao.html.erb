@@ -1,0 +1,57 @@
+---
+title: Box de Seleção
+description: Elemento para ser utilizado em formulários ou páginas de cadastro, inclusão ou administração de itens. Ótimo para visualizar as opções disponíveis, se não forem muitas.
+type: component
+---
+
+<%= partial 'partials/doc-menu-components'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>usar?</strong></h2>
+        <p>- Há necessidade de escolher um item, entre vários disponíveis.</p>
+        <p>- Há necessidade de exibir todas as opções de uma vez, sem priorizar alguma delas.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="ls-box">
+        <h2 class="ls-title-5">Quando <strong>não</strong> usar?</h2>
+        <p>- Há necessidade de exibir muitas opções.</p>
+        <p>- As opções são textos muito longos.</p>
+        <br><br><br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <p>Os botões podem ter ou não <code>&lt;input&gt;</code> dentro dele.</p>
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+    <div class="ls-box">
+      <%= partial 'documentacao/shared/box-de-selecao/box-selecao' %>
+    </div>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="340" height="200" src="<%= base_url %>/documentacao/shared/box-de-selecao/box-selecao-mobile" frameborder="0"></iframe>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/box-de-selecao/box-selecao' %><% end %>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+    <%= partial 'documentacao/shared/box-de-selecao/box-selecao-icon' %>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="340" height="200" src="<%= base_url %>/documentacao/shared/box-de-selecao/box-selecao-icon-mobile" frameborder="0"></iframe>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/box-de-selecao/box-selecao-icon' %><% end %>
+
+</section>

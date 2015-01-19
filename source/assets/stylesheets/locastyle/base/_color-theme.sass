@@ -142,6 +142,10 @@
       &.ls-disabled:focus
         background-color: $color1
 
+    .ls-tabs-button-nav .ls-active
+      [class*="ls-btn"]
+        background-color: $gray2
+
     ////
     // Collpase
     ////
@@ -348,6 +352,39 @@
 
     .ls-steps-arrow:before
       background: $color1
+
+    ////
+    // Tabs Button
+    ////
+    .ls-tabs-btn-nav
+
+      %tabs-btn-active
+        background: mix(#fff, $color1, 90%)
+        border-color: mix(#fff, $color1, 50%)
+        color: $color1
+
+      .ls-active
+
+        [class*="ls-btn"]
+          @extend %tabs-btn-active
+
+          &:before
+            +arrow-down(mix(#fff, $color1, 50%),8px)
+            position: absolute
+            top: auto
+            margin-left: -8px
+
+          &:after
+            +arrow-down(mix(#fff, $color1, 90%),6px)
+            position: absolute
+            top: auto
+            margin-left: -6px
+
+      [class*="ls-btn"]
+        &:focus,
+        &:hover,
+        &:active
+          @extend %tabs-btn-active
 
 
 @each $theme-name, $colors in $themes-colors

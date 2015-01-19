@@ -34,3 +34,4 @@
 //= require locastyle/_browser-unsupported-bar
 //= require locastyle/_track-events
 //= require locastyle/_steps
+//= require locastyle/_tabs-button
