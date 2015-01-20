@@ -42,7 +42,7 @@ $with-steps: 85px
       height: 100%
       left: 16px
       position: absolute
-      top: 22px
+      top: 24px
       z-index: 1
 
 .ls-steps-btn
@@ -50,17 +50,15 @@ $with-steps: 85px
   border: none
   cursor: none
   display: inline-block
-  font-size: remtopx(.875)
+  font-family: Open Sans, Arial, Helvetica, Sans-serif
+  font-size: remtopx(1.125)
+  font-weight: 300
   color: $gray2
   padding-right: 5px
-  padding-bottom: 3px
+  padding-top: 1px
   pointer-events: none
   position: relative
   z-index: 2
-
-  &:before
-    font-family: Open Sans, Arial, Helvetica, Sans-serif
-    font-size: remtopx(1.125)
 
   .ls-active &,
   .ls-actived &
@@ -84,6 +82,7 @@ $with-steps: 85px
     &:before
       content: "\e63d"
       font-family: 'locastyle'
+      font-size: remtopx(1)
 
 
   &:hover,
@@ -95,7 +94,9 @@ $with-steps: 85px
 
   &:before
     content: counters(steps, "") " "
-    font-size: remtopx(.875)
+    font-family: Open Sans, Arial, Helvetica, Sans-serif
+    font-size: remtopx(1.375)
+    font-weight: 300
     border: 2px solid $gray2
     background: #fff
     border-radius: 50%
