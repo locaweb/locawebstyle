@@ -41,7 +41,6 @@ locastyle.steps = (function() {
   function stepsAffix() {
     var $steps   = $(config.selectors.nav);
     var offset    = $steps.offset();
-    var marginTop = 20;
     var $heightStep = $(config.selectors.parent).height();
     var $heightNav  = $(config.selectors.nav).height();
     var $areaStep = parseInt($heightStep + ($heightNav * 2));
