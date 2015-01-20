@@ -48,7 +48,7 @@ locastyle.steps = (function() {
 
     $(window).scroll(function() {
      if ($(window).scrollTop() > offset.top ){
-        var $scroll = parseInt($(window).scrollTop() - $heightNav)
+        var $scroll = parseInt($(window).scrollTop() - $heightNav);
         $steps.stop().animate({
          marginTop: $(window).scrollTop() - offset.top + marginTop
         });
@@ -174,7 +174,6 @@ locastyle.steps = (function() {
   // Create scrollTop when to click
   function anchorSteps() {
     $('html, body').stop().animate({scrollTop: $('.ls-steps').offset().top}, 300);
-    stepsAffix();
   }
 
   return {
