@@ -9,7 +9,8 @@ locastyle.steps = (function() {
       nav: '.ls-steps-nav',
       button: '.ls-steps-btn',
       container: '.ls-steps-content',
-      parent: '.ls-steps'
+      parent: '.ls-steps',
+      moduleVisible: '.ls-steps-content:visible'
     },
     status: {
       active: 'ls-active',
@@ -30,7 +31,6 @@ locastyle.steps = (function() {
     ariaSteps();
     addAriaLabel();
     addActivedNav();
-    stepsAffix();
     bindClickOnTriggers();
     nextStep();
     prevStep();
@@ -38,21 +38,21 @@ locastyle.steps = (function() {
 
 
   // Always visible navigation when the page scrolls
-  function stepsAffix() {
+  function stepsAffix(elemVisible) {
     var $steps   = $(config.selectors.nav);
     var offset    = $steps.offset();
-    var $heightStep = $(config.selectors.parent).height();
     var $heightNav  = $(config.selectors.nav).height();
-    var $areaStep = parseInt($heightStep + ($heightNav * 2));
+    var $areaStep = parseInt(elemVisible + ($heightNav * 2));
 
     $(window).scroll(function() {
      if ($(window).scrollTop() > offset.top ){
         var $scroll = parseInt($(window).scrollTop() - $heightNav);
+
         $steps.stop().animate({
          marginTop: $(window).scrollTop() - offset.top + 75
         });
 
-        if($scroll >= $areaStep ) {
+        if($scroll + $heightNav >= elemVisible ) {
           $steps.stop().animate({
            marginTop: 0
          });
@@ -82,6 +82,8 @@ locastyle.steps = (function() {
       index = parseInt(index + 1);
       $(config.selectors.nav).find('li:lt(' + index + ')').addClass(config.status.actived);
     }
+    var heightStepVisible = $(config.selectors.moduleVisible).height();
+    stepsAffix(heightStepVisible);
   }
 
   // Check what the order of the activated button
@@ -173,6 +175,8 @@ locastyle.steps = (function() {
   // Create scrollTop when to click
   function anchorSteps() {
     $('html, body').stop().animate({scrollTop: $('.ls-steps').offset().top - 60}, 300);
+    var heightStepVisible = $(config.selectors.moduleVisible).height();
+    stepsAffix(heightStepVisible);
   }
 
   return {
