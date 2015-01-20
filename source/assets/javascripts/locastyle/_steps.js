@@ -50,7 +50,7 @@ locastyle.steps = (function() {
      if ($(window).scrollTop() > offset.top ){
         var $scroll = parseInt($(window).scrollTop() - $heightNav)
         $steps.stop().animate({
-         marginTop: $(window).scrollTop() - offset.top + $heightNav / 2
+         marginTop: $(window).scrollTop() - offset.top + marginTop
         });
 
         if($scroll >= $areaStep ) {
