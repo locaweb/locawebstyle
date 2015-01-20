@@ -30,52 +30,34 @@ locastyle.steps = (function() {
     ariaSteps();
     addAriaLabel();
     addActivedNav();
-    scrollStep();
-    stepFloating();
     stepsAffix();
     bindClickOnTriggers();
     nextStep();
     prevStep();
   }
 
+
   // Always visible navigation when the page scrolls
-  function stepFloating() {
-    var $heightStep = $(config.selectors.parent).height();
-    var $heightNav  = $(config.selectors.nav).height();
-    var $scroll = parseInt($(window).scrollTop() - $heightNav)
-
-    var $areaStep = parseInt($heightStep + ($heightNav * 2));
-    console.log($scroll);
-    console.log($areaStep);
-    // console.log($scroll - $heightNav)
-    // console.log(parseInt($heightStep + ($heightNav * 2)))
-
-    if ($scroll => $areaStep)) {
-      // $(config.selectors.nav).removeClass('ls-position-absolute');
-
-    } else {
-      // $(config.selectors.nav).addClass('ls-position-absolute');
-    }
-  }
-
-  // When scroll steps
-  function scrollStep(){
-    $(window).scroll(function() {
-      stepFloating();
-    });
-  }
-
-
-
   function stepsAffix() {
     var $steps   = $(config.selectors.nav);
     var offset    = $steps.offset();
     var marginTop = 20;
+    var $heightStep = $(config.selectors.parent).height();
+    var $heightNav  = $(config.selectors.nav).height();
+    var $areaStep = parseInt($heightStep + ($heightNav * 2));
+
     $(window).scroll(function() {
-     if ($(window).scrollTop() > offset.top) {
-       $steps.stop().animate({
-         marginTop: $(window).scrollTop() - offset.top + marginTop
-       });
+     if ($(window).scrollTop() > offset.top ){
+        var $scroll = parseInt($(window).scrollTop() - $heightNav)
+        $steps.stop().animate({
+         marginTop: $(window).scrollTop() - offset.top + $heightNav / 2
+        });
+
+        if($scroll >= $areaStep ) {
+          $steps.stop().animate({
+           marginTop: 0
+         });
+        }
      } else {
        $steps.stop().animate({
          marginTop: 0
@@ -192,7 +174,7 @@ locastyle.steps = (function() {
   // Create scrollTop when to click
   function anchorSteps() {
     $('html, body').stop().animate({scrollTop: $('.ls-steps').offset().top}, 300);
-    scrollStep();
+    stepsAffix();
   }
 
   return {
