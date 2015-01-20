@@ -1,0 +1,202 @@
+$with-steps: 85px
+
+.ls-steps
+  @extend .ls-clearfix
+  position: relative
+  margin: 15px 0 15px -15px
+  overflow: hidden
+  padding-top: 15px
+
+.ls-steps-nav
+  list-style: none
+  margin: 0
+  counter-reset: steps
+  position: absolute
+  top: 10px
+  left: 15px
+  z-index: 11
+  width: $with-steps
+
+  &:before
+    content: ""
+    border-right: 1px solid $gray2
+    position: absolute
+    height: 100%
+    right: 29px
+    top: 0
+
+  li
+    counter-increment: steps
+    padding-bottom: 20px
+    position: relative
+
+    &:last-child
+      padding-bottom: 0
+
+      &:before
+        display: none
+
+    &:before
+      content: ""
+      border-left: 3px dotted $gray2
+      height: 100%
+      left: 16px
+      position: absolute
+      top: 24px
+      z-index: 1
+
+.ls-steps-btn
+  background: #fff
+  border: none
+  cursor: none
+  display: inline-block
+  font-family: Open Sans, Arial, Helvetica, Sans-serif
+  font-size: remtopx(1.125)
+  font-weight: 300
+  color: $gray2
+  padding-right: 5px
+  padding-top: 1px
+  pointer-events: none
+  position: relative
+  z-index: 2
+
+  .ls-active &,
+  .ls-actived &
+    cursor: pointer
+    pointer-events: initial
+
+    &:before
+      border: 2px solid $gray3
+      color: #fff
+
+    &:after
+      color: $gray3
+
+  .ls-active &
+
+    &:before
+      color: $gray3
+
+  .ls-actived:not(.ls-active) &
+
+    &:before
+      content: "\e63d"
+      font-family: 'locastyle'
+      font-size: remtopx(1)
+
+
+  &:hover,
+  &:focus,
+  &:active
+
+    &:after
+      opacity: .7
+
+  &:before
+    content: counters(steps, "") " "
+    font-family: Open Sans, Arial, Helvetica, Sans-serif
+    font-size: remtopx(1.375)
+    font-weight: 300
+    border: 2px solid $gray2
+    background: #fff
+    border-radius: 50%
+    display: inline-block
+    height: 35px
+    line-height: 31px
+    vertical-align: middle
+    text-align: center
+    width: 35px
+
+  &:after
+    content: attr(aria-label)
+    position: absolute
+    top: -999999px
+
+.ls-steps-arrow
+  +single-transition(all, .25s, linear)
+  border-left: 12px solid $gray2
+  border-top: 12px solid transparent
+  border-bottom: 12px solid transparent
+  display: none
+  height: 0
+  width: 0
+  position: absolute
+  top: 6px
+  right: 18px
+
+  &:before,
+  &:after
+    content: ""
+    display: block
+    left: -1px
+    position: absolute
+
+
+  &:before
+    background: $gray3
+    border-radius: 50%
+    position: absolute
+    left: -12px
+    top: -12px
+    margin-top: 10px
+    height: 4px
+    width: 4px
+    z-index: 2
+
+  &:after
+    border-left: 10px solid #fff
+    border-top: 10px solid transparent
+    border-bottom: 10px solid transparent
+    top: -10px
+    left: -12px
+    height: 0
+    width: 0
+    z-index: 1
+
+.ls-steps-main
+  border-left: 1px solid $gray2
+  position: relative
+  margin-left: 70px
+  padding-left: 15px
+  padding-right: 15px
+
+.ls-steps-content
+  position: relative
+  display: none
+  z-index: -1
+
+  &.ls-active
+    display: block
+    z-index: 99
+
+  .ls-actions-btn
+    overflow: hidden
+
+    [class*="ls-btn"]
+      float: left
+
+      &[data-action="next"]
+        float: right
+
+@media screen and (min-width: $screen-sm)
+
+  $with-steps: 250px
+
+  .ls-steps-nav
+    left: 15px
+    width: $with-steps
+
+  .ls-steps-main
+    margin-left: 235px
+    padding-left: 25px
+
+  .ls-steps-arrow
+    .ls-active &
+      display: block
+
+  .ls-steps-btn
+
+    &:after
+      position: relative
+      top: 0
+      margin-left: 10px

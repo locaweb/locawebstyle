@@ -24,13 +24,17 @@
   @extend .ls-clearfix
 
   b,
-  label
+  label,
+  .ls-label-text
     display: block
     color: $gray4
     font-weight: bold
     line-height: $input-height/2 * 1.2
     font-size: remtopx(.875)
     margin-right: 5px
+
+    + p
+      color: $gray3
 
   b ~ label
     font-weight: normal
@@ -307,6 +311,15 @@ input.ls-form-text,
   background-color: lighten($gray3, 45%)
   border: 1px solid $gray2
   border-radius: $default-radius 0 0 $default-radius
+
+  &.ls-bg-white
+    color: $gray5
+    font-weight: bold
+
+    &:hover,
+    &:focus
+      background: $gray2 !important
+
 
 .ls-label-text-prefix + input
   border-left: none

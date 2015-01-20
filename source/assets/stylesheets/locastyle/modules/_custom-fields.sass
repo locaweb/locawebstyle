@@ -9,6 +9,8 @@
   border-radius: $default-radius
   overflow: hidden
   vertical-align: middle
+  padding-right: 55px
+  width: 98%
 
   .ls-form-horizontal .ls-label &
     display: block
@@ -24,7 +26,7 @@
     -moz-appearance: none
     appearance: none
     height: 31px
-    padding: 5px 35px 5px 10px
+    padding: 5px 45px 5px 10px
     display: inline-block
     border: none
     background: #fff
@@ -51,9 +53,18 @@
     position: absolute
     top: 50%
     margin-top: -2px
-    right: 15px
+    right: 10px
     z-index: 2
     pointer-events: none
+
+  &:after
+    content: ""
+    height: 31px
+    position: absolute
+    border-left: 1px solid $gray2
+    right: 30px
+    top: 0
+    z-index: 1
 
   &.ls-field-lg
     height: $input-lg-height
@@ -82,3 +93,7 @@
     select
       height: $input-xs-height
       font-size: remtopx(.75)
+
+@media screen and (min-width: $screen-sm)
+  .ls-custom-select
+    padding-right: 0

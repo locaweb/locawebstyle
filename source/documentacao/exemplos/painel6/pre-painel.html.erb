@@ -1,0 +1,275 @@
+---
+title: Configurar Site
+layout: panel
+show_topbar_title: true
+pre_panel: true
+theme_name: ls-theme-blue
+panel: painel6
+title_product: Backup de sites
+---
+
+
+<h1 class="ls-title-intro ls-ico-earth">Configurar sites</h1>
+<p>Garanta rotinas de backup automatizadas e eficientes. Personalize o backup selecionando frequência e origem dos arquivos.</p>
+
+
+<div class="ls-steps">
+  <ol class="ls-steps-nav">
+    <li class="ls-active">
+      <button class="ls-steps-btn" data-ls-module="steps" data-target="#step1">Identificação</button>
+    </li>
+    <li>
+      <button class="ls-steps-btn" data-ls-module="steps" data-target="#step2">Rotina</button>
+    </li>
+    <li>
+      <button class="ls-steps-btn" data-ls-module="steps" data-target="#step3">Origem</button>
+    </li>
+  </ol>
+  <div class="ls-steps-main">
+    <div class="ls-steps-content" id="step1">
+      <h2 class="ls-title-3">Identificação</h2>
+      <form action="" >
+        <fieldset class="ls-form row">
+          <label class="ls-label col-md-8 col-sm-9">
+            <b class="ls-label-text">Endereço do site</b>
+            <p>Informe um domínio de referência para identificação do site</p>
+            <input type="text" placeholder="Ex.: dominio.com.br" >
+          </label>
+          <label class="ls-label col-md-12">
+            <b class="ls-label-text">Descrição</b>
+            <p>Adicione descrição ao novo site.</p>
+            <input type="text" name="email" placeholder="opcional">
+          </label>
+        </fieldset>
+        <div class="ls-actions-btn">
+          <a href="#" class="ls-btn-primary ls-float-right" data-action="next">Próximo</a>
+        </div>
+      </form>
+    </div>
+    <div class="ls-steps-content" id="step2">
+      <h2 class="ls-title-3">Rotina</h2>
+
+
+        <div class="ls-tabs-btn">
+          <ul class="ls-tabs-btn-nav">
+            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-12 ls-active"><button class="ls-btn" data-ls-module="button" data-target="#tab1a"><span class="ls-ico-hours">Diária</span></button></li>
+            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-12"><button class="ls-btn" data-ls-module="button" data-target="#tab2a"><span class="ls-ico-week">Semanal</span></button></li>
+            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-12"><button class="ls-btn" data-ls-module="button" data-target="#tab3a"><span class="ls-ico-month">Mensal</span></button></li>
+            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-12"><button class="ls-btn" data-ls-module="button" data-target="#tab4a"><span class="ls-ico-target">Manual</span></button></li>
+          </ul>
+
+          <div class="ls-tabs-container">
+            <div id="tab1a" class="ls-tab-content ls-active">
+              <form action="">
+                <fieldset class="ls-form row">
+                  <label class="ls-label col-md-8 col-sm-12">
+                    <b class="ls-label-text">Período</b>
+                    <div class="ls-custom-select">
+                      <select class="ls-select">
+                        <option value="">Madrugada - 00h-00 até 06h00</option>
+                        <option value="">Manhã - 06h00 até 12h00</option>
+                        <option value="">Tarde - 12h00 até 18h00</option>
+                        <option value="">Noite - 18h00 até 00h00</option>
+                      </select>
+                    </div>
+                  </label>
+                  <label class="ls-label col-md-12 col-sm-12">
+                    <b class="ls-label-text">Maximo de backups armazenados</b>
+                    <div class="row">
+                      <div class="ls-prefix-group col-md-4 col-sm-8 col-lg-3">
+                        <a href="" class="ls-label-text-prefix ls-bg-white">-</a>
+                        <input type="text" value="8" class="ls-txt-center">
+                        <a href="" class="ls-label-text-prefix ls-bg-white">+</a>
+                      </div>
+                    </div>
+                  </label>
+                </fieldset>
+              </form>
+            </div>
+            <div id="tab2a" class="ls-tab-content">
+              <fieldset class="ls-form-horizontal row">
+                <label class="ls-label col-md-12 col-sm-5 col-lg-5">
+                  <b class="ls-label-text">Dia da semana</b>
+                  <div class="ls-custom-select">
+                    <select class="ls-select">
+                      <option value="">Segunda-feira</option>
+                      <option value="">Terça-feira</option>
+                      <option value="">Quarta-feira</option>
+                      <option value="">Quinta-feira</option>
+                      <option value="">Sexta-feira</option>
+                      <option value="">Sábado</option>
+                      <option value="">Domingo</option>
+                    </select>
+                  </div>
+                </label>
+                <label class="ls-label col-md-12 col-sm-7 col-lg-7">
+                  <b class="ls-label-text">Período</b>
+                  <div class="ls-custom-select">
+                    <select class="ls-select">
+                      <option value="">Madrugada - 00h-00 até 06h00</option>
+                      <option value="">Manhã - 06h00 até 12h00</option>
+                      <option value="">Tarde - 12h00 até 18h00</option>
+                      <option value="">Noite - 18h00 até 00h00</option>
+                    </select>
+                  </div>
+                </label>
+                <label class="ls-label col-md-12 col-sm-12">
+                  <b class="ls-label-text">Maximo de backups armazenados</b>
+                  <div class="row">
+                    <div class="ls-prefix-group col-md-4 col-sm-8 col-lg-3">
+                      <a href="" class="ls-label-text-prefix ls-bg-white">-</a>
+                      <input type="text" value="8" class="ls-txt-center">
+                      <a href="" class="ls-label-text-prefix ls-bg-white">+</a>
+                    </div>
+                  </div>
+                </label>
+              </fieldset>
+            </div>
+            <div id="tab3a" class="ls-tab-content">
+              <fieldset class="ls-form-horizontal row">
+                <label class="ls-label col-md-4 col-sm-4">
+                  <b class="ls-label-text">Dia do mês</b>
+                  <div class="ls-custom-select">
+                    <select class="ls-select">
+                      <option value="">01</option>
+                      <option value="">02</option>
+                      <option value="">03</option>
+                      <option value="">04</option>
+                      <option value="">05</option>
+                      <option value="">06</option>
+                      <option value="">07</option>
+                      <option value="">08</option>
+                      <option value="">09</option>
+                      <option value="">10</option>
+                    </select>
+                  </div>
+                </label>
+                <label class="ls-label col-md-8 col-sm-8">
+                  <b class="ls-label-text">Período</b>
+                  <div class="ls-custom-select">
+                    <select class="ls-select">
+                      <option value="">Madrugada - 00h-00 até 06h00</option>
+                      <option value="">Manhã - 06h00 até 12h00</option>
+                      <option value="">Tarde - 12h00 até 18h00</option>
+                      <option value="">Noite - 18h00 até 00h00</option>
+                    </select>
+                  </div>
+                </label>
+                <label class="ls-label col-md-12 col-sm-12">
+                  <b class="ls-label-text">Maximo de backups armazenados</b>
+                  <div class="row">
+                    <div class="ls-prefix-group col-md-4 col-sm-8 col-lg-3">
+                      <a href="" class="ls-label-text-prefix ls-bg-white">-</a>
+                      <input type="text" value="8" class="ls-txt-center">
+                      <a href="" class="ls-label-text-prefix ls-bg-white">+</a>
+                    </div>
+                  </div>
+                </label>
+              </fieldset>
+            </div>
+            <div id="tab4a" class="ls-tab-content">
+              <p>Execute backups <strong>em intervalos de sua preferência.</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ls-actions-btn">
+          <a href="#" class="ls-btn" data-action="prev">Anterior</a>
+          <a href="#" class="ls-btn-primary ls-float-right" data-action="next">Próximo</a>
+        </div>
+    </div>
+    <div class="ls-steps-content" id="step3">
+      <h2 class="ls-title-3">Origem</h2>
+      <p>Preencha abaixo as informações de acesso ao banco de dados:</p>
+      <div class="ls-box">
+        <h3 class="ls-title-5">Origem 1</h3>
+        <div class="ls-tabs-btn">
+          <ul class="ls-tabs-btn-nav">
+            <li class="col-md-2 col-xs-12 ls-active"><button class="ls-btn" data-ls-module="button" data-target="#tab1"><span class="ls-ico-mysql">MySQL</span></button></li>
+          </ul>
+          <div class="ls-tabs-container">
+            <div id="tab1" class="ls-tab-content ls-active">
+              <form action="">
+                <fieldset class="ls-form-horizontal row">
+                  <label class="ls-label col-md-6">
+                    <b class="ls-label-text">Endereço (Host)</b>
+                    <input type="text">
+                  </label>
+                  <label class="ls-label col-md-6">
+                    <b class="ls-label-text">Nome do Banco de Dados</b>
+                    <input type="text">
+                  </label>
+                  <label class="ls-label col-md-5">
+                    <b class="ls-label-text">Usuário</b>
+                    <input type="text">
+                  </label>
+                  <label class="ls-label col-md-5">
+                    <b class="ls-label-text">Senha</b>
+                    <input type="password">
+                  </label>
+                  <label class="ls-label col-md-2">
+                    <b class="ls-label-text">Porta</b>
+                    <input type="text">
+                  </label>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inicio do Exemplo de caixa clonada -->
+      <div class="ls-box ls-dismissable">
+        <span class="ls-dismiss" data-ls-module="dismiss">&times;</span>
+        <h3 class="ls-title-5">Origem 2</h3>
+        <div class="ls-tabs-btn">
+          <ul class="ls-tabs-btn-nav">
+            <li class="col-md-2 col-xs-12 ls-active"><button class="ls-btn" data-ls-module="button" data-target="#tab11"><span class="ls-ico-mysql">MySQL</span></button></li>
+          </ul>
+          <div class="ls-tabs-container">
+            <div id="tab11" class="ls-tab-content ls-active">
+              <form action="">
+                <fieldset class="ls-form-horizontal row">
+                  <label class="ls-label col-md-6">
+                    <b class="ls-label-text">Endereço (Host)</b>
+                    <input type="text">
+                  </label>
+                  <label class="ls-label col-md-6">
+                    <b class="ls-label-text">Nome do Banco de Dados</b>
+                    <input type="text">
+                  </label>
+                  <label class="ls-label col-md-5">
+                    <b class="ls-label-text">Usuário</b>
+                    <input type="text">
+                  </label>
+                  <label class="ls-label col-md-5">
+                    <b class="ls-label-text">Senha</b>
+                    <input type="password">
+                  </label>
+                  <label class="ls-label col-md-2">
+                    <b class="ls-label-text">Porta</b>
+                    <input type="text">
+                  </label>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim do Exemplo de caixa clonada -->
+
+      <p class="ls-txt-right"><a class="ls-btn">Adicionar nova origem</a></p>
+
+
+      <div class="ls-actions-btn">
+        <a href="#" class="ls-btn" data-action="prev">Anterior</a>
+        <a href="#" class="ls-btn-primary ls-float-right" data-action="next">Configurar site</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel6/sidebar' %>
+<% end %>

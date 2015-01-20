@@ -6,9 +6,9 @@ locastyle.dropdown = (function() {
   var config = {
     area: 'body',
     dropdown: '.ls-dropdown',
-    module: '[data-ls-module=dropdown]',
+    module: '[data-ls-module="dropdown"]',
     button: '[class*="ls-btn"]',
-    firstLink: '[data-ls-module=dropdown] > [class*="ls-btn"]:first-child',
+    firstLink: '[data-ls-module="dropdown"] > [class*="ls-btn"]:first-child, .ls-dropdown.ls-user-account > a:first-child',
     nav: '.ls-dropdown-nav'
   }
 
@@ -43,9 +43,7 @@ locastyle.dropdown = (function() {
   }
 
   function toggleDropdown($target) {
-    if($target.find('config.button:eq(0)').hasClass('ls-disabled')){
-      return false;
-    } else {
+    if(!$target.find('config.button:eq(0)').hasClass('ls-disabled')){
       $target.toggleClass("ls-active");
       $(config.button).attr({ 'aria-expanded' : 'false' });
       $(config.nav).attr({ 'aria-hidden' : 'true' });
@@ -65,7 +63,7 @@ locastyle.dropdown = (function() {
   }
 
   function ariaDropdown(el) {
-    $(config.nav, el).find(config.button).attr({ role : 'option' });
+    $(config.nav, el).find('a').attr({ role : 'option' });
     $(config.button, el).attr({ role : 'combobox' });
 
     if($(el).hasClass('ls-active')){

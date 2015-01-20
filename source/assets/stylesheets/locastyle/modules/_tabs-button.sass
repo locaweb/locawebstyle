@@ -1,0 +1,107 @@
+//
+// Buttons with data-ls-module="button"
+//
+.ls-tabs-btn
+
+  .ls-tabs-btn-nav
+    [class*="ls-btn"]
+      border-color: mix($color-mix, #fff, 20%)
+      color: $gray4
+      display: inline-block
+      font-family: Open Sans, Arial, Helvetica, Sans-serif
+      font-size: remtopx(1)
+      font-weight: 300
+      padding: 12px 15px
+      margin-bottom: 10px
+      position: relative
+      width: 100%
+
+      + [class*="ls-btn"]
+        margin-left: 0
+
+      &:hover,
+      &:focus,
+      &:active
+        background-color: $gray2
+        border-color: mix($color-mix, #fff, 15%)
+
+      input
+        position: absolute
+        left: -20px
+        top: -20px
+
+  .ls-active
+
+    > [class*="ls-btn"]
+      position: relative
+      font-weight: 600
+
+      &:before,
+      &:after
+        left: 50%
+        display: none!important
+
+      &:before
+        +arrow-down(mix($color-mix, #fff, 15%),8px)
+        bottom: -16px
+        position: absolute
+        top: auto
+        margin-left: -8px
+        z-index: 1
+
+
+      &:after
+        +arrow-down($gray2,6px)
+        bottom: -12px
+        position: absolute
+        top: auto
+        margin-left: -6px
+        z-index: 2
+
+      [class*="ls-ico"]
+        &:before,
+        &:after
+          opacity: 1
+
+
+  // with icons
+  [class*="ls-ico"]
+    font-size: remtopx(1)
+
+    &:before,
+    &:after
+      opacity: .5
+      font-size: remtopx(1.5)
+      vertical-align: sub
+
+    &:before
+      margin-right: 5px
+
+    &:after
+      margin-left: 5px
+
+  .ls-tabs-btn-nav
+    list-style: none
+    margin-right: 0
+    margin-left: -5px
+
+    [class*="col-"]
+      padding: 0 5px
+      overflow: hidden
+
+  .ls-tabs-container
+    top: 10px
+
+    .ls-tab-content
+      padding: 0
+      border: none
+      margin-bottom: 0
+
+@media screen and (min-width: $screen-sm)
+  .ls-tabs-btn .ls-active
+
+    [class*="ls-btn"]
+
+      &:before,
+      &:after
+        display: block!important
