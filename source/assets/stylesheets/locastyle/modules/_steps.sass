@@ -3,7 +3,7 @@ $with-steps: 85px
 .ls-steps
   @extend .ls-clearfix
   position: relative
-  margin-left: -15px
+  margin: 15px 0 15px -15px
   overflow: hidden
   padding-top: 15px
 
@@ -11,7 +11,7 @@ $with-steps: 85px
   list-style: none
   margin: 0
   counter-reset: steps
-  position: fixed
+  position: absolute
   top: 10px
   left: 15px
   z-index: 11
@@ -24,10 +24,6 @@ $with-steps: 85px
     height: 100%
     right: 29px
     top: 0
-
-  &.ls-position-absolute
-    left: 30px
-
 
   li
     counter-increment: steps
@@ -46,7 +42,7 @@ $with-steps: 85px
       height: 100%
       left: 16px
       position: absolute
-      top: 22px
+      top: 24px
       z-index: 1
 
 .ls-steps-btn
@@ -54,17 +50,15 @@ $with-steps: 85px
   border: none
   cursor: none
   display: inline-block
-  font-size: remtopx(.875)
+  font-family: Open Sans, Arial, Helvetica, Sans-serif
+  font-size: remtopx(1.125)
+  font-weight: 300
   color: $gray2
   padding-right: 5px
-  padding-bottom: 3px
+  padding-top: 1px
   pointer-events: none
   position: relative
   z-index: 2
-
-  &:before
-    font-family: Open Sans, Arial, Helvetica, Sans-serif
-    font-size: remtopx(1.125)
 
   .ls-active &,
   .ls-actived &
@@ -88,6 +82,7 @@ $with-steps: 85px
     &:before
       content: "\e63d"
       font-family: 'locastyle'
+      font-size: remtopx(1)
 
 
   &:hover,
@@ -99,7 +94,9 @@ $with-steps: 85px
 
   &:before
     content: counters(steps, "") " "
-    font-size: remtopx(.875)
+    font-family: Open Sans, Arial, Helvetica, Sans-serif
+    font-size: remtopx(1.375)
+    font-weight: 300
     border: 2px solid $gray2
     background: #fff
     border-radius: 50%
@@ -159,7 +156,7 @@ $with-steps: 85px
 .ls-steps-main
   border-left: 1px solid $gray2
   position: relative
-  margin-left: $with-steps
+  margin-left: 70px
   padding-left: 15px
   padding-right: 15px
 
@@ -183,13 +180,14 @@ $with-steps: 85px
 
 @media screen and (min-width: $screen-sm)
 
-  $with-steps: 235px
+  $with-steps: 250px
 
   .ls-steps-nav
+    left: 15px
     width: $with-steps
 
   .ls-steps-main
-    margin-left: $with-steps
+    margin-left: 235px
     padding-left: 25px
 
   .ls-steps-arrow

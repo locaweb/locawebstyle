@@ -9,7 +9,8 @@ locastyle.steps = (function() {
       nav: '.ls-steps-nav',
       button: '.ls-steps-btn',
       container: '.ls-steps-content',
-      parent: '.ls-steps'
+      parent: '.ls-steps',
+      moduleVisible: '.ls-steps-content:visible'
     },
     status: {
       active: 'ls-active',
@@ -30,30 +31,37 @@ locastyle.steps = (function() {
     ariaSteps();
     addAriaLabel();
     addActivedNav();
-    scrollStep();
-    stepFloating();
     bindClickOnTriggers();
     nextStep();
     prevStep();
   }
 
+
   // Always visible navigation when the page scrolls
-  function stepFloating() {
-    var $heightStep = $(config.selectors.parent).height();
+  function stepsAffix(elemVisible) {
+    var $steps   = $(config.selectors.nav);
+    var offset    = $steps.offset();
     var $heightNav  = $(config.selectors.nav).height();
-    var $scroll = $(window).scrollTop()
+    var $areaStep = parseInt(elemVisible + ($heightNav * 2));
 
-    if ($scroll < parseInt($heightStep - $heightNav)) {
-      $(config.selectors.nav).removeClass('ls-position-absolute');
-    } else {
-      $(config.selectors.nav).addClass('ls-position-absolute');
-    }
-  }
-
-  // When scroll steps
-  function scrollStep(){
     $(window).scroll(function() {
-      stepFloating();
+     if ($(window).scrollTop() > offset.top ){
+        var $scroll = parseInt($(window).scrollTop() - $heightNav);
+
+        $steps.stop().animate({
+         marginTop: $(window).scrollTop() - offset.top + 75
+        });
+
+        if($scroll + $heightNav >= elemVisible ) {
+          $steps.stop().animate({
+           marginTop: 0
+         });
+        }
+     } else {
+       $steps.stop().animate({
+         marginTop: 0
+       });
+     };
     });
   }
 
@@ -74,6 +82,8 @@ locastyle.steps = (function() {
       index = parseInt(index + 1);
       $(config.selectors.nav).find('li:lt(' + index + ')').addClass(config.status.actived);
     }
+    var heightStepVisible = $(config.selectors.moduleVisible).height();
+    stepsAffix(heightStepVisible);
   }
 
   // Check what the order of the activated button
@@ -164,8 +174,9 @@ locastyle.steps = (function() {
 
   // Create scrollTop when to click
   function anchorSteps() {
-    $('html, body').stop().animate({scrollTop: $('.ls-steps').offset().top}, 300);
-    scrollStep();
+    $('html, body').stop().animate({scrollTop: $('.ls-steps').offset().top - 60}, 300);
+    var heightStepVisible = $(config.selectors.moduleVisible).height();
+    stepsAffix(heightStepVisible);
   }
 
   return {
