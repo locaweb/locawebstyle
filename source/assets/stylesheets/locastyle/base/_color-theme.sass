@@ -368,6 +368,11 @@
         [class*="ls-btn"]
           @extend %tabs-btn-active
 
+          &:focus,
+          &:hover,
+          &:active
+            @extend %tabs-btn-active
+
           &:before
             +arrow-down(mix(#fff, $color1, 50%),8px)
             position: absolute
@@ -380,11 +385,6 @@
             top: auto
             margin-left: -6px
 
-      [class*="ls-btn"]
-        &:focus,
-        &:hover,
-        &:active
-          @extend %tabs-btn-active
 
 
 @each $theme-name, $colors in $themes-colors
