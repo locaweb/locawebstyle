@@ -9,6 +9,7 @@
   border-radius: $default-radius
   overflow: hidden
   vertical-align: middle
+  padding-right: 55px
 
   .ls-form-horizontal .ls-label &
     display: block
@@ -82,3 +83,7 @@
     select
       height: $input-xs-height
       font-size: remtopx(.75)
+
+@media screen and (min-width: $screen-sm)
+  .ls-custom-select
+    padding-right: 0
