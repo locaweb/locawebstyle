@@ -24,13 +24,17 @@
   @extend .ls-clearfix
 
   b,
-  label
+  label,
+  .ls-label-text
     display: block
     color: $gray4
     font-weight: bold
     line-height: $input-height/2 * 1.2
     font-size: remtopx(.875)
     margin-right: 5px
+
+    + p
+      color: $gray3
 
   b ~ label
     font-weight: normal
