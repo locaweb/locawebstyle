@@ -115,6 +115,12 @@
       "path": "documentacao/componentes/botoes"
   },
   
+  "documentacao/componentes/box-de-selecao" :   {
+      "title": "Box de Seleção",
+      "description": "Elemento para ser utilizado em formulários ou páginas de cadastro, inclusão ou administração de itens. Ótimo para visualizar as opções disponíveis, se não forem muitas.",
+      "path": "documentacao/componentes/box-de-selecao"
+  },
+  
   "documentacao/componentes/box-info" :   {
       "title": "Box Informativo",
       "description": "Elemento que pode ser utilizado no dashboard de um painel para exibir informações resumidas, principalmente dados numéricos.",
@@ -173,6 +179,12 @@
       "title": "Filtro de exibição e paginação",
       "description": "Exibição de navegação por páginas e controle de quantidade.",
       "path": "documentacao/componentes/paginacao"
+  },
+  
+  "documentacao/componentes/passo-a-passo" :   {
+      "title": "Passo a passo",
+      "description": "Elemento para ser utilizado quando há necessidade de fragmentar uma tarefa em etapas.",
+      "path": "documentacao/componentes/passo-a-passo"
   },
   
   "documentacao/componentes/popover" :   {
@@ -434,7 +446,7 @@
   },
   
   "documentacao/exemplos/painel3/nameservers" :   {
-      "title": "Servidores de DNS",
+      "title": "Gerenciamento DNS",
       "description": "",
       "path": "documentacao/exemplos/painel3/nameservers"
   },
@@ -443,6 +455,30 @@
       "title": "Pré Painel",
       "description": "",
       "path": "documentacao/exemplos/painel3/pre-painel"
+  },
+  
+  "documentacao/exemplos/painel3/results" :   {
+      "title": "Results",
+      "description": "",
+      "path": "documentacao/exemplos/painel3/results"
+  },
+  
+  "documentacao/exemplos/painel3/transfer-international" :   {
+      "title": "Transferência",
+      "description": "",
+      "path": "documentacao/exemplos/painel3/transfer-international"
+  },
+  
+  "documentacao/exemplos/painel3/transferin" :   {
+      "title": "Transferência de Domínio para a Locaweb",
+      "description": "",
+      "path": "documentacao/exemplos/painel3/transferin"
+  },
+  
+  "documentacao/exemplos/painel3/transferout" :   {
+      "title": "Transferência",
+      "description": "",
+      "path": "documentacao/exemplos/painel3/transferout"
   },
   
   "documentacao/exemplos/painel4/config-favicon" :   {
@@ -521,6 +557,12 @@
       "title": "Página Inicial",
       "description": "",
       "path": "documentacao/exemplos/painel5/pre-painel"
+  },
+  
+  "documentacao/exemplos/painel6/pre-painel" :   {
+      "title": "Configurar Site",
+      "description": "",
+      "path": "documentacao/exemplos/painel6/pre-painel"
   },
   
   "documentacao/exemplos/product-not-hired" :   {
