@@ -102,10 +102,12 @@
   <fieldset>
     <label class="ls-label col-md-3">
       <b class="ls-label-text">Nome</b>
+      <p>Digite seu nome completo</p>
       <input type="text" name="nome" placeholder="Nome e sobrenome" required >
     </label>
     <label class="ls-label col-md-4">
       <b class="ls-label-text">E-mail</b>
+      <p>Seu e-mail particular</p>
       <input type="text" name="email" placeholder="Escreva seu email" required >
     </label>
     <label class="ls-label col-md-5">
@@ -239,14 +241,18 @@
 67
 68
 69
-70</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form row"</span><span class="nt">&gt;</span>
+70
+71
+72</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;fieldset&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Digite seu nome completo<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">required</span> <span class="nt">&gt;</span>
     <span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-4"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>E-mail<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Seu e-mail particular<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Escreva seu email"</span> <span class="na">required</span> <span class="nt">&gt;</span>
     <span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-5"</span><span class="nt">&gt;</span>
@@ -579,30 +585,31 @@
 
 <div class="ls-box-filter">
   <!-- To do this -->
-  <form action="" class="ls-form ls-form-inline ls-float-left">
-    <label class="ls-label">
-      <b class="ls-label-text">Status</b>
-
-      <select class="ls-custom-select" name="">
-        <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
-        <option value="#">Ativos</option>
-        <option value="#">Desativados</option>
-        <option value="#">Bloqueados por bounce</option>
-      </select>
-
-    </label>
-  </form>
-
-  <form class="ls-form ls-form-inline ls-float-right">
-    <label class="ls-label" role="search">
+  <form class="ls-form ls-float-right buffer-inserted">
+    <label class="ls-label ls-no-margin" role="search">
       <b class="ls-label-text ls-hidden-accessible">Nome do cliente</b>
       <input type="text" id="q" name="q" aria-label="Faça sua busca por cliente" accesskey="s" placeholder="Nome do cliente" required="">
     </label>
-    <div class="ls-actions-btn">
-      <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
-    </div>
+    <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
   </form>
+  <form action="" class="ls-form ls-form-inline row">
+    <label class="ls-label col-md-5">
+      <b class="ls-label-text">Status</b>
+
+      <div class="ls-custom-select">
+        <select class="ls-custom" name="">
+          <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Desativados</option>
+          <option value="#">Bloqueados por bounce</option>
+        </select>
+      </div>
+
+    </label>
+  </form>
+
 </div>
+
 
   </div>
   <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
@@ -660,7 +667,8 @@
 53
 54
 55
-56</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline row"</span><span class="nt">&gt;</span>
+56
+57</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-5"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">required</span> <span class="nt">&gt;</span>
@@ -692,30 +700,31 @@
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-box-filter"</span><span class="nt">&gt;</span>
   <span class="c">&lt;!-- To do this --&gt;</span>
-  <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline ls-float-left"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/b&gt;</span>
-
-      <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-custom-select"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"&amp;quot;selected&amp;quot;"</span> <span class="na">value=</span><span class="s">"/resale/clients"</span><span class="nt">&gt;</span>Todos<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ativos<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Desativados<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Bloqueados por bounce<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;/select&gt;</span>
-
-    <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/form&gt;</span>
-
-  <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline ls-float-right"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label"</span> <span class="na">role=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"ls-form ls-float-right buffer-inserted"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label ls-no-margin"</span> <span class="na">role=</span><span class="s">"search"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text ls-hidden-accessible"</span><span class="nt">&gt;</span>Nome do cliente<span class="nt">&lt;/b&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"q"</span> <span class="na">name=</span><span class="s">"q"</span> <span class="na">aria-label=</span><span class="s">"Faça sua busca por cliente"</span> <span class="na">accesskey=</span><span class="s">"s"</span> <span class="na">placeholder=</span><span class="s">"Nome do cliente"</span> <span class="na">required=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Buscar"</span> <span class="na">class=</span><span class="s">"ls-btn"</span> <span class="na">title=</span><span class="s">"Buscar"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Buscar"</span> <span class="na">class=</span><span class="s">"ls-btn"</span> <span class="na">title=</span><span class="s">"Buscar"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/form&gt;</span>
+  <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-5"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/b&gt;</span>
+
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-custom-select"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-custom"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"&amp;quot;selected&amp;quot;"</span> <span class="na">value=</span><span class="s">"/resale/clients"</span><span class="nt">&gt;</span>Todos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ativos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Desativados<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Bloqueados por bounce<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
+
 <span class="nt">&lt;/div&gt;</span>
+
 </pre></td></tr></tbody></table>
 </div>
 
