@@ -1,24 +1,26 @@
 <div class="ls-box-filter">
   <!-- To do this -->
-  <form action="" class="ls-form ls-form-inline ls-float-left">
-    <label class="ls-label">
-      <b class="ls-label-text">Status</b>
-
-      <select class="ls-custom-select" name="">
-        <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
-        <option value="#">Ativos</option>
-        <option value="#">Desativados</option>
-        <option value="#">Bloqueados por bounce</option>
-      </select>
-
-    </label>
-  </form>
-
   <form class="ls-form ls-float-right buffer-inserted">
-    <label class="ls-label" role="search">
+    <label class="ls-label ls-no-margin" role="search">
       <b class="ls-label-text ls-hidden-accessible">Nome do cliente</b>
       <input type="text" id="q" name="q" aria-label="Faça sua busca por cliente" accesskey="s" placeholder="Nome do cliente" required="">
     </label>
     <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
   </form>
+  <form action="" class="ls-form ls-form-inline row">
+    <label class="ls-label col-md-5">
+      <b class="ls-label-text">Status</b>
+
+      <div class="ls-custom-select">
+        <select class="ls-custom" name="">
+          <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Desativados</option>
+          <option value="#">Bloqueados por bounce</option>
+        </select>
+      </div>
+
+    </label>
+  </form>
+
 </div>
