@@ -71,6 +71,11 @@
       +arrow-down(#fff, 5px)
       top: 3px
 
+  .ls-btn[class*="ls-btn-"]
+    &:after
+      +arrow-down($gray4, 5px)
+      top: 4px
+
   &.ls-dropdown
     [class*="ls-btn-danger"]:after
       border-color: #d75553 transparent transparent transparent
