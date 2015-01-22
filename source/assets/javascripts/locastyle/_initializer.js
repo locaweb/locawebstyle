@@ -1,10 +1,13 @@
 var locastyle = (function() {
   'use strict';
 
+
+  // Used to run scripts when the HTML is ready
   function fastInit() {
     locastyle.sidebarToggle.init();
   }
 
+  // Used to run scripts that just when all things are ready
   function init() {
     locastyle.breakpoints.init();
     loadModules();
@@ -51,6 +54,7 @@ var locastyle = (function() {
 }());
 
 var ls = locastyle;
+
 
 $(window).load(function() {
   locastyle.init();
