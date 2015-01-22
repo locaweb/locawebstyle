@@ -50,7 +50,7 @@ locastyle.sidebarToggle = (function() {
   function maximizeSidebar() {
     $('html').removeClass('ls-sidebar-toggled');
     $('.ls-sidebar-toggle').removeClass('ls-active');
-    localStorage.removeItem('stateSidebar','maximized');
+    localStorage.removeItem('stateSidebar');
   }
 
   return {
