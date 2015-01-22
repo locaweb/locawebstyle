@@ -4,7 +4,6 @@
     loadFixtures('sideba-toggle_fixture.html');
     locastyle.sidebarToggle.init();
 
-    $.removeCookie('sidebarToggled');
     $.cookie = function(arg) {
       return false;
     };
@@ -18,12 +17,12 @@
   });
 
   describe("When Minimize Sidebar", function() {
-    beforeEach(function(){
-      $('html').removeClass('ls-sidebar-toggled');
-      $('.ls-sidebar-toggle').removeClass('ls-active');
-      $('.ls-sidebar-toggle').trigger('click');
-    });
+//    beforeEach(function(){
+//      $('html').removeClass('ls-sidebar-toggled');
+//      $('.ls-sidebar-toggle').removeClass('ls-active');
+//    });
     it("should add a .ls-sidebar-toggled in <html> element", function() {
+      $('.ls-sidebar-toggle').trigger('click');
       expect($('html').hasClass('ls-sidebar-toggled')).toBe(true);
     });
     it("should add a .ls-active in .ls-sidebar-toggle element", function() {
