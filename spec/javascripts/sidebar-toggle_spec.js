@@ -3,11 +3,6 @@
   beforeEach(function() {
     loadFixtures('sideba-toggle_fixture.html');
     locastyle.sidebarToggle.init();
-
-    $.cookie = function(arg) {
-      return false;
-    };
-
   });
 
   describe("Add Arrow in Sidebar", function() {
@@ -17,12 +12,13 @@
   });
 
   describe("When Minimize Sidebar", function() {
-//    beforeEach(function(){
-//      $('html').removeClass('ls-sidebar-toggled');
-//      $('.ls-sidebar-toggle').removeClass('ls-active');
-//    });
-    it("should add a .ls-sidebar-toggled in <html> element", function() {
+    beforeEach(function(){
+      localStorage.removeItem('stateSidebar');
+      $('html').removeClass('ls-sidebar-toggled');
+      $('.ls-sidebar-toggle').removeClass('ls-active');
       $('.ls-sidebar-toggle').trigger('click');
+    });
+    it("should add a .ls-sidebar-toggled in <html> element", function() {
       expect($('html').hasClass('ls-sidebar-toggled')).toBe(true);
     });
     it("should add a .ls-active in .ls-sidebar-toggle element", function() {
@@ -34,10 +30,13 @@
     beforeEach(function(){
       $('.ls-sidebar-toggle').trigger('click');
     });
-    it("when the .ls-sidebar-toggle is clicked, should remove a .ls-sidebar-toggled of <html> element", function() {
+    afterEach(function(){
+      $('.ls-sidebar-toggle').trigger('click');
+    });
+    it("when the '.ls-sidebar-toggle' is clicked, should remove class '.ls-sidebar-toggled' of <html> element", function() {
       expect($('html').hasClass('ls-sidebar-toggled')).toEqual(false);
     });
-    it("should remove a .ls-active of .ls-sidebar-toggle element", function() {
+    it("should remove a '.ls-active' of '.ls-sidebar-toggle' element", function() {
       expect($('.ls-sidebar-toggle').hasClass('ls-active')).toEqual(false);
     });
   });
