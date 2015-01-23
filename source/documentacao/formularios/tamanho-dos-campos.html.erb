@@ -43,15 +43,14 @@ description: Aumente ou diminua o tamanho dos campos de formulários
     </div>
   </div>
   <% code("html") do %>
-
-  <div class="ls-custom-select ls-field-sm">
-    <select>
-      <option value="">Pequeno</option>
-      <%- 2.times do |i| %>
-      <option value="<%= i %>"> <%= lorem.words 3 %> </option>
-      <% end %>
-    </select>
-  </div>
+<div class="ls-custom-select ls-field-sm">
+  <select>
+    <option value="">Pequeno</option>
+    <%- 2.times do |i| %>
+    <option value="<%= i %>"> <%= lorem.words 3 %> </option>
+    <% end %>
+  </select>
+</div>
 
 <input type="submit" class="ls-btn ls-btn-sm" value="Botão">
   <% end %>
