@@ -53,7 +53,7 @@
       height: 0
       margin-left: 14px
       position: relative
-      top: 2px
+      top: 3px
 
     &.ls-btn-lg:after,
     &.ls-btn-sm:after,
@@ -74,13 +74,14 @@
   .ls-btn[class*="ls-btn-"]
     &:after
       +arrow-down($gray4, 5px)
-      top: 4px
+      top: 3px
 
   &.ls-dropdown
     [class*="ls-btn-danger"]:after
       border-color: #d75553 transparent transparent transparent
 
-    [class*="ls-btn-danger"]:hover:after
+    [class*="ls-btn-danger"]:hover:after,
+    [class*="ls-btn-danger"]:focus:after
       border-color: #fff transparent transparent transparent
 
   &.ls-pos-right ul

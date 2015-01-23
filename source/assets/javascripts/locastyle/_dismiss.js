@@ -28,7 +28,7 @@ locastyle.dismiss = (function() {
   }
 
   function dismiss(el) {
-    $(el).addClass('dismissed');
+    $(el).addClass('ls-dismissed');
   }
 
   return {
