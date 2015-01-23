@@ -8,12 +8,13 @@ locastyle.browserDetect = (function() {
     browserClass();
   }
 
+  var name;
   function browserName() {
     if (userAgent.match(/(firefox)/)) {
-      var name = userAgent.match(/(firefox)/)[1];
+      name = userAgent.match(/(firefox)/)[1];
     } else {
-      var name = (userAgent.match(/(msie|phantomjs|chrome|version|rv)/))[1];
-    };
+      name = (userAgent.match(/(msie|phantomjs|chrome|version|rv)/))[1];
+    }
     return name;
   }
 
@@ -21,7 +22,7 @@ locastyle.browserDetect = (function() {
     return parseInt((userAgent.match(/.+(?:firefox|phantomjs|msie|chrome|version|rv)[\/: ]([\d.]+)/) || [0, 0])[1].split('.')[0] );
   }
 
-  function browserClass (argument) {
+  function browserClass() {
     $("html").addClass('ls-browser-'+browserName());
   }
 
