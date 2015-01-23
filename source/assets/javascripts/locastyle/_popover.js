@@ -12,7 +12,7 @@ locastyle.popover = (function() {
     trigger      : 'click.ls.popover',
     popoverClass : 'ls-popover',
     uniqueId     : 0
-  }
+  };
 
   function init() {
     if(/sm|xs/.test(locastyle.breakpointClass)){
@@ -121,6 +121,6 @@ locastyle.popover = (function() {
   return {
     init: init,
     destroyPopover: destroy
-  }
+  };
 
 }());
