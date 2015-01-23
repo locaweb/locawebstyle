@@ -53,10 +53,10 @@ locastyle.guidedTour = (function() {
 		$('body').off('keyup').on('keyup', function(e){
 			var key = e.keyCode;
 			if( hopscotch.getCurrStepNum() < stepsSize && hopscotch.getState() ){
-				if( key === 39){ hopscotch.nextStep(); }
-				if( key === 37){ hopscotch.prevStep(); }
+				if( key === left ){ hopscotch.nextStep(); }
+				if( key === right ){ hopscotch.prevStep(); }
 			}
-			if( key === 27  ){	hopscotch.endTour();  }
+			if( key === esc ){	hopscotch.endTour();  }
 		});
 	}
 
