@@ -45,7 +45,7 @@ locastyle.guidedTour = (function() {
 		keyCode();
 	}
 
-	function keyCode(element){
+	function keyCode(){
 		var left = 39;
 		var right = 37;
 		var esc = 27;
