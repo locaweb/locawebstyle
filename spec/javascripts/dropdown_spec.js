@@ -110,8 +110,18 @@ describe("Dropdown: ", function() {
     });
 
     it("When click the nav links should has attr aria-hidden with value false", function() {
-      $('.ls-dropdown').find('.ls-btn-primary').trigger('click');
+      $('#dropdown-test-6').find('.ls-btn-primary').trigger('click');
       expect($('#dropdown-test-6 > .ls-dropdown-nav').attr('aria-hidden')).toEqual('false');
+    });
+
+    it("When click in dropdown should has attr aria-hidden with value true in others dropdowns", function() {
+      $('#dropdown-test-6').find('.ls-btn-primary').trigger('click');
+      expect($('#dropdown-test-5 > .ls-dropdown-nav').attr('aria-hidden')).toEqual('true');
+    });
+
+    it("When click in dropdown should has attr aria-expanded with value false in others dropdowns", function() {
+      $('#dropdown-test-6').find('.ls-btn-primary').trigger('click');
+      expect($('#dropdown-test-5 > .ls-btn-primary').attr('aria-expanded')).toEqual('false');
     });
   });
 
