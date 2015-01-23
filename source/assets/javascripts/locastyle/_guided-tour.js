@@ -68,10 +68,6 @@ locastyle.guidedTour = (function() {
 		}
 	}
 
-	function userAborted(xhr) {
-		return !xhr.getAllResponseHeaders();
-	}
-
 	return {
 		init: init,
 		openWelcomeTour: openWelcomeTour
