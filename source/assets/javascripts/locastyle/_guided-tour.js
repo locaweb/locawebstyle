@@ -19,7 +19,7 @@ locastyle.guidedTour = (function() {
 	// Override default selectors if user provide
 	function checkTour(jsonSteps){
 		if(jsonSteps && jsonSteps.selectors && hopscotch){
-			$.each( config.selectors, function(key,selector){
+			$.each( config.selectors, function(key){
 				jsonSteps.selectors[key] = jsonSteps.selectors[key] || config.selectors[key];
 			});
 			setTour(jsonSteps);
