@@ -26,14 +26,14 @@ locastyle.popover = (function() {
     updateBreakpoint();
   }
 
-  function updateBreakpoint (argument) {
+  function updateBreakpoint() {
     $(window).on("breakpoint-updated", function () {
       destroy();
       init();
     });
   }
 
-  function createPopover ($elem) {
+  function createPopover($elem) {
     var elementData = $elem.data(),
         width  = $elem.outerWidth(),
         height = $elem.outerHeight();
@@ -71,12 +71,12 @@ locastyle.popover = (function() {
     $popover.css("top", elementData.position.top).css("left", elementData.position.left);
   }
 
-  function bindActions ($elem, elementData, width, height) {
+  function bindActions($elem, elementData, width, height) {
     var trigger = elementData.trigger == 'hover' ? config.hoverEvent : config.trigger,
         $popover = $(config.idPopover + elementData.uniqueId);
     if(trigger === config.hoverEvent){
       $elem.on({
-        mouseenter: function (event) {
+        mouseenter: function(event) {
           event.preventDefault();
           elementData.position = $(this).offset() ;
           setPositionData(elementData, width, height);
@@ -90,7 +90,7 @@ locastyle.popover = (function() {
       });
     } else {
       $elem.on({
-        click: function (event) {
+        click: function(event) {
           event.preventDefault();
           event.stopPropagation();
           elementData.position = $(this).offset() ;
@@ -99,7 +99,7 @@ locastyle.popover = (function() {
           $popover.stop().toggle();
         }
       });
-      $(document).on('click', function (event) {
+      $(document).on('click', function(event) {
         var element = event.toElement;
         if(!$(element).parents().hasClass( config.popoverClass )){
          $('.' + config.popoverClass).hide();
