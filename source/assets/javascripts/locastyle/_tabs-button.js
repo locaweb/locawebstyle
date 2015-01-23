@@ -17,7 +17,7 @@ locastyle.button = (function() {
     $("[data-ls-module=button]").on("click.button", function(evt) {
       evt.preventDefault();
       var $target = $($(this).attr("href") || $(this).data("target"));
-      var $buttons = '[data-ls-module=button]'
+      var $buttons = '[data-ls-module=button]';
       console.log($buttons);
       deactivateElement(this, $target, $buttons);
       activateElement(this, $target);
