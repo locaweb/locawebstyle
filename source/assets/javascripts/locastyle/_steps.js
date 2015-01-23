@@ -42,7 +42,6 @@ locastyle.steps = (function() {
     var $steps   = $(config.selectors.nav);
     var offset    = $steps.offset();
     var $heightNav  = $(config.selectors.nav).height();
-    var $areaStep = parseInt(elemVisible + ($heightNav * 2));
 
     $(window).scroll(function() {
      if ($(window).scrollTop() > offset.top ){
