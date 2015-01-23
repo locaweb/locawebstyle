@@ -61,7 +61,7 @@ locastyle.steps = (function() {
        $steps.stop().animate({
          marginTop: 0
        });
-     };
+     }
     });
   }
 
