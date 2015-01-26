@@ -6,8 +6,11 @@ locastyle.sidebarToggle = (function() {
   function init() {
     addArrowToggle();
     sidebarToggling();
-    checkCookie();
+    checkStatus();
   }
+
+  var stateStatus = localStorage.getItem('stateSidebar');
+
 
   // Add arrow element in sidebar
   function addArrowToggle() {
@@ -17,15 +20,15 @@ locastyle.sidebarToggle = (function() {
   }
 
   // Check if the cookie exist to maintain the status of sidebar
-  function checkCookie() {
-    if (typeof $.cookie('sidebarToggled') === 'undefined'){
-      maximizeSidebar();
-    } else {
+  function checkStatus() {
+    if (stateStatus === 'minimized' | $('html').hasClass('ls-sidebar-toggled')){
       minimizeSidebar();
+    } else {
+      maximizeSidebar();
     }
   }
 
-  // When click in the arrrow, open ou close sidebar
+  // When click in the arrrow, open or close sidebar
   function sidebarToggling() {
     $('.ls-sidebar-toggle').on('click.ls', function(){
       if($('html').hasClass('ls-sidebar-toggled')) {
@@ -40,14 +43,14 @@ locastyle.sidebarToggle = (function() {
   function minimizeSidebar() {
     $('html').addClass('ls-sidebar-toggled');
     $('.ls-sidebar-toggle').addClass('ls-active');
-    $.cookie('sidebarToggled', 'true');
+    localStorage.setItem('stateSidebar','minimized');
   }
 
   // maximize sidebar
   function maximizeSidebar() {
     $('html').removeClass('ls-sidebar-toggled');
     $('.ls-sidebar-toggle').removeClass('ls-active');
-    $.removeCookie('sidebarToggled');
+    localStorage.removeItem('stateSidebar');
   }
 
   return {
