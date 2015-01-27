@@ -69,7 +69,7 @@
       li
         border-bottom-color: mix($color-menu-mix, $color-menu-bg, 84%)
 
-        &.ls-active:not(.ls-submenu) > a
+        &.ls-active:not(.ls-submenu-parent) > a
           background-color: mix($color-menu-mix, $color-menu-bg, 76%)
 
       a
@@ -84,7 +84,7 @@
       background: $color1
 
     // Submenu
-    .ls-submenu
+    .ls-submenu-parent
 
       &:after
         color: mix($color-menu-mix, $color-menu-text, 45%)

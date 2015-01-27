@@ -14,7 +14,7 @@ var lsexample = (function() {
         var href = $(this).attr('href');
         if (path.substring(0, href.length) === href) {
             $(this).closest('li').addClass('ls-active');
-            $(this).parents('.ls-submenu').find('a').trigger('click');
+            $(this).parents('.ls-submenu-parent').find('a').trigger('click');
         }
     });
   }
