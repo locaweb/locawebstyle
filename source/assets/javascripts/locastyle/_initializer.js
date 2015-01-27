@@ -4,6 +4,7 @@ var locastyle = (function() {
   // Used to run scripts when the HTML is ready
   function fastInit() {
     locastyle.sidebarToggle.init();
+    locastyle.sidebars.init();
   }
 
   // Used to run scripts that just when all things are ready
@@ -11,7 +12,6 @@ var locastyle = (function() {
     locastyle.breakpoints.init();
     loadModules();
     locastyle.general.init();
-    locastyle.sidebars.init();
     locastyle.btnGroup.init();
     locastyle.alert.init();
     locastyle.datepicker.init();
