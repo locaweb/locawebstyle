@@ -25,7 +25,7 @@ locastyle.topbarCurtain = (function() {
   function updateStatusCounter(){
     $(config.module).each(function(index, element){
       var elem = $(element).data('target');
-      var _counter = $(elem+ ' .ls-dismissable:not(.dismissed)').length;
+      var _counter = $(elem+ ' .ls-dismissable:not(.ls-dismissed)').length;
       if(_counter !== 0) {
         $('[data-target="'+elem+'"]').attr('data-counter', _counter);
       }
