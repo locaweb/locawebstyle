@@ -9,6 +9,9 @@ locastyle.sidebars = (function() {
     bindShowSidebar();
     bindShowNotifications();
     userAccountVerification();
+    subMenu();
+    ariaMenu();
+    ariaSubmenu();
   }
 
   // adiciona o bind de click no modulo e chama os métodos necessários
@@ -50,14 +53,53 @@ locastyle.sidebars = (function() {
     }
   }
 
+  function subMenu() {
+    $('.ls-submenu > a').on('click.ls', function(evt) {
+      var $submenu = $(this).parent('.ls-submenu');
+      evt.preventDefault();
+      $(this).parent().toggleClass('ls-active');
+      ariaSubmenu($submenu);
+    });
+    if($('.ls-submenu').find('li').hasClass('ls-active')){
+      $('.ls-submenu li.ls-active').parents('.ls-submenu').addClass('ls-active');
+    }
+  }
+
   // remove os binds que o próprio modulo adiciona
   function unbind() {
     $('.ls-show-sidebar').off('touchstart.ls click.ls');
     $('.ls-show-notifications').off('touchstart.ls click.ls');
+    $('.ls-submenu > a').off('click.ls');
+  }
+
+  function ariaMenu() {
+    var $menu = $('.ls-menu');
+    $menu.attr({ role : 'navigation' });
+    $menu.find('ul').attr({ role: 'menu' });
+    $menu.find('a').attr({ role : 'menuitem' });
+
+    $('.ls-submenu').each(function(i,el){
+       ariaSubmenu(el);
+    });
+  }
+
+  function ariaSubmenu(el) {
+    if($(el).hasClass('ls-active')){
+      $(el).attr({
+        'aria-expanded': 'true',
+        'aria-hidden' : 'false'
+      });
+    } else{
+      $(el).attr({
+        'aria-expanded': 'false',
+        'aria-hidden' : 'true'
+      });
+    }
   }
 
   return {
     init: init,
+    subMenu: subMenu,
     unbind: unbind
   };
 

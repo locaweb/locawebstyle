@@ -17,8 +17,6 @@ locastyle.general = (function() {
     _btnGroupActivationToogle();
     _menuAnchor();
     _toggleFields();
-    subMenu();
-    _ariaMenu();
   }
 
   jQuery.fn.toggleAttr = function(attr) {
@@ -104,18 +102,6 @@ locastyle.general = (function() {
     }
   }
 
-  function subMenu() {
-    $('.ls-submenu > a').on('click.ls', function(evt) {
-      var $submenu = $(this).parent('.ls-submenu');
-      evt.preventDefault();
-      $(this).parent().toggleClass('ls-active');
-      _ariaSubmenu($submenu);
-    });
-    if($('.ls-submenu').find('li').hasClass('ls-active')){
-      $('.ls-submenu li.ls-active').parents('.ls-submenu').addClass('ls-active');
-    }
-  }
-
   function _elementDisabled() {
     $(".ls-disabled, [disabled='disabled']").on('click', function(evt) {
       if( $(this).hasClass('ls-disabled') || $(this).attr('disabled') === 'disabled' ){
@@ -144,38 +130,11 @@ locastyle.general = (function() {
 
   function _unbind () {
     $('[data-ls-fields-enable]').off('click.ls');
-    $('.ls-submenu > a').off('click.ls');
     $(".ls-disabled, [disabled='disabled']").off('click');
-  }
-
-  function _ariaMenu() {
-    var $menu = $('.ls-menu');
-    $menu.attr({ role : 'navigation' });
-    $menu.find('ul').attr({ role: 'menu' });
-    $menu.find('a').attr({ role : 'menuitem' });
-
-    $('.ls-submenu').each(function(i,el){
-       _ariaSubmenu(el);
-    });
-  }
-
-  function _ariaSubmenu(el) {
-    if($(el).hasClass('ls-active')){
-      $(el).attr({
-        'aria-expanded': 'true',
-        'aria-hidden' : 'false'
-      });
-    } else{
-      $(el).attr({
-        'aria-expanded': 'false',
-        'aria-hidden' : 'true'
-      });
-    }
   }
 
   return {
     init: init,
-    subMenu: subMenu
   };
 
 }());

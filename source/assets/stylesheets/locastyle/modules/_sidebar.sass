@@ -256,11 +256,11 @@
       display: block
       position: absolute
       bottom: 0
-      right: 0
       cursor: pointer
       width: 100%
       padding: 20px
       text-align: right
+      +single-transition(width, .25s, linear)
 
       &:hover
         color: $color-menu-text
@@ -278,11 +278,24 @@
 ////
 // When the menu is Toggled
 ////
+$sidebar-toggled-width: 60px
+
 .ls-sidebar-toggled
 
-//   .ls-sidebar-toggle:before
-//     +rotate(-180deg)
-//     +single-transition(transform, .25s, linear)
+  .ls-sidebar-toggle
+    width: $sidebar-toggled-width
+
+    &:before
+      +rotate(-180deg)
+      +single-transition(transform, .25s, linear)
+
+  ul li
+    position: relative
+
+    ul
+      width: $sidebar-width
+      position: absolute
+      left: $sidebar-toggled-width
 
 //   .ls-sidebar
 //     width: 60px
