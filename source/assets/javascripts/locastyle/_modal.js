@@ -56,11 +56,11 @@ locastyle.modal = (function() {
     ariaModal($($element.target),'false');
     $($element.target).each(function(i,e){
       if($(e).data('modal-blocked') !== undefined){
-        $('[data-dismiss="modal"]').remove()
+        $('[data-dismiss="modal"]').remove();
       }else{
         bindClose();
       }
-    })
+    });
   }
 
   function close() {

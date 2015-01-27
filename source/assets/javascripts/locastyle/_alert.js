@@ -1,7 +1,7 @@
 var locastyle = locastyle || {};
 
 locastyle.alert = (function(){
-  'user strict'
+  'user strict';
 
   function init() {
     ariaAlert();
@@ -13,6 +13,6 @@ locastyle.alert = (function(){
 
   return {
     init: init
-  }
+  };
 
 }());

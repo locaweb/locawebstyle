@@ -21,7 +21,7 @@ locastyle.collapse = (function() {
   };
 
   function init() {
-    $(config.selectors.container).each(function(i, collapse) {
+    $(config.selectors.container).each(function() {
       var $collapse = $(this);
       bindHeader($collapse);
       ariaCollapse($collapse);
@@ -45,7 +45,7 @@ locastyle.collapse = (function() {
       // has input
       var $input = $(config.selectors.trigger, $collapse).find('input[type="radio"], input[type="checkbox"]');
       if($input[0]){
-        $input.on('change.ls', function (evt) {
+        $input.on('change.ls', function () {
           var name = $(this).attr('name');
           $('[name="' + name + '"]').each(function (index, input) {
             var $input = $(input);

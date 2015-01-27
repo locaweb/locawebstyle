@@ -8,7 +8,7 @@ locastyle.tabs = (function() {
     tabLink: '.ls-tabs-nav a',
     tabListActive: '.ls-tabs-nav li.ls-active a',
     tabContent: '.ls-tab-content'
-  }
+  };
 
   function init() {
     unbind();

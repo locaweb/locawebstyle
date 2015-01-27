@@ -73,7 +73,7 @@ locastyle.general = (function() {
         cssClass = $this.data('toggle-class');
     if( /(radio)|(checkbox)/.test($this.attr('type'))  ){
       $target.toggleClass(cssClass, !$this.prop('checked'));
-      $('[name="' + $this.attr('name') + '"]').not($this).each(function (evt) {
+      $('[name="' + $this.attr('name') + '"]').not($this).each(function () {
         var $that = $(this);
         var $target2 = $that.data('target') ? $($that.data('target')) : $that,
         cssClass2 = $that.data('toggle-class');

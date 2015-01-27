@@ -31,11 +31,10 @@ locastyle.form = (function() {
     }
   }
 
-  function textareaAutoresize (argument) {
+  function textareaAutoresize () {
     $('textarea.ls-textarea-autoresize', '.ls-label').each(function (index, textarea) {
       var $textarea = $(textarea);
-      var height = $textarea.height();
-      $textarea.keyup(function (e) {
+      $textarea.keyup(function () {
         if (!$textarea.prop('scrollTop')) {
           var scrollHeight;
           do {

@@ -8,7 +8,9 @@ locastyle.sidebarToggle = (function() {
     checkStatus();
     addArrowToggle();
     sidebarToggling();
+    checkStatus();
   }
+
 
   // Add arrow element in sidebar
   function addArrowToggle() {
@@ -27,7 +29,7 @@ locastyle.sidebarToggle = (function() {
     }
   }
 
-  // When click in the arrrow, open ou close sidebar
+  // When click in the arrrow, open or close sidebar
   function sidebarToggling() {
     $('.ls-sidebar-toggle').on('click', function(){
       if($('html').hasClass('ls-sidebar-toggled')) {

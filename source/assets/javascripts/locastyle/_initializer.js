@@ -52,8 +52,6 @@ var locastyle = (function() {
 
 }());
 
-var ls = locastyle;
-
 $(window).load(function() {
   locastyle.init();
 });
