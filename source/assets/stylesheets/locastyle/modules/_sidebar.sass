@@ -279,37 +279,38 @@
 // When the menu is Toggled
 ////
 .ls-sidebar-toggled
-  .ls-sidebar-toggle:before
-    +rotate(-180deg)
-    +single-transition(transform, .25s, linear)
 
-  .ls-sidebar
-    width: 60px
-    overflow: hidden
-    z-index: 12
+//   .ls-sidebar-toggle:before
+//     +rotate(-180deg)
+//     +single-transition(transform, .25s, linear)
 
-    .ls-brand-name
-      +single-transition(padding, .25s)
-      width: $sidebar-width
-      padding: 16px
-      text-align: left
+//   .ls-sidebar
+//     width: 60px
+//     overflow: hidden
+//     z-index: 12
 
-      a
-        display: none
+//     .ls-brand-name
+//       +single-transition(padding, .25s)
+//       width: $sidebar-width
+//       padding: 16px
+//       text-align: left
 
-      &:before
-        font-size: inherit
+//       a
+//         display: none
 
-      .ls-menu
+//       &:before
+//         font-size: inherit
 
-        ul ul,
-        .ls-active ul,
-          opacity: 1
-          height: auto
-          border-top: 1px solid mix($color-mix, $color-menu-bg, 80%)
+//       .ls-menu
 
-      .ls-area-account
-        height: 100px
+//         ul ul,
+//         .ls-active ul,
+//           opacity: 1
+//           height: auto
+//           border-top: 1px solid mix($color-mix, $color-menu-bg, 80%)
+
+//       .ls-area-account
+//         height: 100px
 
   .ls-menu
     width: $sidebar-width
