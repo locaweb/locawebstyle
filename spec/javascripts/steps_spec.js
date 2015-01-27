@@ -12,17 +12,13 @@ describe("Steps: ", function(){
 
 
     it("Don't have class ls-active on the navigation", function(){
-      setTimeout(function(){
-        expect($('#step1a').hasClass('ls-active')).toBe(true);
-      }, 1000);
+      expect($('#step1a').hasClass('ls-active')).toBe(false);
     });
   });
 
   describe("Don't have class ls-active on the navigation", function(){
     it("first li navigation hasClass ls-active", function(){
-      setTimeout(function(){
-        expect($('#stepNav1').hasClass('ls-active')).toBe(true);
-      }, 1000);
+      expect($('#stepNav1').hasClass('ls-active')).toBe(true);
     });
   });
 
