@@ -54,14 +54,21 @@ locastyle.sidebars = (function() {
   }
 
   function subMenu() {
-    $('.ls-submenu > a').on('click.ls', function(evt) {
-      var $submenu = $(this).parent('.ls-submenu');
+    var hasSubmenu = $('.ls-menu').find('ul li ul');
+    $(hasSubmenu).each(function(){
+      $(this).addClass('ls-submenu');
+      $(this).parent('li').addClass('ls-submenu-parent');
+      $(this).find('a').addClass('ls-submenu-item');
+    });
+
+    $('.ls-submenu-parent > a').on('click.ls', function(evt) {
+      var $submenu = $(this).parent('.ls-submenu-parent');
       evt.preventDefault();
       $(this).parent().toggleClass('ls-active');
       ariaSubmenu($submenu);
     });
     if($('.ls-submenu').find('li').hasClass('ls-active')){
-      $('.ls-submenu li.ls-active').parents('.ls-submenu').addClass('ls-active');
+      $('.ls-submenu li.ls-active').parents('.ls-submenu-parent').addClass('ls-active');
     }
   }
 
@@ -69,7 +76,7 @@ locastyle.sidebars = (function() {
   function unbind() {
     $('.ls-show-sidebar').off('touchstart.ls click.ls');
     $('.ls-show-notifications').off('touchstart.ls click.ls');
-    $('.ls-submenu > a').off('click.ls');
+    $('.ls-submenu-parent > a').off('click.ls');
   }
 
   function ariaMenu() {
@@ -78,7 +85,7 @@ locastyle.sidebars = (function() {
     $menu.find('ul').attr({ role: 'menu' });
     $menu.find('a').attr({ role : 'menuitem' });
 
-    $('.ls-submenu').each(function(i,el){
+    $('.ls-submenu-parent').each(function(i,el){
        ariaSubmenu(el);
     });
   }
