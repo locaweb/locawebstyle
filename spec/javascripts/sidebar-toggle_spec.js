@@ -1,4 +1,4 @@
- describe("Minimize or Maximize sidebar: ", function() {
+describe("Minimize or Maximize sidebar: ", function() {
 
   beforeEach(function() {
     loadFixtures('sideba-toggle_fixture.html');

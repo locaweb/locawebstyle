@@ -68,9 +68,8 @@ locastyle.dropdown = (function() {
 
     if($(el).hasClass('ls-active')){
       $(config.button, el).attr({ 'aria-expanded' : 'true' });
-      $(config.nav).attr({ 'aria-hidden' : 'false' });
-    }
-    else{
+      $(config.nav, el).attr({ 'aria-hidden' : 'false' });
+    } else {
       $(config.button, el).attr({ 'aria-expanded' : 'false' });
       $(config.nav, el).attr({ 'aria-hidden' : 'true' });
     }

@@ -1,7 +1,6 @@
 var locastyle = (function() {
   'use strict';
 
-
   // Used to run scripts when the HTML is ready
   function fastInit() {
     locastyle.sidebarToggle.init();
