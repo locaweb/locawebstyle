@@ -5,6 +5,55 @@
     locastyle.sidebars.init();
   });
 
+  describe("Submenu Toggle", function() {
+    describe("When click on link of ls-submenu-parent", function() {
+      it("should add .ls-active class in ls-submenu-parent", function() {
+        $(".ls-submenu-parent > a").trigger("click");
+        expect($(".ls-submenu-parent").hasClass("ls-active")).toEqual(true);
+      });
+      it("should remove .ls-active class on self", function() {
+        $(".ls-submenu-parent.ls-active > a").trigger("click");
+        expect($(".ls-submenu-parent").hasClass("ls-active")).toEqual(false);
+      });
+    });
+  });
+
+  describe("Submenu with wai-aria", function() {
+
+    it("should has attribute aria-expanded equal false", function() {
+      expect($(".ls-submenu-parent").attr('aria-expanded')).toEqual('false');
+    });
+
+    it("When submenu is clicked should has attribute aria-expanded equal true", function() {
+      $(".ls-submenu-parent > a").trigger("click");
+      expect($(".ls-submenu-parent").attr('aria-expanded')).toEqual('true');
+    });
+
+    it("should has attribute aria-hidden equal true", function() {
+      expect($(".ls-submenu-parent").attr('aria-hidden')).toEqual('true');
+    });
+
+    it("When submenu is clicked should has attribute aria-hidden equal false", function() {
+      $(".ls-submenu-parent > a").trigger("click");
+      expect($(".ls-submenu-parent").attr('aria-hidden')).toEqual('false');
+    });
+
+  });
+
+  describe("Menu with wai-aria", function() {
+    it("should has attribute role equal navigation", function() {
+      expect($('.ls-menu').attr('role')).toEqual('navigation');
+    });
+
+    it("UL should has attribute role equal menu", function() {
+      expect($('.ls-menu ul').attr('role')).toEqual('menu');
+    });
+
+    it("Links should has attribute role equal menuitem", function() {
+      expect($('.ls-menu a').attr('role')).toEqual('menuitem');
+    });
+  });
+
   describe("Sidebar toggle", function() {
   	describe("when click on .ls-show-sidebar", function() {
   		it("should add the .ls-sidebar-visible css class on html tag", function() {
