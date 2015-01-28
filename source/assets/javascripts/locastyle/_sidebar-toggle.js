@@ -9,6 +9,7 @@ locastyle.sidebarToggle = (function() {
     addArrowToggle();
     sidebarToggling();
     checkStatus();
+    maximizeMobile();
   }
 
 
@@ -52,6 +53,15 @@ locastyle.sidebarToggle = (function() {
     $('html').removeClass('ls-sidebar-toggled');
     $('.ls-sidebar-toggle').removeClass('ls-active');
     localStorage.removeItem('stateSidebar');
+  }
+
+  // When in Mobile, maximize sidebar
+  function maximizeMobile() {
+    $(window).on("breakpoint-updated", function () {
+      if ($('.ls-screen-xs').length) {
+        maximizeSidebar();
+      }
+    });
   }
 
   function unbind() {
