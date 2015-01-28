@@ -282,62 +282,86 @@ $sidebar-toggled-width: 60px
 
 .ls-sidebar-toggled
 
-  .ls-sidebar-toggle
+  .ls-sidebar-toggle:before
+    +rotate(-180deg)
+    +single-transition(transform, .25s, linear)
+
+  .ls-sidebar
     width: $sidebar-toggled-width
-
-    &:before
-      +rotate(-180deg)
-      +single-transition(transform, .25s, linear)
-
-  ul li
-    position: relative
-
-    ul
-      width: $sidebar-width
-      position: absolute
-      left: $sidebar-toggled-width
-
-//   .ls-sidebar
-//     width: 60px
-//     overflow: hidden
-//     z-index: 12
-
-//     .ls-brand-name
-//       +single-transition(padding, .25s)
-//       width: $sidebar-width
-//       padding: 16px
-//       text-align: left
-
-//       a
-//         display: none
-
-//       &:before
-//         font-size: inherit
-
-//       .ls-menu
-
-//         ul ul,
-//         .ls-active ul,
-//           opacity: 1
-//           height: auto
-//           border-top: 1px solid mix($color-mix, $color-menu-bg, 80%)
-
-//       .ls-area-account
-//         height: 100px
+    z-index: 11
 
   .ls-menu
-    width: $sidebar-width
+    overflow: visible
 
-    ul ul,
-    .ls-active ul
-      +single-transition(opacity, .2s, ease-in-out)
-      opacity: 0
-      height: 0
+    a
+      width: $sidebar-width
+
+    > ul > li
+      position: relative
+      width: 60px
       overflow: hidden
-      border: none
+      outline: 1px solid red
 
-    .ls-active a
-      background: none
+    // LI parent of submenu
+    .ls-submenu-parent
+      outline: 1px solid blue
+
+      &.ls-active
+        overflow: visible
+
+        // UL Submenu
+        .ls-submenu
+          position: absolute
+          left: $sidebar-toggled-width + 10px
+          background: inherit
+          border-radius: 5px
+
+          a
+            padding-left: 20px
+            border-radius: 5px
+
+
+  // .ls-sidebar
+  //   width: 60px
+  //   overflow: hidden
+  //   z-index: 12
+
+  //   .ls-brand-name
+  //     +single-transition(padding, .25s)
+  //     width: $sidebar-width
+  //     padding: 16px
+  //     text-align: left
+
+  //     a
+  //       display: none
+
+  //     &:before
+  //       font-size: inherit
+
+  //     .ls-menu
+
+  //       ul ul,
+  //       .ls-active ul,
+  //         opacity: 1
+  //         height: auto
+  //         border-top: 1px solid mix($color-mix, $color-menu-bg, 80%)
+
+  //     .ls-area-account
+  //       height: 100px
+
+  // .ls-menu
+  //   width: $sidebar-width
+
+  //   ul ul,
+  //   .ls-active ul
+  //     +single-transition(opacity, .2s, ease-in-out)
+  //     opacity: 0
+  //     height: 0
+  //     overflow: hidden
+  //     border: none
+
+  //   .ls-active a
+  //     background: none
 
   .ls-area-account
     +single-transition(height, .4s)
