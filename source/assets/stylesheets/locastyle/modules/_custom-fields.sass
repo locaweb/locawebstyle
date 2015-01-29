@@ -25,7 +25,7 @@
     -webkit-appearance: none
     -moz-appearance: none
     appearance: none
-    height: 31px
+    height: inherit
     padding: 5px 45px 5px 10px
     display: inline-block
     border: none
@@ -59,7 +59,7 @@
 
   &:after
     content: ""
-    height: 31px
+    height: inherit
     position: absolute
     border-left: 1px solid $gray2
     right: 30px
@@ -70,28 +70,24 @@
     height: $input-lg-height
 
     select
-      height: $input-lg-height
       font-size: remtopx(1)
 
   &.ls-field-md
     height: $input-height
 
     select
-      height: $input-height
       font-size: remtopx(.8125)
 
   &.ls-field-sm
     height: $input-sm-height
 
     select
-      height: $input-sm-height
       font-size: remtopx(.75)
 
   &.ls-field-xs
     height: $input-xs-height
 
     select
-      height: $input-xs-height
       font-size: remtopx(.75)
 
 @media screen and (min-width: $screen-sm)
