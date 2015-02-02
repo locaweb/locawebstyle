@@ -9,6 +9,7 @@ locastyle.sidebars = (function() {
     bindShowSidebar();
     bindShowNotifications();
     userAccountVerification();
+    prepareSubmenu();
     subMenu();
     ariaMenu();
     ariaSubmenu();
@@ -53,17 +54,23 @@ locastyle.sidebars = (function() {
     }
   }
 
-  function subMenu() {
+  //
+  // Submenu Treatment
+  //
+  function prepareSubmenu() {
     var hasSubmenu = $('.ls-menu').find('ul li ul');
     $(hasSubmenu).each(function(){
       $(this).addClass('ls-submenu');
       $(this).parent('li').addClass('ls-submenu-parent');
       $(this).find('a').addClass('ls-submenu-item');
     });
+  }
 
+  function subMenu() {
     $('.ls-submenu-parent > a').on('click.ls', function(evt) {
-      var $submenu = $(this).parent('.ls-submenu-parent');
       evt.preventDefault();
+
+      var $submenu = $(this).parent('.ls-submenu-parent');
       $(this).parent().toggleClass('ls-active');
       ariaSubmenu($submenu);
     });
