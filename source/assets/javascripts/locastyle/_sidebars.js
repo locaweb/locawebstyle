@@ -67,15 +67,18 @@ locastyle.sidebars = (function() {
   }
 
   function subMenu() {
-    $('.ls-submenu-parent > a').on('click.ls', function(evt) {
+    $('.ls-submenu-parent').on('click', ' > a', function(evt) {
+      console.count('teste')
       evt.preventDefault();
 
       var $submenu = $(this).parent('.ls-submenu-parent');
-      $(this).parent().toggleClass('ls-active');
+      $submenu.addClass('ls-active');
       ariaSubmenu($submenu);
     });
-    if($('.ls-submenu').find('li').hasClass('ls-active')){
-      $('.ls-submenu li.ls-active').parents('.ls-submenu-parent').addClass('ls-active');
+    if (!$('.ls-sidebar-toggled').length) {
+      if($('.ls-submenu li.ls-active')){
+        $('.ls-submenu').parents('.ls-submenu-parent').addClass('ls-active');
+      }
     }
   }
 
