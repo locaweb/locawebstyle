@@ -287,6 +287,18 @@ $sidebar-toggled-width: 60px
 
 .ls-sidebar-toggled
 
+  .ls-brand-name
+    width: $sidebar-width
+    padding: 16px
+    width: auto
+    text-align: left
+
+    a
+      display: none
+
+    &:before
+      font-size: inherit
+
   .ls-user-account ~ .ls-sidebar-inner
     overflow: initial
 
@@ -360,42 +372,11 @@ $sidebar-toggled-width: 60px
   //   overflow: hidden
   //   z-index: 12
 
-  //   .ls-brand-name
-  //     +single-transition(padding, .25s)
-  //     width: $sidebar-width
-  //     padding: 16px
-  //     text-align: left
-
-  //     a
-  //       display: none
-
-  //     &:before
-  //       font-size: inherit
 
   //     .ls-menu
 
-  //       ul ul,
-  //       .ls-active ul,
-  //         opacity: 1
-  //         height: auto
-  //         border-top: 1px solid mix($color-mix, $color-menu-bg, 80%)
-
   //     .ls-area-account
   //       height: 100px
-
-  // .ls-menu
-  //   width: $sidebar-width
-
-  //   ul ul,
-  //   .ls-active ul
-  //     +single-transition(opacity, .2s, ease-in-out)
-  //     opacity: 0
-  //     height: 0
-  //     overflow: hidden
-  //     border: none
-
-  //   .ls-active a
-  //     background: none
 
   .ls-area-account
     +single-transition(height, .4s)
