@@ -16,7 +16,7 @@ locastyle.sidebarToggle = (function() {
   // Add arrow element in sidebar
   function addArrowToggle() {
     if( $('.ls-sidebar').length ) {
-      $('.ls-sidebar').append('<span class="ls-sidebar-toggle ls-ico-circle-left"></span>');
+      $('.ls-sidebar').append('<span class="ls-sidebar-toggle ls-ico-shaft-left"></span>');
     }
   }
 
