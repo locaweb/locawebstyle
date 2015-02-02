@@ -46,7 +46,7 @@
         top: 15px
 
       .ls-name
-        display: block!important
+        display: block !important
         font-weight: 600
         top: -5px
         position: relative
@@ -111,6 +111,8 @@
     text-decoration: none
     padding: 20px 20px 20px 59px
     position: relative
+    width: $sidebar-width
+    overflow: hidden
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
 
@@ -152,6 +154,8 @@
   &.ls-active
 
     a
+      font-weight: 400
+
       &:hover,
       &:focus
         padding-left: 65px
@@ -168,9 +172,6 @@
 
       li:last-child
         border-bottom: none
-
-    a
-      font-weight: 400
 
 .ls-area-account
   @if (lightness($color-menu-mix) < 30)
@@ -248,7 +249,7 @@
       display: none
 
       ~ .ls-sidebar-inner
-        overflow: initial
+        overflow: auto
         height: 100%
 
     // Arrow to toggle Sidebar
@@ -260,6 +261,8 @@
       width: 100%
       padding: 20px
       text-align: right
+      border-top: 1px solid $gray5
+      background: inherit
       +single-transition(width, .25s, linear)
 
       &:hover
@@ -270,21 +273,26 @@
           color: #fff
 
       &:before
+        +single-transition(transform, .25s, linear)
         display: inline-block
-        font-size: remtopx(1.58)
-        color: #bebebe
+        font-size: remtopx(0.69)
+        font-weight: bold
+        color: #7f7f7f
         width: 22px
 
 ////
-// When the menu is Toggled
+// When the menu is Minimized
 ////
 $sidebar-toggled-width: 60px
 
 .ls-sidebar-toggled
 
+  .ls-user-account ~ .ls-sidebar-inner
+    overflow: initial
+
   .ls-sidebar-toggle:before
     +rotate(-180deg)
-    +single-transition(transform, .25s, linear)
+    margin-left: 4px
 
   .ls-sidebar
     width: $sidebar-toggled-width
@@ -293,33 +301,59 @@ $sidebar-toggled-width: 60px
   .ls-menu
     overflow: visible
 
-    a
-      width: $sidebar-width
+    a:focus:before,
+    a:hover:before,
+      left: 19px
 
     > ul > li
       position: relative
-      width: 60px
       overflow: hidden
-      outline: 1px solid red
 
-    // LI parent of submenu
+    //
+    // LI that is parent of SUBMENU
+    //
     .ls-submenu-parent
-      outline: 1px solid blue
+      &:after
+        top: 26px
+        right: 5px
+        font-size: 9px
+        +rotate(0deg)
+        color: #595959
 
+      // The submenu UL
+      .ls-submenu
+        height: 0
+
+      // When the Submenu is active,
+      // we put a class .ls-active on his parent
       &.ls-active
         overflow: visible
 
+        &:after
+          +rotate(-90deg)
+
+        > a
+          color: #fff
+          background: inherit
+          padding-left: 85px
+          width: $sidebar-width + $sidebar-toggled-width
+          font-weight: 600
+          -moz-transition: none
+          -webkit-transition: none
+          transition: none
+
         // UL Submenu
         .ls-submenu
+          height: auto
           position: absolute
-          left: $sidebar-toggled-width + 10px
+          left: $sidebar-toggled-width
           background: inherit
-          border-radius: 5px
 
           a
-            padding-left: 20px
-            border-radius: 5px
-
+            -moz-transition: none
+            -webkit-transition: none
+            transition: none
+            padding: 15px 25px
 
   // .ls-sidebar
   //   width: 60px
