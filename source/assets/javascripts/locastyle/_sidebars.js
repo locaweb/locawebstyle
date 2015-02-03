@@ -15,7 +15,7 @@ locastyle.sidebars = (function() {
     ariaSubmenu();
   }
 
-  // adiciona o bind de click no modulo e chama os métodos necessários
+  // add click bind and call the necessary methods
   function bindShowSidebar() {
     $('.ls-show-sidebar').on('touchstart.ls click.ls', function(evt) {
       evt.preventDefault();
@@ -23,7 +23,7 @@ locastyle.sidebars = (function() {
     });
   }
 
-  // adiciona o bind de click no modulo e chama os métodos necessários
+  // add click bind and call the necessary methods
   function bindShowNotifications() {
     $('.ls-show-notifications').on('touchstart.ls click.ls', function(evt) {
       evt.preventDefault();
@@ -31,7 +31,7 @@ locastyle.sidebars = (function() {
     });
   }
 
-  // adiciona a class de css na tag html
+  // add class in HTML tag
   function sidebarAddClass() {
     $('html').toggleClass('ls-sidebar-visible');
   }
@@ -54,9 +54,10 @@ locastyle.sidebars = (function() {
     }
   }
 
-  //
-  // Submenu Treatment
-  //
+  ////
+  // Submenu
+  // In sidebar some options of menu have a internal Submenu. Here we treat this scenario, when the menu is Minimized or Maximized.
+  ////
   function prepareSubmenu() {
     var hasSubmenu = $('.ls-menu').find('ul li ul');
     $(hasSubmenu).each(function(){
@@ -66,15 +67,18 @@ locastyle.sidebars = (function() {
     });
   }
 
+  // When click in menu option, open your relative submenu
   function subMenu() {
     $('.ls-submenu-parent').on('click', ' > a', function(evt) {
-      console.count('teste')
       evt.preventDefault();
 
       var $submenu = $(this).parent('.ls-submenu-parent');
       $submenu.addClass('ls-active');
       ariaSubmenu($submenu);
     });
+
+    // When menu is maximized, the submenu need to be opened if one of your items have is active.
+    // But, when the menu is minimized, the submenu need to be closed
     if (!$('.ls-sidebar-toggled').length) {
       if($('.ls-submenu li.ls-active')){
         $('.ls-submenu').parents('.ls-submenu-parent').addClass('ls-active');
@@ -82,13 +86,7 @@ locastyle.sidebars = (function() {
     }
   }
 
-  // remove os binds que o próprio modulo adiciona
-  function unbind() {
-    $('.ls-show-sidebar').off('touchstart.ls click.ls');
-    $('.ls-show-notifications').off('touchstart.ls click.ls');
-    $('.ls-submenu-parent > a').off('click.ls');
-  }
-
+  // Add WAI-ARIA in menu items
   function ariaMenu() {
     var $menu = $('.ls-menu');
     $menu.attr({ role : 'navigation' });
@@ -100,6 +98,7 @@ locastyle.sidebars = (function() {
     });
   }
 
+  // Add WAI-ARIA in submenu items
   function ariaSubmenu(el) {
     if($(el).hasClass('ls-active')){
       $(el).attr({
@@ -113,6 +112,14 @@ locastyle.sidebars = (function() {
       });
     }
   }
+
+  // remove the binds
+  function unbind() {
+    $('.ls-show-sidebar').off('touchstart.ls click.ls');
+    $('.ls-show-notifications').off('touchstart.ls click.ls');
+    $('.ls-submenu-parent > a').off('click.ls');
+  }
+
 
   return {
     init: init,
