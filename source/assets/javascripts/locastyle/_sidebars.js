@@ -11,6 +11,9 @@ locastyle.sidebars = (function() {
     userAccountVerification();
     prepareSubmenu();
     subMenu();
+    hasSubmenuItemActive();
+    openSubmenuItemActive();
+    deactiveSubmenu();
     ariaMenu();
     ariaSubmenu();
   }
@@ -69,19 +72,37 @@ locastyle.sidebars = (function() {
 
   // When click in menu option, open your relative submenu
   function subMenu() {
-    $('.ls-submenu-parent').on('click', ' > a', function(evt) {
+    $('.ls-submenu-parent').on('click', '> a', function(evt){
       evt.preventDefault();
 
-      var $submenu = $(this).parent('.ls-submenu-parent');
-      $submenu.addClass('ls-active');
+      var $submenu = $(this).parents('.ls-submenu-parent')
+      $submenu.toggleClass('ls-active');
+
+      // change wai-aria in submenu
       ariaSubmenu($submenu);
     });
+  }
 
-    // When menu is maximized, the submenu need to be opened if one of your items have is active.
-    // But, when the menu is minimized, the submenu need to be closed
+  // Active the submenu-parent if have a child actived.
+  function openSubmenuItemActive() {
+    if( hasSubmenuItemActive() ) {
+      $('.ls-submenu').parents('.ls-submenu-parent').addClass('ls-active');
+    }
+  }
+
+  function closeSubmenu() {
+    $(window).on('sidebar-status', function(){
+      if( $('.ls-submenu-parent.ls-active').length ) {
+        $('.ls-submenu').parents('.ls-submenu-parent').removeClass('ls-active');
+      }
+    });
+  }
+
+  // Alert if have the a submenu child actived
+  function hasSubmenuItemActive() {
     if (!$('.ls-sidebar-toggled').length) {
-      if($('.ls-submenu li.ls-active')){
-        $('.ls-submenu').parents('.ls-submenu-parent').addClass('ls-active');
+      if($('.ls-submenu li.ls-active').length){
+        return true
       }
     }
   }
@@ -124,6 +145,7 @@ locastyle.sidebars = (function() {
   return {
     init: init,
     subMenu: subMenu,
+    openSubmenuItemActive: openSubmenuItemActive,
     unbind: unbind
   };
 
