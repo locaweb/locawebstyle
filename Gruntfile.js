@@ -47,7 +47,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-plato');
 
-  grunt.registerTask('default', ['plato', 'githooks']);
+  grunt.registerTask('default', ['plato', 'jshint']);
   grunt.registerTask('test', ['jshint']);
 };
 
