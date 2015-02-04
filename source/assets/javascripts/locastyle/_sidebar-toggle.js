@@ -47,6 +47,7 @@ locastyle.sidebarToggle = (function() {
     $('.ls-sidebar-toggle').addClass('ls-active');
     localStorage.setItem('stateSidebar', 'minimized');
     $.event.trigger('sidebar-status');
+    locastyle.sidebars.closeSubmenu();
   }
 
   // maximize sidebar

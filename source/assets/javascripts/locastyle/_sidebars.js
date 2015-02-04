@@ -75,7 +75,7 @@ locastyle.sidebars = (function() {
     $('.ls-submenu-parent').on('click', '> a', function(evt){
       evt.preventDefault();
 
-      var $submenu = $(this).parents('.ls-submenu-parent')
+      var $submenu = $(this).parents('.ls-submenu-parent');
       $submenu.toggleClass('ls-active');
 
       // change wai-aria in submenu
@@ -102,7 +102,7 @@ locastyle.sidebars = (function() {
   function hasSubmenuItemActive() {
     if (!$('.ls-sidebar-toggled').length) {
       if($('.ls-submenu li.ls-active').length){
-        return true
+        return true;
       }
     }
   }
@@ -145,6 +145,7 @@ locastyle.sidebars = (function() {
   return {
     init: init,
     subMenu: subMenu,
+    closeSubmenu: closeSubmenu,
     openSubmenuItemActive: openSubmenuItemActive,
     unbind: unbind
   };
