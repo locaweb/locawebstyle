@@ -30,16 +30,24 @@ module.exports = function(grunt) {
         }
       }
     },
+    githooks: {
+      all: {
+        // 'pos-commit': 'jshint',
+      }
+    },
     watch: {
       files: ['<%= project.files.js %>'],
-      tasks: ['jshint']
+      tasks: ['jshint', 'githooks']
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
+  grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-plato');
 
-  grunt.registerTask('default', ['plato', 'jshint']);
+  grunt.registerTask('default', ['plato', 'githooks']);
+  grunt.registerTask('test', ['jshint']);
 };
+
