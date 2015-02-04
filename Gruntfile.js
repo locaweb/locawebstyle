@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     },
     githooks: {
       all: {
-        // 'pos-commit': 'jshint',
+        'pre-commit': 'jshint',
       }
     },
     watch: {
