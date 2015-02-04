@@ -328,11 +328,13 @@ $sidebar-toggled-width: 60px
     //
     .ls-submenu-parent
       &:after
-        top: 26px
         right: 5px
         font-size: 9px
-        +rotate(0deg)
+        +rotate(-90deg)
         color: #595959
+
+      &:hover:after
+        color: #fff
 
       // The submenu UL
       .ls-submenu
@@ -344,7 +346,7 @@ $sidebar-toggled-width: 60px
         overflow: visible
 
         &:after
-          +rotate(-90deg)
+          color: #fff
 
         > a
           color: #fff
@@ -368,17 +370,6 @@ $sidebar-toggled-width: 60px
             -webkit-transition: none
             transition: none
             padding: 15px 25px
-
-  // .ls-sidebar
-  //   width: 60px
-  //   overflow: hidden
-  //   z-index: 12
-
-
-  //     .ls-menu
-
-  //     .ls-area-account
-  //       height: 100px
 
   .ls-area-account
     +single-transition(height, .4s)
