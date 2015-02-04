@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - general.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>general.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">73.71</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">181</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">25.86</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">1.93</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">var locastyle = locastyle || {};
+locastyle.general = (function() {
+  &#039;use strict&#039;;
+
+  var events = {
+    &#039;[data-toggle-class]|click&#039;: _toggleClass,
+    &#039;[data-toggle-text]|click&#039;: _toggleText,
+    &#039;.ls-link-smooth|click&#039;: _smoothScroll
+  };
+
+  function init() {
+    _unbind();
+    _autoTrigger();
+    _loadEvents();
+    _elementDisabled();
+    _linkPreventDefault();
+    _btnGroupActivationToogle();
+    _menuAnchor();
+    _toggleFields();
+    subMenu();
+    _ariaMenu();
+  }
+
+  jQuery.fn.toggleAttr = function(attr) {
+    return this.each(function() {
+      var $this = $(this);
+      return $this.attr(attr) ? $this.removeAttr(attr) : $this.attr(attr, attr);
+    });
+  };
+
+  function _loadEvents() {
+    $.each(events, function(eventDesc, fn) {
+      var selectorEvent = eventDesc.split(&#039;|&#039;);
+      $(selectorEvent[0]).off(selectorEvent[1], selectorEvent[2]);
+      $(selectorEvent[0]).on(selectorEvent[1], selectorEvent[2], function(evt) {
+        var $this = $(this);
+        fn(evt, $this);
+      });
+    });
+  }
+
+  function _autoTrigger(){
+    var hash = window.location.hash.replace(&quot;!/#&quot;, &quot;&quot;);
+    if(hash !== &#039;&#039;){
+      $(&#039;[data-target=&quot;&#039; + hash + &#039;&quot;], a[href=&quot;&#039; + hash + &#039;&quot;]&#039;).trigger(&#039;click&#039;);
+    }
+  }
+
+  function _toggleFields(){
+    $(&#039;[data-ls-fields-enable]&#039;).on(&#039;click.ls&#039;, function(evt) {
+      evt.preventDefault();
+      var $this = $(this);
+      var $container = $($this.data(&#039;ls-fields-enable&#039;));
+      var isFormText = $container.data(&#039;form-text&#039;) ? &#039;ls-form-text&#039; : &#039;&#039;;
+      $container
+        .toggleClass(&#039;ls-form-disable ls-active &#039; + isFormText)
+        .find(&#039;:input&#039;).each(function(indexField, field){
+          var $field = $(field);
+          $field
+            .toggleAttr(&#039;disabled&#039;)
+            .toggleClass(isFormText)
+            .val($field.data(&#039;original-value&#039;));
+        });
+    });
+  }
+
+  function _menuAnchor() {
+    $(&quot;.ls-menu .ls-active &gt; a&quot;).focus().css(&#039;outline&#039;, &#039;none&#039;);
+  }
+
+  function _toggleClass(evt, $this) {
+    var $target = $this.data(&#039;target&#039;) ? $($this.data(&#039;target&#039;)) : $this,
+        cssClass = $this.data(&#039;toggle-class&#039;);
+    if( /(radio)|(checkbox)/.test($this.attr(&#039;type&#039;))  ){
+      $target.toggleClass(cssClass, !$this.prop(&#039;checked&#039;));
+      $(&#039;[name=&quot;&#039; + $this.attr(&#039;name&#039;) + &#039;&quot;]&#039;).not($this).each(function () {
+        var $that = $(this);
+        var $target2 = $that.data(&#039;target&#039;) ? $($that.data(&#039;target&#039;)) : $that,
+        cssClass2 = $that.data(&#039;toggle-class&#039;);
+        $target2.toggleClass(cssClass2, $this.prop(&#039;checked&#039;));
+      });
+    } else {
+      evt.preventDefault();
+      $target.toggleClass(cssClass);
+    }
+  }
+
+  function _toggleText(evt, $this) {
+    evt.preventDefault();
+    var $target      = $this.data(&#039;target-text&#039;) ? $($this.data(&#039;target-text&#039;)) : $this,
+        textChange   = $this.data(&#039;toggle-text&#039;),
+        textOriginal = $target.text();
+    $this.data(&#039;toggle-text&#039;, textOriginal);
+    $target.text(textChange);
+  }
+
+  function _smoothScroll(evt, $this) {
+    evt.preventDefault();
+    var $target = $($this.attr(&#039;href&#039;));
+    if ($target[0]) {
+      $(&#039;html,body&#039;).animate({
+        scrollTop: $target.offset().top - 70
+      }, 1000);
+    }
+  }
+
+  function subMenu() {
+    $(&#039;.ls-submenu &gt; a&#039;).on(&#039;click.ls&#039;, function(evt) {
+      var $submenu = $(this).parent(&#039;.ls-submenu&#039;);
+      evt.preventDefault();
+      $(this).parent().toggleClass(&#039;ls-active&#039;);
+      _ariaSubmenu($submenu);
+    });
+    if($(&#039;.ls-submenu&#039;).find(&#039;li&#039;).hasClass(&#039;ls-active&#039;)){
+      $(&#039;.ls-submenu li.ls-active&#039;).parents(&#039;.ls-submenu&#039;).addClass(&#039;ls-active&#039;);
+    }
+  }
+
+  function _elementDisabled() {
+    $(&quot;.ls-disabled, [disabled=&#039;disabled&#039;]&quot;).on(&#039;click&#039;, function(evt) {
+      if( $(this).hasClass(&#039;ls-disabled&#039;) || $(this).attr(&#039;disabled&#039;) === &#039;disabled&#039; ){
+        evt.stopImmediatePropagation();
+        evt.preventDefault();
+        evt.stopPropagation();
+        return false;
+      }
+    });
+  }
+
+  function _linkPreventDefault(dom_scope) {
+    $(&quot;a&quot;, dom_scope).on(&quot;click.lsPreventDefault&quot;, function(e) {
+      if ($(this).attr(&quot;href&quot;) === &quot;&quot; || $(this).attr(&quot;href&quot;) === &quot;#&quot;) {
+        e.preventDefault();
+      }
+    });
+  }
+
+  function _btnGroupActivationToogle() {
+    $(&quot;.ls-group-active [class*=&#039;ls-btn&#039;]&quot;).on(&quot;click&quot;, function() {
+      $(this).siblings().removeClass(&quot;ls-active&quot;);
+      $(this).addClass(&quot;ls-active&quot;);
+    });
+  }
+
+  function _unbind () {
+    $(&#039;[data-ls-fields-enable]&#039;).off(&#039;click.ls&#039;);
+    $(&#039;.ls-submenu &gt; a&#039;).off(&#039;click.ls&#039;);
+    $(&quot;.ls-disabled, [disabled=&#039;disabled&#039;]&quot;).off(&#039;click&#039;);
+  }
+
+  function _ariaMenu() {
+    var $menu = $(&#039;.ls-menu&#039;);
+    $menu.attr({ role : &#039;navigation&#039; });
+    $menu.find(&#039;ul&#039;).attr({ role: &#039;menu&#039; });
+    $menu.find(&#039;a&#039;).attr({ role : &#039;menuitem&#039; });
+
+    $(&#039;.ls-submenu&#039;).each(function(i,el){
+       _ariaSubmenu(el);
+    });
+  }
+
+  function _ariaSubmenu(el) {
+    if($(el).hasClass(&#039;ls-active&#039;)){
+      $(el).attr({
+        &#039;aria-expanded&#039;: &#039;true&#039;,
+        &#039;aria-hidden&#039; : &#039;false&#039;
+      });
+    } else{
+      $(el).attr({
+        &#039;aria-expanded&#039;: &#039;false&#039;,
+        &#039;aria-hidden&#039; : &#039;true&#039;
+      });
+    }
+  }
+
+  return {
+    init: init,
+    subMenu: subMenu
+  };
+
+}());</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

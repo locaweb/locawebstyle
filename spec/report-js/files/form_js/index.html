@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - form.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>form.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">71.35</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">124</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">24.92</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">1.40</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">var locastyle = locastyle || {};
+
+locastyle.form = (function() {
+  &#039;use strict&#039;;
+
+  var config = {
+    selectors: {
+      disable: &#039;.ls-form-disable&#039;,
+      text: &#039;.ls-form-text&#039;
+    }
+  };
+
+  function init() {
+    formDisable();
+    formText();
+    masks();
+    textareaAutoresize();
+    prefixSufix();
+    togglePasswordField();
+    textareaHeight();
+  }
+
+  function prefixSufix () {
+    if(locastyle.breakpointClass == &#039;ls-screen-xs&#039;){
+      $(&#039;.ls-label-text-sufix&#039;).parents(&#039;.ls-label&#039;).addClass(&#039;ls-label-text-has-sufix&#039;);
+      $(&#039;.ls-label-text-prefix&#039;).parents(&#039;.ls-label&#039;).addClass(&#039;ls-label-text-has-prefix&#039;);
+    } else{
+      $(&#039;.ls-label-text-sufix&#039;).prev(&#039;[class*=&quot;col-&quot;]&#039;)
+        .addClass(&#039;ls-no-padding-right&#039;)
+        .find(&#039;:input&#039;).addClass(&#039;ls-no-right-radius ls-border&#039;);
+    }
+  }
+
+  function textareaAutoresize () {
+    $(&#039;textarea.ls-textarea-autoresize&#039;, &#039;.ls-label&#039;).each(function (index, textarea) {
+      var $textarea = $(textarea);
+      $textarea.keyup(function () {
+        if (!$textarea.prop(&#039;scrollTop&#039;)) {
+          var scrollHeight;
+          do {
+            scrollHeight = $textarea.prop(&#039;scrollHeight&#039;);
+            var height = $textarea.height();
+            $textarea.height(height - 5);
+          } while (scrollHeight &amp;&amp; (scrollHeight != $textarea.prop(&#039;scrollHeight&#039;)));
+        }
+        $textarea.height($textarea.prop(&#039;scrollHeight&#039;) );
+      });
+    });
+  }
+
+  function textareaHeight (){
+    $(&#039;textarea&#039;).each(function (index, textarea) {
+      var text = $(textarea).val();
+      var lines = text.split(/\r|\r\n|\n/);
+      var count = lines.length;
+      var total = count * 18;
+      $(textarea).height(total + &#039;px&#039;);
+    });
+  }
+
+  function masks() {
+    $(&#039;.ls-mask-date&#039;).mask(&#039;11/11/1111&#039;);
+    $(&#039;.ls-mask-time&#039;).mask(&#039;00:00:00&#039;);
+    $(&#039;.ls-mask-date_time&#039;).mask(&#039;00/00/0000 00:00:00&#039;);
+    $(&#039;.ls-mask-cep&#039;).mask(&#039;00000-000&#039;);
+    $(&#039;.ls-mask-phone8&#039;).mask(&#039;0000-0000&#039;);
+    $(&#039;.ls-mask-phone9&#039;).mask(&#039;00009-0000&#039;);
+    $(&#039;.ls-mask-phone8_with_ddd&#039;).mask(&#039;(00) 0000-0000&#039;);
+    $(&#039;.ls-mask-phone9_with_ddd&#039;).mask(&#039;(00) 00009-0000&#039;);
+    $(&#039;.ls-mask-cpf&#039;).mask(&#039;000.000.000-00&#039;, {reverse: true});
+    $(&#039;.ls-mask-cnpj&#039;).mask(&#039;00.000.000/0000-00&#039;, {reverse: true});
+    $(&#039;.ls-mask-money&#039;).mask(&quot;#.##0,00&quot;, {reverse: true, maxlength: false});
+    $(&#039;.ls-mask-number&#039;).mask(&quot;#.##0&quot;, {reverse: true, maxlength: false});
+    $(&#039;.ls-mask-ip_address&#039;).mask(&#039;0ZZ.0ZZ.0ZZ.0ZZ&#039;, {translation: {&#039;Z&#039;: {pattern: /[0-9]/, optional: true}}});
+    $(&#039;.ls-mask-percent&#039;).mask(&#039;##0,00%&#039;, {reverse: true});
+  }
+
+  function formDisable() {
+    $( config.selectors.disable ).each(function(indexContainer, container){
+      var $container = $(container);
+      $container.find(&#039;:input&#039;).each(function(indexField, field){
+        var $field = $(field);
+        $field.attr(&#039;disabled&#039;, &#039;disabled&#039;);
+        $field.data(&#039;original-value&#039;, $field.val() );
+      });
+    });
+
+  }
+
+  function formText() {
+    $( config.selectors.text ).each(function(indexContainer, container){
+      $(container).find(&#039;:input&#039;).each(function(indexField, field){
+        $(field).addClass(&#039;ls-form-text&#039;);
+      });
+      $(container).data(&#039;form-text&#039;, true);
+    });
+  }
+
+  function dataToggleClass($element){
+    if($($element).data(&#039;toggle-class&#039;) !== undefined){
+      var getClass = $($element).data(&#039;toggle-class&#039;).split(&#039;,&#039;);
+      $($element).toggleClass(getClass[0]).toggleClass(getClass[1]);
+    }
+  }
+
+  function togglePasswordField(){
+    $(&#039;.ls-toggle-pass&#039;).on(&quot;click&quot;, function(e){
+      e.preventDefault();
+      var target = $(this).data(&#039;target&#039;);
+      dataToggleClass($(this));
+      if ($(target).attr(&#039;type&#039;) == &#039;password&#039;){
+        $(target).removeAttr(&#039;attr&#039;).prop(&#039;type&#039;,&#039;text&#039;);
+      } else {
+        $(target).removeAttr(&#039;attr&#039;).prop(&#039;type&#039;,&#039;password&#039;);
+      }
+    });
+  }
+
+  return {
+    init: init,
+    togglePasswordField: togglePasswordField
+  };
+
+}());</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>
