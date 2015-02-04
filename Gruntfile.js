@@ -26,7 +26,7 @@ module.exports = function(grunt) {
     plato: {
       task: {
         files: {
-        'spec/report-js': ['<%= project.files.js %>']
+        'source/documentacao/report-js': ['<%= project.files.js %>']
         }
       }
     },
