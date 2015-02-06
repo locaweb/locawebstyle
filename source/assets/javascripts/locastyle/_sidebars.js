@@ -14,6 +14,7 @@ locastyle.sidebars = (function() {
     submenu();
     openSubmenuItemActive();
     whenSidebarToggling();
+    clickAnywhereCloseSubmenu();
 
     ariaMenu();
     ariaSubmenu();
@@ -128,6 +129,18 @@ locastyle.sidebars = (function() {
       $('.ls-submenu li.ls-active').each(function(){
         openSubmenu( $(this) );
       });
+    });
+  }
+
+  // If user click anywhere in page, close the submenu when sidebar is Toggled.
+  function clickAnywhereCloseSubmenu() {
+    $(document).on('click', function(evt){
+      var target = $(evt.target)
+      if($('.ls-sidebar-toggled').length && $('.ls-submenu-parent.ls-active').length) {
+        if(!target.is('.ls-submenu-parent.ls-active *')) {
+          closeSubmenu( $('.ls-submenu-parent.ls-active > a') );
+        }
+      }
     });
   }
 
