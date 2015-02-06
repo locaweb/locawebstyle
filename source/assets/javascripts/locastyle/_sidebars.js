@@ -22,7 +22,7 @@ locastyle.sidebars = (function() {
   function bindShowSidebar() {
     $('.ls-show-sidebar').on('touchstart.ls click.ls', function(evt) {
       evt.preventDefault();
-      sidebarAddClass();
+      sidebarVisibleClass();
     });
   }
 
@@ -30,16 +30,17 @@ locastyle.sidebars = (function() {
   function bindShowNotifications() {
     $('.ls-show-notifications').on('touchstart.ls click.ls', function(evt) {
       evt.preventDefault();
-      notificationAddClass();
+      notificationClassVisible();
     });
   }
 
-  // add class in HTML tag
-  function sidebarAddClass() {
+  // add class in HTML tag when the sidebar is visible
+  function sidebarVisibleClass() {
     $('html').toggleClass('ls-sidebar-visible');
   }
 
-  function notificationAddClass() {
+  // add class in HTML tag when the notification is visible
+  function notificationClassVisible() {
     $('html').toggleClass('ls-notifications-visible');
   }
 
