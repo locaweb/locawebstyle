@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - track-events.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>track-events.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">68.45</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">155</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">35.86</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">2.26</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">var locastyle = locastyle || {};
+
+locastyle.trackEvents = (function() {
+  &#039;use strict&#039;;
+
+  function init(){
+    if(window.ga){
+      this.gaPresent = true;
+      setCategory(this);
+      findTriggers();
+    } else {
+      this.gaPresent = false;
+    }
+  }
+
+  function setCategory(module){
+    module.eventCategory = $(&quot;body&quot;).attr(&quot;data-ls-te-category&quot;) || window.location.pathname;
+  }
+
+  function findTriggers(){
+    findLinks();
+    findButtons();
+    findForms();
+    findSelects();
+    bindGuidedTour();
+  }
+
+  function findLinks(){
+    var links = $(&quot;a&quot;);
+    $(links).each(function (index, item) {
+      var options = {};
+      options.category = $(item).data(&quot;ls-te-category&quot;) ? $(item).data(&quot;ls-te-category&quot;) : null;
+      options.action = $(item).data(&quot;ls-te-action&quot;) ? $(item).data(&quot;ls-te-action&quot;) : &#039;open_link_#&#039; + $(item).attr(&quot;href&quot;);
+      options.label = $(item).data(&quot;ls-te-label&quot;) ? $(item).data(&quot;ls-te-label&quot;) : $(item).text();
+      if($(item).attr(&quot;href&quot;)) {
+        if($(item).attr(&quot;href&quot;).indexOf(&quot;#&quot;) === 0) {
+          options.action = $(item).data(&quot;ls-te-action&quot;) ? $(item).data(&quot;ls-te-action&quot;) : &#039;on_page_link_&#039; + $(item).attr(&quot;href&quot;);
+        }
+      }
+      if($(item).attr(&quot;data-ls-module&quot;) === &quot;tabs&quot;){
+        options.action = &#039;tab_navigation&#039;;
+      }
+      if($(item).parent().attr(&quot;data-ls-module&quot;) === &quot;dropdown&quot;){
+        if($(item).parents(&quot;.ls-topbar&quot;).length &gt; 0){
+          options.action = &#039;top_bar_action&#039;;
+          options.label = &#039;Toggle user dropdown&#039;;
+        } else {
+          options.action = &#039;dropdown_toggle&#039;;
+        }
+      }
+      if($(item).attr(&quot;data-ls-module&quot;) === &quot;modal&quot;){
+        var modal = $(item).data(&quot;target&quot;) ? $(item).data(&quot;target&quot;) : $(item).attr(&quot;href&quot;);
+        options.action = &#039;open_modal_&#039; + modal;
+      }
+      if($(item).parent().attr(&quot;data-ls-module&quot;) === &quot;collapse&quot;){
+        options.type = &quot;collapse&quot;;
+      }
+      if($(item).attr(&quot;data-ls-module&quot;) === &quot;topbarCurtain&quot;){
+        options.action = &quot;top_bar_action&quot;;
+      }
+      bindClickEvents(item, options);
+    });
+  }
+
+  function findButtons(){
+    var buttons = $(&quot;button&quot;);
+    $(buttons).each(function (index, item) {
+      var options = {};
+      options.category = $(item).data(&quot;ls-te-category&quot;) ? $(item).data(&quot;ls-te-category&quot;) : null;
+      options.action = $(item).data(&quot;ls-te-action&quot;) ? $(item).data(&quot;ls-te-action&quot;) : &#039;on_page_button_#&#039;;
+      options.label = $(item).data(&quot;ls-te-label&quot;) ? $(item).data(&quot;ls-te-label&quot;) : $(item).text();
+      var modal;
+      if($(item).attr(&quot;data-ls-module&quot;) === &quot;modal&quot;){
+        modal = $(item).data(&quot;target&quot;) ? $(item).data(&quot;target&quot;) : $(item).attr(&quot;href&quot;);
+        options.action = &#039;open_modal_&#039; + modal;
+      }
+      if($(item).attr(&quot;data-dismiss&quot;) === &quot;modal&quot;){
+        modal = $($(item).parents(&quot;.ls-modal&quot;)).attr(&quot;id&quot;);
+        options.action = &#039;close_modal_#&#039; + modal;
+      }
+      bindClickEvents(item, options);
+    });
+  }
+
+  function findForms(){
+    var forms = $(&quot;form&quot;);
+    $(forms).each(function (index, item) {
+      var options = {};
+      if($(item).parents(&#039;.ls-modal&#039;).length) {
+        options.action = &quot;submit_form_#&quot; + ($(item).data(&quot;action&quot;) || $(item).attr(&quot;id&quot;) || $(item).attr(&quot;action&quot;)) + &quot;#inside_modal#&quot; + $(item).parents(&#039;.ls-modal&#039;).attr(&quot;id&quot;);
+      } else {
+        options.action = &quot;submit_form_#&quot; + ($(item).data(&quot;action&quot;) || $(item).attr(&quot;id&quot;) || $(item).attr(&quot;action&quot;));
+      }
+      options.label = $(item).find(&quot;:submit[type=submit]&quot;).val() || $(item).find(&quot;:submit[type=submit]&quot;).text();
+      bindFormEvents(item, options);
+    });
+  }
+
+  function findSelects() {
+    var selects = $(&quot;select&quot;);
+    $(selects).each(function (index, item) {
+      var options = {};
+      options.category = $(item).data(&quot;ls-te-category&quot;) ? $(item).data(&quot;ls-te-category&quot;) : null;
+      options.action = &quot;select_change_#&quot; + ($(item).attr(&quot;id&quot;) || $(item).attr(&quot;name&quot;));
+      options.label = &quot;option&quot;;
+      bindSelects(item, options);
+    });
+  }
+
+  function bindClickEvents(element, options){
+    $(element).off(&quot;click.lsTrackEvent&quot;);
+    $(element).on(&quot;click.lsTrackEvent&quot;, function () {
+      if(options.type === &quot;collapse&quot;){
+        var targetCollapse = $(element).parent().attr(&quot;id&quot;);
+        if($(&quot;#&quot; + targetCollapse).hasClass(&quot;ls-collapse-open&quot;)){
+          options.action = &#039;close_collapse_#&#039; + targetCollapse;
+          options.label = &quot;Close collapse&quot;;
+        } else {
+          options.action = &#039;open_collapse_#&#039; + targetCollapse;
+          options.label = &quot;Open collapse&quot;;
+        }
+      }
+      ga(&#039;send&#039;, &#039;event&#039;, options.category || locastyle.trackEvents.eventCategory, options.action, options.label);
+    });
+  }
+
+  function bindFormEvents(element, options) {
+    $(element).find(&quot;:submit[type=submit]&quot;).off(&quot;click.lsTrackEvent&quot;);
+    $(element).off(&quot;submit.ls&quot;);
+    $(element).on(&quot;submit.ls&quot;, function () {
+      ga(&#039;send&#039;, &#039;event&#039;, locastyle.trackEvents.eventCategory, options.action, options.label);
+    });
+  }
+
+  function bindSelects(element, options) {
+    $(element).off(&quot;change.ls&quot;);
+    $(element).on(&quot;change.ls&quot;, function () {
+      options.label = $(this).val();
+      ga(&#039;send&#039;, &#039;event&#039;, options.category || locastyle.trackEvents.eventCategory, options.action, options.label);
+    });
+  }
+
+  function bindGuidedTour() {
+    $(&quot;body&quot;).off(&quot;click.lsTrackEvents&quot;);
+    $(&quot;body&quot;).on(&quot;click.lsTrackEvents&quot;, &quot;.hopscotch-bubble .hopscotch-nav-button&quot;, function() {
+      var currentStep = $(this).parents(&quot;.hopscotch-bubble&quot;).find(&quot;.hopscotch-bubble-number&quot;).text();
+      ga(&#039;send&#039;, &#039;event&#039;, locastyle.trackEvents.eventCategory, &#039;go_to_tour_step[&#039; + currentStep + &#039;]&#039;, $(this).text());
+    });
+  }
+
+  return {
+    init: init
+  };
+
+}());</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>
