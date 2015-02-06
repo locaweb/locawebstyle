@@ -46,8 +46,7 @@ locastyle.sidebarToggle = (function() {
     $('html').addClass('ls-sidebar-toggled');
     $('.ls-sidebar-toggle').addClass('ls-active');
     localStorage.setItem('stateSidebar', 'minimized');
-    $.event.trigger('sidebar-status');
-    locastyle.sidebars.closeSubmenu();
+    $.event.trigger('sidebar-minimize');
   }
 
   // maximize sidebar
@@ -55,8 +54,7 @@ locastyle.sidebarToggle = (function() {
     $('html').removeClass('ls-sidebar-toggled');
     $('.ls-sidebar-toggle').removeClass('ls-active');
     localStorage.removeItem('stateSidebar');
-    $.event.trigger('sidebar-status');
-    locastyle.sidebars.openSubmenuItemActive();
+    $.event.trigger('sidebar-maximize');
   }
 
   // When in Mobile, maximize sidebar
