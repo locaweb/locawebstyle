@@ -9,11 +9,12 @@ locastyle.sidebars = (function() {
     bindShowSidebar();
     bindShowNotifications();
     userAccountVerification();
+
     prepareSubmenu();
-    subMenu();
-    hasSubmenuItemActive();
+    submenu();
     openSubmenuItemActive();
-    deactiveSubmenu();
+    whenSidebarToggling();
+
     ariaMenu();
     ariaSubmenu();
   }
@@ -72,41 +73,68 @@ locastyle.sidebars = (function() {
   }
 
   // When click in menu option, open your relative submenu
-  function subMenu() {
+  function submenu() {
     $('.ls-submenu-parent').on('click', '> a', function(evt){
       evt.preventDefault();
 
-      var $submenu = $(this).parents('.ls-submenu-parent');
-      $submenu.toggleClass('ls-active');
+      if ($(this).parents('.ls-submenu-parent').hasClass('ls-active')) {
+        closeSubmenu( $(this) )
+      } else {
+        openSubmenu( $(this) )
+      }
 
-      // change wai-aria in submenu
-      ariaSubmenu($submenu);
     });
+  }
+
+  // Open Submenu
+  function openSubmenu(el) {
+    var $submenu = $(el).parents('.ls-submenu-parent');
+
+    $('.ls-submenu-parent').removeClass('ls-active')
+    $submenu.addClass('ls-active');
+    
+    ariaSubmenu($submenu);
+  }
+
+  // Close Submenu
+  function closeSubmenu(el) {
+    var $submenu = $(el).parents('.ls-submenu-parent');
+    
+    $submenu.removeClass('ls-active');
+    
+    ariaSubmenu($submenu);
   }
 
   // Active the submenu-parent if have a child actived.
   function openSubmenuItemActive() {
-    if( hasSubmenuItemActive() ) {
-      $('.ls-submenu').parents('.ls-submenu-parent').addClass('ls-active');
+    if (!$('.ls-sidebar-toggled').length) {
+      $('.ls-submenu li.ls-active').each(function(){
+        openSubmenu( $(this) );
+      });
     }
   }
 
-  function closeSubmenu() {
-    $(window).on('sidebar-status', function(){
-      if( $('.ls-submenu-parent.ls-active').length ) {
-        $('.ls-submenu').parents('.ls-submenu-parent').removeClass('ls-active');
-      }
+  // When sidebar toggle, close submenu when minimized, open menu when maximize
+  function whenSidebarToggling() {
+
+    // When the user toggle sidebar, is fired two triggers: sidebar-minimize when sidebar is minimizing or sidebar-maximize when sidebar is maximizing
+    $(window).on('sidebar-minimize', function(){
+      $('.ls-submenu li').each(function(){
+        closeSubmenu( $(this) );
+      });
+    });
+
+    $(window).on('sidebar-maximize', function(){
+      $('.ls-submenu li.ls-active').each(function(){
+        openSubmenu( $(this) );
+      });
     });
   }
 
-  // Alert if have the a submenu child actived
-  function hasSubmenuItemActive() {
-    if (!$('.ls-sidebar-toggled').length) {
-      if($('.ls-submenu li.ls-active').length){
-        return true;
-      }
-    }
-  }
+
+  ////
+  // WAI-ARIA
+  ////
 
   // Add WAI-ARIA in menu items
   function ariaMenu() {
@@ -145,9 +173,6 @@ locastyle.sidebars = (function() {
 
   return {
     init: init,
-    subMenu: subMenu,
-    closeSubmenu: closeSubmenu,
-    openSubmenuItemActive: openSubmenuItemActive,
     unbind: unbind
   };
 
