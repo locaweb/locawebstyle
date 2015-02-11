@@ -9,13 +9,14 @@ locastyle.sidebarToggle = (function() {
     addArrowToggle();
     sidebarToggling();
     checkStatus();
+    maximizeMobile();
   }
 
 
   // Add arrow element in sidebar
   function addArrowToggle() {
     if( $('.ls-sidebar').length ) {
-      $('.ls-sidebar').append('<span class="ls-sidebar-toggle ls-ico-circle-left"></span>');
+      $('.ls-sidebar').append('<span class="ls-sidebar-toggle ls-ico-shaft-left"></span>');
     }
   }
 
@@ -45,6 +46,7 @@ locastyle.sidebarToggle = (function() {
     $('html').addClass('ls-sidebar-toggled');
     $('.ls-sidebar-toggle').addClass('ls-active');
     localStorage.setItem('stateSidebar', 'minimized');
+    $.event.trigger('sidebar-minimize');
   }
 
   // maximize sidebar
@@ -52,6 +54,16 @@ locastyle.sidebarToggle = (function() {
     $('html').removeClass('ls-sidebar-toggled');
     $('.ls-sidebar-toggle').removeClass('ls-active');
     localStorage.removeItem('stateSidebar');
+    $.event.trigger('sidebar-maximize');
+  }
+
+  // When in Mobile, maximize sidebar
+  function maximizeMobile() {
+    $(window).on("breakpoint-updated", function () {
+      if ($('.ls-screen-xs').length) {
+        maximizeSidebar();
+      }
+    });
   }
 
   function unbind() {
