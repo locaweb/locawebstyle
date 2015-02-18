@@ -36,11 +36,9 @@ describe('Popover: ', function() {
     });
 
     it('Should show a popover on hover event', function() {
-      var $popoverTrigger = $('#popoverhover');
-      var $popover = $('.ls-popover');
-      $popover.hide();
-      $popoverTrigger.trigger('mouseenter');
-      expect( $popover.eq(2).css('display')  ).toEqual('block');
+      $('.ls-popover').hide();
+      $('#popoverhover').trigger('mouseenter');
+      expect($('#ls-popover-7').css("display")).toEqual("block");
     });
 
     it('Should show and close a popover on repeated hover events', function() {
