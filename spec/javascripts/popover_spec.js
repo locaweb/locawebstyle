@@ -23,7 +23,7 @@ describe('Popover: ', function() {
     it('Should show a popover on click event', function() {
       $('.ls-popover').hide();
       $('#popoverclick').trigger("click");
-      expect($('.ls-popover').css("display")).toEqual("block");
+      expect($('#ls-popover-2').css("display")).toEqual("block");
     });
 
     it('Should show and close a popover on repeated click events', function() {
