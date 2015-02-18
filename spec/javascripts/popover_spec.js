@@ -7,6 +7,7 @@ describe('Popover: ', function() {
   afterEach(function() {
       locastyle.popover.destroyPopover();
   });
+
   describe('Popover creation', function() {
 
     it('Should create one popover for each trigger', function() {
@@ -20,12 +21,9 @@ describe('Popover: ', function() {
   describe('Popover behavior', function() {
 
     it('Should show a popover on click event', function() {
-      var $popoverTrigger = $('#popoverclick');
-      var $popover = $('.ls-popover');
-      $popover.hide();
-      $popoverTrigger.trigger('click');
-      var display = document.getElementsByClassName('ls-popover')[0].style.display;
-      expect( display  ).toEqual('block');
+      $('.ls-popover').hide();
+      $('#popoverclick').trigger("click");
+      expect($('.ls-popover').css("display")).toEqual("block");
     });
 
     it('Should show and close a popover on repeated click events', function() {
