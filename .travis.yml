@@ -8,7 +8,8 @@ script:
 
 branches:
   only:
-    - tests-fix
+    - wip
+    - master
 
 language: ruby
 rvm:
