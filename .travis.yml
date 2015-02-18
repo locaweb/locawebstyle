@@ -8,7 +8,7 @@ script:
 
 branches:
   only:
-    - master
+    - tests-fix
 
 language: ruby
 rvm:
