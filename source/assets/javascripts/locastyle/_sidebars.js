@@ -79,9 +79,9 @@ locastyle.sidebars = (function() {
       evt.preventDefault();
 
       if ($(this).parents('.ls-submenu-parent').hasClass('ls-active')) {
-        closeSubmenu( $(this) )
+        closeSubmenu( $(this) );
       } else {
-        openSubmenu( $(this) )
+        openSubmenu( $(this) );
       }
 
     });
@@ -91,18 +91,18 @@ locastyle.sidebars = (function() {
   function openSubmenu(el) {
     var $submenu = $(el).parents('.ls-submenu-parent');
 
-    $('.ls-submenu-parent').removeClass('ls-active')
+    $('.ls-submenu-parent').removeClass('ls-active');
     $submenu.addClass('ls-active');
-    
+
     ariaSubmenu($submenu);
   }
 
   // Close Submenu
   function closeSubmenu(el) {
     var $submenu = $(el).parents('.ls-submenu-parent');
-    
+
     $submenu.removeClass('ls-active');
-    
+
     ariaSubmenu($submenu);
   }
 
@@ -135,7 +135,7 @@ locastyle.sidebars = (function() {
   // If user click anywhere in page, close the submenu when sidebar is Toggled.
   function clickAnywhereCloseSubmenu() {
     $(document).on('click', function(evt){
-      var target = $(evt.target)
+      var target = $(evt.target);
       if($('.ls-sidebar-toggled').length && $('.ls-submenu-parent.ls-active').length) {
         if(!target.is('.ls-submenu-parent.ls-active *')) {
           closeSubmenu( $('.ls-submenu-parent.ls-active > a') );
