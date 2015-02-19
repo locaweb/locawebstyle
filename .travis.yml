@@ -8,6 +8,7 @@ script:
 
 branches:
   only:
+    - wip
     - master
 
 language: ruby

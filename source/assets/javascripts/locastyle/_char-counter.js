@@ -16,7 +16,7 @@ locastyle.charCounter = (function() {
       var calc = limit-fieldText;
       updateCounter(index, calc);
 
-      $(field).keyup(function(event){
+      $(field).keyup(function(){
         var count = limit - $(this).val().length;
         updateCounter(index, count);
       });

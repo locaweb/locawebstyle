@@ -7,12 +7,12 @@ describe('Dismiss:', function() {
   describe("When click on [data-ls-module=dismiss]", function() {
     it("should dismiss the parent .ls-dismissable", function() {
       $('#dismiss-test [data-ls-module=dismiss]').trigger('click');
-      expect($('#dismiss-test')).toHaveClass('dismissed');
+      expect($('#dismiss-test')).toHaveClass('ls-dismissed');
     });
 
     it("should dismiss the target if target is given", function() {
       $('#dismiss-test-2').trigger('click');
-      expect($('#dismissable-2')).toHaveClass('dismissed');
+      expect($('#dismissable-2')).toHaveClass('ls-dismissed');
     });
   });
 
@@ -21,7 +21,7 @@ describe('Dismiss:', function() {
       it("should unbind events handled by module", function() {
         locastyle.dismiss.unbind();
         $('#dismiss-test-2').trigger("click");
-        expect($('#dismissable-2')).not.toHaveClass('dismissed');
+        expect($('#dismissable-2')).not.toHaveClass('ls-dismissed');
       });
 
       it("should NOT unbind common events handled by other code", function() {

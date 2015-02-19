@@ -14,7 +14,7 @@ locastyle.datepicker = (function() {
   }
 
   function create($elem){
-    var $datepicker = $elem.pikaday({
+   $elem.pikaday({
       firstDay: 1,
       minDate: new Date('2000-01-01'),
       maxDate: new Date('2020-12-31'),
