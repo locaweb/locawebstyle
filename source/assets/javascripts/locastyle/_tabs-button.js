@@ -43,7 +43,7 @@ locastyle.button = (function() {
       if($(this).hasClass('ls-active') === true){
 
         var $elem = $(this).find('[data-ls-module="button"]');
-        var $target = $(this).find('[data-ls-module="button"]').attr('href') || $(this).find('[data-ls-module="button"]').data('target');
+        var $target = $elem.attr('href') || $elem.data('target');
         var $buttons = '[data-ls-module=button]';
 
         addChecked($(this).find('[data-ls-module="button"] input[type="radio"]'));
