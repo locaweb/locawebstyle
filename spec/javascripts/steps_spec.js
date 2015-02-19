@@ -10,16 +10,6 @@ describe("Steps: ", function(){
       expect($('.ls-steps-btn').attr('aria-label')).toBe(label);
     });
 
-
-    it("Don't have class ls-active on the navigation", function(){
-      expect($('#step1a').hasClass('ls-active')).toBe(false);
-    });
-  });
-
-  describe("Don't have class ls-active on the navigation", function(){
-    it("first li navigation hasClass ls-active", function(){
-      expect($('#stepNav1').hasClass('ls-active')).toBe(true);
-    });
   });
 
   describe("when click in steps is actived", function(){
