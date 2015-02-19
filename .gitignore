@@ -23,6 +23,8 @@
 
 vendor/*
 
+.jshintignore
+
 .DS_Store
 
 # Vim
