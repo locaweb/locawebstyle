@@ -5,34 +5,42 @@ locastyle.button = (function() {
 
   function init() {
     unbind();
-    bindClickOnTriggers();
+    bindClick();
     ariaTabs();
   }
 
   function unbind() {
-    $("[data-ls-module=button]").off("click.button");
+    $('[data-ls-module=button]').off('click.button');
   }
 
-  function bindClickOnTriggers() {
-    $("[data-ls-module=button]").on("click.button", function(evt) {
+  function bindClick() {
+    $('[data-ls-module="button"]').on('click.button', function(evt) {
       evt.preventDefault();
-      var $target = $($(this).attr("href") || $(this).data("target"));
+      var $target = $($(this).attr('href') || $(this).data('target'));
       var $buttons = '[data-ls-module=button]';
       deactivateElement(this, $target, $buttons);
       activateElement(this, $target);
+      removeChecked();
+      $(this).find('input').prop('checked', true);
+    });
+  }
+
+  function removeChecked(){
+    $('[data-ls-module="button"] input[type="radio"]').each(function(index, el){
+      $(el).removeAttr('checked');
     });
   }
 
   function activateElement(el, $target) {
-    $(el).parents("li").addClass("ls-active");
-    $target.addClass("ls-active");
+    $(el).parents('li').addClass('ls-active');
+    $target.addClass('ls-active');
     $(el).attr('aria-selected' , true);
   }
 
   function deactivateElement(el, $target, $buttons) {
-    $(el).parents("li").siblings().removeClass("ls-active");
-    $target.siblings().removeClass("ls-active");
-    $(el).parents("li").siblings().find($buttons).attr('aria-selected' , false);
+    $(el).parents('li').siblings().removeClass('ls-active');
+    $target.siblings().removeClass('ls-active');
+    $(el).parents('li').siblings().find($buttons).attr('aria-selected' , false);
   }
 
   function ariaTabs() {
