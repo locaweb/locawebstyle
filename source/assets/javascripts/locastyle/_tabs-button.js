@@ -5,6 +5,7 @@ locastyle.button = (function() {
 
   function init() {
     unbind();
+    addActivedButton();
     bindClick();
     ariaTabs();
   }
@@ -31,15 +32,37 @@ locastyle.button = (function() {
     });
   }
 
+  function addChecked(el){
+    $(el).each(function(index, el){
+      $(el).attr('checked','checked');
+    });
+  }
+
+  function addActivedButton(){
+    $('.ls-tabs-btn-nav li.ls-active').each(function(){
+      if($(this).hasClass('ls-active') === true){
+
+        var $elem = $(this).find('[data-ls-module="button"]');
+        var $target = $(this).find('[data-ls-module="button"]').attr('href') || $(this).find('[data-ls-module="button"]').data('target');
+        var $buttons = '[data-ls-module=button]';
+
+        addChecked($(this).find('[data-ls-module="button"] input[type="radio"]'));
+        deactivateElement($elem, $target, $buttons);
+        activateElement($elem, $target);
+      }
+    });
+  }
+
+
   function activateElement(el, $target) {
     $(el).parents('li').addClass('ls-active');
-    $target.addClass('ls-active');
+    $($target).addClass('ls-active');
     $(el).attr('aria-selected' , true);
   }
 
   function deactivateElement(el, $target, $buttons) {
     $(el).parents('li').siblings().removeClass('ls-active');
-    $target.siblings().removeClass('ls-active');
+    $($target).siblings().removeClass('ls-active');
     $(el).parents('li').siblings().find($buttons).attr('aria-selected' , false);
   }
 
