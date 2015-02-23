@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="ls-theme-green documentacao documentacao_introducao documentacao_introducao_grunt documentacao_introducao_grunt_index">
+<head>
+  <meta charset="UTF-8">
+  <title>Grunt Tasks</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Entenda quais as tasks você pode usar no projeto" />
+  <meta name="keywords" content="" />
+
+  <link href="../../../assets/stylesheets/docs.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/locawebstyle/assets/stylesheets/locastyle.css">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41233562-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+
+
+<header class="doc-header container">
+  <nav class="doc-menu">
+  <span class="sandwich"></span>
+  <ul>
+    <li><a href="/locawebstyle">Home</a></li>
+    <li><a href="/locawebstyle/documentacao/introducao/">Documentação</a></li>
+    <li><a href="/locawebstyle/documentacao/introducao/boilerplate/">Comece por aqui</a></li>
+    <li><a href="https://github.com/locaweb/locawebstyle/releases">Changelog</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v1/">Documentação V1</a></li>
+    <li><a href="http://locaweb.github.io/locawebstyle-v2/">Documentação V2</a></li>
+  </ul>
+</nav>
+
+  <h1 class="doc-logo"><a href="/locawebstyle/"><strong>Locaweb</strong> Style</a></h1>
+</header>
+
+<div class="doc-title-intro">
+  <div class="container">
+    <h1>Documentação</h1>
+    <p>Saiba todas as features que te ajudarão a produzir sistemas mais rapidamente.</p>
+  </div>
+</div>
+
+<nav class="doc-menu-top">
+  <div class="container">
+    <ul>
+      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/'>Introdução</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/css/grid/'>CSS</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/'>Funções JS</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/estrutura-principal/'>Componentes</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/formularios/'>Formulários</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/exemplos/'>Telas de Exemplo</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="doc-content container">
+  <div class="row">
+    <aside class="doc-sidebar col-md-3">
+<div class="doc-sidebar-inner">
+  <nav class="doc-sidebar-menu">
+    <ul>
+      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/'>Informações iniciais</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/boilerplate/'>Comece por aqui</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/praticas/css/'>Padrões de CSS</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/praticas/javascript/'>Padrões de Javascript</a></li>
+      <li class='active'><a class='active' href='/locawebstyle/documentacao/introducao/grunt/'>Grunt Tasks</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/chrome/'>Extensão para Chrome</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/suporte-browsers/'>Suporte para Browsers Antigos</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/introducao/contribua/'>Contribua</a></li>
+    </ul>
+  </nav>
+</div>
+</aside>
+
+
+<section class="col-md-9">
+
+  <div class="doc-intro-content">
+  <h1>Grunt Tasks</h1>
+  <p>Entenda quais as tasks você pode usar no projeto</p>
+</div>
+
+
+  <p><a href="http://gruntjs.com/">Grunt</a> é um task runner desenvolvido para automatizar algumas tarefas corriqueiras durante o desenvolvimento web. Aqui no Locaweb Style, temos algumas tarefas que você pode usar durante seu desenvolvimento e abaixo listamos todas elas.</p>
+
+  <h2 class="doc-title-2">Rodando a primeira vez</h2>
+  <p>O Grunt tem uma coleção de tasks que tem algumas dependencias e precisam ser instaladas antes de rodarem. Para isso, apenas digite no console: <code>npm install</code>.</p>
+  <p>Feito isso, você pode rodar as tasks abaixo.</p>
+
+  <h3 class="doc-title-3">grunt</h3>
+  <p>Este é o comando default. Rodando <code>grunt</code> no console ele irá rodar algumas tarefas básicas descritas no <strong>Gruntfile.js</strong>. Por enquanto definimos como padrão as tarefas: jshint e plato. Mas a ideia é ter posteriormente rodando outras tasks úteis.</p>
+
+  <h3 class="doc-title-3">grunt test</h3>
+  <p>Esse comando roda todas as tasks que testam nosso código. Ele vai rodar por exemplo JSHint e Jasmine. Se você quiser testar seu código basta rodar essa tarefa</p>
+
+  <h3 class="doc-title-3">grunt jshint</h3>
+  <p><a href="http://jshint.com/">JSHint</a> é uma ferramenta que te ajuda a escrever JavaScripts com o mínimo de erros de sintaxe que podem causar problemas em potencial futuramente no projeto. O plugin do NPM que usamos é o <a href="https://www.npmjs.com/package/grunt-contrib-jshint">grunt-contrib-jshint</a>.</p>
+  <p>Para rodar o JSHint no projeto, apenas digite no console: <code>grunt jshint</code>.</p>
+
+  <h3 class="doc-title-3">grunt jasmine</h3>
+  <p>O <a href="https://www.npmjs.com/package/grunt-contrib-jasmine">Jasmine</a> vai testar seus scripts. Se vocÊ rodar apenas no conesole um <code>grunt jasmine</code>, ele vai rodar todos os testes do Locaweb Style que se encontram na pasta <strong>/spec/</strong> do projeto. Se você rodar um <code>grunt test</code>, o Grunt rodará os todas as tarefas relacionadas a testes, no caso, por enquanto, só o JSHint e o Jasmine.</p>
+
+
+  <h3 class="doc-title-3">grunt githooks</h3>
+  <p>O <a href="https://www.npmjs.com/package/grunt-githooks">Githooks</a> roda uma série de comandos relacionados com o Git. Uma delas é o <strong>pre-commit</strong>, que roda o JSHint antes dos seus commits. Se você quiser ativar essas configurações, basta digitar no console <code>grunt githooks</code>.</p>
+
+  <p><a href="https://www.kernel.org/pub/software/scm/git/docs/githooks.html">Os hooks do Git podem ser vistos nesse site</a>. Ainda não implementamos todos porque não há necessidade. Por enquanto há apenas o pré-commit que analisa seu código antes dos commits serem enviados.</p>
+
+  <h3 class="doc-title-3">grunt plato</h3>
+  <p>O <a href="https://www.npmjs.com/package/plato">Plato</a> gera um relatório (<a href="http://es-analysis.github.io/plato/examples/grunt/">como esse</a>) de complexidade de código e manutenção do JavaScript do projeto. Geralmente nós geramos no projeto de tempos em tempos e você não precisa se preocupar com isso. Para visualizar os resports, basta ver <strong>index.html</strong> que está dentro da pasta <strong>spec/report-js</strong>.</p>
+
+</section>
+
+  </div>
+</div>
+
+<footer class="doc-footer">
+  <div class="container">
+   <ul class="doc-social-link">
+      <!-- <li> <a href="" class="doc-social-facebook">facebook</a> </li> -->
+      <li> <a target="_blank" class="doc-social-twitter" href="http://twitter.com/locawebdevnet">twitter</a> </li>
+    </ul>
+    <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/locawebstyle/assets/images/docs/locaweb-logo.png" alt=""></a>
+    <p class="doc-copyright">
+      Copyright © 1997-2015 Serviços de Internet S/A.
+    </p>
+  </div>
+</footer>
+
+<script src="../../../assets/javascripts/libs/jquery-2.1.0.min.js" type="text/javascript"></script><script src="../../../assets/javascripts/locastyle.js" type="text/javascript"></script><script src="../../../assets/javascripts/docs.js" type="text/javascript"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51cdc3552ecf7080"></script>
+</body>
+</html>
+

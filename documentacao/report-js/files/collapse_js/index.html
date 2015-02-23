@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - collapse.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>collapse.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">70.18</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">91</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">25.66</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">0.86</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">// @todo: prevent-open
+// @todo: hash init
+// @todo: hash change
+// @todo: toggle hover ?
+
+var locastyle = locastyle || {};
+locastyle.collapse = (function() {
+  &#039;use strict&#039;;
+
+  var config = {
+    selectors: {
+      container: &#039;[data-ls-module=&quot;collapse&quot;]&#039;, // .ls-collapse
+      trigger: &#039;.ls-collapse-header&#039;,
+      content: &#039;.ls-collapse-body&#039;,
+      groupContainer: &#039;.ls-collapse-group&#039;
+    },
+    classes: {
+      open: &#039;ls-collapse-open&#039;,
+      alwaysOpen: &#039;ls-collapse-open-always&#039;
+    }
+  };
+
+  function init() {
+    $(config.selectors.container).each(function() {
+      var $collapse = $(this);
+      bindHeader($collapse);
+      ariaCollapse($collapse);
+    });
+    bindButton();
+  }
+
+  function bindButton() {
+    // unbind
+    $(&#039;[data-toggle-collapse]&#039;).off(&#039;click.ls&#039;); // &lt;- unbind
+    $(&#039;[data-toggle-collapse]&#039;).on(&#039;click.ls&#039;, function(evt) {
+      evt.preventDefault();
+      evt.stopPropagation();
+      var id = $(this).data(&#039;toggle-collapse&#039;);
+      toggle($(id));
+    });
+  }
+
+  function bindHeader($collapse) {
+    if (!$collapse.hasClass(config.classes.alwaysOpen)) {
+      // has input
+      var $input = $(config.selectors.trigger, $collapse).find(&#039;input[type=&quot;radio&quot;], input[type=&quot;checkbox&quot;]&#039;);
+      if($input[0]){
+        $input.on(&#039;change.ls&#039;, function () {
+          var name = $(this).attr(&#039;name&#039;);
+          $(&#039;[name=&quot;&#039; + name + &#039;&quot;]&#039;).each(function (index, input) {
+            var $input = $(input);
+            var $collapse = $input.parents(config.selectors.container);
+            $collapse.toggleClass(config.classes.open, $input.is(&#039;:checked&#039;));
+          });
+        }).trigger(&#039;change.ls&#039;);
+      } else {
+        $(config.selectors.trigger, $collapse).off(&#039;click.ls&#039;); // &lt;- unbind
+        $(config.selectors.trigger, $collapse).on(&#039;click.ls&#039;, function(evt) {
+          evt.preventDefault();
+          toggle($collapse);
+        });
+      }
+    }
+  }
+
+  function toggle($collapse) {
+    $collapse = $collapse instanceof $ ? $collapse : $($collapse);
+    var $group = $collapse.parents(config.selectors.groupContainer);
+    if ($group[0]) {
+      $group.find(config.selectors.container).not($collapse).removeClass(config.classes.open).find(config.selectors.content).slideUp();
+    }
+    $collapse.toggleClass(config.classes.open);
+    // $collapse.find(config.selectors.content).slideToggle(300, &#039;linear&#039;, function(){
+    //   $collapse.toggleClass(config.classes.open);
+    // });
+    ariaCollapse($collapse);
+    return $collapse;
+  }
+
+  function ariaCollapse(elem) {
+    if($(elem).hasClass(&#039;ls-collapse-open&#039;)){
+      $(config.selectors.trigger).attr({ &#039;aria-expanded&#039; : true });
+      $(config.selectors.content).attr({ &#039;aria-hidden&#039; : false });
+    }
+    else{
+      $(config.selectors.trigger).attr({ &#039;aria-expanded&#039; : false });
+      $(config.selectors.content).attr({ &#039;aria-hidden&#039; : true });
+    }
+  }
+
+  return {
+    init: init,
+    toggle: toggle
+  };
+
+}());</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>
