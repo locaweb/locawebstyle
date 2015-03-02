@@ -3,29 +3,39 @@ var locastyle = locastyle || {};
 locastyle.charCounter = (function() {
   'use strict';
 
-  function init(){
+  var $fields;
+
+  function init() {
+    $fields = $('[data-ls-module="charCounter"]');
+    bind();
     countText();
   }
 
-  function countText(){
-    $('[data-ls-module="charCounter"]').each(function(index, field){
-      var fieldText = $(field).val().length;
-      var limit = $(field).attr('maxlength');
-      $(field).after('<p class="ls-help-inline"><small><strong class="ls-char-count ls-number-counter-'+index+'">'+limit+'</strong> caracteres restantes</small></p>');
+  function countText() {
+    $fields.each(function(index, field) {
+      var $this     = $(field);
+      $this.after('<p class="ls-help-inline"><small><strong class="ls-char-count ls-number-counter-'+$this.index()+'">0</strong> caracteres restantes</small></p>');
 
-      var calc = limit-fieldText;
-      updateCounter(index, calc);
-
-      $(field).keyup(function(event){
-        var count = limit - $(this).val().length;
-        updateCounter(index, count);
-      });
+      updateCounter($this);
     });
   }
 
-  function updateCounter(index, count){
-    $('.ls-number-counter-'+index).text(count);
+  function bind() {
+    $fields.off("keyup.ls.charCounter").on("keyup.ls.charCounter", function(event) {              
+      updateCounter($(this));
+    });
   }
+
+  function updateCounter(field) {
+    var $this = $(field),
+        text  = $this.val(),
+        // Parece que em alguns casos o enter conta como 2 caracteres
+        // Contamos quantos existem no textarea e subtraimos do total
+        countEnters = text.match(/(\r\n|\n|\r)/g),
+        count = $this.attr('maxlength') - text.length - (countEnters == null ? 0 : countEnters.length)
+    ;
+    $('.ls-number-counter-'+$this.index()).text(count);
+  }  
 
   return {
     init: init
