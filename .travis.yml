@@ -1,16 +1,12 @@
-before_script:
-  - sh -e /etc/init.d/xvfb start
-  - export DISPLAY=:99.0
-  - sleep 3
+language: node_js
+node_js:
+  - "0.11"
+  - "0.12"
 
-script:
-  - bundle exec rake jasmine:ci
+before_install:
+  - npm install -g grunt-cli
 
 branches:
   only:
-    - wip
     - master
-
-language: ruby
-rvm:
-  - "2.0.0"
+    - prod

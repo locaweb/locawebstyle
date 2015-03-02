@@ -16,10 +16,15 @@
     "grunt-contrib-jasmine": "^0.8.2",
     "grunt-contrib-jshint": "^0.11.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-githooks": "^0.3.1",
     "grunt-jasmine-runner": "^0.6.0",
     "grunt-plato": "^1.2.1",
     "jasmine-jquery": "^2.0.6"
+  },
+  "dependencies": {
+    "jQuery": "~1.7.4"
+  },
+  "scripts": {
+    "test": "grunt travis --verbose"
   },
   "repository": {
     "type": "git",
