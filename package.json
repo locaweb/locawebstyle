@@ -21,7 +21,10 @@
     "grunt-plato": "^1.2.1",
     "jasmine-jquery": "^2.0.6"
   },
- "scripts": {
+  "dependencies": {
+    "jQuery": "~2.1.0"
+  },
+  "scripts": {
     "test": "grunt travis --verbose"
   },
   "repository": {

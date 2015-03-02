@@ -8,5 +8,5 @@ before_install:
 
 branches:
   only:
-    - wip
     - master
+    - prod
