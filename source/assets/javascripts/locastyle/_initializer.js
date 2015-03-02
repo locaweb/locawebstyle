@@ -53,9 +53,11 @@ var locastyle = (function() {
 }());
 
 $(window).load(function() {
+  'use strict';
   locastyle.init();
 });
 
 $(document).ready(function(){
+  'use strict';
   locastyle.fastInit();
 });
