@@ -31,7 +31,7 @@ locastyle.modal = (function() {
 
   function bindClose(){
     $(document).one('keyup.ls', function (e) {
-      if(e.keyCode == 27){
+      if(e.keyCode === 27){
         locastyle.modal.close();
       }
     });
