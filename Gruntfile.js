@@ -33,11 +33,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    githooks: {
-      all: {
-        'pre-commit': 'jshint',
-      }
-    },
     watch: {
       files: ['<%= project.files.js %>'],
       tasks: ['']
@@ -97,7 +92,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
-  grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-plato');
 
 };

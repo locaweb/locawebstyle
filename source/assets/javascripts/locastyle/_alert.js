@@ -4,7 +4,7 @@ locastyle.alert = (function() {
   'use strict';
 
   function init() {
-    ariaAlert();
+    ariaAlert()
   }
 
   function ariaAlert() {
