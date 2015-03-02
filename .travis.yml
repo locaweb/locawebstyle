@@ -1,3 +1,12 @@
+language: ruby
+rvm:
+  - "2.0.0"
+
+branches:
+  only:
+    - wip
+    - master
+
 before_script:
   - sh -e /etc/init.d/xvfb start
   - export DISPLAY=:99.0
@@ -5,12 +14,3 @@ before_script:
 
 script:
   - bundle exec rake jasmine:ci
-
-branches:
-  only:
-    - wip
-    - master
-
-language: ruby
-rvm:
-  - "2.0.0"
