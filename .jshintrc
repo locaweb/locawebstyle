@@ -1,7 +1,10 @@
 {
   "strict": true,
   "unused": true,
-  "undef": true,
+  "validthis": true,
+  //"undef": true,
+  "devel": true,
+  "node": true,
   "eqeqeq": true,
   "browser": true,
   "jasmine": true,
