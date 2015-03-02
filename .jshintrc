@@ -1,0 +1,9 @@
+{
+  "strict": true,
+  "unused": true,
+  "undef": true,
+  "eqeqeq": true,
+  "browser": true,
+  "jasmine": true,
+  "jquery": true
+}
