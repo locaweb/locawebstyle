@@ -88,13 +88,17 @@ module.exports = function(grunt) {
     },
   });
 
+  // Declare our tests
+  grunt.registerTask('default', ['plato', 'jshint']);
+  grunt.registerTask('test', ['jshint', 'jasmine']);
+  grunt.registerTask('travis', ['jshint','jasmine']);
+
+  // Calling modules
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-plato');
 
-  grunt.registerTask('default', ['plato', 'jshint']);
-  grunt.registerTask('test', ['jshint', 'jasmine']);
 };
 
