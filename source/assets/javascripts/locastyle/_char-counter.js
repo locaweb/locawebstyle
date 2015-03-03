@@ -13,9 +13,10 @@ locastyle.charCounter = (function() {
 
   function countText() {
     $fields.each(function(index, field) {
-      var $this     = $(field);
-      $this.after('<p class="ls-help-inline"><small><strong class="ls-char-count ls-number-counter-'+$this.index()+'">0</strong> caracteres restantes</small></p>');
-
+      var $this     = $(field);      
+      if ($this.parent().find('.ls-number-counter-'+index).length == 0) {
+        $this.attr('data-index', index).after('<p class="ls-help-inline"><small><strong class="ls-char-count ls-number-counter-'+index+'">0</strong> caracteres restantes</small></p>');  
+      }
       updateCounter($this);
     });
   }
@@ -28,14 +29,12 @@ locastyle.charCounter = (function() {
 
   function updateCounter(field) {
     var $this = $(field),
-        text  = $this.val(),
-        // Parece que em alguns casos o enter conta como 2 caracteres
-        // Contamos quantos existem no textarea e subtraimos do total
+        text  = $this.val(),        
         countEnters = text.match(/(\r\n|\n|\r)/g),
         count = $this.attr('maxlength') - text.length - (countEnters == null ? 0 : countEnters.length)
     ;
-    $('.ls-number-counter-'+$this.index()).text(count);
-  }  
+    $('.ls-number-counter-'+$this.attr('data-index')).text(count);
+  }
 
   return {
     init: init
