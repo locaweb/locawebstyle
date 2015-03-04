@@ -1,0 +1,12 @@
+{
+  "strict": true,
+  "unused": true,
+  "validthis": true,
+  //"undef": true,
+  "devel": true,
+  "node": true,
+  "eqeqeq": true,
+  "browser": true,
+  "jasmine": true,
+  "jquery": true
+}

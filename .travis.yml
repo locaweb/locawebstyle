@@ -13,4 +13,5 @@ before_script:
   - sleep 3
 
 script:
+  - bundle exec rake jshint
   - bundle exec rake jasmine:ci

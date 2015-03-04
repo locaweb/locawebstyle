@@ -72,7 +72,7 @@ locastyle.popover = (function() {
   }
 
   function bindActions($elem, elementData, width, height) {
-    var trigger = elementData.trigger == 'hover' ? config.hoverEvent : config.trigger,
+    var trigger = elementData.trigger === 'hover' ? config.hoverEvent : config.trigger,
         $popover = $(config.idPopover + elementData.uniqueId);
     if(trigger === config.hoverEvent){
       $elem.on({
