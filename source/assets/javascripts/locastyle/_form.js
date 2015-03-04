@@ -21,7 +21,7 @@ locastyle.form = (function() {
   }
 
   function prefixSufix () {
-    if(locastyle.breakpointClass == 'ls-screen-xs'){
+    if(locastyle.breakpointClass === 'ls-screen-xs'){
       $('.ls-label-text-sufix').parents('.ls-label').addClass('ls-label-text-has-sufix');
       $('.ls-label-text-prefix').parents('.ls-label').addClass('ls-label-text-has-prefix');
     } else{
@@ -31,18 +31,17 @@ locastyle.form = (function() {
     }
   }
 
-  function textareaAutoresize (argument) {
+  function textareaAutoresize () {
     $('textarea.ls-textarea-autoresize', '.ls-label').each(function (index, textarea) {
       var $textarea = $(textarea);
-      var height = $textarea.height();
-      $textarea.keyup(function (e) {
+      $textarea.keyup(function () {
         if (!$textarea.prop('scrollTop')) {
           var scrollHeight;
           do {
             scrollHeight = $textarea.prop('scrollHeight');
             var height = $textarea.height();
             $textarea.height(height - 5);
-          } while (scrollHeight && (scrollHeight != $textarea.prop('scrollHeight')));
+          } while (scrollHeight && (scrollHeight !== $textarea.prop('scrollHeight')));
         }
         $textarea.height($textarea.prop('scrollHeight') );
       });
@@ -109,7 +108,7 @@ locastyle.form = (function() {
       e.preventDefault();
       var target = $(this).data('target');
       dataToggleClass($(this));
-      if ($(target).attr('type') == 'password'){
+      if ($(target).attr('type') === 'password'){
         $(target).removeAttr('attr').prop('type','text');
       } else {
         $(target).removeAttr('attr').prop('type','password');

@@ -1,12 +1,13 @@
 describe('Popover: ', function() {
   beforeEach(function() {
-      loadFixtures('popover_fixture.html');
-      locastyle.popover.init();
+    loadFixtures('popover_fixture.html');
+    locastyle.popover.init();
   });
 
   afterEach(function() {
       locastyle.popover.destroyPopover();
   });
+
   describe('Popover creation', function() {
 
     it('Should create one popover for each trigger', function() {
@@ -18,35 +19,31 @@ describe('Popover: ', function() {
   });
 
   describe('Popover behavior', function() {
-    pending();
 
     it('Should show a popover on click event', function() {
-      var $popoverTrigger = $('#popoverclick');
-      var $popover = $('.ls-popover');
-      $popover.hide();
-      $popoverTrigger.trigger('click');
-      var display = document.getElementsByClassName('ls-popover')[0].style.display;
-      expect( display  ).toEqual('block');
+      pending();
+      $('.ls-popover').hide();
+      $('#popoverclick').trigger("click");
+      expect($('#ls-popover-2').css("display")).toEqual("block");
     });
 
-    it('Should show and close a popover on repeated click events', function() {
-      var $popoverTrigger = $('#popoverclick');
-      var $popover = $('.ls-popover');
-      $popover.hide();
-      $popoverTrigger.trigger('click');
-      $popoverTrigger.trigger('click');
-      expect( $popover.eq(0).css('display')  ).toEqual('none');
+    it('Should s.ls-popoverhow and close a popover on repeated click events', function() {
+      pending();
+      $('.ls-popover').hide();
+      $('#popoverclick').trigger('click');
+      $('#popoverclick').trigger('click');
+      expect($("#ls-popover-4").css('display')).toEqual('none');
     });
 
     it('Should show a popover on hover event', function() {
-      var $popoverTrigger = $('#popoverhover');
-      var $popover = $('.ls-popover');
-      $popover.hide();
-      $popoverTrigger.trigger('mouseenter');
-      expect( $popover.eq(2).css('display')  ).toEqual('block');
+      pending();
+      $('.ls-popover').hide();
+      $('#popoverhover').trigger('mouseenter');
+      expect($('#ls-popover-7').css("display")).toEqual("block");
     });
 
     it('Should show and close a popover on repeated hover events', function() {
+      pending();
       var $popoverTrigger = $('#popoverhover');
       var $popover = $('.ls-popover');
       $popover.hide();

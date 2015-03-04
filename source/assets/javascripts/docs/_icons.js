@@ -1,3 +1,5 @@
+var lsdocs = lsdocs || {};
+
 lsdocs.icones = (function() {
   'use strict';
 

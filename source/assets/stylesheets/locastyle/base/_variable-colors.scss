@@ -27,7 +27,7 @@ $themes-colors: (
   light-green : (color1: $color-light-green, color2: mix($color-mix, $color-light-green, $color-mix-percent)),
   green       : (color1: $color-green, color2: mix($color-mix, $color-green, $color-mix-percent)),
   orange      : (color1: $color-orange, color2: mix($color-mix, $color-orange, $color-mix-percent)),
-  wine      : (color1: $color-wine, color2: mix($color-mix, $color-wine, $color-mix-percent)),
+  wine        : (color1: $color-wine, color2: mix($color-mix, $color-wine, $color-mix-percent)),
   cyanogen    : (color1: $color-cyanogen, color2: mix($color-mix, $color-cyanogen, $color-mix-percent)),
   light-red   : (color1: $color-light-red, color2: mix($color-mix, $color-light-red, $color-mix-percent))
 );
@@ -49,7 +49,7 @@ $color-menu-mix: #000;
 // Fifty shades of gray
 //
 $gray0: #f7f7f7; // for backgrounds
-$gray1: #eee;    // for border in lx-boxes
+$gray1: #eee;    // for border in ls-boxes
 $gray2: #ddd;    // for lines on tables
 $gray3: #888;    // for all fonts (with some exceptions)
 $gray4: #555;    // for all fonts

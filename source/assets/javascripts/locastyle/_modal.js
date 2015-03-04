@@ -31,7 +31,7 @@ locastyle.modal = (function() {
 
   function bindClose(){
     $(document).one('keyup.ls', function (e) {
-      if(e.keyCode == 27){
+      if(e.keyCode === 27){
         locastyle.modal.close();
       }
     });
@@ -56,11 +56,11 @@ locastyle.modal = (function() {
     ariaModal($($element.target),'false');
     $($element.target).each(function(i,e){
       if($(e).data('modal-blocked') !== undefined){
-        $('[data-dismiss="modal"]').remove()
+        $('[data-dismiss="modal"]').remove();
       }else{
         bindClose();
       }
-    })
+    });
   }
 
   function close() {

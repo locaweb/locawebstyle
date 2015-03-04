@@ -4,6 +4,24 @@ describe("Tabs: ", function() {
     locastyle.button.init();
   });
 
+  describe("when loading the page", function(){
+    it("Should input[radio] is checked when parent LI hasClass actived", function(){
+      expect($("#input-one").attr("checked")).toEqual("checked");
+    });
+  });
+
+  describe("when click this button", function(){
+   it("your input[radio] should is checked", function(){
+      $("#tab-btn-two").trigger("click");
+      expect($("#input-two").prop("checked")).toEqual(true);
+    });
+
+   it("your input[radio] should don't have attr checked", function(){
+      $("#tab-btn-two").trigger("click");
+      expect($("#input-one").prop("checked")).toEqual(false);
+    });
+  });
+
   describe("Tabs Button toggle", function() {
     describe('when click on a button trigger', function() {
 

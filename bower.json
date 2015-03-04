@@ -1,6 +1,6 @@
 {
   "name": "locawebstyle",
-  "version": "3.7.0",
+  "version": "3.7.1",
   "homepage": "http://locaweb.github.io/locawebstyle/",
   "authors": [
     "Locaweb Front-end Team <frontend@locaweb.com.br>"
@@ -44,4 +44,3 @@
     "jquery": ">= 2.1.1"
   }
 }
-

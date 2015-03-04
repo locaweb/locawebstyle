@@ -19,7 +19,7 @@ locastyle.guidedTour = (function() {
 	// Override default selectors if user provide
 	function checkTour(jsonSteps){
 		if(jsonSteps && jsonSteps.selectors && hopscotch){
-			$.each( config.selectors, function(key,selector){
+			$.each( config.selectors, function(key){
 				jsonSteps.selectors[key] = jsonSteps.selectors[key] || config.selectors[key];
 			});
 			setTour(jsonSteps);
@@ -45,7 +45,7 @@ locastyle.guidedTour = (function() {
 		keyCode();
 	}
 
-	function keyCode(element){
+	function keyCode(){
 		var left = 39;
 		var right = 37;
 		var esc = 27;
@@ -53,23 +53,19 @@ locastyle.guidedTour = (function() {
 		$('body').off('keyup').on('keyup', function(e){
 			var key = e.keyCode;
 			if( hopscotch.getCurrStepNum() < stepsSize && hopscotch.getState() ){
-				if( key === 39){ hopscotch.nextStep(); }
-				if( key === 37){ hopscotch.prevStep(); }
+				if( key === left ){ hopscotch.nextStep(); }
+				if( key === right ){ hopscotch.prevStep(); }
 			}
-			if( key === 27  ){	hopscotch.endTour();  }
+			if( key === esc ){	hopscotch.endTour();  }
 		});
 	}
 
 	function setCookie(){
-		if($.cookie("cookie_tour") != "true"){
+		if($.cookie("cookie_tour") !== "true"){
 			$(config.selectors.tour).trigger('click');
       $(config.selectors.init).focus().attr('tabindex', '-1');
 			$.cookie('cookie_tour', "true");
 		}
-	}
-
-	function userAborted(xhr) {
-		return !xhr.getAllResponseHeaders();
 	}
 
 	return {

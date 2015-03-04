@@ -8,7 +8,7 @@ locastyle.tabs = (function() {
     tabLink: '.ls-tabs-nav a',
     tabListActive: '.ls-tabs-nav li.ls-active a',
     tabContent: '.ls-tab-content'
-  }
+  };
 
   function init() {
     unbind();
@@ -45,7 +45,7 @@ locastyle.tabs = (function() {
 
   // verifica o breakpoint e se a tab já está em modo droppdown
   function checkBreakpoint() {
-    if(locastyle.breakpointClass == "ls-screen-sm" || locastyle.breakpointClass == "ls-screen-xs"){
+    if(locastyle.breakpointClass === "ls-screen-sm" || locastyle.breakpointClass === "ls-screen-xs"){
       $(".ls-tabs-nav").each(function (index, value) {
         if(!isDropdownMode(value)){
           dropdownShape(value);
