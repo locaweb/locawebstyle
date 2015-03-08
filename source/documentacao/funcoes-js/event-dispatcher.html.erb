@@ -18,8 +18,8 @@ type: funcoesjs
 	
 </p>
 <% code("javascript") do %>
-locastyle.eventDispatcher.eventSubscribe('oneEvent', functionCallBackName);
-locastyle.eventDispatcher.eventSubscribe('otherEvent', otherFunctionName);
+ls.eventDispatcher.eventSubscribe('oneEvent', functionCallBackName);
+ls.eventDispatcher.eventSubscribe('otherEvent', otherFunctionName);
 <% end %>
 
  <p>Seguindo nossa estrutura, fica assim:</p>
@@ -33,7 +33,7 @@ function init() {
 function someFunction() {
   // This function fire a event when the Window is fully loaded.
   $(window).load(function() {
-    locastyle.eventDispatcher.trigger('oneEvent')
+    ls.eventDispatcher.trigger('oneEvent')
   });
 }
 
@@ -43,8 +43,27 @@ function functionCallBackName() {
 
 function registerEvents() {
   // When 'oneEvent' is triggered, we fire functionCallBackName
-  locastyle.eventDispatcher.eventSubscribe('oneEvent', functionCallBackName);
+  ls.eventDispatcher.eventSubscribe('oneEvent', functionCallBackName);
 }
 <% end %>
 
+<p>Abra o console e faça um teste clicando nos botões abaixo:</p>
+<p>
+  <a href="javascript: ls.eventDispatcher.trigger('eventTest')" class="ls-btn">Evento de teste</a>
+  <a href="javascript: ls.eventDispatcher.trigger('noEventTest')" class="ls-btn">Botão sem evento</a>
+</p>
+
 </section>
+
+<script type="text/javascript">
+  window.onload = function() {
+    function eventFunctionTest() {
+      console.log('Event Function Test called by trigger eventTest');
+    }
+
+    function registerFunctionTest() {
+      ls.eventDispatcher.eventSubscribe('eventTest', eventFunctionTest)
+    }
+    registerFunctionTest()
+  }
+</script>

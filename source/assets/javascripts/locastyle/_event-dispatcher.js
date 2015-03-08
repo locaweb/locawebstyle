@@ -27,7 +27,7 @@ locastyle.eventDispatcher = (function() {
         subscribers[eventName][i].call(eventName);
       }
     } else {
-      console.info('[Event Dispatcher] no eventSubscribers for event "' + eventName + '"');
+      console.info("[Event Dispatcher] No function subscribed for event '" + eventName + "'  ");
     }
 
   }
