@@ -17,7 +17,6 @@ locastyle.eventDispatcher = (function() {
     subscribers[eventName].push(functionCallback);
   }
 
-
   // Call the functions related with event is triggered
   function trigger(eventName) {
 
@@ -26,10 +25,10 @@ locastyle.eventDispatcher = (function() {
       for(var i = 0, subsCount = subscribers[eventName].length; i < subsCount; i++) {
         subscribers[eventName][i].call(eventName);
       }
+      console.info('[Event Dispatcher] Event "' + eventName + '" dispatched to ' + subscribers[eventName].length + ' function(s).');
     } else {
       console.info("[Event Dispatcher] No function subscribed for event '" + eventName + "'  ");
     }
-
   }
 
   return {
