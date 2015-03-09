@@ -24,6 +24,7 @@ locastyle.eventDispatcher = (function() {
     if (typeof subscribers[eventName] !== 'undefined') {
       for(var i = 0, subsCount = subscribers[eventName].length; i < subsCount; i++) {
         subscribers[eventName][i].call(eventName);
+        $.event.trigger(eventName);
       }
       console.info('[Event Dispatcher] Event "' + eventName + '" dispatched to ' + subscribers[eventName].length + ' function(s).');
     } else {
