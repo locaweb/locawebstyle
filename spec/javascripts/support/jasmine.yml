@@ -19,6 +19,7 @@ src_files:
     - source/assets/javascripts/libs/pikaday.js
     - source/assets/javascripts/libs/pikaday.jquery.js
     - source/assets/javascripts/locastyle/_initializer.js
+    - source/assets/javascripts/locastyle/_event-dispatcher.js
     - source/assets/javascripts/locastyle/_datepicker.js
     - source/assets/javascripts/locastyle/_popover.js
     - source/assets/javascripts/locastyle/_templates.js
