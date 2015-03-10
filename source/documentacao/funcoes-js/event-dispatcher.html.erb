@@ -1,0 +1,69 @@
+---
+title: Event Dispatcher
+description: Roda funções de acordo com os eventos disparados
+type: funcoesjs
+---
+
+<%= partial 'partials/doc-menu-funcoes-js' %>
+
+<section class="col-md-9">
+
+	<%= partial 'partials/doc-intro-content' %>
+
+<p>
+	Algumas funções do Locaweb Style são ativadas apenas quando alguns eventos customizados do framework são disparados. Você pode ver uma lista dos eventos disparados abaixo ou nas páginas dos próprios módulos. 
+</p>
+<p>
+	Existe uma função chamada eventDispatcher, simples, onde o framework cadastra e roda as funções de acordo com os eventos diparados. Se você contribuir conosco e precisar criar um evento customizado, você pode fazer dessa forma:
+	
+</p>
+<% code("javascript") do %>
+ls.eventDispatcher.eventSubscribe('oneEvent', functionCallBackName);
+ls.eventDispatcher.eventSubscribe('otherEvent', otherFunctionName);
+<% end %>
+
+ <p>Seguindo nossa estrutura, fica assim:</p>
+
+<% code("javascript") do %>
+function init() {
+  someFunction();
+  registerEvents();
+}
+
+function someFunction() {
+  // This function fire a event when the Window is fully loaded.
+  $(window).load(function() {
+    ls.eventDispatcher.trigger('oneEvent')
+  });
+}
+
+function functionCallBackName() {
+  console.log('do something');
+}
+
+function registerEvents() {
+  // When 'oneEvent' is triggered, we fire functionCallBackName
+  ls.eventDispatcher.eventSubscribe('oneEvent', functionCallBackName);
+}
+<% end %>
+
+<p>Abra o console e faça um teste clicando nos botões abaixo:</p>
+<p>
+  <a href="javascript: ls.eventDispatcher.trigger('eventTest')" class="ls-btn">Evento de teste</a>
+  <a href="javascript: ls.eventDispatcher.trigger('noEventTest')" class="ls-btn">Botão sem evento</a>
+</p>
+
+</section>
+
+<script type="text/javascript">
+  window.onload = function() {
+    function eventFunctionTest() {
+      console.log('Event Function Test called by trigger eventTest');
+    }
+
+    function registerFunctionTest() {
+      ls.eventDispatcher.eventSubscribe('eventTest', eventFunctionTest)
+    }
+    registerFunctionTest()
+  }
+</script>

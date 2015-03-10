@@ -52,12 +52,14 @@ var locastyle = (function() {
 
 }());
 
+var ls = locastyle;
+
 $(window).load(function() {
   'use strict';
-  locastyle.init();
+  ls.init();
 });
 
 $(document).ready(function(){
   'use strict';
-  locastyle.fastInit();
+  ls.fastInit();
 });
