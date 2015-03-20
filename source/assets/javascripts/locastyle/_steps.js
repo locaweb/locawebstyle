@@ -32,16 +32,15 @@ locastyle.steps = (function() {
     addAriaLabel();
     addActivedNav();
     bindClickOnTriggers();
-    nextStep();
-    prevStep();
+    bindNextStep();
+    bindPrevStep();
   }
-
 
   // Always visible navigation when the page scrolls
   function stepsAffix(elemVisible) {
-    var $steps   = $(config.selectors.nav);
-    var offset    = $steps.offset();
-    var $heightNav  = $(config.selectors.nav).height();
+    var $steps = $(config.selectors.nav);
+    var offset = $steps.offset();
+    var $heightNav = $(config.selectors.nav).height();
 
     $(window).scroll(function() {
      if ($(window).scrollTop() > offset.top ){
@@ -128,25 +127,35 @@ locastyle.steps = (function() {
 
   // Advances to the next step
   function nextStep() {
-    $(config.actions.next).on("click.steps", function(evt) {
+    var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
+    var $target = $($el.attr('href') || $el.data('target'));
+    activateStep($el, $target);
+    deactivateStep($el, $target);
+    anchorSteps();
+  }
+
+  // Bind the target to cal the nextStep on click
+  function bindNextStep() {
+    $(config.actions.next).on('click.steps', function(evt) {
       evt.preventDefault();
-      var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
-      var $target = $($el.attr("href") || $el.data("target"));
-      activateStep($el, $target);
-      deactivateStep($el, $target);
-      anchorSteps();
+      nextStep();
     });
   }
 
   // Back to the previous step
   function prevStep() {
-    $(config.actions.prev).on("click.steps", function(evt) {
+    var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
+    var $target = $($el.attr('href') || $el.data('target'));
+    activateStep($el, $target);
+    deactivateStep($el, $target);
+    anchorSteps();
+  }
+
+  // Bind the target to call the prevStep on click
+  function bindPrevStep() {
+    $(config.actions.prev).on('click.steps', function(evt) {
       evt.preventDefault();
-      var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
-      var $target = $($el.attr("href") || $el.data("target"));
-      activateStep($el, $target);
-      deactivateStep($el, $target);
-      anchorSteps();
+      prevStep();
     });
   }
 
@@ -180,7 +189,9 @@ locastyle.steps = (function() {
 
   return {
     init: init,
-    unbind: unbind
+    unbind: unbind,
+    nextStep: nextStep,
+    prevStep: prevStep
   };
 
 }());

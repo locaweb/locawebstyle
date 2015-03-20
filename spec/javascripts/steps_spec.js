@@ -9,7 +9,6 @@ describe("Steps: ", function(){
       var label = $('#list1 .ls-steps-btn').attr('aria-label');
       expect($('.ls-steps-btn').attr('aria-label')).toBe(label);
     });
-
   });
 
   describe("when click in steps is actived", function(){
@@ -99,7 +98,6 @@ describe("Steps: ", function(){
       $('.ls-steps-nav .ls-steps-btn').trigger('click');
       expect($('.ls-steps-content.ls-active').attr('aria-hidden')).toEqual('false');
     });
-
   });
 
   describe("Unbind:", function() {
@@ -125,6 +123,15 @@ describe("Steps: ", function(){
         $('#prev2').trigger("click");
         expect($('#step1').hasClass("ls-active")).toEqual(false);
       });
+    });
+  });
+
+  describe("Public methods", function() {
+    it("should respond to nextStep", function() {
+      expect(locastyle.steps.nextStep).toBeDefined();
+    });
+    it("should respond to prevStep", function() {
+      expect(locastyle.steps.prevStep).toBeDefined();
     });
   });
 
