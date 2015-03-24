@@ -127,11 +127,15 @@ locastyle.steps = (function() {
 
   // Advances to the next step
   function nextStep() {
-    var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
-    var $target = $($el.attr('href') || $el.data('target'));
-    activateStep($el, $target);
-    deactivateStep($el, $target);
-    anchorSteps();
+    var evt = new CustomEvent('NextStepEvent', { cancelable: true });
+    var propagation = document.dispatchEvent(evt);
+    if(propagation) {
+      var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
+      var $target = $($el.attr('href') || $el.data('target'));
+      activateStep($el, $target);
+      deactivateStep($el, $target);
+      anchorSteps();
+    }
   }
 
   // Bind the target to cal the nextStep on click
