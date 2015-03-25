@@ -59,17 +59,67 @@ type: component
     </tbody>
   </table>
 
+  <h2 class="doc-title-3">Métodos públicos</h2>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Método</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>init()</td>
+        <td>Prepara os elementos pra funcionar como steps e adiciona os binds automáticos.</td>
+      </tr>
+      <tr>
+        <td>nextStep()</td>
+        <td>Faz a troca para o próximo passo.</td>
+      </tr>
+      <tr>
+        <td>prevStep()</td>
+        <td>Faz a troca para o passo anterior.</td>
+      </tr>
+    </tbody>
+  </table>
 
-  <h2 class="doc-title-3">Eventos Personalizados</h2>
-  <p>Usando <code>preventDefault();</code>, faz com que os eventos não ocorram, assim há possibilidade de criar uma validação dentro do projeto chamando os eventos personalizados para o componente passo a passo.</p>
+  <h2 class="doc-title-3">Eventos</h2>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Evento</th>
+        <th>Target</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NextStepEvent</td>
+        <td>document</td>
+        <td>Lançado no método <code>nextStep()</code> antes de trocar o passo.</td>
+      </tr>
+      <tr>
+        <td>PrevStepEvent</td>
+        <td>document</td>
+        <td>Lançado no método <code>prevStep()</code> antes de trocar o passo.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Você pode utilizar os eventos acima para impedir a troca de um determinado passo, veja um exemplo de como adicionar uma validação:</p>
+
   <div class="ls-box-demo">
 <% code("html") do %>
 $(document).on('NextStepEvent', function(e){
-  e.preventDefault();
+  if (!valid) {
+    e.preventDefault();
+  }
 });
 
 $(document).on('PrevStepEvent', function(e){
-  e.preventDefault();
+  if (!valid) {
+    e.preventDefault();
+  }
 });
 <% end %>
   </div>
