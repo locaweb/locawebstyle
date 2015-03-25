@@ -103,10 +103,7 @@ locastyle.steps = (function() {
   function bindClickOnTriggers() {
     $(config.selectors.nav).on("click.steps", config.selectors.moduleActive, function(evt) {
       evt.preventDefault();
-      var $target = $($(this).attr("href") || $(this).data("target"));
-      activateStep(this,$target);
-      deactivateStep(this,$target);
-      anchorSteps();
+      changeStep($(this));
     });
   }
 
@@ -131,10 +128,7 @@ locastyle.steps = (function() {
     $(document).trigger(evt);
     if(!evt.isDefaultPrevented()) {
       var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
-      var $target = $($el.attr('href') || $el.data('target'));
-      activateStep($el, $target);
-      deactivateStep($el, $target);
-      anchorSteps();
+      changeStep($el);
     }
   }
 
@@ -152,10 +146,7 @@ locastyle.steps = (function() {
     $(document).trigger(evt);
     if(!evt.isDefaultPrevented()) {
       var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
-      var $target = $($el.attr('href') || $el.data('target'));
-      activateStep($el, $target);
-      deactivateStep($el, $target);
-      anchorSteps();
+      changeStep($el);
     }
   }
 
@@ -165,6 +156,14 @@ locastyle.steps = (function() {
       evt.preventDefault();
       prevStep();
     });
+  }
+
+  // Change the step
+  function changeStep($el) {
+    var $target = $($el.attr('href') || $el.data('target'));
+    activateStep($el, $target);
+    deactivateStep($el, $target);
+    anchorSteps();
   }
 
   // Remove the binds that own module adds
