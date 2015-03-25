@@ -148,11 +148,15 @@ locastyle.steps = (function() {
 
   // Back to the previous step
   function prevStep() {
-    var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
-    var $target = $($el.attr('href') || $el.data('target'));
-    activateStep($el, $target);
-    deactivateStep($el, $target);
-    anchorSteps();
+    var evt = jQuery.Event('PrevStepEvent');
+    $(document).trigger(evt);
+    if(!evt.isDefaultPrevented()) {
+      var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
+      var $target = $($el.attr('href') || $el.data('target'));
+      activateStep($el, $target);
+      deactivateStep($el, $target);
+      anchorSteps();
+    }
   }
 
   // Bind the target to call the prevStep on click

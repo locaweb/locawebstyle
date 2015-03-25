@@ -63,11 +63,22 @@ describe("Steps: ", function(){
     });
   });
 
-  describe('when nextStep event is prevented', function(){
-    it('does not change to next step', function(){
-      $(document).on('NextStepEvent', function(e){ e.preventDefault() });
-      $('.ls-active #next2').trigger('click');
-      expect($('#list3').hasClass('ls-active')).toBe(false);
+  describe("Custom Events", function(){
+
+    describe('when nextStep event is prevented', function(){
+      it('does not change to next step', function(){
+        $(document).on('NextStepEvent', function(e){ e.preventDefault() });
+        $('.ls-active #next2').trigger('click');
+        expect($('#list3').hasClass('ls-active')).toBe(false);
+      });
+    });
+
+    describe('when prevStep event is prevented', function(){
+      it('does not change to prev step', function(){
+        $(document).on('PrevStepEvent', function(e){ e.preventDefault() });
+        $('.ls-active #next2').trigger('click');
+        expect($('#list1').hasClass('ls-active')).toBe(false);
+      });
     });
   });
 
