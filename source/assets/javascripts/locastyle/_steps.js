@@ -32,16 +32,15 @@ locastyle.steps = (function() {
     addAriaLabel();
     addActivedNav();
     bindClickOnTriggers();
-    nextStep();
-    prevStep();
+    bindNextStep();
+    bindPrevStep();
   }
-
 
   // Always visible navigation when the page scrolls
   function stepsAffix(elemVisible) {
-    var $steps   = $(config.selectors.nav);
-    var offset    = $steps.offset();
-    var $heightNav  = $(config.selectors.nav).height();
+    var $steps = $(config.selectors.nav);
+    var offset = $steps.offset();
+    var $heightNav = $(config.selectors.nav).height();
 
     $(window).scroll(function() {
      if ($(window).scrollTop() > offset.top ){
@@ -104,10 +103,7 @@ locastyle.steps = (function() {
   function bindClickOnTriggers() {
     $(config.selectors.nav).on("click.steps", config.selectors.moduleActive, function(evt) {
       evt.preventDefault();
-      var $target = $($(this).attr("href") || $(this).data("target"));
-      activateStep(this,$target);
-      deactivateStep(this,$target);
-      anchorSteps();
+      changeStep($(this));
     });
   }
 
@@ -128,26 +124,46 @@ locastyle.steps = (function() {
 
   // Advances to the next step
   function nextStep() {
-    $(config.actions.next).on("click.steps", function(evt) {
-      evt.preventDefault();
+    var evt = jQuery.Event('NextStepEvent');
+    $(document).trigger(evt);
+    if(!evt.isDefaultPrevented()) {
       var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
-      var $target = $($el.attr("href") || $el.data("target"));
-      activateStep($el, $target);
-      deactivateStep($el, $target);
-      anchorSteps();
+      changeStep($el);
+    }
+  }
+
+  // Bind the target to cal the nextStep on click
+  function bindNextStep() {
+    $(config.actions.next).on('click.steps', function(evt) {
+      evt.preventDefault();
+      nextStep();
     });
   }
 
   // Back to the previous step
   function prevStep() {
-    $(config.actions.prev).on("click.steps", function(evt) {
-      evt.preventDefault();
+    var evt = jQuery.Event('PrevStepEvent');
+    $(document).trigger(evt);
+    if(!evt.isDefaultPrevented()) {
       var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
-      var $target = $($el.attr("href") || $el.data("target"));
-      activateStep($el, $target);
-      deactivateStep($el, $target);
-      anchorSteps();
+      changeStep($el);
+    }
+  }
+
+  // Bind the target to call the prevStep on click
+  function bindPrevStep() {
+    $(config.actions.prev).on('click.steps', function(evt) {
+      evt.preventDefault();
+      prevStep();
     });
+  }
+
+  // Change the step
+  function changeStep($el) {
+    var $target = $($el.attr('href') || $el.data('target'));
+    activateStep($el, $target);
+    deactivateStep($el, $target);
+    anchorSteps();
   }
 
   // Remove the binds that own module adds
@@ -180,7 +196,9 @@ locastyle.steps = (function() {
 
   return {
     init: init,
-    unbind: unbind
+    unbind: unbind,
+    nextStep: nextStep,
+    prevStep: prevStep
   };
 
 }());
