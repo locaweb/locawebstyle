@@ -59,6 +59,39 @@ type: component
     </tbody>
   </table>
 
+
+  <h2 class="doc-title-3">Eventos Personalizados</h2>
+  <p>Usando <code>preventDefault();</code>, faz com que os eventos não ocorram, assim há possibilidade de criar uma validação dentro do projeto chamando os eventos personalizados para o componente passo a passo.</p>
+  <div class="ls-box-demo">
+<% code("html") do %>
+$(document).on('NextStepEvent', function(e){
+  e.preventDefault();
+});
+
+$(document).on('PrevStepEvent', function(e){
+  e.preventDefault();
+});
+<% end %>
+  </div>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NextStepEvent</td>
+        <td>Chama sua função antes de seguir para o próximo passo</td>
+      </tr>
+      <tr>
+        <td>PrevStepEvent</td>
+        <td>Chama a sua função antes de voltar para o passo anterior</td>
+      </tr>
+    </tbody>
+  </table>
+
   <div class="ls-box-demo">
     <h3 class="doc-title-6">Desktop</h3>
     <div class="ls-overflow-hidden"><%= partial 'documentacao/shared/passo-a-passo/passo' %></div>
