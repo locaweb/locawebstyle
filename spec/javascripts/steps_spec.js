@@ -63,6 +63,14 @@ describe("Steps: ", function(){
     });
   });
 
+  describe('when nextStep event is prevented', function(){
+    it('does not change to next step', function(){
+      $(document).on('NextStepEvent', function(e){ e.preventDefault() });
+      $('.ls-active #next2').trigger('click');
+      expect($('#list3').hasClass('ls-active')).toBe(false);
+    });
+  });
+
   describe("Steps with wai-aria", function() {
     it(".ls-steps-nav should has attribute role with value tablist ",function(){
       expect($('.ls-steps-nav').attr('role')).toEqual('tablist');
