@@ -55,10 +55,8 @@ $with-steps: 85px
   font-weight: 300
   color: $gray2
   padding-right: 5px
-  padding-top: 1px
   pointer-events: none
   position: relative
-  z-index: 2
 
   .ls-active &,
   .ls-actived &
@@ -106,6 +104,8 @@ $with-steps: 85px
     vertical-align: middle
     text-align: center
     width: 35px
+    position: relative
+    z-index: 2
 
   &:after
     content: attr(aria-label)
@@ -200,3 +200,7 @@ $with-steps: 85px
       position: relative
       top: 0
       margin-left: 10px
+      width: 170px
+      text-align: left
+      display: inline-block
+      vertical-align: middle
