@@ -89,7 +89,7 @@ projeto.moduloUm = (function() {
   <h3 class="doc-title-6">Módulo de gráficos no arquivo charts.js</h3>
   <% code("javascript") do %>
 var projeto = projeto || {};
-project.Grafico = (function() {
+projeto.Grafico = (function() {
   'use strict';
 
   function iniciar() {
@@ -500,14 +500,14 @@ $('#botao').on('click', function(){
   <% code("javascript") do %>
 // Use
 var cores = ['Azul', 'verde', 'rosa', 'vermelho'];
-for(var count=0, quantCores=cores.length; count < quantCores; count++){ //
-  console.log( cores[i] );
+for(var indice = 0, quantCores = cores.length; indice < quantCores; indice++){ //
+  console.log( cores[indice] );
 }
 
 // em vez de
 var cores = ['Azul', 'verde', 'rosa', 'vermelho'];
-for(var count=0; i < cores.length; count++){
-  console.log( cores[i]) ;
+for(var indice = 0; indice < cores.length; indice++){
+  console.log( cores[indice]) ;
 }
   <% end %>
   <p>Para comparação, um teste de performance no <a href="http://jsperf.com/loops/111" target="_blank">jsperf</a> analisando diversos tipos de loop. O loop otimizado, como acima, executou 159k vezes, contra 113k vezes do tradicional.</p>
