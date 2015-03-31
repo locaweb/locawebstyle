@@ -8,7 +8,24 @@ namespace :deploy do
     precompile
     package(args[:version])
     copy_to_assets(args[:version])
+    commit_and_tag_assets(args[:version])
     git_tag(args[:version])
+  end
+
+  def commit_and_tag_assets(version)
+    tag = %x{cd ../assets-locastyle && git describe --abbrev=0}
+    splited_tag = tag.split(".")
+    puts splited_tag
+    new_digit = splited_tag.last.to_i + 1
+    splited_tag.delete_at(2)
+    splited_tag.push(new_digit)
+    new_tag = splited_tag.join(".")
+
+    sh %{cd ../assets-locastyle &&
+         git add --all &&
+         git commit -m "Update with version: #{version}" &&
+         git tag -a "#{new_tag}" -m "" &&
+         git push origin master --tags}
   end
 
   def update_assets
