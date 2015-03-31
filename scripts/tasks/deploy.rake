@@ -13,6 +13,7 @@ namespace :deploy do
   end
 
   def commit_and_tag_assets(version)
+    puts "#{@agent} Let's commit, create tag and push on assets repo..."
     tag = %x{cd ../assets-locastyle && git describe --abbrev=0}
     splited_tag = tag.split(".")
     puts splited_tag
@@ -26,10 +27,11 @@ namespace :deploy do
          git commit -m "Update with version: #{version}" &&
          git tag -a "#{new_tag}" -m "" &&
          git push origin master --tags}
+
+    puts "#{@agent} All done in assets repo, look at CI to see the build."
   end
 
   def update_assets
-    puts "Entering assets..."
     sh %{current_dir=${PWD##*/} &&
          cd ../assets-locastyle &&
          git fetch --all &&
@@ -38,8 +40,10 @@ namespace :deploy do
   end
 
   def copy_to_assets(version)
+    puts "#{@agent} Copying files to assets repo..."
     update_assets
     sh %{cp -fr deploy/ ../assets-locastyle/files/}
+    puts "#{@agent} Files copied."
   end
 
   def update_version(version)
@@ -55,7 +59,7 @@ namespace :deploy do
   end
 
   def package(version)
-    puts "#{@agent} Cleaning assets and creating deploy directory..."
+    puts "#{@agent} Cleaning assets and creating temporary deploy directory..."
     sh %{mkdir deploy &&
         cp -fr build/assets/ deploy/#{version} &&
         cd deploy/#{version} &&
@@ -69,12 +73,12 @@ namespace :deploy do
         rm stylesheets/fonts/selection.json
         rm -rf stylesheets/vendor}
     update_version(version)
-    puts "#{@agent} Everything done, version #{version} of Locastyle is ready to upload."
     sh %{cd deploy/#{version} &&
          zip -r ../#{version}.zip . &&
          cd ../ &&
          cp #{version}.zip edge.zip &&
          cp -fr #{version} edge }
+    puts "#{@agent} #{version} package of Locastyle is ready. Now let's handle the assets."
   end
 
   def precompile
@@ -84,9 +88,9 @@ namespace :deploy do
   end
 
   def git_tag(version)
-    puts "#{@agent} Let's create de tag..."
+    puts "#{@agent} Let's create the Locastyle tag..."
     sh %{git tag -a "#{version}" -m "" }
-    puts "#{@agent} Done, now to push the code is up to you."
+    puts "#{@agent} Done. Now, to push the code is up to you."
   end
 
   task :clean do
