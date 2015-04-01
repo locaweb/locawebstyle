@@ -81,6 +81,7 @@ namespace :deploy do
     sh %{cd deploy/#{version} &&
          zip -r ../#{version}.zip . &&
          cd ../ &&
+         cp -fr #{version}/* ../dist &&
          cp #{version}.zip edge.zip &&
          cp -fr #{version} edge }
     puts "#{@agent} #{version} package of Locastyle is ready. Now let's handle the assets."
