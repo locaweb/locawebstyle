@@ -15,7 +15,6 @@ locastyle.general = (function() {
     _elementDisabled();
     _linkPreventDefault();
     _btnGroupActivationToogle();
-    _menuAnchor();
     _toggleFields();
   }
 
@@ -60,10 +59,6 @@ locastyle.general = (function() {
             .val($field.data('original-value'));
         });
     });
-  }
-
-  function _menuAnchor() {
-    $(".ls-menu .ls-active > a").focus().css('outline', 'none');
   }
 
   function _toggleClass(evt, $this) {
