@@ -65,10 +65,15 @@ namespace :deploy do
         cd deploy/#{version} &&
         rm -f .DS_Store &&
         rm -rf flash
+        rm -rf images/docs
+        rm -rf images/locastyle
+        rm images/banner-example.png
         rm javascripts/busca.json
         rm javascripts/docs.js
-        rm -rf javascripts/libs
+        rm javascripts/example.js
         rm javascripts/templates.js
+        rm -rf javascripts/libs
+        rm -rf javascripts/docs
         rm stylesheets/docs.css
         rm stylesheets/fonts/selection.json
         rm -rf stylesheets/vendor}
