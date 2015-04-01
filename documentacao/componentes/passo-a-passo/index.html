@@ -153,6 +153,81 @@
     </tbody>
   </table>
 
+  <h2 class="doc-title-3">Métodos públicos</h2>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Método</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>init()</td>
+        <td>Prepara os elementos pra funcionar como steps e adiciona os binds automáticos.</td>
+      </tr>
+      <tr>
+        <td>nextStep()</td>
+        <td>Faz a troca para o próximo passo.</td>
+      </tr>
+      <tr>
+        <td>prevStep()</td>
+        <td>Faz a troca para o passo anterior.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="doc-title-3">Eventos</h2>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Evento</th>
+        <th>Target</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NextStepEvent</td>
+        <td>document</td>
+        <td>Lançado no método <code>nextStep()</code> antes de trocar o passo.</td>
+      </tr>
+      <tr>
+        <td>PrevStepEvent</td>
+        <td>document</td>
+        <td>Lançado no método <code>prevStep()</code> antes de trocar o passo.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Você pode utilizar os eventos acima para impedir a troca de um determinado passo, veja um exemplo de como adicionar uma validação:</p>
+
+  <div class="ls-box-demo">
+<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td><td class="code"><pre>$(document).on('NextStepEvent', function(e){
+  if (!valid) {
+    e.preventDefault();
+  }
+});
+
+$(document).on('PrevStepEvent', function(e){
+  if (!valid) {
+    e.preventDefault();
+  }
+});
+</pre></td></tr></tbody></table>
+</div>
+  </div>
+
   <div class="ls-box-demo">
     <h3 class="doc-title-6">Desktop</h3>
     <div class="ls-overflow-hidden"><div class="ls-steps">
@@ -175,54 +250,54 @@
   </ol>
   <div class="ls-steps-main">
     <div class="ls-steps-content" id="step1">
-      <p>Sit maxime soluta doloremque qui veniam sit ut ut animi neque eligendi. atque reiciendis ut quos nulla et laboriosam autem rem quasi ut velit aut. ipsam natus ratione et. aperiam officia et ipsa neque. vitae corporis numquam id odio quod rerum atque quia non. quaerat velit quas vel est tempore dignissimos. officia in eos aperiam eius iste perspiciatis praesentium
+      <p>Corporis velit magni quaerat quaerat ab iure ea aliquam tenetur. officia repellat illo eos iste quia possimus nobis iusto iste architecto deserunt. et et eum eum et. cumque eum nobis veritatis. enim sit quo dolore omnis praesentium vitae qui error animi cumque nobis
 
-Possimus rerum voluptatem exercitationem laudantium nostrum asperiores nemo aliquid. natus labore magnam officia quaerat qui dolores itaque voluptatem similique aut. libero sequi provident sed earum expedita voluptatem error veniam fugiat nesciunt harum rem officia nemo. necessitatibus id amet exercitationem quibusdam ex in doloribus est eaque cumque architecto et omnis. et dolore iusto et expedita corrupti enim saepe inventore molestias veniam illum sit. voluptate dolorum in officiis suscipit distinctio ipsa saepe. modi magnam reprehenderit dolore molestiae ut sit
+Explicabo quia atque consequatur nihil omnis quos tenetur ipsum consectetur enim molestias autem harum. sed facere enim at nam corrupti voluptatem et voluptatem at quo delectus ipsum. aliquam hic asperiores et autem qui ratione tenetur magni tenetur amet ducimus doloribus officia. beatae at aut perferendis aut harum non eos ea est accusantium. molestiae ducimus veniam minima eius culpa. ullam hic rerum tempora corrupti voluptatibus blanditiis sed veniam doloremque tempore beatae sed aperiam et. sequi reiciendis libero aut deserunt accusamus
 
-Et cumque quasi hic suscipit quos molestias reprehenderit distinctio qui ea tempora quisquam. architecto nobis hic architecto distinctio molestiae qui ea est. veniam accusantium et neque quibusdam unde est qui mollitia voluptas. animi culpa aut veritatis praesentium veritatis reiciendis. mollitia ad impedit at et blanditiis voluptas et ut similique ut est neque</p>
+Quia doloremque quos fugit corporis. mollitia ipsam ipsa eius tempore necessitatibus aut. et consequuntur sit qui error. iusto mollitia eius rerum dolores reprehenderit laudantium est non fugiat. facilis consequatur ab itaque illum consequatur eligendi inventore dolore illum. explicabo facilis ad saepe</p>
       <div class="ls-actions-btn">
         <a href="#" class="ls-btn-primary ls-float-right" data-action="next">Próximo</a>
       </div>
     </div>
     <div class="ls-steps-content" id="step2">
-      <p>Voluptatem maiores est mollitia voluptatem necessitatibus alias amet ipsum. dicta dicta fuga perspiciatis dolor. in totam aut ipsa debitis est et accusamus in quidem perferendis reprehenderit debitis. voluptate eius esse voluptas eos accusantium. in quia quia deleniti. qui cupiditate ut placeat nulla quo sequi consequatur eligendi beatae perferendis voluptas
+      <p>Quia sunt voluptate quo qui. dignissimos rem quia repudiandae eos libero saepe veniam. molestiae beatae dignissimos consequatur vel. dolores eveniet consequatur corrupti dolores molestias laboriosam rerum a in est. rem consequatur assumenda quos et quod mollitia
 
-Sit maxime aspernatur aut quia dicta ut facilis dicta magnam. sit nulla placeat cum ex iure iure quaerat. vel facilis ab perferendis. dolorum dolorum reiciendis quos nam quis ab dolorem illum ea sapiente
+Eos pariatur sit omnis beatae placeat similique. delectus omnis nihil fugit tempora corporis praesentium expedita ut accusantium totam nemo. placeat est nihil sapiente repudiandae repellat dolor rem est sed facilis. sed sed culpa et ut eos placeat temporibus aut quasi quidem dignissimos officiis. occaecati occaecati et minima expedita autem qui voluptatem non perferendis molestiae quisquam sit autem sunt. tenetur aut qui dolorem tenetur debitis quibusdam optio cumque labore suscipit cumque temporibus dolores voluptatem
 
-Magni quis in esse ad temporibus. quo voluptas illo sit dicta velit rem consectetur ratione dolore dolorum autem. repudiandae quisquam quas tenetur. esse ipsam tempora omnis. sint similique et voluptatem possimus eligendi autem aliquam magnam enim maxime occaecati similique. ut eveniet et culpa magnam occaecati sed consequatur sed culpa molestias. atque velit et repellat magni sed rerum perspiciatis</p>
+Quibusdam cumque modi excepturi iste itaque beatae recusandae rerum et consequatur. atque eveniet repellendus architecto ut qui qui minima perferendis at perspiciatis. beatae consequatur qui unde. animi dignissimos provident adipisci officia dolores atque et omnis perspiciatis. veritatis distinctio voluptate fugiat consequatur quis quam quod molestias aut dolorem omnis. corporis et facilis facilis dignissimos consequuntur animi doloremque fugiat non sit</p>
       <div class="ls-actions-btn">
         <a href="#" class="ls-btn" data-action="prev">Anterior</a>
         <a href="#" class="ls-btn-primary ls-float-right" data-action="next">Próximo</a>
       </div>
     </div>
     <div class="ls-steps-content" id="step3">
-      <p>Ratione quis et delectus magnam et illo tenetur harum assumenda debitis. omnis molestias quia animi nesciunt mollitia quisquam et et. est excepturi repellendus eveniet magnam voluptates sint ad placeat et nihil veniam dicta et magni. sint inventore et quae minima aut at incidunt reiciendis omnis. aut eveniet commodi quas eaque magni nesciunt alias quia atque
+      <p>Illo dolores aut rerum error rerum officia iusto quos autem. laboriosam rem nihil dolorem ducimus quo dolorem possimus consequatur dicta exercitationem aut. quam laborum voluptates recusandae saepe eos nam est. id nobis quia velit corrupti consequatur
 
-Aliquid vel consequatur exercitationem quam aspernatur. in corrupti id non provident autem quis a debitis. nihil rerum praesentium delectus minus velit cum. distinctio facilis dolor id ipsam consequatur aliquam enim consequuntur autem vel culpa eos. autem eos quos repudiandae iste neque adipisci vel ut ex rerum facere consequatur a quam. voluptate suscipit ut aliquid ut aut cum repellat molestias sed voluptatum incidunt
+Consequatur saepe alias perferendis velit consequatur blanditiis cum iusto quia quia. cupiditate dolorem veritatis cupiditate dicta nam in sint. voluptas in soluta nam error minima autem expedita aut. cumque hic aliquid sint repellat
 
-Repudiandae ab quia beatae animi id quaerat et quia quia aut. voluptatum iure quod sit ab. dignissimos cumque eaque non error inventore consequuntur quaerat cupiditate ut</p>
+Non aut inventore eos soluta quia accusamus. dolorem delectus ea odio quaerat neque sunt illum voluptate. expedita vitae quo illum qui ullam temporibus sunt autem dolores corporis voluptatem. ut voluptatem recusandae distinctio sint quia perspiciatis sed aut voluptatibus labore sed dolorum impedit rerum. aperiam nihil quis ad. et delectus est autem ab ullam amet alias et velit dicta vero laboriosam. at aut voluptatem quisquam officiis ut iste cumque quibusdam</p>
       <div class="ls-actions-btn">
         <a href="#" class="ls-btn" data-action="prev">Anterior</a>
         <a href="#" class="ls-btn-primary ls-float-right" data-action="next">Próximo</a>
       </div>
     </div>
     <div class="ls-steps-content" id="step4">
-      <p>Omnis rerum velit et quia vel cum eligendi. corporis earum sed ullam et rerum corporis. eius vel mollitia aut quis asperiores expedita facere aut quo aut quia. est ut autem doloribus unde reprehenderit omnis. culpa et rem nam exercitationem quo pariatur eos perferendis. voluptate vel aut officia consequatur nobis animi repudiandae velit
+      <p>Dolorem nesciunt ea quis nostrum accusantium. itaque voluptates expedita aut voluptatem repellendus earum dolorem magnam debitis veritatis temporibus. eum ipsum sint rerum ipsam soluta illum. aperiam laborum non quia quibusdam
 
-Accusamus aut odio et omnis est fugiat quae sit deleniti sed. odio et non consequatur suscipit molestiae. nulla est facilis optio. aut et facere fugit debitis quo reiciendis nihil non asperiores
+Voluptas occaecati nihil totam reprehenderit reprehenderit possimus error provident vitae ex. excepturi nihil id architecto quia est ut alias in quae asperiores dicta ullam. omnis sit id sapiente excepturi sapiente et qui. tempora vel vitae eius eos dolores soluta a est quae soluta quod rerum quas id. dolor et voluptatem id iusto commodi. quidem ea dignissimos enim dolore similique autem omnis quisquam repudiandae. laudantium voluptate et non mollitia quis
 
-Recusandae totam doloremque in vel quaerat placeat odit et ullam vero ipsam ea. deleniti itaque magnam maiores quae eaque. non dolor ea consectetur voluptatem inventore doloremque dolore voluptatem saepe aliquam et vitae quidem sit. minus sunt aliquam est. qui et ex quae aut ipsum unde sunt consequuntur maiores nesciunt. nesciunt itaque perspiciatis distinctio alias quia tempore odio ab incidunt. ex qui cum expedita officia</p>
+Possimus id est consequuntur tempore vel. illum commodi voluptatem et impedit corrupti voluptatem et consequatur magni rerum placeat. quae doloribus sit quam. modi id aperiam voluptatibus reprehenderit odio. sapiente porro et et eaque ut adipisci quia. voluptatem minus et voluptatem</p>
       <div class="ls-actions-btn">
         <a href="#" class="ls-btn" data-action="prev">Anterior</a>
         <a href="#" class="ls-btn-primary ls-float-right" data-action="next">Próximo</a>
       </div>
     </div>
     <div class="ls-steps-content" id="step5">
-      <p>Sequi quisquam ut delectus est quis itaque doloribus dolor unde. aspernatur iste excepturi atque sed vel id voluptas accusamus. modi voluptatem dolorem sed alias repellat aspernatur. nostrum provident dignissimos debitis fugit repudiandae error est quia nihil. ad aut laudantium et illum omnis
+      <p>Maiores consequatur ab quo ut architecto illo ratione blanditiis ea est voluptate. delectus accusamus occaecati magni veritatis ea debitis repellat alias magnam a excepturi vero. accusantium ad est et sit consequatur ratione voluptates officiis id est quaerat velit. porro facilis voluptas sunt. natus est quasi quis totam dolores hic dolorum debitis voluptates ratione aspernatur quia repellendus. numquam adipisci fugit quia consequatur perferendis et reiciendis quia ullam aut temporibus quae totam aperiam
 
-Voluptas explicabo laudantium est quos ut dolore magnam eveniet eligendi et eos nulla perspiciatis. saepe rerum ut quia aperiam dolorem voluptatem incidunt rerum alias tenetur. voluptate sit repudiandae ex minus expedita consectetur commodi repellat nam cumque sit
+Adipisci deleniti omnis aut laborum consequatur. molestiae ab veritatis omnis aliquam animi ut nostrum maiores veritatis assumenda dolores ut. nam aut nisi quia voluptatum ex ipsam aut et sed. qui ab quod dolores non. reiciendis est omnis laboriosam consectetur exercitationem enim sunt ullam eveniet labore quidem cupiditate. odit doloribus et laudantium soluta suscipit hic sint quaerat
 
-Dignissimos alias non sunt assumenda at dolorum quas sed asperiores harum sunt. natus sed blanditiis vero autem voluptas nesciunt id fugit quis quidem natus. sed cupiditate et commodi nostrum corrupti et error iusto aliquam</p>
+Reiciendis minima ea harum. voluptas possimus officia cum. sed aut pariatur quia. quibusdam omnis quas dolorem sunt labore qui. possimus voluptatem in id ipsa et est velit esse occaecati corrupti qui rem quos. occaecati natus eaque tempora id quae inventore nulla. perspiciatis suscipit et voluptatibus enim eum</p>
       <div class="ls-actions-btn">
         <a href="#" class="ls-btn" data-action="prev">Anterior</a>
         <a href="#" class="ls-btn-primary ls-float-right">Finalizar</a>
@@ -332,54 +407,54 @@ Dignissimos alias non sunt assumenda at dolorum quas sed asperiores harum sunt. 
   <span class="nt">&lt;/ol&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-steps-main"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-steps-content"</span> <span class="na">id=</span><span class="s">"step1"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Quo molestiae quos cum et eum et quas autem aliquid velit. atque quam et magnam quae officia qui ullam necessitatibus. dignissimos numquam occaecati ut non repellendus fugiat voluptatem ut sequi dolorem possimus quas reiciendis voluptas. non dolorum voluptas incidunt doloribus officia atque excepturi sit ut quidem laudantium nostrum
+      <span class="nt">&lt;p&gt;</span>Ratione amet ut temporibus excepturi non hic autem laborum est fugit quia autem. nostrum ex vel eos iure et nulla est incidunt harum ipsam. ut delectus itaque inventore nam voluptates sapiente voluptatem iure consequatur expedita nemo repellat
 
-Minus aliquam ipsa perferendis pariatur rerum eius qui ut quidem. provident et placeat eum minus sint nihil eaque illo harum qui non aperiam. enim laboriosam non omnis et aperiam voluptatibus atque esse aut nobis consequatur voluptatum
+Hic eos saepe eligendi laborum minus. quaerat aliquid aut neque sapiente ut officiis tempore praesentium eum quos aut cupiditate laboriosam. ratione dolorem qui est quisquam eum. culpa et quae corrupti laudantium provident maiores sint necessitatibus. dolores et veritatis laboriosam ratione explicabo odio cupiditate minima quibusdam voluptatem nemo odio. animi voluptatem voluptas voluptas repellendus repellendus atque quia odit. voluptates laboriosam delectus et quasi
 
-Ad consequatur eaque rerum nesciunt et rerum quia. qui beatae et vel voluptatem molestiae. similique voluptas quasi repellendus asperiores voluptatem ullam tempora esse placeat. labore veniam maxime officiis. esse ad animi necessitatibus id molestiae pariatur. dolor voluptas magni quia placeat<span class="nt">&lt;/p&gt;</span>
+Pariatur dolor laudantium architecto fuga sed aliquam qui libero eum dignissimos. accusantium ad ipsa sit. amet dolores animi et est rerum odio voluptatem<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary ls-float-right"</span> <span class="na">data-action=</span><span class="s">"next"</span><span class="nt">&gt;</span>Próximo<span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-steps-content"</span> <span class="na">id=</span><span class="s">"step2"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Quia ipsum officia explicabo sed eos commodi. placeat hic nihil est sed consequuntur a dolor similique dolore veniam eos molestiae ratione. repellendus libero eos consequatur beatae necessitatibus quasi consequatur saepe est. dolor facere exercitationem atque ut. sit ut exercitationem officia qui nobis accusamus facere et est. sit accusamus in aut aperiam cum reiciendis similique reprehenderit eos nam. voluptas consequatur accusantium soluta beatae repellat possimus fuga explicabo voluptates libero
+      <span class="nt">&lt;p&gt;</span>Omnis fugiat ut dolorem. nihil iste quo voluptatum et sunt minus est minima maxime temporibus enim voluptas ea autem. dicta ea animi nulla sunt iusto
 
-Eveniet sint quam eaque facilis. quibusdam quis suscipit et tempore in tenetur et dolor distinctio incidunt voluptatum ut dolor. libero autem cumque quibusdam hic voluptatibus animi vel tempora exercitationem tempora esse
+Nam esse earum et voluptatem pariatur aut quia reiciendis nisi ut. dolor enim quod eum dolorem delectus numquam unde beatae nesciunt distinctio illum suscipit reprehenderit atque. nemo quo quas aut consequatur ut ea odio ut dolore aut et consequatur explicabo
 
-Ipsa ut dolore sit dolore voluptas dolorem aliquam laborum ipsum dicta. nihil ex laborum rerum perferendis delectus saepe labore in quasi temporibus soluta est culpa. perspiciatis et nihil modi vero. excepturi nam dolorem corporis id consectetur odio sed quis vel iusto<span class="nt">&lt;/p&gt;</span>
+Est impedit illo vero quis commodi beatae fugit harum hic sapiente maiores aut saepe. itaque et voluptatem sunt voluptate commodi et quas. sit similique maxime neque officia incidunt aliquid nam facere recusandae id dicta nam saepe. qui sit ducimus et asperiores corporis molestiae nemo voluptatem eius<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn"</span> <span class="na">data-action=</span><span class="s">"prev"</span><span class="nt">&gt;</span>Anterior<span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary ls-float-right"</span> <span class="na">data-action=</span><span class="s">"next"</span><span class="nt">&gt;</span>Próximo<span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-steps-content"</span> <span class="na">id=</span><span class="s">"step3"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Facilis tenetur est odit et tempore libero tenetur nulla laudantium eos dolore voluptate. saepe illo quod similique. reiciendis dolore et assumenda suscipit ipsa. magnam distinctio unde quia. suscipit ea quia nostrum itaque voluptas in quo est sed blanditiis laudantium porro consequatur
+      <span class="nt">&lt;p&gt;</span>Corrupti adipisci cupiditate in quaerat possimus eveniet vitae. illum sit velit et consequatur illum. sit eligendi recusandae eos. autem tempore sint pariatur animi voluptas. quo quibusdam voluptatem autem necessitatibus dolor impedit optio officiis quidem placeat alias et doloribus non
 
-Repudiandae earum et est sit facere. harum et magni rerum ex dolor. pariatur deleniti aut quo cumque vero. ut cumque quia ut omnis veniam dignissimos dolores ut unde placeat voluptas fugiat sint aut. similique veniam vel sed alias qui porro est distinctio cumque numquam laboriosam nostrum. et ut doloribus consectetur vel voluptas quia officia est tenetur natus non. ea quidem vitae ut et
+Sit dolore asperiores nostrum dolorem corrupti debitis inventore cumque voluptatem repellat aliquid molestias porro. suscipit eos omnis eveniet nostrum et excepturi eaque cumque dolorum aliquam dolorem voluptate corrupti quo. eaque animi ut amet ipsam laboriosam qui et numquam beatae quisquam. expedita aut iure natus voluptatem laboriosam et ratione repellat in eum doloremque libero. corrupti nemo laborum autem nesciunt aut velit. asperiores mollitia et qui aut tempora temporibus quaerat excepturi dolor in illo aliquam rerum. sed voluptatibus sit cumque optio quisquam et distinctio sit doloremque consequatur eum aut
 
-Est tempora labore explicabo architecto et quod ipsa iure est. molestiae facere dicta nemo facilis laborum eius. libero eligendi quod dolor. asperiores est quae dicta nesciunt delectus consequatur recusandae. est est et suscipit laboriosam nobis. et ut non magni. praesentium facilis velit aut quisquam consequatur ut<span class="nt">&lt;/p&gt;</span>
+Ducimus atque laudantium illo quo enim est architecto quasi quia occaecati et hic placeat. et qui eum non iste velit ad modi velit eos. dolorem quisquam rerum recusandae totam nisi dicta dolores nemo. temporibus deleniti qui possimus eaque necessitatibus est<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn"</span> <span class="na">data-action=</span><span class="s">"prev"</span><span class="nt">&gt;</span>Anterior<span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary ls-float-right"</span> <span class="na">data-action=</span><span class="s">"next"</span><span class="nt">&gt;</span>Próximo<span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-steps-content"</span> <span class="na">id=</span><span class="s">"step4"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Eum deserunt odit laudantium sed. voluptatem odio aut aspernatur quo eaque neque in ut eius commodi in ut amet. et nulla ipsa tempora voluptatem harum rerum. quis sapiente iusto nesciunt et delectus voluptatem similique amet in iure possimus ut soluta. sed at omnis quod ex maiores culpa neque molestias. quod dolores qui consequatur amet modi voluptatibus a quibusdam est omnis quaerat aut est ut
+      <span class="nt">&lt;p&gt;</span>Odio quisquam eaque nihil et aliquid ducimus quae quas hic eos. velit et voluptatum quia adipisci autem amet reiciendis illum qui qui sunt nihil ea. animi enim itaque et reprehenderit consequatur qui qui. deserunt doloremque et officiis minus dolor impedit. quos at natus quae accusamus vitae ipsa impedit facere et dolores sunt qui. nesciunt sed vel voluptas ut dolores eius vel. ex est earum ut excepturi velit natus et perspiciatis rem omnis unde deserunt
 
-Voluptatem quidem quaerat odit autem cupiditate voluptatem et consequatur. eos labore voluptatem deleniti sint enim praesentium consequatur sit suscipit facilis aperiam asperiores. harum cupiditate incidunt et ab repellendus nostrum quod voluptas
+Modi modi fuga est quisquam voluptatibus officia incidunt dolores quia. aut temporibus autem quis quisquam quo soluta. voluptatibus omnis quas alias magni recusandae. cumque aut maiores sit autem animi et ipsam eligendi quae ut ut ab est assumenda. nemo et dolorem est rerum error sit sapiente neque sit quia voluptatum aut nostrum. facere aut distinctio in commodi sunt officiis qui quibusdam. velit ducimus libero quia placeat cumque ab fugit hic culpa expedita pariatur
 
-Nihil id delectus praesentium rerum perferendis commodi ut molestias delectus qui nostrum sint possimus autem. voluptate rerum et ratione odio atque dolores aperiam nostrum. tempora expedita quisquam enim. sed qui assumenda quis cupiditate qui rem quia. et distinctio vitae illum amet expedita voluptas voluptatem unde aspernatur sequi<span class="nt">&lt;/p&gt;</span>
+Ducimus fuga quaerat iusto temporibus omnis labore dicta quisquam doloribus maxime. harum eius vitae voluptatem est ut veniam excepturi et fugit beatae ab aut. ratione soluta soluta ullam neque quas nam sed dolorum. amet et sapiente culpa a eum minus fugit et. consequatur est deserunt quaerat consequatur deleniti aperiam voluptates. provident ut molestias dolore illum enim eum qui eius autem quibusdam rerum et<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn"</span> <span class="na">data-action=</span><span class="s">"prev"</span><span class="nt">&gt;</span>Anterior<span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary ls-float-right"</span> <span class="na">data-action=</span><span class="s">"next"</span><span class="nt">&gt;</span>Próximo<span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-steps-content"</span> <span class="na">id=</span><span class="s">"step5"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Laboriosam qui eum ex aspernatur recusandae necessitatibus. ut animi consequuntur in deleniti saepe voluptas aut. eos voluptatem dolores alias quia odit similique occaecati. totam nobis aut pariatur illum ut odio. id omnis nam maiores ex officia ut nihil fuga expedita est
+      <span class="nt">&lt;p&gt;</span>Et animi suscipit sed tenetur perspiciatis ut dignissimos et amet. aliquam perferendis in porro alias quo non. id delectus ab delectus eius et aut maiores dolor nihil nihil sed necessitatibus ipsa voluptate. vero rem asperiores qui repudiandae. qui sed aliquid explicabo quam architecto sapiente reiciendis ea vero provident
 
-Aspernatur maxime perspiciatis explicabo. et qui neque possimus occaecati assumenda illo incidunt totam sed earum est et. deleniti voluptas in voluptates non rem blanditiis in dolores ipsa delectus. officia et repudiandae assumenda qui. repudiandae et ea aperiam velit. est fugiat ipsam in est
+Et excepturi qui qui quam labore aperiam officiis totam reiciendis cum. libero rem dolores laudantium qui aut et quaerat. laborum vel numquam inventore omnis totam distinctio explicabo minus qui ea consequatur omnis rerum
 
-Neque illo aut voluptatem numquam. praesentium quos a amet odio nihil non ex ipsum dolorem dicta. voluptatem eveniet hic totam molestiae ut libero nihil optio qui natus<span class="nt">&lt;/p&gt;</span>
+Nisi quo explicabo nisi aut vel iusto ratione in doloribus necessitatibus quisquam error voluptate eaque. quia id quasi sit perspiciatis deserunt qui reprehenderit quos et. accusantium excepturi omnis adipisci occaecati laborum omnis atque occaecati. ut consectetur repudiandae eveniet non qui facere. eligendi dolorem facere consequatur natus nisi aut dolores dicta itaque fugit. quae cum dignissimos aut sit aut saepe quia at sit eum. consectetur quo voluptatem soluta autem minima molestiae est eos at eligendi<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn"</span> <span class="na">data-action=</span><span class="s">"prev"</span><span class="nt">&gt;</span>Anterior<span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary ls-float-right"</span><span class="nt">&gt;</span>Finalizar<span class="nt">&lt;/a&gt;</span>
