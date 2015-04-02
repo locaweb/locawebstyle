@@ -31,13 +31,22 @@ locastyle.charCounter = (function() {
     var $this = $(field),
         text  = $this.val(),
         max   = $this.attr('maxlength'),
-        countEnters = (text.match(/\n/g) || []).length;
+        enters = countEnters(text),
+        counter = 0
+    ;
 
-    if (text.length + countEnters > max) {
-        $this.val( text.substring(0, max - countEnters) );
+    if (text.length + enters > max) {
+        $this.val( text.substring(0, max - enters) );
+        text = $this.val();
+        enters = countEnters(text);
     }
 
-    $('.ls-number-counter-' + $this.attr('data-index')).text(max - (text.length + countEnters));
+    counter = max - (text.length + enters);
+
+    $('.ls-number-counter-' + $this.attr('data-index')).text(counter);
+  }
+  function countEnters(text) {
+    return (text.match(/\n/g) || []).length;
   }
 
   return {
