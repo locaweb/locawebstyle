@@ -8,8 +8,15 @@ namespace :deploy do
     precompile
     package(args[:version])
     copy_to_assets_and_dist(args[:version])
+    update_bower_version(args[:version])
     commit_and_tag_assets(args[:version])
     git_tag(args[:version])
+  end
+
+  def update_bower_version(version)
+    bower_json = File.open("bower.json", "r").read
+    update_version = bower_json.gsub(/("version": "\d.\d{1,2}.\d{1,3})"/, "\"version\": \"#{version}\"")
+    File.open("bower.json", "w") {|file| file.puts update_version}
   end
 
   def commit_and_tag_assets(version)
