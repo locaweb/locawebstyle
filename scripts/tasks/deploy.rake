@@ -7,7 +7,7 @@ namespace :deploy do
   task :setup, :version do |t, args|
     precompile
     package(args[:version])
-    copy_to_assets(args[:version])
+    copy_to_assets_and_dist(args[:version])
     commit_and_tag_assets(args[:version])
     git_tag(args[:version])
   end
@@ -39,8 +39,8 @@ namespace :deploy do
          cd ../$current_dir }
   end
 
-  def copy_to_assets(version)
-    puts "#{@agent} Copying files to assets repo..."
+  def copy_to_assets_and_dist(version)
+    puts "#{@agent} Copying files to dist directory and assets repo..."
     update_assets
     sh %{cp -fr deploy/ ../assets-locastyle/files/}
     puts "#{@agent} Files copied."
