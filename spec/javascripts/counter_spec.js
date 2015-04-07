@@ -19,5 +19,4 @@ describe("Counter char: ", function(){
 
   });
 
-
 });
