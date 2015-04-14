@@ -1,0 +1,131 @@
+---
+title: Registro de Domínio
+layout: panel
+show_topbar_title: true
+pre_panel: true
+theme_name: ls-theme-orange
+html_class: ls-main-full
+no_show_sidebar: true
+panel: painel7
+title_product: Registro de Domínio
+---
+
+<h1 class="ls-title-intro">Registros</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<a href="#" class="ls-btn-primary ls-btn-lg">Registrar ou Transferir</a>
+
+<div class="ls-box-filter">
+  <form class="ls-form ls-float-right">
+    <label class="ls-label ls-no-margin" role="search">
+    <!-- <label class="ls-label ls-no-margin ls-display-inline-block-sm col-xs-8" role="search"> -->
+      <b class="ls-label-text ls-hidden-accessible">Buscar por domínio</b>
+      <input type="text" id="q" name="q" aria-label="Faça sua busca por domínio" accesskey="s" placeholder="Buscar por domínio" required="">
+    </label>
+    <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
+  </form>
+  
+  <form action="" class="ls-form ls-form-inline row">
+    <label class="ls-label col-xs-12 col-md-3">
+      <b class="ls-label-text">Status</b>
+      <div class="ls-custom-select">
+        <select class="ls-custom" name="">
+          <option selected="selected" value="/resale/clients">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Desativados</option>
+          <option value="#">Bloqueados por bounce</option>
+        </select>
+      </div>
+    </label>
+  </form>
+</div>
+
+<% 3.times  do |n| %>
+	<div class="ls-list">
+	  <header class="ls-list-header">
+	    <div class="ls-list-title col-md-9">
+	      <a href="#">Identificador da conta</a>
+	      <small>Fake Product Name I </small>
+	    </div>
+	    <div class="col-md-3 ls-txt-right">
+	      <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+				  <a href="#" class="ls-btn-primary">Administrar</a>
+				  <ul class="ls-dropdown-nav">
+			      <li><a href="#">Edit</a></li>
+			      <li><a href="#">Config</a></li>
+			      <li><a href="#">Save</a></li>
+				  </ul>
+				</div>
+	    </div>
+	  </header>
+
+	  <div class="ls-list-content ">
+	    <div class="col-xs-12 col-md-4">
+	      Período de renovação
+	      <strong class="ls-list-label">1 ano</strong>
+	    </div>
+	    <div class="col-xs-12 col-md-4">
+	      Data de expiração
+	      <strong class="ls-list-label">01/09/2015</strong>
+	    </div>
+	    <div class="col-xs-12 col-md-4">
+	      Status
+	      <strong class="ls-list-label">Ativo</strong>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="ls-list">
+	  <header class="ls-list-header">
+	    <div class="ls-list-title col-md-9">
+	      <a href="#">Identificador da conta</a>
+	      <small>Fake Product Name I </small>
+	    </div>
+	    <div class="col-md-3 ls-txt-right">
+	      <a href="#" class="ls-btn">Renovar domínio</a>
+	    </div>
+	  </header>
+
+	  <div class="ls-list-content ">
+	    <div class="col-xs-12 col-md-4">
+	      Período de renovação
+	      <strong class="ls-list-label">1 ano</strong>
+	    </div>
+	    <div class="col-xs-12 col-md-4">
+	      Data de expiração
+	      <strong class="ls-list-label">01/09/2015</strong>
+	    </div>
+	    <div class="col-xs-12 col-md-4">
+	      Status
+	      <strong class="ls-list-label">
+	      	Expirado <a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="left" data-content="Isso permite que os envios não sejam interrompidos após atingir o limite do plano contratado." data-title="O uso de envios excedentes está ativado!"></a>
+	      </strong>
+	    </div>
+	  </div>
+	</div>
+<% end %>
+
+<div class="ls-pagination-filter">
+  <ul class="ls-pagination">
+    <li><a href="#">&laquo; Anterior</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Próximo &raquo;</a></li>
+  </ul>
+
+  <div class="ls-filter-view">
+    Exibir
+    <div class="ls-custom-select">
+      <select name="" id="" class="ls-select">
+        <option value="10">10</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+    </div>
+    ítens por página
+  </div>
+</div>
