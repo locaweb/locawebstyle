@@ -9,25 +9,45 @@ title_product: SMTP Locaweb
 <h1 class="ls-title-intro ls-ico-stats">Relatórios</h1>
 
 <div class="ls-box-filter">
-  <form action="#" class="ls-form ls-form-inline ls-float-left">
-    <label class="ls-label">
+  <form action="" class="ls-form ls-form-inline">
+    <input type="hidden" name="status" value="">
+    <label class="ls-label col-md-3 col-sm-4">
       <b class="ls-label-text">Período</b>
       <div class="ls-custom-select">
-        <select name="">
-          <option value="">Dia atual</option>
-          <option value="">Última semana</option>
-          <option value="">Últimos 30 dias</option>
-          <option value="">Últimos 6 meses</option>
-          <option value="">Últimos 12 meses </option>
+        <select name="period" id="select_period" class="ls-select">
+            <option>Hoje</option>
+            <option>Ontem</option>
+            <option>Última semana</option>
+            <option>Últimos 30 dias</option>
+            <option>Últimos 6 meses</option>
+            <option>Últimos 12 meses</option>
+            <option>Personalizado</option>
         </select>
       </div>
     </label>
-    <div data-ls-module="dropdown" class="ls-dropdown">
-      <a href="#" class="ls-btn">Exportar</a>
-      <ul class="ls-dropdown-nav">
-        <li><a href="#" data-ls-module="modal" data-target="#modal_export">CSV</a></li>
-        <li><a href="#" data-ls-module="modal" data-target="#modal_export">XLS</a></li>
-        <li><a href="#" class="ls-divider" data-ls-module="modal" data-target="#modal_exported_reports">Relatórios exportados</a></li>
+    <label class="ls-label col-md-2 col-sm-2">
+      <span id="new_feature_custom_filter_2" data-ls-module="popover" data-content="Escolha o período desejado e clique em 'Filtrar'."></span>
+      <input type="text" name="range_start" class="datepicker" placeholder="dd/mm/aaaa">
+    </label>
+    <label class="ls-label col-md-2 col-sm-2">
+      <input type="text" name="range_end" class="datepicker" placeholder="dd/mm/aaaa">
+      <span id="new_feature_custom_filter_3" data-ls-module="popover" data-content="Clique em 'Filtrar' para exibir  o período selecionado."></span>
+    </label>
+    <label class="ls-label col-md-1 col-sm-1">
+      <input type="submit" class="ls-btn-primary" value="Filtrar">
+    </label>
+    <div data-ls-module="dropdown" class="ls-dropdown ls-float-right" id="step4">
+      <a href="#" class="ls-btn" role="combobox" aria-expanded="false">Exportar</a>
+      <ul class="ls-dropdown-nav" aria-hidden="true">
+        <li>
+          <a href="" role="option" tabindex="-1">CSV</a>
+        </li>
+        <li>
+          <a data-action="open_modal_export" data-ls-module="modal" data-report-ext="XLS" data-target="#modal_export" href="" role="option" tabindex="-1">XLS</a>
+        </li>
+        <li>
+          <a class="ls-divider" data-action="open_modal_export" data-ls-module="modal" data-target="#modal_exported_reports" data-url="/panel/exports" href="" id="link_exported_reports" role="option" tabindex="-1">Relatórios exportados</a>
+        </li>
       </ul>
     </div>
   </form>
