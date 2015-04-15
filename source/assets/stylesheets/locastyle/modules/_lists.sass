@@ -1,9 +1,10 @@
 .ls-list
   border: 1px solid $gray1
   border-left-width: 4px
+  color: $gray3
   border-radius: $default-radius
-  margin-bottom: 15px
-  font-size: remtopx(.875)
+  margin-bottom: 10px
+  font-size: remtopx(.8125)
 
   .ls-list-header
     display: table
@@ -13,9 +14,17 @@
       padding: 15px
       height: inherit
 
+    + .ls-list-content
+      border-top: 1px solid $gray1
+
   .ls-list-label
+    +rgba(color, $gray3, .8)
     display: block
+    font-size: remtopx(.8125)
     padding-bottom: 2px
+
+    + strong
+      +rgba(color, $gray5, .8)
 
   .ls-list-image
     display: inline-block
@@ -24,15 +33,18 @@
 
   .ls-list-title
 
-    a
-      font-size: remtopx(1)
+    strong
+      color: $gray5
+
+    a,
+    strong
+      font-size: remtopx(1.125)
       font-weight: 600
 
     small
       padding-top: 5px
       display: block
       font-size: remtopx(.8125)
-      color: $gray3
 
 .ls-list-description
 
@@ -47,14 +59,15 @@
   li
     font-size: remtopx(.8125)
     line-height: 1.4
-    color: $gray3
 
   [class*="ls-btn"] + [class*="ls-btn"]
     margin-right: 5px
 
 .ls-list-content
-  border-top: 1px solid $gray1
-  overflow: hidden
+  display: table
+  margin-left: 10px
+  width: calc(100% - 20px)
+  width: 98.5%\9
 
   [class*="col-"]
     border-left: 1px solid $gray1
@@ -63,6 +76,7 @@
 
     &:first-child
       border-color: transparent
+      padding-left: 5px
 
   [class*="col-xs-12"]
     border-left: none
@@ -71,6 +85,9 @@
 
     &:first-child
       border-top: none
+
+  + .ls-list-content
+    border-top: 1px solid $gray1
 
 
 @media screen and (min-width: 768px)
