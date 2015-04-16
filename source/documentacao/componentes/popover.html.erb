@@ -76,9 +76,16 @@ type: component
   </div>
   <% code("html") do %><a href="#" class="ls-btn-primary" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a><% end %>
 
-  <div class="ls-alert-info">
-    <p>Para que o popover inicie aberto, adicione o atributo <code>data-ls-popover="open"</code>.</p>
+
+  <h2 class="doc-title-3">Popover aberto ao carregar a página</h2>
+  <p>Basta adicionar o atributo <code>data-ls-popover="open"</code>. </p>
+  <div class="ls-box-demo">
+    <a href="#" class="ls-ico-help" data-ls-popover="open" data-placement="right" data-ls-module="popover" title="Titulo" data-content="Exemplo de popover Aberto, <br> ao carregar a página"></a>
   </div>
+  <% code("html") do %>
+    <a href="#" class="ls-ico-help" data-ls-popover="open" data-placement="right" data-ls-module="popover" title="Titulo" data-content="Exemplo de popover Aberto, <br> ao carregar a página."></a>
+  <% end %>
+
 
   <h2 class="doc-title-3">Exemplo classe funcional .ls-word-dotted</h2>
   <div class="ls-box-demo">
