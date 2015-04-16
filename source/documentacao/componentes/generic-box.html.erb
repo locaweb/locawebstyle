@@ -58,6 +58,16 @@ type: component
 
   <p>Por padrão o background do elemento <code>.ls-box</code> é branco, mas você mudar para cinza se usar a classe <code>.ls-box-gray</code>.</p>
 
+  <h2 class="doc-title-3">Vários espaçamentos</h2>
+
+  <p>Como outros elementos, você pode usar as classes <code>.ls-xs-space</code>, <code>.ls-sm-space</code>, <code>.ls-md-space</code> e <code>.ls-lg-space</code> para aumentar ou diminuir o tamanho do <code>.ls-box</code>.</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/box/box-big-small' %>
+  </div>
+
+  <% code("html") do %><%= partial 'documentacao/shared/box/box-big-small' %><% end %>
+
   <div class="ls-box-demo">
     <%= partial 'documentacao/shared/box/box-gray' %>
   </div>
@@ -84,23 +94,4 @@ type: component
 
   <% code("html") do %><%= partial 'documentacao/shared/box/_box-bg-icon' %><% end %>
 
-  <h2 class="doc-title-3">Vários espaçamentos</h2>
-
-  <p>Como outros elementos, você pode usar as classes <code>.ls-xs-space</code>, <code>.ls-sm-space</code>, <code>.ls-md-space</code> e <code>.ls-lg-space</code> para aumentar ou diminuir o tamanho do <code>.ls-box</code>.</p>
-
-  <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/box/box-big-small' %>
-  </div>
-
-  <% code("html") do %><%= partial 'documentacao/shared/box/box-big-small' %><% end %>
-
-  <h2 class="doc-title-3">Box de filtro</h2>
-
-  <p>A caixa de filtro não usa a classe <code>.ls-box</code> mas uma classe chamada <code>.ls-box-filter</code>. Isso já deixa o elemento preparado para receber a estrutura e os elementos abaixo.</p>
-
-  <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/box/box-filter' %>
-  </div>
-
-  <% code("html") do %><%= partial 'documentacao/shared/box/box-filter' %><% end %>
 </section>
