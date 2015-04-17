@@ -1,0 +1,36 @@
+---
+title: Pré Painel
+layout: panel
+show_topbar_title: true
+pre_panel: true
+panel: painel3
+theme_name: ls-theme-orange
+title_product: Registro de Domínio
+html_class: ls-main-full
+no_show_sidebar: true
+topbar_gray: true
+---
+
+<h1 class="ls-title-intro">Transferência de Domínio para a Locaweb</h1>
+<p>Acompanhe o andamento do processo de transferência de domínio para a Locaweb</p>
+
+<h2 class="ls-title-3">nike.com</h2>
+
+<div class="ls-list">
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-12">
+      <strong>Trava de transferência</strong>
+      <span class="ls-float-right">Desabilitada</span>
+    </div>
+  </div>
+  <div class="ls-list-content ">
+    <div class="col-xs-12 col-md-12">
+      <strong>Trava de transferência</strong>
+      <span class="ls-float-right">Desabilitada</span>
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel3/sidebar' %>
+<% end %>

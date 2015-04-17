@@ -6,36 +6,38 @@ pre_panel: true
 panel: painel3
 theme_name: ls-theme-orange
 title_product: Registro de Domínio
+html_class: ls-main-full
+no_show_sidebar: true
+topbar_gray: true
 ---
 
-<h1 class="ls-title-intro ls-ico-list2">Registros</h1>
+<h1 class="ls-title-intro">Registros</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-
-<a class="ls-btn-primary ls-btn-lg">Registrar ou transferir</a>
+<a href="#" class="ls-btn-primary ls-btn-lg">Registrar ou Transferir</a>
 
 <div class="ls-box-filter">
-  <form action="" class="ls-form ls-form-inline ls-float-left">
-    <label class="ls-label">
+  <form action="results/" class="ls-form ls-float-right">
+    <label class="ls-label ls-no-margin" role="search">
+    <!-- <label class="ls-label ls-no-margin ls-display-inline-block-sm col-xs-8" role="search"> -->
+      <b class="ls-label-text ls-hidden-accessible">Buscar por domínio</b>
+      <input type="text" id="q" name="q" aria-label="Faça sua busca por domínio" accesskey="s" placeholder="Buscar por domínio" required="">
+    </label>
+    <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
+  </form>
+
+  <form action="" class="ls-form ls-form-inline row">
+    <label class="ls-label col-xs-12 col-md-3">
       <b class="ls-label-text">Status</b>
       <div class="ls-custom-select">
-        <select class="ls-select" name="">
-          <option selected="selected">Todos</option>
+        <select class="ls-custom" name="">
+          <option selected="selected" value="/resale/clients">Todos</option>
           <option value="#">Ativos</option>
-          <option value="#">Expirado</option>
-          <option value="#">Aguardando transferência</option>
+          <option value="#">Desativados</option>
+          <option value="#">Bloqueados por bounce</option>
         </select>
       </div>
     </label>
-  </form>
-
-  <form action="<%= base_url %>/documentacao/exemplos/painel3/results" method="post" class="ls-form ls-form-inline ls-float-right">
-    <label class="ls-label" role="search">
-      <b class="ls-label-text ls-hidden-accessible">Buscar por domínio</b>
-      <input type="text" id="q" name="q" aria-label="Buscar por domínio" accesskey="s" placeholder="Buscar por domínio">
-    </label>
-    <div class="ls-actions-btn">
-      <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
-    </div>
   </form>
 </div>
 
@@ -60,16 +62,16 @@ title_product: Registro de Domínio
     </header>
     <div class="ls-list-content ">
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Período de renovação</strong>
-        1 ano
+        <span class="ls-list-label">Período de renovação</span>
+        <strong>1 ano</strong>
       </div>
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Data de expiração</strong>
-        01/09/2015
+        <span class="ls-list-label">Data de expiração</span>
+        <strong>01/09/2015</strong>
       </div>
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Status</strong>
-        Ativo
+        <span class="ls-list-label">Status</span>
+        <strong>Ativo</strong>
       </div>
     </div>
   </div>
@@ -93,16 +95,16 @@ title_product: Registro de Domínio
     </header>
     <div class="ls-list-content ">
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Período de renovação</strong>
-        1 ano
+        <span class="ls-list-label">Período de renovação</span>
+        <strong>1 ano</strong>
       </div>
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Data de expiração</strong>
-        30/12/2014 | <a href="" class="ls-color-theme">Renovar domínio</a>
+        <span class="ls-list-label">Data de expiração</span>
+        <strong>30/12/2014</strong> | <a href="" class="ls-color-theme">Renovar domínio</a>
       </div>
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Status</strong>
-        Ativo
+        <span class="ls-list-label">Status</span>
+        <strong>Ativo</strong>
       </div>
     </div>
   </div>
@@ -110,25 +112,25 @@ title_product: Registro de Domínio
   <div class="ls-list">
     <header class="ls-list-header">
       <div class="ls-list-title col-sm-9">
-        <a href="#" >locatransfertest014<%= num %>.com </a>
+        <strong>locatransfertest014<%= num %>.com </strong>
         <small>Registro de Domínio Internacional</small>
       </div>
       <div class="col-sm-3 ls-txt-right">
-        <a href="#" class="ls-btn-primary">Renovar domínio</a>
+        <a href="#" class="ls-btn-default">Renovar domínio</a>
       </div>
     </header>
     <div class="ls-list-content ">
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Período de renovação</strong>
-        1 ano
+        <span class="ls-list-label">Período de renovação</span>
+        <strong>1 ano</strong>
       </div>
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Data de expiração</strong>
-        30/12/2014
+        <span class="ls-list-label">Data de expiração</span>
+        <strong>30/12/2014</strong>
       </div>
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Status</strong>
-        Expirado <span class="ls-ico-help" data-ls-module="popover" data-trigger="hover" data-title="Registro Expirado" data-content="O domínio encontra-se expirado por falta de pagamento. Renove o registro e garanta seu funcionamento." data-placement="top"></span>
+        <span class="ls-list-label">Status</span>
+        <strong>Expirado</strong> <span class="ls-ico-help" data-ls-module="popover" data-trigger="hover" data-title="Registro Expirado" data-content="O domínio encontra-se expirado por falta de pagamento. Renove o registro e garanta seu funcionamento." data-placement="top"></span>
       </div>
     </div>
   </div>
@@ -140,24 +142,25 @@ title_product: Registro de Domínio
         <small>Registro de Domínio Internacional</small>
       </div>
       <div class="col-sm-3 ls-txt-right">
-        <a href="<%= base_url %>/documentacao/exemplos/painel3/transferin" class="ls-btn-primary">Acompanhar transferência</a>
+        <a href="<%= base_url %>/documentacao/exemplos/painel3/transferin" class="ls-btn-defaul">Acompanhar transferência</a>
       </div>
     </header>
     <div class="ls-list-content ">
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Período de renovação</strong>
-        1 ano
+        <span class="ls-list-label">Período de renovação</span>
+        <strong>1 ano</strong>
       </div>
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Data de expiração</strong>
-        30/12/2014
+        <span class="ls-list-label">Data de expiração</span>
+        <strong>30/12/2014</strong>
       </div>
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Status</strong>
-        Aguardando transferência <span class="ls-ico-help" data-ls-module="popover" data-trigger="hover" data-title="Aguardando transferência" data-content="O domínio encontra-se processo de transferência para a Locaweb. Após validação da trava e senha de transferência, aguarde a transferência automática do registro em até 7 dias corridos, a partir da data de solicitação na Locaweb." data-placement="top"></span>
+        <span class="ls-list-label">Status</span>
+        <strong>Aguardando transferência</strong> <span class="ls-ico-help" data-ls-module="popover" data-trigger="hover" data-title="Aguardando transferência" data-content="O domínio encontra-se processo de transferência para a Locaweb. Após validação da trava e senha de transferência, aguarde a transferência automática do registro em até 7 dias corridos, a partir da data de solicitação na Locaweb." data-placement="top"></span>
       </div>
     </div>
   </div>
+
   <div class="ls-list">
     <header class="ls-list-header">
       <div class="ls-list-title col-sm-9">
@@ -177,16 +180,16 @@ title_product: Registro de Domínio
     </header>
     <div class="ls-list-content ">
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Período de renovação</strong>
-        1 ano
+        <span class="ls-list-label">Período de renovação</span>
+        <strong>1 ano</strong>
       </div>
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Data de expiração</strong>
-        01/09/2015
+        <span class="ls-list-label">Data de expiração</span>
+        <strong>01/09/2015</strong>
       </div>
       <div class="col-xs-12 col-md-4">
-        <strong class="ls-list-label">Status</strong>
-        Ativo
+        <span class="ls-list-label">Status</span>
+        <strong>Ativo</strong>
       </div>
     </div>
   </div>
