@@ -227,8 +227,17 @@
         a:not([class*="ls-btn"]),
           color: $color1
 
-      &.ls-table-striped tbody tr:hover td
-        +rgba(background-color, $color2, .02)
+      &.ls-table-striped
+        tbody tr:hover td
+          +rgba(background-color, $color2, .02)
+
+        &.ls-no-hover tbody
+          tr:hover
+            td
+              background: #fff
+
+            &:nth-child(odd) td
+              background: $gray0
 
 
     ////
