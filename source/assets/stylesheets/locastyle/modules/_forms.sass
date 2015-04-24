@@ -194,12 +194,18 @@ textarea
   @extend .ls-clearfix
   margin-right: 0
 
+  &.ls-float-left
+    width: 48%
+
   &.row
     margin-right: 0
 
+    [class*="ls-btn"]
+      margin-left: 0
+
   .ls-label
     display: inline-block
-    margin-right: 15px
+    margin-right: 10px
     margin-bottom: 15px
 
     & + [class*="ls-btn"]
@@ -213,6 +219,7 @@ textarea
       float: left // is necessary
       display: inline-table // is necessary
       margin-right: 0
+      padding-left: 0
 
       .ls-label-text
         display: table-cell
@@ -225,7 +232,7 @@ textarea
     display: inline-table
 
     [class*="ls-btn"] + [class*="ls-btn"]
-      margin-left: 25px
+      margin-left: 15px
 
 .ls-box-filter
   form.ls-float-right
@@ -336,10 +343,21 @@ input + .ls-label-text-prefix
 
   .ls-form-inline
 
+    &.row
+      margin-left: 0
+      margin-right: -15px
+
     .ls-label
 
       .ls-label-text
         display: block
+
+      &[class*="col-"]
+        float: none
+        display: block
+
+        .ls-label-text
+          display: block
 
     .ls-actions-btn
       display: block

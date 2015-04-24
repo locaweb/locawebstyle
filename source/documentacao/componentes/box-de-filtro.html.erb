@@ -1,0 +1,54 @@
+---
+title: Box de filtro
+description: Elemento usado pra envolver elementos de formulário que filtram ou fazem alguma busca.
+type: component
+---
+
+<%= partial 'partials/doc-menu-components'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+
+  <h2 class="doc-title-3">Filtro de período simples</h2>
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+
+    <%= partial 'documentacao/shared/box-de-filtro/filter-time' %>
+
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="340" height="380" scrolling="no" src="<%= base_url %>/documentacao/shared/box-de-filtro/filter-time-mobile" frameborder="0"></iframe>
+  </div>
+
+<% code("html") do %><%= partial 'documentacao/shared/box-de-filtro/filter-time' %><% end %>
+
+
+  <h2 class="doc-title-3">Filtro de período avançado</h2>
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+
+    <%= partial 'documentacao/shared/box-de-filtro/filter-time-advanced' %>
+
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="340" height="400" scrolling="no" src="<%= base_url %>/documentacao/shared/box-de-filtro/filter-time-advanced-mobile" frameborder="0"></iframe>
+  </div>
+
+<% code("html") do %><%= partial 'documentacao/shared/box-de-filtro/filter-time-advanced' %><% end %>
+
+
+
+  <h2 class="doc-title-3">Filtro de status</h2>
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+
+    <%= partial 'documentacao/shared/box-de-filtro/filter-status' %>
+
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="340" height="200" scrolling="no" src="<%= base_url %>/documentacao/shared/box-de-filtro/filter-status-mobile" frameborder="0"></iframe>
+  </div>
+
+<% code("html") do %><%= partial 'documentacao/shared/box-de-filtro/filter-status' %><% end %>
+
+
+</section>

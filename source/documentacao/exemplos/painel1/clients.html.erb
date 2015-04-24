@@ -11,26 +11,26 @@ title_product: Revenda do Email Marketing
 <a href="<%= base_url %>/documentacao/exemplos/painel1/new-client" class="ls-btn-primary">Cadastrar novo</a>
 
 <div class="ls-box-filter">
-  <form action="#" class="ls-form ls-form-inline ls-float-left">
-    <label class="ls-label">
-        <b class="ls-label-text">Status</b>
-        <div class="ls-custom-select ls-field-sm">
-          <select name="">
-            <option value="">Todos</option>
-            <option value="">Ativo</option>
-            <option value="">Desativados</option>
-            <option value="">Bloqueados por bounce</option>
-          </select>
-        </div>
-      </label>
+  <form action="" class="ls-form ls-form-inline ls-float-left">
+    <label class="ls-label col-md-6 col-sm-8">
+      <b class="ls-label-text">Status</b>
+      <div class="ls-custom-select ls-field-sm">
+        <select name="" class="ls-select">
+          <option>Todos</option>
+          <option>Ativos</option>
+          <option>Desativados</option>
+        </select>
+      </div>
+    </label>
   </form>
-  <form action="#" class="ls-form ls-form-inline ls-float-right">
-    <label class="ls-label">
+
+  <form  action="" class="ls-form ls-form-inline ls-float-right">
+    <label class="ls-label" role="search">
       <b class="ls-label-text ls-hidden-accessible">Nome do cliente</b>
-      <input type="text" name="nome" placeholder="Nome e sobrenome" required class="ls-field-sm">
+      <input type="text" id="q" name="q" aria-label="Faça sua busca por cliente" placeholder="Nome do cliente" required="" class="ls-field-sm">
     </label>
     <div class="ls-actions-btn">
-      <button type="submit" class="ls-btn ls-btn-sm">Buscar</button>
+      <input type="submit" value="Buscar" class="ls-btn ls-btn-sm" title="Buscar">
     </div>
   </form>
 </div>

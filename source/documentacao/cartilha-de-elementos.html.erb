@@ -77,7 +77,23 @@ layout: false
 <div class="doc-section container">
   <h2 class="doc-title-2">Box <%= link_to 'ver documentação', "#{base_url}/documentacao/componentes/box-generico/", :class => 'ls-tag-info ls-float-right' %></h2>
   <hr>
+
   <%= partial 'documentacao/shared/box/box-big-small' %>
+</div>
+
+
+<hr class="doc-hr">
+
+<div class="doc-section container">
+  <h2 class="doc-title-2">Box de filtro e busca<%= link_to 'ver documentação', "#{base_url}/documentacao/componentes/box-de-filtro", :class => 'ls-tag-info ls-float-right' %></h2>
+  <hr>
+
+
+  <%= partial 'documentacao/shared/box-de-filtro/filter-time' %>
+
+  <%= partial 'documentacao/shared/box-de-filtro/filter-time-advanced' %>
+
+  <%= partial 'documentacao/shared/box-de-filtro/filter-status' %>
 </div>
 
 <hr class="doc-hr">
