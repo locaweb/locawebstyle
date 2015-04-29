@@ -12,26 +12,6 @@
       font-size: remtopx(.875)
       margin-bottom: 30px
 
-  .ls-topbar .ls-notification-topbar
-
-    .ls-alerts-list a
-      +rgba(color, $gray4,.4)
-
-      &.ls-active
-        color: #000
-
-      &[data-counter]
-        +rgba(color, $gray4,1)
-
-        &.ls-active
-          color: #000
-
-        &:after
-          color: #fff
-
-  .ls-user-account
-    background-color: darken($gray0, 10%)
-
   .ls-topbar
 
     .ls-ico-menu:before,
@@ -46,18 +26,6 @@
   .ls-pre-panel
     .ls-sidebar
       z-index: 12
-
-    .ls-user-account
-
-      > a
-        color: $gray4
-
-        small
-          +rgba(color, $gray4,1)
-
-        &:before
-          +rgba(color, $gray4,.5)
-          box-shadow: inset 0 0 0 2px rgba($gray4,.3)
 
   .ls-main-full
     .ls-topbar
