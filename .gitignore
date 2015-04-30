@@ -37,8 +37,12 @@ Vagrantfile
 
 # rbenv
 .ruby-version
+.rbenv-gemset
 
 # Ignore deploy related files
 deploy
 
 Gemfile.lock
+
+# Ignore Plato report
+/report

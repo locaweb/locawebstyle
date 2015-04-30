@@ -4,11 +4,15 @@ locastyle.modal = (function() {
 
   var config = {
     open: {
-      trigger: '[data-ls-module="modal"]'
+      trigger: '[data-ls-module="modal"]',
+      dispatcherOpen: 'ls-modal-before-open',
+      dispatcherOpened: 'ls-modal-before-opened'
     },
     close: {
       classes: '.ls-modal-overlay',
-      trigger: '[data-dismiss="modal"]'
+      trigger: '[data-dismiss="modal"]',
+      dispatcherClose: 'ls-modal-before-close',
+      dispatcherClosed: 'ls-modal-before-closed'
     },
     lsModal : 0
   };
@@ -16,6 +20,9 @@ locastyle.modal = (function() {
   function init() {
     unbind();
     bindOpen();
+
+    //locastyle.eventDispatcher.eventSubscribe(config.open.dispatcherOpen, logOpen);
+    //locastyle.eventDispatcher.eventSubscribe(config.open.dispatcherOpened, logOpened);
   }
 
   function unbind() {
@@ -41,6 +48,8 @@ locastyle.modal = (function() {
   }
 
   function open($element) {
+    locastyle.eventDispatcher.trigger(config.open.dispatcherOpen);
+
     if (!$element.target) {
       $('body').addClass('modal-opened').append(locastyle.templates.modal($element));
       $('.ls-modal-template').focus();
@@ -53,22 +62,34 @@ locastyle.modal = (function() {
         .appendTo('body');
         $('body').addClass('modal-opened');
     }
+    
     ariaModal($($element.target),'false');
+    
     $($element.target).each(function(i,e){
-      if($(e).data('modal-blocked') !== undefined){
-        $('[data-dismiss="modal"]').remove();
-      }else{
-        bindClose();
-      }
+      targetEach(i, e);
     });
+
+    locastyle.eventDispatcher.trigger(config.open.dispatcherOpened);
+  }
+
+  function targetEach(i, e) {
+    if ($(e).data('modal-blocked') !== undefined) {
+      $('[data-dismiss="modal"]').remove();
+    } else {
+      bindClose();
+    }
   }
 
   function close() {
+    locastyle.eventDispatcher.trigger(config.close.dispatcherClose);
+
     $('.ls-modal').hide().removeClass("opened").attr({ 'aria-hidden' : 'true' });
     $(".ls-modal-overlay, .ls-modal-template").remove();
     $('body').removeClass('modal-opened');
     locastyle.popover.destroyPopover();
     locastyle.popover.init();
+
+    locastyle.eventDispatcher.trigger(config.close.dispatcherClosed);
   }
 
   function ariaModal($modal) {
@@ -80,6 +101,22 @@ locastyle.modal = (function() {
       'aria-labelledby' : idModal,
       tabindex : '-1'
     }).focus();
+  }
+
+  function logOpen() {
+    console.log('log open');
+  }
+
+  function logOpened() {
+    console.log('log opened');
+  }
+
+  function logClose() {
+    console.log('log close');
+  }
+
+  function logClosed() {
+    console.log('log closed');
   }
 
   return {
