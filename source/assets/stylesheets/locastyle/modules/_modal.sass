@@ -6,6 +6,7 @@ $paddingDefault: 20px
 .ls-modal
   visibility: hidden
   backface-visibility: hidden
+  opacity: 0
   z-index: 0
   position: fixed
   left: 0
@@ -15,50 +16,28 @@ $paddingDefault: 20px
   overflow: auto
   overflow-y: scroll
   text-align: center
+  background: rgba(0, 0, 0, 0.8)
 
-  &.opened
+  &.ls-opened
     z-index: 16
+    opacity: 1
     visibility: visible
 
   &.popover
     .ls-modal-footer
       display: none
 
-.ls-modal-overlay
-  position: fixed
-  width: 100%
-  height: 100%
-  visibility: hidden
-  top: 0
-  left: 0
-  z-index: 15
-  opacity: 0
-  background: rgba(0, 0, 0, 0.8)
-  +single-transition(opacity, .25s, linear)
-
-  .modal-opened &
-    opacity: 1
-    visibility: visible
-
 .ls-modal-box
   background-color: #fff
   border-radius: $default-radius
-  -webkit-transform: scale(.5)
-  transform: scale(.5)
-  opacity: 0.5
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7)
   text-align: left
-  display: inline-block
   position: relative
-  z-index: 16
-  margin: 10% 20px 100px
+  display: inline-block
   width: $defaultWidth
-
-  .opened &
-    -webkit-transition: all 0.25s linear
-    -webkit-transform: scale(1)
-    transform: scale(1)
-    opacity: 1
+  margin: 10% 20px 100px
+  opacity: 0
+  visibility:  hidden
 
   &.ls-modal-large
     width: $largeWidth
@@ -67,6 +46,11 @@ $paddingDefault: 20px
   &.ls-modal-small
     width: $smallWidth
     margin-left: -$smallWidth / 2
+
+  .ls-modal.ls-opened &
+    opacity: 1
+    visibility: visible
+
 
 .ls-modal-header
   padding: $paddingDefault
@@ -103,24 +87,6 @@ $paddingDefault: 20px
   padding: $paddingDefault
   border-top: 1px solid $gray1
 
-// +keyframes(modal-fadein)
-//   0%
-//     visibility: hidden
-//     opacity: 0
-//   1%
-//     visibility: visible
-//   100%
-//     opacity: 1
-
-// +keyframes(modal-fadeout)
-//   0%
-//     visibility: visible
-//     opacity: 1
-//   1%
-//     opacity: 0
-//   100%
-//     visibility: hidden
-
 .ls-modal-feedbackr
 
   .ls-modal-box
@@ -138,7 +104,6 @@ $paddingDefault: 20px
     .ls-modal-body
       width: 100%
       height: 600px
-
 
 @media screen and (min-width: $screen-sm)
   .ls-modal-box

@@ -9,7 +9,7 @@ locastyle.modal = (function() {
       dispatcherOpened: 'ls-modal-before-opened'
     },
     close: {
-      classes: '.ls-modal-overlay',
+      classes: '.ls-modal',
       trigger: '[data-dismiss="modal"]',
       dispatcherClose: 'ls-modal-before-close',
       dispatcherClosed: 'ls-modal-before-closed'
@@ -20,9 +20,6 @@ locastyle.modal = (function() {
   function init() {
     unbind();
     bindOpen();
-
-    //locastyle.eventDispatcher.eventSubscribe(config.open.dispatcherOpen, logOpen);
-    //locastyle.eventDispatcher.eventSubscribe(config.open.dispatcherOpened, logOpened);
   }
 
   function unbind() {
@@ -42,7 +39,11 @@ locastyle.modal = (function() {
         locastyle.modal.close();
       }
     });
-    $(config.close.classes + ", " + config.close.trigger).on('click.ls', function() {
+
+    $(config.close.classes + ", " + config.close.trigger).on('click.ls', function(e) {
+      if (e.target !== e.currentTarget) {
+        return false;
+      }
       locastyle.modal.close();
     });
   }
@@ -51,16 +52,12 @@ locastyle.modal = (function() {
     locastyle.eventDispatcher.trigger(config.open.dispatcherOpen);
 
     if (!$element.target) {
-      $('body').addClass('modal-opened').append(locastyle.templates.modal($element));
+      $('body').append(locastyle.templates.modal($element));
       $('.ls-modal-template').focus();
+      
       bindClose();
     } else {
-      $($element.target)
-        .show()
-        .addClass('opened')
-        .append('<div class="ls-modal-overlay"></div>')
-        .appendTo('body');
-        $('body').addClass('modal-opened');
+      $($element.target).addClass('ls-opened');
     }
     
     ariaModal($($element.target),'false');
@@ -83,9 +80,8 @@ locastyle.modal = (function() {
   function close() {
     locastyle.eventDispatcher.trigger(config.close.dispatcherClose);
 
-    $('.ls-modal').hide().removeClass("opened").attr({ 'aria-hidden' : 'true' });
-    $(".ls-modal-overlay, .ls-modal-template").remove();
-    $('body').removeClass('modal-opened');
+    $('.ls-modal').removeClass('ls-opened').attr({ 'aria-hidden' : 'true' });
+    $('.ls-modal-template').remove();
     locastyle.popover.destroyPopover();
     locastyle.popover.init();
 
@@ -95,28 +91,13 @@ locastyle.modal = (function() {
   function ariaModal($modal) {
     var idModal = $modal.find('.ls-modal-title').attr('id') || 'lsModal' + config.lsModal++;
     $modal.find('.ls-modal-title').attr('id', idModal);
+    
     $($modal).attr({
       role: 'dialog',
       'aria-hidden' : 'false',
       'aria-labelledby' : idModal,
       tabindex : '-1'
     }).focus();
-  }
-
-  function logOpen() {
-    console.log('log open');
-  }
-
-  function logOpened() {
-    console.log('log opened');
-  }
-
-  function logClose() {
-    console.log('log close');
-  }
-
-  function logClosed() {
-    console.log('log closed');
   }
 
   return {
