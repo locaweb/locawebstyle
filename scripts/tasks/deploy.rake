@@ -11,7 +11,7 @@ namespace :deploy do
     update_bower_version(args[:version])
     update_version_in_config(args[:version])
     commit_and_tag_assets(args[:version])
-    git_tag(args[:version])
+    git_commit_and_tag_locastyle(args[:version])
   end
 
   def update_version_in_config(version)
@@ -107,9 +107,11 @@ namespace :deploy do
     puts "#{@agent} Project builded."
   end
 
-  def git_tag(version)
-    puts "#{@agent} Let's create the Locastyle tag..."
-    sh %{git tag -a "#{version}" -m "" }
+  def git_commit_and_tag_locastyle(version)
+    puts "#{@agent} Let's commit and create the Locastyle tag..."
+    sh %{git add --all &&
+         git commit -m "Bump version to: #{version}" &&
+         git tag -a "#{version}" -m "" }
     puts "#{@agent} Done. Now, to push the code is up to you."
   end
 
