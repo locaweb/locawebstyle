@@ -19,7 +19,6 @@ locastyle.eventDispatcher = (function() {
 
   // Call the functions related with event is triggered
   function trigger(eventName) {
-
     // Only if have subscribers
     if (typeof subscribers[eventName] !== 'undefined') {
       for(var i = 0, subsCount = subscribers[eventName].length; i < subsCount; i++) {

@@ -254,7 +254,7 @@ describe("Track Events: ", function() {
     });
   });
 
-  describe("Modal", function () {
+  describe("Modal: ", function () {
     describe("When click on #closed_modal_sample_trigger which is a trigger to open modal", function () {
       it("should call ga with expedtedOptions as arguments", function () {
         var expectedOptions = {
@@ -306,10 +306,11 @@ describe("Track Events: ", function() {
     });
 
     describe("When sending a form inside a modal", function () {
+      pending();
       it("should call ga with expected options as params", function () {
         var expectedOptions = {
           category: "locastyle#track-events-test",
-          action: "submit_form_#modalSample#inside_modal#myAwesomeModal",
+          action: "submit_form_#modalSample#inside_modal#myAwesomeModalClosed",
           label: "Save changes"
         }
         spyOn(window, "ga");

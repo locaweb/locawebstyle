@@ -1,7 +1,8 @@
 <div class="ls-modal ls-modal-template ls-opened <%= this.lsModule %>" tabindex="-1" aria-labelledby="lsModal" role="dialog">
-  <div class="ls-modal-box">
   <% if @actionType != 'link': %>
-    <form action="<%= @action %>" method="post">
+    <form action="<%= @action %>" class="ls-modal-box ls-form" method="post">
+  <% else: %>
+    <div class="ls-modal-box">
   <% end %>
     <div class="ls-modal-header">
       <button type="button" data-dismiss="modal" class="close">&times;</button>
@@ -22,6 +23,7 @@
     </div>
   <% if @actionType != 'link': %>
     </form>
+  <% else: %>
+    </div>
   <% end %>
-  </div>
 </div>

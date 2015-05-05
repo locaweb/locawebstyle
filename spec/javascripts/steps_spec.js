@@ -85,7 +85,7 @@ describe("Steps: ", function(){
         $(document).on('NextStepEvent', function(e){ e.preventDefault(); });
         locastyle.steps.nextStep();
         expect($('#list3').hasClass('ls-active')).toBe(false);
-        $(document).off('NextStepEvent'});
+        $(document).off('NextStepEvent');
       });
     });
 

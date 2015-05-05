@@ -5,14 +5,14 @@ locastyle.modal = (function() {
   var config = {
     open: {
       trigger: '[data-ls-module="modal"]',
-      dispatcherOpen: 'ls-modal-before-open',
-      dispatcherOpened: 'ls-modal-before-opened'
+      dispatcherOpen: 'ls-modal-open',
+      dispatcherOpened: 'ls-modal-opened'
     },
     close: {
       classes: '.ls-modal',
       trigger: '[data-dismiss="modal"]',
-      dispatcherClose: 'ls-modal-before-close',
-      dispatcherClosed: 'ls-modal-before-closed'
+      dispatcherClose: 'ls-modal-close',
+      dispatcherClosed: 'ls-modal-closed'
     },
     lsModal : 0
   };
@@ -60,27 +60,26 @@ locastyle.modal = (function() {
       $($element.target).addClass('ls-opened');
     }
     
-    ariaModal($($element.target),'false');
-    
-    $($element.target).each(function(i,e){
-      targetEach(i, e);
-    });
+    ariaModal($($element.target));
+    modalBlocked($element.target);
 
     locastyle.eventDispatcher.trigger(config.open.dispatcherOpened);
   }
 
-  function targetEach(i, e) {
-    if ($(e).data('modal-blocked') !== undefined) {
-      $('[data-dismiss="modal"]').remove();
-    } else {
-      bindClose();
-    }
+  function modalBlocked($target) {
+    $($target).each(function(i,e){
+      if ($(e).data('modal-blocked') !== undefined) {
+        $('[data-dismiss="modal"]').remove();
+      } else {
+        bindClose();
+      }
+    });
   }
 
   function close() {
     locastyle.eventDispatcher.trigger(config.close.dispatcherClose);
 
-    $('.ls-modal').removeClass('ls-opened').attr({ 'aria-hidden' : 'true' });
+    $('.ls-modal').removeClass('ls-opened').attr('aria-hidden', true);
     $('.ls-modal-template').remove();
     locastyle.popover.destroyPopover();
     locastyle.popover.init();
@@ -92,7 +91,7 @@ locastyle.modal = (function() {
     var idModal = $modal.find('.ls-modal-title').attr('id') || 'lsModal' + config.lsModal++;
     $modal.find('.ls-modal-title').attr('id', idModal);
     
-    $($modal).attr({
+    $modal.attr({
       role: 'dialog',
       'aria-hidden' : 'false',
       'aria-labelledby' : idModal,
