@@ -52,11 +52,47 @@
       &.ls-topbar-gray
         background: $gray0
 
+        .ls-user-account
+          background-color: darken($gray0, 10%)
+
+          > a
+            color: $gray4
+
+            small
+              +rgba(color, $gray4,1)
+
+            &:before
+              +rgba(color, $gray4,.5)
+              box-shadow: inset 0 0 0 2px rgba($gray4,.3)
+
+        [class*="ls-go"]
+          background-color: darken($gray0, 10%)
+
+          &:before
+            color: $gray4
+
         .ls-brand-name
           background: $gray0
 
           a
-            color: $color1
+            color: $gray4
+
+        .ls-notification-topbar
+
+          .ls-alerts-list a
+            +rgba(color, $gray4,.4)
+
+            &.ls-active
+              color: #000
+
+            &[data-counter]
+              +rgba(color, $gray4,1)
+
+              &.ls-active
+                color: #000
+
+              &:after
+                color: #fff
 
     ////
     // Link back to pre panel
@@ -298,6 +334,7 @@
     &.ls-pre-panel
       .ls-topbar
         background-color: $gray0
+
 
     ////
     // Datepicker
