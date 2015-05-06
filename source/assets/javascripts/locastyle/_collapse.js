@@ -56,7 +56,6 @@ locastyle.collapse = (function() {
   }
 
   function toggle(target) {
-    console.log(target)
     checkVisible(target, config.dispatcherClose.close, config.dispatcherOpen.open);
     $(target).slideToggle(function() {
       $(target).parent().toggleClass(config.classes.opened);
