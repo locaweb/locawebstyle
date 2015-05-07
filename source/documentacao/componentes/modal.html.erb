@@ -205,6 +205,48 @@ locastyle.modal.open({target: "#myAwesomeModal"});
 <div class="ls-modal" data-modal-blocked id="myAwesomeModal">
   <% end %>
   <p class="ls-alert-warning"><strong>Atenção:</strong> Se você for fechar sua modal depois de uma determinada ação, você precisa chamar <code>locastyle.modal.close()</code></p>
+  <hr>
 
+  <h3 class="ls-title-4">Dispatchers</h3>
+  <% code("javascript") do %>
+locastyle.eventDispatcher.eventSubscribe('trigger', fn)
+  <% end %>
 
+  <h2 class="doc-title-3">Eventos</h2>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Trigger</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ls-modal-open</td>
+        <td>Lançado no método <code>open(#element)</code> antes de abrir a modal.</td>
+      </tr>
+      <tr>
+        <td>ls-modal-opened</td>
+        <td>Lançado no método <code>open(#element)</code> depois de aberto a modal.</td>
+      </tr>
+      <tr>
+        <td>ls-modal-close</td>
+        <td>Lançado no método <code>close()</code> antes de fechar a modal.</td>
+      </tr>
+      <tr>
+        <td>ls-modal-closed</td>
+        <td>Lançado no método <code>close()</code> depois de fechado a modal.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Você pode utilizar os eventos acima para um determinado momento, veja um exemplo de como adicionar um trigger do Modal:</p>
+
+  <div class="ls-box-demo">
+<% code("html") do %>
+locastyle.eventDispatcher.eventSubscribe('ls-modal-open', function(e){
+  console.log('abrindo');
+});
+<% end %>
+  </div>
 </section>
