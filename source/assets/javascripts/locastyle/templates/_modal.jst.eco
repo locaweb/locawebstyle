@@ -1,4 +1,4 @@
-<div class="ls-modal ls-modal-template ls-opened <%= this.lsModule %>" tabindex="-1" aria-labelledby="lsModal" role="dialog">
+<div class="ls-modal ls-modal-template <%= this.lsModule %>" tabindex="-1" aria-labelledby="lsModal" role="dialog">
   <% if @actionType != 'link': %>
     <form action="<%= @action %>" class="ls-modal-box ls-form" method="post">
   <% else: %>

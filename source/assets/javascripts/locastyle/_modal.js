@@ -24,6 +24,7 @@ locastyle.modal = (function() {
 
   function unbind() {
     $(config.open.trigger).off('click.ls');
+    $(document).off('keyup.ls-esc');
     $(config.close.classes + ", " + config.close.trigger).off('click.ls');
   }
 
@@ -31,12 +32,17 @@ locastyle.modal = (function() {
     $(config.open.trigger).on('click.ls', function() {
       locastyle.modal.open($(this).data());
     });
+
+    if ($('.ls-opened').length > 0) {
+      modalBlocked("#" + $('.ls-opened').attr('id'));
+    }
   }
 
-  function bindClose(){
-    $(document).one('keyup.ls', function (e) {
-      if(e.keyCode === 27){
+  function bindClose() {
+    $(document).one('keyup.ls-esc', function (e) {
+      if(e.keyCode === 27 && $('.ls-opened')){
         locastyle.modal.close();
+        console.log('close');
       }
     });
 
@@ -49,23 +55,52 @@ locastyle.modal = (function() {
   }
 
   function open($element) {
-    locastyle.eventDispatcher.trigger(config.open.dispatcherOpen);
-
     if (!$element.target) {
-      $('body').append(locastyle.templates.modal($element));
-      $('.ls-modal-template').focus();
+      var $template = $(locastyle.templates.modal($element));
+      $('body').append($template);
+      fadeIn($template);
       
+      $('.ls-modal-template').focus();
       bindClose();
     } else {
-      $($element.target).addClass('ls-opened');
+      fadeIn($($element.target));
     }
     
     ariaModal($($element.target));
     modalBlocked($element.target);
-
-    locastyle.eventDispatcher.trigger(config.open.dispatcherOpened);
   }
 
+  function close() {
+    $('.ls-modal.ls-opened').attr('aria-hidden', true);
+    fadeOut();
+    locastyle.popover.destroyPopover();
+    locastyle.popover.init();
+  }
+
+  function fadeIn($target) {
+    locastyle.eventDispatcher.trigger(config.open.dispatcherOpen);
+
+    $target.fadeIn({queue: false, duration: 500, complete: function(){
+      $(this).addClass('ls-opened');
+
+      locastyle.eventDispatcher.trigger(config.open.dispatcherOpened);
+    }});
+  }
+
+  function fadeOut() {
+    locastyle.eventDispatcher.trigger(config.close.dispatcherClose);
+
+    $('.ls-modal.ls-opened').fadeOut({queue: false, duration: 500, complete: function(){
+      $(this).removeClass('ls-opened');
+      
+      if($(this).hasClass('ls-modal-template')) {
+        $(this).remove();
+      }
+      
+      locastyle.eventDispatcher.trigger(config.close.dispatcherClosed);
+    }});
+  }
+  
   function modalBlocked($target) {
     $($target).each(function(i,e){
       if ($(e).data('modal-blocked') !== undefined) {
@@ -76,24 +111,13 @@ locastyle.modal = (function() {
     });
   }
 
-  function close() {
-    locastyle.eventDispatcher.trigger(config.close.dispatcherClose);
-
-    $('.ls-modal').removeClass('ls-opened').attr('aria-hidden', true);
-    $('.ls-modal-template').remove();
-    locastyle.popover.destroyPopover();
-    locastyle.popover.init();
-
-    locastyle.eventDispatcher.trigger(config.close.dispatcherClosed);
-  }
-
   function ariaModal($modal) {
     var idModal = $modal.find('.ls-modal-title').attr('id') || 'lsModal' + config.lsModal++;
     $modal.find('.ls-modal-title').attr('id', idModal);
     
     $modal.attr({
       role: 'dialog',
-      'aria-hidden' : 'false',
+      'aria-hidden' : false,
       'aria-labelledby' : idModal,
       tabindex : '-1'
     }).focus();

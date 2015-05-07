@@ -184,15 +184,26 @@ type: component
 <button data-ls-module="modal" data-action="http://locaweb.com.br/" data-content="<h2>Título feito dentro do data-content</h2><p>Conteúdo feito dentro do data-content</p>" data-title="Este título é o atributo data-title" data-class="ls-btn-danger" data-save="Salvar" data-close="Fechar" class="ls-btn-primary"> Modal sem target </button>
   <% end %>
   <hr>
+
   <h3 class="ls-title-4">Abrindo a modal via javascript</h3>
     <% code("javascript") do %>
 locastyle.modal.open({target: "#myAwesomeModal"});
     <% end %>
-  <p class="ls-alert-warning"><strong>Atenção:</strong> Você deve sempre específicar o <code>target</code> do modal em seu javascript.</p>
+  <p class="ls-alert-warning"><strong>Atenção:</strong> Você deve sempre especificar o <code>target</code> do modal em seu javascript.</p>
   <hr>
 
-  <h3 class="ls-title-4">Modal sempre aberta</h3>
-  <p>Se você quer manter uma modal sempre aberta, basta inserir esse código <code>data-modal-blocked</code> na sua modal, no mesmo lugar onde fica a <code>.ls-modal</code>.</p>
+  <h3 class="ls-title-4">Abrindo a modal via css class</h3>
+    <% code("html") do %>
+<div class="ls-modal ls-opened" id="myAwesomeModal">
+    <% end %>
+  <p class="ls-alert-warning"><strong>Atenção:</strong> Você deve sempre especificar o css class <code>.ls-opened</code> do modal, no mesmo lugar do <code>.ls-modal</code>.</p>
+  <hr>
+
+  <h3 class="ls-title-4">Modal sempre ativa depois de aberta</h3>
+  <p>Se você quer manter uma modal sempre ativa depois de aberta, basta inserir esse código <code>data-modal-blocked</code> na sua modal, no mesmo elemento onde fica a <code>.ls-modal</code>.</p>
+  <% code("html") do %>
+<div class="ls-modal" data-modal-blocked id="myAwesomeModal">
+  <% end %>
   <p class="ls-alert-warning"><strong>Atenção:</strong> Se você for fechar sua modal depois de uma determinada ação, você precisa chamar <code>locastyle.modal.close()</code></p>
 
 

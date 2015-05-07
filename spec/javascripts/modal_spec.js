@@ -38,63 +38,6 @@ describe("Modal: ", function() {
     });
   });
 
-  describe("Unbind:", function() {
-    describe("when unbind is called in module init", function() {
-      it("should prevent open modal from being called twice or more times", function() {
-        var spy = spyOn(locastyle.modal, "open");
-        $('[data-ls-module="modal"]').trigger("click");
-        expect(locastyle.modal.open.calls.count()).toEqual(4);
-      });
-
-      it("should prevent close modal from being called more times than needed", function() {
-
-        var config = {
-          modal: '.ls-modal',
-          open: {
-            trigger: '[data-ls-module="modal"]'
-          },
-          close: {
-            classes: '#myAwesomeModalClosed .ls-modal',
-            trigger: '#myAwesomeModalClosed [data-dismiss="modal"]'
-          },
-          template: {
-            classes: '.ls-modal-template'
-          }
-        };
-
-        var spy = spyOn(locastyle.modal, "close");
-        $('[data-target="#myAwesomeModalClosed"]').trigger("click");
-        var timesToBeCalled = $(config.close.classes + ", " + config.close.trigger).length;
-        $('#myAwesomeModalClosed [data-dismiss="modal"]').trigger("click");
-        expect(locastyle.modal.close.calls.count()).toEqual(timesToBeCalled);
-      });
-
-      it("should NOT unbind common events handled by other code", function() {
-        window.test = {
-          method: function(){
-            //my fake function
-          }
-        };
-        var spy = spyOn(window.test, "method");
-        $('[data-ls-module="modal"]').on("click", function () {
-          window.test.method();
-        });
-        locastyle.modal.unbind();
-        $('[data-ls-module="modal"]').trigger("click");
-        expect(window.test.method).toHaveBeenCalled();
-      });
-    });
-
-    describe("when ESC keyup", function() {
-
-      it("should unbind $document keyup event", function() {
-        $('#myModalClosed [data-ls-module="modal"]').trigger("click");
-        expect($._data($(document)[0], "events").keyup.length).toEqual(4);
-      });
-
-    });
-  });
-
   describe("When modal have wai-aria:", function() {
 
     it("if modal opened should has attribute aria-hidden equal false", function() {
@@ -116,6 +59,72 @@ describe("Modal: ", function() {
     it("should has attribute aria-labelledby equal value ID of title modal", function() {
       var titleID = $('.ls-modal-title').attr('id')
       expect($('.ls-modal').attr('aria-labelledby')).toEqual(titleID);
+    });
+
+  });
+
+  describe("Unbind:", function() {
+    describe("when ESC keyup", function() {
+      it("should unbind $document keyup event", function() {
+        locastyle.modal.close();
+        $('#myModalESC [data-ls-module="modal"]').trigger("click");
+        var spy = spyOn(locastyle.modal, "close");
+        locastyle.modal.init();
+        locastyle.modal.init();
+        locastyle.modal.init();
+
+        var e = $.Event("keyup.ls-esc", { keyCode: 27 });
+        $("body").trigger(e);
+        expect(locastyle.modal.close.calls.count()).toEqual(1);
+      });
+    });
+
+    describe("when unbind is called in module init", function() {
+      it("should prevent open modal from being called twice or more times", function() {
+        var spy = spyOn(locastyle.modal, "open");
+        locastyle.modal.init();
+        locastyle.modal.init();
+        $('#myModalClosed [data-ls-module="modal"]').trigger("click");
+        expect(locastyle.modal.open.calls.count()).toEqual(1);
+      });
+
+      it("should prevent close modal from being called more times than needed", function() {
+
+        var config = {
+          modal: '.ls-modal',
+          open: {
+            trigger: '[data-ls-module="modal"]'
+          },
+          close: {
+            classes: '#myAwesomeModalClosed .ls-modal',
+            trigger: '#myAwesomeModalClosed [data-dismiss="modal"]'
+          },
+          template: {
+            classes: '.ls-modal-template'
+          }
+        };
+
+        var spy = spyOn(locastyle.modal, "close");
+        $('[data-target="#myAwesomeModalClosed"]').trigger("click");
+        var timesToBeCalled = $(config.close.classes + ", " + config.close.trigger).length + 2;
+        $('#myAwesomeModalClosed [data-dismiss="modal"]').trigger("click");
+        expect(locastyle.modal.close.calls.count()).toEqual(timesToBeCalled);
+      });
+
+      it("should NOT unbind common events handled by other code", function() {
+        window.test = {
+          method: function(){
+            //my fake function
+          }
+        };
+        var spy = spyOn(window.test, "method");
+        $('[data-ls-module="modal"]').on("click", function () {
+          window.test.method();
+        });
+        locastyle.modal.unbind();
+        $('[data-ls-module="modal"]').trigger("click");
+        expect(window.test.method).toHaveBeenCalled();
+      });
     });
 
   });

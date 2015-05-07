@@ -4,6 +4,7 @@ $smallWidth: 450px
 $paddingDefault: 20px
 
 .ls-modal
+  display: none
   position: fixed
   left: 0
   top: 0
@@ -12,16 +13,16 @@ $paddingDefault: 20px
   text-align: center
   overflow: auto
   overflow-y: scroll
-  opacity: 0
-  z-index: 0
-  visibility: hidden
+  z-index: 16
+  // opacity: 0
+  // visibility: hidden
   backface-visibility: hidden
   background: rgba(0, 0, 0, 0.8)
 
   &.ls-opened
-    opacity: 1
-    visibility: visible
-    z-index: 16
+    // opacity: 1
+    // visibility: visible
+    display: block
 
   &.popover
     .ls-modal-footer
@@ -36,8 +37,8 @@ $paddingDefault: 20px
   background-color: #fff
   border-radius: $default-radius
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7)
-  opacity: 0
-  visibility:  hidden
+  // opacity: 0
+  // visibility:  hidden
 
   &.ls-modal-large
     width: $largeWidth
@@ -47,9 +48,9 @@ $paddingDefault: 20px
     width: $smallWidth
     margin-left: -$smallWidth / 2
 
-  .ls-modal.ls-opened &
-    opacity: 1
-    visibility: visible
+[data-modal-blocked]
+  [data-dismiss]
+    display: none  
 
 
 .ls-modal-header
