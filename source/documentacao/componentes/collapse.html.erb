@@ -73,11 +73,6 @@ type: component
     </thead>
     <tbody>
       <tr>
-        <td>locastyle.collapse.toggle('element')</td>
-        <td>classe ou ID</td>
-        <td>faz o toggle do collapse</td>
-      </tr>
-      <tr>
         <td>ls-collapse-opened-always</td>
         <td>classe</td>
         <td>mantém um collapse sempre aberto</td>
@@ -90,6 +85,45 @@ type: component
     </tbody>
   </table>
 
+  <h2 class="doc-title-3">Abrir/Fechar o Collapse</h2>
+  <% code("javascript") do %>locastyle.collapse.toggle('#element')<% end %>
+
+
+
+  <h2 class="doc-title-3">Dispatchers</h2>
+  <% code("javascript") do %>locastyle.eventDispatcher.eventSubscribe('trigger', fn)<% end %>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Trigger</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ls-collapse-open</td>
+        <td>É disaparado esse evento assim que o bind é feito no elemento</td>
+      </tr>
+      <tr>
+        <td>ls-collapse-opened</td>
+        <td>É disaparado esse evento assim que o collapse termina de abrir</td>
+      </tr>
+      <tr>
+        <td>ls-collapse-close</td>
+        <td>É disaparado esse evento assim que o bind de fechar é feito</td>
+      </tr>
+      <tr>
+        <td>ls-collapse-closed</td>
+        <td>É disaparado esse evento assim que o collapse termina de fechar</td>
+      </tr>
+    </tbody>
+  </table>
+  <% code("javascript") do %>
+locastyle.eventDispatcher.eventSubscribe('ls-collapse-open', function() {
+  console.log('Abrir collapse');
+})
+  <% end %>
+  <hr>
   <div class="ls-box-demo">
     <button type="button" class="ls-btn-primary" data-ls-module="collapse" data-target="#010">Abre/Fecha o <i>collapse</i></button>
     <br>
