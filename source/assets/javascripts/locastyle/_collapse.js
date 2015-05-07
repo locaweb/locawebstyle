@@ -1,90 +1,84 @@
-// @todo: prevent-open
-// @todo: hash init
-// @todo: hash change
-// @todo: toggle hover ?
-
 var locastyle = locastyle || {};
 locastyle.collapse = (function() {
   'use strict';
 
+  // general config
   var config = {
-    selectors: {
-      container: '[data-ls-module="collapse"]', // .ls-collapse
-      trigger: '.ls-collapse-header',
-      content: '.ls-collapse-body',
-      groupContainer: '.ls-collapse-group'
-    },
+    trigger: '[data-ls-module="collapse"]',
     classes: {
-      open: 'ls-collapse-open',
-      alwaysOpen: 'ls-collapse-open-always'
+      header        : '.ls-collapse-header',
+      content       : '.ls-collapse-body',
+      groupContainer: '.ls-collapse-group',
+      open          : 'ls-collapse-open',
+      close         : 'ls-collapse-close',
+      opened        : 'ls-collapse-opened',
+      alwaysOpened  : 'ls-collapse-opened-always'
+    }, dispatcherOpen: {
+      open  : 'ls-collapse-open',
+      opened: 'ls-collapse-opened'
+    }, dispatcherClose: {
+      close : 'ls-collapse-close',
+      closed: 'ls-collapse-closed'
     }
   };
 
   function init() {
-    $(config.selectors.container).each(function() {
-      var $collapse = $(this);
-      bindHeader($collapse);
-      ariaCollapse($collapse);
+    // set attributes from all collapses on load
+    $(config.classes.header).each(function() {
+      ariaCollapse($(this));
     });
-    bindButton();
+    bind();
   }
 
-  function bindButton() {
-    // unbind
-    $('[data-toggle-collapse]').off('click.ls'); // <- unbind
-    $('[data-toggle-collapse]').on('click.ls', function(evt) {
-      evt.preventDefault();
-      evt.stopPropagation();
-      var id = $(this).data('toggle-collapse');
-      toggle($(id));
-    });
-  }
-
-  function bindHeader($collapse) {
-    if (!$collapse.hasClass(config.classes.alwaysOpen)) {
-      // has input
-      var $input = $(config.selectors.trigger, $collapse).find('input[type="radio"], input[type="checkbox"]');
-      if($input[0]){
-        $input.on('change.ls', function () {
-          var name = $(this).attr('name');
-          $('[name="' + name + '"]').each(function (index, input) {
-            var $input = $(input);
-            var $collapse = $input.parents(config.selectors.container);
-            $collapse.toggleClass(config.classes.open, $input.is(':checked'));
-          });
-        }).trigger('change.ls');
-      } else {
-        $(config.selectors.trigger, $collapse).off('click.ls'); // <- unbind
-        $(config.selectors.trigger, $collapse).on('click.ls', function(evt) {
-          evt.preventDefault();
-          toggle($collapse);
-        });
-      }
+  function bind() {
+    if (!$(config.trigger).hasClass(config.classes.alwaysOpened)) {
+      $(config.trigger).on('click.ls', function() {
+        groupCollapse($(this));
+        // get target
+        var target = $(this).data('target');
+        toggle(target);
+        // set aria's attributes
+        ariaCollapse($(this));
+      });
+      // if click on ls-collapse-body no action happens
+      $(config.classes.content).on('click.ls', function(event) {
+        event.stopPropagation();
+      });
     }
   }
 
-  function toggle($collapse) {
-    $collapse = $collapse instanceof $ ? $collapse : $($collapse);
-    var $group = $collapse.parents(config.selectors.groupContainer);
+  // if have collapses in group "accordeon"
+  function groupCollapse($collapse) {
+    var $group = $($collapse).parents(config.classes.groupContainer);
     if ($group[0]) {
-      $group.find(config.selectors.container).not($collapse).removeClass(config.classes.open).find(config.selectors.content).slideUp();
+      $group.find(config.trigger).not($($collapse)).removeClass(config.classes.opened).find(config.classes.content).slideUp();
     }
-    $collapse.toggleClass(config.classes.open);
-    // $collapse.find(config.selectors.content).slideToggle(300, 'linear', function(){
-    //   $collapse.toggleClass(config.classes.open);
-    // });
-    ariaCollapse($collapse);
-    return $collapse;
+  }
+
+  function toggle(target) {
+    checkVisible(target, config.dispatcherClose.close, config.dispatcherOpen.open);
+    $(target).slideToggle(function() {
+      $(target).parent().toggleClass(config.classes.opened);
+      checkVisible(target, config.dispatcherOpen.opened, config.dispatcherClose.closed);
+    });
+  }
+
+  // Set dispatchet according state
+  function checkVisible(target, dispatcher1, dispatcher2) {
+    if($(target).is(':visible')) {
+      locastyle.eventDispatcher.trigger(dispatcher1);
+    }else{
+      locastyle.eventDispatcher.trigger(dispatcher2);
+    }
   }
 
   function ariaCollapse(elem) {
     if($(elem).hasClass('ls-collapse-open')){
-      $(config.selectors.trigger).attr({ 'aria-expanded' : true });
-      $(config.selectors.content).attr({ 'aria-hidden' : false });
-    }
-    else{
-      $(config.selectors.trigger).attr({ 'aria-expanded' : false });
-      $(config.selectors.content).attr({ 'aria-hidden' : true });
+      $(config.classes.header).attr({ 'aria-expanded' : true });
+      $(config.classes.content).attr({ 'aria-hidden' : false });
+    }else{
+      $(config.classes.header).attr({ 'aria-expanded' : false });
+      $(config.classes.content).attr({ 'aria-hidden' : true });
     }
   }
 

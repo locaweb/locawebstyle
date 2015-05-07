@@ -2,152 +2,65 @@ describe('Collapse:', function() {
   beforeEach(function() {
     loadFixtures('collapse_fixture.html');
     locastyle.collapse.init();
-  });
 
-  afterEach(function() {
-  });
+    window.test = {
+      eventFunctionTest: function() {
+        // fake function
+      }
+    };
 
+    spyOnEvent(window, 'ls-collapse-open');
+    spyOnEvent($('#myCollapse4 a'), 'click');
+    spyOn(window.test, "eventFunctionTest");
 
-  describe('Single', function() {
-
-    it('should open and close after two clicks', function() {
-      var $collapse = $('#collapse1');
-      var $collapseTitle = $collapse.find('.ls-collapse-header');
-      $collapseTitle.trigger("click");
-      expect($collapse.hasClass('ls-collapse-open')).toBe(true);
-      $collapseTitle.trigger("click");
-      expect($collapse.hasClass('ls-collapse-open')).toBe(false);
-    });
-
-    it('with class .ls-collapse-open-always dont close on click', function() {
-      var $collapse = $('#collapse3');
-      var $collapseTitle = $collapse.find('.ls-collapse-header');
-      $collapseTitle.trigger("click");
-      expect($collapse.hasClass('ls-collapse-open')).toBe(false);
-    });
+    ls.eventDispatcher.eventSubscribe('ls-collapse-open', window.test.eventFunctionTest);
 
   });
 
-  describe('With input checkbox', function () {
-
-    it('checked on load, collapse starts open', function () {
-      var $collapse = $('#collapse9');
-      $collapse.find('input').trigger('change');
-      expect($collapse.hasClass('ls-collapse-open')).toBe(true);
+  describe('When click to open collapse', function() {
+    it('should target be visible', function() {
+      $('#myCollapse1 [data-ls-module="collapse"]').trigger('click');
+      expect($('#collapse1')).toBeVisible();
     });
-
-    it('when check, open ', function () {
-      var $collapse = $('#collapse8');
-      $collapse.find('input').prop('checked', true).trigger('change');
-      expect($collapse.hasClass('ls-collapse-open')).toBe(true);
-    });
-
-    it('when check, later uncheck close ', function () {
-      var $collapse = $('#collapse8');
-      $collapse.find('input').prop('checked', true).trigger('change');
-      expect($collapse.hasClass('ls-collapse-open')).toBe(true);
-      $collapse.find('input').prop('checked', false).trigger('change');
-      expect($collapse.hasClass('ls-collapse-open')).toBe(false);
-    });
-
   });
 
-
-  describe('With input radio', function () {
-
-    it('checked on load, collapse starts open', function () {
-      var $collapse = $('#collapse10');
-      $collapse.find('input').trigger('change');
-      expect($collapse.hasClass('ls-collapse-open')).toBe(true);
+  describe('When collapse have a class ls-collapse-opened', function() {
+    it('should target be visible', function() {
+      expect($('.ls-collapse-opened #collapse2')).toBeVisible();
     });
+  });
 
-    it('check a item of group, open it, close the others', function () {
-      var $collapse1 = $('#collapse11');
-      var $collapse2 = $('#collapse10');
-      $collapse1.find('input').prop('checked', true).trigger('change');
-      expect($collapse1.hasClass('ls-collapse-open')).toBe(true);
-      expect($collapse2.hasClass('ls-collapse-open')).toBe(false);
-      $collapse2.find('input').prop('checked', true).trigger('change');
-      expect($collapse1.hasClass('ls-collapse-open')).toBe(false);
-      expect($collapse2.hasClass('ls-collapse-open')).toBe(true);
+  describe('When collapse have a class ls-collapse-opened-always', function() {
+    it('should target be not hidden', function() {
+      $('#myCollapse3 [data-ls-module="collapse"]').trigger('click');
+      expect($('.ls-collapse-opened-always #collapse3')).toBeVisible();
     });
+  });
 
+  describe('When click to open collapse', function() {
+    it('should shoot eventDispatcher', function() {
+      $('#myCollapse4 a').on('click', function(){
+        ls.eventDispatcher.trigger('ls-collapse-open');
+      });
+      $('#myCollapse4 a').trigger('click');
+      expect('ls-collapse-open').toHaveBeenTriggeredOn(window);
+      expect(window.test.eventFunctionTest).toHaveBeenCalled()
+    });
   });
 
   describe('Group / Accordeon', function() {
 
     it('open collapse, close others', function() {
       var $collapseClose = $('#collapse4');
-      var $collapseCloseTitle = $collapseClose.find('.ls-collapse-header');
+      var $collapseCloseBody = $collapseClose.find('.ls-collapse-body');
       var $collapseOpen = $('#collapse5');
-      var $collapseOpenTitle = $collapseOpen.find('.ls-collapse-header');
-      $collapseOpenTitle.trigger("click");
-      expect($collapseOpen.hasClass('ls-collapse-open')).toBe(true);
-      expect($collapseClose.hasClass('ls-collapse-open')).toBe(false);
-      $collapseCloseTitle.trigger("click");
-      expect($collapseOpen.hasClass('ls-collapse-open')).toBe(false);
-      expect($collapseClose.hasClass('ls-collapse-open')).toBe(true);
-    });
-
-  });
-
-  describe('Buttons/Links behavior', function() {
-
-    it('click button with data-toggle-collapse="#id" toggle collapse open/close collapse', function() {
-      var $button = $('#button1');
-      var $collapse = $('#collapse6');
-      var $collapseTitle = $collapse.find('.ls-collapse-header');
-      $button.trigger("click");
-      expect($collapse.hasClass('ls-collapse-open')).toBe(true);
-      $button.trigger("click");
-      expect($collapse.hasClass('ls-collapse-open')).toBe(false);
-
-    });
-  });
-
-  describe('Module methods', function() {
-
-    it('locastyle.collapse.toggle(#id) open/close collapse', function() {
-      var $collapse = $('#collapse7');
-      locastyle.collapse.toggle('#collapse7');
-      expect($collapse.hasClass('ls-collapse-open')).toBe(true);
-      locastyle.collapse.toggle('#collapse7');
-      expect($collapse.hasClass('ls-collapse-open')).toBe(false);
-
-    });
-  });
-
-  describe("Unbind", function() {
-    it("should bind click only one time on the button with [data-toggle-collapse]", function() {
-      locastyle.collapse.init();
-      locastyle.collapse.init();
-      expect($('#button1')).toHaveBeenBindedOnce('click');
-    });
-
-    it("should bind click only one time on the collapse header", function() {
-      locastyle.collapse.init();
-      locastyle.collapse.init();
-      expect($('#collapse1 .ls-collapse-header')).toHaveBeenBindedOnce('click');
-    });
-  });
-
-  describe('Collapse with waia-ria', function() {
-    it("Link should has attribute aria-expanded", function() {
-      expect($('.ls-collapse-header').attr('aria-expanded')).toEqual('false');
-    });
-
-    it("Content should has attribute aria-hidden", function() {
-      expect($('.ls-collapse-body').attr('aria-hidden')).toEqual('true');
-    });
-
-    it("When bind click the link should has attribute aria-expanded", function() {
-      $('.ls-collapse-header').trigger("click");
-      expect($('.ls-collapse-header').attr('aria-expanded')).toEqual('true');
-    });
-
-    it("When bind click the content should has attribute aria-hidden", function() {
-      $('.ls-collapse-header').trigger("click");
-      expect($('.ls-collapse-body').attr('aria-hidden')).toEqual('false');
+      var $collapseOpenTitle = $collapseOpen.find('.ls-collapse-body');
+      $collapseOpen.trigger("click");
+      expect($collapseOpen.is(':visible')).toBe(true);
+      expect($collapseClose.is(':visible')).toBe(true);
+      $collapseClose.trigger("click");
+      expect($collapseOpen.is(':visible')).toBe(true);
+      expect($collapseClose.is(':visible')).toBe(true);
     });
 
   });
