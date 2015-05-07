@@ -4,61 +4,41 @@ $smallWidth: 450px
 $paddingDefault: 20px
 
 .ls-modal
-  visibility: hidden
-  backface-visibility: hidden
-  z-index: 0
+  display: none
   position: fixed
   left: 0
   top: 0
   right: 0
   bottom: 0
+  text-align: center
   overflow: auto
   overflow-y: scroll
-  text-align: center
+  z-index: 16
+  // opacity: 0
+  // visibility: hidden
+  backface-visibility: hidden
+  background: rgba(0, 0, 0, 0.8)
 
-  &.opened
-    z-index: 16
-    visibility: visible
+  &.ls-opened
+    // opacity: 1
+    // visibility: visible
+    display: block
 
   &.popover
     .ls-modal-footer
       display: none
 
-.ls-modal-overlay
-  position: fixed
-  width: 100%
-  height: 100%
-  visibility: hidden
-  top: 0
-  left: 0
-  z-index: 15
-  opacity: 0
-  background: rgba(0, 0, 0, 0.8)
-  +single-transition(opacity, .25s, linear)
-
-  .modal-opened &
-    opacity: 1
-    visibility: visible
-
 .ls-modal-box
+  display: inline-block
+  width: $defaultWidth
+  margin: 10% 20px 100px
+  position: relative
+  text-align: left
   background-color: #fff
   border-radius: $default-radius
-  -webkit-transform: scale(.5)
-  transform: scale(.5)
-  opacity: 0.5
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7)
-  text-align: left
-  display: inline-block
-  position: relative
-  z-index: 16
-  margin: 10% 20px 100px
-  width: $defaultWidth
-
-  .opened &
-    -webkit-transition: all 0.25s linear
-    -webkit-transform: scale(1)
-    transform: scale(1)
-    opacity: 1
+  // opacity: 0
+  // visibility:  hidden
 
   &.ls-modal-large
     width: $largeWidth
@@ -67,6 +47,11 @@ $paddingDefault: 20px
   &.ls-modal-small
     width: $smallWidth
     margin-left: -$smallWidth / 2
+
+[data-modal-blocked]
+  [data-dismiss]
+    display: none  
+
 
 .ls-modal-header
   padding: $paddingDefault
@@ -77,9 +62,9 @@ $paddingDefault: 20px
     right: 10px
     top: 14px
     border: none
-    text-align: center
     background: none
     color: #212121
+    text-align: center
     font-size: remtopx(1.25)
     font-weight: bold
     cursor: pointer
@@ -89,9 +74,9 @@ $paddingDefault: 20px
       opacity: 1
 
   .ls-modal-title
-    font-size: remtopx(1)
     padding: 0
     margin: 0
+    font-size: remtopx(1)
 
 .ls-modal-body
   padding: $paddingDefault
@@ -102,24 +87,6 @@ $paddingDefault: 20px
 .ls-modal-footer
   padding: $paddingDefault
   border-top: 1px solid $gray1
-
-// +keyframes(modal-fadein)
-//   0%
-//     visibility: hidden
-//     opacity: 0
-//   1%
-//     visibility: visible
-//   100%
-//     opacity: 1
-
-// +keyframes(modal-fadeout)
-//   0%
-//     visibility: visible
-//     opacity: 1
-//   1%
-//     opacity: 0
-//   100%
-//     visibility: hidden
 
 .ls-modal-feedbackr
 
@@ -138,7 +105,6 @@ $paddingDefault: 20px
     .ls-modal-body
       width: 100%
       height: 600px
-
 
 @media screen and (min-width: $screen-sm)
   .ls-modal-box

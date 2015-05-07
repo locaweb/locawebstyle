@@ -83,7 +83,7 @@ describe('Popover: ', function() {
       locastyle.breakpointClass = 'ls-screen-sm';
       locastyle.popover.init();
       var $popoverTrigger = $('#popoverclick');
-      expect( $('.ls-modal')[0] ).not.toBeUndefined();
+      expect( $('.ls-modal') ).not.toBeUndefined();
     });
 
   });
