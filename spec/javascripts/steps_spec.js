@@ -5,10 +5,10 @@ describe("Steps: ", function(){
   });
 
   describe('#init', function(){
-    describe('when loading the page', function(){
-      it("The text of the button is inserted into aria-label attribute", function(){
-        var label = $('#list1 .ls-steps-btn').attr('aria-label');
-        expect($('.ls-steps-btn').attr('aria-label')).toBe(label);
+    describe('When loading the page', function(){
+      it('should get text on attr title and insert on aria-label', function() {
+        var title = $('#list1 .ls-steps-btn').attr('title');
+        expect($('#list1 .ls-steps-btn').attr('aria-label')).toEqual(title);
       });
 
       it('actives the step that has ls-active class', function(){

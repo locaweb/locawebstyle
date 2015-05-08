@@ -43,11 +43,11 @@ locastyle.steps = (function() {
     var $heightNav = $(config.selectors.nav).height();
 
     $(window).scroll(function() {
-     if ($(window).scrollTop() > offset.top ){
+     if ($(window).scrollTop() > offset.top ) {
         var $scroll = parseInt($(window).scrollTop() - $heightNav);
 
         $steps.stop().animate({
-         marginTop: $(window).scrollTop() - offset.top + 75
+         marginTop: $(window).scrollTop() - offset.top + 20
         });
 
         if($scroll + $heightNav >= elemVisible ) {
@@ -68,14 +68,14 @@ locastyle.steps = (function() {
     var index = $(config.selectors.nav).find(config.classes.active).index();
 
     // Checks if there are any enabled button to load the page
-    if(index ===  -1){
-      $(config.selectors.nav).each(function(){
+    if(index ===  -1) {
+      $(config.selectors.nav).each(function() {
         var $el = $(this).find('li:first').find(config.selectors.button);
         var $target = $el.data('target');
         activateStep($el, $($target));
       });
 
-    } else{
+    } else {
       addActiveContent(index);
       index = parseInt(index + 1);
       $(config.selectors.nav).find('li:lt(' + index + ')').addClass(config.status.actived);
@@ -94,10 +94,10 @@ locastyle.steps = (function() {
     var $elem = $(config.selectors.button);
     var elemLength = $elem.length;
     for (var i=0; i < elemLength; i++) {
-      var text = $($elem[i]).text();
-      $($elem[i]).attr({ 'aria-label' : text }).html('');
-      }
+      var text = $($elem[i]).attr('title');
+      $($elem[i]).attr({ 'aria-label' : text });
     }
+  }
 
   //Create the step by activated navigation buttons
   function bindClickOnTriggers() {
