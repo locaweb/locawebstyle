@@ -36,6 +36,101 @@ locastyle.steps = (function() {
     bindPrevStep();
   }
 
+  // Remove the binds that own module adds
+  function unbind() {
+    $(config.selectors.nav).off('click.steps');
+    $(config.actions.next).off('click.steps');
+    $(config.actions.prev).off('click.steps');
+  }
+
+  // Create arrow on the navigation
+  function createArrow() {
+    $('.ls-steps-nav li').prepend('<span class="ls-steps-arrow" />');
+  }
+
+  // Add the arias
+  function ariaSteps() {
+    $(config.selectors.nav).attr('role' , 'tablist');
+    $(config.selectors.nav).find(config.selectors.button).attr('aria-selected' , 'false');
+    $(config.selectors.nav).find('.ls-active .ls-steps-btn').attr('aria-selected' , 'true');
+    $(config.selectors.button).attr('role' , 'tab');
+    $(config.selectors.container).attr({ 'aria-hidden' : true, 'role' : 'tabpanel' });
+  }
+
+  //Add aria-label in the navigation
+  function addAriaLabel() {
+    var $elem = $(config.selectors.button);
+    var elemLength = $elem.length;
+    for (var i=0; i < elemLength; i++) {
+      var text = $($elem[i]).attr('title');
+      $($elem[i]).attr({ 'aria-label' : text });
+    }
+  }
+
+  // Displays the contents related to the active button
+  function addActivedNav() {
+    var index = $(config.selectors.nav).find(config.classes.active).index();
+
+    // Checks if there are any enabled button to load the page
+    if(index ===  -1) {
+      $(config.selectors.nav).each(function() {
+        var $el = $(this).find('li:first').find(config.selectors.button);
+        var $target = $el.data('target');
+        activateStep($el, $($target));
+      });
+
+    } else {
+      addActiveContent(index);
+      $(config.selectors.nav).find('li:lt(' + index + ')').addClass(config.status.actived);
+    }
+    var heightStepVisible = $(config.selectors.moduleVisible).height();
+    stepsAffix(heightStepVisible);
+  }
+
+  //Create the step by activated navigation buttons
+  function bindClickOnTriggers() {
+    $(config.selectors.nav).on("click.steps", config.selectors.moduleActive, function(evt) {
+      evt.preventDefault();
+      changeStep($(this));
+    });
+  }
+
+  // Bind the target to cal the nextStep on click
+  function bindNextStep() {
+    $(config.actions.next).on('click.steps', function(evt) {
+      evt.preventDefault();
+      nextStep();
+    });
+  }
+
+  // Bind the target to call the prevStep on click
+  function bindPrevStep() {
+    $(config.actions.prev).on('click.steps', function(evt) {
+      evt.preventDefault();
+      prevStep();
+    });
+  }
+
+  // Advances to the next step
+  function nextStep() {
+    var evt = jQuery.Event('NextStepEvent');
+    $(document).trigger(evt);
+    if(!evt.isDefaultPrevented()) {
+      var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
+      changeStep($el);
+    }
+  }
+
+  // Back to the previous step
+  function prevStep() {
+    var evt = jQuery.Event('PrevStepEvent');
+    $(document).trigger(evt);
+    if(!evt.isDefaultPrevented()) {
+      var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
+      changeStep($el);
+    }
+  }
+
   // Always visible navigation when the page scrolls
   function stepsAffix(elemVisible) {
     var $steps = $(config.selectors.nav);
@@ -63,48 +158,17 @@ locastyle.steps = (function() {
     });
   }
 
-  // Displays the contents related to the active button
-  function addActivedNav() {
-    var index = $(config.selectors.nav).find(config.classes.active).index();
-
-    // Checks if there are any enabled button to load the page
-    if(index ===  -1) {
-      $(config.selectors.nav).each(function() {
-        var $el = $(this).find('li:first').find(config.selectors.button);
-        var $target = $el.data('target');
-        activateStep($el, $($target));
-      });
-
-    } else {
-      addActiveContent(index);
-      index = parseInt(index + 1);
-      $(config.selectors.nav).find('li:lt(' + index + ')').addClass(config.status.actived);
-    }
-    var heightStepVisible = $(config.selectors.moduleVisible).height();
-    stepsAffix(heightStepVisible);
-  }
-
   // Check what the order of the activated button
   function addActiveContent(index) {
     $(config.selectors.container).eq(index).addClass(config.status.active);
   }
 
-  //Add aria-label in the navigation
-  function addAriaLabel() {
-    var $elem = $(config.selectors.button);
-    var elemLength = $elem.length;
-    for (var i=0; i < elemLength; i++) {
-      var text = $($elem[i]).attr('title');
-      $($elem[i]).attr({ 'aria-label' : text });
-    }
-  }
-
-  //Create the step by activated navigation buttons
-  function bindClickOnTriggers() {
-    $(config.selectors.nav).on("click.steps", config.selectors.moduleActive, function(evt) {
-      evt.preventDefault();
-      changeStep($(this));
-    });
+  // Change the step
+  function changeStep($el) {
+    var $target = $($el.attr('href') || $el.data('target'));
+    activateStep($el, $target);
+    deactivateStep($el, $target);
+    anchorSteps();
   }
 
   //Active step
@@ -120,71 +184,6 @@ locastyle.steps = (function() {
     $(el).parents("li").siblings().removeClass(config.status.active);
     $target.siblings().removeClass(config.status.active).attr({ 'aria-hidden' : true });
     $(el).parents("li").siblings().find(config.selectors.button).attr('aria-selected' , false);
-  }
-
-  // Advances to the next step
-  function nextStep() {
-    var evt = jQuery.Event('NextStepEvent');
-    $(document).trigger(evt);
-    if(!evt.isDefaultPrevented()) {
-      var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
-      changeStep($el);
-    }
-  }
-
-  // Bind the target to cal the nextStep on click
-  function bindNextStep() {
-    $(config.actions.next).on('click.steps', function(evt) {
-      evt.preventDefault();
-      nextStep();
-    });
-  }
-
-  // Back to the previous step
-  function prevStep() {
-    var evt = jQuery.Event('PrevStepEvent');
-    $(document).trigger(evt);
-    if(!evt.isDefaultPrevented()) {
-      var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
-      changeStep($el);
-    }
-  }
-
-  // Bind the target to call the prevStep on click
-  function bindPrevStep() {
-    $(config.actions.prev).on('click.steps', function(evt) {
-      evt.preventDefault();
-      prevStep();
-    });
-  }
-
-  // Change the step
-  function changeStep($el) {
-    var $target = $($el.attr('href') || $el.data('target'));
-    activateStep($el, $target);
-    deactivateStep($el, $target);
-    anchorSteps();
-  }
-
-  // Remove the binds that own module adds
-  function unbind() {
-    $(config.selectors.nav).off('click.steps');
-    $(config.actions.next).off('click.steps');
-    $(config.actions.prev).off('click.steps');
-  }
-
-  // Add the arias
-  function ariaSteps() {
-    $(config.selectors.nav).attr('role' , 'tablist');
-    $(config.selectors.nav).find(config.selectors.button).attr('aria-selected' , 'false');
-    $(config.selectors.nav).find('.ls-active .ls-steps-btn').attr('aria-selected' , 'true');
-    $(config.selectors.button).attr('role' , 'tab');
-    $(config.selectors.container).attr({ 'aria-hidden' : true, 'role' : 'tabpanel' });
-  }
-
-  // Create arrow on the navigation
-  function createArrow() {
-    $('.ls-steps-nav li').prepend('<span class="ls-steps-arrow" />');
   }
 
   // Create scrollTop when to click
