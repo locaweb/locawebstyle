@@ -19,7 +19,7 @@ You can [use the Locaweb Style in many ways](http://locaweb.github.io/locawebsty
 <head>
 ...
   <!-- Insert the CSS in HEAD -->
-  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.6.2/stylesheets/locastyle.css">
+  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.7.2/stylesheets/locastyle.css">
 ...
 </head>
 <body>
@@ -29,7 +29,7 @@ You can [use the Locaweb Style in many ways](http://locaweb.github.io/locawebsty
   <script src="http://code.jquery.com/jquery-2.0.1.min.js">
 
   <!-- Put the JS in your footer, always after jQuery (dependency) -->
-  <script src="//assets.locaweb.com.br/locastyle/3.6.2/javascripts/locastyle.js"></script>
+  <script src="//assets.locaweb.com.br/locastyle/3.7.2/javascripts/locastyle.js"></script>
 </body>
 ```
 
@@ -60,7 +60,7 @@ Um framework front-end de comportamento e estilo para projetos web, com uma inte
 Você pode ver [exemplos de painéis neste link](http://locaweb.github.io/locawebstyle/documentacao/exemplos/).
 
 ### Use o Locaweb Style
-Você pode usar o Locaweb Style de várias formas: [direto pelo nosso servidor](//assets.locaweb.com.br/locastyle/3.6.2/javascripts/locastyle.js), via Bower ou baixando os assets para usar offline.
+Você pode usar o Locaweb Style de várias formas: [direto pelo nosso servidor](//assets.locaweb.com.br/locastyle/3.7.2/javascripts/locastyle.js), via Bower ou baixando os assets para usar offline.
 
 #### Utilizando pelo nosso servidor
 
@@ -68,7 +68,7 @@ Você pode usar o Locaweb Style de várias formas: [direto pelo nosso servidor](
 <head>
 ...
   <!-- Insert the CSS in HEAD -->
-  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.6.2/stylesheets/locastyle.css">
+  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.7.2/stylesheets/locastyle.css">
 ...
 </head>
 <body>
@@ -78,7 +78,7 @@ Você pode usar o Locaweb Style de várias formas: [direto pelo nosso servidor](
   <script src="http://code.jquery.com/jquery-2.0.1.min.js">
 
   <!-- Put the JS in your footer, always after jQuery (dependency) link -->
-  <script src="//assets.locaweb.com.br/locastyle/3.6.2/javascripts/locastyle.js"></script>
+  <script src="//assets.locaweb.com.br/locastyle/3.7.2/javascripts/locastyle.js"></script>
 </body>
 ```
 
