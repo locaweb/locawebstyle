@@ -21,7 +21,7 @@ locastyle.form = (function() {
   }
 
   function prefixSufix () {
-    if(locastyle.breakpointClass === 'ls-screen-xs'){
+    if(locastyle.breakpointClass === 'ls-window-xs'){
       $('.ls-label-text-sufix').parents('.ls-label').addClass('ls-label-text-has-sufix');
       $('.ls-label-text-prefix').parents('.ls-label').addClass('ls-label-text-has-prefix');
     } else{
