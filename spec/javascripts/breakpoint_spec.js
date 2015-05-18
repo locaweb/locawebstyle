@@ -28,47 +28,47 @@ describe("Breakpoint: ", function() {
 
     describe("HTML tag should has class", function() {
 
-      it("ls-screen-xs", function() {
+      it("ls-window-xs", function() {
         locastyle.breakpoints.init({ documentWidth: 767 });
-        expect($('html').hasClass('ls-screen-xs')).toBeTruthy();
+        expect($('html').hasClass('ls-window-xs')).toBeTruthy();
       });
 
-      it("ls-screen-sm", function() {
+      it("ls-window-sm", function() {
         locastyle.breakpoints.init({ documentWidth: 768 });
-        expect($('html').hasClass('ls-screen-sm')).toBeTruthy();
+        expect($('html').hasClass('ls-window-sm')).toBeTruthy();
       });
 
-      it("ls-screen-md", function() {
+      it("ls-window-md", function() {
         locastyle.breakpoints.init({ documentWidth: 992 });
-        expect($('html').hasClass('ls-screen-md')).toBeTruthy();
+        expect($('html').hasClass('ls-window-md')).toBeTruthy();
       });
 
-      it("ls-screen-lg", function() {
+      it("ls-window-lg", function() {
         locastyle.breakpoints.init({ documentWidth: 1200 });
-        expect($('html').hasClass('ls-screen-lg')).toBeTruthy();
+        expect($('html').hasClass('ls-window-lg')).toBeTruthy();
       });
     });
 
     describe("locastyle.breackpoint class value should has", function() {
 
-      it("ls-screen-xs", function() {
+      it("ls-window-xs", function() {
         locastyle.breakpoints.init({ documentWidth: 767 });
-        expect(locastyle.breakpointClass).toEqual('ls-screen-xs');
+        expect(locastyle.breakpointClass).toEqual('ls-window-xs');
       });
 
-      it("ls-screen-sm", function() {
+      it("ls-window-sm", function() {
         locastyle.breakpoints.init({ documentWidth: 768 });
-        expect(locastyle.breakpointClass).toEqual('ls-screen-sm');
+        expect(locastyle.breakpointClass).toEqual('ls-window-sm');
       });
 
-      it("ls-screen-md", function() {
+      it("ls-window-md", function() {
         locastyle.breakpoints.init({ documentWidth: 992 });
-        expect(locastyle.breakpointClass).toEqual('ls-screen-md');
+        expect(locastyle.breakpointClass).toEqual('ls-window-md');
       });
 
-      it("ls-screen-lg", function() {
+      it("ls-window-lg", function() {
         locastyle.breakpoints.init({ documentWidth: 1200 });
-        expect(locastyle.breakpointClass).toEqual('ls-screen-lg');
+        expect(locastyle.breakpointClass).toEqual('ls-window-lg');
       });
 
     });

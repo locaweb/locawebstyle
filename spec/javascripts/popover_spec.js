@@ -71,7 +71,7 @@ describe('Popover: ', function() {
 
   describe('change component on small screens', function () {
     it('should not create a popover in small screens', function () {
-      locastyle.breakpointClass = 'ls-screen-sm';
+      locastyle.breakpointClass = 'ls-window-sm';
       locastyle.popover.destroyPopover();
       locastyle.popover.init();
       var $popoverTrigger = $('#popoverclick');
@@ -80,7 +80,7 @@ describe('Popover: ', function() {
     });
 
     it('should open popover as modal in small screens', function () {
-      locastyle.breakpointClass = 'ls-screen-sm';
+      locastyle.breakpointClass = 'ls-window-sm';
       locastyle.popover.init();
       var $popoverTrigger = $('#popoverclick');
       expect( $('.ls-modal') ).not.toBeUndefined();

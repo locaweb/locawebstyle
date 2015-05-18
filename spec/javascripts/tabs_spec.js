@@ -50,40 +50,40 @@ describe("Tabs: ", function() {
       });
     });
 
-    describe("when resolution class is .ls-screen-sm or ls-screen-xs", function () {
+    describe("when resolution class is .ls-window-sm or ls-window-xs", function () {
       it("should turn dropdown", function () {
-        locastyle.breakpointClass = "ls-screen-xs";
+        locastyle.breakpointClass = "ls-window-xs";
         locastyle.tabs.init();
         expect($('#my-tabs-in-mobile').parents(".ls-dropdown-tabs").length).toEqual(1);
       });
 
       it("should turn dropdown", function () {
-        locastyle.breakpointClass = "ls-screen-sm";
+        locastyle.breakpointClass = "ls-window-sm";
         locastyle.tabs.init();
         expect($('#my-tabs-in-mobile').parents(".ls-dropdown-tabs").length).toEqual(1);
       });
 
       it("should insert the active tab as link in dropdown", function () {
         var expectedContent = $("#my-tabs-in-mobile li.ls-active a").html();
-        locastyle.breakpointClass = "ls-screen-sm";
+        locastyle.breakpointClass = "ls-window-sm";
         locastyle.tabs.init();
         expect($('#my-tabs-in-mobile-wrapper .ls-dropdown-tabs > a').html()).toEqual(expectedContent);
       });
 
       it("should insert the .ls-btn css class in the dropdown trigger link", function () {
-        locastyle.breakpointClass = "ls-screen-sm";
+        locastyle.breakpointClass = "ls-window-sm";
         locastyle.tabs.init();
         expect($('#my-tabs-in-mobile-wrapper .ls-dropdown-tabs').find("> a").hasClass('ls-btn')).toEqual(true);
       });
 
       it("should insert the .in-dropdown css class in .ls-tabs-nav", function () {
-        locastyle.breakpointClass = "ls-screen-sm";
+        locastyle.breakpointClass = "ls-window-sm";
         locastyle.tabs.init();
         expect($('#my-tabs-in-mobile-wrapper .ls-dropdown-tabs .ls-tabs-nav').hasClass('in-dropdown')).toEqual(true);
       });
 
       it("should insert the .ls-dropdown-tabs-nav css class in .ls-tabs-nav", function () {
-        locastyle.breakpointClass = "ls-screen-sm";
+        locastyle.breakpointClass = "ls-window-sm";
         locastyle.tabs.init();
         expect($('#my-tabs-in-mobile-wrapper .ls-dropdown-tabs .ls-tabs-nav').hasClass('ls-dropdown-nav')).toEqual(true);
       });
@@ -98,7 +98,7 @@ describe("Tabs: ", function() {
       });
 
       it("should not run dropdownShape if it is already a dropdown", function(){
-        locastyle.breakpointClass = "ls-screen-sm";
+        locastyle.breakpointClass = "ls-window-sm";
         locastyle.tabs.init();
         expect($('#my-tabs-in-dropdown-shape .ls-dropdown-tabs > a').size()).toEqual(1);
       });
