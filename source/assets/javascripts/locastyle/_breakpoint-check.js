@@ -7,9 +7,9 @@ locastyle.breakpoints = (function() {
   // Tamanhos padrões dos breakpoints
   //
   var config = {
-    screenSm: '768',
-    screenMd: '992',
-    screenLg: '1200'
+    windowSm: '768',
+    windowMd: '992',
+    windowLg: '1200'
   };
 
   function init(userConfig) {
@@ -29,27 +29,27 @@ locastyle.breakpoints = (function() {
     }
 
     // Se for menor que 768 - xs
-    if (documentWidth < config.screenSm) {
-      $('html').addClass('ls-screen-xs');
-      locastyle.breakpointClass = "ls-screen-xs";
+    if (documentWidth < config.windowSm) {
+      $('html').addClass('ls-window-xs');
+      locastyle.breakpointClass = "ls-window-xs";
     }
 
     // Se for maior ou igual a 768 e menor que 992 - sm
-    else if (documentWidth >= config.screenSm && documentWidth < config.screenMd) {
-      $('html').addClass('ls-screen-sm').removeClass('ls-sidebar-visible ls-notifications-visible ');
-      locastyle.breakpointClass = "ls-screen-sm";
+    else if (documentWidth >= config.windowSm && documentWidth < config.windowMd) {
+      $('html').addClass('ls-window-sm').removeClass('ls-sidebar-visible ls-notifications-visible ');
+      locastyle.breakpointClass = "ls-window-sm";
     }
 
     // Se for maior ou igual a 992 e menor que 1200 - md
-    else if (documentWidth >= config.screenMd && documentWidth < config.screenLg) {
-      $('html').addClass('ls-screen-md').removeClass('ls-sidebar-visible ls-notifications-visible ');
-      locastyle.breakpointClass = "ls-screen-md";
+    else if (documentWidth >= config.windowMd && documentWidth < config.windowLg) {
+      $('html').addClass('ls-window-md').removeClass('ls-sidebar-visible ls-notifications-visible ');
+      locastyle.breakpointClass = "ls-window-md";
     }
 
     // Se for maior ou igual a 1200 - lg
     else {
-      $('html').addClass('ls-screen-lg').removeClass('ls-sidebar-visible ls-notifications-visible ');
-      locastyle.breakpointClass = "ls-screen-lg";
+      $('html').addClass('ls-window-lg').removeClass('ls-sidebar-visible ls-notifications-visible ');
+      locastyle.breakpointClass = "ls-window-lg";
     }
   }
 
@@ -65,7 +65,7 @@ locastyle.breakpoints = (function() {
 
       changeClass = setTimeout(function() {
 
-        var breakpointActive = $('html').attr('class').replace(/(^|\s)ls-screen-\S+/g, '');
+        var breakpointActive = $('html').attr('class').replace(/(^|\s)ls-window-\S+/g, '');
 
         $('html').attr('class', breakpointActive);
 
