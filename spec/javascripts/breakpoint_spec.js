@@ -26,8 +26,7 @@ describe("Breakpoint: ", function() {
       $('html').removeClass();
     });
 
-    describe("HTML tag should has class", function() {
-
+    describe("HTML tag should has class ls-window", function() {
       it("ls-window-xs", function() {
         locastyle.breakpoints.init({ documentWidth: 767 });
         expect($('html').hasClass('ls-window-xs')).toBeTruthy();
@@ -49,8 +48,7 @@ describe("Breakpoint: ", function() {
       });
     });
 
-    describe("locastyle.breackpoint class value should has", function() {
-
+    describe("locastyle.breackpoint class value ls-window should has", function() {
       it("ls-window-xs", function() {
         locastyle.breakpoints.init({ documentWidth: 767 });
         expect(locastyle.breakpointClass).toEqual('ls-window-xs');
@@ -70,7 +68,20 @@ describe("Breakpoint: ", function() {
         locastyle.breakpoints.init({ documentWidth: 1200 });
         expect(locastyle.breakpointClass).toEqual('ls-window-lg');
       });
+    });
 
+    describe("HTML tag should has class ls-screen", function() {
+      it("ls-screen", function() {
+        locastyle.breakpoints.init({ documentWidth: 767 });
+        expect($('html[class*="ls-screen"]')).toBeTruthy();
+      });
+    });
+
+    describe("locastyle.breakpointScreenClass class value ls-screen should has", function() {
+      it("ls-screen", function() {
+        locastyle.breakpoints.init({ documentWidth: 767 });
+        expect(locastyle.breakpointScreenClass).toMatch(/ls-screen/);
+      });
     });
   });
 
