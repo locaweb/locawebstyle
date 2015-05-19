@@ -60,7 +60,7 @@ var lsdocs = (function() {
   }
 
   function sidebarAffix(){
-    if($('html').hasClass('ls-screen-lg') || $('html').hasClass('ls-screen-md')){
+    if($('html').hasClass('ls-window-lg') || $('html').hasClass('ls-window-md')){
       var docSidebarWidth = $('.doc-sidebar-inner').width();
       if ( $('.doc-sidebar-inner').height() < $(window).height() ){
         $(window).scroll(function(){

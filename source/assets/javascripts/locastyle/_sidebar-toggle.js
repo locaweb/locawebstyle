@@ -60,7 +60,7 @@ locastyle.sidebarToggle = (function() {
   // When in Mobile, maximize sidebar
   function maximizeMobile() {
     $(window).on("breakpoint-updated", function () {
-      if ($('.ls-screen-xs').length) {
+      if ($('.ls-window-xs').length) {
         maximizeSidebar();
       }
     });
