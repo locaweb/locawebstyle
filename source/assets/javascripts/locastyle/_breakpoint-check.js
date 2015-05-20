@@ -4,7 +4,7 @@ locastyle.breakpoints = (function() {
   'use strict';
 
   //
-  // Tamanhos padrões dos breakpoints
+  // Sizes of breakpoints Standards
   //
   var config = {
     sm: '768',
@@ -17,12 +17,12 @@ locastyle.breakpoints = (function() {
     config.html = $('html');
 
     breakpointWindowWidth(userConfig);
-    breakpointScreenWidth();
+    breakpointScreenWidth(userConfig);
     changeClassBreakpoint();
   }
 
   //
-  // Coloca classe na tag html de acordo com o tamanho do breakpoint
+  // Changing the class in html tag according to the size in the document
   //
   function breakpointWindowWidth(userConfig) {
     var documentWidth;
@@ -33,25 +33,25 @@ locastyle.breakpoints = (function() {
       documentWidth = $(document).width();
     }
 
-    // Se for menor que 768 - xs
+    // If less than 768 - xs
     if (documentWidth < config.sm) {
       config.html.addClass('ls-window-xs');
       locastyle.breakpointClass = "ls-window-xs";
     }
 
-    // Se for maior ou igual a 768 e menor que 992 - sm
+    // If greater than or equal to 768 and less than 992 - sm
     else if (documentWidth >= config.sm && documentWidth < config.md) {
       config.html.addClass('ls-window-sm').removeClass('ls-sidebar-visible ls-notifications-visible ');
       locastyle.breakpointClass = "ls-window-sm";
     }
 
-    // Se for maior ou igual a 992 e menor que 1200 - md
+    // If greater than or equal to 992 and less than 1200 - md
     else if (documentWidth >= config.md && documentWidth < config.lg) {
       config.html.addClass('ls-window-md').removeClass('ls-sidebar-visible ls-notifications-visible ');
       locastyle.breakpointClass = "ls-window-md";
     }
 
-    // Se for maior ou igual a 1200 - lg
+    // If greater than or equal to 1200 - lg
     else {
       config.html.addClass('ls-window-lg').removeClass('ls-sidebar-visible ls-notifications-visible ');
       locastyle.breakpointClass = "ls-window-lg";
@@ -59,7 +59,7 @@ locastyle.breakpoints = (function() {
   }
 
   //
-  // Alterando a classe na tag html de acordo com o screen.
+  // Changing the class in html tag according to the screen .
   //
   function breakpointScreenWidth(userConfig) {
     var screenWidth;
@@ -70,25 +70,25 @@ locastyle.breakpoints = (function() {
       screenWidth = screen.width;
     }
 
-    // Se for menor que 768 - xs
+    // If less than 768 - xs
     if (screenWidth < config.sm) {
       config.html.addClass('ls-screen-xs');
       locastyle.breakpointScreenClass = "ls-screen-xs";
     }
 
-    // Se for maior ou igual a 768 e menor que 992 - sm
+    // If greater than or equal to 768 and less than 992 - sm
     else if (screenWidth >= config.sm && screenWidth < config.md) {
       config.html.addClass('ls-screen-sm');
       locastyle.breakpointScreenClass = "ls-screen-sm";
     }
 
-    // Se for maior ou igual a 992 e menor que 1200 - md
+    // If greater than or equal to 992 and less than 1200 - md
     else if (screenWidth >= config.md && screenWidth < config.lg) {
       config.html.addClass('ls-screen-md');
       locastyle.breakpointScreenClass = "ls-screen-md";
     }
 
-    // Se for maior ou igual a 1200 - lg
+    // If greater than or equal to 1200 - lg
     else {
       config.html.addClass('ls-screen-lg');
       locastyle.breakpointScreenClass = "ls-screen-lg";
@@ -96,7 +96,7 @@ locastyle.breakpoints = (function() {
   }
 
   //
-  // Alterando a classe na tag html quando redimensionamos a janela.
+  // Changing the class in html tag when resized the window.
   //
   function changeClassBreakpoint() {
 
@@ -114,7 +114,7 @@ locastyle.breakpoints = (function() {
         breakpointWindowWidth();
         breakpointScreenWidth();
 
-        // dispara evento para informar outros modulos que o breakpoint foi atualizado
+        // event triggers to inform other modules that the breakpoint has been updated
         $.event.trigger("breakpoint-updated");
       }, 300);
 

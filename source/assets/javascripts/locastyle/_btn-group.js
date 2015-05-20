@@ -11,7 +11,7 @@ locastyle.btnGroup = (function() {
     $(document).off("breakpoint-updated");
   }
 
-  // adiciona o bind de breakpoint-updated e chama o checker quando o evento ocorre
+  // adds the bind -updated breakpoint and calls the checker when the event occurs
   function bindBreakpointUpdateOnChecker() {
     unbind();
 
@@ -20,21 +20,21 @@ locastyle.btnGroup = (function() {
     });
   }
 
-  // verifica se o breakpoint é para mobile, se for faz a ação para agrupar
+  // checks whether the breakpoint is for mobile, if the action is to group
   function checkBreakpoint() {
     if(locastyle.breakpointClass === "ls-window-sm" || locastyle.breakpointClass === "ls-window-xs"){
       $(".ls-regroup").each(function (index, $element) {
         group($($element).find('a, button'));
       });
 
-      // chama os inits para os itens dentro do dropdown
+      // calls inits for the items in the dropdown
       locastyle.dropdown.init();
       locastyle.modal.init();
       locastyle.general.init();
     }
   }
 
-  // agrupa os botões em um dropdown
+  // groups the buttons on a dropdown
   function group($element){
     var list = $($element).wrap('<li class="hidden-xs hidden-sm">');
     $element.parents('.ls-regroup').find('a[class*="ls-btn"]').removeClass();
