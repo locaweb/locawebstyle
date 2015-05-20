@@ -22,7 +22,7 @@ locastyle.breakpoints = (function() {
   }
 
   //
-  // Changing the class in html tag according to the size in the document
+  // Changes the css class in html tag according to the breakpoint size
   //
   function breakpointWindowWidth(userConfig) {
     var documentWidth;

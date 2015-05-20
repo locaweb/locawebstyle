@@ -3,7 +3,7 @@ window.tourGuiado = {};
 tourGuiado = (function() {
   'use strict';
 
-  // settings and steps from the tour
+  // settings and steps for tour
   var tourFirstStep = {
     id: 'tourDemo',
     selectors: {
