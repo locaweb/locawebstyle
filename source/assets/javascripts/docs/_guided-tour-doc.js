@@ -3,7 +3,7 @@ window.tourGuiadoDoc = {};
 tourGuiadoDoc = (function() {
   'use strict';
 
-  // configurações e passos do tour
+  // configuration and steps guided tour
   var configTourDoc = {
     id: 'tourDemoDoc',
     selectors: {

@@ -18,7 +18,7 @@ locastyle.tabs = (function() {
     ariaTabs();
   }
 
-  // adiciona o bind de click no modulo e chama os métodos necessários
+  // bind click and call the necessary methods
   function bindClickOnTriggers() {
     $("[data-ls-module=tabs]").on("click.ls", function(evt) {
       evt.preventDefault();
@@ -31,19 +31,19 @@ locastyle.tabs = (function() {
     });
   }
 
-  // adiciona o bind de breakpoint-updated e chama o checker quando o evento ocorre
+  // bind the breakpoint-updated event calls the checker when fired
   function bindBreakpointUpdateOnChecker() {
     $(window).on("breakpoint-updated", function () {
       locastyle.tabs.checkBreakpoint();
     });
   }
 
-  // checa se a tab está em modo dropdown
+  // check if the tab is in dropdown mode
   function isDropdownMode(el) {
     return $(el).hasClass('in-dropdown');
   }
 
-  // verifica o breakpoint e se a tab já está em modo droppdown
+  // check the breakpoint and if the tab is already in droppdown mode
   function checkBreakpoint() {
     if(locastyle.breakpointClass === "ls-window-sm" || locastyle.breakpointClass === "ls-window-xs"){
       $(".ls-tabs-nav").each(function (index, value) {
@@ -54,51 +54,51 @@ locastyle.tabs = (function() {
     }
   }
 
-  // atualiza o link do dropdowna com valor da aba ativa
+  // update dropdown link with value of active tab
   function updateTriggerLink(tabNav) {
-    //limpa trigger o atual
+    // clean the current trigger
     $(tabNav).parents(".ls-dropdown-tabs").find("> a").remove();
 
-    //atualiza com o novo trigger
+    // update with the new trigger
     $(tabNav).parents(".ls-dropdown-tabs").prepend($(tabNav).find("li.ls-active").html());
 
-    // adiciona classe de estilo no trigger
+    // add style class on trigger
     $(tabNav).parents(".ls-dropdown-tabs").find("> a").addClass("ls-btn");
 
-    // reinicializa o módulo de dropdown para pegar o novo trigger
+    // resets the dropdown module to catch the new trigger
     locastyle.dropdown.init();
   }
 
-  // altera a tab para o modo dropdown
+  // changes the tab to the dropdown mode
   function dropdownShape(tabNav) {
-    // coloca a div de dropdown em volta da navegação de abas
+    // puts div dropdown around the tab navigation
     $(tabNav).wrap('<div data-ls-module="dropdown" class="ls-dropdown-tabs">');
 
-    // coloca a aba ativa como link do dropdown
+    // puts the active tab as link dropdown
     updateTriggerLink(tabNav);
 
-    // adiciona a classe que altera o estilo dos links
+    // adds class amending style links
     $(tabNav).addClass("in-dropdown");
 
-    // adiciona a classe usada pelo dropdown para fazer o toggle
+    // adds class used by dropdown to the toggle
     $(tabNav).addClass("ls-dropdown-nav");
   }
 
-  // ativa a aba de acordo com os argumentos recebidos
+  // activates the flap in accordance with the received arguments
   function activateTab(el, $target) {
     $(el).parents("li").addClass("ls-active");
     $target.addClass("ls-active");
     $(el).attr('aria-selected' , true);
   }
 
-  // desativa a aba de acordo com os argumentos recebidos
+  // disable tab according to the received arguments
   function deactivateTab(el, $target) {
     $(el).parents("li").siblings().removeClass("ls-active");
     $target.siblings().removeClass("ls-active");
     $(el).parents("li").siblings().find('a').attr('aria-selected' , false);
   }
 
-  // remove os binds que o próprio modulo adiciona
+  // remove binds added by the module itself
   function unbind() {
     $("[data-ls-module=tabs]").off("click.ls");
   }
