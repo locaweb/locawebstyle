@@ -19,7 +19,7 @@
 </head>
 <body class="documentacao documentacao_exemplos documentacao_exemplos_painel2 documentacao_exemplos_painel2_stats documentacao_exemplos_painel2_stats_index">
 
-  <div class="ls-topbar">
+  <div class="ls-topbar ">
 
   <!-- Barra de Notificações -->
   <div class="ls-notification-topbar">
@@ -52,13 +52,15 @@
 
   <a href="/locawebstyle/documentacao/exemplos/painel2/pre-painel"  class="ls-go-next"><span class="ls-text">Voltar à lista de serviços</span></a>
 
-  <!-- Nome do produto/marca -->
+  <!-- Nome do produto/marca com sidebar -->
     <h1 class="ls-brand-name">
       <a href="home" class="ls-ico-earth">
         <small>SMTP Locaweb</small>
         fmolina
       </a>
     </h1>
+
+  <!-- Nome do produto/marca sem sidebar quando for o pre-painel  -->
 </div>
 
 
@@ -104,25 +106,45 @@
       <h1 class="ls-title-intro ls-ico-stats">Relatórios</h1>
 
 <div class="ls-box-filter">
-  <form action="#" class="ls-form ls-form-inline ls-float-left">
-    <label class="ls-label">
+  <form action="" class="ls-form ls-form-inline">
+    <input type="hidden" name="status" value="">
+    <label class="ls-label col-md-3 col-sm-4">
       <b class="ls-label-text">Período</b>
       <div class="ls-custom-select">
-        <select name="">
-          <option value="">Dia atual</option>
-          <option value="">Última semana</option>
-          <option value="">Últimos 30 dias</option>
-          <option value="">Últimos 6 meses</option>
-          <option value="">Últimos 12 meses </option>
+        <select name="period" id="select_period" class="ls-select">
+            <option>Hoje</option>
+            <option>Ontem</option>
+            <option>Última semana</option>
+            <option>Últimos 30 dias</option>
+            <option>Últimos 6 meses</option>
+            <option>Últimos 12 meses</option>
+            <option>Personalizado</option>
         </select>
       </div>
     </label>
-    <div data-ls-module="dropdown" class="ls-dropdown">
-      <a href="#" class="ls-btn">Exportar</a>
-      <ul class="ls-dropdown-nav">
-        <li><a href="#" data-ls-module="modal" data-target="#modal_export">CSV</a></li>
-        <li><a href="#" data-ls-module="modal" data-target="#modal_export">XLS</a></li>
-        <li><a href="#" class="ls-divider" data-ls-module="modal" data-target="#modal_exported_reports">Relatórios exportados</a></li>
+    <label class="ls-label col-md-2 col-sm-2">
+      <span id="new_feature_custom_filter_2" data-ls-module="popover" data-content="Escolha o período desejado e clique em 'Filtrar'."></span>
+      <input type="text" name="range_start" class="datepicker" placeholder="dd/mm/aaaa">
+    </label>
+    <label class="ls-label col-md-2 col-sm-2">
+      <input type="text" name="range_end" class="datepicker" placeholder="dd/mm/aaaa">
+      <span id="new_feature_custom_filter_3" data-ls-module="popover" data-content="Clique em 'Filtrar' para exibir  o período selecionado."></span>
+    </label>
+    <label class="ls-label col-md-1 col-sm-1">
+      <input type="submit" class="ls-btn-primary" value="Filtrar">
+    </label>
+    <div data-ls-module="dropdown" class="ls-dropdown ls-float-right" id="step4">
+      <a href="#" class="ls-btn" role="combobox" aria-expanded="false">Exportar</a>
+      <ul class="ls-dropdown-nav" aria-hidden="true">
+        <li>
+          <a href="" role="option" tabindex="-1">CSV</a>
+        </li>
+        <li>
+          <a data-action="open_modal_export" data-ls-module="modal" data-report-ext="XLS" data-target="#modal_export" href="" role="option" tabindex="-1">XLS</a>
+        </li>
+        <li>
+          <a class="ls-divider" data-action="open_modal_export" data-ls-module="modal" data-target="#modal_exported_reports" data-url="/panel/exports" href="" id="link_exported_reports" role="option" tabindex="-1">Relatórios exportados</a>
+        </li>
       </ul>
     </div>
   </form>
@@ -249,39 +271,39 @@
         </thead>
         <tbody>
             <tr>
-              <td class="hidden-xs">Tue Sep 04, 1990</td>
-              <td>isabelneal@fastmail.com</td>
-              <td>xena_bender@hotmail.com</td>
+              <td class="hidden-xs">Tue Jun 24, 2008</td>
+              <td>piperpittman@gmail.com</td>
+              <td>joey-rowe@hotmail.com</td>
               <td>Entregue</td>
-              <td class="hidden-xs">Impedit quod error non ut animi ut</td>
+              <td class="hidden-xs">Pariatur natus occaecati tenetur accusamus et cupiditate rerum</td>
             </tr>
             <tr>
-              <td class="hidden-xs">Sun Apr 30, 2006</td>
-              <td>dirksteele@fastmail.com</td>
-              <td>allenmerritt@yahoo.com</td>
+              <td class="hidden-xs">Mon Jun 08, 1992</td>
+              <td>raul-desai@me.com</td>
+              <td>rolandomay@hotmail.com</td>
               <td>Entregue</td>
-              <td class="hidden-xs">Maxime veritatis sapiente beatae sint expedita qui corrupti quasi aliquid asperiores</td>
+              <td class="hidden-xs">Eum ipsam explicabo nemo</td>
             </tr>
             <tr>
-              <td class="hidden-xs">Tue Feb 07, 1995</td>
-              <td>collin-rose@me.com</td>
-              <td>gayle_woodard@mac.com</td>
+              <td class="hidden-xs">Fri May 10, 1996</td>
+              <td>angela-morgan@mac.com</td>
+              <td>clintonjohnston@yahoo.com</td>
               <td>Entregue</td>
-              <td class="hidden-xs">Ipsam nam assumenda doloribus facilis molestias et ex odit sit quia aspernatur ut sapiente</td>
+              <td class="hidden-xs">Quasi ipsam quia porro incidunt deleniti</td>
             </tr>
             <tr>
-              <td class="hidden-xs">Sat Jul 04, 1998</td>
-              <td>petechandler@email.com</td>
-              <td>kelvin_zhang@mac.com</td>
+              <td class="hidden-xs">Wed Jan 18, 1995</td>
+              <td>chriscowan@hotmail.com</td>
+              <td>monty-gray@live.com</td>
               <td>Entregue</td>
-              <td class="hidden-xs">Ea culpa fuga est dolor dolorum consectetur voluptatem distinctio qui eos quia</td>
+              <td class="hidden-xs">Et aut sunt voluptatem sed omnis ipsum beatae officia perspiciatis nobis est et culpa enim</td>
             </tr>
             <tr>
-              <td class="hidden-xs">Thu Jul 04, 1996</td>
-              <td>rafael-byrne@gmail.com</td>
-              <td>ian-black@live.com</td>
+              <td class="hidden-xs">Thu Jan 24, 1991</td>
+              <td>caitlyn_pearson@fastmail.com</td>
+              <td>nadiabowman@gmail.com</td>
               <td>Entregue</td>
-              <td class="hidden-xs">Consequatur pariatur velit rerum</td>
+              <td class="hidden-xs">Aut quia voluptatum non dolorem numquam quibusdam maiores minima at sed velit aut iste expedita</td>
             </tr>
         </tbody>
       </table>
@@ -331,39 +353,39 @@
         </thead>
         <tbody>
             <tr>
-              <td>Tue Feb 27, 1996</td>
-              <td>eric_goldstein@hotmail.com</td>
-              <td>staciboykin@yahoo.com</td>
+              <td>Tue Feb 11, 1992</td>
+              <td>alyson_love@hotmail.com</td>
+              <td>wendell-starr@mail.com</td>
               <td>Entregue</td>
-              <td>Voluptates expedita mollitia quia in perspiciatis mollitia repudiandae quia</td>
+              <td>Et ipsum dicta laudantium</td>
             </tr>
             <tr>
-              <td>Mon Aug 31, 1998</td>
-              <td>emilianowoods@me.com</td>
-              <td>coltonchristensen@yahoo.com</td>
+              <td>Tue Aug 01, 2000</td>
+              <td>idablanchard@live.com</td>
+              <td>melinda-snyder@aol.com</td>
               <td>Entregue</td>
-              <td>Est et in earum nisi quidem quo saepe voluptate magnam nisi omnis</td>
+              <td>Dolorum veritatis alias est sint ducimus omnis</td>
             </tr>
             <tr>
-              <td>Sun Apr 20, 2003</td>
-              <td>marybeth-sharpe@me.com</td>
-              <td>wayneweiner@gmail.com</td>
+              <td>Tue Apr 04, 2000</td>
+              <td>carmenwalton@live.com</td>
+              <td>javonsong@mail.com</td>
               <td>Entregue</td>
-              <td>Non et vel sapiente fugiat animi officiis est consequatur autem illo sunt ea</td>
+              <td>Reprehenderit porro quis nihil a cum illum rerum similique doloribus neque ea laudantium</td>
             </tr>
             <tr>
-              <td>Wed Oct 22, 1997</td>
-              <td>sheryl-norman@aol.com</td>
-              <td>marsha_harvey@mail.com</td>
+              <td>Wed May 27, 1998</td>
+              <td>carmen_case@aol.com</td>
+              <td>bart-cowan@live.com</td>
               <td>Entregue</td>
-              <td>Repellat ipsam placeat ut minus commodi hic occaecati suscipit</td>
+              <td>Ullam quisquam quasi eum porro earum ut voluptas ut minima ipsa</td>
             </tr>
             <tr>
-              <td>Fri Dec 18, 1998</td>
-              <td>tymiddleton@aol.com</td>
-              <td>javon_moon@aol.com</td>
+              <td>Fri Nov 09, 1990</td>
+              <td>ericchappell@email.com</td>
+              <td>makenzie-hester@mac.com</td>
               <td>Entregue</td>
-              <td>Aperiam sequi tempore aut suscipit aut est placeat</td>
+              <td>Culpa ut tempora rerum ipsum sit exercitationem iusto quia</td>
             </tr>
         </tbody>
       </table>
@@ -608,23 +630,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Accusamus accusantium odit sint molestiae</a>
+            <a href="#">Voluptatum aut neque est et voluptatibus rerum</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Non et nobis cum ipsa tenetur laudantium error cum minus neque et id provident doloremque</a>
+            <a href="#">Non fugit quisquam iusto quis nobis quisquam delectus et incidunt minus doloribus sed quis</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Eos quam vel libero beatae tempore eaque consequatur ipsum neque vero aut</a>
+            <a href="#">Non est totam voluptatem</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Eos beatae laborum corrupti aut suscipit non omnis</a>
+            <a href="#">Sit voluptates placeat explicabo aut excepturi iusto in</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Voluptate in corporis voluptatem ea alias nostrum et et sint minima magnam dicta enim sunt</a>
+            <a href="#">Quibusdam error minus ut</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -633,8 +655,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> explicabo ea reprehenderit sed excepturi et</a></li>
-          <li><a href="#">> sint ullam temporibus aut qui modi</a></li>
+          <li><a href="#">> quia deleniti sunt id mollitia quos</a></li>
+          <li><a href="#">> veniam sit quis voluptatum soluta excepturi</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">

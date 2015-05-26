@@ -54,7 +54,7 @@
       <li class=''><a class='' href='/locawebstyle/documentacao/introducao/'>Introdução</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/css/grid/'>CSS</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/'>Funções JS</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/estrutura-principal/'>Componentes</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/'>Componentes</a></li>
       <li class='active'><a class='active' href='/locawebstyle/documentacao/formularios/'>Formulários</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/exemplos/'>Telas de Exemplo</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
@@ -92,6 +92,24 @@
   <h1>Iniciando com formulários</h1>
   <p>Elementos padrão de formulários e disposição de campos</p>
 </div>
+
+
+  <p>É possível fazer um formulário usando elementos verticais e horizontais, usando o <strong>grid</strong> padrão e a classe para <strong>formulários inline</strong>.</p>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classe</th>
+        <th>Layout</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>.ls-form</td><td>Vertical</td><td>Classe padrão do formulário, exibe a label e conteúdo de formulários em bloco</td></tr>
+      <tr><td>.ls-form-horinzontal</td><td>Horizontal</td><td>Exibe os elementos ao lado, mas a label continua sendo bloco</td></tr>
+      <tr><td>.ls-form-horinzontal</td><td>Inline</td><td>Exibe todos os elementos ao lado, label e conteúdo de formulário</td></tr>
+    </tbody>
+  </table>
 
 
   <h3 class="doc-title-3">Formulários verticais</h3>
@@ -553,7 +571,7 @@
   <p>Basta adicionar a classe <code>ls-form-inline</code> na tag FORM. Veja exemplos abaixo:</p>
 
   <div class="ls-box-demo">
-    <form action="" class="ls-form ls-form-inline row">
+    <form action="" class="ls-form ls-form-inline">
   <label class="ls-label col-md-5">
     <b class="ls-label-text">Nome</b>
     <input type="text" name="nome" placeholder="Nome e sobrenome" required >
@@ -570,7 +588,7 @@
 
 <br>
 
-<form action="" class="ls-form ls-form-inline row">
+<form action="" class="ls-form ls-form-inline">
   <label class="ls-label col-md-9">
     <b class="ls-label-text">Nome</b>
     <input type="text" name="nome" placeholder="Nome e sobrenome" required >
@@ -584,30 +602,28 @@
 <p>Com caixa de filtro:</p>
 
 <div class="ls-box-filter">
-  <!-- To do this -->
-  <form class="ls-form ls-float-right buffer-inserted">
-    <label class="ls-label ls-no-margin" role="search">
-      <b class="ls-label-text ls-hidden-accessible">Nome do cliente</b>
-      <input type="text" id="q" name="q" aria-label="Faça sua busca por cliente" accesskey="s" placeholder="Nome do cliente" required="">
-    </label>
-    <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
-  </form>
-  <form action="" class="ls-form ls-form-inline row">
-    <label class="ls-label col-md-5">
+  <form action="" class="ls-form ls-form-inline ls-float-left">
+    <label class="ls-label col-md-8 col-sm-8">
       <b class="ls-label-text">Status</b>
-
       <div class="ls-custom-select">
-        <select class="ls-custom" name="">
-          <option selected="&quot;selected&quot;" value="/resale/clients">Todos</option>
-          <option value="#">Ativos</option>
-          <option value="#">Desativados</option>
-          <option value="#">Bloqueados por bounce</option>
+        <select name="" class="ls-select">
+          <option>Todos</option>
+          <option>Ativos</option>
+          <option>Desativados</option>
         </select>
       </div>
-
     </label>
   </form>
 
+  <form  action="" class="ls-form ls-form-inline ls-float-right">
+    <label class="ls-label" role="search">
+      <b class="ls-label-text ls-hidden-accessible">Nome do cliente</b>
+      <input type="text" id="q" name="q" aria-label="Faça sua busca por cliente" placeholder="Nome do cliente" required="" class="ls-field">
+    </label>
+    <div class="ls-actions-btn">
+      <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
+    </div>
+  </form>
 </div>
 
 
@@ -666,9 +682,7 @@
 52
 53
 54
-55
-56
-57</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline row"</span><span class="nt">&gt;</span>
+55</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-5"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">required</span> <span class="nt">&gt;</span>
@@ -685,7 +699,7 @@
 
 <span class="nt">&lt;br&gt;</span>
 
-<span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline row"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-9"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/b&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Nome e sobrenome"</span> <span class="na">required</span> <span class="nt">&gt;</span>
@@ -699,30 +713,28 @@
 <span class="nt">&lt;p&gt;</span>Com caixa de filtro:<span class="nt">&lt;/p&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-box-filter"</span><span class="nt">&gt;</span>
-  <span class="c">&lt;!-- To do this --&gt;</span>
-  <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"ls-form ls-float-right buffer-inserted"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label ls-no-margin"</span> <span class="na">role=</span><span class="s">"search"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text ls-hidden-accessible"</span><span class="nt">&gt;</span>Nome do cliente<span class="nt">&lt;/b&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"q"</span> <span class="na">name=</span><span class="s">"q"</span> <span class="na">aria-label=</span><span class="s">"Faça sua busca por cliente"</span> <span class="na">accesskey=</span><span class="s">"s"</span> <span class="na">placeholder=</span><span class="s">"Nome do cliente"</span> <span class="na">required=</span><span class="s">""</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Buscar"</span> <span class="na">class=</span><span class="s">"ls-btn"</span> <span class="na">title=</span><span class="s">"Buscar"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/form&gt;</span>
-  <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-5"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline ls-float-left"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-8 col-sm-8"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/b&gt;</span>
-
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-custom-select"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-custom"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"&amp;quot;selected&amp;quot;"</span> <span class="na">value=</span><span class="s">"/resale/clients"</span><span class="nt">&gt;</span>Todos<span class="nt">&lt;/option&gt;</span>
-          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ativos<span class="nt">&lt;/option&gt;</span>
-          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Desativados<span class="nt">&lt;/option&gt;</span>
-          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Bloqueados por bounce<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-select"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option&gt;</span>Todos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option&gt;</span>Ativos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option&gt;</span>Desativados<span class="nt">&lt;/option&gt;</span>
         <span class="nt">&lt;/select&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-
     <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/form&gt;</span>
 
+  <span class="nt">&lt;form</span>  <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline ls-float-right"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label"</span> <span class="na">role=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text ls-hidden-accessible"</span><span class="nt">&gt;</span>Nome do cliente<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"q"</span> <span class="na">name=</span><span class="s">"q"</span> <span class="na">aria-label=</span><span class="s">"Faça sua busca por cliente"</span> <span class="na">placeholder=</span><span class="s">"Nome do cliente"</span> <span class="na">required=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-field"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Buscar"</span> <span class="na">class=</span><span class="s">"ls-btn"</span> <span class="na">title=</span><span class="s">"Buscar"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
 </pre></td></tr></tbody></table>
@@ -737,9 +749,6 @@
       Faça isso e a Acessibilidade agradece =)
     </p>
   </div>
-
-
-  <p>É possível fazer um formulário usando elementos verticais e horizontais, usando o <i>grid</i> padrão e a classe para <i>form inline</i>.</p>
 
 </section>
 

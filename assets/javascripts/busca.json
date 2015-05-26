@@ -115,10 +115,22 @@
       "path": "documentacao/componentes/botoes"
   },
   
+  "documentacao/componentes/box-de-filtro" :   {
+      "title": "Box de filtro",
+      "description": "Elemento usado pra envolver elementos de formulário que filtram ou fazem alguma busca.",
+      "path": "documentacao/componentes/box-de-filtro"
+  },
+  
   "documentacao/componentes/box-de-selecao" :   {
       "title": "Box de Seleção",
       "description": "Elemento para ser utilizado em formulários ou páginas de cadastro, inclusão ou administração de itens. Ótimo para visualizar as opções disponíveis, se não forem muitas.",
       "path": "documentacao/componentes/box-de-selecao"
+  },
+  
+  "documentacao/componentes/box-generico" :   {
+      "title": "Box genérico",
+      "description": "Um box genérico usado para dividir ou agrupar conteúdos",
+      "path": "documentacao/componentes/box-generico"
   },
   
   "documentacao/componentes/box-info" :   {
@@ -143,18 +155,6 @@
       "title": "Dropdown",
       "description": "Componente para agrupar listas de links.",
       "path": "documentacao/componentes/dropdown"
-  },
-  
-  "documentacao/componentes/estrutura-principal" :   {
-      "title": "Estrutura principal",
-      "description": "É daqui que você vai começar. Nosso Boilerplate responsivo tem header, menu lateral e uma estrutura de conteúdo principal que é fluida, ou seja, sem largura limitada.",
-      "path": "documentacao/componentes/estrutura-principal"
-  },
-  
-  "documentacao/componentes/generic-box" :   {
-      "title": "Box genérico",
-      "description": "Um box genérico usado para dividir ou agrupar conteúdos",
-      "path": "documentacao/componentes/generic-box"
   },
   
   "documentacao/componentes" :   {
@@ -469,6 +469,12 @@
       "path": "documentacao/exemplos/painel3/transfer-international"
   },
   
+  "documentacao/exemplos/painel3/transfer" :   {
+      "title": "Pré Painel",
+      "description": "",
+      "path": "documentacao/exemplos/painel3/transfer"
+  },
+  
   "documentacao/exemplos/painel3/transferin" :   {
       "title": "Transferência de Domínio para a Locaweb",
       "description": "",
@@ -707,6 +713,12 @@
       "title": "Downloads",
       "description": "Aqui você pode baixar separadamente os módulos do Locastyle para usar em seu projeto.",
       "path": "documentacao/introducao/downloads"
+  },
+  
+  "documentacao/introducao/estrutura-principal" :   {
+      "title": "Estrutura principal",
+      "description": "É daqui que você vai começar. Nosso Boilerplate responsivo tem header, menu lateral e uma estrutura de conteúdo principal que é fluida, ou seja, sem largura limitada.",
+      "path": "documentacao/introducao/estrutura-principal"
   },
   
   "documentacao/introducao" :   {

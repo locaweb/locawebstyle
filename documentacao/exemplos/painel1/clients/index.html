@@ -19,7 +19,7 @@
 </head>
 <body class="documentacao documentacao_exemplos documentacao_exemplos_painel1 documentacao_exemplos_painel1_clients documentacao_exemplos_painel1_clients_index">
 
-  <div class="ls-topbar">
+  <div class="ls-topbar ">
 
   <!-- Barra de Notificações -->
   <div class="ls-notification-topbar">
@@ -52,13 +52,15 @@
 
   <a href="/locawebstyle/documentacao/exemplos/painel1/pre-painel"  class="ls-go-next"><span class="ls-text">Voltar à lista de serviços</span></a>
 
-  <!-- Nome do produto/marca -->
+  <!-- Nome do produto/marca com sidebar -->
     <h1 class="ls-brand-name">
       <a href="home" class="ls-ico-earth">
         <small>Revenda do Email Marketing</small>
         fmolina
       </a>
     </h1>
+
+  <!-- Nome do produto/marca sem sidebar quando for o pre-painel  -->
 </div>
 
 
@@ -112,26 +114,26 @@
 <a href="/locawebstyle/documentacao/exemplos/painel1/new-client" class="ls-btn-primary">Cadastrar novo</a>
 
 <div class="ls-box-filter">
-  <form action="#" class="ls-form ls-form-inline ls-float-left">
-    <label class="ls-label">
-        <b class="ls-label-text">Status</b>
-        <div class="ls-custom-select ls-field-sm">
-          <select name="">
-            <option value="">Todos</option>
-            <option value="">Ativo</option>
-            <option value="">Desativados</option>
-            <option value="">Bloqueados por bounce</option>
-          </select>
-        </div>
-      </label>
+  <form action="" class="ls-form ls-form-inline ls-float-left">
+    <label class="ls-label col-md-6 col-sm-8">
+      <b class="ls-label-text">Status</b>
+      <div class="ls-custom-select ls-field-sm">
+        <select name="" class="ls-select">
+          <option>Todos</option>
+          <option>Ativos</option>
+          <option>Desativados</option>
+        </select>
+      </div>
+    </label>
   </form>
-  <form action="#" class="ls-form ls-form-inline ls-float-right">
-    <label class="ls-label">
+
+  <form  action="" class="ls-form ls-form-inline ls-float-right">
+    <label class="ls-label" role="search">
       <b class="ls-label-text ls-hidden-accessible">Nome do cliente</b>
-      <input type="text" name="nome" placeholder="Nome e sobrenome" required class="ls-field-sm">
+      <input type="text" id="q" name="q" aria-label="Faça sua busca por cliente" placeholder="Nome do cliente" required="" class="ls-field-sm">
     </label>
     <div class="ls-actions-btn">
-      <button type="submit" class="ls-btn ls-btn-sm">Buscar</button>
+      <input type="submit" value="Buscar" class="ls-btn ls-btn-sm" title="Buscar">
     </div>
   </form>
 </div>
@@ -329,23 +331,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">At provident ex asperiores ab a aspernatur autem</a>
+            <a href="#">Et saepe sapiente eligendi unde blanditiis laudantium omnis dolorem rerum est sint</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Cupiditate in ut nihil placeat natus vero voluptatem</a>
+            <a href="#">Et odio aspernatur alias odio illo eum ut</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Eaque quos velit aliquam commodi rerum</a>
+            <a href="#">Iusto laborum possimus doloremque sit qui harum maxime</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Harum deserunt iure sit fugiat ullam minus consequuntur et at in</a>
+            <a href="#">Similique dolor vel ut omnis qui ut doloribus aut enim expedita voluptatem</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Id harum perspiciatis omnis et repellat voluptate quia voluptas consequatur dolore reiciendis excepturi</a>
+            <a href="#">Voluptas nulla officiis non quo a sed aut dolorum sit corrupti inventore nesciunt</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -354,8 +356,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> tenetur ad explicabo fugiat magni voluptatem</a></li>
-          <li><a href="#">> ducimus natus voluptatibus eum sit amet</a></li>
+          <li><a href="#">> natus quia odio atque laudantium perferendis</a></li>
+          <li><a href="#">> consequuntur ullam doloremque iusto vel explicabo</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">

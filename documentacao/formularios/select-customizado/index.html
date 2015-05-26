@@ -54,7 +54,7 @@
       <li class=''><a class='' href='/locawebstyle/documentacao/introducao/'>Introdução</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/css/grid/'>CSS</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/'>Funções JS</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/estrutura-principal/'>Componentes</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/'>Componentes</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/'>Formulários</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/exemplos/'>Telas de Exemplo</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
@@ -130,6 +130,219 @@
   <div class="ls-alert ls-alert-info">
     <p>Foi usado apenas CSS, com suporte aos navegadores mais atuais, inclusive IE-8 ou superior.</p>
   </div>
+
+  <h2 class="doc-title-3">Definindo largura da select através do Grid</h2>
+
+  <div class="ls-box-demo">
+    <form action="" class="ls-form row">
+  <fieldset>
+
+    <!--  col-md-2  -->
+    <label class="ls-label col-md-2">
+      <b class="ls-label-text">Status</b>
+      <div class="ls-custom-select">
+        <select class="ls-custom" name="">
+          <option selected="selected">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Desativados</option>
+        </select>
+      </div>
+    </label>
+    <!--  col-md-4  -->
+    <label class="ls-label col-md-4">
+      <b class="ls-label-text">Status</b>
+      <div class="ls-custom-select">
+        <select class="ls-custom" name="">
+          <option selected="selected">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Desativados</option>
+        </select>
+      </div>
+    </label>
+    <!--  col-md-6  -->
+    <label class="ls-label col-md-6">
+      <b class="ls-label-text">Status</b>
+      <div class="ls-custom-select">
+        <select class="ls-custom" name="">
+          <option selected="selected">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Desativados</option>
+        </select>
+      </div>
+    </label>
+    <label class="ls-label col-md-8">
+      <b class="ls-label-text">Status</b>
+      <div class="ls-custom-select">
+        <select class="ls-custom" name="">
+          <option selected="selected">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Desativados</option>
+        </select>
+      </div>
+    </label>
+    <label class="ls-label col-md-10">
+      <b class="ls-label-text">Status</b>
+      <div class="ls-custom-select">
+        <select class="ls-custom" name="">
+          <option selected="selected">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Desativados</option>
+        </select>
+      </div>
+    </label>
+    <label class="ls-label col-md-12">
+      <b class="ls-label-text">Status</b>
+      <div class="ls-custom-select">
+        <select class="ls-custom" name="">
+          <option selected="selected">Todos</option>
+          <option value="#">Ativos</option>
+          <option value="#">Desativados</option>
+        </select>
+      </div>
+    </label>
+  </fieldset>
+</form>
+
+  </div>
+
+  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</pre></td><td class="code"><pre> <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+
+    <span class="c">&lt;!--  col-md-2  --&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-custom-select"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-custom"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span><span class="nt">&gt;</span>Todos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ativos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Desativados<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="c">&lt;!--  col-md-4  --&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-4"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-custom-select"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-custom"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span><span class="nt">&gt;</span>Todos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ativos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Desativados<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="c">&lt;!--  col-md-6  --&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-custom-select"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-custom"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span><span class="nt">&gt;</span>Todos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ativos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Desativados<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-custom-select"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-custom"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span><span class="nt">&gt;</span>Todos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ativos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Desativados<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-10"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-custom-select"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-custom"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span><span class="nt">&gt;</span>Todos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ativos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Desativados<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-12"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/b&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-custom-select"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"ls-custom"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span><span class="nt">&gt;</span>Todos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ativos<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"#"</span><span class="nt">&gt;</span>Desativados<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
 </section>
 
   </div>

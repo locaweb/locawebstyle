@@ -54,7 +54,7 @@
       <li class=''><a class='' href='/locawebstyle/documentacao/introducao/'>Introdução</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/css/grid/'>CSS</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/'>Funções JS</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/estrutura-principal/'>Componentes</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/'>Componentes</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/'>Formulários</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/exemplos/'>Telas de Exemplo</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
@@ -69,14 +69,14 @@
 <div class="doc-sidebar-inner doc-sidebar-componentes">
   <nav class="doc-sidebar-menu">
     <ul>
-      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/estrutura-principal/'>Estrutura principal</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/'>Abas</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/alertas/'>Alertas</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/barra-de-progresso/'>Barra de Progresso</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/botao-switch/'>Botão Switch</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/botoes/'>Botões</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/box-de-selecao/'>Box de seleção</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/generic-box/'>Box genérico</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/box-de-filtro/'>Box de Filtro</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/box-generico/'>Box genérico</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/box-info/'>Box Informativo</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/alert-box/'>Box de notificações</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/breadcrumb/'>Breadcrumb</a></li>
@@ -223,6 +223,122 @@
       </tr>
     </tbody>
   </table>
+
+  <h2 class="doc-title-3">Tabela sem hover</h2>
+  <p>A classe <code>.ls-no-hover</code>, remove o estilo de hover das tabelas, mesmo quando ela for zebrada.</p>
+  <div class="ls-box-demo">
+    <table class="ls-table ls-no-hover ls-table-striped">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th class="hidden-xs">Campanha</th>
+      <th>Status</th>
+      <th class="hidden-xs">Data de envio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="" title="">Mensagem Teste Locastyle</a></td>
+      <td class="hidden-xs">Campanha</td>
+      <td>Enviada</td>
+      <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+    </tr>
+    <tr>
+      <td><a href="" title="">Mensagem Teste Locastyle</a></td>
+      <td class="hidden-xs">Campanha</td>
+      <td>Enviada</td>
+      <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+    </tr>
+    <tr>
+      <td><a href="" title="">Mensagem Teste Locastyle</a></td>
+      <td class="hidden-xs">Campanha</td>
+      <td>Enviada</td>
+      <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+    </tr>
+    <tr>
+      <td><a href="" title="">Mensagem Teste Locastyle</a></td>
+      <td class="hidden-xs">Campanha</td>
+      <td>Enviada</td>
+      <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></td><td class="code"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"ls-table ls-no-hover ls-table-striped"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Título<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"hidden-xs"</span><span class="nt">&gt;</span>Campanha<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Status<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"hidden-xs"</span><span class="nt">&gt;</span>Data de envio<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Mensagem Teste Locastyle<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"hidden-xs"</span><span class="nt">&gt;</span>Campanha<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Enviada<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"hidden-xs"</span><span class="nt">&gt;</span>21/09/2013 as 20:00 PM<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Mensagem Teste Locastyle<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"hidden-xs"</span><span class="nt">&gt;</span>Campanha<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Enviada<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"hidden-xs"</span><span class="nt">&gt;</span>21/09/2013 as 20:00 PM<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Mensagem Teste Locastyle<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"hidden-xs"</span><span class="nt">&gt;</span>Campanha<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Enviada<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"hidden-xs"</span><span class="nt">&gt;</span>21/09/2013 as 20:00 PM<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Mensagem Teste Locastyle<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"hidden-xs"</span><span class="nt">&gt;</span>Campanha<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Enviada<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"hidden-xs"</span><span class="nt">&gt;</span>21/09/2013 as 20:00 PM<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
 
 
   <h2 class="doc-title-3">Tabela zebrada</h2>

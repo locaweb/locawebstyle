@@ -54,7 +54,7 @@
       <li class=''><a class='' href='/locawebstyle/documentacao/introducao/'>Introdução</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/css/grid/'>CSS</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/'>Funções JS</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/estrutura-principal/'>Componentes</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/'>Componentes</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/formularios/'>Formulários</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/exemplos/'>Telas de Exemplo</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/cartilha-de-elementos/'>Cartilha de Elementos</a></li>
@@ -96,7 +96,7 @@
   <p>Pra inserir um adendo ao input no início ou no final, envolva o <code>input</code> em um elemento com a classe <code>ls-prefix-group</code>. Depois coloque outro elemento (sugerimos <code>span</code>) com a classe <code>ls-label-text-prefix</code> antes ou depois do input.</p>
 
   <div class="ls-box-demo">
-    <form action="" class="ls-form">
+    <form action="" class="ls-form row">
 
   <label class="ls-label col-md-8">
     <b class="ls-label-text">Escreva o endereço do seu site</b>
@@ -175,7 +175,7 @@
 36
 37
 38
-39</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form"</span><span class="nt">&gt;</span>
+39</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form row"</span><span class="nt">&gt;</span>
 
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-8"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Escreva o endereço do seu site<span class="nt">&lt;/b&gt;</span>
@@ -187,6 +187,132 @@
   <span class="nt">&lt;/label&gt;</span>
 
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Escreva o endereço do seu site<span class="nt">&lt;/b&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-prefix-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ls-label-text-prefix"</span><span class="nt">&gt;</span>http://<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ls-label-text-prefix"</span><span class="nt">&gt;</span>.subdominio.com.br<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-6"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-prefix-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ls-label-text-prefix"</span><span class="nt">&gt;</span>Seu nome:<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">placeholder=</span><span class="s">"Completo, por favor..."</span> <span class="na">required</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-12 col-sm-12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Maximo de backups armazenados<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-prefix-group col-md-4 col-sm-8 col-lg-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-label-text-prefix ls-bg-white"</span><span class="nt">&gt;</span>-<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">"8"</span> <span class="na">class=</span><span class="s">"ls-txt-center"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-label-text-prefix ls-bg-white"</span><span class="nt">&gt;</span>+<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+
+
+
+  <p>Pra mudar o layout basta adicionar no form a classe <code>.ls-form-inline</code></p>
+  <div class="ls-box-demo">
+    <form action="" class="ls-form ls-form-inline row">
+
+  <label class="ls-label col-md-8">
+    <b class="ls-label-text">Escreva o endereço do seu site</b>
+
+    <div class="ls-prefix-group">
+      <span class="ls-label-text-prefix">URL</span>
+      <input type="text" name="nome" required >
+    </div>
+  </label>
+
+  <label class="ls-label col-md-10 col-sm-10">
+    <b class="ls-label-text">Escreva o endereço do seu site</b>
+
+    <div class="ls-prefix-group">
+      <span class="ls-label-text-prefix">http://</span>
+      <input type="text" name="nome" required >
+      <span class="ls-label-text-prefix">.subdominio.com.br</span>
+    </div>
+  </label>
+
+  <label class="ls-label col-md-6">
+    <div class="ls-prefix-group">
+      <span class="ls-label-text-prefix">Seu nome:</span>
+      <input type="text" name="nome" placeholder="Completo, por favor..." required>
+    </div>
+  </label>
+
+  <label class="ls-label col-md-12 col-sm-12">
+    <b class="ls-label-text">Maximo de backups armazenados</b>
+    <div class="row">
+      <div class="ls-prefix-group col-md-4 col-sm-8 col-lg-3">
+        <a href="" class="ls-label-text-prefix ls-bg-white">-</a>
+        <input type="text" value="8" class="ls-txt-center">
+        <a href="" class="ls-label-text-prefix ls-bg-white">+</a>
+      </div>
+    </div>
+  </label>
+</form>
+
+  </div>
+  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline row"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Escreva o endereço do seu site<span class="nt">&lt;/b&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-prefix-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ls-label-text-prefix"</span><span class="nt">&gt;</span>URL<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-10 col-sm-10"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Escreva o endereço do seu site<span class="nt">&lt;/b&gt;</span>
 
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-prefix-group"</span><span class="nt">&gt;</span>
