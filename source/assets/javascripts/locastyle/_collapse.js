@@ -31,20 +31,22 @@ locastyle.collapse = (function() {
   }
 
   function bind() {
-    if (!$(config.trigger).hasClass(config.classes.alwaysOpened)) {
-      $(config.trigger).on('click.ls', function() {
-        groupCollapse($(this));
-        // get target
-        var target = $(this).data('target');
-        toggle(target);
-        // set aria's attributes
-        ariaCollapse($(this));
-      });
-      // if click on ls-collapse-body no action happens
-      $(config.classes.content).on('click.ls', function(event) {
-        event.stopPropagation();
-      });
-    }
+    $(config.trigger).each(function(index, element) {
+      if (!$(element).hasClass(config.classes.alwaysOpened)) {
+        $(element).on('click.ck', function() {
+          groupCollapse($(this));
+          // get target
+          var target = $(this).data('target');
+          toggle(target);
+          // set aria's attributes
+          ariaCollapse($(this));
+        });
+        // if click on ck-collapse-body no action happens
+        $(config.classes.content).on('click.ck', function(event) {
+          event.stopPropagation();
+        });
+      };
+    });
   }
 
   // if have collapses in group "accordeon"

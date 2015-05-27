@@ -1,5 +1,5 @@
 <% quant.times do |num| %>
-  <div data-ls-module="collapse" data-target="#<%= id %><%= num %>" class="ls-collapse<% if defined?(startOpen) %> ls-collapse-open <% end %> <% if defined?(alwaysOpen) %> ls-collapse-open-always <% end %>">
+  <div data-ls-module="collapse" data-target="#<%= id %><%= num %>" class="ls-collapse<% if defined?(startOpen) %> ls-collapse-open <% end %> <% if defined?(alwaysOpen) %> ls-collapse-opened-always <% end %>">
     <a href="#" class="ls-collapse-header">
       <% if header.is_a? String %>
       <h3 class="ls-collapse-title"><%= header %> <%= num+1 %></h3>
