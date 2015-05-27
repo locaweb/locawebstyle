@@ -45,7 +45,7 @@ locastyle.collapse = (function() {
         $(config.classes.content).on('click.ck', function(event) {
           event.stopPropagation();
         });
-      };
+      }
     });
   }
 
