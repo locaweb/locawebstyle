@@ -23,7 +23,7 @@ locastyle.datepicker = (function() {
       i18n: {
         previousMonth : 'Anterior',
         nextMonth     : 'Próximo',
-        months        : ['Janeiro','Fevereiro','Março','Abril','Maio','Junnho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+        months        : ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
         weekdays      : ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
         weekdaysShort : ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb']
       }
