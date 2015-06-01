@@ -42,13 +42,12 @@ locastyle.modal = (function() {
     $(document).one('keyup.ls-esc', function (e) {
       if(e.keyCode === 27 && $('.ls-opened')){
         locastyle.modal.close();
-        console.log('close');
       }
     });
 
     $(config.close.classes + ", " + config.close.trigger).on('click.ls', function(e) {
       if (e.target !== e.currentTarget) {
-        return false;
+        return true;
       }
       locastyle.modal.close();
     });
