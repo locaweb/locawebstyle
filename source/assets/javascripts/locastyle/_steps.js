@@ -113,21 +113,33 @@ locastyle.steps = (function() {
 
   // Advances to the next step
   function nextStep() {
+    // TODO: when change the minor version we can remove this old event.
     var evt = jQuery.Event('NextStepEvent');
     $(document).trigger(evt);
-    if(!evt.isDefaultPrevented()) {
+
+    var beforeEvent = jQuery.Event('BeforeNextStep');
+    $(document).trigger(beforeEvent);
+
+    if(!evt.isDefaultPrevented() && !beforeEvent.isDefaultPrevented()) {
       var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
       changeStep($el);
+      $(document).trigger(jQuery.Event('AfterNextStep'));
     }
   }
 
   // Back to the previous step
   function prevStep() {
+    // TODO: when change the minor version we can remove this old event.
     var evt = jQuery.Event('PrevStepEvent');
     $(document).trigger(evt);
-    if(!evt.isDefaultPrevented()) {
+
+    var beforeEvent = jQuery.Event('BeforePrevStep');
+    $(document).trigger(beforeEvent);
+
+    if(!evt.isDefaultPrevented() && !beforeEvent.isDefaultPrevented()) {
       var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
       changeStep($el);
+      $(document).trigger(jQuery.Event('AfterPrevStep'));
     }
   }
 
