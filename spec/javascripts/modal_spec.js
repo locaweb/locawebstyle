@@ -16,6 +16,17 @@ describe("Modal: ", function() {
     });
   });
 
+  describe('When click submit button on modal', function() {
+    it('should submit the form when you press button', function() {
+      //$('#modalSubmitSample').trigger('submit');
+      //expect(window.location.hash).toEqual('#modal-no-action');
+
+      var spyEvent = spyOnEvent($('#modalSubmitSample'), 'submit');
+      $("#submitFormModalSample").trigger("click");
+      expect(spyEvent).toHaveBeenTriggered();
+    });
+  });
+
   describe('When click on data-dismiss on modal', function() {
     it('should remove class opened on .ls-modal', function() {
       locastyle.modal.close();
