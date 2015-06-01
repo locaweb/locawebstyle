@@ -45,7 +45,7 @@ locastyle.modal = (function() {
       }
     });
 
-    $(config.close.classes + ", " + config.close.trigger).one('click.ls', function(e) {
+    $(config.close.classes + ", " + config.close.trigger).on('click.ls', function(e) {
       if (e.target !== e.currentTarget) {
         return true;
       }
