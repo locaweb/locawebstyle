@@ -10,9 +10,25 @@ describe("Modal: ", function() {
   });
 
   describe('When click on element with data-ls-module="modal"', function() {
-    it('should add class ls-opened on .ls-modal', function() {
+    beforeEach(function() {
       $('[data-ls-module="modal"]').trigger("click");
+    });
+
+    it('should add class ls-opened on .ls-modal', function() {
       expect($("body .ls-modal")).toHaveClass('ls-opened');
+    });
+
+    describe('When modal is opened', function() {
+      it('tag body should have class .ls-overflow-hidden', function() {
+        expect($("body").hasClass('ls-overflow-hidden')).toEqual(true);
+      });
+    });
+
+    describe('When modal is closed', function() {
+      it('tag body not should have class .ls-overflow-hidden', function() {
+        locastyle.modal.close();
+        expect($("body").hasClass('ls-overflow-hidden')).toEqual(false);
+      });
     });
   });
 
@@ -72,26 +88,6 @@ describe("Modal: ", function() {
       expect($('.ls-modal').attr('aria-labelledby')).toEqual(titleID);
     });
 
-  });
-
-  describe('When click modal', function() {
-
-    beforeEach(function() {
-      $('#myModal').trigger("click");
-    });
-
-    describe('When modal is opened', function() {
-      it('tag body should have class .ls-overflow-hidden', function() {
-        expect($("body").hasClass('ls-overflow-hidden')).toEqual(true);
-      });
-    });
-
-    describe('When modal is closed', function() {
-      it('tag body not should have class .ls-overflow-hidden', function() {
-        locastyle.modal.close();
-        expect($("body").hasClass('ls-overflow-hidden')).toEqual(false);
-      });
-    });
   });
 
   describe("Unbind:", function() {
