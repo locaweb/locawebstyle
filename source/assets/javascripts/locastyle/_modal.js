@@ -15,7 +15,7 @@ locastyle.modal = (function() {
       dispatcherClosed: 'ls-modal-closed'
     },
     classes: {
-      open: 'ls-modal-open'
+      open: 'ls-overflow-hidden'
     },
     lsModal : 0
   };
