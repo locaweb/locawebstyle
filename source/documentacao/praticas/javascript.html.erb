@@ -279,7 +279,7 @@ if( idade >= 18 ){ ... }
 
 
   <h3 class="doc-title-5">Evite misturar tecnologias</h3>
-  <p>Na prática do dia a dia, algo bem simples: Estilize seu HTML com CSS, Não com JS.</p>
+  <p>Na prática do dia a dia, algo bem simples: estilize seu HTML com CSS, não com JS.</p>
   <% code("javascript") do %>
 // Errado
 $('#nome-usuario').css({
@@ -291,12 +291,15 @@ $('#nome-usuario').addClass('erro');
   <% end %>
   <p>Crie os estilos que precisar (e animações, quando possível) no CSS, e no javascript controle quando os estilos são aplicados, em vez de aplicar propriedades.</p>
 
+  <p>Outro ponto importante é seguir a jQuery. Eu sei que você vai querer escrever JavaScript puro em alguns momentos. Mas isso complica a leitura do código e sai totalmente do padrão inicial definido que é usar a abstração da jQuery. Por isso, use sempre os comandos da jQuery.</p>
+
   <h3 class="doc-title-5">Use sintaxe abreviada</h3>
   <p>Conheça as notações de variáveis e funções abreviadas e procure usá-las.</p>
   <p>Exemplo:</p>
   <% code("javascript") do %>
 // Use
 var cores = ['rosa', 'azul', 'verde'];
+
 // Em vez de
 var cores = new Array();
 cores[0]='rosa';
@@ -305,6 +308,7 @@ cores[2]='verde';
 
 // Use
 var margem = altura || 10;
+
 // Em vez de
 if(altura === undefined){
   var margem = altura;
@@ -314,6 +318,7 @@ if(altura === undefined){
 
 // Use
 var direcao = (x > 100) ? 1 : -1;
+
 // Em vez de
 var direcao;
 if(x > 100){
@@ -369,98 +374,6 @@ function carregaDados( elemento, url){
 }
 carregaDados('#botao1', 'ajax/lista-pessoas.html');
 carregaDados('#botao2', 'ajax/lista-empresas.html');
-  <% end %>
-
-  <h3 class="doc-title-5">Configurações e internacionalização</h3>
-  <p>Quando estiver criando a aplicação, pense em cada valor, texto, variável, se é o caso de deixá-la separada, permitindo alterá-la depois.</p>
-  <p>Exemplo:</p>
-  <% code("javascript") do %>
-// Em vez de
-$.ajax({
-  type   : "POST",
-  url    : "api/usuarios",
-  data   : { limite: 10 },
-  success: function( dados ){
-    $('#formulario').hide();
-    $('#mensagem').text( 'Busca efetuada com sucesso' );
-    $('#lista').html( dados ).fadeIn('fast');
-  },
-  error  : function(){
-    $('#mensagem').text( 'Erro na busca' );
-  }
-});
-
-// Faça
-var configuracoes: {
-  mensagens = {
-    successo : 'Busca efetuada com sucesso',
-    erro     : 'Erro na busca'
-  },
-  api: {
-    usuarios: "api/usuarios"
-  },
-  animacao: {
-    velocidade: "fast"
-  },
-  lista: {
-    porPagina: 10
-  }
-}
-//...
-$.ajax({
-  type   : "POST",
-  url    : configuracoes.api.usuarios,
-  data   : { limite: configuracoes.lista.porPagina} ,
-  success: function( dados ){
-    $('#formulario').hide();
-    $('#mensagem').text( configuracoes.mensagens.successo );
-    $('#lista').html( dados ).fadeIn( configuracoes.animacao.velocity );
-  },
-  error  : function(){
-    $('#mensagem').text( configuracoes.mensagens.erro );
-  }
-});
-  <% end %>
-
-
-  <h3 class="doc-title-5">Utilização correta de Eventos</h3>
-  <p>Ao escrever seu código e registrar comportamentos e eventos na interação do usuário é importante ter cuidado na escolha correta dos eventos.</p>
-  <p>Um caso comum de erro é vincular uma função no clique do botão enviar de um formulário, em vez de chamar a ação no submit do formulário:</p>
-  <% code("javascript") do %>
-// Errado
-// se o usuário submeter o form teclando ENTER a função não é executada
-$('#meuForm').delegate('#enviar', 'click', function(event){
-  if( $('#meuForm').isValid() ){
-    // ... ação
-  }
-});
-// correto
-// a ação é executada no clique ou no ENTER
-$('#meuForm').on('submit', function(event){
-  if( $('#meuForm').isValid() ){
-    // ... ação
-  }
-});
-  <% end %>
-
-  <p>Também é preciso saber o uso correto e diferenças entre os métodos, no caso do jQuery, sabendo os corretos para cada situação e os que estão em desuso.</p>
-  <% code("javascript") do %>
-// Os seguintes foram descontinuados
-.die()   .load()
-.error() .unload()
-.live()  .toggle()
-// os seguintes métodos podem ser evitados
-.mousedown()   .blur()     .rezise()   .keyup()     .keypress()
-.mousenter()   .change()   .hover()    .ready()     .focusin()
-.mouseleave()  .click()    .scroll()   .submit()    .mouseup()
-.mouseout()    .dblclick() .keydown()  .focusout()
-.mouseover()   .focus()    .select()
-// e devem ser substitídos por
-$('#elemento').on('blur', function(){ ... })
-$('#elementoPai').delegate('#elemento', 'blur', function(){ ...});
-// de prefrência o .delegate() que tem melhor performance
-// por fazer a seleção dentro de um escopo ( '#elementoPai' )
-$('#escopo').delegate('#elemento', 'click', function(){ ...});
   <% end %>
 
   <h3 class="doc-title-5">Evite muitos aninhamentos</h3>
@@ -541,16 +454,5 @@ $botaoEnviar.on( 'click', function(){
   });
 });
   <% end %>
-
-
-  <h3 class="doc-title-5">Adicione funcionalidades com javascript, não conteúdo</h3>
-  <p>Se sua aplicação precisa criar e inserir muito HTML, códigos estão cheios de 'divs', 'tds', etc, analise e repense sua aplicação, veja se não é o caso de usar algum sistema de templates ( handlebars... ). São códigos dificeis de manter, que podem ter problemas de desempenho. Caso precise, use templates separados do JS, ou carregue HTML do back-end com AJAX.</p>
-
-  <h3 class="doc-title-5">Não reinvente a roda</h3>
-  <p>Use bibliotecas e frameworks estáveis, que possuem estrutura conhecida.</p>
-  <p>Antes de inserir libraries e plugins, verifique a real necessidade, o suporte e compatibilidade.</p>
-
-  <h3 class="doc-title-5">Código de desenvolvimento não é código de produção</h3>
-  <p>Compacte, remova comentários, concatene os javascripts antes de mandar para produção. Existem diversas ferramentas para isso, inclusive online. Tenha uma versão de desenvolvimento, normal, comentada e uma para o site em produção.</p>
 
 </section>

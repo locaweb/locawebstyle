@@ -13,11 +13,22 @@ description: Iniciando seu desenvolvimento com Locaweb Style
 
   <a href="<%= base_url %>/documentacao/introducao/boilerplate" target="_blank" class="ls-btn-primary">Veja o código de Inicial</a>
 
+  <h2 class="doc-title-4">Baixando o boilerplate via NPM</h2>
+  <p>O <a href="http://emalherbi.com">Eduardo Malherbi</a> fez um <a href="https://www.npmjs.com/package/generator-locawebstyle">módulo para NPM que instala a última versão do LocaStyle</a> e também o HTML inicial, que serve como base para você começar seu projeto. Para instalar é simples:</p>
+
+  <% code("bash") do %>
+    npm install -g yo
+    npm install -g generator-locawebstyle
+    mkdir my-new-project
+    cd my-new-project
+    yo locawebstyle
+  <% end %>
+
   <br>
   <br>
   <hr>
 
-  <h2 class="doc-title-5">Use pelo nosso servidor</h2>
+  <h2 class="doc-title-5">Use os assets pelo nosso servidor</h2>
   <p>Nós disponibilizamos as versões do Locaweb Style em nosso servidor de alta disponibilidade para qualquer desenvolvedor. Basta usar os links abaixo em seu projeto. A única de depêndencia é a <strong><a href="http://jquery.com/">jQuery</a></strong>.</p>
 
   <% code("html") do %>
@@ -40,13 +51,13 @@ description: Iniciando seu desenvolvimento com Locaweb Style
 
   <p>Sempre que há uma atualização, esses assets são atualizados automaticamente.</p>
 
-  <h2 class="doc-title-5">Instale usando Bower</h2>
+  <h2 class="doc-title-5">Baixe os assets usando Bower</h2>
 
-  <p>Para instalar o locawebstyle utilizando o <%= link_to "Bower", "http://bower.io/", target: "_blank" %> é bem simples:</p>
+  <p>Para usar os assets do Locaweb Style pelo <%= link_to "Bower", "http://bower.io/", target: "_blank" %> é bem simples:</p>
 
   <% code("shell") do %>bower install locawebstyle<% end %>
 
-  <p>Após a instalação, basta chamar os arquivos baixados no diretório <code>bower_components</code>:</p>
+  <p>Após a instalação, basta chamar os arquivos do diretório <code>bower_components</code>:</p>
 
   <% code("html") do %>
   <link href="bower_components/locawebstyle/dist/stylesheets/locastyle.css" rel="stylesheet" type="text/css">
@@ -67,6 +78,7 @@ description: Iniciando seu desenvolvimento com Locaweb Style
   <link href="assets/components/locawebstyle/dist/stylesheets/locastyle.css" rel="stylesheet" type="text/css">
   <script src="assets/components/locawebstyle/dist/javascripts/locastyle.js"></script>
   <% end %>
+  <hr>
 
   <h2 class="doc-title-5">Download da versão mais atual</h2>
   <p>Se você quiser baixar os assets para usar localmente ou em projetos offline, basta clicar no botão abaixo e baixe a versão estável mais atual publicada.<br><br>
@@ -87,6 +99,7 @@ description: Iniciando seu desenvolvimento com Locaweb Style
       <a href="https://github.com/locaweb/locawebstyle/archive/master.zip" class="ls-btn">Baixar</a>
     </div>
   </div>
+  <hr>
 
   <h2 class="doc-title-3">A documentação</h2>
   <p>Nossa documentação vai ser o seu guia para aprender como funciona o Locaweb Style. Nós sempre nos esforçamos para que toda a implementação e o uso dos elementos seja tão fácil quanto um <strong>copy and paste</strong>. </p>
