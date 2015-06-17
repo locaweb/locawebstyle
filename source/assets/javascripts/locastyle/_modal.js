@@ -14,6 +14,9 @@ locastyle.modal = (function() {
       dispatcherClose: 'ls-modal-close',
       dispatcherClosed: 'ls-modal-closed'
     },
+    classes: {
+      open: 'ls-overflow-hidden'
+    },
     lsModal : 0
   };
 
@@ -54,22 +57,24 @@ locastyle.modal = (function() {
   }
 
   function open($element) {
+    $('body').addClass(config.classes.open);
     if (!$element.target) {
       var $template = $(locastyle.templates.modal($element));
       $('body').append($template);
       fadeIn($template);
-      
+
       $('.ls-modal-template').focus();
       bindClose();
     } else {
       fadeIn($($element.target));
     }
-    
+
     ariaModal($($element.target));
     modalBlocked($element.target);
   }
 
   function close() {
+    $('body').removeClass(config.classes.open);
     $('.ls-modal.ls-opened').attr('aria-hidden', true);
     fadeOut();
     locastyle.popover.destroyPopover();
@@ -91,15 +96,15 @@ locastyle.modal = (function() {
 
     $('.ls-modal.ls-opened').fadeOut({queue: false, duration: 500, complete: function(){
       $(this).removeClass('ls-opened');
-      
+
       if($(this).hasClass('ls-modal-template')) {
         $(this).remove();
       }
-      
+
       locastyle.eventDispatcher.trigger(config.close.dispatcherClosed);
     }});
   }
-  
+
   function modalBlocked($target) {
     $($target).each(function(i,e){
       if ($(e).data('modal-blocked') !== undefined) {
@@ -113,7 +118,7 @@ locastyle.modal = (function() {
   function ariaModal($modal) {
     var idModal = $modal.find('.ls-modal-title').attr('id') || 'lsModal' + config.lsModal++;
     $modal.find('.ls-modal-title').attr('id', idModal);
-    
+
     $modal.attr({
       role: 'dialog',
       'aria-hidden' : false,
