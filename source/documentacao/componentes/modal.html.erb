@@ -207,6 +207,15 @@ locastyle.modal.open({target: "#myAwesomeModal"});
   <p class="ls-alert-warning"><strong>Atenção:</strong> Se você for fechar sua modal depois de uma determinada ação, você precisa chamar <code>locastyle.modal.close()</code></p>
   <hr>
 
+  <h3 class="ls-title-4">Modal pequena</h3>
+  <p>Se precisar de uma modal menor, basta adicionar a classe <code>.ls-modal-small</code> no mesmo lugar do <code>.ls-modal-box</code>.</p>
+    <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/modal-small' %>
+  </div>
+  <% code("html") do %>
+<%= partial 'documentacao/shared/modal-small' %>
+  <% end %>
+
   <h3 class="ls-title-4">Dispatchers</h3>
   <% code("javascript") do %>
 locastyle.eventDispatcher.eventSubscribe('trigger', fn)
