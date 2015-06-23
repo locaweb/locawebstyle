@@ -94,4 +94,30 @@ type: component
     <%= partial 'documentacao/shared/abas-dropdown-nav' %>
   </div>
   <% code("html") do %><%= partial 'documentacao/shared/abas-dropdown-nav' %><% end %>
+
+  <h2 class="doc-title-3">Eventos</h2>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th width="200">Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>tab:clicked</th>
+        <td><p>Quando uma aba é clicada, o evento <code>tab:clicked</code> é disparado com dois argumentos: o primeiro argumento é o elemento que foi clicado. O segundo argumento é o target do conteúdo relacionado aquela aba.</p></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Exemplo: </p>
+  <% code("javascript") do %>
+function someFunction() {
+  $(document).on('tab:clicked', function(evt, arg1, arg2){
+    console.log(arg1, arg2);
+  })
+}
+  <%end%>
+
 </section>
