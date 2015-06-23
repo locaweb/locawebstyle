@@ -28,6 +28,9 @@ locastyle.tabs = (function() {
       if(isDropdownMode($(this).parents('.ls-tabs-nav'))){
         updateTriggerLink($(this).parents('.ls-tabs-nav'));
       }
+
+      // This event return two arguments: element clicked and content target.
+      $.event.trigger('tab:clicked', [$(this), $target]);
     });
   }
 
