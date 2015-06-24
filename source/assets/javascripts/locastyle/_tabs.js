@@ -20,20 +20,23 @@ locastyle.tabs = (function() {
 
   // bind click and call the necessary methods
   function bindClickOnTriggers() {
-    $("[data-ls-module=tabs]").on("click.ls", function(evt) {
+    $('[data-ls-module="tabs"]').on('click.ls', function(evt) {
       evt.preventDefault();
-      var $target = $($(this).attr("href") || $(this).data("target"));
+      var $target = $($(this).attr('href') || $(this).data('target'));
       deactivateTab(this, $target);
       activateTab(this, $target);
-      if(isDropdownMode($(this).parents(".ls-tabs-nav"))){
-        updateTriggerLink($(this).parents(".ls-tabs-nav"));
+      if(isDropdownMode($(this).parents('.ls-tabs-nav'))){
+        updateTriggerLink($(this).parents('.ls-tabs-nav'));
       }
+
+      // This event return two arguments: element clicked and content target.
+      $.event.trigger('tab:clicked', [$(this), $target]);
     });
   }
 
   // bind the breakpoint-updated event calls the checker when fired
   function bindBreakpointUpdateOnChecker() {
-    $(window).on("breakpoint-updated", function () {
+    $(window).on('breakpoint-updated', function () {
       locastyle.tabs.checkBreakpoint();
     });
   }
@@ -45,8 +48,8 @@ locastyle.tabs = (function() {
 
   // check the breakpoint and if the tab is already in droppdown mode
   function checkBreakpoint() {
-    if(locastyle.breakpointClass === "ls-window-sm" || locastyle.breakpointClass === "ls-window-xs"){
-      $(".ls-tabs-nav").each(function (index, value) {
+    if(locastyle.breakpointClass === 'ls-window-sm' || locastyle.breakpointClass === 'ls-window-xs'){
+      $('.ls-tabs-nav').each(function (index, value) {
         if(!isDropdownMode(value)){
           dropdownShape(value);
         }
@@ -57,13 +60,13 @@ locastyle.tabs = (function() {
   // update dropdown link with value of active tab
   function updateTriggerLink(tabNav) {
     // clean the current trigger
-    $(tabNav).parents(".ls-dropdown-tabs").find("> a").remove();
+    $(tabNav).parents('.ls-dropdown-tabs').find('> a').remove();
 
     // update with the new trigger
-    $(tabNav).parents(".ls-dropdown-tabs").prepend($(tabNav).find("li.ls-active").html());
+    $(tabNav).parents('.ls-dropdown-tabs').prepend($(tabNav).find('li.ls-active').html());
 
     // add style class on trigger
-    $(tabNav).parents(".ls-dropdown-tabs").find("> a").addClass("ls-btn");
+    $(tabNav).parents('.ls-dropdown-tabs').find('> a').addClass('ls-btn');
 
     // resets the dropdown module to catch the new trigger
     locastyle.dropdown.init();
@@ -78,29 +81,29 @@ locastyle.tabs = (function() {
     updateTriggerLink(tabNav);
 
     // adds class amending style links
-    $(tabNav).addClass("in-dropdown");
+    $(tabNav).addClass('in-dropdown');
 
     // adds class used by dropdown to the toggle
-    $(tabNav).addClass("ls-dropdown-nav");
+    $(tabNav).addClass('ls-dropdown-nav');
   }
 
   // activates the flap in accordance with the received arguments
   function activateTab(el, $target) {
-    $(el).parents("li").addClass("ls-active");
-    $target.addClass("ls-active");
+    $(el).parents('li').addClass('ls-active');
+    $target.addClass('ls-active');
     $(el).attr('aria-selected' , true);
   }
 
   // disable tab according to the received arguments
   function deactivateTab(el, $target) {
-    $(el).parents("li").siblings().removeClass("ls-active");
-    $target.siblings().removeClass("ls-active");
-    $(el).parents("li").siblings().find('a').attr('aria-selected' , false);
+    $(el).parents('li').siblings().removeClass('ls-active');
+    $target.siblings().removeClass('ls-active');
+    $(el).parents('li').siblings().find('a').attr('aria-selected' , false);
   }
 
   // remove binds added by the module itself
   function unbind() {
-    $("[data-ls-module=tabs]").off("click.ls");
+    $('[data-ls-module=tabs]').off('click.ls');
   }
 
   function ariaTabs() {

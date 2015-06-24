@@ -23,6 +23,12 @@ describe("Tabs: ", function() {
         expect(spyEvent).toHaveBeenPrevented();
       });
 
+      it("should triggered the event tab:clicked", function() {
+        var spyEvent = spyOnEvent(document, 'tab:clicked');
+        $("#tab-trigger-2").trigger("click");
+        expect(spyEvent).toHaveBeenTriggered();
+      });
+
       it("should activate the parent li", function() {
         var $parentLi = $("#tab-trigger-2").parents("li");
         $("#tab-trigger-2").trigger("click");
