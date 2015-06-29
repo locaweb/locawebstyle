@@ -169,21 +169,56 @@
       &.ls-active:not([data-ls-module="tabs"])
         background-color: darken($color1, 10%)
 
-    .ls-btn-primary
+        
 
+      &.ls-btn-danger
+        &.ls-disabled,
+        &[disabled]
+          background: mix($color-mix, #fff, 10%)
+          border-color: mix($color-mix, #fff, 20%)
+          color: mix(#fff, $color-danger, 20%)
+
+          &:focus,
+          &:hover
+            color: mix(#fff, $color-danger, 20%)
+
+      &.ls-btn-dark
+        &.ls-disabled,
+        &[disabled]
+          background: mix($color-mix, #fff, 25%)
+          border-color: mix($color-mix, #fff, 35%)
+
+    .ls-btn
+      &.ls-disabled,
+      &[disabled]
+        background: mix($color-mix, #fff, 10%)
+        border-color: mix($color-mix, #fff, 20%)
+        color: mix($color-mix, #fff, 50%)
+
+    .ls-btn-primary
       background-color: mix($color-mix, $color1, 20%)
       border-color: mix($color-mix, $color1, 30%)
 
       &:hover:not([disabled="disabled"]),
+      &:hover:not('.ls-disabled'),
       &:focus:not([disabled="disabled"]),
+      &:focus:not('.ls-disabled'),
       &:active:not([disabled="disabled"]),
-      &.ls-active:not([disabled="disabled"])
+      &:active:not('.ls-disabled'),
+      &.ls-active:not([disabled="disabled"]),
+      &.ls-active:not('.ls-disabled')
         background: mix($color-mix, $color1, 40%)
         border-color: mix($color-mix, $color1, 50%)
 
-      &.ls-disabled:hover,
-      &.ls-disabled:focus
-        background-color: $color1
+      &.ls-disabled,
+      &[disabled]
+        background-color: mix(#fff, $color1, 40%)
+        border-color: mix(#fff, $color1, 50%)
+
+        &:hover,
+        &:focus
+          background-color: mix(#fff, $color1, 50%)
+          border-color: mix(#fff, $color1, 60%)
 
     .ls-tabs-button-nav .ls-active
       [class*="ls-btn"]
