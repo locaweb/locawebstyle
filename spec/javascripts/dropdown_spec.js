@@ -106,7 +106,7 @@ describe("Dropdown: ", function() {
     });
 
     it("When click the button should has attr aria-expanded with value true", function() {
-      $('.ls-dropdown').find('.ls-btn-primary').trigger('click');
+      $('#dropdown-test-6.ls-dropdown').find('.ls-btn-primary').trigger('click');
       expect($('#dropdown-test-6 > .ls-btn-primary').attr('aria-expanded')).toEqual('true');
     });
 
