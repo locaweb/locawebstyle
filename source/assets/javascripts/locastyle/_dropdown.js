@@ -68,13 +68,10 @@ locastyle.dropdown = (function() {
       $(config.nav).find('a').attr({ role : 'option' });
       $(config.button).attr({ role : 'combobox' });
 
-        console.log($(this))
       if($(this).hasClass('ls-active')){
-        console.log("estava ativado")
         $(config.button, $(this)).attr({ 'aria-expanded' : 'true' });
         $(config.nav, $(this)).attr({ 'aria-hidden' : 'false' });
       } else {
-        console.log("estava desativado")
         $(config.button, $(this)).attr({ 'aria-expanded' : 'false' });
         $(config.nav, $(this)).attr({ 'aria-hidden' : 'true' });
       }
