@@ -46,6 +46,15 @@ locastyle.dropdown = (function() {
       $target.toggleClass("ls-active");
       ariaDropdown($target);
       locastyle.topbarCurtain.hideCurtains();
+      eventsHandler($target);
+    }
+  }
+
+  function eventsHandler(el) {
+    if($(el).hasClass("ls-active")) {
+      $(el).trigger('dropdown:opened');
+    } else {
+      $(el).trigger('dropdown:closed');
     }
   }
 

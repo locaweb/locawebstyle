@@ -17,6 +17,12 @@ describe("Dropdown: ", function() {
           $("#dropdown-test > a:first-child").trigger("click");
           expect($("#dropdown-test").hasClass("ls-active")).toEqual(true);
         });
+
+        it("should trigger the event dropdown:opened", function() {
+          var spyEvent = spyOnEvent("#dropdown-test-7", 'dropdown:opened');
+          $("#dropdown-test-7 > a").trigger("click");
+          expect('dropdown:opened').toHaveBeenTriggeredOn("#dropdown-test-7");
+        });
       });
 
       describe("And dropdown is opened", function() {
@@ -28,6 +34,12 @@ describe("Dropdown: ", function() {
         it("should close any opened dropdown", function() {
           $("#dropdown-test-4 #dropdown-default > a:first-child").trigger("click");
           expect($("#dropdown-test-4 #dropdown-active").hasClass("ls-active")).toEqual(false);
+        });
+
+        it("should trigger the event dropdown:opened", function() {
+          var spyEvent = spyOnEvent(document, 'dropdown:closed');
+          $("#dropdown-test-8 > a").trigger("click");
+          expect('dropdown:closed').toHaveBeenTriggeredOn(document)
         });
       });
     });
