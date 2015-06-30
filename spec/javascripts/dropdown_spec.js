@@ -6,18 +6,6 @@ describe("Dropdown: ", function() {
 
   describe("Dropdown toggle", function() {
     describe('when click on a dropdown trigger', function() {
-      it("should activate a disabled related dropdown module", function() {
-        // Added as pending because the tests broke while I was testing other functionality
-        $("#dropdown-test > a:first-child").trigger("click");
-        expect($("#dropdown-test").hasClass("ls-active")).toEqual(true);
-      });
-
-      it("should disable an active related dropdown module", function() {
-        // Added as pending because the tests broke while I was testing other functionality
-        $("#dropdown-test-2 > a:first-child").trigger("click");
-        expect($("#dropdown-test-2").hasClass("ls-active")).toEqual(false);
-      });
-
       it("should prevent default event on dropdown module", function() {
         // Added as pending because the tests broke while I was testing other functionality
         var spyEvent = spyOnEvent('#dropdown-test > a:first-child', 'click');
@@ -25,12 +13,27 @@ describe("Dropdown: ", function() {
         expect(spyEvent).toHaveBeenPrevented();
       });
 
-      it("should close any opened dropdown", function() {
-        // Added as pending because the tests broke while I was testing other functionality
-        $("#dropdown-test-4 #dropdown-default > a:first-child").trigger("click");
-        expect($("#dropdown-test-4 #dropdown-active").hasClass("ls-active")).toEqual(false);
+      describe('And dropdown is closed', function() {
+        it("should activate a disabled related dropdown module", function() {
+          // Added as pending because the tests broke while I was testing other functionality
+          $("#dropdown-test > a:first-child").trigger("click");
+          expect($("#dropdown-test").hasClass("ls-active")).toEqual(true);
+        });
       });
 
+      describe("And dropdown is opened", function() {
+        it("should disable an active related dropdown module", function() {
+          // Added as pending because the tests broke while I was testing other functionality
+          $("#dropdown-test-2 > a:first-child").trigger("click");
+          expect($("#dropdown-test-2").hasClass("ls-active")).toEqual(false);
+        });
+
+        it("should close any opened dropdown", function() {
+          // Added as pending because the tests broke while I was testing other functionality
+          $("#dropdown-test-4 #dropdown-default > a:first-child").trigger("click");
+          expect($("#dropdown-test-4 #dropdown-active").hasClass("ls-active")).toEqual(false);
+        });
+      });
     });
 
     describe("When click outside dropdown click", function() {
@@ -103,7 +106,7 @@ describe("Dropdown: ", function() {
     });
 
     it("When click the button should has attr aria-expanded with value true", function() {
-      $('.ls-dropdown').find('.ls-btn-primary').trigger('click');
+      $('#dropdown-test-6.ls-dropdown').find('.ls-btn-primary').trigger('click');
       expect($('#dropdown-test-6 > .ls-btn-primary').attr('aria-expanded')).toEqual('true');
     });
 
