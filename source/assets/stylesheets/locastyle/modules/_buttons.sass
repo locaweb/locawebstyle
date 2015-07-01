@@ -1,7 +1,7 @@
 // Style base button
 [class*="ls-btn"]
   +single-transition(all, .2s)
-  @extend .ls-cursor-pointer
+  cursor: pointer
   border: 1px solid mix($color-mix, #fff, 30%)
   padding: 6px 11px 7px
   border-radius: $default-radius
@@ -36,9 +36,7 @@
   // Disabled Buttons
   &.ls-disabled,
   &[disabled]
-    opacity: .6
     cursor: default
-    pointer-events: none
 
   &:empty:after
     @extend .ls-no-margin-left

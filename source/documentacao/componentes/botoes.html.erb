@@ -53,12 +53,16 @@ type: component
   <p>Para desabilitar um botão, basta inserir o atributo <code>[disabled]</code> que os browsers cuidarão do resto. Também funciona se você inserir a classe <code>.ls-disabled</code></p>
 
   <div class="ls-box-demo">
-    <a href="#" class="ls-btn-primary" disabled="disabled">Link desativado</a>
-    <button class="ls-btn-primary ls-disabled">Botão Desativado</button>
+    <a href="#" class="ls-btn-primary" disabled="disabled">Primary</a>
+    <input type="button" value="Default" disabled class="ls-btn">
+    <button class="ls-btn-dark ls-disabled">Dark</button>
+    <button class="ls-btn-danger ls-disabled">Danger</button>
   </div>
   <% code("html") do %>
-<a href="#" class="ls-btn-primary" disabled="disabled">Link desativado</a>
-<button class="ls-btn-primary ls-disabled">Button Desativado</button>
+<a href="#" class="ls-btn-primary" disabled="disabled">Primary</a>
+<input type="button" value="Default" disabled class="ls-btn">
+<button class="ls-btn-dark ls-disabled">Dark</button>
+<button class="ls-btn-danger ls-disabled">Danger</button>
   <% end %>
 
   <h2 class="doc-title-3">Botões com ícones</h2>
