@@ -11,6 +11,7 @@ locastyle.popover = (function() {
     placement    : 'top',
     trigger      : 'click.ls.popover',
     popoverClass : 'ls-popover',
+    activeClass  : 'ls-active',
     uniqueId     : 0
   };
 
@@ -81,11 +82,11 @@ locastyle.popover = (function() {
           elementData.position = $(this).offset() ;
           setPositionData(elementData, width, height);
           updateElementPosition($popover, elementData);
-          $popover.stop().show();
+          open($popover);
         },
         mouseleave: function (event) {
           event.preventDefault();
-          $popover.stop().hide();
+          close($popover);
         }
       });
     } else {
@@ -96,16 +97,28 @@ locastyle.popover = (function() {
           elementData.position = $(this).offset() ;
           setPositionData(elementData, width, height);
           updateElementPosition($popover, elementData);
-          $popover.stop().toggle();
+          if($popover.hasClass("ls-active")) {
+            close($popover);
+          } else {
+            open($popover);
+          }
         }
       });
       $(document).on('click', function(event) {
         var element = event.toElement;
         if(!$(element).parents().hasClass( config.popoverClass )){
-         $('.' + config.popoverClass).hide();
+          close($('.' + config.popoverClass));
         }
       });
     }
+  }
+
+  function open($popover) {
+    $popover.addClass(config.activeClass).show();
+  }
+
+  function close($popover) {
+    $popover.stop().removeClass(config.activeClass).hide();
   }
 
   function destroy() {
