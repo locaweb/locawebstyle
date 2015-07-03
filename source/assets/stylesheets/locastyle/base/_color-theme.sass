@@ -442,3 +442,8 @@
 
 @each $theme-name, $colors in $themes-colors
   @include theme-color($theme-name, $colors)
+
+
+/** Make gray the theme color if nothing are set **/
+html
+  @extend .ls-theme-gray
