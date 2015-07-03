@@ -26,12 +26,26 @@ describe('Popover: ', function() {
       expect($('.ls-popover').eq(0).css('display')).toEqual("block");
     });
 
+    it('Should add ls-active class on opened popover', function() {
+      $('.ls-popover').hide();
+      $('#popoverclick').trigger("click");
+      expect($('.ls-popover').eq(0).hasClass('ls-active')).toEqual(true);
+    });
+
     it('Should show and close .ls-popover on repeated click events', function() {
       $('.ls-popover').hide();
       $('#popoverclick').trigger('click');
       $('#popoverclick').trigger('click');
       expect($('.ls-popover').eq(0).css('display')).toEqual("none");
     });
+
+    it('Should remove ls-active class on closed popover', function() {
+      $('.ls-popover').hide();
+      $('#popoverclick').trigger('click');
+      $('#popoverclick').trigger("click");
+      expect($('.ls-popover').eq(0).hasClass('ls-active')).toEqual(false);
+    });
+
 
     it('Should show a popover on hover event', function() {
       $('.ls-popover').hide();
