@@ -1,8 +1,6 @@
 Dir.glob('scripts/tasks/*.rake').each { |r| import r }
 
-####
 # jasmine
-####
 begin
   require 'jasmine'
   load 'jasmine/tasks/jasmine.rake'
@@ -12,13 +10,9 @@ rescue LoadError
   end
 end
 
-####
-# jshint
-####
-require "jshintrb/jshinttask"
-Jshintrb::JshintTask.new :jshint do |t|
-  t.pattern = 'source/assets/javascripts/locastyle/**/*.js'
-  t.options = :jshintrc
-end
-
+# publisher
 require 'middleman-gh-pages'
+
+# jshint
+require 'jshint/tasks'
+JSHint.config_path = "spec/config_jslint.yml"
