@@ -23,8 +23,10 @@ var locastyle = (function() {
   function loadModules() {
     var modules = getModules();
     for (var i in modules) {
-      locastyle[modules[i]].init();
-      console.info("Locastyle: module [" + modules[i] + "] successfully initialized.");
+      if (modules.hasOwnProperty(i)) {
+        locastyle[modules[i]].init();
+        console.info("Locastyle: module [" + modules[i] + "] successfully initialized.");
+      }
     }
   }
 
