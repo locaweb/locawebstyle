@@ -29,8 +29,6 @@ locastyle.dropdown = (function() {
       evt.preventDefault();
       var $target = $($(this).parents(config.module));
       locastyle.dropdown.toggleDropdown($target);
-      ariaDropdown($target);
-      locastyle.dropdown.closeDropdown($target);
       setPositionVisible($target);
       evt.stopPropagation();
     });
@@ -44,10 +42,19 @@ locastyle.dropdown = (function() {
 
   function toggleDropdown($target) {
     if(!$target.find(config.button).first().hasClass('ls-disabled')){
+      closeDropdown($target);
       $target.toggleClass("ls-active");
-      $(config.button).attr({ 'aria-expanded' : 'false' });
-      $(config.nav).attr({ 'aria-hidden' : 'true' });
+      ariaDropdown($target);
       locastyle.topbarCurtain.hideCurtains();
+      eventsHandler($target);
+    }
+  }
+
+  function eventsHandler(el) {
+    if($(el).hasClass("ls-active")) {
+      $(el).trigger('dropdown:opened');
+    } else {
+      $(el).trigger('dropdown:closed');
     }
   }
 
@@ -63,16 +70,21 @@ locastyle.dropdown = (function() {
   }
 
   function ariaDropdown(el) {
-    $(config.nav, el).find('a').attr({ role : 'option' });
-    $(config.button, el).attr({ role : 'combobox' });
+    $(config.button).attr({ 'aria-expanded' : 'false' });
+    $(config.nav).attr({ 'aria-hidden' : 'true' });
 
-    if($(el).hasClass('ls-active')){
-      $(config.button, el).attr({ 'aria-expanded' : 'true' });
-      $(config.nav, el).attr({ 'aria-hidden' : 'false' });
-    } else {
-      $(config.button, el).attr({ 'aria-expanded' : 'false' });
-      $(config.nav, el).attr({ 'aria-hidden' : 'true' });
-    }
+    $(el).each(function() {
+      $(config.nav).find('a').attr({ role : 'option' });
+      $(config.button).attr({ role : 'combobox' });
+
+      if($(this).hasClass('ls-active')){
+        $(config.button, $(this)).attr({ 'aria-expanded' : 'true' });
+        $(config.nav, $(this)).attr({ 'aria-hidden' : 'false' });
+      } else {
+        $(config.button, $(this)).attr({ 'aria-expanded' : 'false' });
+        $(config.nav, $(this)).attr({ 'aria-hidden' : 'true' });
+      }
+    });
   }
 
   return {

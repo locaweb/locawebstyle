@@ -433,4 +433,37 @@ type: component
     </table>
   </div>
 
+  <h2 class="doc-title-3">Eventos</h2>
+  <p>Você pode escutar eventos de abre e fecha nos elementos de dropdown, veja a referência abaixo.</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th width="200">Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>dropdown:opened</th>
+        <td><p>Quando um dropdown abre, o evento <code>dropdown:opened</code> é disparado no elemento do módulo. Veja exemplo abaixo.</p></td>
+      </tr>
+      <tr>
+        <th>dropdown:closed</th>
+        <td><p>Quando um dropdown fecha, o evento <code>dropdown:closed</code> é disparado no elemento do módulo. Veja exemplo abaixo.</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Exemplo: </p>
+  <% code("javascript") do %>
+// Um dropdown específico
+$("#id-do-dropdown").on('dropdown:opened', function(){
+  // do something
+})
+
+// Todos os elementos de dropdown
+$(".ls-dropdown").on('dropdown:closed', function(){
+  // do something
+})
+  <%end%>
+
 </section>
