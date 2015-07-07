@@ -21,35 +21,43 @@ describe('Popover: ', function() {
   describe('Popover behavior', function() {
 
     it('Should show a popover on click event', function() {
-      pending();
       $('.ls-popover').hide();
       $('#popoverclick').trigger("click");
-      expect($('#ls-popover-2').css("display")).toEqual("block");
+      expect($('.ls-popover').eq(0).css('display')).toEqual("block");
     });
 
-    it('Should s.ls-popoverhow and close a popover on repeated click events', function() {
-      pending();
+    it('Should add ls-active class on opened popover', function() {
+      $('.ls-popover').hide();
+      $('#popoverclick').trigger("click");
+      expect($('.ls-popover').eq(0).hasClass('ls-active')).toEqual(true);
+    });
+
+    it('Should show and close .ls-popover on repeated click events', function() {
       $('.ls-popover').hide();
       $('#popoverclick').trigger('click');
       $('#popoverclick').trigger('click');
-      expect($("#ls-popover-4").css('display')).toEqual('none');
+      expect($('.ls-popover').eq(0).css('display')).toEqual("none");
     });
+
+    it('Should remove ls-active class on closed popover', function() {
+      $('.ls-popover').hide();
+      $('#popoverclick').trigger('click');
+      $('#popoverclick').trigger("click");
+      expect($('.ls-popover').eq(0).hasClass('ls-active')).toEqual(false);
+    });
+
 
     it('Should show a popover on hover event', function() {
-      pending();
       $('.ls-popover').hide();
       $('#popoverhover').trigger('mouseenter');
-      expect($('#ls-popover-7').css("display")).toEqual("block");
+      expect($('.ls-popover').eq(1).css('display')).toEqual("block");
     });
 
-    it('Should show and close a popover on repeated hover events', function() {
-      pending();
-      var $popoverTrigger = $('#popoverhover');
-      var $popover = $('.ls-popover');
-      $popover.hide();
-      $popoverTrigger.trigger('mouseenter');
-      $popoverTrigger.trigger('mouseleave');
-      expect( $popover.eq(2).css('display')  ).toEqual('none');
+    it('Should close a popover on mouseleave event', function() {
+      $('.ls-popover').hide();
+      $('#popoverhover').trigger('mouseenter');
+      $('#popoverhover').trigger('mouseleave');
+      expect($('.ls-popover').eq(1).css('display')).toEqual("none");
     });
 
   });
