@@ -46,7 +46,7 @@ sub:      false     # true if subscript notation may be used for expressions bet
 
 # other options
 
-maxlen:   160       # Maximum line length
+maxlen:   260       # Maximum line length
 indent:   2         # Number of spaces that should be used for indentation - used only if 'white' option is set
 maxerr:   50        # The maximum number of warnings reported (per file)
 passfail: false     # true if the scan should stop on first error (per file)
