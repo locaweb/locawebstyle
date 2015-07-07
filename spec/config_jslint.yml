@@ -32,7 +32,7 @@ undef:    false      # true if variables must be declared before used
 white:    false     # true if strict whitespace rules apply (see also 'indent' option)
 
 # "allow" type options (false means potentially more warnings)
-
+shadow:   true
 cap:      false     # true if upper case HTML should be allowed
 css:      false     # true if CSS workarounds should be tolerated
 debug:    false     # true if debugger statements should be allowed (set to false before going into production)
