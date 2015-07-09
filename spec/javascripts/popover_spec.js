@@ -40,6 +40,14 @@ describe('Popover: ', function() {
       expect($('.ls-popover').eq(0).css('display')).toEqual("none");
     });
 
+    it("Should trigger the event dropdown:opened when it opens by click", function() {
+      var id = $('.ls-popover').eq(0).attr("id");
+      var popoverToOpen = "#" + id;
+      var spyEvent = spyOnEvent(popoverToOpen, 'popover:opened');
+      $("#popoverclick").trigger("click");
+      expect('popover:opened').toHaveBeenTriggeredOn(popoverToOpen);
+    });
+
     it('Should remove ls-active class on closed popover', function() {
       $('.ls-popover').hide();
       $('#popoverclick').trigger('click');
@@ -47,11 +55,27 @@ describe('Popover: ', function() {
       expect($('.ls-popover').eq(0).hasClass('ls-active')).toEqual(false);
     });
 
+    it("Should trigger the event dropdown:closed when it closes by click", function() {
+      var id = $('.ls-popover').eq(0).attr("id");
+      var popoverToClose = "#" + id;
+      var spyEvent = spyOnEvent(popoverToClose, 'popover:closed');
+      $("#popoverclick").trigger("click");
+      $("#popoverclick").trigger("click");
+      expect('popover:closed').toHaveBeenTriggeredOn(popoverToClose);
+    });
 
     it('Should show a popover on hover event', function() {
       $('.ls-popover').hide();
       $('#popoverhover').trigger('mouseenter');
       expect($('.ls-popover').eq(1).css('display')).toEqual("block");
+    });
+
+    it("Should trigger the event dropdown:opened when it opens by mouseenter", function() {
+      var id = $('.ls-popover').eq(1).attr("id");
+      var popoverToOpen = "#" + id;
+      var spyEvent = spyOnEvent(popoverToOpen, 'popover:opened');
+      $('#popoverhover').trigger('mouseenter');
+      expect('popover:opened').toHaveBeenTriggeredOn(popoverToOpen);
     });
 
     it('Should close a popover on mouseleave event', function() {
@@ -60,6 +84,16 @@ describe('Popover: ', function() {
       $('#popoverhover').trigger('mouseleave');
       expect($('.ls-popover').eq(1).css('display')).toEqual("none");
     });
+
+    it("Should trigger the event dropdown:closed when it closes by mouseout", function() {
+      var id = $('.ls-popover').eq(1).attr("id");
+      var popoverToClose = "#" + id;
+      var spyEvent = spyOnEvent(popoverToClose, 'popover:closed');
+      $('#popoverhover').trigger('mouseenter');
+      $('#popoverhover').trigger('mouseleave');
+      expect('popover:closed').toHaveBeenTriggeredOn(popoverToClose);
+    });
+
 
   });
 

@@ -115,10 +115,12 @@ locastyle.popover = (function() {
 
   function open($popover) {
     $popover.addClass(config.activeClass).show();
+    $popover.trigger('popover:opened');
   }
 
   function close($popover) {
     $popover.stop().removeClass(config.activeClass).hide();
+    $popover.trigger('popover:closed');
   }
 
   function destroy() {
