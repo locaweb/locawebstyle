@@ -24,14 +24,14 @@ locastyle.modal = (function() {
     bindOpen();
   }
 
-  function unbind() {
-    $(config.open.trigger).off('click.ls');
-    unbindClose();
-  }
-
   function unbindClose() {
     $(document).off('keyup.ls-esc');
     $(config.close.classes + ", " + config.close.trigger).off('click.ls');
+  }
+
+  function unbind() {
+    $(config.open.trigger).off('click.ls');
+    unbindClose();
   }
 
   function bindOpen() {
