@@ -1,6 +1,7 @@
 describe('Popover: ', function() {
   beforeEach(function() {
     loadFixtures('popover_fixture.html');
+    locastyle.breakpointClass = "ls-window-lg";
     locastyle.popover.init();
   });
 
