@@ -92,4 +92,40 @@ type: component
     <a href="#" class="ls-word-dotted" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a>
   </div>
   <% code("html") do %><a href="#" class="ls-word-dotted" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a><% end %>
+
+
+  <h2 class="doc-title-3">Eventos</h2>
+  <p>Você pode escutar eventos de abre e fecha nos elementos de popover, isto é bom porque estes elementos são criados pelo próprio módulo e normalmente não sabemos identificá-los, com os eventos basta procurar pelo elemento onde foi disparado o evento e pronto.</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th width="200">Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>popover:opened</th>
+        <td><p>Quando um popover abre, o evento <code>popover:opened</code> é disparado no elemento do popover, aquele que recebe a classe <code>ls-popover</code>. Veja exemplo abaixo.</p></td>
+      </tr>
+      <tr>
+        <th>popover:closed</th>
+        <td><p>Quando um popover fecha, o evento <code>popover:closed</code> é disparado no elemento do popover, aquele que recebe a classe <code>ls-popover</code>. Veja exemplo abaixo.</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Exemplo: </p>
+<% code("javascript") do %>
+// Um popover específico, caso você saiba o ID
+// (os IDs dos popovers são atribuidos pelo próprio módulo)
+$("#id-do-popover").on('popover:opened', function(){
+  // do something
+})
+
+// Todos os elementos de popover
+$(".ls-popover").on('popover:closed', function(){
+  // do something
+})
+<%end%>
+
 </section>
