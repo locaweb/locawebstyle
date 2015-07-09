@@ -12,7 +12,7 @@ gem 'eco'
 gem 'compass', '~> 1.0.0.alpha.19'
 gem 'sass', '~> 3.3.9'
 
-gem 'jasmine', '~> 2.2.0'
+gem 'jasmine', '~> 2.3.0'
 gem 'jshintrb', '~> 0.3.0'
 
 gem 'therubyracer' # faster JS compiles
