@@ -19,7 +19,7 @@ locastyle.browserDetect = (function() {
   }
 
   function browserVersion() {
-    return parseInt((userAgent.match(/.+(?:firefox|phantomjs|msie|chrome|version|rv)[\/: ]([\d.]+)/) || [0, 0])[1].split('.')[0] );
+    return parseInt((userAgent.match(/.+(?:firefox|phantomjs|msie|chrome|version|rv)[\/: ]([\d.]+)/) || [0, 0])[1].split('.')[0], 10);
   }
 
   function browserClass() {

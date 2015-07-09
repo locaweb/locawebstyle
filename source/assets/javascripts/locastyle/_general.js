@@ -129,7 +129,7 @@ locastyle.general = (function() {
   }
 
   return {
-    init: init,
+    init: init
   };
 
 }());

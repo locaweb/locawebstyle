@@ -4,7 +4,6 @@ rvm:
 
 branches:
   only:
-    - wip
     - master
 
 before_script:
@@ -13,5 +12,4 @@ before_script:
   - sleep 3
 
 script:
-  - bundle exec rake jshint
-  - bundle exec rake jasmine:ci
+  - bundle exec rake tests:run
