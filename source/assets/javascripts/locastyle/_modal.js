@@ -58,20 +58,28 @@ locastyle.modal = (function() {
     });
   }
 
+  function show($target, $this) {
+  }
+
   function open($this) {
-    var $element = $this.data();
+    var $element = $this.data(),
+        $target = null;
     
     $('body').addClass(config.classes.open);
 
     if (!$element.target) {
-      var $template = $(locastyle.templates.modal($element));
-      $('body').append($template);
-      show($template, $this);
+      $target = $(locastyle.templates.modal($element));
+      $('body').append($target);
       $('.ls-modal-template').focus();
       bindClose();
     } else {
-      show($($element.target), $this);
+      $target = $($element.target);
     }
+    
+    $target.addClass('ls-opened');
+
+    // This event return two arguments: element clicked and target.
+    $.event.trigger(config.open.triggerOpened, [$this, $target]);
 
     ariaModal($($element.target));
     modalBlocked($element.target);
@@ -96,13 +104,6 @@ locastyle.modal = (function() {
 
     // This event return one argument: element target.
     $.event.trigger(config.close.triggerClosed, [$this]);
-  }
-
-  function show($target, $this) {
-    $target.addClass('ls-opened');
-
-    // This event return two arguments: element clicked and target.
-    $.event.trigger(config.open.triggerOpened, [$this, $target]);
   }
 
   function modalBlocked($target) {
