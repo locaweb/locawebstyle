@@ -5,14 +5,13 @@ locastyle.modal = (function() {
   var config = {
     open: {
       trigger: '[data-ls-module="modal"]',
-      dispatcherOpen: 'ls-modal-open',
-      dispatcherOpened: 'ls-modal-opened'
+      triggerOpen: 'modal:open',
+      triggerOpened: 'modal:opened'
     },
     close: {
       classes: '.ls-modal',
       trigger: '[data-dismiss="modal"]',
-      dispatcherClose: 'ls-modal-close',
-      dispatcherClosed: 'ls-modal-closed'
+      triggerClosed: 'modal:closed'
     },
     classes: {
       open: 'ls-overflow-hidden'
@@ -27,13 +26,17 @@ locastyle.modal = (function() {
 
   function unbind() {
     $(config.open.trigger).off('click.ls');
+    unbindClose();
+  }
+
+  function unbindClose() {
     $(document).off('keyup.ls-esc');
     $(config.close.classes + ", " + config.close.trigger).off('click.ls');
   }
 
   function bindOpen() {
     $(config.open.trigger).on('click.ls', function() {
-      locastyle.modal.open($(this).data());
+      locastyle.modal.open($(this));
     });
 
     if ($('.ls-opened').length > 0) {
@@ -56,17 +59,19 @@ locastyle.modal = (function() {
     });
   }
 
-  function open($element) {
+  function open($this) {
+    var $element = $this.data();
+    
     $('body').addClass(config.classes.open);
+
     if (!$element.target) {
       var $template = $(locastyle.templates.modal($element));
       $('body').append($template);
-      fadeIn($template);
-
+      fadeIn($template, $this);
       $('.ls-modal-template').focus();
       bindClose();
     } else {
-      fadeIn($($element.target));
+      fadeIn($($element.target), $this);
     }
 
     ariaModal($($element.target));
@@ -77,31 +82,31 @@ locastyle.modal = (function() {
     $('body').removeClass(config.classes.open);
     $('.ls-modal.ls-opened').attr('aria-hidden', true);
     fadeOut();
-    locastyle.popover.destroyPopover();
-    locastyle.popover.init();
+    unbindClose();
+
+    locastyle.popover.destroyPopover(); //add trigger on popover
+    locastyle.popover.init(); ///add trigger on popover
   }
 
-  function fadeIn($target) {
-    locastyle.eventDispatcher.trigger(config.open.dispatcherOpen);
+  function fadeIn($target, $this) {
+    $.event.trigger(config.open.triggerOpen, [$this, $target]);
 
     $target.fadeIn({queue: false, duration: 500, complete: function(){
       $(this).addClass('ls-opened');
 
-      locastyle.eventDispatcher.trigger(config.open.dispatcherOpened);
+      $.event.trigger(config.open.triggerOpened, [$this, $(this)]);
     }});
   }
 
   function fadeOut() {
-    locastyle.eventDispatcher.trigger(config.close.dispatcherClose);
-
     $('.ls-modal.ls-opened').fadeOut({queue: false, duration: 500, complete: function(){
+      $.event.trigger(config.close.triggerClosed, [$(this)]);
+
       $(this).removeClass('ls-opened');
 
       if($(this).hasClass('ls-modal-template')) {
         $(this).remove();
       }
-
-      locastyle.eventDispatcher.trigger(config.close.dispatcherClosed);
     }});
   }
 
