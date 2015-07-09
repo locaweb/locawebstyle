@@ -5,7 +5,6 @@ locastyle.modal = (function() {
   var config = {
     open: {
       trigger: '[data-ls-module="modal"]',
-      triggerOpen: 'modal:open',
       triggerOpened: 'modal:opened'
     },
     close: {
@@ -67,11 +66,11 @@ locastyle.modal = (function() {
     if (!$element.target) {
       var $template = $(locastyle.templates.modal($element));
       $('body').append($template);
-      fadeIn($template, $this);
+      show($template, $this);
       $('.ls-modal-template').focus();
       bindClose();
     } else {
-      fadeIn($($element.target), $this);
+      show($($element.target), $this);
     }
 
     ariaModal($($element.target));
@@ -79,35 +78,31 @@ locastyle.modal = (function() {
   }
 
   function close() {
+    var $this = $('.ls-modal.ls-opened');
+
     $('body').removeClass(config.classes.open);
-    $('.ls-modal.ls-opened').attr('aria-hidden', true);
-    fadeOut();
+    $this.attr('aria-hidden', true);
+
+    if($this.hasClass('ls-modal-template')) {
+      $this.remove();
+    }
+
+    $this.removeClass('ls-opened');
+    
     unbindClose();
 
     locastyle.popover.destroyPopover(); //add trigger on popover
     locastyle.popover.init(); ///add trigger on popover
+
+    // This event return one argument: element target.
+    $.event.trigger(config.close.triggerClosed, [$this]);
   }
 
-  function fadeIn($target, $this) {
-    $.event.trigger(config.open.triggerOpen, [$this, $target]);
+  function show($target, $this) {
+    $target.addClass('ls-opened');
 
-    $target.fadeIn({queue: false, duration: 500, complete: function(){
-      $(this).addClass('ls-opened');
-
-      $.event.trigger(config.open.triggerOpened, [$this, $(this)]);
-    }});
-  }
-
-  function fadeOut() {
-    $('.ls-modal.ls-opened').fadeOut({queue: false, duration: 500, complete: function(){
-      $.event.trigger(config.close.triggerClosed, [$(this)]);
-
-      $(this).removeClass('ls-opened');
-
-      if($(this).hasClass('ls-modal-template')) {
-        $(this).remove();
-      }
-    }});
+    // This event return two arguments: element clicked and target.
+    $.event.trigger(config.open.triggerOpened, [$this, $target]);
   }
 
   function modalBlocked($target) {
