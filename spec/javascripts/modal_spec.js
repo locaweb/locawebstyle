@@ -14,6 +14,12 @@ describe("Modal: ", function() {
       $('[data-ls-module="modal"]').trigger("click");
     });
 
+    it("should trigger the event modal:open", function() {
+      var spyEvent = spyOnEvent(document, 'modal:open');
+      $('[data-ls-module="modal"]').trigger("click");
+      expect('modal:open').toHaveBeenTriggeredOn(document)
+    });
+
     it('should add class ls-opened on .ls-modal', function() {
       expect($("body .ls-modal")).toHaveClass('ls-opened');
     });
@@ -21,6 +27,12 @@ describe("Modal: ", function() {
     describe('When modal is opened', function() {
       it('tag body should have class .ls-overflow-hidden', function() {
         expect($("body").hasClass('ls-overflow-hidden')).toEqual(true);
+      });
+
+      it("should trigger the event modal:opened", function() {
+        var spyEvent = spyOnEvent(document, 'modal:opened');
+        $('[data-ls-module="modal"]').trigger("click");
+        expect('modal:opened').toHaveBeenTriggeredOn(document)
       });
     });
 
@@ -48,6 +60,16 @@ describe("Modal: ", function() {
       locastyle.modal.close();
       $('[data-dismiss="modal"]').trigger("click");
       expect($("#myModalOpened .ls-modal").hasClass('opened')).toBeFalsy();
+    });
+
+    it("should trigger the event modal:closed", function() {
+      var spyEvent = spyOnEvent(document, 'modal:closed');
+      $('[data-dismiss="modal"]').trigger("click");
+
+      setTimeout(100, function() {
+        expect('modal:closed').toHaveBeenTriggeredOn(document);
+        done();
+      });
     });
   });
 
