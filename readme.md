@@ -51,6 +51,13 @@ We have some instructions maintain the code more legible and organized. Sorry, t
 
 [Read here the code guide of CSS](http://locaweb.github.io/locawebstyle/documentacao/praticas/css/) and [JavaScript](http://locaweb.github.io/locawebstyle/documentacao/praticas/javascript/) to maintain a good practices of this project.
 
+### Running tests
+Before sending any code, please run our automated tests:
+```sh
+$ bundle exec rake tests:run
+```
+It will run Jasmine tests and JShint.
+
 ---
 **pt-br version**
 
@@ -98,3 +105,10 @@ Para contribuir é bico: Faça um fork do projeto aqui mesmo no GitHub e comece 
 Existem algumas instruções para mantermos o código legível e organizado. [Leia essas instruções aqui](http://locaweb.github.io/locawebstyle/documentacao/introducao/contribua/).
 
 Leia também nossos padrões de código de [CSS](http://locaweb.github.io/locawebstyle/documentacao/praticas/css/) e [JavaScript](http://locaweb.github.io/locawebstyle/documentacao/praticas/javascript/).
+
+### Rodando os tests
+Antes de enviar seu código, rode nossa suite de testes:
+```sh
+$ bundle exec rake tests:run
+```
+Isso vai rodar os testes de Jasmine e o JShint.

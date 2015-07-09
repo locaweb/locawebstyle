@@ -5,11 +5,11 @@ locastyle.trackEvents = (function() {
 
   function init(){
     if(window.ga){
-      this.gaPresent = true;
-      setCategory(this);
+      locastyle.trackEvents.gaPresent = true;
+      setCategory(locastyle.trackEvents);
       findTriggers();
     } else {
-      this.gaPresent = false;
+      locastyle.trackEvents.gaPresent = false;
     }
   }
 

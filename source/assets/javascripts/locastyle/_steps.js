@@ -151,7 +151,7 @@ locastyle.steps = (function() {
 
     $(window).scroll(function() {
      if ($(window).scrollTop() > offset.top ) {
-        var $scroll = parseInt($(window).scrollTop() - $heightNav);
+        var $scroll = parseInt($(window).scrollTop() - $heightNav, 10);
 
         $steps.stop().animate({
          marginTop: $(window).scrollTop() - offset.top + 20
