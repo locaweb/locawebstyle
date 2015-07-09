@@ -14,12 +14,6 @@ describe("Modal: ", function() {
       $('[data-ls-module="modal"]').trigger("click");
     });
 
-    it("should trigger the event modal:open", function() {
-      var spyEvent = spyOnEvent(document, 'modal:open');
-      $('[data-ls-module="modal"]').trigger("click");
-      expect('modal:open').toHaveBeenTriggeredOn(document)
-    });
-
     it('should add class ls-opened on .ls-modal', function() {
       expect($("body .ls-modal")).toHaveClass('ls-opened');
     });
@@ -46,9 +40,6 @@ describe("Modal: ", function() {
 
   describe('When click submit button on modal', function() {
     it('should submit the form when you press button', function() {
-      //$('#modalSubmitSample').trigger('submit');
-      //expect(window.location.hash).toEqual('#modal-no-action');
-
       var spyEvent = spyOnEvent($('#modalSubmitSample'), 'submit');
       $("#submitFormModalSample").trigger("click");
       expect(spyEvent).toHaveBeenTriggered();
@@ -65,11 +56,7 @@ describe("Modal: ", function() {
     it("should trigger the event modal:closed", function() {
       var spyEvent = spyOnEvent(document, 'modal:closed');
       $('[data-dismiss="modal"]').trigger("click");
-
-      setTimeout(100, function() {
-        expect('modal:closed').toHaveBeenTriggeredOn(document);
-        done();
-      });
+      expect('modal:closed').toHaveBeenTriggeredOn(document);
     });
   });
 
