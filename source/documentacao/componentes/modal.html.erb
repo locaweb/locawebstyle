@@ -216,46 +216,55 @@ locastyle.modal.open({target: "#myAwesomeModal"});
 <%= partial 'documentacao/shared/modal-small' %>
   <% end %>
 
-  <h3 class="ls-title-4">Dispatchers</h3>
-  <% code("javascript") do %>
-locastyle.eventDispatcher.eventSubscribe('trigger', fn)
-  <% end %>
-
   <h2 class="doc-title-3">Eventos</h2>
+  <p>Você pode utilizar os eventos abaixo para um determinado momento do modal, veja a referência abaixo:</p>
   <table class="ls-table">
     <thead>
       <tr>
-        <th>Trigger</th>
+        <th width="200">Evento</th>
         <th>Descrição</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>ls-modal-open</td>
-        <td>Lançado no método <code>open(#element)</code> antes de abrir a modal.</td>
+        <td>modal:open</td>
+        <td>
+          <p>Quando um modal é aberto, o evento <code>modal:open</code> é disparado antes de aparecer, com dois argumentos: o primeiro argumento é o elemento que foi clicado. O segundo argumento é o target do modal.</p>
+        </td>
       </tr>
       <tr>
-        <td>ls-modal-opened</td>
-        <td>Lançado no método <code>open(#element)</code> depois de aberto a modal.</td>
+        <td>modal:opened</td>
+        <td>
+          <p>Quando um modal é aberto por completo, o evento <code>modal:opened</code> é disparado com dois argumentos: o primeiro argumento é o elemento que foi clicado. O segundo argumento é o target do modal.</p>
+        </td>
       </tr>
       <tr>
-        <td>ls-modal-close</td>
-        <td>Lançado no método <code>close()</code> antes de fechar a modal.</td>
-      </tr>
-      <tr>
-        <td>ls-modal-closed</td>
-        <td>Lançado no método <code>close()</code> depois de fechado a modal.</td>
+        <td>modal:closed</td>
+        <td>
+          <p>Quando um modal é fechado por completo, o evento <code>modal:closed</code> é disparado com um argumento: o único argumento é o target do modal.</p>
+        </td>
       </tr>
     </tbody>
   </table>
 
-  <p>Você pode utilizar os eventos acima para um determinado momento, veja um exemplo de como adicionar um trigger do Modal:</p>
+  <p>Exemplo: </p>
+<% code("javascript") do %>
+function someFunctionOpen() {
+  $(document).on('modal:open', function(evt, arg1, arg2){
+    console.log(arg1, arg2);
+  });
+}
 
-  <div class="ls-box-demo">
-<% code("html") do %>
-locastyle.eventDispatcher.eventSubscribe('ls-modal-open', function(e){
-  console.log('abrindo');
-});
+function someFunctionOpened() {
+  $(document).on('modal:opened', function(evt, arg1, arg2){
+    console.log(arg1, arg2);
+  });
+}
+
+function someFunctionClosed() {
+  $(document).on('modal:closed', function(evt, arg1){
+    console.log(arg1);
+  });
+}
 <% end %>
-  </div>
 </section>
