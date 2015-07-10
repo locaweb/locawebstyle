@@ -13,7 +13,6 @@ describe('Collapse:', function() {
     spyOnEvent($('#myCollapse4 a'), 'click');
     spyOn(window.test, "eventFunctionTest");
 
-    ls.eventDispatcher.eventSubscribe('ls-collapse-open', window.test.eventFunctionTest);
 
   });
 
@@ -37,16 +36,6 @@ describe('Collapse:', function() {
     });
   });
 
-  describe('When click to open collapse', function() {
-    it('should shoot eventDispatcher', function() {
-      $('#myCollapse4 a').on('click', function(){
-        ls.eventDispatcher.trigger('ls-collapse-open');
-      });
-      $('#myCollapse4 a').trigger('click');
-      expect('ls-collapse-open').toHaveBeenTriggeredOn(window);
-      expect(window.test.eventFunctionTest).toHaveBeenCalled()
-    });
-  });
 
   describe('Group / Accordeon', function() {
 
