@@ -32,10 +32,12 @@ locastyle.collapse = (function() {
           // get target
           var target = $(this).data('target');
           toggle(target);
+          console.log(target);
+          console.log($(this));
           // set aria's attributes
           ariaCollapse($(this));
 
-          eventsHandler(this,target);
+          eventsHandler($(this),target);
         });
         // if click on ck-collapse-body no action happens
         $(config.classes.content).on('click.ls', function(event) {
@@ -59,16 +61,12 @@ locastyle.collapse = (function() {
     });
   }
 
-  function eventsHandler(event,el, target) {
-    if($(el).parents(config.trigger).hasClass(config.classes.opened)) {
-      $(el).trigger('collapse:closed');
-      console.log('fechou')
+  function eventsHandler(el, target) {
+    if($(el).hasClass(config.classes.opened)) {
+      $.event.trigger('collapse:opened', [$(this), $(target)]);
     } else {
-      $(el).trigger('collapse:opened');
-      console.log('abriu')
+      $.event.trigger('collapse:closed', [$(this), $(target)]);
     }
-
-    $.event.trigger('collapse:clicked', [$(this), $(target)]);
   }
 
 
