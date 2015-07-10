@@ -35,7 +35,7 @@ locastyle.collapse = (function() {
           // set aria's attributes
           ariaCollapse($(this));
 
-          eventsHandler(target);
+          eventsHandler(this,target);
         });
         // if click on ck-collapse-body no action happens
         $(config.classes.content).on('click.ls', function(event) {
@@ -61,7 +61,7 @@ locastyle.collapse = (function() {
     });
   }
 
-  function eventsHandler(el) {
+  function eventsHandler(event,el, target) {
     if($(el).parents(config.trigger).hasClass(config.classes.opened)) {
       $(el).trigger('collapse:closed');
       console.log('fechou')
@@ -69,6 +69,8 @@ locastyle.collapse = (function() {
       $(el).trigger('collapse:opened');
       console.log('abriu')
     }
+
+    $.event.trigger('collapse:clicked', [$(this), $(target)]);
   }
 
   // Set dispatchet according state
