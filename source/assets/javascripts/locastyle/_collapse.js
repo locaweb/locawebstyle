@@ -33,11 +33,12 @@ locastyle.collapse = (function() {
           var target = $(this).data('target');
           toggle(target);
           console.log(target);
-          console.log($(this));
           // set aria's attributes
           ariaCollapse($(this));
 
-          eventsHandler($(this),target);
+          eventsHandler(target);
+
+
         });
         // if click on ck-collapse-body no action happens
         $(config.classes.content).on('click.ls', function(event) {
@@ -58,14 +59,15 @@ locastyle.collapse = (function() {
   function toggle(target) {
     $(target).slideToggle(function() {
       $(target).parent().toggleClass(config.classes.opened);
+      // eventsHandler(target);
     });
   }
 
-  function eventsHandler(el, target) {
-    if($(el).hasClass(config.classes.opened)) {
-      $.event.trigger('collapse:opened', [$(this), $(target)]);
+  function eventsHandler(target) {
+    if($(target).parents(config.trigger).hasClass(config.classes.opened)) {
+      $.event.trigger('collapse:opened', [$(target)]);
     } else {
-      $.event.trigger('collapse:closed', [$(this), $(target)]);
+      $.event.trigger('collapse:closed', [$(target)]);
     }
   }
 
