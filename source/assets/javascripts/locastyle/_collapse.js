@@ -54,10 +54,8 @@ locastyle.collapse = (function() {
   }
 
   function toggle(target) {
-    // checkVisible(target, config.dispatcherClose.close, config.dispatcherOpen.open);
     $(target).slideToggle(function() {
       $(target).parent().toggleClass(config.classes.opened);
-      // checkVisible(target, config.dispatcherOpen.opened, config.dispatcherClose.closed);
     });
   }
 
@@ -73,14 +71,6 @@ locastyle.collapse = (function() {
     $.event.trigger('collapse:clicked', [$(this), $(target)]);
   }
 
-  // Set dispatchet according state
-  // function checkVisible(target, dispatcher1, dispatcher2) {
-  //   if($(target).is(':visible')) {
-  //     locastyle.eventDispatcher.trigger(dispatcher1);
-  //   }else{
-  //     locastyle.eventDispatcher.trigger(dispatcher2);
-  //   }
-  // }
 
   function ariaCollapse(elem) {
     if($(elem).hasClass('ls-collapse-open')){
