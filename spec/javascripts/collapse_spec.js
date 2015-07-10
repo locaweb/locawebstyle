@@ -9,9 +9,9 @@ describe('Collapse:', function() {
       }
     };
 
-    spyOnEvent(window, 'ls-collapse-open');
-    spyOnEvent($('#myCollapse4 a'), 'click');
-    spyOn(window.test, "eventFunctionTest");
+    // spyOnEvent(window, 'ls-collapse-open');
+    // spyOnEvent($('#myCollapse4 a'), 'click');
+    // spyOn(window.test, "eventFunctionTest");
 
 
   });
@@ -20,6 +20,20 @@ describe('Collapse:', function() {
     it('should target be visible', function() {
       $('#myCollapse1 [data-ls-module="collapse"]').trigger('click');
       expect($('#collapse1')).toBeVisible();
+    });
+
+    it("should trigger the event collapse:opened", function() {
+      var spyEvent = spyOnEvent(document, 'collapse:opened');
+      $('[data-ls-module="collapse"]').trigger("click");
+      expect('collapse:opened').toHaveBeenTriggeredOn(document)
+    });
+  });
+
+  describe('When click on opened collapse', function() {
+    it("should trigger the event collapse:closed", function() {
+      var spyEvent = spyOnEvent(document, 'collapse:closed');
+      $('[data-dismiss="collapse"]').trigger("click");
+      expect('collapse:closed').toHaveBeenTriggeredOn(document);
     });
   });
 
