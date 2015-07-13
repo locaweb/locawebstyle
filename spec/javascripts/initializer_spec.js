@@ -4,6 +4,12 @@ describe("Initializer: ", function() {
   });
 
   describe("When page loads", function() {
+    it("should trigger the event modal:ready", function() {
+      var spyEvent = spyOnEvent(document, 'modal:ready');
+      locastyle.init();
+      expect('modal:ready').toHaveBeenTriggeredOn(document);
+    });
+
     it("should call init on modal since it is a present module", function() {
       spyOn(locastyle.modal, 'init');
       locastyle.init();
