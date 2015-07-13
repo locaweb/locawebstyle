@@ -36,3 +36,4 @@
 //= require locastyle/_track-events
 //= require locastyle/_steps
 //= require locastyle/_tabs-button
+//= require locastyle/_switch-button
