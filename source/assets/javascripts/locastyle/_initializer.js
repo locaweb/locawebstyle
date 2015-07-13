@@ -26,6 +26,8 @@ var locastyle = (function() {
       if (modules.hasOwnProperty(i)) {
         locastyle[modules[i]].init();
         console.info("Locastyle: module [" + modules[i] + "] successfully initialized.");
+
+        $.event.trigger(modules[i] + ':ready');
       }
     }
   }
