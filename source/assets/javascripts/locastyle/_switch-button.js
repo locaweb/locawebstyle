@@ -10,21 +10,35 @@ locastyle.switchButton = (function() {
 
   function init() {
     bindEventOnChange();
+    validateClassExistence();
   }
 
   function bindEventOnChange() {
-    $(config.switchButton).on('click.ls', function(e) {
+    $(config.switchButton).on('click.ls', function(event) {
+      toggleClass($(this));
       eventHandler($(this));
-      e.stopPropagation();
+      event.stopPropagation();
     });
   }
 
   function eventHandler(el) {
     if (el.find('input[type=checkbox]').prop('checked')) {
-      el.trigger('switchButton:actived').addClass(config.openedClass);
+      el.trigger('switchButton:actived');
     } else {
-      el.trigger('switchButton:disabled').removeClass(config.openedClass);
+      el.trigger('switchButton:disabled');
     }
+  }
+
+  function toggleClass(el) {
+    el.toggleClass(config.openedClass);
+  }
+
+  function validateClassExistence() {
+    $(config.switchButton).find('input[type=checkbox]').each(function() {
+      if ($(this).prop('checked')) {
+        $(this).closest(config.switchButton).addClass(config.openedClass);
+      }
+    });
   }
 
   return {
