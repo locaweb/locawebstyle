@@ -24,9 +24,9 @@ describe("Modal: ", function() {
       });
 
       it("should trigger the event modal:opened", function() {
-        var spyEvent = spyOnEvent(document, 'modal:opened');
+        var spyEvent = spyOnEvent('body .ls-modal', 'modal:opened');
         $('[data-ls-module="modal"]').trigger("click");
-        expect('modal:opened').toHaveBeenTriggeredOn(document)
+        expect('modal:opened').toHaveBeenTriggeredOn('body .ls-modal')
       });
     });
 
@@ -54,9 +54,9 @@ describe("Modal: ", function() {
     });
 
     it("should trigger the event modal:closed", function() {
-      var spyEvent = spyOnEvent(document, 'modal:closed');
+      var spyEvent = spyOnEvent('.ls-modal', 'modal:closed');
       $('[data-dismiss="modal"]').trigger("click");
-      expect('modal:closed').toHaveBeenTriggeredOn(document);
+      expect('modal:closed').toHaveBeenTriggeredOn('.ls-modal');
     });
   });
 
