@@ -229,30 +229,30 @@ locastyle.modal.open({target: "#myAwesomeModal"});
       <tr>
         <td>modal:opened</td>
         <td>
-          <p>Quando um modal é aberto por completo, o evento <code>modal:opened</code> é disparado com dois argumentos: o primeiro argumento é o elemento que foi clicado. O segundo argumento é o target do modal.</p>
+          <p>Quando um modal é aberto por completo, o evento <code>modal:opened</code> é disparado com dois argumentos: o primeiro argumento é o evento. O segundo argumento é o elemento que foi clicado.</p>
         </td>
       </tr>
       <tr>
         <td>modal:closed</td>
         <td>
-          <p>Quando um modal é fechado por completo, o evento <code>modal:closed</code> é disparado com um argumento: o único argumento é o target do modal.</p>
+          <p>Quando um modal é fechado por completo, o evento <code>modal:closed</code> é disparado com um argumento: o único argumento é o event.</p>
         </td>
       </tr>
     </tbody>
   </table>
 
+  <p>Para acessar o conteúdo do modal, basta usar o <code>this</code>.</p>
+
   <p>Exemplo: </p>
 <% code("javascript") do %>
-function someFunctionOpened() {
-  $(document).on('modal:opened', function(evt, arg1, arg2){
-    console.log(arg1, arg2);
-  });
-}
+// Um modal específico pelo ID
+$('body').on('modal:opened', '#myAwesomeModal', function(evt, arg1){
+  console.log(evt, arg1, this);
+});
 
-function someFunctionClosed() {
-  $(document).on('modal:closed', function(evt, arg1){
-    console.log(arg1);
-  });
-}
+// Todos os elementos de modal
+$('body').on('modal:closed', '.ls-modal', function(evt){
+  console.log(evt, this);
+});
 <% end %>
 </section>
