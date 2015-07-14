@@ -31,13 +31,10 @@ locastyle.collapse = (function() {
           groupCollapse($(this));
           // get target
           var target = $(this).data('target');
-          toggle(target);
-          console.log(target);
           // set aria's attributes
           ariaCollapse($(this));
-
-          eventsHandler(target);
-
+          // set event
+          eventsHandler($(this), target);
 
         });
         // if click on ck-collapse-body no action happens
@@ -49,25 +46,20 @@ locastyle.collapse = (function() {
   }
 
   // if have collapses in group "accordeon"
-  function groupCollapse($collapse) {
-    var $group = $($collapse).parents(config.classes.groupContainer);
+  function groupCollapse(collapse) {
+    var $group = $(collapse).parents(config.classes.groupContainer);
     if ($group[0]) {
-      $group.find(config.trigger).not($($collapse)).removeClass(config.classes.opened).find(config.classes.content).slideUp();
+      $group.find(config.trigger).not($(collapse)).removeClass(config.classes.opened).find(config.classes.content).slideUp();
     }
   }
 
-  function toggle(target) {
-    $(target).slideToggle(function() {
-      $(target).parent().toggleClass(config.classes.opened);
-      // eventsHandler(target);
-    });
-  }
-
-  function eventsHandler(target) {
-    if($(target).parents(config.trigger).hasClass(config.classes.opened)) {
-      $.event.trigger('collapse:opened', [$(target)]);
+  function eventsHandler(el, target) {
+    if($(target).parent().hasClass(config.classes.opened)) {
+      $(target).parent().removeClass(config.classes.opened);
+      el.trigger('collapse:closed');
     } else {
-      $.event.trigger('collapse:closed', [$(target)]);
+      $(target).parent().addClass(config.classes.opened);
+      el.trigger('collapse:opened');
     }
   }
 
@@ -83,8 +75,7 @@ locastyle.collapse = (function() {
   }
 
   return {
-    init: init,
-    toggle: toggle
+    init: init
   };
 
 }());
