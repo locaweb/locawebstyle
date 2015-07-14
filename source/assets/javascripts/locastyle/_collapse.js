@@ -65,7 +65,7 @@ locastyle.collapse = (function() {
 
 
   function ariaCollapse(elem) {
-    if($(elem).hasClass('ls-collapse-open')){
+    if($(elem).hasClass(config.classes.open)){
       $(config.classes.header).attr({ 'aria-expanded' : true });
       $(config.classes.content).attr({ 'aria-hidden' : false });
     }else{
