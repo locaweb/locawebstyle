@@ -15,9 +15,11 @@ locastyle.switchButton = (function() {
 
   function bindEventOnChange() {
     $(config.switchButton).on('click.ls', function(event) {
-      toggleClass($(this));
-      eventHandler($(this));
-      event.stopPropagation();
+      if ($(this).find('a').length === 0) {
+        toggleClass($(this));
+        eventHandler($(this));
+        event.stopPropagation();
+      }
     });
   }
 
