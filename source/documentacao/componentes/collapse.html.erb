@@ -142,5 +142,39 @@ locastyle.eventDispatcher.eventSubscribe('ls-collapse-open', function() {
   </div>
   <% code("html") do %><%= partial('documentacao/shared/collapse/collapse', :locals => { :id => "acordeon", :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %><% end %>
 
+
+  <h2 class="doc-title-3">Eventos</h2>
+  <p>Você pode escutar eventos de abre e fecha nos elementos de collapse, veja a referência abaixo.</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th width="200">Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>collapse:opened</th>
+        <td><p>Quando um collapse abre, o evento <code>collapse:opened</code> é disparado no elemento do módulo. Veja exemplo abaixo.</p></td>
+      </tr>
+      <tr>
+        <th>collapse:closed</th>
+        <td><p>Quando um collapse fecha, o evento <code>collapse:closed</code> é disparado no elemento do módulo. Veja exemplo abaixo.</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Exemplo: </p>
+  <% code("javascript") do %>
+// Um collapse específico
+$("#id-collapse").on('collapse:opened', function(){
+  // do something
+})
+
+// Todos os elementos de collapse
+$(".ls-collapse").on('collapse:closed', function(){
+  // do something
+})
+  <%end%>
+
 </section>
 
