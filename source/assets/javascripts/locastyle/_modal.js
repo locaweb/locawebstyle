@@ -58,9 +58,6 @@ locastyle.modal = (function() {
     });
   }
 
-  function show($target, $this) {
-  }
-
   function open($this) {
     var $element = $this.data(),
         $target = null;
@@ -79,7 +76,7 @@ locastyle.modal = (function() {
     $target.addClass('ls-opened');
 
     // This event return two arguments: element clicked and target.
-    $.event.trigger(config.open.triggerOpened, [$this, $target]);
+    $target.trigger(config.open.triggerOpened, $this);
 
     ariaModal($($element.target));
     modalBlocked($element.target);
@@ -89,12 +86,8 @@ locastyle.modal = (function() {
     var $this = $('.ls-modal.ls-opened');
 
     $('body').removeClass(config.classes.open);
+
     $this.attr('aria-hidden', true);
-
-    if($this.hasClass('ls-modal-template')) {
-      $this.remove();
-    }
-
     $this.removeClass('ls-opened');
     
     unbindClose();
@@ -103,7 +96,11 @@ locastyle.modal = (function() {
     locastyle.popover.init(); ///add trigger on popover
 
     // This event return one argument: element target.
-    $.event.trigger(config.close.triggerClosed, [$this]);
+    $this.trigger(config.close.triggerClosed);
+    
+    if($this.hasClass('ls-modal-template')) {
+      $this.remove();
+    }
   }
 
   function modalBlocked($target) {
