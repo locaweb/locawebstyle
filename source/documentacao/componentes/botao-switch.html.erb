@@ -10,7 +10,7 @@ type: component
 
 	<%= partial 'partials/doc-intro-content' %>
 
-  <div class="row">
+  <div class="row clearfix">
     <div class="col-md-7">
       <div class="ls-box">
         <h2 class="ls-title-5">Quando <strong>usar?</strong></h2>
@@ -23,7 +23,6 @@ type: component
       <div class="ls-box">
         <h2 class="ls-title-5">Quando <strong>não</strong> usar?</h2>
         <p>- Acompanhado um modal de confirmação, por exemplo uma exclusão, ou de não ter possibilidade de reverter a ação.</p>
-        <p>- Dentro de um formulário.</p>
       </div>
     </div>
   </div>
@@ -75,12 +74,12 @@ type: component
   <p>Exemplo: </p>
   <% code("javascript") do %>
 // Um botão switch específico
-$('body').on('switchButton:actived', '#id-do-botao-switch', function() {
+$('#id-do-botao-switch').on('switchButton:actived', function() {
   // do something
 })
 
 // Todos os elementos botão switch
-$('body').on('switchButton:disabled', '.ls-switch-btn', function() {
+$('.ls-switch-btn').on('switchButton:disabled', function() {
   // do something
 })
   <%end%>
