@@ -47,9 +47,9 @@ locastyle.collapse = (function() {
 
   // if have collapses in group "accordeon"
   function groupCollapse(collapse) {
-    var $group = $(collapse).parents(config.classes.groupContainer);
+    var $group = collapse.parents(config.classes.groupContainer);
     if ($group[0]) {
-      $group.find(config.trigger).not($(collapse)).removeClass(config.classes.opened).find(config.classes.content).slideUp();
+      $group.find(config.trigger).not(collapse).removeClass(config.classes.opened).find(config.classes.content).slideUp();
     }
   }
 
