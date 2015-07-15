@@ -242,3 +242,7 @@ predef:
   - bindActions
   - closeDropdown
   - eventsHandler
+  - bindEventOnChange
+  - validateClassExistence
+  - toggleClass
+  - eventHandler
