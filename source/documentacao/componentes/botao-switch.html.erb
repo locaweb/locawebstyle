@@ -75,12 +75,12 @@ type: component
   <p>Exemplo: </p>
   <% code("javascript") do %>
 // Um botão switch específico
-$("#id-do-botao-switch").on('switchButton:actived', function() {
+$('body').on('switchButton:actived', '#id-do-botao-switch', function() {
   // do something
 })
 
 // Todos os elementos botão switch
-$(".ls-switch-btn").on('switchButton:disabled', function() {
+$('body').on('switchButton:disabled', '.ls-switch-btn', function() {
   // do something
 })
   <%end%>
