@@ -4,7 +4,7 @@ locastyle.switchButton = (function() {
   'use strict';
 
   var config = {
-    switchButton: '.ls-switch-btn',
+    switchButton: '[data-ls-module=switchButton]',
     openedClass: 'ls-switch-btn-active'
   };
 
@@ -47,4 +47,4 @@ locastyle.switchButton = (function() {
     init: init
   };
 
-})();
+}());

@@ -18,7 +18,6 @@ var locastyle = (function() {
     locastyle.form.togglePasswordField();
     checkClassForTrack();
     locastyle.browserDetect.init();
-    locastyle.switchButton.init();
   }
 
   function loadModules() {
