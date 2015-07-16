@@ -19,14 +19,6 @@
   -moz-appearance: none
   appearance: none
 
-  &:hover,
-  &:focus,
-  &:active,
-  &.ls-active
-    border-color: mix($color-mix, #fff, 20%)
-    background: mix($color-mix, #fff, 10%)
-    +box-shadow(inset 0 3px 5px rgba(0, 0, 0, 0.05))
-
   &[class*="ls-ico-"]:empty:before
     margin: 0
 
@@ -94,17 +86,6 @@
 .ls-btn-sm,
 .ls-btn-xs
   line-height: 1.5
-
-// Danger Button
-.ls-btn-danger
-  color: $color-danger
-
-  &:hover,
-  &:focus,
-  &.ls-active
-    background: #d75553
-    border-color: mix($color-mix, $color-danger, 10%)
-    color: #fff
 
 // BTN Groups
 .ls-group-btn
