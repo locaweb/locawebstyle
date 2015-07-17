@@ -15,37 +15,11 @@ layout: false
     <link rel="apple-touch-icon" href="<%= base_url %>/assets/images/ico-boilerplate.png">
   </head>
   <body>
-    <div class="ls-topbar">
+    <%= partial "documentacao/shared/topbar_panel" %>
 
-      <!-- Notification bar -->
-      <div class="ls-notification-topbar">
-        <!-- Link of support/help -->
-        <div class="ls-alerts-list">
-          <a href="#" class="ls-ico-bell-o" data-counter="5" data-ls-module="topbarCurtain" data-target="#ls-notification-curtain"><span>Notificações</span></a>
-          <a href="#" class="ls-ico-bullhorn" data-ls-module="topbarCurtain" data-target="#ls-help-curtain"><span>Ajuda</span></a>
-          <a href="#" class="ls-ico-question" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain"><span>Sugestões</span></a>
-        </div>
-
-        <!-- User details -->
-        <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
-          <a href="#" class="ls-ico-user">
-            <%= lorem.name %>
-            <small>(lstyle)</small>
-          </a>
-          <nav class="ls-dropdown-nav ls-user-menu">
-            <ul>
-              <li><a href="#">Conta</a></li>
-              <li><a href="#">Logout</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-      <span class="ls-show-sidebar ls-ico-menu"></span>
-
-      <!-- Nome do produto/marca -->
-      <h1 class="ls-brand-name"><a class="ls-ico-earth" href="<%= base_url %>/documentacao/exemplos/boilerplate">Boilerplate</a></h1>
-    </div>
+    <aside class="ls-sidebar">
+      <%= partial 'documentacao/exemplos/painel1/sidebar' %>
+    </aside>
 
     <main class="ls-main ">
       <div class="container-fluid">
@@ -60,27 +34,6 @@ layout: false
 
       </div>
     </main>
-
-    <aside class="ls-sidebar">
-      <!-- Defails of user account -->
-      <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
-        <a href="#" class="ls-ico-user">
-          <%= lorem.name %>
-          <small>(lstyle)</small>
-        </a>
-        <nav class="ls-dropdown-nav ls-user-menu">
-          <ul>
-            <li><a href="#">submenu</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <nav class="ls-menu">
-        <ul>
-          <li><a href="#" class="ls-ico-home">Página inicial</a></li>
-        </ul>
-      </nav>
-    </aside>
 
     <aside class="ls-notification">
       <nav class="ls-notification-list" id="ls-notification-curtain" style="left: 1716px;">
