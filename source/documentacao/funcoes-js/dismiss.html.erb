@@ -73,4 +73,35 @@ type: funcoesjs
 
   <p>Note que o botão tem um atributo <code>data-target</code> cujo valor pode ser um ID ou uma CLASSE.</p>
 
+
+<h2 class="doc-title-3">Eventos</h2>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th width="200">Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>dismiss:close</th>
+        <td><p>Quando o dismiss é clicado, o evento <code>dismiss:close</code> é disparado com um argumento: o único argumento é o event.</p></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Para acessar o conteúdo que foi removido, basta usar o <code>this</code>.</p>
+
+  <p>Exemplo: </p>
+  <% code("javascript") do %>
+// Um conteúdo específico pelo ID
+$('body').on('dismiss:close', '#alertDismissExample', function(evt){
+  console.log(evt, this);
+});
+
+// Todos os conteúdos por class
+$('body').on('dismiss:close', '.ls-dismissable', function(evt){
+  console.log(evt, this);
+});
+  <%end%>
 </section>
