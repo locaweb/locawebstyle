@@ -58,8 +58,8 @@ locastyle.modal = (function() {
     });
   }
 
-  function open($this) {
-    var $element = $this.data(),
+  function open(button) {
+    var $element = button.data(),
         $target = null;
     
     $('body').addClass(config.classes.open);
@@ -76,7 +76,7 @@ locastyle.modal = (function() {
     $target.addClass('ls-opened');
 
     // This event return two arguments: element clicked and target.
-    $target.trigger(config.open.triggerOpened, $this);
+    $target.trigger(config.open.triggerOpened, button);
 
     ariaModal($($element.target));
     modalBlocked($element.target);
