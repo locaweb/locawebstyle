@@ -68,7 +68,8 @@ locastyle.datepicker = (function() {
 
   return {
     init: init,
-    newDatepicker: newDatepicker
+    newDatepicker: newDatepicker,
+    createWithRange: createWithRange
   };
 
 }());

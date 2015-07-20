@@ -22,6 +22,14 @@ describe("Datepicker: ", function(){
       expect( $datepicker ).toExist();
     });
 
+    it('pikaday range init', function() {
+      locastyle.datepicker.createWithRange($('#datepicker1'));
+      var target = $('#datepicker2');
+      target.trigger('focus');
+      var datepicker = $('.pika-single');
+      expect(datepicker).toExist();
+    });
+
   });
 
 });
