@@ -16,16 +16,16 @@ describe('Swicth Button: ', function() {
       expect($('#button2').hasClass('ls-switch-btn-active')).toEqual(false);
     });
 
-    it('should trigger the switchButton:actived event', function() {
-      var spyEvent = spyOnEvent(document, 'switchButton:actived');
+    it('should trigger the switchButton:activated event', function() {
+      var spyEvent = spyOnEvent(document, 'switchButton:activated');
       $('#button1 input[type=checkbox]').trigger('click');
-      expect('switchButton:actived').toHaveBeenTriggeredOn(document);
+      expect('switchButton:activated').toHaveBeenTriggeredOn(document);
     });
 
-    it('should trigger the switchButton:disabled event', function() {
-      var spyEvent = spyOnEvent('#button2', 'switchButton:disabled');
+    it('should trigger the switchButton:deactivated event', function() {
+      var spyEvent = spyOnEvent('#button2', 'switchButton:deactivated');
       $('#button2 input[type=checkbox]').trigger('click');
-      expect('switchButton:disabled').toHaveBeenTriggeredOn('#button2');
+      expect('switchButton:deactivated').toHaveBeenTriggeredOn('#button2');
     });
   });
 
