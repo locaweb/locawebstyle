@@ -8,21 +8,8 @@ locastyle.toggleText = (function() {
     triggerChange: 'toggleText:change'
   };
 
-  function init() {
-    unbind();
-    bindEventOnClick();
-  }
-
-  function unbind() {
-    $(config.trigger).off('click.ls');
-  }
-
-  function bindEventOnClick() {
-    $(config.trigger).on('click.ls', function(event) {
-      event.preventDefault();
-      bindToggle($(this));
-      event.stopPropagation();
-    });
+  function eventHandler(el, target, text) {
+    el.trigger(config.triggerChange, [target, text]);
   }
 
   function bindToggle(el) {
@@ -36,8 +23,21 @@ locastyle.toggleText = (function() {
     eventHandler(el, $target, textChange);
   }
 
-  function eventHandler(el, target, text) {
-    el.trigger(config.triggerChange, [target, text]);
+  function bindEventOnClick() {
+    $(config.trigger).on('click.ls', function(event) {
+      event.preventDefault();
+      bindToggle($(this));
+      event.stopPropagation();
+    });
+  }
+
+  function unbind() {
+    $(config.trigger).off('click.ls');
+  }
+
+  function init() {
+    unbind();
+    bindEventOnClick();
   }
 
   return {
