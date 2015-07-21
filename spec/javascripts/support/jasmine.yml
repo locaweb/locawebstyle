@@ -43,6 +43,7 @@ src_files:
     - source/assets/javascripts/locastyle/_browser-unsupported-bar.js
     - source/assets/javascripts/locastyle/_steps.js
     - source/assets/javascripts/locastyle/_tabs-button.js
+    - source/assets/javascripts/locastyle/_switch-button.js
 
 # stylesheets
 #

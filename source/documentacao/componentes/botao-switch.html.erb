@@ -10,7 +10,7 @@ type: component
 
 	<%= partial 'partials/doc-intro-content' %>
 
-  <div class="row">
+  <div class="row clearfix">
     <div class="col-md-7">
       <div class="ls-box">
         <h2 class="ls-title-5">Quando <strong>usar?</strong></h2>
@@ -23,7 +23,6 @@ type: component
       <div class="ls-box">
         <h2 class="ls-title-5">Quando <strong>não</strong> usar?</h2>
         <p>- Acompanhado um modal de confirmação, por exemplo uma exclusão, ou de não ter possibilidade de reverter a ação.</p>
-        <p>- Dentro de um formulário.</p>
       </div>
     </div>
   </div>
@@ -41,7 +40,7 @@ type: component
 
 
   <h2 class="doc-title-3">Botão switch com link</h2>
-  <p>Pra deixá-lo com visual ativado é necessário que o checkbox esteja checado.</p>
+  <p>Para desabilitar os eventos do swicth e atrelar sua utilização ao <code>href</code> de um hyperlink, basta seguir a utilização abaixo.</p>
   <div class="ls-box-demo">
     <h3 class="doc-title-6">Desktop</h3>
     <%= partial 'documentacao/shared/switch/switch-with-link' %>
@@ -49,5 +48,40 @@ type: component
     <iframe width="340" height="180" src="<%= base_url %>/documentacao/shared/switch/switch-link-mobile" frameborder="0"></iframe>
   </div>
   <% code("html") do %><%= partial 'documentacao/shared/switch/switch-with-link' %><% end %>
+
+  <div class="ls-alert-warning"><strong>Atenção:</strong> Nesse cenário, o retorno deve controlar o estado do switch button manipulando seu checkbox.</div>
+
+  <h2 class="doc-title-3">Eventos</h2>
+  <p>Você pode escutar eventos de ativado e desativado nos botões switch, veja a referência abaixo.</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th width="250">Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>switchButton:activated</th>
+        <td><p>Quando um botão switch for ativado, o evento <code>switchButton:activated</code> é disparado no elemento do módulo. Veja exemplo abaixo.</p></td>
+      </tr>
+      <tr>
+        <th>switchButton:deactivated</th>
+        <td><p>Quando um botão switch for desativado, o evento <code>switchButton:deactivated</code> é disparado no elemento do módulo. Veja exemplo abaixo.</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Exemplo: </p>
+  <% code("javascript") do %>
+// Um botão switch específico
+$('#id-do-botao-switch').on('switchButton:activated', function() {
+  // do something
+})
+
+// Todos os elementos botão switch
+$('.ls-switch-btn').on('switchButton:deactivated', function() {
+  // do something
+})
+  <%end%>
 
 </section>
