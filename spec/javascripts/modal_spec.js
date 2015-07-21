@@ -22,6 +22,12 @@ describe("Modal: ", function() {
       it('tag body should have class .ls-overflow-hidden', function() {
         expect($("body").hasClass('ls-overflow-hidden')).toEqual(true);
       });
+
+      it("should trigger the event modal:opened", function() {
+        var spyEvent = spyOnEvent('body .ls-modal', 'modal:opened');
+        $('[data-ls-module="modal"]').trigger("click");
+        expect('modal:opened').toHaveBeenTriggeredOn('body .ls-modal')
+      });
     });
 
     describe('When modal is closed', function() {
@@ -34,9 +40,6 @@ describe("Modal: ", function() {
 
   describe('When click submit button on modal', function() {
     it('should submit the form when you press button', function() {
-      //$('#modalSubmitSample').trigger('submit');
-      //expect(window.location.hash).toEqual('#modal-no-action');
-
       var spyEvent = spyOnEvent($('#modalSubmitSample'), 'submit');
       $("#submitFormModalSample").trigger("click");
       expect(spyEvent).toHaveBeenTriggered();
@@ -48,6 +51,12 @@ describe("Modal: ", function() {
       locastyle.modal.close();
       $('[data-dismiss="modal"]').trigger("click");
       expect($("#myModalOpened .ls-modal").hasClass('opened')).toBeFalsy();
+    });
+
+    it("should trigger the event modal:closed", function() {
+      var spyEvent = spyOnEvent('.ls-modal', 'modal:closed');
+      $('[data-dismiss="modal"]').trigger("click");
+      expect('modal:closed').toHaveBeenTriggeredOn('.ls-modal');
     });
   });
 

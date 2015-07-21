@@ -5,14 +5,12 @@ locastyle.modal = (function() {
   var config = {
     open: {
       trigger: '[data-ls-module="modal"]',
-      dispatcherOpen: 'ls-modal-open',
-      dispatcherOpened: 'ls-modal-opened'
+      triggerOpened: 'modal:opened'
     },
     close: {
       classes: '.ls-modal',
       trigger: '[data-dismiss="modal"]',
-      dispatcherClose: 'ls-modal-close',
-      dispatcherClosed: 'ls-modal-closed'
+      triggerClosed: 'modal:closed'
     },
     classes: {
       open: 'ls-overflow-hidden'
@@ -25,15 +23,19 @@ locastyle.modal = (function() {
     bindOpen();
   }
 
-  function unbind() {
-    $(config.open.trigger).off('click.ls');
+  function unbindClose() {
     $(document).off('keyup.ls-esc');
     $(config.close.classes + ", " + config.close.trigger).off('click.ls');
   }
 
+  function unbind() {
+    $(config.open.trigger).off('click.ls');
+    unbindClose();
+  }
+
   function bindOpen() {
     $(config.open.trigger).on('click.ls', function() {
-      locastyle.modal.open($(this).data());
+      locastyle.modal.open($(this));
     });
 
     if ($('.ls-opened').length > 0) {
@@ -56,53 +58,49 @@ locastyle.modal = (function() {
     });
   }
 
-  function open($element) {
+  function open(button) {
+    var $element = button.data(),
+        $target = null;
+    
     $('body').addClass(config.classes.open);
-    if (!$element.target) {
-      var $template = $(locastyle.templates.modal($element));
-      $('body').append($template);
-      fadeIn($template);
 
+    if (!$element.target) {
+      $target = $(locastyle.templates.modal($element));
+      $('body').append($target);
       $('.ls-modal-template').focus();
       bindClose();
     } else {
-      fadeIn($($element.target));
+      $target = $($element.target);
     }
+    
+    $target.addClass('ls-opened');
+
+    // This event return two arguments: element clicked and target.
+    $target.trigger(config.open.triggerOpened, button);
 
     ariaModal($($element.target));
     modalBlocked($element.target);
   }
 
   function close() {
+    var $this = $('.ls-modal.ls-opened');
+
     $('body').removeClass(config.classes.open);
-    $('.ls-modal.ls-opened').attr('aria-hidden', true);
-    fadeOut();
-    locastyle.popover.destroyPopover();
-    locastyle.popover.init();
-  }
 
-  function fadeIn($target) {
-    locastyle.eventDispatcher.trigger(config.open.dispatcherOpen);
+    $this.attr('aria-hidden', true);
+    $this.removeClass('ls-opened');
+    
+    unbindClose();
 
-    $target.fadeIn({queue: false, duration: 500, complete: function(){
-      $(this).addClass('ls-opened');
+    locastyle.popover.destroyPopover(); //add trigger on popover
+    locastyle.popover.init(); ///add trigger on popover
 
-      locastyle.eventDispatcher.trigger(config.open.dispatcherOpened);
-    }});
-  }
-
-  function fadeOut() {
-    locastyle.eventDispatcher.trigger(config.close.dispatcherClose);
-
-    $('.ls-modal.ls-opened').fadeOut({queue: false, duration: 500, complete: function(){
-      $(this).removeClass('ls-opened');
-
-      if($(this).hasClass('ls-modal-template')) {
-        $(this).remove();
-      }
-
-      locastyle.eventDispatcher.trigger(config.close.dispatcherClosed);
-    }});
+    // This event return one argument: element target.
+    $this.trigger(config.close.triggerClosed);
+    
+    if($this.hasClass('ls-modal-template')) {
+      $this.remove();
+    }
   }
 
   function modalBlocked($target) {
