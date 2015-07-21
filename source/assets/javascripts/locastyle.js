@@ -37,3 +37,4 @@
 //= require locastyle/_steps
 //= require locastyle/_tabs-button
 //= require locastyle/_switch-button
+//= require locastyle/_toggle-text
