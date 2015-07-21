@@ -229,7 +229,7 @@ locastyle.modal.open({target: "#myAwesomeModal"});
       <tr>
         <td>modal:opened</td>
         <td>
-          <p>Quando um modal é aberto por completo, o evento <code>modal:opened</code> é disparado com dois argumentos: o primeiro argumento é o evento. O segundo argumento é o elemento que foi clicado.</p>
+          <p>Quando um modal é aberto por completo, o evento <code>modal:opened</code> é disparado com dois argumentos: o primeiro argumento é o evento. O segundo argumento é o botão que foi clicado.</p>
         </td>
       </tr>
       <tr>
@@ -246,8 +246,8 @@ locastyle.modal.open({target: "#myAwesomeModal"});
   <p>Exemplo: </p>
 <% code("javascript") do %>
 // Um modal específico pelo ID
-$('body').on('modal:opened', '#myAwesomeModal', function(evt, arg1){
-  console.log(evt, arg1, this);
+$('body').on('modal:opened', '#myAwesomeModal', function(evt, button){
+  console.log(evt, button, this);
 });
 
 // Todos os elementos de modal
