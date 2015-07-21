@@ -90,39 +90,6 @@ type: component
 
 
 
-  <h2 class="doc-title-3">Dispatchers</h2>
-  <% code("javascript") do %>locastyle.eventDispatcher.eventSubscribe('trigger', fn)<% end %>
-  <table class="ls-table">
-    <thead>
-      <tr>
-        <th>Trigger</th>
-        <th>Descrição</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>ls-collapse-open</td>
-        <td>É disaparado esse evento assim que o bind é feito no elemento</td>
-      </tr>
-      <tr>
-        <td>ls-collapse-opened</td>
-        <td>É disaparado esse evento assim que o collapse termina de abrir</td>
-      </tr>
-      <tr>
-        <td>ls-collapse-close</td>
-        <td>É disaparado esse evento assim que o bind de fechar é feito</td>
-      </tr>
-      <tr>
-        <td>ls-collapse-closed</td>
-        <td>É disaparado esse evento assim que o collapse termina de fechar</td>
-      </tr>
-    </tbody>
-  </table>
-  <% code("javascript") do %>
-locastyle.eventDispatcher.eventSubscribe('ls-collapse-open', function() {
-  console.log('Abrir collapse');
-})
-  <% end %>
   <hr>
   <div class="ls-box-demo">
     <button type="button" class="ls-btn-primary" data-ls-module="collapse" data-target="#010">Abre/Fecha o <i>collapse</i></button>
@@ -141,6 +108,40 @@ locastyle.eventDispatcher.eventSubscribe('ls-collapse-open', function() {
     </div>
   </div>
   <% code("html") do %><%= partial('documentacao/shared/collapse/collapse', :locals => { :id => "acordeon", :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %><% end %>
+
+
+  <h2 class="doc-title-3">Eventos</h2>
+  <p>Você pode escutar eventos de abre e fecha nos elementos de collapse, veja a referência abaixo.</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th width="200">Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>collapse:opened</th>
+        <td><p>Quando um collapse abre, o evento <code>collapse:opened</code> é disparado no elemento do módulo. Veja exemplo abaixo.</p></td>
+      </tr>
+      <tr>
+        <th>collapse:closed</th>
+        <td><p>Quando um collapse fecha, o evento <code>collapse:closed</code> é disparado no elemento do módulo. Veja exemplo abaixo.</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Exemplo: </p>
+  <% code("javascript") do %>
+// Um collapse específico
+$("#id-collapse").on('collapse:opened', function(){
+  // do something
+})
+
+// Todos os elementos de collapse
+$(".ls-collapse").on('collapse:closed', function(){
+  // do something
+})
+  <%end%>
 
 </section>
 

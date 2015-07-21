@@ -1,19 +1,8 @@
 describe('Collapse:', function() {
+
   beforeEach(function() {
     loadFixtures('collapse_fixture.html');
     locastyle.collapse.init();
-
-    window.test = {
-      eventFunctionTest: function() {
-        // fake function
-      }
-    };
-
-    spyOnEvent(window, 'ls-collapse-open');
-    spyOnEvent($('#myCollapse4 a'), 'click');
-    spyOn(window.test, "eventFunctionTest");
-
-    ls.eventDispatcher.eventSubscribe('ls-collapse-open', window.test.eventFunctionTest);
 
   });
 
@@ -22,6 +11,17 @@ describe('Collapse:', function() {
       $('#myCollapse1 [data-ls-module="collapse"]').trigger('click');
       expect($('#collapse1')).toBeVisible();
     });
+
+    it("should trigger the event collapse:opened", function() {
+      var spyEvent = spyOnEvent(document, 'collapse:opened');
+      $('#myCollapse1 [data-ls-module="collapse"]').trigger("click");
+      expect('collapse:opened').toHaveBeenTriggeredOn(document);
+
+      var spyEvent = spyOnEvent(document, 'collapse:closed');
+      $('#myCollapse1 [data-ls-module="collapse"]').trigger("click");
+      expect('collapse:closed').toHaveBeenTriggeredOn(document);
+    });
+
   });
 
   describe('When collapse have a class ls-collapse-opened', function() {
@@ -37,16 +37,6 @@ describe('Collapse:', function() {
     });
   });
 
-  describe('When click to open collapse', function() {
-    it('should shoot eventDispatcher', function() {
-      $('#myCollapse4 a').on('click', function(){
-        ls.eventDispatcher.trigger('ls-collapse-open');
-      });
-      $('#myCollapse4 a').trigger('click');
-      expect('ls-collapse-open').toHaveBeenTriggeredOn(window);
-      expect(window.test.eventFunctionTest).toHaveBeenCalled()
-    });
-  });
 
   describe('Group / Accordeon', function() {
 
