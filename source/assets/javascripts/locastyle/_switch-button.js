@@ -25,9 +25,9 @@ locastyle.switchButton = (function() {
 
   function eventHandler(el) {
     if (el.find('input[type=checkbox]').prop('checked')) {
-      el.trigger('switchButton:actived');
+      el.trigger('switchButton:activated');
     } else {
-      el.trigger('switchButton:disabled');
+      el.trigger('switchButton:deactivated');
     }
   }
 
