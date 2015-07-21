@@ -3,17 +3,22 @@ var locastyle = locastyle || {};
 locastyle.dismiss = (function() {
   'use strict';
 
+  var config = {
+    trigger: '[data-ls-module=dismiss]',
+    triggerClose: 'dismiss:close'
+  };
+
   function init() {
     unbind();
     bindClickOnTriggers();
   }
 
   function unbind() {
-    $('[data-ls-module=dismiss]').off('click.ls');
+    $(config.trigger).off('click.ls');
   }
 
   function bindClickOnTriggers() {
-    $('[data-ls-module=dismiss]').on('click.ls', function() {
+    $(config.trigger).on('click.ls', function() {
       checkTarget(this);
       locastyle.topbarCurtain.updateStatusCounter();
     });
@@ -29,6 +34,7 @@ locastyle.dismiss = (function() {
 
   function dismiss(el) {
     $(el).addClass('ls-dismissed');
+    $(el).trigger(config.triggerClose);
   }
 
   return {

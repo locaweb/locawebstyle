@@ -14,6 +14,12 @@ describe('Dismiss:', function() {
       $('#dismiss-test-2').trigger('click');
       expect($('#dismissable-2')).toHaveClass('ls-dismissed');
     });
+
+    it("should trigger the event dismiss:close", function() {
+      var spyEvent = spyOnEvent('.ls-dismissable', 'dismiss:close');
+      $('[data-ls-module="dismiss"]').trigger('click');
+      expect('dismiss:close').toHaveBeenTriggeredOn('.ls-dismissable');
+    });
   });
 
   describe("Unbind:", function() {
