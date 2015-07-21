@@ -246,3 +246,5 @@ predef:
   - validateClassExistence
   - toggleClass
   - eventHandler
+  - Pikaday
+  - createWithRange

@@ -84,6 +84,11 @@
   +arrow-structure($arrow-size)
   border-color: transparent $arrow-color transparent transparent
 
+=button-variation($mix1, $mix2, $mix3:"")
+  background: $mix1
+  border-color: $mix2
+  color: unquote($mix3)
+
 @function map-fetch($map, $keys)
   $key: nth($keys, 1)
   $length: length($keys)
