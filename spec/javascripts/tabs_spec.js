@@ -23,8 +23,14 @@ describe("Tabs: ", function() {
         expect(spyEvent).toHaveBeenPrevented();
       });
 
-      it("should triggered the event tab:clicked", function() {
-        var spyEvent = spyOnEvent(document, 'tab:clicked');
+      it("should triggered the event tab:activated", function() {
+        var spyEvent = spyOnEvent('[data-ls-module="tabs"]', 'tab:activated');
+        $("#tab-trigger-2").trigger("click");
+        expect(spyEvent).toHaveBeenTriggered();
+      });
+
+      it("should triggered the event tab:deactivated", function() {
+        var spyEvent = spyOnEvent('[data-ls-module="tabs"]', 'tab:deactivated');
         $("#tab-trigger-2").trigger("click");
         expect(spyEvent).toHaveBeenTriggered();
       });

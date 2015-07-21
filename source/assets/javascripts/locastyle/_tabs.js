@@ -28,9 +28,6 @@ locastyle.tabs = (function() {
       if(isDropdownMode($(this).parents('.ls-tabs-nav'))){
         updateTriggerLink($(this).parents('.ls-tabs-nav'));
       }
-
-      // This event return two arguments: element clicked and content target.
-      $.event.trigger('tab:clicked', [$(this), $target]);
     });
   }
 
@@ -90,6 +87,7 @@ locastyle.tabs = (function() {
   // activates the flap in accordance with the received arguments
   function activateTab(el, $target) {
     $(el).parents('li').addClass('ls-active');
+    $(el).trigger('tab:activated');
     $target.addClass('ls-active');
     $(el).attr('aria-selected' , true);
   }
@@ -97,6 +95,7 @@ locastyle.tabs = (function() {
   // disable tab according to the received arguments
   function deactivateTab(el, $target) {
     $(el).parents('li').siblings().removeClass('ls-active');
+    $(el).trigger('tab:deactivated');
     $target.siblings().removeClass('ls-active');
     $(el).parents('li').siblings().find('a').attr('aria-selected' , false);
   }

@@ -105,19 +105,21 @@ type: component
     </thead>
     <tbody>
       <tr>
-        <th>tab:clicked</th>
-        <td><p>Quando uma aba é clicada, o evento <code>tab:clicked</code> é disparado com dois argumentos: o primeiro argumento é o elemento que foi clicado. O segundo argumento é o target do conteúdo relacionado aquela aba.</p></td>
+        <th>tab:activated</th>
+        <td><p>Quando uma aba é clicada, o evento <code>tab:activated</code> é disparado.</p></td>
+      </tr>
+      <tr>
+        <th>tab:deactivated</th>
+        <td><p>Quando uma aba que está ativa é clicada, o evento <code>tab:deactivated</code> é disparado.</p></td>
       </tr>
     </tbody>
   </table>
 
   <p>Exemplo: </p>
   <% code("javascript") do %>
-function someFunction() {
-  $(document).on('tab:clicked', function(evt, arg1, arg2){
-    console.log(arg1, arg2);
-  })
-}
+  $('[data-ls-module="tabs"]').on('tab:activated', function(){
+    // Do whatever you want.
+  });
   <%end%>
 
 </section>
