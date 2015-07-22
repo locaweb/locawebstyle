@@ -112,7 +112,7 @@ predef:
   - hideCurtains
   - hideCurtains
   - showCurtain
-  - dropdownToSidebar
+  - cloneDropdownToSidebar
   - setCategory
   - updateTriggerLink
   - dropdownShape
