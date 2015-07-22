@@ -27,9 +27,7 @@
 
   <%= partial "documentacao/shared/topbar_panel" %>
 
-  <aside class="ls-sidebar">
-    <%= yield_content :sidebar_panel %>
-  </aside>
+  <%= yield_content :sidebar_panel %>
 
   <main class="ls-main <%= current_page.data.body_class %>">
     <div class="container-fluid">

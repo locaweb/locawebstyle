@@ -1,50 +1,52 @@
-<div data-ls-module="dropdown" class="ls-dropdown ls-user-account ls-active">
-  <a href="#" class="ls-ico-user">
-    <img src="<%= base_url %>/assets/images/locastyle/avatar-example.jpg" alt="" />
-    <span class="ls-name">João Kennedy</span>
-    (johnkennedy)</small>
-  </a>
-  <nav class="ls-dropdown-nav ls-user-menu">
-    <ul>
-      <li><a href="#">Meus dados</a></li>
-      <li><a href="#">Faturas</a></li>
-      <li><a href="#">Planos</a></li>
-     </ul>
-     <a href="#" class="ls-btn-logout">Sair</a>
-  </nav>
-</div>
-
-<div class="ls-sidebar-inner">
-  <% if current_page.data.pre_panel %>
-    <h1 class="ls-brand-name ls-ico-earth"><%= link_to current_page.data.title_product, '../home' %></h1>
-    <nav class="ls-menu">
+<aside class="ls-sidebar">
+  <div data-ls-module="dropdown" class="ls-dropdown ls-user-account ls-active">
+    <a href="#" class="ls-ico-user">
+      <img src="<%= base_url %>/assets/images/locastyle/avatar-example.jpg" alt="" />
+      <span class="ls-name">João Kennedy</span>
+      (johnkennedy)</small>
+    </a>
+    <nav class="ls-dropdown-nav ls-user-menu">
       <ul>
-         <li><a href="<%= base_url %>/documentacao/exemplos/painel1/home" class="ls-ico-list2">Contas</a></li>
-         <li><a href="<%= base_url %>/documentacao/exemplos/painel1/home" class="ls-ico-users" >Recurso A</a></li>
-         <li><a href="<%= base_url %>/documentacao/exemplos/painel1/home" class="ls-ico-stats" >Serviço A</a></li>
+        <li><a href="#">Meus dados</a></li>
+        <li><a href="#">Faturas</a></li>
+        <li><a href="#">Planos</a></li>
        </ul>
+       <a href="#" class="ls-btn-logout">Sair</a>
     </nav>
-  <% else %>
-    <a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/pre-painel"  class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
+  </div>
 
-    <nav class="ls-menu">
-      <ul>
-         <li><a href="<%= base_url %>/documentacao/exemplos/painel1/home" class="ls-ico-dashboard">Dashboard</a></li>
-         <li><a href="<%= base_url %>/documentacao/exemplos/painel1/clients" class="ls-ico-users">Clientes</a></li>
-         <li><a href="<%= base_url %>/documentacao/exemplos/painel1/stats" class="ls-ico-stats">Relatórios da revenda</a></li>
-         <li>
-          <a href="#" class="ls-ico-cog">Configurações</a>
-          <ul>
-            <li><a href="<%= base_url %>/documentacao/exemplos/painel1/config-domain">Domínios da Revenda</a></li>
-            <li><a href="<%= base_url %>/documentacao/exemplos/painel1/config-email">E-mail de Remetente</a></li>
-            <li><a href="<%= base_url %>/documentacao/exemplos/painel1/config-aspect">Aparência</a></li>
-            <li><a href="<%= base_url %>/documentacao/exemplos/painel1/config-answer">Atendimento</a></li>
-            <li><a href="<%= base_url %>/documentacao/exemplos/painel1/config-api">Chave de acesso para API</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+  <div class="ls-sidebar-inner">
+    <% if current_page.data.pre_panel %>
+      <h1 class="ls-brand-name ls-ico-earth"><%= link_to current_page.data.title_product, '../home' %></h1>
+      <nav class="ls-menu">
+        <ul>
+           <li><a href="<%= base_url %>/documentacao/exemplos/painel1/home" class="ls-ico-list2">Contas</a></li>
+           <li><a href="<%= base_url %>/documentacao/exemplos/painel1/home" class="ls-ico-users" >Recurso A</a></li>
+           <li><a href="<%= base_url %>/documentacao/exemplos/painel1/home" class="ls-ico-stats" >Serviço A</a></li>
+         </ul>
+      </nav>
+    <% else %>
+      <a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/pre-painel"  class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
 
-  <% end %>
+      <nav class="ls-menu">
+        <ul>
+           <li><a href="<%= base_url %>/documentacao/exemplos/painel1/home" class="ls-ico-dashboard">Dashboard</a></li>
+           <li><a href="<%= base_url %>/documentacao/exemplos/painel1/clients" class="ls-ico-users">Clientes</a></li>
+           <li><a href="<%= base_url %>/documentacao/exemplos/painel1/stats" class="ls-ico-stats">Relatórios da revenda</a></li>
+           <li>
+            <a href="#" class="ls-ico-cog">Configurações</a>
+            <ul>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel1/config-domain">Domínios da Revenda</a></li>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel1/config-email">E-mail de Remetente</a></li>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel1/config-aspect">Aparência</a></li>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel1/config-answer">Atendimento</a></li>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel1/config-api">Chave de acesso para API</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
 
-</div>
+    <% end %>
+
+  </div>
+</aside>
