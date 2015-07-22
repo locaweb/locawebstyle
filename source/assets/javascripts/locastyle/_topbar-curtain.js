@@ -14,6 +14,7 @@ locastyle.topbarCurtain = (function() {
     bindPreventClosing();
     repositionOnResize();
     updateStatusCounter();
+    cloneDropdownToSidebar();
   }
 
   function unbind() {
@@ -101,6 +102,13 @@ locastyle.topbarCurtain = (function() {
         bindPreventClosing();
       }, 300);
     });
+  }
+
+  function cloneDropdownToSidebar() {
+    var $userAccountTopbar = $('.ls-topbar .ls-user-account')
+    if ( !$('.ls-sidebar .ls-user-account').length ) {
+      $userAccountTopbar.clone().appendTo('.ls-sidebar');
+    }
   }
 
   return {
