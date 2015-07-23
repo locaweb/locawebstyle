@@ -33,16 +33,16 @@ type: funcoesjs
 
 
   <div class="ls-box-demo">
-    <button class="ls-btn" data-toggle-text="Clique para voltar ao texto original">Clique para alterar o texto</button>
+    <button class="ls-btn" data-ls-module="toggleText" data-toggle-text="Clique para voltar ao texto original">Clique para alterar o texto</button>
   </div>
   <% code("html") do %>
-<button class="ls-btn" data-toggle-text="Clique para voltar ao texto original">Clique para alterar o texto</button>
+<button class="ls-btn" data-ls-module="toggleText" data-toggle-text="Clique para voltar ao texto original">Clique para alterar o texto</button>
   <% end %>
 
   <p>Se você quiser alternar o texto de outro elemento, siga o exemplo abaixo:</p>
 
   <div class="ls-box-demo">
-    <button class="ls-btn-primary" data-toggle-text="Clique para voltar ao texto original" data-target-text="#lsBox">Clique para alterar o texto do botão ao lado</button>
+    <button class="ls-btn-primary" data-ls-module="toggleText" data-toggle-text="Clique para voltar ao texto original" data-target-text="#lsBox">Clique para alterar o texto do botão ao lado</button>
     <br>
     <br>
     <div id="lsBox" class="ls-box ls-box-gray">
@@ -50,10 +50,38 @@ type: funcoesjs
     </div>
   </div>
   <% code("html") do %>
-<button class="ls-btn-primary" data-toggle-text="Clique para voltar ao texto original" data-target-text="#lsBox">Clique para alterar o texto do botão ao lado</button>
+<button class="ls-btn-primary" data-ls-module="toggleText" data-toggle-text="Clique para voltar ao texto original" data-target-text="#lsBox">Clique para alterar o texto do botão ao lado</button>
 <div id="lsBox" class="ls-box ls-box-gray">
   Uma mensagem bonita para caramba!
 </div>
   <% end %>
+
+  <h2 class="doc-title-3">Eventos</h2>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th width="250">Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>toggleText:change</th>
+        <td><p>Quando um element do módulo toggleText for clicado, o evento <code>toggleText:change</code> é disparado com três argumentos: event, target e text. Veja o exemplo abaixo.</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Exemplo: </p>
+  <% code("javascript") do %>
+// Elementos toggle text
+$('[data-toggle-text]').on('toggleText:change', function(event, target, text) {
+  // do something
+});
+
+// Um toggle text específico
+$('#id-do-toggle-text').on('toggleText:change', function(event, target, text) {
+  // do something
+});
+  <%end%>
 
 </section>

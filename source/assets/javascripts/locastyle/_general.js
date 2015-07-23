@@ -4,7 +4,6 @@ locastyle.general = (function() {
 
   var events = {
     '[data-toggle-class]|click': _toggleClass,
-    '[data-toggle-text]|click': _toggleText,
     '.ls-link-smooth|click': _smoothScroll
   };
 
@@ -76,15 +75,6 @@ locastyle.general = (function() {
       evt.preventDefault();
       $target.toggleClass(cssClass);
     }
-  }
-
-  function _toggleText(evt, $this) {
-    evt.preventDefault();
-    var $target      = $this.data('target-text') ? $($this.data('target-text')) : $this,
-        textChange   = $this.data('toggle-text'),
-        textOriginal = $target.text();
-    $this.data('toggle-text', textOriginal);
-    $target.text(textChange);
   }
 
   function _smoothScroll(evt, $this) {
