@@ -11,7 +11,6 @@
 //= require locastyle/templates/_browser-unsupported-bar
 
 //= require locastyle/_initializer
-//= require locastyle/_event-dispatcher
 //= require locastyle/_breakpoint-check
 //= require locastyle/_sidebars
 //= require locastyle/_sidebar-toggle
