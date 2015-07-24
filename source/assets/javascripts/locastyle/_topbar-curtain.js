@@ -107,7 +107,7 @@ locastyle.topbarCurtain = (function() {
   function cloneDropdownToSidebar() {
     var $userAccountTopbar = $('.ls-topbar .ls-user-account');
     if ( !$('.ls-sidebar .ls-user-account').length ) {
-      $userAccountTopbar.clone().appendTo('.ls-sidebar');
+      $userAccountTopbar.clone().prependTo('.ls-sidebar');
     }
   }
 
