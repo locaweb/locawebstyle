@@ -1,41 +1,30 @@
-<div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
-  <a href="#" class="ls-ico-user">
-    <span class="ls-name">João</span>
-    (fmolina)</small>
-  </a>
-  <nav class="ls-dropdown-nav ls-user-menu">
-    <ul>
-      <li><a href="#">Meus dados</a></li>
-      <li><a href="#">Faturas</a></li>
-      <li><a href="#">Planos</a></li>
-      <li><a href="#">Sair</a></li>
-     </ul>
-  </nav>
-</div>
-<% if current_page.data.pre_panel %>
-  <h1 class="ls-brand-name ls-ico-earth"><%= link_to current_page.data.title_product, '../home' %></h1>
-<% else %>
-  <div class="ls-sidebar-inner">
-    <a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/pre-painel"  class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
-    <nav class="ls-menu">
-      <ul>
-        <li><a href="<%= base_url %>/documentacao/exemplos/painel4/home" class="ls-ico-home">Página inicial</a></li>
-        <!-- <li><a href="<%= base_url %>/documentacao/exemplos/painel4/base" class="ls-ico-home">Primeiros passos</a></li> -->
-        <li><a href="#" class="ls-ico-screen">Meu Site</a></li>
-        <li><a href="<%= base_url %>/documentacao/exemplos/painel4/domains" class="ls-ico-link">Endereço do Site</a></li>
-        <li><a href="<%= base_url %>/documentacao/exemplos/painel4/plugins" class="ls-ico-attachment">Plugins</a></li>
-        <li>
-          <a href="#" class="ls-ico-cog">Configurações</a>
-          <ul>
-            <li><a href="<%= base_url %>/documentacao/exemplos/painel4/config-language">Idiomas</a></li>
-            <li><a href="<%= base_url %>/documentacao/exemplos/painel4/config-favicon">Favicon</a></li>
-            <li><a href="<%= base_url %>/documentacao/exemplos/painel4/config-ga">Google Analytics</a></li>
-            <li><a href="<%= base_url %>/documentacao/exemplos/painel4/config-mobile">Site mobile</a></li>
-            <li><a href="<%= base_url %>/documentacao/exemplos/painel4/config-users">Usuários do site</a></li>
-            <li><a href="<%= base_url %>/documentacao/exemplos/painel4/config-publish">Publicar o site</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
-<% end %>
+<aside class="ls-sidebar">
+
+  <% if current_page.data.pre_panel %>
+    <h1 class="ls-brand-name ls-ico-earth"><%= link_to current_page.data.title_product, '../home' %></h1>
+  <% else %>
+    <div class="ls-sidebar-inner">
+      <a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/pre-painel"  class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
+      <nav class="ls-menu">
+        <ul>
+          <li><a href="<%= base_url %>/documentacao/exemplos/painel4/home" class="ls-ico-home">Página inicial</a></li>
+          <!-- <li><a href="<%= base_url %>/documentacao/exemplos/painel4/base" class="ls-ico-home">Primeiros passos</a></li> -->
+          <li><a href="#" class="ls-ico-screen">Meu Site</a></li>
+          <li><a href="<%= base_url %>/documentacao/exemplos/painel4/domains" class="ls-ico-link">Endereço do Site</a></li>
+          <li><a href="<%= base_url %>/documentacao/exemplos/painel4/plugins" class="ls-ico-attachment">Plugins</a></li>
+          <li>
+            <a href="#" class="ls-ico-cog">Configurações</a>
+            <ul>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel4/config-language">Idiomas</a></li>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel4/config-favicon">Favicon</a></li>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel4/config-ga">Google Analytics</a></li>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel4/config-mobile">Site mobile</a></li>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel4/config-users">Usuários do site</a></li>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel4/config-publish">Publicar o site</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  <% end %>
+</aside>

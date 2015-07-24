@@ -1,13 +1,11 @@
 .ls-user-account
-  box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.05)
-  display: none
-  vertical-align: middle
   height: $topbar-height
   padding: 0 15px
   position: relative
   z-index: 1
+  display: none
 
-  > a
+  .ls-ico-user
     color: #fff
     text-decoration: none
     vertical-align: middle
@@ -18,11 +16,19 @@
     padding: 14px 3px
     position: relative
 
+    img
+      width: 33px
+      height: 33px
+      border-radius: 100%
+      vertical-align: middle
+      position: absolute
+      left: 13px
+      top: 14px
+
     .ls-name
       @extend .ls-ellipsis
       max-width: 160px
-      position: relative
-      top: 2px
+      vertical-align: middle
 
     small
       color: #fff
@@ -128,3 +134,8 @@
 
       &:after
         display: none
+
+
+@media screen and (min-width: $screen-sm)
+  .ls-user-account .ls-ico-user img
+    left: 3px

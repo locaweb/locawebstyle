@@ -1,33 +1,27 @@
-<div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
-  <a href="#" class="ls-ico-user">
-    <span class="ls-name">João</span>
-    (fmolina)</small>
-  </a>
-  <nav class="ls-dropdown-nav ls-user-menu">
-    <a href="#" class="ls-btn-logout">Sair</a>
-  </nav>
-</div>
-<% if current_page.data.pre_panel %>
-  <h1 class="ls-brand-name ls-ico-earth"><%= link_to current_page.data.title_product, '../home' %></h1>
-<% else %>
-  <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
-    <a href="#" class="ls-ico-user">
-      João
-      <small>(fmolina)</small>
-    </a>
-    <nav class="ls-dropdown-nav ls-user-menu">
-      <a href="#" class="ls-btn-logout">Sair</a>
-    </nav>
-  </div>
-  <div class="ls-sidebar-inner">
-    <a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/pre-painel"  class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
-    <nav class="ls-menu">
-      <ul>
-      <li><a href="<%= base_url %>/documentacao/exemplos/painel3/nameservers" class="ls-ico-globe">Gerenciamento DNS</a></li>
-        <li><a href="<%= base_url %>/documentacao/exemplos/painel3/contacts" class="ls-ico-users">Contatos</a></li>
-        <li><a href="<%= base_url %>/documentacao/exemplos/painel3/transferout" class="ls-ico-cog">Transferência</a></li>
-        <li><a href="<%= base_url %>/documentacao/exemplos/painel3/transfer-international" class="ls-ico-cog">Transferência Internacional</a></li>
-      </ul>
-    </nav>
-  </div>
-<% end %>
+<aside class="ls-sidebar">
+
+  <% if current_page.data.pre_panel %>
+    <h1 class="ls-brand-name ls-ico-earth"><%= link_to current_page.data.title_product, '../home' %></h1>
+  <% else %>
+    <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+      <a href="#" class="ls-ico-user">
+        João
+        <small>(fmolina)</small>
+      </a>
+      <nav class="ls-dropdown-nav ls-user-menu">
+        <a href="#" class="ls-btn-logout">Sair</a>
+      </nav>
+    </div>
+    <div class="ls-sidebar-inner">
+      <a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/pre-painel"  class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
+      <nav class="ls-menu">
+        <ul>
+        <li><a href="<%= base_url %>/documentacao/exemplos/painel3/nameservers" class="ls-ico-globe">Gerenciamento DNS</a></li>
+          <li><a href="<%= base_url %>/documentacao/exemplos/painel3/contacts" class="ls-ico-users">Contatos</a></li>
+          <li><a href="<%= base_url %>/documentacao/exemplos/painel3/transferout" class="ls-ico-cog">Transferência</a></li>
+          <li><a href="<%= base_url %>/documentacao/exemplos/painel3/transfer-international" class="ls-ico-cog">Transferência Internacional</a></li>
+        </ul>
+      </nav>
+    </div>
+  <% end %>
+</aside>

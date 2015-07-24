@@ -13,9 +13,11 @@
     <!-- Dropdown com detalhes da conta de usuário -->
     <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
       <a href="#" class="ls-ico-user">
-        <span class="ls-name">João</span>
-        (fmolina)
+        <img src="<%= base_url %>/assets/images/locastyle/avatar-example.jpg" alt="" />
+        <span class="ls-name">João Kennedy</span>
+        (johnkennedy)
       </a>
+
       <nav class="ls-dropdown-nav ls-user-menu">
         <ul>
           <li><a href="#">Meus dados</a></li>
@@ -35,8 +37,8 @@
   <%- unless current_page.data.show_topbar_title %>
     <h1 class="ls-brand-name">
       <a href="home" class="ls-ico-earth">
-        <small><%= current_page.data.title_product %></small>
-        fmolina
+        <small>Uma descrição ou outro nome</small>
+        O nome do Produto
       </a>
     </h1>
   <% end %>
