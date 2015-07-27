@@ -8,6 +8,7 @@ locastyle.popover = (function() {
     module       : '[data-ls-module="popover"]',
     idPopover    : '#ls-popover-',
     popoverClass : '.ls-popover',
+    trigger      : 'click',
     events: {
       created: 'popover:ready',
       clicked: 'popover:clicked',
@@ -16,7 +17,7 @@ locastyle.popover = (function() {
 
   function init() {
     checkExists();
-    setPosition();
+    bindPopover();
   }
 
   function checkExists() {
@@ -26,11 +27,10 @@ locastyle.popover = (function() {
       }
     });
     $(document).trigger(config.events.created);
-    bindPopover();
   }
 
   function buildPopover(index, el) {
-    var elementData = {
+    var data = {
       index        : index,
       title        : $(el).data('title'),
       content      : $(el).data('content'),
@@ -38,77 +38,87 @@ locastyle.popover = (function() {
       customClasses: $(el).data('custom-class')
     }
     setTarget(index, el);
-    $(config.container).append(locastyle.templates.popover(elementData));
+    $(config.container).append(locastyle.templates.popover(data));
+    setPosition(index, el);
   }
 
-  function setTarget(index, el) {
-    $(el).attr('data-target', config.idPopover+index);
+  // Define position of popover
+  function setPosition(index, el) {
+    var data = {
+        target    : $(el).data('target'),
+        top       : $(el).offset().top,
+        left      : $(el).offset().left,
+        width     : $(el).outerWidth(),
+        height    : $(el).outerHeight(),
+        placement : $(el).data('placement')
+    }
+    calcPosition(data);
   }
 
-  function bindPopover() {
-    $(document).on(config.events.created, function() {
-      $(config.module).on('click', function() {
-        $(this).trigger(config.events.clicked);
-      });
-    });
-  }
-
-  function setPosition(element) {
-    $(config.module).on(config.events.clicked, function(event, target) {
-      var element = event.target;
-      var data = {
-          target    : $(element).data('target'),
-          top       : $(element).offset().top,
-          left      : $(element).offset().left,
-          width     : $(element).outerWidth(),
-          height    : $(element).outerHeight(),
-          placement : $(element).data('placement')
-      }
-      calcPosition(data);
-      $(data.target).show();
-    });
-  }
-
+  // Calc the position of popover called
   function calcPosition(data) {
     var style;
     switch (data.placement) {
       case 'top':
-        style = {
+        $(data.target).css({
           top : data.top  -=  12,
           left: data.left += (data.width/2 + 4)
-        }
+        });
         break;
       case 'right':
-        style = {
+        $(data.target).css({
           top : data.top  += (data.height/2 -2),
           left: data.left += (data.width + 12)
-        }
+        });
         break;
       case 'bottom':
-        style = {
+        $(data.target).css({
           top : data.top  += (data.height + 12),
           left: data.left += (data.width/2 + 4)
-        }
+        });
         break;
       case 'left':
-        style = {
+        $(data.target).css({
           top : data.top  += (data.height/2 -2 ),
           left: data.left -= 12
-        }
+        });
     }
-    return $(data.target).css(style);
   }
 
+  function bindPopover() {
+    $(document).on(config.events.created, function() {
+
+      // if ( !$(config.module).attr('data-trigger', 'hover').length ){
+      //   console.log('true')
+      // }
+      //
+      // var trigger = $(config.module).data('trigger') === 'hover' ? 'mouseover' : config.trigger;
+
+      $(config.module).on('click', function() {
+        $(this).trigger(config.events.clicked);
+        show($(this).data('target'));
+      });
+    });
+  }
+
+  // Show called popover
   function show(target) {
-    $('[data-target="' + target + '"]').trigger(config.events.clicked);
+    $(target).show();
   }
 
+  // Hide all or visible popovers
   function hide(target) {
     $(target || config.popoverClass+':visible').hide();
   }
 
+  // Destroy all created popovers
   function destroy() {
     $(config.popoverClass).remove();
+  }
+
+  // Define popover target that will be called
+  function setTarget(index, el) {
+    $(el).attr('data-target', config.idPopover+index);
   }
 
   return {
