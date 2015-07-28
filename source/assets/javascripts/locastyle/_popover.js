@@ -12,6 +12,9 @@ locastyle.popover = (function() {
     events: {
       created: 'popover:created',
       called: 'popover:called',
+      opened: 'popover:opened',
+      closed: 'popover:closed',
+      destroyed: 'popover:destroyed',
       builded: 'popover:builded',
       targetSetted: 'popover:hastarget',
       checkedExistence: 'popover:exist'
@@ -65,7 +68,7 @@ locastyle.popover = (function() {
       var trigger = $(popoverTrigger).attr('data-trigger') === 'hover' ? 'mouseover' : config.trigger;
 
       $(popoverTrigger).on(trigger, function() {
-        $(this).trigger(config.events.clicked);
+        $(this).trigger(config.events.called);
         show($(this).data('target'));
       });
 
@@ -122,11 +125,13 @@ locastyle.popover = (function() {
   // Show called popover
   function show(target) {
     $(target).show();
+    $(target).trigger(config.events.opened);
   }
 
   // Hide all or visible popovers
   function hide(target) {
     $(target || config.popoverClass+':visible').hide();
+    $(target).trigger(config.events.closed);
   }
 
   // Destroy all created popovers
@@ -138,6 +143,7 @@ locastyle.popover = (function() {
       $(document).unbind(event);
     });
 
+    $(document).trigger(config.events.destroyed);
   }
 
   return {
