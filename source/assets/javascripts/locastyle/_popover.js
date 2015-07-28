@@ -11,7 +11,7 @@ locastyle.popover = (function() {
     trigger      : 'click',
     events: {
       created: 'popover:created',
-      clicked: 'popover:clicked',
+      called: 'popover:called',
       builded: 'popover:builded',
       targetSetted: 'popover:hastarget',
       checkedExistence: 'popover:exist'
