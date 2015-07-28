@@ -114,11 +114,12 @@ locastyle.popover = (function() {
   // Destroy all created popovers
   function destroy() {
     $(config.popoverClass).remove();
-  }
 
-  // Define popover target that will be called
-  function setTarget(index, el) {
-    $(el).attr('data-target', config.idPopover+index);
+    // Unbind all events.
+    $.each(config.events, function(index, event) {
+      $(document).unbind(event);
+    });
+
   }
 
   return {
