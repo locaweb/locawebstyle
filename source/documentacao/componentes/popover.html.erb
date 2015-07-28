@@ -15,11 +15,6 @@ type: component
   </div>
   <% code("html") do %><%= partial 'documentacao/shared/popover' %><% end %>
 
-  <div class="ls-alert-info">
-    <h4 class="doc-title-5">No mobile, vira modal</h4>
-    <p>Quando resolução abaixo de 769px o popover muda seu comportamento e é exibido como uma modal, evitando problemas de usabilidade!</p>
-  </div>
-
   <h2 class="doc-title-3">Como usar</h2>
   <table class="ls-table">
     <thead>
@@ -32,10 +27,16 @@ type: component
     </thead>
     <tbody>
       <tr>
+        <td>data-ls-module</td>
+        <td>popover</td>
+        <td>-</td>
+        <td>inicia o módulo de popover. Deve ser colocado no elemento que chamará o popover</td>
+      </tr>
+      <tr>
         <td>data-trigger</td>
         <td>hover</td>
-        <td>click</td>
-        <td>cria o popover baseado na posição do elemento</td>
+        <td>-</td>
+        <td>define qual a interação pelo qual o popover irá aparecer. Por padrão, o popover só aparece com click, mas esse atributo substitui o click pelo <code>hover</code></td>
       </tr>
       <tr>
         <td>data-placement</td>
@@ -46,14 +47,8 @@ type: component
       <tr>
         <td>data-title</td>
         <td>text</td>
-        <td>--</td>
+        <td>-</td>
         <td>insere o título no popover</td>
-      </tr>
-      <tr>
-        <td>data-container</td>
-        <td>classe ou id</td>
-        <td>body</td>
-        <td>posiciona o popover de acordo com elemento clicado</td>
       </tr>
       <tr>
         <td>data-content</td>
@@ -64,8 +59,8 @@ type: component
       <tr>
         <td>data-custom-classes</td>
         <td>classe</td>
-        <td>--</td>
-        <td>permite inserir qualquer classe para customização do popover</td>
+        <td>-</td>
+        <td>permite inserir qualquer classe para customização do popover. Os valores colocados aqui, serão herdados pelo elemento do popover</td>
       </tr>
     </tbody>
   </table>
@@ -76,7 +71,6 @@ type: component
   </div>
   <% code("html") do %><a href="#" class="ls-btn-primary" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a><% end %>
 
-
   <h2 class="doc-title-3">Popover aberto ao carregar a página</h2>
   <p>Basta adicionar o atributo <code>data-ls-popover="open"</code>. </p>
   <div class="ls-box-demo">
@@ -86,16 +80,7 @@ type: component
     <a href="#" class="ls-ico-help" data-ls-popover="open" data-placement="right" data-ls-module="popover" title="Titulo" data-content="Exemplo de popover Aberto, <br> ao carregar a página."></a>
   <% end %>
 
-
-  <h2 class="doc-title-3">Exemplo classe funcional .ls-word-dotted</h2>
-  <div class="ls-box-demo">
-    <a href="#" class="ls-word-dotted" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a>
-  </div>
-  <% code("html") do %><a href="#" class="ls-word-dotted" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a><% end %>
-
-
   <h2 class="doc-title-3">Eventos</h2>
-  <p>Você pode escutar eventos de abre e fecha nos elementos de popover, isto é bom porque estes elementos são criados pelo próprio módulo e normalmente não sabemos identificá-los, com os eventos basta procurar pelo elemento onde foi disparado o evento e pronto.</p>
   <table class="ls-table">
     <thead>
       <tr>
@@ -105,27 +90,40 @@ type: component
     </thead>
     <tbody>
       <tr>
-        <th>popover:opened</th>
+        <th>popover:created</th>
         <td><p>Quando um popover abre, o evento <code>popover:opened</code> é disparado no elemento do popover, aquele que recebe a classe <code>ls-popover</code>. Veja exemplo abaixo.</p></td>
       </tr>
       <tr>
         <th>popover:closed</th>
         <td><p>Quando um popover fecha, o evento <code>popover:closed</code> é disparado no elemento do popover, aquele que recebe a classe <code>ls-popover</code>. Veja exemplo abaixo.</p></td>
       </tr>
+      <tr>
+        <th>popover:called</th>
+        <td><p>Quando o elemento que chama o popover é clicado (ou quando ouver hover), ele emite um evento chamado <code>popover:called</code>
+      </tr>
+      <tr>
+        <th>popover:destroyed</th>
+        <td><p>Quando os a função <code>locastyle.popover.destroy()</code> é acionado, ele emite um evento chamado <code>popover:destroyed</code></code>
+      </tr>
+      <tr>
+        <th>popover:builded</th>
+        <td><p>Quando o HTML do popover é criado, um trigger  <code>popover:builded</code> é disparado no <code>document</code> com o nome do elemento que chama este determinado popover.
+      </tr>
     </tbody>
   </table>
+  
   <p>Exemplo: </p>
 <% code("javascript") do %>
 // Um popover específico, caso você saiba o ID
 // (os IDs dos popovers são atribuidos pelo próprio módulo)
 $("#id-do-popover").on('popover:opened', function(){
   // do something
-})
+});
 
 // Todos os elementos de popover
 $(".ls-popover").on('popover:closed', function(){
   // do something
-})
+});
 <%end%>
 
 </section>
