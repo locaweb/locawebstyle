@@ -26,13 +26,13 @@ locastyle.popover = (function() {
     checkExists();
   }
 
+  // Check if popovers exists. If not, create that.
   function checkExists() {
     $(config.module).each(function(index, el) {
       if(!$(config.idPopover+index).length) {
-        buildPopover(index, el);
+        $(document).trigger(config.events.checkedExistence, [index, el]);
       }
     });
-    $(document).trigger(config.events.created);
   }
 
   function buildPopover(index, el) {
