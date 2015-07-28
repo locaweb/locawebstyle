@@ -19,8 +19,11 @@ locastyle.popover = (function() {
   }
 
   function init() {
-    checkExists();
     bindPopover();
+    setPosition();
+    setTarget();
+    buildPopover();
+    checkExists();
   }
 
   function checkExists() {
