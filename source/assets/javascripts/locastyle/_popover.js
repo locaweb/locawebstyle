@@ -61,20 +61,6 @@ locastyle.popover = (function() {
     });
   }
 
-  // When click or hover elements, show the popovers
-  function bindPopover() {
-    $(document).on(config.events.created, function(event, popoverTrigger) {
-
-      var trigger = $(popoverTrigger).attr('data-trigger') === 'hover' ? 'mouseover' : config.trigger;
-
-      $(popoverTrigger).on(trigger, function() {
-        $(this).trigger(config.events.called);
-        show($(this).data('target'));
-      });
-
-    });
-  }
-
   // Define position of popovers
   function setPosition() {
     $(document).on(config.events.targetSetted, function(event, popoverTrigger){
@@ -117,20 +103,36 @@ locastyle.popover = (function() {
       }
 
       // Communicate that all popovers was created.
-      $(document).trigger(config.events.created, [popoverTrigger]);
+      $(document).trigger(config.events.created, [popoverTrigger, data.target]);
     });
   }
 
+  // When click or hover elements, show the popovers
+  function bindPopover() {
+    $(document).on(config.events.created, function(event, popoverTrigger, popoverTarget) {
+
+      var trigger = $(popoverTrigger).attr('data-trigger') === 'hover' ? 'mouseover' : config.trigger;
+
+      $(popoverTrigger).on(trigger, function() {
+        if ($(popoverTarget).hasClass('ls-active')) {
+          hide(popoverTarget);
+        } else {
+          show(popoverTarget);
+        }
+        $(popoverTrigger).trigger(config.events.called, [popoverTrigger, popoverTarget]);
+      });
+    });
+  }
 
   // Show called popover
   function show(target) {
-    $(target).show();
+    $(target).addClass('ls-active');
     $(target).trigger(config.events.opened);
   }
 
   // Hide all or visible popovers
   function hide(target) {
-    $(target || config.popoverClass+':visible').hide();
+    $(target || config.popoverClass+':visible').removeClass('ls-active');
     $(target).trigger(config.events.closed);
   }
 
