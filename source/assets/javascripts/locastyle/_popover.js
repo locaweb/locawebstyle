@@ -10,8 +10,11 @@ locastyle.popover = (function() {
     popoverClass : '.ls-popover',
     trigger      : 'click',
     events: {
-      created: 'popover:ready',
+      created: 'popover:created',
       clicked: 'popover:clicked',
+      builded: 'popover:builded',
+      targetSetted: 'popover:hastarget',
+      checkedExistence: 'popover:exist'
     }
   }
 
