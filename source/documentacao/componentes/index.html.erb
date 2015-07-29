@@ -95,6 +95,14 @@ type: component
   </div>
   <% code("html") do %><%= partial 'documentacao/shared/abas-dropdown-nav' %><% end %>
 
+  <h2 class="doc-title-3">Combinação de abas normais com dropdown</h2>
+  <p>Você também pode juntar os dois itens acima e fazer uma combinação de abas normais com abas em formato de dropdown. Para isso, a estrutura muda um pouco. Confira abaixo.</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/abas-dropdown' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/abas-dropdown' %><% end %>
+
   <h2 class="doc-title-3">Eventos</h2>
   <table class="ls-table">
     <thead>
@@ -121,5 +129,9 @@ type: component
     // Do whatever you want.
   });
   <%end%>
+
+  <div class="ls-alert-warning" role="alert">
+    <strong>Atenção:</strong> Tanto os eventos de abas quanto os de dropdown continuam funcionando normalmente com as abordagens acima apresentadas.
+  </div>
 
 </section>
