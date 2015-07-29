@@ -28,6 +28,41 @@
         color: #333
         padding: 15px 16px 12px
 
+.ls-tabs-nav
+  .ls-dropdown-tabs
+    [class*="ls-btn"]
+      background-color: transparent
+      vertical-align: initial
+
+  li:not(.ls-active)
+    [class*="ls-dropdown"].ls-dropdown-tabs [class*="ls-btn"]
+      padding: 11px 12px 11px
+
+      &:after
+        border-top-color: #fff
+
+  li
+    [class*="ls-dropdown"].ls-dropdown-tabs [class*="ls-btn"]
+      border: 0
+      -webkit-transition: none
+      -moz-transition: none
+      -o-transition: none
+      transition: none
+
+      & + .in-dropdown
+        margin-left: -1px
+
+        li
+          width: 100%
+          background-color: transparent
+          border: none
+
+          a
+            width: 100%
+            color: #333
+            display: block
+            padding: 8px 20px
+
 .ls-tabs-container
   clear: both
   position: relative

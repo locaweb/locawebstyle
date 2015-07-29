@@ -23,10 +23,13 @@ locastyle.tabs = (function() {
     $('[data-ls-module="tabs"]').on('click.ls', function(evt) {
       evt.preventDefault();
       var $target = $($(this).attr('href') || $(this).data('target'));
+      var $closestTabNav = $(this).closest('.ls-tabs-nav');
+
       deactivateTab(this, $target);
       activateTab(this, $target);
-      if(isDropdownMode($(this).parents('.ls-tabs-nav'))){
-        updateTriggerLink($(this).parents('.ls-tabs-nav'));
+
+      if (isDropdownMode($closestTabNav)) {
+        updateTriggerLink($closestTabNav);
       }
     });
   }
@@ -56,32 +59,29 @@ locastyle.tabs = (function() {
 
   // update dropdown link with value of active tab
   function updateTriggerLink(tabNav) {
-    // clean the current trigger
-    $(tabNav).parents('.ls-dropdown-tabs').find('> a').remove();
-
-    // update with the new trigger
-    $(tabNav).parents('.ls-dropdown-tabs').prepend($(tabNav).find('li.ls-active').html());
-
-    // add style class on trigger
-    $(tabNav).parents('.ls-dropdown-tabs').find('> a').addClass('ls-btn');
-
-    // resets the dropdown module to catch the new trigger
-    locastyle.dropdown.init();
+    tabNav.closest('.ls-dropdown-tabs').find('> a').text(tabNav.find('li.ls-active > a').text());
   }
 
   // changes the tab to the dropdown mode
-  function dropdownShape(tabNav) {
-    // puts div dropdown around the tab navigation
-    $(tabNav).wrap('<div data-ls-module="dropdown" class="ls-dropdown-tabs">');
+  function dropdownShape(el) {
+    var tabNav = $(el);
 
-    // puts the active tab as link dropdown
-    updateTriggerLink(tabNav);
+    // puts div dropdown around the tab navigation and adds class amending style links used by dropdown toggle
+    tabNav.addClass('in-dropdown ls-dropdown-nav').wrap('<div data-ls-module="dropdown" class="ls-dropdown-tabs">');
 
-    // adds class amending style links
-    $(tabNav).addClass('in-dropdown');
+    // put all dropdown tabs items inside the dropdown mode
+    // note this next code block will be ignored if do not exist any element with that class name inside the tab
+    tabNav.find('.ls-dropdown-nav').each(function() {
+      tabNav.append($(this).html());
+      $(this).closest('li').remove();
+    });
 
-    // adds class used by dropdown to the toggle
-    $(tabNav).addClass('ls-dropdown-nav');
+    // creates the link necessary to control the dropdown with the actived item text
+    tabNav.parent('.ls-dropdown-tabs').prepend('<a data-ls-module="tabs" class="ls-btn">' + tabNav.find('li.ls-active > a').text() + '</a>');
+
+    // init the tabs and dropdown modules
+    locastyle.tabs.init();
+    locastyle.dropdown.init();
   }
 
   // activates the flap in accordance with the received arguments
