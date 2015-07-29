@@ -63,18 +63,25 @@ locastyle.tabs = (function() {
   }
 
   // changes the tab to the dropdown mode
-  function dropdownShape(tabNav) {
-    // puts div dropdown around the tab navigation
-    tabNav.wrap('<div data-ls-module="dropdown" class="ls-dropdown-tabs">');
+  function dropdownShape(el) {
+    var tabNav = $(el);
 
-    // puts the active tab as link dropdown
-    updateTriggerLink(tabNav);
+    // puts div dropdown around the tab navigation and adds class amending style links used by dropdown toggle
+    tabNav.addClass('in-dropdown ls-dropdown-nav').wrap('<div data-ls-module="dropdown" class="ls-dropdown-tabs">');
 
-    // adds class amending style links
-    tabNav.addClass('in-dropdown');
+    // put all dropdown tabs items inside the dropdown mode
+    // note this next code block will be ignored if do not exist any element with that class name inside the tab
+    tabNav.find('.ls-dropdown-nav').each(function() {
+      tabNav.append($(this).html());
+      $(this).closest('li').remove();
+    });
 
-    // adds class used by dropdown to the toggle
-    tabNav.addClass('ls-dropdown-nav');
+    // creates the link necessary to control the dropdown with the actived item text
+    tabNav.parent('.ls-dropdown-tabs').prepend('<a data-ls-module="tabs" class="ls-btn">' + tabNav.find('li.ls-active > a').text() + '</a>');
+
+    // init the tabs and dropdown modules
+    locastyle.tabs.init();
+    locastyle.dropdown.init();
   }
 
   // activates the flap in accordance with the received arguments
