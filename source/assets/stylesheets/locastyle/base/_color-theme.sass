@@ -159,6 +159,21 @@
     .ls-info-header [class*="ls-title"]
       color: $color1
 
+
+    ////
+    // Shop cart
+    ////
+    .ls-checkbox-cart
+      &:checked
+        ~ .ls-cart-header
+          color: mix($color-mix, $color1, 20%)!important
+
+          .ls-ico-cart, strong
+            color: mix($color-mix, $color1, 20%)!important
+
+    .ls-cart-header
+      +rgba(background-color, $color2,1)
+
     ////
     // Buttons
     ////

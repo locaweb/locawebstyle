@@ -1,0 +1,125 @@
+$border: 1px solid #e5e5e5
+
+.ls-cart
+  width: 100%
+  position: relative
+
+  .ls-checkbox-cart
+    width: 100%
+    height: 65px
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    cursor: pointer
+
+    &:checked
+      ~ .ls-cart-content
+        display: block
+        border: 1px solid #c3c3c3
+        border-top: 0
+        position: absolute
+        width: inherit
+        background: #fff
+        border-radius: 0 0 5px 5px
+
+      ~ .ls-cart-header
+        width: 100%
+        background: #fff
+        border: 1px solid #c3c3c3
+        border-bottom: 0
+        border-radius: 5px 5px 0 0
+
+        .ls-ico-cart, strong
+          color: $gray3
+
+        &:before
+          color: $gray3
+          +rotate(180deg)
+          +transition (all .35s ease)
+
+  .ls-cart-header
+    width: 100%
+    padding: 19px 15px
+    border-radius: 5px
+    z-index: 9
+    display: block
+    color: #fff
+
+    small
+      text-transform: uppercase
+      font-size: 12px
+      display: block
+
+    strong
+      font-size: 14px
+
+    &:before
+      +rotate(0deg)
+      +transition (all .35s ease)
+      font: 12px "Locastyle"
+      color: #fff
+      pointer-events: none
+      content: "\e60f"
+      position: absolute
+      right: 20px
+      top: 39%
+
+  .ls-cart-content
+    display: none
+
+  .ls-ico-cart
+    margin-right: 5px
+    font-size: remtopx(1.875)
+    color: #fff
+
+  ul
+    max-height: 345px
+    overflow-y: auto
+    border-top: $border
+
+    li
+      padding: 20px 10px
+      border-bottom: $border
+      font-size: 14px
+      position: relative
+
+      a
+        position: absolute
+        top: 20px
+        right: 10px
+        @extend .ls-color-danger
+
+      .ls-title-product
+        margin-bottom: 0
+        max-width: 70%
+        font-weight: normal
+        @extend .ls-ellipsis
+        @extend .ls-title-6
+
+        strong
+          font-weight: bold
+
+      p
+        display: inherit
+        margin-left: 20px
+        font-size: 11px
+        margin-top: 0
+        margin-bottom: 0
+        padding: 0
+
+  .ls-cart-footer
+    border-top: $border
+    background: #f7f7f7
+    padding: 20px 0
+    border-radius: 0 0 5px 5px
+
+@media screen and (max-width: $screen-sm)
+
+  .ls-cart
+    ul
+      li
+        a
+          position: relative
+          left: 20px
+          top: 5px
