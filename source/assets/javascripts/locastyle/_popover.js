@@ -110,7 +110,6 @@ locastyle.popover = (function() {
   // When click or hover elements, show the popovers
   function bindPopover() {
     $(document).on(config.events.created, function(event, popoverTrigger, popoverTarget) {
-
       var trigger = $(popoverTrigger).attr('data-trigger') === 'hover' ? 'mouseover' : config.trigger;
 
       $(popoverTrigger).on(trigger, function() {
@@ -119,8 +118,14 @@ locastyle.popover = (function() {
         } else {
           show(popoverTarget);
         }
+
         $(popoverTrigger).trigger(config.events.called, [popoverTrigger, popoverTarget]);
       });
+      if (trigger === 'mouseover') {
+        $(popoverTrigger).on('mouseout', function() {
+          hide(popoverTarget);
+        });
+      }
     });
   }
 
