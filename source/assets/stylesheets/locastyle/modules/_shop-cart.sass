@@ -1,7 +1,6 @@
 $border: 1px solid #e5e5e5
 
 .ls-cart
-  font-family: "Locastyle"
   width: 100%
   position: relative
 
@@ -58,7 +57,7 @@ $border: 1px solid #e5e5e5
     &:before
       +rotate(0deg)
       +transition (all .35s ease)
-      font-size: 12px
+      font: 12px "Locastyle"
       color: #fff
       pointer-events: none
       content: "\e60f"
@@ -75,16 +74,52 @@ $border: 1px solid #e5e5e5
     color: #fff
 
   ul
-    max-height: 140px
+    max-height: 345px
     overflow-y: auto
     border-top: $border
 
     li
       padding: 20px 10px
       border-bottom: $border
+      font-size: 14px
+      position: relative
+
+      a
+        position: absolute
+        top: 20px
+        right: 10px
+        @extend .ls-color-danger
+
+      .ls-title-product
+        margin-bottom: 0
+        max-width: 70%
+        font-weight: normal
+        @extend .ls-ellipsis
+        @extend .ls-title-6
+
+        strong
+          font-weight: bold
+
+      p
+        display: inherit
+        margin-left: 20px
+        font-size: 11px
+        margin-top: 0
+        margin-bottom: 0
+        padding: 0
 
   .ls-cart-footer
     border-top: $border
     background: #f7f7f7
     padding: 20px 0
     border-radius: 0 0 5px 5px
+
+@media screen and (max-width: $screen-sm)
+
+  .ls-cart
+    ul
+      li
+        a
+          position: relative
+          left: 20px
+          top: 5px
