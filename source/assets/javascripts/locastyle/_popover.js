@@ -4,127 +4,117 @@ locastyle.popover = (function() {
   'use strict';
 
   var config = {
-    container    : 'body',
     module       : '[data-ls-module="popover"]',
     idPopover    : '#ls-popover-',
     popoverClass : '.ls-popover',
     trigger      : 'click',
     events: {
-      created: 'popover:created',
-      called: 'popover:called',
       opened: 'popover:opened',
       closed: 'popover:closed',
-      destroyed: 'popover:destroyed',
-      builded: 'popover:builded',
-      targetSetted: 'popover:hastarget',
-      checkedExistence: 'popover:exist'
+      destroyed: 'popover:destroyed'
     }
   }
 
   function init() {
-    bindPopover();
-    setPosition();
-    setTarget();
     buildPopover();
-    checkExists();
-  }
-
-  // Check if popovers exists. If not, create that.
-  function checkExists() {
-    $(config.module).each(function(index, el) {
-      if(!$(config.idPopover+index).length) {
-        $(document).trigger(config.events.checkedExistence, [index, el]);
-      }
-    });
-  }
-
-  // Build the HTML of popovers using a template
-  function buildPopover() {
-    $(document).on(config.events.checkedExistence, function(event, index, popoverTrigger){
-      var data = {
-        index        : index,
-        title        : $(popoverTrigger).data('title'),
-        content      : $(popoverTrigger).data('content'),
-        placement    : $(popoverTrigger).data('placement'),
-        customClasses: $(popoverTrigger).data('custom-class')
-      }
-      $(config.container).append(locastyle.templates.popover(data));
-      $(document).trigger(config.events.builded, [index, popoverTrigger]);
-    });
-  }
-
-  // Define popover target that will be called
-  function setTarget() {
-    $(document).on(config.events.builded, function(event, index, popoverTrigger){
-      $(popoverTrigger).attr('data-target', config.idPopover+index);
-      $(document).trigger(config.events.targetSetted, [popoverTrigger]);
-    });
-  }
-
-  // Define position of popovers
-  function setPosition() {
-    $(document).on(config.events.targetSetted, function(event, popoverTrigger){
-
-      // Get the informations to position the popovers
-      var data = {
-          target    : $(popoverTrigger).data('target'),
-          top       : $(popoverTrigger).offset().top,
-          left      : $(popoverTrigger).offset().left,
-          width     : $(popoverTrigger).outerWidth(),
-          height    : $(popoverTrigger).outerHeight(),
-          placement : $(popoverTrigger).data('placement')
-      }
-
-      // Define the position of popovers and your elements triggers
-      switch (data.placement) {
-        case 'top':
-          $(data.target).css({
-            top : data.top  -=  12,
-            left: data.left += (data.width/2 + 4)
-          });
-          break;
-        case 'right':
-          $(data.target).css({
-            top : data.top  += (data.height/2 -2),
-            left: data.left += (data.width + 12)
-          });
-          break;
-        case 'bottom':
-          $(data.target).css({
-            top : data.top  += (data.height + 12),
-            left: data.left += (data.width/2 + 4)
-          });
-          break;
-        case 'left':
-          $(data.target).css({
-            top : data.top  += (data.height/2 -2 ),
-            left: data.left -= 12
-          });
-      }
-
-      // Communicate that all popovers was created.
-      $(document).trigger(config.events.created, [popoverTrigger, data.target]);
-    });
+    bindPopover();
   }
 
   // When click or hover elements, show the popovers
   function bindPopover() {
-    $(document).on(config.events.created, function(event, popoverTrigger, popoverTarget) {
+    $(config.module).each(function(index, popoverTrigger) {
       var trigger = $(popoverTrigger).attr('data-trigger') === 'hover' ? 'mouseover' : config.trigger;
 
       $(popoverTrigger).on(trigger, function() {
+        var popoverTarget = $(popoverTrigger).data('target');
+
         if ($(popoverTarget).hasClass('ls-active')) {
           hide(popoverTarget);
         } else {
-          show(popoverTarget);
+          setTimeout(function(){
+            show(popoverTarget)
+          },100);
+          clickAnywhereClose(popoverTarget);
+        }
+        if (trigger === 'mouseover') {
+          $(popoverTrigger).on('mouseout', function() {
+            hide(popoverTarget);
+          });
         }
 
-        $(popoverTrigger).trigger(config.events.called, [popoverTrigger, popoverTarget]);
       });
-      if (trigger === 'mouseover') {
-        $(popoverTrigger).on('mouseout', function() {
-          hide(popoverTarget);
+    });
+
+  }
+
+  // If popover was not created, we build the HTML using a template
+  function buildPopover() {
+    $(config.module).each(function(index, popoverTrigger) {
+
+      // Add attr data-target to popover triggers
+      $(popoverTrigger).attr('data-target', config.idPopover+index);
+
+      if (!$(config.idPopover+index).length) {
+        var data = {
+          index        : index,
+          title        : $(popoverTrigger).data('title'),
+          content      : $(popoverTrigger).data('content'),
+          placement    : $(popoverTrigger).data('placement'),
+          customClasses: $(popoverTrigger).data('custom-class')
+        }
+
+        $('body').append(locastyle.templates.popover(data));
+
+        // Define position of popovers based on his triggers
+        setPosition(popoverTrigger);
+      }
+    });
+  }
+
+  // Define position of popovers
+  function setPosition(popoverTrigger) {
+    var data = {
+        target    : $(popoverTrigger).data('target'),
+        top       : $(popoverTrigger).offset().top,
+        left      : $(popoverTrigger).offset().left,
+        width     : $(popoverTrigger).outerWidth(),
+        height    : $(popoverTrigger).outerHeight(),
+        placement : $(popoverTrigger).data('placement')
+    }
+
+    // Define the position of popovers and your elements triggers
+    switch (data.placement) {
+      case 'top':
+        $(data.target).css({
+          top : data.top  -=  12,
+          left: data.left += (data.width/2 + 4)
         });
+        break;
+      case 'right':
+        $(data.target).css({
+          top : data.top  += (data.height/2 -2),
+          left: data.left += (data.width + 12)
+        });
+        break;
+      case 'bottom':
+        $(data.target).css({
+          top : data.top  += (data.height + 12),
+          left: data.left += (data.width/2 + 4)
+        });
+        break;
+      case 'left':
+        $(data.target).css({
+          top : data.top  += (data.height/2 -2 ),
+          left: data.left -= 12
+        });
+    }
+
+  }
+
+  function clickAnywhereClose(popoverTarget) {
+    $(document).on('click.ls', function(evt){
+      if ($(popoverTarget).is(':visible') && !$(evt.target).parents(popoverTarget).length) {
+        hide('.ls-popover.ls-active');
       }
     });
   }
@@ -138,7 +128,7 @@ locastyle.popover = (function() {
   // Hide all or visible popovers
   function hide(target) {
     $(target || config.popoverClass+':visible').removeClass('ls-active');
-    $(target).trigger(config.events.closed);
+    $(target).trigger(config.events.closed).unbind(config.events.opened);
   }
 
   // Destroy all created popovers
