@@ -9,6 +9,7 @@ locastyle.popover = (function() {
     popoverClass : '.ls-popover',
     trigger      : 'click',
     events: {
+      clickAnywhere: 'click.clickanywhere',
       opened: 'popover:opened',
       closed: 'popover:closed',
       destroyed: 'popover:destroyed'
@@ -16,6 +17,7 @@ locastyle.popover = (function() {
   }
 
   function init() {
+    clickAnywhereClose();
     buildPopover();
     bindPopover();
   }
@@ -25,17 +27,19 @@ locastyle.popover = (function() {
     $(config.module).each(function(index, popoverTrigger) {
       var trigger = $(popoverTrigger).attr('data-trigger') === 'hover' ? 'mouseover' : config.trigger;
 
-      $(popoverTrigger).on(trigger, function() {
+      $(popoverTrigger).on(trigger, function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
         var popoverTarget = $(popoverTrigger).data('target');
 
         if ($(popoverTarget).hasClass('ls-active')) {
           hide(popoverTarget);
         } else {
-          setTimeout(function(){
-            show(popoverTarget)
-          },100);
-          clickAnywhereClose(popoverTarget);
+          show(popoverTarget);
+          clickAnywhereClose(popoverTarget)
         }
+
         if (trigger === 'mouseover') {
           $(popoverTrigger).on('mouseout', function() {
             hide(popoverTarget);
@@ -46,6 +50,15 @@ locastyle.popover = (function() {
     });
 
   }
+
+  function clickAnywhereClose(target) {
+    $(document).on(config.events.clickAnywhere, function(event){
+      if(!$(event.target).parents('.ls-popover').length){
+        hide(target);
+      }
+    });
+  }
+
 
   // If popover was not created, we build the HTML using a template
   function buildPopover() {
@@ -111,24 +124,23 @@ locastyle.popover = (function() {
 
   }
 
-  function clickAnywhereClose(popoverTarget) {
-    $(document).on('click.ls', function(evt){
-      if ($(popoverTarget).is(':visible') && !$(evt.target).parents(popoverTarget).length) {
-        hide('.ls-popover.ls-active');
-      }
-    });
-  }
-
   // Show called popover
   function show(target) {
+    $(target).on(config.events.opened, function(){
+      console.log('opened', target)
+    });
     $(target).addClass('ls-active');
-    $(target).trigger(config.events.opened);
+    $(target).off(config.events.closed).trigger(config.events.opened);
   }
 
   // Hide all or visible popovers
   function hide(target) {
-    $(target || config.popoverClass+':visible').removeClass('ls-active');
-    $(target).trigger(config.events.closed).unbind(config.events.opened);
+    $(target).on(config.events.closed, function(){
+      console.log('closed', target)
+    });
+    $(target || '.ls-popover.ls-active').removeClass('ls-active');
+    $(target).trigger(config.events.closed).off(config.events.opened)
+    $(document).off(config.events.clickAnywhere)
   }
 
   // Destroy all created popovers
