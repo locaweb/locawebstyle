@@ -20,6 +20,7 @@ locastyle.popover = (function() {
     clickAnywhereClose();
     buildPopover();
     bindPopover();
+    startOpened();
   }
 
   // When click or hover elements, show the popovers
@@ -59,6 +60,12 @@ locastyle.popover = (function() {
     });
   }
 
+  // When open page, start popover automatically
+  function startOpened() {
+    $(config.module+'[data-ls-popover="open"]').each(function() {
+      show($(this).data('target'));
+    });
+  }
 
   // If popover was not created, we build the HTML using a template
   function buildPopover() {
@@ -126,18 +133,12 @@ locastyle.popover = (function() {
 
   // Show called popover
   function show(target) {
-    $(target).on(config.events.opened, function(){
-      console.log('opened', target)
-    });
     $(target).addClass('ls-active');
     $(target).off(config.events.closed).trigger(config.events.opened);
   }
 
   // Hide all or visible popovers
   function hide(target) {
-    $(target).on(config.events.closed, function(){
-      console.log('closed', target)
-    });
     $(target || '.ls-popover.ls-active').removeClass('ls-active');
     $(target).trigger(config.events.closed).off(config.events.opened)
     $(document).off(config.events.clickAnywhere)
