@@ -2,9 +2,9 @@ describe('Popover: ', function() {
   beforeEach(function() {
     loadFixtures('popover_fixture.html');
     locastyle.breakpointClass = "ls-window-lg";
-    locastyle.popover.destroy();
     locastyle.popover.init();
   });
+
 
   describe('Popover creation', function() {
 
@@ -34,68 +34,57 @@ describe('Popover: ', function() {
     });
 
     it('Should add ls-active class on opened popover', function() {
-      $('#popoverclick').click(); // click to open
-      expect($('.ls-popover').eq(0)).toHaveClass('ls-active');
+      $('#popoverclick2').click(); // click to open
+      var target = $('#popoverclick2').data('target');
+      expect($(target)).toHaveClass('ls-active');
     });
 
     // Click Closing Popover
     it('Should close .ls-popover removing class ls-active', function() {
-      $('#popoverclick').click(); // click to open
-      $('#popoverclick').click(); // and now click to close
-      expect($('.ls-popover').eq(0).hasClass('ls-active')).toEqual(false);
+      $('#popoverclick2').click(); // click to open
+      var target = $('#popoverclick2').data('target');
+      expect($(target).hasClass('ls-active')).toEqual(false);
     });
 
     it("Should trigger the event popover:closed when it closes by click", function() {
-      var id = $('.ls-popover').eq(0).attr("id");
-      var popoverToOpen = "#" + id;
-      var spyEvent = spyOnEvent(popoverToOpen, 'popover:closed');
-      $('#popoverclick').click(); // click to open
+      var target = $('#popoverclick').data('target');
+      var spyEvent = spyOnEvent($(target), 'popover:closed');
       $('#popoverclick').click(); // and now click to close
-      expect('popover:closed').toHaveBeenTriggeredOn(popoverToOpen);
+      expect('popover:closed').toHaveBeenTriggeredOn( $(target));
     });
 
     // Hover Opening Popover
-    it('Should show a popover on hover event', function() {
+    it('Should show a popover on hover event and trigger popover:opened', function() {
+      var target = $('#popoverhover').data('target');
+      var spyEvent = spyOnEvent($(target), 'popover:opened');
       $('#popoverhover').trigger('mouseenter');
-      expect($('.ls-popover').eq(1)).toHaveClass('ls-active');
-    });
-
-    it("Should trigger the event popover:opened when it opens by mouseenter", function() {
-      var id = $('.ls-popover').eq(1).attr("id");
-      var popoverToOpen = "#" + id;
-      var spyEvent = spyOnEvent(popoverToOpen, 'popover:opened');
-      $('#popoverhover').trigger('mouseenter');
-      expect('popover:opened').toHaveBeenTriggeredOn(popoverToOpen);
+      expect('popover:opened').toHaveBeenTriggeredOn($(target));
+      expect($(target)).toHaveClass('ls-active');
     });
 
     it('Should close a popover on mouseleave event', function() {
-      $('#popoverhover').trigger('mouseleave');
-      expect($('.ls-popover').eq(1).hasClass('ls-active')).toEqual(false);
-    });
-
-    it("Should trigger the event popover:closed when it closes by mouseout", function() {
-      var id = $('.ls-popover').eq(1).attr("id");
-      var popoverToClose = "#" + id;
-      var spyEvent = spyOnEvent(popoverToClose, 'popover:closed');
+      var target = $('#popoverhover').data('target');
+      var spyEvent = spyOnEvent($(target), 'popover:closed');
       $('#popoverhover').trigger('mouseenter');
       $('#popoverhover').trigger('mouseleave');
-      expect('popover:closed').toHaveBeenTriggeredOn(popoverToClose);
+      expect('popover:closed').toHaveBeenTriggeredOn($(target));
+      expect($(target).hasClass('ls-active')).toEqual(false);
     });
-  });
 
-  // Testing Unbind
-  describe('[unbind] When init is called multiple times', function () {
+    // Testing Unbind
+    describe('[unbind] When init is called multiple times', function () {
 
-    it('should bind events on popover elements only one time', function () {
-      locastyle.init();
-      locastyle.init();
-      locastyle.init();
-      var $popoverTrigger = $('#popoverclick');
-      var $popover = $('#ls-popover-' + $popoverTrigger.data('idPopover'));
-      $popover.hide();
-      $popoverTrigger.click();
-      $popoverTrigger.click();
-      expect( $popover ).not.toBeVisible();
+      it('should bind events on popover elements only one time', function () {
+        locastyle.init();
+        locastyle.init();
+        locastyle.init();
+        var $popoverTrigger = $('#popoverclick');
+        var $popover = $('#ls-popover-' + $popoverTrigger.data('idPopover'));
+        $popover.hide();
+        $popoverTrigger.click();
+        $popoverTrigger.click();
+        expect( $popover ).not.toBeVisible();
+      });
     });
   });
 
