@@ -57,7 +57,6 @@ locastyle.popover = (function() {
       if(!$(event.target).parents('.ls-popover').length){
         hide(target);
       }
-      console.log('yeah')
     });
   }
 
@@ -102,7 +101,6 @@ locastyle.popover = (function() {
         height    : $(popoverTrigger).outerHeight(),
         placement : $(popoverTrigger).data('placement')
     }
-    console.log(data.target)
 
     // Define the position of popovers and your elements triggers
     switch (data.placement) {
