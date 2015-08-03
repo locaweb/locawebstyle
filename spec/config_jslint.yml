@@ -256,3 +256,4 @@ predef:
   - hide
   - show
   - setPosition
+  - addMobileStepsIndex

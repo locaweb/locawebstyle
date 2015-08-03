@@ -31,7 +31,7 @@ locastyle.steps = (function() {
     ariaSteps();
     addAriaLabel();
     addActivedNav();
-    addMobileStepsData();
+    addMobileStepsIndex();
     bindClickOnTriggers();
     bindNextStep();
     bindPrevStep();
@@ -58,7 +58,7 @@ locastyle.steps = (function() {
     $(config.selectors.container).attr({ 'aria-hidden' : true, 'role' : 'tabpanel' });
   }
 
-  function addMobileStepsData() {
+  function addMobileStepsIndex() {
     var steps = $(config.selectors.nav).find('li');
 
     steps.each(function(index) {
