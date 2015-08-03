@@ -88,6 +88,11 @@ locastyle.popover = (function() {
         // Define position of popovers based on his triggers
         setPosition(popoverTrigger);
       }
+
+      $(window).on('breakpoint-updated', function(){
+        setPosition(popoverTrigger);
+      });
+
     });
   }
 
