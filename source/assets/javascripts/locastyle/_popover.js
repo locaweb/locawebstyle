@@ -57,6 +57,7 @@ locastyle.popover = (function() {
       if(!$(event.target).parents('.ls-popover').length){
         hide(target);
       }
+      console.log('yeah')
     });
   }
 
@@ -141,8 +142,13 @@ locastyle.popover = (function() {
   function hide(target) {
     $(target || '.ls-popover.ls-active').removeClass('ls-active');
     $(target).trigger(config.events.closed).off(config.events.opened)
-    $(document).off(config.events.clickAnywhere)
+
+    if(!$('.ls-popover.ls-active').length) {
+      $(document).off(config.events.clickAnywhere)
+    }
+
   }
+
 
   // Destroy all created popovers
   function destroy() {
