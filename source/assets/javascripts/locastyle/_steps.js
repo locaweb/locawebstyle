@@ -31,6 +31,7 @@ locastyle.steps = (function() {
     ariaSteps();
     addAriaLabel();
     addActivedNav();
+    addMobileStepsIndex();
     bindClickOnTriggers();
     bindNextStep();
     bindPrevStep();
@@ -55,6 +56,14 @@ locastyle.steps = (function() {
     $(config.selectors.nav).find('.ls-active .ls-steps-btn').attr('aria-selected' , 'true');
     $(config.selectors.button).attr('role' , 'tab');
     $(config.selectors.container).attr({ 'aria-hidden' : true, 'role' : 'tabpanel' });
+  }
+
+  function addMobileStepsIndex() {
+    var steps = $(config.selectors.nav).find('li');
+
+    steps.each(function(index) {
+      $(this).attr('data-mobile-step-index', (index + 1) + ' de ' + steps.length);
+    });
   }
 
   //Add aria-label in the navigation
@@ -150,6 +159,9 @@ locastyle.steps = (function() {
     var $heightNav = $(config.selectors.nav).height();
 
     $(window).scroll(function() {
+      if ($(window).width() < 768) {
+        return;
+      }
      if ($(window).scrollTop() > offset.top ) {
         var $scroll = parseInt($(window).scrollTop() - $heightNav, 10);
 

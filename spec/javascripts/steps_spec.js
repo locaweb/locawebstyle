@@ -14,6 +14,14 @@ describe("Steps: ", function(){
       it('actives the step that has ls-active class', function(){
         expect($('#step2').hasClass('ls-active')).toBe(true);
       });
+
+      it('should have the data-mobile-step-index attribute on each li item', function() {
+        var items = $('.ls-steps-nav li');
+
+        items.each(function(index) {
+          expect($(this).data('mobile-step-index')).toBe((index + 1) + ' de ' + items.length);
+        });
+      });
     });
   });
 

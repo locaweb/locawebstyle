@@ -3,48 +3,39 @@ $with-steps: 85px
 .ls-steps
   @extend .ls-clearfix
   position: relative
-  margin: 15px 0 15px -15px
+  margin: 0
   padding-top: 15px
 
 .ls-steps-nav
-  list-style: none
-  margin: 0
+  width: 100%
+  height: 35px
   counter-reset: steps
-  position: absolute
-  top: 10px
-  left: 15px
-  z-index: 11
-  width: $with-steps
-
-  &:before
-    content: ""
-    border-right: 1px solid $gray2
-    position: absolute
-    height: 100%
-    right: 29px
-    top: 0
+  list-style: none
+  position: relative
+  margin: 0
 
   li
+    width: 100%
     counter-increment: steps
-    padding-bottom: 20px
-    position: relative
+    position: absolute
+    top: 0
+    left: 0
 
-    &:last-child
-      padding-bottom: 0
+    &:not(.ls-active)
+      opacity: 0
+      visibility: hidden
 
-      &:before
-        display: none
-
-    &:before
-      content: ""
-      border-left: 3px dotted $gray2
-      height: 100%
-      left: 16px
+    &:after
+      color: $gray3
+      content: attr(data-mobile-step-index)
+      font-size: 15px
+      line-height: 15px
       position: absolute
-      top: 24px
-      z-index: 1
+      top: 9px
+      right: 0
 
 .ls-steps-btn
+  width: 100%
   background: #fff
   border: none
   cursor: none
@@ -56,6 +47,7 @@ $with-steps: 85px
   padding-right: 5px
   pointer-events: none
   position: relative
+  text-align: left
 
   .ls-active &,
   .ls-actived &
@@ -80,7 +72,6 @@ $with-steps: 85px
       content: "\e63d"
       font-family: 'locastyle'
       font-size: remtopx(1)
-
 
   &:hover,
   &:focus,
@@ -107,9 +98,15 @@ $with-steps: 85px
     z-index: 2
 
   &:after
+    width: calc(100% - 95px) // This 95px is the sum of the before item, margin left and a little differece to complete the distance from the mobile steps index.
     content: attr(aria-label)
-    position: absolute
-    top: -999999px
+    display: inline-block
+    font-weight: 600
+    overflow: hidden
+    text-overflow: ellipsis
+    vertical-align: middle
+    white-space: nowrap
+    margin-left: 10px
 
 .ls-steps-arrow
   +single-transition(all, .25s, linear)
@@ -154,11 +151,10 @@ $with-steps: 85px
     z-index: 1
 
 .ls-steps-main
-  border-left: 1px solid $gray2
+  border-top: 1px solid $gray2
   position: relative
-  margin-left: 70px
-  padding-left: 15px
-  padding-right: 15px
+  padding-top: 30px
+  margin-top: 10px
 
 .ls-steps-content
   position: relative
@@ -182,21 +178,63 @@ $with-steps: 85px
 
   $with-steps: 250px
 
+  .ls-steps
+    margin: 15px 0 15px -15px
+
   .ls-steps-nav
-    left: 15px
     width: $with-steps
+    position: absolute
+    z-index: 11
+    top: 10px
+    left: 15px
+
+    &:before
+      content: ""
+      border-right: 1px solid $gray2
+      position: absolute
+      height: 100%
+      right: 29px
+      top: 0
+
+    li
+      width: auto
+      position: relative
+      padding-bottom: 20px
+
+      &:not(.ls-active)
+        opacity: 1
+        visibility: visible
+
+      &:last-child:before
+        display: none
+
+      &:before
+        content: ""
+        border-left: 3px dotted $gray2
+        height: 100%
+        left: 16px
+        position: absolute
+        top: 24px
+        z-index: 1
+
+      &:after
+        display: none
 
   .ls-steps-main
-    margin-left: 235px
-    padding-left: 25px
+    border-top: 0
+    border-left: 1px solid $gray2
+    padding: 0 15px 0 25px
+    margin: 0 0 0 235px
 
   .ls-steps-arrow
     .ls-active &
       display: block
 
   .ls-steps-btn
+    width: auto
 
     &:after
+      font-weight: 300
       position: relative
       top: 0
       margin-left: 10px
