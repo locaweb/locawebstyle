@@ -104,13 +104,6 @@ locastyle.popover = (function() {
 
     // Define the position of popovers and your elements triggers
     switch (data.placement) {
-      default:
-      case 'top':
-        $(data.target).css({
-          top : data.top  -=  12,
-          left: data.left += (data.width/2 + 4)
-        });
-        break;
       case 'right':
         $(data.target).css({
           top : data.top  += (data.height/2 -2),
@@ -128,6 +121,14 @@ locastyle.popover = (function() {
           top : data.top  += (data.height/2 -2 ),
           left: data.left -= 12
         });
+        break;
+      default:
+      case 'top':
+        $(data.target).css({
+          top : data.top  -=  12,
+          left: data.left += (data.width/2 + 4)
+        });
+
     }
 
   }
