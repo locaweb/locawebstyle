@@ -3,9 +3,13 @@
 namespace :tests do
   desc "Run all Locastyle tests"
   task :run do
-    puts "Running Jasmine tests..."
+    puts "\n\n############################# \n Starting Jasmine tests... \n#############################"
     Rake::Task["jasmine:ci"].invoke
 
+    puts "\n\n############################# \n Starting JSHint tests... \n#############################"
     Rake::Task["jshint"].invoke
+
+    puts "\n\n############################# \n Starting Wraith tests... \n#############################"
+    sh %{wraith latest spec/diff/configs/config.yaml} # Running regression test of CSS diff image
   end
 end
