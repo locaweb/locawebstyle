@@ -61,7 +61,7 @@ locastyle.modal = (function() {
   function open(button) {
     var $element = button.data(),
         $target = null;
-    
+
     $('body').addClass(config.classes.open);
 
     if (!$element.target) {
@@ -72,7 +72,7 @@ locastyle.modal = (function() {
     } else {
       $target = $($element.target);
     }
-    
+
     $target.addClass('ls-opened');
 
     // This event return two arguments: element clicked and target.
@@ -89,15 +89,12 @@ locastyle.modal = (function() {
 
     $this.attr('aria-hidden', true);
     $this.removeClass('ls-opened');
-    
-    unbindClose();
 
-    locastyle.popover.destroyPopover(); //add trigger on popover
-    locastyle.popover.init(); ///add trigger on popover
+    unbindClose();
 
     // This event return one argument: element target.
     $this.trigger(config.close.triggerClosed);
-    
+
     if($this.hasClass('ls-modal-template')) {
       $this.remove();
     }

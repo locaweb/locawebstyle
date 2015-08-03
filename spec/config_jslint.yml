@@ -249,3 +249,10 @@ predef:
   - eventHandler
   - Pikaday
   - createWithRange
+  - clickAnywhereClose
+  - buildPopover
+  - bindPopover
+  - startOpened
+  - hide
+  - show
+  - setPosition

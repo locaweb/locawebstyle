@@ -17,7 +17,7 @@
             }),
             function() {
                 (function() {
-                    n.push('<div id="ls-popover-'), n.push(e(this.uniqueId)), n.push('" class="ls-popover ls-popover-'), n.push(e(this.placement)), n.push(" "), n.push(e(this.customClasses)), n.push('" style="top:'), n.push(e(this.position.top)), n.push("px; left:"), n.push(e(this.position.left)), n.push('px;">\n  '), this.title && (n.push('\n  <div class="ls-popover-header">\n    <h3 class="title-3"> '), n.push(e(this.title)), n.push(" </h3>\n  </div>\n  ")), n.push("\n  "), this.content && n.push("\n  "), n.push('\n  <div class="ls-popover-content"> '), n.push(this.content), n.push(" </div>\n</div>\n")
+                    n.push('<div id="ls-popover-'), n.push(e(this.index)), n.push('" class="ls-popover ls-popover-'), n.push(e(this.placement)), n.push(" "), n.push(e(this.customClasses)), n.push('" style="top: 13px; left: 13px;">'), this.title && (n.push('\n  <div class="ls-popover-header">\n    <h3 class="title-3"> '), n.push(e(this.title)), n.push(" </h3>\n  </div>\n  ")), n.push("\n  "), this.content && n.push("\n  "), n.push('\n  <div class="ls-popover-content"> '), n.push(this.content), n.push(" </div>\n</div>\n")
                 }).call(this)
             }.call(s), s.safe = l, s.escape = i, n.join("")
     }
