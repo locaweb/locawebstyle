@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-
+# rake deploy:setup[version]
 namespace :deploy do
   @agent = "[Locastyle Robot] says:"
 
