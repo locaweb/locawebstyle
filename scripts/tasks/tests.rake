@@ -9,7 +9,7 @@ namespace :tests do
     puts "\n\n############################# \n Starting JSHint tests... \n#############################"
     Rake::Task["jshint"].invoke
 
-    puts "\n\n############################# \n Starting Wraith tests... \n#############################"
-    sh %{wraith latest spec/wraith/configs/config.yaml} # Running regression test of CSS diff image
+    #puts "\n\n############################# \n Starting Wraith tests... \n#############################"
+    #sh %{wraith latest spec/wraith/configs/config.yaml} # Running regression test of CSS diff image
   end
 end
