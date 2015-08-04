@@ -5,7 +5,7 @@
 # git config --global core.excludesfile ~/.gitignore_global
 
 # Ignore folder where the screenshots diff stays
-spec/diff/test_shots
+test_shots/
 
 # Ignore bundler config
 /.bundle

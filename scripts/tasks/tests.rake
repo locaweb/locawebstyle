@@ -10,6 +10,6 @@ namespace :tests do
     Rake::Task["jshint"].invoke
 
     puts "\n\n############################# \n Starting Wraith tests... \n#############################"
-    sh %{wraith latest spec/diff/configs/config.yaml} # Running regression test of CSS diff image
+    sh %{wraith latest spec/wraith/configs/config.yaml} # Running regression test of CSS diff image
   end
 end
