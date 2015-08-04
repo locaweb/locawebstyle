@@ -89,7 +89,7 @@
   <p>Entenda como melhorar o suporte a browsers antigos, como o IE8</p>
 </div>
 
-  <p>O Locawebstyle dá suporte a todos os navegadores atuais, já nos antigos esse suporte está no formato Progressive Enhancement, sendo que os componentes e o layout funcionam na experiência máxima que o browser suporta.</p>
+  <p>O Locaweb Style dá suporte a todos os navegadores atuais. Nós <strong>consideramos atuais duas versões anteriores dos browsers</strong>: se o atual é o IE 11, nós damos suporte a partir do IE 9. Já nos antigos, esse suporte está no formato Progressive Enhancement, sendo que os componentes e o layout funcionam na experiência máxima que o browser suporta.</p>
   <p>Para dar suporte ao Internet Explorer 8, é necessário implementar algumas modificações:</p>
   <ol>
     <li><a href="http://jquery.com/download/" target="_blank" class="ls-color-theme">jQuery</a> com suporte a navegadores antigos. Nesse caso, você precisa usar a jQuery na versão 1.11 ou menor. As versões mais novas, da 2.0 ou superior, não suportam browsers antigos.</li>
@@ -104,9 +104,7 @@
 2
 3
 4
-5
-6</pre></td><td class="code"><pre>
-<span class="c">&lt;!--[if lt IE 9]&gt;
+5</pre></td><td class="code"><pre><span class="c">&lt;!--[if lt IE 9]&gt;
   &lt;script type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
   &lt;script type="text/javascript" src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"&gt;&lt;/script&gt;
   &lt;script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"&gt;&lt;/script&gt;

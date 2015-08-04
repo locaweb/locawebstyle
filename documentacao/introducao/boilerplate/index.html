@@ -235,7 +235,29 @@
 130
 131
 132
-133</pre></td><td class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155</pre></td><td class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">class=</span><span class="s">"ls-theme-green"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;head&gt;</span>
     <span class="nt">&lt;title&gt;</span>Página com a estrutura inicial<span class="nt">&lt;/title&gt;</span>
@@ -244,42 +266,85 @@
     <span class="nt">&lt;meta</span> <span class="na">content=</span><span class="s">"IE=edge,chrome=1"</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, user-scalable=no"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">content=</span><span class="s">"Insira aqui a descrição da página."</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://assets.locaweb.com.br/locastyle/3.7.4/stylesheets/locastyle.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://assets.locaweb.com.br/locastyle/3.8.0/stylesheets/locastyle.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">sizes=</span><span class="s">"192x192"</span> <span class="na">href=</span><span class="s">"/locawebstyle/assets/images/ico-boilerplate.png"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">href=</span><span class="s">"/locawebstyle/assets/images/ico-boilerplate.png"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/head&gt;</span>
   <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-topbar"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-topbar "</span><span class="nt">&gt;</span>
 
-      <span class="c">&lt;!-- Notification bar --&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-notification-topbar"</span><span class="nt">&gt;</span>
-        <span class="c">&lt;!-- Link of support/help --&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-alerts-list"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-bell-o"</span> <span class="na">data-counter=</span><span class="s">"5"</span> <span class="na">data-ls-module=</span><span class="s">"topbarCurtain"</span> <span class="na">data-target=</span><span class="s">"#ls-notification-curtain"</span><span class="nt">&gt;&lt;span&gt;</span>Notificações<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-bullhorn"</span> <span class="na">data-ls-module=</span><span class="s">"topbarCurtain"</span> <span class="na">data-target=</span><span class="s">"#ls-help-curtain"</span><span class="nt">&gt;&lt;span&gt;</span>Ajuda<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-question"</span> <span class="na">data-ls-module=</span><span class="s">"topbarCurtain"</span> <span class="na">data-target=</span><span class="s">"#ls-feedback-curtain"</span><span class="nt">&gt;&lt;span&gt;</span>Sugestões<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+  <span class="c">&lt;!-- Barra de Notificações --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-notification-topbar"</span><span class="nt">&gt;</span>
 
-        <span class="c">&lt;!-- User details --&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"dropdown"</span> <span class="na">class=</span><span class="s">"ls-dropdown ls-user-account"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-user"</span><span class="nt">&gt;</span>
-            Zoe Palmer
-            <span class="nt">&lt;small&gt;</span>(lstyle)<span class="nt">&lt;/small&gt;</span>
-          <span class="nt">&lt;/a&gt;</span>
-          <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"ls-dropdown-nav ls-user-menu"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;ul&gt;</span>
-              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Conta<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Logout<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-            <span class="nt">&lt;/ul&gt;</span>
-          <span class="nt">&lt;/nav&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ls-show-sidebar ls-ico-menu"</span><span class="nt">&gt;&lt;/span&gt;</span>
-
-      <span class="c">&lt;!-- Nome do produto/marca --&gt;</span>
-      <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"ls-brand-name"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"ls-ico-earth"</span> <span class="na">href=</span><span class="s">"/locawebstyle/documentacao/exemplos/boilerplate"</span><span class="nt">&gt;</span>Boilerplate<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
+    <span class="c">&lt;!-- Links de apoio --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-alerts-list"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-bell-o"</span> <span class="na">data-counter=</span><span class="s">"8"</span> <span class="na">data-ls-module=</span><span class="s">"topbarCurtain"</span> <span class="na">data-target=</span><span class="s">"#ls-notification-curtain"</span><span class="nt">&gt;&lt;span&gt;</span>Notificações<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-bullhorn"</span> <span class="na">data-ls-module=</span><span class="s">"topbarCurtain"</span> <span class="na">data-target=</span><span class="s">"#ls-help-curtain"</span><span class="nt">&gt;&lt;span&gt;</span>Ajuda<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-question"</span> <span class="na">data-ls-module=</span><span class="s">"topbarCurtain"</span> <span class="na">data-target=</span><span class="s">"#ls-feedback-curtain"</span><span class="nt">&gt;&lt;span&gt;</span>Sugestões<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
+
+    <span class="c">&lt;!-- Dropdown com detalhes da conta de usuário --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"dropdown"</span> <span class="na">class=</span><span class="s">"ls-dropdown ls-user-account"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-user"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/locawebstyle/assets/images/locastyle/avatar-example.jpg"</span> <span class="na">alt=</span><span class="s">""</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ls-name"</span><span class="nt">&gt;</span>João Kennedy<span class="nt">&lt;/span&gt;</span>
+        (johnkennedy)
+      <span class="nt">&lt;/a&gt;</span>
+
+      <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"ls-dropdown-nav ls-user-menu"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Meus dados<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Faturas<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Planos<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Sair<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+         <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ls-show-sidebar ls-ico-menu"</span><span class="nt">&gt;&lt;/span&gt;</span>
+
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/locawebstyle/documentacao/exemplos//pre-painel"</span>  <span class="na">class=</span><span class="s">"ls-go-next"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"ls-text"</span><span class="nt">&gt;</span>Voltar à lista de serviços<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+
+  <span class="c">&lt;!-- Nome do produto/marca com sidebar --&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"ls-brand-name"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"home"</span> <span class="na">class=</span><span class="s">"ls-ico-earth"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;small&gt;</span>Uma descrição ou outro nome<span class="nt">&lt;/small&gt;</span>
+        O nome do Produto
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/h1&gt;</span>
+
+  <span class="c">&lt;!-- Nome do produto/marca sem sidebar quando for o pre-painel  --&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+
+    <span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"ls-sidebar"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-sidebar-inner"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/locawebstyle/documentacao/exemplos//pre-painel"</span>  <span class="na">class=</span><span class="s">"ls-go-prev"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"ls-text"</span><span class="nt">&gt;</span>Voltar à lista de serviços<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+
+      <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"ls-menu"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/locawebstyle/documentacao/exemplos/painel1/home"</span> <span class="na">class=</span><span class="s">"ls-ico-dashboard"</span><span class="nt">&gt;</span>Dashboard<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/locawebstyle/documentacao/exemplos/painel1/clients"</span> <span class="na">class=</span><span class="s">"ls-ico-users"</span><span class="nt">&gt;</span>Clientes<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/locawebstyle/documentacao/exemplos/painel1/stats"</span> <span class="na">class=</span><span class="s">"ls-ico-stats"</span><span class="nt">&gt;</span>Relatórios da revenda<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+           <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-cog"</span><span class="nt">&gt;</span>Configurações<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/locawebstyle/documentacao/exemplos/painel1/config-domain"</span><span class="nt">&gt;</span>Domínios da Revenda<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/locawebstyle/documentacao/exemplos/painel1/config-email"</span><span class="nt">&gt;</span>E-mail de Remetente<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/locawebstyle/documentacao/exemplos/painel1/config-aspect"</span><span class="nt">&gt;</span>Aparência<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/locawebstyle/documentacao/exemplos/painel1/config-answer"</span><span class="nt">&gt;</span>Atendimento<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/locawebstyle/documentacao/exemplos/painel1/config-api"</span><span class="nt">&gt;</span>Chave de acesso para API<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/nav&gt;</span>
+
+
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/aside&gt;</span>
+
 
     <span class="nt">&lt;main</span> <span class="na">class=</span><span class="s">"ls-main "</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
@@ -294,27 +359,6 @@
 
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/main&gt;</span>
-
-    <span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"ls-sidebar"</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- Defails of user account --&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"dropdown"</span> <span class="na">class=</span><span class="s">"ls-dropdown ls-user-account"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-user"</span><span class="nt">&gt;</span>
-          Calum Hoyle
-          <span class="nt">&lt;small&gt;</span>(lstyle)<span class="nt">&lt;/small&gt;</span>
-        <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"ls-dropdown-nav ls-user-menu"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;ul&gt;</span>
-            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>submenu<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-          <span class="nt">&lt;/ul&gt;</span>
-        <span class="nt">&lt;/nav&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-
-      <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"ls-menu"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;ul&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-home"</span><span class="nt">&gt;</span>Página inicial<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;/ul&gt;</span>
-      <span class="nt">&lt;/nav&gt;</span>
-    <span class="nt">&lt;/aside&gt;</span>
 
     <span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"ls-notification"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"ls-notification-list"</span> <span class="na">id=</span><span class="s">"ls-notification-curtain"</span> <span class="na">style=</span><span class="s">"left: 1716px;"</span><span class="nt">&gt;</span>
@@ -364,8 +408,8 @@
     <span class="nt">&lt;/aside&gt;</span>
 
     <span class="c">&lt;!-- We recommended use jQuery 1.10 or up --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://code.jquery.com/jquery-2.0.3.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://assets.locaweb.com.br/locastyle/3.7.4/javascripts/locastyle.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://code.jquery.com/jquery-2.1.4.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://assets.locaweb.com.br/locastyle/3.8.0/javascripts/locastyle.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 </pre></td></tr></tbody></table>

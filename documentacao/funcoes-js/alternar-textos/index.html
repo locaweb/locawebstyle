@@ -70,7 +70,6 @@
   <nav class="doc-sidebar-menu">
     <ul>
       <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/'>Iniciando Funções JS (ajax)</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/event-dispatcher/'>Event Dispatcher</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/alternar-classes/'>Alternar Classes</a></li>
       <li class='active'><a class='active' href='/locawebstyle/documentacao/funcoes-js/alternar-textos/'>Alternar textos</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/rastreando-eventos/'>Track Eventos do GA</a></li>
@@ -113,16 +112,16 @@
 
 
   <div class="ls-box-demo">
-    <button class="ls-btn" data-toggle-text="Clique para voltar ao texto original">Clique para alterar o texto</button>
+    <button class="ls-btn" data-ls-module="toggleText" data-toggle-text="Clique para voltar ao texto original">Clique para alterar o texto</button>
   </div>
-<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn"</span> <span class="na">data-toggle-text=</span><span class="s">"Clique para voltar ao texto original"</span><span class="nt">&gt;</span>Clique para alterar o texto<span class="nt">&lt;/button&gt;</span>
+<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn"</span> <span class="na">data-ls-module=</span><span class="s">"toggleText"</span> <span class="na">data-toggle-text=</span><span class="s">"Clique para voltar ao texto original"</span><span class="nt">&gt;</span>Clique para alterar o texto<span class="nt">&lt;/button&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 
   <p>Se você quiser alternar o texto de outro elemento, siga o exemplo abaixo:</p>
 
   <div class="ls-box-demo">
-    <button class="ls-btn-primary" data-toggle-text="Clique para voltar ao texto original" data-target-text="#lsBox">Clique para alterar o texto do botão ao lado</button>
+    <button class="ls-btn-primary" data-ls-module="toggleText" data-toggle-text="Clique para voltar ao texto original" data-target-text="#lsBox">Clique para alterar o texto do botão ao lado</button>
     <br>
     <br>
     <div id="lsBox" class="ls-box ls-box-gray">
@@ -132,10 +131,46 @@
 <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
-4</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span> <span class="na">data-toggle-text=</span><span class="s">"Clique para voltar ao texto original"</span> <span class="na">data-target-text=</span><span class="s">"#lsBox"</span><span class="nt">&gt;</span>Clique para alterar o texto do botão ao lado<span class="nt">&lt;/button&gt;</span>
+4</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span> <span class="na">data-ls-module=</span><span class="s">"toggleText"</span> <span class="na">data-toggle-text=</span><span class="s">"Clique para voltar ao texto original"</span> <span class="na">data-target-text=</span><span class="s">"#lsBox"</span><span class="nt">&gt;</span>Clique para alterar o texto do botão ao lado<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"lsBox"</span> <span class="na">class=</span><span class="s">"ls-box ls-box-gray"</span><span class="nt">&gt;</span>
   Uma mensagem bonita para caramba!
 <span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  <h2 class="doc-title-3">Eventos</h2>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th width="250">Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>toggleText:change</th>
+        <td><p>Quando um element do módulo toggleText for clicado, o evento <code>toggleText:change</code> é disparado com três argumentos: event, target e text. Veja o exemplo abaixo.</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Exemplo: </p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9</pre></td><td class="code"><pre><span class="c1">// Elementos toggle text</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'[data-toggle-text]'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'toggleText:change'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// do something</span>
+<span class="p">});</span>
+
+<span class="c1">// Um toggle text específico</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#id-do-toggle-text'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'toggleText:change'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// do something</span>
+<span class="p">});</span>
 </pre></td></tr></tbody></table>
 </div>
 

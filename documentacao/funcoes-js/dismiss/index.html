@@ -70,7 +70,6 @@
   <nav class="doc-sidebar-menu">
     <ul>
       <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/'>Iniciando Funções JS (ajax)</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/event-dispatcher/'>Event Dispatcher</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/alternar-classes/'>Alternar Classes</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/alternar-textos/'>Alternar textos</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/funcoes-js/rastreando-eventos/'>Track Eventos do GA</a></li>
@@ -159,6 +158,45 @@
 
   <p>Note que o botão tem um atributo <code>data-target</code> cujo valor pode ser um ID ou uma CLASSE.</p>
 
+
+<h2 class="doc-title-3">Eventos</h2>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th width="200">Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>dismiss:close</th>
+        <td><p>Quando o dismiss é clicado, o evento <code>dismiss:close</code> é disparado com um argumento: o único argumento é o event.</p></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Para acessar o conteúdo que foi removido, basta usar o <code>this</code>.</p>
+
+  <p>Exemplo: </p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9</pre></td><td class="code"><pre><span class="c1">// Um conteúdo específico pelo ID</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'dismiss:close'</span><span class="p">,</span> <span class="s1">'#alertDismissExample'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">evt</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Todos os conteúdos por class</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'dismiss:close'</span><span class="p">,</span> <span class="s1">'.ls-dismissable'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">evt</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table>
+</div>
 </section>
 
   </div>

@@ -490,7 +490,7 @@
 
 
   <h3 class="doc-title-5">Evite misturar tecnologias</h3>
-  <p>Na prática do dia a dia, algo bem simples: Estilize seu HTML com CSS, Não com JS.</p>
+  <p>Na prática do dia a dia, algo bem simples: estilize seu HTML com CSS, não com JS.</p>
 <div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
@@ -507,6 +507,8 @@
 </pre></td></tr></tbody></table>
 </div>
   <p>Crie os estilos que precisar (e animações, quando possível) no CSS, e no javascript controle quando os estilos são aplicados, em vez de aplicar propriedades.</p>
+
+  <p>Outro ponto importante é seguir a jQuery. Eu sei que você vai querer escrever JavaScript puro em alguns momentos. Mas isso complica a leitura do código e sai totalmente do padrão inicial definido que é usar a abstração da jQuery. Por isso, use sempre os comandos da jQuery.</p>
 
   <h3 class="doc-title-5">Use sintaxe abreviada</h3>
   <p>Conheça as notações de variáveis e funções abreviadas e procure usá-las.</p>
@@ -536,8 +538,12 @@
 23
 24
 25
-26</pre></td><td class="code"><pre><span class="c1">// Use</span>
+26
+27
+28
+29</pre></td><td class="code"><pre><span class="c1">// Use</span>
 <span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'rosa'</span><span class="p">,</span> <span class="s1">'azul'</span><span class="p">,</span> <span class="s1">'verde'</span><span class="p">];</span>
+
 <span class="c1">// Em vez de</span>
 <span class="kd">var</span> <span class="nx">cores</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
 <span class="nx">cores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s1">'rosa'</span><span class="p">;</span>
@@ -546,6 +552,7 @@
 
 <span class="c1">// Use</span>
 <span class="kd">var</span> <span class="nx">margem</span> <span class="o">=</span> <span class="nx">altura</span> <span class="o">||</span> <span class="mi">10</span><span class="p">;</span>
+
 <span class="c1">// Em vez de</span>
 <span class="k">if</span><span class="p">(</span><span class="nx">altura</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">){</span>
   <span class="kd">var</span> <span class="nx">margem</span> <span class="o">=</span> <span class="nx">altura</span><span class="p">;</span>
@@ -555,6 +562,7 @@
 
 <span class="c1">// Use</span>
 <span class="kd">var</span> <span class="nx">direcao</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
 <span class="c1">// Em vez de</span>
 <span class="kd">var</span> <span class="nx">direcao</span><span class="p">;</span>
 <span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">){</span>
@@ -650,170 +658,6 @@
 <span class="p">}</span>
 <span class="nx">carregaDados</span><span class="p">(</span><span class="s1">'#botao1'</span><span class="p">,</span> <span class="s1">'ajax/lista-pessoas.html'</span><span class="p">);</span>
 <span class="nx">carregaDados</span><span class="p">(</span><span class="s1">'#botao2'</span><span class="p">,</span> <span class="s1">'ajax/lista-empresas.html'</span><span class="p">);</span>
-</pre></td></tr></tbody></table>
-</div>
-
-  <h3 class="doc-title-5">Configurações e internacionalização</h3>
-  <p>Quando estiver criando a aplicação, pense em cada valor, texto, variável, se é o caso de deixá-la separada, permitindo alterá-la depois.</p>
-  <p>Exemplo:</p>
-<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45</pre></td><td class="code"><pre><span class="c1">// Em vez de</span>
-<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">type</span>   <span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
-  <span class="na">url</span>    <span class="p">:</span> <span class="s2">"api/usuarios"</span><span class="p">,</span>
-  <span class="na">data</span>   <span class="p">:</span> <span class="p">{</span> <span class="na">limite</span><span class="p">:</span> <span class="mi">10</span> <span class="p">},</span>
-  <span class="na">success</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">){</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span> <span class="s1">'Busca efetuada com sucesso'</span> <span class="p">);</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#lista'</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span><span class="s1">'fast'</span><span class="p">);</span>
-  <span class="p">},</span>
-  <span class="na">error</span>  <span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span> <span class="s1">'Erro na busca'</span> <span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-
-<span class="c1">// Faça</span>
-<span class="kd">var</span> <span class="na">configuracoes</span><span class="p">:</span> <span class="p">{</span>
-  <span class="nx">mensagens</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="na">successo</span> <span class="p">:</span> <span class="s1">'Busca efetuada com sucesso'</span><span class="p">,</span>
-    <span class="na">erro</span>     <span class="p">:</span> <span class="s1">'Erro na busca'</span>
-  <span class="p">},</span>
-  <span class="na">api</span><span class="p">:</span> <span class="p">{</span>
-    <span class="na">usuarios</span><span class="p">:</span> <span class="s2">"api/usuarios"</span>
-  <span class="p">},</span>
-  <span class="na">animacao</span><span class="p">:</span> <span class="p">{</span>
-    <span class="na">velocidade</span><span class="p">:</span> <span class="s2">"fast"</span>
-  <span class="p">},</span>
-  <span class="na">lista</span><span class="p">:</span> <span class="p">{</span>
-    <span class="na">porPagina</span><span class="p">:</span> <span class="mi">10</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="c1">//...</span>
-<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-  <span class="na">type</span>   <span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
-  <span class="na">url</span>    <span class="p">:</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">usuarios</span><span class="p">,</span>
-  <span class="na">data</span>   <span class="p">:</span> <span class="p">{</span> <span class="na">limite</span><span class="p">:</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">lista</span><span class="p">.</span><span class="nx">porPagina</span><span class="p">}</span> <span class="p">,</span>
-  <span class="na">success</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">){</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#formulario'</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">mensagens</span><span class="p">.</span><span class="nx">successo</span> <span class="p">);</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#lista'</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span> <span class="nx">dados</span> <span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">animacao</span><span class="p">.</span><span class="nx">velocity</span> <span class="p">);</span>
-  <span class="p">},</span>
-  <span class="na">error</span>  <span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#mensagem'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span> <span class="nx">configuracoes</span><span class="p">.</span><span class="nx">mensagens</span><span class="p">.</span><span class="nx">erro</span> <span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-</pre></td></tr></tbody></table>
-</div>
-
-
-  <h3 class="doc-title-5">Utilização correta de Eventos</h3>
-  <p>Ao escrever seu código e registrar comportamentos e eventos na interação do usuário é importante ter cuidado na escolha correta dos eventos.</p>
-  <p>Um caso comum de erro é vincular uma função no clique do botão enviar de um formulário, em vez de chamar a ação no submit do formulário:</p>
-<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14</pre></td><td class="code"><pre><span class="c1">// Errado</span>
-<span class="c1">// se o usuário submeter o form teclando ENTER a função não é executada</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">'#enviar'</span><span class="p">,</span> <span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
-  <span class="k">if</span><span class="p">(</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">isValid</span><span class="p">()</span> <span class="p">){</span>
-    <span class="c1">// ... ação</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-<span class="c1">// correto</span>
-<span class="c1">// a ação é executada no clique ou no ENTER</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'submit'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
-  <span class="k">if</span><span class="p">(</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#meuForm'</span><span class="p">).</span><span class="nx">isValid</span><span class="p">()</span> <span class="p">){</span>
-    <span class="c1">// ... ação</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-</pre></td></tr></tbody></table>
-</div>
-
-  <p>Também é preciso saber o uso correto e diferenças entre os métodos, no caso do jQuery, sabendo os corretos para cada situação e os que estão em desuso.</p>
-<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16</pre></td><td class="code"><pre><span class="c1">// Os seguintes foram descontinuados</span>
-<span class="p">.</span><span class="nx">die</span><span class="p">()</span>   <span class="p">.</span><span class="nx">load</span><span class="p">()</span>
-<span class="p">.</span><span class="nx">error</span><span class="p">()</span> <span class="p">.</span><span class="nx">unload</span><span class="p">()</span>
-<span class="p">.</span><span class="nx">live</span><span class="p">()</span>  <span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
-<span class="c1">// os seguintes métodos podem ser evitados</span>
-<span class="p">.</span><span class="nx">mousedown</span><span class="p">()</span>   <span class="p">.</span><span class="nx">blur</span><span class="p">()</span>     <span class="p">.</span><span class="nx">rezise</span><span class="p">()</span>   <span class="p">.</span><span class="nx">keyup</span><span class="p">()</span>     <span class="p">.</span><span class="nx">keypress</span><span class="p">()</span>
-<span class="p">.</span><span class="nx">mousenter</span><span class="p">()</span>   <span class="p">.</span><span class="nx">change</span><span class="p">()</span>   <span class="p">.</span><span class="nx">hover</span><span class="p">()</span>    <span class="p">.</span><span class="nx">ready</span><span class="p">()</span>     <span class="p">.</span><span class="nx">focusin</span><span class="p">()</span>
-<span class="p">.</span><span class="nx">mouseleave</span><span class="p">()</span>  <span class="p">.</span><span class="nx">click</span><span class="p">()</span>    <span class="p">.</span><span class="nx">scroll</span><span class="p">()</span>   <span class="p">.</span><span class="nx">submit</span><span class="p">()</span>    <span class="p">.</span><span class="nx">mouseup</span><span class="p">()</span>
-<span class="p">.</span><span class="nx">mouseout</span><span class="p">()</span>    <span class="p">.</span><span class="nx">dblclick</span><span class="p">()</span> <span class="p">.</span><span class="nx">keydown</span><span class="p">()</span>  <span class="p">.</span><span class="nx">focusout</span><span class="p">()</span>
-<span class="p">.</span><span class="nx">mouseover</span><span class="p">()</span>   <span class="p">.</span><span class="nx">focus</span><span class="p">()</span>    <span class="p">.</span><span class="nx">select</span><span class="p">()</span>
-<span class="c1">// e devem ser substitídos por</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#elemento'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'blur'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="p">...</span> <span class="p">})</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#elementoPai'</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">'#elemento'</span><span class="p">,</span> <span class="s1">'blur'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="p">...});</span>
-<span class="c1">// de prefrência o .delegate() que tem melhor performance</span>
-<span class="c1">// por fazer a seleção dentro de um escopo ( '#elementoPai' )</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#escopo'</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">'#elemento'</span><span class="p">,</span> <span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="p">...});</span>
 </pre></td></tr></tbody></table>
 </div>
 
@@ -953,17 +797,6 @@
 <span class="p">});</span>
 </pre></td></tr></tbody></table>
 </div>
-
-
-  <h3 class="doc-title-5">Adicione funcionalidades com javascript, não conteúdo</h3>
-  <p>Se sua aplicação precisa criar e inserir muito HTML, códigos estão cheios de 'divs', 'tds', etc, analise e repense sua aplicação, veja se não é o caso de usar algum sistema de templates ( handlebars... ). São códigos dificeis de manter, que podem ter problemas de desempenho. Caso precise, use templates separados do JS, ou carregue HTML do back-end com AJAX.</p>
-
-  <h3 class="doc-title-5">Não reinvente a roda</h3>
-  <p>Use bibliotecas e frameworks estáveis, que possuem estrutura conhecida.</p>
-  <p>Antes de inserir libraries e plugins, verifique a real necessidade, o suporte e compatibilidade.</p>
-
-  <h3 class="doc-title-5">Código de desenvolvimento não é código de produção</h3>
-  <p>Compacte, remova comentários, concatene os javascripts antes de mandar para produção. Existem diversas ferramentas para isso, inclusive online. Tenha uma versão de desenvolvimento, normal, comentada e uma para o site em produção.</p>
 
 </section>
 

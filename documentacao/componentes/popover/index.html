@@ -71,6 +71,7 @@
     <ul>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/'>Abas</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/alertas/'>Alertas</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/alert-box/'>Box de notificações</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/barra-de-progresso/'>Barra de Progresso</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/botao-switch/'>Botão Switch</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/botoes/'>Botões</a></li>
@@ -78,15 +79,15 @@
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/box-de-filtro/'>Box de Filtro</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/box-generico/'>Box genérico</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/box-info/'>Box Informativo</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/alert-box/'>Box de notificações</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/breadcrumb/'>Breadcrumb</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/collapse/'>Collapse &amp; Accordeon</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/dropdown/'>Dropdown</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/paginacao/'>Filtro de exibição e paginação</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/listas/'>Listas</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/modal/'>Modal</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/paginacao/'>Filtro de exibição e paginação</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/passo-a-passo/'>Passo a passo</a></li>
       <li class='active'><a class='active' href='/locawebstyle/documentacao/componentes/popover/'>Popover</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/shop-cart/'>Carrinho de compras</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/tabelas/'>Tabelas</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/tags/'>Tags</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/tooltip/'>Tooltip</a></li>
@@ -110,6 +111,13 @@
     <a href="#" class="ls-btn-primary" data-ls-module="popover" data-trigger="hover" data-title="Titulo do popover 3" data-content="<p>Conteúdo do popover 3</p>" data-placement="left">
   Hover (left)
 </a>
+<a href="#" class="ls-btn-primary" data-ls-module="popover" data-ls-popover="open" data-title="Titulo do popover 2" data-content="<ul class='ls-no-list-style'>
+  <li>Lista 1</li>
+  <li>Lista 2</li>
+  <li>Lista 3</li>
+</ul>" data-placement="top">
+  Start opened
+</a>
 <a href="#" class="ls-btn-primary" data-ls-module="popover" data-title="Titulo do popover 2" data-content="<ul class='ls-no-list-style'>
   <li>Lista 1</li>
   <li>Lista 2</li>
@@ -120,11 +128,11 @@
 <a href="#" class="ls-btn-primary" data-ls-module="popover" data-title="Titulo do popover 1" data-content="<p>Conteúdo do popover 1 Conteúdo do popover 1 Conteúdo do popover 1 Conteúdo do popover 1 Conteúdo do popover 1 </p>" data-placement="bottom">
   Click (bottom)
 </a>
-<a href="#" class="ls-btn-primary" data-custom-class="ls-color-danger" data-ls-module="popover" data-title="Titulo do popover 4" data-content="<p>Conteúdo do popover 4</p>" data-placement="right">
+<a href="#" class="ls-btn-primary" data-custom-class="ls-color-success" data-ls-module="popover" data-title="Titulo do popover 4" data-content="<p>Conteúdo do popover 4</p>" data-placement="right">
   Click (right)
 </a>
 
-<a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="top" data-content="Aqui usamos a classe <strong class='ls-color-danger'>.ls-ico-help</strong>" data-title="Popover com ícone de ajuda"></a>
+<a href="#" class="ls-ico-help ls-float-right" data-trigger="hover" data-ls-module="popover" data-placement="left" data-content="Aqui usamos a classe <strong class='ls-color-danger'>.ls-ico-help</strong>" data-title="Popover com ícone de ajuda"></a>
 
   </div>
   <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
@@ -144,8 +152,22 @@
 15
 16
 17
-18</pre></td><td class="code"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span> <span class="na">data-ls-module=</span><span class="s">"popover"</span> <span class="na">data-trigger=</span><span class="s">"hover"</span> <span class="na">data-title=</span><span class="s">"Titulo do popover 3"</span> <span class="na">data-content=</span><span class="s">"&lt;p&gt;Conteúdo do popover 3&lt;/p&gt;"</span> <span class="na">data-placement=</span><span class="s">"left"</span><span class="nt">&gt;</span>
+18
+19
+20
+21
+22
+23
+24
+25</pre></td><td class="code"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span> <span class="na">data-ls-module=</span><span class="s">"popover"</span> <span class="na">data-trigger=</span><span class="s">"hover"</span> <span class="na">data-title=</span><span class="s">"Titulo do popover 3"</span> <span class="na">data-content=</span><span class="s">"&lt;p&gt;Conteúdo do popover 3&lt;/p&gt;"</span> <span class="na">data-placement=</span><span class="s">"left"</span><span class="nt">&gt;</span>
   Hover (left)
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span> <span class="na">data-ls-module=</span><span class="s">"popover"</span> <span class="na">data-ls-popover=</span><span class="s">"open"</span> <span class="na">data-title=</span><span class="s">"Titulo do popover 2"</span> <span class="na">data-content=</span><span class="s">"&lt;ul class='ls-no-list-style'&gt;
+  &lt;li&gt;Lista 1&lt;/li&gt;
+  &lt;li&gt;Lista 2&lt;/li&gt;
+  &lt;li&gt;Lista 3&lt;/li&gt;
+&lt;/ul&gt;"</span> <span class="na">data-placement=</span><span class="s">"top"</span><span class="nt">&gt;</span>
+  Start opened
 <span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span> <span class="na">data-ls-module=</span><span class="s">"popover"</span> <span class="na">data-title=</span><span class="s">"Titulo do popover 2"</span> <span class="na">data-content=</span><span class="s">"&lt;ul class='ls-no-list-style'&gt;
   &lt;li&gt;Lista 1&lt;/li&gt;
@@ -157,19 +179,14 @@
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span> <span class="na">data-ls-module=</span><span class="s">"popover"</span> <span class="na">data-title=</span><span class="s">"Titulo do popover 1"</span> <span class="na">data-content=</span><span class="s">"&lt;p&gt;Conteúdo do popover 1 Conteúdo do popover 1 Conteúdo do popover 1 Conteúdo do popover 1 Conteúdo do popover 1 &lt;/p&gt;"</span> <span class="na">data-placement=</span><span class="s">"bottom"</span><span class="nt">&gt;</span>
   Click (bottom)
 <span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span> <span class="na">data-custom-class=</span><span class="s">"ls-color-danger"</span> <span class="na">data-ls-module=</span><span class="s">"popover"</span> <span class="na">data-title=</span><span class="s">"Titulo do popover 4"</span> <span class="na">data-content=</span><span class="s">"&lt;p&gt;Conteúdo do popover 4&lt;/p&gt;"</span> <span class="na">data-placement=</span><span class="s">"right"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span> <span class="na">data-custom-class=</span><span class="s">"ls-color-success"</span> <span class="na">data-ls-module=</span><span class="s">"popover"</span> <span class="na">data-title=</span><span class="s">"Titulo do popover 4"</span> <span class="na">data-content=</span><span class="s">"&lt;p&gt;Conteúdo do popover 4&lt;/p&gt;"</span> <span class="na">data-placement=</span><span class="s">"right"</span><span class="nt">&gt;</span>
   Click (right)
 <span class="nt">&lt;/a&gt;</span>
 
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-help"</span> <span class="na">data-trigger=</span><span class="s">"hover"</span> <span class="na">data-ls-module=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">data-content=</span><span class="s">"Aqui usamos a classe &lt;strong class='ls-color-danger'&gt;.ls-ico-help&lt;/strong&gt;"</span> <span class="na">data-title=</span><span class="s">"Popover com ícone de ajuda"</span><span class="nt">&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-help ls-float-right"</span> <span class="na">data-trigger=</span><span class="s">"hover"</span> <span class="na">data-ls-module=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"left"</span> <span class="na">data-content=</span><span class="s">"Aqui usamos a classe &lt;strong class='ls-color-danger'&gt;.ls-ico-help&lt;/strong&gt;"</span> <span class="na">data-title=</span><span class="s">"Popover com ícone de ajuda"</span><span class="nt">&gt;&lt;/a&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 
-
-  <div class="ls-alert-info">
-    <h4 class="doc-title-5">No mobile, vira modal</h4>
-    <p>Quando resolução abaixo de 769px o popover muda seu comportamento e é exibido como uma modal, evitando problemas de usabilidade!</p>
-  </div>
 
   <h2 class="doc-title-3">Como usar</h2>
   <table class="ls-table">
@@ -183,10 +200,16 @@
     </thead>
     <tbody>
       <tr>
+        <td>data-ls-module</td>
+        <td>popover</td>
+        <td>-</td>
+        <td>inicia o módulo de popover. Deve ser colocado no elemento que chamará o popover</td>
+      </tr>
+      <tr>
         <td>data-trigger</td>
-        <td>click / hover</td>
-        <td>click</td>
-        <td>cria o popover baseado na posição do elemento</td>
+        <td>hover</td>
+        <td>-</td>
+        <td>define qual a interação pelo qual o popover irá aparecer. Por padrão, o popover só aparece com click, mas esse atributo substitui o click pelo <code>hover</code></td>
       </tr>
       <tr>
         <td>data-placement</td>
@@ -197,14 +220,8 @@
       <tr>
         <td>data-title</td>
         <td>text</td>
-        <td>--</td>
+        <td>-</td>
         <td>insere o título no popover</td>
-      </tr>
-      <tr>
-        <td>data-container</td>
-        <td>classe ou id</td>
-        <td>body</td>
-        <td>posiciona o popover de acordo com elemento clicado</td>
       </tr>
       <tr>
         <td>data-content</td>
@@ -216,37 +233,75 @@
         <td>data-custom-classes</td>
         <td>classe</td>
         <td>--</td>
-        <td>permite inserir qualquer classe para customização do popover</td>
+        <td>permite inserir qualquer classe para customização do popover. Os valores colocados aqui, serão herdados pelo elemento do popover</td>
       </tr>
     </tbody>
   </table>
 
-  <h2 class="doc-title-3">Exemplo utilizando os parâmetros default do popover</h2>
-  <div class="ls-box-demo">
-    <a href="#" class="ls-btn-primary" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a>
-  </div>
-  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-btn-primary"</span> <span class="na">data-ls-module=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Titulo"</span> <span class="na">data-content=</span><span class="s">"Conteúdo do popover"</span><span class="nt">&gt;</span>Popover<span class="nt">&lt;/a&gt;</span><span class="w">
-</span></pre></td></tr></tbody></table>
-</div>
-
-
-
   <h2 class="doc-title-3">Popover aberto ao carregar a página</h2>
   <p>Basta adicionar o atributo <code>data-ls-popover="open"</code>. </p>
+
   <div class="ls-box-demo">
-    <a href="#" class="ls-ico-help" data-ls-popover="open" data-placement="right" data-ls-module="popover" title="Titulo" data-content="Exemplo de popover Aberto, <br> ao carregar a página"></a>
+    <a href="#" class="ls-ico-help" data-ls-popover="open" data-placement="top" data-ls-module="popover" title="Titulo" data-content="Exemplo de popover Aberto, <br> ao carregar a página"></a>
+    <br>
+    <br>
+    <a href="#" class="ls-btn-primary" data-ls-module="popover" data-placement="right" data-ls-popover="open" data-title="Titulo do popover" data-content="<ul class='ls-no-list-style'>
+      <li>Lista 1</li>
+      <li>Lista 2</li>
+      <li>Lista 3</li>
+    </ul>" data-placement="top">
+      Start opened
+    </a>
   </div>
 <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-ico-help"</span> <span class="na">data-ls-popover=</span><span class="s">"open"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-ls-module=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Titulo"</span> <span class="na">data-content=</span><span class="s">"Exemplo de popover Aberto, &lt;br&gt; ao carregar a página."</span><span class="nt">&gt;&lt;/a&gt;</span>
 </pre></td></tr></tbody></table>
 </div>
 
+  <h2 class="doc-title-3">Eventos</h2>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th width="200">Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>popover:closed</th>
+        <td><p>Quando um popover fecha, o evento <code>popover:closed</code> é disparado no elemento do popover, aquele que recebe a classe <code>ls-popover</code>. Veja exemplo abaixo.</p></td>
+      </tr>
+      <tr>
+        <th>popover:opened</th>
+        <td><p>Quando o elemento que chama o popover é clicado (ou quando ouver hover), ele emite um evento chamado <code>popover:called</code>
+      </tr>
+      <tr>
+        <th>popover:destroyed</th>
+        <td><p>Quando os a função <code>locastyle.popover.destroy()</code> é acionado, ele emite um evento chamado <code>popover:destroyed</code></code>
+      </tr>
+    </tbody>
+  </table>
 
-  <h2 class="doc-title-3">Exemplo classe funcional .ls-word-dotted</h2>
-  <div class="ls-box-demo">
-    <a href="#" class="ls-word-dotted" data-ls-module="popover" title="Titulo" data-content="Conteúdo do popover">Popover</a>
-  </div>
-  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"ls-word-dotted"</span> <span class="na">data-ls-module=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Titulo"</span> <span class="na">data-content=</span><span class="s">"Conteúdo do popover"</span><span class="nt">&gt;</span>Popover<span class="nt">&lt;/a&gt;</span><span class="w">
-</span></pre></td></tr></tbody></table>
+  <p>Exemplo: </p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</pre></td><td class="code"><pre><span class="c1">// Um popover específico, caso você saiba o ID</span>
+<span class="c1">// (os IDs dos popovers são atribuidos pelo próprio módulo)</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"#id-do-popover"</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'popover:opened'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="c1">// do something</span>
+<span class="p">});</span>
+
+<span class="c1">// Todos os elementos de popover</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">".ls-popover"</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'popover:closed'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="c1">// do something</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table>
 </div>
 
 </section>

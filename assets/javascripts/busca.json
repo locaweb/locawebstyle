@@ -193,6 +193,12 @@
       "path": "documentacao/componentes/popover"
   },
   
+  "documentacao/componentes/shop-cart" :   {
+      "title": "Carrinho de compras",
+      "description": "Módulos de carrinhos de compras.",
+      "path": "documentacao/componentes/shop-cart"
+  },
+  
   "documentacao/componentes/tabelas" :   {
       "title": "Tabelas",
       "description": "Padrão de tabelas",
@@ -665,12 +671,6 @@
       "title": "Dismiss",
       "description": "Insere um elemento para fechar alerts",
       "path": "documentacao/funcoes-js/dismiss"
-  },
-  
-  "documentacao/funcoes-js/event-dispatcher" :   {
-      "title": "Event Dispatcher",
-      "description": "Roda funções de acordo com os eventos disparados",
-      "path": "documentacao/funcoes-js/event-dispatcher"
   },
   
   "documentacao/funcoes-js" :   {

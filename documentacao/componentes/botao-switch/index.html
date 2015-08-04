@@ -71,6 +71,7 @@
     <ul>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/'>Abas</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/alertas/'>Alertas</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/alert-box/'>Box de notificações</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/barra-de-progresso/'>Barra de Progresso</a></li>
       <li class='active'><a class='active' href='/locawebstyle/documentacao/componentes/botao-switch/'>Botão Switch</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/botoes/'>Botões</a></li>
@@ -78,15 +79,15 @@
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/box-de-filtro/'>Box de Filtro</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/box-generico/'>Box genérico</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/box-info/'>Box Informativo</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/alert-box/'>Box de notificações</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/breadcrumb/'>Breadcrumb</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/collapse/'>Collapse &amp; Accordeon</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/dropdown/'>Dropdown</a></li>
-      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/paginacao/'>Filtro de exibição e paginação</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/listas/'>Listas</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/modal/'>Modal</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/paginacao/'>Filtro de exibição e paginação</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/passo-a-passo/'>Passo a passo</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/popover/'>Popover</a></li>
+      <li class=''><a class='' href='/locawebstyle/documentacao/componentes/shop-cart/'>Carrinho de compras</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/tabelas/'>Tabelas</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/tags/'>Tags</a></li>
       <li class=''><a class='' href='/locawebstyle/documentacao/componentes/tooltip/'>Tooltip</a></li>
@@ -105,7 +106,7 @@
 </div>
 
 
-  <div class="row">
+  <div class="row clearfix">
     <div class="col-md-7">
       <div class="ls-box">
         <h2 class="ls-title-5">Quando <strong>usar?</strong></h2>
@@ -118,7 +119,6 @@
       <div class="ls-box">
         <h2 class="ls-title-5">Quando <strong>não</strong> usar?</h2>
         <p>- Acompanhado um modal de confirmação, por exemplo uma exclusão, ou de não ter possibilidade de reverter a ação.</p>
-        <p>- Dentro de um formulário.</p>
       </div>
     </div>
   </div>
@@ -131,7 +131,7 @@
     <div class="ls-box">
   <h2 class="ls-title-5 ls-display-inline-block">Uso de envios excedentes</h2>
 
-  <div class="ls-switch-btn ls-float-right">
+  <div data-ls-module="switchButton" class="ls-switch-btn ls-float-right">
     <input type="checkbox" id="teste">
     <label class="ls-switch-label" for="teste" name="label-teste" ls-switch-off="Desativado" ls-switch-on="Ativado"><span></span></label>
   </div>
@@ -150,7 +150,7 @@
 8</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-box"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"ls-title-5 ls-display-inline-block"</span><span class="nt">&gt;</span>Uso de envios excedentes<span class="nt">&lt;/h2&gt;</span>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-switch-btn ls-float-right"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"switchButton"</span> <span class="na">class=</span><span class="s">"ls-switch-btn ls-float-right"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"teste"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-switch-label"</span> <span class="na">for=</span><span class="s">"teste"</span> <span class="na">name=</span><span class="s">"label-teste"</span> <span class="na">ls-switch-off=</span><span class="s">"Desativado"</span> <span class="na">ls-switch-on=</span><span class="s">"Ativado"</span><span class="nt">&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -161,13 +161,13 @@
 
 
   <h2 class="doc-title-3">Botão switch com link</h2>
-  <p>Pra deixá-lo com visual ativado é necessário que o checkbox esteja checado.</p>
+  <p>Para desabilitar os eventos do swicth e atrelar sua utilização ao <code>href</code> de um hyperlink, basta seguir a utilização abaixo.</p>
   <div class="ls-box-demo">
     <h3 class="doc-title-6">Desktop</h3>
     <!-- Desativado -->
 <div class="ls-box">
   <h2 class="ls-title-5 ls-display-inline-block">Uso de envios excedentes</h2>
-  <div class="ls-switch-btn ls-float-right">
+  <div data-ls-module="switchButton" class="ls-switch-btn ls-float-right">
     <a href="#">
       <input type="checkbox" id="test1">
       <label class="ls-switch-label" for="test1" name="label-test1" ls-switch-off="Desativado" ls-switch-on="Ativado"><span></span></label>
@@ -178,7 +178,7 @@
 <!-- Ativado -->
 <div class="ls-box">
   <h2 class="ls-title-5 ls-display-inline-block">Uso de envios excedentes</h2>
-  <div class="ls-switch-btn ls-float-right">
+  <div data-ls-module="switchButton" class="ls-switch-btn ls-float-right">
     <a href="#">
       <input type="checkbox" checked id="test2">
       <label class="ls-switch-label" for="test2" name="label-test2" ls-switch-off="Desativado" ls-switch-on="Ativado"><span></span></label>
@@ -212,7 +212,7 @@
 21</pre></td><td class="code"><pre><span class="c">&lt;!-- Desativado --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-box"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"ls-title-5 ls-display-inline-block"</span><span class="nt">&gt;</span>Uso de envios excedentes<span class="nt">&lt;/h2&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-switch-btn ls-float-right"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"switchButton"</span> <span class="na">class=</span><span class="s">"ls-switch-btn ls-float-right"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"test1"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-switch-label"</span> <span class="na">for=</span><span class="s">"test1"</span> <span class="na">name=</span><span class="s">"label-test1"</span> <span class="na">ls-switch-off=</span><span class="s">"Desativado"</span> <span class="na">ls-switch-on=</span><span class="s">"Ativado"</span><span class="nt">&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;</span>
@@ -223,7 +223,7 @@
 <span class="c">&lt;!-- Ativado --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-box"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"ls-title-5 ls-display-inline-block"</span><span class="nt">&gt;</span>Uso de envios excedentes<span class="nt">&lt;/h2&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-switch-btn ls-float-right"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-ls-module=</span><span class="s">"switchButton"</span> <span class="na">class=</span><span class="s">"ls-switch-btn ls-float-right"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span> <span class="na">id=</span><span class="s">"test2"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-switch-label"</span> <span class="na">for=</span><span class="s">"test2"</span> <span class="na">name=</span><span class="s">"label-test2"</span> <span class="na">ls-switch-off=</span><span class="s">"Desativado"</span> <span class="na">ls-switch-on=</span><span class="s">"Ativado"</span><span class="nt">&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;</span>
@@ -233,6 +233,49 @@
 </pre></td></tr></tbody></table>
 </div>
 
+
+  <div class="ls-alert-warning"><strong>Atenção:</strong> Nesse cenário, o retorno deve controlar o estado do switch button manipulando seu checkbox.</div>
+
+  <h2 class="doc-title-3">Eventos</h2>
+  <p>Você pode escutar eventos de ativado e desativado nos botões switch, veja a referência abaixo.</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th width="250">Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>switchButton:activated</th>
+        <td><p>Quando um botão switch for ativado, o evento <code>switchButton:activated</code> é disparado no elemento do módulo. Veja exemplo abaixo.</p></td>
+      </tr>
+      <tr>
+        <th>switchButton:deactivated</th>
+        <td><p>Quando um botão switch for desativado, o evento <code>switchButton:deactivated</code> é disparado no elemento do módulo. Veja exemplo abaixo.</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Exemplo: </p>
+<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9</pre></td><td class="code"><pre><span class="c1">// Um botão switch específico</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#id-do-botao-switch'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'switchButton:activated'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// do something</span>
+<span class="p">})</span>
+
+<span class="c1">// Todos os elementos botão switch</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.ls-switch-btn'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'switchButton:deactivated'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// do something</span>
+<span class="p">})</span>
+</pre></td></tr></tbody></table>
+</div>
 
 </section>
 
