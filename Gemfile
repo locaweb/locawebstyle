@@ -21,3 +21,4 @@ gem 'oj' # faster JS compiles
 gem "pry"
 
 gem 'rack-cors', require: false
+gem 'wraith' #css test diff image compare
