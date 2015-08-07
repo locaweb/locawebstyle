@@ -208,7 +208,21 @@
           border: none
           cursor: pointer
           display: inline-block
-          margin-top: 17%
+          height: inherit
+          position: relative
+
+          &:before,
+          &:after
+            left: 0
+            position: absolute
+
+          &:before
+            top: 32%
+
+          &:after
+            top: 22%
+            right: -7px
+            left: auto
 
       .ls-user-account
         display: inline-block
