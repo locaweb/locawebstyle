@@ -10,6 +10,7 @@ $with-steps: 85px
   width: 100%
   height: 35px
   counter-reset: steps
+  display: none
   list-style: none
   position: relative
   margin: 0
@@ -174,6 +175,53 @@ $with-steps: 85px
       &[data-action="next"]
         float: right
 
+.ls-steps-mobile
+  width: 100%
+  height: 35px
+  position: relative
+  margin-bottom: 10px
+
+  &:before,
+  &:after
+    position: absolute
+    top: 9px
+
+  &:before
+    width: calc(100% - 106px)
+    background: transparent
+    border: none
+    color: #333333
+    content: attr(data-title)
+    font-size: 16px
+    font-weight: 700
+    overflow: hidden
+    text-overflow: ellipsis
+    text-transform: uppercase
+    white-space: nowrap
+    left: 0
+
+  &:after
+    color: #777b7c
+    content: attr(data-index)
+    font-size: 15px
+    line-height: 15px
+    right: 53px
+
+  .ls-steps-mobile-btn
+    width: 38px
+    height: 100%
+    border-left: 1px solid #d1d5d6
+    box-sizing: border-box
+    font-size: 18px
+    position: absolute
+    text-align: center
+    top: 0
+    right: 0
+    padding-top: 8px
+
+    &:before
+      margin-right: 0
+
 @media screen and (min-width: $screen-sm)
 
   $with-steps: 250px
@@ -183,6 +231,7 @@ $with-steps: 85px
 
   .ls-steps-nav
     width: $with-steps
+    display: block
     position: absolute
     z-index: 11
     top: 10px
