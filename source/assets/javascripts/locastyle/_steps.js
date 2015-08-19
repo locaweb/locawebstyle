@@ -10,7 +10,8 @@ locastyle.steps = (function() {
       button: '.ls-steps-btn',
       container: '.ls-steps-content',
       parent: '.ls-steps',
-      moduleVisible: '.ls-steps-content:visible'
+      moduleVisible: '.ls-steps-content:visible',
+      mobile: '.ls-steps-mobile'
     },
     status: {
       active: 'ls-active',
@@ -31,8 +32,9 @@ locastyle.steps = (function() {
     ariaSteps();
     addAriaLabel();
     addActivedNav();
-    addMobileStepsIndex();
+    mobileInfos();
     bindClickOnTriggers();
+    bindMobileMenuClick();
     bindNextStep();
     bindPrevStep();
   }
@@ -58,11 +60,23 @@ locastyle.steps = (function() {
     $(config.selectors.container).attr({ 'aria-hidden' : true, 'role' : 'tabpanel' });
   }
 
-  function addMobileStepsIndex() {
+  // Set the mobile infos on data-index and data-title attributes
+  function mobileInfos() {
     var steps = $(config.selectors.nav).find('li');
 
     steps.each(function(index) {
-      $(this).attr('data-mobile-step-index', (index + 1) + ' de ' + steps.length);
+      if ($(this).hasClass(config.status.active)) {
+        $(config.selectors.mobile).attr({
+          'data-index': (index + 1) + ' de ' + steps.length,
+          'data-title': $(this).find(config.selectors.button).attr('title')
+        });
+      }
+    });
+  }
+
+  function bindMobileMenuClick() {
+    $(config.selectors.mobile).on('click.steps', function() {
+      $(config.selectors.nav).slideToggle();
     });
   }
 
