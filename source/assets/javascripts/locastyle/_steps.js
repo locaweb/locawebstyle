@@ -207,6 +207,11 @@ locastyle.steps = (function() {
     activateStep($el, $target);
     deactivateStep($el, $target);
     anchorSteps();
+    mobileInfos();
+
+    if ($('html').hasClass('ls-screen-xs') && $(config.selectors.nav).css('display') === 'block') {
+      $(config.selectors.nav).slideToggle();
+    }
   }
 
   //Active step
