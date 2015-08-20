@@ -8,7 +8,7 @@ $with-steps: 85px
 
 .ls-steps-nav
   width: 100%
-  height: 35px
+  height: auto
   counter-reset: steps
   display: none
   list-style: none
@@ -18,13 +18,9 @@ $with-steps: 85px
   li
     width: 100%
     counter-increment: steps
-    position: absolute
+    position: relative
     top: 0
     left: 0
-
-    &:not(.ls-active)
-      opacity: 0
-      visibility: hidden
 
     &:after
       color: $gray3
@@ -35,9 +31,18 @@ $with-steps: 85px
       top: 9px
       right: 0
 
+  .ls-actived:not(.ls-active)
+    &:after
+      content: "\e63d"
+      font-family: "locastyle"
+      font-size: 16px
+      position: absolute
+      top: 16px
+      right: 12px
+
 .ls-steps-btn
   width: 100%
-  background: #fff
+  background: $gray1
   border: none
   cursor: none
   display: inline-block
@@ -45,10 +50,10 @@ $with-steps: 85px
   font-size: remtopx(1.125)
   font-weight: 300
   color: $gray2
-  padding-right: 5px
   pointer-events: none
   position: relative
   text-align: left
+  padding: 10px
 
   .ls-active &,
   .ls-actived &
@@ -82,19 +87,19 @@ $with-steps: 85px
       opacity: .7
 
   &:before
+    width: 29px
+    height: 29px
+    box-sizing: border-box
     content: counters(steps, "") " "
     font-family: Open Sans, Arial, Helvetica, Sans-serif
-    font-size: remtopx(1.375)
+    font-size: 15px
     font-weight: 300
+    line-height: 25px
     border: 2px solid $gray2
-    background: #fff
     border-radius: 50%
     display: inline-block
-    height: 35px
-    line-height: 31px
     vertical-align: middle
     text-align: center
-    width: 35px
     position: relative
     z-index: 2
 
@@ -155,7 +160,7 @@ $with-steps: 85px
   border-top: 1px solid $gray2
   position: relative
   padding-top: 30px
-  margin-top: 10px
+  margin: 0
 
 .ls-steps-content
   position: relative
@@ -178,6 +183,7 @@ $with-steps: 85px
 .ls-steps-mobile
   width: 100%
   height: 35px
+  cursor: pointer
   position: relative
   margin-bottom: 10px
 
@@ -273,7 +279,7 @@ $with-steps: 85px
     border-top: 0
     border-left: 1px solid $gray2
     padding: 0 15px 0 25px
-    margin: 0 0 0 235px
+    margin: 10px 0 0 235px
 
   .ls-steps-arrow
     .ls-active &
@@ -281,6 +287,15 @@ $with-steps: 85px
 
   .ls-steps-btn
     width: auto
+    background: transparent
+    padding: 0 5px 0 0
+
+    &:before
+      width: 37px
+      height: 37px
+      background: #fff
+      font-size: 22px
+      line-height: 31px
 
     &:after
       font-weight: 300
@@ -291,3 +306,7 @@ $with-steps: 85px
       text-align: left
       display: inline-block
       vertical-align: middle
+
+  .ls-steps-mobile
+    display: none
+    visibility: hidden

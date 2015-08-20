@@ -449,11 +449,13 @@
     // Steps
     ////
     .ls-steps-nav
-
       .ls-actived
-
         &:before
           border-color: $color1
+
+        &:not(.ls-active)
+          &:after
+            color: $color1
 
         .ls-steps-btn
           color: $color1
@@ -464,7 +466,7 @@
             color: #fff
 
           &:after
-            color: mix(#fff, $color1, 50%)
+            color: $color1
 
         &.ls-active
           .ls-steps-btn:before
@@ -473,13 +475,15 @@
 
       .ls-active
         .ls-steps-btn
+          background: $color1
 
           &:before
-            border-color: $color1
-
-          &:before,
-          &:after
+            background: #fff
+            border-color: #fff
             color: $color1
+
+          &:after
+            color: #fff
 
     .ls-steps-arrow:before
       background: $color1
