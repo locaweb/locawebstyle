@@ -49,7 +49,7 @@ $with-steps: 85px
   font-family: Open Sans, Arial, Helvetica, Sans-serif
   font-size: remtopx(1.125)
   font-weight: 300
-  color: $gray2
+  color: $gray3
   pointer-events: none
   position: relative
   text-align: left
@@ -72,13 +72,6 @@ $with-steps: 85px
     &:before
       color: $gray3
 
-  .ls-actived:not(.ls-active) &
-
-    &:before
-      content: "\e63d"
-      font-family: 'locastyle'
-      font-size: remtopx(1)
-
   &:hover,
   &:focus,
   &:active
@@ -95,7 +88,7 @@ $with-steps: 85px
     font-size: 15px
     font-weight: 300
     line-height: 25px
-    border: 2px solid $gray2
+    border: 2px solid $gray3
     border-radius: 50%
     display: inline-block
     vertical-align: middle
@@ -107,7 +100,7 @@ $with-steps: 85px
     width: calc(100% - 95px) // This 95px is the sum of the before item, margin left and a little differece to complete the distance from the mobile steps index.
     content: attr(aria-label)
     display: inline-block
-    font-weight: 600
+    font-weight: 400
     overflow: hidden
     text-overflow: ellipsis
     vertical-align: middle
@@ -272,8 +265,10 @@ $with-steps: 85px
         top: 24px
         z-index: 1
 
+    .ls-actived:not(.ls-active)
       &:after
-        display: none
+        top: 12px
+        right: 42px
 
   .ls-steps-main
     border-top: 0
@@ -286,23 +281,25 @@ $with-steps: 85px
       display: block
 
   .ls-steps-btn
-    width: auto
+    width: 100%
     background: transparent
+    color: $gray2
     padding: 0 5px 0 0
 
     &:before
       width: 37px
       height: 37px
       background: #fff
+      border-color: $gray2
       font-size: 22px
       line-height: 31px
 
     &:after
+      width: calc(100% - 120px)
       font-weight: 300
       position: relative
       top: 0
       margin-left: 10px
-      width: 170px
       text-align: left
       display: inline-block
       vertical-align: middle

@@ -462,8 +462,7 @@
 
           &:before
             border-color: $color1
-            background: $color1
-            color: #fff
+            color: $color1
 
           &:after
             color: $color1
@@ -472,6 +471,10 @@
           .ls-steps-btn:before
             background: #fff
             color: $color1
+
+            @media screen and (min-width: $screen-sm)
+              background: $color1
+              color: #fff
 
       .ls-active
         .ls-steps-btn
@@ -485,8 +488,23 @@
           &:after
             color: #fff
 
+          @media screen and (min-width: $screen-sm)
+            background: transparent
+
+            &:before
+              background: $color1
+              border-color: $color1
+              color: #fff
+
+            &:after
+              color: $color1
+
     .ls-steps-arrow:before
       background: $color1
+
+    .ls-steps-mobile
+      .ls-steps-mobile-btn
+        color: $color1
 
     ////
     // Tabs Button
