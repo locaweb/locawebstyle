@@ -15,13 +15,44 @@ describe("Steps: ", function(){
         expect($('#step2').hasClass('ls-active')).toBe(true);
       });
 
-      it('should have the data-mobile-step-index attribute on each li item', function() {
-        var items = $('.ls-steps-nav li');
-
-        items.each(function(index) {
-          expect($(this).data('mobile-step-index')).toBe((index + 1) + ' de ' + items.length);
-        });
+      it('should have the data-index attribute on .ls-steps-mobile', function() {
+        expect($('.ls-steps-mobile').data('index')).toBe('2 de 4');
       });
+
+      it('should have the data-title attribute on .ls-steps-mobile', function() {
+        expect($('.ls-steps-mobile').data('title')).toBe('Aparência');
+      });
+    });
+  });
+
+  describe('When click on .ls-steps-mobile', function() {
+    it('should open the mobile menu', function() {
+      var nav = $('.ls-steps-nav');
+      nav.css('display', 'none');
+      $('.ls-steps-mobile').trigger('click');
+      expect(nav.hasClass('ls-active')).toBe(true);
+    });
+
+    it('should close the mobile menu', function() {
+      var nav = $('.ls-steps-nav');
+      nav.css('display', 'block').addClass('ls-active');
+      $('html').addClass('ls-screen-xs');
+      $('#next2').trigger('click');
+      expect(nav.hasClass('ls-active')).toBe(false);
+    });
+  });
+
+  describe('When change the step', function() {
+    beforeEach(function() {
+      $('#next2').trigger('click');
+    });
+
+    it('should change the .ls-steps-mobile data-index attribute', function() {
+      expect($('.ls-steps-mobile').data('index')).toBe('3 de 4');
+    });
+
+    it('should change the .ls-steps-mobile data-title attribute', function() {
+      expect($('.ls-steps-mobile').data('title')).toBe('Conteúdo');
     });
   });
 

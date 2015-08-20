@@ -76,6 +76,7 @@ locastyle.steps = (function() {
 
   function bindMobileMenuClick() {
     $(config.selectors.mobile).on('click.steps', function() {
+      $(config.selectors.nav).toggleClass(config.status.active);
       $(config.selectors.nav).slideToggle();
     });
   }
@@ -209,8 +210,8 @@ locastyle.steps = (function() {
     anchorSteps();
     mobileInfos();
 
-    if ($('html').hasClass('ls-screen-xs') && $(config.selectors.nav).css('display') === 'block') {
-      $(config.selectors.nav).slideToggle();
+    if ($('html').hasClass('ls-screen-xs') && $(config.selectors.nav).hasClass(config.status.active)) {
+      $(config.selectors.mobile).trigger('click');
     }
   }
 
