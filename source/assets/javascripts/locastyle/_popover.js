@@ -42,7 +42,6 @@ locastyle.popover = (function() {
             buildPopover(index, popoverTrigger);
           }
 
-          teste(popoverTarget)
           show(popoverTarget);
           clickAnywhereClose(popoverTarget)
         }
@@ -62,12 +61,6 @@ locastyle.popover = (function() {
       });
     });
 
-  }
-
-  function teste(target){
-    $(target).on(config.events.opened, function(){
-      console.log('target')
-    });
   }
 
   // If popover was not created, we build the HTML using a template
