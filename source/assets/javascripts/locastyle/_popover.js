@@ -18,7 +18,6 @@ locastyle.popover = (function() {
 
   function init() {
     clickAnywhereClose();
-    buildPopover();
     bindPopover();
     startOpened();
   }
@@ -28,15 +27,22 @@ locastyle.popover = (function() {
     $(config.module).each(function(index, popoverTrigger) {
       var trigger = $(popoverTrigger).attr('data-trigger') === 'hover' ? 'mouseover' : config.trigger;
 
+      // Add attr data-target to popover triggers
+      $(popoverTrigger).attr('data-target', config.idPopover+index);
+      var popoverTarget = $(popoverTrigger).data('target');
+
       $(popoverTrigger).on(trigger, function(event) {
         event.preventDefault();
         event.stopPropagation();
 
-        var popoverTarget = $(popoverTrigger).data('target');
-
         if ($(popoverTarget).hasClass('ls-active')) {
           hide(popoverTarget);
         } else {
+          if (!$(config.idPopover+index).length) {
+            buildPopover(index, popoverTrigger);
+          }
+
+          teste(popoverTarget)
           show(popoverTarget);
           clickAnywhereClose(popoverTarget)
         }
@@ -47,53 +53,35 @@ locastyle.popover = (function() {
           });
         }
 
-      });
-    });
-
-  }
-
-  function clickAnywhereClose(target) {
-    $(document).on(config.events.clickAnywhere, function(event){
-      if(!$(event.target).parents('.ls-popover').length){
-        hide(target);
-      }
-    });
-  }
-
-  // When open page, start popover automatically
-  function startOpened() {
-    $(config.module+'[data-ls-popover="open"]').each(function() {
-      show($(this).data('target'));
-    });
-  }
-
-  // If popover was not created, we build the HTML using a template
-  function buildPopover() {
-    $(config.module).each(function(index, popoverTrigger) {
-
-      // Add attr data-target to popover triggers
-      $(popoverTrigger).attr('data-target', config.idPopover+index);
-
-      if (!$(config.idPopover+index).length) {
-        var data = {
-          index        : index,
-          title        : $(popoverTrigger).data('title'),
-          content      : $(popoverTrigger).data('content'),
-          placement    : $(popoverTrigger).data('placement'),
-          customClasses: $(popoverTrigger).data('custom-class')
-        }
-
-        $('body').append(locastyle.templates.popover(data));
-
         // Define position of popovers based on his triggers
         setPosition(popoverTrigger);
-      }
+      });
 
       $(window).on('breakpoint-updated', function(){
         setPosition(popoverTrigger);
       });
-
     });
+
+  }
+
+  function teste(target){
+    $(target).on(config.events.opened, function(){
+      console.log('target')
+    });
+  }
+
+  // If popover was not created, we build the HTML using a template
+  function buildPopover(index, popoverTrigger) {
+    var data = {
+      index        : index,
+      title        : $(popoverTrigger).data('title'),
+      content      : $(popoverTrigger).data('content'),
+      placement    : $(popoverTrigger).data('placement'),
+      customClasses: $(popoverTrigger).data('custom-class')
+    }
+
+    $('body').append(locastyle.templates.popover(data));
+
   }
 
   // Define position of popovers
@@ -147,14 +135,13 @@ locastyle.popover = (function() {
   // Hide all or visible popovers
   function hide(target) {
     $(target || '.ls-popover.ls-active').removeClass('ls-active');
-    $(target).trigger(config.events.closed).off(config.events.opened)
+    $(target).trigger(config.events.closed).off(config.events.opened);
 
     if(!$('.ls-popover.ls-active').length) {
-      $(document).off(config.events.clickAnywhere)
+      $(document).off(config.events.clickAnywhere);
     }
 
   }
-
 
   // Destroy all created popovers
   function destroy() {
@@ -166,6 +153,21 @@ locastyle.popover = (function() {
     });
 
     $(document).trigger(config.events.destroyed);
+  }
+
+  function clickAnywhereClose(target) {
+    $(document).on(config.events.clickAnywhere, function(event){
+      if(!$(event.target).parents('.ls-popover').length){
+        hide(target);
+      }
+    });
+  }
+
+  // When open page, start popover automatically
+  function startOpened() {
+    $(config.module+'[data-ls-popover="open"]').each(function() {
+      show($(this).data('target'));
+    });
   }
 
   return {
