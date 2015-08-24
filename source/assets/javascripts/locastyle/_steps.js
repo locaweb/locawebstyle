@@ -77,7 +77,6 @@ locastyle.steps = (function() {
   function bindMobileMenuClick() {
     $(config.selectors.mobile).on('click.steps', function() {
       $(config.selectors.nav).toggleClass(config.status.active);
-      $(config.selectors.nav).slideToggle();
     });
   }
 

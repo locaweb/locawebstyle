@@ -8,12 +8,16 @@ $with-steps: 85px
 
 .ls-steps-nav
   width: 100%
-  height: auto
+  max-height: 0
   counter-reset: steps
-  display: none
   list-style: none
+  overflow: hidden
   position: relative
   margin: 0
+  +single-transition(max-height, .3s, linear)
+
+  &.ls-active
+    max-height: 600px
 
   li
     width: 100%
@@ -230,7 +234,7 @@ $with-steps: 85px
 
   .ls-steps-nav
     width: $with-steps
-    display: block
+    max-height: 100%
     position: absolute
     z-index: 11
     top: 10px
