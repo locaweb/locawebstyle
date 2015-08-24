@@ -9,7 +9,7 @@ locastyle.steps = (function() {
       nav: '.ls-steps-nav',
       button: '.ls-steps-btn',
       container: '.ls-steps-content',
-      parent: '.ls-steps',
+      steps: '.ls-steps',
       moduleVisible: '.ls-steps-content:visible',
       mobile: '.ls-steps-mobile'
     },
@@ -76,7 +76,7 @@ locastyle.steps = (function() {
 
   function bindMobileMenuClick() {
     $(config.selectors.mobile).on('click.steps', function() {
-      $(config.selectors.nav).toggleClass(config.status.active);
+      $(config.selectors.steps).toggleClass(config.status.active);
     });
   }
 
