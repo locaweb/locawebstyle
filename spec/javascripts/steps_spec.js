@@ -26,19 +26,9 @@ describe("Steps: ", function(){
   });
 
   describe('When click on .ls-steps-mobile', function() {
-    it('should open the mobile menu', function() {
-      var nav = $('.ls-steps-nav');
-      nav.css('display', 'none');
+    it('should add the ls-active class on steps container', function() {
       $('.ls-steps-mobile').trigger('click');
-      expect(nav.hasClass('ls-active')).toBe(true);
-    });
-
-    it('should close the mobile menu', function() {
-      var nav = $('.ls-steps-nav');
-      nav.css('display', 'block').addClass('ls-active');
-      $('html').addClass('ls-screen-xs');
-      $('#next2').trigger('click');
-      expect(nav.hasClass('ls-active')).toBe(false);
+      expect($('.ls-steps').hasClass('ls-active')).toBe(true);
     });
   });
 
