@@ -74,25 +74,40 @@ $(function () {
   // Panel 2
   $('#panel-charts-2').highcharts({
     chart: {
-      type: 'column'
+      type: 'line'
     },
     title: {
-      text: 'Relatório'
+      text: ''
     },
     xAxis: {
-      categories: ['00h', '01h', '02h', '03h', '04h']
+      type: 'datetime',
+      labels: {
+        rotation: 10,
+        step: [{
+          _symbolIndex: 0,
+          color: '#5E9A44',
+          name: "Entregues"
+        },
+        {
+          _symbolIndex: 1,
+          color: '#993333',
+          name: 'Bounces'
+        },
+        {
+          _symbolIndex: 2,
+          color: '#009966',
+          name: 'Aberturas'
+        }],
+        y: 20,
+        align: "left"
+      },
+      tickWidth: 0
     },
     yAxis: {
       min: 0,
+      allowDecimals: false,
       title: {
         text: 'Quantidade'
-      },
-      stackLabels: {
-        enabled: true,
-        style: {
-          fontWeight: 'bold',
-          color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
-        }
       }
     },
     legend: {
@@ -107,11 +122,15 @@ $(function () {
       shadow: false
     },
     plotOptions: {
-      column: {
-        stacking: 'normal',
-        dataLabels: {
-          enabled: false,
-          color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+      line: {
+        lineWidth: 2,
+        marker: {
+          enabled: true
+        },
+        states: {
+          hover: {
+            lineWidth: 2
+          }
         }
       }
     },
@@ -130,7 +149,14 @@ $(function () {
     {
       name: 'erros',
       data: [5, 5, 2, 10, 3]
-    }]
+    }],
+    legend: {
+      lineHeight: 20
+    },
+    tooltip: {
+      crosshairs: true,
+      useHTML: true
+    }
   });
 
   // Panel 2 Pie chart

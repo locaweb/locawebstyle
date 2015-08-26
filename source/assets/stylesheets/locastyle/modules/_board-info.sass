@@ -12,6 +12,13 @@
     padding: 45px 0 50px
     margin: 0
 
+  .ls-box-group
+    &:after
+      clear: both
+
+    & + .ls-chart
+      margin-top: 40px
+
   .ls-box
     @extend .ls-box-gray
     @extend .ls-txt-center
@@ -36,12 +43,12 @@
       small
         font-size: remtopx(.875)
 
-  .ls-title-4
-    text-transform: uppercase
-    color: $gray3
-    font-weight: 400
-    font-size: remtopx(.875)
-    margin-bottom: 8px
+    .ls-title-4
+      text-transform: uppercase
+      color: $gray3
+      font-weight: 400
+      font-size: remtopx(.875)
+      margin-bottom: 8px
 
 .ls-board-data
   display: block
