@@ -71,19 +71,32 @@ title_product: SMTP Locaweb
 
     <div class="col-sm-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Entregues</h6>
-        <span class="ls-board-data">
-          <strong>27</strong>
-        </span>
+        <div class="ls-half-board-data ls-v-align-middle">
+          <div id="board-chart-1" style="height: 130px;">
+            <h6 class="ls-title-4">Teste</h6>
+          </div>
+        </div>
+        <div class="ls-half-board-data ls-txt-left ls-v-align-middle">
+          <h6 class="ls-title-4">Entregues</h6>
+          <span><strong>20.000</strong></span>
+          <h6 class="ls-title-4">Bounces</h6>
+          <span><strong class="ls-no-margin-bottom">5.000</strong></span>
+        </div>
       </div>
     </div>
 
     <div class="col-sm-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Erros</h6>
-        <span class="ls-board-data">
-          <strong>16</strong>
-        </span>
+        <div class="ls-half-board-data ls-v-align-middle">
+          <div id="board-chart-2" style="height: 130px;">
+            <h6 class="ls-title-4">Teste</h6>
+          </div>
+        </div>
+        <div class="ls-half-board-data ls-txt-left ls-v-align-middle">
+          <h6 class="ls-title-4">Abertos</h6>
+          <span><strong>10.000</strong></span>
+          <small>Dos e-mails entregues</small>
+        </div>
       </div>
     </div>
 
@@ -108,7 +121,7 @@ title_product: SMTP Locaweb
           <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
         </div>
         <div class="ls-md-space ls-no-padding-right ls-no-padding-top ls-no-padding-bottom ls-display-inline-block ls-v-align-top">
-          <a href="#" class="ls-btn-primary ls-no-margin-top" data-toggle-class="ls-display-none" data-target="#infoAll">Detalhar</a>
+          <a class="ls-btn-primary ls-no-margin-top" data-ls-module="tabs" data-target="#infoAll">Detalhar</a>
         </div>
       </div>
     </div>
@@ -142,7 +155,7 @@ title_product: SMTP Locaweb
         </table>
       </div>
 
-      <div id="infoAll" class="ls-display-none">
+      <div id="infoAll" class="ls-tab-content ls-no-border ls-no-padding">
         <table class="ls-table">
           <thead>
             <tr>

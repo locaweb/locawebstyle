@@ -30,6 +30,7 @@
     border-radius: $default-radius
 
     small
+      color: $gray3
       margin-bottom: 10px
       display: block
       font-size: remtopx(.75)
@@ -43,6 +44,10 @@
       small
         font-size: remtopx(.875)
 
+    .ls-half-board-data
+      strong
+        font-size: 26px
+
     .ls-title-4
       text-transform: uppercase
       color: $gray3
@@ -55,6 +60,10 @@
 
   & + [class*="ls-btn"]
     margin-bottom: 15px
+
+.ls-half-board-data
+  width: 49%
+  display: inline-block
 
 .ls-info-header
   @extend .ls-clearfix

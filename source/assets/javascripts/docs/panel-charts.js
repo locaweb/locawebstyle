@@ -249,4 +249,115 @@ $(function () {
     }]
   });
 
+  // Panel 2 board chart 1
+  $('#board-chart-1').highcharts({
+    colors: ['#7f7f7f', '#e4e4e4'],
+    chart: {
+      backgroundColor: '#f7f7f7',
+      plotBackgroundColor: '#f7f7f7',
+      plotBorderWidth: 0,
+      plotShadow: false,
+      spacing: [0, 0, 0, 0]
+    },
+    title: {
+      text: '80%',
+      align: 'center',
+      verticalAlign: 'middle',
+      y: 7,
+      style: {
+        fontWeight: 'bold',
+        fontSize: '20px'
+      }
+    },
+    tooltip: {
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        dataLabels: false,
+        startAngle: 0,
+        endAngle: 360,
+        center: ['50%', '50%']
+      }
+    },
+    series: [{
+      type: 'pie',
+      name: 'Entregues e bounce',
+      innerSize: '60%',
+      data: [
+        ['Entregues', 80],
+        ['Bounce', 20],
+        {
+          name: 'Proprietary or Undetectable',
+          y: 0,
+          dataLabels: {
+            enabled: false
+          }
+        }
+      ]
+    }],
+    credits: {
+      text: 'Locaweb',
+      href: 'http://www.locaweb.com.br',
+      style: {
+        display: 'none'
+      }
+    }
+  });
+
+// Panel 2 board chart 2
+  $('#board-chart-2').highcharts({
+    colors: ['#7f7f7f', '#e4e4e4'],
+    chart: {
+      backgroundColor: '#f7f7f7',
+      plotBackgroundColor: '#f7f7f7',
+      plotBorderWidth: 0,
+      plotShadow: false,
+      spacing: [0, 0, 0, 0]
+    },
+    title: {
+      text: '50%',
+      align: 'center',
+      verticalAlign: 'middle',
+      y: 7,
+      style: {
+        fontWeight: 'bold',
+        fontSize: '20px'
+      }
+    },
+    tooltip: {
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        dataLabels: false,
+        startAngle: 0,
+        endAngle: 360,
+        center: ['50%', '50%']
+      }
+    },
+    series: [{
+      type: 'pie',
+      name: 'Abertos',
+      innerSize: '60%',
+      data: [
+        ['Abertos', 50],
+        ['Fechados', 50],
+        {
+          name: 'Proprietary or Undetectable',
+          y: 0,
+          dataLabels: {
+            enabled: false
+          }
+        }
+      ]
+    }],
+    credits: {
+      text: 'Locaweb',
+      href: 'http://www.locaweb.com.br',
+      style: {
+        display: 'none'
+      }
+    }
+  });
 });
