@@ -15,13 +15,34 @@ describe("Steps: ", function(){
         expect($('#step2').hasClass('ls-active')).toBe(true);
       });
 
-      it('should have the data-mobile-step-index attribute on each li item', function() {
-        var items = $('.ls-steps-nav li');
-
-        items.each(function(index) {
-          expect($(this).data('mobile-step-index')).toBe((index + 1) + ' de ' + items.length);
-        });
+      it('should have the data-index attribute on .ls-steps-mobile', function() {
+        expect($('.ls-steps-mobile').data('index')).toBe('2 de 4');
       });
+
+      it('should have the data-title attribute on .ls-steps-mobile', function() {
+        expect($('.ls-steps-mobile').data('title')).toBe('Aparência');
+      });
+    });
+  });
+
+  describe('When click on .ls-steps-mobile', function() {
+    it('should add the ls-active class on steps container', function() {
+      $('.ls-steps-mobile').trigger('click');
+      expect($('.ls-steps').hasClass('ls-active')).toBe(true);
+    });
+  });
+
+  describe('When change the step', function() {
+    beforeEach(function() {
+      $('#next2').trigger('click');
+    });
+
+    it('should change the .ls-steps-mobile data-index attribute', function() {
+      expect($('.ls-steps-mobile').data('index')).toBe('3 de 4');
+    });
+
+    it('should change the .ls-steps-mobile data-title attribute', function() {
+      expect($('.ls-steps-mobile').data('title')).toBe('Conteúdo');
     });
   });
 

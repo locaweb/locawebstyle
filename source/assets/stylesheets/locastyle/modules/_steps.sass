@@ -6,24 +6,29 @@ $with-steps: 85px
   margin: 0
   padding-top: 15px
 
+  &.ls-active
+    .ls-steps-nav
+      max-height: 600px
+
+    .ls-steps-mobile-btn:before
+      +rotate(180deg)
+
 .ls-steps-nav
   width: 100%
-  height: 35px
+  max-height: 0
   counter-reset: steps
   list-style: none
+  overflow: hidden
   position: relative
   margin: 0
+  +single-transition(max-height, .3s, linear)
 
   li
     width: 100%
     counter-increment: steps
-    position: absolute
+    position: relative
     top: 0
     left: 0
-
-    &:not(.ls-active)
-      opacity: 0
-      visibility: hidden
 
     &:after
       color: $gray3
@@ -34,20 +39,29 @@ $with-steps: 85px
       top: 9px
       right: 0
 
+  .ls-actived:not(.ls-active)
+    &:after
+      content: "\e63d"
+      font-family: "locastyle"
+      font-size: 16px
+      position: absolute
+      top: 16px
+      right: 12px
+
 .ls-steps-btn
   width: 100%
-  background: #fff
+  background: $gray1
   border: none
   cursor: none
   display: inline-block
   font-family: Open Sans, Arial, Helvetica, Sans-serif
   font-size: remtopx(1.125)
   font-weight: 300
-  color: $gray2
-  padding-right: 5px
+  color: $gray3
   pointer-events: none
   position: relative
   text-align: left
+  padding: 10px
 
   .ls-active &,
   .ls-actived &
@@ -66,13 +80,6 @@ $with-steps: 85px
     &:before
       color: $gray3
 
-  .ls-actived:not(.ls-active) &
-
-    &:before
-      content: "\e63d"
-      font-family: 'locastyle'
-      font-size: remtopx(1)
-
   &:hover,
   &:focus,
   &:active
@@ -81,19 +88,19 @@ $with-steps: 85px
       opacity: .7
 
   &:before
+    width: 29px
+    height: 29px
+    box-sizing: border-box
     content: counters(steps, "") " "
     font-family: Open Sans, Arial, Helvetica, Sans-serif
-    font-size: remtopx(1.375)
+    font-size: 15px
     font-weight: 300
-    border: 2px solid $gray2
-    background: #fff
+    line-height: 25px
+    border: 2px solid $gray3
     border-radius: 50%
     display: inline-block
-    height: 35px
-    line-height: 31px
     vertical-align: middle
     text-align: center
-    width: 35px
     position: relative
     z-index: 2
 
@@ -101,7 +108,7 @@ $with-steps: 85px
     width: calc(100% - 95px) // This 95px is the sum of the before item, margin left and a little differece to complete the distance from the mobile steps index.
     content: attr(aria-label)
     display: inline-block
-    font-weight: 600
+    font-weight: 400
     overflow: hidden
     text-overflow: ellipsis
     vertical-align: middle
@@ -154,7 +161,7 @@ $with-steps: 85px
   border-top: 1px solid $gray2
   position: relative
   padding-top: 30px
-  margin-top: 10px
+  margin: 0
 
 .ls-steps-content
   position: relative
@@ -174,6 +181,57 @@ $with-steps: 85px
       &[data-action="next"]
         float: right
 
+.ls-steps-mobile
+  width: 100%
+  height: 35px
+  cursor: pointer
+  position: relative
+  margin-bottom: 10px
+
+  &:before,
+  &:after
+    position: absolute
+    top: 9px
+
+  &:before
+    width: calc(100% - 106px)
+    background: transparent
+    border: none
+    color: #333333
+    content: attr(data-title)
+    font-size: 16px
+    font-weight: 700
+    overflow: hidden
+    text-overflow: ellipsis
+    text-transform: uppercase
+    white-space: nowrap
+    left: 0
+
+  &:after
+    color: #777b7c
+    content: attr(data-index)
+    font-size: 15px
+    line-height: 15px
+    right: 53px
+
+  .ls-steps-mobile-btn
+    width: 38px
+    height: 100%
+    border-left: 1px solid #d1d5d6
+    box-sizing: border-box
+    font-size: 18px
+    position: absolute
+    text-align: center
+    top: 0
+    right: 0
+    padding-top: 8px
+    +rotate(0deg)
+
+    &:before
+      display: block
+      margin-right: 0
+      +single-transition(all, .2s, linear)
+
 @media screen and (min-width: $screen-sm)
 
   $with-steps: 250px
@@ -183,6 +241,7 @@ $with-steps: 85px
 
   .ls-steps-nav
     width: $with-steps
+    max-height: 100%
     position: absolute
     z-index: 11
     top: 10px
@@ -217,28 +276,45 @@ $with-steps: 85px
         top: 24px
         z-index: 1
 
+    .ls-actived:not(.ls-active)
       &:after
-        display: none
+        top: 12px
+        right: 42px
 
   .ls-steps-main
     border-top: 0
     border-left: 1px solid $gray2
     padding: 0 15px 0 25px
-    margin: 0 0 0 235px
+    margin: 10px 0 0 235px
 
   .ls-steps-arrow
     .ls-active &
       display: block
 
   .ls-steps-btn
-    width: auto
+    width: 100%
+    background: transparent
+    color: $gray2
+    padding: 0 5px 0 0
+
+    &:before
+      width: 37px
+      height: 37px
+      background: #fff
+      border-color: $gray2
+      font-size: 22px
+      line-height: 31px
 
     &:after
+      width: calc(100% - 120px)
       font-weight: 300
       position: relative
       top: 0
       margin-left: 10px
-      width: 170px
       text-align: left
       display: inline-block
       vertical-align: middle
+
+  .ls-steps-mobile
+    display: none
+    visibility: hidden

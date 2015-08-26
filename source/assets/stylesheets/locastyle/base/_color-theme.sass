@@ -449,37 +449,55 @@
     // Steps
     ////
     .ls-steps-nav
-
       .ls-actived
-
         &:before
           border-color: $color1
+
+        &:not(.ls-active)
+          &:after
+            color: $color1
 
         .ls-steps-btn
           color: $color1
 
           &:before
             border-color: $color1
-            background: $color1
-            color: #fff
+            color: $color1
 
           &:after
-            color: mix(#fff, $color1, 50%)
+            color: $color1
 
         &.ls-active
           .ls-steps-btn:before
             background: #fff
             color: $color1
 
+            @media screen and (min-width: $screen-sm)
+              background: $color1
+              color: #fff
+
       .ls-active
         .ls-steps-btn
+          background: $color1
 
           &:before
-            border-color: $color1
-
-          &:before,
-          &:after
+            background: #fff
+            border-color: #fff
             color: $color1
+
+          &:after
+            color: #fff
+
+          @media screen and (min-width: $screen-sm)
+            background: transparent
+
+            &:before
+              background: $color1
+              border-color: $color1
+              color: #fff
+
+            &:after
+              color: $color1
 
     .ls-steps-arrow:before
       background: $color1
