@@ -80,24 +80,20 @@ $(function () {
       text: ''
     },
     xAxis: {
-      type: 'datetime',
+      categories: [
+        '20/05/2014',
+        '21/05/2014',
+        '22/05/2014',
+        '23/05/2014',
+        '24/05/2014',
+        '25/05/2014',
+        '26/05/2014',
+        '27/05/2014'
+      ],
       labels: {
         rotation: 10,
-        step: [{
-          _symbolIndex: 0,
-          color: '#5E9A44',
-          name: "Entregues"
-        },
-        {
-          _symbolIndex: 1,
-          color: '#993333',
-          name: 'Bounces'
-        },
-        {
-          _symbolIndex: 2,
-          color: '#009966',
-          name: 'Aberturas'
-        }],
+        x: -20,
+        step: 1,
         y: 20,
         align: "left"
       },
@@ -111,21 +107,13 @@ $(function () {
       }
     },
     legend: {
-      align: 'right',
-      x: 0,
-      verticalAlign: 'top',
-      y: 0,
-      floating: true,
-      backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-      borderColor: '#ccc',
-      borderWidth: 1,
-      shadow: false
+      lineHeight: 20
     },
     plotOptions: {
       line: {
         lineWidth: 2,
         marker: {
-          enabled: true
+          enabled: false
         },
         states: {
           hover: {
@@ -135,20 +123,20 @@ $(function () {
       }
     },
     credits: {
-      text: 'Locaweb',
-      href: 'http://www.locaweb.com.br',
-      style: {
-        display: 'none'
-      }
+      enabled: false
     },
     colors: ['#25b89a', '#aa4643 ','#89a54e'],
     series: [{
-      name: 'envios',
-      data: [55, 50, 40, 25, 13]
+      name: 'Entregues',
+      data: [55,50,40,25,13,60,45,50]
     },
     {
-      name: 'erros',
-      data: [5, 5, 2, 10, 3]
+      name: 'Bounces',
+      data: [5,5,2,10,3,7,20,5]
+    },
+    {
+      name: 'Aberturas',
+      data: [2,1,2,2,3,2,1,1  ]
     }],
     legend: {
       lineHeight: 20
