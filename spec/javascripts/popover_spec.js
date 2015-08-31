@@ -8,11 +8,12 @@ describe('Popover: ', function() {
 
   describe('Popover creation', function() {
 
-    // Create popover to each trigger elements
-    it('Should create one popover for each trigger', function() {
-      var elems    = document.querySelectorAll('[data-ls-module="popover"]').length;
-      var popovers = document.querySelectorAll('.ls-popover').length;
-      expect(elems).toEqual(popovers);
+    // Create popover when the trigger is binded
+    it('Should create the respective popover when trigger is clicked', function() {
+      $('#popoverclick').click();
+      var target = $('#popoverclick').data('target');
+      expect($(target)).toExist();
+      locastyle.popover.hide($(target))
     });
 
     // Adding the attribute data-target to identify popovers and triggers
@@ -26,11 +27,10 @@ describe('Popover: ', function() {
 
     // Click Opening Popover
     it("Should trigger the event popover:opened when it opens by click", function() {
-      var id = $('.ls-popover').eq(0).attr("id");
-      var popoverToOpen = "#" + id;
-      var spyEvent = spyOnEvent(popoverToOpen, 'popover:opened');
-      $('#popoverclick').click(); // click to open
-      expect('popover:opened').toHaveBeenTriggeredOn(popoverToOpen);
+      var target = $('#popoverclick').data('target');
+      var spyEvent = spyOnEvent($(target), 'popover:opened');
+      $('#popoverclick').click(); // and now click to open
+      expect('popover:opened').toHaveBeenTriggeredOn($(target));
     });
 
     it('Should add ls-active class on opened popover', function() {
@@ -54,11 +54,10 @@ describe('Popover: ', function() {
     });
 
     // Hover Opening Popover
-    it('Should show a popover on hover event and trigger popover:opened', function() {
+    it('Should show a popover on hover event', function() {
       var target = $('#popoverhover').data('target');
       var spyEvent = spyOnEvent($(target), 'popover:opened');
       $('#popoverhover').trigger('mouseenter');
-      expect('popover:opened').toHaveBeenTriggeredOn($(target));
       expect($(target)).toHaveClass('ls-active');
     });
 
@@ -75,8 +74,6 @@ describe('Popover: ', function() {
     describe('[unbind] When init is called multiple times', function () {
 
       it('should bind events on popover elements only one time', function () {
-        locastyle.init();
-        locastyle.init();
         locastyle.init();
         var $popoverTrigger = $('#popoverclick');
         var $popover = $('#ls-popover-' + $popoverTrigger.data('idPopover'));
