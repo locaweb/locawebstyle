@@ -18,7 +18,7 @@ locastyle.form = (function() {
     prefixSufix();
     togglePasswordField();
     textareaHeight();
-    clickField();
+    triggerClickField();
   }
 
   function prefixSufix () {
@@ -104,7 +104,7 @@ locastyle.form = (function() {
     }
   }
 
-  function clickField() {
+  function triggerClickField() {
     $('.ls-click-field').on('click.ls', function(e) {
       var target = $(this).data('target');
       $(target).trigger('click.ls');
@@ -127,7 +127,7 @@ locastyle.form = (function() {
   return {
     init: init,
     togglePasswordField: togglePasswordField,
-    clickField: clickField
+    triggerClickField: triggerClickField
   };
 
 }());
