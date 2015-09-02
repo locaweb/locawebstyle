@@ -2,6 +2,8 @@
 // Dashboard info
 ////
 .ls-board-box
+  margin-top: 20px
+
   .ls-no-data
     text-align: center
     font-size: remtopx(1.125)
@@ -16,6 +18,13 @@
 
     & + .ls-chart
       margin-top: 40px
+
+      .ls-clearfix + .ls-tabs-container
+        margin-top: 10px
+
+        .ls-tab-content
+          @extend .ls-no-border
+          @extend .ls-no-padding
 
   .ls-box
     @extend .ls-box-gray
@@ -36,7 +45,7 @@
     strong
       display: block
       font-size: remtopx(2.5)
-      margin-bottom: 10px
+      margin-bottom: 0
       color: $gray5
 
       small
@@ -55,6 +64,9 @@
     .ls-half-board-data strong
       font-size: remtopx(1.25)
 
+.row + .ls-box-group
+  margin-top: 20px
+
 .ls-board-data
   display: block
 
@@ -62,6 +74,7 @@
     margin-bottom: 15px
 
 .ls-half-board-data
+  @extend .ls-v-align-middle
   width: auto
   max-width: 78px
   display: inline-block
@@ -111,7 +124,7 @@
 ////
 // Special breakpoint to control the nine digits numbers on ls-box
 ////
-@media screen and (min-width: $screen-lg) and (max-width: 1360px)
+@media screen and (max-width: 1360px)
   .ls-board-box .ls-box
     strong
       font-size: remtopx(2)
@@ -124,7 +137,7 @@
 ////
 @media screen and (min-width: $screen-sm)
   .ls-board-box
-    margin-bottom: 0
+    margin-top: 40px
     min-height: 170px
 
   .ls-box-group .ls-box
@@ -139,3 +152,7 @@
       ~ [class*="ls-btn"]
         margin-left: 5px
         margin-right: 5px
+
+  [class*="ls-title"] + .ls-box-group,
+  .row + .ls-box-group
+    margin-top: 20px

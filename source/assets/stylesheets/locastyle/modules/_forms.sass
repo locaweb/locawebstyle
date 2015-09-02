@@ -390,8 +390,9 @@ input + .ls-label-text-prefix
 @media screen and (min-width: $screen-sm)
   .ls-form-inline
 
-    .ls-box-filter .ls-label:last-child
-      margin-bottom: 0
+    .ls-label
+      .ls-box-filter ~ &
+        margin-bottom: 0
 
     .ls-actions-btn
       margin-top: 0
