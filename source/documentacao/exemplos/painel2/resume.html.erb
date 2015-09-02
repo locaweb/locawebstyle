@@ -8,10 +8,13 @@ title_product: SMTP Locaweb
 
 <h1 class="ls-title-intro ls-ico-stats">Resumo</h1>
 
-<div class="ls-box-filter">
+<div class="ls-box-filter ls-no-margin-bottom">
+
   <form action="" class="ls-form ls-form-inline">
+
     <input type="hidden" name="status" value="">
-    <label class="ls-label col-md-3 col-sm-4">
+
+    <label class="ls-label col-lg-3 col-md-6 col-sm-12">
       <b class="ls-label-text">Período</b>
       <div class="ls-custom-select">
         <select name="period" id="select_period" class="ls-select">
@@ -25,86 +28,92 @@ title_product: SMTP Locaweb
         </select>
       </div>
     </label>
-    <label class="ls-label col-md-2 col-sm-2">
-      <span id="new_feature_custom_filter_2" data-ls-module="popover" data-content="Escolha o período desejado e clique em 'Filtrar'."></span>
-      <input type="text" name="range_start" class="datepicker ls-daterange" placeholder="dd/mm/aaaa" id="datepicker1" data-ls-daterange="#datepicker2">
+
+    <label class="ls-label col-lg-2 col-md-3 col-sm-12">
+      <div class="ls-prefix-group">
+        <span id="new_feature_custom_filter_2" data-ls-module="popover" data-content="Escolha o período desejado e clique em 'Filtrar'."></span>
+        <input type="text" name="range_start" class="datepicker ls-daterange" placeholder="dd/mm/aaaa" id="datepicker1" data-ls-daterange="#datepicker2">
+        <a class="ls-label-text-prefix ls-focus-field ls-ico-calendar" data-target="#datepicker1" href="#"></a>
+      </div>
     </label>
-    <label class="ls-label col-md-2 col-sm-2">
-      <input type="text" name="range_end" class="datepicker ls-daterange" placeholder="dd/mm/aaaa" id="datepicker2">
-      <span id="new_feature_custom_filter_3" data-ls-module="popover" data-content="Clique em 'Filtrar' para exibir  o período selecionado."></span>
+
+    <label class="ls-label col-lg-2 col-md-3 col-sm-12">
+      <div class="ls-prefix-group">
+        <span id="new_feature_custom_filter_3" data-ls-module="popover" data-content="Clique em 'Filtrar' para exibir  o período selecionado."></span>
+        <input type="text" name="range_end" class="datepicker ls-daterange" placeholder="dd/mm/aaaa" id="datepicker2">
+        <a class="ls-label-text-prefix ls-focus-field ls-ico-calendar" data-target="#datepicker2" href="#"></a>
+      </div>
     </label>
-    <label class="ls-label col-md-1 col-sm-1">
-      <input type="submit" class="ls-btn-primary" value="Filtrar">
-    </label>
-    <div data-ls-module="dropdown" class="ls-dropdown ls-float-right" id="step4">
+
+    <input type="submit" class="ls-btn-primary" value="Filtrar"/>
+
+    <div data-ls-module="dropdown" class="ls-dropdown ls-float-right ls-float-none-sm ls-float-none-md" id="step4">
       <a href="#" class="ls-btn" role="combobox" aria-expanded="false">Exportar</a>
       <ul class="ls-dropdown-nav" aria-hidden="true">
-        <li>
-          <a href="" role="option" tabindex="-1">CSV</a>
-        </li>
-        <li>
-          <a data-action="open_modal_export" data-ls-module="modal" data-report-ext="XLS" data-target="#modal_export" href="" role="option" tabindex="-1">XLS</a>
-        </li>
-        <li>
-          <a class="ls-divider" data-action="open_modal_export" data-ls-module="modal" data-target="#modal_exported_reports" data-url="/panel/exports" href="" id="link_exported_reports" role="option" tabindex="-1">Relatórios exportados</a>
-        </li>
+        <li><a href="" role="option" tabindex="-1">CSV</a></li>
+        <li><a data-action="open_modal_export" data-ls-module="modal" data-report-ext="XLS" data-target="#modal_export" href="" role="option" tabindex="-1">XLS</a></li>
+        <li><a class="ls-divider" data-action="open_modal_export" data-ls-module="modal" data-target="#modal_exported_reports" data-url="/panel/exports" href="" id="link_exported_reports" role="option" tabindex="-1">Relatórios exportados</a></li>
       </ul>
     </div>
+
   </form>
+
 </div>
 
-<div class="ls-box ls-board-box">
+<div class="ls-box ls-board-box ls-no-border ls-lg-space ls-no-padding-bottom ls-no-padding-right ls-no-padding-left">
 
-  <h2 class="ls-title-4 ls-color-theme"><strong>Relatório de envio</strong></h2>
+  <h2 class="ls-title-4">Relatório de envio</h2>
 
-  <p>Resumo de e-mail enviados e entregues por período. <span class="ls-float-right">Período selecionado: <strong>15/06/2015 à 22/06/2015</strong></span></p>
+  <div class="row">
+    <div class="col-md-6 col-sm-6"><p>Resumo de e-mail enviados e entregues por período.</p></div>
+    <div class="col-md-6 col-sm-6"><p class="ls-float-right ls-float-none-xs">Período selecionado: <strong>15/06/2015 à 22/06/2015</strong></p></div>
+  </div>
 
-  <div id="sending-stats" class="row ls-box-group">
-    <div class="col-sm-3">
+  <div id="sending-stats" class="row ls-box-group ls-lg-space ls-no-padding-left ls-no-padding-right ls-no-padding-bottom">
+    <div class="col-sm-6 col-lg-3">
       <div class="ls-box">
         <h6 class="ls-title-4">Enviados</h6>
-        <span class="ls-board-data">
-          <strong>25.000</strong>
-        </span>
+        <strong class="ls-no-margin-bottom ls-reduce-font">99.999.999</strong>
+        <small>e-mails</small>
       </div>
     </div>
 
-    <div class="col-sm-3">
+    <div class="col-sm-6 col-lg-3">
       <div class="ls-box">
+        <h6 class="ls-title-4">Entregas x Bounces</h6>
         <div class="ls-half-board-data ls-v-align-middle">
-          <div id="board-chart-1" style="height: 130px;">
-            <h6 class="ls-title-4">Teste</h6>
+          <div id="board-chart-1" class="ls-box-chart">
           </div>
         </div>
-        <div class="ls-half-board-data ls-txt-left ls-v-align-middle">
-          <h6 class="ls-title-4">Entregues</h6>
-          <span><strong>20.000</strong></span>
-          <h6 class="ls-title-4">Bounces</h6>
-          <span><strong class="ls-no-margin-bottom">5.000</strong></span>
+        <div class="ls-half-board-data ls-v-align-middle">
+          <strong class="ls-no-margin-bottom ls-color-theme ls-reduce-font">20.000</strong>
+          <small>entregues</small>
+          <strong class="ls-no-margin-bottom ls-color-danger">5.000</strong>
+          <small>bounces</small>
         </div>
       </div>
     </div>
 
-    <div class="col-sm-3">
+    <div class="col-sm-6 col-lg-3">
       <div class="ls-box">
+        <h6 class="ls-title-4">Abertos</h6>
         <div class="ls-half-board-data ls-v-align-middle">
-          <div id="board-chart-2" style="height: 130px;">
-            <h6 class="ls-title-4">Teste</h6>
+          <div id="board-chart-2" class="ls-box-chart">
           </div>
         </div>
-        <div class="ls-half-board-data ls-txt-left ls-v-align-middle">
-          <h6 class="ls-title-4">Abertos</h6>
-          <span><strong>10.000</strong></span>
-          <small>Dos e-mails entregues</small>
+        <div class="ls-half-board-data ls-v-align-middle">
+          <strong class="ls-no-margin-bottom ls-color-info">10.000</strong>
+          <small>dos e-mails entregues</small>
         </div>
       </div>
     </div>
 
-    <div class="col-sm-3">
+    <div class="col-sm-6 col-lg-3">
       <div class="ls-box">
         <h6 class="ls-title-4">Denúncias</h6>
         <span class="ls-board-data">
-          <strong>80</strong>
+          <strong class="ls-no-margin-bottom">80</strong>
+          <small>spam</small>
         </span>
       </div>
     </div>
@@ -113,7 +122,7 @@ title_product: SMTP Locaweb
   <div class="ls-chart">
 
     <div class="ls-clearfix ls-sm-space ls-no-padding-top ls-no-padding-right ls-no-padding-left">
-      <p class="ls-float-left">Gráfico de <strong>Entregues x Bounces x Abertos</strong></p>
+      <h3 class="ls-title-4 ls-float-left">Gráfico de <strong>Entregues x Bounces x Abertos</strong></h3>
 
       <div class="ls-float-right">
         <div class="ls-group-btn ls-group-active ls-display-inline-block">

@@ -125,18 +125,18 @@ $(function () {
     credits: {
       enabled: false
     },
-    colors: ['#25b89a', '#aa4643 ','#89a54e'],
+    colors: ['#25b799', '#d75452 ','#428bca'],
     series: [{
       name: 'Entregues',
-      data: [55,50,40,25,13,60,45,50]
+      data: [1200,5000,500,1000,5500,1800,2500,2500]
     },
     {
       name: 'Bounces',
-      data: [5,5,2,10,3,7,20,5]
+      data: [500,200,300,700,1600,500,200,500]
     },
     {
       name: 'Aberturas',
-      data: [2,1,2,2,3,2,1,1  ]
+      data: [1000,2400,400,800,2400,1000,500,1500]
     }],
     legend: {
       lineHeight: 20
@@ -206,7 +206,7 @@ $(function () {
     tooltip: {
       pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
     },
-    colors: ['#25b89a', '#aa4643 ','#89a54e'],
+    colors: ['#1d937b', '#aa4643 ','#89a54e'],
     plotOptions: {
       pie: {
         allowPointSelect: true,
@@ -239,22 +239,23 @@ $(function () {
 
   // Panel 2 board chart 1
   $('#board-chart-1').highcharts({
-    colors: ['#7f7f7f', '#e4e4e4'],
+    colors: ['#1d937b', '#d75553'],
     chart: {
       backgroundColor: '#f7f7f7',
       plotBackgroundColor: '#f7f7f7',
       plotBorderWidth: 0,
       plotShadow: false,
-      spacing: [0, 0, 0, 0]
+      spacing: [0, 0, 0, 0],
+      height: 78,
+      width: 78
     },
     title: {
       text: '80%',
       align: 'center',
       verticalAlign: 'middle',
-      y: 7,
+      y: 8,
       style: {
-        fontWeight: 'bold',
-        fontSize: '20px'
+        fontSize: '22px'
       }
     },
     tooltip: {
@@ -270,11 +271,11 @@ $(function () {
     },
     series: [{
       type: 'pie',
-      name: 'Entregues e bounce',
-      innerSize: '60%',
+      name: 'Entregues x bounces',
+      innerSize: '75%',
       data: [
         ['Entregues', 80],
-        ['Bounce', 20],
+        ['Bounces', 20],
         {
           name: 'Proprietary or Undetectable',
           y: 0,
@@ -282,7 +283,8 @@ $(function () {
             enabled: false
           }
         }
-      ]
+      ],
+      size: 78
     }],
     credits: {
       text: 'Locaweb',
@@ -295,22 +297,23 @@ $(function () {
 
 // Panel 2 board chart 2
   $('#board-chart-2').highcharts({
-    colors: ['#7f7f7f', '#e4e4e4'],
+    colors: ['#2881ac', '#dddddd'],
     chart: {
       backgroundColor: '#f7f7f7',
       plotBackgroundColor: '#f7f7f7',
       plotBorderWidth: 0,
       plotShadow: false,
-      spacing: [0, 0, 0, 0]
+      spacing: [0, 0, 0, 0],
+      height: 78,
+      width: 78
     },
     title: {
       text: '50%',
       align: 'center',
       verticalAlign: 'middle',
-      y: 7,
+      y: 8,
       style: {
-        fontWeight: 'bold',
-        fontSize: '20px'
+        fontSize: '22px'
       }
     },
     tooltip: {
@@ -327,10 +330,10 @@ $(function () {
     series: [{
       type: 'pie',
       name: 'Abertos',
-      innerSize: '60%',
+      innerSize: '75%',
       data: [
         ['Abertos', 50],
-        ['Fechados', 50],
+        ['Não abertos', 50],
         {
           name: 'Proprietary or Undetectable',
           y: 0,
@@ -338,7 +341,8 @@ $(function () {
             enabled: false
           }
         }
-      ]
+      ],
+      size: 78
     }],
     credits: {
       text: 'Locaweb',

@@ -1,9 +1,7 @@
-///
-/// Dashboard info
-///
-
+////
+// Dashboard info
+////
 .ls-board-box
-
   .ls-no-data
     text-align: center
     font-size: remtopx(1.125)
@@ -25,7 +23,7 @@
     border: none
     background-color: #f8f8f8
     margin-bottom: 10px
-    min-height: 90px
+    min-height: 200px
     padding: 15px
     border-radius: $default-radius
 
@@ -44,16 +42,18 @@
       small
         font-size: remtopx(.875)
 
-    .ls-half-board-data
-      strong
-        font-size: 26px
-
-    .ls-title-4
+    [class*="ls-title-"]
       text-transform: uppercase
       color: $gray3
       font-weight: 400
       font-size: remtopx(.875)
-      margin-bottom: 8px
+      margin: 10px 0 30px
+
+      & ~ .ls-half-board-data
+        margin-top: -15px
+
+    .ls-half-board-data strong
+      font-size: remtopx(1.25)
 
 .ls-board-data
   display: block
@@ -62,8 +62,20 @@
     margin-bottom: 15px
 
 .ls-half-board-data
-  width: 49%
+  width: auto
+  max-width: 78px
   display: inline-block
+  text-align: left
+  margin-bottom: 15px
+
+  & + .ls-half-board-data
+    padding-left: 7px
+
+  small:last-child
+    margin-bottom: 0
+
+  .highcharts-series-group > path
+    display: none !important
 
 .ls-info-header
   @extend .ls-clearfix
@@ -86,7 +98,6 @@
       margin-bottom: 7px
 
   [class*="ls-btn"]
-
     ~ .ls-dropdown,
     ~ [class*="ls-btn"]
       margin-left: 0
@@ -97,40 +108,34 @@
     padding: 0
     margin: 20px 0 0
 
-//
+////
+// Special breakpoint to control the nine digits numbers on ls-box
+////
+@media screen and (min-width: $screen-lg) and (max-width: 1360px)
+  .ls-board-box .ls-box
+    strong
+      font-size: remtopx(2)
+
+    .ls-half-board-data strong
+      font-size: remtopx(1)
+
+////
 // Tablet and bigger
-//
+////
 @media screen and (min-width: $screen-sm)
   .ls-board-box
     margin-bottom: 0
     min-height: 170px
 
-    .row > [class*="col-"]
-      display: table
-      height: 160px
-      table-layout: fixed
-
-      .ls-box
-        display: table-cell
-        vertical-align: middle
-        min-height: 160px
+  .ls-box-group .ls-box
+    min-height: 200px
 
   .ls-info-header
-
     .ls-actions-btn
       margin: 0
 
     [class*="ls-btn"]
-
       ~ .ls-dropdown,
       ~ [class*="ls-btn"]
         margin-left: 5px
         margin-right: 5px
-
-//
-// DESKTOP
-//
-@media screen and (max-width: $screen-lg)
-  .ls-board-box .ls-box strong
-    display: block
-    font-size: remtopx(2)
