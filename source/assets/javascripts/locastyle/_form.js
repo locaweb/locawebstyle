@@ -18,6 +18,7 @@ locastyle.form = (function() {
     prefixSufix();
     togglePasswordField();
     textareaHeight();
+    clickField();
   }
 
   function prefixSufix () {
@@ -103,6 +104,13 @@ locastyle.form = (function() {
     }
   }
 
+  function clickField() {
+    $('.ls-focus-field').on('click.ls', function(e) {
+      var target = $(this).data('target');
+      $(target).trigger('click.ls');
+    });
+  }
+
   function togglePasswordField(){
     $('.ls-toggle-pass').on("click", function(e){
       e.preventDefault();
@@ -118,7 +126,8 @@ locastyle.form = (function() {
 
   return {
     init: init,
-    togglePasswordField: togglePasswordField
+    togglePasswordField: togglePasswordField,
+    clickField: clickField
   };
 
 }());
