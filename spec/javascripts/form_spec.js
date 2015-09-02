@@ -32,7 +32,6 @@ describe("Forms: ", function() {
     it('bind the triggerClickField function', function() {
       $('#myInput').on('click.ls', function() {
         $(this).parent().find('.ls-label-text').text('click');
-        console.log($(this).parent().find('.ls-label-text').text());
       });
 
       $('#formSufix').trigger('click.ls');
