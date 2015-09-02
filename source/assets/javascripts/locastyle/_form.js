@@ -105,7 +105,7 @@ locastyle.form = (function() {
   }
 
   function clickField() {
-    $('.ls-focus-field').on('click.ls', function(e) {
+    $('.ls-click-field').on('click.ls', function(e) {
       var target = $(this).data('target');
       $(target).trigger('click.ls');
     });
