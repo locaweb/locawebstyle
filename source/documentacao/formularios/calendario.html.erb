@@ -21,4 +21,12 @@ description: Calendário e para facilitar a selação de datas
 
   <p>Todas as demais configurações e métodos do plugin Pikaday podem ser utilizados, conforme descrito na sua <a href="https://github.com/dbushell/Pikaday" target="_blank">documentação</a>.</p>
 
+  <h2 class="doc-title-3">Disparo alternativo</h2>
+  <p>Para disparar o calendário através do clique em outro elemento, basta acrescentar o atributo <code>data-trigger-calendar</code> ao elemento que terá essa funcionalidade. Observe o exemplo abaixo:</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/form/form-calendar-prefix.erb' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/form/form-calendar-prefix.erb' %><% end %>
+
 </section>

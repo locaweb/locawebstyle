@@ -18,7 +18,7 @@ locastyle.form = (function() {
     prefixSufix();
     togglePasswordField();
     textareaHeight();
-    triggerClickField();
+    triggerCalendar();
   }
 
   function prefixSufix () {
@@ -104,9 +104,9 @@ locastyle.form = (function() {
     }
   }
 
-  function triggerClickField() {
-    $('.ls-click-field').on('click.ls', function(e) {
-      var target = $(this).data('target');
+  function triggerCalendar() {
+    $('[data-trigger-calendar]').on('click.ls', function(e) {
+      var target = $(this).data('trigger-calendar');
       $(target).trigger('click.ls');
     });
   }
@@ -127,7 +127,7 @@ locastyle.form = (function() {
   return {
     init: init,
     togglePasswordField: togglePasswordField,
-    triggerClickField: triggerClickField
+    triggerCalendar: triggerCalendar
   };
 
 }());

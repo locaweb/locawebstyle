@@ -259,4 +259,4 @@ predef:
   - addMobileStepsIndex
   - mobileInfos
   - bindMobileMenuClick
-  - triggerClickField
+  - triggerCalendar
