@@ -259,3 +259,4 @@ predef:
   - addMobileStepsIndex
   - mobileInfos
   - bindMobileMenuClick
+  - clickField
