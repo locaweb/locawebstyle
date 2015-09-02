@@ -28,4 +28,16 @@ describe("Forms: ", function() {
     });
   });
 
+  describe('When click on a ls-click-field element', function() {
+    it('bind the clickField function', function() {
+      $('#myInput').on('click.ls', function() {
+        $(this).parent().find('.ls-label-text').text('click');
+        console.log($(this).parent().find('.ls-label-text').text());
+      });
+
+      $('#formSufix').trigger('click.ls');
+      expect($('#myInput').parent().find('.ls-label-text').text()).toBe('click');
+    });
+  });
+
 });
