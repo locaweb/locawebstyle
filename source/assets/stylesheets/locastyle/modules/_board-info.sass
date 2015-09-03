@@ -43,7 +43,7 @@
       font-size: remtopx(.75)
 
     strong
-      display: block
+      display: initial
       font-size: remtopx(2.5)
       margin-bottom: 0
       color: $gray5
@@ -61,8 +61,28 @@
       & ~ .ls-half-board-data
         margin-top: -15px
 
+    [class*="ls-half-board"] [data-prefix]:after
+      color: inherit
+      font-size: 14px
+      opacity: 1
+      right: -13px
+      top: 10%
+
     .ls-half-board-data strong
       font-size: remtopx(1.25)
+
+  [data-prefix]
+    position: relative
+
+    &:after
+      color: #464646
+      font-size: remtopx(1.5)
+      font-weight: bold
+      content: attr(data-prefix)
+      opacity: .5
+      position: absolute
+      top: 25%
+      right: 0
 
 .row + .ls-box-group
   margin-top: 20px
@@ -73,16 +93,29 @@
   & + [class*="ls-btn"]
     margin-bottom: 15px
 
-.ls-half-board-data
+[class*="ls-half-board"]
   @extend .ls-v-align-middle
-  width: auto
-  max-width: 78px
-  display: inline-block
-  text-align: left
-  margin-bottom: 15px
+  display: block
+  text-align: center
+  padding: 0 35px
 
-  & + .ls-half-board-data
-    padding-left: 7px
+  & + [class*="ls-half-board"]
+    border-left: 0
+    margin-top: 15px
+    margin-left: 0
+
+  &[class*="data"]
+    width: auto
+    max-width: 78px
+    text-align: left
+    padding: 0
+    margin-bottom: 15px
+
+    & + .ls-half-board-data
+      border-left: 0
+      padding-left: 7px
+      margin-top: 0
+      margin-left: 0
 
   small:last-child
     margin-bottom: 0
@@ -156,3 +189,12 @@
   [class*="ls-title"] + .ls-box-group,
   .row + .ls-box-group
     margin-top: 20px
+
+@media screen and (min-width: $screen-md)
+  [class*="ls-half-board"]
+    display: inline-block
+
+    & + [class*="ls-half-board"]
+      border-left: 1px solid $gray2
+      margin-top: 0
+      margin-left: -4px
