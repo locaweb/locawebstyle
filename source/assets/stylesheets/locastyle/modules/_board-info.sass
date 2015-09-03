@@ -43,7 +43,7 @@
       font-size: remtopx(.75)
 
     strong
-      display: initial
+      display: block
       font-size: remtopx(2.5)
       margin-bottom: 0
       color: $gray5
@@ -61,14 +61,19 @@
       & ~ .ls-half-board-data
         margin-top: -15px
 
-    [class*="ls-half-board"] [data-prefix]:after
-      color: inherit
-      font-size: 14px
-      opacity: 1
-      right: -13px
-      top: 10%
+    [class*="ls-half-board"]
+      strong
+        display: initial
+
+      [data-prefix]:after
+        color: inherit
+        font-size: 14px
+        opacity: 1
+        right: -13px
+        top: 10%
 
     .ls-half-board-data strong
+      display: block
       font-size: remtopx(1.25)
 
   [data-prefix]
