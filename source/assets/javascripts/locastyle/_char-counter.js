@@ -19,6 +19,7 @@ locastyle.charCounter = (function() {
 
         if(count > limit) {
           $(this).val($(this).val().substring(0, limit));
+          updateCounter(index, 0);
         } else {
           updateCounter(index, limit - count);
         }
