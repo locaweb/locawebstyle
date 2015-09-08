@@ -74,63 +74,77 @@ $(function () {
   // Panel 2
   $('#panel-charts-2').highcharts({
     chart: {
-      type: 'column'
+      type: 'line'
     },
     title: {
-      text: 'Relatório'
+      text: ''
     },
     xAxis: {
-      categories: ['00h', '01h', '02h', '03h', '04h']
+      categories: [
+        '20/05/2014',
+        '21/05/2014',
+        '22/05/2014',
+        '23/05/2014',
+        '24/05/2014',
+        '25/05/2014',
+        '26/05/2014',
+        '27/05/2014'
+      ],
+      labels: {
+        rotation: 10,
+        x: -20,
+        step: 1,
+        y: 20,
+        align: "left"
+      },
+      tickWidth: 0
     },
     yAxis: {
       min: 0,
+      allowDecimals: false,
       title: {
         text: 'Quantidade'
-      },
-      stackLabels: {
-        enabled: true,
-        style: {
-          fontWeight: 'bold',
-          color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
-        }
       }
     },
     legend: {
-      align: 'right',
-      x: 0,
-      verticalAlign: 'top',
-      y: 0,
-      floating: true,
-      backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-      borderColor: '#ccc',
-      borderWidth: 1,
-      shadow: false
+      lineHeight: 20
     },
     plotOptions: {
-      column: {
-        stacking: 'normal',
-        dataLabels: {
-          enabled: false,
-          color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+      line: {
+        lineWidth: 2,
+        marker: {
+          enabled: false
+        },
+        states: {
+          hover: {
+            lineWidth: 2
+          }
         }
       }
     },
     credits: {
-      text: 'Locaweb',
-      href: 'http://www.locaweb.com.br',
-      style: {
-        display: 'none'
-      }
+      enabled: false
     },
-    colors: ['#25b89a', '#aa4643 ','#89a54e'],
+    colors: ['#25b799', '#d75452 ','#428bca'],
     series: [{
-      name: 'envios',
-      data: [55, 50, 40, 25, 13]
+      name: 'Entregues',
+      data: [1200,5000,500,1000,5500,1800,2500,2500]
     },
     {
-      name: 'erros',
-      data: [5, 5, 2, 10, 3]
-    }]
+      name: 'Bounces',
+      data: [500,200,300,700,1600,500,200,500]
+    },
+    {
+      name: 'Aberturas',
+      data: [1000,2400,400,800,2400,1000,500,1500]
+    }],
+    legend: {
+      lineHeight: 20
+    },
+    tooltip: {
+      crosshairs: true,
+      useHTML: true
+    }
   });
 
   // Panel 2 Pie chart
@@ -192,7 +206,7 @@ $(function () {
     tooltip: {
       pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
     },
-    colors: ['#25b89a', '#aa4643 ','#89a54e'],
+    colors: ['#1d937b', '#aa4643 ','#89a54e'],
     plotOptions: {
       pie: {
         allowPointSelect: true,
@@ -223,4 +237,119 @@ $(function () {
     }]
   });
 
+  // Panel 2 board chart 1
+  $('#board-chart-1').highcharts({
+    colors: ['#1d937b', '#d75553'],
+    chart: {
+      backgroundColor: '#f7f7f7',
+      plotBackgroundColor: '#f7f7f7',
+      plotBorderWidth: 0,
+      plotShadow: false,
+      spacing: [0, 0, 0, 0],
+      height: 78,
+      width: 78
+    },
+    title: {
+      text: '80%',
+      align: 'center',
+      verticalAlign: 'middle',
+      y: 8,
+      style: {
+        fontSize: '22px'
+      }
+    },
+    tooltip: {
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        dataLabels: false,
+        startAngle: 0,
+        endAngle: 360,
+        center: ['50%', '50%']
+      }
+    },
+    series: [{
+      type: 'pie',
+      name: 'Entregues x bounces',
+      innerSize: '75%',
+      data: [
+        ['Entregues', 80],
+        ['Bounces', 20],
+        {
+          name: 'Proprietary or Undetectable',
+          y: 0,
+          dataLabels: {
+            enabled: false
+          }
+        }
+      ],
+      size: 78
+    }],
+    credits: {
+      text: 'Locaweb',
+      href: 'http://www.locaweb.com.br',
+      style: {
+        display: 'none'
+      }
+    }
+  });
+
+// Panel 2 board chart 2
+  $('#board-chart-2').highcharts({
+    colors: ['#2881ac', '#dddddd'],
+    chart: {
+      backgroundColor: '#f7f7f7',
+      plotBackgroundColor: '#f7f7f7',
+      plotBorderWidth: 0,
+      plotShadow: false,
+      spacing: [0, 0, 0, 0],
+      height: 78,
+      width: 78
+    },
+    title: {
+      text: '50%',
+      align: 'center',
+      verticalAlign: 'middle',
+      y: 8,
+      style: {
+        fontSize: '22px'
+      }
+    },
+    tooltip: {
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        dataLabels: false,
+        startAngle: 0,
+        endAngle: 360,
+        center: ['50%', '50%']
+      }
+    },
+    series: [{
+      type: 'pie',
+      name: 'Abertos',
+      innerSize: '75%',
+      data: [
+        ['Abertos', 50],
+        ['Não abertos', 50],
+        {
+          name: 'Proprietary or Undetectable',
+          y: 0,
+          dataLabels: {
+            enabled: false
+          }
+        }
+      ],
+      size: 78
+    }],
+    credits: {
+      text: 'Locaweb',
+      href: 'http://www.locaweb.com.br',
+      style: {
+        display: 'none'
+      }
+    }
+  });
 });

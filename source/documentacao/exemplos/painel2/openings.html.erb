@@ -1,0 +1,239 @@
+---
+title: Aberturas
+layout: panel
+theme_name: ls-theme-light-green
+panel: painel2
+title_product: SMTP Locaweb
+---
+
+<h1 class="ls-title-intro ls-ico-stats">Aberturas</h1>
+
+<%= partial 'documentacao/exemplos/painel2/form_filter' %>
+
+<div class="ls-board-box">
+
+  <h2 class="ls-title-4">Relatório de Aberturas</h2>
+
+  <div class="row">
+    <div class="col-md-6 col-sm-6"><p>E-mails abertos no período selecionado.</p></div>
+    <div class="col-md-6 col-sm-6"><p class="ls-float-right ls-float-none-xs">Período selecionado: <strong>15/06/2015 à 22/06/2015</strong></p></div>
+  </div>
+
+  <div id="sending-stats" class="row ls-box-group">
+    <div class="col-sm-6 col-md-3">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Aberturas</h6>
+        <strong>10.000</strong>
+        <small>apenas de e-mails enviados no período selecionado.</small>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Total de aberturas</h6>
+        <strong>12.500</strong>
+        <small>de e-mails enviados desde a contrataçãodo plano.</small>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Limite de denúncias aceitável</h6>
+        <div class="col-xs-4" data-prefix=":">
+          <strong>10</strong>
+          <small>dias</small>
+        </div>
+        <div class="col-xs-4" data-prefix=":">
+          <strong>10</strong>
+          <small>horas</small>
+        </div>
+        <div class="col-xs-4">
+          <strong>10</strong>
+          <small>horas</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ls-chart">
+
+    <div class="ls-clearfix">
+      <form class="ls-form ls-form-inline">
+        <label class="ls-label col-lg-3 col-md-6 col-sm-12">
+          <b class="ls-label-text">Gráfico</b>
+          <div class="ls-custom-select">
+            <select name="charts" class="ls-select">
+                <option>Aberturas</option>
+                <option>Bounces</option>
+                <option>Denúncias</option>
+            </select>
+          </div>
+        </label>
+        <div class="col-md-4 ls-float-right ls-txt-right">
+          <div class="ls-group-btn ls-group-active ls-display-inline-block">
+            <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn ls-active ls-ico-chart-bar-up"></button>
+            <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
+          </div>
+          <a class="ls-btn-primary ls-no-margin-top" data-ls-module="tabs" data-target="#infoAll">Detalhar</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="ls-tabs-container" id="awesome-tab-content">
+
+      <div class="ls-tab-content child1 ls-active">
+        <div id="panel-charts-2"></div>
+      </div>
+
+      <div class="ls-tab-content child2">
+        <table class="ls-table">
+          <thead>
+            <tr>
+              <th class="ls-txt-center">Hora</th>
+              <th class="ls-txt-center">Enviados</th>
+              <th class="ls-txt-center hidden-xs">Bounces</th>
+              <th class="ls-txt-center hidden-xs">Denúncias</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%- 5.times do |num| %>
+              <tr>
+                <td class="ls-txt-center">00h</td>
+                <td class="ls-txt-center">0</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="infoAll" class="ls-tab-content">
+        <table class="ls-table">
+          <thead>
+            <tr>
+              <th class="hidden-xs">Tipo</th>
+              <th class="hidden-xs">Data de envio</th>
+              <th>Remetente</th>
+              <th>Destinatário</th>
+              <th class="hidden-xs">Assunto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%- 5.times do |num| %>
+              <tr>
+                <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
+                <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+                <td><%= lorem.email %></td>
+                <td><%= lorem.email %></td>
+                <td class="hidden-xs"><%= lorem.sentence %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Modal de exportação -->
+<div class="ls-modal fade" id="modal_export">
+  <div class="ls-modal-box">
+    <div class="ls-modal-header">
+      <button data-dismiss="modal">&times;</button>
+      <h4 class="ls-modal-title">Exportar CSV</h4>
+    </div>
+    <div class="ls-modal-body">
+      <form class="ls-form row">
+        <fieldset>
+          <label class="ls-label col-md-5">
+            <b class="ls-label-text">Período</b>
+            <div class="ls-custom-select">
+              <select name="">
+                <option value="">Dia atual</option>
+                <option value="">Última semana</option>
+                <option value="">Últimos 30 dias</option>
+                <option value="">Últimos 6 meses</option>
+                <option value="">Últimos 12 meses</option>
+                <option value="">Personalizado</option>
+              </select>
+            </div>
+          </label>
+          <div class="ls-label col-md-11">
+            <h5 class="ls-title-6">Status de Envio</h5>
+            <label class="ls-label-text">
+              <input type="radio" name="export[filter_status]">
+              Todos enviados (Entregues e Erros)
+            </label>
+            <label class="ls-label-text">
+              <input type="radio" name="export[filter_status]">
+              Apenas Entregues
+            </label>
+            <label class="ls-label-text">
+              <input type="radio" name="export[filter_status]">
+              Apenas Erros
+            </label>
+            <label class="ls-label-text">
+              <input type="checkbox" name="export[send_notification]" data-toggle-class="ls-display-none" data-target="#notification">
+              Receber notificação por e-mail quando o arquivo estiver disponível
+            </label>
+          </div>
+          <div id="notification" class="ls-display-none ls-label col-md-12">
+            <input id="export_email" name="export[email]" placeholder="Preencha com o seu e-mail" type="text" value="testeqa@teste.com.br">
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="ls-modal-footer">
+      <a class="ls-btn float-right ls-float-right" data-dismiss="modal">Cancelar</a>
+      <a class="ls-btn-primary">Exportar</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de exportação realizadas -->
+<div class="ls-modal fade" id="modal_exported_reports">
+  <div class="ls-modal-box">
+    <div class="ls-modal-header">
+      <button data-dismiss="modal">&times;</button>
+      <h4 class="ls-modal-title">Relatórios Exportados</h4>
+    </div>
+    <div class="ls-modal-body">
+      <p>Os arquivos ficarão disponíveis por 7 dias após a data de criação.</p>
+      <table class="ls-table">
+        <thead>
+          <tr>
+            <th>Nome do arquivo</th>
+            <th class="ls-width-100"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%- 5.times do |num| %>
+            <tr>
+              <td>
+                <a href="#">Relatorios_Enviados_02-07-2013_01-07-2014.csv</a>
+                <p><strong>Data de criação: </strong>02/07/2013 - 14:30</p>
+              </td>
+              <td>
+                <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right ls-float-right">
+                  <a href="#" class="ls-btn-sm"></a>
+                  <ul class="ls-dropdown-nav">
+                    <li><a href="#" >Baixar arquivo</a></li>
+                    <li><a href="#" class="ls-color-danger">Excluir</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel2/sidebar' %>
+<% end %>

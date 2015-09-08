@@ -1,8 +1,8 @@
-///
-/// Dashboard info
-///
-
+////
+// Dashboard info
+////
 .ls-board-box
+  margin-top: 20px
 
   .ls-no-data
     text-align: center
@@ -12,17 +12,32 @@
     padding: 45px 0 50px
     margin: 0
 
+  .ls-box-group
+    &:after
+      clear: both
+
+    & + .ls-chart
+      margin-top: 40px
+
+      .ls-clearfix + .ls-tabs-container
+        margin-top: 10px
+
+        .ls-tab-content
+          @extend .ls-no-border
+          @extend .ls-no-padding
+
   .ls-box
     @extend .ls-box-gray
     @extend .ls-txt-center
     border: none
     background-color: #f8f8f8
     margin-bottom: 10px
-    min-height: 90px
+    min-height: 200px
     padding: 15px
     border-radius: $default-radius
 
     small
+      color: $gray3
       margin-bottom: 10px
       display: block
       font-size: remtopx(.75)
@@ -30,24 +45,91 @@
     strong
       display: block
       font-size: remtopx(2.5)
-      margin-bottom: 10px
+      margin-bottom: 0
       color: $gray5
+
+      &[data-prefix]
+        display: initial
+
+        &:after
+          color: inherit
+          font-size: 14px
+          opacity: 1
+          right: -13px
+          top: 10%
 
       small
         font-size: remtopx(.875)
 
-  .ls-title-4
-    text-transform: uppercase
-    color: $gray3
-    font-weight: 400
-    font-size: remtopx(.875)
-    margin-bottom: 8px
+    [class*="ls-title-"]
+      text-transform: uppercase
+      color: $gray3
+      font-weight: 400
+      font-size: remtopx(.875)
+      margin: 10px 0 30px
+
+      & ~ .ls-half-board-data
+        margin-top: -15px
+
+    [class*="ls-half-board"]
+      strong
+        display: initial
+
+    .ls-half-board-data strong
+      display: block
+      font-size: remtopx(1.25)
+
+  [data-prefix]
+    position: relative
+
+    &:after
+      color: #464646
+      font-size: remtopx(1.5)
+      font-weight: bold
+      content: attr(data-prefix)
+      opacity: .5
+      position: absolute
+      top: 25%
+      right: 0
+
+.row + .ls-box-group
+  margin-top: 20px
 
 .ls-board-data
   display: block
 
   & + [class*="ls-btn"]
     margin-bottom: 15px
+
+[class*="ls-half-board"]
+  @extend .ls-v-align-middle
+  display: block
+  text-align: center
+  padding: 0 35px
+
+  & + [class*="ls-half-board"]
+    border-left: 0
+    margin-top: 15px
+    margin-left: 0
+
+  &[class*="data"]
+    width: auto
+    max-width: 78px
+    text-align: left
+    padding: 0
+    margin-bottom: 15px
+
+    & + .ls-half-board-data
+      border-left: 0
+      padding-left: 7px
+      margin-top: 0
+      margin-left: 0
+
+  small:last-child
+    margin-bottom: 0
+
+  .highcharts-series-group > path
+    @extend .ls-display-none
 
 .ls-info-header
   @extend .ls-clearfix
@@ -70,7 +152,6 @@
       margin-bottom: 7px
 
   [class*="ls-btn"]
-
     ~ .ls-dropdown,
     ~ [class*="ls-btn"]
       margin-left: 0
@@ -81,40 +162,47 @@
     padding: 0
     margin: 20px 0 0
 
-//
+////
+// Special breakpoint to control the nine digits numbers on ls-box
+////
+@media screen and (max-width: 1360px)
+  .ls-board-box .ls-box
+    strong
+      font-size: remtopx(2)
+
+    .ls-half-board-data strong
+      font-size: remtopx(1)
+
+////
 // Tablet and bigger
-//
+////
 @media screen and (min-width: $screen-sm)
   .ls-board-box
-    margin-bottom: 0
+    margin-top: 40px
     min-height: 170px
 
-    .row > [class*="col-"]
-      display: table
-      height: 160px
-      table-layout: fixed
-
-      .ls-box
-        display: table-cell
-        vertical-align: middle
-        min-height: 160px
+  .ls-box-group .ls-box
+    min-height: 200px
 
   .ls-info-header
-
     .ls-actions-btn
       margin: 0
 
     [class*="ls-btn"]
-
       ~ .ls-dropdown,
       ~ [class*="ls-btn"]
         margin-left: 5px
         margin-right: 5px
 
-//
-// DESKTOP
-//
-@media screen and (max-width: $screen-lg)
-  .ls-board-box .ls-box strong
-    display: block
-    font-size: remtopx(2)
+  [class*="ls-title"] + .ls-box-group,
+  .row + .ls-box-group
+    margin-top: 20px
+
+@media screen and (min-width: $screen-md)
+  [class*="ls-half-board"]
+    display: inline-block
+
+    & + [class*="ls-half-board"]
+      border-left: 1px solid $gray2
+      margin-top: 0
+      margin-left: -4px

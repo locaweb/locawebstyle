@@ -7,8 +7,16 @@
       <a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/pre-painel"  class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
       <nav class="ls-menu">
         <ul>
-          <li><a href="<%= base_url %>/documentacao/exemplos/painel2/home" class="ls-ico-dashboard" title="Dashboard">Dashboard</a></li>
-          <li><a href="<%= base_url %>/documentacao/exemplos/painel2/stats" class="ls-ico-stats" title="Relatórios">Relatórios</a></li>
+          <li><a href="<%= base_url %>/documentacao/exemplos/painel2/home" class="ls-ico-dashboard">Dashboard</a></li>
+          <li>
+            <a href="#" class="ls-ico-stats">Relatórios</a>
+            <ul>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel2/resume">Resumo</a></li>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel2/openings">Aberturas</a></li>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel2/bounces">Bounces</a></li>
+              <li><a href="<%= base_url %>/documentacao/exemplos/painel2/complaints">Denúncias</a></li>
+            </ul>
+          </li>
           <li>
             <a href="#" class="ls-ico-cog" title="Configurações">Configurações</a>
             <ul>

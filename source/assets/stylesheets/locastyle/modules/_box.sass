@@ -85,10 +85,10 @@
       padding-bottom: 5px
 
 .ls-info-header
+  +border-radius(4px 4px 0 0)
   background: #fff
   padding: 15px 15px 10px
   margin-bottom: 20px
-  +border-radius(4px 4px 0 0)
   width: calc(32px + 100%)
   margin-left: -16px
   margin-top: -16px
@@ -109,13 +109,6 @@
   .ls-small-info + [class^="ls-title-"]
     padding-top: 10px
 
-@media screen and (min-width: $screen-sm) and (max-width: $screen-md)
-  .ls-box:last-child
-    margin-bottom: 30px
-
-  [class^="col-"]:last-child
-    .ls-box:last-child
-      margin-bottom: 0
 
 @media screen and (min-width: $screen-md)
 
@@ -125,3 +118,9 @@
 
     .ls-btn
       float: right
+
+
+@media screen and (min-width: $screen-lg)
+  .ls-box-filter .ls-label
+    margin-bottom: 0
+

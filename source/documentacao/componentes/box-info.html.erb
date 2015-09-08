@@ -73,4 +73,13 @@ type: component
   </div>
   <% code("html") do %><%= partial 'documentacao/shared/box-info/_box-info-demo' %><% end %>
 
+  <h2 class="doc-title-5">Aumentando a complexidade da estrutura</h2>
+  <p>Você também pode aumentar um pouco a complexidade do seu box informativo utilizando a nossa grid internamente e o atributo <code>data-prefix</code>, tanto no elemento da grid como no <code>strong</code>, para chegar em exemplos como o de baixo.</p>
+  <div class="ls-box-demo">
+    <h3 class="doc-title-6">Desktop</h3>
+    <%= partial 'documentacao/shared/box-info/_box-info-complex' %>
+    <h3 class="doc-title-6">Mobile</h3>
+    <iframe width="320" height="580" src="<%= base_url %>/documentacao/shared/box-info/box-info-complex-mobile" frameborder="0"></iframe>
+  </div>
+
 </section>
