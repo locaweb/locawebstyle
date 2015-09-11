@@ -403,6 +403,18 @@
       "path": "documentacao/exemplos/painel1/stats"
   },
   
+  "documentacao/exemplos/painel2/bounces" :   {
+      "title": "Bounces",
+      "description": "",
+      "path": "documentacao/exemplos/painel2/bounces"
+  },
+  
+  "documentacao/exemplos/painel2/complaints" :   {
+      "title": "Denúncias",
+      "description": "",
+      "path": "documentacao/exemplos/painel2/complaints"
+  },
+  
   "documentacao/exemplos/painel2/config-email" :   {
       "title": "Dados do Servidor SMTP",
       "description": "",
@@ -427,16 +439,22 @@
       "path": "documentacao/exemplos/painel2/home"
   },
   
+  "documentacao/exemplos/painel2/openings" :   {
+      "title": "Aberturas",
+      "description": "",
+      "path": "documentacao/exemplos/painel2/openings"
+  },
+  
   "documentacao/exemplos/painel2/pre-painel" :   {
       "title": "Pré Painel",
       "description": "",
       "path": "documentacao/exemplos/painel2/pre-painel"
   },
   
-  "documentacao/exemplos/painel2/stats" :   {
-      "title": "Relatórios",
+  "documentacao/exemplos/painel2/resume" :   {
+      "title": "Resumo",
       "description": "",
-      "path": "documentacao/exemplos/painel2/stats"
+      "path": "documentacao/exemplos/painel2/resume"
   },
   
   "documentacao/exemplos/painel3/contacts" :   {

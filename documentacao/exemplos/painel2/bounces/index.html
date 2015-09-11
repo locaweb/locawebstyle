@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="ls-theme-light-green  ">
 <head>
-  <title>Relatórios</title>
+  <title>Bounces</title>
 
   <meta charset="utf-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -17,7 +17,7 @@
 
   <link href="../../../../assets/stylesheets/locastyle.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="documentacao documentacao_exemplos documentacao_exemplos_painel2 documentacao_exemplos_painel2_stats documentacao_exemplos_painel2_stats_index">
+<body class="documentacao documentacao_exemplos documentacao_exemplos_painel2 documentacao_exemplos_painel2_bounces documentacao_exemplos_painel2_bounces_index">
 
   <div class="ls-topbar ">
 
@@ -73,9 +73,17 @@
       <nav class="ls-menu">
         <ul>
           <li><a href="/locawebstyle/documentacao/exemplos/painel2/home" class="ls-ico-dashboard">Dashboard</a></li>
-          <li><a href="/locawebstyle/documentacao/exemplos/painel2/stats" class="ls-ico-stats">Relatórios</a></li>
           <li>
-            <a href="#" class="ls-ico-cog">Configurações</a>
+            <a href="#" class="ls-ico-stats">Relatórios</a>
+            <ul>
+              <li><a href="/locawebstyle/documentacao/exemplos/painel2/resume">Resumo</a></li>
+              <li><a href="/locawebstyle/documentacao/exemplos/painel2/openings">Aberturas</a></li>
+              <li><a href="/locawebstyle/documentacao/exemplos/painel2/bounces">Bounces</a></li>
+              <li><a href="/locawebstyle/documentacao/exemplos/painel2/complaints">Denúncias</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="ls-ico-cog" title="Configurações">Configurações</a>
             <ul>
               <li><a href="/locawebstyle/documentacao/exemplos/painel2/config-server">Dados do Servidor SMTP</a></li>
               <li><a href="/locawebstyle/documentacao/exemplos/painel2/config-email">E-mail de remetente</a></li>
@@ -92,12 +100,15 @@
 
   <main class="ls-main ">
     <div class="container-fluid">
-      <h1 class="ls-title-intro ls-ico-stats">Relatórios</h1>
+      <h1 class="ls-title-intro ls-ico-stats">Bounces</h1>
 
 <div class="ls-box-filter">
+
   <form action="" class="ls-form ls-form-inline">
+
     <input type="hidden" name="status" value="">
-    <label class="ls-label col-md-3 col-sm-4">
+
+    <label class="ls-label col-lg-3 col-md-6 col-sm-12">
       <b class="ls-label-text">Período</b>
       <div class="ls-custom-select">
         <select name="period" id="select_period" class="ls-select">
@@ -111,315 +122,213 @@
         </select>
       </div>
     </label>
-    <label class="ls-label col-md-2 col-sm-2">
-      <span id="new_feature_custom_filter_2" data-ls-module="popover" data-content="Escolha o período desejado e clique em 'Filtrar'."></span>
-      <input type="text" name="range_start" class="datepicker" placeholder="dd/mm/aaaa">
+
+    <label class="ls-label col-lg-2 col-md-3 col-sm-12">
+      <div class="ls-prefix-group">
+        <span id="new_feature_custom_filter_2" data-ls-module="popover" data-content="Escolha o período desejado e clique em 'Filtrar'."></span>
+        <input type="text" name="range_start" class="datepicker ls-daterange" placeholder="dd/mm/aaaa" id="datepicker1" data-ls-daterange="#datepicker2">
+        <a class="ls-label-text-prefix ls-ico-calendar" data-trigger-calendar="#datepicker1" href="#"></a>
+      </div>
     </label>
-    <label class="ls-label col-md-2 col-sm-2">
-      <input type="text" name="range_end" class="datepicker" placeholder="dd/mm/aaaa">
-      <span id="new_feature_custom_filter_3" data-ls-module="popover" data-content="Clique em 'Filtrar' para exibir  o período selecionado."></span>
+
+    <label class="ls-label col-lg-2 col-md-3 col-sm-12">
+      <div class="ls-prefix-group">
+        <span id="new_feature_custom_filter_3" data-ls-module="popover" data-content="Clique em 'Filtrar' para exibir  o período selecionado."></span>
+        <input type="text" name="range_end" class="datepicker ls-daterange" placeholder="dd/mm/aaaa" id="datepicker2">
+        <a class="ls-label-text-prefix ls-ico-calendar" data-trigger-calendar="#datepicker2" href="#"></a>
+      </div>
     </label>
-    <label class="ls-label col-md-1 col-sm-1">
-      <input type="submit" class="ls-btn-primary" value="Filtrar">
-    </label>
-    <div data-ls-module="dropdown" class="ls-dropdown ls-float-right" id="step4">
+
+    <input type="submit" class="ls-btn-primary" value="Filtrar"/>
+
+    <div data-ls-module="dropdown" class="ls-dropdown ls-float-right ls-float-none-sm ls-float-none-md" id="step4">
       <a href="#" class="ls-btn" role="combobox" aria-expanded="false">Exportar</a>
       <ul class="ls-dropdown-nav" aria-hidden="true">
-        <li>
-          <a href="" role="option" tabindex="-1">CSV</a>
-        </li>
-        <li>
-          <a data-action="open_modal_export" data-ls-module="modal" data-report-ext="XLS" data-target="#modal_export" href="" role="option" tabindex="-1">XLS</a>
-        </li>
-        <li>
-          <a class="ls-divider" data-action="open_modal_export" data-ls-module="modal" data-target="#modal_exported_reports" data-url="/panel/exports" href="" id="link_exported_reports" role="option" tabindex="-1">Relatórios exportados</a>
-        </li>
+        <li><a href="" role="option" tabindex="-1">CSV</a></li>
+        <li><a data-action="open_modal_export" data-ls-module="modal" data-report-ext="XLS" data-target="#modal_export" href="" role="option" tabindex="-1">XLS</a></li>
+        <li><a class="ls-divider" data-action="open_modal_export" data-ls-module="modal" data-target="#modal_exported_reports" data-url="/panel/exports" href="" id="link_exported_reports" role="option" tabindex="-1">Relatórios exportados</a></li>
       </ul>
     </div>
+
   </form>
+
 </div>
 
-<div class="ls-box ls-board-box">
-  <div id="sending-stats" class="row">
-    <div class="col-sm-3">
-      <div class="ls-box">
-        <h6 class="ls-title-4">Enviados</h6>
-        <span class="ls-board-data">
-          <strong>33</strong>
-        </span>
-      </div>
-    </div>
 
-    <div class="col-sm-3">
-      <div class="ls-box">
-        <h6 class="ls-title-4">Entregues</h6>
-        <span class="ls-board-data">
-          <strong>27</strong>
-        </span>
-      </div>
-    </div>
+<div class="ls-board-box">
 
-    <div class="col-sm-3">
-      <div class="ls-box">
-        <h6 class="ls-title-4">Erros</h6>
-        <span class="ls-board-data">
-          <strong>16</strong>
-        </span>
-      </div>
-    </div>
+  <h2 class="ls-title-4">Relatório de Bounces</h2>
 
-    <div class="col-sm-3">
-      <div class="ls-box">
-        <h6 class="ls-title-4">Denúncias <a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="left" data-custom-classes="ls-width-300" data-content="<p>Este número corresponde ao número de vezes que seus destinatários marcaram suas mensagens como spam. Essas denúncias podem comprometer a entregabilidade das suas próximas mensagens.</p>"></a></h6>
-        <span class="ls-board-data">
-          <strong>1</strong>
-        </span>
-      </div>
-    </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-6"><p>E-mails abertos no período selecionado.</p></div>
+    <div class="col-md-6 col-sm-6"><p class="ls-float-right ls-float-none-xs">Período selecionado: <strong>15/06/2015 à 22/06/2015</strong></p></div>
   </div>
-</div>
 
-<div class="ls-group-btn ls-group-active ls-float-right">
-  <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn ls-active ls-ico-chart-bar-up"></button>
-  <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
-</div>
-
-<ul class="ls-tabs-nav" id="awesome-tab">
-  <li class="ls-active"><a data-ls-module="tabs" href="#tab1">Geral</a></li>
-  <li><a data-ls-module="tabs" href="#tab2">Erros</a></li>
-  <li><a data-ls-module="tabs" href="#tab3">Denúncias</a></li>
-</ul>
-
-<div class="ls-tabs-container" id="awesome-tab-content">
-  <div id="tab1" class="ls-tab-content ls-active">
-
-    <div class="ls-tab-content child1 ls-active">
-      <div id="panel-charts-2"></div>
+  <div id="sending-stats" class="row ls-box-group">
+    <div class="col-sm-4">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Total de Bounces</h6>
+        <strong>5.000</strong>
+        <small>soft + hard Bounces</small>
+      </div>
     </div>
 
-    <div class="ls-tab-content child2">
-
-      <table class="ls-table">
-        <thead>
-          <tr>
-            <th class="ls-txt-center">Hora</th>
-            <th class="ls-txt-center">Enviados</th>
-            <th class="ls-txt-center hidden-xs">Bounces</th>
-            <th class="ls-txt-center hidden-xs">Denúncias</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-              <td class="ls-txt-center">00h</td>
-              <td class="ls-txt-center">0</td>
-              <td class="ls-txt-center hidden-xs">0</td>
-              <td class="ls-txt-center hidden-xs">0</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center">00h</td>
-              <td class="ls-txt-center">0</td>
-              <td class="ls-txt-center hidden-xs">0</td>
-              <td class="ls-txt-center hidden-xs">0</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center">00h</td>
-              <td class="ls-txt-center">0</td>
-              <td class="ls-txt-center hidden-xs">0</td>
-              <td class="ls-txt-center hidden-xs">0</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center">00h</td>
-              <td class="ls-txt-center">0</td>
-              <td class="ls-txt-center hidden-xs">0</td>
-              <td class="ls-txt-center hidden-xs">0</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center">00h</td>
-              <td class="ls-txt-center">0</td>
-              <td class="ls-txt-center hidden-xs">0</td>
-              <td class="ls-txt-center hidden-xs">0</td>
-            </tr>
-        </tbody>
-      </table>
+    <div class="col-sm-4">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Soft Bounce</h6>
+        <strong>3.500</strong>
+        <small>
+          relacionados a erros temporários
+          <br>
+          (ex: Caixa cheia)
+        </small>
+      </div>
     </div>
 
-    <hr>
-
-    <p><a href="#" data-toggle-class="ls-display-none" data-target="#infoAll">Exibir detalhes por destinatário</a></p>
-
-    <div id="infoAll" class="ls-display-none">
-      <table class="ls-table">
-        <thead>
-          <tr>
-            <th class="hidden-xs">Data</th>
-            <th>Remetente</th>
-            <th>Destinatário</th>
-            <th>Status do envio</th>
-            <th class="hidden-xs">Assunto</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-              <td class="hidden-xs">Wed Feb 01, 1995</td>
-              <td>piper-sumner@me.com</td>
-              <td>shirley_connolly@live.com</td>
-              <td>Entregue</td>
-              <td class="hidden-xs">Aut libero dolore aliquam eum magnam facilis ut qui eos quas laboriosam dolore officia</td>
-            </tr>
-            <tr>
-              <td class="hidden-xs">Wed Mar 28, 2007</td>
-              <td>agnesallen@live.com</td>
-              <td>javon-morse@fastmail.com</td>
-              <td>Entregue</td>
-              <td class="hidden-xs">Deleniti iure laboriosam fugit voluptatum vitae autem provident dolor animi</td>
-            </tr>
-            <tr>
-              <td class="hidden-xs">Thu Feb 14, 2008</td>
-              <td>arturostone@email.com</td>
-              <td>calum-joseph@me.com</td>
-              <td>Entregue</td>
-              <td class="hidden-xs">Reiciendis consequatur eligendi dolorem rerum in aperiam</td>
-            </tr>
-            <tr>
-              <td class="hidden-xs">Fri Feb 09, 2007</td>
-              <td>billymckenzie@me.com</td>
-              <td>maisie-glover@fastmail.com</td>
-              <td>Entregue</td>
-              <td class="hidden-xs">Voluptatum aperiam laboriosam dicta ut quo libero provident qui laudantium suscipit id deleniti</td>
-            </tr>
-            <tr>
-              <td class="hidden-xs">Sat Jan 01, 1994</td>
-              <td>kendrick_joseph@email.com</td>
-              <td>clintweinstein@me.com</td>
-              <td>Entregue</td>
-              <td class="hidden-xs">Et aut ratione et neque accusamus iusto exercitationem accusantium deleniti quis repellat</td>
-            </tr>
-        </tbody>
-      </table>
-    </div>
-
-  </div>
-  <div id="tab2" class="ls-tab-content">
-
-    <div class="ls-tab-content child1 ls-active">
-      <p>Erros de recebimento para 6 destinatários</p>
-      <div id="panel-chart-pie-errors"></div>
-    </div>
-
-    <div class="ls-tab-content child2">
-      <p>Erros de recebimento para 6 destinatários</p>
-      <table class="ls-table">
-        <thead>
-          <tr>
-            <th class="ls-txt-center">Tipo de erro</th>
-            <th class="ls-txt-center" colspan="2">Quantidade</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="ls-txt-center">Servidor de destino não existe ou é incapaz de receber emails</td>
-            <td class="ls-txt-center">3</td>
-            <td class="ls-txt-center">50%</td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-
-    <p><a href="#" data-toggle-class="ls-display-none" data-target="#infoError">Exibir detalhes por destinatário</a></p>
-
-    <div id="infoError" class="ls-display-none">
-      <table class="ls-table">
-        <thead>
-          <tr>
-            <th>Data</th>
-            <th>Remetente</th>
-            <th>Destinatário</th>
-            <th>Motivo do erro</th>
-            <th>Assunto</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-              <td>Sun Jun 08, 1997</td>
-              <td>jackiefinch@fastmail.com</td>
-              <td>johnny_heath@mail.com</td>
-              <td>Entregue</td>
-              <td>Qui nam voluptates tempora aut dolor impedit temporibus nisi quidem minus nesciunt a omnis dicta</td>
-            </tr>
-            <tr>
-              <td>Fri Oct 28, 1994</td>
-              <td>marsha_mcneill@mac.com</td>
-              <td>alondra-eason@gmail.com</td>
-              <td>Entregue</td>
-              <td>Sunt natus impedit veritatis nisi dolores</td>
-            </tr>
-            <tr>
-              <td>Sat Nov 07, 2009</td>
-              <td>wayne_thornton@email.com</td>
-              <td>justicelove@fastmail.com</td>
-              <td>Entregue</td>
-              <td>Quam ex aspernatur libero</td>
-            </tr>
-            <tr>
-              <td>Fri Nov 29, 2002</td>
-              <td>ana-moss@gmail.com</td>
-              <td>abel-mcnamara@yahoo.com</td>
-              <td>Entregue</td>
-              <td>Hic sunt quia qui optio sed rerum eum porro et in</td>
-            </tr>
-            <tr>
-              <td>Thu Nov 24, 1994</td>
-              <td>neil-bowden@email.com</td>
-              <td>earlheath@live.com</td>
-              <td>Entregue</td>
-              <td>Aut praesentium ullam rerum voluptate praesentium in ea</td>
-            </tr>
-        </tbody>
-      </table>
+    <div class="col-sm-4">
+      <div class="ls-box">
+        <h6 class="ls-title-4">Hard Bounce</h6>
+        <strong>1.500</strong>
+        <small>
+          relacionados a erros permanentes
+          <br>
+          (ex: E-mail inexistente)
+        </small>
+      </div>
     </div>
 
   </div>
 
-  <div id="tab3" class="ls-tab-content">
-    <div class="child1 ls-tab-content ls-active">
-      <div id="panel-chart-pie-complaints"></div>
+  <div class="ls-chart">
+
+    <div class="ls-clearfix">
+      <form class="ls-form ls-form-inline">
+        <label class="ls-label col-lg-3 col-md-6 col-sm-12">
+          <b class="ls-label-text">Gráfico</b>
+          <div class="ls-custom-select">
+            <select name="charts" class="ls-select">
+                <option>Bounces</option>
+                <option>Aberturas</option>
+                <option>Denúncias</option>
+            </select>
+          </div>
+        </label>
+        <div class="col-md-4 ls-float-right ls-txt-right">
+          <div class="ls-group-btn ls-group-active ls-display-inline-block">
+            <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn ls-active ls-ico-chart-bar-up"></button>
+            <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
+          </div>
+          <a class="ls-btn-primary ls-no-margin-top" data-ls-module="tabs" data-target="#infoAll">Detalhar</a>
+        </div>
+      </form>
     </div>
 
-    <div class="ls-tab-content child2">
+    <div class="ls-tabs-container" id="awesome-tab-content">
 
-      <table class="ls-table">
-        <thead>
-          <tr>
-            <th class="ls-txt-center">Hora</th>
-            <th class="ls-txt-center hidden-xs">Denúncias</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div class="ls-tab-content child1 ls-active">
+        <div id="panel-charts-2"></div>
+      </div>
+
+      <div class="ls-tab-content child2">
+        <table class="ls-table">
+          <thead>
             <tr>
-              <td class="ls-txt-center">00h</td>
-              <td class="ls-txt-center">0</td>
+              <th class="ls-txt-center">Hora</th>
+              <th class="ls-txt-center">Enviados</th>
+              <th class="ls-txt-center hidden-xs">Bounces</th>
+              <th class="ls-txt-center hidden-xs">Denúncias</th>
             </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td class="ls-txt-center">00h</td>
+                <td class="ls-txt-center">0</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+              </tr>
+              <tr>
+                <td class="ls-txt-center">00h</td>
+                <td class="ls-txt-center">0</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+              </tr>
+              <tr>
+                <td class="ls-txt-center">00h</td>
+                <td class="ls-txt-center">0</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+              </tr>
+              <tr>
+                <td class="ls-txt-center">00h</td>
+                <td class="ls-txt-center">0</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+              </tr>
+              <tr>
+                <td class="ls-txt-center">00h</td>
+                <td class="ls-txt-center">0</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+                <td class="ls-txt-center hidden-xs">0</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="infoAll" class="ls-tab-content">
+        <table class="ls-table">
+          <thead>
             <tr>
-              <td class="ls-txt-center">00h</td>
-              <td class="ls-txt-center">0</td>
+              <th class="hidden-xs">Tipo</th>
+              <th class="hidden-xs">Data de envio</th>
+              <th>Remetente</th>
+              <th>Destinatário</th>
+              <th class="hidden-xs">Assunto</th>
             </tr>
-            <tr>
-              <td class="ls-txt-center">00h</td>
-              <td class="ls-txt-center">0</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center">00h</td>
-              <td class="ls-txt-center">0</td>
-            </tr>
-            <tr>
-              <td class="ls-txt-center">00h</td>
-              <td class="ls-txt-center">0</td>
-            </tr>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+              <tr>
+                <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
+                <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+                <td>hamish-puckett@gmail.com</td>
+                <td>georgenorman@live.com</td>
+                <td class="hidden-xs">Minima quod rerum ea natus tempore libero sint qui quod</td>
+              </tr>
+              <tr>
+                <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
+                <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+                <td>sheryl_sutton@mail.com</td>
+                <td>tobypalmer@gmail.com</td>
+                <td class="hidden-xs">A eveniet quia exercitationem voluptates delectus accusamus quisquam laudantium quos iure ullam sed quae</td>
+              </tr>
+              <tr>
+                <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
+                <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+                <td>ciara-desai@mail.com</td>
+                <td>eli_schroeder@gmail.com</td>
+                <td class="hidden-xs">Consequatur aut atque est omnis dolore sed</td>
+              </tr>
+              <tr>
+                <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
+                <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+                <td>brockcarver@yahoo.com</td>
+                <td>rubywalton@live.com</td>
+                <td class="hidden-xs">Voluptatum enim magni suscipit quidem animi soluta consequuntur sint voluptate pariatur illum veniam quam esse</td>
+              </tr>
+              <tr>
+                <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
+                <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
+                <td>lynette_olsen@hotmail.com</td>
+                <td>patrick-sumner@gmail.com</td>
+                <td class="hidden-xs">Molestiae sint quisquam reprehenderit corrupti quod adipisci accusantium tenetur quam</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
   </div>
+
 </div>
 
 <!-- Modal de exportação -->
@@ -619,23 +528,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Est voluptate aut aut aut totam possimus nam</a>
+            <a href="#">Nam molestiae hic mollitia</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Temporibus totam eligendi dolorem</a>
+            <a href="#">Veniam sit hic veniam nemo dolorem eos iure quisquam voluptatem dolorem</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Sed sit voluptatem aut iure id nobis</a>
+            <a href="#">Nam quisquam nesciunt vel doloremque</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Reiciendis consequatur nostrum vel illum modi deleniti distinctio aut molestiae quis</a>
+            <a href="#">Nostrum non id temporibus architecto a tempora repudiandae quis</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Et qui blanditiis dolor expedita beatae quis minima</a>
+            <a href="#">Saepe est non aut quos praesentium nam</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -644,8 +553,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> rem libero ad maxime et repellat</a></li>
-          <li><a href="#">> soluta iure nostrum nihil voluptas non</a></li>
+          <li><a href="#">> possimus magnam ut voluptate sed ab</a></li>
+          <li><a href="#">> nulla libero ullam voluptate velit autem</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">
