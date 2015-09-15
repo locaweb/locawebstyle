@@ -44,6 +44,7 @@ src_files:
     - source/assets/javascripts/locastyle/_tabs-button.js
     - source/assets/javascripts/locastyle/_switch-button.js
     - source/assets/javascripts/locastyle/_toggle-text.js
+    - source/assets/javascripts/locastyle/_table.js
 
 # stylesheets
 #

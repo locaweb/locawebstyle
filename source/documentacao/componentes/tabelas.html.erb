@@ -180,4 +180,12 @@ type: component
     </tbody>
   </table>
 
+  <h2 class="doc-title-3">Seleção de Checkboxes</h2>
+  <p>Para utilizar a seleção através de checkboxes, basta adicioná-los em todas as linhas (inclusive na thead) e iniciar o módulo na tabela utilizando o atributo <code>data-ls-module="table"</code>. Note que o checkbox presente na thead possui a classe <code>ls-main-check</code> para ser registrado como o checkbox principal que irá selecionar ou deselecionar todos os outros.</p>
+  <p>Esse comportamento <strong>não adiciona a funcionalidade de seleção</strong> a linha da tabela através do clique na mesma. Esse controle é feito somente através do checkbox.</p>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/table/checkbox-table' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/table/checkbox-table' %><% end %>
+
 </section>
