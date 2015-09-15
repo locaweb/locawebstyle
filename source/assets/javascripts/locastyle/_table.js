@@ -7,10 +7,10 @@ locastyle.table = (function() {
     selector: {
       module: '[data-ls-module=table]',
       mainCheck: '.ls-main-check',
-      checked: '.is-checked'
+      selected: '.is-selected'
     },
     classes: {
-      checked: 'is-checked'
+      selected: 'is-selected'
     },
     events: {
       click: 'click.ls'
@@ -26,9 +26,9 @@ locastyle.table = (function() {
   function checkAllRows(table, mainCheck) {
     mainCheck.on(config.events.click, function() {
       if ($(this).prop('checked')) {
-        table.find('tbody tr').not(config.selector.checked).find('input[type=checkbox]').trigger(config.events.click);
+        table.find('tbody tr').not(config.selector.selected).find('input[type=checkbox]').trigger(config.events.click);
       } else {
-        table.find('tbody tr' + config.selector.checked + ' input[type=checkbox]').trigger(config.events.click);
+        table.find('tbody tr' + config.selector.selected + ' input[type=checkbox]').trigger(config.events.click);
       }
     });
   }
@@ -51,9 +51,9 @@ locastyle.table = (function() {
     checkboxes.each(function() {
       $(this).on(config.events.click, function() {
         if ($(this).prop('checked')) {
-          $(this).closest('tr').addClass(config.classes.checked);
+          $(this).closest('tr').addClass(config.classes.selected);
         } else {
-          $(this).closest('tr').removeClass(config.classes.checked);
+          $(this).closest('tr').removeClass(config.classes.selected);
         }
 
         watchCheckboxes(mainCheck, checkboxes);

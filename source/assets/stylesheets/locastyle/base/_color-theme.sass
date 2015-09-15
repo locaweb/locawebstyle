@@ -337,13 +337,13 @@
 
       tbody
         tr:hover,
-        tr.is-checked
+        tr.is-selected
           +rgba(background-color, $color2, .02)
         a:not([class*="ls-btn"]),
           color: $color1
 
       &.ls-no-hover
-        tbody tr.is-checked:hover
+        tbody tr.is-selected:hover
           +rgba(background-color, $color2, .02)
 
       &.ls-table-striped
