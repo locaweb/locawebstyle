@@ -61,6 +61,21 @@ locastyle.table = (function() {
     });
   }
 
+  function validateCheckedItems(mainCheck, checkboxes) {
+    var count = 0;
+
+    checkboxes.each(function() {
+      if ($(this).prop('checked')) {
+        $(this).closest('tr').addClass(config.classes.selected);
+        count++;
+      }
+    });
+
+    if (count === checkboxes.length) {
+      mainCheck.prop('checked', true);
+    }
+  }
+
   function initCheck() {
     var $table = $(config.selector.module);
 
@@ -70,6 +85,7 @@ locastyle.table = (function() {
       if ($mainCheck.length) {
         var $checkboxes = $(this).find('input[type=checkbox]').not(config.selector.mainCheck);
 
+        validateCheckedItems($mainCheck, $checkboxes);
         checkAllRows($(this), $mainCheck);
         checkRow($(this), $mainCheck, $checkboxes);
       }
