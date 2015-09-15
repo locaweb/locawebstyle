@@ -6,27 +6,59 @@ describe('Table: ', function() {
   });
 
   describe('when click on checkbox', function() {
-    it('should check if the line is checked', function() {
+    it('should validate if the line has the is-selected class', function() {
       var elem = $('#myTable tbody tr:first-child');
       elem.find('input[type=checkbox]').trigger('click.ls');
-      expect(elem.hasClass('is-checked')).toBe(true);
+      expect(elem.hasClass('is-selected')).toBe(true);
     });
 
-    it('should check if all the checkboxes are checked', function() {
+    it('should validate if all the tbody tr has the is-selected class', function() {
       $('#myTable thead tr').find('input[type=checkbox]').trigger('click.ls');
       $('#myTable tbody tr').each(function() {
-        expect($(this).hasClass('is-checked')).toBe(true);
+        expect($(this).hasClass('is-selected')).toBe(true);
       });
     });
 
-    it('should check if all the checkboxes are not checked', function() {
-      var elem = $('#myTable thead tr');
+    it('should validate if all the tbody tr has not the is-selected class', function() {
+      var $elem = $('#myTable thead tr');
       // The first click to select all cheboxes
-      elem.find('input[type=checkbox]').trigger('click.ls');
+      $elem.find('input[type=checkbox]').trigger('click.ls');
       // The second click to deselect all checkboxes
-      elem.find('input[type=checkbox]').trigger('click.ls');
+      $elem.find('input[type=checkbox]').trigger('click.ls');
       $('#myTable tbody tr').each(function() {
-        expect($(this).hasClass('is-checked')).toBe(false);
+        expect($(this).hasClass('is-selected')).toBe(false);
+      });
+    });
+
+    it('should check the main checkbox when all the other checkboxes are checked', function() {
+      var $checkboxes = $('#myTable tbody').find('input[type=checkbox]');
+      $checkboxes.each(function() {
+        $(this).trigger('click.ls');
+      });
+      expect($('#myTable thead').find('input[type=checkbox]').prop('checked')).toBe(true);
+    });
+
+    it('should uncheck the main checkbox when all the other checkboxes are unchecked', function() {
+      var $checkboxes = $('#checkedTable tbody').find('input[type=checkbox]');
+      $checkboxes.each(function() {
+        $(this).trigger('click.ls');
+      });
+      expect($('#checkedTable thead').find('input[type=checkbox]').prop('checked')).toBe(false);
+    });
+  });
+
+  describe('When load the module with all the sub checkboxes in checkedTable', function() {
+    it('should check the main checkbox', function() {
+      expect($('#checkedTable thead').find('input[type=checkbox]').prop('checked')).toBe(true);
+    });
+
+    it('should add the is-selected class to each closest checkbox tr that is checked', function() {
+      var $checkboxes = $('#checkedTable tbody tr').find('input[type=checkbox]');
+
+      $checkboxes.each(function() {
+        if ($(this).prop('checked')) {
+          expect($(this).closest('tr').hasClass('is-selected')).toBe(true);
+        }
       });
     });
   });
