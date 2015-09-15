@@ -6,27 +6,27 @@ describe('Table: ', function() {
   });
 
   describe('when click on checkbox', function() {
-    it('should validate if the line has the is-selected class', function() {
+    it('should validate if the line has the ls-selected class', function() {
       var elem = $('#myTable tbody tr:first-child');
       elem.find('input[type=checkbox]').trigger('click.ls');
-      expect(elem.hasClass('is-selected')).toBe(true);
+      expect(elem.hasClass('ls-selected')).toBe(true);
     });
 
-    it('should validate if all the tbody tr has the is-selected class', function() {
+    it('should validate if all the tbody tr has the ls-selected class', function() {
       $('#myTable thead tr').find('input[type=checkbox]').trigger('click.ls');
       $('#myTable tbody tr').each(function() {
-        expect($(this).hasClass('is-selected')).toBe(true);
+        expect($(this).hasClass('ls-selected')).toBe(true);
       });
     });
 
-    it('should validate if all the tbody tr has not the is-selected class', function() {
+    it('should validate if all the tbody tr has not the ls-selected class', function() {
       var $elem = $('#myTable thead tr');
       // The first click to select all cheboxes
       $elem.find('input[type=checkbox]').trigger('click.ls');
       // The second click to deselect all checkboxes
       $elem.find('input[type=checkbox]').trigger('click.ls');
       $('#myTable tbody tr').each(function() {
-        expect($(this).hasClass('is-selected')).toBe(false);
+        expect($(this).hasClass('ls-selected')).toBe(false);
       });
     });
 
@@ -52,12 +52,12 @@ describe('Table: ', function() {
       expect($('#checkedTable thead').find('input[type=checkbox]').prop('checked')).toBe(true);
     });
 
-    it('should add the is-selected class to each closest checkbox tr that is checked', function() {
+    it('should add the ls-selected class to each closest checkbox tr that is checked', function() {
       var $checkboxes = $('#checkedTable tbody tr').find('input[type=checkbox]');
 
       $checkboxes.each(function() {
         if ($(this).prop('checked')) {
-          expect($(this).closest('tr').hasClass('is-selected')).toBe(true);
+          expect($(this).closest('tr').hasClass('ls-selected')).toBe(true);
         }
       });
     });

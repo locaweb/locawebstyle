@@ -7,10 +7,10 @@ locastyle.table = (function() {
     selector: {
       module: '[data-ls-module=table]',
       mainCheck: '.ls-main-check',
-      selected: '.is-selected'
+      selected: '.ls-selected'
     },
     classes: {
-      selected: 'is-selected'
+      selected: 'ls-selected'
     },
     events: {
       click: 'click.ls'
