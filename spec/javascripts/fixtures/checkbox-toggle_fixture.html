@@ -1,7 +1,7 @@
-<table id="myTable" class="ls-table ls-no-hover" data-ls-module="table">
+<table id="lsTable" class="ls-table ls-no-hover">
   <thead>
     <tr>
-      <th class="ls-width-50"><input type="checkbox" class="ls-main-check" /></th>
+      <th class="ls-width-50"><input type="checkbox" data-ls-module="checkboxToggle" data-checkbox-target="foo" id="checkboxElement" /></th>
       <th>Título</th>
       <th class="hidden-xs">Campanha</th>
       <th>Status</th>
@@ -10,14 +10,14 @@
   </thead>
   <tbody>
     <tr>
-      <td><input type="checkbox" /></td>
+      <td><input type="checkbox" class="checkboxElementTarget" data-checkbox-toggle="foo" /></td>
       <td><a href="" title="">Mensagem Teste Locastyle</a></td>
       <td class="hidden-xs">Campanha</td>
       <td>Enviada</td>
       <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
     </tr>
     <tr>
-      <td><input type="checkbox" /></td>
+      <td><input type="checkbox" class="checkboxElementTarget" data-checkbox-toggle="foo" /></td>
       <td><a href="" title="">Mensagem Teste Locastyle</a></td>
       <td class="hidden-xs">Campanha</td>
       <td>Enviada</td>
@@ -26,10 +26,12 @@
   </tbody>
 </table>
 
-<table id="checkedTable" class="ls-table ls-no-hover" data-ls-module="table">
+<a id="toggleButton" href="#" class="ls-btn ls-triggered" data-ls-module="checkboxToggle"></a>
+
+<table id="lsCheckedTable" class="ls-table ls-no-hover">
   <thead>
     <tr>
-      <th class="ls-width-50"><input type="checkbox" class="ls-main-check" /></th>
+      <th class="ls-width-50"><input type="checkbox" data-ls-module="checkboxToggle" data-checkbox-target="checked" id="uncheckedElement" /></th>
       <th>Título</th>
       <th class="hidden-xs">Campanha</th>
       <th>Status</th>
@@ -38,14 +40,14 @@
   </thead>
   <tbody>
     <tr>
-      <td><input type="checkbox" checked /></td>
+      <td><input type="checkbox" class="checkedElement" data-checkbox-toggle="checked" /></td>
       <td><a href="" title="">Mensagem Teste Locastyle</a></td>
       <td class="hidden-xs">Campanha</td>
       <td>Enviada</td>
       <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
     </tr>
     <tr>
-      <td><input type="checkbox" checked /></td>
+      <td><input type="checkbox" class="checkedElement ls-checked" data-checkbox-toggle="checked" checked="checked" /></td>
       <td><a href="" title="">Mensagem Teste Locastyle</a></td>
       <td class="hidden-xs">Campanha</td>
       <td>Enviada</td>
