@@ -1,0 +1,31 @@
+---
+title: Checkbox Toggle
+description: Controle checkboxes utilizando qualquer elemento
+type: funcoesjs
+---
+
+<%= partial 'partials/doc-menu-funcoes-js' %>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <p>Para selecionar um ou mais checkboxes a partir de um click em outro elemento, você precisa colocar <code>data-ls-module="checkboxToggle"</code> no elemento que servirá como gatilho para essa ação. Além disso, também é necessário colocar o <code>data-checkbox-target="foo"</code> no mesmo elemento. O conteúdo desse servirá como "seletor" para os checkboxes alvo.</p>
+  <p>Nos checkboxes que deverão interagir, você coloca o <code>data-checkbox-toggle="foo"</code> com o mesmo conteúdo do <code>data-checkbox-target</code> presente no elemento gatilho.</p>
+  <p>Abaixo seguem alguns exemplos de utilização:</p>
+
+
+  <h2 class="doc-title-3">Tabela</h2>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/checkbox-toggle/checkbox-table' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/checkbox-toggle/checkbox-table' %><% end %>
+
+  <h2 class="doc-title-3">Listas</h2>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/checkbox-toggle/checkbox-lista' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/checkbox-toggle/checkbox-lista' %><% end %>
+
+
+</section>
