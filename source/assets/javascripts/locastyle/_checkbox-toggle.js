@@ -23,12 +23,16 @@ locastyle.checkboxToggle = (function() {
   function watchCheckboxes(triggerElement, checkboxes) {
     for (var i = 0; i < checkboxes.length; i++) {
       if (!checkboxes[i].checked) {
+        if (triggerElement.hasClass('ls-triggered')) {
+          toggleText(triggerElement);
+        }
         triggerElement.prop('checked', false).removeClass('ls-triggered');
         return false;
       }
     }
 
     triggerElement.prop('checked', true).addClass('ls-triggered');
+    toggleText(triggerElement);
   }
 
   // Event handler for triggerElement
@@ -41,11 +45,13 @@ locastyle.checkboxToggle = (function() {
   }
 
   // Toggle the triggerElement text like the toggleText module
-  function toggleText(el) {
-    var textChange = el.data('toggleText');
-    var textOriginal = el.text();
+  function toggleText(triggerElement) {
+    if (triggerElement.data('toggleText')) {
+      var textChange = triggerElement.data('toggleText');
+      var textOriginal = triggerElement.text();
 
-    el.data('toggleText', textOriginal).text(textChange);
+      triggerElement.data('toggleText', textOriginal).text(textChange);
+    }
   }
 
   // Register the click.ls events on the triggerElement and target checkboxes
@@ -59,10 +65,7 @@ locastyle.checkboxToggle = (function() {
 
       $(this).toggleClass('ls-triggered');
       eventHandler($(this));
-
-      if ($(this).data('toggleText')) {
-        toggleText($(this));
-      }
+      toggleText($(this));
     });
 
     checkboxes.each(function() {
