@@ -41,4 +41,11 @@ describe('Checkbox Toggle: ', function() {
     });
   });
 
+  describe('when click on an element the has the data-toggle-text attribute', function() {
+    it('should change its text to the data-toggle-text content', function() {
+      $('#btnExample').trigger('click.ls');
+      expect($('#btnExample').text()).toBe('Deselecionar todos');
+    });
+  });
+
 });

@@ -40,6 +40,14 @@ locastyle.checkboxToggle = (function() {
     }
   }
 
+  // Toggle the triggerElement text like the toggleText module
+  function toggleText(el) {
+    var textChange = el.data('toggleText');
+    var textOriginal = el.text();
+
+    el.data('toggleText', textOriginal).text(textChange);
+  }
+
   // Register the click.ls events on the triggerElement and target checkboxes
   function triggers(triggerElement, checkboxes) {
     triggerElement.on('click.ls', function() {
@@ -51,6 +59,10 @@ locastyle.checkboxToggle = (function() {
 
       $(this).toggleClass('ls-triggered');
       eventHandler($(this));
+
+      if ($(this).data('toggleText')) {
+        toggleText($(this));
+      }
     });
 
     checkboxes.each(function() {
