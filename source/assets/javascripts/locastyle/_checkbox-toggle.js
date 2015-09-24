@@ -19,6 +19,16 @@ locastyle.checkboxToggle = (function() {
     checkboxes.prop('checked', true).addClass('ls-checked');
   }
 
+  // Toggle the triggerElement text like the toggleText module
+  function toggleText(triggerElement) {
+    if (triggerElement.data('toggleText')) {
+      var textChange = triggerElement.data('toggleText');
+      var textOriginal = triggerElement.text();
+
+      triggerElement.data('toggleText', textOriginal).text(textChange);
+    }
+  }
+
   // Watch the target chechboxes and trigger the triggerElement when all are checked or vice versa
   function watchCheckboxes(triggerElement, checkboxes) {
     for (var i = 0; i < checkboxes.length; i++) {
@@ -41,16 +51,6 @@ locastyle.checkboxToggle = (function() {
       el.trigger('checkboxToggle:activated');
     } else {
       el.trigger('checkboxToggle:deactivated');
-    }
-  }
-
-  // Toggle the triggerElement text like the toggleText module
-  function toggleText(triggerElement) {
-    if (triggerElement.data('toggleText')) {
-      var textChange = triggerElement.data('toggleText');
-      var textOriginal = triggerElement.text();
-
-      triggerElement.data('toggleText', textOriginal).text(textChange);
     }
   }
 
