@@ -59,7 +59,7 @@ locastyle.modal = (function() {
   }
 
   function open(button) {
-    var $element = button.data(),
+    var $element = ('target' in button) ? button : button.data(),
         $target = null;
 
     $('body').addClass(config.classes.open);
