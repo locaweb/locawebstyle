@@ -99,8 +99,9 @@ locastyle.modal = (function() {
     }
   }
 
-  function modalBlocked($target) {
-    $($target).each(function(i,e){
+  function modalBlocked(el) {
+    var target = $(el).data('target') ? $(el.data('target')) : $(el);
+    target.each(function(i,e){
       if ($(e).data('modal-blocked') !== undefined) {
         $('[data-dismiss="modal"]').remove();
       } else {
@@ -110,7 +111,7 @@ locastyle.modal = (function() {
   }
 
   function ariaModal(el) {
-    var modal = $(el);
+    var modal = $(el).data('target') ? $(el.data('target')) : $(el);
     var idModal = modal.find('.ls-modal-title').attr('id') || 'lsModal' + config.lsModal++;
     modal.find('.ls-modal-title').attr('id', idModal);
 
