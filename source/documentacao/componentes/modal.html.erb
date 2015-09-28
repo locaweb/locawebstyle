@@ -113,6 +113,10 @@ type: component
     </tbody>
   </table>
 
+  <div class="ls-alert-warning">
+    <p>Lembre de não passar o atributo <code>data-target</code> caso queira abrir um modal via template, pois a presença desse atributo no elemento faz com que somente seja direcionada a abertura do modal para um target.</p>
+  </div>
+
   <div class="ls-box ls-box-gray">
     <h2 class="doc-title-4">Acessibilidade</h2>
     <p>Via javascript, o modal recebe <code>focus()</code> e o atributo <code>tabindex="-1"</code> além de ser adicionada as ARIAs abaixo:</p>
@@ -187,7 +191,7 @@ type: component
 
   <h3 class="ls-title-4">Abrindo a modal via javascript</h3>
     <% code("javascript") do %>
-locastyle.modal.open({target: "#myAwesomeModal"});
+locastyle.modal.open("#myAwesomeModal");
     <% end %>
   <p class="ls-alert-warning"><strong>Atenção:</strong> Você deve sempre especificar o <code>target</code> do modal em seu javascript.</p>
   <hr>
