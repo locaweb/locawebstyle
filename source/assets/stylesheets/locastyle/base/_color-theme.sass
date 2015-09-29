@@ -336,15 +336,10 @@
         color: #000
 
       tbody
-        tr:hover,
-        tr.ls-selected
+        tr:hover
           +rgba(background-color, $color2, .02)
         a:not([class*="ls-btn"]),
           color: $color1
-
-      &.ls-no-hover
-        tbody tr.ls-selected:hover
-          +rgba(background-color, $color2, .02)
 
       &.ls-table-striped
         tbody tr:hover td

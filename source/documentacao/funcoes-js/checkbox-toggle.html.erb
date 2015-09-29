@@ -1,0 +1,88 @@
+---
+title: Checkbox Toggle
+description: Controle checkboxes utilizando qualquer elemento
+type: funcoesjs
+---
+
+<%= partial 'partials/doc-menu-funcoes-js' %>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Classe / Atributo</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>data-checkbox-target</td>
+        <td><p>Atributo cujo valor guarda o checkbox alvo</p></td>
+      </tr>
+      <tr>
+        <td>data-checkbox-toggle</td>
+        <td><p>Atributo utilizado no checkbox para identificar que ele é alvo do elemento gatilho.</p></td>
+      </tr>
+      <tr>
+        <td>data-toggle-text</td>
+        <td><p>Atributo utilizado para modificar o texto do elemento gatilho, caso seja necessário.</p></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Para selecionar um ou mais checkboxes a partir de um click em outro elemento, você precisa colocar <code>data-ls-module="checkboxToggle"</code> no elemento que servirá como gatilho para essa ação. Além disso, também é necessário colocar o <code>data-checkbox-target="foo"</code> no mesmo elemento. O conteúdo desse servirá como "seletor" para os checkboxes alvo.</p>
+  <p>Nos checkboxes que deverão interagir, você coloca o <code>data-checkbox-toggle="foo"</code> com o mesmo conteúdo do <code>data-checkbox-target</code> presente no elemento gatilho.</p>
+  <p>Abaixo seguem alguns exemplos de utilização:</p>
+
+  <h2 class="doc-title-3">Tabela</h2>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/checkbox-toggle/checkbox-table' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/checkbox-toggle/checkbox-table' %><% end %>
+
+  <h2 class="doc-title-3">Listas</h2>
+  <p>Para modificar o texto do elemento gatilho, basta colocar o atributo <code>data-toggle-text</code> no mesmo, com o texto que você deseja substituir.</p>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/checkbox-toggle/checkbox-lista' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/checkbox-toggle/checkbox-lista' %><% end %>
+
+  <h2 class="doc-title-3">Eventos</h2>
+  <p>Você pode escutar eventos no click do elemento gatilho, veja a referência abaixo.</p>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Evento</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>checkboxToggle:activated</td>
+        <td><p>Quando um elemento gatilho for ativado, o evento <code>checkboxToggle:activated</code> é disparado no elemento do módulo. Veja exemplo abaixo.</p></td>
+      </tr>
+      <tr>
+        <td>checkboxToggle:deactivated</td>
+        <td><p>Quando um elemento gatilho for desativado, o evento <code>checkboxToggle:deactivated</code> é disparado no elemento do módulo. Veja exemplo abaixo.</p></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Exemplo:</p>
+
+  <% code("javascript") do %>
+// Um elemento gatilho específico
+$('#id-do-elemento').on('checkboxToggle:activated', function() {
+  // do something
+})
+
+// Um elemento gatilho específico
+$('#id-do-elemento').on('checkboxToggle:deactivated', function() {
+  // do something
+})
+  <%end%>
+
+</section>
