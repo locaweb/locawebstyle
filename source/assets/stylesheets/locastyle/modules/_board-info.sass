@@ -29,12 +29,52 @@
   .ls-box
     @extend .ls-box-gray
     @extend .ls-txt-center
-    border: none
-    background-color: #f8f8f8
-    margin-bottom: 10px
+    width: 100%
     min-height: 200px
-    padding: 15px
+    background-color: #f8f8f8
+    border: none
     border-radius: $default-radius
+    padding: 15px
+    margin-bottom: 10px
+
+    &.ls-box-centered
+      width: 100%
+      min-height: 200px
+      display: table
+      table-layout: auto
+
+      strong
+        display: table-cell
+        vertical-align: middle
+        margin-bottom: 0
+
+    .ls-box-head
+      width: 100%
+      height: 45px
+      -webkit-align-self: flex-start
+      align-self: flex-start
+      flex: 1
+      padding-top: 10px
+
+      [class*="ls-title-"]
+        margin: 0 0 10px
+
+    .ls-box-body
+      width: 100%
+      min-height: 76px
+      flex: 1
+      padding-bottom: 10px
+
+      small
+        margin-bottom: 0
+
+      strong
+        margin-bottom: 5px
+
+    .ls-box-footer
+      width: 100%
+      align-self: flex-end
+      flex: 1
 
     small
       color: $gray3
@@ -206,3 +246,26 @@
       border-left: 1px solid $gray2
       margin-top: 0
       margin-left: -4px
+
+  .ls-board-box
+    > .row
+      display: flex
+      flex-wrap: wrap
+
+      > [class*="col-"]
+        align-items: stretch
+        display: flex
+        flex: 1
+
+    .ls-box
+      -webkit-align-content: center
+      align-content: center
+      -webkit-align-items: center
+      align-items: center
+      display: flex
+      flex-direction: column
+      -webkit-justify-content: center
+      justify-content: center
+
+      &.ls-box-centered
+        display: flex
