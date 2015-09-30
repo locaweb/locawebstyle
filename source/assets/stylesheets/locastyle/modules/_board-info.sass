@@ -90,11 +90,15 @@
 
       &[data-prefix]
         display: initial
+        position: relative
 
         &:after
           color: inherit
+          content: attr(data-prefix)
           font-size: 14px
+          font-weight: bold
           opacity: 1
+          position: absolute
           right: -13px
           top: 10%
 
@@ -124,19 +128,6 @@
     .ls-half-board-data strong
       display: block
       font-size: remtopx(1.25)
-
-  [data-prefix]
-    position: relative
-
-    &:after
-      color: #464646
-      font-size: remtopx(1.5)
-      font-weight: bold
-      content: attr(data-prefix)
-      opacity: .5
-      position: absolute
-      top: 25%
-      right: 0
 
 .row + .ls-box-group
   margin-top: 20px
