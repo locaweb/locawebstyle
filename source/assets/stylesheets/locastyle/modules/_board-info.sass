@@ -115,6 +115,12 @@
       strong
         display: initial
 
+      small
+        margin-bottom: 10px
+
+        &:last-child
+          margin-bottom: 0
+
     .ls-half-board-data strong
       display: block
       font-size: remtopx(1.25)
@@ -146,6 +152,7 @@
   display: block
   text-align: center
   padding: 0 35px
+  margin: 0 auto
 
   & + [class*="ls-half-board"]
     border-left: 0
@@ -162,11 +169,7 @@
     & + .ls-half-board-data
       border-left: 0
       padding-left: 7px
-      margin-top: 0
-      margin-left: 0
-
-  small:last-child
-    margin-bottom: 0
+      margin: 0 auto
 
   .highcharts-series-group > path
     @extend .ls-display-none
