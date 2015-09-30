@@ -10,61 +10,75 @@ title_product: SMTP Locaweb
 
 <%= partial 'documentacao/exemplos/painel2/form_filter' %>
 
+<h2 class="ls-title-4">Relatório de envio</h2>
+
+<div class="row">
+  <div class="col-md-6 col-sm-6"><p>Resumo de e-mail enviados e entregues por período.</p></div>
+  <div class="col-md-6 col-sm-6"><p class="ls-float-right ls-float-none-xs">Período selecionado: <strong>15/06/2015 à 22/06/2015</strong></p></div>
+</div>
+
 <div class="ls-board-box">
-
-  <h2 class="ls-title-4">Relatório de envio</h2>
-
-  <div class="row">
-    <div class="col-md-6 col-sm-6"><p>Resumo de e-mail enviados e entregues por período.</p></div>
-    <div class="col-md-6 col-sm-6"><p class="ls-float-right ls-float-none-xs">Período selecionado: <strong>15/06/2015 à 22/06/2015</strong></p></div>
-  </div>
 
   <div id="sending-stats" class="row ls-box-group">
     <div class="col-sm-6 col-lg-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Enviados</h6>
-        <strong>99.999.999</strong>
-        <small>e-mails</small>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Enviados</h6>
+        </div>
+        <div class="ls-box-body">
+          <strong>99.999.999</strong>
+          <small>e-mails</small>
+        </div>
       </div>
     </div>
 
     <div class="col-sm-6 col-lg-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Entregas x Bounces</h6>
-        <div class="ls-half-board-data">
-          <div id="board-chart-1" class="ls-box-chart">
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Entregas x Bounces</h6>
+        </div>
+        <div class="ls-box-body">
+          <div class="ls-half-board-data">
+            <div id="board-chart-1" class="ls-box-chart">
+            </div>
+          </div>
+          <div class="ls-half-board-data">
+            <strong class="ls-color-theme">20.000</strong>
+            <small>entregues</small>
+            <strong class="ls-color-danger">5.000</strong>
+            <small>bounces</small>
           </div>
         </div>
-        <div class="ls-half-board-data">
-          <strong class="ls-color-theme">20.000</strong>
-          <small>entregues</small>
-          <strong class="ls-color-danger">5.000</strong>
-          <small>bounces</small>
-        </div>
       </div>
     </div>
 
     <div class="col-sm-6 col-lg-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Abertos</h6>
-        <div class="ls-half-board-data">
-          <div id="board-chart-2" class="ls-box-chart">
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Abertos</h6>
+        </div>
+        <div class="ls-box-body">
+          <div class="ls-half-board-data">
+            <div id="board-chart-2" class="ls-box-chart">
+            </div>
+          </div>
+          <div class="ls-half-board-data">
+            <strong class="ls-color-info">10.000</strong>
+            <small>dos e-mails entregues</small>
           </div>
         </div>
-        <div class="ls-half-board-data">
-          <strong class="ls-color-info">10.000</strong>
-          <small>dos e-mails entregues</small>
-        </div>
       </div>
     </div>
 
     <div class="col-sm-6 col-lg-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Denúncias</h6>
-        <span class="ls-board-data">
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Denúncias</h6>
+        </div>
+        <div class="ls-box-body">
           <strong>80</strong>
           <small>spam</small>
-        </span>
+        </div>
       </div>
     </div>
   </div>
