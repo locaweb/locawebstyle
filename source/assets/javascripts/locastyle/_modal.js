@@ -58,28 +58,27 @@ locastyle.modal = (function() {
     });
   }
 
-  function open(button) {
-    var $element = button.data(),
-        $target = null;
+  function open(el) {
+    var target = null;
 
     $('body').addClass(config.classes.open);
 
-    if (!$element.target) {
-      $target = $(locastyle.templates.modal($element));
-      $('body').append($target);
+    if (!$(el).data('target') && typeof el === 'object') {
+      target = $(locastyle.templates.modal(el.data()));
+      $('body').append(target);
       $('.ls-modal-template').focus();
       bindClose();
     } else {
-      $target = $($element.target);
+      target = $(el).data('target') ? $(el.data('target')) : $(el);
     }
 
-    $target.addClass('ls-opened');
+    target.addClass('ls-opened');
 
     // This event return two arguments: element clicked and target.
-    $target.trigger(config.open.triggerOpened, button);
+    target.trigger(config.open.triggerOpened, el);
 
-    ariaModal($($element.target));
-    modalBlocked($element.target);
+    ariaModal(el);
+    modalBlocked(el);
   }
 
   function close() {
@@ -100,8 +99,9 @@ locastyle.modal = (function() {
     }
   }
 
-  function modalBlocked($target) {
-    $($target).each(function(i,e){
+  function modalBlocked(el) {
+    var target = $(el).data('target') ? $(el.data('target')) : $(el);
+    target.each(function(i,e){
       if ($(e).data('modal-blocked') !== undefined) {
         $('[data-dismiss="modal"]').remove();
       } else {
@@ -110,11 +110,12 @@ locastyle.modal = (function() {
     });
   }
 
-  function ariaModal($modal) {
-    var idModal = $modal.find('.ls-modal-title').attr('id') || 'lsModal' + config.lsModal++;
-    $modal.find('.ls-modal-title').attr('id', idModal);
+  function ariaModal(el) {
+    var modal = $(el).data('target') ? $(el.data('target')) : $(el);
+    var idModal = modal.find('.ls-modal-title').attr('id') || 'lsModal' + config.lsModal++;
+    modal.find('.ls-modal-title').attr('id', idModal);
 
-    $modal.attr({
+    modal.attr({
       role: 'dialog',
       'aria-hidden' : false,
       'aria-labelledby' : idModal,

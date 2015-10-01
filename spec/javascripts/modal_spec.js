@@ -165,4 +165,11 @@ describe("Modal: ", function() {
 
   });
 
+  describe('when open modal from javascript', function() {
+    it('should open with a simple object structure on call', function() {
+      locastyle.modal.open("#myAwesomeModalClosed");
+      expect($('#myAwesomeModalClosed')).toHaveClass('ls-opened');
+    });
+  });
+
 });
