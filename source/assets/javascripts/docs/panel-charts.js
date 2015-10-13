@@ -295,7 +295,7 @@ $(function () {
     }
   });
 
-// Panel 2 board chart 2
+  // Panel 2 board chart 2
   $('#board-chart-2').highcharts({
     colors: ['#2881ac', '#dddddd'],
     chart: {
@@ -350,6 +350,198 @@ $(function () {
       style: {
         display: 'none'
       }
+    }
+  });
+
+  // Panel 2 reputation hard bounce chart
+  $('#reputation-hard-bounce').highcharts({
+    colors: ['#dddddd', '#d75553'],
+    chart: {
+      backgroundColor: '#f7f7f7',
+      plotBackgroundColor: '#f7f7f7',
+      plotBorderWidth: 0,
+      plotShadow: false,
+      spacing: [0, 0, 0, 0],
+      height: 100
+    },
+    title: {
+      text: '10%',
+      align: 'center',
+      verticalAlign: 'middle',
+      y: 8,
+      style: {
+        fontSize: '22px'
+      }
+    },
+    tooltip: {
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        dataLabels: false,
+        startAngle: 0,
+        endAngle: 360,
+        center: ['50%', '50%']
+      }
+    },
+    series: [{
+      type: 'pie',
+      name: 'Abertos',
+      innerSize: '75%',
+      data: [
+        ['Ok', 90],
+        ['Hard Bounces', 10],
+        {
+          name: 'Proprietary or Undetectable',
+          y: 0,
+          dataLabels: {
+            enabled: false
+          }
+        }
+      ],
+      size: 78
+    }],
+    credits: {
+      text: 'Locaweb',
+      href: 'http://www.locaweb.com.br',
+      style: {
+        display: 'none'
+      }
+    }
+  });
+
+// Panel 2 reputation complaints chart
+  $('#reputation-complaints').highcharts({
+    colors: ['#dddddd', '#d75553'],
+    chart: {
+      backgroundColor: '#f7f7f7',
+      plotBackgroundColor: '#f7f7f7',
+      plotBorderWidth: 0,
+      plotShadow: false,
+      spacing: [0, 0, 0, 0],
+      height: 100
+    },
+    title: {
+      text: '0,1%',
+      align: 'center',
+      verticalAlign: 'middle',
+      y: 8,
+      style: {
+        fontSize: '22px'
+      }
+    },
+    tooltip: {
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        dataLabels: false,
+        startAngle: 0,
+        endAngle: 360,
+        center: ['50%', '50%']
+      }
+    },
+    series: [{
+      type: 'pie',
+      name: 'Abertos',
+      innerSize: '75%',
+      data: [
+        ['Ok', 90],
+        ['Hard Bounces', 10],
+        {
+          name: 'Proprietary or Undetectable',
+          y: 0,
+          dataLabels: {
+            enabled: false
+          }
+        }
+      ],
+      size: 78
+    }],
+    credits: {
+      text: 'Locaweb',
+      href: 'http://www.locaweb.com.br',
+      style: {
+        display: 'none'
+      }
+    }
+  });
+
+// Panel 2
+  $('#reputation-history').highcharts({
+    chart: {
+      type: 'line'
+    },
+    title: {
+      text: ''
+    },
+    xAxis: {
+      categories: [
+        '20/05/2014',
+        '21/05/2014',
+        '22/05/2014',
+        '23/05/2014',
+        '24/05/2014',
+        '25/05/2014',
+        '26/05/2014',
+        '27/05/2014'
+      ],
+      labels: {
+        rotation: 10,
+        x: -20,
+        step: 1,
+        y: 20,
+        align: "left"
+      },
+      tickWidth: 0
+    },
+    yAxis: {
+      min: 0,
+      allowDecimals: false,
+      title: {
+        text: 'Quantidade'
+      }
+    },
+    legend: {
+      lineHeight: 20
+    },
+    plotOptions: {
+      line: {
+        lineWidth: 2,
+        marker: {
+          enabled: false
+        },
+        states: {
+          hover: {
+            lineWidth: 2
+          }
+        }
+      }
+    },
+    credits: {
+      enabled: false
+    },
+    colors: ['#25b799'],
+    series: [{
+      name: 'Entregues',
+      data: [500,1000,1200,1800,2500,3600,4000],
+      zones: [{
+        value: 1200,
+        color: '#e74c3c'
+      }, {
+        value: 3500,
+        color: '#f1c40f'
+      }, {
+        value: 5500,
+        color: '#2ecc71'
+      }]
+    }],
+    legend: {
+      lineHeight: 20
+    },
+    tooltip: {
+      crosshairs: true,
+      useHTML: true
     }
   });
 });
