@@ -98,29 +98,47 @@
 
   [class*="ls-btn"]
     @extend .ls-float-left
+    cursor: pointer
 
     &:first-child:not(:last-child)
       border-top-right-radius: 0
       border-bottom-right-radius: 0
 
     &:not(:first-child):not(:last-child)
-      @extend .ls-no-radius
+      +border-radius(0)
 
     &:last-child:not(:first-child),
       border-bottom-left-radius: 0
       border-top-left-radius: 0
 
-    & +[class*="ls-btn"],
-      margin-left: -1px
-
     &:hover,
     &:focus
       +single-transition(none)
-      outline: none
+
+    & +[class*="ls-btn"]
+      margin-left: -1px
+
+    &.ls-btn +[class*="ls-btn-"]:last-child
+      margin-left: 10px
+      border-top-left-radius: $default-radius
+      border-bottom-left-radius: $default-radius
+
+    &.ls-btn:nth-last-child(2):not(:nth-child(1)),
+    &.ls-btn:nth-last-child(2):not(:nth-child(2))
+      border-bottom-right-radius: $default-radius
+      border-top-right-radius: $default-radius
+
+
 
   .ls-form-inline &
-    [class*="ls-btn"] + [class*="ls-btn"]
-      margin-left: -1px
+    [class*="ls-btn"] 
+
+      & + [class*="ls-btn"]
+        margin-left: -1px
+
+      & +[class*="ls-btn-"]:not(:first-child)
+        margin-left: 10px
+
 
 //
 // Container that wraps the buttons in forms
