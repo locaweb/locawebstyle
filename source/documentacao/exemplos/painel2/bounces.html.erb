@@ -10,45 +10,57 @@ title_product: SMTP Locaweb
 
 <%= partial 'documentacao/exemplos/painel2/form_filter' %>
 
+<h2 class="ls-title-4">Relatório de Bounces</h2>
+
+<div class="row">
+  <div class="col-md-6 col-sm-6"><p>E-mails abertos no período selecionado.</p></div>
+  <div class="col-md-6 col-sm-6"><p class="ls-float-right ls-float-none-xs">Período selecionado: <strong>15/06/2015 à 22/06/2015</strong></p></div>
+</div>
+
 <div class="ls-board-box">
-
-  <h2 class="ls-title-4">Relatório de Bounces</h2>
-
-  <div class="row">
-    <div class="col-md-6 col-sm-6"><p>E-mails abertos no período selecionado.</p></div>
-    <div class="col-md-6 col-sm-6"><p class="ls-float-right ls-float-none-xs">Período selecionado: <strong>15/06/2015 à 22/06/2015</strong></p></div>
-  </div>
 
   <div id="sending-stats" class="row ls-box-group">
     <div class="col-sm-4">
       <div class="ls-box">
-        <h6 class="ls-title-4">Total de Bounces</h6>
-        <strong>5.000</strong>
-        <small>soft + hard Bounces</small>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Total de Bounces</h6>
+        </div>
+        <div class="ls-box-body">
+          <strong>5.000</strong>
+          <small>soft + hard Bounces</small>
+        </div>
       </div>
     </div>
 
     <div class="col-sm-4">
       <div class="ls-box">
-        <h6 class="ls-title-4">Soft Bounce</h6>
-        <strong>3.500</strong>
-        <small>
-          relacionados a erros temporários
-          <br>
-          (ex: Caixa cheia)
-        </small>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Soft Bounce</h6>
+        </div>
+        <div class="ls-box-body">
+          <strong>3.500</strong>
+          <small>
+            relacionados a erros temporários
+            <br>
+            (ex: Caixa cheia)
+          </small>
+        </div>
       </div>
     </div>
 
     <div class="col-sm-4">
       <div class="ls-box">
-        <h6 class="ls-title-4">Hard Bounce</h6>
-        <strong>1.500</strong>
-        <small>
-          relacionados a erros permanentes
-          <br>
-          (ex: E-mail inexistente)
-        </small>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Hard Bounce</h6>
+        </div>
+        <div class="ls-box-body">
+          <strong>1.500</strong>
+          <small>
+            relacionados a erros permanentes
+            <br>
+            (ex: E-mail inexistente)
+          </small>
+        </div>
       </div>
     </div>
 
