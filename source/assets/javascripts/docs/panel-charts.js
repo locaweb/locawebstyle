@@ -545,7 +545,7 @@ buildCategoriesArray();
       categories: categories
     },
     legend: {
-      lineHeight: 20
+      enabled: false
     },
     plotOptions: {
       line: {
@@ -556,7 +556,7 @@ buildCategoriesArray();
         },
         states: {
           hover: {
-            lineWidth: 2
+            enabled: false
           }
         }
       }
@@ -566,34 +566,36 @@ buildCategoriesArray();
     },
     colors: ['#25b799'],
     series: [{
-      name: 'Entregues',
-      data: [0,24,30,120,55,110,0,95,0],
+      data: [0,25,30,120,55,110,0,95,125],
       zones: [{
-        value: 24,
+        value: 25,
         color: '#b2b2b2'
       }, {
-        value: 49,
+        value: 50,
         color: '#d75452'
       }, {
-        value: 74,
+        value: 75,
         color: '#f87e1b'
       }, {
-        value: 99,
+        value: 100,
         color: '#f7c709'
       }, {
-        value: 111,
+        value: 112,
         color: '#5fb760'
       }, {
-        value: 124,
+        value: 125,
         color: '#428bca'
       }]
     }],
-    legend: {
-      lineHeight: 20
-    },
     tooltip: {
       crosshairs: true,
-      useHTML: true
+      useHTML: true,
+      formatter: function() {
+        var value = this.y < 25 ? 'Sem índice' : (this.y - 25);
+
+        return this.x + '<br>' +
+          'Nota: <b>' + value  + '</b>';
+      },
     }
   });
 });
