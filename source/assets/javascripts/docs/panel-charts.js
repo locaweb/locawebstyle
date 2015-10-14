@@ -467,6 +467,41 @@ $(function () {
     }
   });
 
+var tickPositions = [0,25,50,75,100,112,125];
+var categories = [];
+
+function buildCategoriesArray() {
+
+  for (var i = 0; i <= 125; i++) {
+    switch(i) {
+      case 0:
+        categories.push('Sem índice');
+        break;
+      case 25:
+        categories.push('0 a 24 Péssima');
+        break;
+      case 50:
+        categories.push('25 a 49 Ruim');
+        break;
+      case 75:
+        categories.push('50 a 74 Regular');
+        break;
+      case 100:
+        categories.push('75 a 87 Boa');
+        break;
+      case 112:
+        categories.push('Acima de 87 Ótima');
+        break;
+      default:
+        categories.push('');
+    }
+  }
+
+  console.log(categories);
+}
+
+buildCategoriesArray();
+
 // Panel 2
   $('#reputation-history').highcharts({
     chart: {
@@ -497,10 +532,13 @@ $(function () {
     },
     yAxis: {
       min: 0,
+      max: 125,
       allowDecimals: false,
       title: {
-        text: 'Quantidade'
-      }
+        text: null
+      },
+      tickPositions: tickPositions,
+      categories: categories
     },
     legend: {
       lineHeight: 20
@@ -509,7 +547,8 @@ $(function () {
       line: {
         lineWidth: 2,
         marker: {
-          enabled: false
+          enabled: true,
+          symbol: "circle"
         },
         states: {
           hover: {
@@ -524,15 +563,15 @@ $(function () {
     colors: ['#25b799'],
     series: [{
       name: 'Entregues',
-      data: [500,1000,1200,1800,2500,3600,4000],
+      data: [24,30,60,55,50,10,95,20],
       zones: [{
-        value: 1200,
+        value: 30,
         color: '#e74c3c'
       }, {
-        value: 3500,
+        value: 70,
         color: '#f1c40f'
       }, {
-        value: 5500,
+        value: 80,
         color: '#2ecc71'
       }]
     }],
