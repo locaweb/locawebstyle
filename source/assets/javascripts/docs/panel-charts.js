@@ -492,6 +492,9 @@ function buildCategoriesArray() {
       case 112:
         categories.push('Acima de 87 Ótima');
         break;
+      case 125:
+        categories.push('100 Nota máxima');
+        break;
       default:
         categories.push('');
     }
@@ -519,7 +522,8 @@ buildCategoriesArray();
         '24/05/2014',
         '25/05/2014',
         '26/05/2014',
-        '27/05/2014'
+        '27/05/2014',
+        '28/05/2014'
       ],
       labels: {
         rotation: 10,
@@ -563,16 +567,25 @@ buildCategoriesArray();
     colors: ['#25b799'],
     series: [{
       name: 'Entregues',
-      data: [24,30,60,55,50,10,95,20],
+      data: [0,24,30,120,55,110,0,95,0],
       zones: [{
-        value: 30,
-        color: '#e74c3c'
+        value: 24,
+        color: '#b2b2b2'
       }, {
-        value: 70,
-        color: '#f1c40f'
+        value: 49,
+        color: '#d75452'
       }, {
-        value: 80,
-        color: '#2ecc71'
+        value: 74,
+        color: '#f87e1b'
+      }, {
+        value: 99,
+        color: '#f7c709'
+      }, {
+        value: 111,
+        color: '#5fb760'
+      }, {
+        value: 124,
+        color: '#428bca'
       }]
     }],
     legend: {
