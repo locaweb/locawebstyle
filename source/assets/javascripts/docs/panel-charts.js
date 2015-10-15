@@ -1,5 +1,10 @@
 $(function () {
 
+  // This will resize all charts examples on sidebar minimize or maximize
+  $(document).on('sidebar-minimize sidebar-maximize transitionend', function() {
+    $(window).resize();
+  });
+
   // panel 1
   $('#panel-charts').highcharts({
     chart: {
