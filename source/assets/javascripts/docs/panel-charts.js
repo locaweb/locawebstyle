@@ -467,10 +467,8 @@ $(function () {
     }
   });
 
-var tickPositions = [0,25,50,75,100,112,125];
-var categories = [];
-
-function buildCategoriesArray() {
+  // This is used to set the yAxis labels on chart
+  var categories = [];
 
   for (var i = 0; i <= 125; i++) {
     switch(i) {
@@ -500,12 +498,7 @@ function buildCategoriesArray() {
     }
   }
 
-  console.log(categories);
-}
-
-buildCategoriesArray();
-
-// Panel 2
+  // Reputation chart example
   $('#reputation-history').highcharts({
     chart: {
       type: 'line'
@@ -541,7 +534,7 @@ buildCategoriesArray();
       title: {
         text: null
       },
-      tickPositions: tickPositions,
+      tickPositions: [0,25,50,75,100,112,125],
       categories: categories
     },
     legend: {
