@@ -564,28 +564,9 @@ buildCategoriesArray();
     credits: {
       enabled: false
     },
-    colors: ['#25b799'],
+    colors: ['#303030'],
     series: [{
-      data: [0,25,30,120,55,110,0,95,125],
-      zones: [{
-        value: 25,
-        color: '#b2b2b2'
-      }, {
-        value: 50,
-        color: '#d75452'
-      }, {
-        value: 75,
-        color: '#f87e1b'
-      }, {
-        value: 100,
-        color: '#f7c709'
-      }, {
-        value: 112,
-        color: '#5fb760'
-      }, {
-        value: 125,
-        color: '#428bca'
-      }]
+      data: [0,25,30,120,55,110,0,95,125]
     }],
     tooltip: {
       crosshairs: true,
