@@ -149,6 +149,12 @@
   border-top: 4px solid $gray1
   white-space: nowrap
 
+  .ls-form &
+    margin: 15px
+
+    [class*="ls-btn"]:first-child
+      margin-left: 0
+
   // when in inline forms
   .ls-form-inline &
     padding: 0
@@ -156,13 +162,31 @@
     border: none
     display: inline-block
 
+    [class*="ls-btn"] + [class*="ls-btn"]
+      margin-left: 10px
+
   // when in horizontal forms
   .ls-form-horizontal &
     @extend .ls-clearfix
-    @extend .ls-no-padding
-    @extend .ls-no-margin
     padding-top: 21px
-    border: none
 
     [class*="ls-btn"]:not(.ls-btn-block)
       @extend .ls-no-margin-top
+
+@media screen and (max-width: $screen-md)
+
+  .ls-actions-btn
+
+    .ls-form-inline &
+      padding: 15px 0
+      margin: 30px 0
+      border-top: 4px solid $gray1
+      white-space: nowrap
+      clear: both
+      display: block
+
+    .ls-box-filter &
+      margin: 0
+      padding: 0
+      display: inline-table
+      border: none
