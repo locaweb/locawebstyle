@@ -194,8 +194,8 @@ textarea
   .row:after
     @extend .ls-clearfix
 
-  .ls-actions-btn
-    clear: both
+  // .ls-actions-btn
+  //   clear: both
 
 //
 // Label and input side by side
@@ -230,6 +230,7 @@ textarea
       display: inline-table // is necessary
       margin-right: 0
       padding-left: 0
+      padding-right: 0
 
       .ls-label-text
         display: table-cell
@@ -238,11 +239,11 @@ textarea
         white-space: nowrap
         width: 1%
 
-  .ls-actions-btn
-    display: inline-table
+  // .ls-actions-btn
+  //   display: inline-table
 
-    [class*="ls-btn"] + [class*="ls-btn"]
-      margin-left: 15px
+  //   [class*="ls-btn"] + [class*="ls-btn"]
+  //     margin-left: 15px
 
 .ls-box-filter
   form.ls-float-right
@@ -251,12 +252,16 @@ textarea
 
     .ls-label
       display: inline-block
+      margin-bottom: 0
 
       &[class*="col-"]
         padding-right: 15px
 
       input
         width: 100%
+
+  .ls-label
+    margin-bottom: 0
 
 //
 // Form like text
@@ -365,12 +370,13 @@ input + .ls-label-text-prefix
       &[class*="col-"]
         float: none
         display: block
+        padding-right: 0
 
         .ls-label-text
           display: block
 
-    .ls-actions-btn
-      display: block
+    // .ls-actions-btn
+    //   display: block
 
     [class*="ls-btn"]
       margin-left: 0
@@ -388,17 +394,22 @@ input + .ls-label-text-prefix
 
       .ls-label
         display: block
+        margin-bottom: 15px
 
       [class*="ls-btn"]
         margin-left: 0
+        
+    .ls-label
+      margin-bottom: 15px
 
-@media screen and (min-width: $screen-sm)
+@media screen and (min-width: $screen-md)
   .ls-form-inline
 
     .ls-label
-      .ls-box-filter ~ &
-        margin-bottom: 0
 
-    .ls-actions-btn
-      margin-top: 0
-      margin-bottom: 0
+      &[class*="col-"]
+        padding-right: 15px
+
+    .ls-box-filter &
+      .ls-label
+        margin-bottom: 0
