@@ -95,41 +95,49 @@ describe("Dropdown: ", function() {
     });
   });
 
-  describe("Dropdown with waia-ria", function() {
-    it("Button should has attr role with value combobox", function() {
-      expect($('#dropdown-test-6 > .ls-btn-primary').attr('role')).toEqual('combobox');
+  describe("Waia-ria", function() {
+
+    describe("loading page", function() {
+      it("Button should has attr role with value combobox", function() {
+        expect($('#dropdown-test-6 > .ls-btn-primary').attr('role')).toEqual('combobox');
+      });
+
+      it("Links should has attr role with value option", function() {
+        expect($('#dropdown-test-6 > .ls-dropdown-nav').find('a').attr('role')).toEqual('option');
+      });
+
+      it("Button should has attr aria-expanded with value false", function() {
+        expect($('#dropdown-test-6 > .ls-btn-primary').attr('aria-expanded')).toEqual('false');
+      });
+
+      it("Nav links should has attr aria-hidden with value true", function() {
+        expect($('.ls-dropdown-nav').attr('aria-hidden')).toEqual('true');
+      });
     });
 
-    it("Links should has attr role with value option", function() {
-      expect($('#dropdown-test-6 > .ls-dropdown-nav').find('a').attr('role')).toEqual('option');
+    describe("When click to open", function() {
+      it("The button should has attr aria-expanded with value true", function() {
+        $('#dropdown-test-6.ls-dropdown').find('.ls-btn-primary').trigger('click');
+        expect($('#dropdown-test-6 > .ls-btn-primary').attr('aria-expanded')).toEqual('true');
+      });
+
+      it("The nav links should has attr aria-hidden with value false", function() {
+        $('#dropdown-test-6').find('.ls-btn-primary').trigger('click');
+        expect($('#dropdown-test-6 > .ls-dropdown-nav').attr('aria-hidden')).toEqual('false');
+      });
     });
 
-    it("Button should has attr aria-expanded with value false", function() {
-      expect($('#dropdown-test-6 > .ls-btn-primary').attr('aria-expanded')).toEqual('false');
-    });
+    describe("When click to close", function() {
 
-    it("Nav links should has attr aria-hidden with value true", function() {
-      expect($('.ls-dropdown-nav').attr('aria-hidden')).toEqual('true');
-    });
+      it("The nav links should has attr aria-hidden with value true", function() {
+        $('#dropdown-test-8').find('.ls-btn-primary').trigger('click');
+        expect($('#dropdown-test-8 > .ls-dropdown-nav').attr('aria-hidden')).toEqual('true');
+      });
 
-    it("When click the button should has attr aria-expanded with value true", function() {
-      $('#dropdown-test-6.ls-dropdown').find('.ls-btn-primary').trigger('click');
-      expect($('#dropdown-test-6 > .ls-btn-primary').attr('aria-expanded')).toEqual('true');
-    });
-
-    it("When click the nav links should has attr aria-hidden with value false", function() {
-      $('#dropdown-test-6').find('.ls-btn-primary').trigger('click');
-      expect($('#dropdown-test-6 > .ls-dropdown-nav').attr('aria-hidden')).toEqual('false');
-    });
-
-    it("When click in dropdown should has attr aria-hidden with value true in others dropdowns", function() {
-      $('#dropdown-test-6').find('.ls-btn-primary').trigger('click');
-      expect($('#dropdown-test-5 > .ls-dropdown-nav').attr('aria-hidden')).toEqual('true');
-    });
-
-    it("When click in dropdown should has attr aria-expanded with value false in others dropdowns", function() {
-      $('#dropdown-test-6').find('.ls-btn-primary').trigger('click');
-      expect($('#dropdown-test-5 > .ls-btn-primary').attr('aria-expanded')).toEqual('false');
+      it("The button should has attr aria-expanded with value false", function() {
+        $('#dropdown-test-8').find('.ls-btn-primary').trigger('click');
+        expect($('#dropdown-test-8 > .ls-btn-primary').attr('aria-expanded')).toEqual('false');
+      });
     });
   });
 
