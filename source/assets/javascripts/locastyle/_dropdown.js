@@ -7,7 +7,7 @@ locastyle.dropdown = (function() {
     area: 'body',
     dropdown: '.ls-dropdown',
     module: '[data-ls-module="dropdown"]',
-    button: '.ls-dropdown [class*="ls-btn"]',
+    button: '[class*="ls-btn"]',
     firstLink: '[data-ls-module="dropdown"] > [class*="ls-btn"]:first-child, .ls-dropdown.ls-user-account > a:first-child',
     nav: '.ls-dropdown-nav'
   };
@@ -70,12 +70,12 @@ locastyle.dropdown = (function() {
   }
 
   function ariaDropdown(el) {
-    $(config.button).attr({ 'aria-expanded' : 'false' });
+    $(config.button, $(el)).attr({ 'aria-expanded' : 'false' });
     $(config.nav).attr({ 'aria-hidden' : 'true' });
 
     $(el).each(function() {
       $(config.nav).find('a').attr({ role : 'option' });
-      $(config.button).attr({ role : 'combobox' });
+      $(config.button, $(this)).attr({ role : 'combobox' });
 
       if($(this).hasClass('ls-active')){
         $(config.button, $(this)).attr({ 'aria-expanded' : 'true' });
