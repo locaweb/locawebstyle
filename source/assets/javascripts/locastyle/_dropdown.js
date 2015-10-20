@@ -70,7 +70,7 @@ locastyle.dropdown = (function() {
   }
 
   function ariaDropdown(el) {
-    $(config.button, $(el)).attr({ 'aria-expanded' : 'false' });
+    $(config.button).attr({ 'aria-expanded' : 'false' });
     $(config.nav).attr({ 'aria-hidden' : 'true' });
 
     $(el).each(function() {
