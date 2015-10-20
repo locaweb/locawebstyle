@@ -151,6 +151,18 @@ describe("Dropdown: ", function() {
         expect($('#dropdown-test-7 > .ls-dropdown-nav').attr('aria-hidden')).toEqual('true');
       });
     });
+
+    describe("When dropdown is open and click away", function() {
+      it("The button should has attr aria-expanded with value false", function() {
+        $('.ls-main').trigger('click');
+        expect($('#dropdown-test-8 > .ls-btn-primary').attr('aria-expanded')).toEqual('false');
+      });
+
+      it("The nav links should has attr aria-hidden with value true", function() {
+        $('.ls-main').trigger('click');
+        expect($('#dropdown-test-8 > .ls-dropdown-nav').attr('aria-hidden')).toEqual('true');
+      });
+    });
   });
 
 });
