@@ -37,6 +37,7 @@ locastyle.dropdown = (function() {
   function bindClickOutsideTriggers() {
     $(config.area).on("click.ls", function(){
       locastyle.dropdown.closeDropdown();
+      ariaDropdown(config.dropdown);
     });
   }
 
