@@ -37,6 +37,7 @@ locastyle.dropdown = (function() {
   function bindClickOutsideTriggers() {
     $(config.area).on("click.ls", function(){
       locastyle.dropdown.closeDropdown();
+      ariaDropdown(config.dropdown);
     });
   }
 
@@ -75,7 +76,7 @@ locastyle.dropdown = (function() {
 
     $(el).each(function() {
       $(config.nav).find('a').attr({ role : 'option' });
-      $(config.button).attr({ role : 'combobox' });
+      $(config.button, $(this)).attr({ role : 'combobox' });
 
       if($(this).hasClass('ls-active')){
         $(config.button, $(this)).attr({ 'aria-expanded' : 'true' });
