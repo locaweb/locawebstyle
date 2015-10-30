@@ -451,6 +451,18 @@
       "path": "documentacao/exemplos/painel2/pre-painel"
   },
   
+  "documentacao/exemplos/painel2/reputation-terms" :   {
+      "title": "Termos de Serviço SMTP",
+      "description": "",
+      "path": "documentacao/exemplos/painel2/reputation-terms"
+  },
+  
+  "documentacao/exemplos/painel2/reputation" :   {
+      "title": "Reputação",
+      "description": "",
+      "path": "documentacao/exemplos/painel2/reputation"
+  },
+  
   "documentacao/exemplos/painel2/resume" :   {
       "title": "Resumo",
       "description": "",
@@ -683,6 +695,12 @@
       "title": "Clique automático",
       "description": "Ativando elementos pela URL",
       "path": "documentacao/funcoes-js/auto-trigger"
+  },
+  
+  "documentacao/funcoes-js/checkbox-toggle" :   {
+      "title": "Checkbox Toggle",
+      "description": "Controle checkboxes utilizando qualquer elemento",
+      "path": "documentacao/funcoes-js/checkbox-toggle"
   },
   
   "documentacao/funcoes-js/dismiss" :   {

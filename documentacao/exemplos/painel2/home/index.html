@@ -14,6 +14,7 @@
     <link rel="icon" sizes="192x192" href="/locawebstyle/assets/images/ico-painel2.png">
     <link rel="apple-touch-icon" href="/locawebstyle/assets/images/ico-painel2.png">
     <meta name="apple-mobile-web-app-title" content="Painel 2">
+  <script src="../../../../assets/javascripts/libs/mediaqueries-ie.js" type="text/javascript"></script><script src="../../../../assets/javascripts/libs/html5shiv.js" type="text/javascript"></script>
 
   <link href="../../../../assets/stylesheets/locastyle.css" rel="stylesheet" type="text/css" />
 </head>
@@ -82,6 +83,7 @@
               <li><a href="/locawebstyle/documentacao/exemplos/painel2/complaints">Denúncias</a></li>
             </ul>
           </li>
+          <li><a href="/locawebstyle/documentacao/exemplos/painel2/reputation" class="ls-ico-trophy">Reputação</a></li>
           <li>
             <a href="#" class="ls-ico-cog" title="Configurações">Configurações</a>
             <ul>
@@ -112,7 +114,7 @@
   <table class="ls-table ls-table-striped">
     <tbody>
       <tr>
-        <td><strong>Usuário: </strong> Ian</td>
+        <td><strong>Usuário: </strong> Camila</td>
       </tr>
       <tr>
         <td>
@@ -144,37 +146,53 @@
   <div id="sending-stats" class="row">
     <div class="col-sm-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Enviados</h6>
-        <span class="ls-board-data">
-          <strong>33</strong>
-        </span>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Enviados</h6>
+        </div>
+        <div class="ls-box-body">
+          <span class="ls-board-data">
+            <strong>33</strong>
+          </span>
+        </div>
       </div>
     </div>
 
     <div class="col-sm-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Entregues</h6>
-        <span class="ls-board-data">
-          <strong>27</strong>
-        </span>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Entregues</h6>
+        </div>
+        <div class="ls-box-body">
+          <span class="ls-board-data">
+            <strong>27</strong>
+          </span>
+        </div>
       </div>
     </div>
 
     <div class="col-sm-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Erros</h6>
-        <span class="ls-board-data">
-          <strong>16</strong>
-        </span>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Erros</h6>
+        </div>
+        <div class="ls-box-body">
+          <span class="ls-board-data">
+            <strong>16</strong>
+          </span>
+        </div>
       </div>
     </div>
 
     <div class="col-sm-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Denúncias <a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="left" data-custom-classes="ls-width-300" data-content="<p>Este número corresponde ao número de vezes que seus destinatários marcaram suas mensagens como spam. Essas denúncias podem comprometer a entregabilidade das suas próximas mensagens.</p>"></a></h6>
-        <span class="ls-board-data">
-          <strong>1</strong>
-        </span>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Denúncias <a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="left" data-custom-classes="ls-width-300" data-content="<p>Este número corresponde ao número de vezes que seus destinatários marcaram suas mensagens como spam. Essas denúncias podem comprometer a entregabilidade das suas próximas mensagens.</p>"></a></h6>
+        </div>
+        <div class="ls-box-body">
+          <span class="ls-board-data">
+            <strong>1</strong>
+          </span>
+        </div>
       </div>
     </div>
 
@@ -192,39 +210,59 @@
   <div id="sending-stats" class="row ls-clearfix">
     <div class="col-sm-6 col-md-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Contratado</h6>
-        <span class="ls-board-data">
-          <strong>1 <small>milhão</small></strong>
-        </span>
-        <a href="#" class="ls-btn ls-btn-xs">Alterar plano</a>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Contratado</h6>
+        </div>
+        <div class="ls-box-body">
+          <span class="ls-board-data">
+            <strong>1 <small>milhão</small></strong>
+          </span>
+        </div>
+        <div class="ls-box-footer">
+          <a href="#" class="ls-btn ls-btn-xs">Alterar plano</a>
+        </div>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Envios do plano</h6>
-        <span class="ls-board-data">
-          <strong>0 <small>de 1 milhão</small></strong>
-        </span>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Envios do plano</h6>
+        </div>
+        <div class="ls-box-body">
+          <span class="ls-board-data">
+            <strong>0 <small>de 1 milhão</small></strong>
+          </span>
+        </div>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Envios Excedentes <a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="left" data-content="Isso permite que os envios não sejam interrompidos após atingir o limite do plano contratado." data-title="O uso de envios excedentes está ativado!"></a></h6>
-        <span class="ls-board-data ls-transparent-25">
-          <strong>0 <small>de 1 milhão</small></strong>
-        </span>
-        <a href="#" class="ls-btn ls-btn-xs">Ativar</a>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Envios Excedentes <a href="#" class="ls-ico-help" data-trigger="hover" data-ls-module="popover" data-placement="left" data-content="Isso permite que os envios não sejam interrompidos após atingir o limite do plano contratado." data-title="O uso de envios excedentes está ativado!"></a></h6>
+        </div>
+        <div class="ls-box-body">
+          <span class="ls-board-data ls-transparent-25">
+            <strong>0 <small>de 1 milhão</small></strong>
+          </span>
+        </div>
+        <div class="ls-box-footer">
+          <a href="#" class="ls-btn ls-btn-xs">Ativar</a>
+        </div>
       </div>
     </div>
 
     <div class="col-sm-6 col-md-3">
       <div class="ls-box">
-        <h6 class="ls-title-4 color-default">Total de envios utilizados</h6>
-        <span class="ls-board-data">
-          <strong class="ls-color-theme">81%</strong>
-        </span>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4 color-default">Total de envios utilizados</h6>
+        </div>
+        <div class="ls-box-body">
+          <span class="ls-board-data">
+            <strong class="ls-color-theme">81%</strong>
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -304,23 +342,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Aspernatur et ipsa omnis</a>
+            <a href="#">Itaque explicabo sint sunt quod repellat quod et et</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Enim qui ea velit nihil earum dolore voluptas doloremque quis et blanditiis molestiae inventore nihil</a>
+            <a href="#">Inventore nihil fuga voluptate qui vel nihil sed similique rerum dolor est quo et</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Eveniet ipsam vel assumenda vero reiciendis sapiente itaque amet similique eos et veniam eos ipsam</a>
+            <a href="#">Aut praesentium velit eaque est modi</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Perspiciatis maxime expedita aut assumenda</a>
+            <a href="#">Voluptatem minima quo ipsum nihil qui et autem dicta adipisci</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Accusamus dignissimos pariatur facere aut commodi nulla in</a>
+            <a href="#">Provident officia voluptatem ut quibusdam quis sed</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -329,8 +367,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> et consequuntur libero quis consequatur amet</a></li>
-          <li><a href="#">> et et corrupti consequatur sapiente est</a></li>
+          <li><a href="#">> veniam et ex delectus eum vel</a></li>
+          <li><a href="#">> qui quidem adipisci nihil molestias nobis</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">

@@ -14,6 +14,7 @@
     <link rel="icon" sizes="192x192" href="/locawebstyle/assets/images/ico-painel2.png">
     <link rel="apple-touch-icon" href="/locawebstyle/assets/images/ico-painel2.png">
     <meta name="apple-mobile-web-app-title" content="Painel 2">
+  <script src="../../../../assets/javascripts/libs/mediaqueries-ie.js" type="text/javascript"></script><script src="../../../../assets/javascripts/libs/html5shiv.js" type="text/javascript"></script>
 
   <link href="../../../../assets/stylesheets/locastyle.css" rel="stylesheet" type="text/css" />
 </head>
@@ -82,6 +83,7 @@
               <li><a href="/locawebstyle/documentacao/exemplos/painel2/complaints">Denúncias</a></li>
             </ul>
           </li>
+          <li><a href="/locawebstyle/documentacao/exemplos/painel2/reputation" class="ls-ico-trophy">Reputação</a></li>
           <li>
             <a href="#" class="ls-ico-cog" title="Configurações">Configurações</a>
             <ul>
@@ -155,61 +157,77 @@
 </div>
 
 
+<h2 class="ls-title-4">Relatório de envio</h2>
+
+<div class="row">
+  <div class="col-md-6 col-sm-6"><p>Resumo de e-mail enviados e entregues por período.</p></div>
+  <div class="col-md-6 col-sm-6"><p class="ls-float-right ls-float-none-xs">Período selecionado: <strong>15/06/2015 à 22/06/2015</strong></p></div>
+</div>
+
+<div class="ls-clearfix"></div>
+
 <div class="ls-board-box">
-
-  <h2 class="ls-title-4">Relatório de envio</h2>
-
-  <div class="row">
-    <div class="col-md-6 col-sm-6"><p>Resumo de e-mail enviados e entregues por período.</p></div>
-    <div class="col-md-6 col-sm-6"><p class="ls-float-right ls-float-none-xs">Período selecionado: <strong>15/06/2015 à 22/06/2015</strong></p></div>
-  </div>
 
   <div id="sending-stats" class="row ls-box-group">
     <div class="col-sm-6 col-lg-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Enviados</h6>
-        <strong>99.999.999</strong>
-        <small>e-mails</small>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Enviados</h6>
+        </div>
+        <div class="ls-box-body">
+          <strong>99.999.999</strong>
+          <small>e-mails</small>
+        </div>
       </div>
     </div>
 
     <div class="col-sm-6 col-lg-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Entregas x Bounces</h6>
-        <div class="ls-half-board-data">
-          <div id="board-chart-1" class="ls-box-chart">
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Entregas x Bounces</h6>
+        </div>
+        <div class="ls-box-body">
+          <div class="ls-half-board-data">
+            <div id="board-chart-1" class="ls-box-chart">
+            </div>
+          </div>
+          <div class="ls-half-board-data">
+            <strong class="ls-color-theme">20.000</strong>
+            <small>entregues</small>
+            <strong class="ls-color-danger">5.000</strong>
+            <small>bounces</small>
           </div>
         </div>
-        <div class="ls-half-board-data">
-          <strong class="ls-color-theme">20.000</strong>
-          <small>entregues</small>
-          <strong class="ls-color-danger">5.000</strong>
-          <small>bounces</small>
-        </div>
       </div>
     </div>
 
     <div class="col-sm-6 col-lg-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Abertos</h6>
-        <div class="ls-half-board-data">
-          <div id="board-chart-2" class="ls-box-chart">
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Abertos</h6>
+        </div>
+        <div class="ls-box-body">
+          <div class="ls-half-board-data">
+            <div id="board-chart-2" class="ls-box-chart">
+            </div>
+          </div>
+          <div class="ls-half-board-data">
+            <strong class="ls-color-info">10.000</strong>
+            <small>dos e-mails entregues</small>
           </div>
         </div>
-        <div class="ls-half-board-data">
-          <strong class="ls-color-info">10.000</strong>
-          <small>dos e-mails entregues</small>
-        </div>
       </div>
     </div>
 
     <div class="col-sm-6 col-lg-3">
       <div class="ls-box">
-        <h6 class="ls-title-4">Denúncias</h6>
-        <span class="ls-board-data">
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Denúncias</h6>
+        </div>
+        <div class="ls-box-body">
           <strong>80</strong>
           <small>spam</small>
-        </span>
+        </div>
       </div>
     </div>
   </div>
@@ -223,8 +241,9 @@
         <div class="ls-group-btn ls-group-active ls-display-inline-block">
           <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn ls-active ls-ico-chart-bar-up"></button>
           <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
+          <button type="button" class="ls-btn-primary ls-no-margin-top" data-ls-module="tabs" data-target="#infoAll">Detalhar</button>
         </div>
-        <a class="ls-btn-primary ls-no-margin-top" data-ls-module="tabs" data-target="#infoAll">Detalhar</a>
+        
       </div>
     </div>
 
@@ -294,37 +313,37 @@
               <tr>
                 <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
                 <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-                <td>bryce-alexander@aol.com</td>
-                <td>dora-abrams@aol.com</td>
-                <td class="hidden-xs">Ad omnis suscipit impedit magni ab dolorum veniam</td>
+                <td>darius-weiner@mac.com</td>
+                <td>neil_woods@hotmail.com</td>
+                <td class="hidden-xs">Rerum porro et omnis repellat alias earum voluptatem neque eius accusamus magnam unde</td>
               </tr>
               <tr>
                 <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
                 <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-                <td>carley-watts@me.com</td>
-                <td>waynelocklear@email.com</td>
-                <td class="hidden-xs">Et hic est non dolor consequatur dolorum enim</td>
+                <td>brock_graham@fastmail.com</td>
+                <td>sadie_mckenna@email.com</td>
+                <td class="hidden-xs">Velit autem modi recusandae et ut autem impedit</td>
               </tr>
               <tr>
                 <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
                 <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-                <td>neilweinstein@live.com</td>
-                <td>piper_watson@mail.com</td>
-                <td class="hidden-xs">Quisquam laudantium numquam sed ea perferendis assumenda sint et quo incidunt velit voluptas quam</td>
+                <td>angelo_parks@mac.com</td>
+                <td>bryce_eason@aol.com</td>
+                <td class="hidden-xs">Quia quod qui est vero unde</td>
               </tr>
               <tr>
                 <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
                 <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-                <td>angelapalmer@email.com</td>
-                <td>monty_brady@yahoo.com</td>
-                <td class="hidden-xs">Voluptatem ut omnis sit quia aut est qui blanditiis impedit aliquam deleniti sit ut</td>
+                <td>geraldine_stone@mail.com</td>
+                <td>mohammed-wallace@mac.com</td>
+                <td class="hidden-xs">Nemo magni vel a suscipit eius nam est aliquam adipisci et officiis enim</td>
               </tr>
               <tr>
                 <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
                 <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-                <td>brooklynn_cain@hotmail.com</td>
-                <td>agnes-hawkins@mail.com</td>
-                <td class="hidden-xs">Porro earum itaque quis suscipit et</td>
+                <td>toby-may@hotmail.com</td>
+                <td>trisha_boswell@live.com</td>
+                <td class="hidden-xs">Non placeat iste ut inventore vel doloribus modi provident et</td>
               </tr>
           </tbody>
         </table>
@@ -533,23 +552,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Aut at et maiores sit</a>
+            <a href="#">Aspernatur laborum eaque dolores deleniti repellat consequatur</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Doloremque eaque molestias enim quas occaecati itaque et qui</a>
+            <a href="#">Error eos deleniti omnis rerum est explicabo</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Eveniet aut aut quia accusamus omnis iure consequuntur distinctio voluptas necessitatibus quo vel</a>
+            <a href="#">Tempore nobis temporibus et deserunt necessitatibus nemo adipisci dignissimos deleniti</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Rerum sapiente tempora dolore perferendis voluptas nihil est voluptatem enim quasi</a>
+            <a href="#">Fugit velit voluptates non numquam nobis est magnam aspernatur dolorem non</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Aut magni molestiae ut repudiandae architecto sunt quo esse</a>
+            <a href="#">Dignissimos incidunt nostrum et repellat</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -558,8 +577,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> aut quo vel nesciunt culpa quaerat</a></li>
-          <li><a href="#">> omnis cupiditate eum est eum sit</a></li>
+          <li><a href="#">> numquam omnis consequatur et quia vel</a></li>
+          <li><a href="#">> praesentium ducimus porro ut voluptas soluta</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">

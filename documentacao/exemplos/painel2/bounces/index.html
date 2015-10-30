@@ -14,6 +14,7 @@
     <link rel="icon" sizes="192x192" href="/locawebstyle/assets/images/ico-painel2.png">
     <link rel="apple-touch-icon" href="/locawebstyle/assets/images/ico-painel2.png">
     <meta name="apple-mobile-web-app-title" content="Painel 2">
+  <script src="../../../../assets/javascripts/libs/mediaqueries-ie.js" type="text/javascript"></script><script src="../../../../assets/javascripts/libs/html5shiv.js" type="text/javascript"></script>
 
   <link href="../../../../assets/stylesheets/locastyle.css" rel="stylesheet" type="text/css" />
 </head>
@@ -82,6 +83,7 @@
               <li><a href="/locawebstyle/documentacao/exemplos/painel2/complaints">Denúncias</a></li>
             </ul>
           </li>
+          <li><a href="/locawebstyle/documentacao/exemplos/painel2/reputation" class="ls-ico-trophy">Reputação</a></li>
           <li>
             <a href="#" class="ls-ico-cog" title="Configurações">Configurações</a>
             <ul>
@@ -155,45 +157,59 @@
 </div>
 
 
+<h2 class="ls-title-4">Relatório de Bounces</h2>
+
+<div class="row">
+  <div class="col-md-6 col-sm-6"><p>E-mails abertos no período selecionado.</p></div>
+  <div class="col-md-6 col-sm-6"><p class="ls-float-right ls-float-none-xs">Período selecionado: <strong>15/06/2015 à 22/06/2015</strong></p></div>
+</div>
+
+<div class="ls-clearfix"></div>
+
 <div class="ls-board-box">
-
-  <h2 class="ls-title-4">Relatório de Bounces</h2>
-
-  <div class="row">
-    <div class="col-md-6 col-sm-6"><p>E-mails abertos no período selecionado.</p></div>
-    <div class="col-md-6 col-sm-6"><p class="ls-float-right ls-float-none-xs">Período selecionado: <strong>15/06/2015 à 22/06/2015</strong></p></div>
-  </div>
 
   <div id="sending-stats" class="row ls-box-group">
     <div class="col-sm-4">
       <div class="ls-box">
-        <h6 class="ls-title-4">Total de Bounces</h6>
-        <strong>5.000</strong>
-        <small>soft + hard Bounces</small>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Total de Bounces</h6>
+        </div>
+        <div class="ls-box-body">
+          <strong>5.000</strong>
+          <small>soft + hard Bounces</small>
+        </div>
       </div>
     </div>
 
     <div class="col-sm-4">
       <div class="ls-box">
-        <h6 class="ls-title-4">Soft Bounce</h6>
-        <strong>3.500</strong>
-        <small>
-          relacionados a erros temporários
-          <br>
-          (ex: Caixa cheia)
-        </small>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Soft Bounce</h6>
+        </div>
+        <div class="ls-box-body">
+          <strong>3.500</strong>
+          <small>
+            relacionados a erros temporários
+            <br>
+            (ex: Caixa cheia)
+          </small>
+        </div>
       </div>
     </div>
 
     <div class="col-sm-4">
       <div class="ls-box">
-        <h6 class="ls-title-4">Hard Bounce</h6>
-        <strong>1.500</strong>
-        <small>
-          relacionados a erros permanentes
-          <br>
-          (ex: E-mail inexistente)
-        </small>
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">Hard Bounce</h6>
+        </div>
+        <div class="ls-box-body">
+          <strong>1.500</strong>
+          <small>
+            relacionados a erros permanentes
+            <br>
+            (ex: E-mail inexistente)
+          </small>
+        </div>
       </div>
     </div>
 
@@ -217,8 +233,8 @@
           <div class="ls-group-btn ls-group-active ls-display-inline-block">
             <button type="button" data-ls-module="tabs" data-target=".child1" class="ls-btn ls-active ls-ico-chart-bar-up"></button>
             <button type="button" data-ls-module="tabs" data-target=".child2" class="ls-btn ls-ico-table-alt"></button>
+            <a class="ls-btn-primary ls-no-margin-top" data-ls-module="tabs" data-target="#infoAll">Detalhar</a>
           </div>
-          <a class="ls-btn-primary ls-no-margin-top" data-ls-module="tabs" data-target="#infoAll">Detalhar</a>
         </div>
       </form>
     </div>
@@ -289,37 +305,37 @@
               <tr>
                 <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
                 <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-                <td>hamish-puckett@gmail.com</td>
-                <td>georgenorman@live.com</td>
-                <td class="hidden-xs">Minima quod rerum ea natus tempore libero sint qui quod</td>
+                <td>kelly_puckett@mac.com</td>
+                <td>teddy-davidson@aol.com</td>
+                <td class="hidden-xs">In delectus ea atque omnis quidem voluptatem est deserunt rem omnis</td>
               </tr>
               <tr>
                 <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
                 <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-                <td>sheryl_sutton@mail.com</td>
-                <td>tobypalmer@gmail.com</td>
-                <td class="hidden-xs">A eveniet quia exercitationem voluptates delectus accusamus quisquam laudantium quos iure ullam sed quae</td>
+                <td>dominickdavidson@aol.com</td>
+                <td>tomas-middleton@mail.com</td>
+                <td class="hidden-xs">Esse labore corrupti sit error sed blanditiis iste molestias totam distinctio voluptatem</td>
               </tr>
               <tr>
                 <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
                 <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-                <td>ciara-desai@mail.com</td>
-                <td>eli_schroeder@gmail.com</td>
-                <td class="hidden-xs">Consequatur aut atque est omnis dolore sed</td>
+                <td>tonia_goldman@me.com</td>
+                <td>neil_davis@aol.com</td>
+                <td class="hidden-xs">Nihil doloremque quidem incidunt adipisci quis fugit quia nihil</td>
               </tr>
               <tr>
                 <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
                 <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-                <td>brockcarver@yahoo.com</td>
-                <td>rubywalton@live.com</td>
-                <td class="hidden-xs">Voluptatum enim magni suscipit quidem animi soluta consequuntur sint voluptate pariatur illum veniam quam esse</td>
+                <td>anahi-boykin@gmail.com</td>
+                <td>mitziwhitehead@live.com</td>
+                <td class="hidden-xs">Repudiandae inventore quia corporis dolorem</td>
               </tr>
               <tr>
                 <td class="hidden-xs ls-color-theme"><a href="#">Soft Bounce</a></td>
                 <td class="hidden-xs">21/09/2013 as 20:00 PM</td>
-                <td>lynette_olsen@hotmail.com</td>
-                <td>patrick-sumner@gmail.com</td>
-                <td class="hidden-xs">Molestiae sint quisquam reprehenderit corrupti quod adipisci accusantium tenetur quam</td>
+                <td>rylee-fischer@mac.com</td>
+                <td>hamishhunt@email.com</td>
+                <td class="hidden-xs">Ea culpa in blanditiis aut aliquid non voluptatem non dolores laboriosam repellat laborum</td>
               </tr>
           </tbody>
         </table>
@@ -528,23 +544,23 @@
       <h3 class="ls-title-2">Notificações</h3>
       <ul>
           <li class="ls-dismissable">
-            <a href="#">Nam molestiae hic mollitia</a>
+            <a href="#">Velit ut nesciunt optio unde non corporis temporibus corrupti fugiat soluta</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Veniam sit hic veniam nemo dolorem eos iure quisquam voluptatem dolorem</a>
+            <a href="#">Quos necessitatibus voluptatibus incidunt aut in distinctio placeat voluptatem aliquam cupiditate non</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Nam quisquam nesciunt vel doloremque</a>
+            <a href="#">Eligendi inventore voluptatem expedita qui debitis aut est blanditiis ut</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Nostrum non id temporibus architecto a tempora repudiandae quis</a>
+            <a href="#">Neque voluptas tempora neque debitis placeat tempora earum perferendis sunt consequuntur omnis quia sequi</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
           <li class="ls-dismissable">
-            <a href="#">Saepe est non aut quos praesentium nam</a>
+            <a href="#">Ipsum vitae dolor omnis eum sed sequi</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
       </ul>
@@ -553,8 +569,8 @@
     <nav class="ls-notification-list" id="ls-help-curtain">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-          <li><a href="#">> possimus magnam ut voluptate sed ab</a></li>
-          <li><a href="#">> nulla libero ullam voluptate velit autem</a></li>
+          <li><a href="#">> impedit vel minima voluptate aspernatur eligendi</a></li>
+          <li><a href="#">> magni quis cum et non ab</a></li>
       </ul>
     </nav>
     <nav class="ls-notification-list" id="ls-feedback-curtain">
