@@ -99,7 +99,7 @@ locastyle.popover = (function() {
       case 'bottom':
         $(data.target).css({
           top : data.top  += (data.height + 12),
-          left: data.left += (data.width/2 + 4)
+          left: data.left += (data.width/2)
         });
         break;
       case 'left':
@@ -112,7 +112,7 @@ locastyle.popover = (function() {
       case 'top':
         $(data.target).css({
           top : data.top  -=  12,
-          left: data.left += (data.width/2 + 4)
+          left: data.left += (data.width/2)
         });
 
     }
