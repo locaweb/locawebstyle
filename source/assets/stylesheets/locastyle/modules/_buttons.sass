@@ -118,20 +118,20 @@
     & +[class*="ls-btn"]
       margin-left: -1px
 
-    &.ls-btn +[class*="ls-btn-"]:last-child
-      margin-left: 10px
-      border-top-left-radius: $default-radius
-      border-bottom-left-radius: $default-radius
+    &.ls-btn[data-ls-module="tabs"]
 
-    &.ls-btn:nth-last-child(2):not(:nth-child(1)),
-    &.ls-btn:nth-last-child(2):not(:nth-child(2))
-      border-bottom-right-radius: $default-radius
-      border-top-right-radius: $default-radius
+      & +[class*="ls-btn-"]:last-child
+        margin-left: 10px
+        border-top-left-radius: $default-radius
+        border-bottom-left-radius: $default-radius
 
+      &:not(:first-child):not(:last-child)
+        border-bottom-right-radius: $default-radius
+        border-top-right-radius: $default-radius
 
 
   .ls-form-inline &
-    [class*="ls-btn"] 
+    [class*="ls-btn"]
 
       & + [class*="ls-btn"]
         margin-left: -1px
