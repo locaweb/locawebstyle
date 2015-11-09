@@ -2,6 +2,9 @@ $arrowWidth: 10px
 $colorArrow: #fff
 $colorBorderPop: rgba(0, 0, 0, 0.2)
 
+%horizontal-position-calc
+  left: calc(50% - 10px)
+
 .ls-popover
   position: absolute
   z-index: 17
@@ -39,14 +42,14 @@ $colorBorderPop: rgba(0, 0, 0, 0.2)
 
   &.ls-popover-top
     &:after
+      @extend %horizontal-position-calc
       bottom: -$arrowWidth
-      left: calc(50% - 10px)
       border-width: $arrowWidth $arrowWidth 0 $arrowWidth
       border-color: $colorArrow transparent transparent transparent
 
     &:before
+      @extend %horizontal-position-calc
       bottom: -($arrowWidth + 1)
-      left: calc(50% - 10px)
       border-width: $arrowWidth $arrowWidth 0 $arrowWidth
       border-color: $colorBorderPop transparent transparent transparent
 
@@ -67,14 +70,14 @@ $colorBorderPop: rgba(0, 0, 0, 0.2)
 
   &.ls-popover-bottom
     &:after
+      @extend %horizontal-position-calc
       top: -$arrowWidth
-      left: calc(50% - 10px)
       border-width: 0 $arrowWidth $arrowWidth $arrowWidth
       border-color: transparent transparent #f7f7f7 transparent
 
     &:before
+      @extend %horizontal-position-calc
       top: -($arrowWidth + 1)
-      left: calc(50% - 10px)
       border-width: 0 $arrowWidth $arrowWidth $arrowWidth
       border-color: transparent transparent $colorBorderPop transparent
 
