@@ -48,10 +48,10 @@
 
   [class*="ls-btn"]
 
-    &:empty:after
+    &:empty::after
       margin-left: 0
 
-    &:after
+    &::after
       content: ""
       +arrow-down($gray4, 5px)
       display: inline-block
@@ -61,24 +61,24 @@
       position: relative
       top: 4px
 
-    &.ls-btn-lg:after
+    &.ls-btn-lg::after
       top: 2px
 
   [class*="ls-btn-"],
   [class*="ls-btn-"][class*="ls-btn-"]
-    &:after
+    &::after
       +arrow-down(#fff, 5px)
 
   .ls-btn[class*="ls-btn-"]
-    &:after
+    &::after
       +arrow-down($gray4, 5px)
 
   &.ls-dropdown
-    [class*="ls-btn-danger"]:after
+    [class*="ls-btn-danger"]::after
       border-color: $color-danger transparent transparent transparent
 
-    [class*="ls-btn-danger"]:hover:after,
-    [class*="ls-btn-danger"]:focus:after
+    [class*="ls-btn-danger"]:hover::after,
+    [class*="ls-btn-danger"]:focus::after
       border-color: #fff transparent transparent transparent
 
   &.ls-pos-right ul
@@ -100,7 +100,7 @@
       &:focus
         +rgba(background-color, $gray1,.2)
 
-      &:after
+      &::after
         margin-left: 6px
 
     .ls-dropdown-nav
@@ -114,5 +114,5 @@
 
 // Dealing with differences in the arrow used in dropdown buttons
 [class*="ls-btn-"]
-  &[data-ls-module]:after
+  &[data-ls-module]::after
     border-top-color: #fff

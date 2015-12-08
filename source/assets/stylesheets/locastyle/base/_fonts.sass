@@ -17,10 +17,10 @@
   font-weight: normal
   font-style: normal
 
-[class*="ls-ico"]:before,
-[class*="ls-ico"]:after,
-[class*="ls-ico-panel"]:before,
-[class*="ls-ico-panel"]:after
+[class*="ls-ico"]::before,
+[class*="ls-ico"]::after,
+[class*="ls-ico-panel"]::before,
+[class*="ls-ico-panel"]::after
   font-family: 'locastyle'
   speak: none
   font-style: normal
@@ -32,18 +32,18 @@
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-[class*="ls-ico-panel"]:before,
-[class*="ls-ico-panel"]:after
+[class*="ls-ico-panel"]::before,
+[class*="ls-ico-panel"]::after
   font-family: 'locastyle-panel-icons'
 
-[class*="ls-ico-"]:after,
-[class*="ls-ico-panel"]:after,
-.ls-ico-right:before,
-.ls-ico-panel-right:before
+[class*="ls-ico-"]::after,
+[class*="ls-ico-panel"]::after,
+.ls-ico-right::before,
+.ls-ico-panel-right::before
   display: none
 
-.ls-ico-right:after,
-.ls-ico-panel-right:after
+.ls-ico-right::after,
+.ls-ico-panel-right::after
   display: inline-block
   margin-left: 5px
   padding: 0
@@ -59,8 +59,8 @@
 // Locastyle Icons
 //
 =ico($name, $content)
-  .ls-ico-#{$name}:before,
-  .ls-ico-#{$name}:after
+  .ls-ico-#{$name}::before,
+  .ls-ico-#{$name}::after
     content: "#{$content}"
 
 
@@ -194,8 +194,8 @@
 // Panel Icons
 //
 =panel-ico($name, $content)
-  .ls-ico-panel-#{$name}:before,
-  .ls-ico-panel-#{$name}:after
+  .ls-ico-panel-#{$name}::before,
+  .ls-ico-panel-#{$name}::after
     content: "#{$content}"
 
 +panel-ico(streaming, \e600)

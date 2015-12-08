@@ -8,7 +8,7 @@
     .ls-steps-nav
       max-height: 600px
 
-    .ls-steps-mobile-btn:before
+    .ls-steps-mobile-btn::before
       +rotate(180deg)
 
 .ls-steps-nav
@@ -28,7 +28,7 @@
     top: 0
     left: 0
 
-    &:after
+    &::after
       color: $gray3
       content: attr(data-mobile-step-index)
       font-size: 15px
@@ -38,7 +38,7 @@
       right: 0
 
   .ls-actived:not(.ls-active)
-    &:after
+    &::after
       content: "\e63d"
       font-family: "locastyle"
       font-size: 16px
@@ -66,26 +66,26 @@
     cursor: pointer
     pointer-events: initial
 
-    &:before
+    &::before
       border: 2px solid $gray3
       color: #fff
 
-    &:after
+    &::after
       color: $gray3
 
   .ls-active &
 
-    &:before
+    &::before
       color: $gray3
 
   &:hover,
   &:focus,
   &:active
 
-    &:after
+    &::after
       opacity: .7
 
-  &:before
+  &::before
     width: 29px
     height: 29px
     box-sizing: border-box
@@ -102,8 +102,8 @@
     position: relative
     z-index: 2
 
-  &:after
-    width: calc(100% - 95px) // This 95px is the sum of the before item, margin left and a little differece to complete the distance from the mobile steps index.
+  &::after
+    width: calc(100% - 95px) // This 95px is the sum of the :before item, margin left and a little differece to complete the distance from the mobile steps index.
     content: attr(aria-label)
     display: inline-block
     font-weight: 400
@@ -126,15 +126,15 @@
   margin-top: -23px
   right: 18px
 
-  &:before,
-  &:after
+  &::before,
+  &::after
     content: ""
     display: block
     left: -1px
     position: absolute
 
 
-  &:before
+  &::before
     background: $gray3
     border-radius: 50%
     position: absolute
@@ -145,7 +145,7 @@
     width: 4px
     z-index: 2
 
-  &:after
+  &::after
     border-left: 10px solid #fff
     border-top: 10px solid transparent
     border-bottom: 10px solid transparent
@@ -186,12 +186,12 @@
   position: relative
   margin-bottom: 10px
 
-  &:before,
-  &:after
+  &::before,
+  &::after
     position: absolute
     top: 9px
 
-  &:before
+  &::before
     width: calc(100% - 106px)
     background: transparent
     border: none
@@ -205,7 +205,7 @@
     white-space: nowrap
     left: 0
 
-  &:after
+  &::after
     color: #777b7c
     content: attr(data-index)
     font-size: 15px
@@ -225,7 +225,7 @@
     padding-top: 8px
     +rotate(0deg)
 
-    &:before
+    &::before
       display: block
       margin-right: 0
       +single-transition(all, .2s, linear)
@@ -245,7 +245,7 @@
     top: 10px
     left: 15px
 
-    &:before
+    &::before
       content: ""
       border-right: 1px solid $gray2
       position: absolute
@@ -262,10 +262,10 @@
         opacity: 1
         visibility: visible
 
-      &:last-child:before
+      &:last-child::before
         display: none
 
-      &:before
+      &::before
         content: ""
         border-left: 3px dotted $gray2
         height: 100%
@@ -275,7 +275,7 @@
         z-index: 1
 
     .ls-actived:not(.ls-active)
-      &:after
+      &::after
         top: 12px
         right: 42px
 
@@ -295,7 +295,7 @@
     color: $gray2
     padding: 0 5px 0 0
 
-    &:before
+    &::before
       width: 37px
       height: 37px
       background: #fff
@@ -303,7 +303,7 @@
       font-size: 22px
       line-height: 31px
 
-    &:after
+    &::after
       width: calc(100% - 120px)
       font-weight: 300
       position: relative

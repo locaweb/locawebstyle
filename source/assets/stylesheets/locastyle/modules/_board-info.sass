@@ -13,7 +13,7 @@
     margin: 0
 
   .ls-box-group
-    &:after
+    &::after
       clear: both
 
     & + .ls-chart
@@ -92,7 +92,7 @@
         display: initial
         position: relative
 
-        &:after
+        &::after
           color: inherit
           content: attr(data-prefix)
           font-size: 14px
@@ -180,7 +180,7 @@
       font-size: remtopx(.875)
       margin-top: 3px
 
-    &:before
+    &::before
       @extend .ls-float-left
       margin-right: 5px
       margin-bottom: 7px

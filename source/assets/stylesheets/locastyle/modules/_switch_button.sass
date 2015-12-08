@@ -14,7 +14,7 @@
       display: inline-block
       vertical-align: middle
 
-      &:after
+      &::after
         content: ""
         +user-select(none)
         background: $gray3 url(../images/ico-switch-on-off.png) -159px center no-repeat
@@ -27,7 +27,7 @@
         display: inline-block
         cursor: pointer
 
-      &:before
+      &::before
         content: ""
         +single-transition(all, .25s, linear)
         position: absolute
@@ -45,7 +45,7 @@
       &:hover,
       &:focus
 
-        &:before
+        &::before
           background-color: #ebebeb
 
       &:focus
@@ -67,11 +67,11 @@
     &:checked + .ls-switch-label span
       display: inline-block
 
-      &:after
+      &::after
         box-shadow: none
         background-position: 7px center
 
-      &:before
+      &::before
         +single-transition(all, .25s, linear)
         top: 2px
         left: 25px
@@ -81,17 +81,17 @@
 
   .ls-switch-btn input
 
-    + .ls-switch-label:after
+    + .ls-switch-label::after
       display: inline-block
       vertical-align: middle
       content: attr(ls-switch-off)
 
-    + .ls-switch-label span:before
+    + .ls-switch-label span::before
       +single-transition(none)
 
-    &:checked + .ls-switch-label:after
+    &:checked + .ls-switch-label::after
       content: attr(ls-switch-on)
 
-    &:checked + .ls-switch-label span:before
+    &:checked + .ls-switch-label span::before
       +single-transition(none)
 

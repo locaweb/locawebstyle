@@ -19,7 +19,7 @@
   -moz-appearance: none
   appearance: none
 
-  &[class*="ls-ico-"]:empty:before
+  &[class*="ls-ico-"]:empty::before
     margin: 0
 
   p + &
@@ -30,7 +30,7 @@
   &[disabled]
     cursor: default
 
-  &:empty:after
+  &:empty::after
     @extend .ls-no-margin-left
 
   + .ls-dropdown,
@@ -65,7 +65,7 @@
   &:focus
     background-color: $gray4
 
-  &[data-ls-module]:after
+  &[data-ls-module]::after
     border-top-color: $gray1
 
 //
@@ -129,7 +129,6 @@
         border-bottom-right-radius: $default-radius
         border-top-right-radius: $default-radius
 
-
   .ls-form-inline &
     [class*="ls-btn"]
 
@@ -138,7 +137,6 @@
 
       & +[class*="ls-btn-"]:not(:first-child)
         margin-left: 10px
-
 
 //
 // Container that wraps the buttons in forms
@@ -174,9 +172,7 @@
       @extend .ls-no-margin-top
 
 @media screen and (max-width: $screen-md)
-
   .ls-actions-btn
-
     .ls-form-inline &
       padding: 15px 0
       margin: 30px 0
@@ -191,13 +187,9 @@
       display: inline-table
       border: none
 
-
 @media screen and (min-width: $screen-md) and(max-width: $screen-lg)
-
   .ls-box-filter
-
     .ls-actions-btn
-
       .ls-btn-primary
         margin-top: 0
 

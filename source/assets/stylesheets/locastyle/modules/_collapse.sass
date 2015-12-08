@@ -22,7 +22,7 @@
 .ls-collapse-opened,
 .ls-collapse-opened-always
 
-  .ls-collapse-header:before
+  .ls-collapse-header::before
     +rotate(180deg)
 
   .ls-collapse-body
@@ -35,7 +35,7 @@
   position: relative
   word-wrap: break-word
 
-  &:before
+  &::before
     +rotate(0deg)
     +transition (all .35s ease)
     border-radius: 100%

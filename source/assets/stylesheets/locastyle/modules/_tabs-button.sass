@@ -36,12 +36,12 @@
       position: relative
       font-weight: 600
 
-      &:before,
-      &:after
+      &::before,
+      &::after
         left: 50%
         display: none!important
 
-      &:before
+      &::before
         +arrow-down(mix($color-mix, #fff, 15%),8px)
         bottom: -16px
         position: absolute
@@ -50,7 +50,7 @@
         z-index: 1
 
 
-      &:after
+      &::after
         +arrow-down($gray2,6px)
         bottom: -12px
         position: absolute
@@ -59,8 +59,8 @@
         z-index: 2
 
       [class*="ls-ico"]
-        &:before,
-        &:after
+        &::before,
+        &::after
           opacity: 1
 
 
@@ -68,16 +68,16 @@
   [class*="ls-ico"]
     font-size: remtopx(1)
 
-    &:before,
-    &:after
+    &::before,
+    &::after
       opacity: .5
       font-size: remtopx(1.5)
       vertical-align: sub
 
-    &:before
+    &::before
       margin-right: 5px
 
-    &:after
+    &::after
       margin-left: 5px
 
   .ls-tabs-btn-nav
@@ -102,6 +102,6 @@
 
     [class*="ls-btn"]
 
-      &:before,
-      &:after
+      &::before,
+      &::after
         display: block!important

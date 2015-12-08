@@ -16,7 +16,7 @@
   padding: 40px !important
 
 // FLOAT and CLEAR
-.ls-clearfix:after
+.ls-clearfix::after
   content: ""
   display: block
   clear: both
@@ -389,8 +389,8 @@
   border-color: #ccc transparent #ddd transparent
   margin: 2rem 1rem
 
-  &:before, &:after
-    content: " "
+  &::before, &::after
+    content: ''
     display: table
 
 // BACKGROUND COLORS
