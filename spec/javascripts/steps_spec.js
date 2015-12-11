@@ -49,9 +49,9 @@ describe("Steps: ", function(){
   describe('#bindClickOnTriggers', function(){
     describe("when click in an actived navigation link", function(){
       beforeEach(function(){
-        this.button = $('#list1 .ls-steps-btn');
-        this.target = this.button.data('target') || this.button.attr('href');
-        this.button.trigger('click');
+        var this.button = $('#list1 .ls-steps-btn');
+        var this.target = this.button.data('target') || this.button.attr('href');
+        var this.button.trigger('click');
       });
 
       it("activates the content related to the step", function(){
@@ -170,26 +170,27 @@ describe("Steps: ", function(){
         $(document).off('BeforePrevStep');
       });
     });
+  });
 
-    describe('AfterPrevStep', function(){
-      it('triggers this event after change the step', function(){
-        var activeStepId = 'lala';
-        $(document).on('AfterPrevStep', function(){
-          activeStepId = $('.ls-steps-content.ls-active').attr('id');
-        });
-        locastyle.steps.prevStep();
-        expect(activeStepId).toEqual('step1');
-        $(document).off('AfterPrevStep');
+  describe('AfterPrevStep', function(){
+    it('triggers this event after change the step', function(){
+      var activeStepId = 'lala';
+      $(document).on('AfterPrevStep', function(){
+        activeStepId = $('.ls-steps-content.ls-active').attr('id');
       });
-    });
-
-    describe('bind button', function(){
-      it('when click change to prev step', function(){
-        $('#prev2').trigger('click');
-        expect($('#list1').hasClass('ls-active')).toBe(true);
-      });
+      locastyle.steps.prevStep();
+      expect(activeStepId).toEqual('step1');
+      $(document).off('AfterPrevStep');
     });
   });
+
+  describe('bind button', function(){
+    it('when click change to prev step', function(){
+      $('#prev2').trigger('click');
+      expect($('#list1').hasClass('ls-active')).toBe(true);
+    });
+  });
+
 
   describe('#ariaSteps', function() {
     it(".ls-steps-nav should has attribute role with value tablist ",function(){
