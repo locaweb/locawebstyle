@@ -147,7 +147,7 @@ describe("Steps: ", function(){
     });
   });
 
-  describe('prevStep', function(argument){
+  describe('prevStep', function(){
     it("checks the active list and adds in the prev ls-active class", function(){
       locastyle.steps.prevStep();
       expect($('#list1').hasClass('ls-active')).toBe(true);
