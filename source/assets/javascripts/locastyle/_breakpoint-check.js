@@ -116,8 +116,8 @@ locastyle.breakpoints = (function() {
 
         // event triggers to inform other modules that the breakpoint has been updated
         $.event.trigger("breakpoint-updated");
+        clearTimeout(changeClass);
       }, 300);
-
     });
   }
 
