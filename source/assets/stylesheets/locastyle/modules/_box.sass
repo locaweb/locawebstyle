@@ -14,7 +14,7 @@
   .ls-box-group &
     margin-bottom: 10px
 
-  &:after
+  &::after
     @extend .ls-clearfix
 
   &.ls-box-gray
@@ -36,7 +36,7 @@
     overflow: hidden
     position: relative
 
-    &:before
+    &::before
       @extend .ls-float-left
       vertical-align: top
       font-size: remtopx(6)
@@ -63,7 +63,7 @@
     padding: 0 0 20px
     font-size: remtopx(1)
 
-.ls-ico-bg:before
+.ls-ico-bg::before
   @extend .ls-color-theme
   opacity: .1
   position: absolute
@@ -94,7 +94,7 @@
   margin-top: -16px
   border: 1px solid $gray1
 
-  [class*="ls-ico-"]:before
+  [class*="ls-ico-"]::before
     font-size: remtopx(1.75)
 
   [class*="ls-title"]
@@ -103,7 +103,7 @@
 
 @media screen and (max-width: $screen-sm)
 
-  .ls-ico-bg:before
+  .ls-ico-bg::before
     display: none
 
   .ls-small-info + [class^="ls-title-"]

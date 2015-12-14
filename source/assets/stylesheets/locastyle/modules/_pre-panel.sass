@@ -29,7 +29,7 @@
         &.ls-active
           color: #000
 
-        &:after
+        &::after
           color: #fff
 
   .ls-user-account
@@ -37,8 +37,8 @@
 
   .ls-topbar
 
-    .ls-ico-menu:before,
-    .ls-show-notifications.ls-ico-question:before
+    .ls-ico-menu::before,
+    .ls-show-notifications.ls-ico-question::before
       color: $gray4
 
 .ls-pre-panel
@@ -58,7 +58,7 @@
         small
           +rgba(color, $gray4,1)
 
-        &:before
+        &::before
           +rgba(color, $gray4,.5)
           box-shadow: inset 0 0 0 2px rgba($gray4,.3)
 

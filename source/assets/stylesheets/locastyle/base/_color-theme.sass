@@ -61,14 +61,14 @@
             small
               +rgba(color, $gray4,1)
 
-            &:before
+            &::before
               +rgba(color, $gray4,.5)
               box-shadow: inset 0 0 0 2px rgba($gray4,.3)
 
         [class*="ls-go"]
           background-color: darken($gray0, 10%)
 
-          &:before
+          &::before
             color: $gray4
 
         .ls-brand-name
@@ -91,7 +91,7 @@
               &.ls-active
                 color: #000
 
-              &:after
+              &::after
                 color: #fff
 
     ////
@@ -129,10 +129,10 @@
     // Submenu
     .ls-submenu-parent
 
-      &:after
+      &::after
         color: mix($color-menu-mix, $color-menu-text, 45%)
 
-      &:hover:after
+      &:hover::after
         color: $color-menu-text
 
       li
@@ -147,7 +147,7 @@
     .ls-brand-name
       background-color: $color1
 
-    .ls-area-account[class*="ls-ico"]:before
+    .ls-area-account[class*="ls-ico"]::before
       @if (lightness($color1) < 30)
         color: mix(#fff, $color1, 25%)
       @else
@@ -178,7 +178,7 @@
     // Buttons
     ////
     [class*="ls-btn"]
-      &[data-ls-module]:after
+      &[data-ls-module]::after
         border-top-color: $color2
 
       &.ls-btn-danger
@@ -272,7 +272,7 @@
     ////
     .ls-collapse
       .ls-collapse-header
-        &:before
+        &::before
           color: $color1
           border: 3px solid $color1
 
@@ -323,12 +323,12 @@
           &.ls-data-descending,
           &.ls-data-ascending
 
-            a:after
+            a::after
               border-top-color: #fff
 
           &.ls-data-ascending
 
-            a:after
+            a::after
               border-color: transparent
               border-bottom-color: #fff
 
@@ -376,11 +376,11 @@
       &:hover
         color: $color2
 
-        &[class*="ls-ico"]:before
+        &[class*="ls-ico"]::before
           color: $color2
           border-color: $color2
 
-      &[class*="ls-ico"]:before
+      &[class*="ls-ico"]::before
         color: $color1
         border: 4px solid $color1
 
@@ -400,7 +400,7 @@
     ////
     // Switch button
     ////
-    .ls-switch-btn input:checked + label span:after
+    .ls-switch-btn input:checked + label span::after
       background-color: $color1
 
     ////
@@ -450,25 +450,25 @@
     ////
     .ls-steps-nav
       .ls-actived
-        &:before
+        &::before
           border-color: $color1
 
         &:not(.ls-active)
-          &:after
+          &::after
             color: $color1
 
         .ls-steps-btn
           color: $color1
 
-          &:before
+          &::before
             border-color: $color1
             color: $color1
 
-          &:after
+          &::after
             color: $color1
 
         &.ls-active
-          .ls-steps-btn:before
+          .ls-steps-btn::before
             background: #fff
             color: $color1
 
@@ -480,26 +480,26 @@
         .ls-steps-btn
           background: $color1
 
-          &:before
+          &::before
             background: #fff
             border-color: #fff
             color: $color1
 
-          &:after
+          &::after
             color: #fff
 
           @media screen and (min-width: $screen-sm)
             background: transparent
 
-            &:before
+            &::before
               background: $color1
               border-color: $color1
               color: #fff
 
-            &:after
+            &::after
               color: $color1
 
-    .ls-steps-arrow:before
+    .ls-steps-arrow::before
       background: $color1
 
     ////
@@ -522,13 +522,13 @@
           &:active
             @extend %tabs-btn-active
 
-          &:before
+          &::before
             +arrow-down(mix(#fff, $color1, 50%),8px)
             position: absolute
             top: auto
             margin-left: -8px
 
-          &:after
+          &::after
             +arrow-down(mix(#fff, $color1, 90%),6px)
             position: absolute
             top: auto
@@ -536,7 +536,6 @@
 
 @each $theme-name, $colors in $themes-colors
   @include theme-color($theme-name, $colors)
-
 
 /** Make gray the theme color if nothing are set **/
 html

@@ -2,13 +2,13 @@
   position: relative
   text-decoration: none
 
-  &:after,
-  &:before
+  &::after,
+  &::before
     position: absolute
     z-index: 100
     opacity: 0
 
-  &:after
+  &::after
     +single-box-shadow(0, 0, 5px, 0, rgba(0,0,0,0.3))
     content: attr(aria-label)
     height: 25px
@@ -22,147 +22,147 @@
     text-shadow: 0 0 5px #000
     white-space: nowrap
 
-  &:before
+  &::before
     content: ""
     width: 0
     height: 0
     border-width: 6px
     border-style: solid
 
-  &:hover:after,
-  &:focus:after,
-  &:hover:before,
-  &:focus:before
+  &:hover::after,
+  &:focus::after,
+  &:hover::before,
+  &:focus::before
     opacity: 1
 
 /* Top */
 
 .ls-tooltip-top
-  &:after,
-  &:before
+  &::after,
+  &::before
     +single-transition(bottom, 0.25s, ease-in-out)
     +single-transition(opacity, 0.25s, ease-in-out)
     bottom: 90%
     left: -9999px
     margin-bottom: 12px
 
-  &:before
+  &::before
     border-color: #222 transparent transparent transparent
     margin-bottom: 0
 
-  &:hover:after,
-  &:focus:after,
-  &:focus:after,
-  &:hover:before,
-  &:focus:before,
-  &:focus:before
+  &:hover::after,
+  &:focus::after,
+  &:focus::after,
+  &:hover::before,
+  &:focus::before,
+  &:focus::before
     bottom: 80%
     left: 0
 
-  &:hover:before,
-  &:focus:before
+  &:hover::before,
+  &:focus::before
     left: 15px
 
 /* Bottom */
 .ls-tooltip-bottom
-  &:after,
-  &:before
+  &::after,
+  &::before
     +single-transition(top, 0.25s, ease-in-out)
     +single-transition(opacity, 0.25s, ease-in-out)
     top: 90%
     left: -9999px
     margin-top: 12px
 
-  &:before
+  &::before
     border-color: transparent transparent #222 transparent
     margin-top: 0
 
-  &:hover:after,
-  &:focus:after,
-  &:hover:before,
-  &:focus:before
+  &:hover::after,
+  &:focus::after,
+  &:hover::before,
+  &:focus::before
     top: 80%
     left: 0
 
-  &:hover:before,
-  &:focus:before
+  &:hover::before,
+  &:focus::before
     left: 15px
 
 /* Right */
 .ls-tooltip-right
-  &:after,
-  &:before
+  &::after,
+  &::before
     +single-transition(left, 0.25s, ease-in-out)
     +single-transition(opacity, 0.25s, ease-in-out)
     top: -9999px
     left: 96%
     margin-left: 12px
 
-  &:before
+  &::before
     border-color: transparent #222 transparent transparent
     margin-left: 0
 
-  &:hover:after,
-  &:focus:after,
-  &:hover:before,
-  &:focus:before
+  &:hover::after,
+  &:focus::after,
+  &:hover::before,
+  &:focus::before
     left: 100%
     top: 0
 
-  &:hover:before,
-  &:focus:before
+  &:hover::before,
+  &:focus::before
     top: 7px
 
 /* Left */
 .ls-tooltip-left
-  &:after,
-  &:before
+  &::after,
+  &::before
     +single-transition(right, 0.25s, ease-in-out)
     +single-transition(opacity, 0.25s, ease-in-out)
     top: -9999px
     right: 96%
     margin-right: 12px
 
-  &:before
+  &::before
     border-color: transparent transparent transparent #222
     margin-right: 0
 
-  &:hover:after,
-  &:focus:after,
-  &:hover:before,
-  &:focus:before
+  &:hover::after,
+  &:focus::after,
+  &:hover::before,
+  &:focus::before
     right: 100%
     top: 0
 
-  &:hover:before,
-  &:focus:before
+  &:hover::before,
+  &:focus::before
     top: 7px
 
 /* Top-left */
 
 .ls-tooltip-top-left
-  &:after,
-  &:before
+  &::after,
+  &::before
     +single-transition(bottom, 0.25s, ease-in-out)
     +single-transition(opacity, 0.25s, ease-in-out)
     bottom: 90%
     left: -9999px
     margin-bottom: 12px
 
-  &:before
+  &::before
     border-color: #222 transparent transparent transparent
     margin-bottom: 0
 
-  &:hover:after,
-  &:focus:after,
-  &:focus:after,
-  &:hover:before,
-  &:focus:before,
-  &:focus:before
+  &:hover::after,
+  &:focus::after,
+  &:focus::after,
+  &:hover::before,
+  &:focus::before,
+  &:focus::before
     bottom: 80%
     left: auto
     right: 0
 
-  &:hover:before,
-  &:focus:before
+  &:hover::before,
+  &:focus::before
     right: 15px

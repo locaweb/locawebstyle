@@ -9,7 +9,7 @@
   width: 100%
   z-index: 11
 
-  &:after
+  &::after
     +box-shadow(0px 5px 8px -1px rgba(255,255,255,.5))
     content: ""
     width: 100%
@@ -37,7 +37,7 @@
       color: #fff
       vertical-align: sub
 
-      &:before
+      &::before
         display: none
 
       small, span
@@ -73,7 +73,7 @@
       vertical-align: middle
       margin-top: 20px
 
-      & :before
+      & ::before
         font-size: remtopx(1.25)
         margin: 0
 
@@ -84,7 +84,7 @@
         width: 22px
         text-align: center
 
-        &:after
+        &::after
           content: attr(data-counter)
           position: absolute
           font-family: arial, sans-serif
@@ -103,7 +103,7 @@
         &[data-counter]
           color: #fff
 
-          &:after
+          &::after
             display: block
 
         &.ls-active
@@ -117,7 +117,7 @@
   .ls-show-notifications
     cursor: pointer
 
-    &:before
+    &::before
       position: absolute
       padding: 15px 15px 0
       height: $topbar-height
@@ -127,7 +127,7 @@
       vertical-align: middle
       cursor: pointer
 
-    &:after
+    &::after
       background: #fff
       content: ""
       position: absolute
@@ -138,13 +138,13 @@
       display: none
       opacity: .8
 
-  .ls-show-notifications:before
+  .ls-show-notifications::before
     right: 0
     font-size: remtopx(1.5)
     top: 4px
 
-.ls-sidebar-visible .ls-ico-menu:after,
-.ls-notifications-visible .ls-show-notifications:after
+.ls-sidebar-visible .ls-ico-menu::after,
+.ls-notifications-visible .ls-show-notifications::after
   display: block
 
 
@@ -153,7 +153,7 @@
     text-align: left
     +single-transition(none)
 
-    &:after
+    &::after
       left: $sidebar-width
 
     .ls-sidebar-visible &
@@ -173,7 +173,7 @@
 
       a
 
-        &:before
+        &::before
           display: block
           position: absolute
           top: 12px
@@ -188,13 +188,13 @@
         &[class*="ls-ico-panel"]
           padding-left: 52px
 
-          &:before
+          &::before
             font-size: remtopx(3.375)
             top: 4px
             left: 7px
 
-    .ls-ico-menu:before,
-    .ls-show-notifications:before
+    .ls-ico-menu::before,
+    .ls-show-notifications::before
       display: none
 
     .ls-notification-topbar
@@ -211,15 +211,15 @@
           height: inherit
           position: relative
 
-          &:before,
-          &:after
+          &::before,
+          &::after
             left: 0
             position: absolute
 
-          &:before
+          &::before
             top: 32%
 
-          &:after
+          &::after
             top: 22%
             right: -7px
             left: auto

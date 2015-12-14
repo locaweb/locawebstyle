@@ -32,14 +32,14 @@
       padding-left: 60px
       padding-top: 20px
 
-      &:after
+      &::after
         +single-transition(none)
         content: "\e60f"
         position: absolute
         top: 25px
         right: 15px
 
-      &:before
+      &::before
         background: $gray5
         position: absolute
         left: 15px
@@ -54,7 +54,7 @@
     &.ls-active
       height: 100%
 
-      > a:after
+      > a::after
         +rotate(0)
         +single-transition(none)
         content: "\e63c"
@@ -81,7 +81,7 @@
     a
       color: #fff
 
-    &:before
+    &::before
       display: block
       color: #fff
       font-size: remtopx(4.5)
@@ -118,7 +118,7 @@
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
 
-    &:before
+    &::before
       +single-transition(all, .2s)
       font-size: remtopx(1.25)
       position: absolute
@@ -130,7 +130,7 @@
     &:hover
       padding-left: 65px
 
-      &:before
+      &::before
         left: 25px
 
 .ls-submenu-parent
@@ -143,7 +143,7 @@
     height: 0
     display: none
 
-  &:after
+  &::after
     +single-transition(all, .2s)
     content: "\e60b"
     font-family: 'locastyle'
@@ -162,7 +162,7 @@
       &:focus
         padding-left: 65px
 
-    &:after
+    &::after
       +rotate(180deg)
       +single-transition(all, .2s)
 
@@ -188,7 +188,7 @@
   width: 100%
   z-index: 2
 
-  &[class*="ls-ico"]:before
+  &[class*="ls-ico"]::before
     float: left
     font-size: 1.875em
     margin-right: 15px
@@ -197,7 +197,7 @@
     margin-bottom: 0
     padding-top: 0
 
-    &:after
+    &::after
       display: inline-block
 
   .ls-title-2
@@ -244,7 +244,7 @@
       overflow: auto
       margin-top: 0
 
-      > ul 
+      > ul
         padding-bottom: 42px
 
     .ls-area-account
@@ -274,10 +274,10 @@
         color: $color-menu-text
         background-color: mix($color-menu-mix, $color-menu-bg, 80%)
 
-        &:before
+        &::before
           color: #fff
 
-      &:before
+      &::before
         +single-transition(transform, .25s, linear)
         display: inline-block
         font-size: remtopx(0.69)
@@ -301,13 +301,13 @@ $sidebar-toggled-width: 60px
     a
       display: none
 
-    &:before
+    &::before
       font-size: inherit
 
   .ls-user-account ~ .ls-sidebar-inner
     overflow: initial
 
-  .ls-sidebar-toggle:before
+  .ls-sidebar-toggle::before
     +rotate(-180deg)
     margin-left: 4px
 
@@ -318,8 +318,8 @@ $sidebar-toggled-width: 60px
   .ls-menu
     overflow: visible
 
-    a:focus:before,
-    a:hover:before,
+    a:focus::before,
+    a:hover::before,
       left: 19px
 
     > ul > li
@@ -330,13 +330,13 @@ $sidebar-toggled-width: 60px
     // LI that is parent of SUBMENU
     //
     .ls-submenu-parent
-      &:after
+      &::after
         right: 5px
         font-size: 9px
         +rotate(-90deg)
         color: #595959
 
-      &:hover:after
+      &:hover::after
         color: #fff
 
       // The submenu UL
@@ -348,7 +348,7 @@ $sidebar-toggled-width: 60px
       &.ls-active
         overflow: visible
 
-        &:after
+        &::after
           color: #fff
 
         > a

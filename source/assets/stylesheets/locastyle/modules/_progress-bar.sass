@@ -13,7 +13,7 @@
     border-radius: $default-radius
     text-align: center
 
-    &:before
+    &::before
       content: attr(aria-valuenow)
       color: #fff
       font-size: remtopx(.625)
@@ -24,7 +24,7 @@
     width: calc(100% - 30px)
     width: 96.5%\9
 
-    span:before
+    span::before
       position: absolute
       left: 100%
       color: #000
@@ -34,7 +34,7 @@
     width: calc(100% - 30px)
     width: 96.5%\9
 
-    span:before
+    span::before
       position: absolute
       right: 100%
       color: #000

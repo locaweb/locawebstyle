@@ -35,21 +35,21 @@
       font-weight: 400
       font-size: inherit
 
-    &:before
+    &::before
       margin-right: 10px
       +border-circle(33px, 20px)
       box-shadow: inset 0 0 0 2px rgba(255,255,255, 0.3)
       vertical-align: sub
       display: inline-block
 
-    &:after
+    &::after
       content: "\e60b"
       font-size: remtopx(.75)
       display: inline-block
       margin-left: 10px
       +single-transition(all, .2s)
 
-  &.ls-active > a:after
+  &.ls-active > a::after
     +rotate(180deg)
     +single-transition(all, .2s)
 
@@ -132,9 +132,8 @@
       &:focus
         background-color: rgba($gray5,.8)
 
-      &:after
+      &::after
         display: none
-
 
 @media screen and (min-width: $screen-sm)
   .ls-user-account .ls-ico-user img

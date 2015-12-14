@@ -2,7 +2,7 @@
   position: relative
   z-index: 2
 
-  &:before
+  &::before
     @extend .ls-ico-chevron-left
     font-family: 'locastyle'
     color: #fff
@@ -43,7 +43,7 @@
 
   [class*="ls-go"]
 
-    &:before
+    &::before
       border-right: 1px solid rgba(0,0,0,0.2)
       padding: 0
       width: 60px
@@ -71,13 +71,13 @@
       text-shadow: 0 0 5px #000
       white-space: nowrap
 
-      &:before
+      &::before
         position: absolute
         left: -12px
         top: 6px
         z-index: 10
 
-      &:before
+      &::before
         content: ""
         width: 0
         height: 0

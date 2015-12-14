@@ -39,7 +39,7 @@
       font-size: 11px
       padding-bottom: 5px
       margin-bottom: 0
- 
+
   b ~ label
     font-weight: normal
 
@@ -191,9 +191,8 @@ textarea
     vertical-align: top
     margin-top: 21px
 
-  .row:after
+  .row::after
     @extend .ls-clearfix
-
 
 //
 // Label and input side by side
@@ -238,7 +237,6 @@ textarea
         white-space: nowrap
         width: 1%
 
-
 .ls-box-filter
   form.ls-float-right
     min-width: 230px
@@ -253,7 +251,6 @@ textarea
 
       input
         width: 100%
-
 
 //
 // Form like text
@@ -329,7 +326,6 @@ input.ls-form-text,
     &:focus
       background: $gray2 !important
 
-
 .ls-label-text-prefix + input
   border-left: none
   border-bottom-left-radius: 0
@@ -343,15 +339,12 @@ input + .ls-label-text-prefix
   z-index: 2
 
 @media screen and (max-width: $screen-sm)
-
   .ls-form-horizontal
     [class*="ls-btn"]
       margin-top: 0
 
   .ls-form-inline
-
     .ls-label
-
       .ls-label-text
         display: block
 
@@ -363,7 +356,6 @@ input + .ls-label-text-prefix
         .ls-label-text
           display: block
 
-
     [class*="ls-btn"]
       margin-left: 0
 
@@ -374,7 +366,6 @@ input + .ls-label-text-prefix
       float: none !important
 
   .ls-box-filter
-
     form.ls-float-right
       text-align: left
       float: none !important
@@ -392,9 +383,7 @@ input + .ls-label-text-prefix
 
 @media screen and (min-width: $screen-md)
   .ls-form-inline
-
     .ls-label
-
       &[class*="col-"]
         padding-right: 15px
 
@@ -402,10 +391,8 @@ input + .ls-label-text-prefix
       .ls-label
         margin-bottom: 0
 
-
 @media screen and (min-width: $screen-sm) and(max-width: $screen-md)
-
   .ls-box-filter
-    .ls-form-inline.ls-float-left 
+    .ls-form-inline.ls-float-left
       .ls-label
-        margin-bottom: 0 
+        margin-bottom: 0
