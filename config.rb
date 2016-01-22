@@ -95,6 +95,9 @@ set :images_dir, 'assets/images'
 activate :directory_indexes
 activate :i18n
 
+#Redirect
+redirect "documentacao/index.html", to: "/documentacao/introducao"
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
