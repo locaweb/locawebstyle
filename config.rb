@@ -96,7 +96,7 @@ activate :directory_indexes
 activate :i18n
 
 #Redirect
-redirect "documentacao/index.html", to: "documentacao/introducao"
+redirect "documentacao/index.html", to: "/documentacao/introducao"
 
 # Build-specific configuration
 configure :build do
