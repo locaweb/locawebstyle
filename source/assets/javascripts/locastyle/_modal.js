@@ -103,7 +103,7 @@ locastyle.modal = (function() {
     var target = $(el).data('target') ? $(el.data('target')) : $(el);
     target.each(function(i,e){
       if ($(e).data('modal-blocked') !== undefined) {
-        $('[data-dismiss="modal"]').remove();
+        $(e).find('[data-dismiss="modal"]').remove();
       } else {
         bindClose();
       }
