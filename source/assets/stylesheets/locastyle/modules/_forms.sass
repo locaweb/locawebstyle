@@ -402,6 +402,14 @@ input + .ls-label-text-prefix
     .ls-label
       margin-bottom: 15px
 
+  .ls-form-horizontal,
+  .ls-form-inline
+    .ls-inline-text
+      display: none
+
+      & + [class*="ls-btn"]
+        display: none
+
 @media screen and (min-width: $screen-md)
   .ls-form-inline
 
