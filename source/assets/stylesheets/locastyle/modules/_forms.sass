@@ -39,7 +39,7 @@
       font-size: 11px
       padding-bottom: 5px
       margin-bottom: 0
- 
+
   b ~ label
     font-weight: normal
 
@@ -342,6 +342,18 @@ input + .ls-label-text-prefix
   left: -4px
   z-index: 2
 
+////
+// Inline Text
+////
+.ls-form-horizontal,
+.ls-form-inline
+  .ls-inline-text
+    display: inline-block
+    margin-top: 7px
+
+    & + [class*="ls-btn"]
+      margin-left: 26px
+
 @media screen and (max-width: $screen-sm)
 
   .ls-form-horizontal
@@ -390,6 +402,14 @@ input + .ls-label-text-prefix
     .ls-label
       margin-bottom: 15px
 
+  .ls-form-horizontal,
+  .ls-form-inline
+    .ls-inline-text
+      display: none
+
+      & + [class*="ls-btn"]
+        display: none
+
 @media screen and (min-width: $screen-md)
   .ls-form-inline
 
@@ -406,6 +426,6 @@ input + .ls-label-text-prefix
 @media screen and (min-width: $screen-sm) and(max-width: $screen-md)
 
   .ls-box-filter
-    .ls-form-inline.ls-float-left 
+    .ls-form-inline.ls-float-left
       .ls-label
-        margin-bottom: 0 
+        margin-bottom: 0
