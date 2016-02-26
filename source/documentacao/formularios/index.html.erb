@@ -69,4 +69,29 @@ type: forms
     </p>
   </div>
 
+  <hr>
+  <h3 class="doc-title-3">Texto inline nos forms</h3>
+  <p>Textos inlines podem ser aplicados nos forms utilizando a classe <code>ls-inline-text</code>. Sua aplicação depende da separação dos elementos em colunas para que o texto fique verticalmente alinhado com o campo. Abaixo seguem os exemplos de utilização com os formulários inline e horizontal.</p>
+
+  <h5 class="doc-title-5">Form inline</h5>
+  <p>Na utilização inline, não é necessário fazer nenhuma modificação na sua aplicação normal.</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/form/form-inline-text.erb' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/form/form-inline-text.erb' %><% end %>
+
+  <h5 class="doc-title-5">Form horizontal</h5>
+  <p>No caso da aplicação nos forms horizontais, o <code>label</code> deve ficar separado das colunas de referência para que o alinhamento vertical seja mantido, conforme o exemplo abaixo:</p>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/form/form-horizontal-text.erb' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/form/form-horizontal-text.erb' %><% end %>
+
+  <div class="ls-box ls-box-gray">
+    <h4>Observação</h4>
+    <p>As colunas de referências devem conter somente os elementos que devem ser alinhar verticalmente, no caso dos exemplos, input, texto e botão.</p>
+  </div>
+
 </section>
