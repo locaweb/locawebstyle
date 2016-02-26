@@ -56,6 +56,14 @@ p
   border-bottom: 1px solid
   +rgba(border-bottom-color,$gray1,.4)
 
+  [class*="ls-btn"]
+    float: right
+    margin-top: 2px !important
+
+  .ls-text-title
+    width: 50%
+    @extend .ls-ellipsis
+
   &.ls-no-bg
     border-bottom: none
     margin-bottom: 0
@@ -151,8 +159,10 @@ p
     font-size: remtopx(2.25)
     font-weight: 300
 
-    &[class*="ls-ico"]
+    .ls-text-title
+      width: 70%
 
+    &[class*="ls-ico"]
       &:before
         margin-left: 0
         margin-right: 10px
