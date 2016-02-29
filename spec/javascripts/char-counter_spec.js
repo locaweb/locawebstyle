@@ -1,6 +1,6 @@
 describe("Counter char: ", function(){
   beforeEach(function(){
-    loadFixtures('counter_fixture.html');
+    loadFixtures('char-counter_fixture.html');
     locastyle.charCounter.init();
   });
 
