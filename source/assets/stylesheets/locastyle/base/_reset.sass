@@ -47,11 +47,26 @@ img
 hr
   border: none
   border-top: 1px solid $gray1
-  margin: 15px 0
+  margin: 30px 0
 
   .ls-form &
     margin-left: 15px
     margin-right: 15px
+
+  &[data-ls-text]
+    border-top-style: dashed
+    text-align: left
+    margin-top: 50px
+
+    &:before
+      background-color: #fff
+      content: attr(data-ls-text)
+      font-size: 18px
+      font-weight: 600
+      position: relative
+      top: -12px
+      padding: 10px 20px 10px 0
+      margin: 0 auto
 
 fieldset
   border: none
