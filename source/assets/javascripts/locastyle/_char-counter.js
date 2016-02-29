@@ -3,17 +3,25 @@ var locastyle = locastyle || {};
 locastyle.charCounter = (function() {
   'use strict';
 
-  function init(){
-    countText();
+  function updateCounter(index, count) {
+    $('.ls-number-counter-'+index).text(count);
   }
 
-  function countText(){
-    $('[data-ls-module="charCounter"]').each(function(index, field){
+  function countText() {
+    $('[data-ls-module="charCounter"]').each(function(index, field) {
       var limit = $(field).attr('maxlength');
-      $(field).removeAttr('maxlength').data().maxlength = limit;
-      $(field).after('<p class="ls-help-inline"><small><strong class="ls-char-count ls-number-counter-'+index+'">'+limit+'</strong> caracteres restantes</small></p>');
+      var html = '<p class="ls-help-inline"><small><strong class="ls-char-count ls-number-counter-' + index + '">' + limit + '</strong> caracteres restantes</small></p>';
+      var prefixGroup = $(field).closest('.ls-prefix-group');
 
-      $(field).keyup(function(){
+      $(field).removeAttr('maxlength').data().maxlength = limit;
+
+      if (prefixGroup.length) {
+        prefixGroup.after(html);
+      } else {
+        $(field).after(html);
+      }
+
+      $(field).keyup(function() {
         var count = $(this).val().length;
         var limit = $(this).data().maxlength;
 
@@ -29,8 +37,8 @@ locastyle.charCounter = (function() {
     });
   }
 
-  function updateCounter(index, count){
-    $('.ls-number-counter-'+index).text(count);
+  function init() {
+    countText();
   }
 
   return {
