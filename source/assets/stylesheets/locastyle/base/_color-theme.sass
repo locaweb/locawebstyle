@@ -534,6 +534,12 @@
             top: auto
             margin-left: -6px
 
+    hr[data-ls-text]
+      border-color: $color2
+
+      &:before
+        color: $color2
+
 @each $theme-name, $colors in $themes-colors
   @include theme-color($theme-name, $colors)
 
