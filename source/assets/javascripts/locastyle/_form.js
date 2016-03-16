@@ -50,7 +50,7 @@ locastyle.form = (function() {
   }
 
   function textareaHeight (){
-    $('textarea').each(function (index, textarea) {
+    $('textarea.ls-textarea-autoresize', '.ls-label').each(function (index, textarea) {
       var text = $(textarea).val();
       var lines = text.split(/\r|\r\n|\n/);
       var count = lines.length;
