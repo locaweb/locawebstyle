@@ -8,7 +8,6 @@ locastyle.sidebarToggle = (function() {
     checkStatus();
     addArrowToggle();
     sidebarToggling();
-    checkStatus();
     maximizeMobile();
   }
 

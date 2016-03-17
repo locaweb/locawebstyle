@@ -1,7 +1,7 @@
 $(function () {
 
   // This will resize all charts examples on sidebar minimize or maximize
-  $(document).on('sidebar-minimize sidebar-maximize transitionend', function() {
+  $(document).on('sidebar-minimize sidebar-maximize', function() {
     $(window).resize();
   });
 
