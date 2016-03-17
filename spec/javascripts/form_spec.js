@@ -24,7 +24,7 @@ describe("Forms: ", function() {
 
   describe("When exist textarea", function(){
     it("textarea has atribute height", function(){
-      expect($("textarea")).toHaveCss({ height: "18px" });
+      expect($("textarea")).toHaveCss({ height: "54px" });
     });
   });
 
