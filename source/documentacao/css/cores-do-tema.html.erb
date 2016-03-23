@@ -19,38 +19,12 @@ description: Insira cores no seu projeto.
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>ls-theme-green</td>
-        <td>Tema verde</td>
-      </tr>
-      <tr>
-        <td>ls-theme-light-green</td>
-        <td>Tema verde claro</td>
-      </tr>
-      <tr>
-        <td>ls-theme-blue</td>
-        <td>Tema Azul</td>
-      </tr>
-      <tr>
-        <td>ls-theme-gold</td>
-        <td>Tema dourada</td>
-      </tr>
-      <tr>
-        <td>ls-theme-gray</td>
-        <td>Tema cinza</td>
-      </tr>
-      <tr>
-        <td>ls-theme-orange</td>
-        <td>Tema laranja</td>
-      </tr>
-      <tr>
-        <td>ls-theme-light-red</td>
-        <td>Tema Vermelho claro</td>
-      </tr>
-      <tr>
-        <td>ls-theme-moss</td>
-        <td>Tema verde musgo</td>
-      </tr>
+      <% data.themes.each do |theme| %>
+        <tr>
+          <td><%= theme[0] %></td>
+          <td><%= theme[1] %></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 
@@ -58,14 +32,9 @@ description: Insira cores no seu projeto.
 
   <div class="ls-box-demo">
     <div class="doc-test-themes ls-group-btn ls-group-active">
-      <a href="#" class="ls-btn-primary ls-active" data-toggle-class="ls-theme-green" data-target="html">Verde</a>
-      <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-light-green" data-target="html">Verde claro</a>
-      <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-blue" data-target="html">Azul</a>
-      <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-gold" data-target="html">Dourado</a>
-      <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-gray" data-target="html">Cinza</a>
-      <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-orange" data-target="html">Laranja</a>
-      <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-light-red" data-target="html">Vermelho claro</a>
-      <a href="#" class="ls-btn-primary" data-toggle-class="ls-theme-moss" data-target="html">Verde musgo</a>
+      <% data.themes.each do |theme| %>
+        <a href="#" class="ls-btn-primary" data-toggle-class="<%= theme[0] %>" data-target="html"><%= theme[1] %></a>
+      <% end %>
     </div>
     <br>
     <br>
