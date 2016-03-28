@@ -13,6 +13,14 @@ $color-cyanogen:    #00c9f5;
 $color-light-red:   #ef1e37;
 $color-wine:        #513335;
 $color-moss:        #679511;
+$color-indigo:      #00417b;
+$color-turquoise:   #3b949c;
+$color-light-blue:  #5c90c4;
+$color-light-brown: #654445;
+$color-green-lemon: #94c83c;
+$color-purple:      #5a2dc0;
+$color-dark-yellow: #b19b22;
+$color-yellow-gold: #ffb500;
 
 // Color that will be mixed with the main color of each theme.
 $color-mix: #000;
@@ -31,7 +39,15 @@ $themes-colors: (
   wine        : (color1: $color-wine, color2: mix($color-mix, $color-wine, $color-mix-percent)),
   cyanogen    : (color1: $color-cyanogen, color2: mix($color-mix, $color-cyanogen, $color-mix-percent)),
   light-red   : (color1: $color-light-red, color2: mix($color-mix, $color-light-red, $color-mix-percent)),
-  moss        : (color1: $color-moss, color2: mix($color-mix, $color-moss, $color-mix-percent))
+  moss        : (color1: $color-moss, color2: mix($color-mix, $color-moss, $color-mix-percent)),
+  indigo      : (color1: $color-indigo, color2: mix($color-mix, $color-indigo, $color-mix-percent)),
+  turquoise   : (color1: $color-turquoise, color2: mix($color-mix, $color-turquoise, $color-mix-percent)),
+  light-blue  : (color1: $color-light-blue, color2: mix($color-mix, $color-light-blue, $color-mix-percent)),
+  light-brown : (color1: $color-light-brown, color2: mix($color-mix, $color-light-brown, $color-mix-percent)),
+  green-lemon : (color1: $color-green-lemon, color2: mix($color-mix, $color-green-lemon, $color-mix-percent)),
+  purple      : (color1: $color-purple, color2: mix($color-mix, $color-purple, $color-mix-percent)),
+  dark-yellow : (color1: $color-dark-yellow, color2: mix($color-mix, $color-dark-yellow, $color-mix-percent)),
+  yellow-gold : (color1: $color-yellow-gold, color2: mix($color-mix, $color-yellow-gold, $color-mix-percent))
 );
 
 //
