@@ -286,7 +286,7 @@ input.ls-form-text,
 //
 .ls-prefix-group
   position: relative
-  height: 36px
+  height: $input-height
   display: table
 
   .ls-form-inline &
@@ -305,6 +305,22 @@ input.ls-form-text,
     height: inherit
     margin-bottom: 0
     display: table-cell
+
+  &.ls-field-lg
+    height: $input-lg-height
+
+  &.ls-field-sm
+    height: $input-sm-height
+
+  &.ls-field-xs
+    height: $input-xs-height
+
+    .ls-label-text-prefix
+      font-size: 12px
+      padding: 4px 12px
+
+    input
+      height: $input-xs-height 
 
 .ls-label-text-prefix
   width: 1%
