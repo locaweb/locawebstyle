@@ -277,6 +277,9 @@ input.ls-form-text,
     border-left: none !important
     padding-left: 8px !important
 
+  .ls-table &
+    border-collapse: initial
+
 .ls-middle-label
   display: inline-block
   padding-top: 9px
@@ -351,12 +354,18 @@ input.ls-form-text,
   border-bottom-left-radius: 0
   border-top-left-radius: 0
 
+  .ls-table & 
+    margin-left: -2px
+
 input + .ls-label-text-prefix
   border: 1px solid $gray2
   border-radius: 0 $default-radius $default-radius 0
   position: relative
   left: -4px
   z-index: 2
+
+  .ls-table & 
+    left: -6px
 
 @media screen and (max-width: $screen-sm)
 
