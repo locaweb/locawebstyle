@@ -7,7 +7,7 @@ locastyle.dropdown = (function() {
     area: 'body',
     dropdown: '.ls-dropdown',
     module: '[data-ls-module="dropdown"]',
-    button: '[class*="ls-btn"]',
+    button: '.ls-dropdown [class*="ls-btn"]',
     firstLink: '[data-ls-module="dropdown"] > [class*="ls-btn"]:first-child, .ls-dropdown.ls-user-account > a:first-child',
     nav: '.ls-dropdown-nav'
   };
