@@ -130,4 +130,73 @@ description: Aumente ou diminua o tamanho dos campos de formulários
     </tbody>
   </table>
 
+  <h2 class="doc-title-3">Alterando altura dos campos com prefixos e sufixos</h2>
+  <p>Para alterar a altura dos prefixos e sufixos, basta adicionar as classes abaixo na classe <code>.ls-prefix-group</code> <br>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ls-field-lg</td>
+        <td>
+          <label class="ls-label col-md-12 col-xs-102">
+            <div class="ls-prefix-group ls-field-lg">
+              <span class="ls-label-text-prefix">URL</span>
+              <input type="text" name="nome" required >
+              <span class="ls-label-text-prefix">.com.br</span>
+            </div>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>ls-field-md (tamanho default)</td>
+        <td>
+          <label class="ls-label col-md-12 col-xs-12">
+            <div class="ls-prefix-group ls-field-md">
+              <!-- <span class="ls-label-text-prefix">URL</span> -->
+              <input type="text" name="nome" required >
+              <span class="ls-label-text-prefix">.subdominio.com.br</span>
+            </div>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>ls-field-sm</td>
+        <td>
+          <label class="ls-label col-md-12 col-xs-12">
+            <div class="ls-prefix-group ls-field-sm">
+              <span class="ls-label-text-prefix">URL</span>
+              <input type="text" name="nome" required >
+            </div>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>ls-field-xs</td>
+        <td>
+          <label class="ls-label col-md-12 col-xs-12">
+            <div class="ls-prefix-group ls-field-xs">
+              <span class="ls-label-text-prefix">URL</span>
+              <input type="text" name="nome" required >
+            </div>
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="ls-box-demo">
+
+  <%= partial 'documentacao/shared/form/fields-prefix-sizes.erb' %>
+  </div>
+<% code("html") do %>
+  <%= partial 'documentacao/shared/form/fields-prefix-sizes.erb' %>
+<% end %>
+
+
 </section>
