@@ -71,7 +71,7 @@ locastyle.dropdown = (function() {
   }
 
   function ariaDropdown(el) {
-    $(config.button).attr({ 'aria-expanded' : 'false' });
+    $(config.nav config.button).attr({ 'aria-expanded' : 'false' });
     $(config.nav).attr({ 'aria-hidden' : 'true' });
 
     $(el).each(function() {
