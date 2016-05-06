@@ -1,44 +1,40 @@
-describe("Datepicker: ", function(){
-  beforeEach(function(){
+describe('Datepicker: ', function() {
+  beforeEach(function() {
     loadFixtures('datepicker_fixture.html');
+    locastyle.datepicker.init();
+    locastyle.form.triggerCalendar();
   });
 
-  describe("when input has class .datepicker", function(){
-    it("pikaday binded", function(){
-      var $input = $('#datepickerClass');
-      $input.trigger('focus');
-      var $datepicker = $('.pika-single');
-      expect($datepicker.hasClass("is-hidden")).toBe(false);
-    });
+  afterEach(function() {
+    $('.pika-single').remove();
   });
 
-  describe("init by javascript", function(){
-    it("pikaday binded", function(){
-      locastyle.datepicker.newDatepicker('#datepickerJs');
-      var $datepicker = $('.pika-single');
-      expect($datepicker).toExist();
+  describe('when input has class .datepicker', function() {
+    it('the datepicker module init', function() {
+      expect($('.pika-single')).toExist();
     });
 
     it('the datepicker field should have the text type', function() {
-      locastyle.datepicker.newDatepicker('#datepickerJs');
-      var dateField = $('#datepickerJs');
-      expect(dateField.attr('type')).toBe('date');
+      expect($('#datepicker-1').attr('type')).toBe('text');
     });
 
     it('pikaday range init', function() {
-      locastyle.datepicker.createWithRange($('#datepicker1'));
-      var target = $('#datepicker2');
-      target.trigger('focus');
-      var datepicker = $('.pika-single');
-      expect(datepicker).toExist();
+      expect($('#datepicker-2').data('date-pair')).toBe('datepicker-1');
+    });
+  });
+
+  describe('init by javascript', function() {
+    it('pikaday should be triggered', function() {
+      locastyle.datepicker.newDatepicker('#datepicker-js');
+      $('#datepicker-js').trigger('click');
+      expect($('.pika-single:not(.is-hidden)')).toExist();
     });
   });
 
   describe('When click on a data-trigger-calendar element', function() {
     it('bind the triggerCalendar function', function() {
-      $('#formSufix').trigger('click.ls');
-      var datepicker = $('.pika-single');
-      expect(datepicker).toExist();
+      $('#datepicker-1-prefix').trigger('click');
+      expect($('.pika-single:not(.is-hidden)')).toExist();
     });
   });
 });
