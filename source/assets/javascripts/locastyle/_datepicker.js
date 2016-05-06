@@ -26,12 +26,14 @@ locastyle.datepicker = (function() {
     // Datepicker without range
     $(config.selector).each(function(){
       if (!$(this).hasClass('ls-daterange')) {
+        changeTypeToText($(this));
         create($(this));
       }
     });
 
     // Datepicker with range
     $(config.rangeSelector).each(function() {
+      changeTypeToText($(this));
       createWithRange($(this));
     });
   }
@@ -64,6 +66,13 @@ locastyle.datepicker = (function() {
 
   function newDatepicker(selector){
    create($(selector));
+  }
+
+  // This ensures the datepicker functionality to use only text inputs
+  function changeTypeToText(el) {
+    if (el.attr('type') != 'text') {
+      el.attr('type', 'text');
+    }
   }
 
   return {

@@ -8,7 +8,7 @@ describe("Datepicker: ", function(){
       var $input = $('#datepickerClass');
       $input.trigger('focus');
       var $datepicker = $('.pika-single');
-      expect( $datepicker.hasClass("is-hidden") ).toBe(false);
+      expect($datepicker.hasClass("is-hidden")).toBe(false);
     });
   });
 
@@ -16,7 +16,13 @@ describe("Datepicker: ", function(){
     it("pikaday binded", function(){
       locastyle.datepicker.newDatepicker('#datepickerJs');
       var $datepicker = $('.pika-single');
-      expect( $datepicker ).toExist();
+      expect($datepicker).toExist();
+    });
+
+    it('the datepicker field should have the text type', function() {
+      locastyle.datepicker.newDatepicker('#datepickerJs');
+      var dateField = $('#datepickerJs');
+      expect(dateField.attr('type')).toBe('date');
     });
 
     it('pikaday range init', function() {
@@ -35,5 +41,4 @@ describe("Datepicker: ", function(){
       expect(datepicker).toExist();
     });
   });
-
 });
