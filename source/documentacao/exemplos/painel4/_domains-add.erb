@@ -1,0 +1,55 @@
+<div class="ls-steps">
+  <div class="ls-steps-mobile">
+    <a class="ls-steps-mobile-btn ls-ico-chevron-down"></a>
+  </div>
+  <ol class="ls-steps-nav">
+    <li>
+      <button class="ls-steps-btn " data-ls-module="steps" data-target="#step1" title="Verificar"></button>
+    </li>
+    <li>
+      <button class="ls-steps-btn" data-ls-module="steps" data-target="#step2" title="Adicionar"></button>
+    </li>
+  </ol>
+  <div class="ls-steps-main">
+    <div class="ls-steps-content " id="step1">
+      <form action="" class="ls-form-inline">
+        <fieldset>
+          <legend class="ls-title-5">Pesquisar endereço para incluir no site</legend>
+          <br><br>
+          <label class="ls-label col-md-6 col-sm-12 ls-success">
+
+            <div class="ls-prefix-group">
+              <span class="ls-label-text-prefix">www.</span>
+              <input type="text" name="nome" placeholder="meudominio" >
+            </div>
+            <small class="ls-help-message">Mensagem de sucesso.</small>
+          </label>
+          <label class="ls-label col-md-4 col-sm-12">
+            <div class="ls-custom-select">
+              <select class="ls-select">
+                  <option value="1">.com.br</option>
+                  <option value="2">.com</option>
+                  <option value="3">.net</option>
+              </select>
+            </div>
+          </label>
+          <div class="ls-actions-btn">
+            <input type="submit" value="Verificar" class="ls-btn" title="Verificar">
+          </div>
+        </fieldset>
+      </form>
+      <div class="ls-actions-btn">
+        <a href="#" class="ls-btn-primary ls-float-right" data-action="next">Continuar</a>
+      </div>
+    </div>
+    <div class="ls-steps-content" id="step2">
+      <h2 class="ls-title-5">Adicionar endereço ao site</h2>
+      <p>O endereço abaixo será adicionado ao seu site:</p>
+      <p class="ls-title-6">fulano.com.br</p>
+      <div class="ls-actions-btn">
+        <a href="#" class="ls-btn" data-action="prev">Voltar</a>
+        <a href="<%= base_url %>/documentacao/exemplos/painel4/domains-list" class="ls-btn-primary ls-float-right">Adicionar</a>
+      </div>
+    </div>
+  </div>
+</div>

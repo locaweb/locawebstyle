@@ -31,6 +31,7 @@
     appearance: none
     height: inherit
     padding: 5px 42px 5px 10px
+    line-height: inherit
     display: inline-block
     border: none
     background: #fff
@@ -46,6 +47,10 @@
     &[disabled],
     .ls-form-disable &
       background: $gray1
+
+    // used to Edge
+    &::-ms-expand
+      display: none
 
   &:before
     content: ""

@@ -1,0 +1,27 @@
+---
+title: Endereço do site
+layout: panel
+theme_name: ls-theme-cyanogen
+panel: painel4
+title_product: Criador de Sites 2.0
+---
+<h1 class="ls-title-intro ls-ico-link">Endereço do site</h1>
+<p>Este será o endereço principal de acesso ao seu site:</p>
+
+<ul class="ls-tabs-nav">
+  <li class="ls-active"><a data-ls-module="tabs" href="#register">Registrar</a></li>
+  <li ><a data-ls-module="tabs" href="#domain">Já tenho um domínio</a></li>
+</ul>
+<div class="ls-tabs-container">
+  <div id="register" class="ls-tab-content ls-active">
+    <%= partial 'documentacao/exemplos/painel4/domains-register' %>
+    
+  </div>
+  <div id="domain" class="ls-tab-content">
+    <%= partial 'documentacao/exemplos/painel4/domains-add' %>
+  </div>
+</div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel4/sidebar' %>
+<% end %>

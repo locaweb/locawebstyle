@@ -46,6 +46,25 @@
       top: 16px
       right: 12px
 
+  .ls-active,
+  .ls-actived
+
+    .ls-steps-btn
+      cursor: pointer
+      pointer-events: initial
+
+      &:before
+        border: 2px solid $gray3
+        color: #fff
+
+      &:after
+        color: $gray3
+
+  .ls-active
+
+    &:before
+      color: $gray3
+
 .ls-steps-btn
   width: 100%
   background: $gray1
@@ -60,23 +79,6 @@
   position: relative
   text-align: left
   padding: 10px
-
-  .ls-active &,
-  .ls-actived &
-    cursor: pointer
-    pointer-events: initial
-
-    &:before
-      border: 2px solid $gray3
-      color: #fff
-
-    &:after
-      color: $gray3
-
-  .ls-active &
-
-    &:before
-      color: $gray3
 
   &:hover,
   &:focus,
@@ -160,6 +162,10 @@
   position: relative
   padding-top: 30px
   margin: 0
+
+  .ls-steps-content > .ls-actions-btn
+    @extend %actions-btn
+    display: block
 
 .ls-steps-content
   position: relative
@@ -274,6 +280,9 @@
         top: 24px
         z-index: 1
 
+      &.ls-active .ls-steps-arrow
+        display: block
+
     .ls-actived:not(.ls-active)
       &:after
         top: 12px
@@ -284,10 +293,6 @@
     border-left: 1px solid $gray2
     padding: 0 15px 0 25px
     margin: 10px 0 0 235px
-
-  .ls-steps-arrow
-    .ls-active &
-      display: block
 
   .ls-steps-btn
     width: 100%

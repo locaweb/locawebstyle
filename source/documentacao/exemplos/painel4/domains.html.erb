@@ -1,0 +1,25 @@
+---
+title: Endereço do site
+layout: panel
+theme_name: ls-theme-cyanogen
+panel: painel4
+title_product: Criador de Sites 2.0
+---
+<h1 class="ls-title-intro ls-ico-link">Endereço do site</h1>
+<p>Este é o atual endereço utilizado para acessar seu site:</p>
+
+<div class="ls-list">
+  <header class="ls-list-header">
+    <div class="ls-list-title col-md-9">
+    <a href="<%= base_url %>/documentacao/exemplos/painel4/domains-config">murilo.lwsite.com.br</a> <span class="ls-ico-help" data-ls-module="popover" data-trigger="hover"  data-content="<b>Este é seu endereço</b><br><br>Ele será substituído após você adicionar o seu domínio" data-placement="top" data-target="#ls-popover-0"></span>
+      <small>Endereço temporário</small>
+    </div>
+    <div class="col-md-3 ls-txt-right">
+      <a href="<%= base_url %>/documentacao/exemplos/painel4/domains-config" class="ls-btn-primary">Alterar</a>
+    </div>
+  </header>
+</div>
+
+<% content_for :sidebar_panel do %>
+  <%= partial 'documentacao/exemplos/painel4/sidebar' %>
+<% end %>
