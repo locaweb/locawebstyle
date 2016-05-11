@@ -22,9 +22,18 @@ locastyle.datepicker = (function() {
     }
   };
 
+  // This ensures the datepicker functionality to use only text inputs
+  function changeTypeToText(el) {
+    if (el.attr('type') !== 'text') {
+      el.attr('type', 'text');
+    }
+  }
+
   function init() {
     // Datepicker without range
-    $(config.selector).each(function(){
+    $(config.selector).each(function() {
+      changeTypeToText($(this));
+
       if (!$(this).hasClass('ls-daterange')) {
         create($(this));
       }
@@ -43,6 +52,7 @@ locastyle.datepicker = (function() {
   function createWithRange(el) {
     var picker1 = null;
     var picker2 = null;
+    var elementDatePair = $(el.data('ls-daterange'));
 
     var pickerStartObj = {
       field: el[0],
@@ -52,7 +62,7 @@ locastyle.datepicker = (function() {
     };
 
     var pickerEndObj = {
-      field: $(el.data('ls-daterange'))[0],
+      field: elementDatePair[0],
       onSelect: function() {
         picker1.setMaxDate(this.getDate());
       }
@@ -60,6 +70,8 @@ locastyle.datepicker = (function() {
 
     picker1 = new Pikaday($.extend(pickerStartObj, config.pikaday));
     picker2 = new Pikaday($.extend(pickerEndObj, config.pikaday));
+
+    elementDatePair.attr('data-date-pair', el.attr('id'));
   }
 
   function newDatepicker(selector){
