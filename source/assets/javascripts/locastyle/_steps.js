@@ -3,6 +3,9 @@ var locastyle = locastyle || {};
 locastyle.steps = (function() {
   'use strict';
 
+  var topbar = $('.ls-topbar');
+  var topBarHeight = topbar.height();
+
   var config = {
     selectors: {
       moduleActive: '.ls-actived [data-ls-module="steps"]',
@@ -166,33 +169,45 @@ locastyle.steps = (function() {
     }
   }
 
+  // Calc the steps nav margin top based on the topbar existence or not
+  function calcMarginTop(steps, marginTop) {
+    var topBarDistance = topbar.offset().top + topBarHeight - steps.offset().top;
+
+    if (topBarDistance >= 0) {
+      marginTop += topBarHeight;
+    }
+
+    return marginTop;
+  }
+
   // Always visible navigation when the page scrolls
   function stepsAffix(elemVisible) {
-    var $steps = $(config.selectors.nav);
-    var offset = $steps.offset();
-    var $heightNav = $(config.selectors.nav).height();
+    var steps = $(config.selectors.steps);
+    var stepsNav = $(config.selectors.nav);
+    var stepsNavOffset = stepsNav.offset();
+    var stepsNavHeight = stepsNav.height();
 
     $(window).scroll(function() {
       if ($(window).width() < 768) {
         return;
       }
-     if ($(window).scrollTop() > offset.top ) {
-        var $scroll = parseInt($(window).scrollTop() - $heightNav, 10);
 
-        $steps.stop().animate({
-         marginTop: $(window).scrollTop() - offset.top + 20
-        });
+      if ($(window).scrollTop() + topBarHeight >= steps.offset().top) {
+        var scroll = parseInt($(window).scrollTop() - stepsNavHeight, 10);
+        var marginTop = $(window).scrollTop() - stepsNavOffset.top + 20;
 
-        if($scroll + $heightNav >= elemVisible ) {
-          $steps.stop().animate({
-           marginTop: 0
-         });
+        if (topbar.length) {
+          stepsNav.stop().animate({ marginTop: calcMarginTop(steps, marginTop) });
+        } else {
+          stepsNav.stop().animate({ marginTop: marginTop });
         }
-     } else {
-       $steps.stop().animate({
-         marginTop: 0
-       });
-     }
+
+        if (scroll + stepsNavHeight >= elemVisible) {
+          stepsNav.stop().animate({ marginTop: 0 });
+        }
+      } else {
+        stepsNav.stop().animate({ marginTop: 0 });
+      }
     });
   }
 
