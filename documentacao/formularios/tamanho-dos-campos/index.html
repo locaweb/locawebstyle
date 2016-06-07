@@ -125,8 +125,8 @@
     <div class="ls-custom-select ls-field-sm">
       <select>
         <option value="">Pequeno</option>
-          <option value="0"> pariatur quo et </option>
-          <option value="1"> saepe asperiores dolores </option>
+          <option value="0"> quidem quo quia </option>
+          <option value="1"> aut dolores non </option>
       </select>
     </div>
   </div>
@@ -141,8 +141,8 @@
 9</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-custom-select ls-field-sm"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;select&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>Pequeno<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"0"</span><span class="nt">&gt;</span> quia maiores accusamus <span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span> dolor pariatur aspernatur <span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"0"</span><span class="nt">&gt;</span> ducimus odio blanditiis <span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span> sint nemo beatae <span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
@@ -165,8 +165,8 @@
           <div class="ls-custom-select ls-field-lg">
             <select>
               <option value="">Grande</option>
-                <option value="0"> maxime adipisci officia </option>
-                <option value="1"> consequatur dicta corrupti </option>
+                <option value="0"> consequatur veritatis aut </option>
+                <option value="1"> temporibus magnam id </option>
             </select>
           </div>
 
@@ -179,8 +179,8 @@
           <div class="ls-custom-select ls-field-md">
             <select>
               <option value="">Normal</option>
-                <option value="0"> quo consequatur temporibus </option>
-                <option value="1"> molestiae et quis </option>
+                <option value="0"> temporibus et aliquam </option>
+                <option value="1"> unde tempore officia </option>
             </select>
           </div>
         </td>
@@ -194,8 +194,8 @@
           <div class="ls-custom-select ls-field-sm">
             <select>
               <option value="">Pequeno</option>
-                <option value="0"> rerum et molestias </option>
-                <option value="1"> cupiditate est qui </option>
+                <option value="0"> necessitatibus sequi id </option>
+                <option value="1"> eum blanditiis id </option>
             </select>
           </div>
         </td>
@@ -209,8 +209,8 @@
           <div class="ls-custom-select ls-field-xs">
             <select>
               <option value="">Bem pequeno</option>
-                <option value="0"> mollitia sequi praesentium </option>
-                <option value="1"> dolores dicta dicta </option>
+                <option value="0"> est et quibusdam </option>
+                <option value="1"> ratione et inventore </option>
             </select>
           </div>
         </td>
@@ -220,6 +220,237 @@
       </tr>
     </tbody>
   </table>
+
+  <h2 class="doc-title-3">Alterando altura dos campos com prefixos e sufixos</h2>
+  <p>Para alterar a altura dos prefixos e sufixos, basta adicionar as classes abaixo na classe <code>.ls-prefix-group</code> <br>
+
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ls-field-lg</td>
+        <td>
+          <label class="ls-label col-md-12 col-xs-102">
+            <div class="ls-prefix-group ls-field-lg">
+              <span class="ls-label-text-prefix">URL</span>
+              <input type="text" name="nome" required >
+              <span class="ls-label-text-prefix">.com.br</span>
+            </div>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>ls-field-md (tamanho default)</td>
+        <td>
+          <label class="ls-label col-md-12 col-xs-12">
+            <div class="ls-prefix-group ls-field-md">
+              <!-- <span class="ls-label-text-prefix">URL</span> -->
+              <input type="text" name="nome" required >
+              <span class="ls-label-text-prefix">.subdominio.com.br</span>
+            </div>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>ls-field-sm</td>
+        <td>
+          <label class="ls-label col-md-12 col-xs-12">
+            <div class="ls-prefix-group ls-field-sm">
+              <span class="ls-label-text-prefix">URL</span>
+              <input type="text" name="nome" required >
+            </div>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>ls-field-xs</td>
+        <td>
+          <label class="ls-label col-md-12 col-xs-12">
+            <div class="ls-prefix-group ls-field-xs">
+              <span class="ls-label-text-prefix">URL</span>
+              <input type="text" name="nome" required >
+            </div>
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="ls-box-demo">
+
+  <form action="" class="ls-form ls-form-horizontal row">
+  <label class="ls-label col-md-12 col-xs-12">
+    <b class="ls-label-text">E-mail</b>
+    <div class="ls-prefix-group ls-field-lg">
+      <span class="ls-label-text-prefix">URL</span>
+      <input type="text" name="nome" required >
+    </div>
+  </label>
+  <div class="ls-actions-btn">
+    <button class="ls-btn ls-btn-lg">Salvar</button>
+    <button class="ls-btn-danger ls-btn-lg">Cancelar</button>
+  </div>
+</form>
+
+<form action="" class="ls-form ls-form-inline row">
+  <label class="ls-label col-md-11 col-xs-12">
+    <b class="ls-label-text">Digite seu site</b>
+    <div class="ls-prefix-group ls-field-md">
+      <span class="ls-label-text-prefix">URL</span>
+      <input type="text" name="nome" required >
+    </div>
+  </label>
+  <div class="ls-actions-btn">
+    <button class="ls-btn">Salvar</button>
+  </div>
+</form>
+
+<form action="" class="ls-form ls-form-inline row">
+  <label class="ls-label col-md-11 col-xs-12">
+    <b class="ls-label-text">Domínio</b>
+    <div class="ls-prefix-group ls-field-sm">
+      <span class="ls-label-text-prefix">www</span>
+      <input type="text" name="nome" required >
+      <span class="ls-label-text-prefix">.com.br</span>
+    </div>
+  </label>
+  <div class="ls-actions-btn">
+    <button class="ls-btn ls-btn-sm">Enviar</button>
+  </div>
+</form>
+
+
+<form action="" class="ls-form ls-form-inline row">
+  <label class="ls-label col-md-8 col-xs-12">
+    <b class="ls-label-text ls-hidden-accessible">E-mail</b>
+    <div class="ls-prefix-group ls-field-xs">
+      <span class="ls-label-text-prefix">URL</span>
+      <input type="text" name="nome" required >
+    </div>
+  </label>
+  <div class="ls-actions-btn">
+    <button class="ls-btn ls-btn-xs">Salvar</button>
+  </div>
+</form>
+
+  </div>
+<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55</pre></td><td class="code"><pre>  <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-horizontal row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-12 col-xs-12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>E-mail<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-prefix-group ls-field-lg"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ls-label-text-prefix"</span><span class="nt">&gt;</span>URL<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn ls-btn-lg"</span><span class="nt">&gt;</span>Salvar<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn-danger ls-btn-lg"</span><span class="nt">&gt;</span>Cancelar<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+
+<span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-11 col-xs-12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Digite seu site<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-prefix-group ls-field-md"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ls-label-text-prefix"</span><span class="nt">&gt;</span>URL<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn"</span><span class="nt">&gt;</span>Salvar<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+
+<span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-11 col-xs-12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Domínio<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-prefix-group ls-field-sm"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ls-label-text-prefix"</span><span class="nt">&gt;</span>www<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ls-label-text-prefix"</span><span class="nt">&gt;</span>.com.br<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn ls-btn-sm"</span><span class="nt">&gt;</span>Enviar<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+
+
+<span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-8 col-xs-12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text ls-hidden-accessible"</span><span class="nt">&gt;</span>E-mail<span class="nt">&lt;/b&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-prefix-group ls-field-xs"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ls-label-text-prefix"</span><span class="nt">&gt;</span>URL<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nome"</span> <span class="na">required</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-actions-btn"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ls-btn ls-btn-xs"</span><span class="nt">&gt;</span>Salvar<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+
+</pre></td></tr></tbody></table>
+</div>
+
 
 </section>
 
@@ -234,7 +465,7 @@
     </ul>
     <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/locawebstyle/assets/images/docs/locaweb-logo.png" alt=""></a>
     <p class="doc-copyright">
-      Copyright © 1997-2015 Serviços de Internet S/A.
+      Copyright © 1997-2016 Serviços de Internet S/A.
     </p>
   </div>
 </footer>

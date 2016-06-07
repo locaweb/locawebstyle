@@ -559,6 +559,24 @@
       "path": "documentacao/exemplos/painel4/config-users"
   },
   
+  "documentacao/exemplos/painel4/domains-config" :   {
+      "title": "Endereço do site",
+      "description": "",
+      "path": "documentacao/exemplos/painel4/domains-config"
+  },
+  
+  "documentacao/exemplos/painel4/domains-list" :   {
+      "title": "Endereço do site",
+      "description": "",
+      "path": "documentacao/exemplos/painel4/domains-list"
+  },
+  
+  "documentacao/exemplos/painel4/domains" :   {
+      "title": "Endereço do site",
+      "description": "",
+      "path": "documentacao/exemplos/painel4/domains"
+  },
+  
   "documentacao/exemplos/painel4/home-first-access" :   {
       "title": "Página Inicial",
       "description": "",
