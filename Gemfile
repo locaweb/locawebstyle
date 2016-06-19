@@ -18,7 +18,7 @@ gem 'jshint_on_rails'
 gem 'therubyracer' # faster JS compiles
 gem 'oj' # faster JS compiles
 
-gem "pry"
+gem 'pry'
 
 gem 'rack-cors', require: false
 gem 'wraith' #css test diff image compare

@@ -97,6 +97,11 @@
 .ls-no-margin-bottom
   margin-bottom: 0 !important
 
+@each $size in $sizes
+  @each $direction in $directions
+    .ls-#{$size}-margin-#{$direction}
+      margin-#{$direction}: map-get($spacers, $size) !important
+
 .ls-no-padding
   padding: 0 !important
 
