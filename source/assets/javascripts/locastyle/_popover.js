@@ -19,7 +19,6 @@ locastyle.popover = (function() {
   function init() {
     clickAnywhereClose();
     bindPopover();
-    startOpened();
   }
 
   // When click or hover elements, show the popovers
@@ -159,7 +158,7 @@ locastyle.popover = (function() {
   // When open page, start popover automatically
   function startOpened() {
     $(config.module+'[data-ls-popover="open"]').each(function() {
-      show($(this).data('target'));
+      $(this).trigger('click')
     });
   }
 
@@ -167,7 +166,8 @@ locastyle.popover = (function() {
     init   : init,
     show   : show,
     hide   : hide,
-    destroy: destroy
+    destroy: destroy,
+    startOpened: startOpened
   };
 
 }());
