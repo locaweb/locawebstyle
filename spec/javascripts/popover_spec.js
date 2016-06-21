@@ -3,6 +3,7 @@ describe('Popover: ', function() {
     loadFixtures('popover_fixture.html');
     locastyle.breakpointClass = "ls-window-lg";
     locastyle.popover.init();
+
   });
 
 
@@ -83,6 +84,16 @@ describe('Popover: ', function() {
         expect( $popover ).not.toBeVisible();
       });
     });
+
+    describe('#startOpened', function () {
+
+      it('should to open popover when load page ', function () {
+        var target = $('[data-ls-popover="open"]').data('target');
+        locastyle.popover.startOpened();
+        expect($(target).hasClass('ls-active')).toEqual(true);
+      });
+    });
+
   });
 
 });
