@@ -9,7 +9,7 @@ locastyle.charCounter = (function() {
 
   function countText() {
     $('[data-ls-module="charCounter"]').each(function(index, field) {
-      $('.ls-number-counter-' + index).parent().remove();
+      $('.ls-number-counter-' + index).parents('.ls-help-inline').remove();
 
       var limit = $(field).attr('maxlength');
       var html = '<p class="ls-help-inline"><small><strong ' +
