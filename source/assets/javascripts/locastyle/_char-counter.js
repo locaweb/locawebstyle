@@ -9,13 +9,15 @@ locastyle.charCounter = (function() {
 
   function countText() {
     $('[data-ls-module="charCounter"]').each(function(index, field) {
+      $('.ls-number-counter-' + index).parent().remove();
+
       var limit = $(field).attr('maxlength');
       var html = '<p class="ls-help-inline"><small><strong ' +
         'class="ls-char-count ls-number-counter-' + index + '">' + limit +
         '</strong> caracteres restantes</small></p>';
       var prefixGroup = $(field).closest('.ls-prefix-group');
 
-      $(field).removeAttr('maxlength').data().maxlength = limit;
+      $(field).data().maxlength = limit;
 
       if (prefixGroup.length) {
         prefixGroup.after(html);
