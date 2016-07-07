@@ -38,9 +38,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rsilva93/locawebstyle.git"
+    "url": "git+https://github.com/locaweb/locawebstyle.git"
   },
   "bugs": {
-    "url": "https://github.com/rsilva93/locawebstyle/issues"
+    "url": "https://github.com/locaweb/locawebstyle/issues"
   }
 }
