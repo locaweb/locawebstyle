@@ -25,3 +25,13 @@ $input-xs-height: 24px;
 
 /* Used in steps component */
 $with-steps: 85px !global;
+
+// SPACING
+$sizes: (xs, sm, md, lg);
+$directions: (top, right, bottom, left);
+$spacers: (
+  xs: 5px,
+  sm: 10px,
+  md: 20px,
+  lg: 40px,
+);
