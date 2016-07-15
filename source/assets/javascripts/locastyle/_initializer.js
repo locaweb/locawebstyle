@@ -19,6 +19,7 @@ var locastyle = (function() {
     locastyle.form.triggerCalendar();
     checkClassForTrack();
     locastyle.browserDetect.init();
+    locastyle.popover.startOpened();
   }
 
   function loadModules() {
