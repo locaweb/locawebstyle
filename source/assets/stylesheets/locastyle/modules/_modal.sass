@@ -1,5 +1,5 @@
-$defaultWidth: 90%
-$largeWidth: 750px
+$defaultWidth: 600px
+$largeWidth: 850px
 $smallWidth: 450px
 $paddingDefault: 20px
 
@@ -26,19 +26,16 @@ $paddingDefault: 20px
 
 .ls-modal-box
   display: inline-block
-  width: $defaultWidth
-  margin: 10% 20px 100px
-  position: relative
+  width: 95%
+  margin: 10% 20px 0
   text-align: left
   background-color: #fff
   border-radius: $default-radius
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7)
 
-  &.ls-modal-large
-    width: $largeWidth
-
-  &.ls-modal-small
-    width: $smallWidth
+.ls-modal-large,
+.ls-modal-small
+  @extend .ls-modal-box
 
 [data-modal-blocked]
   [data-dismiss]
@@ -99,4 +96,10 @@ $paddingDefault: 20px
 
 @media screen and (min-width: $screen-sm)
   .ls-modal-box
-    width: 600px
+    width: $defaultWidth
+
+  .ls-modal-large
+    width: $largeWidth
+
+  .ls-modal-small
+    width: $smallWidth
