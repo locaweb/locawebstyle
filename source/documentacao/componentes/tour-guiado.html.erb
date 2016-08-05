@@ -57,7 +57,7 @@ type: component
 
   <h2 class="doc-title-4">Chamando a função de navegação dentro do seu projeto, propositalmente com window.load</h2>
   <% code("javascript") do %>
-$(window).load(function() {
+$(window).on('load', function() {
   //Onde tourDashboard é a variável que recebe os eventos do plugin no exemplo abaixo
   locastyle.guidedTour.init(tourDashboard);
 });
