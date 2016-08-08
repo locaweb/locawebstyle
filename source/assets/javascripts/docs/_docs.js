@@ -85,6 +85,6 @@ var lsdocs = (function() {
 
 }());
 
-$(window).load(function() {
+$(window).on('load', function() {
   lsdocs.init();
 });

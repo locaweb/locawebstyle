@@ -60,7 +60,7 @@ var locastyle = (function() {
 
 var ls = locastyle;
 
-$(window).load(function() {
+$(window).on('load', function() {
   'use strict';
   ls.init();
 });

@@ -30,7 +30,7 @@ description: Entenda como melhorar o suporte a browsers antigos, como o IE8
   <p>Você pode inserir uma barra de aviso sobre os browsers que não são suportados. Por padrão, o Locaweb Style não insere essa barra, por isso você precisa iniciar a função manualmente. Para tanto, basta chamar a função <code>locastyle.browserUnsupportedBar</code>:</p>
 
   <% code("javascript") do %>
-$(window).load(function() {
+$(window).on('load', function() {
   locastyle.browserUnsupportedBar.init();
 });
   <% end %>

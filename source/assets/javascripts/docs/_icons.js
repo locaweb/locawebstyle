@@ -46,6 +46,6 @@ lsdocs.icones = (function() {
 
 }());
 
-$(window).load(function() {
+$(window).on('load', function() {
   lsdocs.icones.init();
 });
