@@ -16,9 +16,6 @@
   font-size: remtopx(.875)
   margin-bottom: 10px
 
-  .ls-collapse-body
-    padding: 10px
-
 .ls-collapse-opened,
 .ls-collapse-opened-always
 
@@ -26,7 +23,8 @@
     +rotate(180deg)
 
   .ls-collapse-body
-    display: block
+    padding: 10px
+    @extend %show-element
 
 .ls-collapse-header
   display: block
@@ -62,4 +60,5 @@
 
 .ls-collapse-body
   border: 0px solid transparent
-  display: none
+  padding: 0
+  @extend %hide-element

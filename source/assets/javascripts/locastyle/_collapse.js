@@ -1,4 +1,5 @@
 var locastyle = locastyle || {};
+
 locastyle.collapse = (function() {
   'use strict';
 
@@ -13,28 +14,39 @@ locastyle.collapse = (function() {
       close: 'ls-collapse-close',
       opened: 'ls-collapse-opened',
       alwaysOpened: 'ls-collapse-opened-always'
+    },
+    event: {
+      click: 'click.ls'
     }
   };
 
   function init() {
-    // set attributes from all collapses on load
     $(config.trigger).each(function() {
       ariaCollapse($(this));
     });
     bind();
   }
 
+  // bind the collapse event
   function bind() {
     $(config.trigger).each(function(index, element) {
-      if (!$(element).hasClass(config.classes.alwaysOpened)) {
-        $(element).find(config.classes.header).on('click.ls', function() {
-          groupCollapse($(element));
-          // get target
-          var target = $(element).data('target');
-          // set event
-          eventsHandler($(element));
-          // set aria's attributes
-          ariaCollapse($(element));
+      var collapse = $(element);
+
+      if (!collapse.hasClass(config.classes.alwaysOpened)) {
+        collapse.find(config.classes.header).on(config.event.click, function(e) {
+          e.preventDefault();
+          groupCollapse(collapse);
+          eventsHandler(collapse);
+          ariaCollapse(collapse);
+        });
+      }
+
+      // trigger collapse event from another element
+      if (collapse.find(config.classes.header).length === 0) {
+        collapse.off(config.event.click);
+        collapse.on(config.event.click, function(e) {
+          e.preventDefault();
+          toggle($(element).data('target'));
         });
       }
     });
@@ -44,10 +56,11 @@ locastyle.collapse = (function() {
   function groupCollapse(collapse) {
     var $group = collapse.parents(config.classes.groupContainer);
     if ($group[0]) {
-      $group.find(config.trigger).not(collapse).removeClass(config.classes.opened).find(config.classes.content).slideUp();
+      $group.find(config.trigger).not(collapse).removeClass(config.classes.opened);
     }
   }
 
+  // triggers events and change the collapse behavior
   function eventsHandler(el) {
     if (el.hasClass(config.classes.opened)) {
       el.removeClass(config.classes.opened);
@@ -58,7 +71,7 @@ locastyle.collapse = (function() {
     }
   }
 
-
+  // set aria's attributes
   function ariaCollapse(elem) {
     if ($(elem).hasClass(config.classes.opened)) {
       $(elem).find(config.classes.header).attr({ 'aria-expanded': true });
@@ -69,7 +82,13 @@ locastyle.collapse = (function() {
     }
   }
 
+  // toggle collapse behavior
+  function toggle(elem) {
+    $(elem).prev(config.classes.header).trigger(config.event.click);
+  }
+
   return {
-    init: init
+    init: init,
+    toggle: toggle
   };
 }());
