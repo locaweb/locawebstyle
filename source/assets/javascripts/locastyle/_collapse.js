@@ -6,19 +6,19 @@ locastyle.collapse = (function() {
   var config = {
     trigger: '[data-ls-module="collapse"]',
     classes: {
-      header        : '.ls-collapse-header',
-      content       : '.ls-collapse-body',
+      header: '.ls-collapse-header',
+      content: '.ls-collapse-body',
       groupContainer: '.ls-collapse-group',
-      open          : 'ls-collapse-open',
-      close         : 'ls-collapse-close',
-      opened        : 'ls-collapse-opened',
-      alwaysOpened  : 'ls-collapse-opened-always'
+      open: 'ls-collapse-open',
+      close: 'ls-collapse-close',
+      opened: 'ls-collapse-opened',
+      alwaysOpened: 'ls-collapse-opened-always'
     }
   };
 
   function init() {
     // set attributes from all collapses on load
-    $(config.classes.header).each(function() {
+    $(config.trigger).each(function() {
       ariaCollapse($(this));
     });
     bind();
@@ -27,19 +27,14 @@ locastyle.collapse = (function() {
   function bind() {
     $(config.trigger).each(function(index, element) {
       if (!$(element).hasClass(config.classes.alwaysOpened)) {
-        $(element).on('click.ls', function() {
-          groupCollapse($(this));
+        $(element).find(config.classes.header).on('click.ls', function() {
+          groupCollapse($(element));
           // get target
-          var target = $(this).data('target');
-          // set aria's attributes
-          ariaCollapse($(this));
+          var target = $(element).data('target');
           // set event
-          eventsHandler($(this), target);
-
-        });
-        // if click on ck-collapse-body no action happens
-        $(config.classes.content).on('click.ls', function(event) {
-          event.stopPropagation();
+          eventsHandler($(element));
+          // set aria's attributes
+          ariaCollapse($(element));
         });
       }
     });
@@ -53,29 +48,28 @@ locastyle.collapse = (function() {
     }
   }
 
-  function eventsHandler(el, target) {
-    if($(target).parent().hasClass(config.classes.opened)) {
-      $(target).parent().removeClass(config.classes.opened);
+  function eventsHandler(el) {
+    if (el.hasClass(config.classes.opened)) {
+      el.removeClass(config.classes.opened);
       el.trigger('collapse:closed');
     } else {
-      $(target).parent().addClass(config.classes.opened);
+      el.addClass(config.classes.opened);
       el.trigger('collapse:opened');
     }
   }
 
 
   function ariaCollapse(elem) {
-    if($(elem).hasClass(config.classes.open)){
-      $(config.classes.header).attr({ 'aria-expanded' : true });
-      $(config.classes.content).attr({ 'aria-hidden' : false });
-    }else{
-      $(config.classes.header).attr({ 'aria-expanded' : false });
-      $(config.classes.content).attr({ 'aria-hidden' : true });
+    if ($(elem).hasClass(config.classes.opened)) {
+      $(elem).find(config.classes.header).attr({ 'aria-expanded': true });
+      $(elem).find(config.classes.content).attr({ 'aria-hidden': false });
+    } else {
+      $(elem).find(config.classes.header).attr({ 'aria-expanded': false });
+      $(elem).find(config.classes.content).attr({ 'aria-hidden': true });
     }
   }
 
   return {
     init: init
   };
-
 }());

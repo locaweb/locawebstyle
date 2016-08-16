@@ -8,17 +8,17 @@ describe('Collapse:', function() {
 
   describe('When click to open collapse', function() {
     it('should target be visible', function() {
-      $('#myCollapse1 [data-ls-module="collapse"]').trigger('click');
+      $('#myCollapse1 .ls-collapse-header').trigger('click');
       expect($('#collapse1')).toBeVisible();
     });
 
     it("should trigger the event collapse:opened", function() {
       var spyEvent = spyOnEvent(document, 'collapse:opened');
-      $('#myCollapse1 [data-ls-module="collapse"]').trigger("click");
+      $('#myCollapse1 .ls-collapse-header').trigger("click");
       expect('collapse:opened').toHaveBeenTriggeredOn(document);
 
       var spyEvent = spyOnEvent(document, 'collapse:closed');
-      $('#myCollapse1 [data-ls-module="collapse"]').trigger("click");
+      $('#myCollapse1 .ls-collapse-header').trigger("click");
       expect('collapse:closed').toHaveBeenTriggeredOn(document);
     });
 
