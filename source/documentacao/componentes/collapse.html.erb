@@ -86,11 +86,12 @@ type: component
   </table>
 
   <h2 class="doc-title-3">Abrir/Fechar o Collapse</h2>
+  <p>Utilize a função <code>.toggle()</code> para controlar o comportamento do collapse.</p>
   <% code("javascript") do %>locastyle.collapse.toggle('#element')<% end %>
 
-
-
   <hr>
+
+  <p>Você também pode utilizar outros elementos para abrir/fechar um collapse. Para isso, inicialize o módulo normalmente utilizando o <code>data-ls-module="collapse"</code> no elemento que deseja utilizar como trigger e também o atributo <code>data-target="#target"</code> para indicar o collapse alvo.</p>
   <div class="ls-box-demo">
     <button type="button" class="ls-btn-primary" data-ls-module="collapse" data-target="#010">Abre/Fecha o <i>collapse</i></button>
     <br>
@@ -104,10 +105,10 @@ type: component
 
   <div class="ls-box-demo">
     <div class="ls-collapse-group">
-      <%= partial('documentacao/shared/collapse/collapse', :locals => { :id => "acordeon", :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %>
+      <%= partial('documentacao/shared/collapse/collapse', :locals => { :id => "accordeon", :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %>
     </div>
   </div>
-  <% code("html") do %><%= partial('documentacao/shared/collapse/collapse', :locals => { :id => "acordeon", :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %><% end %>
+  <% code("html") do %><%= partial('documentacao/shared/collapse/collapse-group', :locals => { :id => "accordeon", :quant => 2, :header => "Título", content: (lorem.paragraphs 1)  }) %><% end %>
 
 
   <h2 class="doc-title-3">Eventos</h2>
@@ -144,4 +145,3 @@ $(".ls-collapse").on('collapse:closed', function(){
   <%end%>
 
 </section>
-
