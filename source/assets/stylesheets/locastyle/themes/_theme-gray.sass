@@ -1,0 +1,12 @@
+@import "../locastyle"
+
+$color1: $color-gray !default
+$color2: mix($color-mix, $color1, $color-mix-percent) !default
+
+.ls-bg-theme-gray
+  background-color: $color1
+
+.ls-theme-gray
+  color: mix($color-mix, $color1, 20%)!important
+
+@import "base"
