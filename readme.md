@@ -27,7 +27,7 @@ your project:
 <head>
 ...
   <!-- Insert the CSS in HEAD -->
-  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.7.4/stylesheets/locastyle.css">
+  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.8.5/stylesheets/locastyle.css">
 ...
 </head>
 <body>
@@ -37,7 +37,7 @@ your project:
   <script src="http://code.jquery.com/jquery-2.0.1.min.js">
 
   <!-- Put the JS in your footer, always after jQuery (dependency) -->
-  <script src="//assets.locaweb.com.br/locastyle/3.7.4/javascripts/locastyle.js"></script>
+  <script src="//assets.locaweb.com.br/locastyle/3.8.5/javascripts/locastyle.js"></script>
 </body>
 ```
 
@@ -48,6 +48,14 @@ To install the Locaweb Style using Bower:
 
 ```sh
 $ bower install locawebstyle
+```
+
+#### Installing via [npm](https://www.npmjs.com/)
+
+To install the Locaweb using Npm:
+
+```sh
+$ npm install locawebstyle
 ```
 
 ### Read the manual
@@ -125,6 +133,14 @@ Para instalar o Locaweb Style utilizando o Bower é bem simples:
 
 ```sh
 $ bower install locawebstyle
+```
+
+#### Instalação via [npm](https://www.npmjs.com/)
+
+Para instalar o Locaweb Style utilizando o Npm:
+
+```sh
+$ npm install locawebstyle
 ```
 
 ### Documentação completa

@@ -9,6 +9,7 @@ namespace :deploy do
     package(args[:version])
     copy_to_assets_and_dist(args[:version])
     update_bower_version(args[:version])
+    update_package_version(args[:version])
     update_version_in_config(args[:version])
     commit_and_tag_assets(args[:version])
     git_commit_and_tag_locastyle(args[:version])
@@ -18,6 +19,12 @@ namespace :deploy do
     bower_json = File.open("config.rb", "r").read
     update_version = bower_json.gsub(/(set :stable, "\d.\d{1,2}.\d{1,3}")/, "set :stable, \"#{version}\"")
     File.open("config.rb", "w") {|file| file.puts update_version}
+  end
+
+  def update_package_version(version)
+    package_json = File.open("package.json", "r").read
+    update_version = package_json.gsub(/("version": "\d.\d{1,2}.\d{1,3})"/, "\"version\": \"#{version}\"")
+    File.open("package.json", "w") {|file| file.puts update_version}
   end
 
   def update_bower_version(version)
