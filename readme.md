@@ -135,6 +135,14 @@ Para instalar o Locaweb Style utilizando o Bower é bem simples:
 $ bower install locawebstyle
 ```
 
+#### Instalação via [npm](https://www.npmjs.com/)
+
+Para instalar o Locaweb Style utilizando o Npm:
+
+```sh
+$ npm install locawebstyle
+```
+
 ### Documentação completa
 
 Mantemos a
