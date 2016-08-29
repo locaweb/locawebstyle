@@ -5,13 +5,18 @@ namespace :deploy do
 
   desc "Build Locastyle assets, generates a new version tag and commit it"
   task :setup, :version do |t, args|
+
+    # update_version(args[:version])
+
     precompile
     package(args[:version])
+
     copy_to_assets_and_dist(args[:version])
     update_bower_version(args[:version])
     update_version_in_config(args[:version])
-    commit_and_tag_assets(args[:version])
-    git_commit_and_tag_locastyle(args[:version])
+
+    # commit_and_tag_assets(args[:version])
+    # git_commit_and_tag_locastyle(args[:version])
   end
 
   def update_version_in_config(version)
@@ -61,10 +66,28 @@ namespace :deploy do
   end
 
   def update_version(version)
-    css_content = File.open("deploy/#{version}/stylesheets/locastyle.css", "r").read
-    File.open("deploy/#{version}/stylesheets/locastyle.css", "w") do |f|
-      f.write "/*! Locastyle version: #{version}*/ " + css_content
-    end
+    # css_content1 = File.open("deploy/#{version}/stylesheets/locastyle.css", "r").read
+    # css_content3 = File.open("deploy/#{version}/stylesheets/theme-gray.css", "r").read
+    # css_content2 = File.open("deploy/#{version}/stylesheets/theme-blue.css", "r").read
+
+    # File.open("deploy/#{version}/stylesheets/locastyle.css", "w") do |f|
+    #   f.write "/*! Locastyle version: #{version}*/ " + css_content1
+    # end
+
+    # File.open("deploy/#{version}/stylesheets/theme-blue.css", "w") do |f|
+    #   f.write "/*! Locastyle version: #{version}*/ " + css_content2
+    # end
+
+    # File.open("deploy/#{version}/stylesheets/theme-gray.css", "w") do |f|
+    #   f.write "/*! Locastyle version: #{version}*/ " + css_content3
+    # end
+
+    themes_css = FileList['deploy/' + version + '/stylesheets/theme-gray.css','deploy/' + version + '/stylesheets/theme-blue.css','deploy/' + version + '/stylesheets/locastyle.css']
+    # themes_css = FileList['theme-gray.css','theme-blue.css','locastyle.css']
+
+      File.open(themes_css, "w") do |f|
+        f.write "/*! Locastyle version: #{version}*/ " + File.open(themes_css, "r").read
+      end
 
     js_content = File.open("deploy/#{version}/javascripts/locastyle.js", "r").read
     File.open("deploy/#{version}/javascripts/locastyle.js", "w") do |f|
