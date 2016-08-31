@@ -21,6 +21,7 @@ $color-green-lemon: #94c83c;
 $color-purple:      #5a2dc0;
 $color-dark-yellow: #b19b22;
 $color-yellow-gold: #ffb500;
+$color-royal-blue:  #0f6cb9;
 
 // Color that will be mixed with the main color of each theme.
 $color-mix: #000;
@@ -47,7 +48,8 @@ $themes-colors: (
   green-lemon : (color1: $color-green-lemon, color2: mix($color-mix, $color-green-lemon, $color-mix-percent)),
   purple      : (color1: $color-purple, color2: mix($color-mix, $color-purple, $color-mix-percent)),
   dark-yellow : (color1: $color-dark-yellow, color2: mix($color-mix, $color-dark-yellow, $color-mix-percent)),
-  yellow-gold : (color1: $color-yellow-gold, color2: mix($color-mix, $color-yellow-gold, $color-mix-percent))
+  yellow-gold : (color1: $color-yellow-gold, color2: mix($color-mix, $color-yellow-gold, $color-mix-percent)),
+  royal-blue  : (color1: $color-royal-blue, color2: mix($color-mix, $color-royal-blue, $color-mix-percent))
 );
 
 //
