@@ -202,6 +202,30 @@
         &[disabled].ls-active
           +button-variation(mix($color-mix, #fff, 10%), mix($color-mix, #fff, 20%), mix(#fff, $color-danger, 20%))
 
+      &.ls-btn-primary-danger
+        +button-variation(mix(#fff, $color-danger, 10%), mix(#fff, $color-danger, 20%), #fff)
+        color: #fff
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.ls-active
+          +button-variation(mix($color-mix, $color-danger, 20%), mix($color-mix, $color-danger, 30%))
+          +box-shadow(inset 0 3px 5px rgba(0, 0, 0, 0.05))
+          color: #fff
+
+        &.ls-disabled,
+        &.ls-disabled:focus,
+        &.ls-disabled:hover,
+        &.ls-disabled:active,
+        &.ls-disabled.ls-active,
+        &[disabled],
+        &[disabled]:focus,
+        &[disabled]:hover,
+        &[disabled]:active,
+        &[disabled].ls-active
+          +button-variation(mix(#fff, $color-danger, 40%), mix(#fff, $color-danger, 50%))
+
       &.ls-btn-dark
         &:focus,
         &:hover,
