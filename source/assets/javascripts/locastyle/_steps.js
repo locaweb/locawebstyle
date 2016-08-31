@@ -149,7 +149,7 @@ locastyle.steps = (function() {
     if(!evt.isDefaultPrevented() && !beforeEvent.isDefaultPrevented()) {
       var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
       changeStep($el);
-      $(document).trigger(jQuery.Event('AfterNextStep'));
+      $(document).trigger(jQuery.Event('AfterNextStep'), [$el, getTarget($el)]);
     }
   }
 
@@ -165,7 +165,7 @@ locastyle.steps = (function() {
     if(!evt.isDefaultPrevented() && !beforeEvent.isDefaultPrevented()) {
       var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
       changeStep($el);
-      $(document).trigger(jQuery.Event('AfterPrevStep'));
+      $(document).trigger(jQuery.Event('AfterPrevStep'), [$el, getTarget($el)]);
     }
   }
 
@@ -216,9 +216,15 @@ locastyle.steps = (function() {
     $(config.selectors.container).eq(index).addClass(config.status.active);
   }
 
+
+  // Get target
+  function getTarget($el) {
+    return $($el.attr('href') || $el.data('target'));
+  }
+
   // Change the step
   function changeStep($el) {
-    var $target = $($el.attr('href') || $el.data('target'));
+    var $target = getTarget($el);
     activateStep($el, $target);
     deactivateStep($el, $target);
     anchorSteps();
