@@ -7,13 +7,12 @@ type: component
 <%= partial 'partials/doc-menu-components'%>
 
 <section class="col-md-9">
-
   <%= partial 'partials/doc-intro-content' %>
 
   <div class="ls-box-demo">
-    <%= partial 'documentacao/shared/botoes/botoes' %>
+    <%= partial 'documentacao/shared/botoes/buttons' %>
   </div>
-  <% code("html") do %><%= partial 'documentacao/shared/botoes/botoes' %><% end %>
+  <% code("html") do %><%= partial 'documentacao/shared/botoes/buttons' %><% end %>
 
   <h2 class="doc-title-3">Criando botões</h2>
   <p>Teoricamente você pode dar o visual de botão para qualquer elemento, mas geralmente os elementos <code>&lt;a&gt;</code>, <code>&lt;button&gt; </code> e <code>&lt;input&gt;</code> serão os mais utilizados e também é o que aconselhamos. </p>
@@ -26,6 +25,7 @@ type: component
 
   <h2 class="doc-title-3">Alterando o tamanho</h2>
   <p>Para alterar o tamanho dos botões, basta incluir as classes abaixo:</p>
+  
   <table class="ls-table">
     <thead>
       <tr>
@@ -40,12 +40,11 @@ type: component
       <tr><td>ls-btn-xs</td><td><a href="#" class="ls-btn ls-btn-xs ls-btn-primary">Bem pequeno</a></td></tr>
     </tbody>
   </table>
-  <% code("html") do %>
-<%= partial 'documentacao/shared/botoes/width-buttons' %>
-  <% end %>
+  <% code("html") do %><%= partial 'documentacao/shared/botoes/width-buttons' %><% end %>
 
   <h2 class="doc-title-3">Botões blocados</h2>
   <p>As vezes usamos botões que precisam ocupar todo o espaço disponível, para fazer isso use a classe <code>.ls-btn-block</code>. Isso aplicará um <code>display: block;</code> ao botão, dando uma largura de 100%.</p>
+
   <div class="ls-box-demo"><button type="button" class="ls-btn ls-btn-lg ls-btn-block">Botão em forma de bloco</button></div>
   <% code("html") do %><button type="button" class="ls-btn ls-btn-lg ls-btn-block">Botão em forma de bloco</button><% end %>
 
@@ -53,83 +52,38 @@ type: component
   <p>Para desabilitar um botão, basta inserir o atributo <code>[disabled]</code> que os browsers cuidarão do resto. Também funciona se você inserir a classe <code>.ls-disabled</code></p>
 
   <div class="ls-box-demo">
-    <a href="#" class="ls-btn-primary" disabled="disabled">Primary</a>
-    <input type="button" value="Default" disabled class="ls-btn">
-    <button class="ls-btn-dark ls-disabled">Dark</button>
-    <button class="ls-btn-danger ls-disabled">Danger</button>
+    <%= partial 'documentacao/shared/botoes/disabled-buttons' %>
   </div>
-  <% code("html") do %>
-<a href="#" class="ls-btn-primary" disabled="disabled">Primary</a>
-<input type="button" value="Default" disabled class="ls-btn">
-<button class="ls-btn-dark ls-disabled">Dark</button>
-<button class="ls-btn-danger ls-disabled">Danger</button>
-  <% end %>
+  <% code("html") do %><%= partial 'documentacao/shared/botoes/disabled-buttons' %><% end %>
 
   <h2 class="doc-title-3">Botões com ícones</h2>
   <p>Escolha uma classe de ícone do Locastyle e adicione no botão, simple like that. Veja exemplos abaixo:</p>
 
   <div class="ls-box-demo">
-    <a href="#" class="ls-btn-primary ls-ico-user">Adicionar usuário</a>
-    <button class="ls-btn-dark ls-ico-chevron-left">Anterior</button>
-    <button class="ls-btn ls-ico-cog">Configurações</button>
-    <button class="ls-btn-danger ls-ico-dashboard">Consumo limite</button>
+    <%= partial 'documentacao/shared/botoes/icon-buttons' %>
   </div>
-  <% code("html") do %>
-<a href="#" class="ls-btn-primary ls-ico-user">Adicionar usuário</a>
-<button class="ls-btn-dark ls-ico-chevron-left">Anterior</button>
-<button class="ls-btn ls-ico-cog">Configurações</button>
-<button class="ls-btn-danger ls-ico-dashboard">Consumo limite</button>
-  <% end %>
+  <% code("html") do %><%= partial 'documentacao/shared/botoes/icon-buttons' %><% end %>
 
   <h2 class="doc-title-3">Botões com ícones sem texto</h2>
 
   <div class="ls-box-demo">
-    <a href="#" class="ls-btn-primary ls-ico-user"></a>
-    <button class="ls-btn-dark ls-ico-chevron-left"></button>
-    <button class="ls-btn ls-ico-cog"></button>
-    <button class="ls-btn-danger ls-ico-dashboard"></button>
+    <%= partial 'documentacao/shared/botoes/icon-buttons-without-text' %>
   </div>
-  <% code("html") do %>
-<a href="#" class="ls-btn-primary ls-ico-user"></a>
-<button class="ls-btn-dark ls-ico-chevron-left"></button>
-<button class="ls-btn ls-ico-cog"></button>
-<button class="ls-btn-danger ls-ico-dashboard"></button>
-  <% end %>
+  <% code("html") do %><%= partial 'documentacao/shared/botoes/icon-buttons-without-text' %><% end %>
 
   <h2 class="doc-title-3">Grupo de botões</h2>
   <p>Os grupos de botões são botões dentro de um elemento <code>.ls-group-btn</code>.</p>
 
   <div class="ls-box-demo">
-    <div class="ls-group-btn">
-      <button type="button" class="ls-btn">Botão 1</button>
-      <button type="button" class="ls-btn">Botão 2</button>
-      <button type="button" class="ls-btn">Botão 3</button>
-    </div>
+    <%= partial 'documentacao/shared/botoes/group-buttons' %>
   </div>
-  <% code("html") do %>
-<div class="ls-group-btn">
-  <button type="button" class="ls-btn">Botão 1</button>
-  <button type="button" class="ls-btn">Botão 2</button>
-  <button type="button" class="ls-btn">Botão 3</button>
-</div>
-  <% end %>
+  <% code("html") do %><%= partial 'documentacao/shared/botoes/group-buttons' %><% end %>
 
   <h2 class="doc-title-3">Botões Ativados/Desativados</h2>
   <p>Adicionamos uma chave para ativar/desativar o grupo de botões, para usá-la adicione a classe <code>.ls-group-active</code> no mesmo elemento com <code>.ls-group-btn</code>.</p>
 
   <div class="ls-box-demo">
-    <div class="ls-group-btn ls-group-active">
-      <button type="button" class="ls-btn-primary ls-active">Botão 1</button>
-      <button type="button" class="ls-btn-primary">Botão 2</button>
-      <button type="button" class="ls-btn-primary">Botão 3</button>
-    </div>
+    <%= partial 'documentacao/shared/botoes/controlled-group-buttons' %>
   </div>
-  <% code("html") do %>
-<div class="ls-group-btn ls-group-active">
-  <button type="button" class="ls-btn-primary ls-active">Botão 1</button>
-  <button type="button" class="ls-btn-primary">Botão 2</button>
-  <button type="button" class="ls-btn-primary">Botão 3</button>
-</div>
-  <% end %>
-
+  <% code("html") do %><%= partial 'documentacao/shared/botoes/controlled-group-buttons' %><% end %>
 </section>
