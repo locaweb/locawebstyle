@@ -482,6 +482,15 @@ p code
     background-color: #fff
     box-shadow: inset 0px 2px 16px #ccc
 
+    .overlay
+      position: fixed
+      background: rgba(0,0,0,.4)
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 1
+
     .sandwich
 
       &:after
@@ -491,8 +500,10 @@ p code
     ul
       display: block
       margin: 0
+      z-index: 2
 
   .sandwich
+    position: relative
 
     &:after
       content: ""
