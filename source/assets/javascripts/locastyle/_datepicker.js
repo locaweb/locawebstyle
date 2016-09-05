@@ -8,10 +8,10 @@ locastyle.datepicker = (function() {
     rangeSelector: '[data-ls-daterange]',
     pikaday: {
       firstDay: 1,
-      minDate: new Date('2000-01-01'),
-      maxDate: new Date('2020-12-31'),
+      minDate: new Date('1900-01-01'),
+      maxDate: new Date('2100-12-31'),
       format: 'DD/MM/YYYY',
-      yearRange: [2000,2020],
+      yearRange: [1900,2100],
       i18n: {
         previousMonth : 'Anterior',
         nextMonth     : 'Próximo',
