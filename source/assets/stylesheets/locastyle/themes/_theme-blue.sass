@@ -1,12 +1,16 @@
-@import "../locastyle"
+@import 'compass/css3'
+@import '../base/_mixins'
+@import '../base/_variables'
+@import 'variables-colors'
 
-$color1: $color-blue
+$name: yellow
+$color1: $color-yellow
 $color2: mix($color-mix, $color1, $color-mix-percent)
 
-.ls-bg-theme-blue
+.ls-bg-theme-yellow
   background-color: $color1
 
-.ls-theme-blue
+.ls-theme-yellow
   color: mix($color-mix, $color1, 20%)!important
 
-@import "base"
+@import 'base'
