@@ -1,12 +1,10 @@
-$name: 'gray'
-
-$color1: $color-#{$name}!default
+$color1: $color-gray!default
 $color2: mix($color-mix, $color1, $color-mix-percent)!default
 
-.ls-bg-theme-#{$name}
+.ls-bg-theme-gray
   background-color: $color1
 
-.ls-theme-#{$name}
+.ls-theme-gray
   color: mix($color-mix, $color1, 20%)!important
 
 @import "base"

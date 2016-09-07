@@ -16,7 +16,6 @@ namespace :themes do
 @import '../base/_variables'
 @import 'variables-themes'
 
-$name: #{themes}
 $color1: $color-#{themes}
 $color2: mix($color-mix, $color1, $color-mix-percent)
 
