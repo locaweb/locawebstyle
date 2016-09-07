@@ -7,7 +7,7 @@ namespace :themes do
 
   task :generate do
     path = 'source/assets/stylesheets/locastyle/themes/_theme'
-    themes = FileList['yellow', 'red']
+    themes = FileList['yellow', 'red', 'gold']
 
     themes.each do |themes|
 
@@ -36,7 +36,7 @@ $color2: mix($color-mix, $color1, $color-mix-percent)
         File.write("#{path}-#{themes}.sass", model)
 
         f.close
-        puts "finalizou"
+        puts "O tema #{themes} foi criado com sucesso"
       end
     end
 
