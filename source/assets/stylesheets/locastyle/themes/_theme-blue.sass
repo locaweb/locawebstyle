@@ -1,16 +1,15 @@
-@import 'compass/css3'
-@import '../base/_mixins'
-@import '../base/_variables'
-@import 'variables-colors'
+@import "compass/css3"
+@import "../base/_mixins"
+@import "../base/_variables"
+@import "variables-colors"
 
-$name: yellow
-$color1: $color-yellow
+$color1: $color-blue
 $color2: mix($color-mix, $color1, $color-mix-percent)
 
-.ls-bg-theme-yellow
+.ls-bg-theme-blue
   background-color: $color1
 
-.ls-theme-yellow
+.ls-theme-blue
   color: mix($color-mix, $color1, 20%)!important
 
-@import 'base'
+@import "base"
