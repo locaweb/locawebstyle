@@ -27,7 +27,6 @@ locastyle.toggleText = (function() {
     $(config.trigger).on('click.ls', function(event) {
       event.preventDefault();
       bindToggle($(this));
-      event.stopPropagation();
     });
   }
 
