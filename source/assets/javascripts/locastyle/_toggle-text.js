@@ -4,7 +4,7 @@ locastyle.toggleText = (function() {
   'use strict';
 
   var config = {
-    trigger: '[data-ls-module=toggleText]',
+    trigger: '[data-ls-module="toggleText"]',
     triggerChange: 'toggleText:change'
   };
 
