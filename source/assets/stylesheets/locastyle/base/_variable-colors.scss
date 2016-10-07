@@ -18,6 +18,7 @@ $color-turquoise:   #3b949c;
 $color-light-blue:  #5c90c4;
 $color-light-brown: #654445;
 $color-green-lemon: #94c83c;
+$color-dark-green:  #108E67;
 $color-purple:      #5a2dc0;
 $color-dark-yellow: #b19b22;
 $color-yellow-gold: #ffb500;
@@ -49,7 +50,8 @@ $themes-colors: (
   purple      : (color1: $color-purple, color2: mix($color-mix, $color-purple, $color-mix-percent)),
   dark-yellow : (color1: $color-dark-yellow, color2: mix($color-mix, $color-dark-yellow, $color-mix-percent)),
   yellow-gold : (color1: $color-yellow-gold, color2: mix($color-mix, $color-yellow-gold, $color-mix-percent)),
-  royal-blue  : (color1: $color-royal-blue, color2: mix($color-mix, $color-royal-blue, $color-mix-percent))
+  royal-blue  : (color1: $color-royal-blue, color2: mix($color-mix, $color-royal-blue, $color-mix-percent)),
+  dark-green  : (color1: $color-dark-green, color2: mix($color-mix, $color-dark-green, $color-mix-percent))
 );
 
 //
