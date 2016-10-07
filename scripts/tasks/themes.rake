@@ -7,7 +7,13 @@ namespace :themes do
 
   task :generate do
     path = 'source/assets/stylesheets/locastyle/themes/_theme'
-    themes = FileList['yellow', 'red', 'gold']
+    themes = FileList[
+      'yellow',
+      'red',
+      'gold',
+      'deivid',
+      'green'
+    ]
 
     themes.each do |themes|
 
