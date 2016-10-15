@@ -55,7 +55,7 @@ $color2: mix($color-mix, $color1, $color-mix-percent)
       else
         puts "Criando arquivo #{path}-#{themes}.sass..."
         f = File.new("#{path}-#{themes}.sass", "w+")
-        File.write("#{path}-#{themes}.sass", modelThemes)
+        File.write("#{path}-#{themes}.sass", modelThemeSass)
 
         f.close
         puts "O tema #{themes}.sass foi criado com sucesso"
