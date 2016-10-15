@@ -7,7 +7,7 @@ namespace :themes do
 
   task :generate do
     createConfigThemes
-    createBuildThemes
+    # createBuildThemes
 
   end
 
@@ -19,9 +19,9 @@ namespace :themes do
 
   def modelThemeSass
     model = "@import 'compass/css3'
-@import '../base/_mixins'
-@import '../base/_variables'
-@import 'variables-themes'
+@import 'locastyle/base/_mixins'
+@import 'locastyle/base/_variables'
+@import 'locastyle/themes/variables-colors'
 
 $color1: $color-#{themes}
 $color2: mix($color-mix, $color1, $color-mix-percent)
@@ -32,18 +32,18 @@ $color2: mix($color-mix, $color1, $color-mix-percent)
 .ls-theme-#{themes}
   color: mix($color-mix, $color1, 20%)!important
 
-@import 'theme-base'"
+@import 'locastyle/themes/_theme-base'"
   end
 
   def modelThemeCss
     model = "/*
-*=require locastyle/themes/_theme-#{themes}
+*=require locastyle/_theme-#{themes}
 */
 "
   end
 
   def createConfigThemes
-    path = 'source/assets/stylesheets/locastyle/themes/_theme'
+    path = 'source/assets/stylesheets/theme'
     themes
 
     themes.each do |themes|
