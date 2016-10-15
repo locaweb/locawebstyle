@@ -6,13 +6,19 @@ namespace :themes do
   desc "Generate Locastyle themes colors"
 
   task :generate do
-    path = 'source/assets/stylesheets/locastyle/themes/_theme'
+    createConfigThemes
+    createBuildThemes
 
-    themes
+  end
 
-    themes.each do |themes|
+  def themes
+    themes = FileList[
+      'green'
+    ]
+  end
 
-      model = "@import 'compass/css3'
+  def modelThemeSass
+    model = "@import 'compass/css3'
 @import '../base/_mixins'
 @import '../base/_variables'
 @import 'variables-themes'
@@ -27,30 +33,55 @@ $color2: mix($color-mix, $color1, $color-mix-percent)
   color: mix($color-mix, $color1, 20%)!important
 
 @import 'theme-base'"
+  end
 
+  def modelThemeCss
+    model = "/*
+*=require locastyle/themes/_theme-#{themes}
+*/
+"
+  end
+
+  def createConfigThemes
+    path = 'source/assets/stylesheets/locastyle/themes/_theme'
+    themes
+
+    themes.each do |themes|
+
+      modelThemeSass
 
       if File.exists?("#{path}-#{themes}.sass")
-        puts "O arquivo #{path}-#{themes}.sass já existe, não será criado um novo"
+        puts "O arquivo #{path}-#{themes}.sass já existe, não será criado"
       else
         puts "Criando arquivo #{path}-#{themes}.sass..."
         f = File.new("#{path}-#{themes}.sass", "w+")
-        File.write("#{path}-#{themes}.sass", model)
+        File.write("#{path}-#{themes}.sass", modelThemes)
 
         f.close
-        puts "O tema #{themes} foi criado com sucesso"
+        puts "O tema #{themes}.sass foi criado com sucesso"
       end
     end
-
   end
 
-  def themes
-    themes = FileList[
-      'yellow',
-      'red',
-      'gold',
-      'deivid',
-      'green'
-    ]
+  def createBuildThemes
+    path = 'source/assets/stylesheets/theme'
+    themes
+
+    themes.each do |themes|
+
+      modelThemeCss
+
+      if File.exists?("#{path}-#{themes}.css")
+        puts "O arquivo #{path}-#{themes}.css já existe, não será criado"
+      else
+        puts "Criando arquivo #{path}-#{themes}.css..."
+        f = File.new("#{path}-#{themes}.css", "w+")
+        File.write("#{path}-#{themes}.css", modelThemeCss)
+
+        f.close
+        puts "O tema #{themes}.css foi criado com sucesso"
+      end
+    end
   end
 
 end
