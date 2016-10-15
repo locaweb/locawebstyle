@@ -8,9 +8,9 @@ namespace :deploy do
     precompile
     package(args[:version])
     copy_to_assets_and_dist(args[:version])
-    update_bower_version(args[:version])
-    update_package_version(args[:version])
-    update_version_in_config(args[:version])
+    # update_bower_version(args[:version])
+    # update_package_version(args[:version])
+    # update_version_in_config(args[:version])
     # commit_and_tag_assets(args[:version])
     # git_commit_and_tag_locastyle(args[:version])
   end
