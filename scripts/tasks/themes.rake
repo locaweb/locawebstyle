@@ -7,13 +7,8 @@ namespace :themes do
 
   task :generate do
     path = 'source/assets/stylesheets/locastyle/themes/_theme'
-    themes = FileList[
-      'yellow',
-      'red',
-      'gold',
-      'deivid',
-      'green'
-    ]
+
+    themes
 
     themes.each do |themes|
 
@@ -31,7 +26,7 @@ $color2: mix($color-mix, $color1, $color-mix-percent)
 .ls-theme-#{themes}
   color: mix($color-mix, $color1, 20%)!important
 
-@import 'base'"
+@import 'theme-base'"
 
 
       if File.exists?("#{path}-#{themes}.sass")
@@ -46,6 +41,16 @@ $color2: mix($color-mix, $color1, $color-mix-percent)
       end
     end
 
+  end
+
+  def themes
+    themes = FileList[
+      'yellow',
+      'red',
+      'gold',
+      'deivid',
+      'green'
+    ]
   end
 
 end
