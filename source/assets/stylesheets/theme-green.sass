@@ -1,0 +1,15 @@
+@import 'compass/css3'
+@import 'locastyle/base/_mixins'
+@import 'locastyle/base/_variables'
+@import 'locastyle/themes/variables-colors'
+
+$color1: $color-green
+$color2: mix($color-mix, $color1, $color-mix-percent)
+
+.ls-bg-theme-green
+  background-color: $color1
+
+.ls-theme-green
+  color: mix($color-mix, $color1, 20%)!important
+
+@import 'locastyle/themes/_theme-base'
