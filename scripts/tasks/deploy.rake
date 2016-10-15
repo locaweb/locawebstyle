@@ -77,6 +77,18 @@ namespace :deploy do
     File.open("deploy/#{version}/javascripts/locastyle.js", "w") do |f|
       f.write "/*! Locastyle version: #{version}*/ " + js_content
     end
+
+    themes = FileList[
+      'green'
+    ]
+
+    themes.each do |themes|
+      theme_content = File.open("deploy/#{version}/stylesheets/theme-#{themes}.css", "r").read
+      File.open("deploy/#{version}/stylesheets/theme-#{themes}.css", "w") do |f|
+        f.write "/*! Locastyle Theme #{themes} version: #{version}*/ " + theme_content
+      end
+
+    end
   end
 
   def package(version)
