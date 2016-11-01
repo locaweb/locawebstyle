@@ -305,7 +305,6 @@ input.ls-form-text,
     @extend .ls-float-left
     position: relative
     z-index: 2
-    width: 100%
     height: inherit
     margin-bottom: 0
     display: table-cell
@@ -324,7 +323,8 @@ input.ls-form-text,
       padding: 4px 12px
 
     input
-      height: $input-xs-height 
+      height: $input-xs-height
+      padding: 3px 11px
 
 .ls-label-text-prefix
   width: 1%
@@ -355,17 +355,17 @@ input.ls-form-text,
   border-bottom-left-radius: 0
   border-top-left-radius: 0
 
-  .ls-table & 
+  .ls-table &
     margin-left: -2px
 
 input + .ls-label-text-prefix
   border: 1px solid $gray2
   border-radius: 0 $default-radius $default-radius 0
   position: relative
-  left: -4px
+  left: 0
   z-index: 2
 
-  .ls-table & 
+  .ls-table &
     left: -6px
 
 @media screen and (max-width: $screen-sm)
