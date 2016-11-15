@@ -25,11 +25,11 @@ locastyle.popover = (function() {
   function bindPopover() {
     $(config.module).each(function(index, popoverTrigger) {
       var trigger = $(popoverTrigger).attr('data-trigger') === 'hover' ? 'mouseover' : config.trigger;
-
       // Add attr data-target to popover triggers
       $(popoverTrigger).attr('data-target', config.idPopover+index);
       var popoverTarget = $(popoverTrigger).data('target');
 
+      $(popoverTrigger).unbind(trigger);
       $(popoverTrigger).on(trigger, function(event) {
         event.preventDefault();
         event.stopPropagation();
