@@ -71,6 +71,13 @@ describe('Popover: ', function() {
       expect($(target).hasClass('ls-active')).toEqual(false);
     });
 
+    // When page load popover has to open
+    it('Should open popover when page load', function () {
+      var target = $('#popoverOpened').data('target');
+      expect($(target)).toHaveClass('ls-active');
+
+    });
+
     // Testing Unbind
     describe('[unbind] When init is called multiple times', function () {
 
@@ -82,15 +89,6 @@ describe('Popover: ', function() {
         $popoverTrigger.click();
         $popoverTrigger.click();
         expect( $popover ).not.toBeVisible();
-      });
-    });
-
-    describe('#startOpened', function () {
-
-      it('should to open popover when load page ', function () {
-        var target = $('[data-ls-popover="open"]').data('target');
-        locastyle.popover.startOpened();
-        expect($(target).hasClass('ls-active')).toEqual(true);
       });
     });
 

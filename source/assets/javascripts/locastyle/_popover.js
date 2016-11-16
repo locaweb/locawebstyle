@@ -25,10 +25,12 @@ locastyle.popover = (function() {
   function bindPopover() {
     $(config.module).each(function(index, popoverTrigger) {
       var trigger = $(popoverTrigger).attr('data-trigger') === 'hover' ? 'mouseover' : config.trigger;
-
       // Add attr data-target to popover triggers
       $(popoverTrigger).attr('data-target', config.idPopover+index);
       var popoverTarget = $(popoverTrigger).data('target');
+
+      // unbind
+      $(popoverTrigger).off(trigger);
 
       $(popoverTrigger).on(trigger, function(event) {
         event.preventDefault();
@@ -58,6 +60,16 @@ locastyle.popover = (function() {
       $(window).on('breakpoint-updated', function(){
         setPosition(popoverTrigger);
       });
+
+
+      // When page load popover has to open
+      if($(this).attr('data-ls-popover') === 'open') {
+        var target =  $(this).data('target');
+
+        buildPopover(index, popoverTrigger);
+        show(popoverTarget);
+        setPosition(popoverTrigger);
+      }
     });
 
   }
@@ -155,19 +167,11 @@ locastyle.popover = (function() {
     });
   }
 
-  // When open page, start popover automatically
-  function startOpened() {
-    $(config.module+'[data-ls-popover="open"]').each(function() {
-      $(this).trigger('click')
-    });
-  }
-
   return {
     init   : init,
     show   : show,
     hide   : hide,
-    destroy: destroy,
-    startOpened: startOpened
+    destroy: destroy
   };
 
 }());
