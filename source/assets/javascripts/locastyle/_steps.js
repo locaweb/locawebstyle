@@ -157,9 +157,9 @@ locastyle.steps = (function() {
     $(document).trigger(beforeEvent);
 
     if(
-      !evt.isDefaultPrevented() 
-      && !nextStepEvt.isDefaultPrevented()
-      && !beforeEvent.isDefaultPrevented()
+      !evt.isDefaultPrevented() &&
+      !nextStepEvt.isDefaultPrevented() && 
+      !beforeEvent.isDefaultPrevented()
       ) {
       var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
       changeStep($el);
@@ -185,9 +185,9 @@ locastyle.steps = (function() {
     $(document).trigger(beforeEvent);
 
     if(
-      !evt.isDefaultPrevented() 
-      && !prevStepEvt.isDefaultPrevented()
-      && !beforeEvent.isDefaultPrevented()
+      !evt.isDefaultPrevented() && 
+      !prevStepEvt.isDefaultPrevented() && 
+      !beforeEvent.isDefaultPrevented()
       ) {
       var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
       changeStep($el);
