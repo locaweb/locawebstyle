@@ -109,6 +109,15 @@ describe("Steps: ", function(){
       });
     });
 
+    describe('when steps:next event is prevented', function(){
+      it('does not change to next step', function(){
+        $(document).on('steps:next', function(e){ e.preventDefault(); });
+        locastyle.steps.nextStep();
+        expect($('#list3').hasClass('ls-active')).toBe(false);
+        $(document).off('steps:next');
+      });
+    });
+
     describe('when NextStepEvent is prevented', function(){
       it('does not change to next step', function(){
         $(document).on('NextStepEvent', function(e){ e.preventDefault(); });
@@ -151,6 +160,15 @@ describe("Steps: ", function(){
     it("checks the active list and adds in the prev ls-active class", function(){
       locastyle.steps.prevStep();
       expect($('#list1').hasClass('ls-active')).toBe(true);
+    });
+
+    describe('when steps:prev event is prevented', function(){
+      it('does not change to prev step', function(){
+        $(document).on('steps:prev', function(e){ e.preventDefault() });
+        locastyle.steps.prevStep();
+        expect($('#list1').hasClass('ls-active')).toBe(false);
+        $(document).off('steps:prev');
+      });
     });
 
     describe('when PrevStepEvent is prevented', function(){
