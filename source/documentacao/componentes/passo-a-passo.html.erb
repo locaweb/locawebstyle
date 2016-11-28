@@ -94,12 +94,12 @@ type: component
     </thead>
     <tbody>
       <tr>
-        <td>NextStepEvent</td>
+        <td>steps:next</td>
         <td>document</td>
         <td>Lançado no método <code>nextStep()</code> antes de trocar o passo.</td>
       </tr>
       <tr>
-        <td>PrevStepEvent</td>
+        <td>steps:prev</td>
         <td>document</td>
         <td>Lançado no método <code>prevStep()</code> antes de trocar o passo.</td>
       </tr>
@@ -110,13 +110,13 @@ type: component
 
   <div class="ls-box-demo">
 <% code("html") do %>
-$(document).on('NextStepEvent', function(e){
+$(document).on('steps:next', function(e){
   if (!valid) {
     e.preventDefault();
   }
 });
 
-$(document).on('PrevStepEvent', function(e){
+$(document).on('steps:prev', function(e){
   if (!valid) {
     e.preventDefault();
   }
