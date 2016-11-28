@@ -126,6 +126,15 @@ describe("Steps: ", function(){
         $(document).off('NextStepEvent');
       });
     });
+    
+    describe('when steps:beforenext is prevented', function(){
+      it('does not change to next step', function(){
+        $(document).on('steps:beforenext', function(e){ e.preventDefault(); });
+        locastyle.steps.nextStep();
+        expect($('#list3').hasClass('ls-active')).toBe(false);
+        $(document).off('steps:beforenext');
+      });
+    });   
 
     describe('when BeforeNextStep is prevented', function(){
       it('does not change to next step', function(){
@@ -133,6 +142,18 @@ describe("Steps: ", function(){
         locastyle.steps.nextStep();
         expect($('#list3').hasClass('ls-active')).toBe(false);
         $(document).off('BeforeNextStep');
+      });
+    });
+
+    describe('steps:afternext', function(){
+      it('triggers this event after change the step', function(){
+        var activeStepId = 'lala';
+        $(document).on('steps:afternext', function(){
+          activeStepId = $('.ls-steps-content.ls-active').attr('id');
+        });
+        locastyle.steps.nextStep();
+        expect(activeStepId).toEqual('step3');
+        $(document).off('steps:afternext');
       });
     });
 
@@ -177,6 +198,15 @@ describe("Steps: ", function(){
         locastyle.steps.prevStep();
         expect($('#list1').hasClass('ls-active')).toBe(false);
         $(document).off('PrevStepEvent');
+      });
+    });
+
+    describe('when BeforePrevStep is prevented', function(){
+      it('does not change to prev step', function(){
+        $(document).on('BeforePrevStep', function(e){ e.preventDefault(); });
+        locastyle.steps.prevStep();
+        expect($('#list1').hasClass('ls-active')).toBe(false);
+        $(document).off('BeforePrevStep');
       });
     });
 

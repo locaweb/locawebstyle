@@ -29,7 +29,11 @@ locastyle.steps = (function() {
     },
     events: {
       nextStep: 'steps:next',
-      prevStep: 'steps:prev'
+      beforeNextStep: 'steps:beforenext',
+      afterNextStep: 'steps:afternext',
+      prevStep: 'steps:prev',
+      beforePrevStep: 'steps:beforeprev',
+      afterPrevStep: 'steps:afterprev'
     }
   };
 
@@ -148,24 +152,34 @@ locastyle.steps = (function() {
     var evt = jQuery.Event('NextStepEvent');
     $(document).trigger(evt);
     
-    // This is the new event name
-    var nextStepEvt = jQuery.Event(config.events.nextStep);
-    $(document).trigger(nextStepEvt);
-
     // This event is deprecated
     var beforeEvent = jQuery.Event('BeforeNextStep');
     $(document).trigger(beforeEvent);
 
+    // This is the new event name
+    var nextStepEvt = jQuery.Event(config.events.nextStep);
+    $(document).trigger(nextStepEvt);
+
+    // This is the new event name for the Before Next Step
+    var beforeNextStepEvt = jQuery.Event(config.events.beforeNextStep);
+    $(document).trigger(beforeNextStepEvt);
+
     if(
+      // Deprecated
       !evt.isDefaultPrevented() &&
+      !beforeEvent.isDefaultPrevented() &&
+      // New events
       !nextStepEvt.isDefaultPrevented() && 
-      !beforeEvent.isDefaultPrevented()
+      !beforeNextStepEvt.isDefaultPrevented()
       ) {
       var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
       changeStep($el);
 
       // This event is deprecated
       $(document).trigger(jQuery.Event('AfterNextStep'));
+
+      // This is the new event name for the After Next Step
+      $(document).trigger(jQuery.Event(config.events.afterNextStep));
     }
   }
 
@@ -175,25 +189,35 @@ locastyle.steps = (function() {
     // This event name is being deprecated
     var evt = jQuery.Event('PrevStepEvent');
     $(document).trigger(evt);
+
+    // This event is deprecated
+    var beforeEvent = jQuery.Event('BeforePrevStep');
+    $(document).trigger(beforeEvent);
     
     // This is the new event name
     var prevStepEvt = jQuery.Event(config.events.prevStep);
     $(document).trigger(prevStepEvt);
 
-    // This event is deprecated
-    var beforeEvent = jQuery.Event('BeforePrevStep');
-    $(document).trigger(beforeEvent);
+    // This is the new event for the Before Prev Step
+    var beforePrevStepEvt = jQuery.Event(config.events.beforePrevStep);
+    $(document).trigger(beforePrevStepEvt);
 
     if(
+      // Deprecated
       !evt.isDefaultPrevented() && 
+      !beforeEvent.isDefaultPrevented() &&
+      // New Events
       !prevStepEvt.isDefaultPrevented() && 
-      !beforeEvent.isDefaultPrevented()
+      !beforePrevStepEvt.isDefaultPrevented()
       ) {
       var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
       changeStep($el);
 
       // This event is deprecated
       $(document).trigger(jQuery.Event('AfterPrevStep'));
+
+      // This is the new event for the After Prev Step
+      $(document).trigger(jQuery.Event(config.events.afterPrevStep));
     }
   }
 
