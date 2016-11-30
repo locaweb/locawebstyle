@@ -29,10 +29,8 @@ locastyle.steps = (function() {
     },
     events: {
       nextStep: 'steps:next',
-      beforeNextStep: 'steps:beforenext',
       afterNextStep: 'steps:afternext',
       prevStep: 'steps:prev',
-      beforePrevStep: 'steps:beforeprev',
       afterPrevStep: 'steps:afterprev'
     }
   };
@@ -160,17 +158,12 @@ locastyle.steps = (function() {
     var nextStepEvt = jQuery.Event(config.events.nextStep);
     $(document).trigger(nextStepEvt);
 
-    // This is the new event name for the Before Next Step
-    var beforeNextStepEvt = jQuery.Event(config.events.beforeNextStep);
-    $(document).trigger(beforeNextStepEvt);
-
     if(
       // Deprecated
       !evt.isDefaultPrevented() &&
       !beforeEvent.isDefaultPrevented() &&
       // New events
-      !nextStepEvt.isDefaultPrevented() && 
-      !beforeNextStepEvt.isDefaultPrevented()
+      !nextStepEvt.isDefaultPrevented()
       ) {
       var $el = $(config.selectors.nav).find(config.classes.active).next('li').addClass(config.status.active).find(config.selectors.button);
       changeStep($el);
@@ -194,21 +187,16 @@ locastyle.steps = (function() {
     var beforeEvent = jQuery.Event('BeforePrevStep');
     $(document).trigger(beforeEvent);
     
-    // This is the new event name
+    // This is the new event for the Before Prev Step
     var prevStepEvt = jQuery.Event(config.events.prevStep);
     $(document).trigger(prevStepEvt);
-
-    // This is the new event for the Before Prev Step
-    var beforePrevStepEvt = jQuery.Event(config.events.beforePrevStep);
-    $(document).trigger(beforePrevStepEvt);
 
     if(
       // Deprecated
       !evt.isDefaultPrevented() && 
       !beforeEvent.isDefaultPrevented() &&
       // New Events
-      !prevStepEvt.isDefaultPrevented() && 
-      !beforePrevStepEvt.isDefaultPrevented()
+      !prevStepEvt.isDefaultPrevented()
       ) {
       var $el = $(config.selectors.nav).find(config.classes.active).prev('li').find(config.selectors.button);
       changeStep($el);
