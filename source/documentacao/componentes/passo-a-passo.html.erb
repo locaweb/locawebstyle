@@ -76,10 +76,20 @@ type: component
         <td>nextStep()</td>
         <td>Faz a troca para o próximo passo.</td>
       </tr>
+      <tr> 
+        <td>steps:afternext</td> 
+        <td>document</td> 
+        <td>Lançado no método <code>nextStep()</code> depois de trocar o passo.</td> 
+      </tr>       
       <tr>
         <td>prevStep()</td>
         <td>Faz a troca para o passo anterior.</td>
       </tr>
+      <tr> 
+        <td>steps:afterprev</td> 
+        <td>document</td> 
+        <td>Lançado no método <code>prevStep()</code> depois de trocar o passo.</td> 
+      </tr>       
     </tbody>
   </table>
 
@@ -94,15 +104,16 @@ type: component
     </thead>
     <tbody>
       <tr>
-        <td>NextStepEvent</td>
+        <td>steps:next</td>
         <td>document</td>
         <td>Lançado no método <code>nextStep()</code> antes de trocar o passo.</td>
       </tr>
       <tr>
-        <td>PrevStepEvent</td>
+        <td>steps:prev</td>
         <td>document</td>
         <td>Lançado no método <code>prevStep()</code> antes de trocar o passo.</td>
       </tr>
+      <tr>
     </tbody>
   </table>
 
@@ -110,13 +121,13 @@ type: component
 
   <div class="ls-box-demo">
 <% code("html") do %>
-$(document).on('NextStepEvent', function(e){
+$(document).on('steps:next', function(e){
   if (!valid) {
     e.preventDefault();
   }
 });
 
-$(document).on('PrevStepEvent', function(e){
+$(document).on('steps:prev', function(e){
   if (!valid) {
     e.preventDefault();
   }
