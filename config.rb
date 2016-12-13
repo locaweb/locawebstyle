@@ -86,14 +86,14 @@ helpers CustomHelpers
 
 set :base_url, ""
 
-set :stable, "3.9.0"
+set :stable, "3.10.0"
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 
 set :path_css, '/assets/stylesheets/locastyle.css'
-version = "3.9.0"
+version = "3.10.0"
 
 activate :directory_indexes
 activate :i18n
