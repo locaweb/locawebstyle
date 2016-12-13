@@ -92,6 +92,9 @@ set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 
+set :path_css, '/assets/stylesheets/locastyle.css'
+version = , "3.10.0"
+
 activate :directory_indexes
 activate :i18n
 
@@ -120,4 +123,8 @@ configure :build do
 
   # base url for gh-pages
   set :base_url, "/locawebstyle"
+
+  # path css production
+  set :path_css, '//assets.locaweb.com.br/locastyle/'+ version + '/stylesheets/locastyle.css'
+
 end
