@@ -10,15 +10,15 @@ namespace :deploy do
     copy_to_assets_and_dist(args[:version])
     update_bower_version(args[:version])
     update_package_version(args[:version])
-    update_stable_in_config(args[:version])
+    update_version_in_config(args[:version])
     commit_and_tag_assets(args[:version])
     git_commit_and_tag_locastyle(args[:version])
   end
 
-  def update_stable_in_config(version)
+  def update_version_in_config(version)
     bower_json = File.open("config.rb", "r").read
-    update_stable = bower_json.gsub(/(set :stable, "\d.\d{1,2}.\d{1,3}")/, "set :stable, \"#{version}\"")
-    File.open("config.rb", "w") {|file| file.puts update_stable}
+    update_version = bower_json.gsub(/(set :stable, "\d.\d{1,2}.\d{1,3}")/, "set :stable, \"#{version}\"")
+    File.open("config.rb", "w") {|file| file.puts update_version}
   end
 
   def update_package_version(version)
