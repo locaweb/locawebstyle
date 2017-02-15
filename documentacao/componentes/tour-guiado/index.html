@@ -113,10 +113,9 @@
   <div class="ls-box-demo">
     <button id="demo-init" class="ls-btn-primary ls-btn-tour">Iniciar Tour</button>
   </div>
-  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"demo-init-sample"</span> <span class="na">class=</span><span class="s">"ls-btn-primary ls-btn-tour"</span><span class="nt">&gt;</span>Iniciar Tour<span class="nt">&lt;/button&gt;</span><span class="w">
-</span></pre></td></tr></tbody></table>
-</div>
-
+  <pre class="highlight html"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"demo-init-sample"</span> <span class="na">class=</span><span class="s">"ls-btn-primary ls-btn-tour"</span><span class="nt">&gt;</span>Iniciar Tour<span class="nt">&lt;/button&gt;</span></pre></td></tr></tbody></table>
+</code></pre>
 
   <p>Utilizamos o plugin  <a href="http://linkedin.github.io/hopscotch" target="_blank">hopscotch</a> (criado pelo LinkedIn) e aplicamos a identidade visual do Locaweb Style.</p>
 
@@ -158,16 +157,16 @@
   <p>Abaixo segue um exemplo dos códigos necessários para implementar o <strong>Tour Guiado</strong>. </p>
 
   <h2 class="doc-title-4">Chamando a função de navegação dentro do seu projeto, propositalmente com window.load</h2>
-<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<pre class="highlight javascript"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-4</pre></td><td class="code"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'load'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+4
+</pre></td><td class="rouge-code"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'load'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">//Onde tourDashboard é a variável que recebe os eventos do plugin no exemplo abaixo</span>
   <span class="nx">locastyle</span><span class="p">.</span><span class="nx">guidedTour</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">tourDashboard</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></td></tr></tbody></table>
-</div>
-
+</code></pre>
   <p>O valor do <strong>target</strong> (dentro do tour.js) server como referência de exibição do Tour Guiado. Na tabela abaixo alguns exemplos</p>
 
   <table class="ls-table">
@@ -193,7 +192,7 @@
   </table>
 
   <h2 id="passo1" class="doc-title-4" >tour.js </h2>
-<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<pre class="highlight javascript"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -222,7 +221,8 @@
 27
 28
 29
-30</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">configTour</span> <span class="o">=</span> <span class="p">{</span>
+30
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">configTour</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'tourDemo'</span><span class="p">,</span>
   <span class="na">selectors</span><span class="p">:</span> <span class="p">{</span>
     <span class="na">init</span><span class="p">:</span>  <span class="s1">'#demo-init'</span>
@@ -253,8 +253,7 @@
   <span class="p">}]</span>
 <span class="p">};</span>
 </pre></td></tr></tbody></table>
-</div>
-
+</code></pre>
 
 </section>
 
@@ -269,7 +268,7 @@
     </ul>
     <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/locawebstyle/assets/images/docs/locaweb-logo.png" alt=""></a>
     <p class="doc-copyright">
-      Copyright © 1997-2016 Serviços de Internet S/A.
+      Copyright © 1997-2017 Serviços de Internet S/A.
     </p>
   </div>
 </footer>

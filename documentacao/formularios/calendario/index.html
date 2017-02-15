@@ -106,28 +106,27 @@
 </form>
 
   </div>
-  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+  <pre class="highlight html"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-horizontal"</span> <span class="na">data-ls-module=</span><span class="s">"form"</span><span class="nt">&gt;</span>
+6
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-horizontal"</span> <span class="na">data-ls-module=</span><span class="s">"form"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-3"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Data<span class="nt">&lt;/b&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"cel2"</span> <span class="na">class=</span><span class="s">"datepicker"</span>  <span class="na">placeholder=</span><span class="s">"dd/mm/aaaa"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/form&gt;</span>
 </pre></td></tr></tbody></table>
-</div>
-
+</code></pre>
 
   <p>Utilizamos o plugin <a href="https://github.com/dbushell/Pikaday" target="_blank">Pikaday</a> para o calendário do Locawebstyle, pré-configurado para <b>pt-br</b>.</p>
   <p>Para iniciar um novo datepicker com javascript, utilizando as mesmas configurações, use, no javascript:</p>
 
-  <div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nx">locastyle</span><span class="p">.</span><span class="nx">datepicker</span><span class="p">.</span><span class="nx">newDatepicker</span><span class="p">(</span><span class="s1">'#id ou .classe do elemento'</span><span class="p">);</span><span class="w">
-</span></pre></td></tr></tbody></table>
-</div>
-
+  <pre class="highlight javascript"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nx">locastyle</span><span class="p">.</span><span class="nx">datepicker</span><span class="p">.</span><span class="nx">newDatepicker</span><span class="p">(</span><span class="s1">'#id ou .classe do elemento'</span><span class="p">);</span></pre></td></tr></tbody></table>
+</code></pre>
 
   <p>Todas as demais configurações e métodos do plugin Pikaday podem ser utilizados, conforme descrito na sua <a href="https://github.com/dbushell/Pikaday" target="_blank">documentação</a>.</p>
 
@@ -146,7 +145,7 @@
 </form>
 
   </div>
-  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+  <pre class="highlight html"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -154,7 +153,8 @@
 6
 7
 8
-9</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline"</span> <span class="na">data-ls-module=</span><span class="s">"form"</span><span class="nt">&gt;</span>
+9
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline"</span> <span class="na">data-ls-module=</span><span class="s">"form"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-4"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-prefix-group"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"ls-label-text"</span><span class="nt">&gt;</span>Data<span class="nt">&lt;/b&gt;</span>
@@ -164,8 +164,7 @@
   <span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/form&gt;</span>
 </pre></td></tr></tbody></table>
-</div>
-
+</code></pre>
 
   <h2 class="doc-title-3">Intervalo de datas</h2>
   <p>Utilizar dois campos de calendário com intervalo de datas é simples. Primeiro, ambos os campos devem possuir a classe <code>.ls-daterange</code> para que o módulo consiga identificar a funcionalidade. Depois basta colocar um atributo <code>data-ls-daterange</code> no primeiro campo apontando para o segundo (com um seletor), para que a referência entre ambos seja criada. Veja o exemplo abaixo:</p>
@@ -190,7 +189,7 @@
 </form>
 
   </div>
-  <div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+  <pre class="highlight html"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -206,7 +205,8 @@
 14
 15
 16
-17</pre></td><td class="code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline"</span> <span class="na">data-ls-module=</span><span class="s">"form"</span><span class="nt">&gt;</span>
+17
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"ls-form ls-form-inline"</span> <span class="na">data-ls-module=</span><span class="s">"form"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ls-label col-md-4 col-sm-12"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ls-prefix-group"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">data-ls-module=</span><span class="s">"popover"</span> <span class="na">data-content=</span><span class="s">"Escolha o período desejado e clique em 'Filtrar'."</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -224,8 +224,7 @@
   <span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/form&gt;</span>
 </pre></td></tr></tbody></table>
-</div>
-
+</code></pre>
 
 </section>
 
@@ -240,7 +239,7 @@
     </ul>
     <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/locawebstyle/assets/images/docs/locaweb-logo.png" alt=""></a>
     <p class="doc-copyright">
-      Copyright © 1997-2016 Serviços de Internet S/A.
+      Copyright © 1997-2017 Serviços de Internet S/A.
     </p>
   </div>
 </footer>

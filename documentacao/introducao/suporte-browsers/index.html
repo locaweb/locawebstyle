@@ -103,29 +103,29 @@
 
   <p>Abaixo um exemplo usando as tags condicionais da Microsoft. Nós tentamos sempre usar os princícios do Progressive Enhancement para que os browsers antigos tenham a melhor experiência possível.</p>
 
-<div class="highlight html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<pre class="highlight html"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-5</pre></td><td class="code"><pre><span class="c">&lt;!--[if lt IE 9]&gt;
+5
+</pre></td><td class="rouge-code"><pre><span class="c">&lt;!--[if lt IE 9]&gt;
   &lt;script type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
   &lt;script type="text/javascript" src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"&gt;&lt;/script&gt;
   &lt;script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"&gt;&lt;/script&gt;
 &lt;![endif]--&gt;</span>
 </pre></td></tr></tbody></table>
-</div>
-
+</code></pre>
   <h2 class="doc-title-2">Adicionando uma barra de aviso</h2>
   <p>Você pode inserir uma barra de aviso sobre os browsers que não são suportados. Por padrão, o Locaweb Style não insere essa barra, por isso você precisa iniciar a função manualmente. Para tanto, basta chamar a função <code>locastyle.browserUnsupportedBar</code>:</p>
 
-<div class="highlight javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<pre class="highlight javascript"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-3</pre></td><td class="code"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'load'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+3
+</pre></td><td class="rouge-code"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'load'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="nx">locastyle</span><span class="p">.</span><span class="nx">browserUnsupportedBar</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
 <span class="p">});</span>
 </pre></td></tr></tbody></table>
-</div>
-
+</code></pre>
   <p>Geralmente nós mantemos o suporte para browsers com duas versões anteriores. Por exemplo: a versão mais atual do IE é a 11, por isso damos suporte para o IE 9, 10 e 11. A barra, nesse caso iria aparecer para o IE8 ou inferior.</p>
 
 <h2 class="doc-title-3">Classes com o nome do navegador</h2>
@@ -159,7 +159,7 @@
     </ul>
     <a href="http://locaweb.com.br/" class="doc-logo-footer"><img src="/locawebstyle/assets/images/docs/locaweb-logo.png" alt=""></a>
     <p class="doc-copyright">
-      Copyright © 1997-2016 Serviços de Internet S/A.
+      Copyright © 1997-2017 Serviços de Internet S/A.
     </p>
   </div>
 </footer>
