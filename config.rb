@@ -86,11 +86,13 @@ helpers CustomHelpers
 
 set :base_url, ""
 
-set :stable, "3.9.0"
+set :stable, "3.10.0"
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
+
+set :path_css, '/assets/stylesheets/locastyle.css'
 
 activate :directory_indexes
 activate :i18n
@@ -120,4 +122,8 @@ configure :build do
 
   # base url for gh-pages
   set :base_url, "/locawebstyle"
+
+  # path css production
+  set :path_css, '//assets.locaweb.com.br/locastyle/'+ config[:stable]  + '/stylesheets/locastyle.css'
+
 end
