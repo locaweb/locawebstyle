@@ -309,6 +309,14 @@ input.ls-form-text,
     margin-bottom: 0
     display: table-cell
 
+    &:last-child
+      border-top-right-radius: $default-radius
+      border-bottom-right-radius: $default-radius
+
+    &:first-child
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+
   &.ls-field-lg
     height: $input-lg-height
 
@@ -352,8 +360,7 @@ input.ls-form-text,
 
 .ls-label-text-prefix + input
   border-left: none
-  border-bottom-left-radius: 0
-  border-top-left-radius: 0
+  border-radius: 0
 
   .ls-table &
     margin-left: -2px
@@ -362,7 +369,7 @@ input + .ls-label-text-prefix
   border: 1px solid $gray2
   border-radius: 0 $default-radius $default-radius 0
   position: relative
-  left: 0
+  left: -1px
   z-index: 2
 
   .ls-table &
