@@ -1,0 +1,92 @@
+---
+title: Instalando o projeto no Ubuntu
+description: O que você precisa saber para criar o ambiente de desenvolvimento local.
+---
+<%= partial 'partials/doc-menu-intro'%>
+
+<section class="col-md-9">
+
+  <%= partial 'partials/doc-intro-content' %>
+
+  <p>Abaixo você vai acompanhar o passo a passo de como configurar seu ambiente de desenvolvimento e rodar o projeto localmente.</p>
+
+  <h3 class="doc-title-4">Ruby</h3>
+  <p>Primeiramente você precisa do ruby >= 2.2 instalado.</p>
+  <% code("bash") do %>
+    # O comando abaixo vai mostrar a versão instalada, caso não tenha instale
+    $ ruby -v
+
+    # Atualiza o repositorio
+    $ sudo apt-get update
+
+    # Instala o ruby
+    $ sudo apt-get install ruby
+  <% end %>
+  <p>Se você estiver tendo problemas com a versão do ruby do seu sistema operacional use o rvm (Ruby Version Manager)</p>
+  <% code("bash") do %>
+    # O comando abaixo instala uma chave gpg, necessário para instalar o rvm
+    $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+
+    # Caso o comando acima não funcione tente
+    $ curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+
+    # Baixa o script do rvm e manda instalar
+    $ curl -sSL https://get.rvm.io | bash -s stable --ruby
+
+    # Faz o comando rvm ser interpretado pelo terminal
+    $ source /etc/profile
+
+    # Lista as versões atuais do ruby
+    $ rvm list known
+
+    # Exemplo de instalação do ruby 2.3
+    $ rvm install 2.3
+
+    # Usando a versão instalada
+    $ rvm use 2.3
+
+    # Verifica qual a versão esta sendo usada pelo terminal
+    $ ruby -v
+  <% end %>
+  <p>Pacotes para compilar, caso já não tenha instalado, instale os pacotes abaixo:</p>
+  <% code("bash") do %>
+  # Instala pacote necessario para compilações de gems
+  $ sudo apt-get install ruby-all-dev
+
+  # O middleman precisa de alguns pacotes do gcc para compilar, então instale o pacote abaixo
+  $ sudo apt-get install build-essential
+  <% end %>
+  <h3 class="doc-title-4">Git</h3>
+  <p>Você precisa do Git instalado, caso não tenha instale usando o comando abaixo:</p>
+  <% code("bash") do %>
+    # Instala o Git
+    $ sudo apt-get install git
+  <% end %>
+  <h3 class="doc-title-4">Middleman</h3>
+  <p>Instale o middleman</p>
+  <% code("bash") do %>
+    # Instala o middleman, para rodar o servidor local
+    $ sudo gem install middleman
+  <% end %>
+  <h3 class="doc-title-4">O projeto</h3>
+  <p>Clone o seu fork do projeto, no exemplo abaixo estou clonando o projeto original</p>
+  <% code("bash") do %>
+    # Clonando o projeto para a pasta local
+    $ git clone https://github.com/locaweb/locawebstyle.git
+
+    # Entrando na pasta do projeto
+    $ cd locawebstyle
+  <% end %>
+  <p>Dentro da pasta do projeto instale as dependências</p>
+  <% code("bash") do %>
+    # Instala as gems de dependência do projeto
+    $ bundle install
+  <% end %>
+  <p>Rode o servidor local com middleman</p>
+  <% code("bash") do %>
+    # Para rodar o servidor
+    $ bundle exec middleman server
+  <% end %>
+  <p>Acesse no navegador o seguinte endereço: http://127.0.0.1:4567/</p>
+  <p>Pronto agora você esta preparado para começar a codar.</p>
+</section>

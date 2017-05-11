@@ -61,18 +61,18 @@ $ npm install locawebstyle
 ### Read the manual
 
 We maintain the
-[docs of components and how they works here](http://opensource.locaweb.com.br/locawebstyle/documentacao/introducao/). If
+[docs of components and how they work here](http://opensource.locaweb.com.br/locawebstyle/documentacao/introducao/). If
 you use the Chrome,
 [download here our extension](http://opensource.locaweb.com.br/locawebstyle/documentacao/introducao/chrome/)
 to access the documentation more easily.
 
-### Do you want contribute?
+### Do you want to contribute?
 
 Contribute is easy: make a fork and start to code. :-)
 
-We have some instructions maintain the code more legible and
-organized. Sorry, this article still in portuguese and you can
-[read here these instructions.](http://opensource.locaweb.com.br/locawebstyle/documentacao/introducao/contribua/).
+We have some instructions to maintain the code more legible and
+organized. Sorry, this article is still in portuguese and you can
+[read these instructions here.](http://opensource.locaweb.com.br/locawebstyle/documentacao/introducao/contribua/).
 
 [Read here the code guide of CSS](http://opensource.locaweb.com.br/locawebstyle/documentacao/praticas/css/)
 and
