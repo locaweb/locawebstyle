@@ -1,24 +1,25 @@
 [data-ls-module="progressBar"]
-  background: $gray1
+  background: #fff
+  border: 1px solid $gray1
   width: 100%
   padding: 2px
-  min-height: 24px
+  min-height: 10px
   border-radius: $default-radius
   position: relative
 
   span
     display: block
-    min-height: 20px
+    min-height: inherit
     background: $gray4
     border-radius: $default-radius
     text-align: center
+    line-height: 10px
 
     &:before
       content: attr(aria-valuenow)
       color: #fff
       font-size: remtopx(.625)
       display: inline-block
-      padding: 5px
 
   &.ls-right-percentage
     width: calc(100% - 30px)
