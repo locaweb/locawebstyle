@@ -398,28 +398,47 @@
     content: " "
     display: table
 
+// The success, info, warning and danger background classes will be deprecated in the future.
 // BACKGROUND COLORS
-.ls-background-sucess,
-.ls-table .ls-background-sucess td,
 .ls-background-success,
-.ls-table .ls-background-success td
-  color: $color-success
-  background-color: lighten($color-success, 40%)
+.ls-table .ls-background-success td,
+.ls-background-success,
+.ls-table .ls-background-success td,
+.ls-background-green,
+.ls-table .ls-background-green td
+  color: $ls-color-green
+  background-color: lighten($color-success, 50%)
 
 .ls-background-info,
-.ls-table .ls-background-info td
-  color: $color-info
-  background-color: lighten($color-info, 40%)
+.ls-table .ls-background-info td,
+.ls-background-blue,
+.ls-table .ls-background-blue td
+  color: $ls-color-blue
+  background-color: lighten($color-info, 45%)
+
+.ls-background-oil-blue,
+.ls-table .ls-background-oil-blue td
+  color: $ls-color-oil-blue
+  background-color: lighten($ls-color-oil-blue, 50%)
 
 .ls-background-warning,
-.ls-table .ls-background-warning td
-  color: $color-warning
-  background-color: lighten($color-warning, 40%)
+.ls-table .ls-background-warning td,
+.ls-background-yellow,
+.ls-table .ls-background-yellow td
+  color: $ls-color-yellow
+  background-color: lighten($color-warning, 50%)
 
 .ls-background-danger,
-.ls-table .ls-background-danger td
-  color: $color-danger
-  background-color: lighten($color-danger, 40%)
+.ls-table .ls-background-danger td,
+.ls-background-red,
+.ls-table .ls-background-red td
+  color: $ls-color-red
+  background-color: lighten($color-danger, 35%)
+
+.ls-background-purple,
+.ls-table .ls-background-purple td
+  color: $ls-color-purple
+  background-color: lighten($ls-color-purple, 30%)
 
 //
 // Styling List
