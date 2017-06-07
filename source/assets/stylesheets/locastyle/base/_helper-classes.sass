@@ -233,27 +233,50 @@
   -ms-overflow-scrolling: touch
   overflow-scrolling: touch
 
+// OBS: The success, info, warning and danger color classes will be deprecated in the future.
 // COLORS
 .ls-bg-white
   background: #fff !important
 
-.ls-color-black
+.ls-color-black,
+.ls-table .ls-color-black td
   color: #000 !important
 
-.ls-color-white
-  color: #fff
+.ls-color-white,
+.ls-table .ls-color-white td
+  color: #fff !important
 
-.ls-color-danger
-  color: $color-danger !important
+.ls-color-danger,
+.ls-table .ls-color-danger td,
+.ls-color-red,
+.ls-table .ls-color-red td
+  color: $ls-color-red !important
 
-.ls-color-info
-  color: $color-info !important
+.ls-color-info,
+.ls-table .ls-color-info td,
+.ls-color-blue,
+.ls-table .ls-color-blue td
+  color: $ls-color-blue !important
 
-.ls-color-success
-  color: $color-success !important
+.ls-color-oil-blue,
+.ls-table .ls-color-oil-blue td
+  color: $ls-color-oil-blue !important
 
-.ls-color-warning
-  color: $color-warning !important
+.ls-color-success,
+.ls-table .ls-color-success td,
+.ls-color-green,
+.ls-table .ls-color-green td
+  color: $ls-color-green !important
+
+.ls-color-warning,
+.ls-table .ls-color-warning td,
+.ls-color-yellow,
+.ls-table .ls-color-yellow td
+  color: $ls-color-yellow !important
+
+.ls-color-purple,
+.ls-table .ls-color-purple td
+  color: $ls-color-purple !important
 
 .ls-dropdown-menu
   @extend .ls-color-white
