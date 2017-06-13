@@ -64,15 +64,16 @@ locastyle.modal = (function() {
     $('body').addClass(config.classes.open);
 
     if (!$(el).data('target') && typeof el === 'object') {
-      target = $(locastyle.templates.modal(el.data()));
+      target = $(locastyle.templates.modal($(el).data()));
       $('body').append(target);
       $('.ls-modal-template').focus();
       bindClose();
     } else {
       target = $(el).data('target') ? $(el.data('target')) : $(el);
+      modalAppendTo(el);
     }
 
-    target.addClass('ls-opened');
+    $(target).addClass('ls-opened');
 
     // This event return two arguments: element clicked and target.
     target.trigger(config.open.triggerOpened, el);
@@ -121,6 +122,15 @@ locastyle.modal = (function() {
       'aria-labelledby' : idModal,
       tabindex : '-1'
     }).focus();
+  }
+
+  function modalAppendTo(el) {
+    var dataAppend = $(el).data('append');
+    var dataTarget = $(el).data('target');
+
+    if (dataAppend) {
+      $(dataTarget).appendTo(dataAppend);
+    }
   }
 
   return {
