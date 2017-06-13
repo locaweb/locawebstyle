@@ -172,4 +172,24 @@ describe("Modal: ", function() {
     });
   });
 
+  // describe("modalAppendTo:", function() {
+    // var target = $('[data-target="#myModalAppend"]');
+
+    // describe('when modal opened from javascript ', function() {
+    //   it('should to render last children of attribute data-append', function() {
+    //     var parentElement = $('#myModalAppend').parent()[0];
+    //     locastyle.modal.open("#myModalAppend");
+    //     expect(parentElement).toEqual(1);
+    //   });
+    // });
+
+    // describe('when modal opened from bind click ', function() {
+    //   it('should to render last children of attribute data-append', function() {
+    //     var parentElement = target.data('append');
+    //     target.on("click", function() {
+    //     expect($('#myModalAppend').parent()).toEqual(1);
+    //   });
+    // });
+  // });
+
 });
