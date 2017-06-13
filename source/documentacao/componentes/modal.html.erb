@@ -17,7 +17,7 @@ type: component
       <tr>
         <th>Nome</th>
         <th>Tipo</th>
-        <th>Padrão</th>
+        <th>Tipo</th>
         <th class="ls-width-500">Descrição</th>
       </tr>
     </thead>
@@ -25,7 +25,7 @@ type: component
       <tr>
         <td>target</td>
         <td>#myTarget</td>
-        <td>--</td>
+        <td>obrigatório</td>
         <td>
           <p>Abre a modal com o mesmo nome do target</p>
         </td>
@@ -258,4 +258,30 @@ $('body').on('modal:closed', '.ls-modal', function(evt){
   console.log(evt, this);
 });
 <% end %>
+
+
+<h2 class="doc-title-3">Personalizando o local abertura do Modal</h2>
+  <p>Caso deseja abrir o modal fora do escopo, basta usar o atributo<code>data-append</code> passando a referência de onde ele será aberto.</p>
+  <p>Exemplo: </p>
+    <% code("html") do %>
+<button data-ls-module="modal" data-target="#modalAppend" data-append="body" class="ls-btn-primary">Modal abrindo no fim do body</button>
+    <% end %>
+
+    <button data-ls-module="modal" data-target="#modalAppend" data-append="body" class="ls-btn-primary">Modal abrindo no fim do body</button>
+
+    <div class="ls-modal" id="modalAppend">
+      <div class="ls-modal-large">
+        <div class="ls-modal-header">
+          <button data-dismiss="modal">&times;</button>
+          <h4 class="ls-modal-title">Modal aberto no fim do body</h4>
+        </div>
+        <div class="ls-modal-body">
+          <p>O valor do atributo <b>data-append</b> definiu aonde esse Modal foi aberto.</p>
+        </div>
+        <div class="ls-modal-footer">
+          <button class="ls-btn ls-float-right" data-dismiss="modal">Close</button>
+          <button type="submit" class="ls-btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
 </section>
