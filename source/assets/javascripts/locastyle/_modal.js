@@ -35,7 +35,7 @@ locastyle.modal = (function() {
 
   function bindOpen() {
     $(config.open.trigger).on('click.ls', function() {
-      locastyle.modal.open($(this));
+      locastyle.modal.open($(this).data('target'));
     });
 
     if ($('.ls-opened').length > 0) {
@@ -125,9 +125,8 @@ locastyle.modal = (function() {
   }
 
   function modalAppendTo(el) {
-    var dataAppend = $(el).data('append-to');
-    var dataTarget = $(el).data('target');
-    $(dataAppend) ? $(dataTarget).appendTo(dataAppend) : '';
+    var dataAppend = $('[data-target="'+ el + '"]').data('append-to');
+    $(dataAppend) ? $(el).appendTo(dataAppend) : '';
   }
 
   return {
