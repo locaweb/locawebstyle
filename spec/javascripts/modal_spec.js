@@ -175,25 +175,25 @@ describe("Modal: ", function() {
   describe("modalAppendTo:", function() {
     var target = null
     var append = null
-    var idLastElement = null
+    var parentElement = null
 
     beforeEach(function() {
       target = $('#btnModalAppend').attr('data-target');
-      append = $('#btnModalAppend').attr('data-append');
-      idLastElement = $(append).find(target).attr('id');
+      append = $('#btnModalAppend').attr('data-append-to');
+      parentElement = $(target).parent();
     });
 
     describe('when modal opened by javascript ', function() {
-      it('should to render last children of attribute data-append', function() {
+      it('should to render last children of attribute data-append-to', function() {
         locastyle.modal.open('#myModalAppend');
-        expect('#' + idLastElement).toEqual($('#myModalAppend'));
+        expect(parentElement).toEqual(append);
       });
     });
 
-    describe('when modal opened by click', function() {
-      it('should to render last children of attribute data-append', function() {
+    describe('when modal opened by javascript ', function() {
+      it('should to render last children of attribute data-append-to', function() {
         $('#btnModalAppend').trigger("click");
-        expect('#' + idLastElement).toEqual($('#myModalAppend'));
+        expect(parentElement).toEqual(append);
       });
     });
   })
