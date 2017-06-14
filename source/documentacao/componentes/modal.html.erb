@@ -262,7 +262,7 @@ $('body').on('modal:closed', '.ls-modal', function(evt){
 
 <h2 class="doc-title-3">Append To no modal</h2>
   <p>Caso deseja abrir o modal fora do escopo, basta usar o atributo<code>data-append-to</code> (que é opcional) passando a referência de onde ele será aberto</p>
-  <p>O atributo <code></code> pode receber classes ou mesmo IDs, conforme exemplo abaixo</p>
+  <p>O valor do atributo <code>data-append-to</code> pode ser uma tag, classe ou ID, conforme exemplo abaixo:</p>
     <% code("html") do %>
 <button data-ls-module="modal" data-target="#modalAppend" data-append-to="body" class="ls-btn-primary">Abrir do body</button>
 <button data-ls-module="modal" data-target="#modalAppend" data-append-to=".classe-do-elemento" class="ls-btn-primary">Abrindo dentro da classe</button>
