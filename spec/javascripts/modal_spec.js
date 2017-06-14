@@ -172,24 +172,30 @@ describe("Modal: ", function() {
     });
   });
 
-  // describe("modalAppendTo:", function() {
-    // var target = $('[data-target="#myModalAppend"]');
+  describe("modalAppendTo:", function() {
+    var target = null
+    var append = null
+    var idLastElement = null
 
-    // describe('when modal opened from javascript ', function() {
-    //   it('should to render last children of attribute data-append', function() {
-    //     var parentElement = $('#myModalAppend').parent()[0];
-    //     locastyle.modal.open("#myModalAppend");
-    //     expect(parentElement).toEqual(1);
-    //   });
-    // });
+    beforeEach(function() {
+      target = $('#btnModalAppend').attr('data-target');
+      append = $('#btnModalAppend').attr('data-append');
+      idLastElement = $(append).find(target).attr('id');
+    });
 
-    // describe('when modal opened from bind click ', function() {
-    //   it('should to render last children of attribute data-append', function() {
-    //     var parentElement = target.data('append');
-    //     target.on("click", function() {
-    //     expect($('#myModalAppend').parent()).toEqual(1);
-    //   });
-    // });
-  // });
+    describe('when modal opened by javascript ', function() {
+      it('should to render last children of attribute data-append', function() {
+        locastyle.modal.open('#myModalAppend');
+        expect('#' + idLastElement).toEqual($('#myModalAppend'));
+      });
+    });
+
+    describe('when modal opened by click', function() {
+      it('should to render last children of attribute data-append', function() {
+        $('#btnModalAppend').trigger("click");
+        expect('#' + idLastElement).toEqual($('#myModalAppend'));
+      });
+    });
+  })
 
 });
