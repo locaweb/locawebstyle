@@ -260,14 +260,16 @@ $('body').on('modal:closed', '.ls-modal', function(evt){
 <% end %>
 
 
-<h2 class="doc-title-3">Personalizando o local abertura do Modal</h2>
-  <p>Caso deseja abrir o modal fora do escopo, basta usar o atributo<code>data-append</code> passando a referência de onde ele será aberto.</p>
-  <p>Exemplo: </p>
+<h2 class="doc-title-3">Append To no modal</h2>
+  <p>Caso deseja abrir o modal fora do escopo, basta usar o atributo<code>data-append-to</code> (que é opcional) passando a referência de onde ele será aberto</p>
+  <p>O atributo <code></code> pode receber classes ou mesmo IDs, conforme exemplo abaixo</p>
     <% code("html") do %>
-<button data-ls-module="modal" data-target="#modalAppend" data-append="body" class="ls-btn-primary">Modal abrindo no fim do body</button>
+<button data-ls-module="modal" data-target="#modalAppend" data-append-to="body" class="ls-btn-primary">Abrir do body</button>
+<button data-ls-module="modal" data-target="#modalAppend" data-append-to=".classe-do-elemento" class="ls-btn-primary">Abrindo dentro da classe</button>
+<button data-ls-module="modal" data-target="#modalAppend" data-append-to="#ID-do-element0" class="ls-btn-primary">Abrindo dentro do ID</button>
     <% end %>
 
-    <button data-ls-module="modal" data-target="#modalAppend" data-append="body" class="ls-btn-primary">Modal abrindo no fim do body</button>
+    <button data-ls-module="modal" data-target="#modalAppend" data-append-to="body" class="ls-btn-primary">Abrir Modal</button>
 
     <div class="ls-modal" id="modalAppend">
       <div class="ls-modal-large">
@@ -276,7 +278,7 @@ $('body').on('modal:closed', '.ls-modal', function(evt){
           <h4 class="ls-modal-title">Modal aberto no fim do body</h4>
         </div>
         <div class="ls-modal-body">
-          <p>O valor do atributo <b>data-append</b> definiu aonde esse Modal foi aberto.</p>
+          <p>O valor do atributo <b>data-append-to</b> definiu aonde esse Modal foi aberto.</p>
         </div>
         <div class="ls-modal-footer">
           <button class="ls-btn ls-float-right" data-dismiss="modal">Close</button>
