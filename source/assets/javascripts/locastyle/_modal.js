@@ -58,6 +58,13 @@ locastyle.modal = (function() {
     });
   }
 
+  function modalAppendTo(el) {
+    var dataAppend = $('[data-target="'+ el + '"]').data('append-to');
+    if ($(dataAppend)) {
+      $(el).appendTo(dataAppend);
+    }
+  }
+
   function open(el) {
     var target = null;
 
@@ -122,11 +129,6 @@ locastyle.modal = (function() {
       'aria-labelledby' : idModal,
       tabindex : '-1'
     }).focus();
-  }
-
-  function modalAppendTo(el) {
-    var dataAppend = $('[data-target="'+ el + '"]').data('append-to');
-    $(dataAppend) ? $(el).appendTo(dataAppend) : '';
   }
 
   return {

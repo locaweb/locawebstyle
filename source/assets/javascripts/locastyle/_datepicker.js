@@ -14,10 +14,10 @@ locastyle.datepicker = (function() {
       yearRange: [1900,2100],
       i18n: {
         previousMonth : 'Anterior',
-        nextMonth     : 'Próximo',
-        months        : ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-        weekdays      : ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
-        weekdaysShort : ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb']
+        nextMonth     : 'Pr&oacute;ximo',
+        months        : ['Janeiro','Fevereiro','Mar&ccedil;o','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+        weekdays      : ['Domingo','Segunda','Ter&ccedil;a','Quarta','Quinta','Sexta','S&aacute;bado'],
+        weekdaysShort : ['Dom','Seg','Ter','Qua','Qui','Sex','S&aacute;b']
       }
     }
   };
