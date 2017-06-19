@@ -1,43 +1,47 @@
 [data-ls-module="progressBar"]
-  background: $gray1
+  background: $ls-color-gray
   width: 100%
-  padding: 2px
-  min-height: 24px
+  min-height: 12px
   border-radius: $default-radius
   position: relative
 
   span
     display: block
-    min-height: 20px
-    background: $gray4
+    min-height: inherit
     border-radius: $default-radius
     text-align: center
+    position: relative
+    background-color: $ls-color-green
 
-    &:before
+    &::before
       content: attr(aria-valuenow)
       color: #fff
-      font-size: remtopx(.625)
-      display: inline-block
-      padding: 5px
-
-  &.ls-right-percentage
-    width: calc(100% - 30px)
-    width: 96.5%\9
-
-    span:before
+      font-size: remtopx(.75)
       position: absolute
-      left: 100%
-      color: #000
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+
+  &.ls-right-percentage span::before
+    left: 100%
+    transform: translate(5px, -50%)
 
   &.ls-left-percentage
     margin-left: 30px
+
+    span::before
+      right: 100%
+      left: auto
+      transform: translate(-5px, -50%)
+
+  &.ls-right-percentage,
+  &.ls-left-percentage
     width: calc(100% - 30px)
     width: 96.5%\9
 
-    span:before
-      position: absolute
-      right: 100%
+    span::before
       color: #000
+
 
 @-webkit-keyframes stretch
   0%
