@@ -35,7 +35,7 @@ locastyle.modal = (function() {
 
   function bindOpen() {
     $(config.open.trigger).on('click.ls', function() {
-      locastyle.modal.open($(this));
+      locastyle.modal.open($(this).data('target'));
     });
 
     if ($('.ls-opened').length > 0) {
@@ -58,21 +58,29 @@ locastyle.modal = (function() {
     });
   }
 
+  function modalAppendTo(el) {
+    var dataAppend = $('[data-target="'+ el + '"]').data('append-to');
+    if ($(dataAppend)) {
+      $(el).appendTo(dataAppend);
+    }
+  }
+
   function open(el) {
     var target = null;
 
     $('body').addClass(config.classes.open);
 
     if (!$(el).data('target') && typeof el === 'object') {
-      target = $(locastyle.templates.modal(el.data()));
+      target = $(locastyle.templates.modal($(el).data()));
       $('body').append(target);
       $('.ls-modal-template').focus();
       bindClose();
     } else {
       target = $(el).data('target') ? $(el.data('target')) : $(el);
+      modalAppendTo(el);
     }
 
-    target.addClass('ls-opened');
+    $(target).addClass('ls-opened');
 
     // This event return two arguments: element clicked and target.
     target.trigger(config.open.triggerOpened, el);

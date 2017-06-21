@@ -172,4 +172,80 @@ describe("Modal: ", function() {
     });
   });
 
+  describe("modalAppendTo:", function() {
+    var btn = null
+    var target = null
+    var append = null
+    var parentElement = null
+
+    describe("testing with tag value", function() {
+      beforeEach(function() {
+        btn = $('#btnAppendBody');
+        target = btn.attr('data-target');
+        append = btn.attr('data-append-to');
+        parentElement = $(target).parent();
+      });
+
+      describe('when modal opened by javascript ', function() {
+        it('should to render last children of attribute data-append-to', function() {
+          locastyle.modal.open('#myModalAppendBody');
+          expect(parentElement).toEqual(append);
+        });
+      });
+
+      describe('when modal opened by javascript ', function() {
+        it('should to render last children of attribute data-append-to', function() {
+          btn.trigger("click");
+          expect(parentElement).toEqual(append);
+        });
+      });
+    })
+
+    describe("testing with class value", function() {
+      beforeEach(function() {
+        btn = $('#btnAppendClass');
+        target = btn.attr('data-target');
+        append = btn.attr('data-append-to');
+        parentElement = $(target).parent();
+      });
+
+      describe('when modal opened by javascript ', function() {
+        it('should to render last children of attribute data-append-to', function() {
+          locastyle.modal.open('#myModalAppendClass');
+          expect(parentElement).toContainElement(append);
+        });
+      });
+
+      describe('when modal opened by javascript ', function() {
+        it('should to render last children of attribute data-append-to', function() {
+          btn.trigger("click");
+          expect(parentElement).toContainElement(append);
+        });
+      });
+    })
+
+    describe("testing with ID value", function() {
+      beforeEach(function() {
+        btn = $('#btnAppendId');
+        target = btn.attr('data-target');
+        append = btn.attr('data-append-to');
+        parentElement = $(target).parent();
+      });
+
+      describe('when modal opened by javascript ', function() {
+        it('should to render last children of attribute data-append-to', function() {
+          locastyle.modal.open('#myModalAppendId');
+          expect(parentElement).toContainElement(append);
+        });
+      });
+
+      describe('when modal opened by javascript ', function() {
+        it('should to render last children of attribute data-append-to', function() {
+          btn.trigger("click");
+          expect(parentElement).toContainElement(append);
+        });
+      });
+    })
+  })
+
 });
