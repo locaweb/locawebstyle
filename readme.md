@@ -1,174 +1,81 @@
-![Travis:Master](https://travis-ci.org/locaweb/locawebstyle.svg?branch=master "Travis Master")
+![Locastyle Logo]("https://gartic.com.br/imgs/mural/th/thiagoh87/1235109800.png")
 
--
+# Locastyle 4
 
-![Locaweb Style with Gold color](http://i.imgur.com/3mBJPr4.png "Locaweb Style")
+Este é um framework para front-end com padrões de comportamento e estilos para projetos Web.
+O foco deste framework é agilizar o trabalho do desenvolvedor garantindo uma interface agradável
+com uma boa usabilidade. O trabalho foi desenvolvido com o auxílio de um time de UX e um time de Front-end
+e é utilizado em diversos projetos internos aqui na Locaweb.
 
+## Documentaçao completa
 
-# Locastyle 3.0 (Barbecue)
+Olhe a [Wiki](#) para documentação completa, exemplos, detalhes e outras informações.
 
-This is a front-end framework with patterns of behaviors and styles to
-web projects. The focus of this framework is build admin interfaces
-and not websites. We design this interface with a team of UX and
-Front-end. We also use this interface in our own products here in
-Locaweb.
+## Conteúdo do README
 
-You can see
-[all examples in this link](http://opensource.locaweb.com.br/locawebstyle/documentacao/exemplos/).
+- Iniciando o projeto
+- Como testar o projeto
+- Hello World!
+- Testando seu código
+- Changelog
+- Créditos
+- LICENÇA
+- Contribuição
 
-### How to install
-
-You can
-[use the Locaweb Style in many ways](http://opensource.locaweb.com.br/locawebstyle/documentacao/introducao/),
-but we suggest use direct of our server just adding this address in
-your project:
-
-```html
-<head>
-...
-  <!-- Insert the CSS in HEAD -->
-  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.10.0/stylesheets/locastyle.css">
-...
-</head>
-<body>
-  <!-- Your code -->
-
-  <!-- JQuery is a dependency -->
-  <script src="http://code.jquery.com/jquery-2.0.1.min.js">
-
-  <!-- Put the JS in your footer, always after jQuery (dependency) -->
-  <script src="//assets.locaweb.com.br/locastyle/3.10.0/javascripts/locastyle.js"></script>
-</body>
-```
+## Iniciando o Projeto
 
 
-#### Installing via [bower](http://bower.io)
+## Como testar o projeto
 
-To install the Locaweb Style using Bower:
+Pré-requisitos:
 
-```sh
-$ bower install locawebstyle
-```
+    - Node v7.0.0
+    - Npm v3.10.8
 
-#### Installing via [npm](https://www.npmjs.com/)
+Para instalar todas as dependências do projeto:
 
-To install the Locaweb using Npm:
+    - npm install
 
-```sh
-$ npm install locawebstyle
-```
+Para rodar o projeto localmente:
 
-### Read the manual
+    - npm start
 
-We maintain the
-[docs of components and how they work here](http://opensource.locaweb.com.br/locawebstyle/documentacao/introducao/). If
-you use the Chrome,
-[download here our extension](http://opensource.locaweb.com.br/locawebstyle/documentacao/introducao/chrome/)
-to access the documentation more easily.
+## Hello World!
 
-### Do you want to contribute?
+## Testando seu código
 
-Contribute is easy: make a fork and start to code. :-)
+## Changelog
 
-We have some instructions to maintain the code more legible and
-organized. Sorry, this article is still in portuguese and you can
-[read these instructions here.](http://opensource.locaweb.com.br/locawebstyle/documentacao/introducao/contribua/).
+## Créditos
 
-[Read here the code guide of CSS](http://opensource.locaweb.com.br/locawebstyle/documentacao/praticas/css/)
-and
-[JavaScript](http://opensource.locaweb.com.br/locawebstyle/documentacao/praticas/javascript/)
-to maintain a good practices of this project.
+c
 
-### Running tests
+## LICENÇA
 
-Before sending any code, please run our automated tests:
+The MIT License (MIT)
 
-```sh
-$ bundle exec rake tests:run
-```
+Copyright (c) [2014] [Locaweb]
 
-It will run Jasmine tests and JShint.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
----
-**pt-br version**
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-# Locastyle 3.0 (Barbecue)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-Um framework front-end de comportamento e estilo para projetos web,
-com uma interface usada por milhares de usuários. Mantido pelos
-desenvolvedores front-end da [Locaweb](http://locaweb.com.br/).
+## Contribuição
 
-Você pode ver
-[exemplos de painéis neste link](http://opensource.locaweb.com.br/locawebstyle/documentacao/exemplos/).
+Para contribuir é fácil: faça um fork do projeto aqui no GitHub e comece a codar! ;-) Existem algumas instruções para mantermos o código legível e organizado. Leia essas instruções aqui.
 
-### Use o Locaweb Style
-
-Você pode usar o Locaweb Style de várias formas:
-[direto pelo nosso servidor](//assets.locaweb.com.br/locastyle/3.7.4/javascripts/locastyle.js),
-via Bower ou baixando os assets para usar offline.
-
-#### Utilizando pelo nosso servidor
-
-```html
-<head>
-...
-  <!-- Insert the CSS in HEAD -->
-  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.7.4/stylesheets/locastyle.css">
-...
-</head>
-<body>
-  <!-- Your code -->
-
-  <!-- JQuery is a dependency -->
-  <script src="http://code.jquery.com/jquery-2.0.1.min.js">
-
-  <!-- Put the JS in your footer, always after jQuery (dependency) link -->
-  <script src="//assets.locaweb.com.br/locastyle/3.7.4/javascripts/locastyle.js"></script>
-</body>
-```
-
-#### Instalação via [bower](http://bower.io)
-
-Para instalar o Locaweb Style utilizando o Bower é bem simples:
-
-```sh
-$ bower install locawebstyle
-```
-
-#### Instalação via [npm](https://www.npmjs.com/)
-
-Para instalar o Locaweb Style utilizando o Npm:
-
-```sh
-$ npm install locawebstyle
-```
-
-### Documentação completa
-
-Mantemos a
-[documentação completa dos componentes e como eles funcionam aqui](http://opensource.locaweb.com.br/locawebstyle/documentacao/introducao/). Se
-você usar o Chrome,
-[baixe nossa extensão](http://opensource.locaweb.com.br/locawebstyle/documentacao/introducao/chrome/)
-para facilitar o acesso à documentação.
-
-### Quer contribuir?
-
-Para contribuir é bico: Faça um fork do projeto aqui mesmo no GitHub e
-comece a codar! ;-) Existem algumas instruções para mantermos o código
-legível e
-organizado. [Leia essas instruções aqui](http://opensource.locaweb.com.br/locawebstyle/documentacao/introducao/contribua/).
-
-Leia também nossos padrões de código de
-[CSS](http://opensource.locaweb.com.br/locawebstyle/documentacao/praticas/css/)
-e
-[JavaScript](http://opensource.locaweb.com.br/locawebstyle/documentacao/praticas/javascript/).
-
-### Rodando os testes
-
-Antes de enviar seu código, rode nossa suite de testes:
-
-```sh
-$ bundle exec rake tests:run
-```
-
-Isso vai rodar os testes de Jasmine e o JShint.
+Leia também nossos padrões de código de CSS e JavaScript.
