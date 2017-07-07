@@ -62,7 +62,9 @@ locastyle.modal = (function() {
     var dataAppend = $(el).data('append-to');
     var dataTarget = $(el).data('target');
 
-    dataAppend && $(dataTarget).appendTo(dataAppend);
+    if (dataAppend) {
+      $(dataTarget).appendTo(dataAppend);
+    }
   }
 
   function open(el) {
