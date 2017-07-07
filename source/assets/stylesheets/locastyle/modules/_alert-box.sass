@@ -1,0 +1,35 @@
+.ls-alert-box
+  @extend .ls-box
+  border: none
+  padding: 20px 25px
+
+  .ls-info-header
+    @extend .ls-background-blue
+    color: #fff
+    border-radius: 2px
+    border: none
+    margin: 0 -25px 30px
+
+    &.ls-background-oil-blue
+      @extend .ls-background-oil-blue
+
+    &.ls-background-purple
+      @extend .ls-background-purple
+
+    [class^="ls-title-"]
+      font-weight: normal
+      color: #fff
+      margin-bottom: 0
+
+    .ls-dismiss
+      @include translateY(50%)
+      color: #fff
+      opacity: 1
+
+      &:hover
+        opacity: 0.3
+
+    p
+      margin: 0 0 10px
+
+
