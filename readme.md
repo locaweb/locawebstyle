@@ -1,3 +1,5 @@
+![Travis:Master](https://travis-ci.org/locaweb/locawebstyle.svg?branch=master "Travis Master")
+
 ![Locastyle Logo]("https://gartic.com.br/imgs/mural/th/thiagoh87/1235109800.png")
 
 bower, npm, build
