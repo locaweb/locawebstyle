@@ -1,6 +1,8 @@
 ![Locastyle Logo]("https://gartic.com.br/imgs/mural/th/thiagoh87/1235109800.png")
 
-# Locastyle 4
+bower, npm, build
+
+# Locastyle
 
 Este é um framework para front-end com padrões de comportamento e estilos para projetos Web.
 O foco deste framework é agilizar o trabalho do desenvolvedor garantindo uma interface agradável
