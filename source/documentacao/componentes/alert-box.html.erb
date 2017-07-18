@@ -46,8 +46,8 @@ type: component
     </tbody>
   </table>
 
-  <h2 class="doc-title-3">Alterando o status e cores do box de notificações</h2>
-  <p>Para alterar as cores dos boxes de notificações, basta seguir a tabela abaixo:</p>
+  <h2 class="doc-title-3">Alterando a cor do box de notificações</h2>
+  <p>Para alterar as cores dos boxes de notificações, adicione no elemento pai a classe: <code>ls-purple</code> ou <code>ls-oil-blue</code> </p>
   <table class="ls-table">
     <thead>
       <tr>
@@ -57,22 +57,34 @@ type: component
     </thead>
     <tbody>
       <tr>
-        <td>.ls-alert-box-success</td>
-        <td>O elemento é representado com status/cor de sucesso.</td>
-      </tr>
-      <tr>
-        <td>.ls-alert-box-info</td>
-        <td>O elemento é representado com status/cor de informações.</td>
-      </tr>
-      <tr>
-        <td>.ls-alert-box-warning</td>
-        <td>O elemento é representado com status/cor de atenção.</td>
-      </tr>
-      <tr>
-        <td>.ls-alert-box-danger</td>
-        <td>O elemento é representado com status/cor de perigo.</td>
+        <td>.ls-purple</td>
+        <td>O elemento é representado na cor roxa.</td>
       </tr>
     </tbody>
   </table>
+
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/alert-box/box-purple' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/alert-box/box-purple' %><% end %>
+  <table class="ls-table">
+    <thead>
+      <tr>
+        <th>Seletor</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>.ls-oil-blue</td>
+        <td>O elemento é representado na cor azul petróleo.</td>
+      </tr>
+
+    </tbody>
+  </table>
+  <div class="ls-box-demo">
+    <%= partial 'documentacao/shared/alert-box/box-oil-blue' %>
+  </div>
+  <% code("html") do %><%= partial 'documentacao/shared/alert-box/box-oil-blue' %><% end %>
 
 </section>
