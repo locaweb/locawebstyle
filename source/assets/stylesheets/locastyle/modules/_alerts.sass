@@ -1,11 +1,11 @@
 [class*="ls-alert-"]
   padding: 15px
   margin-bottom: 20px
-  border-style: solid
-  border-width: 1px
+  border: 1px solid $ls-color-gray
   border-radius: $default-radius
-  font-size: remtopx(.875)
+  font-size: remtopx(1)
   line-height: 1.6
+  background-color: #fff
 
   &:empty
     display: none
@@ -30,24 +30,16 @@
     @extend .ls-sm-space
 
 .ls-alert-success
-  color: $color-success
-  border-color: mix(#fff, $color-success, 35%)
-  background-color: mix(#fff, $color-success, 80%)
+  color: $ls-color-green
 
 .ls-alert-info
-  color: $color-info
-  border-color: mix(#fff, $color-info, 35%)
-  background-color: mix(#fff, $color-info, 80%)
+  color: $ls-color-blue
 
 .ls-alert-warning
-  color: $color-warning
-  border-color: mix(#fff, $color-warning, 35%)
-  background-color: mix(#fff, $color-warning, 80%)
+  color: $ls-color-yellow
 
 .ls-alert-danger
-  color: $color-danger
-  border-color: mix(#fff, $color-danger, 35%)
-  background-color: mix(#fff, $color-danger, 80%)
+  color: $ls-color-red
 
 .ls-dismiss
   float: right
@@ -57,13 +49,15 @@
   background: none
   border: none
   cursor: pointer
-  color: inherit
-  font-size: remtopx(1.3125)
-  opacity: .3
+  color: $ls-color-dark-gray
+  font-size: remtopx(1.75)
+  font-weight: 300
+  opacity: .5
   line-height: 1
+  @extend %font-smoothing
 
   &:hover
-    opacity: .5
+    opacity: .3
 
 //
 // When the unsupported bar is visible
