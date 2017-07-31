@@ -17,8 +17,14 @@
   -moz-appearance: none
   appearance: none
 
-  &[class*="ls-ico-"]:empty:before
-    margin: 0
+  &[class*="ls-ico-"]:empty
+    border-radius: 50%
+    width: $input-lg-height
+    height: $input-lg-height
+    line-height: 2
+
+    &:before
+      margin: 0
 
   p + &
     margin-top: 7px
