@@ -2,17 +2,15 @@
 [class*="ls-btn"]
   +single-transition(all, .2s)
   cursor: pointer
-  border: 1px solid mix($color-mix, #fff, 30%)
-  padding: 6px 11px 7px
-  border-radius: $default-radius
-  background-color: #fff
+  padding: 10px 16px
+  border: none
   display: inline-block
-  font-size: remtopx(.8125)
+  font-size: 14px
   line-height: 1.42857143
   text-decoration: none
   text-align: center
   white-space: normal
-  color: #000
+  color: #fff
   vertical-align: top
   font-weight: normal
   -webkit-appearance: none
@@ -51,22 +49,44 @@
     & + .ls-btn-block
       margin-top: 15px
 
-// Primary button
-.ls-btn-primary
-  color: #fff
+  &.ls-btn-primary
+    background-color: $ls-color-blue
 
-// Dark
-.ls-btn-dark
-  background-color: $gray3
-  border-color: $gray4
-  color: $gray1
+    &:hover, &:focus, &:active
 
-  &:hover,
-  &:focus
-    background-color: $gray4
+  &.ls-btn-dark
+    background-color: $ls-color-oil-blue
 
-  &[data-ls-module]:after
-    border-top-color: $gray1
+    &:hover, &:focus, &:active
+
+  &.ls-btn-success
+    background-color: $ls-color-green
+
+    &:hover, &:focus, &:active
+
+  &.ls-btn-info
+    background-color: $ls-color-purple
+
+    &:hover, &:focus, &:active
+
+
+  &.ls-btn-warning
+    background-color: $ls-color-yellow
+
+    &:hover, &:focus, &:active
+
+.ls-btn:not([class*="ls-btn-"])
+  background-color: $ls-color-gray-light
+  color: $ls-color-gray-medium
+
+  &:hover, &:focus, &:active
+
+
+.ls-btn-danger,
+.ls-btn-primary-danger
+  background-color: $ls-color-red
+
+  &:hover, &:focus, &:active
 
 //
 // Sizes of BTN
