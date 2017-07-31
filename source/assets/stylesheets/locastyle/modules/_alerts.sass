@@ -89,7 +89,7 @@
   text-align: center
 
 .ls-alert-fixed-top
-  top: 0
+  top: $topbar-height
 
 .ls-alert-fixed-bottom
   bottom: 0
@@ -105,11 +105,21 @@
   border-radius: 0
   border: none
   width: 100%
+  margin-left: -15px
+  padding-left: 15px
+  padding-right: 15px
   margin-bottom: 0
   line-height: 20px
 
 @media screen and (min-width: $screen-sm)
-  .ls-alert-blocker
+  .ls-alert-blocker,
+  .ls-alert-fixed-top,
+  .ls-alert-fixed-bottom
+    width: calc(100% - #{$sidebar-width})
+    margin-left: -30px
+    padding-left: 30px
+    padding-right: 30px
+
     & ~ .ls-sidebar
       height: 100%
 
