@@ -1,32 +1,34 @@
 .ls-tabs-nav:not(.in-dropdown)
   position: relative
   z-index: 2
+  border: 1px solid $ls-color-gray
   margin: 0
 
   li
     position: relative
     list-style: none
     display: inline-block
-    border: 1px solid transparent
-    border-bottom: none
-    border-radius: $default-radius $default-radius 0 0
     line-height: 1
     font-size: remtopx(.875)
-    margin-right: -3px
+    background-color: #fff
+    margin-right: -4px
+
+    &:hover
+      +rgba(background-color, $ls-color-gray,0.4)
 
     a
-      color: #fff
       display: inline-block
-      padding: 11px
+      color: #c1c1c1
+      padding: 19px 30px
 
     &.ls-active
-      border-color: $gray1
-      top: 0px
+      background-color: $ls-color-blue
+
+      &:hover
+        +rgba(background-color, $ls-color-blue,0.8)
 
       a
-        margin-top: 0px
-        color: #333
-        padding: 15px 16px 12px
+        color: #fff
 
 .ls-tabs-nav
   .ls-dropdown-tabs
@@ -70,12 +72,9 @@
   top: -1px
 
   .ls-tab-content
-    +border-radius(0 $default-radius $default-radius $default-radius)
     display: none
-    padding: 20px 15px
-    margin-bottom: 20px
-    border: 1px solid $gray1
-    border-bottom-width: 3px
+    padding: 27px 28px
+    margin-bottom: 36px
     background-color: #fff
     @extend .ls-clearfix
 
