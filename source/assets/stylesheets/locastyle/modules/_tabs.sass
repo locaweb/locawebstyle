@@ -64,13 +64,15 @@
         li
           width: 100%
           background-color: transparent
-          border: none
 
           a
             width: 100%
-            color: #333
+            color: $ls-color-dark-gray
             display: block
-            padding: 8px 20px
+            padding: 19px 30px
+
+            &:hover
+              +rgba(background-color, $ls-color-gray,0.4)
 
 .ls-tabs-container
   clear: both
