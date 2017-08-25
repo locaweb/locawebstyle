@@ -30,15 +30,22 @@
       a
         color: #fff
 
+      [class*="ls-btn"]
+        background-color: $ls-color-blue
+
 .ls-tabs-nav
   .ls-dropdown-tabs
     [class*="ls-btn"]
-      background-color: transparent
+      background-color: #fff
       vertical-align: initial
+
+    &.ls-active [class*="ls-btn"]
+      color: #fff
+      background-color: $ls-color-blue
 
   li:not(.ls-active)
     [class*="ls-dropdown"].ls-dropdown-tabs [class*="ls-btn"]
-      padding: 11px 12px 11px
+      padding: 19px 30px
 
       &:after
         border-top-color: #fff
