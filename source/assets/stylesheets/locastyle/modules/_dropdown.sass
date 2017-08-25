@@ -87,11 +87,35 @@
 
   &.ls-dropdown-tabs
     z-index: 2
+    border: 1px solid $ls-color-gray
+
+    &.ls-active
+      border: 0
+      background-color: $ls-color-blue
+
+      [class*="ls-btn"]
+        background-color: transparent
+        color: #fff
+
+        &:hover,
+        &:focus
+          background-color: transparent
+
+      .in-dropdown li a
+        color: $ls-color-dark-gray
+        padding: 19px 30px
+
+        &:hover
+          +rgba(background-color, $ls-color-gray,0.4)
 
     [class*="ls-btn"]
+      border: 0
       border-radius: 0
+      background-color: #fff
+      color: #c1c1c1
       line-height: 1
       font-size: remtopx(.875)
+      padding: 19px 30px
 
       &:hover,
       &:focus
@@ -99,6 +123,8 @@
 
     .ls-dropdown-nav
       border: 1px solid $ls-color-gray
+      border-radius: 0
+      min-width: 100%
       box-shadow: 2px 2px 0 0 rgba($gray4,.35)
       margin-top: 0
       padding: 10px 0
