@@ -52,14 +52,14 @@
       margin-left: 0
 
     &:after
-      content: ""
-      +arrow-down($gray4, 5px)
+      content: "\e91b"
       display: inline-block
-      width: 0
-      height: 0
-      margin-left: 14px
+      font-family: 'locastyle'
+      font-size: 21px
+      margin: -5px 0 -4px 14px
       position: relative
-      top: 4px
+      vertical-align: middle
+      +single-transition(transform, .1s)
 
     &.ls-btn-lg:after
       top: 2px
@@ -100,6 +100,9 @@
         &:hover,
         &:focus
           background-color: transparent
+
+        &:after
+          +rotate(180deg)
 
       .in-dropdown li a
         color: $ls-color-dark-gray
