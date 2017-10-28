@@ -41,7 +41,7 @@
         &:hover,
         &:focus
           background: $color-danger
-          color: #fff !important 
+          color: #fff !important
 
   &.ls-active .ls-dropdown-nav
     display: block
@@ -52,14 +52,14 @@
       margin-left: 0
 
     &:after
-      content: ""
-      +arrow-down($gray4, 5px)
+      @extend .ls-ico-circle-down
+      font-family: "locastyle"
       display: inline-block
-      width: 0
-      height: 0
-      margin-left: 14px
+      font-size: 21px
+      margin: -5px 0 -4px 14px
       position: relative
-      top: 4px
+      vertical-align: middle
+      +single-transition(transform, .1s)
 
     &.ls-btn-lg:after
       top: 2px
@@ -87,27 +87,50 @@
 
   &.ls-dropdown-tabs
     z-index: 2
+    border: 1px solid $ls-color-gray
+
+    &.ls-active
+      border: 0
+      background-color: $ls-color-blue
+
+      [class*="ls-btn"]
+        background-color: transparent
+        color: #fff
+
+        &:hover,
+        &:focus
+          background-color: transparent
+
+        &:after
+          +rotate(180deg)
+
+      .in-dropdown li a
+        color: $ls-color-dark-gray
+        padding: 19px 30px
+
+        &:hover
+          +rgba(background-color, $ls-color-gray,0.4)
 
     [class*="ls-btn"]
-      border-radius: $default-radius $default-radius 0 0
-      border-color: $gray1
-      border-bottom: 1px solid #fff
-      padding: 13px 12px 11px
+      border: 0
+      border-radius: 0
+      background-color: #fff
+      color: $ls-color-light-gray
       line-height: 1
       font-size: remtopx(.875)
+      padding: 19px 30px
 
       &:hover,
       &:focus
-        +rgba(background-color, $gray1,.2)
-
-      &:after
-        margin-left: 6px
+        +rgba(background-color, $ls-color-gray,0.4)
 
     .ls-dropdown-nav
-      border-radius: 0 0 $default-radius $default-radius
-      border-color: $gray2
-      margin-top: -1px
-      padding: 5px 0
+      border: 1px solid $ls-color-gray
+      border-radius: 0
+      min-width: 100%
+      box-shadow: 2px 2px 0 0 rgba($gray4,.35)
+      margin-top: 0
+      padding: 10px 0
 
       a
         font-size: remtopx(.875)
