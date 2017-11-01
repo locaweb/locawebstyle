@@ -1,3 +1,5 @@
+$percentColor: 10%
+
 // Style base button
 [class*="ls-btn"]
   +single-transition(all, .2s)
@@ -16,6 +18,7 @@
   -webkit-appearance: none
   -moz-appearance: none
   appearance: none
+  text-transform: uppercase
 
   &[class*="ls-ico-"]:empty
     border-radius: 50%
@@ -25,6 +28,14 @@
 
     &:before
       margin: 0
+      vertical-align: sub
+      font-size: 18px
+      padding-right: 0
+
+  &[class*="ls-ico-"]:before
+    padding-right: 5px
+    font-size: 20px
+    vertical-align: bottom
 
   p + &
     margin-top: 7px
@@ -33,6 +44,7 @@
   &.ls-disabled,
   &[disabled]
     cursor: default
+    opacity: .6
 
   &:empty:after
     @extend .ls-no-margin-left
@@ -58,41 +70,46 @@
   &.ls-btn-primary
     background-color: $ls-color-blue
 
-    &:hover, &:focus, &:active
+    &:hover, &:focus, &:active, &.ls-active
+      background-color: darken($ls-color-blue, $percentColor)
 
   &.ls-btn-dark
     background-color: $ls-color-oil-blue
 
-    &:hover, &:focus, &:active
+    &:hover, &:focus, &:active, &.ls-active
+      background-color: darken($ls-color-oil-blue, $percentColor)
 
   &.ls-btn-success
     background-color: $ls-color-green
 
-    &:hover, &:focus, &:active
+    &:hover, &:focus, &:active, &.ls-active
+      background-color: darken($ls-color-green, $percentColor)
 
   &.ls-btn-info
     background-color: $ls-color-purple
 
-    &:hover, &:focus, &:active
-
+    &:hover, &:focus, &:active, &.ls-active
+      background-color: darken($ls-color-purple, $percentColor)
 
   &.ls-btn-warning
     background-color: $ls-color-yellow
 
-    &:hover, &:focus, &:active
+    &:hover, &:focus, &:active, &.ls-active
+      background-color: darken($ls-color-yellow, $percentColor)
 
 .ls-btn:not([class*="ls-btn-"])
   background-color: $ls-color-gray-light
   color: $ls-color-gray-medium
 
-  &:hover, &:focus, &:active
-
+  &:hover, &:focus, &:active, &.ls-active
+    background-color: darken($ls-color-gray-light, $percentColor)
 
 .ls-btn-danger,
 .ls-btn-primary-danger
   background-color: $ls-color-red
 
   &:hover, &:focus, &:active
+    background-color: darken($ls-color-red, $percentColor)
 
 //
 // Sizes of BTN
@@ -125,6 +142,10 @@
   [class*="ls-btn"]
     @extend .ls-float-left
     cursor: pointer
+    margin-left: 1px
+
+    &:first-child
+      margin-left: 0
 
     &:first-child:not(:last-child)
       border-top-right-radius: 0
@@ -140,9 +161,6 @@
     &:hover,
     &:focus
       +single-transition(none)
-
-    & +[class*="ls-btn"]
-      margin-left: -1px
 
     &.ls-btn[data-ls-module="tabs"]
 
