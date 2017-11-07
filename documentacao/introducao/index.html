@@ -10,7 +10,7 @@
   <script src="../../assets/javascripts/libs/mediaqueries-ie.js" type="text/javascript"></script><script src="../../assets/javascripts/libs/html5shiv.js" type="text/javascript"></script>
 
   <link href="../../assets/stylesheets/docs.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="//assets.locaweb.com.br/locastyle/3.10.0/stylesheets/locastyle.css">
+  <link rel="stylesheet" href="//assets.locaweb.com.br/locastyle/3.10.1/stylesheets/locastyle.css">
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -102,18 +102,17 @@
   <h2 class="doc-title-4">Baixando o boilerplate via NPM</h2>
   <p>O <a href="http://emalherbi.com">Eduardo Malherbi</a> fez um <a href="https://www.npmjs.com/package/generator-locawebstyle">módulo para NPM que instala a última versão do LocaStyle</a> e também o HTML inicial, que serve como base para você começar seu projeto. Para instalar é simples:</p>
 
-<pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-</pre></td><td class="rouge-code"><pre>    npm install -g yo
-    npm install -g generator-locawebstyle
+</pre></td><td class="rouge-code"><pre>    npm install <span class="nt">-g</span> yo
+    npm install <span class="nt">-g</span> generator-locawebstyle
     mkdir my-new-project
     <span class="nb">cd </span>my-new-project
     yo locawebstyle
-</pre></td></tr></tbody></table>
-</code></pre>
+</pre></td></tr></tbody></table></code></pre></div>
   <br>
   <br>
   <hr>
@@ -121,21 +120,20 @@
   <h2 class="doc-title-5">Use os assets pelo nosso servidor</h2>
   <p>Nós disponibilizamos as versões do Locaweb Style em nosso servidor de alta disponibilidade para qualquer desenvolvedor. Basta usar os links abaixo em seu projeto. A única de dependência é a <strong><a href="http://jquery.com/">jQuery</a></strong>.</p>
 
-<pre class="highlight html"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="highlight"><pre class="highlight html"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 </pre></td><td class="rouge-code"><pre><span class="c">&lt;!-- Coloque o CSS no seu HEAD --&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"//assets.locaweb.com.br/locastyle/3.10.0/stylesheets/locastyle.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"//assets.locaweb.com.br/locastyle/3.10.1/stylesheets/locastyle.css"</span><span class="nt">&gt;</span>
 
 <span class="c">&lt;!-- Coloque o JS no seu FOOTER, logo depois da jQuery --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//assets.locaweb.com.br/locastyle/3.10.0/javascripts/locastyle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></td></tr></tbody></table>
-</code></pre>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//assets.locaweb.com.br/locastyle/3.10.1/javascripts/locastyle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div>
   <p>Se você quiser usar a versão mais atual que existe, use os assets em <strong>edge</strong>. Veja abaixo um exemplo:</p>
 
-<pre class="highlight html"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="highlight"><pre class="highlight html"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -145,48 +143,43 @@
 
 <span class="c">&lt;!-- Coloque o JS no seu FOOTER, logo depois da jQuery --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></td></tr></tbody></table>
-</code></pre>
+</pre></td></tr></tbody></table></code></pre></div>
   <p>Sempre que há uma atualização, esses assets são atualizados automaticamente.</p>
 
   <h2 class="doc-title-5">Baixe os assets usando Bower</h2>
 
   <p>Para usar os assets do Locaweb Style pelo <a target="_blank" href="http://bower.io/">Bower</a> é bem simples:</p>
 
-  <pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>bower install locawebstyle</pre></td></tr></tbody></table>
-</code></pre>
+  <div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bower install locawebstyle</pre></td></tr></tbody></table></code></pre></div>
 
   <p>Após a instalação, basta chamar os arquivos do diretório <code>bower_components</code>:</p>
 
-<pre class="highlight html"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="highlight"><pre class="highlight html"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 </pre></td><td class="rouge-code"><pre>  <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"bower_components/locawebstyle/dist/stylesheets/locastyle.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"bower_components/locawebstyle/dist/javascripts/locastyle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></td></tr></tbody></table>
-</code></pre>
+</pre></td></tr></tbody></table></code></pre></div>
   <p>Caso queira alterar o diretório que o bower vai instalar o framework e suas dependências, crie um arquivo <code>.bowerrc</code> e coloque o conteúdo abaixo:</p>
 
-<pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 </pre></td><td class="rouge-code"><pre><span class="o">{</span>
   <span class="s2">"directory"</span>: <span class="s2">"assets/components"</span>
 <span class="o">}</span>
-</pre></td></tr></tbody></table>
-</code></pre>
+</pre></td></tr></tbody></table></code></pre></div>
   <p>E depois basta chamar os arquivos:</p>
 
-<pre class="highlight html"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="highlight"><pre class="highlight html"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 </pre></td><td class="rouge-code"><pre>  <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"assets/components/locawebstyle/dist/stylesheets/locastyle.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"assets/components/locawebstyle/dist/javascripts/locastyle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></td></tr></tbody></table>
-</code></pre>  <hr>
+</pre></td></tr></tbody></table></code></pre></div>  <hr>
 
   <h2 class="doc-title-5">Download da versão mais atual</h2>
   <p>Se você quiser baixar os assets para usar localmente ou em projetos offline, basta clicar no botão abaixo e baixe a versão estável mais atual publicada.<br><br>
-  <a href="http://assets.locaweb.com.br/locastyle/3.10.0.zip" class="ls-btn-primary ls-btn-large">Baixar versão atual</a>
+  <a href="http://assets.locaweb.com.br/locastyle/3.10.1.zip" class="ls-btn-primary ls-btn-large">Baixar versão atual</a>
   </p>
 
   <h2 class="doc-title-5">Pelo GitHub</h2>

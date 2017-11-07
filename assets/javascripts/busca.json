@@ -781,6 +781,12 @@
       "path": "documentacao/introducao"
   },
   
+  "documentacao/introducao/instalacao-ubuntu" :   {
+      "title": "Instalando o projeto no Ubuntu",
+      "description": "O que você precisa saber para criar o ambiente de desenvolvimento local.",
+      "path": "documentacao/introducao/instalacao-ubuntu"
+  },
+  
   "documentacao/introducao/suporte-browsers" :   {
       "title": "Suporte para browsers antigos",
       "description": "Entenda como melhorar o suporte a browsers antigos, como o IE8",
