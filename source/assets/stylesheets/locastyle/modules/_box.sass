@@ -92,47 +92,17 @@
     li
       padding-bottom: 5px
 
-.ls-info-header
-  +border-radius(4px 4px 0 0)
-  background: #fff
-  padding: 15px 25px
-  margin-bottom: 20px
-  width: calc(32px + 100%)
-  margin-left: -16px
-  margin-top: -16px
-  border: 1px solid $gray2
-
-  [class*="ls-ico-"]:before
-    font-size: remtopx(1.75)
-
-  [class*="ls-title"]
-    font-weight: normal
-    display: block
-
 @media screen and (min-width: ($screen-sm + 1px))
   .ls-box
     &[class*="ls-ico-"]
       padding-left: 175px !important
 
 @media screen and (max-width: $screen-sm)
-  .ls-box
-    &[class*="ls-ico-"]
-
   .ls-ico-bg:before
     display: none
 
   .ls-small-info + [class^="ls-title-"]
     padding-top: 10px
-
-
-@media screen and (min-width: $screen-md)
-  .ls-info-header
-    [class^="ls-title-"]
-      display: inline-block
-
-    .ls-btn
-      float: right
-
 
 @media screen and (min-width: $screen-lg)
   .ls-box-filter .ls-label

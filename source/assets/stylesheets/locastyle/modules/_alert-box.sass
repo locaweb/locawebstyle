@@ -1,5 +1,5 @@
 .ls-alert-box
-  @extend .ls-box
+  background-color: #fff
   border: none
   padding: 20px 25px
 
@@ -8,6 +8,7 @@
     color: #fff
     border-radius: 3px
     border: none
+    padding: 15px 25px
     margin: 0 -25px 30px
 
     [class^="ls-title-"]
@@ -19,6 +20,8 @@
       @include translateY(50%)
       color: #fff
       opacity: 1
+      top: -20px
+      right: -10px
 
       &:hover
         opacity: 0.3
@@ -31,7 +34,4 @@
 
   &.ls-purple .ls-info-header
     background-color: $ls-color-purple
-
-
-
 
