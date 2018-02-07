@@ -1,28 +1,32 @@
 [class*="ls-tag"]
   display: inline-block
-  padding: 4px
-  font-size: remtopx(.625) !important
-  letter-spacing: remtopx(.0375)
-  font-weight: 400
+  padding: 5px
+  font-size: 12px
+  font-weight: 300
   line-height: 1
-  color: #fff !important
+  color: $ls-color-dark-gray
   text-align: center
   white-space: nowrap
   vertical-align: baseline
-  border-radius: 2px
-  background-color: $gray3
+  background-color: $ls-color-gray
+
+[class*="ls-tag-"]
+  color: #fff
+
+.ls-tag-primary
+  background-color: $ls-color-blue
 
 .ls-tag-success
-  background-color: $color-success
+  background-color: $ls-color-green
 
 .ls-tag-info
-  background-color: $color-info
+  background-color: $ls-color-oil-blue
 
 .ls-tag-warning
-  background-color: $color-warning
+  background-color: $ls-color-yellow
 
 .ls-tag-danger
-  background-color: $color-danger
+  background-color: $ls-color-red
 
 a[class*="ls-tag-"]:hover
   opacity: 0.8
