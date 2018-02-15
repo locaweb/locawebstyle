@@ -1,26 +1,41 @@
+$percentColor: 10%
+
 // Style base button
 [class*="ls-btn"]
   +single-transition(all, .2s)
   cursor: pointer
-  border: 1px solid mix($color-mix, #fff, 30%)
-  padding: 6px 11px 7px
-  border-radius: $default-radius
-  background-color: #fff
+  padding: 10px 16px
+  border: none
   display: inline-block
-  font-size: remtopx(.8125)
+  font-size: 14px
   line-height: 1.42857143
   text-decoration: none
   text-align: center
   white-space: normal
-  color: #000
+  color: #fff
   vertical-align: top
   font-weight: normal
   -webkit-appearance: none
   -moz-appearance: none
   appearance: none
+  text-transform: uppercase
 
-  &[class*="ls-ico-"]:empty:before
-    margin: 0
+  &[class*="ls-ico-"]:empty
+    border-radius: 50%
+    width: $input-lg-height
+    height: $input-lg-height
+    line-height: 2
+
+    &:before
+      margin: 0
+      vertical-align: sub
+      font-size: 18px
+      padding-right: 0
+
+  &[class*="ls-ico-"]:before
+    padding-right: 5px
+    font-size: 20px
+    vertical-align: bottom
 
   p + &
     margin-top: 7px
@@ -29,6 +44,7 @@
   &.ls-disabled,
   &[disabled]
     cursor: default
+    opacity: .6
 
   &:empty:after
     @extend .ls-no-margin-left
@@ -51,22 +67,50 @@
     & + .ls-btn-block
       margin-top: 15px
 
-// Primary button
-.ls-btn-primary
-  color: #fff
+  &.ls-btn-primary
+    background-color: $ls-color-blue
+    color: #fff
 
-// Dark
-.ls-btn-dark
-  background-color: $gray3
-  border-color: $gray4
-  color: $gray1
+    &:hover, &:focus, &:active, &.ls-active
+      background-color: darken($ls-color-blue, $percentColor)
 
-  &:hover,
-  &:focus
-    background-color: $gray4
+  &.ls-btn-dark
+    background-color: $ls-color-oil-blue
 
-  &[data-ls-module]:after
-    border-top-color: $gray1
+    &:hover, &:focus, &:active, &.ls-active
+      background-color: darken($ls-color-oil-blue, $percentColor)
+
+  &.ls-btn-success
+    background-color: $ls-color-green
+
+    &:hover, &:focus, &:active, &.ls-active
+      background-color: darken($ls-color-green, $percentColor)
+
+  &.ls-btn-info
+    background-color: $ls-color-purple
+
+    &:hover, &:focus, &:active, &.ls-active
+      background-color: darken($ls-color-purple, $percentColor)
+
+  &.ls-btn-warning
+    background-color: $ls-color-yellow
+
+    &:hover, &:focus, &:active, &.ls-active
+      background-color: darken($ls-color-yellow, $percentColor)
+
+.ls-btn
+  background-color: $ls-color-gray
+  color: $ls-color-dark-gray
+
+  &:hover, &:focus, &:active, &.ls-active
+    background-color: darken($ls-color-gray, $percentColor)
+
+.ls-btn-danger,
+.ls-btn-primary-danger
+  background-color: $ls-color-red
+
+  &:hover, &:focus, &:active
+    background-color: darken($ls-color-red, $percentColor)
 
 //
 // Sizes of BTN
@@ -99,6 +143,10 @@
   [class*="ls-btn"]
     @extend .ls-float-left
     cursor: pointer
+    margin-left: 1px
+
+    &:first-child
+      margin-left: 0
 
     &:first-child:not(:last-child)
       border-top-right-radius: 0
@@ -114,9 +162,6 @@
     &:hover,
     &:focus
       +single-transition(none)
-
-    & +[class*="ls-btn"]
-      margin-left: -1px
 
     &.ls-btn[data-ls-module="tabs"]
 
