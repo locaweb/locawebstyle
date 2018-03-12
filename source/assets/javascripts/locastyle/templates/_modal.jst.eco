@@ -5,7 +5,7 @@
     <div class="ls-modal-box">
   <% end %>
     <div class="ls-modal-header">
-      <button type="button" data-dismiss="modal" class="close"></button>
+      <button type="button" data-dismiss="modal" aria-label="fechar"></button>
       <h4 class="ls-modal-title" id="lsModal"><%= @title %></h4>
     </div>
     <div class="ls-modal-body">
