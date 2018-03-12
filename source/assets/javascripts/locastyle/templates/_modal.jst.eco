@@ -5,7 +5,7 @@
     <div class="ls-modal-box">
   <% end %>
     <div class="ls-modal-header">
-      <button type="button" data-dismiss="modal" class="close">&times;</button>
+      <button type="button" data-dismiss="modal" class="close"></button>
       <h4 class="ls-modal-title" id="lsModal"><%= @title %></h4>
     </div>
     <div class="ls-modal-body">
@@ -16,9 +16,9 @@
         <%= @close %>
       </button>
       <% if @actionType != 'link': %>
-        <button <%= @customAttrs %> type="submit" class=" ls-btn <%= @class %>"><%= @save %></button>
+        <button <%= @customAttrs %> type="submit" class="<%= @class %>"><%= @save %></button>
       <% else: %>
-        <a href="<%= @action %>" <%= @customAttrs %> class=" ls-btn <%= @class %>"><%= @save %></a>
+        <a href="<%= @action %>" <%= @customAttrs %> class="<%= @class %>"><%= @save %></a>
       <% end %>
     </div>
   <% if @actionType != 'link': %>
