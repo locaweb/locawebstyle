@@ -12,14 +12,14 @@
       <p><%- @content %></p>
     </div>
     <div class="ls-modal-footer">
-      <button type="button" class="ls-btn ls-float-right" data-dismiss="modal">
-        <%= @close %>
-      </button>
       <% if @actionType != 'link': %>
         <button <%= @customAttrs %> type="submit" class="<%= @class %>"><%= @save %></button>
       <% else: %>
         <a href="<%= @action %>" <%= @customAttrs %> class="<%= @class %>"><%= @save %></a>
       <% end %>
+      <button type="button" class="ls-btn" data-dismiss="modal">
+        <%= @close %>
+      </button>
     </div>
   <% if @actionType != 'link': %>
     </form>
