@@ -166,23 +166,7 @@ type: component
     <%= partial 'documentacao/shared/modal' %>
   </div>
   <% code("html") do %>
-<button data-ls-module="modal" data-target="#myAwesomeModal" class="ls-btn-primary">Ative a modal</button>
-
-<div class="ls-modal" id="myAwesomeModal">
-  <div class="ls-modal-box">
-    <div class="ls-modal-header">
-      <button data-dismiss="modal" arial-label="Fechar"></button>
-      <h4 class="ls-modal-title">Modal title</h4>
-    </div>
-    <div class="ls-modal-body" id="myModalBody">
-      <p><%= lorem.sentences 15 %></p>
-    </div>
-    <div class="ls-modal-footer">
-      <button class="ls-btn ls-float-right" data-dismiss="modal">Close</button>
-      <button type="submit" class="ls-btn-primary">Save changes</button>
-    </div>
-  </div>
-</div><!-- /.modal -->
+<%= partial 'documentacao/shared/modal' %>
   <% end %>
 
   <hr>
