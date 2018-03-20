@@ -54,8 +54,8 @@
       pointer-events: initial
 
       &:before
-        border: 2px solid $gray3
         color: #fff
+        background: $ls-color-blue
 
       &:after
         color: $gray3
@@ -72,8 +72,7 @@
   cursor: none
   display: inline-block
   font-family: $default-font
-  font-size: remtopx(1.125)
-  font-weight: 300
+  font-size: 17px
   color: $gray3
   pointer-events: none
   position: relative
@@ -96,7 +95,7 @@
     font-size: 15px
     font-weight: 300
     line-height: 25px
-    border: 2px solid $gray3
+    // border: 2px solid $gray3
     border-radius: 50%
     display: inline-block
     vertical-align: middle
@@ -297,7 +296,7 @@
   .ls-steps-btn
     width: 100%
     background: transparent
-    color: $gray2
+    color: #fff
     padding: 0 5px 0 0
 
     &:before
@@ -307,6 +306,7 @@
       border-color: $gray2
       font-size: 22px
       line-height: 31px
+      background: $ls-color-gray
 
     &:after
       width: calc(100% - 120px)
