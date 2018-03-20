@@ -1,24 +1,25 @@
 .ls-breadcrumb
-  display: block
   padding: 8px 0
-  font-size: remtopx(.75)
-  background: none
-  border-bottom: 1px solid $gray1
   list-style: none
 
   li
-    position: relative
+    font-size: 17px
     display: inline-block
     padding: 0 12px
-    list-style: none
-    color: $gray4
+    color: $ls-color-dark-gray
 
-    &:before
-      +arrow-right($gray4, 4px)
-      top: -1px
+    &:first-child
+      padding-left: 0
+
+    &::before
+      content: "\e918"
+      font-family: 'locastyle'
+      font-size: 13px
+      display: inline-block
+      margin-right: 5px
 
     a
-      text-decoration: underline
+      color: $ls-color-blue
 
-      &:hover
-        text-decoration: none
+      &:hover, &:focus
+        text-decoration: underline
