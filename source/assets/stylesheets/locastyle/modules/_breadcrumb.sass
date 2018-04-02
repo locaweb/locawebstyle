@@ -6,17 +6,21 @@
     font-size: 17px
     display: inline-block
     padding: 0 12px
+    font-weight: 600
     color: $ls-color-dark-gray
+    @extend .ls-ico-chevron-left
 
     &:first-child
       padding-left: 0
 
     &::before
-      content: "\e918"
       font-family: 'locastyle'
       font-size: 13px
       display: inline-block
       margin-right: 5px
+
+    &::after
+      display: none
 
     a
       color: $ls-color-blue
