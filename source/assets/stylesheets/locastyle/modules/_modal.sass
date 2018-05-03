@@ -1,7 +1,7 @@
 $defaultWidth: 600px
 $largeWidth: 850px
 $smallWidth: 450px
-$paddingDefault: 20px
+$paddingDefault: 26px
 
 .ls-modal
   display: none
@@ -15,7 +15,7 @@ $paddingDefault: 20px
   overflow-y: scroll
   z-index: 16
   backface-visibility: hidden
-  background: rgba(0, 0, 0, 0.8)
+  background: rgba(0, 0, 0, 0.7)
 
   &.ls-opened
     display: block
@@ -30,7 +30,6 @@ $paddingDefault: 20px
   margin: 5% auto 0
   text-align: left
   background-color: #fff
-  border-radius: $default-radius
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7)
 
 .ls-modal-large,
@@ -42,41 +41,51 @@ $paddingDefault: 20px
     display: none
 
 .ls-modal-header
-  padding: $paddingDefault
-  border-bottom: 1px solid $gray1
+  padding: $paddingDefault 
   position: relative
 
   [data-dismiss]
     position: absolute
-    right: 20px
-    top: 14px
+    right: $paddingDefault
+    top: $paddingDefault
     border: none
     background: none
-    color: #212121
-    text-align: center
-    font-size: remtopx(1.25)
-    font-weight: bold
     cursor: pointer
-    opacity: .3
 
-    &:hover
-      opacity: 1
+    &:before
+      @extend .ls-ico-close
+      font-family: 'locastyle'
+      color: $ls-color-dark-gray
+      font-size: 15px
+
+    &:hover:before
+      opacity: .5
 
   .ls-modal-title
-    padding: 0
+    padding-right: 20px
     margin: 0
-    font-size: remtopx(1)
+    font-size: 17px
     width: calc(100% - 20px)
 
+
 .ls-modal-body
-  padding: $paddingDefault
+  padding: 0 $paddingDefault
+  color: $ls-color-medium-gray
 
   p
+    margin-bottom: 10px
+    font-size: 14px
+
+  h1,h2,h3,h4,h5,h6
+    color: $ls-color-dark-gray
     margin-bottom: 10px
 
 .ls-modal-footer
   padding: $paddingDefault
-  border-top: 1px solid $gray1
+  text-align: right
+
+  [class*="ls-btn-"]
+    margin-right: 12px
 
 .ls-modal-feedbackr
   .ls-modal-box

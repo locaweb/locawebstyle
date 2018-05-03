@@ -5,21 +5,21 @@
     <div class="ls-modal-box">
   <% end %>
     <div class="ls-modal-header">
-      <button type="button" data-dismiss="modal" class="close">&times;</button>
+      <button type="button" data-dismiss="modal" aria-label="fechar"></button>
       <h4 class="ls-modal-title" id="lsModal"><%= @title %></h4>
     </div>
     <div class="ls-modal-body">
       <p><%- @content %></p>
     </div>
     <div class="ls-modal-footer">
-      <button type="button" class="ls-btn ls-float-right" data-dismiss="modal">
+      <% if @actionType != 'link': %>
+        <button <%= @customAttrs %> type="submit" class="<%= @class %>"><%= @save %></button>
+      <% else: %>
+        <a href="<%= @action %>" <%= @customAttrs %> class="<%= @class %>"><%= @save %></a>
+      <% end %>
+      <button type="button" class="ls-btn" data-dismiss="modal">
         <%= @close %>
       </button>
-      <% if @actionType != 'link': %>
-        <button <%= @customAttrs %> type="submit" class=" ls-btn <%= @class %>"><%= @save %></button>
-      <% else: %>
-        <a href="<%= @action %>" <%= @customAttrs %> class=" ls-btn <%= @class %>"><%= @save %></a>
-      <% end %>
     </div>
   <% if @actionType != 'link': %>
     </form>
