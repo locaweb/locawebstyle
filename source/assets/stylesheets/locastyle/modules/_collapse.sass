@@ -1,20 +1,17 @@
+$spacer: 26px
+
 .ls-collapse-group
   .ls-collapse
+    border-top: 1px solid $ls-color-light-gray
     margin-bottom: 0
-    border-bottom: 0
-    border-radius: 0
+
     &:first-child
-      +border-top-radius($default-radius)
-    &:last-child
-      +border-bottom-radius($default-radius)
-      border: 1px solid $gray1
+      border-top-color: transparent
 
 .ls-collapse
-  border: 1px solid $gray1
-  border-radius: $default-radius
   background-color: #fff
-  font-size: remtopx(.875)
   margin-bottom: 10px
+  box-shadow: 4px 4px 6px $default-shadow
 
 .ls-collapse-opened,
 .ls-collapse-opened-always
@@ -23,12 +20,12 @@
     +rotate(180deg)
 
   .ls-collapse-body
-    padding: 10px
+    padding: 0 $spacer 10px
     @extend %show-element
 
 .ls-collapse-header
   display: block
-  padding: 10px 35px 10px 10px
+  padding: $spacer
   cursor: pointer
   position: relative
   word-wrap: break-word
@@ -36,29 +33,28 @@
   &:before
     +rotate(0deg)
     +transition (all .35s ease)
-    border-radius: 100%
-    content: "\e60b"
+    transform-origin: 7px 7px
+    @extend .ls-ico-chevron-down
+    color: $ls-color-dark-gray
     font-family: 'locastyle'
-    font-size: remtopx(.875)
+    font-size: 16px
     position: absolute
     top: 50%
     margin-top: -12px
-    right: 10px
+    right: 15px
     height: 24px
     width: 24px
-    line-height: 1.4
-    text-align: center
 
   p
     margin-bottom: 0
-    color: $gray3
+    color: $ls-color-medium-gray
 
 .ls-collapse-title
-  color: $gray4
-  font-size: remtopx(1)
+  color: $ls-color-dark-gray
+  font-size: 17px
   margin-bottom: 0
+  padding-right: $spacer
 
 .ls-collapse-body
-  border: 0px solid transparent
   padding: 0
   @extend %hide-element
