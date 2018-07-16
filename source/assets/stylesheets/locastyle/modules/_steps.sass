@@ -39,9 +39,9 @@
 
   .ls-actived:not(.ls-active)
     &:after
-      content: "\e63d"
-      font-family: "locastyle"
-      font-size: 16px
+      content: ""
+      font-family: $default-font
+      font-size: 17px
       position: absolute
       top: 16px
       right: 12px
@@ -58,12 +58,12 @@
         background: $ls-color-blue
 
       &:after
-        color: $gray3
+        color: #fff
 
   .ls-active
 
     &:before
-      color: $gray3
+      color: #fff
 
 .ls-steps-btn
   width: 100%
@@ -73,6 +73,7 @@
   display: inline-block
   font-family: $default-font
   font-size: 17px
+  font-weight: 500
   color: $gray3
   pointer-events: none
   position: relative
@@ -116,7 +117,6 @@
 
 .ls-steps-arrow
   +single-transition(all, .25s, linear)
-  border-left: 12px solid $gray2
   border-top: 12px solid transparent
   border-bottom: 12px solid transparent
   display: none
@@ -139,22 +139,12 @@
     background: $gray3
     border-radius: 50%
     position: absolute
-    left: -12px
+    left: -17px
     top: -12px
-    margin-top: 10px
-    height: 4px
-    width: 4px
+    margin-top: 7px
+    height: 10px
+    width: 10px
     z-index: 2
-
-  &:after
-    border-left: 10px solid #fff
-    border-top: 10px solid transparent
-    border-bottom: 10px solid transparent
-    top: -10px
-    left: -12px
-    height: 0
-    width: 0
-    z-index: 1
 
 .ls-steps-main
   border-top: 1px solid $gray2
@@ -272,9 +262,9 @@
 
       &:before
         content: ""
-        border-left: 3px dotted $gray2
+        border-left: 1px solid $gray2
         height: 100%
-        left: 16px
+        left: 19px
         position: absolute
         top: 24px
         z-index: 1
@@ -302,15 +292,15 @@
     &:before
       width: 37px
       height: 37px
-      background: #fff
+      background: $gray2
       border-color: $gray2
       font-size: 22px
-      line-height: 31px
-      background: $ls-color-gray
+      line-height: 33px
 
     &:after
       width: calc(100% - 120px)
-      font-weight: 300
+      font-weight: 500
+      color: $gray2
       position: relative
       top: 0
       margin-left: 10px
