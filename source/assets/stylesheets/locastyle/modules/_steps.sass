@@ -29,22 +29,16 @@
     left: 0
 
     &:after
-      color: $gray3
-      content: attr(data-mobile-step-index)
-      font-size: 15px
-      line-height: 15px
-      position: absolute
-      top: 9px
-      right: 0
-
-  .ls-actived:not(.ls-active)
-    &:after
       content: ""
-      font-family: $default-font
-      font-size: 17px
+      height: 100%
+      border-right: 1px solid
       position: absolute
-      top: 16px
-      right: 12px
+      top: 8px
+      right: 29px
+
+    &:last-child:after
+      height: 65%
+
 
   .ls-active,
   .ls-actived
@@ -53,39 +47,18 @@
       cursor: pointer
       pointer-events: initial
 
-      &:before
-        color: #fff
-        background: $ls-color-blue
-
-      &:after
-        color: #fff
-
-  .ls-active
-
-    &:before
-      color: #fff
-
 .ls-steps-btn
   width: 100%
-  background: $gray1
   border: none
   cursor: none
   display: inline-block
   font-family: $default-font
   font-size: 17px
   font-weight: 500
-  color: $gray3
   pointer-events: none
   position: relative
   text-align: left
   padding: 10px
-
-  &:hover,
-  &:focus,
-  &:active
-
-    &:after
-      opacity: .7
 
   &:before
     width: 29px
@@ -94,9 +67,8 @@
     content: counters(steps, "") " "
     font-family: $default-font
     font-size: 15px
-    font-weight: 300
-    line-height: 25px
-    // border: 2px solid $gray3
+    font-weight: 600
+    line-height: 29px
     border-radius: 50%
     display: inline-block
     vertical-align: middle
@@ -119,7 +91,6 @@
   +single-transition(all, .25s, linear)
   border-top: 12px solid transparent
   border-bottom: 12px solid transparent
-  display: none
   height: 0
   width: 0
   position: absolute
@@ -127,15 +98,10 @@
   margin-top: -23px
   right: 18px
 
-  &:before,
-  &:after
+  &:before
     content: ""
     display: block
-    left: -1px
     position: absolute
-
-
-  &:before
     background: $gray3
     border-radius: 50%
     position: absolute
@@ -155,6 +121,9 @@
   .ls-steps-content > .ls-actions-btn
     @extend %actions-btn
     display: block
+    border-top: none
+    padding: 0
+    margin-bottom: 46px
 
 .ls-steps-content
   position: relative
@@ -167,12 +136,20 @@
 
   .ls-actions-btn
     overflow: hidden
+    text-align: right
 
     [class*="ls-btn"]
-      float: left
+      display: inline-block
+      padding: 10px 0px
+      width: 36px
+      height: 36px
+      line-height: 1
 
-      &[data-action="next"]
-        float: right
+      &:before
+        font-size: 16px
+
+      &[class*="ls-ico-"]:empty
+        border-radius: 0
 
 .ls-steps-mobile
   width: 100%
@@ -264,18 +241,13 @@
         content: ""
         border-left: 1px solid $gray2
         height: 100%
-        left: 19px
+        left: 18px
         position: absolute
         top: 24px
         z-index: 1
 
       &.ls-active .ls-steps-arrow
         display: block
-
-    .ls-actived:not(.ls-active)
-      &:after
-        top: 12px
-        right: 42px
 
   .ls-steps-main
     border-top: 0
@@ -285,22 +257,17 @@
 
   .ls-steps-btn
     width: 100%
-    background: transparent
-    color: #fff
     padding: 0 5px 0 0
 
     &:before
       width: 37px
       height: 37px
-      background: $gray2
-      border-color: $gray2
-      font-size: 22px
-      line-height: 33px
+      font-size: 17px
+      line-height: 37px
 
     &:after
       width: calc(100% - 120px)
       font-weight: 500
-      color: $gray2
       position: relative
       top: 0
       margin-left: 10px
@@ -311,3 +278,20 @@
   .ls-steps-mobile
     display: none
     visibility: hidden
+
+@media screen and (max-width: $screen-sm)
+  .ls-steps-arrow
+    &:before
+      top: 0
+
+  .ls-steps-btn
+    &:before
+      width: 20px
+      height: 20px
+      font-size: 14px
+      line-height: 20px
+
+    &:after
+      font-size: 14px
+      font-weight: 600
+      text-transform: uppercase
