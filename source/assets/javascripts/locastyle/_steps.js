@@ -14,7 +14,9 @@ locastyle.steps = (function() {
       container: '.ls-steps-content',
       steps: '.ls-steps',
       moduleVisible: '.ls-steps-content:visible',
-      mobile: '.ls-steps-mobile'
+      mobile: '.ls-steps-mobile',
+      mobileTitle: '.ls-steps-mobile-title',
+      mobilePageInfo: '.ls-steps-mobile-pageinfo'
     },
     status: {
       active: 'ls-active',
@@ -75,9 +77,24 @@ locastyle.steps = (function() {
 
     steps.each(function(index) {
       if ($(this).hasClass(config.status.active)) {
+        var step = index + 1;
+        var title = $(this).find(config.selectors.button).attr('title');
+        var pageInfo = step + ' de ' + steps.length;
+
+        if($(config.selectors.mobileTitle).length == 1) {
+          $(config.selectors.mobile).addClass('ls-steps-mobile-title-labeled');
+          $(config.selectors.mobileTitle).html(title);
+          $(config.selectors.mobileTitle).attr({ 'data-step': step });
+        }
+
+        if($(config.selectors.mobilePageInfo).length == 1) {
+          $(config.selectors.mobile).addClass('ls-steps-mobile-pageinfo-labeled');
+          $(config.selectors.mobilePageInfo).html(pageInfo);
+        }
+
         $(config.selectors.mobile).attr({
-          'data-index': (index + 1) + ' de ' + steps.length,
-          'data-title': $(this).find(config.selectors.button).attr('title')
+          'data-title': title,
+          'data-index': pageInfo
         });
       }
     });
@@ -149,7 +166,7 @@ locastyle.steps = (function() {
     // This event name is being deprecated
     var evt = jQuery.Event('NextStepEvent');
     $(document).trigger(evt);
-    
+
     // This event is deprecated
     var beforeEvent = jQuery.Event('BeforeNextStep');
     $(document).trigger(beforeEvent);
@@ -186,14 +203,14 @@ locastyle.steps = (function() {
     // This event is deprecated
     var beforeEvent = jQuery.Event('BeforePrevStep');
     $(document).trigger(beforeEvent);
-    
+
     // This is the new event for the Before Prev Step
     var prevStepEvt = jQuery.Event(config.events.prevStep);
     $(document).trigger(prevStepEvt);
 
     if(
       // Deprecated
-      !evt.isDefaultPrevented() && 
+      !evt.isDefaultPrevented() &&
       !beforeEvent.isDefaultPrevented() &&
       // New Events
       !prevStepEvt.isDefaultPrevented()

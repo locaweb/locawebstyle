@@ -126,7 +126,7 @@ describe("Steps: ", function(){
         $(document).off('NextStepEvent');
       });
     });
-    
+
     describe('when BeforeNextStep is prevented', function(){
       it('does not change to next step', function(){
         $(document).on('BeforeNextStep', function(e){ e.preventDefault(); });

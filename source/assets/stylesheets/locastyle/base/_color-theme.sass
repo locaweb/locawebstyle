@@ -314,62 +314,62 @@
     ////
     // Steps
     ////
-    .ls-steps-nav
+    .ls-steps
+      &.ls-active
+        .ls-steps-nav
+          border-bottom-color: $ls-color-light-gray1
 
-      li
+      .ls-steps-mobile
+        border-bottom-color: $ls-color-light-gray1
+        &:before, .ls-steps-mobile-title
+          color: $color1
+        &:after, .ls-steps-mobile-pageinfo
+          color: #777b7c
+        .ls-steps-mobile-title
+          &:before
+            background-color: $color1
+            color: $color-menu-text
+
+      .ls-steps-nav
         &:after
-          border-color: $ls-color-light-gray1
+          border-right-color: $ls-color-light-gray1
 
-      .ls-actived
-        &:before
-          border-color: $ls-color-gray
+        li
+          &:before
+            border-color: $ls-color-gray
 
-        &:not(.ls-active)
-          &:after
-            color: $color1
+        .ls-steps-arrow:before
+          background: $ls-color-light-gray1
 
         .ls-steps-btn
-          color: $ls-color-light-gray1
-
+          background: transparent
           &:before
             background: $ls-color-light-gray1
             color: $color-menu-text
-
           &:after
             color: $ls-color-light-gray1
 
-      .ls-active
-        .ls-steps-arrow:before
-          background: $color1
-
-        .ls-steps-btn
-
-          &:before
+        .ls-active
+          .ls-steps-arrow:before
             background: $color1
-            color: $color-menu-text
+          .ls-steps-btn
+            &:before
+              background: $color1
+            &:after
+              color: $color1
 
-          &:after
-            color: $color1
+      .ls-steps-main
+        .ls-steps-content
+          color: $ls-color-dark-gray
+          p
+            color: $ls-color-dark-gray
 
-    .ls-steps-arrow:before
-      background: $ls-color-light-gray1
-
-    .ls-steps-btn
-      background: transparent
-      &:before
-        color: $color-menu-text
-        background: $ls-color-light-gray1
-
-      &:after
-        color: $ls-color-light-gray1
-
-    .ls-steps-main
-      .ls-actions-btn
-        .ls-btn-primary
-          background-color: $color1
-        .ls-btn
-          background-color: $ls-color-light-gray1
-          color: $color-menu-text
+          .ls-actions-btn
+            .ls-btn-primary
+              background-color: $color1
+            .ls-btn
+              background-color: $ls-color-light-gray1
+              color: $color-menu-text
 
     ////
     // Tabs Button
