@@ -27,17 +27,17 @@ your project:
 <head>
 ...
   <!-- Insert the CSS in HEAD -->
-  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.10.0/stylesheets/locastyle.css">
+  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.10.1/stylesheets/locastyle.css">
 ...
 </head>
 <body>
   <!-- Your code -->
 
   <!-- JQuery is a dependency -->
-  <script src="http://code.jquery.com/jquery-2.0.1.min.js">
+  <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
 
   <!-- Put the JS in your footer, always after jQuery (dependency) -->
-  <script src="//assets.locaweb.com.br/locastyle/3.10.0/javascripts/locastyle.js"></script>
+  <script src="//assets.locaweb.com.br/locastyle/3.10.1/javascripts/locastyle.js"></script>
 </body>
 ```
 
@@ -113,17 +113,17 @@ via Bower ou baixando os assets para usar offline.
 <head>
 ...
   <!-- Insert the CSS in HEAD -->
-  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.7.4/stylesheets/locastyle.css">
+  <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.10.1/stylesheets/locastyle.css">
 ...
 </head>
 <body>
   <!-- Your code -->
 
   <!-- JQuery is a dependency -->
-  <script src="http://code.jquery.com/jquery-2.0.1.min.js">
+  <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
 
   <!-- Put the JS in your footer, always after jQuery (dependency) link -->
-  <script src="//assets.locaweb.com.br/locastyle/3.7.4/javascripts/locastyle.js"></script>
+  <script src="//assets.locaweb.com.br/locastyle/3.10.1/javascripts/locastyle.js"></script>
 </body>
 ```
 
